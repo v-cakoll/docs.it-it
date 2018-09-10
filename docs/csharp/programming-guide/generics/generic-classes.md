@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, generic classes
 - generics [C#], classes
 ms.assetid: 27d6f256-cd61-41e3-bc6e-b990a53b0224
-ms.openlocfilehash: 65c5f376bce44e6120c17638076d2edfc38c734e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2568600c130847b3317aeb399541c61a050901ce
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33338286"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44216080"
 ---
 # <a name="generic-classes-c-programming-guide"></a>Classi generiche (Guida per programmatori C#)
 Le classi generiche incapsulano operazioni che non sono specifiche di un determinato tipo di dati. L'uso più comune per le classi generiche è con raccolte come elenchi collegati, tabelle hash, stack, code, alberi e così via. Le operazioni come l'aggiunta e la rimozione di elementi dalla raccolta vengono eseguite praticamente allo stesso modo, indipendentemente dal tipo dei dati archiviati.  
@@ -65,9 +65,10 @@ Le classi generiche incapsulano operazioni che non sono specifiche di un determi
   
  Le classi generiche sono invariabili. In altri termini, se un parametro di input specifica un oggetto `List<BaseClass>`, se si prova a specificare un oggetto `List<DerivedClass>`, viene restituito un errore in fase di compilazione.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Collections.Generic>  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [Generics](../../../csharp/programming-guide/generics/index.md)  
- [Saving the State of Enumerators](https://blogs.msdn.microsoft.com/wesdyer/2006/01/13/saving-the-state-of-enumerators/) (Salvataggio dello stato degli enumeratori)  
- [An Inheritance Puzzle, Part One](https://blogs.msdn.microsoft.com/ericlippert/2007/07/27/an-inheritance-puzzle-part-one/) (Indovinello sull'ereditarietà - Parte 1)
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.Collections.Generic>  
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- [Generics](../../../csharp/programming-guide/generics/index.md)  
+- [Saving the State of Enumerators](https://blogs.msdn.microsoft.com/wesdyer/2006/01/13/saving-the-state-of-enumerators/) (Salvataggio dello stato degli enumeratori)  
+- [An Inheritance Puzzle, Part One](https://blogs.msdn.microsoft.com/ericlippert/2007/07/27/an-inheritance-puzzle-part-one/) (Indovinello sull'ereditarietà - Parte 1)

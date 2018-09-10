@@ -4,11 +4,11 @@ description: Informazioni su come eseguire degli inner join usando LINQ in C#.
 ms.date: 12/1/2016
 ms.assetid: 45bceed6-f549-4114-a9b1-b44feb497742
 ms.openlocfilehash: 2f6aad30dc8278ce1bb88bacc19b27deaa0288c7
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43484170"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44210130"
 ---
 # <a name="perform-inner-joins"></a>Eseguire inner join
 

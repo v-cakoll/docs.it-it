@@ -2,12 +2,12 @@
 title: Bug nel codice dichiarativo/imperativo misto (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: fada62d0-0680-4e73-945a-2b00d7a507af
-ms.openlocfilehash: efc58aac69c53cda724e5fe348560a99311e8d4c
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 56d8140613f3dae7f99c1374634dbd8bdf094a7c
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244072"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44192613"
 ---
 # <a name="mixed-declarative-codeimperative-code-bugs-linq-to-xml-c"></a>Bug nel codice dichiarativo/imperativo misto (LINQ to XML) (C#)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] contiene i vari metodi che consentono di modificare direttamente un albero XML. È possibile aggiungere elementi, eliminare elementi, modificare il contenuto di un elemento, aggiungere attributi e così via. Questa interfaccia di programmazione è descritta in [Modifica di alberi XML (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md). Se si scorre uno degli assi, ad esempio <xref:System.Xml.Linq.XContainer.Elements%2A>, e si modifica l'albero XML durante lo scorrimento dell'asse, è possibile che vengano individuati alcuni bug strani.  
@@ -168,5 +168,6 @@ XElement newRoot = new XElement("Root",
 Console.WriteLine(newRoot);  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Programmazione LINQ to XML avanzata (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Programmazione LINQ to XML avanzata (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

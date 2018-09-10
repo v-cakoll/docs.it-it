@@ -2,12 +2,12 @@
 title: 'Procedura: Popolare un albero XML dal file system (C#)'
 ms.date: 07/20/2015
 ms.assetid: 2aa2ccac-4a22-47ae-9107-3bb8df232576
-ms.openlocfilehash: fdbab0fbda3bbfe3ab91e674bb66694f71121962
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7bddab1942c5a673969e271338f17705914f81a4
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328175"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44204994"
 ---
 # <a name="how-to-populate-an-xml-tree-from-the-file-system-c"></a>Procedura: Popolare un albero XML dal file system (C#)
 Un'applicazione utile e comune degli alberi XML è data dall'utilizzo come archivio dati nome/valore gerarchico. È possibile popolare un albero XML con dati gerarchici e quindi eseguirvi query, trasformarla e, se necessario, serializzarla. In questo scenario di utilizzo molte delle caratteristiche semantiche specifiche di XML, quali gli spazi dei nomi e il comportamento degli spazi vuoti, non sono rilevanti. L'albero XML viene invece usato come piccolo database gerarchico in memoria per singolo utente.  
@@ -116,5 +116,6 @@ class Program
 Total File Size:59089  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Advanced Query Techniques (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md) (Tecniche di query avanzate (LINQ to XML) in C#)
+## <a name="see-also"></a>Vedere anche
+
+- [Advanced Query Techniques (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md) (Tecniche di query avanzate (LINQ to XML) in C#)

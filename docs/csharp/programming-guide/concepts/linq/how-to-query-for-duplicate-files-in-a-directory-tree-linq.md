@@ -2,12 +2,12 @@
 title: 'Procedura: Eseguire una query per trovare i file duplicati in un albero di directory (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 1ff5562b-0d30-46d1-b426-a04e8f78c840
-ms.openlocfilehash: 618f1942133401718dcc71d54476043d27e0c036
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 09ce574c68cbf11c0ee50df663692fd207038758
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321301"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44189235"
 ---
 # <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-c"></a>Procedura: Eseguire una query per trovare i file duplicati in un albero di directory (LINQ) (C#)
 Talvolta i file con lo stesso nome possono trovarsi in più di una cartella. Ad esempio, nella cartella di installazione di Visual Studio diverse cartelle hanno un file readme.htm. In questo esempio viene illustrato come eseguire una query per trovare tali nomi di file duplicati in una cartella radice specificata. Nel secondo esempio viene illustrato come eseguire una query per trovare i file con dimensioni e ora di creazione corrispondenti.  
@@ -172,6 +172,7 @@ class QueryDuplicateFileNames
 ## <a name="compiling-the-code"></a>Compilazione del codice  
  Creare un progetto che usi .NET Framework versione 3.5 o successiva con un riferimento a System.Core.dll e alle direttive `using` per gli spazi dei nomi System.Linq e System.IO.  
   
-## <a name="see-also"></a>Vedere anche  
- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
- [Directory di file e LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a>Vedere anche
+
+- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
+- [Directory di file e LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)

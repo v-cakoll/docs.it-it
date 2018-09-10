@@ -2,12 +2,12 @@
 title: Varianza nelle interfacce generiche (C#)
 ms.date: 07/20/2015
 ms.assetid: 4828a8f9-48c0-4128-9749-7fcd6bf19a06
-ms.openlocfilehash: fdcfd13a645ffc9b596beed65b74f8e593c642f7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 11d0c8665412bb513cb68d58203a454b7c97e052
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326758"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44200304"
 ---
 # <a name="variance-in-generic-interfaces-c"></a>Varianza nelle interfacce generiche (C#)
 In .NET framework 4 è stato introdotto il supporto della varianza per diverse interfacce generiche esistenti. Il supporto della varianza consente la conversione implicita delle classi che implementano tali interfacce. Le interfacce seguenti sono ora varianti:  
@@ -89,8 +89,9 @@ IEnumerable<int> integers = new List<int>();
 IEnumerable<Object> listObjects = new List<String>();  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Uso della varianza nelle interfacce per le raccolte generiche (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md)  
- [Creazione di interfacce generiche varianti (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/creating-variant-generic-interfaces.md)  
- [Interfacce generiche](../../../../standard/generics/interfaces.md)  
- [Varianza nei delegati (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Uso della varianza nelle interfacce per le raccolte generiche (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md)  
+- [Creazione di interfacce generiche varianti (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/creating-variant-generic-interfaces.md)  
+- [Interfacce generiche](../../../../standard/generics/interfaces.md)  
+- [Varianza nei delegati (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)

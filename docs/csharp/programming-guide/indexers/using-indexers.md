@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - indexers [C#], about indexers
 ms.assetid: df70e1a2-3ce3-4aba-ad80-4b2f3538699f
-ms.openlocfilehash: 82de2841a74f58905d3089bb0b320e7501a77045
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3e4c1f346b83cf97c57a359984bd08e075b6451b
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337613"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44253221"
 ---
 # <a name="using-indexers-c-programming-guide"></a>Utilizzo degli indicizzatori (Guida per programmatori C#)
 Gli indicizzatori sono una convenzione sintattica che consente di creare una [classe](../../../csharp/language-reference/keywords/class.md), uno [struct](../../../csharp/language-reference/keywords/struct.md) o un'[interfaccia](../../../csharp/language-reference/keywords/interface.md) a cui le applicazioni client possono accedere esattamente come a una matrice. Gli indicizzatori sono in genere implementati in tipi il cui scopo principale è incapsulare una raccolta o una matrice interna. Si supponga, ad esempio, di avere una classe denominata TempRecord che rappresenta la temperatura in gradi Farenheit registrata a 10 orari diversi in un periodo di 24 ore. La classe contiene una matrice denominata "temps" di tipo float per rappresentare le temperature e un oggetto <xref:System.DateTime> che rappresenta la data in cui sono state registrate le temperature. Implementando un indicizzatore in questa classe, i client possono accedere alle temperature in un'istanza di TempRecord come `float temp = tr[4]` anziché come `float temp = tr.temps[4]`. La notazione dell'indicizzatore non solo semplifica la sintassi per le applicazioni client, ma rende anche la classe e il relativo scopo più intuitivi per gli altri sviluppatori.  
@@ -71,7 +71,8 @@ public int this [int index]   // Indexer declaration
   
 -   Impostare l'accessibilità delle funzioni di accesso `get` e [set](../../../csharp/language-reference/keywords/set.md) in modo che siano quanto più restrittive possibile. Questo è particolarmente importante per la funzione di accesso `set`. Per altre informazioni, vedere [Limitazione dell'accessibilità delle funzioni di accesso](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [Indicizzatori](../../../csharp/programming-guide/indexers/index.md)  
- [Proprietà](../../../csharp/programming-guide/classes-and-structs/properties.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- [Indicizzatori](../../../csharp/programming-guide/indexers/index.md)  
+- [Proprietà](../../../csharp/programming-guide/classes-and-structs/properties.md)

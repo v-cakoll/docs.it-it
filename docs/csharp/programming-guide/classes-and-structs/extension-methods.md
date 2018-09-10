@@ -6,12 +6,12 @@ helpviewer_keywords:
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: d478370edcd0ec4772a8ad3706d08a4e85e43f06
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 80ecca30b534591ffb2633ade961425f694403f7
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43405127"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44192199"
 ---
 # <a name="extension-methods-c-programming-guide"></a>Metodi di estensione (Guida per programmatori C#)
 I metodi di estensione consentono di "aggiungere" metodi ai tipi esistenti senza creare un nuovo tipo derivato, ricompilare o modificare in altro modo il tipo originale. I metodi di estensione sono uno speciale tipo di metodo statico, ma vengono chiamati come se fossero metodi di istanza sul tipo esteso. Per il codice client scritto in C#, F# e Visual Basic non esistono differenze evidenti tra la chiamata a un metodo di estensione e ai metodi effettivamente definiti in un tipo.  
@@ -81,12 +81,13 @@ using System.Linq;
   
  Per una libreria di classi implementata, non è necessario utilizzare i metodi di estensione per evitare l'incremento del numero di versione di un assembly. Se si desidera aggiungere funzionalità significative a una libreria per il quale si è proprietari del codice sorgente, è necessario seguire le linee guida standard di .NET Framework per il controllo delle versioni degli assembly. Per altre informazioni, vedere [Controllo delle versioni degli assembly](../../../../docs/framework/app-domains/assembly-versioning.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [Esempi di programmazione parallela (sono inclusi molti metodi di estensione di esempio)](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)  
- [Espressioni lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
- [Cenni preliminari sugli operatori di query standard](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)  
- [Regole di conversione per parametri Instance e relativo impatto](https://blogs.msdn.microsoft.com/sreekarc/2007/10/11/conversion-rules-for-instance-parameters-and-their-impact)  
- [Interoperabilità dei metodi di estensione tra linguaggi](https://blogs.msdn.microsoft.com/sreekarc/2007/10/11/extension-methods-interoperability-between-languages)  
- [Metodi di estensione e delegati sottoposti a currying](https://blogs.msdn.microsoft.com/sreekarc/2007/05/01/extension-methods-and-curried-delegates)  
- [Associazione di metodi di estensione e segnalazione errori](https://blogs.msdn.microsoft.com/sreekarc/2007/04/26/extension-method-binding-and-error-reporting)
+## <a name="see-also"></a>Vedere anche
+
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- [Esempi di programmazione parallela (sono inclusi molti metodi di estensione di esempio)](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)  
+- [Espressioni lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
+- [Cenni preliminari sugli operatori di query standard](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Regole di conversione per parametri Instance e relativo impatto](https://blogs.msdn.microsoft.com/sreekarc/2007/10/11/conversion-rules-for-instance-parameters-and-their-impact)  
+- [Interoperabilità dei metodi di estensione tra linguaggi](https://blogs.msdn.microsoft.com/sreekarc/2007/10/11/extension-methods-interoperability-between-languages)  
+- [Metodi di estensione e delegati sottoposti a currying](https://blogs.msdn.microsoft.com/sreekarc/2007/05/01/extension-methods-and-curried-delegates)  
+- [Associazione di metodi di estensione e segnalazione errori](https://blogs.msdn.microsoft.com/sreekarc/2007/04/26/extension-method-binding-and-error-reporting)

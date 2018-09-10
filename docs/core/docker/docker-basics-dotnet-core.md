@@ -6,23 +6,23 @@ ms.author: johalex
 ms.date: 11/06/2017
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 02b6b3fc9e149f5d1d5d78e310c7df257be983c1
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 543b9454e826022a72752d9a24bc43b77d2501f5
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961547"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44201387"
 ---
 # <a name="learn-docker-basics-with-net-core"></a>Apprendere le nozioni di base di Docker con .NET Core
 
-Questa esercitazione illustra le attività di compilazione e distribuzione di un contenitore Docker per un'applicazione .NET Core. Nel corso di questa esercitazione verranno illustrate le attività seguenti:
+Questa esercitazione illustra le attività di compilazione e distribuzione di un contenitore Docker per un'applicazione .NET Core. La [piattaforma Docker](https://docs.docker.com/engine/docker-overview/#the-docker-platform) usa il [motore Docker](https://docs.docker.com/engine/docker-overview/#docker-engine) per compilare e creare pacchetti rapidamente per le app come [immagini Docker](https://docs.docker.com/glossary/?term=image). Queste immagini vengono scritte nel formato [Dockerfile](https://docs.docker.com/glossary/?term=Dockerfile) per la distribuzione e l'esecuzione in un [contenitore su più livelli](https://docs.docker.com/engine/userguide/storagedriver/imagesandcontainers/#container-and-layers).
+
+Nel corso di questa esercitazione verranno illustrate le attività seguenti:
 
 > [!div class="checklist"]
 > * Come creare un Dockerfile
 > * Come creare un'app .NET Core.
 > * Come distribuire l'app in un contenitore Docker.
-
-La [piattaforma Docker](https://docs.docker.com/engine/docker-overview/#the-docker-platform) usa il [motore Docker](https://docs.docker.com/engine/docker-overview/#docker-engine) per compilare e creare pacchetti rapidamente per le app come [immagini Docker](https://docs.docker.com/glossary/?term=image). Queste immagini vengono scritte nel formato [Dockerfile](https://docs.docker.com/glossary/?term=Dockerfile) per la distribuzione e l'esecuzione in un [contenitore su più livelli](https://docs.docker.com/engine/userguide/storagedriver/imagesandcontainers/#container-and-layers).
 
 ## <a name="net-core-easiest-way-to-get-started"></a>.NET Core: il modo più semplice per iniziare
 
@@ -283,7 +283,7 @@ In questo esempio vengono usate le immagini Docker seguenti
 
 ## <a name="related-resources"></a>Risorse correlate
 
-* [Esempi di Docker per .NET Core](https://github.com/dotnet/dotnet-docker-samples/README.md)
+* [Esempi di Docker per .NET Core](https://github.com/dotnet/dotnet-docker/tree/master/samples)
 * [Dockerfile on Windows Containers](https://docs.microsoft.com/virtualization/windowscontainers/manage-docker/manage-windows-dockerfile) (Dockerfile in contenitori Windows)
 * [Esempi di Docker per .NET Framework](https://github.com/Microsoft/dotnet-framework-docker-samples)
 * [ASP.NET Core on DockerHub](https://hub.docker.com/r/microsoft/aspnetcore/) (ASP.NET Core in DockerHub)

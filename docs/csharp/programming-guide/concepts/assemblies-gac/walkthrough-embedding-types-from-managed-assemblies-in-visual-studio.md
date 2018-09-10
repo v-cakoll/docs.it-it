@@ -2,12 +2,12 @@
 title: 'Procedura dettagliata: Incorporamento dei tipi da assembly gestiti in Visual Studio (C#)'
 ms.date: 07/20/2015
 ms.assetid: 55ed13c9-c5bb-4bc2-bcd8-0587eb568864
-ms.openlocfilehash: 90bb523e3eb42cea2cd0a9d1e753e4d9b9873c0c
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 1900c62d1ebaf611f141f8f1bdf95f8d11f82140
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42932095"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44201257"
 ---
 # <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-c"></a>Procedura dettagliata: Incorporamento dei tipi da assembly gestiti in Visual Studio (C#)
 Se si incorporano informazioni sul tipo da un assembly gestito con nome sicuro, è possibile effettuare un accoppiamento debole dei tipi in un'applicazione per ottenere l'indipendenza dalla versione. Ovvero, il programma può essere scritto in modo da usare tipi di più versioni di una libreria gestita senza dover essere ricompilato per ogni versione.  
@@ -232,8 +232,9 @@ Se si incorporano informazioni sul tipo da un assembly gestito con nome sicuro, 
   
 6.  In Esplora File aprire la cartella del percorso di output, ad esempio C:\TypeEquivalenceSample. Fare doppio clic su TypeEquivalenceClient.exe per eseguire il programma. Il programma rifletterà la nuova versione dell'assembly TypeEquivalenceRuntime senza dover essere ricompilato.  
   
-## <a name="see-also"></a>Vedere anche  
- [/link (opzioni del compilatore C#)](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)  
- [Guida per programmatori C#](../../../../csharp/programming-guide/index.md)  
- [Programmazione con gli assembly](../../../../framework/app-domains/programming-with-assemblies.md)  
- [Assembly e Global Assembly Cache (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)
+## <a name="see-also"></a>Vedere anche
+
+- [/link (opzioni del compilatore C#)](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)  
+- [Guida per programmatori C#](../../../../csharp/programming-guide/index.md)  
+- [Programmazione con gli assembly](../../../../framework/app-domains/programming-with-assemblies.md)  
+- [Assembly e Global Assembly Cache (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)

@@ -2,12 +2,12 @@
 title: Trasformazioni funzionali pure di XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 97e8e582-eb3d-4756-bbfb-0899eb688ae4
-ms.openlocfilehash: 7bbe5735541432108794959a7889976d4951fffd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e05c6167973b2342aafd51aad7d9102db9e94ae0
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33336710"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44252129"
 ---
 # <a name="pure-functional-transformations-of-xml-c"></a>Trasformazioni funzionali pure di XML (C#)
 Contenuto della sezione viene fornita un'esercitazione sulle trasformazioni funzionali per XML. Vengono illustrati i principali concetti e costrutti di linguaggio che è necessario comprendere per usare le trasformazioni funzionali e vengono presentati alcuni esempi di utilizzo delle trasformazioni funzionali per la modifica di documenti XML. Anche se nell'esercitazione sono riportati esempi di codice LINQ to XML, tutti i concetti sottostanti sono validi anche per altre tecnologie LINQ.  
@@ -26,5 +26,6 @@ Contenuto della sezione viene fornita un'esercitazione sulle trasformazioni funz
 |[Esercitazione: Concatenamento di query (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)|Vengono descritte in dettaglio la valutazione lazy e l'esecuzione posticipata.|  
 |[Tutorial: Manipulating Content in a WordprocessingML Document (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) (Esercitazione sulla modifica del contenuto in un documento WordprocessingML (C#))|In questa esercitazione viene illustrata una trasformazione funzionale.|  
   
-## <a name="see-also"></a>Vedere anche  
- [Esecuzione di query su strutture ad albero XML (C#)](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Esecuzione di query su strutture ad albero XML (C#)](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)

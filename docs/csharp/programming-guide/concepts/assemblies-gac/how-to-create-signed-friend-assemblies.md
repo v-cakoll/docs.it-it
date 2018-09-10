@@ -2,12 +2,12 @@
 title: 'Procedura: Creare assembly Friend firmati (C#)'
 ms.date: 07/20/2015
 ms.assetid: bab62063-61e6-453f-905f-77673df9534e
-ms.openlocfilehash: 34243a65f57f41c358439baac82a1ce169233259
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8f310055db6899bf315310efc22b67bca2c4500f
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340658"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44260006"
 ---
 # <a name="how-to-create-signed-friend-assemblies-c"></a>Procedura: Creare assembly Friend firmati (C#)
 In questo esempio viene illustrato come usare assembly Friend e assembly con nomi sicuri. È necessario che entrambi i tipi di assembly abbiano un nome sicuro. Gli assembly in questo esempio usano le stesse chiavi. È comunque possibile usare chiavi diverse per i due assembly.  
@@ -16,7 +16,7 @@ In questo esempio viene illustrato come usare assembly Friend e assembly con nom
   
 1.  Aprire un prompt dei comandi.  
   
-2.  Eseguire la sequenza di comandi seguente con lo strumento Nome sicuro per generare un keyfile e per visualizzare la relativa chiave pubblica. Per altre informazioni, vedere [Sn.exe (Strong Name Tool)](https://msdn.microsoft.com/library/k5b5tt23).  
+2.  Eseguire la sequenza di comandi seguente con lo strumento Nome sicuro per generare un keyfile e per visualizzare la relativa chiave pubblica. Per altre informazioni, vedere [Sn.exe (Strong Name Tool)](../../../../framework/tools/sn-exe-strong-name-tool.md).  
   
     1.  Generare una chiave con nome sicuro per questo esempio e archiviarla nel file FriendAssemblies.snk:  
   
@@ -88,12 +88,13 @@ In questo esempio viene illustrato come usare assembly Friend e assembly con nom
 ## <a name="net-framework-security"></a>Sicurezza di .NET Framework  
  Ci sono alcune analogie tra l'attributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> e la classe <xref:System.Security.Permissions.StrongNameIdentityPermission>. La differenza principale è che <xref:System.Security.Permissions.StrongNameIdentityPermission> può chiedere le autorizzazioni di sicurezza per l'esecuzione di una particolare sezione di codice, mentre l'attributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> controlla la visibilità dei membri e dei tipi `internal`.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
- [Assembly e Global Assembly Cache (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
- [Assembly Friend (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
- [Procedura: Creare assembly Friend non firmati (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)  
- [/keyfile](../../../../visual-basic/reference/command-line-compiler/keyfile.md)  
- [Sn.exe (strumento Nome sicuro)](https://msdn.microsoft.com/library/k5b5tt23)  
- [Creazione e utilizzo degli assembly con nome sicuro](../../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)  
- [Guida per programmatori C#](../../../../csharp/programming-guide/index.md)
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
+- [Assembly e Global Assembly Cache (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
+- [Assembly Friend (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
+- [Procedura: Creare assembly Friend non firmati (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)  
+- [/keyfile](../../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md)  
+- [Sn.exe (strumento Nome sicuro)](../../../../framework/tools/sn-exe-strong-name-tool.md)  
+- [Creazione e utilizzo degli assembly con nome sicuro](../../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)  
+- [Guida per programmatori C#](../../../../csharp/programming-guide/index.md)

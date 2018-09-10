@@ -5,12 +5,12 @@ helpviewer_keywords:
 - expressions [C#]
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
-ms.openlocfilehash: bb70a7e3dfd8b274987bf68568004d785afd0ee1
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 3cf084102186d9e13727c36ed14e2ea72ca324f9
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37936953"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44213806"
 ---
 # <a name="expressions-c-programming-guide"></a>Espressioni (Guida per programmatori C#)
 Un'*espressione* è una sequenza di uno o più operandi e zero o più operatori che può restituire un singolo valore, oggetto, metodo o spazio dei nomi. Le espressioni possono contenere un valore letterale, una chiamata al metodo, un operatore e i relativi operandi oppure un *nome semplice*, ad esempio il nome di una variabile, un membro di un tipo, un parametro di un metodo, uno spazio dei nomi o un tipo.  
@@ -72,10 +72,11 @@ C# supporta i *membri con corpo di espressione*, che consentono di specificare u
 ## <a name="remarks"></a>Note  
  Ogni volta che un'espressione identifica una variabile, una proprietà dell'oggetto o l'accesso a un indicizzatore di oggetti, il valore di tale elemento viene usato come valore dell'espressione. Un'espressione può essere inserita ovunque sia richiesto un valore o un oggetto in C#, purché l'espressione alla fine restituisca il tipo richiesto.  
 
-## <a name="see-also"></a>Vedere anche  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [Metodi](../../../csharp/programming-guide/classes-and-structs/methods.md)  
- [Delegati](../../../csharp/programming-guide/delegates/index.md)  
- [Operatori](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
- [Tipi](../../../csharp/programming-guide/types/index.md)  
- [Espressioni di query LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- [Metodi](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+- [Delegati](../../../csharp/programming-guide/delegates/index.md)  
+- [Operatori](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
+- [Tipi](../../../csharp/programming-guide/types/index.md)  
+- [Espressioni di query LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)

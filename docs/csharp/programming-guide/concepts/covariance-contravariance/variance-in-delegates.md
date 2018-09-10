@@ -2,12 +2,12 @@
 title: Varianza nei delegati (C#)
 ms.date: 07/20/2015
 ms.assetid: 19de89d2-8224-4406-8964-2965b732b890
-ms.openlocfilehash: 8b74c29d8d94a31d30408131009d92e2b2a4281c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3dabac4e532198871cf05d639aa692751ab17ae1
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326228"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44208675"
 ---
 # <a name="variance-in-delegates-c"></a>Varianza nei delegati (C#)
 In .NET framework 3.5 è stato introdotto il supporto della varianza per la corrispondenza delle firme del metodo con i tipi di delegati in tutti i delegati in C#. Ciò significa che è possibile assegnare ai delegati non solo i metodi con firme corrispondenti, ma anche i metodi che restituiscono più tipi derivati (covarianza) o accettano parametri con meno tipi derivati (controvarianza) rispetto a quelli specificati dal tipo di delegato. Sono inclusi sia i delegati generici che quelli non generici.  
@@ -196,7 +196,8 @@ public static void Test()
 }  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Generics](~/docs/standard/generics/index.md)  
- [Uso della varianza per i delegati generici Func e Action (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)  
- [Procedura: Combinare delegati multicast](../../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Generics](~/docs/standard/generics/index.md)  
+- [Uso della varianza per i delegati generici Func e Action (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)  
+- [Procedura: Combinare delegati multicast](../../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)

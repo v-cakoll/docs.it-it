@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - fields [C#]
 ms.assetid: 3cbb2f61-75f8-4cce-b4ef-f5d1b3de0db7
-ms.openlocfilehash: 65e815411cc9f4af063cb955ae63d18e87f43f38
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 708bd4e768e795397624bcac6e5bc2594bff93f5
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43483068"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44210338"
 ---
 # <a name="fields-c-programming-guide"></a>Campi (Guida per programmatori C#)
 Un *campo* è una variabile di qualsiasi tipo che viene dichiarata direttamente in una [classe](../../../csharp/language-reference/keywords/class.md) o [struct](../../../csharp/language-reference/keywords/struct.md). I campi sono *membri* del rispettivo tipo contenitore.  
@@ -46,10 +46,11 @@ Un *campo* è una variabile di qualsiasi tipo che viene dichiarata direttamente 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [Classi e struct](../../../csharp/programming-guide/classes-and-structs/index.md)  
- [Uso dei costruttori](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)  
- [Ereditarietà](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
- [Modificatori di accesso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)  
- [Classi e membri delle classi astratte e sealed](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- [Classi e struct](../../../csharp/programming-guide/classes-and-structs/index.md)  
+- [Uso dei costruttori](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)  
+- [Ereditarietà](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
+- [Modificatori di accesso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)  
+- [Classi e membri delle classi astratte e sealed](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)

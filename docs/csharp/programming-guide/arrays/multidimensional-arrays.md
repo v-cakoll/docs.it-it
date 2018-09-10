@@ -5,14 +5,15 @@ helpviewer_keywords:
 - arrays [C#], multidimensional
 - multidimensional arrays [C#]
 ms.assetid: 020ce02e-7dff-4273-8e53-bf0b33747232
-ms.openlocfilehash: 12cc7ff4f0a688145f2dee130e66dbe9a05ec7e7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a1d7a0a014c330682316e869f6727082fa3b31ef
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33313849"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44266018"
 ---
 # <a name="multidimensional-arrays-c-programming-guide"></a>Matrici multidimensionali (Guida per programmatori C#)
+
 Le matrici possono avere più di una dimensione. La dichiarazione seguente, ad esempio, crea una matrice bidimensionale di quattro righe e due colonne.  
   
  [!code-csharp[csProgGuideArrays#11](../../../csharp/programming-guide/arrays/codesnippet/CSharp/multidimensional-arrays_1.cs)]  
@@ -21,7 +22,8 @@ Le matrici possono avere più di una dimensione. La dichiarazione seguente, ad e
   
  [!code-csharp[csProgGuideArrays#12](../../../csharp/programming-guide/arrays/codesnippet/CSharp/multidimensional-arrays_2.cs)]  
   
-## <a name="array-initialization"></a>Inizializzazione di una matrice  
+## <a name="array-initialization"></a>Inizializzazione di una matrice
+
  È possibile inizializzare la matrice al momento della dichiarazione, come illustrato nell'esempio seguente.  
   
  [!code-csharp[csProgGuideArrays#13](../../../csharp/programming-guide/arrays/codesnippet/CSharp/multidimensional-arrays_3.cs)]  
@@ -46,8 +48,9 @@ Le matrici possono avere più di una dimensione. La dichiarazione seguente, ad e
   
  [!code-csharp[csProgGuideArrays#17](../../../csharp/programming-guide/arrays/codesnippet/CSharp/multidimensional-arrays_8.cs)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [Array](../../../csharp/programming-guide/arrays/index.md)  
- [Matrici unidimensionali](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)  
- [Matrici irregolari](../../../csharp/programming-guide/arrays/jagged-arrays.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- [Array](../../../csharp/programming-guide/arrays/index.md)  
+- [Matrici unidimensionali](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)  
+- [Matrici irregolari](../../../csharp/programming-guide/arrays/jagged-arrays.md)

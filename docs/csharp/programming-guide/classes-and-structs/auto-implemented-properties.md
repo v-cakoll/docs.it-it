@@ -5,12 +5,12 @@ helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: aa55fa97-ccec-431f-b5e9-5ac789fd32b7
-ms.openlocfilehash: 756e235dacc3fcb2bf741d1d426e8dfcb53bf19b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0d32dfd626cb8484e935dd0e8608c2e29d3ecbde
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33313800"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44228078"
 ---
 # <a name="auto-implemented-properties-c-programming-guide"></a>Proprietà implementate automaticamente (Guida per programmatori C#)
 In C# 3.0 e versioni successive, le proprietà implementate automaticamente rendono più concisa la dichiarazione di proprietà quando nelle funzioni di accesso della proprietà non è necessaria alcuna logica aggiuntiva. Consentono inoltre al codice client di creare oggetti. Quando si dichiara una proprietà come mostrato nel seguente esempio, il compilatore crea un campo sottostante privato anonimo accessibile solo tramite le funzioni di accesso `get` e `set` della proprietà.  
@@ -30,6 +30,7 @@ public string FirstName { get; set; } = "Jane";
   
  Gli attributi sono consentiti nelle proprietà implementate automaticamente, ma ovviamente non nei campi sottostanti perché non sono accessibili dal codice sorgente. Se è necessario usare un attributo nel campo sottostante di una proprietà, è sufficiente creare una normale proprietà.  
   
-## <a name="see-also"></a>Vedere anche  
- [Proprietà](../../../csharp/programming-guide/classes-and-structs/properties.md)  
- [Modificatori](../../../csharp/language-reference/keywords/modifiers.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Proprietà](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+- [Modificatori](../../../csharp/language-reference/keywords/modifiers.md)
