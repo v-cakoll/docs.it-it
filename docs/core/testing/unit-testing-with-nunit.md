@@ -2,20 +2,32 @@
 title: Testing unità di C# con NUnit e .NET Core
 description: Informazioni sui concetti relativi agli unit test in C# e .NET Core tramite un'esperienza interattiva per la creazione passo-passo di una soluzione di esempio con test dotnet e NUnit.
 author: rprouse
-ms.date: 12/01/2017
-ms.openlocfilehash: 8cf9e28353dd4dad6143f0dc3f8c0a8245715ea2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 08/31/2018
+ms.openlocfilehash: 253e07c16740a39566cf37ee5742a32342c78c49
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43468912"
 ---
 # <a name="unit-testing-c-with-nunit-and-net-core"></a>Testing unità di C# con NUnit e .NET Core
 
 In questa esercitazione viene illustrata un'esperienza interattiva di compilazione passo passo di una soluzione di esempio finalizzata all'apprendimento dei concetti base del testing unità. Se si preferisce seguire l'esercitazione usando una soluzione preesistente, [visualizzare o scaricare il codice di esempio](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-nunit/) prima di iniziare. Per istruzioni sul download, vedere [Esempi ed esercitazioni](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
+## <a name="prerequisites"></a>Prerequisiti
+
+- [.NET Core SDK 2.1 (v. 2.1.400)](https://www.microsoft.com/net/download) o versioni successive.
+- Editor di testo o editor di codice a scelta.
+
 ## <a name="creating-the-source-project"></a>Creazione del progetto di origine
 
-Aprire una finestra della shell. Creare una directory denominata *unit-testing-using-nunit* in cui archiviare la soluzione. In questa nuova directory, eseguire [`dotnet new sln`](../tools/dotnet-new.md) per creare un nuovo file di soluzione per la libreria di classi e il progetto di test. Creare quindi una directory *PrimeService*. Finora è stata creata la struttura di directory e file seguente:
+Aprire una finestra della shell. Creare una directory denominata *unit-testing-using-nunit* in cui archiviare la soluzione. In questa nuova directory eseguire il comando seguente per creare un nuovo file di soluzione per la libreria di classi e il progetto di test:
+
+```console
+dotnet new sln
+```
+ 
+Creare quindi una directory *PrimeService*. Finora è stata creata la struttura di directory e file seguente:
 
 ```
 /unit-testing-using-nunit
@@ -23,7 +35,13 @@ Aprire una finestra della shell. Creare una directory denominata *unit-testing-u
     /PrimeService
 ```
 
-Impostare *PrimeService* come directory corrente ed eseguire [`dotnet new classlib`](../tools/dotnet-new.md) per creare il progetto di origine. Assegnare il nome *PrimeService.cs* al file *Class1.cs*. Per usare lo sviluppo basato su test (TDD), si creerà un'implementazione non corretta della classe `PrimeService`:
+Impostare *PrimeService* come directory corrente ed eseguire il comando seguente per creare il progetto di origine:
+
+```console
+dotnet new classlib
+```
+
+Assegnare il nome *PrimeService.cs* al file *Class1.cs*. Per usare lo sviluppo basato su test (TDD), si creerà un'implementazione non corretta della classe `PrimeService`:
 
 ```csharp
 using System;
@@ -40,17 +58,13 @@ namespace Prime.Services
 }
 ```
 
-Tornare alla directory *unit-testing-using-nunit*. Eseguire [`dotnet sln add PrimeService/PrimeService.csproj`](../tools/dotnet-sln.md) per aggiungere il progetto di libreria di classi alla soluzione.
+Tornare alla directory *unit-testing-using-nunit*. Eseguire il comando seguente per aggiungere il progetto di libreria di classi alla soluzione:
 
-## <a name="install-the-nunit-project-template"></a>Installare il modello di progetto NUnit
-
-È necessario installare i modelli di progetto di test NUnit prima di creare un progetto di test. Questa operazione deve essere eseguita una sola volta in ogni computer di sviluppo in cui verranno creati nuovi progetti NUnit. Eseguire [`dotnet new -i NUnit3.DotNetNew.Template`](../tools/dotnet-new.md) per installare i modelli NUnit.
-
-```
-dotnet new -i NUnit3.DotNetNew.Template
+```console
+dotnet sln add PrimeService/PrimeService.csproj
 ```
 
-### <a name="creating-the-test-project"></a>Creazione del progetto di test
+## <a name="creating-the-test-project"></a>Creazione del progetto di test
 
 Creare quindi la directory *PrimeService.Tests*. Di seguito è illustrata la struttura di directory:
 
@@ -63,19 +77,19 @@ Creare quindi la directory *PrimeService.Tests*. Di seguito è illustrata la str
     /PrimeService.Tests
 ```
 
-Impostare *PrimeService.Tests* come directory corrente e creare un nuovo progetto usando [`dotnet new nunit`](../tools/dotnet-new.md). Il comando dotnet new crea un progetto di test che usa NUnit come libreria di test. Il modello generato configura il Test Runner nel file *PrimeServiceTests.csproj*:
+Impostare *PrimeService.Tests* come directory corrente e creare un nuovo progetto usando il comando seguente:
 
-```xml
-<ItemGroup>
-  <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.5.0" />
-  <PackageReference Include="NUnit" Version="3.9.0" />
-  <PackageReference Include="NUnit3TestAdapter" Version="3.9.0" />
-</ItemGroup>
+```console
+dotnet new nunit
 ```
+
+Il comando [dotnet new](../tools/dotnet-new.md) crea un progetto di test che usa NUnit come libreria di test. Il modello generato configura il Test Runner nel file *PrimeService.Tests.csproj*:
+
+[!code-xml[Packages](~/samples/core/getting-started/unit-testing-using-nunit/PrimeService.Tests/PrimeService.Tests.csproj#Packages)]
 
 Per creare ed eseguire unit test, il progetto di test richiede altri pacchetti. `dotnet new` nel passaggio precedente aggiunge Microsoft Test SDK, il framework di test NUnit e l'adattatore di test NUnit. Aggiungere ora la libreria di classi `PrimeService` come un'altra dipendenza del progetto. Usare il comando [`dotnet add reference`](../tools/dotnet-add-reference.md):
 
-```
+```console
 dotnet add reference ../PrimeService/PrimeService.csproj
 ```
 
@@ -91,14 +105,18 @@ Il layout della soluzione finale è il seguente:
         PrimeService.csproj
     /PrimeService.Tests
         Test Source Files
-        PrimeServiceTests.csproj
+        PrimeService.Tests.csproj
 ```
 
-Eseguire [`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.csproj`](../tools/dotnet-sln.md) nella directory *unit-testing-using-dotnet-test*.
+Eseguire il comando seguente nella directory *unit-testing-using-dotnet-test*:
+
+```console
+dotnet sln add .\PrimeService.Tests\PrimeService.Tests.csproj
+```
 
 ## <a name="creating-the-first-test"></a>Creazione del primo test
 
-L'approccio di sviluppo basato su test richiede la creazione di un test con esito negativo. È quindi necessario che il test venga superato e che il processo venga ripetuto. Rimuovere *UnitTest1.cs* dalla directory *PrimeService.Tests* e creare un nuovo file C# denominato *PrimeService_IsPrimeShould.cs* con il contenuto seguente:
+L'approccio di sviluppo basato su test richiede la creazione di un test con esito negativo. È quindi necessario che il test venga superato e che il processo venga ripetuto. Nella directory *PrimeService.Tests* rinominare il file *UnitTest1.cs* in *PrimeService_IsPrimeShould.cs* e sostituire l'intero contenuto con il codice seguente:
 
 ```csharp
 using NUnit.Framework;
@@ -154,7 +172,7 @@ Anziché creare nuovi test, applicare questo attributo per creare un singolo tes
 
 [!code-csharp[Sample_TestCode](../../../samples/core/getting-started/unit-testing-using-nunit/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_TestCode)]
 
-Eseguire `dotnet test`. Due test hanno esito negativo. Per assicurare che tutti i test vengano superati, modificare la clausola `if` all'inizio del metodo:
+Eseguire `dotnet test`. Due test hanno esito negativo. Per assicurare che tutti i test vengano superati, modificare la clausola `if` all'inizio del metodo `Main` nel file *PrimeService.cs*:
 
 ```csharp
 if (candidate < 2)

@@ -2,12 +2,12 @@
 title: Operazioni di generazione (C#)
 ms.date: 07/20/2015
 ms.assetid: 1c421b3a-5954-448c-bcac-a27798d1858f
-ms.openlocfilehash: 01b3d439e826dc5fd8435d37f8c80a29141b3ecc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 968f74342ca4fe5ef892c9ce64ed0e9ac21a6071
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326397"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43500244"
 ---
 # <a name="generation-operations-c"></a>Operazioni di generazione (C#)
 La generazione si riferisce alla creazione di una nuova sequenza di valori.  
@@ -23,6 +23,7 @@ La generazione si riferisce alla creazione di una nuova sequenza di valori.
 |Intervallo|Genera una raccolta che contiene una sequenza di numeri.|Non applicabile.|<xref:System.Linq.Enumerable.Range%2A?displayProperty=nameWithType>|  
 |Repeat|Genera una raccolta che contiene un valore ripetuto.|Non applicabile.|<xref:System.Linq.Enumerable.Repeat%2A?displayProperty=nameWithType>|  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Linq>  
- [Cenni preliminari sugli operatori di query standard (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.Linq>  
+- [Cenni preliminari sugli operatori di query standard (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - indexers [C#], in interfaces
 - accessors [C#], indexers
 ms.assetid: e16b54bd-4a83-4f52-bd75-65819fca79e8
-ms.openlocfilehash: 120b6e72a6ab906437c593d6eb33024d1df8f52b
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: c3ddb48590087d49402482e8cbf3760027da1a2a
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207965"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43799463"
 ---
 # <a name="indexers-in-interfaces-c-programming-guide"></a>Indicizzatori nelle interfacce (Guida per programmatori C#)
 Gli indicizzatori possono essere dichiarati su una [interfaccia](../../../csharp/language-reference/keywords/interface.md). Le funzioni di accesso degli indicizzatori di interfaccia differiscono dalle funzioni di accesso degli indicizzatori di [classe](../../../csharp/language-reference/keywords/class.md) per gli aspetti seguenti:  
@@ -58,8 +58,9 @@ string ICitizen.this[int index]
   
  implementa l'indicizzatore nell'interfaccia `ICitizen`.  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [Indicizzatori](../../../csharp/programming-guide/indexers/index.md)  
- [Proprietà](../../../csharp/programming-guide/classes-and-structs/properties.md)  
- [Interfacce](../../../csharp/programming-guide/interfaces/index.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- [Indicizzatori](../../../csharp/programming-guide/indexers/index.md)  
+- [Proprietà](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+- [Interfacce](../../../csharp/programming-guide/interfaces/index.md)

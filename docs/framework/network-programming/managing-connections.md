@@ -20,19 +20,19 @@ ms.assetid: 9b3d3de7-189f-4f7d-81ae-9c29c441aaaa
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 8702f2329b262fc5c5965ae49365d46ba34091d6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 29077a1c0f2b803270adb730e0d810143095e709
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391173"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484980"
 ---
 # <a name="managing-connections"></a>Gestione di connessioni
 Le applicazioni che usano HTTP per connettersi alle risorse di dati possono usare le classi <xref:System.Net.ServicePoint> e <xref:System.Net.ServicePointManager> di .NET Framework per gestire le connessioni a Internet e ottenere prestazioni e scalabilità ottimali.  
   
  La classe **ServicePoint** offre un endpoint a cui un'applicazione può connettersi per accedere alle risorse Internet. Ogni **ServicePoint** contiene informazioni che consentono di ottimizzare le connessioni con un server Internet tramite la condivisione di informazioni sull'ottimizzazione tra le connessioni per migliorare le prestazioni.  
   
- Ogni **ServicePoint** è identificato da un URI (Uniform Resource Identifier) e viene categorizzato in base ai frammenti dell'URI che indicano host e identificatore di schema. Ad esempio, la stessa istanza di **ServicePoint** fornirà le richieste agli URI http://www.contoso.com/index.htm e http://www.contoso.com/news.htm?date=today perché hanno gli stessi frammenti per l'identificatore di schema (http) e l'host (www.contoso.com). Se l'applicazione dispone già di una connessione permanente al server www.contoso.com, userà tale connessione per recuperare entrambe le richieste, evitando la necessità di creare due connessioni.  
+ Ogni **ServicePoint** è identificato da un URI (Uniform Resource Identifier) e viene categorizzato in base ai frammenti dell'URI che indicano host e identificatore di schema. Ad esempio, la stessa istanza di **ServicePoint** fornirà le richieste agli URI `http://www.contoso.com/index.htm` e `http://www.contoso.com/news.htm?date=today` perché hanno gli stessi frammenti per l'identificatore di schema (http) e l'host (`www.contoso.com`). Se l'applicazione dispone già di una connessione permanente al server `www.contoso.com`, userà tale connessione per recuperare entrambe le richieste, evitando la necessità di creare due connessioni.  
   
  **ServicePointManager** è una classe statica che gestisce la creazione e distruzione delle istanze di **ServicePoint**. **ServicePointManager** crea un **ServicePoint** quando l'applicazione richiede una risorsa Internet che non è presente nella raccolta di istanze di **ServicePoint** esistenti. Le istanze di **ServicePoint** vengono eliminate definitivamente quando superano il tempo di inattività massimo o quando il numero di istanze di **ServicePoint** esistenti supera il numero massimo di istanze di **ServicePoint** per l'applicazione. È possibile controllare sia il tempo di inattività massimo predefinito che il numero massimo di istanze di **ServicePoint** impostando le proprietà <xref:System.Net.ServicePointManager.MaxServicePointIdleTime%2A> e <xref:System.Net.ServicePointManager.MaxServicePoints%2A> in **ServicePointManager**.  
   
@@ -53,7 +53,7 @@ ServicePointManager.DefaultConnectionLimit = 4;
 ServicePointManager.DefaultConnectionLimit = 4  
 ```  
   
- La modifica della proprietà **ServicePointManager.DefaultConnectionLimit** non influisce sulle istanze di **ServicePoint** inizializzate in precedenza. Il codice seguente illustra la modifica del limite di connessione per un'istanza esistente di **ServicePoint** per il server http://www.contoso.com sul valore archiviato in `newLimit`.  
+ La modifica della proprietà **ServicePointManager.DefaultConnectionLimit** non influisce sulle istanze di **ServicePoint** inizializzate in precedenza. Il codice seguente illustra la modifica del limite di connessione per un'istanza esistente di **ServicePoint** per il server `http://www.contoso.com` sul valore archiviato in `newLimit`.  
   
 ```csharp  
 Uri uri = new Uri("http://www.contoso.com/");  

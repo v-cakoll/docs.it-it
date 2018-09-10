@@ -2,12 +2,12 @@
 title: Esempio che genera parti di documento Office Open XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 6cd37055-89b4-42e8-bf27-5a29717e35f3
-ms.openlocfilehash: e63f6eafb32a6426d6c3fd7296c0e8fa6595efee
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5dd8e4238ff4015130160b5297f807d79013ce7b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33325370"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43505671"
 ---
 # <a name="example-that-outputs-office-open-xml-document-parts-c"></a>Esempio che genera parti di documento Office Open XML (C#)
 In questo argomento viene illustrato come aprire un documento Office Open XML e accedere a parti del documento.  
@@ -66,5 +66,6 @@ using (Package wdPackage = Package.Open(fileName, FileMode.Open, FileAccess.Read
 }  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Details of Office Open XML WordprocessingML Documents (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md) (Dettagli di documenti WordprocessingML Office Open XML (C#))
+## <a name="see-also"></a>Vedere anche
+
+- [Details of Office Open XML WordprocessingML Documents (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md) (Dettagli di documenti WordprocessingML Office Open XML (C#))

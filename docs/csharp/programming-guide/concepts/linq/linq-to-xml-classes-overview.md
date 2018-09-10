@@ -2,12 +2,12 @@
 title: Panoramica delle classi LINQ to XML (C#)
 ms.date: 07/20/2015
 ms.assetid: bf666100-5392-4968-97f4-f6b9d3287d7b
-ms.openlocfilehash: 619bf59c2b10cbb699f8e5b177991da9a0a2b238
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: d1454909591ff060f9d2a1d2484302e7112be149
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42752120"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502391"
 ---
 # <a name="linq-to-xml-classes-overview-c"></a>Panoramica delle classi LINQ to XML (C#)
 In questo argomento viene fornito un elenco delle classi [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] disponibili nello spazio dei nomi <xref:System.Xml.Linq>, con una breve descrizione.  
@@ -86,5 +86,6 @@ In questo argomento viene fornito un elenco delle classi [!INCLUDE[sqltecxlinq](
 ### <a name="xtext-class"></a>Classe XText  
  <xref:System.Xml.Linq.XText> rappresenta un nodo di testo. Nella maggior parte dei casi non è necessario usare questa classe, che viene usata principalmente per contenuto misto.  
   
-## <a name="see-also"></a>Vedere anche  
- [Panoramica della programmazione con LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Panoramica della programmazione con LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)

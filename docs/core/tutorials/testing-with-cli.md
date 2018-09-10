@@ -4,12 +4,12 @@ description: Questa esercitazione illustra come organizzare e testare i progetti
 author: cartermp
 ms.author: mairaw
 ms.date: 05/16/2017
-ms.openlocfilehash: a49eb1d398ab80a4ece703b7889083ea967df862
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 5fdbdc115ea5cd6da54f7c43bec2aa6f82e71310
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37960983"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43400283"
 ---
 # <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a>Organizzazione e test di progetti con la riga di comando di .NET Core
 
@@ -162,7 +162,7 @@ public class PetTests
 Esercizio facoltativo: se in precedenza è stato aggiunto un tipo `Bird` che restituisce `Tweet!` al proprietario, aggiungere al file *PetTests.cs* un metodo di test `BirdTalkToOwnerReturnsTweet` per verificare che il metodo `TalkToOwner` funzioni correttamente per il tipo `Bird`.
 
 > [!NOTE]
-> Anche se si prevede che i valori `expected` e `actual` siano uguali, le asserzioni iniziali con le verifiche `Assert.NotEqual` specificano che sono *not equal* (diversi). Inizialmente creare sempre i test in modo che diano esito negativo almeno una volta, per verificare la struttura del codice. Questo è un passaggio importante nella metodologia di design basato su test (TDD, Test-Driven Design). Dopo aver verificato che i test hanno dato esito negativo, modificare le asserzioni per fare in modo che diano esito positivo.
+> Anche se si prevede che i valori `expected` e `actual` siano uguali, un'asserzione iniziale con le verifiche `Assert.NotEqual` specifica che questi valori sono *not equal* (diversi). Per verificare la logica del test, inizialmente creare sempre i test in modo che diano esito negativo. Dopo aver confermato che il test non riesce, modificare l'asserzione per fare in modo che il test venga superato.
 
 Di seguito viene riportata la struttura completa del progetto:
 

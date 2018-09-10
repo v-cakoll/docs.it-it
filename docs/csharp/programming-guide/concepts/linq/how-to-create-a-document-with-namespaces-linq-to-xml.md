@@ -2,12 +2,12 @@
 title: 'Procedura: creare un documento con spazi dei nomi (C#) (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 37e63c57-f86d-47ac-88a7-2c2d107def30
-ms.openlocfilehash: ab572e0af79d51205167ad60b1b80e8ba6b43707
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5937639fc48b82ee155450a3eaa1c7715ee3f9b9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330691"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43478026"
 ---
 # <a name="how-to-create-a-document-with-namespaces-c-linq-to-xml"></a>Procedura: creare un documento con spazi dei nomi (C#) (LINQ to XML)
 In questo argomento viene illustrato come creare documenti con spazi dei nomi.  
@@ -58,7 +58,7 @@ Console.WriteLine(root);
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente è illustrata la creazione di un documento che contiene due spazi dei nomi. Uno è lo spazio dei nomi predefinito, mentre l'altro è uno spazio dei nomi con prefisso.  
   
- Includendo gli attributi dello spazio dei nomi nell'elemento radice, gli spazi dei nomi vengono serializzati in modo tale che http://www.adventure-works.com corrisponde allo spazio dei nomi predefinito e www.fourthcoffee.com viene serializzato con il prefisso "fc". Per creare un attributo che dichiara uno spazio dei nomi predefinito, viene creato un attributo denominato "xmlns" e senza spazio dei nomi. Il valore dell'attributo è l'URI dello spazio dei nomi predefinito.  
+ Se si includono gli attributi dello spazio dei nomi nell'elemento radice, gli spazi dei nomi vengono serializzati in modo tale che `http://www.adventure-works.com` corrisponda allo spazio dei nomi predefinito e `www.fourthcoffee.com` venga serializzato con il prefisso "fc". Per creare un attributo che dichiara uno spazio dei nomi predefinito, viene creato un attributo denominato "xmlns" e senza spazio dei nomi. Il valore dell'attributo è l'URI dello spazio dei nomi predefinito.  
   
 ```csharp  
 // The http://www.adventure-works.com namespace is forced to be the default namespace.  

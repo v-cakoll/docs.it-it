@@ -5,12 +5,12 @@ helpviewer_keywords:
 - constructors [C#], instance constructors
 - instance constructors [C#]
 ms.assetid: 24663779-c1e5-4af4-a942-ca554e4c542d
-ms.openlocfilehash: 5864511e6323ca1508494abfe2350e8eaffb6a2f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cd7105ec61e5c878dc148c30b27706b1eda3ae72
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333024"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43530379"
 ---
 # <a name="instance-constructors-c-programming-guide"></a>Costruttori di istanze (Guida per programmatori C#)
 I costruttori di istanze vengono usati per creare e inizializzare qualsiasi variabile membro di istanza quando si usa l'espressione [new](../../../csharp/language-reference/keywords/new.md) per creare un oggetto di una [classe](../../../csharp/language-reference/keywords/class.md). Per inizializzare una classe [statica](../../../csharp/language-reference/keywords/static.md), o variabili statiche in una classe non statica, è necessario definire un costruttore statico. Per altre informazioni, vedere [Costruttori statici](../../../csharp/programming-guide/classes-and-structs/static-constructors.md).  
@@ -57,9 +57,10 @@ I costruttori di istanze vengono usati per creare e inizializzare qualsiasi vari
   
  Per altri esempi su come chiamare i costruttori della classe di base, vedere [virtual](../../../csharp/language-reference/keywords/virtual.md), [override](../../../csharp/language-reference/keywords/override.md) e [base](../../../csharp/language-reference/keywords/base.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [Classi e struct](../../../csharp/programming-guide/classes-and-structs/index.md)  
- [Costruttori](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
- [Finalizzatori](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
- [static](../../../csharp/language-reference/keywords/static.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- [Classi e struct](../../../csharp/programming-guide/classes-and-structs/index.md)  
+- [Costruttori](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
+- [Finalizzatori](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
+- [static](../../../csharp/language-reference/keywords/static.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 4ece5c0b-f8fe-4114-9862-ac02cfe5a5d7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 809385bda48c6fb8dae125fe348228aaee375a6c
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: e399a512d2bee636aec35e008c0632ce9c5fa781
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37071305"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44172642"
 ---
 # <a name="asynchronous-programming-patterns"></a>Modelli di programmazione asincrona
 
@@ -79,6 +79,6 @@ Per una trattazione completa di TAP, APM ed EAP, vedere i collegamenti disponibi
 
 ## <a name="see-also"></a>Vedere anche
 
-[Programmazione asincrona in C#](~/docs/csharp/async.md)   
-[Async Programming in F#](~/docs/fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)  (Programmazione asincrona in F#)  
-[Programmazione asincrona con Async e Await (Visual Basic)](~/docs/visual-basic/programming-guide/concepts/async/index.md)
+- [Programmazione asincrona in C#](~/docs/csharp/async.md)   
+- [Programmazione asincrona in F#](~/docs/fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)   
+- [Programmazione asincrona con Async e Await (Visual Basic)](~/docs/visual-basic/programming-guide/concepts/async/index.md)

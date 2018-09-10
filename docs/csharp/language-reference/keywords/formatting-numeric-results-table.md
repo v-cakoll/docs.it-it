@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Console.Write method
 ms.assetid: 120ba537-4448-4c62-8676-7a8fdd98f496
 ms.openlocfilehash: 8d034955d5d5d31788eafc0c21246451d7fd1f35
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43474294"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43508199"
 ---
 # <a name="formatting-numeric-results-table-c-reference"></a>Tabella di formattazione dei risultati numerici (Riferimenti per C#)
 È possibile formattare i risultati numerici usando il metodo <xref:System.String.Format%2A?displayProperty=nameWithType>, con il metodo <xref:System.Console.Write%2A?displayProperty=nameWithType> o <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> che chiama `String.Format` o usando l'[interpolazione di stringhe](../tokens/interpolated.md). Il formato è specificato dalle stringhe di formato. La tabella seguente contiene le stringhe di formato standard supportate. La stringa di formato ha questo aspetto: `Axx`, dove `A` è l'identificatore del formato e `xx` è l'identificatore della precisione. L'identificatore del formato controlla il tipo di formattazione applicato al valore numerico e l'identificatore della precisione controlla il numero di cifre significative o di decimali dell'output formattato. Il valore dell'identificatore della precisione è compreso tra 0 e 99.  

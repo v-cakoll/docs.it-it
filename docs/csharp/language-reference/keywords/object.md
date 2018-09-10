@@ -7,27 +7,31 @@ f1_keywords:
 helpviewer_keywords:
 - object keyword [C#]
 ms.assetid: 93f60c0b-e17a-40a9-9362-cca5fb77b0e7
-ms.openlocfilehash: 67eaf7f1fd2f01e433395ed21701c3b7fad7c7b4
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: b36703828e6027a89297ac88edaf2b55ec18f42e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39199251"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482522"
 ---
 # <a name="object-c-reference"></a>object (Riferimenti per C#)
-Il tipo `object` è un alias di <xref:System.Object> in .NET Framework. Nel sistema di tipi unificato di C#, tutti i tipi, predefiniti e definiti dall'utente, i tipi riferimento e i tipi valore ereditano direttamente o indirettamente da <xref:System.Object>. Alle variabili di tipo `object` è possibile assegnare valori di qualsiasi tipo. Una variabile di un tipo di valore convertita in oggetto viene definita *boxed*. Una variabile di tipo object convertita in un tipo di valore viene definita *unboxed*. Per altre informazioni, vedere [Boxing e unboxing](../../../csharp/programming-guide/types/boxing-and-unboxing.md).  
-  
-## <a name="example"></a>Esempio  
- L'esempio seguente descrive come le variabili di tipo `object` possono accettare valori di qualsiasi tipo di dati e come le variabili di tipo `object` possono usare i metodi in <xref:System.Object> da .NET Framework.  
-  
- [!code-csharp[csrefKeywordsTypes#16](../../../csharp/language-reference/keywords/codesnippet/CSharp/object_1.cs)]  
-  
-## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a>Vedere anche  
- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)  
- [Tipi riferimento](../../../csharp/language-reference/keywords/reference-types.md)  
- [Tipi valore](../../../csharp/language-reference/keywords/value-types.md)
+
+Il tipo `object` è un alias per <xref:System.Object> in .NET. Nel sistema di tipi unificato di C#, tutti i tipi, predefiniti e definiti dall'utente, i tipi riferimento e i tipi valore ereditano direttamente o indirettamente da <xref:System.Object>. Alle variabili di tipo `object` è possibile assegnare valori di qualsiasi tipo. Una variabile di un tipo di valore convertita in oggetto viene definita *boxed*. Una variabile di tipo object convertita in un tipo di valore viene definita *unboxed*. Per altre informazioni, vedere [Boxing e unboxing](../../../csharp/programming-guide/types/boxing-and-unboxing.md).
+
+## <a name="example"></a>Esempio
+
+L'esempio seguente descrive come le variabili di tipo `object` possono accettare valori di qualsiasi tipo di dati e come le variabili di tipo `object` possono usare i metodi in <xref:System.Object> da .NET Framework.
+
+[!code-csharp[csrefKeywordsTypes#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#16)]
+
+## <a name="c-language-specification"></a>Specifiche del linguaggio C#
+
+[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+
+## <a name="see-also"></a>Vedere anche
+
+- [Riferimenti per C#](../index.md)
+- [Guida per programmatori C#](../../programming-guide/index.md)
+- [Parole chiave di C#](index.md)
+- [Tipi riferimento](reference-types.md)
+- [Tipi valore](value-types.md)

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - -fullpaths compiler option [C#]
 ms.assetid: d2a5f857-cbb2-430b-879c-d648aaf0b8c4
 ms.openlocfilehash: 8f23bb683067c55f5b5213065c3082b843dd7dce
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43388279"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43522943"
 ---
 # <a name="-fullpaths-c-compiler-options"></a>-fullpaths (opzioni del compilatore C#)
 L'opzione **-fullpaths** fa in modo che il compilatore specifichi il percorso completo del file quando vengono elencati gli avvisi e gli errori di compilazione.  

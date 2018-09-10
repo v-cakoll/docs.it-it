@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], vs. C++ templates
 ms.assetid: 1da6beeb-d4a4-4da0-87b7-0cfbe04920b7
-ms.openlocfilehash: db3311c7fa81d48137c542f320d0abef791e5116
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eef2fc5919f405b75be7ae2a2069b1e7cf8a45a7
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331685"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44088076"
 ---
 # <a name="differences-between-c-templates-and-c-generics-c-programming-guide"></a>Differenze tra modelli C++ e generics C# (Guida per programmatori C#)
 I generics C# e i modelli C++ sono entrambi funzionalità del linguaggio che offrono il supporto per i tipi con parametri. Esistono tuttavia numerose differenze tra queste due funzionalità. A livello di sintassi, i generics C# rappresentano un approccio più semplice ai tipi con parametri, senza la complessità dei modelli C++. Inoltre, il linguaggio C# non è stato concepito per offrire tutte le funzionalità dei modelli C++. A livello di implementazione, la differenza principale consiste nel fatto che le sostituzioni di tipi generici C# vengono eseguite durante il runtime e, di conseguenza, le informazioni sui tipi generici vengono mantenute per gli oggetti di cui viene creata un'istanza. Per altre informazioni, vedere [Generics nel runtime](../../../csharp/programming-guide/generics/generics-in-the-run-time.md).  
@@ -32,7 +32,8 @@ I generics C# e i modelli C++ sono entrambi funzionalità del linguaggio che off
   
 -   C++ consente di usare codice che potrebbe non essere valido per tutti i parametri di tipo nel modello, che viene quindi controllato per verificare la disponibilità del tipo specifico usato come parametro di tipo. In C# il codice di una classe deve essere scritto in modo da funzionare con qualsiasi tipo in grado di soddisfare i vincoli. Ad esempio, in C++ è possibile scrivere una funzione che usa gli operatori aritmetici `+` e `-` sugli oggetti del parametro di tipo, generando un errore al momento della creazione di un'istanza del modello con un tipo che non supporta gli operatori. In C# questo non è possibile. Gli unici costrutti di linguaggio ammessi sono quelli deducibili dai vincoli.  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [Introduzione ai generics](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
- [Modelli](/cpp/cpp/templates-cpp)
+## <a name="see-also"></a>Vedere anche
+
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- [Introduzione ai generics](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
+- [Modelli](/cpp/cpp/templates-cpp)

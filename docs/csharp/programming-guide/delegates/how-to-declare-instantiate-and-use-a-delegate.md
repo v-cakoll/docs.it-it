@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], declaring and instantiating
 ms.assetid: 61c4895f-f785-48f8-8bfe-db73b411c4ae
-ms.openlocfilehash: 19e5883135d65a648bb6afb74a475b761f572a95
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6c53d7572074db44976494e5eed596bf95aaf456
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333973"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43858860"
 ---
 # <a name="how-to-declare-instantiate-and-use-a-delegate-c-programming-guide"></a>Procedura: dichiarare un delegato, crearne un'istanza e utilizzarlo (Guida per programmatori C#)
 In C# 1.0 e versioni successive i delegati possono essere dichiarati come illustrato nell'esempio seguente.  
@@ -71,7 +71,8 @@ In C# 1.0 e versioni successive i delegati possono essere dichiarati come illust
   
      Un delegato può essere chiamato in modo sincrono, come in questo esempio, oppure in modo asincrono usando i metodi `BeginInvoke` e `EndInvoke`.  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [Eventi](../../../csharp/programming-guide/events/index.md)  
- [Delegati](../../../csharp/programming-guide/delegates/index.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- [Eventi](../../../csharp/programming-guide/events/index.md)  
+- [Delegati](../../../csharp/programming-guide/delegates/index.md)

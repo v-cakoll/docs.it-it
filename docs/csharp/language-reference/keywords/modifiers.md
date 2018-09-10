@@ -6,11 +6,11 @@ helpviewer_keywords:
 - modifiers [C#]
 ms.assetid: c96691dd-b357-49ec-b5ae-03ca214fadfb
 ms.openlocfilehash: 5000f94a954994769eda2ac09404ba6a71c4639b
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42930364"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43524828"
 ---
 # <a name="modifiers-c-reference"></a>Modificatori (Riferimenti per C#)
 I modificatori vengono utilizzati per modificare le dichiarazioni dei tipi e dei membri dei tipi. In questa sezione verranno descritti i modificatori C#.  

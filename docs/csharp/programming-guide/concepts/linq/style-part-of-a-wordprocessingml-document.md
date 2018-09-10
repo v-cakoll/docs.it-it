@@ -2,12 +2,12 @@
 title: Parte relativa allo stile di un documento WordprocessingML1
 ms.date: 07/20/2015
 ms.assetid: 5458bccf-3898-4661-904b-7d280c9239a9
-ms.openlocfilehash: e55e9ea8a2e8e35c5de7ee7442d3e8eec261906b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 96ed7445379d9a8ca64250ef4d923786555a3882
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334574"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44179598"
 ---
 # <a name="style-part-of-a-wordprocessingml-document"></a>Parte relativa allo stile di un documento WordprocessingML
 In questo argomento è illustrato un esempio della parte di stile del documento WordprocessingML di Office Open XML.  
@@ -140,5 +140,6 @@ In questo argomento è illustrato un esempio della parte di stile del documento 
 </w:styles>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Details of Office Open XML WordprocessingML Documents (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md) (Dettagli di documenti WordprocessingML Office Open XML (C#))
+## <a name="see-also"></a>Vedere anche
+
+- [Details of Office Open XML WordprocessingML Documents (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md) (Dettagli di documenti WordprocessingML Office Open XML (C#))

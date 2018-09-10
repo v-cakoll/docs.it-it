@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, versioning
 - C# language, override and new
 ms.assetid: 88247d07-bd0d-49e9-a619-45ccbbfdf0c5
-ms.openlocfilehash: 2a6a6f59320d94cf97b1a07448000bd708d95559
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5dfed1c4a7e68bbe112a136260bf95ba0826392d
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327551"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44178377"
 ---
 # <a name="versioning-with-the-override-and-new-keywords-c-programming-guide"></a>Controllo delle versioni con le parole chiave Override e New (Guida per programmatori C#)
 Il linguaggio C# è progettato in modo che il controllo delle versioni tra le classi [di base](../../../csharp/language-reference/keywords/base.md) e le classi derivate in diverse librerie possa svilupparsi e mantenere la compatibilità con le versioni precedenti. Ciò significa ad esempio che l'introduzione di un nuovo membro in una classe [di base](../../../csharp/language-reference/keywords/class.md) con lo stesso nome di un membro in una classe derivata è completamente supportata da C# e non causa comportamenti imprevisti. Significa inoltre che una classe deve dichiarare in modo esplicito se un metodo deve eseguire l'override di un metodo ereditato o se si tratta di un nuovo metodo che consente di nascondere un metodo ereditato con nome simile.  
@@ -78,8 +78,9 @@ Il linguaggio C# è progettato in modo che il controllo delle versioni tra le cl
   
  Per altri esempi di `new` e `override`, vedere [Sapere quando usare le parole chiave Override e New](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [Classi e struct](../../../csharp/programming-guide/classes-and-structs/index.md)  
- [Metodi](../../../csharp/programming-guide/classes-and-structs/methods.md)  
- [Ereditarietà](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- [Classi e struct](../../../csharp/programming-guide/classes-and-structs/index.md)  
+- [Metodi](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+- [Ereditarietà](../../../csharp/programming-guide/classes-and-structs/inheritance.md)

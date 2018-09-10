@@ -4,12 +4,12 @@ description: Architettura dei microservizi .NET per le applicazioni .NET in cont
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: ec3ccdd823e00d148bb8a97e906132f44e7fa727
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: ec0617c5a5c1861f3596e12f3d7a7017a448239e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106671"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43388905"
 ---
 # <a name="microservices-addressability-and-the-service-registry"></a>Indirizzabilità dei microservizi e registro del servizio
 
@@ -19,7 +19,7 @@ Lo [schema del registro del servizio](https://microservices.io/patterns/service-
 
 In alcuni ambienti di distribuzione dei microservizi (denominati cluster e illustrati in una sezione successiva), l'individuazione del servizio è una procedura predefinita. Nell'ambiente di un servizio contenitore di Azure, ad esempio, Kubernetes e DC/OS con Marathon possono gestire le procedure di registrazione e annullamento della registrazione delle istanze del servizio. Eseguono inoltre un proxy su ogni cluster host che svolge il ruolo di router di individuazione sul lato server. Un altro esempio è Azure Service Fabric, che offre un registro del servizio tramite il servizio di denominazione predefinito.
 
-Osservare come sia presente una certa sovrapposizione tra il registro del servizio e lo schema API Gateway, altro aspetto che contribuisce a risolvere il problema. Il [proxy inverso di Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-reverseproxy), ad esempio, è un tipo di implementazione di API Gateway basato sul servizio di denominazione di Service Fabric e semplifica la risoluzione degli indirizzi dei servizi interni.
+Osservare come sia presente una certa sovrapposizione tra il registro del servizio e lo schema API Gateway, altro aspetto che contribuisce a risolvere il problema. Il [proxy inverso di Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-reverseproxy), ad esempio, è un tipo di implementazione di un gateway API basato su Service Fabric Naming Service, che semplifica la risoluzione degli indirizzi dei servizi interni.
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 

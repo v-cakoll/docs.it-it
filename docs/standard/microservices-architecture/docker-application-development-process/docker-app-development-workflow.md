@@ -4,12 +4,12 @@ description: Architettura di microservizi .NET per applicazioni .NET in contenit
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.openlocfilehash: 0627a61e910b1d278fd2e604dd8de7021fdb0fed
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: b7115530c44321dc2a10be3996c14429591b611f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106217"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43401980"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Flusso di lavoro di sviluppo per app Docker
 
@@ -35,7 +35,7 @@ Un'applicazione è costituita da servizi e raccolte aggiuntive, ossia dipendenze
 
 Questa guida descrive nei dettagli l'intero processo e ogni passaggio principale è spiegato con riferimento all'ambiente Visual Studio.
 
-Quando si usa un approccio di sviluppo editor/CLI, ad esempio codice Visual Studio e CLI di Docker in macOS o Windows, di solito è necessario conoscere ogni passaggio in modo più dettagliato rispetto all'uso di Visual Studio. Per altre informazioni sull'uso di un ambiente CLI, vedere l'e-book [Containerized Docker Application lifecycle with Microsoft Platforms and Tools](http://aka.ms/dockerlifecycleebook/) (Ciclo di vita di un'applicazione Docker in un contenitore con piattaforme e strumenti Microsoft).
+Quando si usa un approccio di sviluppo editor/CLI, ad esempio codice Visual Studio e CLI di Docker in macOS o Windows, di solito è necessario conoscere ogni passaggio in modo più dettagliato rispetto all'uso di Visual Studio. Per altre informazioni sull'uso di un ambiente CLI, vedere l'e-book [Containerized Docker Application lifecycle with Microsoft Platforms and Tools](https://aka.ms/dockerlifecycleebook/) (Ciclo di vita di un'applicazione Docker in un contenitore con piattaforme e strumenti Microsoft).
 
 Quando si usa Visual Studio 2015 o Visual Studio 2017, molti di questi passaggi sono gestiti automaticamente e questo migliora notevolmente la produttività. Ciò vale soprattutto quando si usa Visual Studio 2017 con applicazioni a più contenitori. Ad esempio, con un solo clic, Visual Studio aggiunge ai progetti il Dockerfile e il file docker-compose.yml con la configurazione per l'applicazione. Quando si esegue l'applicazione in Visual Studio, viene creata l'immagine Docker e l'applicazione a più contenitori viene eseguita direttamente in Docker; è anche possibile eseguire il debug di diversi contenitori contemporaneamente. Queste funzionalità rendono lo sviluppo più veloce.
 
@@ -248,7 +248,7 @@ services:
 
 Si noti che questo file docker-compose.yml è una versione semplificata e unita. Contiene dati di configurazione statici per ogni contenitore, ad esempio il nome dell'immagine personalizzata, sempre applicabili, nonché informazioni di configurazione che potrebbero dipendere dall'ambiente di distribuzione, ad esempio la stringa di connessione. In seguito si vedrà come suddividere la configurazione di docker-compose.yml in più file docker-compose e sostituire valori a seconda del tipo di ambiente e di esecuzione, ovvero debug o release.
 
-L'esempio del file docker-compose.yml definisce cinque servizi: il servizio webmvc, che è un'applicazione Web; due microservizi, ovvero catalog.api e ordering.api; un contenitore origine dati, sql.data, basato su SQL Server per Linux eseguito come contenitore. Ogni servizio è distribuito come contenitore, quindi è necessaria un'immagine Docker per ciascuno.
+L'esempio del file docker-compose.yml definisce quattro servizi: il servizio webmvc, che è un'applicazione Web; due microservizi, ovvero catalog.api e ordering.api; un contenitore origine dati, sql.data, basato su SQL Server per Linux eseguito come contenitore. Ogni servizio è distribuito come contenitore, quindi è necessaria un'immagine Docker per ciascuno.
 
 Il file docker-compose.yml specifica non solo quali contenitori vengono usati, ma come sono configurati singolarmente. Ad esempio, la definizione del contenitore webmvc nel file .yml:
 

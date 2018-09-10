@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data sources [LINQ in C#], data transformations
 - data transformations [LINQ in C#]
 ms.assetid: 674eae9e-bc72-4a88-aed3-802b45b25811
-ms.openlocfilehash: c165f78c53cec0417d39320580b812ff01fef68b
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: cbb4583d7eceb1410450cd9c953c3431f25dd60b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39199322"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43513452"
 ---
 # <a name="data-transformations-with-linq-c"></a>Trasformazioni dati con LINQ (C#)
 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] non riguarda solo il recupero dei dati. È anche un potente strumento per la trasformazione dei dati. Con una query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] è possibile usare una sequenza di origine come input e modificarla in molti modi per creare una nuova sequenza di output. È possibile modificare la sequenza senza modificare gli elementi con operazioni di ordinamento e raggruppamento. Ma probabilmente la funzionalità più potente delle query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] è la possibilità di creare nuovi tipi. Questa operazione viene eseguita nella clausola [select](../../../../csharp/language-reference/keywords/select-clause.md). Ad esempio, è possibile effettuare le attività seguenti:  
@@ -97,10 +97,11 @@ ms.locfileid: "39199322"
   
  [!code-csharp[CsLINQGettingStarted#10](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_4.cs)]  
   
-## <a name="see-also"></a>Vedere anche  
- [LINQ (Language-Integrated Query) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)  
- [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
- [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)  
- [LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)  
- [Espressioni di query LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md)  
- [Clausola select](../../../../csharp/language-reference/keywords/select-clause.md)
+## <a name="see-also"></a>Vedere anche
+
+- [LINQ (Language-Integrated Query) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)  
+- [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
+- [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)  
+- [LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)  
+- [Espressioni di query LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md)  
+- [Clausola select](../../../../csharp/language-reference/keywords/select-clause.md)

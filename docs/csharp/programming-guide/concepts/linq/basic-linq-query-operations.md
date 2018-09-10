@@ -17,12 +17,12 @@ helpviewer_keywords:
 - join clause [LINQ in C#]
 - group clause [LINQ in C#]
 ms.assetid: a7ea3421-1cf4-4df7-832a-aa22fe6379e9
-ms.openlocfilehash: 2825b79c9638fff050522da43184a8d95a3fe02f
-ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.openlocfilehash: 8b8237a09b36114f7100c90cee0bd753236789fd
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42751967"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43522620"
 ---
 # <a name="basic-linq-query-operations-c"></a>Operazioni di query LINQ di base (C#)
 Questo argomento offre una breve introduzione alle espressioni di query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] e ad alcuni tipi di operazioni specifiche eseguite in una query. Informazioni più specifiche sono disponibili negli argomenti seguenti:  
@@ -99,9 +99,10 @@ from order in Customer.Orders...
 ## <a name="selecting-projections"></a>Selezione (proiezioni)  
  La clausola `select` produce i risultati della query e specifica la "forma" o un tipo di ogni elemento restituito. Ad esempio, è possibile specificare se i risultati saranno costituiti di oggetti `Customer` completi, di un solo membro, di un subset di membri, oppure un tipo di risultato completamente diverso basato su un calcolo o su una creazione nuova di oggetti. Quando la clausola `select` produce un valore diverso da una copia dell'elemento d'origine, l'operazione viene chiamata *proiezione*. L'uso di proiezioni per trasformare i dati è una funzionalità efficace delle espressioni delle query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Per altre informazioni, vedere [Trasformazioni dati con LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/data-transformations-with-linq.md) e [Clausola select](../../../../csharp/language-reference/keywords/select-clause.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Nozioni di base su LINQ in C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
- [Espressioni di query LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md)  
- [Procedura dettagliata: scrittura di query in C#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
- [Parole chiave di query (LINQ)](../../../../csharp/language-reference/keywords/query-keywords.md)  
- [Tipi anonimi](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Nozioni di base su LINQ in C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
+- [Espressioni di query LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md)  
+- [Procedura dettagliata: scrittura di query in C#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
+- [Parole chiave di query (LINQ)](../../../../csharp/language-reference/keywords/query-keywords.md)  
+- [Tipi anonimi](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)

@@ -3,12 +3,12 @@ title: Raggruppare i risultati di una query (LINQ in C#)
 description: Informazioni su come raggruppare i risultati usando LINQ in C#.
 ms.date: 12/1/2016
 ms.assetid: 2e4ec27f-06fb-4de7-8973-0189906d4520
-ms.openlocfilehash: 4da0aac6b406f588ea4f241c72d5700e8a63838c
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: f768718cb1435efdc67791612776c9e9ce2b14b8
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37403865"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43798335"
 ---
 # <a name="group-query-results"></a>Raggruppare i risultati di una query
 
@@ -76,11 +76,11 @@ Incollare il metodo seguente nella classe `StudentClass`. Modificare l'istruzion
 
 ## <a name="see-also"></a>Vedere anche
 
-<xref:System.Linq.Enumerable.GroupBy%2A>  
-<xref:System.Linq.IGrouping%602>  
-[LINQ (Language-Integrated Query)](index.md)  
-[Clausola group](../language-reference/keywords/group-clause.md)  
-[Tipi anonimi](../programming-guide/classes-and-structs/anonymous-types.md)  
-[Eseguire una sottoquery su un'operazione di raggruppamento](perform-a-subquery-on-a-grouping-operation.md)  
-[Creare un gruppo annidato](create-a-nested-group.md)  
-[Raggruppamento dei dati](../programming-guide/concepts/linq/grouping-data.md)  
+- <xref:System.Linq.Enumerable.GroupBy%2A>  
+- <xref:System.Linq.IGrouping%602>  
+- [LINQ (Language-Integrated Query)](index.md)  
+- [Clausola group](../language-reference/keywords/group-clause.md)  
+- [Tipi anonimi](../programming-guide/classes-and-structs/anonymous-types.md)  
+- [Eseguire una sottoquery su un'operazione di raggruppamento](perform-a-subquery-on-a-grouping-operation.md)  
+- [Creare un gruppo annidato](create-a-nested-group.md)  
+- [Raggruppamento dei dati](../programming-guide/concepts/linq/grouping-data.md)  

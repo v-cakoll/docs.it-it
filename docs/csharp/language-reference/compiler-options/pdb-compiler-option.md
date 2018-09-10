@@ -9,11 +9,11 @@ helpviewer_keywords:
 - /pdb compiler option [C#]
 ms.assetid: e9d0f96a-5b75-45d6-9765-92538dd5f823
 ms.openlocfilehash: dc7ea6aae6aa429efdf1a2dca23a3d679cb21fb7
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43418465"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526581"
 ---
 # <a name="-pdb-c-compiler-options"></a>-pdb (opzioni del compilatore C#)
 L'opzione del compilatore **-pdb** consente di specificare il nome e il percorso del file dei simboli di debug.  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-ms.openlocfilehash: d3fc4107c10d098d40e4021bef9f6acd06311fab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3c6315daf08ce9931263aa5fb27c80a0bf41ef79
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33336398"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43473986"
 ---
 # <a name="methods-c-programming-guide"></a>Metodi (Guida per programmatori C#)
 Un metodo è un blocco di codice che contiene una serie di istruzioni. Un programma fa in modo che le istruzioni vengano eseguite chiamando il metodo e specificando gli argomenti del metodo obbligatori. In C#, ogni istruzione eseguita viene attuata nel contesto di un metodo. Il metodo principale è il punto di ingresso per ogni applicazione C# e viene chiamato da Common Language Runtime (CLR) quando viene avviato il programma.  
@@ -24,7 +24,7 @@ Un metodo è un blocco di codice che contiene una serie di istruzioni. Un progra
 > [!NOTE]
 >  Un tipo restituito di un metodo non fa parte della firma del metodo in caso di overload dei metodi. Fa tuttavia parte della firma del metodo quando si determina la compatibilità tra un delegato e il metodo a cui fa riferimento.  
   
- I parametri del metodo vengono racchiusi tra parentesi e separati da virgole. Le parentesi vuote indicano che il metodo non richiede parametri. Questa classe contiene tre metodi:  
+ I parametri del metodo vengono racchiusi tra parentesi e separati da virgole. Le parentesi vuote indicano che il metodo non richiede parametri. Questa classe contiene quattro metodi:  
   
  [!code-csharp[csProgGuideObjects#40](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_1.cs)]  
   
@@ -88,23 +88,23 @@ ref int distance = plant
 Non è necessario restituire una matrice multidimensionale da un metodo, `M`, che modifica il contenuto della matrice, se la funzione chiamante ha passato la matrice a `M`.  Si può restituire la matrice risultante da `M` per un flusso di valori corretto o funzionale, ma non è necessario perché C# passa tutti i tipi riferimento per valore e il valore di un riferimento a una matrice è il puntatore alla matrice. Nel metodo `M`, eventuali modifiche apportate al contenuto della matrice sono osservabili da qualsiasi codice che presenti un riferimento alla matrice, come illustrato nell'esempio seguente.  
   
 ```csharp  
-static void Main(string[] args)  
-        {  
-            int[,] matrix = new int[2, 2];  
-            FillMatrix(matrix);  
-            // matrix is now full of -1  
-        }  
-  
-        public static void FillMatrix(int[,] matrix)  
-        {  
-            for (int i = 0; i < matrix.GetLength(0); i++)  
-            {  
-                for (int j = 0; j < matrix.GetLength(1); j++)  
-                {  
-                    matrix[i, j] = -1;  
-                }  
-            }  
-        }  
+static void Main(string[] args)
+{
+    int[,] matrix = new int[2, 2];
+    FillMatrix(matrix);
+    // matrix is now full of -1
+}
+
+public static void FillMatrix(int[,] matrix)
+{
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            matrix[i, j] = -1;
+        }
+    }
+}
 ```  
   
  Per altre informazioni, vedere [return](../../../csharp/language-reference/keywords/return.md).  
@@ -150,7 +150,7 @@ public Customer this[long id] => store.LookupCustomer(id);
   
  Il tipo restituito di un iteratore può essere <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>o <xref:System.Collections.Generic.IEnumerator%601>.  
   
- Per altre informazioni, vedere [Iteratori](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7).  
+ Per altre informazioni, vedere [Iteratori](https://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7).  
   
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  

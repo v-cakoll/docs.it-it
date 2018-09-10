@@ -11,12 +11,12 @@ ms.author: ronpet
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: abb1f72a10a4aff448dea22b5c9415111c25eaab
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 852efc14af02eec4608e133e4c75507cd881b80e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457399"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43469947"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Heap oggetti grandi nei sistemi Windows
 
@@ -40,21 +40,21 @@ Gli oggetti grandi appartengono alla generazione 2 perché vengono raccolti solo
 Le generazioni offrono una visualizzazione logica dell'heap GC. A livello fisico gli oggetti si trovano in segmenti gestiti dell'heap. Un *segmento gestito dell'heap* è una parte di memoria che l'operazione GC riserva nel sistema operativo (chiamando la [funzione VirtualAlloc](https://msdn.microsoft.com/library/windows/desktop/aa366887(v=vs.85).aspx)) per conto del codice gestito. Quando viene caricato il CLR, l'operazione GC alloca due segmenti di heap iniziali, l'heap oggetti piccoli (SOH, Small Object Heap) e l'heap oggetti grandi (LOH, Large Object Heap).
 
 Le richieste di allocazione vengono quindi soddisfatte inserendo gli oggetti gestiti in uno di questi segmenti di heap gestiti. Se l'oggetto ha dimensioni inferiori a 85.000 byte viene inserito in un segmento SOH; in caso contrario viene inserito in un segmento LOH. Man mano che nei segmenti vengono allocati gli oggetti, tali segmenti vengono impegnati (in blocchi più piccoli).
-Per l'heap oggetti piccoli, gli oggetti ancora attivi dopo un'operazione GC vengono promossi alla generazione successiva. Gli oggetti esclusi da una raccolta di generazione 0 sono ora considerati oggetti di generazione 1 e così via. Gli oggetti che raggiungono la generazione di grado superiore si considerano come appartenenti a tale generazione. In altri termini gli oggetti che rimangono nella generazione 2 sono oggetti di generazione 2 e gli oggetti che rimangono nel segmento LOH sono oggetti LOH (raccolti con la generazione 2). 
+Per l'heap oggetti piccoli, gli oggetti ancora attivi dopo un'operazione GC vengono promossi alla generazione successiva. Gli oggetti esclusi da una raccolta di generazione 0 sono ora considerati oggetti di generazione 1 e così via. Gli oggetti che raggiungono la generazione di grado superiore si considerano come appartenenti a tale generazione. In altri termini gli oggetti che rimangono nella generazione 2 sono oggetti di generazione 2 e gli oggetti che rimangono nel segmento LOH sono oggetti LOH (raccolti con la generazione 2).
 
 Il codice utente può effettuare allocazioni solo nella generazione 0 (oggetti piccoli) o nell'heap oggetti grandi (LOH). Soltanto l'operazione GC può "allocare" gli oggetti nella generazione 1 (promuovendo i superstiti della generazione 0) e nella generazione 2 (promuovendo i superstiti delle generazioni 1 e 2).
 
 Quando viene attivata una Garbage Collection, il Garbage Collector rintraccia gli oggetti ancora attivi e li compatta. Tuttavia, dato che la compattazione è dispendiosa in termini di risorse, il GC *effettua lo sweep* dell'heap oggetti grandi e crea un elenco degli oggetti inattivi che possono essere riusati successivamente per soddisfare le richieste di allocazione di oggetti grandi. Gli oggetti inattivi adiacenti vengono trasformati in un unico oggetto libero.
 
-.NET core e .NET Framework (a partire da .NET Framework 4.5.1) includono la proprietà <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode?displayProperty="fullname"> che consente agli utenti di specificare che l'heap oggetti grandi dovrà essere compresso durante la successiva operazione GC completa e bloccante. In futuro è possibile che .NET scelga di compattare automaticamente l'heap oggetti grandi. Quindi se si allocano oggetti grandi e si vuole essere certi che non verranno spostati, è ancora necessario bloccarli.
+.NET core e .NET Framework (a partire da .NET Framework 4.5.1) includono la proprietà <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode?displayProperty=nameWithType> che consente agli utenti di specificare che l'heap oggetti grandi dovrà essere compresso durante la successiva operazione GC completa e bloccante. In futuro è possibile che .NET scelga di compattare automaticamente l'heap oggetti grandi. Quindi se si allocano oggetti grandi e si vuole essere certi che non verranno spostati, è ancora necessario bloccarli.
 
 La figura 1 illustra uno scenario in cui GC forma la generazione 1 dopo la prima operazione GC di generazione 0 in cui `Obj1` e `Obj3` sono inattivi e forma la generazione 2 dopo la prima operazione GC di generazione 1 in cui `Obj2` e `Obj5` sono inattivi. Si noti che questa figura e le successive sono incluse a semplice scopo illustrativo e contengono pochissimi oggetti per illustrare meglio cosa accade nell'heap. In realtà un'operazione GC include in genere un numero di oggetti molto più elevato.
 
-![Figura 1: GC generazione 0 e GC generazione 1](media/loh/loh-figure-1.jpg)   
+![Figura 1: GC generazione 0 e GC generazione 1](media/loh/loh-figure-1.jpg)  
 Figura 1: GC generazione 0 e GC generazione 1.
 
 Nella figura 2, dopo un'operazione GC di generazione 2 in cui viene rilevato che `Obj1` e `Obj2` sono inattivi, il Garbage Collector crea spazio libero contiguo con la memoria occupata in precedenza da `Obj1` e `Obj2` e tale memoria viene usata per soddisfare una richiesta di allocazione per `Obj4`. Anche lo spazio dopo l'ultimo oggetto, `Obj3`, e fino alla fine del segmento può essere usato per soddisfare richieste di allocazione.
- 
+
 ![Figura 2: Dopo un'operazione GC di generazione 2](media/loh/loh-figure-2.jpg)  
 Figura 2: Dopo un'operazione GC di generazione 2
 
@@ -63,7 +63,7 @@ Se lo spazio libero non è sufficiente ad accogliere le richieste di allocazione
 Durante un'operazione GC di generazione 1 o 2 il Garbage Collector rilascia i segmenti privi di oggetti attivi al sistema operativo chiamando la [funzione VirtualFree](https://msdn.microsoft.com/library/windows/desktop/aa366892(v=vs.85).aspx). Viene annullato il commit dello spazio dopo l'ultimo oggetto attivo alla fine del segmento (salvo per il segmento effimero in cui risiedono gen0/gen1 e dove il Garbage Collector mantiene spazio con commit, perché l'applicazione lo alloca quasi immediatamente). Gli spazi liberi mantengono il commit anche se vengono reimpostati, a indicare che il sistema operativo non ha bisogno di riscrivere su disco i dati in essi contenuti.
 
 Dato che l'heap oggetti grandi viene raccolto solo durante operazioni GC di generazione 2, il segmento LOH può essere liberato solo durante un' operazione GC di questo tipo. La figura 3 illustra uno scenario in cui il Garbage Collector rilascia un segmento (segmento 2) al sistema operativo e annulla il commit di altro spazio nei segmenti rimanenti. Se il Garbage Collector deve usare lo spazio liberato alla fine del segmento per soddisfare nuove richieste di allocazione di oggetti grandi, esegue di nuovo il commit della memoria. Per una spiegazione del commit e dell'annullamento del commit, vedere la documentazione relativa a [VirtualAlloc](https://msdn.microsoft.com/library/windows/desktop/aa366887(v=vs.85).aspx).
- 
+
 ![Figura 3: LOH dopo un'operazione GC di generazione 2](media/loh/loh-figure-3.jpg)  
 Figura 3: LOH dopo un'operazione GC di generazione 2
 
@@ -73,17 +73,17 @@ In genere un'operazione GC avviene quando si verifica una delle 3 condizioni seg
 
 - L'allocazione supera la soglia della generazione 0 o degli oggetti grandi.
 
-   La soglia è una proprietà di una generazione. Una soglia per una generazione viene impostata quando il Garbage Collector alloca oggetti al suo interno. Quando la soglia viene superata viene attivata un'operazione GC su questa generazione. Pertanto, quando si allocano oggetti piccoli o grandi, si consumano rispettivamente le soglie della generazione 0 e dell'heap oggetti grandi. Quando il Garbage Collector effettua allocazioni nelle generazioni 1 e 2, consuma le soglie di queste generazioni. Queste soglie vengono regolate dinamicamente mentre viene eseguito il programma.
+  La soglia è una proprietà di una generazione. Una soglia per una generazione viene impostata quando il Garbage Collector alloca oggetti al suo interno. Quando la soglia viene superata viene attivata un'operazione GC su questa generazione. Pertanto, quando si allocano oggetti piccoli o grandi, si consumano rispettivamente le soglie della generazione 0 e dell'heap oggetti grandi. Quando il Garbage Collector effettua allocazioni nelle generazioni 1 e 2, consuma le soglie di queste generazioni. Queste soglie vengono regolate dinamicamente mentre viene eseguito il programma.
 
-   Questo è lo scenario tipico: la maggior parte delle operazioni GC si verifica come conseguenza delle allocazioni nell'heap gestito.
+  Questo è lo scenario tipico: la maggior parte delle operazioni GC si verifica come conseguenza delle allocazioni nell'heap gestito.
 
 - Viene chiamato il metodo <xref:System.GC.Collect%2A?displayProperty=nameWithType>.
 
-   Se viene chiamato il metodo senza parametri <xref:System.GC.Collect?displayProperty=nameWithType> o se <xref:System.GC.MaxGeneration?displayProperty=nameWithType> viene passato come argomento a un altro overload, l'heap oggetti grandi viene raccolto insieme al resto dell'heap gestito.
+  Se viene chiamato il metodo senza parametri <xref:System.GC.Collect?displayProperty=nameWithType> o se <xref:System.GC.MaxGeneration?displayProperty=nameWithType> viene passato come argomento a un altro overload, l'heap oggetti grandi viene raccolto insieme al resto dell'heap gestito.
 
 - La memoria del sistema è insufficiente.
 
-   Questo si verifica quando il Garbage Collector riceve una notifica di uso di memoria elevato dal sistema operativo. Se il Garbage Collector rileva condizioni produttive per un'operazione GC di generazione 2, attiva tale operazione.
+  Questo si verifica quando il Garbage Collector riceve una notifica di uso di memoria elevato dal sistema operativo. Se il Garbage Collector rileva condizioni produttive per un'operazione GC di generazione 2, attiva tale operazione.
 
 ## <a name="loh-performance-implications"></a>Implicazioni a livello di prestazioni dell'heap oggetti grandi
 
@@ -91,41 +91,41 @@ Le allocazioni nell'heap oggetti grandi influiscono sulle prestazioni nei modi s
 
 - Costo di allocazione.
 
-   Il CLR garantisce che la memoria per ogni nuovo oggetto inattivo venga liberata. Ciò significa che il costo di allocazione di un oggetto grande è totalmente determinato dalla liberazione della memoria (a meno che non attivi un'operazione GC). Mentre per liberare un byte sono sufficienti due cicli, per liberare il più piccolo degli oggetti grandi sono necessari 170.000 cicli. La cancellazione della memoria corrispondente a un oggetto di 16 MB su un computer a 2 GHz richiede circa 16 ms. Si tratta di un costo operativo elevato.
+  Il CLR garantisce che la memoria per ogni nuovo oggetto inattivo venga liberata. Ciò significa che il costo di allocazione di un oggetto grande è totalmente determinato dalla liberazione della memoria (a meno che non attivi un'operazione GC). Mentre per liberare un byte sono sufficienti due cicli, per liberare il più piccolo degli oggetti grandi sono necessari 170.000 cicli. La cancellazione dalla memoria di un oggetto di 16 MB in un computer a 2 GHz richiede circa 16 ms. Si tratta di un costo operativo elevato.
 
 - Costo dell'operazione di raccolta.
 
-   Poiché le operazioni GC per l'heap oggetti grandi e la generazione 2 avvengono insieme, se una delle due soglie viene superata si attiva una raccolta di generazione 2. Se la raccolta di generazione 2 viene attivata a causa dell'heap oggetti grandi, il volume della generazione 2 potrebbe non risultare di molto ridotto dopo l'operazione GC. Se la generazione 2 non contiene molti dati l'impatto è minimo. Se tuttavia il volume di dati di generazione 2 è importante, può causare problemi di prestazioni se vengono attivate varie operazioni GC di generazione 2. Se molti oggetti grandi vengono allocati su base molto volatile e l'heap oggetti piccoli è molto grande, le operazioni GC potrebbero richiedere un tempo eccessivo. Il costo in termini di allocazione può diventare importante se si allocano e rilasciano continuamente oggetti molto grandi.
+  Poiché le operazioni GC per l'heap oggetti grandi e la generazione 2 avvengono insieme, se una delle due soglie viene superata si attiva una raccolta di generazione 2. Se la raccolta di generazione 2 viene attivata a causa dell'heap oggetti grandi, il volume della generazione 2 potrebbe non risultare di molto ridotto dopo l'operazione GC. Se la generazione 2 non contiene molti dati l'impatto è minimo. Se tuttavia il volume di dati di generazione 2 è importante, può causare problemi di prestazioni se vengono attivate varie operazioni GC di generazione 2. Se molti oggetti grandi vengono allocati su base molto volatile e l'heap oggetti piccoli è molto grande, le operazioni GC potrebbero richiedere un tempo eccessivo. Il costo in termini di allocazione può diventare importante se si allocano e rilasciano continuamente oggetti molto grandi.
 
 - Elementi di matrice con tipi di riferimento.
 
-   Gli oggetti molto grandi dell'heap oggetti grandi sono normalmente costituiti da matrici (è poco comune che un oggetto istanza sia davvero molto grande). Se gli elementi della matrice hanno molti riferimenti, questo comporta un costo che non è presente se gli elementi non includono tali riferimenti. Se l'elemento non contiene nessun riferimento, il Garbage Collector non analizza la matrice. Se ad esempio si usa una matrice per memorizzare nodi in un albero binario, un metodo di implementazione è la creazione di un riferimento tra i nodi destro e sinistro di un nodo in base ai nodi effettivi:
+  Gli oggetti molto grandi dell'heap oggetti grandi sono normalmente costituiti da matrici (è poco comune che un oggetto istanza sia davvero molto grande). Se gli elementi della matrice hanno molti riferimenti, questo comporta un costo che non è presente se gli elementi non includono tali riferimenti. Se l'elemento non contiene nessun riferimento, il Garbage Collector non analizza la matrice. Se ad esempio si usa una matrice per memorizzare nodi in un albero binario, un metodo di implementazione è la creazione di un riferimento tra i nodi destro e sinistro di un nodo in base ai nodi effettivi:
 
-   ```csharp
-   class Node
-   {
-      Data d;
-      Node left;
-      Node right;
-   };
+  ```csharp
+  class Node
+  {
+     Data d;
+     Node left;
+     Node right;
+  };
 
-   Node[] binary_tr = new Node [num_nodes];
-   ```
+  Node[] binary_tr = new Node [num_nodes];
+  ```
 
-   Se `num_nodes` è molto grande, il Garbage Collector deve elaborare almeno due riferimenti per ogni elemento. Un approccio alternativo è la memorizzazione dell'indice dei nodi destro e sinistro:
+  Se `num_nodes` è molto grande, il Garbage Collector deve elaborare almeno due riferimenti per ogni elemento. Un approccio alternativo è la memorizzazione dell'indice dei nodi destro e sinistro:
 
-   ```csharp
-   class Node
-   {
-      Data d;
-      uint left_index;
-      uint right_index;
-   } ;
-   ```
+  ```csharp
+  class Node
+  {
+     Data d;
+     uint left_index;
+     uint right_index;
+  } ;
+  ```
 
-   Anziché fare riferimento ai dati del nodo sinistro come `left.d` si fa riferimento a tali dati come `binary_tr[left_index].d`. Il Garbage Collector non deve verificare riferimenti per i nodi sinistro e destro.
+  Anziché fare riferimento ai dati del nodo sinistro come `left.d` si fa riferimento a tali dati come `binary_tr[left_index].d`. Il Garbage Collector non deve verificare riferimenti per i nodi sinistro e destro.
 
-Fra i tre fattori, i primi due sono in genere più significativi del terzo. Per questo motivo è consigliabile allocare un pool di oggetti grandi da usare più volte anziché allocare oggetti temporanei. 
+Fra i tre fattori, i primi due sono in genere più significativi del terzo. Per questo motivo è consigliabile allocare un pool di oggetti grandi da usare più volte anziché allocare oggetti temporanei.
 
 ## <a name="collecting-performance-data-for-the-loh"></a>Raccolta di dati sulle prestazioni per l'heap oggetti grandi
 
@@ -133,7 +133,7 @@ Prima di raccogliere dati sulle prestazioni per un'area specifica, è necessario
 
 1. Dimostrare che è necessario analizzare l'area in questione.
 
-1. Esaminare altre aree note senza trovare elementi che possono spiegare il problema di prestazioni rilevato.
+2. Esaminare altre aree note senza trovare elementi che possono spiegare il problema di prestazioni rilevato.
 
 Vedere il blog [Understand the problem before you try to find a solution](https://blogs.msdn.microsoft.com/maoni/2006/09/01/understand-the-problem-before-you-try-to-find-a-solution/) (Comprendere il problema prima di cercare una soluzione) per altre informazioni sui concetti fondamentali della memoria e della CPU.
 
@@ -149,7 +149,7 @@ Per raccogliere dati sulle prestazioni dell'heap oggetti grandi è possibile usa
 
 Questi contatori delle prestazioni sono in genere un buon primo passo nell'analisi dei problemi di prestazioni (anche se Microsoft consiglia l'uso degli [eventi ETW](#etw)). Configurare Performance Monitor aggiungendo i contatori desiderati, come illustrato nella figura 4. I contatori importanti per l'heap oggetti grandi sono:
 
-- **\# Raccolte di generazione 2**
+- **Raccolte di generazione 2**
 
    Visualizza il numero di operazioni GC di generazione 2 eseguite dall'avvio del processo. Il contatore viene incrementato alla fine di una raccolta di generazione 2 (denominata anche Garbage Collection completa). Questo contatore visualizza 'ultimo valore osservato.
 
@@ -159,7 +159,7 @@ Questi contatori delle prestazioni sono in genere un buon primo passo nell'anali
 
 Un metodo molto comune per il controllo dei contatori è Performance Monitor (perfmon.exe). Usare "Aggiungi contatori" per aggiungere il contatore corrispondente ai processi che interessano. I dati del contatore delle prestazioni possono essere salvati in un file di registro, come indicato nella figura 4.
 
-![Figura 4: Aggiunta di contatori delle prestazioni.](media/loh/perfcounter.png)    
+![Figura 4: Aggiunta di contatori delle prestazioni.](media/loh/perfcounter.png)  
 Figura 4: LOH dopo un'operazione GC di generazione 2
 
 È anche possibile eseguire query sui contatori delle prestazioni a livello di codice. Molti utenti raccolgono i dati con questa modalità come parte del processo di test di routine. Se vengono identificati contatori con valori anomali, è possibile usare altri mezzi per ottenere dati più dettagliati ai fini dell'analisi.
@@ -171,13 +171,13 @@ Figura 4: LOH dopo un'operazione GC di generazione 2
 
 Il Garbage Collector offre vari eventi ETW che favoriscono la comprensione delle operazioni dell'heap e del loro scopo. I post di blog seguenti illustrano come raccogliere e interpretare gli eventi GC con ETW:
 
-- [Eventi ETW - GC - 1 ](http://blogs.msdn.com/b/maoni/archive/2014/12/22/gc-etw-events.aspx)
+- [Eventi ETW - GC - 1](https://blogs.msdn.microsoft.com/maoni/2014/12/22/gc-etw-events-1/)
 
-- [Eventi ETW - GC - 2](http://blogs.msdn.com/b/maoni/archive/2014/12/25/gc-etw-events-2.aspx)
+- [Eventi ETW - GC - 2](https://blogs.msdn.microsoft.com/maoni/2014/12/25/gc-etw-events-2/)
 
-- [Eventi ETW - GC - 3](http://blogs.msdn.com/b/maoni/archive/2014/12/25/gc-etw-events-3.aspx) 
+- [Eventi ETW - GC - 3](https://blogs.msdn.microsoft.com/maoni/2014/12/25/gc-etw-events-3/)
 
-- [Eventi ETW - GC - 4](http://blogs.msdn.com/b/maoni/archive/2014/12/30/gc-etw-events-4.aspx)
+- [Eventi ETW - GC - 4](https://blogs.msdn.microsoft.com/maoni/2014/12/30/gc-etw-events-4/)
 
 Per identificare un numero eccessivo di operazioni GC di generazione 2 causate da allocazioni di heap oggetti grandi temporanee, esaminare la colonna Motivo trigger per le operazioni GC. Per un test semplice che consente di allocare solo oggetti di grandi dimensioni temporanei, è possibile raccogliere informazioni sugli eventi ETW con la riga di comando [PerfView](https://www.microsoft.com/download/details.aspx?id=28567) seguente:
 
@@ -186,7 +186,7 @@ perfview /GCCollectOnly /AcceptEULA /nogui collect
 ```
 
 Il risultato è simile al seguente:
- 
+
 ![Figura 5: Esame degli eventi ETW con PerfView](media/loh/perfview.png)  
 Figura 5: Eventi ETW visualizzati mediante PerfView
 
@@ -199,18 +199,18 @@ perfview /GCOnly /AcceptEULA /nogui collect
 ```
 
 registra un evento AllocationTick ogni 100 KB circa di allocazione. In altre parole viene generato un evento ogni volta che viene allocato un oggetto grande. È quindi possibile esaminare una delle visualizzazioni di allocazione heap GC che includono gli stack di chiamate che hanno allocato oggetti grandi:
- 
+
 ![Figura 6: Visualizzazione di allocazione heap GC](media/loh/perfview2.png)  
 Figura 6: Visualizzazione di allocazione heap GC
- 
+
 Questo test molto semplice esegue solo l'allocazione di oggetti grandi dal relativo metodo `Main`.
 
 ### <a name="a-debugger"></a>Un debugger
 
-Se è presente solo di un dump di memoria ed è necessario esaminare quali oggetti sono effettivamente inclusi nell'heap oggetti grandi, è possibile usare l'[estensione del debugger SoS](http://msdn2.microsoft.com/ms404370.aspx) disponibile in .NET. 
+Se è presente solo di un dump di memoria ed è necessario esaminare quali oggetti sono effettivamente inclusi nell'heap oggetti grandi, è possibile usare l'[estensione del debugger SoS](http://msdn2.microsoft.com/ms404370.aspx) disponibile in .NET.
 
 > [!NOTE]
-> I comandi di debug indicati in questa sezione sono applicabili ai [debugger di Windows](http://www.microsoft.com/whdc/devtools/debugging/default.mspx).
+> I comandi di debug indicati in questa sezione sono applicabili ai [debugger di Windows](https://www.microsoft.com/whdc/devtools/debugging/default.mspx).
 
 Il codice seguente visualizza un output di esempio dell'analisi dell'heap oggetti grandi:
 
@@ -243,7 +243,7 @@ MT   Count   TotalSize Class Name
 Total 133 objects
 ```
 
-Le dimensioni dell'heap oggetti grandi sono (16.754.224 + 16.699.288 + 16.284.504) = 49.738.016 byte. Tra gli indirizzi 023e1000 e 033db630, 8.008.736 byte sono occupati da una matrice di oggetti <xref:System.Object?displayProperty=fullName>, 6.663.696 byte sono occupati da una matrice di oggetti <xref:System.Byte?displayProperty=nameWithType> e 2.081.792 byte sono occupati da spazio libero.
+Le dimensioni dell'heap oggetti grandi sono (16.754.224 + 16.699.288 + 16.284.504) = 49.738.016 byte. Tra gli indirizzi 023e1000 e 033db630, 8.008.736 byte sono occupati da una matrice di oggetti <xref:System.Object?displayProperty=nameWithType>, 6.663.696 byte sono occupati da una matrice di oggetti <xref:System.Byte?displayProperty=nameWithType> e 2.081.792 byte sono occupati da spazio libero.
 
 A volte il debugger indica che le dimensioni totali dell'heap oggetti grandi sono inferiori a 85.000 byte. Il motivo è che il runtime stesso usa l'heap oggetti grandi per allocare alcuni oggetti di dimensioni inferiori a quelle di un oggetto grande.
 

@@ -2,12 +2,12 @@
 title: 'Procedura: Trovare un elemento con un attributo specifico (C#)'
 ms.date: 07/20/2015
 ms.assetid: b92591aa-3cfb-490e-99f6-da8de335e362
-ms.openlocfilehash: 53296b2ace23bbc57deb0f5e7c0b23ebfc9613d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 351fb4160328ebcf547b0b3442adef11a153c523
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33325695"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43529950"
 ---
 # <a name="how-to-find-an-element-with-a-specific-attribute-c"></a>Procedura: Trovare un elemento con un attributo specifico (C#)
 In questo argomento viene illustrato come trovare un elemento che include un attributo con un valore specifico.  
@@ -69,9 +69,10 @@ foreach (XElement el in address)
 </aw:Address>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Xml.Linq.XElement.Attribute%2A>  
- <xref:System.Xml.Linq.XContainer.Elements%2A>  
- [Query di base (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)  
- [Cenni preliminari sugli operatori di query standard (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [Operazioni di proiezione (C#)](../../../../csharp/programming-guide/concepts/linq/projection-operations.md)
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.Xml.Linq.XElement.Attribute%2A>  
+- <xref:System.Xml.Linq.XContainer.Elements%2A>  
+- [Query di base (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)  
+- [Cenni preliminari sugli operatori di query standard (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+- [Operazioni di proiezione (C#)](../../../../csharp/programming-guide/concepts/linq/projection-operations.md)

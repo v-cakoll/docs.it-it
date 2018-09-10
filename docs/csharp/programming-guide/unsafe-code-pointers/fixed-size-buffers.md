@@ -5,12 +5,12 @@ helpviewer_keywords:
 - fixed size buffers [C#]
 - unsafe buffers [C#]
 - unsafe code [C#], fixed size buffers
-ms.openlocfilehash: 310c5eed5507f75239efc78b6132fbc91211d29e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0691c33b551e39b2384950cfcd0be6e8a3a29cee
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339592"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43506901"
 ---
 # <a name="fixed-size-buffers-c-programming-guide"></a>Buffer a dimensione fissa (Guida per programmatori C#)
 
@@ -32,7 +32,7 @@ Un oggetto `struct` può contenere una matrice incorporata in codice unsafe. Nel
 
 [!code-csharp[Struct with embedded inline array](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#7)]
 
-Le dimensioni della matrice `char` a 128 elementi sono di 256 byte. I buffer [char](../../language-reference/keywords/char.md) a dimensione fissa accettano sempre due byte per carattere, indipendentemente dalla codifica. Questo vale anche quando viene eseguito il marshalling di buffer char in metodi API o struct con `CharSet = CharSet.Auto` o `CharSet = CharSet.Ansi`. Per altre informazioni, vedere <xref:System.Runtime.InteropServices.CharSet>.
+Le dimensioni della matrice `char` a 128 elementi sono di 256 byte. I buffer [char](../../language-reference/keywords/char.md) a dimensione fissa accettano sempre due byte per carattere, indipendentemente dalla codifica. Questo vale anche quando viene eseguito il marshalling di buffer char in metodi API o struct con `CharSet = CharSet.Auto` o `CharSet = CharSet.Ansi`. Per ulteriori informazioni, vedere <xref:System.Runtime.InteropServices.CharSet>.
 
 L'esempio precedente illustra l'accesso ai cambi `fixed` senza blocco, opzione disponibile a partire da C# 7.3.
 
@@ -50,7 +50,7 @@ I buffer unsafe sono diversi dalle normali matrici per i motivi seguenti:
 
 ## <a name="see-also"></a>Vedere anche
 
-[Guida per programmatori C#](../index.md)  
-[Codice unsafe e puntatori](index.md)  
-[Istruzione fixed](../../language-reference/keywords/fixed-statement.md)  
-[Interoperabilità](../interop/index.md)
+- [Guida per programmatori C#](../index.md)  
+- [Codice unsafe e puntatori](index.md)  
+- [Istruzione fixed](../../language-reference/keywords/fixed-statement.md)  
+- [Interoperabilità](../interop/index.md)

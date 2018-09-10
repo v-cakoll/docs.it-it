@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, constants
 - constants [C#]
 ms.assetid: 1fb39621-1738-49b1-a1b3-8587f109123f
-ms.openlocfilehash: 90423c868ca303f8e94c16f44bc5e0b23615fc17
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: 0ae8ca8b1bc9259ab259ed8fdfea450e4471891e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39199378"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43513855"
 ---
 # <a name="constants-c-programming-guide"></a>Costanti (Guida per programmatori C#)
 Le costanti sono valori non modificabili, che sono noti nella fase di compilazione e non cambiano per la durata del programma. Le costanti vengono dichiarate con il modificatore [const](../../../csharp/language-reference/keywords/const.md). Solo i tipi incorporati C# (ad esclusione di <xref:System.Object?displayProperty=nameWithType>) possono essere dichiarati come `const`. Per l'elenco dei tipi incorporati, vedere [Tabella dei tipi incorporati](../../../csharp/language-reference/keywords/built-in-types-table.md). I tipi definiti dall'utente, incluse le classi, gli struct e le matrici, non possono essere `const`. Usare il modificatore [readonly](../../../csharp/language-reference/keywords/readonly.md) per creare una classe, una matrice o uno struct che viene inizializzato una sola volta in fase di runtime (ad esempio in un costruttore) e successivamente non può più essere modificato.  
@@ -45,10 +45,11 @@ Le costanti sono valori non modificabili, che sono noti nella fase di compilazio
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [Classi e struct](../../../csharp/programming-guide/classes-and-structs/index.md)  
- [Proprietà](../../../csharp/programming-guide/classes-and-structs/properties.md)  
- [Tipi](../../../csharp/programming-guide/types/index.md)  
- [readonly](../../../csharp/language-reference/keywords/readonly.md)  
- [Immutability in C# Part One: Kinds of Immutability](https://blogs.msdn.microsoft.com/ericlippert/2007/11/13/immutability-in-c-part-one-kinds-of-immutability) (Immutabilità in C# - Parte 1: tipi di immutabilità)
+## <a name="see-also"></a>Vedere anche
+
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- [Classi e struct](../../../csharp/programming-guide/classes-and-structs/index.md)  
+- [Proprietà](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+- [Tipi](../../../csharp/programming-guide/types/index.md)  
+- [readonly](../../../csharp/language-reference/keywords/readonly.md)  
+- [Immutability in C# Part One: Kinds of Immutability](https://blogs.msdn.microsoft.com/ericlippert/2007/11/13/immutability-in-c-part-one-kinds-of-immutability) (Immutabilità in C# - Parte 1: tipi di immutabilità)

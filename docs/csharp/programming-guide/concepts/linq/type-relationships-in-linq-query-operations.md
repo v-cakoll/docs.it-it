@@ -12,12 +12,12 @@ helpviewer_keywords:
 - data transformations [LINQ in C#]
 - LINQ [C#], type relationships
 ms.assetid: 99118938-d47c-4d7e-bb22-2657a9f95268
-ms.openlocfilehash: 274c5eaee2b4bf0e1331fb7a4a1a89a432a567c2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 154501d666b467c94f5d1dd721f1e2303189c908
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339579"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484824"
 ---
 # <a name="type-relationships-in-linq-query-operations-c"></a>Relazioni tra i tipi nelle operazioni di query LINQ (C#)
 Per scrivere le query in modo efficace, è necessario comprendere in che modo i tipi di variabili in un'operazione di query completa interagiscono tra loro. Conoscendo queste relazioni, si comprenderanno più facilmente gli esempi di [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] e di codice nella documentazione. In aggiunta, è possibile comprendere che cosa accade dietro le quinte quando le variabili vengono tipizzate in modo implicito tramite `var`.  
@@ -33,7 +33,7 @@ Per scrivere le query in modo efficace, è necessario comprendere in che modo i 
   
 1.  L'argomento del tipo dell'origine dati determina il tipo della variabile di intervallo.  
   
-2.  Il tipo di oggetto selezionato determina il tipo della variabile di query. Qui `name` è una stringa. La variabile di query è pertanto una `IEnumerable`\<string>.  
+2.  Il tipo di oggetto selezionato determina il tipo della variabile di query. Qui `name` è una stringa. La variabile di query è pertanto una `IEnumerable<string>`.  
   
 3.  La variabile di query viene iterata nell'istruzione `foreach`. Poiché la variabile di query è una sequenza di stringhe, anche la variabile di iterazione è una stringa.  
   

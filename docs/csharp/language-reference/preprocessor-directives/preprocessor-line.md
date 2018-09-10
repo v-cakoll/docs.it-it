@@ -6,15 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - '#line directive [C#]'
 ms.assetid: 6439e525-5dd5-4acb-b8ea-efabb32ff95b
-ms.openlocfilehash: 08ba94ec3f1799f858e098bd2c0e059b7f45af2e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f3ebecda7761e6249656e0b9f8543ae1252b844e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33289269"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43395137"
 ---
 # <a name="line-c-reference"></a>#line (Riferimenti per C#)
-`#line` consente di modificare il numero di riga del compilatore e, facoltativamente, l'output del nome del file per gli errori e gli avvisi. Nell'esempio seguente viene illustrata la modalità di segnalazione di due avvisi associati a numeri di riga. La direttiva `#line 200` forza l'impostazione del numero di riga su 200 (anche se l'impostazione predefinita è 7) e, fino alla successiva direttiva #line, il nome file viene indicato come "Special". La direttiva #line predefinita reimposta la numerazione predefinita delle righe, con il conteggio delle righe rinumerate dalla direttiva precedente.  
+`#line` consente di modificare il numero di riga del compilatore e, facoltativamente, l'output del nome del file per gli errori e gli avvisi.
+
+Nell'esempio seguente viene illustrata la modalità di segnalazione di due avvisi associati a numeri di riga. La direttiva `#line 200` forza l'impostazione del numero di riga successivo su 200 (anche se l'impostazione predefinita è 6) e, fino alla successiva direttiva #line, il nome file viene indicato come "Special". La direttiva #line predefinita reimposta la numerazione predefinita delle righe, con il conteggio delle righe rinumerate dalla direttiva precedente.  
   
 ```csharp
 class MainClass  
@@ -22,18 +24,28 @@ class MainClass
     static void Main()  
     {  
 #line 200 "Special"  
-        int i;    // CS0168 on line 200  
-        int j;    // CS0168 on line 201  
+        int i;
+        int j;
 #line default  
-        char c;   // CS0168 on line 9  
-        float f;  // CS0168 on line 10  
+        char c;
+        float f;
 #line hidden // numbering not affected  
         string s;   
-        double d; // CS0168 on line 13  
+        double d;
     }  
 }  
 ```  
-  
+La compilazione produce l'output seguente:
+
+```console
+Special(200,13): warning CS0168: The variable 'i' is declared but never used
+Special(201,13): warning CS0168: The variable 'j' is declared but never used
+MainClass.cs(9,14): warning CS0168: The variable 'c' is declared but never used
+MainClass.cs(10,15): warning CS0168: The variable 'f' is declared but never used
+MainClass.cs(12,16): warning CS0168: The variable 's' is declared but never used
+MainClass.cs(13,16): warning CS0168: The variable 'd' is declared but never used
+```
+
 ## <a name="remarks"></a>Note  
  La direttiva `#line` può essere usata in un'istruzione automatizzata intermedia nel processo di compilazione. Se, ad esempio, sono state rimosse delle righe dal file del codice sorgente originale e si vuole che il compilatore generi comunque un output basato sulla numerazione originale delle righe del file, è possibile rimuovere le righe e simulare la numerazione originale tramite `#line`.  
   
@@ -64,7 +76,8 @@ class MainClass
 }  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [Direttive per il preprocessore C#](../../../csharp/language-reference/preprocessor-directives/index.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- [Direttive per il preprocessore C#](../../../csharp/language-reference/preprocessor-directives/index.md)

@@ -4,18 +4,18 @@ description: Architettura di microservizi .NET per applicazioni .NET in contenit
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 07/03/2018
-ms.openlocfilehash: d5902c5a0744d74ae5086a4df3aee606b24b6030
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 8cd3564e5240ec5a8783edb336957549be27ea6a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37875167"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43403527"
 ---
 # <a name="implement-the-circuit-breaker-pattern"></a>Implementazione dello schema Circuit Breaker
 
 Come notato in precedenza, è necessario gestire gli errori che potrebbero richiedere una quantità di tempo variabile per il ripristino, come accade quando si prova a connettersi a una risorsa o a un servizio remoto. La gestione di questo tipo di errore può migliorare la stabilità e la resilienza di un'applicazione.
 
-In un ambiente distribuito, le chiamate a servizi e risorse remote può non riuscire a causa di errori temporanei, ad esempio connessioni di rete lente e timeout oppure se le risorse vengono rallentate o sono temporaneamente non disponibili. Questi errori in genere si correggono autonomamente dopo un breve periodo di tempo e un'applicazione cloud affidabile deve essere preparata a gestirli usando una strategia simile allo "schema Retry". 
+In un ambiente distribuito, le chiamate a servizi e risorse remote possono non riuscire a causa di errori temporanei, ad esempio connessioni di rete lente e timeout oppure se le risorse rispondono lentamente o sono temporaneamente non disponibili. Questi errori in genere si correggono autonomamente dopo un breve periodo di tempo e un'applicazione cloud affidabile deve essere preparata a gestirli usando una strategia simile allo "schema Retry". 
 
 Tuttavia, in alcune situazioni gli errori sono dovuti a eventi imprevisti, la cui risoluzione potrebbe richiedere molto più tempo. La gravità di questi errori può variare, da una perdita parziale di connettività a un errore generale di un servizio. In questi casi, è inutile continuare a ripetere in un'applicazione un'operazione che è improbabile venga eseguita. 
 
@@ -23,7 +23,7 @@ Tuttavia, in alcune situazioni gli errori sono dovuti a eventi imprevisti, la cu
 
 L'uso improprio di tentativi HTTP potrebbe causare la creazione un attacco Denial of Service ([DoS](https://en.wikipedia.org/wiki/Denial-of-service_attack)) nel proprio software. Quando un microservizio non funziona o è lento, più client potrebbero ripetere più volte le richieste non riuscite. Si crea così un rischio pericoloso di un aumento esponenziale del traffico destinato al servizio non funzionante.
 
-Pertanto, è necessario un tipo di barriera di difesa che interrompa i tentativi di richiesta quando non vale la pena continuare a provare. La barriera di difesa è proprio l'interruttore di circuito.
+È pertanto necessario un tipo di barriera di difesa in modo che le richieste eccessive vengano interrotte quando non vale la pena continuare a provare. La barriera di difesa è proprio l'interruttore di circuito.
 
 Lo schema Circuit Breaker ha uno scopo diverso rispetto allo "schema Retry". Lo "schema Retry" consente a un'applicazione di ripetere un'operazione che si prevede possa essere completata correttamente. Lo schema Circuit Breaker impedisce a un'applicazione di eseguire un'operazione che potrebbe non riuscire. Un'applicazione può combinare questi due modelli. Tuttavia, la logica di ripetizione deve essere sensibile alle eventuali eccezioni restituite dall'interruttore di circuito e deve sospendere i tentativi se l'interruttore di circuito indica che un errore non è temporaneo.
 
@@ -43,7 +43,7 @@ services.AddHttpClient<IBasketService, BasketService>()
         .AddPolicyHandler(GetCircuitBreakerPolicy());
 ```
 
-Il metodo `AddPolicyHandler()` aggiunge i criteri agli oggetti HttpClient che verranno usati. In questo caso vengono aggiunti dei criteri di Polly, uno per ogni interruttore di circuito.
+Il metodo `AddPolicyHandler()` aggiunge i criteri agli oggetti HttpClient che verranno usati. In questo caso vengono aggiunti dei criteri Polly, uno per ogni interruttore di circuito.
 
 Per avere un approccio più modulare, i criteri dell'interruttore di circuito vengono definiti in un metodo separato denominato GetCircuitBreakerPolicy(), come il codice seguente.
 
@@ -56,7 +56,7 @@ static IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy()
 }
 ```
 
-Nell'esempio di codice precedente i criteri dell'interruttore di circuito sono configurati in modo da interrompere o aprire il circuito quando si verificano cinque eccezioni durante i tentativi di richieste HTTP. La durata o l'interruzione sarà quindi di 30 secondi.
+Nell'esempio di codice precedente i criteri dell'interruttore di circuito sono configurati in modo da interrompere o aprire il circuito quando si verificano cinque errori consecutivi durante i nuovi tentativi di richieste HTTP. In questo caso, il circuito verrà interrotto per 30 secondi: in questo intervallo di tempo, le chiamate verranno bloccate immediatamente dall'interruttore di circuito invece di essere effettivamente inserite.  Il criterio interpreta automaticamente le [eccezioni e i codici di stato HTTP rilevanti](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1#handle-transient-faults) come errori.  
 
 Gli interruttori di circuito devono essere usati anche per reindirizzare le richieste a un'infrastruttura di fallback nel caso di problemi in una determinata risorsa che viene distribuita in un ambiente diverso rispetto all'applicazione client o al servizio che esegue la chiamata HTTP. In questo modo, se si verifica un'interruzione nel centro dati che influisce solo sui microservizi back-end, ma non sulle applicazioni client, queste applicazioni possono essere reindirizzate ai servizi di fallback. È il corso la pianificazione di un nuovo criterio in Polly che consenta di automatizzare questo scenario per i [criteri di failover](https://github.com/App-vNext/Polly/wiki/Polly-Roadmap#failover-policy). 
 
@@ -65,7 +65,6 @@ Tutte queste funzionalità riguardano casi in cui il failover viene gestito inte
 Dal punto di vista dell'utilizzo, quando si usa HttpClient non occorre aggiungere nulla di nuovo, perché il codice è lo stesso di quando si usa HttpClient con HttpClientFactory, come mostrato nelle sezioni precedenti. 
 
 ## <a name="testing-http-retries-and-circuit-breakers-in-eshoponcontainers"></a>Test dei tentativi HTTP e degli interruttori di circuito in eShopOnContainers
-
 
 Ogni volta che si avvia la soluzione eShopOnContainers in un host Docker, è necessario avviare più contenitori. Alcuni dei contenitori vengono avviati e inizializzati più lentamente, ad esempio il contenitore di SQL Server. Questo vale in particolare la prima volta che si distribuisce l'applicazione eShopOnContainers in Docker, perché è necessario configurare le immagini e il database. Il fatto che alcuni contenitori vengano avviati più lentamente rispetto ad altri può causare la generazione iniziale di eccezioni HTTP negli altri servizi, anche se si impostano dipendenze tra i contenitori al livello Docker Compose, come illustrato nelle sezioni precedenti. Le dipendenze Docker Compose tra i contenitori si trovano solo sul livello processo. Il processo del punto di ingresso del contenitore può essere avviato, ma SQL Server potrebbe non essere pronto per le query. Di conseguenza, possono essere visualizzati numerosi errori e può essere restituita un'eccezione all'applicazione quando prova a usare il contenitore specificato. 
 

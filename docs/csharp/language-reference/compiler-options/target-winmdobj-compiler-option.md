@@ -3,11 +3,11 @@ title: -target:winmdobj (opzioni del compilatore C#)
 ms.date: 07/20/2015
 ms.assetid: 1819a045-659d-498a-9457-c466e902986f
 ms.openlocfilehash: 38d0dedbca56475d4f2561c99e8b29e01e9d7a90
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43473931"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43740922"
 ---
 # <a name="-targetwinmdobj-c-compiler-options"></a>-target:winmdobj (opzioni del compilatore C#)
 Se si usa l'opzione del compilatore **-target:winmdobj**, viene creato un file intermedio con estensione winmdobj che è possibile convertire in un file binario di Windows Runtime (con estensione winmd). Il file con estensione winmd può quindi essere utilizzato dai programmi C++ e JavaScript, oltre ai programmi di linguaggi gestiti.  

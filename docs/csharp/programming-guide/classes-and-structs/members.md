@@ -5,12 +5,12 @@ helpviewer_keywords:
 - types [C#], nested types
 - C# language, type members
 ms.assetid: 4a30a4ab-d690-4936-9124-92ce9448665a
-ms.openlocfilehash: 61818b153bb74c5c0da053f381fd1ed9132c066b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dbfd0c48dc59b094af49e65d2ed4fcd4e2a70ff0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318224"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44087558"
 ---
 # <a name="members-c-programming-guide"></a>Membri (Guida per programmatori C#)
 Le classi e gli struct contengono membri che ne rappresentano i dati e il comportamento. I membri di una classe includono tutti i membri dichiarati nella classe, oltre a tutti i membri (ad eccezione di costruttori e finalizzatori) dichiarati in tutte le classi nella relativa gerarchia di ereditarietà. I membri privati nelle classi base vengono ereditati ma non sono accessibili dalle classi derivate.  
@@ -30,16 +30,17 @@ Le classi e gli struct contengono membri che ne rappresentano i dati e il compor
 |[Finalizzatori](../../../csharp/programming-guide/classes-and-structs/destructors.md)|I finalizzatori vengono usati molto raramente in C#. Questi sono metodi che vengono chiamati dal motore di esecuzione di runtime quando l'oggetto sta per essere rimosso dalla memoria. Vengono in genere usati per assicurarsi che le eventuali risorse da rilasciare vengano gestite nel modo appropriato.|  
 |[Tipi annidati](../../../csharp/programming-guide/classes-and-structs/nested-types.md)|I tipi nidificati sono tipi dichiarati all'interno di un altro tipo. Vengono spesso usati per descrivere gli oggetti usati solo dai tipi che li contengono.|  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [Classi](../../../csharp/programming-guide/classes-and-structs/classes.md)  
- [Metodi](../../../csharp/programming-guide/classes-and-structs/methods.md)  
- [Costruttori](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
- [Finalizzatori](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
- [Proprietà](../../../csharp/programming-guide/classes-and-structs/properties.md)  
- [Campi](../../../csharp/programming-guide/classes-and-structs/fields.md)  
- [Indicizzatori](../../../csharp/programming-guide/indexers/index.md)  
- [Eventi](../../../csharp/programming-guide/events/index.md)  
- [Tipi annidati](../../../csharp/programming-guide/classes-and-structs/nested-types.md)  
- [Operatori](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
- [Operatori che supportano l'overload](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- [Classi](../../../csharp/programming-guide/classes-and-structs/classes.md)  
+- [Metodi](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+- [Costruttori](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
+- [Finalizzatori](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
+- [Proprietà](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+- [Campi](../../../csharp/programming-guide/classes-and-structs/fields.md)  
+- [Indicizzatori](../../../csharp/programming-guide/indexers/index.md)  
+- [Eventi](../../../csharp/programming-guide/events/index.md)  
+- [Tipi annidati](../../../csharp/programming-guide/classes-and-structs/nested-types.md)  
+- [Operatori](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
+- [Operatori che supportano l'overload](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)

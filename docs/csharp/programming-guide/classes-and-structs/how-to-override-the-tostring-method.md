@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ToString method, overriding in C#
 - inheritance [C#], overriding OnPaint and ToString
 ms.assetid: 8016db69-1f19-420c-8e17-98e8bebb7749
-ms.openlocfilehash: 86394f5fed55f57df8928648548fcfca117b00d8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b047efb9215675b8c3dfb75438a6dbbc4e6f92d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330707"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44084173"
 ---
 # <a name="how-to-override-the-tostring-method-c-programming-guide"></a>Procedura: eseguire l'override del metodo ToString (Guida per programmatori C#)
 Ogni classe o struct in C# eredita in modo implicito la classe <xref:System.Object>. Ogni oggetto in C# ottiene quindi il metodo <xref:System.Object.ToString%2A>, che restituisce una rappresentazione di stringa dell'oggetto. Ad esempio, tutte le variabili di tipo `int` hanno un metodo `ToString` che consente loro di restituire il rispettivo contenuto sotto forma di stringa:  
@@ -42,13 +42,14 @@ Ogni classe o struct in C# eredita in modo implicito la classe <xref:System.Obje
   
      [!code-csharp[csProgGuideInheritance#38](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-override-the-tostring-method_3.cs)]  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.IFormattable>  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [Classi e struct](../../../csharp/programming-guide/classes-and-structs/index.md)  
- [Stringhe](../../../csharp/programming-guide/strings/index.md)  
- [string](../../../csharp/language-reference/keywords/string.md)  
- [new](../../../csharp/language-reference/keywords/new.md)  
- [override](../../../csharp/language-reference/keywords/override.md)  
- [virtual](../../../csharp/language-reference/keywords/virtual.md)  
- [Formattazione di tipi](../../../standard/base-types/formatting-types.md)
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.IFormattable>  
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- [Classi e struct](../../../csharp/programming-guide/classes-and-structs/index.md)  
+- [Stringhe](../../../csharp/programming-guide/strings/index.md)  
+- [string](../../../csharp/language-reference/keywords/string.md)  
+- [new](../../../csharp/language-reference/keywords/new.md)  
+- [override](../../../csharp/language-reference/keywords/override.md)  
+- [virtual](../../../csharp/language-reference/keywords/virtual.md)  
+- [Formattazione di tipi](../../../standard/base-types/formatting-types.md)

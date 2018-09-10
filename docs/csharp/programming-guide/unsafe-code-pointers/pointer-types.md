@@ -4,12 +4,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: cbc75a2ec6fe826cb192b1e8bef61c7295f13916
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 2950d92f877a7e99734267a3071b2bcb25ce1023
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42924508"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43509278"
 ---
 # <a name="pointer-types-c-programming-guide"></a>Tipi di puntatori (Guida per programmatori C#)
 
@@ -89,12 +89,13 @@ Nella tabella riportata di seguito sono elencati gli operatori e le istruzioni c
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
 ## <a name="see-also"></a>Vedere anche
- [Guida per programmatori C#](../index.md)  
- [Codice unsafe e puntatori](index.md)  
- [Conversioni puntatore](pointer-conversions.md)  
- [Espressioni puntatore](pointer-expressions.md)  
- [Tipi](../../language-reference/keywords/types.md)  
- [unsafe](../../language-reference/keywords/unsafe.md)  
- [Istruzione fixed](../../language-reference/keywords/fixed-statement.md)  
- [stackalloc](../../language-reference/keywords/stackalloc.md)  
- [Boxing e unboxing](../types/boxing-and-unboxing.md)
+
+- [Guida per programmatori C#](../index.md)  
+- [Codice unsafe e puntatori](index.md)  
+- [Conversioni puntatore](pointer-conversions.md)  
+- [Espressioni puntatore](pointer-expressions.md)  
+- [Tipi](../../language-reference/keywords/types.md)  
+- [unsafe](../../language-reference/keywords/unsafe.md)  
+- [Istruzione fixed](../../language-reference/keywords/fixed-statement.md)  
+- [stackalloc](../../language-reference/keywords/stackalloc.md)  
+- [Boxing e unboxing](../types/boxing-and-unboxing.md)

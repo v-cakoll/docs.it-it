@@ -9,12 +9,12 @@ helpviewer_keywords:
 - virtual methods [C#]
 - C# language, inheritance
 ms.assetid: 81d64ee4-50f9-4d6c-a8dc-257c348d2eea
-ms.openlocfilehash: 6294669a05f5cc6c52de5164d89e29062ceb6bdd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f6620562a9500885f31d1343664919f09af33861
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33323602"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43855895"
 ---
 # <a name="inheritance-c-programming-guide"></a>Ereditarietà (Guida per programmatori C#)
 
@@ -53,8 +53,9 @@ Ereditarietà delle classi
 ## <a name="derived-class-hiding-of-base-class-members"></a>Nascondere un membro di una classe di base in una classe derivata  
  Una classe derivata può nascondere i membri di una classe di base dichiarando dei membri con lo stesso nome e la stessa firma. Il modificatore [new](../../../csharp/language-reference/keywords/new.md) può essere usato per indicare in modo esplicito che un membro non costituisce un override del membro della classe di base. L'uso del modificatore [new](../../../csharp/language-reference/keywords/new.md) non è necessario. Tuttavia, se il modificatore [new](../../../csharp/language-reference/keywords/new.md) non viene usato, il compilatore genererà un avviso. Per altre informazioni, vedere [Controllo delle versioni con le parole chiave Override e New](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md) e [Sapere quando usare le parole chiave Override e New](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [Classi e struct](../../../csharp/programming-guide/classes-and-structs/index.md)  
- [class](../../../csharp/language-reference/keywords/class.md)  
- [struct](../../../csharp/language-reference/keywords/struct.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- [Classi e struct](../../../csharp/programming-guide/classes-and-structs/index.md)  
+- [class](../../../csharp/language-reference/keywords/class.md)  
+- [struct](../../../csharp/language-reference/keywords/struct.md)

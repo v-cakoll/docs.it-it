@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-ms.openlocfilehash: fbee7e6ad0fad312e9e5524f7b3fcc7c417ad47b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2b156d043f5a4b72f4cb7423708b41fdd0e475dd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577427"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43385696"
 ---
 # <a name="async-in-depth"></a>La programmazione asincrona in dettaglio
 
@@ -114,7 +114,7 @@ E cosa ancora più importante, dal momento che il lavoro associato a I/O virtual
 
 Inviare lavoro al thread dell'interfaccia utente, ad esempio l'aggiornamento dell'interfaccia, è anche molto semplice con i metodi `async` e non richiede operazioni aggiuntive, come ad esempio la chiamata a un delegato thread-safe.
 
-## <a name="deeper-dive-into-task-and-taskt-for-a-cpu-bound-operation"></a>Approfondimento delle attività Task e Task<T> per un'operazione associata alla CPU
+## <a name="deeper-dive-into-task-and-tasklttgt-for-a-cpu-bound-operation"></a>Approfondimento delle attività Task e Task&lt;T&gt; per un'operazione associata alla CPU
 
 Il codice `async` associato alla CPU è un po' diverso rispetto al codice `async` associato a I/O.  Dal momento che il lavoro viene eseguito sulla CPU, non c'è modo di evitare di dedicare un thread al calcolo.  L'uso di `async` e `await` offre un metodo chiaro per interagire con un thread in background e mantenere reattivo il chiamante del metodo asincrono.  Si noti che ciò non offre alcuna protezione per i dati condivisi.  Se si usano dati condivisi, sarà necessario applicare una strategia di sincronizzazione appropriata.
 

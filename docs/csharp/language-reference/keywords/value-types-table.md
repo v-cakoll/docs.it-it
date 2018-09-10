@@ -1,44 +1,57 @@
 ---
 title: Tabella dei tipi di valore (Riferimenti per C#)
-ms.date: 07/20/2015
+ms.date: 08/24/2018
 helpviewer_keywords:
 - value types [C#], table
-- Visual C#, types
 - types [C#], value types
 - types [C#], suffixes
 ms.assetid: 67d8f631-b6e3-4d83-9910-5ec497f8c5f3
-ms.openlocfilehash: a3979a9c269c6268ef679d0494cf4da501201c97
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bc7143b9f006af20b0bb91203d3093410d4ac0bf
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33280894"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43418422"
 ---
 # <a name="value-types-table-c-reference"></a>Tabella dei tipi di valore (Riferimenti per C#)
-Nella tabella seguente sono elencati i tipi valore di C# per categoria.  
+
+La tabella seguente mostra i tipi valore di C#.  
   
 |Tipo valore|Category|Suffisso del tipo|  
 |----------------|--------------|-----------------|  
-|[bool](../../../csharp/language-reference/keywords/bool.md)|Booleano||  
-|[byte](../../../csharp/language-reference/keywords/byte.md)|Senza segno, numerico, integrale||  
-|[char](../../../csharp/language-reference/keywords/char.md)|Senza segno, numerico, integrale||  
-|[decimal](../../../csharp/language-reference/keywords/decimal.md)|Numerico, decimale|M o m|  
-|[double](../../../csharp/language-reference/keywords/double.md)|Numerico, virgola mobile|D o d|  
-|[enum](../../../csharp/language-reference/keywords/enum.md)|Enumerazione||  
-|[float](../../../csharp/language-reference/keywords/float.md)|Numerico, virgola mobile|F o f|  
-|[int](../../../csharp/language-reference/keywords/int.md)|Con segno, numerico, integrale||  
-|[long](../../../csharp/language-reference/keywords/long.md)|Con segno, numerico, integrale|L o l|  
-|[sbyte](../../../csharp/language-reference/keywords/sbyte.md)|Con segno, numerico, integrale||  
-|[short](../../../csharp/language-reference/keywords/short.md)|Con segno, numerico, integrale||  
-|[struct](../../../csharp/language-reference/keywords/struct.md)|Struttura definita dall'utente||  
-|[uint](../../../csharp/language-reference/keywords/uint.md)|Senza segno, numerico, integrale|U o u|  
-|[ulong](../../../csharp/language-reference/keywords/ulong.md)|Senza segno, numerico, integrale|UL o ul|  
-|[ushort](../../../csharp/language-reference/keywords/ushort.md)|Senza segno, numerico, integrale||  
-  
-## <a name="see-also"></a>Vedere anche  
- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [Tabella dei valori predefiniti](../../../csharp/language-reference/keywords/default-values-table.md)  
- [Tipi valore](../../../csharp/language-reference/keywords/value-types.md)  
- [Tabella di formattazione dei risultati numerici](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)  
- [Tabelle di riferimento per i tipi](../../../csharp/language-reference/keywords/reference-tables-for-types.md)
+|[bool](bool.md)|Booleano||  
+|[byte](byte.md)|Senza segno, numerico, [integrale](integral-types-table.md)||  
+|[char](char.md)|Senza segno, numerico, [integrale](integral-types-table.md)||  
+|[decimal](decimal.md)|Numerico, [virgola mobile](floating-point-types-table.md)|M o m|  
+|[double](double.md)|Numerico, [virgola mobile](floating-point-types-table.md)|D o d|  
+|[enum](enum.md)|Enumerazione||  
+|[float](float.md)|Numerico, [virgola mobile](floating-point-types-table.md)|F o f|  
+|[int](int.md)|Con segno, numerico, [integrale](integral-types-table.md)||  
+|[long](long.md)|Con segno, numerico, [integrale](integral-types-table.md)|L o l|  
+|[sbyte](sbyte.md)|Con segno, numerico, [integrale](integral-types-table.md)||  
+|[short](short.md)|Con segno, numerico, [integrale](integral-types-table.md)||  
+|[struct](struct.md)|Struttura definita dall'utente||  
+|[uint](uint.md)|Senza segno, numerico, [integrale](integral-types-table.md)|U o u|  
+|[ulong](ulong.md)|Senza segno, numerico, [integrale](integral-types-table.md)|UL, Ul, uL, ul, LU, Lu, lU o lu|  
+|[ushort](ushort.md)|Senza segno, numerico, [integrale](integral-types-table.md)||  
+
+## <a name="remarks"></a>Note
+
+Usare un suffisso del tipo per specificare un tipo di un valore letterale numerico. Ad esempio:
+
+```csharp
+decimal a = 0.1M;
+```
+
+Se un [valore letterale integer](/dotnet/csharp/language-reference/language-specification/lexical-structure#integer-literals) non ha alcun suffisso, il tipo corrisponderà al primo dei tipi seguenti in cui il valore può essere rappresentato: `int`, `uint`, `long`, `ulong`.
+
+Se un [valore letterale numerico reale](/dotnet/csharp/language-reference/language-specification/lexical-structure#real-literals) non ha alcun suffisso, il tipo è `double`.
+
+## <a name="see-also"></a>Vedere anche
+
+- [Riferimenti per C#](../index.md)
+- [Guida per programmatori C#](../../programming-guide/index.md)
+- [Tabelle di riferimento per i tipi](reference-tables-for-types.md)
+- [Tabella dei valori predefiniti](default-values-table.md)
+- [Tipi valore](value-types.md)
+- [Tabella di formattazione dei risultati numerici](formatting-numeric-results-table.md)

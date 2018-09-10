@@ -5,12 +5,12 @@ helpviewer_keywords:
 - exception handling [C#], about exception handling
 - exceptions [C#], about exceptions
 ms.assetid: 71472c62-320a-470a-97d2-67995180389d
-ms.openlocfilehash: 43012ec1190117b1905b5e44010d5f57a1e543aa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b60ad4ce20a1977d309b275b530d03cbb8e1f7d
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339826"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43514686"
 ---
 # <a name="using-exceptions-c-programming-guide"></a>Utilizzo di eccezioni (Guida per programmatori C#)
 In C# gli errori del programma in fase di esecuzione vengono propagati attraverso il programma usando il meccanismo delle eccezioni. Le eccezioni vengono generate dal codice che rileva un errore e intercettate dal codice in grado di correggere l'errore. Le eccezioni possono essere generate da Common Language Runtime (CLR) in .NET Framework o dal codice in un programma. Quando viene generata un'eccezione, si propaga nello stack di chiamate finché non viene trovata un'istruzione `catch` per l'eccezione. Le eccezioni non rilevate vengono gestite da un gestore di eccezioni generico del sistema che visualizza una finestra di dialogo.  
@@ -43,6 +43,7 @@ In C# gli errori del programma in fase di esecuzione vengono propagati attravers
   
 -   Se viene raggiunto l'inizio del thread, il thread viene terminato.  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [Eccezioni e gestione delle eccezioni](../../../csharp/programming-guide/exceptions/index.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- [Eccezioni e gestione delle eccezioni](../../../csharp/programming-guide/exceptions/index.md)

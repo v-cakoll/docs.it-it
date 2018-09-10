@@ -2,12 +2,12 @@
 title: Prestazioni delle query concatenate (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: b2f1d715-8946-4dc0-8d56-fb3d1bba54a6
-ms.openlocfilehash: 6e0b2ec0b73afe10e21c83499c1a3a52c923f591
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 9377c4e57eb19f133a1f973ea7f86c3bf72e4cf8
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43466930"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43854580"
 ---
 # <a name="performance-of-chained-queries-linq-to-xml-c"></a>Prestazioni delle query concatenate (LINQ to XML) (C#)
 Uno dei più importanti vantaggi di LINQ (e di LINQ to XML) consiste nel fatto che le query concatenate possono offrire le stesse prestazioni di una singola query di dimensioni maggiori e più complessa.  
@@ -54,7 +54,8 @@ foreach (var i in query2)
   
  Per altre informazioni sugli iteratori, vedere [yield](../../../../csharp/language-reference/keywords/yield.md).  
   
- Per un'esercitazione dettagliata sul concatenamento di query, vedere [Esercitazione: concatenamento di query](https://msdn.microsoft.com/library/c08d228a-f07a-4c98-810f-1bf0e8f2257c).  
+ Per un'esercitazione dettagliata sul concatenamento di query, vedere [Esercitazione: concatenamento di query](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Prestazioni (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/performance-linq-to-xml.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Prestazioni (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/performance-linq-to-xml.md)

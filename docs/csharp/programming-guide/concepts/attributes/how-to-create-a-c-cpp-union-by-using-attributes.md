@@ -2,12 +2,12 @@
 title: "Procedura: Creare un'unione C-C++ tramite attributi (C#)"
 ms.date: 07/20/2015
 ms.assetid: 85f35e56-26e0-4d31-9f3a-89bd4005e71a
-ms.openlocfilehash: 30a8be9021495aa4cf61010508762999cdf91ff4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8b5a88656b1172407c3e5b9f5198d5acae7bf9e0
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33315841"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43798509"
 ---
 # <a name="how-to-create-a-cc-union-by-using-attributes-c"></a>Procedura: Creare un'unione C-C++ tramite attributi (C#)
 L'uso degli attributi consente di personalizzare la disposizione degli struct in memoria. Ad esempio, tramite gli attributi `StructLayout(LayoutKind.Explicit)` e `FieldOffset` è possibile creare una struttura che in C/C++ è nota come unione.  
@@ -66,12 +66,13 @@ L'uso degli attributi consente di personalizzare la disposizione degli struct in
   
  I due campi integer, `i1` e `i2`, condividono le stesse posizioni di memoria di `lg`. Questo tipo di controllo sul layout degli struct è utile quando si usa la chiamata di piattaforma.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Reflection>  
- <xref:System.Attribute>  
- [Guida per programmatori C#](../../../../csharp/programming-guide/index.md)  
- [Attributi](../../../../../docs/standard/attributes/index.md)  
- [Reflection (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
- [Attributi (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)  
- [Creazione di attributi personalizzati (C#)](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)  
- [Accessing Attributes by Using Reflection (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md) (Accesso agli attributi tramite reflection (C#))
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.Reflection>  
+- <xref:System.Attribute>  
+- [Guida per programmatori C#](../../../../csharp/programming-guide/index.md)  
+- [Attributi](../../../../../docs/standard/attributes/index.md)  
+- [Reflection (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
+- [Attributi (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)  
+- [Creazione di attributi personalizzati (C#)](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)  
+- [Accessing Attributes by Using Reflection (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md) (Accesso agli attributi tramite reflection (C#))

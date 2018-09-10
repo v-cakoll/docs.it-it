@@ -1,6 +1,6 @@
 ---
-title: Parola chiave switch (Riferimenti per C#)
-ms.date: 03/07/2017
+title: Istruzione switch in C#
+ms.date: 08/14/2018
 f1_keywords:
 - switch_CSharpKeyword
 - switch
@@ -12,25 +12,26 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: 4e21700b36437bf9bd60bb4f33e2833819333f1e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 08b63d67b6175d18bee1317cc8908d876fbb4039
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33288892"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43394817"
 ---
 # <a name="switch-c-reference"></a>switch (Riferimenti per C#)
-`switch` è un'istruzione di selezione che sceglie una sola *sezione opzioni* da eseguire da un elenco di candidati in base a un criterio di ricerca con l'*espressione di ricerca*. 
-  
- [!code-csharp[switch#1](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch1.cs#1)]  
 
-L'istruzione `switch` viene spesso usata come alternativa a un costrutto [if-else](if-else.md) se una singola espressione viene testata in base a tre o più condizioni. Ad esempio, l'istruzione `switch` determina se una variabile di tipo `Color` ha uno dei tre valori: 
+`switch` è un'istruzione di selezione che sceglie una sola *sezione opzioni* da eseguire da un elenco di candidati in base a un criterio di ricerca con l'*espressione di ricerca*.
 
-[!code-csharp[switch#3](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch3.cs#1)] 
+[!code-csharp[switch#1](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch1.cs#1)]
 
-È equivalente all'esempio seguente che usa un costrutto `if`-`else`. 
+L'istruzione `switch` viene spesso usata come alternativa a un costrutto [if-else](if-else.md) se una singola espressione viene testata in base a tre o più condizioni. Ad esempio, l'istruzione `switch` determina se una variabile di tipo `Color` ha uno dei tre valori:
 
-[!code-csharp[switch#3a](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch3a.cs#1)] 
+[!code-csharp[switch#3](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch3.cs#1)]
+
+È equivalente all'esempio seguente che usa un costrutto `if`-`else`.
+
+[!code-csharp[switch#3a](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch3a.cs#1)]
 
 ## <a name="the-match-expression"></a>Espressione di ricerca
 
@@ -44,60 +45,61 @@ In C# 6, l'espressione di ricerca deve essere un'espressione che restituisce un 
 
 - un [char](char.md).
 - una [string](string.md).
-- un [bool](bool.md). 
+- un [bool](bool.md).
 - un valore integrale, ad esempio un [int](int.md) o un [long](long.md).
 - un valore [enum](enum.md).
 
 A partire da C# 7.0, l'espressione di ricerca può essere qualsiasi espressione non null.
- 
+
 ## <a name="the-switch-section"></a>Sezione opzioni
- 
- Un'istruzione `switch` include una o più sezioni opzioni. Ogni sezione opzioni contiene una o più *etichette case* seguite da una o più istruzioni. Nell'esempio seguente viene illustrata una semplice istruzione `switch` con tre sezioni opzioni. Ogni sezione opzione ha un'etichetta case, ad esempio `case 1:`, e due istruzioni.
- 
-  Un'istruzione `switch` può contenere qualsiasi numero di sezioni opzioni e ogni sezione può avere una o più etichette case, come illustrato nell'esempio seguente. Tuttavia, due etichette case non possono contenere la stessa espressione.  
 
- [!code-csharp[switch#2](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch2.cs#1)]  
+Un'istruzione `switch` include una o più sezioni opzioni. Ogni sezione switch contiene una o più *etichette case* (etichetta case o default) seguite da una o più istruzioni. L'istruzione `switch` può includere al massimo un'etichetta default posizionata in qualsiasi sezione switch. Nell'esempio seguente viene illustrata una semplice istruzione `switch` con tre sezioni switch, contenenti ognuna due istruzioni. La seconda sezione switch contiene le etichette `case 2:` e `case 3:`.
 
- Viene eseguita una sola sezione opzioni in un'istruzione switch. C# non consente di continuare l'esecuzione da una sezione opzioni a quella successiva. Per questo motivo, il codice seguente genera un errore di compilazione CS0163: "Il controllo non può passare da un'etichetta case ("<case label>") a un'altra".  
+Un'istruzione `switch` può contenere qualsiasi numero di sezioni opzioni e ogni sezione può avere una o più etichette case, come illustrato nell'esempio seguente. Tuttavia, due etichette case non possono contenere la stessa espressione.
 
-```csharp  
-switch (caseSwitch)  
-{  
-    // The following switch section causes an error.  
-    case 1:  
-        Console.WriteLine("Case 1...");  
-        // Add a break or other jump statement here.  
-    case 2:  
-        Console.WriteLine("... and/or Case 2");  
-        break;  
-}  
-```  
+[!code-csharp[switch#2](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch2.cs#1)]
+
+Viene eseguita una sola sezione opzioni in un'istruzione switch. C# non consente di continuare l'esecuzione da una sezione opzioni a quella successiva. Per questo motivo, il codice seguente genera un errore di compilazione CS0163: "Il controllo non può passare da un'etichetta case ("<case label>") a un'altra".
+
+```csharp
+switch (caseSwitch)
+{
+    // The following switch section causes an error.
+    case 1:
+        Console.WriteLine("Case 1...");
+        // Add a break or other jump statement here.
+    case 2:
+        Console.WriteLine("... and/or Case 2");
+        break;
+}
+```
+
 Questo requisito viene generalmente soddisfatto chiudendo in modo esplicito la sezione opzioni tramite un'istruzione [break](break.md), [goto](goto.md) o [return](return.md). Tuttavia, anche il codice seguente è valido, perché assicura che il controllo del programma non può passare alla sezione opzioni `default`.
-  
- [!code-csharp[switch#4](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch4.cs#1)]    
-  
- L'esecuzione dell'elenco di istruzioni nella sezione opzioni con un'etichetta case che corrisponde all'espressione di ricerca inizia con la prima istruzione e continua con l'elenco di istruzioni, in genere fino a raggiungere un'istruzione di salto, ad esempio `break`, `goto case`, `goto label`, `return` o `throw`. A quel punto, il controllo viene trasferito al di fuori dell'istruzione `switch` o in un'altra etichetta case. Un'istruzione `goto`, se usata, deve trasferire il controllo a un'etichetta costante. Questa restrizione è necessaria, perché il tentativo di trasferire il controllo a un'etichetta non costante può avere effetti collaterali indesiderati, come il trasferimento del controllo a una posizione non prevista nel codice o la creazione di un ciclo infinito.
+
+[!code-csharp[switch#4](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch4.cs#1)]
+
+L'esecuzione dell'elenco di istruzioni nella sezione opzioni con un'etichetta case che corrisponde all'espressione di ricerca inizia con la prima istruzione e continua con l'elenco di istruzioni, in genere fino a raggiungere un'istruzione di salto, ad esempio `break`, `goto case`, `goto label`, `return` o `throw`. A quel punto, il controllo viene trasferito al di fuori dell'istruzione `switch` o in un'altra etichetta case. Un'istruzione `goto`, se usata, deve trasferire il controllo a un'etichetta costante. Questa restrizione è necessaria, perché il tentativo di trasferire il controllo a un'etichetta non costante può avere effetti collaterali indesiderati, come il trasferimento del controllo a una posizione non prevista nel codice o la creazione di un ciclo infinito.
 
 ## <a name="case-labels"></a>Etichette case
 
- Ogni etichetta case specifica un criterio da confrontare con l'espressione di ricerca (la variabile `caseSwitch` negli esempi precedenti). Se corrispondono, il controllo viene trasferito alla sezione opzioni che contiene la **prima** etichetta case corrispondente. Se nessun criterio di etichetta case corrisponde all'espressione di ricerca, il controllo viene trasferito alla sezione con etichetta case `default`, se presente. Se non è presente alcun case `default`, non vengono eseguite istruzioni in nessuna sezione opzioni e il controllo viene trasferito al di fuori dell'istruzione `switch`.
+Ogni etichetta case specifica un criterio da confrontare con l'espressione di ricerca (la variabile `caseSwitch` negli esempi precedenti). Se corrispondono, il controllo viene trasferito alla sezione opzioni che contiene la **prima** etichetta case corrispondente. Se nessun criterio di etichetta case corrisponde all'espressione di ricerca, il controllo viene trasferito alla sezione con etichetta case `default`, se presente. Se non è presente alcun case `default`, non vengono eseguite istruzioni in nessuna sezione opzioni e il controllo viene trasferito al di fuori dell'istruzione `switch`.
 
- Per informazioni sull'istruzione `switch` e sui criteri di ricerca, vedere [Criteri di ricerca con la sezione `switch` istruzione](#pattern).
+Per informazioni sull'istruzione `switch` e sui criteri di ricerca, vedere [Criteri di ricerca con la sezione `switch` istruzione](#pattern).
 
- Poiché C# 6 supporta solo il criterio costante e non consente la ripetizione di valori costanti, le etichette case definiscono valori che si escludono a vicenda e solo un criterio può corrispondere all'espressione di ricerca. Di conseguenza, l'ordine in cui vengono visualizzate le istruzioni `case` non è rilevante.
+Poiché C# 6 supporta solo il criterio costante e non consente la ripetizione di valori costanti, le etichette case definiscono valori che si escludono a vicenda e solo un criterio può corrispondere all'espressione di ricerca. Di conseguenza, l'ordine in cui vengono visualizzate le istruzioni `case` non è rilevante.
 
- In C# 7.0, tuttavia, poiché sono supportati altri criteri, le etichette case non devono necessariamente definire valori che si escludono a vicenda e più criteri possono corrispondere all'espressione di ricerca. Dal momento che vengono eseguite solo le istruzioni nella sezione opzione che contiene il criterio di prima corrispondenza, l'ordine in cui ora vengono visualizzate le istruzioni `case` è importante. Se C# rileva una sezione opzioni la cui istruzione o istruzioni case sono equivalenti a o sono subset di istruzioni precedenti, viene generato l'errore del compilatore CS8120: "Lo switch case è già stato gestito da un case precedente." 
+In C# 7.0, tuttavia, poiché sono supportati altri criteri, le etichette case non devono necessariamente definire valori che si escludono a vicenda e più criteri possono corrispondere all'espressione di ricerca. Dal momento che vengono eseguite solo le istruzioni nella sezione opzione che contiene il criterio di prima corrispondenza, l'ordine in cui ora vengono visualizzate le istruzioni `case` è importante. Se C# rileva una sezione opzioni la cui istruzione o istruzioni case sono equivalenti a o sono subset di istruzioni precedenti, viene generato l'errore del compilatore CS8120: "Lo switch case è già stato gestito da un case precedente."
 
- Nell'esempio seguente viene illustrata un'istruzione `switch` che usa un'ampia gamma di criteri che non si escludono a vicenda. Se si sposta la sezione opzioni `case 0:` in modo che non sia più la prima sezione nell'istruzione `switch`, C# genera un errore del compilatore perché un numero intero il cui valore è uguale a zero è un sottoinsieme di tutti i numeri interi, che corrisponde al criterio definito dall'istruzione `case int val`.
+Nell'esempio seguente viene illustrata un'istruzione `switch` che usa un'ampia gamma di criteri che non si escludono a vicenda. Se si sposta la sezione opzioni `case 0:` in modo che non sia più la prima sezione nell'istruzione `switch`, C# genera un errore del compilatore perché un numero intero il cui valore è uguale a zero è un sottoinsieme di tutti i numeri interi, che corrisponde al criterio definito dall'istruzione `case int val`.
 
- [!code-csharp[switch#5](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch5.cs#1)]    
+[!code-csharp[switch#5](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch5.cs#1)]
 
 È possibile correggere il problema ed eliminare l'avviso del compilatore in uno dei due modi seguenti:
 
-- Modificando l'ordine delle sezioni opzioni. 
- 
+- Modificando l'ordine delle sezioni opzioni.
+
 - Usando un oggetto </a name="when"> quando la clausola </a> si trova nell'etichetta `case`.
- 
+
 ## <a name="the-default-case"></a>Case `default`
 
 Il case `default` specifica la sezione opzioni da eseguire se l'espressione di ricerca non corrisponde nessun'altra etichetta `case`. Se non è presente un case `default` e l'espressione di ricerca non corrisponde a nessun'altra etichetta `case`, il flusso del programma salta l'istruzione `switch`.
@@ -105,10 +107,10 @@ Il case `default` specifica la sezione opzioni da eseguire se l'espressione di r
 Il case `default` può essere visualizzato in qualsiasi ordine nell'istruzione `switch`. Indipendentemente dall'ordine nel codice sorgente, viene sempre valutato per ultimo, dopo la valutazione di tutte le etichette `case`.
 
 ## <a name="a-namepattern--pattern-matching-with-the-switch-statement"></a><a name="pattern" /> Criteri di ricerca con istruzione `switch`
-  
-Ogni istruzione `case` definisce un criterio che, in caso di corrispondenza con l'espressione di ricerca, provoca l'esecuzione della sezione opzioni che la contiene. Tutte le versioni di C# supportano il criterio costante. I criteri rimanenti sono supportati a partire da C# 7.0. 
-  
-### <a name="constant-pattern"></a>Criterio costante 
+
+Ogni istruzione `case` definisce un criterio che, in caso di corrispondenza con l'espressione di ricerca, provoca l'esecuzione della sezione opzioni che la contiene. Tutte le versioni di C# supportano il criterio costante. I criteri rimanenti sono supportati a partire da C# 7.0.
+
+### <a name="constant-pattern"></a>Criterio costante
 
 Il criterio costante verifica se un'espressione di ricerca è uguale a una costante specificata. La sintassi è la seguente:
 
@@ -116,10 +118,10 @@ Il criterio costante verifica se un'espressione di ricerca è uguale a una costa
    case constant:
 ```
 
-dove *costant* è il valore su cui eseguire il test. *constant* può essere una delle espressioni costanti seguenti: 
+dove *costant* è il valore su cui eseguire il test. *constant* può essere una delle espressioni costanti seguenti:
 
 - Un valore letterale [bool](bool.md), ad esempio `true` o `false`.
-- Qualsiasi costante integrale, ad esempio un [int](int.md), un [long](long.md) o un [byte](byte.md). 
+- Qualsiasi costante integrale, ad esempio un [int](int.md), un [long](long.md) o un [byte](byte.md).
 - Il nome di una variabile `const` dichiarata.
 - Una costante di enumerazione.
 - Un valore letterale [char](char.md).
@@ -129,24 +131,25 @@ L'espressione costante viene valutata nel modo seguente:
 
 - Se *expr* e *constant* sono tipi integrali, l'operatore di uguaglianza C# determina se l'espressione restituisce `true` (ovvero, se `expr == constant`).
 
-- In caso contrario, il valore dell'espressione è determinato da una chiamata al metodo [Object.Equals(expr, constant)](xref:System.Object.Equals(System.Object,System.Object)) statico.  
+- In caso contrario, il valore dell'espressione è determinato da una chiamata al metodo [Object.Equals(expr, constant)](xref:System.Object.Equals(System.Object,System.Object)) statico.
 
-Nell'esempio seguente viene usato il modello costante per determinare se una determinata data è un fine settimana, il primo giorno della settimana lavorativa, l'ultimo giorno della settimana o nel mezzo della settimana lavorativa. Viene valutata la proprietà <xref:System.DateTime.DayOfWeek?displayProperty=nameWithType> del giorno corrente con i membri dell'enumerazione <xref:System.DayOfWeek>. 
+Nell'esempio seguente viene usato il modello costante per determinare se una determinata data è un fine settimana, il primo giorno della settimana lavorativa, l'ultimo giorno della settimana o nel mezzo della settimana lavorativa. Viene valutata la proprietà <xref:System.DateTime.DayOfWeek?displayProperty=nameWithType> del giorno corrente con i membri dell'enumerazione <xref:System.DayOfWeek>.
 
 [!code-csharp[switch#7](../../../../samples/snippets/csharp/language-reference/keywords/switch/const-pattern.cs#1)]
 
 L'esempio seguente usa il modello costante per gestire l'input dell'utente in un'applicazione console che simula una macchina per il caffè automatica.
-  
- [!code-csharp[switch#6](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch6.cs)]  
+
+[!code-csharp[switch#6](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch6.cs)]
 
 ### <a name="type-pattern"></a>Criterio del tipo
 
 Il criterio del tipo consente la conversione e valutazione concise del tipo. Quando si usa con l'espressione `switch` per eseguire i criteri di ricerca, verifica se un'espressione può essere convertita in un tipo specificato e, in tal caso, esegue il cast a una variabile di quel tipo. La sintassi è la seguente:
 
 ```csharp
-   case type varname 
+   case type varname
 ```
-dove *type* è il nome del tipo in cui il risultato di *expr* deve essere convertito e *varname* è l'oggetto in cui il risultato di *expr*deve essere convertito se la ricerca ha esito positivo. 
+
+dove *type* è il nome del tipo in cui il risultato di *expr* deve essere convertito e *varname* è l'oggetto in cui il risultato di *expr*deve essere convertito se la ricerca ha esito positivo.
 
 L'espressione `case` è `true` se una delle condizioni seguenti è true:
 
@@ -165,35 +168,33 @@ Si noti che `null` non corrisponde a un tipo. Per associare un `null`, usare l'e
 ```csharp
 case null:
 ```
- 
+
 Nell'esempio seguente viene usato il criterio del tipo per fornire informazioni sui vari generi di tipi di raccolta.
 
 [!code-csharp[switch#5](../../../../samples/snippets/csharp/language-reference/keywords/switch/type-pattern.cs#1)]
 
-Senza criteri di ricerca, questo codice potrebbe essere scritto come segue. L'uso di criteri di ricerca del tipo produce codice più compatto e leggibile eliminando la necessità di verificare se il risultato di una conversione è un `null` o eseguire cast ripetuti.  
+Senza criteri di ricerca, questo codice potrebbe essere scritto come segue. L'uso di criteri di ricerca del tipo produce codice più compatto e leggibile eliminando la necessità di verificare se il risultato di una conversione è un `null` o eseguire cast ripetuti.
 
 [!code-csharp[switch#6](../../../../samples/snippets/csharp/language-reference/keywords/switch/type-pattern2.cs#1)]
 
-## <a name="the-case-statement-and-the-when-clause"></a>L'istruzione `case` e la clausola `when`
+## <a name="a-namewhen--the-case-statement-and-the-when-clause"></a><a name="when" /> Istruzione `case` e clausola `when`
 
-A partire da C# 7.0, poiché le istruzioni case devono escludersi a vicenda, è possibile aggiungere una clausola `when` per specificare una condizione aggiuntiva che deve essere soddisfatta perché l'istruzione case restituisca true. La clausola `when` può essere qualsiasi espressione che restituisce un valore booleano. Comunemente, la clausola `when` viene usata per impedire l'esecuzione di una sezione opzioni quando il valore di un'espressione di ricerca è `null`. 
+A partire da C# 7.0, poiché le istruzioni case non devono escludersi a vicenda, è possibile aggiungere una clausola `when` per specificare una condizione aggiuntiva che deve essere soddisfatta perché l'istruzione case restituisca true. La clausola `when` può essere qualsiasi espressione che restituisce un valore booleano.
 
- Nell'esempio seguente viene definita una classe `Shape` di base, una classe `Rectangle` che deriva da `Shape` e una classe `Square` che deriva da `Rectangle`. L'esempio usa una clausola `when` per assicurarsi che `ShowShapeInfo` consideri un oggetto `Rectangle` a cui è stata assegnata pari lunghezza e larghezza di un `Square`, anche nel caso in cui non sia stata creata un'istanza come oggetto `Square`. Il metodo non tenta di visualizzare informazioni su un oggetto `null` o su una forma la cui l'area è pari a zero. 
+Nell'esempio seguente viene definita una classe `Shape` di base, una classe `Rectangle` che deriva da `Shape` e una classe `Square` che deriva da `Rectangle`. L'esempio usa una clausola `when` per assicurarsi che `ShowShapeInfo` consideri un oggetto `Rectangle` a cui è stata assegnata pari lunghezza e larghezza di un elemento `Square`, anche nel caso in cui non sia stata creata un'istanza come oggetto `Square`. Il metodo non tenta di visualizzare informazioni su un oggetto `null` o su una forma la cui l'area è pari a zero.
 
 [!code-csharp[switch#8](../../../../samples/snippets/csharp/language-reference/keywords/switch/when-clause.cs#1)]
-  
+
 Si noti che non viene eseguita la clausola `when` nell'esempio che tenta di verificare se un oggetto `Shape` è `null`. Il criterio del tipo corretto da verificare per un `null` è `case null:`.
 
-## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
- [!INCLUDE[CSharplangspec](../../../../includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a>Vedere anche  
+## <a name="c-language-specification"></a>Specifiche del linguaggio C#
 
- [Riferimenti per C#](../index.md)  
- [Guida per programmatori C#](../../programming-guide/index.md)  
- [Parole chiave di C#](index.md)  
- [if-else](if-else.md)  
- [Criteri di ricerca](../../pattern-matching.md)  
- 
+Per altre informazioni, vedere la sezione relativa all'[istruzione switch](/dotnet/csharp/language-reference/language-specification/statements#the-switch-statement) nella [specifica del linguaggio C#](../language-specification/index.md). La specifica del linguaggio costituisce il riferimento ufficiale principale per la sintassi e l'uso di C#.
 
- 
+## <a name="see-also"></a>Vedere anche
+
+- [Riferimenti per C#](../index.md)
+- [Guida per programmatori C#](../../programming-guide/index.md)
+- [Parole chiave di C#](index.md)
+- [if-else](if-else.md)
+- [Criteri di ricerca](../../pattern-matching.md)

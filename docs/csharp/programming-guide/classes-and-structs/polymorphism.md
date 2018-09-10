@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-ms.openlocfilehash: 8bbf93d14a16b06441ba48b9d4e19cfd249e9146
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 25192d57955d15c5707816ee6c4a515893891507
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328445"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43523393"
 ---
 # <a name="polymorphism-c-programming-guide"></a>Polimorfismo (Guida per programmatori C#)
 Il polimorfismo è spesso definito il terzo pilastro della programmazione orientata a oggetti, dopo l'incapsulamento e l'ereditarietà. Polimorfismo è una parola che deriva dal greco e significa "multiforme". Il polimorfismo presenta due aspetti distinti:  
@@ -94,13 +94,14 @@ Il polimorfismo è spesso definito il terzo pilastro della programmazione orient
   
 -   [Procedura: Eseguire l'override del metodo ToString](../../../csharp/programming-guide/classes-and-structs/how-to-override-the-tostring-method.md)  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [Ereditarietà](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
- [Classi e membri delle classi astratte e sealed](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)  
- [Metodi](../../../csharp/programming-guide/classes-and-structs/methods.md)  
- [Eventi](../../../csharp/programming-guide/events/index.md)  
- [Proprietà](../../../csharp/programming-guide/classes-and-structs/properties.md)  
- [Indicizzatori](../../../csharp/programming-guide/indexers/index.md)  
- [Tipi](../../../csharp/programming-guide/types/index.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- [Ereditarietà](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
+- [Classi e membri delle classi astratte e sealed](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)  
+- [Metodi](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+- [Eventi](../../../csharp/programming-guide/events/index.md)  
+- [Proprietà](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+- [Indicizzatori](../../../csharp/programming-guide/indexers/index.md)  
+- [Tipi](../../../csharp/programming-guide/types/index.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - double data type [C#]
 ms.assetid: 0980e11b-6004-4102-abcf-cfc280fc6991
-ms.openlocfilehash: 8e3a94bb79d46f2815e46b86f1aca92acc73e5c2
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.openlocfilehash: 4c11065d9354d44c1da8354c6f7b4f52d7b84c10
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37027850"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43401324"
 ---
 # <a name="double-c-reference"></a>double (Riferimenti per C#)
 
@@ -34,9 +34,9 @@ double x = 3D;
 
 In una stessa espressione è possibile combinare tipi integrali numerici e tipi a virgola mobile. In questo caso i tipi integrali vengono convertiti in tipi a virgola mobile. La valutazione dell'espressione viene eseguita in base alle regole seguenti:
 
-- Se uno dei tipi a virgola mobile è `double`, l'espressione restituirà un valore `double` o [bool](../../../csharp/language-reference/keywords/bool.md) in caso di espressioni relazionali o booleane.
+- Se uno dei tipi a virgola mobile è `double`, l'espressione restituirà un valore `double` o [bool](../../../csharp/language-reference/keywords/bool.md) nei confronti relazionali o nei confronti per l'uguaglianza.
 
-- Se l'espressione non contiene alcun tipo `double` restituirà un valore [float](../../../csharp/language-reference/keywords/float.md) o [bool](../../../csharp/language-reference/keywords/bool.md) in caso di espressioni relazionali o booleane.
+- Se nell'espressione non è presente alcun tipo `double`, l'espressione restituirà un valore [float](../../../csharp/language-reference/keywords/float.md) o [bool](../../../csharp/language-reference/keywords/bool.md) nei confronti relazionali o nei confronti per l'uguaglianza.
 
  Un'espressione a virgola mobile può contenere gli insiemi di valori seguenti:
 
@@ -62,11 +62,11 @@ Nell'esempio seguente, i valori [int](../../../csharp/language-reference/keyword
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimenti per C#](../../../csharp/language-reference/index.md)  
-[Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
-[Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)  
-[Tabella dei valori predefiniti](../../../csharp/language-reference/keywords/default-values-table.md)  
-[Tabella dei tipi incorporati](../../../csharp/language-reference/keywords/built-in-types-table.md)  
-[Tabella dei tipi a virgola mobile](../../../csharp/language-reference/keywords/floating-point-types-table.md)  
-[Tabella delle conversioni numeriche implicite](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
-[Tabella delle conversioni numeriche esplicite](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  
+- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)  
+- [Tabella dei valori predefiniti](../../../csharp/language-reference/keywords/default-values-table.md)  
+- [Tabella dei tipi incorporati](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+- [Tabella dei tipi a virgola mobile](../../../csharp/language-reference/keywords/floating-point-types-table.md)  
+- [Tabella delle conversioni numeriche implicite](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
+- [Tabella delle conversioni numeriche esplicite](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - -nowarn compiler option [C#]
 ms.assetid: 6dcbc5e8-ae67-4566-9df3-f63cfdd9c4e4
 ms.openlocfilehash: 76bb008c40d84ed6048b8f960f050048319273b9
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43421928"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43518205"
 ---
 # <a name="-nowarn-c-compiler-options"></a>-nowarn (opzioni del compilatore C#)
 L'opzione **-nowarn** impedisce al compilatore di visualizzare uno o più avvisi. Separare più numeri di avviso con una virgola.  

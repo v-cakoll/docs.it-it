@@ -2,12 +2,12 @@
 title: 'Procedura: trasformare la forma di una struttura ad albero XML (C#)'
 ms.date: 07/20/2015
 ms.assetid: 93c5d426-dea2-4709-a991-60204de42e8f
-ms.openlocfilehash: 2c1f5728781a89caa813c2e3cbd822ae711a77e4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6bfa3e14694ce421dc349dc4449ae231c4628b79
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326105"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43514880"
 ---
 # <a name="how-to-transform-the-shape-of-an-xml-tree-c"></a>Procedura: trasformare la forma di una struttura ad albero XML (C#)
 Per *forma* di un documento XML si intendono i relativi nomi di elemento, nomi di attributi, nonché le caratteristiche della relativa gerarchia.  
@@ -138,5 +138,6 @@ static void Main(string[] args)
 </PO>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Projections and Transformations (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md) (Proiezioni e trasformazioni (LINQ to XML) in C#)
+## <a name="see-also"></a>Vedere anche
+
+- [Projections and Transformations (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md) (Proiezioni e trasformazioni (LINQ to XML) in C#)

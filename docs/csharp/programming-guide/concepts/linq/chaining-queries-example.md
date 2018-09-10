@@ -2,12 +2,12 @@
 title: Esempio di concatenamento di query (C#)
 ms.date: 07/20/2015
 ms.assetid: abbca162-d95e-43af-b92c-e46e6aa2540e
-ms.openlocfilehash: d28f5f4ed4f9e6deb5f6f3d381d310ebcef6e132
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 864d7ed34957defdedf21ccb1671d49c48913d88
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327692"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43739926"
 ---
 # <a name="chaining-queries-example-c"></a>Esempio di concatenamento di query (C#)
 In questo esempio, basato sull'esempio precedente, vengono illustrati gli effetti del concatenamento di due query che usano l'esecuzione posticipata e la valutazione lazy.  
@@ -86,5 +86,6 @@ Main: str >GHI!!!<
   
 -   [Materializzazione intermedia (C#)](../../../../csharp/programming-guide/concepts/linq/intermediate-materialization.md)  
   
-## <a name="see-also"></a>Vedere anche  
- [Esercitazione: Concatenamento di query (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Esercitazione: Concatenamento di query (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)

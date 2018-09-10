@@ -4,12 +4,12 @@ description: Informazioni su come creare la prima applicazione .NET Core in C# e
 author: kendrahavens
 ms.author: mairaw
 ms.date: 09/27/2017
-ms.openlocfilehash: 8958c39ba16cadbfab95e35fa36e8e85ce0a4ab8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 321edcebdea141b7290fa57b47c8d9fc91d3521c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33213617"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484668"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>Introduzione a C# e Visual Studio Code
 
@@ -50,7 +50,7 @@ Si inizia con un semplice programma "Hello World" in .NET Core:
 
 4. Eseguire il programma "Hello World":
 
-    * Digitare `dotnet run`. 
+    * Digitare `dotnet run`.
 
       ![Comando run di dotnet](media/with-visual-studio-code/dotnetrun.png)
 
@@ -62,7 +62,7 @@ Per altre informazioni sull'installazione in [Windows](https://channel9.msdn.com
 
     ![Aprire il file Program.cs](media/with-visual-studio-code/opencs.png)
 
-2. Visual Studio Code dovrebbe chiedere di aggiungere le risorse mancanti per compilare l'app ed eseguirne il debug. Selezionare **Sì**. 
+2. Visual Studio Code dovrebbe chiedere di aggiungere le risorse mancanti per compilare l'app ed eseguirne il debug. Selezionare **Sì**.
 
     ![Richiesta delle risorse mancanti](media/with-visual-studio-code/missing-assets.png)
 
@@ -74,7 +74,7 @@ Per altre informazioni sull'installazione in [Windows](https://channel9.msdn.com
 
     ![Selezione di .NET Core](media/with-visual-studio-code/selectcore.png)
 
-5. Aggiungere un punto di interruzione al progetto facendo clic sul **margine dell'editor**, ovvero lo spazio a sinistra dei numeri riga nell'editor, accanto alla riga 9.
+5. Aggiungere un punto di interruzione al progetto facendo clic sul **margine dell'editor**, ovvero lo spazio a sinistra dei numeri di riga nell'editor accanto alla riga 9, oppure spostare il cursore di testo sulla riga 9 e premere <kbd>F9</kbd>.
 
     ![Impostazione di un punto di interruzione](media/with-visual-studio-code/setbreakpoint.png)
 
@@ -85,9 +85,16 @@ Per altre informazioni sull'installazione in [Windows](https://channel9.msdn.com
 
 7. Selezionare la freccia verde in alto per continuare il debug oppure fare clic sul quadrato rosso per arrestarlo.
 
-> [!TIP] 
+> [!TIP]
 > Per altre informazioni e per suggerimenti sul debug .NET Core con OmniSharp in Visual Studio Code, vedere [Instructions for setting up the .NET Core debugger](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md) (Istruzioni per l'impostazione del debugger .NET Core).
 
+## <a name="faq"></a>Domande frequenti
+
+### <a name="im-missing-required-assets-to-build-and-debug-c-in-visual-studio-code-my-debugger-says-no-configuration"></a>Non sono più disponibili gli asset necessari per compilare ed eseguire il debug di C# in Visual Studio Code. Ildebugger indica "Nessuna configurazione".
+
+L'estensione C# di Visual Studio Code può generare gli asset necessari per compilare ed eseguire il debug. Visual Studio Code chiederà di generarli alla prima apertura di un progetto C#. Se gli asset non sono stati generati, è comunque possibile eseguire questo comando aprendo il riquadro comandi (**Visualizza > Riquadro comandi**) e digitando "> .NET: generare gli asset per la compilazione e il debug". Questa seleziona consente di generare i file .vscode, launch.json e tasks.json necessari.
+
 ## <a name="see-also"></a>Vedere anche
-[Setting up Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview)  (Impostazione di Visual Studio Code)  
-[Debugging in Visual Studio Code](https://code.visualstudio.com/Docs/editor/debugging) (Debug in Visual Studio Code)
+
+* [Setting up Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview) (Impostazione di Visual Studio Code)
+* [Debugging in Visual Studio Code](https://code.visualstudio.com/Docs/editor/debugging) (Debug in Visual Studio Code)

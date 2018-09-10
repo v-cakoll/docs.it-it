@@ -9,11 +9,11 @@ helpviewer_keywords:
 - -target compiler options [C#], /target:exe
 ms.assetid: bda5717d-1b91-4848-956b-fcf85c30e432
 ms.openlocfilehash: 4a2d3ea2bda56caf6a16f52877ad36b3947357e8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43391110"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43518159"
 ---
 # <a name="-targetexe-c-compiler-options"></a>-target:exe (opzioni del compilatore C#)
 L'opzione **-target:exe** indica al compilatore di creare un file eseguibile (EXE), applicazione console.  

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - using directive [C#]
 ms.assetid: b42b8e61-5e7e-439c-bb71-370094b44ae8
-ms.openlocfilehash: 180c038987e7de6b39a8eae0e86871eea41a40bb
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 1ed7ac49cde6792cddff898e8b9930a83598e02c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37960040"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43388143"
 ---
 # <a name="using-directive-c-reference"></a>Direttiva using (Riferimenti per C#)
 La direttiva `using` ha tre usi:  
@@ -20,7 +20,7 @@ La direttiva `using` ha tre usi:
     using System.Text;  
     ```  
   
--   Consentire l'accesso ai membri statici di un tipo senza dover qualificare l'accesso con il nome del tipo. 
+-   Consentire l'accesso ai membri statici e ai tipi nidificati di un tipo senza dover qualificare l'accesso con il nome del tipo. 
   
     ```csharp  
     using static System.Math;  
@@ -52,13 +52,23 @@ class Program
 ```  
   
 ## <a name="remarks"></a>Note  
- L'ambito di una direttiva `using` è limitato al file in cui viene visualizzata.  
+ L'ambito di una direttiva `using` è limitato al file in cui viene visualizzata.
+ 
+ La direttiva `using` può essere visualizzata:
+- All'inizio del file del codice sorgente, prima di eventuali definizioni di spazio dei nomi o tipo.
+- In qualsiasi spazio dei nomi, ma prima di un spazio dei nomi o di tipi dichiarati nello spazio dei nomi.
+
+In caso contrario, viene generato l'errore del compilatore [CS1529](../../misc/cs1529.md).
   
- Creare un alias `using` per semplificare la qualifica di un identificatore in uno spazio dei nomi o un tipo. La parte destra di una direttiva alias deve essere sempre un tipo completo indipendentemente dalle direttive using che lo precedono.  
+ Creare una direttiva alias `using` per semplificare la qualifica di un identificatore in uno spazio dei nomi o un tipo. In una direttiva `using` è necessario usare lo spazio dei nomi o il tipo completo indipendentemente dalle direttive `using` che la precedono. Non è possibile usare alcun alias `using` nella dichiarazione di una direttiva `using`. Ad esempio, il codice seguente genera un errore del compilatore:
+ ```csharp
+ using s = System.Text;
+ using s.RegularExpressions; 
+ ```
   
  Creare una direttiva `using` per usare i tipi in uno spazio dei nomi senza dover specificare tale spazio dei nomi. Una direttiva `using` non offre accesso ad alcuno spazio dei nomi annidato nello spazio dei nomi specificato.  
   
- Gli spazi dei nomi sono disponibili in due categorie: definiti dall'utente e definiti dal sistema. Gli spazi dei nomi definiti dall'utente vengono definiti nel codice. Per un elenco di spazi dei nomi definiti dal sistema, vedere [.NET Framework Class Library Overview](../../../standard/class-library-overview.md) (Panoramica della libreria di classi di .NET Framework).  
+ Gli spazi dei nomi sono disponibili in due categorie: definiti dall'utente e definiti dal sistema. Gli spazi dei nomi definiti dall'utente vengono definiti nel codice. Per un elenco di spazi dei nomi definiti dal sistema, vedere [Browser API .NET](https://docs.microsoft.com/en-us/dotnet/api/).  
   
  Per esempi relativi ai metodi di riferimento in altri assembly, vedere [Create and Use Assemblies Using the Command Line](../../programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md) (Creazione e uso degli assembly usando la riga di comando).  
   
@@ -79,11 +89,12 @@ class Program
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [Uso degli spazi dei nomi](../../../csharp/programming-guide/namespaces/using-namespaces.md)  
- [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)  
- [Parole chiave per gli spazi dei nomi](../../../csharp/language-reference/keywords/namespace-keywords.md)  
- [Spazi dei nomi](../../../csharp/programming-guide/namespaces/index.md)  
- [Istruzione using](../../../csharp/language-reference/keywords/using-statement.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- [Uso degli spazi dei nomi](../../../csharp/programming-guide/namespaces/using-namespaces.md)  
+- [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)  
+- [Parole chiave per gli spazi dei nomi](../../../csharp/language-reference/keywords/namespace-keywords.md)  
+- [Spazi dei nomi](../../../csharp/programming-guide/namespaces/index.md)  
+- [Istruzione using](../../../csharp/language-reference/keywords/using-statement.md)

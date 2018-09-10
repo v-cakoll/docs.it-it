@@ -2,12 +2,12 @@
 title: 'Procedura: Suddividere un file in molti file usando i gruppi (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 8179b91c-d778-4e57-884f-77fe5a8e4e40
-ms.openlocfilehash: 8cce9176c303efe0da4b546afabe2bf6d491e167
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d0dd742f599a6acee4928239aab79cc7b1b66d4b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326973"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43512253"
 ---
 # <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a>Procedura: Suddividere un file in molti file usando i gruppi (LINQ) (C#)
 Questo esempio illustra un modo per unire il contenuto di due file e creare quindi un set di nuovi file in cui i dati sono organizzati in modo diverso.  
@@ -124,9 +124,11 @@ class SplitWithGroups
   
  Il programma scrive un file separato per ogni gruppo nella stessa cartella dei file di dati.  
   
-## <a name="compiling-the-code"></a>Compilazione del codice  
+## <a name="compiling-the-code"></a>Compilazione del codice
+
  Creare un progetto che usi .NET Framework versione 3.5 o successiva con un riferimento a System.Core.dll e alle direttive `using` per gli spazi dei nomi System.Linq e System.IO.  
   
-## <a name="see-also"></a>Vedere anche  
- [LINQ e stringhe (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
- [Directory di file e LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a>Vedere anche
+
+- [LINQ e stringhe (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
+- [Directory di file e LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)

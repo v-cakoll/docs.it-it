@@ -4,18 +4,18 @@ description: Informazioni su come .NET Core ricerca e sceglie le versioni runtim
 author: billwagner
 ms.author: wiwagn
 ms.date: 06/27/2018
-ms.openlocfilehash: d1b885ebbade4736d5f592d1dc1d4ba25a321a16
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 21697aa773abfbd88288d47323402a48c51d69ae
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874470"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43395117"
 ---
 # <a name="net-core-version-selection"></a>Scelta della versione di .NET Core
 
 [!INCLUDE [topic-appliesto-net-core-2plus](../../../includes/topic-appliesto-net-core-2plus.md)]
 
-Questo articolo illustra i criteri usati dagli strumenti di .NET Core, dall'SDK e dal Common Language Runtime per selezionare le versioni. Questi criteri consentono di bilanciare tra l'esecuzione di applicazioni con le versioni specificate e la possibilità di aggiornare i computer sia degli sviluppatori che degli utenti finali. Questi criteri consentono quanto segue:
+Questo articolo illustra i criteri usati dagli strumenti di .NET Core, dall'SDK e dal Common Language Runtime per selezionare le versioni. Questi criteri consentono di bilanciare tra l'esecuzione di applicazioni con le versioni specificate e la possibilità di aggiornare i computer sia degli sviluppatori che degli utenti finali. Questi criteri consentono le azioni seguenti:
 
 - Distribuzione facile e veloce di .NET Core, inclusi gli aggiornamenti alla sicurezza e all'affidabilità.
 - Utilizzo degli strumenti e dei comandi più recenti indipendentemente dal runtime di destinazione.
@@ -31,11 +31,11 @@ Il resto di questo documento esamina questi quattro scenari.
 
 ## <a name="the-sdk-uses-the-latest-installed-version"></a>L'SDK usa la versione installata più recente
 
-I comandi dell'SDK includono `dotnet new`, `dotnet build` o `dotnet run`. L'interfaccia della riga di comando `dotnet` deve scegliere una versione dell'SDK per qualsiasi comando. Per impostazione predefinita, l'interfaccia della riga di comando .NET Core usa l'SDK più recente installato nel computer. Si userà .NET Core SDK v2.1.301 quando installato, anche se il progetto a cui si lavora è destinato a .NET Core Runtime 2.0. Ciò vale sia per le versioni di anteprima che per le versioni rilasciate. È possibile usufruire delle funzionalità e dei miglioramenti più recenti dell'SDK anche se si punta a versioni meno recenti di .NET Core Runtime. È possibile assegnare più versioni di runtime di .NET Core a progetti diversi, usando gli stessi strumenti dell'SDK per tutti i progetti.
+I comandi dell'SDK includono `dotnet new`,  , o `dotnet run`. L'interfaccia della riga di comando `dotnet` deve scegliere una versione dell'SDK per qualsiasi comando. Per impostazione predefinita, l'interfaccia della riga di comando .NET Core usa l'SDK più recente installato nel computer. Si userà .NET Core SDK v2.1.301 quando installato, anche se il progetto a cui si lavora è destinato a .NET Core Runtime 2.0. Si useranno sia le versioni di anteprima più recenti che le versioni rilasciate. È possibile usufruire delle funzionalità e dei miglioramenti più recenti dell'SDK anche se si punta a versioni meno recenti di .NET Core Runtime. È possibile assegnare più versioni di runtime di .NET Core a progetti diversi, usando gli stessi strumenti dell'SDK per tutti i progetti.
 
 In casi rari potrebbe essere necessario usare una versione meno recente dell'SDK. La versione deve essere specificata in un file [*global.json*](../tools/global-json.md). I criteri dell'"uso della versione più recente" indicano che si usa solo il file *global.json* per specificare una versione di .NET Core SDK antecedente a quella installata, che è la più recente.
 
-Il file *global.json* può essere memorizzato in un punto qualsiasi della gerarchia di file. L'interfaccia della riga di comando cerca a ritroso il primo file *global.json* che trova partendo dalla directory di progetto. Si controlla a quali progetti si applica un determinato file *global.json* in base alla sua posizione nel file system. L'interfaccia della riga di comando .NET cerca ripetutamente un file *global.json* esplorando il percorso a ritroso partendo dalla directory di lavoro corrente. Il primo file *global.json* trovato specifica la versione usata. Se tale versione è installata, sarà questa a essere usata. Se l'SDK specificato nel file *global.json* non viene trovato, l'interfaccia della riga di comando .NET esegue il roll forward all'SDK installato più recente. Questo approccio è uguale al comportamento predefinito quando non viene individuato alcun file *global.json*.
+Il file *global.json* può essere memorizzato in un punto qualsiasi della gerarchia di file. L'interfaccia della riga di comando cerca a ritroso il primo file *global.json* che trova partendo dalla directory di progetto. Si controlla a quali progetti si applica un determinato file *global.json* in base alla sua posizione nel file system. L'interfaccia della riga di comando .NET cerca ripetutamente un file *global.json* esplorando il percorso a ritroso partendo dalla directory di lavoro corrente. Il primo file *global.json* trovato specifica la versione usata. Se tale versione è installata, sarà questa a essere usata. Se l'SDK specificato nel file *global.json* non viene trovato, l'interfaccia della riga di comando .NET esegue il roll forward all'SDK installato più recente. Il roll-forward è analogo al comportamento predefinito quando non viene individuato alcun file *global.json*.
 
 L'esempio seguente mostra la sintassi del file *global.json*:
 
@@ -53,7 +53,7 @@ Il processo per la selezione di una versione dell'SDK è il seguente:
 1. `dotnet` usa l'SDK specificato nel file *global.json* trovato.
 1. `dotnet` usa l'SDK installato più recente se non viene trovato alcun file *global.json*.
 
-Altre informazioni sulla selezione di una versione dell'SDK sono disponibili nella sezione sulle [regole di corrispondenza](../tools/global-json.md) nell'argomento relativo a *global.json*.
+Altre informazioni sulla selezione di una versione dell'SDK sono disponibili nella sezione sulle [regole di corrispondenza](../tools/global-json.md#matching-rules) nell'articolo relativo a *global.json*.
 
 ## <a name="target-framework-monikers-define-build-time-apis"></a>Definizione delle API della fase di compilazione tramite i moniker del framework di destinazione
 

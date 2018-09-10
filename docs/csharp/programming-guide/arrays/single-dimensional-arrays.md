@@ -5,14 +5,15 @@ helpviewer_keywords:
 - single-dimensional arrays [C#]
 - arrays [C#], single-dimensional
 ms.assetid: 2cec1196-1de0-49d2-baf2-c607c33310e8
-ms.openlocfilehash: 2f5dcb032c5dea764cdd212bbcd02e1640089d96
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c2f26fd74a596ada21eef578e58c9cd8e0305d6c
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33313953"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44128550"
 ---
 # <a name="single-dimensional-arrays-c-programming-guide"></a>Matrici unidimensionali (Guida per programmatori C#)
+
 È possibile dichiarare una matrice unidimensionale di cinque valori integer, come illustrato nell'esempio seguente:  
   
  [!code-csharp[csProgGuideArrays#4](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_1.cs)]  
@@ -23,7 +24,8 @@ ms.locfileid: "33313953"
   
  [!code-csharp[csProgGuideArrays#5](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_2.cs)]  
   
-## <a name="array-initialization"></a>Inizializzazione di una matrice  
+## <a name="array-initialization"></a>Inizializzazione di una matrice
+
  È possibile inizializzare una matrice al momento della dichiarazione. In tal caso, l'identificatore del numero di dimensioni non è necessario perché è già fornito dal numero di elementi nell'elenco di inizializzazione. Ad esempio:  
   
  [!code-csharp[csProgGuideArrays#6](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_3.cs)]  
@@ -42,7 +44,8 @@ ms.locfileid: "33313953"
   
  In C# 3.0 sono state introdotte le matrici tipizzate in modo implicito. Per altre informazioni, vedere [Matrici tipizzate in modo implicito](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md).  
   
-## <a name="value-type-and-reference-type-arrays"></a>Matrici di tipo valore e di tipo riferimento  
+## <a name="value-type-and-reference-type-arrays"></a>Matrici di tipo valore e di tipo riferimento
+
  Considerare la dichiarazione di matrice seguente:  
   
  [!code-csharp[csProgGuideArrays#10](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_7.cs)]  
@@ -51,9 +54,10 @@ ms.locfileid: "33313953"
   
  Per altre informazioni su tipi valore e tipi riferimento, vedere [Tipi](../../../csharp/language-reference/keywords/types.md).  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Array>  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [Array](../../../csharp/programming-guide/arrays/index.md)  
- [Matrici multidimensionali](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)  
- [Matrici irregolari](../../../csharp/programming-guide/arrays/jagged-arrays.md)
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.Array>  
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- [Array](../../../csharp/programming-guide/arrays/index.md)  
+- [Matrici multidimensionali](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)  
+- [Matrici irregolari](../../../csharp/programming-guide/arrays/jagged-arrays.md)

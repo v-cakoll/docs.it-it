@@ -2,12 +2,12 @@
 title: Analisi di codice XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 7ea83f83-a779-423a-9875-4ea4e51f97fc
-ms.openlocfilehash: 876cfdf7bd5a82aba75d456d6d5cda57e080fdf0
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: a2dc3043c8cbf8138a164ab06d8394e4c859fa50
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42933982"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43523028"
 ---
 # <a name="parsing-xml-c"></a>Analisi di codice XML (C#)
 Negli argomenti di questa sezione viene descritto come analizzare documenti XML.  
@@ -23,5 +23,6 @@ Negli argomenti di questa sezione viene descritto come analizzare documenti XML.
 |[Procedura: Creare una struttura ad albero da un XmlReader (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-create-a-tree-from-an-xmlreader.md)|Viene illustrato come creare un albero XML direttamente da un oggetto <xref:System.Xml.XmlReader>.|  
 |[Procedura: flusso di frammenti XML da un XmlReader (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-from-an-xmlreader.md)|Viene illustrato come eseguire il flusso di frammenti XML usando un oggetto <xref:System.Xml.XmlReader>.<br /><br /> Quando è necessario elaborare file XML grandi in modo arbitrario, potrebbe risultare impossibile caricare in memoria l'intero albero XML. In tali casi, è possibile eseguire il flusso di frammenti XML.|  
   
-## <a name="see-also"></a>Vedere anche  
- [Creazione di alberi XML (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Creazione di alberi XML (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)

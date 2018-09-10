@@ -2,12 +2,12 @@
 title: 'File XML di esempio: più ordini di acquisto in uno spazio dei nomi2'
 ms.date: 07/20/2015
 ms.assetid: 595024f2-374a-4615-acb5-64fa1600f377
-ms.openlocfilehash: 03ca5cfbf198f576a52e6ceb5eb085195d599d3b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 2c4812aa1c15223c7d2a65fa21f6c505e21e0bae
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43470012"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43523544"
 ---
 # <a name="sample-xml-file-multiple-purchase-orders-in-a-namespace"></a>File XML di esempio: più ordini di acquisto in uno spazio dei nomi
 Il file XML seguente viene usato in vari esempi nella documentazione di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Questo file contiene molti ordini di acquisto. L'XML si trova in uno spazio dei nomi.  
@@ -109,5 +109,6 @@ Il file XML seguente viene usato in vari esempi nella documentazione di [!INCLUD
 </aw:PurchaseOrders>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Documenti XML di esempio (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Documenti XML di esempio (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

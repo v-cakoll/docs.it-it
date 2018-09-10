@@ -4,12 +4,12 @@ description: Informazioni sui concetti relativi agli unit test in C# e .NET Core
 author: ardalis
 ms.author: wiwagn
 ms.date: 11/29/2017
-ms.openlocfilehash: 6f3b041bf690183f60b687699d878a4d5006be6f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 560ba58076fedbb1174da2cfe93796030aa9d46f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33213330"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43404295"
 ---
 # <a name="unit-testing-c-in-net-core-using-dotnet-test-and-xunit"></a>Testing unità di C# in .NET Core usando il test dotnet e xUnit
 
@@ -171,4 +171,4 @@ Continuare a eseguire l'iterazione aggiungendo altri test, altre teorie e altro 
 
 ### <a name="additional-resources"></a>Risorse aggiuntive
 
-[Test della logica dei controller in ASP.NET Core](/aspnet/core/mvc/controllers/testing)
+- [Test della logica dei controller in ASP.NET Core](/aspnet/core/mvc/controllers/testing)

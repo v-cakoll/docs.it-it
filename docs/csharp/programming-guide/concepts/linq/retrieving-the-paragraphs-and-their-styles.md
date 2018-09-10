@@ -2,12 +2,12 @@
 title: Recupero dei paragrafi e dei relativi stili (C#)
 ms.date: 07/20/2015
 ms.assetid: c2f767f8-57b1-4b4b-af04-89ffb1f7067d
-ms.openlocfilehash: 11788c1fa46c63c78a9db0255c8e84250285863e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 46ffc13c9808b6186efa402bd46b75c6c1a9bbda
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33335348"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510774"
 ---
 # <a name="retrieving-the-paragraphs-and-their-styles-c"></a>Recupero dei paragrafi e dei relativi stili (C#)
 In questo esempio viene scritta una query che recupera i nodi dei paragrafi da un documento WordprocessingML. Viene inoltre identificato lo stile di ciascun paragrafo.  
@@ -132,5 +132,6 @@ StyleName:Code
 ## <a name="next-steps"></a>Passaggi successivi  
  Nell'argomento successivo, [Recupero del testo dei paragrafi (C#)](../../../../csharp/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), verrà creata una query per recuperare il testo dei paragrafi.  
   
-## <a name="see-also"></a>Vedere anche  
- [Esercitazione: Manipolazione di contenuto in un documento WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Esercitazione: Manipolazione di contenuto in un documento WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

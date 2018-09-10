@@ -2,12 +2,12 @@
 title: Programmazione LINQ to XML avanzata (C#)
 ms.date: 07/20/2015
 ms.assetid: 2e012d40-532b-49ea-b1fc-152e616bdfa3
-ms.openlocfilehash: e455b2b579c56632d5e06b4da5c44a71ea150416
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 684c91724ad8f283dc47f38e31697884f4d216d2
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42931837"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43855816"
 ---
 # <a name="advanced-linq-to-xml-programming-c"></a>Programmazione LINQ to XML avanzata (C#)
 Contenuto della sezione vengono fornite informazioni che saranno applicabili solo a sviluppatori esperti in specifici scenari di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
@@ -28,5 +28,6 @@ Contenuto della sezione vengono fornite informazioni che saranno applicabili sol
 |[Serializzazione di oggetti grafici contenenti oggetti XElement (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)|Viene descritto come serializzare oggetti grafici che contengono oggetti <xref:System.Xml.Linq.XElement> e <xref:System.Xml.Linq.XDocument>.|  
 |[Data binding WPF con LINQ to XML](/visualstudio/designers/wpf-data-binding-with-linq-to-xml)|Viene descritto come usare LINQ to XML come origine dati per il data binding in applicazioni Windows Presentation Foundation.|  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida per programmatori (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Guida per programmatori (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

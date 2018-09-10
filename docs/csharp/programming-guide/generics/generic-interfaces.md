@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, generic interfaces
 - generics [C#], interfaces
 ms.assetid: a8fa49a1-6e78-4a09-87e5-84a0b9f5ffbe
-ms.openlocfilehash: 72f48aa1d70e6cf81b20adc547e2d418c4497256
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a5763413662d32d66e955fb0edfc6b438968720b
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33323638"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43857745"
 ---
 # <a name="generic-interfaces-c-programming-guide"></a>Interfacce generiche (Guida per programmatori C#)
 Spesso è utile definire interfacce per classi di raccolta generiche o per le classi generiche che rappresentano elementi nella raccolta. Per le classi generiche è preferibile usare interfacce generiche, ad esempio <xref:System.IComparable%601> invece di <xref:System.IComparable>, per evitare operazioni di conversione boxing e unboxing sui tipi valore. La libreria di classi .NET Framework definisce diverse interfacce generiche da usare con le classi di raccolta nello spazio dei nomi <xref:System.Collections.Generic>.  
@@ -43,8 +43,9 @@ Spesso è utile definire interfacce per classi di raccolta generiche o per le cl
   
  Le regole che controllano l'overload dei metodi sono le stesse per i metodi all'interno di classi generiche, struct generici o interfacce generiche. Per altre informazioni, vedere [Metodi generici](../../../csharp/programming-guide/generics/generic-methods.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [Introduzione ai generics](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
- [interface](../../../csharp/language-reference/keywords/interface.md)  
- [Generics](~/docs/standard/generics/index.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- [Introduzione ai generics](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
+- [interface](../../../csharp/language-reference/keywords/interface.md)  
+- [Generics](~/docs/standard/generics/index.md)

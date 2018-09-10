@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], benefits
 ms.assetid: 80f037cd-9ea7-48be-bfc1-219bfb2d4277
-ms.openlocfilehash: bd0a133c6ce1a9623bfe8598d1dc786c44e6eaad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2770f8bc7fc4242beb02bf9e0555b5cbb8db0180
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33336830"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43503794"
 ---
 # <a name="benefits-of-generics-c-programming-guide"></a>Vantaggi dei generics (Guida per programmatori C#)
 I generics rappresentano la soluzione a una limitazione in versioni precedenti di Common Language Runtime e del linguaggio C# nelle quali la generalizzazione viene effettuata tramite il casting dei tipi nel e dal tipo di base universale <xref:System.Object>. Creando una classe generica, è possibile creare una raccolta indipendente dai tipi in fase di compilazione.  
@@ -34,10 +34,11 @@ I generics rappresentano la soluzione a una limitazione in versioni precedenti d
   
  Per il codice client, l'unica sintassi aggiunta con <xref:System.Collections.Generic.List%601> rispetto a <xref:System.Collections.ArrayList> è l'argomento di tipo nella dichiarazione e nella creazione dell'istanza. Al costo di codice leggermente più complesso, è possibile creare un elenco che non è solo più sicuro di <xref:System.Collections.ArrayList>, ma anche molto più rapido, specialmente quando gli elementi dell'elenco sono tipi valore.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Collections.Generic>  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [Introduzione ai generics](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
- [Boxing e unboxing](../../../csharp/programming-guide/types/boxing-and-unboxing.md)  
- [Quando utilizzare raccolte generiche](../../../standard/collections/when-to-use-generic-collections.md)  
- [Linee guida per le raccolte](../../../standard/design-guidelines/guidelines-for-collections.md)   
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.Collections.Generic>  
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- [Introduzione ai generics](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
+- [Boxing e unboxing](../../../csharp/programming-guide/types/boxing-and-unboxing.md)  
+- [Quando utilizzare raccolte generiche](../../../standard/collections/when-to-use-generic-collections.md)  
+- [Linee guida per le raccolte](../../../standard/design-guidelines/guidelines-for-collections.md)   

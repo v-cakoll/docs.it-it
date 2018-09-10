@@ -4,12 +4,12 @@ description: Informazioni sulla distribuzione di app .NET Core con Visual Studio
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/18/2017
-ms.openlocfilehash: dedf04a872faf1b35a05f9da0c61b80713fdce51
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2829bb5a2f5857f6124e5c1f78f5247fe8d1f552
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218677"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43407449"
 ---
 # <a name="deploying-net-core-apps-with-visual-studio"></a>Distribuzione di app .NET Core con Visual Studio
 
@@ -72,11 +72,11 @@ In una distribuzione dipendente dal framework con una o più dipendenze di terze
 
 1. Se `Newtonsoft.Json` è già installato nel sistema, aggiungerlo al progetto selezionando il progetto nel riquadro destro della scheda **Gestisci i pacchetti per la soluzione**.
 
-Si noti che la portabilità di una distribuzione dipendente dal framework con dipendenze di terze parti corrisponde esattamente alla portabilità delle dipendenze. Se ad esempio una libreria di terze parti supporta solo macOS, l'app non è portabile in sistemi Windows. Questa situazione si verifica se la dipendenza di terze parti stessa dipende da codice nativo. Un buon esempio è il [server Kestrel](http://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel), che richiede una dipendenza nativa da [libuv](https://github.com/libuv/libuv). Quando viene creata una distribuzione dipendente dal framework per un'applicazione con questo tipo di dipendenze di terze parti, l'output pubblicato contiene una cartella per ogni [identificatore di runtime (RID)](../rid-catalog.md) supportato dalla dipendenza nativa (e presente nel relativo pacchetto NuGet).
+Si noti che la portabilità di una distribuzione dipendente dal framework con dipendenze di terze parti corrisponde esattamente alla portabilità delle dipendenze. Se ad esempio una libreria di terze parti supporta solo macOS, l'app non è portabile in sistemi Windows. Questa situazione si verifica se la dipendenza di terze parti stessa dipende da codice nativo. Un buon esempio è il [server Kestrel](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel), che richiede una dipendenza nativa da [libuv](https://github.com/libuv/libuv). Quando viene creata una distribuzione dipendente dal framework per un'applicazione con questo tipo di dipendenze di terze parti, l'output pubblicato contiene una cartella per ogni [identificatore di runtime (RID)](../rid-catalog.md) supportato dalla dipendenza nativa (e presente nel relativo pacchetto NuGet).
 
 ## <a name="simpleSelf"></a> Distribuzione autonoma senza dipendenze di terze parti
 
-La pubblicazione di una distribuzione autonoma senza dipendenze di terze parti comporta la creazione del progetto, la modifica del file *csproj*, la compilazione, il test e la pubblicazione dell'app. Il processo viene illustrato da un semplice esempio scritto in C#. 
+La pubblicazione di una distribuzione autonoma senza dipendenze di terze parti comporta la creazione del progetto, la modifica del file *csproj*, la compilazione, il test e la pubblicazione dell'app. Il processo viene illustrato da un semplice esempio scritto in C#.
 
 1. Creare il progetto.
 
@@ -92,7 +92,7 @@ La pubblicazione di una distribuzione autonoma senza dipendenze di terze parti c
 
    1. Fare clic con il pulsante destro del mouse sul progetto (non sulla soluzione) in **Solution Explorer** e selezionare **Modifica SCD.csproj**.
 
-   1. Creare un tag `<RuntimeIdentifiers>` nella sezione `<PropertyGroup>` del file *csproj* che definisce le piattaforme di destinazione dell'app e specifica l'identificatore di runtime di ogni piattaforma di destinazione. Si noti che è inoltre necessario aggiungere un punto e virgola per separare i RID. Per un elenco degli identificatori di runtime, vedere [Runtime IDentifier catalog](../rid-catalog.md) (Catalogo degli identificatori di runtime). 
+   1. Creare un tag `<RuntimeIdentifiers>` nella sezione `<PropertyGroup>` del file *csproj* che definisce le piattaforme di destinazione dell'app e specifica l'identificatore di runtime di ogni piattaforma di destinazione. Si noti che è inoltre necessario aggiungere un punto e virgola per separare i RID. Per un elenco degli identificatori di runtime, vedere [Runtime IDentifier catalog](../rid-catalog.md) (Catalogo degli identificatori di runtime).
 
    L'esempio seguente indica che l'app viene eseguita in sistemi operativi Windows 10 a 64 bit e nel sistema operativo OS X versione 10.11 a 64 bit.
 
@@ -101,6 +101,7 @@ La pubblicazione di una distribuzione autonoma senza dipendenze di terze parti c
     <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
 </PropertyGroup>
 ```
+
    Si noti che l'elemento `<RuntimeIdentifiers>` può essere inserito in qualsiasi elemento `<PropertyGroup>` presente nel file *csproj*. Un file di esempio *csproj* completo è disponibile più avanti in questa sezione.
 
 1. Creare una build di debug dell'app.
@@ -115,7 +116,7 @@ La pubblicazione di una distribuzione autonoma senza dipendenze di terze parti c
 
       1. Modificare la configurazione della soluzione da **Debug** a **Release** sulla barra degli strumenti, per creare una versione di rilascio dell'app (invece di una versione di debug).
 
-      1. Fare clic con il pulsante destro del mouse sul progetto (non sulla soluzione) in **Esplora soluzioni** e selezionare **Pubblica**. 
+      1. Fare clic con il pulsante destro del mouse sul progetto (non sulla soluzione) in **Esplora soluzioni** e selezionare **Pubblica**.
 
       1. Nella scheda **Pubblica** selezionare **Pubblica**. I file che costituiscono l'applicazione vengono salvati nel file system locale.
 
@@ -180,6 +181,7 @@ Quando si distribuisce l'applicazione, anche le dipendenze di terze parti usate 
 
 Si noti che è possibile distribuire una distribuzione autonoma solo con una libreria di terze parti alle piattaforme supportate da tale libreria. Il caso è simile alla presenza di dipendenze di terze parti con dipendenze native in una distribuzione dipendente dal framework: le dipendenze native esistono nella piattaforma di destinazione solo se sono state installate in precedenza in tale piattaforma.
 
-# <a name="see-also"></a>Vedere anche
-[Distribuzione di applicazioni .NET Core](index.md)   
-[Catalogo dei RID (Runtime IDentifier) di .NET Core](../rid-catalog.md)   
+## <a name="see-also"></a>Vedere anche
+
+* [Distribuzione di applicazioni .NET Core](index.md)
+* [Catalogo dei RID (Runtime IDentifier) di .NET Core](../rid-catalog.md)

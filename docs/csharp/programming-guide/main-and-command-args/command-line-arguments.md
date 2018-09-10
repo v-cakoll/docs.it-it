@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: ccfac6bd2688a2e02a1b3fcc14748d357acb1aa2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: a55e40a4a4880c39c74186c55b0886e06dc33bcb
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43464337"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44083949"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>Argomenti della riga di comando (Guida per programmatori C#)
 È possibile inviare argomenti al metodo `Main` definendo il metodo in uno dei modi seguenti:  
@@ -71,13 +71,14 @@ long num = Convert.ToInt64(s);
 > [!NOTE]
 >  Quando si esegue un'applicazione in Visual Studio, è possibile specificare argomenti della riga di comando nella [Pagina Debug, Progettazione progetti](/visualstudio/ide/reference/debug-page-project-designer).  
   
- Per altri esempi d'uso degli argomenti della riga di comando, vedere [Procedura: Creare e usare assembly dalla riga di comando](https://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4).  
+ Per altri esempi d'uso degli argomenti della riga di comando, vedere [Procedura: Creare e usare assembly dalla riga di comando](../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md).  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Environment?displayProperty=nameWithType>  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [Main() e argomenti della riga di comando](../../../csharp/programming-guide/main-and-command-args/index.md)  
- [Procedura: Visualizzare gli argomenti della riga di comando](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)  
- [Procedura: Accedere agli argomenti della riga di comando usando foreach](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)  
- [Valori restituiti da Main()](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)  
- [Classi](../../../csharp/programming-guide/classes-and-structs/classes.md)
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.Environment?displayProperty=nameWithType>  
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- [Main() e argomenti della riga di comando](../../../csharp/programming-guide/main-and-command-args/index.md)  
+- [Procedura: Visualizzare gli argomenti della riga di comando](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)  
+- [Procedura: Accedere agli argomenti della riga di comando usando foreach](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)  
+- [Valori restituiti da Main()](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)  
+- [Classi](../../../csharp/programming-guide/classes-and-structs/classes.md)

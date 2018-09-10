@@ -2,12 +2,12 @@
 title: "Procedura: Scrivere un metodo dell'asse LINQ to XML (C#)"
 ms.date: 07/20/2015
 ms.assetid: 50aef06b-1d22-4718-a18a-21237e26d7c1
-ms.openlocfilehash: 51adbc9f0771f8925e5e16c61f48bbb5f8bedf05
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 74ed60fa3c78bcbc233e27868b1abe357a85c62a
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322783"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510533"
 ---
 # <a name="how-to-write-a-linq-to-xml-axis-method-c"></a>Procedura: Scrivere un metodo dell'asse LINQ to XML (C#)
 È possibile scrivere metodi dell'asse personalizzati per recuperare raccolte da un albero XML. Uno dei modi migliori per eseguire questa operazione consiste nello scrivere un metodo di estensione che restituisce una raccolta di elementi o attributi. È possibile scrivere il metodo di estensione per restituire subset specifici di elementi o attributi, in base ai requisiti dell'applicazione.  
@@ -291,5 +291,6 @@ class Program
 1999-10-22  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Advanced Query Techniques (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md) (Tecniche di query avanzate (LINQ to XML) in C#)
+## <a name="see-also"></a>Vedere anche
+
+- [Advanced Query Techniques (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md) (Tecniche di query avanzate (LINQ to XML) in C#)

@@ -5,18 +5,19 @@ ms.date: 03/20/2018
 helpviewer_keywords:
 - strings [C#], comparison
 - comparing strings [C#]
-ms.openlocfilehash: e9f4216af6073a352bef1efb59eea0ddeda5fc4b
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 3c841a1152613ec877bb6172dc8d053bf060b33b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961306"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484102"
 ---
-# <a name="how-to-compare-strings-in-c"></a>Come confrontare stringhe in C# #
+# <a name="how-to-compare-strings-in-c"></a>Come confrontare stringhe in C\#
 
 Il confronto delle stringhe viene eseguito per rispondere a una delle due domande seguenti: "Queste due stringhe sono uguali?" oppure "In che ordine vengono disposte queste stringhe quando si esegue l'ordinamento?"
 
-Queste due domande vengono complicate da fattori propri dei confronti fra stringhe: 
+Queste due domande vengono complicate da fattori propri dei confronti fra stringhe:
+
 - È possibile scegliere un confronto ordinale o linguistico.
 - È possibile scegliere se la distinzione maiuscole/minuscole è importante.
 - È possibile scegliere confronti specifici in base alle impostazioni cultura.
@@ -36,14 +37,15 @@ I confronti ordinali non prendono in considerazione le regole linguistiche. In q
 
 ## <a name="case-insensitive-ordinal-comparisons"></a>Confronti ordinali senza distinzione tra maiuscole e minuscole
 
-Il metodo <xref:System.String.Equals%2A?displayProperty=nameWithType> consente di specificare un valore <xref:System.StringComparison> di <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> per impostare un confronto senza distinzione tra maiuscole e minuscole. È anche disponibile un metodo <xref:System.String.Compare%2A> statico che include un argomento booleano per specificare i confronti senza distinzione tra maiuscole e minuscole. Questi metodi sono illustrati nella figura seguente.
+Il metodo <xref:System.String.Equals%2A?displayProperty=nameWithType> consente di specificare un valore <xref:System.StringComparison> pari a <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType>
+per eseguire un confronto senza distinzione tra maiuscole/minuscole. È anche disponibile un metodo <xref:System.String.Compare%2A> statico che include un argomento booleano per specificare i confronti senza distinzione tra maiuscole e minuscole. Questi metodi sono illustrati nella figura seguente.
 
 [!code-csharp-interactive[Comparing strings ignoring case](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#2)]
 
 ## <a name="linguistic-comparisons"></a>Confronti linguistici
 
 Le stringhe possono anche essere ordinate in base alle regole linguistiche delle impostazioni cultura correnti.
-Questo ordinamento è detto anche "ordinamento di Word". Quando si eseguono confronti linguistici, è possibile che a determinati caratteri Unicode non alfanumerici sia assegnata una valenza specifica. Ad esempio il trattino "-" può avere una valenza ridotta, pertanto le parole "co-op"e "coop" vengono visualizzate l'una accanto all'altra nell'ordinamento. Alcuni caratteri Unicode possono anche essere equivalenti a una sequenza di caratteri alfanumerici. L'esempio seguente usa la frase "Ballano per strada." in tedesco, con le notazioni "ss" e "ß". Dal punto di vista del confronto linguistico (in Windows), "ss" è equivalente al carattere tedesco Eszett "ß", sia nelle impostazioni cultura "en-US" che in quelle "de-DE". 
+Questo ordinamento è detto anche "ordinamento di Word". Quando si eseguono confronti linguistici, è possibile che a determinati caratteri Unicode non alfanumerici sia assegnata una valenza specifica. Ad esempio il trattino "-" può avere una valenza ridotta, pertanto le parole "co-op"e "coop" vengono visualizzate l'una accanto all'altra nell'ordinamento. Alcuni caratteri Unicode possono anche essere equivalenti a una sequenza di caratteri alfanumerici. L'esempio seguente usa la frase "Ballano per strada." in tedesco, con le notazioni "ss" e "ß". Dal punto di vista del confronto linguistico (in Windows), "ss" è equivalente al carattere tedesco Eszett "ß", sia nelle impostazioni cultura "en-US" che in quelle "de-DE".
 
 [!code-csharp-interactive[Comparing strings using linguistic rules](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#3)]
 
@@ -86,7 +88,7 @@ I confronti linguistici dipendono dalle impostazioni cultura correnti e dal sist
 
 Gli esempi seguenti illustrano come eseguire l'ordinamento e la ricerca di stringhe in una matrice mediante un confronto linguistico dipendente dalle impostazioni cultura correnti. Si usano i metodi <xref:System.Array> statici che accettano un parametro <xref:System.StringComparer?displayProperty=nameWithType>.
 
-Questo esempio illustra come ordinare una matrice di stringhe in base alle impostazioni cultura correnti: 
+Questo esempio illustra come ordinare una matrice di stringhe in base alle impostazioni cultura correnti:
 
 [!code-csharp-interactive[Sorting an array of strings](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#5)]
 
@@ -104,7 +106,7 @@ Dopo l'ordinamento è possibile eseguire ricerche nell'elenco di stringhe usando
 
 [!code-csharp-interactive[csProgGuideStrings#11](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#8)]
 
-Assicurarsi di usare sempre lo stesso tipo di confronto per l'ordinamento e la ricerca. L'uso di tipi di confronto diversi per l'ordinamento e la ricerca produce risultati imprevisti. 
+Assicurarsi di usare sempre lo stesso tipo di confronto per l'ordinamento e la ricerca. L'uso di tipi di confronto diversi per l'ordinamento e la ricerca produce risultati imprevisti.
 
 Le classi Collection, ad esempio <xref:System.Collections.Hashtable?displayProperty=nameWithType>, <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>, e <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> contengono costruttori che accettano un parametro <xref:System.StringComparer?displayProperty=nameWithType> quando il tipo degli elementi o delle chiavi è `string`. In generale è necessario usare sempre questi costruttori, quando possibile, e specificare il parametro <xref:System.StringComparer.Ordinal?displayProperty=nameWithType> o <xref:System.StringComparer.OrdinalIgnoreCase?displayProperty=nameWithType>.
 
@@ -118,8 +120,9 @@ Le classi Collection, ad esempio <xref:System.Collections.Hashtable?displayPrope
 > Per verificare l'uguaglianza fra stringhe è opportuno usare metodi che consentono di specificare in modo esplicito il tipo di confronto da eseguire. In questo modo il codice risulta molto più gestibile e leggibile. Usare gli overload dei metodi delle classi <xref:System.String?displayProperty=nameWithType> e <xref:System.Array?displayProperty=nameWithType> che accettano un parametro di enumerazione <xref:System.StringComparison>. È possibile specificare il tipo di confronto da eseguire. Evitare di usare gli operatori `==` e `!=` nelle verifiche di uguaglianza. I metodi di istanza <xref:System.String.CompareTo%2A?displayProperty=nameWithType> eseguono sempre un confronto ordinale con distinzione tra maiuscole e minuscole. Sono adatti soprattutto per ordinare le stringhe in ordine alfabetico.
 
 ## <a name="see-also"></a>Vedere anche
- <xref:System.Globalization.CultureInfo?displayProperty=nameWithType>  
- <xref:System.StringComparer?displayProperty=nameWithType>  
- [Stringhe](../programming-guide/strings/index.md)  
- [Confronto di stringhe](../../standard/base-types/comparing.md)  
- [Globalizzazione e localizzazione di applicazioni](/visualstudio/ide/globalizing-and-localizing-applications)
+
+- <xref:System.Globalization.CultureInfo?displayProperty=nameWithType>  
+- <xref:System.StringComparer?displayProperty=nameWithType>  
+- [Stringhe](../programming-guide/strings/index.md)  
+- [Confronto di stringhe](../../standard/base-types/comparing.md)  
+- [Globalizzazione e localizzazione di applicazioni](/visualstudio/ide/globalizing-and-localizing-applications)

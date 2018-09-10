@@ -4,12 +4,12 @@ description: Architettura di microservizi .NET per applicazioni .NET in contenit
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: c61a08566492a59090b19f99aaf97b5f6082c1fb
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 70a1f716797e03acdcbf1c58d4b0302449d98fa9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37104569"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43395676"
 ---
 # <a name="client-side-validation-validation-in-the-presentation-layers"></a>Convalida lato client (convalida nei livelli di presentazione)
 
@@ -23,7 +23,7 @@ Quando si usa la convalida lato client, è necessario convalidare sempre i coman
 
 Di conseguenza, nel codice sul lato client vengono in genere convalidati gli oggetti ViewModel. È anche possibile convalidare i comandi o gli oggetti DTO di output del client prima di inviarli ai servizi.
 
-L'implementazione della convalida del lato client dipende dalla tipologia di applicazione client che si sta creando. La scelta sarà diversa se si vogliono convalidare i dati in un'applicazione Web MVC con la maggior parte del codice in .NET, un'applicazione Web a pagina singola con la convalida scritta in JavaScript o TypeScript o un'applicazione per dispositivi mobili scritta in Xamarin e C\#.
+L'implementazione della convalida del lato client dipende dalla tipologia di applicazione client che si sta creando. La scelta sarà diversa se si vogliono convalidare i dati in un'applicazione Web MVC con la maggior parte del codice in .NET, un'applicazione Web a pagina singola con la convalida scritta in JavaScript o TypeScript o un'applicazione per dispositivi mobili scritta in Xamarin e C#.
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
@@ -42,8 +42,8 @@ L'implementazione della convalida del lato client dipende dalla tipologia di app
 
 ### <a name="validation-in-spa-web-apps-angular-2-typescript-javascript"></a>Convalida nelle app Web a pagina singola (Angular 2, TypeScript, JavaScript)
 
--   **Ado Kukic. Convalida del modulo angular 2** **
-    **[*https://scotch.io/tutorials/angular-2-form-validation*](https://scotch.io/tutorials/angular-2-form-validation)
+-   **Ado Kukic. Convalida del modulo Angular 2**
+    [*https://scotch.io/tutorials/angular-2-form-validation*](https://scotch.io/tutorials/angular-2-form-validation)
 
 -   **Convalida del modulo**
     [*https://angular.io/docs/ts/latest/cookbook/form-validation.html*](https://angular.io/docs/ts/latest/cookbook/form-validation.html)
@@ -53,16 +53,15 @@ L'implementazione della convalida del lato client dipende dalla tipologia di app
 
 In breve, questi sono i concetti più importanti in merito alla convalida:
 
--   Le entità e le aggregazioni devono imporre la propria coerenza ed essere "sempre valide". Le radici di aggregazione sono responsabili della coerenza di più entità all'interno della stessa aggregazione.
+- Le entità e le aggregazioni devono imporre la propria coerenza ed essere "sempre valide". Le radici di aggregazione sono responsabili della coerenza di più entità all'interno della stessa aggregazione.
 
--   Se si pensa che un'entità debba passare a uno stato non valido, provare a usare un modello a oggetti diverso, ad esempio un oggetto DTO temporaneo fino a quando non viene creata l'entità del dominio finale.
+- Se si pensa che un'entità debba passare a uno stato non valido, provare a usare un modello a oggetti diverso, ad esempio un oggetto DTO temporaneo fino a quando non viene creata l'entità del dominio finale.
 
--   Se occorre creare numerosi oggetti correlati, ad esempio un'aggregazione, e questi sono validi solo quando tutti saranno stati creati, provare a usare lo schema Factory.
+- Se occorre creare numerosi oggetti correlati, ad esempio un'aggregazione, e questi sono validi solo quando tutti saranno stati creati, provare a usare lo schema Factory.
 
--   I framework di convalida sono ideali per l'uso in livelli specifici, ad esempio il livello della presentazione o il livello dell'applicazione/servizio, ma in genere non nel livello del modello di dominio, in quanto sarebbe necessario creare una dipendenza elevata dal framework dell'infrastruttura.
+- I framework di convalida sono ideali per l'uso in livelli specifici, ad esempio il livello della presentazione o il livello dell'applicazione/servizio, ma in genere non nel livello del modello di dominio, in quanto sarebbe necessario creare una dipendenza elevata dal framework dell'infrastruttura.
 
--   Nella maggior parte dei client, è consigliabile adottare una convalida ridondante sul lato client, per aumentare la proattività dell'applicazione.
-
+- Nella maggior parte dei client, è consigliabile adottare una convalida ridondante sul lato client, per aumentare la proattività dell'applicazione.
 
 >[!div class="step-by-step"]
 [Precedente](domain-model-layer-validations.md)

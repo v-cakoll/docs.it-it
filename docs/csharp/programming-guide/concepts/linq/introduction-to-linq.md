@@ -2,12 +2,12 @@
 title: Introduzione a LINQ (C#)
 ms.date: 07/20/2015
 ms.assetid: 54874feb-55e5-4ca8-a9d6-1c1127fd7fb1
-ms.openlocfilehash: 3c32c20efec55568a668c5dba55baf8f3ebbee7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 990a47d6ecfe38d9efa7d505eb3c23a28c05f58c
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33323316"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43740247"
 ---
 # <a name="introduction-to-linq-c"></a>Introduzione a LINQ (C#)
 LINQ (Language-Integrated Query) rappresenta una novità introdotta in .NET Framework versione 3.5 che colma il divario tra il mondo degli oggetti e il mondo dei dati.  
@@ -33,5 +33,6 @@ LINQ (Language-Integrated Query) rappresenta una novità introdotta in .NET Fram
   
 -   Raccolte .NET, file, stringhe e così via: [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
   
-## <a name="see-also"></a>Vedere anche  
- [LINQ (Language-Integrated Query) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)
+## <a name="see-also"></a>Vedere anche
+
+- [LINQ (Language-Integrated Query) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)

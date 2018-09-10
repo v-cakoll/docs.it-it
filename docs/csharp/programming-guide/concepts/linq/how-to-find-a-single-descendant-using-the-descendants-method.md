@@ -2,12 +2,12 @@
 title: Procedura:Trovare un discendente singolo con il metodo Descendants (C#)
 ms.date: 07/20/2015
 ms.assetid: 6f735be9-0293-4680-8007-ca9d96bfebed
-ms.openlocfilehash: e08e07e0d32146a14b90b9d6463e6e58a233a923
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fafb7dc4e2e65c913de46b64028f7dcd69fdd2c3
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316959"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43784660"
 ---
 # <a name="how-to-find-a-single-descendant-using-the-descendants-method-c"></a>Procedura:Trovare un discendente singolo con il metodo Descendants (C#)
 È possibile usare il metodo <xref:System.Xml.Linq.XContainer.Descendants%2A> dell'asse per scrivere rapidamente codice per trovare un singolo elemento con un nome univoco. Questa tecnica è particolarmente utile quando si desidera trovare un particolare discendente con un nome specifico. È possibile scrivere il codice per spostarsi fino all'elemento desiderato, ma risulta in genere più veloce e semplice scrivere il codice usando l'asse <xref:System.Xml.Linq.XContainer.Descendants%2A>.  
@@ -73,5 +73,6 @@ Console.WriteLine(grandChild3);
 GC3 Value  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Query di base (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Query di base (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

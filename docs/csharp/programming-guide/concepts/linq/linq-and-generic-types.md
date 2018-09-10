@@ -6,12 +6,12 @@ helpviewer_keywords:
 - generic types [LINQ]
 - generics [LINQ]
 ms.assetid: 660e3799-25ca-462c-8c4a-8bce04fbb031
-ms.openlocfilehash: f9bb4ec21685d21d0975529c7460944b5f0f9fc6
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 45bc5cbbdd1c0721797aed38636892e731c2883f
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925772"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43513886"
 ---
 # <a name="linq-and-generic-types-c"></a>LINQ e tipi generici (C#)
 Le query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sono basate su tipi generici introdotti nella versione 2.0 di [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Non è necessaria una conoscenza approfondita dei generics per poter iniziare a scrivere le query. È tuttavia importante comprendere due concetti di base:  
@@ -36,6 +36,7 @@ Le query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sono basate su tipi g
   
  La parola chiave `var` è utile quando il tipo della variabile è ovvio o quando non è importante specificare in modo esplicito i tipi generici annidati, ad esempio quelli generati dalle query di gruppo. In generale, è consigliabile usare `var` per rendere più difficile la lettura del codice da parte di altri utenti. Per altre informazioni, vedere [Variabili locali tipizzate in modo implicito](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Nozioni di base su LINQ in C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
- [Generics](../../../../csharp/programming-guide/generics/index.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Nozioni di base su LINQ in C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
+- [Generics](../../../../csharp/programming-guide/generics/index.md)

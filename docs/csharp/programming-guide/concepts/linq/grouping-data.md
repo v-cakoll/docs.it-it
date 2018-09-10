@@ -2,12 +2,12 @@
 title: Raggruppamento dei dati (C#)
 ms.date: 07/20/2015
 ms.assetid: e414e9e4-343a-4e6e-858f-4a30c5e64492
-ms.openlocfilehash: 1d2aca79fd6ae5df84b34a903ecb5e18ae7ab5a7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 42e93bf291b0921d7aafa07265d1193387d46aa6
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327437"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43500315"
 ---
 # <a name="grouping-data-c"></a>Raggruppamento dei dati (C#)
 Il raggruppamento consiste nell'inserire i dati in gruppi in modo che gli elementi in ogni gruppo condividano un attributo comune.  
@@ -59,12 +59,13 @@ foreach (var group in query)
 */  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Linq>  
- [Cenni preliminari sugli operatori di query standard (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [Clausola group](../../../../csharp/language-reference/keywords/group-clause.md)  
- [Procedura: Creare un gruppo annidato](../../../../csharp/programming-guide/linq-query-expressions/how-to-create-a-nested-group.md)  
- [Procedura: Raggruppare file per estensione (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)  
- [Procedura: Raggruppare i risultati di una query](../../../../csharp/programming-guide/linq-query-expressions/how-to-group-query-results.md)  
- [Procedura: Eseguire una sottoquery su un'operazione di raggruppamento](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-a-subquery-on-a-grouping-operation.md)  
- [Procedura: Suddividere un file in molti file usando i gruppi (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.Linq>  
+- [Cenni preliminari sugli operatori di query standard (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+- [Clausola group](../../../../csharp/language-reference/keywords/group-clause.md)  
+- [Procedura: Creare un gruppo annidato](../../../../csharp/programming-guide/linq-query-expressions/how-to-create-a-nested-group.md)  
+- [Procedura: Raggruppare file per estensione (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)  
+- [Procedura: Raggruppare i risultati di una query](../../../../csharp/programming-guide/linq-query-expressions/how-to-group-query-results.md)  
+- [Procedura: Eseguire una sottoquery su un'operazione di raggruppamento](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-a-subquery-on-a-grouping-operation.md)  
+- [Procedura: Suddividere un file in molti file usando i gruppi (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)

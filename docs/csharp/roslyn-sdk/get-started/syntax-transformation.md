@@ -3,12 +3,12 @@ title: Introduzione alla trasformazione della sintassi (API Roslyn)
 description: Introduzione all'attraversamento, all'esecuzione di query e all'esplorazione di alberi della sintassi.
 ms.date: 06/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 04053645b91e8f74e890340fb9bba66a4efdce0c
-ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
+ms.openlocfilehash: c372b1ba1e08a7d3b57ceea0d4449d03e55a39cf
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35231621"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43464026"
 ---
 # <a name="get-started-with-syntax-transformation"></a>Introduzione alla trasformazione della sintassi
 
@@ -154,7 +154,7 @@ Infine, aggiungere l'istruzione `if` seguente per sostituire il nome del tipo es
 
 [!code-csharp[ReplaceNode](../../../../samples/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/TypeInferenceRewriter.cs#BindInitializer "Replace the initializer node")]
 
-L'operazione condizionale è necessaria perché la dichiarazione può esegue il cast dell'espressione dell'inizializzatore su un'interfaccia o una classe di base. Se si vuole ottenere tale risultato, i tipi sul lato sinistro e destro dell'assegnazione non corrispondono. La rimozione del tipo esplicito in questi casi comporterebbe la modifica della semantica di un programma. `var` viene specificato come un identificatore anziché come una parola chiave poiché `var` è una parola chiave contestuale. Gli elementi semplici iniziali e finali (spazio) vengono trasferiti dal nome del tipo precedente alla parola chiave `var` per mantenere gli spazi vuoti verticali e il rientro. È più semplice usare `ReplaceNode` anziché `With*` per trasformare <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax>, perché il nome del tipo è di fatto il nipote dell'istruzione di dichiarazione.
+L'operazione condizionale è necessaria perché la dichiarazione può esegue il cast dell'espressione dell'inizializzatore su un'interfaccia o una classe di base. Se si vuole ottenere tale risultato, i tipi sul lato sinistro e destro dell'assegnazione non corrispondono. La rimozione del tipo esplicito in questi casi comporterebbe la modifica della semantica di un programma. `var` viene specificato come un identificatore anziché come una parola chiave poiché `var` è una parola chiave contestuale. Gli elementi semplici iniziali e finali (spazio) vengono trasferiti dal nome del tipo precedente alla parola chiave `var` per mantenere lo spazio vuoto verticale e il rientro. È più semplice usare `ReplaceNode` anziché `With*` per trasformare <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax>, perché il nome del tipo è di fatto il nipote dell'istruzione di dichiarazione.
 
 `TypeInferenceRewriter` è stato completato. A questo punto, eseguire la restituzione nel file `Program.cs` per completare l'esempio. Creare un <xref:Microsoft.CodeAnalysis.Compilation> di test e ottenere <xref:Microsoft.CodeAnalysis.SemanticModel> da quest'ultimo. Usare tale <xref:Microsoft.CodeAnalysis.SemanticModel> per provare `TypeInferenceRewriter`. Questo passaggio verrà eseguito per ultimo. Nel frattempo dichiarare una variabile segnaposto che rappresenta la compilazione di test:
 

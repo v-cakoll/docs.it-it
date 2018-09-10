@@ -2,14 +2,15 @@
 title: Operazioni sugli elementi (C#)
 ms.date: 07/20/2015
 ms.assetid: 283206c9-3246-4c48-b01a-d9de409a7231
-ms.openlocfilehash: 5c10603d9e074faf891d41fa6b39614fcc167c8a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 14fdfbc38e1c25aa00056a42e116be98a489ce0f
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317447"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43856890"
 ---
 # <a name="element-operations-c"></a>Operazioni sugli elementi (C#)
+
 Le operazioni sugli elementi restituiscono un singolo elemento specifico di una sequenza.  
   
  La sezione seguente elenca i metodi dell'operatore query standard che eseguono operazioni sugli elementi.  
@@ -27,7 +28,8 @@ Le operazioni sugli elementi restituiscono un singolo elemento specifico di una 
 |Single|Restituisce l'unico elemento di una Collection o l'unico elemento che soddisfa una condizione.|Non applicabile.|<xref:System.Linq.Enumerable.Single%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Single%2A?displayProperty=nameWithType>|  
 |SingleOrDefault|Restituisce l'unico elemento di una Collection o l'unico elemento che soddisfa una condizione. Restituisce un valore predefinito se tale elemento non esiste o la Collection non contiene esattamente un elemento.|Non applicabile.|<xref:System.Linq.Enumerable.SingleOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SingleOrDefault%2A?displayProperty=nameWithType>|  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Linq>  
- [Cenni preliminari sugli operatori di query standard (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [Procedura: eseguire una query per trovare il file o i file più grandi in un albero di directory (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md)
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.Linq>  
+- [Cenni preliminari sugli operatori di query standard (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+- [Procedura: eseguire una query per trovare il file o i file più grandi in un albero di directory (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md)

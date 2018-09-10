@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bdc82f2f-4754-45a1-a81e-fe2e9c30cef9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 99d62eca26e19d343b3f8f6afb9824c009610fb4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f0b18f33c0cbc83f955c32477a21f77b09c7546c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33585087"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43396474"
 ---
 # <a name="data-structures-for-parallel-programming"></a>Strutture di dati per la programmazione in parallelo
 In .NET Framework versione 4 sono stati introdotti diversi nuovi tipi utili nella programmazione parallela, inclusi un set di classi di raccolta simultanee, primitive di sincronizzazione leggera e tipi per l'inizializzazione differita. È possibile usare questi tipi con qualsiasi codice dell'applicazione multithreading, inclusi Task Parallel Library e PLINQ.  
@@ -66,7 +66,7 @@ In .NET Framework versione 4 sono stati introdotti diversi nuovi tipi utili nell
  Per altre informazioni, vedere [Inizializzazione differita](../../../docs/framework/performance/lazy-initialization.md).  
   
 ## <a name="aggregate-exceptions"></a>Eccezioni di aggregazione  
- Il tipo <xref:System.AggregateException?displayProperty=nameWithType> può essere usato per acquisire più eccezioni generate simultaneamente in thread separati e restituirle al thread di unione come un'unica eccezione. I tipi <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> e PLINQ usano ampiamente <xref:System.AggregateException> a questo scopo. Per altre informazioni, vedere [NIB - Procedura: Gestire le eccezioni generate dalle attività](https://msdn.microsoft.com/library/d6c47ec8-9de9-4880-beb3-ff19ae51565d) e [Procedura: Gestire le eccezioni in una query PLINQ](../../../docs/standard/parallel-programming/how-to-handle-exceptions-in-a-plinq-query.md).  
+ Il tipo <xref:System.AggregateException?displayProperty=nameWithType> può essere usato per acquisire più eccezioni generate simultaneamente in thread separati e restituirle al thread di unione come un'unica eccezione. I tipi <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> e PLINQ usano ampiamente <xref:System.AggregateException> a questo scopo. Per altre informazioni, vedere [Gestione delle eccezioni](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md) e [Procedura: Gestire le eccezioni in una query PLINQ](../../../docs/standard/parallel-programming/how-to-handle-exceptions-in-a-plinq-query.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Collections.Concurrent?displayProperty=nameWithType>  

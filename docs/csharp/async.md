@@ -4,12 +4,12 @@ description: Informazioni sul modello di programmazione asincrona a livello del 
 author: cartermp
 ms.date: 06/20/2016
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.openlocfilehash: b753b887da6f8836e0f4363a479c12c7364ea770
-ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
+ms.openlocfilehash: ae1c9b1569b5fb6784f50ec9d78a44380242fcd8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34312066"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484967"
 ---
 # <a name="asynchronous-programming"></a>Programmazione asincrona
 
@@ -19,7 +19,7 @@ C# ha un modello di programmazione asincrona a livello di linguaggio che consent
 
 ## <a name="basic-overview-of-the-asynchronous-model"></a>Panoramica di base del modello asincrono
 
-Il nucleo della programmazione asincrona consiste di oggetti `Task` e `Task<T>`, che modellano le operazioni asincrone.  Sono supportati dalle parole chiavi `async` e `await`.  Il modello è piuttosto semplice nella maggior parte dei casi: 
+Il nucleo della programmazione asincrona è costituito da oggetti `Task` e `Task<T>` che modellano le operazioni asincrone.  Sono supportati dalle parole chiavi `async` e `await`.  Il modello è piuttosto semplice nella maggior parte dei casi: 
 
 Per il codice associato a I/O, si usa `await` per l'operazione che restituisce un oggetto `Task` o `Task<T>` all'interno di un metodo `async`.
 
@@ -118,7 +118,7 @@ Gli esempi seguenti illustrano i diversi modi in cui è possibile scrivere codic
 
 ### <a name="extracting-data-from-a-network"></a>Estrazione di dati da una rete
 
-Questo frammento di codice scarica il contenuto HTML da www.dotnetfoundation.org e conta il numero di volte in cui che la stringa ".NET" è inclusa nel contenuto HTML.  Usa MVC di ASP.NET per definire un metodo del controller Web che esegue questa attività, restituendo il numero.
+Questo frammento di codice scarica il contenuto HTML dalla home page di [www.dotnetfoundation.org](https://www.dotnetfoundation.org) e conta il numero di volte in cui la stringa ".NET" è inclusa nel contenuto HTML.  Usa MVC di ASP.NET per definire un metodo del controller Web che esegue questa attività, restituendo il numero.
 
 > [!NOTE]
 > Se si prevede di eseguire l'analisi del codice HTML nel codice di produzione, non usare le espressioni regolari. Usare invece una libreria di analisi.

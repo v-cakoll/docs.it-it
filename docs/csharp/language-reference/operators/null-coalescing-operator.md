@@ -9,11 +9,11 @@ helpviewer_keywords:
 - conditional-AND operator (&&) [C#]
 ms.assetid: 088b1f0d-c1af-4fe1-b4b8-196fd5ea9132
 ms.openlocfilehash: 03d81d4216dabce2ea75b9fdcf6ef0971cc32490
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43388859"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43530106"
 ---
 # <a name="-operator-c-reference"></a>?? Operatore (Riferimenti per C#)
 L'operatore `??` viene chiamato operatore null-coalescing.  Restituisce l'operando sinistro se non è Null. In caso contrario, restituisce l'operando destro.  
