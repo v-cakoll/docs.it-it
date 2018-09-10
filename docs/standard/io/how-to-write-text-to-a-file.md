@@ -14,11 +14,11 @@ ms.assetid: 060cbe06-2adf-4337-9e7b-961a5c840208
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: bc8082175047271c92f9a9a17a49534ffc9546a9
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44180631"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44270815"
 ---
 # <a name="how-to-write-text-to-a-file"></a>Procedura: Scrivere un testo in un file
 Questo argomento illustra diverse modalità con cui è possibile scrivere un testo in un file per le applicazioni .NET Framework o le app di [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] . Per scrivere un testo in un file vengono in genere usati le classi e i metodi seguenti:  

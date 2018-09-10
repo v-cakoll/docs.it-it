@@ -11,11 +11,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: 703d3c2260f46f46e85831f809386d5a3af647a4
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44222594"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44271325"
 ---
 # <a name="network-programming-how-to-topics"></a>Procedure per la programmazione di rete
 Di seguito vengono elencati i collegamenti ad alcune procedure contenute nella documentazione concettuale relativa alla programmazione di rete.  

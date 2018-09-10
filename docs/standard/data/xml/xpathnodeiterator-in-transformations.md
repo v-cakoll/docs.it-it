@@ -9,11 +9,11 @@ ms.assetid: 2bc6ddc6-674a-4f75-b264-abc35e4e5857
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6f71d409729707f4af93fd7f8d5b82a99404579b
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44186253"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44270893"
 ---
 # <a name="xpathnodeiterator-in-transformations"></a>XPathNodeIterator nelle trasformazioni
 La classe <xref:System.Xml.XPath.XPathNodeIterator> fornisce i metodi per eseguire un'iterazione in un set di nodi creato come risultato di una query XPath (XML Path Language) o un frammento di albero risultato convertito in un set di nodi usando il metodo node-set. La classe <xref:System.Xml.XPath.XPathNodeIterator> consente di eseguire un'iterazione tra i nodi all'interno di quel determinato set. Una volta recuperato il set di nodi, la classe <xref:System.Xml.XPath.XPathNodeIterator> fornisce al set di nodi selezionato un cursore forward-only di sola lettura. Il set di nodi viene creato in base all'ordine con cui è riportato nel documento, quindi la chiamata a questo metodo consente di spostarsi al nodo successivo nell'ordine del documento. L'oggetto <xref:System.Xml.XPath.XPathNodeIterator> non compila un albero con tutti i nodi del set, bensì fornisce una finestra per i dati di ogni singolo nodo, esponendo il nodo sottostante a cui si riferisce quando il cursore viene spostato all'interno dell'albero. I metodi e le proprietà disponibili nella classe <xref:System.Xml.XPath.XPathNodeIterator> consentono di ottenere informazioni dal nodo corrente. Per un elenco dei metodi e delle proprietà disponibili, vedere <xref:System.Windows.Forms.ToolBar>.  

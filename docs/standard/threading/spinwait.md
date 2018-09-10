@@ -11,11 +11,11 @@ ms.assetid: 36012f42-34e5-4f86-adf4-973f433ed6c6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1ff8b5b75d1d69d3d8c88810de1311540a239c52
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44210000"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44273411"
 ---
 # <a name="spinwait"></a>SpinWait
 <xref:System.Threading.SpinWait?displayProperty=nameWithType> è un tipo di sincronizzazione leggera che è possibile usare in scenari di basso livello per evitare i cambi di contesto dispendiosi e le transizioni del kernel necessarie per gli eventi del kernel. Nei computer multicore, quando non si prevede che una risorsa venga bloccata per lunghi periodi di tempo, per un thread in attesa potrebbe essere più efficiente ruotare in modalità utente per alcune decine o centinaia di cicli e quindi ritentare di acquisire la risorsa. Se la risorsa è disponibile dopo la rotazione, vengono risparmiate diverse migliaia di cicli. Se la risorsa continua a non essere disponibile, sono stati usati solo alcuni cicli ed è possibile attivare un'attesa basata sul kernel. Questa combinazione di rotazione-attesa è talvolta detta un *operazione di attesa a due fasi*.  
