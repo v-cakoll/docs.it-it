@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 606698b0-cb1a-42ca-beeb-0bea34205d20
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d04af38123efdbb70b8b917a3c4a59cb3a154262
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: b043c5a2173cff9eb82497f6d4ee8b7c0aa3f14c
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582187"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44061026"
 ---
 # <a name="how-to-use-data-protection"></a>Procedura: utilizzare la protezione dati
 .NET Framework fornisce l'accesso a Data Protection API (DPAPI), che permette di crittografare dati usando informazioni dell'account utente o del computer corrente.  L'uso di DPAPI permette di attenuare il problema complesso correlato alla generazione e all'archiviazione esplicite di una chiave crittografica.  
@@ -66,6 +66,7 @@ ms.locfileid: "33582187"
   
 -   Includere gli spazi dei nomi <xref:System>, <xref:System.IO>, <xref:System.Security.Cryptography> e <xref:System.Text>.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Security.Cryptography.ProtectedMemory>  
- <xref:System.Security.Cryptography.ProtectedData>
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.Security.Cryptography.ProtectedMemory>  
+- <xref:System.Security.Cryptography.ProtectedData>

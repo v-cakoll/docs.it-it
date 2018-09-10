@@ -2,12 +2,12 @@
 title: Esempio di tecnologia per la serializzazione di generics dei servizi Web
 ms.date: 03/30/2017
 ms.assetid: cdc15ea4-f678-4729-8ebe-188ae720bef7
-ms.openlocfilehash: 799206b1bd86e98c87441771174441d07074a325
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
-ms.translationtype: MT
+ms.openlocfilehash: b233ed4374231c7e7ff2b6617a63c4e4c94612c2
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37936776"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44060385"
 ---
 # <a name="web-services-generics-serialization-technology-sample"></a>Esempio di tecnologia per la serializzazione di generics dei servizi Web
 [Scaricare l'esempio](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/GenericsSerialization.zip.exe)  
@@ -63,9 +63,10 @@ ms.locfileid: "37936776"
 ## <a name="remarks"></a>Note  
  Nell'esempio viene visualizzata una pagina ASP.NET predefinita che contiene collegamenti alla definizione del servizio Web. Oltre a modificare il codice sorgente per il servizio Web, è possibile personalizzare la visualizzazione. Per altre informazioni, vedere [Compilazione di client dei servizi Web XML](https://msdn.microsoft.com/library/c606f3cb-4111-45b4-ae42-9300420fa16c).  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Collections.Generic>  
- <xref:System.Web.Services>  
- <xref:System.Xml.Serialization>  
- [Serializzazione](../../../docs/standard/serialization/index.md)  
- [Servizi Web XML creati mediante ASP.NET e tramite client di servizi Web XML](https://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c)
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.Collections.Generic>  
+- <xref:System.Web.Services>  
+- <xref:System.Xml.Serialization>  
+- [Serializzazione](../../../docs/standard/serialization/index.md)  
+- [Servizi Web XML creati mediante ASP.NET e tramite client di servizi Web XML](https://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c)
