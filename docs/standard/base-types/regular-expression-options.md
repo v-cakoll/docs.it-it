@@ -15,11 +15,11 @@ ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: dbc5909a3d4ea1ba2747fcc694bf1f34e20e7d2b
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44179360"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44262555"
 ---
 # <a name="regular-expression-options"></a>Opzioni di espressioni regolari
 <a name="Top"></a> Per impostazione predefinita, il confronto di una stringa di input con qualsiasi carattere letterale in un criterio di ricerca di espressioni regolari prevede la distinzione tra maiuscole e minuscole. Gli spazi vuoti in un criterio di ricerca di espressioni regolari vengono interpretati come caratteri di spazio vuoto letterali e i gruppi di acquisizione in un'espressione regolare sono denominati in modo sia implicito che esplicito. È possibile modificare questi e molti altri aspetti del comportamento predefinito delle espressioni regolari specificando le relative opzioni. Queste opzioni, elencate nella tabella seguente, possono essere incluse inline come parte del criterio di ricerca di espressioni regolari o in alternativa fornite a un costruttore della classe <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> o a un metodo statico dei criteri di ricerca come valore di enumerazione <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>.  
