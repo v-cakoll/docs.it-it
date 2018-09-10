@@ -10,27 +10,28 @@ helpviewer_keywords:
 ms.assetid: 1167cfe6-c8aa-4096-94ba-c66c3a4edf4c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c69d4d423bbdf72f2af7dad38812aa508df0067c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9fd67d5f0cb5af33dc2b79f86148557a0dca6ec4
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580250"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44190280"
 ---
-# <a name="how-to-combine-parallel-and-sequential-linq-queries"></a><span data-ttu-id="37bfa-102">Procedura: combinare query LINQ parallele e sequenziali</span><span class="sxs-lookup"><span data-stu-id="37bfa-102">How to: Combine Parallel and Sequential LINQ Queries</span></span>
-<span data-ttu-id="37bfa-103">Questo esempio mostra come usare il metodo <xref:System.Linq.ParallelEnumerable.AsSequential%2A> per indicare a PLINQ di elaborare tutti gli operatori successivi nella query in modo sequenziale.</span><span class="sxs-lookup"><span data-stu-id="37bfa-103">This example shows how to use the <xref:System.Linq.ParallelEnumerable.AsSequential%2A> method to instruct PLINQ to process all subsequent operators in the query sequentially.</span></span> <span data-ttu-id="37bfa-104">Anche se l'elaborazione sequenziale è generalmente più lenta di quella parallela, a volte è necessaria per produrre risultati corretti.</span><span class="sxs-lookup"><span data-stu-id="37bfa-104">Although sequential processing is generally slower than parallel, sometimes it is necessary to produce correct results.</span></span>  
+# <a name="how-to-combine-parallel-and-sequential-linq-queries"></a><span data-ttu-id="d9b4c-102">Procedura: combinare query LINQ parallele e sequenziali</span><span class="sxs-lookup"><span data-stu-id="d9b4c-102">How to: Combine Parallel and Sequential LINQ Queries</span></span>
+<span data-ttu-id="d9b4c-103">Questo esempio mostra come usare il metodo <xref:System.Linq.ParallelEnumerable.AsSequential%2A> per indicare a PLINQ di elaborare tutti gli operatori successivi nella query in modo sequenziale.</span><span class="sxs-lookup"><span data-stu-id="d9b4c-103">This example shows how to use the <xref:System.Linq.ParallelEnumerable.AsSequential%2A> method to instruct PLINQ to process all subsequent operators in the query sequentially.</span></span> <span data-ttu-id="d9b4c-104">Anche se l'elaborazione sequenziale è generalmente più lenta di quella parallela, a volte è necessaria per produrre risultati corretti.</span><span class="sxs-lookup"><span data-stu-id="d9b4c-104">Although sequential processing is generally slower than parallel, sometimes it is necessary to produce correct results.</span></span>  
   
 > [!WARNING]
->  <span data-ttu-id="37bfa-105">Lo scopo di questo esempio consiste nell'illustrare l'uso ed è possibile che l'esecuzione non sia più veloce rispetto alla query LINQ to Objects sequenziale equivalente.</span><span class="sxs-lookup"><span data-stu-id="37bfa-105">This example is intended to demonstrate usage, and might not run faster than the equivalent sequential LINQ to Objects query.</span></span> <span data-ttu-id="37bfa-106">Per altre informazioni sull'aumento di velocità, vedere [Informazioni sull'aumento di velocità in PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).</span><span class="sxs-lookup"><span data-stu-id="37bfa-106">For more information about speedup, see [Understanding Speedup in PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).</span></span>  
+>  <span data-ttu-id="d9b4c-105">Lo scopo di questo esempio consiste nell'illustrare l'uso ed è possibile che l'esecuzione non sia più veloce rispetto alla query LINQ to Objects sequenziale equivalente.</span><span class="sxs-lookup"><span data-stu-id="d9b4c-105">This example is intended to demonstrate usage, and might not run faster than the equivalent sequential LINQ to Objects query.</span></span> <span data-ttu-id="d9b4c-106">Per altre informazioni sull'aumento di velocità, vedere [Informazioni sull'aumento di velocità in PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).</span><span class="sxs-lookup"><span data-stu-id="d9b4c-106">For more information about speedup, see [Understanding Speedup in PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="37bfa-107">Esempio</span><span class="sxs-lookup"><span data-stu-id="37bfa-107">Example</span></span>  
- <span data-ttu-id="37bfa-108">L'esempio seguente mostra uno scenario in cui è necessario usare <xref:System.Linq.ParallelEnumerable.AsSequential%2A>, in particolare per mantenere l'ordinamento stabilito in una clausola precedente della query.</span><span class="sxs-lookup"><span data-stu-id="37bfa-108">The following example shows one scenario in which <xref:System.Linq.ParallelEnumerable.AsSequential%2A> is required, namely to preserve the ordering that was established in a previous clause of the query.</span></span>  
+## <a name="example"></a><span data-ttu-id="d9b4c-107">Esempio</span><span class="sxs-lookup"><span data-stu-id="d9b4c-107">Example</span></span>  
+ <span data-ttu-id="d9b4c-108">L'esempio seguente mostra uno scenario in cui è necessario usare <xref:System.Linq.ParallelEnumerable.AsSequential%2A>, in particolare per mantenere l'ordinamento stabilito in una clausola precedente della query.</span><span class="sxs-lookup"><span data-stu-id="d9b4c-108">The following example shows one scenario in which <xref:System.Linq.ParallelEnumerable.AsSequential%2A> is required, namely to preserve the ordering that was established in a previous clause of the query.</span></span>  
   
  [!code-csharp[PLINQ#24](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#24)]
  [!code-vb[PLINQ#24](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#24)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="37bfa-109">Compilazione del codice</span><span class="sxs-lookup"><span data-stu-id="37bfa-109">Compiling the Code</span></span>  
- <span data-ttu-id="37bfa-110">Per compilare ed eseguire il codice, incollarlo nel progetto [PLINQ Data Sample](../../../docs/standard/parallel-programming/plinq-data-sample.md), aggiungere una riga per chiamare il metodo da `Main` e quindi premere F5.</span><span class="sxs-lookup"><span data-stu-id="37bfa-110">To compile and run this code, paste it into the [PLINQ Data Sample](../../../docs/standard/parallel-programming/plinq-data-sample.md) project, add a line to call the method from `Main`, and press F5.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="d9b4c-109">Compilazione del codice</span><span class="sxs-lookup"><span data-stu-id="d9b4c-109">Compiling the Code</span></span>  
+ <span data-ttu-id="d9b4c-110">Per compilare ed eseguire il codice, incollarlo nel progetto [PLINQ Data Sample](../../../docs/standard/parallel-programming/plinq-data-sample.md), aggiungere una riga per chiamare il metodo da `Main` e quindi premere F5.</span><span class="sxs-lookup"><span data-stu-id="d9b4c-110">To compile and run this code, paste it into the [PLINQ Data Sample](../../../docs/standard/parallel-programming/plinq-data-sample.md) project, add a line to call the method from `Main`, and press F5.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="37bfa-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="37bfa-111">See Also</span></span>  
- [<span data-ttu-id="37bfa-112">Parallel LINQ (PLINQ)</span><span class="sxs-lookup"><span data-stu-id="37bfa-112">Parallel LINQ (PLINQ)</span></span>](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+## <a name="see-also"></a><span data-ttu-id="d9b4c-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="d9b4c-111">See also</span></span>
+
+- [<span data-ttu-id="d9b4c-112">Parallel LINQ (PLINQ)</span><span class="sxs-lookup"><span data-stu-id="d9b4c-112">Parallel LINQ (PLINQ)</span></span>](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

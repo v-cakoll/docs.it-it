@@ -18,28 +18,29 @@ helpviewer_keywords:
 ms.assetid: f977ebdc-1b55-475a-bc3d-3376470b08ae
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 90195e4e1a368f8b8b0fcf04fd8d86afce3ea7c3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9aecf7aef9023439e145d408e40fb4adf5c0e986
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573776"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44195504"
 ---
-# <a name="how-to-read-and-write-to-files-in-isolated-storage"></a><span data-ttu-id="9e467-102">Procedura: leggere e scrivere sui file nello spazio di memorizzazione isolato</span><span class="sxs-lookup"><span data-stu-id="9e467-102">How to: Read and Write to Files in Isolated Storage</span></span>
-<span data-ttu-id="9e467-103">Per leggere da un file in un archivio isolato o scrivervi, utilizzare un oggetto <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> con un lettore di flusso (oggetto <xref:System.IO.StreamReader>) o uno scrittore di flusso (oggetto <xref:System.IO.StreamWriter>).</span><span class="sxs-lookup"><span data-stu-id="9e467-103">To read from, or write to, a file in an isolated store, use an <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> object with a stream reader (<xref:System.IO.StreamReader> object) or stream writer (<xref:System.IO.StreamWriter> object).</span></span>  
+# <a name="how-to-read-and-write-to-files-in-isolated-storage"></a><span data-ttu-id="c0916-102">Procedura: leggere e scrivere sui file nello spazio di memorizzazione isolato</span><span class="sxs-lookup"><span data-stu-id="c0916-102">How to: Read and Write to Files in Isolated Storage</span></span>
+<span data-ttu-id="c0916-103">Per leggere da un file in un archivio isolato o scrivervi, utilizzare un oggetto <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> con un lettore di flusso (oggetto <xref:System.IO.StreamReader>) o uno scrittore di flusso (oggetto <xref:System.IO.StreamWriter>).</span><span class="sxs-lookup"><span data-stu-id="c0916-103">To read from, or write to, a file in an isolated store, use an <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> object with a stream reader (<xref:System.IO.StreamReader> object) or stream writer (<xref:System.IO.StreamWriter> object).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="9e467-104">Esempio</span><span class="sxs-lookup"><span data-stu-id="9e467-104">Example</span></span>  
- <span data-ttu-id="9e467-105">L'esempio di codice seguente ottiene un archivio isolato e controlla se nell'archivio è presente un file denominato TestStore.txt.</span><span class="sxs-lookup"><span data-stu-id="9e467-105">The following code example obtains an isolated store and checks whether a file named TestStore.txt exists in the store.</span></span> <span data-ttu-id="9e467-106">Se non è presente, crea il file e scrive "Hello Isolated Storage" al suo interno.</span><span class="sxs-lookup"><span data-stu-id="9e467-106">If it doesn't exist, it creates the file and writes "Hello Isolated Storage" to the file.</span></span> <span data-ttu-id="9e467-107">Se il file TestStore.txt è presente, l'esempio di codice legge dal file.</span><span class="sxs-lookup"><span data-stu-id="9e467-107">If TestStore.txt already exists, the example code reads from the file.</span></span>  
+## <a name="example"></a><span data-ttu-id="c0916-104">Esempio</span><span class="sxs-lookup"><span data-stu-id="c0916-104">Example</span></span>  
+ <span data-ttu-id="c0916-105">L'esempio di codice seguente ottiene un archivio isolato e controlla se nell'archivio è presente un file denominato TestStore.txt.</span><span class="sxs-lookup"><span data-stu-id="c0916-105">The following code example obtains an isolated store and checks whether a file named TestStore.txt exists in the store.</span></span> <span data-ttu-id="c0916-106">Se non è presente, crea il file e scrive "Hello Isolated Storage" al suo interno.</span><span class="sxs-lookup"><span data-stu-id="c0916-106">If it doesn't exist, it creates the file and writes "Hello Isolated Storage" to the file.</span></span> <span data-ttu-id="c0916-107">Se il file TestStore.txt è presente, l'esempio di codice legge dal file.</span><span class="sxs-lookup"><span data-stu-id="c0916-107">If TestStore.txt already exists, the example code reads from the file.</span></span>  
   
  [!code-csharp[Conceptual.IsolatedStorage#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source5.cs#5)]
  [!code-vb[Conceptual.IsolatedStorage#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source5.vb#5)]  
   
-## <a name="see-also"></a><span data-ttu-id="9e467-108">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="9e467-108">See Also</span></span>  
- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
- <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream>  
- <xref:System.IO.FileMode?displayProperty=nameWithType>  
- <xref:System.IO.FileAccess?displayProperty=nameWithType>  
- <xref:System.IO.StreamReader?displayProperty=nameWithType>  
- <xref:System.IO.StreamWriter?displayProperty=nameWithType>  
- [<span data-ttu-id="9e467-109">I/O di file e di flussi</span><span class="sxs-lookup"><span data-stu-id="9e467-109">File and Stream I/O</span></span>](../../../docs/standard/io/index.md)  
- [<span data-ttu-id="9e467-110">Spazio di memorizzazione isolato</span><span class="sxs-lookup"><span data-stu-id="9e467-110">Isolated Storage</span></span>](../../../docs/standard/io/isolated-storage.md)
+## <a name="see-also"></a><span data-ttu-id="c0916-108">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c0916-108">See also</span></span>
+
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream>  
+- <xref:System.IO.FileMode?displayProperty=nameWithType>  
+- <xref:System.IO.FileAccess?displayProperty=nameWithType>  
+- <xref:System.IO.StreamReader?displayProperty=nameWithType>  
+- <xref:System.IO.StreamWriter?displayProperty=nameWithType>  
+- [<span data-ttu-id="c0916-109">I/O di file e di flussi</span><span class="sxs-lookup"><span data-stu-id="c0916-109">File and Stream I/O</span></span>](../../../docs/standard/io/index.md)  
+- [<span data-ttu-id="c0916-110">Spazio di memorizzazione isolato</span><span class="sxs-lookup"><span data-stu-id="c0916-110">Isolated Storage</span></span>](../../../docs/standard/io/isolated-storage.md)

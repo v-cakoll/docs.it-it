@@ -17,16 +17,16 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: 158a68d97a52bb5a72985d260a3dd5c6bfd0bd41
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43408487"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44084611"
 ---
-# <a name="using-application-protocols"></a><span data-ttu-id="23a2e-102">Uso di protocolli applicativi</span><span class="sxs-lookup"><span data-stu-id="23a2e-102">Using Application Protocols</span></span>
-<span data-ttu-id="23a2e-103">.NET Framework supporta i protocolli applicativi Internet di uso comune.</span><span class="sxs-lookup"><span data-stu-id="23a2e-103">The .NET Framework supports commonly used Internet application protocols.</span></span> <span data-ttu-id="23a2e-104">Questa sezione include informazioni sull'uso dei protocolli [HTTP](../../../docs/framework/network-programming/http.md), "TCP" e "UDP", nonché informazioni sull'uso dell'interfaccia [Windows Sockets](../../../docs/framework/network-programming/sockets.md) per implementare protocolli personalizzati.</span><span class="sxs-lookup"><span data-stu-id="23a2e-104">This section includes information on using the [HTTP](../../../docs/framework/network-programming/http.md), "TCP", and "UDP" protocols, as well as information on using the [Windows Sockets](../../../docs/framework/network-programming/sockets.md) interface to implement custom protocols.</span></span>  
+# <a name="using-application-protocols"></a><span data-ttu-id="2da60-102">Uso di protocolli applicativi</span><span class="sxs-lookup"><span data-stu-id="2da60-102">Using Application Protocols</span></span>
+<span data-ttu-id="2da60-103">.NET Framework supporta i protocolli applicativi Internet di uso comune.</span><span class="sxs-lookup"><span data-stu-id="2da60-103">The .NET Framework supports commonly used Internet application protocols.</span></span> <span data-ttu-id="2da60-104">Questa sezione include informazioni sull'uso dei protocolli [HTTP](../../../docs/framework/network-programming/http.md), "TCP" e "UDP", nonché informazioni sull'uso dell'interfaccia [Windows Sockets](../../../docs/framework/network-programming/sockets.md) per implementare protocolli personalizzati.</span><span class="sxs-lookup"><span data-stu-id="2da60-104">This section includes information on using the [HTTP](../../../docs/framework/network-programming/http.md), "TCP", and "UDP" protocols, as well as information on using the [Windows Sockets](../../../docs/framework/network-programming/sockets.md) interface to implement custom protocols.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="23a2e-105">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="23a2e-105">See Also</span></span>  
- [<span data-ttu-id="23a2e-106">Programmazione di rete in .NET Framework</span><span class="sxs-lookup"><span data-stu-id="23a2e-106">Network Programming in the .NET Framework</span></span>](../../../docs/framework/network-programming/index.md)  
- [<span data-ttu-id="23a2e-107">Esempi di programmazione di rete</span><span class="sxs-lookup"><span data-stu-id="23a2e-107">Network Programming Samples</span></span>](../../../docs/framework/network-programming/network-programming-samples.md)  
- [<span data-ttu-id="23a2e-108">Esempi di rete per .NET in MSDN Code Gallery</span><span class="sxs-lookup"><span data-stu-id="23a2e-108">Networking Samples for .NET on MSDN Code Gallery</span></span>](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)
+## <a name="see-also"></a><span data-ttu-id="2da60-105">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="2da60-105">See Also</span></span>  
+ [<span data-ttu-id="2da60-106">Programmazione di rete in .NET Framework</span><span class="sxs-lookup"><span data-stu-id="2da60-106">Network Programming in the .NET Framework</span></span>](../../../docs/framework/network-programming/index.md)  
+ [<span data-ttu-id="2da60-107">Esempi di programmazione di rete</span><span class="sxs-lookup"><span data-stu-id="2da60-107">Network Programming Samples</span></span>](../../../docs/framework/network-programming/network-programming-samples.md)  
+ [<span data-ttu-id="2da60-108">Esempi di rete per .NET in MSDN Code Gallery</span><span class="sxs-lookup"><span data-stu-id="2da60-108">Networking Samples for .NET on MSDN Code Gallery</span></span>](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)

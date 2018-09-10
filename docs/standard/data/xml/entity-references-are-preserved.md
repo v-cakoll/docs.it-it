@@ -5,34 +5,35 @@ ms.technology: dotnet-standard
 ms.assetid: 000a6cae-5972-40d6-bd6c-a9b7d9649b3c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 652a044bf1b5293bc9c36477a46a78d9851f1810
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b1c48e42e55025aff0ce1a24a3ef45ddf8005eab
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568485"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44204321"
 ---
-# <a name="entity-references-are-preserved"></a><span data-ttu-id="fe542-102">Riferimenti alle entità conservati</span><span class="sxs-lookup"><span data-stu-id="fe542-102">Entity References are Preserved</span></span>
-<span data-ttu-id="fe542-103">Se il riferimento all'entità non viene espanso, ma conservato, il modello DOM (Document Object Model) XML compila un nodo **XmlEntityReference** quando rileva un riferimento all'entità.</span><span class="sxs-lookup"><span data-stu-id="fe542-103">When the entity reference is not expanded, but preserved, the XML Document Object Model (DOM) builds an **XmlEntityReference** node when it encounters an entity reference.</span></span>  
+# <a name="entity-references-are-preserved"></a><span data-ttu-id="5db20-102">Riferimenti alle entità conservati</span><span class="sxs-lookup"><span data-stu-id="5db20-102">Entity References are Preserved</span></span>
+<span data-ttu-id="5db20-103">Se il riferimento all'entità non viene espanso, ma conservato, il modello DOM (Document Object Model) XML compila un nodo **XmlEntityReference** quando rileva un riferimento all'entità.</span><span class="sxs-lookup"><span data-stu-id="5db20-103">When the entity reference is not expanded, but preserved, the XML Document Object Model (DOM) builds an **XmlEntityReference** node when it encounters an entity reference.</span></span>  
   
- <span data-ttu-id="fe542-104">Usando il seguente codice XML,</span><span class="sxs-lookup"><span data-stu-id="fe542-104">Using the following XML,</span></span>  
+ <span data-ttu-id="5db20-104">Usando il seguente codice XML,</span><span class="sxs-lookup"><span data-stu-id="5db20-104">Using the following XML,</span></span>  
   
 ```xml  
 <author>Fred</author>  
 <pubinfo>Published by &publisher;</pubinfo>  
 ```  
   
- <span data-ttu-id="fe542-105">il modello DOM compila un nodo **XmlEntityReference** quando rileva il riferimento `&publisher;`.</span><span class="sxs-lookup"><span data-stu-id="fe542-105">the DOM builds an **XmlEntityReference** node when it encounters the `&publisher;` reference.</span></span> <span data-ttu-id="fe542-106">Il nodo **XmlEntityReference** contiene nodi figlio copiati dal contenuto della dichiarazione di entità.</span><span class="sxs-lookup"><span data-stu-id="fe542-106">The **XmlEntityReference** contains child nodes copied from the content in the entity declaration.</span></span> <span data-ttu-id="fe542-107">Nell'esempio di codice precedente è contenuto un testo nella dichiarazione di entità, quindi viene creato un nodo **XmlText** come nodo figlio del nodo del riferimento all'entità.</span><span class="sxs-lookup"><span data-stu-id="fe542-107">The preceding code example contains text in the entity declaration, so an **XmlText** node is created as the child node of the entity reference node.</span></span>  
+ <span data-ttu-id="5db20-105">il modello DOM compila un nodo **XmlEntityReference** quando rileva il riferimento `&publisher;`.</span><span class="sxs-lookup"><span data-stu-id="5db20-105">the DOM builds an **XmlEntityReference** node when it encounters the `&publisher;` reference.</span></span> <span data-ttu-id="5db20-106">Il nodo **XmlEntityReference** contiene nodi figlio copiati dal contenuto della dichiarazione di entità.</span><span class="sxs-lookup"><span data-stu-id="5db20-106">The **XmlEntityReference** contains child nodes copied from the content in the entity declaration.</span></span> <span data-ttu-id="5db20-107">Nell'esempio di codice precedente è contenuto un testo nella dichiarazione di entità, quindi viene creato un nodo **XmlText** come nodo figlio del nodo del riferimento all'entità.</span><span class="sxs-lookup"><span data-stu-id="5db20-107">The preceding code example contains text in the entity declaration, so an **XmlText** node is created as the child node of the entity reference node.</span></span>  
   
- <span data-ttu-id="fe542-108">![Struttura ad albero per i riferimenti alle entità conservati](../../../../docs/standard/data/xml/media/xmlentityref-notexpanded-nodes.gif "xmlentityref_notexpanded_nodes")</span><span class="sxs-lookup"><span data-stu-id="fe542-108">![Tree structure for preserved entity references](../../../../docs/standard/data/xml/media/xmlentityref-notexpanded-nodes.gif "xmlentityref_notexpanded_nodes")</span></span>  
-<span data-ttu-id="fe542-109">Struttura ad albero per i riferimenti alle entità conservati</span><span class="sxs-lookup"><span data-stu-id="fe542-109">Tree structure for entity references that are preserved</span></span>  
+ <span data-ttu-id="5db20-108">![Struttura ad albero per i riferimenti alle entità conservati](../../../../docs/standard/data/xml/media/xmlentityref-notexpanded-nodes.gif "xmlentityref_notexpanded_nodes")</span><span class="sxs-lookup"><span data-stu-id="5db20-108">![Tree structure for preserved entity references](../../../../docs/standard/data/xml/media/xmlentityref-notexpanded-nodes.gif "xmlentityref_notexpanded_nodes")</span></span>  
+<span data-ttu-id="5db20-109">Struttura ad albero per i riferimenti alle entità conservati</span><span class="sxs-lookup"><span data-stu-id="5db20-109">Tree structure for entity references that are preserved</span></span>  
   
- <span data-ttu-id="fe542-110">I nodi figlio di **XmlEntityReference** sono copie di tutti i nodi figlio creati dal nodo **XmlEntity** quando è stata rilevata la dichiarazione di entità.</span><span class="sxs-lookup"><span data-stu-id="fe542-110">The child nodes of the **XmlEntityReference** are copies of all the child nodes created from the **XmlEntity** node when the entity declaration was encountered.</span></span>  
+ <span data-ttu-id="5db20-110">I nodi figlio di **XmlEntityReference** sono copie di tutti i nodi figlio creati dal nodo **XmlEntity** quando è stata rilevata la dichiarazione di entità.</span><span class="sxs-lookup"><span data-stu-id="5db20-110">The child nodes of the **XmlEntityReference** are copies of all the child nodes created from the **XmlEntity** node when the entity declaration was encountered.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="fe542-111">I nodi copiati da **XmlEntity** non sono sempre copie esatte dopo che vengono inseriti sotto il nodo del riferimento all'entità.</span><span class="sxs-lookup"><span data-stu-id="fe542-111">The nodes copied from the **XmlEntity** are not always exact copies once placed under the entity reference node.</span></span> <span data-ttu-id="fe542-112">Nell'ambito del nodo del riferimento all'entità possono essere presenti spazi dei nomi che incidono sulla configurazione finale dei nodi figlio.</span><span class="sxs-lookup"><span data-stu-id="fe542-112">There can be namespaces that are in scope at the entity reference node, and that affects the final configuration of the child nodes.</span></span>  
+>  <span data-ttu-id="5db20-111">I nodi copiati da **XmlEntity** non sono sempre copie esatte dopo che vengono inseriti sotto il nodo del riferimento all'entità.</span><span class="sxs-lookup"><span data-stu-id="5db20-111">The nodes copied from the **XmlEntity** are not always exact copies once placed under the entity reference node.</span></span> <span data-ttu-id="5db20-112">Nell'ambito del nodo del riferimento all'entità possono essere presenti spazi dei nomi che incidono sulla configurazione finale dei nodi figlio.</span><span class="sxs-lookup"><span data-stu-id="5db20-112">There can be namespaces that are in scope at the entity reference node, and that affects the final configuration of the child nodes.</span></span>  
   
- <span data-ttu-id="fe542-113">Per impostazione predefinita, le entità generali, ad esempio `&abc;`, vengono conservate e vengono sempre creati nodi **XmlEntityReference**.</span><span class="sxs-lookup"><span data-stu-id="fe542-113">By default, general entities like `&abc;` are preserved and **XmlEntityReference** nodes always created.</span></span>  
+ <span data-ttu-id="5db20-113">Per impostazione predefinita, le entità generali, ad esempio `&abc;`, vengono conservate e vengono sempre creati nodi **XmlEntityReference**.</span><span class="sxs-lookup"><span data-stu-id="5db20-113">By default, general entities like `&abc;` are preserved and **XmlEntityReference** nodes always created.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fe542-114">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="fe542-114">See Also</span></span>  
- [<span data-ttu-id="fe542-115">Modello DOM (Document Object Mode) XML</span><span class="sxs-lookup"><span data-stu-id="fe542-115">XML Document Object Model (DOM)</span></span>](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a><span data-ttu-id="5db20-114">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="5db20-114">See also</span></span>
+
+- [<span data-ttu-id="5db20-115">Modello DOM (Document Object Mode) XML</span><span class="sxs-lookup"><span data-stu-id="5db20-115">XML Document Object Model (DOM)</span></span>](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
