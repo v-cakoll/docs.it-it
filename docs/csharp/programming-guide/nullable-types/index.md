@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, nullable types
 - types [C#], nullable
 ms.assetid: e473cb01-28ca-42be-9cea-f717055d72c6
-ms.openlocfilehash: 64b326b82cd022ed6590a232546690e2ec2a5c78
-ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
+ms.openlocfilehash: 2af0704abcad00c75a5d40bfe2d0523d07ee6a3f
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39245590"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "43885048"
 ---
 # <a name="nullable-types-c-programming-guide"></a>Tipi nullable (Guida per programmatori C#)
 
@@ -38,7 +38,7 @@ I tipi nullable hanno le caratteristiche seguenti:
   
 - Con un tipo nullable è anche possibile usare gli operatori `==` e `!=`, come mostrato nell'esempio seguente: `if (x != null) y = x.Value;`. Se `a` e `b` sono Null, `a == b` restituisce `true`.  
 
-- A partire da C# 7.0, è possibile usare i criteri di ricerca per esaminare e ottenere un valore di un tipo nullable: `if (x is int xValue) y = xValue;`.
+- A partire da C# 7.0, è possibile usare i [criteri di ricerca](../../pattern-matching.md#the-is-type-pattern-expression) per esaminare e ottenere un valore di un tipo nullable: `if (x is int valueOfX) y = valueOfX;`.
   
 - Il valore predefinito di `T?` è un'istanza la cui proprietà <xref:System.Nullable%601.HasValue%2A> restituisce `false`.  
 
@@ -56,10 +56,10 @@ Per altre informazioni, vedere gli argomenti [Utilizzo dei tipi nullable](using-
   
 ## <a name="see-also"></a>Vedere anche
 
- <xref:System.Nullable%601?displayProperty=nameWithType>  
- <xref:System.Nullable?displayProperty=nameWithType>  
- [?? (operatore)](../../language-reference/operators/null-coalescing-operator.md)  
- [Guida per programmatori C#](../index.md)  
- [Guida a C#](../../index.md)  
- [Riferimenti per C#](../../language-reference/index.md)  
- [Tipi di valori nullable (Visual Basic)](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)  
+- <xref:System.Nullable%601?displayProperty=nameWithType>  
+- <xref:System.Nullable?displayProperty=nameWithType>  
+- [?? (operatore)](../../language-reference/operators/null-coalescing-operator.md)  
+- [Guida per programmatori C#](../index.md)  
+- [Guida a C#](../../index.md)  
+- [Riferimenti per C#](../../language-reference/index.md)  
+- [Tipi di valori nullable (Visual Basic)](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)  

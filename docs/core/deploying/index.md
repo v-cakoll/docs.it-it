@@ -3,13 +3,13 @@ title: Distribuzione di applicazioni .NET Core
 description: Distribuzione di un'applicazione .NET Core.
 author: rpetrusha
 ms.author: ronpet
-ms.date: 04/18/2017
-ms.openlocfilehash: ab65beaa293f7543a8436f913a1e5bf89ca7281b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.date: 09/03/2018
+ms.openlocfilehash: 2ef63ebd737739b2c8e671d982c3844135689ab4
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43562006"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43891311"
 ---
 # <a name="net-core-application-deployment"></a>Distribuzione di applicazioni .NET Core
 
@@ -41,7 +41,9 @@ Sono presenti anche alcuni svantaggi:
 
 ## <a name="self-contained-deployments-scd"></a>Distribuzioni autonome
 
-Per una distribuzione autonoma, si distribuiscono l'app e le eventuali dipendenze di terze parti richieste, insieme alla versione di .NET Core usata per compilare l'app. Poiché la creazione di una distribuzione autonoma non include le [dipendenze native di .NET Core](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md) su più piattaforme, queste dipendenze devono essere presenti prima di eseguire l'applicazione. Per altre informazioni sull'associazione di versioni in fase di runtime, vedere l'articolo sull'[associazione delle versioni in .NET Core](../versions/selection.md)
+Per una distribuzione autonoma, si distribuiscono l'app e le eventuali dipendenze di terze parti richieste, insieme alla versione di .NET Core usata per compilare l'app. Poiché la creazione di una distribuzione autonoma non include le [dipendenze native di .NET Core](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md) su più piattaforme, queste dipendenze devono essere presenti prima di eseguire l'applicazione. Per altre informazioni sull'associazione di versioni in fase di esecuzione, vedere l'articolo sull'[associazione delle versioni in .NET Core](../versions/selection.md).
+
+A partire da NET Core 2.1 SDK (versione 2.1.300), .NET Core supporta il *roll forward della versione della patch*. Quando si crea una distribuzione autonoma, gli strumenti di .NET Core includono automaticamente l'ultimo il runtime servito della versione di .NET Core a cui l'applicazione è destinata. L'ultimo runtime servito include le patch di sicurezza e altre correzioni di bug. Il runtime servito non deve essere presente nel sistema di compilazione. Viene scaricato automaticamente da NuGet.org. Per altre informazioni, incluse le istruzioni su come rifiutare esplicitamente il roll forward della versione della patch, vedere [Roll forward del runtime di distribuzione autonoma](runtime-patch-selection.md).
 
 Le distribuzioni dipendenti dal framework e le distribuzioni autonome usano eseguibili host separati, quindi è possibile firmare un eseguibile host per una distribuzione autonoma con la firma del server di pubblicazione.
 
@@ -58,6 +60,8 @@ Sono presenti anche alcuni svantaggi:
 - Poiché .NET Core è incluso nel pacchetto di distribuzione, è necessario selezionare in anticipo le piattaforme di destinazione per cui vengono creati i pacchetti di distribuzione.
 
 - La dimensione del pacchetto di distribuzione è relativamente elevata, poiché è necessario includere .NET Core, nonché l'app e le relative dipendenze di terze parti.
+
+  A partire da .NET Core 2.0, è possibile ridurre le dimensioni della distribuzione nei sistemi Linux di circa 28 MB usando la [*modalità invariante della globalizzazione*](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md). In genere, .NET Core in Linux si basa sulle [librerie ICU](https://github.com/dotnet/docs/issues/http%22//icu-project.org) per il supporto della globalizzazione. Nella modalità invariante le librerie non sono incluse nella distribuzione e tutte le impostazioni cultura si comportano come le [impostazioni cultura inglese non dipendenti da paese/area geografica](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType).
 
 - La distribuzione di numerose app .NET Core autonome a un sistema comporta l'utilizzo di quantità significative di spazio su disco, poiché ogni app duplica i file di .NET Core.
 
