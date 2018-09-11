@@ -8,11 +8,11 @@ helpviewer_keywords:
 - cubic Bezier curves [WPF]
 ms.assetid: 450a3a77-7c57-48b0-a008-0f6051add980
 ms.openlocfilehash: 2dd9dfa7f15ce00261c87f316079c25a7aa52532
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44201627"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44264142"
 ---
 # <a name="how-to-create-a-cubic-bezier-curve"></a>Procedura: creare una curva di Bezier cubica
 In questo esempio viene illustrato come creare una curva di Bézier cubica. Per creare una curva di Bézier cubica continua, usare il <xref:System.Windows.Media.PathGeometry>, <xref:System.Windows.Media.PathFigure>, e <xref:System.Windows.Media.BezierSegment> classi.  Per visualizzare la geometria risulta, usare una <xref:System.Windows.Shapes.Path> elemento, o usarlo con un <xref:System.Windows.Media.GeometryDrawing> o un <xref:System.Windows.Media.DrawingContext>. Negli esempi seguenti, una curva di Bézier cubica viene disegnata da (10, 100) a (300, 100). La curva ha punti di controllo di (100, 0) e (200, 200).  

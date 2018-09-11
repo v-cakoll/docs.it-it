@@ -3,11 +3,11 @@ title: Da Windows Communication Foundation a Accodamento messaggi
 ms.date: 03/30/2017
 ms.assetid: 78d0d0c9-648e-4d4a-8f0a-14d9cafeead9
 ms.openlocfilehash: ea0723d178b37b1ff2581981f8f49a6953c913cc
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44197485"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44277481"
 ---
 # <a name="windows-communication-foundation-to-message-queuing"></a>Da Windows Communication Foundation a Accodamento messaggi
 Questo esempio dimostra come un'applicazione Windows Communication Foundation (WCF) può inviare un messaggio a un'applicazione di Accodamento messaggi (MSMQ). Il servizio è un'applicazione console indipendente che consente di osservare il servizio che riceve messaggi in coda. Non è necessario che il servizio e il client siano in esecuzione contemporaneamente.  

@@ -3,11 +3,11 @@ title: Programmabilità dell'archivio di metadati
 ms.date: 03/30/2017
 ms.assetid: 5b613661-f3f9-4e07-8e88-28c9ea2fd8f8
 ms.openlocfilehash: 4ea6117686b985a9ea18ce4e5cc4ea2b5c25524c
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44187020"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44276328"
 ---
 # <a name="metadata-store-programmability"></a>Programmabilità dell'archivio di metadati
 L'archivio di metadati è una funzionalità di [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] che consente l'associazione di metadati arbitrari, nel formato di attributi CLR, ai tipi in fase di esecuzione. In questo modo è possibile un accoppiamento libero tra i componenti runtime e le controparti in fase di progettazione e la possibilità di modificare i componenti della fase di progettazione senza incidere sul runtime. In questo esempio viene illustrato come programmare in base all'archivio di metadati applicando attributi a un tipo in fase di esecuzione, ovvero l'origine che non può essere controllata. Secondo la terminologia usata in genere, un'applicazione host registra i metadati per un set di tipi.  

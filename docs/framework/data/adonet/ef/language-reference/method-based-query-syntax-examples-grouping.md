@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: cb23c25c-1075-4cc3-a8ff-4db72e536c0d
 ms.openlocfilehash: 2fd64cb16224290d76efe327978083b1e834d6cb
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
-ms.translationtype: MT
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44213225"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44273726"
 ---
 # <a name="method-based-query-syntax-examples-grouping"></a>Esempi di sintassi di query basate sul metodo: raggruppamento
 Gli esempi in questo argomento mostrano come usare il `GroupBy` metodo di query il [modello Sales di AdventureWorks](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) usando la sintassi di query basate su metodo. Il modello Sales di AdventureWorks usato in questi esempi è compilato in base alle tabelle Contact, Address, Product, SalesOrderHeader e SalesOrderDetail del database di esempio AdventureWorks.  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - key frames [WPF], animating Doubles with
 ms.assetid: 3a1a7dba-7694-4907-8a2f-3408baebfa82
 ms.openlocfilehash: 67466bbb5fd7e7a46c312e14666c23048bf43d80
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44187351"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44339342"
 ---
 # <a name="how-to-animate-a-double-by-using-key-frames"></a>Procedura: animare un oggetto Double utilizzando i fotogrammi chiave
 In questo esempio illustra come animare il valore di una proprietà che accetta un <xref:System.Double> usando fotogrammi chiave.  

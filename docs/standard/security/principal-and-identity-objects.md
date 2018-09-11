@@ -15,11 +15,11 @@ ms.assetid: aa5930ad-f3d7-40aa-b6f6-c6edcd5c64f7
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b8c7616a3187cd5fa28f231dffd15b0bfeea4b7f
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44201172"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44338779"
 ---
 # <a name="principal-and-identity-objects"></a>Oggetti Principal e Identity
 Codice gestito può individuare l'identità o il ruolo di un principale tramite un <xref:System.Security.Principal.IPrincipal> oggetto che contiene un riferimento a un <xref:System.Security.Principal.IIdentity> oggetto. Può essere utile paragonare oggetti Identity e Principal a concetti familiari quali account utente e di gruppo. Nella maggior parte degli ambienti di rete, gli account utente rappresentano utenti o programmi, mentre gli account di gruppo rappresentano determinate categorie di utenti e i diritti che essi detengono. Analogamente, gli oggetti Identity di .NET Framework rappresentano utenti, mentre i ruoli rappresentano appartenenze e contesti di sicurezza. In .NET Framework l'oggetto Principal incapsula sia un oggetto Identity che un ruolo. Le applicazioni di .NET Framework concedono diritti al principale sulla base dell'identità che esso presenta oppure, più comunemente, al ruolo che esso riveste.  

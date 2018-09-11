@@ -5,11 +5,11 @@ ms.assetid: a17ebe67-836b-4c52-9a81-2c3d58e225ee
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: d895524d36895ad087f7394fcc3380573355eaad
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44207512"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44269150"
 ---
 # <a name="securing-messages-using-message-security"></a>Protezione dei messaggi mediante protezione a livello di messaggio
 Questa sezione illustra la protezione dei messaggi WCF quando si usa <xref:System.ServiceModel.NetMsmqBinding>.  

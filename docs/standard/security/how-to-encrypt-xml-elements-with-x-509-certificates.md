@@ -17,11 +17,11 @@ ms.assetid: 761f1c66-631c-47af-aa86-ad9c50cfa453
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 674a4c917df20f58a509e92465e756c4615118ca
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44183525"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44276669"
 ---
 # <a name="how-to-encrypt-xml-elements-with-x509-certificates"></a>Procedura: crittografare gli elementi XML con certificati X.509
 È possibile usare le classi dello spazio dei nomi <xref:System.Security.Cryptography.Xml> per crittografare un elemento all'interno di un documento XML.  La crittografia XML consente di scambiare o archiviare dati XML crittografati in modo standard, garantendo un'adeguata protezione dei dati da letture non autorizzate.  Per altre informazioni sullo standard della crittografia XML, vedere la specifica World Wide Web Consortium (W3C) per la crittografia XML disponibile all'indirizzo http://www.w3.org/TR/xmldsig-core/.  

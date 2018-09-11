@@ -11,11 +11,11 @@ ms.assetid: 1cdb8740-871a-456c-9bd9-db96ca8d79b3
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9c1690d0cdf1f57eaf0a794d6e71babfa4fa6425
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44199882"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44277549"
 ---
 # <a name="designing-for-extensibility"></a>Progettazione finalizzata all'estensibilità
 Un aspetto importante della progettazione di un framework è assicurare che l'estendibilità del framework è stato considerato con attenzione. È necessario comprendere i costi e vantaggi associati vari meccanismi di estendibilità. In questo capitolo contribuisce di stabilire quale dei meccanismi di estendibilità: creazione di una sottoclasse, eventi, i membri virtuali, callback e così via, possano soddisfare i requisiti del framework.  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - writing LINQ queries [Visual Basic]
 ms.assetid: f0045808-b9fe-4d31-88d1-473d9957211e
 ms.openlocfilehash: 6c5f7d288d805a6a25afa9a5b32a4550aaa76ec3
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44221935"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44275353"
 ---
 # <a name="walkthrough-writing-queries-in-visual-basic"></a>Procedura dettagliata: Scrittura delle query in Visual Basic
 Questa procedura dettagliata illustra come è possibile usare le funzionalità del linguaggio Visual Basic per scrivere [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] le espressioni di query. La procedura dettagliata illustra come creare query in un elenco di oggetti per studenti, come eseguire la query e come modificarli. Le query integrare diverse funzionalità tra cui i tipi anonimi, inferenza del tipo locale e gli inizializzatori di oggetto.  

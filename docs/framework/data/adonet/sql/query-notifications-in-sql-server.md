@@ -3,11 +3,11 @@ title: Notifiche di query in SQL Server
 ms.date: 03/30/2017
 ms.assetid: 0f0ba1a1-3180-4af8-87f7-c795dc8f8f55
 ms.openlocfilehash: c4e58a3eecc18fb5693e9850163533b0a1a6a574
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44214745"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44275288"
 ---
 # <a name="query-notifications-in-sql-server"></a>Notifiche di query in SQL Server
 Basate sull'infrastruttura Service Broker, le notifiche di query consentono di inviare notifiche alle applicazioni quando i dati vengono modificati. Questa funzionalità è particolarmente utile per le applicazioni che forniscono una cache di informazioni da un database, ad esempio un'applicazione Web, e che richiedono una notifica quando i dati di origine vengono modificati.  

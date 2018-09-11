@@ -9,11 +9,11 @@ helpviewer_keywords:
 - visual styles [Windows Forms]
 ms.assetid: 95de9b9c-d804-405c-b2d1-49a88c1e0fe1
 ms.openlocfilehash: f4684e277335a119d41d5bd79d504ed37a76d6fc
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44179455"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44268471"
 ---
 # <a name="how-to-enable-visual-styles-in-a-hybrid-application"></a>Procedura: Abilitare stili di visualizzazione in un'applicazione ibrida
 In questo argomento viene illustrato come abilitare [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] gli stili di visualizzazione in un [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controllo ospitato in un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-applicazione basata su.  

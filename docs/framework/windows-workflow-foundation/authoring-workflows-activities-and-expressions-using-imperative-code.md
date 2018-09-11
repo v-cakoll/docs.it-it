@@ -3,11 +3,11 @@ title: Creazione di flussi di lavoro, attività ed espressioni tramite codice im
 ms.date: 03/30/2017
 ms.assetid: cefc9cfc-2882-4eb9-8c94-7a6da957f2b2
 ms.openlocfilehash: a0566e01d5786c955562ef97d6d083d886278293
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
-ms.translationtype: MT
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44197498"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44265130"
 ---
 # <a name="authoring-workflows-activities-and-expressions-using-imperative-code"></a>Creazione di flussi di lavoro, attività ed espressioni tramite codice imperativo
 Una definizione del flusso di lavoro è un albero degli oggetti attività configurati che può essere definita in diversi modi, ad esempio modificando manualmente il codice XAML o usando l'utilità di progettazione del flusso di lavoro per produrre codice XAML. L'utilizzo di XAML tuttavia non è un requisito. Le definizioni del flusso di lavoro possono essere create anche a livello di codice. In questo argomento viene fornita una panoramica sulla creazione di definizioni del flusso di lavoro, di attività e di espressioni tramite codice. Per esempi dell'uso di flussi di lavoro XAML tramite codice, vedere [serializzazione di flussi di lavoro e attività da e verso XAML](../../../docs/framework/windows-workflow-foundation/serializing-workflows-and-activities-to-and-from-xaml.md).  

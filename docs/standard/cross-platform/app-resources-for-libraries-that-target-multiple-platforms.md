@@ -15,11 +15,11 @@ ms.assetid: 72c76f0b-7255-4576-9261-3587f949669c
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a6c589a393ccfb5610a19776af6e33e4046bf5d3
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
-ms.translationtype: MT
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44140593"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44275952"
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>Risorse app per librerie destinate a più piattaforme
 È possibile usare .NET Framework [libreria di classi portabile](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) tipo per garantire che le risorse nelle librerie di classi sono accessibili da più piattaforme progetto. Il tipo di progetto è disponibile in [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)] e fa riferimento al subset portabile della libreria di classi di .NET Framework. Usando la [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] viene garantito che sia possibile accedere alla libreria da applicazioni desktop, applicazioni Silverlight, applicazioni Windows Phone e da applicazioni [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].  

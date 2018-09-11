@@ -3,11 +3,11 @@ title: Estensione del controllo sulla gestione e sulla segnalazione degli errori
 ms.date: 03/30/2017
 ms.assetid: 45f996a7-fa00-45cb-9d6f-b368f5778aaa
 ms.openlocfilehash: 6492807b55b50662790cf25807a35ddd65fbe01d
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44032838"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44264246"
 ---
 # <a name="extending-control-over-error-handling-and-reporting"></a>Estensione del controllo sulla gestione e sulla segnalazione degli errori
 In questo esempio viene illustrato come estendere il controllo sulla gestione degli errori e segnalazione errori in un servizio Windows Communication Foundation (WCF) utilizzando il <xref:System.ServiceModel.Dispatcher.IErrorHandler> interfaccia. L'esempio è basato sul [introduttiva](../../../../docs/framework/wcf/samples/getting-started-sample.md) con ulteriore codice aggiunto al servizio di gestione degli errori. Il client forza diverse condizioni di errore. Il servizio intercetta gli errori e li registra in un file.  

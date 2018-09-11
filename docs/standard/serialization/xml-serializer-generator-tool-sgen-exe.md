@@ -3,11 +3,11 @@ title: Strumento per la generazione di serializzatori XML (Sgen.exe)
 ms.date: 03/30/2017
 ms.assetid: cc1d1f1c-fb26-4be9-885a-3fe84c81cec6
 ms.openlocfilehash: e0fee890f86f4e377a9372d7e4c47ef78effc9fa
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44214901"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44268419"
 ---
 # <a name="xml-serializer-generator-tool-sgenexe"></a>Strumento per la generazione di serializzatori XML (Sgen.exe)
 Lo strumento per la generazione di serializzatori XML (Sgen.exe) consente di creare un assembly di serializzazione XML per i tipi in un assembly specificato al fine di migliorare le prestazioni di avvio di un oggetto <xref:System.Xml.Serialization.XmlSerializer> quando serializza o deserializza oggetti dei tipi specificati.  

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - Windows Forms, resizable
 ms.assetid: babdf198-404c-485d-a914-ed370c6ecd99
 ms.openlocfilehash: a319fba43c6735cd5552dd71d1fb614a6192da97
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44205744"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44260944"
 ---
 # <a name="how-to-create-a-resizable-windows-form-for-data-entry"></a>Procedura: creare Windows Form ridimensionabile per immissione dati
 Un layout appropriato risponde correttamente alle modifiche apportate alle dimensioni del form padre. È possibile usare il controllo <xref:System.Windows.Forms.TableLayoutPanel> per disporre il layout del form in modo che i controlli vengano ridimensionati e posizionati in maniera coerente quando cambiano le dimensioni del form. Il controllo <xref:System.Windows.Forms.TableLayoutPanel> è utile anche quando le modifiche del contenuto dei controlli generano modifiche nel layout. Il processo descritto in questa procedura può essere eseguito nell'ambiente di Visual Studio.  Vedere anche [Procedura dettagliata: creazione di un Windows Form ridimensionabile per l'inserimento di dati](https://msdn.microsoft.com/library/991eahec\(v=vs.110\)).  

@@ -11,11 +11,11 @@ ms.assetid: cc42267f-bb7a-427a-845e-df97408528d4
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6d8c445de44a69f6c0cb1eaefa0e59d682288318
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44199921"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44336914"
 ---
 # <a name="sealing"></a>sealed
 Una delle funzionalità orientate a oggetti Framework è che gli sviluppatori possono estendere e personalizzarli in modi non previsti per i progettisti del framework. Questa è la potenza e pericolo di progettazione estendibile. Quando si progetta il tuo framework, è quindi molto importante per progettare con attenzione per l'estensibilità quando lo si desidera e per limitare l'estendibilità è pericoloso.  

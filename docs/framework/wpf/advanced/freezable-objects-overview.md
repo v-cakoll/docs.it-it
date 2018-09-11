@@ -10,11 +10,11 @@ helpviewer_keywords:
 - classes [WPF], Freezable
 ms.assetid: 89c71692-4f43-4057-b611-67c6a8a863a2
 ms.openlocfilehash: a1006816168e405d0d79786b8430b802f1ec0928
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
-ms.translationtype: HT
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44216633"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44265000"
 ---
 # <a name="freezable-objects-overview"></a>Cenni preliminari sugli oggetti Freezable
 In questo argomento viene descritto come creare e utilizzare in modo efficace <xref:System.Windows.Freezable> oggetti, che forniscono funzionalità speciali che consentono di migliorare le prestazioni dell'applicazione. Sono esempi di oggetti freezable pennelli, penne, trasformazioni, geometrie e animazioni.  

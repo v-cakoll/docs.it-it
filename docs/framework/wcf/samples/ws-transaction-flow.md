@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Transactions
 ms.assetid: f8eecbcf-990a-4dbb-b29b-c3f9e3b396bd
 ms.openlocfilehash: 35af3090c0f898578a5f8dfb81d02d22a0074ad2
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44097269"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44264857"
 ---
 # <a name="ws-transaction-flow"></a>Flusso delle transazioni WS
 Questo esempio dimostra l'uso di una transazione coordinata dal client e le opzioni client e server per il flusso delle transazioni mediante il protocollo WS-Atomic Transaction o OleTransactions. Questo esempio è basato sul [Guida introduttiva](../../../../docs/framework/wcf/samples/getting-started-sample.md) che implementa un servizio Calcolatrice, ma le operazioni vengono attribuite per dimostrare l'utilizzo delle `TransactionFlowAttribute` con il **TransactionFlowOption** enumerazione per determinare a quali livello di transazione è abilitato il flusso. All'interno dell'ambito della transazione propagata, viene scritto un log delle operazioni richieste in un database che persiste fino a che la transazione coordinata dal client non è stata completata; se la transazione client non viene completata, la transazione del servizio Web assicura che non venga eseguito il commit degli aggiornamenti appropriati al database.  

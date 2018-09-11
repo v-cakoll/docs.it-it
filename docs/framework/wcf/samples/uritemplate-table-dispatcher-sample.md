@@ -3,11 +3,11 @@ title: Dispatcher di esempio nella tabella UriTemplate
 ms.date: 03/30/2017
 ms.assetid: 3b32975d-ba90-4c5c-83bc-2fbb48f11c0c
 ms.openlocfilehash: 4a4f725e88e014da241e1042c27bfee270e13268
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44187282"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44337408"
 ---
 # <a name="uritemplate-table-dispatcher-sample"></a>Dispatcher di esempio nella tabella UriTemplate
 La classe <xref:System.UriTemplateTable> fornisce una struttura con tabella associativa simile a un dizionario per lavorare con un set di istanze <xref:System.UriTemplate>. In questo esempio viene illustrato un motore di distribuzione di base compilato utilizzando `UriTemplateTable`, uno scenario di utilizzo comune per la classe `UriTemplateTable`.  

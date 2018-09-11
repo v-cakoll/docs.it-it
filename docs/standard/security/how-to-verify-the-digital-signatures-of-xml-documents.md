@@ -17,11 +17,11 @@ ms.assetid: a4d5ceb1-b9f5-47e8-9e4a-a2b39110002f
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9ec813e50bb4dca33c8dda8b41914cfa5d5596c2
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44067617"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44267154"
 ---
 # <a name="how-to-verify-the-digital-signatures-of-xml-documents"></a>Procedura: verificare le firme digitali dei documenti XML
 È possibile usare le classi nello spazio dei nomi <xref:System.Security.Cryptography.Xml> per verificare i dati XML firmati con una firma digitale.  Le firme digitali XML (XMLDSIG) consentono di verificare che i dati non siano stati alterati dopo la firma.  Per altre informazioni sullo standard XMLDSIG, vedere la specifica World Wide Web Consortium (W3C) al http://www.w3.org/TR/xmldsig-core/.  

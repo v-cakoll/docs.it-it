@@ -13,11 +13,11 @@ ms.assetid: 67b3c6e2-6a8f-480d-a78f-ebeeaca1b95a
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b257da73d33fae54ef464e9dd69906316b87fd88
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44127920"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44270906"
 ---
 # <a name="event-design"></a>Progettazione di eventi
 Gli eventi sono la forma più diffuso di callback (costrutti che consentono al framework di effettuare chiamate nel codice utente). Altri meccanismi di callback che includono membri accettando i delegati, i membri virtuali e basata sull'interfaccia plug-in. I dati di studi di utilizzabilità indicano che la maggior parte degli sviluppatori sono più a proprio agio usando gli eventi che usano altri meccanismi di callback. Gli eventi sono perfettamente integrati con Visual Studio e linguaggi.  

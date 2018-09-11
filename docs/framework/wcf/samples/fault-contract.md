@@ -3,11 +3,11 @@ title: Contratto di errore
 ms.date: 03/30/2017
 ms.assetid: b31b140e-dc3b-408b-b3c7-10b6fe769725
 ms.openlocfilehash: 5b3348f31d239d6bf7e64852ba02010115062669
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44098433"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44270984"
 ---
 # <a name="fault-contract"></a>Contratto di errore
 Nell'esempio di contratto di errore viene illustrato come comunicare informazioni relative all'errore da un servizio a un client. L'esempio è basato sul [introduttiva](../../../../docs/framework/wcf/samples/getting-started-sample.md), con ulteriore codice aggiunto al servizio per convertire un'eccezione interna in un errore. Il client tenta di eseguire una divisione per zero per imporre una condizione di errore al servizio.  

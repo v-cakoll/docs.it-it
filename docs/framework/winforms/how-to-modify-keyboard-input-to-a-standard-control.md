@@ -11,11 +11,11 @@ helpviewer_keywords:
 - keyboards [Windows Forms], keyboard input
 ms.assetid: 626d3712-d866-4988-bcda-a2d5b36ec0ba
 ms.openlocfilehash: c109615b9a0eb61d18f7f44e3248d2b24934ee5f
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44184954"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44270799"
 ---
 # <a name="how-to-modify-keyboard-input-to-a-standard-control"></a>Procedura: modificare l'input da tastiera in un controllo standard
 Windows Forms permette di usare e modificare l'input da tastiera. L'utilizzo di una chiave fa riferimento alla gestione di una chiave entro un metodo o un gestore eventi, in modo che altri metodi ed eventi successivi nella coda di messaggi non ricevano il valore della chiave. Per modifica di una chiave si intente la modifica del valore di una chiave, in modo che i metodi e i gestori eventi successivi nella coda di messaggi ricevano un valore di chiave diverso. Questo argomento illustra come completare queste attività.  

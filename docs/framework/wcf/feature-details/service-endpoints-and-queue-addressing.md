@@ -3,11 +3,11 @@ title: Mapping fra gli endpoint di servizio e l'indirizzamento delle code
 ms.date: 03/30/2017
 ms.assetid: 7d2d59d7-f08b-44ed-bd31-913908b83d97
 ms.openlocfilehash: 71ebf29e51118a7f555f3e79598e49ffd65e0c63
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44180826"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44268682"
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>Mapping fra gli endpoint di servizio e l'indirizzamento delle code
 Questo argomento descrive come i client indirizzano i servizi che leggono da code e il mapping fra gli endpoint di servizio e le code. Come promemoria, la figura seguente illustra il modello di distribuzione classica di Windows Communication Foundation (WCF) in coda la distribuzione di applicazioni.  

@@ -10,11 +10,11 @@ ms.assetid: eed44dff-eaee-4937-a89f-444e418e74f6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3b106005ff07f55e05ae66dba94041cd8b5c24bb
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44227298"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44266813"
 ---
 # <a name="byte-data-type-visual-basic"></a>Tipo di dati byte (Visual Basic)
 Contiene interi senza segno a 8 bit (a 1 byte) in un intervallo compreso tra 0 e 255.

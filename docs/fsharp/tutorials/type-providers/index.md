@@ -3,11 +3,11 @@ title: Provider di tipi
 description: "Informazioni su come un provider di tipi F # è un componente che fornisce i tipi, proprietà e metodi per l'uso nei programmi."
 ms.date: 04/02/2018
 ms.openlocfilehash: 5fa9de229caa2ec3ba4a248ca5cd1c8aa5adb230
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44210325"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44276583"
 ---
 # <a name="type-providers"></a>Provider di tipi
 

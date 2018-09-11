@@ -3,11 +3,11 @@ title: Rilevamento tramite un file di testo
 ms.date: 03/30/2017
 ms.assetid: 56a82682-73c2-4b91-a206-4d8bb12c561b
 ms.openlocfilehash: 19b4d544bc1d1c5bc9ebfa51b4ba28eb82c525d0
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44191287"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44262699"
 ---
 # <a name="tracking-using-a-text-file"></a>Rilevamento tramite un file di testo
 In questo esempio viene illustrato come estendere il rilevamento in Windows Workflow Foundation (WF) creando un partecipante del rilevamento personalizzato. I partecipanti di rilevamento sono classi .NET Framework che ricevono record di rilevamento dal runtime man mano che vengono generati. È possibile creare un partecipante di rilevamento per trasportare gli eventi di rilevamento a qualunque destinazione necessaria per lo specifico scenario. Ad esempio, il partecipante di rilevamento Analisi eventi per Windows (ETW) viene fornito come parte di [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Il partecipante di rilevamento in questo esempio scrive i record in formato XML in un file di testo.  
