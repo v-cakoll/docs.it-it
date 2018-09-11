@@ -2,12 +2,12 @@
 title: 'Procedura: Generare un flusso di frammenti XML con accesso a informazioni di intestazione (C#)'
 ms.date: 07/20/2015
 ms.assetid: 7f242770-b0c7-418d-894b-643215e1f8aa
-ms.openlocfilehash: af8f83ba746292289bb97f591103cc91d6febbad
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: 9c141b21a009f836fbf385c1f4179e288ec6c3b5
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39199300"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44217074"
 ---
 # <a name="how-to-stream-xml-fragments-with-access-to-header-information-c"></a>Procedura: Generare un flusso di frammenti XML con accesso a informazioni di intestazione (C#)
 A volte è necessario leggere file XML arbitrariamente grandi e scrivere l'applicazione in modo tale che il footprint di memoria dell'applicazione sia prevedibile. Se si tenta di popolare un albero XML con un file XML di grandi dimensioni, l'uso della memoria sarà proporzionale alla dimensione del file (ovvero, eccessivo). Pertanto, è necessario usare una tecnica di flusso in sostituzione.  
@@ -166,5 +166,6 @@ static void Main(string[] args)
 </Root>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Programmazione LINQ to XML avanzata (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Programmazione LINQ to XML avanzata (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

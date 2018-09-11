@@ -6,11 +6,12 @@ helpviewer_keywords:
 - Code Editor, event handlers
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
-ms.openlocfilehash: 51b611237422ef30730850369627467c152f7579
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e27473ca34f634f4a3125a2e87e6d0ef918a6f9d
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44225438"
 ---
 # <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>Procedura: sottoscrivere e annullare la sottoscrizione di eventi (Guida per programmatori C#)
 Si sottoscrive un evento pubblicato da un'altra classe quando si vuole scrivere codice personalizzato che viene chiamato quando viene generato tale evento. È ad esempio possibile sottoscrivere l'evento `click` di un pulsante perché l'applicazione esegua un'operazione utile quando l'utente fa clic sul pulsante in questione.  
@@ -97,9 +98,10 @@ Si sottoscrive un evento pubblicato da un'altra classe quando si vuole scrivere 
   
      Quando tutti i sottoscrittori hanno annullato la sottoscrizione a un evento, l'istanza dell'evento nella classe publisher viene impostata su `null`.  
   
-## <a name="see-also"></a>Vedere anche  
- [Eventi](../../../csharp/programming-guide/events/index.md)  
- [event](../../../csharp/language-reference/keywords/event.md)  
- [Procedura: Pubblicare eventi conformi alle linee guida di .NET Framework](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)  
- [Operatore = (Riferimenti per C#)](../../language-reference/operators/subtraction-assignment-operator.md)  
- [Operatore +=](../../../csharp/language-reference/operators/addition-assignment-operator.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Eventi](../../../csharp/programming-guide/events/index.md)  
+- [event](../../../csharp/language-reference/keywords/event.md)  
+- [Procedura: Pubblicare eventi conformi alle linee guida di .NET Framework](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)  
+- [Operatore = (Riferimenti per C#)](../../language-reference/operators/subtraction-assignment-operator.md)  
+- [Operatore +=](../../../csharp/language-reference/operators/addition-assignment-operator.md)

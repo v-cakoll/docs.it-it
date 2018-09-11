@@ -9,12 +9,12 @@ helpviewer_keywords:
 - reading data, text files
 - text files, reading
 ms.assetid: 92246c5b-e819-4eea-9370-1a9460e12de3
-ms.openlocfilehash: a42f98a81ff9e9bdbbf6c61554667aa223c7c269
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cb7f5c0239273c04f9f89b4e63335e67fdf5419a
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331672"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44084117"
 ---
 # <a name="how-to-read-from-a-text-file-c-programming-guide"></a>Procedura: leggere da un file di testo (Guida per programmatori C#)
 Questo esempio legge il contenuto di un file di testo usando i metodi statici <xref:System.IO.File.ReadAllText%2A> e <xref:System.IO.File.ReadAllLines%2A> della classe <xref:System.IO.File?displayProperty=nameWithType>.  
@@ -40,7 +40,8 @@ Questo esempio legge il contenuto di un file di testo usando i metodi statici <x
 ## <a name="net-framework-security"></a>Sicurezza di .NET Framework  
  Non basarsi sul nome di un file per determinare il contenuto del file. Ad esempio, il file `myFile.cs` potrebbe non essere un file di origine C#.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.IO?displayProperty=nameWithType>  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [File system e Registro di sistema (Guida per programmatori C#)](../../../csharp/programming-guide/file-system/index.md)
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.IO?displayProperty=nameWithType>  
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- [File system e Registro di sistema (Guida per programmatori C#)](../../../csharp/programming-guide/file-system/index.md)

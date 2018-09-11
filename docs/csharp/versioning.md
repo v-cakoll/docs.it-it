@@ -3,12 +3,12 @@ title: Controllo delle versioni di C# - Guida a C#
 description: Informazioni sul funzionamento del controllo delle versioni in C# e .NET
 ms.date: 01/08/2017
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.openlocfilehash: 4dc8e7e521bf209d6ca69a84534d277fb8a93ea8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 949b7414116169cada62b48392f37809f26d7ff9
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351784"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44185757"
 ---
 # <a name="versioning-in-c"></a>Controllo delle versioni in C# #
 
@@ -24,7 +24,7 @@ Gli sviluppatori che hanno creato le librerie .NET per uso pubblico probabilment
 In teoria, le informazioni sulla versione applicate alla libreria consentono agli sviluppatori di determinare la compatibilità con i progetti che usano versioni precedenti di quella libreria.
 
 L'approccio di base a SemVer è il formato a 3 componenti `MAJOR.MINOR.PATCH`, dove:
- 
+
 * `MAJOR` viene incrementato quando si apportano modifiche incompatibili all'API
 * `MINOR` viene incrementato quando si aggiungono funzionalità compatibili con le versioni precedenti
 * `PATCH` viene incrementato quando si apportano correzioni dei bug compatibili con le versioni precedenti
@@ -51,7 +51,7 @@ Più è facile per gli utenti eseguire l'aggiornamento alla nuova versione della
 
 ### <a name="application-configuration-file"></a>File di configurazione dell'applicazione
 
-Gli sviluppatori .NET molto probabilmente hanno trovato [il file `app.config`](https://msdn.microsoft.com/library/1fk1t1t0(v=vs.110).aspx) nella maggior parte dei tipi di progetto.
+Gli sviluppatori .NET molto probabilmente hanno trovato [il file `app.config`](../framework/configure-apps/file-schema/index.md) nella maggior parte dei tipi di progetto.
 Questo semplice file di configurazione è in grado di ottimizzare la distribuzione dei nuovi aggiornamenti. In genere è consigliabile progettare le librerie in modo che le informazioni che probabilmente cambieranno regolarmente vengano memorizzate nel file `app.config`. Quando le informazioni vengono aggiornate è sufficiente sostituire il file di configurazione delle versioni precedenti con il nuovo file senza dover ricompilare la libreria.
 
 ## <a name="consuming-libraries"></a>Elaborazione delle librerie
@@ -62,7 +62,7 @@ Sia C# che l'ecosistema .NET offrono funzionalità e tecniche che consentono di 
 
 ### <a name="assembly-binding-redirection"></a>Reindirizzamento dell'associazione di assembly
 
-È possibile usare il file `app.config` per aggiornare la versione di una libreria usata dall'applicazione. Aggiungendo il cosiddetto un [ *reindirizzamento di binding* ](https://msdn.microsoft.com/library/7wd6ex19(v=vs.110).aspx) è possibile usare la nuova versione della libreria senza dover ricompilare l'applicazione. Nell'esempio seguente viene illustrato come aggiornare il file `app.config` dell'applicazione per usare la versione di patch `1.0.1` di `ReferencedLibrary` anziché la versione `1.0.0` con cui è stata compilata in origine.
+È possibile usare il file `app.config` per aggiornare la versione di una libreria usata dall'applicazione. Aggiungendo il cosiddetto un [ *reindirizzamento di binding* ](../framework/configure-apps/redirect-assembly-versions.md) è possibile usare la nuova versione della libreria senza dover ricompilare l'applicazione. Nell'esempio seguente viene illustrato come aggiornare il file `app.config` dell'applicazione per usare la versione di patch `1.0.1` di `ReferencedLibrary` anziché la versione `1.0.0` con cui è stata compilata in origine.
 
 ```xml
 <dependentAssembly>

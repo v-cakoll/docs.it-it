@@ -4,11 +4,11 @@ description: Vengono introdotti concetti relativi alle espressioni di query
 ms.date: 11/30/2016
 ms.assetid: 027db1f8-346f-44d2-a16e-043fcea3a4e0
 ms.openlocfilehash: 68f338381e354f4944539d63ca3a3cc3500031c1
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43417278"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44192735"
 ---
 # <a name="query-expression-basics"></a>Nozioni fondamentali sulle espressioni di query
 

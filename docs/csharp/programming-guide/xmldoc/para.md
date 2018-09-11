@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <para> C# XML tag
 - para C# XML tag
 ms.assetid: c74b8705-29df-40b1-bff5-237492b0e978
-ms.openlocfilehash: 6b38a5c1321db8eae8eee1b8b167090dad50ebab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e51df23db97aadddbc4c4e8c3cb38bda7ff7e3a4
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337262"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44181354"
 ---
 # <a name="ltparagt-c-programming-guide"></a>&lt;para&gt; (Guida per programmatori C#)
 ## <a name="syntax"></a>Sintassi  
@@ -34,6 +34,7 @@ ms.locfileid: "33337262"
 ## <a name="example"></a>Esempio  
  Per un esempio di utilizzo di \<para>, vedere [\<summary>](../../../csharp/programming-guide/xmldoc/summary.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [Tag consigliati per i commenti relativi alla documentazione](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- [Tag consigliati per i commenti relativi alla documentazione](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

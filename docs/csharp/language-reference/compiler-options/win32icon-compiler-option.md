@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /win32icon compiler option [C#]
 - -win32icon compiler option [C#]
 ms.assetid: 756d9b6d-ab07-41b7-ba58-5bd88f711138
-ms.openlocfilehash: ba5c7fcc8fe9e3eaab0a955f4cd1a1e07169049e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5014b1da714f8e29f869d4641da93796a607aa4d
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216203"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44225347"
 ---
 # <a name="-win32icon-c-compiler-options"></a>-win32icon (opzioni del compilatore C#)
 Con l'opzione **-win32icon** viene inserito un file con estensione ico nel file di output, che assume l'aspetto desiderato in Esplora file.  
@@ -29,7 +29,7 @@ Con l'opzione **-win32icon** viene inserito un file con estensione ico nel file 
  Il file con estensione ico da aggiungere al file di output.  
   
 ## <a name="remarks"></a>Note  
- Un file con estensione ico può essere creato mediante il [compilatore di risorse](https://msdn.microsoft.com/library/aa381042.aspx). Il Compilatore di risorse viene richiamato quando si compila un programma Visual C++. Dal file .rc viene creato un file .ico.  
+ Un file con estensione ico può essere creato mediante il [compilatore di risorse](/windows/desktop/menurc/resource-compiler). Il Compilatore di risorse viene richiamato quando si compila un programma Visual C++. Dal file .rc viene creato un file .ico.  
   
  Vedere [-linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md) (per fare riferimento a un file di risorse di .NET Framework) o a [-resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md) (per associarlo). Vedere [-win32res](../../../csharp/language-reference/compiler-options/win32res-compiler-option.md) per importare un file con estensione res.  
   
@@ -51,5 +51,6 @@ csc -win32icon:rf.ico in.cs
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Opzioni del compilatore C#](../../../csharp/language-reference/compiler-options/index.md)  
- [Gestione delle proprietà di progetti e soluzioni](/visualstudio/ide/managing-project-and-solution-properties)
+
+- [Opzioni del compilatore C#](../../../csharp/language-reference/compiler-options/index.md)  
+- [Gestione delle proprietà di progetti e soluzioni](/visualstudio/ide/managing-project-and-solution-properties)

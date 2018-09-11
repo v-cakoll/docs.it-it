@@ -2,12 +2,12 @@
 title: 'Procedura: Calcolare valori intermedi (C#)'
 ms.date: 07/20/2015
 ms.assetid: 7fd3001f-f8f9-4bce-879f-d4c7af8a04fe
-ms.openlocfilehash: 47b84e7186cf579d9229dc82b12ed621e1f58e2a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 15ccf58738b64ebfaef77deb162ddb29db0ae33a
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316998"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44259730"
 ---
 # <a name="how-to-calculate-intermediate-values-c"></a>Procedura: Calcolare valori intermedi (C#)
 In questo esempio viene illustrato come calcolare valori intermedi che è possibile usare in operazioni di ordinamento, filtro e selezione.  
@@ -67,5 +67,6 @@ foreach (decimal ex in extensions)
 435.00  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Query di base (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Query di base (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

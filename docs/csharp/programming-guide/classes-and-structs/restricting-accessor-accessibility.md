@@ -9,12 +9,12 @@ helpviewer_keywords:
 - asymmetric accessor accesibility [C#]
 - indexers [C#], read-only
 ms.assetid: 6e655798-e112-4301-a680-6310a6e012e1
-ms.openlocfilehash: bf9ead7934630d3974657107ca38e08bbd3bed85
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 66e6f0da417e62bb592fdd8654f85cdb80ccf9bc
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322315"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44197206"
 ---
 # <a name="restricting-accessor-accessibility-c-programming-guide"></a>Limitazione dell'accessibilità delle funzioni di accesso (Guida per programmatori C#)
 Le parti [get](../../../csharp/language-reference/keywords/get.md) e [set](../../../csharp/language-reference/keywords/set.md) di una proprietà o un indicizzatore sono denominate *funzioni di accesso*. Per impostazione predefinita, queste funzioni di accesso hanno la stessa visibilità, o livello di accesso: quello della proprietà o dell'indicizzatore a cui appartengono. Per altre informazioni, vedere [Livelli di accessibilità](../../../csharp/language-reference/keywords/accessibility-levels.md). Tuttavia, talvolta è utile limitare l'accesso a una di queste funzioni di accesso. In genere, ciò comporta la limitazione dell'accessibilità della funzione di accesso `set`, mantenendo la funzione di accesso `get` accessibile pubblicamente. Ad esempio:  
@@ -63,8 +63,9 @@ Le parti [get](../../../csharp/language-reference/keywords/get.md) e [set](../..
   
  `Name and ID in the derived class: John, John123`  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [Proprietà](../../../csharp/programming-guide/classes-and-structs/properties.md)  
- [Indicizzatori](../../../csharp/programming-guide/indexers/index.md)  
- [Modificatori di accesso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- [Proprietà](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+- [Indicizzatori](../../../csharp/programming-guide/indexers/index.md)  
+- [Modificatori di accesso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)

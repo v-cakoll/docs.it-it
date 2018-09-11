@@ -5,12 +5,12 @@ helpviewer_keywords:
 - anonymous types [C#]
 - C# Language, anonymous types
 ms.assetid: 59c9d7a4-3b0e-475e-b620-0ab86c088e9b
-ms.openlocfilehash: 40c709e8a68f3a095672a9d4b7aacde5c62e12af
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b732de508c8738de5e5e55168a6e17a1d88a3b02
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33314216"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44259821"
 ---
 # <a name="anonymous-types-c-programming-guide"></a>Tipi anonimi (Guida per programmatori C#)
 I tipi anonimi offrono un modo pratico per incapsulare un set di proprietà di sola lettura in un singolo oggetto, senza dover definire prima un tipo in modo esplicito. Il nome del tipo viene generato dal compilatore e non è disponibile a livello di codice sorgente. Il tipo di ogni proprietà è dedotto dal compilatore.  
@@ -54,8 +54,9 @@ var anonArray = new[] { new { name = "apple", diam = 4 }, new { name = "grape", 
   
  I metodi <xref:System.Object.Equals%2A> e <xref:System.Object.GetHashCode%2A> nei tipi anonimi sono definiti in termini di metodi delle proprietà `Equals` e `GetHashCode`, di conseguenza due istanze dello stesso tipo anonimo sono uguali solo se tutte le relative proprietà sono uguali.  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [Inizializzatori di oggetto e di raccolta](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
- [Nozioni di base su LINQ in C#](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
- [Espressioni di query LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- [Inizializzatori di oggetto e di raccolta](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
+- [Nozioni di base su LINQ in C#](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
+- [Espressioni di query LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)

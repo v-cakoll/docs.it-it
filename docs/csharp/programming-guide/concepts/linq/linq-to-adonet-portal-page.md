@@ -2,18 +2,18 @@
 title: LINQ to ADO.NET (pagina portale)
 ms.date: 07/20/2015
 ms.assetid: 6bd269b4-3509-4688-b672-836008704182
-ms.openlocfilehash: 0d8fd3834f4d44e266f7925dcf02a6fee9d05f3b
-ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
+ms.openlocfilehash: d65f041751a9418d0eebd3f92fd33a414cbed699
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43331984"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44209316"
 ---
 # <a name="linq-to-adonet-portal-page"></a>LINQ to ADO.NET (pagina portale)
 [!INCLUDE[linq_adonet](~/includes/linq-adonet-md.md)] consente di eseguire una query in qualsiasi oggetto enumerabile in [!INCLUDE[vstecado](~/includes/vstecado-md.md)] usando il modello di programmazione [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)].  
   
 > [!NOTE]
->  La documentazione di [!INCLUDE[linq_adonet](~/includes/linq-adonet-md.md)] si trova nella sezione ADO.NET di .NET Framework SDK: [LINQ e ADO.NET](https://msdn.microsoft.com/library/bf0c8f93-3ff7-49f3-8aed-f2b7ac938dec).  
+>  La documentazione di [!INCLUDE[linq_adonet](~/includes/linq-adonet-md.md)] si trova nella sezione ADO.NET di .NET Framework SDK: [LINQ e ADO.NET](../../../../framework/data/adonet/linq-and-ado-net.md).  
   
  Sono disponibili tre diverse tecnologie [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] ADO.NET: [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)], [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] e [!INCLUDE[linq_entities](~/includes/linq-entities-md.md)]. [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)] offre un supporto più completo e ottimizzato per l'esecuzione di query su <xref:System.Data.DataSet>, [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] consente di eseguire query direttamente sugli schemi di database di SQL Server e [!INCLUDE[linq_entities](~/includes/linq-entities-md.md)] consente di eseguire query su [!INCLUDE[adonet_edm](~/includes/adonet-edm-md.md)].  
   
@@ -34,6 +34,7 @@ ms.locfileid: "43331984"
 ## <a name="linq-to-entities"></a>LINQ to Entities  
  Tramite [!INCLUDE[adonet_edm](~/includes/adonet-edm-md.md)], i dati relazionali vengono esposti come oggetti nell'ambiente .NET. Ciò rende il livello di oggetto una destinazione ideale per il supporto di [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], consentendo agli sviluppatori di formulare query sul database a partire dal linguaggio usato per compilare la logica di business. Questa funzionalità è nota come [!INCLUDE[linq_entities](~/includes/linq-entities-md.md)]. Per altre informazioni, vedere [LINQ to Entities](../../../../framework/data/adonet/ef/language-reference/linq-to-entities.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [LINQ e ADO.NET](https://msdn.microsoft.com/library/bf0c8f93-3ff7-49f3-8aed-f2b7ac938dec)  
- [LINQ (Language-Integrated Query) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)
+## <a name="see-also"></a>Vedere anche
+
+- [LINQ e ADO.NET](../../../../framework/data/adonet/linq-and-ado-net.md)  
+- [LINQ (Language-Integrated Query) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)

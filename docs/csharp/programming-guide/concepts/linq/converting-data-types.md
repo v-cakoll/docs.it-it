@@ -2,12 +2,12 @@
 title: Conversione di tipi di dati (C#)
 ms.date: 07/20/2015
 ms.assetid: 46e5682f-77a1-4302-8f93-a2b53c408808
-ms.openlocfilehash: 374ce15b8329c02c6b496a276a40fd9a60596e1f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 54ef612ad4e92058d9af4d96b7b3cde9732b2f9c
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33335822"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44210052"
 ---
 # <a name="converting-data-types-c"></a>Conversione di tipi di dati (C#)
 I metodi di conversione modificano il tipo degli oggetti di input.  
@@ -74,9 +74,10 @@ static void Cast()
 }  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Linq>  
- [Cenni preliminari sugli operatori di query standard (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [Clausola from](../../../../csharp/language-reference/keywords/from-clause.md)  
- [Espressioni di query LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md)  
- [Procedura: Eseguire una query su un ArrayList con LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.Linq>  
+- [Cenni preliminari sugli operatori di query standard (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+- [Clausola from](../../../../csharp/language-reference/keywords/from-clause.md)  
+- [Espressioni di query LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md)  
+- [Procedura: Eseguire una query su un ArrayList con LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - files [C#]
 - creating folders [C#]
 ms.assetid: 4582ee2d-d72d-4687-bcb9-08d336c62c25
-ms.openlocfilehash: d69885b420d28878072a70dfd2288905cf13de1f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 34919efe32730fe0db11cb881b8e07629a3094fd
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334834"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44207460"
 ---
 # <a name="how-to-create-a-file-or-folder-c-programming-guide"></a>Procedura: creare un file o una cartella (Guida per programmatori C#)
 A livello di codice è possibile creare una cartella, una sottocartella e un file nella sottocartella e quindi scrivere dati nel file.  
@@ -67,7 +67,8 @@ A livello di codice è possibile creare una cartella, una sottocartella e un fil
   
  Se l'utente non è autorizzato a creare la cartella, l'esempio genera un'istanza della classe <xref:System.UnauthorizedAccessException>.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.IO?displayProperty=nameWithType>  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [File system e Registro di sistema (Guida per programmatori C#)](../../../csharp/programming-guide/file-system/index.md)
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.IO?displayProperty=nameWithType>  
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- [File system e Registro di sistema (Guida per programmatori C#)](../../../csharp/programming-guide/file-system/index.md)

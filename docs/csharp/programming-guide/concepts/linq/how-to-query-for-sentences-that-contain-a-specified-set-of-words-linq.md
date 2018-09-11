@@ -2,12 +2,12 @@
 title: 'Procedura: eseguire una query per trovare frasi che contengono un set definito di parole (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 0724b429-4b87-4d26-a7b1-409358f3fc20
-ms.openlocfilehash: 736078ccf97ba3e61748932c3e48fb436b2c5564
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: db9c35c0dd8f31541b69877b3ec869b9f4aa9081
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319884"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43885644"
 ---
 # <a name="how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq-c"></a>Procedura: eseguire una query per trovare frasi che contengono un set definito di parole (LINQ) (C#)
 Questo esempio illustra come trovare frasi in un file di testo che contengono corrispondenze per ogni set di parole specificato. Sebbene la matrice dei termini di ricerca sia hardcoded in questo esempio, può essere anche popolata in modo dinamico durante il runtime. In questo esempio la query restituisce le frasi che contengono le parole "Historically", "data" e "integrated".  
@@ -69,5 +69,6 @@ Historically, the world of data and the world of objects have not been well inte
 ## <a name="compiling-the-code"></a>Compilazione del codice  
  Creare un progetto che usi .NET Framework versione 3.5 o successiva con un riferimento a System.Core.dll e alle direttive `using` per gli spazi dei nomi System.Linq e System.IO.  
   
-## <a name="see-also"></a>Vedere anche  
- [LINQ e stringhe (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
+## <a name="see-also"></a>Vedere anche
+
+- [LINQ e stringhe (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)

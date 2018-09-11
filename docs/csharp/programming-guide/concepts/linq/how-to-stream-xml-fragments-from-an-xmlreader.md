@@ -2,12 +2,12 @@
 title: 'Procedura: Flusso di frammenti XML da un XmlReader (C#)'
 ms.date: 07/20/2015
 ms.assetid: 4a8f0e45-768a-42e2-bc5f-68bdf0e0a726
-ms.openlocfilehash: 8e2baed3ca32ea4273993fe5bed43fef768204ce
-ms.sourcegitcommit: f6343b070f3c66877338a05c8bfb0be9985255e2
+ms.openlocfilehash: cb3e9fbc9567593cdc77ae116273f4c0fede4af3
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39221010"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44195803"
 ---
 # <a name="how-to-stream-xml-fragments-from-an-xmlreader-c"></a>Procedura: Flusso di frammenti XML da un XmlReader (C#)
 Quando è necessario elaborare file XML di grandi dimensioni, potrebbe risultare impossibile caricare in memoria l'intero albero XML. In questo argomento viene illustrato come generare il flusso di frammenti tramite <xref:System.Xml.XmlReader>.  
@@ -82,5 +82,6 @@ ccc
   
  In questo esempio il documento di origine è molto piccolo. Tuttavia, anche contenesse milioni di elementi `Child`, il footprint di memoria di questo esempio sarebbe comunque ridotto.  
   
-## <a name="see-also"></a>Vedere anche  
- [Analisi di codice XML (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Analisi di codice XML (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)

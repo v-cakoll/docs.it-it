@@ -2,12 +2,12 @@
 title: 'Procedura: Trovare nodi di pari livello (XPath-LINQ to XML)(C#)'
 ms.date: 07/20/2015
 ms.assetid: e2c73d10-a8ca-4e11-b5aa-d055de285874
-ms.openlocfilehash: a448be9d86f9f2e2f85d45f9bc1f019b3f72305c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e10b23c311e4e7debf228c01c898f3582e2ac8d4
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33324161"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43865358"
 ---
 # <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-c"></a>Procedura: Trovare nodi di pari livello (XPath-LINQ to XML)(C#)
 Può essere necessario trovare tutti i gli elementi di pari livello di un nodo che hanno un nome specifico. La raccolta risultante può includere il nodo di contesto, se anche quest'ultimo ha il nome specifico.  
@@ -74,5 +74,6 @@ Results are identical
 </Book>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [LINQ to XML per gli utenti di XPath (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a>Vedere anche
+
+- [LINQ to XML per gli utenti di XPath (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

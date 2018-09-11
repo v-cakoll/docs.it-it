@@ -2,12 +2,12 @@
 title: 'Procedura: Estendere la procedura dettagliata asincrona usando Task.WhenAll (C#)'
 ms.date: 07/20/2015
 ms.assetid: f6927ef2-dc6c-43f8-bc82-bbeac42de423
-ms.openlocfilehash: b7df5c1f1ffbcc8c60fd6ed0596088f0842ef9ea
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 241bd6baf0c1133ba7603da433a7cdf8d36748c0
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43482814"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44260243"
 ---
 # <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-c"></a>Procedura: Estendere la procedura dettagliata asincrona usando Task.WhenAll (C#)
 È possibile migliorare le prestazioni della soluzione asincrona in [Procedura dettagliata: accesso al Web con Async e Await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) usando il metodo <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>. Questo metodo mette in attesa più operazioni asincrone, rappresentate come una raccolta di attività.  
@@ -61,7 +61,7 @@ ms.locfileid: "43482814"
     //}  
     ```  
   
-3.  Creare una raccolta di attività. Il codice seguente definisce una [query](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d) che, quando eseguita dal metodo <xref:System.Linq.Enumerable.ToArray%2A>, crea una raccolta di attività che scaricano il contenuto di ogni sito Web. Le attività vengono avviate quando viene valutata la query.  
+3.  Creare una raccolta di attività. Il codice seguente definisce una [query](../../../../csharp/programming-guide/concepts/linq/index.md) che, quando eseguita dal metodo <xref:System.Linq.Enumerable.ToArray%2A>, crea una raccolta di attività che scaricano il contenuto di ogni sito Web. Le attività vengono avviate quando viene valutata la query.  
   
      Aggiungere il codice seguente al metodo `SumPageSizesAsync` dopo la dichiarazione di `urlList`.  
   
@@ -136,7 +136,7 @@ ms.locfileid: "43482814"
     //}  
     ```  
   
-3.  Definire una [query](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d) che, quando eseguita dal metodo <xref:System.Linq.Enumerable.ToArray%2A>, crea una raccolta di attività che scaricano il contenuto di ogni sito Web. Le attività vengono avviate quando viene valutata la query.  
+3.  Definire una [query](../../../../csharp/programming-guide/concepts/linq/index.md) che, quando eseguita dal metodo <xref:System.Linq.Enumerable.ToArray%2A>, crea una raccolta di attività che scaricano il contenuto di ogni sito Web. Le attività vengono avviate quando viene valutata la query.  
   
      Aggiungere il codice seguente al metodo `SumPageSizesAsync` dopo la dichiarazione di `client` e `urlList`.  
   
@@ -435,6 +435,7 @@ namespace AsyncExampleWPF_HttpClient_WhenAll
 }  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>  
- [Procedura dettagliata: Accesso al Web con Async e Await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>  
+- [Procedura dettagliata: Accesso al Web con Async e Await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)

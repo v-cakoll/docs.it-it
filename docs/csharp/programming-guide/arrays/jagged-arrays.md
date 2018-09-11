@@ -5,14 +5,15 @@ helpviewer_keywords:
 - jagged arrays [C#]
 - arrays [C#], jagged
 ms.assetid: 537c65a6-0e0a-4a00-a2b8-086f38519c70
-ms.openlocfilehash: c1825e1a731c40a5945060f8085bd612b5d62008
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2e4988439000712f4d1bd9b5abe412e7fd5d43eb
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297368"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44261670"
 ---
 # <a name="jagged-arrays-c-programming-guide"></a>Matrici irregolari (Guida per programmatori C#)
+
 Una matrice di matrici è una matrice i cui elementi sono costituiti da matrici. Gli elementi di una matrice di matrici possono presentare dimensioni e misure diverse. Una matrice di matrici è chiamata talvolta "matrice irregolare". Gli esempi seguenti mostrano come dichiarare, inizializzare e accedere a matrici di matrici.  
   
  Di seguito è riportata la dichiarazione di una matrice unidimensionale a tre elementi, ognuno dei quali è una matrice unidimensionale di Integer:  
@@ -57,14 +58,16 @@ Una matrice di matrici è una matrice i cui elementi sono costituiti da matrici.
   
  restituisce il valore 3.  
   
-## <a name="example"></a>Esempio  
+## <a name="example"></a>Esempio
+
  In questo esempio viene compilata una matrice i cui elementi sono costituiti da matrici. Ogni elemento della matrice ha una dimensione diversa.  
   
  [!code-csharp[csProgGuideArrays#18](../../../csharp/programming-guide/arrays/codesnippet/CSharp/jagged-arrays_10.cs)]  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Array>  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [Array](../../../csharp/programming-guide/arrays/index.md)  
- [Matrici unidimensionali](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)  
- [Matrici multidimensionali](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.Array>  
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- [Array](../../../csharp/programming-guide/arrays/index.md)  
+- [Matrici unidimensionali](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)  
+- [Matrici multidimensionali](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)

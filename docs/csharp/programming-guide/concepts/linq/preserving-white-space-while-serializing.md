@@ -2,12 +2,12 @@
 title: Conservazione di spazi vuoti durante la serializzazione
 ms.date: 07/20/2015
 ms.assetid: 0c4f8b98-483b-4cf8-86be-fa146eef90dc
-ms.openlocfilehash: 48e654c2b7992544cdc2c67dfc5a5136d6a9bb33
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7fd0a38d2a9ed8c4712b8e9a03a24a23b408f38a
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329881"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44267089"
 ---
 # <a name="preserving-white-space-while-serializing"></a>Conservazione di spazi vuoti durante la serializzazione
 In questo argomento viene descritto come controllare lo spazio vuoto durante la serializzazione di un albero XML.  
@@ -31,5 +31,6 @@ In questo argomento viene descritto come controllare lo spazio vuoto durante la 
   
  Se il metodo accetta <xref:System.Xml.Linq.SaveOptions> come argomento, è possibile specificare di non formattare il codice XML serializzato, ovvero il metodo non ne imposterà il rientro. In questo caso tutto lo spazio vuoto nella struttura ad albero XML verrà mantenuto.  
   
-## <a name="see-also"></a>Vedere anche  
- [Serializzazione di alberi XML (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-xml-trees.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Serializzazione di alberi XML (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-xml-trees.md)

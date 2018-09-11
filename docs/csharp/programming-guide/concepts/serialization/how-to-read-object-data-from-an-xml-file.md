@@ -2,12 +2,12 @@
 title: 'Procedura: Leggere dati oggetto in un file XML (C#)'
 ms.date: 07/20/2015
 ms.assetid: 6ad60d96-a4d9-48e6-a8b0-d7f6f803cafa
-ms.openlocfilehash: 59110a5bd0fe738239c0ca8b177a8c775db99ccf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7c3bad56c6a0bee51262586aea4ce97ff0491f24
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33336154"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44083936"
 ---
 # <a name="how-to-read-object-data-from-an-xml-file-c"></a>Procedura: Leggere dati oggetto in un file XML (C#)
 Questo esempio legge i dati oggetto scritti in precedenza in un file XML usando la classe <xref:System.Xml.Serialization.XmlSerializer>.  
@@ -61,8 +61,9 @@ public void ReadXML()
 ## <a name="net-framework-security"></a>Sicurezza di .NET Framework  
  Verificare sempre gli input e non deserializzare mai i dati proveniente da un'origine non attendibile. L'oggetto ricreato viene eseguito in un computer locale con le autorizzazioni del codice che ha eseguito la deserializzazione. Prima di usare i dati nell'applicazione verificare tutti gli input.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.IO.StreamWriter>  
- [Procedura: Scrivere dati oggetto in un file XML (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)  
- [Serializzazione (C#)](../../../../csharp/programming-guide/concepts/serialization/index.md)  
- [Guida per programmatori C#](../../../../csharp/programming-guide/index.md)
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.IO.StreamWriter>  
+- [Procedura: Scrivere dati oggetto in un file XML (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)  
+- [Serializzazione (C#)](../../../../csharp/programming-guide/concepts/serialization/index.md)  
+- [Guida per programmatori C#](../../../../csharp/programming-guide/index.md)

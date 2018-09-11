@@ -7,12 +7,12 @@ helpviewer_keywords:
 - multiplication operator (*) [C#]
 - '* operator [C#]'
 ms.assetid: abd9a5f0-9b24-431e-971a-09ee1c45c50e
-ms.openlocfilehash: 6c5d4de587b67e5ade158c163a87e8dea6bece5a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 873cc1dc0d81425117f1784353acf08b35158133
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33275841"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44225360"
 ---
 # <a name="-operator-c-reference"></a>Operatore * (Riferimenti per C#)
 L'operatore di moltiplicazione (`*`) calcola il prodotto degli operandi. Tutti i tipi numerici hanno operatori di moltiplicazione predefiniti.  
@@ -25,13 +25,14 @@ L'operatore di moltiplicazione (`*`) calcola il prodotto degli operandi. Tutti i
  I tipi definiti dall'utente possono eseguire l'overload dell'operatore `*` (vedere [operator](../../../csharp/language-reference/keywords/operator.md)). Quando viene eseguito l'overload di un operatore binario, viene anche eseguito in modo implicito l'overload dell'operatore di assegnazione corrispondente, se presente.  
   
 ## <a name="example"></a>Esempio  
- [!code-csharp[csRefOperators#50](../../../csharp/language-reference/operators/codesnippet/CSharp/multiplication-operator_1.cs)]  
+ [!code-csharp-interactive[csRefOperators#50](../../../csharp/language-reference/operators/codesnippet/CSharp/multiplication-operator_1.cs)]  
   
 ## <a name="example"></a>Esempio  
  [!code-csharp[csRefOperators#51](../../../csharp/language-reference/operators/codesnippet/CSharp/multiplication-operator_2.cs)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [Codice unsafe e puntatori](../../../csharp/programming-guide/unsafe-code-pointers/index.md)  
- [Operatori C#](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- [Codice unsafe e puntatori](../../../csharp/programming-guide/unsafe-code-pointers/index.md)  
+- [Operatori C#](../../../csharp/language-reference/operators/index.md)

@@ -4,12 +4,12 @@ ms.date: 08/02/2017
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-ms.openlocfilehash: 51a7d821b5705c0ddda96a34663ba0288e0f1da9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8ac0d70458d7c3762ae9dc5fc90058f0caafc4ab
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339956"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44184928"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Valori restituiti da Main() (Guida per programmatori C#)
 
@@ -93,8 +93,8 @@ Quando il punto di ingresso dell'applicazione restituisce `Task` o `Task<int>` i
 >Se negli esempi si fosse usato il modificatore `async` sul metodo `Main` il compilatore avrebbe generato lo stesso codice.
 
 ## <a name="see-also"></a>Vedere anche
-[Guida per programmatori C#](../../programming-guide/index.md)
-[Riferimenti per C#](../index.md)
-[Main() e argomenti della riga di comando](index.md)
-[Procedura: Visualizzare gli argomenti della riga di comando](../../programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
-[Procedura: Accedere agli argomenti della riga di comando usando foreach](../../programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)
+- [Guida per programmatori C#](../../programming-guide/index.md)
+- [Riferimenti per C#](../index.md)
+- [Main() e argomenti della riga di comando](index.md)
+- [Procedura: Visualizzare gli argomenti della riga di comando](../../programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
+- [Procedura: Accedere agli argomenti della riga di comando usando foreach](../../programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)

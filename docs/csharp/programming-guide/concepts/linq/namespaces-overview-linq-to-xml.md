@@ -2,12 +2,12 @@
 title: Panoramica degli spazi dei nomi (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 16283322-8238-4918-ab11-802ac6748eb7
-ms.openlocfilehash: 03451f50605adf6de0d43f19d220aaeed382f13c
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 4d422d9f72eb3297cffda72c441d6370d519f450
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "42999225"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44266654"
 ---
 # <a name="namespaces-overview-linq-to-xml"></a>Panoramica degli spazi dei nomi (LINQ to XML)
 In questo argomento vengono presentati gli spazi dei nomi, la classe <xref:System.Xml.Linq.XName> e la classe <xref:System.Xml.Linq.XNamespace>.  
@@ -23,5 +23,6 @@ In questo argomento vengono presentati gli spazi dei nomi, la classe <xref:Syste
   
  Per altre informazioni, vedere <xref:System.Xml.Linq.XNamespace> e <xref:System.Xml.Linq.XName>.  
   
-## <a name="see-also"></a>Vedere anche  
- [Uso degli spazi dei nomi XML (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Uso degli spazi dei nomi XML (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)

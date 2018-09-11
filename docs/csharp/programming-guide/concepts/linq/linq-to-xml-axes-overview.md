@@ -2,17 +2,17 @@
 title: Panoramica degli assi LINQ to XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 516792fb-461d-40a8-8a50-9993a51258fc
-ms.openlocfilehash: 9b771e0157d1fcfbbb4643d24ccdbf096787f08b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 1eabd6a171637b85a5d22afa209e6c80dbbb9f4c
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43486857"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44211710"
 ---
 # <a name="linq-to-xml-axes-overview-c"></a>Panoramica degli assi LINQ to XML (C#)
 Dopo aver creato un albero XML o aver caricato un documento XML in un albero XML, è possibile eseguire query su di essa per cercare elementi e attributi e recuperarne i valori. Per recuperare le raccolte vengono usati i *metodi dell'asse*, detti anche *assi*. Alcuni degli assi sono metodi delle classi <xref:System.Xml.Linq.XElement> e <xref:System.Xml.Linq.XDocument> che restituiscono raccolte <xref:System.Collections.Generic.IEnumerable%601>. Alcuni degli assi sono metodi di estensione della classe <xref:System.Xml.Linq.Extensions>. Gli assi implementati come metodi di estensione operano sulle raccolte e restituiscono raccolte.  
   
- Come descritto in [Panoramica della classe XElement](https://msdn.microsoft.com/library/d35180fe-7016-4895-9bfc-ba1e3f7875ec), un oggetto <xref:System.Xml.Linq.XElement> rappresenta il nodo di un unico elemento. Il contenuto di un elemento può essere semplice o complesso (talvolta definito contenuto strutturato). Un elemento semplice può essere vuoto o può contenere un valore. Se il nodo include contenuto strutturato, è possibile usare i diversi metodi dell'asse per recuperare enumerazioni di elementi discendente. I metodi dell'asse usati più di frequente sono <xref:System.Xml.Linq.XContainer.Elements%2A> e <xref:System.Xml.Linq.XContainer.Descendants%2A>.  
+ Come descritto in [Panoramica della classe XElement](../../../../csharp/programming-guide/concepts/linq/xelement-class-overview.md), un oggetto <xref:System.Xml.Linq.XElement> rappresenta il nodo di un unico elemento. Il contenuto di un elemento può essere semplice o complesso (talvolta definito contenuto strutturato). Un elemento semplice può essere vuoto o può contenere un valore. Se il nodo include contenuto strutturato, è possibile usare i diversi metodi dell'asse per recuperare enumerazioni di elementi discendente. I metodi dell'asse usati più di frequente sono <xref:System.Xml.Linq.XContainer.Elements%2A> e <xref:System.Xml.Linq.XContainer.Descendants%2A>.  
   
  Oltre ai metodi dell'asse, che restituiscono raccolte, sono disponibili altri due metodi usati frequentemente nelle query [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Il metodo <xref:System.Xml.Linq.XContainer.Element%2A> restituisce un singolo oggetto <xref:System.Xml.Linq.XElement>. Il metodo <xref:System.Xml.Linq.XElement.Attribute%2A> restituisce un singolo oggetto <xref:System.Xml.Linq.XAttribute>.  
   
@@ -54,5 +54,6 @@ Dopo aver creato un albero XML o aver caricato un documento XML in un albero XML
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType>|Restituisce l'oggetto <xref:System.Xml.Linq.XAttribute> per il quale è stato specificato <xref:System.Xml.Linq.XName>.|  
   
-## <a name="see-also"></a>Vedere anche  
- [Assi LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Assi LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)

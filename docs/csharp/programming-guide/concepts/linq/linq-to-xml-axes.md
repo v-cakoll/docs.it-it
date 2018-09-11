@@ -2,12 +2,12 @@
 title: Assi LINQ to XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 3f7d54ff-b608-43a1-9e2d-e70668b72df8
-ms.openlocfilehash: d12d35a6f9b02056946ba201a7bd5a961f64ba36
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 6a27adb1c7e1dcfefda13a355700202ccda3ffab
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43408655"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44200841"
 ---
 # <a name="linq-to-xml-axes-c"></a>Assi LINQ to XML (C#)
 Dopo aver creato un albero XML o aver caricato un documento XML in un albero XML, è possibile eseguire query su di essa per cercare elementi e attributi e recuperarne i valori.  
@@ -29,6 +29,7 @@ Dopo aver creato un albero XML o aver caricato un documento XML in un albero XML
 |[Procedura: Recuperare il valore di un attributo (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-retrieve-the-value-of-an-attribute-linq-to-xml.md)|Viene spiegato come ottenere i valori di attributi.|  
 |[Procedura: Recuperare il valore superficiale di un elemento](../../../../csharp/programming-guide/concepts/linq/how-to-retrieve-the-shallow-value-of-an-element.md)|Viene illustrato come recuperare il valore superficiale di un elemento|  
   
-## <a name="see-also"></a>Vedere anche  
- [Metodi di estensione](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)  
- [Guida per programmatori (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Metodi di estensione](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)  
+- [Guida per programmatori (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

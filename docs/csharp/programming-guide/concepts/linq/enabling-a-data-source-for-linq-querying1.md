@@ -2,12 +2,12 @@
 title: Abilitazione di un'origine dati per l'esecuzione di query LINQ1
 ms.date: 07/20/2015
 ms.assetid: d2ef04a5-31a6-45cb-af9a-a5ce7732662c
-ms.openlocfilehash: 5b67995f40bc0cb703003aa80b511268f21da8b8
-ms.sourcegitcommit: f6343b070f3c66877338a05c8bfb0be9985255e2
+ms.openlocfilehash: 204d2d6104a065f1d1cf9e731dc01f400218f91b
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39220997"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44253182"
 ---
 # <a name="enabling-a-data-source-for-linq-querying"></a>Abilitazione di un'origine dati per l'esecuzione di query LINQ
 Esistono diversi modi per estendere [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] in modo da consentire l'esecuzione di una query su un'origine dati nel modello [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. L'origine dati potrebbe, ad esempio, essere una struttura ad albero dei dati, un servizio Web, un file system o un database. Il modello [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] consente ai client di eseguire una query su un'origine dati per la quale è attivata l'esecuzione di query[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], poiché la sintassi e il modello della query non vengono modificati. Di seguito vengono riportati i modi in cui è possibile estendere [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] a queste origini dati:  
@@ -39,9 +39,10 @@ Esistono diversi modi per estendere [!INCLUDE[vbteclinq](~/includes/vbteclinq-md
   
  Un provider `IQueryable` complesso, ad esempio il provider [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], può convertire le query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] complete in un linguaggio di query espressivo, ad esempio SQL. Un provider complesso è più generale di un provider meno complesso, poiché può gestire un'ampia gamma di domande nella query. Ha anche un sistema di tipi aperto e pertanto deve contenere un'infrastruttura completa per eseguire il mapping dei tipi definiti dall'utente. Lo sviluppo di un provider complesso è molto impegnativo.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Linq.IQueryable%601>  
- <xref:System.Collections.Generic.IEnumerable%601>  
- <xref:System.Linq.Enumerable>  
- [Cenni preliminari sugli operatori di query standard (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.Linq.IQueryable%601>  
+- <xref:System.Collections.Generic.IEnumerable%601>  
+- <xref:System.Linq.Enumerable>  
+- [Cenni preliminari sugli operatori di query standard (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)

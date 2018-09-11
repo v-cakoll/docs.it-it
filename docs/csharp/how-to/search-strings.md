@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strings [C#], searching with String methods
 - strings [C#], searching with regular expressions
 ms.assetid: fb1d9a6d-598d-4a35-bd5f-b86012edcb2b
-ms.openlocfilehash: d1e132093cc59c7b41a3f7d5b522fca2e224f779
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: b6d5ab1c4588e72bf49c5ca2f859b9996c0d3834
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961219"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43857154"
 ---
 # <a name="how-to-search-strings"></a>Procedura: Cercare stringhe
 
@@ -68,7 +68,6 @@ Il codice seguente usa le espressioni regolari per convalidare il formato di ogn
 | \d{4}    | corrisponde esattamente a 4 caratteri numerici  |
 | $        | corrisponde alla fine della stringa       |
 
-
 [!code-csharp-interactive[csProgGuideStrings#4](../../../samples/snippets/csharp/how-to/strings/SearchStrings.cs#4)]
 
 Questo singolo criterio di ricerca corrisponde a molte stringhe valide. Le espressioni regolari sono preferibili per eseguire ricerche o convalide in base a un modello, anziché a una singola stringa di testo.
@@ -77,10 +76,10 @@ Questo singolo criterio di ricerca corrisponde a molte stringhe valide. Le espre
 
 ## <a name="see-also"></a>Vedere anche  
 
- [Guida per programmatori C#](../programming-guide/index.md)  
- [Stringhe](../programming-guide/strings/index.md)  
- [LINQ e stringhe](../programming-guide/concepts/linq/linq-and-strings.md)   
- <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>     
- [Espressioni regolari di .NET Framework](../../standard/base-types/regular-expressions.md)   
- [Linguaggio di espressioni regolari - Riferimento rapido](../../standard/base-types/regular-expression-language-quick-reference.md)   
- [Procedure consigliate per l'uso delle stringhe in .NET](../../standard/base-types/best-practices-strings.md)  
+- [Guida per programmatori C#](../programming-guide/index.md)  
+- [Stringhe](../programming-guide/strings/index.md)  
+- [LINQ e stringhe](../programming-guide/concepts/linq/linq-and-strings.md)
+- <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>
+- [Espressioni regolari di .NET Framework](../../standard/base-types/regular-expressions.md)
+- [Linguaggio di espressioni regolari - Riferimento rapido](../../standard/base-types/regular-expression-language-quick-reference.md)
+- [Procedure consigliate per l'uso delle stringhe in .NET](../../standard/base-types/best-practices-strings.md)  

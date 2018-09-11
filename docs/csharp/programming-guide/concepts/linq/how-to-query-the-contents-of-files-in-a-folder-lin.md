@@ -2,12 +2,12 @@
 title: 'Procedura: Eseguire una query sul contenuto dei file di testo in una cartella (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: f5b4dce7-1a34-4eb4-9bf1-60d5bdda264c
-ms.openlocfilehash: 4e421e1bdb5008816989c26b725faaf2b4ae8caf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dedb3b742805daa23151c61e89dd0835f730dd9c
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319524"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44204539"
 ---
 # <a name="how-to-query-the-contents-of-text-files-in-a-folder-linq-c"></a>Procedura: Eseguire una query sul contenuto dei file di testo in una cartella (LINQ) (C#)
 Questo esempio illustra come eseguire una query su tutti i file in un albero di directory specificato, aprire ogni file e controllarne il contenuto. Questo tipo di tecnica può essere usato per creare indici o indici inversi del contenuto di un albero di directory. In questo esempio viene eseguita una semplice ricerca di una stringa. Tuttavia, con un'espressione regolare è possibile eseguire tipi di criteri di ricerca più complessi. Per altre informazioni, vedere [Procedura: Combinare query LINQ con espressioni regolari (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md).  
@@ -73,6 +73,7 @@ class QueryContents
 ## <a name="compiling-the-code"></a>Compilazione del codice  
  Creare un progetto che usi .NET Framework versione 3.5 o successiva con un riferimento a System.Core.dll e alle direttive `using` per gli spazi dei nomi System.Linq e System.IO.  
   
-## <a name="see-also"></a>Vedere anche  
- [Directory di file e LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)  
- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Directory di file e LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)  
+- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
