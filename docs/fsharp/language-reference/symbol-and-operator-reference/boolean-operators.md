@@ -3,30 +3,30 @@ title: Operatori booleani (F#)
 description: 'Scopri gli operatori booleani che sono disponibili nel linguaggio di programmazione F #.'
 ms.date: 05/16/2016
 ms.openlocfilehash: faa181090efa7c4064a30b42d83afa4888e98b82
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44172736"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44272319"
 ---
-# <a name="boolean-operators"></a><span data-ttu-id="926c2-103">Operatori booleani</span><span class="sxs-lookup"><span data-stu-id="926c2-103">Boolean Operators</span></span>
+# <a name="boolean-operators"></a><span data-ttu-id="8db1a-103">Operatori booleani</span><span class="sxs-lookup"><span data-stu-id="8db1a-103">Boolean Operators</span></span>
 
-<span data-ttu-id="926c2-104">In questo argomento viene descritto il supporto per gli operatori booleani nel linguaggio F #.</span><span class="sxs-lookup"><span data-stu-id="926c2-104">This topic describes the support for Boolean operators in the F# language.</span></span>
+<span data-ttu-id="8db1a-104">In questo argomento viene descritto il supporto per gli operatori booleani nel linguaggio F #.</span><span class="sxs-lookup"><span data-stu-id="8db1a-104">This topic describes the support for Boolean operators in the F# language.</span></span>
 
-## <a name="summary-of-boolean-operators"></a><span data-ttu-id="926c2-105">Riepilogo degli operatori booleani</span><span class="sxs-lookup"><span data-stu-id="926c2-105">Summary of Boolean Operators</span></span>
+## <a name="summary-of-boolean-operators"></a><span data-ttu-id="8db1a-105">Riepilogo degli operatori booleani</span><span class="sxs-lookup"><span data-stu-id="8db1a-105">Summary of Boolean Operators</span></span>
 
-<span data-ttu-id="926c2-106">Nella tabella seguente sono riepilogati gli operatori booleani che sono disponibili nel linguaggio F #.</span><span class="sxs-lookup"><span data-stu-id="926c2-106">The following table summarizes the Boolean operators that are available in the F# language.</span></span> <span data-ttu-id="926c2-107">L'unico tipo supportato da questi operatori è il `bool` tipo.</span><span class="sxs-lookup"><span data-stu-id="926c2-107">The only type supported by these operators is the `bool` type.</span></span>
+<span data-ttu-id="8db1a-106">Nella tabella seguente sono riepilogati gli operatori booleani che sono disponibili nel linguaggio F #.</span><span class="sxs-lookup"><span data-stu-id="8db1a-106">The following table summarizes the Boolean operators that are available in the F# language.</span></span> <span data-ttu-id="8db1a-107">L'unico tipo supportato da questi operatori è il `bool` tipo.</span><span class="sxs-lookup"><span data-stu-id="8db1a-107">The only type supported by these operators is the `bool` type.</span></span>
 
-|<span data-ttu-id="926c2-108">Operatore</span><span class="sxs-lookup"><span data-stu-id="926c2-108">Operator</span></span>|<span data-ttu-id="926c2-109">Descrizione</span><span class="sxs-lookup"><span data-stu-id="926c2-109">Description</span></span>|
+|<span data-ttu-id="8db1a-108">Operatore</span><span class="sxs-lookup"><span data-stu-id="8db1a-108">Operator</span></span>|<span data-ttu-id="8db1a-109">Descrizione</span><span class="sxs-lookup"><span data-stu-id="8db1a-109">Description</span></span>|
 |--------|-----------|
-|`not`|<span data-ttu-id="926c2-110">Negazione booleana</span><span class="sxs-lookup"><span data-stu-id="926c2-110">Boolean negation</span></span>|
-|<code>&#124;&#124;</code>|<span data-ttu-id="926c2-111">OR booleano</span><span class="sxs-lookup"><span data-stu-id="926c2-111">Boolean OR</span></span>|
-|`&&`|<span data-ttu-id="926c2-112">AND booleano</span><span class="sxs-lookup"><span data-stu-id="926c2-112">Boolean AND</span></span>|
+|`not`|<span data-ttu-id="8db1a-110">Negazione booleana</span><span class="sxs-lookup"><span data-stu-id="8db1a-110">Boolean negation</span></span>|
+|<code>&#124;&#124;</code>|<span data-ttu-id="8db1a-111">OR booleano</span><span class="sxs-lookup"><span data-stu-id="8db1a-111">Boolean OR</span></span>|
+|`&&`|<span data-ttu-id="8db1a-112">AND booleano</span><span class="sxs-lookup"><span data-stu-id="8db1a-112">Boolean AND</span></span>|
 
-<span data-ttu-id="926c2-113">Il booleani AND e OR operatori seguire *valutazione di corto circuito*, vale a dire, tali operatori valutano l'espressione a destra dell'operatore solo quando è necessario determinare il risultato complessivo dell'espressione.</span><span class="sxs-lookup"><span data-stu-id="926c2-113">The Boolean AND and OR operators perform *short-circuit evaluation*, that is, they evaluate the expression on the right of the operator only when it is necessary to determine the overall result of the expression.</span></span> <span data-ttu-id="926c2-114">La seconda espressione del `&&` operatore viene valutato solo se la prima espressione viene valutata `true`; la seconda espressione delle `||` operatore viene valutato solo se la prima espressione viene valutata `false`.</span><span class="sxs-lookup"><span data-stu-id="926c2-114">The second expression of the `&&` operator is evaluated only if the first expression evaluates to `true`; the second expression of the `||` operator is evaluated only if the first expression evaluates to `false`.</span></span>
+<span data-ttu-id="8db1a-113">Il booleani AND e OR operatori seguire *valutazione di corto circuito*, vale a dire, tali operatori valutano l'espressione a destra dell'operatore solo quando è necessario determinare il risultato complessivo dell'espressione.</span><span class="sxs-lookup"><span data-stu-id="8db1a-113">The Boolean AND and OR operators perform *short-circuit evaluation*, that is, they evaluate the expression on the right of the operator only when it is necessary to determine the overall result of the expression.</span></span> <span data-ttu-id="8db1a-114">La seconda espressione del `&&` operatore viene valutato solo se la prima espressione viene valutata `true`; la seconda espressione delle `||` operatore viene valutato solo se la prima espressione viene valutata `false`.</span><span class="sxs-lookup"><span data-stu-id="8db1a-114">The second expression of the `&&` operator is evaluated only if the first expression evaluates to `true`; the second expression of the `||` operator is evaluated only if the first expression evaluates to `false`.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="926c2-115">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="926c2-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8db1a-115">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="8db1a-115">See also</span></span>
 
-- [<span data-ttu-id="926c2-116">Operatori bit per bit</span><span class="sxs-lookup"><span data-stu-id="926c2-116">Bitwise Operators</span></span>](bitwise-operators.md)
-- [<span data-ttu-id="926c2-117">Operatori aritmetici</span><span class="sxs-lookup"><span data-stu-id="926c2-117">Arithmetic Operators</span></span>](arithmetic-operators.md)
-- [<span data-ttu-id="926c2-118">Riferimenti per simboli e operatori</span><span class="sxs-lookup"><span data-stu-id="926c2-118">Symbol and Operator Reference</span></span>](index.md)
+- [<span data-ttu-id="8db1a-116">Operatori bit per bit</span><span class="sxs-lookup"><span data-stu-id="8db1a-116">Bitwise Operators</span></span>](bitwise-operators.md)
+- [<span data-ttu-id="8db1a-117">Operatori aritmetici</span><span class="sxs-lookup"><span data-stu-id="8db1a-117">Arithmetic Operators</span></span>](arithmetic-operators.md)
+- [<span data-ttu-id="8db1a-118">Riferimenti per simboli e operatori</span><span class="sxs-lookup"><span data-stu-id="8db1a-118">Symbol and Operator Reference</span></span>](index.md)
