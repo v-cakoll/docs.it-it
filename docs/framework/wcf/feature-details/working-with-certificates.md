@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: 938998a2316af28071e54e909fa60b5edbda0f35
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 147de1cdde79ee29f8f316399ba2e41f93921073
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44198933"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44361602"
 ---
 # <a name="working-with-certificates"></a>Utilizzo dei certificati
 Per programmare le funzionalità di sicurezza di Windows Communication Foundation (WCF) in genere si usano i certificati digitali X.509. In particolare, questi certificati vengono usati per autenticare client e server, nonché per crittografare e firmare digitalmente i messaggi. Questo argomento fornisce una breve descrizione delle funzionalità relative ai certificati digitali X.509 e illustra come usarle in WCF. Questo argomento contiene inoltre i collegamenti agli argomenti che trattano questi concetti in modo più dettagliato o che descrivono come eseguire attività comuni tramite l'uso di WCF e dei certificati.  
@@ -55,7 +55,7 @@ Per programmare le funzionalità di sicurezza di Windows Communication Foundatio
  Analogamente alle cartelle di un computer, anche gli archivi vengono protetti tramite gli elenchi di controllo di accesso (ACL, Access Control List). Quando si crea un servizio ospitato in Internet Information Services (IIS), il processo [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] è in esecuzione nell'account [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Tale account deve essere autorizzato ad accedere all'archivio contenente i certificati utilizzati da un servizio. Ogni archivio principale viene protetto mediante un ACL predefinito, che tuttavia può essere modificato. Se si crea un ruolo a parte per accedere a un archivio, a tale ruolo è necessario concedere l'autorizzazione di accesso. Per informazioni su come modificare l'elenco di accesso tramite lo strumento WinHttpCertConfig.exe, vedere [Procedura: creare certificati temporanei da usare durante lo sviluppo](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md). Per altre informazioni sull'uso di certificati client in IIS, vedere la pagina relativa alla [procedura per chiamare un servizio Web tramite un certificato client per l'autenticazione in un'applicazione Web ASP.NET](https://go.microsoft.com/fwlink/?LinkId=88914).  
   
 ## <a name="chain-trust-and-certificate-authorities"></a>Catena di trust e autorità di certificazione  
- I certificati vengono creati in una gerarchia dove ogni singolo certificato è collegato alla CA che ha emesso il certificato. Questo collegamento è per il certificato della CA. Il certificato della CA collega quindi la CA che ha emesso il certificato della CA originale. Questo processo si ripete fino a raggiungere il certificato della CA radice. Il certificato della CA radice è considerato naturalmente attendibile.  
+ I certificati vengono creati in una gerarchia dove ogni singolo certificato è collegato alla CA che ha emesso il certificato. Questo collegamento è per il certificato della CA. L'autorità di certificazione del certificato quindi i collegamenti all'autorità di certificazione che ha emesso il certificato della CA originale. Questo processo si ripete fino a raggiungere il certificato della CA radice. Il certificato della CA radice è considerato naturalmente attendibile.  
   
  I certificati digitali vengono usati per autenticare un'entità basandosi su una *catena di trust*. Lo snap-in MMC consente di visualizzare la catena di qualsiasi certificato. A tale scopo, fare doppio clic sul certificato desiderato e quindi sulla scheda **Percorso certificato**. Per altre informazioni sull'importazione di catene di certificati per un'autorità di certificazione, vedere [Procedura: specificare la catena di certificati di autorità di certificazione usata per verificare le firme](../../../../docs/framework/wcf/feature-details/specify-the-certificate-authority-chain-verify-signatures-wcf.md).  
   

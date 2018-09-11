@@ -3,11 +3,11 @@ title: 'Eccezioni: espressione try...finally (F#)'
 description: "Informazioni su come F # ' try... finally' espressione consente di eseguire il codice di pulitura, anche se un blocco di codice genera un'eccezione."
 ms.date: 05/16/2016
 ms.openlocfilehash: 546a6b0619de6f51044600dc1ead73c6d5211299
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44275145"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44369082"
 ---
 # <a name="exceptions-the-tryfinally-expression"></a>Eccezioni: espressione try...finally
 

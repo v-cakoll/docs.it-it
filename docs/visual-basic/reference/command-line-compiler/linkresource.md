@@ -9,12 +9,12 @@ helpviewer_keywords:
 - linkres compiler option [Visual Basic]
 - -linkres compiler option [Visual Basic]
 ms.assetid: cf4dcad8-17b7-404c-9184-29358aa05b15
-ms.openlocfilehash: 4f4b3db768b5466f8912b66a0a4709d0f773c1f3
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 97e0ccd46f413cc05b659731436bb141ee178419
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44047191"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44369030"
 ---
 # <a name="-linkresource-visual-basic"></a>-linkresource (Visual Basic)
 Crea un collegamento a una risorsa gestita.  
@@ -39,7 +39,7 @@ Crea un collegamento a una risorsa gestita.
   
  Il `-linkresource` necessaria un'opzione il `-target` diversa da `-target:module`.  
   
- Se `filename` è un [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] file di risorse creato, ad esempio, mediante il [Resgen.exe (Resource File Generator)](https://msdn.microsoft.com/library/8ef159de-b660-4bec-9213-c3fbc4d1c6f4) oppure nell'ambiente di sviluppo, è possibile accedervi tramite i membri di <xref:System.Resources> dello spazio dei nomi. Per altre informazioni, vedere <xref:System.Resources.ResourceManager>. Per accedere a tutte le altre risorse in fase di esecuzione, usare i metodi che iniziano con `GetManifestResource` nella <xref:System.Reflection.Assembly> classe.  
+ Se `filename` è un [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] file di risorse creato, ad esempio, mediante il [Resgen.exe (Resource File Generator)](../../../framework/tools/resgen-exe-resource-file-generator.md) oppure nell'ambiente di sviluppo, è possibile accedervi tramite i membri di <xref:System.Resources> dello spazio dei nomi. Per altre informazioni, vedere <xref:System.Resources.ResourceManager>. Per accedere a tutte le altre risorse in fase di esecuzione, usare i metodi che iniziano con `GetManifestResource` nella <xref:System.Reflection.Assembly> classe.  
   
  Il nome del file può avere qualsiasi formato di file. Può ad esempio risultare opportuno rendere una DLL nativa parte dell'assembly in modo che possa essere installata nella Global Assembly Cache e che sia possibile accedervi dal codice gestito nell'assembly.  
   
@@ -55,8 +55,9 @@ Crea un collegamento a una risorsa gestita.
 vbc -linkresource:rf.resource in.vb  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Compilatore della riga di comando di Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
- [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)  
- [-resource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md)  
- [Esempi di righe di comando di compilazione](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Compilatore della riga di comando di Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
+- [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)  
+- [-resource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md)  
+- [Esempi di righe di comando di compilazione](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

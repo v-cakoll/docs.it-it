@@ -3,11 +3,11 @@ title: Esempio di endpoint di gestione del flusso di lavoro
 ms.date: 03/30/2017
 ms.assetid: 3ac6e08f-c43d-4bb7-83c3-e3890a4dac03
 ms.openlocfilehash: 3d99cbef20895381f5e40ee939e1d94a409f1391
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44206497"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44360622"
 ---
 # <a name="workflow-management-endpoint-sample"></a>Esempio di endpoint di gestione del flusso di lavoro
 In questo esempio viene illustrato come è possibile usare un endpoint di controllo del flusso di lavoro per creare ed eseguire flussi di lavoro sia in modalità locale che remota. Nell'esempio viene illustrato come ospitare un endpoint di controllo e scrivere client che chiamano l'endpoint di controllo per creare ed eseguire l'istanza di un flusso di lavoro. Il flusso di lavoro non è un servizio.  

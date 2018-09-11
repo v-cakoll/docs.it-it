@@ -13,11 +13,11 @@ helpviewer_keywords:
 - z-order
 ms.assetid: 1acc4281-2976-4715-86f4-bda68134baaf
 ms.openlocfilehash: d67d9b204c316dce5f3818496d791ed4c1b352f2
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44269163"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44360422"
 ---
 # <a name="how-to-layer-objects-on-windows-forms"></a>Procedura: disporre oggetti su più livelli in Windows Form
 Quando si crea un'interfaccia utente complessa, o di lavoro con un form MDI (interfaccia), spesso si desidera sia form e controlli figlio per creare più complesse interfacce utente (UI) di livello. Per spostare e tenere traccia di controlli e finestre all'interno del contesto di un gruppo, è modificare l'ordine z. *Ordine Z* è disposizione visiva di controlli in un form lungo l'asse z del form (profondità). La finestra nella parte superiore dello z-order si sovrappone a tutte le altre finestre. Tutte le altre finestre si sovrappongono la finestra nella parte inferiore dello z-order.  

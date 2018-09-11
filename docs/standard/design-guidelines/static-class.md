@@ -13,11 +13,11 @@ ms.assetid: d67c14d8-c4dd-443f-affb-4ccae677c9b6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c3a0a51fc6055190f9a0189de2e17d98f88036ea
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44249568"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44367366"
 ---
 # <a name="static-class-design"></a>Progettazione di classi statiche
 Una classe statica viene definita come una classe che contiene solo membri statici (naturalmente oltre i membri di istanza ereditati da <xref:System.Object?displayProperty=nameWithType> e possibilmente un costruttore privato). Alcuni linguaggi offrono il supporto incorporato per le classi statiche. In c# 2.0 e versioni successive, quando una classe viene dichiarata come statico, è sealed, abstract e non i membri di istanza possono essere sottoposto a override o dichiarati.  

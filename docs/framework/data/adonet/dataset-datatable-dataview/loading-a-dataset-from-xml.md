@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 49c083b7-a5ed-41cf-aabc-5aaba96f00e6
 ms.openlocfilehash: 3a781f17ac3cabebce17955b9a7e2edda4d4fd4b
-ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44338818"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44365887"
 ---
 # <a name="loading-a-dataset-from-xml"></a>Caricamento di un dataset da XML
 È possibile creare il contenuto di un <xref:System.Data.DataSet> di ADO.NET da un flusso o un documento XML. Inoltre, .NET Framework consente di definire con grande flessibilità le informazioni da caricare da XML e la modalità di creazione dello schema o struttura relazionale del <xref:System.Data.DataSet>.  

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Key attribute
 ms.assetid: 1985cd45-f197-42d5-b75e-886add64b248
 ms.openlocfilehash: f77f0a952224f79ee95a755cb848a4f8b68c9602
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44274138"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44368468"
 ---
 # <a name="xkey-directive"></a>Direttiva x:Key
 Identifica in modo univoco gli elementi che vengono creati e a cui fa riferimento un dizionario definito XAML. Aggiunta di un `x:Key` valore da un elemento oggetto XAML è il modo più comune per identificare una risorsa in un dizionario risorse, ad esempio in un controllo WPF <xref:System.Windows.ResourceDictionary>.  

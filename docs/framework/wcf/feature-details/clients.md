@@ -3,11 +3,11 @@ title: Client
 ms.date: 03/30/2017
 ms.assetid: cce50025-0318-4a5e-9ce8-c67feab83b06
 ms.openlocfilehash: 844412b211fe6187e3475fc71b9c3ccca8dd178f
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44181485"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44360781"
 ---
 # <a name="clients"></a>Client
 Gli argomenti di questa sezione riguardano l'architettura client, come per accedere a Windows Communication Foundation (WCF) del servizio, come configurare un client WCF e alcune considerazioni sulla protezione per i client WCF.  
