@@ -3,11 +3,11 @@ title: 'Procedura: Recuperare un singolo elemento figlio (LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: ce37db9e-76fa-46eb-b4cc-e8f32d22ad90
 ms.openlocfilehash: 77ccd56d1d131a740bb90ef4258ef35504f5e3cb
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44206195"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44268981"
 ---
 # <a name="how-to-retrieve-a-single-child-element-linq-to-xml-c"></a>Procedura: Recuperare un singolo elemento figlio (LINQ to XML) (C#)
 In questo argomento viene illustrato come recuperare un singolo elemento figlio, dato il relativo nome. Quando si conosce il nome dell'elemento figlio e si ha la certezza che ne esista solo uno con tale nome, può risultare utile recuperare un singolo elemento, anziché una raccolta.  
