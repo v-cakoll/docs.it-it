@@ -2,41 +2,41 @@
 title: Eventi LINQ to XML (C#)
 ms.date: 07/20/2015
 ms.assetid: ce7de951-cba7-4870-9962-733eb01cd680
-ms.openlocfilehash: 3dd4eaa0261ae7d878e188572d260b34b64fc031
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 6308d81eac830e11b6d58f8e460dfa377663cd21
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "42999941"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44261473"
 ---
-# <a name="linq-to-xml-events-c"></a><span data-ttu-id="9100e-102">Eventi LINQ to XML (C#)</span><span class="sxs-lookup"><span data-stu-id="9100e-102">LINQ to XML Events (C#)</span></span>
-<span data-ttu-id="9100e-103">Gli eventi [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] consentono di ricevere una notifica quando un albero XML viene modificato.</span><span class="sxs-lookup"><span data-stu-id="9100e-103">[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] events enable you to be notified when an XML tree is altered.</span></span>  
+# <a name="linq-to-xml-events-c"></a><span data-ttu-id="1bdae-102">Eventi LINQ to XML (C#)</span><span class="sxs-lookup"><span data-stu-id="1bdae-102">LINQ to XML Events (C#)</span></span>
+<span data-ttu-id="1bdae-103">Gli eventi [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] consentono di ricevere una notifica quando un albero XML viene modificato.</span><span class="sxs-lookup"><span data-stu-id="1bdae-103">[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] events enable you to be notified when an XML tree is altered.</span></span>  
   
- <span data-ttu-id="9100e-104">È possibile aggiungere eventi a un'istanza di qualsiasi oggetto <xref:System.Xml.Linq.XObject>.</span><span class="sxs-lookup"><span data-stu-id="9100e-104">You can add events to an instance of any <xref:System.Xml.Linq.XObject>.</span></span> <span data-ttu-id="9100e-105">Il gestore eventi riceverà quindi gli eventi relativi alle modifiche apportate a <xref:System.Xml.Linq.XObject> e a tutti i relativi discendenti.</span><span class="sxs-lookup"><span data-stu-id="9100e-105">The event handler will then receive events for modifications to that <xref:System.Xml.Linq.XObject> and any of its descendants.</span></span> <span data-ttu-id="9100e-106">Ad esempio, è possibile aggiungere un gestore eventi alla radice dell'albero e gestire tutte le modifiche apportate alla struttura da tale gestore.</span><span class="sxs-lookup"><span data-stu-id="9100e-106">For example, you can add an event handler to the root of the tree, and handle all modifications to the tree from that event handler.</span></span>  
+ <span data-ttu-id="1bdae-104">È possibile aggiungere eventi a un'istanza di qualsiasi oggetto <xref:System.Xml.Linq.XObject>.</span><span class="sxs-lookup"><span data-stu-id="1bdae-104">You can add events to an instance of any <xref:System.Xml.Linq.XObject>.</span></span> <span data-ttu-id="1bdae-105">Il gestore eventi riceverà quindi gli eventi relativi alle modifiche apportate a <xref:System.Xml.Linq.XObject> e a tutti i relativi discendenti.</span><span class="sxs-lookup"><span data-stu-id="1bdae-105">The event handler will then receive events for modifications to that <xref:System.Xml.Linq.XObject> and any of its descendants.</span></span> <span data-ttu-id="1bdae-106">Ad esempio, è possibile aggiungere un gestore eventi alla radice dell'albero e gestire tutte le modifiche apportate alla struttura da tale gestore.</span><span class="sxs-lookup"><span data-stu-id="1bdae-106">For example, you can add an event handler to the root of the tree, and handle all modifications to the tree from that event handler.</span></span>  
   
- <span data-ttu-id="9100e-107">Per esempi di eventi [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], vedere <xref:System.Xml.Linq.XObject.Changing> e <xref:System.Xml.Linq.XObject.Changed>.</span><span class="sxs-lookup"><span data-stu-id="9100e-107">For examples of [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] events, see <xref:System.Xml.Linq.XObject.Changing> and <xref:System.Xml.Linq.XObject.Changed>.</span></span>  
+ <span data-ttu-id="1bdae-107">Per esempi di eventi [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], vedere <xref:System.Xml.Linq.XObject.Changing> e <xref:System.Xml.Linq.XObject.Changed>.</span><span class="sxs-lookup"><span data-stu-id="1bdae-107">For examples of [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] events, see <xref:System.Xml.Linq.XObject.Changing> and <xref:System.Xml.Linq.XObject.Changed>.</span></span>  
   
-## <a name="types-and-events"></a><span data-ttu-id="9100e-108">Tipi ed eventi</span><span class="sxs-lookup"><span data-stu-id="9100e-108">Types and Events</span></span>  
- <span data-ttu-id="9100e-109">Con gli eventi è possibile usare i tipi seguenti:</span><span class="sxs-lookup"><span data-stu-id="9100e-109">You use the following types when working with events:</span></span>  
+## <a name="types-and-events"></a><span data-ttu-id="1bdae-108">Tipi ed eventi</span><span class="sxs-lookup"><span data-stu-id="1bdae-108">Types and Events</span></span>  
+ <span data-ttu-id="1bdae-109">Con gli eventi è possibile usare i tipi seguenti:</span><span class="sxs-lookup"><span data-stu-id="1bdae-109">You use the following types when working with events:</span></span>  
   
-|<span data-ttu-id="9100e-110">Tipo</span><span class="sxs-lookup"><span data-stu-id="9100e-110">Type</span></span>|<span data-ttu-id="9100e-111">Descrizione</span><span class="sxs-lookup"><span data-stu-id="9100e-111">Description</span></span>|  
+|<span data-ttu-id="1bdae-110">Tipo</span><span class="sxs-lookup"><span data-stu-id="1bdae-110">Type</span></span>|<span data-ttu-id="1bdae-111">Descrizione</span><span class="sxs-lookup"><span data-stu-id="1bdae-111">Description</span></span>|  
 |----------|-----------------|  
-|<xref:System.Xml.Linq.XObjectChange>|<span data-ttu-id="9100e-112">Specifica il tipo di evento quando viene generato un evento per un oggetto <xref:System.Xml.Linq.XObject>.</span><span class="sxs-lookup"><span data-stu-id="9100e-112">Specifies the event type when an event is raised for an <xref:System.Xml.Linq.XObject>.</span></span>|  
-|<xref:System.Xml.Linq.XObjectChangeEventArgs>|<span data-ttu-id="9100e-113">Fornisce i dati per gli eventi <xref:System.Xml.Linq.XObject.Changing> e <xref:System.Xml.Linq.XObject.Changed>.</span><span class="sxs-lookup"><span data-stu-id="9100e-113">Provides data for the <xref:System.Xml.Linq.XObject.Changing> and <xref:System.Xml.Linq.XObject.Changed> events.</span></span>|  
+|<xref:System.Xml.Linq.XObjectChange>|<span data-ttu-id="1bdae-112">Specifica il tipo di evento quando viene generato un evento per un oggetto <xref:System.Xml.Linq.XObject>.</span><span class="sxs-lookup"><span data-stu-id="1bdae-112">Specifies the event type when an event is raised for an <xref:System.Xml.Linq.XObject>.</span></span>|  
+|<xref:System.Xml.Linq.XObjectChangeEventArgs>|<span data-ttu-id="1bdae-113">Fornisce i dati per gli eventi <xref:System.Xml.Linq.XObject.Changing> e <xref:System.Xml.Linq.XObject.Changed>.</span><span class="sxs-lookup"><span data-stu-id="1bdae-113">Provides data for the <xref:System.Xml.Linq.XObject.Changing> and <xref:System.Xml.Linq.XObject.Changed> events.</span></span>|  
   
- <span data-ttu-id="9100e-114">Gli eventi seguenti vengono generati quando si modifica una struttura ad albero XML:</span><span class="sxs-lookup"><span data-stu-id="9100e-114">The following events are raised when you modify an XML tree:</span></span>  
+ <span data-ttu-id="1bdae-114">Gli eventi seguenti vengono generati quando si modifica una struttura ad albero XML:</span><span class="sxs-lookup"><span data-stu-id="1bdae-114">The following events are raised when you modify an XML tree:</span></span>  
   
-|<span data-ttu-id="9100e-115">event</span><span class="sxs-lookup"><span data-stu-id="9100e-115">Event</span></span>|<span data-ttu-id="9100e-116">Descrizione</span><span class="sxs-lookup"><span data-stu-id="9100e-116">Description</span></span>|  
+|<span data-ttu-id="1bdae-115">event</span><span class="sxs-lookup"><span data-stu-id="1bdae-115">Event</span></span>|<span data-ttu-id="1bdae-116">Descrizione</span><span class="sxs-lookup"><span data-stu-id="1bdae-116">Description</span></span>|  
 |-----------|-----------------|  
-|<xref:System.Xml.Linq.XObject.Changing>|<span data-ttu-id="9100e-117">Si verifica poco prima che l'oggetto <xref:System.Xml.Linq.XObject> o uno qualsiasi dei relativi discendenti venga modificato.</span><span class="sxs-lookup"><span data-stu-id="9100e-117">Occurs just before this <xref:System.Xml.Linq.XObject> or any of its descendants is going to change.</span></span>|  
-|<xref:System.Xml.Linq.XObject.Changed>|<span data-ttu-id="9100e-118">Si verifica quando un oggetto <xref:System.Xml.Linq.XObject> o uno qualsiasi dei relativi discendenti viene modificato.</span><span class="sxs-lookup"><span data-stu-id="9100e-118">Occurs when an <xref:System.Xml.Linq.XObject> has changed or any of its descendants have changed.</span></span>|  
+|<xref:System.Xml.Linq.XObject.Changing>|<span data-ttu-id="1bdae-117">Si verifica poco prima che l'oggetto <xref:System.Xml.Linq.XObject> o uno qualsiasi dei relativi discendenti venga modificato.</span><span class="sxs-lookup"><span data-stu-id="1bdae-117">Occurs just before this <xref:System.Xml.Linq.XObject> or any of its descendants is going to change.</span></span>|  
+|<xref:System.Xml.Linq.XObject.Changed>|<span data-ttu-id="1bdae-118">Si verifica quando un oggetto <xref:System.Xml.Linq.XObject> o uno qualsiasi dei relativi discendenti viene modificato.</span><span class="sxs-lookup"><span data-stu-id="1bdae-118">Occurs when an <xref:System.Xml.Linq.XObject> has changed or any of its descendants have changed.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="9100e-119">Esempio</span><span class="sxs-lookup"><span data-stu-id="9100e-119">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="1bdae-119">Esempio</span><span class="sxs-lookup"><span data-stu-id="1bdae-119">Example</span></span>  
   
-### <a name="description"></a><span data-ttu-id="9100e-120">Descrizione</span><span class="sxs-lookup"><span data-stu-id="9100e-120">Description</span></span>  
- <span data-ttu-id="9100e-121">Gli eventi sono utili quando si desidera gestire alcune informazioni di aggregazione in un albero XML.</span><span class="sxs-lookup"><span data-stu-id="9100e-121">Events are useful when you want to maintain some aggregate information in an XML tree.</span></span> <span data-ttu-id="9100e-122">Ad esempio, si desidera gestire un totale di fattura che corrisponde alla somma delle voci della fattura.</span><span class="sxs-lookup"><span data-stu-id="9100e-122">For example, you may want maintain an invoice total that is the sum of the line items of the invoice.</span></span> <span data-ttu-id="9100e-123">In questo esempio vengono usati gli eventi per gestire il totale di tutti gli elementi figlio sotto l'elemento `Items` complesso.</span><span class="sxs-lookup"><span data-stu-id="9100e-123">This example uses events to maintain the total of all of the child elements under the complex element `Items`.</span></span>  
+### <a name="description"></a><span data-ttu-id="1bdae-120">Descrizione</span><span class="sxs-lookup"><span data-stu-id="1bdae-120">Description</span></span>  
+ <span data-ttu-id="1bdae-121">Gli eventi sono utili quando si desidera gestire alcune informazioni di aggregazione in un albero XML.</span><span class="sxs-lookup"><span data-stu-id="1bdae-121">Events are useful when you want to maintain some aggregate information in an XML tree.</span></span> <span data-ttu-id="1bdae-122">Ad esempio, si desidera gestire un totale di fattura che corrisponde alla somma delle voci della fattura.</span><span class="sxs-lookup"><span data-stu-id="1bdae-122">For example, you may want maintain an invoice total that is the sum of the line items of the invoice.</span></span> <span data-ttu-id="1bdae-123">In questo esempio vengono usati gli eventi per gestire il totale di tutti gli elementi figlio sotto l'elemento `Items` complesso.</span><span class="sxs-lookup"><span data-stu-id="1bdae-123">This example uses events to maintain the total of all of the child elements under the complex element `Items`.</span></span>  
   
-### <a name="code"></a><span data-ttu-id="9100e-124">Codice</span><span class="sxs-lookup"><span data-stu-id="9100e-124">Code</span></span>  
+### <a name="code"></a><span data-ttu-id="1bdae-124">Codice</span><span class="sxs-lookup"><span data-stu-id="1bdae-124">Code</span></span>  
   
 ```csharp  
 XElement root = new XElement("Root",  
@@ -75,8 +75,8 @@ Console.WriteLine("Total:{0}", (int)total);
 Console.WriteLine(root);  
 ```  
   
-### <a name="comments"></a><span data-ttu-id="9100e-125">Commenti</span><span class="sxs-lookup"><span data-stu-id="9100e-125">Comments</span></span>  
- <span data-ttu-id="9100e-126">L'output del codice è il seguente:</span><span class="sxs-lookup"><span data-stu-id="9100e-126">This code produces the following output:</span></span>  
+### <a name="comments"></a><span data-ttu-id="1bdae-125">Commenti</span><span class="sxs-lookup"><span data-stu-id="1bdae-125">Comments</span></span>  
+ <span data-ttu-id="1bdae-126">L'output del codice è il seguente:</span><span class="sxs-lookup"><span data-stu-id="1bdae-126">This code produces the following output:</span></span>  
   
 ```  
 Changed System.Xml.Linq.XElement Add  
@@ -97,5 +97,6 @@ Total:308
 </Root>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="9100e-127">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="9100e-127">See Also</span></span>  
- [<span data-ttu-id="9100e-128">Programmazione LINQ to XML avanzata (C#)</span><span class="sxs-lookup"><span data-stu-id="9100e-128">Advanced LINQ to XML Programming (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+## <a name="see-also"></a><span data-ttu-id="1bdae-127">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="1bdae-127">See Also</span></span>
+
+- [<span data-ttu-id="1bdae-128">Programmazione LINQ to XML avanzata (C#)</span><span class="sxs-lookup"><span data-stu-id="1bdae-128">Advanced LINQ to XML Programming (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
