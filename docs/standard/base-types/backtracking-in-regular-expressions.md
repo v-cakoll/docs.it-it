@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e05da1c2ed68f482cbb1280c5c40583ab54d71bb
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: 043b4ab00699062d8c1af5866fbeb3773c8ce9af
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37071864"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44039501"
 ---
 # <a name="backtracking-in-regular-expressions"></a>Backtracking nelle espressioni regolari
 <a name="top"></a> Il backtracking si verifica quando un modello di espressione regolare contiene [quantificatori](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) facoltativi o [costrutti di alternanza](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)e il motore delle espressioni regolari torna a uno stato salvato in precedenza per continuare la ricerca di una corrispondenza. Il backtracking è fondamentale per la potenza delle espressioni regolari. Consente alle espressioni di essere potenti e flessibili e di cercare una corrispondenza di modelli molto complessi. Questa tecnica presenta tuttavia anche alcuni svantaggi. Il backtracking spesso è il fattore più importante che influisce sulle prestazioni del motore delle espressioni regolari. Fortunatamente, lo sviluppatore è in grado di controllare il comportamento del motore delle espressioni regolari e il modo in cui viene utilizzato il backtracking. In questo argomento viene illustrato il funzionamento del backtracking e il modo in cui può essere controllato.  
@@ -215,9 +215,10 @@ ms.locfileid: "37071864"
   
  [Torna all'inizio](#top)  
   
-## <a name="see-also"></a>Vedere anche  
- [Espressioni regolari .NET](../../../docs/standard/base-types/regular-expressions.md)  
- [Linguaggio di espressioni regolari - Riferimento rapido](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
- [Quantificatori](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)  
- [Costrutti di alternanza](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)  
- [Costrutti di raggruppamento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Espressioni regolari .NET](../../../docs/standard/base-types/regular-expressions.md)  
+- [Linguaggio di espressioni regolari - Riferimento rapido](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
+- [Quantificatori](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)  
+- [Costrutti di alternanza](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)  
+- [Costrutti di raggruppamento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)

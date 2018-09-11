@@ -3,11 +3,11 @@ title: Procedura di installazione singola per gli esempi di Windows Communicatio
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
 ms.openlocfilehash: 3c3c5934cbbc7dd68f03d888aa0594f9ff61c225
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: MT
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43539095"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44063855"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Procedura di installazione singola per gli esempi di Windows Communication Foundation
 La maggior parte degli esempi Windows Communication Foundation (WCF) sono ospitata in Internet Information Services (IIS) ed eseguire da una directory virtuale comune. Questa procedura di installazione singola crea una cartella sul disco. Aggiunge inoltre una directory virtuale IIS denominato **ServiceModelSamples**.  
@@ -40,7 +40,7 @@ La maggior parte degli esempi Windows Communication Foundation (WCF) sono ospita
   
 5.  Seguire le [istruzioni del Firewall](../../../../docs/framework/wcf/samples/firewall-instructions.md) per abilitare le porte utilizzate dagli esempi.  
   
-6.  Cercare la directory predefinita seguente: \<Unitàinstallazione >:**\wf_wcf_samples.**. Se gli esempi sono stati installati in precedenza, questa è la directory predefinita.  
+6.  Cercare la directory predefinita seguente: \<Unitàinstallazione >:**\wf_wcf_samples**. Se gli esempi sono stati installati in precedenza, questa è la directory predefinita.  
   
 7.  Se gli esempi non sono installati, installarli dal percorso di download di esempi per [Visual c#](https://go.microsoft.com/fwlink/?LinkId=190939) oppure [Visual Basic](https://go.microsoft.com/fwlink/?LinkID=193373).  
   

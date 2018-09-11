@@ -2,17 +2,16 @@
 title: Vincoli (F#)
 description: 'Informazioni sui vincoli di F # che si applicano ai parametri di tipo generico per specificare i requisiti per un argomento di tipo in una funzione o un tipo generico.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 0e79cf5b1a25ada49bf30416f85c1d59f8f2fd23
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: MT
+ms.openlocfilehash: 9534db4ffd195022366af8c993658bd94f375f53
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525605"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43867829"
 ---
 # <a name="constraints"></a>Vincoli
 
 In questo argomento descrive i vincoli che è possibile applicare generico parametri per specificare i requisiti per un argomento di tipo in un tipo generico o una funzione di tipo.
-
 
 ## <a name="syntax"></a>Sintassi
 
@@ -21,13 +20,14 @@ type-parameter-list when constraint1 [ and constraint2]
 ```
 
 ## <a name="remarks"></a>Note
+
 Esistono diversi vincoli diversi, che è possibile applicare per limitare i tipi che possono essere utilizzati in un tipo generico. Nella tabella seguente elenca e descrive questi vincoli.
 
 |Vincolo|Sintassi|Descrizione|
 |----------|------|-----------|
 |Vincolo di tipo|*parametro di tipo* :&gt; *tipo*|Il tipo specificato deve essere uguale o derivare dal tipo specificato o, se il tipo è un'interfaccia, il tipo specificato deve implementare l'interfaccia.|
 |Vincolo Null|*parametro di tipo* : null|Il tipo specificato deve supportare il valore letterale null. Ciò include tutti i tipi di oggetti .NET ma non F # elenco, tupla, funzione, classe, record o i tipi di unione.|
-|Vincolo membro esplicito|[()]*parametro di tipo* [or... o *parametro di tipo*)]: (*firma del membro*)|Almeno uno degli argomenti di tipo specificati deve avere un membro con la firma specificata. non destinato all'uso comune. I membri devono essere esplicitamente definiti sul tipo o parte di un'estensione di tipo implicito da destinazioni valide per un vincolo membro esplicito.|
+|Vincolo membro esplicito|[(]*parametro di tipo* [or... o *parametro di tipo*)]: (*firma del membro*)|Almeno uno degli argomenti di tipo specificati deve avere un membro con la firma specificata. non destinato all'uso comune. I membri devono essere esplicitamente definiti sul tipo o parte di un'estensione di tipo implicito da destinazioni valide per un vincolo membro esplicito.|
 |Vincolo del costruttore|*parametro di tipo* : (new: unità -&gt; ' un)|Il tipo specificato deve avere un costruttore predefinito.|
 |Vincolo di tipo valore|: uno struct|Il tipo specificato deve essere un tipo di valore .NET.|
 |Vincolo di tipo riferimento|: non struct|Il tipo specificato deve essere un tipo di riferimento .NET.|
@@ -115,6 +115,6 @@ class end
 ```
 
 ## <a name="see-also"></a>Vedere anche
-[Generics](index.md)
 
-[Vincoli](constraints.md)
+- [Generics](index.md)
+- [Vincoli](constraints.md)

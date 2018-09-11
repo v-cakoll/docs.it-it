@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 18426e655f6702844daa822921888194ed7ecb64
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.openlocfilehash: 1fe0ead93d1ff2b7867a52d80cf812e2850ea7b3
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42753614"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44186539"
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>Procedura: Verificare che le stringhe siano in formato di posta elettronica valido
 L'esempio seguente usa un'espressione regolare per verificare la validità del formato di posta elettronica di una stringa.  
@@ -103,5 +103,6 @@ vbc /t:library RegexUtilities.vb
     vbc Example.vb /r:RegexUtilities.dll  
     ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Espressioni regolari di .NET Framework](../../../docs/standard/base-types/regular-expressions.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Espressioni regolari di .NET Framework](../../../docs/standard/base-types/regular-expressions.md)

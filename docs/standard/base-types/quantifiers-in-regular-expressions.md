@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 36b81212-6511-49ed-a8f1-ff080415312f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 374ef3e015ee477c5979e2e31574aabfdd03dd1b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a982082611760e4f901c427af25a0a49a4e243a1
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579093"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44192283"
 ---
 # <a name="quantifiers-in-regular-expressions"></a>quantificatori in espressioni regolari
 I quantificatori specificano il numero di istanze di un carattere, un gruppo o una classe di caratteri che deve essere presente nell'input affinché venga trovata una corrispondenza.  Nella tabella seguente vengono elencati i quantificatori supportati da .NET.  
@@ -115,7 +115,7 @@ I quantificatori specificano il numero di istanze di un carattere, un gruppo o u
 |`\b`|Terminare al confine di una parola.|  
   
 ### <a name="match-at-least-n-times-n"></a>Trova la corrispondenza almeno n volte: {n,}  
- Il quantificatore `{`*n*`,}` trova la corrispondenza con l'elemento precedente almeno *n* volte, dove *n* è qualsiasi numero intero. `{`*n*`,}` è un quantificatore greedy il cui equivalente lazy è `{`*n*`}?`.  
+ Il quantificatore `{`*n*`,}` trova la corrispondenza con l'elemento precedente almeno *n* volte, dove *n* è qualsiasi numero intero. `{`*n*`,}` è un quantificatore greedy il cui equivalente lazy è `{`*n*`,}?`.  
   
  Ad esempio, l'espressione regolare `\b\d{2,}\b\D+` tenta di trovare la corrispondenza con il confine di una parola seguito da almeno due cifre seguite dal confine di una parola e un carattere non numerico. L'esempio seguente illustra questa espressione regolare. L'espressione regolare non riesce a trovare la frase `"7 days"` perché contiene solo una cifra decimale, ma trova la corrispondenza con le frasi `"10 weeks and 300 years"`.  
   
@@ -271,6 +271,7 @@ I quantificatori specificano il numero di istanze di un carattere, un gruppo o u
  [!code-csharp[RegularExpressions.Quantifiers.EmptyMatch#2](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.quantifiers.emptymatch/cs/emptymatch4.cs#2)]
  [!code-vb[RegularExpressions.Quantifiers.EmptyMatch#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.quantifiers.emptymatch/vb/emptymatch4.vb#2)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Linguaggio di espressioni regolari - Riferimento rapido](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
- [Backtracking](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Linguaggio di espressioni regolari - Riferimento rapido](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
+- [Backtracking](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)
