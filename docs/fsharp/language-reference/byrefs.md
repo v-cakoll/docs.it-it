@@ -2,12 +2,12 @@
 title: 'ByRef (F #)'
 description: 'Informazioni su byref e tipi byref simili in F #, che vengono usati per la programmazione di basso livello.'
 ms.date: 09/02/2018
-ms.openlocfilehash: 7d4138649ee39a0d342db2828ad4d32fbded978c
-ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.openlocfilehash: 6131104e4325f77da84368c337f998c6b2b5309b
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44338662"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44699646"
 ---
 # <a name="byrefs"></a>Zkratka
 
@@ -105,7 +105,7 @@ Tutte queste regole insieme significa che il titolare di un `inref` puntatore no
 
 Lo scopo di `outref<'T>` consiste nell'indicare che il puntatore deve essere letto solo da. In modo imprevisto, `outref<'T>` consente la lettura sottostante valore malgrado il nome. Si tratta di garantire la compatibilità. A livello semantico `outref<'T>` non è diversa da `byref<'T>`.
 
-### <a name="interop-with-c"></a>Interoperabilità con C #
+### <a name="interop-with-c"></a>Interoperabilità con c# #
 
 C# supporta le `in ref` e `out ref` parole chiave, oltre a `ref` restituisce. La tabella seguente illustra in che modo F # interpreta c# genera di cosa:
 
@@ -196,7 +196,7 @@ Per evitare il dereferenziazione implicito, ad esempio passando un riferimento t
 È anche possibile assegnare direttamente a una restituzione `byref`. Si consideri il seguente programma (elevata imperativo):
 
 ```fsharp
-ype C() =
+type C() =
     let mutable nums = [| 1; 3; 7; 15; 31; 63; 127; 255; 511; 1023 |]
 
     override __.ToString() = String.Join(' ', nums)

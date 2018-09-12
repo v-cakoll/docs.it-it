@@ -4,11 +4,11 @@ description: Informazioni su come scrivere un 'copia e aggiorna record expressio
 author: ChrSteinert
 ms.date: 06/04/2016
 ms.openlocfilehash: d2b089e8a7fc5c7ee26139003e23d2eaa8a3174e
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44197400"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44494070"
 ---
 # <a name="copy-and-update-record-expressions"></a>Copiare e aggiornare espressioni di record
 

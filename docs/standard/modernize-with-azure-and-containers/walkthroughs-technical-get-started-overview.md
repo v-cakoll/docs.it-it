@@ -1,368 +1,368 @@
 ---
-title: Procedure dettagliate e technical Panoramica avviata
-description: Modernizzare le applicazioni .NET esistenti con Cloud di Azure e i contenitori di Windows | Procedure dettagliate e technical Panoramica avviata
+title: Procedure dettagliate e technical panoramica introduttiva
+description: Modernizzare le applicazioni .NET esistenti con Cloud di Azure e i contenitori di Windows | Procedure dettagliate e technical panoramica introduttiva
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 27de9d1c5475855a22f2d8a3518982605277f6d9
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: 41fbeb3abc201ef03cf0c237a069e7687c98dd18
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027389"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44700349"
 ---
-# <a name="walkthroughs-and-technical-get-started-overview"></a>Procedure dettagliate e technical Panoramica avviata
+# <a name="walkthroughs-and-technical-get-started-overview"></a>Procedure dettagliate e technical panoramica introduttiva
 
-Per limitare le dimensioni di questo e-book, documentazione tecnica aggiuntiva e le procedure dettagliate di complete sono stati resi disponibili in un repository di GitHub. La serie in linea di procedure dettagliate in cui sono descritto in questo capitolo descrive la procedura di configurazione di più ambienti basati su contenitori di Windows e la distribuzione in Azure.
+Per limitare le dimensioni di questo e-book, documentazione tecnica aggiuntiva e le procedure dettagliate complete sono stati resi disponibili in un repository GitHub. La linea serie di procedure dettagliate che sono descritti in questo capitolo descrive la configurazione dettagliata di più ambienti basati su contenitori di Windows e la distribuzione in Azure.
 
-Le sezioni seguenti illustrano ciò che ogni procedura dettagliata è sui relativi obiettivi e degli obiettivi di alto livello e un diagramma di attività che sono coinvolti. È possibile ottenere le procedure dettagliate autonomamente nel *eShopModernizing* wiki repository GitHub di App in [ https://github.com/dotnet-architecture/eShopModernizing/wiki ](https://github.com/dotnet-architecture/eShopModernizing/wiki).
+Le sezioni seguenti illustrano ciò che ogni procedura dettagliata sui suoi obiettivi e una visione generale e fornisce un diagramma di attività che sono coinvolti. È possibile ottenere le procedure dettagliate autonomamente nel *eShopModernizing* App wiki di repository GitHub in [ https://github.com/dotnet-architecture/eShopModernizing/wiki ](https://github.com/dotnet-architecture/eShopModernizing/wiki).
 
-## <a name="technical-walkthrough-list"></a>Elenco di istruzioni dettagliate
+## <a name="technical-walkthrough-list"></a>Elenco delle procedure dettagliate tecniche
 
-Le procedure dettagliate seguenti avviato get forniscono linee guida tecnica completa e coerenza per le app di esempio che è possibile sollevare e spostare usando i contenitori e quindi spostare utilizzando più opzioni di distribuzione in Azure.
+Procedure dettagliate di introduzione seguenti forniscono indicazioni tecniche completa e coerente per le app di esempio che è possibile sollevare e spostare usando i contenitori e reinserirvi usando più opzioni di distribuzione in Azure.
 
 Ognuna delle procedure dettagliate seguenti utilizza il nuovo esempio eShopLegacy eShopModernizing le App e quali sono disponibili in GitHub all'indirizzo [ https://github.com/dotnet-architecture/eShopModernizing ](https://github.com/dotnet-architecture/eShopModernizing).
 
-- **Presentazione di eShop legacy (app linea di base per modernizzare)**
+- **Panoramica delle App legacy eShop (app linea di base per modernizzare)**
 
-- **Containerize le app web ASP.NET esistenti (Web Form e MVC) con i contenitori di Windows**
+- **Distribuire le app web ASP.NET esistenti (Web Form e MVC) in un contenitore con contenitori Windows**
 
-- **Containerize i servizi WCF esistenti (applicazioni a più livelli) con i contenitori di Windows**
+- **Distribuire i servizi WCF esistenti (App a più livelli) con i contenitori Windows in un contenitore**
 
-- **Distribuire l'app basata su contenitori di Windows in macchine virtuali di Azure**
+- **Distribuire l'app basata su contenitori Windows in macchine virtuali di Azure**
 
-- **Distribuire le app basate su contenitori di Windows in Kubernetes nel servizio contenitore di Azure**
+- **Distribuire le app di Windows basata su contenitori in Kubernetes nel servizio contenitore di Azure**
 
-- **Distribuire le app basate su contenitori di Windows Azure Service Fabric**
+- **Distribuire le app basate su contenitori Windows in Azure Service Fabric**
 
 
-## <a name="walkthrough-1-tour-of-eshop-legacy-apps"></a>Procedura dettagliata 1: Panoramica delle applicazioni legacy eShop
+## <a name="walkthrough-1-tour-of-eshop-legacy-apps"></a>Procedura dettagliata 1: Presentazione dell'App legacy eShop
 
-### <a name="technical-walkthrough-availability"></a>Procedura dettagliata tecniche disponibilità
+### <a name="technical-walkthrough-availability"></a>Istruzioni dettagliate su disponibilità
 
-Procedura dettagliata tecnica completa è disponibile nella pagina wiki di repository GitHub eShopModernizing:
+La procedura dettagliata tecnica completa è disponibile nella pagina wiki di repository GitHub eShopModernizing:
 
-[procedure dettagliate di wiki eShopModernizing](https://github.com/dotnet-architecture/eShopModernizing/wiki)
+[procedure wiki dettagliate eShopModernizing](https://github.com/dotnet-architecture/eShopModernizing/wiki)
 
 
 ### <a name="overview"></a>Panoramica
 
-In questa procedura dettagliata, è possibile esplorare l'implementazione iniziale tre applicazioni di esempio legacy. Le prime due App web di esempio hanno un'architettura monolitica e sono state create tramite ASP.NET classico. Un'applicazione basata su ASP.NET 4. x MVC; la seconda applicazione è basata su Web Form ASP.NET 4. x. La terza applicazione è un'applicazione a 3 livelli composta da un'app di Windows Form client e lato server [Windows Communication Foundation (WCF)](../../framework/wcf/whats-wcf.md) servizio.
+In questa procedura dettagliata, è possibile esplorare l'implementazione iniziale di tre applicazioni legacy di esempio. Le prime due App web di esempio dispone di un'architettura monolitica e sono state create utilizzando ASP.NET classico. Un'applicazione si basa su ASP.NET 4.x MVC; la seconda applicazione si basa su Web Form ASP.NET 4.x. Il terzo app è un'app a 3 livelli composta da un lato server e un'app client di Windows Form [Windows Communication Foundation (WCF)](../../framework/wcf/whats-wcf.md) servizio.
 
-Tutte queste applicazioni sono disponibili nel [repository GitHub eShopModernizing](https://github.com/dotnet-architecture/eShopModernizing).
+Sono disponibili in tutte le applicazioni di [repository GitHub eShopModernizing](https://github.com/dotnet-architecture/eShopModernizing).
 
 ### <a name="goals"></a>Obiettivi
 
-L'obiettivo principale di questa procedura dettagliata è semplicemente per acquisire familiarità con queste App e con il codice e configurazione. È possibile configurare le App in modo che possano generare e utilizzare dati fittizi, senza l'utilizzo del database SQL, a scopo di test. Questa configurazione facoltativa è basata sul inserimento di dipendenze, in modo separato.
+L'obiettivo principale di questa procedura dettagliata è semplicemente per acquisire familiarità con queste App e con il codice e configurazione. È possibile configurare le App in modo che possano generare e usare dati fittizi, senza usare il database SQL, a scopo di test. Questa configurazione facoltativa si basa sull'inserimento delle dipendenze, in modo disgiunto.
 
-### <a name="scenario-1-aspnet-web-apps"></a>Scenario 1: App Web ASP.NET
+### <a name="scenario-1-aspnet-web-apps"></a>Lo scenario 1: Le app Web ASP.NET
 
-Nella figura seguente viene illustrato un semplice scenario delle applicazioni web ASP.NET legacy originale.
+La figura seguente illustra uno scenario semplice delle applicazioni web ASP.NET legacy originale.
 
 > ![Scenario semplice architettura delle applicazioni web originale legacy ASP.NET](./media/image5-1.png)
 >
 
-Da una prospettiva di dominio aziendale, entrambe le app offrono lo stesso catalogo le funzionalità di gestione. I membri del team enterprise eShop utilizzerebbe l'app per visualizzare e modificare il catalogo dei prodotti. 
+Dalla prospettiva del dominio aziendale, entrambe le app offrono lo stesso catalogo le funzionalità di gestione. I membri del team di enterprise eShop utilizzerebbe l'app per visualizzare e modificare il catalogo dei prodotti. 
 
-La figura seguente mostra la schermata iniziale di app.
+La figura seguente mostra le schermate iniziale dell'app.
 
-![Applicazioni ASP.NET MVC e Web Form ASP.NET (le tecnologie esistenti/legacy)](./media/image5-2.png)
+![Applicazioni MVC ASP.NET e Web Form ASP.NET (le tecnologie esistenti/legacy)](./media/image5-2.png)
 
-Le dipendenze in ASP.NET 4. x o versioni precedenti (una per MVC o Web Form) significa che queste applicazioni non vengono eseguito su .NET Core, a meno che il codice è stata completamente riscritta utilizzando ASP.NET MVC di base. 
+Le dipendenze in ASP.NET 4.x o versioni precedenti (per MVC o Web Form) significa che queste applicazioni non verranno eseguito in .NET Core, a meno che il codice è completamente riscritto usando ASP.NET Core MVC. 
 
-### <a name="scenario-2-wcf-service-and-winforms-client-app-3-tier-app"></a>Scenario 2: Servizio WCF e app di Windows Form client (applicazione di livello 3)
+### <a name="scenario-2-wcf-service-and-winforms-client-app-3-tier-app"></a>Scenario 2: Servizio WCF e client di Windows Forms app (app di livello 3)
 
-Nella figura seguente viene illustrato un semplice scenario dell'applicazione legacy a 3 livelli originale.
+La figura seguente illustra uno scenario semplice dell'applicazione legacy a 3 livelli originale.
 
-> ![Scenario semplice architettura dell'app a 3 livelli legacy originale con un servizio WCF e un'app client di Windows Form](./media/image5-1.5.png)
+> ![Scenario semplice architettura di app legacy originale a 3 livelli con un servizio WCF e un'app client di Windows Form](./media/image5-1.5.png)
 >
 
 ### <a name="benefits"></a>Vantaggi
 
-I vantaggi di questa procedura dettagliata sono semplici: semplicemente acquisire familiarità con il codice e App iniziale.
+I vantaggi di questa procedura dettagliata sono semplici: solo acquisire familiarità con le app iniziale e il codice.
 
 ### <a name="next-steps"></a>Passaggi successivi
 
-Esplorare il contenuto di informazioni più dettaglio su wiki di GitHub:
+Esplorare il contenuto più approfondito su wiki di GitHub:
 
-  - [Panoramica sulla linea di base ASP.NET MVC e Web Form "legacy" app](https://github.com/dotnet-architecture/eShopModernizing/wiki/01.-Tour-on-the-ASP.NET-MVC-and-WebForms-apps-implementation-code)
-  - [Panoramica sul servizio WCF di base e "legacy" app di Windows Form (livello 3)](https://github.com/dotnet-architecture/eShopModernizing/wiki/21.-Tour-on-the-WCF-service-and-WinForms-apps)
+  - [Panoramica sulla linea di base ASP.NET MVC e le app "legacy" Web Form](https://github.com/dotnet-architecture/eShopModernizing/wiki/01.-Tour-on-the-ASP.NET-MVC-and-WebForms-apps-implementation-code)
+  - [Panoramica sul servizio WCF di base e l'app "legacy" (livello 3) di Windows Form](https://github.com/dotnet-architecture/eShopModernizing/wiki/21.-Tour-on-the-WCF-service-and-WinForms-apps)
 
 
-## <a name="walkthrough-2-containerize-your-existing-net-applications-with-windows-containers"></a>Procedura dettagliata 2: Inserita in un contenitore le applicazioni .NET esistenti con i contenitori di Windows
+## <a name="walkthrough-2-containerize-your-existing-net-applications-with-windows-containers"></a>Procedura dettagliata 2: Distribuire le applicazioni .NET esistenti con contenitori Windows in un contenitore
 
 ### <a name="overview"></a>Panoramica
 
-Utilizzare i contenitori di Windows per migliorare la distribuzione di applicazioni .NET esistenti, ad esempio quelle basate su WCF, MVC o Web Form per gli ambienti di test, sviluppo e produzione.
+Usare i contenitori di Windows per migliorare la distribuzione delle applicazioni .NET esistenti, ad esempio quelle basate su Web Form, MVC o WCF, produzione, sviluppo e ambienti di test.
 
 ### <a name="goals"></a>Obiettivi
 
-L'obiettivo di questa procedura dettagliata è descrivere le diverse opzioni per containerizing un'applicazione esistente di .NET Framework. È possibile:
+L'obiettivo di questa procedura dettagliata è descrive diverse opzioni per l'inserimento di un'applicazione esistente di .NET Framework nei contenitori. È possibile:
 
-- L'applicazione inserita in un contenitore utilizzando [Visual Studio 2017 Tools per Docker](/aspnet/core/host-and-deploy/docker/visual-studio-tools-for-docker) (Visual Studio 2017 o versioni successive).
+- Distribuire l'applicazione in un contenitore usando [Visual Studio 2017 Tools per Docker](/aspnet/core/host-and-deploy/docker/visual-studio-tools-for-docker) (Visual Studio 2017 o versioni successive).
 
-- L'applicazione inserita in un contenitore aggiungendo manualmente un [Dockerfile](https://docs.docker.com/engine/reference/builder/)e quindi utilizzando il [CLI di Docker](https://docs.docker.com/engine/reference/commandline/cli/).
+- Distribuire in un contenitore dell'applicazione aggiungendo manualmente un [Dockerfile](https://docs.docker.com/engine/reference/builder/)e quindi usando la [CLI di Docker](https://docs.docker.com/engine/reference/commandline/cli/).
 
-- L'applicazione inserita in un contenitore utilizzando il [Img2Docker](https://github.com/docker/communitytools-image2docker-win) strumento (uno strumento open source da Docker).
+- Distribuire l'applicazione in un contenitore usando il [Img2Docker](https://github.com/docker/communitytools-image2docker-win) strumento (uno strumento open source da Docker).
 
-Questa procedura dettagliata si concentra sugli strumenti di Visual Studio 2017 per approccio Docker, ma gli altri due approcci sono piuttosto simili per quanto riguarda utilizzo Dockerfile.
+Questa procedura dettagliata si basa su Visual Studio 2017 Tools per l'approccio di Docker, ma gli altri due approcci sono abbastanza simili dal punto di vista usando i Dockerfile.
 
 ### <a name="scenario-1-containerized-aspnet-web-apps"></a>Scenario 1: Le app web ASP.NET nei contenitori
 
-Nella figura seguente viene illustrato lo scenario per le applicazioni di App web legacy eShop nei contenitori.
+Nella figura seguente illustra lo scenario per applicazioni web legacy eShop nei contenitori.
 
-> ![Diagramma dell'architettura semplificata di contenitore applicazioni ASP.NET in un ambiente di sviluppo](./media/image5-3.png)
+> ![Diagramma dell'architettura semplificata in contenitori le applicazioni ASP.NET in un ambiente di sviluppo](./media/image5-3.png)
 >
 
 
-### <a name="scenario-2-containerized-wcf-service"></a>Scenario 2: Servizio WCF nei contenitori
+### <a name="scenario-2-containerized-wcf-service"></a>Scenario 2: Servizio WCF in contenitori
 
-Nella figura seguente viene illustrato lo scenario per un'applicazione a 3 livelli con un servizio WCF nei contenitori. 
+Nella figura seguente illustra lo scenario per un'app a 3 livelli con un servizio WCF in contenitori. 
 
-> ![Diagramma dell'architettura del servizio WCF nei contenitori in un ambiente di sviluppo semplificato](./media/image5-3.5.png)
+> ![Diagramma dell'architettura del servizio WCF in contenitori in un ambiente di sviluppo semplificato](./media/image5-3.5.png)
 >
 
 ### <a name="benefits"></a>Vantaggi
 
-Esistono vantaggi rispetto all'esecuzione dell'applicazione monolitica in un contenitore. Creare un'immagine per l'applicazione. Da quel momento in poi, ogni distribuzione viene eseguito nello stesso ambiente. Ogni contenitore Usa la stessa versione del sistema operativo, ha la stessa versione di dipendenze installata, Usa la stessa versione di .NET framework e viene compilato con lo stesso processo. In pratica, controllare le dipendenze dell'applicazione tramite un'immagine di Docker. Quando si distribuiscono i contenitori, le dipendenze viaggiano con l'applicazione.
+Esistono vantaggi rispetto all'esecuzione dell'applicazione monolitica in un contenitore. In primo luogo, viene creata un'immagine per l'applicazione. Da quel momento, ogni distribuzione viene eseguito nello stesso ambiente. Ogni contenitore Usa la stessa versione del sistema operativo, ha la stessa versione di dipendenze installata, Usa la stessa versione di .NET framework e viene compilato con lo stesso processo. In pratica, si controllano le dipendenze dell'applicazione usando un'immagine Docker. Le dipendenze di pari passo con l'applicazione quando si distribuisce i contenitori.
 
-Un ulteriore vantaggio è che gli sviluppatori possono eseguire l'applicazione nell'ambiente di coerente fornito dai contenitori di Windows. I problemi che vengono visualizzati solo con alcune versioni possono essere rilevati immediatamente, invece di replica in un ambiente di gestione temporanea o produzione. Differenze in ambienti di sviluppo utilizzati dai membri del team di sviluppo è importante minore quando le applicazioni eseguite nei contenitori.
+Un ulteriore vantaggio è che gli sviluppatori possono eseguire l'applicazione nell'ambiente coerente che viene fornito dai contenitori di Windows. I problemi che vengono visualizzati solo con determinate versioni possono essere rilevati immediatamente, anziché emergere in un ambiente di gestione temporanea o produzione. Differenze in ambienti di sviluppo usati dai membri del team di sviluppo sono meno rilevanti quando le applicazioni eseguite nei contenitori.
 
-Le applicazioni nei contenitori hanno anche una curva di scalabilità orizzontale più semplice. Le applicazioni nei contenitori consentono di disporre di altre applicazioni e le istanze del servizio (basate su contenitori) in una macchina virtuale o un computer fisico rispetto alle distribuzioni applicazione regolare per ogni macchina. Questo si traduce in maggiore densità e meno necessarie risorse, soprattutto quando si utilizzano orchestrators come Kubernetes o Service Fabric.
+Le applicazioni in contenitori hanno anche una curva di scalabilità orizzontale flatter. Le App in contenitori consentono di avere più applicazioni e istanze del servizio (basate su contenitori) in una macchina virtuale o fisica rispetto alle distribuzioni di applicazioni normali per ogni macchina. Questo si traduce in maggiore densità e meno necessarie risorse, soprattutto quando si usano gli agenti di orchestrazione come Kubernetes o Service Fabric.
 
-Creazione dei contenitori, in situazioni ideali, non è necessario apportare modifiche al codice dell'applicazione (C\#). Nella maggior parte degli scenari, è necessario solo i file di metadati di distribuzione (file Dockerfile e Docker Compose) Docker.
+Utilizzo dei contenitori, in situazioni ideali non è necessario apportare modifiche al codice dell'applicazione (C\#). Nella maggior parte degli scenari, è necessario solo i file di metadati di distribuzione di Docker (file Dockerfile e Docker Compose).
 
 ### <a name="next-steps"></a>Passaggi successivi
 
-Esplorare il contenuto di informazioni più dettaglio su wiki di GitHub:
+Esplorare il contenuto più approfondito su wiki di GitHub:
 
-  - [Come containerize le app web di .NET Framework con i contenitori di Windows e Docker](https://github.com/dotnet-architecture/eShopModernizing/wiki/02.-How-to-containerize-the-.NET-Framework-web-apps-with-Windows-Containers-and-Docker)
-  - [Aggiunta del supporto di Docker a un servizio WCF](https://github.com/dotnet-architecture/eShopModernizing/wiki/22.-Adding-Docker-Support)
+  - [Come distribuire le app web di .NET Framework con i contenitori Windows e Docker in un contenitore](https://github.com/dotnet-architecture/eShopModernizing/wiki/02.-How-to-containerize-the-.NET-Framework-web-apps-with-Windows-Containers-and-Docker)
+  - [Aggiunta del supporto Docker a un servizio WCF](https://github.com/dotnet-architecture/eShopModernizing/wiki/22.-Adding-Docker-Support)
 
 
 
-## <a name="walkthrough-3-deploy-your-windows-containers-based-app-to-azure-vms"></a>Procedura dettagliata 3: Distribuire l'app basata su contenitori di Windows in macchine virtuali di Azure
+## <a name="walkthrough-3-deploy-your-windows-containers-based-app-to-azure-vms"></a>Procedura dettagliata 3: Distribuire l'app basata su contenitori Windows in macchine virtuali di Azure
 
-### <a name="technical-walkthrough-availability"></a>Procedura dettagliata tecniche disponibilità
+### <a name="technical-walkthrough-availability"></a>Istruzioni dettagliate su disponibilità
 
-Procedura dettagliata tecnica completa è disponibile nella pagina wiki di repository GitHub eShopModernizing: [https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD))
+La procedura dettagliata tecnica completa è disponibile nella pagina wiki di repository GitHub eShopModernizing: [https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD))
 
 ### <a name="overview"></a>Panoramica
 
-La distribuzione in un host Docker in un Windows Server 2016 macchina virtuale (VM) in Azure consente di configurare rapidamente gli ambienti di sviluppo/test/staging. Offre inoltre una posizione comune per i tester o gli utenti di business convalidare l'app. Macchine virtuali anche possono essere modalità valido come ambienti di produzione un servizio (IaaS).
+Distribuzione in un host Docker in un Windows Server 2016 Virtual Machine (VM) in Azure consente di configurare rapidamente gli ambienti di sviluppo/test/staging. Offre inoltre una posizione frequente per i tester o utenti di business convalidare l'app. Macchine virtuali possono anche essere dell'infrastruttura valido come ambienti di produzione un servizio (IaaS).
 
 ### <a name="goals"></a>Obiettivi
 
-L'obiettivo di questa procedura dettagliata è di illustrare le alternative più, che è necessario quando si distribuiscono i contenitori di Windows in macchine virtuali di Azure basate su Windows Server 2016 o versioni successive.
+L'obiettivo di questa procedura dettagliata è descrive le alternative più, che è necessario quando si distribuisce i contenitori Windows in macchine virtuali di Azure basate su Windows Server 2016 o versioni successive.
 
 ### <a name="scenarios"></a>Scenari
 
-In questa procedura dettagliata sono illustrati i diversi scenari.
+In questa procedura dettagliata vengono illustrati gli scenari diversi.
 
-#### <a name="scenario-a-deploy-to-an-azure-vm-from-a-dev-pc-through-docker-engine-connection"></a>Scenario a: distribuire una macchina virtuale di Azure da un PC di sviluppo tramite una connessione al motore Docker
+#### <a name="scenario-a-deploy-to-an-azure-vm-from-a-dev-pc-through-docker-engine-connection"></a>Scenario a: Distribuisci in una VM di Azure da un PC di sviluppo tramite connessione al motore di Docker
 
-![Distribuire in una macchina virtuale di Azure da un computer di sviluppo tramite una connessione al motore Docker](./media/image5-4.png)
+![Distribuire in una VM di Azure da un computer di sviluppo tramite una connessione al motore di Docker](./media/image5-4.png)
 
-> **Figura 5-4.** Distribuire in una macchina virtuale di Azure da un computer di sviluppo tramite una connessione al motore Docker
+> **Figura 5-4.** Distribuire in una VM di Azure da un computer di sviluppo tramite una connessione al motore di Docker
 
-#### <a name="scenario-b-deploy-to-an-azure-vm-through-a-docker-registry"></a>Scenario b: distribuire una macchina virtuale di Azure tramite un registro di sistema di Docker
+#### <a name="scenario-b-deploy-to-an-azure-vm-through-a-docker-registry"></a>Scenario b: distribuire una macchina virtuale di Azure tramite un registro Docker
 
-![Distribuire una macchina virtuale di Azure tramite un registro di sistema di Docker](./media/image5-5.png)
+![Distribuire una macchina virtuale di Azure tramite un registro Docker](./media/image5-5.png)
 
-> **Figura 5-5.** Distribuire una macchina virtuale di Azure tramite un registro di sistema di Docker
+> **Figura 5-5.** Distribuire una macchina virtuale di Azure tramite un registro Docker
 
-#### <a name="scenario-c-deploy-to-an-azure-vm-from-cicd-pipelines-in-visual-studio-team-services"></a>Scenario c: distribuire una macchina virtuale di Azure dalla pipeline/CD degli elementi di configurazione in Visual Studio Team Services
+#### <a name="scenario-c-deploy-to-an-azure-vm-from-cicd-pipelines-in-azure-devops-services"></a>Scenario c: distribuire una macchina virtuale di Azure dalla pipeline CI/CD in servizi di Azure DevOps
 
-![Distribuire una macchina virtuale di Azure dalla pipeline/CD degli elementi di configurazione in Visual Studio Team Services](./media/image5-6.png)
+![Distribuire in una VM di Azure dalla pipeline CI/CD in servizi di Azure DevOps](./media/image5-6.png)
 
-> **Figura 5-6.** Distribuire una macchina virtuale di Azure dalla pipeline/CD degli elementi di configurazione in Visual Studio Team Services
+> **Figura 5-6.** Distribuire in una VM di Azure dalla pipeline CI/CD in servizi di Azure DevOps
 
-### <a name="azure-vms-for-windows-containers"></a>Macchine virtuali di Azure per i contenitori di Windows
+### <a name="azure-vms-for-windows-containers"></a>Macchine virtuali di Azure per contenitori Windows
 
-Macchine virtuali di Azure per i contenitori di Windows sono le macchine virtuali basate su Windows Server 2016, Windows 10 o versioni successive, entrambi con il motore Docker impostato. Nella maggior parte dei casi, viene utilizzato Windows Server 2016 in macchine virtuali di Azure.
+Macchine virtuali di Azure per contenitori Windows sono macchine virtuali basate su Windows Server 2016, Windows 10 o versioni successive, entrambi con il motore Docker configurare. Nella maggior parte dei casi, viene usato Windows Server 2016 in macchine virtuali di Azure.
 
-Azure offre attualmente di una macchina virtuale denominata **Windows Server 2016 con contenitori**. È possibile utilizzare questa macchina virtuale per provare la nuova funzionalità di contenitore di Windows Server, con Windows Server Core o Nano Server di Windows. Immagini del sistema operativo contenitore vengono installate e quindi la macchina virtuale è pronta all'uso con Docker.
+Attualmente, Azure offre una macchina virtuale denominata **Windows Server 2016 with Containers**. È possibile usare questa macchina virtuale per provare la nuova funzionalità di contenitore di Windows Server con Windows Server Core o Windows Nano Server. Le immagini del sistema operativo del contenitore vengono installate, e quindi la macchina virtuale è pronta per l'uso con Docker.
 
 ### <a name="benefits"></a>Vantaggi
 
-Sebbene i contenitori di Windows possono essere distribuiti a macchine virtuali in locale Windows Server 2016, quando si distribuiscono in Azure, è possibile ottenere un modo più semplice per iniziare, con macchine virtuali di contenitore pronto all'uso Windows Server. Anche possibile ottenere un percorso online comune che è accessibile ai tester e la scalabilità automatica tramite il set di scalabilità di macchine virtuali di Azure.
+Sebbene i contenitori di Windows possono essere distribuiti in macchine virtuali in locale Windows Server 2016, quando si distribuiscono in Azure, si ottiene un modo più semplice per iniziare, con macchine virtuali di contenitore pronto da usare Windows Server. È anche possibile ottenere una posizione online comune che è accessibile ai tester e la scalabilità automatica tramite set di scalabilità di macchine virtuali di Azure.
 
 ### <a name="next-steps"></a>Passaggi successivi
 
-Esplorare il contenuto di informazioni più dettaglio su wiki di GitHub:
+Esplorare il contenuto più approfondito su wiki di GitHub:
 
 [https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD))
 
 ## <a name="walkthrough-4-deploy-your-windows-containers-based-apps-to-azure-container-instances-aci"></a>Procedura dettagliata 4: Distribuire le app basate su contenitori di Windows per le istanze di contenitore di Azure (ACI)
 
-### <a name="technical-walkthrough-availability"></a>Procedura dettagliata tecniche disponibilità
+### <a name="technical-walkthrough-availability"></a>Istruzioni dettagliate su disponibilità
 
-Procedura dettagliata tecnica completa è disponibile nella pagina wiki di repository GitHub eShopModernizing:
+La procedura dettagliata tecnica completa è disponibile nella pagina wiki di repository GitHub eShopModernizing:
 
-[Distribuire le App per ACI (istanze del contenitore di Azure)](https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-Deploying-the-Apps-to-ACI-(Azure-Container-Instances))
+[La distribuzione dell'App a ACI (istanze di contenitore di Azure)](https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-Deploying-the-Apps-to-ACI-(Azure-Container-Instances))
 
 ### <a name="overview"></a>Panoramica
 
-[Le istanze di contenitore di Azure (ACI)](https://docs.microsoft.com/en-us/azure/container-instances/) è il modo più rapido per dispone di un ambiente di sviluppo/test/gestione temporanea di contenitori in cui è possibile distribuire singole istanze di contenitori.
+[Le istanze di contenitore di Azure (ACI)](https://docs.microsoft.com/en-us/azure/container-instances/) è il modo più rapido per disporre di un ambiente di sviluppo/test/staging contenitori in cui è possibile distribuire singole istanze di contenitori.
 
 ### <a name="goals"></a>Obiettivi
 
-Quando si distribuiscono i contenitori di Windows Azure contenitore istanze ACI () e come è possibile distribuire le app eShopModernizing in ACI, questa procedura dettagliata illustra gli scenari principali.
+Questa procedura dettagliata illustra gli scenari principali quando si distribuisce i contenitori di Windows per le istanze di contenitore di Azure (ACI) e come è possibile distribuire le app eShopModernizing in ACI.
 
 ### <a name="scenarios"></a>Scenari
 
-Possono esistere variazioni su come distribuire le app eShopModernizing in ACI quali la distribuzione di una o tutte le App (app MVC, Web Form app o un servizio WCF). Nel seguente scenario illustrato di seguito è possibile visualizzare l'app ASP.NET MVC e il contenitore di SQL Server distribuiti entrambi i parametri come contenitori in ACI (istanze di contenitori di Azure).
+Possono esistere variazioni sulla distribuzione di App eShopModernizing in ACI quali la distribuzione solo una o tutte le App (app MVC, applicazione Web Form o servizio WCF). Nello scenario seguente illustrato di seguito è possibile visualizzare l'app ASP.NET MVC e il contenitore di SQL Server di entrambi gli elementi distribuiti come contenitori in ACI (istanze di contenitore di Azure).
 
-![Distribuire in ACI da un ambiente di sviluppo](./media/image5-3.5.6.png)
+![Distribuire da un ambiente di sviluppo in ACI](./media/image5-3.5.6.png)
 
 ### <a name="benefits"></a>Vantaggi
 
-Istanze di contenitore di Azure semplifica creare e gestire i contenitori di Docker in Azure, senza dover eseguire il provisioning di macchine virtuali o adottare un servizio di livello superiore. Con ACI, è possibile distribuire un contenitore di Windows in Azure direttamente ed esporla a internet con un nome di dominio completo (FQDN) in pochi secondi (purché si disponga dell'immagine di contenitore di Windows pronto nel Registro di sistema Docker come Hub Docker o contenitore di Azure Registro di sistema).
+Istanze di contenitore di Azure rende semplice creare e gestire contenitori Docker in Azure, senza dover effettuare il provisioning di macchine virtuali o adottare un servizio di livello superiore. Con ACI, è possibile distribuire un contenitore Windows in Azure direttamente ed esporla a internet con un nome di dominio completo (FQDN) in pochi secondi (purché si disponga dell'immagine del contenitore Windows pronto in un registro Docker come contenitori di Azure o Hub Docker Registro di sistema).
 
 ### <a name="considerations"></a>Considerazioni
 
-Distribuzione di contenitori di Windows con una versione completa di .NET Framework / ASP.NET o SQL Server in Azure contenitore istanze ACI () non è abbastanza veloce per la distribuzione in un Host Docker regolari (ad esempio, Windows Server 2016 con i contenitori di Windows) perché è necessario che l'immagine di Docker scaricato (estratta dal Registro di sistema Docker) ogni volta e le dimensioni dell'immagine contenitore SQL (15.1 GB) e l'immagine di contenitore ASP.NET (13.9 GB) vengono significativamente grandi, tuttavia, è molto più economica rispetto a mantenere il proprio host docker (in modo permanente in linea Windows Server 2016 con macchina virtuale di contenitori di Windows in Azure) per non parlare di un intero agente di orchestrazione, ad esempio Kubernetes in Azure (AKS/ACS) o Azure Service Fabric che, invece, sono un'ottima scelta per le distribuzioni di produzione.
+La distribuzione di contenitori di Windows con una versione completa di .NET Framework / ASP.NET o SQL Server in Azure le istanze di contenitore non è abbastanza veloce come distribuzione in un Host Docker normali (ad esempio, Windows Server 2016 con contenitori Windows) perché deve essere l'immagine Docker scaricato (estratta dal registro Docker) ogni volta e le dimensioni dell'immagine del contenitore SQL (15.1 GB) e l'immagine del contenitore ASP.NET (13.9 GB) sono significativamente grandi, tuttavia, è molto più economica rispetto a mantenere il proprio host docker (in modo permanente in linea Windows Server 2016 con VM di contenitori Windows in Azure) per non parlare di un intero agente di orchestrazione come Kubernetes in Azure (AKS/ACS) o Azure Service Fabric che sono, d'altra parte, un'ottima scelta per le distribuzioni di produzione.
 
-Come principale conclusione, utilizzando istanze di contenitori di Azure è un'opzione molto interessante per gli scenari di sviluppo/Test e per le pipeline CI/CD-ROM.
+Come principale conclusione, tramite le istanze di contenitore di Azure è un'opzione molto accattivante per gli scenari di sviluppo/Test e per le pipeline di integrazione continua/recapito Continuo.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Esplorare il contenuto di informazioni più dettaglio su wiki di GitHub: 
+Esplorare il contenuto più approfondito su wiki di GitHub: 
 
 [https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-Deploying-the-Apps-to-ACI-(Azure-Container-Instances)](https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-Deploying-the-Apps-to-ACI-(Azure-Container-Instances)TBD)
 
 
 ## <a name="walkthrough-5-deploy-your-windows-containers-based-apps-to-kubernetes-in-azure-container-service"></a>Procedura dettagliata 5: Distribuire le app basate su contenitori di Windows in Kubernetes nel servizio contenitore di Azure
 
-### <a name="technical-walkthrough-availability"></a>Procedura dettagliata tecniche disponibilità
+### <a name="technical-walkthrough-availability"></a>Istruzioni dettagliate su disponibilità
 
-Procedura dettagliata tecnica completa è disponibile nella pagina wiki di repository GitHub eShopModernizing:
+La procedura dettagliata tecnica completa è disponibile nella pagina wiki di repository GitHub eShopModernizing:
 
 [https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD))
 
 ### <a name="overview"></a>Panoramica
 
-Un'applicazione che si basa sui contenitori di Windows, rapidamente è necessario utilizzare le piattaforme, spostando ulteriormente da macchine virtuali IaaS. Questo è necessario per ottenere facilmente la scalabilità elevata meglio la scalabilità automatica e per un miglioramento significativo automaticamente le distribuzioni e controllo delle versioni. È possibile raggiungere questi obiettivi tramite l'agente di orchestrazione [Kubernetes](https://kubernetes.io/), disponibile in [servizi contenitore Azure](https://azure.microsoft.com/services/container-service/).
+Un'applicazione basata su contenitori Windows sarà necessario rapidamente a usare le piattaforme, spostando ulteriormente dalle macchine virtuali IaaS. Questo è necessario per ottenere con facilità la scalabilità elevata e meglio automatizzata della scalabilità e per un miglioramento significativo delle automaticamente le distribuzioni e controllo delle versioni. È possibile raggiungere questi obiettivi con l'agente di orchestrazione [Kubernetes](https://kubernetes.io/), disponibile in [servizi contenitore di Azure](https://azure.microsoft.com/services/container-service/).
 
 ### <a name="goals"></a>Obiettivi
 
-L'obiettivo di questa procedura dettagliata consiste nel comprendere come distribuire un'applicazione basata su contenitore di Windows per Kubernetes (chiamato anche *K8s*) nel servizio contenitore di Azure. La distribuzione in Kubernetes da zero è un processo in due passaggi:
+L'obiettivo di questa procedura dettagliata consiste nel comprendere come distribuire un'applicazione basata su Windows contenitore in Kubernetes (detto anche *K8s*) nel servizio contenitore di Azure. Distribuzione di Kubernetes da zero è un processo in due passaggi:
 
-1.  Distribuire un cluster Kubernetes al servizio di contenitore di Azure.
+1.  Distribuire un cluster Kubernetes del servizio contenitore di Azure.
 
-2.  Distribuire l'applicazione e le relative risorse nel cluster Kubernetes.
+2.  Distribuire l'applicazione e le risorse correlate al cluster Kubernetes.
 
 ### <a name="scenarios"></a>Scenari
 
-#### <a name="scenario-a-deploy-directly-to-a-kubernetes-cluster-from-a-dev-environment"></a>Scenario a: distribuire direttamente a un cluster Kubernetes da un ambiente di sviluppo
+#### <a name="scenario-a-deploy-directly-to-a-kubernetes-cluster-from-a-dev-environment"></a>Scenario a: Distribuisci direttamente a un cluster Kubernetes da un ambiente di sviluppo
 
 ![Distribuire direttamente in un cluster Kubernetes da un ambiente di sviluppo](./media/image5-7.png)
 
 > **Figura 5-7.** Distribuire direttamente in un cluster Kubernetes da un ambiente di sviluppo
 
-#### <a name="scenario-b-deploy-to-a-kubernetes-cluster-from-cicd-pipelines-in-team-services"></a>Scenario b: distribuire a un cluster Kubernetes CI/CD pipeline in Team Services
+#### <a name="scenario-b-deploy-to-a-kubernetes-cluster-from-cicd-pipelines-in-azure-devops-services"></a>Scenario b: distribuire in un cluster Kubernetes da CI/CD pipeline in servizi di Azure DevOps
 
-![Distribuire un cluster Kubernetes dalla pipeline CI/CD-ROM in Team Services](./media/image5-8.png)
+![Distribuire un cluster Kubernetes dalla pipeline CI/CD in servizi di Azure DevOps](./media/image5-8.png)
 
-> **Figura 5-8.** Distribuire un cluster Kubernetes dalla pipeline CI/CD-ROM in Team Services
+> **Figura 5-8.** Distribuire un cluster Kubernetes dalla pipeline CI/CD in servizi di Azure DevOps
 
 ### <a name="benefits"></a>Vantaggi
 
-Esistono numerosi vantaggi per la distribuzione a un cluster in Kubernetes. Il vantaggio più importante è che si ottiene un ambiente di produzione in cui è possibile scalare orizzontalmente l'applicazione in base al numero di istanze di contenitori, si desidera utilizzare (scalabilità interna in nodi esistenti) e in base al numero di nodi o le macchine virtuali in (il cluster scalabilità globale del cluster).
+Esistono diversi vantaggi per la distribuzione in un cluster di Kubernetes. Il vantaggio più importante è che si ottiene un ambiente di produzione in cui è possibile scalare orizzontalmente l'applicazione in base al numero di istanze di contenitore si desidera utilizzare (inner una scalabilità molto elevata di nodi esistenti) e in base al numero di nodi o macchine virtuali nel (cluster scalabilità globale del cluster).
 
-Il servizio contenitore di Azure consente di ottimizzare tecnologie e strumenti open source più diffusi in particolare per Azure. È possibile ottenere una soluzione aperta che offre la portabilità, per i contenitori e per la configurazione dell'applicazione. Selezionare la dimensione, il numero di host, e orchestrator strumenti-Container servizio gestisce tutti gli altri elementi.
+Servizio contenitore di Azure consente di ottimizzare le tecnologie e strumenti open source più diffusi per Azure. Si ottiene una soluzione che offre la portabilità sia per i contenitori per la configurazione dell'applicazione. Selezionare le dimensioni, il numero di host, e dell'agente di orchestrazione strumenti-servizio contenitore gestisce tutto il resto.
 
-Con Kubernetes, gli sviluppatori possono sullo stato da considerare macchine fisiche e virtuali, per la pianificazione di un'infrastruttura incentrato sul contenitore che facilita le seguenti funzionalità, tra gli altri:
+Con Kubernetes, gli sviluppatori possono passare da pensare macchine fisiche e virtuali, alla pianificazione di un'infrastruttura incentrata sui contenitori che facilita le funzionalità seguenti, tra gli altri:
 
-- In base a più contenitori di applicazioni
+- Applicazioni basate su più contenitori
 
-- La replica delle istanze di contenitori e il ridimensionamento orizzontale
+- La replica di istanze di contenitore e la scalabilità automatica orizzontale
 
-- Denominazione e individuazione (ad esempio, DNS interno)
+- Denominazione e l'individuazione (ad esempio, il DNS interno)
 
 - Bilanciamento del carico
 
-- Gli aggiornamenti in sequenza
+- Aggiornamenti in sequenza
 
-- Distribuzione di segreti
+- Distribuzione segreti
 
 - Controlli di integrità dell'applicazione
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Esplorare il contenuto di informazioni più dettaglio su wiki di GitHub: [https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD))
+Esplorare il contenuto più approfondito su wiki di GitHub: [https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD))
 
-## <a name="walkthrough-6-deploy-your-windows-containers-based-apps-to-azure-service-fabric"></a>Procedura dettagliata 6: Distribuire le app basate su contenitori di Windows Azure Service Fabric
+## <a name="walkthrough-6-deploy-your-windows-containers-based-apps-to-azure-service-fabric"></a>Procedura dettagliata 6: Distribuire le app basate su contenitori Windows in Azure Service Fabric
 
-### <a name="technical-walkthrough-availability"></a>Procedura dettagliata tecniche disponibilità
+### <a name="technical-walkthrough-availability"></a>Istruzioni dettagliate su disponibilità
 
-Procedura dettagliata tecnica completa è disponibile nella pagina wiki di repository GitHub eShopModernizing:
+La procedura dettagliata tecnica completa è disponibile nella pagina wiki di repository GitHub eShopModernizing:
 
 [https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-How-to-deploy-your-Windows-Containers-based-apps-into-Azure-Service-Fabric-(Including-CI-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-How-to-deploy-your-Windows-Containers-based-apps-into-Azure-Service-Fabric-(Including-CI-CD))
 
 ### <a name="overview"></a>Panoramica
 
-Un'applicazione basata su contenitori di Windows rapidamente deve utilizzare le piattaforme, spostando ulteriormente da macchine virtuali IaaS. Questo è necessario per ottenere facilmente la scalabilità elevata meglio la scalabilità automatica e per un miglioramento significativo automaticamente le distribuzioni e controllo delle versioni. È possibile raggiungere questi obiettivi tramite orchestrator Azure Service Fabric è disponibile nel cloud di Azure, ma è anche disponibile per l'utilizzo di on-premise, o anche in un cloud pubblico diverso.
+Un'applicazione basata su contenitori Windows rapidamente deve usare le piattaforme, spostando ulteriormente dalle macchine virtuali IaaS. Questo è necessario per ottenere con facilità la scalabilità elevata e meglio automatizzata della scalabilità e per un miglioramento significativo delle automaticamente le distribuzioni e controllo delle versioni. È possibile raggiungere questi obiettivi con Azure Service Fabric, che è disponibile nel cloud di Azure, ma è anche disponibile per l'uso in locale, l'agente di orchestrazione o anche in un altro cloud pubblico.
 
 ### <a name="goals"></a>Obiettivi
 
-L'obiettivo di questa procedura dettagliata consiste nel comprendere come distribuire un'applicazione basata su Windows contenitore a un cluster di Service Fabric in Azure. Distribuzione di Service Fabric da zero è un processo in due passaggi:
+L'obiettivo di questa procedura dettagliata consiste nel comprendere come distribuire un'applicazione basata su contenitore Windows in un cluster di Service Fabric in Azure. Distribuzione di Service Fabric da zero è un processo in due passaggi:
 
-1.  Distribuire un cluster di Service Fabric in Azure (o in un ambiente diverso).
+1.  Distribuire un cluster di Service Fabric in Azure (o a un altro ambiente).
 
-2.  Distribuire l'applicazione e le relative risorse nel cluster di Service Fabric.
+2.  Distribuire l'applicazione e le risorse correlate per il cluster di Service Fabric.
 
 ### <a name="scenarios"></a>Scenari
 
-#### <a name="scenario-a-deploy-directly-to-a-service-fabric-cluster-from-a-dev-environment"></a>Scenario a: distribuire direttamente a un cluster di Service Fabric da un ambiente di sviluppo
+#### <a name="scenario-a-deploy-directly-to-a-service-fabric-cluster-from-a-dev-environment"></a>Scenario a: Distribuisci direttamente a un cluster di Service Fabric da un ambiente di sviluppo
 
 ![Distribuire direttamente in un cluster di Service Fabric da un ambiente di sviluppo](./media/image5-9.png)
 
 > **Figura 5-9.** Distribuire direttamente in un cluster di Service Fabric da un ambiente di sviluppo
 
-### <a name="scenario-b-deploy-to-a-service-fabric-cluster-from-cicd-pipelines-in-team-services"></a>Scenario b: distribuire a un cluster di Service Fabric dal CI/CD-ROM pipeline in Team Services
+### <a name="scenario-b-deploy-to-a-service-fabric-cluster-from-cicd-pipelines-in-azure-devops-services"></a>Scenario b: distribuire un cluster di Service Fabric da CI/CD pipeline in servizi di Azure DevOps
 
-![Distribuire un cluster di Service Fabric dalla pipeline/CD degli elementi di configurazione in Visual Studio Team Services](./media/image5-10.png)
+![Distribuire in un cluster di Service Fabric dalla pipeline CI/CD in servizi di Azure DevOps](./media/image5-10.png)
 
-> **Figura 5-10.** Distribuire un cluster di Service Fabric dalla pipeline/CD degli elementi di configurazione in Visual Studio Team Services
+> **Figura 5-10.** Distribuire in un cluster di Service Fabric dalla pipeline CI/CD in servizi di Azure DevOps
 
 ## <a name="benefits"></a>Vantaggi
 
-I vantaggi della distribuzione a un cluster nell'infrastruttura del servizio sono simili ai vantaggi dell'utilizzo Kubernetes. Una differenza, tuttavia, è che Service Fabric è un ambiente di produzione più avanzato per le applicazioni di Windows rispetto a Kubernetes, ovvero in una fase beta per i contenitori di Windows nella Kubernetes versione 1.9 (2017 dicembre). Kubernetes è un ambiente più avanzato per Linux.
+I vantaggi della distribuzione in un cluster di Service Fabric sono simili ai vantaggi dell'uso di Kubernetes. Una differenza, tuttavia, è che Service Fabric è un ambiente di produzione più avanzato per le applicazioni di Windows rispetto a Kubernetes, che si trova in una fase beta per i contenitori Windows in Kubernetes versione 1.9 (dicembre 2017). Kubernetes è un ambiente più avanzato per Linux.
 
-Il principale vantaggio dell'utilizzo di Azure Service Fabric è che si dispone di un ambiente di ambiente di produzione in cui è possibile scalare orizzontalmente l'applicazione in base al numero di istanze di contenitori, si desidera utilizzare (scalabilità interna in nodi esistenti) e in base al numero di i nodi o macchine virtuali in cluster (scalabilità globale del cluster).
+Il principale vantaggio dell'uso di Azure Service Fabric è di ottenere un ambiente di produzione in cui è possibile scalare orizzontalmente l'applicazione in base al numero di istanze di contenitore si desidera utilizzare (inner una scalabilità molto elevata di nodi esistenti) e in base al numero di i nodi o macchine virtuali del cluster (scalabilità globale del cluster).
 
-Azure Service Fabric offre portabilità per i contenitori e per la configurazione dell'applicazione. È un'infrastruttura del servizio cluster in Azure oppure installarlo in locale nel proprio Data Center. È anche possibile installare un cluster di Service Fabric in un cloud diverso, ad esempio [Amazon AWS](https://blogs.msdn.microsoft.com/azureservicefabric/2017/05/18/tutorial-how-to-create-a-service-fabric-standalone-cluster-with-aws-ec2-instances/).
+Azure Service Fabric offre la portabilità per i contenitori sia per la configurazione dell'applicazione. È possibile avere un'infrastruttura di servizi del cluster in Azure o installarlo in locale nel proprio Data Center. È anche possibile installare un cluster di Service Fabric in un cloud diverso, ad esempio [Amazon AWS](https://blogs.msdn.microsoft.com/azureservicefabric/2017/05/18/tutorial-how-to-create-a-service-fabric-standalone-cluster-with-aws-ec2-instances/).
 
-Con Service Fabric, gli sviluppatori possono sullo stato da considerare macchine fisiche e virtuali per la pianificazione di un'infrastruttura incentrato sul contenitore che facilita le seguenti funzionalità, tra gli altri:
+Con Service Fabric, gli sviluppatori possono passare da pensare macchine fisiche e virtuali per la pianificazione di un'infrastruttura incentrata sui contenitori che facilita le funzionalità seguenti, tra gli altri:
 
 - Applicazioni basate su più contenitori.
 
-- La replica di istanze di contenitori e scalabilità orizzontale automatica.
+- La replica di istanze di contenitore e la scalabilità automatica orizzontale.
 
-- Denominazione e individuazione (ad esempio, DNS interno).
+- Denominazione e l'individuazione (ad esempio, il DNS interno).
 
 - Bilanciamento del carico.
 
 - Aggiornamenti in sequenza.
 
-- Distribuire i segreti.
+- Per la distribuzione dei segreti.
 
-- Controlla l'integrità dell'applicazione.
+- Controlli di integrità dell'applicazione.
 
-Le seguenti funzionalità sono esclusive nell'infrastruttura di servizio (rispetto a altro orchestrators):
+Le funzionalità seguenti sono esclusive in Service Fabric (rispetto a altri agenti di orchestrazione):
 
-- Funzionalità di servizi con stato, tramite il modello applicazione servizi affidabili.
+- Funzionalità di servizi con stato, tramite il modello applicativo di Reliable Services.
 
-- Modello di attori, tramite il modello di applicazione Reliable Actors.
+- Modello di attori, tramite il modello applicativo di Reliable Actors.
 
-- Distribuire processi ossa bare, oltre ai contenitori di Windows o Linux.
+- Distribuire i processi di essenziale, oltre a contenitori Windows o Linux.
 
-- Gli aggiornamenti in sequenza e controlli di integrità avanzati.
+- Gli aggiornamenti in sequenza e controlli di integrità avanzate.
 
 ### <a name="next-steps"></a>Passaggi successivi
 
-Esplorare il contenuto di informazioni più dettaglio su wiki di GitHub:
+Esplorare il contenuto più approfondito su wiki di GitHub:
 
 [https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-How-to-deploy-your-Windows-Containers-based-apps-into-Azure-Service-Fabric-(Including-CI-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-How-to-deploy-your-Windows-Containers-based-apps-into-Azure-Service-Fabric-(Including-CI-CD))
 

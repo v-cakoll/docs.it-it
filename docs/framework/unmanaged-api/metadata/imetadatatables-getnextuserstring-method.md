@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 01b326765e792bf97658d951a2d5590d22eff546
-ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
-ms.translationtype: MT
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44336498"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44513887"
 ---
 # <a name="imetadatatablesgetnextuserstring-method"></a>Metodo IMetaDataTables::GetNextUserString
 Ottiene l'indice della riga che contiene la stringa a livello di codice successiva nella colonna della tabella corrente.  

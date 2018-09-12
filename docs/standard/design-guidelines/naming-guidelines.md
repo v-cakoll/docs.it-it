@@ -14,11 +14,11 @@ ms.assetid: fc076d66-9b5f-42d3-aa65-61d970c794a3
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 70888e068782add5ebe5ae1c7da3bdee842faea8
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44267008"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44699910"
 ---
 # <a name="naming-guidelines"></a>Convenzioni di denominazione
 Segue un set coerente di convenzioni di denominazione per lo sviluppo di un framework può essere un importante contributo a livello di usabilità del framework. Consente al framework di essere usata da molti sviluppatori sui progetti ampiamente separati. Oltre la coerenza del form, i nomi di elementi del framework devono essere riconosciuti facilmente e devono fornire la funzione di ogni elemento.  

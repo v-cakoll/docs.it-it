@@ -3,11 +3,11 @@ title: Esempio di elemento di associazione di individuazione
 ms.date: 03/30/2017
 ms.assetid: af513015-85bf-417b-8729-1bdff77ff6d6
 ms.openlocfilehash: d906d9a389c50095f2af5d52e3874c3e43199e68
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44177536"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44511919"
 ---
 # <a name="discovery-binding-element-sample"></a>Esempio di elemento di associazione di individuazione
 In questo esempio viene illustrato come utilizzare l'elemento di associazione del client di individuazione per individuare un servizio. Questa funzionalità consente agli sviluppatori di aggiungere un canale client di individuazione allo stack dei canali del client esistente, rendendo il modello di programmazione estremamente intuitivo. Quando il canale associato viene aperto, l'indirizzo del servizio viene risolto utilizzando la funzionalità di individuazione. L'esempio è costituito dai progetti seguenti:  
