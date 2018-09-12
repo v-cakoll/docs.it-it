@@ -3,17 +3,17 @@ title: 'Funzioni ricorsive: parola chiave rec (F#)'
 description: "Informazioni su come la parola chiave 'rec' di F # viene usata con la parola chiave 'let'. per definire una funzione ricorsiva."
 ms.date: 05/16/2016
 ms.openlocfilehash: 5aab6ed8ab0fc3c0f0bcfc93c3ce6518ec53254f
-ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44336511"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44710823"
 ---
-# <a name="recursive-functions-the-rec-keyword"></a><span data-ttu-id="e2e8f-103">Funzioni ricorsive: parola chiave rec</span><span class="sxs-lookup"><span data-stu-id="e2e8f-103">Recursive Functions: The rec Keyword</span></span>
+# <a name="recursive-functions-the-rec-keyword"></a><span data-ttu-id="4628e-103">Funzioni ricorsive: parola chiave rec</span><span class="sxs-lookup"><span data-stu-id="4628e-103">Recursive Functions: The rec Keyword</span></span>
 
-<span data-ttu-id="e2e8f-104">Il `rec` parola chiave viene usata in combinazione con il `let` parola chiave per definire una funzione ricorsiva.</span><span class="sxs-lookup"><span data-stu-id="e2e8f-104">The `rec` keyword is used together with the `let` keyword to define a recursive function.</span></span>
+<span data-ttu-id="4628e-104">Il `rec` parola chiave viene usata in combinazione con il `let` parola chiave per definire una funzione ricorsiva.</span><span class="sxs-lookup"><span data-stu-id="4628e-104">The `rec` keyword is used together with the `let` keyword to define a recursive function.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="e2e8f-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="e2e8f-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="4628e-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="4628e-105">Syntax</span></span>
 
 ```fsharp
 // Recursive function:
@@ -28,27 +28,27 @@ function2-body
 ...
 ```
 
-## <a name="remarks"></a><span data-ttu-id="e2e8f-106">Note</span><span class="sxs-lookup"><span data-stu-id="e2e8f-106">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="4628e-106">Note</span><span class="sxs-lookup"><span data-stu-id="4628e-106">Remarks</span></span>
 
-<span data-ttu-id="e2e8f-107">Funzioni ricorsive, le funzioni che chiamano se stesse, vengono identificate in modo esplicito nel linguaggio F #.</span><span class="sxs-lookup"><span data-stu-id="e2e8f-107">Recursive functions, functions that call themselves, are identified explicitly in the F# language.</span></span> <span data-ttu-id="e2e8f-108">Ciò rende disponibili l'identificatore che viene definito nell'ambito della funzione.</span><span class="sxs-lookup"><span data-stu-id="e2e8f-108">This makes the identifer that is being defined available in the scope of the function.</span></span>
+<span data-ttu-id="4628e-107">Funzioni ricorsive, le funzioni che chiamano se stesse, vengono identificate in modo esplicito nel linguaggio F #.</span><span class="sxs-lookup"><span data-stu-id="4628e-107">Recursive functions, functions that call themselves, are identified explicitly in the F# language.</span></span> <span data-ttu-id="4628e-108">Ciò rende disponibili l'identificatore che viene definito nell'ambito della funzione.</span><span class="sxs-lookup"><span data-stu-id="4628e-108">This makes the identifer that is being defined available in the scope of the function.</span></span>
 
-<span data-ttu-id="e2e8f-109">Il codice seguente illustra una funzione ricorsiva che calcola la *n*<sup>th</sup> numero di Fibonacci.</span><span class="sxs-lookup"><span data-stu-id="e2e8f-109">The following code illustrates a recursive function that computes the *n*<sup>th</sup> Fibonacci number.</span></span>
+<span data-ttu-id="4628e-109">Il codice seguente illustra una funzione ricorsiva che calcola la *n*<sup>th</sup> numero di Fibonacci.</span><span class="sxs-lookup"><span data-stu-id="4628e-109">The following code illustrates a recursive function that computes the *n*<sup>th</sup> Fibonacci number.</span></span>
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet4001.fs)]
 
 >[!NOTE]
-<span data-ttu-id="e2e8f-110">In pratica, codice come quello precedente è dispendioso di memoria e tempo processore dal momento che implica il ricalcolo di valori calcolati in precedenza.</span><span class="sxs-lookup"><span data-stu-id="e2e8f-110">In practice, code like that above is wasteful of memory and processor time because it involves the recomputation of previously computed values.</span></span>
+<span data-ttu-id="4628e-110">In pratica, codice come quello precedente è dispendioso di memoria e tempo processore dal momento che implica il ricalcolo di valori calcolati in precedenza.</span><span class="sxs-lookup"><span data-stu-id="4628e-110">In practice, code like that above is wasteful of memory and processor time because it involves the recomputation of previously computed values.</span></span>
 
-<span data-ttu-id="e2e8f-111">I metodi sono implicitamente ricorsivo all'interno del tipo; non è necessario aggiungere il `rec` (parola chiave).</span><span class="sxs-lookup"><span data-stu-id="e2e8f-111">Methods are implicitly recursive within the type; there is no need to add the `rec` keyword.</span></span> <span data-ttu-id="e2e8f-112">Associazioni let nelle classi sono implicitamente non ricorsivo.</span><span class="sxs-lookup"><span data-stu-id="e2e8f-112">Let bindings within classes are not implicitly recursive.</span></span>
+<span data-ttu-id="4628e-111">I metodi sono implicitamente ricorsivo all'interno del tipo; non è necessario aggiungere il `rec` (parola chiave).</span><span class="sxs-lookup"><span data-stu-id="4628e-111">Methods are implicitly recursive within the type; there is no need to add the `rec` keyword.</span></span> <span data-ttu-id="4628e-112">Associazioni let nelle classi sono implicitamente non ricorsivo.</span><span class="sxs-lookup"><span data-stu-id="4628e-112">Let bindings within classes are not implicitly recursive.</span></span>
 
-## <a name="mutually-recursive-functions"></a><span data-ttu-id="e2e8f-113">Funzioni ricorsive reciproche</span><span class="sxs-lookup"><span data-stu-id="e2e8f-113">Mutually Recursive Functions</span></span>
+## <a name="mutually-recursive-functions"></a><span data-ttu-id="4628e-113">Funzioni ricorsive reciproche</span><span class="sxs-lookup"><span data-stu-id="4628e-113">Mutually Recursive Functions</span></span>
 
-<span data-ttu-id="e2e8f-114">Le funzioni sono talvolta *ricorsive reciproche*, vale a dire le chiamate formano un cerchio, in cui una funzione chiama un'altra che a sua volta chiama la prima, con qualsiasi numero di chiamate tra.</span><span class="sxs-lookup"><span data-stu-id="e2e8f-114">Sometimes functions are *mutually recursive*, meaning that calls form a circle, where one function calls another which in turn calls the first, with any number of calls in between.</span></span> <span data-ttu-id="e2e8f-115">È necessario definire tali funzioni tra loro in quello `let` binding, utilizzando il `and` parola chiave per collegarli tra loro.</span><span class="sxs-lookup"><span data-stu-id="e2e8f-115">You must define such functions together in the one `let` binding, using the `and` keyword to link them together.</span></span>
+<span data-ttu-id="4628e-114">Le funzioni sono talvolta *ricorsive reciproche*, vale a dire le chiamate formano un cerchio, in cui una funzione chiama un'altra che a sua volta chiama la prima, con qualsiasi numero di chiamate tra.</span><span class="sxs-lookup"><span data-stu-id="4628e-114">Sometimes functions are *mutually recursive*, meaning that calls form a circle, where one function calls another which in turn calls the first, with any number of calls in between.</span></span> <span data-ttu-id="4628e-115">È necessario definire tali funzioni tra loro in quello `let` binding, utilizzando il `and` parola chiave per collegarli tra loro.</span><span class="sxs-lookup"><span data-stu-id="4628e-115">You must define such functions together in the one `let` binding, using the `and` keyword to link them together.</span></span>
 
-<span data-ttu-id="e2e8f-116">Nell'esempio seguente vengono illustrati due si escludono a vicenda funzioni ricorsive.</span><span class="sxs-lookup"><span data-stu-id="e2e8f-116">The following example shows two mutually recursive functions.</span></span>
+<span data-ttu-id="4628e-116">Nell'esempio seguente vengono illustrati due si escludono a vicenda funzioni ricorsive.</span><span class="sxs-lookup"><span data-stu-id="4628e-116">The following example shows two mutually recursive functions.</span></span>
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet4002.fs)]
 
-## <a name="see-also"></a><span data-ttu-id="e2e8f-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="e2e8f-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4628e-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="4628e-117">See also</span></span>
 
-- [<span data-ttu-id="e2e8f-118">Funzioni</span><span class="sxs-lookup"><span data-stu-id="e2e8f-118">Functions</span></span>](index.md)
+- [<span data-ttu-id="4628e-118">Funzioni</span><span class="sxs-lookup"><span data-stu-id="4628e-118">Functions</span></span>](index.md)
