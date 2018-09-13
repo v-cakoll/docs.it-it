@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 4e530831-695e-49ff-8f0b-e5b0c526b8eb
 ms.openlocfilehash: 2a59a9fc1c3b2f52543f4cc69de22a5703fa9b8b
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44192509"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44707435"
 ---
 # <a name="writing-dataset-schema-information-as-xsd"></a>Scrittura di informazioni dello schema di dataset come XSD
 È possibile scrivere lo schema di un tipo <xref:System.Data.DataSet> sotto forma di schema XSD (XML Schema Definition Language), in modo da consentirne il trasporto, con o senza dati correlati, in un documento XML. XML Schema può essere scritto in un file, un flusso, un <xref:System.Xml.XmlWriter>, o una stringa; è utile per la generazione di un oggetto fortemente tipizzato **set di dati**. Per altre informazioni sulle fortemente tipizzate **set di dati** oggetti, vedere [tipizzati](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md).  
