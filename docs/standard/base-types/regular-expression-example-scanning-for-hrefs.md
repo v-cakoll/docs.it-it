@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fae2c15b-7adf-4b15-b118-58eb3906994f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b270559e9e73e18bebb29e36b815268d5426a940
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: e6fe667ca908b2a4ba16e34e8e74dd39ca01f153
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728680"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44271931"
 ---
 # <a name="regular-expression-example-scanning-for-hrefs"></a>Esempio di espressione regolare: ricerca di HREF
 Nell'esempio riportato di seguito viene cercata una stringa di input e vengono visualizzati tutti i valori href="…" e le relative posizioni nella stringa.  
@@ -56,5 +56,6 @@ Nell'esempio riportato di seguito viene cercata una stringa di input e vengono v
   
  Per risolvere questi problemi, la classe <xref:System.Text.RegularExpressions.Regex> supporta la sintassi `(?<name>…)` per l'acquisizione di una corrispondenza in uno slot specificato (che è possibile denominare tramite una stringa o un numero intero, che può essere chiamato più rapidamente). Le corrispondenze alternative per la stessa stringa possono perciò essere tutte indirizzate verso la stessa posizione. In caso di conflitto, l'ultima corrispondenza rilasciata in uno slot è quella corretta. (È tuttavia disponibile un elenco completo di più corrispondenze per un unico slot. Vedere la raccolta <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> per i dettagli.  
   
-## <a name="see-also"></a>Vedere anche  
- [Espressioni regolari .NET](../../../docs/standard/base-types/regular-expressions.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Espressioni regolari .NET](../../../docs/standard/base-types/regular-expressions.md)
