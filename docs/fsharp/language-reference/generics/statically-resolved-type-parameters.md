@@ -3,11 +3,11 @@ title: Parametri di tipo risolti staticamente (F#)
 description: 'Informazioni su come utilizzare F # parametro di tipo risolti staticamente, che viene sostituito con un tipo effettivo in fase di compilazione anziché in fase di esecuzione.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 747917fef2746dcbf363ef4b717ace5e47229800
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44698851"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45595138"
 ---
 # <a name="statically-resolved-type-parameters"></a>Parametri di tipo risolti staticamente
 
