@@ -3,11 +3,11 @@ title: Unità di misura (F#)
 description: 'Informazioni su a virgola mobile come e i valori interi con segno in F # possono essere associate unità di misura, che sono in genere usata per indicare lunghezza, volume e massa.'
 ms.date: 05/16/2016
 ms.openlocfilehash: ad2193e25f3c0cee6e73cd529ab43d1e4b6b549b
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45519523"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45616153"
 ---
 # <a name="units-of-measure"></a>Unità di misura
 

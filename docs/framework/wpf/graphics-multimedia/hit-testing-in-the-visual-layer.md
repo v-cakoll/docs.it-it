@@ -9,11 +9,11 @@ helpviewer_keywords:
 - visual layer [WPF], hit testing functionality
 ms.assetid: b1a64b61-14be-4d75-b89a-5c67bebb2c7b
 ms.openlocfilehash: fe54578407e881ec7d6782ec21100b29eded07a3
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44365981"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45618779"
 ---
 # <a name="hit-testing-in-the-visual-layer"></a>Hit testing a livello visivo
 In questo argomento vengono forniti dei cenni preliminari sulle funzionalità di hit testing fornite dal livello visivo. Supporto per l'hit testing consente di determinare se un valore di geometria o un punto compreso in contenuto di cui viene eseguito il rendering di un <xref:System.Windows.Media.Visual>, consentendo di implementare un comportamento dell'interfaccia utente, ad esempio un rettangolo di selezione per selezionare più oggetti.  

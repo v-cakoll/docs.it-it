@@ -4,12 +4,12 @@ description: Informazioni su come definire e usare valori restituiti e variabili
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/04/2018
-ms.openlocfilehash: a869cd50c5512c9893b6e5056aa58e1f92ee26f4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6250d2b0c3490cce18623d6b06d5e1a352f22c09
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510565"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45616140"
 ---
 # <a name="ref-returns-and-ref-locals"></a>Valori restituiti e variabili locali ref
 
@@ -58,7 +58,7 @@ Il valore restituito ref è un alias per un'altra variabile nell'ambito del meto
 - Quando si legge il valore, si legge il valore della variabile di cui effettua l'aliasing.
 - Se lo si restituisce *per riferimento*, si restituisce un alias alla stessa variabile.
 - Se lo si passa a un altro metodo *per riferimento*, si passa un riferimento alla variabile di cui effettua l'aliasing.
-- Quando si crea un alias [locale ref](#ref-local), si crea un nuovo alias per la stessa variabile.
+- Quando si crea un alias [locale ref](#ref-locals), si crea un nuovo alias per la stessa variabile.
 
 
 ## <a name="ref-locals"></a>Variabili locali ref
