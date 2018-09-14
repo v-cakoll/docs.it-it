@@ -3,11 +3,11 @@ title: Sequenze (F#)
 description: 'Informazioni su come usare le sequenze di F #, quando si hanno grandi dimensioni, raccolta ordinata di dati, ma non necessariamente prevediate di usare tutti gli elementi.'
 ms.date: 05/16/2016
 ms.openlocfilehash: cfe8d1e350a8ac46b7700c12aa84d250f8b35855
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44353996"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45527642"
 ---
 # <a name="sequences"></a>Sequenze
 

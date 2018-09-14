@@ -12,11 +12,11 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], examples
 ms.assetid: 7d59af89-ff82-41d8-a48a-f1fbae788b0d
 ms.openlocfilehash: f085e7b7d20f958a90777ddb820924a07a5e2d8d
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44700225"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45510364"
 ---
 # <a name="how-to-bind-a-windows-forms-control-to-a-factory-object"></a>Procedura: associare un controllo Windows Form a un oggetto Factory
 Quando si compilano controlli che interagiscono con i dati, è a volte necessario associare un controllo a un oggetto o metodo che genera altri oggetti. Tale oggetto o metodo è definito factory. L'origine dati, ad esempio, potrebbe essere il valore restituito da una chiamata al metodo anziché un oggetto in memoria o un tipo. È possibile associare un controllo a tale tipo di origine dati purché l'origine restituisca una raccolta.  

@@ -3,11 +3,11 @@ title: Attività NoPersistScope
 ms.date: 03/30/2017
 ms.assetid: 9a0baeb7-a05c-4fac-b905-252758cb71bb
 ms.openlocfilehash: 6543756594b6734aec39bf22c5ab6215605341b1
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44038783"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45529251"
 ---
 # <a name="nopersistscope-activity"></a>Attività NoPersistScope
 In questo esempio viene illustrato come modificare uno stato Non-serializable e Disposable all'interno di un flusso di lavoro. È importante che i flussi di lavoro non tentino di rendere persistente lo stato Non-serializable e che venga eseguita la pulizia degli oggetti eliminabili dopo essere stati usati nel flusso di lavoro.  

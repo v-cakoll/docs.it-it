@@ -3,11 +3,11 @@ title: 'Procedura: condividere un Assembly con altre applicazioni (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5388aedc-cb42-4622-8b70-8e701eee057a
 ms.openlocfilehash: 3d29a3558a64c02fc8c59035f2fee5c64c4a776f
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44200142"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45515925"
 ---
 # <a name="how-to-share-an-assembly-with-other-applications-visual-basic"></a>Procedura: condividere un Assembly con altre applicazioni (Visual Basic)
 Gli assembly possono essere privati o condivisi. Per impostazione predefinita, i programmi più semplici sono costituiti da un assembly privato perché non sono destinati ad essere usati in altre applicazioni.  

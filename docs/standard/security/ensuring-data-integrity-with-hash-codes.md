@@ -17,11 +17,11 @@ ms.assetid: 33660f33-b70f-4dca-8c87-ab35cfc2961a
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 16770ea938973372d1d94c628c42d5d5bf10c695
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44268747"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45528552"
 ---
 # <a name="ensuring-data-integrity-with-hash-codes"></a>Integrità dei dati con codici hash
 Un valore hash è un valore numerico di lunghezza fissa che identifica in modo univoco i dati. I valori hash rappresentano grandi quantità di dati sotto forma di valori numerici molto più piccoli, pertanto vengono usati con le firme digitali. È possibile firmare un valore hash in modo più efficiente rispetto alla firma di un valore più grande. I valori hash sono anche utili per verificare l'integrità dei dati inviati attraverso canali non sicuri. Il valore hash dei dati ricevuti può essere confrontato con il valore hash dei dati inviati per determinare se i dati sono stati modificati.  

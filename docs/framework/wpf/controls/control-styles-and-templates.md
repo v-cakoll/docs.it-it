@@ -11,11 +11,11 @@ helpviewer_keywords:
 - templates [WPF]
 ms.assetid: c19049bb-5ceb-492d-afd2-751dca0ed8e3
 ms.openlocfilehash: 58d65ee9842270b07a76ff438c975955689197e9
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44710265"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45529714"
 ---
 # <a name="control-styles-and-templates"></a>Stili e modelli di Control
 I controlli in Windows Presentation Foundation (WPF) dispongono di un <xref:System.Windows.Controls.ControlTemplate> che contiene la struttura ad albero visuale del controllo. È possibile modificare la struttura e l'aspetto di un controllo modificando il <xref:System.Windows.Controls.ControlTemplate> di tale controllo. Non è possibile sostituire solo una parte della struttura visiva di un controllo. Per modificare la struttura ad albero visuale di un controllo è necessario impostare il <xref:System.Windows.Controls.Control.Template%2A> proprietà del controllo per il nuovo e completo <xref:System.Windows.Controls.ControlTemplate>.  

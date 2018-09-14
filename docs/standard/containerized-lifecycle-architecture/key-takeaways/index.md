@@ -4,12 +4,12 @@ description: Ciclo di vita delle applicazioni Docker in contenitori con piattafo
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: bf5648b1aa21ffd783c76aaa11c8e81371f45d18
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 24a4e826ece691a6a1221b39c164bba2eef8a059
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37104638"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "44778422"
 ---
 # <a name="key-takeaways"></a>Considerazioni principali
 
@@ -23,7 +23,7 @@ ms.locfileid: "37104638"
 
 -   Un ambiente DevOps end-to-end che supporta la distribuzione continua e l'integrazione continua connesso agli ambienti di produzione Docker offre flessibilità e, in definitiva, migliora il time-to-market delle applicazioni.
 
-Visual Studio Team Services semplifica notevolmente l'ambiente DevOps designato per gli ambienti Docker dalle pipeline di distribuzione continua, inclusi ambienti Docker semplici o agenti di orchestrazione di contenitori e microservizi più avanzati basati su Azure.
+Servizi di Azure DevOps semplifica notevolmente l'ambiente DevOps designato per gli ambienti Docker dalle pipeline di distribuzione continua, inclusi ambienti Docker semplici o orchestrazione di contenitori e microservizi più avanzati basate su Azure.
 
 >[!div class="step-by-step"]
 [Precedente](../run-manage-monitor-docker-environments/monitor-containerized-application-services.md)

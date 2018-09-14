@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 26dfac36-ae23-4909-9867-62495b55fb5e
 ms.openlocfilehash: c3d870e9e5ad8129a5cf24c63c2a7884e91f9630
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44080995"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45558210"
 ---
 # <a name="how-to-update-the-definition-of-a-running-workflow-instance"></a>Procedura: aggiornare la definizione di un'istanza del flusso di lavoro in esecuzione
 L'aggiornamento dinamico fornisce agli sviluppatori di applicazioni del flusso di lavoro un meccanismo per aggiornare la definizione del flusso di lavoro di un'istanza persistente del flusso di lavoro. La modifica richiesta può servire a implementare la correzione di un bug, nuovi requisiti o modifiche impreviste. Questo passaggio dell'esercitazione viene illustrato come utilizzare aggiornamento dinamico per modificare le istanze persistenti del `v1` numero un'ipotesi del flusso di lavoro in modo che corrisponda alla nuova funzionalità introdotta [come: Host più versioni di un flusso di lavoro Side-by-Side ](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).  

@@ -3,11 +3,11 @@ title: Riferimenti
 ms.date: 03/30/2017
 ms.assetid: 312c3935-a947-4220-a837-0039d9fc458b
 ms.openlocfilehash: 3edfbe7d650fead507946610de8e76d27e94136f
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44707717"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45514462"
 ---
 # <a name="reference"></a>Riferimenti
 Questa sezione descrive informazioni di riferimento per gli sviluppatori che usano [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  

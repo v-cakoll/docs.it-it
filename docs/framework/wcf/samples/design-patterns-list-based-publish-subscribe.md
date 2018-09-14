@@ -3,11 +3,11 @@ title: 'Modelli di progettazione: pubblicazione-sottoscrizione basata su elenchi
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
 ms.openlocfilehash: 2807cc8cc197ff39417e3b6375ebbd595cf73c54
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44265026"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45526733"
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>Modelli di progettazione: pubblicazione-sottoscrizione basata su elenchi
 Questo esempio viene illustrato il modello basato su elenchi di pubblicazione-sottoscrizione implementato come un programma di Windows Communication Foundation (WCF).  

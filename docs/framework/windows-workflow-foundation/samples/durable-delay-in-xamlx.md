@@ -3,11 +3,11 @@ title: Ritardo durevole in XAMLX
 ms.date: 03/30/2017
 ms.assetid: efc38df4-2d34-453c-8e59-2c21d1307354
 ms.openlocfilehash: 1eef9211c67d190ecb5f329c481fa2e3d1763353
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44708685"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45521453"
 ---
 # <a name="durable-delay-in-xamlx"></a>Ritardo durevole in XAMLX
 In questo esempio viene illustrato come usare un ritardo durevole, ovvero un ritardo che rende persistente il flusso di lavoro in un dispositivo durevole durante il ritardo.  

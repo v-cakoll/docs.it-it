@@ -6,11 +6,11 @@ helpviewer_keywords:
 - graphics [WPF], scaling elements
 ms.assetid: 18158d94-bbe7-4f6a-814e-84d27fa748bf
 ms.openlocfilehash: 44c638b58d828e5beb0b9de5c7bb0b67c8e82d87
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44698549"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45527564"
 ---
 # <a name="how-to-scale-an-element"></a>Procedura: ridimensionare un elemento
 In questo esempio viene illustrato come utilizzare un <xref:System.Windows.Media.ScaleTransform> per ridimensionare un elemento.  
