@@ -19,11 +19,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f4621a7d143d401d4cb620ac17c31e4ee5f13837
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43870302"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45588345"
 ---
 # <a name="iclrstrongnamestrongnamegetblob-method"></a>Metodo ICLRStrongName::StrongNameGetBlob
 Completa il buffer specificato con la rappresentazione binaria del file eseguibile presente all'indirizzo specificato.  

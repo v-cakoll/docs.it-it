@@ -9,11 +9,11 @@ ms.assetid: f7bd1361-4ab2-4132-972d-a044b8f197e1
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d41ba0c1e972eeee07b36ad0d15532f7b551ec2a
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44262008"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45587480"
 ---
 # <a name="common-design-patterns"></a>Modelli di progettazione comuni
 Esistono numerosi libri su modelli di software, i linguaggi di modello e anti-modelli che consentono di risolvere l'oggetto molto ampia di modelli. Di conseguenza, in questo capitolo vengono fornite indicazioni e discussione relativa a un set molto limitato dei modelli utilizzati di frequente nella progettazione di API di .NET Framework.  

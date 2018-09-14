@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 51096a2e-8b38-4c4d-a523-799bfdb7ec69
 ms.openlocfilehash: 4d5de5ed3f557842fb28a3cf92b1923a709195d2
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44366934"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45568436"
 ---
 # <a name="manipulating-data"></a>Manipolazione di dati
 Prima dell'introduzione di MARS (Multiple Active Result Set), gli sviluppatori dovevano usare più connessioni o cursori sul lato server per risolvere determinati scenari. Inoltre, quando sono state usate più connessioni in una situazione di transazione, le connessioni associate (con **sp_getbindtoken** e **sp_bindsession**) erano necessari. Nei seguenti scenari viene illustrato come usare una connessione con MARS abilitato anziché più connessioni.  

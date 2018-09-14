@@ -10,11 +10,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: 7d089cf01f3cee0cac40c258e48de5e9f5f95df7
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44708283"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45587558"
 ---
 # <a name="ui-automation-support-for-the-tooltip-control-type"></a>Supporto per l'automazione dell'interfaccia utente del tipo di controllo ToolTip
 > [!NOTE]
