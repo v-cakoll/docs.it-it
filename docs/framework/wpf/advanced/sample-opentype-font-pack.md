@@ -7,11 +7,11 @@ helpviewer_keywords:
 - typography [WPF], OpenType font pack
 ms.assetid: 56b46fa1-a44e-419b-8f14-25ad51c715c3
 ms.openlocfilehash: 93bba86801ec4971e884cb4703d7a6323a2e94fe
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45508059"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45625828"
 ---
 # <a name="sample-opentype-font-pack"></a>Esempio di pacchetto di tipi di carattere OpenType
 Questo argomento offre una panoramica dei tipi di carattere [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] di esempio distribuiti con [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)]. I tipi di carattere di esempio supportano funzionalità [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] estese che possono essere usate dalle applicazioni [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  

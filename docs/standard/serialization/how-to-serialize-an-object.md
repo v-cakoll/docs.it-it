@@ -9,11 +9,11 @@ helpviewer_keywords:
 - objects, serializing steps
 ms.assetid: a1207d05-32b2-4953-8582-959607991227
 ms.openlocfilehash: e4d6e3edb15dbf5ba4b7ec7f8658fec1a618d315
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44700544"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45624905"
 ---
 # <a name="how-to-serialize-an-object"></a>Procedura: serializzare un oggetto
 Per serializzare un oggetto, creare prima l'oggetto da serializzare e impostarne i campi e le proprietà pubbliche. A tale scopo, è necessario determinare il formato di trasporto in cui deve essere archiviato il flusso XML, come flusso o come file. Ad esempio, se il flusso XML deve essere salvato in forma permanente, creare un oggetto <xref:System.IO.FileStream>.  

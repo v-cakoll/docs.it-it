@@ -3,11 +3,11 @@ title: '&lt;commonParameters&gt;'
 ms.date: 03/30/2017
 ms.assetid: ffc20832-34d6-4622-8174-81924fd53514
 ms.openlocfilehash: 5e4c19c48709ffd81cb00e9820e6c3cdb297ec7e
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45529030"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45625334"
 ---
 # <a name="ltcommonparametersgt"></a>&lt;commonParameters&gt;
 Rappresenta una raccolta di parametri che vengono usati globalmente tra più servizi. Questa raccolta in genere contiene la stringa di connessione del database che potrebbe essere condivisa dai servizi durevoli.  

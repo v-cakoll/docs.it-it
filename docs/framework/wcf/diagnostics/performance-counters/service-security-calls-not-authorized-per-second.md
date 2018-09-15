@@ -5,11 +5,11 @@ ms.assetid: 1eeade5a-ea62-4757-b1f9-1b1b1746abd1
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: f2c921991f059d7dfe5661dfe688ec9675d0d5fe
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44700794"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45625542"
 ---
 # <a name="service-security-calls-not-authorized-per-second"></a>Servizio: chiamate di sicurezza non autorizzate al secondo
 Nome contatore: chiamate di sicurezza non autorizzate al secondo  
