@@ -3,11 +3,11 @@ title: Riferimenti per il linguaggio F#
 description: 'Trovare informazioni funzionalità del linguaggio F # da questo riferimento al token delle lingue, i concetti, tipi, le espressioni e gli argomenti supportati dal compilatore costrutto.'
 ms.date: 05/16/2016
 ms.openlocfilehash: adce37ee393673b7611ad24f385c8b8106f6ce86
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44710946"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45646415"
 ---
 # <a name="f-language-reference"></a>Riferimenti per il linguaggio F#
 
