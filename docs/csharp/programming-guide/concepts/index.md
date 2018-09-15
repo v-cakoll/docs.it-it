@@ -3,11 +3,11 @@ title: Concetti di programmazione (C#)
 ms.date: 07/20/2015
 ms.assetid: 3227afd5-4794-484b-b83b-0f1f94a0476b
 ms.openlocfilehash: f71e05e05e3d027b6190142e8062ea3caf95edb7
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 09/14/2018
-ms.locfileid: "45569151"
+ms.locfileid: "45615924"
 ---
 # <a name="programming-concepts-c"></a>Concetti di programmazione (C#)
 Questa sezione illustra i concetti della programmazione in linguaggio C#.  
