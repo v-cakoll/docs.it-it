@@ -3,11 +3,11 @@ title: Espressioni di calcolo (F#)
 description: 'Informazioni su come creare una sintassi efficiente per la scrittura di calcoli in F # che possa essere sequenziata e combinati tramite costrutti del flusso di controllo e associazioni.'
 ms.date: 07/27/2018
 ms.openlocfilehash: ce81af7966a436b3973de277fb2a78ec06f4c471
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45508538"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45685738"
 ---
 # <a name="computation-expressions"></a>Espressioni di calcolo
 

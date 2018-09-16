@@ -3,11 +3,11 @@ title: Criteri di ricerca [F#]
 description: 'Informazioni su come i modelli vengono usati in F # per confrontare i dati con strutture logiche, scomporre i dati in parti costituenti o estrarre informazioni dai dati.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 5ad3d3e1a78246afdfa2948fd0fb84fa04686d30
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45518321"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45668483"
 ---
 # <a name="pattern-matching"></a>Criteri di ricerca
 

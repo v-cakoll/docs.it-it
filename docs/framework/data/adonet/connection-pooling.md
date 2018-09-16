@@ -3,11 +3,11 @@ title: Pool di connessioni
 ms.date: 03/30/2017
 ms.assetid: 955c057f-aea8-4ba8-aa6d-e3dfa18ba8d5
 ms.openlocfilehash: 28a1036f377326b5f1fdfafa1eaffd8a47bc05bc
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45533412"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45678509"
 ---
 # <a name="connection-pooling"></a>Pool di connessioni
 La connessione a un'origine dati può richiedere molto tempo. Per ridurre al minimo il costo dell'apertura delle connessioni, ADO.NET usa una tecnica di ottimizzazione denominata *pool di connessioni*, che consente di ridurre il costo dell'apertura e chiusura delle connessioni ripetutamente. Per i provider di dati .NET Framework il pool di connessioni viene gestito in modo diverso.  

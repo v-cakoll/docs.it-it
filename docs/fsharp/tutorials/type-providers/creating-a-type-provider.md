@@ -3,11 +3,11 @@ title: 'Esercitazione: Creare un Provider di tipi (F #)'
 description: 'Informazioni su come creare il proprio provider di tipi F # in F # 3.0 esaminando i diversi provider di tipo semplice per illustrare i concetti di base.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 3c998377b2c3a408d536ef416f3799bf7f04b6bd
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44275509"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45666915"
 ---
 # <a name="tutorial-create-a-type-provider"></a>Esercitazione: Creare un Provider di tipi
 

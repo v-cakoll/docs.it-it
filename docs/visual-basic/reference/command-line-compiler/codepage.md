@@ -7,11 +7,11 @@ helpviewer_keywords:
 - -codepage compiler option [Visual Basic]
 ms.assetid: be36ec33-6800-4505-838c-4124564f5cc9
 ms.openlocfilehash: fda75383435fdff718d1d50bc8583afc9858e7e2
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45515484"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45666392"
 ---
 # <a name="-codepage-visual-basic"></a>-codepage (Visual Basic)
 Specifica la tabella codici da usare per tutti i file del codice sorgente nella compilazione.  

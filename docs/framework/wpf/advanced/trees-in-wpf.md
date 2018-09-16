@@ -7,11 +7,11 @@ helpviewer_keywords:
 - visual tree [WPF]
 ms.assetid: e83f25e5-d66b-4fc7-92d2-50130c9a6649
 ms.openlocfilehash: e6173916ad64a60d3727b5d35bb2a2302b881b38
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44700716"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45676337"
 ---
 # <a name="trees-in-wpf"></a>Strutture ad albero in WPF
 In molte tecnologie gli elementi e i componenti sono organizzati in una struttura ad albero in cui gli sviluppatori modificano direttamente i nodi degli oggetti nell'albero per influire sul rendering o sul comportamento di un'applicazione. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] usa anche molte metafore correlate alla struttura ad albero per definire le relazioni tra gli elementi del programma. In genere gli sviluppatori WPF possono creare un'applicazione nel codice o definire parti dell'applicazione in XAML usando come riferimento concettuale la metafora della struttura ad albero di oggetti, ma chiameranno un'API specifica o useranno un markup specifico a tale scopo anziché un'API di modifica della struttura ad albero di oggetti generica simile a quella usata nel modello DOM XML. WPF espone due classi di helper che forniscono una visualizzazione albero metafora <xref:System.Windows.LogicalTreeHelper> e <xref:System.Windows.Media.VisualTreeHelper>. Nella documentazione di WPF vengono inoltre usati i termini struttura ad albero visuale e albero logico, in quanto tali strutture ad albero sono utili per la comprensione del comportamento di alcune funzionalità chiave di WPF. In questo argomento definisce ciò che rappresentano la struttura ad albero visuale e albero logico, vengono illustrate tali strutture ad albero correlazione tra un concetto di albero di oggetti complessiva e introduce <xref:System.Windows.LogicalTreeHelper> e <xref:System.Windows.Media.VisualTreeHelper>s.  
