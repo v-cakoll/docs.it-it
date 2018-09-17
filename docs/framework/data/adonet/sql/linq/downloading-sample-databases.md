@@ -3,11 +3,11 @@ title: Download di database di esempio
 ms.date: 03/30/2017
 ms.assetid: ef9d69a1-9461-43fe-94bb-7c836754bcb5
 ms.openlocfilehash: e0b842385762a486ffcc775974e15334c77b589b
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45624723"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45747192"
 ---
 # <a name="downloading-sample-databases"></a>Download di database di esempio
 In numerosi esempi e procedure dettagliate nella documentazione di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] vengono usati il database di esempio Northwind e SQL Server Express Edition. È possibile scaricare questi prodotti gratuitamente dal sito di download Microsoft.  

@@ -12,11 +12,11 @@ ms.assetid: eee2f227-91f2-4f2b-a9d6-1c51c5320858
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2a69d0e15f9094860c4c66f3fe0a195a0a609db9
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45641469"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45746484"
 ---
 # <a name="-resource-visual-basic"></a>-resource (Visual Basic)
 Incorpora una risorsa gestita in un assembly.  

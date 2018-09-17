@@ -11,11 +11,11 @@ helpviewer_keywords:
 - z-order
 ms.assetid: 8b595429-ba9f-46af-9c55-3d5cc53f7fff
 ms.openlocfilehash: 34d600454a7fa63c7ba59bebded6365cd5401cb4
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45685881"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45747218"
 ---
 # <a name="how-to-define-z-ordering-of-docked-toolstrip-controls"></a>Procedura: definire l'ordinamento z di controlli ToolStrip ancorati
 Per posizionare correttamente un controllo <xref:System.Windows.Forms.ToolStrip> mediante l'ancoraggio, è necessario posizionarlo in modo corretto nell'ordinamento z del form.  

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], visual inheritance
 - Windows Forms, inheritance
 ms.assetid: 01966086-3142-450e-8210-3fd4cb33f591
-ms.openlocfilehash: bc91e3bde54eedb4d9dbcfcb9f7faa0ccc98e397
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b17de01c4a5e89051393aa3c6bb2d0079535dbf6
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505624"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45746205"
 ---
 # <a name="walkthrough-demonstrating-visual-inheritance"></a>Procedura dettagliata: dimostrazione dell'ereditarietà visiva
 L'ereditarietà visiva consente di visualizzare i controlli nel form di base e di aggiungere nuovi controlli. In questa procedura dettagliata verrà creato un form di base che verrà compilato in una libreria di classi. La libreria di classi verrà importata in un altro progetto e verrà creato un nuovo form che eredita dal form di base. Durante questa procedura dettagliata, si apprenderà come:  
@@ -80,7 +80,7 @@ L'ereditarietà visiva consente di visualizzare i controlli nel form di base e d
   
     -   Impostare il **(nome)** proprietà **btnProtected**.  
   
-    -   Impostare il**modificatori** proprietà **Protected**. Questo rende possibile per i moduli da cui ereditare **Form1** per modificare le proprietà di **btnProtected**.  
+    -   Impostare il **modificatori** proprietà **Protected**. Questo rende possibile per i moduli da cui ereditare **Form1** per modificare le proprietà di **btnProtected**.  
   
 4.  Fare doppio clic il **Say Hello** per aggiungere un gestore eventi per il **fare clic su** evento.  
   
@@ -128,7 +128,7 @@ L'ereditarietà visiva consente di visualizzare i controlli nel form di base e d
   
 #### <a name="to-add-an-inherited-form"></a>Per aggiungere un form ereditato  
   
-1.  In **Esplora soluzioni**, fare doppio clic sul **InheritanceTest** progetto, selezionare **Add**, quindi selezionare**nuovo elemento**.  
+1.  In **Esplora soluzioni**, fare doppio clic sul **InheritanceTest** progetto, selezionare **Add**, quindi selezionare **nuovo elemento**.  
   
 2.  Nel **Aggiungi nuovo elemento** finestra di dialogo, seleziona la **Windows Forms** categoria (se si dispone di un elenco delle categorie) e quindi selezionare il **Form ereditato** modello.  
   

@@ -3,11 +3,11 @@ title: Stringhe di connessione in ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490
 ms.openlocfilehash: b4e057cab4c562fc51893631c35d66409e1c3731
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45617036"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45746627"
 ---
 # <a name="connection-strings-in-adonet"></a>Stringhe di connessione in ADO.NET
 In .NET Framework 2.0 sono state introdotte nuove funzionalità per l'uso delle stringhe di connessione, tra cui l'introduzione di nuove parole chiave nelle classi di generatori di stringhe di connessione che facilitano la creazione di stringhe di connessione valide in fase di esecuzione.  

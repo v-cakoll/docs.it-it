@@ -3,11 +3,11 @@ title: Calcoli differiti (F#)
 description: 'Informazioni su come F # calcoli differiti possono migliorare le prestazioni delle App e librerie.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 8afe815f26978de96291a52973d54a9dbcc5eaf2
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45676519"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45698209"
 ---
 # <a name="lazy-computations"></a>Calcoli differiti
 

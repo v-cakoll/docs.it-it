@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 94171b0708c97eb7510e916e451ed03645d706f3
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45668132"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45743906"
 ---
 # <a name="getpropertyhandle-function"></a>GetPropertyHandle (funzione)
 Restituisce un handle univoco che identifica una proprietà.
