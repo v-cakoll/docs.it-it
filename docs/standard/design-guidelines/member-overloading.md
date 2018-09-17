@@ -12,11 +12,11 @@ ms.assetid: 964ba19e-8b94-4b5b-b1e3-5a0b531a0bb1
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2127497d294cbfd4e1bb24d033f432378627ff13
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45619058"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45964202"
 ---
 # <a name="member-overloading"></a>Overload dei membri
 Overload dei membri prevede la creazione di due o più membri sullo stesso tipo che si differenziano solo per il numero o il tipo dei parametri, ma hanno lo stesso nome. Ad esempio, in quanto segue, il `WriteLine` è l'overload di metodo:  

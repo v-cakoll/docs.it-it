@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: d475d356-6abb-4701-8fd1-2906fb93dfba
 ms.openlocfilehash: e27ef72f0341524524a8f267eeeb13a6f46deb52
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 09/17/2018
-ms.locfileid: "45692592"
+ms.locfileid: "45964280"
 ---
 # <a name="childviews-and-relations"></a>Oggetti ChildView e relazioni
 Se esiste una relazione tra le tabelle di un tipo <xref:System.Data.DataSet>, è possibile creare un tipo <xref:System.Data.DataView> contenente le righe della tabella figlio correlata usando il metodo <xref:System.Data.DataRowView.CreateChildView%2A> di <xref:System.Data.DataRowView> per le righe della tabella padre. Ad esempio, il codice seguente consente di visualizzare **categorie** e le relative **Products** in ordine alfabetico per **CategoryName** e **ProductName** .  

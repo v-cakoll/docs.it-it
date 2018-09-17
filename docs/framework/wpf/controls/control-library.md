@@ -8,11 +8,11 @@ helpviewer_keywords:
 - libraries [WPF], controls
 ms.assetid: c1b33289-c389-4ac2-b153-3cbb0d8324ad
 ms.openlocfilehash: 26f81a2bfeb5ef4e448ddcbc9b8bac521624a629
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45592752"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45964894"
 ---
 # <a name="control-library"></a>Libreria di controlli
 La libreria di controlli Windows Presentation Foundation (WPF) contiene informazioni sui controlli forniti da Windows Presentation Foundation (WPF), elencate in ordine alfabetico.  
