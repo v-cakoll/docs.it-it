@@ -9,11 +9,11 @@ ms.assetid: 76f28770-7126-428f-9ed5-7b5ae8bad5ee
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d7b6ea782020dde83aa7d59be8ec3058a27075ad
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44267951"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45677701"
 ---
 # <a name="xmlschemacollection-schema-compilation"></a>Compilazione dello schema XmlSchemaCollection
 **XmlSchemaCollection** è una cache o una libreria in cui è possibile archiviare e convalidare gli schemi XDR (XML-Data Reduced) e XSD (XML Schema Definition Language). **XmlSchemaCollection** migliora le prestazioni memorizzando nella cache gli schemi anziché accedervi da un file o un URL.  

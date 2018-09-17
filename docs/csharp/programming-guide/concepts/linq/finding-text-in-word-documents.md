@@ -3,11 +3,11 @@ title: Ricerca di testo nei documenti di Word (C#)
 ms.date: 07/20/2015
 ms.assetid: 82f86677-560b-49dc-a089-610409939b2a
 ms.openlocfilehash: 56a99dd548eb149f6fa85370cef6a114103ce91e
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44135147"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45679401"
 ---
 # <a name="finding-text-in-word-documents-c"></a>Ricerca di testo nei documenti di Word (C#)
 In questo argomento le query precedenti vengono estese in modo da individuare tutte le occorrenze di una stringa nel documento.  
