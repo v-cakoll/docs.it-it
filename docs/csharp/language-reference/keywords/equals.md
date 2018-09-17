@@ -8,22 +8,22 @@ helpviewer_keywords:
 - equals keyword [C#]
 ms.assetid: e981309a-e4bf-444c-8a2b-5c695e6114b1
 ms.openlocfilehash: 30a8be7e81bae65e565d2a3ed28e225ac3094f13
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44177857"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45641235"
 ---
-# <a name="equals-c-reference"></a><span data-ttu-id="a738b-102">equals (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="a738b-102">equals (C# Reference)</span></span>
+# <a name="equals-c-reference"></a><span data-ttu-id="66201-102">equals (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="66201-102">equals (C# Reference)</span></span>
 
-<span data-ttu-id="a738b-103">La parola chiave contestuale `equals` viene usata in una clausola `join` in un'espressione di query per confrontare gli elementi di due sequenze.</span><span class="sxs-lookup"><span data-stu-id="a738b-103">The `equals` contextual keyword is used in a `join` clause in a query expression to compare the elements of two sequences.</span></span> <span data-ttu-id="a738b-104">Per altre informazioni, vedere [Clausola join](join-clause.md).</span><span class="sxs-lookup"><span data-stu-id="a738b-104">For more information, see [join clause](join-clause.md).</span></span>
+<span data-ttu-id="66201-103">La parola chiave contestuale `equals` viene usata in una clausola `join` in un'espressione di query per confrontare gli elementi di due sequenze.</span><span class="sxs-lookup"><span data-stu-id="66201-103">The `equals` contextual keyword is used in a `join` clause in a query expression to compare the elements of two sequences.</span></span> <span data-ttu-id="66201-104">Per altre informazioni, vedere [Clausola join](join-clause.md).</span><span class="sxs-lookup"><span data-stu-id="66201-104">For more information, see [join clause](join-clause.md).</span></span>
 
-## <a name="example"></a><span data-ttu-id="a738b-105">Esempio</span><span class="sxs-lookup"><span data-stu-id="a738b-105">Example</span></span>
+## <a name="example"></a><span data-ttu-id="66201-105">Esempio</span><span class="sxs-lookup"><span data-stu-id="66201-105">Example</span></span>
 
-<span data-ttu-id="a738b-106">L'esempio seguente illustra l'uso della parola chiave `equals` in una clausola `join`.</span><span class="sxs-lookup"><span data-stu-id="a738b-106">The following example shows the use of the `equals` keyword in a `join` clause.</span></span>
+<span data-ttu-id="66201-106">L'esempio seguente illustra l'uso della parola chiave `equals` in una clausola `join`.</span><span class="sxs-lookup"><span data-stu-id="66201-106">The following example shows the use of the `equals` keyword in a `join` clause.</span></span>
 
 [!code-csharp[csrefKeywordsContextual#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsContextual/CS/csrefKeywordsContextual.cs#12)]
 
-## <a name="see-also"></a><span data-ttu-id="a738b-107">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a738b-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="66201-107">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="66201-107">See also</span></span>
 
-- [<span data-ttu-id="a738b-108">LINQ (Language-Integrated Query)</span><span class="sxs-lookup"><span data-stu-id="a738b-108">Language Integrated Query (LINQ)</span></span>](../../linq/index.md)
+- [<span data-ttu-id="66201-108">LINQ (Language-Integrated Query)</span><span class="sxs-lookup"><span data-stu-id="66201-108">Language Integrated Query (LINQ)</span></span>](../../linq/index.md)
