@@ -6,11 +6,11 @@ ms.assetid: ad3fa320-4b8f-4e5c-b549-01157591007a
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ef31d101769dca00f5cff545c72b3afbd59bc638
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44268406"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45664488"
 ---
 # <a name="resolving-external-resources"></a>Risoluzione di risorse esterne
 La proprietà **XmlResolver** di **XmlDocument** viene usata dalla classe **XmlDocument** per individuare le risorse non inline nei dati XML, quali DTD, entità e schemi esterni. Questi elementi possono trovarsi in una rete o in un'unità locale ed essere identificati tramite un URI (Uniform Resource Identifier) . Questo consente a **XmlDocument** di risolvere i nodi **EntityReference** presenti nel documento e convalidare il documento in base allo schema o alla DTD esterna.  

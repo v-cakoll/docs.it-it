@@ -4,12 +4,12 @@ description: Architettura di microservizi .NET per applicazioni .NET in contenit
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 4c514f3a7dc1fb01b2f1ed2dddc9d938c1101809
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 7574a28fc3e8eb3288a81fa5a7ad26f34f1a3eb9
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44268851"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45646220"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>Problemi e soluzioni per la gestione dei dati distribuiti
 
@@ -19,7 +19,7 @@ La definizione dei limiti dei microservizi è probabilmente il primo problema ri
 
 In primo luogo, è necessario concentrare l'attenzione sui modelli di dominio logici dell'applicazione e sui dati correlati. È necessario provare a individuare isole scollegate di dati e contesti diversi all'interno della stessa applicazione. Ogni contesto potrebbe essere caratterizzato da un linguaggio aziendale diverso, ovvero termini aziendali diversi. I contesti devono quindi essere definiti e gestiti in modo indipendente. I termini e le entità usati in questi contesti diversi potrebbero sembrare simili, ma potrebbe capitare che in un determinato contesto un concetto aziendale in un contesto venga usato per uno scopo diverso in un altro contesto e persino essere caratterizzato da un nome diverso. È ad esempio possibile che si faccia riferimento al concetto di utente come utente in un contesto di identità o appartenenza, come cliente in un contesto CRM, come acquirente in un contesto di creazione ordini e così via.
 
-Il modo in cui vengono identificati i limiti tra più contesti dell'applicazione con un dominio diverso per ogni contesto coincide con la modalità di identificazione dei limiti per ogni microservizio business e i relativi dati e modelli di dominio correlati. Si prova sempre a ridurre al minimo l'accoppiamento tra tali microservizi. Questa guida approfondisce la struttura di questo modello di dominio e identificazione più avanti, nella sezione [Identificazione dei limiti del modello di dominio per ogni microservizio](#identifying-domain-model-boundaries-for-each-microservice).
+Il modo in cui vengono identificati i limiti tra più contesti dell'applicazione con un dominio diverso per ogni contesto coincide con la modalità di identificazione dei limiti per ogni microservizio business e i relativi dati e modelli di dominio correlati. Si prova sempre a ridurre al minimo l'accoppiamento tra tali microservizi. Questa guida approfondisce la struttura di questo modello di dominio e identificazione più avanti, nella sezione [Identificazione dei limiti del modello di dominio per ogni microservizio](identify-microservice-domain-model-boundaries.md).
 
 ## <a name="challenge-2-how-to-create-queries-that-retrieve-data-from-several-microservices"></a>Problema \#2: Come creare query che recuperano dati da più microservizi
 
@@ -57,7 +57,7 @@ Come dichiarato nel [teorema CAP](https://en.wikipedia.org/wiki/CAP_theorem), è
 
 Senza contare che le transazioni di commit in due fasi o di tipo ACID non sono solo contrarie ai principi dei microservizi. La maggior parte dei database NoSQL, come Azure Cosmos DB, MongoDB e così via, non supporta le transazioni di commit in due fasi. È tuttavia essenziale garantire la coerenza dei dati tra servizi e database. Questo problema è anche correlato a quello relativo alla propagazione delle modifiche tra più microservizi quando determinati dati devono essere ridondanti, ad esempio quando il nome o la descrizione del prodotto deve essere presente sia nel microservizio Catalog che nel microservizio Basket.
 
-Una valida soluzione per questo problema consiste nell'usare la coerenza finale tra microservizi articolati tramite la comunicazione basata su eventi e un sistema di pubblicazione e sottoscrizione. Questi argomenti sono trattati nella sezione [Comunicazione asincrona basata su eventi](#async_event_driven_communication) più avanti in questa guida.
+Una valida soluzione per questo problema consiste nell'usare la coerenza finale tra microservizi articolati tramite la comunicazione basata su eventi e un sistema di pubblicazione e sottoscrizione. Questi argomenti sono trattati nella sezione [Comunicazione asincrona basata su eventi](asynchronous-message-based-communication.md#asynchronous-event-driven-communication) più avanti in questa guida.
 
 ## <a name="challenge-4-how-to-design-communication-across-microservice-boundaries"></a>Problema \#4: Come progettare la comunicazione tra i limiti dei microservizi
 

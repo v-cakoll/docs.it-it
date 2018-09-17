@@ -5,11 +5,11 @@ helpviewer_keywords:
 - access modifiers [C#]
 ms.assetid: 61c3fa51-c00f-48cb-9b49-c805dedd62d7
 ms.openlocfilehash: ff313df9683dbc76bab684ff484b746ad05e065a
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44262041"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45653018"
 ---
 # <a name="access-modifiers-c-reference"></a>Modificatori di accesso (Riferimenti per C#)
 I modificatori di accesso sono parole chiave usate per specificare l'accessibilità dichiarata di un membro o di un tipo. In questa sezione vengono presentati i quattro modificatori di accesso:  

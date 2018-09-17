@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: fde6f43f-c594-486f-abcb-2211197fae20
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 23961caa7b307df46b20b3811d0883d4c702a357
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c4d7dee9ebaed20970f715026661c29aae701289
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577163"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45686089"
 ---
 # <a name="script-blocks-using-msxslscript"></a>Blocchi di script utilizzando msxsl:script
 La classe <xref:System.Xml.Xsl.XslCompiledTransform> supporta lo script incorporato mediante l'elemento `msxsl:script`. Quando viene caricato il foglio di stile, le funzioni definite vengono compilate in MSIL (Microsoft Intermediate Language) da CodeDOM (Code Document Object Model) e vengono attivate in fase di esecuzione. L'assembly generato dal blocco di script incorporato è separato rispetto all'assembly generato per il foglio di stile.  
@@ -148,6 +148,7 @@ La classe <xref:System.Xml.Xsl.XslCompiledTransform> supporta lo script incorpor
 </circles>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Trasformazioni XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)  
- [Generazione e compilazione dinamica di codice sorgente](../../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Trasformazioni XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)  
+- [Generazione e compilazione dinamica di codice sorgente](../../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)
