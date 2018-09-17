@@ -6,11 +6,11 @@ ms.assetid: f0548ead-0fed-41ee-b33e-117ba900d3bc
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: bcc796f8d895e3daa81a9607bd7c4941b747cf24
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44208770"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45596754"
 ---
 # <a name="namespace-support-in-the-dom"></a>Supporto dello spazio dei nomi nel DOM
 Il modello DOM XML supporta pienamente lo spazio dei nomi. Sono supportati solo i documenti XML che supportano lo spazio dei nomi. Il W3C (World Wide Web Consortium) specifica che lo spazio dei nomi può non essere supportato da applicazioni DOM che implementano il Livello 1, ma che è supportato dalle funzionalità di Livello 2 del DOM. Tutte le funzionalità nel DOM XML, tuttavia, supportano lo spazio dei nomi indipendentemente dal fatto che il metodo sia regolato dalla raccomandazione DOM di Livello 1 o di Livello 2.  

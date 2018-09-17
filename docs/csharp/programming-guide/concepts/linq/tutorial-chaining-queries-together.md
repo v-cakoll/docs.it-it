@@ -2,12 +2,12 @@
 title: 'Esercitazione: Concatenamento di query (C#)'
 ms.date: 07/20/2015
 ms.assetid: 44f54444-c4c5-4c23-9d19-986b957b8eda
-ms.openlocfilehash: 8411d8577c192e2aa1a43bea47644fe6bdc09e88
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cab012a6ae618bd731c26bc1a002c144b84d2169
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33323710"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45609632"
 ---
 # <a name="tutorial-chaining-queries-together-c"></a>Esercitazione: Concatenamento di query (C#)
 In questa esercitazione viene illustrato il modello di elaborazione correlato al concatenamento di query. Il concatenamento di query costituisce una parte fondamentale nella scrittura delle trasformazioni funzionali. È quindi importante comprendere esattamente il funzionamento delle query concatenate.  
@@ -24,5 +24,6 @@ In questa esercitazione viene illustrato il modello di elaborazione correlato al
 |[Materializzazione intermedia (C#)](../../../../csharp/programming-guide/concepts/linq/intermediate-materialization.md)|Viene identificata e illustrata la semantica della materializzazione intermedia.|  
 |[Concatenamento di operatori di query standard (C#)](../../../../csharp/programming-guide/concepts/linq/chaining-standard-query-operators-together.md)|Viene descritta la semantica lazy degli operatori di query standard.|  
   
-## <a name="see-also"></a>Vedere anche  
- [Trasformazioni funzionali pure di XML (C#)](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Trasformazioni funzionali pure di XML (C#)](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)

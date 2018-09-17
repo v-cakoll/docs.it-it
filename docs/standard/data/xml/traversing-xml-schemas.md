@@ -10,11 +10,11 @@ ms.assetid: cce69574-5861-4a30-b730-2e18d915d8ee
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5f2da2849bdf9ce922a89bf25e1758d868ee5ea8
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44198257"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45616127"
 ---
 # <a name="traversing-xml-schemas"></a>Attraversamento di schemi XML
 L'attraversamento di uno schema XML mediante l'API del modello SOM (Schema Object Model) consente di accedere a elementi, attributi e tipi archiviati nel modello SOM. Tale attraversamento rappresenta inoltre il primo passaggio per la modifica di uno schema XML tramite l'API del modello SOM.  

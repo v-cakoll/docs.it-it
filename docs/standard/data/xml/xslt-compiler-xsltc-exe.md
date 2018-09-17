@@ -6,11 +6,11 @@ ms.assetid: 672a5ac8-8305-4d28-ba10-11089c2c0924
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 470dd0eb37d8081d388ef69b204293f568096a5e
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44262230"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45615050"
 ---
 # <a name="xslt-compiler-xsltcexe"></a>Compilatore XSLT (xsltc.exe)
 Il compilatore XSLT (xsltc.exe) consente di compilare fogli di stile XSLT e di generare un assembly. Il foglio di stile compilato può quindi essere passato direttamente nel metodo <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType>. Non è possibile generare assembly firmati con xsltc.exe.  

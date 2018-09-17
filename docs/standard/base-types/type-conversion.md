@@ -27,11 +27,11 @@ ms.assetid: ba36154f-064c-47d3-9f05-72f93a7ca96d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2d039e591e1f61a7be18dc224845f82b107d918f
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44211951"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45617934"
 ---
 # <a name="type-conversion-in-the-net-framework"></a>Conversione di tipi in .NET Framework
 <a name="top"></a> A ogni valore è associato un tipo che definisce attributi quali la quantità di spazio allocato per il valore, l'intervallo di valori possibili supportati e i membri resi disponibili. Numerosi valori possono essere espressi mediante tipi diversi. Il valore 4, ad esempio, può essere espresso come intero o come valore a virgola mobile. Mediante la conversione di tipi viene creato un valore in un nuovo tipo equivalente al valore del tipo precedente, ma non viene necessariamente mantenuta l'identità, o il valore esatto, dell'oggetto originale.  

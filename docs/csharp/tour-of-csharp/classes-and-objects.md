@@ -185,7 +185,7 @@ Se una dichiarazione di metodo di istanza include un modificatore `virtual`, il 
 
 Quando viene richiamato un metodo virtuale, il *tipo in fase di esecuzione* dell'istanza per cui viene eseguita la chiamata determina l'implementazione effettiva del metodo da richiamare. In una chiamata a un metodo non virtuale, il fattore determinante è il *tipo in fase di compilazione* dell'istanza.
 
-Un metodo virtuale non può essere *sottoposto a override* in una classe derivata. Se una dichiarazione di metodo di istanza include un modificatore override, il metodo esegue l'override di un metodo virtuale ereditato con la stessa firma. Mentre una dichiarazione di metodo virtuale introduce un nuovo metodo, una dichiarazione di metodo di override specializza un metodo virtuale ereditato esistente specificando una nuova implementazione del metodo.
+Un metodo virtuale può essere *sottoposto a override* in una classe derivata. Se una dichiarazione di metodo di istanza include un modificatore override, il metodo esegue l'override di un metodo virtuale ereditato con la stessa firma. Mentre una dichiarazione di metodo virtuale introduce un nuovo metodo, una dichiarazione di metodo di override specializza un metodo virtuale ereditato esistente specificando una nuova implementazione del metodo.
 
 Un *metodo astratto* è un metodo virtuale senza implementazione. Viene dichiarato con il modificatore abstract ed è consentito solo in una classe anch'essa dichiarata astratta. Un metodo astratto deve essere sottoposto a override in ogni classe derivata non astratta.
 

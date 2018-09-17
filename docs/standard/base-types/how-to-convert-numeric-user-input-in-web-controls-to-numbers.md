@@ -16,11 +16,11 @@ ms.assetid: f27ddfb8-7479-4b79-8879-02a3bd8402d4
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 663f9d88315f396b187cca874c930179f1dea523
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44204955"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45615391"
 ---
 # <a name="how-to-convert-numeric-user-input-in-web-controls-to-numbers"></a>Procedura: convertire in numeri l'input numerico dell'utente nei controlli Web
 Poiché una pagina Web può essere visualizzata ovunque nel mondo, gli utenti possono immettere dati numerici in un controllo <xref:System.Web.UI.WebControls.TextBox> in un numero praticamente illimitato di formati. Di conseguenza, è molto importante determinare le impostazioni locali e le impostazioni cultura dell'utente della pagina Web. Quando si analizza l'input dell'utente, è quindi possibile applicare le convenzioni di formattazione definite dalle impostazioni locali e dalle impostazioni cultura dell'utente.  

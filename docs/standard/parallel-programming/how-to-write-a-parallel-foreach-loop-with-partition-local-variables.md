@@ -11,11 +11,11 @@ ms.assetid: 24b10041-b30b-45cb-aa65-66cf568ca76d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 357cc488705ec3dab66543fa4814dbe3e6a22777
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44227571"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45590997"
 ---
 # <a name="how-to-write-a-parallelforeach-loop-with-partition-local-variables"></a>Procedura: Scrivere un ciclo Parallel.ForEach con variabili partition-local
 L'esempio seguente illustra come scrivere un metodo <xref:System.Threading.Tasks.Parallel.ForEach%2A> che usa variabili partition-local. Quando viene eseguito un ciclo <xref:System.Threading.Tasks.Parallel.ForEach%2A>, la relativa raccolta di origine viene divisa in più partizioni. Ogni partizione ha la propria copia della variabile partition-local. Una variabile partition-local è simile a una [variabile thread-local](xref:System.Threading.ThreadLocal%601), tranne per il fatto che in un singolo thread possono essere eseguite più partizioni.

@@ -9,11 +9,11 @@ ms.assetid: 8e4450dc-56b3-472b-b467-32f5694f83ad
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9e02dd304893e4d9354144c5b412dfd145161c6e
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44202050"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45596949"
 ---
 # <a name="select-nodes-using-xpath-navigation"></a>Selezione di nodi utilizzando la navigazione XPath
 Il DOM (Document Object Model) XML contiene metodi che consentono di usare la navigazione XPath (XML Path Language) per eseguire query sulle informazioni del DOM. È possibile usare XPath per individuare un singolo nodo specifico o tutti i nodi che corrispondono a certi criteri.  

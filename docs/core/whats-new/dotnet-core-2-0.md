@@ -4,12 +4,12 @@ description: Informazioni sulle nuove funzionalità in .NET Core.
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/13/2017
-ms.openlocfilehash: 02aac2dab2b892927c0c98fae30bb287a6e24ad6
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 4be579f2000c86b3dad412b24589fa8e7024d2f0
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44191053"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45591763"
 ---
 # <a name="whats-new-in-net-core-20"></a>Novità di .NET Core 2.0
 
@@ -158,8 +158,8 @@ Dalla pagina [.NET Application Architecture](https://www.microsoft.com/net/learn
 
 - [Microservizi e contenitori Docker](../../standard/microservices-architecture/index.md)
 - [Applicazioni Web con ASP.NET](../../standard/modern-web-apps-azure-architecture/index.md)
-- [Applicazioni per dispositivi mobili con Xamarin](/xamarin/xamarin-forms/enterprise-application-patterns/index.md)
-- [Applicazioni distribuite nel cloud con Azure](/azure/architecture/reference-architectures/index.md)
+- [Applicazioni per dispositivi mobili con Xamarin](/xamarin/xamarin-forms/enterprise-application-patterns/index)
+- [Applicazioni distribuite nel cloud con Azure](/azure/architecture/reference-architectures/index)
 
 ## <a name="see-also"></a>Vedere anche
 

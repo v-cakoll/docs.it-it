@@ -4,12 +4,12 @@ description: Viene illustrato come gestire le dipendenze con gli strumenti di .N
 author: blackdwarf
 ms.author: mairaw
 ms.date: 03/06/2017
-ms.openlocfilehash: c8f40b8571523b98da55b047fea8d2bf03b390a2
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: cbeb9ad17932f6abaf14333a71fab2b4b8fd099c
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244228"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45591121"
 ---
 # <a name="managing-dependencies-with-net-core-sdk-10"></a>Gestione delle dipendenze con .NET Core SDK 1.0
 
@@ -32,7 +32,7 @@ Se si ha familiarità con MSBuild, il nuovo elemento risulterà analogo agli alt
 Per aggiungere una dipendenza disponibile solo in una destinazione specifica, usare le condizioni come nell'esempio seguente:
 
 ```xml
-<PackageReference Include="PACKAGE_ID" Version="PACKAGE_VERSION" Condition="'$(TargetFramework)' == 'netcoreapp1.0'" />
+<PackageReference Include="PACKAGE_ID" Version="PACKAGE_VERSION" Condition="'$(TargetFramework)' == 'netcoreapp2.1'" />
 ```
 
 Quanto descritto sopra indica che la dipendenza sarà valida solo se la compilazione avviene per una specifica destinazione. `$(TargetFramework)` nella condizione è una proprietà di MSBuild che viene impostata nel progetto. Per le applicazioni .NET Core più comuni, non occorre eseguire questa operazione. 
@@ -57,7 +57,7 @@ Il progetto completo è simile al seguente:
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp1.0</TargetFramework>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>

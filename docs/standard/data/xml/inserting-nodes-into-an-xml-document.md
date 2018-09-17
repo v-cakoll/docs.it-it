@@ -6,11 +6,11 @@ ms.assetid: 891e54f5-54f6-4bb4-b624-9d1b6a1f1216
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1472bdef3a4e6244f5eb8e943c28243ae8e9f3df
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44249127"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45592193"
 ---
 # <a name="inserting-nodes-into-an-xml-document"></a>Inserimento di nodi in un documento XML
 È possibile modificare il documento inserendo nuovi nodi. I nodi possono essere creati da zero all'interno dello stesso documento o essere importati da un altro documento. Per altre informazioni sulla creazione di nuovi nodi, vedere [Creazione di nuovi nodi nel DOM](../../../../docs/standard/data/xml/create-new-nodes-in-the-dom.md). Per altre informazioni sulla copia di nodi esistenti, vedere [Copia di nodi esistenti](../../../../docs/standard/data/xml/copy-existing-nodes.md), [Copia di nodi esistenti da un documento all'altro](../../../../docs/standard/data/xml/copying-existing-nodes-from-one-document-to-another.md) o [Copia di frammenti di documenti](../../../../docs/standard/data/xml/copying-document-fragments.md).  

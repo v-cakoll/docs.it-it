@@ -11,11 +11,11 @@ ms.assetid: 987ea3d7-0ad5-4238-8b64-331ce4eb3f0b
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 257435516b38d0e4389b7feceba68371bcc8f90e
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44262139"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45616552"
 ---
 # <a name="blockingcollection-overview"></a>Panoramica di BlockingCollection
 <xref:System.Collections.Concurrent.BlockingCollection%601> è una classe di raccolta thread-safe che offre le funzionalità seguenti:  

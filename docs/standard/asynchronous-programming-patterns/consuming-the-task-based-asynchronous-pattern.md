@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 033cf871-ae24-433d-8939-7a3793e547bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f7fd03a43d8722e32f64dd9cbe2936301d6bd2f4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5b538cb53e1cbc1fdbd8e34506710a1967e50f9d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579496"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45615547"
 ---
 # <a name="consuming-the-task-based-asynchronous-pattern"></a>Utilizzo del modello asincrono basato su attività
 Quando si usa il modello asincrono basato su attività (TAP, Task-based Asynchronous Pattern) per lavorare con operazioni asincrone, è possibile usare i callback per ottenere un'attesa non bloccante.  Per le attività, è possibile ottenere questo risultato tramite metodi come <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType>. Il supporto asincrono basato sul linguaggio nasconde i callback consentendo alle operazioni asincrone di essere in attesa all'interno di un normale flusso di controllo e il codice generato dal compilatore fornisce lo stesso livello di supporto delle API.  
@@ -834,7 +834,8 @@ private static void Produce(int data)
 > [!NOTE]
 >  Lo spazio dei nomi <xref:System.Threading.Tasks.Dataflow> è disponibile in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] tramite **NuGet**. Per installare l'assembly contenente lo spazio dei nomi <xref:System.Threading.Tasks.Dataflow>, aprire il progetto in [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], scegliere **Gestisci pacchetti NuGet** dal menu Progetto e cercare online il pacchetto Microsoft.Tpl.Dataflow.  
   
-## <a name="see-also"></a>Vedere anche  
- [Modello asincrono basato su attività (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)  
- [Implementazione del modello asincrono basato su attività](../../../docs/standard/asynchronous-programming-patterns/implementing-the-task-based-asynchronous-pattern.md)  
- [Interoperabilità con altri tipi e modelli asincroni](../../../docs/standard/asynchronous-programming-patterns/interop-with-other-asynchronous-patterns-and-types.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Modello asincrono basato su attività (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)  
+- [Implementazione del modello asincrono basato su attività](../../../docs/standard/asynchronous-programming-patterns/implementing-the-task-based-asynchronous-pattern.md)  
+- [Interoperabilità con altri tipi e modelli asincroni](../../../docs/standard/asynchronous-programming-patterns/interop-with-other-asynchronous-patterns-and-types.md)
