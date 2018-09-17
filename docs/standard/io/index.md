@@ -13,11 +13,11 @@ ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a0ffef95c8f9a187d5dac6902462d9747023384d
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44705870"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45685712"
 ---
 # <a name="file-and-stream-io"></a>I/O di file e di flussi
 I/O (input/output) di file e di flussi fa riferimento al trasferimento di dati da o verso un supporto di archiviazione. In .NET Framework gli spazi dei nomi `System.IO` contengono i tipi che consentono la lettura e la scrittura, sia in modo sincrono che in modo asincrono, su flussi di dati e file. Questi spazi dei nomi contengono anche i tipi che eseguono la compressione e la decompressione dei file e i tipi che consentono la comunicazione tra le pipe e le porte seriali.  
