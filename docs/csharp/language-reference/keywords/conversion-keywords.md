@@ -7,23 +7,23 @@ helpviewer_keywords:
 - types [C#], conversion keywords
 ms.assetid: 8683ff14-5289-4efe-b4f5-1e6a075918ab
 ms.openlocfilehash: 34175f1bda169a9def9e3146214a6d5cd4d258e7
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44266667"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45596962"
 ---
-# <a name="conversion-keywords-c-reference"></a><span data-ttu-id="4ca1f-102">Parole chiave di conversione (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="4ca1f-102">Conversion Keywords (C# Reference)</span></span>
-<span data-ttu-id="4ca1f-103">Questa sezione descrive le parole chiave usate nelle conversioni dei tipi:</span><span class="sxs-lookup"><span data-stu-id="4ca1f-103">This section describes keywords used in type conversions:</span></span>  
+# <a name="conversion-keywords-c-reference"></a><span data-ttu-id="e2b0d-102">Parole chiave di conversione (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="e2b0d-102">Conversion Keywords (C# Reference)</span></span>
+<span data-ttu-id="e2b0d-103">Questa sezione descrive le parole chiave usate nelle conversioni dei tipi:</span><span class="sxs-lookup"><span data-stu-id="e2b0d-103">This section describes keywords used in type conversions:</span></span>  
   
--   [<span data-ttu-id="4ca1f-104">explicit</span><span class="sxs-lookup"><span data-stu-id="4ca1f-104">explicit</span></span>](../../../csharp/language-reference/keywords/explicit.md)  
+-   [<span data-ttu-id="e2b0d-104">explicit</span><span class="sxs-lookup"><span data-stu-id="e2b0d-104">explicit</span></span>](../../../csharp/language-reference/keywords/explicit.md)  
   
--   [<span data-ttu-id="4ca1f-105">implicit</span><span class="sxs-lookup"><span data-stu-id="4ca1f-105">implicit</span></span>](../../../csharp/language-reference/keywords/implicit.md)  
+-   [<span data-ttu-id="e2b0d-105">implicit</span><span class="sxs-lookup"><span data-stu-id="e2b0d-105">implicit</span></span>](../../../csharp/language-reference/keywords/implicit.md)  
   
--   [<span data-ttu-id="4ca1f-106">operator</span><span class="sxs-lookup"><span data-stu-id="4ca1f-106">operator</span></span>](../../../csharp/language-reference/keywords/operator.md)  
+-   [<span data-ttu-id="e2b0d-106">operator</span><span class="sxs-lookup"><span data-stu-id="e2b0d-106">operator</span></span>](../../../csharp/language-reference/keywords/operator.md)  
   
-## <a name="see-also"></a><span data-ttu-id="4ca1f-107">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="4ca1f-107">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="e2b0d-107">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="e2b0d-107">See Also</span></span>  
 
-- [<span data-ttu-id="4ca1f-108">Riferimenti per C#</span><span class="sxs-lookup"><span data-stu-id="4ca1f-108">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="4ca1f-109">Guida per programmatori C#</span><span class="sxs-lookup"><span data-stu-id="4ca1f-109">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="4ca1f-110">Parole chiave di C#</span><span class="sxs-lookup"><span data-stu-id="4ca1f-110">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)
+- [<span data-ttu-id="e2b0d-108">Riferimenti per C#</span><span class="sxs-lookup"><span data-stu-id="e2b0d-108">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+- [<span data-ttu-id="e2b0d-109">Guida per programmatori C#</span><span class="sxs-lookup"><span data-stu-id="e2b0d-109">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="e2b0d-110">Parole chiave di C#</span><span class="sxs-lookup"><span data-stu-id="e2b0d-110">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)

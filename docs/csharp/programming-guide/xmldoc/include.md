@@ -9,43 +9,43 @@ helpviewer_keywords:
 - include C# XML tag
 ms.assetid: a8a70302-6196-4643-bd09-ef33f411f18f
 ms.openlocfilehash: 854c8b61fa8164bccfc9451f2f163dab4a56388f
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44214758"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45595334"
 ---
-# <a name="ltincludegt-c-programming-guide"></a><span data-ttu-id="c9d64-102">&lt;include&gt; (Guida per programmatori C#)</span><span class="sxs-lookup"><span data-stu-id="c9d64-102">&lt;include&gt; (C# Programming Guide)</span></span>
-## <a name="syntax"></a><span data-ttu-id="c9d64-103">Sintassi</span><span class="sxs-lookup"><span data-stu-id="c9d64-103">Syntax</span></span>  
+# <a name="ltincludegt-c-programming-guide"></a><span data-ttu-id="53597-102">&lt;include&gt; (Guida per programmatori C#)</span><span class="sxs-lookup"><span data-stu-id="53597-102">&lt;include&gt; (C# Programming Guide)</span></span>
+## <a name="syntax"></a><span data-ttu-id="53597-103">Sintassi</span><span class="sxs-lookup"><span data-stu-id="53597-103">Syntax</span></span>  
   
 ```xml  
 <include file='filename' path='tagpath[@name="id"]' />  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="c9d64-104">Parametri</span><span class="sxs-lookup"><span data-stu-id="c9d64-104">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="53597-104">Parametri</span><span class="sxs-lookup"><span data-stu-id="53597-104">Parameters</span></span>  
  `filename`  
- <span data-ttu-id="c9d64-105">Nome del file XML che contiene la documentazione.</span><span class="sxs-lookup"><span data-stu-id="c9d64-105">The name of the XML file containing the documentation.</span></span> <span data-ttu-id="c9d64-106">Il nome file può essere qualificato con un percorso relativo al file del codice sorgente.</span><span class="sxs-lookup"><span data-stu-id="c9d64-106">The file name can be qualified with a path relative to the source code file.</span></span> <span data-ttu-id="c9d64-107">Racchiudere `filename` tra virgolette singole (' ').</span><span class="sxs-lookup"><span data-stu-id="c9d64-107">Enclose `filename` in single quotation marks (' ').</span></span>  
+ <span data-ttu-id="53597-105">Nome del file XML che contiene la documentazione.</span><span class="sxs-lookup"><span data-stu-id="53597-105">The name of the XML file containing the documentation.</span></span> <span data-ttu-id="53597-106">Il nome file può essere qualificato con un percorso relativo al file del codice sorgente.</span><span class="sxs-lookup"><span data-stu-id="53597-106">The file name can be qualified with a path relative to the source code file.</span></span> <span data-ttu-id="53597-107">Racchiudere `filename` tra virgolette singole (' ').</span><span class="sxs-lookup"><span data-stu-id="53597-107">Enclose `filename` in single quotation marks (' ').</span></span>  
   
  `tagpath`  
- <span data-ttu-id="c9d64-108">Percorso dei tag di `filename` che porta al `name` del tag.</span><span class="sxs-lookup"><span data-stu-id="c9d64-108">The path of the tags in `filename` that leads to the tag `name`.</span></span> <span data-ttu-id="c9d64-109">Racchiudere il percorso tra virgolette singole (' ').</span><span class="sxs-lookup"><span data-stu-id="c9d64-109">Enclose the path in single quotation marks (' ').</span></span>  
+ <span data-ttu-id="53597-108">Percorso dei tag di `filename` che porta al `name` del tag.</span><span class="sxs-lookup"><span data-stu-id="53597-108">The path of the tags in `filename` that leads to the tag `name`.</span></span> <span data-ttu-id="53597-109">Racchiudere il percorso tra virgolette singole (' ').</span><span class="sxs-lookup"><span data-stu-id="53597-109">Enclose the path in single quotation marks (' ').</span></span>  
   
  `name`  
- <span data-ttu-id="c9d64-110">Identificatore del nome contenuto nel tag che precede i commenti. `name` ha sempre un `id`.</span><span class="sxs-lookup"><span data-stu-id="c9d64-110">The name specifier in the tag that precedes the comments; `name` will have an `id`.</span></span>  
+ <span data-ttu-id="53597-110">Identificatore del nome contenuto nel tag che precede i commenti. `name` ha sempre un `id`.</span><span class="sxs-lookup"><span data-stu-id="53597-110">The name specifier in the tag that precedes the comments; `name` will have an `id`.</span></span>  
   
  `id`  
- <span data-ttu-id="c9d64-111">ID del tag che precede i commenti.</span><span class="sxs-lookup"><span data-stu-id="c9d64-111">The ID for the tag that precedes the comments.</span></span> <span data-ttu-id="c9d64-112">Racchiudere l'ID tra virgolette doppie (" ").</span><span class="sxs-lookup"><span data-stu-id="c9d64-112">Enclose the ID in double quotation marks (" ").</span></span>  
+ <span data-ttu-id="53597-111">ID del tag che precede i commenti.</span><span class="sxs-lookup"><span data-stu-id="53597-111">The ID for the tag that precedes the comments.</span></span> <span data-ttu-id="53597-112">Racchiudere l'ID tra virgolette doppie (" ").</span><span class="sxs-lookup"><span data-stu-id="53597-112">Enclose the ID in double quotation marks (" ").</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="c9d64-113">Note</span><span class="sxs-lookup"><span data-stu-id="c9d64-113">Remarks</span></span>  
- <span data-ttu-id="c9d64-114">Il tag \<include> consente di fare riferimento ai commenti di un altro file per la descrizione dei tipi e dei membri del codice sorgente,</span><span class="sxs-lookup"><span data-stu-id="c9d64-114">The \<include> tag lets you refer to comments in another file that describe the types and members in your source code.</span></span> <span data-ttu-id="c9d64-115">eliminando la necessità di inserire i commenti relativi alla documentazione direttamente nel file del codice sorgente.</span><span class="sxs-lookup"><span data-stu-id="c9d64-115">This is an alternative to placing documentation comments directly in your source code file.</span></span> <span data-ttu-id="c9d64-116">Inserendo la documentazione in un file separato, è possibile applicare alla documentazione il controllo del codice sorgente separatamente dal codice sorgente.</span><span class="sxs-lookup"><span data-stu-id="c9d64-116">By putting the documentation in a separate file, you can apply source control to the documentation separately from the source code.</span></span> <span data-ttu-id="c9d64-117">Una persona, ad esempio, può avere il file di codice sorgente estratto e un'altra il file della documentazione estratto.</span><span class="sxs-lookup"><span data-stu-id="c9d64-117">One person can have the source code file checked out and someone else can have the documentation file checked out.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="53597-113">Note</span><span class="sxs-lookup"><span data-stu-id="53597-113">Remarks</span></span>  
+ <span data-ttu-id="53597-114">Il tag \<include> consente di fare riferimento ai commenti di un altro file per la descrizione dei tipi e dei membri del codice sorgente,</span><span class="sxs-lookup"><span data-stu-id="53597-114">The \<include> tag lets you refer to comments in another file that describe the types and members in your source code.</span></span> <span data-ttu-id="53597-115">eliminando la necessità di inserire i commenti relativi alla documentazione direttamente nel file del codice sorgente.</span><span class="sxs-lookup"><span data-stu-id="53597-115">This is an alternative to placing documentation comments directly in your source code file.</span></span> <span data-ttu-id="53597-116">Inserendo la documentazione in un file separato, è possibile applicare alla documentazione il controllo del codice sorgente separatamente dal codice sorgente.</span><span class="sxs-lookup"><span data-stu-id="53597-116">By putting the documentation in a separate file, you can apply source control to the documentation separately from the source code.</span></span> <span data-ttu-id="53597-117">Una persona, ad esempio, può avere il file di codice sorgente estratto e un'altra il file della documentazione estratto.</span><span class="sxs-lookup"><span data-stu-id="53597-117">One person can have the source code file checked out and someone else can have the documentation file checked out.</span></span>  
   
- <span data-ttu-id="c9d64-118">Il tag \<include> usa la sintassi XML XPath.</span><span class="sxs-lookup"><span data-stu-id="c9d64-118">The \<include> tag uses the XML XPath syntax.</span></span> <span data-ttu-id="c9d64-119">Per informazioni sulla personalizzazione dell'utilizzo di \<include>, consultare la documentazione relativa a XPath.</span><span class="sxs-lookup"><span data-stu-id="c9d64-119">Refer to XPath documentation for ways to customize your \<include> use.</span></span>  
+ <span data-ttu-id="53597-118">Il tag \<include> usa la sintassi XML XPath.</span><span class="sxs-lookup"><span data-stu-id="53597-118">The \<include> tag uses the XML XPath syntax.</span></span> <span data-ttu-id="53597-119">Per informazioni sulla personalizzazione dell'utilizzo di \<include>, consultare la documentazione relativa a XPath.</span><span class="sxs-lookup"><span data-stu-id="53597-119">Refer to XPath documentation for ways to customize your \<include> use.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="c9d64-120">Esempio</span><span class="sxs-lookup"><span data-stu-id="c9d64-120">Example</span></span>  
- <span data-ttu-id="c9d64-121">In questo esempio vengono presi in considerazione più file.</span><span class="sxs-lookup"><span data-stu-id="c9d64-121">This is a multifile example.</span></span> <span data-ttu-id="c9d64-122">Di seguito è riportato il primo file, che usa \<include>:</span><span class="sxs-lookup"><span data-stu-id="c9d64-122">The first file, which uses \<include>, is listed below:</span></span>  
+## <a name="example"></a><span data-ttu-id="53597-120">Esempio</span><span class="sxs-lookup"><span data-stu-id="53597-120">Example</span></span>  
+ <span data-ttu-id="53597-121">In questo esempio vengono presi in considerazione più file.</span><span class="sxs-lookup"><span data-stu-id="53597-121">This is a multifile example.</span></span> <span data-ttu-id="53597-122">Di seguito è riportato il primo file, che usa \<include>:</span><span class="sxs-lookup"><span data-stu-id="53597-122">The first file, which uses \<include>, is listed below:</span></span>  
   
  [!code-csharp[csProgGuideDocComments#5](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/include_1.cs)]  
   
- <span data-ttu-id="c9d64-123">Il secondo file, xml_include_tag.doc, contiene i commenti alla documentazione seguenti:</span><span class="sxs-lookup"><span data-stu-id="c9d64-123">The second file, xml_include_tag.doc, contains the following documentation comments:</span></span>  
+ <span data-ttu-id="53597-123">Il secondo file, xml_include_tag.doc, contiene i commenti alla documentazione seguenti:</span><span class="sxs-lookup"><span data-stu-id="53597-123">The second file, xml_include_tag.doc, contains the following documentation comments:</span></span>  
   
 ```xml  
 <MyDocs>  
@@ -65,8 +65,8 @@ The summary for this other type.
 </MyDocs>  
 ```  
   
-## <a name="program-output"></a><span data-ttu-id="c9d64-124">Output di programma</span><span class="sxs-lookup"><span data-stu-id="c9d64-124">Program Output</span></span>  
- <span data-ttu-id="c9d64-125">L'output seguente viene generato quando si compilano le classi Test e Test2 con la riga di comando seguente: `/doc:DocFileName.xml.`. In Visual Studio, è possibile specificare l'opzione dei commenti XML alla documentazione nel riquadro Compilazione di Creazione progetti.</span><span class="sxs-lookup"><span data-stu-id="c9d64-125">The following output is generated when you compile the Test and Test2 classes with the following command line: `/doc:DocFileName.xml.` In Visual Studio, you specify the XML doc comments option in the Build pane of the Project Designer.</span></span> <span data-ttu-id="c9d64-126">Se il compilatore C# rileva il tag \<include>, la ricerca dei commenti alla documentazione verrà eseguita nel file xml_include_tag.doc anziché nel file di origine corrente.</span><span class="sxs-lookup"><span data-stu-id="c9d64-126">When the C# compiler sees the \<include> tag, it will search for documentation comments in xml_include_tag.doc instead of the current source file.</span></span> <span data-ttu-id="c9d64-127">Il compilatore genera quindi il file DocFileName.xml, che verrà usato dagli strumenti della documentazione come [Sandcastle](https://github.com/EWSoftware/SHFB) per realizzare la documentazione finale.</span><span class="sxs-lookup"><span data-stu-id="c9d64-127">The compiler then generates DocFileName.xml, and this is the file that is consumed by documentation tools such as [Sandcastle](https://github.com/EWSoftware/SHFB) to produce the final documentation.</span></span>  
+## <a name="program-output"></a><span data-ttu-id="53597-124">Output di programma</span><span class="sxs-lookup"><span data-stu-id="53597-124">Program Output</span></span>  
+ <span data-ttu-id="53597-125">L'output seguente viene generato quando si compilano le classi Test e Test2 con la riga di comando seguente: `/doc:DocFileName.xml.`. In Visual Studio, è possibile specificare l'opzione dei commenti XML alla documentazione nel riquadro Compilazione di Creazione progetti.</span><span class="sxs-lookup"><span data-stu-id="53597-125">The following output is generated when you compile the Test and Test2 classes with the following command line: `/doc:DocFileName.xml.` In Visual Studio, you specify the XML doc comments option in the Build pane of the Project Designer.</span></span> <span data-ttu-id="53597-126">Se il compilatore C# rileva il tag \<include>, la ricerca dei commenti alla documentazione verrà eseguita nel file xml_include_tag.doc anziché nel file di origine corrente.</span><span class="sxs-lookup"><span data-stu-id="53597-126">When the C# compiler sees the \<include> tag, it will search for documentation comments in xml_include_tag.doc instead of the current source file.</span></span> <span data-ttu-id="53597-127">Il compilatore genera quindi il file DocFileName.xml, che verrà usato dagli strumenti della documentazione come [Sandcastle](https://github.com/EWSoftware/SHFB) per realizzare la documentazione finale.</span><span class="sxs-lookup"><span data-stu-id="53597-127">The compiler then generates DocFileName.xml, and this is the file that is consumed by documentation tools such as [Sandcastle](https://github.com/EWSoftware/SHFB) to produce the final documentation.</span></span>  
   
 ```xml  
 <?xml version="1.0"?>   
@@ -89,7 +89,7 @@ The summary for this other type.
 </doc>   
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="c9d64-128">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c9d64-128">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="53597-128">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="53597-128">See Also</span></span>
 
-- [<span data-ttu-id="c9d64-129">Guida per programmatori C#</span><span class="sxs-lookup"><span data-stu-id="c9d64-129">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="c9d64-130">Tag consigliati per i commenti relativi alla documentazione</span><span class="sxs-lookup"><span data-stu-id="c9d64-130">Recommended Tags for Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+- [<span data-ttu-id="53597-129">Guida per programmatori C#</span><span class="sxs-lookup"><span data-stu-id="53597-129">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="53597-130">Tag consigliati per i commenti relativi alla documentazione</span><span class="sxs-lookup"><span data-stu-id="53597-130">Recommended Tags for Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
