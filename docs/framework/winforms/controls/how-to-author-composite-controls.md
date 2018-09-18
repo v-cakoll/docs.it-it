@@ -7,12 +7,12 @@ helpviewer_keywords:
 - user controls [Windows Forms], inheriting from
 - composite controls [Windows Forms], creating
 ms.assetid: 79c9cf05-5ab6-4a18-886d-88a64748b098
-ms.openlocfilehash: 2c7d2c94c376b671d6e9e4e4b71bc8a9b0fbc343
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 7abdeae4d19ceb6425f85e3cdd28f565a03d7ea4
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43798758"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46007437"
 ---
 # <a name="how-to-author-composite-controls"></a>Procedura: modificare controlli compositi
 I controlli compositi possono essere usati in molti modi. È possibile crearli come parte di un progetto applicazione desktop di Windows e usarli solo sui form del progetto. Oppure è possibile crearli in un progetto libreria di controlli Windows, compilare il progetto in un assembly e usare i controlli in altri progetti. È anche possibile ereditare da essi e usare l'ereditarietà visiva per personalizzarli rapidamente per scopi speciali.  
@@ -30,7 +30,7 @@ I controlli compositi possono essere usati in molti modi. È possibile crearli c
   
 3.  Nella finestra di dialogo **Aggiungi nuovo elemento** assegnare al file di classe (file con estensione .vb o .cs) il nome che si desidera assegnare al controllo composito.  
   
-4.  Fare clic sul pulsante **Aggiungi** per creare il file di classe per il controllo composito.  
+4.  Selezionare il **Add** pulsante per creare il file di classe per il controllo composito.  
   
 5.  Aggiungere controlli dalla **Casella degli strumenti** alla superficie del controllo composito.  
   
