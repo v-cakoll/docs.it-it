@@ -3,11 +3,11 @@ title: Sintassi dettagliata (F#)
 description: 'Informazioni sulla differenza tra la sintassi dettagliata e leggera nel linguaggio di programmazione F #.'
 ms.date: 05/16/2016
 ms.openlocfilehash: b4f2354738da4692cb444e5e7dd9531d80d26664
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45647138"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45972319"
 ---
 # <a name="verbose-syntax"></a>Sintassi dettagliata
 
