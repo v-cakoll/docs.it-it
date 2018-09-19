@@ -5,11 +5,11 @@ f1_keywords:
 - vbrTextFieldParser_FieldWidthsNothing
 ms.assetid: 623e0825-5640-4e47-8341-7eeec80fc145
 ms.openlocfilehash: cb9051269bf46e23d5ae070956994212d3e98675
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45658307"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46322444"
 ---
 # <a name="unable-to-read-fixed-width-fields-because-fieldwidths-is-nothing-or-empty"></a>Impossibile leggere i campi a larghezza fissa. FieldWidths è Nothing o vuoto
 `TextFieldParser` non riesce a leggere i campi a larghezza fissa perché la proprietà `FieldWidths` è impostata su `Nothing` o è vuota.  

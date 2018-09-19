@@ -2,12 +2,12 @@
 title: Correlazione duplex durevole
 ms.date: 03/30/2017
 ms.assetid: 8eb0e49a-6d3b-4f7e-a054-0d4febee2ffb
-ms.openlocfilehash: 5bef3e243afc0ea9a51f474bfed98320134ec043
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 82c052ff87eb8b125dfc64e1567dbd00d255894d
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33491488"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46323782"
 ---
 # <a name="durable-duplex-correlation"></a>Correlazione duplex durevole
 La correlazione duplex durevole, nota anche come correlazione di callback, risulta utile se un servizio flusso di lavoro dispone del requisito adatto a inviare un callback al chiamante iniziale. A differenza del duplex WCF, il callback si può verificare in qualsiasi momento nel futuro e non è legato allo stesso canale o al canale di durata. L'unico requisito è costituito dal fatto che il chiamante dispone di un endpoint attivo in ascolto del messaggio di callback. In questo modo due servizi flusso di lavoro possono comunicare in una conversazione prolungata. In questo argomento vengono forniti cenni preliminari sulla correlazione duplex durevole.  
@@ -16,7 +16,7 @@ La correlazione duplex durevole, nota anche come correlazione di callback, risul
  Per utilizzare la correlazione duplex durevole, i due servizi devono utilizzare un'associazione abilitata per il contesto che supporta operazioni bidirezionali, ad esempio <xref:System.ServiceModel.NetTcpContextBinding> o <xref:System.ServiceModel.WSHttpContextBinding>. Il servizio chiamante registra un <xref:System.ServiceModel.WSHttpContextBinding.ClientCallbackAddress%2A> con l'associazione desiderata sul client <xref:System.ServiceModel.Endpoint>. Il servizio ricevente riceve questi dati nella chiamata iniziale, quindi li utilizza sul proprio <xref:System.ServiceModel.Endpoint> nell'attività <xref:System.ServiceModel.Activities.Send> che effettua nuovamente la chiamata al servizio chiamante. In questo esempio, due servizi comunicano l'uno con l'altro. Il primo servizio richiama un metodo nel secondo servizio, quindi attende una risposta. Il secondo servizio conosce il nome del metodo di callback, ma l'endpoint del servizio che implementa questo metodo non è noto in fase di progettazione.  
   
 > [!NOTE]
->  La correlazione duplex durevole può essere utilizzata soltanto quando <xref:System.ServiceModel.Channels.AddressingVersion> dell'endpoint è configurato con <xref:System.ServiceModel.Channels.AddressingVersion.WSAddressing10%2A>. In caso contrario, una <xref:System.InvalidOperationException> eccezione con il messaggio seguente: "il messaggio contiene un'intestazione di contesto di callback con un riferimento dell'endpoint per AddressingVersion" Addressing200408 (collegamento ipertestuale "http://schemas.xmlsoap.org/ws/2004/08/addressing" http://schemas.xmlsoap.org/ws/2004/08/addressing)'. Il contesto di callback può essere trasmesso solo quando AddressingVersion è configurato con 'WSAddressing10'".  
+> La correlazione duplex durevole può essere utilizzata soltanto quando <xref:System.ServiceModel.Channels.AddressingVersion> dell'endpoint è configurato con <xref:System.ServiceModel.Channels.AddressingVersion.WSAddressing10%2A>. In caso contrario, un' <xref:System.InvalidOperationException> viene generata l'eccezione con messaggio analogo al seguente: "il messaggio contiene un'intestazione del contesto di callback con un riferimento dell'endpoint per [AddressingVersion](http://schemas.xmlsoap.org/ws/2004/08/addressing). Contesto di callback può essere trasmesso solo quando AddressingVersion è configurato con 'WSAddressing10'.
   
  Nell'esempio seguente viene ospitato un servizio flusso di lavoro che crea un <xref:System.ServiceModel.Endpoint> del callback mediante <xref:System.ServiceModel.WSHttpContextBinding>.  
   
@@ -201,4 +201,4 @@ WF1 - Items Received
  In questo esempio, entrambi i flussi di lavoro gestiscono in modo esplicito la correlazione mediante un <xref:System.ServiceModel.Activities.CallbackCorrelationInitializer>. Poiché in questi flussi di lavoro di esempio era presente una sola correlazione, sarebbe stata sufficiente la gestione di <xref:System.ServiceModel.Activities.CorrelationHandle> predefinita.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Duplex durevole &#91;esempi WF&#93;](../../../../docs/framework/windows-workflow-foundation/samples/durable-duplex.md)
+ [Duplex durevole &#91;esempi di WF&#93;](../../../../docs/framework/windows-workflow-foundation/samples/durable-duplex.md)

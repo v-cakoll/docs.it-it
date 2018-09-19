@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - basicHttpBinding Element
 ms.assetid: 85cf1a4f-26c2-48c7-bda6-6c960d5d3fb3
-ms.openlocfilehash: cde75b44f30d445a00007dac617b898ea5dcb254
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1453923fd916519f92f36fed47afdc2ba2e7488b
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511244"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46321418"
 ---
 # <a name="ltbasichttpbindinggt"></a>&lt;basicHttpBinding&gt;
 Rappresenta un'associazione che può essere usata da un servizio Windows Communication Foundation (WCF) per configurare ed esporre endpoint in grado di comunicare con servizi e client Web basati su ASMX e altri servizi conformi alla specifica WS-I Basic Profile 1.1.  
@@ -22,36 +22,35 @@ Rappresenta un'associazione che può essere usata da un servizio Windows Communi
   
 ```xml  
 <basicHttpBinding>  
-   <binding   
-       allowCookies="Boolean"  
-       bypassProxyOnLocal="Boolean"  
-       closeTimeout="TimeSpan"   
-       envelopeVersion="None/Soap11/Soap12"  
-       hostNameComparisonMode="StrongWildCard/Exact/WeakWildcard"  
-       maxBufferPoolSize="Integer"  
-       maxBufferSize="Integer"  
-       maxReceivedMessageSize="Integer"  
-       messageEncoding="Text/Mtom"  
-              name="string"   
-       openTimeout="TimeSpan"   
-       proxyAddress="URI"  
-        receiveTimeout="TimeSpan"  
-       sendTimeout="TimeSpan"  
-              textEncoding="UnicodeFffeTextEncoding/Utf16TextEncoding/Utf8TextEncoding"  
-              transferMode="Buffered/Streamed/StreamedRequest/StreamedResponse"  
-       useDefaultWebProxy="Boolean"  
+   <binding allowCookies="Boolean"  
+            bypassProxyOnLocal="Boolean"  
+            closeTimeout="TimeSpan"   
+            envelopeVersion="None/Soap11/Soap12"  
+            hostNameComparisonMode="StrongWildCard/Exact/WeakWildcard"  
+            maxBufferPoolSize="Integer"  
+            maxBufferSize="Integer"  
+            maxReceivedMessageSize="Integer"  
+            messageEncoding="Text/Mtom"  
+            name="string"   
+            openTimeout="TimeSpan"   
+            proxyAddress="URI"  
+            receiveTimeout="TimeSpan"  
+            sendTimeout="TimeSpan"  
+            textEncoding="UnicodeFffeTextEncoding/Utf16TextEncoding/Utf8TextEncoding"  
+            transferMode="Buffered/Streamed/StreamedRequest/StreamedResponse"  
+            useDefaultWebProxy="Boolean">
        <security mode="None/Transport/Message/TransportWithMessageCredential/TransportCredentialOnly">  
            <transport clientCredentialType="None/Basic/Digest/Ntlm/Windows/Certificate"  
-                  proxyCredentialType="None/Basic/Digest/Ntlm/Windows"  
-                                    realm="string" />  
-           <message   
-                 algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes/TripleDesRsa15/Basic128Sha256/Basic192Sha256/TripleDesSha256/Basic128Sha256Rsa15/Basic192Sha256Rsa15/Basic256Sha256Rsa15/TripleDesSha256Rsa15"  
-                            clientCredentialType="UserName/Certificate"/>  
+                      proxyCredentialType="None/Basic/Digest/Ntlm/Windows"  
+                      realm="string" />  
+           <message algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes/TripleDesRsa15/Basic128Sha256/Basic192Sha256/TripleDesSha256/Basic128Sha256Rsa15/Basic192Sha256Rsa15/Basic256Sha256Rsa15/TripleDesSha256Rsa15"  
+                     clientCredentialType="UserName/Certificate"/>  
        </security>  
-       <readerQuotas   
-            maxArrayLength="Integer"  
-            maxBytesPerRead="Integer"  
-            maxDepth="Integer"             maxNameTableCharCount="Integer"                maxStringContentLength="Integer" />  
+       <readerQuotas maxArrayLength="Integer"  
+                     maxBytesPerRead="Integer"  
+                     maxDepth="Integer"
+                     maxNameTableCharCount="Integer"
+                     maxStringContentLength="Integer" />  
    </binding>  
 </basicHttpBinding>  
 ```  
