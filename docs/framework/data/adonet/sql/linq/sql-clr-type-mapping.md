@@ -2,12 +2,12 @@
 title: Mapping del tipo SQL-CLR
 ms.date: 07/23/2018
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
-ms.openlocfilehash: ac00d78fff65f5d44a52f92509db3aa493952949
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: d5c0072d8561efa1211de191a1f2b6f3a1e55b7b
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43862105"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46478695"
 ---
 # <a name="sql-clr-type-mapping"></a>Mapping del tipo SQL-CLR
 In LINQ to SQL viene eseguito il mapping del modello di dati di un database relazionale a un modello a oggetti espresso nel linguaggio di programmazione desiderato. Quando viene eseguita l'applicazione, LINQ to SQL converte in SQL le query LINQ (Language Integrated Query) nel modello a oggetti e le invia al database per l'esecuzione. Quando il database restituisce i risultati, questi vengono nuovamente convertiti da LINQ to SQL in oggetti che è possibile usare nel linguaggio di programmazione desiderato.  
@@ -122,7 +122,7 @@ In LINQ to SQL viene eseguito il mapping del modello di dati di un database rela
  Benché sia possibile scegliere tra molti altri mapping dei tipi numerici, alcuni possono comportare eccezioni di overflow o di perdita di dati durante la conversione da o verso il database. Per altre informazioni, vedere la [tipo di Mapping di matrice fase di esecuzione comportamento](#BehaviorMatrix).  
   
 ### <a name="decimal-and-money-types"></a>Tipi Decimal e Money  
- La precisione predefinita di SQL Server `DECIMAL` tipo (18 cifre decimali a sinistra e a destra del separatore decimale) è molto inferiore alla precisione di CLR <!--zz <xref:System.Decima?displayProperty=nameWithType>l --> `Decimal` tipo cui viene abbinato per impostazione predefinita. Questa differenza può comportare una perdita di precisione quando si salvano dati nel database. Può tuttavia verificarsi il contrario se il tipo `DECIMAL` di SQL Server viene configurato con più di 29 cifre di precisione. Quando un tipo `DECIMAL` di SQL Server viene configurato con una precisione maggiore del tipo <xref:System.Decimal?displayProperty=nameWithType> CLR, può verificarsi una perdita di precisione durante il recupero di dati dal database.  
+ La precisione predefinita di SQL Server `DECIMAL` tipo (18 cifre decimali a sinistra e a destra del separatore decimale) è molto inferiore alla precisione di CLR <xref:System.Decimal?displayProperty=nameWithType> tipo cui viene abbinato per impostazione predefinita. Questa differenza può comportare una perdita di precisione quando si salvano dati nel database. Può tuttavia verificarsi il contrario se il tipo `DECIMAL` di SQL Server viene configurato con più di 29 cifre di precisione. Quando un tipo `DECIMAL` di SQL Server viene configurato con una precisione maggiore del tipo <xref:System.Decimal?displayProperty=nameWithType> CLR, può verificarsi una perdita di precisione durante il recupero di dati dal database.  
   
  I tipi `MONEY` e `SMALLMONEY` di SQL Server, abbinati anch'essi al tipo <xref:System.Decimal?displayProperty=nameWithType> CLR per impostazione predefinita, hanno una precisione di gran lunga inferiore, che può comportare eccezioni di overflow o di perdita di dati quando si salvano dati nel database.  
   
