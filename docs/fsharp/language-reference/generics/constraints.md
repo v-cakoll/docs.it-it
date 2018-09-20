@@ -3,11 +3,11 @@ title: Vincoli (F#)
 description: 'Informazioni sui vincoli di F # che si applicano ai parametri di tipo generico per specificare i requisiti per un argomento di tipo in una funzione o un tipo generico.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 9534db4ffd195022366af8c993658bd94f375f53
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45675886"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46324058"
 ---
 # <a name="constraints"></a>Vincoli
 
