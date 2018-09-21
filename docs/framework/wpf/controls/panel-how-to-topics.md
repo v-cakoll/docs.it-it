@@ -8,23 +8,23 @@ helpviewer_keywords:
 - controls [WPF], Panel
 ms.assetid: 28d8faf2-490c-4e17-a447-df25a66f6679
 ms.openlocfilehash: d8ead1a799f1bd7524d171beb3e262baeb4b5fbe
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45745468"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46493527"
 ---
-# <a name="panel-how-to-topics"></a><span data-ttu-id="f42f4-102">Procedure relative all'elemento Panel</span><span class="sxs-lookup"><span data-stu-id="f42f4-102">Panel How-to Topics</span></span>
-<span data-ttu-id="f42f4-103">Gli argomenti in questa sezione descrivono come usare il <xref:System.Windows.Controls.Panel> elemento ed elementi correlati [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].</span><span class="sxs-lookup"><span data-stu-id="f42f4-103">The topics in this section describe how to use the <xref:System.Windows.Controls.Panel> element and related [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].</span></span>  
+# <a name="panel-how-to-topics"></a><span data-ttu-id="ac364-102">Procedure relative all'elemento Panel</span><span class="sxs-lookup"><span data-stu-id="ac364-102">Panel How-to Topics</span></span>
+<span data-ttu-id="ac364-103">Gli argomenti in questa sezione descrivono come usare il <xref:System.Windows.Controls.Panel> elemento ed elementi correlati [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].</span><span class="sxs-lookup"><span data-stu-id="ac364-103">The topics in this section describe how to use the <xref:System.Windows.Controls.Panel> element and related [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="f42f4-104">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="f42f4-104">In This Section</span></span>  
- [<span data-ttu-id="f42f4-105">Procedura: applicare una proprietà LayoutTransform a un elemento</span><span class="sxs-lookup"><span data-stu-id="f42f4-105">How to: Apply a LayoutTransform to an Element</span></span>](https://msdn.microsoft.com/library/8221db67-d99f-4783-b65e-a6c5a52c03ab)  
- [<span data-ttu-id="f42f4-106">Creare un elemento Panel personalizzato</span><span class="sxs-lookup"><span data-stu-id="f42f4-106">Create a Custom Panel Element</span></span>](../../../../docs/framework/wpf/controls/how-to-create-a-custom-panel-element.md)  
- [<span data-ttu-id="f42f4-107">Eseguire l'override del metodo Panel OnRender</span><span class="sxs-lookup"><span data-stu-id="f42f4-107">Override the Panel OnRender Method</span></span>](../../../../docs/framework/wpf/controls/how-to-override-the-panel-onrender-method.md)  
- [<span data-ttu-id="f42f4-108">Impostare le proprietà di altezza di un elemento</span><span class="sxs-lookup"><span data-stu-id="f42f4-108">Set the Height Properties of an Element</span></span>](../../../../docs/framework/wpf/controls/how-to-set-the-height-properties-of-an-element.md)  
- [<span data-ttu-id="f42f4-109">Impostare le proprietà di larghezza di un elemento</span><span class="sxs-lookup"><span data-stu-id="f42f4-109">Set the Width Properties of an Element</span></span>](../../../../docs/framework/wpf/controls/how-to-set-the-width-properties-of-an-element.md)  
+## <a name="in-this-section"></a><span data-ttu-id="ac364-104">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="ac364-104">In This Section</span></span>  
+ [<span data-ttu-id="ac364-105">Procedura: applicare una proprietà LayoutTransform a un elemento</span><span class="sxs-lookup"><span data-stu-id="ac364-105">How to: Apply a LayoutTransform to an Element</span></span>](https://msdn.microsoft.com/library/8221db67-d99f-4783-b65e-a6c5a52c03ab)  
+ [<span data-ttu-id="ac364-106">Creare un elemento Panel personalizzato</span><span class="sxs-lookup"><span data-stu-id="ac364-106">Create a Custom Panel Element</span></span>](../../../../docs/framework/wpf/controls/how-to-create-a-custom-panel-element.md)  
+ [<span data-ttu-id="ac364-107">Eseguire l'override del metodo Panel OnRender</span><span class="sxs-lookup"><span data-stu-id="ac364-107">Override the Panel OnRender Method</span></span>](../../../../docs/framework/wpf/controls/how-to-override-the-panel-onrender-method.md)  
+ [<span data-ttu-id="ac364-108">Impostare le proprietà di altezza di un elemento</span><span class="sxs-lookup"><span data-stu-id="ac364-108">Set the Height Properties of an Element</span></span>](../../../../docs/framework/wpf/controls/how-to-set-the-height-properties-of-an-element.md)  
+ [<span data-ttu-id="ac364-109">Impostare le proprietà di larghezza di un elemento</span><span class="sxs-lookup"><span data-stu-id="ac364-109">Set the Width Properties of an Element</span></span>](../../../../docs/framework/wpf/controls/how-to-set-the-width-properties-of-an-element.md)  
   
-## <a name="reference"></a><span data-ttu-id="f42f4-110">Riferimenti</span><span class="sxs-lookup"><span data-stu-id="f42f4-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="ac364-110">Riferimenti</span><span class="sxs-lookup"><span data-stu-id="ac364-110">Reference</span></span>  
  <xref:System.Windows.Controls.Panel>  
   
  <xref:System.Windows.Controls.Canvas>  
@@ -39,9 +39,9 @@ ms.locfileid: "45745468"
   
  <xref:System.Windows.Controls.WrapPanel>  
   
-## <a name="related-sections"></a><span data-ttu-id="f42f4-111">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="f42f4-111">Related Sections</span></span>  
- [<span data-ttu-id="f42f4-112">Layout</span><span class="sxs-lookup"><span data-stu-id="f42f4-112">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)  
+## <a name="related-sections"></a><span data-ttu-id="ac364-111">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="ac364-111">Related Sections</span></span>  
+ [<span data-ttu-id="ac364-112">Layout</span><span class="sxs-lookup"><span data-stu-id="ac364-112">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)  
   
- [<span data-ttu-id="f42f4-113">Procedura dettagliata: Prima applicazione desktop WPF</span><span class="sxs-lookup"><span data-stu-id="f42f4-113">Walkthrough: My first WPF desktop application</span></span>](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [<span data-ttu-id="ac364-113">Procedura dettagliata: Prima applicazione desktop WPF</span><span class="sxs-lookup"><span data-stu-id="ac364-113">Walkthrough: My first WPF desktop application</span></span>](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [<span data-ttu-id="f42f4-114">Panoramica sull'elemento ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="f42f4-114">ScrollViewer Overview</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [<span data-ttu-id="ac364-114">Panoramica sull'elemento ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="ac364-114">ScrollViewer Overview</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)

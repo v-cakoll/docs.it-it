@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 33aab5ee23a1f0d30d1f9f3079856ca30d46d2ec
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
-ms.translationtype: MT
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45593038"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46481491"
 ---
-# <a name="iclrstrongnamegethashfromfile-method"></a><span data-ttu-id="3402c-102">Metodo ICLRStrongName::GetHashFromFile</span><span class="sxs-lookup"><span data-stu-id="3402c-102">ICLRStrongName::GetHashFromFile Method</span></span>
-<span data-ttu-id="3402c-103">Genera un hash basato sul contenuto del file specificato.</span><span class="sxs-lookup"><span data-stu-id="3402c-103">Generates a hash over the contents of the specified file.</span></span>  
+# <a name="iclrstrongnamegethashfromfile-method"></a><span data-ttu-id="2b8a5-102">Metodo ICLRStrongName::GetHashFromFile</span><span class="sxs-lookup"><span data-stu-id="2b8a5-102">ICLRStrongName::GetHashFromFile Method</span></span>
+<span data-ttu-id="2b8a5-103">Genera un hash basato sul contenuto del file specificato.</span><span class="sxs-lookup"><span data-stu-id="2b8a5-103">Generates a hash over the contents of the specified file.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3402c-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="3402c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2b8a5-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="2b8a5-104">Syntax</span></span>  
   
 ```  
 HRESULT GetHashFromFile (  
@@ -39,37 +39,37 @@ HRESULT GetHashFromFile (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="3402c-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="3402c-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="2b8a5-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="2b8a5-105">Parameters</span></span>  
  `szFilePath`  
- <span data-ttu-id="3402c-106">[in] Il nome del file da hash.</span><span class="sxs-lookup"><span data-stu-id="3402c-106">[in] The name of the file to hash.</span></span>  
+ <span data-ttu-id="2b8a5-106">[in] Il nome del file da hash.</span><span class="sxs-lookup"><span data-stu-id="2b8a5-106">[in] The name of the file to hash.</span></span>  
   
  `piHashAlg`  
- <span data-ttu-id="3402c-107">[in, out] L'algoritmo da utilizzare durante la generazione di hash.</span><span class="sxs-lookup"><span data-stu-id="3402c-107">[in, out] The algorithm to use when generating the hash.</span></span> <span data-ttu-id="3402c-108">Gli algoritmi validi sono quelli definiti per la funzione CryptoAPI Win32.</span><span class="sxs-lookup"><span data-stu-id="3402c-108">Valid algorithms are those defined by the Win32 CryptoAPI.</span></span> <span data-ttu-id="3402c-109">Se `piHashAlg` è impostato su 0, l'algoritmo predefinito viene utilizzato CALG_SHA-1.</span><span class="sxs-lookup"><span data-stu-id="3402c-109">If `piHashAlg` is set to 0, the default algorithm CALG_SHA-1 is used.</span></span>  
+ <span data-ttu-id="2b8a5-107">[in, out] L'algoritmo da utilizzare durante la generazione di hash.</span><span class="sxs-lookup"><span data-stu-id="2b8a5-107">[in, out] The algorithm to use when generating the hash.</span></span> <span data-ttu-id="2b8a5-108">Gli algoritmi validi sono quelli definiti per la funzione CryptoAPI Win32.</span><span class="sxs-lookup"><span data-stu-id="2b8a5-108">Valid algorithms are those defined by the Win32 CryptoAPI.</span></span> <span data-ttu-id="2b8a5-109">Se `piHashAlg` è impostato su 0, l'algoritmo predefinito viene utilizzato CALG_SHA-1.</span><span class="sxs-lookup"><span data-stu-id="2b8a5-109">If `piHashAlg` is set to 0, the default algorithm CALG_SHA-1 is used.</span></span>  
   
  `pbHash`  
- <span data-ttu-id="3402c-110">[out] Matrice di byte contenente il valore hash generato.</span><span class="sxs-lookup"><span data-stu-id="3402c-110">[out] A byte array containing the generated hash.</span></span>  
+ <span data-ttu-id="2b8a5-110">[out] Matrice di byte contenente il valore hash generato.</span><span class="sxs-lookup"><span data-stu-id="2b8a5-110">[out] A byte array containing the generated hash.</span></span>  
   
  `cchHash`  
- <span data-ttu-id="3402c-111">[in] Le dimensioni massime del buffer che `pbHash` punta a.</span><span class="sxs-lookup"><span data-stu-id="3402c-111">[in] The maximum size of the buffer that `pbHash` points to.</span></span>  
+ <span data-ttu-id="2b8a5-111">[in] Le dimensioni massime del buffer che `pbHash` punta a.</span><span class="sxs-lookup"><span data-stu-id="2b8a5-111">[in] The maximum size of the buffer that `pbHash` points to.</span></span>  
   
  `pchHash`  
- <span data-ttu-id="3402c-112">[out] Le dimensioni, in byte, del valore restituito `pbHash`.</span><span class="sxs-lookup"><span data-stu-id="3402c-112">[out] The size, in bytes, of the returned `pbHash`.</span></span>  
+ <span data-ttu-id="2b8a5-112">[out] Le dimensioni, in byte, del valore restituito `pbHash`.</span><span class="sxs-lookup"><span data-stu-id="2b8a5-112">[out] The size, in bytes, of the returned `pbHash`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="3402c-113">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="3402c-113">Return Value</span></span>  
- <span data-ttu-id="3402c-114">`S_OK` Se il metodo è stata completata correttamente. in caso contrario, un valore HRESULT indicante un errore (vedere [valori HRESULT comuni](https://go.microsoft.com/fwlink/?LinkId=213878) per un elenco).</span><span class="sxs-lookup"><span data-stu-id="3402c-114">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
+## <a name="return-value"></a><span data-ttu-id="2b8a5-113">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="2b8a5-113">Return Value</span></span>  
+ <span data-ttu-id="2b8a5-114">`S_OK` Se il metodo è stata completata correttamente. in caso contrario, un valore HRESULT indicante un errore (vedere [valori HRESULT comuni](https://go.microsoft.com/fwlink/?LinkId=213878) per un elenco).</span><span class="sxs-lookup"><span data-stu-id="2b8a5-114">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="3402c-115">Note</span><span class="sxs-lookup"><span data-stu-id="3402c-115">Remarks</span></span>  
- <span data-ttu-id="3402c-116">Questo metodo è quello utilizzato per il [GetHashFromFileW](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md) metodo, ad eccezione del fatto che il nome del file specifica è ANSI invece di Unicode.</span><span class="sxs-lookup"><span data-stu-id="3402c-116">This method is the same as the [ICLRStrongName::GetHashFromFileW](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md) method, except that the file name specification is ANSI instead of Unicode.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2b8a5-115">Note</span><span class="sxs-lookup"><span data-stu-id="2b8a5-115">Remarks</span></span>  
+ <span data-ttu-id="2b8a5-116">Questo metodo è quello utilizzato per il [GetHashFromFileW](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md) metodo, ad eccezione del fatto che il nome del file specifica è ANSI invece di Unicode.</span><span class="sxs-lookup"><span data-stu-id="2b8a5-116">This method is the same as the [ICLRStrongName::GetHashFromFileW](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md) method, except that the file name specification is ANSI instead of Unicode.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3402c-117">Requisiti</span><span class="sxs-lookup"><span data-stu-id="3402c-117">Requirements</span></span>  
- <span data-ttu-id="3402c-118">**Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3402c-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2b8a5-117">Requisiti</span><span class="sxs-lookup"><span data-stu-id="2b8a5-117">Requirements</span></span>  
+ <span data-ttu-id="2b8a5-118">**Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2b8a5-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3402c-119">**Intestazione:** Metahost. H</span><span class="sxs-lookup"><span data-stu-id="3402c-119">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="2b8a5-119">**Intestazione:** Metahost. H</span><span class="sxs-lookup"><span data-stu-id="2b8a5-119">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="3402c-120">**Libreria:** inclusa come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="3402c-120">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="2b8a5-120">**Libreria:** inclusa come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="2b8a5-120">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="3402c-121">**Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3402c-121">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="2b8a5-121">**Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2b8a5-121">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3402c-122">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="3402c-122">See Also</span></span>  
- [<span data-ttu-id="3402c-123">Metodo GetHashFromFileW</span><span class="sxs-lookup"><span data-stu-id="3402c-123">GetHashFromFileW Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md)  
- [<span data-ttu-id="3402c-124">Interfaccia ICLRStrongName</span><span class="sxs-lookup"><span data-stu-id="3402c-124">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a><span data-ttu-id="2b8a5-122">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="2b8a5-122">See Also</span></span>  
+ [<span data-ttu-id="2b8a5-123">Metodo GetHashFromFileW</span><span class="sxs-lookup"><span data-stu-id="2b8a5-123">GetHashFromFileW Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md)  
+ [<span data-ttu-id="2b8a5-124">Interfaccia ICLRStrongName</span><span class="sxs-lookup"><span data-stu-id="2b8a5-124">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
