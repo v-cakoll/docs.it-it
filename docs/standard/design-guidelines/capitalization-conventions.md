@@ -12,11 +12,11 @@ ms.assetid: 4c4ea526-9203-486f-b72d-29d61c5b3c6d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 070fc69728c2cb38e465dab9f6f591a77a857531
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
-ms.translationtype: MT
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45990388"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46473311"
 ---
 # <a name="capitalization-conventions"></a>Convenzioni per l'utilizzo di maiuscole e minuscole
 Le linee guida in questo capitolo disporre un metodo semplice per l'utilizzo di case che, quando applicata in modo coerente, verificare gli identificatori per i tipi, membri e parametri di facile lettura.  

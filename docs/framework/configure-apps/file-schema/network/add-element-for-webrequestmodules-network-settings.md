@@ -1,5 +1,5 @@
 ---
-title: '&lt;aggiungere&gt; elemento per webRequestModules (impostazioni di rete)'
+title: '&lt;aggiungere&gt; (elemento) per webRequestModules (impostazioni di rete)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules/add
@@ -13,14 +13,14 @@ ms.assetid: 47ec4adc-f39f-4bcd-8680-1ec21fd26890
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 921f5f2bfda1a19d022d3f3f4131e3653fd17ea7
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: f3c3ea63df8d99154c42e40b359180ad1065f6c5
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742790"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46481754"
 ---
-# <a name="ltaddgt-element-for-webrequestmodules-network-settings"></a>&lt;aggiungere&gt; elemento per webRequestModules (impostazioni di rete)
+# <a name="ltaddgt-element-for-webrequestmodules-network-settings"></a>&lt;aggiungere&gt; (elemento) per webRequestModules (impostazioni di rete)
 Aggiunge un modulo di richiesta Web personalizzato per l'applicazione.  
   
  \<configuration>  
@@ -54,22 +54,22 @@ Aggiunge un modulo di richiesta Web personalizzato per l'applicazione.
   
 |**Elemento**|**Descrizione**|  
 |-----------------|---------------------|  
-|[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|Specifica i moduli da utilizzare per richiedere informazioni agli host di rete.|  
+|[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|Specifica i moduli da utilizzare per richiedere informazioni da host di rete.|  
   
 ## <a name="remarks"></a>Note  
- Il `prefix` attributo definisce il prefisso URI che usa il modulo di richiesta Web specificato. Moduli di richiesta Web sono in genere registrati per gestire un protocollo specifico, ad esempio HTTP o FTP, ma possono essere registrati per gestire una richiesta di un server specifico o un percorso in un server.  
+ Il `prefix` attributo definisce il prefisso URI che usa il modulo di richiesta Web specificato. Moduli di richiesta Web sono in genere registrati per gestire un protocollo specifico, ad esempio HTTP o FTP, ma possono essere registrati per gestire una richiesta a un server specifico o un percorso in un server.  
   
- Il modulo di richiesta Web viene creato quando viene passato un prefisso corrispondente a un URI per il <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> metodo.  
+ Il modulo di richiesta Web viene creato quando viene passato un prefisso corrispondente a un URI per il <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> (metodo).  
   
- Il valore per il `prefix` attributo deve corrispondere ai caratteri iniziali di un URI valido, ad esempio, "http", o "http://www.contoso.com".  
+ Il valore per il `prefix` attributo deve corrispondere ai caratteri iniziali di un URI valido. Ad esempio, `http` o `http://www.contoso.com`.
   
- Il valore per il `type` attributo deve essere un nome di tipo valido e un nome di assembly corrispondente, separati da una virgola.  
+ Il valore per il `type` attributo deve essere un nome di tipo valido e il corrispondente nome dell'assembly, separati da una virgola.
   
 ## <a name="configuration-files"></a>File di configurazione  
  Questo elemento può essere usato nel file di configurazione dell'applicazione o nel file di configurazione del computer (Machine.config).  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene registrato un modulo di richiesta Web personalizzato per HTTP. È necessario sostituire i valori per la versione e PublicKeyToken con i valori corretti per il modulo specificato.  
+ Nell'esempio seguente registra un modulo di richiesta Web personalizzato per il protocollo HTTP. È necessario sostituire i valori per la versione e PublicKeyToken con i valori corretti per il modulo specificato.  
   
 ```xml  
 <configuration>  

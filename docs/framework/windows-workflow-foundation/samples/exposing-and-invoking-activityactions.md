@@ -2,19 +2,19 @@
 title: Esposizione e richiamo di ActivityAction
 ms.date: 03/30/2017
 ms.assetid: 97ce4797-426e-463d-9cc4-1261afad6df4
-ms.openlocfilehash: f36d88fc54e5150927113ed8825fbccad84129d4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 99207c33d82ec9028da2355cc792c366dc5e0cc6
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520123"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46479754"
 ---
 # <a name="exposing-and-invoking-activityactions"></a>Esposizione e richiamo di ActivityAction
 In questo esempio viene illustrato come sviluppare un'attività personalizzata che dispone di un oggetto <xref:System.Activities.ActivityAction>. Viene inoltre illustrato come usare questa attività fornendo un'implementazione dell'oggetto <xref:System.Activities.ActivityAction>.  
   
- Un <xref:System.Activities.ActivityAction> consente a un autore di attività di esporre "buchi" con le firme specifiche in cui l'utente di attività può collegare un comportamento personalizzato. Ad esempio, il <!--zz <xref:System.Activities.Statements.ForEach>--> `System.Activities.Statements.ForEach` attività (che agisce su una raccolta di elementi,) ha un <xref:System.Activities.ActivityAction> che consente all'utente di attività associare un comportamento che agisce sull'elemento iterazione corrente.  
+ Un <xref:System.Activities.ActivityAction> consente a un autore di attività di esporre "buchi" con le firme specifiche in cui l'utente di attività può collegare un comportamento personalizzato. Ad esempio, l'attività <xref:System.Activities.Statements.ForEach%601> (che agisce su una raccolta di elementi) dispone di un oggetto <xref:System.Activities.ActivityAction> che consente all'utente di attività di associare un comportamento che agisce sull'elemento di iterazione corrente.  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
+## <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
 1.  Aprire il **ActivityAction** nella soluzione di esempio [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
   

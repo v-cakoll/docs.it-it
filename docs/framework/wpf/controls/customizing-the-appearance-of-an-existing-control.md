@@ -13,11 +13,11 @@ helpviewer_keywords:
 - templates [WPF], custom for existing controls
 ms.assetid: 678dd116-43a2-4b8c-82b5-6b826f126e31
 ms.openlocfilehash: 435789e0d1bc601a9eb51488254407fefd334e05
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45519994"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46490257"
 ---
 # <a name="customizing-the-appearance-of-an-existing-control-by-creating-a-controltemplate"></a>Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate
 <a name="introduction"></a> Oggetto <xref:System.Windows.Controls.ControlTemplate> specifica la struttura visiva e il comportamento di un controllo. È possibile personalizzare l'aspetto di un controllo assegnando una nuova <xref:System.Windows.Controls.ControlTemplate>. Quando si crea un <xref:System.Windows.Controls.ControlTemplate>, si sostituisce l'aspetto di un controllo esistente senza modificarne la funzionalità. Ad esempio, è possibile rendere i pulsanti nell'applicazione forma rotonda invece della forma quadrata predefinita, ma il pulsante genererà comunque il <xref:System.Windows.Controls.Primitives.ButtonBase.Click> evento.  

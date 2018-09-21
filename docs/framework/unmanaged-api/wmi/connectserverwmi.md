@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 163e61eef8a753b5b6470285e5e3ce63789e25a4
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
-ms.translationtype: MT
+ms.openlocfilehash: 244df48606f6d971d6b6e246c4f9b73f916cbdcd
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46287741"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46473538"
 ---
 # <a name="connectserverwmi-function"></a>ConnectServerWmi (funzione)
 Crea una connessione tramite DCOM a uno spazio dei nomi WMI in un computer specifico.  
@@ -48,7 +48,7 @@ HRESULT ConnectServerWmi (
 
 `strNetworkResource` [in] Puntatore a un valore valido `BSTR` che contiene il percorso dell'oggetto dello spazio dei nomi WMI corretto. Vedere le [osservazioni](#remarks) sezione per altre informazioni.
 
-`strUser` [in] Un puntatore a un valore valido `BSTR` che contiene il nome utente. Oggetto `null` valore indica il contesto di sicurezza corrente. Se l'utente è di un dominio diverso da quello corrente, `strUser` può inoltre contenere il nome utente e dominio separato da una barra rovesciata. `strUser` può anche essere utente principal nome (UPN) formattare, suhc come *userName@domainName*. Vedere le [osservazioni](#remarks) sezione per altre informazioni.
+`strUser` [in] Un puntatore a un valore valido `BSTR` che contiene il nome utente. Oggetto `null` valore indica il contesto di sicurezza corrente. Se l'utente è di un dominio diverso da quello corrente, `strUser` può inoltre contenere il nome utente e dominio separato da una barra rovesciata. `strUser` può anche essere nel formato user principal name (UPN), ad esempio `userName@domainName`. Vedere le [osservazioni](#remarks) sezione per altre informazioni.
 
 `strPassword` [in] Un puntatore a un valore valido `BSTR` che contiene la password. Oggetto `null` indica il contesto di sicurezza corrente. Una stringa vuota ("") indica una password valida di lunghezza zero.
 

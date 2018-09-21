@@ -2,15 +2,16 @@
 title: Utilizzo di azioni per implementare il comportamento lato server
 ms.date: 03/30/2017
 ms.assetid: 11a372db-7168-498b-80d2-9419ff557ba5
-ms.openlocfilehash: 415797114d1e6d2ff307f0d872361f7d415cad3c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 515553540053ed0c16085fde06e2cc2d2dedda1e
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516261"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46471735"
 ---
 # <a name="using-actions-to-implement-server-side-behavior"></a>Utilizzo di azioni per implementare il comportamento lato server
-Le azioni OData consentono di implementare un comportamento che agisce su una risorsa recuperata da un servizio OData.  Ad esempio, se si considera come risorsa un filmato digitale, sono diverse le operazioni che è possibile eseguire, ad esempio l'estrazione, la valutazione, l'aggiunta di commenti o l'archiviazione. Sono tutti esempi di azioni che possono essere implementate da un servizio di WCF Data Services che gestisce i filmati digitali. Le azioni vengono descritte in una risposta OData che contiene una risorsa in cui l'azione può essere richiamata. Quando un utente richiede una risorsa che rappresenta un filmato digitale, la risposta restituita da un servizio di WCF Data Services contiene le informazioni sulle azioni disponibili per tale risorsa. La disponibilità di un'azione può dipendere dallo stato del servizio dati o della risorsa. Ad esempio, una volta estratto, un filmato digitale non può essere estratto da un altro utente. I client possono richiamare un'azione semplicemente specificando un URL. Ad esempio http://MyServer/MovieService.svc/Movies(6) identifica un filmato digitale specifico e http://MyServer/MovieService.svc/Movies(6)/Checkout richiama l'azione sul filmato specifico. Le azioni consentono di esporre il modello di servizio senza esporre il modello di dati. Continuando con l'esempio del servizio del filmato, è possibile che si desideri consentire a un utente di valutare un filmato ma non di esporre direttamente i dati della valutazione come risorsa. È possibile implementare un'azione Rate per consentire all'utente di valutare un filmato ma non di accedere direttamente ai dati della valutazione come risorsa.  
+
+Le azioni OData consentono di implementare un comportamento che agisce su una risorsa recuperata da un servizio OData. Ad esempio, se si considera come risorsa un filmato digitale, sono diverse le operazioni che è possibile eseguire, ad esempio l'estrazione, la valutazione, l'aggiunta di commenti o l'archiviazione. Sono tutti esempi di azioni che possono essere implementate da un servizio di WCF Data Services che gestisce i filmati digitali. Le azioni vengono descritte in una risposta OData che contiene una risorsa in cui l'azione può essere richiamata. Quando un utente richiede una risorsa che rappresenta un filmato digitale, la risposta restituita da un servizio di WCF Data Services contiene le informazioni sulle azioni disponibili per tale risorsa. La disponibilità di un'azione può dipendere dallo stato del servizio dati o della risorsa. Ad esempio, una volta estratto, un filmato digitale non può essere estratto da un altro utente. I client possono richiamare un'azione semplicemente specificando un URL. Ad esempio, `http://MyServer/MovieService.svc/Movies(6)` identifica un filmato digitale specifico e `http://MyServer/MovieService.svc/Movies(6)/Checkout` richiama l'azione sul filmato specifico. Le azioni consentono di esporre il modello di servizio senza esporre il modello di dati. Continuando con l'esempio del servizio del filmato, è possibile che si desideri consentire a un utente di valutare un filmato ma non di esporre direttamente i dati della valutazione come risorsa. È possibile implementare un'azione Rate per consentire all'utente di valutare un filmato ma non di accedere direttamente ai dati della valutazione come risorsa.
   
 ## <a name="implementing-an-action"></a>Implementazione di un'azione  
  Per implementare un'azione di servizio è necessario implementare il <xref:System.IServiceProvider>, [IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx), e [IDataServiceInvokable](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceinvokable(v=vs.113).aspx) interfacce. <xref:System.IServiceProvider> consente a WCF Data Services ottenere l'implementazione di [IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx). [IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx) consente a WCF Data Services creare, trovare, descrivere e richiamare le azioni di servizio. [IDataServiceInvokable](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceinvokable(v=vs.113).aspx) consente di richiamare il codice che implementa il comportamento di azioni di servizio e ottenere i risultati, se presente. Tenere presente che WCF Data Services contiene servizi WCF "per chiamata", ovvero ogni volta che viene chiamato il servizio, verrà creata una nuova istanza del servizio.  Assicurarsi che non vengano eseguite operazioni non necessarie quando viene creato il servizio.  
@@ -52,7 +53,7 @@ Le azioni OData consentono di implementare un comportamento che agisce su una ri
 ## <a name="invoking-a-wcf-data-service-action"></a>Richiamo di un'azione di WCF Data Services  
  Le azioni vengono richiamate mediante una richiesta HTTP POST. L'URL specifica la risorsa seguita dal nome dell'azione. I parametri vengono passati nel corpo della richiesta. Se ad esempio è presente un servizio denominato MovieService che espone un'azione denominata Rate, è possibile usare l'URL seguente per richiamare l'azione Rate in un filmato specifico:  
   
- http://MovieServer/MovieService.svc/Movies(1)/Rate  
+ `http://MovieServer/MovieService.svc/Movies(1)/Rate`
   
  Movies(1) specifica il filmato che si desidera valutare e Rate specifica l'azione di valutazione. Il valore effettivo della valutazione sarà presente nel corpo della richiesta HTTP come mostrato nell'esempio seguente:  
   
@@ -67,15 +68,15 @@ Host: localhost:15238
 ```  
   
 > [!WARNING]
->  Il codice di esempio precedente funzionerà solo con WCF Data Services 5.2 e versioni successive che supportano la versione light di JSON. Se si usa una versione precedente di WCF Data Services, è necessario specificare il tipo di contenuto json verbose come segue: `application/json;odata=verbose`.  
+> Il codice di esempio precedente funzionerà solo con WCF Data Services 5.2 e versioni successive che supportano la versione light di JSON. Se si usa una versione precedente di WCF Data Services, è necessario specificare il tipo di contenuto json verbose come segue: `application/json;odata=verbose`.  
   
  In alternativa, è possibile richiamare un'azione mediante il client di WCF Data Services come mostrato nel frammento di codice seguente.  
   
-```  
+```csharp
 MoviesModel context = new MoviesModel (new Uri("http://MyServer/MoviesService.svc/"));  
-            //...  
-            context.Execute(new Uri("http://MyServer/MoviesService.svc/Movies(1)/Rate"), "POST", new BodyOperationParameter("rating",4) );           
-```  
+//...  
+context.Execute(new Uri("http://MyServer/MoviesService.svc/Movies(1)/Rate"), "POST", new BodyOperationParameter("rating",4) );
+```
   
  Nel frammento di codice precedente la classe `MoviesModel` è stata generata mediante la procedura per aggiungere il riferimento a un servizio WCF Data Services in Visual Studio.  
   

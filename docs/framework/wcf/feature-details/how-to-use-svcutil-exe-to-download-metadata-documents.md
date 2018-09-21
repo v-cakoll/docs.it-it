@@ -2,12 +2,12 @@
 title: 'Procedura: usare Svcutil.exe per scaricare documenti di metadati'
 ms.date: 03/30/2017
 ms.assetid: 15524274-3167-4627-b722-d6cedb9fa8c6
-ms.openlocfilehash: 75068608c2b44ab772175aba7af8d8123457fb7c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6643f0a5dba98afcef38870cf24d91e7d69a1440
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510949"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46481858"
 ---
 # <a name="how-to-use-svcutilexe-to-download-metadata-documents"></a>Procedura: usare Svcutil.exe per scaricare documenti di metadati
 È possibile utilizzare Svcutil.exe per scaricare i metadati dai servizi in esecuzione e salvarli in file locali. Per schemi URL HTTP e HTTPS, Svcutil.exe tenta di recuperare i metadati tramite WS-MetadataExchange e [Individuazione servizio Web XML](https://go.microsoft.com/fwlink/?LinkId=94950). Per tutti gli altri schemi URL, Svcutil.exe utilizza solo WS-MetadataExchange.  
@@ -15,13 +15,13 @@ ms.locfileid: "43510949"
  Per impostazione predefinita, Svcutil.exe utilizza le associazioni definite nella classe <xref:System.ServiceModel.Description.MetadataExchangeBindings>. Per configurare l'associazione utilizzata per WS-MetadataExchange, nel file di configurazione di Svcutil.exe (svcutil.exe.config) è necessario definire un endpoint client che utilizza il contratto `IMetadataExchange` e che ha lo stesso nome dello schema URI (Uniform Resource Identifier) dell'indirizzo dell'endpoint dei metadati.  
   
 > [!CAUTION]
->  Quando in esecuzione Svcutil.exe per ottenere i metadati per un servizio che espone due servizi diversi contratti che ognuno dei quali contiene un'operazione con lo stesso nome, Svcutil.exe viene visualizzato un errore indicante che, "Non è possibile ottenere i metadati da..." Ad esempio, se si dispone di un servizio che espone un contratto di servizio denominato ICarService con un'operazione Get (Car c) e lo stesso servizio espone un contratto di servizio denominato IBookService con un'operazione Get (Book b). Per risolvere il problema, effettuare una delle operazioni seguenti:  
->   
->  -   Rinominare una delle operazioni.  
-> -   Impostare <xref:System.ServiceModel.OperationContractAttribute.Name%2A> su un nome diverso.  
-> -   Impostare uno degli spazi dei nomi delle operazioni su uno spazio dei nomi diverso, utilizzando la proprietà <xref:System.ServiceModel.ServiceContractAttribute.Namespace%2A>.  
+> Quando in esecuzione Svcutil.exe per ottenere i metadati per un servizio che espone due servizi diversi contratti che ognuno dei quali contiene un'operazione con lo stesso nome, Svcutil.exe viene visualizzato un errore indicante che, "Non è possibile ottenere i metadati da..." Ad esempio, se si dispone di un servizio che espone un contratto di servizio denominato `ICarService` che dispone di un'operazione `Get(Car c)` e lo stesso servizio espone un contratto di servizio denominato `IBookService` dotato di un'operazione `Get(Book b)`. Per risolvere il problema, effettuare una delle operazioni seguenti:
+>
+> - Rinominare una delle operazioni.
+> - Impostare <xref:System.ServiceModel.OperationContractAttribute.Name%2A> su un nome diverso.
+> - Impostare uno degli spazi dei nomi delle operazioni su uno spazio dei nomi diverso, utilizzando la proprietà <xref:System.ServiceModel.ServiceContractAttribute.Namespace%2A>.
   
-### <a name="to-download-metadata-using-svcutilexe"></a>Per scaricare metadati utilizzando Svcutil.exe  
+## <a name="to-download-metadata-using-svcutilexe"></a>Per scaricare metadati utilizzando Svcutil.exe  
   
 1.  Individuare lo strumento Svcutil.exe nel percorso seguente:  
   

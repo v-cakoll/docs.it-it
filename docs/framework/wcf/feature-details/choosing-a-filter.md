@@ -2,12 +2,12 @@
 title: Scelta di un filtro
 ms.date: 03/30/2017
 ms.assetid: 67ab5af9-b9d9-4300-b3b1-41abb5a1fd10
-ms.openlocfilehash: bc3bba9a2b00b35f3e0cff1786ea98cfa881f311
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
-ms.translationtype: MT
+ms.openlocfilehash: 377d4f5c221ad37acf954b1dafc8712a388122ff
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43743144"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46478502"
 ---
 # <a name="choosing-a-filter"></a>Scelta di un filtro
 Quando si configura il servizio di routing, è importante selezionare i filtri messaggi corretti e configurarli per consentire l'individuazione di corrispondenze esatte con i messaggi ricevuti. Se i filtri selezionati non sono sufficientemente precisi o non sono configurati correttamente, i messaggi vengono indirizzati in modo non corretto. Se i filtri sono troppo restrittivi, è possibile che non vengano individuate route valide disponibili per alcuni messaggi.  
@@ -16,7 +16,7 @@ Quando si configura il servizio di routing, è importante selezionare i filtri m
  Se si selezionano filtri utilizzati dal servizio di routing, è importante comprenderne il funzionamento ed essere a conoscenza delle informazioni disponibili all'interno dei messaggi in ingresso. Se ad esempio tutti i messaggi vengono ricevuti sullo stesso endpoint, i filtri Address e EndpointName non sono utili perché tutti i messaggi corrispondono a questi filtri.  
   
 ### <a name="action"></a>Operazione  
- Il filtro Action controlla la proprietà <xref:System.ServiceModel.Channels.MessageHeaders.Action%2A>. Se il contenuto dell'intestazione Action nel messaggio corrisponde al valore dei dati specificato nella configurazione del filtro, viene restituito `true`. L'esempio seguente definisce una `FilterElement` che utilizza il filtro Action per individuare i messaggi con un'intestazione action che contiene un valore di "http://namespace/contract/operation/".  
+ Il filtro Action controlla la proprietà <xref:System.ServiceModel.Channels.MessageHeaders.Action%2A>. Se il contenuto dell'intestazione Action nel messaggio corrisponde al valore dei dati specificato nella configurazione del filtro, viene restituito `true`. L'esempio seguente definisce una `FilterElement` che utilizza il filtro Action per individuare i messaggi con un'intestazione action che contiene un valore di `http://namespace/contract/operation/`.
   
 ```xml  
 <filter name="action1" filterType="Action" filterData="http://namespace/contract/operation/" />  
@@ -47,7 +47,7 @@ EndpointAddressMessageFilter address1 = new EndpointAddressMessageFilter(new End
  È consigliabile utilizzare questo filtro quando i messaggi in ingresso vengono indirizzati a un indirizzo univoco.  
   
 ### <a name="endpointaddressprefix"></a>EndpointAddressPrefix  
- Il filtro EndpointAddressPrefix è analogo al filtro EndpointAddress. Il filtro EndpointAddressPrefix controlla il valore EndpointAddress indicante l'indirizzo di ricezione del messaggio. Tuttavia, il filtro EndpointAddressPrefix viene utilizzato come un carattere jolly che individua le corrispondenze con gli indirizzi che iniziano con il valore specificato nella configurazione del filtro. L'esempio seguente definisce una `FilterElement` che utilizza il filtro EndpointAddressPrefix per individuare i messaggi indirizzati a "http://\<nome host > / vdir *".  
+ Il filtro EndpointAddressPrefix è analogo al filtro EndpointAddress. Il filtro EndpointAddressPrefix controlla il valore EndpointAddress indicante l'indirizzo di ricezione del messaggio. Tuttavia, il filtro EndpointAddressPrefix viene utilizzato come un carattere jolly che individua le corrispondenze con gli indirizzi che iniziano con il valore specificato nella configurazione del filtro. L'esempio seguente definisce una `FilterElement` che utilizza il filtro EndpointAddressPrefix per individuare i messaggi indirizzati a `http://<hostname>/vdir*`.  
   
 ```xml  
 <filter name="prefix1" filterType="EndpointAddressPrefix" filterData="http://host/vdir" />  
@@ -79,7 +79,7 @@ StrictAndMessageFilter and1=new StrictAndMessageFilter(address1, action1);
   
  È consigliabile utilizzare questo filtro quando è necessario combinare la logica di più filtri per determinare quando si verifica una corrispondenza. Se ad esempio si dispone di più destinazioni che devono ricevere solo determinate combinazioni di azioni e messaggi a specifici indirizzi, è possibile utilizzare un filtro AND per combinare i filtri indirizzo e azione necessari.  
   
-### <a name="custom"></a>Custom (Personalizzati)  
+### <a name="custom"></a>Personalizzato  
  Quando si seleziona il tipo di filtro Custom, è necessario fornire un valore customType contenente il tipo dell'assembly che contiene il **MessageFilter** implementazione da utilizzare per il filtro. Inoltre, filterData deve contenere qualsiasi valore necessario per la valutazione dei messaggi da parte del filtro personalizzato. Nell'esempio seguente viene definito un elemento `FilterElement` che utilizza l'implementazione di MessageFilter `CustomAssembly.MyCustomMsgFilter`.  
   
 ```xml  

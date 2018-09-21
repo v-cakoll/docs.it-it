@@ -2,15 +2,15 @@
 title: UriTemplate e UriTemplateTable
 ms.date: 03/30/2017
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
-ms.openlocfilehash: 09726af0a124723de025f29927954a2100aebcb4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 75ef447d8c79bded99bd29292a544c72627f113e
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33508822"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46478597"
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate e UriTemplateTable
-Gli sviluppatori Web devono poter essere in grado di descrivere la forma e il layout degli URI a cui rispondono i loro servizi. Windows Communication Foundation (WCF) aggiunte due nuove classi per consentire agli sviluppatori di controllare gli URI. <xref:System.UriTemplate> e <xref:System.UriTemplateTable> costituiscono la base del motore di distribuzione basata sull'URI in WCF. Queste classi possono essere utilizzate anche nel meccanismo del mapping delle proprie, consentendo agli sviluppatori di sfruttare i vantaggi dei modelli e l'URI senza implementare un servizio WCF.  
+Gli sviluppatori Web devono poter essere in grado di descrivere la forma e il layout degli URI a cui rispondono i loro servizi. Windows Communication Foundation (WCF) aggiunto due nuove classi per consentire agli sviluppatori di controllare gli URI. <xref:System.UriTemplate> e <xref:System.UriTemplateTable> costituiscono la base del motore di invio basato su URI in WCF. Queste classi possono essere utilizzate anche nel meccanismo del mapping delle proprie, consentendo agli sviluppatori di sfruttare i vantaggi dei modelli e l'URI senza implementare un servizio WCF.  
   
 ## <a name="templates"></a>Modelli  
  I modelli consentono di descrivere set di URI relativi. Nella tabella seguente il set di modelli URI illustra come definire un sistema per il recupero di vari tipi di informazioni meteorologiche.  
@@ -22,7 +22,7 @@ Gli sviluppatori Web devono poter essere in grado di descrivere la forma e il la
 |Previsioni urbane|previsioni/{regione}/{città}|  
 |Previsioni di attività|previsioni/{regione}/{città}/{attività}|  
   
- Questa tabella descrive un insieme di URI simili fra loro dal punto di vista strutturale. Ogni voce è un modello URI. I segmenti nelle parentesi graffe descrivono variabili, mentre quelli non all'interno di parentesi graffe descrivono stringhe letterali. Le classi di modello WCF consentono a uno sviluppatore di eseguire un URI in ingresso, ad esempio, "/ meteo/wa/seattle/ripetizione" e confrontarla a un modello che lo descrive, "/ previsioni {regione} / {città} / {attività}".  
+ Questa tabella descrive un insieme di URI simili fra loro dal punto di vista strutturale. Ogni voce è un modello URI. I segmenti nelle parentesi graffe descrivono variabili, mentre quelli non all'interno di parentesi graffe descrivono stringhe letterali. Le classi di modello WCF consentono agli sviluppatori di sfruttare un URI in ingresso, ad esempio, "/ meteo/wa/seattle/ed esegue il ciclo" e confrontarla a un modello che descrive, "{regione} / previsioni / {città} / {attività}".  
   
 ## <a name="uritemplate"></a>UriTemplate  
  L'elemento <xref:System.UriTemplate> è una classe che incapsula un modello URI. Il costruttore accetta un parametro di stringa che definisce il modello. Questa stringa contiene il modello nel formato descritto nella sezione seguente. La classe <xref:System.UriTemplate> fornisce metodi che consentono di mettere in corrispondenza un URI in ingresso con un modello, generare un URI a partire da un modello, recuperare una raccolta di nomi variabili utilizzati nel modello, determinare se due modelli sono equivalenti e restituire la stringa del modello.  
@@ -42,15 +42,15 @@ Gli sviluppatori Web devono poter essere in grado di descrivere la forma e il la
   
  <xref:System.UriTemplate> può essere utilizzato con qualsiasi schema URI conforme alla grammatica URI HTTP. Di seguito vengono riportati esempi di schemi URI supportati.  
   
--   http://  
+- http://  
   
--   https://  
+- https://  
   
--   net.tcp://  
+- net.tcp://  
   
--   net.pipe://  
+- net.pipe://  
   
--   sb://  
+- sb://  
   
  Schemi come file:// e urn:// non sono conformi alla grammatica URI HTTP e causeranno risultati imprevisti se utilizzati con modelli URI.  
   
@@ -63,7 +63,7 @@ Gli sviluppatori Web devono poter essere in grado di descrivere la forma e il la
   
  Il percorso è "/previsioni/{regione}/{città}", la query è "?previsioni={durata)" e il frammento è "#framm1".  
   
- Le barre iniziali e finali sono facoltative nell'espressione del percorso. Le espressioni di query e di frammento possono essere omesse del tutto. Un percorso è costituito da una serie di segmenti delimitati dal simbolo '/', ogni segmento può avere un valore letterale, un nome di variabile (scritto in parentesi le parentesi graffe {}) o un carattere jolly (scritto come\*'). Nel modello precedente il segmento "\previsioni\ è un valore letterale, mentre"{regione}" e "{città}" rappresentano variabili. Le variabili hanno il proprio nome dal contenuto delle parentesi graffe e versioni successive possono essere sostituiti con un valore concreto per creare un *URI chiuso*. Il carattere jolly è facoltativo, ma può trovarsi solo alla fine dell'URI in cui logicamente corrisponde a "il resto del percorso".  
+ Le barre iniziali e finali sono facoltative nell'espressione del percorso. Le espressioni di query e di frammento possono essere omesse del tutto. Un percorso è costituito da una serie di segmenti delimitati dal simbolo '/', ogni segmento può avere un valore letterale, un nome di variabile (scritto in parentesi le parentesi graffe {}) o un carattere jolly (scritto come\*'). Nel modello precedente il segmento "\previsioni\ è un valore letterale, mentre"{regione}" e "{città}" rappresentano variabili. Le variabili hanno il proprio nome dal contenuto delle parentesi graffe e in un secondo momento può essere sostituiti con un valore concreto per creare un *URI chiuso*. Il carattere jolly è facoltativo, ma può comparire solo alla fine dell'URI, in cui una corrispondenza logica con "il resto del percorso".  
   
  L'espressione di query, se presente, specifica una serie di coppie nome/valore non ordinate delimitate dal simbolo "&". Gli elementi dell'espressione di query possono essere coppie letterali (x=2) o una coppia variabile (x={var}). Solo il lato destro della query può contenere un'espressione variabile. ({someName} = {someValue} non è consentito. Non è consentito utilizzare valori non abbinati (?x). Non c'è differenza tra un'espressione di query vuota e un'espressione di query contenente il solo carattere "?". Entrambe significano infatti "qualsiasi query".  
   
@@ -73,66 +73,66 @@ Gli sviluppatori Web devono poter essere in grado di descrivere la forma e il la
   
  Esempi di stringhe di modello valide:  
   
--   ""  
+- ""  
   
--   "/casa"  
+- "/casa"  
   
--   "/casa/*"  
+- "/shoe/\*"  
   
--   "{casa}/stanza"  
+- "{casa}/stanza"  
   
--   "{casa} / {emergenza} /bed/ {quilt}"  
+- "{casa} / {barca} /bed/ {quilt}"  
   
--   "casa / {emergenza}"  
+- "casa / {barca}"  
   
--   "casa / {emergenza} / *"  
+- "casa / {barca} /\*"  
   
--   "casa/barca? x = 2"  
+- "casa/barca? x = 2"  
   
--   "casa / {emergenza}? x = {letto}"  
+- "casa / {barca}? x = {bed}"  
   
--   "casa/{stanza}?x={letto}&y=divano"  
+- "casa/{stanza}?x={letto}&y=divano"  
   
--   "? x = {casa}"  
+- "? x = {casa}"  
   
--   "casa?x=3&y={var}  
+- "casa?x=3&y={var}  
   
  Esempi di stringhe di modello non valide:  
   
--   "{casa} / {casa} / x = 2": nomi variabili duplicati.  
+- "{casa} / {casa} / x = 2": nomi variabili duplicati.  
   
--   "{casa} /stanza/? letto = {casa}": nomi variabili duplicati.  
+- "{casa} /stanza/? letto = {casa}": nomi variabili duplicati.  
   
--   "? x = 2 & x = 3" – coppie nome/valore all'interno di una stringa di query devono essere univoche, anche se sono valori letterali.  
+- "? x = x & amp;2 = 3" – coppie nome/valore all'interno di una stringa di query devono essere univoche, anche se sono valori letterali.  
   
--   "? x = 2 &": stringa di Query non è valida.  
+- "? x = 2 &", stringa di Query non è valida.  
   
--   "? 2 & x = {casa}": stringa di Query deve contenere coppie nome/valore.  
+- "? 2 2&x = {casa}"-stringa di Query deve contenere coppie nome/valore.  
   
--   "? y = 2 & & X = 3": stringa di Query deve contenere coppie nome / valore, i nomi non possono iniziare con '&'.  
+- "? y = 2 & & X = 3", stringa di Query deve contenere coppie nome / valore, i nomi non possono iniziare con '&'.  
   
 ### <a name="compound-path-segments"></a>Segmenti di percorso composti  
  I segmenti di percorso composti consentono a un singolo segmento di percorso URI di contenere più variabili, nonché variabili combinate con valori letterali. Di seguito vengono riportati esempi di segmenti di percorso composti validi.  
   
--   /nomefile.{ext}/  
+- /nomefile.{ext}/  
   
--   /{nomefile}.jpg/  
+- /{nomefile}.jpg/  
   
--   /{nomefile}.{ext}/  
+- /{nomefile}.{ext}/  
   
--   /{a}.{b}someLiteral{c}({d})/  
+- /{a}.{b}someLiteral{c}({d})/  
   
  Di seguito vengono riportati esempi di segmenti di percorso non validi.  
   
--   /{} -Variabili devono essere denominate.  
+- /{} -Variabili devono essere denominate.  
   
--   /{casa}{stanza}: le variabili devono essere separate da un valore letterale.  
+- /{casa}{stanza}: le variabili devono essere separate da un valore letterale.  
   
 ### <a name="matching-and-compound-path-segments"></a>Segmenti di percorso composti e corrispondenti  
- I segmenti di percorso composti consentono di definire un UriTemplate che dispone di più variabili all'interno di un solo segmento di percorso. Ad esempio, nella stringa di modello seguente: "indirizzi / {state}. {Città} "due variabili (stato e città) sono definite all'interno del segmento stesso. Questo modello corrisponderebbe a un URL, ad esempio "http://example.com/Washington.Redmond"ma corrisponderà anche un URL, ad esempio"http://example.com/Washington.Redmond.Microsoft". Nel secondo caso, la variabile di stato conterrà "Washington" e la variabile della città conterrà "Redmond". In questo caso il qualsiasi testo (eccetto '/') corrisponderà alla variabile {city}. Se si desidera un modello che non corrisponderà al testo "extra", inserire la variabile in un segmento di modello separato, ad esempio: "indirizzi / {regione} / {città}.  
+ I segmenti di percorso composti consentono di definire un UriTemplate che dispone di più variabili all'interno di un solo segmento di percorso. Ad esempio, nella stringa di modello seguente: "indirizzi / {regione}. {Città} "due variabili (stato e città) sono definite all'interno del segmento stesso. Questo modello corrisponderebbe a un URL, ad esempio `http://example.com/Washington.Redmond` ma corrisponderà anche un URL come `http://example.com/Washington.Redmond.Microsoft`. Nel secondo caso, la variabile di stato conterrà "Washington" e la variabile della città conterrà "Redmond". In questo caso il qualsiasi testo (eccetto '/') corrisponderà alla variabile {city}. Se si desidera un modello che non corrisponderà al testo "extra", posizionare la variabile in un segmento di modello separato, ad esempio: "indirizzi / {regione} / {città}.  
   
 ### <a name="named-wildcard-segments"></a>Segmenti con caratteri jolly con nome  
- Un segmento con carattere jolly con nome è un qualsiasi segmento variabile di percorso il cui nome di variabile inizia con il carattere jolly '*'. La stringa di modello seguente contiene un segmento con carattere jolly con nome denominato "casa".  
+ Un segmento con carattere jolly denominata è qualsiasi segmento variabile di percorso il cui nome di variabile inizia con il carattere jolly '\*'. La stringa di modello seguente contiene un segmento con carattere jolly con nome denominato "casa".  
   
 ```  
 "literal/{*shoe}"  
@@ -140,22 +140,22 @@ Gli sviluppatori Web devono poter essere in grado di descrivere la forma e il la
   
  I segmenti con caratteri jolly devono rispettare le regole seguenti:  
   
--   Per ogni stringa di modello può esistere al massimo un segmento con carattere jolly con nome.  
+- Per ogni stringa di modello può esistere al massimo un segmento con carattere jolly con nome.  
   
--   Un segmento con carattere jolly con nome deve comparire nel segmento all'estrema destra del percorso.  
+- Un segmento con carattere jolly con nome deve comparire nel segmento all'estrema destra del percorso.  
   
--   Un segmento con carattere jolly con nome non può coesistere con un segmento con carattere jolly anonimo all'interno della stessa stringa di modello.  
+- Un segmento con carattere jolly con nome non può coesistere con un segmento con carattere jolly anonimo all'interno della stessa stringa di modello.  
   
--   Il nome di un segmento con carattere jolly con nome deve essere univoco.  
+- Il nome di un segmento con carattere jolly con nome deve essere univoco.  
   
--   I segmenti con carattere jolly con nome non possono disporre di valori predefiniti.  
+- I segmenti con carattere jolly con nome non possono disporre di valori predefiniti.  
   
--   Segmenti con caratteri jolly denominato non possono terminare con "/".  
+- Segmenti con caratteri jolly denominato non possono terminare con "/".  
   
 ### <a name="default-variable-values"></a>Valori di variabili predefiniti  
  I valori di variabili predefiniti consentono di specificare valori predefiniti per variabili all'interno di un modello. È possibile specificare le variabili predefinite con parentesi graffe che dichiarano la variabile o come una raccolta passata al costruttore UriTemplate. Nel modello seguente vengono illustrati due modi per specificare <xref:System.UriTemplate> con variabili con valori predefiniti.  
   
-```  
+```csharp
 UriTemplate t = new UriTemplate("/test/{a=1}/{b=5}");  
 ```  
   
@@ -166,34 +166,37 @@ UriTemplate t = new UriTemplate("/test/{a=1}/{b=5}");
   
  Nell'esempio di codice seguente viene illustrato come gestire i valori di variabili predefiniti quando si crea una corrispondenza con un URI candidato.  
   
-```  
-Uri baseAddress = new Uri("http://localhost:800   
-Dictionary<string,string> defVals = new Dictionary<string,string> {{"a","1"}, {"b", "5"}};  
-UriTemplate t = new UriTemplate("/test/{a}/{b}", defVals);0");  
-UriTemplate t = new UriTemplate("/{state=WA}/{city=Redmond}/", true);  
-Uri candidate = new Uri("http://localhost:8000/OR");  
-  
-UriTemplateMatch m1 = t.Match(baseAddress, candidate);  
-  
-// Display contents of BoundVariables  
-foreach (string key in m1.BoundVariables.AllKeys)  
-{  
-    Console.WriteLine("\t\t{0}={1}", key, m1.BoundVariables[key]);  
-}  
+```csharp
+Uri baseAddress = new Uri("http://localhost:8000/");
+
+UriTemplate t = new UriTemplate("/{state=WA}/{city=Redmond}/", true);
+Uri candidate = new Uri("http://localhost:8000/OR");
+
+UriTemplateMatch m1 = t.Match(baseAddress, candidate);
+
+Console.WriteLine($"Template: {t}");
+Console.WriteLine($"Candidate URI: {candidate}");
+
+// Display contents of BoundVariables
+Console.WriteLine("BoundVariables:");
+foreach (string key in m1.BoundVariables.AllKeys)
+{
+    Console.WriteLine($"\t{key}={m1.BoundVariables[key]}");
+}
 // The output of the above code is  
-// Template: /{state=WA}/{city=Redmond}/  
-// Candidate URI: http://localhost:8000/OR  
-// BoundVariables:  
-//      STATE=OR  
-//       CITY=Redmond  
+// Template: /{state=WA}/{city=Redmond}/
+// Candidate URI: http://localhost:8000/OR
+// BoundVariables:
+//         STATE=OR
+//         CITY=Redmond
 ```  
   
 > [!NOTE]
->  Un URI, ad esempio http://localhost:8000/// non corrisponde al modello elencato nel codice precedente, tuttavia un URI, ad esempio http://localhost:8000/ does.  
+>  Un URI, ad esempio http://localhost:8000/// corrisponde al modello elencato nel codice precedente, tuttavia un URI, ad esempio http://localhost:8000/ viene.  
   
  Nell'esempio di codice seguente viene illustrato come gestire i valori di variabili predefiniti quando si crea un URI con un modello.  
   
-```  
+```csharp
 Uri baseAddress = new Uri("http://localhost:8000/");  
 Dictionary<string,string> defVals = new Dictionary<string,string> {{"a","1"}, {"b", "5"}};  
 UriTemplate t = new UriTemplate("/test/{a}/{b}", defVals);  
@@ -219,46 +222,39 @@ Console.WriteLine("Bound URI: {0}", boundUri);
 // Bound URI: http://localhost:8000/test/10/5  
 ```  
   
- Quando a una variabile viene assegnato il valore predefinito `null`, è necessario tenere conto di alcuni vincoli aggiuntivi. Una variabile può presentare il valore predefinito `null` se è contenuta nel segmento più a destra della stringa del modello o se tutti i segmenti a destra del segmento presentano valori predefiniti `null`. Di seguito vengono riportate stringhe di modello valide con valori predefiniti `null`:  
+Quando a una variabile viene assegnato il valore predefinito `null`, è necessario tenere conto di alcuni vincoli aggiuntivi. Una variabile può presentare il valore predefinito `null` se è contenuta nel segmento più a destra della stringa del modello o se tutti i segmenti a destra del segmento presentano valori predefiniti `null`. Di seguito vengono riportate stringhe di modello valide con valori predefiniti `null`:  
   
--   ```  
-    UriTemplate t = new UriTemplate("shoe/{boat=null}");  
-    ```  
--   ```  
-    UriTemplate t = new UriTemplate("{shoe=null}/{boat=null}");  
-    ```  
+- `UriTemplate t = new UriTemplate("shoe/{boat=null}");`
+
+- `UriTemplate t = new UriTemplate("{shoe=null}/{boat=null}");`
   
--   ```  
-    UriTemplate t = new UriTemplate("{shoe=1}/{boat=null}");  
-    ```  
- Di seguito vengono riportate stringhe di modello non valide con valori predefiniti `null`:  
+- `UriTemplate t = new UriTemplate("{shoe=1}/{boat=null}");`
+
+ Di seguito vengono riportate stringhe di modello non valido con i valori predefiniti di `null`:  
   
--   ```  
-    UriTemplate t = new UriTemplate("{shoe=null}/boat"); // null default must be in the right most path segment  
-    ```  
+- `UriTemplate t = new UriTemplate("{shoe=null}/boat"); // null default must be in the right most path segment`
   
--   ```  
-    UriTemplate t = new UriTemplate("{shoe=null}/{boat=x}/{bed=null}"); // shoe cannot have a null default because boat does not have a default null value  
-    ```  
+- `UriTemplate t = new UriTemplate("{shoe=null}/{boat=x}/{bed=null}"); // shoe cannot have a null default because boat does not have a default null value`
+
 ### <a name="default-values-and-matching"></a>Valori predefiniti e corrispondenza  
  Quando si crea una corrispondenza tra un URI candidato e un modello con valori predefiniti, se i valori non sono specificati nell'URI candidato i valori predefiniti verranno inseriti nella raccolta <xref:System.UriTemplateMatch.BoundVariables%2A>.  
   
 ### <a name="template-equivalence"></a>Equivalenza fra modelli  
- Due modelli rientrano *strutturalmente equivalenti* quando tutti i valori letterali dei modelli corrispondono e contengono variabili negli stessi segmenti. Ad esempio, i modelli seguenti sono strutturalmente equivalenti:  
+ Due modelli si dice che trovano *strutturalmente equivalente* quando tutti i valori letterali dei modelli corrisponde e contengono variabili negli stessi segmenti. Ad esempio, i modelli seguenti sono strutturalmente equivalenti:  
   
--   /a/{var1}/b b/{var2}?x=1&y=2  
+- /a/{var1}/b b/{var2}?x=1&y=2  
   
--   a/{x}/b%20b/{var1}?y=2&x=1  
+- a/{x}/b%20b/{var1}?y=2&x=1  
   
--   a/{y}/B%20B/{z}/?y=2&x=1  
+- a/{y}/B%20B/{z}/?y=2&x=1  
   
  Alcune considerazioni:  
   
--   Se un modello contiene barre iniziali, solo la prima viene ignorata.  
+- Se un modello contiene barre iniziali, solo la prima viene ignorata.  
   
--   Quando si verifica se due stringhe di modello sono strutturalmente equivalenti, i nomi variabili, i segmenti di percorso e le stringhe di query non fanno distinzione fra maiuscole e minuscole.  
+- Quando si verifica se due stringhe di modello sono strutturalmente equivalenti, i nomi variabili, i segmenti di percorso e le stringhe di query non fanno distinzione fra maiuscole e minuscole.  
   
--   Le stringhe di query non sono ordinate.  
+- Le stringhe di query non sono ordinate.  
   
 ## <a name="uritemplatetable"></a>UriTemplateTable  
  La classe <xref:System.UriTemplateTable> rappresenta una tabella associativa di oggetti <xref:System.UriTemplate> associata a un oggetto scelto dallo sviluppatore. Ogni tabella <xref:System.UriTemplateTable> deve contenere almeno un modello <xref:System.UriTemplate> prima di chiamare il metodo <xref:System.UriTemplateTable.MakeReadOnly%28System.Boolean%29>. È possibile modificare il contenuto di <xref:System.UriTemplateTable> finché non viene chiamato il metodo <xref:System.UriTemplateTable.MakeReadOnly%28System.Boolean%29>. Quando viene chiamato il metodo <xref:System.UriTemplateTable.MakeReadOnly%28System.Boolean%29> viene eseguita una convalida il cui tipo dipende dal valore del parametro `allowMultiple` da passare al metodo <xref:System.UriTemplateTable.MakeReadOnly%28System.Boolean%29>.  
@@ -277,60 +273,60 @@ Console.WriteLine("Bound URI: {0}", boundUri);
   
  I set seguenti di stringhe di query non sono ambigui fra loro:  
   
--   ?x=1  
+- ?x=1  
   
--   ?x=2  
+- ?x=2  
   
--   ?x=3  
+- ?x=3  
   
--   ?x=1&y={var}  
+- ?x=1&y={var}  
   
--   ?x=2&z={var}  
+- ?x=2&z={var}  
   
--   ?x=3  
+- ?x=3  
   
--   ?x=1  
+- ?x=1  
   
--   ?  
+- ?  
   
--   ? x={var}  
+- ? x={var}  
   
--   ?  
+- ?  
   
--   ?m=get&c=rss  
+- ?m=get&c=rss  
   
--   ?m=put&c=rss  
+- ?m=put&c=rss  
   
--   ?m=get&c=atom  
+- ?m=get&c=atom  
   
--   ?m=put&c=atom  
+- ?m=put&c=atom  
   
  I set seguenti di modelli di stringhe di query sono ambigui fra loro:  
   
--   ?x=1  
+- ?x=1  
   
--   ?x={var}  
+- ?x={var}  
   
  "x=1": corrisponde a entrambi i modelli.  
   
--   ?x=1  
+- ?x=1  
   
--   ?y=2  
+- ?y=2  
   
  "x=1&y=2" corrisponde a entrambi i modelli. Ciò è dovuto al fatto che una stringa di query può contenere più variabili di stringa rispetto al modello a cui corrisponde.  
   
--   ?x=1  
+- ?x=1  
   
--   ?x=1&y={var}  
+- ?x=1&y={var}  
   
  "x=1&y=3" corrisponde a entrambi i modelli.  
   
--   ?x=3&y=4  
+- ?x=3&y=4  
   
--   ?x=3&z=5  
+- ?x=3&z=5  
   
 > [!NOTE]
->  I caratteri á e Á sono considerati caratteri diversi quando sono contenuti in un percorso URI o in un valore letterale di un segmento di percorso <xref:System.UriTemplate>. I caratteri a e A sono invece considerati uguali. I caratteri á e Á sono considerati caratteri uguali quando sono contenuti in un elemento {nomeVariabile} del modello <xref:System.UriTemplate> o in una stringa di query. Anche in questo caso i caratteri a e A sono considerati uguali.  
+> I caratteri á e Á sono considerati caratteri diversi quando sono contenuti in un percorso URI o in un valore letterale di un segmento di percorso <xref:System.UriTemplate>. I caratteri a e A sono invece considerati uguali. I caratteri á e Á sono considerati caratteri uguali quando sono contenuti in un elemento {nomeVariabile} del modello <xref:System.UriTemplate> o in una stringa di query. Anche in questo caso i caratteri a e A sono considerati uguali.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica del modello di programmazione HTTP Web di WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)  

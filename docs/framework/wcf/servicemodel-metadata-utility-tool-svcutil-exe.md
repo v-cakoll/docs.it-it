@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Svcutil.exe
 - clients [WCF], consuming services
 ms.assetid: 1abf3d9f-b420-46f1-b628-df238751f308
-ms.openlocfilehash: 4c47013ebc84c6006d65a89e57217ce1c720b45a
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
-ms.translationtype: MT
+ms.openlocfilehash: f9ae53aeb988f23611adb4b00354f65918790d3b
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44197566"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46490166"
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>Strumento ServiceModel Metadata Utility Tool (Svcutil.exe)
 
@@ -192,7 +192,7 @@ Svcutil.exe può generare il codice di serializzazione C# necessario dagli assem
 |-reference:\<percorso file >|Aggiunge l'assembly specificato al set di assembly utilizzato per la risoluzione di riferimenti del tipo.<br /><br /> Forma abbreviata: `/r`|
 |/excludeType:\<tipo >|Specifica il nome completo o il nome completo dell’assembly del tipo da escludere dall’esportazione o convalida.<br /><br /> Forma abbreviata: `/et`|
 |/out:\<file>|Specifica il nome file per il codice generato. Questa opzione è ignorata quando più assembly vengono passati come input allo strumento.<br /><br /> Impostazione predefinita: derivata dal nome dell'assembly.<br /><br /> Forma abbreviata: `/o`|
-|/UseSerializerForFaults|Specifica che il <!--zz <xref:System.Xml.XmlSerializer> --> `xref:System.Xml.XmlSerializer ` deve essere utilizzato per la lettura e la scrittura degli errori, anziché il valore predefinito <xref:System.Runtime.Serialization.DataContractSerializer>.|
+|/UseSerializerForFaults|Specifica che per la lettura e la scrittura degli errori deve essere utilizzato <xref:System.Xml.Serialization.XmlSerializer> anziché l'oggetto predefinito <xref:System.Runtime.Serialization.DataContractSerializer>.|
 
 ## <a name="examples"></a>Esempi
 
