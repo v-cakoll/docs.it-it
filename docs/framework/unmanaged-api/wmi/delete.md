@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 791e75aa60fd651dde1555339e31664a3523e1eb
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 09/21/2018
-ms.locfileid: "46516626"
+ms.locfileid: "46561552"
 ---
 # <a name="delete-function"></a>Elimina funzione
 Elimina la proprietà specificata e tutti i relativi i qualificatori da una definizione di classe CIM.
