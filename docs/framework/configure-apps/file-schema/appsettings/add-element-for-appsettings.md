@@ -1,5 +1,5 @@
 ---
-title: '&lt;aggiungere&gt; elemento per &lt;appSettings&gt;'
+title: '&lt;aggiungere&gt; (elemento) per &lt;appSettings&gt;'
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/appSettings/add
@@ -9,20 +9,20 @@ helpviewer_keywords:
 ms.assetid: 8734efdc-00f6-4a65-bba6-084c5bc65246
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 35a9fc08033d2b9cd1dae5a1f1f3ddcd361f03eb
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: bcdac76528e7a8b07b56b6fd1d827c3c8072c371
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753638"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46529580"
 ---
-# <a name="add-element-for-appsettings"></a>\<aggiungere > elemento per \<appSettings >
+# <a name="add-element-for-appsettings"></a>\<aggiungere > (elemento) per \<appSettings >
 
-Aggiunge un'impostazione applicazione personalizzata.
+Aggiunge un'impostazione personalizzata dell'applicazione.
 
 [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
 &nbsp;&nbsp;[**\<appSettings >**](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<Aggiungi >**
+&nbsp;&nbsp;&nbsp;&nbsp;**\<aggiungere >**
 
 ## <a name="syntax"></a>Sintassi
 
@@ -47,15 +47,24 @@ Aggiunge un'impostazione applicazione personalizzata.
 
 ## <a name="child-elements"></a>Elementi figlio
 
-Nessuno
+nessuno
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come aggiungere un'impostazione di configurazione personalizzato per il nome dell'applicazione:
+Nell'esempio seguente viene illustrato come aggiungere un'impostazione di configurazione personalizzati per il nome dell'applicazione:
 
 ```xml
 <appSettings>
   <add key="ApplicationName" value="MyApplication" />
+</appSettings>
+```
+
+L'esempio seguente usa il `<add>` elemento per definire due impostazioni di compatibilità in un'applicazione ASP.NET:
+
+```xml
+<appSettings>
+  <add key="AppContext.SetSwitch:Switch.System.Globalization.NoAsyncCurrentCulture" value="true" />
+  <add key="AppContext.SetSwitch:Switch.System.Uri.DontEnableStrictRFC3986ReservedCharacterSets" value="true" />
 </appSettings>
 ```
 

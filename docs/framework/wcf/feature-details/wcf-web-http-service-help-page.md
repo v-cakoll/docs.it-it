@@ -2,21 +2,21 @@
 title: Pagina della Guida del servizio HTTP Web WCF
 ms.date: 03/30/2017
 ms.assetid: 63c7c695-44b6-4f31-bb9c-00f2763f525e
-ms.openlocfilehash: 75babbeda7d5f0dca18c2de2e3187145164ac9a0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d0fe4f99fea4d414c95244e535cd75891f921790
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33500952"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46529976"
 ---
 # <a name="wcf-web-http-service-help-page"></a>Pagina della Guida del servizio HTTP Web WCF
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] include una pagina automatica della Guida per i servizi HTTP WEB WCF. Questa pagina della Guida contiene una descrizione di ogni operazione, formato di richiesta e risposta e schema. Per impostazione predefinita, questa funzionalità è disabilitata. Quando un utente accede a un servizio HTTP WEB WCF e aggiunge "/help" alla fine dell'URL, ad esempio http://localhost:8000/Customers/Help, una pagina della Guida come viene visualizzato quanto segue.  
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] include una pagina automatica della Guida per i servizi HTTP WEB WCF. Questa pagina della Guida contiene una descrizione di ogni operazione, formato di richiesta e risposta e schema. Per impostazione predefinita, questa funzionalità è disabilitata. Quando un utente passa a un servizio HTTP WEB WCF e aggiunge "/help" alla fine dell'URL, ad esempio http://localhost:8000/Customers/Help, una pagina della Guida, come viene visualizzato il seguente.  
   
  ![Pagina della Guida REST WCF](../../../../docs/framework/wcf/feature-details/media/wcfresthelppagemain.gif "WCFRESTHELPPAGEMAIN")  
   
  L'utente può quindi fare clic su qualsiasi metodo elencato nella pagina della Guida e viene visualizzata la pagina dettagliata per l'operazione specificata, contenente ulteriori informazioni sul metodo, quali i formati del messaggio e le risposte di esempio. L'immagine seguente rappresenta un esempio di una pagina della Guida per un metodo.  
   
- ![Dettagli della pagina della Guida WCF REST](../../../../docs/framework/wcf/feature-details/media/wcfresthelppagedetail2.gif "WCFRESTHELPPAGEDETAIL2")  
+ ![Pagina della Guida REST WCF in dettaglio](../../../../docs/framework/wcf/feature-details/media/wcfresthelppagedetail2.gif "WCFRESTHELPPAGEDETAIL2")  
   
 ## <a name="using-the-wcf-web-http-help-page"></a>Utilizzo della pagina della Guida relativa a HTTP Web WCF  
  La pagina della Guida relativa a HTTP WEB WCF contiene una breve descrizione per ogni operazione, a condizione che ne venga specificata una mediante <xref:System.ComponentModel.DescriptionAttribute>. Questo attributo utilizza una stringa che contiene una breve descrizione dell'operazione a cui è applicato. Il codice seguente indica ad esempio come utilizzare l'elemento <xref:System.ComponentModel.DescriptionAttribute> per fornire una breve descrizione.  
@@ -45,12 +45,12 @@ SyndicationFeedFormatter GetTemplate1();
 </services>  
 ```  
   
- Per abilitare la pagina Guida HTTP Web WCF nel codice, aggiungere un endpoint del servizio e aggiungere un <xref:System.ServiceModel.Description.WebHttpBehavior> all'endpoint impostando <!--zz <xref:System.ServiceModel.Description.WebHttpBehavior.EnableHelp%2A>--> `EnableHelp` a `true`. A tale scopo, osservare il codice indicato di seguito.  
+ Per abilitare la pagina della Guida relativa a HTTP WEB WCF nel codice, aggiungere un endpoint servizio e un elemento <xref:System.ServiceModel.Description.WebHttpBehavior> all'endpoint impostando <xref:System.ServiceModel.Description.WebHttpBehavior.HelpEnabled%2A> su `true`. A tale scopo, osservare il codice indicato di seguito.  
   
 ```  
 using (WebServiceHost host = new WebServiceHost(typeof(Service), new Uri("http://localhost:8000/Customers")))  
 {  
-   host.AddServiceEndpoint(typeof(ICustomerCollection), new WebHttpBinding(), "");               
+   host.AddServiceEndpoint(typeof(ICustomerCollection), new WebHttpBinding(), "");
    host.Description.Endpoints[0].Behaviors.Add(new WebHttpBehavior { EnableHelp = true });  
    // ...  
 }  
@@ -240,4 +240,4 @@ using (WebServiceHost host = new WebServiceHost(typeof(Service), new Uri("http:/
 </xs:schema>  
 ```  
   
- Per ulteriori informazioni sullo schema di serializzazione del contratto dati, vedere [riferimento dello Schema del contratto dati](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).
+ Per altre informazioni sullo schema di serializzazione del contratto dati, vedere [Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).

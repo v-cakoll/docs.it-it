@@ -2,15 +2,15 @@
 title: Attività di raccolta in WF
 ms.date: 03/30/2017
 ms.assetid: 2680c3e2-9902-4968-b98d-cab776103dbe
-ms.openlocfilehash: 442da07e78ee08b49ad0e023362cace23dcd5b8d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6b3a02cdd020d303519f605a206d62b42f4fe731
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516727"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46525058"
 ---
 # <a name="collection-activities-in-wf"></a>Attività di raccolta in WF
-Le attività di raccolta vengono usate per operare con gli oggetti di una raccolta in un flusso di lavoro. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] dispone di attività fornite dal sistema per l'aggiunta e la rimozione di elementi da una raccolta, la verifica dell'esistenza di un elemento in una raccolta e la cancellazione di una raccolta. `ExistsInCollection` e `RemoveFromCollection` hanno un <xref:System.Activities.OutArgument%601> di tipo <xref:System.Boolean>, che indica il risultato.  
+Le attività di raccolta vengono usate per operare con gli oggetti di una raccolta in un flusso di lavoro. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] dispone di attività fornite dal sistema per l'aggiunta e la rimozione di elementi da una raccolta, la verifica dell'esistenza di un elemento in una raccolta e la cancellazione di una raccolta. `ExistsInCollection` e `RemoveFromCollection` hanno un' <xref:System.Activities.OutArgument%601> di tipo <xref:System.Boolean>, che indica il risultato.  
   
 > [!IMPORTANT]
 >  Se un'attività di raccolta viene eseguita prima di impostare l'oggetto Collection sottostante, viene generata un'eccezione <xref:System.InvalidOperationException> e l'attività non riesce.  
@@ -25,7 +25,7 @@ Le attività di raccolta vengono usate per operare con gli oggetti di una raccol
 |<xref:System.Activities.Statements.RemoveFromCollection%601>|Rimuove un elemento da una raccolta specificata e restituisce `true` se l'elemento è stato rimosso correttamente.|  
   
 ## <a name="using-collection-activities"></a>Utilizzo delle attività di raccolta  
- Nell'esempio di codice seguente viene illustrato come interagire con una raccolta dichiarata come variabile del flusso di lavoro. La raccolta usata è un <!--zz <xref:System.Collections.Generic.List%E2%80%991>--> `System.Collections.Generic.List` di <xref:System.String> gli oggetti denominati `fruitList`.  
+ Nell'esempio di codice seguente viene illustrato come interagire con una raccolta dichiarata come variabile del flusso di lavoro. La raccolta usata è un oggetto <xref:System.Collections.Generic.List%601> di oggetti <xref:System.String> denominati `fruitList`.  
   
 ```csharp  
 Variable<ICollection<string>> fruitList = new Variable<ICollection<string>>  
@@ -227,7 +227,7 @@ Activity wf = new Sequence
   
  Gli esempi di codice precedenti possono essere creati anche usando <xref:Microsoft.CSharp.Activities.CSharpValue%601> anziché <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>  
   
-```  
+```csharp
 Variable<ICollection<string>> fruitList = new Variable<ICollection<string>>  
 {  
     Default = new CSharpValue<ICollection<string>>("new List<String> From {\"Apple\", \"Orange\"};"),  
