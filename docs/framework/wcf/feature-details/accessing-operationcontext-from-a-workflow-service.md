@@ -3,11 +3,11 @@ title: Accesso a OperationContext da un servizio flusso di lavoro
 ms.date: 03/30/2017
 ms.assetid: b1dafe55-a20e-4db0-9ac8-90c315883cdd
 ms.openlocfilehash: 15dd817dddbe3272b188f6b74697f8c5839d498b
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46540752"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46697828"
 ---
 # <a name="accessing-operationcontext-from-a-workflow-service"></a>Accesso a OperationContext da un servizio flusso di lavoro
 Per accedere a <xref:System.ServiceModel.OperationContext> in un servizio di flusso di lavoro, è necessario implementare l'interfaccia <xref:System.ServiceModel.Activities.IReceiveMessageCallback> in una proprietà di esecuzione personalizzata. Eseguire l'override del metodo <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage(System.ServiceModel.OperationContext,System.Activities.ExecutionProperties)> passato come riferimento a <xref:System.ServiceModel.OperationContext>. In questo argomento viene descritta l'implementazione della proprietà di esecuzione per recuperare un'intestazione personalizzata e un'attività personalizzata che esporrà tale proprietà a <xref:System.ServiceModel.Activities.Receive> in fase di esecuzione.  L'attività personalizzata implementerà lo stesso comportamento come un'attività <xref:System.Activities.Statements.Sequence>, ad eccezione del fatto che quando un oggetto <xref:System.ServiceModel.Activities.Receive> viene posizionato all'interno dell'attività verrà chiamato <xref:System.ServiceModel.Activities.IReceiveMessageCallback> e le informazioni <xref:System.ServiceModel.OperationContext> verranno recuperate.  Nell'argomento viene inoltre illustrato come accedere a <xref:System.ServiceModel.OperationContext> sul lato client per aggiungere intestazioni in uscita tramite l'interfaccia <xref:System.ServiceModel.Activities.ISendMessageCallback>.  

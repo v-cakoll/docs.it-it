@@ -17,11 +17,11 @@ ms.assetid: c197dfc9-a453-4226-898d-37a16638056e
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 839a04d8a06e782582705cf0d9ad92d2e2df6af6
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46471645"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46696521"
 ---
 # <a name="generating-keys-for-encryption-and-decryption"></a>Generazione di chiavi per crittografia e decrittografia
 La creazione e la gestione di chiavi sono due momenti importanti del processo di crittografia. Per gli algoritmi simmetrici è richiesta la creazione di una chiave e un vettore di inizializzazione (IV). La chiave deve rimanere segreta per chiunque non debba decrittografare i dati. Il vettore di inizializzazione non deve rimanere segreto, ma dovrebbe essere modificato per ogni sessione. Gli algoritmi asimmetrici richiedono la creazione di una chiave pubblica e di una chiave privata. La chiave pubblica può essere resa pubblica a chiunque, mentre quella privata deve essere nota solo alla parte che decrittograferà i dati crittografati con la chiave pubblica. Questa sezione descrive come generare e gestire chiavi sia per gli algoritmi simmetrici che per quelli asimmetrici.  

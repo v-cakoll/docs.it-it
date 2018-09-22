@@ -10,11 +10,11 @@ ms.assetid: 10e245f7-d31e-42e7-82a2-d5780325d372
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 8cbc22be68aae976e939520383995652e896d529
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46539966"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46696170"
 ---
 # <a name="how-to-create-a-custom-security-token-authenticator"></a>Procedura: creare un autenticatore del token di sicurezza personalizzato
 In questo argomento viene illustrato come creare un autenticatore del token di sicurezza personalizzato e come integrarlo con un gestore del token di sicurezza personalizzato. Un autenticatore del token di sicurezza codi sicurezzantenuto di un token di sicurezza fornito con un messaggio in ingresso. Se la convalida ha esito positivo, l'autenticatore restituisce una raccolta di istanze <xref:System.IdentityModel.Policy.IAuthorizationPolicy> che, quando valutata, restituisce un set di attestazioni.  
