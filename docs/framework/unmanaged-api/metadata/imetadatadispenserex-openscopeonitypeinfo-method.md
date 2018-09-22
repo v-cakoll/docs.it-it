@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d5fd96f390b0bba60d1b95d20273bbf670208d41
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46532662"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46583392"
 ---
-# <a name="imetadatadispenserexopenscopeonitypeinfo-method"></a><span data-ttu-id="4eb92-102">Metodo IMetaDataDispenserEx::OpenScopeOnITypeInfo</span><span class="sxs-lookup"><span data-stu-id="4eb92-102">IMetaDataDispenserEx::OpenScopeOnITypeInfo Method</span></span>
-<span data-ttu-id="4eb92-103">Questo metodo non è implementato.</span><span class="sxs-lookup"><span data-stu-id="4eb92-103">This method is not implemented.</span></span> <span data-ttu-id="4eb92-104">Se chiamato, viene restituito E_NOTIMPL.</span><span class="sxs-lookup"><span data-stu-id="4eb92-104">If called, it returns E_NOTIMPL.</span></span>  
+# <a name="imetadatadispenserexopenscopeonitypeinfo-method"></a><span data-ttu-id="d9450-102">Metodo IMetaDataDispenserEx::OpenScopeOnITypeInfo</span><span class="sxs-lookup"><span data-stu-id="d9450-102">IMetaDataDispenserEx::OpenScopeOnITypeInfo Method</span></span>
+<span data-ttu-id="d9450-103">Questo metodo non è implementato.</span><span class="sxs-lookup"><span data-stu-id="d9450-103">This method is not implemented.</span></span> <span data-ttu-id="d9450-104">Se chiamato, viene restituito E_NOTIMPL.</span><span class="sxs-lookup"><span data-stu-id="d9450-104">If called, it returns E_NOTIMPL.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4eb92-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="4eb92-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d9450-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="d9450-105">Syntax</span></span>  
   
 ```  
 HRESULT OpenScopeOnITypeInfo (  
@@ -38,28 +38,28 @@ HRESULT OpenScopeOnITypeInfo (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="4eb92-106">Parametri</span><span class="sxs-lookup"><span data-stu-id="4eb92-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="d9450-106">Parametri</span><span class="sxs-lookup"><span data-stu-id="d9450-106">Parameters</span></span>  
  `pITI`  
- <span data-ttu-id="4eb92-107">[in] Puntatore a un [ITypeInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-itypeinfo) interfaccia che fornisce le informazioni sul tipo in cui aprire l'ambito.</span><span class="sxs-lookup"><span data-stu-id="4eb92-107">[in] Pointer to an [ITypeInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-itypeinfo) interface that provides the type information on which to open the scope.</span></span>  
+ <span data-ttu-id="d9450-107">[in] Puntatore a un [ITypeInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-itypeinfo) interfaccia che fornisce le informazioni sul tipo in cui aprire l'ambito.</span><span class="sxs-lookup"><span data-stu-id="d9450-107">[in] Pointer to an [ITypeInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-itypeinfo) interface that provides the type information on which to open the scope.</span></span>  
   
  `dwOpenFlags`  
- <span data-ttu-id="4eb92-108">[in] I flag di modalità di apertura.</span><span class="sxs-lookup"><span data-stu-id="4eb92-108">[in] The open mode flags.</span></span>  
+ <span data-ttu-id="d9450-108">[in] I flag di modalità di apertura.</span><span class="sxs-lookup"><span data-stu-id="d9450-108">[in] The open mode flags.</span></span>  
   
  `riid`  
- <span data-ttu-id="4eb92-109">[in] L'interfaccia desiderata.</span><span class="sxs-lookup"><span data-stu-id="4eb92-109">[in] The desired interface.</span></span>  
+ <span data-ttu-id="d9450-109">[in] L'interfaccia desiderata.</span><span class="sxs-lookup"><span data-stu-id="d9450-109">[in] The desired interface.</span></span>  
   
  `ppIUnk`  
- <span data-ttu-id="4eb92-110">[out] Puntatore a un puntatore a interfaccia restituito.</span><span class="sxs-lookup"><span data-stu-id="4eb92-110">[out] Pointer to a pointer to the returned interface.</span></span>  
+ <span data-ttu-id="d9450-110">[out] Puntatore a un puntatore a interfaccia restituito.</span><span class="sxs-lookup"><span data-stu-id="d9450-110">[out] Pointer to a pointer to the returned interface.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4eb92-111">Requisiti</span><span class="sxs-lookup"><span data-stu-id="4eb92-111">Requirements</span></span>  
- <span data-ttu-id="4eb92-112">**Piattaforma:** visualizzare [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4eb92-112">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d9450-111">Requisiti</span><span class="sxs-lookup"><span data-stu-id="d9450-111">Requirements</span></span>  
+ <span data-ttu-id="d9450-112">**Piattaforma:** visualizzare [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d9450-112">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4eb92-113">**Intestazione:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="4eb92-113">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="d9450-113">**Intestazione:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="d9450-113">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="4eb92-114">**Libreria:** usato come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="4eb92-114">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="d9450-114">**Libreria:** usato come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="d9450-114">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="4eb92-115">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4eb92-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="d9450-115">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d9450-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4eb92-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="4eb92-116">See Also</span></span>  
- [<span data-ttu-id="4eb92-117">Interfaccia IMetaDataDispenserEx</span><span class="sxs-lookup"><span data-stu-id="4eb92-117">IMetaDataDispenserEx Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)  
- [<span data-ttu-id="4eb92-118">Interfaccia IMetaDataDispenser</span><span class="sxs-lookup"><span data-stu-id="4eb92-118">IMetaDataDispenser Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
+## <a name="see-also"></a><span data-ttu-id="d9450-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="d9450-116">See Also</span></span>  
+ [<span data-ttu-id="d9450-117">Interfaccia IMetaDataDispenserEx</span><span class="sxs-lookup"><span data-stu-id="d9450-117">IMetaDataDispenserEx Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)  
+ [<span data-ttu-id="d9450-118">Interfaccia IMetaDataDispenser</span><span class="sxs-lookup"><span data-stu-id="d9450-118">IMetaDataDispenser Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
