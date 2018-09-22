@@ -11,11 +11,11 @@ ms.assetid: d468325a-21c5-43ce-8567-84e342b22308
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fd77a8a81718837d55f3018564d0f4ba8fdc95ee
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46509135"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46567894"
 ---
 # <a name="certtimestampauthenticodelicense-function"></a>Funzione CertTimestampAuthenticodeLicense
 Aggiunge un timestamp a una licenza Authenticode XrML.  

@@ -3,11 +3,11 @@ title: Matrici (F#)
 description: 'Informazioni su come creare e usare matrici nel linguaggio di programmazione F #.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 27b73efc900ac2efc813fe66f81baa2e9ae1e843
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46007343"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46568401"
 ---
 # <a name="arrays"></a>Matrici
 
