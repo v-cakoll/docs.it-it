@@ -3,11 +3,11 @@ title: Strumenti per la serializzazione
 ms.date: 03/30/2017
 ms.assetid: 593b675f-938c-44ff-807b-0ca9fea30103
 ms.openlocfilehash: af0ed0df0e99245d3dacd31280574c36415d2a1e
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46481819"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46525620"
 ---
 # <a name="serialization-tools"></a>Strumenti per la serializzazione
 In questa sezione vengono fornite informazioni dettagliate sugli strumenti per la serializzazione. È possibile utilizzare tutti gli strumenti dalla riga di comando.  
