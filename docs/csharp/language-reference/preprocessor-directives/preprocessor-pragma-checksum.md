@@ -7,41 +7,41 @@ helpviewer_keywords:
 - '#pragma checksum [C#]'
 ms.assetid: 3673e4ca-6098-4ec1-890f-8fceb2a794a2
 ms.openlocfilehash: 28a9ccfb9d36e648304a177294904ab1b7f18892
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46568566"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47027175"
 ---
-# <a name="pragma-checksum-c-reference"></a><span data-ttu-id="4e13a-102">#pragma checksum (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="4e13a-102">#pragma checksum (C# Reference)</span></span>
-<span data-ttu-id="4e13a-103">Consente di generare i checksum per i file di origine facilitando in tal modo le operazioni di debug delle pagine [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)].</span><span class="sxs-lookup"><span data-stu-id="4e13a-103">Generates checksums for source files to aid with debugging [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] pages.</span></span>  
+# <a name="pragma-checksum-c-reference"></a><span data-ttu-id="055df-102">#pragma checksum (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="055df-102">#pragma checksum (C# Reference)</span></span>
+<span data-ttu-id="055df-103">Consente di generare i checksum per i file di origine facilitando in tal modo le operazioni di debug delle pagine [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)].</span><span class="sxs-lookup"><span data-stu-id="055df-103">Generates checksums for source files to aid with debugging [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] pages.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4e13a-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="4e13a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="055df-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="055df-104">Syntax</span></span>  
   
 ```csharp
 #pragma checksum "filename" "{guid}" "checksum bytes"  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="4e13a-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="4e13a-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="055df-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="055df-105">Parameters</span></span>  
  `"filename"`  
- <span data-ttu-id="4e13a-106">Nome del file che richiede il monitoraggio per modifiche o aggiornamenti.</span><span class="sxs-lookup"><span data-stu-id="4e13a-106">The name of the file that requires monitoring for changes or updates.</span></span>  
+ <span data-ttu-id="055df-106">Nome del file che richiede il monitoraggio per modifiche o aggiornamenti.</span><span class="sxs-lookup"><span data-stu-id="055df-106">The name of the file that requires monitoring for changes or updates.</span></span>  
   
  `"{guid}"`  
- <span data-ttu-id="4e13a-107">Identificatore univoco globale (GUID, Globally Unique Identifier) dell'algoritmo hash.</span><span class="sxs-lookup"><span data-stu-id="4e13a-107">The Globally Unique Identifier (GUID) for the hash algorithm.</span></span>  
+ <span data-ttu-id="055df-107">Identificatore univoco globale (GUID, Globally Unique Identifier) dell'algoritmo hash.</span><span class="sxs-lookup"><span data-stu-id="055df-107">The Globally Unique Identifier (GUID) for the hash algorithm.</span></span>  
   
  `"checksum_bytes"`  
- <span data-ttu-id="4e13a-108">Stringa di cifre esadecimali che rappresenta i byte del checksum.</span><span class="sxs-lookup"><span data-stu-id="4e13a-108">The string of hexadecimal digits representing the bytes of the checksum.</span></span> <span data-ttu-id="4e13a-109">Deve essere un numero pari di cifre esadecimali.</span><span class="sxs-lookup"><span data-stu-id="4e13a-109">Must be an even number of hexadecimal digits.</span></span> <span data-ttu-id="4e13a-110">Un numero dispari di cifre genera un avviso in fase di compilazione, pertanto la direttiva viene ignorata.</span><span class="sxs-lookup"><span data-stu-id="4e13a-110">An odd number of digits results in a compile-time warning, and the directive are ignored.</span></span>  
+ <span data-ttu-id="055df-108">Stringa di cifre esadecimali che rappresenta i byte del checksum.</span><span class="sxs-lookup"><span data-stu-id="055df-108">The string of hexadecimal digits representing the bytes of the checksum.</span></span> <span data-ttu-id="055df-109">Deve essere un numero pari di cifre esadecimali.</span><span class="sxs-lookup"><span data-stu-id="055df-109">Must be an even number of hexadecimal digits.</span></span> <span data-ttu-id="055df-110">Un numero dispari di cifre genera un avviso in fase di compilazione, pertanto la direttiva viene ignorata.</span><span class="sxs-lookup"><span data-stu-id="055df-110">An odd number of digits results in a compile-time warning, and the directive are ignored.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="4e13a-111">Note</span><span class="sxs-lookup"><span data-stu-id="4e13a-111">Remarks</span></span>  
- <span data-ttu-id="4e13a-112">Il debugger di Visual Studio usa un checksum per trovare sempre l'origine corretta.</span><span class="sxs-lookup"><span data-stu-id="4e13a-112">The Visual Studio debugger uses a checksum to make sure  that it always finds the right source.</span></span> <span data-ttu-id="4e13a-113">Il compilatore calcola il checksum di un file di origine, quindi genera l'output nel file del database di programma (PDB).</span><span class="sxs-lookup"><span data-stu-id="4e13a-113">The compiler computes the checksum for a source file, and then emits the output to the program database (PDB) file.</span></span> <span data-ttu-id="4e13a-114">Il PDB viene quindi usato dal debugger per eseguire il confronto con il checksum calcolato per il file di origine.</span><span class="sxs-lookup"><span data-stu-id="4e13a-114">The debugger then uses the PDB to compare against the checksum that it computes for the source file.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="055df-111">Note</span><span class="sxs-lookup"><span data-stu-id="055df-111">Remarks</span></span>  
+ <span data-ttu-id="055df-112">Il debugger di Visual Studio usa un checksum per trovare sempre l'origine corretta.</span><span class="sxs-lookup"><span data-stu-id="055df-112">The Visual Studio debugger uses a checksum to make sure  that it always finds the right source.</span></span> <span data-ttu-id="055df-113">Il compilatore calcola il checksum di un file di origine, quindi genera l'output nel file del database di programma (PDB).</span><span class="sxs-lookup"><span data-stu-id="055df-113">The compiler computes the checksum for a source file, and then emits the output to the program database (PDB) file.</span></span> <span data-ttu-id="055df-114">Il PDB viene quindi usato dal debugger per eseguire il confronto con il checksum calcolato per il file di origine.</span><span class="sxs-lookup"><span data-stu-id="055df-114">The debugger then uses the PDB to compare against the checksum that it computes for the source file.</span></span>  
   
- <span data-ttu-id="4e13a-115">Questa soluzione non funziona per i progetti [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] ASP.NET, poiché il checksum calcolato si riferisce al file di origine generato piuttosto che al file ASPX.</span><span class="sxs-lookup"><span data-stu-id="4e13a-115">This solution does not work for [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] projects, because the computed checksum is for the generated source file, rather than the .aspx file.</span></span> <span data-ttu-id="4e13a-116">Per risolvere questo problema, `#pragma checksum` fornisce supporto per il checksum nelle pagine [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)].</span><span class="sxs-lookup"><span data-stu-id="4e13a-116">To address this problem, `#pragma checksum` provides checksum support for [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] pages.</span></span>  
+ <span data-ttu-id="055df-115">Questa soluzione non funziona per i progetti [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] ASP.NET, poiché il checksum calcolato si riferisce al file di origine generato piuttosto che al file ASPX.</span><span class="sxs-lookup"><span data-stu-id="055df-115">This solution does not work for [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] projects, because the computed checksum is for the generated source file, rather than the .aspx file.</span></span> <span data-ttu-id="055df-116">Per risolvere questo problema, `#pragma checksum` fornisce supporto per il checksum nelle pagine [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)].</span><span class="sxs-lookup"><span data-stu-id="055df-116">To address this problem, `#pragma checksum` provides checksum support for [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] pages.</span></span>  
   
- <span data-ttu-id="4e13a-117">Quando si crea un progetto [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] in Visual C#, il file di origine generato contiene un checksum per il file ASPX, dal quale viene generata l'origine.</span><span class="sxs-lookup"><span data-stu-id="4e13a-117">When you create an [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] project in Visual C#, the generated source file contains a checksum for the .aspx file, from which the source is generated.</span></span> <span data-ttu-id="4e13a-118">Queste informazioni vengono quindi scritte dal compilatore nel file PDB.</span><span class="sxs-lookup"><span data-stu-id="4e13a-118">The compiler then writes this information into the PDB file.</span></span>  
+ <span data-ttu-id="055df-117">Quando si crea un progetto [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] in Visual C#, il file di origine generato contiene un checksum per il file ASPX, dal quale viene generata l'origine.</span><span class="sxs-lookup"><span data-stu-id="055df-117">When you create an [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] project in Visual C#, the generated source file contains a checksum for the .aspx file, from which the source is generated.</span></span> <span data-ttu-id="055df-118">Queste informazioni vengono quindi scritte dal compilatore nel file PDB.</span><span class="sxs-lookup"><span data-stu-id="055df-118">The compiler then writes this information into the PDB file.</span></span>  
   
- <span data-ttu-id="4e13a-119">Se il compilatore non rileva alcuna direttiva `#pragma checksum` nel file, calcola il checksum e scrive il valore nel file PDB.</span><span class="sxs-lookup"><span data-stu-id="4e13a-119">If the compiler encounters no `#pragma checksum` directive in the file, it computes the checksum and writes the value to the PDB file.</span></span>  
+ <span data-ttu-id="055df-119">Se il compilatore non rileva alcuna direttiva `#pragma checksum` nel file, calcola il checksum e scrive il valore nel file PDB.</span><span class="sxs-lookup"><span data-stu-id="055df-119">If the compiler encounters no `#pragma checksum` directive in the file, it computes the checksum and writes the value to the PDB file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="4e13a-120">Esempio</span><span class="sxs-lookup"><span data-stu-id="4e13a-120">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="055df-120">Esempio</span><span class="sxs-lookup"><span data-stu-id="055df-120">Example</span></span>  
   
 ```csharp
 class TestClass  
@@ -53,8 +53,8 @@ class TestClass
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="4e13a-121">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="4e13a-121">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="055df-121">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="055df-121">See Also</span></span>
 
-- [<span data-ttu-id="4e13a-122">Riferimenti per C#</span><span class="sxs-lookup"><span data-stu-id="4e13a-122">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="4e13a-123">Guida per programmatori C#</span><span class="sxs-lookup"><span data-stu-id="4e13a-123">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="4e13a-124">Direttive per il preprocessore C#</span><span class="sxs-lookup"><span data-stu-id="4e13a-124">C# Preprocessor Directives</span></span>](../../../csharp/language-reference/preprocessor-directives/index.md)
+- [<span data-ttu-id="055df-122">Riferimenti per C#</span><span class="sxs-lookup"><span data-stu-id="055df-122">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+- [<span data-ttu-id="055df-123">Guida per programmatori C#</span><span class="sxs-lookup"><span data-stu-id="055df-123">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="055df-124">Direttive per il preprocessore C#</span><span class="sxs-lookup"><span data-stu-id="055df-124">C# Preprocessor Directives</span></span>](../../../csharp/language-reference/preprocessor-directives/index.md)
