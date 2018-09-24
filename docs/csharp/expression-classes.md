@@ -4,11 +4,11 @@ description: Informazioni sui tipi di framework che supportano gli alberi delle 
 ms.date: 06/20/2016
 ms.assetid: e9c85021-0d36-48af-91b7-aaaa66f22654
 ms.openlocfilehash: 687b521c52c1ca380a12e18469b5f66000049d3c
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45617967"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45972559"
 ---
 # <a name="framework-types-supporting-expression-trees"></a>Tipi di framework che supportano alberi delle espressioni
 

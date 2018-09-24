@@ -13,11 +13,11 @@ ms.assetid: 36e7e096-4e6c-4cf2-9ab6-68073026ea0e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a1d9f62055b497aa7522d589610c12badb2361d5
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45677727"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46711194"
 ---
 # <a name="performing-formatting-operations"></a>Esecuzione di operazioni di formattazione
 Gli argomenti che seguono contengono istruzioni dettagliate per l'esecuzione di operazioni di formattazione specifiche.  

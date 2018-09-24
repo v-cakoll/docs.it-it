@@ -6,11 +6,11 @@ ms.assetid: d818a29a-6ee5-4725-97c4-78cf60a156b6
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 960d69e7db4d06956bfff8fb849f1d085e4cb1c0
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45594050"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46583367"
 ---
 # <a name="removing-nodes-content-and-values-from-an-xml-document"></a>Rimozione di nodi, contenuto e valori da un documento XML
 Una volta che un DOM XML si trova in memoria, è possibile rimuovere i nodi dall'albero oppure rimuovere il contenuto e i valori da alcuni tipi di nodi. Per informazioni su come rimuovere un nodo secondario o un intero sottoalbero di nodi da un documento, vedere [Rimozione di nodi dal DOM](../../../../docs/standard/data/xml/removing-nodes-from-the-dom.md). Per altre informazioni su come rimuovere gli attributi di un elemento, vedere [Rimozione di attributi da un nodo di elemento nel DOM](../../../../docs/standard/data/xml/removing-attributes-from-an-element-node-in-the-dom.md). Per informazioni sulla rimozione del contenuto di un nodo lasciando però il nodo stesso nell'albero, vedere [Rimozione del contenuto di un nodo nel DOM](../../../../docs/standard/data/xml/removing-node-content-in-the-dom.md).  

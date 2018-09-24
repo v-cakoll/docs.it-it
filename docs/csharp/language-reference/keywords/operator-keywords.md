@@ -6,11 +6,11 @@ helpviewer_keywords:
 - operators [C#], keywords
 ms.assetid: f745c81f-f8d8-4673-86a1-0f3a85cc63c3
 ms.openlocfilehash: b6a7fbc08647ace73676403937f4b0f79e7ff585
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45679119"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46003646"
 ---
 # <a name="operator-keywords-c-reference"></a>Parole chiave per operatori (Riferimenti per C#)
 Consentono di eseguire diversi tipi di operazioni, come creare oggetti, controllare il tipo di runtime di un oggetto, ottenere la dimensione di un tipo e altre azioni. In questa sezione vengono presentate le parole chiave seguenti:  

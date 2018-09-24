@@ -4,12 +4,12 @@ description: Il comando dotnet msbuild consente di accedere alla riga di comando
 author: mairaw
 ms.author: mairaw
 ms.date: 05/25/2018
-ms.openlocfilehash: 58aac2a5314758b8711c0b014154022168fb671c
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 76165590478b0e76d19d546c87e012da4716b6db
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696845"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46578896"
 ---
 # <a name="dotnet-msbuild"></a>dotnet msbuild
 
@@ -37,12 +37,12 @@ Compilare un progetto e le relative dipendenze:
 
 Compilare un progetto e le relative dipendenze usando la configurazione per il rilascio:
 
-`dotnet msbuild /p:Configuration=Release`
+`dotnet msbuild -p:Configuration=Release`
 
 Eseguire la destinazione di pubblicazione e pubblicare per il RID `osx.10.11-x64`:
 
-`dotnet msbuild /t:Publish /p:RuntimeIdentifiers=osx.10.11-x64`
+`dotnet msbuild -t:Publish -p:RuntimeIdentifiers=osx.10.11-x64`
 
 Vedere l'intero progetto con tutte le destinazioni incluse dall'SDK:
 
-`dotnet msbuild /pp`
+`dotnet msbuild -pp`

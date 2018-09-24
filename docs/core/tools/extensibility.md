@@ -4,12 +4,12 @@ description: Informazioni sull'estendibilità degli strumenti dell'interfaccia d
 author: blackdwarf
 ms.author: mairaw
 ms.date: 04/12/2017
-ms.openlocfilehash: a9cfebbeddbedc329432c805c5956b382a726a77
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 9f54479704f547ada567619a82b24a47a0b104c4
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45592062"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46326582"
 ---
 # <a name="net-core-cli-tools-extensibility-model"></a>Modello di estendibilità degli strumenti CLI di .NET Core
 
@@ -133,7 +133,7 @@ Nell'esempio seguente è possibile visualizzare il file di progetto della destin
 
 L'utilizzo delle destinazioni personalizzate è reso possibile dalla specifica di un elemento `<PackageReference>` che punta al pacchetto e alla relativa versione all'interno del progetto in fase di estensione. A differenza degli strumenti, il pacchetto di destinazione personalizzato non viene incluso nella chiusura delle dipendenze del progetto.
 
-L'uso della destinazione personalizzata dipende esclusivamente dal modo in cui questa viene configurata. Dal momento che si tratta di una destinazione MSBuild, può dipendere da una destinazione data, essere eseguita dopo un'altra destinazione e anche essere chiamata manualmente mediante il comando `dotnet msbuild /t:<target-name>`.
+L'uso della destinazione personalizzata dipende esclusivamente dal modo in cui questa viene configurata. Dal momento che si tratta di una destinazione MSBuild, può dipendere da una destinazione data, essere eseguita dopo un'altra destinazione e anche essere chiamata manualmente mediante il comando `dotnet msbuild -t:<target-name>`.
 
 Tuttavia per offrire agli utenti una migliore esperienza d'uso è possibile combinare strumenti in base al progetto e destinazioni personalizzate. In questo scenario lo strumento in base al progetto si limita ad accettare qualsiasi parametro necessario e lo traduce nella chiamata a [`dotnet msbuild`](dotnet-msbuild.md) richiesta, che esegue la destinazione. È possibile visualizzare un esempio di questo tipo di sinergia nel repository degli [esempi di MVP Summit 2016 Hackathon](https://github.com/dotnet/MVPSummitHackathon2016) nel progetto [`dotnet-packer`](https://github.com/dotnet/MVPSummitHackathon2016/tree/master/dotnet-packer).
 

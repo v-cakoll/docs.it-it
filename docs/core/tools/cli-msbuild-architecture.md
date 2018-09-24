@@ -3,12 +3,12 @@ title: Architettura degli strumenti della riga di comando di .NET Core
 description: Informazioni sui livelli degli strumenti di .NET Core e sulle modifiche apportate nelle versioni più recenti.
 author: blackdwarf
 ms.date: 03/06/2017
-ms.openlocfilehash: 1d96a0b1e19bf84af0ab645ebd104afc899ae656
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 85987129421e8ee22f7cf7fe1d44e0768d95a214
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245129"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46696334"
 ---
 # <a name="high-level-overview-of-changes-in-the-net-core-tools"></a>Panoramica generale delle modifiche agli strumenti di .NET Core
 
@@ -63,7 +63,7 @@ Dal punto di vista dell'esecuzione, i comandi dell'interfaccia della riga di com
     
 Questo comando pubblica un'applicazione in una cartella `pub` usando la configurazione "Release". A livello interno, il comando viene tradotto nella chiamata a MSBuild seguente: 
 
-   `dotnet msbuild /t:Publish /p:OutputPath=pub /p:Configuration=Release`
+   `dotnet msbuild -t:Publish -p:OutputPath=pub -p:Configuration=Release`
 
 La principale eccezione a questa regola sono i comandi `new` e `run`, che non sono stati implementati come destinazioni MSBuild.
 

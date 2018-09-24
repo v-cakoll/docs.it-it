@@ -10,11 +10,11 @@ ms.assetid: b782bcb8-da6a-4c6a-805f-2eb46d504309
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 37abcb6b3a8fdf4ef91d5e946a97db7ca1428ce8
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45591880"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46532740"
 ---
 # <a name="overview-of-synchronization-primitives"></a>Cenni preliminari sulle primitive di sincronizzazione
 <a name="top"></a>.NET Framework fornisce diverse primitive di sincronizzazione per controllare le interazioni dei thread ed evitare race condition. Queste possono essere divise approssimativamente in tre categorie: blocco, segnalazione e operazioni interlocked.  
