@@ -1,24 +1,23 @@
 ---
-title: '&lt;iriParsing&gt; elemento (impostazioni Uri)'
+title: '&lt;iriParsing&gt; (impostazioni Uri)'
 ms.date: 03/30/2017
 ms.assetid: 953d0b53-445e-41f9-b302-77c4030852ce
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: f05f7e35d69f789d3ebb371689aafbc84004b732
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 446447f0d279755dbc06e0e3a25d50ad86ad555b
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743303"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47075226"
 ---
-# <a name="ltiriparsinggt-element-uri-settings"></a>&lt;iriParsing&gt; elemento (impostazioni Uri)
+# <a name="ltiriparsinggt-element-uri-settings"></a>&lt;iriParsing&gt; (impostazioni Uri)
 Specifica se l'analisi IRI (International Resource Identifier) viene applicata a un <xref:System.Uri> e se devono essere applicate le regole di analisi IRI.  
   
 ## <a name="schema-hierarchy"></a>Gerarchia dello schema  
  [Elemento \<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
   
- [\<URI > elemento (impostazioni Uri)](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)  
+ [\<URI > (impostazioni Uri)](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)  
   
  [\<iriParsing >](../../../../../docs/framework/configure-apps/file-schema/network/iriparsing-element-uri-settings.md)  
   
@@ -40,7 +39,7 @@ Specifica se l'analisi IRI (International Resource Identifier) viene applicata a
 |`enabled`|Specifica se è abilitata l'analisi IRI. Il valore predefinito è `false`.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- Nessuno  
+ nessuno  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -49,9 +48,9 @@ Specifica se l'analisi IRI (International Resource Identifier) viene applicata a
 |[URI](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)|Contiene le impostazioni che specificano come .NET Framework gestisce gli indirizzi web espressi tramite uniform resource identifier (URI).|  
   
 ## <a name="remarks"></a>Note  
- Esistente <xref:System.Uri> classe è stata estesa in .NET Framework 3.5. 3.0 SP1 e 2.0 SP1 per fornire supporto per gli identificatori IRI (International Resource) e IDN (Internationalized Domain nomi). Gli utenti non visualizzeranno qualsiasi modifica rispetto al comportamento di .NET Framework 2.0 a meno che non consentono in modo specifico IRI e IDN supportano. Questo garantisce la compatibilità delle applicazioni con le versioni precedenti di .NET Framework.  
+ L'oggetto esistente <xref:System.Uri> classe è stata estesa in .NET Framework 3.5. 3.0 SP1 e 2.0 SP1 per fornire supporto per gli identificatori IRI (International Resource) e IDN (Internationalized Domain nomi). Gli utenti correnti non noteranno cambiamenti rispetto al comportamento di .NET Framework 2.0 a meno che non consentono in modo specifico gli IRI e IDN supportano. Questo garantisce la compatibilità delle applicazioni con le versioni precedenti di .NET Framework.  
   
- Per abilitare il supporto per IRI, sono necessarie le seguenti due modifiche:  
+ Per abilitare il supporto per IRI, sono necessarie le due modifiche seguenti:  
   
 1.  Aggiungere la riga seguente al file Machine. config nella directory di .NET Framework 2.0  
   
@@ -59,9 +58,9 @@ Specifica se l'analisi IRI (International Resource Identifier) viene applicata a
     <section name="uri" type="System.Configuration.UriSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />  
     ```  
   
-2.  Specificare se applicare le regole di analisi IRI. A questo scopo, è possibile usare il file machine.config o il file app.config.  
+2.  Specificare se le regole di analisi degli IRI deve essere applicato. A questo scopo, è possibile usare il file machine.config o il file app.config.  
   
- Abilitazione dell'analisi IRI (iriParsing abilitato = `true`) consentirà la normalizzazione e regole di controllo in base alle IRI più recente dei caratteri nella RFC 3987. Il valore predefinito è `false` e la normalizzazione e i caratteri di controllo in base a RFC 2396 e RFC 3986 (per i valori letterali IPv6).  
+ Attivando l'analisi IRI (iriParsing attivato = `true`) eseguirà la normalizzazione e regole di carattere di controllo in base a IRI più recenti nella specifica RFC 3987. Il valore predefinito è `false` e la normalizzazione e i caratteri di controllo in base alla RFC 2396 e RFC 3986 (per i valori letterali IPv6).  
   
 ### <a name="configuration-files"></a>File di configurazione  
  Questo elemento può essere usato nel file di configurazione dell'applicazione o nel file di configurazione del computer (Machine.config).  
@@ -69,7 +68,7 @@ Specifica se l'analisi IRI (International Resource Identifier) viene applicata a
 ## <a name="example"></a>Esempio  
   
 ### <a name="description"></a>Descrizione  
- Nell'esempio seguente viene mostrata una configurazione utilizzata per la <xref:System.Uri> classe per supportare l'analisi IRI e i nomi IDN.  
+ Nell'esempio seguente mostra una configurazione usata dal <xref:System.Uri> classe per supportare l'analisi IRI e IDN nomi.  
   
 ### <a name="code"></a>Codice  
   

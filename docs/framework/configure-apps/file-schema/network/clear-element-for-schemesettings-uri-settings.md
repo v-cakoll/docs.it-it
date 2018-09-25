@@ -1,24 +1,23 @@
 ---
-title: '&lt;deselezionare&gt; elemento per schemeSettings (impostazioni Uri)'
+title: '&lt;Cancella&gt; (elemento) per schemeSettings (impostazioni Uri)'
 ms.date: 03/30/2017
 ms.assetid: 65098332-ce61-4542-ab8d-e7dc0257d31f
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 32c7a9e07b48536584f7ca5588226fb4479bacb5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: f0daa689ba09fa39ffe0f38d769112f0f095592a
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742523"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47070643"
 ---
-# <a name="ltcleargt-element-for-schemesettings-uri-settings"></a>&lt;deselezionare&gt; elemento per schemeSettings (impostazioni Uri)
+# <a name="ltcleargt-element-for-schemesettings-uri-settings"></a>&lt;Cancella&gt; (elemento) per schemeSettings (impostazioni Uri)
 Cancella tutte le impostazioni di schema esistenti.  
   
  \<configuration>  
 \<URI >  
 \<schemeSettings >  
-\<cancellare >  
+\<clear >  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -46,21 +45,21 @@ Cancella tutte le impostazioni di schema esistenti.
   
  `http://www.contoso.com/..%2F..%2F/Windows/System32/cmd.exe?/c+dir+c:\`  
   
- Se questo URI viene passato a moduli non gestiscono percentuale correttamente codificati in caratteri, potrebbe verificarsi il seguente comando viene eseguito dal server:  
+ Se viene passato questo URI lungo i moduli non gestiscono percento codificati in caratteri correttamente, potrebbero verificarsi il seguente comando eseguito dal server:  
   
  `c:\Windows\System32\cmd.exe /c dir c:\`  
   
- Per questo motivo, <xref:System.Uri?displayProperty=nameWithType> prima i delimitatori di percorso non consente l'escape di classe e quindi applica la compressione del percorso. Il risultato di passare l'URL dannoso per <xref:System.Uri?displayProperty=nameWithType> costruttore di classe nell'URI seguente:  
+ Per questo motivo, <xref:System.Uri?displayProperty=nameWithType> prima i delimitatori di percorso non consente l'escape di classi e quindi applica la compressione del percorso. Il risultato di passare l'URL dannoso a <xref:System.Uri?displayProperty=nameWithType> costruttore di classe nell'URI seguente:  
   
  `http://www.microsoft.com/Windows/System32/cmd.exe?/c+dir+c:\`  
   
- Per non delimitatori di percorso con codifica percentuale di caratteri di escape annullare utilizzando l'opzione di configurazione schemeSettings per uno schema specifico, è possibile modificare questo comportamento predefinito.  
+ Possibile è possibile modificare questo comportamento predefinito per non i delimitatori del percorso con codifica percentuale ONU-escape utilizzando l'opzione di configurazione schemeSettings per uno schema specifico.  
   
 ## <a name="configuration-files"></a>File di configurazione  
  Questo elemento può essere usato nel file di configurazione dell'applicazione o nel file di configurazione del computer (Machine.config).  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene mostrata una configurazione utilizzata per la <xref:System.Uri> classe che cancella tutte le impostazioni di schema e quindi aggiunge il supporto per sequenza di escape non delimitatori di percorso con codifica percentuale per lo schema http.  
+ Nell'esempio seguente mostra una configurazione usata dal <xref:System.Uri> classe che cancella tutte le impostazioni di schema e quindi aggiunge il supporto per non eseguire l'escape delimitatori di percorso codificato in percentuale per lo schema http.  
   
 ```xml  
 <configuration>  

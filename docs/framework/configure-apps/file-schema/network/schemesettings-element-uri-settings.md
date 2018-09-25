@@ -1,18 +1,17 @@
 ---
-title: '&lt;schemeSettings&gt; elemento (impostazioni Uri)'
+title: '&lt;schemeSettings&gt; (impostazioni Uri)'
 ms.date: 03/30/2017
 ms.assetid: 0ae45c6e-8c4c-4c0d-8b9f-a93824648890
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 40ff62a48a3ba1f4a9b5aed28630ab70d37869fc
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 76ca5acc22eca07d372a2964cf3a6df4ea3b58d5
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742679"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47077486"
 ---
-# <a name="ltschemesettingsgt-element-uri-settings"></a>&lt;schemeSettings&gt; elemento (impostazioni Uri)
+# <a name="ltschemesettingsgt-element-uri-settings"></a>&lt;schemeSettings&gt; (impostazioni Uri)
 Specifica come verrà analizzato un <xref:System.Uri> per schemi specifici.  
   
  \<configuration>  
@@ -30,15 +29,15 @@ Specifica come verrà analizzato un <xref:System.Uri> per schemi specifici.
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
 ### <a name="attributes"></a>Attributi  
- Nessuno  
+ nessuno  
   
 ### <a name="child-elements"></a>Elementi figlio  
   
 |**Elemento**|**Descrizione**|  
 |-----------------|---------------------|  
-|[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-schemesettings-uri-settings.md)|Aggiunge un'impostazione dello schema per il nome di schema.|  
+|[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-schemesettings-uri-settings.md)|Aggiunge un'impostazione di schema per un nome di schema.|  
 |[clear](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-schemesettings-uri-settings.md)|Cancella tutte le impostazioni di schema esistenti.|  
-|[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-schemesettings-uri-settings.md)|Rimuove un'impostazione dello schema per il nome di schema.|  
+|[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-schemesettings-uri-settings.md)|Rimuove un'impostazione di schema per un nome di schema.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -51,21 +50,21 @@ Specifica come verrà analizzato un <xref:System.Uri> per schemi specifici.
   
  `http://www.contoso.com/..%2F..%2F/Windows/System32/cmd.exe?/c+dir+c:\`  
   
- Se questo URI viene passato a moduli non gestiscono percentuale correttamente codificati in caratteri, potrebbe verificarsi il seguente comando viene eseguito dal server:  
+ Se viene passato questo URI lungo i moduli non gestiscono percento codificati in caratteri correttamente, potrebbero verificarsi il seguente comando eseguito dal server:  
   
  `c:\Windows\System32\cmd.exe /c dir c:\`  
   
- Per questo motivo, <xref:System.Uri?displayProperty=nameWithType> prima i delimitatori di percorso non consente l'escape di classe e quindi applica la compressione del percorso. Il risultato di passare l'URL dannoso per <xref:System.Uri?displayProperty=nameWithType> costruttore di classe nell'URI seguente:  
+ Per questo motivo, <xref:System.Uri?displayProperty=nameWithType> prima i delimitatori di percorso non consente l'escape di classi e quindi applica la compressione del percorso. Il risultato di passare l'URL dannoso a <xref:System.Uri?displayProperty=nameWithType> costruttore di classe nell'URI seguente:  
   
  `http://www.microsoft.com/Windows/System32/cmd.exe?/c+dir+c:\`  
   
- Per non delimitatori di percorso con codifica percentuale di caratteri di escape annullare utilizzando l'opzione di configurazione schemeSettings per uno schema specifico, è possibile modificare questo comportamento predefinito.  
+ Possibile è possibile modificare questo comportamento predefinito per non i delimitatori del percorso con codifica percentuale ONU-escape utilizzando l'opzione di configurazione schemeSettings per uno schema specifico.  
   
 ## <a name="configuration-files"></a>File di configurazione  
  Questo elemento può essere usato nel file di configurazione dell'applicazione o nel file di configurazione del computer (Machine.config).  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene mostrata una configurazione utilizzata per la <xref:System.Uri> classe per il supporto non escape delimitatori di percorso con codifica percentuale per lo schema http.  
+ Nell'esempio seguente mostra una configurazione usata dal <xref:System.Uri> classe per il supporto non escape delimitatori di percorso codificato in percentuale per lo schema http.  
   
 ```xml  
 <configuration>  
