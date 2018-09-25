@@ -3,11 +3,11 @@ title: Introduzione al routing
 ms.date: 03/30/2017
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
 ms.openlocfilehash: e540e084305aee51d6820cc9ae43f7791d5c07d6
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47058461"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47109472"
 ---
 # <a name="routing-introduction"></a>Introduzione al routing
 Il servizio di routing fornisce un intermediario SOAP di collegamento generico in grado di indirizzare i messaggi in base al relativo contenuto. Il servizio di routing consente di creare logica di routing complessa per l'implementazione di scenari quali l'aggregazione dei servizi, il controllo delle versioni dei servizi, il routing prioritario e il routing multicast. Il servizio di routing offre inoltre funzionalità di gestione degli errori che consentono di configurare elenchi di endpoint di backup ai quali vengono inviati i messaggi se si verifica un errore di invio all'endpoint di destinazione primario.  
