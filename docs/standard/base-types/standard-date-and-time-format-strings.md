@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: abb38e4f084575665954bc514584feed760b0666
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 4ca6109a61fb32cd148e69081da0772277743b6e
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44207642"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47075801"
 ---
 # <a name="standard-date-and-time-format-strings"></a>Stringhe di formato di data e ora standard
 Una stringa di formato data e ora standard usa un singolo identificatore di formato per definire la rappresentazione di testo di un valore di data e ora. Qualsiasi stringa di formato data e ora contenente più di un carattere, inclusi gli spazi, viene interpretata come una stringa di formato data e ora personalizzata. Per altre informazioni, vedere [Stringhe di formato di data e ora personalizzato](../../../docs/standard/base-types/custom-date-and-time-format-strings.md). Una stringa di formato standard o personalizzata può essere usata in due modi:  
@@ -35,7 +35,7 @@ Una stringa di formato data e ora standard usa un singolo identificatore di form
 
 Le stringhe di formato data e ora standard possono essere usate con i valori <xref:System.DateTime> e <xref:System.DateTimeOffset>.  
   
-[!INCLUDE[C# interactive-note](~/includes/csharp-interactive-with-utc-note.md)] 
+[!INCLUDE[C# interactive-note](~/includes/csharp-interactive-with-utc-partial-note.md)] 
 
 <a name="table"></a> Nella tabella seguente vengono descritti gli identificatori di formato di data e ora standard. Se non specificato diversamente, un identificatore di formato di data e ora standard specifico genera una rappresentazione di stringa identica, indipendentemente dal fatto che venga usato con un valore <xref:System.DateTime> o con un valore <xref:System.DateTimeOffset>. Per altre informazioni sull'uso di stringhe di formato di data e ora standard, vedere la sezione [Note](#Notes).  
   
@@ -70,12 +70,12 @@ Le stringhe di formato data e ora standard possono essere usate con i valori <xr
   
 -   È possibile passare un oggetto <xref:System.Globalization.CultureInfo> che rappresenta le impostazioni cultura di cui deve essere usata la formattazione a un metodo con un parametro <xref:System.IFormatProvider>. Nell'esempio seguente viene visualizzata una data usando il formato di data breve delle impostazioni cultura pt-BR.  
   
-     [!code-csharp-interactive[System.DateTime.Conceptual.Formatting#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#2)]
+     [!code-csharp[System.DateTime.Conceptual.Formatting#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#2)]
      [!code-vb[System.DateTime.Conceptual.Formatting#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/vb/StandardFormats1.vb#2)]  
   
 -   È possibile passare un oggetto <xref:System.Globalization.DateTimeFormatInfo> che fornisce informazioni di formattazione a un metodo con un parametro <xref:System.IFormatProvider>. Nell'esempio seguente viene visualizzata una data usndo il formato di data breve da un oggetto <xref:System.Globalization.DateTimeFormatInfo> per le impostazioni cultura hr-HR.  
   
-     [!code-csharp-interactive[System.DateTime.Conceptual.Formatting#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#3)]
+     [!code-csharp[System.DateTime.Conceptual.Formatting#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#3)]
      [!code-vb[System.DateTime.Conceptual.Formatting#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/vb/StandardFormats1.vb#3)]  
   
 > [!NOTE]
@@ -110,7 +110,7 @@ Le stringhe di formato data e ora standard possono essere usate con i valori <xr
   
  Nell'esempio seguente viene usato l'identificatore di formato "d" per visualizzare un valore di data e ora.  
   
- [!code-csharp-interactive[Formatting.DateAndTime.Standard#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#1)]
+ [!code-csharp[Formatting.DateAndTime.Standard#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#1)]
  [!code-vb[Formatting.DateAndTime.Standard#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#1)]  
   
  [Torna alla tabella](#table)  
@@ -129,7 +129,7 @@ Le stringhe di formato data e ora standard possono essere usate con i valori <xr
   
  Nell'esempio seguente viene usato l'identificatore di formato "D" per visualizzare un valore di data e ora.  
   
- [!code-csharp-interactive[Formatting.DateAndTime.Standard#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#2)]
+ [!code-csharp[Formatting.DateAndTime.Standard#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#2)]
  [!code-vb[Formatting.DateAndTime.Standard#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#2)]  
   
  [Torna alla tabella](#table)  
@@ -152,7 +152,7 @@ Le stringhe di formato data e ora standard possono essere usate con i valori <xr
   
  Nell'esempio seguente viene usato l'identificatore di formato "f" per visualizzare un valore di data e ora.  
   
- [!code-csharp-interactive[Formatting.DateAndTime.Standard#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#3)]
+ [!code-csharp[Formatting.DateAndTime.Standard#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#3)]
  [!code-vb[Formatting.DateAndTime.Standard#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#3)]  
   
  [Torna alla tabella](#table)  
@@ -174,7 +174,7 @@ Le stringhe di formato data e ora standard possono essere usate con i valori <xr
   
  Nell'esempio seguente viene usato l'identificatore di formato "F" per visualizzare un valore di data e ora.  
   
- [!code-csharp-interactive[Formatting.DateAndTime.Standard#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#4)]
+ [!code-csharp[Formatting.DateAndTime.Standard#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#4)]
  [!code-vb[Formatting.DateAndTime.Standard#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#4)]  
   
  [Torna alla tabella](#table)  
@@ -196,7 +196,7 @@ Le stringhe di formato data e ora standard possono essere usate con i valori <xr
   
  Nell'esempio seguente viene usato l'identificatore di formato "g" per visualizzare un valore di data e ora.  
   
- [!code-csharp-interactive[Formatting.DateAndTime.Standard#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#5)]
+ [!code-csharp[Formatting.DateAndTime.Standard#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#5)]
  [!code-vb[Formatting.DateAndTime.Standard#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#5)]  
   
  [Torna alla tabella](#table)  
@@ -218,7 +218,7 @@ Le stringhe di formato data e ora standard possono essere usate con i valori <xr
   
  Nell'esempio seguente viene usato l'identificatore di formato "G" per visualizzare un valore di data e ora.  
   
- [!code-csharp-interactive[Formatting.DateAndTime.Standard#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#6)]
+ [!code-csharp[Formatting.DateAndTime.Standard#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#6)]
  [!code-vb[Formatting.DateAndTime.Standard#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#6)]  
   
  [Torna alla tabella](#table)  
@@ -236,7 +236,7 @@ Le stringhe di formato data e ora standard possono essere usate con i valori <xr
   
  Nell'esempio seguente viene usato l'identificatore di formato "m" per visualizzare un valore di data e ora.  
   
- [!code-csharp-interactive[Formatting.DateAndTime.Standard#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#7)]
+ [!code-csharp[Formatting.DateAndTime.Standard#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#7)]
  [!code-vb[Formatting.DateAndTime.Standard#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#7)]  
   
  [Torna alla tabella](#table)  
@@ -266,7 +266,7 @@ Le stringhe di formato data e ora standard possono essere usate con i valori <xr
   
  Nell'esempio seguente viene usato l'identificatore di formato "o" per creare una stringa formattata, quindi viene ripristinato il valore di data e ora originale chiamando un metodo `Parse` di data e ora.  
   
- [!code-csharp-interactive[Formatting.DateandTime.Standard#16](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Roundtrip1.cs#16)]
+ [!code-csharp[Formatting.DateandTime.Standard#16](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Roundtrip1.cs#16)]
  [!code-vb[Formatting.DateandTime.Standard#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/RoundTrip1.vb#16)]  
   
  [Torna alla tabella](#table)  
@@ -322,7 +322,7 @@ Le stringhe di formato data e ora standard possono essere usate con i valori <xr
   
  Nell'esempio seguente viene usato l'identificatore di formato "t" per visualizzare un valore di data e ora.  
   
- [!code-csharp-interactive[Formatting.DateAndTime.Standard#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#11)]
+ [!code-csharp[Formatting.DateAndTime.Standard#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#11)]
  [!code-vb[Formatting.DateAndTime.Standard#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#11)]  
   
  [Torna alla tabella](#table)  
@@ -342,7 +342,7 @@ Le stringhe di formato data e ora standard possono essere usate con i valori <xr
   
  Nell'esempio seguente viene usato l'identificatore di formato "T" per visualizzare un valore di data e ora.  
   
- [!code-csharp-interactive[Formatting.DateAndTime.Standard#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#12)]
+ [!code-csharp[Formatting.DateAndTime.Standard#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#12)]
  [!code-vb[Formatting.DateAndTime.Standard#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#12)]  
   
  [Torna alla tabella](#table)  
@@ -379,7 +379,7 @@ Le stringhe di formato data e ora standard possono essere usate con i valori <xr
   
  Nell'esempio seguente viene usato l'identificatore di formato "U" per visualizzare un valore di data e ora.  
   
- [!code-csharp-interactive[Formatting.DateAndTime.Standard#14](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#14)]
+ [!code-csharp[Formatting.DateAndTime.Standard#14](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#14)]
  [!code-vb[Formatting.DateAndTime.Standard#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#14)]  
   
  [Torna alla tabella](#table)  
@@ -397,7 +397,7 @@ Le stringhe di formato data e ora standard possono essere usate con i valori <xr
   
  Nell'esempio seguente viene usato l'identificatore di formato "Y" per visualizzare un valore di data e ora.  
   
- [!code-csharp-interactive[Formatting.DateAndTime.Standard#15](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#15)]
+ [!code-csharp[Formatting.DateAndTime.Standard#15](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#15)]
  [!code-vb[Formatting.DateAndTime.Standard#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#15)]  
   
  [Torna alla tabella](#table)  
