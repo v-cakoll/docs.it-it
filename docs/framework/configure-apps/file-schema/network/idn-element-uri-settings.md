@@ -1,24 +1,23 @@
 ---
-title: '&lt;IDN&gt; elemento (impostazioni Uri)'
+title: '&lt;IDN&gt; (impostazioni Uri)'
 ms.date: 03/30/2017
 ms.assetid: 16c8e869-1791-4cf5-9244-3d3c738f60ec
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 17f68fbb92797928be911e530232e8638793687f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1537c17cb3c16beeb41cfaa4103e0664e93facc7
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742572"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47170600"
 ---
-# <a name="ltidngt-element-uri-settings"></a>&lt;IDN&gt; elemento (impostazioni Uri)
+# <a name="ltidngt-element-uri-settings"></a>&lt;IDN&gt; (impostazioni Uri)
 Specifica se l'analisi IDN (Internationalized Domain Name) viene applicato a un nome di dominio.  
   
 ## <a name="schema-hierarchy"></a>Gerarchia dello schema  
  [Elemento \<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
   
- [\<URI > elemento (impostazioni Uri)](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)  
+ [\<URI > (impostazioni Uri)](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)  
   
  [\<IDN >](../../../../../docs/framework/configure-apps/file-schema/network/idn-element-uri-settings.md)  
   
@@ -40,7 +39,7 @@ Specifica se l'analisi IDN (Internationalized Domain Name) viene applicato a un 
 |`enabled`|Specifica che se l'analisi IDN (Internationalized Domain Name) viene applicato a un nome di dominio il valore predefinito è none.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- Nessuno  
+ nessuno  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -49,9 +48,9 @@ Specifica se l'analisi IDN (Internationalized Domain Name) viene applicato a un 
 |[URI](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)|Contiene le impostazioni che specificano come .NET Framework gestisce gli indirizzi web espressi tramite uniform resource identifier (URI).|  
   
 ## <a name="remarks"></a>Note  
- Esistente <xref:System.Uri> classe è stata estesa in .NET Framework 3.5. 3.0 SP1 e 2.0 SP1 con supporto per gli identificatori IRI (International Resource) e IDN (Internationalized Domain nomi). Gli utenti non visualizzeranno qualsiasi modifica rispetto al comportamento di .NET Framework 2.0 a meno che non consentono in modo specifico IRI e IDN supportano. Questo garantisce la compatibilità delle applicazioni con le versioni precedenti di .NET Framework.  
+ L'oggetto esistente <xref:System.Uri> classe è stata estesa in .NET Framework 3.5. 3.0 SP1 e 2.0 SP1 con supporto per gli identificatori IRI (International Resource) e IDN (Internationalized Domain nomi). Gli utenti correnti non noteranno cambiamenti rispetto al comportamento di .NET Framework 2.0 a meno che non consentono in modo specifico gli IRI e IDN supportano. Questo garantisce la compatibilità delle applicazioni con le versioni precedenti di .NET Framework.  
   
- Per abilitare il supporto per IRI, sono necessarie le seguenti due modifiche:  
+ Per abilitare il supporto per IRI, sono necessarie le due modifiche seguenti:  
   
 1.  Aggiungere la riga seguente al file Machine. config nella directory di .NET Framework 2.0  
   
@@ -59,21 +58,21 @@ Specifica se l'analisi IDN (Internationalized Domain Name) viene applicato a un 
     <section name="uri" type="System.Configuration.UriSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />  
     ```  
   
-2.  Specificare se l'analisi IDN (Internationalized Domain Name) applicata al nome di dominio e se devono essere applicate le regole di analisi IRI. A questo scopo, è possibile usare il file machine.config o il file app.config.  
+2.  Specificare se si desidera applicare l'analisi IDN (Internationalized Domain Name) al nome di dominio e se devono essere applicati le regole di analisi IRI. A questo scopo, è possibile usare il file machine.config o il file app.config.  
   
- Esistono tre possibili valori per IDN a seconda di server DNS che vengono utilizzati:  
+ Esistono tre possibili valori per IDN a seconda del server DNS che vengono usati:  
   
--   IDN abilitata = All  
+-   IDN abilitato = All  
   
-     Questo valore convertirà i nomi di dominio Unicode equivalenti Punycode (nomi IDN).  
+     Questo valore convertirà qualsiasi nome di dominio Unicode negli equivalenti Punycode (nomi IDN).  
   
--   IDN abilitata = AllExceptIntranet  
+-   IDN abilitato = AllExceptIntranet  
   
-     Questo valore verrà convertito tutti i nomi di dominio Unicode non sulla rete Intranet locale per l'utilizzo degli equivalenti Punycode (nomi IDN). In questo caso, per gestire nomi internazionali sulla rete Intranet locale, i server DNS utilizzati per la rete Intranet devono supportare la risoluzione dei nomi di Unicode.  
+     Questo valore convertirà tutti i nomi di dominio Unicode non nella Intranet locale per l'utilizzo degli equivalenti Punycode (nomi IDN). In questo caso, per gestire nomi internazionali sulla rete Intranet locale, i server DNS utilizzati per la rete Intranet devono supportare la risoluzione dei nomi Unicode.  
   
--   IDN abilitata = nessuno  
+-   IDN abilitato = nessuno  
   
-     Questo valore non convertirà i nomi di dominio Unicode per l'utilizzo di Punycode. Questo è il valore predefinito è coerenza con il comportamento di .NET Framework 2.0.  
+     Questo valore non convertirà qualsiasi nome di dominio Unicode per l'utilizzo di Punycode. Questo è il valore predefinito che è coerenza con il comportamento di .NET Framework 2.0.  
   
  L'abilitazione degli IDN comporta la conversione di tutte le etichette Unicode in un nome di dominio nei rispettivi equivalenti Punycode. I nomi Punycode contengono solo caratteri ASCII e iniziano sempre con il prefisso "xn--". Questo avviene per supportare i server DNS esistenti in Internet, in quanto la maggior parte dei server DNS supporta solo caratteri ASCII. Vedere il documento RFC 3940.  
   
@@ -83,7 +82,7 @@ Specifica se l'analisi IDN (Internationalized Domain Name) viene applicato a un 
 ## <a name="example"></a>Esempio  
   
 ### <a name="description"></a>Descrizione  
- Nell'esempio seguente viene mostrata una configurazione utilizzata per la <xref:System.Uri> classe per supportare l'analisi IRI e i nomi IDN.  
+ Nell'esempio seguente mostra una configurazione usata dal <xref:System.Uri> classe per supportare l'analisi IRI e IDN nomi.  
   
 ### <a name="code"></a>Codice  
   

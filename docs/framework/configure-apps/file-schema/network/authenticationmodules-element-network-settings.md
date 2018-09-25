@@ -1,5 +1,5 @@
 ---
-title: '&lt;authenticationModules&gt; elemento (impostazioni di rete)'
+title: '&lt;authenticationModules&gt; (impostazioni di rete)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#authenticationModules
@@ -10,16 +10,15 @@ helpviewer_keywords:
 ms.assetid: 10fcfaad-82ef-4692-871a-0aec9dfbe75e
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 6d7f811a5746fa07264a192efdc4c5c02323e1f4
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 394a686fe07036d6c3ac2bc51fb3503e1ee4a9e6
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743329"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47170808"
 ---
-# <a name="ltauthenticationmodulesgt-element-network-settings"></a>&lt;authenticationModules&gt; elemento (impostazioni di rete)
-Specifica i moduli utilizzati per autenticare le richieste di rete.  
+# <a name="ltauthenticationmodulesgt-element-network-settings"></a>&lt;authenticationModules&gt; (impostazioni di rete)
+Specifica i moduli usati per autenticare le richieste di rete.  
   
  \<configuration>  
 \<system.net>  
@@ -53,7 +52,7 @@ Specifica i moduli utilizzati per autenticare le richieste di rete.
 |[System.NET](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|Contiene le impostazioni di rete che specificano la modalità di connessione alla rete di .NET Framework.|  
   
 ## <a name="remarks"></a>Note  
- Il `authenticationModule` elemento specifica i moduli di autenticazione che dirigono il processo di autenticazione con un server. Un modulo di autenticazione deve implementare il <xref:System.Net.IAuthenticationModule> interfaccia.  
+ Il `authenticationModule` elemento specifica i moduli di autenticazione che eseguono il processo di autenticazione con un server. Un modulo di autenticazione deve implementare il <xref:System.Net.IAuthenticationModule> interfaccia.  
   
 ## <a name="configuration-files"></a>File di configurazione  
  Questo elemento può essere usato nel file di configurazione dell'applicazione o nel file di configurazione del computer (Machine.config).  

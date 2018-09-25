@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8eb34f3b-427e-4288-a7ff-c73f489deb45
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 71769efa1233fc8a693219dc02ae56ea39c164e7
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c5186aa94993ba551252db6fef55853b5b554789
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743797"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47170821"
 ---
 # <a name="linkedconfiguration-element"></a>\<linkedConfiguration > elemento
 
@@ -49,32 +48,32 @@ Specifica un file di configurazione da includere.
 
 ## <a name="child-elements"></a>Elementi figlio
 
-Nessuno
+nessuno
 
 ## <a name="remarks"></a>Note
 
-Il  **\<linkedConfiguration >** elemento semplifica la gestione degli assembly del componente. Se una o più applicazioni utilizzano un assembly dotato di un file di configurazione che si trova in un percorso noto, è possono utilizzare i file di configurazione delle applicazioni che utilizzano l'assembly di  **\<linkedConfiguration >** elemento da includere il file di configurazione di assembly, anziché di includere le informazioni di configurazione direttamente. Quando viene gestita l'assembly del componente, l'aggiornamento del file di configurazione comuni fornisce informazioni di configurazione aggiornate per tutte le applicazioni che utilizzano l'assembly.
+Il  **\<linkedConfiguration >** elemento semplifica la gestione degli assembly del componente. Se uno o più applicazioni usano un assembly con un file di configurazione che si trova in un percorso noto, i file di configurazione delle applicazioni che usano l'assembly è possono usare la  **\<linkedConfiguration >** elemento da includere il file di configurazione di assembly, anziché includere le informazioni di configurazione direttamente. Quando viene gestita l'assembly del componente, l'aggiornamento del file di configurazione comune fornisce informazioni di configurazione aggiornate per tutte le applicazioni che usano l'assembly.
 
 > [!NOTE]
-> Il  **\<linkedConfiguration >** elemento non è supportato per le applicazioni con manifesti side-by-side di Windows.
+> Il  **\<linkedConfiguration >** elemento non è supportato per le applicazioni con i manifesti side-by-side di Windows.
 
 Le regole seguenti determinano l'uso di file di configurazione collegati:
 
-- Le impostazioni nel file di configurazione inclusi solo influisce sui criteri di associazione del caricatore e vengono utilizzate solo dal caricatore. I file di configurazione inclusi possono avere impostazioni diverse da quelle di criteri di associazione, ma tali impostazioni non hanno alcun effetto.
+- Le impostazioni nel file di configurazione inclusi solo influisce sui criteri di associazione del caricatore e vengono usate solo dal caricatore. I file di configurazione inclusi possono avere impostazioni diverse da quelle di criteri di associazione, ma tali impostazioni non hanno alcun effetto.
 
-- L'unico formato supportato per il `href` attributo `file://`. File locali e UNC file sono supportati.
+- L'unico formato supportato per il `href` attributo è `file://`. File locali e UNC file sono supportati.
 
-- È presente alcun vincolo al numero di configurazioni collegate per ogni file di configurazione.
+- È presente alcun vincolo per il numero di configurazioni collegate per ogni file di configurazione.
 
-- Tutti i file di configurazione collegati vengono uniti per formare un file, simile al comportamento del `#include` direttiva in C/C++.
+- Tutti i file di configurazione collegati vengono uniti per formare un file, analogamente al comportamento del `#include` direttiva in C/C++.
 
-- Il  **\<linkedConfiguration >** l'elemento è consentito solo nel file di configurazione dell'applicazione; viene ignorata *Machine. config*.
+- Il  **\<linkedConfiguration >** l'elemento è consentito solo nei file di configurazione dell'applicazione; viene ignorata nelle *Machine. config*.
 
-- I riferimenti circolari vengono rilevati e terminati. Ovvero, se il  **\<linkedConfiguration >** elementi di una serie di file di configurazione formano un ciclo, il ciclo viene rilevato e arrestato.
+- I riferimenti circolari vengono rilevati e terminati. Vale a dire, se il  **\<linkedConfiguration >** elementi di una serie di file di configurazione formano un ciclo, il ciclo viene rilevato e arrestato.
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come includere i file di configurazione dal disco rigido locale:
+Nell'esempio seguente viene illustrato come includere il file di configurazione dal disco rigido locale:
 
 ```xml
 <configuration>
