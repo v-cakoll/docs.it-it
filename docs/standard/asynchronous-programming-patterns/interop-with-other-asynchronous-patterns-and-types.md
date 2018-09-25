@@ -15,11 +15,11 @@ ms.assetid: f120a5d9-933b-4d1d-acb6-f034a57c3749
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 05b53016712f75e45636979d77bfd27116ce8e14
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45638756"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47027713"
 ---
 # <a name="interop-with-other-asynchronous-patterns-and-types"></a>Interoperabilità con altri tipi e modelli asincroni
 In .NET Framework 1.0 è stato introdotto il modello <xref:System.IAsyncResult> , altrimenti noto come [Asynchronous Programming Model (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md)o modello `Begin/End` .  In .NET Framework 2.0 è stato aggiunto [Event-based Asynchronous Pattern (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).  A partire da .NET Framework 4, [Task-based Asynchronous Pattern (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) sostituisce sia APM che EAP, ma consente di compilare facilmente le routine di migrazione dai modelli precedenti.  

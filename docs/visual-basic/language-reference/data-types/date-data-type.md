@@ -16,11 +16,11 @@ helpviewer_keywords:
 - '# specifier for Date literals'
 ms.assetid: d9edf5b0-e85e-438b-a1cf-1f321e7c831b
 ms.openlocfilehash: 32bd0912b0bae3340cffed010fc67431d0efb376
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46009844"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47027752"
 ---
 # <a name="date-data-type-visual-basic"></a>Tipo di dati Date (Visual Basic)
 Contiene valori a 64 bit (8 byte) conformi alle specifiche IEEE che rappresentano le date comprese tra l'1 gennaio dell'anno 0001 e il 31 dicembre dell'anno 9999 e le ore comprese tra le 00.00.00 (mezzanotte) e le 23.59.59.9999999. Ogni incremento rappresenta 100 nanosecondi di tempo trascorso dall'inizio del 1° gennaio dell'anno 1 del calendario gregoriano. Il valore massimo rappresenta 100 nanosecondi prima dell'inizio del 1° gennaio dell'anno 10000.  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: eedf2fbd-f407-4f62-bb1a-c00eb001b1dd
 ms.openlocfilehash: 2a52bf4a2a4999257377c7303cb6d362136d73a5
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46000882"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46710960"
 ---
 # <a name="method-based-query-syntax-examples-element-operators-linq-to-dataset"></a>Esempi di sintassi di query basate sul metodo: operatori di elemento (LINQ to DataSet)
 Negli esempi di questo argomento viene illustrato come usare i metodi <xref:System.Linq.Enumerable.First%2A> e <xref:System.Linq.Enumerable.ElementAt%2A> per ottenere elementi di <xref:System.Data.DataRow> da <xref:System.Data.DataSet> usando la sintassi delle espressioni di query.  
