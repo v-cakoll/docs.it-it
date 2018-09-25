@@ -7,13 +7,12 @@ helpviewer_keywords:
 ms.assetid: 3770ea8a-2655-4add-9c59-fe0610ad5084
 author: Xansky
 ms.author: mhopkins
-manager: markl
-ms.openlocfilehash: cbfb640a068a2c1178d321480ee3a112db07b6ac
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 68fa7753be76b0681c40e540e86b11c89e7a8ca1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519990"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47157025"
 ---
 # <a name="ui-automation-support-for-standard-controls"></a>Supporto per automazione interfaccia utente dei controlli standard
 > [!NOTE]
@@ -88,12 +87,12 @@ ms.locfileid: "43519990"
 |----------------|------------------|  
 |SysAnimate32|Image|  
 |SysPager|Spinner|  
-|SysDateTimePick32|Custom (Personalizzati)|  
+|SysDateTimePick32|Personalizzato|  
 |SysMonthCal32|Calendar|  
 |MS_WINNOTE|ToolTip|  
 |VBBubble|Tooltip|  
 |ScrollBar (se usato come controllo autonomo)|Slider|  
-|SuperGrid|Custom (Personalizzati)|  
+|SuperGrid|Personalizzato|  
   
 <a name="Windows_Forms_Controls"></a>   
 ## <a name="windows-forms-controls"></a>Controlli per Windows Form  

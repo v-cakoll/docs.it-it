@@ -10,16 +10,15 @@ helpviewer_keywords:
 ms.assetid: 7f0c2246-c070-4748-b96a-2f66a296c539
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: db39d7de3566647b5171b71940c78a9a0ab6f5f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4ec2ba884f0f60182dd59bb6a4491e223f43ce1a
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350222"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47073541"
 ---
 # <a name="ltoidmapgt-element"></a>&lt;oidMap&gt; elemento
-Contiene i mapping di ASN. 1 oggetto (OID) identificatore alle classi.  
+Contiene mapping di identificatore (OID) ASN.1 oggetto alle classi.  
   
  \<configuration>  
 \<mscorlib >  
@@ -43,7 +42,7 @@ Contiene i mapping di ASN. 1 oggetto (OID) identificatore alle classi.
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<oidEntry >](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidentry-element.md)|Esegue il mapping a un nome descrittivo di un OID ASN. 1.|  
+|[\<oidEntry >](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidentry-element.md)|Esegue il mapping di OID ASN.1 a un nome descrittivo.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -54,7 +53,7 @@ Contiene i mapping di ASN. 1 oggetto (OID) identificatore alle classi.
 |`mscorlib`|Contiene il `cryptographySettings` elemento.|  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare il  **\<oidMap >** per contenere un mapping di un identificatore di oggetto per l'algoritmo hash RIPEMD-160 a un'implementazione dell'algoritmo hash.  
+ Nell'esempio seguente viene illustrato come utilizzare il  **\<oidMap >** elemento per contenere il mapping di un OID per l'algoritmo hash RIPEMD-160 a un'implementazione dell'algoritmo di hash.  
   
 ```xml  
 <configuration>  

@@ -10,13 +10,12 @@ helpviewer_keywords:
 ms.assetid: a71f605b-c7d9-4501-a5c3-abcbb964a43f
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: cb4af08095c14c0c748a79f53104d8454d3dcd47
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 69d6deafb6aad88f5d379c7e8d4ac707e4c51815
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754158"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47088685"
 ---
 # <a name="ltperformancecountersgt-element"></a>&lt;performanceCounters&gt; elemento
 Specifica le dimensioni della memoria globale condivisa dai contatori delle prestazioni.  
@@ -51,11 +50,11 @@ Specifica le dimensioni della memoria globale condivisa dai contatori delle pres
 |`system.diagnostics`|Consente di specificare l'elemento radice per la sezione di configurazione ASP.NET.|  
   
 ## <a name="remarks"></a>Note  
- I contatori delle prestazioni di usare un file mappato alla memoria o memoria condivisa, per pubblicare i dati sulle prestazioni.  La dimensione della memoria condivisa determina il numero di istanze può essere utilizzato in una sola volta.  Esistono due tipi di memoria condivisa: memoria condivisa globale e della memoria condivisa separata.  La memoria condivisa globale viene utilizzata da tutte le categorie di contatori delle prestazioni installate con le versioni di .NET Framework 1.0 o 1.1.  Categorie di contatori delle prestazioni installate con .NET Framework versione 2.0 utilizzano memoria condivisa separata, con ogni categoria di contatori delle prestazioni disponga della propria memoria.  
+ I contatori delle prestazioni utilizzano un file mappato alla memoria o della memoria condivisa, per pubblicare i dati sulle prestazioni.  Le dimensioni della memoria condivisa determinano il numero di istanze può essere utilizzato in una sola volta.  Esistono due tipi di memoria condivisa: memoria condivisa globale e della memoria condivisa separata.  La memoria condivisa globale viene usata da tutte le categorie di contatori delle prestazioni installate con le versioni di .NET Framework 1.0 o 1.1.  Categorie di contatori delle prestazioni installate con .NET Framework versione 2.0 usano memoria condivisa separata, con ogni categoria di contatori delle prestazioni disponga della propria memoria.  
   
- La dimensione della memoria condivisa globale può essere impostata solo con un file di configurazione.  La dimensione predefinita è 524.288, la dimensione massima è 33.554.432 byte e la dimensione minima è corrispondono a 32.768 byte.  Poiché la memoria condivisa globale è condiviso da tutti i processi e le categorie, l'autore del primo specifica le dimensioni.  Se si definiscono le dimensioni nel file di configurazione dell'applicazione, tale dimensione viene utilizzata solo se l'applicazione è la prima applicazione che fa sì che i contatori delle prestazioni per l'esecuzione.  Pertanto la posizione corretta per specificare il `filemappingsize` valore rappresenta il file Machine. config.  Impossibile rilasciare memoria nella memoria globale condivisa da singoli contatori delle prestazioni, dopo un certo periodo esaurimento di memoria condivisa globale se viene creato un numero elevato di istanze di contatore delle prestazioni con nomi diversi.  
+ Le dimensioni della memoria condivisa globale possono essere impostate solo con un file di configurazione.  Il valore predefinito è 524.288, la dimensione massima è 33.554.432 byte e la dimensione minima è 32.768 byte.  Poiché la memoria condivisa globale è condiviso da tutti i processi e le categorie, l'autore prima specifica le dimensioni.  Se si definiscono le dimensioni nel file di configurazione dell'applicazione, che la dimensione viene usata solo se l'applicazione è la prima applicazione che fa sì che i contatori delle prestazioni per l'esecuzione.  Pertanto la posizione corretta per specificare il `filemappingsize` valore è il file Machine. config.  Impossibile rilasciare memoria nella memoria globale condivisa dai contatori delle prestazioni singoli, pertanto, alla fine viene esaurita la memoria globale condivisa se viene creato un numero elevato di istanze del contatore delle prestazioni con nomi diversi.  
   
- Per le dimensioni della memoria condivisa separata, il valore di DWORD FileMappingSize nel Registro di sistema chiave HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\\*\<nome categoria >* \Performance viene fatto riferimento in primo luogo, seguito dal valore specificato per la memoria condivisa globale nel file di configurazione. Se il valore di FileMappingSize non esiste, quindi le dimensioni di memoria condivisa separata sono impostata su un quarto (1/4) dell'impostazione globale nel file di configurazione.  
+ Per le dimensioni della memoria condivisa separata, il valore della chiave DWORD FileMappingSize nel Registro di sistema chiave HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\\*\<il nome di categoria >* \Performance viene fatto riferimento in primo luogo, seguito dal valore specificato per la memoria condivisa globale nel file di configurazione. Se il valore FileMappingSize non esiste, quindi le dimensioni di memoria condivisa separata sono impostata su un quarto (1 e 4) l'impostazione globale nel file di configurazione.  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Diagnostics.PerformanceCounter>  

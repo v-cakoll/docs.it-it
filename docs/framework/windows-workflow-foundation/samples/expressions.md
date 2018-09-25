@@ -3,11 +3,11 @@ title: Expressions2
 ms.date: 03/30/2017
 ms.assetid: 43a85905-77b5-4893-bb38-1cb9b293d69d
 ms.openlocfilehash: e852b62e6d0b6b4b3ddc19b197902de5325310a1
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46711363"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47156416"
 ---
 # <a name="expressions"></a>Espressioni
 In questo esempio viene illustrato come usare espressioni di base in un flusso di lavoro. È costituito da un flusso di lavoro che calcola statistiche del salario di base per due dipendenti di una società fittizia. Due classi, `Employee` e `SalaryStats`, sono definite in Employee.cs e SalaryStats.cs. Queste classi vengono usate in un flusso di lavoro che illustra come eseguire calcoli aritmetici semplici e operazioni di stringa su proprietà di variabili di tipi complessi.  

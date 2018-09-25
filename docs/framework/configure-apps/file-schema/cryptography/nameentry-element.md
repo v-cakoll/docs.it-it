@@ -10,13 +10,12 @@ helpviewer_keywords:
 ms.assetid: 7d7535e9-4b4a-4b8c-82e2-e40dff5a7821
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 1bffb72e7c68d10e2c0edd5ec3cb9bcff10cbc0a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9f8176ca3ee2340100978aef044140dafdeb179b
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743053"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47082370"
 ---
 # <a name="ltnameentrygt-element"></a>&lt;nameEntry&gt; elemento
 Esegue il mapping di un nome di classe a un nome di algoritmo descrittivo, in modo da poter associare più nomi descrittivi a una classe.  
@@ -41,7 +40,7 @@ Esegue il mapping di un nome di classe a un nome di algoritmo descrittivo, in mo
 |Attributo|Descrizione|  
 |---------------|-----------------|  
 |**name**|Attributo obbligatorio.<br /><br /> Specifica il nome descrittivo dell'algoritmo che implementa la classe di crittografia.|  
-|**class**|Attributo obbligatorio.<br /><br /> Specifica il valore per il **nome** attributo la [ \<cryptoClass >](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md) elemento.|  
+|**class**|Attributo obbligatorio.<br /><br /> Specifica il valore per il **name** attributo il [ \<cryptoClass >](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md) elemento.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
@@ -54,10 +53,10 @@ Esegue il mapping di un nome di classe a un nome di algoritmo descrittivo, in mo
 |`system.web`|Consente di specificare l'elemento radice per la sezione di configurazione ASP.NET.|  
   
 ## <a name="remarks"></a>Note  
- Il **nome** attributo può essere il nome di una delle classi astratte, vedere il <xref:System.Security.Cryptography> dello spazio dei nomi. Quando si chiama il **crea** su una classe astratta di crittografia, il nome della classe astratta viene passato per il <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A> metodo. **CreateFromName** restituisce un'istanza del tipo indicato per il **classe** attributo. Se il **nome** attributo è un nome breve, ad esempio RSA, è possibile utilizzare tale nome quando si chiama il **CreateFromName** metodo.  
+ Il **name** attributo può essere il nome di una delle classi astratte trovate nel <xref:System.Security.Cryptography> dello spazio dei nomi. Quando si chiama il **Create** metodo su una classe astratta di crittografia, il nome di classe astratta viene passato per il <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A> (metodo). **CreateFromName** restituisce un'istanza del tipo indicato per il **classe** attributo. Se il **name** attributo è un nome breve, ad esempio RSA, è possibile usare questo nome quando si chiama il **CreateFromName** (metodo).  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare il  **\<nameEntry >** elemento a cui fare riferimento a una classe di crittografia e configurare il runtime. È quindi possibile passare la stringa "RSA" per il <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> metodo e utilizzare il <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> per restituire un `MyCryptoRSAClass` oggetto.  
+ Nell'esempio seguente viene illustrato come utilizzare il  **\<nameEntry >** elemento a cui fare riferimento a una classe di crittografia e configurare il runtime. È quindi possibile passare la stringa "RSA" per il <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> metodo e usare il <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> metodo restituisca un `MyCryptoRSAClass` oggetto.  
   
 ```xml  
 <configuration>  

@@ -8,13 +8,12 @@ helpviewer_keywords:
 ms.assetid: 9050dde5-6469-4c83-abb7-f861c24ff985
 author: Xansky
 ms.author: mhopkins
-manager: markl
-ms.openlocfilehash: f565ef28d0b4d872f7878999c19ef7756e4f7c93
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f8af2acda229fe0e357ec0ee1b4c0f3b850a477a
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43503995"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47090149"
 ---
 # <a name="ui-automation-support-for-the-table-control-type"></a>Supporto per automazione interfaccia utente del tipo di controllo Table
 > [!NOTE]
@@ -32,7 +31,7 @@ ms.locfileid: "43503995"
   
 |Visualizzazione controlli|Visualizzazione contenuto|  
 |------------------|------------------|  
-|Table<br /><br /> -Header (0 o 1)<br />-Text (0 o 1)<br />-Vari controlli (0 o più)|Table<br /><br /> -Text (0 o più)<br />-Vari controlli (0 o più)|  
+|Tabella<br /><br /> -Header (0 o 1)<br />-Text (0 o 1)<br />-Vari controlli (0 o più)|Tabella<br /><br /> -Text (0 o più)<br />-Vari controlli (0 o più)|  
   
  Se un controllo tabella include intestazioni di riga o colonna, queste informazioni devono essere esposte nella visualizzazione controlli dell'albero di automazione interfaccia utente. La visualizzazione contenuto non deve esporre queste informazioni perché è possibile accedervi usando la proprietà TablePattern.  
   
@@ -48,7 +47,7 @@ ms.locfileid: "43503995"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|Vedere le note.|Se il controllo può ricevere lo stato attivo, deve supportare questa proprietà.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|Vedere le note.|Il controllo tabella in genere ricava il proprio nome da un'etichetta di testo statico. Se non è presente alcuna etichetta di testo statico, è necessario assegnare una proprietà Name che deve essere sempre disponibile per descrivere lo scopo della tabella.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|Vedere le note.|Se è presente un'etichetta di testo statico, questa proprietà deve esporre un riferimento all'elemento di automazione del controllo.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Table|Questo valore è uguale per tutti i framework dell'interfaccia utente.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Tabella|Questo valore è uguale per tutti i framework dell'interfaccia utente.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"table"|Stringa localizzata corrispondente al tipo di controllo Table.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.HelpTextProperty>|Vedere le note.|Altre informazioni sullo scopo della tabella devono essere esposte tramite questa proprietà se non viene illustrata in modo sufficiente accedendo alla proprietà NameProperty.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|True|Il controllo tabella deve essere sempre di tipo contenuto.|  

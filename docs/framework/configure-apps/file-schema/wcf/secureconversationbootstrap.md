@@ -3,13 +3,12 @@ title: '&lt;secureConversationBootstrap&gt;'
 ms.date: 03/30/2017
 ms.assetid: 66b46f95-fa2d-4b5b-b6ce-0572ab0cdd50
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: f7eab333899f5fc379db8fb5683ea3d29d04943c
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 703e89342cbfd4a957c10419d6583e85ec6f6d2a
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32751597"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47079844"
 ---
 # <a name="ltsecureconversationbootstrapgt"></a>&lt;secureConversationBootstrap&gt;
 Specifica i valori predefiniti usati per iniziare un servizio di conversazione protetta.  
@@ -54,8 +53,8 @@ messageProtectionOrder="SignBeforeEncrypt/SignBeforeEncryptAndEncryptSignature/E
 |`authenticationMode`|Specifica la modalità di autenticazione SOAP usata tra l'iniziatore e il risponditore.<br /><br /> L'impostazione predefinita è sspiNegotiated.<br /><br /> L'attributo è di tipo <xref:System.ServiceModel.Configuration.AuthenticationMode>.|  
 |`defaultAlgorithmSuite`|La suite di algoritmi di sicurezza definisce vari algoritmi, fra cui gli algoritmi Canonicalization, Digest, KeyWrap, Signature, Encryption e KeyDerivation. Ciascuna delle suite di algoritmi di sicurezza definisce valori per questi parametri diversi. La sicurezza basata su messaggi è ottenuta usando questi algoritmi.<br /><br /> Questo attributo viene usato con una piattaforma differente che usa un set di algoritmi diverso da quello predefinito. Quando si apportano modifiche a questa impostazione, è necessario essere consapevoli dei punti di forza e dei punti di debolezza degli algoritmi pertinenti. L'attributo è di tipo <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>. Il valore predefinito è `Basic256`.|  
 |`includeTimestamp`|Valore booleano che specifica se in ogni messaggio vengono inclusi gli indicatori di data e ora. Il valore predefinito è `true`.|  
-|`keyEntropyMode`|Specifica la modalità di calcolo delle chiavi per la sicurezza dei messaggi. Le chiavi possono essere basate solo sul materiale della chiave client, solo sul materiale della chiave del servizio o su una combinazione di entrambi. I valori validi sono:<br /><br /> -ClientEntropy: La chiave della sessione è basata sul materiale della chiave fornito client.<br />-ServerEntropy: La chiave della sessione è basata sul servizio fornito il materiale della chiave.<br />-Combineentropy: La chiave della sessione è basata sul client e servizio fornito il materiale.<br /><br /> L'impostazione predefinita è CombinedEntropy.<br /><br /> L'attributo è di tipo <xref:System.ServiceModel.Security.SecurityKeyEntropyMode>.|  
-|`messageProtectionOrder`|Imposta l'ordine nel quale gli algoritmi di sicurezza a livello di messaggio vengono applicati al messaggio. Di seguito vengono elencati i valori validi:<br /><br /> -SignBeforeEncrypt: Prima firma, quindi crittografia.<br />-SignBeforeEncryptAndEncryptSignature: Firma, crittografia e crittografia firma.<br />-EncryptBeforeSign: Prima crittografia, quindi eseguire l'accesso.<br /><br /> SignBeforeEncryptAndEncryptSignature è il valore predefinito se si usano i certificati reciproci con WS-Security 1.1.  SignBeforeEncrypt è l'impostazione predefinita con WS-Security 1.0.<br /><br /> L'attributo è di tipo <xref:System.ServiceModel.Security.MessageProtectionOrder>.|  
+|`keyEntropyMode`|Specifica la modalità di calcolo delle chiavi per la sicurezza dei messaggi. Le chiavi possono essere basate solo sul materiale della chiave client, solo sul materiale della chiave del servizio o su una combinazione di entrambi. I valori validi sono:<br /><br /> -ClientEntropy: La chiave della sessione è basata sul materiale della chiave fornito client.<br />-ServerEntropy: La chiave della sessione è basata sul servizio fornito il materiale della chiave.<br />-Combineentropy: La chiave della sessione è basata sul client e servizio fornito materiale della chiave.<br /><br /> L'impostazione predefinita è CombinedEntropy.<br /><br /> L'attributo è di tipo <xref:System.ServiceModel.Security.SecurityKeyEntropyMode>.|  
+|`messageProtectionOrder`|Imposta l'ordine nel quale gli algoritmi di sicurezza a livello di messaggio vengono applicati al messaggio. Di seguito vengono elencati i valori validi:<br /><br /> -SignBeforeEncrypt: Prima firma, quindi crittografia.<br />-SignBeforeEncryptAndEncryptSignature: Firma, crittografia e crittografia firma.<br />-EncryptBeforeSign: Prima crittografia, quindi accedere.<br /><br /> SignBeforeEncryptAndEncryptSignature è il valore predefinito se si usano i certificati reciproci con WS-Security 1.1.  SignBeforeEncrypt è l'impostazione predefinita con WS-Security 1.0.<br /><br /> L'attributo è di tipo <xref:System.ServiceModel.Security.MessageProtectionOrder>.|  
 |`messageSecurityVersion`|Imposta la versione di WS-Security da usare. Di seguito vengono elencati i valori validi:<br /><br /> -WSSecurityJan2004<br />-WSSecurityXXX2005<br /><br /> L'impostazione predefinita è WSSecurityXXX2005. L'attributo è di tipo <xref:System.ServiceModel.MessageSecurityVersion>.|  
 |`requireDerivedKeys`|Valore booleano che specifica se le chiavi possono essere derivate dalle chiavi di prova originali. Il valore predefinito è `true`.|  
 |`requireSecurityContextCancellation`|Valore booleano che specifica se il contesto di sicurezza deve essere annullato e terminato nel caso in cui non sia più richiesto. Il valore predefinito è `true`.|  

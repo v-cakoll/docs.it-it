@@ -3,11 +3,11 @@ title: 'Espressioni lambda: parola chiave fun (F#)'
 description: "Informazioni su come usare la parola chiave 'divertente' di F # per definire un'espressione lambda, che è una funzione anonima."
 ms.date: 05/16/2016
 ms.openlocfilehash: a37757f6b7328cd348bbf13f058a6dbc881769cf
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46580746"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47080181"
 ---
 # <a name="lambda-expressions-the-fun-keyword-f"></a>Espressioni lambda: parola chiave fun (F#)
 

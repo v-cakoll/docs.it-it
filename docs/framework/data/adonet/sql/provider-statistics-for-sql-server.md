@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 429c9d09-92ac-46ec-829a-fbff0a9575a2
 ms.openlocfilehash: d52c6bfdadf0a53ac4c5f62c37f1056c6702a82c
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46706424"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47080091"
 ---
 # <a name="provider-statistics-for-sql-server"></a>Statistiche di provider per SQL Server
 A partire da .NET Framework versione 2.0, il provider di dati .NET Framework per SQL Server supporta le statistiche in fase di esecuzione. È necessario abilitare le statistiche impostando la proprietà <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> dell'oggetto <xref:System.Data.SqlClient.SqlConnection> su `True` dopo aver creato un oggetto di connessione valido. Dopo aver abilitato le statistiche, è possibile visualizzarle come "snapshot" recuperando un riferimento <xref:System.Collections.IDictionary> mediante il metodo <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> dell'oggetto <xref:System.Data.SqlClient.SqlConnection>. È possibile enumerare l'elenco come un set di voci di dizionario delle coppie nome/valore. Queste coppie nome/valore non seguono alcun ordine. È possibile chiamare il metodo <xref:System.Data.SqlClient.SqlConnection.ResetStatistics%2A> dell'oggetto <xref:System.Data.SqlClient.SqlConnection> per azzerare i contatori in qualsiasi momento. Se non è stata abilitata la raccolta delle statistiche, non viene generata alcuna eccezione. Inoltre, se il metodo <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> viene chiamato senza la proprietà <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A>, i valori recuperati sono i valori iniziali per ciascuna voce. Se vengono abilitate le statistiche, eseguire l'applicazione, quindi disabilitare le statistiche. I valori recuperati rifletteranno i valori raccolti fino al momento in cui le statistiche sono state disabilitate. Tutti i valori delle statistiche vengono raccolti in base alla connessione.  

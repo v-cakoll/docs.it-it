@@ -1,5 +1,5 @@
 ---
-title: '&lt;rimuovere&gt; elemento per connectionManagement (impostazioni di rete)'
+title: '&lt;rimuovere&gt; (elemento) per connectionManagement (impostazioni di rete)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/connectionManagement/remove
@@ -12,15 +12,14 @@ helpviewer_keywords:
 ms.assetid: 94b81775-5a22-4975-8c47-8620c40c3f35
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 8d503e06139fc6ce14f4d2c50c46e4bcfeb1b860
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: d249cc412a1638e62b57b4976adc23fdf8f36e80
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754480"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47085537"
 ---
-# <a name="ltremovegt-element-for-connectionmanagement-network-settings"></a>&lt;rimuovere&gt; elemento per connectionManagement (impostazioni di rete)
+# <a name="ltremovegt-element-for-connectionmanagement-network-settings"></a>&lt;rimuovere&gt; (elemento) per connectionManagement (impostazioni di rete)
 Rimuove un indirizzo IP o nome DNS dall'elenco di gestione connessione.  
   
  \<configuration>  
@@ -57,13 +56,13 @@ Rimuove un indirizzo IP o nome DNS dall'elenco di gestione connessione.
 ## <a name="remarks"></a>Note  
  Il `remove` elemento rimuove la voce di elenco di gestione connessione per il server specificato.  
   
- Il valore di `address` attributo deve essere un nome host o indirizzo IP valido.  
+ Il valore della `address` attributo deve essere un nome host o indirizzo IP valido.  
   
 ## <a name="configuration-files"></a>File di configurazione  
  Questo elemento può essere usato nel file di configurazione dell'applicazione o nel file di configurazione del computer (Machine.config).  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente rimuove tutte le voci di elenco di gestione connessione per il server www.adventure-works.com e viene configurata un'applicazione può utilizzare quattro connessioni al server www.contoso.com e due connessioni a tutti gli altri server.  
+ Nell'esempio seguente rimuove tutte le voci di elenco di gestione connessione per www.adventure-works.com il server e quindi configura un'applicazione per usare quattro connessioni al server www.contoso.com e due connessioni a tutti gli altri server.  
   
 ```xml  
 <configuration>  

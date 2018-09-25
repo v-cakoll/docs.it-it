@@ -1,5 +1,5 @@
 ---
-title: '&lt;namedCaches&gt; elemento (impostazioni della Cache)'
+title: '&lt;namedCaches&gt; (impostazioni Cache)'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - namedCaches element
@@ -8,16 +8,15 @@ helpviewer_keywords:
 ms.assetid: 6bd4fbc5-55a6-4dc4-998b-cdcc7e023330
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: fac50aedbb11eba40482fab71c912f587d85f855
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a74dfaf883ea23514c6bc4641d9d576f5baf10b4
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744655"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47071709"
 ---
-# <a name="ltnamedcachesgt-element-cache-settings"></a>&lt;namedCaches&gt; elemento (impostazioni della Cache)
-Specifica una raccolta di impostazioni di configurazione per l'oggetto denominato <xref:System.Runtime.Caching.MemoryCache> istanze. Il <xref:System.Runtime.Caching.Configuration.MemoryCacheSection.NamedCaches%2A> proprietà fa riferimento alla raccolta di impostazioni di configurazione da uno o più `namedCaches` elementi del file di configurazione.  
+# <a name="ltnamedcachesgt-element-cache-settings"></a>&lt;namedCaches&gt; (impostazioni Cache)
+Specifica una raccolta di impostazioni di configurazione per l'oggetto denominato <xref:System.Runtime.Caching.MemoryCache> istanze. Il <xref:System.Runtime.Caching.Configuration.MemoryCacheSection.NamedCaches%2A> proprietà fa riferimento alla raccolta di impostazioni di configurazione da uno o più `namedCaches` gli elementi del file di configurazione.  
   
  \<configuration>  
 \< Caching >  
@@ -42,9 +41,9 @@ Specifica una raccolta di impostazioni di configurazione per l'oggetto denominat
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|`cacheMemoryLimitMegabytes`|Valore intero che specifica la dimensione massima consentita, in megabyte, che un'istanza di un <xref:System.Runtime.Caching.MemoryCache> può raggiungere. Il valore predefinito è 0, il che significa che l'euristica di ridimensionamento automatico della <xref:System.Runtime.Caching.MemoryCache> classe vengono utilizzati per impostazione predefinita.|  
+|`cacheMemoryLimitMegabytes`|Valore intero che specifica la dimensione massima consentita, in megabyte, che un'istanza di un <xref:System.Runtime.Caching.MemoryCache> può raggiungere. Il valore predefinito è 0, che significa che le euristiche di ridimensionamento automatico del <xref:System.Runtime.Caching.MemoryCache> classe vengono utilizzate per impostazione predefinita.|  
 |`name`|Nome della cache.|  
-|`physicalMemoryLimitPercentage`|Valore intero compreso tra 0 e 100 che specifica la percentuale massima di memoria installata fisicamente i computer che può essere utilizzata dalla cache. Il valore predefinito è 0, il che significa che l'euristica di ridimensionamento automatico della <xref:System.Runtime.Caching.MemoryCache> classe vengono utilizzati per impostazione predefinita.|  
+|`physicalMemoryLimitPercentage`|Valore intero compreso tra 0 e 100 che specifica la percentuale massima di memoria del computer fisicamente installati che può essere utilizzata dalla cache. Il valore predefinito è 0, che significa che le euristiche di ridimensionamento automatico del <xref:System.Runtime.Caching.MemoryCache> classe vengono utilizzate per impostazione predefinita.|  
 |`pollingInterval`|Un valore che indica l'intervallo di tempo dopo il quale l'implementazione della cache confronta il carico di memoria corrente con i limiti di memoria percentuali e assoluti impostati per l'istanza della cache. Questo valore viene immesso nel formato "Hh".|  
   
 ### <a name="child-elements"></a>Elementi figlio  
@@ -62,16 +61,16 @@ Specifica una raccolta di impostazioni di configurazione per l'oggetto denominat
 |[\<memoryCache>](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md)|Definisce un elemento che viene usato per configurare una cache basata sulla classe <xref:System.Runtime.Caching.MemoryCache> .|  
   
 ## <a name="remarks"></a>Note  
- La sezione di configurazione della memoria cache del file Web. config può contenere `add`, `remove`, e `clear` gli attributi per il `namedCaches` insieme. Ogni `namedCaches` voce viene identificata in modo univoco dal `name` attributo.  
+ La sezione di configurazione della memoria cache del file Web. config deve contenere `add`, `remove`, e `clear` gli attributi per il `namedCaches` raccolta. Ciascuna `namedCaches` voce è identificata dal `name` attributo.  
   
- È possibile recuperare le istanze di voci della cache di memoria facendo riferimento alle informazioni nei file di configurazione dell'applicazione. Per impostazione predefinita, solo l'istanza di cache predefinita ha una voce nel file di configurazione. L'istanza di cache predefinita è l'istanza restituita dal <xref:System.Runtime.Caching.MemoryCache.Default%2A> proprietà.  
+ È possibile recuperare le istanze di voci della cache di memoria facendo le informazioni nei file di configurazione dell'applicazione. Per impostazione predefinita, solo l'istanza di cache predefinita include una voce nel file di configurazione. L'istanza di cache predefinita è l'istanza che viene restituito dal <xref:System.Runtime.Caching.MemoryCache.Default%2A> proprietà.  
   
- Se si imposta l'attributo name per "default", l'elemento Usa l'istanza di cache di memoria predefinita.  
+ Se si imposta l'attributo name su "default", l'elemento Usa l'istanza di cache di memoria predefinita.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrato come impostare il nome della cache per il nome della voce della cache predefinita impostando la `name` attributo "default".  
   
- Gli attributi `cacheMemoryLimitMegabytes` e `physicalMemoryPercentage` sono impostati su zero. L'impostazione di questi attributi su zero significa che l'euristica di ridimensionamento automatico della <xref:System.Runtime.Caching.MemoryCache> classe vengono utilizzati. L'implementazione della cache confronta il carico di memoria corrente limiti di memoria in percentuale e assoluti ogni due minuti.  
+ Gli attributi `cacheMemoryLimitMegabytes` e `physicalMemoryPercentage` sono impostati su zero. L'impostazione di questi attributi a zero indica che le euristiche di ridimensionamento automatico del <xref:System.Runtime.Caching.MemoryCache> classe vengono utilizzate. L'implementazione della cache confronta il carico di memoria corrente con i limiti di memoria in percentuale e assoluti ogni due minuti.  
   
 ```xml  
 <configuration>  
@@ -91,4 +90,4 @@ Specifica una raccolta di impostazioni di configurazione per l'oggetto denominat
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [\<memoryCache > Element (Cache Settings)](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md)
+ [\<memoryCache > (impostazioni Cache)](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md)

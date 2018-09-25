@@ -1,5 +1,5 @@
 ---
-title: '&lt;webRequestModules&gt; elemento (impostazioni di rete)'
+title: '&lt;webRequestModules&gt; (impostazioni di rete)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules
@@ -10,16 +10,15 @@ helpviewer_keywords:
 ms.assetid: 1263de11-3e0a-4f94-97c9-710b2ae53817
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 7454099d8af0f2d656296be55677c648cc0c36c9
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 34173812f4f6fac940632e23e6641e458250a4ee
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742692"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47110892"
 ---
-# <a name="ltwebrequestmodulesgt-element-network-settings"></a>&lt;webRequestModules&gt; elemento (impostazioni di rete)
-Specifica i moduli da utilizzare per richiedere informazioni agli host di rete.  
+# <a name="ltwebrequestmodulesgt-element-network-settings"></a>&lt;webRequestModules&gt; (impostazioni di rete)
+Specifica i moduli da utilizzare per richiedere informazioni da host di rete.  
   
  \<configuration>  
 \<system.net>  

@@ -10,13 +10,12 @@ helpviewer_keywords:
 ms.assetid: 22fb88b0-bf27-489c-9ca0-e65950ac136c
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: db209bac487ccbb98f7f0aeb272f51169e7a0148
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c5be6ef95693f274e5cb2002e5642d5e58a7661a
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746355"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47082068"
 ---
 # <a name="ltoidentrygt-element"></a>&lt;oidEntry&gt; elemento
 Esegue il mapping di un identificatore di oggetto (OID) ASN.1 a un nome descrittivo.  
@@ -40,8 +39,8 @@ Esegue il mapping di un identificatore di oggetto (OID) ASN.1 a un nome descritt
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|**OID**|Attributo obbligatorio.<br /><br /> Specifica l'OID ASN. 1 corrispondente all'algoritmo implementato dalla classe.|  
-|**name**|Attributo obbligatorio.<br /><br /> Specifica il valore per il **nome** attributo la [ \<nameEntry >](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) tag.|  
+|**ID OGGETTO**|Attributo obbligatorio.<br /><br /> Specifica il valore OID ASN.1 corrispondente all'algoritmo implementato dalla classe.|  
+|**name**|Attributo obbligatorio.<br /><br /> Specifica il valore per il **name** attributo il [ \<nameEntry >](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) tag.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
@@ -53,13 +52,13 @@ Esegue il mapping di un identificatore di oggetto (OID) ASN.1 a un nome descritt
 |`configuration`|Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.|  
 |`cryptographySettings`|Contiene le impostazioni di crittografia.|  
 |`mscorlib`|Contiene il `cryptographySettings` elemento.|  
-|`oidMap`|Contiene i mapping di ASN. 1 oggetto (OID) identificatore alle classi.|  
+|`oidMap`|Contiene mapping di identificatore (OID) ASN.1 oggetto alle classi.|  
   
 ## <a name="remarks"></a>Note  
- Gli identificatori di oggetto ASN. 1 identificano gli algoritmi in alcuni formati di crittografia. Eseguire il mapping ai nomi descrittivi per gli algoritmi a cui che si desidera identificare gli identificatori di oggetto.  
+ Gli identificatori di oggetto ASN.1 identificano gli algoritmi in alcuni formati di crittografia. Eseguire il mapping ai nomi descrittivi per gli algoritmi che si desidera identificare gli identificatori di oggetto.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare il  **\<oidEntry >** elemento per eseguire il mapping di un identificatore di oggetto per l'algoritmo hash RIPEMD-160 a un'implementazione dell'algoritmo hash.  
+ Nell'esempio seguente viene illustrato come utilizzare il  **\<oidEntry >** elemento per eseguire il mapping di un identificatore di oggetto per l'algoritmo hash RIPEMD-160 a un'implementazione dell'algoritmo di hash.  
   
 ```xml  
 <configuration>  

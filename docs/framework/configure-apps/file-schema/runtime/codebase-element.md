@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: d48a3983-2297-43ff-a14d-1f29d3995822
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 3b614546e8ed23cc1a5e169a33fb5878695037ae
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: d7563d3a0ba545bfd8d1b80981fcce607d230873
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745994"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47073190"
 ---
 # <a name="ltcodebasegt-element"></a>&lt;codeBase&gt; elemento
-Specifica se common language runtime può individuare un assembly.  
+Specifica in cui common language runtime può trovare un assembly.  
   
  \<configuration>  
 \<runtime>  
@@ -43,8 +42,8 @@ href="URL of assembly"/>
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|`href`|Attributo obbligatorio.<br /><br /> Specifica l'URL in cui il runtime può individuare la versione specificata dell'assembly.|  
-|`version`|Attributo obbligatorio.<br /><br /> Specifica la versione dell'assembly che viene applicata la codebase. Il formato di un numero di versione di assembly è *revisione*.|  
+|`href`|Attributo obbligatorio.<br /><br /> Specifica l'URL in cui il runtime può trovare la versione dell'assembly specificata.|  
+|`version`|Attributo obbligatorio.<br /><br /> Specifica la versione dell'assembly che viene applicata la codebase. Il formato di un numero di versione assembly *revisione*.|  
   
 ## <a name="version-attribute"></a>Attributo di versione  
   
@@ -60,19 +59,19 @@ href="URL of assembly"/>
 |Elemento|Descrizione|  
 |-------------|-----------------|  
 |`buildproviders`|Definisce una raccolta di provider di compilazione utilizzati per compilare file di risorse personalizzati. Possono essere presenti più provider di compilazione.|  
-|`compilation`|Consente di configurare tutte le impostazioni di compilazione che utilizza ASP.NET.|  
+|`compilation`|Consente di configurare tutte le impostazioni di compilazione usato da ASP.NET.|  
 |`configuration`|Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.|  
 |`System.web`|Consente di specificare l'elemento radice per la sezione di configurazione ASP.NET.|  
   
 ## <a name="remarks"></a>Note  
- Per il runtime di utilizzare il  **\<codeBase >** impostato in un file di configurazione di computer o un file dei criteri editore, il file deve reindirizzare la versione dell'assembly. File di configurazione dell'applicazione possono avere un'impostazione di codebase senza eseguire il reindirizzamento alla versione dell'assembly. Dopo aver determinato la versione di assembly da utilizzare, il runtime applica l'impostazione della codebase dal file che determina la versione. Se non è indicato alcun codebase, il runtime verifica per l'assembly nel modo consueto.  
+ Per il runtime utilizzare la  **\<codeBase >** impostazione in un file di configurazione di computer o i file dei criteri editore, il file anche necessario reindirizzare la versione dell'assembly. File di configurazione dell'applicazione possono avere un'impostazione di base di codice senza eseguire il reindirizzamento alla versione dell'assembly. Dopo aver determinato la versione di assembly da usare, il runtime si applica l'impostazione di base di codice dal file che determina la versione. Se non viene specificata alcuna codebase, il runtime esegue il probe per l'assembly nel modo consueto.  
   
- Se l'assembly dispone di un nome sicuro, l'impostazione della codebase può essere in un punto qualsiasi nella rete intranet locale o Internet. Se l'assembly è un assembly privato, l'impostazione di codebase deve essere un percorso relativo alla directory dell'applicazione.  
+ Se l'assembly ha un nome sicuro, la codebase può trovarsi in un punto qualsiasi nella rete intranet locale o in Internet. Se l'assembly è un assembly privato, l'impostazione di base di codice deve essere un percorso relativo alla directory dell'applicazione.  
   
- Per gli assembly senza nome sicuro, la versione viene ignorata e il caricatore Usa la prima occorrenza di \<codebase > all'interno di \<dependentAssembly >. Se c'è una voce nel file di configurazione dell'applicazione che reindirizza l'associazione a un altro assembly, il reindirizzamento avrà la precedenza anche se la versione dell'assembly non corrisponde alla richiesta di associazione.  
+ Per gli assembly senza un nome sicuro, la versione viene ignorata e il caricatore Usa la prima occorrenza di \<codebase > all'interno di \<dependentAssembly >. Se è presente una voce nel file di configurazione dell'applicazione che reindirizza l'associazione a un altro assembly, il reindirizzamento avrà la precedenza anche se la versione dell'assembly non corrisponde alla richiesta di associazione.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come specificare in cui il runtime può individuare un assembly.  
+ Nell'esempio seguente viene illustrato come specificare dove il runtime può trovare un assembly.  
   
 ```xml  
 <configuration>  

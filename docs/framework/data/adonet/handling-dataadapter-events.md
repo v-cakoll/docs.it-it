@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 11515b25-ee49-4b1d-9294-a142147c1ec5
 ms.openlocfilehash: 3c2158e94f936dd2b28fe46310fd96df8dbc50fb
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46577295"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47108208"
 ---
 # <a name="handling-dataadapter-events"></a>Gestione di eventi DataAdapter
 <xref:System.Data.Common.DataAdapter> di ADO.NET espone tre eventi che è possibile usare per rispondere alle modifiche apportate ai dati nell'origine dati. Nella tabella seguente vengono descritti gli eventi di `DataAdapter`.  

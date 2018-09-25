@@ -1,5 +1,5 @@
 ---
-title: Schema delle impostazioni dell'applicazione
+title: Schema Application Settings
 ms.date: 03/30/2017
 helpviewer_keywords:
 - schema application settings
@@ -9,36 +9,35 @@ helpviewer_keywords:
 ms.assetid: 5797fcff-6081-4e8c-bebf-63d9c70cf14b
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 7af6342e9c05fc4e6c1bf4daac59db14ccdf22c7
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: f11be59941759687806591feb1edcce28b2119e6
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32741737"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47073432"
 ---
-# <a name="application-settings-schema"></a>Schema delle impostazioni dell'applicazione
+# <a name="application-settings-schema"></a>Schema Application Settings
 
-Le impostazioni dell'applicazione consentono a un'applicazione Windows Forms o ASP.NET archiviare e recuperare le impostazioni con ambito di applicazione e con ambito di utente. In questo contesto, un *impostazione* è qualsiasi informazione che possono essere specifici dell'applicazione o specifici dell'utente corrente, qualsiasi elemento da una stringa di connessione di database per l'utente preferita dimensione predefinita della finestra.
+Le impostazioni dell'applicazione consentono a un'applicazione Windows Forms o ASP.NET di archiviare e recuperare le impostazioni con ambito di applicazione e con ambito di utente. In questo contesto, un *impostazione* è qualsiasi informazione che potrebbero essere specifici dell'applicazione o specifici dell'utente corrente, ovvero qualsiasi elemento da una stringa di connessione di database per l'utente preferite del dimensione predefinita della finestra.
 
-Per impostazione predefinita, le impostazioni dell'applicazione in un'applicazione Windows Form usa il <xref:System.Configuration.LocalFileSettingsProvider> (classe), che utilizza il sistema di configurazione .NET per archiviare le impostazioni in un file di configurazione XML. Per ulteriori informazioni sui file utilizzati dalle impostazioni dell'applicazione, vedere [architettura Impostazioni applicazione](~/docs/framework/winforms/advanced/application-settings-architecture.md).
+Per impostazione predefinita, le impostazioni dell'applicazione in un'applicazione Windows Form usa il <xref:System.Configuration.LocalFileSettingsProvider> (classe), che usa il sistema di configurazione di .NET per archiviare le impostazioni in un file di configurazione XML. Per altre informazioni sui file utilizzati dalle impostazioni dell'applicazione, vedere [Application Settings Architecture](~/docs/framework/winforms/advanced/application-settings-architecture.md).
 
-Le impostazioni dell'applicazione definisce gli elementi seguenti come parte dei file di configurazione viene utilizzato.
+Le impostazioni dell'applicazione definisce gli elementi seguenti come parte dei file di configurazione viene utilizzata.
 
 | Elemento                    | Descrizione                                                                           |
 | -------------------------- | ------------------------------------------------------------------------------------- |
 | **\<applicationSettings >** | Contiene tutti  **\<impostazione >** tag specifici dell'applicazione.                         |
 | **\<userSettings >**        | Contiene tutti  **\<impostazione >** tag specifici per l'utente corrente.                        |
-| **\<impostazione >**             | Definisce un'impostazione. Figlio di  **\<applicationSettings >** o  **\<userSettings >**. |
-| **\<value>**               | Definisce un valore dell'impostazione. Elemento figlio di  **\<impostazione >**.                                   |
+| **\<impostazione >**             | Definisce un'impostazione. Figlio del  **\<applicationSettings >** oppure  **\<userSettings >**. |
+| **\<value>**               | Definisce un valore dell'impostazione. Elemento figlio  **\<impostazione >**.                                   |
 
 ## <a name="applicationsettings-element"></a>\<applicationSettings > elemento
 
-Questo elemento contiene tutti  **\<impostazione >** tag specifici a un'istanza dell'applicazione in un computer client. Non definisce alcun attributo.
+Questo elemento contiene tutti  **\<impostazione >** tag che sono specifici di un'istanza dell'applicazione in un computer client. Non definisce alcun attributo.
 
 ## <a name="usersettings-element"></a>\<userSettings > elemento
 
-Questo elemento contiene tutti  **\<impostazione >** tag specifici per l'utente che sta attualmente utilizzando l'applicazione. Non definisce alcun attributo.
+Questo elemento contiene tutti  **\<impostazione >** tag specifici per l'utente che sta utilizzando l'applicazione. Non definisce alcun attributo.
 
 ## <a name="setting-element"></a>\<impostazione > elemento
 
@@ -47,7 +46,7 @@ Questo elemento definisce un'impostazione. Include gli attributi seguenti.
 | Attributo        | Descrizione |
 | ---------------- | ----------- |
 | **name**         | Obbligatorio. ID univoco dell'impostazione. Le impostazioni create tramite Visual Studio vengono salvate con il nome `ProjectName.Properties.Settings`. |
-| **serializedAs** | Obbligatorio. Il formato da utilizzare per la serializzazione del valore di testo. I valori validi sono:<br><br>- `string`. Il valore viene serializzato come una stringa usando un <xref:System.ComponentModel.TypeConverter>.<br>- `xml`. Il valore viene serializzato utilizzando la serializzazione XML.<br>- `binary`. Il valore viene serializzato in formato binario con codifica testo mediante la serializzazione binaria.<br />- `custom`. Il provider di impostazioni ha informazioni inerenti a questa impostazione e serializza e deserializza il. |
+| **serializedAs** | Obbligatorio. Il formato da utilizzare per la serializzazione del valore di testo. I valori validi sono:<br><br>- `string`. Il valore viene serializzato come una stringa usando un <xref:System.ComponentModel.TypeConverter>.<br>- `xml`. Il valore viene serializzato utilizzando la serializzazione XML.<br>- `binary`. Il valore viene serializzato in formato binario con codifica del testo mediante la serializzazione binaria.<br />- `custom`. Il provider di impostazioni ha una conoscenza intrinseca di questa impostazione e serializza e deserializza il. |
 
 ## <a name="value-element"></a>\<valore > elemento
 

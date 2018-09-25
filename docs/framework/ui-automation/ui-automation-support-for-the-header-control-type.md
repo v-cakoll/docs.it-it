@@ -8,13 +8,12 @@ helpviewer_keywords:
 ms.assetid: d2e48891-2dbe-409e-8655-2f753908e29b
 author: Xansky
 ms.author: mhopkins
-manager: markl
-ms.openlocfilehash: f9ff82987474e78e7d724c22cd32e5fa7518f0f3
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2803f297225319a5512c7e24cedd9440d44c1f7d
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519024"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47071112"
 ---
 # <a name="ui-automation-support-for-the-header-control-type"></a>Supporto di automazione interfaccia utente per il tipo di controllo Header
 > [!NOTE]
@@ -32,7 +31,7 @@ ms.locfileid: "43519024"
   
 |Visualizzazione controlli|Visualizzazione contenuto|  
 |------------------|------------------|  
-|Header<br /><br /> -HeaderItem (1 o più)|nessuno|  
+|Intestazione<br /><br /> -HeaderItem (1 o più)|nessuno|  
   
  I controlli intestazione hanno sempre 1 o più elementi figlio nella visualizzazione controlli dell'albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .  
   
@@ -50,7 +49,7 @@ ms.locfileid: "43519024"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|Vedere le note.|Se il controllo può ricevere lo stato attivo, deve supportare questa proprietà.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|Vedere le note.|Il controllo intestazione richiede un nome se è presente più di un'intestazione di riga o più di un'intestazione di colonna. Identifica le informazioni all'interno dell'intestazione.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|`Null`.|I controlli intestazione in genere non hanno un'etichetta statica.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Header|Questo valore è uguale per tutti i framework dell' [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] .|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Intestazione|Questo valore è uguale per tutti i framework dell' [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] .|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"header"|Questo valore è uguale per tutti i framework dell' [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] .|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.OrientationProperty>|Orizzontale|Il valore di questa proprietà espone la posizione del controllo intestazione, indipendentemente dal fatto che sia un'intestazione di riga o un'intestazione di colonna.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|False|Il controllo intestazione non viene incluso nella visualizzazione contenuto dell'albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|  

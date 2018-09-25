@@ -3,13 +3,12 @@ title: Traccia attività relative alla protezione dei messaggi
 ms.date: 03/30/2017
 ms.assetid: 68862534-3b2e-4270-b097-8121b12a2c97
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 31882dfff746aa8e0e45698f70b0f19ae413d66a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 830339682f86d3882ff2cfc2d07d14145b987dde
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33474857"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47157519"
 ---
 # <a name="activity-tracing-in-message-security"></a>Traccia attività relative alla protezione dei messaggi
 Questo argomento descrive la traccia attività per l'elaborazione delle operazioni di sicurezza, che si articola nelle tre fasi seguenti.  
@@ -23,7 +22,7 @@ Questo argomento descrive la traccia attività per l'elaborazione delle operazio
 ## <a name="negotiationsct-exchange"></a>Scambio negoziazione/SCT  
  La fase di scambio negoziazione/SCT prevede la creazione di due tipi di attività nel client: l'impostazione della sessione di sicurezza e la chiusura della sessione protetta. La prima attività contiene le tracce relative agli scambi di messaggi RST/RSTR/SCT mentre la seconda contiene le tracce relative al messaggio di annullamento.  
   
- Nel server, ogni request/reply degli scambi RST/RSTR/SCT viene visualizzato nella propria attività. Se `propagateActivity` = `true` server sia nel client, hanno lo stesso ID attività del server e vengono incluse nella "impostazione sessione di sicurezza" quando viene visualizzato tramite Service Trace Viewer.  
+ Nel server, ogni request/reply degli scambi RST/RSTR/SCT viene visualizzato nella propria attività. Se `propagateActivity` = `true` nel server sia client, hanno lo stesso ID attività nel server e abbinati nella "Configurazione sessione di sicurezza" quando viene visualizzato in Service Trace Viewer.  
   
  Questo modello di traccia attività è valido per le autenticazioni basate su nome/password, certificato o NTLM.  
   
@@ -31,8 +30,8 @@ Questo argomento descrive la traccia attività per l'elaborazione delle operazio
   
 ||Contesto in cui si verifica lo scambio negoziazione/SCT|Attività|Tracce|  
 |-|-------------------------------------------------|----------------|------------|  
-|Protezione a livello di trasporto<br /><br /> (HTTPS, SSL)|Alla ricezione del primo messaggio.|Le tracce vengono generate nell'attività di ambiente.|-Scambio di tracce<br />-Canale sicuro stabilito<br />-Condividere l'ottenimento dei segreti.|  
-|Protezione a livello di messaggio<br /><br /> (WSHTTP)|Alla ricezione del primo messaggio.|Nel client:<br /><br /> -"Il programma di installazione sessione protetta" da "Elaborazione azione" di questo primo messaggio per ogni request/reply degli scambi RST/RSTR/SCT.<br />-"Chiudi sessione protetta" per lo scambio di annullamento, all'esterno di "attività di chiusura del Proxy." Questa attività può essere causata da un'altra attività di ambiente, a seconda del momento di chiusura della sessione protetta.<br /><br /> Nel server:<br /><br /> -L'attività "Elaborazione azione" uno per ogni request/reply degli scambi RST/SCT/Cancel nel server. Se `propagateActivity` = `true`, le attività RST/RSTR/SCT vengono unite con "Set della sessione di sicurezza" e l'annullamento viene unita con l'attività "Chiudere" dal client.<br /><br /> L'attività di impostazione della sessione di sicurezza si articola in due fasi:<br /><br /> 1.  Negoziazione dell'autenticazione: questa fase è facoltativa se il client già dispone delle credenziali corrette. Questa fase può essere eseguita tramite un trasporto protetto o lo scambio di messaggi. Nel secondo caso è possibile che si verifichino 1 o 2 scambi RST/RSTR. Per questi scambi il sistema genera tracce in nuove attività di request/reply, come descritto in precedenza.<br />2.  Creazione di una sessione protetta: in tale fase si verifica un unico scambio RST/RSTR avente le stesse attività di ambiente descritte in precedenza.|-Scambio di tracce<br />-Canale sicuro stabilito<br />-Condividere l'ottenimento dei segreti.|  
+|Protezione a livello di trasporto<br /><br /> (HTTPS, SSL)|Alla ricezione del primo messaggio.|Le tracce vengono generate nell'attività di ambiente.|-Le tracce Exchange<br />-Canale sicuro stabilito<br />-Condivisione ottenuti dei segreti.|  
+|Protezione a livello di messaggio<br /><br /> (WSHTTP)|Alla ricezione del primo messaggio.|Nel client:<br /><br /> -"Il programma di installazione sessione protetta" da "Processaction" di questo primo messaggio, per ogni request/reply degli scambi RST/RSTR/SCT.<br />-"Chiusura della sessione protetta" per lo scambio di annullamento, le "attività della chiusura del Proxy". Questa attività può essere causata da un'altra attività di ambiente, a seconda del momento di chiusura della sessione protetta.<br /><br /> Nel server:<br /><br /> -Un'attività "Processaction" per ogni request/reply per RST/SCT/Cancel nel server. Se `propagateActivity` = `true`attività RST/RSTR/SCT vengono unite con "Impostazione della sessione di sicurezza" e annullamento viene unita con l'attività "Chiudere" dal client.<br /><br /> L'attività di impostazione della sessione di sicurezza si articola in due fasi:<br /><br /> 1.  Negoziazione dell'autenticazione: questa fase è facoltativa se il client già dispone delle credenziali corrette. Questa fase può essere eseguita tramite un trasporto protetto o lo scambio di messaggi. Nel secondo caso è possibile che si verifichino 1 o 2 scambi RST/RSTR. Per questi scambi il sistema genera tracce in nuove attività di request/reply, come descritto in precedenza.<br />2.  Creazione di una sessione protetta: in tale fase si verifica un unico scambio RST/RSTR avente le stesse attività di ambiente descritte in precedenza.|-Le tracce Exchange<br />-Canale sicuro stabilito<br />-Condivisione ottenuti dei segreti.|  
   
 > [!NOTE]
 >  In modalità di sicurezza mista, l'autenticazione di negoziazione si verifica in scambi binari. Tuttavia, lo scambio SCT si verifica tramite lo scambio di messaggi. Nella modalità di trasporto pure, la negoziazione si verifica solo nel trasporto senza alcuna attività aggiuntiva.  
@@ -44,7 +43,7 @@ Questo argomento descrive la traccia attività per l'elaborazione delle operazio
 |-|---------------------------------------------------------------------------------|  
 |Momento in cui si verificano la crittografia/decrittografia dei messaggi e l'autenticazione della firma|Alla ricezione del messaggio|  
 |Attività|Le tracce vengono generate nell'attività ProcessAction nel client e nel server.|  
-|Tracce|-sendSecurityHeader (mittente):<br />-Firma messaggio<br />-Crittografare i dati di richiesta<br />-receiveSecurityHeader (destinatario):<br />-Verificare la firma<br />-Decrittografare i dati di risposta<br />-Autenticazione|  
+|Tracce|-sendSecurityHeader (mittente):<br />-Firma messaggio<br />-Crittografare i dati della richiesta<br />-receiveSecurityHeader (destinatario):<br />-Verificare la firma<br />-Decrittografare i dati di risposta<br />-Autenticazione|  
   
 > [!NOTE]
 >  Nella modalità di trasporto pure, la crittografia/decrittografia dei messaggi si verifica solo nel trasporto senza alcuna attività aggiuntiva.  

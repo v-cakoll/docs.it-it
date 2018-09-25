@@ -3,16 +3,15 @@ title: Combinazione di protocolli trust in scenari federati
 ms.date: 03/30/2017
 ms.assetid: d7b5fee9-2246-4b09-b8d7-9e63cb817279
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: bca23ba16c69c6d21ed7cf49aaebb8d2ed079f5e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d4290880d8d708811a95b38356aa61f0d23c89a8
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494463"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47090370"
 ---
 # <a name="mixing-trust-protocols-in-federated-scenarios"></a>Combinazione di protocolli trust in scenari federati
-In alcuni scenari i client federati comunicano con un servizio e con un servizio token di sicurezza che non hanno la stessa versione Trust. Il WSDL del servizio può contenere un'asserzione `RequestSecurityTokenTemplate` con elementi WS-Trust di versioni diverse rispetto al servizio token di sicurezza. In questi casi, un client Windows Communication Foundation (WCF) converte gli elementi di WS-Trust ricevuti dal `RequestSecurityTokenTemplate` in base alla versione trust servizio token di sicurezza. WCF gestisce le versioni trust non corrispondenti solo per le associazioni standard. Tutti i parametri dell'algoritmo standard riconosciuti da WCF fanno parte dell'associazione standard. In questo argomento viene descritto il comportamento WCF con varie impostazioni di trust tra il servizio e il servizio token di sicurezza.  
+In alcuni scenari i client federati comunicano con un servizio e con un servizio token di sicurezza che non hanno la stessa versione Trust. Il WSDL del servizio può contenere un'asserzione `RequestSecurityTokenTemplate` con elementi WS-Trust di versioni diverse rispetto al servizio token di sicurezza. In questi casi, un client Windows Communication Foundation (WCF) converte gli elementi WS-Trust ricevuti dal `RequestSecurityTokenTemplate` in modo che corrisponda il servizio token di versione trust. WCF gestisce le versioni trust non corrispondenti solo per le associazioni standard. Tutti i parametri dell'algoritmo standard riconosciuti da WCF fanno parte dell'associazione standard. In questo argomento viene descritto il comportamento WCF con varie impostazioni di trust tra il servizio e il servizio token di sicurezza.  
   
 ## <a name="rp-feb-2005-and-sts-feb-2005"></a>Componente febbraio 2005 e servizio token di sicurezza febbraio 2005  
  Il WSDL per il componente contiene gli elementi seguenti all'interno della sezione `RequestSecurityTokenTemplate`:  
@@ -52,7 +51,7 @@ In alcuni scenari i client federati comunicano con un servizio e con un servizio
   
  Il file di configurazione client contiene un elemento `secondaryParameters` che esegue il wrapping dei parametri specificati dal componente.  
   
- WCF rimuove il `EncryptionAlgorithm`, `CanonicalizationAlgorithm` e `KeyWrapAlgorithm` elementi dall'elemento di primo livello sotto RST se sono presenti all'interno di `SecondaryParameters` elemento. WCF aggiunge il `SecondaryParameters` elemento RST in uscita senza modificata.  
+ WCF rimuove il `EncryptionAlgorithm`, `CanonicalizationAlgorithm` e `KeyWrapAlgorithm` gli elementi di elemento di primo livello sotto RST se sono presenti all'interno di `SecondaryParameters` elemento. WCF consente di accodare il `SecondaryParameters` elemento RST in uscita senza modificata.  
   
 ## <a name="rp-trust-feb-2005-and-sts-trust-13"></a>Componente Trust febbraio 2005 e servizio token di sicurezza Trust 1.3  
  Il WSDL per il componente contiene i seguenti elementi nella sezione `RequestSecurityTokenTemplate`:  
@@ -71,7 +70,7 @@ In alcuni scenari i client federati comunicano con un servizio e con un servizio
   
  Il file di configurazione client contiene un elenco di parametri.  
   
- Dal file di configurazione client WCF non è possibile distinguere tra i parametri del servizio e client. Pertanto WCF converte tutti i parametri in uno spazio dei nomi versione 1.3 di Trust.  
+ Da file di configurazione del client WCF non è possibile distinguere tra i parametri del servizio e client. Di conseguenza WCF converte tutti i parametri in uno spazio dei nomi versione 1.3 di Trust.  
   
  WCF gestisce il `KeyType`, `KeySize`, e `TokenType` elementi come indicato di seguito:  
   
@@ -100,4 +99,4 @@ In alcuni scenari i client federati comunicano con un servizio e con un servizio
   
  Il file di configurazione client contiene un elemento `secondaryParamters` che esegue il wrapping dei parametri specificati dal componente.  
   
- WCF consente di copiare tutti i parametri specificati all'interno di `SecondaryParameters` sezione in cui l'elemento RST di primo livello, ma non li converte allo spazio dei nomi WS-Trust 2005.
+ WCF consente di copiare tutti i parametri specificati all'interno di `SecondaryParameters` sezione per l'elemento RST di primo livello, ma non li converte allo spazio dei nomi WS-Trust 2005.

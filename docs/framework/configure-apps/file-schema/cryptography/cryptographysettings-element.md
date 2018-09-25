@@ -10,13 +10,12 @@ helpviewer_keywords:
 ms.assetid: 6201b7da-bcb7-49f7-b9f5-ba1fe05573b9
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 14b510df192dcff1f005eec4f029aa0f26b967a4
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: dc55acd7a698ef37d45e8a412db684c13a3b8b16
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32751935"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47156637"
 ---
 # <a name="ltcryptographysettingsgt-element"></a>&lt;cryptographySettings&gt; elemento
 Contiene le impostazioni di crittografia.  
@@ -43,7 +42,7 @@ Contiene le impostazioni di crittografia.
 |Elemento|Descrizione|  
 |-------------|-----------------|  
 |[\<cryptoNameMapping >](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptonamemapping-element.md)|Contiene i mapping di classi e nomi descrittivi.|  
-|[\<oidMap >](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidmap-element.md)|Contiene i mapping di ASN. 1 oggetto (OID) identificatore alle classi.|  
+|[\<oidMap >](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidmap-element.md)|Contiene mapping di identificatore (OID) ASN.1 oggetto alle classi.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -53,7 +52,7 @@ Contiene le impostazioni di crittografia.
 |`mscorlib`|Contiene il `cryptographySettings` elemento.|  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare il  **\<cryptographySettings >** per contenere i mapping dei nomi di crittografia e degli OID. In questo esempio viene configurato in modo che <xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType> restituisce un `MyHashClass` oggetto e `MyCryptoClass` classe esegue il mapping all'identificatore di oggetto 1.3.36.2.1.  
+ Nell'esempio seguente viene illustrato come utilizzare il  **\<cryptographySettings >** elemento per contenere i mapping dei nomi di crittografia e i mapping di OID. In questo esempio configura il runtime in modo che <xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType> restituisce un `MyHashClass` oggetto e il `MyCryptoClass` classe esegue il mapping all'identificatore di oggetto 1.3.36.2.1.  
   
 ```xml  
 <configuration>  

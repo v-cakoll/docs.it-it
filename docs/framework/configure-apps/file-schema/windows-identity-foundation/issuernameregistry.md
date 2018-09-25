@@ -3,16 +3,15 @@ title: '&lt;issuerNameRegistry&gt;'
 ms.date: 03/30/2017
 ms.assetid: 58b39d12-c953-40c4-88af-d7eb3343ca28
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: b695cc6d66e5b9e45bb6a5fd22d594bc22ea3cba
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: de3ceb5d84d17307c69e9155834a0a584e6920a1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32757528"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47075775"
 ---
 # <a name="ltissuernameregistrygt"></a>&lt;issuerNameRegistry&gt;
-Consente di configurare il Registro di sistema nome dell'autorità di certificazione che viene utilizzata dai gestori nella raccolta di gestori di token.  
+Configura il registro dei nomi dell'autorità di certificazione che viene usato dai gestori nella raccolta di gestori di token.  
   
  \<system.identityModel>  
 \<identityConfiguration>  
@@ -43,32 +42,32 @@ Consente di configurare il Registro di sistema nome dell'autorità di certificaz
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|tipo|Un tipo da cui deriva il <xref:System.IdentityModel.Tokens.IssuerNameRegistry> classe. Per ulteriori informazioni su come specificare un oggetto personalizzato `type`, vedere [riferimenti al tipo personalizzato].|  
+|tipo|Un tipo da cui deriva il <xref:System.IdentityModel.Tokens.IssuerNameRegistry> classe. Per altre informazioni su come specificare un oggetto personalizzato `type`, vedere [riferimenti a tipi personalizzati].|  
   
 ### <a name="child-elements"></a>Elementi figlio  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<trustedIssuers >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/trustedissuers.md)|Quando il `type` attributo specifica il Registro di sistema di nome dell'autorità di certificazione basata sulla configurazione (il <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> classe), il [ \<trustedIssuers >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/trustedissuers.md) elemento deve essere specificato. Il [ \<trustedIssuers >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/trustedissuers.md) può richiedere l'elemento `<add>`, `<clear>`, o `<remove>` elementi come elementi figlio.|  
+|[\<trustedIssuers >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/trustedissuers.md)|Quando la `type` attributo specifica il registro dei nomi basato sulla configurazione dell'autorità emittente (il <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> classe), il [ \<trustedIssuers >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/trustedissuers.md) elemento deve essere specificato. Il [ \<trustedIssuers >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/trustedissuers.md) elemento può accettare `<add>`, `<clear>`, o `<remove>` elementi come elementi figlio.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Fornisce la configurazione per una raccolta di sicurezza gestori di token.|  
+|[\<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Fornisce la configurazione per una raccolta di sicurezza i gestori di token.|  
   
 ## <a name="remarks"></a>Note  
- Tutti i token dell'autorità di certificazione vengono convalidati mediante un registro di sistema di nome dell'autorità di certificazione. Si tratta di un oggetto da cui deriva il <xref:System.IdentityModel.Tokens.IssuerNameRegistry> classe. Il Registro di sistema di nome dell'autorità di certificazione viene utilizzato per associare un nome di tasti di scelta rapida per il materiale di crittografia è necessaria per verificare le firme di token generato dall'emittente corrispondente. Il Registro di sistema di nome dell'autorità emittente mantiene un elenco delle autorità emittenti attendibili per l'applicazione relying party (RP). Il tipo del Registro di sistema di nome dell'autorità di certificazione è specificato utilizzando il `type` attributo. Il `<issuerNameRegistry>` elemento può avere uno o più elementi figlio che forniscono la configurazione per il tipo specificato. Fornire la logica che elabora gli elementi figlio, eseguendo l'override di <xref:System.IdentityModel.Tokens.IssuerNameRegistry.LoadCustomConfiguration%2A> metodo.  
+ Tutti i token dell'autorità di certificazione vengono convalidati tramite un registro dei nomi dell'autorità di certificazione. Si tratta di un oggetto da cui deriva il <xref:System.IdentityModel.Tokens.IssuerNameRegistry> classe. Il registro dei nomi dell'autorità di certificazione viene utilizzato per associare un nome mnemonico al materiale di crittografia che è necessario per verificare le firme dei token prodotti dall'autorità emittente corrispondente. Il registro dei nomi dell'autorità emittente mantiene un elenco di autorità di certificazione considerate attendibili dall'applicazione relying party (RP). Il tipo del Registro di sistema di nome dell'autorità di certificazione è specificato utilizzando il `type` attributo. Il `<issuerNameRegistry>` elemento può avere uno o più elementi figlio che forniscono la configurazione per il tipo specificato. Fornire la logica che elabora tali elementi figlio eseguendo l'override di <xref:System.IdentityModel.Tokens.IssuerNameRegistry.LoadCustomConfiguration%2A> (metodo).  
   
- WIF offre una singola autorità di certificazione come nome del Registro di sistema predefinita, la <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> classe. Questa classe Usa un set di autorità emittenti attendibili i certificati che sono specificati nella configurazione. Richiede un elemento di configurazione figlio, `<trustedIssuers>`, in cui viene configurato l'insieme dei certificati dell'autorità emittente attendibile. Attendibili i certificati vengono specificati utilizzando l'ASN. 1 formato dell'identificazione digitale del certificato con codifica e viene aggiunti o rimossi dalla raccolta utilizzando `<add>`, `<clear>`, o `<remove>` elementi.  
+ WIF fornisce una singola autorità di certificazione nome tipo del Registro di sistema per impostazione predefinita, il <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> classe. Questa classe Usa un set di certificati di autorità emittenti attendibili che sono specificati nella configurazione. Richiede un elemento di configurazione figlio, `<trustedIssuers>`, in cui viene configurato l'insieme di certificati di autorità emittenti attendibili. Attendibili i certificati vengono specificati usando il ASN.1 formato dell'identificazione digitale del certificato con codifica e viene aggiunti o rimossi dalla raccolta utilizzando `<add>`, `<clear>`, o `<remove>` elementi.  
   
- Il `<issuerNameRegistry>` elemento è rappresentato dalla <xref:System.IdentityModel.Configuration.IssuerNameRegistryElement> classe.  
+ Il `<issuerNameRegistry>` elemento è rappresentato dal <xref:System.IdentityModel.Configuration.IssuerNameRegistryElement> classe.  
   
 > [!NOTE]
->  Specifica il `<issuerNameRegistry>` come un elemento figlio dell'elemento di [ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) elemento è stato deprecato, ma è ancora supportato per compatibilità con le versioni precedenti. Impostazioni di `<securityTokenHandlerConfiguration>` elemento prevalgono su quelle nel `<identityConfiguration>` elemento.  
+>  Specifica la `<issuerNameRegistry>` come elemento figlio dell'elemento di [ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) elemento è stato deprecato, ma è ancora supportata per la compatibilità con le versioni precedenti. Le impostazioni nel `<securityTokenHandlerConfiguration>` elemento sostituiscono quelle di `<identityConfiguration>` elemento.  
   
 ## <a name="example"></a>Esempio  
- Il codice XML seguente viene illustrato come specificare l'autorità emittente di base di configurazione del Registro di sistema di nome.  
+ Il codice XML seguente viene illustrato come specificare l'autorità di certificazione di base di configurazione del registro dei nomi.  
   
 ```xml  
 <issuerNameRegistry type="System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">  
