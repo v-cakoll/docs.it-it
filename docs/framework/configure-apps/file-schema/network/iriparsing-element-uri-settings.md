@@ -1,28 +1,27 @@
 ---
-title: '&lt;iriParsing&gt; elemento (impostazioni Uri)'
+title: '&lt;iriParsing&gt; (impostazioni Uri)'
 ms.date: 03/30/2017
 ms.assetid: 953d0b53-445e-41f9-b302-77c4030852ce
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: f05f7e35d69f789d3ebb371689aafbc84004b732
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 446447f0d279755dbc06e0e3a25d50ad86ad555b
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743303"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47075226"
 ---
-# <a name="ltiriparsinggt-element-uri-settings"></a><span data-ttu-id="d6bb3-102">&lt;iriParsing&gt; elemento (impostazioni Uri)</span><span class="sxs-lookup"><span data-stu-id="d6bb3-102">&lt;iriParsing&gt; Element (Uri Settings)</span></span>
-<span data-ttu-id="d6bb3-103">Specifica se l'analisi IRI (International Resource Identifier) viene applicata a un <xref:System.Uri> e se devono essere applicate le regole di analisi IRI.</span><span class="sxs-lookup"><span data-stu-id="d6bb3-103">Specifies if International Resource Identifier (IRI) parsing is applied to a <xref:System.Uri> and whether IRI parsing rules should be applied.</span></span>  
+# <a name="ltiriparsinggt-element-uri-settings"></a><span data-ttu-id="ccd9b-102">&lt;iriParsing&gt; (impostazioni Uri)</span><span class="sxs-lookup"><span data-stu-id="ccd9b-102">&lt;iriParsing&gt; Element (Uri Settings)</span></span>
+<span data-ttu-id="ccd9b-103">Specifica se l'analisi IRI (International Resource Identifier) viene applicata a un <xref:System.Uri> e se devono essere applicate le regole di analisi IRI.</span><span class="sxs-lookup"><span data-stu-id="ccd9b-103">Specifies if International Resource Identifier (IRI) parsing is applied to a <xref:System.Uri> and whether IRI parsing rules should be applied.</span></span>  
   
-## <a name="schema-hierarchy"></a><span data-ttu-id="d6bb3-104">Gerarchia dello schema</span><span class="sxs-lookup"><span data-stu-id="d6bb3-104">Schema Hierarchy</span></span>  
- [<span data-ttu-id="d6bb3-105">Elemento \<configuration></span><span class="sxs-lookup"><span data-stu-id="d6bb3-105">\<configuration> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
+## <a name="schema-hierarchy"></a><span data-ttu-id="ccd9b-104">Gerarchia dello schema</span><span class="sxs-lookup"><span data-stu-id="ccd9b-104">Schema Hierarchy</span></span>  
+ [<span data-ttu-id="ccd9b-105">Elemento \<configuration></span><span class="sxs-lookup"><span data-stu-id="ccd9b-105">\<configuration> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
   
- [<span data-ttu-id="d6bb3-106">\<URI > elemento (impostazioni Uri)</span><span class="sxs-lookup"><span data-stu-id="d6bb3-106">\<Uri> Element (Uri Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)  
+ [<span data-ttu-id="ccd9b-106">\<URI > (impostazioni Uri)</span><span class="sxs-lookup"><span data-stu-id="ccd9b-106">\<Uri> Element (Uri Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)  
   
- [<span data-ttu-id="d6bb3-107">\<iriParsing ></span><span class="sxs-lookup"><span data-stu-id="d6bb3-107">\<iriParsing></span></span>](../../../../../docs/framework/configure-apps/file-schema/network/iriparsing-element-uri-settings.md)  
+ [<span data-ttu-id="ccd9b-107">\<iriParsing ></span><span class="sxs-lookup"><span data-stu-id="ccd9b-107">\<iriParsing></span></span>](../../../../../docs/framework/configure-apps/file-schema/network/iriparsing-element-uri-settings.md)  
   
-## <a name="syntax"></a><span data-ttu-id="d6bb3-108">Sintassi</span><span class="sxs-lookup"><span data-stu-id="d6bb3-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ccd9b-108">Sintassi</span><span class="sxs-lookup"><span data-stu-id="ccd9b-108">Syntax</span></span>  
   
 ```xml  
 <iriParsing  
@@ -30,48 +29,48 @@ ms.locfileid: "32743303"
 />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="d6bb3-109">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="d6bb3-109">Attributes and Elements</span></span>  
- <span data-ttu-id="d6bb3-110">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="d6bb3-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="ccd9b-109">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="ccd9b-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="ccd9b-110">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="ccd9b-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="d6bb3-111">Attributi</span><span class="sxs-lookup"><span data-stu-id="d6bb3-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="ccd9b-111">Attributi</span><span class="sxs-lookup"><span data-stu-id="ccd9b-111">Attributes</span></span>  
   
-|<span data-ttu-id="d6bb3-112">**Elemento**</span><span class="sxs-lookup"><span data-stu-id="d6bb3-112">**Element**</span></span>|<span data-ttu-id="d6bb3-113">**Descrizione**</span><span class="sxs-lookup"><span data-stu-id="d6bb3-113">**Description**</span></span>|  
+|<span data-ttu-id="ccd9b-112">**Elemento**</span><span class="sxs-lookup"><span data-stu-id="ccd9b-112">**Element**</span></span>|<span data-ttu-id="ccd9b-113">**Descrizione**</span><span class="sxs-lookup"><span data-stu-id="ccd9b-113">**Description**</span></span>|  
 |-----------------|---------------------|  
-|`enabled`|<span data-ttu-id="d6bb3-114">Specifica se è abilitata l'analisi IRI.</span><span class="sxs-lookup"><span data-stu-id="d6bb3-114">Specifies whether IRI parsing is enabled.</span></span> <span data-ttu-id="d6bb3-115">Il valore predefinito è `false`.</span><span class="sxs-lookup"><span data-stu-id="d6bb3-115">The default value is `false`.</span></span>|  
+|`enabled`|<span data-ttu-id="ccd9b-114">Specifica se è abilitata l'analisi IRI.</span><span class="sxs-lookup"><span data-stu-id="ccd9b-114">Specifies whether IRI parsing is enabled.</span></span> <span data-ttu-id="ccd9b-115">Il valore predefinito è `false`.</span><span class="sxs-lookup"><span data-stu-id="ccd9b-115">The default value is `false`.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="d6bb3-116">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="d6bb3-116">Child Elements</span></span>  
- <span data-ttu-id="d6bb3-117">Nessuno</span><span class="sxs-lookup"><span data-stu-id="d6bb3-117">None</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="ccd9b-116">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="ccd9b-116">Child Elements</span></span>  
+ <span data-ttu-id="ccd9b-117">nessuno</span><span class="sxs-lookup"><span data-stu-id="ccd9b-117">None</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="d6bb3-118">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="d6bb3-118">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="ccd9b-118">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="ccd9b-118">Parent Elements</span></span>  
   
-|<span data-ttu-id="d6bb3-119">**Elemento**</span><span class="sxs-lookup"><span data-stu-id="d6bb3-119">**Element**</span></span>|<span data-ttu-id="d6bb3-120">**Descrizione**</span><span class="sxs-lookup"><span data-stu-id="d6bb3-120">**Description**</span></span>|  
+|<span data-ttu-id="ccd9b-119">**Elemento**</span><span class="sxs-lookup"><span data-stu-id="ccd9b-119">**Element**</span></span>|<span data-ttu-id="ccd9b-120">**Descrizione**</span><span class="sxs-lookup"><span data-stu-id="ccd9b-120">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="d6bb3-121">URI</span><span class="sxs-lookup"><span data-stu-id="d6bb3-121">uri</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)|<span data-ttu-id="d6bb3-122">Contiene le impostazioni che specificano come .NET Framework gestisce gli indirizzi web espressi tramite uniform resource identifier (URI).</span><span class="sxs-lookup"><span data-stu-id="d6bb3-122">Contains settings that specify how the .NET Framework handles web addresses expressed using uniform resource identifiers (URIs).</span></span>|  
+|[<span data-ttu-id="ccd9b-121">URI</span><span class="sxs-lookup"><span data-stu-id="ccd9b-121">uri</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)|<span data-ttu-id="ccd9b-122">Contiene le impostazioni che specificano come .NET Framework gestisce gli indirizzi web espressi tramite uniform resource identifier (URI).</span><span class="sxs-lookup"><span data-stu-id="ccd9b-122">Contains settings that specify how the .NET Framework handles web addresses expressed using uniform resource identifiers (URIs).</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="d6bb3-123">Note</span><span class="sxs-lookup"><span data-stu-id="d6bb3-123">Remarks</span></span>  
- <span data-ttu-id="d6bb3-124">Esistente <xref:System.Uri> classe è stata estesa in .NET Framework 3.5.</span><span class="sxs-lookup"><span data-stu-id="d6bb3-124">The existing <xref:System.Uri> class has been extended in .NET Framework 3.5.</span></span> <span data-ttu-id="d6bb3-125">3.0 SP1 e 2.0 SP1 per fornire supporto per gli identificatori IRI (International Resource) e IDN (Internationalized Domain nomi).</span><span class="sxs-lookup"><span data-stu-id="d6bb3-125">3.0 SP1, and 2.0 SP1 to provide support for International Resource Identifiers (IRI) and Internationalized Domain Names (IDN).</span></span> <span data-ttu-id="d6bb3-126">Gli utenti non visualizzeranno qualsiasi modifica rispetto al comportamento di .NET Framework 2.0 a meno che non consentono in modo specifico IRI e IDN supportano.</span><span class="sxs-lookup"><span data-stu-id="d6bb3-126">Current users will not see any change from the .NET Framework 2.0 behavior unless they specifically enable IRI and IDN support.</span></span> <span data-ttu-id="d6bb3-127">Questo garantisce la compatibilità delle applicazioni con le versioni precedenti di .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="d6bb3-127">This ensures application compatibility with prior versions of the .NET Framework.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ccd9b-123">Note</span><span class="sxs-lookup"><span data-stu-id="ccd9b-123">Remarks</span></span>  
+ <span data-ttu-id="ccd9b-124">L'oggetto esistente <xref:System.Uri> classe è stata estesa in .NET Framework 3.5.</span><span class="sxs-lookup"><span data-stu-id="ccd9b-124">The existing <xref:System.Uri> class has been extended in .NET Framework 3.5.</span></span> <span data-ttu-id="ccd9b-125">3.0 SP1 e 2.0 SP1 per fornire supporto per gli identificatori IRI (International Resource) e IDN (Internationalized Domain nomi).</span><span class="sxs-lookup"><span data-stu-id="ccd9b-125">3.0 SP1, and 2.0 SP1 to provide support for International Resource Identifiers (IRI) and Internationalized Domain Names (IDN).</span></span> <span data-ttu-id="ccd9b-126">Gli utenti correnti non noteranno cambiamenti rispetto al comportamento di .NET Framework 2.0 a meno che non consentono in modo specifico gli IRI e IDN supportano.</span><span class="sxs-lookup"><span data-stu-id="ccd9b-126">Current users will not see any change from the .NET Framework 2.0 behavior unless they specifically enable IRI and IDN support.</span></span> <span data-ttu-id="ccd9b-127">Questo garantisce la compatibilità delle applicazioni con le versioni precedenti di .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="ccd9b-127">This ensures application compatibility with prior versions of the .NET Framework.</span></span>  
   
- <span data-ttu-id="d6bb3-128">Per abilitare il supporto per IRI, sono necessarie le seguenti due modifiche:</span><span class="sxs-lookup"><span data-stu-id="d6bb3-128">To enable support for IRI, the following two changes are required:</span></span>  
+ <span data-ttu-id="ccd9b-128">Per abilitare il supporto per IRI, sono necessarie le due modifiche seguenti:</span><span class="sxs-lookup"><span data-stu-id="ccd9b-128">To enable support for IRI, the following two changes are required:</span></span>  
   
-1.  <span data-ttu-id="d6bb3-129">Aggiungere la riga seguente al file Machine. config nella directory di .NET Framework 2.0</span><span class="sxs-lookup"><span data-stu-id="d6bb3-129">Add the following line to the machine.config file under the .NET Framework 2.0 directory</span></span>  
+1.  <span data-ttu-id="ccd9b-129">Aggiungere la riga seguente al file Machine. config nella directory di .NET Framework 2.0</span><span class="sxs-lookup"><span data-stu-id="ccd9b-129">Add the following line to the machine.config file under the .NET Framework 2.0 directory</span></span>  
   
     ```xml  
     <section name="uri" type="System.Configuration.UriSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />  
     ```  
   
-2.  <span data-ttu-id="d6bb3-130">Specificare se applicare le regole di analisi IRI.</span><span class="sxs-lookup"><span data-stu-id="d6bb3-130">Specify whether IRI parsing rules should be applied.</span></span> <span data-ttu-id="d6bb3-131">A questo scopo, è possibile usare il file machine.config o il file app.config.</span><span class="sxs-lookup"><span data-stu-id="d6bb3-131">This can be done in the machine.config or in the app.config file.</span></span>  
+2.  <span data-ttu-id="ccd9b-130">Specificare se le regole di analisi degli IRI deve essere applicato.</span><span class="sxs-lookup"><span data-stu-id="ccd9b-130">Specify whether IRI parsing rules should be applied.</span></span> <span data-ttu-id="ccd9b-131">A questo scopo, è possibile usare il file machine.config o il file app.config.</span><span class="sxs-lookup"><span data-stu-id="ccd9b-131">This can be done in the machine.config or in the app.config file.</span></span>  
   
- <span data-ttu-id="d6bb3-132">Abilitazione dell'analisi IRI (iriParsing abilitato = `true`) consentirà la normalizzazione e regole di controllo in base alle IRI più recente dei caratteri nella RFC 3987.</span><span class="sxs-lookup"><span data-stu-id="d6bb3-132">Enabling IRI parsing (iriParsing enabled = `true`) will do normalization and character checking according to the latest IRI rules in RFC 3987.</span></span> <span data-ttu-id="d6bb3-133">Il valore predefinito è `false` e la normalizzazione e i caratteri di controllo in base a RFC 2396 e RFC 3986 (per i valori letterali IPv6).</span><span class="sxs-lookup"><span data-stu-id="d6bb3-133">The default value is `false` and will do normalization and character checking according to RFC 2396 and RFC 3986 (for IPv6 literals).</span></span>  
+ <span data-ttu-id="ccd9b-132">Attivando l'analisi IRI (iriParsing attivato = `true`) eseguirà la normalizzazione e regole di carattere di controllo in base a IRI più recenti nella specifica RFC 3987.</span><span class="sxs-lookup"><span data-stu-id="ccd9b-132">Enabling IRI parsing (iriParsing enabled = `true`) will do normalization and character checking according to the latest IRI rules in RFC 3987.</span></span> <span data-ttu-id="ccd9b-133">Il valore predefinito è `false` e la normalizzazione e i caratteri di controllo in base alla RFC 2396 e RFC 3986 (per i valori letterali IPv6).</span><span class="sxs-lookup"><span data-stu-id="ccd9b-133">The default value is `false` and will do normalization and character checking according to RFC 2396 and RFC 3986 (for IPv6 literals).</span></span>  
   
-### <a name="configuration-files"></a><span data-ttu-id="d6bb3-134">File di configurazione</span><span class="sxs-lookup"><span data-stu-id="d6bb3-134">Configuration Files</span></span>  
- <span data-ttu-id="d6bb3-135">Questo elemento può essere usato nel file di configurazione dell'applicazione o nel file di configurazione del computer (Machine.config).</span><span class="sxs-lookup"><span data-stu-id="d6bb3-135">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+### <a name="configuration-files"></a><span data-ttu-id="ccd9b-134">File di configurazione</span><span class="sxs-lookup"><span data-stu-id="ccd9b-134">Configuration Files</span></span>  
+ <span data-ttu-id="ccd9b-135">Questo elemento può essere usato nel file di configurazione dell'applicazione o nel file di configurazione del computer (Machine.config).</span><span class="sxs-lookup"><span data-stu-id="ccd9b-135">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d6bb3-136">Esempio</span><span class="sxs-lookup"><span data-stu-id="d6bb3-136">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="ccd9b-136">Esempio</span><span class="sxs-lookup"><span data-stu-id="ccd9b-136">Example</span></span>  
   
-### <a name="description"></a><span data-ttu-id="d6bb3-137">Descrizione</span><span class="sxs-lookup"><span data-stu-id="d6bb3-137">Description</span></span>  
- <span data-ttu-id="d6bb3-138">Nell'esempio seguente viene mostrata una configurazione utilizzata per la <xref:System.Uri> classe per supportare l'analisi IRI e i nomi IDN.</span><span class="sxs-lookup"><span data-stu-id="d6bb3-138">The following example shows a configuration used by the <xref:System.Uri> class to support IRI parsing and IDN names.</span></span>  
+### <a name="description"></a><span data-ttu-id="ccd9b-137">Descrizione</span><span class="sxs-lookup"><span data-stu-id="ccd9b-137">Description</span></span>  
+ <span data-ttu-id="ccd9b-138">Nell'esempio seguente mostra una configurazione usata dal <xref:System.Uri> classe per supportare l'analisi IRI e IDN nomi.</span><span class="sxs-lookup"><span data-stu-id="ccd9b-138">The following example shows a configuration used by the <xref:System.Uri> class to support IRI parsing and IDN names.</span></span>  
   
-### <a name="code"></a><span data-ttu-id="d6bb3-139">Codice</span><span class="sxs-lookup"><span data-stu-id="d6bb3-139">Code</span></span>  
+### <a name="code"></a><span data-ttu-id="ccd9b-139">Codice</span><span class="sxs-lookup"><span data-stu-id="ccd9b-139">Code</span></span>  
   
 ```xml  
 <configuration>  
@@ -82,7 +81,7 @@ ms.locfileid: "32743303"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="d6bb3-140">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="d6bb3-140">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="ccd9b-140">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="ccd9b-140">See Also</span></span>  
  <xref:System.Configuration.IriParsingElement?displayProperty=nameWithType>  
  <xref:System.Configuration.UriSection?displayProperty=nameWithType>  
- [<span data-ttu-id="d6bb3-141">Schema delle impostazioni di rete</span><span class="sxs-lookup"><span data-stu-id="d6bb3-141">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+ [<span data-ttu-id="ccd9b-141">Schema delle impostazioni di rete</span><span class="sxs-lookup"><span data-stu-id="ccd9b-141">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
