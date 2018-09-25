@@ -1,5 +1,5 @@
 ---
-title: '&lt;impostazioni&gt; elemento (impostazioni di rete)'
+title: '&lt;impostazioni&gt; (impostazioni di rete)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#settings
@@ -10,15 +10,14 @@ helpviewer_keywords:
 ms.assetid: 189ce989-c39b-427d-b004-6b82a668b931
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 3f717705a6cd4cc29fe333f5012c7fec466d350b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9d6189c736e1f2843a986c3a96f8547e9a231db0
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752478"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47075148"
 ---
-# <a name="ltsettingsgt-element-network-settings"></a>&lt;impostazioni&gt; elemento (impostazioni di rete)
+# <a name="ltsettingsgt-element-network-settings"></a>&lt;impostazioni&gt; (impostazioni di rete)
 Configura le opzioni di rete di base per lo spazio dei nomi <xref:System.Net?displayProperty=nameWithType>.  
   
  \<configuration>  
@@ -49,13 +48,13 @@ Configura le opzioni di rete di base per lo spazio dei nomi <xref:System.Net?dis
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[HttpListener](../../../../../docs/framework/configure-apps/file-schema/network/httplistener-element-network-settings.md)|Consente di personalizzare i parametri utilizzati per la <xref:System.Net.HttpListener> classe.|  
-|[HttpWebRequest](../../../../../docs/framework/configure-apps/file-schema/network/httpwebrequest-element-network-settings.md)|Consente di personalizzare i parametri della richiesta Web.|  
-|[IPv6](../../../../../docs/framework/configure-apps/file-schema/network/ipv6-element-network-settings.md)|Protocollo Internet versione 6 (IPv6) consente il supporto.|  
-|[\<performanceCounter > elemento (impostazioni di rete)](../../../../../docs/framework/configure-apps/file-schema/network/performancecounter-element-network-settings.md)|Abilita i contatori delle prestazioni di rete.|  
-|[servicePointManager](../../../../../docs/framework/configure-apps/file-schema/network/servicepointmanager-element-network-settings.md)|Configura le connessioni alle risorse di rete.|  
-|[Socket](../../../../../docs/framework/configure-apps/file-schema/network/socket-element-network-settings.md)|Specifica se le operazioni socket utilizzano le porte di completamento.|  
-|[\<webProxyScript > elemento (impostazioni di rete)](../../../../../docs/framework/configure-apps/file-schema/network/webproxyscript-element-network-settings.md)|Consente di configurare le caratteristiche dello script utilizzato per individuare il proxy Web.|  
+|[httpListener](../../../../../docs/framework/configure-apps/file-schema/network/httplistener-element-network-settings.md)|Consente di personalizzare i parametri usati dal <xref:System.Net.HttpListener> classe.|  
+|[httpWebRequest](../../../../../docs/framework/configure-apps/file-schema/network/httpwebrequest-element-network-settings.md)|Consente di personalizzare i parametri della richiesta Web.|  
+|[IPv6](../../../../../docs/framework/configure-apps/file-schema/network/ipv6-element-network-settings.md)|Abilita protocollo Internet versione 6 (IPv6) supportano.|  
+|[\<performanceCounter > (impostazioni di rete)](../../../../../docs/framework/configure-apps/file-schema/network/performancecounter-element-network-settings.md)|I contatori delle prestazioni di rete.|  
+|[servicePointManager](../../../../../docs/framework/configure-apps/file-schema/network/servicepointmanager-element-network-settings.md)|Consente di configurare le connessioni alle risorse di rete.|  
+|[socket](../../../../../docs/framework/configure-apps/file-schema/network/socket-element-network-settings.md)|Specifica se le operazioni socket usano le porte di completamento.|  
+|[\<webProxyScript > (impostazioni di rete)](../../../../../docs/framework/configure-apps/file-schema/network/webproxyscript-element-network-settings.md)|Consente di configurare le caratteristiche dello script utilizzato per individuare i proxy Web.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   

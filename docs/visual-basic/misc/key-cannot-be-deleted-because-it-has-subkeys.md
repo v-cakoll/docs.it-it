@@ -3,11 +3,11 @@ title: Impossibile eliminare la chiave perché contiene sottochiavi
 ms.date: 07/20/2015
 ms.assetid: 71d7f28f-42ef-4eb7-a39e-512c40b79977
 ms.openlocfilehash: da784f0d22e0cdd5db5054645d977918fca47f4b
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46519619"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47061290"
 ---
 # <a name="key-cannot-be-deleted-because-it-has-subkeys"></a>Impossibile eliminare la chiave perché contiene sottochiavi
 La chiave non può essere eliminata perché contiene sottochiavi.  

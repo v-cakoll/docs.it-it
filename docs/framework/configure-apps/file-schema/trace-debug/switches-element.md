@@ -11,20 +11,19 @@ helpviewer_keywords:
 ms.assetid: 4cf36786-b89a-40e2-a0f1-86bb9b783343
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 60a18ae8d89d6be69b2c10c07064f123d3f9c0f8
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 7ca375935c1dfcdb406257ece1a9dfd18851dddf
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745147"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47113884"
 ---
 # <a name="ltswitchesgt-element"></a>&lt;commutatori&gt; elemento
 Contiene le opzioni di traccia e il livello in cui vengono impostate le opzioni di traccia.  
   
  \<configuration>  
 \<System. Diagnostics >  
-\<commutatori >  
+\<Opzioni >  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -53,10 +52,10 @@ Contiene le opzioni di traccia e il livello in cui vengono impostate le opzioni 
 |`System.diagnostics`|Specifica i listener di traccia per raccogliere, archiviare e indirizzare i messaggi, oltre al livello di impostazione di un'opzione di traccia.|  
   
 ## <a name="remarks"></a>Note  
- È possibile modificare il livello di un'opzione di traccia mediante l'inserimento in un file di configurazione. Se l'opzione è un <xref:System.Diagnostics.BooleanSwitch>, è possibile attivare e disattivare. Se l'opzione è un <xref:System.Diagnostics.TraceSwitch>, è possibile assegnare diversi livelli per specificare i tipi di traccia messaggi o di debug generati dall'applicazione.  
+ È possibile modificare il livello di un'opzione di traccia inserendolo in un file di configurazione. Se l'opzione è un <xref:System.Diagnostics.BooleanSwitch>, è possibile attivare e disattivare. Se l'opzione è un <xref:System.Diagnostics.TraceSwitch>, è possibile assegnare diversi livelli per specificare i tipi di traccia o debug messaggi generati dall'applicazione.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare il  **\<passare >** elemento da impostare il `General` opzione di traccia di <xref:System.Diagnostics.TraceLevel> livello e attivare il `Data` opzione di traccia Boolean.  
+ Nell'esempio seguente viene illustrato come utilizzare il  **\<passare >** elemento per cui impostare il `General` opzione di traccia il <xref:System.Diagnostics.TraceLevel> livello e attivare il `Data` commutatore di traccia di tipo Boolean.  
   
 ```xml  
 <configuration>  

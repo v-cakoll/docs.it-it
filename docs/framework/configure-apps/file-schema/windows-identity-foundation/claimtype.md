@@ -1,23 +1,22 @@
 ---
-title: '&lt;ClaimType&gt;'
+title: '&lt;Tipo di attestazione&gt;'
 ms.date: 03/30/2017
 ms.assetid: d17b5831-9a2c-45c4-b0d1-68f48e72e861
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 94f8586a9ca63b8c1f1128cdda4a74ccfe0f5416
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 805377565b6e835fd9ffba915a003bc56529a3b6
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32767427"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47084215"
 ---
-# <a name="ltclaimtypegt"></a>&lt;ClaimType&gt;
+# <a name="ltclaimtypegt"></a>&lt;Tipo di attestazione&gt;
 Specifica una singola attestazione obbligatorio o facoltativa per i token di sicurezza in ingresso.  
   
  \<system.identityModel>  
 \<identityConfiguration>  
 \<claimTypeRequired >  
-\<claimType >  
+\<tipo di attestazione >  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,7 +42,7 @@ Specifica una singola attestazione obbligatorio o facoltativa per i token di sic
 |facoltativi|Valore booleano che specifica se il tipo di attestazione è facoltativo. Facoltativo.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- Nessuno  
+ nessuno  
   
 ### <a name="parent-elements"></a>Elementi padre  
   

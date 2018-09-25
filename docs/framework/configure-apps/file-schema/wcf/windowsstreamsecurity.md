@@ -3,13 +3,12 @@ title: '&lt;windowsStreamSecurity&gt;'
 ms.date: 03/30/2017
 ms.assetid: 926bea29-90c7-4a26-9cf0-fb4aa44f6f70
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: a089a6fb61e8f7fac4116b2280a5c2fe0b703f94
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 6c1253e6f402da6b818a4438142e122f8b31809c
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32755110"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47084260"
 ---
 # <a name="ltwindowsstreamsecuritygt"></a>&lt;windowsStreamSecurity&gt;
 Specificare le impostazioni per la sicurezza del flusso di Windows dell'associazione personalizzata.  
@@ -36,7 +35,7 @@ Specificare le impostazioni per la sicurezza del flusso di Windows dell'associaz
 |protectionLevel|Definisce la sicurezza a livello di messaggio. La firma dei messaggi riduce il rischio di manomissione da parte di terzi durante il trasferimento. La crittografia fornisce riservatezza a livello di dati durante il trasporto. Di seguito vengono elencati i valori validi:<br /><br /> -None: Nessuna protezione.<br />-Sign: I messaggi vengono firmati.<br />-EncryptAndSign: I messaggi sono firmati e crittografati.<br /><br /> L'impostazione predefinita è EncryptAndSign.<br /><br /> L'attributo è di tipo <xref:System.Net.Security.ProtectionLevel>.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- Nessuno  
+ nessuno  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -45,7 +44,7 @@ Specificare le impostazioni per la sicurezza del flusso di Windows dell'associaz
 |[\<binding>](../../../../../docs/framework/misc/binding.md)|Definisce tutte le funzionalità di associazione dell'associazione personalizzata.|  
   
 ## <a name="remarks"></a>Note  
- I trasporti che usano un protocollo orientato al flusso, ad esempio TCP e named pipe, supportano aggiornamenti del trasporto basati sul flusso. In particolare, WCF fornisce aggiornamenti della sicurezza. La configurazione della sicurezza del trasporto viene incapsulata da questo elemento di configurazione, oltre che dalla [ \<sslStreamSecurity >](../../../../../docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md), che possono essere configurati e aggiunto a un'associazione personalizzata  
+ I trasporti che usano un protocollo orientato al flusso, ad esempio TCP e named pipe, supportano aggiornamenti del trasporto basati sul flusso. In particolare, WCF fornisce aggiornamenti della sicurezza. La configurazione di questa sicurezza del trasporto viene incapsulata da questo elemento di configurazione e dalla [ \<sslStreamSecurity >](../../../../../docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md), che possono essere configurate e aggiunte a un'associazione personalizzata  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.ServiceModel.Channels.CustomBinding>  

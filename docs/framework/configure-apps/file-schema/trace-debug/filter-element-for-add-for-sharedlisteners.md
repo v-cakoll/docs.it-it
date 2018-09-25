@@ -1,5 +1,5 @@
 ---
-title: '&lt;filtro&gt; elemento per &lt;aggiungere&gt; per &lt;sharedListeners&gt;'
+title: '&lt;filtro&gt; (elemento) per &lt;aggiungere&gt; per &lt;sharedListeners&gt;'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sharedListeners/add/filter
@@ -12,15 +12,14 @@ helpviewer_keywords:
 ms.assetid: 7d4e7faa-2e4e-4379-ac76-f6cd7f2f8fac
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 3bbba1c805c6b300f7cf7b3d9112cde9df7607a8
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5172a2be163e178b9c7115825fa5dba4ff073a96
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745055"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47115139"
 ---
-# <a name="ltfiltergt-element-for-ltaddgt-for-ltsharedlistenersgt"></a>&lt;filtro&gt; elemento per &lt;aggiungere&gt; per &lt;sharedListeners&gt;
+# <a name="ltfiltergt-element-for-ltaddgt-for-ltsharedlistenersgt"></a>&lt;filtro&gt; (elemento) per &lt;aggiungere&gt; per &lt;sharedListeners&gt;
 Aggiunge un filtro a un listener nella raccolta `sharedListeners`.  
   
  \<configuration>  
@@ -43,7 +42,7 @@ Aggiunge un filtro a un listener nella raccolta `sharedListeners`.
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|**type**|Attributo obbligatorio.<br /><br /> Specifica il tipo del filtro. È possibile utilizzare solo il nome completo del tipo (nel formato di <xref:System.Type.FullName%2A?displayProperty=nameWithType> proprietà), oppure è possibile utilizzare il nome completo del tipo, incluse le informazioni sull'assembly (nel formato il <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType> proprietà). Per informazioni sulla creazione di un nome completo del tipo, vedere [specifica di nomi di tipo completi](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
+|**type**|Attributo obbligatorio.<br /><br /> Specifica il tipo del filtro. È possibile usare solo il nome completo del tipo (nel formato il <xref:System.Type.FullName%2A?displayProperty=nameWithType> proprietà), oppure è possibile usare il nome completo del tipo tra cui le informazioni sull'assembly (nel formato di <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType> proprietà). Per informazioni sulla creazione di un nome completo del tipo, vedere [Specifying Fully Qualified Type Names](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
 |**attributo initializeData**|Attributo facoltativo.<br /><br /> La stringa passata al costruttore per la classe specificata.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
@@ -55,16 +54,16 @@ Aggiunge un filtro a un listener nella raccolta `sharedListeners`.
 |-------------|-----------------|  
 |`configuration`|Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.|  
 |`system.diagnostics`|Specifica i listener di traccia per raccogliere, archiviare e indirizzare i messaggi, oltre al livello di impostazione di un'opzione di traccia.|  
-|`sharedListeners`|Una raccolta di listener che qualsiasi origine o un elemento di traccia può fare riferimento.|  
-|`add`|Aggiunge un listener per il **sharedListeners** insieme.|  
+|`sharedListeners`|Raccolta di listener che possono fare riferimento qualsiasi origine o un elemento di traccia.|  
+|`add`|Aggiunge un listener per il **sharedListeners** raccolta.|  
   
 ## <a name="remarks"></a>Note  
  Se viene definito un listener in un `<add>` elemento del `<sharedListeners>` elemento, il filtro per il listener deve essere definito un `<filter>` elemento figlio del `<add>` elemento.  
   
- Questo elemento può essere usato nel file di configurazione del computer (Machine. config) e file di configurazione dell'applicazione.  
+ Questo elemento può essere usato nel file di configurazione del computer (Machine. config) e il file di configurazione dell'applicazione.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare il `<filter>` elemento per aggiungere un filtro al listener di traccia `console` nel `sharedListeners` insieme.  
+ Nell'esempio seguente viene illustrato come utilizzare il `<filter>` elemento per aggiungere un filtro per il listener di traccia `console` nel `sharedListeners` raccolta.  
   
 ```xml  
 <configuration>  

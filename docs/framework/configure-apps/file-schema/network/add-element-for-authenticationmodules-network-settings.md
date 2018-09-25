@@ -1,5 +1,5 @@
 ---
-title: '&lt;aggiungere&gt; elemento per authenticationModules (impostazioni di rete)'
+title: '&lt;aggiungere&gt; (elemento) per authenticationModules (impostazioni di rete)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#add
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 333c5fb0-a2ab-4db8-8531-a7fe37bb9b5b
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 471e36bb584164b851e7a06c0e682ba9872f7910
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 4a9bcc6cd5d2bbf30f463da0a51e1bccbcd5a3f1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47083887"
 ---
-# <a name="ltaddgt-element-for-authenticationmodules-network-settings"></a>&lt;aggiungere&gt; elemento per authenticationModules (impostazioni di rete)
+# <a name="ltaddgt-element-for-authenticationmodules-network-settings"></a>&lt;aggiungere&gt; (elemento) per authenticationModules (impostazioni di rete)
 Aggiunge un modulo di autenticazione all'applicazione.  
   
  \<configuration>  
@@ -51,12 +51,12 @@ Aggiunge un modulo di autenticazione all'applicazione.
   
 |**Elemento**|**Descrizione**|  
 |-----------------|---------------------|  
-|[authenticationModules](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|Specifica i moduli utilizzati per autenticare le richieste di rete.|  
+|[authenticationModules](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|Specifica i moduli usati per autenticare le richieste di rete.|  
   
 ## <a name="remarks"></a>Note  
- Con l'elemento `add` viene aggiunto un modulo di autenticazione alla fine dell'elenco dei moduli di autenticazione registrati. Moduli di autenticazione vengono chiamati nell'ordine in cui sono stati aggiunti all'elenco.  
+ Con l'elemento `add` viene aggiunto un modulo di autenticazione alla fine dell'elenco dei moduli di autenticazione registrati. I moduli di autenticazione vengono chiamati nell'ordine in cui sono stati aggiunti all'elenco.  
   
- Il valore per il `type` attributo deve essere un nome di tipo valido e un nome di assembly corrispondente, separati da una virgola.  
+ Il valore per il `type` attributo deve essere un nome di tipo valido e il corrispondente nome dell'assembly, separati da una virgola.  
   
 ## <a name="configuration-files"></a>File di configurazione  
  Questo elemento può essere usato nel file di configurazione dell'applicazione o nel file di configurazione del computer (Machine.config).  

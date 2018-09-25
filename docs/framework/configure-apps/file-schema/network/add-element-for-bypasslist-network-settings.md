@@ -1,5 +1,5 @@
 ---
-title: '&lt;aggiungere&gt; elemento per bypasslist (impostazioni di rete)'
+title: '&lt;aggiungere&gt; (elemento) per bypasslist (impostazioni di rete)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/bypasslist/add
@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: a0b86e28-86b4-4497-abe8-d5fd614c7926
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: d786d4fd7e6663649408b36fb518db06063ef916
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b6cf22fcaff928e53c33a8eb4987acd5a7f6250e
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754519"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47081033"
 ---
-# <a name="ltaddgt-element-for-bypasslist-network-settings"></a>&lt;aggiungere&gt; elemento per bypasslist (impostazioni di rete)
-Aggiunge un indirizzo IP o nome DNS all'elenco di esclusione proxy.  
+# <a name="ltaddgt-element-for-bypasslist-network-settings"></a>&lt;aggiungere&gt; (elemento) per bypasslist (impostazioni di rete)
+Aggiunge un indirizzo IP o nome DNS per l'elenco proxy da ignorare.  
   
  \<configuration>  
 \<system.net>  
@@ -53,22 +52,22 @@ Aggiunge un indirizzo IP o nome DNS all'elenco di esclusione proxy.
   
 |**Elemento**|**Descrizione**|  
 |-----------------|---------------------|  
-|[BypassList](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Fornisce un set di espressioni regolari che descrivono gli indirizzi che non utilizzano un proxy.|  
+|[BypassList](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Fornisce un set di espressioni regolari che descrivono gli indirizzi che non usano un proxy.|  
   
 ## <a name="remarks"></a>Note  
  Il `add` elemento consente di inserire le espressioni regolari che descrivono gli indirizzi IP o nomi di server DNS all'elenco di indirizzi che ignorano un server proxy.  
   
- Il valore di `address` attributo deve essere un'espressione regolare che descrive un set di indirizzi IP o nomi host.  
+ Il valore della `address` attributo deve essere un'espressione regolare che descrive un set di indirizzi IP o nomi host.  
   
- È necessario prestare attenzione quando si specifica un'espressione regolare per questo elemento. L'espressione regolare "[a-z] +\\.contoso\\. com" corrispondenza qualsiasi host nel dominio contoso.com, ma corrisponde anche a qualsiasi host nel dominio cpandl.com. Per trovare un host nel dominio contoso.com, utilizzare un ancoraggio ("$"): "[a-z] +\\.contoso\\$. com".  
+ È necessario prestare attenzione quando si specifica un'espressione regolare per questo elemento. L'espressione regolare "[a-z] +\\.contoso\\. com" corrisponde a qualsiasi host nel dominio contoso.com, che corrisponde anche a qualsiasi host nel dominio cpandl.com. In modo che corrisponda solo un host nel dominio contoso.com, usare un ancoraggio ("$"): "[a-z] +\\.contoso\\$. com".  
   
- Per ulteriori informazioni sulle espressioni regolari, vedere. [Espressioni regolari di .NET framework](../../../../../docs/standard/base-types/regular-expressions.md).  
+ Per altre informazioni sulle espressioni regolari, vedere. [Espressioni regolari di .NET framework](../../../../../docs/standard/base-types/regular-expressions.md).  
   
 ## <a name="configuration-files"></a>File di configurazione  
  Questo elemento può essere usato nel file di configurazione dell'applicazione o nel file di configurazione del computer (Machine.config).  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente aggiunge due indirizzi all'elenco di esclusione. Il primo viene ignorato il proxy per tutti i server nel dominio contoso.com. il secondo consente di ignorare il proxy per tutti i server il cui indirizzo IP inizia con 192.168.  
+ L'esempio seguente aggiunge due indirizzi all'elenco di esclusione. Il primo consente di ignorare il proxy per tutti i server nel dominio contoso.com. il secondo consente di ignorare il proxy per tutti i server il cui indirizzo IP inizia con 192.168.  
   
 ```xml  
 <configuration>  

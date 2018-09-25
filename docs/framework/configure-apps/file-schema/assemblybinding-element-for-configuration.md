@@ -1,5 +1,5 @@
 ---
-title: '&lt;assemblyBinding&gt; elemento per &lt;configurazione&gt;'
+title: '&lt;assemblyBinding&gt; (elemento) per &lt;configurazione&gt;'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/assemblyBinding
@@ -9,15 +9,14 @@ helpviewer_keywords:
 ms.assetid: 6cc55983-b894-449b-8e26-b258e53939cd
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 6a3358b2d64ade65e641caa203e2e760dcc4be2c
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5693b92ac35a357ff1f8643d0eb9ec2105acecb4
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743121"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47073463"
 ---
-# <a name="assemblybinding-element-for-configuration"></a>\<assemblyBinding > elemento per \<configurazione >
+# <a name="assemblybinding-element-for-configuration"></a>\<assemblyBinding > (elemento) per \<configuration >
 
 Specifica i criteri di associazione degli assembly al livello di configurazione.
 
@@ -52,10 +51,10 @@ Specifica i criteri di associazione degli assembly al livello di configurazione.
 
 ## <a name="remarks"></a>Note
 
-Il [  **\<linkedConfiguration >** ](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md) elemento semplifica la gestione degli assembly del componente, consentendo di file di configurazione in file di configurazione dell'applicazione per includere assembly percorsi conosciuti, anziché di duplicare le impostazioni di configurazione di assembly.
+Il [  **\<linkedConfiguration >** ](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md) elemento semplifica la gestione di assembly del componente, consentendo a file di configurazione in file di configurazione dell'applicazione per includere assembly percorsi noti, invece di duplicare le impostazioni di configurazione di assembly.
 
 > [!NOTE]
-> Il  **\<linkedConfiguration >** elemento non è supportato per le applicazioni con manifesti side-by-side di Windows.
+> Il  **\<linkedConfiguration >** elemento non è supportato per le applicazioni con i manifesti side-by-side di Windows.
 
 ## <a name="example"></a>Esempio
 

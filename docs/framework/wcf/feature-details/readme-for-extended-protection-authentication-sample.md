@@ -3,18 +3,17 @@ title: File Leggimi sull'esempio relativo alla protezione estesa per l'autentica
 ms.date: 03/30/2017
 ms.assetid: 80bf2e97-398d-4db5-9040-d96478a2ccab
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: d45271180b7f00ba78d106f2a93d5860375da5f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d298f1f6668078d327cf0fd78110c0cbb7b4474c
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495080"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47110320"
 ---
 # <a name="readme-for-extended-protection-authentication-sample"></a>File Leggimi sull'esempio relativo alla protezione estesa per l'autenticazione
 La protezione estesa è un'iniziativa di sicurezza per impedire attacchi man-in-the-middle (MITM) in cui un utente malintenzionato (il "man-in-the-middle"), intercetta le credenziali del client e li utilizza per accedere alle risorse protette nel server di destinazione del client.  
   
- Per ulteriori informazioni, vedere [Extended Protection for Authentication Overview](../../../../docs/framework/wcf/feature-details/extended-protection-for-authentication-overview.md).  
+ Per altre informazioni, vedere [Extended Protection for Authentication Overview](../../../../docs/framework/wcf/feature-details/extended-protection-for-authentication-overview.md).  
   
 > [!NOTE]
 >  Questo esempio funziona solo quando è ospitato in IIS e non funziona in Visual Studio Development Server perché non supporta HTTPS.  
@@ -45,6 +44,6 @@ La protezione estesa è un'iniziativa di sicurezza per impedire attacchi man-in-
   
 10. Per testare il servizio, accedere all'URL da una finestra del browser. Se si desidera accedere a tale URL da più computer, verificare che il firewall sia aperto per tutte le connessioni HTTP e HTTPS in ingresso.  
   
-11. Aprire il file di configurazione di client e fornire un nome completo del computer per il \<client >- \<endpoint >-attributo dell'indirizzo, sostituendo << full_machine_name >>.  
+11. Aprire il file di configurazione client e fornire un nome di computer completo per il \<client >- \<endpoint >-attributo dell'indirizzo, sostituendo << full_machine_name >>.  
   
 12. Eseguire il client. Per comunicare con il servizio, il client stabilisce un canale protetto e utilizza la protezione estesa tra gli elementi.

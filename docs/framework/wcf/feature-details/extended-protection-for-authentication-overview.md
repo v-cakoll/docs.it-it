@@ -3,13 +3,12 @@ title: Panoramica sulla protezione estesa per l'autenticazione
 ms.date: 03/30/2017
 ms.assetid: 3d2ceffe-a7bf-4bd9-a5a2-9406423bd7f8
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 5b4abd570f8bb40f2faa72f2debf2dee563d3a23
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 77ebaeaeb82d931a24d35fc1b5c2034fce03a032
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526601"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47090448"
 ---
 # <a name="extended-protection-for-authentication-overview"></a>Panoramica sulla protezione estesa per l'autenticazione
 La protezione estesa per l'autenticazione consente di impedire attacchi man-in-the-middle (MITM) in cui l'autore di un attacco intercetta le credenziali del client e le inoltra a un server.  

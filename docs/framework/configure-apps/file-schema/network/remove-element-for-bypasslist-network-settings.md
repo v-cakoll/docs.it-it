@@ -1,5 +1,5 @@
 ---
-title: '&lt;rimuovere&gt; elemento per bypasslist (impostazioni di rete)'
+title: '&lt;rimuovere&gt; (elemento) per bypasslist (impostazioni di rete)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/bypasslist/remove
@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 61dcfb4a-e3d9-4abf-a2cd-7d685fe2f64b
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 5c7918048743d53d8523ec399d1a11c67152a2bf
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b6c72d9780088fddcaa59e644ff8069afbb4e43d
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47074979"
 ---
-# <a name="ltremovegt-element-for-bypasslist-network-settings"></a>&lt;rimuovere&gt; elemento per bypasslist (impostazioni di rete)
-Rimuove l'elenco proxy da ignorare un indirizzo IP o nome DNS.  
+# <a name="ltremovegt-element-for-bypasslist-network-settings"></a>&lt;rimuovere&gt; (elemento) per bypasslist (impostazioni di rete)
+Rimuove un indirizzo IP o nome DNS dall'elenco di bypass del proxy.  
   
  \<configuration>  
 \<system.net>  
@@ -52,20 +52,20 @@ Rimuove l'elenco proxy da ignorare un indirizzo IP o nome DNS.
   
 |**Elemento**|**Descrizione**|  
 |-----------------|---------------------|  
-|[BypassList](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Fornisce un set di espressioni regolari che descrivono gli indirizzi che non utilizzano un proxy.|  
+|[BypassList](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Fornisce un set di espressioni regolari che descrivono gli indirizzi che non usano un proxy.|  
   
 ## <a name="remarks"></a>Note  
- Il `remove` elemento rimuove espressioni regolari che descrivono gli indirizzi IP o nomi di server DNS nell'elenco di indirizzi che ignorano un server proxy. Gli indirizzi sono stati definiti in precedenza nel file di configurazione o a un livello superiore nella gerarchia di configurazione.  
+ Il `remove` elemento rimuove le espressioni regolari che descrivono gli indirizzi IP o nomi di server DNS nell'elenco di indirizzi che ignorano un server proxy. Gli indirizzi sono stati definiti in precedenza nel file di configurazione o a un livello superiore nella gerarchia di configurazione.  
   
  Il valore per il `address` attributo deve essere un'espressione regolare che descrive un set di indirizzi IP o nomi host.  
   
- Per ulteriori informazioni sulle espressioni regolari, vedere. [Espressioni regolari di .NET framework](../../../../../docs/standard/base-types/regular-expressions.md).  
+ Per altre informazioni sulle espressioni regolari, vedere. [Espressioni regolari di .NET framework](../../../../../docs/standard/base-types/regular-expressions.md).  
   
 ## <a name="configuration-files"></a>File di configurazione  
  Questo elemento può essere usato nel file di configurazione dell'applicazione o nel file di configurazione del computer (Machine.config).  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente rimuove qualsiasi definizione precedente per il dominio adventure-works.com e quindi aggiunge il dominio contoso.com all'elenco di esclusione.  
+ Nell'esempio seguente rimuove le definizioni precedenti per il dominio Adventure-Works.com e quindi aggiunge il dominio contoso.com all'elenco di esclusione.  
   
 ```xml  
 <configuration>  

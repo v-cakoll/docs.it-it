@@ -1,5 +1,5 @@
 ---
-title: '&lt;servicePointManager&gt; elemento (impostazioni di rete)'
+title: '&lt;servicePointManager&gt; (impostazioni di rete)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#servicePointManager
@@ -10,16 +10,15 @@ helpviewer_keywords:
 ms.assetid: 6e5def51-3646-4ef6-a7bd-c69151321bec
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 5903174f125938923a63fc031421a8d5a020e56d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 2aaf590975d9fd3f5d78cb64d8d2b1c38c0e8dc7
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753586"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47113069"
 ---
-# <a name="ltservicepointmanagergt-element-network-settings"></a>&lt;servicePointManager&gt; elemento (impostazioni di rete)
-Configura le connessioni alle risorse di rete.  
+# <a name="ltservicepointmanagergt-element-network-settings"></a>&lt;servicePointManager&gt; (impostazioni di rete)
+Consente di configurare le connessioni alle risorse di rete.  
   
  \<configuration>  
 \<system.net>  
@@ -47,13 +46,13 @@ Configura le connessioni alle risorse di rete.
   
 |**Attributo**|**Descrizione**|  
 |-------------------|---------------------|  
-|`checkCertificateName`|Specifica se il sistema deve verificare che il nome del certificato corrisponda al nome di host server prima di utilizzare il certificato. Il valore predefinito è `true`.|  
-|`checkCertificateRevocationList`|Specifica se il sistema deve verificare se è stato revocato il certificato prima di utilizzare il certificato. Il valore predefinito è `false`.|  
+|`checkCertificateName`|Specifica se il sistema deve verificare che il nome del certificato corrisponda al nome host del server prima di usare il certificato. Il valore predefinito è `true`.|  
+|`checkCertificateRevocationList`|Specifica se il sistema deve verificare se è stato revocato il certificato prima di usare il certificato. Il valore predefinito è `false`.|  
 |`dnsRefreshTimeout`|Specifica la durata del servizio DNS (Domain Name) vengono memorizzati nella cache le soluzioni in combinazione con l'opzione DNS Round Robin, in millisecondi. Il valore predefinito è 120.000 millisecondi (due minuti).|  
-|`enableDnsRoundRobin`|Specifica se la risoluzione DNS dell'host nomi con più indirizzi IP (Internet Protocol) restituiti tutti gli indirizzi o solo il primo. Il valore predefinito è `false`.|  
-|`encryptionPolicy`|Specifica i criteri di crittografia applicato a una sessione SSL/TLS in un <xref:System.Net.ServicePointManager> istanza. I possibili valori sono equivalenti ai valori per il <xref:System.Net.Security.EncryptionPolicy> enumerazione. L'utilizzo di <xref:System.Security.Authentication.CipherAlgorithmType.Null> è necessario quando i criteri di crittografia sono impostato su `NoEncryption`. Il valore predefinito è `RequireEncryption`.|  
+|`enableDnsRoundRobin`|Specifica se le risoluzioni DNS dell'host di nomi con più indirizzi IP (Internet Protocol) restituiti tutti gli indirizzi, o solo il primo. Il valore predefinito è `false`.|  
+|`encryptionPolicy`|Specifica i criteri di crittografia applicati a una sessione SSL/TLS in un <xref:System.Net.ServicePointManager> istanza. I possibili valori sono equivalenti ai valori per il <xref:System.Net.Security.EncryptionPolicy> enumerazione. L'uso di <xref:System.Security.Authentication.CipherAlgorithmType.Null> è obbligatorio quando il criterio di crittografia è impostato su `NoEncryption`. Il valore predefinito è `RequireEncryption`.|  
 |`expect100Continue`|Specifica se i metodi POST devono prevedere di ricevere un `100-continue` risposta dal server. Il valore predefinito è `true`.|  
-|`useNagleAlgorithm`|Specifica se le connessioni controllate dal gestore del punto di servizio utilizzano l'algoritmo Nagle. Il valore predefinito è `true`.|  
+|`useNagleAlgorithm`|Specifica se le connessioni controllate dal punto di Gestione servizi usano l'algoritmo Nagle. Il valore predefinito è `true`.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  

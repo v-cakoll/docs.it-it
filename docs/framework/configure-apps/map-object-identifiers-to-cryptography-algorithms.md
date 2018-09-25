@@ -10,16 +10,15 @@ helpviewer_keywords:
 ms.assetid: c9673f81-bf9e-47fd-bc6f-6bc1c1c4c15e
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 7801c55cf6b3334347788013d9052038d5d2f3ec
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: d23fc48a53ee47aacfc290b52887b800ce37477f
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32756618"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47083611"
 ---
 # <a name="mapping-object-identifiers-to-cryptography-algorithms"></a>Mapping di identificatori di oggetti ad algoritmi di crittografia
-Verificare che le firme digitali che dati non vengono alterati quando viene inviato da un programma a un altro. In genere la firma digitale viene calcolata applicando una funzione matematica per l'hash dei dati da firmare. Quando si formatta un valore hash deve essere firmata, alcuni algoritmi di firma digitale accodare un identificatore di oggetto ASN. 1 (OID) come parte dell'operazione di formattazione. L'OID identifica l'algoritmo utilizzato per calcolare il valore hash. È possibile eseguire il mapping di algoritmi agli identificatori di oggetto per estendere il meccanismo di crittografia per l'utilizzo di algoritmi personalizzati. Nell'esempio seguente viene illustrato come eseguire il mapping di un identificatore di oggetto a un nuovo algoritmo di hash.  
+Le firme digitali garantiscono che i dati non venga manomesso quando viene inviato da un programma a un altro. In genere la firma digitale viene calcolata applicando una funzione matematica l'hash dei dati da firmare. Quando si formatta un valore hash deve essere firmato, alcuni algoritmi di firma digitale accodare un identificatore di oggetto ASN.1 (OID) come parte dell'operazione di formattazione. L'identificatore di oggetto identifica l'algoritmo utilizzato per calcolare l'hash. È possibile mappare gli algoritmi per gli identificatori di oggetto per estendere il meccanismo di crittografia per l'uso di algoritmi personalizzati. Nell'esempio seguente viene illustrato come eseguire il mapping di un identificatore di oggetto a un nuovo algoritmo di hash.  
   
 ```xml  
 <configuration>  
@@ -41,7 +40,7 @@ Verificare che le firme digitali che dati non vengono alterati quando viene invi
 </configuration>  
 ```  
   
- Il [ \<oidEntry > elemento](../../../docs/framework/configure-apps/file-schema/cryptography/oidentry-element.md) contiene due attributi. Il **OID** attributo è il numero dell'identificatore di oggetto. Il **nome** attributo è il valore della **nome** dall'attributo di [ \<nameEntry > elemento](../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md). Deve essere presente un mapping da un nome di algoritmo a una classe prima di un identificatore di oggetto può essere mappato a un nome semplice.  
+ Il [ \<oidEntry > elemento](../../../docs/framework/configure-apps/file-schema/cryptography/oidentry-element.md) contiene due attributi. Il **OID** attributo è il numero dell'identificatore di oggetto. Il **name** attributo è il valore della **nome** dell'attributo dal [ \<nameEntry > elemento](../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md). Deve essere presente un mapping da nome di un algoritmo a una classe prima di un identificatore di oggetto può essere mappato a un nome semplice.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Configurazione di classi di crittografia](../../../docs/framework/configure-apps/configure-cryptography-classes.md)  

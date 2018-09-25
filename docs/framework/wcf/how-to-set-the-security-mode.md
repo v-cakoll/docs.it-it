@@ -10,24 +10,23 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: 6e01dd9f-b5dd-4474-b24c-06e124de4ff7
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: e8c08fba0e4a74eafab00e75977a9f756c1b1cfa
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 32fd1ebede841488d1bfabd2f92bd3fb1ffb55e8
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33807241"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47087343"
 ---
 # <a name="how-to-set-the-security-mode"></a>Procedura: impostare la modalità di sicurezza
-Sicurezza di Windows Communication Foundation (WCF) presenta tre modalità di sicurezza comuni che si trovano nel binding predefiniti più: trasporto, messaggi e "trasporto con credenziali del messaggio". Esistono inoltre due modalità aggiuntive disponibili soltanto in due associazioni specifiche: la modalità "Solo credenziale a livello di trasporto" ("TransportCredentialOnly") dell'associazione <xref:System.ServiceModel.BasicHttpBinding> e la modalità "Entrambi" ("Both") dell'associazione <xref:System.ServiceModel.NetMsmqBinding>. Tuttavia, questo argomento descrive solo le tre modalità di sicurezza generali, ovvero: <xref:System.ServiceModel.SecurityMode.Transport>, <xref:System.ServiceModel.SecurityMode.Message> e <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>.  
+Sicurezza di Windows Communication Foundation (WCF) dispone di tre modalità di sicurezza comuni che si trovano nelle associazioni predefinite più: il trasporto e messaggio "trasporto con credenziali del messaggio". Esistono inoltre due modalità aggiuntive disponibili soltanto in due associazioni specifiche: la modalità "Solo credenziale a livello di trasporto" ("TransportCredentialOnly") dell'associazione <xref:System.ServiceModel.BasicHttpBinding> e la modalità "Entrambi" ("Both") dell'associazione <xref:System.ServiceModel.NetMsmqBinding>. Tuttavia, questo argomento descrive solo le tre modalità di sicurezza generali, ovvero: <xref:System.ServiceModel.SecurityMode.Transport>, <xref:System.ServiceModel.SecurityMode.Message> e <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>.  
   
  Si noti che non tutte le associazioni predefinite supportano queste modalità. Questo argomento descrive come utilizzare le classi <xref:System.ServiceModel.WSHttpBinding> e <xref:System.ServiceModel.NetTcpBinding> per impostare la modalità, sia a livello di programmazione sia in configurazione.  
   
- Per altre informazioni, vedere sicurezza WCF, vedere [Cenni preliminari sulla sicurezza](../../../docs/framework/wcf/feature-details/security-overview.md), [protezione Services](../../../docs/framework/wcf/securing-services.md), e [protezione dei servizi e client](../../../docs/framework/wcf/feature-details/securing-services-and-clients.md). Per ulteriori informazioni sulle modalità di trasporto e messaggio, vedere [la sicurezza del trasporto](../../../docs/framework/wcf/feature-details/transport-security.md) e [sicurezza dei messaggi](../../../docs/framework/wcf/feature-details/message-security-in-wcf.md).  
+ Per altre informazioni, vedere sicurezza WCF, vedere [Panoramica della sicurezza](../../../docs/framework/wcf/feature-details/security-overview.md), [Securing Services](../../../docs/framework/wcf/securing-services.md), e [Securing Services and Clients](../../../docs/framework/wcf/feature-details/securing-services-and-clients.md). Per altre informazioni sulle modalità di trasporto e messaggio, vedere [la sicurezza del trasporto](../../../docs/framework/wcf/feature-details/transport-security.md) e [Message Security](../../../docs/framework/wcf/feature-details/message-security-in-wcf.md).  
   
 ### <a name="to-set-the-security-mode-in-code"></a>Per impostare la modalità di sicurezza in codice  
   
-1.  Creare un'istanza della classe di associazione in uso. Per un elenco di associazioni predefinite, vedere [associazioni fornite dal sistema](../../../docs/framework/wcf/system-provided-bindings.md). In questo esempio viene creata un'istanza della classe <xref:System.ServiceModel.WSHttpBinding>  
+1.  Creare un'istanza della classe di associazione in uso. Per un elenco di associazioni predefinite, vedere [System-provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md). In questo esempio viene creata un'istanza della classe <xref:System.ServiceModel.WSHttpBinding>  
   
 2.  Impostare la proprietà `Mode` dell'oggetto restituito dalla proprietà `Security`.  
   
@@ -76,9 +75,9 @@ Sicurezza di Windows Communication Foundation (WCF) presenta tre modalità di si
   
 #### <a name="to-set-the-mode-and-clientcredentialtype-property-in-configuration"></a>Per impostare la modalità e la proprietà ClientCredentialType in configurazione  
   
-1.  Aggiungere un elemento di associazione appropriata di [ \<associazioni >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) elemento del file di configurazione. L'esempio seguente aggiunge un [ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) elemento.  
+1.  Aggiungere un elemento di binding appropriato per il [ \<associazioni >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) elemento del file di configurazione. L'esempio seguente aggiunge un [ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) elemento.  
   
-2.  Aggiungere un `<binding>` elemento e impostare il relativo `name` attributo su un valore appropriato.  
+2.  Aggiungere un `<binding>` e impostare il `name` attributo su un valore appropriato.  
   
 3.  Aggiungere un `<security>` elemento e impostare il `mode` attributo `Message`, `Transport`, o `TransportWithMessageCredential`.  
   
@@ -113,7 +112,7 @@ Sicurezza di Windows Communication Foundation (WCF) presenta tre modalità di si
 ### <a name="using-transportwithmessagecredential"></a>Utilizzo della modalità TransportWithMessageCredential  
  Quando si imposta la modalità di sicurezza su `TransportWithMessageCredential`, il trasporto determina il meccanismo di sicurezza a livello di trasporto effettivamente utilizzato. Ad esempio, il protocollo di trasporto HTTP utilizza il meccanismo Secure Sockets Layer (SSL) su HTTP (HTTPS). Pertanto, l'impostazione della proprietà `ClientCredentialType` di qualsiasi oggetto di sicurezza a livello di trasporto (ad esempio <xref:System.ServiceModel.HttpTransportSecurity>) viene ignorata.  In altre parole, è possibile impostare solo la proprietà `ClientCredentialType` dell'oggetto di sicurezza a livello di messaggio (per l'associazione `WSHttpBinding`, tale proprietà può essere impostata solo per l'oggetto <xref:System.ServiceModel.NonDualMessageSecurityOverHttp>).  
   
- Per altre informazioni, vedere [procedura: utilizzare sicurezza del trasporto e le credenziali del messaggio](../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md).  
+ Per altre informazioni, vedere [procedura: usare la sicurezza trasporto e le credenziali del messaggio](../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Procedura: Configurare una porta con un certificato SSL](../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  

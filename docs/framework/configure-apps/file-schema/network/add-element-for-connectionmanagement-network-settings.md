@@ -1,5 +1,5 @@
 ---
-title: '&lt;aggiungere&gt; elemento per connectionManagement (impostazioni di rete)'
+title: '&lt;aggiungere&gt; (elemento) per connectionManagement (impostazioni di rete)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#add
@@ -12,15 +12,14 @@ helpviewer_keywords:
 ms.assetid: 856bf57d-1c63-46c7-a178-03d97b0a4149
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: c6cfd036a98c345da23fc7b3699987c9678e149d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: cdc7e8501f7cf3f5cff4c29ca5b2d004ce7cd5c6
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753742"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47080325"
 ---
-# <a name="ltaddgt-element-for-connectionmanagement-network-settings"></a>&lt;aggiungere&gt; elemento per connectionManagement (impostazioni di rete)
+# <a name="ltaddgt-element-for-connectionmanagement-network-settings"></a>&lt;aggiungere&gt; (elemento) per connectionManagement (impostazioni di rete)
 Aggiunge un indirizzo IP o nome DNS all'elenco di gestione delle connessioni.  
   
  \<configuration>  
@@ -65,7 +64,7 @@ Aggiunge un indirizzo IP o nome DNS all'elenco di gestione delle connessioni.
  Questo elemento può essere usato nel file di configurazione dell'applicazione o nel file di configurazione del computer (Machine.config).  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente consente di configurare un'applicazione può utilizzare quattro connessioni al server www.contoso.com e due connessioni a tutti gli altri server.  
+ Nell'esempio seguente consente di configurare un'applicazione per usare quattro connessioni al server www.contoso.com e due connessioni a tutti gli altri server.  
   
 ```xml  
 <configuration>  

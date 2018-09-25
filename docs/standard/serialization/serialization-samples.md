@@ -2,12 +2,12 @@
 title: Esempi di serializzazione per .NET Framework
 ms.date: 03/30/2017
 ms.assetid: 6a56f66d-c80a-43e9-8e50-fb9b61120222
-ms.openlocfilehash: 67fef0855cbe33a32d4a3838e88a246cdc884dd4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5deae766b2b05fcb14c51666fa9fb988832a9a2d
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33581469"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47087304"
 ---
 # <a name="serialization-samples-for-the-net-framework"></a>Esempi di serializzazione per .NET Framework
 In questa sezione viene illustrata la serializzazione di oggetti in .NET Framework.  
@@ -20,10 +20,7 @@ In questa sezione viene illustrata la serializzazione di oggetti in .NET Framewo
  Vengono illustrate le funzionalità relative all'indipendenza dalla versione della serializzazione .NET.  
   
  [Esempio di tecnologia per la serializzazione di generics dei servizi Web](../../../docs/standard/serialization/web-services-generics-serialization-technology-sample.md)  
- Viene illustrato come utilizzare e controllare la serializzazione di generics nei servizi Web ASP.NET.  
-  
- [Esempio di tecnologia IXmlSerializable dei servizi Web](../../../docs/standard/serialization/web-services-ixmlserializable-technology-sample.md)  
- Viene illustrato come utilizzare l'oggetto <xref:System.Xml.Serialization.IXmlSerializable> per controllare la serializzazione dei tipi personalizzati nei servizi Web ASP.NET.  
+ Viene illustrato come utilizzare e controllare la serializzazione di generics nei servizi Web ASP.NET. 
   
  [Esempio di tecnologia SchemaImporterExtension](../../../docs/standard/serialization/schemaimporterextension-technology-sample.md)  
  Viene illustrato un oggetto <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension> personalizzato.  

@@ -1,5 +1,5 @@
 ---
-title: '&lt;aggiungere&gt; elemento per &lt;switch&gt;'
+title: '&lt;aggiungere&gt; (elemento) per &lt;commutatori&gt;'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/switches/add
@@ -9,20 +9,19 @@ helpviewer_keywords:
 ms.assetid: 712ac3a7-7abf-4a9e-8db4-acd241c2f369
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: e0dc425327f6577606e1205a23fdaffcc39f6e01
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0a1a2c9ec34c43eb1b9559d90a8da0d70193c19e
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747454"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47109524"
 ---
-# <a name="ltaddgt-element-for-ltswitchesgt"></a>&lt;aggiungere&gt; elemento per &lt;switch&gt;
+# <a name="ltaddgt-element-for-ltswitchesgt"></a>&lt;aggiungere&gt; (elemento) per &lt;commutatori&gt;
 Specifica il livello in cui viene impostata un'opzione di traccia.  
   
  \<configuration>  
 \<System. Diagnostics >  
-\<commutatori >  
+\<Opzioni >  
 \<add>  
   
 ## <a name="syntax"></a>Sintassi  
@@ -39,7 +38,7 @@ Specifica il livello in cui viene impostata un'opzione di traccia.
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|**name**|Attributo obbligatorio.<br /><br /> Specifica il nome del commutatore. Il valore di questo attributo corrisponde alla *displayName* parametro passato al costruttore di opzioni.|  
+|**name**|Attributo obbligatorio.<br /><br /> Specifica il nome del commutatore. Il valore di questo attributo corrisponde alla *displayName* parametro che viene passato al costruttore di opzioni.|  
 |**value**|Attributo obbligatorio.<br /><br /> Specifica il livello del commutatore.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
@@ -54,10 +53,10 @@ Specifica il livello in cui viene impostata un'opzione di traccia.
 |`system.diagnostics`|Specifica i listener di traccia per raccogliere, archiviare e indirizzare i messaggi, oltre al livello di impostazione di un'opzione di traccia.|  
   
 ## <a name="remarks"></a>Note  
- È possibile modificare il livello di un'opzione di traccia mediante l'inserimento in un file di configurazione. Se l'opzione è un <xref:System.Diagnostics.BooleanSwitch>, è possibile attivare e disattivare. Se l'opzione è un <xref:System.Diagnostics.TraceSwitch>, è possibile assegnare diversi livelli per specificare i tipi di traccia messaggi o di debug generati dall'applicazione.  
+ È possibile modificare il livello di un'opzione di traccia inserendolo in un file di configurazione. Se l'opzione è un <xref:System.Diagnostics.BooleanSwitch>, è possibile attivare e disattivare. Se l'opzione è un <xref:System.Diagnostics.TraceSwitch>, è possibile assegnare diversi livelli per specificare i tipi di traccia o debug messaggi generati dall'applicazione.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare il  **\<aggiungere >** elemento da impostare il `General` opzione di traccia di <xref:System.Diagnostics.TraceLevel> livello e attivare il `Data` opzione di traccia Boolean.  
+ Nell'esempio seguente viene illustrato come utilizzare il  **\<aggiungere >** elemento per cui impostare il `General` opzione di traccia il <xref:System.Diagnostics.TraceLevel> livello e attivare il `Data` commutatore di traccia di tipo Boolean.  
   
 ```xml  
 <configuration>  
