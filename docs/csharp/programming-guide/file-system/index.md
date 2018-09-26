@@ -7,11 +7,11 @@ helpviewer_keywords:
 - files [C#]
 ms.assetid: 0f2511cf-2b02-4b41-b001-b1754677c38f
 ms.openlocfilehash: 3625f7a108675a3a9ab6be16ef94ae7e7c107612
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45597134"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45971249"
 ---
 # <a name="file-system-and-the-registry-c-programming-guide"></a>File system e Registro di sistema (Guida per programmatori C#)
 Gli argomenti seguenti illustrano come usare C# e .NET Framework per eseguire varie operazioni di base su file e cartelle e nel Registro di sistema.  
