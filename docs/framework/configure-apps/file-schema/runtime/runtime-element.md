@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 1eb2fae3-de4b-45b6-852f-517c39b751bd
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: fb050a8d73c42094caf83ba00c5dfc2e4d472723
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0640b4c54b6f1429bce4947ec536352f240ca719
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748672"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47172732"
 ---
 # <a name="ltruntimegt-element"></a>&lt;runtime&gt; elemento
-Fornisce informazioni utilizzate da common language runtime per configurare le applicazioni.  
+Fornisce informazioni usate da common language runtime per configurare le applicazioni.  
   
  \<configuration>  
 \<runtime>  
@@ -33,7 +32,7 @@ Fornisce informazioni utilizzate da common language runtime per configurare le a
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
- Nelle sezioni seguenti vengono descritti gli elementi figlio e gli elementi padre.  
+ Le sezioni seguenti descrivono gli elementi figlio e gli elementi padre.  
   
 ### <a name="attributes"></a>Attributi  
  Nessuno.  
@@ -49,9 +48,9 @@ Fornisce informazioni utilizzate da common language runtime per configurare le a
 |[\<appDomainResourceMonitoring>](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)|Indica al runtime di raccogliere statistiche su tutti i domini applicazione nel processo per la durata del processo.|  
 |[\<assemblyBinding>](../../../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md)|Contiene le informazioni sul reindirizzamento della versione degli assembly e i relativi percorsi.|  
 |[\<bypassTrustedAppStrongNames>](../../../../../docs/framework/configure-apps/file-schema/runtime/bypasstrustedappstrongnames-element.md)|Specifica se la verifica del nome sicuro per gli assembly attendibili deve essere ignorata.|  
-|[\<CompatSortNLSVersion>](../../../../../docs/framework/configure-apps/file-schema/runtime/compatsortnlsversion-element.md)|Specifica che il runtime deve usare il comportamento di ordinamento legacy quando si eseguono confronti di stringa.|  
+|[\<CompatSortNLSVersion>](../../../../../docs/framework/configure-apps/file-schema/runtime/compatsortnlsversion-element.md)|Specifica che il runtime deve utilizzare il comportamento di ordinamento legacy quando si eseguono confronti di stringhe.|  
 |[\<developmentMode>](../../../../../docs/framework/configure-apps/file-schema/runtime/developmentmode-element.md)|Specifica se il runtime cerca gli assembly nelle directory specificate dalla variabile di ambiente DEVPATH.|  
-|[\<disableCachingBindingFailures>](../../../../../docs/framework/configure-apps/file-schema/runtime/disablecachingbindingfailures-element.md)|Specifica se la memorizzazione nella cache di errori di associazione, ovvero il comportamento predefinito in .NET Framework versione 2.0 è disabilitato.|  
+|[\<disableCachingBindingFailures>](../../../../../docs/framework/configure-apps/file-schema/runtime/disablecachingbindingfailures-element.md)|Specifica se la memorizzazione nella cache di errori di associazione, ovvero il comportamento predefinito in .NET Framework versione 2.0, è disabilitato.|  
 |[\<disableCommitThreadStack>](../../../../../docs/framework/configure-apps/file-schema/runtime/disablecommitthreadstack-element.md)|Specifica se viene eseguito il commit dello stack di thread completo quando viene avviato un thread.|  
 |[\<disableFusionUpdatesFromADManager>](../../../../../docs/framework/configure-apps/file-schema/runtime/disablefusionupdatesfromadmanager-element.md)|Specifica se è disabilitato il comportamento predefinito, ovvero consentire all'host di runtime di eseguire l'override delle impostazioni di configurazione per un dominio applicazione.|  
 |[\<EnableAmPmParseAdjustment>](../../../../../docs/framework/configure-apps/file-schema/runtime/enableampmparseadjustment-element.md)|Determina se i metodi di analisi di data e ora usano un set di regole di rettifica per analizzare le stringhe di data che contengono solo un indicatore di giorno, mese, ora e AM/PM.|  
@@ -59,7 +58,7 @@ Fornisce informazioni utilizzate da common language runtime per configurare le a
 |[\<etwEnable>](../../../../../docs/framework/configure-apps/file-schema/runtime/etwenable-element.md)|Specifica se abilitare Event Tracing for Windows (ETW) e gli eventi CLR (Common Language Runtime).|  
 |[\<forcePerformanceCounterUniqueSharedMemoryReads>](../../../../../docs/framework/configure-apps/file-schema/runtime/forceperformancecounteruniquesharedmemoryreads-element.md)|Specifica se PerfCounter.dll usa l'impostazione del Registro di sistema CategoryOptions in un'applicazione di .NET Framework versione 1.1 per determinare se caricare i dati del contatore delle prestazioni dalla memoria condivisa specifica della categoria o dalla memoria globale.|  
 |[\<gcAllowVeryLargeObjects>](../../../../../docs/framework/configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md)|Nelle piattaforme a 64 bit, abilita le matrici con dimensione totale maggiore di 2 gigabyte (GB).|  
-|[\<gcConcurrent>](../../../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)|Specifica se common language runtime esegue garbage collection simultaneamente.|  
+|[\<gcConcurrent>](../../../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)|Specifica se common language runtime esegue garbage collection simultanea.|  
 |[\<GCCpuGroup>](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md)|Specifica se Garbage Collection supporta più gruppi di CPU.|  
 |[\<gcServer>](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md)|Specifica se Common Language Runtime esegue Garbage Collection per server.|  
 |[\<generatePublisherEvidence>](../../../../../docs/framework/configure-apps/file-schema/runtime/generatepublisherevidence-element.md)|Specifica se il runtime usa i criteri dell'editore di sicurezza per l'accesso di codice.|  
@@ -88,9 +87,9 @@ Fornisce informazioni utilizzate da common language runtime per configurare le a
 |`configuration`|Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.|  
   
 ## <a name="remarks"></a>Note  
- Gli elementi figlio di [ \<runtime >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) sezione di un file di configurazione vengono utilizzati da common language runtime per configurare la modalità di esecuzione di un'applicazione. Ad esempio, il [ \<gcServer >](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) elemento determina se il garbage collector Usa garbage collection per workstation o garbage collection per server, il [ \< UseRandomizedStringHashAlgorithm >](../../../../../docs/framework/configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md) elemento determina se common language runtime calcola il codice hash per una stringa in base all'applicazione o una base per dominio di applicazione e `AppContextSwitchOverrides` elemento consente agli utenti di libreria Per partecipare o rifiutare esplicitamente modificato funzionalità fornite da una libreria.  
+ Gli elementi figlio di [ \<runtime >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) sezione di un file di configurazione vengono usati da common language runtime per configurare la modalità di esecuzione di un'applicazione. Ad esempio, il [ \<gcServer >](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) elemento determina se il garbage collector Usa garbage collection per workstation o garbage collection per server, il [ \< UseRandomizedStringHashAlgorithm >](../../../../../docs/framework/configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md) elemento determina se common language runtime calcola i codici hash per la stringa in un'applicazione o una singola operazione di dominio per ogni applicazione e il `AppContextSwitchOverrides` elemento consente agli utenti della libreria per acconsentire o rifiutare esplicitamente la funzionalità modificate fornita da una libreria.  
   
- Gli elementi di [ \<runtime >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) sezione vengono lette automaticamente dal common language runtime all'avvio dell'applicazione. È inoltre possibile definire il file di configurazione per un dominio applicazione non predefinito specificando il nome per il <xref:System.AppDomainSetup.ConfigurationFile%2A?displayProperty=nameWithType> proprietà; le relative impostazioni vengono lette automaticamente quando viene caricato il dominio dell'applicazione. Raramente, se applicabile, è necessario leggere direttamente le impostazioni di [ \<runtime >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) sezione nel file di configurazione dell'applicazione.  
+ Gli elementi di [ \<runtime >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) sezione vengono letti automaticamente dal common language runtime all'avvio dell'applicazione. È anche possibile definire il file di configurazione per un dominio dell'applicazione non predefinito specificando il nome per il <xref:System.AppDomainSetup.ConfigurationFile%2A?displayProperty=nameWithType> proprietà; le relative impostazioni vengono lette automaticamente quando viene caricato il dominio dell'applicazione. Si dovrebbe raramente, se mai, ha l'esigenza di leggere direttamente le impostazioni nel [ \<runtime >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) sezione nel file di configurazione dell'applicazione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Schema delle impostazioni di runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  

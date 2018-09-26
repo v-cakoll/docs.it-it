@@ -3,23 +3,22 @@ title: Protezione del trasporto
 ms.date: 03/30/2017
 ms.assetid: 86c94153-e48d-4539-b6cf-cd8060582e7f
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: e7f804d34a47c5508839636a6fe5045ebce3972e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7a52ac584abe766a7517436e697aff89333c9833
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33498215"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47171426"
 ---
 # <a name="transport-security"></a>Protezione del trasporto
 Sicurezza del trasporto in Windows Communication Foundation (WCF) dipende dall'associazione selezionata. Il trasporto implementato dall'associazione determina l'effettivo meccanismo di sicurezza. Negli argomenti contenuti in questa sezione sono illustrati i meccanismi implementati e le rispettive opzioni.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Panoramica della sicurezza del trasporto](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)  
- Illustra le nozioni di base della sicurezza del trasporto in WCF.  
+ Illustra le nozioni fondamentali della sicurezza del trasporto in WCF.  
   
  [Sicurezza del trasporto HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md)  
- Spiega come WCF implementa Secure Sockets Layer (SSL o HTTPS).  
+ Viene illustrato il modo in cui WCF implementa Secure Sockets Layer (SSL o HTTPS).  
   
  [Informazioni sull'autenticazione HTTP](../../../../docs/framework/wcf/feature-details/understanding-http-authentication.md)  
  Vengono descritti gli schemi di autenticazione HTTP, ad esempio di base, digest, NT LAN Manager (NTLM) e altri.  
