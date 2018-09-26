@@ -3,11 +3,11 @@ title: 'Informazioni sul chiamante (F #)'
 description: Viene descritto come utilizzare attributi di argomenti informativi sul chiamante per ottenere informazioni sul chiamante da un metodo.
 ms.date: 04/25/2017
 ms.openlocfilehash: 0f2f4b16804d9156d234cc29d1f72ebe80a5b556
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47110021"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47216370"
 ---
 # <a name="caller-information"></a>Informazioni sul chiamante
 

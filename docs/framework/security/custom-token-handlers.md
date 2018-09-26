@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 5062669f-8bfc-420a-a25d-d8ab992ab10e
 author: BrucePerlerMS
 ms.openlocfilehash: c27abb5df7f895a9dec5f7f784f1a3ff0b31edb7
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47082383"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47200880"
 ---
 # <a name="custom-token-handlers"></a>Gestori di token personalizzati
 Questo argomento illustra i gestori di token in WIF e ne descrive l'uso per l'elaborazione dei token. L'argomento spiega anche cosa serve per creare gestori di token personalizzati per i tipi di token non supportati per impostazione predefinita in WIF.  

@@ -2,15 +2,15 @@
 title: Estendibilità
 ms.date: 03/30/2017
 ms.assetid: cd7ddffc-a261-44aa-bd50-33c1c74f0df0
-ms.openlocfilehash: 010d6d7b17d3cb39e19c23550ca3522d6ea73a21
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: af6bbb5ea703c83ec38b97fae5a6f4bd266479b3
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805382"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47196870"
 ---
 # <a name="extensibility"></a>Estendibilità
-In questa sezione è contenuti esempi relativi all'estensibilità personalizzata e altre funzionalità di Windows Communication Foundation (WCF).  
+In questa sezione è inclusi esempi che trattano estensibilità personalizzata e altre funzionalità di Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Estensibilità dei canali](../../../../docs/framework/wcf/samples/channels-extensibility.md)  
@@ -38,16 +38,13 @@ In questa sezione è contenuti esempi relativi all'estensibilità personalizzata
  Viene illustrata la diffusione personalizzata.  
   
  [Estensibilità del trasporto](../../../../docs/framework/wcf/samples/transport-extensibility.md)  
- Vengono illustrati i trasporti personalizzati.  
-  
- [Estensibilità Web](../../../../docs/framework/wcf/samples/web-extensibility.md)  
- Vengono illustrate le funzionalità Web personalizzate.  
+ Vengono illustrati i trasporti personalizzati.
   
  [Formattatore e selettore dell'operazione](../../../../docs/framework/wcf/samples/operation-formatter-and-operation-selector.md)  
  Viene descritto in che modo punti di estensibilità possono usare formati dati del messaggio personalizzati.  
   
  [Filtro messaggi personalizzato](../../../../docs/framework/wcf/samples/custom-message-filter.md)  
- viene illustrato come sostituire i filtri messaggi che utilizza Windows Communication Foundation (WCF) per inviare messaggi agli endpoint.  
+ viene illustrato come sostituire i filtri messaggi che utilizza Windows Communication Foundation (WCF) per distribuire messaggi agli endpoint.  
   
  [Host di servizi personalizzati](../../../../docs/framework/wcf/samples/custom-service-host.md)  
  Viene illustrato come usare un derivato personalizzato della classe <xref:System.ServiceModel.ServiceHost> per modificare il comportamento di runtime di un servizio.  

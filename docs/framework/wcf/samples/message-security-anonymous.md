@@ -6,11 +6,11 @@ helpviewer_keywords:
 ms.assetid: c321cbf9-8c05-4cce-b5a5-4bf7b230ee03
 author: BrucePerlerMS
 ms.openlocfilehash: 23f814b036d698a4973ca923cd534ea5f0f5b25c
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47075554"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47196837"
 ---
 # <a name="message-security-anonymous"></a>Sicurezza dei messaggi anonima
 Nell'esempio di sicurezza dei messaggi anonima viene illustrato come implementare un'applicazione Windows Communication Foundation (WCF) che usa la sicurezza a livello di messaggio non usano l'autenticazione client ma che richiede l'autenticazione server mediante certificati X.509 del server certificato. Tutti i messaggi dell'applicazione tra il client e il server vengono firmati e crittografati. In questo esempio si basa sul [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md) esempio. Questo esempio è costituito da un programma di console client (.exe) e da una libreria di servizi (.dll) ospitati da Internet Information Services (IIS). Il servizio implementa un contratto che definisce un modello di comunicazione richiesta/risposta.  

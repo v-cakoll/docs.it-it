@@ -2,12 +2,12 @@
 title: Progettazione e implementazione di attività personalizzate
 ms.date: 03/30/2017
 ms.assetid: 4e30e63d-6e33-4842-a7a4-ce807cef1fad
-ms.openlocfilehash: 2ed80b5cbb27c6647053ee9b8f4cd2bedb0c6cde
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 673145c856e950c8648a87cb3dcb9665ffa51ba9
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33513819"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47216715"
 ---
 # <a name="designing-and-implementing-custom-activities"></a>Progettazione e implementazione di attività personalizzate
 Le attività personalizzate in [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] vengono create assemblando le attività fornite dal sistema nelle attività composte o creando nuovi tipi che derivano dall'oggetto <xref:System.Activities.CodeActivity>, <xref:System.Activities.AsyncCodeActivity> o <xref:System.Activities.NativeActivity>. Contenuto della sezione viene illustrato come creare attività personalizzate con uno dei metodi.  
@@ -35,10 +35,7 @@ Le attività personalizzate in [!INCLUDE[netfx_current_long](../../../includes/n
  Viene illustrato come usare le proprietà di esecuzione del flusso di lavoro per aggiungere proprietà specifiche del contesto all'ambiente di un'attività.  
   
  [Uso di delegati di attività](../../../docs/framework/windows-workflow-foundation/using-activity-delegates.md)  
- Viene illustrato come creare e usare attività che contengono delegati di attività.  
-  
- [Localizzazione di attività](../../../docs/framework/windows-workflow-foundation/activity-localization.md)  
- Viene illustrato come usare la localizzazione di risorse di tipo stringa nelle attività.  
+ Viene illustrato come creare e usare attività che contengono delegati di attività.
   
  [Uso di estensioni di attività](../../../docs/framework/windows-workflow-foundation/using-activity-extensions.md)  
  Viene descritto come creare e usare le estensioni di attività.  

@@ -3,11 +3,11 @@ title: Pagina della Guida del servizio HTTP Web WCF
 ms.date: 03/30/2017
 ms.assetid: 63c7c695-44b6-4f31-bb9c-00f2763f525e
 ms.openlocfilehash: d0fe4f99fea4d414c95244e535cd75891f921790
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47075703"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47195992"
 ---
 # <a name="wcf-web-http-service-help-page"></a>Pagina della Guida del servizio HTTP Web WCF
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] include una pagina automatica della Guida per i servizi HTTP WEB WCF. Questa pagina della Guida contiene una descrizione di ogni operazione, formato di richiesta e risposta e schema. Per impostazione predefinita, questa funzionalità è disabilitata. Quando un utente passa a un servizio HTTP WEB WCF e aggiunge "/help" alla fine dell'URL, ad esempio http://localhost:8000/Customers/Help, una pagina della Guida, come viene visualizzato il seguente.  

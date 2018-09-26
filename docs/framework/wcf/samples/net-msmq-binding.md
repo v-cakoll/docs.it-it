@@ -2,12 +2,12 @@
 title: Associazione Net MSMQ
 ms.date: 03/30/2017
 ms.assetid: fe4bb696-f57c-4cb3-9b7e-9d95fe6b8323
-ms.openlocfilehash: c54e8b661e011eb6b8add39dc7484f39ddc9b7c1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ee32ea09eed28c1c7cd5df2df2d13fd5f41f4b22
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33500880"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47200971"
 ---
 # <a name="net-msmq-binding"></a>Associazione Net MSMQ
 Contenuto della sezione sono inclusi esempi di base che illustrano l'uso degli attributo di associazione MSMQ di un elemento dell'endpoint.  
@@ -29,16 +29,10 @@ Contenuto della sezione sono inclusi esempi di base che illustrano l'uso degli a
  Viene illustrato come inviare e ricevere una serie di messaggi correlati in una comunicazione in coda sul trasporto di Accodamento messaggi (MSMQ).  
   
  [Comunicazione bidirezionale](../../../../docs/framework/wcf/samples/two-way-communication.md)  
- Viene illustrato come eseguire comunicazioni transazionali bidirezionali in coda su MSQM.  
-  
- [Batch transazionale](../../../../docs/framework/wcf/samples/transacted-batching.md)  
- Viene illustrato come raggruppare letture transazionali usando Accodamento messaggi (MSMQ).  
+ Viene illustrato come eseguire comunicazioni transazionali bidirezionali in coda su MSQM.
   
  [SRMP](../../../../docs/framework/wcf/samples/srmp.md)  
  Viene illustrato come eseguire comunicazioni in coda transazionali usando Accodamento messaggi (MSMQ) su HTTP.  
   
  [Sicurezza dei messaggi nell'accodamento messaggi](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)  
- Viene illustrato come implementare un'applicazione che usa WS-Security con l'autenticazione del certificato X.509v3 per il client e che richiede l'autenticazione del server usando il certificato X.509v3 del server su MSMQ.  
-  
- [Generatore di prodotti ReceiveContext](../../../../docs/framework/wcf/samples/receivecontext-enabled-wcf-channels.md)  
- Viene descritta l'utilità dei canali WCF abilitati per <xref:System.ServiceModel.Channels.ReceiveContext>.
+ Viene illustrato come implementare un'applicazione che usa WS-Security con l'autenticazione del certificato X.509v3 per il client e che richiede l'autenticazione del server usando il certificato X.509v3 del server su MSMQ.

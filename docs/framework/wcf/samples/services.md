@@ -2,19 +2,19 @@
 title: Services2
 ms.date: 03/30/2017
 ms.assetid: 462a2218-f8c6-4fb7-95bc-64765459c429
-ms.openlocfilehash: 2b6d8322caa32246d6171af50c7773342ac11de2
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 3987b170f216064073f14afb489bd7afb5228c77
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806097"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47206373"
 ---
 # <a name="services"></a>Servizi
-In questa sezione è contenuti esempi che illustrano i servizi Windows Communication Foundation (WCF).  
+In questa sezione è inclusi esempi che illustrano i servizi Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Hosting](../../../../docs/framework/wcf/feature-details/hosting.md)  
- Illustra l'hosting dei servizi WCF.  
+ Illustra i servizi di hosting WCF.  
   
  [Interoperabilità dei servizi](../../../../docs/framework/wcf/samples/service-interoperability.md)  
  Viene descritta l'interazione tra WCF e altre tecnologie del servizio.  
@@ -29,10 +29,7 @@ In questa sezione è contenuti esempi che illustrano i servizi Windows Communica
  Viene illustrato come implementare e configurare un servizio tipico e un client tramite WCF.  
   
  [Uso di endpoint standard](../../../../docs/framework/wcf/samples/usage-of-standard-endpoints.md)  
- Viene illustrato come utilizzare endpoint standard in file di configurazione del servizio.  
-  
- [Modello di configurazione gerarchica](../../../../docs/framework/wcf/samples/hierarchical-configuration-model.md)  
- Viene descritto come implementare una gerarchia di file di configurazione per i servizi.  
+ Viene illustrato come utilizzare endpoint standard in file di configurazione del servizio.
   
  [Criteri di protezione estesa](../../../../docs/framework/wcf/samples/extended-protection-policy.md)  
  Viene descritta la protezione estesa, un'iniziativa per la sicurezza per la protezione da attacchi di tipo man in the middle (MITM).  
@@ -44,7 +41,7 @@ In questa sezione è contenuti esempi che illustrano i servizi Windows Communica
  Vengono illustrati i vari aspetti e le funzionalità degli indirizzi degli endpoint.  
   
  [Imperativo](../../../../docs/framework/wcf/samples/imperative.md)  
- Viene illustrato come definire un <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> per un servizio utilizzando il codice anziché definire il `wsHttpBinding` associazione nella configurazione.  
+ Viene illustrato come definire un <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> per un servizio utilizzando il codice anziché definire il `wsHttpBinding` nella configurazione di associazione.  
   
  [Più contratti](../../../../docs/framework/wcf/samples/multiple-contracts.md)  
  Viene illustrato come implementare più di un contratto in un servizio e come configurare gli endpoint per comunicare con ognuno dei contratti implementati.  
@@ -56,7 +53,7 @@ In questa sezione è contenuti esempi che illustrano i servizi Windows Communica
  Viene descritto un servizio che ospita più endpoint in un solo `ListenUri`.  
   
  [OperationContextScope](../../../../docs/framework/wcf/samples/operationcontextscope.md)  
- Viene illustrato come inviare informazioni aggiuntive su una chiamata WCF utilizzando le intestazioni.  
+ Viene illustrato come inviare informazioni aggiuntive su una chiamata WCF con intestazioni.  
   
  [Descrizione del servizio](../../../../docs/framework/wcf/samples/service-description.md)  
  Viene descritto come un servizio può recuperare le informazioni di descrizione del servizio nella fase di esecuzione.  

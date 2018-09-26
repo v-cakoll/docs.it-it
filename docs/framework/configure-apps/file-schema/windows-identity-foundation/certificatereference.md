@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 2ac8bc14-e9f1-48fb-b662-f5991558fbe4
 author: BrucePerlerMS
 ms.openlocfilehash: e04dc90134aadfb8af7b0800c7144963d267f513
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47075083"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47206891"
 ---
 # <a name="ltcertificatereferencegt"></a>&lt;CertificateReference&gt;
 Specifica le impostazioni che consentono di trovare e convalidare un certificato X.509 in un archivio certificati.  

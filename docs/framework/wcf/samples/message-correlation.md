@@ -2,19 +2,19 @@
 title: Correlazione dei messaggi
 ms.date: 03/30/2017
 ms.assetid: 3f62babd-c991-421f-bcd8-391655c82a1f
-ms.openlocfilehash: fd97f12f536da85619f300d36d02a10306f32aa5
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: d51e3169bbb32d6e33c5658d02a1ec840bfc9c13
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46577464"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47200503"
 ---
 # <a name="message-correlation"></a>Correlazione dei messaggi
 Questo esempio viene illustrato come un'applicazione di Accodamento messaggi (MSMQ) può inviare un messaggio MSMQ a un servizio Windows Communication Foundation (WCF) e come i messaggi possono essere correlati tra applicazioni mittenti e riceventi in uno scenario di richiesta/risposta. In questo esempio viene utilizzata l'associazione msmqIntegrationBinding. Il servizio in questo caso è un'applicazione console self-hosted che consente di osservare il servizio che riceve i messaggi in coda. k  
   
  Il servizio elabora il messaggio ricevuto dal mittente e invia un messaggio di risposta al mittente. Il mittente correla la risposta ricevuta alla richiesta inviata originariamente. Le proprietà `MessageID` e `CorrelationID` del messaggio vengono utilizzate per correlare i messaggi di richiesta e risposta.  
   
- Il contratto di servizio `IOrderProcessor` definisce un'operazione di servizio unidirezionale adatto per l'utilizzo con l'accodamento. Un messaggio MSMQ non ha un'intestazione Action, pertanto non è possibile eseguire automaticamente il mapping di messaggi MSMQ diversi ai contratti dell'operazione. Pertanto, in questo caso può essere presente un solo contratto dell'operazione. Se si desidera definire più contratti dell'operazione nel servizio, l'applicazione deve fornire informazioni in merito a quale intestazione nel messaggio MSMQ (ad esempio, l'etichetta o correlationID) può essere utilizzata per decidere quale contratto dell'operazione inviare. Questa funzionalità viene illustrata la [Demux personalizzato](../../../../docs/framework/wcf/samples/custom-demux.md).  
+ Il contratto di servizio `IOrderProcessor` definisce un'operazione di servizio unidirezionale adatto per l'utilizzo con l'accodamento. Un messaggio MSMQ non ha un'intestazione Action, pertanto non è possibile eseguire automaticamente il mapping di messaggi MSMQ diversi ai contratti dell'operazione. Pertanto, in questo caso può essere presente un solo contratto dell'operazione. Se si desidera definire più contratti dell'operazione nel servizio, l'applicazione deve fornire informazioni in merito a quale intestazione nel messaggio MSMQ (ad esempio, l'etichetta o correlationID) può essere utilizzata per decidere quale contratto dell'operazione inviare. 
   
  Il messaggio MSMQ non contiene inoltre informazioni in merito alle intestazioni di cui è stato eseguito il mapping ai diversi parametri del contratto dell'operazione. Pertanto, può essere presente un solo parametro nel contratto dell'operazione. Il parametro è di tipo <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>, che contiene il messaggio MSMQ sottostante. Il tipo "T" nella classe `MsmqMessage<T>` rappresenta i dati serializzati nel corpo del messaggio MSMQ. In questo esempio, il tipo `PurchaseOrder` è serializzato nel corpo del messaggio MSMQ.  
 

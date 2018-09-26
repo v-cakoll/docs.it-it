@@ -9,11 +9,11 @@ helpviewer_keywords:
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
 author: BrucePerlerMS
 ms.openlocfilehash: 904ea64bd6e76e7bf99aa4a31ef752bfb2760c23
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47080130"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47198462"
 ---
 # <a name="bindings-and-security"></a>Associazioni e protezione
 Le associazioni fornite dal sistema incluse con Windows Communication Foundation (WCF) offrono un modo rapido per programmare le applicazioni WCF. Tutte le associazioni, tranne una, dispongono di uno schema di sicurezza predefinito attivo. In questo argomento viene illustrato come selezionare l'associazione corretta per la sicurezza desiderata.  

@@ -3,21 +3,20 @@ title: 'Procedura: specificare credenziali di sicurezza del canale'
 ms.date: 03/30/2017
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: f25089f7f5ffa16bb46e0833b15b4cbc4a7735ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8e730e3deaccb581b1722b62ce6282d8fde7180e
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496851"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47196183"
 ---
 # <a name="how-to-specify-channel-security-credentials"></a>Procedura: specificare credenziali di sicurezza del canale
-Il Moniker del servizio Windows Communication Foundation (WCF) consente alle applicazioni COM di chiamare i servizi WCF. La maggior parte dei servizi WCF richiedono al client specificare le credenziali per l'autenticazione e autorizzazione. Quando si chiama un servizio WCF da un client WCF, è possibile specificare queste credenziali nel codice gestito o in un file di configurazione dell'applicazione. Quando si chiama un servizio WCF da un'applicazione COM, è possibile utilizzare il <xref:System.ServiceModel.ComIntegration.IChannelCredentials> interfaccia per specificare le credenziali. In questo argomento vengono illustrate varie modalità di specifica delle credenziali mediante l'interfaccia <xref:System.ServiceModel.ComIntegration.IChannelCredentials>.  
+Il Moniker del servizio Windows Communication Foundation (WCF) consente alle applicazioni COM di chiamare i servizi WCF. La maggior parte dei servizi WCF richiedono al client specificare le credenziali per l'autenticazione e autorizzazione. Quando si chiama un servizio WCF da un client WCF, è possibile specificare queste credenziali nel codice gestito o in un file di configurazione dell'applicazione. Quando si chiama un servizio WCF da un'applicazione COM, è possibile usare il <xref:System.ServiceModel.ComIntegration.IChannelCredentials> interfaccia per specificare le credenziali. In questo argomento vengono illustrate varie modalità di specifica delle credenziali mediante l'interfaccia <xref:System.ServiceModel.ComIntegration.IChannelCredentials>.  
   
 > [!NOTE]
 >  <xref:System.ServiceModel.ComIntegration.IChannelCredentials> è un'interfaccia basata su IDispatch nella quale non viene visualizzata la funzionalità IntelliSense nell'ambiente Visual Studio.  
   
- In questo articolo verrà utilizzato il servizio WCF definito nella [messaggio di esempio per la sicurezza](../../../../docs/framework/wcf/samples/message-security-sample.md).  
+ Questo articolo usa il servizio WCF definito nella [esempio di sicurezza messaggio](../../../../docs/framework/wcf/samples/message-security-sample.md).  
   
 ### <a name="to-specify-a-client-certificate"></a>Per specificare un certificato client  
   
@@ -29,7 +28,7 @@ Il Moniker del servizio Windows Communication Foundation (WCF) consente alle app
   
 4.  Aggiungere `bindingNamespace=``http://Microsoft.ServiceModel.Samples` al tag dell'endpoint in App. config per il servizio.  
   
-5.  Compilare l'esempio di sicurezza dei messaggi ed eseguire Service.exe. Usare Internet Explorer e passare all'URI del servizio (http://localhost:8000/ServiceModelSamples/Service) per verificare che il servizio sia in funzione.  
+5.  Compilare l'esempio di sicurezza dei messaggi ed eseguire Service.exe. Usare Internet Explorer e passare all'URI del servizio (http://localhost:8000/ServiceModelSamples/Service) per garantire che il servizio funzioni.  
   
 6.  Aprire Visual Basic 6.0 e creare un nuovo file standard con estensione exe. Aggiungere un pulsante al form e fare doppio clic su di esso per aggiungere il codice seguente al gestore Click:  
   
@@ -123,7 +122,7 @@ Il Moniker del servizio Windows Communication Foundation (WCF) consente alle app
   
 ### <a name="to-specify-an-issue-token"></a>Per specificare un token di pubblicazione  
   
-1.  I token di pubblicazione vengono usati soltanto per applicazioni che usano la protezione federata. Per ulteriori informazioni sulla sicurezza federata, vedere [federazione e i token emessi](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md) e [federazione esempio](../../../../docs/framework/wcf/samples/federation-sample.md).  
+1.  I token di pubblicazione vengono usati soltanto per applicazioni che usano la protezione federata. Per altre informazioni sulla protezione federata, vedere [federazione e token emessi](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md) e [esempio di federazione](../../../../docs/framework/wcf/samples/federation-sample.md).  
   
      L'esempio di codice Visual Basic seguente mostra come chiamare il metodo <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetIssuedToken%28System.String%2CSystem.String%2CSystem.String%29>:  
   

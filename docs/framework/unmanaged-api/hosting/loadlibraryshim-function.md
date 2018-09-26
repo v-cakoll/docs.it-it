@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5fe1ba15f8a9f8ee79582158209049c1e502a61d
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47108728"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47199869"
 ---
 # <a name="loadlibraryshim-function"></a>Funzione LoadLibraryShim
 Carica una versione specifica di una DLL che è incluso nel pacchetto ridistribuibile di .NET Framework.  

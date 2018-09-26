@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - rounting [WCF], scenarios
 ms.assetid: ec22f308-665a-413e-9f94-7267cb665dab
-ms.openlocfilehash: 458b67de57be2bd0847ceccbc8a3aebd3b025f64
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 629f478e1a5a9ad21ce77943fdad098aa21de4a6
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496152"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47200451"
 ---
 # <a name="routing-scenarios"></a>Scenari di routing
 Sebbene il servizio di routing sia notevolmente personalizzabile, può risultare difficile progettare una logica di routing efficiente quando si crea una nuova configurazione da zero.  Esistono tuttavia diversi scenari comuni seguiti dalla maggior parte delle configurazioni dei servizi di routing. Tali scenari possono non essere direttamente applicabili a una configurazione specifica, tuttavia comprendere le modalità di configurazione del servizio di routing per tali scenari consente di acquisire familiarità con le potenzialità del servizio stesso.  
@@ -34,17 +34,17 @@ Sebbene il servizio di routing sia notevolmente personalizzabile, può risultare
   
  Con il servizio di routing è possibile esporre un endpoint affinché riceva i messaggi dalle applicazioni client e quindi indirizzare ogni messaggio alla versione corretta del servizio in base al contenuto del messaggio. L'implementazione più semplice prevede l'aggiunta di un'intestazione personalizzata al messaggio, la quale indichi la versione del servizio da cui deve essere elaborato il messaggio. Il servizio di routing può usare XPathMessageFilter per verificare in ogni messaggio la presenza dell'intestazione personalizzata e indirizzare il messaggio all'endpoint di destinazione appropriato.  
   
- Per i passaggi necessari per creare una configurazione di controllo delle versioni del servizio, vedere [How To: controllo delle versioni del servizio](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md). Per un esempio di utilizzo XPathMessageFilter per instradare i messaggi in base a un'intestazione personalizzata, vedere il [Advanced Filters](../../../../docs/framework/wcf/samples/advanced-filters.md) esempio.  
+ Per i passaggi necessari per creare una configurazione di controllo delle versioni del servizio, vedere [How To: controllo delle versioni del servizio](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md).
   
 ### <a name="service-data-partitioning"></a>Partizionamento dei dati del servizio  
  Quando si progetta un ambiente distribuito, è spesso consigliabile suddividere il carico di elaborazione tra più computer in modo da offrire disponibilità elevata, ridurre il carico sui singoli computer o fornire risorse dedicate per uno specifico subset di messaggi. Sebbene il servizio di routing non sostituisca una soluzione di bilanciamento del carico dedicata, la possibilità di eseguire il routing basato sul contenuto consente di indirizzare messaggi simili a specifiche destinazioni. Può essere ad esempio necessario elaborare i messaggi di un determinato cliente separatamente da quelli ricevuti da altri client.  
   
- Per i passaggi necessari per creare un servizio di dati di configurazione del partizionamento, vedere [How To: partizionamento dei dati del servizio](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md). Per un esempio di utilizzo di filtri per partizionare i dati in base a URL e le intestazioni personalizzate, vedere il [Advanced Filters](../../../../docs/framework/wcf/samples/advanced-filters.md) esempio.  
+ Per i passaggi necessari per creare un servizio dati di configurazione del partizionamento, vedere [How To: partizionamento dei dati del servizio](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md).  
   
 ### <a name="dynamic-routing"></a>Routing dinamico  
  È spesso necessario modificare la configurazione di routing per soddisfare nuove esigenze aziendali, ad esempio con l'aggiunta di una route a una versione più recente di un servizio, la modifica dei criteri di routing oppure la modifica dell'endpoint di destinazione di uno specifico messaggio. Queste modifiche sono possibile tramite <xref:System.ServiceModel.Routing.RoutingExtension> grazie al quale è possibile specificare una nuova configurazione di routing in fase di esecuzione. La nuova configurazione viene applicata immediatamente, ma influisce solo sulle nuove sessioni elaborate dal servizio di routing.  
   
- Per i passaggi necessari per implementare il routing dinamico, vedere [procedura: aggiornamento dinamico](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md). Per un esempio di utilizzo del routing dinamico, vedere il [riconfigurazione dinamica](../../../../docs/framework/wcf/samples/dynamic-reconfiguration.md) esempio.  
+ Per i passaggi necessari per implementare il routing dinamico, vedere [How To: aggiornamento dinamico](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md).
   
 ### <a name="multicast"></a>Multicast  
  Il routing dei messaggi avviene in genere a uno specifico endpoint di destinazione.  Può tuttavia risultare talvolta necessario indirizzare una copia del messaggio a più endpoint di destinazione. Per il routing multicast, è necessario che siano soddisfatte le condizioni seguenti:  
@@ -56,16 +56,14 @@ Sebbene il servizio di routing sia notevolmente personalizzabile, può risultare
  Se vengono soddisfatte queste condizioni, ogni endpoint di destinazione associato a un filtro che restituisce true riceverà una copia del messaggio.  
   
 ### <a name="protocol-bridging"></a>Bridging del protocollo  
- Per il routing dei messaggi tra protocolli SOAP diversi, il servizio di routing usa le API WCF per convertire il messaggio da un protocollo all'altro. Il bridging viene eseguito automaticamente se l'endpoint servizio esposto dal servizio di routing usa un protocollo diverso rispetto agli endpoint client ai quali vengono indirizzati i messaggi. È possibile disabilitare questo comportamento se i protocolli usati non sono standard; tuttavia, è necessario fornire codice di bridging specifico.  
-  
- . Per un esempio dell'utilizzo del servizio di Routing per convertire i messaggi tra protocolli, vedere il [Bridging e gestione degli errori](../../../../docs/framework/wcf/samples/bridging-and-error-handling.md) esempio.  
+ Per il routing dei messaggi tra protocolli SOAP diversi, il servizio di routing usa le API WCF per convertire il messaggio da un protocollo all'altro. Il bridging viene eseguito automaticamente se l'endpoint servizio esposto dal servizio di routing usa un protocollo diverso rispetto agli endpoint client ai quali vengono indirizzati i messaggi. È possibile disabilitare questo comportamento se i protocolli usati non sono standard; tuttavia, è necessario fornire codice di bridging specifico.
   
 ### <a name="error-handling"></a>Gestione degli errori  
  In un ambiente distribuito non è insolito che si verifichino errori di rete o di comunicazione temporanei. In assenza di un servizio intermediario quale quello di routing, la gestione di tali errori dipende dall'applicazione client. Se l'applicazione client non include logica specifica per eseguire un nuovo tentativo in caso di errori di rete o di comunicazione e non sono noti indirizzi alternativi, è possibile che un messaggio debba essere inviato più volte affinché possa essere elaborato correttamente dal servizio di destinazione. Ciò può determinare disservizi per i clienti che potrebbero considerare l'applicazione inaffidabile.  
   
  Il servizio di routing offre affidabili funzionalità di gestione degli errori di rete e di comunicazione allo scopo di rimediare a tali scenari. Creando un elenco di possibili endpoint di destinazione da associare a ogni filtro messaggi, è possibile evitare il singolo punto di errore determinato dalla presenza di un'unica possibile destinazione. In caso di errore, il servizio di routing tenta di recapitare il messaggio all'endpoint successivo nell'elenco finché l'operazione non ha esito positivo, si verifica un errore non di comunicazione o si esauriscono tutti gli endpoint.  
   
- Per i passaggi necessari per configurare la gestione degli errori, vedere [How To: Error Handling](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md). Per un esempio di implementazione della gestione degli errori, vedere il [Bridging e gestione degli errori](../../../../docs/framework/wcf/samples/bridging-and-error-handling.md) e [avanzate di gestione degli errori](../../../../docs/framework/wcf/samples/advanced-error-handling.md) esempi.  
+ Per i passaggi necessari per configurare la gestione degli errori, vedere [How To: Error Handling](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md).
   
 ### <a name="in-this-section"></a>In questa sezione  
  [Procedura: Controllo delle versioni dei servizi](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)  
