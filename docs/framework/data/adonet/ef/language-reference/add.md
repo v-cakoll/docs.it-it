@@ -3,11 +3,11 @@ title: + (Aggiungi)
 ms.date: 03/30/2017
 ms.assetid: 51769b02-a8f7-4177-9e99-bbd10e77092c
 ms.openlocfilehash: a3c41ef8cf393a4d1b1deb362d6a3614558a34ba
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47086262"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47200945"
 ---
 # <a name="-add"></a>+ (addizione)
 Esegue l'addizione di due numeri.  

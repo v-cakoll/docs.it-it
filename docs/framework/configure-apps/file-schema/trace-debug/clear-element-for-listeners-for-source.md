@@ -10,11 +10,11 @@ ms.assetid: 76796bb2-9c0b-4526-8135-8bf18b16d8d9
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 3674b5e8f54735010da901c76b77bd617218891e
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47071753"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47209181"
 ---
 # <a name="ltcleargt-element-for-ltlistenersgt-for-ltsourcegt"></a>&lt;deselezionare&gt; (elemento) per &lt;listener&gt; per &lt;origine&gt;
 Cancella la raccolta `Listeners` per un'origine di traccia.  
