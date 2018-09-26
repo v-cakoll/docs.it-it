@@ -7,11 +7,11 @@ dev_langs:
 ms.assetid: 056653a5-384e-4a02-ae3c-1b0157d2ccb4
 author: BrucePerlerMS
 ms.openlocfilehash: d09d2a2ad4e48e67f2d3930517a2ed3f8cc4403d
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47072826"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47216082"
 ---
 # <a name="transport-security-with-an-anonymous-client"></a>Protezione del trasporto con un client anonimo
 Questo scenario di Windows Communication Foundation (WCF) Usa sicurezza del trasporto (HTTPS) per garantire la riservatezza e integrità. È necessario che il server sia autenticato con un certificato SSL (Secure Sockets Layer) e che il client ritenga attendibile il certificato del server. Il client non viene autenticato da alcun meccanismo ed è pertanto anonimo.  
