@@ -9,26 +9,25 @@ helpviewer_keywords:
 - federation
 ms.assetid: 98e82101-4cff-4bb8-a220-f7abed3556e5
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 364d4e6b1009993c11a7f23edcd262de4ad435c9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dd2c4f32978107a82ce940e0ef984c70f461b2c3
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493878"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47172193"
 ---
 # <a name="how-to-create-a-security-token-service"></a>Procedura: creare un servizio token di sicurezza
 Un servizio token di sicurezza implementa il protocollo definito nella specifica WS-Trust. Questo protocollo definisce i formati e i modelli di scambio dei messaggi per il rilascio, il rinnovo, l'annullamento e la convalida di token di sicurezza. Un determinato servizio token di sicurezza fornisce una o più di queste funzionalità. In questo argomento viene descritto lo scenario più comune: l'implementazione del rilascio di token.  
   
 ## <a name="issuing-tokens"></a>Rilascio di token  
- Per l'esecuzione del rilascio del token WS-Trust definisce i formati dei messaggi in base all'elemento dello schema XSD (XML Schema Definition Language) di `RequestSecurityToken` e all'elemento dello schema XSD di `RequestSecurityTokenResponse`. Definisce inoltre gli URI (Uniform Resource Identifiers) dell'azione associati. L'azione associato all'URI il `RequestSecurityToken` messaggio http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Issue. L'azione associato all'URI il `RequestSecurityTokenResponse` messaggio http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Issue.  
+ Per l'esecuzione del rilascio del token WS-Trust definisce i formati dei messaggi in base all'elemento dello schema XSD (XML Schema Definition Language) di `RequestSecurityToken` e all'elemento dello schema XSD di `RequestSecurityTokenResponse`. Definisce inoltre gli URI (Uniform Resource Identifiers) dell'azione associati. L'azione associata all'URI con il `RequestSecurityToken` messaggio http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Issue. L'azione associata all'URI con il `RequestSecurityTokenResponse` messaggio http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Issue.  
   
 ### <a name="request-message-structure"></a>Struttura del messaggio di richiesta  
  In genere la struttura del messaggio di richiesta consiste negli elementi seguenti:  
   
 -   Una richiesta di digitare l'URI con un valore di http://schemas.xmlsoap.org/ws/2005/02/trust/Issue.  
   
--   Un URI di tipo token. Per i token di sicurezza asserzioni SAML (Markup Language) 1.1, il valore di questo URI è http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1.  
+-   Un URI di tipo token. Per i token Security Assertions Markup Language (SAML) 1.1, il valore di questo URI è http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1.  
   
 -   Un valore della dimensione della chiave che indica il numero di bit nella chiave da associare al token rilasciato.  
   
@@ -113,7 +112,7 @@ Un servizio token di sicurezza implementa il protocollo definito nella specifica
  [!code-csharp[c_CreateSTS#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#6)]
  [!code-vb[c_CreateSTS#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#6)]  
   
- Per ulteriori informazioni su come creare il token di prova quando il client e servizio token di sicurezza forniscono materiale della chiave per la chiave condivisa, vedere [esempio di federazione](../../../../docs/framework/wcf/samples/federation-sample.md).  
+ Per altre informazioni su come costruire il token di prova quando il client e servizio token di sicurezza fornisce il materiale della chiave per la chiave condivisa, vedere [esempio di federazione](../../../../docs/framework/wcf/samples/federation-sample.md).  
   
  I riferimenti del token rilasciato sono costruiti creando istanze della classe <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause>.  
   
@@ -123,7 +122,7 @@ Un servizio token di sicurezza implementa il protocollo definito nella specifica
  Tutti questi diversi valori vengono quindi serializzati nel messaggio di risposta restituito al client.  
   
 ## <a name="example"></a>Esempio  
- Per il codice completo per un servizio token di sicurezza, vedere [federazione esempio](../../../../docs/framework/wcf/samples/federation-sample.md).  
+ Per il codice completo per un servizio token di sicurezza, vedere [esempio di federazione](../../../../docs/framework/wcf/samples/federation-sample.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.IdentityModel.Tokens.SigningCredentials>  

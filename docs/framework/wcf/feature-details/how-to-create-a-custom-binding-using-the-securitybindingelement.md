@@ -8,16 +8,15 @@ helpviewer_keywords:
 - security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 1e288daeb717fa9fa041d552cac4ec5d0cd28808
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e0adbe9d1689e840d940dd22fcfe05f54e2131fa
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495632"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47171738"
 ---
 # <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>Procedura: creare un'associazione personalizzata usando SecurityBindingElement
-Windows Communication Foundation (WCF) include diverse associazioni fornite dal sistema che possono essere configurate ma non forniscono totale flessibilità durante la configurazione di tutte le opzioni di protezione supportati da WCF. In questo argomento viene illustrato come creare direttamente un'associazione personalizzata di singoli elementi di associazione e vengono evidenziate alcune impostazioni di sicurezza che è possibile specificare durante la creazione di tale associazione. Per ulteriori informazioni sulla creazione di associazioni personalizzate, vedere [estensione delle associazioni](../../../../docs/framework/wcf/extending/extending-bindings.md).  
+Windows Communication Foundation (WCF) include diverse associazioni fornite dal sistema che possono essere configurate ma non forniscono totale flessibilità durante la configurazione di tutte le opzioni di protezione supportati da WCF. In questo argomento viene illustrato come creare direttamente un'associazione personalizzata di singoli elementi di associazione e vengono evidenziate alcune impostazioni di sicurezza che è possibile specificare durante la creazione di tale associazione. Per altre informazioni sulla creazione di associazioni personalizzate, vedere [estensione delle associazioni](../../../../docs/framework/wcf/extending/extending-bindings.md).  
   
 > [!WARNING]
 >  <xref:System.ServiceModel.Channels.SecurityBindingElement> non supporta la forma di <xref:System.ServiceModel.Channels.IDuplexSessionChannel>, vale a dire la forma di canale predefinita utilizzata dal trasporto TCP quando l'oggetto <xref:System.ServiceModel.TransferMode> è impostato su <xref:System.ServiceModel.TransferMode.Buffered>. È necessario impostare <xref:System.ServiceModel.TransferMode> su <xref:System.ServiceModel.TransferMode.Streamed> per utilizzare <xref:System.ServiceModel.Channels.SecurityBindingElement> in questo scenario.  

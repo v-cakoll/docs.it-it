@@ -14,11 +14,11 @@ ms.assetid: 1f48b2d8-608c-4be6-9ba4-d8f203ed9f9f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3879dc3f0270a56132b44882a74c50d05914ff89
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46531957"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47176594"
 ---
 # <a name="struct-design"></a>Progettazione di struct
 Il tipo di valore per utilizzo generico è più noto anche come uno struct, la parola chiave c#. In questa sezione vengono fornite linee guida per la progettazione di struct generale.  

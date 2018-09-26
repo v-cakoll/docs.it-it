@@ -1,5 +1,5 @@
 ---
-title: '&lt;IPv6&gt; elemento (impostazioni di rete)'
+title: '&lt;IPv6&gt; (impostazioni di rete)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/ipv6
@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 10b79aef-327b-4718-a892-e11f55e4d169
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 4b73e5d781829292513e809c39ac9de9dfc6d0e8
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5b1707d7490de07520603f6fdf6d1ee1a44ffba7
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47171413"
 ---
-# <a name="ltipv6gt-element-network-settings"></a>&lt;IPv6&gt; elemento (impostazioni di rete)
-Abilita protocollo Internet versione 6 (IPv6) risposte da membri obsoleti della <xref:System.Net.Dns> classe.  
+# <a name="ltipv6gt-element-network-settings"></a>&lt;IPv6&gt; (impostazioni di rete)
+Abilita protocollo Internet versione 6 (IPv6) delle risposte dai membri obsoleti del <xref:System.Net.Dns> classe.  
   
  \<configuration>  
 \<system.net>  
@@ -40,7 +40,7 @@ Abilita protocollo Internet versione 6 (IPv6) risposte da membri obsoleti della 
   
 |**Attributo**|**Descrizione**|  
 |-------------------|---------------------|  
-|`enabled`|Specifica se i membri del <xref:System.Net.Dns> classe restituiscono Internet Protocol versione 6 (IPv6) indirizzi. Il valore predefinito è `false`.|  
+|`enabled`|Specifica se i membri del <xref:System.Net.Dns> classe restituire protocollo Internet versione 6 (IPv6) gli indirizzi. Il valore predefinito è `false`.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
@@ -52,13 +52,13 @@ Abilita protocollo Internet versione 6 (IPv6) risposte da membri obsoleti della 
 |[Impostazioni](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Configura le opzioni di rete di base per lo spazio dei nomi <xref:System.Net>.|  
   
 ## <a name="remarks"></a>Note  
- Questa impostazione abilita il supporto IPv6 per i membri obsoleti del <xref:System.Net.Dns> classe: <xref:System.Net.Dns.BeginGetHostByName%2A>, <xref:System.Net.Dns.BeginResolve%2A>, <xref:System.Net.Dns.EndGetHostByName%2A>, <xref:System.Net.Dns.EndResolve%2A>, <xref:System.Net.Dns.GetHostByAddress%2A>, <xref:System.Net.Dns.GetHostByName%2A>, e <xref:System.Net.Dns.Resolve%2A>. Per altri membri di <xref:System.Net?displayProperty=nameWithType> dello spazio dei nomi, gli indirizzi IPv6 possono essere restituiti se IPv6 è abilitato nel sistema operativo.  
+ Questa impostazione abilita il supporto IPv6 per i membri obsoleti della <xref:System.Net.Dns> classe: <xref:System.Net.Dns.BeginGetHostByName%2A>, <xref:System.Net.Dns.BeginResolve%2A>, <xref:System.Net.Dns.EndGetHostByName%2A>, <xref:System.Net.Dns.EndResolve%2A>, <xref:System.Net.Dns.GetHostByAddress%2A>, <xref:System.Net.Dns.GetHostByName%2A>, e <xref:System.Net.Dns.Resolve%2A>. Per altri membri del <xref:System.Net?displayProperty=nameWithType> dello spazio dei nomi, indirizzi IPv6 potrebbero essere restituiti se IPv6 è abilitato nel sistema operativo.  
   
 ## <a name="configuration-files"></a>File di configurazione  
  Questo elemento può essere usato nel file di configurazione dell'applicazione o nel file di configurazione del computer (Machine.config).  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come abilitare il supporto IPv6 per la <xref:System.Net.Dns> classe.  
+ Nell'esempio seguente viene illustrato come abilitare il supporto IPv6 per il <xref:System.Net.Dns> classe.  
   
 ```xml  
 <configuration>  
