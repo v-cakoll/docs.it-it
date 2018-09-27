@@ -6,12 +6,12 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: b5ad639309238912aa27b58c95466b4f37052699
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: df5a509296f3fb9e8e77a273a0636c74a6f86da3
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457366"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44208660"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>Vincoli sui parametri di tipo (Guida per programmatori C#)
 
@@ -19,7 +19,7 @@ I vincoli indicano al compilatore quali funzionalità deve usare un argomento ti
 
 |Vincolo|Descrizione|
 |----------------|-----------------|
-|`where T : struct`|L'argomento tipo deve essere un tipo valore. È possibile specificare qualsiasi tipo valore tranne <xref:System.Nullable>. Per altre informazioni, vedere [Uso dei tipi nullable](../nullable-types/using-nullable-types.md).|
+|`where T : struct`|L'argomento tipo deve essere un tipo valore. È possibile specificare qualsiasi tipo valore tranne <xref:System.Nullable%601>. Per altre informazioni sui tipi nullable, vedere [Tipi nullable](../nullable-types/index.md).|
 |`where T : class`|L'argomento tipo deve essere un tipo riferimento. Questo vincolo si applica anche a qualsiasi tipo di classe, interfaccia, delegato o matrice.|
 |`where T : unmanaged`|L'argomento tipo non deve essere un tipo di riferimento e non deve contenere membri di tipo riferimento a qualsiasi livello di annidamento.|
 |`where T : new()`|L'argomento tipo deve avere un costruttore pubblico senza parametri. Quando il vincolo `new()` viene usato con altri vincoli, deve essere specificato per ultimo.|
@@ -111,7 +111,8 @@ Il metodo può essere usato come illustrato nell'esempio seguente per creare un'
 
 ## <a name="see-also"></a>Vedere anche
 
- <xref:System.Collections.Generic> [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [Introduzione ai generics](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
- [Classi generiche](../../../csharp/programming-guide/generics/generic-classes.md)  
- [Vincolo new](../../../csharp/language-reference/keywords/new-constraint.md)  
+- <xref:System.Collections.Generic>
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- [Introduzione ai generics](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
+- [Classi generiche](../../../csharp/programming-guide/generics/generic-classes.md)  
+- [Vincolo new](../../../csharp/language-reference/keywords/new-constraint.md)  

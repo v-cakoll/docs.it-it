@@ -1,53 +1,61 @@
 ---
 title: Tabella delle conversioni numeriche implicite (Riferimenti per C#)
-ms.date: 07/20/2015
+ms.date: 09/05/2018
 helpviewer_keywords:
 - conversions [C#], implicit numeric
 - implicit numeric conversions [C#]
 - numeric conversions [C#], implicit
 - types [C#], implicit numeric conversions
 ms.assetid: 72eb5a94-0491-48bf-8032-d7ebfdfeb8d8
-ms.openlocfilehash: 4bbc6086dc5fd3838ef9361762c3068ca44efd0e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: e46816fc8f3a6ff71dcba3561098d3cfce1e1054
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43417596"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44213264"
 ---
 # <a name="implicit-numeric-conversions-table-c-reference"></a>Tabella delle conversioni numeriche implicite (Riferimenti per C#)
-Nella tabella che segue sono illustrate le conversioni numeriche implicite predefinite. Le conversioni implicite possono avere luogo in numerose situazioni, ad esempio le chiamate di metodi e le istruzioni di assegnazione.  
+
+Nella tabella che segue sono illustrate le conversioni implicite predefinite tra i tipi numerici .NET.
   
 |Da|A|  
 |----------|--------|  
-|[sbyte](../../../csharp/language-reference/keywords/sbyte.md)|`short`, `int`, `long`, `float`, `double` o `decimal`|  
-|[byte](../../../csharp/language-reference/keywords/byte.md)|`short`, `ushort`, `int`, `uint`, `long`, `ulong`, `float`, `double` o `decimal`|  
-|[short](../../../csharp/language-reference/keywords/short.md)|`int`, `long`, `float`, `double` o `decimal`|  
-|[ushort](../../../csharp/language-reference/keywords/ushort.md)|`int`, `uint`, `long`, `ulong`, `float`, `double` o `decimal`|  
-|[int](../../../csharp/language-reference/keywords/int.md)|`long`, `float`, `double` o `decimal`|  
-|[uint](../../../csharp/language-reference/keywords/uint.md)|`long`, `ulong`, `float`, `double` o `decimal`|  
-|[long](../../../csharp/language-reference/keywords/long.md)|`float`, `double`o `decimal`|  
-|[char](../../../csharp/language-reference/keywords/char.md)|`ushort`, `int`, `uint`, `long`, `ulong`, `float`, `double` o `decimal`|  
-|[float](../../../csharp/language-reference/keywords/float.md)|`double`|  
-|[ulong](../../../csharp/language-reference/keywords/ulong.md)|`float`, `double`o `decimal`|  
+|[sbyte](sbyte.md)|`short`, `int`, `long`, `float`, `double` o `decimal`|  
+|[byte](byte.md)|`short`, `ushort`, `int`, `uint`, `long`, `ulong`, `float`, `double` o `decimal`|  
+|[short](short.md)|`int`, `long`, `float`, `double` o `decimal`|  
+|[ushort](ushort.md)|`int`, `uint`, `long`, `ulong`, `float`, `double` o `decimal`|  
+|[int](int.md)|`long`, `float`, `double` o `decimal`|  
+|[uint](uint.md)|`long`, `ulong`, `float`, `double` o `decimal`|  
+|[long](long.md)|`float`, `double`o `decimal`|  
+|[char](char.md)|`ushort`, `int`, `uint`, `long`, `ulong`, `float`, `double` o `decimal`|  
+|[float](float.md)|`double`|  
+|[ulong](ulong.md)|`float`, `double`o `decimal`|  
   
 ## <a name="remarks"></a>Note  
-  
--   Nella conversione da `int`, `uint`, `long` o `ulong` a `float` e da `long` o `ulong` a `double` può andare persa la precisione ma non la grandezza.  
-  
--   Non esiste alcuna conversione implicita verso il tipo `char`.  
-  
--   Non esiste alcuna conversione implicita tra tipi a virgola mobile e il tipo `decimal`.  
-  
--   Un'espressione costante di tipo `int` può essere convertita in `sbyte`, `byte`, `short`, `ushort`, `uint` o `ulong`, a condizione che il valore di tale espressione sia compreso nell'intervallo del tipo di destinazione.  
-  
-## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a>Vedere anche  
 
-- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
-- [Tabella dei tipi integrali](../../../csharp/language-reference/keywords/integral-types-table.md)  
-- [Tabella dei tipi incorporati](../../../csharp/language-reference/keywords/built-in-types-table.md)  
-- [Tabella delle conversioni numeriche esplicite](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  
-- [Cast e conversioni di tipi](../../../csharp/programming-guide/types/casting-and-type-conversions.md)
+- Qualunque [tipo integrale](integral-types-table.md) è implicitamente convertibile in qualunque [tipo a virgola mobile](floating-point-types-table.md).
+
+- Nella conversione da `int`, `uint`, `long` o `ulong` a `float` e da `long` o `ulong` a `double` può andare persa la precisione ma non la grandezza.  
+  
+- Non esiste alcuna conversione implicita verso il tipo `char`.  
+  
+- Non esiste alcuna conversione implicita tra tipi `float` e `double` e il tipo `decimal`.  
+  
+- Un valore di un'espressione costante di tipo `int` (ad esempio, un valore rappresentato da un valore letterale intero) possono essere convertiti in `sbyte`, `byte`, `short`, `ushort`, `uint`, o `ulong`, purché rientri all'interno dell'intervallo del tipo di destinazione:
+
+  ```csharp
+  byte a = 13;    // Compiles
+  byte b = 300;   // CS0031: Constant value '300' cannot be converted to a 'byte'
+  ```
+
+Per altre informazioni sulle conversioni implicite, vedere la sezione [conversioni implicite](/dotnet/csharp/language-reference/language-specification/conversions#implicit-conversions) della [specifica del linguaggio C#](../language-specification/index.md).
+  
+## <a name="see-also"></a>Vedere anche
+
+- [Riferimenti per C#](../index.md)
+- [Guida per programmatori C#](../../programming-guide/index.md)
+- [Tabella dei tipi integrali](integral-types-table.md)
+- [Tabella dei tipi a virgola mobile](floating-point-types-table.md)
+- [Tabella dei tipi incorporati](built-in-types-table.md)
+- [Tabella delle conversioni numeriche esplicite](explicit-numeric-conversions-table.md)
+- [Cast e conversioni di tipi](../../programming-guide/types/casting-and-type-conversions.md)

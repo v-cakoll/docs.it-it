@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: 76371985e340945793310247ec48d9b0cb747aed
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 025510782551c058c3b80eff3045138476e031b9
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457930"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43514185"
 ---
 # <a name="operators-c-programming-guide"></a>Operatori (Guida per programmatori C#)
 Nel linguaggio C# un *operatore* è un elemento del programma che si applica a uno o più *operandi* in un'espressione o in un'istruzione. Gli operatori che accettano un unico operando, ad esempio l'operatore di incremento (`++`) o `new`, sono denominati operatori *unari* . Quelli che accettano due operandi, ad esempio gli operatori aritmetici (`+`,`-`,`*`,`/`), sono denominati operatori *binari* . L'operatore condizionale (`?:`) accetta tre operandi ed è l'unico operatore ternario disponibile in C#.  
@@ -123,7 +123,7 @@ Nel linguaggio C# un *operatore* è un elemento del programma che si applica a u
 |Espressione|Descrizione|  
 |----------------|-----------------|  
 |[=](../../../csharp/language-reference/operators/assignment-operator.md)|Assegnazione|  
-|x op= y|Assegnazione composta. Supporta gli operatori seguenti: [+=](../../../csharp/language-reference/operators/addition-assignment-operator.md), [-=](../../../csharp/language-reference/operators/subtraction-assignment-operator.md), [*=](../../../csharp/language-reference/operators/multiplication-assignment-operator.md), [/=](../../../csharp/language-reference/operators/division-assignment-operator.md), [%=](../../../csharp/language-reference/operators/modulus-assignment-operator.md), [&=](../../../csharp/language-reference/operators/and-assignment-operator.md), [&#124;=](../../../csharp/language-reference/operators/or-assignment-operator.md), [!=](../../../csharp/language-reference/operators/not-equal-operator.md), [<\<=](../../../csharp/language-reference/operators/left-shift-assignment-operator.md), [>>=](../../../csharp/language-reference/operators/right-shift-assignment-operator.md)|  
+|x op= y|Assegnazione composta. Supporta gli operatori seguenti: [+=](../../../csharp/language-reference/operators/addition-assignment-operator.md), [-=](../../../csharp/language-reference/operators/subtraction-assignment-operator.md), [*=](../../../csharp/language-reference/operators/multiplication-assignment-operator.md), [/=](../../../csharp/language-reference/operators/division-assignment-operator.md), [%=](../../../csharp/language-reference/operators/modulus-assignment-operator.md), [&=](../../../csharp/language-reference/operators/and-assignment-operator.md), [&#124;=](../../../csharp/language-reference/operators/or-assignment-operator.md), [^=](../../../csharp/language-reference/operators/xor-assignment-operator.md), [<\<=](../../../csharp/language-reference/operators/left-shift-assignment-operator.md), [>>=](../../../csharp/language-reference/operators/right-shift-assignment-operator.md)|  
 |(T x) [=>](../../../csharp/language-reference/operators/lambda-operator.md) y|Funzione anonima (espressione lambda)|  
   
 ## <a name="associativity"></a>Associazione  
@@ -163,11 +163,12 @@ a = (b = c);
 |`a = (b + c) * (d - e)`|a, b, c, +, d, e, -, *, =|  
   
 ## <a name="operator-overloading"></a>Overload degli operatori  
- È possibile modificare il comportamento degli operatori per classi e struct personalizzati. Questo processo è denominato *overload degli operatori*. Per altre informazioni, vedere [Operatori che supportano l'overload](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md).  
+ È possibile modificare il comportamento degli operatori per classi e struct personalizzati. Questo processo è denominato *overload degli operatori*. Per altre informazioni, vedere [Operatori che supportano l'overload](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md) e l'articolo relativo alla parola chiave [operator](../../../csharp/language-reference/keywords/operator.md).  
   
 ## <a name="related-sections"></a>Sezioni correlate  
  Per altre informazioni, vedere [Parole chiave per operatori](../../../csharp/language-reference/keywords/operator-keywords.md) e [Operatori C#](../../../csharp/language-reference/operators/index.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [Istruzioni, espressioni e operatori](../../../csharp/programming-guide/statements-expressions-operators/index.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- [Istruzioni, espressioni e operatori](../../../csharp/programming-guide/statements-expressions-operators/index.md)

@@ -3,13 +3,16 @@ title: Distribuzione di app .NET Core con Visual Studio
 description: Informazioni sulla distribuzione di app .NET Core con Visual Studio
 author: rpetrusha
 ms.author: ronpet
-ms.date: 04/18/2017
-ms.openlocfilehash: 2829bb5a2f5857f6124e5c1f78f5247fe8d1f552
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.date: 09/03/2018
+dev_langs:
+- csharp
+- vb
+ms.openlocfilehash: 62cfef08a8319981891c713c08c34eba5ab54b6f
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43407449"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44227740"
 ---
 # <a name="deploying-net-core-apps-with-visual-studio"></a>Distribuzione di app .NET Core con Visual Studio
 
@@ -30,13 +33,14 @@ Una distribuzione dipendente dal framework senza dipendenze di terze parti richi
 
 1. Creare il progetto.
 
-   Selezionare **File** > **Nuovo** > **Progetto**. Nella finestra di dialogo **Nuovo progetto** selezionare **.NET Core** nel riquadro dei tipi di progetto **Installati**, quindi selezionare il modello **Console App (.NET Core)** (App console (.NET Core)) nel riquadro al centro. Immettere un nome di progetto, ad esempio "FDD", nella casella di testo **Nome**. Selezionare il pulsante **OK** .
+   Selezionare **File** > **Nuovo** > **Progetto**. Nella finestra di dialogo **Nuovo progetto** espandere le categorie di progetti del linguaggio (C# o Visual Basic) nel riquadro dei tipi di progetti **Installati**, scegliere il modello **.NET Core** e selezionare il modello **Console App (.NET Core)** (App console (.NET Core)) nel riquadro centrale. Immettere un nome di progetto, ad esempio "FDD", nella casella di testo **Nome**. Selezionare il pulsante **OK** .
 
 1. Aggiungere il codice sorgente dell'applicazione.
 
-   Aprire il file *Program.cs* nell'editor e sostituire il codice generato automaticamente con il codice seguente. Questo codice richiede all'utente di immettere del testo e visualizza le singole parole immesse dall'utente. Usa l'espressione regolare `\w+` per separare le parole nel testo di input.
+   Aprire il file *Program.cs* o *Program.vb* nell'editor e sostituire il codice generato automaticamente con il codice seguente. Questo codice richiede all'utente di immettere del testo e visualizza le singole parole immesse dall'utente. Usa l'espressione regolare `\w+` per separare le parole nel testo di input.
 
-   [!code-csharp[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
+   [!code-csharp[deployment#1](~/samples/snippets/core/deploying/cs/deployment-example.cs)]
+   [!code-vb[deployment#1](~/samples/snippets/core/deploying/vb/deployment-example.vb)]
 
 1. Creare una build di debug dell'app.
 
@@ -48,13 +52,13 @@ Una distribuzione dipendente dal framework senza dipendenze di terze parti richi
 
       1. Modificare la configurazione della soluzione da **Debug** a **Release** sulla barra degli strumenti, per creare una versione di rilascio dell'app (invece di una versione di debug).
 
-      1. Fare clic con il pulsante destro del mouse sul progetto (non sulla soluzione) in **Solution Explorer** e selezionare **Pubblica**.
+      1. Fare clic con il pulsante destro del mouse sul progetto (non sulla soluzione) in **Esplora soluzioni** e selezionare **Pubblica**.
 
       1. Nella scheda **Pubblica** selezionare **Pubblica**. I file che costituiscono l'applicazione vengono salvati nel file system locale.
 
       1. La scheda **Pubblica** ora visualizza un unico profilo **FolderProfile**. Le impostazioni di configurazione del profilo vengono visualizzate nella sezione **Riepilogo** della scheda.
 
-   I file risultanti vengono inseriti nella directory `PublishOutput` in una sottodirectory della directory *.\bin\release* del progetto.
+   I file risultanti vengono inseriti in una directory di nome `Publish` in Windows e `publish` nei sistemi Unix, che è una sottodirectory della directory *.\bin\release\netcoreapp2.1* del progetto.
 
 Insieme ai file dell'applicazione, il processo di pubblicazione genera un file del database di programma (con estensione pdb) che contiene le informazioni di debug relative all'app. Il file è utile soprattutto per il debug delle eccezioni. È possibile scegliere di non includerlo nel pacchetto dei file dell'applicazione. È tuttavia consigliabile salvarlo perché può risultare utile per il debug della build di rilascio dell'app.
 
@@ -76,37 +80,56 @@ Si noti che la portabilità di una distribuzione dipendente dal framework con di
 
 ## <a name="simpleSelf"></a> Distribuzione autonoma senza dipendenze di terze parti
 
-La pubblicazione di una distribuzione autonoma senza dipendenze di terze parti comporta la creazione del progetto, la modifica del file *csproj*, la compilazione, il test e la pubblicazione dell'app. Il processo viene illustrato da un semplice esempio scritto in C#.
+La pubblicazione di una distribuzione autonoma senza dipendenze di terze parti comporta la creazione del progetto, la modifica del file *csproj*, la compilazione, il test e la pubblicazione dell'app. Il processo viene illustrato da un semplice esempio scritto in C#. Creare, codificare e testare inizialmente il progetto come nel caso di una distribuzione dipendente dal framework:
 
 1. Creare il progetto.
 
-   Selezionare **File** > **Nuovo** > **Progetto**. Nella finestra di dialogo **Aggiungi nuovo progetto** selezionare **.NET Core** nel riquadro dei tipi di progetto **Installati**, quindi selezionare il modello **Console App (.NET Core)** (App console (.NET Core)) nel riquadro al centro. Immettere un nome di progetto, ad esempio "SCD" nella casella di testo **Nome**, quindi selezionare il pulsante **OK**.
+   Selezionare **File** > **Nuovo** > **Progetto**. Nella finestra di dialogo **Nuovo progetto** espandere le categorie di progetti del linguaggio (C# o Visual Basic) nel riquadro dei tipi di progetti **Installati**, scegliere il modello **.NET Core** e selezionare il modello **Console App (.NET Core)** (App console (.NET Core)) nel riquadro centrale. Immettere un nome di progetto, ad esempio "SCD" nella casella di testo **Nome**, quindi selezionare il pulsante **OK**.
 
 1. Aggiungere il codice sorgente dell'applicazione.
 
    Aprire il file *Program.cs* nell'editor e sostituire il codice generato automaticamente con il codice seguente. Questo codice richiede all'utente di immettere del testo e visualizza le singole parole immesse dall'utente. Usa l'espressione regolare `\w+` per separare le parole nel testo di input.
 
-   [!code-csharp[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
+   [!code-csharp[deployment#1](~/samples/snippets/core/deploying/cs/deployment-example.cs)]
+   [!code-vb[deployment#1](~/samples/snippets/core/deploying/vb/deployment-example.vb)]
+
+1. Specificare se si intende usare la modalità invariante della globalizzazione.
+
+   In particolare, se l'app è destinata a Linux, è possibile ridurre le dimensioni totali della distribuzione sfruttando la [modalità invariante della globalizzazione](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md). La modalità invariante della globalizzazione è utile per le applicazioni che non sono compatibili a livello globale e possono usare le convenzioni di formattazione, le convenzioni sulla combinazione di maiuscole e minuscole, il confronto tra stringhe e l'ordinamento delle [impostazioni cultura invarianti](xref:System.Globalization.CultureInfo.InvariantCulture).
+
+   Per abilitare la modalità invariante fare clic con il pulsante destro del mouse sul progetto (non sulla soluzione) in **Esplora soluzioni** e selezionare **Modifica SCD.csproj** o **Modifica SCD.vbproj**. Aggiungere al file le seguenti righe evidenziate:
+
+ [!code-xml[globalization-invariant-mode](~/samples/snippets/core/deploying/xml/invariant.csproj)]
+
+1. Creare una build di debug dell'applicazione.
+
+   Selezionare **Compila** > **Compila soluzione**. È anche possibile compilare ed eseguire la build di debug dell'applicazione selezionando **Esegui debug** > **Avvia debug**. Questo passaggio di debug consente di identificare i problemi dell'applicazione quando è in esecuzione sulla piattaforma host. È tuttavia necessario testarla sulle singole piattaforme di destinazione.
+
+   Se è stata abilitata la modalità invariante della globalizzazione, verificare soprattutto se l'assenza di dati dipendenti dalle impostazioni cultura sia adatta per l'applicazione.
+
+Dopo aver terminato il debug, è possibile pubblicare la distribuzione autonoma:
+
+# <a name="visual-studio-156-and-earliertabvs156"></a>[Visual Studio 15.6 e versioni precedenti](#tab/vs156)
+
+Dopo aver eseguito il debug e il test del programma creare i file da distribuire con l'app per ogni piattaforma di destinazione.
+
+Per pubblicare l'app da Visual Studio eseguire le operazioni seguenti:
 
 1. Definire le piattaforme di destinazione per l'app.
 
-   1. Fare clic con il pulsante destro del mouse sul progetto (non sulla soluzione) in **Solution Explorer** e selezionare **Modifica SCD.csproj**.
+   1. Fare clic con il pulsante destro del mouse sul progetto (non sulla soluzione) in **Esplora soluzioni** e selezionare **Modifica SCD.csproj**.
 
    1. Creare un tag `<RuntimeIdentifiers>` nella sezione `<PropertyGroup>` del file *csproj* che definisce le piattaforme di destinazione dell'app e specifica l'identificatore di runtime di ogni piattaforma di destinazione. Si noti che è inoltre necessario aggiungere un punto e virgola per separare i RID. Per un elenco degli identificatori di runtime, vedere [Runtime IDentifier catalog](../rid-catalog.md) (Catalogo degli identificatori di runtime).
 
    L'esempio seguente indica che l'app viene eseguita in sistemi operativi Windows 10 a 64 bit e nel sistema operativo OS X versione 10.11 a 64 bit.
 
-```xml
-<PropertyGroup>
-    <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
-</PropertyGroup>
-```
+   ```xml
+   <PropertyGroup>
+      <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
+   </PropertyGroup>
+   ```
 
    Si noti che l'elemento `<RuntimeIdentifiers>` può essere inserito in qualsiasi elemento `<PropertyGroup>` presente nel file *csproj*. Un file di esempio *csproj* completo è disponibile più avanti in questa sezione.
-
-1. Creare una build di debug dell'app.
-
-   Selezionare **Compila** > **Compila soluzione**. È anche possibile compilare ed eseguire la build di debug dell'applicazione selezionando **Esegui debug** > **Avvia debug**.
 
 1. Pubblicare l'app.
 
@@ -146,11 +169,97 @@ Di seguito è riportato il file *csproj* completo per questo progetto.
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp1.1</TargetFramework>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
     <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
   </PropertyGroup>
 </Project>
 ```
+
+# <a name="visual-studio-157-and-latertabvs157"></a>[Visual Studio 15.7 e versioni successive](#tab/vs157)
+
+Dopo aver eseguito il debug e il test del programma creare i file da distribuire con l'app per ogni piattaforma di destinazione. Questo richiede la creazione di un profilo separato per ogni piattaforma di destinazione.
+
+Eseguire le operazioni seguenti per ogni piattaforma a cui è destinata l'applicazione:
+
+1. Creare un profilo per la piattaforma di destinazione.
+
+   Se si tratta del primo profilo creato, fare clic con il pulsante destro del mouse sul progetto (non sulla soluzione) in **Esplora soluzioni** e selezionare **Pubblica**.
+
+   Se è già stato creato un profilo, fare clic con il pulsante destro del mouse sul progetto per aprire la finestra di dialogo **Pubblica** se non è già aperta. Selezionare quindi **Nuovo profilo**.
+
+   Viene visualizzata la finestra di dialogo **Selezionare una destinazione di pubblicazione**.
+  
+1. Selezionare la posizione in cui Visual Studio pubblica l'applicazione.
+
+   Se esegue solo la pubblicazione in una singola piattaforma, è possibile accettare il valore predefinito nella casella di testo **Scegliere una cartella**; con questa operazione si pubblica la distribuzione dipendente dal framework dell'applicazione nella directory *\<directory del progetto>\bin\Release\netcoreapp2.1\publish\*.
+
+   Se esegue la pubblicazione in più di una piattaforma, aggiungere una stringa che identifica la piattaforma di destinazione. Se ad esempio si aggiunge la stringa "linux" al percorso del file, Visual Studio pubblica la distribuzione dipendente dal framework dell'applicazione nella directory *\<directory del progetto>\bin\Release\netcoreapp2.1\publish\linux*.
+
+1. Creare il profilo selezionando l'icona dell'elenco a discesa accanto al pulsante **Pubblica** e selezionando **Crea profilo**. Selezionare il pulsante **Crea profilo** per creare il profilo.
+
+1. Specificare che si sta pubblicando una distribuzione autonoma e definire una piattaforma di destinazione per l'app.
+
+   1. Nella finestra di dialogo **Pubblica** selezionare il collegamento **Configura** per aprire la finestra di dialogo **Impostazioni profilo**.
+
+   1. Selezionare **Indipendente** nella casella di riepilogo **Modalità di distribuzione**.
+
+   1. Nella casella di riepilogo **Runtime di destinazione** selezionare una delle piattaforme di destinazione dell'applicazione.
+
+   1. Selezionare **Salva** per salvare le modifiche e chiudere la finestra di dialogo.
+
+1. Assegnare un nome al profilo.
+
+   1. Selezionare **Azioni** > **Rinomina profilo** per assegnare un nome al profilo.
+
+   2. Assegnare al profilo un nome che identifica la piattaforma di destinazione e quindi selezionare **Salva*.
+
+Ripetere questi passaggi per definire eventuali piattaforme di destinazione dell'applicazione.
+
+I profili sono stati configurati e ora si è pronti per pubblicare l'applicazione. Per eseguire questa operazione:
+
+   1. Se la finestra **Pubblica** non è attualmente aperta, fare clic con il pulsante destro del mouse sul progetto (non sulla soluzione) in **Esplora soluzioni** e selezionare **Pubblica**.
+
+   2. Selezionare il profilo che si intende pubblicare e selezionare **Pubblica**. Eseguire questa operazione per ogni profilo da pubblicare.
+
+   Si noti che ogni percorso di destinazione (nel nostro esempio, bin\release\netcoreapp2.1\publish\\*nome profilo* contiene il set completo di file (i file dell'app e tutti i file di .NET Core) necessari per l'avvio dell'app.
+
+Insieme ai file dell'applicazione, il processo di pubblicazione genera un file del database di programma (con estensione pdb) che contiene le informazioni di debug relative all'app. Il file è utile soprattutto per il debug delle eccezioni. È possibile scegliere di non includerlo nel pacchetto dei file dell'applicazione. È tuttavia consigliabile salvarlo perché può risultare utile per il debug della build di rilascio dell'app.
+
+Distribuire i file pubblicati con il metodo desiderato. È ad esempio possibile inserire i file in un file zip, usare un semplice comando `copy` o distribuire i file con un pacchetto di installazione a scelta.
+
+Di seguito è riportato il file *csproj* completo per questo progetto.
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+</Project>
+```
+
+Visual Studio crea anche un profilo di pubblicazione separato (\*.pubxml) per ogni piattaforma di destinazione. Ad esempio, il file per il profilo di linux (linux.pubxml) viene visualizzato come segue:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PublishProtocol>FileSystem</PublishProtocol>
+    <Configuration>Release</Configuration>
+    <Platform>Any CPU</Platform>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <PublishDir>bin\Release\netcoreapp2.1\publish\linux</PublishDir>
+    <RuntimeIdentifier>win-x86</RuntimeIdentifier>
+    <SelfContained>true</SelfContained>
+    <_IsPortable>false</_IsPortable>
+  </PropertyGroup>
+</Project>
+```
+
+---
 
 ## <a name="self-contained-deployment-with-third-party-dependencies"></a>Distribuzione autonoma con dipendenze di terze parti
 
@@ -164,11 +273,13 @@ Una distribuzione autonoma con una o più dipendenze di terze parti comporta l'a
 
 Di seguito è riportato il file *csproj* completo per questo progetto:
 
+# <a name="visual-studio-156-and-earliertabvs156"></a>[Visual Studio 15.6 e versioni precedenti](#tab/vs156)
+
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp1.1</TargetFramework>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
     <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
   </PropertyGroup>
   <ItemGroup>
@@ -176,6 +287,22 @@ Di seguito è riportato il file *csproj* completo per questo progetto:
   </ItemGroup>
 </Project>
 ```
+
+# <a name="visual-studio-157-and-latertabvs157"></a>[Visual Studio 15.7 e versioni successive](#tab/vs157)
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.2" />
+  </ItemGroup>
+</Project>
+```
+
+---
 
 Quando si distribuisce l'applicazione, anche le dipendenze di terze parti usate nell'app sono contenute nei file dell'applicazione. Non è necessario che le librerie di terze parti siano già presenti nel sistema in cui viene eseguita l'app.
 

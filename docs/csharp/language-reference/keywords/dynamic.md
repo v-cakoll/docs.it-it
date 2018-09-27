@@ -7,12 +7,12 @@ helpviewer_keywords:
 - dynamic [C#]
 - dynamic keyword [C#]
 ms.assetid: 9e797102-cc83-4964-bf58-afe4f54d16bc
-ms.openlocfilehash: bddcb8890ef7312047d05794ccef0b638de4ed78
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 840ecd6ab929b00e1be96c23eb06ccf362380f8e
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43484015"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44195348"
 ---
 # <a name="dynamic-c-reference"></a>dynamic (Riferimenti per C#)
 
@@ -72,5 +72,5 @@ Per altre informazioni ed esempi, vedere [Uso del tipo dynamic](../../../csharp/
 - [is](../../../csharp/language-reference/keywords/is.md)  
 - [as](../../../csharp/language-reference/keywords/as.md)  
 - [typeof](../../../csharp/language-reference/keywords/typeof.md)  
-- [Procedura: Eseguire il cast sicuro usando gli operatori as e is](../../../csharp/programming-guide/types/how-to-safely-cast-by-using-as-and-is-operators.md)  
+- [How to: Safely cast Using pattern matching, as, and is Operators](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md) (Procedura: Eseguire il cast sicuro con i criteri di ricerca e gli operatori as e is)  
 - [Procedura dettagliata: Creazione e utilizzo di oggetti dinamici](../../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)

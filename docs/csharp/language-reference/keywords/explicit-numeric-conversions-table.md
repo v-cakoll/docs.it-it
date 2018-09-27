@@ -1,6 +1,6 @@
 ---
 title: Tabella delle conversioni numeriche esplicite (Riferimenti per C#)
-ms.date: 07/20/2015
+ms.date: 09/06/2018
 helpviewer_keywords:
 - conversions [C#], explicit numeric
 - numeric conversions [C#], explicit
@@ -9,59 +9,67 @@ helpviewer_keywords:
 - types [C#], explicit numeric conversions
 - type conversion [C#], explicit numeric
 ms.assetid: f3bb9e76-6b92-4df7-bc36-f866c24e1dfd
-ms.openlocfilehash: 5ca052dea4ee4abc866d2b02055188b0707499d4
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 22bb2117e7b78596e1fb6af63584f51b066564c9
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43475933"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44211788"
 ---
 # <a name="explicit-numeric-conversions-table-c-reference"></a>Tabella delle conversioni numeriche esplicite (Riferimenti per C#)
-La conversione numerica esplicita viene usata per convertire qualsiasi tipo numerico in qualsiasi altro tipo numerico, per il quale non c'è alcuna conversione implicita, usando un'espressione cast. La tabella seguente illustra queste conversioni.  
-  
- Per altre informazioni sulle conversioni, vedere [Cast e conversioni di tipi](../../../csharp/programming-guide/types/casting-and-type-conversions.md).  
-  
+
+Nella tabella seguente sono illustrate le conversioni esplicite predefinite tra i tipi numerici .NET in cui non è presente alcuna [conversione implicita](implicit-numeric-conversions-table.md).
+
 |Da|A|  
 |----------|--------|  
-|[sbyte](../../../csharp/language-reference/keywords/sbyte.md)|`byte`, `ushort`, `uint`, `ulong` o `char`|  
-|[byte](../../../csharp/language-reference/keywords/byte.md)|`Sbyte` o `char`|  
-|[short](../../../csharp/language-reference/keywords/short.md)|`sbyte`, `byte`, `ushort`, `uint`, `ulong` o `char`|  
-|[ushort](../../../csharp/language-reference/keywords/ushort.md)|`sbyte`, `byte`, `short` o `char`|  
-|[int](../../../csharp/language-reference/keywords/int.md)|`sbyte`, `byte`, `short`, `ushort`, `uint`, `ulong` o `char`|  
-|[uint](../../../csharp/language-reference/keywords/uint.md)|`sbyte`, `byte`, `short`, `ushort`, `int` o `char`|  
-|[long](../../../csharp/language-reference/keywords/long.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `ulong` o `char`|  
-|[ulong](../../../csharp/language-reference/keywords/ulong.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long` o `char`|  
-|[char](../../../csharp/language-reference/keywords/char.md)|`sbyte`, `byte`o `short`|  
-|[float](../../../csharp/language-reference/keywords/float.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char` o `decimal`|  
-|[double](../../../csharp/language-reference/keywords/double.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, `float` o `decimal`|  
-|[decimal](../../../csharp/language-reference/keywords/decimal.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, `float` o `double`|  
+|[sbyte](sbyte.md)|`byte`, `ushort`, `uint`, `ulong` o `char`|  
+|[byte](byte.md)|`sbyte` o `char`|  
+|[short](short.md)|`sbyte`, `byte`, `ushort`, `uint`, `ulong` o `char`|  
+|[ushort](ushort.md)|`sbyte`, `byte`, `short` o `char`|  
+|[int](int.md)|`sbyte`, `byte`, `short`, `ushort`, `uint`, `ulong` o `char`|  
+|[uint](uint.md)|`sbyte`, `byte`, `short`, `ushort`, `int` o `char`|  
+|[long](long.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `ulong` o `char`|  
+|[ulong](ulong.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long` o `char`|  
+|[char](char.md)|`sbyte`, `byte`o `short`|  
+|[float](float.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char` o `decimal`|  
+|[double](double.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, `float` o `decimal`|  
+|[decimal](decimal.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, `float` o `double`|  
   
 ## <a name="remarks"></a>Note  
   
--   La conversione numerica esplicita può causare una perdita nella precisione o comportare la generazione di eccezioni.  
+- La conversione numerica esplicita può causare una perdita nella precisione o comportare la generazione di un'eccezione, generalmente un'<xref:System.OverflowException>.  
+
+- Quando si converte un valore di tipo integrale a un altro tipo integrale, il risultato dipende dal [contesto di controllo](checked-and-unchecked.md) dell'overflow. In un contesto controllato, la conversione ha esito positivo se il valore di origine è compreso nell'intervallo del tipo di destinazione. In caso contrario, verrà generata un'eccezione <xref:System.OverflowException>. In un contesto non controllato, la conversione ha sempre esito positivo e procede nel modo seguente:
+
+  - Se il tipo di origine è maggiore del tipo di destinazione, il valore di origine viene troncato rimuovendo i relativi "extra" bit più rilevanti. Il risultato viene quindi trattato come un valore del tipo di destinazione.
+
+  - Se il tipo di origine è inferiore al tipo di destinazione, il valore di origine ha estensione firma o estensione zero in modo da avere le stesse dimensioni del tipo di destinazione. L'estensione firma viene usata se il tipo di origine dispone della firma; l'estensione zero viene usata se il tipo di origine è privo di firma. Il risultato viene quindi trattato come un valore del tipo di destinazione.
+
+  - Se il tipo di origine ha le stesse dimensioni del tipo di destinazione, il valore di origine viene considerato un valore del tipo di destinazione.
   
--   Quando si esegue una conversione da un valore `decimal` a un tipo integrale, il valore viene arrotondato per difetto al valore integrale più vicino. Se il valore integrale risultante non rientra nell'intervallo del tipo di destinazione, viene generata un'eccezione <xref:System.OverflowException>.  
+- Quando si esegue una conversione da un valore `decimal` a un tipo integrale, il valore viene arrotondato per difetto al valore integrale più vicino. Se il valore integrale risultante non rientra nell'intervallo del tipo di destinazione, viene generata un'eccezione <xref:System.OverflowException>.  
   
--   Quando si esegue una conversione da un valore `double` o `float` a un tipo integrale, il valore viene troncato. Se il valore integrale risultante non rientra nell'intervallo del valore di destinazione, il risultato dipende dal contesto di controllo dell'overflow. In un contesto controllato (checked) viene generata un'eccezione `OverflowException`, mentre in un contesto non controllato (unckecked) il risultato è un valore non specificato del tipo di destinazione.  
+- Quando si esegue una conversione da un valore `double` o `float` a un tipo integrale, il valore viene arrotondato per difetto al valore integrale più vicino. Se il valore integrale risultante non rientra nell'intervallo del tipo di destinazione, il risultato dipende dal [contesto di controllo](checked-and-unchecked.md) dell'overflow. In un contesto controllato (checked) viene generata un'eccezione <xref:System.OverflowException>, mentre in un contesto non controllato (unckecked) il risultato è un valore non specificato del tipo di destinazione.  
   
--   Per una conversione da `double` a `float`, il valore `double` viene arrotondato al valore `float` più vicino. Se il valore `double` è troppo piccolo o troppo grande per essere contenuto nel tipo di destinazione, il risultato sarà zero o infinito.  
+- Per una conversione da `double` a `float`, il valore `double` viene arrotondato al valore `float` più vicino. Se il valore `double` è troppo piccolo o troppo grande per essere contenuto nel tipo di destinazione, il risultato sarà zero o infinito.  
   
--   Quando si esegue una conversione da `float` o `double` a `decimal`, il valore di origine viene convertito nella rappresentazione `decimal` e arrotondato al numero più vicino successivo alla ventottesima posizione decimale, se necessario. A seconda dell'entità del valore di origine, è possibile che si verifichi uno dei risultati seguenti:  
+- Quando si esegue una conversione da `float` o `double` a `decimal`, il valore di origine viene convertito nella rappresentazione `decimal` e arrotondato al numero più vicino successivo alla ventottesima posizione decimale, se necessario. A seconda dell'entità del valore di origine, è possibile che si verifichi uno dei risultati seguenti:  
+
+  - Se il valore di origine è troppo piccolo per essere rappresentato come `decimal`, il risultato diventa zero.  
+
+  - Se il valore di origine è NaN (non un numero), infinito o troppo grande per essere rappresentato come `decimal`, viene generata un'eccezione <xref:System.OverflowException>.  
   
-    -   Se il valore di origine è troppo piccolo per essere rappresentato come `decimal`, il risultato diventa zero.  
+- Quando si esegue una conversione da `decimal` a `float` o `double`, il valore `decimal` viene arrotondato al valore `double` o `float` più vicino.  
   
-    -   Se il valore di origine è NaN (non un numero), infinito o troppo grande per essere rappresentato come `decimal`, viene generata un'eccezione `OverflowException`.  
-  
--   Quando si esegue una conversione da `decimal` a `float` o `double`, il valore `decimal` viene arrotondato al valore `double` o `float` più vicino.  
-  
- Per altre informazioni sulla conversione esplicita, vedere Explicit nella specifica del linguaggio C#. Per altre informazioni su come accedere alla specifica, vedere [Specifica del linguaggio C#](../../../csharp/language-reference/language-specification/index.md).  
+ Per altre informazioni sulle conversioni esplicite, vedere la sezione [conversioni esplicite](/dotnet/csharp/language-reference/language-specification/conversions#explicit-conversions) della [specifica del linguaggio C#](../language-specification/index.md).
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
-- [Cast e conversioni di tipi](../../../csharp/programming-guide/types/casting-and-type-conversions.md)  
-- [Operatore ()](../../../csharp/language-reference/operators/invocation-operator.md)  
-- [Tabella dei tipi integrali](../../../csharp/language-reference/keywords/integral-types-table.md)  
-- [Tabella dei tipi incorporati](../../../csharp/language-reference/keywords/built-in-types-table.md)  
-- [Tabella delle conversioni numeriche implicite](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)
+- [Riferimenti per C#](../index.md)
+- [Guida per programmatori C#](../../programming-guide/index.md)
+- [Cast e conversioni di tipi](../../programming-guide/types/casting-and-type-conversions.md)
+- [Operatore ()](../operators/invocation-operator.md)
+- [Tabella dei tipi integrali](integral-types-table.md)
+- [Tabella dei tipi a virgola mobile](floating-point-types-table.md)
+- [Tabella dei tipi incorporati](built-in-types-table.md)
+- [Tabella delle conversioni numeriche implicite](implicit-numeric-conversions-table.md)

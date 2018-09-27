@@ -1,44 +1,47 @@
 ---
 title: Operatore %= (Riferimenti per C#)
-ms.date: 04/04/2018
+ms.date: 09/04/2018
 f1_keywords:
 - '%=_CSharpKeyword'
 helpviewer_keywords:
 - remainder assignment operator (%=) [C#]
 - '%= assignment operator (remainder assignment) [C#]'
 ms.assetid: 47e5f068-1d97-4010-bd3b-e21b5d3a77f5
-ms.openlocfilehash: 009c162b13fab05ba349d0535fe8dfae206502f3
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: c475517666bdadaa457dbb4188808b3a96fcdf0e
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43399491"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44085647"
 ---
 # <a name="-operator-c-reference"></a>Operatore %= (Riferimenti per C#)
-Operatore di assegnazione di resto.  
-  
-## <a name="remarks"></a>Note  
- Un'espressione che usa l'operatore di assegnazione `%=`, ad esempio  
-  
-```csharp  
-x %= y  
+
+Operatore di assegnazione di resto.
+
+Un'espressione che usa l'operatore `%=`, ad esempio  
+
+```csharp
+x %= y
 ```  
-  
- equivale a  
-  
-```csharp  
-x = x % y  
+
+equivale a  
+
+```csharp
+x = x % y
 ```  
+
+con la differenza che `x` viene valutato una sola volta.
   
- con la differenza che `x` viene valutato una sola volta. Per i tipi numerici, l'[operatore %](../../../csharp/language-reference/operators/remainder-operator.md) è predefinito per calcolare il resto dopo una divisione.  
+L'[operatore di resto](remainder-operator.md) `%` è supportato da tutti i tipi numerici e calcola il resto dopo la divisione dei relativi operandi.
+
+Se un tipo definito dall'utente [esegue l'overload](../keywords/operator.md) dell'[operatore di resto](remainder-operator.md) `%`, l'operatore di assegnazione di resto `%=` viene sottoposto a overload in modo implicito.
   
- L'operatore `%=` non può essere sottoposto direttamente a overload. I tipi definiti dall'utente, tuttavia, possono eseguire l'overload dell'[operatore %](../../../csharp/language-reference/operators/remainder-operator.md) (vedere [operator (Riferimenti per C#)](../../../csharp/language-reference/keywords/operator.md)).  
-  
-## <a name="example"></a>Esempio  
- [!code-csharp[csRefOperators#4](../../../csharp/language-reference/operators/codesnippet/CSharp/modulus-assignment-operator_1.cs)]  
-  
+Nell'esempio seguente viene illustrato l'uso dell'operatore `%=`:
+
+[!code-csharp-interactive[%= example](~/samples/snippets/csharp/language-reference/operators/RemainderExamples.cs#3)]
+
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
-- [Operatori C#](../../../csharp/language-reference/operators/index.md)
+- [Riferimenti per C#](../index.md)
+- [Guida per programmatori C#](../../programming-guide/index.md)
+- [Operatori C#](index.md)

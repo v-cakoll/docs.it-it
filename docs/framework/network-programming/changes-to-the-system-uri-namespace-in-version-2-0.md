@@ -5,12 +5,12 @@ ms.assetid: 35883fe9-2d09-4d8b-80ca-cf23a941e459
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 169454edd04bfdb55affcc2be12140f42dd2f7ff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dbd12b3e08b6e21d26e2cb688a591cd4e03574dc
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392448"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44205984"
 ---
 # <a name="changes-to-the-systemuri-namespace-in-version-20"></a>Modifiche apportate allo spazio dei nomi System.Uri nella versione 2.0
 Alla classe <xref:System.Uri?displayProperty=nameWithType> sono state apportate alcune modifiche allo scopo di correggerne il comportamento nonché di aumentarne le possibilità d'utilizzo e il livello di sicurezza.  
@@ -42,7 +42,7 @@ Alla classe <xref:System.Uri?displayProperty=nameWithType> sono state apportate 
   
 -   Nel caso di schemi URI in cui è notoriamente assente una parte relativa a query (file, ftp e altri), il punto interrogativo (?) deve essere sempre preceduto da un carattere di escape e non viene considerato come inizio di una parte <xref:System.Uri.Query%2A>.  
   
--   Per gli URI di file impliciti, nel formato c:\directory\file@name.txt, il cancelletto (#) viene sempre preceduto da un carattere di escape tranne nei casi in cui è esplicitamente richiesta l'assenza totale di caratteri di escape oppure <xref:System.Uri.LocalPath%2A> è `true`.  
+-   Per gli URI di file impliciti nel formato `c:\directory\file@name.txt`, il cancelletto (#) viene sempre preceduto da un carattere di escape tranne nei casi in cui è richiesta l'assenza totale di caratteri di escape oppure <xref:System.Uri.LocalPath%2A> è `true`.  
   
 -   Il supporto per nomi host UNC non è più disponibile. Per la rappresentazione dei nomi host internazionali è ora stata adottata la specifica IDN.  
   
@@ -56,9 +56,9 @@ Alla classe <xref:System.Uri?displayProperty=nameWithType> sono state apportate 
   
 -   <xref:System.Uri.IsLoopback%2A> è ora in grado di generare risultati coerenti.  
   
--   L'URI `file:///path` non viene più convertito in file://path.  
+-   L'URI "`file:///path`" non viene più convertito in `file://path`.  
   
--   Il cancelletto (#) viene ora riconosciuto come carattere di terminazione di nome host. Vale a dire, "http://consoto.com#fragment" diventa "http://contoso.com/#fragment".  
+-   Il cancelletto (#) viene ora riconosciuto come carattere di terminazione di nome host. Vale a dire, `http://consoto.com#fragment` diventa `http://contoso.com/#fragment`.  
   
 -   È stato corretto un bug relativo alla combinazione di un URI di base con un frammento.  
   

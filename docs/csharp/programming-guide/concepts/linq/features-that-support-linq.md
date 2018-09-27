@@ -4,20 +4,20 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], features supporting LINQ
 ms.assetid: 524b0078-ebfd-45a7-b390-f2ceb9d84797
-ms.openlocfilehash: f1c045ffe311dfad851c7cace37966d8d42a22cc
-ms.sourcegitcommit: f6343b070f3c66877338a05c8bfb0be9985255e2
+ms.openlocfilehash: c617b2d7b56618867fe92cbe1d9ee04aa4c3ab64
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39220737"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44207239"
 ---
 # <a name="c-features-that-support-linq"></a>Funzionalità di C# che supportano LINQ
 Nella sezione seguente vengono illustrati i nuovi costrutti di linguaggio introdotti in C# 3.0. Sebbene queste nuove funzionalità vengano tutte usate con le query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], non sono limitate a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] e possono essere usate in qualsiasi contesto in cui risultino utili.  
   
 ## <a name="query-expressions"></a>Espressioni di query  
- Le espressioni di query usano una sintassi dichiarativa simile a SQL o XQuery per eseguire una query sulle Collection IEnumerable. In fase di compilazione la sintassi della query viene convertita nelle chiamate al metodo per l'implementazione di un provider [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] dei metodi di estensione degli operatori di query standard. Le applicazioni controllano gli operatori di query standard inclusi nell'ambito specificando lo spazio dei nomi adatto con una direttiva `using`. Nell'espressione di query seguente viene usata una matrice di stringhe, raggruppate in base al primo carattere della stringa, e vengono ordinati i gruppi.  
+ Le espressioni di query usano una sintassi dichiarativa simile a SQL o XQuery per eseguire una query sulle raccolte IEnumerable. In fase di compilazione la sintassi della query viene convertita nelle chiamate al metodo per l'implementazione di un provider [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] dei metodi di estensione degli operatori di query standard. Le applicazioni controllano gli operatori di query standard inclusi nell'ambito specificando lo spazio dei nomi adatto con una direttiva `using`. Nell'espressione di query seguente viene usata una matrice di stringhe, raggruppate in base al primo carattere della stringa, e vengono ordinati i gruppi.  
   
-```  
+```csharp  
 var query = from str in stringArray  
             group str by str[0] into stringGroup  
             orderby stringGroup.Key  
@@ -29,7 +29,7 @@ var query = from str in stringArray
 ## <a name="implicitly-typed-variables-var"></a>Variabili tipizzate in modo implicito (var)  
  Anziché specificare in modo esplicito un tipo quando si dichiara e inizializza una variabile, è possibile usare il modificatore [var](../../../../csharp/language-reference/keywords/var.md) per indicare al compilatore di dedurre e assegnare il tipo, come illustrato di seguito:  
   
-```  
+```csharp  
 var number = 5;  
 var name = "Virginia";  
 var query = from str in stringArray  
@@ -37,14 +37,14 @@ var query = from str in stringArray
             select str;  
 ```  
   
- Le variabili dichiarate come `var` sono fortemente tipizzate esattamente come le variabili in cui il tipo viene specificato in modo esplicito. L'uso di `var` consente di creare tipi anonimi, ma può essere usato per qualsiasi variabile locale. Le matrici possono essere dichiarate anche con la tipizzazione implicita.  
+ Le variabili dichiarate come `var` sono fortemente tipizzate esattamente come le variabili in cui il tipo viene specificato in modo esplicito. L'uso di `var` consente di creare tipi anonimi, ma può essere usato solo per variabili locali. Le matrici possono essere dichiarate anche con la tipizzazione implicita.  
   
  Per altre informazioni, vedere [Variabili locali tipizzate in modo implicito](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
   
 ## <a name="object-and-collection-initializers"></a>Inizializzatori di oggetto e di raccolta  
  Gli inizializzatori di oggetti e Collection consentono di inizializzare gli oggetti senza chiamare in modo esplicito un costruttore per l'oggetto. Gli inizializzatori vengono usati in genere nelle espressioni di query quando proiettano i dati di origine in un nuovo tipo di dati. Supponendo di usare una classe denominata `Customer` con le proprietà pubbliche `Name` e `Phone`, l'inizializzatore di oggetto può essere usato come nel codice seguente:  
   
-```  
+```csharp  
 Customer cust = new Customer { Name = "Mike", Phone = "555-1212" };  
 ```  
   
@@ -78,11 +78,12 @@ select new {name = cust.Name, phone = cust.Phone};
 ## <a name="auto-implemented-properties"></a>Proprietà implementate automaticamente  
  Le proprietà implementate automaticamente rendono più concisa la dichiarazione di proprietà. Quando si dichiara una proprietà come mostrato nel seguente esempio, il compilatore crea un campo sottostante privato anonimo accessibile solo tramite la propertà getter e setter.  
   
-```  
+```csharp  
 public string Name {get; set;}  
 ```  
   
  Per altre informazioni, vedere [Proprietà implementate automaticamente](../../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [LINQ (Language-Integrated Query) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)
+## <a name="see-also"></a>Vedere anche
+
+- [LINQ (Language-Integrated Query) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)

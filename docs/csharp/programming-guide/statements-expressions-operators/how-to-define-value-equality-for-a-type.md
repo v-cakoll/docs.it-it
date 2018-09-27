@@ -8,25 +8,25 @@ helpviewer_keywords:
 - value equality [C#]
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
-ms.openlocfilehash: c0105371bd39c3999aafca867a7bb7a59fd367c1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 365aa5a71eb3d07a79920f565a66fcac67de0b42
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339605"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44042621"
 ---
 # <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>Procedura: definire l'uguaglianza di valori per un tipo (Guida per programmatori C#)
 Quando si definisce una classe o uno struct, si decide se è opportuno creare una definizione personalizzata di uguaglianza di valore, o equivalenza, per il tipo. In genere, l'uguaglianza di valori viene implementata quando si prevede che oggetti del tipo vengano aggiunti a una raccolta, o quando lo scopo principale di tali oggetti consiste nell'archiviare un set di campi o di proprietà. È possibile basare la definizione di uguaglianza di valori su un confronto di tutti i campi e di tutte le proprietà nel tipo, oppure su un sottoinsieme. Ma in entrambi i casi e in entrambe le classi e gli struct, l'implementazione deve seguire le cinque garanzie di equivalenza:  
   
-1.  x.`Equals`(x) restituisce `true.`. Questa viene denominata proprietà riflessiva.  
+1.  `x.Equals(x)` restituisce `true`. Questa viene denominata proprietà riflessiva.  
   
-2.  x.`Equals`(y) restituisce lo stesso valore di y.`Equals`(x). Questa viene denominata proprietà simmetrica.  
+2.  `y.Equals(x)` restituisce lo stesso valore di `x.Equals(y)`. Questa viene denominata proprietà simmetrica.  
   
-3.  Se (x.`Equals`(y) && y`Equals`(z)) restituisce `true`, x.`Equals`(z) restituisce `true`. Questa viene denominata proprietà transitiva.  
+3.  Se `(x.Equals(y) && y.Equals(z))` restituisce `true`, `x.Equals(z)` restituirà `true`. Questa viene denominata proprietà transitiva.  
   
-4.  Le successive chiamate di x.`Equals`(y) restituiscono lo stesso valore purché gli oggetti a cui x e y fanno riferimento non vengano modificati.  
+4.  Le successive chiamate di `x.Equals(y)` restituiscono lo stesso valore purché gli oggetti a cui x e y fanno riferimento non vengano modificati.  
   
-5.  x.`Equals`(null) restituisce `false`. Tuttavia, null.Equals(null) genera un'eccezione in quanto non rispetta la regola numero 2 precedente.  
+5.  `x.Equals(null)` restituisce `false`. `null.Equals(null)` genera tuttavia un'eccezione in quanto non rispetta la regola numero 2 precedente.  
   
  Gli struct definiti hanno già un'implementazione predefinita di uguaglianza di valore che eredita dall'override <xref:System.ValueType?displayProperty=nameWithType> del metodo <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>. Questa implementazione usa il processo di reflection per esaminare tutti i campi e tutte le proprietà nel tipo. Sebbene questa implementazione produca risultati corretti, è relativamente lenta rispetto a un'implementazione personalizzata che viene scritta specificamente per il tipo.  
   
@@ -62,6 +62,7 @@ Quando si definisce una classe o uno struct, si decide se è opportuno creare un
   
  Gli operatori [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) e [!=](../../../csharp/language-reference/operators/not-equal-operator.md) non possono funzionare con uno struct a meno che lo struct non ne esegua esplicitamente l'overload.  
   
-## <a name="see-also"></a>Vedere anche  
- [Confronti di uguaglianza](../../../csharp/programming-guide/statements-expressions-operators/equality-comparisons.md)  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Confronti di uguaglianza](../../../csharp/programming-guide/statements-expressions-operators/equality-comparisons.md)  
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)

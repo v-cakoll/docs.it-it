@@ -7,17 +7,17 @@ helpviewer_keywords:
 - converting strings to int [C#]
 - strings [C#], converting to int
 ms.assetid: 467b9979-86ee-4afd-b734-30299cda91e3
-ms.openlocfilehash: 55ff87ef51f00a803276083052d4d86960e702e3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1f11ba3981b219d3b3a7817afd75fa78f2ccf78a
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332855"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43521753"
 ---
 # <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>Procedura: convertire una stringa in un numero (Guida per programmatori C#)
 È possibile convertire una [stringa`TryParse` in un numero usando i metodi della classe ](../../../csharp/language-reference/keywords/string.md) o usando il metodo <xref:System.Convert> presente nei diversi tipi numerici (int, long, float e così via).  
   
- Se si dispone di una stringa, è leggermente più efficiente e semplice chiamare un metodo `TryParse` (ad esempio, `int.TryParse("11")`).  L'uso di un metodo `Convert` è più utile per gli oggetti generali che implementano <xref:System.IConvertible>.  
+ Se si ha una stringa, è leggermente più efficiente e semplice chiamare un metodo `TryParse` (ad esempio, [`int.TryParse("11", out number)`](xref:System.Int32.TryParse%2A)).  L'uso di un metodo <xref:System.Convert> è più utile per gli oggetti generali che implementano <xref:System.IConvertible>.  
   
  È possibile usare i metodi `Parse` o `TryParse` sul tipo numerico che si prevede sia contenuto nella stringa, ad esempio il tipo <xref:System.Int32?displayProperty=nameWithType>.  Il metodo <xref:System.Convert.ToUInt32%2A?displayProperty=nameWithType> utilizza il metodo <xref:System.Int32.Parse%2A> internamente.  Se il formato della stringa non è valido, il metodo `Parse` genera un'eccezione, mentre il metodo `TryParse` restituisce [false](../../../csharp/language-reference/keywords/false.md).  
   
@@ -53,7 +53,8 @@ ms.locfileid: "33332855"
  [!code-csharp[csProgGuideTypes#5555](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/how-to-convert-a-string-to-a-number_1.cs)]  
 [!code-csharp[csProgGuideTypes#24](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/how-to-convert-a-string-to-a-number_7.cs)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Tipi](../../../csharp/programming-guide/types/index.md)  
- [Procedura: Determinare se una stringa rappresenta un valore numerico](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)  
- [.NET Framework 4 Formatting Utility](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d) (Utilità di formattazione in .NET Framework 4)
+## <a name="see-also"></a>Vedere anche
+
+- [Tipi](../../../csharp/programming-guide/types/index.md)  
+- [Procedura: Determinare se una stringa rappresenta un valore numerico](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)  
+- [.NET Framework 4 Formatting Utility](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d) (Utilità di formattazione in .NET Framework 4)

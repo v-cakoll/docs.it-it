@@ -4,12 +4,12 @@ description: Informazioni sulla distribuzione di app .NET Core con strumenti del
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/18/2017
-ms.openlocfilehash: 7b009068422686442ebff83b9400c365f34a3154
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: dbef9d91aa4e7af8e6e0ed2d8f361238385d4976
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244751"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43855022"
 ---
 # <a name="deploying-net-core-apps-with-command-line-interface-cli-tools"></a>Distribuire app .NET Core con strumenti dell'interfaccia della riga di comando (CLI)
 
@@ -26,7 +26,7 @@ Con la riga di comando è possibile usare l'editor di codice desiderato. Se l'ed
 
 ## <a name="framework-dependent-deployment"></a>Distribuzione dipendente dal framework
 
-Una distribuzione dipendente dal framework senza dipendenze di terze parti richiede la compilazione, il testing e la pubblicazione dell'app. Il processo viene illustrato da un semplice esempio scritto in C#. 
+Una distribuzione dipendente dal framework senza dipendenze di terze parti richiede la compilazione, il testing e la pubblicazione dell'app. Il processo viene illustrato da un semplice esempio scritto in C#.
 
 1. Creare una directory del progetto.
 
@@ -43,7 +43,7 @@ Una distribuzione dipendente dal framework senza dipendenze di terze parti richi
    [!code-csharp[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
 
 1. Aggiornare le dipendenze e gli strumenti del progetto.
- 
+
    Eseguire il comando [dotnet-restore](../tools/dotnet-restore.md) ([vedere la nota](#dotnet-restore-note)) per ripristinare le dipendenze specificate nel progetto.
 
 1. Creare una build di debug dell'app.
@@ -105,7 +105,7 @@ Una distribuzione autonoma senza dipendenze di terze parti comporta la creazione
 
 1. Definire le piattaforme di destinazione per l'app.
 
-   Creare un tag `<RuntimeIdentifiers>` nella sezione `<PropertyGroup>` del file *csproj* che definisce le piattaforme di destinazione dell'app e specificare l'identificatore di runtime di ogni piattaforma di destinazione. Si noti che è inoltre necessario aggiungere un punto e virgola per separare i RID. Per un elenco degli identificatori di runtime, vedere [Runtime IDentifier catalog](../rid-catalog.md) (Catalogo degli identificatori di runtime). 
+   Creare un tag `<RuntimeIdentifiers>` nella sezione `<PropertyGroup>` del file *csproj* che definisce le piattaforme di destinazione dell'app e specificare l'identificatore di runtime di ogni piattaforma di destinazione. Si noti che è inoltre necessario aggiungere un punto e virgola per separare i RID. Per un elenco degli identificatori di runtime, vedere [Runtime IDentifier catalog](../rid-catalog.md) (Catalogo degli identificatori di runtime).
 
    Ad esempio, la sezione `<PropertyGroup>` seguente indica che l'app viene eseguita in sistemi operativi Windows 10 a 64 bit e nel sistema operativo OS X versione 10.11 a 64 bit.
 
@@ -188,8 +188,7 @@ Si noti che è possibile distribuire una distribuzione autonoma solo con una lib
 <a name="dotnet-restore-note"></a>
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-# <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedere anche
 
-[Distribuzione di applicazioni .NET Core](index.md)   
-[Catalogo dei RID (Runtime IDentifier) di .NET Core](../rid-catalog.md)   
-
+* [Distribuzione di applicazioni .NET Core](index.md)
+* [Catalogo dei RID (Runtime IDentifier) di .NET Core](../rid-catalog.md)

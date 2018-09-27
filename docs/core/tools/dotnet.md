@@ -4,12 +4,12 @@ description: Informazioni sul comando dotnet (il driver generico per gli strumen
 author: mairaw
 ms.author: mairaw
 ms.date: 06/04/2018
-ms.openlocfilehash: 788dc746705f9328683019ab3ad9836204a1ea63
-ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
+ms.openlocfilehash: 53e8f8bab1cbaabaa7926aa68197c18843b0b637
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34805659"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44079816"
 ---
 # <a name="dotnet-command"></a>Comando dotnet
 
@@ -17,7 +17,7 @@ ms.locfileid: "34805659"
 
 ## <a name="name"></a>nome
 
-`dotnet`: driver generale per l'esecuzione dei comandi della riga di comando.
+`dotnet`: uno strumento per la gestione dei file binari e del codice sorgente di .NET.
 
 ## <a name="synopsis"></a>Riepilogo
 
@@ -40,11 +40,9 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 ## <a name="description"></a>Descrizione
 
-`dotnet` è un driver generico per la toolchain dell'interfaccia della riga di comando. Se richiamato come comando autonomo, visualizza brevi istruzioni di utilizzo.
+`dotnet` è uno strumento per la gestione dei file binari e del codice sorgente di .NET. Espone i comandi che eseguono attività specifiche, come ad esempio [`dotnet build`](dotnet-build.md) e [`dotnet run`](dotnet-run.md). Ogni comando definisce i propri argomenti. Digitare `--help` dopo ogni comando per accedere a una breve documentazione della Guida.
 
-Ogni funzionalità specifica viene implementata come un comando. Per usare la funzionalità, il comando viene specificato dopo `dotnet`, ad esempio [`dotnet build`](dotnet-build.md). Tutti gli argomenti che seguono il comando sono gli argomenti del comando.
-
-`dotnet` viene usato come comando autonomo solo per eseguire [app dipendenti dal framework](../deploying/index.md). Per eseguire l'applicazione, ad esempio `dotnet myapp.dll`, specificare una DLL di applicazione dopo il verbo `dotnet`.
+`dotnet` può essere usato per eseguire le applicazioni specificando una DLL dell'applicazione, come ad esempio `dotnet myapp.dll`. Per informazioni sulle opzioni di distribuzione, vedere [Distribuzione di applicazioni .NET Core](../deploying/index.md).
 
 ## <a name="options"></a>Opzioni
 
@@ -64,15 +62,15 @@ Abilita l'output di diagnostica.
 
 `--fx-version <VERSION>`
 
-Versione del runtime .NET Core installato da usare per eseguire l'applicazione.
+Versione del runtime di .NET Core da usare per eseguire l'applicazione.
 
 `-h|--help`
 
-Stampa una breve guida per il comando. Se usato con `dotnet`, stampa anche un elenco dei comandi disponibili.
+Visualizza la documentazione per un determinato comando, come ad esempio `dotnet build --help`. `dotnet --help` consente di visualizzare un elenco dei comandi disponibili.
 
 `--info`
 
-Stampa informazioni dettagliate sull'ambiente e sugli strumenti dell'interfaccia della riga di comando, ad esempio il sistema operativo corrente, l'Agente integrità sistema di commit per la versione e altre informazioni.
+Consente di visualizzare informazioni dettagliate sull'installazione di .NET Core e sull'ambiente del computer, come ad esempio il sistema operativo corrente e l'Agente integrità sistema di commit della versione di .NET Core.
 
 `--list-runtimes`
 
@@ -84,7 +82,7 @@ Visualizza i .NET Core SDK installati.
 
 `--roll-forward-on-no-candidate-fx`
 
- Non esegue il roll forward su framework condiviso candidato.
+ Se impostato su `0`, disabilita il roll forward della versione secondaria. Per altre informazioni, vedere [Roll forward](../whats-new/dotnet-core-2-1.md#roll-forward).
 
 `-v|--verbosity <LEVEL>`
 
@@ -110,19 +108,19 @@ Abilita l'output di diagnostica.
 
 `--fx-version <VERSION>`
 
-Versione del runtime .NET Core installato da usare per eseguire l'applicazione.
+Versione del runtime di .NET Core da usare per eseguire l'applicazione.
 
 `-h|--help`
 
-Stampa una breve guida per il comando. Se usato con `dotnet`, stampa anche un elenco dei comandi disponibili.
+Visualizza la documentazione per un determinato comando, come ad esempio `dotnet build --help`. `dotnet --help` consente di visualizzare un elenco dei comandi disponibili.
 
 `--info`
 
-Stampa informazioni dettagliate sull'ambiente e sugli strumenti dell'interfaccia della riga di comando, ad esempio il sistema operativo corrente, l'Agente integrità sistema di commit per la versione e altre informazioni.
+Consente di visualizzare informazioni dettagliate sull'installazione di .NET Core e sull'ambiente del computer, come ad esempio il sistema operativo corrente e l'Agente integrità sistema di commit della versione di .NET Core.
 
 `--roll-forward-on-no-candidate-fx`
 
- Non esegue il roll forward su framework condiviso candidato.
+ Se impostato su `0`, disabilita il roll forward della versione secondaria. Per altre informazioni, vedere [Roll forward](../whats-new/dotnet-core-2-1.md#roll-forward).
 
 `-v|--verbosity <LEVEL>`
 
@@ -144,15 +142,15 @@ Abilita l'output di diagnostica.
 
 `--fx-version <VERSION>`
 
-Versione del runtime .NET Core installato da usare per eseguire l'applicazione.
+Versione del runtime di .NET Core da usare per eseguire l'applicazione.
 
 `-h|--help`
 
-Stampa una breve guida per il comando. Se usato con `dotnet`, stampa anche un elenco dei comandi disponibili.
+Visualizza la documentazione per un determinato comando, come ad esempio `dotnet build --help`. `dotnet --help` consente di visualizzare un elenco dei comandi disponibili.
 
 `--info`
 
-Stampa informazioni dettagliate sull'ambiente e sugli strumenti dell'interfaccia della riga di comando, ad esempio il sistema operativo corrente, l'Agente integrità sistema di commit per la versione e altre informazioni.
+Consente di visualizzare informazioni dettagliate sull'installazione di .NET Core e sull'ambiente del computer, come ad esempio il sistema operativo corrente e l'Agente integrità sistema di commit della versione di .NET Core.
 
 `-v|--verbosity <LEVEL>`
 
@@ -259,7 +257,7 @@ Comando | Funzione
 
 ### <a name="additional-tools"></a>Altri strumenti
 
-A partire da .NET Core SDK 2.1.300, numerosi strumenti precedentemente disponibili solo a livello di singolo progetto usando `DotnetCliToolReference` sono ora disponibili come parte di .NET Core SDK. Questi strumenti comprendono:
+A partire da .NET Core SDK 2.1.300, numerosi strumenti precedentemente disponibili solo a livello di singolo progetto usando `DotnetCliToolReference` sono ora disponibili come parte di .NET Core SDK. Tali strumenti sono elencati nella tabella seguente:
 
 | Strumento                                              | Funzione                                                     |
 | ------------------------------------------------- | ------------------------------------------------------------ |
@@ -269,7 +267,7 @@ A partire da .NET Core SDK 2.1.300, numerosi strumenti precedentemente disponibi
 | [user-secrets](/aspnet/core/security/app-secrets) | Gestisce i segreti dell'utente di sviluppo.                            |
 | [watch](/aspnet/core/tutorials/dotnet-watch)      | Avvia un watcher per file che esegue un comando quando si modificano i file. |
 
-Per altre informazioni sui diversi strumenti, eseguire `dotnet <tool-name> --help`.
+Per altre informazioni su ogni strumento, digitare `dotnet <tool-name> --help`.
 
 ## <a name="examples"></a>Esempi
 
@@ -287,7 +285,7 @@ Compilare un progetto e le relative dipendenze in una determinata directory:
 
 `dotnet build`
 
-Eseguire un'app dipendente dal framework denominata `myapp.dll`:
+Eseguire una DLL dell'applicazione, ad esempio `myapp.dll`:
 
 `dotnet myapp.dll`
 
@@ -313,7 +311,7 @@ Specifica se il runtime .NET Core, il framework condiviso o l'SDK vengono risolt
 
 `DOTNET_ROLL_FORWARD_ON_NO_CANDIDATE_FX`
 
-Disabilita il roll forward della versione secondaria. Per altre informazioni, vedere [Roll forward](../whats-new/dotnet-core-2-1.md#roll-forward).
+Se impostato su `0`, disabilita il roll forward della versione secondaria. Per altre informazioni, vedere [Roll forward](../whats-new/dotnet-core-2-1.md#roll-forward).
 
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 

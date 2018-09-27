@@ -1,5 +1,5 @@
 ---
-title: ref (Riferimenti per C#)
+title: Parola chiave ref (Riferimenti per C#)
 ms.date: 03/06/2018
 f1_keywords:
 - ref_CSharpKeyword
@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: a72624d5702ec12bfda98d49a16474cc84205ff0
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: e0b82de125246e95d8dce2a7afc20119a8a1fe4f
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245752"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44200553"
 ---
 # <a name="ref-c-reference"></a>ref (Riferimenti per C#)
 
@@ -21,7 +21,7 @@ La parola chiave `ref` indica un valore che viene passato per riferimento. Viene
 - Nella firma di un metodo e in una chiamata al metodo, per passare un argomento a un metodo per riferimento. Per altre informazioni, vedere [Passaggio di un argomento per riferimento](#passing-an-argument-by-reference).
 - Nella firma di un metodo, per restituire un valore al chiamante per riferimento. Per altre informazioni, vedere [Valori restituiti di riferimento](#reference-return-values).
 - Nel corpo di un membro, per indicare che un valore restituito di riferimento è archiviato in locale come un riferimento che il chiamante intende modificare o, in generale, che una variabile locale accede a un altro valore per riferimento. Per altre informazioni, vedere [Variabili locali ref](#ref-locals).
-- In una dichiarazione `struct` per dichiarare `ref struct` o `ref readonly struct`. Per altre informazioni vedere [ref struct declarations](#ref-struct-declarations) (Dichiarazioni sulla struttura ref).
+- In una dichiarazione `struct` per dichiarare `ref struct` o `ref readonly struct`. Per altre informazioni, vedere [Semantica di riferimento con i tipi valore](../../reference-semantics-with-value-types.md).
 
 ## <a name="passing-an-argument-by-reference"></a>Passaggio di un argomento per riferimento
 
@@ -32,7 +32,7 @@ Quando viene usata nell'elenco di parametri di un metodo, la parola chiave `ref`
 
 Per usare un parametro `ref`, la definizione del metodo e il metodo chiamante devono usare in modo esplicito la parola chiave `ref`, come illustrato nell'esempio seguente.  
 
-[!code-csharp-interactive[csrefKeywordsMethodParams#6](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/RefParameterModifier.cs#1)]
+[!code-csharp-interactive[csrefKeywordsMethodParams#6](~/samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/RefParameterModifier.cs#1)]
 
 Un argomento passato a un parametro `ref` o `in` deve essere inizializzato prima di essere passato. Questo comportamento è diverso dai parametri [out](out-parameter-modifier.md), i cui argomenti non devono essere inizializzati in modo esplicito prima di essere passati.
 
@@ -50,26 +50,24 @@ class CS0663_Example
 
 È tuttavia possibile eseguire l'overload dei metodi quando un metodo ha un parametro `ref`, `in` o `out` e l'altro ha un parametro di valore, come illustrato nell'esempio seguente.
   
-[!code-csharp[csrefKeywordsMethodParams#6](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/RefParameterModifier.cs#2)]
+[!code-csharp[csrefKeywordsMethodParams#6](~/samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/RefParameterModifier.cs#2)]
   
  In altre situazioni che richiedono la firma corrispondente, ad esempio nascondere o sottoporre a override, `in`, `ref` e `out` fanno parte della firma e non sono corrispondenti tra loro.  
   
  Le proprietà non sono variabili. Sono metodi e non possono essere passate ai parametri `ref`.  
   
- Per informazioni su come passare le matrici, vedere [Passaggio di matrici usando ref e out](../../../csharp/programming-guide/arrays/passing-arrays-using-ref-and-out.md).  
-  
  Non è possibile usare le parole chiave `ref`, `in` e `out` per i seguenti tipi di metodi:  
   
-- Metodi asincroni definiti usando il modificatore [async](../../../csharp/language-reference/keywords/async.md).  
-- Metodi iteratori che includono un'istruzione [yield return](../../../csharp/language-reference/keywords/yield.md) o `yield break`.  
+- Metodi asincroni definiti usando il modificatore [async](async.md).  
+- Metodi iteratori che includono un'istruzione [yield return](yield.md) o `yield break`.  
 
 ## <a name="passing-an-argument-by-reference-an-example"></a>Passaggio di un argomento per riferimento: un esempio
 
 Negli esempi precedenti vengono passati tipi valore per riferimento. È anche possibile usare la parola chiave `ref` per passare tipi riferimento per riferimento. Il passaggio di un tipo riferimento per riferimento consente al metodo chiamato di sostituire l'oggetto a cui fa riferimento il parametro per riferimento nel chiamante. Il percorso di archiviazione dell'oggetto viene passato al metodo come valore del parametro referenziato. Se si modifica il valore nella posizione di archiviazione del parametro (in modo che punti a un nuovo oggetto), è anche possibile modificare il percorso di archiviazione a cui fa riferimento il chiamante. Nell'esempio seguente viene passata un'istanza di un tipo di riferimento come parametro `ref`.
   
-[!code-csharp[csrefKeywordsMethodParams#6](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/RefParameterModifier.cs#3)]
+[!code-csharp[csrefKeywordsMethodParams#6](~/samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/RefParameterModifier.cs#3)]
 
-Per altre informazioni su come passare i tipi di riferimento per valore e per riferimento, vedere [Passaggio di parametri di tipi di riferimento](../../../csharp/programming-guide/classes-and-structs/passing-reference-type-parameters.md).
+Per altre informazioni su come passare i tipi di riferimento per valore e per riferimento, vedere [Passaggio di parametri di tipi di riferimento](../../programming-guide/classes-and-structs/passing-reference-type-parameters.md).
   
 ## <a name="reference-return-values"></a>Valori restituiti di riferimento
 
@@ -80,7 +78,7 @@ Un valore restituito di riferimento viene definito mediante la parola chiave `re
 - Nella firma del metodo. Ad esempio, la firma del metodo seguente indica che il metodo `GetCurrentPrice` restituisce un valore <xref:System.Decimal> per riferimento.
 
 ```csharp
-public ref decimal GetCurrentValue()
+public ref decimal GetCurrentPrice()
 ```
 
 - Tra il token `return` e la variabile restituita in un'istruzione `return` nel metodo. Ad esempio:
@@ -95,7 +93,7 @@ Per un esempio, vedere [Esempio di valori restituiti e variabili locali ref](#a-
 
 ## <a name="ref-locals"></a>Variabili locali ref
 
-Una variabile locale ref viene usata per fare riferimento ai valori restituiti mediante `return ref`.  Una variabile locale ref deve essere inizializzata e assegnata a un valore restituito ref. Tutte le modifiche apportate al valore della variabile locale ref vengono riflesse nello stato dell'oggetto di cui metodo ha restituito il valore per riferimento.
+Una variabile locale ref viene usata per fare riferimento ai valori restituiti mediante `return ref`. Non è possibile inizializzare una variabile locale ref in un valore restituito non ref. In altre parole, il lato destro dell'inizializzazione deve essere un riferimento. Tutte le modifiche apportate al valore della variabile locale ref vengono riflesse nello stato dell'oggetto di cui metodo ha restituito il valore per riferimento.
 
 Per definire una variabile locale ref, usare la parola chiave `ref` prima della dichiarazione di variabile, nonché immediatamente prima della chiamata al metodo che restituisce il valore per riferimento.
 
@@ -117,13 +115,11 @@ Si noti che nei due esempi la parola chiave `ref` deve essere usata in entrambe 
 
 Nell'esempio seguente viene definita una classe `Book` che ha due campi <xref:System.String>, `Title` e `Author`. Definisce inoltre una classe `BookCollection` che include una matrice privata di oggetti `Book`. I singoli oggetti book vengono restituiti per riferimento chiamando il relativo metodo `GetBookByTitle`.
 
-[!code-csharp[csrefKeywordsMethodParams#6](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/RefParameterModifier.cs#4)]
+[!code-csharp[csrefKeywordsMethodParams#6](~/samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/RefParameterModifier.cs#4)]
 
 Quando il chiamante archivia il valore restituito dal metodo `GetBookByTitle` come una variabile locale ref, le modifiche apportate al valore restituito dal chiamante vengono riflesse nell'oggetto `BookCollection`, come illustrato nell'esempio seguente.
 
-[!code-csharp[csrefKeywordsMethodParams#6](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/RefParameterModifier.cs#5)]
-
-## <a name="ref-struct-declarations"></a>Dichiarazioni struttura ref
+[!code-csharp[csrefKeywordsMethodParams#6](~/samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/RefParameterModifier.cs#5)]
 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#
 
@@ -131,9 +127,9 @@ Quando il chiamante archivia il valore restituito dal metodo `GetBookByTitle` co
   
 ## <a name="see-also"></a>Vedere anche
 
- [Semantica di riferimento con i tipi valore](../../reference-semantics-with-value-types.md)  
- [Passaggio di parametri](../../programming-guide/classes-and-structs/passing-parameters.md)  
- [Parametri dei metodi](method-parameters.md)  
- [Riferimenti per C#](../index.md)  
- [Guida per programmatori C#](../../programming-guide/index.md)  
- [Parole chiave di C#](index.md)
+- [Semantica di riferimento con i tipi valore](../../reference-semantics-with-value-types.md)  
+- [Passaggio di parametri](../../programming-guide/classes-and-structs/passing-parameters.md)  
+- [Parametri dei metodi](method-parameters.md)  
+- [Riferimenti per C#](../index.md)  
+- [Guida per programmatori C#](../../programming-guide/index.md)  
+- [Parole chiave di C#](index.md)

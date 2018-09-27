@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f2306d51d88ab2d3b74ed6381a6de0acebf1e62c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 67955e2b9d523cdee02f6de548720fdad261ab4d
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410098"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43748430"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (strumento per i criteri di sicurezza dall'accesso di codice)
 Lo strumento Criteri di sicurezza dall'accesso di codice (Caspol.exe) consente a utenti e amministratori di modificare i criteri di sicurezza definiti a livello di computer, di utente e di azienda.  
@@ -83,29 +83,29 @@ caspol [options]
   
 |Argomento|Descrizione|  
 |--------------|-----------------|  
-|**-allcode**|Specifica tutto il codice. Per altre informazioni su questa condizione di appartenenza vedere <xref:System.Security.Policy.AllMembershipCondition>.|  
-|**-appdir**|Specifica la directory dell'applicazione. Se si specifica **-appdir** come condizione di appartenenza, l'evidenza URL del codice verrà confrontata con l'evidenza della directory dell'applicazione di tale codice. Se i valori delle evidenze sono identici, questa condizione di appartenenza è soddisfatta. Per altre informazioni su questa condizione di appartenenza vedere <xref:System.Security.Policy.ApplicationDirectoryMembershipCondition>.|  
+|**-allcode**|Specifica tutto il codice. Per altre informazioni su questa condizione di appartenenza, vedere <xref:System.Security.Policy.AllMembershipCondition?displayProperty=nameWithType>.|  
+|**-appdir**|Specifica la directory dell'applicazione. Se si specifica **-appdir** come condizione di appartenenza, l'evidenza URL del codice verrà confrontata con l'evidenza della directory dell'applicazione di tale codice. Se i valori delle evidenze sono identici, questa condizione di appartenenza è soddisfatta. Per altre informazioni su questa condizione di appartenenza, vedere <xref:System.Security.Policy.ApplicationDirectoryMembershipCondition?displayProperty=nameWithType>.|  
 |**-custom** *xmlfile*|Aggiunge una condizione di appartenenza personalizzata. L'argomento obbligatorio *xmlfile* specifica il file XML contenente la serializzazione XML della condizione di appartenenza personalizzata.|  
-|**-hash** *hashAlg* {**-hex** *hashValue* &#124; **-file** *assembly_file* }|Specifica il codice che include l'hash di assembly specificato. Per utilizzare un hash come condizione di appartenenza di un gruppo di codice, è necessario specificare il valore hash oppure il file di assembly. Per altre informazioni su questa condizione di appartenenza vedere <xref:System.Security.Policy.HashMembershipCondition>.|  
-|**-pub** { **-cert** *cert_file_name* &#124;<br /><br /> **-file** *signed_file_name* &#124; **-hex** *hex_string* }|Specifica il codice che include l'editore di software specificato, come indicato da un file di certificato, da una firma su un file o dalla rappresentazione esadecimale di un certificato X509. Per altre informazioni su questa condizione di appartenenza vedere <xref:System.Security.Policy.PublisherMembershipCondition>.|  
-|**-site** *website*|Specifica il codice che include il sito di origine specificato. Ad esempio:<br /><br /> **-site** www.proseware.com<br /><br /> Per altre informazioni su questa condizione di appartenenza vedere <xref:System.Security.Policy.SiteMembershipCondition>.|  
-|**-strong -file** *file_name* {*name* &#124; **-noname**} {*version* &#124; **-noversion**}|Specifica il codice che include un nome sicuro specifico, composto dal nome del file, dal nome dell'assembly sotto forma di stringa e dalla versione dell'assembly nel formato *major*.*minor*.*build*.*revision*. Ad esempio:<br /><br /> **-strong -file** myAssembly.exe myAssembly 1.2.3.4<br /><br /> Per altre informazioni su questa condizione di appartenenza vedere <xref:System.Security.Policy.StrongNameMembershipCondition>.|  
-|**-url** *URL*|Specifica il codice che deriva dall'URL specificato. L'URL deve includere un protocollo, quale http:// o ftp://. È anche possibile usare un carattere jolly (\*) per specificare più assembly da un determinato URL. **Nota:** poiché un URL può essere identificato tramite più nomi, l'uso di un URL come condizione di appartenenza non è un metodo sicuro per determinare l'identità del codice. Se possibile, è consigliabile utilizzare una condizione di appartenenza con un nome sicuro, una condizione di appartenenza editore o una condizione di appartenenza hash. <br /><br /> Per altre informazioni su questa condizione di appartenenza vedere <xref:System.Security.Policy.UrlMembershipCondition>.|  
+|**-hash** *hashAlg* {**-hex** *hashValue* &#124; **-file** *assembly_file* }|Specifica il codice che include l'hash di assembly specificato. Per utilizzare un hash come condizione di appartenenza di un gruppo di codice, è necessario specificare il valore hash oppure il file di assembly. Per altre informazioni su questa condizione di appartenenza, vedere <xref:System.Security.Policy.HashMembershipCondition?displayProperty=nameWithType>.|  
+|**-pub** { **-cert** *cert_file_name* &#124;<br /><br /> **-file** *signed_file_name* &#124; **-hex** *hex_string* }|Specifica il codice che include l'editore di software specificato, come indicato da un file di certificato, da una firma su un file o dalla rappresentazione esadecimale di un certificato X509. Per altre informazioni su questa condizione di appartenenza, vedere <xref:System.Security.Policy.PublisherMembershipCondition?displayProperty=nameWithType>.|  
+|**-site** *website*|Specifica il codice che include il sito di origine specificato. Ad esempio:<br /><br /> `-site** www.proseware.com`<br /><br /> Per altre informazioni su questa condizione di appartenenza, vedere <xref:System.Security.Policy.SiteMembershipCondition?displayProperty=nameWithType>.|  
+|**-strong -file** *file_name* {*name* &#124; **-noname**} {*version* &#124; **-noversion**}|Specifica il codice che include un nome sicuro specifico, composto dal nome del file, dal nome dell'assembly sotto forma di stringa e dalla versione dell'assembly nel formato *major*.*minor*.*build*.*revision*. Ad esempio:<br /><br /> **-strong -file** myAssembly.exe myAssembly 1.2.3.4<br /><br /> Per altre informazioni su questa condizione di appartenenza, vedere <xref:System.Security.Policy.StrongNameMembershipCondition?displayProperty=nameWithType>.|  
+|**-url** *URL*|Specifica il codice che deriva dall'URL specificato. L'URL deve includere un protocollo, quale http:// o ftp://. È anche possibile usare un carattere jolly (\*) per specificare più assembly da un determinato URL. **Nota:** poiché un URL può essere identificato tramite più nomi, l'uso di un URL come condizione di appartenenza non è un metodo sicuro per determinare l'identità del codice. Se possibile, è consigliabile utilizzare una condizione di appartenenza con un nome sicuro, una condizione di appartenenza editore o una condizione di appartenenza hash. <br /><br /> Per altre informazioni su questa condizione di appartenenza, vedere <xref:System.Security.Policy.UrlMembershipCondition?displayProperty=nameWithType>.|  
 |**-zone** *zonename*|Specifica il codice con la zona di origine specificata. L'argomento *zonename* può essere impostato su **MyComputer**, **Intranet**, **Trusted**, **Internet** o **Untrusted**. Per ulteriori informazioni su questa condizione di appartenenza, vedere la classe <xref:System.Security.Policy.ZoneMembershipCondition>.|  
   
  L'argomento *flags*, utilizzabile con le opzioni **-addgroup** e **-chggroup**, viene specificato mediante uno degli argomenti elencati di seguito.  
   
 |Argomento|Descrizione|  
 |--------------|-----------------|  
-|**-description "** *description* **"**|Se viene usato con l'opzione **-addgroup**, specifica la descrizione di un gruppo di codice da aggiungere. Se viene usato con l'opzione **-chggroup**, specifica la descrizione di un gruppo di codice da modificare. L'argomento *description* deve essere racchiuso tra virgolette doppie.|  
+|**-description** "*description*"|Se viene usato con l'opzione **-addgroup**, specifica la descrizione di un gruppo di codice da aggiungere. Se viene usato con l'opzione **-chggroup**, specifica la descrizione di un gruppo di codice da modificare. L'argomento *description* deve essere racchiuso tra virgolette doppie.|  
 |**-exclusive** {**on**&#124;**off**}|Quando è impostato su **on**, indica che solo il set di autorizzazioni associato al gruppo di codice da aggiungere o da modificare verrà considerato quando del codice soddisferà la condizione di appartenenza del gruppo di codice. Quando questa opzione è impostata su **off**, vengono considerati i set di autorizzazioni di tutti i gruppi di codice corrispondenti nel livello di criteri.|  
 |**-levelfinal** {**on**&#124;**off**}|Quando è impostato su **on**, indica che non verrà considerato alcun livello di criteri inferiore al livello del gruppo di codice aggiunto o modificato. Questa opzione è in genere utilizzata per i criteri definiti a livello di computer. Se ad esempio si imposta questo flag per un gruppo di codice a livello di computer ed esiste codice che soddisfa la condizione di appartenenza di tale gruppo di codice, i criteri definiti a livello utente per questo codice non verranno né calcolati né applicati.|  
-|**-name "** *name* **"**|Se viene usato con l'opzione **-addgroup**, specifica il nome di script di un gruppo di codice da aggiungere. Se viene usato con l'opzione **-chggroup**, specifica il nome di script di un gruppo di codice da modificare. L'argomento *name* deve essere racchiuso tra virgolette doppie. L'argomento *name* non può iniziare con un numero e può contenere solo i caratteri dalla A alla Z, i numeri da 0 a 9 e il carattere di sottolineatura. È possibile fare riferimento ai gruppi di codice in base a questo argomento *name* anziché in base all'etichetta numerica. *name* è anche estremamente utile per la creazione di script.|  
+|**-name** "*name*"|Se viene usato con l'opzione **-addgroup**, specifica il nome di script di un gruppo di codice da aggiungere. Se viene usato con l'opzione **-chggroup**, specifica il nome di script di un gruppo di codice da modificare. L'argomento *name* deve essere racchiuso tra virgolette doppie. L'argomento *name* non può iniziare con un numero e può contenere solo i caratteri dalla A alla Z, i numeri da 0 a 9 e il carattere di sottolineatura. È possibile fare riferimento ai gruppi di codice in base a questo argomento *name* anziché in base all'etichetta numerica. *name* è anche estremamente utile per la creazione di script.|  
   
 ## <a name="remarks"></a>Note  
  I criteri di sicurezza vengono espressi mediante tre livelli computer, utente e azienda. Il set di autorizzazioni che un assembly riceve è determinato dall'intersezione dei set di autorizzazioni consentiti da questi tre livelli di criteri. Ciascun livello di criteri è rappresentato da una struttura gerarchica di gruppi di codice. Ciascun gruppo di codice presenta una condizione di appartenenza che determina quale codice appartiene a tale gruppo. A ciascun gruppo di codice è inoltre associato un set di autorizzazioni denominato. Questo set di autorizzazioni specifica le autorizzazioni concesse dal runtime al codice che soddisfa la condizione di appartenenza. Una gerarchia dei gruppi di codice, insieme ai set di autorizzazioni denominati a essa associati, definisce e mantiene ciascun livello dei criteri di sicurezza. Per impostare il livello dei criteri di sicurezza, è possibile usare le opzioni **-user**, **-customuser**, **-machine** ed **-enterprise**.  
   
- Per altre informazioni sui criteri di sicurezza e sulle modalità con cui il runtime determina quali autorizzazioni concedere al codice, vedere [Gestione dei criteri di sicurezza](http://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9).  
+ Per altre informazioni sui criteri di sicurezza e sulle modalità con cui il runtime determina quali autorizzazioni concedere al codice, vedere [Gestione dei criteri di sicurezza](https://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9).  
   
 ## <a name="referencing-code-groups-and-permission-sets"></a>Riferimenti a gruppi di codice e a set di autorizzazioni  
  Per facilitare i riferimenti ai gruppi di codice presenti in una gerarchia, l'opzione **-list** visualizza un elenco con rientri dei gruppi di codice insieme alle corrispondenti etichette numeriche (1, 1.1, 1.1.1 e così via). Anche le altre operazioni da riga di comando relative ai gruppi di codice utilizzano le etichette numeriche per far riferimento a gruppi di codice specifici.  
@@ -132,13 +132,13 @@ caspol [options]
   
  Si supponga che un set di autorizzazioni contenente un'autorizzazione personalizzata sia stato aggiunto ai criteri definiti a livello di computer. Questa autorizzazione personalizzata viene implementata in `MyPerm.exe` e `MyPerm.exe` fa riferimento a classi contenute in `MyOther.exe`. Entrambi gli assembly dovranno essere aggiunti all'elenco di assembly completamente attendibili. Il comando che segue aggiunge l'assembly `MyPerm.exe` all'elenco completamente attendibile relativo ai criteri a livello di computer.  
   
-```  
+```console  
 caspol -machine -addfulltrust MyPerm.exe  
 ```  
   
  Il comando che segue aggiunge l'assembly `MyOther.exe` all'elenco completamente attendibile relativo ai criteri a livello di computer.  
   
-```  
+```console  
 caspol -machine -addfulltrust MyOther.exe  
 ```  
   
@@ -146,13 +146,13 @@ caspol -machine -addfulltrust MyOther.exe
   
  Il comando che segue aggiunge un gruppo di codice figlio alla radice della gerarchia dei gruppi di codice dei criteri definiti a livello di computer. Il nuovo gruppo di codice appartiene alla zona **Internet** ed è associato al set di autorizzazioni **Execution**.  
   
-```  
+```console  
 caspol -machine -addgroup 1.  -zone Internet Execution  
 ```  
   
  Il comando che segue aggiunge un gruppo di codice figlio che fornisce le autorizzazioni per l'intranet locale alla condivisione \\\netserver\netshare.  
   
-```  
+```console  
 caspol -machine -addgroup 1. -url \\netserver\netshare\* LocalIntranet  
 ```  
   
@@ -160,7 +160,7 @@ caspol -machine -addgroup 1. -url \\netserver\netshare\* LocalIntranet
   
  Il comando che segue aggiunge il set di autorizzazioni `Mypset` ai criteri definiti a livello di utente.  
   
-```  
+```console  
 caspol -user -addpset Mypset.xml Mypset  
 ```  
   
@@ -168,13 +168,13 @@ caspol -user -addpset Mypset.xml Mypset
   
  Il comando che segue modifica il set di autorizzazioni nei criteri utente del gruppo di codice con etichetta 1.2. nel set di autorizzazioni **Execution**.  
   
-```  
+```console  
 caspol -user -chggroup 1.2. Execution  
 ```  
   
  Il comando che segue modifica la condizione di appartenenza nei criteri predefiniti del gruppo di codice con etichetta 1.2.1. e l'impostazione del flag **exclusive**. La condizione di appartenenza viene definita come codice originato nella zona **Internet** e il flag **exclusive** viene attivato.  
   
-```  
+```console  
 caspol -chggroup 1.2.1. -zone Internet -exclusive on  
 ```  
   
@@ -182,7 +182,7 @@ caspol -chggroup 1.2.1. -zone Internet -exclusive on
   
  Il comando che segue sostituisce il set di autorizzazioni denominato `Mypset` con il set di autorizzazioni contenuto in `newpset.xml`. Si noti che l'attuale versione dello strumento non supporta la modifica dei set di autorizzazioni utilizzati dalla gerarchia dei gruppi di codice.  
   
-```  
+```console  
 caspol -chgpset Mypset newpset.xml  
 ```  
   
@@ -190,7 +190,7 @@ caspol -chgpset Mypset newpset.xml
   
  Il comando che segue associa il gruppo di codice radice dei criteri per l'utente (con etichetta 1) al set di autorizzazioni denominato **Nothing**. Questo impedisce l'esecuzione di Caspol.exe.  
   
-```  
+```console  
 caspol -force -user -chggroup 1 Nothing  
 ```  
   
@@ -198,7 +198,7 @@ caspol -force -user -chggroup 1 Nothing
   
  Il comando che segue recupera gli ultimi criteri salvati a livello di computer.  
   
-```  
+```console  
 caspol -machine -recover  
 ```  
   
@@ -206,7 +206,7 @@ caspol -machine -recover
   
  Il comando che segue rimuove il gruppo di codice con etichetta 1.1. Se tale gruppo di codice presenta gruppi di codice figlio, anche questi verranno eliminati.  
   
-```  
+```console  
 caspol -remgroup 1.1.  
 ```  
   
@@ -214,13 +214,13 @@ caspol -remgroup 1.1.
   
  Il comando che segue rimuove il set di autorizzazioni **Execution** dai criteri utente.  
   
-```  
+```console  
 caspol -user -rempset Execution  
 ```  
   
  Il comando che segue rimuove `Mypset` dal livello dei criteri utente.  
   
-```  
+```console  
 caspol -rempset MyPset  
 ```  
   
@@ -228,13 +228,13 @@ caspol -rempset MyPset
   
  Il comando che segue mostra tutti i gruppi di codice dei criteri del computer a cui `myassembly` appartiene.  
   
-```  
+```console  
 caspol -machine -resolvegroup myassembly  
 ```  
   
  Il comando che segue mostra tutti i gruppi di codice dei criteri definiti a livello di computer e di azienda nonché dei criteri personalizzati definiti a livello di utente ai quali `myassembly` appartiene.  
   
-```  
+```console  
 caspol -customall "c:\config_test\security.config" -resolvegroup myassembly  
 ```  
   
@@ -242,10 +242,10 @@ caspol -customall "c:\config_test\security.config" -resolvegroup myassembly
   
  Il comando che segue calcola le autorizzazioni di `testassembly` sulla base dei livelli di criteri relativi a computer e utente.  
   
-```  
+```console  
 caspol -all -resolveperm testassembly  
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Strumenti](../../../docs/framework/tools/index.md)  
- [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+ [Strumenti](index.md)  
+ [Prompt dei comandi](developer-command-prompt-for-vs.md)

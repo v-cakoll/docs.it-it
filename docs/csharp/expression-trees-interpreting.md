@@ -3,12 +3,12 @@ title: Interpretazione di espressioni
 description: Informazioni su come scrivere codice per esaminare la struttura di un albero delle espressioni.
 ms.date: 06/20/2016
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.openlocfilehash: 04622c0aa7323ac4cf16af94e31f1ef6987f87c8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 95fbb021aeeb9f2f4eb36f664f9fe904d1d52453
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33219310"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43506419"
 ---
 # <a name="interpreting-expressions"></a>Interpretazione di espressioni
 
@@ -514,7 +514,7 @@ In primo luogo, i visitatori gestiscono solo le costanti che sono valori interi.
 
 Anche nell'ultimo esempio viene riconosciuto un sottoinsieme dei possibili tipi di nodo.
 È comunque possibile inserire molte espressioni che ne determinerebbero l'esito negativo.
-Un'implementazione completa è inclusa nella piattaforma .NET standard con il nome [ExpressionVisitor](/dotnet/core/api/System.Linq.Expressions.ExpressionVisitor) e consente di gestire tutti i possibili tipi di nodo.
+Un'implementazione completa è inclusa in .NET Standard con il nome <xref:System.Linq.Expressions.ExpressionVisitor> e consente di gestire tutti i possibili tipi di nodo.
 
 Infine, la libreria usata in questo articolo è stata creata per la formazione e dimostrazione. Non è ottimizzata. È stata scritta per rendere le strutture usate molto chiare e per evidenziare le tecniche applicate per visitare i nodi e analizzarne il contenuto. Un'implementazione di produzione presterebbe maggiore attenzione alle prestazioni di quanto è stato fatto qui.
 

@@ -4,12 +4,12 @@ description: Informazioni sugli script dotnet-install per l'installazione degli 
 author: blackdwarf
 ms.author: mairaw
 ms.date: 09/11/2017
-ms.openlocfilehash: acdf49950ebb49751c55ae72b3f623e590489202
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8d1c6ebb30bd45575bb61206799c9c3e5c47ff0c
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33214380"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44180043"
 ---
 # <a name="dotnet-install-scripts-reference"></a>Riferimento agli script dotnet-install
 
@@ -36,11 +36,11 @@ Gli script `dotnet-install` vengono usati per eseguire un'installazione non ammi
 * https://dot.net/v1/dotnet-install.sh (Bash, UNIX)
 * https://dot.net/v1/dotnet-install.ps1 (Powershell, Windows)
 
-Gli script vengono usati principalmente negli scenari di automazione e nelle installazioni senza privilegi di amministratore. Sono disponibili due script, uno per PowerShell, che funziona in Windows, L'altro script è uno script bash che funziona su Linux/macOS. Entrambi gli script hanno lo stesso comportamento. Lo script bash legge anche le opzioni PowerShell, che possono quindi essere usate con lo script in sistemi Linux/macOS. 
+Gli script vengono usati principalmente negli scenari di automazione e nelle installazioni senza privilegi di amministratore. Sono disponibili due script, uno per PowerShell, che funziona in Windows, L'altro script è uno script bash che funziona su Linux/macOS. Entrambi gli script hanno lo stesso comportamento. Lo script bash legge anche le opzioni PowerShell, che possono quindi essere usate con lo script in sistemi Linux/macOS.
 
-Gli script di installazione scaricano il file ZIP/tarball da destinazioni di compilazione dell'interfaccia della riga di comando e lo installano nel percorso predefinito o in un percorso specificato da `-InstallDir|--install-dir`. Per impostazione predefinita, lo script di installazione scarica e installa l'SDK. Se si vuole ottenere solo il runtime condiviso, è possibile specificare l'argomento `--shared-runtime`. 
+Gli script di installazione scaricano il file ZIP/tarball da destinazioni di compilazione dell'interfaccia della riga di comando e lo installano nel percorso predefinito o in un percorso specificato da `-InstallDir|--install-dir`. Per impostazione predefinita, lo script di installazione scarica e installa l'SDK. Se si vuole ottenere solo il runtime condiviso, è possibile specificare l'argomento `--shared-runtime`.
 
-Per impostazione predefinita, lo script aggiunge il percorso di installazione a $PATH per la sessione corrente. Eseguire l'override di questo comportamento predefinito specificando l'argomento `--no-path`. 
+Per impostazione predefinita, lo script aggiunge il percorso di installazione a $PATH per la sessione corrente. Eseguire l'override di questo comportamento predefinito specificando l'argomento `--no-path`.
 
 Prima di eseguire lo script, installare le [dipendenze](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md) necessarie.
 
@@ -141,7 +141,7 @@ Ottenere lo script e installare gli esempi di .NET Core CLI di una singola riga 
 
 Windows:
 
-`@powershell -NoProfile -ExecutionPolicy unrestricted -Command "&([scriptblock]::Create((Invoke-WebRequest -useb 'https://dot.net/v1/dotnet-install.ps1'))) <additional install-script args>"`
+`@powershell -NoProfile -ExecutionPolicy unrestricted -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; &([scriptblock]::Create((Invoke-WebRequest -useb 'https://dot.net/v1/dotnet-install.ps1'))) <additional install-script args>"`
 
 macOS/Linux:
 
@@ -149,5 +149,5 @@ macOS/Linux:
 
 ## <a name="see-also"></a>Vedere anche
 
-[Versioni di .NET Core](https://github.com/dotnet/core/releases)   
-[.NET Core Runtime and SDK download archive](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md) (Archivio di download per runtime e SDK di .NET Core)
+* [.NET Core releases](https://github.com/dotnet/core/releases) (Versioni di .NET Core)
+* [.NET Core Runtime and SDK download archive](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md) (Archivio di download per runtime e SDK di .NET Core)

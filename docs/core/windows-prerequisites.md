@@ -4,12 +4,12 @@ description: Informazioni sulle dipendenze per sviluppare ed eseguire applicazio
 author: mairaw
 ms.author: mairaw
 ms.date: 08/31/2018
-ms.openlocfilehash: bbf54c8d215783656830f0fa035708be82a7c39c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 477d303b50495070ba3a3540188deb274dd9f510
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43482610"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44179494"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Prerequisiti per .NET Core in Windows
 
@@ -30,6 +30,8 @@ Questo articolo illustra le dipendenze necessarie per sviluppare applicazioni .N
 * Windows Server 2012 SP1 (Full Server o Server Core)
 * Windows Server 2012 R2 (Full Server o Server Core)
 * Windows Server 2016 o versioni successive (Full Server, Server Core o Nano Server)
+
+## <a name="net-core-supported-operating-systems"></a>Sistemi operativi supportati da .NET Core
 
 Gli articoli seguenti contengono un elenco completo dei sistemi operativi supportati da .NET Core per ogni versione:
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - public type information [C#]
 - -reference compiler option [C#]
 ms.assetid: 8d13e5b0-abf6-4c46-bf71-2daf2cd0a6c4
-ms.openlocfilehash: 76a53d6adcf4c55faa57c25f851e46dd4c2c6c22
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 131cdf62917ab2fc8d564b85c30d13c8971e5809
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43393211"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44213715"
 ---
 # <a name="-reference-c-compiler-options"></a>-reference (opzioni del compilatore C#)
 Con l'opzione **-reference** il compilatore importa nel progetto corrente le informazioni sui tipi [public](../../../csharp/language-reference/keywords/public.md) disponibili nel file specificato e consente quindi di fare riferimento ai metadati dai file di assembly specificati.  
@@ -67,10 +67,12 @@ Con l'opzione **-reference** il compilatore importa nel progetto corrente le inf
  L'esempio seguente illustra come usare la funzionalità [extern alias](../../../csharp/language-reference/keywords/extern-alias.md).  
   
  Il file di origine viene compilato e i metadati vengono importati dai file `grid.dll` e `grid20.dll`, compilati in precedenza. Nelle due DLL sono presenti versioni distinte dello stesso componente. Usare due opzioni **-reference** con opzioni alias per compilare il file di origine. Le opzioni sono analoghe alle seguenti:  
+
+```console
+-reference:GridV1=grid.dll -reference:GridV2=grid20.dll  
+```
   
- -reference:GridV1=grid.dll e -reference:GridV2=grid20.dll  
-  
- In questo modo vengono impostati gli alias esterni "GridV1" e "GridV2", da usare nel programma tramite un'istruzione extern:  
+ In questo modo vengono configurati gli alias esterni `GridV1` e `GridV2`, da usare nel programma tramite un'istruzione `extern`:  
   
 ```csharp  
 extern alias GridV1;  
@@ -78,13 +80,13 @@ extern alias GridV2;
 // Using statements go here.  
 ```  
   
- Una volta completate queste operazioni, è possibile fare riferimento al controllo griglia dal file grid.dll aggiungendo il prefisso GridV1 al nome del controllo, come riportato di seguito:  
+ Una volta completate queste operazioni, è possibile fare riferimento al controllo griglia da `grid.dll` aggiungendo il prefisso `GridV1` al nome del controllo, come riportato di seguito:  
   
 ```csharp  
 GridV1::Grid  
 ```  
   
- È anche possibile fare riferimento al controllo griglia dal file grid20.dll aggiungendo il prefisso GridV2 al nome del controllo, come riportato di seguito:  
+ È anche possibile fare riferimento al controllo griglia da `grid20.dll` aggiungendo il prefisso `GridV2` al nome del controllo, come riportato di seguito:  
   
 ```csharp  
 GridV2::Grid   

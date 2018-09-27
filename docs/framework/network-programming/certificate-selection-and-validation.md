@@ -5,12 +5,12 @@ ms.assetid: c933aca2-4cd0-4ff1-9df9-267143f25a6f
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: bdeb0e92dca723b64ee82b70f58fe910fd0c2edb
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: fe3b10e17c3cdf181f0b33b4305008655047fb0f
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42931050"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44269397"
 ---
 # <a name="certificate-selection-and-validation"></a>Selezione e convalida dei certificati
 Le classi <xref:System.Net> supportano diversi modi per selezionare e convalidare <xref:System.Security.Cryptography.X509Certificates> per le connessioni SSL (Secure Socket Layer). Un client può selezionare uno o più certificati per autenticarsi a un server, mentre un server può richiedere che un certificato client abbia uno o più attributi specifici per l'autenticazione.  
@@ -41,13 +41,13 @@ Le classi <xref:System.Net> supportano diversi modi per selezionare e convalidar
 ## <a name="tools-for-certificate-configuration"></a>Strumenti per la configurazione dei certificati  
  Per la configurazione dei certificati client e server è disponibile una serie di strumenti.  
   
- Per configurare i certificati client è possibile usare *Winhttpcertcfg.exe*. Lo strumento *Winhttpcertcfg.exe* è incluso in Windows Server 2003 Resource Kit ed è anche disponibile come download in Windows Server 2003 Resource Kit Tools sul sito www.microsoft.com.  
+ Per configurare i certificati client è possibile usare *Winhttpcertcfg.exe*. Lo strumento *Winhttpcertcfg.exe* è incluso in Windows Server 2003 Resource Kit ed è anche disponibile come download in Windows Server 2003 Resource Kit Tools sul sito [www.microsoft.com](https://www.microsoft.com).  
   
 Per configurare i certificati server per la classe <xref:System.Net.HttpListener> è possibile usare lo strumento *HttpCfg.exe*. Lo strumento *HttpCfg.exe* è incluso tra gli strumenti di supporto per Windows Server 2003 e Windows XP Service Pack 2. *HttpCfg.exe* e gli altri strumenti di supporto non vengono installati per impostazione predefinita in Windows Server 2003 o Windows XP. Per Windows Server 2003 gli strumenti di supporto vengono installati separatamente dalla cartella e dal file seguenti sul CD del sistema operativo:  
   
  \Support\Tools\Suptools.msi  
   
- Per Windows XP Service Pack 2, gli strumenti di supporto di Windows XP sono disponibili come download sul sito www.microsoft.com.  
+ Per Windows XP Service Pack 2, gli strumenti di supporto di Windows XP sono disponibili come download sul sito [www.microsoft.com](https://www.microsoft.com).  
   
  Il codice sorgente di una versione di *HttpCfg.exe* è inoltre disponibile come esempio in Windows Server SDK. Il codice sorgente dell'esempio *HttpCfg.exe* viene installato per impostazione predefinita con gli esempi di rete, come parte di Windows SDK, nella cartella seguente:  
   

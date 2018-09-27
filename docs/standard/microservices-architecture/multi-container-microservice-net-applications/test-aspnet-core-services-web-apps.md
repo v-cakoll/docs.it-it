@@ -4,12 +4,12 @@ description: Architettura di microservizi .NET per le applicazioni .NET incluse 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: f7bd75ecdd85e49524ccdf67f3e59aa4be46bdce
-ms.sourcegitcommit: 702d5ffc6e733b6c4ded85bf1c92e2293638ee9a
+ms.openlocfilehash: 63576445a44df0c0bdbd22b263754bb3d2919963
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37792413"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44195621"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>Test delle app Web e dei servizi ASP.NET di base
 
@@ -31,9 +31,9 @@ Lo unit test prevede l'esecuzione di test su una parte di un'applicazione isolan
 
 Quando si sottopongono a unit test le azioni del controller, è importante concentrarsi esclusivamente sul funzionamento del relativo controller. Uno unit test del controller non prende in esame elementi come filtri, routing o associazione di modelli. Gli unit test risultano in genere facili da creare e rapidi da eseguire, perché verificano un solo aspetto. Un set di unit test ben organizzato può essere eseguito spesso senza sovraccarichi eccessivi.
 
-Gli unit test vengono implementati in base ai framework di test come xUnit.net, MSTest, Moq o NUnit. Per l'applicazione di esempio eShopOnContainers, useremo XUnit.
+Gli unit test vengono implementati in base ai framework di test come xUnit.net, MSTest, Moq o NUnit. Per l'applicazione di esempio eShopOnContainers, useremo xUnit.
 
-Quando si scrive uno unit test per un controller API Web, si crea direttamente un'istanza della classe controller usando la nuova parola chiave in C\#, in modo che il test venga eseguito il più velocemente possibile. L'esempio seguente illustra come eseguire questa operazione usando [XUnit](https://xunit.github.io/) come framework di test.
+Quando si scrive uno unit test per un controller API Web, si crea direttamente un'istanza della classe controller usando la nuova parola chiave in C\#, in modo che il test venga eseguito il più velocemente possibile. L'esempio seguente illustra come eseguire questa operazione usando [xUnit](https://xunit.github.io/) come framework di test.
 
 ```csharp
 [Fact]

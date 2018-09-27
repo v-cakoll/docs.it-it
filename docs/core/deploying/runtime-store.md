@@ -4,12 +4,12 @@ description: Questo argomento illustra l'archivio pacchetti di runtime e i manif
 author: bleroy
 ms.author: mairaw
 ms.date: 08/12/2017
-ms.openlocfilehash: aba1939cda8459d8b0d9438a97545c19d3c1926d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: df2776ac2e4a2eed7f54b3031f13ab41fc714aae
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218703"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43511584"
 ---
 # <a name="runtime-package-store"></a>Archivio pacchetti di runtime
 
@@ -17,18 +17,20 @@ A partire da .NET Core 2.0, è possibile creare un pacchetto e distribuire le ap
 
 Questa funzionalità viene implementata come *archivio pacchetti di runtime*, che è una directory su disco in cui vengono archiviati i pacchetti, in genere */usr/local/share/dotnet/store* in macOS/Linux e *C:/Program Files/dotnet/store* in Windows. In questa directory sono disponibili le sottodirectory per le architetture e i [framework di destinazione](../../standard/frameworks.md). Il layout dei file è simile a quello con cui gli [asset NuGet sono disposti su disco](/nuget/create-packages/supporting-multiple-target-frameworks#framework-version-folder-structure):
 
-\dotnet   
-&nbsp;&nbsp;\store   
-&nbsp;&nbsp;&nbsp;&nbsp;\x64   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\netcoreapp2.0   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\microsoft.applicationinsights   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\microsoft.aspnetcore   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...   
-&nbsp;&nbsp;&nbsp;&nbsp;\x86   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\netcoreapp2.0   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\microsoft.applicationinsights   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\microsoft.aspnetcore   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...   
+```
+\dotnet
+    \store
+        \x64
+            \netcoreapp2.0
+                \microsoft.applicationinsights
+                \microsoft.aspnetcore
+                ...
+        \x86
+            \netcoreapp2.0
+                \microsoft.applicationinsights
+                \microsoft.aspnetcore
+                ...
+```
 
 Un file *manifesto di destinazione* elenca i pacchetti nell'archivio pacchetti di runtime. Gli sviluppatori possono destinare questo manifesto quando pubblicano la propria applicazione. Il manifesto di destinazione viene fornito in genere dal proprietario dell'ambiente di produzione di destinazione.
 
@@ -120,6 +122,8 @@ Specificare i manifesti di destinazione nel file di progetto solo quando l'ambie
 
 ## <a name="aspnet-core-implicit-store"></a>Archivio implicito di ASP.NET Core
 
+L'archivio implicito di ASP.NET Core è valido solo per ASP.NET Core 2.0. È consigliabile che le applicazioni usino ASP.NET Core 2.1 e versioni successive, che **non** usano l'archivio implicito. ASP.NET Core 2.1 e versioni successive usano il framework condiviso.
+
 La funzionalità di archivio pacchetti di runtime viene usata in modo implicito da un'app ASP.NET Core quando l'app viene distribuita come app con [distribuzione dipendente da framework (FDD, Framework-Dependent Deployment)](index.md#framework-dependent-deployments-fdd). Le destinazioni in [ `Microsoft.NET.Sdk.Web`](https://github.com/aspnet/websdk) includono manifesti che fanno riferimento all'archivio pacchetti implicito nel sistema di destinazione. Inoltre, qualsiasi app con distribuzione dipendente da framework (FDD, Framework-Dependent Deployment) dipende dal pacchetto `Microsoft.AspNetCore.All` genera un'app pubblicata che contiene solo l'app e gli asset e non i pacchetti elencati nel metapacchetto `Microsoft.AspNetCore.All`. Si presuppone che questi pacchetti siano presenti nel sistema di destinazione.
 
 L'archivio pacchetti di runtime viene installato nell'host quando viene installato .NET Core SDK. Altri programmi di installazione possono fornire l'archivio pacchetti di runtime, incluse le installazioni di Zip/tarball di SDK .NET Core, `apt-get`, Red Hat Yum, il bundle di .NET Core Windows Server Hosting e le installazioni manuali di archivi pacchetti di runtime.
@@ -132,7 +136,7 @@ Quando si distribuisce un'app con [distribuzione dipendente da framework (FDD, F
 </PropertyGroup>
 ```
 
-> [!NOTE] 
+> [!NOTE]
 > Per le app con [distribuzione indipendente (SCD, Self-Contained Deployment)](index.md#self-contained-deployments-scd), si presuppone che il sistema di destinazione non contenga necessariamente i pacchetti del manifesto necessari. Pertanto,  **\<PublishWithAspNetCoreTargetManifest >** non può essere impostato su `true` per un'app con distribuzione indipendente (SCD, Self-Contained Deployment).
 
 Se si distribuisce un'applicazione con una dipendenza del manifesto che è presente nella distribuzione (l'assembly si trova nella cartella *bin*), l'archivio pacchetti di runtime *non viene usato* nell'host per tale assembly. L'assembly della cartella *bin* viene usato indipendentemente dalla sua presenza nell'archivio pacchetti di runtime nell'host.
@@ -142,5 +146,6 @@ La versione della dipendenza indicata nel manifesto deve corrispondere alla vers
 Quando la distribuzione viene *tagliata* nella pubblicazione, solo le versioni specifiche dei pacchetti del manifesto indicate vengono trattenute dall'output pubblicato. I pacchetti nelle versioni indicate devono essere presenti nell'host per consentire l'avvio dell'app.
 
 ## <a name="see-also"></a>Vedere anche
- [dotnet-publish](../tools/dotnet-publish.md)  
- [dotnet-store](../tools/dotnet-store.md)  
+
+* [dotnet-publish](../tools/dotnet-publish.md)  
+* [dotnet-store](../tools/dotnet-store.md)  

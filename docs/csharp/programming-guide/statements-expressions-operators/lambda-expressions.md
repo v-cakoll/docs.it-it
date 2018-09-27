@@ -8,12 +8,12 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: e043903647075587d1e7eec21c9a7b04f596dbf6
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 47e066f8eb7402fedabc70cf1e3b4a1bb974ff62
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37937049"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43504692"
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Espressioni lambda (Guida per programmatori C#)
 
@@ -78,6 +78,7 @@ namespace ConsoleApplication1
 ```csharp
 (int x, string s) => s.Length > x
 ```
+ I tipi di parametro di input devono essere o tutti di tipo esplicito o tutti di tipo implicito; in caso contrario, C# genera un errore del compilatore [CS0748](../../misc/cs0748.md).
 
  Specificare zero parametri di input con parentesi vuote:  
   
@@ -273,11 +274,12 @@ class Test
 ## <a name="featured-book-chapter"></a>Capitoli del libro rappresentati  
  [Delegates, Events, and Lambda Expressions](https://msdn.microsoft.com/library/orm-9780596516109-03-09.aspx) (Delegati, eventi ed espressioni lambda) in [C# 3.0 Cookbook, Third Edition: More than 250 solutions for C# 3.0 programmers](https://msdn.microsoft.com/library/orm-9780596516109-03.aspx)  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [LINQ (Language-Integrated Query)](../../../csharp/programming-guide/concepts/linq/index.md)  
- [Metodi anonimi](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)  
- [is](../../../csharp/language-reference/keywords/is.md)  
- [Alberi delle espressioni](../../../csharp/programming-guide/concepts/expression-trees/index.md)  
- [Esempi C# di Visual Studio 2008 (vedere i file di query di esempio LINQ e il programma XQuery)](http://code.msdn.microsoft.com/Visual-Studio-2008-C-d295cdba)  
- [Recursive lambda expressions (Espressioni lambda ricorsive)](https://blogs.msdn.microsoft.com/madst/2007/05/11/recursive-lambda-expressions/)
+## <a name="see-also"></a>Vedere anche
+
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- [LINQ (Language-Integrated Query)](../../../csharp/programming-guide/concepts/linq/index.md)  
+- [Metodi anonimi](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)  
+- [is](../../../csharp/language-reference/keywords/is.md)  
+- [Alberi delle espressioni](../../../csharp/programming-guide/concepts/expression-trees/index.md)  
+- [Esempi C# di Visual Studio 2008 (vedere i file di query di esempio LINQ e il programma XQuery)](https://code.msdn.microsoft.com/Visual-Studio-2008-C-d295cdba)  
+- [Recursive lambda expressions (Espressioni lambda ricorsive)](https://blogs.msdn.microsoft.com/madst/2007/05/11/recursive-lambda-expressions/)

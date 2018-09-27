@@ -3,13 +3,13 @@ title: Comando dotnet new - Interfaccia della riga di comando di .NET Core
 description: Il comando dotnet new consente di creare nuovi progetti .NET Core in base al modello specificato.
 author: mairaw
 ms.author: mairaw
-ms.date: 06/12/2018
-ms.openlocfilehash: f0ef91361dfbc2c2ba5532fbd607786289e98c69
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.date: 07/31/2018
+ms.openlocfilehash: 2c82dda2d93225edb360316637e22964135cd5e4
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207782"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43512555"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -22,25 +22,31 @@ ms.locfileid: "36207782"
 ## <a name="synopsis"></a>Riepilogo
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
-```
+
+```console
 dotnet new <TEMPLATE> [--force] [-i|--install] [-lang|--language] [-n|--name] [--nuget-source] [-o|--output]
     [-u|--uninstall] [Template options]
 dotnet new <TEMPLATE> [-l|--list] [--type]
 dotnet new [-h|--help]
 ```
+
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
-```
+
+```console
 dotnet new <TEMPLATE> [--force] [-i|--install] [-lang|--language] [-n|--name] [-o|--output] [-u|--uninstall] [Template options]
 dotnet new <TEMPLATE> [-l|--list] [--type]
 dotnet new [-h|--help]
 ```
+
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-```
+
+```console
 dotnet new <TEMPLATE> [-lang|--language] [-n|--name] [-o|--output] [-all|--show-all] [-h|--help] [Template options]
 dotnet new <TEMPLATE> [-l|--list]
 dotnet new [-all|--show-all]
 dotnet new [-h|--help]
 ```
+
 ---
 
 ## <a name="description"></a>Descrizione
@@ -284,9 +290,11 @@ Per ogni modello di progetto potrebbero essere disponibili opzioni aggiuntive. I
 
 **web**
 
-`--use-launch-settings`: include *launchSettings.json* nell'output del modello generato.
+`--exclude-launch-settings`: esclude *launchSettings.json* dal modello generato.
 
 `--no-restore`: non esegue un ripristino implicito durante la creazione del progetto.
+
+`--no-https`: il progetto non richiede HTTPS. Questa opzione si applica solo se `IndividualAuth` o `OrganizationalAuth` non sono in uso.
 
 **webapi**
 
@@ -311,11 +319,13 @@ Per ogni modello di progetto potrebbero essere disponibili opzioni aggiuntive. I
 
 `-r|--org-read-access`: consente all'applicazione l'accesso in lettura sulla directory. Si applica solo all'autenticazione `SingleOrg` o `MultiOrg`.
 
-`--use-launch-settings`: include *launchSettings.json* nell'output del modello generato.
+`--exclude-launch-settings`: esclude *launchSettings.json* dal modello generato.
 
 `-uld|--use-local-db`: specifica che deve essere usato Local DB invece di SQLite. Si applica solo all'autenticazione `Individual` o `IndividualB2C`.
 
 `--no-restore`: non esegue un ripristino implicito durante la creazione del progetto.
+
+`--no-https`: il progetto non richiede HTTPS. `app.UseHsts` e `app.UseHttpsRedirection` non vengono aggiunti a `Startup.Configure`. Questa opzione si applica solo se `Individual`, `IndividualB2C`, `SingleOrg` o `MultiOrg` non sono in uso.
 
 **mvc, razor**
 
@@ -348,13 +358,15 @@ Per ogni modello di progetto potrebbero essere disponibili opzioni aggiuntive. I
 
 `-r|--org-read-access`: consente all'applicazione l'accesso in lettura sulla directory. Si applica solo all'autenticazione `SingleOrg` o `MultiOrg`.
 
-`--use-launch-settings`: include *launchSettings.json* nell'output del modello generato.
+`--exclude-launch-settings`: esclude *launchSettings.json* dal modello generato.
 
 `--use-browserlink`: include BrowserLink nel progetto.
 
 `-uld|--use-local-db`: specifica che deve essere usato Local DB invece di SQLite. Si applica solo all'autenticazione `Individual` o `IndividualB2C`.
 
 `--no-restore`: non esegue un ripristino implicito durante la creazione del progetto.
+
+`--no-https`: il progetto non richiede HTTPS. `app.UseHsts` e `app.UseHttpsRedirection` non vengono aggiunti a `Startup.Configure`. Questa opzione si applica solo se `Individual`, `IndividualB2C`, `SingleOrg` o `MultiOrg` non sono in uso.
 
 **page**
 
@@ -524,7 +536,7 @@ Creare un file *global.json* nell'impostazione di directory corrente impostando 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Modelli personalizzati per dotnet new](custom-templates.md)  
-[Creare un modello personalizzato per dotnet new](~/docs/core/tutorials/create-custom-template.md)  
-[Repository GitHub dotnet/dotnet-template-samples](https://github.com/dotnet/dotnet-template-samples)  
-[Modelli disponibili per dotnet new](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new)
+* [Modelli personalizzati per dotnet new](custom-templates.md)  
+* [Creare un modello personalizzato per dotnet new](~/docs/core/tutorials/create-custom-template.md)  
+* [Repository GitHub dotnet/dotnet-template-samples](https://github.com/dotnet/dotnet-template-samples)  
+* [Modelli disponibili per dotnet new](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new)
