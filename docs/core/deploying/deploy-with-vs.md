@@ -7,12 +7,13 @@ ms.date: 09/03/2018
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 62cfef08a8319981891c713c08c34eba5ab54b6f
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.custom: vs-dotnet
+ms.openlocfilehash: 7a9410ca99f621ee6d0e8b263354ebc536f71a4a
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44227740"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46705799"
 ---
 # <a name="deploying-net-core-apps-with-visual-studio"></a>Distribuzione di app .NET Core con Visual Studio
 
@@ -74,7 +75,7 @@ In una distribuzione dipendente dal framework con una o più dipendenze di terze
 
 1. Verificare che `Newtonsoft.Json` sia installato nel sistema e, in caso contrario, installarlo. La scheda **Installati** elenca i pacchetti NuGet installati nel sistema. Se `Newtonsoft.Json` non è presente nell'elenco, selezionare la scheda **Sfoglia** e immettere "Newtonsoft.Json" nella casella di ricerca. Selezionare `Newtonsoft.Json`, selezionare il progetto nel riquadro destro e quindi selezionare **Installa**.
 
-1. Se `Newtonsoft.Json` è già installato nel sistema, aggiungerlo al progetto selezionando il progetto nel riquadro destro della scheda **Gestisci i pacchetti per la soluzione**.
+1. Se `Newtonsoft.Json` è già installato nel sistema aggiungerlo al progetto selezionando il progetto stesso nel riquadro destro della scheda **Gestisci i pacchetti per la soluzione**.
 
 Si noti che la portabilità di una distribuzione dipendente dal framework con dipendenze di terze parti corrisponde esattamente alla portabilità delle dipendenze. Se ad esempio una libreria di terze parti supporta solo macOS, l'app non è portabile in sistemi Windows. Questa situazione si verifica se la dipendenza di terze parti stessa dipende da codice nativo. Un buon esempio è il [server Kestrel](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel), che richiede una dipendenza nativa da [libuv](https://github.com/libuv/libuv). Quando viene creata una distribuzione dipendente dal framework per un'applicazione con questo tipo di dipendenze di terze parti, l'output pubblicato contiene una cartella per ogni [identificatore di runtime (RID)](../rid-catalog.md) supportato dalla dipendenza nativa (e presente nel relativo pacchetto NuGet).
 

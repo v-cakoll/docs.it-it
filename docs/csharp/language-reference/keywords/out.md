@@ -9,11 +9,11 @@ helpviewer_keywords:
 - out keyword [C#]
 ms.assetid: 7e911a0c-3f98-4536-87be-d539b7536ca8
 ms.openlocfilehash: ecdaf8e94b3b799f41d6750d6ba5fca6895f0e93
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44252551"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46697068"
 ---
 # <a name="out-c-reference"></a>out (Riferimenti per C#)
 

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - type conversion [C#], explicit numeric
 ms.assetid: f3bb9e76-6b92-4df7-bc36-f866c24e1dfd
 ms.openlocfilehash: 22bb2117e7b78596e1fb6af63584f51b066564c9
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44211788"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46577636"
 ---
 # <a name="explicit-numeric-conversions-table-c-reference"></a>Tabella delle conversioni numeriche esplicite (Riferimenti per C#)
 
