@@ -1,92 +1,80 @@
 ---
 title: Istruzione lock (Riferimenti per C#)
-description: 'La parola chiave lock viene usata nel threading '
-ms.date: 07/20/2015
+description: Usare l'istruzione lock di C# per sincronizzare l'accesso dei thread alla risorsa condivisa
+ms.date: 08/28/2018
 f1_keywords:
 - lock_CSharpKeyword
 - lock
 helpviewer_keywords:
 - lock keyword [C#]
 ms.assetid: 656da1a4-707e-4ef6-9c6e-6d13b646af42
-ms.openlocfilehash: 6ed46837482642dfd7e1a96cd120fc18023c5e9f
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 2b6fbfb2f81d7745c4effb9ea0087f34cc872a6c
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42931193"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43858356"
 ---
-# <a name="lock-statement-c-reference"></a><span data-ttu-id="e00cf-103">Istruzione lock (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="e00cf-103">lock statement (C# Reference)</span></span>
+# <a name="lock-statement-c-reference"></a><span data-ttu-id="d62cf-103">Istruzione lock (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="d62cf-103">lock statement (C# Reference)</span></span>
 
-<span data-ttu-id="e00cf-104">La parola chiave `lock` contrassegna un blocco di istruzioni come sezione critica ottenendo il blocco a esclusione reciproca per un determinato oggetto, eseguendo un'istruzione e rilasciando in seguito il blocco.</span><span class="sxs-lookup"><span data-stu-id="e00cf-104">The `lock` keyword marks a statement block as a critical section by obtaining the mutual-exclusion lock for a given object, executing a statement, and then releasing the lock.</span></span> <span data-ttu-id="e00cf-105">L'esempio seguente illustra un'istruzione `lock`.</span><span class="sxs-lookup"><span data-stu-id="e00cf-105">The following example includes a `lock` statement.</span></span>
+<span data-ttu-id="d62cf-104">L'istruzione `lock` ottiene il blocco a esclusione reciproca per un oggetto specificato, esegue il blocco di un'istruzione e quindi rilascia il blocco.</span><span class="sxs-lookup"><span data-stu-id="d62cf-104">The `lock` statement obtains the mutual-exclusion lock for a given object, executes a statement block, and then releases the lock.</span></span> <span data-ttu-id="d62cf-105">Mentre è attivo un blocco, il thread che contiene il blocco può ancora ottenere e rilasciare il blocco.</span><span class="sxs-lookup"><span data-stu-id="d62cf-105">While a lock is held, the thread that holds the lock can again obtain and release the lock.</span></span> <span data-ttu-id="d62cf-106">Gli altri thread non possono ottenere il blocco e devono attendere finché il blocco non viene rilasciato.</span><span class="sxs-lookup"><span data-stu-id="d62cf-106">Any other thread is blocked from obtaining the lock and waits until the lock is released.</span></span>
+
+<span data-ttu-id="d62cf-107">L'istruzione `lock` ha il formato</span><span class="sxs-lookup"><span data-stu-id="d62cf-107">The `lock` statement is of the form</span></span>
 
 ```csharp
-class Account
+lock (x)
 {
-    decimal balance;
-    private Object thisLock = new Object();
-
-    public void Withdraw(decimal amount)
-    {
-        lock (thisLock)
-        {
-            if (amount > balance)
-            {
-                throw new Exception("Insufficient funds");
-            }
-            balance -= amount;
-        }
-    }
+    // Your code...
 }
 ```
 
-<span data-ttu-id="e00cf-106">Per altre informazioni, vedere [Sincronizzazione di thread](../../programming-guide/concepts/threading/thread-synchronization.md).</span><span class="sxs-lookup"><span data-stu-id="e00cf-106">For more information, see [Thread Synchronization](../../programming-guide/concepts/threading/thread-synchronization.md).</span></span>
+<span data-ttu-id="d62cf-108">in cui `x` è un'espressione di un [tipo riferimento](reference-types.md).</span><span class="sxs-lookup"><span data-stu-id="d62cf-108">where `x` is an expression of a [reference type](reference-types.md).</span></span> <span data-ttu-id="d62cf-109">È esattamente equivalente a</span><span class="sxs-lookup"><span data-stu-id="d62cf-109">It's precisely equivalent to</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="e00cf-107">Note</span><span class="sxs-lookup"><span data-stu-id="e00cf-107">Remarks</span></span>
+```csharp
+object __lockObj = x;
+bool __lockWasTaken = false;
+try
+{
+    System.Threading.Monitor.Enter(__lockObj, ref __lockWasTaken);
+    // Your code...
+}
+finally
+{
+    if (__lockWasTaken) System.Threading.Monitor.Exit(__lockObj);
+}
+```
 
-<span data-ttu-id="e00cf-108">La parola chiave `lock` impedisce a un thread di entrare in una sezione critica del codice se è già presente un altro thread.</span><span class="sxs-lookup"><span data-stu-id="e00cf-108">The `lock` keyword ensures that one thread does not enter a critical section of code while another thread is in the critical section.</span></span> <span data-ttu-id="e00cf-109">Se un altro thread tenta di accedere a un codice bloccato, attenderà (in stato di blocco) finché l'oggetto non verrà rilasciato.</span><span class="sxs-lookup"><span data-stu-id="e00cf-109">If another thread tries to enter a locked code, it will wait, block, until the object is released.</span></span>
+<span data-ttu-id="d62cf-110">Poiché il codice usa un blocco [try... finally](try-finally.md), il blocco viene rilasciato anche se viene generata un'eccezione nel corpo di un'istruzione `lock`.</span><span class="sxs-lookup"><span data-stu-id="d62cf-110">Since the code uses a [try...finally](try-finally.md) block, the lock is released even if an exception is thrown within the body of a `lock` statement.</span></span>
 
-<span data-ttu-id="e00cf-110">Nella sezione [Threading](../../programming-guide/concepts/threading/index.md) vengono specificate informazioni sul threading.</span><span class="sxs-lookup"><span data-stu-id="e00cf-110">The section [Threading](../../programming-guide/concepts/threading/index.md) discusses threading.</span></span>
+<span data-ttu-id="d62cf-111">Non è possibile usare la parola chiave [await](await.md) nel corpo di un'istruzione `lock`.</span><span class="sxs-lookup"><span data-stu-id="d62cf-111">You can't use the [await](await.md) keyword in the body of a `lock` statement.</span></span>
 
-<span data-ttu-id="e00cf-111">La parola chiave `lock` chiama <xref:System.Threading.Monitor.Enter%2A> all'inizio del blocco e <xref:System.Threading.Monitor.Exit%2A> alla fine del blocco.</span><span class="sxs-lookup"><span data-stu-id="e00cf-111">The `lock` keyword calls <xref:System.Threading.Monitor.Enter%2A> at the start of the block and <xref:System.Threading.Monitor.Exit%2A> at the end of the block.</span></span> <span data-ttu-id="e00cf-112">Viene generata un'eccezione <xref:System.Threading.ThreadInterruptedException> se <xref:System.Threading.Thread.Interrupt%2A> interrompe un thread in attesa di immettere un'istruzione `lock`.</span><span class="sxs-lookup"><span data-stu-id="e00cf-112">A <xref:System.Threading.ThreadInterruptedException> is thrown if <xref:System.Threading.Thread.Interrupt%2A> interrupts a thread that is waiting to enter a `lock` statement.</span></span>
+## <a name="remarks"></a><span data-ttu-id="d62cf-112">Note</span><span class="sxs-lookup"><span data-stu-id="d62cf-112">Remarks</span></span>
 
-<span data-ttu-id="e00cf-113">In generale è opportuno evitare il blocco su un tipo `public` o su istanze oltre il controllo del codice.</span><span class="sxs-lookup"><span data-stu-id="e00cf-113">In general, avoid locking on a `public` type, or instances beyond your code's control.</span></span> <span data-ttu-id="e00cf-114">I costrutti comuni `lock (this)`, `lock (typeof (MyType))` e `lock ("myLock")` non rispettano questa regola:</span><span class="sxs-lookup"><span data-stu-id="e00cf-114">The common constructs `lock (this)`, `lock (typeof (MyType))`, and `lock ("myLock")` violate this guideline:</span></span>
+<span data-ttu-id="d62cf-113">Quando si sincronizza l'accesso thread a una risorsa condivisa, applicare il blocco a un'istanza dell'oggetto dedicata (ad esempio `private readonly object balanceLock = new object();`) o a un'altra istanza che ha poche probabilità di essere usata come oggetto di blocco da parti del codice non correlate.</span><span class="sxs-lookup"><span data-stu-id="d62cf-113">When you synchronize thread access to shared resource, lock on a dedicated object instance (for example, `private readonly object balanceLock = new object();`) or another instance that is unlikely to be used as a lock object by unrelated parts of the code.</span></span> <span data-ttu-id="d62cf-114">Evitare di usare la stessa istanza di oggetto di blocco per diverse risorse condivise. Questo può originare problemi di deadlock o conflitti di blocco.</span><span class="sxs-lookup"><span data-stu-id="d62cf-114">Avoid using the same lock object instance for different shared resources, as it might result in deadlock or lock contention.</span></span> <span data-ttu-id="d62cf-115">In particolare evitare di usare</span><span class="sxs-lookup"><span data-stu-id="d62cf-115">In particular, avoid using</span></span>
 
-- <span data-ttu-id="e00cf-115">`lock (this)` costituisce un problema se l'accesso all'istanza può avvenire pubblicamente.</span><span class="sxs-lookup"><span data-stu-id="e00cf-115">`lock (this)` is a problem if the instance can be accessed publicly.</span></span>
+- <span data-ttu-id="d62cf-116">`this` (usabile dai chiamati come blocco),</span><span class="sxs-lookup"><span data-stu-id="d62cf-116">`this` (might be used by the callers as a lock),</span></span>
+- <span data-ttu-id="d62cf-117">istanze <xref:System.Type> (possono essere ottenute dall'operatore [typeof](typeof.md) o dalla reflection),</span><span class="sxs-lookup"><span data-stu-id="d62cf-117"><xref:System.Type> instances (might be obtained by the [typeof](typeof.md) operator or reflection),</span></span>
+- <span data-ttu-id="d62cf-118">e infine istanze stringa, tra cui i valori letterali stringa,</span><span class="sxs-lookup"><span data-stu-id="d62cf-118">string instances, including string literals,</span></span>
 
-- <span data-ttu-id="e00cf-116">`lock (typeof (MyType))` costituisce un problema se l'accesso a `MyType` può avvenire pubblicamente.</span><span class="sxs-lookup"><span data-stu-id="e00cf-116">`lock (typeof (MyType))` is a problem if `MyType` is publicly accessible.</span></span>
+<span data-ttu-id="d62cf-119">come oggetti di blocco.</span><span class="sxs-lookup"><span data-stu-id="d62cf-119">as lock objects.</span></span>
 
-- <span data-ttu-id="e00cf-117">`lock("myLock")` costituisce un problema poiché qualsiasi altro codice nel processo che usa la stessa stringa condividerà lo stesso blocco.</span><span class="sxs-lookup"><span data-stu-id="e00cf-117">`lock("myLock")` is a problem because any other code in the process using the same string, will share the same lock.</span></span>
+## <a name="example"></a><span data-ttu-id="d62cf-120">Esempio</span><span class="sxs-lookup"><span data-stu-id="d62cf-120">Example</span></span>
 
-<span data-ttu-id="e00cf-118">La procedura consigliata consiste nel definire un oggetto `private` da bloccare o una variabile oggetto `private static` per proteggere i dati comuni a tutte le istanze.</span><span class="sxs-lookup"><span data-stu-id="e00cf-118">Best practice is to define a `private` object to lock on, or a `private static` object variable to protect data common to all instances.</span></span>
+<span data-ttu-id="d62cf-121">L'esempio seguente definisce una classe `Account` che sincronizza l'accesso al proprio campo `balance` privato applicando il blocco su un'istanza `balanceLock` dedicata.</span><span class="sxs-lookup"><span data-stu-id="d62cf-121">The following example defines an `Account` class that synchronizes access to its private `balance` field by locking on a dedicated `balanceLock` instance.</span></span> <span data-ttu-id="d62cf-122">L'uso della stessa istanza per il blocco garantisce che il campo `balance` non possa essere aggiornato contemporaneamente da due thread che provano a chiamare i metodi `Debit` o `Credit` allo stesso tempo.</span><span class="sxs-lookup"><span data-stu-id="d62cf-122">Using the same instance for locking ensures that the `balance` field cannot be updated simultaneously by two threads attempting to call the `Debit` or `Credit` methods simultaneously.</span></span>
 
-<span data-ttu-id="e00cf-119">Non è possibile usare la parola chiave [await](await.md) nel corpo di un'istruzione `lock`.</span><span class="sxs-lookup"><span data-stu-id="e00cf-119">You can't use the [await](await.md) keyword in the body of a `lock` statement.</span></span>
+[!code-csharp[lock-statement-example](~/samples/snippets/csharp/keywords/LockStatementExample.cs)]
 
-## <a name="example---threads-without-locking"></a><span data-ttu-id="e00cf-120">Esempio - Thread senza blocco</span><span class="sxs-lookup"><span data-stu-id="e00cf-120">Example - Threads without locking</span></span>
-
-<span data-ttu-id="e00cf-121">L'esempio seguente illustra un uso semplificato dei thread senza blocco in C#:</span><span class="sxs-lookup"><span data-stu-id="e00cf-121">The following sample shows a simple use of threads without locking in C#:</span></span>
-
-[!code-csharp[csrefKeywordsFixedLock#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsFixedLock/CS/csrefKeywordsFixedLock.cs#5)]
-
-## <a name="example---threads-using-locking"></a><span data-ttu-id="e00cf-122">Esempio - Thread con blocco</span><span class="sxs-lookup"><span data-stu-id="e00cf-122">Example - Threads using locking</span></span>
-
-<span data-ttu-id="e00cf-123">Nell'esempio riportato di seguito vengono usati thread e `lock`.</span><span class="sxs-lookup"><span data-stu-id="e00cf-123">The following sample uses threads and `lock`.</span></span> <span data-ttu-id="e00cf-124">Finché è presente l'istruzione `lock`, il blocco di istruzioni rimarrà una sezione critica e `balance` non diventerà mai un numero negativo:</span><span class="sxs-lookup"><span data-stu-id="e00cf-124">As long as the `lock` statement is present, the statement block is a critical section and `balance` will never become a negative number:</span></span>
-
-[!code-csharp[csrefKeywordsFixedLock#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsFixedLock/CS/csrefKeywordsFixedLock.cs#6)]
-
-## <a name="c-language-specification"></a><span data-ttu-id="e00cf-125">Specifiche del linguaggio C#</span><span class="sxs-lookup"><span data-stu-id="e00cf-125">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="d62cf-123">Specifiche del linguaggio C#</span><span class="sxs-lookup"><span data-stu-id="d62cf-123">C# language specification</span></span>
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a><span data-ttu-id="e00cf-126">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="e00cf-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d62cf-124">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="d62cf-124">See also</span></span>
 
-- <xref:System.Reflection.MethodImplAttributes>
-- <xref:System.Threading.Mutex>
-- <xref:System.Threading.Monitor>
-- [<span data-ttu-id="e00cf-127">Riferimenti per C#</span><span class="sxs-lookup"><span data-stu-id="e00cf-127">C# Reference</span></span>](../../language-reference/index.md)
-- [<span data-ttu-id="e00cf-128">Guida per programmatori C#</span><span class="sxs-lookup"><span data-stu-id="e00cf-128">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="e00cf-129">Threading</span><span class="sxs-lookup"><span data-stu-id="e00cf-129">Threading</span></span>](../../programming-guide/concepts/threading/index.md)
-- [<span data-ttu-id="e00cf-130">Parole chiave di C#</span><span class="sxs-lookup"><span data-stu-id="e00cf-130">C# Keywords</span></span>](index.md)
-- [<span data-ttu-id="e00cf-131">Parole chiave per le istruzioni</span><span class="sxs-lookup"><span data-stu-id="e00cf-131">Statement Keywords</span></span>](statement-keywords.md)
-- [<span data-ttu-id="e00cf-132">Operazioni interlocked</span><span class="sxs-lookup"><span data-stu-id="e00cf-132">Interlocked Operations</span></span>](../../../standard/threading/interlocked-operations.md)
-- [<span data-ttu-id="e00cf-133">AutoResetEvent</span><span class="sxs-lookup"><span data-stu-id="e00cf-133">AutoResetEvent</span></span>](../../../standard/threading/autoresetevent.md)
-- [<span data-ttu-id="e00cf-134">Sincronizzazione di thread</span><span class="sxs-lookup"><span data-stu-id="e00cf-134">Thread Synchronization</span></span>](../../programming-guide/concepts/threading/thread-synchronization.md)
+- <xref:System.Threading.Monitor?displayProperty=nameWithType>
+- <xref:System.Threading.SpinLock?displayProperty=nameWithType>
+- <xref:System.Threading.Interlocked?displayProperty=nameWithType>
+- [<span data-ttu-id="d62cf-125">Riferimenti per C#</span><span class="sxs-lookup"><span data-stu-id="d62cf-125">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="d62cf-126">Parole chiave di C#</span><span class="sxs-lookup"><span data-stu-id="d62cf-126">C# Keywords</span></span>](index.md)
+- [<span data-ttu-id="d62cf-127">Parole chiave per le istruzioni</span><span class="sxs-lookup"><span data-stu-id="d62cf-127">Statement Keywords</span></span>](statement-keywords.md)
+- [<span data-ttu-id="d62cf-128">Operazioni interlocked</span><span class="sxs-lookup"><span data-stu-id="d62cf-128">Interlocked operations</span></span>](../../../standard/threading/interlocked-operations.md)
+- [<span data-ttu-id="d62cf-129">Cenni preliminari sulle primitive di sincronizzazione</span><span class="sxs-lookup"><span data-stu-id="d62cf-129">Overview of synchronization primitives</span></span>](../../../standard/threading/overview-of-synchronization-primitives.md)

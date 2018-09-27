@@ -1,44 +1,47 @@
 ---
 title: Operatore %= (Riferimenti per C#)
-ms.date: 04/04/2018
+ms.date: 09/04/2018
 f1_keywords:
 - '%=_CSharpKeyword'
 helpviewer_keywords:
 - remainder assignment operator (%=) [C#]
 - '%= assignment operator (remainder assignment) [C#]'
 ms.assetid: 47e5f068-1d97-4010-bd3b-e21b5d3a77f5
-ms.openlocfilehash: 009c162b13fab05ba349d0535fe8dfae206502f3
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: c475517666bdadaa457dbb4188808b3a96fcdf0e
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43399491"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44085647"
 ---
-# <a name="-operator-c-reference"></a><span data-ttu-id="69f74-102">Operatore %= (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="69f74-102">%= Operator (C# Reference)</span></span>
-<span data-ttu-id="69f74-103">Operatore di assegnazione di resto.</span><span class="sxs-lookup"><span data-stu-id="69f74-103">The remainder assignment operator.</span></span>  
-  
-## <a name="remarks"></a><span data-ttu-id="69f74-104">Note</span><span class="sxs-lookup"><span data-stu-id="69f74-104">Remarks</span></span>  
- <span data-ttu-id="69f74-105">Un'espressione che usa l'operatore di assegnazione `%=`, ad esempio</span><span class="sxs-lookup"><span data-stu-id="69f74-105">An expression using the `%=` assignment operator, such as</span></span>  
-  
-```csharp  
-x %= y  
-```  
-  
- <span data-ttu-id="69f74-106">equivale a</span><span class="sxs-lookup"><span data-stu-id="69f74-106">is equivalent to</span></span>  
-  
-```csharp  
-x = x % y  
-```  
-  
- <span data-ttu-id="69f74-107">con la differenza che `x` viene valutato una sola volta.</span><span class="sxs-lookup"><span data-stu-id="69f74-107">except that `x` is only evaluated once.</span></span> <span data-ttu-id="69f74-108">Per i tipi numerici, l'[operatore %](../../../csharp/language-reference/operators/remainder-operator.md) è predefinito per calcolare il resto dopo una divisione.</span><span class="sxs-lookup"><span data-stu-id="69f74-108">The [% operator](../../../csharp/language-reference/operators/remainder-operator.md) is predefined for numeric types to compute the remainder after division.</span></span>  
-  
- <span data-ttu-id="69f74-109">L'operatore `%=` non può essere sottoposto direttamente a overload. I tipi definiti dall'utente, tuttavia, possono eseguire l'overload dell'[operatore %](../../../csharp/language-reference/operators/remainder-operator.md) (vedere [operator (Riferimenti per C#)](../../../csharp/language-reference/keywords/operator.md)).</span><span class="sxs-lookup"><span data-stu-id="69f74-109">The `%=` operator cannot be overloaded directly, but user-defined types can overload the [% operator](../../../csharp/language-reference/operators/remainder-operator.md) (see [operator (C# Reference)](../../../csharp/language-reference/keywords/operator.md)).</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="69f74-110">Esempio</span><span class="sxs-lookup"><span data-stu-id="69f74-110">Example</span></span>  
- [!code-csharp[csRefOperators#4](../../../csharp/language-reference/operators/codesnippet/CSharp/modulus-assignment-operator_1.cs)]  
-  
-## <a name="see-also"></a><span data-ttu-id="69f74-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="69f74-111">See Also</span></span>
+# <a name="-operator-c-reference"></a><span data-ttu-id="cf1df-102">Operatore %= (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="cf1df-102">%= Operator (C# Reference)</span></span>
 
-- [<span data-ttu-id="69f74-112">Riferimenti per C#</span><span class="sxs-lookup"><span data-stu-id="69f74-112">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="69f74-113">Guida per programmatori C#</span><span class="sxs-lookup"><span data-stu-id="69f74-113">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="69f74-114">Operatori C#</span><span class="sxs-lookup"><span data-stu-id="69f74-114">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)
+<span data-ttu-id="cf1df-103">Operatore di assegnazione di resto.</span><span class="sxs-lookup"><span data-stu-id="cf1df-103">The remainder assignment operator.</span></span>
+
+<span data-ttu-id="cf1df-104">Un'espressione che usa l'operatore `%=`, ad esempio</span><span class="sxs-lookup"><span data-stu-id="cf1df-104">An expression using the `%=` operator, such as</span></span>  
+
+```csharp
+x %= y
+```  
+
+<span data-ttu-id="cf1df-105">equivale a</span><span class="sxs-lookup"><span data-stu-id="cf1df-105">is equivalent to</span></span>  
+
+```csharp
+x = x % y
+```  
+
+<span data-ttu-id="cf1df-106">con la differenza che `x` viene valutato una sola volta.</span><span class="sxs-lookup"><span data-stu-id="cf1df-106">except that `x` is only evaluated once.</span></span>
+  
+<span data-ttu-id="cf1df-107">L'[operatore di resto](remainder-operator.md) `%` è supportato da tutti i tipi numerici e calcola il resto dopo la divisione dei relativi operandi.</span><span class="sxs-lookup"><span data-stu-id="cf1df-107">The [remainder operator](remainder-operator.md) `%` is supported by all numeric types and computes the remainder after division of its operands.</span></span>
+
+<span data-ttu-id="cf1df-108">Se un tipo definito dall'utente [esegue l'overload](../keywords/operator.md) dell'[operatore di resto](remainder-operator.md) `%`, l'operatore di assegnazione di resto `%=` viene sottoposto a overload in modo implicito.</span><span class="sxs-lookup"><span data-stu-id="cf1df-108">If a user-defined type [overloads](../keywords/operator.md) the [remainder operator](remainder-operator.md) `%`, the remainder assignment operator `%=` is implicitly overloaded.</span></span>
+  
+<span data-ttu-id="cf1df-109">Nell'esempio seguente viene illustrato l'uso dell'operatore `%=`:</span><span class="sxs-lookup"><span data-stu-id="cf1df-109">The following example demonstrates the usage of the `%=` operator:</span></span>
+
+[!code-csharp-interactive[%= example](~/samples/snippets/csharp/language-reference/operators/RemainderExamples.cs#3)]
+
+## <a name="see-also"></a><span data-ttu-id="cf1df-110">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="cf1df-110">See also</span></span>
+
+- [<span data-ttu-id="cf1df-111">Riferimenti per C#</span><span class="sxs-lookup"><span data-stu-id="cf1df-111">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="cf1df-112">Guida per programmatori C#</span><span class="sxs-lookup"><span data-stu-id="cf1df-112">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="cf1df-113">Operatori C#</span><span class="sxs-lookup"><span data-stu-id="cf1df-113">C# Operators</span></span>](index.md)
