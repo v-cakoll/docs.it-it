@@ -11,11 +11,11 @@ ms.assetid: bc177b2f-7528-4ae4-83db-aacfb04b86d0
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 51cc5296a7b3f6d75b5e56d6bbc74330fa147848
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47070615"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47232617"
 ---
 # <a name="design-guidelines-for-exceptions"></a>Linee guida di progettazione delle eccezioni
 La gestione delle eccezioni ha numerosi vantaggi rispetto alla creazione di report errori basato sul valore restituito. Framework buona struttura consente lo sviluppatore di applicazioni di sfruttare i vantaggi delle eccezioni. In questa sezione illustra i vantaggi delle eccezioni e vengono fornite linee guida per il loro utilizzo in modo efficace.  

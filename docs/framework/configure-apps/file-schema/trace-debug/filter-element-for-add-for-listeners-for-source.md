@@ -12,11 +12,11 @@ ms.assetid: 15808b80-4579-4c25-b385-178cfdf154ba
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 19b28c3391a10cc522f17c5353c9ec0726b0a2f8
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47073281"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47233179"
 ---
 # <a name="ltfiltergt-element-for-ltaddgt-for-ltlistenersgt-for-ltsourcegt"></a>&lt;filtro&gt; (elemento) per &lt;aggiungere&gt; per &lt;listener&gt; per &lt;origine&gt;
 Aggiunge un filtro a un listener nella raccolta `Listeners` per un'origine di traccia.  
