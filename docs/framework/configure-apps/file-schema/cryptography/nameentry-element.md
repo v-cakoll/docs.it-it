@@ -11,52 +11,52 @@ ms.assetid: 7d7535e9-4b4a-4b8c-82e2-e40dff5a7821
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 9f8176ca3ee2340100978aef044140dafdeb179b
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47082370"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47400725"
 ---
-# <a name="ltnameentrygt-element"></a><span data-ttu-id="95a6b-102">&lt;nameEntry&gt; elemento</span><span class="sxs-lookup"><span data-stu-id="95a6b-102">&lt;nameEntry&gt; Element</span></span>
-<span data-ttu-id="95a6b-103">Esegue il mapping di un nome di classe a un nome di algoritmo descrittivo, in modo da poter associare più nomi descrittivi a una classe.</span><span class="sxs-lookup"><span data-stu-id="95a6b-103">Maps a class name to a friendly algorithm name, which allows one class to have many friendly names.</span></span>  
+# <a name="ltnameentrygt-element"></a><span data-ttu-id="16463-102">&lt;nameEntry&gt; elemento</span><span class="sxs-lookup"><span data-stu-id="16463-102">&lt;nameEntry&gt; Element</span></span>
+<span data-ttu-id="16463-103">Esegue il mapping di un nome di classe a un nome di algoritmo descrittivo, in modo da poter associare più nomi descrittivi a una classe.</span><span class="sxs-lookup"><span data-stu-id="16463-103">Maps a class name to a friendly algorithm name, which allows one class to have many friendly names.</span></span>  
   
- <span data-ttu-id="95a6b-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="95a6b-104">\<configuration></span></span>  
-<span data-ttu-id="95a6b-105">\<mscorlib ></span><span class="sxs-lookup"><span data-stu-id="95a6b-105">\<mscorlib></span></span>  
-<span data-ttu-id="95a6b-106">\<cryptographySettings ></span><span class="sxs-lookup"><span data-stu-id="95a6b-106">\<cryptographySettings></span></span>  
-<span data-ttu-id="95a6b-107">\<cryptoNameMapping ></span><span class="sxs-lookup"><span data-stu-id="95a6b-107">\<cryptoNameMapping></span></span>  
-<span data-ttu-id="95a6b-108">\<nameEntry ></span><span class="sxs-lookup"><span data-stu-id="95a6b-108">\<nameEntry></span></span>  
+ <span data-ttu-id="16463-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="16463-104">\<configuration></span></span>  
+<span data-ttu-id="16463-105">\<mscorlib ></span><span class="sxs-lookup"><span data-stu-id="16463-105">\<mscorlib></span></span>  
+<span data-ttu-id="16463-106">\<cryptographySettings ></span><span class="sxs-lookup"><span data-stu-id="16463-106">\<cryptographySettings></span></span>  
+<span data-ttu-id="16463-107">\<cryptoNameMapping ></span><span class="sxs-lookup"><span data-stu-id="16463-107">\<cryptoNameMapping></span></span>  
+<span data-ttu-id="16463-108">\<nameEntry ></span><span class="sxs-lookup"><span data-stu-id="16463-108">\<nameEntry></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="95a6b-109">Sintassi</span><span class="sxs-lookup"><span data-stu-id="95a6b-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="16463-109">Sintassi</span><span class="sxs-lookup"><span data-stu-id="16463-109">Syntax</span></span>  
   
 ```xml  
 <nameEntry name="friendly name" Class="class name" />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="95a6b-110">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="95a6b-110">Attributes and Elements</span></span>  
- <span data-ttu-id="95a6b-111">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="95a6b-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="16463-110">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="16463-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="16463-111">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="16463-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="95a6b-112">Attributi</span><span class="sxs-lookup"><span data-stu-id="95a6b-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="16463-112">Attributi</span><span class="sxs-lookup"><span data-stu-id="16463-112">Attributes</span></span>  
   
-|<span data-ttu-id="95a6b-113">Attributo</span><span class="sxs-lookup"><span data-stu-id="95a6b-113">Attribute</span></span>|<span data-ttu-id="95a6b-114">Descrizione</span><span class="sxs-lookup"><span data-stu-id="95a6b-114">Description</span></span>|  
+|<span data-ttu-id="16463-113">Attributo</span><span class="sxs-lookup"><span data-stu-id="16463-113">Attribute</span></span>|<span data-ttu-id="16463-114">Descrizione</span><span class="sxs-lookup"><span data-stu-id="16463-114">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="95a6b-115">**name**</span><span class="sxs-lookup"><span data-stu-id="95a6b-115">**name**</span></span>|<span data-ttu-id="95a6b-116">Attributo obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="95a6b-116">Required attribute.</span></span><br /><br /> <span data-ttu-id="95a6b-117">Specifica il nome descrittivo dell'algoritmo che implementa la classe di crittografia.</span><span class="sxs-lookup"><span data-stu-id="95a6b-117">Specifies the friendly name of the algorithm that the cryptography class implements.</span></span>|  
-|<span data-ttu-id="95a6b-118">**class**</span><span class="sxs-lookup"><span data-stu-id="95a6b-118">**class**</span></span>|<span data-ttu-id="95a6b-119">Attributo obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="95a6b-119">Required attribute.</span></span><br /><br /> <span data-ttu-id="95a6b-120">Specifica il valore per il **name** attributo il [ \<cryptoClass >](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md) elemento.</span><span class="sxs-lookup"><span data-stu-id="95a6b-120">Specifies the value for the **name** attribute in the [\<cryptoClass>](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md) element.</span></span>|  
+|<span data-ttu-id="16463-115">**name**</span><span class="sxs-lookup"><span data-stu-id="16463-115">**name**</span></span>|<span data-ttu-id="16463-116">Attributo obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="16463-116">Required attribute.</span></span><br /><br /> <span data-ttu-id="16463-117">Specifica il nome descrittivo dell'algoritmo che implementa la classe di crittografia.</span><span class="sxs-lookup"><span data-stu-id="16463-117">Specifies the friendly name of the algorithm that the cryptography class implements.</span></span>|  
+|<span data-ttu-id="16463-118">**class**</span><span class="sxs-lookup"><span data-stu-id="16463-118">**class**</span></span>|<span data-ttu-id="16463-119">Attributo obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="16463-119">Required attribute.</span></span><br /><br /> <span data-ttu-id="16463-120">Specifica il valore per il **name** attributo il [ \<cryptoClass >](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md) elemento.</span><span class="sxs-lookup"><span data-stu-id="16463-120">Specifies the value for the **name** attribute in the [\<cryptoClass>](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md) element.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="95a6b-121">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="95a6b-121">Child Elements</span></span>  
- <span data-ttu-id="95a6b-122">Nessuno.</span><span class="sxs-lookup"><span data-stu-id="95a6b-122">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="16463-121">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="16463-121">Child Elements</span></span>  
+ <span data-ttu-id="16463-122">Nessuno.</span><span class="sxs-lookup"><span data-stu-id="16463-122">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="95a6b-123">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="95a6b-123">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="16463-123">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="16463-123">Parent Elements</span></span>  
   
-|<span data-ttu-id="95a6b-124">Elemento</span><span class="sxs-lookup"><span data-stu-id="95a6b-124">Element</span></span>|<span data-ttu-id="95a6b-125">Descrizione</span><span class="sxs-lookup"><span data-stu-id="95a6b-125">Description</span></span>|  
+|<span data-ttu-id="16463-124">Elemento</span><span class="sxs-lookup"><span data-stu-id="16463-124">Element</span></span>|<span data-ttu-id="16463-125">Descrizione</span><span class="sxs-lookup"><span data-stu-id="16463-125">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="95a6b-126">Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="95a6b-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`system.web`|<span data-ttu-id="95a6b-127">Consente di specificare l'elemento radice per la sezione di configurazione ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="95a6b-127">Specifies the root element for the ASP.NET configuration section.</span></span>|  
+|`configuration`|<span data-ttu-id="16463-126">Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="16463-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`system.web`|<span data-ttu-id="16463-127">Consente di specificare l'elemento radice per la sezione di configurazione ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="16463-127">Specifies the root element for the ASP.NET configuration section.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="95a6b-128">Note</span><span class="sxs-lookup"><span data-stu-id="95a6b-128">Remarks</span></span>  
- <span data-ttu-id="95a6b-129">Il **name** attributo può essere il nome di una delle classi astratte trovate nel <xref:System.Security.Cryptography> dello spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="95a6b-129">The **name** attribute can be the name of one of the abstract classes found in the <xref:System.Security.Cryptography> namespace.</span></span> <span data-ttu-id="95a6b-130">Quando si chiama il **Create** metodo su una classe astratta di crittografia, il nome di classe astratta viene passato per il <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A> (metodo).</span><span class="sxs-lookup"><span data-stu-id="95a6b-130">When you call the **Create** method on an abstract cryptography class, the abstract class name is passed to the <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A> method.</span></span> <span data-ttu-id="95a6b-131">**CreateFromName** restituisce un'istanza del tipo indicato per il **classe** attributo.</span><span class="sxs-lookup"><span data-stu-id="95a6b-131">**CreateFromName** returns an instance of the type indicated by the **class** attribute.</span></span> <span data-ttu-id="95a6b-132">Se il **name** attributo è un nome breve, ad esempio RSA, è possibile usare questo nome quando si chiama il **CreateFromName** (metodo).</span><span class="sxs-lookup"><span data-stu-id="95a6b-132">If the **name** attribute is a short name, such as RSA, you can use that name when calling the **CreateFromName** method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="16463-128">Note</span><span class="sxs-lookup"><span data-stu-id="16463-128">Remarks</span></span>  
+ <span data-ttu-id="16463-129">Il **name** attributo può essere il nome di una delle classi astratte trovate nel <xref:System.Security.Cryptography> dello spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="16463-129">The **name** attribute can be the name of one of the abstract classes found in the <xref:System.Security.Cryptography> namespace.</span></span> <span data-ttu-id="16463-130">Quando si chiama il **Create** metodo su una classe astratta di crittografia, il nome di classe astratta viene passato per il <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A> (metodo).</span><span class="sxs-lookup"><span data-stu-id="16463-130">When you call the **Create** method on an abstract cryptography class, the abstract class name is passed to the <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A> method.</span></span> <span data-ttu-id="16463-131">**CreateFromName** restituisce un'istanza del tipo indicato per il **classe** attributo.</span><span class="sxs-lookup"><span data-stu-id="16463-131">**CreateFromName** returns an instance of the type indicated by the **class** attribute.</span></span> <span data-ttu-id="16463-132">Se il **name** attributo è un nome breve, ad esempio RSA, è possibile usare questo nome quando si chiama il **CreateFromName** (metodo).</span><span class="sxs-lookup"><span data-stu-id="16463-132">If the **name** attribute is a short name, such as RSA, you can use that name when calling the **CreateFromName** method.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="95a6b-133">Esempio</span><span class="sxs-lookup"><span data-stu-id="95a6b-133">Example</span></span>  
- <span data-ttu-id="95a6b-134">Nell'esempio seguente viene illustrato come utilizzare il  **\<nameEntry >** elemento a cui fare riferimento a una classe di crittografia e configurare il runtime.</span><span class="sxs-lookup"><span data-stu-id="95a6b-134">The following example shows how to use the **\<nameEntry>** element to reference a cryptography class and to configure the runtime.</span></span> <span data-ttu-id="95a6b-135">È quindi possibile passare la stringa "RSA" per il <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> metodo e usare il <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> metodo restituisca un `MyCryptoRSAClass` oggetto.</span><span class="sxs-lookup"><span data-stu-id="95a6b-135">You can then pass the string "RSA" to the <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> method and use the <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> method to return a `MyCryptoRSAClass` object.</span></span>  
+## <a name="example"></a><span data-ttu-id="16463-133">Esempio</span><span class="sxs-lookup"><span data-stu-id="16463-133">Example</span></span>  
+ <span data-ttu-id="16463-134">Nell'esempio seguente viene illustrato come utilizzare il  **\<nameEntry >** elemento a cui fare riferimento a una classe di crittografia e configurare il runtime.</span><span class="sxs-lookup"><span data-stu-id="16463-134">The following example shows how to use the **\<nameEntry>** element to reference a cryptography class and to configure the runtime.</span></span> <span data-ttu-id="16463-135">È quindi possibile passare la stringa "RSA" per il <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> metodo e usare il <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> metodo restituisca un `MyCryptoRSAClass` oggetto.</span><span class="sxs-lookup"><span data-stu-id="16463-135">You can then pass the string "RSA" to the <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> method and use the <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> method to return a `MyCryptoRSAClass` object.</span></span>  
   
 ```xml  
 <configuration>  
@@ -77,8 +77,8 @@ ms.locfileid: "47082370"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="95a6b-136">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="95a6b-136">See Also</span></span>  
- [<span data-ttu-id="95a6b-137">Schema dei file di configurazione</span><span class="sxs-lookup"><span data-stu-id="95a6b-137">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [<span data-ttu-id="95a6b-138">Schema delle impostazioni di crittografia</span><span class="sxs-lookup"><span data-stu-id="95a6b-138">Cryptography Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
- [<span data-ttu-id="95a6b-139">Servizi di crittografia</span><span class="sxs-lookup"><span data-stu-id="95a6b-139">Cryptographic Services</span></span>](../../../../../docs/standard/security/cryptographic-services.md)  
- [<span data-ttu-id="95a6b-140">Configurazione di classi di crittografia</span><span class="sxs-lookup"><span data-stu-id="95a6b-140">Configuring Cryptography Classes</span></span>](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
+## <a name="see-also"></a><span data-ttu-id="16463-136">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="16463-136">See Also</span></span>  
+ [<span data-ttu-id="16463-137">Schema dei file di configurazione</span><span class="sxs-lookup"><span data-stu-id="16463-137">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [<span data-ttu-id="16463-138">Schema delle impostazioni di crittografia</span><span class="sxs-lookup"><span data-stu-id="16463-138">Cryptography Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
+ [<span data-ttu-id="16463-139">Servizi di crittografia</span><span class="sxs-lookup"><span data-stu-id="16463-139">Cryptographic Services</span></span>](../../../../../docs/standard/security/cryptographic-services.md)  
+ [<span data-ttu-id="16463-140">Configurazione di classi di crittografia</span><span class="sxs-lookup"><span data-stu-id="16463-140">Configuring Cryptography Classes</span></span>](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
