@@ -12,11 +12,11 @@ ms.assetid: 67784ecd-9663-434e-bd6a-26975e447ac0
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 535519c65aba7ce13703bb33a16b09cde84c3f03
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47085554"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47400608"
 ---
 # <a name="ltbindingredirectgt-element"></a>&lt;bindingRedirect&gt; elemento
 Reindirizza una versione dell'assembly in un'altra.  

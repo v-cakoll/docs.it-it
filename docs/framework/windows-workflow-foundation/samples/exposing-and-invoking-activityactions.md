@@ -3,11 +3,11 @@ title: Esposizione e richiamo di ActivityAction
 ms.date: 03/30/2017
 ms.assetid: 97ce4797-426e-463d-9cc4-1261afad6df4
 ms.openlocfilehash: 99207c33d82ec9028da2355cc792c366dc5e0cc6
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47176399"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47398563"
 ---
 # <a name="exposing-and-invoking-activityactions"></a>Esposizione e richiamo di ActivityAction
 In questo esempio viene illustrato come sviluppare un'attività personalizzata che dispone di un oggetto <xref:System.Activities.ActivityAction>. Viene inoltre illustrato come usare questa attività fornendo un'implementazione dell'oggetto <xref:System.Activities.ActivityAction>.  

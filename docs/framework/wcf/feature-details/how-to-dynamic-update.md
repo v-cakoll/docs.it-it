@@ -2,12 +2,12 @@
 title: 'Procedura: aggiornamento dinamico'
 ms.date: 03/30/2017
 ms.assetid: 9b8f6e0d-edab-4a7e-86e3-8c66bebc64bb
-ms.openlocfilehash: 891caf2570ea4f843f20f95ac347b66ef84569f9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 597a4f8776398769307214090a8b463981bc0d46
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493295"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47399281"
 ---
 # <a name="how-to-dynamic-update"></a>Procedura: aggiornamento dinamico
 In questo argomento vengono descritti i passaggi di base necessari per creare e aggiornare in modo dinamico la configurazione del routing. In questo esempio, la configurazione iniziale del routing viene ottenuta dal file di configurazione e indirizza tutti i messaggi al servizio di calcolo regularCalc. Viene tuttavia aggiornata in un secondo momento a livello di codice per modificare l'endpoint di destinazione del servizio roundingCalc.  
@@ -64,7 +64,7 @@ In questo argomento vengono descritti i passaggi di base necessari per creare e 
     </filterTables>  
     ```  
   
-3.  Per valutare i messaggi in ingresso rispetto ai filtri contenuti nella rispettiva tabella, è necessario associare la tabella dei filtri agli endpoint servizio tramite il comportamento di routing. L'esempio seguente illustra l'associazione di "filterTable1" con l'endpoint del servizio.  
+3.  Per valutare i messaggi in ingresso rispetto ai filtri contenuti nella rispettiva tabella, è necessario associare la tabella dei filtri agli endpoint servizio tramite il comportamento di routing. L'esempio seguente illustra l'associazione "filterTable1" agli endpoint del servizio.  
   
     ```xml  
     <behaviors>  
@@ -160,7 +160,7 @@ In questo argomento vengono descritti i passaggi di base necessari per creare e 
     ```  
   
     > [!NOTE]
-    >  Poiché il metodo per fornire un nuovo elemento RoutingConfiguration è contenuto nell'estensione RoutingExtension del servizio, possono essere forniti nuovi oggetti RoutingConfiguration in qualunque punto del modello di estensibilità WCF che dispone o può ottenere un riferimento a ServiceHost o ServiceExtensions (ad esempio in un altro ServiceExtension). Per un esempio di aggiornamento dinamico RoutingConfiguration in questo modo, vedere [riconfigurazione dinamica](../../../../docs/framework/wcf/samples/dynamic-reconfiguration.md).  
+    > Poiché il metodo per fornire un nuovo elemento RoutingConfiguration è contenuto nell'estensione RoutingExtension del servizio, possono essere forniti nuovi oggetti RoutingConfiguration in qualunque punto del modello di estensibilità WCF che dispone o può ottenere un riferimento a ServiceHost o ServiceExtensions (ad esempio in un altro ServiceExtension).
   
 ## <a name="example"></a>Esempio  
  Di seguito è riportato un elenco completo dell'applicazione console utilizzata in questo esempio.  

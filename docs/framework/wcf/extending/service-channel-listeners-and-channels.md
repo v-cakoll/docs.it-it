@@ -3,11 +3,11 @@ title: 'Servizio: Listener di canale e canali'
 ms.date: 03/30/2017
 ms.assetid: 8ccbe0e8-7e55-441d-80de-5765f67542fa
 ms.openlocfilehash: 88bfdc879e4f3c7df6b2c4035c7ed7fdc2b4c41d
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47176413"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47396929"
 ---
 # <a name="service-channel-listeners-and-channels"></a>Servizio: Listener di canale e canali
 
