@@ -5,11 +5,11 @@ ms.assetid: 4095ba51-de20-4f87-b562-018abe422c91
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 3f4e3dbdc3dae425e44cd1c0890e8fef9d42a780
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47072722"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47436063"
 ---
 # <a name="ltremovegt-element-for-schemesettings-uri-settings"></a>&lt;rimuovere&gt; (elemento) per schemeSettings (impostazioni Uri)
 Rimuove un'impostazione di schema per un nome di schema.  
