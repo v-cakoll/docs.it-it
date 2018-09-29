@@ -14,11 +14,11 @@ ms.assetid: f99a1d29-a2a8-47af-9707-9909f9010735
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 263e6394a57ec3e7ef00eb79671d9b8ac47e724f
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47071192"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47454947"
 ---
 # <a name="handling-and-throwing-exceptions-in-net"></a>Gestione e generazione di eccezioni in .NET
 
@@ -30,7 +30,7 @@ Un'eccezione è una condizione di errore o un comportamento imprevisto riscontra
 
 In .NET un'eccezione è un oggetto che eredita dalla classe <xref:System.Exception?displayProperty=nameWithType>. Le eccezioni vengono generate dalle aree di codice in cui si è verificato un problema. Ogni eccezione viene passata ai livelli superiori dello stack finché non viene gestita dall'applicazione o non si arresta il programma.
 
-## <a name="exceptions-vs-traditional-error-handling-methods"></a>Confronto tra eccezioni e metodi di gestione degli errori tradizionali
+## <a name="exceptions-vs-traditional-error-handling-methods"></a>Eccezioni e metodi tradizionali di gestione degli errori
 
 In precedenza, il modello di gestione degli errori di un linguaggio si basava sul metodo specifico usato da tale linguaggio per rilevare gli errori e individuarne i gestori oppure sul meccanismo di gestione degli errori fornito dal sistema operativo. La modalità di gestione delle eccezioni di .NET offre i vantaggi seguenti:
 
