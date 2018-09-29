@@ -2,12 +2,12 @@
 title: Servizio HTTP di base
 ms.date: 03/30/2017
 ms.assetid: 27048b43-8a54-4f2a-9952-594bbfab10ad
-ms.openlocfilehash: 914ad5f04d980fd53cd07251461367356f00b4cc
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f97fcab1200b9c13860ab8030378b5402b087d7a
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516629"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47455723"
 ---
 # <a name="basic-http-service"></a>Servizio HTTP di base
 In questo esempio viene illustrato come implementare un servizio basato su RPC su HTTP, - noto come servizio "POX" (Plain Old XML) usando il modello di programmazione REST di Windows Communication Foundation (WCF). Questo esempio è costituito da due componenti: un servizio HTTP WCF indipendente (Service.cs) e un'applicazione console (Program.cs) che crea il servizio ed effettua chiamate ad esso.  
@@ -21,7 +21,7 @@ In questo esempio viene illustrato come implementare un servizio basato su RPC s
   
  Il file App.config configura il servizio WCF con un endpoint <xref:System.ServiceModel.Description.WebHttpEndpoint> predefinito in cui la proprietà <xref:System.ServiceModel.Description.WebHttpEndpoint.HelpEnabled%2A> è impostata su `true`. Di conseguenza, l'infrastruttura WCF crea una pagina automatica della Guida basata su HTML in `http://localhost:8000/Customers/help` che fornisce informazioni su come creare richieste HTTP al servizio e come utilizzare la risposta del servizio HTTP.  
   
- Program.cs illustra come una factory canale WCF è utilizzabile per effettuare chiamate al servizio ed elaborare le risposte. È importante sottolineare che quella descritta è solo una delle modalità per accedere a un servizio WCF. È inoltre possibile accedere al servizio utilizzando altre classi .NET Framework come <xref:System.Net.HttpWebRequest> e <xref:System.Net.WebClient>. Altri esempi in SDK (ad esempio il [la selezione del formato automatica](../../../../docs/framework/wcf/samples/automatic-format-selection.md) esempio e [servizio risorse di base](../../../../docs/framework/wcf/samples/basic-resource-service.md) esempio) Mostra come usare queste classi per comunicare con un servizio WCF.  
+ Program.cs illustra come una factory canale WCF è utilizzabile per effettuare chiamate al servizio ed elaborare le risposte. È importante sottolineare che quella descritta è solo una delle modalità per accedere a un servizio WCF. È inoltre possibile accedere al servizio utilizzando altre classi .NET Framework come <xref:System.Net.HttpWebRequest> e <xref:System.Net.WebClient>.
   
  L'esempio è costituito da un servizio indipendente e da un client, entrambi in esecuzione in un'applicazione console. Quando l'applicazione console è in esecuzione, il client invia richieste al servizio e scrive nella finestra della console le informazioni pertinenti incluse nelle risposte.  
   
@@ -41,7 +41,3 @@ In questo esempio viene illustrato come implementare un servizio basato su RPC s
 >  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\BasicHttpService`  
-  
-## <a name="see-also"></a>Vedere anche  
- [Selezione automatica del formato](../../../../docs/framework/wcf/samples/automatic-format-selection.md)  
- [Servizio risorse di base](../../../../docs/framework/wcf/samples/basic-resource-service.md)
