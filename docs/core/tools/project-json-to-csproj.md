@@ -5,23 +5,23 @@ author: natemcmaster
 ms.author: mairaw
 ms.date: 03/13/2017
 ms.openlocfilehash: 0079164470f87df665be6f9de62bc98d3fb51696
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45647369"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47397712"
 ---
-# <a name="a-mapping-between-projectjson-and-csproj-properties"></a><span data-ttu-id="235a2-103">Mapping tra le proprietà di project.json e csproj</span><span class="sxs-lookup"><span data-stu-id="235a2-103">A mapping between project.json and csproj properties</span></span>
+# <a name="a-mapping-between-projectjson-and-csproj-properties"></a><span data-ttu-id="f4b32-103">Mapping tra le proprietà di project.json e csproj</span><span class="sxs-lookup"><span data-stu-id="f4b32-103">A mapping between project.json and csproj properties</span></span>
 
-<span data-ttu-id="235a2-104">di [Nate McMaster](https://github.com/natemcmaster)</span><span class="sxs-lookup"><span data-stu-id="235a2-104">By [Nate McMaster](https://github.com/natemcmaster)</span></span>
+<span data-ttu-id="f4b32-104">di [Nate McMaster](https://github.com/natemcmaster)</span><span class="sxs-lookup"><span data-stu-id="f4b32-104">By [Nate McMaster](https://github.com/natemcmaster)</span></span>
 
-<span data-ttu-id="235a2-105">Durante lo sviluppo degli strumenti di .NET Core, è stata apportata una modifica importante che non supporta più i file *project.json* e sposta invece i progetti .NET Core nel formato MSBuild/csproj.</span><span class="sxs-lookup"><span data-stu-id="235a2-105">During the development of the .NET Core tooling, an important design change was made to no longer support *project.json* files and instead move the .NET Core projects to the MSBuild/csproj format.</span></span>
+<span data-ttu-id="f4b32-105">Durante lo sviluppo degli strumenti di .NET Core, è stata apportata una modifica importante che non supporta più i file *project.json* e sposta invece i progetti .NET Core nel formato MSBuild/csproj.</span><span class="sxs-lookup"><span data-stu-id="f4b32-105">During the development of the .NET Core tooling, an important design change was made to no longer support *project.json* files and instead move the .NET Core projects to the MSBuild/csproj format.</span></span>
 
-<span data-ttu-id="235a2-106">Questo articolo illustra come vengono rappresentate le impostazioni di *project.json* nel formato MSBuild/csproj, offre informazioni sull'uso del nuovo formato e consente di capire le modifiche apportate dagli strumenti di migrazione quando si aggiorna un progetto alla nuova versione degli strumenti.</span><span class="sxs-lookup"><span data-stu-id="235a2-106">This article shows how the settings in *project.json* are represented in the MSBuild/csproj format so you can learn how to use the new format and understand the changes made by the migration tools when you're upgrading your project to the latest version of the tooling.</span></span>
+<span data-ttu-id="f4b32-106">Questo articolo illustra come vengono rappresentate le impostazioni di *project.json* nel formato MSBuild/csproj, offre informazioni sull'uso del nuovo formato e consente di capire le modifiche apportate dagli strumenti di migrazione quando si aggiorna un progetto alla nuova versione degli strumenti.</span><span class="sxs-lookup"><span data-stu-id="f4b32-106">This article shows how the settings in *project.json* are represented in the MSBuild/csproj format so you can learn how to use the new format and understand the changes made by the migration tools when you're upgrading your project to the latest version of the tooling.</span></span>
 
-## <a name="the-csproj-format"></a><span data-ttu-id="235a2-107">Formato csproj</span><span class="sxs-lookup"><span data-stu-id="235a2-107">The csproj format</span></span>
+## <a name="the-csproj-format"></a><span data-ttu-id="f4b32-107">Formato csproj</span><span class="sxs-lookup"><span data-stu-id="f4b32-107">The csproj format</span></span>
 
-<span data-ttu-id="235a2-108">Il nuovo formato, \*.csproj, è un formato basato su XML.</span><span class="sxs-lookup"><span data-stu-id="235a2-108">The new format, \*.csproj, is an XML-based format.</span></span> <span data-ttu-id="235a2-109">L'esempio seguente illustra il nodo radice di un progetto .NET Core usando `Microsoft.NET.Sdk`.</span><span class="sxs-lookup"><span data-stu-id="235a2-109">The following example shows the root node of a .NET Core project using the `Microsoft.NET.Sdk`.</span></span> <span data-ttu-id="235a2-110">Per i progetti Web, l'SDK usato è `Microsoft.NET.Sdk.Web`.</span><span class="sxs-lookup"><span data-stu-id="235a2-110">For web projects, the SDK used is `Microsoft.NET.Sdk.Web`.</span></span>
+<span data-ttu-id="f4b32-108">Il nuovo formato, \*.csproj, è un formato basato su XML.</span><span class="sxs-lookup"><span data-stu-id="f4b32-108">The new format, \*.csproj, is an XML-based format.</span></span> <span data-ttu-id="f4b32-109">L'esempio seguente illustra il nodo radice di un progetto .NET Core usando `Microsoft.NET.Sdk`.</span><span class="sxs-lookup"><span data-stu-id="f4b32-109">The following example shows the root node of a .NET Core project using the `Microsoft.NET.Sdk`.</span></span> <span data-ttu-id="f4b32-110">Per i progetti Web, l'SDK usato è `Microsoft.NET.Sdk.Web`.</span><span class="sxs-lookup"><span data-stu-id="f4b32-110">For web projects, the SDK used is `Microsoft.NET.Sdk.Web`.</span></span>
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -29,9 +29,9 @@ ms.locfileid: "45647369"
 </Project>
 ```
 
-## <a name="common-top-level-properties"></a><span data-ttu-id="235a2-111">Proprietà comuni di livello superiore</span><span class="sxs-lookup"><span data-stu-id="235a2-111">Common top-level properties</span></span>
+## <a name="common-top-level-properties"></a><span data-ttu-id="f4b32-111">Proprietà comuni di livello superiore</span><span class="sxs-lookup"><span data-stu-id="f4b32-111">Common top-level properties</span></span>
 
-### <a name="name"></a><span data-ttu-id="235a2-112">name</span><span class="sxs-lookup"><span data-stu-id="235a2-112">name</span></span>
+### <a name="name"></a><span data-ttu-id="f4b32-112">name</span><span class="sxs-lookup"><span data-stu-id="f4b32-112">name</span></span>
 
 ```json
 {
@@ -39,9 +39,9 @@ ms.locfileid: "45647369"
 }
 ```
 
-<span data-ttu-id="235a2-113">Non è più supportato.</span><span class="sxs-lookup"><span data-stu-id="235a2-113">No longer supported.</span></span> <span data-ttu-id="235a2-114">In csproj, ciò è determinato dal nome del file di progetto, che viene definito dal nome della directory.</span><span class="sxs-lookup"><span data-stu-id="235a2-114">In csproj, this is determined by the project filename, which is defined by the directory name.</span></span> <span data-ttu-id="235a2-115">Ad esempio `MyProjectName.csproj`.</span><span class="sxs-lookup"><span data-stu-id="235a2-115">For example, `MyProjectName.csproj`.</span></span>
+<span data-ttu-id="f4b32-113">Non è più supportato.</span><span class="sxs-lookup"><span data-stu-id="f4b32-113">No longer supported.</span></span> <span data-ttu-id="f4b32-114">In csproj, ciò è determinato dal nome del file di progetto, che viene definito dal nome della directory.</span><span class="sxs-lookup"><span data-stu-id="f4b32-114">In csproj, this is determined by the project filename, which is defined by the directory name.</span></span> <span data-ttu-id="f4b32-115">Ad esempio `MyProjectName.csproj`.</span><span class="sxs-lookup"><span data-stu-id="f4b32-115">For example, `MyProjectName.csproj`.</span></span>
 
-<span data-ttu-id="235a2-116">Per impostazione predefinita, il nome del file di progetto specifica anche il valore delle proprietà `<AssemblyName>` e `<PackageId>`.</span><span class="sxs-lookup"><span data-stu-id="235a2-116">By default, the project filename also specifies the value of the `<AssemblyName>` and `<PackageId>` properties.</span></span>
+<span data-ttu-id="f4b32-116">Per impostazione predefinita, il nome del file di progetto specifica anche il valore delle proprietà `<AssemblyName>` e `<PackageId>`.</span><span class="sxs-lookup"><span data-stu-id="f4b32-116">By default, the project filename also specifies the value of the `<AssemblyName>` and `<PackageId>` properties.</span></span>
 
 ```xml
 <PropertyGroup>
@@ -50,10 +50,10 @@ ms.locfileid: "45647369"
 </PropertyGroup>
 ```
 
-<span data-ttu-id="235a2-117">La proprietà `<AssemblyName>` avrà un valore diverso da `<PackageId>` se la proprietà `buildOptions\outputName` è stata definita in project.json.</span><span class="sxs-lookup"><span data-stu-id="235a2-117">The `<AssemblyName>` will have a different value than `<PackageId>` if `buildOptions\outputName` property was defined in project.json.</span></span>
-<span data-ttu-id="235a2-118">Per altre informazioni, vedere [Altre opzioni comuni di compilazione](#other-common-build-options).</span><span class="sxs-lookup"><span data-stu-id="235a2-118">For more information, see [Other common build options](#other-common-build-options).</span></span>
+<span data-ttu-id="f4b32-117">La proprietà `<AssemblyName>` avrà un valore diverso da `<PackageId>` se la proprietà `buildOptions\outputName` è stata definita in project.json.</span><span class="sxs-lookup"><span data-stu-id="f4b32-117">The `<AssemblyName>` will have a different value than `<PackageId>` if `buildOptions\outputName` property was defined in project.json.</span></span>
+<span data-ttu-id="f4b32-118">Per altre informazioni, vedere [Altre opzioni comuni di compilazione](#other-common-build-options).</span><span class="sxs-lookup"><span data-stu-id="f4b32-118">For more information, see [Other common build options](#other-common-build-options).</span></span>
 
-### <a name="version"></a><span data-ttu-id="235a2-119">version</span><span class="sxs-lookup"><span data-stu-id="235a2-119">version</span></span>
+### <a name="version"></a><span data-ttu-id="f4b32-119">version</span><span class="sxs-lookup"><span data-stu-id="f4b32-119">version</span></span>
 
 ```json
 {
@@ -61,7 +61,7 @@ ms.locfileid: "45647369"
 }
 ```
 
-<span data-ttu-id="235a2-120">Usare le proprietà `VersionPrefix` e `VersionSuffix`:</span><span class="sxs-lookup"><span data-stu-id="235a2-120">Use the `VersionPrefix` and `VersionSuffix` properties:</span></span>
+<span data-ttu-id="f4b32-120">Usare le proprietà `VersionPrefix` e `VersionSuffix`:</span><span class="sxs-lookup"><span data-stu-id="f4b32-120">Use the `VersionPrefix` and `VersionSuffix` properties:</span></span>
 
 ```xml
 <PropertyGroup>
@@ -70,7 +70,7 @@ ms.locfileid: "45647369"
 </PropertyGroup>
 ```
 
-<span data-ttu-id="235a2-121">È anche possibile usare la proprietà `Version`, ma questa operazione potrebbe causare la sovrascrittura delle impostazioni della versione durante la creazione di pacchetti:</span><span class="sxs-lookup"><span data-stu-id="235a2-121">You can also use the `Version` property, but this may override version settings during packaging:</span></span>
+<span data-ttu-id="f4b32-121">È anche possibile usare la proprietà `Version`, ma questa operazione potrebbe causare la sovrascrittura delle impostazioni della versione durante la creazione di pacchetti:</span><span class="sxs-lookup"><span data-stu-id="f4b32-121">You can also use the `Version` property, but this may override version settings during packaging:</span></span>
 
 ```xml
 <PropertyGroup>
@@ -78,7 +78,7 @@ ms.locfileid: "45647369"
 </PropertyGroup>
 ```
 
-### <a name="other-common-root-level-options"></a><span data-ttu-id="235a2-122">Altre opzioni comuni a livello radice</span><span class="sxs-lookup"><span data-stu-id="235a2-122">Other common root-level options</span></span>
+### <a name="other-common-root-level-options"></a><span data-ttu-id="f4b32-122">Altre opzioni comuni a livello radice</span><span class="sxs-lookup"><span data-stu-id="f4b32-122">Other common root-level options</span></span>
 
 ```json
 {
@@ -105,9 +105,9 @@ And it's really great!</Description>
 </PropertyGroup>
 ```
 
-## <a name="frameworks"></a><span data-ttu-id="235a2-123">frameworks</span><span class="sxs-lookup"><span data-stu-id="235a2-123">frameworks</span></span>
+## <a name="frameworks"></a><span data-ttu-id="f4b32-123">frameworks</span><span class="sxs-lookup"><span data-stu-id="f4b32-123">frameworks</span></span>
 
-### <a name="one-target-framework"></a><span data-ttu-id="235a2-124">Un solo framework di destinazione</span><span class="sxs-lookup"><span data-stu-id="235a2-124">One target framework</span></span>
+### <a name="one-target-framework"></a><span data-ttu-id="f4b32-124">Un solo framework di destinazione</span><span class="sxs-lookup"><span data-stu-id="f4b32-124">One target framework</span></span>
 
 ```json
 {
@@ -123,7 +123,7 @@ And it's really great!</Description>
 </PropertyGroup>
 ```
 
-### <a name="multiple-target-frameworks"></a><span data-ttu-id="235a2-125">Più framework di destinazione</span><span class="sxs-lookup"><span data-stu-id="235a2-125">Multiple target frameworks</span></span>
+### <a name="multiple-target-frameworks"></a><span data-ttu-id="f4b32-125">Più framework di destinazione</span><span class="sxs-lookup"><span data-stu-id="f4b32-125">Multiple target frameworks</span></span>
 
 ```json
 {
@@ -134,7 +134,7 @@ And it's really great!</Description>
 }
 ```
 
-<span data-ttu-id="235a2-126">Usare la proprietà `TargetFrameworks` per definire l'elenco dei framework di destinazione.</span><span class="sxs-lookup"><span data-stu-id="235a2-126">Use the `TargetFrameworks` property to define your list of target frameworks.</span></span> <span data-ttu-id="235a2-127">Usare un punto e virgola per separare più valori di framework.</span><span class="sxs-lookup"><span data-stu-id="235a2-127">Use semi-colon to separate multiple framework values.</span></span>
+<span data-ttu-id="f4b32-126">Usare la proprietà `TargetFrameworks` per definire l'elenco dei framework di destinazione.</span><span class="sxs-lookup"><span data-stu-id="f4b32-126">Use the `TargetFrameworks` property to define your list of target frameworks.</span></span> <span data-ttu-id="f4b32-127">Usare un punto e virgola per separare più valori di framework.</span><span class="sxs-lookup"><span data-stu-id="f4b32-127">Use semi-colon to separate multiple framework values.</span></span>
 
 ```xml
 <PropertyGroup>
@@ -142,13 +142,13 @@ And it's really great!</Description>
 </PropertyGroup>
 ```
 
-## <a name="dependencies"></a><span data-ttu-id="235a2-128">dependencies</span><span class="sxs-lookup"><span data-stu-id="235a2-128">dependencies</span></span>
+## <a name="dependencies"></a><span data-ttu-id="f4b32-128">dependencies</span><span class="sxs-lookup"><span data-stu-id="f4b32-128">dependencies</span></span>
 
 > [!IMPORTANT]
-> <span data-ttu-id="235a2-129">Se la dipendenza è un **progetto** e non un pacchetto, il formato è diverso.</span><span class="sxs-lookup"><span data-stu-id="235a2-129">If the dependency is a **project** and not a package, the format is different.</span></span>
-> <span data-ttu-id="235a2-130">Per altre informazioni, vedere la sezione [Tipo di dipendenza](#dependency-type).</span><span class="sxs-lookup"><span data-stu-id="235a2-130">For more information, see the [dependency type](#dependency-type) section.</span></span>
+> <span data-ttu-id="f4b32-129">Se la dipendenza è un **progetto** e non un pacchetto, il formato è diverso.</span><span class="sxs-lookup"><span data-stu-id="f4b32-129">If the dependency is a **project** and not a package, the format is different.</span></span>
+> <span data-ttu-id="f4b32-130">Per altre informazioni, vedere la sezione [Tipo di dipendenza](#dependency-type).</span><span class="sxs-lookup"><span data-stu-id="f4b32-130">For more information, see the [dependency type](#dependency-type) section.</span></span>
 
-### <a name="netstandardlibrary-metapackage"></a><span data-ttu-id="235a2-131">Metapacchetto NETStandard.Library</span><span class="sxs-lookup"><span data-stu-id="235a2-131">NETStandard.Library metapackage</span></span>
+### <a name="netstandardlibrary-metapackage"></a><span data-ttu-id="f4b32-131">Metapacchetto NETStandard.Library</span><span class="sxs-lookup"><span data-stu-id="f4b32-131">NETStandard.Library metapackage</span></span>
 
 ```json
 {
@@ -164,7 +164,7 @@ And it's really great!</Description>
 </PropertyGroup>
 ```
 
-### <a name="microsoftnetcoreapp-metapackage"></a><span data-ttu-id="235a2-132">Metapacchetto Microsoft.NETCore.App</span><span class="sxs-lookup"><span data-stu-id="235a2-132">Microsoft.NETCore.App metapackage</span></span>
+### <a name="microsoftnetcoreapp-metapackage"></a><span data-ttu-id="f4b32-132">Metapacchetto Microsoft.NETCore.App</span><span class="sxs-lookup"><span data-stu-id="f4b32-132">Microsoft.NETCore.App metapackage</span></span>
 
 ```json
 {
@@ -180,9 +180,9 @@ And it's really great!</Description>
 </PropertyGroup>
 ```
 
-<span data-ttu-id="235a2-133">Si noti che il valore `<RuntimeFrameworkVersion>` nel progetto migrato è determinato dalla versione dell'SDK installato.</span><span class="sxs-lookup"><span data-stu-id="235a2-133">Note that the `<RuntimeFrameworkVersion>` value in the migrated project is determined by the version of the SDK you have installed.</span></span>
+<span data-ttu-id="f4b32-133">Si noti che il valore `<RuntimeFrameworkVersion>` nel progetto migrato è determinato dalla versione dell'SDK installato.</span><span class="sxs-lookup"><span data-stu-id="f4b32-133">Note that the `<RuntimeFrameworkVersion>` value in the migrated project is determined by the version of the SDK you have installed.</span></span>
 
-### <a name="top-level-dependencies"></a><span data-ttu-id="235a2-134">Dipendenze di livello superiore</span><span class="sxs-lookup"><span data-stu-id="235a2-134">Top-level dependencies</span></span>
+### <a name="top-level-dependencies"></a><span data-ttu-id="f4b32-134">Dipendenze di livello superiore</span><span class="sxs-lookup"><span data-stu-id="f4b32-134">Top-level dependencies</span></span>
 
 ```json
 {
@@ -198,7 +198,7 @@ And it's really great!</Description>
 </ItemGroup>
 ```
 
-### <a name="per-framework-dependencies"></a><span data-ttu-id="235a2-135">Dipendenze per framework</span><span class="sxs-lookup"><span data-stu-id="235a2-135">Per-framework dependencies</span></span>
+### <a name="per-framework-dependencies"></a><span data-ttu-id="f4b32-135">Dipendenze per framework</span><span class="sxs-lookup"><span data-stu-id="f4b32-135">Per-framework dependencies</span></span>
 
 ```json
 {
@@ -227,7 +227,7 @@ And it's really great!</Description>
 </ItemGroup>
 ```
 
-### <a name="imports"></a><span data-ttu-id="235a2-136">importazioni</span><span class="sxs-lookup"><span data-stu-id="235a2-136">imports</span></span>
+### <a name="imports"></a><span data-ttu-id="f4b32-136">importazioni</span><span class="sxs-lookup"><span data-stu-id="f4b32-136">imports</span></span>
 
 ```json
 {
@@ -254,9 +254,9 @@ And it's really great!</Description>
 </ItemGroup>
 ```
 
-### <a name="dependency-type"></a><span data-ttu-id="235a2-137">Tipo di dipendenza</span><span class="sxs-lookup"><span data-stu-id="235a2-137">dependency type</span></span>
+### <a name="dependency-type"></a><span data-ttu-id="f4b32-137">Tipo di dipendenza</span><span class="sxs-lookup"><span data-stu-id="f4b32-137">dependency type</span></span>
 
-#### <a name="type-project"></a><span data-ttu-id="235a2-138">Tipo: progetto</span><span class="sxs-lookup"><span data-stu-id="235a2-138">type: project</span></span>
+#### <a name="type-project"></a><span data-ttu-id="f4b32-138">Tipo: progetto</span><span class="sxs-lookup"><span data-stu-id="f4b32-138">type: project</span></span>
 
 ```json
 {
@@ -277,9 +277,9 @@ And it's really great!</Description>
 ```
 
 > [!NOTE]
-> <span data-ttu-id="235a2-139">Questa operazione interrompe il modo in cui `dotnet pack --version-suffix $suffix` determina la versione di dipendenza di un riferimento al progetto.</span><span class="sxs-lookup"><span data-stu-id="235a2-139">This will break the way that `dotnet pack --version-suffix $suffix` determines the dependency version of a project reference.</span></span>
+> <span data-ttu-id="f4b32-139">Questa operazione interrompe il modo in cui `dotnet pack --version-suffix $suffix` determina la versione di dipendenza di un riferimento al progetto.</span><span class="sxs-lookup"><span data-stu-id="f4b32-139">This will break the way that `dotnet pack --version-suffix $suffix` determines the dependency version of a project reference.</span></span>
 
-#### <a name="type-build"></a><span data-ttu-id="235a2-140">Tipo: compilazione</span><span class="sxs-lookup"><span data-stu-id="235a2-140">type: build</span></span>
+#### <a name="type-build"></a><span data-ttu-id="f4b32-140">Tipo: compilazione</span><span class="sxs-lookup"><span data-stu-id="f4b32-140">type: build</span></span>
 
 ```json
 {
@@ -298,7 +298,7 @@ And it's really great!</Description>
 </ItemGroup>
 ```
 
-#### <a name="type-platform"></a><span data-ttu-id="235a2-141">Tipo: piattaforma</span><span class="sxs-lookup"><span data-stu-id="235a2-141">type: platform</span></span>
+#### <a name="type-platform"></a><span data-ttu-id="f4b32-141">Tipo: piattaforma</span><span class="sxs-lookup"><span data-stu-id="f4b32-141">type: platform</span></span>
 
 ```json
 {
@@ -311,9 +311,9 @@ And it's really great!</Description>
 }
 ```
 
-<span data-ttu-id="235a2-142">Non è disponibile nessuna opzione equivalente in csproj.</span><span class="sxs-lookup"><span data-stu-id="235a2-142">There is no equivalent in csproj.</span></span>
+<span data-ttu-id="f4b32-142">Non è disponibile nessuna opzione equivalente in csproj.</span><span class="sxs-lookup"><span data-stu-id="f4b32-142">There is no equivalent in csproj.</span></span>
 
-## <a name="runtimes"></a><span data-ttu-id="235a2-143">runtimes</span><span class="sxs-lookup"><span data-stu-id="235a2-143">runtimes</span></span>
+## <a name="runtimes"></a><span data-ttu-id="f4b32-143">runtimes</span><span class="sxs-lookup"><span data-stu-id="f4b32-143">runtimes</span></span>
 
 ```json
 {
@@ -331,16 +331,16 @@ And it's really great!</Description>
 </PropertyGroup>
 ```
 
-### <a name="standalone-apps-self-contained-deployment"></a><span data-ttu-id="235a2-144">App indipendenti (distribuzione autonoma)</span><span class="sxs-lookup"><span data-stu-id="235a2-144">Standalone apps (self-contained deployment)</span></span>
+### <a name="standalone-apps-self-contained-deployment"></a><span data-ttu-id="f4b32-144">App indipendenti (distribuzione autonoma)</span><span class="sxs-lookup"><span data-stu-id="f4b32-144">Standalone apps (self-contained deployment)</span></span>
 
-<span data-ttu-id="235a2-145">In project.json, la definizione di una sezione `runtimes` indica che l'app era indipendente durante la compilazione e la pubblicazione.</span><span class="sxs-lookup"><span data-stu-id="235a2-145">In project.json, defining a `runtimes` section means the app was standalone during build and publish.</span></span>
-<span data-ttu-id="235a2-146">In MSBuild, tutti i progetti sono *portatili* durante la creazione, ma possono essere pubblicati come autonomi.</span><span class="sxs-lookup"><span data-stu-id="235a2-146">In MSBuild, all projects are *portable* during build, but can be published as standalone.</span></span>
+<span data-ttu-id="f4b32-145">In project.json, la definizione di una sezione `runtimes` indica che l'app era indipendente durante la compilazione e la pubblicazione.</span><span class="sxs-lookup"><span data-stu-id="f4b32-145">In project.json, defining a `runtimes` section means the app was standalone during build and publish.</span></span>
+<span data-ttu-id="f4b32-146">In MSBuild, tutti i progetti sono *portatili* durante la creazione, ma possono essere pubblicati come autonomi.</span><span class="sxs-lookup"><span data-stu-id="f4b32-146">In MSBuild, all projects are *portable* during build, but can be published as standalone.</span></span>
 
 `dotnet publish --framework netcoreapp1.0 --runtime osx.10.11-x64`
 
-<span data-ttu-id="235a2-147">Per altre informazioni, vedere [Distribuzioni autonome (SCD)](../deploying/index.md#self-contained-deployments-scd).</span><span class="sxs-lookup"><span data-stu-id="235a2-147">For more information, see [Self-contained deployments (SCD)](../deploying/index.md#self-contained-deployments-scd).</span></span>
+<span data-ttu-id="f4b32-147">Per altre informazioni, vedere [Distribuzioni autonome (SCD)](../deploying/index.md#self-contained-deployments-scd).</span><span class="sxs-lookup"><span data-stu-id="f4b32-147">For more information, see [Self-contained deployments (SCD)](../deploying/index.md#self-contained-deployments-scd).</span></span>
 
-## <a name="tools"></a><span data-ttu-id="235a2-148">tools</span><span class="sxs-lookup"><span data-stu-id="235a2-148">tools</span></span>
+## <a name="tools"></a><span data-ttu-id="f4b32-148">tools</span><span class="sxs-lookup"><span data-stu-id="f4b32-148">tools</span></span>
 
 ```json
 {
@@ -357,13 +357,13 @@ And it's really great!</Description>
 ```
 
 > [!NOTE]
-> <span data-ttu-id="235a2-149">Gli `imports` sugli strumenti non sono supportati in csproj.</span><span class="sxs-lookup"><span data-stu-id="235a2-149">`imports` on tools are not supported in csproj.</span></span> <span data-ttu-id="235a2-150">Gli strumenti che hanno bisogno di imports non funzionano con il nuovo `Microsoft.NET.Sdk`.</span><span class="sxs-lookup"><span data-stu-id="235a2-150">Tools that need imports will not work with the new `Microsoft.NET.Sdk`.</span></span>
+> <span data-ttu-id="f4b32-149">Gli `imports` sugli strumenti non sono supportati in csproj.</span><span class="sxs-lookup"><span data-stu-id="f4b32-149">`imports` on tools are not supported in csproj.</span></span> <span data-ttu-id="f4b32-150">Gli strumenti che hanno bisogno di imports non funzionano con il nuovo `Microsoft.NET.Sdk`.</span><span class="sxs-lookup"><span data-stu-id="f4b32-150">Tools that need imports will not work with the new `Microsoft.NET.Sdk`.</span></span>
 
-## <a name="buildoptions"></a><span data-ttu-id="235a2-151">buildOptions</span><span class="sxs-lookup"><span data-stu-id="235a2-151">buildOptions</span></span>
+## <a name="buildoptions"></a><span data-ttu-id="f4b32-151">buildOptions</span><span class="sxs-lookup"><span data-stu-id="f4b32-151">buildOptions</span></span>
 
-<span data-ttu-id="235a2-152">Vedere anche [Files](#files).</span><span class="sxs-lookup"><span data-stu-id="235a2-152">See also [Files](#files).</span></span>
+<span data-ttu-id="f4b32-152">Vedere anche [Files](#files).</span><span class="sxs-lookup"><span data-stu-id="f4b32-152">See also [Files](#files).</span></span>
 
-### <a name="emitentrypoint"></a><span data-ttu-id="235a2-153">emitEntryPoint</span><span class="sxs-lookup"><span data-stu-id="235a2-153">emitEntryPoint</span></span>
+### <a name="emitentrypoint"></a><span data-ttu-id="f4b32-153">emitEntryPoint</span><span class="sxs-lookup"><span data-stu-id="f4b32-153">emitEntryPoint</span></span>
 
 ```json
 {
@@ -379,7 +379,7 @@ And it's really great!</Description>
 </PropertyGroup>
 ```
 
-<span data-ttu-id="235a2-154">Se `emitEntryPoint` fosse `false`, il valore di `OutputType` verrebbe convertito in `Library`, ovvero il valore predefinito:</span><span class="sxs-lookup"><span data-stu-id="235a2-154">If `emitEntryPoint` was `false`, the value of `OutputType` is converted to `Library`, which is the default value:</span></span>
+<span data-ttu-id="f4b32-154">Se `emitEntryPoint` fosse `false`, il valore di `OutputType` verrebbe convertito in `Library`, ovvero il valore predefinito:</span><span class="sxs-lookup"><span data-stu-id="f4b32-154">If `emitEntryPoint` was `false`, the value of `OutputType` is converted to `Library`, which is the default value:</span></span>
 
 ```json
 {
@@ -396,7 +396,7 @@ And it's really great!</Description>
 </PropertyGroup>
 ```
 
-### <a name="keyfile"></a><span data-ttu-id="235a2-155">keyFile</span><span class="sxs-lookup"><span data-stu-id="235a2-155">keyFile</span></span>
+### <a name="keyfile"></a><span data-ttu-id="f4b32-155">keyFile</span><span class="sxs-lookup"><span data-stu-id="f4b32-155">keyFile</span></span>
 
 ```json
 {
@@ -406,7 +406,7 @@ And it's really great!</Description>
 }
 ```
 
-<span data-ttu-id="235a2-156">L'elemento `keyFile` si espande a tre proprietà in MSBuild:</span><span class="sxs-lookup"><span data-stu-id="235a2-156">The `keyFile` element expands to three properties in MSBuild:</span></span>
+<span data-ttu-id="f4b32-156">L'elemento `keyFile` si espande a tre proprietà in MSBuild:</span><span class="sxs-lookup"><span data-stu-id="f4b32-156">The `keyFile` element expands to three properties in MSBuild:</span></span>
 
 ```xml
 <PropertyGroup>
@@ -416,7 +416,7 @@ And it's really great!</Description>
 </PropertyGroup>
 ```
 
-### <a name="other-common-build-options"></a><span data-ttu-id="235a2-157">Altre opzioni comuni di compilazione</span><span class="sxs-lookup"><span data-stu-id="235a2-157">Other common build options</span></span>
+### <a name="other-common-build-options"></a><span data-ttu-id="f4b32-157">Altre opzioni comuni di compilazione</span><span class="sxs-lookup"><span data-stu-id="f4b32-157">Other common build options</span></span>
 
 ```json
 {
@@ -446,11 +446,11 @@ And it's really great!</Description>
 </PropertyGroup>
 ```
 
-## <a name="packoptions"></a><span data-ttu-id="235a2-158">packOptions</span><span class="sxs-lookup"><span data-stu-id="235a2-158">packOptions</span></span>
+## <a name="packoptions"></a><span data-ttu-id="f4b32-158">packOptions</span><span class="sxs-lookup"><span data-stu-id="f4b32-158">packOptions</span></span>
 
-<span data-ttu-id="235a2-159">Vedere anche [Files](#files).</span><span class="sxs-lookup"><span data-stu-id="235a2-159">See also [Files](#files).</span></span>
+<span data-ttu-id="f4b32-159">Vedere anche [Files](#files).</span><span class="sxs-lookup"><span data-stu-id="f4b32-159">See also [Files](#files).</span></span>
 
-### <a name="common-pack-options"></a><span data-ttu-id="235a2-160">Opzioni comuni di pacchetto</span><span class="sxs-lookup"><span data-stu-id="235a2-160">Common pack options</span></span>
+### <a name="common-pack-options"></a><span data-ttu-id="f4b32-160">Opzioni comuni di pacchetto</span><span class="sxs-lookup"><span data-stu-id="f4b32-160">Common pack options</span></span>
 
 ```json
 {
@@ -486,10 +486,10 @@ And it's really great!</Description>
 </PropertyGroup>
 ```
 
-<span data-ttu-id="235a2-161">Non è disponibile nessuna opzione equivalente per l'elemento `owners` in MSBuild.</span><span class="sxs-lookup"><span data-stu-id="235a2-161">There is no equivalent for the `owners` element in MSBuild.</span></span>
-<span data-ttu-id="235a2-162">In `summary` è possibile usare la proprietà `<Description>` di MSBuild, anche se il valore di `summary` non viene migrato automaticamente a tale proprietà, poiché tale proprietà è mappata all'elemento [`description`](#other-common-root-level-options).</span><span class="sxs-lookup"><span data-stu-id="235a2-162">For `summary`, you can use the MSBuild `<Description>` property, even though the value of `summary` is not migrated automatically to that property, since that property is mapped to the [`description`](#other-common-root-level-options) element.</span></span>
+<span data-ttu-id="f4b32-161">Non è disponibile nessuna opzione equivalente per l'elemento `owners` in MSBuild.</span><span class="sxs-lookup"><span data-stu-id="f4b32-161">There is no equivalent for the `owners` element in MSBuild.</span></span>
+<span data-ttu-id="f4b32-162">In `summary` è possibile usare la proprietà `<Description>` di MSBuild, anche se il valore di `summary` non viene migrato automaticamente a tale proprietà, poiché tale proprietà è mappata all'elemento [`description`](#other-common-root-level-options).</span><span class="sxs-lookup"><span data-stu-id="f4b32-162">For `summary`, you can use the MSBuild `<Description>` property, even though the value of `summary` is not migrated automatically to that property, since that property is mapped to the [`description`](#other-common-root-level-options) element.</span></span>
 
-## <a name="scripts"></a><span data-ttu-id="235a2-163">script</span><span class="sxs-lookup"><span data-stu-id="235a2-163">scripts</span></span>
+## <a name="scripts"></a><span data-ttu-id="f4b32-163">script</span><span class="sxs-lookup"><span data-stu-id="f4b32-163">scripts</span></span>
 
 ```json
 {
@@ -500,7 +500,7 @@ And it's really great!</Description>
 }
 ```
 
-<span data-ttu-id="235a2-164">Gli equivalenti in MSBuild sono i [target](/visualstudio/msbuild/msbuild-targets):</span><span class="sxs-lookup"><span data-stu-id="235a2-164">Their equivalent in MSBuild are [targets](/visualstudio/msbuild/msbuild-targets):</span></span>
+<span data-ttu-id="f4b32-164">Gli equivalenti in MSBuild sono i [target](/visualstudio/msbuild/msbuild-targets):</span><span class="sxs-lookup"><span data-stu-id="f4b32-164">Their equivalent in MSBuild are [targets](/visualstudio/msbuild/msbuild-targets):</span></span>
 
 ```xml
 <Target Name="MyPreCompileTarget" BeforeTargets="Build">
@@ -513,7 +513,7 @@ And it's really great!</Description>
 </Target>
 ```
 
-## <a name="runtimeoptions"></a><span data-ttu-id="235a2-165">runtimeOptions</span><span class="sxs-lookup"><span data-stu-id="235a2-165">runtimeOptions</span></span>
+## <a name="runtimeoptions"></a><span data-ttu-id="f4b32-165">runtimeOptions</span><span class="sxs-lookup"><span data-stu-id="f4b32-165">runtimeOptions</span></span>
 
 ```json
 {
@@ -529,7 +529,7 @@ And it's really great!</Description>
 }
 ```
 
-<span data-ttu-id="235a2-166">Tutte le impostazioni in questo gruppo, ad eccezione della proprietà "System.GC.Server", vengono inserite in un file denominato *runtimeconfig.template.json* nella cartella del progetto, con le opzioni elevate all'oggetto radice durante il processo di migrazione:</span><span class="sxs-lookup"><span data-stu-id="235a2-166">All settings in this group, except for the "System.GC.Server" property, are placed into a file called *runtimeconfig.template.json* in the project folder, with options lifted to the root object during the migration process:</span></span>
+<span data-ttu-id="f4b32-166">Tutte le impostazioni in questo gruppo, ad eccezione della proprietà "System.GC.Server", vengono inserite in un file denominato *runtimeconfig.template.json* nella cartella del progetto, con le opzioni elevate all'oggetto radice durante il processo di migrazione:</span><span class="sxs-lookup"><span data-stu-id="f4b32-166">All settings in this group, except for the "System.GC.Server" property, are placed into a file called *runtimeconfig.template.json* in the project folder, with options lifted to the root object during the migration process:</span></span>
 
 ```json
 {
@@ -542,7 +542,7 @@ And it's really great!</Description>
 }
 ```
 
-<span data-ttu-id="235a2-167">La proprietà "System.GC.Server" viene migrata nel file csproj:</span><span class="sxs-lookup"><span data-stu-id="235a2-167">The "System.GC.Server" property is migrated into the csproj file:</span></span>
+<span data-ttu-id="f4b32-167">La proprietà "System.GC.Server" viene migrata nel file csproj:</span><span class="sxs-lookup"><span data-stu-id="f4b32-167">The "System.GC.Server" property is migrated into the csproj file:</span></span>
 
 ```xml
 <PropertyGroup>
@@ -550,7 +550,7 @@ And it's really great!</Description>
 </PropertyGroup>
 ```
 
-<span data-ttu-id="235a2-168">È possibile tuttavia impostare tutti questi valori nel file csproj e anche nelle proprietà di MSBuild:</span><span class="sxs-lookup"><span data-stu-id="235a2-168">However, you can set all those values in the csproj as well as MSBuild properties:</span></span>
+<span data-ttu-id="f4b32-168">È possibile tuttavia impostare tutti questi valori nel file csproj e anche nelle proprietà di MSBuild:</span><span class="sxs-lookup"><span data-stu-id="f4b32-168">However, you can set all those values in the csproj as well as MSBuild properties:</span></span>
 
 ```xml
 <PropertyGroup>
@@ -562,7 +562,7 @@ And it's really great!</Description>
 </PropertyGroup>
 ```
 
-## <a name="shared"></a><span data-ttu-id="235a2-169">shared</span><span class="sxs-lookup"><span data-stu-id="235a2-169">shared</span></span>
+## <a name="shared"></a><span data-ttu-id="f4b32-169">shared</span><span class="sxs-lookup"><span data-stu-id="f4b32-169">shared</span></span>
 
 ```json
 {
@@ -570,13 +570,13 @@ And it's really great!</Description>
 }
 ```
 
-<span data-ttu-id="235a2-170">Non supportato in csproj.</span><span class="sxs-lookup"><span data-stu-id="235a2-170">Not supported in csproj.</span></span> <span data-ttu-id="235a2-171">È invece necessario creare e includere i file di contenuto nel file *.nuspec*.</span><span class="sxs-lookup"><span data-stu-id="235a2-171">You must instead create include content files in your *.nuspec* file.</span></span>
-<span data-ttu-id="235a2-172">Per altre informazioni, vedere [Including content files](/nuget/schema/nuspec#including-content-files) (Includere i file di contenuto).</span><span class="sxs-lookup"><span data-stu-id="235a2-172">For more information, see [Including content files](/nuget/schema/nuspec#including-content-files).</span></span>
+<span data-ttu-id="f4b32-170">Non supportato in csproj.</span><span class="sxs-lookup"><span data-stu-id="f4b32-170">Not supported in csproj.</span></span> <span data-ttu-id="f4b32-171">È invece necessario creare e includere i file di contenuto nel file *.nuspec*.</span><span class="sxs-lookup"><span data-stu-id="f4b32-171">You must instead create include content files in your *.nuspec* file.</span></span>
+<span data-ttu-id="f4b32-172">Per altre informazioni, vedere [Including content files](/nuget/schema/nuspec#including-content-files) (Includere i file di contenuto).</span><span class="sxs-lookup"><span data-stu-id="f4b32-172">For more information, see [Including content files](/nuget/schema/nuspec#including-content-files).</span></span>
 
-## <a name="files"></a><span data-ttu-id="235a2-173">file</span><span class="sxs-lookup"><span data-stu-id="235a2-173">files</span></span>
+## <a name="files"></a><span data-ttu-id="f4b32-173">file</span><span class="sxs-lookup"><span data-stu-id="f4b32-173">files</span></span>
 
-<span data-ttu-id="235a2-174">In *project.json*, la compilazione e la creazione di pacchetti possono essere estese per compilare e incorporare da cartelle diverse.</span><span class="sxs-lookup"><span data-stu-id="235a2-174">In *project.json*, build and pack could be extended to compile and embed from different folders.</span></span>
-<span data-ttu-id="235a2-175">In MSBuild, questa operazione viene eseguita tramite [items](/visualstudio/msbuild/common-msbuild-project-items).</span><span class="sxs-lookup"><span data-stu-id="235a2-175">In MSBuild, this is done using [items](/visualstudio/msbuild/common-msbuild-project-items).</span></span> <span data-ttu-id="235a2-176">L'esempio seguente illustra una conversione comune:</span><span class="sxs-lookup"><span data-stu-id="235a2-176">The following example is a common conversion:</span></span>
+<span data-ttu-id="f4b32-174">In *project.json*, la compilazione e la creazione di pacchetti possono essere estese per compilare e incorporare da cartelle diverse.</span><span class="sxs-lookup"><span data-stu-id="f4b32-174">In *project.json*, build and pack could be extended to compile and embed from different folders.</span></span>
+<span data-ttu-id="f4b32-175">In MSBuild, questa operazione viene eseguita tramite [items](/visualstudio/msbuild/common-msbuild-project-items).</span><span class="sxs-lookup"><span data-stu-id="f4b32-175">In MSBuild, this is done using [items](/visualstudio/msbuild/common-msbuild-project-items).</span></span> <span data-ttu-id="f4b32-176">L'esempio seguente illustra una conversione comune:</span><span class="sxs-lookup"><span data-stu-id="f4b32-176">The following example is a common conversion:</span></span>
 
 ```json
 {
@@ -622,21 +622,21 @@ And it's really great!</Description>
 ```
 
 > [!NOTE]
-> <span data-ttu-id="235a2-177">Molti dei [criteri GLOB](https://en.wikipedia.org/wiki/Glob_(programming)) predefiniti vengono aggiunti automaticamente da .NET Core SDK.</span><span class="sxs-lookup"><span data-stu-id="235a2-177">Many of the default [globbing patterns](https://en.wikipedia.org/wiki/Glob_(programming)) are added automatically by the .NET Core SDK.</span></span>
-> <span data-ttu-id="235a2-178">Per altre informazioni, vedere [Default Compile Item Values](https://aka.ms/sdkimplicititems) (Valori predefiniti degli elementi di compilazione).</span><span class="sxs-lookup"><span data-stu-id="235a2-178">For more information, see [Default Compile Item Values](https://aka.ms/sdkimplicititems).</span></span>
+> <span data-ttu-id="f4b32-177">Molti dei [criteri GLOB](https://en.wikipedia.org/wiki/Glob_(programming)) predefiniti vengono aggiunti automaticamente da .NET Core SDK.</span><span class="sxs-lookup"><span data-stu-id="f4b32-177">Many of the default [globbing patterns](https://en.wikipedia.org/wiki/Glob_(programming)) are added automatically by the .NET Core SDK.</span></span>
+> <span data-ttu-id="f4b32-178">Per altre informazioni, vedere [Default Compile Item Values](https://aka.ms/sdkimplicititems) (Valori predefiniti degli elementi di compilazione).</span><span class="sxs-lookup"><span data-stu-id="f4b32-178">For more information, see [Default Compile Item Values](https://aka.ms/sdkimplicititems).</span></span>
 
-<span data-ttu-id="235a2-179">Tutti gli elementi `ItemGroup` di MSBuild supportano `Include`, `Exclude` e `Remove`.</span><span class="sxs-lookup"><span data-stu-id="235a2-179">All MSBuild `ItemGroup` elements support `Include`, `Exclude`, and `Remove`.</span></span>
+<span data-ttu-id="f4b32-179">Tutti gli elementi `ItemGroup` di MSBuild supportano `Include`, `Exclude` e `Remove`.</span><span class="sxs-lookup"><span data-stu-id="f4b32-179">All MSBuild `ItemGroup` elements support `Include`, `Exclude`, and `Remove`.</span></span>
 
-<span data-ttu-id="235a2-180">Il layout del pacchetto all'interno di .nupkg può essere modificato con `PackagePath="path"`.</span><span class="sxs-lookup"><span data-stu-id="235a2-180">Package layout inside the .nupkg can be modified with `PackagePath="path"`.</span></span>
+<span data-ttu-id="f4b32-180">Il layout del pacchetto all'interno di .nupkg può essere modificato con `PackagePath="path"`.</span><span class="sxs-lookup"><span data-stu-id="f4b32-180">Package layout inside the .nupkg can be modified with `PackagePath="path"`.</span></span>
 
-<span data-ttu-id="235a2-181">Ad eccezione di `Content`, la maggior parte dei gruppi di elementi richiedono in modo esplicito l'aggiunta di `Pack="true"` nel pacchetto.</span><span class="sxs-lookup"><span data-stu-id="235a2-181">Except for `Content`, most item groups require explicitly adding `Pack="true"` to be included in the package.</span></span> <span data-ttu-id="235a2-182">`Content` verrà incluso nella cartella *content* in un pacchetto poiché la proprietà `<IncludeContentInPack>` di MSBuild è impostata su `true` per impostazione predefinita.</span><span class="sxs-lookup"><span data-stu-id="235a2-182">`Content` will be put in the *content* folder in a package since the MSBuild `<IncludeContentInPack>` property is set to `true` by default.</span></span>
-<span data-ttu-id="235a2-183">Per altre informazioni, vedere [Including content in a package](/nuget/schema/msbuild-targets#including-content-in-a-package) (Includere contenuto in un pacchetto).</span><span class="sxs-lookup"><span data-stu-id="235a2-183">For more information, see [Including content in a package](/nuget/schema/msbuild-targets#including-content-in-a-package).</span></span>
+<span data-ttu-id="f4b32-181">Ad eccezione di `Content`, la maggior parte dei gruppi di elementi richiedono in modo esplicito l'aggiunta di `Pack="true"` nel pacchetto.</span><span class="sxs-lookup"><span data-stu-id="f4b32-181">Except for `Content`, most item groups require explicitly adding `Pack="true"` to be included in the package.</span></span> <span data-ttu-id="f4b32-182">`Content` verrà incluso nella cartella *content* in un pacchetto poiché la proprietà `<IncludeContentInPack>` di MSBuild è impostata su `true` per impostazione predefinita.</span><span class="sxs-lookup"><span data-stu-id="f4b32-182">`Content` will be put in the *content* folder in a package since the MSBuild `<IncludeContentInPack>` property is set to `true` by default.</span></span>
+<span data-ttu-id="f4b32-183">Per altre informazioni, vedere [Including content in a package](/nuget/schema/msbuild-targets#including-content-in-a-package) (Includere contenuto in un pacchetto).</span><span class="sxs-lookup"><span data-stu-id="f4b32-183">For more information, see [Including content in a package](/nuget/schema/msbuild-targets#including-content-in-a-package).</span></span>
 
-<span data-ttu-id="235a2-184">`PackagePath="%(Identity)"` è un modo breve di impostare il percorso di un pacchetto sul percorso del file relativo al progetto.</span><span class="sxs-lookup"><span data-stu-id="235a2-184">`PackagePath="%(Identity)"` is a short way of setting package path to the project-relative file path.</span></span>
+<span data-ttu-id="f4b32-184">`PackagePath="%(Identity)"` è un modo breve di impostare il percorso di un pacchetto sul percorso del file relativo al progetto.</span><span class="sxs-lookup"><span data-stu-id="f4b32-184">`PackagePath="%(Identity)"` is a short way of setting package path to the project-relative file path.</span></span>
 
-## <a name="testrunner"></a><span data-ttu-id="235a2-185">testRunner</span><span class="sxs-lookup"><span data-stu-id="235a2-185">testRunner</span></span>
+## <a name="testrunner"></a><span data-ttu-id="f4b32-185">testRunner</span><span class="sxs-lookup"><span data-stu-id="f4b32-185">testRunner</span></span>
 
-### <a name="xunit"></a><span data-ttu-id="235a2-186">xUnit</span><span class="sxs-lookup"><span data-stu-id="235a2-186">xUnit</span></span>
+### <a name="xunit"></a><span data-ttu-id="f4b32-186">xUnit</span><span class="sxs-lookup"><span data-stu-id="f4b32-186">xUnit</span></span>
 
 ```json
 {
@@ -655,7 +655,7 @@ And it's really great!</Description>
 </ItemGroup>
 ```
 
-### <a name="mstest"></a><span data-ttu-id="235a2-187">MSTest</span><span class="sxs-lookup"><span data-stu-id="235a2-187">MSTest</span></span>
+### <a name="mstest"></a><span data-ttu-id="f4b32-187">MSTest</span><span class="sxs-lookup"><span data-stu-id="f4b32-187">MSTest</span></span>
 
 ```json
 {
@@ -674,6 +674,6 @@ And it's really great!</Description>
 </ItemGroup>
 ```
 
-## <a name="see-also"></a><span data-ttu-id="235a2-188">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="235a2-188">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f4b32-188">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="f4b32-188">See Also</span></span>
 
-* <span data-ttu-id="235a2-189">[High-level overview of changes in CLI](../tools/cli-msbuild-architecture.md) (Panoramica generale sulle modifiche nell'interfaccia della riga di comando)</span><span class="sxs-lookup"><span data-stu-id="235a2-189">[High-level overview of changes in CLI](../tools/cli-msbuild-architecture.md)</span></span>
+* <span data-ttu-id="f4b32-189">[High-level overview of changes in CLI](../tools/cli-msbuild-architecture.md) (Panoramica generale sulle modifiche nell'interfaccia della riga di comando)</span><span class="sxs-lookup"><span data-stu-id="f4b32-189">[High-level overview of changes in CLI](../tools/cli-msbuild-architecture.md)</span></span>
