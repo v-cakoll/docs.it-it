@@ -28,13 +28,12 @@ helpviewer_keywords:
 ms.assetid: 20a104ae-1649-4649-a005-531a5cf74c93
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 532928118df9784198eada6f6a2f1e7a1b808ee9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8c992a96f2fa8d55d1fe16c03922cc8dbb39451c
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394836"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47194009"
 ---
 # <a name="ipv6-addressing"></a>Indirizzamento IPv6
 La lunghezza degli indirizzi IPv6 (Internet Protocol version 6) è di 128 bit. Uno dei motivi di uno spazio indirizzi così grande è la possibilità di suddividere gli indirizzi disponibili in una gerarchia di domini di routing che riflettono la topologia di Internet. Un altro motivo è poter eseguire il mapping degli indirizzi delle schede (o interfacce) di rete che connettono i dispositivi alla rete. IPv6 è automaticamente in grado di risolvere gli indirizzi al livello inferiore, ovvero a livello di interfaccia di rete, e include anche funzionalità di configurazione automatica.  

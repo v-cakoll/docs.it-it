@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6567d451-ecec-496c-95a3-a415b99ba52a
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: d88ef1e736a16dddf156a1bc0e42f06d128d2c57
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a35bdeaf0fc6cf513363f3d990167f342a496c76
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394166"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47193460"
 ---
 # <a name="cache-policy-interactionmaximum-age-and-minimum-freshness"></a>Interazione tra criteri di cache: durata massima e validità minima
 Per garantire che all'applicazione client venga restituito il contenuto più aggiornato, l'interazione tra criteri di cache del client e requisiti di riconvalida del server determina sempre la creazione dei criteri di cache più conservativi. In tutti gli esempi di questo argomento vengono illustrati i criteri di cache per una risorsa memorizzata nella cache il 1° gennaio con scadenza il 4 gennaio.  

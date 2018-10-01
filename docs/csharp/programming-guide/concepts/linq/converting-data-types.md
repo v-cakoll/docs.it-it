@@ -3,11 +3,11 @@ title: Conversione di tipi di dati (C#)
 ms.date: 07/20/2015
 ms.assetid: 46e5682f-77a1-4302-8f93-a2b53c408808
 ms.openlocfilehash: 54ef612ad4e92058d9af4d96b7b3cde9732b2f9c
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46580577"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47089724"
 ---
 # <a name="converting-data-types-c"></a>Conversione di tipi di dati (C#)
 I metodi di conversione modificano il tipo degli oggetti di input.  

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: df6f1e1d-6f2a-45dd-8141-4a85c3dafe1d
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 166a076eae69b351248bc67570cdaf50b43ab95c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a163374810cbc06ca048c1bdd304de9519db140c
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396298"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47195706"
 ---
 # <a name="requesting-data"></a>Richiesta di dati
 Lo sviluppo di applicazioni in esecuzione nell'ambiente operativo distribuito dell'attuale rete Internet richiede un metodo efficace e semplice da usare per il recupero dei dati da risorse di tutti i tipi. I protocolli di collegamento consentono di sviluppare applicazioni che usano una singola interfaccia per recuperare i dati da più protocolli Internet.  

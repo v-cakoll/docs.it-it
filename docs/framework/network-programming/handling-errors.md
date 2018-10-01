@@ -33,13 +33,12 @@ helpviewer_keywords:
 ms.assetid: 657141cd-5cf5-4fdb-a4b2-4c040eba84b5
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 8020a92345ba85a99c0b46b2d4247d677defd054
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 776e0a728b56aa2acfb7a033c2a7244b2cc824f9
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397923"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47237189"
 ---
 # <a name="handling-errors"></a>Gestione degli errori
 Entrambe le classi <xref:System.Net.WebRequest> e <xref:System.Net.WebResponse> generano eccezioni di sistema (ad esempio <xref:System.ArgumentException>) ed eccezioni specifiche del Web (ovvero <xref:System.Net.WebException> generate dal metodo <xref:System.Net.WebRequest.GetResponse%2A>).  

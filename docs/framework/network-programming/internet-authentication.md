@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d342e87c-f672-4660-a513-41a2f2b80c4a
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: e44d752e5743d7d56bdce9b216b4cf5f5f920734
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e0f1ad373f8ec7687b44856a53e1e35b8b6baf8c
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396185"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47089062"
 ---
 # <a name="internet-authentication"></a>Autenticazione Internet
 Le classi <xref:System.Net> supportano svariati meccanismi di autenticazione client, inclusi i metodi di autenticazione Internet standard come l'autenticazione di base, digest, di negoziazione, NTLM e Kerberos, nonché metodi personalizzati che è possibile creare.  

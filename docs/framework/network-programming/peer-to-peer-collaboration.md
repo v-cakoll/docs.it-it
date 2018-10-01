@@ -4,13 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: b6216d88-bccb-4a59-9f1c-9f751708e811
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: a933c81105399a9411fcb749a06e47bf769cf532
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c81300d160e2ec175f61f286047fa92015345942
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397819"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47198150"
 ---
 # <a name="peer-to-peer-collaboration"></a>Collaborazione peer-to-peer
 Il termine rete peer-to-peer si riferisce all'utilizzo di computer relativamente potenti (PC) esistenti ai margini di Internet per attività di elaborazione più estese rispetto a quelle solamente basate su client. I PC moderni hanno processori molto veloci, tanta memoria e dischi rigidi di grandi dimensioni e nessuna di queste risorse viene usata appieno per l'esecuzione di attività di elaborazione comuni, come ad esempio posta elettronica ed esplorazione del Web. I PC moderni possono fungere facilmente sia da client che da server (peer) per molti tipi di applicazioni.  

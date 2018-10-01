@@ -4,13 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: a82e2bf1-62ab-4c2d-83f3-3217a6aead2e
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: ef3f4fd2f7333c5a78024edf7eb536e9254c0293
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 07e2d445196e5bec454ea8115ea48dd03ebe7d8b
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393842"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47192719"
 ---
 # <a name="pnrp-clouds"></a>Cloud PNRP
 Un "cloud" PNRP rappresenta un set di nodi che possono comunicare tra loro attraverso la rete. Il termine "cloud" è sinonimo di "rete di peer" e "grafico peer-to-peer".  

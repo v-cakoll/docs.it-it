@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: d2811830-3bcb-495c-b82d-cda9cf919aad
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: d11566182cc9d0b4f2634350868ec94a0685d996
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e6ab51da72a7cecac02a2bbd5664dee164239401
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397169"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47195467"
 ---
 # <a name="using-tcp-services"></a>Uso dei servizi TCP
 La classe <xref:System.Net.Sockets.TcpClient> richiede i dati da una risorsa Internet tramite TCP. I metodi e le proprietà di **TcpClient** ottengono un'astrazione dei dettagli per creare un <xref:System.Net.Sockets.Socket> per la richiesta e la ricezione di dati tramite TCP. Dato che la connessione al dispositivo remoto è rappresentata come flusso, i dati possono essere letti e scritti con le tecniche di gestione dei flussi di .NET Framework.  

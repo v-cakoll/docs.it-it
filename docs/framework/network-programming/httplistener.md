@@ -6,13 +6,12 @@ helpviewer_keywords:
 ms.assetid: 5b89d3fb-3c9a-49e2-af1f-c34c020c68ac
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 68c69de839ccbd51de9f0bfa74be018f877f7731
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 0d5b7fccdac9dba3fd44d12241dd60cbaefa1b7a
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085903"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47192940"
 ---
 # <a name="httplistener"></a>HttpListener
 La classe <xref:System.Net.HttpListener> fornisce un listener del protocollo HTTP controllato a livello di codice. Il listener è attivo per la durata dell'oggetto <xref:System.Net.HttpListener> e viene eseguito all'interno dell'applicazione.  

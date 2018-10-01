@@ -3,11 +3,11 @@ title: Recupero del testo dei paragrafi (C#)
 ms.date: 07/20/2015
 ms.assetid: 127d635e-e559-408f-90c8-2bb621ca50ac
 ms.openlocfilehash: 1d23addb4c4c1ea17343585392fbe08fef08568a
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46579212"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47208789"
 ---
 # <a name="retrieving-the-text-of-the-paragraphs-c"></a>Recupero del testo dei paragrafi (C#)
 Questo esempio si basa sull'esempio precedente, [Recupero dei paragrafi e dei relativi stili (C#)](../../../../csharp/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md). Questo nuovo esempio consente di recuperare il testo di ciascun paragrafo sotto forma di stringa.  

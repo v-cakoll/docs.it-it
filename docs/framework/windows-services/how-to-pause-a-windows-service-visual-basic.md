@@ -10,13 +10,12 @@ helpviewer_keywords:
 - pausing Windows Service applications
 ms.assetid: eddb9409-942b-46b6-a2ce-fbd4c65f2790
 author: ghogen
-manager: douge
-ms.openlocfilehash: 43a852f1b618582c5aa65636e0a529434f8fd6a1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c62de97439ecf90ebfcc14d9fea4c5ab52f6ef73
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33511514"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47230826"
 ---
 # <a name="how-to-pause-a-windows-service-visual-basic"></a>Procedura: sospendere un servizio Windows (Visual Basic)
 Questo esempio usa il componente <xref:System.ServiceProcess.ServiceController> per sospendere l'esecuzione del servizio IIS Admin nel computer locale.  

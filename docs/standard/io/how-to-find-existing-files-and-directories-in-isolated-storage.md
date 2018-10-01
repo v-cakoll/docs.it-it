@@ -20,11 +20,11 @@ ms.assetid: eb28458a-6161-4e7a-9ada-30ef93761b5c
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 09c112374458b70a464291e898e9a880c8679773
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46585984"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47398956"
 ---
 # <a name="how-to-find-existing-files-and-directories-in-isolated-storage"></a>Procedura: Trovare file e directory esistenti nello spazio di memorizzazione isolato
 Per cercare una directory nello spazio di memorizzazione isolato, usare il metodo <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A?displayProperty=nameWithType>. Questo metodo accetta una stringa che rappresenta un criterio di ricerca. Nel criterio di ricerca è possibile usare sia un solo carattere jolly (?) sia più caratteri jolly (*), ma questi devono apparire nella parte finale del nome. Ad esempio, `directory1/*ect*` è una stringa di ricerca valida, mentre `*ect*/directory2` non lo è.  

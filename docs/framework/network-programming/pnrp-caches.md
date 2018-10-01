@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 270068d9-1b6b-4eb9-9e14-e02326bb88df
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: dfa7da476bd56b34d3fcb7b7e0f3bcc33fee032b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f0cda9fe5ea6d8c79249603f4a51c18a615fe839
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47205291"
 ---
 # <a name="pnrp-caches"></a>Cache PNRP
 Le cache PNRP (Peer Name Resolution Protocol) sono raccolte locali di endpoint peer selezionati tramite algoritmo e mantenuti disponibili nel peer.  
