@@ -2,12 +2,12 @@
 title: Espressioni di calcolo (F#)
 description: 'Informazioni su come creare una sintassi efficiente per la scrittura di calcoli in F # che possa essere sequenziata e combinati tramite costrutti del flusso di controllo e associazioni.'
 ms.date: 07/27/2018
-ms.openlocfilehash: ce81af7966a436b3973de277fb2a78ec06f4c471
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 148d1a661fb7630782c6dc48507a66e7bdc1d56b
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45685738"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47459802"
 ---
 # <a name="computation-expressions"></a>Espressioni di calcolo
 
@@ -88,7 +88,7 @@ Il `do!` è la parola chiave per la chiamata di un'espressione di calcolo che re
 ```fsharp
 let doThingsAsync data url =
     async {
-        do! sumbitData data url
+        do! submitData data url
         ...
     }
 ```
