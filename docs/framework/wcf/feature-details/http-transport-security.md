@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: d3439262-c58e-4d30-9f2b-a160170582bb
 author: BrucePerlerMS
 ms.openlocfilehash: c21769eed2f3040bf336860b5a9cd6cd450d5525
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47232690"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48035201"
 ---
 # <a name="http-transport-security"></a>Protezione del trasporto HTTP
 Quando si usa HTTP come trasporto, la protezione viene fornita da un'implementazione SSL (Secure Sockets Layer). SSL viene ampiamente usato in Internet per autenticare un servizio presso un client e quindi garantire la riservatezza (crittografia) sul canale. Questo argomento viene illustrato come funziona SSL e come implementarlo in Windows Communication Foundation (WCF).  

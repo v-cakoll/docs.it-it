@@ -11,11 +11,11 @@ ms.assetid: 1263de11-3e0a-4f94-97c9-710b2ae53817
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 34173812f4f6fac940632e23e6641e458250a4ee
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47436128"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48028186"
 ---
 # <a name="ltwebrequestmodulesgt-element-network-settings"></a>&lt;webRequestModules&gt; (impostazioni di rete)
 Specifica i moduli da utilizzare per richiedere informazioni da host di rete.  

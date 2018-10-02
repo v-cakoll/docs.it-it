@@ -21,11 +21,11 @@ helpviewer_keywords:
 - numbers [Visual Basic], floating point
 ms.assetid: 224a2795-4cd5-496c-8f7a-a4f05a06d45d
 ms.openlocfilehash: 98433c0f1d1008664bb994f3b43fe48a753a432c
-ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
-ms.translationtype: HT
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47863104"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48028770"
 ---
 # <a name="single-data-type-visual-basic"></a>Tipo di dati Single (Visual Basic)
 Contiene con segno a 32 bit IEEE (4 byte) e con precisione singola numeri a virgola mobile con valore compreso tra - 3,4028235E + 38 e - 1,401298E-45 per valori negativi e tra 1,401298E-45 e 3,4028235E + 38 per i valori positivi. Numeri a precisione singola contengono un'approssimazione di un numero reale.  

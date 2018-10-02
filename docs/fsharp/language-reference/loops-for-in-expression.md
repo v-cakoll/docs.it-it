@@ -3,11 +3,11 @@ title: 'Cicli: espressioni for...in (F#)'
 description: "Vedere come il ciclo for di F #.. nell'espressione costrutto di ciclo viene utilizzato per scorrere le corrispondenze di un modello in una raccolta enumerabile."
 ms.date: 05/16/2016
 ms.openlocfilehash: c4fba1f1dea3993cafa2e37ad0f32d9fb2eed85a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47400712"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48027234"
 ---
 # <a name="loops-forin-expression"></a>Espressione Loops: for...in
 

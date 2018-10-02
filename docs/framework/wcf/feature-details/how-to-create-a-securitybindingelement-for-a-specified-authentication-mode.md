@@ -7,11 +7,11 @@ dev_langs:
 ms.assetid: a7c7747a-5b8c-463f-8493-7266dac75066
 author: BrucePerlerMS
 ms.openlocfilehash: 6204a2832bbdc0c6631903687fcd8a1c45b35d03
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47202841"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48036963"
 ---
 # <a name="how-to-create-a-securitybindingelement-for-a-specified-authentication-mode"></a>Procedura: creare un elemento SecurityBindingElement per una modalità di autenticazione specificata
 Windows Communication Foundation (WCF) sono disponibili varie modalità con cui i client e servizi l'autenticazione reciproca. È possibile creare elementi di associazione di sicurezza per tali modalità di autenticazione utilizzando metodi statici sulla classe <xref:System.ServiceModel.Channels.SecurityBindingElement> o tramite configurazione, come spiegato nell'esempio seguente.  

@@ -2,12 +2,12 @@
 title: Designer
 ms.date: 03/30/2017
 ms.assetid: bf28aae3-ddfb-4a86-b55d-1957f08c4e10
-ms.openlocfilehash: 9a579b7aae785e664103fecb6717247b8383576a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7fa97d5e9d9f83a134e91b0d50f923d72d36f12b
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33513497"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48031420"
 ---
 # <a name="designer"></a>Designer
 Contenuto della sezione sono inclusi esempi che illustrano come usare [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)].  
@@ -17,10 +17,7 @@ Contenuto della sezione sono inclusi esempi che illustrano come usare [!INCLUDE[
  Viene illustrato come creare una classe che deriva da <xref:System.Windows.Markup.XamlWriter> e rimuove lo stato di visualizzazione da un file XAML.  
   
  [Programmazione dell'albero degli elementi del modello](../../../../docs/framework/windows-workflow-foundation/samples/programming-model-item-tree.md)  
- Viene illustrato come passare il <xref:System.Activities.Presentation.Model.ModelItem> albero usando l'associazione dati dichiarativa dalla visualizzazione albero Windows Presentation Foundation (WPF).  
+ Viene illustrato come passare il <xref:System.Activities.Presentation.Model.ModelItem> albero tramite associazione dati dichiarativa dalla visualizzazione albero Windows Presentation Foundation (WPF).  
   
  [Estensibilità della griglia delle proprietà](../../../../docs/framework/windows-workflow-foundation/samples/property-grid-extensibliity.md)  
- Viene illustrato come personalizzare la griglia delle proprietà visualizzata quando un'attività specificata viene selezionata all'interno della finestra di progettazione.  
-  
- [Servizio casella degli strumenti](../../../../docs/framework/windows-workflow-foundation/samples/toolbox-service.md)  
- Viene illustrato come aggiornare le attività della casella degli strumenti di [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] in base al contesto del flusso di lavoro.
+ Viene illustrato come personalizzare la griglia delle proprietà visualizzata quando un'attività specificata viene selezionata all'interno della finestra di progettazione.

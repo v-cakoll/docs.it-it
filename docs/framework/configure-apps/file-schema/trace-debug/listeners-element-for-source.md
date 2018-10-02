@@ -10,11 +10,11 @@ ms.assetid: a2991f43-b4d3-4614-a8e7-da392de9697f
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 86b85779f4eff72e8ab910a5ccd32fd369270509
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47399008"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48027819"
 ---
 # <a name="ltlistenersgt-element-for-ltsourcegt"></a>&lt;i listener&gt; (elemento) per &lt;origine&gt;
 Aggiunge o rimuove nei listener di traccia le <xref:System.Diagnostics.TraceSource.Listeners%2A> insieme per un <xref:System.Diagnostics.TraceSource>. I listener indirizzano l'output di traccia a una destinazione appropriata, ad esempio un log, una finestra o un file di testo.  

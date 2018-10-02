@@ -19,11 +19,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 20c5f6bbb58b85f42ec00e356eccc5fb41ce813c
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47080562"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48033415"
 ---
 # <a name="iclrstrongnamegethashfromhandle-method"></a>Metodo ICLRStrongName::GetHashFromHandle
 Genera un hash per il contenuto del file che contiene l'handle di file specificato, usando l'algoritmo hash specificato.  

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], workflow security
 ms.assetid: d712a566-f435-44c0-b8c0-49298e84b114
-ms.openlocfilehash: ebce4daf433647179a0bce5751f66cdfab7a4d80
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 726e41e8cde028fb86004ff06e2ad0663a042287
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195719"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48030272"
 ---
 # <a name="workflow-security"></a>Sicurezza del flusso di lavoro
 Windows Workflow Foundation (WF) si integra con varie tecnologie diverse, ad esempio Microsoft SQL Server e Windows Communication Foundation (WCF). L'interazione con queste tecnologie può introdurre problemi di sicurezza nel flusso di lavoro, se eseguito in modo errato.
@@ -40,7 +40,7 @@ Windows Workflow Foundation (WF) si integra con varie tecnologie diverse, ad ese
 
 -   Endpoint Windows Communication Foundation (WCF) usati nei flussi di lavoro deve essere protetto. Per altre informazioni, vedere [Cenni preliminari sulla sicurezza](https://go.microsoft.com/fwlink/?LinkID=164975).
 
--   È possibile implementare l'autorizzazione a livello host usando <xref:System.ServiceModel.ServiceAuthorizationManager>. Visualizzare [procedura: creare un gestore autorizzazioni personalizzato per un servizio](https://go.microsoft.com/fwlink/?LinkId=192228) per informazioni dettagliate. Ciò è dimostrato anche nell'esempio seguente: [protezione di servizi flusso di lavoro](../../../docs/framework/windows-workflow-foundation/samples/securing-workflow-services.md).
+-   È possibile implementare l'autorizzazione a livello host usando <xref:System.ServiceModel.ServiceAuthorizationManager>. Visualizzare [procedura: creare un gestore autorizzazioni personalizzato per un servizio](https://go.microsoft.com/fwlink/?LinkId=192228) per informazioni dettagliate.
 
 -   L'oggetto ServiceSecurityContext per il messaggio in arrivo è disponibile anche dall'interno del flusso di lavoro tramite l'accesso a OperationContext.
 

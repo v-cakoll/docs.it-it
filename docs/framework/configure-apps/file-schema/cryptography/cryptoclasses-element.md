@@ -11,11 +11,11 @@ ms.assetid: 290d5f96-946d-4f02-babb-1d31ec0b8295
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 671302003c3a1f3a37e1773aeeae9cb09a457d13
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47215873"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48033363"
 ---
 # <a name="ltcryptoclassesgt-element"></a>&lt;cryptoClasses&gt; elemento
 Contiene un elenco delle classi di crittografia per le quali è stato eseguito il mapping a un nome descrittivo nell'elemento [\<nameEntry>](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md).  

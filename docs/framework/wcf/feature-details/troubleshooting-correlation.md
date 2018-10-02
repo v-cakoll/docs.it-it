@@ -2,12 +2,12 @@
 title: Risoluzione dei problemi relativi alla correlazione
 ms.date: 03/30/2017
 ms.assetid: 98003875-233d-4512-a688-4b2a1b0b5371
-ms.openlocfilehash: 56b17d0a865d1a6c1afaa2844878c82b755afdc7
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: fecfaf7374823bb19a4ad3d7f6cb2dbbdf139703
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397156"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48027923"
 ---
 # <a name="troubleshooting-correlation"></a>Risoluzione dei problemi relativi alla correlazione
 La correlazione viene utilizzata per correlare i messaggi del servizio flusso di lavoro l'uno all'altro e all'istanza del flusso di lavoro corretta, ma se non viene configurata correttamente, i messaggi non verranno ricevuti e le applicazioni non funzioneranno in modo appropriato. In questo argomento viene fornita una panoramica dei metodi che consentono di risolvere i problemi relativi alla correlazione e vengono inoltre descritti alcuni dei problemi comuni che possono verificarsi durante l'utilizzo della correlazione.
@@ -76,7 +76,7 @@ class CustomFactory : WorkflowServiceHostFactory
 host.WorkflowExtensions.Add(new ConsoleTrackingParticipant());
 ```
 
- Un partecipante del rilevamento, quale ConsoleTrackingParticipant, è utile per i servizi flusso di lavoro indipendenti che dispongono di una finestra della console. Per un servizio ospitato sul Web, è necessario usare un partecipante del rilevamento che registri le informazioni di rilevamento in un archivio durevole, ad esempio l'oggetto incorporato <xref:System.Activities.Tracking.EtwTrackingParticipant>, o un partecipante del rilevamento personalizzato che registra le informazioni in un file, ad esempio il `TextWriterTrackingParticpant` dal [ Rilevamento tramite un File di testo](../../../../docs/framework/windows-workflow-foundation/samples/tracking-using-a-text-file.md) esempio.
+ Un partecipante del rilevamento, quale ConsoleTrackingParticipant, è utile per i servizi flusso di lavoro indipendenti che dispongono di una finestra della console. Per un servizio ospitato sul Web, è necessario usare un partecipante del rilevamento che registri le informazioni di rilevamento in un archivio durevole, ad esempio l'elemento predefinito <xref:System.Activities.Tracking.EtwTrackingParticipant>, oppure un partecipante del rilevamento personalizzato che registra le informazioni in un file.
 
  Per altre informazioni sul rilevamento e configurazione del rilevamento per un servizio del flusso di lavoro ospitato sul Web, vedere [flusso di lavoro di rilevamento e traccia](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md), [configurazione del rilevamento per un flusso di lavoro](../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)e il [ Rilevamento &#91;esempi di WF&#93; ](../../../../docs/framework/windows-workflow-foundation/samples/tracking.md) campioni.
 
@@ -214,7 +214,7 @@ sm:body()/xg0:AddItemMessage/xg0:CartId
 sm:header()/tempuri:CartId
 ```
 
- Questo può essere confermato esaminando il corpo del messaggio.
+Questo può essere confermato esaminando il corpo del messaggio.
 
 ```xml
 <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
@@ -230,7 +230,7 @@ sm:header()/tempuri:CartId
 </s:Envelope>
 ```
 
- Nell'esempio riportato di seguito viene illustrata un'attività <xref:System.ServiceModel.Activities.Receive> configurata per un'operazione `AddItem` che utilizza il contratto di messaggio precedente per ricevere i dati. La query XPath è configurata correttamente.
+Nell'esempio riportato di seguito viene illustrata un'attività <xref:System.ServiceModel.Activities.Receive> configurata per un'operazione `AddItem` che utilizza il contratto di messaggio precedente per ricevere i dati. La query XPath è configurata correttamente.
 
 ```xaml
 <Receive CorrelatesWith="[CCHandle] OperationName="AddItem" ServiceContractName="p:IService">
@@ -247,5 +247,3 @@ sm:header()/tempuri:CartId
   </ReceiveMessageContent>
 </Receive>
 ```
-
-Per altre informazioni sulla correlazione basata sul contenuto, vedere la [calcolatrice correlata](../../../../docs/framework/windows-workflow-foundation/samples/correlated-calculator.md) esempio.

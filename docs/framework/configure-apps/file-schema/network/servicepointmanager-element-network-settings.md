@@ -11,11 +11,11 @@ ms.assetid: 6e5def51-3646-4ef6-a7bd-c69151321bec
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 2aaf590975d9fd3f5d78cb64d8d2b1c38c0e8dc7
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47202536"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48033506"
 ---
 # <a name="ltservicepointmanagergt-element-network-settings"></a>&lt;servicePointManager&gt; (impostazioni di rete)
 Consente di configurare le connessioni alle risorse di rete.  
