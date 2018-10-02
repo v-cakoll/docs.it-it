@@ -3,21 +3,21 @@ title: Chiave del Registro di sistema &#39; &lt;keyname&gt; &#39; non è stato t
 ms.date: 07/20/2015
 ms.assetid: ca4eb74f-8303-48fc-9ea8-d792fa4c810b
 ms.openlocfilehash: 874371dd2d4dc9f7d4b1374ae08359e4ea6afc87
-ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
-ms.translationtype: HT
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47861748"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48025545"
 ---
-# <a name="registry-key-39ltkeynamegt39-could-not-be-found"></a><span data-ttu-id="6be1a-102">Chiave del Registro di sistema &#39; &lt;keyname&gt; &#39; non è stato trovato</span><span class="sxs-lookup"><span data-stu-id="6be1a-102">Registry key &#39;&lt;keyname&gt;&#39; could not be found</span></span>
-<span data-ttu-id="6be1a-103">Impossibile trovare una chiave del Registro di sistema.</span><span class="sxs-lookup"><span data-stu-id="6be1a-103">A registry key cannot be found.</span></span>  
+# <a name="registry-key-39ltkeynamegt39-could-not-be-found"></a><span data-ttu-id="6a57f-102">Chiave del Registro di sistema &#39; &lt;keyname&gt; &#39; non è stato trovato</span><span class="sxs-lookup"><span data-stu-id="6a57f-102">Registry key &#39;&lt;keyname&gt;&#39; could not be found</span></span>
+<span data-ttu-id="6a57f-103">Impossibile trovare una chiave del Registro di sistema.</span><span class="sxs-lookup"><span data-stu-id="6a57f-103">A registry key cannot be found.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="6be1a-104">Per correggere l'errore</span><span class="sxs-lookup"><span data-stu-id="6be1a-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="6a57f-104">Per correggere l'errore</span><span class="sxs-lookup"><span data-stu-id="6a57f-104">To correct this error</span></span>  
   
-1.  <span data-ttu-id="6be1a-105">Controllare l'ortografia del nome della chiave.</span><span class="sxs-lookup"><span data-stu-id="6be1a-105">Check the spelling of the key name.</span></span>  
+1.  <span data-ttu-id="6a57f-105">Controllare l'ortografia del nome della chiave.</span><span class="sxs-lookup"><span data-stu-id="6a57f-105">Check the spelling of the key name.</span></span>  
   
-2.  <span data-ttu-id="6be1a-106">Assicurarsi di disporre di autorizzazioni di sicurezza sufficienti per accedere alla chiave.</span><span class="sxs-lookup"><span data-stu-id="6be1a-106">Make sure that you have sufficient security permissions to access the key.</span></span>  
+2.  <span data-ttu-id="6a57f-106">Assicurarsi di disporre di autorizzazioni di sicurezza sufficienti per accedere alla chiave.</span><span class="sxs-lookup"><span data-stu-id="6a57f-106">Make sure that you have sufficient security permissions to access the key.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6be1a-107">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="6be1a-107">See Also</span></span>  
- [<span data-ttu-id="6be1a-108">Riepilogo del Registro di sistema</span><span class="sxs-lookup"><span data-stu-id="6be1a-108">Registry Summary</span></span>](../../visual-basic/language-reference/keywords/registry-summary.md)  
- [<span data-ttu-id="6be1a-109">Modifiche all'accesso del Registro di sistema in Visual Basic .NET</span><span class="sxs-lookup"><span data-stu-id="6be1a-109">Registry Access Changes in Visual Basic .NET</span></span>](https://msdn.microsoft.com/library/b58f7687-f4db-448a-a865-07f62fd16fb2)
+## <a name="see-also"></a><span data-ttu-id="6a57f-107">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="6a57f-107">See Also</span></span>  
+ [<span data-ttu-id="6a57f-108">Riepilogo del Registro di sistema</span><span class="sxs-lookup"><span data-stu-id="6a57f-108">Registry Summary</span></span>](../../visual-basic/language-reference/keywords/registry-summary.md)  
+ [<span data-ttu-id="6a57f-109">Modifiche all'accesso del Registro di sistema in Visual Basic .NET</span><span class="sxs-lookup"><span data-stu-id="6a57f-109">Registry Access Changes in Visual Basic .NET</span></span>](https://msdn.microsoft.com/library/b58f7687-f4db-448a-a865-07f62fd16fb2)

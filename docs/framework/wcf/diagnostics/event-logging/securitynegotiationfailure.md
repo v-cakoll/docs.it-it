@@ -4,22 +4,22 @@ ms.date: 03/30/2017
 ms.assetid: 2060a678-f97b-4491-acd9-6c57c732afd7
 author: BrucePerlerMS
 ms.openlocfilehash: 1833838b71610c2a07aeaaa6ba43fcbbf3ff22df
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47401066"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48046328"
 ---
-# <a name="securitynegotiationfailure"></a><span data-ttu-id="fd869-102">SecurityNegotiationFailure</span><span class="sxs-lookup"><span data-stu-id="fd869-102">SecurityNegotiationFailure</span></span>
-<span data-ttu-id="fd869-103">ID: 172</span><span class="sxs-lookup"><span data-stu-id="fd869-103">Id: 172</span></span>  
+# <a name="securitynegotiationfailure"></a><span data-ttu-id="ad9d9-102">SecurityNegotiationFailure</span><span class="sxs-lookup"><span data-stu-id="ad9d9-102">SecurityNegotiationFailure</span></span>
+<span data-ttu-id="ad9d9-103">ID: 172</span><span class="sxs-lookup"><span data-stu-id="ad9d9-103">Id: 172</span></span>  
   
- <span data-ttu-id="fd869-104">Gravità: errore</span><span class="sxs-lookup"><span data-stu-id="fd869-104">Severity: Error</span></span>  
+ <span data-ttu-id="ad9d9-104">Gravità: errore</span><span class="sxs-lookup"><span data-stu-id="ad9d9-104">Severity: Error</span></span>  
   
- <span data-ttu-id="fd869-105">Categoria: SecurityAudit</span><span class="sxs-lookup"><span data-stu-id="fd869-105">Category: SecurityAudit</span></span>  
+ <span data-ttu-id="ad9d9-105">Categoria: SecurityAudit</span><span class="sxs-lookup"><span data-stu-id="ad9d9-105">Category: SecurityAudit</span></span>  
   
-## <a name="description"></a><span data-ttu-id="fd869-106">Descrizione</span><span class="sxs-lookup"><span data-stu-id="fd869-106">Description</span></span>  
- <span data-ttu-id="fd869-107">Questo evento indica che la negoziazione di sicurezza non è riuscita.</span><span class="sxs-lookup"><span data-stu-id="fd869-107">This event indicates that Security negotiation failed.</span></span> <span data-ttu-id="fd869-108">Vengono indicati il servizio, l'azione, l'identità client, l'ID attività e la negoziazione.</span><span class="sxs-lookup"><span data-stu-id="fd869-108">The event lists the service, action, client identity, activity ID, and negotiation.</span></span>  
+## <a name="description"></a><span data-ttu-id="ad9d9-106">Descrizione</span><span class="sxs-lookup"><span data-stu-id="ad9d9-106">Description</span></span>  
+ <span data-ttu-id="ad9d9-107">Questo evento indica che la negoziazione di sicurezza non è riuscita.</span><span class="sxs-lookup"><span data-stu-id="ad9d9-107">This event indicates that Security negotiation failed.</span></span> <span data-ttu-id="ad9d9-108">Vengono indicati il servizio, l'azione, l'identità client, l'ID attività e la negoziazione.</span><span class="sxs-lookup"><span data-stu-id="ad9d9-108">The event lists the service, action, client identity, activity ID, and negotiation.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fd869-109">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="fd869-109">See Also</span></span>  
- [<span data-ttu-id="fd869-110">Registrazione eventi</span><span class="sxs-lookup"><span data-stu-id="fd869-110">Event Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
- [<span data-ttu-id="fd869-111">Riferimenti generali sugli eventi</span><span class="sxs-lookup"><span data-stu-id="fd869-111">Events General Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+## <a name="see-also"></a><span data-ttu-id="ad9d9-109">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="ad9d9-109">See Also</span></span>  
+ [<span data-ttu-id="ad9d9-110">Registrazione eventi</span><span class="sxs-lookup"><span data-stu-id="ad9d9-110">Event Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
+ [<span data-ttu-id="ad9d9-111">Riferimenti generali sugli eventi</span><span class="sxs-lookup"><span data-stu-id="ad9d9-111">Events General Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

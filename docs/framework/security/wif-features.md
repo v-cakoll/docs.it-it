@@ -4,22 +4,22 @@ ms.date: 03/30/2017
 ms.assetid: 7e13cae9-7cd1-491f-aa75-0735320a7be6
 author: BrucePerlerMS
 ms.openlocfilehash: d2896d9afb3dbee0e0cb8348d229d399a2c3437a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47206333"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48032127"
 ---
-# <a name="wif-features"></a><span data-ttu-id="a5c7f-102">Funzionalità di WIF</span><span class="sxs-lookup"><span data-stu-id="a5c7f-102">WIF Features</span></span>
--   [<span data-ttu-id="a5c7f-103">Identity and Access Tool per Visual Studio 2012</span><span class="sxs-lookup"><span data-stu-id="a5c7f-103">Identity and Access Tool for Visual Studio 2012</span></span>](../../../docs/framework/security/identity-and-access-tool-for-vs.md)  
+# <a name="wif-features"></a><span data-ttu-id="789d5-102">Funzionalità di WIF</span><span class="sxs-lookup"><span data-stu-id="789d5-102">WIF Features</span></span>
+-   [<span data-ttu-id="789d5-103">Identity and Access Tool per Visual Studio 2012</span><span class="sxs-lookup"><span data-stu-id="789d5-103">Identity and Access Tool for Visual Studio 2012</span></span>](../../../docs/framework/security/identity-and-access-tool-for-vs.md)  
   
--   [<span data-ttu-id="a5c7f-104">Gestione delle sessioni WIF</span><span class="sxs-lookup"><span data-stu-id="a5c7f-104">WIF Session Management</span></span>](../../../docs/framework/security/wif-session-management.md)  
+-   [<span data-ttu-id="789d5-104">Gestione delle sessioni WIF</span><span class="sxs-lookup"><span data-stu-id="789d5-104">WIF Session Management</span></span>](../../../docs/framework/security/wif-session-management.md)  
   
--   [<span data-ttu-id="a5c7f-105">WIF e Web farm</span><span class="sxs-lookup"><span data-stu-id="a5c7f-105">WIF and Web Farms</span></span>](../../../docs/framework/security/wif-and-web-farms.md)  
+-   [<span data-ttu-id="789d5-105">WIF e Web farm</span><span class="sxs-lookup"><span data-stu-id="789d5-105">WIF and Web Farms</span></span>](../../../docs/framework/security/wif-and-web-farms.md)  
   
--   [<span data-ttu-id="a5c7f-106">Panoramica del modulo di autenticazione WSFederation</span><span class="sxs-lookup"><span data-stu-id="a5c7f-106">WSFederation Authentication Module Overview</span></span>](../../../docs/framework/security/wsfederation-authentication-module-overview.md)  
+-   [<span data-ttu-id="789d5-106">Panoramica del modulo di autenticazione WSFederation</span><span class="sxs-lookup"><span data-stu-id="789d5-106">WSFederation Authentication Module Overview</span></span>](../../../docs/framework/security/wsfederation-authentication-module-overview.md)  
   
--   [<span data-ttu-id="a5c7f-107">WSTrustChannelFactory e WSTrustChannel</span><span class="sxs-lookup"><span data-stu-id="a5c7f-107">WSTrustChannelFactory and WSTrustChannel</span></span>](../../../docs/framework/security/wstrustchannelfactory-and-wstrustchannel.md)  
+-   [<span data-ttu-id="789d5-107">WSTrustChannelFactory e WSTrustChannel</span><span class="sxs-lookup"><span data-stu-id="789d5-107">WSTrustChannelFactory and WSTrustChannel</span></span>](../../../docs/framework/security/wstrustchannelfactory-and-wstrustchannel.md)  
   
-## <a name="see-also"></a><span data-ttu-id="a5c7f-108">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a5c7f-108">See Also</span></span>  
- [<span data-ttu-id="a5c7f-109">Windows Identity Foundation</span><span class="sxs-lookup"><span data-stu-id="a5c7f-109">Windows Identity Foundation</span></span>](../../../docs/framework/security/index.md)
+## <a name="see-also"></a><span data-ttu-id="789d5-108">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="789d5-108">See Also</span></span>  
+ [<span data-ttu-id="789d5-109">Windows Identity Foundation</span><span class="sxs-lookup"><span data-stu-id="789d5-109">Windows Identity Foundation</span></span>](../../../docs/framework/security/index.md)
