@@ -2,12 +2,12 @@
 title: Correlazione duplex durevole
 ms.date: 03/30/2017
 ms.assetid: 8eb0e49a-6d3b-4f7e-a054-0d4febee2ffb
-ms.openlocfilehash: 82c052ff87eb8b125dfc64e1567dbd00d255894d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: f2f5fe557f1f8754758d0dd9b4042cacc62cc61f
+ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47205486"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47862896"
 ---
 # <a name="durable-duplex-correlation"></a>Correlazione duplex durevole
 La correlazione duplex durevole, nota anche come correlazione di callback, risulta utile se un servizio flusso di lavoro dispone del requisito adatto a inviare un callback al chiamante iniziale. A differenza del duplex WCF, il callback si può verificare in qualsiasi momento nel futuro e non è legato allo stesso canale o al canale di durata. L'unico requisito è costituito dal fatto che il chiamante dispone di un endpoint attivo in ascolto del messaggio di callback. In questo modo due servizi flusso di lavoro possono comunicare in una conversazione prolungata. In questo argomento vengono forniti cenni preliminari sulla correlazione duplex durevole.  
@@ -198,7 +198,4 @@ WF2 - Items sent
 WF1 - Items Received  
 ```  
   
- In questo esempio, entrambi i flussi di lavoro gestiscono in modo esplicito la correlazione mediante un <xref:System.ServiceModel.Activities.CallbackCorrelationInitializer>. Poiché in questi flussi di lavoro di esempio era presente una sola correlazione, sarebbe stata sufficiente la gestione di <xref:System.ServiceModel.Activities.CorrelationHandle> predefinita.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Duplex durevole &#91;esempi di WF&#93;](../../../../docs/framework/windows-workflow-foundation/samples/durable-duplex.md)
+ In questo esempio, entrambi i flussi di lavoro gestiscono in modo esplicito la correlazione mediante un <xref:System.ServiceModel.Activities.CallbackCorrelationInitializer>. Poiché in questi flussi di lavoro di esempio era presente una sola correlazione, sarebbe stata sufficiente la gestione di <xref:System.ServiceModel.Activities.CorrelationHandle> predefinita.
