@@ -8,11 +8,11 @@ helpviewer_keywords:
 - serialization, XML Schema Definition tool
 ms.assetid: 3c03f855-f931-47ff-bbc6-50c0367a16e4
 ms.openlocfilehash: 326a62ab8ccc04b93c9304758ff068f35cf3ecf4
-ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
-ms.translationtype: HT
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47862750"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48025279"
 ---
 # <a name="the-xml-schema-definition-tool-and-xml-serialization"></a>Strumento XML Schema Definition e serializzazione XML
 Lo strumento XML Schema Definition ([XML Schema Definition Tool (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)) viene installato insieme agli strumenti .NET Framework come parte di Windows® Software Development Kit (SDK). Lo strumento è progettato principalmente per due scopi:  
