@@ -2,106 +2,106 @@
 title: Supporto per nuovo funzionalità di Workflow Foundation 4.5 nella finestra di progettazione del flusso di lavoro ospitata nuovamente
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-ms.openlocfilehash: f0afc9f0a6254b0df1e0c6e724ec5b3cfd1f86d0
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: c6f6c6baedba0c932472a087d378ccce90b60db7
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43800635"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48266732"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>Supporto per nuovo funzionalità di Workflow Foundation 4.5 nella finestra di progettazione del flusso di lavoro ospitata nuovamente
-Windows Workflow Foundation (WF) in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] introdotte molte nuove funzionalità, inclusi numerosi miglioramenti all'esperienza di progettazione del flusso di lavoro. In questo argomento vengono descritte quali funzionalità sono supportate nella finestra di progettazione ospitata nuovamente e quali non sono attualmente supportate.  
-  
+Windows Workflow Foundation (WF) in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] introdotte molte nuove funzionalità, inclusi numerosi miglioramenti all'esperienza di progettazione del flusso di lavoro. In questo argomento vengono descritte quali funzionalità sono supportate nella finestra di progettazione ospitata nuovamente e quali non sono attualmente supportate.
+
 > [!NOTE]
->  Per un elenco di tutte le nuove funzionalità di Windows Workflow Foundation (WF) introdotte [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], inclusi quelli che non sono correlati alla riallocazione della finestra di progettazione, vedere [What ' s New in Windows Workflow Foundation in .NET 4.5](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md).  
-  
-## <a name="activities"></a>Attività  
- La libreria di attività predefinita contiene nuove attività e funzionalità per le attività esistenti. Tutte queste nuove attività sono supportate nella finestra di progettazione ospitata nuovamente. Per altre informazioni su queste nuove attività, vedere la [impegni](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_NewActivities) sezione [What ' s New in Windows Workflow Foundation in .NET 4.5](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md).  
-  
-## <a name="c-expressions"></a>Espressioni C#  
- In precedenza a [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], tutte le espressioni nei flussi di lavoro potevano essere scritte solo in Visual Basic. In [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] le espressioni di Visual Basic vengono usate solo per i progetti creati tramite questo linguaggio. Nei progetti Visual C# viene ora usato C# per le espressioni. Quando si creano flussi di lavoro in [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)], è ora disponibile un editor espressioni C# completamente funzionale con funzionalità quali l'evidenziazione della grammatica e Intellisense. I progetti di flussi di lavoro C# creati in versioni precedenti che utilizzavano espressioni di Visual Basic continueranno a funzionare.  
-  
+>  Per un elenco di tutte le nuove funzionalità di Windows Workflow Foundation (WF) introdotte [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], inclusi quelli che non sono correlati alla riallocazione della finestra di progettazione, vedere [What ' s New in Windows Workflow Foundation in .NET 4.5](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md).
+
+## <a name="activities"></a>Attività
+ La libreria di attività predefinita contiene nuove attività e funzionalità per le attività esistenti. Tutte queste nuove attività sono supportate nella finestra di progettazione ospitata nuovamente. Per altre informazioni su queste nuove attività, vedere la [impegni](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_NewActivities) sezione [What ' s New in Windows Workflow Foundation in .NET 4.5](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md).
+
+## <a name="c-expressions"></a>Espressioni C#
+ In precedenza a [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], tutte le espressioni nei flussi di lavoro potevano essere scritte solo in Visual Basic. In [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] le espressioni di Visual Basic vengono usate solo per i progetti creati tramite questo linguaggio. Nei progetti Visual C# viene ora usato C# per le espressioni. Durante la creazione di flussi di lavoro in Visual Studio 2012, un editor di espressioni c# completamente funzionale viene fornito funzionalità quali l'evidenziazione della grammatica e intellisense. I progetti di flussi di lavoro C# creati in versioni precedenti che utilizzavano espressioni di Visual Basic continueranno a funzionare.
+
 > [!WARNING]
->  Le espressioni C# non sono supportate nella finestra di progettazione ospitata nuovamente.  
-  
-## <a name="new-designer-capabilities"></a>Nuove funzionalità di progettazione  
-  
-### <a name="designer-search"></a>Ricerca nella finestra di progettazione  
- Il [ricerca veloce](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_QuickFind) e [Cerca nei file](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles) funzionalità introdotte con [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] non sono supportate nella finestra di progettazione ospitata nuovamente. La ricerca di `Toolbox` è supportata nella finestra di progettazione ospitata nuovamente. Per altre informazioni su queste funzionalità, vedere [ricerca progettazione](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_DesignerSearch).  
-  
+>  Le espressioni C# non sono supportate nella finestra di progettazione ospitata nuovamente.
+
+## <a name="new-designer-capabilities"></a>Nuove funzionalità di progettazione
+
+### <a name="designer-search"></a>Ricerca nella finestra di progettazione
+ Il [ricerca veloce](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_QuickFind) e [Cerca nei file](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles) funzionalità introdotte con [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] non sono supportate nella finestra di progettazione ospitata nuovamente. La ricerca di `Toolbox` è supportata nella finestra di progettazione ospitata nuovamente. Per altre informazioni su queste funzionalità, vedere [ricerca progettazione](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_DesignerSearch).
+
 > [!WARNING]
->  [Ricerca veloce](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_QuickFind) e [Cerca nei file](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles) non sono supportate nella finestra di progettazione ospitata nuovamente.  
-  
-### <a name="delete-context-menu-item-in-variable-and-argument-designer"></a>Eliminare l'elemento del menu di scelta rapida nella finestra di progettazione delle variabili e degli argomenti  
- In [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] le variabili e gli argomenti potevano essere eliminati solo nella finestra di progettazione mediante la tastiera. A partire da [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] le variabili e gli argomenti possono essere eliminati usando il menu di scelta rapida. Questa funzionalità è supportata nella finestra di progettazione ospitata nuovamente.  
-  
- Nella schermata seguente è illustrato il menu di scelta rapida della finestra di progettazione delle variabili e degli argomenti.  
-  
- ![Variabili e menu di scelta rapida della finestra di progettazione argomenti](../../../docs/framework/windows-workflow-foundation/media/designercontextmenu.png "DesignerContextMenu")  
-  
-### <a name="auto-surround-with-sequence"></a>Racchiudere automaticamente con l'attività Sequence  
- Poiché un flusso di lavoro o determinate attività contenitore (ad esempio <xref:System.Activities.Statements.NoPersistScope>) potevano contenere solo un'unica attività Body, l'aggiunta di una seconda attività richiedeva allo sviluppatore di eliminare la prima attività, di aggiungere un'attività <xref:System.Activities.Statements.Sequence> e, successivamente, di aggiungere entrambe le attività all'attività Sequence. A partire da [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], quando si aggiunge una seconda attività all'area di progettazione, verrà creata automaticamente un'attività `Sequence` per eseguire il wrapping di entrambe le attività. Questa funzionalità è supportata nella finestra di progettazione ospitata nuovamente.  
-  
- La schermata riportata di seguito mostra un'attività di `WriteLine` in `Body` di `NoPersistScope`.  
-  
- ![Automatico&#45;racchiudere il percorso di rilascio](../../../docs/framework/windows-workflow-foundation/media/autosurround1.png "AutoSurround1")  
-  
- La schermata riportata di seguito mostra l'attività automaticamente creata di `Sequence` in `Body` quando un secondo `WriteLine` viene rilasciato sotto il primo.  
-  
- ![Attività sequence creata automaticamente](../../../docs/framework/windows-workflow-foundation/media/autosurround2.png "AutoSurround2")  
-  
-### <a name="pan-mode"></a>Modalità dettaglio  
- Per spostarsi più facilmente in un flusso di lavoro di grandi dimensioni nella finestra di progettazione è possibile abilitare la modalità dettaglio, consentendo allo sviluppatore di selezionare e trascinare la parte visibile del flusso di lavoro, anziché dover usare le barre di scorrimento. Il pulsante per attivare la modalità dettaglio si trova nell'angolo inferiore destro della finestra di progettazione. Questa funzionalità è supportata nella finestra di progettazione ospitata nuovamente.  
-  
- Nella schermata seguente viene illustrato il pulsante della modalità dettaglio posizionato nell'angolo inferiore destro della finestra di progettazione del flusso di lavoro.  
-  
- ![Pulsante mano nella finestra di progettazione del flusso di lavoro](../../../docs/framework/windows-workflow-foundation/media/panbutton.png "PanButton")  
-  
- Per ottenere il dettaglio della finestra di progettazione del flusso di lavoro è anche possibile usare il pulsante centrale del mouse o la barra spaziatrice.  
-  
-### <a name="multi-select"></a>Selezione multipla  
- È possibile selezionare più attività alla volta trascinando un rettangolo attorno a esse (quando la modalità dettaglio non è abilitata) o tenendo premuto CTRL e facendo clic sulle attività desiderate una alla volta. Questa funzionalità è supportata nella finestra di progettazione ospitata nuovamente.  
-  
- Le selezioni di più attività possono anche essere trascinate e rilasciate all'interno della finestra di progettazione, nonché usate con il menu di scelta rapida.  
-  
-### <a name="outline-view-of-workflow-items"></a>Visualizzazione Struttura degli elementi del flusso di lavoro  
- Per consentire uno spostamento più semplice nei flussi di lavoro gerarchici, i componenti di un flusso di lavoro vengono visualizzati in una visualizzazione ad albero. Visualizzazione della struttura viene visualizzata nei **struttura documento** visualizzazione. Per aprire questa visualizzazione in Visual Studio, dal menu in alto, selezionare **View**, **Other Windows**, **struttura documento**, oppure premere Ctrl W, U. Facendo clic su un nodo nella visualizzazione Struttura verrà visualizzata l'attività corrispondente nella finestra di progettazione del flusso di lavoro e la visualizzazione Struttura verrà aggiornata in modo da mostrare le attività selezionate nella finestra di progettazione. Questa funzionalità è supportata nella finestra di progettazione ospitata nuovamente.  
-  
- Lo screenshot seguente del flusso di lavoro completata dal [esercitazione introduttiva su](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md) Mostra la visualizzazione struttura con un flusso di lavoro sequenza.  
-  
- ![Visualizzazione nella finestra di progettazione del flusso di lavoro struttura](../../../docs/framework/windows-workflow-foundation/media/outlineviewinworkflowdesigner.jpg "OutlineViewinWorkflowDesigner")  
-  
-### <a name="more-control-of-visibility-of-shell-bar-and-header-items"></a>Maggiore controllo della visibilità degli elementi della barra della shell e dell'intestazione  
- In una finestra di progettazione ospitata nuovamente, alcuni dei controlli dell'interfaccia utente standard possono non essere appropriati per un determinato flusso di lavoro e, pertanto, è possibile disattivarli. In [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] questa personalizzazione è supportata solo dalla barra della shell nella parte inferiore della finestra di progettazione. In [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] la visibilità degli elementi dell'intestazione della shell nella parte superiore della finestra di progettazione può essere regolata impostando la proprietà <xref:System.Activities.Presentation.View.DesignerView.WorkflowShellHeaderItemsVisibility%2A> con il valore <xref:System.Activities.Presentation.View.ShellHeaderItemsVisibility> appropriato.  
-  
-### <a name="auto-connect-and-auto-insert-in-flowchart-and-state-machine-workflows"></a>Connessione e inserimento automatici nei flussi di lavoro del diagramma di flusso e della macchina a stati  
- In [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] le connessioni tra i nodi di un flusso di lavoro del diagramma di flusso devono essere aggiunte manualmente. In [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] i nodi del diagramma di flusso e della macchina a stati dispongono di punti di connessione automatica che diventano visibili quando un'attività viene trascinata dalla casella degli strumenti nell'area di progettazione. Rilasciando un'attività in uno di questi punti, viene automaticamente aggiunta insieme alla connessione necessaria.  
-  
- Nella schermata seguente vengono illustrati i punti di associazione che diventano visibili quando un'attività viene trascinata dalla casella degli strumenti.  
-  
- ![Nodo iniziale del diagramma di flusso che illustra i punti di connessione automatica](../../../docs/framework/windows-workflow-foundation/media/autoconnect1.png "Autoconnect1")  
-  
- Le attività possono anche essere trascinate nelle connessioni tra i nodi e gli stati del diagramma di flusso per inserire automaticamente un nodo tra altri due. Nella schermata seguente viene illustrata la linea di connessione evidenziata in cui è possibile trascinare e rilasciare le attività dalla casella degli strumenti.  
-  
- ![Automatico&#45;inserire handle per l'eliminazione di attività](../../../docs/framework/windows-workflow-foundation/media/autoinsert.png "Autoinsert")  
-  
- Connessione e inserimento automatici sono supportati nella finestra di progettazione ospitata nuovamente.  
-  
-### <a name="designer-annotations"></a>Annotazioni della finestra di progettazione  
- Per semplificare lo sviluppo di flussi di lavoro di grandi dimensioni, la finestra di progettazione supporta ora l'aggiunta di annotazioni per consentire di tenere traccia del processo di progettazione. Le annotazioni possono essere aggiunte ad attività, stati, nodi del diagramma di flusso, variabili e argomenti. Nella schermata seguente è illustrato il menu di scelta rapida usato per aggiungere annotazioni alla finestra di progettazione.  
-  
- ![Menu di scelta rapida annotazione](../../../docs/framework/windows-workflow-foundation/media/annotationdialog.png "annotationdialog")  
-  
- Le annotazioni della finestra di progettazione non sono supportate nella finestra di progettazione ospitata nuovamente.  
-  
-### <a name="define-and-consume-activitydelegate-objects-in-the-designer"></a>Definire e usare gli oggetti ActivityDelegate nella finestra di progettazione  
- Le attività in [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] utilizzavano gli oggetti <xref:System.Activities.ActivityDelegate> per esporre i punti di esecuzione dove altre parti del flusso di lavoro potevano interagire con l'esecuzione di un flusso di lavoro, tuttavia l'uso dei punti di esecuzione richiedeva, generalmente, una grande quantità di codice. In questa versione gli sviluppatori possono definire e usare delegati di attività tramite la finestra di progettazione del flusso di lavoro. Per altre informazioni, vedere [procedura: definire e usare delegati di attività nella finestra di progettazione del flusso di lavoro](/visualstudio/workflow-designer/how-to-define-and-consume-activity-delegates-in-the-workflow-designer).  
-  
- I delegati di attività non sono supportati nella finestra di progettazione ospitata nuovamente.  
-  
-### <a name="build-time-validation"></a>Convalida in fase di compilazione  
- In [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] gli errori di convalida del flusso di lavoro non venivano contati come errori di compilazione durante l'esecuzione di questa operazione per un progetto di flusso di lavoro. In questo modo, la compilazione di un progetto di flusso di lavoro poteva essere completata correttamente anche in presenza di errori di convalida del flusso di lavoro. In [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] gli errori di convalida del flusso di lavoro comportano il mancato completamento della compilazione.  
-  
+>  [Ricerca veloce](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_QuickFind) e [Cerca nei file](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles) non sono supportate nella finestra di progettazione ospitata nuovamente.
+
+### <a name="delete-context-menu-item-in-variable-and-argument-designer"></a>Eliminare l'elemento del menu di scelta rapida nella finestra di progettazione delle variabili e degli argomenti
+ In [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] le variabili e gli argomenti potevano essere eliminati solo nella finestra di progettazione mediante la tastiera. A partire da [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] le variabili e gli argomenti possono essere eliminati usando il menu di scelta rapida. Questa funzionalità è supportata nella finestra di progettazione ospitata nuovamente.
+
+ Nella schermata seguente è illustrato il menu di scelta rapida della finestra di progettazione delle variabili e degli argomenti.
+
+ ![Variabili e menu di scelta rapida della finestra di progettazione argomenti](../../../docs/framework/windows-workflow-foundation/media/designercontextmenu.png "DesignerContextMenu")
+
+### <a name="auto-surround-with-sequence"></a>Racchiudere automaticamente con l'attività Sequence
+ Poiché un flusso di lavoro o determinate attività contenitore (ad esempio <xref:System.Activities.Statements.NoPersistScope>) potevano contenere solo un'unica attività Body, l'aggiunta di una seconda attività richiedeva allo sviluppatore di eliminare la prima attività, di aggiungere un'attività <xref:System.Activities.Statements.Sequence> e, successivamente, di aggiungere entrambe le attività all'attività Sequence. A partire da [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], quando si aggiunge una seconda attività all'area di progettazione, verrà creata automaticamente un'attività `Sequence` per eseguire il wrapping di entrambe le attività. Questa funzionalità è supportata nella finestra di progettazione ospitata nuovamente.
+
+ La schermata riportata di seguito mostra un'attività di `WriteLine` in `Body` di `NoPersistScope`.
+
+ ![Automatico&#45;racchiudere il percorso di rilascio](../../../docs/framework/windows-workflow-foundation/media/autosurround1.png "AutoSurround1")
+
+ La schermata riportata di seguito mostra l'attività automaticamente creata di `Sequence` in `Body` quando un secondo `WriteLine` viene rilasciato sotto il primo.
+
+ ![Attività sequence creata automaticamente](../../../docs/framework/windows-workflow-foundation/media/autosurround2.png "AutoSurround2")
+
+### <a name="pan-mode"></a>Modalità dettaglio
+ Per spostarsi più facilmente in un flusso di lavoro di grandi dimensioni nella finestra di progettazione è possibile abilitare la modalità dettaglio, consentendo allo sviluppatore di selezionare e trascinare la parte visibile del flusso di lavoro, anziché dover usare le barre di scorrimento. Il pulsante per attivare la modalità dettaglio si trova nell'angolo inferiore destro della finestra di progettazione. Questa funzionalità è supportata nella finestra di progettazione ospitata nuovamente.
+
+ Nella schermata seguente viene illustrato il pulsante della modalità dettaglio posizionato nell'angolo inferiore destro della finestra di progettazione del flusso di lavoro.
+
+ ![Pulsante mano nella finestra di progettazione del flusso di lavoro](../../../docs/framework/windows-workflow-foundation/media/panbutton.png "PanButton")
+
+ Per ottenere il dettaglio della finestra di progettazione del flusso di lavoro è anche possibile usare il pulsante centrale del mouse o la barra spaziatrice.
+
+### <a name="multi-select"></a>Selezione multipla
+ È possibile selezionare più attività alla volta trascinando un rettangolo attorno a esse (quando la modalità dettaglio non è abilitata) o tenendo premuto CTRL e facendo clic sulle attività desiderate una alla volta. Questa funzionalità è supportata nella finestra di progettazione ospitata nuovamente.
+
+ Le selezioni di più attività possono anche essere trascinate e rilasciate all'interno della finestra di progettazione, nonché usate con il menu di scelta rapida.
+
+### <a name="outline-view-of-workflow-items"></a>Visualizzazione Struttura degli elementi del flusso di lavoro
+ Per consentire uno spostamento più semplice nei flussi di lavoro gerarchici, i componenti di un flusso di lavoro vengono visualizzati in una visualizzazione ad albero. Visualizzazione della struttura viene visualizzata nei **struttura documento** visualizzazione. Per aprire questa visualizzazione in Visual Studio, dal menu in alto, selezionare **View**, **Other Windows**, **struttura documento**, oppure premere Ctrl W, U. Facendo clic su un nodo nella visualizzazione Struttura verrà visualizzata l'attività corrispondente nella finestra di progettazione del flusso di lavoro e la visualizzazione Struttura verrà aggiornata in modo da mostrare le attività selezionate nella finestra di progettazione. Questa funzionalità è supportata nella finestra di progettazione ospitata nuovamente.
+
+ Lo screenshot seguente del flusso di lavoro completata dal [esercitazione introduttiva su](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md) Mostra la visualizzazione struttura con un flusso di lavoro sequenza.
+
+ ![Visualizzazione nella finestra di progettazione del flusso di lavoro struttura](../../../docs/framework/windows-workflow-foundation/media/outlineviewinworkflowdesigner.jpg "OutlineViewinWorkflowDesigner")
+
+### <a name="more-control-of-visibility-of-shell-bar-and-header-items"></a>Maggiore controllo della visibilità degli elementi della barra della shell e dell'intestazione
+ In una finestra di progettazione ospitata nuovamente, alcuni dei controlli dell'interfaccia utente standard possono non essere appropriati per un determinato flusso di lavoro e, pertanto, è possibile disattivarli. In [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] questa personalizzazione è supportata solo dalla barra della shell nella parte inferiore della finestra di progettazione. In [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] la visibilità degli elementi dell'intestazione della shell nella parte superiore della finestra di progettazione può essere regolata impostando la proprietà <xref:System.Activities.Presentation.View.DesignerView.WorkflowShellHeaderItemsVisibility%2A> con il valore <xref:System.Activities.Presentation.View.ShellHeaderItemsVisibility> appropriato.
+
+### <a name="auto-connect-and-auto-insert-in-flowchart-and-state-machine-workflows"></a>Connessione e inserimento automatici nei flussi di lavoro del diagramma di flusso e della macchina a stati
+ In [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] le connessioni tra i nodi di un flusso di lavoro del diagramma di flusso devono essere aggiunte manualmente. In [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] i nodi del diagramma di flusso e della macchina a stati dispongono di punti di connessione automatica che diventano visibili quando un'attività viene trascinata dalla casella degli strumenti nell'area di progettazione. Rilasciando un'attività in uno di questi punti, viene automaticamente aggiunta insieme alla connessione necessaria.
+
+ Nella schermata seguente vengono illustrati i punti di associazione che diventano visibili quando un'attività viene trascinata dalla casella degli strumenti.
+
+ ![Nodo iniziale del diagramma di flusso che illustra i punti di connessione automatica](../../../docs/framework/windows-workflow-foundation/media/autoconnect1.png "Autoconnect1")
+
+ Le attività possono anche essere trascinate nelle connessioni tra i nodi e gli stati del diagramma di flusso per inserire automaticamente un nodo tra altri due. Nella schermata seguente viene illustrata la linea di connessione evidenziata in cui è possibile trascinare e rilasciare le attività dalla casella degli strumenti.
+
+ ![Automatico&#45;inserire handle per l'eliminazione di attività](../../../docs/framework/windows-workflow-foundation/media/autoinsert.png "Autoinsert")
+
+ Connessione e inserimento automatici sono supportati nella finestra di progettazione ospitata nuovamente.
+
+### <a name="designer-annotations"></a>Annotazioni della finestra di progettazione
+ Per semplificare lo sviluppo di flussi di lavoro di grandi dimensioni, la finestra di progettazione supporta ora l'aggiunta di annotazioni per consentire di tenere traccia del processo di progettazione. Le annotazioni possono essere aggiunte ad attività, stati, nodi del diagramma di flusso, variabili e argomenti. Nella schermata seguente è illustrato il menu di scelta rapida usato per aggiungere annotazioni alla finestra di progettazione.
+
+ ![Menu di scelta rapida annotazione](../../../docs/framework/windows-workflow-foundation/media/annotationdialog.png "annotationdialog")
+
+ Le annotazioni della finestra di progettazione non sono supportate nella finestra di progettazione ospitata nuovamente.
+
+### <a name="define-and-consume-activitydelegate-objects-in-the-designer"></a>Definire e usare gli oggetti ActivityDelegate nella finestra di progettazione
+ Le attività in [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] utilizzavano gli oggetti <xref:System.Activities.ActivityDelegate> per esporre i punti di esecuzione dove altre parti del flusso di lavoro potevano interagire con l'esecuzione di un flusso di lavoro, tuttavia l'uso dei punti di esecuzione richiedeva, generalmente, una grande quantità di codice. In questa versione gli sviluppatori possono definire e usare delegati di attività tramite la finestra di progettazione del flusso di lavoro. Per altre informazioni, vedere [procedura: definire e usare delegati di attività nella finestra di progettazione del flusso di lavoro](/visualstudio/workflow-designer/how-to-define-and-consume-activity-delegates-in-the-workflow-designer).
+
+ I delegati di attività non sono supportati nella finestra di progettazione ospitata nuovamente.
+
+### <a name="build-time-validation"></a>Convalida in fase di compilazione
+ In [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] gli errori di convalida del flusso di lavoro non venivano contati come errori di compilazione durante l'esecuzione di questa operazione per un progetto di flusso di lavoro. In questo modo, la compilazione di un progetto di flusso di lavoro poteva essere completata correttamente anche in presenza di errori di convalida del flusso di lavoro. In [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] gli errori di convalida del flusso di lavoro comportano il mancato completamento della compilazione.
+
 > [!WARNING]
 >  La convalida in fase di compilazione non è supportata nella finestra di progettazione ospitata nuovamente.  
   

@@ -2,82 +2,82 @@
 title: Servizi WCF e traccia eventi per Windows
 ms.date: 03/30/2017
 ms.assetid: eda4355d-0bd0-4dc9-80a2-d2c832152272
-ms.openlocfilehash: 11f476b966886d4a114f7870b4c029e200ee84e0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 26ce5fcb07b06a52f69ad8655adea563c177b055
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504772"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48266871"
 ---
 # <a name="wcf-services-and-event-tracing-for-windows"></a>Servizi WCF e traccia eventi per Windows
-Questo esempio viene illustrato come utilizzare la traccia analitica in Windows Communication Foundation (WCF) per generare eventi di Event Tracing for Windows (ETW). Le tracce analitiche sono eventi generati in punti chiave nello stack di WCF che consentono la risoluzione dei problemi dei servizi WCF nell'ambiente di produzione.  
-  
- Traccia analitica nei servizi WCF è la traccia che può essere attivata in un ambiente di produzione con impatto minimo sulle prestazioni. Queste tracce vengono inviate come eventi a una sessione ETW.  
-  
- In questo esempio include un servizio WCF di base in cui vengono generati gli eventi dal servizio nel registro eventi, che può essere visualizzato tramite Visualizzatore eventi. È anche possibile avviare una sessione ETW dedicata che attende gli eventi dal servizio WCF. Nell'esempio è incluso uno script che consente di creare una sessione ETW dedicata che archivia gli eventi in un file binario che può essere letto tramite Visualizzatore eventi.  
-  
-#### <a name="to-use-this-sample"></a>Per usare questo esempio  
-  
-1.  In [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] aprire il file della soluzione EtwAnalyticTraceSample.sln.  
-  
-2.  Per compilare la soluzione, premere CTRL+MAIUSC+B.  
-  
-3.  Per eseguire la soluzione, premere CTRL+F5.  
-  
-     Nel Web browser, fare clic su **Calculator**. L'URI del documento WSDL per il servizio viene visualizzato nel browser. Copiare l'URI.  
-  
-     Per impostazione predefinita, il servizio avvia l'ascolto delle richieste sulla porta 1378 (http://localhost:1378/Calculator.svc).  
-  
-4.  Eseguire il client di prova WCF (WcfTestClient.exe).  
-  
-     Il client di prova WCF (WcfTestClient.exe) si trova nel \< [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] directory di installazione > \Common7\IDE\ WcfTestClient.exe (impostazione predefinita [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] è c:\Programmi\Microsoft Visual Studio 10.0).  
-  
-5.  All'interno del client di test WCF, aggiungere il servizio selezionando **File**e quindi **Aggiungi servizio**.  
-  
-     Aggiungere l'indirizzo dell'endpoint nella casella di input. Il valore predefinito è http://localhost:1378/Calculator.svc.  
-  
-6.  Aprire l'applicazione Visualizzatore eventi.  
-  
-     Prima di richiamare il servizio, avviare Visualizzatore eventi e assicurarsi che il registro eventi sia in ascolto per rilevare eventi creati dal servizio WCF.  
-  
-7.  Dal **avviare** dal menu **strumenti di amministrazione**e quindi **Visualizzatore eventi**.  Abilitare la **analitico** e **Debug** i log.  
-  
-8.  Nella visualizzazione albero in Visualizzatore eventi passare a **Visualizzatore eventi**, **registri applicazioni e servizi**, **Microsoft**, **Windows**e quindi **Server applicazioni-applicazioni**. Fare doppio clic su **Server applicazioni-applicazioni**, selezionare **View**e quindi **Visualizza registri analitici e Debug**.  
-  
-     Verificare che il **Visualizza registri analitici e Debug** opzione è selezionata.  
-  
-9. Abilitare la **analitico** log.  
-  
-     Nella visualizzazione albero in Visualizzatore eventi passare a **Visualizzatore eventi**, **registri applicazioni e servizi**, **Microsoft**, **Windows**e quindi **Server applicazioni-applicazioni**. Fare doppio clic su **analitico** e selezionare **Attiva registro**.  
-  
-#### <a name="to-test-the-service"></a>Per eseguire il test del servizio  
-  
-1.  Tornare al client di prova WCF e fare doppio clic su `Divide` e mantenere i valori predefiniti, che specificano un denominatore pari a 0.  
-  
-     Se il valore del denominatore è 0, il servizio genererà un errore.  
-  
-2.  Osservare gli eventi creati dal servizio.  
-  
-     Tornare a Visualizzatore eventi e passare a **Visualizzatore eventi**, **registri applicazioni e servizi**, **Microsoft**, **Windows**e quindi **Server applicazioni-applicazioni**. Fare doppio clic su **analitico** e selezionare **aggiornare**.  
-  
-     Gli eventi di traccia analitici di WCF verranno visualizzati nel Visualizzatore eventi. Si noti che poiché un errore è stato generato dal servizio, nel Visualizzatori eventi viene visualizzato un evento traccia di errore.  
-  
-3.  Ripetere i passaggi 1 e 2 con valori di input validi. Il valore del parametro `N2` deve essere un numero diverso da 0.  
-  
-     Aggiornare il canale analitico per visualizzare gli eventi WCF e osservare come non includano alcun evento di errore.  
-  
- Nell'esempio vengono illustrati gli eventi di traccia analitici creati da un servizio WCF.  
-  
-#### <a name="to-cleanup-optional"></a>Per eseguire la pulizia (facoltativo)  
-  
-1.  Aprire Visualizzatore eventi.  
-  
-2.  Passare a **Visualizzatore eventi**, **registri applicazioni e servizi**, **Microsoft**, **Windows**e quindi  **Server applicazioni-applicazioni**. Fare doppio clic su **analitico** e selezionare **Disattiva registro**.  
-  
-3.  Passare a **Visualizzatore eventi**, **registri applicazioni e servizi**, **Microsoft**, **Windows**e quindi  **Server applicazioni-applicazioni**. Fare doppio clic su **analitico** e selezionare **Cancella Log**.  
-  
-4.  Scegliere il **cancellare** opzione per cancellare gli eventi.  
-  
+Questo esempio viene illustrato come utilizzare la traccia analitica in Windows Communication Foundation (WCF) per generare eventi di Event Tracing for Windows (ETW). Le tracce analitiche sono eventi generati in punti chiave nello stack di WCF che consentono la risoluzione dei problemi dei servizi WCF nell'ambiente di produzione.
+
+ Traccia analitica nei servizi WCF è la traccia che può essere attivata in un ambiente di produzione con impatto minimo sulle prestazioni. Queste tracce vengono inviate come eventi a una sessione ETW.
+
+ In questo esempio include un servizio WCF di base in cui vengono generati gli eventi dal servizio nel registro eventi, che può essere visualizzato tramite Visualizzatore eventi. È anche possibile avviare una sessione ETW dedicata che attende gli eventi dal servizio WCF. Nell'esempio è incluso uno script che consente di creare una sessione ETW dedicata che archivia gli eventi in un file binario che può essere letto tramite Visualizzatore eventi.
+
+#### <a name="to-use-this-sample"></a>Per usare questo esempio
+
+1.  Usa Visual Studio 2012, aprire il file della soluzione Etwanalytictracesample.
+
+2.  Per compilare la soluzione, premere CTRL+MAIUSC+B.
+
+3.  Per eseguire la soluzione, premere CTRL+F5.
+
+     Nel Web browser, fare clic su **Calculator**. L'URI del documento WSDL per il servizio viene visualizzato nel browser. Copiare l'URI.
+
+     Per impostazione predefinita, il servizio avvia l'ascolto delle richieste sulla porta 1378 (http://localhost:1378/Calculator.svc).
+
+4.  Eseguire il client di prova WCF (WcfTestClient.exe).
+
+     Il client di prova WCF (WcfTestClient.exe) si trova nel \<Visual Studio 2012 installare Dir > \Common7\IDE\ WcfTestClient.exe (directory di installazione di Visual Studio 2012 impostazione predefinita è c:\Programmi\Microsoft Visual Studio 10.0).
+
+5.  All'interno del client di test WCF, aggiungere il servizio selezionando **File**e quindi **Aggiungi servizio**.
+
+     Aggiungere l'indirizzo dell'endpoint nella casella di input. Il valore predefinito è http://localhost:1378/Calculator.svc.
+
+6.  Aprire l'applicazione Visualizzatore eventi.
+
+     Prima di richiamare il servizio, avviare Visualizzatore eventi e assicurarsi che il registro eventi sia in ascolto per rilevare eventi creati dal servizio WCF.
+
+7.  Dal **avviare** dal menu **strumenti di amministrazione**e quindi **Visualizzatore eventi**.  Abilitare la **analitico** e **Debug** i log.
+
+8.  Nella visualizzazione albero in Visualizzatore eventi passare a **Visualizzatore eventi**, **registri applicazioni e servizi**, **Microsoft**, **Windows**e quindi **Server applicazioni-applicazioni**. Fare doppio clic su **Server applicazioni-applicazioni**, selezionare **View**e quindi **Visualizza registri analitici e Debug**.
+
+     Verificare che il **Visualizza registri analitici e Debug** opzione è selezionata.
+
+9. Abilitare la **analitico** log.
+
+     Nella visualizzazione albero in Visualizzatore eventi passare a **Visualizzatore eventi**, **registri applicazioni e servizi**, **Microsoft**, **Windows**e quindi **Server applicazioni-applicazioni**. Fare doppio clic su **analitico** e selezionare **Attiva registro**.
+
+#### <a name="to-test-the-service"></a>Per eseguire il test del servizio
+
+1.  Tornare al client di prova WCF e fare doppio clic su `Divide` e mantenere i valori predefiniti, che specificano un denominatore pari a 0.
+
+     Se il valore del denominatore è 0, il servizio genererà un errore.
+
+2.  Osservare gli eventi creati dal servizio.
+
+     Tornare a Visualizzatore eventi e passare a **Visualizzatore eventi**, **registri applicazioni e servizi**, **Microsoft**, **Windows**e quindi **Server applicazioni-applicazioni**. Fare doppio clic su **analitico** e selezionare **aggiornare**.
+
+     Gli eventi di traccia analitici di WCF verranno visualizzati nel Visualizzatore eventi. Si noti che poiché un errore è stato generato dal servizio, nel Visualizzatori eventi viene visualizzato un evento traccia di errore.
+
+3.  Ripetere i passaggi 1 e 2 con valori di input validi. Il valore del parametro `N2` deve essere un numero diverso da 0.
+
+     Aggiornare il canale analitico per visualizzare gli eventi WCF e osservare come non includano alcun evento di errore.
+
+ Nell'esempio vengono illustrati gli eventi di traccia analitici creati da un servizio WCF.
+
+#### <a name="to-cleanup-optional"></a>Per eseguire la pulizia (facoltativo)
+
+1.  Aprire Visualizzatore eventi.
+
+2.  Passare a **Visualizzatore eventi**, **registri applicazioni e servizi**, **Microsoft**, **Windows**e quindi  **Server applicazioni-applicazioni**. Fare doppio clic su **analitico** e selezionare **Disattiva registro**.
+
+3.  Passare a **Visualizzatore eventi**, **registri applicazioni e servizi**, **Microsoft**, **Windows**e quindi  **Server applicazioni-applicazioni**. Fare doppio clic su **analitico** e selezionare **Cancella Log**.
+
+4.  Scegliere il **cancellare** opzione per cancellare gli eventi.
+
 > [!IMPORTANT]
 >  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
 >   

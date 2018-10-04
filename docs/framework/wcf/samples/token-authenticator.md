@@ -2,338 +2,338 @@
 title: Autenticatore token
 ms.date: 03/30/2017
 ms.assetid: 84382f2c-f6b1-4c32-82fa-aebc8f6064db
-ms.openlocfilehash: 5c103f5a5a4f95761a5c19e6a8d6159a7439d05a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 198994acb322ece374ba0e04bc4d15cb2754f995
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43523220"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48582645"
 ---
 # <a name="token-authenticator"></a>Autenticatore token
-In questo esempio viene illustrato come implementare un autenticatore di token personalizzato. Un autenticatore del token in Windows Communication Foundation (WCF) viene usato per la convalida del token utilizzato con il messaggio di verifica che è coerente e l'autenticazione dell'identità associata al token.  
-  
- Gli autenticatori di token personalizzati sono utili in molti casi, ad esempio:  
-  
--   Quando si vuole eseguire l'override del meccanismo di autenticazione predefinito associato a un token.  
-  
--   Quando si sta compilando un token personalizzato.  
-  
- Questo esempio illustra i seguenti elementi:  
-  
--   Come un client può eseguire l'autenticazione utilizzando un nome utente e una password.  
-  
--   Come il server può convalidare le credenziali client utilizzando un autenticatore di token personalizzato.  
-  
--   Modo in cui è strettamente il codice del servizio WCF con l'autenticatore del token personalizzato.  
-  
--   Come può essere autenticato il servizio dal client mediante il certificato X.509 del server.  
-  
- Questo esempio viene inoltre illustrato come l'identità del chiamante sia accessibile da WCF dopo il processo di autenticazione del token personalizzato.  
-  
- Il servizio espone un solo endpoint per comunicare con il servizio che viene definito mediante il file di configurazione App.config. L'endpoint è costituito da un indirizzo, un'associazione e un contratto. L'associazione viene configurata con una classe standard `wsHttpBinding`, con la modalità di sicurezza impostata sul messaggio, modalità predefinita di `wsHttpBinding`. In questo esempio viene impostata la classe `wsHttpBinding` standard per usare l'autenticazione del nome utente del client. Il servizio configura anche il certificato del servizio usando il comportamento `serviceCredentials`. Il comportamento `securityCredentials` consente di specificare un certificato del servizio. Un certificato del servizio viene usato da un client per autenticare il servizio e fornire protezione del messaggio. La configurazione seguente fa riferimento al certificato localhost installato durante l'installazione dell'esempio come descritto nelle istruzioni seguenti.  
-  
-```xml  
-<system.serviceModel>  
-    <services>  
-      <service   
-          name="Microsoft.ServiceModel.Samples.CalculatorService"  
-          behaviorConfiguration="CalculatorServiceBehavior">  
-        <host>  
-          <baseAddresses>  
-            <!-- configure base address provided by host -->  
-            <add baseAddress ="http://localhost:8000/servicemodelsamples/service" />  
-          </baseAddresses>  
-        </host>  
-        <!-- use base address provided by host -->  
-        <endpoint address=""  
-                  binding="wsHttpBinding"  
-                  bindingConfiguration="Binding1"   
-                  contract="Microsoft.ServiceModel.Samples.ICalculator" />  
-      </service>  
-    </services>  
-  
-    <bindings>  
-      <wsHttpBinding>  
-        <binding name="Binding1">  
-          <security mode="Message">  
-            <message clientCredentialType="UserName" />  
-          </security>  
-        </binding>  
-      </wsHttpBinding>  
-    </bindings>  
-  
-    <behaviors>  
-      <serviceBehaviors>  
-        <behavior name="CalculatorServiceBehavior">  
-          <serviceDebug includeExceptionDetailInFaults="False" />  
-          <!--   
-          The serviceCredentials behavior allows one to define a service certificate.  
-          A service certificate is used by a client to authenticate the service and provide message protection.  
-          This configuration references the "localhost" certificate installed during the setup instructions.  
-....        -->  
-          <serviceCredentials>  
-            <serviceCertificate findValue="localhost" storeLocation="LocalMachine" storeName="My" x509FindType="FindBySubjectName" />  
-          </serviceCredentials>  
-        </behavior>  
-      </serviceBehaviors>  
-    </behaviors>  
-  
-  </system.serviceModel>  
-```  
-  
- La configurazione dell'endpoint client è costituita da un nome di configurazione, un indirizzo assoluto per l'endpoint del servizio, l'associazione e il contratto. L'associazione client viene configurata con la `Mode` e la `clientCredentialType` appropriate.  
-  
-```xml  
-<system.serviceModel>  
-    <client>  
-      <endpoint name=""  
-                address="http://localhost:8000/servicemodelsamples/service"   
-                binding="wsHttpBinding"   
-                bindingConfiguration="Binding1"   
-                contract="Microsoft.ServiceModel.Samples.ICalculator">  
-      </endpoint>  
-    </client>  
-  
-    <bindings>  
-      <wsHttpBinding>  
-        <binding name="Binding1">  
-          <security mode="Message">  
-            <message clientCredentialType="UserName" />  
-          </security>  
-        </binding>  
-      </wsHttpBinding>  
-    </bindings>  
-  </system.serviceModel>  
-```  
-  
- L'implementazione del client imposta il nome utente e la password da usare.  
-  
-```  
-static void Main()  
-{  
-     ...  
-     client.ClientCredentials.UserNamePassword.UserName = username;  
-     client.ClientCredentials.UserNamePassword.Password = password;  
-     ...  
-}  
-```  
-  
-## <a name="custom-token-authenticator"></a>Autenticatore di token personalizzato  
- Utilizzare i passaggi seguenti per creare un autenticatore di token personalizzato:  
-  
-1.  Creare un autenticatore di token personalizzato  
-  
-     L'esempio implementa un autenticatore di token personalizzato che verifica che il nome utente abbia un formato di posta elettronica valido. Deriva la classe <xref:System.IdentityModel.Selectors.UserNameSecurityTokenAuthenticator>. Il metodo più importante di questa classe è <xref:System.IdentityModel.Selectors.UserNameSecurityTokenAuthenticator.ValidateUserNamePasswordCore%28System.String%2CSystem.String%29>. In questo metodo, l'autenticatore convalida il formato del nome utente e verifica anche che il nome host non provenga da un dominio sospetto. Se entrambe le condizioni sono soddisfatte, restituisce una raccolta di sola lettura delle istanze della classe <xref:System.IdentityModel.Policy.IAuthorizationPolicy> che viene quindi utilizzata per fornire attestazioni che rappresentano le informazioni archiviate nel token del nome utente.  
-  
-    ```  
-    protected override ReadOnlyCollection<IAuthorizationPolicy> ValidateUserNamePasswordCore(string userName, string password)  
-    {  
-        if (!ValidateUserNameFormat(userName))  
-            throw new SecurityTokenValidationException("Incorrect UserName format");  
-  
-        ClaimSet claimSet = new DefaultClaimSet(ClaimSet.System, new Claim(ClaimTypes.Name, userName, Rights.PossessProperty));  
-        List<IIdentity> identities = new List<IIdentity>(1);  
-        identities.Add(new GenericIdentity(userName));  
-        List<IAuthorizationPolicy> policies = new List<IAuthorizationPolicy>(1);  
-        policies.Add(new UnconditionalPolicy(ClaimSet.System, claimSet, DateTime.MaxValue.ToUniversalTime(), identities));  
-        return policies.AsReadOnly();  
-    }  
-    ```  
-  
-2.  Fornisce i criteri di autorizzazione restituiti dall'autenticatore di token personalizzato.  
-  
-     Questo esempio fornisce un'implementazione di <xref:System.IdentityModel.Policy.IAuthorizationPolicy> chiamata `UnconditionalPolicy` che restituisce set di attestazioni e identità passati a esso nel costruttore.  
-  
-    ```  
-    class UnconditionalPolicy : IAuthorizationPolicy  
-    {  
-        String id = Guid.NewGuid().ToString();  
-        ClaimSet issuer;  
-        ClaimSet issuance;  
-        DateTime expirationTime;  
-        IList<IIdentity> identities;  
-  
-        public UnconditionalPolicy(ClaimSet issuer, ClaimSet issuance, DateTime expirationTime, IList<IIdentity> identities)  
-        {  
-            if (issuer == null)  
-                throw new ArgumentNullException("issuer");  
-            if (issuance == null)  
-                throw new ArgumentNullException("issuance");  
-  
-            this.issuer = issuer;  
-            this.issuance = issuance;  
-            this.identities = identities;  
-            this.expirationTime = expirationTime;  
-        }  
-  
-        public string Id  
-        {  
-            get { return this.id; }  
-        }  
-  
-        public ClaimSet Issuer  
-        {  
-            get { return this.issuer; }  
-        }  
-  
-        public DateTime ExpirationTime  
-        {  
-            get { return this.expirationTime; }  
-        }  
-  
-        public bool Evaluate(EvaluationContext evaluationContext, ref object state)  
-        {  
-            evaluationContext.AddToTarget(this, this.issuance);  
-  
-            if (this.identities != null)  
-            {  
-                object value;  
-                IList<IIdentity> contextIdentities;  
-                if (!evaluationContext.Properties.TryGetValue("Identities", out value))  
-                {  
-                    contextIdentities = new List<IIdentity>(this.identities.Count);  
-                    evaluationContext.Properties.Add("Identities", contextIdentities);  
-                }  
-                else  
-                {  
-                    contextIdentities = value as IList<IIdentity>;  
-                }  
-                foreach (IIdentity identity in this.identities)  
-                {  
-                    contextIdentities.Add(identity);  
-                }  
-            }  
-  
-            evaluationContext.RecordExpirationTime(this.expirationTime);  
-            return true;  
-        }  
-    }  
-    ```  
-  
-3.  Scrivere un gestore di token di sicurezza personalizzato.  
-  
-     La classe <xref:System.IdentityModel.Selectors.SecurityTokenManager> viene utilizzata per creare una classe <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> per oggetti specifici della classe <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> che vengono passati nel metodo `CreateSecurityTokenAuthenticator`. Viene inoltre utilizzato il gestore del token di sicurezza per creare provider di token e serializzatori di token, che però non sono trattati in questo esempio. In questo esempio, il gestore del token di sicurezza personalizzato eredita dalla classe <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager> ed esegue l'override del metodo `CreateSecurityTokenAuthenticator` per restituire un autenticatore di token nome utente personalizzato quando i requisiti del token passati indicano che l'autenticatore nome utente è necessario.  
-  
-    ```  
-    public class MySecurityTokenManager : ServiceCredentialsSecurityTokenManager  
-    {  
-        MyUserNameCredential myUserNameCredential;  
-  
-        public MySecurityTokenManager(MyUserNameCredential myUserNameCredential)  
-            : base(myUserNameCredential)  
-        {  
-            this.myUserNameCredential = myUserNameCredential;  
-        }  
-  
-        public override SecurityTokenAuthenticator CreateSecurityTokenAuthenticator(SecurityTokenRequirement tokenRequirement, out SecurityTokenResolver outOfBandTokenResolver)  
-        {  
-            if (tokenRequirement.TokenType ==  SecurityTokenTypes.UserName)  
-            {  
-                outOfBandTokenResolver = null;  
-                return new MyTokenAuthenticator();  
-            }  
-            else  
-            {  
-                return base.CreateSecurityTokenAuthenticator(tokenRequirement, out outOfBandTokenResolver);  
-            }  
-        }  
-    }  
-    ```  
-  
-4.  Scrivere una credenziale del servizio personalizzata  
-  
-     La classe delle credenziali del servizio viene utilizzata per rappresentare le credenziali configurate per il servizio e crea un gestore del token di sicurezza utilizzato per ottenere gli autenticatori del token, i provider di token e i serializzatori di token.  
-  
-    ```  
-    public class MyUserNameCredential : ServiceCredentials  
-    {  
-  
-        public MyUserNameCredential()  
-            : base()  
-        {  
-        }  
-  
-        protected override ServiceCredentials CloneCore()  
-        {  
-            return new MyUserNameCredential();  
-        }  
-  
-        public override SecurityTokenManager CreateSecurityTokenManager()  
-        {  
-            return new MySecurityTokenManager(this);  
-        }  
-  
-    }  
-    ```  
-  
-5.  Configurare il servizio per l'utilizzo della credenziale del servizio personalizzata.  
-  
-     Affinché il servizio utilizzi la credenziale del servizio personalizzata, si elimina la classe della credenziale di servizio predefinita dopo avere acquisito il certificato del servizio già preconfigurato nella credenziale del servizio predefinita, si configura la nuova istanza della credenziale del servizio per utilizzare i certificati del servizio preconfigurati e si aggiunge questa nuova istanza della credenziale del servizio nuova ai comportamenti del servizio.  
-  
-    ```  
-    ServiceCredentials sc = serviceHost.Credentials;  
-    X509Certificate2 cert = sc.ServiceCertificate.Certificate;  
-    MyUserNameCredential serviceCredential = new MyUserNameCredential();  
-    serviceCredential.ServiceCertificate.Certificate = cert;  
-    serviceHost.Description.Behaviors.Remove((typeof(ServiceCredentials)));  
-    serviceHost.Description.Behaviors.Add(serviceCredential);  
-    ```  
-  
- Per visualizzare le informazioni sul chiamante è possibile utilizzare <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> come mostra il codice seguente. La classe <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> contiene informazioni sulle attestazioni circa il chiamante corrente.  
-  
-```  
-static void DisplayIdentityInformation()  
-{  
-    Console.WriteLine("\t\tSecurity context identity  :  {0}",   
-            ServiceSecurityContext.Current.PrimaryIdentity.Name);  
-     return;  
-}  
-```  
-  
- Quando si esegue l'esempio, le richieste e le risposte dell'operazione vengono visualizzate nella finestra della console client. Premere INVIO nella finestra del client per arrestare il client.  
-  
-## <a name="setup-batch-file"></a>File batch di installazione  
- Il file batch Setup.bat incluso con questo esempio consente di configurare il server con i certificati attinenti per eseguire un'applicazione indipendente che richiede la sicurezza server basata su certificato. Questo file batch deve essere modificato per funzionare tra computer diversi o nel caso in cui non sia ospitato.  
-  
- Di seguito viene fornita una breve panoramica delle varie sezioni dei file batch in modo che possano essere modificate per l'esecuzione nella configurazione appropriata.  
-  
--   Creazione del certificato server.  
-  
-     Le righe seguenti del file batch Setup.bat creano il certificato server da usare. La variabile `%SERVER_NAME%` specifica il nome del server. Modificare questa variabile per specificare nome del server. Il valore predefinito in questo file batch è localhost.  
-  
-    ```  
-    echo ************  
-    echo Server cert setup starting  
-    echo %SERVER_NAME%  
-    echo ************  
-    echo making server cert  
-    echo ************  
-    makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe  
-    ```  
-  
--   Installazione del certificato server nell'archivio certificati attendibili del client  
-  
-     Le righe seguenti nel file batch Setup.bat copiano il certificato server nell'archivio di persone attendibile del client. Questo passaggio è necessario perché certificati generati da Makecert.exe non sono considerati implicitamente attendibili dal sistema client. Se è già disponibile un certificato con radice in un certificato radice client attendibile, ad esempio un certificato rilasciato da Microsoft, il passaggio del popolamento dell'archivio certificati client con il certificato server non è necessario.  
-  
-    ```  
-    certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  
-    ```  
-  
+In questo esempio viene illustrato come implementare un autenticatore di token personalizzato. Un autenticatore del token in Windows Communication Foundation (WCF) viene usato per la convalida del token utilizzato con il messaggio di verifica che è coerente e l'autenticazione dell'identità associata al token.
+
+ Gli autenticatori di token personalizzati sono utili in molti casi, ad esempio:
+
+-   Quando si vuole eseguire l'override del meccanismo di autenticazione predefinito associato a un token.
+
+-   Quando si sta compilando un token personalizzato.
+
+ Questo esempio illustra i seguenti elementi:
+
+-   Come un client può eseguire l'autenticazione utilizzando un nome utente e una password.
+
+-   Come il server può convalidare le credenziali client utilizzando un autenticatore di token personalizzato.
+
+-   Modo in cui è strettamente il codice del servizio WCF con l'autenticatore del token personalizzato.
+
+-   Come può essere autenticato il servizio dal client mediante il certificato X.509 del server.
+
+ Questo esempio viene inoltre illustrato come l'identità del chiamante sia accessibile da WCF dopo il processo di autenticazione del token personalizzato.
+
+ Il servizio espone un solo endpoint per comunicare con il servizio che viene definito mediante il file di configurazione App.config. L'endpoint è costituito da un indirizzo, un'associazione e un contratto. L'associazione viene configurata con una classe standard `wsHttpBinding`, con la modalità di sicurezza impostata sul messaggio, modalità predefinita di `wsHttpBinding`. In questo esempio viene impostata la classe `wsHttpBinding` standard per usare l'autenticazione del nome utente del client. Il servizio configura anche il certificato del servizio usando il comportamento `serviceCredentials`. Il comportamento `securityCredentials` consente di specificare un certificato del servizio. Un certificato del servizio viene usato da un client per autenticare il servizio e fornire protezione del messaggio. La configurazione seguente fa riferimento al certificato localhost installato durante l'installazione dell'esempio come descritto nelle istruzioni seguenti.
+
+```xml
+<system.serviceModel>
+    <services>
+      <service
+          name="Microsoft.ServiceModel.Samples.CalculatorService"
+          behaviorConfiguration="CalculatorServiceBehavior">
+        <host>
+          <baseAddresses>
+            <!-- configure base address provided by host -->
+            <add baseAddress ="http://localhost:8000/servicemodelsamples/service" />
+          </baseAddresses>
+        </host>
+        <!-- use base address provided by host -->
+        <endpoint address=""
+                  binding="wsHttpBinding"
+                  bindingConfiguration="Binding1"
+                  contract="Microsoft.ServiceModel.Samples.ICalculator" />
+      </service>
+    </services>
+
+    <bindings>
+      <wsHttpBinding>
+        <binding name="Binding1">
+          <security mode="Message">
+            <message clientCredentialType="UserName" />
+          </security>
+        </binding>
+      </wsHttpBinding>
+    </bindings>
+
+    <behaviors>
+      <serviceBehaviors>
+        <behavior name="CalculatorServiceBehavior">
+          <serviceDebug includeExceptionDetailInFaults="False" />
+          <!--
+          The serviceCredentials behavior allows one to define a service certificate.
+          A service certificate is used by a client to authenticate the service and provide message protection.
+          This configuration references the "localhost" certificate installed during the setup instructions.
+....        -->
+          <serviceCredentials>
+            <serviceCertificate findValue="localhost" storeLocation="LocalMachine" storeName="My" x509FindType="FindBySubjectName" />
+          </serviceCredentials>
+        </behavior>
+      </serviceBehaviors>
+    </behaviors>
+
+  </system.serviceModel>
+```
+
+ La configurazione dell'endpoint client è costituita da un nome di configurazione, un indirizzo assoluto per l'endpoint del servizio, l'associazione e il contratto. L'associazione client viene configurata con la `Mode` e la `clientCredentialType` appropriate.
+
+```xml
+<system.serviceModel>
+    <client>
+      <endpoint name=""
+                address="http://localhost:8000/servicemodelsamples/service"
+                binding="wsHttpBinding"
+                bindingConfiguration="Binding1"
+                contract="Microsoft.ServiceModel.Samples.ICalculator">
+      </endpoint>
+    </client>
+
+    <bindings>
+      <wsHttpBinding>
+        <binding name="Binding1">
+          <security mode="Message">
+            <message clientCredentialType="UserName" />
+          </security>
+        </binding>
+      </wsHttpBinding>
+    </bindings>
+  </system.serviceModel>
+```
+
+ L'implementazione del client imposta il nome utente e la password da usare.
+
+```
+static void Main()
+{
+     ...
+     client.ClientCredentials.UserNamePassword.UserName = username;
+     client.ClientCredentials.UserNamePassword.Password = password;
+     ...
+}
+```
+
+## <a name="custom-token-authenticator"></a>Autenticatore di token personalizzato
+ Utilizzare i passaggi seguenti per creare un autenticatore di token personalizzato:
+
+1.  Creare un autenticatore di token personalizzato
+
+     L'esempio implementa un autenticatore di token personalizzato che verifica che il nome utente abbia un formato di posta elettronica valido. Deriva la classe <xref:System.IdentityModel.Selectors.UserNameSecurityTokenAuthenticator>. Il metodo più importante di questa classe è <xref:System.IdentityModel.Selectors.UserNameSecurityTokenAuthenticator.ValidateUserNamePasswordCore%28System.String%2CSystem.String%29>. In questo metodo, l'autenticatore convalida il formato del nome utente e verifica anche che il nome host non provenga da un dominio sospetto. Se entrambe le condizioni sono soddisfatte, restituisce una raccolta di sola lettura delle istanze della classe <xref:System.IdentityModel.Policy.IAuthorizationPolicy> che viene quindi utilizzata per fornire attestazioni che rappresentano le informazioni archiviate nel token del nome utente.
+
+    ```
+    protected override ReadOnlyCollection<IAuthorizationPolicy> ValidateUserNamePasswordCore(string userName, string password)
+    {
+        if (!ValidateUserNameFormat(userName))
+            throw new SecurityTokenValidationException("Incorrect UserName format");
+
+        ClaimSet claimSet = new DefaultClaimSet(ClaimSet.System, new Claim(ClaimTypes.Name, userName, Rights.PossessProperty));
+        List<IIdentity> identities = new List<IIdentity>(1);
+        identities.Add(new GenericIdentity(userName));
+        List<IAuthorizationPolicy> policies = new List<IAuthorizationPolicy>(1);
+        policies.Add(new UnconditionalPolicy(ClaimSet.System, claimSet, DateTime.MaxValue.ToUniversalTime(), identities));
+        return policies.AsReadOnly();
+    }
+    ```
+
+2.  Fornisce i criteri di autorizzazione restituiti dall'autenticatore di token personalizzato.
+
+     Questo esempio fornisce un'implementazione di <xref:System.IdentityModel.Policy.IAuthorizationPolicy> chiamata `UnconditionalPolicy` che restituisce set di attestazioni e identità passati a esso nel costruttore.
+
+    ```
+    class UnconditionalPolicy : IAuthorizationPolicy
+    {
+        String id = Guid.NewGuid().ToString();
+        ClaimSet issuer;
+        ClaimSet issuance;
+        DateTime expirationTime;
+        IList<IIdentity> identities;
+
+        public UnconditionalPolicy(ClaimSet issuer, ClaimSet issuance, DateTime expirationTime, IList<IIdentity> identities)
+        {
+            if (issuer == null)
+                throw new ArgumentNullException("issuer");
+            if (issuance == null)
+                throw new ArgumentNullException("issuance");
+
+            this.issuer = issuer;
+            this.issuance = issuance;
+            this.identities = identities;
+            this.expirationTime = expirationTime;
+        }
+
+        public string Id
+        {
+            get { return this.id; }
+        }
+
+        public ClaimSet Issuer
+        {
+            get { return this.issuer; }
+        }
+
+        public DateTime ExpirationTime
+        {
+            get { return this.expirationTime; }
+        }
+
+        public bool Evaluate(EvaluationContext evaluationContext, ref object state)
+        {
+            evaluationContext.AddToTarget(this, this.issuance);
+
+            if (this.identities != null)
+            {
+                object value;
+                IList<IIdentity> contextIdentities;
+                if (!evaluationContext.Properties.TryGetValue("Identities", out value))
+                {
+                    contextIdentities = new List<IIdentity>(this.identities.Count);
+                    evaluationContext.Properties.Add("Identities", contextIdentities);
+                }
+                else
+                {
+                    contextIdentities = value as IList<IIdentity>;
+                }
+                foreach (IIdentity identity in this.identities)
+                {
+                    contextIdentities.Add(identity);
+                }
+            }
+
+            evaluationContext.RecordExpirationTime(this.expirationTime);
+            return true;
+        }
+    }
+    ```
+
+3.  Scrivere un gestore di token di sicurezza personalizzato.
+
+     La classe <xref:System.IdentityModel.Selectors.SecurityTokenManager> viene utilizzata per creare una classe <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> per oggetti specifici della classe <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> che vengono passati nel metodo `CreateSecurityTokenAuthenticator`. Viene inoltre utilizzato il gestore del token di sicurezza per creare provider di token e serializzatori di token, che però non sono trattati in questo esempio. In questo esempio, il gestore del token di sicurezza personalizzato eredita dalla classe <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager> ed esegue l'override del metodo `CreateSecurityTokenAuthenticator` per restituire un autenticatore di token nome utente personalizzato quando i requisiti del token passati indicano che l'autenticatore nome utente è necessario.
+
+    ```
+    public class MySecurityTokenManager : ServiceCredentialsSecurityTokenManager
+    {
+        MyUserNameCredential myUserNameCredential;
+
+        public MySecurityTokenManager(MyUserNameCredential myUserNameCredential)
+            : base(myUserNameCredential)
+        {
+            this.myUserNameCredential = myUserNameCredential;
+        }
+
+        public override SecurityTokenAuthenticator CreateSecurityTokenAuthenticator(SecurityTokenRequirement tokenRequirement, out SecurityTokenResolver outOfBandTokenResolver)
+        {
+            if (tokenRequirement.TokenType ==  SecurityTokenTypes.UserName)
+            {
+                outOfBandTokenResolver = null;
+                return new MyTokenAuthenticator();
+            }
+            else
+            {
+                return base.CreateSecurityTokenAuthenticator(tokenRequirement, out outOfBandTokenResolver);
+            }
+        }
+    }
+    ```
+
+4.  Scrivere una credenziale del servizio personalizzata
+
+     La classe delle credenziali del servizio viene utilizzata per rappresentare le credenziali configurate per il servizio e crea un gestore del token di sicurezza utilizzato per ottenere gli autenticatori del token, i provider di token e i serializzatori di token.
+
+    ```
+    public class MyUserNameCredential : ServiceCredentials
+    {
+
+        public MyUserNameCredential()
+            : base()
+        {
+        }
+
+        protected override ServiceCredentials CloneCore()
+        {
+            return new MyUserNameCredential();
+        }
+
+        public override SecurityTokenManager CreateSecurityTokenManager()
+        {
+            return new MySecurityTokenManager(this);
+        }
+
+    }
+    ```
+
+5.  Configurare il servizio per l'utilizzo della credenziale del servizio personalizzata.
+
+     Affinché il servizio utilizzi la credenziale del servizio personalizzata, si elimina la classe della credenziale di servizio predefinita dopo avere acquisito il certificato del servizio già preconfigurato nella credenziale del servizio predefinita, si configura la nuova istanza della credenziale del servizio per utilizzare i certificati del servizio preconfigurati e si aggiunge questa nuova istanza della credenziale del servizio nuova ai comportamenti del servizio.
+
+    ```
+    ServiceCredentials sc = serviceHost.Credentials;
+    X509Certificate2 cert = sc.ServiceCertificate.Certificate;
+    MyUserNameCredential serviceCredential = new MyUserNameCredential();
+    serviceCredential.ServiceCertificate.Certificate = cert;
+    serviceHost.Description.Behaviors.Remove((typeof(ServiceCredentials)));
+    serviceHost.Description.Behaviors.Add(serviceCredential);
+    ```
+
+ Per visualizzare le informazioni sul chiamante è possibile utilizzare <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> come mostra il codice seguente. La classe <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> contiene informazioni sulle attestazioni circa il chiamante corrente.
+
+```
+static void DisplayIdentityInformation()
+{
+    Console.WriteLine("\t\tSecurity context identity  :  {0}",
+            ServiceSecurityContext.Current.PrimaryIdentity.Name);
+     return;
+}
+```
+
+ Quando si esegue l'esempio, le richieste e le risposte dell'operazione vengono visualizzate nella finestra della console client. Premere INVIO nella finestra del client per arrestare il client.
+
+## <a name="setup-batch-file"></a>File batch di installazione
+ Il file batch Setup.bat incluso con questo esempio consente di configurare il server con i certificati attinenti per eseguire un'applicazione indipendente che richiede la sicurezza server basata su certificato. Questo file batch deve essere modificato per funzionare tra computer diversi o nel caso in cui non sia ospitato.
+
+ Di seguito viene fornita una breve panoramica delle varie sezioni dei file batch in modo che possano essere modificate per l'esecuzione nella configurazione appropriata.
+
+-   Creazione del certificato server.
+
+     Le righe seguenti del file batch Setup.bat creano il certificato server da usare. La variabile `%SERVER_NAME%` specifica il nome del server. Modificare questa variabile per specificare nome del server. Il valore predefinito in questo file batch è localhost.
+
+    ```
+    echo ************
+    echo Server cert setup starting
+    echo %SERVER_NAME%
+    echo ************
+    echo making server cert
+    echo ************
+    makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
+    ```
+
+-   Installazione del certificato server nell'archivio certificati attendibili del client
+
+     Le righe seguenti nel file batch Setup.bat copiano il certificato server nell'archivio di persone attendibile del client. Questo passaggio è necessario perché certificati generati da Makecert.exe non sono considerati implicitamente attendibili dal sistema client. Se è già disponibile un certificato con radice in un certificato radice client attendibile, ad esempio un certificato rilasciato da Microsoft, il passaggio del popolamento dell'archivio certificati client con il certificato server non è necessario.
+
+    ```
+    certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople
+    ```
+
     > [!NOTE]
-    >  Il file batch di configurazione è progettato per essere eseguito da un prompt dei comandi di Windows SDK. e richiede che la variabile di ambiente MSSDK punti alla directory in cui è installato SDK. Questa variabile di ambiente viene impostata automaticamente all'interno di un prompt dei comandi di SDK di Windows.  
-  
-#### <a name="to-set-up-and-build-the-sample"></a>Per impostare e compilare l'esempio  
-  
-1.  Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
-  
-2.  Per compilare la soluzione, seguire le istruzioni riportate in [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
-  
-#### <a name="to-run-the-sample-on-the-same-computer"></a>Per eseguire l'esempio nello stesso computer  
-  
-1.  Aprire un prompt dei comandi di [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] con privilegi di amministratore ed eseguire Setup.bat dalla cartella di installazione dell'esempio. In questo modo vengono installati tutti i certificati necessari per l'esecuzione dell'esempio.  
-  
+    >  Il file batch di configurazione è progettato per essere eseguito da un prompt dei comandi di Windows SDK. e richiede che la variabile di ambiente MSSDK punti alla directory in cui è installato SDK. Questa variabile di ambiente viene impostata automaticamente all'interno di un prompt dei comandi di SDK di Windows.
+
+#### <a name="to-set-up-and-build-the-sample"></a>Per impostare e compilare l'esempio
+
+1.  Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+
+2.  Per compilare la soluzione, seguire le istruzioni riportate in [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).
+
+#### <a name="to-run-the-sample-on-the-same-computer"></a>Per eseguire l'esempio nello stesso computer
+
+1.  Eseguire Setup. bat dalla cartella di installazione dell'esempio all'interno di un prompt dei comandi di Visual Studio 2012 aperta con privilegi di amministratore. In questo modo vengono installati tutti i certificati necessari per l'esecuzione dell'esempio.
+
     > [!NOTE]
-    >  Il file batch Setup.bat è progettato per essere eseguito da un prompt dei comandi di [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]. La variabile di ambiente PATH impostata nel prompt dei comandi di [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] punta alla directory che contiene file eseguibili richiesti dallo script Setup.bat.  
+    >  Il file batch Setup. bat è progettato per essere eseguito dal Prompt dei comandi un Visual Studio 2012. Variabile di ambiente PATH impostata all'interno di punti di Prompt dei comandi di Visual Studio 2012 per la directory che contiene file eseguibili richiesti dallo script Setup. bat.  
   
 2.  Avviare service.exe da service\bin.  
   

@@ -7,15 +7,14 @@ dev_langs:
 - CSharp
 - VB
 ms.assetid: 67bf05b7-1d08-4911-83b7-a45d0b036fc3
-ms.openlocfilehash: 4f85a51c47eb045d1d2f0111cb217199c9acf0d7
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 9f7f696b1f5be2e96c50938f4627271d891deb32
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46537878"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48582200"
 ---
 # <a name="how-to-define-a-windows-communication-foundation-service-contract"></a>Procedura: definire un contratto di servizio di Windows Communication Foundation
-
 Questa è la prima delle sei attività necessarie per creare un'applicazione Windows Communication Foundation (WCF). Per una panoramica di tutte e sei le attività, vedere l'argomento [Esercitazione introduttiva](../../../docs/framework/wcf/getting-started-tutorial.md).
 
  Quando si crea un servizio WCF, la prima attività consiste nel definire un contratto di servizio. Nel contratto di servizio vengono specificate le operazioni supportate dal servizio. Un'operazione può essere considerata un metodo del servizio Web. I contratti vengono creati definendo un'interfaccia C++, C# o Visual Basic (VB). Ogni metodo nell'interfaccia corrisponde a un'operazione del servizio specifica. A ogni interfaccia deve essere applicato l'oggetto <xref:System.ServiceModel.ServiceContractAttribute> e a ogni operazione deve essere applicato l'attributo <xref:System.ServiceModel.OperationContractAttribute>. Se un metodo di un'interfaccia a cui è associato l'attributo <xref:System.ServiceModel.ServiceContractAttribute> non dispone dell'attributo <xref:System.ServiceModel.OperationContractAttribute>, tale metodo non viene esposto dal servizio.

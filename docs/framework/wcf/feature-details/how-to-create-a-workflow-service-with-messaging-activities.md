@@ -2,19 +2,19 @@
 title: 'Procedura: creare un servizio flusso di lavoro con attività di messaggistica'
 ms.date: 03/30/2017
 ms.assetid: 53d094e2-6901-4aa1-88b8-024b27ccf78b
-ms.openlocfilehash: 6ccc4ddc6ba273f6f41efb023f077dd6b87c7ffb
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 12fc8706eb81df281571bb6ab54f7c2a2805f351
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196557"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48580498"
 ---
 # <a name="how-to-create-a-workflow-service-with-messaging-activities"></a>Procedura: creare un servizio flusso di lavoro con attività di messaggistica
 In questo argomento viene illustrato come creare un semplice servizio flusso di lavoro usando le attività di messaggistica. L'argomento è incentrato sui meccanismi di creazione di un servizio flusso di lavoro in cui il servizio è costituito esclusivamente da attività di messaggistica. In servizi reali i flussi di lavoro contengono molte altre attività. Il servizio implementa un'operazione denominata Echo che acquisisce una stringa e la restituisce al chiamante. Questo è il primo di una serie di due argomenti. Argomento successivo [procedura: accedere a un servizio da un flusso di lavoro applicazione](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md) viene illustrato come creare un'applicazione flusso di lavoro che possa chiamare il servizio creato in questo argomento.  
   
 ### <a name="to-create-a-workflow-service-project"></a>Per creare un progetto di servizio flusso di lavoro  
   
-1.  Avviare [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
+1.  Avviare Visual Studio 2012.  
   
 2.  Fare clic sui **File** dal menu **New**e quindi **progetto** per visualizzare il **finestra Nuovo progetto**. Selezionare **flusso di lavoro** dall'elenco dei modelli installati e **applicazione di servizio del flusso di lavoro WCF** dall'elenco dei tipi di progetto. Denominare il progetto `MyWFService` e usare il percorso predefinito, come illustrato nella figura seguente.  
   

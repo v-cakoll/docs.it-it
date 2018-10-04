@@ -2,12 +2,12 @@
 title: Attività personalizzata SendMail
 ms.date: 03/30/2017
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
-ms.openlocfilehash: e9d27711754c3aa8ff7f68c23f528c9f5c4356f7
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: f51914ae01ea680ae09be8080cce1aa866bd6ec7
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45747205"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48266669"
 ---
 # <a name="sendmail-custom-activity"></a>Attività personalizzata SendMail
 In questo esempio viene illustrato come creare un'attività personalizzata che deriva da <xref:System.Activities.AsyncCodeActivity> per inviare messaggi di posta elettronica tramite il protocollo SMTP da usare in un'applicazione flusso di lavoro. L'attività personalizzata Usa le funzionalità di <xref:System.Net.Mail.SmtpClient> per inviare posta elettronica in modo asincrono e per inviare posta elettronica con l'autenticazione. Nell'attività sono inoltre disponibili funzionalità per l'utente finale, ad esempio la modalità test, la sostituzione dei token, i modelli di file e il percorso di rilascio di prova.  
@@ -119,7 +119,7 @@ new SendMail
   
 ##### <a name="to-run-this-sample"></a>Per eseguire l'esempio  
   
-1.  In [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] aprire il file della soluzione SendMail.sln.  
+1.  Con Visual Studio 2010, aprire il file della soluzione SendMail.  
   
 2.  Verificare di disporre dell'accesso a un server SMTP valido. Vedere le istruzioni di configurazione.  
   

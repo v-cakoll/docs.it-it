@@ -2,12 +2,12 @@
 title: Utilizzo di delegati di attività
 ms.date: 03/30/2017
 ms.assetid: e33cf876-8979-440b-9b23-4a12d1139960
-ms.openlocfilehash: bb23f6a79b6f2390952f9aadc1cf08099acb289b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 7ed4032f8f8070648f8a2f0fcfb386101740f1ad
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43489929"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48580880"
 ---
 # <a name="using-activity-delegates"></a>Utilizzo di delegati di attività
 I delegati di attività consentono agli autori di attività di esporre callback con firme specifiche, per cui gli utenti dell'attività possono fornire gestori in base all'attività. Sono disponibili due tipi di delegati di attività: <xref:System.Activities.ActivityAction%601>, usato per definire i delegati di attività senza un valore restituito, e <xref:System.Activities.ActivityFunc%601>, usato per definire i delegati di attività con un valore restituito.  
@@ -54,7 +54,4 @@ Negli esempi di questo argomento viene usata la sintassi di inizializzazione ogg
   
  Per usare l'attività `TextGenerator` con l'attività `WriteFillerText`, specificarla come proprietà <xref:System.Activities.ActivityDelegate.Handler%2A>.  
   
- [!code-csharp[CFX_ActivityExample#5](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#5)]  
-  
-## <a name="see-also"></a>Vedere anche  
- [Esposizione e richiamo di ActivityAction](../../../docs/framework/windows-workflow-foundation/samples/exposing-and-invoking-activityactions.md)
+ [!code-csharp[CFX_ActivityExample#5](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#5)]

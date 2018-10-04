@@ -6,20 +6,19 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], getting started
 - getting started [WCF]
 ms.assetid: df939177-73cb-4440-bd95-092a421516a1
-ms.openlocfilehash: 204869d0a7a7b8d56449c28cb37b18624a1701cf
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 5947e70b0dc4ef5838322722f2ee2a55034bae96
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47207127"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48582174"
 ---
 # <a name="getting-started-tutorial"></a>Esercitazione introduttiva
-
 Gli argomenti contenuti in questa sezione sono utili per fornire una rapida descrizione a Windows Communication Foundation (WCF) esperienza di programmazione. Vengono ideati per essere completati secondo l'ordine dell'elenco posto nella parte inferiore di questo argomento. Esecuzione di questa esercitazione offre informazioni introduttive sui passaggi necessari per creare applicazioni client e servizio WCF. Un servizio espone uno o più endpoint, ciascuno dei quali espone una o più operazioni del servizio. Il *endpoint* di un servizio specifica un indirizzo in cui è possibile trovare il servizio, un'associazione che contiene le informazioni che descrivono come un client deve comunicare con il servizio e un contratto che definisce la funzionalità fornita dal servizio ai propri client.
 
  Seguendo la sequenza degli argomenti di questa esercitazione si otterrà un servizio funzionante e un client che chiama il servizio. Nei primi tre argomenti viene descritto come definire e implementare un contratto di servizio, nonché come ospitare il servizio. Il servizio creato è self-hosted all'interno di un'applicazione console. I servizi possono anche essere ospitati in Internet Information Services (IIS). Per altre informazioni su come eseguire questa operazione, vedere [procedura: ospitare un servizio WCF in IIS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md). Il servizio viene configurato nel codice; tuttavia, i servizi possono essere configurati anche all'interno di un file di configurazione. Per altre informazioni sull'uso di un file di configurazione, vedere [configurazione di servizi tramite file di configurazione](../../../docs/framework/wcf/configuring-services-using-configuration-files.md).
 
- Nei tre argomenti successivi viene descritto come creare un proxy client, configurare l'applicazione client e usare il proxy client per chiamare l'operazione del servizio esposta da quest'ultimo. I servizi pubblicano i metadati che definiscono le informazioni necessarie a un'applicazione client per comunicare con il servizio. In [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] il processo di accesso a questi metadati viene automatizzato e i metadati vengono usati per creare e configurare l'applicazione client per il servizio. Se non si usa [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)], è possibile usare il [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) per costruire e configurare l'applicazione client per il servizio.
+ Nei tre argomenti successivi viene descritto come creare un proxy client, configurare l'applicazione client e usare il proxy client per chiamare l'operazione del servizio esposta da quest'ultimo. I servizi pubblicano i metadati che definiscono le informazioni necessarie a un'applicazione client per comunicare con il servizio. Visual Studio 2012 consente di automatizzare il processo di accesso a questi metadati e lo usa per creare e configurare l'applicazione client per il servizio. Se non si usa Visual Studio 2012, è possibile usare la [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) per costruire e configurare l'applicazione client per il servizio.
 
 Negli argomenti di questa sezione presuppongono il che uso di Visual Studio come ambiente di sviluppo. Se si usa un altro ambiente di sviluppo, ignorare le istruzioni specifiche di Visual Studio.
 

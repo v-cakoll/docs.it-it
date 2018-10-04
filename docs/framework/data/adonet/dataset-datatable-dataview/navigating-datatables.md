@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 202026a1-ec79-435e-b507-12a77f5011b2
 ms.openlocfilehash: f00e2171c1adf4ff99a669085131ebc8d38f7006
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48027049"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48263917"
 ---
 # <a name="navigating-datatables"></a>Esplorazione di oggetti DataTable
 Il tipo <xref:System.Data.DataTableReader> presenta il contenuto di uno o più oggetti <xref:System.Data.DataTable> sotto forma di uno o più set di risultati forward-only di sola lettura.  

@@ -6,12 +6,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-ide-designers
 author: gewarren
 ms.author: gewarren
-ms.openlocfilehash: 7ecffedbe536f293945227d817e507f012816737
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 3b290b67ca97065dfc408c09850cf0b5720d65ae
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48037041"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48263505"
 ---
 # <a name="disable-dpi-awareness-in-visual-studio"></a>Disabilitare la compatibilità con DPI in Visual Studio
 
@@ -68,6 +68,10 @@ Visual Studio è possibile contrassegnare come non compatibili con DPI modifican
 Per impostare la visualizzazione del ridimensionamento di impostazione al 100% in Windows 10, digitare **impostazioni di visualizzazione** nell'attività della casella di ricerca e quindi selezionare **Modifica impostazioni dello schermo**. Nel **le impostazioni** impostare nella finestra **modificare le dimensioni del testo, App e altri elementi** al **100%**.
 
 Impostazione dello schermo al 100% la scalabilità può essere inaccettabile, poiché l'interfaccia utente potrebbe rendere troppo piccolo per essere utilizzabile.
+
+## <a name="troubleshoot"></a>Risolvere i problemi
+
+Se la transizione di compatibilità con DPI non funziona come previsto in Visual Studio, verificare se è presente il `dpiAwareness` valore il **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File esecuzione Options\devenv.exe**  sottochiave nell'Editor del Registro di sistema. Eliminare il valore, se presente.
 
 ## <a name="see-also"></a>Vedere anche
 

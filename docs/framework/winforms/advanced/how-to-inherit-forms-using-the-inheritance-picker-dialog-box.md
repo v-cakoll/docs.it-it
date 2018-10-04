@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Inheritance Picker dialog box
 - inherited forms [Windows Forms], creating
 ms.assetid: 969b4c04-12aa-4297-93a2-0ae747447823
-ms.openlocfilehash: 5bcd29531858f9cf014042db7ee447cecfdd89b1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7a6de60ec7621792b4f19857a2743f64cbdc686c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525744"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48777409"
 ---
 # <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>Procedura: ereditare form mediante la finestra di dialogo Selezione ereditarietà
 Il modo più semplice di ereditare un modulo o un altro oggetto consiste nell'usare la finestra di dialogo **Selezione ereditarietà**. In questo modo è possibile recuperare e riutilizzare il codice o un'interfaccia utente precedentemente creata in altre soluzioni.  
@@ -27,7 +27,7 @@ Il modo più semplice di ereditare un modulo o un altro oggetto consiste nell'us
   
      Viene aperta la finestra di dialogo **Aggiungi nuovo elemento**.  
   
-2.  Selezionare il modello **Form ereditato** e denominarlo nella casella **Nome**. Fare clic sul pulsante **Aggiungi** per procedere.  
+2.  Ricerca il **Form ereditato** modello da searchbox o facendo clic sul **Windows Forms** categoria, selezionarlo e denominarlo nel **nome** casella. Fare clic sul pulsante **Aggiungi** per procedere.  
   
      Viene aperta la finestra di dialogo **Selezione ereditarietà**. Se il progetto corrente include già form, verranno visualizzati nella finestra di dialogo **Selezione ereditarietà**.  
   

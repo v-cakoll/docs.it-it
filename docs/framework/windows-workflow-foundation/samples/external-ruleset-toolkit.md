@@ -2,22 +2,22 @@
 title: Toolkit di RuleSet esterno
 ms.date: 03/30/2017
 ms.assetid: a306d283-a031-475e-aa01-9ae86e7adcb0
-ms.openlocfilehash: f418c71b39611e64afea168ed40418dbe981521a
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: f545d083bb6caf9daca3ce553d0a1ee6711b0062
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43803356"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48584260"
 ---
 # <a name="external-ruleset-toolkit"></a>Toolkit di RuleSet esterno
-Normalmente quando vengono usate all'interno di un'applicazione del flusso di lavoro, le regole fanno parte dell'assembly. In alcuni scenari, può essere necessario gestire il RuleSet separatamente dall'assembly così che possano essere aggiornati senza ricompilare e distribuire l'assembly del flusso di lavoro. In questo esempio viene illustrato come gestire e modificare il RuleSet in un database e accedere ai RuleSet da un flusso di lavoro durante il runtime. Abilita l'esecuzione di istanze del flusso di lavoro per incorporare automaticamente le modifiche del RuleSet.  
-  
- L'esempio di toolkit di RuleSet esterno contiene uno strumento basato su Windows Form che può essere usato per gestire e modificare le versioni di RuleSet in un database. Include inoltre un'attività e un servizio host per l'esecuzione di tali regole.  
-  
+Normalmente quando vengono usate all'interno di un'applicazione del flusso di lavoro, le regole fanno parte dell'assembly. In alcuni scenari, può essere necessario gestire il RuleSet separatamente dall'assembly così che possano essere aggiornati senza ricompilare e distribuire l'assembly del flusso di lavoro. In questo esempio viene illustrato come gestire e modificare il RuleSet in un database e accedere ai RuleSet da un flusso di lavoro durante il runtime. Abilita l'esecuzione di istanze del flusso di lavoro per incorporare automaticamente le modifiche del RuleSet.
+
+ L'esempio di toolkit di RuleSet esterno contiene uno strumento basato su Windows Form che può essere usato per gestire e modificare le versioni di RuleSet in un database. Include inoltre un'attività e un servizio host per l'esecuzione di tali regole.
+
 > [!NOTE]
 >  Questo esempio richiede [Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkId=96181).  
   
- [!INCLUDE[vsprvsext](../../../../includes/vsprvsext-md.md)] provvede un editor di RuleSet come parte di Windows Workflow Foundation (WF). È possibile avviare questo editor facendo doppio clic sull'attività `Policy` in un flusso di lavoro; serializza l'oggetto di RuleSet definito al file con estensione rules associato al flusso di lavoro (un'attività `Policy` esegue un'istanza di RuleSet in base al flusso di lavoro). Il file con estensione rules viene compilato nell'assembly come una risorsa quando si compila il progetto del flusso di lavoro.  
+ Visual Studio fornisce un editor di RuleSet come parte di Windows Workflow Foundation (WF). È possibile avviare questo editor facendo doppio clic sull'attività `Policy` in un flusso di lavoro; serializza l'oggetto di RuleSet definito al file con estensione rules associato al flusso di lavoro (un'attività `Policy` esegue un'istanza di RuleSet in base al flusso di lavoro). Il file con estensione rules viene compilato nell'assembly come una risorsa quando si compila il progetto del flusso di lavoro.  
   
  L'esempio è costituito dai componenti seguenti:  
   

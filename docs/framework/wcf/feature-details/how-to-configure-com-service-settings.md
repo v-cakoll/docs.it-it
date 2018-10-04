@@ -5,11 +5,11 @@ helpviewer_keywords:
 - COM+ [WCF], configuring service settings
 ms.assetid: f42a55a8-3af8-4394-9fdd-bf12a93780eb
 ms.openlocfilehash: d14fd1434cb87dc62babeabb79cb780e568aacb7
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48032764"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48581838"
 ---
 # <a name="how-to-configure-com-service-settings"></a>Procedura: configurare le impostazioni del servizio COM+
 Quando l'interfaccia di un'applicazione viene aggiunta o rimossa usando lo strumento di configurazione del servizio COM+, la configurazione del servizio Web viene aggiornata nel file di configurazione dell'applicazione. Nella modalità di hosting COM+, il file Application config viene inserito nella Directory radice dell'applicazione (%PROGRAMFILES%\ComPlus applicazioni\\{appid} è l'impostazione predefinita). In entrambe le modalità di hosting Web il file Web.config è posizionato nella directory vroot specificata.  

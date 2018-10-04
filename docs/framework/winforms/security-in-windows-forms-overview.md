@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [Windows Forms], about security
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
-ms.openlocfilehash: 54fc56e5e7d6ee5cd0e7bc55bd22c7d4127eb4d3
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 36d38756f7df88ec04aca781525f0f6b0a48b768
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45747124"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48580930"
 ---
 # <a name="security-in-windows-forms-overview"></a>Cenni preliminari sulla sicurezza in Windows Form
 Prima del rilascio di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], qualsiasi codice in esecuzione sul computer di un utente aveva gli stessi diritti o le stesse autorizzazioni di accesso alle risorse che aveva un utente del computer. Se ad esempio all'utente era consentito l'accesso al file system o a un database, anche il codice aveva accesso al file system o al database. Anche se ciò può essere accettabile per il codice contenuto negli eseguibili installati esplicitamente dall'utente nel computer locale, non è altrettanto accettabile per quanto riguarda il codice potenzialmente dannoso proveniente da Internet o da una Intranet locale. A questo tipo di codice, infatti, non deve essere consentito l'accesso alle risorse del computer dell'utente senza autorizzazione esplicita.  
@@ -49,7 +49,7 @@ Prima del rilascio di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md
   
  Quando si richiedono autorizzazioni facoltative, è necessario gestire le eccezioni di sicurezza che verranno generate nel caso in cui l'applicazione esegua un'azione che richiede autorizzazioni non concesse. La corretta gestione dell'eccezione <xref:System.Security.SecurityException> assicurerà che l'esecuzione dell'applicazione non venga interrotta. L'eccezione può essere usata dall'applicazione per determinare se è necessario disabilitare una funzionalità per l'utente. Un'applicazione, ad esempio, può disabilitare l'opzione di menu **Salva** se l'autorizzazione necessaria non viene concessa.  
   
- In alcuni casi, è difficile sapere se è stata effettuata l'asserzione di tutte le autorizzazioni appropriate. È possibile, ad esempio, che una chiamata a metodo che a prima vista potrebbe sembrare innocua, a un certo punto dell'esecuzione richieda l'accesso al file system. Se l'applicazione non viene distribuita con tutte le autorizzazioni necessarie, è possibile che l'esecuzione risulti corretta nel proprio computer ma non dopo la distribuzione. Entrambi i [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] SDK e [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] contiene strumenti per il calcolo delle autorizzazioni richieste da un'applicazione: MT.exe comando dello strumento di riga e la funzionalità Elabora autorizzazioni di Visual Studio, rispettivamente.  
+ In alcuni casi, è difficile sapere se è stata effettuata l'asserzione di tutte le autorizzazioni appropriate. È possibile, ad esempio, che una chiamata a metodo che a prima vista potrebbe sembrare innocua, a un certo punto dell'esecuzione richieda l'accesso al file system. Se l'applicazione non viene distribuita con tutte le autorizzazioni necessarie, è possibile che l'esecuzione risulti corretta nel proprio computer ma non dopo la distribuzione. Entrambi i [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] SDK e Visual Studio 2005 sono disponibili strumenti per il calcolo delle autorizzazioni richieste da un'applicazione: MT.exe comando dello strumento di riga e la funzionalità Elabora autorizzazioni di Visual Studio, rispettivamente.  
   
  Negli argomenti riportati di seguito vengono illustrate le funzionalità di sicurezza aggiuntive di Windows Form.  
   

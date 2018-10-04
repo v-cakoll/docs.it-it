@@ -2,12 +2,12 @@
 title: Creazione di un'attività in fase di esecuzione con DynamicActivity
 ms.date: 03/30/2017
 ms.assetid: 1af85cc6-912d-449e-90c5-c5db3eca5ace
-ms.openlocfilehash: 880dbc6263b64c877d3211347541766d91534c85
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 32a35d5220950d8547b1f934c431bdb9c3627e8e
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48027364"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48583874"
 ---
 # <a name="creating-an-activity-at-runtime-with-dynamicactivity"></a>Creazione di un'attività in fase di esecuzione con DynamicActivity
 <xref:System.Activities.DynamicActivity> è una classe sealed concreta con costruttore pubblico. <xref:System.Activities.DynamicActivity> può essere usata per assemblare la funzionalità di attività in fase di esecuzione tramite un unico DOM di attività.  
@@ -21,7 +21,7 @@ ms.locfileid: "48027364"
   
 #### <a name="to-create-an-activity-at-runtime-using-imperative-code"></a>Per creare un'attività in fase di esecuzione usando il codice imperativo  
   
-1.  Aprire [!INCLUDE[vs2010](../../../includes/vs2010-md.md)].  
+1.  Aprire Visual Studio 2010.  
   
 2.  Selezionare **File**, **nuove**, **progetto**. Selezionare **Workflow 4.0** sotto **Visual c#** nel **tipi di progetto** finestra e selezionare il **v2010** nodo. Selezionare **applicazione Console flusso di lavoro sequenziale** nel **modelli** finestra. Assegnare il nome DynamicActivitySample al nuovo progetto.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "48027364"
   
 #### <a name="to-create-an-activity-at-runtime-using-xaml"></a>Per creare un'attività in fase di esecuzione usando il codice XAML  
   
-1.  Aprire [!INCLUDE[vs2010](../../../includes/vs2010-md.md)].  
+1.  Aprire Visual Studio 2010.  
   
 2.  Selezionare **File**, **nuove**, **progetto**. Selezionare **Workflow 4.0** sotto **Visual c#** nel **tipi di progetto** finestra e selezionare il **v2010** nodo. Selezionare **applicazione Console flusso di lavoro** nel **modelli** finestra. Assegnare il nome DynamicActivitySample al nuovo progetto.  
   

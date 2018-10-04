@@ -3,11 +3,11 @@ title: 'Procedura: determinare la versione di individuazione di una richiesta de
 ms.date: 03/30/2017
 ms.assetid: b3c4e2e2-2957-4074-ae6a-776a5ca84278
 ms.openlocfilehash: 98dfd5ec5d3c180b619e2f15d95037feae8ebbaf
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48031575"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48582187"
 ---
 # <a name="how-todetermine-the-discovery-version-of-a-probe-request"></a>Procedura: determinare la versione di individuazione di una richiesta del probe
 È possibile che un proxy di individuazione esponga più endpoint di individuazione usando versioni di individuazione diverse. Quando una richiesta del probe multicast UDP arriva al proxy, il proxy deve rispondere con un messaggio di soppressione multicast. Per eseguire questa operazione è necessario che conosca la versione di individuazione della richiesta.  

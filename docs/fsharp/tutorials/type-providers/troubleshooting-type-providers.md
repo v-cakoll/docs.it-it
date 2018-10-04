@@ -3,11 +3,11 @@ title: Risoluzione dei problemi relativi ai provider di tipi
 description: 'Individua le potenziali soluzioni per i problemi di cui si sono più probabile incontrare quando si usano provider di tipi in F #.'
 ms.date: 05/16/2016
 ms.openlocfilehash: f3b8ffdaf615563305b7b84b45a9ed1e066d0dcc
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
-ms.translationtype: HT
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48244919"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48262408"
 ---
 # <a name="troubleshooting-type-providers"></a>Risoluzione dei problemi relativi ai provider di tipi
 

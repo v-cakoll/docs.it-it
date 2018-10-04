@@ -2,12 +2,12 @@
 title: Vincoli dichiarativi
 ms.date: 03/30/2017
 ms.assetid: 67001ed1-7f4d-4ada-ae57-a31176901a53
-ms.openlocfilehash: bf794d5b14d2d278dc4068309f25e6f0ddcf3342
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5599513405c77aa213b329b085075660baed5c47
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517660"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48580491"
 ---
 # <a name="declarative-constraints"></a>Vincoli dichiarativi
 I vincoli dichiarativi offrono un metodo potente di convalida per un'attività e le relative relazioni con altre attività. I vincoli vengono configurati per un'attività durante il processo di creazione, ma vincoli aggiuntivi possono essere specificati anche dall'host del flusso di lavoro. In questo argomento viene fornita una panoramica sull'utilizzo di vincoli dichiarativi per la convalida delle attività.  
@@ -57,12 +57,13 @@ public sealed class SampleActivity : CodeActivity
   
  Questo vincolo potrebbe essere specificato dall'host anche per le attività in un flusso di lavoro usando la proprietà <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A>, illustrata nella sezione successiva.  
   
- L'attività <xref:System.Activities.Validation.AddValidationError> viene usata per generare un errore o avviso di convalida senza richiedere la valutazione di un'espressione. Le relative proprietà sono simili all'oggetto <xref:System.Activities.Validation.AssertValidation> che può essere usato insieme alle attività di controllo del flusso di un vincolo quale l'attività <xref:System.Activities.Statements.If>.  
+ L'attività <xref:System.Activities.Validation.AddValidationError> viene usata per generare un errore o avviso di convalida senza richiedere la valutazione di un'espressione. Le relative proprietà sono simili all'oggetto <xref:System.Activities.Validation.AssertValidation> che può essere usato insieme alle attività di controllo del flusso di un vincolo quale l'attività <xref:System.Activities.Statements.If>.
   
-### <a name="workflow-relationship-activities"></a>Attività di relazioni di flussi di lavoro  
- Sono disponibili numerose attività di convalida che forniscono informazioni sulle altre attività del flusso di lavoro in relazione all'attività da convalidare. <xref:System.Activities.Validation.GetParentChain> restituisce una raccolta di attività contenente tutte le attività tra l'attività in corso e l'attività radice. <xref:System.Activities.Validation.GetChildSubtree> fornisce una raccolta di attività contenente le attività figlio nel modello ricorsivo e <xref:System.Activities.Validation.GetWorkflowTree> ottiene tutte le attività nel flusso di lavoro.  
+### <a name="workflow-relationship-activities"></a>Attività di relazioni di flussi di lavoro
+
+Sono disponibili numerose attività di convalida che forniscono informazioni sulle altre attività del flusso di lavoro in relazione all'attività da convalidare. <xref:System.Activities.Validation.GetParentChain> restituisce una raccolta di attività contenente tutte le attività tra l'attività in corso e l'attività radice. <xref:System.Activities.Validation.GetChildSubtree> fornisce una raccolta di attività contenente le attività figlio nel modello ricorsivo e <xref:System.Activities.Validation.GetWorkflowTree> ottiene tutte le attività nel flusso di lavoro.  
   
- Nell'esempio seguente il [convalida di relazioni tra attività](../../../docs/framework/windows-workflow-foundation/samples/activity-relationships-validation.md) esempio, un `CreateState` viene definita un'attività. L'attività `CreateState` deve essere contenuta all'interno di un'attività `CreateCountry` e il metodo `GetParent` restituisce un vincolo che applica questo requisito. `GetParent` usa l'attività <xref:System.Activities.Validation.GetParentChain> insieme a un'attività <xref:System.Activities.Statements.ForEach%601> per controllare le attività padre dell'attività `CreateState` per determinare se il requisito è stato rispettato.  
+Nell'esempio seguente viene definita un'attività `CreateState`. L'attività `CreateState` deve essere contenuta all'interno di un'attività `CreateCountry` e il metodo `GetParent` restituisce un vincolo che applica questo requisito. `GetParent` usa l'attività <xref:System.Activities.Validation.GetParentChain> insieme a un'attività <xref:System.Activities.Statements.ForEach%601> per controllare le attività padre dell'attività `CreateState` per determinare se il requisito è stato rispettato.  
   
 ```csharp  
 public sealed class CreateState : CodeActivity  
@@ -134,9 +135,7 @@ public sealed class CreateState : CodeActivity
         // not needed for the sample  
     }  
 }  
-```  
-  
- Per altre informazioni, vedere Windows Workflow Foundation [convalida](../../../docs/framework/windows-workflow-foundation/samples/validation.md) esempi.  
+```
   
 ## <a name="additional-constraints"></a>Vincoli aggiuntivi  
  Gli autori di host del flusso di lavoro possono specificare vincoli di convalida aggiuntivi per le attività in un flusso di lavoro creando vincoli e aggiungendoli al dizionario <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> di un'istanza di <xref:System.Activities.Validation.ValidationSettings>. Ogni elemento nella proprietà <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> contiene il tipo di attività per il quale vengono applicati i vincoli e un elenco dei vincoli aggiuntivi per quel tipo di attività. Quando la convalida viene richiamata per il flusso di lavoro, ogni attività del tipo specificato, incluse le classi derivate, valuta i vincoli. In questo esempio il vincolo `ActivityDisplayNameIsNotSetWarning` della sezione precedente viene applicato a tutte le attività in un flusso di lavoro.  
@@ -177,4 +176,4 @@ else
 }  
 ```  
   
- Se la proprietà <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> dell'oggetto <xref:System.Activities.Validation.ValidationSettings> è `true`, solo i vincoli aggiuntivi specificati vengono valutati quando la convalida viene richiamata mediante la chiamata al metodo <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>. Ciò può essere utile per esaminare i flussi di lavoro per configurazioni di convalida specifiche. Si noti tuttavia che quando viene richiamato il flusso di lavoro, la logica di convalida configurata nel flusso di lavoro viene valutata e deve passare per il flusso di lavoro per iniziare correttamente. Per ulteriori informazioni sulla chiamata della convalida, vedere [richiamare la convalida delle attività](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md).
+ Se la proprietà <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> dell'oggetto <xref:System.Activities.Validation.ValidationSettings> è `true`, solo i vincoli aggiuntivi specificati vengono valutati quando la convalida viene richiamata mediante la chiamata al metodo <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>. Ciò può essere utile per esaminare i flussi di lavoro per configurazioni di convalida specifiche. Si noti tuttavia che quando viene richiamato il flusso di lavoro, la logica di convalida configurata nel flusso di lavoro viene valutata e deve passare per il flusso di lavoro per iniziare correttamente. Per altre informazioni sul richiamo della convalida, vedere [richiamo di convalida delle attività](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md).

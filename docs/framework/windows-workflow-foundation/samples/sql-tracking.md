@@ -2,26 +2,26 @@
 title: Rilevamento SQL
 ms.date: 03/30/2017
 ms.assetid: bcaebeb1-b9e5-49e8-881b-e49af66fd341
-ms.openlocfilehash: 5f8d7bbd57965b4d7399373416caea87d4d84187
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 84d3fb994c790301ceb55b945bf972c21ed2a971
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43779143"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48584324"
 ---
 # <a name="sql-tracking"></a>Rilevamento SQL
-In questo esempio viene illustrato come scrivere un partecipante del rilevamento SQL personalizzato che scrive record di rilevamento in un database SQL. Windows Workflow Foundation (WF) fornisce per ottenere visibilità nell'esecuzione di un'istanza del flusso di lavoro di rilevamento del flusso di lavoro. Il runtime di rilevamento crea record di rilevamento del flusso di lavoro durante l'esecuzione di quest'ultimo. Per altre informazioni sul rilevamento del flusso di lavoro, vedere [flusso di lavoro di rilevamento e traccia](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md).  
-  
-#### <a name="to-use-this-sample"></a>Per usare questo esempio  
-  
-1.  Verificare di avere installato SQL Server 2008, SQL Server 2008 Express o una versione più recente. Gli script impacchettati con l'esempio presuppongono l'uso di un'istanza di SQL Express sul computer locale. Se si dispone di un'istanza diversa, modificare gli script correlati al database prima di eseguire l'esempio.  
-  
-2.  Creare il database di rilevamento di SQL Server eseguendo Trackingsetup.cmd nella directory degli script (\WF\Basic\Tracking\SqlTracking\CS\Scripts). Verrà creato un database denominato TrackingSample.  
-  
+In questo esempio viene illustrato come scrivere un partecipante del rilevamento SQL personalizzato che scrive record di rilevamento in un database SQL. Windows Workflow Foundation (WF) fornisce per ottenere visibilità nell'esecuzione di un'istanza del flusso di lavoro di rilevamento del flusso di lavoro. Il runtime di rilevamento crea record di rilevamento del flusso di lavoro durante l'esecuzione di quest'ultimo. Per altre informazioni sul rilevamento del flusso di lavoro, vedere [flusso di lavoro di rilevamento e traccia](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md).
+
+#### <a name="to-use-this-sample"></a>Per usare questo esempio
+
+1.  Verificare di avere installato SQL Server 2008, SQL Server 2008 Express o una versione più recente. Gli script impacchettati con l'esempio presuppongono l'uso di un'istanza di SQL Express sul computer locale. Se si dispone di un'istanza diversa, modificare gli script correlati al database prima di eseguire l'esempio.
+
+2.  Creare il database di rilevamento di SQL Server eseguendo Trackingsetup.cmd nella directory degli script (\WF\Basic\Tracking\SqlTracking\CS\Scripts). Verrà creato un database denominato TrackingSample.
+
     > [!NOTE]
     >  Lo script crea il database nell'istanza predefinita di SQL Express. Se si desidera installarlo in un'istanza di database diversa, modificare lo script Trackingsetup.cmd.  
   
-3.  Aprire SqlTrackingSample.sln in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
+3.  Aprire Sqltrackingsample in Visual Studio 2010.  
   
 4.  Per compilare la soluzione, premere CTRL+MAIUSC+B.  
   
@@ -48,8 +48,8 @@ In questo esempio viene illustrato come scrivere un partecipante del rilevamento
 1.  Eseguire lo script Trackingcleanup.cmd nella directory di esempio (\WF\Basic\Tracking\SqlTracking).  
   
     > [!NOTE]
-    >  Trackingcleanup.cmd tenta di eliminare il database nel computer locale SQL Express. Se si usa un'altra istanza di SQL Server, modificare Trackingcleanup.cmd.  
-  
+    >  Trackingcleanup.cmd tenta di eliminare il database nel computer locale SQL Express. Se si usa un'altra istanza di SQL Server, modificare Trackingcleanup.cmd.
+
 > [!IMPORTANT]
 >  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
 >   

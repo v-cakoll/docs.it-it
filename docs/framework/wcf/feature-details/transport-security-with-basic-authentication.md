@@ -7,11 +7,11 @@ dev_langs:
 ms.assetid: b54f491d-196b-4279-876c-76b83ec0442c
 author: BrucePerlerMS
 ms.openlocfilehash: 4a6ad2746bea9dfea1999e272796d44f0341e64d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47235572"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48777279"
 ---
 # <a name="transport-security-with-basic-authentication"></a>Protezione del trasporto con l'autenticazione di base
 La figura seguente mostra un servizio Windows Communication Foundation (WCF) e un client. Il server richiede un certificato X.509 valido che possa essere usato per SSL (Secure Sockets Layer) e i client devono ritenere attendibile il certificato del server. Il servizio Web dispone già di un'implementazione SSL usabile. Per altre informazioni sull'abilitazione dell'autenticazione base in Internet Information Services (IIS), vedere [ https://go.microsoft.com/fwlink/?LinkId=83822 ](https://go.microsoft.com/fwlink/?LinkId=83822).  

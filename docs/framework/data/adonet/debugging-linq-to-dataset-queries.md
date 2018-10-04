@@ -2,15 +2,16 @@
 title: Debug di query di LINQ to DataSet
 ms.date: 03/30/2017
 ms.assetid: f4c54015-8ce2-4c5c-8d18-7038144cc66d
-ms.openlocfilehash: fd10e6c715529ba937ba09732a254d311158b0f1
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: c1014db4cad54420b917585becd2a2031638c1d9
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086004"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48266260"
 ---
 # <a name="debugging-linq-to-dataset-queries"></a>Debug di query di LINQ to DataSet
-In [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] è supportato il debug di codice [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]. Vi sono tuttavia alcune differenze tra l'esecuzione del debug di codice [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] e di codice gestito non [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]. La maggior parte delle funzionalità di debug è compatibile con le istruzioni [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)], inclusa l'esecuzione di istruzioni, l'impostazione dei punti di interruzione e la visualizzazione dei risultati nelle finestre del debugger. Posticipata, tuttavia, l'esecuzione in ha alcuni effetti collaterali che è opportuno considerare durante il debug di query [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] del codice e sono previste alcune limitazioni all'uso di modifica e continuazione. In questo argomento vengono illustrati gli aspetti del debug che sono univoci per [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] rispetto a non -[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] codice gestito.  
+
+Visual Studio supporta il debug di [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] codice. Vi sono tuttavia alcune differenze tra l'esecuzione del debug di codice [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] e di codice gestito non [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]. La maggior parte delle funzionalità di debug è compatibile con le istruzioni [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)], inclusa l'esecuzione di istruzioni, l'impostazione dei punti di interruzione e la visualizzazione dei risultati nelle finestre del debugger. Posticipata, tuttavia, l'esecuzione in ha alcuni effetti collaterali che è opportuno considerare durante il debug di query [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] del codice e sono previste alcune limitazioni all'uso di modifica e continuazione. In questo argomento vengono illustrati gli aspetti del debug che sono univoci per [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] rispetto a non -[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] codice gestito.  
   
 ## <a name="viewing-results"></a>Visualizzazione dei risultati  
  È possibile visualizzare il risultato di un [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] istruzione usando i suggerimenti dati, finestra Espressioni di controllo e la finestra di dialogo Controllo immediato. Quando si usa una finestra di origine, passare con il puntatore su una query nella finestra di origine per visualizzare un suggerimento dati. È possibile copiare una variabile [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] e incollarla nella finestra Espressioni di controllo o nella finestra di dialogo Controllo immediato. In [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] le query non vengono valutate al momento della creazione o della dichiarazione, ma solo quando vengono eseguite. Questa operazione viene definita *un'esecuzione posticipata*. La variabile della query non dispone pertanto di un valore fino a quando non viene valutata. Per altre informazioni, vedere [le query in LINQ to DataSet](../../../../docs/framework/data/adonet/queries-in-linq-to-dataset.md).  

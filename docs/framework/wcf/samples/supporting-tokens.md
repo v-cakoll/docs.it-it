@@ -2,431 +2,431 @@
 title: Token di supporto
 ms.date: 03/30/2017
 ms.assetid: 65a8905d-92cc-4ab0-b6ed-1f710e40784e
-ms.openlocfilehash: 14f1cbf628e0666f0a8e96123cafe29ba300ea78
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b5834a0ae8fa987f243617fdf291223725ed5f6d
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524815"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48261602"
 ---
 # <a name="supporting-tokens"></a>Token di supporto
-L'esempio dei token di supporto illustra come aggiungere token aggiuntivi a un messaggio che utilizza WS-Security. L'esempio aggiunge un token di sicurezza binario X.509 e un token di sicurezza nome utente. Il token viene passato in un'intestazione di un messaggio WS-Security dal client al servizio e parte del messaggio viene firmata con la chiave privata associata al token di sicurezza X.509 per provare il possesso del certificato X.509 al destinatario. Ciò è utile nel caso in cui vi sia un requisito di più richieste per autenticare o autorizzare il mittente associate a un messaggio. Il servizio implementa un contratto che definisce un modello di comunicazione richiesta/risposta.  
-  
-## <a name="demonstrates"></a>Dimostrazione  
- L'esempio illustra quanto segue:  
-  
--   Come un client può passare token di sicurezza aggiuntivi a un servizio.  
-  
--   Come il server può accedere a richieste associate ai token di sicurezza aggiuntivi.  
-  
--   Come viene usato il certificato X.509 del server per proteggere la chiave simmetrica usata per crittografare il messaggio e la firma.  
-  
+L'esempio dei token di supporto illustra come aggiungere token aggiuntivi a un messaggio che utilizza WS-Security. L'esempio aggiunge un token di sicurezza binario X.509 e un token di sicurezza nome utente. Il token viene passato in un'intestazione di un messaggio WS-Security dal client al servizio e parte del messaggio viene firmata con la chiave privata associata al token di sicurezza X.509 per provare il possesso del certificato X.509 al destinatario. Ciò è utile nel caso in cui vi sia un requisito di più richieste per autenticare o autorizzare il mittente associate a un messaggio. Il servizio implementa un contratto che definisce un modello di comunicazione richiesta/risposta.
+
+## <a name="demonstrates"></a>Dimostrazione
+ L'esempio illustra quanto segue:
+
+-   Come un client può passare token di sicurezza aggiuntivi a un servizio.
+
+-   Come il server può accedere a richieste associate ai token di sicurezza aggiuntivi.
+
+-   Come viene usato il certificato X.509 del server per proteggere la chiave simmetrica usata per crittografare il messaggio e la firma.
+
 > [!NOTE]
->  La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.  
-  
-## <a name="client-authenticates-with-username-token-and-supporting-x509-security-token"></a>Il client autentica con token nome utente e token di sicurezza X.509 di supporto  
- Il servizio espone un solo endpoint per comunicare con il servizio che viene creato a livello di codice utilizzando le classi `BindingHelper` e `EchoServiceHost`. L'endpoint è costituito da un indirizzo, un'associazione e un contratto. L'associazione è configurata con un'associazione personalizzata usando `SymmetricSecurityBindingElement` e `HttpTransportBindingElement`. Questo esempio imposta `SymmetricSecurityBindingElement` per utilizzare un certificato X.509 del servizio per proteggere la chiave simmetrica durante la trasmissione e passare un `UserNameToken` insieme a un  `X509SecurityToken` di supporto in un'intestazione del messaggio WS-Security. La chiave simmetrica viene utilizzata per crittografare il corpo del messaggio e il token di sicurezza del nome utente. Il token di supporto viene passato come un token di sicurezza binario aggiuntivo nell'intestazione del messaggio WS-Security. L'autenticità del token di supporto viene provata firmando parte del messaggio con la chiave privata associata con il token di sicurezza X.509 di supporto.  
-  
-```  
-public static Binding CreateMultiFactorAuthenticationBinding()  
-{  
-    HttpTransportBindingElement httpTransport = new HttpTransportBindingElement();  
-  
-    // the message security binding element will be configured to require 2 tokens:  
-    // 1) A username-password encrypted with the service token  
-    // 2) A client certificate used to sign the message  
-  
-    // Instantiate a binding element that will require the username/password token in the message (encrypted with the server cert)  
-    SymmetricSecurityBindingElement messageSecurity = SecurityBindingElement.CreateUserNameForCertificateBindingElement();  
-  
-    // Create supporting token parameters for the client X509 certificate.  
-    X509SecurityTokenParameters clientX509SupportingTokenParameters = new X509SecurityTokenParameters();  
-    // Specify that the supporting token is passed in message send by the client to the service  
-    clientX509SupportingTokenParameters.InclusionMode = SecurityTokenInclusionMode.AlwaysToRecipient;  
-    // Turn off derived keys  
-    clientX509SupportingTokenParameters.RequireDerivedKeys = false;  
-    // Augment the binding element to require the client's X509 certificate as an endorsing token in the message  
-    messageSecurity.EndpointSupportingTokenParameters.Endorsing.Add(clientX509SupportingTokenParameters);  
-  
-    // Create a CustomBinding based on the constructed security binding element.  
-    return new CustomBinding(messageSecurity, httpTransport);  
-}  
-```  
-  
- Il comportamento specifica le credenziali del servizio che devono essere usate per l'autenticazione del client e anche informazioni sul certificato X.509 del servizio. L'esempio utilizza `CN=localhost` come nome del soggetto nel certificato X.509 del servizio.  
-  
-```  
-override protected void InitializeRuntime()  
-{  
-    // Extract the ServiceCredentials behavior or create one.  
-    ServiceCredentials serviceCredentials =   
-        this.Description.Behaviors.Find<ServiceCredentials>();  
-    if (serviceCredentials == null)  
-    {  
-        serviceCredentials = new ServiceCredentials();  
-        this.Description.Behaviors.Add(serviceCredentials);  
-    }  
-  
-    // Set the service certificate  
-    serviceCredentials.ServiceCertificate.SetCertificate(  
-                                       "CN=localhost");  
-  
-/*  
-Setting the CertificateValidationMode to PeerOrChainTrust means that if the certificate is in the Trusted People store, then it will be trusted without performing a validation of the certificate's issuer chain. This setting is used here for convenience so that the sample can be run without having to have certificates issued by a certification authority (CA).  
-This setting is less secure than the default, ChainTrust. The security implications of this setting should be carefully considered before using PeerOrChainTrust in production code.  
-*/  
-    serviceCredentials.ClientCertificate.Authentication.CertificateValidationMode = X509CertificateValidationMode.PeerOrChainTrust;  
-  
-    // Create the custom binding and add an endpoint to the service.  
-    Binding multipleTokensBinding =  
-         BindingHelper.CreateMultiFactorAuthenticationBinding();  
-    this.AddServiceEndpoint(typeof(IEchoService),   
-                          multipleTokensBinding, string.Empty);  
-    base.InitializeRuntime();  
-}  
-```  
-  
- Codice del servizio  
-  
-```  
-[ServiceBehavior(IncludeExceptionDetailInFaults = true)]  
-public class EchoService : IEchoService  
-{  
-    public string Echo()  
-    {  
-        string userName;  
-        string certificateSubjectName;  
-        GetCallerIdentities(  
-            OperationContext.Current.ServiceSecurityContext,   
-            out userName,   
-            out certificateSubjectName);  
-            return String.Format("Hello {0}, {1}",   
-                    userName, certificateSubjectName);  
-    }  
-  
-    public void Dispose()  
-    {  
-    }  
-  
-    bool TryGetClaimValue<TClaimResource>(ClaimSet claimSet,   
-            string claimType, out TClaimResource resourceValue)  
-            where TClaimResource : class  
-    {  
-        resourceValue = default(TClaimResource);  
-        IEnumerable<Claim> matchingClaims =   
-            claimSet.FindClaims(claimType, Rights.PossessProperty);  
-        if(matchingClaims == null)  
-            return false;  
-        IEnumerator<Claim> enumerator = matchingClaims.GetEnumerator();  
-        if (enumerator.MoveNext())  
-        {  
-            resourceValue =   
-              (enumerator.Current.Resource == null) ? null :   
-              (enumerator.Current.Resource as TClaimResource);  
-            return true;  
-        }  
-        else  
-        {  
-            return false;  
-        }  
-    }  
-  
-    // Returns the username and certificate subject name provided by   
-    //the client  
-    void GetCallerIdentities(ServiceSecurityContext   
-        callerSecurityContext,   
-        out string userName, out string certificateSubjectName)  
-    {  
-        userName = null;  
-        certificateSubjectName = null;  
-  
-       // Look in all the claimsets in the authorization context  
-       foreach (ClaimSet claimSet in   
-               callerSecurityContext.AuthorizationContext.ClaimSets)  
-       {  
-            if (claimSet is WindowsClaimSet)  
-            {  
-                // Try to find a Name claim. This will have been   
-                // generated from the windows username.  
-                string tmpName;  
-                if (TryGetClaimValue<string>(claimSet, ClaimTypes.Name,   
-                                                      out tmpName))  
-                {  
-                    userName = tmpName;  
-                }  
-            }  
-            else if (claimSet is X509CertificateClaimSet)  
-            {  
-                // Try to find an X500DisinguishedName claim. This will   
-                // have been generated from the client certificate.  
-                X500DistinguishedName tmpDistinguishedName;  
-                if (TryGetClaimValue<X500DistinguishedName>(claimSet,   
-                               ClaimTypes.X500DistinguishedName,   
-                               out tmpDistinguishedName))  
-                {  
-                    certificateSubjectName = tmpDistinguishedName.Name;  
-                }  
-            }  
-        }  
-    }  
-}   
-```  
-  
- L'endpoint del client viene configurato in modo simile all'endpoint del servizio. Il client usa la stessa classe `BindingHelper` per creare un'associazione. Il resto dell'installazione è situato nella classe `Client`. Il client imposta informazioni sul token di sicurezza del nome utente, il token di sicurezza X.509 di supporto e informazioni sul certificato X.509 del servizio nel codice dell'installazione sulla raccolta dei comportamenti dell'endpoint del client.  
-  
-```  
- static void Main()  
- {  
-     // Create the custom binding and an endpoint address for   
-     // the service.  
-     Binding multipleTokensBinding =   
-         BindingHelper.CreateMultiFactorAuthenticationBinding();  
-         EndpointAddress serviceAddress = new EndpointAddress(  
-         "http://localhost/servicemodelsamples/service.svc");  
-       ChannelFactory<IEchoService> channelFactory = null;  
-       IEchoService client = null;  
-  
-       Console.WriteLine("Username authentication required.");  
-       Console.WriteLine(  
-         "Provide a valid machine or domain account. [domain\\user]");  
-       Console.WriteLine("   Enter username:");  
-       string username = Console.ReadLine();  
-       Console.WriteLine("   Enter password:");  
-       string password = "";  
-       ConsoleKeyInfo info = Console.ReadKey(true);  
-       while (info.Key != ConsoleKey.Enter)  
-       {  
-           if (info.Key != ConsoleKey.Backspace)  
-           {  
-               if (info.KeyChar != '\0')  
-               {  
-                   password += info.KeyChar;  
-                }  
-                info = Console.ReadKey(true);  
-            }  
-            else if (info.Key == ConsoleKey.Backspace)  
-            {  
-                if (password != "")  
-                {  
-                    password =   
-                       password.Substring(0, password.Length - 1);  
-                }  
-                info = Console.ReadKey(true);  
-            }  
-         }  
-         for (int i = 0; i < password.Length; i++)  
-            Console.Write("*");  
-         Console.WriteLine();  
-         try  
-         {  
-           // Create a proxy with the previously create binding and   
-           // endpoint address  
-              channelFactory =   
-                 new ChannelFactory<IEchoService>(  
-                     multipleTokensBinding, serviceAddress);  
-           // configure the username credentials, the client   
-           // certificate and the server certificate on the channel   
-           // factory   
-           channelFactory.Credentials.UserName.UserName = username;  
-           channelFactory.Credentials.UserName.Password = password;  
-           channelFactory.Credentials.ClientCertificate.SetCertificate(  
-           "CN=client.com", StoreLocation.CurrentUser, StoreName.My);  
-              channelFactory.Credentials.ServiceCertificate.SetDefaultCertificate(  
-           "CN=localhost", StoreLocation.LocalMachine, StoreName.My);  
-           client = channelFactory.CreateChannel();  
-           Console.WriteLine("Echo service returned: {0}",   
-                                           client.Echo());  
-  
-           ((IChannel)client).Close();  
-           channelFactory.Close();  
-        }  
-        catch (CommunicationException e)  
-        {  
-         Abort((IChannel)client, channelFactory);  
-         // if there is a fault then print it out  
-         FaultException fe = null;  
-         Exception tmp = e;  
-         while (tmp != null)  
-         {  
-            fe = tmp as FaultException;  
-            if (fe != null)  
-            {  
-                break;  
-            }  
-            tmp = tmp.InnerException;  
-        }  
-        if (fe != null)  
-        {  
-           Console.WriteLine("The server sent back a fault: {0}",   
-         fe.CreateMessageFault().Reason.GetMatchingTranslation().Text);  
-        }  
-        else  
-        {  
-         Console.WriteLine("The request failed with exception: {0}",e);  
-        }  
-    }  
-    catch (TimeoutException)  
-    {  
-        Abort((IChannel)client, channelFactory);  
-        Console.WriteLine("The request timed out");  
-    }  
-    catch (Exception e)  
-    {  
-         Abort((IChannel)client, channelFactory);  
-          Console.WriteLine(  
-          "The request failed with unexpected exception: {0}", e);  
-    }  
-    Console.WriteLine();  
-    Console.WriteLine("Press <ENTER> to terminate client.");  
-    Console.ReadLine();  
-}  
-```  
-  
-## <a name="displaying-callers-information"></a>Visualizzazione delle informazioni sul chiamante  
- Per visualizzare le informazioni sul chiamante è possibile utilizzare `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` come mostra il codice seguente. `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` contiene attestazioni di autorizzazione associate al chiamante corrente. Tali richieste vengono fornite automaticamente da Windows Communication Foundation (WCF) per ogni token ricevuto nel messaggio.  
-  
-```  
-bool TryGetClaimValue<TClaimResource>(ClaimSet claimSet, string   
-                         claimType, out TClaimResource resourceValue)  
-    where TClaimResource : class  
-{  
-    resourceValue = default(TClaimResource);  
-    IEnumerable<Claim> matchingClaims =   
-    claimSet.FindClaims(claimType, Rights.PossessProperty);  
-    if (matchingClaims == null)  
-          return false;  
-    IEnumerator<Claim> enumerator = matchingClaims.GetEnumerator();  
-    if (enumerator.MoveNext())  
-    {  
-        resourceValue = (enumerator.Current.Resource == null) ? null : (enumerator.Current.Resource as TClaimResource);  
-        return true;  
-    }  
-    else  
-    {  
-         return false;  
-    }  
-}  
-  
-// Returns the username and certificate subject name provided by the client  
-void GetCallerIdentities(ServiceSecurityContext callerSecurityContext, out string userName, out string certificateSubjectName)  
-{  
-    userName = null;  
-    certificateSubjectName = null;  
-  
-    // Look in all the claimsets in the authorization context  
-    foreach (ClaimSet claimSet in   
-      callerSecurityContext.AuthorizationContext.ClaimSets)  
-    {  
-        if (claimSet is WindowsClaimSet)  
-        {  
-            // Try to find a Name claim. This will have been generated   
-            //from the windows username.  
-            string tmpName;  
-            if (TryGetClaimValue<string>(claimSet, ClaimTypes.Name,   
-                                                     out tmpName))  
-            {  
-                userName = tmpName;  
-            }  
-        }  
-        else if (claimSet is X509CertificateClaimSet)  
-         {  
-            //Try to find an X500DisinguishedName claim.   
-            //This will have been generated from the client   
-            //certificate.  
-            X500DistinguishedName tmpDistinguishedName;  
-            if (TryGetClaimValue<X500DistinguishedName>(claimSet,   
-               ClaimTypes.X500DistinguishedName,   
-               out tmpDistinguishedName))  
-            {  
-                    certificateSubjectName = tmpDistinguishedName.Name;  
-            }  
-        }  
-    }  
-}  
-```  
-  
-## <a name="running-the-sample"></a>Esecuzione dell'esempio  
- Quando si esegue l'esempio, il client innanzitutto richiede nome utente e password per il token del nome utente. Assicurarsi di specificare i valori corretti per l'account di sistema, poiché WCF per il servizio esegue il mapping di valori forniti nel token del nome utente nell'identità fornita dal sistema. Successivamente, il client visualizza la risposta del servizio. Premere INVIO nella finestra del client per arrestare il client.  
-  
-## <a name="setup-batch-file"></a>File batch di installazione  
- Il file batch Setup.bat incluso in questo esempio consente di configurare il server con i certificati attinenti per eseguire un'applicazione ospitata su Internet Information Services (IIS) che richiede sicurezza server basata su certificato. Questo file batch deve essere modificato per funzionare tra più computer o in caso di applicazioni indipendenti.  
-  
- Di seguito viene fornita una breve panoramica delle varie sezioni dei file batch in modo che possano essere modificate per l'esecuzione nella configurazione appropriata.  
-  
-### <a name="creating-the-client-certificate"></a>Creazione del certificato del client  
- Le righe seguenti del file batch Setup.bat creano il certificato client da utilizzare. La variabile `%CLIENT_NAME%` specifica l'oggetto del certificato client. Questo esempio utilizza "client.com" come nome del soggetto.  
-  
- Il certificato viene memorizzato nell'archivio personale nel percorso di archivio `CurrentUser`.  
-  
-```  
-echo ************  
-echo making client cert  
-echo ************  
-makecert.exe -sr CurrentUser -ss MY -a sha1 -n CN=%CLIENT_NAME% -sky exchange -pe  
-```  
-  
-### <a name="installing-the-client-certificate-into-the-servers-trusted-store"></a>Installazione del certificato client nell'archivio certificati attendibili del server:  
- La riga seguente nel file batch Setup.bat copia il certificato client nell'archivio delle persone attendibili del server. Questo passaggio è necessario perché certificati generati da Makecert.exe non sono considerati implicitamente attendibili dal sistema server. Se è già disponibile un certificato con radice in un certificato radice client attendibile, ad esempio un certificato rilasciato da Microsoft, il passaggio del popolamento dell'archivio certificati client con il certificato server non è necessario.  
-  
-```  
-echo ************  
-echo copying client cert to server's CurrentUserstore  
-echo ************  
-certmgr.exe -add -r CurrentUser -s My -c -n %CLIENT_NAME% -r LocalMachine -s TrustedPeople  
-```  
-  
-### <a name="creating-the-server-certificate"></a>Creazione del certificato del server:  
- Le righe seguenti del file batch Setup.bat creano il certificato server da usare. La variabile `%SERVER_NAME%` specifica il nome del server. Modificare questa variabile per specificare nome del server. Il valore predefinito in questo file batch è localhost.  
-  
- Il certificato viene memorizzato nell'archivio personale nel percorso di archivio LocalMachine. Il certificato viene archiviato nell'archivio LocalMachine per i servizi ospitati su IIS. Per i servizi indipendenti, è necessario modificare il file batch per archiviare il certificato server nel percorso dell'archivio CurrentUser sostituendo la stringa LocalMachine con CurrentUser.  
-  
-```  
-echo ************  
-echo Server cert setup starting  
-echo %SERVER_NAME%  
-echo ************  
-echo making server cert  
-echo ************  
-makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe  
-```  
-  
-### <a name="installing-server-certificate-into-clients-trusted-certificate-store"></a>Installazione del certificato server nell'archivio certificati attendibili del client:  
- Le righe seguenti nel file batch Setup.bat copiano il certificato server nell'archivio di persone attendibile del client. Questo passaggio è necessario perché certificati generati da Makecert.exe non sono considerati implicitamente attendibili dal sistema client. Se è già disponibile un certificato con radice in un certificato radice client attendibile, ad esempio un certificato rilasciato da Microsoft, il passaggio del popolamento dell'archivio certificati client con il certificato server non è necessario.  
-  
-```  
-echo ************  
-echo copying server cert to client's TrustedPeople store  
-echo ************certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  
-```  
-  
-### <a name="enabling-access-to-the-certificates-private-key"></a>Abilitare l'accesso alla chiave privata del certificato  
- Per abilitare l'accesso alla chiave privata del certificato dal servizio ospitato su IIS, è necessario concedere le autorizzazioni alla chiave privata appropriate all'account utente con cui viene eseguito il processo ospitato da IIS. Questa operazione viene eseguita negli ultimi passaggi dello script Setup.bat.  
-  
-```  
-echo ************  
-echo setting privileges on server certificates  
-echo ************  
-for /F "delims=" %%i in ('"%ProgramFiles%\ServiceModelSampleTools\FindPrivateKey.exe" My LocalMachine -n CN^=%SERVER_NAME% -a') do set PRIVATE_KEY_FILE=%%i  
-set WP_ACCOUNT=NT AUTHORITY\NETWORK SERVICE  
-(ver | findstr /C:"5.1") && set WP_ACCOUNT=%COMPUTERNAME%\ASPNET  
-echo Y|cacls.exe "%PRIVATE_KEY_FILE%" /E /G "%WP_ACCOUNT%":R  
-iisreset  
-```  
-  
-##### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
-  
-1.  Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
-  
-2.  Per compilare la soluzione, seguire le istruzioni riportate in [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
-  
-3.  Per eseguire l'esempio in una configurazione con un solo computer o tra computer diversi, seguire le istruzioni seguenti.  
-  
-##### <a name="to-run-the-sample-on-the-same-machine"></a>Per eseguire l'esempio sullo stesso computer  
-  
-1.  Aprire un prompt dei comandi di [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] con privilegi di amministratore ed eseguire Setup.bat dalla cartella di installazione dell'esempio. In questo modo vengono installati tutti i certificati necessari per l'esecuzione dell'esempio.  
-  
+>  La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.
+
+## <a name="client-authenticates-with-username-token-and-supporting-x509-security-token"></a>Il client autentica con token nome utente e token di sicurezza X.509 di supporto
+ Il servizio espone un solo endpoint per comunicare con il servizio che viene creato a livello di codice utilizzando le classi `BindingHelper` e `EchoServiceHost`. L'endpoint è costituito da un indirizzo, un'associazione e un contratto. L'associazione è configurata con un'associazione personalizzata usando `SymmetricSecurityBindingElement` e `HttpTransportBindingElement`. Questo esempio imposta `SymmetricSecurityBindingElement` per utilizzare un certificato X.509 del servizio per proteggere la chiave simmetrica durante la trasmissione e passare un `UserNameToken` insieme a un  `X509SecurityToken` di supporto in un'intestazione del messaggio WS-Security. La chiave simmetrica viene utilizzata per crittografare il corpo del messaggio e il token di sicurezza del nome utente. Il token di supporto viene passato come un token di sicurezza binario aggiuntivo nell'intestazione del messaggio WS-Security. L'autenticità del token di supporto viene provata firmando parte del messaggio con la chiave privata associata con il token di sicurezza X.509 di supporto.
+
+```
+public static Binding CreateMultiFactorAuthenticationBinding()
+{
+    HttpTransportBindingElement httpTransport = new HttpTransportBindingElement();
+
+    // the message security binding element will be configured to require 2 tokens:
+    // 1) A username-password encrypted with the service token
+    // 2) A client certificate used to sign the message
+
+    // Instantiate a binding element that will require the username/password token in the message (encrypted with the server cert)
+    SymmetricSecurityBindingElement messageSecurity = SecurityBindingElement.CreateUserNameForCertificateBindingElement();
+
+    // Create supporting token parameters for the client X509 certificate.
+    X509SecurityTokenParameters clientX509SupportingTokenParameters = new X509SecurityTokenParameters();
+    // Specify that the supporting token is passed in message send by the client to the service
+    clientX509SupportingTokenParameters.InclusionMode = SecurityTokenInclusionMode.AlwaysToRecipient;
+    // Turn off derived keys
+    clientX509SupportingTokenParameters.RequireDerivedKeys = false;
+    // Augment the binding element to require the client's X509 certificate as an endorsing token in the message
+    messageSecurity.EndpointSupportingTokenParameters.Endorsing.Add(clientX509SupportingTokenParameters);
+
+    // Create a CustomBinding based on the constructed security binding element.
+    return new CustomBinding(messageSecurity, httpTransport);
+}
+```
+
+ Il comportamento specifica le credenziali del servizio che devono essere usate per l'autenticazione del client e anche informazioni sul certificato X.509 del servizio. L'esempio utilizza `CN=localhost` come nome del soggetto nel certificato X.509 del servizio.
+
+```
+override protected void InitializeRuntime()
+{
+    // Extract the ServiceCredentials behavior or create one.
+    ServiceCredentials serviceCredentials =
+        this.Description.Behaviors.Find<ServiceCredentials>();
+    if (serviceCredentials == null)
+    {
+        serviceCredentials = new ServiceCredentials();
+        this.Description.Behaviors.Add(serviceCredentials);
+    }
+
+    // Set the service certificate
+    serviceCredentials.ServiceCertificate.SetCertificate(
+                                       "CN=localhost");
+
+/*
+Setting the CertificateValidationMode to PeerOrChainTrust means that if the certificate is in the Trusted People store, then it will be trusted without performing a validation of the certificate's issuer chain. This setting is used here for convenience so that the sample can be run without having to have certificates issued by a certification authority (CA).
+This setting is less secure than the default, ChainTrust. The security implications of this setting should be carefully considered before using PeerOrChainTrust in production code.
+*/
+    serviceCredentials.ClientCertificate.Authentication.CertificateValidationMode = X509CertificateValidationMode.PeerOrChainTrust;
+
+    // Create the custom binding and add an endpoint to the service.
+    Binding multipleTokensBinding =
+         BindingHelper.CreateMultiFactorAuthenticationBinding();
+    this.AddServiceEndpoint(typeof(IEchoService),
+                          multipleTokensBinding, string.Empty);
+    base.InitializeRuntime();
+}
+```
+
+ Codice del servizio
+
+```
+[ServiceBehavior(IncludeExceptionDetailInFaults = true)]
+public class EchoService : IEchoService
+{
+    public string Echo()
+    {
+        string userName;
+        string certificateSubjectName;
+        GetCallerIdentities(
+            OperationContext.Current.ServiceSecurityContext,
+            out userName,
+            out certificateSubjectName);
+            return String.Format("Hello {0}, {1}",
+                    userName, certificateSubjectName);
+    }
+
+    public void Dispose()
+    {
+    }
+
+    bool TryGetClaimValue<TClaimResource>(ClaimSet claimSet,
+            string claimType, out TClaimResource resourceValue)
+            where TClaimResource : class
+    {
+        resourceValue = default(TClaimResource);
+        IEnumerable<Claim> matchingClaims =
+            claimSet.FindClaims(claimType, Rights.PossessProperty);
+        if(matchingClaims == null)
+            return false;
+        IEnumerator<Claim> enumerator = matchingClaims.GetEnumerator();
+        if (enumerator.MoveNext())
+        {
+            resourceValue =
+              (enumerator.Current.Resource == null) ? null :
+              (enumerator.Current.Resource as TClaimResource);
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    // Returns the username and certificate subject name provided by
+    //the client
+    void GetCallerIdentities(ServiceSecurityContext
+        callerSecurityContext,
+        out string userName, out string certificateSubjectName)
+    {
+        userName = null;
+        certificateSubjectName = null;
+
+       // Look in all the claimsets in the authorization context
+       foreach (ClaimSet claimSet in
+               callerSecurityContext.AuthorizationContext.ClaimSets)
+       {
+            if (claimSet is WindowsClaimSet)
+            {
+                // Try to find a Name claim. This will have been
+                // generated from the windows username.
+                string tmpName;
+                if (TryGetClaimValue<string>(claimSet, ClaimTypes.Name,
+                                                      out tmpName))
+                {
+                    userName = tmpName;
+                }
+            }
+            else if (claimSet is X509CertificateClaimSet)
+            {
+                // Try to find an X500DisinguishedName claim. This will
+                // have been generated from the client certificate.
+                X500DistinguishedName tmpDistinguishedName;
+                if (TryGetClaimValue<X500DistinguishedName>(claimSet,
+                               ClaimTypes.X500DistinguishedName,
+                               out tmpDistinguishedName))
+                {
+                    certificateSubjectName = tmpDistinguishedName.Name;
+                }
+            }
+        }
+    }
+}
+```
+
+ L'endpoint del client viene configurato in modo simile all'endpoint del servizio. Il client usa la stessa classe `BindingHelper` per creare un'associazione. Il resto dell'installazione è situato nella classe `Client`. Il client imposta informazioni sul token di sicurezza del nome utente, il token di sicurezza X.509 di supporto e informazioni sul certificato X.509 del servizio nel codice dell'installazione sulla raccolta dei comportamenti dell'endpoint del client.
+
+```
+ static void Main()
+ {
+     // Create the custom binding and an endpoint address for
+     // the service.
+     Binding multipleTokensBinding =
+         BindingHelper.CreateMultiFactorAuthenticationBinding();
+         EndpointAddress serviceAddress = new EndpointAddress(
+         "http://localhost/servicemodelsamples/service.svc");
+       ChannelFactory<IEchoService> channelFactory = null;
+       IEchoService client = null;
+
+       Console.WriteLine("Username authentication required.");
+       Console.WriteLine(
+         "Provide a valid machine or domain account. [domain\\user]");
+       Console.WriteLine("   Enter username:");
+       string username = Console.ReadLine();
+       Console.WriteLine("   Enter password:");
+       string password = "";
+       ConsoleKeyInfo info = Console.ReadKey(true);
+       while (info.Key != ConsoleKey.Enter)
+       {
+           if (info.Key != ConsoleKey.Backspace)
+           {
+               if (info.KeyChar != '\0')
+               {
+                   password += info.KeyChar;
+                }
+                info = Console.ReadKey(true);
+            }
+            else if (info.Key == ConsoleKey.Backspace)
+            {
+                if (password != "")
+                {
+                    password =
+                       password.Substring(0, password.Length - 1);
+                }
+                info = Console.ReadKey(true);
+            }
+         }
+         for (int i = 0; i < password.Length; i++)
+            Console.Write("*");
+         Console.WriteLine();
+         try
+         {
+           // Create a proxy with the previously create binding and
+           // endpoint address
+              channelFactory =
+                 new ChannelFactory<IEchoService>(
+                     multipleTokensBinding, serviceAddress);
+           // configure the username credentials, the client
+           // certificate and the server certificate on the channel
+           // factory
+           channelFactory.Credentials.UserName.UserName = username;
+           channelFactory.Credentials.UserName.Password = password;
+           channelFactory.Credentials.ClientCertificate.SetCertificate(
+           "CN=client.com", StoreLocation.CurrentUser, StoreName.My);
+              channelFactory.Credentials.ServiceCertificate.SetDefaultCertificate(
+           "CN=localhost", StoreLocation.LocalMachine, StoreName.My);
+           client = channelFactory.CreateChannel();
+           Console.WriteLine("Echo service returned: {0}",
+                                           client.Echo());
+
+           ((IChannel)client).Close();
+           channelFactory.Close();
+        }
+        catch (CommunicationException e)
+        {
+         Abort((IChannel)client, channelFactory);
+         // if there is a fault then print it out
+         FaultException fe = null;
+         Exception tmp = e;
+         while (tmp != null)
+         {
+            fe = tmp as FaultException;
+            if (fe != null)
+            {
+                break;
+            }
+            tmp = tmp.InnerException;
+        }
+        if (fe != null)
+        {
+           Console.WriteLine("The server sent back a fault: {0}",
+         fe.CreateMessageFault().Reason.GetMatchingTranslation().Text);
+        }
+        else
+        {
+         Console.WriteLine("The request failed with exception: {0}",e);
+        }
+    }
+    catch (TimeoutException)
+    {
+        Abort((IChannel)client, channelFactory);
+        Console.WriteLine("The request timed out");
+    }
+    catch (Exception e)
+    {
+         Abort((IChannel)client, channelFactory);
+          Console.WriteLine(
+          "The request failed with unexpected exception: {0}", e);
+    }
+    Console.WriteLine();
+    Console.WriteLine("Press <ENTER> to terminate client.");
+    Console.ReadLine();
+}
+```
+
+## <a name="displaying-callers-information"></a>Visualizzazione delle informazioni sul chiamante
+ Per visualizzare le informazioni sul chiamante è possibile utilizzare `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` come mostra il codice seguente. `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` contiene attestazioni di autorizzazione associate al chiamante corrente. Tali richieste vengono fornite automaticamente da Windows Communication Foundation (WCF) per ogni token ricevuto nel messaggio.
+
+```
+bool TryGetClaimValue<TClaimResource>(ClaimSet claimSet, string
+                         claimType, out TClaimResource resourceValue)
+    where TClaimResource : class
+{
+    resourceValue = default(TClaimResource);
+    IEnumerable<Claim> matchingClaims =
+    claimSet.FindClaims(claimType, Rights.PossessProperty);
+    if (matchingClaims == null)
+          return false;
+    IEnumerator<Claim> enumerator = matchingClaims.GetEnumerator();
+    if (enumerator.MoveNext())
+    {
+        resourceValue = (enumerator.Current.Resource == null) ? null : (enumerator.Current.Resource as TClaimResource);
+        return true;
+    }
+    else
+    {
+         return false;
+    }
+}
+
+// Returns the username and certificate subject name provided by the client
+void GetCallerIdentities(ServiceSecurityContext callerSecurityContext, out string userName, out string certificateSubjectName)
+{
+    userName = null;
+    certificateSubjectName = null;
+
+    // Look in all the claimsets in the authorization context
+    foreach (ClaimSet claimSet in
+      callerSecurityContext.AuthorizationContext.ClaimSets)
+    {
+        if (claimSet is WindowsClaimSet)
+        {
+            // Try to find a Name claim. This will have been generated
+            //from the windows username.
+            string tmpName;
+            if (TryGetClaimValue<string>(claimSet, ClaimTypes.Name,
+                                                     out tmpName))
+            {
+                userName = tmpName;
+            }
+        }
+        else if (claimSet is X509CertificateClaimSet)
+         {
+            //Try to find an X500DisinguishedName claim.
+            //This will have been generated from the client
+            //certificate.
+            X500DistinguishedName tmpDistinguishedName;
+            if (TryGetClaimValue<X500DistinguishedName>(claimSet,
+               ClaimTypes.X500DistinguishedName,
+               out tmpDistinguishedName))
+            {
+                    certificateSubjectName = tmpDistinguishedName.Name;
+            }
+        }
+    }
+}
+```
+
+## <a name="running-the-sample"></a>Esecuzione dell'esempio
+ Quando si esegue l'esempio, il client innanzitutto richiede nome utente e password per il token del nome utente. Assicurarsi di specificare i valori corretti per l'account di sistema, poiché WCF per il servizio esegue il mapping di valori forniti nel token del nome utente nell'identità fornita dal sistema. Successivamente, il client visualizza la risposta del servizio. Premere INVIO nella finestra del client per arrestare il client.
+
+## <a name="setup-batch-file"></a>File batch di installazione
+ Il file batch Setup.bat incluso in questo esempio consente di configurare il server con i certificati attinenti per eseguire un'applicazione ospitata su Internet Information Services (IIS) che richiede sicurezza server basata su certificato. Questo file batch deve essere modificato per funzionare tra più computer o in caso di applicazioni indipendenti.
+
+ Di seguito viene fornita una breve panoramica delle varie sezioni dei file batch in modo che possano essere modificate per l'esecuzione nella configurazione appropriata.
+
+### <a name="creating-the-client-certificate"></a>Creazione del certificato del client
+ Le righe seguenti del file batch Setup.bat creano il certificato client da utilizzare. La variabile `%CLIENT_NAME%` specifica l'oggetto del certificato client. Questo esempio utilizza "client.com" come nome del soggetto.
+
+ Il certificato viene memorizzato nell'archivio personale nel percorso di archivio `CurrentUser`.
+
+```
+echo ************
+echo making client cert
+echo ************
+makecert.exe -sr CurrentUser -ss MY -a sha1 -n CN=%CLIENT_NAME% -sky exchange -pe
+```
+
+### <a name="installing-the-client-certificate-into-the-servers-trusted-store"></a>Installazione del certificato client nell'archivio certificati attendibili del server:
+ La riga seguente nel file batch Setup.bat copia il certificato client nell'archivio delle persone attendibili del server. Questo passaggio è necessario perché certificati generati da Makecert.exe non sono considerati implicitamente attendibili dal sistema server. Se è già disponibile un certificato con radice in un certificato radice client attendibile, ad esempio un certificato rilasciato da Microsoft, il passaggio del popolamento dell'archivio certificati client con il certificato server non è necessario.
+
+```
+echo ************
+echo copying client cert to server's CurrentUserstore
+echo ************
+certmgr.exe -add -r CurrentUser -s My -c -n %CLIENT_NAME% -r LocalMachine -s TrustedPeople
+```
+
+### <a name="creating-the-server-certificate"></a>Creazione del certificato del server:
+ Le righe seguenti del file batch Setup.bat creano il certificato server da usare. La variabile `%SERVER_NAME%` specifica il nome del server. Modificare questa variabile per specificare nome del server. Il valore predefinito in questo file batch è localhost.
+
+ Il certificato viene memorizzato nell'archivio personale nel percorso di archivio LocalMachine. Il certificato viene archiviato nell'archivio LocalMachine per i servizi ospitati su IIS. Per i servizi indipendenti, è necessario modificare il file batch per archiviare il certificato server nel percorso dell'archivio CurrentUser sostituendo la stringa LocalMachine con CurrentUser.
+
+```
+echo ************
+echo Server cert setup starting
+echo %SERVER_NAME%
+echo ************
+echo making server cert
+echo ************
+makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
+```
+
+### <a name="installing-server-certificate-into-clients-trusted-certificate-store"></a>Installazione del certificato server nell'archivio certificati attendibili del client:
+ Le righe seguenti nel file batch Setup.bat copiano il certificato server nell'archivio di persone attendibile del client. Questo passaggio è necessario perché certificati generati da Makecert.exe non sono considerati implicitamente attendibili dal sistema client. Se è già disponibile un certificato con radice in un certificato radice client attendibile, ad esempio un certificato rilasciato da Microsoft, il passaggio del popolamento dell'archivio certificati client con il certificato server non è necessario.
+
+```
+echo ************
+echo copying server cert to client's TrustedPeople store
+echo ************certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople
+```
+
+### <a name="enabling-access-to-the-certificates-private-key"></a>Abilitare l'accesso alla chiave privata del certificato
+ Per abilitare l'accesso alla chiave privata del certificato dal servizio ospitato su IIS, è necessario concedere le autorizzazioni alla chiave privata appropriate all'account utente con cui viene eseguito il processo ospitato da IIS. Questa operazione viene eseguita negli ultimi passaggi dello script Setup.bat.
+
+```
+echo ************
+echo setting privileges on server certificates
+echo ************
+for /F "delims=" %%i in ('"%ProgramFiles%\ServiceModelSampleTools\FindPrivateKey.exe" My LocalMachine -n CN^=%SERVER_NAME% -a') do set PRIVATE_KEY_FILE=%%i
+set WP_ACCOUNT=NT AUTHORITY\NETWORK SERVICE
+(ver | findstr /C:"5.1") && set WP_ACCOUNT=%COMPUTERNAME%\ASPNET
+echo Y|cacls.exe "%PRIVATE_KEY_FILE%" /E /G "%WP_ACCOUNT%":R
+iisreset
+```
+
+##### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio
+
+1.  Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+
+2.  Per compilare la soluzione, seguire le istruzioni riportate in [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).
+
+3.  Per eseguire l'esempio in una configurazione con un solo computer o tra computer diversi, seguire le istruzioni seguenti.
+
+##### <a name="to-run-the-sample-on-the-same-machine"></a>Per eseguire l'esempio sullo stesso computer
+
+1.  Eseguire Setup. bat dalla cartella di installazione dell'esempio all'interno di un prompt dei comandi di Visual Studio 2012 eseguito con privilegi di amministratore. In questo modo vengono installati tutti i certificati necessari per l'esecuzione dell'esempio.
+
     > [!NOTE]
-    >  Il file batch Setup.bat è progettato per essere eseguito da un prompt dei comandi di [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]. La variabile di ambiente PATH impostata nel prompt dei comandi di [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] punta alla directory che contiene file eseguibili richiesti dallo script Setup.bat. Assicurarsi di rimuovere i certificati eseguendo Cleanup.bat una volta completato l'esempio. Negli altri esempi relativi alla sicurezza vengono usati gli stessi certificati.  
+    >  Il file batch Setup. bat è progettato per essere eseguito dal Prompt dei comandi un Visual Studio 2012. Variabile di ambiente PATH impostata all'interno di punti di Prompt dei comandi di Visual Studio 2012 per la directory che contiene file eseguibili richiesti dallo script Setup. bat. Assicurarsi di rimuovere i certificati eseguendo Cleanup.bat una volta completato l'esempio. Negli altri esempi relativi alla sicurezza vengono usati gli stessi certificati.  
   
 2.  Avviare Client.exe da \client\bin. L'attività del client viene visualizzata nella finestra dell'applicazione console.  
   
@@ -465,6 +465,6 @@ iisreset
 -   Eseguire Cleanup.bat nella cartella degli esempi una volta completato l'esempio.  
   
 > [!NOTE]
->  Questo script non rimuove i certificati del servizio su un client quando si esegue questo esempio tra più computer. Se è stato eseguito gli esempi WCF che usano certificati tra più computer, assicurarsi di cancellare i certificati del servizio che sono stati installati nell'archivio CurrentUser - TrustedPeople. Per eseguire questa operazione, usare il seguente comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Ad esempio: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
-  
+>  Questo script non rimuove i certificati del servizio su un client quando si esegue questo esempio tra più computer. Se è stato eseguito gli esempi WCF che usano certificati tra più computer, assicurarsi di cancellare i certificati del servizio che sono stati installati nell'archivio CurrentUser - TrustedPeople. Per eseguire questa operazione, usare il seguente comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Ad esempio: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.
+
 ## <a name="see-also"></a>Vedere anche

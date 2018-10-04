@@ -2,16 +2,16 @@
 title: Processo di approvazione dei documenti
 ms.date: 03/30/2017
 ms.assetid: 9b240937-76a7-45cd-8823-7f82c34d03bd
-ms.openlocfilehash: 874ee560407c3054b4f270a35e5100eaf9e174b8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 34b63acaacde274210343a1135f3ed39a2df885e
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508930"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48582710"
 ---
 # <a name="document-approval-process"></a>Processo di approvazione dei documenti
-In questo esempio illustra l'uso di molte funzionalità di Windows Workflow Foundation (WF) e Windows Communication Foundation (WCF) tra loro. Insieme implementano uno scenario del processo di approvazione dei documenti. Un'applicazione client può inviare documenti da sottoporre ad approvazione e approvare documenti. Un'applicazione di gestione delle approvazioni è utile per semplificare le comunicazioni tra i client e per applicare le regole del processo di approvazione che consiste in un flusso di lavoro che può eseguire molti tipi di approvazione. Le attività servono per ottenere un processo di approvazione singola, di approvazione a quorum (una percentuale del gruppo di responsabili approvazione) e di approvazione complessa costituito da un'approvazione a quorum e una singola in sequenza.  
-  
+In questo esempio illustra l'uso di molte funzionalità di Windows Workflow Foundation (WF) e Windows Communication Foundation (WCF) tra loro. Insieme implementano uno scenario del processo di approvazione dei documenti. Un'applicazione client può inviare documenti da sottoporre ad approvazione e approvare documenti. Un'applicazione di gestione delle approvazioni è utile per semplificare le comunicazioni tra i client e per applicare le regole del processo di approvazione che consiste in un flusso di lavoro che può eseguire molti tipi di approvazione. Le attività servono per ottenere un processo di approvazione singola, di approvazione a quorum (una percentuale del gruppo di responsabili approvazione) e di approvazione complessa costituito da un'approvazione a quorum e una singola in sequenza.
+
 > [!IMPORTANT]
 >  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
 >   
@@ -80,11 +80,11 @@ In questo esempio illustra l'uso di molte funzionalità di Windows Workflow Foun
   
 ##### <a name="to-set-up-the-database"></a>Per impostare il database  
   
-1.  Aprire un prompt dei comandi di [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] con privilegi di amministratore ed eseguire Setup.cmd dalla cartella DocumentApprovalProcess.  
+1.  Da un prompt dei comandi di Visual Studio 2010 aperto con privilegi di amministratore, passare alla cartella DocumentApprovalProcess ed eseguire Setup. cmd.  
   
 ##### <a name="to-set-up-the-application"></a>Per impostare l'applicazione  
   
-1.  In [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] aprire il file della soluzione DocumentApprovalProcess.sln.  
+1.  Con Visual Studio 2010, aprire il file della soluzione Documentapprovalprocess.  
   
 2.  Per compilare la soluzione, premere CTRL+MAIUSC+B.  
   
@@ -146,4 +146,4 @@ In questo esempio illustra l'uso di molte funzionalità di Windows Workflow Foun
   
 ##### <a name="to-clean-up"></a>Per eseguire la pulizia  
   
-1.  Da un prompt dei comandi di [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], passare alla cartella DocumentApprovalProcess ed eseguire Cleanup.cmd.
+1.  Da un prompt dei comandi di Visual Studio 2010, passare alla cartella DocumentApprovalProcess ed eseguire Cleanup.

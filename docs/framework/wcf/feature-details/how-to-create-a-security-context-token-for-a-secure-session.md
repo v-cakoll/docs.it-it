@@ -7,11 +7,11 @@ dev_langs:
 ms.assetid: 640676b6-c75a-4ff7-aea4-b1a1524d71b2
 author: BrucePerlerMS
 ms.openlocfilehash: 85954dd89bdb576b68d234a364a406a6e0d2145b
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48030350"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48261316"
 ---
 # <a name="how-to-create-a-security-context-token-for-a-secure-session"></a>Procedura: creare un token di contesto di sicurezza per una sessione sicura
 Per evitare la perdita di una determinata sessione protetta quando il servizio viene riciclato, è possibile utilizzare in tale sessione un token di contesto di sicurezza (SCT, Security Context Token) con stato. Ad esempio, quando in una sessione protetta si utilizza un token SCT senza stato e si reimposta Internet Information Services (IIS), i dati di sessione associati al servizio vengono persi. Questi dati di sessione comprendono una cache del token SCT. Pertanto, quando un client invia al servizio un token SCT senza stato, viene restituito un errore, in quanto risulta impossibile recuperare la chiave associata al token SCT. Se tuttavia si utilizza un token SCT con stato, la relativa chiave associata è contenuta nel token SCT e quindi nel messaggio. Ne consegue che in questo caso il riciclo del servizio non influisce sulla sessione protetta. Per impostazione predefinita, Windows Communication Foundation (WCF) utilizza token SCT senza stato in una sessione protetta. In questo argomento viene descritto in modo dettagliato come utilizzare token SCT con stato in una sessione protetta.  

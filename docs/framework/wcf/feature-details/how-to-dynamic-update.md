@@ -3,11 +3,11 @@ title: 'Procedura: aggiornamento dinamico'
 ms.date: 03/30/2017
 ms.assetid: 9b8f6e0d-edab-4a7e-86e3-8c66bebc64bb
 ms.openlocfilehash: 597a4f8776398769307214090a8b463981bc0d46
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47399281"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48777143"
 ---
 # <a name="how-to-dynamic-update"></a>Procedura: aggiornamento dinamico
 In questo argomento vengono descritti i passaggi di base necessari per creare e aggiornare in modo dinamico la configurazione del routing. In questo esempio, la configurazione iniziale del routing viene ottenuta dal file di configurazione e indirizza tutti i messaggi al servizio di calcolo regularCalc. Viene tuttavia aggiornata in un secondo momento a livello di codice per modificare l'endpoint di destinazione del servizio roundingCalc.  

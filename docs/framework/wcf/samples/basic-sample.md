@@ -2,16 +2,16 @@
 title: Esempio di base
 ms.date: 03/30/2017
 ms.assetid: c1910bc1-3d0a-4fa6-b12a-4ed6fe759620
-ms.openlocfilehash: 8c99b4955dcc00015d54391dcb509b312190ddab
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 29edc8acb0293210e66e31660e3215220440fbae
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508709"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48580316"
 ---
 # <a name="basic-sample"></a>Esempio di base
-In questo esempio viene illustrato come rendere individuabile un servizio e come cercare e chiamare un servizio individuabile. Questo esempio è costituito da due progetti, ovvero il servizio e il client.  
-  
+In questo esempio viene illustrato come rendere individuabile un servizio e come cercare e chiamare un servizio individuabile. Questo esempio è costituito da due progetti, ovvero il servizio e il client.
+
 > [!NOTE]
 >  In questo esempio l'individuazione viene implementata nel codice.  Per un esempio che implementa l'individuazione nella configurazione, vedere [configurazione](../../../../docs/framework/wcf/samples/configuration-sample.md).  
   
@@ -84,7 +84,7 @@ static void InvokeCalculatorService(ServiceEndpoint serviceEndpoint)
   
 1.  Questo esempio usa endpoint HTTP e per eseguirlo è necessario aggiungere elenchi di controllo di accesso (ACL) agli URL appropriati. Per altre informazioni, vedere [Configuring HTTP and HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353). L'esecuzione del comando seguente con privilegi elevati consente di aggiungere gli elenchi di controllo di accesso appropriati. È possibile che si desideri sostituire il dominio e il nome utente per gli argomenti seguenti quando il comando non funziona nella forma originale. `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
-2.  Aprire Basic.sln e compilare l'esempio usando [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
+2.  In Visual Studio 2012 aprire sln e compilare l'esempio.  
   
 3.  Eseguire l'applicazione service.exe.  
   

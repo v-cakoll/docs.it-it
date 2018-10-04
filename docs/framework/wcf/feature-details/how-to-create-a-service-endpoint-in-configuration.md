@@ -2,12 +2,12 @@
 title: 'Procedura: creare un endpoint di servizio nella configurazione'
 ms.date: 06/16/2016
 ms.assetid: f474e25d-2a27-4f31-84c5-395c442b8e70
-ms.openlocfilehash: f1a2696e2aeb8d0c704d008b064a8f8c8b0745d5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 63a40576b805952197cec5af2f89a5dc4b5d3545
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33490227"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48266273"
 ---
 # <a name="how-to-create-a-service-endpoint-in-configuration"></a>Procedura: creare un endpoint di servizio nella configurazione
 Gli endpoint forniscono ai client l'accesso alla funzionalità che offre un servizio Windows Communication Foundation (WCF). È possibile definire uno o più endpoint per un servizio usando una combinazione di indirizzi di endpoint assoluti e relativi. In alternativa, se non si definisce alcun endpoint per il servizio, il runtime ne fornirà automaticamente alcuni per impostazione predefinita. In questo argomento viene illustrato come aggiungere endpoint usando un file di configurazione che contiene indirizzi sia relativi che assoluti.  
@@ -83,7 +83,7 @@ Gli endpoint forniscono ai client l'accesso alla funzionalità che offre un serv
 ```  
   
 ## <a name="example"></a>Esempio  
- La prima definizione dell'endpoint descritta nella configurazione di esempio seguente specifica un indirizzo relativo, che indica che l'indirizzo endpoint è una combinazione dell'indirizzo di base e dell'indirizzo relativo, in base alle regole di composizione URI (Uniform Resource Identifier). L'indirizzo relativo è vuoto (""), pertanto l'indirizzo endpoint corrisponde all'indirizzo di base. L'indirizzo endpoint effettivo è http://localhost:8000/servicemodelsamples/service.  
+ La prima definizione dell'endpoint descritta nella configurazione di esempio seguente specifica un indirizzo relativo, che indica che l'indirizzo endpoint è una combinazione dell'indirizzo di base e dell'indirizzo relativo, in base alle regole di composizione URI (Uniform Resource Identifier). L'indirizzo relativo è vuoto (""), pertanto l'indirizzo endpoint corrisponde all'indirizzo di base. L'indirizzo endpoint effettivo è `http://localhost:8000/servicemodelsamples/service`.  
   
 ```xml  
 <endpoint address=""   
@@ -92,7 +92,7 @@ Gli endpoint forniscono ai client l'accesso alla funzionalità che offre un serv
 ```  
   
 ## <a name="example"></a>Esempio  
- Anche la seconda definizione dell'endpoint specifica un indirizzo relativo, come illustrato nell'esempio di configurazione seguente. L'indirizzo relativo, "test", viene accodato all'indirizzo di base. L'indirizzo endpoint effettivo è http://localhost:8000/servicemodelsamples/service/test.  
+ Anche la seconda definizione dell'endpoint specifica un indirizzo relativo, come illustrato nell'esempio di configurazione seguente. L'indirizzo relativo, "test", viene accodato all'indirizzo di base. L'indirizzo endpoint effettivo è `http://localhost:8000/servicemodelsamples/service/test`.  
   
 ```xml  
 <endpoint address="/test"  
@@ -101,7 +101,7 @@ Gli endpoint forniscono ai client l'accesso alla funzionalità che offre un serv
 ```  
   
 ## <a name="example"></a>Esempio  
- La terza definizione dell'endpoint specifica un indirizzo assoluto, come illustrato nell'esempio di configurazione seguente. L'indirizzo di base non ha alcun ruolo nell'indirizzo. L'indirizzo endpoint effettivo è http://localhost:8001/hello/servicemodelsamples.  
+ La terza definizione dell'endpoint specifica un indirizzo assoluto, come illustrato nell'esempio di configurazione seguente. L'indirizzo di base non ha alcun ruolo nell'indirizzo. L'indirizzo endpoint effettivo è `http://localhost:8001/hello/servicemodelsamples`.  
   
 ```xml  
 <endpoint address="http://localhost:8001/hello/servicemodelsamples"  
@@ -119,7 +119,7 @@ Gli endpoint forniscono ai client l'accesso alla funzionalità che offre un serv
 ```  
   
 ## <a name="example"></a>Esempio  
- Per usare gli endpoint predefiniti forniti dal runtime, non specificare alcun endpoint del servizio nel codice né nel file di configurazione. In questo esempio, il runtime crea gli endpoint predefiniti all'apertura del servizio. Per ulteriori informazioni sull'endpoint predefiniti, associazioni e comportamenti, vedere [configurazione semplificata](../../../../docs/framework/wcf/simplified-configuration.md) e [configurazione semplificata per i servizi WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+ Per usare gli endpoint predefiniti forniti dal runtime, non specificare alcun endpoint del servizio nel codice né nel file di configurazione. In questo esempio, il runtime crea gli endpoint predefiniti all'apertura del servizio. Per altre informazioni su endpoint, associazioni e comportamenti predefiniti, vedere [Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md) (Configurazione semplificata) e [Simplified Configuration for WCF Services](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md) (Configurazione semplificata per servizi WCF).  
   
 ```xml  
 <configuration>  
