@@ -2,24 +2,24 @@
 title: '&lt;transport&gt; di &lt;netPeerTcpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: c44d86d2-1160-44d7-9c7a-297b12eccc7f
-ms.openlocfilehash: 2b89ae090d24ff6aad1aae1b39a0a18961bd2537
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 62ba3b27b10afe182623f3be0f6738940e194579
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45678045"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48579790"
 ---
-# <a name="lttransportgt-of-ltnetpeertcpbindinggt"></a><span data-ttu-id="88cf1-102">&lt;transport&gt; di &lt;netPeerTcpBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="88cf1-102">&lt;transport&gt; of &lt;netPeerTcpBinding&gt;</span></span>
-<span data-ttu-id="88cf1-103">Specifica le impostazioni per la sicurezza a livello di trasporto quando si usa la [ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md).</span><span class="sxs-lookup"><span data-stu-id="88cf1-103">Specifies settings for transport level security when using the [\<netPeerTcpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md).</span></span>  
+# <a name="lttransportgt-of-ltnetpeertcpbindinggt"></a><span data-ttu-id="ad016-102">&lt;transport&gt; di &lt;netPeerTcpBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="ad016-102">&lt;transport&gt; of &lt;netPeerTcpBinding&gt;</span></span>
+<span data-ttu-id="ad016-103">Specifica le impostazioni per la sicurezza a livello di trasporto quando si usa la [ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md).</span><span class="sxs-lookup"><span data-stu-id="ad016-103">Specifies settings for transport level security when using the [\<netPeerTcpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md).</span></span>  
   
- <span data-ttu-id="88cf1-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="88cf1-104">\<system.ServiceModel></span></span>  
-<span data-ttu-id="88cf1-105">\<le associazioni ></span><span class="sxs-lookup"><span data-stu-id="88cf1-105">\<bindings></span></span>  
-<span data-ttu-id="88cf1-106">\<netPeerTcpBinding></span><span class="sxs-lookup"><span data-stu-id="88cf1-106">\<netPeerTcpBinding></span></span>  
-<span data-ttu-id="88cf1-107">\<binding></span><span class="sxs-lookup"><span data-stu-id="88cf1-107">\<binding></span></span>  
-<span data-ttu-id="88cf1-108">\<security></span><span class="sxs-lookup"><span data-stu-id="88cf1-108">\<security></span></span>  
-<span data-ttu-id="88cf1-109">\<trasporto ></span><span class="sxs-lookup"><span data-stu-id="88cf1-109">\<transport></span></span>  
+ <span data-ttu-id="ad016-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="ad016-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="ad016-105">\<le associazioni ></span><span class="sxs-lookup"><span data-stu-id="ad016-105">\<bindings></span></span>  
+<span data-ttu-id="ad016-106">\<netPeerTcpBinding></span><span class="sxs-lookup"><span data-stu-id="ad016-106">\<netPeerTcpBinding></span></span>  
+<span data-ttu-id="ad016-107">\<binding></span><span class="sxs-lookup"><span data-stu-id="ad016-107">\<binding></span></span>  
+<span data-ttu-id="ad016-108">\<security></span><span class="sxs-lookup"><span data-stu-id="ad016-108">\<security></span></span>  
+<span data-ttu-id="ad016-109">\<trasporto ></span><span class="sxs-lookup"><span data-stu-id="ad016-109">\<transport></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="88cf1-110">Sintassi</span><span class="sxs-lookup"><span data-stu-id="88cf1-110">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ad016-110">Sintassi</span><span class="sxs-lookup"><span data-stu-id="ad016-110">Syntax</span></span>  
   
 ```xml  
 <netPeerTcpBinding>  
@@ -31,38 +31,38 @@ ms.locfileid: "45678045"
 </netPeerTcpBinding>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="88cf1-111">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="88cf1-111">Attributes and Elements</span></span>  
- <span data-ttu-id="88cf1-112">Nelle sezioni seguenti vengono descritti attributi, elementi figlio ed elementi padre.</span><span class="sxs-lookup"><span data-stu-id="88cf1-112">The following sections describe attributes, child elements, and parent elements</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="ad016-111">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="ad016-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="ad016-112">Nelle sezioni seguenti vengono descritti attributi, elementi figlio ed elementi padre.</span><span class="sxs-lookup"><span data-stu-id="ad016-112">The following sections describe attributes, child elements, and parent elements</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="88cf1-113">Attributi</span><span class="sxs-lookup"><span data-stu-id="88cf1-113">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="ad016-113">Attributi</span><span class="sxs-lookup"><span data-stu-id="ad016-113">Attributes</span></span>  
   
-|<span data-ttu-id="88cf1-114">Attributo</span><span class="sxs-lookup"><span data-stu-id="88cf1-114">Attribute</span></span>|<span data-ttu-id="88cf1-115">Descrizione</span><span class="sxs-lookup"><span data-stu-id="88cf1-115">Description</span></span>|  
+|<span data-ttu-id="ad016-114">Attributo</span><span class="sxs-lookup"><span data-stu-id="ad016-114">Attribute</span></span>|<span data-ttu-id="ad016-115">Descrizione</span><span class="sxs-lookup"><span data-stu-id="ad016-115">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="88cf1-116">credentialType</span><span class="sxs-lookup"><span data-stu-id="88cf1-116">credentialType</span></span>|<span data-ttu-id="88cf1-117">Parametro facoltativo.</span><span class="sxs-lookup"><span data-stu-id="88cf1-117">Optional.</span></span> <span data-ttu-id="88cf1-118">Specifica il tipo di credenziali usate per verificare messaggi inviati con il trasporto peer.</span><span class="sxs-lookup"><span data-stu-id="88cf1-118">Specifies the type of credentials used to verify messages sent with the peer transport.</span></span> <span data-ttu-id="88cf1-119">L'attributo è di tipo <xref:System.ServiceModel.PeerTransportCredentialType>.</span><span class="sxs-lookup"><span data-stu-id="88cf1-119">This attribute is of type <xref:System.ServiceModel.PeerTransportCredentialType>.</span></span>|  
+|<span data-ttu-id="ad016-116">credentialType</span><span class="sxs-lookup"><span data-stu-id="ad016-116">credentialType</span></span>|<span data-ttu-id="ad016-117">Parametro facoltativo.</span><span class="sxs-lookup"><span data-stu-id="ad016-117">Optional.</span></span> <span data-ttu-id="ad016-118">Specifica il tipo di credenziali usate per verificare messaggi inviati con il trasporto peer.</span><span class="sxs-lookup"><span data-stu-id="ad016-118">Specifies the type of credentials used to verify messages sent with the peer transport.</span></span> <span data-ttu-id="ad016-119">L'attributo è di tipo <xref:System.ServiceModel.PeerTransportCredentialType>.</span><span class="sxs-lookup"><span data-stu-id="ad016-119">This attribute is of type <xref:System.ServiceModel.PeerTransportCredentialType>.</span></span>|  
   
-## <a name="credentialtype-attribute"></a><span data-ttu-id="88cf1-120">Attributo credentialType</span><span class="sxs-lookup"><span data-stu-id="88cf1-120">credentialType Attribute</span></span>  
+## <a name="credentialtype-attribute"></a><span data-ttu-id="ad016-120">Attributo credentialType</span><span class="sxs-lookup"><span data-stu-id="ad016-120">credentialType Attribute</span></span>  
   
-|<span data-ttu-id="88cf1-121">Valore</span><span class="sxs-lookup"><span data-stu-id="88cf1-121">Value</span></span>|<span data-ttu-id="88cf1-122">Descrizione</span><span class="sxs-lookup"><span data-stu-id="88cf1-122">Description</span></span>|  
+|<span data-ttu-id="ad016-121">Valore</span><span class="sxs-lookup"><span data-stu-id="ad016-121">Value</span></span>|<span data-ttu-id="ad016-122">Descrizione</span><span class="sxs-lookup"><span data-stu-id="ad016-122">Description</span></span>|  
 |-----------|-----------------|  
-|<span data-ttu-id="88cf1-123">Certificato</span><span class="sxs-lookup"><span data-stu-id="88cf1-123">Certificate</span></span>|<span data-ttu-id="88cf1-124">L'autenticazione del trasporto del canale peer richiede un certificato X509.</span><span class="sxs-lookup"><span data-stu-id="88cf1-124">Authentication of the peer channel transport requires an X509 certificate.</span></span>|  
-|<span data-ttu-id="88cf1-125">Password</span><span class="sxs-lookup"><span data-stu-id="88cf1-125">Password</span></span>|<span data-ttu-id="88cf1-126">L'autenticazione del trasporto del canale peer richiede una password corretta.</span><span class="sxs-lookup"><span data-stu-id="88cf1-126">Authentication of the peer channel transport requires a correct password.</span></span>|  
+|<span data-ttu-id="ad016-123">Certificato</span><span class="sxs-lookup"><span data-stu-id="ad016-123">Certificate</span></span>|<span data-ttu-id="ad016-124">L'autenticazione del trasporto del canale peer richiede un certificato X509.</span><span class="sxs-lookup"><span data-stu-id="ad016-124">Authentication of the peer channel transport requires an X509 certificate.</span></span>|  
+|<span data-ttu-id="ad016-125">Password</span><span class="sxs-lookup"><span data-stu-id="ad016-125">Password</span></span>|<span data-ttu-id="ad016-126">L'autenticazione del trasporto del canale peer richiede una password corretta.</span><span class="sxs-lookup"><span data-stu-id="ad016-126">Authentication of the peer channel transport requires a correct password.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="88cf1-127">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="88cf1-127">Child Elements</span></span>  
- <span data-ttu-id="88cf1-128">nessuno</span><span class="sxs-lookup"><span data-stu-id="88cf1-128">None</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="ad016-127">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="ad016-127">Child Elements</span></span>  
+ <span data-ttu-id="ad016-128">nessuno</span><span class="sxs-lookup"><span data-stu-id="ad016-128">None</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="88cf1-129">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="88cf1-129">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="ad016-129">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="ad016-129">Parent Elements</span></span>  
   
-|<span data-ttu-id="88cf1-130">Elemento</span><span class="sxs-lookup"><span data-stu-id="88cf1-130">Element</span></span>|<span data-ttu-id="88cf1-131">Descrizione</span><span class="sxs-lookup"><span data-stu-id="88cf1-131">Description</span></span>|  
+|<span data-ttu-id="ad016-130">Elemento</span><span class="sxs-lookup"><span data-stu-id="ad016-130">Element</span></span>|<span data-ttu-id="ad016-131">Descrizione</span><span class="sxs-lookup"><span data-stu-id="ad016-131">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="88cf1-132">\<security></span><span class="sxs-lookup"><span data-stu-id="88cf1-132">\<security></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netpeerbinding.md)|<span data-ttu-id="88cf1-133">Definisce le impostazioni di sicurezza per il [ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md).</span><span class="sxs-lookup"><span data-stu-id="88cf1-133">Defines the security settings for the [\<netPeerTcpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md).</span></span>|  
+|[<span data-ttu-id="ad016-132">\<security></span><span class="sxs-lookup"><span data-stu-id="ad016-132">\<security></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netpeerbinding.md)|<span data-ttu-id="ad016-133">Definisce le impostazioni di sicurezza per il [ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md).</span><span class="sxs-lookup"><span data-stu-id="ad016-133">Defines the security settings for the [\<netPeerTcpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md).</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="88cf1-134">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="88cf1-134">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="ad016-134">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="ad016-134">See Also</span></span>  
  <xref:System.ServiceModel.Configuration.PeerTransportSecurityElement>  
  <xref:System.ServiceModel.PeerSecuritySettings.Transport%2A>  
  <xref:System.ServiceModel.Configuration.PeerSecurityElement.Transport%2A>  
  <xref:System.ServiceModel.PeerTransportSecuritySettings>  
- [<span data-ttu-id="88cf1-135">Protezione di servizi e client</span><span class="sxs-lookup"><span data-stu-id="88cf1-135">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [<span data-ttu-id="88cf1-136">Associazioni</span><span class="sxs-lookup"><span data-stu-id="88cf1-136">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
- [<span data-ttu-id="88cf1-137">Configurazione di associazioni fornite dal sistema</span><span class="sxs-lookup"><span data-stu-id="88cf1-137">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [<span data-ttu-id="88cf1-138">Uso di associazioni per configurare i client e servizi Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="88cf1-138">Using Bindings to Configure Windows Communication Foundation Services and Clients</span></span>](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [<span data-ttu-id="88cf1-139">\<binding></span><span class="sxs-lookup"><span data-stu-id="88cf1-139">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)
+ [<span data-ttu-id="ad016-135">Protezione di servizi e client</span><span class="sxs-lookup"><span data-stu-id="ad016-135">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [<span data-ttu-id="ad016-136">Associazioni</span><span class="sxs-lookup"><span data-stu-id="ad016-136">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="ad016-137">Configurazione di associazioni fornite dal sistema</span><span class="sxs-lookup"><span data-stu-id="ad016-137">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [<span data-ttu-id="ad016-138">Uso di associazioni per configurare servizi e client</span><span class="sxs-lookup"><span data-stu-id="ad016-138">Using Bindings to Configure Services and Clients</span></span>](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
+ [<span data-ttu-id="ad016-139">\<binding></span><span class="sxs-lookup"><span data-stu-id="ad016-139">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)
