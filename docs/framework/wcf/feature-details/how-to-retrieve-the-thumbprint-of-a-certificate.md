@@ -5,11 +5,11 @@ helpviewer_keywords:
 - certificates [WCF], retrieving thumbprint
 ms.assetid: da3101aa-78cd-4c34-9652-d1f24777eeab
 ms.openlocfilehash: f520e897ad467686e0dc151548a61ea8370eb07a
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48027260"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48793359"
 ---
 # <a name="how-to-retrieve-the-thumbprint-of-a-certificate"></a>Procedura: recuperare l'identificazione personale di un certificato
 Quando si scrive un'applicazione Windows Communication Foundation (WCF) che usa un certificato X.509 per l'autenticazione, è spesso necessario specificare le attestazioni trovano nel certificato. È, ad esempio, necessario fornire un'attestazione di identificazione personale in caso di utilizzo dell'enumerazione <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> nel metodo <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> . La ricerca del valore dell'attestazione richiede due passaggi. Aprire innanzitutto lo snap-in MMC (Microsoft Management Console) per i certificati. Per informazioni, vedere [Procedura: visualizzare certificati con lo snap-in MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md). Quindi, come descritto qui, cercare un certificato appropriato e copiarne l'identificazione personale o gli altri valori di attestazione.  

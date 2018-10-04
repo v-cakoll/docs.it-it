@@ -7,11 +7,11 @@ dev_langs:
 ms.assetid: 9f71b6ae-737c-4382-8d89-0a7b1c7e182b
 author: BrucePerlerMS
 ms.openlocfilehash: f1dae4b9d2976ddbc941e49843324a29ec8885a4
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48027704"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48781791"
 ---
 # <a name="how-to-secure-metadata-endpoints"></a>Procedura: proteggere endpoint dei metadati
 È possibile che i metadati di un servizio contengano informazioni riservate sull'applicazione che un utente malintenzionato potrebbe sfruttare. Gli utenti del servizio, inoltre, potrebbero richiedere un meccanismo protetto per ottenere metadati sul servizio. È talvolta necessario, quindi, pubblicare i metadati utilizzando un endpoint protetto.  

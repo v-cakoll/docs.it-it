@@ -10,11 +10,11 @@ helpviewer_keywords:
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
 ms.openlocfilehash: 1eddf3ad52bab6ef4665d7c3691353fa9c54574c
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
-ms.translationtype: HT
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48263998"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48793682"
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>Procedura dettagliata: memorizzazione dei dati di un'applicazione nella cache di un'applicazione WPF
 La memorizzazione nella cache consente di inserire i dati in memoria per l'accesso rapido. Quando i dati sono accessibili anche in questo caso, le applicazioni possono ottenere i dati dalla cache anziché recuperarli dall'origine dati originale. In questo modo si possono ottenere migliori prestazioni e scalabilità. Inoltre, se si memorizzano i dati nella cache, questi sono accessibili anche quando l'origine dati è temporaneamente non disponibile.

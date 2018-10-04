@@ -2,12 +2,12 @@
 title: Utilizzo di feed OData da un flusso di lavoro
 ms.date: 03/30/2017
 ms.assetid: 1b26617c-53e9-476a-81af-675c36d95919
-ms.openlocfilehash: a7e2a0658294681b154b11f48563ebc562c47210
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 8d08a58cecead105f6e1f580ea40175cac93e417
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44221623"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48780102"
 ---
 # <a name="consuming-odata-feeds-from-a-workflow"></a>Utilizzo di feed OData da un flusso di lavoro
 
@@ -23,7 +23,7 @@ In WCF Data Services sono disponibili librerie client che consentono di usare co
 
 ### <a name="adding-a-service-reference-to-the-wcf-data-service"></a>Aggiunta di un riferimento al servizio a WCF Data Services
 
-Per generare le librerie client Northwind, è possibile usare la finestra di dialogo **Aggiungi riferimento al servizio** in [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] per aggiungere un riferimento al servizio Northwind OData.
+Per generare le librerie client Northwind, è possibile usare la **Aggiungi riferimento al servizio** finestra di dialogo in Visual Studio 2012 per aggiungere un riferimento al servizio Northwind OData.
 
 ![Aggiungi riferimento al servizio](../../../docs/framework/windows-workflow-foundation/media/addservicereferencetonorthwindodataservice.gif "AddServiceReferencetoNorthwindODataService")
 
@@ -114,7 +114,7 @@ Quando questo codice viene eseguito, nella console viene visualizzato l'output s
 
 ```console
 Raw data returned:
-<?xml version="1.0" encoding="utf-8" standalone="yes"?> 
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <ContactName xmlns="http://schemas.microsoft.com/ado/2007/08/dataservices">Maria Anders</ContactName>
 ```
 

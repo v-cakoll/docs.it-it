@@ -2,12 +2,12 @@
 title: "Procedura: distribuire un'applicazione di integrazione COM+"
 ms.date: 03/30/2017
 ms.assetid: 2e5a0510-db3c-4988-a09c-696285836650
-ms.openlocfilehash: 872d0f0c84c1ac0ea96a87ed24a386bb9bedcf85
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e338641b801113c5cd6ff4ec380f60f9ef900fc2
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33490139"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48793071"
 ---
 # <a name="how-to-deploy-a-com-integration-application"></a>Procedura: distribuire un'applicazione di integrazione COM+
 Dopo aver scritto un'applicazione di integrazione COM+, è possibile distribuirla ad altri computer. In questo argomento viene illustrato come trasferire un'applicazione di integrazione COM+ da un computer a un altro.  
@@ -24,7 +24,7 @@ Dopo aver scritto un'applicazione di integrazione COM+, è possibile distribuirl
   
 5.  Copiare i file Application.config e Application.manifest dalla directory principale dell'applicazione del computer A nella directory principale dell'applicazione del computer B.  
   
-6.  Modificare gli indirizzi endpoint del servizio nel file Application.config nel computer B per identificare il computer appropriato. Ad esempio, modificare http://machineA/MyService a http://machineB/MyService.  
+6.  Modificare gli indirizzi endpoint del servizio nel file Application.config nel computer B per identificare il computer appropriato. Ad esempio, modificare `http://machineA/MyService` in `http://machineB/MyService`.  
   
 ### <a name="moving-a-web-hosted-integration-application"></a>Trasferimento di un'applicazione di integrazione ospitata da Web  
   

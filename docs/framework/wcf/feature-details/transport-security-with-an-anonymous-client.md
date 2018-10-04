@@ -6,12 +6,12 @@ dev_langs:
 - vb
 ms.assetid: 056653a5-384e-4a02-ae3c-1b0157d2ccb4
 author: BrucePerlerMS
-ms.openlocfilehash: d09d2a2ad4e48e67f2d3930517a2ed3f8cc4403d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 54391356648a8f4a8c7175f690b00fd88393b712
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47216082"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48780727"
 ---
 # <a name="transport-security-with-an-anonymous-client"></a>Protezione del trasporto con un client anonimo
 Questo scenario di Windows Communication Foundation (WCF) Usa sicurezza del trasporto (HTTPS) per garantire la riservatezza e integrità. È necessario che il server sia autenticato con un certificato SSL (Secure Sockets Layer) e che il client ritenga attendibile il certificato del server. Il client non viene autenticato da alcun meccanismo ed è pertanto anonimo.  
@@ -54,7 +54,7 @@ Questo scenario di Windows Communication Foundation (WCF) Usa sicurezza del tras
   <system.serviceModel>  
     <services>  
       <service name="ServiceModel.Calculator">  
-        <endpoint address="http://localhost/Calculator"   
+        <endpoint address="https://localhost/Calculator"   
                   binding="wsHttpBinding"  
                   bindingConfiguration="WSHttpBinding_ICalculator"   
                   name="SecuredByTransportEndpoint"  

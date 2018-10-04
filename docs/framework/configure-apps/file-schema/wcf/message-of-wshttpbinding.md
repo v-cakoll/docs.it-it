@@ -2,12 +2,12 @@
 title: '&lt;message&gt; di &lt;wsHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 621abbde-590b-454d-90ac-68dc3c69c720
-ms.openlocfilehash: 1657ebb0e4a76972a2f002d0910af5a9c2a8173c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: db0825d0abe05564d040903304d8654fa75ed0ee
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504103"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48781492"
 ---
 # <a name="ltmessagegt-of-ltwshttpbindinggt"></a>&lt;message&gt; di &lt;wsHttpBinding&gt;
 Definisce le impostazioni per la sicurezza a livello di messaggio dei [ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
@@ -92,5 +92,5 @@ Definisce le impostazioni per la sicurezza a livello di messaggio dei [ \<wsHttp
  [Protezione di servizi e client](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Associazioni](../../../../../docs/framework/wcf/bindings.md)  
  [Configurazione di associazioni fornite dal sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Uso di associazioni per configurare i client e servizi Windows Communication Foundation](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Uso di associazioni per configurare servizi e client](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
  [\<binding>](../../../../../docs/framework/misc/binding.md)

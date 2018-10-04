@@ -6,11 +6,11 @@ helpviewer_keywords:
 - print system management [WPF]
 ms.assetid: 5f3d391a-4afd-49ee-ad99-ceb737c0c8a8
 ms.openlocfilehash: e9b54cd7e59a5a410bfc5c0fb1ba4973c5e482af
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47459763"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48780570"
 ---
 # <a name="printing-how-to-topics"></a>Procedure relative alla stampa
 Gli argomenti in questa sezione illustrano come usare la stampa e le funzionalità di gestione del sistema di stampa è incluso con [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] , nonché il nuovo [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] percorso di stampa.  

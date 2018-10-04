@@ -2,12 +2,12 @@
 title: '&lt;netNamedPipeBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 00a8580b-face-47a4-838d-b9fed48e72df
-ms.openlocfilehash: f3b6771d5a1a07a35bdf3f0ffa92c837aa202e4d
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 213f775fd3804e6d64e7dae7fe1649a4fe1868f3
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43785313"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48793617"
 ---
 # <a name="ltnetnamedpipebindinggt"></a>&lt;netNamedPipeBinding&gt;
 Definisce un'associazione che è protetta, affidabile, ottimizzata per le comunicazioni tra processi nel computer. Per impostazione predefinita, genera uno stack di comunicazione in fase di esecuzione con WS-ReliableMessaging per affidabilità, sicurezza del trasporto per la sicurezza del trasferimento, named pipe per il recapito dei messaggi e codifica binaria dei messaggi.  
@@ -148,4 +148,4 @@ Definisce un'associazione che è protetta, affidabile, ottimizzata per le comuni
  [\<binding>](../../../../../docs/framework/misc/binding.md)  
  [Associazioni](../../../../../docs/framework/wcf/bindings.md)  
  [Configurazione di associazioni fornite dal sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Uso di associazioni per configurare i client e servizi Windows Communication Foundation](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)
+ [Uso di associazioni per configurare servizi e client](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)

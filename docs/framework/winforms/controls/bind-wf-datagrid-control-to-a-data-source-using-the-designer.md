@@ -12,14 +12,15 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - bound controls [Windows Forms]
 ms.assetid: 4e96e3d0-b1cc-4de1-8774-bc9970ec4554
-ms.openlocfilehash: 409d94e46cae3e4daf7df930097f0a3d46360633
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: c528e95b37abb230e761ce93e5f5c7bcb27d30d3
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43500586"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48780297"
 ---
 # <a name="how-to-bind-the-windows-forms-datagrid-control-to-a-data-source-using-the-designer"></a>Procedura: associare il controllo DataGrid Windows Form a un'origine dati mediante la finestra di progettazione
+
 > [!NOTE]
 >  Benché il controllo <xref:System.Windows.Forms.DataGridView> sostituisca il controllo <xref:System.Windows.Forms.DataGrid> aggiungendovi funzionalità, il controllo <xref:System.Windows.Forms.DataGrid> viene mantenuto per compatibilità con le versioni precedenti e per un eventuale uso futuro. Per altre informazioni, vedere [Differenze tra i controlli DataGridView e DataGrid Windows Form](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
@@ -29,7 +30,7 @@ ms.locfileid: "43500586"
   
  È anche possibile associare la griglia a livello di codice in fase di esecuzione. Ciò è utile quando si desidera impostare un'origine dati basata su informazioni ottenute in fase di esecuzione. Ad esempio, l'applicazione potrebbe consentire all'utente specificare il nome di una tabella da visualizzare. È inoltre necessario in situazioni in cui l'origine dati non esiste in fase di progettazione. Ciò include le origini dati, ad esempio matrici, raccolte, i set di dati non tipizzato e lettori di dati.  
   
- La procedura seguente richiede un **applicazione di Windows** progetto con un form contenente un <xref:System.Windows.Forms.DataGrid> controllo. Per informazioni sulla configurazione di un progetto di questo tipo, vedere [procedura: creare un progetto di applicazione Windows](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa) e [procedura: aggiungere i controlli Windows Form](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md). Nelle [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)], il <xref:System.Windows.Forms.DataGrid> controllo non è nel **della casella degli strumenti** per impostazione predefinita. Per informazioni su come aggiungerlo, vedere [procedura: aggiungere elementi alla casella degli strumenti](https://msdn.microsoft.com/library/458e119e-17fe-450b-b889-e31c128bd7e0). Inoltre, in [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)], è possibile usare il **Zdroje dat** finestra per l'associazione dati design-time. Per altre informazioni, vedere [associare controlli ai dati in Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio).  
+ La procedura seguente richiede un **applicazione di Windows** progetto con un form contenente un <xref:System.Windows.Forms.DataGrid> controllo. Per informazioni sulla configurazione di un progetto di questo tipo, vedere [procedura: creare un progetto di applicazione Windows](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa) e [procedura: aggiungere i controlli Windows Form](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md). In Visual Studio 2005, il <xref:System.Windows.Forms.DataGrid> controllo non è nel **casella degli strumenti** per impostazione predefinita. Per informazioni su come aggiungerlo, vedere [procedura: aggiungere elementi alla casella degli strumenti](https://msdn.microsoft.com/library/458e119e-17fe-450b-b889-e31c128bd7e0). In Visual Studio 2005, è inoltre possibile usare la **Zdroje dat** finestra per l'associazione dati design-time. Per altre informazioni, vedere [associare controlli ai dati in Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio).  
   
 > [!NOTE]
 >  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzare l'IDE di Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  

@@ -2,12 +2,12 @@
 title: Creazione di attività asincrone in WF
 ms.date: 03/30/2017
 ms.assetid: 497e81ed-5eef-460c-ba55-fae73c05824f
-ms.openlocfilehash: 8df876c9be020ece29683d1c101a4045b1c76322
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 31c0d5a87a7979bc59c3e1d942ed0594d128c80a
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520068"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48266559"
 ---
 # <a name="creating-asynchronous-activities-in-wf"></a>Creazione di attività asincrone in WF
 <xref:System.Activities.AsyncCodeActivity> fornisce agli autori dell'attività una classe di base che consente alle attività derivate di implementare la logica di esecuzione asincrona. Ciò si rivela utile per attività personalizzate che devono eseguire un lavoro asincrono senza contenere il thread dell'utilità di pianificazione del flusso di lavoro e senza bloccare nessuna attività che può essere eseguita in parallelo. In questo argomento viene fornita una panoramica su come creare attività asincrone personalizzate usando l'oggetto <xref:System.Activities.AsyncCodeActivity>.  
@@ -31,7 +31,7 @@ ms.locfileid: "33520068"
  [!code-csharp[CFX_ActivityExample#10](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#10)]  
   
 ### <a name="invoking-asynchronous-methods-on-a-class"></a>Richiamo di metodi asincroni su una classe  
- Molte delle classi in [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] dispongono di funzionalità asincrona che può essere richiamata in modo asincrono tramite un'attività basata su <xref:System.Activities.AsyncCodeActivity>. Nell'esempio seguente il [utilizzo di AsyncOperationContext in un'attività](../../../docs/framework/windows-workflow-foundation/samples/using-asyncoperationcontext-in-an-activity-sample.md), viene creata un'attività che crea in modo asincrono un file utilizzando il <xref:System.IO.FileStream> classe.  
+ Molte delle classi in [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] dispongono di funzionalità asincrona che può essere richiamata in modo asincrono tramite un'attività basata su <xref:System.Activities.AsyncCodeActivity>. Nell'esempio seguente viene creata un'attività che crea un file in modo asincrono usando il <xref:System.IO.FileStream> classe.  
   
  [!code-csharp[CFX_ActivityExample#12](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#12)]  
   
@@ -39,14 +39,14 @@ ms.locfileid: "33520068"
  Nell'esempio precedente, è stato effettuato l'accesso in <xref:System.IO.FileStream> all'oggetto <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> creato in <xref:System.Activities.AsyncCodeActivity.EndExecute%2A>. Ciò è possibile poiché la variabile `file` è stata passata nella proprietà <xref:System.Activities.AsyncCodeActivityContext.UserState%2A?displayProperty=nameWithType> in <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A>. Questo è il metodo corretto per condividere lo stato tra <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> e <xref:System.Activities.AsyncCodeActivity.EndExecute%2A>. È errato usare una variabile membro nella classe derivata (in questo caso `FileWriter`) per condividere lo stato tra <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> e <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> perché più istanze dell'attività possono fare riferimento agli oggetti attività. Tentare di usare una variabile membro per condividere lo stato può causare la sovrascrittura o la cancellazione di valori da un oggetto <xref:System.Activities.ActivityInstance> a un altro oggetto <xref:System.Activities.ActivityInstance>.  
   
 ### <a name="accessing-argument-values"></a>Accesso ai valori degli argomenti  
- L'ambiente di un oggetto <xref:System.Activities.AsyncCodeActivity> è costituito dagli argomenti definiti nell'attività. Questi argomenti sono accessibili dal <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> / <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> esegue l'override utilizzando il <xref:System.Activities.AsyncCodeActivityContext> parametro. L'accesso agli argomenti non può essere eseguito nel delegato, ma i valori dell'argomento o i dati desiderati possono essere passati al delegato usando i relativi parametri. Nell'esempio seguente viene definita un'attività che genera un numero casuale e ottiene il limite superiore incluso dal relativo argomento `Max`. Il valore dell'argomento viene passato al codice asincrono quando viene richiamato il delegato.  
+ L'ambiente di un oggetto <xref:System.Activities.AsyncCodeActivity> è costituito dagli argomenti definiti nell'attività. Questi argomenti sono accessibili dal <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> / <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> esegue l'override usando la <xref:System.Activities.AsyncCodeActivityContext> parametro. L'accesso agli argomenti non può essere eseguito nel delegato, ma i valori dell'argomento o i dati desiderati possono essere passati al delegato usando i relativi parametri. Nell'esempio seguente viene definita un'attività che genera un numero casuale e ottiene il limite superiore incluso dal relativo argomento `Max`. Il valore dell'argomento viene passato al codice asincrono quando viene richiamato il delegato.  
   
  [!code-csharp[CFX_ActivityExample#9](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#9)]  
   
 ### <a name="scheduling-actions-or-child-activities-using-asynccodeactivity"></a>Azioni di programmazione o attività figlio usando AsyncCodeActivity  
- Le attività personalizzate derivate <xref:System.Activities.AsyncCodeActivity> forniscono un metodo per eseguire il lavoro in modo asincrono rispetto al thread del flusso di lavoro, ma non consentono di pianificare le attività figlio o le azioni. Tuttavia, il comportamento asincrono può essere incorporato nella pianificazione delle attività figlio tramite la composizione. Un'attività asincrona può essere creata e quindi composta con un'attività <xref:System.Activities.Activity> o <xref:System.Activities.NativeActivity> derivata per fornire il comportamento asincrono e la pianificazione delle attività figlio o delle azioni. Ad esempio, è possibile creare un'attività che deriva da <xref:System.Activities.Activity> e ha come implementazione un oggetto <xref:System.Activities.Statements.Sequence> che contiene l'attività asincrona nonché le altre attività che implementano la logica dell'attività. Per altri esempi di composizione di attività usando <xref:System.Activities.Activity> e <xref:System.Activities.NativeActivity>, vedere [procedura: creare un'attività](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md), [opzioni di creazione di attività](../../../docs/framework/windows-workflow-foundation/activity-authoring-options-in-wf.md)e il [composito](../../../docs/framework/windows-workflow-foundation/samples/composite.md) esempi di attività.  
+ Le attività personalizzate derivate <xref:System.Activities.AsyncCodeActivity> forniscono un metodo per eseguire il lavoro in modo asincrono rispetto al thread del flusso di lavoro, ma non consentono di pianificare le attività figlio o le azioni. Tuttavia, il comportamento asincrono può essere incorporato nella pianificazione delle attività figlio tramite la composizione. Un'attività asincrona può essere creata e quindi composta con un'attività <xref:System.Activities.Activity> o <xref:System.Activities.NativeActivity> derivata per fornire il comportamento asincrono e la pianificazione delle attività figlio o delle azioni. Ad esempio, è possibile creare un'attività che deriva da <xref:System.Activities.Activity> e ha come implementazione un oggetto <xref:System.Activities.Statements.Sequence> che contiene l'attività asincrona nonché le altre attività che implementano la logica dell'attività. Per ulteriori esempi sulla composizione di attività usando <xref:System.Activities.Activity> e <xref:System.Activities.NativeActivity>, vedere [procedura: creare un'attività](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) e [opzioni di creazione di attività](../../../docs/framework/windows-workflow-foundation/activity-authoring-options-in-wf.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- <xref:System.Action>  
- <xref:System.Func%602>  
- [Uso di AsyncOperationContext in un'attività](../../../docs/framework/windows-workflow-foundation/samples/using-asyncoperationcontext-in-an-activity-sample.md)
+
+- <xref:System.Action>  
+- <xref:System.Func%602>  

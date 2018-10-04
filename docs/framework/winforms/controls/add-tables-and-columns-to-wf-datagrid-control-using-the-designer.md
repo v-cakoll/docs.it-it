@@ -6,20 +6,21 @@ helpviewer_keywords:
 - tables [Windows Forms], adding to DataGrid control
 - DataGrid control [Windows Forms], adding tables and columns
 ms.assetid: 4a6d1b34-b696-476b-bf8a-57c6230aa9e1
-ms.openlocfilehash: 745e866363dc7547ee540b9cac7e1e9fd3cc79ee
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b2e8f962ed7fb9d205a9061bdc1b32c3a2f8b0bd
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504933"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48780011"
 ---
 # <a name="how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control-using-the-designer"></a>Procedura: aggiungere tabelle e colonne nel controllo DataGrid Windows Form mediante la finestra di progettazione
+
 > [!NOTE]
 >  Benché il controllo <xref:System.Windows.Forms.DataGridView> sostituisca il controllo <xref:System.Windows.Forms.DataGrid> aggiungendovi funzionalità, il controllo <xref:System.Windows.Forms.DataGrid> viene mantenuto per compatibilità con le versioni precedenti e per un eventuale uso futuro. Per altre informazioni, vedere [Differenze tra i controlli DataGridView e DataGrid Windows Form](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
  È possibile visualizzare i dati nei moduli di Windows <xref:System.Windows.Forms.DataGrid> controllo in tabelle e colonne creando <xref:System.Windows.Forms.DataGridTableStyle> oggetti e ad aggiungerle nel <xref:System.Windows.Forms.GridTableStylesCollection> oggetto, accessibile tramite il <xref:System.Windows.Forms.DataGrid> del controllo <xref:System.Windows.Forms.DataGrid.TableStyles%2A> proprietà. Ogni stile tabella viene visualizzato il contenuto di qualsiasi tabella dati specificata nel <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> proprietà del <xref:System.Windows.Forms.DataGridTableStyle>. Per impostazione predefinita, uno stile di tabella senza gli stili di colonna specificati visualizzerà tutte le colonne all'interno della tabella di dati. È possibile limitare le colonne della tabella vengono visualizzati aggiungendo <xref:System.Windows.Forms.DataGridColumnStyle> gli oggetti per il <xref:System.Windows.Forms.GridColumnStylesCollection>, accessibile tramite il <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> proprietà della ognuno <xref:System.Windows.Forms.DataGridTableStyle>.  
   
- Nelle procedure seguenti è richiesto un **applicazione di Windows** progetto con un modulo che contiene un <xref:System.Windows.Forms.DataGrid> controllo. Per informazioni su come configurare un progetto di questo tipo, vedere [procedura: creare un progetto di applicazione Windows](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa) e [procedura: aggiungere i controlli Windows Form](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md). Per impostazione predefinita in [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)], il <xref:System.Windows.Forms.DataGrid> controllo non è nel **della casella degli strumenti**. Per informazioni su come aggiungerlo, vedere [procedura: aggiungere elementi alla casella degli strumenti](https://msdn.microsoft.com/library/458e119e-17fe-450b-b889-e31c128bd7e0).  
+ Nelle procedure seguenti è richiesto un **applicazione di Windows** progetto con un modulo che contiene un <xref:System.Windows.Forms.DataGrid> controllo. Per informazioni su come configurare un progetto di questo tipo, vedere [procedura: creare un progetto di applicazione Windows](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa) e [procedura: aggiungere i controlli Windows Form](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md). Per impostazione predefinita in Visual Studio 2005, il <xref:System.Windows.Forms.DataGrid> controllo non è nel **casella degli strumenti**. Per informazioni su come aggiungerlo, vedere [procedura: aggiungere elementi alla casella degli strumenti](https://msdn.microsoft.com/library/458e119e-17fe-450b-b889-e31c128bd7e0).  
   
 > [!NOTE]
 >  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzare l'IDE di Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
