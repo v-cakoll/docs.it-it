@@ -2,47 +2,47 @@
 title: Configurazione di una channel factory
 ms.date: 03/30/2017
 ms.assetid: 3b749493-bd8a-4ccb-893e-5948901a1486
-ms.openlocfilehash: 1f95356b0b473b297b36c7661c849589e9c0d6ef
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b5dbabf8cdc28cc2beaf343b0377528c6ced1c66
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520814"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48778588"
 ---
 # <a name="configuration-channel-factory"></a>Configurazione di una channel factory
-In questo esempio viene descritto l'utilizzo di <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601>. Il <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> consente la gestione centrale della configurazione del client WCF. Può essere anche utile in scenari nei quali la configurazione viene selezionata o modificata dopo la fase di caricamento del dominio dell'applicazione.  
-  
-## <a name="demonstrates"></a>Dimostrazione  
- <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601>  
-  
-## <a name="discussion"></a>Discussione  
- In questo esempio viene descritto come utilizzare <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> per aggiungere uno specifico file di configurazione a un'applicazione client, senza che sia necessario utilizzare il file di configurazione dell'applicazione predefinito.  
-  
- L'esempio è costituito da due progetti. Il primo progetto è un servizio semplice in esecuzione per rispondere a messaggi provenienti dai client. Il secondo progetto è un'applicazione client che compila due oggetti <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> utilizzando un <xref:System.Configuration.ExeConfigurationFileMap> per il file di configurazione Test.config e li utilizza per comunicare con il servizio. Entrambi i client comunicano con il servizio utilizzando la configurazione specificata in Test.config.  
-  
- Il codice seguente aggiunge un file di configurazione personalizzato a un'applicazione client.  
-  
-```  
-ExeConfigurationFileMap fileMap = new ExeConfigurationFileMap();  
-fileMap.ExeConfigFilename = "Test.config";  
-Configuration newConfiguration = ConfigurationManager.OpenMappedExeConfiguration(fileMap, ConfigurationUserLevel.None);  
-  
-ConfigurationChannelFactory<ICalculatorChannel> factory1 = new ConfigurationChannelFactory<ICalculatorChannel>("endpoint1", newConfiguration, new EndpointAddress("http://localhost:8000/servicemodelsamples/service"));  
-ICalculatorChannel client1 = factory1.CreateChannel();  
-```  
-  
-#### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
-  
-1.  Aprire [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] con privilegi di amministratore.  
-  
-2.  Pulsante destro del mouse sulla soluzione ConfigurationChannelFactory (2 progetti) e quindi selezionare **proprietà**.  
-  
-3.  Nelle **proprietà comuni**, selezionare **progetto di avvio**, quindi fare clic su **progetti di avvio multipli**.  
-  
-4.  Spostare il **Service** all'inizio dell'elenco, il progetto con la **azione 'Start'** e quindi spostare il **Client** progetto dopo la **servizio**progetto, anche con le **azione 'Start'**, in modo che il **Client** progetto viene eseguito dopo il **servizio** progetto.  
-  
-5.  Fare clic su **OK**, quindi premere F5 o CTRL+F5 per eseguire l'esempio.  
-  
+In questo esempio viene descritto l'utilizzo di <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601>. Il <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> consente la gestione centrale della configurazione del client WCF. Può essere anche utile in scenari nei quali la configurazione viene selezionata o modificata dopo la fase di caricamento del dominio dell'applicazione.
+
+## <a name="demonstrates"></a>Dimostrazione
+ <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601>
+
+## <a name="discussion"></a>Discussione
+ In questo esempio viene descritto come utilizzare <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> per aggiungere uno specifico file di configurazione a un'applicazione client, senza che sia necessario utilizzare il file di configurazione dell'applicazione predefinito.
+
+ L'esempio è costituito da due progetti. Il primo progetto è un servizio semplice in esecuzione per rispondere a messaggi provenienti dai client. Il secondo progetto è un'applicazione client che compila due oggetti <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> utilizzando un <xref:System.Configuration.ExeConfigurationFileMap> per il file di configurazione Test.config e li utilizza per comunicare con il servizio. Entrambi i client comunicano con il servizio utilizzando la configurazione specificata in Test.config.
+
+ Il codice seguente aggiunge un file di configurazione personalizzato a un'applicazione client.
+
+```
+ExeConfigurationFileMap fileMap = new ExeConfigurationFileMap();
+fileMap.ExeConfigFilename = "Test.config";
+Configuration newConfiguration = ConfigurationManager.OpenMappedExeConfiguration(fileMap, ConfigurationUserLevel.None);
+
+ConfigurationChannelFactory<ICalculatorChannel> factory1 = new ConfigurationChannelFactory<ICalculatorChannel>("endpoint1", newConfiguration, new EndpointAddress("http://localhost:8000/servicemodelsamples/service"));
+ICalculatorChannel client1 = factory1.CreateChannel();
+```
+
+#### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio
+
+1.  Aprire Visual Studio 2012 con privilegi di amministratore.
+
+2.  Pulsante destro del mouse sulla soluzione ConfigurationChannelFactory (2 progetti) e quindi selezionare **proprietà**.
+
+3.  Nelle **proprietà comuni**, selezionare **progetto di avvio**, quindi fare clic su **progetti di avvio multipli**.
+
+4.  Spostare il **Service** all'inizio dell'elenco, il progetto con la **azione 'Start'** e quindi spostare il **Client** progetto dopo la **servizio**progetto, anche con le **azione 'Start'**, in modo che il **Client** progetto viene eseguito dopo il **servizio** progetto.
+
+5.  Fare clic su **OK**, quindi premere F5 o CTRL+F5 per eseguire l'esempio.
+
 > [!IMPORTANT]
 >  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
 >   

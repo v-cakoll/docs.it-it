@@ -2,19 +2,19 @@
 title: 'Procedura: aggiungere capacità di individuazione a un client e un servizio WCF a livello di codice'
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-ms.openlocfilehash: e32128a20a765762249e6892232447c56036c2d8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 407777b1545fb12eb3ed1787fdba86991c894fdb
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524140"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48779894"
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>Procedura: aggiungere capacità di individuazione a un client e un servizio WCF a livello di codice
 In questo argomento viene illustrato come rendere individuabile un servizio Windows Communication Foundation (WCF). Si basa il [self-hosting](https://go.microsoft.com/fwlink/?LinkId=145523) esempio.  
   
 ### <a name="to-configure-the-existing-self-host-service-sample-for-discovery"></a>Per configurare l'esempio di servizio indipendente esistente per l'individuazione  
   
-1.  Aprire la soluzione Self-Host in [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]. L'esempio si trova nella directory TechnologySamples\Basic\Service\Hosting\SelfHost.  
+1.  Aprire la soluzione self-hosting in Visual Studio 2012. L'esempio si trova nella directory TechnologySamples\Basic\Service\Hosting\SelfHost.  
   
 2.  Aggiungere al progetto di servizio un riferimento a `System.ServiceModel.Discovery.dll`. Si può vedere un messaggio di errore che informa che "System. ServiceModel.Discovery.dll o una delle relative dipendenze richiede una versione successiva del [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] rispetto a quella specificata nel progetto... " Se viene visualizzato questo messaggio, fare clic sul progetto in Esplora soluzioni e scegliere **proprietà**. Nel **proprietà progetto** finestra, assicurarsi che il **Framework di destinazione** è [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
   

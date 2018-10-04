@@ -2,12 +2,12 @@
 title: Tipi deprecati in Windows Workflow Foundation
 ms.date: 03/30/2017
 ms.assetid: 4aebe928-a964-4c1c-abf7-0dbbd3604b13
-ms.openlocfilehash: b25be26d4c0ad6c423b011cd7cad24a8728333f5
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: d41bf147cd079a3d6d3714da5595732de3dcb7de
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857642"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48778312"
 ---
 # <a name="deprecated-types-in-windows-workflow-foundation"></a>Tipi deprecati in Windows Workflow Foundation
 In .NET 4 team del flusso di lavoro ha rilasciato un motore del flusso di lavoro totalmente nuovo nello spazio dei nomi <xref:System.Activities>. Con la versione di .NET 4.5 Beta la maggior parte dei tipi in "WF 3" vengono contrassegnati <xref:System.Workflow.Activities>, <xref:System.Workflow.ComponentModel>, e <xref:System.Workflow.Runtime> spazi dei nomi come obsoleto.  
@@ -31,7 +31,7 @@ In .NET 4 team del flusso di lavoro ha rilasciato un motore del flusso di lavoro
   
  Di conseguenza, i clienti che usano le API di WF 3 deprecate riceveranno avvisi di compilazione con un messaggio simile al seguente:  
   
- **Avviso BC40000: X è obsoleto: tipi di WF 3 sono deprecati. Usare WF 4.** I tipi verranno rimossi da .NET Framework in una versione futura, ma non è stato ancora determinato l'arco di tempo (non in 4.5). L'attuale passaggio intende comunicare la direttiva ai clienti concedendo loro il tempo sufficiente per passare al nuovo modello WF4. È, naturalmente, continuerà a supportare questi tipi di WF 3 con il [ciclo di vita del supporto Microsoft](https://aka.ms/MicrosoftSupportLifecycle). Le applicazioni in WF3 esistenti verranno eseguite senza problemi in .NET 4.5 e [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] supporterà le nuove e soluzioni esistenti basate su WF3.  
+ **Avviso BC40000: X è obsoleto: tipi di WF 3 sono deprecati. Usare WF 4.** I tipi verranno rimossi da .NET Framework in una versione futura, ma non è stato ancora determinato l'arco di tempo (non in 4.5). L'attuale passaggio intende comunicare la direttiva ai clienti concedendo loro il tempo sufficiente per passare al nuovo modello WF4. È, naturalmente, continuerà a supportare questi tipi di WF 3 con il [ciclo di vita del supporto Microsoft](https://aka.ms/MicrosoftSupportLifecycle). Le applicazioni WF3 esistenti verranno eseguite senza problemi in .NET 4.5 e Visual Studio 2012 supporterà le soluzioni basate su WF3 nuove ed esistenti.  
   
  I tipi relativi alle regole nello spazio dei nomi <xref:System.Workflow.Activities.Rules>, che non hanno una sostituzione in WF 4.5, non sono stati deprecati.  
   

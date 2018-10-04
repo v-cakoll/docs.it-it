@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c06b63c492d31d1391b53a36ced5b5c7277f5ad6
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: ed2a81c4ec4f679b99f5f5a4d2a2c21270691e93
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028185"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48778406"
 ---
 # <a name="ltappcontextswitchoverridesgt-element"></a>&lt;AppContextSwitchOverrides&gt; elemento
 Definisce una o più opzioni di compatibilità usate dalla classe <xref:System.AppContext> per fornire un meccanismo di rifiuto esplicito per la nuova funzionalità.  
@@ -93,7 +93,7 @@ Definisce una o più opzioni di compatibilità usate dalla classe <xref:System.A
 |`Switch.System.Security.Cryptography.`<br/>`DoNotAddrOfCspParentWindowHandle`|Controlli se il valore della [CspParameters. Parentwindowhandle](xref:System.Security.Cryptography.CspParameters.ParentWindowHandle) proprietà è un [IntPtr](xref:System.IntPtr) che rappresenta la posizione di memoria di una finestra di gestione, oppure se si tratta di un handle di finestra (HWND). Per altre informazioni, vedere [Mitigazione: CspParameters.ParentWindowHandle prevede un HWND](Mitigation:%20CspParameters.ParentWindowHandle%20Expects%20an%20HWND.md). |.NET Framework 4.7|   
 |`Switch.System.Security.Cryptography.Pkcs.`<br/>`UseInsecureHashAlgorithms`|Determina se il valore predefinito per alcune operazioni SignedCMS SHA1 o SHA256. |.NET Framework 4.7.1|
 |`Switch.System.Security.Cryptography.Xml.`<br/>`UseInsecureHashAlgorithms`|Determina se il valore predefinito per alcune operazioni di SignedXML SHA1 o SHA256. |.NET Framework 4.7.1|
-|`Switch.System.ServiceModel.`<br/>`AllowUnsignedToHeader`|Determina se il `TransportWithMessageCredential` modalità di sicurezza consente messaggi con un unsigned "intestazione to". Si tratta di un commutatore di consenso. Per altre informazioni, vedere [modifiche al Runtime in .NET Framework 4.6.1](https://msdn.microsoft.com/library/mt592686.aspx#WCF).|.NET Framework 4.6.1| 
+|`Switch.System.ServiceModel.`<br/>`AllowUnsignedToHeader`|Determina se il `TransportWithMessageCredential` modalità di sicurezza consente messaggi con un unsigned "intestazione to". Si tratta di un commutatore di consenso. Per altre informazioni, vedere [modifiche al Runtime in .NET Framework 4.6.1](~/docs/framework/migration-guide/runtime/4.5.2-4.6.1.md#windows-communication-foundation-wcf).|.NET Framework 4.6.1| 
 |`Switch.System.ServiceModel.`<br/>`DisableAddressHeaderCollectionValidation`>|Controlli se il <xref:System.ServiceModel.Channels.AddressHeaderCollection.%23ctor(System.Collections.Generic.IEnumerable{System.ServiceModel.Channels.AddressHeader})> costruttore genera un <xref:System.ArgumentException> se uno degli elementi è `null`.|.NET Framework 4.7.1| 
 |`Switch.System.ServiceModel.`<br />`DisableCngCertificates`|Determina che se il tentativo di usare X509 i certificati con un provider di archiviazione chiavi CSG genera un'eccezione. Per altre informazioni, vedere [protezione del trasporto WCF supporta i certificati archiviati usando CNG](~/docs/framework/migration-guide/retargeting/4.6.1-4.6.2.md#wcf-transport-security-supports-certificates-stored-using-cng).|.NET Framework 4.6.1|
 |`Switch.System.ServiceModel.`<br/>`DisableExplicitConnectionCloseHeader`|Quando si usa il trasporto HTTP con un servizio indipendente, impostare questo valore su `true` fa sì che WCF ignorare l'aggiunta di un'applicazione di `Connection: close` intestazione per le intestazioni di risposta per una richiesta. Impostando questo valore su `false` consente l'aggiunta di `Connection: close` intestazione per le intestazioni di risposta, con conseguente chiusura del socket di richiesta dopo aver inviata una risposta.|.NET Framework 4.6|
