@@ -6,15 +6,15 @@ helpviewer_keywords:
 - WCF [WCF], system-provided bindings
 - bindings [WCF], system-provided
 ms.assetid: 443f8d65-f1f2-4311-83b3-4d8fdf7ccf16
-ms.openlocfilehash: 184f4da26df2c688b2b6f30f063bab058af37a4a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 343cdc4e30984e75bd2fede2706679839a573153
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496838"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48845710"
 ---
 # <a name="configuring-system-provided-bindings"></a>Configurazione di associazioni fornite dal sistema
-Le associazioni specificano il meccanismo di comunicazione da utilizzare durante la comunicazione con un endpoint e indicano come collegarsi a un endpoint. Le associazioni sono costituite da elementi che definiscono come sono sovrapposti i canali di Windows Communication Foundation (WCF) backup per fornire le funzionalità di comunicazione richieste. Un'associazione contiene tre tipi di elementi:  
+Le associazioni specificano il meccanismo di comunicazione da utilizzare durante la comunicazione con un endpoint e indicano come collegarsi a un endpoint. Le associazioni sono costituite da elementi che definiscono come i canali Windows Communication Foundation (WCF) sono sovrapposti per fornire la funzionalità di comunicazione richieste. Un'associazione contiene tre tipi di elementi:  
   
 -   Elementi di associazione dei canali di protocollo che determinano la sicurezza, l'affidabilità, le impostazioni di flusso del contesto o i protocolli definiti dall'utente da utilizzare con i messaggi inviati all'endpoint.  
   
@@ -22,7 +22,7 @@ Le associazioni specificano il meccanismo di comunicazione da utilizzare durante
   
 -   Elementi di associazione della codifica dei messaggi, che determinano la codifica di trasmissione da utilizzare per i messaggi inviati all'endpoint, ad esempio, testo/XML, binari o MTOM (Message Transmission Optimization Mechanism).  
   
- In questo argomento vengono presentate tutte le associazioni fornite dal sistema di Windows Communication Foundation (WCF). Se nessuna di esse soddisfa i requisiti specifici dell'applicazione, è possibile creare un'associazione utilizzando la classe <xref:System.ServiceModel.Channels.CustomBinding>. Per ulteriori informazioni sulla creazione di associazioni personalizzate, vedere [associazioni personalizzate](../../../../docs/framework/wcf/extending/custom-bindings.md).  
+ In questo argomento vengono presentate tutte le associazioni fornite dal sistema di Windows Communication Foundation (WCF). Se nessuna di esse soddisfa i requisiti specifici dell'applicazione, è possibile creare un'associazione utilizzando la classe <xref:System.ServiceModel.Channels.CustomBinding>. Per altre informazioni sulla creazione di associazioni personalizzate, vedere [Associazioni personalizzate](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
 > [!IMPORTANT]
 >  Selezionare un'associazione con la sicurezza attivata. Per impostazione predefinita, tutte le associazioni, tranne l'associazione <xref:System.ServiceModel.BasicHttpBinding>, hanno la sicurezza attivata. Se non si seleziona un'associazione protetta o se si disattiva la sicurezza, assicurarsi che gli scambi di rete siano protetti in qualche altro modo, ad esempio archiviandoli in un centro dati protetto o in una rete isolata.  
@@ -31,7 +31,7 @@ Le associazioni specificano il meccanismo di comunicazione da utilizzare durante
 >  Non utilizzare contratti duplex con associazioni che non supportano la sicurezza o che hanno la sicurezza disattivata, a meno che lo scambio di rete non sia protetto in altro modo.  
   
 ## <a name="system-provided-bindings"></a>Associazioni fornite dal sistema  
- Il seguente dotato delle associazioni WCF.  
+ Le associazioni seguenti vengono fornite con WCF.  
   
 |Binding|Elemento di configurazione|Descrizione|  
 |-------------|---------------------------|-----------------|  
@@ -41,12 +41,12 @@ Le associazioni specificano il meccanismo di comunicazione da utilizzare durante
 |<xref:System.ServiceModel.WSDualHttpBinding>|[\<wsDualHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)|Associazione protetta e interoperabile adatta per contratti di servizio duplex o per la comunicazione tramite intermediari SOAP.|  
 |<xref:System.ServiceModel.WSFederationHttpBinding>|[\<wsFederationHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|Associazione protetta e interoperabile che supporta il protocollo WS-Federation, che consente alle organizzazioni di una federazione di autenticare e autorizzare gli utenti in modo efficiente.|  
 |<xref:System.ServiceModel.WS2007FederationHttpBinding>|[\<ws2007FederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md)|Associazione protetta e interoperabile che deriva da <xref:System.ServiceModel.WS2007HttpBinding> e supporta la sicurezza federata.|  
-|<xref:System.ServiceModel.NetTcpBinding>|[\<netTcpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)|Un'associazione protetta e ottimizzata adatta per le comunicazioni tra computer tra le applicazioni WCF.|  
-|<xref:System.ServiceModel.NetNamedPipeBinding>|[\<netNamedPipeBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md)|Un'associazione protetta, affidabile e ottimizzata adatta per la comunicazione su computer tra le applicazioni WCF.|  
-|<xref:System.ServiceModel.NetMsmqBinding>|[\<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)|Un'associazione in coda adatta per le comunicazioni tra computer tra le applicazioni WCF.|  
-|<xref:System.ServiceModel.NetPeerTcpBinding>|[\<netPeerTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md)|Associazione che consente comunicazioni protette tra più computer.|  
-|<xref:System.ServiceModel.WebHttpBinding>|[\<webHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)|Un'associazione utilizzata per configurare endpoint per servizi Web WCF esposti tramite richieste HTTP anziché a messaggi SOAP.|  
-|<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|[\<msmqIntegrationBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md)|Associazione che è adatta per le comunicazioni tra computer tra un'applicazione WCF ed esistente Microsoft Message Queuing (noto anche come MSMQ) le applicazioni.|  
+|<xref:System.ServiceModel.NetTcpBinding>|[\<netTcpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)|Associazione protetta e ottimizzata adatta per le comunicazioni tra applicazioni WCF da un computer a un altro.|  
+|<xref:System.ServiceModel.NetNamedPipeBinding>|[\<netNamedPipeBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md)|Associazione protetta, affidabile e ottimizzata adatta per la comunicazione tra applicazioni WCF in un computer.|  
+|<xref:System.ServiceModel.NetMsmqBinding>|[\<netMsmqBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)|Associazione in coda adatta per la comunicazione tra applicazioni WCF da un computer a un altro.|  
+|<xref:System.ServiceModel.NetPeerTcpBinding>|[\<netPeerTcpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md)|Associazione che consente comunicazioni protette tra più computer.|  
+|<xref:System.ServiceModel.WebHttpBinding>|[\<webHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)|Associazione usata per configurare endpoint per servizi Web WCF esposti tramite richieste HTTP anziché tramite messaggi SOAP.|  
+|<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|[\<msmqIntegrationBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md)|Associazione che è adatta per le comunicazioni fra computer tra un'applicazione WCF ed esistente Microsoft Message Queuing (noto anche come MSMQ) le applicazioni.|  
   
 ## <a name="binding-features"></a>Funzionalità di associazione  
  Nella tabella seguente sono riportate alcune delle funzionalità chiave di ogni associazione fornita dal sistema: Le associazioni sono riportate nella prima colonna, mentre le informazioni relative alle funzionalità sono descritte nella tabella. Nella tabella seguente viene fornita una chiave per le abbreviazioni delle associazioni utilizzate. Per selezionare un'associazione, stabilire qual è la colonna che soddisfa tutte le funzioni della riga necessarie.  
@@ -63,6 +63,7 @@ Le associazioni specificano il meccanismo di comunicazione da utilizzare durante
 |<xref:System.ServiceModel.NetNamedPipeBinding>|.NET|None,<br /><br /> (Transport)|None, (Transport)|(None), sì|Yes|  
 |<xref:System.ServiceModel.NetMsmqBinding>|.NET|None, Message, (Transport), Both|(Nessuno)|(None), sì|No|  
 |<xref:System.ServiceModel.NetPeerTcpBinding>|Peer|None, Message, (Transport), misto|(Nessuno)|(Nessuno)|Yes|  
+|<xref:System.ServiceModel.WebHttpBinding>|.NET|None, Transport, TransportCredentialOnly|(Nessuno)|(Nessuno)|N/D|  
 |<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|MSMQ|None, (Transport)|(Nessuno)|(None), sì|N/D|  
   
  Nella tabella seguente sono spiegate le funzionalità elencate nella tabella precedente.  
@@ -70,7 +71,7 @@ Le associazioni specificano il meccanismo di comunicazione da utilizzare durante
 |Funzionalità|Descrizione|  
 |-------------|-----------------|  
 |Tipo di interoperabilità|Denomina il protocollo o la tecnologia con cui l'associazione assicura l'interoperatività.|  
-|Sicurezza|Specifica come il canale viene protetto:<br /><br /> -None: Non è protetto il messaggio SOAP e il client non è stato autenticato.<br />-Transport: I requisiti di sicurezza sono soddisfatti a livello di trasporto.<br />-Message: I requisiti di sicurezza sono soddisfatti a livello di messaggio.<br />-Misto: Questa modalità di sicurezza è nota come `TransportWithMessageCredentials`. Gestisce le credenziali a livello di messaggio, mentre i requisiti di integrità e riservatezza sono soddisfatti dal livello di trasporto.<br />-Entrambi: Vengono utilizzati entrambi protezione dei messaggi livello e di trasporto. Questa possibilità è disponibile solo per <xref:System.ServiceModel.NetMsmqBinding>.|  
+|Sicurezza|Specifica come il canale viene protetto:<br /><br /> -None: Non è protetto il messaggio SOAP e il client non viene autenticato.<br />-Transport: I requisiti di sicurezza sono soddisfatti a livello di trasporto.<br />-Messaggio: Requisiti di sicurezza sono soddisfatti a livello di messaggio.<br />-Misto: Questa modalità di sicurezza è nota come `TransportWithMessageCredentials`. Gestisce le credenziali a livello di messaggio, mentre i requisiti di integrità e riservatezza sono soddisfatti dal livello di trasporto.<br />-Entrambi: Vengono usati entrambi trasporto e a livello di protezione dei messaggi. Questa possibilità è disponibile solo per <xref:System.ServiceModel.NetMsmqBinding>.|  
 |Sessione|Specifica se questa associazione supporta contratti di sessione.|  
 |Transazioni|Specifica se le transazioni sono attivate.|  
 |Duplex|Specifica se sono supportati contratti duplex. Si noti che questa funzionalità richiede il supporto delle sessioni nell'associazione.|  

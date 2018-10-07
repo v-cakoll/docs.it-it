@@ -2,12 +2,12 @@
 title: Interoperabilità con servizi Web ASMX
 ms.date: 03/30/2017
 ms.assetid: a7c11f0a-9e68-4f03-a6b1-39cf478d1a89
-ms.openlocfilehash: ff1b497dde615e5c14417bd0ad14f1dbfd80d5e2
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 58e0a527e853436acf4ab6420d2dd28cbdfbd1fa
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864537"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48842452"
 ---
 # <a name="interoperating-with-asmx-web-services"></a>Interoperabilità con servizi Web ASMX
 Questo esempio viene illustrato come integrare un'applicazione client Windows Communication Foundation (WCF) con un servizio Web ASMX esistente.  
@@ -46,7 +46,7 @@ public class CalculatorService : System.Web.Services.WebService
     }  
 ```  
   
- In base alla configurazione, è possibile accedere al servizio http://localhost/servicemodelsamples/service.asmx da un client sullo stesso computer. Affinché i client presenti nei computer remoti accedano al servizio, è necessario specificare un nome di dominio completo anziché localhost.  
+ In base alla configurazione, è possibile accedere al servizio `http://localhost/servicemodelsamples/service.asmx` da un client sullo stesso computer. Affinché i client presenti nei computer remoti accedano al servizio, è necessario specificare un nome di dominio completo anziché localhost.  
   
  La comunicazione avviene tramite un client generato per il [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Il client è contenuto nel file generatedClient.cs. Il servizio ASMX deve essere disponibile per generare il codice proxy, perché viene utilizzato per recuperare i metadati aggiornati. Eseguire il comando seguente da un prompt dei comandi nella directory del client per generare il proxy tipizzato.  
   

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Impersonating the Client Sample [Windows Communication Foundation]
 - impersonation, Windows Communication Foundation sample
 ms.assetid: 8bd974e1-90db-4152-95a3-1d4b1a7734f8
-ms.openlocfilehash: 5a13ab73e48616b38e583b1c9948fc1bf5eb8a64
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 29ed1f988819a47d8ac8845a379aeda5e15c655e
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522288"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48844293"
 ---
 # <a name="impersonating-the-client"></a>Rappresentazione di client
 L'esempio Rappresentazione di client mostra come rappresentare l'applicazione del chiamante al servizio così che il servizio possa accedere a risorse di sistema per conto del chiamante.  
@@ -102,7 +102,7 @@ client.ClientCredentials.Windows.AllowedImpersonationLevel = TokenImpersonationL
  Quando si esegue l'esempio, le richieste e le risposte dell'operazione vengono visualizzate nelle finestre della console client e del servizio. Premere INVIO in tutte le finestre della console per arrestare il servizio e il client.  
   
 > [!NOTE]
->  Il servizio deve eseguire con un account amministrativo o l'account di cui viene eseguito deve essere concessi i diritti per registrare il http://localhost:8000/ServiceModelSamples URI con il livello HTTP. Tali diritti possono essere concessi configurando una [Namespace prenotazione](https://go.microsoft.com/fwlink/?LinkId=95012) usando la [strumento Httpcfg.exe](https://go.microsoft.com/fwlink/?LinkId=95010).  
+>  Il servizio deve eseguire con un account amministrativo o l'account di cui viene eseguito deve essere concessi i diritti per registrare il `http://localhost:8000/ServiceModelSamples` URI con il livello HTTP. Tali diritti possono essere concessi configurando una [Namespace prenotazione](https://go.microsoft.com/fwlink/?LinkId=95012) usando la [strumento Httpcfg.exe](https://go.microsoft.com/fwlink/?LinkId=95010).  
   
 > [!NOTE]
 >  In computer che eseguono [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], la rappresentazione è supportata solo se l'applicazione Host.exe ha il privilegio di rappresentazione. Per impostazione predefinita, solo gli amministratori dispongono di questa autorizzazione. Per aggiungere questo privilegio a un account è in esecuzione il servizio, passare **strumenti di amministrazione**aprire **criteri di sicurezza locali**Open **criteri locali**, fare clic su **Assegnazione diritti utente**e selezionare **rappresenta un Client dopo l'autenticazione** e fare doppio clic su **proprietà** per aggiungere un utente o gruppo.  

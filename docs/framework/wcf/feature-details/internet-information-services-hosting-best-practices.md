@@ -2,12 +2,12 @@
 title: Procedure consigliate per l'hosting in Internet Information Services (IIS)
 ms.date: 03/30/2017
 ms.assetid: 0834768e-9665-46bf-86eb-d4b09ab91af5
-ms.openlocfilehash: 0ca5e20b846a1b10f5a52748ff06a4af958b2f4c
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 2cb193cd2f504b5010ede6887e814e0c4d0a1a3c
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47073593"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48840745"
 ---
 # <a name="internet-information-services-hosting-best-practices"></a>Procedure consigliate per l'hosting in Internet Information Services (IIS)
 Questo argomento descrive alcune procedure consigliate per l'hosting di servizi Windows Communication Foundation (WCF).  
@@ -33,7 +33,7 @@ Questo argomento descrive alcune procedure consigliate per l'hosting di servizi 
  Gli scenari di livello intermedio offrono vantaggi a livello di prestazioni anche utilizzando le API asincrone generate dall'opzione `svcutil /a`. Il `/a` opzione causa il [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) per generare `BeginXXX/EndXXX` metodi per ogni operazione del servizio, che consente chiamate potenzialmente di lunga ai servizi remoti da eseguire nella thread in background.  
   
 ## <a name="wcf-in-multi-homed-or-multi-named-scenarios"></a>WCF in scenari multihomed o con nomi multipli  
- È possibile distribuire i servizi WCF all'interno di una Web farm IIS, in cui un set di computer condividono un nome esterno comune (ad esempio http://www.contoso.com) ma sono indirizzati individualmente tramite nomi host diversi (ad esempio, http://www.contoso.com potrebbe indirizzare il traffico a due computer diversi denominati http://machine1.internal.contoso.com e http://machine2.internal.contoso.com). Questo scenario di distribuzione è completamente supportato da WCF, ma richiede una configurazione speciale del sito Web IIS che ospita i servizi WCF per visualizzare il nome di host corretto (esterno) nei metadati del servizio (Web Services Description Language).  
+ È possibile distribuire i servizi WCF all'interno di una Web farm IIS, in cui un set di computer condividono un nome esterno comune (ad esempio `http://www.contoso.com`), ma sono indirizzati individualmente tramite nomi host diversi (ad esempio, `http://www.contoso.com` potrebbe indirizzare il traffico a due computer diversi denominati `http://machine1.internal.contoso.com` e `http://machine2.internal.contoso.com`). Questo scenario di distribuzione è completamente supportato da WCF, ma richiede una configurazione speciale del sito Web IIS che ospita i servizi WCF per visualizzare il nome di host corretto (esterno) nei metadati del servizio (Web Services Description Language).  
   
  Per garantire che venga visualizzato il nome host corretto nei metadati del servizio che WCF generato, configurare l'identità predefinita per il sito Web IIS che ospita i servizi WCF per utilizzare un nome host esplicito. Ad esempio, i computer che si trovano all'interno della farm www.contoso.com devono usare un'associazione del sito IIS di *: 80:www.contoso.com per HTTP e \*: 443:www.contoso.com per HTTPS.  
   

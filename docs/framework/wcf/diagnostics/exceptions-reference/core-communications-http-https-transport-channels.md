@@ -2,14 +2,15 @@
 title: 'Comunicazioni principali: Canali di trasporto HTTP-HTTPS'
 ms.date: 03/30/2017
 ms.assetid: 6c0a23c9-a663-461c-bdab-58b4d3e23642
-ms.openlocfilehash: fbdb5b350425aad7108402dec939f036e971d053
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4c4a2537ae615943ffac299a8c8cd00c67094360
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48844189"
 ---
 # <a name="core-communications-httphttps-transport-channels"></a>Comunicazioni principali: canali di trasporto HTTP/HTTPS
-In questo argomento vengono elencate tutte le eccezioni generate dai canali di Windows Communication Foundation (WCF) trasporto HTTP/HTTPS.  
+Questo argomento elenca tutte le eccezioni generate dai canali di Windows Communication Foundation (WCF) trasporto HTTP/HTTPS.  
   
 ## <a name="exception-list"></a>Elenco delle eccezioni  
   
@@ -20,7 +21,7 @@ In questo argomento vengono elencate tutte le eccezioni generate dai canali di W
 |Hosting_SslSettingsMisconfigured|Le impostazioni del protocollo Secure Sockets Layer del servizio specificato non corrispondono a quelle di Internet Information Services.|  
 |HttpAuthSchemeAndClientCert|La listener factory HTTPS è stata configurata in modo da richiedere un certificato client e lo schema di autenticazione specificato. Tuttavia, è consentito richiedere una sola forma di autenticazione client alla volta.|  
 |HttpReceiveFailure|Si è verificato un errore durante la ricezione della risposta HTTP all'entità specificata. È possibile che l'associazione dell'endpoint del servizio non utilizzi il protocollo HTTP o che un contesto di richiesta HTTP sia stato interrotto dal server a causa dell'arresto di un servizio. Per altre informazioni, vedere i registri del server.|  
-|HttpRegistrationAccessDenied|Il protocollo HTTP non è in grado di registrare l'URL specificato. Il processo non dispone dei diritti di accesso per questo spazio dei nomi (vedere http://msdn.microsoft.com/library/default.asp?url=/library/http/http/namespace_reservations_registrations_and_routing.asp per informazioni dettagliate).|  
+|HttpRegistrationAccessDenied|Il protocollo HTTP non è in grado di registrare l'URL specificato. Il processo non dispone dei diritti di accesso per questo spazio dei nomi (vedere [prenotazioni Namespace, registrazioni e Routing](/windows/desktop/http/namespace-reservations-registrations-and-routing) per informazioni dettagliate).|  
 |HttpRegistrationAlreadyExists|Il protocollo HTTP non è in grado di registrare l'URL specificato. Un'altra applicazione ha già registrato questo URL in HTTP.SYS.|  
 |HttpRegistrationPortInUse|Il protocollo HTTP non è in grado di registrare l'URL specificato poiché la porta TCP specificata è usata da un'altra applicazione.|  
 |HttpSendFailure|Si è verificato un errore durante la creazione della richiesta HTTP all'entità specificata. Verificare che questo errore non sia dovuto a una mancata corrispondenza fra associazioni di sicurezza. Verificare inoltre che il servizio non sia stato configurato per usare il protocollo Secure Sockets Layer.|  

@@ -2,15 +2,15 @@
 title: Supporto delle associazioni a più siti IIS
 ms.date: 03/30/2017
 ms.assetid: 40440495-254d-45c8-a8c6-b29f364892ba
-ms.openlocfilehash: 2c42ba7cf3713e5d165d10ce7049df8200d612fb
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 5a8b06d86b505452f9ded808f727343b1453e592
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517875"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48840868"
 ---
 # <a name="supporting-multiple-iis-site-bindings"></a>Supporto delle associazioni a più siti IIS
-Quando si ospita un servizio Windows Communication Foundation (WCF) in Internet Information Services (IIS) 7.0, è possibile specificare più indirizzi di base che utilizzano lo stesso protocollo nello stesso sito. In questo modo lo stesso servizio può rispondere a diversi URI. Ciò è utile quando si desidera ospitare un servizio che è in ascolto sulla http://www.contoso.com e http://contoso.com. È inoltre utile per creare un servizio che dispone di un indirizzo di base per gli utenti interni e un indirizzo di base separato per gli utenti esterni. Ad esempio: http://internal.contoso.com e http://www.contoso.com.  
+Quando si ospita un servizio Windows Communication Foundation (WCF) in Internet Information Services (IIS) 7.0, è possibile specificare più indirizzi di base che utilizzano lo stesso protocollo nello stesso sito. In questo modo lo stesso servizio può rispondere a diversi URI. Ciò è utile quando si desidera ospitare un servizio che è in ascolto sulla `http://www.contoso.com` e `http://contoso.com`. È inoltre utile per creare un servizio che dispone di un indirizzo di base per gli utenti interni e un indirizzo di base separato per gli utenti esterni. Ad esempio: `http://internal.contoso.com` e `http://www.contoso.com`.  
   
 > [!NOTE]
 >  Questa funzionalità è disponibile solo utilizzando il protocollo HTTP.  
