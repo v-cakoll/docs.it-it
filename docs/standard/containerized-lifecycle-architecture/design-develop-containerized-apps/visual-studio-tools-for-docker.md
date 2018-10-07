@@ -5,12 +5,12 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/12/2018
 ms.custom: vs-dotnet
-ms.openlocfilehash: 7daac744238feb38358e4cc0ab185e90257aa98d
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: faae4b3e3ef96d1d8dd73b7ac313b0a5deffec34
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48027455"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48838234"
 ---
 # <a name="using-visual-studio-tools-for-docker-visual-studio-on-windows"></a>Uso di Visual Studio Tools per Docker (Visual Studio in Windows)
 
@@ -65,6 +65,23 @@ Dopo aver aggiunto il supporto di orchestrazione contenitore al progetto, viene 
 Figura 4-29: file di Docker in Esplora soluzioni in Visual Studio 2017
 
 Se *docker-Compose. yml* esiste già, Visual Studio aggiunge solo le righe di codice di configurazione necessarie a esso.
+
+## <a name="configure-docker-tools"></a>Configurare gli strumenti di Docker
+
+Dal menu principale scegliere **degli strumenti** > **opzioni**, espandere **strumenti contenitore** > **impostazioni**. Le impostazioni di strumenti contenitore vengono visualizzate.
+
+![](./media/visual-studio-docker-tools-options.png)
+
+Figura 4-30: opzioni di strumenti di Docker
+
+Nella tabella seguente consente di decidere come impostare queste opzioni.
+
+| nome | Impostazione predefinita | Descrizione |
+| -----|:---------------:| ----------- |
+| Automaticamente il pull delle immagini Docker richiesto nel caricamento del progetto | Attivato | Per ottenere migliori prestazioni, durante il caricamento dei progetti, Visual Studio verrà avviato un'operazione di pull di Docker in background in modo che quando si è pronti per eseguire il codice, l'immagine è già stato scaricato o in fase di download. Se si sta semplicemente il caricamento di progetti e codice di esplorazione, è possibile disattivare questa funzionalità per evitare il download delle immagini del contenitore che non è necessario. |
+| Avvia automaticamente i contenitori in background | Attivato | Anche in questo caso per ottenere migliori prestazioni, Visual Studio crea un contenitore con punti di montaggio di volume pronti per quando viene compilato ed eseguito nel contenitore. Se si desidera controllare quando viene creato il contenitore, è possibile disattivare questa funzionalità. |
+| Chiudono automaticamente i contenitori kill sulla soluzione | Attivato | Disattivare questa funzionalità se si vuole contenitori per la soluzione continuare a eseguire dopo la chiusura della soluzione o chiusura di Visual Studio. |
+| Non chiedere conferma per considerare attendibile il certificato SSL localhost | Disattivato | Visual Studio continuerà per la richiesta di nuovi progetti anche dopo che il certificato SSL è stato considerato attendibile per un progetto precedente. È possibile impostare questa casella di controllo consente di evitare il prompt dei comandi quando si aprono altri progetti. |
 
 **Altre informazioni:** per altri dettagli sull'implementazione di servizi e l'uso di Visual Studio Tools per Docker, leggere gli articoli seguenti:
 

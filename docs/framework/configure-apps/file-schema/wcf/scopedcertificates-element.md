@@ -2,12 +2,12 @@
 title: Elemento &lt;scopedCertificates&gt;
 ms.date: 03/30/2017
 ms.assetid: c7b6fc35-d4b2-4c18-98bd-83e09591f1d3
-ms.openlocfilehash: d95e608fa9b94086dac72341eb599f258dae6097
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5b9bf4d25e23c8bdc4e3d01c2dfa61d059166117
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748864"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48838279"
 ---
 # <a name="ltscopedcertificatesgt-element"></a>Elemento &lt;scopedCertificates&gt;
 Rappresenta una raccolta di certificati X.509 fornita da servizi specifici (con ambito) per l'autenticazione. Questa raccolta è usata in genere per specificare i certificati di servizio per i servizi dei token di sicurezza in un scenario federato.  
@@ -17,9 +17,9 @@ Rappresenta una raccolta di certificati X.509 fornita da servizi specifici (con 
 sezione endpointBehaviors  
 \<comportamento >  
 \<clientCredentials>  
-\<elemento serviceCertificate >  
+\<serviceCertificate >  
 \<scopedCertificates > elemento  
-\<aggiungere > elemento per \<scopedCertificates >  
+\<aggiungere > (elemento) per \<scopedCertificates >  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -49,17 +49,17 @@ sezione endpointBehaviors
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<elemento serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)|Specifica un certificato da usare per l'autenticazione di un servizio presso il client.|  
+|[\<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)|Specifica un certificato da usare per l'autenticazione di un servizio presso il client.|  
   
 ## <a name="remarks"></a>Note  
  Questa raccolta consente al client di configurare i certificati del servizio da usare in base all'URL del servizio con cui comunica. Questa soluzione è particolarmente utile negli scenari di token pubblicati in cui un client comunica con più servizi (il servizio finale e i servizi token di sicurezza intermedi). Per le associazioni che usano sistemi di sicurezza dei messaggi basati sui certificati, questo certificato viene usato per crittografare i messaggi inviati al servizio ed è previsto che venga usato dal servizio per firmare le risposte al client.  
   
  Se per un'associazione è necessario un certificato per il servizio e non vengono individuati certificati specifici per l'URL del servizio in ScopedCertificates, verrà usato il certificato predefinito.  
   
- Per ulteriori informazioni, vedere la sezione "Certificati con ambito" di [procedura: creare un Client federato](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md).  
+ Per altre informazioni, vedere la sezione "Scoped Certificates" di [procedura: creare un Client federato](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md).  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente specifica un certificato del servizio per il client da utilizzare per comunicare con endpoint il cui nome di dominio è http://www.contoso.com sul protocollo HTTP.  
+ L'esempio seguente specifica un certificato di servizio per il client da utilizzare per comunicare con endpoint il cui nome di dominio è `http://www.contoso.com` sul protocollo HTTP.  
   
 ```xml  
 <serviceCertificate>  

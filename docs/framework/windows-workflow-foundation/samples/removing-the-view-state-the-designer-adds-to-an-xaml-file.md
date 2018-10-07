@@ -3,11 +3,11 @@ title: Rimozione dello stato di visualizzazione della finestra di progettazione 
 ms.date: 03/30/2017
 ms.assetid: a801ce22-8699-483c-a392-7bb3834aae4f
 ms.openlocfilehash: 0d4dccb16796893df58f709e011657457cc71670
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48781687"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48835720"
 ---
 # <a name="removing-the-view-state-the-designer-adds-to-an-xaml-file"></a>Rimozione dello stato di visualizzazione della finestra di progettazione per l'aggiunta a un file XAML
 In questo esempio viene illustrato come creare una classe che deriva da <xref:System.Windows.Markup.XamlWriter> e rimuove lo stato di visualizzazione da un file XAML. [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] scrive informazioni nel documento XAML, che è noto come stato di visualizzazione. Lo stato di visualizzazione si riferisce alle informazioni richieste in fase di progettazione, ad esempio il posizionamento del layout, che non sono richieste in fase di esecuzione. [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)] inserisce queste informazioni nel documento XAML man mano che viene modificato. [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)] scrive lo stato di visualizzazione nel file XAML con un attributo `mc:Ignorable`, in modo che queste informazioni non vengano caricate quando il runtime carica il file XAML. In questo esempio viene illustrato come creare una classe che rimuove tali informazioni sullo stato di visualizzazione durante l'elaborazione di nodi XAML.

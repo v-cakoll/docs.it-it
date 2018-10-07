@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
-ms.openlocfilehash: 0fe38b690d093e5a0bbe90d2b62e56b5d0cb4816
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: d51cd3bcef44c32c24630c1a3a332b2144a41469
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44188384"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48839430"
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>Hosting nel servizio di attivazione dei processi di Windows
 Il servizio di attivazione processo Windows (WAS) gestisce l'attivazione e la durata dei processi di lavoro che contengono applicazioni che servizi di Windows Communication Foundation (WCF) host. Il modello di processo WAS generalizza il modello di processo [!INCLUDE[iis601](../../../../includes/iis601-md.md)] per il server HTTP rimuovendo la dipendenza da HTTP. In questo modo i servizi WCF da usare HTTP e protocolli non HTTP, ad esempio NET. TCP, in un ambiente di hosting che supporta l'attivazione basata su messaggi e offre la possibilità di ospitare un numero elevato di applicazioni in un determinato computer.  
@@ -45,8 +45,8 @@ Il servizio di attivazione processo Windows (WAS) gestisce l'attivazione e la du
   
  Possono essere indirizzati anche servizi e risorse all'interno di un'applicazione. All'interno di un'applicazione, le risorse dell'applicazione vengono indirizzate in relazione al percorso dell'applicazione di base. Ad esempio, si presupponga che un sito in un computer contoso.com abbia associazioni di sito per entrambi i protocolli HTTP e Net.TCP. Si presupponga inoltre che il sito contenga un'applicazione ubicata in /Billing, che espone un servizio in GetOrders.svc. Quindi, se il servizio GetOrders.svc espone un endpoint con un indirizzo relativo di SecureEndpoint, l'endpoint del servizio viene esposto nei due URI seguenti:  
   
- http://contoso.com/Billing/GetOrders.svc/SecureEndpoint  
-net.tcp://contoso.com/Billing/GetOrders.svc/SecureEndpoint  
+- `http://contoso.com/Billing/GetOrders.svc/SecureEndpoint`
+- `net.tcp://contoso.com/Billing/GetOrders.svc/SecureEndpoint`
   
 ## <a name="the-was-runtime"></a>Runtime WAS  
  Le applicazioni vengono organizzate in siti a scopo di indirizzamento e gestione. In fase di esecuzione, le applicazioni vengono inoltre raggruppate in pool. Un pool di applicazioni può contenere molte applicazioni diverse di molti siti diversi. Tutte le applicazioni in un pool di applicazioni condividono una serie comune di caratteristiche runtime. Ad esempio, vengono eseguite tutte nella stessa versione di Common Language Runtime (CLR) e tutte condividono un'identità di processo comune. Ogni pool di applicazioni corrisponde a un'istanza di un processo di lavoro (w3wp.exe). Ogni applicazione gestita in esecuzione in un pool di applicazioni condiviso è isolata dalle altre applicazioni da un AppDomain CLR.  

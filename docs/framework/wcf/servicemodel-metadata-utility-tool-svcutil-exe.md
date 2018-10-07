@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Svcutil.exe
 - clients [WCF], consuming services
 ms.assetid: 1abf3d9f-b420-46f1-b628-df238751f308
-ms.openlocfilehash: f9ae53aeb988f23611adb4b00354f65918790d3b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 01a30ac6cb252eba51cfff8a221c28425f347b0a
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200763"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48837264"
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>Strumento ServiceModel Metadata Utility Tool (Svcutil.exe)
 
@@ -236,7 +236,7 @@ Il comando seguente consente di generare tipi di serializzazione per i tipi <xre
 
 Quando si utilizza svcutil per generare metadati per un servizio, è possibile che venga visualizzato il messaggio seguente:
 
-Errore: Impossibile ottenere i metadati da http://localhost:8000/somesservice/mex la quota di conteggio di caratteri massimo della tabella dei nomi (16384) superata durante la lettura dei dati XML. La tabella dei nomi è una struttura dati utilizzata per memorizzare le stringhe trovate durante l'elaborazione dei dati XML. Documenti XML lunghi con nomi di elementi, nomi di attributi e valori di attributi non ripetuti possono comportare il superamento della quota. Tale quota può essere incrementata modificando la proprietà MaxNameTableCharCount dell'oggetto XmlDictionaryReaderQuotas utilizzato durante la creazione del lettore XML.
+Errore: Impossibile ottenere i metadati da `http://localhost:8000/somesservice/mex` la quota di conteggio di caratteri massimo della tabella dei nomi (16384) superata durante la lettura dei dati XML. La tabella dei nomi è una struttura dati utilizzata per memorizzare le stringhe trovate durante l'elaborazione dei dati XML. Documenti XML lunghi con nomi di elementi, nomi di attributi e valori di attributi non ripetuti possono comportare il superamento della quota. Tale quota può essere incrementata modificando la proprietà MaxNameTableCharCount dell'oggetto XmlDictionaryReaderQuotas utilizzato durante la creazione del lettore XML.
 
 Questo errore può essere causato dalla restituzione di un file WSDL di grandi dimensioni da parte di un servizio quando vengono richiesti i relativi metadati. Il problema deriva dal superamento della quota di caratteri per lo strumento svcutil.exe. Questo valore viene impostato per contribuire a impedire attacchi di tipo Denial of Service (DoS). Questa quota può essere aumentata specificando il seguente file di configurazione per svcutil.
 

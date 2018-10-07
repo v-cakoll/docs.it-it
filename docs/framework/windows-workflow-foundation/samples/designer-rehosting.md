@@ -2,12 +2,12 @@
 title: Riallocazione della finestra di progettazione
 ms.date: 03/30/2017
 ms.assetid: b676ad31-5f64-4d84-9a36-b4d7113a2f4d
-ms.openlocfilehash: f8dbe89ec605f3e957b5178eafd2e034e8159dc3
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 885590604532fba76fc9ab3f6bcc69e077868403
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028914"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48837358"
 ---
 # <a name="designer-rehosting"></a>Riallocazione della finestra di progettazione
 La riallocazione della finestra di progettazione è un scenario comune che si riferisce all'hosting dell'area di progettazione flussi di lavoro all'interno di un'applicazione personalizzata. La maggior parte degli utenti dell'applicazione host usa Visual Studio, tuttavia esistono scenari in cui potrebbe essere utile visualizzare la progettazione flussi di lavoro in un'applicazione:  
@@ -114,7 +114,7 @@ protected override void OnInitialized(EventArgs e)
   
 #### <a name="using-the-sample"></a>Utilizzo dell'esempio  
   
-1.  Aprire la soluzione DesignerRehosting.sln in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
+1.  Aprire la soluzione Designerrehosting in Visual Studio 2010.  
   
 2.  Premere F5 per compilare ed eseguire l'applicazione.  
   

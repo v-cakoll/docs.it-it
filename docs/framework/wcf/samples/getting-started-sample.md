@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - basic samples [WCF], getting started
 ms.assetid: 967a3d94-0261-49ff-b85a-20bb07f1af20
-ms.openlocfilehash: dda11511904d452a3a5101417f8ab8a33c00204f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 74c3b825bbd51a082f20e8e2009e1ca5f0b35100
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857095"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48837154"
 ---
 # <a name="getting-started-sample"></a>Esempio della guida introduttiva
 L'esempio di Guida introduttiva illustra come implementare un servizio tipico e un client tipico utilizzando Windows Communication Foundation (WCF). Questo esempio è la base per tutti gli altri esempi di tecnologia di base.  
@@ -141,9 +141,9 @@ public class CalculatorService : ICalculator
   
  Il servizio espone l'endpoint dell'indirizzo di base fornito dall'host IIS o WAS. L'associazione è configurata con una classe <xref:System.ServiceModel.WSHttpBinding> standard che fornisce comunicazione HTTP e protocolli del servizio Web standard per l'indirizzamento e la sicurezza. Il contratto rappresenta il `ICalculator` implementato dal servizio.  
   
- In base alla configurazione, è possibile accedere al servizio http://localhost/servicemodelsamples/service.svc da un client sullo stesso computer. Affinché i client presenti nei computer remoti accedano al servizio, è necessario specificare un nome di dominio completo anziché localhost.  
+ In base alla configurazione, è possibile accedere al servizio `http://localhost/servicemodelsamples/service.svc` da un client sullo stesso computer. Affinché i client presenti nei computer remoti accedano al servizio, è necessario specificare un nome di dominio completo anziché localhost.  
   
- Per impostazione predefinita il framework non espone metadati. Di conseguenza, il servizio attiva la <xref:System.ServiceModel.Description.ServiceMetadataBehavior> ed espone un endpoint di metadati exchange (MEX) su http://localhost/servicemodelsamples/service.svc/mex. Nella configurazione seguente viene illustrata questa evenienza.  
+ Per impostazione predefinita il framework non espone metadati. Di conseguenza, il servizio attiva la <xref:System.ServiceModel.Description.ServiceMetadataBehavior> ed espone un endpoint di metadati exchange (MEX) su `http://localhost/servicemodelsamples/service.svc/mex`. Nella configurazione seguente viene illustrata questa evenienza.  
   
 ```xaml  
 <system.serviceModel>  

@@ -8,22 +8,22 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 15263371-514e-4ea6-90fb-14b4939154cd
-ms.openlocfilehash: 2b227398af3ea0dfd7cd866f1110ccc1737553c3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5bddab91fed0f8267804cdf8506c9a632c50d174
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495093"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48837128"
 ---
 # <a name="how-to-configure-a-local-issuer"></a>Procedura: configurare un emittente locale
 In questo argomento viene illustrato come configurare un client per utilizzare un emittente locale per i token emessi.  
   
- Spesso, quando un client comunica con un servizio federato, il servizio specifica l'indirizzo del servizio token di sicurezza previsto per l'emissione del token che il client utilizzerà per autenticarsi presso il servizio federato. In alcuni casi, il client può essere configurato per utilizzare un *emittente locale*.  
+ Spesso, quando un client comunica con un servizio federato, il servizio specifica l'indirizzo del servizio token di sicurezza previsto per l'emissione del token che il client utilizzerà per autenticarsi presso il servizio federato. In determinate situazioni, il client può essere configurato per usare un *emittente locale*.  
   
- Windows Communication Foundation (WCF) viene utilizzato un emittente locale nei casi in cui l'indirizzo dell'emittente di un'associazione federativa http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous o `null`. In tali casi, è necessario configurare la classe <xref:System.ServiceModel.Description.ClientCredentials> con l'indirizzo dell'emittente locale e con l'associazione da utilizzare per comunicare con tale emittente.  
+ Windows Communication Foundation (WCF) viene utilizzato un emittente locale nei casi in cui l'indirizzo dell'emittente di un'associazione federativa `http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous` o `null`. In tali casi, è necessario configurare la classe <xref:System.ServiceModel.Description.ClientCredentials> con l'indirizzo dell'emittente locale e con l'associazione da utilizzare per comunicare con tale emittente.  
   
 > [!NOTE]
->  Se il <xref:System.ServiceModel.Description.ClientCredentials.SupportInteractive%2A> proprietà del `ClientCredentials` (classe) è impostata su `true`, non è specificato un indirizzo emittente locale e l'indirizzo dell'emittente specificato dal [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) o altri associazione federata è http://schemas.xmlsoap.org/ws/2005/05/identity/issuer/self, http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous, o `null`, quindi le finestre [!INCLUDE[infocard](../../../../includes/infocard-md.md)] emittente verrà utilizzato.  
+>  Se il <xref:System.ServiceModel.Description.ClientCredentials.SupportInteractive%2A> proprietà del `ClientCredentials` classe è impostata su `true`, un indirizzo dell'emittente locale non è specificato e l'indirizzo dell'emittente specificato dal [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) o altri associazione federata è `http://schemas.xmlsoap.org/ws/2005/05/identity/issuer/self`, `http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous`, o viene `null`, quindi il Windows [!INCLUDE[infocard](../../../../includes/infocard-md.md)] dell'autorità di certificazione viene usata.  
   
 ### <a name="to-configure-the-local-issuer-in-code"></a>Per configurare l'emittente locale nel codice  
   
@@ -61,7 +61,7 @@ In questo argomento viene illustrato come configurare un client per utilizzare u
   
 ### <a name="to-configure-the-local-issuer-in-configuration"></a>Per configurare l'emittente locale nella configurazione  
   
-1.  Creare un [ \<localIssuer >](../../../../docs/framework/configure-apps/file-schema/wcf/localissuer.md) come figlio dell'elemento il [ \<issuedToken >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md) elemento che a sua volta figlio di [ \<clientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) elemento in un comportamento dell'endpoint.  
+1.  Creare un [ \<localIssuer >](../../../../docs/framework/configure-apps/file-schema/wcf/localissuer.md) come figlio dell'elemento il [ \<issuedToken >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md) che a sua volta figlio dell'elemento il [ \<clientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) elemento in un comportamento dell'endpoint.  
   
 2.  Impostare l'attributo `address` sull'indirizzo dell'emittente locale che accetterà richieste del token.  
   
@@ -69,7 +69,7 @@ In questo argomento viene illustrato come configurare un client per utilizzare u
   
 4.  Facoltativo. Impostare il [ \<identità >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md) come figlio dell'elemento di <`localIssuer`> elemento e specificare le informazioni di identità per l'emittente locale.  
   
-5.  Facoltativo. Impostare il [ \<intestazioni >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) come figlio dell'elemento di <`localIssuer`> elemento e specificare le intestazioni aggiuntive necessarie per indirizzare correttamente l'autorità emittente locale.  
+5.  Facoltativo. Impostare il [ \<intestazioni >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) come figlio dell'elemento di <`localIssuer`> elemento e specificare le intestazioni aggiuntive necessarie per indirizzare correttamente l'emittente locale.  
   
 ## <a name="net-framework-security"></a>Sicurezza di .NET Framework  
  Si noti che, se per una determinata associazione vengono specificati l'indirizzo dell'emittente e l'associazione, l'emittente locale non verrà utilizzato per gli endpoint che utilizzano tale associazione. Per i client che prevedono di utilizzare sempre l'emittente locale, è necessario accertarsi di non utilizzare tale associazione o di modificare l'associazione in modo che l'indirizzo dell'emittente sia `null`.  

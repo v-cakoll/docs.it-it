@@ -3,12 +3,12 @@ title: Elemento &lt;security&gt; di &lt;ws2007FederationHttpBinding&gt;
 ms.date: 03/30/2017
 ms.assetid: 826219b4-3a16-45fc-832d-0cd7cbbd3b84
 author: BrucePerlerMS
-ms.openlocfilehash: 6451d4c3cdcf649ae959012826eb433732d87c54
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: f413a7f978df1a0ef3d731abee93c34824c8a6c6
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47208711"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48841151"
 ---
 # <a name="ltsecuritygt-element-of-ltws2007federationhttpbindinggt"></a>Elemento &lt;security&gt; di &lt;ws2007FederationHttpBinding&gt;
 Definisce le impostazioni di sicurezza del [ \<ws2007FederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md) elemento.  
@@ -75,5 +75,5 @@ Definisce le impostazioni di sicurezza del [ \<ws2007FederationHttpBinding >](..
  [Selezione di un tipo di credenziale](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
  [Associazioni](../../../../../docs/framework/wcf/bindings.md)  
  [Configurazione di associazioni fornite dal sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Uso di associazioni per configurare i client e servizi Windows Communication Foundation](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Uso di associazioni per configurare servizi e client](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
  [\<binding>](../../../../../docs/framework/misc/binding.md)

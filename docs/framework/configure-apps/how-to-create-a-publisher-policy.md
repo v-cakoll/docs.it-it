@@ -10,11 +10,11 @@ ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: e7cac3c7e6c588a82e9dfff169ba7b7aa72c35f8
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48793292"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48838474"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>Procedura: creare criteri editore
 I fornitori di assembly possono indicare che le applicazioni devono utilizzare una versione più recente di un assembly includendo un file dei criteri editore con l'assembly aggiornato. File dei criteri editore specifica il reindirizzamento di assembly e le impostazioni della codebase e Usa lo stesso formato di un file di configurazione dell'applicazione. File dei criteri editore viene compilato in un assembly e inserito nella global assembly cache.  

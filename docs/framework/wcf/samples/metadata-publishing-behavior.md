@@ -5,12 +5,12 @@ helpviewer_keywords:
 - service behaviors, metadata publishing sample
 - Metadata Publishing Behaviors Sample [Windows Communication Foundation]
 ms.assetid: 78c13633-d026-4814-910e-1c801cffdac7
-ms.openlocfilehash: c3e26454cc9b29620d80a86df7d7aee131e18200
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b728d1c5a794fa6e0cadef136050d8fa31fb4afe
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197097"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48838793"
 ---
 # <a name="metadata-publishing-behavior"></a>Comportamento di pubblicazione dei metadati
 L'esempio Comportamento di pubblicazione dei metadati illustra come controllare le funzionalità di pubblicazione dei metadati di un servizio. Per evitare la diffusione accidentale di metadati del servizio potenzialmente riservati, la configurazione predefinita per i servizi Windows Communication Foundation (WCF) consente di disattivare la pubblicazione dei metadati. Questo comportamento è protetto per impostazione predefinita, ma significa inoltre che non è possibile usare uno strumento di importazione di metadati (ad esempio Svcutil.exe) per generare il codice client necessario per chiamare il servizio, a meno che il comportamento del servizio di pubblicazione dei metadati non venga abilitato in modo esplicito in fase di configurazione.  
@@ -23,7 +23,7 @@ L'esempio Comportamento di pubblicazione dei metadati illustra come controllare 
 > [!NOTE]
 >  La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.  
   
- Affinché un servizio esponga metadati, la classe <xref:System.ServiceModel.Description.ServiceMetadataBehavior> deve essere configurata nel servizio. Quando questo comportamento è presente, è possibile pubblicare metadati configurando un endpoint per esporre il contratto <xref:System.ServiceModel.Description.IMetadataExchange> come un'implementazione di un protocollo WS-MetadataExchange (MEX). Per convenienza, a questo contratto è stato dato il nome di configurazione abbreviato seguente: "IMetadataExchange." In questo esempio viene utilizzata l'associazione `mexHttpBinding`, ovvero un'utile associazione standard equivalente all'associazione `wsHttpBinding` con la modalità di sicurezza impostata su `None`. Viene usato un indirizzo relativo "MEX" nell'endpoint, che, quando risolto rispetto ai servizi di base comporta un indirizzo dell'endpoint di indirizzo http://localhost/servicemodelsamples/service.svc/mex. Di seguito viene illustrata la configurazione del comportamento:  
+ Affinché un servizio esponga metadati, la classe <xref:System.ServiceModel.Description.ServiceMetadataBehavior> deve essere configurata nel servizio. Quando questo comportamento è presente, è possibile pubblicare metadati configurando un endpoint per esporre il contratto <xref:System.ServiceModel.Description.IMetadataExchange> come un'implementazione di un protocollo WS-MetadataExchange (MEX). Per convenienza, a questo contratto è stato dato il nome di configurazione abbreviato seguente: "IMetadataExchange." In questo esempio viene utilizzata l'associazione `mexHttpBinding`, ovvero un'utile associazione standard equivalente all'associazione `wsHttpBinding` con la modalità di sicurezza impostata su `None`. Viene usato un indirizzo relativo "MEX" nell'endpoint, che, quando risolto rispetto ai servizi di base comporta un indirizzo dell'endpoint di indirizzo `http://localhost/servicemodelsamples/service.svc/mex`. Di seguito viene illustrata la configurazione del comportamento:  
   
 ```xml  
 <behaviors>  
@@ -55,7 +55,7 @@ L'esempio Comportamento di pubblicazione dei metadati illustra come controllare 
           contract="IMetadataExchange" />  
 ```  
   
- Questo esempio imposta la proprietà <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> su `true`, che espone anche i metadati del servizio utilizzando HTTP GET. Per abilitare un endpoint di metadati HTTP GET, il servizio deve avere un indirizzo di base HTTP. La stringa di query `?wsdl` viene utilizzata sull'indirizzo di base del servizio per accedere ai metadati. Ad esempio, per visualizzare il file WSDL per il servizio in un Web browser si utilizzerebbe l'indirizzo http://localhost/servicemodelsamples/service.svc?wsdl. In alternativa, è possibile utilizzare questo comportamento per esporre metadati su HTTP impostando <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> su `true`. Ciò richiede un indirizzo di base HTTP.  
+ Questo esempio imposta la proprietà <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> su `true`, che espone anche i metadati del servizio utilizzando HTTP GET. Per abilitare un endpoint di metadati HTTP GET, il servizio deve avere un indirizzo di base HTTP. La stringa di query `?wsdl` viene utilizzata sull'indirizzo di base del servizio per accedere ai metadati. Ad esempio, per visualizzare il file WSDL per il servizio in un Web browser si utilizzerebbe l'indirizzo `http://localhost/servicemodelsamples/service.svc?wsdl`. In alternativa, è possibile utilizzare questo comportamento per esporre metadati su HTTP impostando <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> su `true`. Ciò richiede un indirizzo di base HTTP.  
   
  Per l'uso di endpoint MEX del servizio di accesso di [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
   
@@ -63,7 +63,7 @@ L'esempio Comportamento di pubblicazione dei metadati illustra come controllare 
   
  Ciò genera un client basato sui metadati del servizio.  
   
- Per accedere ai metadati del servizio utilizzando HTTP GET, puntare il browser a http://localhost/servicemodelsamples/service.svc?wsdl.  
+ Per accedere ai metadati del servizio utilizzando HTTP GET, puntare il browser a `http://localhost/servicemodelsamples/service.svc?wsdl`.  
   
  Se si rimuove questo comportamento e si tenta di aprire il servizio si otterrà un'eccezione. Questo errore si verifica perché senza il comportamento, l'endpoint configurato con il contratto `IMetadataExchange` non viene implementato.  
   

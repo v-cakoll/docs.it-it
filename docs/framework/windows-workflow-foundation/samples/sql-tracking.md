@@ -2,12 +2,12 @@
 title: Rilevamento SQL
 ms.date: 03/30/2017
 ms.assetid: bcaebeb1-b9e5-49e8-881b-e49af66fd341
-ms.openlocfilehash: 84d3fb994c790301ceb55b945bf972c21ed2a971
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 741df337187b2a5fffe63052c9fafbd430f7c2fc
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584324"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48836381"
 ---
 # <a name="sql-tracking"></a>Rilevamento SQL
 In questo esempio viene illustrato come scrivere un partecipante del rilevamento SQL personalizzato che scrive record di rilevamento in un database SQL. Windows Workflow Foundation (WF) fornisce per ottenere visibilità nell'esecuzione di un'istanza del flusso di lavoro di rilevamento del flusso di lavoro. Il runtime di rilevamento crea record di rilevamento del flusso di lavoro durante l'esecuzione di quest'ultimo. Per altre informazioni sul rilevamento del flusso di lavoro, vedere [flusso di lavoro di rilevamento e traccia](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md).
@@ -33,7 +33,7 @@ In questo esempio viene illustrato come scrivere un partecipante del rilevamento
   
 7.  Nel browser viene visualizzata la pagina StockPriceService contenente l'indirizzo WSDL del servizio locale. Copiare questo indirizzo.  
   
-     Un esempio dell'indirizzo WSDL del servizio locale è http://localhost:65193/StockPriceService.xamlx?wsdl.  
+     Un esempio dell'indirizzo WSDL del servizio locale è `http://localhost:65193/StockPriceService.xamlx?wsdl`.  
   
 8.  Tramite [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], eseguire il client di prova WCF (WcfTestClient.exe). che si trova nella directory Microsoft Visual Studio 10.0\Common7\IDE.  
   

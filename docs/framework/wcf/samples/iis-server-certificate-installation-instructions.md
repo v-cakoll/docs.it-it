@@ -2,12 +2,12 @@
 title: Istruzioni di installazione certificato server IIS (Internet Information Services)
 ms.date: 03/30/2017
 ms.assetid: 11281490-d2ac-4324-8f33-e7714611a34b
-ms.openlocfilehash: 46d1acf758dd50b881527a16570a1e4a45933958
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ae1f90a68acc4b1217c46a6570031a88e60c6e88
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33502605"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48838247"
 ---
 # <a name="internet-information-services-iis-server-certificate-installation-instructions"></a>Istruzioni di installazione certificato server IIS (Internet Information Services)
 Per eseguire gli esempi che comunicano in modo sicuro con IIS (Internet Information Services) è necessario creare e installare un certificato server.  
@@ -28,15 +28,15 @@ makecert -sr LocalMachine -ss My -n CN=ServiceModelSamples-HTTPS-Server -sky exc
   
 2.  Il sito Web predefinito e scegliere **proprietà**.  
   
-3.  Selezionare il **protezione Directory** scheda.  
+3.  Selezionare il **sicurezza Directory** scheda.  
   
-4.  Fare clic su di **certificato Server** pulsante. Verrà avviata la Procedura guidata certificati server Web.  
+4.  Scegliere il **certificato del Server** pulsante. Verrà avviata la Procedura guidata certificati server Web.  
   
 5.  Completare la procedura guidata. Selezionare l'opzione per assegnare un certificato. Selezionare il certificato server HTTPS ServiceModelSamples nell'elenco di certificati visualizzati.  
   
-     ![Gestione guidata certificati IIS](../../../../docs/framework/wcf/samples/media/iiscertificate-wizard.GIF "IISCertificate_Wizard")  
+     ![IIS Gestione guidata certificati](../../../../docs/framework/wcf/samples/media/iiscertificate-wizard.GIF "IISCertificate_Wizard")  
   
-6.  Testare l'accesso al servizio in un browser utilizzando l'indirizzo HTTPS https://localhost/servicemodelsamples/service.svc.  
+6.  Testare l'accesso al servizio in un browser usando l'indirizzo HTTPS `https://localhost/servicemodelsamples/service.svc`.  
   
 #### <a name="if-ssl-was-previously-configured-by-using-httpcfgexe"></a>Se SSL è stato precedentemente configurato utilizzando Httpcfg.exe  
   
@@ -55,17 +55,17 @@ PermissiveCertificatePolicy.Enact("CN=ServiceModelSamples-HTTPS-Server");
   
 #### <a name="to-install-iis-on-iis-70-windows-vista-and-windows-server-2008"></a>Per installare IIS su IIS 7.0 (Windows Vista e Windows Server 2008)  
   
-1.  Dal **avviare** menu, fare clic su **eseguire**, quindi digitare **inetmgr** per aprire lo snap-in MMC di Internet Information Services (IIS).  
+1.  Dal **avviare** menu, fare clic su **eseguito**, quindi digitare **inetmgr** per aprire lo snap-in MMC di Internet Information Services (IIS).  
   
-2.  Fare doppio clic sui **sito Web predefinito** e selezionare **Modifica associazioni...**  
+2.  Fare doppio clic il **sito Web predefinito** e selezionare **Modifica binding...**  
   
-3.  Fare clic sul **Aggiungi** pulsante il **binding sito** la finestra di dialogo.  
+3.  Fare clic sui **Add** pulsante del **binding sito** nella finestra di dialogo.  
   
-4.  Selezionare **HTTPS** dal **tipo** elenco a discesa.  
+4.  Selezionare **HTTPS** dalle **tipo** elenco a discesa.  
   
-5.  Selezionare il **ServiceModelSamples-HTTPS-Server** dal **certificato SSL** elenco a discesa e fare clic su **OK**.  
+5.  Selezionare il **ServiceModelSamples-HTTPS-Server** dalle **certificato SSL** elenco a discesa e fare clic **OK**.  
   
-6.  Testare l'accesso al servizio in un browser utilizzando l'indirizzo HTTPS https://localhost/servicemodelsamples/service.svc.  
+6.  Testare l'accesso al servizio in un browser usando l'indirizzo HTTPS `https://localhost/servicemodelsamples/service.svc`.  
   
 > [!NOTE]
 >  Dato che il certificato di prova appena installato non è un certificato attendibile, possono essere visualizzati avvisi di sicurezza di Internet Explorer aggiuntivi quando si visitano indirizzi Web locali protetti da questo certificato.  
