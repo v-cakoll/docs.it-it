@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: d171b5ca-96ef-47ff-800c-c138023cf76e
 author: BrucePerlerMS
-ms.openlocfilehash: bf88073c25351aac0e421d69a947605de3e37759
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b9b7d78601790cfcd7cf54688db1750df96a19f9
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200698"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48848231"
 ---
 # <a name="how-to-secure-a-service-with-windows-credentials"></a>Procedura: proteggere un servizio con credenziali di Windows
 Questo argomento illustra come abilitare la sicurezza del trasporto in un servizio Windows Communication Foundation (WCF) che risiede in un dominio di Windows e viene chiamato dai client nello stesso dominio. Per altre informazioni su questo scenario, vedere [protezione del trasporto con autenticazione di Windows](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md). Per un'applicazione di esempio, vedere la [WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md) esempio.  
@@ -55,7 +55,7 @@ Questo argomento illustra come abilitare la sicurezza del trasporto in un serviz
   
 3.  Creare una seconda variabile `Type` denominata `serviceType` e assegnarle il tipo del contratto implementato (`Calculator`).  
   
-4.  Creare un'istanza della classe <xref:System.Uri> denominata `baseAddress` con l'indirizzo di base del servizio. L'indirizzo di base deve avere uno schema corrispondente al trasporto. In questo caso, lo schema di trasporto è HTTP e l'indirizzo include il particolare Uniform Resource Identifier (URI) "localhost" e una porta (8036) il numero e un indirizzo di base dell'endpoint ("serviceModelSamples /): http://localhost:8036/serviceModelSamples/.  
+4.  Creare un'istanza della classe <xref:System.Uri> denominata `baseAddress` con l'indirizzo di base del servizio. L'indirizzo di base deve avere uno schema corrispondente al trasporto. In questo caso, lo schema di trasporto è HTTP e l'indirizzo include il particolare Uniform Resource Identifier (URI) "localhost" e una porta (8036) il numero e un indirizzo di base dell'endpoint ("serviceModelSamples /): `http://localhost:8036/serviceModelSamples/`.  
   
 5.  Creare un'istanza della classe <xref:System.ServiceModel.ServiceHost> class con le variabili `serviceType` e `baseAddress`.  
   

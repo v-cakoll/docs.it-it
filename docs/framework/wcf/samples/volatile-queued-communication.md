@@ -3,11 +3,11 @@ title: Comunicazione volatile in coda
 ms.date: 03/30/2017
 ms.assetid: 0d012f64-51c7-41d0-8e18-c756f658ee3d
 ms.openlocfilehash: 55c2b695cdc672216ef6a76bef55bc0d427336a0
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47204049"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48845941"
 ---
 # <a name="volatile-queued-communication"></a>Comunicazione volatile in coda
 In questo esempio viene illustrato come eseguire la comunicazione volatile in coda sul trasporto dell'accodamento messaggi (MSMQ). Nell'esempio viene utilizzato <xref:System.ServiceModel.NetMsmqBinding>. Il servizio, in questo caso, è un'applicazione console indipendente che consente di osservare il servizio che riceve messaggi in coda.  

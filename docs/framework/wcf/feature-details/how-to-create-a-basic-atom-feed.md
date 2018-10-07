@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6e0cacc1-9b11-4665-adb7-577a62626fd6
-ms.openlocfilehash: 229cc4a5a06059159eb045da234d9f09de0f6c0d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ac356ac9acd3f0b14fb3da902f1a9c3cfbdd9ef7
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493029"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48847893"
 ---
 # <a name="how-to-create-a-basic-atom-feed"></a>Procedura: creare un feed Atom di base
 Windows Communication Foundation (WCF) consente di creare un servizio che espone un feed di diffusione. In questo argomento viene illustrato come creare un servizio di diffusione che espone un feed di diffusione Atom.  
@@ -23,7 +23,7 @@ Windows Communication Foundation (WCF) consente di creare un servizio che espone
      [!code-vb[htAtomBasic#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatombasic/vb/program.vb#0)]  
   
     > [!NOTE]
-    >  Tutte le operazioni del servizio che applicano <xref:System.ServiceModel.Web.WebGetAttribute> vengono mappate alle richieste HTTP GET. Per eseguire il mapping dell'operazione a un metodo HTTP diverso, utilizzare invece <xref:System.ServiceModel.Web.WebInvokeAttribute>. Per altre informazioni, vedere [procedura: creare un servizio HTTP Web di WCF base](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md).  
+    >  Tutte le operazioni del servizio che applicano <xref:System.ServiceModel.Web.WebGetAttribute> vengono mappate alle richieste HTTP GET. Per eseguire il mapping dell'operazione a un metodo HTTP diverso, utilizzare invece <xref:System.ServiceModel.Web.WebInvokeAttribute>. Per altre informazioni, vedere [procedura: creare un servizio HTTP Web WCF base](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md).  
   
 2.  Implementare il contratto di servizio  
   
@@ -64,9 +64,9 @@ Windows Communication Foundation (WCF) consente di creare un servizio che espone
   
 ### <a name="to-call-getblog-with-an-http-get"></a>Per chiamare GetBlog() con un HTTP GET  
   
-1.  Aprire Internet Explorer, digitare l'URL seguente e premere INVIO: http://localhost:8000/BlogService/GetBlog  
+1.  Aprire Internet Explorer, digitare l'URL seguente e premere INVIO: `http://localhost:8000/BlogService/GetBlog`  
   
-     L'URL contiene l'indirizzo di base del servizio (http://localhost:8000/BlogService), l'indirizzo relativo dell'endpoint e l'operazione di servizio da chiamare.  
+     L'URL contiene l'indirizzo di base del servizio (`http://localhost:8000/BlogService`), l'indirizzo relativo dell'endpoint e l'operazione di servizio da chiamare.  
   
 ### <a name="to-call-getblog-from-code"></a>Per chiamare GetBlog() dal codice  
   

@@ -6,20 +6,20 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], addresses
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
-ms.openlocfilehash: cc81e7ad45c308f5ecf476641dfd65fe47b36098
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 59b3aa87056cc2d32512c8b9ea68c0a6d5935814
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855715"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48847408"
 ---
 # <a name="endpoint-addresses"></a>Indirizzi endpoint
 A ogni endpoint è associato un indirizzo, che è utilizzato per individuarlo e identificarlo. L'indirizzo è costituito principalmente da un URI (Uniform Resource Identifier) che specifica il percorso dell'endpoint. L'indirizzo dell'endpoint è rappresentato nel modello di programmazione di Windows Communication Foundation (WCF) per il <xref:System.ServiceModel.EndpointAddress> classe, che contiene un facoltativo <xref:System.ServiceModel.EndpointAddress.Identity%2A> proprietà che abilita l'autenticazione dell'endpoint da altri endpoint che scambiare messaggi con esso e un set di facoltativo <xref:System.ServiceModel.EndpointAddress.Headers%2A> proprietà definiscono qualsiasi altra intestazione SOAP richiesta per raggiungere il servizio. Le intestazioni facoltative forniscono dettagli aggiuntivi e più precisi sull'indirizzo per identificare o interagire con l'endpoint del servizio. L'indirizzo di un endpoint è rappresentato in transito come riferimento all'endpoint di WS-Addressing (EPR).  
   
 ## <a name="uri-structure-of-an-address"></a>Struttura URI di un indirizzo  
- L'indirizzo URI per la maggior parte dei trasporti è costituito da quattro parti. Ad esempio, le quattro parti dell'URI http://www.fabrikam.com:322/mathservice.svc/secureEndpoint possono essere specificate come segue:  
+ L'indirizzo URI per la maggior parte dei trasporti è costituito da quattro parti. Ad esempio, le quattro parti dell'URI `http://www.fabrikam.com:322/mathservice.svc/secureEndpoint` possono essere specificate come segue:  
   
--   Schema: http:  
+-   Schema: `http:`
   
 -   Computer: `www.fabrikam.com`  
   
@@ -56,9 +56,9 @@ A ogni endpoint è associato un indirizzo, che è utilizzato per individuarlo e 
   
  Un sito potrebbe contenere, ad esempio, gli indirizzi di base seguenti:  
   
--   http://payroll.myorg.com/Service.svc  
+- `http://payroll.myorg.com/Service.svc`
   
--   http://shipping.myorg.com/Service.svc  
+- `http://shipping.myorg.com/Service.svc`
   
  Con [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)], si specifica un filtro del prefisso a livello di AppDomain nel file di configurazione. Eseguire questa operazione con il [ \<baseAddressPrefixFilters >](../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md) elemento che contiene un elenco di prefissi. Gli indirizzi di base in ingresso, forniti da IIS, sono filtrati in base all'elenco di prefissi facoltativo. Per impostazione predefinita, quando non è specificato un prefisso, vengono passati tutti gli indirizzi. La specifica del prefisso fa sì che venga passato solo l'indirizzo di base corrispondente per quello schema.  
   
@@ -75,7 +75,7 @@ A ogni endpoint è associato un indirizzo, che è utilizzato per individuarlo e 
 </system.serviceModel>  
 ```  
   
- Nell'esempio precedente, NET.TCP://Payroll.myorg.com:8000: 8000 e http://shipping.myorg.com:8000 sono solo gli indirizzi di base, i rispettivi schemi, che vengono passati.  
+ Nell'esempio precedente, `net.tcp://payroll.myorg.com:8000` e `http://shipping.myorg.com:8000` sono solo gli indirizzi di base, i rispettivi schemi, che vengono passati.  
   
  `baseAddressPrefixFilter` non supporta caratteri jolly.  
   

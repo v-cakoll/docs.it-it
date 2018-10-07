@@ -3,11 +3,11 @@ title: Tipi deprecati in Windows Workflow Foundation
 ms.date: 03/30/2017
 ms.assetid: 4aebe928-a964-4c1c-abf7-0dbbd3604b13
 ms.openlocfilehash: d41bf147cd079a3d6d3714da5595732de3dcb7de
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48778312"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48847438"
 ---
 # <a name="deprecated-types-in-windows-workflow-foundation"></a>Tipi deprecati in Windows Workflow Foundation
 In .NET 4 team del flusso di lavoro ha rilasciato un motore del flusso di lavoro totalmente nuovo nello spazio dei nomi <xref:System.Activities>. Con la versione di .NET 4.5 Beta la maggior parte dei tipi in "WF 3" vengono contrassegnati <xref:System.Workflow.Activities>, <xref:System.Workflow.ComponentModel>, e <xref:System.Workflow.Runtime> spazi dei nomi come obsoleto.  

@@ -2,12 +2,12 @@
 title: Supporto di memorizzazione nella cache per servizi HTTP Web WCF
 ms.date: 03/30/2017
 ms.assetid: 7f8078e0-00d9-415c-b8ba-c1b6d5c31799
-ms.openlocfilehash: 25b564235b5d2b3b26b5d657f3e5f0bd5d594125
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: ef7a03a9e4c6e188e3c7a000fc4a6050e678556d
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45972988"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48847639"
 ---
 # <a name="caching-support-for-wcf-web-http-services"></a>Supporto di memorizzazione nella cache per servizi HTTP Web WCF
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] Consente di utilizzare il meccanismo dichiarativo di memorizzazione nella cache già disponibile in ASP.NET nei servizi HTTP Web WCF. In questo modo è possibile memorizzare nella cache le risposte inviate dalle operazioni del servizio HTTP Web WCF. Se un utente invia un'operazione HTTP GET al servizio configurato per la memorizzazione nella cache, ASP.NET restituisce la risposta memorizzata nella cache e il metodo del servizio non viene chiamato. Se la cache scade, al successivo tentativo di invio di un'operazione HTTP GET da parte dell'utente, viene chiamato il metodo del servizio e la risposta viene nuovamente memorizzata nella cache. Per altre informazioni sulla memorizzazione nella cache di ASP.NET, vedere [Cenni preliminari sulla memorizzazione nella cache di ASP.NET](https://go.microsoft.com/fwlink/?LinkId=152534)  
@@ -58,7 +58,7 @@ public class Service
 </system.web>  
 ```  
   
- Si tratta dello stesso elemento di configurazione disponibile per le applicazioni ASP.NET. Per altre informazioni sui profili cache ASP.NET, vedere <xref:System.Web.Configuration.OutputCacheProfile>. Per i servizi HTTP Web, gli attributi più importanti del profilo cache sono `cacheDuration` e `varyByParam`. Entrambi gli attributi sono obbligatori. `cacheDuration` imposta la quantità di tempo in secondi necessaria per la memorizzazione nella cache di una risposta. `varyByParam` consente di specificare un parametro della stringa di query utilizzato per memorizzare risposte nella cache. Tutte le richieste effettuate con valori del parametro della stringa di query diversi vengono memorizzate nella cache separatamente. Ad esempio, una volta effettuata una richiesta iniziale a http://MyServer/MyHttpService/MyOperation?param=10 tutte le richieste successive effettuate con lo stesso URI verrebbe restituite la risposta memorizzata nella cache (purché non sia trascorsa la durata della cache). Le risposte per una richiesta analoga ma con valore diverso per quanto riguarda il parametro della stringa di query vengono memorizzate nella cache separatamente. Se non si desidera questo tipo di comportamento di memorizzazione nella cache, impostare `varyByParam` su "none".  
+ Si tratta dello stesso elemento di configurazione disponibile per le applicazioni ASP.NET. Per altre informazioni sui profili cache ASP.NET, vedere <xref:System.Web.Configuration.OutputCacheProfile>. Per i servizi HTTP Web, gli attributi più importanti del profilo cache sono `cacheDuration` e `varyByParam`. Entrambi gli attributi sono obbligatori. `cacheDuration` imposta la quantità di tempo in secondi necessaria per la memorizzazione nella cache di una risposta. `varyByParam` consente di specificare un parametro della stringa di query utilizzato per memorizzare risposte nella cache. Tutte le richieste effettuate con valori del parametro della stringa di query diversi vengono memorizzate nella cache separatamente. Ad esempio, una volta effettuata una richiesta iniziale a `http://MyServer/MyHttpService/MyOperation?param=10`, tutte le richieste successive effettuate con lo stesso URI verrebbe restituite la risposta memorizzata nella cache (purché non sia trascorsa la durata della cache). Le risposte per una richiesta analoga ma con valore diverso per quanto riguarda il parametro della stringa di query vengono memorizzate nella cache separatamente. Se non si desidera questo tipo di comportamento di memorizzazione nella cache, impostare `varyByParam` su "none".  
   
 ## <a name="sql-cache-dependency"></a>Dipendenza dalla cache SQL  
  È inoltre possibile memorizzare nella cache le risposte di un servizio HTTP Web con una dipendenza della cache SQL. Se il servizio HTTP Web WCF dipende da dati archiviati in un database SQL, potrebbe risultare opportuno memorizzare nella cache la risposta del servizio e invalidare la risposta memorizzata nella cache quando i dati nella tabella del database SQL vengono modificati. Questo comportamento viene completamente configurato all'interno del file Web.config. È necessario innanzitutto definire una stringa di connessione nel <`connectionStrings`> elemento.  

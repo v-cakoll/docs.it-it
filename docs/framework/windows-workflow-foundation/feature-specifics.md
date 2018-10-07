@@ -2,12 +2,12 @@
 title: Specifiche delle funzionalità di Windows Workflow Foundation
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-ms.openlocfilehash: b18c6dd76762f4495ac475cd3dfa4e1995733b59
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 6929150f786f0d6b4a5887eb5c0758ebcfdd411c
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44205075"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48846006"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Specifiche delle funzionalità di Windows Workflow Foundation
 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] aggiunge una serie di funzionalità a Windows Workflow Foundation. Questo documento descrive alcune delle nuove funzionalità e fornisce informazioni dettagliate sugli scenari nei quali potrebbero essere utili.  
@@ -17,19 +17,11 @@ ms.locfileid: "44205075"
   
 ### <a name="getting-started-with-messaging-activities"></a>Introduzione alle attività di messaggistica  
   
--   In [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)], creare un progetto Applicazione di servizi flusso di lavoro WCF. Nel canvas verrà posizionata la coppia <xref:System.ServiceModel.Activities.Receive> e <xref:System.ServiceModel.Activities.SendReply>.  
+-   In Visual Studio 2012, creare un progetto di applicazione del servizio del flusso di lavoro WCF. Nel canvas verrà posizionata la coppia <xref:System.ServiceModel.Activities.Receive> e <xref:System.ServiceModel.Activities.SendReply>.  
   
--   Pulsante destro del mouse sul progetto e scegliere **Aggiungi riferimento al servizio**.  Quindi fare clic su un servizio web esistente WSDL **OK**.  Compilare il progetto per mostrare le attività generate (implementate usando <xref:System.ServiceModel.Activities.Send> e <xref:System.ServiceModel.Activities.ReceiveReply>) nella casella degli strumenti.  
+-   Pulsante destro del mouse sul progetto e scegliere **Aggiungi riferimento al servizio**.  Quindi fare clic su un servizio web esistente WSDL **OK**.  Compilare il progetto per mostrare le attività generate (implementate usando <xref:System.ServiceModel.Activities.Send> e <xref:System.ServiceModel.Activities.ReceiveReply>) nella casella degli strumenti.
   
--   Esempi di queste attività sono disponibili nelle sezioni seguenti:  
-  
-    -   Basic: [servizi](../../../docs/framework/windows-workflow-foundation/samples/services.md)  
-  
-    -   Scenari: [servizi](../../../docs/framework/windows-workflow-foundation/samples/services.md)  
-  
--   [Documentazione concettuale](https://go.microsoft.com/fwlink/?LinkId=204801)  
-  
--   [Documentazione della finestra di progettazione di attività di messaggistica](https://go.microsoft.com/fwlink/?LinkId=204802)  
+-   [Documentazione di servizi flusso di lavoro](../wcf/feature-details/workflow-services.md)
   
 ### <a name="messaging-activities-example-scenario"></a>Scenario di esempio relativo alle attività di messaggistica  
  Oggetto `BestPriceFinder` servizio chiama più servizi di compagnie aeree per trovare il prezzo migliore del biglietto per una route specifica.  Implementazione di questo scenario sarebbe necessario usare le attività di messaggistica per ricevere la richiesta di prezzo, recuperare i prezzi dai servizi di back-end e rispondere alla richiesta di prezzo con il prezzo migliore.  Sarebbe inoltre necessario utilizzare altre attività out-of-box per creare la logica di business per calcolare il prezzo migliore.  
@@ -47,15 +39,11 @@ ms.locfileid: "44205075"
   
 -   Esempi di <xref:System.ServiceModel.WorkflowServiceHost> sono disponibili nelle sezioni seguenti:  
   
-    -   [Esecuzione](../../../docs/framework/windows-workflow-foundation/samples/execution.md)  
+    -   [Esecuzione](samples/execution.md)
   
-    -   Basic: [servizi](../../../docs/framework/windows-workflow-foundation/samples/services.md)  
+    -   Applicazione: [sospesa la gestione delle istanze](samples/suspended-instance-management.md)  
   
-    -   Scenari: [servizi](../../../docs/framework/windows-workflow-foundation/samples/services.md)  
-  
-    -   Applicazione: [sospesa la gestione delle istanze](../../../docs/framework/windows-workflow-foundation/samples/suspended-instance-management.md)  
-  
--   [Documentazione concettuale su WorkflowServiceHost](https://go.microsoft.com/fwlink/?LinkId=204807)  
+-   [Cenni preliminari sui servizi di hosting del flusso di lavoro](../wcf/feature-details/hosting-workflow-services-overview.md)  
   
 ### <a name="workflowservicehost-scenario"></a>Scenario relativo a WorkflowServiceHost  
  Un servizio BestPriceFinder chiama più servizi di compagnie aeree per trovare il prezzo migliore del biglietto per una route specifica.  Implementazione di questo scenario sarebbe necessario ospitare il flusso di lavoro in <xref:System.ServiceModel.WorkflowServiceHost>.  Utilizza inoltre le attività di messaggistica per ricevere la richiesta di prezzo, recuperare i prezzi dai servizi di back-end e rispondere alla richiesta di prezzo con il prezzo migliore.  
@@ -79,15 +67,9 @@ ms.locfileid: "44205075"
   
 -   Un esempio di mapping di un dato a un'istanza del servizio è una correlazione basata sul contenuto che associa un dato (ad esempio un ID ordine) a una determinata istanza del flusso di lavoro.  
   
-    -   In un'attività di messaggistica qualsiasi, fare clic sulla proprietà `CorrelationInitializers` e aggiungere un <xref:System.ServiceModel.Activities.QueryCorrelationInitializer> usando la variabile <xref:System.ServiceModel.Activities.CorrelationHandle> creata in precedenza. Nel messaggio fare doppio clic sulla proprietà desiderata (ad es. OrderID) dal menu a discesa. Impostare la proprietà `CorrelatesWith` sulla variabile <xref:System.ServiceModel.Activities.CorrelationHandle> usata in precedenza.  
+    -   In un'attività di messaggistica qualsiasi, fare clic sulla proprietà `CorrelationInitializers` e aggiungere un <xref:System.ServiceModel.Activities.QueryCorrelationInitializer> usando la variabile <xref:System.ServiceModel.Activities.CorrelationHandle> creata in precedenza. Nel messaggio fare doppio clic sulla proprietà desiderata (ad es. OrderID) dal menu a discesa. Impostare la proprietà `CorrelatesWith` sulla variabile <xref:System.ServiceModel.Activities.CorrelationHandle> usata in precedenza. 
   
--   Esempi:  
-  
-    -   Basic: [servizi](../../../docs/framework/windows-workflow-foundation/samples/services.md)  
-  
-    -   Scenari: [servizi](../../../docs/framework/windows-workflow-foundation/samples/services.md)  
-  
-    -   [Documentazione concettuale sulla correlazione](https://go.microsoft.com/fwlink/?LinkId=204939)  
+-   [Documentazione concettuale sulla correlazione](../wcf/feature-details/correlation.md)  
   
 ### <a name="correlation-scenario"></a>Scenario relativo alla correlazione  
  Un flusso di lavoro di elaborazione ordini viene utilizzato per gestire la creazione di nuovi ordini e l'aggiornamento degli ordini esistenti nel processo.  Implementazione di questo scenario sarebbe necessario ospitare il flusso di lavoro in <xref:System.ServiceModel.WorkflowServiceHost> e usare le attività di messaggistica.  Sarebbe inoltre necessaria la correlazione basata sul `orderId` per garantire che gli aggiornamenti vengono eseguiti nel flusso di lavoro corretta.  
@@ -155,7 +137,7 @@ ms.locfileid: "44205075"
   
 ### <a name="getting-started"></a>Introduzione  
   
--   In [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)], creare un'applicazione console flusso di lavoro. Aggiungere un diagramma di flusso nella finestra di progettazione.  
+-   In Visual Studio 2012, creare un'applicazione console flusso di lavoro. Aggiungere un diagramma di flusso nella finestra di progettazione.  
   
 -   La funzionalità diagramma di flusso usa le classi seguenti:  
   
@@ -171,9 +153,7 @@ ms.locfileid: "44205075"
   
 -   Esempi:  
   
-    -   [Gestione errori in un'attività Flowchart usando TryCatch](../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)  
-  
-    -   [Scenario StateMachine usando una combinazione attività FlowChart e Pick](../../../docs/framework/windows-workflow-foundation/samples/statemachine-scenario-using-a-combination-of-flowchart-and-pick.md)  
+    -   [Gestione errori in un'attività Flowchart usando TryCatch](../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md) 
   
     -   [Processo di assunzione](../../../docs/framework/windows-workflow-foundation/samples/hiring-process.md)  
   
@@ -201,7 +181,7 @@ ms.locfileid: "44205075"
   
 ### <a name="getting-started"></a>Introduzione  
   
--   In [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)], creare un'applicazione console flusso di lavoro. Aggiungere le attività procedurali nella finestra di progettazione del flusso di lavoro.  
+-   In Visual Studio 2012, creare un'applicazione console flusso di lavoro. Aggiungere le attività procedurali nella finestra di progettazione del flusso di lavoro.  
   
 -   Esempi:  
   
@@ -226,11 +206,7 @@ ms.locfileid: "44205075"
   
 ### <a name="getting-started"></a>Introduzione  
   
--   In [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)], creare un'applicazione console flusso di lavoro. Aggiungere un'attività <xref:System.Activities.Statements.InvokeMethod> nella finestra di progettazione del flusso di lavoro e configurare i metodi di istanza e statici.  
-  
--   Esempi:  
-  
-    -   [InvokeMethod](../../../docs/framework/windows-workflow-foundation/samples/invokemethod.md)  
+-   In Visual Studio 2012, creare un'applicazione console flusso di lavoro. Aggiungere un'attività <xref:System.Activities.Statements.InvokeMethod> nella finestra di progettazione del flusso di lavoro e configurare i metodi di istanza e statici.  
   
 -   Documentazione della finestra di progettazione: [ActivityDesigner InvokeMethod](/visualstudio/workflow-designer/invokemethod-activity-designer)  
   
@@ -245,13 +221,9 @@ ms.locfileid: "44205075"
   
 ### <a name="getting-started"></a>Introduzione  
   
--   In [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)], creare un'applicazione console flusso di lavoro. Aggiungere un'attività <xref:System.Activities.Statements.TryCatch> nella finestra di progettazione del flusso di lavoro.  
+-   In Visual Studio 2012, creare un'applicazione console flusso di lavoro. Aggiungere un'attività <xref:System.Activities.Statements.TryCatch> nella finestra di progettazione del flusso di lavoro.  
   
--   Esempi:  
-  
-    1.  [Gestione errori in un'attività Flowchart usando TryCatch](../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)  
-  
-    2.  [Uso di attività procedurali](../../../docs/framework/windows-workflow-foundation/samples/using-procedural-activities.md)  
+-   Esempio: [gestione in un'attività Flowchart usando TryCatch guasto](../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)  
   
 -   Documentazione della finestra di progettazione: [Activity Designer Error Handling](/visualstudio/workflow-designer/error-handling-activity-designers)  
   
@@ -263,7 +235,7 @@ ms.locfileid: "44205075"
   
 ### <a name="getting-started"></a>Introduzione  
   
--   In [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)], creare un'applicazione console flusso di lavoro. Aggiungere un'attività <xref:System.Activities.Statements.Pick> nella finestra di progettazione del flusso di lavoro.  
+-   In Visual Studio 2012, creare un'applicazione console flusso di lavoro. Aggiungere un'attività <xref:System.Activities.Statements.Pick> nella finestra di progettazione del flusso di lavoro.  
   
 -   Esempio: [utilizzo dell'attività Pick](../../../docs/framework/windows-workflow-foundation/samples/using-the-pick-activity.md)  
   
@@ -337,7 +309,7 @@ ms.locfileid: "44205075"
   
 ### <a name="getting-started"></a>Introduzione  
   
-1.  In [!INCLUDE[vs2010](../../../includes/vs2010-md.md)], creare un progetto Applicazione di servizi flusso di lavoro WCF. Inizialmente, nel canvas verrà posizionata la coppia <xref:System.ServiceModel.Activities.Receive> e <xref:System.ServiceModel.Activities.SendReply>.  
+1.  In Visual Studio 2010, creare un progetto Applicazione di servizi flusso di lavoro WCF. Inizialmente, nel canvas verrà posizionata la coppia <xref:System.ServiceModel.Activities.Receive> e <xref:System.ServiceModel.Activities.SendReply>.  
   
 2.  Aprire web.config e aggiungere un comportamento di rilevamento ETW senza profilo.  
   
@@ -358,7 +330,7 @@ ms.locfileid: "44205075"
   
 ### <a name="getting-started"></a>Introduzione  
   
-1.  In [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)], creare un flusso di lavoro che contiene un'attività <xref:System.Activities.Statements.Persist> implicita o esplicita. Aggiungere il comportamento <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> all'host del servizio del flusso di lavoro. Questa operazione può essere eseguita nel codice o nel file di configurazione dell'applicazione.  
+1.  In Visual Studio 2012, creare un flusso di lavoro che contiene un implicita o esplicita <xref:System.Activities.Statements.Persist> attività. Aggiungere il comportamento <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> all'host del servizio del flusso di lavoro. Questa operazione può essere eseguita nel codice o nel file di configurazione dell'applicazione.  
   
 2.  Esempi: [persistenza](../../../docs/framework/windows-workflow-foundation/samples/persistence.md)  
   

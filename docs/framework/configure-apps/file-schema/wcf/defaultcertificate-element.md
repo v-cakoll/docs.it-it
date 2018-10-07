@@ -2,12 +2,12 @@
 title: Elemento &lt;defaultCertificate&gt;
 ms.date: 03/30/2017
 ms.assetid: f1ddf364-9a00-45d3-b989-ff381c154ce6
-ms.openlocfilehash: a4af1c6ec452b24634fa50162fa71f069e2451f5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9b99ee36fdb924ea12f3023984a3aa4b590937e8
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32751012"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48847854"
 ---
 # <a name="ltdefaultcertificategt-element"></a>Elemento &lt;defaultCertificate&gt;
 Specifica un certificato X.509 da usare quando un servizio o STS non ne fornisce uno tramite un protocollo di negoziazione.  
@@ -17,7 +17,7 @@ Specifica un certificato X.509 da usare quando un servizio o STS non ne fornisce
 sezione endpointBehaviors  
 \<comportamento >  
 \<clientCredentials>  
-\<elemento serviceCertificate >  
+\<serviceCertificate >  
 \<defaultCertificate >  
   
 ## <a name="syntax"></a>Sintassi  
@@ -72,13 +72,13 @@ x509FindType="FindByThumbPrint/FindBySubjectName/FindBySubjectDistinguishedName/
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<elemento serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)|Specifica un certificato da usare per l'autenticazione di un servizio presso il client.|  
+|[\<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)|Specifica un certificato da usare per l'autenticazione di un servizio presso il client.|  
   
 ## <a name="remarks"></a>Note  
  Per le associazioni che usano sistemi di sicurezza dei messaggi basati sui certificati, il certificato specificato mediante questo elemento di configurazione viene usato per crittografare i messaggi inviati al servizio ed è previsto che venga usato dal servizio per firmare le risposte al client. Può contenere un solo certificato da usare quando il servizio non specifica alcun certificato.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente specifica un certificato da usare per endpoint il cui URI inizia con http://www.contoso.com e un certificato da usare per tutti gli altri endpoint che non eseguono negoziazione del certificato.  
+ L'esempio seguente specifica un certificato da usare per gli endpoint il cui URI inizia con `http://www.contoso.com` e un certificato da usare per tutti gli altri endpoint che non eseguono negoziazione del certificato.  
   
 ```xml  
 <serviceCertificate>  

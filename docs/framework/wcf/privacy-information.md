@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-ms.openlocfilehash: 9c2a8d89fc62f8e3e0ce17f13604a6ba05df1a6f
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 717e38b15767b744816c0a57c97827a1a35c95b3
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44083881"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48847815"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Informazioni sulla privacy di Windows Communication Foundation
 Microsoft è impegnata a proteggere la privacy degli utenti finali. Quando si compila un'applicazione che usa Windows Communication Foundation (WCF), versione 3.0, l'applicazione può incidere sulla privacy degli utenti finali. L'applicazione potrebbe, ad esempio, raccogliere in modo esplicito informazioni di contatto sugli utenti o richiedere o inviare informazioni in Internet al sito Web. Se si incorpora la tecnologia Microsoft nell'applicazione, è possibile che tale tecnologia abbia un proprio comportamento che potrebbe influire sulla privacy. WCF non invia informazioni a Microsoft dall'applicazione, a meno che l'utente finale sceglie di inviarlo a Microsoft.  
@@ -316,45 +316,45 @@ Microsoft è impegnata a proteggere la privacy degli utenti finali. Quando si co
   
  Vengono inoltre rimosse informazioni per ognuna delle azioni seguenti:  
   
- http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Issue  
+- `http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Issue`
   
- http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Issue  
+- `http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Issue`
   
- http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Renew  
+- `http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Renew`
   
- http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Renew  
+- `http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Renew`
   
- http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Cancel  
+- `http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Cancel`
   
- http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Cancel  
+- `http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Cancel`
   
- http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Validate  
+- `http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Validate`
   
- http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Validate  
+- `http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Validate`
   
- http://schemas.xmlsoap.org/ws/2005/02/trust/RST/SCT  
+- `http://schemas.xmlsoap.org/ws/2005/02/trust/RST/SCT`
   
- http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/SCT  
+- `http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/SCT`
   
- http://schemas.xmlsoap.org/ws/2005/02/trust/RST/SCT/Amend  
+- `http://schemas.xmlsoap.org/ws/2005/02/trust/RST/SCT/Amend`
   
- http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/SCT/Amend  
+- `http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/SCT/Amend`
   
- http://schemas.xmlsoap.org/ws/2005/02/trust/RST/SCT/Renew  
+- `http://schemas.xmlsoap.org/ws/2005/02/trust/RST/SCT/Renew`
   
- http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/SCT/Renew  
+- `http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/SCT/Renew`
   
- http://schemas.xmlsoap.org/ws/2005/02/trust/RST/SCT/Cancel  
+- `http://schemas.xmlsoap.org/ws/2005/02/trust/RST/SCT/Cancel`
   
- http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/SCT/Cancel  
+- `http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/SCT/Cancel`
   
- http://schemas.xmlsoap.org/ws/2004/04/security/trust/RST/SCT  
+- `http://schemas.xmlsoap.org/ws/2004/04/security/trust/RST/SCT`
   
- http://schemas.xmlsoap.org/ws/2004/04/security/trust/RSTR/SCT  
+- `http://schemas.xmlsoap.org/ws/2004/04/security/trust/RSTR/SCT`
   
- http://schemas.xmlsoap.org/ws/2004/04/security/trust/RST/SCT-Amend  
+- `http://schemas.xmlsoap.org/ws/2004/04/security/trust/RST/SCT-Amend`
   
- http://schemas.xmlsoap.org/ws/2004/04/security/trust/RSTR/SCT-Amend  
+- `http://schemas.xmlsoap.org/ws/2004/04/security/trust/RSTR/SCT-Amend`
   
 #### <a name="no-information-is-removed-from-application-specific-headers-and-body-data"></a>Non vengono rimosse informazioni dalle intestazioni e dai dati del corpo specifici dell'applicazione  
  WCF non tiene traccia delle informazioni personali nelle intestazioni specifiche dell'applicazione (ad esempio, le stringhe di query) o dati del corpo (ad esempio, numero di carta di credito).  

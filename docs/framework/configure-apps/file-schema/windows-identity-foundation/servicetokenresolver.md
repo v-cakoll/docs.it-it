@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 6e9001e1-e064-4f47-84b2-46225c177746
 author: BrucePerlerMS
 ms.openlocfilehash: d4b64e2c88e153834b7cf5a83bd6258b6dfd471f
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48780791"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48847763"
 ---
 # <a name="ltservicetokenresolvergt"></a>&lt;serviceTokenResolver&gt;
 Registra il resolver dei token di servizio che viene usato dai gestori nella raccolta di gestori di token. Il resolver dei token di servizio viene usato per risolvere il token di crittografia token in arrivo e messaggi.  
