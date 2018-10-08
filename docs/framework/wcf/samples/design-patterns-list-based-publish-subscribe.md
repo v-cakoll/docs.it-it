@@ -2,12 +2,12 @@
 title: 'Modelli di progettazione: pubblicazione-sottoscrizione basata su elenchi'
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
-ms.openlocfilehash: 2807cc8cc197ff39417e3b6375ebbd595cf73c54
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: caec9a9aa6de267cb5407ad4a7166701740f9a63
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664696"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48850127"
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>Modelli di progettazione: pubblicazione-sottoscrizione basata su elenchi
 Questo esempio viene illustrato il modello basato su elenchi di pubblicazione-sottoscrizione implementato come un programma di Windows Communication Foundation (WCF).  
@@ -118,7 +118,7 @@ public class PriceChangeEventArgs : EventArgs
   
 ### <a name="to-run-the-sample-on-the-same-machine"></a>Per eseguire l'esempio sullo stesso computer  
   
-1.  Verificare che sia possibile accedere al servizio usando un browser immettendo l'indirizzo seguente: http://localhost/servicemodelsamples/service.svc. In risposta, viene visualizzata un pagina di conferma.  
+1.  Verificare che sia possibile accedere al servizio usando un browser immettendo l'indirizzo seguente: `http://localhost/servicemodelsamples/service.svc`. In risposta, viene visualizzata un pagina di conferma.  
   
 2.  Eseguire Client.exe da \Client\Bin.\\, che si trova sotto la cartella specifica del linguaggio. L'attività del client viene visualizzata nella finestra della console client. Avviare più client.  
   

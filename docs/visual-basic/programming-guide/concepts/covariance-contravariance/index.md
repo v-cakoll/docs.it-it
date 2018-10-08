@@ -2,12 +2,12 @@
 title: Covarianza e controvarianza (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 59224c46-9931-466b-8c6e-3648c3e609c6
-ms.openlocfilehash: 322cb452e0a3391812e58b68406657651f7a430f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 241b8f5864b6e9b3e1caddde25d032a24e4d0bb7
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644043"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48850452"
 ---
 # <a name="covariance-and-contravariance-visual-basic"></a>Covarianza e controvarianza (Visual Basic)
 In Visual Basic, covarianza e controvarianza abilitano la conversione implicita del riferimento per i tipi di matrice, i tipi delegati e gli argomenti di tipo generico. La covarianza mantiene la compatibilità dell'assegnazione e la controvarianza la inverte.  
@@ -78,7 +78,7 @@ Shared Sub Test()
 End Sub  
 ```  
   
- In .NET Framework 4 o versioni più recenti Visual Basic supporta la covarianza e la controvarianza nelle interfacce e nei delegati generici e consente la conversione implicita dei parametri di tipo generico. Per altre informazioni, vedere [Varianza nelle interfacce generiche (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md) e [Varianza nei delegati (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md).  
+ In .NET Framework 4 o versioni successive, Visual Basic supporta la covarianza e controvarianza nelle interfacce e delegati generici e consente la conversione implicita dei parametri di tipo generico. Per altre informazioni, vedere [Varianza nelle interfacce generiche (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md) e [Varianza nei delegati (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md).  
   
  L'esempio di codice seguente illustra la conversione implicita del riferimento per le interfacce generiche.  
   

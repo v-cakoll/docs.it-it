@@ -2,12 +2,12 @@
 title: XML Schema Definition Tool (Xsd.exe)
 ms.date: 03/30/2017
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
-ms.openlocfilehash: a3a16e92dab6994de6bfa99c248ff0b13658e22d
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 23dea344b123b377224aad5816137aa246b8f596
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45615443"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48850863"
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>XML Schema Definition Tool (Xsd.exe)
 Lo strumento XML Schema Definition (Xsd.exe) consente di generare classi Common Language Runtime o XML Schema da file XDR, XML e XSD o da classi di un assembly di runtime.  
@@ -86,7 +86,7 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
  Da classi a XSD  
  Generare uno schema XML da uno o più tipi presenti in un file di assembly di runtime. Lo schema generato definisce il formato XML utilizzato da `System.Xml.Serialization.XmlSerializer`.  
   
- Xsd.exe consente solo di modificare gli schemi XML che seguono il linguaggio XSD (XML Schema Definition) proposto da W3C (World Wide Web Consortium). Per altre informazioni sulla proposta di XML Schema Definition o lo standard XML, vedere http://w3.org.  
+ Xsd.exe consente solo di modificare gli schemi XML che seguono il linguaggio XSD (XML Schema Definition) proposto da W3C (World Wide Web Consortium). Per altre informazioni sulla proposta di XML Schema Definition o lo standard XML, vedere <https://w3.org>.  
   
 ## <a name="setting-options-with-an-xml-file"></a>Impostazione delle opzioni con un file XML  
  Usando l'opzione `/parameters`, è possibile specificare un singolo file XML che imposta diverse opzioni. Le opzioni che è possibile impostare dipendono dalla modalità di utilizzo dello strumento XSD.exe. È possibile scegliere di generare schemi, file di codice o file di codice con funzionalità `DataSet`. Ad esempio, è possibile impostare l'elemento `<assembly\>` sul nome di un file eseguibile (.exe) o di una libreria di tipi (.dll) durante la generazione di uno schema, ma non durante la generazione di un file di codice. Nel codice XML riportato di seguito viene illustrato come utilizzare l'elemento `<generateSchemas\>` con un determinato file eseguibile:  

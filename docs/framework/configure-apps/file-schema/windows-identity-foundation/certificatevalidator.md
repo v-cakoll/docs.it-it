@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 86161897-c20f-4ad8-9d7f-050c247251bf
 author: BrucePerlerMS
 ms.openlocfilehash: 65b8aa6fa4422579ce0d1c5e33d3418ea051612a
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48776883"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48849698"
 ---
 # <a name="ltcertificatevalidatorgt"></a>&lt;certificateValidator&gt;
 Specifica un tipo personalizzato per la convalida del certificato. Questo tipo viene usato solo se il `certificateValidationMode` attributo del [ \<certificateValidation >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md) elemento è impostato su "Custom".  

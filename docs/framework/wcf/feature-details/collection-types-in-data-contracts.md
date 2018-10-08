@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data contracts [WCF], collection types
 - collection types [WCF]
 ms.assetid: 9b45b28e-0a82-4ea3-8c33-ec0094aff9d5
-ms.openlocfilehash: dccc53f13889e2073579af19e86459fe56b069e7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a2528699387a86ca276cb3ba63eab39544552a4f
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496906"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48850876"
 ---
 # <a name="collection-types-in-data-contracts"></a>Tipi di raccolta nei contratti dati
 Una *raccolta* costituisce un elenco di elementi di un certo tipo. In [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]tali elenchi possono essere rappresentati mediante matrici o una varietà di altri tipi (elenco generico, <xref:System.ComponentModel.BindingList%601>generico, <xref:System.Collections.Specialized.StringCollection>o <xref:System.Collections.ArrayList>). Una raccolta, ad esempio, può contenere un elenco di indirizzi per un determinato cliente. Queste raccolte vengono denominate *raccolte di elenchi*, indipendentemente dal tipo effettivo.  
@@ -27,9 +27,9 @@ Una *raccolta* costituisce un elenco di elementi di un certo tipo. In [!INCLUDE[
   
  Nelle sezioni seguenti vengono descritti dettagliatamente gli ulteriori requisiti relativi ai tipi di raccolte, ad esempio la presenza di un metodo denominato `Add` e di un costruttore predefinito. La presenza di questi requisiti garantisce che i tipi di raccolta possano essere serializzati e deserializzati e implica inoltre che alcune raccolte non sono supportate direttamente, ad esempio l'oggetto <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> generico (perché non dispone di un costruttore predefinito). Per informazioni su come evitare queste restrizioni, tuttavia, vedere la sezione "Utilizzo di tipi di interfacce di raccolta e raccolte di sola lettura" più avanti in questo argomento.  
   
- I tipi contenuti nelle raccolte devono essere tipi di contratto dati o devono poter essere serializzati in altro modo. Per altre informazioni, vedere [i tipi supportati dal serializzatore dei contratti dati](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
+ I tipi contenuti nelle raccolte devono essere tipi di contratto dati o devono poter essere serializzati in altro modo. Per altre informazioni, vedere [tipi supportati dal serializzatore dei contratti dati](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
   
- Per ulteriori informazioni sulle novità e cosa non viene considerata una raccolta valida, nonché sulla modalità di serializzazione delle raccolte, vedere le informazioni sulla serializzazione raccolte nella sezione "Regole avanzate di raccolta" di questo argomento.  
+ Per altre informazioni su che cos'è e cosa non è considerata una raccolta valida, nonché sulle modalità di serializzazione delle raccolte, vedere le informazioni sulla serializzazione di raccolte nella sezione "Regole avanzate" di questo argomento.  
   
 ## <a name="interchangeable-collections"></a>Raccolte intercambiabili  
  Si suppone che tutte le raccolte di elenco dello stesso tipo dispongano dello stesso contratto dati (a meno che non vengano personalizzate con l'attributo <xref:System.Runtime.Serialization.CollectionDataContractAttribute> , come viene descritto più avanti in questo argomento). Pertanto, ad esempio, i contratti dati seguenti sono equivalenti.  
@@ -73,12 +73,12 @@ Una *raccolta* costituisce un elenco di elementi di un certo tipo. In [!INCLUDE[
   
  Durante la serializzazione, quando il tipo dichiarato è un'interfaccia, il tipo dell'istanza effettivo utilizzato può essere qualsiasi tipo che implementa quell'interfaccia. Le restrizioni discusse in precedenza (la presenza di un costruttore predefinito e di un metodo `Add`) non sono applicabili. È ad esempio possibile impostare indirizzi in Customer2 su un'istanza della classe <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> generica di Address, anche se non si può dichiarare direttamente un membro dati di tipo <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>generico.  
   
- Durante la deserializzazione, quando il tipo dichiarato è un'interfaccia, il motore di serializzazione sceglie un tipo che implementi l'interfaccia dichiarata e viene creata un'istanza del tipo. Meccanismo dei tipi noti (descritto in [tipi conosciuti di contratto dati](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)) non ha alcun effetto; la scelta del tipo è incorporata in WCF.  
+ Durante la deserializzazione, quando il tipo dichiarato è un'interfaccia, il motore di serializzazione sceglie un tipo che implementi l'interfaccia dichiarata e viene creata un'istanza del tipo. Meccanismo dei tipi noti (descritto nella [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)) non ha alcun effetto in questo contesto; la scelta del tipo è incorporata in WCF.  
   
 ## <a name="customizing-collection-types"></a>Personalizzazione dei tipi di raccolta  
  È possibile personalizzare i tipi di raccolta utilizzando l'attributo <xref:System.Runtime.Serialization.CollectionDataContractAttribute> , che presenta molti utilizzi.  
   
- Si noti che la personalizzazione dei tipi di raccolta compromette l'intercambiabilità delle raccolte, pertanto si consiglia in genere di evitare l'applicazione di questo attributo quando possibile. Per ulteriori informazioni su questo problema, vedere la sezione "Regole avanzate di raccolta" più avanti in questo argomento.  
+ Si noti che la personalizzazione dei tipi di raccolta compromette l'intercambiabilità delle raccolte, pertanto si consiglia in genere di evitare l'applicazione di questo attributo quando possibile. Per altre informazioni su questo problema, vedere la sezione "Regole avanzate" più avanti in questo argomento.  
   
 ### <a name="collection-data-contract-naming"></a>Denominazione del contratto dati della raccolta  
  Le regole per la denominazione dei tipi di raccolta sono simili a quelle per la denominazione dei tipi di contratto dati normali, come viene descritto in [Data Contract Names](../../../../docs/framework/wcf/feature-details/data-contract-names.md), ad eccezione di alcune importanti differenze:  
@@ -139,12 +139,12 @@ Una *raccolta* costituisce un elenco di elementi di un certo tipo. In [!INCLUDE[
 </cust_list>  
 ```  
   
- Per altre informazioni, vedere la sezione "Regole avanzate di raccolta" più avanti in questo argomento.  
+ Per altre informazioni, vedere la sezione "Regole avanzate" più avanti in questo argomento.  
   
 ### <a name="customizing-the-repeating-element-name-in-list-collections"></a>Personalizzazione del nome dell'elemento ripetuto nelle raccolte di elenco  
  Le raccolte di elenco contengono voci ripetute. Normalmente ogni voce ripetuta è rappresentata come un elemento denominato secondo il nome del contratto dati del tipo contenuto nella raccolta.  
   
- Negli esempi `CustomerList` , le raccolte contengono stringhe. Il nome del contratto dati per il tipo primitivo della stringa è "string", pertanto l'elemento ripetuto è "\<stringa >".  
+ Negli esempi `CustomerList` , le raccolte contengono stringhe. Il nome del contratto dati per il tipo primitivo della stringa è "string", in modo che l'elemento ripetuto è "\<stringa >".  
   
  Utilizzando la proprietà <xref:System.Runtime.Serialization.CollectionDataContractAttribute.ItemName%2A> nell'attributo <xref:System.Runtime.Serialization.CollectionDataContractAttribute> , tuttavia, questo nome di elemento ripetuto può essere personalizzato. Per un esempio, vedere il tipo seguente.  
   
@@ -190,7 +190,7 @@ Una *raccolta* costituisce un elenco di elementi di un certo tipo. In [!INCLUDE[
 </CountriesOrRegionsWithCapitals>  
 ```  
   
- Per altre informazioni sulle raccolte di dizionario, vedere la sezione "Regole avanzate di raccolta" più avanti in questo argomento.  
+ Per altre informazioni sulle raccolte di dizionario, vedere la sezione "Regole avanzate" più avanti in questo argomento.  
   
 ## <a name="collections-and-known-types"></a>Raccolte e tipi noti  
  Non è necessario aggiungere tipi di raccolta a tipi noti quando vengono utilizzati polimorficamente in luogo di altre raccolte o di altre interfacce di raccolta. Se ad esempio si dichiara un membro dati di tipo <xref:System.Collections.IEnumerable> e lo si utilizza per inviare un'istanza di <xref:System.Collections.ArrayList>, non è necessario aggiungere <xref:System.Collections.ArrayList> a tipi noti.  
@@ -222,7 +222,7 @@ Una *raccolta* costituisce un elenco di elementi di un certo tipo. In [!INCLUDE[
 ## <a name="collections-and-schema"></a>Raccolte e schema  
  Tutte le raccolte equivalenti presentano la stessa rappresentazione nello schema XSD (XML Schema Definition Language). Per questo motivo in genere non si ottiene, nel codice client generato, lo stesso tipo di raccolta del codice generato nel server. Il server, ad esempio, può utilizzare un contratto dati con <xref:System.Collections.Generic.List%601> generico del membro dati Integer ma nel codice client generato lo stesso membro dati può diventare una matrice di numeri interi.  
   
- Le raccolte di dizionario sono contrassegnate con un'annotazione di schema specifica di WCF che indicano che si tratta di dizionari; in caso contrario, non sarebbero distinguibili da semplici elenchi contenenti voci con una chiave e un valore. Per una descrizione più precisa del modo in cui le raccolte vengono rappresentate nello schema del contratto dati, vedere [Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
+ Le raccolte di dizionario sono contrassegnate con un'annotazione di schema specifica di WCF che indicano che si tratta di dizionari; in caso contrario, sono distinguibili da semplici elenchi contenenti voci con una chiave e un valore. Per una descrizione più precisa del modo in cui le raccolte vengono rappresentate nello schema del contratto dati, vedere [Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
   
  Per impostazione predefinita i tipi non vengono generati per raccolte non personalizzate nel codice importato. I membri dati di tipi di raccolta di elenco sono importati come matrici e i membri dati di tipi di raccolta di dizionario sono importati come dizionario generico.  
   
@@ -245,7 +245,7 @@ Una *raccolta* costituisce un elenco di elementi di un certo tipo. In [!INCLUDE[
  Quando si fa riferimento a tipi generici, deve trattarsi di generics completamente aperti o di generics completamente chiusi.  
   
 > [!NOTE]
->  Quando si usa lo strumento Svcutil.exe, questo riferimento può essere eseguito usando l'opzione della riga di comando **/collectionType** (forma breve: **/ct**). È importante ricordare che è anche necessario specificare l'assembly per i tipi di raccolta a cui viene fatto riferimento usando l'opzione **/reference** (forma breve: **/r**). Se il tipo è generico, deve essere seguito da una virgoletta inversa e dal numero di parametri generici. La virgoletta inversa (`) non deve essere confusa con il carattere della virgoletta singola ('). È possibile specificare più tipi di raccolta a cui viene fatto riferimento usando l'opzione **/collectionType** più di una volta.  
+>  Quando si usa lo strumento Svcutil.exe, questo riferimento può essere eseguito usando l'opzione della riga di comando **/collectionType** (forma breve: **/ct**). È importante ricordare che è anche necessario specificare l'assembly per i tipi di raccolta a cui viene fatto riferimento usando l'opzione **/reference** (forma breve: **/r**). Se il tipo è generico, deve essere seguito da una virgoletta inversa e dal numero di parametri generici. La virgoletta inversa (\`) non deve essere confusa con il carattere di virgoletta singola ('). È possibile specificare più tipi di raccolta a cui viene fatto riferimento usando l'opzione **/collectionType** più di una volta.  
   
  Ad esempio, per fare in modo che tutti gli elenchi vengano importati come oggetto <xref:System.Collections.Generic.List%601>generico.  
   
@@ -342,13 +342,13 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 ### <a name="collection-naming"></a>Denominazione di raccolte  
  Di seguito vengono elencate le regole di denominazione delle raccolte:  
   
--   Spazio dei nomi predefinito per tutti i contratti di dati di raccolte di dizionario, nonché per contratti di dati raccolte di elenco contenenti tipi primitivi, http://schemas.microsoft.com/2003/10/Serialization/Arrays a meno che non sottoposto a override utilizzando Namespace. I tipi che eseguono il mapping a tipi XSD incorporati, nonché i tipi `char`, `Timespan`e `Guid` , vengono considerati primitivi a questo scopo.  
+-   Spazio dei nomi predefinito per tutti i contratti di dati di raccolta dizionario, nonché per contratti di dati raccolte di elenco contenenti tipi primitivi, è `http://schemas.microsoft.com/2003/10/Serialization/Arrays` a meno che non viene sottoposto a override utilizzando Namespace. I tipi che eseguono il mapping a tipi XSD incorporati, nonché i tipi `char`, `Timespan`e `Guid` , vengono considerati primitivi a questo scopo.  
   
 -   Lo spazio dei nomi predefinito per tipi di raccolta che contengono tipi non primitivi corrisponde allo spazio dei nomi del contratto dati del tipo contenuto nella raccolta, a meno che non venga eseguito l'override utilizzando Namespace.  
   
 -   Il nome predefinito per i contratti dati delle raccolte di elenco, a meno che non venga sottoposto a override utilizzando Name, è la stringa "ArrayOf" associata al nome del contratto dati del tipo contenuto nella raccolta. Il nome del contratto dati per un elenco generico di numeri interi è, ad esempio, "ArrayOfint". È importante ricordare che il nome del contratto dati di `Object` è "anyType", quindi il nome del contratto dati di elenchi non generici come <xref:System.Collections.ArrayList> è "ArrayOfanyType".  
   
- Il nome predefinito per i contratti dati delle raccolte di dizionario, a meno che non venga sottoposto a override utilizzando `Name`, è la stringa "ArrayOfKeyValueOf" associata al nome del contratto dati del tipo di chiave seguito dal nome del contratto dati del tipo di valore. Il nome del contratto dati per un dizionario generico di stringa e numero intero, ad esempio, è "ArrayOfKeyValueOfstringint". Inoltre, se il tipo di chiave o il tipo di valore non sono tipi primitivi, un hash di spazio dei nomi degli spazi dei nomi del contratto dati dei tipi di chiave e valore viene aggiunto al nome. Per ulteriori informazioni su hash di spazio dei nomi, vedere [nomi di contratto dati](../../../../docs/framework/wcf/feature-details/data-contract-names.md).  
+ Il nome predefinito per i contratti dati delle raccolte di dizionario, a meno che non venga sottoposto a override utilizzando `Name`, è la stringa "ArrayOfKeyValueOf" associata al nome del contratto dati del tipo di chiave seguito dal nome del contratto dati del tipo di valore. Il nome del contratto dati per un dizionario generico di stringa e numero intero, ad esempio, è "ArrayOfKeyValueOfstringint". Inoltre, se il tipo di chiave o il tipo di valore non sono tipi primitivi, un hash di spazio dei nomi degli spazi dei nomi del contratto dati dei tipi di chiave e valore viene aggiunto al nome. Per altre informazioni sugli hash di spazio dei nomi, vedere [Data Contract Names](../../../../docs/framework/wcf/feature-details/data-contract-names.md).  
   
  Ogni contratto dati della raccolta di dizionario dispone di un contratto dati complementare che rappresenta una voce del dizionario. Il nome è lo stesso del contratto dati del dizionario, ad eccezione del prefisso "ArrayOf", e lo spazio dei nomi corrisponde a quello del contratto dati del dizionario. Per il contratto dati del dizionario "ArrayOfKeyValueOfstringint", ad esempio, il contratto dati "KeyValueofstringint" rappresenta una voce del dizionario. È possibile personalizzare il nome di questo contratto dati utilizzando la proprietà `ItemName` , come viene descritto nella prossima sezione.  
   

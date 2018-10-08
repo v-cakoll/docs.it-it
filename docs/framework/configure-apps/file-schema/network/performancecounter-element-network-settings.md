@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 3afa1586-e1b8-473d-8985-c3fc90cf561b
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 549f3dcfd7225937fd04ad2116e2be311687861b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 259d8e0297025d496b3a10c3ef3ec2b3c96cffaa
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47399450"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48849789"
 ---
 # <a name="ltperformancecountergt-element-network-settings"></a>&lt;performanceCounter&gt; (impostazioni di rete)
 Abilita o disabilita i contatori delle prestazioni di rete.  
@@ -54,7 +54,7 @@ Abilita o disabilita i contatori delle prestazioni di rete.
 ## <a name="remarks"></a>Note  
  Questo elemento può essere usato nel file di configurazione dell'applicazione o nel file di configurazione del computer (Machine.config).  
   
- I contatori delle prestazioni della rete devono essere abilitati nel file di configurazione da usare. Tutti i contatori delle prestazioni della rete vengono abilitati o disabilitati con una singola impostazione nel file di configurazione. Non è possibile abilitare o disabilitare singoli contatori delle prestazioni della rete. Per altre informazioni sui contatori di prestazioni di rete specifico, vedere [contatori delle prestazioni della rete](https://msdn.microsoft.com/library/d1860235-f643-46ae-846c-ff0ed8b0e3cd).  
+ I contatori delle prestazioni della rete devono essere abilitati nel file di configurazione da usare. Tutti i contatori delle prestazioni della rete vengono abilitati o disabilitati con una singola impostazione nel file di configurazione. Non è possibile abilitare o disabilitare singoli contatori delle prestazioni della rete. Per altre informazioni sui contatori di prestazioni di rete specifico, vedere [contatori delle prestazioni della rete](../../../../../docs/framework/debug-trace-profile/performance-counters.md#networking).  
   
  Il valore predefinito è che le prestazioni di rete i contatori sono disabilitati.  
   
@@ -79,4 +79,4 @@ Abilita o disabilita i contatori delle prestazioni di rete.
  <xref:System.Net.Configuration.PerformanceCountersElement?displayProperty=nameWithType>  
  <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType>  
  [Schema delle impostazioni di rete](../../../../../docs/framework/configure-apps/file-schema/network/index.md)  
- [I contatori delle prestazioni di rete](https://msdn.microsoft.com/library/d1860235-f643-46ae-846c-ff0ed8b0e3cd)
+ [I contatori delle prestazioni di rete](../../../../../docs/framework/debug-trace-profile/performance-counters.md#networking)

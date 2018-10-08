@@ -2,12 +2,12 @@
 title: Data binding in un client ASP.NET
 ms.date: 03/30/2017
 ms.assetid: 68b49fa6-94e7-4d4c-a34e-902a2b3770b6
-ms.openlocfilehash: a3d4213729c8025592a756242a6174d7ace63eaa
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: dde5ec9ac944b205051b2499c7aceac2e6d84b92
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511644"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48850244"
 ---
 # <a name="data-binding-in-an-aspnet-client"></a>Data binding in un client ASP.NET
 In questo esempio viene illustrato come associare dati restituiti da un servizio tipico di Windows Communication Foundation (WCF) in un'applicazione Web Form.  
@@ -27,7 +27,7 @@ In questo esempio viene illustrato come associare dati restituiti da un servizio
   
 2.  Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Il client di questo esempio è un sito Web che è in esecuzione sotto un server Web di sviluppo. Per avviare il server di sviluppo Web, digitare quanto segue al prompt dei comandi: "`%SystemDrive%\Program Files\Common Files\Microsoft Shared\DevServer\9.0\WebDev.WebServer.EXE" /port:8000 /path:<WebFormsSamplePath>\CS\client /vpath:/client`. Passare quindi a http://localhost:8000/client. Per eseguire questo esempio tra più computer, sostituire tutti i riferimenti a `localhost` nel file Web.config del client con il nome del computer che ospita il server.  
+3.  Il client di questo esempio è un sito Web che è in esecuzione sotto un server Web di sviluppo. Per avviare il server di sviluppo Web, digitare quanto segue al prompt dei comandi: `%SystemDrive%\Program Files\Common Files\Microsoft Shared\DevServer\9.0\WebDev.WebServer.EXE" /port:8000 /path:<WebFormsSamplePath>\CS\client /vpath:/client`. Passare quindi a `http://localhost:8000/client`. Per eseguire questo esempio tra più computer, sostituire tutti i riferimenti a `localhost` nel file Web.config del client con il nome del computer che ospita il server.  
   
 > [!IMPORTANT]
 >  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
@@ -36,6 +36,4 @@ In questo esempio viene illustrato come associare dati restituiti da un servizio
 >   
 >  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DataBinding\WebForms`  
-  
-## <a name="see-also"></a>Vedere anche
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DataBinding\WebForms`
