@@ -3,11 +3,11 @@ title: 'Procedura: Creare un ActivityDesigner personalizzato'
 ms.date: 03/30/2017
 ms.assetid: 2f3aade6-facc-44ef-9657-a407ef8b9b31
 ms.openlocfilehash: 86cd3544e9117cca273b6c8dde8454672f14a36a
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48777682"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873008"
 ---
 # <a name="how-to-create-a-custom-activity-designer"></a>Procedura: Creare un ActivityDesigner personalizzato
 
@@ -17,7 +17,7 @@ Gli ActivityDesigner personalizzati vengono in genere implementati in modo che l
 
  L'oggetto <xref:System.Activities.Presentation.ActivityDesigner> usa due controlli di supporto, <xref:System.Activities.Presentation.WorkflowItemPresenter> e <xref:System.Activities.Presentation.WorkflowItemsPresenter>, per facilitare lo sviluppo di ActivityDesigner personalizzati. Questi consentono di gestire funzionalità comuni quali il trascinamento e rilascio di elementi figlio, l'eliminazione, la selezione nonché l'aggiunta di tali elementi figlio. Il <xref:System.Activities.Presentation.WorkflowItemPresenter> consente a un singolo elemento figlio elemento dell'interfaccia utente, fornendo il "area di rilascio", mentre il <xref:System.Activities.Presentation.WorkflowItemsPresenter> può fornire supporto di più elementi dell'interfaccia utente, incluse le funzionalità aggiuntive quali ordinamento, lo spostamento, eliminazione e aggiunta di elementi figlio.
 
- L'altro aspetto principale che è opportuno evidenziare nell'implementazione di un ActivityDesigner personalizzato riguarda il modo in cui vengono associate le modifiche visive usando l'associazione dati di [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] all'istanza archiviata in memoria degli elementi in fase di modifica nella finestra di progettazione. Questa operazione viene eseguita dall'albero degli elementi del modello che è inoltre responsabile per l'abilitazione della notifica di modifiche e il rilevamento di eventi quali le modifiche degli stati.
+ L'altro aspetto principale che è opportuno evidenziare nell'implementazione di un ActivityDesigner personalizzato riguarda il modo in cui vengono associate le modifiche visive usando il data binding di [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] all'istanza archiviata in memoria degli elementi in fase di modifica nella finestra di progettazione. Questa operazione viene eseguita dall'albero degli elementi del modello che è inoltre responsabile per l'abilitazione della notifica di modifiche e il rilevamento di eventi quali le modifiche degli stati.
 
  In questo argomento vengono delineate due procedure.
 

@@ -3,12 +3,12 @@ title: Autorizzazione basata su attestazioni con WIF
 ms.date: 03/30/2017
 ms.assetid: e24000a3-8fd8-4c0e-bdf0-39882cc0f6d8
 author: BrucePerlerMS
-ms.openlocfilehash: c13ea5c9f2f62c9c01139741d06de35dd2ff4be1
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 65254b31570ebf65d10c4d8c1f0fa776a6e2bae1
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47236056"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48872924"
 ---
 # <a name="claims-based-authorization-using-wif"></a>Autorizzazione basata su attestazioni con WIF
 Tramite l'autorizzazione di un'applicazione relying party vengono determinate le risorse di un'identità autenticata a cui è consentito l'accesso e le operazioni eseguibili in queste risorse. Un'autorizzazione non corretta o debole comporta la diffusione di informazioni e l'alterazione dei dati. In questo argomento vengono descritti gli approcci disponibili per implementare l'autorizzazione per i servizi e le applicazioni Web ASP.NET in grado di riconoscere attestazioni mediante WIF (Windows Identity Foundation) e un servizio token di sicurezza (STS), ad esempio il Servizio di controllo di accesso (ACS) di Microsoft Azure.  
@@ -36,7 +36,7 @@ Tramite l'autorizzazione di un'applicazione relying party vengono determinate le
 ### <a name="expressing-roles-as-claims"></a>Espressione dei ruoli come attestazioni  
  Quando viene chiamato il metodo **IsInRole()**, viene eseguito un controllo per determinare se l'utente corrente dispone del ruolo in questione. Nelle applicazioni in grado di riconoscere attestazioni il ruolo è espresso da un tipo di attestazione del ruolo che deve essere disponibile nel token. Il tipo di attestazione del ruolo viene espresso tramite l'URI seguente:  
   
- http://schemas.microsoft.com/ws/2008/06/identity/claims/role  
+ `http://schemas.microsoft.com/ws/2008/06/identity/claims/role`
   
  Vi sono diversi modi per arricchire un token con un tipo di attestazione del ruolo:  
   

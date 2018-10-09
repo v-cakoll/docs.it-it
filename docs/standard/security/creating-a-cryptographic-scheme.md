@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: d40c509f-5a5e-46cc-94cb-a951e9ab6843
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2db6d4229ac777801aff792c86fe0e5e9a1b4994
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 51d07fadcf359c2b44f22ca9868d0f12e24b80c5
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45964384"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873119"
 ---
 # <a name="creating-a-cryptographic-scheme"></a>Creazione di uno schema di crittografia
 I componenti di crittografia di .NET Framework possono essere combinati per creare diversi schemi per la crittografia e la decrittografia dei dati.  
@@ -30,7 +30,7 @@ I componenti di crittografia di .NET Framework possono essere combinati per crea
   
 5.  Le parti avviano quindi una conversazione usando la crittografia simmetrica.  
   
- La creazione di uno schema di crittografia non è un'attività banale. Per altre informazioni sull'uso della crittografia, vedere l'argomento crittografia nella documentazione di Platform SDK al http://msdn.microsoft.com/library.  
+ La creazione di uno schema di crittografia non è un'attività banale.
   
 ## <a name="see-also"></a>Vedere anche
 

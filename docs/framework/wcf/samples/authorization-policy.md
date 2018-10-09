@@ -2,12 +2,12 @@
 title: Criteri di autorizzazione
 ms.date: 03/30/2017
 ms.assetid: 1db325ec-85be-47d0-8b6e-3ba2fdf3dda0
-ms.openlocfilehash: 78ca42abfd2df56edeeb273fcd8ba585aa16f635
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 16549b90692d8061abe729521075e0f248446513
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198319"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873479"
 ---
 # <a name="authorization-policy"></a>Criteri di autorizzazione
 
@@ -284,7 +284,7 @@ In alternativa, è possibile eseguire la stessa operazione nella configurazione:
 
 Windows Communication Foundation (WCF) offre un modello dettagliato basato sulle attestazioni per l'esecuzione di controlli di accesso. L'oggetto <xref:System.ServiceModel.ServiceAuthorizationManager> viene utilizzato per eseguire il controllo dell'accesso e determinare se le attestazioni associate al client soddisfano i requisiti necessari per accedere al metodo del servizio.
 
-Ai fini della dimostrazione, in questo esempio viene illustrata un'implementazione di <xref:System.ServiceModel.ServiceAuthorizationManager> che implementa le <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> metodo per consentire l'accesso dell'utente ai metodi basate sulle attestazioni di tipo http://example.com/claims/allowedoperation il cui valore è l'URI di azione dell'operazione che è può essere chiamato.
+Ai fini della dimostrazione, in questo esempio viene illustrata un'implementazione di <xref:System.ServiceModel.ServiceAuthorizationManager> che implementa le <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> metodo per consentire l'accesso dell'utente ai metodi basate sulle attestazioni di tipo `http://example.com/claims/allowedoperation` il cui valore è l'URI di azione dell'operazione che è può essere chiamato.
 
 ```csharp
 public class MyServiceAuthorizationManager : ServiceAuthorizationManager
@@ -460,7 +460,7 @@ Di seguito viene fornita una breve panoramica delle varie sezioni dei file batch
 
 1. Avviare Client.exe dal *\client\bin*. L'attività del client viene visualizzata nella finestra dell'applicazione console.
 
-  Se il client e il servizio non è in grado di comunicare, vedere [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).
+  Se il client e il servizio non possono comunicare, vedere [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).
 
 ### <a name="to-run-the-sample-across-computers"></a>Per eseguire l'esempio tra più computer
 
@@ -500,7 +500,7 @@ Di seguito viene fornita una breve panoramica delle varie sezioni dei file batch
 
 14. Sul computer client avviare Client.exe da una finestra del prompt dei comandi.
 
-   Se il client e il servizio non è in grado di comunicare, vedere [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).
+   Se il client e il servizio non possono comunicare, vedere [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).
 
 ### <a name="clean-up-after-the-sample"></a>La pulizia dopo il codice di esempio
 

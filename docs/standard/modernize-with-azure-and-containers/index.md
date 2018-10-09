@@ -4,12 +4,12 @@ description: Scopri come lift and -shift e modernizzare le applicazioni esistent
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 4/28/2018
-ms.openlocfilehash: 07e1a1e2ef145dce1b292d9425f33fcd99ffd1ae
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: b22ddd8a63d183571f9ca3a63fb7ae84ebb88510
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45747004"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873499"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Modernizzare le applicazioni .NET esistenti con cloud di Azure e i contenitori di Windows (2nd edition)
 
@@ -25,7 +25,7 @@ Copyright © 2018 Microsoft Corporation
 
 Tutti i diritti sono riservati. Nessuna parte del contenuto di questo libro può essere riprodotta in qualsiasi forma o con qualsiasi mezzo, senza il permesso scritto dell'editore.
 
-Questo libro è disponibile gratuitamente sotto forma di libro elettronico (e-book) attraverso diversi canali Microsoft, ad esempio http://dot.net/architecture.
+Questo libro è disponibile gratuitamente sotto forma di libro elettronico (e-book) attraverso diversi canali Microsoft, ad esempio <http://dot.net/architecture>.
 
 Per domande relative a questo libro, inviare un messaggio di posta elettronica a [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book)
 
@@ -33,7 +33,7 @@ Questo libro viene fornito "così com'è" ed esprime i punti di vista e le opini
 
 Alcuni esempi contenuti nella presente guida vengono forniti solo a fini illustrativi e sono fittizi. Nessuna associazione o connessione reale è intenzionale o può essere presupposta.
 
-Microsoft e i marchi elencati nella pagina Web relativa ai marchi all'indirizzo http://www.microsoft.com sono marchi delle società del gruppo Microsoft. Tutti gli altri marchi appartengono ai rispettivi proprietari.
+Microsoft e i marchi elencati nella pagina Web relativa ai marchi all'indirizzo <https://www.microsoft.com> sono marchi delle società del gruppo Microsoft. Tutti gli altri marchi appartengono ai rispettivi proprietari.
 
 Autore:
 > **Cesar de la Torre**, Sr. PM, team di prodotto .NET, Microsoft Corp.

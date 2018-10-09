@@ -3,11 +3,11 @@ title: 'Procedura: Sostituire la prenotazione URL WCF con una prenotazione limit
 ms.date: 03/30/2017
 ms.assetid: 2754d223-79fc-4e2b-a6ce-989889f2abfa
 ms.openlocfilehash: b53596d7ac4e7e7c3748f6a98130492a96c0b48c
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48037229"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873323"
 ---
 # <a name="how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation"></a>Procedura: Sostituire la prenotazione URL WCF con una prenotazione limitata
 Una prenotazione URL consente di limitare chi può ricevere messaggi da un URL o un set di URL. Una prenotazione è costituita da un modello di URL, un elenco di controllo di accesso (ACL) e un set di flag. Il modello di URL definisce quali URL sono interessati dalla prenotazione. Per altre informazioni su come vengono elaborati i modelli di URL, vedere [Routing delle richieste in ingresso](https://go.microsoft.com/fwlink/?LinkId=136764). L'elenco ACL controlla a quale utente o gruppo di utenti è permesso ricevere messaggi dagli URL specificati. I flag indicano se la prenotazione deve fornire a un utente o a un gruppo l'autorizzazione per ascoltare direttamente l'URL o delegare l'autorizzazione per ascoltare qualche altro processo.  

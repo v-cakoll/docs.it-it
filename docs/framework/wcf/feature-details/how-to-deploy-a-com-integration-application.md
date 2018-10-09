@@ -3,11 +3,11 @@ title: "Procedura: distribuire un'applicazione di integrazione COM+"
 ms.date: 03/30/2017
 ms.assetid: 2e5a0510-db3c-4988-a09c-696285836650
 ms.openlocfilehash: e338641b801113c5cd6ff4ec380f60f9ef900fc2
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48793071"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873086"
 ---
 # <a name="how-to-deploy-a-com-integration-application"></a>Procedura: distribuire un'applicazione di integrazione COM+
 Dopo aver scritto un'applicazione di integrazione COM+, è possibile distribuirla ad altri computer. In questo argomento viene illustrato come trasferire un'applicazione di integrazione COM+ da un computer a un altro.  

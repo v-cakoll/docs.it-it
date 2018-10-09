@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], schema reference
 ms.assetid: 9ebb0ebe-8166-4c93-980a-7c8f1f38f7c0
-ms.openlocfilehash: 5eb4caee5c2057e112ed4f5a88f46fa82b1f57cc
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 33661061e1a5db4f7826c1a8eca188f8c782b58f
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44088037"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873719"
 ---
 # <a name="data-contract-schema-reference"></a>Riferimento allo schema del contratto dati
 In questo argomento viene descritto il sottoinsieme dell'XML Schema (XSD) utilizzato da <xref:System.Runtime.Serialization.DataContractSerializer> per descrivere i tipi di Common Language Runtime (CLR) per la serializzazione XML.  
@@ -32,7 +32,7 @@ In questo argomento viene descritto il sottoinsieme dell'XML Schema (XSD) utiliz
   
 ## <a name="general-information"></a>Informazioni generali  
   
--   Lo spazio dei nomi dello schema viene descritto in [XML Schema](https://go.microsoft.com/fwlink/?LinkId=95475). In questo documento viene utilizzato il prefisso "xs".  
+-   Lo spazio dei nomi dello schema viene descritto nella pagina relativa a [XML Schema](https://go.microsoft.com/fwlink/?LinkId=95475). In questo documento viene utilizzato il prefisso "xs".  
   
 -   Tutti gli attributi con un spazio dei nomi non di schema vengono ignorati.  
   
@@ -47,7 +47,7 @@ In questo argomento viene descritto il sottoinsieme dell'XML Schema (XSD) utiliz
 |`elementFormDefault`|Deve essere qualificato. Per essere supportati da `DataContractSerializer`, tutti gli elementi devono essere qualificati per uno schema. Questa operazione può essere eseguita impostando xs:schema/@elementFormDefault su "qualified" o impostando xs:element/@form su "qualified" in ogni singola dichiarazione di elemento.|  
 |`finalDefault`|Ignorato.|  
 |`Id`|Ignorato.|  
-|`targetNamespace`|Supportato e associato allo spazio dei nomi del contratto dati. Se questo attributo non viene specificato, viene utilizzato lo spazio dei nomi vuoto, Non può essere lo spazio dei nomi riservato http://schemas.microsoft.com/2003/10/Serialization/.|  
+|`targetNamespace`|Supportato e associato allo spazio dei nomi del contratto dati. Se questo attributo non viene specificato, viene utilizzato lo spazio dei nomi vuoto, Non può essere lo spazio dei nomi riservato `http://schemas.microsoft.com/2003/10/Serialization/`.|  
 |`version`|Ignorato.|  
   
 ### <a name="xsschema-contents"></a>\<xs: schema >: contenuto  
@@ -56,7 +56,7 @@ In questo argomento viene descritto il sottoinsieme dell'XML Schema (XSD) utiliz
 |--------------|------------|  
 |`include`|Supportato. `DataContractSerializer` supporta xs:include e xs:import. Tuttavia, Svcutil.exe restringe i seguenti riferimenti `xs:include/@schemaLocation` e `xs:import/@location` quando i metadati vengono caricati da un file locale. In questo caso, l'elenco dei file di schema deve essere passato tramite un meccanismo fuori banda e non tramite `include` ; i documenti dello schema `include`vengono ignorati.|  
 |`redefine`|Non consentito. L'utilizzo di `xs:redefine` non è consentito da `DataContractSerializer` per motivi di sicurezza: `x:redefine` rende necessario seguire `schemaLocation` . In alcune circostanze, Svcutil.exe che utilizza DataContract restringe l'utilizzo di `schemaLocation`.|  
-|`import`|Supportato. `DataContractSerializer` supporta `xs:include` e `xs:import`. Tuttavia, Svcutil.exe restringe i seguenti riferimenti `xs:include/@schemaLocation` e `xs:import/@location` quando i metadati vengono caricati da un file locale. In questo caso, l'elenco dei file di schema deve essere passato tramite un meccanismo fuori banda e non tramite `include` ; i documenti dello schema `include`vengono ignorati.|  
+|`import`|Supportato. `DataContractSerializer` supporta `xs:include` e `xs:import`. Tuttavia, Svcutil.exe restringe i seguenti riferimenti `xs:include/@schemaLocation` e `xs:import/@location` quando i metadati vengono caricati da un file locale. In questo caso, l'elenco dei file di schema deve essere passato tramite un meccanismo fuori banda e non tramite `include`; i documenti dello schema `include` vengono ignorati.|  
 |`simpleType`|Supportato. Vedere la sezione `xs:simpleType` .|  
 |`complexType`|Supportato, esegue il mapping ai contratti dati. Vedere la sezione `xs:complexType` .|  
 |`group`|Ignorato. `DataContractSerializer` non supporta l'utilizzo di `xs:group`, `xs:attributeGroup`e `xs:attribute`. Queste dichiarazioni vengono ignorate come elementi figlio di `xs:schema`, ma non è possibile fare riferimento a esse da `complexType` o da altri costrutti supportati.|  
@@ -524,7 +524,7 @@ public class Employee : Person
 |`positiveInteger`|<xref:System.Int64>.|  
   
 ## <a name="iserializable-types-mapping"></a>Mapping dei tipi ISerializable  
- In [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] versione 1.0, `ISerializable` è stato introdotto come meccanismo generale per serializzare oggetti per la persistenza o il trasferimento di dati. Sono disponibili molti tipi [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] che implementano `ISerializable` e che possono essere passati tra le applicazioni. `DataContractSerializer` fornisce naturalmente il supporto per le classi `ISerializable` . `DataContractSerializer` esegue il mapping ai tipi dello schema di implementazione di `ISerializable` che differiscono solo per il QName (nome completo) del tipo e sono effettivamente raccolte di proprietà. Ad esempio, il `DataContractSerializer` viene eseguito il mapping <xref:System.Exception> a un tipo XSD seguente nel http://schemas.datacontract.org/2004/07/System dello spazio dei nomi.  
+ In [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] versione 1.0, `ISerializable` è stato introdotto come meccanismo generale per serializzare oggetti per la persistenza o il trasferimento di dati. Sono disponibili molti tipi [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] che implementano `ISerializable` e che possono essere passati tra le applicazioni. `DataContractSerializer` fornisce naturalmente il supporto per le classi `ISerializable` . `DataContractSerializer` esegue il mapping ai tipi dello schema di implementazione di `ISerializable` che differiscono solo per il QName (nome completo) del tipo e sono effettivamente raccolte di proprietà. Ad esempio, il `DataContractSerializer` viene eseguito il mapping <xref:System.Exception> a un tipo XSD seguente nel `http://schemas.datacontract.org/2004/07/System` dello spazio dei nomi.  
   
 ```xml  
 <xs:complexType name="Exception">  
@@ -541,7 +541,7 @@ public class Employee : Person
 ## <a name="datacontract-serialization-schema"></a>Schema di serializzazione del contratto dati  
  Diversi schemi esportati da `DataContractSerializer` utilizzano tipi, elementi e attributi da uno speciale spazio dei nomi di serializzazione del contratto dati:  
   
- http://schemas.microsoft.com/2003/10/Serialization  
+ `http://schemas.microsoft.com/2003/10/Serialization`
   
  Di seguito è riportata una dichiarazione completa dello schema di serializzazione del contratto dati.  
   

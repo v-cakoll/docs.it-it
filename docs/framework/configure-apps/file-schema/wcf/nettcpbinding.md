@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - netTcpBinding Element
 ms.assetid: 5c5104a7-8754-4335-8233-46a45322503e
-ms.openlocfilehash: e8ac320c1edde05074d42652a708320d10690550
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 4c069699e35880d90e93f032ad6c0dd0202f6ebb
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48245257"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873531"
 ---
 # <a name="ltnettcpbindinggt"></a>&lt;netTcpBinding&gt;
 Specifica un'associazione protetta, affidabile e ottimizzata adatta per le comunicazioni fra computer. Per impostazione predefinita, genera uno stack di comunicazione in fase di runtime con Windows per la sicurezza per garantire la sicurezza e l'autenticazione dei messaggi, TCP per il recapito dei messaggi e la codifica binaria dei messaggi.  
@@ -147,5 +147,5 @@ algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes
  <xref:System.ServiceModel.Configuration.NetTcpBindingElement>  
  [Associazioni](../../../../../docs/framework/wcf/bindings.md)  
  [Configurazione di associazioni fornite dal sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Uso di associazioni per configurare i client e servizi Windows Communication Foundation](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Uso di associazioni per configurare servizi e client](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
  [\<binding>](../../../../../docs/framework/misc/binding.md)
