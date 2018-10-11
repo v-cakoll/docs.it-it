@@ -2,12 +2,12 @@
 title: '&lt;serviceMetadata&gt;'
 ms.date: 03/30/2017
 ms.assetid: 2b4c3b4c-31d4-4908-a9b7-5bb411c221f2
-ms.openlocfilehash: 3c59a47f8a45fbccb05eb1f385215fe2aa739836
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a5f69093a8eca7bfbdfd3b0d933a2689b552ec8f
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32751782"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086713"
 ---
 # <a name="ltservicemetadatagt"></a>&lt;serviceMetadata&gt;
 Specifica la pubblicazione dei metadati del servizio e delle informazioni associate.  
@@ -52,7 +52,7 @@ Specifica la pubblicazione dei metadati del servizio e delle informazioni associ
 |policyVersion|Stringa che indica la versione della specifica WS-Policy usata. L'attributo è di tipo <xref:System.ServiceModel.Description.PolicyVersion>.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- Nessuno  
+ nessuno  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -61,13 +61,13 @@ Specifica la pubblicazione dei metadati del servizio e delle informazioni associ
 |[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Specifica un elemento di comportamento.|  
   
 ## <a name="remarks"></a>Note  
- Questo elemento di configurazione consente di controllare le funzionalità di pubblicazione dei metadati di un servizio. Per evitare la diffusione accidentale di metadati del servizio potenzialmente riservati, la configurazione predefinita per i servizi Windows Communication Foundation (WCF) disabilita la pubblicazione dei metadati. Questo comportamento è protetto per impostazione predefinita, ma significa inoltre che non è possibile usare uno strumento di importazione di metadati (ad esempio Svcutil.exe) per generare il codice client necessario per chiamare il servizio, a meno che il comportamento del servizio di pubblicazione dei metadati non venga abilitato in modo esplicito in fase di configurazione. Tale elemento di configurazione consente di abilitare questo comportamento di pubblicazione per il servizio.  
+ Questo elemento di configurazione consente di controllare le funzionalità di pubblicazione dei metadati di un servizio. Per evitare la diffusione accidentale di metadati del servizio potenzialmente riservati, la configurazione predefinita per i servizi Windows Communication Foundation (WCF) consente di disattivare la pubblicazione dei metadati. Questo comportamento è protetto per impostazione predefinita, ma significa inoltre che non è possibile usare uno strumento di importazione di metadati (ad esempio Svcutil.exe) per generare il codice client necessario per chiamare il servizio, a meno che il comportamento del servizio di pubblicazione dei metadati non venga abilitato in modo esplicito in fase di configurazione. Tale elemento di configurazione consente di abilitare questo comportamento di pubblicazione per il servizio.  
   
- Per un esempio dettagliato di configurazione di questo comportamento, vedere [il comportamento di pubblicazione dei metadati](../../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md).  
+ Per un esempio dettagliato della configurazione di questo comportamento, vedere [comportamento di pubblicazione dei metadati](../../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md).  
   
  Gli attributi `httpGetBinding` e `httpsGetBinding` facoltativi consentono di configurare le associazioni usate per il recupero di metadati tramite HTTP GET (o HTTPS GET). Se non vengono specificati, per il recupero dei metadati verranno usate le associazioni predefinite (`HttpTransportBindingElement` per HTTP e `HttpsTransportBindingElement` per HTTPS) a seconda dei casi. Si noti che non è possibile usare questi attributi con le associazioni WCF incorporate. Verranno supportate sole le associazioni con elementi di associazione interni che supportano <xref:System.ServiceModel.Channels.IReplyChannel>. La proprietà <xref:System.ServiceModel.Channels.MessageVersion> dell'associazione deve inoltre essere <xref:System.ServiceModel.Channels.MessageVersion.None%2A>.  
   
- Per ridurre l'esposizione di un servizio agli utenti malintenzionati, questo trasferimento può essere protetto mediante il meccanismo HTTPS (ovvero SSL su HTTP). A tale scopo, è anzitutto necessario associare un certificato X.509 adatto a una porta specifica del computer che ospita il servizio. (Per altre informazioni, vedere [utilizzano i certificati](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).) Aggiungere quindi questo elemento alla configurazione del servizio e impostare l'attributo `httpsGetEnabled` su `true`. Impostare infine l'attributo `httpsGetUrl` sull'URL dell'endpoint dei metadati del servizio, come illustrato nell'esempio seguente.  
+ Per ridurre l'esposizione di un servizio agli utenti malintenzionati, questo trasferimento può essere protetto mediante il meccanismo HTTPS (ovvero SSL su HTTP). A tale scopo, è anzitutto necessario associare un certificato X.509 adatto a una porta specifica del computer che ospita il servizio. (Per altre informazioni, vedere [Working with Certificates](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).) Aggiungere quindi questo elemento alla configurazione del servizio e impostare l'attributo `httpsGetEnabled` su `true`. Impostare infine l'attributo `httpsGetUrl` sull'URL dell'endpoint dei metadati del servizio, come illustrato nell'esempio seguente.  
   
 ```xml
 <behaviors>  
@@ -81,7 +81,7 @@ Specifica la pubblicazione dei metadati del servizio e delle informazioni associ
 ```  
   
 ## <a name="example"></a>Esempio  
- L'esempio seguente configura un servizio per esporre metadati tramite il \<serviceMetadata > elemento. Viene inoltre configurato un endpoint per esporre il contratto `IMetadataExchange` come un'implementazione di un protocollo WS-MetadataExchange (MEX). Nell'esempio viene usata l'associazione `mexHttpBinding`, ovvero un'utile associazione standard equivalente all'associazione `wsHttpBinding` con la modalità di sicurezza impostata su `None`. Viene usato un indirizzo relativo "MEX" nell'endpoint, che, quando risolto rispetto ai servizi di base indirizzo l'indirizzo di endpoint http://localhost/servicemodelsamples/service.svc/mex.  
+ Nell'esempio seguente configura un servizio per esporre metadati tramite il \<serviceMetadata > elemento. Viene inoltre configurato un endpoint per esporre il contratto `IMetadataExchange` come un'implementazione di un protocollo WS-MetadataExchange (MEX). Nell'esempio viene usata l'associazione `mexHttpBinding`, ovvero un'utile associazione standard equivalente all'associazione `wsHttpBinding` con la modalità di sicurezza impostata su `None`. Viene usato un indirizzo relativo "MEX" nell'endpoint, che, quando risolto rispetto ai servizi di base comporta un indirizzo dell'endpoint di indirizzo `http://localhost/servicemodelsamples/service.svc/mex`.  
   
 ```xml
 <configuration>  

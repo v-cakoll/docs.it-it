@@ -1,13 +1,13 @@
 ---
 title: '&lt;trackingProfile&gt; di WCF'
-ms.date: 03/30/2017
+ms.date: 10/08/2018
 ms.assetid: 09b651c2-c0d2-4850-a101-b0e009a1dc3a
-ms.openlocfilehash: 7f1b6836dc8d9d4e56a0a6831a373e50bbae920c
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: a11086ef07a2a605f3889bc4077d25e0b7748e5e
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839709"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49087661"
 ---
 # <a name="lttrackingprofilegt-of-wcf"></a>&lt;trackingProfile&gt; di WCF
 Rappresenta una sezione di configurazione per la creazione di una sottoscrizione di record di rilevamento in un partecipante del rilevamento del flusso di lavoro. Un profilo di rilevamento contiene query di rilevamento che consentono a un partecipante del rilevamento di sottoscrivere gli eventi del flusso di lavoro generati quando lo stato di un'istanza del flusso di lavoro viene modificato in fase di esecuzione. Le query definite all'interno della sezione del profilo di rilevamento definiscono i tipi di eventi restituiti dalla sottoscrizione.  
@@ -21,11 +21,63 @@ Rappresenta una sezione di configurazione per la creazione di una sottoscrizione
 ## <a name="syntax"></a>Sintassi  
   
 ```xml
-   <system.serviceModel>  <tracking>      <trackingProfile name="String">      <workflow activityDefinitionId="String">          <activityScheduledQueries>             <activityScheduledQuery activityName="String"                 childActivityName="String"/>          </activityScheduledQueries>             <activityStateQuery activityName="String" />                <arguments>                   <argument name="String"/>                </arguments>                <states>                   <state name="String"/>                </states>                <variables>                   <variable name="String"/>                </variables>          </activityStateQueries>          <bookmarkResumptionQueries>             <bookmarkResumptionQuery name="String" />          </bookmarkResumptionQueries>          <cancelRequestQueries>             <cancelRequestQuery activityName="String"                 childActivityName="String"/>          </cancelRequestQueries>          <customTrackingQueries>             <customTrackingQuery activityName="String"                 name="String"/>          </customTrackingQueries>          <faultPropagationQueries>             <faultPropagationQuery activityName="String"                 faultHandlerActivityName="String"/>          </faultPropagationQueries>         <workflowInstanceQueries>            <workflowInstanceQuery>              <states>                 <state name="String"/>              </states>          </workflowInstanceQuery>        </workflowInstanceQueries>      </workflow>    </trackingProfile>           </profiles>  </tracking></system.serviceModel>    
+<system.serviceModel>
+  <tracking>
+    <profiles>
+      <trackingProfile name="String">
+        <workflow activityDefinitionId="String">
+          <activityScheduledQueries>
+            <activityScheduledQuery activityName="String" 
+                                    childActivityName="String" />
+          </activityScheduledQueries>
+          <activityStateQueries>
+            <activityStateQuery activityName="String">
+              <arguments>
+                <argument name="String"/>
+              </arguments>
+              <states>
+                <state name="String"/>
+              </states>
+              <variables>
+                <variable name="String"/>
+              </variables>
+            </activityStateQuery>
+          </activityStateQueries>
+          <bookmarkResumptionQueries>
+            <bookmarkResumptionQuery name="String" />
+          </bookmarkResumptionQueries>
+          <cancelRequestedQueries>
+            <cancelRequestedQuery activityName="String" 
+                                childActivityName="String"/>
+          </cancelRequestedQueries>
+          <customTrackingQueries>
+            <customTrackingQuery activityName="String" 
+                                 name="String"/>
+          </customTrackingQueries>
+          <faultPropagationQueries>
+            <faultPropagationQuery faultSourceActivityName="String" 
+                                   faultHandlerActivityName="String"/>
+          </faultPropagationQueries>
+          <stateMachineStateQueries>
+            <stateMachineStateQuery activityName="String" />
+          </stateMachineStateQueries>
+          <workflowInstanceQueries>
+            <workflowInstanceQuery>
+              <states>
+                <state name="String"/>
+              </states>
+            </workflowInstanceQuery>
+          </workflowInstanceQueries>
+        </workflow>
+      </trackingProfile>
+    </profiles>
+  </tracking>
+</system.serviceModel>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
- Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
+
+Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
 ### <a name="attributes"></a>Attributi  
   
@@ -48,32 +100,34 @@ Rappresenta una sezione di configurazione per la creazione di una sottoscrizione
 ## <a name="remarks"></a>Note  
  I profili di rilevamento contengono query di rilevamento che consentono a un partecipante del rilevamento di sottoscrivere gli eventi del flusso di lavoro generati quando lo stato di un'istanza del flusso di lavoro viene modificato in fase di esecuzione. A seconda dei requisiti di monitoraggio, è possibile scrivere un profilo molto generico che sottoscrive un piccolo set di modifiche dello stato di alto livello in un flusso di lavoro. Viceversa, è possibile creare un profilo molto dettagliato i cui eventi risultanti sono sufficientemente precisi per ricostruire un flusso di esecuzione dettagliato in un secondo momento.  
   
- I profili di rilevamento vengono strutturati sotto forma di sottoscrizioni dichiarative per record di rilevamento che consentono di eseguire query sulla fase di esecuzione del flusso di lavoro per record di rilevamento specifici. Esistono diversi tipi di query che consentono di sottoscrivere classi differenti di <xref:System.Activities.Tracking.TrackingRecord> oggetti. Per un elenco completo delle query, vedere [ \<partecipanti >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/participants.md) e [profili di rilevamento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)...  
+ I profili di rilevamento vengono strutturati sotto forma di sottoscrizioni dichiarative per record di rilevamento che consentono di eseguire query sulla fase di esecuzione del flusso di lavoro per record di rilevamento specifici. Esistono diversi tipi di query che consentono di sottoscrivere classi differenti di <xref:System.Activities.Tracking.TrackingRecord> oggetti. Per un elenco completo delle query, vedere [ \<partecipanti >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/participants.md) e [profili di rilevamento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).
   
- Nell'esempio seguente viene illustrato un profilo di rilevamento in un file di configurazione che consente a un partecipante di rilevamento sottoscrivere i `Started` e `Completed` gli eventi del flusso di lavoro.  
+Nell'esempio seguente viene illustrato un profilo di rilevamento in un file di configurazione che consente a un partecipante di rilevamento sottoscrivere i `Started` e `Completed` gli eventi del flusso di lavoro.  
   
-```xml  
-<system.serviceModel>  
-  <tracking>    
-    <trackingProfile name="Sample Tracking Profile">  
-      <workflow activityDefinitionId="*">  
-         <workflowInstanceQueries>  
-            <workflowInstanceQuery>  
-            <states>  
-              <state name="Started"/>  
-              <state name="Completed"/>  
-            </states>  
-          </workflowInstanceQuery>  
-        </workflowInstanceQueries>  
-      </workflow>  
-    </trackingProfile>          
-   </profiles>  
-  </tracking>  
-</system.serviceModel>  
+```xml
+<system.serviceModel>
+  <tracking>
+    <profiles>
+      <trackingProfile name="Sample Tracking Profile">
+        <workflow activityDefinitionId="*">
+          <workflowInstanceQueries>
+            <workflowInstanceQuery>
+              <states>
+                <state name="Started"/>
+                <state name="Completed"/>
+              </states>
+            </workflowInstanceQuery>
+          </workflowInstanceQueries>
+        </workflow>
+      </trackingProfile>
+    </profiles>
+  </tracking>
+</system.serviceModel>
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.Activities.Tracking.Configuration.ProfileElement>  
- <xref:System.Activities.Tracking.TrackingProfile>  
- [Rilevamento e analisi del flusso di lavoro](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
- [Profili di rilevamento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.ServiceModel.Activities.Tracking.Configuration.ProfileElement>  
+- <xref:System.Activities.Tracking.TrackingProfile>  
+- [Rilevamento e analisi del flusso di lavoro](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
+- [Profili di rilevamento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

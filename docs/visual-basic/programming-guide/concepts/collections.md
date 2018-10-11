@@ -3,11 +3,11 @@ title: Raccolte (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5f7749f3-aaf2-4319-b63c-bfa72e1e2b7a
 ms.openlocfilehash: 60519de1f580bf1cfa4aa067d4a999b20ea8d54d
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48847464"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49087375"
 ---
 # <a name="collections-visual-basic"></a>Raccolte (Visual Basic)
 Per molte applicazioni è utile creare e gestire gruppi di oggetti correlati. È possibile raggruppare gli oggetti in due modi: creando matrici di oggetti e creando raccolte di oggetti.  
@@ -23,7 +23,7 @@ Per molte applicazioni è utile creare e gestire gruppi di oggetti correlati. È
 > [!NOTE]
 >  Per gli esempi in questo argomento, includere [importazioni](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) istruzioni per il `System.Collections.Generic` e `System.Linq` gli spazi dei nomi.  
   
- **Contenuto dell'argomento**  
+ **In questo argomento**  
   
 -   [Uso di una raccolta semplice](#BKMK_SimpleCollection)  
   
@@ -35,7 +35,7 @@ Per molte applicazioni è utile creare e gestire gruppi di oggetti correlati. È
   
     -   [Classi System.Collections](#BKMK_Collections)  
   
-    -   [Classe di raccolta di Visual Basic](#BKMK_VisualBasic)  
+    -   [Classe Collection di Visual Basic](#BKMK_VisualBasic)  
   
 -   [Implementazione di una raccolta di coppie chiave/valore](#BKMK_KeyValuePairs)  
   
@@ -182,7 +182,7 @@ End Class
   
 -   Classi <xref:System.Collections>  
   
--   Visual Basic `Collection` classe  
+-   Classe `Collection` di Visual Basic  
   
 <a name="BKMK_Generic"></a>
 ### <a name="systemcollectionsgeneric-classes"></a>Classi System.Collections.Generic  
@@ -224,17 +224,17 @@ End Class
 |<xref:System.Collections.Queue>|Rappresenta una raccolta di oggetti FIFO (First-In First-Out).|  
 |<xref:System.Collections.Stack>|Rappresenta una raccolta di oggetti LIFO (Last-In First-Out).|  
   
- Lo spazio dei nomi <xref:System.Collections.Specialized> offre classi di raccolte fortemente tipizzate e specializzate, ad esempio raccolte di sole stringhe, dizionari ibridi e dizionari a elenchi collegati.  
+ Lo spazio dei nomi <xref:System.Collections.Specialized> fornisce classi di raccolta fortemente tipizzate e specializzate, ad esempio raccolte di sole stringhe e dizionari ibridi ed elenchi collegati.  
 
 <a name="BKMK_VisualBasic"></a> 
 ###  <a name="visual-basic-collection-class"></a>Classe Collection di Visual Basic  
- È possibile usare Visual Basic <xref:Microsoft.VisualBasic.Collection> classe a una raccolta di elementi usando un indice numerico o un accesso `String` chiave. Per aggiungere elementi a un oggetto raccolta, è possibile specificare o non specificare una chiave. Se si aggiunge un elemento senza una chiave, è necessario usare il relativo indice numerico per accedervi.  
+ È possibile usare la classe <xref:Microsoft.VisualBasic.Collection> di Visual Basic per accedere a un elemento della raccolta usando un indice numerico o una chiave `String`. Per aggiungere elementi a un oggetto raccolta, è possibile specificare o non specificare una chiave. Se si aggiunge un elemento senza una chiave, è necessario usare il relativo indice numerico per accedervi.  
   
- Visual Basic `Collection` classe archivia tutti i relativi elementi come tipo `Object`, pertanto è possibile aggiungere un elemento di qualsiasi tipo di dati. Non esiste alcuna misura per impedire l'aggiunta di tipi di dati non appropriati.  
+ La classe `Collection` di Visual Basic archivia tutti gli elementi di tipo `Object`, pertanto è possibile aggiungere un elemento di qualsiasi tipo di dati. Non esiste alcuna misura per impedire l'aggiunta di tipi di dati non appropriati.  
   
- Quando si usa Visual Basic `Collection` (classe), il primo elemento in una raccolta ha indice 1. Questo comportamento è diverso rispetto alle classi di raccolte di .NET Framework, per cui l'indice iniziale è 0.  
+ Quando si usa la classe `Collection` di Visual Basic, il primo elemento di una raccolta ha indice 1. Questo comportamento è diverso rispetto alle classi di raccolte di .NET Framework, per cui l'indice iniziale è 0.  
   
- Laddove possibile, è necessario usare le raccolte generiche nel <xref:System.Collections.Generic?displayProperty=nameWithType> dello spazio dei nomi o il <xref:System.Collections.Concurrent> dello spazio dei nomi anziché di Visual Basic `Collection` classe.  
+ Quando possibile, usare le raccolte generiche negli spazi dei nomi <xref:System.Collections.Generic?displayProperty=nameWithType> o <xref:System.Collections.Concurrent> al posto della classe `Collection` di Visual Basic.  
   
  Per altre informazioni, vedere <xref:Microsoft.VisualBasic.Collection>.  
   

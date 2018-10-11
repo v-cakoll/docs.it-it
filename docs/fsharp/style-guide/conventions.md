@@ -2,12 +2,12 @@
 title: 'Convenzioni di scrittura codice F #'
 description: 'Informazioni su termini e le linee guida generali durante la scrittura di codice F #.'
 ms.date: 05/14/2018
-ms.openlocfilehash: b9afd1fbfbd9d8e04d9bfaa07615de045b7e05fe
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 21119b6d69e00f359104bfb6eab7681bdbfb8d78
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47237406"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49087388"
 ---
 # <a name="f-coding-conventions"></a>Convenzioni di scrittura codice F #
 
@@ -420,7 +420,7 @@ Questa tecnica non deve essere applicata universalmente per l'intera codebase, m
 
 F # offre più opzioni per la [controllo di accesso](../language-reference/access-control.md), ereditato da ciò che è disponibile nel runtime di .NET. Questi non sono utilizzabili solo per i tipi: è possibile usarli per le funzioni, troppo.
 
-* Non preferisce`public` tipi e membri fino a quando non è necessario che diventino utilizzabile pubblicamente. Ciò riduce al minimo le due consumer per
+* Non preferisce`public` tipi e membri fino a quando non è necessario che diventino utilizzabile pubblicamente. Ciò riduce al minimo le due consumer per.
 * Cercare di mantenere tutte le funzionalità di helper `private`.
 * Si consideri l'uso di `[<AutoOpen>]` su un modulo privato delle funzioni di supporto se diventano numerosi.
 
