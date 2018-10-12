@@ -4,18 +4,18 @@ description: Ciclo di vita delle applicazioni Docker in contenitori con piattafo
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 78db191bdec4c25c11728d819d89eaaaff4bd7da
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 9b048beb0eb913fc6587dcc639a16df8153c550b
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46586041"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123228"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Stato e dati nelle applicazioni di Docker
 
 Una primitiva di contenitori è immutabilità. Rispetto a una macchina virtuale, i contenitori non interrompersi quando una situazione comune. Una macchina virtuale potrebbe non riuscire in varie forme da processi inattivi, overload della CPU o un disco con registrazione completo o non riuscito. Tuttavia, si prevede che la macchina virtuale sia disponibile e unità RAID sono usuali per assicurare che i dati di gestire errori delle unità.
 
-Tuttavia, i contenitori considerati come istanze dei processi. Un processo non mantiene lo stato durevole. Anche se un contenitore può scrivere la risorsa di archiviazione locale, presupponendo che tale istanza saranno intorno a tempo indeterminato corrisponderebbe a presupponendo che una copia singola memoria sia durevole. Si deve presupporre che i contenitori, come i processi, vengono duplicati, abbattuti o, quando gestito con un agente di orchestrazione del contenitore, potrebbero essere spostati.
+Tuttavia, i contenitori considerati come istanze dei processi. Un processo non mantiene lo stato durevole. Anche se un contenitore può scrivere la risorsa di archiviazione locale, presupponendo che l'istanza resti disponibile all'infinito corrisponderebbe a presupponendo che una copia singola memoria sia durevole. Si deve presupporre che i contenitori, come i processi, vengono duplicati, abbattuti o, quando gestito con un agente di orchestrazione del contenitore, potrebbero essere spostati.
 
 Docker Usa una funzionalità nota come un *sovrimpressione di file system* per implementare un processo di copia su scrittura che archivia le informazioni aggiornate nel file System radice di un contenitore, rispetto all'immagine originale su cui è basato. Queste modifiche vengono perse se il contenitore viene successivamente eliminato dal sistema. Un contenitore, pertanto, non è un archivio permanente per impostazione predefinita. Sebbene sia possibile salvare lo stato di un contenitore, la progettazione di un sistema di risoluzione di questo problema sarà in conflitto con il principio di architettura a contenitori.
 

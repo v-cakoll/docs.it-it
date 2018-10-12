@@ -4,12 +4,12 @@ description: Informazioni su come rilevare e attenuare le vulnerabilità di temp
 ms.date: 06/12/2018
 author: blowdart
 ms.author: mairaw
-ms.openlocfilehash: 6d16b6849bfd4744f1828cda38a537f842243c1d
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 4f1d6df3c0368fa0273d871ff32564c159e62a2c
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840529"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123644"
 ---
 # <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>Vulnerabilità di temporizzazione con decrittografia simmetrica modalità CBC con spaziatura interna
 
@@ -65,7 +65,7 @@ In passato, si è verificato il consenso che è importante crittografare e auten
 
 Classe di vulnerabilità note come "padding attacchi oracle" sono certo noti per esiste da oltre 10 anni. Le vulnerabilità consentono un attacco decrittografare i dati crittografati con gli algoritmi di blocchi simmetriche, ad esempio AES e 3DES, utilizzando non più di 4096 tentativi per ogni blocco di dati. Apportare queste vulnerabilità sfrutta il fatto che bloccano le crittografie vengono in genere usati con i dati di spaziatura interna verificabile alla fine. È stato rilevato che se un utente malintenzionato può manomettere testo crittografato e scoprire se la manomissione causa un errore nel formato di riempimento alla fine, l'autore dell'attacco può decrittografare i dati.
 
-Inizialmente, attacchi pratici in base ai servizi che restituiscono i codici di errore diverso basati sul fatto che la spaziatura interna è stata valida, ad esempio la vulnerabilità in ASP.NET [MS10 070](https://technet.microsoft.com/library/security/ms10-070.aspx). Tuttavia, Microsoft ritiene ora che è pratico per condurre attacchi simili che utilizzano solo le differenze nell'intervallo tra l'elaborazione di spaziatura interna valida e non è valida.
+Inizialmente, attacchi pratici in base ai servizi che restituiscono i codici di errore diverso basati sul fatto che la spaziatura interna è stata valida, ad esempio la vulnerabilità in ASP.NET [MS10 070](/security-updates/SecurityBulletins/2010/ms10-070). Tuttavia, Microsoft ritiene ora che è pratico per condurre attacchi simili che utilizzano solo le differenze nell'intervallo tra l'elaborazione di spaziatura interna valida e non è valida.
 
 Condizione che lo schema di crittografia Usa una firma e che viene eseguita la verifica della firma con un runtime predefinito per una determinata lunghezza dei dati (indipendentemente dal contenuto), l'integrità dei dati può essere verificata senza la creazione di qualsiasi informazione da un autore dell'attacco tramite un [canale lato](https://en.wikipedia.org/wiki/Side-channel_attack). Poiché il controllo dell'integrità rifiuta eventuali messaggi alterati, la minaccia di oracle spaziatura interna è stata risolta.
 

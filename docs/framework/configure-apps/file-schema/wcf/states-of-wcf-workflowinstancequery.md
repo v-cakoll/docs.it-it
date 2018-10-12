@@ -2,20 +2,21 @@
 title: '&lt;stati&gt; di WCF, &lt;workflowInstanceQuery&gt;'
 ms.date: 03/30/2017
 ms.assetid: d17f7525-8035-4e9e-85a0-4cddae59f85d
-ms.openlocfilehash: ef3d8d05dad684b07ee527dbd34ae6269ae57657
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a6c54f0903f30b5a7c3147cf4b874516a766c2b8
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749488"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49121944"
 ---
 # <a name="ltstatesgt-of-wcf-ltworkflowinstancequerygt"></a>&lt;stati&gt; di WCF, &lt;workflowInstanceQuery&gt;
+
 Rappresenta una raccolta di stati sottoscritti dell'istanza del flusso di lavoro rilevata che si riferiscono alla fase di creazione dei record di rilevamento.  
   
- Per ulteriori informazioni sulla query del profilo di rilevamento, vedere [profili di rilevamento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
+Per altre informazioni sulle query relative ai profili di rilevamento, vedere [profili di rilevamento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
   
- \<system.serviceModel>  
-\<rilevamento >  
+\<System. ServiceModel > \<rilevamento >  
+\<i profili >  
 \<trackingProfile>  
 \<flusso di lavoro >  
 \<workflowInstanceQueries >  
@@ -25,20 +26,36 @@ Rappresenta una raccolta di stati sottoscritti dell'istanza del flusso di lavoro
 ## <a name="syntax"></a>Sintassi  
   
 ```xml
-<tracking>   <trackingProfile name="Name">       <workflow>          <workflowInstanceQueries>             <workflowInstanceQuery>                <states>                   <state name="Name"/>                </states>            </workflowInstanceQuery>         </workflowInstanceQueries>       </workflow>   </trackingProfile></tracking>  
+<tracking>
+  <profiles>
+    <trackingProfile name="Name">
+      <workflow>
+        <workflowInstanceQueries>
+          <workflowInstanceQuery>
+            <states>
+              <state name="Name"/>
+            </states>
+          </workflowInstanceQuery>
+        </workflowInstanceQueries>
+      </workflow>
+    </trackingProfile>
+  </profiles>
+</tracking>
 ```
   
-## <a name="attributes-and-elements"></a>Attributi ed elementi  
- Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
+## <a name="attributes-and-elements"></a>Attributi ed elementi
+
+Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
 ### <a name="attributes"></a>Attributi  
- Nessuno.  
+
+Nessuno.  
   
-### <a name="child-elements"></a>Elementi figlio  
+### <a name="child-elements"></a>Elementi figlio
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<stati >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md)|Stato sottoscritto dell'istanza del flusso di lavoro rilevata che si riferisce al momento della creazione del record.|  
+|[\<stati >](state-of-wcf-workflowinstancequery.md)|Stato sottoscritto dell'istanza del flusso di lavoro rilevata che si riferisce al momento della creazione del record.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -46,10 +63,11 @@ Rappresenta una raccolta di stati sottoscritti dell'istanza del flusso di lavoro
 |-------------|-----------------|  
 |[\<workflowInstanceQuery>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflowinstancequery.md)|Query che rileva modifiche del ciclo di vita dell'istanza del flusso di lavoro, come l'avvio o il completamento di un evento.|  
   
-## <a name="remarks"></a>Note  
- I record restituiti vengono filtrati in base agli stati di questa raccolta.  
+## <a name="remarks"></a>Note
+
+I record restituiti vengono filtrati in base agli stati di questa raccolta.  
   
- I valori possibili dello stato sono descritti nella tabella seguente.  
+I valori possibili dello stato sono descritti nella tabella seguente.  
   
 |Stato|Descrizione|  
 |-----------|-----------------|  
@@ -67,8 +85,9 @@ Rappresenta una raccolta di stati sottoscritti dell'istanza del flusso di lavoro
 |Terminated|L'istanza del flusso di lavoro è terminata.|  
 |Unsuspended|L'istanza del flusso di lavoro non è sospesa.|  
   
-## <a name="example"></a>Esempio  
- La configurazione seguente sottoscrive i record di rilevamento a livello di istanza del flusso di lavoro per lo stato dell'istanza `Started` usando questa query.  
+## <a name="example"></a>Esempio
+
+La configurazione seguente sottoscrive i record di rilevamento a livello di istanza del flusso di lavoro per lo stato dell'istanza `Started` usando questa query.  
   
 ```xml  
 <workflowInstanceQueries>  
@@ -81,8 +100,9 @@ Rappresenta una raccolta di stati sottoscritti dell'istanza del flusso di lavoro
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement?displayProperty=nameWithType>       
- <xref:System.ServiceModel.Activities.Tracking.Configuration.StateElementCollection?displayProperty=nameWithType>       
- <xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType>       
- [Rilevamento e analisi del flusso di lavoro](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
- [Profili di rilevamento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+
+- <xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement?displayProperty=nameWithType>       
+- <xref:System.ServiceModel.Activities.Tracking.Configuration.StateElementCollection?displayProperty=nameWithType>       
+- <xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType>       
+- [Rilevamento e analisi del flusso di lavoro](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
+- [Profili di rilevamento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

@@ -1,13 +1,13 @@
 ---
 title: Programmazione asincrona
-ms.date: 03/30/2017
+ms.date: 10/18/2018
 ms.assetid: 85da7447-7125-426e-aa5f-438a290d1f77
-ms.openlocfilehash: 0c5c3f52f6afa0e1fa48d33167feabeb8d5b76f5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0c16fecc9e79f36c122c13909be0eeba848b7c20
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504975"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123657"
 ---
 # <a name="asynchronous-programming"></a>Programmazione asincrona
 
@@ -23,15 +23,16 @@ In questo argomento viene descritto il supporto per la programmazione asincrona 
 3.  <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A?displayProperty=nameWithType>  
   
  Questa funzionalità rimane in SqlClient in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
-  
- A partire da [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], questi metodi non richiedono più `Asynchronous Processing=true` nella stringa di connessione.  
+
+> [!TIP]
+> A partire dal [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], questi metodi legacy non sono più necessari `Asynchronous Processing=true` nella stringa di connessione.  
   
 ## <a name="asynchronous-programming-features-added-in-includenetv45includesnet-v45-mdmd"></a>Funzionalità di programmazione asincrona aggiunte in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]  
  La nuova funzionalità di programmazione asincrona fornisce una tecnica semplice per rendere il codice asincrono.  
   
  Per altre informazioni sulla funzionalità di programmazione asincrona introdotta in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], vedere:  
   
-- [Programmazione asincrona in c#](../../../csharp/async.md)
+- [Programmazione asincrona in C#](../../../csharp/async.md)
 
 - [Programmazione asincrona con Async e Await (Visual Basic)](../../../visual-basic/programming-guide/concepts/async/index.md)
 
@@ -87,6 +88,9 @@ In questo argomento viene descritto il supporto per la programmazione asincrona 
 -   <xref:System.Data.SqlClient.SqlBulkCopy.WriteToServerAsync%2A?displayProperty=nameWithType>  
   
  Altri membri asincroni sono stati aggiunti per supportare [SqlClient Streaming supporta](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md).  
+
+> [!TIP]
+> I nuovi metodi asincroni non richiedono `Asynchronous Processing=true` nella stringa di connessione.  
   
 ### <a name="synchronous-to-asynchronous-connection-open"></a>Apertura della connessione da sincrona ad asincrona  
  È possibile aggiornare un'applicazione esistente in modo da usare la nuova funzionalità asincrona. Ad esempio, si presupponga che un'applicazione disponga di un algoritmo di connessione sincrono e che blocchi il thread UI ogni volta che si connette al database e che, una volta che connessa, l'applicazione chiami una stored procedure che segnala agli altri utenti l'utente che ha appena effettuato l'accesso.  

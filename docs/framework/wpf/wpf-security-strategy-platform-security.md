@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 905092cfdcbcbeb95fdfa689c09a847491595d9d
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 1b5bada61a9d6374a1b961603fcf575199dee591
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857323"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49121402"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>Strategia di sicurezza di WPF - Sicurezza della piattaforma
 Anche se Windows Presentation Foundation (WPF) offre un'ampia gamma di servizi di sicurezza, sfrutta le funzionalità di sicurezza della piattaforma sottostante, che include il sistema operativo, il [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)], e [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]. Questi livelli forniscono a [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] un modello di sicurezza in profondità solido e dettagliato per evitare ogni singola vulnerabilità, come illustrato nella figura seguente:  
@@ -88,7 +88,7 @@ Anche se Windows Presentation Foundation (WPF) offre un'ampia gamma di servizi d
 #### <a name="defense-in-depth-layer"></a>Livello di difesa in profondità  
  Poiché le [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] vengono in genere eseguite in una sandbox in base al set di autorizzazioni dell'area Internet, la rimozione di questi privilegi non danneggia, da un punto di vista della compatibilità, tali [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)]. Viene invece creato un livello di difesa aggiuntivo; se un'applicazione eseguita in una sandbox è in grado di sfruttare altri livelli e di assumere il controllo del processo, il processo disporrà comunque unicamente di privilegi limitati.  
   
- Visualizzare [utilizzando un Account utente con privilegi minimi](https://technet.microsoft.com/library/cc700846.aspx).  
+ Visualizzare [utilizzando un Account utente con privilegi minimi](https://docs.microsoft.com/previous-versions/tn-archive/cc700846%28v=technet.10%29).  
   
 <a name="Common_Language_Runtime_Security"></a>   
 ## <a name="common-language-runtime-security"></a>Sicurezza di Common Language Runtime (CLR)  

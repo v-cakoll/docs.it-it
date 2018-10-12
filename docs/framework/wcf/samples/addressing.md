@@ -2,12 +2,12 @@
 title: Indirizzamento
 ms.date: 03/30/2017
 ms.assetid: d438e6f2-d0f3-43aa-b259-b51b5bda2e64
-ms.openlocfilehash: 6f2ab732fd5758358c7347087694cab8d56703bf
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 0e18039db51a1060661b435640c356fd0610a68a
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43468365"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123202"
 ---
 # <a name="addressing"></a>Indirizzamento
 Nell'esempio relativo all'Indirizzamento vengono illustrati i vari aspetti e le funzionalità degli indirizzi endpoint. L'esempio è basato sul [introduttiva](../../../../docs/framework/wcf/samples/getting-started-sample.md). In questo esempio, il servizio è indipendente. Sia il client che il servizio sono applicazioni console. Il servizio definisce più endpoint usando una combinazione di indirizzi endpoint relativi e assoluti.  
@@ -40,7 +40,7 @@ Nell'esempio relativo all'Indirizzamento vengono illustrati i vari aspetti e le 
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- In questo caso, l'indirizzo relativo è vuoto (""), pertanto l'indirizzo endpoint corrisponde all'indirizzo di base. L'indirizzo endpoint effettivo è http://localhost:8000/servicemodelsamples/service.  
+ In questo caso, l'indirizzo relativo è vuoto (""), pertanto l'indirizzo endpoint corrisponde all'indirizzo di base. L'indirizzo endpoint effettivo è `http://localhost:8000/servicemodelsamples/service`.
   
  Anche la seconda definizione dell'endpoint specifica un indirizzo relativo, come illustrato nell'esempio di configurazione seguente.  
   
@@ -53,7 +53,7 @@ Nell'esempio relativo all'Indirizzamento vengono illustrati i vari aspetti e le 
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- L'indirizzo relativo, "test", viene accodato all'indirizzo di base. L'indirizzo endpoint effettivo è http://localhost:8000/servicemodelsamples/service/test.  
+ L'indirizzo relativo, "test", viene accodato all'indirizzo di base. L'indirizzo endpoint effettivo è `http://localhost:8000/servicemodelsamples/service/test`.
   
  La terza definizione dell'endpoint specifica un indirizzo assoluto, come illustrato nell'esempio di configurazione seguente.  
   
@@ -63,9 +63,9 @@ Nell'esempio relativo all'Indirizzamento vengono illustrati i vari aspetti e le 
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- L'indirizzo di base non ha alcun ruolo nell'indirizzo. L'indirizzo endpoint effettivo è http://localhost:8001/hello/servicemodelsamples.  
+ L'indirizzo di base non ha alcun ruolo nell'indirizzo. L'indirizzo endpoint effettivo è `http://localhost:8001/hello/servicemodelsamples`.
   
- Il quarto indirizzo endpoint specifica un indirizzo assoluto e un trasporto diverso, cioè TCP. L'indirizzo di base non ha alcun ruolo nell'indirizzo. L'indirizzo dell'endpoint effettivo è net.tcp://localhost:9000/servicemodelsamples/service.  
+ Il quarto indirizzo endpoint specifica un indirizzo assoluto e un trasporto diverso, cioè TCP. L'indirizzo di base non ha alcun ruolo nell'indirizzo. L'indirizzo endpoint effettivo è `net.tcp://localhost:9000/servicemodelsamples/service`.
   
 ```xml  
 <!-- The absolute address specified, different transport: -->  

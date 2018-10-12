@@ -2,12 +2,12 @@
 title: Prestazioni di Windows Workflow Foundation 4
 ms.date: 03/30/2017
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
-ms.openlocfilehash: c7dc098eee5f17e18f76c0b54a097a22f5d844b1
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 78e9ac1cc350fe8c04222b2698569412961d3b52
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873693"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123813"
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Prestazioni di Windows Workflow Foundation 4
 Dustin Metzgar
@@ -287,7 +287,7 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
  Anche con flussi di lavoro complessi con molta profondità e un numero elevato di attività, i risultati delle prestazioni sono coerenti con altri dati relativi alla velocità effettiva mostrati in precedenza in questo articolo.  La velocità effettiva di WF4 è notevolmente maggiore e deve essere confrontata su scala logaritmica.
 
 ### <a name="memory"></a>Memoria
- Il sovraccarico della memoria di Windows Workflow Foundation viene misurato in due aree principali: complessità del flusso di lavoro e numero di definizioni del flusso di lavoro.  Le misurazioni della memoria sono state effettuate su una workstation Windows 7 a 64 bit.  Esistono diversi modi per misurare la dimensione del working set, ad esempio i contatori delle prestazioni di monitoraggio, il polling di Environment. WorkingSet o usando uno strumento come VMMap di [VMMap](https://technet.microsoft.com/sysinternals/dd535533.aspx). Per ottenere e verificare i risultati di ogni test, è stata usata una combinazione di metodi.
+ Il sovraccarico della memoria di Windows Workflow Foundation viene misurato in due aree principali: complessità del flusso di lavoro e numero di definizioni del flusso di lavoro.  Le misurazioni della memoria sono state effettuate su una workstation Windows 7 a 64 bit.  Esistono diversi modi per misurare la dimensione del working set, ad esempio i contatori delle prestazioni di monitoraggio, il polling di Environment. WorkingSet o usando uno strumento come VMMap di [VMMap](/sysinternals/downloads/vmmap). Per ottenere e verificare i risultati di ogni test, è stata usata una combinazione di metodi.
 
 ### <a name="workflow-complexity-test"></a>Test di complessità del flusso di lavoro
  Il test di complessità del flusso di lavoro misura la differenza del working set in base alla complessità del flusso di lavoro.  Oltre ai flussi di lavoro complessi usati nella sezione precedente, sono state aggiunte nuove varianti per analizzare due casi di base: un flusso di lavoro costituito da una singola attività e una sequenza con 1000 attività.  Per questi test i flussi di lavoro vengono inizializzati ed eseguiti fino al completamento in un unico ciclo seriale per un periodo di un minuto.  Ogni variante del test viene eseguita tre volte e i dati registrati rappresentano la media delle tre esecuzioni.
