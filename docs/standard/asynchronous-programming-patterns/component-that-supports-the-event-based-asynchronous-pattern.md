@@ -18,12 +18,12 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: 09746f01115a4b6bf3ca54cdc72c6ad936fbaaae
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 3fd01e19bc8aad8af709aee2fdaa020d8192d530
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042439"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46003815"
 ---
 # <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>Procedura: implementare un componente che supporta il modello asincrono basato su eventi
 In caso di scrittura di una classe con alcune operazioni che possono causare ritardi notevoli, è consigliabile assegnare la funzionalità asincrona implementando [Panoramica sul modello asincrono basato su eventi](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
@@ -58,7 +58,7 @@ In caso di scrittura di una classe con alcune operazioni che possono causare rit
 -   Creare una classe denominata `PrimeNumberCalculator` che eredita da <xref:System.ComponentModel.Component>.  
   
 ## <a name="defining-public-asynchronous-events-and-delegates"></a>Definizione di delegati ed eventi asincroni pubblici  
- Il componente comunica con i client usando gli eventi. L'evento *NomeMetodo***Completed** avvisa i client del completamento di un'attività asincrona, mentre l'evento *NomeMetodo***ProgressChanged** li informa dello stato di avanzamento di questa attività.  
+ Il componente comunica con i client usando gli eventi. L'evento _MethodName_**Completed** avvisa i client del completamento di un'attività asincrona, mentre l'evento _MethodName_**ProgressChanged** li informa dello stato di avanzamento di questa attività.  
   
 #### <a name="to-define-asynchronous-events-for-clients-of-your-component"></a>Per definire gli eventi asincroni per i client del componente:  
   

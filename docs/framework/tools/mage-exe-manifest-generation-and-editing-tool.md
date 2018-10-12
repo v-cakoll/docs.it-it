@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - Mage.exe
 ms.assetid: 77dfe576-2962-407e-af13-82255df725a1
-ms.openlocfilehash: 8f4e60eef443f772de3574d988ce48470f8c2017
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 3eb1c665067d08a86fd4128381139c6829ebfd89
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856179"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46009777"
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe (Strumento per la generazione e la modifica di manifesti)
 
@@ -30,7 +30,7 @@ Mage [commands] [commandOptions]
 
 ### <a name="parameters"></a>Parametri
 
-La tabella seguente illustra i comandi supportati da *Mage.exe*. Per ulteriori informazioni sulle opzioni supportate da questi comandi, vedere [Opzioni dei comandi New e Update](#NewUpdate) e [Opzioni del comando Sign](#Sign).
+La tabella seguente illustra i comandi supportati da *Mage.exe*. Per altre informazioni sulle opzioni supportate da questi comandi, vedere [Opzioni dei comandi New e Update](#new-and-update-command-options) e [Opzioni del comando Sign](#sign-command-options).
 
 |Comando|Descrizione|
 |-------------|-----------------|
@@ -40,7 +40,6 @@ La tabella seguente illustra i comandi supportati da *Mage.exe*. Per ulteriori i
 |**-s, -Sign** `[signOptions]`|Utilizza una coppia di chiavi o il certificato X509 per firmare un file. Le firme vengono inserite nei file come elementi XML.<br /><br /> È necessario essere connessi a Internet quando si firma un manifesto che specifica un valore **-TimestampUri** .|
 |**-h, -?, -Help** *[verbose]*|Descrive tutti i comandi disponibili e le rispettive opzioni. Specificare `verbose` per ottenere informazioni dettagliate.|
 
-<a name="NewUpdate"></a>
 ## <a name="new-and-update-command-options"></a>Opzioni dei comandi New e Update
 
 La tabella seguente illustra le opzioni supportate dai comandi `-New` e `-Update`:
@@ -70,9 +69,9 @@ La tabella seguente illustra le opzioni supportate dai comandi `-New` e `-Update
 |**-v, -Version** `versionNumber`|1.0.0.0|Manifesti di applicazione.<br /><br /> Manifesti di distribuzione.|Versione della distribuzione. L'argomento deve essere una stringa di versione valida nel formato "*N.N.N.N*", dove "*N*" è un Integer senza segno a 32 bit.|
 |**-wpf, -WPFBrowserApp**  `isWPFApp`|False|Manifesti di applicazione.<br /><br /> Manifesti di distribuzione.|Utilizzare questo flag unicamente se si tratta di un'applicazione Windows Presentation Foundation (WPF) che verrà ospitata all'interno di Internet Explorer e non è un file eseguibile autonomo. I valori validi sono "true" (o "t") e "false" (o "f").<br /><br /> Per i manifesti di applicazione, inserisce l'attributo `hostInBrowser` nell'elemento `entryPoint` del manifesto.<br /><br /> Per i manifesti di distribuzione, imposta l'attributo `install` dell'elemento `deployment` su false e salva il manifesto di distribuzione con l'estensione .xbap. Se l'argomento è specificato insieme all'argomento **-Install** , viene generato un errore dovuto al fatto che un'applicazione ospitata dal browser non può essere un'applicazione installata offline.|
 
-<a name="Sign"></a>
 ## <a name="sign-command-options"></a>Opzioni del comando Sign
- Nella tabella seguente sono descritte le opzioni supportate dal comando `-Sign` , valide per tutti i tipi di file.
+
+Nella tabella seguente sono descritte le opzioni supportate dal comando `-Sign` , valide per tutti i tipi di file.
 
 |Opzioni|Descrizione|
 |-------------|-----------------|
@@ -105,7 +104,11 @@ mage -Update c:\HelloWorldDeployment\HelloWorld.deploy -CertFile cert.pfx
 
  Nei manifesti di applicazioni sono supportate anche sezioni Trust personalizzate. In questo modo, viene rispettato il principio di sicurezza in base al quale devono essere richieste autorizzazioni minime, poiché è possibile configurare il manifesto in modo da richiedere solo le autorizzazioni necessarie per l'esecuzione dell'applicazione. *Mage.exe* non consente di aggiungere direttamente una sezione Trust personalizzata. A tale scopo, è possibile usare un editor di testo, un parser XML o lo strumento con interfaccia grafica *MageUI.exe*. Per altre informazioni sull'uso di *MageUI.exe* per aggiungere sezioni Trust personalizzate, vedere [MageUI.exe (Strumento per la generazione e la modifica di manifesti, client grafico)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md).
 
- I nuovi manifesti creati con la versione 4 di *Mage.exe*, inclusa con Visual Studio 2010, sono destinati a [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]. Per usare come destinazione versioni precedenti di .NET Framework, è necessario usare una versione precedente di *Mage.exe*. In caso di aggiunta o rimozione di assembly da un manifesto esistente o di nuova firma di un manifesto esistente, *Mage.exe* non aggiorna il manifesto con [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] come destinazione. Nelle tabelle seguenti vengono mostrate queste funzionalità e limitazioni.
+Visual Studio 2017 include la versione 4.6.1 di *Mage.exe*. I manifesti creati con questa versione di *Mage.exe* usano come destinazione .NET Framework 4. Per usare come destinazione versioni precedenti di .NET Framework, usare una versione precedente di *Mage.exe*.
+
+In caso di aggiunta o rimozione di assembly da un manifesto esistente o di nuova firma di un manifesto esistente, *Mage.exe* non aggiorna il manifesto con .NET Framework 4 come destinazione.
+
+Nelle tabelle seguenti vengono mostrate queste funzionalità e limitazioni:
 
 |Versione del manifesto|Operazione|Mage v2.0|Mage v4.0|
 |----------------------|---------------|---------------|---------------|
@@ -131,7 +134,9 @@ mage -Update c:\HelloWorldDeployment\HelloWorld.deploy -CertFile cert.pfx
 ||Aggiungere un assembly|Non supportato|OK|
 ||Rimuovere un assembly|Non supportato|OK|
 
- I nuovi manifesti creati con Mage.exe vengono destinati a [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]. Le applicazioni ClickOnce destinate a [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] possono essere eseguite sia su [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] che sulla versione completa di [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]. Se l'applicazione è destinata alla versione completa di [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] e non può essere eseguita su [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)], rimuovere l'elemento del client `<framework>` tramite un editor di testo e firmare nuovamente il manifesto. Quello che segue è un elemento `<framework>` di esempio destinato a [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)].
+ I nuovi manifesti creati con Mage.exe vengono destinati a [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]. Le applicazioni ClickOnce destinate a [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] possono essere eseguite sia in [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] che nella versione completa di .NET Framework 4. Se l'applicazione è destinata alla versione completa di .NET Framework 4 e non può essere eseguita in [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)], rimuovere l'elemento del client `<framework>` tramite un editor di testo e firmare nuovamente il manifesto.
+
+Quello che segue è un elemento `<framework>` di esempio destinato a [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]:
 
 ```xml
 <framework targetVersion="4.0" profile="client" supportedRuntime="4.0.20506" />

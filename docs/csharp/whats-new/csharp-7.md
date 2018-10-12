@@ -3,12 +3,12 @@ title: Novità di C# 7.0 - Guida a C#
 description: Panoramica delle nuove funzionalità incluse nella prossima versione 7 del linguaggio C#.
 ms.date: 12/21/2016
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: a78b30411d734d6dadc52b7dbd402763d4eb7f5e
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: 734fdf962ef481a3b434e9ce17e535eadd52f420
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33956409"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47237384"
 ---
 # <a name="whats-new-in-c-70"></a>Novità di C# 7.0
 
@@ -159,7 +159,7 @@ L'esempio seguente definisce un metodo `QueryCityDataForYears` che restituisce u
 [!code-csharp[Tuple-discard](../../../samples/snippets/csharp/programming-guide/deconstructing-tuples/discard-tuple1.cs)]
 
 Per altre informazioni, vedere [Variabili discard](../discards.md).
- 
+
 ## <a name="pattern-matching"></a>Criteri di ricerca
 
 L'uso dei *criteri di ricerca* consente di implementare l'invio dei metodi per le proprietà diverse dal tipo di un oggetto. Probabilmente si ha già familiarità con l'invio dei metodi basato sul tipo di un oggetto. Nella programmazione orientata agli oggetti i metodi virtuali e di override offrono la sintassi del linguaggio per implementare l'invio dei metodi basato sul tipo di un oggetto. Le classi di base e derivate consentono diverse implementazioni. Le espressioni di criteri di ricerca estendono questo concetto in modo che sia possibile implementare facilmente modelli di invio simili per i tipi e gli elementi di dati che non sono correlati attraverso una gerarchia di ereditarietà. 
@@ -277,7 +277,9 @@ Il linguaggio C# usa altre tre regole per evitare usi impropri delle variabili l
 * Non è possibile usare variabili locali e valori restituiti `ref` con i metodi asincroni.
     - Il compilatore non può stabilire se la variabile a cui si fa riferimento è stata impostata sul valore finale quando il metodo asincrono restituisce il controllo.
 
-L'aggiunta di variabili locali e valori restituiti ref abilita algoritmi più efficienti, evitando la copia dei valori o l'esecuzione ripetuta di operazioni di dereferenziazione. 
+L'aggiunta di variabili locali e valori restituiti ref abilita algoritmi più efficienti, evitando la copia dei valori o l'esecuzione ripetuta di operazioni di dereferenziazione.
+
+L'aggiunta di `ref` al valore restituito è una [modifica compatibile a livello di codice sorgente](version-update-considerations.md#source-compatible-changes). Il codice esistente viene compilato, ma il valore restituito ref viene copiato quando è assegnato. I chiamanti devono aggiornare l'archiviazione per il valore restituito in una variabile locale `ref` per archiviare il valore restituito come riferimento.
 
 ## <a name="local-functions"></a>Funzioni locali
 
@@ -327,6 +329,8 @@ In C# 6 sono stati introdotti i [membri con corpo di espressione](csharp-6.md#ex
 
 Le nuove posizioni per i membri con corpo di espressione rappresentano un importante punto cardine per il linguaggio C#: queste funzionalità sono state implementate dai membri della community che lavoravano al progetto open source [Roslyn](https://github.com/dotnet/Roslyn).
 
+La modifica di un metodo in un membro con corpo di espressione è una [modifica compatibile a livello binario](version-update-considerations.md#binary-compatible-changes).
+
 ## <a name="throw-expressions"></a>Espressioni throw
 
 In C# `throw` è sempre stata un'istruzione. Poiché `throw` è un'istruzione, non un'espressione, vi sono costrutti di C# in cui non è possibile usarla. Sono incluse le espressioni condizionali, le espressioni Null ridondanti e alcune espressioni lambda. L'aggiunta di membri con corpo di espressione consente di aggiungere più posizioni in cui le espressioni `throw` possono risultare utili. Per fare in modo che sia possibile scrivere uno di questi costrutti, C# 7.0 introduce le *espressioni throw*.
@@ -362,8 +366,10 @@ La nuova funzionalità del linguaggio consente ai metodi asincroni di restituire
 Una semplice ottimizzazione sarebbe usare `ValueTask` in posizioni in cui prima sarebbe stato usato `Task`. Tuttavia, se si vogliono eseguire manualmente altre ottimizzazioni, è possibile memorizzare nella cache i risultati delle attività asincrone e usarli di nuovo nelle chiamate successive. Lo struct `ValueTask` include un costruttore con un parametro `Task` in modo che sia possibile costruire un oggetto `ValueTask` dal valore restituito di qualsiasi metodo asincrono esistente:
 
 [!code-csharp[AsyncOptimizedValueTask](../../../samples/snippets/csharp/new-in-7/AsyncWork.cs#31_AsyncOptimizedValueTask "Return async result or cached value")]
- 
+
 Come si raccomanda sempre a proposito delle prestazioni, è necessario creare un benchmark di entrambe le versioni prima di apportare modifiche su larga scala al codice.
+
+Quando il valore restituito è la destinazione di un'istruzione `await`, la modifica di un'API da <xref:System.Threading.Tasks.Task%601> in <xref:System.Threading.Tasks.ValueTask%601> è una [modifica compatibile a livello di codice sorgente](version-update-considerations.md#source-compatible-changes). In generale, la modifica in `ValueTask` non lo è.
 
 ## <a name="numeric-literal-syntax-improvements"></a>Miglioramenti della sintassi dei valori letterali numerici
 

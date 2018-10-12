@@ -4,12 +4,12 @@ description: Informazioni sulla terminologia relativa a pacchetti, metapacchetti
 author: richlander
 ms.author: mairaw
 ms.date: 06/20/2016
-ms.openlocfilehash: f10965a8f5f2848f2b942b92577adf3185d8bd3c
-ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
+ms.openlocfilehash: e68c63d26133ac76b718bb3696d16c81bd943dc2
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/24/2018
-ms.locfileid: "34472802"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45597687"
 ---
 # <a name="packages-metapackages-and-frameworks"></a>Pacchetti, metapacchetti e framework
 
@@ -56,7 +56,7 @@ In genere, anziché includere i pacchetti nei progetti in modo individuale, è m
 
 I metapacchetti sono una convenzione di NuGet per descrivere un set di pacchetti che sono significativi insieme. I metapacchetti rappresentano questo set di pacchetti trasformandoli in dipendenze. Facoltativamente, stabiliscono un framework per questo set di pacchetti specificando appunto un framework. 
 
-Le versioni precedenti degli strumenti di .NET Core (gli strumenti project.json e gli strumenti basati su csproj) specificavano un framework e un metapacchetto. Il framework di destinazione fa attualmente riferimento in modo implicito al metapacchetto, in modo che ogni metapacchetto sia associato a un framework di destinazione. Ad esempio, il framework `netstandard1.6` fa riferimento a NetStandard.Library versione 1.6.0. Analogamente, il framework `netcoreapp1.1` fa riferimento al metapacchetto Microsoft.NETCore.App versione 1.1.0 . Per altre informazioni, vedere [Implicit metapackage package reference in the .NET Core SDK](https://github.com/dotnet/core/blob/master/release-notes/1.0/sdk/1.0-rc3-implicit-package-refs.md) (Riferimento implicito a un pacchetto di un metapacchetto in .NET Core SDK).
+Le versioni precedenti degli strumenti di .NET Core (gli strumenti project.json e gli strumenti basati su csproj) specificavano un framework e un metapacchetto. Il framework di destinazione fa attualmente riferimento in modo implicito al metapacchetto, in modo che ogni metapacchetto sia associato a un framework di destinazione. Ad esempio, il framework `netstandard1.6` fa riferimento a NetStandard.Library versione 1.6.0. Analogamente, il framework `netcoreapp2.1` fa riferimento al metapacchetto Microsoft.NETCore.App versione 2.1.0. Per altre informazioni, vedere [Implicit metapackage package reference in the .NET Core SDK](https://github.com/dotnet/core/blob/master/release-notes/1.0/sdk/1.0-rc3-implicit-package-refs.md) (Riferimento implicito a un pacchetto di un metapacchetto in .NET Core SDK).
 
 La destinazione a un framework e il riferimento implicito a un metapacchetto implica che in realtà viene aggiunto un riferimento a ogni pacchetto dipendente con una singola operazione. Ciò rende disponibili tutte le librerie incluse nei pacchetti per IntelliSense (o metodi simili) e per la pubblicazione dell'app.  
 

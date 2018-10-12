@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: 9b108a1613e01016c541d088612303c6aaa13629
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: a06a5144e91901417906f071efd8e19c10cf2cba
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961469"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47170652"
 ---
 # <a name="strings-c-programming-guide"></a>Stringhe (Guida per programmatori C#)
 Una stringa è un oggetto di tipo <xref:System.String> il cui valore è testo. Internamente il testo viene archiviato come una raccolta di sola lettura sequenziale di oggetti <xref:System.Char>. Le stringhe C# non presentano un carattere di terminazione null alla fine, pertanto una stringa C# può contenere qualsiasi numero di caratteri null incorporati ('\0'). La proprietà <xref:System.String.Length%2A> di una stringa rappresenta il numero di oggetti `Char` in essa contenuti e non il numero di caratteri Unicode. Per accedere ai singoli punti di codice Unicode in una stringa usare l'oggetto <xref:System.Globalization.StringInfo>.  
@@ -64,7 +64,7 @@ Una stringa è un oggetto di tipo <xref:System.String> il cui valore è testo. I
 |\U|Sequenza di escape Unicode per le coppie di surrogati|\Unnnnnnnn|  
 |\u|Sequenza di escape Unicode|\u0041 = "A"|  
 |\v|Tabulazione verticale|0x000B|  
-|\x|Sequenza di escape Unicode simile a "\u", ma con lunghezza variabile|\x0041 = "A"|  
+|\x|Sequenza di escape Unicode simile a "\u", ma con lunghezza variabile|\x0041 o \x41 = "A"|  
   
 > [!NOTE]
 >  In fase di compilazione, le stringhe verbatim vengono convertite in stringhe normali con tutte le stesse sequenze di escape. Pertanto, se si visualizza una stringa verbatim nella finestra Espressioni di controllo del debugger, si vedranno i caratteri di escape aggiunti dal compilatore e non la versione verbatim del codice sorgente. Ad esempio, la stringa verbatim @"C:\files.txt" verrà visualizzata nella finestra delle espressioni di controllo come "C \\\files.txt".  

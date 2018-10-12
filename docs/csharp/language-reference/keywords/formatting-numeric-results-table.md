@@ -1,38 +1,60 @@
 ---
 title: Tabella di formattazione dei risultati numerici (Riferimenti per C#)
-ms.date: 07/20/2015
+description: Informazioni sulle stringhe in formato numerico standard di C#
+ms.date: 09/20/2018
 helpviewer_keywords:
 - formatting [C#]
 - numeric formatting [C#]
 - String.Format method
-- Console.Write method
 ms.assetid: 120ba537-4448-4c62-8676-7a8fdd98f496
-ms.openlocfilehash: 8d034955d5d5d31788eafc0c21246451d7fd1f35
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6f1cb5b49139cf9661e678cfc0ecc884a2749622
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508199"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47203891"
 ---
 # <a name="formatting-numeric-results-table-c-reference"></a>Tabella di formattazione dei risultati numerici (Riferimenti per C#)
-È possibile formattare i risultati numerici usando il metodo <xref:System.String.Format%2A?displayProperty=nameWithType>, con il metodo <xref:System.Console.Write%2A?displayProperty=nameWithType> o <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> che chiama `String.Format` o usando l'[interpolazione di stringhe](../tokens/interpolated.md). Il formato è specificato dalle stringhe di formato. La tabella seguente contiene le stringhe di formato standard supportate. La stringa di formato ha questo aspetto: `Axx`, dove `A` è l'identificatore del formato e `xx` è l'identificatore della precisione. L'identificatore del formato controlla il tipo di formattazione applicato al valore numerico e l'identificatore della precisione controlla il numero di cifre significative o di decimali dell'output formattato. Il valore dell'identificatore della precisione è compreso tra 0 e 99.  
-  
- Per altre informazioni sulle stringhe di formato numerico standard, vedere [Formattazione di tipi](../../../standard/base-types/formatting-types.md).
-  
-|Identificatore di formato|Descrizione|Esempi|Output|  
+
+Nella tabella seguente vengono descritti gli identificatori di formato supportati per la formattazione dei risultati numerici. Il risultato formattato nell'ultima colonna corrisponde al valore <xref:System.Globalization.CultureInfo> "en-US".
+
+|Identificatore di formato|Descrizione|Esempi|Risultato|  
 |----------------------|-----------------|--------------|------------|  
-|C o c|Valuta|Console.Write("{0:C}", 2.5);<br /><br /> Console.Write("{0:C}", -2.5);|$2.50<br /><br /> ($2.50)|  
-|D o d|Decimale|Console.Write("{0:D5}", 25);|00025|  
-|E o e|Scientifico|Console.Write("{0:E}", 250000);|2.500000E+005|  
-|F o f|A virgola fissa|Console.Write("{0:F2}", 25);<br /><br /> Console.Write("{0:F0}", 25);|25.00<br /><br /> 25|  
-|G o g|Generale|Console.Write("{0:G}", 2.5);|2.5|  
-|N o n|Number|Console.Write("{0:N}", 2500000);|2,500,000.00|  
-|X o x|Esadecimale|Console.Write("{0:X}", 250);<br /><br /> Console.Write("{0:X}", 0xffff);|FA<br /><br /> FFFF|  
-  
+|C o c|Valuta|`string s = $"{2.5:C}";`<br /><br /> `string s = $"{-2.5:C}";`|$2.50<br /><br /> ($2.50)|  
+|D o d|Decimale|`string s = $"{25:D5}";`|00025|  
+|E o e|Esponenziale|`string s = $"{250000:E2}";`|2,50E+005|  
+|F o f|A virgola fissa|`string s = $"{2.5:F2}";`<br /><br /> `string s = $"{2.5:F0}";`|2.50<br /><br /> 3|  
+|G o g|Generale|`string s = $"{2.5:G}";`|2.5|  
+|N o n|Numerico|`string s = $"{2500000:N}";`|2,500,000.00|  
+|P o p|Percentuale|`string s = $"{0.25:P}";`|25,00%|  
+|R o r|Round trip|`string s = $"{2.5:R}";`|2.5|  
+|X o x|Esadecimale|`string s = $"{250:X}";`<br /><br /> `string s = $"{0xffff:X}";`|FA<br /><br /> FFFF|  
+
+## <a name="remarks"></a>Note
+
+Usare un identificatore di formato per creare una stringa di formato. La stringa di formato ha il formato seguente: `Axx`, dove
+
+- `A` è l'identificatore di formato, che controlla il tipo di formattazione applicato al valore numerico.
+- `xx` è l'identificatore di precisione, che controlla il numero di cifre nell'output formattato. Il valore dell'identificatore della precisione è compreso tra 0 e 99.
+
+Gli identificatori di formato decimale ("D" o "d") ed esadecimale ("X" o "x") sono supportati solo per i tipi integrali. L'identificatore di formato round trip ("R" o "r") è supportato solo per i tipi <xref:System.Single>, <xref:System.Double> e <xref:System.Numerics.BigInteger>.
+
+Le stringhe di formato numerico standard sono supportate:
+
+- Da alcuni overload del metodo `ToString` di tutti i tipi numerici. È ad esempio possibile fornire una stringa di formato numerico ai metodi <xref:System.Int32.ToString%28System.String%29?displayProperty=nameWithType> e <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>.
+
+- Dalla [funzionalità di formattazione composita](../../../standard/base-types/composite-formatting.md) di .NET, che è ad esempio supportata dal metodo <xref:System.String.Format%2A?displayProperty=nameWithType>.
+
+- [Stringhe interpolate](../tokens/interpolated.md).
+
+Per altre informazioni, vedere [Stringhe di formato numerico standard](../../../standard/base-types/standard-numeric-format-strings.md).
+
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
-- [Stringhe di formato numerico standard](../../../standard/base-types/standard-numeric-format-strings.md)  
-- [Tabelle di riferimento per i tipi](../../../csharp/language-reference/keywords/reference-tables-for-types.md)  
-- [string](../../../csharp/language-reference/keywords/string.md)
+- [Riferimenti per C#](../index.md)
+- [Guida per programmatori C#](../../programming-guide/index.md)
+- [Tabelle di riferimento per i tipi](reference-tables-for-types.md)
+- [Formattazione di tipi](../../../standard/base-types/formatting-types.md)
+- [Formattazione composita](../../../standard/base-types/composite-formatting.md)
+- [Interpolazione di stringhe](../tokens/interpolated.md)
+- [string](string.md)

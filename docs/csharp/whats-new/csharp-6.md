@@ -3,12 +3,12 @@ title: Novità di C# 6 - Guida a C#
 description: Informazioni sulle nuove funzionalità di C# versione 6
 ms.date: 09/22/2016
 ms.assetid: 4d879f69-f889-4d3f-a781-75194e143400
-ms.openlocfilehash: 5ba5d8f4cc5c7cecdda030594273324d14d1582a
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: f6f953eacc935d38cc7d45173109c96c52a5e2f3
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34565878"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47208185"
 ---
 # <a name="whats-new-in-c-6"></a>Novità di C# 6
 
@@ -45,7 +45,7 @@ L'effetto generale di queste funzionalità è che il codice che si scrive è pi�
 
 Nelle altre sezioni di questo argomento sono disponibili informazioni dettagliate su ognuna di queste funzionalità.
 
-## <a name="auto-property-enhancements"></a>Miglioramenti delle proprietà automatiche 
+## <a name="auto-property-enhancements"></a>Miglioramenti delle proprietà automatiche
 
 La sintassi per le proprietà implementate automaticamente, in genere definite "proprietà automatiche", ha semplificato notevolmente la creazione delle proprietà con semplici funzioni di accesso get e set:
 
@@ -88,6 +88,8 @@ public class Student
 
 Questa funzionalità abilita un effettivo supporto del linguaggio per la creazione di tipi non modificabili e l'uso della sintassi più concisa e pratica per le proprietà automatiche.
 
+Se l'aggiunta di questa sintassi non rimuove un metodo accessibile, si tratta di una [modifica compatibile a livello binario](version-update-considerations.md#binary-compatible-changes).
+
 ### <a name="auto-property-initializers"></a>Inizializzatori di proprietà automatiche
 
 Gli *inizializzatori di proprietà automatiche* consentono di dichiarare il valore iniziale per una proprietà automatica come parte della dichiarazione di proprietà.  Nelle versioni precedenti queste proprietà dovevano avere dei setter che era necessario usare per inizializzare l'archiviazione dei dati usata dal campo sottostante. La classe dell'esempio seguente contiene il nome di uno studente e un elenco dei suoi voti:
@@ -115,6 +117,9 @@ Il corpo di molti membri che si scrivono è costituito da un'unica istruzione ch
 È possibile usare membri con corpo di espressione anche nelle proprietà di sola lettura:
 
 [!code-csharp[FullNameExpressionMember](../../../samples/snippets/csharp/new-in-6/newcode.cs#FullNameExpressionMember)]
+
+La modifica di un membro esistente in un membro con corpo di espressione è una [modifica compatibile a livello binario](version-update-considerations.md#binary-compatible-changes).
+
 
 ## <a name="using-static"></a>using static
 
@@ -398,4 +403,3 @@ L'opzione `-deterministic` indica al compilatore di produrre un assembly di outp
 Per impostazione predefinita, ogni compilazione produce un output univoco in ogni compilazione. Il compilatore aggiunge un timestamp e un GUID generato da numeri casuali. Usare questa opzione se si vuole confrontare l'output byte per byte per garantire coerenza tra le compilazioni.
 
 Per altre informazioni, vedere l'articolo [Opzione del compilatore -deterministic](../language-reference/compiler-options/deterministic-compiler-option.md).
-

@@ -2,12 +2,12 @@
 title: Novità di C# 7.2
 description: Panoramica delle nuove funzionalità in C# 7.2.
 ms.date: 08/16/2017
-ms.openlocfilehash: a74afd7f073daa46328d60149e2dd90207420a80
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 87fd67b37a31a02960334a2b2a325724e0cc2c73
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34566189"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47400803"
 ---
 # <a name="whats-new-in-c-72"></a>Novità di C# 7.2
 
@@ -33,10 +33,10 @@ Le nuove funzionalità relative al linguaggio in questa versione sono:
 
 Le funzionalità del linguaggio introdotte nella versione 7.2 consentono di lavorare con i tipi valore usando allo stesso tempo la semantica di riferimento. Queste funzionalità sono state progettate per migliorare le prestazioni riducendo al minimo la copia dei tipi valore senza dover sostenere le allocazioni di memoria associate all'uso dei tipi riferimento. Sono incluse le funzionalità seguenti:
 
- - Il modificatore `in` per i parametri, per specificare che un argomento viene passato per riferimento, ma non modificato dal metodo chiamato.
- - Il modificatore `ref readonly` per i valori restituiti dai metodi, per indicare che un metodo restituisce il valore per riferimento, ma non consente scritture su tale oggetto.
- - La dichiarazione `readonly struct` per indicare che uno struct non è modificabile e deve essere passato come parametro `in` ai relativi metodi membro.
- - La dichiarazione `ref struct` per indicare che un tipo di struct accede direttamente alla memoria gestita e deve sempre essere allocato nello stack.
+ - Il modificatore `in` per i parametri, per specificare che un argomento viene passato per riferimento, ma non modificato dal metodo chiamato. L'aggiunta del modificatore `in` a un argomento è una [modifica compatibile a livello di codice sorgente](version-update-considerations.md#source-compatible-changes).
+ - Il modificatore `ref readonly` per i valori restituiti dai metodi, per indicare che un metodo restituisce il valore per riferimento, ma non consente scritture su tale oggetto. L'aggiunta del modificatore `ref readonly` è una [modifica compatibile a livello di codice sorgente](version-update-considerations.md#source-compatible-changes), se il valore restituito viene assegnato a un valore. L'aggiunta del modificatore `readonly` a un'istruzione return `ref` esistente è una [modifica incompatibile](version-update-considerations.md#incompatible-changes). Richiede ai chiamanti di aggiornare la dichiarazione delle variabili locali `ref` per includere il modificatore `readonly`.
+ - La dichiarazione `readonly struct` per indicare che uno struct non è modificabile e deve essere passato come parametro `in` ai relativi metodi membro. L'aggiunta del modificatore `readonly` a una dichiarazione di struct esistente è una [modifica compatibile a livello binario](version-update-considerations.md#binary-compatible-changes).
+ - La dichiarazione `ref struct` per indicare che un tipo di struct accede direttamente alla memoria gestita e deve sempre essere allocato nello stack. L'aggiunta del modificatore `ref` a una dichiarazione `struct` esistente è una [modifica incompatibile](version-update-considerations.md#incompatible-changes). `ref struct` non può essere un membro di una classe o usato in altre posizioni in cui potrebbe allocato nell'heap.
 
 Per altre informazioni su tutte queste modifiche, vedere [Semantica di riferimento con tipi di valore](../reference-semantics-with-value-types.md).
 

@@ -5,11 +5,11 @@ author: bleroy
 ms.author: mairaw
 ms.date: 06/28/2017
 ms.openlocfilehash: fa9c193ea4088f04745bdadc6040552e18c0858a
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47188989"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47231112"
 ---
 # <a name="build-net-core-from-source"></a>Compilare .NET Core dal codice sorgente
 
@@ -78,7 +78,7 @@ Esistono due tecniche di base per l'uso del nuovo runtime:
     Questo archivio definisce anche un host semplice denominato corerun.exe che NON accetta dipendenze in NuGet.
     Si dovrà indicare all'host dove si ottengono le DLL necessarie in uso e raccogliere le DLL manualmente.
     Questa tecnica viene usata da tutti i test nel repository [dotnet/coreclr](https://github.com/dotnet/coreclr) ed è utile in un ciclo rapido di "modifica-compilazione-debug" locale, ad esempio per gli unit test preliminari.
-    Vedere l'argomento relativo all'[esecuzione delle app .NET Core con CoreRun.exe](https://github.com/dotnet/coreclr/blob/master/Documentation/workflow/UsingCoreRun.md) per informazioni dettagliate sull'uso di questa tecnica.
+    Vedere [Executing .NET Core Apps with CoreRun.exe](https://github.com/dotnet/coreclr/blob/master/Documentation/workflow/UsingCoreRun.md) (Esecuzione delle app .NET Core con CoreRun.exe) per informazioni dettagliate sull'uso di questa tecnica.
 
 ## <a name="build-the-cli-from-source"></a>Compilare l'interfaccia della riga di comando dal codice sorgente
 
@@ -91,7 +91,7 @@ Per compilare l'interfaccia della riga di comando di .NET Core, i seguenti compo
 * macOS:
   * git nel PERCORSO
   * Xcode
-  * Openssl
+  * OpenSSL
 
 Per compilare, eseguire `build.cmd` in Windows o `build.sh` in Linux e macOS dalla radice. Per non eseguire i test, eseguire `build.cmd -t:Compile` o `./build.sh -t:Compile`. Per compilare l'interfaccia della riga di comando in macOS Sierra, è necessario impostare la variabile di ambiente DOTNET_RUNTIME_ID eseguendo `export DOTNET_RUNTIME_ID=osx.10.11-x64`.
 

@@ -3,12 +3,12 @@ title: Applicazione console
 description: Questa esercitazione illustra alcune funzionalità disponibili in .NET Core e nel linguaggio C#.
 ms.date: 03/06/2017
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.openlocfilehash: bae03c9ae02f2888b1b70617ca712ef7927e9dce
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: da3f8f913d452b5c3c9dcda6079067c879a678dd
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961417"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46937592"
 ---
 # <a name="console-application"></a>Applicazione console
 
@@ -20,7 +20,7 @@ Questa esercitazione illustra alcune funzionalità disponibili in .NET Core e ne
 - Nozioni di base sulle API di I/O dei file in .NET
 - Nozioni di base sul modello di programmazione asincrona delle attività in .NET
 
-Verrà creata un'applicazione in grado di leggere un file di testo e restituire il contenuto del file alla console. La velocità di riproduzione dell'output della console verrà quindi configurata in modo da consentirne la lettura ad alta voce. È possibile aumentare o diminuire la velocità premendo il tasto < o >.
+Verrà creata un'applicazione in grado di leggere un file di testo e restituire il contenuto del file alla console. La velocità di riproduzione dell'output della console verrà quindi configurata in modo da consentirne la lettura ad alta voce. È possibile aumentare o diminuire la velocità premendo il tasto < (minore di) o > (maggiore di).
 
 In questa esercitazione verranno create anche numerose funzionalità.
 
@@ -190,7 +190,7 @@ Di seguito, nel metodo `Main`, il codice attende in modo sincrono. Quando possib
 > [!NOTE]
 > Se si usa C# 7.1 o versione successiva è possibile creare applicazioni console con il metodo [ `async` `Main` ](../whats-new/csharp-7-1.md#async-main).
 
-È ora necessario scrivere il secondo metodo asincrono per leggere dalla console e verificare la presenza dei caratteri < e >. Di seguito è illustrato il metodo da aggiungere per questa attività.
+È ora necessario scrivere il secondo metodo asincrono per leggere dalla console e verificare la presenza dei caratteri < (minore di) e > (maggiore di). Di seguito è illustrato il metodo da aggiungere per questa attività.
 
 ```csharp
 private static async Task GetInput()
@@ -214,7 +214,7 @@ private static async Task GetInput()
 }
 ```
 
-Si crea in questo modo un'espressione lambda per rappresentare un delegato <xref:System.Action> che legge un carattere dalla console e modifica una variabile locale che rappresenta il ritardo quando l'utente preme il tasto < o >. Questo metodo usa <xref:System.Console.ReadKey> per bloccare l'operazione e attendere che l'utente prema un tasto.
+Si crea in questo modo un'espressione lambda per rappresentare un delegato <xref:System.Action> che legge un carattere dalla console e modifica una variabile locale che rappresenta il ritardo quando l'utente preme il tasto < (minore di) o > (maggiore di). Questo metodo usa <xref:System.Console.ReadKey> per bloccare l'operazione e attendere che l'utente prema un tasto.
 
 Per completare questa funzionalità, è necessario creare un nuovo metodo di restituzione `async Task` in grado di avviare entrambe le attività (`GetInput` e `ShowTeleprompter`) e gestire i dati condivisi tra di esse.
 
@@ -277,10 +277,10 @@ Il nuovo metodo qui è la chiamata <xref:System.Threading.Tasks.Task.WhenAny(Sys
 private static async Task ShowTeleprompter(TelePrompterConfig config)
 {
     var words = ReadFrom("sampleQuotes.txt");
-    foreach (var line in words)
+    foreach (var word in words)
     {
-        Console.Write(line);
-        if (!string.IsNullOrWhiteSpace(line))
+        Console.Write(word);
+        if (!string.IsNullOrWhiteSpace(word))
         {
             await Task.Delay(config.DelayInMilliseconds);
         }

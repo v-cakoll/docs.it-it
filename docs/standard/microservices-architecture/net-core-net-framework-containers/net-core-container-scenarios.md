@@ -3,13 +3,13 @@ title: Quando scegliere .NET Core per i contenitori Docker
 description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Quando scegliere .NET Core per i contenitori Docker
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 10/18/2017
-ms.openlocfilehash: 761a9579cc301b7ca4b949a2a83af20ab8bb0f20
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 09/11/2018
+ms.openlocfilehash: fa5efd3c2478965ef01efc39b57918ec2d35962a
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37104653"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47207984"
 ---
 # <a name="when-to-choose-net-core-for-docker-containers"></a>Quando scegliere .NET Core per i contenitori Docker
 
@@ -21,15 +21,17 @@ Di seguito è fornita una spiegazione dettagliata sui motivi per cui è opportun
 
 ## <a name="developing-and-deploying-cross-platform"></a>Sviluppo e distribuzione per più piattaforme
 
-Chiaramente, se l'obiettivo è creare un'applicazione (applicazione Web o servizio) che può essere eseguita su più piattaforme supportate da Docker (Linux e Windows), la scelta corretta è .NET Core, in quanto .NET Framework supporta solo Windows.
+Chiaramente, se l'obiettivo è creare un'applicazione (app Web o servizio) che può essere eseguita su più piattaforme supportate da Docker (Linux e Windows), la scelta corretta è .NET Core, in quanto .NET Framework supporta solo Windows.
 
 .NET Core supporta anche macOS come piattaforma di sviluppo. Tuttavia, quando i contenitori vengono distribuiti in un host Docker, l'host deve (attualmente) essere basato su Linux o Windows. In un ambiente di sviluppo, ad esempio, si potrebbe usare una macchina virtuale Linux in esecuzione in un Mac.
 
-[Visual Studio](https://visualstudio.microsoft.com/) fornisce un ambiente di sviluppo integrato (IDE) per Windows e supporta lo sviluppo per Docker. 
+[Visual Studio](https://www.visualstudio.com/vs/) fornisce un ambiente di sviluppo integrato (IDE) per Windows e supporta lo sviluppo per Docker.
 
-[Visual Studio per Mac](https://visualstudio.microsoft.com/vs/visual-studio-mac/) è un ambiente di sviluppo integrato, un'evoluzione di Xamarin Studio, in esecuzione in macOS e in grado di supportare Docker dalla metà del 2017.
+[Visual Studio per Mac](https://www.visualstudio.com/vs/visual-studio-mac/) è un ambiente IDE, evoluzione di Xamarin Studio, che viene eseguito su macOS e supporta lo sviluppo di applicazioni basate su Docker. È la scelta più indicata per gli sviluppatori che lavorano in computer Mac che vogliono anche usare un potente IDE.
 
-È anche possibile usare [Visual Studio Code](https://code.visualstudio.com/) in macOS, Linux e Windows. Visual Studio Code supporta infatti .NET Core, incluse le funzionalità IntelliSense e di debug. Poiché Visual Studio Code è un editor leggero, è possibile usarlo per sviluppare app in contenitori in Mac in combinazione con l'interfaccia della riga di comando di Docker e gli strumenti dell'interfaccia della riga di comando di [.NET Core](../../../core/tools/index.md). È anche possibile usare .NET Core con la maggior parte degli editor di terze parti, come Sublime Text, Emacs, vi e il progetto OmniSharp open source che fornisce il supporto di IntelliSense per i linguaggi .NET. Oltre agli ambienti di sviluppo integrato e agli editor, è possibile usare l'interfaccia della riga di comando di .NET Core per tutte le piattaforme supportate.
+È anche possibile usare [Visual Studio Code](https://code.visualstudio.com/) in macOS, Linux e Windows. Visual Studio Code supporta infatti .NET Core, incluse le funzionalità IntelliSense e di debug. Poiché Visual Studio Code è un editor leggero, è possibile usarlo per sviluppare app in contenitori in Mac in combinazione con l'interfaccia della riga di comando di Docker e l'[interfaccia della riga di comando di .NET Core](https://docs.microsoft.com/dotnet/core/tools/?tabs=netcore2x). È anche possibile usare .NET Core con la maggior parte degli editor di terze parti, come Sublime, Emacs, vi e il progetto OmniSharp open source che fornisce anche il supporto di IntelliSense.
+
+Oltre agli ambienti di sviluppo integrato e agli editor, è possibile usare gli strumenti dell'[interfaccia della riga di comando di .NET Core](https://docs.microsoft.com/dotnet/core/tools/?tabs=netcore2x) per tutte le piattaforme supportate.
 
 ## <a name="using-containers-for-new-green-field-projects"></a>Uso dei contenitori per i nuovi progetti (green field)
 
@@ -41,7 +43,7 @@ Per creare applicazioni basate su microservizi (senza contenitori) è possibile 
 
 Al contrario, .NET Core è il miglior candidato per un sistema orientato ai microservizi basato su contenitori, perché è molto più leggero. Inoltre, le immagini dei contenitori correlate, l'immagine Linux o l'immagine Windows Nano, sono snelle e di piccole dimensioni per garantire la leggerezza dei contenitori e aumentarne la velocità di avvio.
 
-Un microservizio deve essere più piccolo possibile: deve essere leggero quando accelera, avere un footprint ridotto e un contesto delimitato di piccole dimensioni, non deve generare un eccesso di preoccupazioni e deve poter essere avviato e arrestato velocemente. Con questi requisiti, sarà opportuno usare immagini del contenitore di piccole dimensioni e che garantiscono la creazione di istanze veloce, come l'immagine del contenitore .NET Core.
+Un microservizio deve essere più piccolo possibile: deve essere leggero quando accelera, avere un footprint ridotto e un contesto delimitato di piccole dimensioni (vedere DDD, [Domain-driven design](https://en.wikipedia.org/wiki/Domain-driven_design)), non deve generare un eccesso di preoccupazioni e deve poter essere avviato e arrestato velocemente. Con questi requisiti, sarà opportuno usare immagini del contenitore di piccole dimensioni e che garantiscono la creazione di istanze veloce, come l'immagine del contenitore .NET Core.
 
 Un'architettura di microservizi consente di usare una combinazione di tecnologie in un'area di servizi confinata. Questo permette una migrazione graduale a .NET Core per i nuovi microservizi che funzionano in combinazione con altri microservizi o con servizi sviluppati con Node.js, Python, Java, GoLang o altre tecnologie.
 

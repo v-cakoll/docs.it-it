@@ -1,6 +1,6 @@
 ---
 title: Procedure consigliate per l'uso delle stringhe in .NET
-ms.date: 08/22/2018
+ms.date: 09/13/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 14945cc6812e4bcb14085656337c7df1abc0a5bf
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 6114553c6bcdac8521c80c10f470d4c38b15e738
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43000151"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47080338"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>Procedure consigliate per l'uso delle stringhe in .NET
 <a name="top"></a> .NET offre un ampio supporto per lo sviluppo di applicazioni localizzate e globalizzate e semplifica l'applicazione delle convenzioni relative alle impostazioni cultura correnti o alle impostazioni cultura specifiche quando si eseguono operazioni comuni come l'ordinamento e la visualizzazione delle stringhe. Tuttavia, l'ordinamento o il confronto delle stringhe non è sempre un'operazione con distinzione delle impostazioni cultura. Ad esempio, le stringhe usate internamente da un'applicazione in genere devono essere gestite in modo identico in tutte le impostazioni cultura. Quando i dati di stringa indipendenti dalle impostazioni cultura, ad esempio i tag XML, i tag HTML, i nomi utente, i percorsi di file e i nomi degli oggetti di sistema, vengono interpretati come dati con distinzione delle impostazioni cultura, nel codice dell'applicazione possono verificarsi bug complessi, riduzioni delle prestazioni e, in alcuni casi, problemi di sicurezza.  
@@ -123,10 +123,12 @@ ms.locfileid: "43000151"
  Il confronto tra stringhe è la base di molte operazioni relative alle stringhe, in particolare l'ordinamento e il test di uguaglianza. L'ordinamento delle stringhe viene eseguito in un modo specifico: se "my" compare prima di "string" in un elenco ordinato di stringhe, nel confronto "my" deve essere minore o uguale a "string". Inoltre, il confronto definisce implicitamente l'uguaglianza. L'operazione di confronto restituisce zero per le stringhe che considera uguali. In altre parole, nessuna stringa viene considerata minore delle altre. Le operazioni più significative relative alle stringhe includono una o più delle seguenti procedure: confronto con un'altra stringa ed esecuzione di un'operazione di ordinamento definita correttamente.  
 
 > [!NOTE]
-> È possibile scaricare le [tabelle di ordinamento spessore](https://www.microsoft.com/en-us/download/details.aspx?id=10921), un set di file di testo che contengono informazioni sugli spessori dei caratteri usati nelle operazioni di ordinamento e confronto per i sistemi operativi Windows.
+> È possibile scaricare le [tabelle di ordinamento spessore](https://www.microsoft.com/en-us/download/details.aspx?id=10921), un set di file di testo che contengono informazioni sugli spessori dei caratteri usati nelle operazioni di ordinamento e confronto per i sistemi operativi Windows, e la [tabella degli elementi delle regole di confronto Unicode predefinite](https://www.unicode.org/Public/UCA/latest/allkeys.txt), la versione più recente della tabella di ordinamento spessore per Linux e MacOS. La versione specifica della tabella di ordinamento spessore in Linux e macOS dipende dalla versione delle librerie [International Components for Unicode](http://site.icu-project.org/) installate nel sistema. Per informazioni sulle versioni ICU e sulle versioni Unicode implementate, vedere [Downloading ICU](http://site.icu-project.org/download) (Download di ICU).
 
  Tuttavia, la valutazione di due stringhe per l'uguaglianza e l'ordinamento non produce un unico risultato corretto; l'esito dipende dai criteri usati per il confronto delle stringhe. In particolare, i confronti tra stringhe ordinali o basati sulle convenzioni di utilizzo di maiuscole e minuscole e di ordinamento delle impostazioni cultura correnti o della lingua inglese (impostazioni indipendenti dalle impostazioni cultura basate sulla lingua inglese) possono produrre risultati diversi.  
-  
+
+I confronti di stringhe tramite versioni diverse di .NET oppure tramite .NET in sistemi operativi o versioni del sistema operativo diverse possono inoltre restituire risultati diversi. Per altre informazioni, vedere [Stringhe e standard Unicode](xref:System.String#Unicode). 
+
 <a name="current_culture"></a>   
 ### <a name="string-comparisons-that-use-the-current-culture"></a>Confronti tra stringhe che usano le impostazioni cultura correnti  
  Un criterio prevede l'uso delle convenzioni delle impostazioni cultura correnti quando si confrontano le stringhe. I confronti basati sulle impostazioni cultura correnti usano le impostazioni cultura o le impostazioni locali correnti del thread. Se le impostazioni cultura non vengono impostate dall'utente, vengono usate le impostazioni predefinite della finestra **Opzioni internazionali** nel Pannello di controllo. È necessario usare sempre i confronti basati sulle impostazioni cultura correnti quando i dati sono linguisticamente rilevanti e quando riflettono un'interazione utente con distinzione delle impostazioni cultura.  
@@ -370,5 +372,6 @@ ms.locfileid: "43000151"
 18.02.1905 15:12  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Modifica di stringhe](../../../docs/standard/base-types/manipulating-strings.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Modifica di stringhe](../../../docs/standard/base-types/manipulating-strings.md)

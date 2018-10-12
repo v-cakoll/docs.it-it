@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 11ee0b38-d663-4617-b793-35eb6c64e9fc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cdb11b283cc008e7f4bb060d1c2cb18706c824b7
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 86376919d7456167c58ada4145d213b39e050e33
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084718"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46702777"
 ---
 # <a name="eventwaithandle"></a>EventWaitHandle
 La classe <xref:System.Threading.EventWaitHandle> consente la comunicazione tra i thread inviando e attendendo i segnali. Gli handle di attesa degli eventi (detti anche semplicemente eventi) sono handle di attesa che possono essere segnalati per rilasciare uno o più thread in attesa. Un handle di attesa di un evento, dopo essere stato segnalato, viene reimpostato manualmente o automaticamente. La classe <xref:System.Threading.EventWaitHandle> può rappresentare un handle di attesa di un evento locale (evento locale) o un handle di attesa di un evento di sistema denominato (evento denominato o evento di sistema, visibile a tutti i processi).  
   
 > [!NOTE]
->  Gli handle di attesa degli eventi non sono eventi nel significato abituale del termine in .NET Framework. Non sono coinvolti delegati o gestori eventi. Si usa la parola "evento" per descriverli perché sono sempre stati indicati come eventi del sistema operativo e perché l'azione di segnalare l'handle di attesa indica ai thread in attesa che si è verificato un evento.  
+>  Gli handle di attesa evento non sono [eventi](../events/index.md) .NET. Non sono coinvolti delegati o gestori eventi. Si usa la parola "evento" per descriverli perché sono sempre stati indicati come eventi del sistema operativo e perché l'azione di segnalare l'handle di attesa indica ai thread in attesa che si è verificato un evento.  
   
  Sia gli handle di attesa degli eventi locali che quelli denominati usano oggetti di sincronizzazione del sistema, protetti da wrapper <xref:Microsoft.Win32.SafeHandles.SafeWaitHandle> per assicurare che le risorse vengano rilasciate. È possibile usare il metodo <xref:System.Threading.WaitHandle.Dispose%2A> per liberare le risorse immediatamente dopo aver finito di usare l'oggetto.  
   

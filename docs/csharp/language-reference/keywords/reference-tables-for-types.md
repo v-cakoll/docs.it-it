@@ -1,6 +1,6 @@
 ---
 title: Tabelle di riferimento per i tipi (Riferimenti per C#)
-ms.date: 07/20/2015
+ms.date: 09/21/2018
 f1_keywords:
 - cs.referencetables
 helpviewer_keywords:
@@ -8,36 +8,31 @@ helpviewer_keywords:
 - types [C#], reference tables
 - C# language, data types
 ms.assetid: 1d2b6a9b-31fd-4fa6-a7b2-bfd9c806ac8a
-ms.openlocfilehash: 2138bd85740b715466e263020125b367d6036c87
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f75a1cf0b118becd940bd1aa8ac66550d0852773
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529910"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47207335"
 ---
 # <a name="reference-tables-for-types-c-reference"></a>Tabelle di riferimento per i tipi (Riferimenti per C#)
 
 Nelle tabelle di riferimento seguenti sono riepilogati i tipi di C#:
 
-- [Tabella dei tipi predefiniti](built-in-types-table.md)
-
-- [Tipi integrali](integral-types-table.md)
-
-- [Tipi a virgola mobile](floating-point-types-table.md)
-
-- [Valori predefiniti](default-values-table.md)
-
-- [Tipi valore](value-types-table.md)
-
-- [Conversioni numeriche implicite](implicit-numeric-conversions-table.md)
-
-- [Tabella delle conversioni numeriche esplicite](explicit-numeric-conversions-table.md)
-
-Per informazioni sulla formattazione dell'output dei tipi numerici, vedere [Tabella di formattazione dei risultati numerici](formatting-numeric-results-table.md).
+|Table|Descrizione|
+|---------|---------|
+|[Tipi incorporati](built-in-types-table.md)|Elenca i tipi incorporati di C# e tipi .NET corrispondenti.|
+|[Tipi integrali](integral-types-table.md)|Fornisce una panoramica dei tipi integrali.|
+|[Tipi a virgola mobile](floating-point-types-table.md)|Fornisce una panoramica dei tipi a virgola mobile.|
+|[Tipi valore](value-types-table.md)|Elenca i tipi valore di C#.|
+|[Valori predefiniti](default-values-table.md)|Elenca i valori predefiniti dei tipi valore di C#.|
+|[Conversioni numeriche implicite](implicit-numeric-conversions-table.md)|Fornisce una panoramica delle conversioni implicite supportate tra i tipi numerici di C#.|
+|[Conversioni numeriche esplicite](explicit-numeric-conversions-table.md)|Fornisce una panoramica delle conversioni esplicite supportate tra i tipi numerici di C#.|
+|[Formattazione dei risultati numerici](formatting-numeric-results-table.md)|Fornisce una panoramica delle stringhe in formato numerico standard.|
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per C#](../../language-reference/index.md)
+- [Riferimenti per C#](../index.md)
 - [Guida per programmatori C#](../../programming-guide/index.md)
 - [Tipi riferimento](reference-types.md)
 - [Tipi valore](value-types.md)

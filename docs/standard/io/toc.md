@@ -14,6 +14,7 @@
 ### [Composizione dei flussi](composing-streams.md)
 ### [Procedura: Eseguire la conversione tra flussi di .NET Framework e flussi di Windows Runtime](how-to-convert-between-dotnet-streams-and-winrt-streams.md)
 ## [I/O di file asincrono](asynchronous-file-i-o.md)
+## [Gestione degli errori di I/O](handling-io-errors.md)
 ## [Spazio di memorizzazione isolato](isolated-storage.md)
 ### [Tipi di isolamento](types-of-isolation.md)
 ### [Procedura: Recuperare archivi per lo spazio di memorizzazione isolato](how-to-obtain-stores-for-isolated-storage.md)

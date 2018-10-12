@@ -4,12 +4,12 @@ description: Informazioni sul processo di trasferimento e sugli strumenti che po
 author: cartermp
 ms.author: mairaw
 ms.date: 06/20/2016
-ms.openlocfilehash: bf4f50ca915f21cdda6b99ae6bdf9e837eca3ae7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d273b3abe46de59aa55b5b9a531d3c572a065124
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33210082"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48835392"
 ---
 # <a name="porting-to-net-core-from-net-framework"></a>Portabilità in .NET Core da .NET Framework
 
@@ -27,7 +27,7 @@ Il processo consigliato per la portabilità fa riferimento alla serie di passagg
 
    Questo passaggio garantisce che si possano usare le alternative di API per le destinazioni specifiche di .NET Framework nei casi in cui .NET Core non supporta un'API specifica.
    
-3. Usare lo [strumento API Portability Analyzer](https://github.com/Microsoft/dotnet-apiport/) per analizzare gli assembly e sviluppare un piano per eseguire il trasferimento in base ai risultati ottenuti.
+3. Usare [.NET Portability Analyzer](../../standard/analyzers/portability-analyzer.md) per analizzare gli assembly e sviluppare un piano per eseguire il trasferimento in base ai risultati ottenuti.
 
    Lo strumento API Portability Analyzer analizza gli assembly compilati e genera un report che mostra un riepilogo a elevato livello di portabilità e un'analisi dettagliata di ogni API in uso non disponibile in .NET Core.  È possibile usare questo report insieme a un'analisi della base di codici per sviluppare un piano per il trasferimento del codice.
    

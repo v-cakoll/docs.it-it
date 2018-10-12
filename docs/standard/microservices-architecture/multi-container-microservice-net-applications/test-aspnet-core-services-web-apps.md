@@ -4,12 +4,12 @@ description: Architettura di microservizi .NET per le applicazioni .NET incluse 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: 63576445a44df0c0bdbd22b263754bb3d2919963
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 2702a273ade0e58ba93d556cfd1ecc5531027f93
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44195621"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47232859"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>Test delle app Web e dei servizi ASP.NET di base
 
@@ -121,7 +121,7 @@ Come indicato in precedenza, quando si testano applicazioni a più contenitori, 
 
 Sono possibili alcuni approcci. Nel file docker-compose.yml usato per distribuire l'applicazione (o file simili, come docker-compose.ci.build.yml), a livello di soluzione è possibile espandere il punto di ingresso in modo da usare [dotnet test](../../../core/tools/dotnet-test.md). È anche possibile usare un altro file Compose che esegua i test nell'immagine specificata come destinazione. Se per i test di integrazione si usa un altro file Compose che include i microservizi e i database nei contenitori, ci si assicura di ripristinare sempre lo stato originale dei dati correlati prima di eseguire i test.
 
-Quando l'applicazione Compose è operativa, è possibile sfruttare i punti di interruzione e le eccezioni se si esegue Visual Studio. In alternativa, è possibile eseguire i test di integrazione nella pipeline CI in Visual Studio Team Services o qualsiasi altro sistema di integrazione continua/recapito continuo che supporti i contenitori Docker.
+Quando l'applicazione Compose è operativa, è possibile sfruttare i punti di interruzione e le eccezioni se si esegue Visual Studio. In alternativa, è possibile eseguire i test di integrazione nella pipeline CI in Azure DevOps Services o qualsiasi altro sistema di integrazione continua/recapito continuo che supporti i contenitori Docker.
 
 >[!div class="step-by-step"]
 [Precedente](subscribe-events.md)

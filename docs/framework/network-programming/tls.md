@@ -13,12 +13,12 @@ helpviewer_keywords:
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
 author: blowdart
-ms.openlocfilehash: a45d57af1069bba9e3afe8c2e6e6d463115a4e39
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 96d37934b5e852b69c692bb1606d2998dac6f63a
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43798912"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47424480"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>Procedure consigliate per Transport Layer Security (TLS) con .NET Framework
 
@@ -179,7 +179,10 @@ Per altre informazioni sui protocolli TLS, vedere [Mitigazione: Protocolli TLS](
 
 ## <a name="configuring-security-via-the-windows-registry"></a>Configurazione della sicurezza tramite il Registro di sistema di Windows
 
-Se l'impostazione di una o entrambe le opzioni di `AppContext` non è praticabile, è possibile controllare i protocolli di sicurezza usati dall'app con le chiavi del Registro di sistema di Windows descritte in questa sezione. L'uso di una o entrambe le opzioni di `AppContext` potrebbe non essere possibile se l'app è destinata una versione di .NET Framework precedente alla 4.6 o se non è possibile modificare il file di configurazione. Se si vuole configurare la sicurezza con il Registro di sistema, non specificare un valore del protocollo di sicurezza nel codice, perché avrebbe la precedenza rispetto al Registro di sistema.
+> [!WARNING]
+> L'impostazione delle chiavi del Registro di sistema influisce su tutte le applicazioni nel sistema. Usare questa opzione solo se si ha il controllo completo del computer ed è possibile controllare le modifiche apportate al Registro di sistema.
+
+Se l'impostazione di una o entrambe le opzioni di `AppContext` non è praticabile, è possibile controllare i protocolli di sicurezza usati dall'app con le chiavi del Registro di sistema di Windows descritte in questa sezione. L'uso di una o entrambe le opzioni di `AppContext` potrebbe non essere possibile se l'app viene eseguita in .NET Framework 4.5.2 o versioni precedenti oppure se non è possibile modificare il file di configurazione. Se si vuole configurare la sicurezza con il Registro di sistema, non specificare un valore del protocollo di sicurezza nel codice, perché ha la precedenza rispetto all'impostazione del Registro di sistema.
 
 I nomi delle chiavi del Registro di sistema sono simili a quelli delle opzioni `AppContext` corrispondenti, ma senza il prefisso `DontEnable` nel nome. Ad esempio, l'opzione di `AppContext` `DontEnableSchUseStrongCrypto` corrisponde alla chiave del Registro di sistema denominata [SchUseStrongCrypto](#schusestrongcrypto).
 

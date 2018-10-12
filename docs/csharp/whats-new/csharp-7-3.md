@@ -2,12 +2,12 @@
 title: Novità di C# 7.3
 description: Panoramica delle nuove funzionalità in C# 7.3
 ms.date: 05/16/2018
-ms.openlocfilehash: 921374773d57d3fa6f8dd614f2691d345cf6eab7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 570da53059242c0242609ddcba5cb23f1728aa9f
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511611"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47235231"
 ---
 # <a name="whats-new-in-c-73"></a>Novità di C# 7.3
 
@@ -36,7 +36,7 @@ Le nuove opzioni del compilatore sono le seguenti:
 
 Il resto di questo articolo fornisce informazioni dettagliate e collegamenti a risorse aggiuntive per ciascuno dei miglioramenti.
 
-## <a name="enabling-more-performant-safe-code"></a>Miglioramento delle prestazioni del codice gestito
+## <a name="enabling-more-efficient-safe-code"></a>Miglioramento dell'efficienza del codice gestito
 
 È possibile scrivere codice C# in modo gestito con prestazioni altrettanto elevate di quelle del codice non gestito. Il codice gestito evita classi di errori come sovraccarichi del buffer, puntatori errati e altri errori di accesso alla memoria. Queste nuove funzionalità espandono le capacità del codice gestito verificabile. È possibile scrivere una parte più ampia del codice usando costrutti gestiti. Queste funzionalità rendono più semplice tale attività.
 
@@ -127,6 +127,8 @@ Ora è possibile specificare il tipo <xref:System.Enum?displayProperty=nameWithT
 È anche possibile usare il nuovo vincolo `unmanaged` per specificare che un parametro di tipo deve essere un **tipo non gestito**. Un **tipo non gestito** è un tipo che non è un tipo riferimento e non contiene alcun tipo riferimento a nessun livello di annidamento.
 
 Per altre informazioni, vedere gli articoli su [vincoli generici `where`](../language-reference/keywords/where-generic-type-constraint.md) e [vincoli sui parametri di tipo](../programming-guide/generics/constraints-on-type-parameters.md).
+
+L'aggiunta di questi vincoli ai tipi esistenti è una [modifica incompatibile](version-update-considerations.md#incompatible-changes). I tipi generici chiusi potrebbero non soddisfare più questi nuovi vincoli.
 
 ## <a name="make-existing-features-better"></a>Miglioramenti delle funzionalità esistenti
 

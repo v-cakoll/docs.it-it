@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: utilizzare SpinLock per la sincronizzazione di basso livello'
+title: 'Procedura: Usare SpinLock per la sincronizzazione di basso livello'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,18 +10,16 @@ helpviewer_keywords:
 ms.assetid: a9ed3e4e-4f29-4207-b730-ed0a51ecbc19
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 216480e893f6dbebbb204cbf2bfebae8dc139ec4
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: ff604b94ecef1ffec5fe9845df7c5ba35f5857d7
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45593856"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46000268"
 ---
-# <a name="how-to-use-spinlock-for-low-level-synchronization"></a>Procedura: utilizzare SpinLock per la sincronizzazione di basso livello
-L'esempio seguente illustra come usare un oggetto <xref:System.Threading.SpinLock>.  
-  
-## <a name="example"></a>Esempio  
- In questo esempio la sezione critica esegue una quantità minima di lavoro, quindi è ideale per l'uso di <xref:System.Threading.SpinLock>. Aumentando leggermente il lavoro, aumentano le prestazioni di <xref:System.Threading.SpinLock> rispetto a un blocco standard. Tuttavia, esiste un punto in cui uno SpinLock diventa più costoso di un blocco standard. È possibile usare la funzionalità del profilo di concorrenza negli strumenti di profilatura per vedere quale tipo di blocco fornisce prestazioni migliori nel programma. Per altre informazioni, vedere [Visualizzatore di concorrenza](/visualstudio/profiling/concurrency-visualizer).  
+# <a name="how-to-use-spinlock-for-low-level-synchronization"></a>Procedura: Usare SpinLock per la sincronizzazione di basso livello
+
+L'esempio seguente illustra come usare un oggetto <xref:System.Threading.SpinLock>. In questo esempio la sezione critica esegue una quantità minima di lavoro, quindi è ideale per l'uso di <xref:System.Threading.SpinLock>. Aumentando leggermente il lavoro, aumentano le prestazioni di <xref:System.Threading.SpinLock> rispetto a un blocco standard. Tuttavia, esiste un punto in cui uno SpinLock diventa più costoso di un blocco standard. È possibile usare la funzionalità del profilo di concorrenza negli strumenti di profilatura per vedere quale tipo di blocco fornisce prestazioni migliori nel programma. Per altre informazioni, vedere [Visualizzatore di concorrenza](/visualstudio/profiling/concurrency-visualizer).  
   
  [!code-csharp[CDS_SpinLock#02](../../../samples/snippets/csharp/VS_Snippets_Misc/cds_spinlock/cs/spinlockdemo.cs#02)]
  [!code-vb[CDS_SpinLock#02](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_spinlock/vb/spinlock_vb.vb#02)]  
@@ -30,8 +28,10 @@ L'esempio seguente illustra come usare un oggetto <xref:System.Threading.SpinLoc
   
  Questo esempio usa la classe <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType>, che richiede la sincronizzazione utente per l'accesso a thread multipli. Nelle applicazioni destinate a .NET Framework versione 4, è anche possibile usare <xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=nameWithType>, che non richiede alcun blocco dell'utente.  
   
- Si noti l'uso di `false` (`False` in Visual Basic) nella chiamata a <xref:System.Threading.SpinLock.Exit%2A>. Questo fornisce prestazioni ottimali. Specificare `true` (`True`) nelle architetture IA64 per usare il limite di memoria, che scarica il buffer di scrittura per garantire che il blocco sia ora disponibile per l'uscita di altri thread.  
+ Si noti l'uso di `false` (`False` in Visual Basic) nella chiamata a <xref:System.Threading.SpinLock.Exit%2A?displayProperty=nameWithType>. Questo fornisce prestazioni ottimali. Specificare `true` (`True` in Visual Basic) nelle architetture IA64 per usare il limite di memoria, che scarica il buffer di scrittura per garantire che il blocco sia ora disponibile per l'uscita di altri thread.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Threading Objects and Features](../../../docs/standard/threading/threading-objects-and-features.md) (Oggetti e funzionalità del threading)
+- [Oggetti e funzionalità del threading](threading-objects-and-features.md)
+- [Istruzione lock (C#)](../../csharp/language-reference/keywords/lock-statement.md)
+- [Istruzione SyncLock (Visual Basic)](../../visual-basic/language-reference/statements/synclock-statement.md)

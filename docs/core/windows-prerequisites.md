@@ -4,12 +4,12 @@ description: Informazioni sulle dipendenze per sviluppare ed eseguire applicazio
 author: mairaw
 ms.author: mairaw
 ms.date: 08/31/2018
-ms.openlocfilehash: 477d303b50495070ba3a3540188deb274dd9f510
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 63c0de2b413f38458dba89506f4070760b3f53f8
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44179494"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45747468"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Prerequisiti per .NET Core in Windows
 
@@ -61,7 +61,7 @@ Gli articoli seguenti contengono un elenco completo dei sistemi operativi suppor
 
 ## <a name="prerequisites-with-visual-studio-2017"></a>Prerequisiti con Visual Studio 2017
 
-È possibile usare qualsiasi editor per sviluppare applicazioni .NET Core con .NET Core SDK. [Visual Studio 2017](#visual-studio-2017) fornisce un ambiente di sviluppo integrato per le app .NET Core in Windows.
+È possibile usare qualsiasi editor per sviluppare applicazioni .NET Core con .NET Core SDK. Visual Studio 2017 fornisce un ambiente di sviluppo integrato per le app .NET Core in Windows.
 
 Nelle [note sulla versione ](/visualstudio/releasenotes/vs2017-relnotes) è possibile trovare altre informazioni sulle modifiche in Visual Studio 2017.
 

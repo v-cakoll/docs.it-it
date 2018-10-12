@@ -3,13 +3,13 @@ title: Quando scegliere .NET Framework per i contenitori Docker
 description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Quando scegliere .NET Framework per i contenitori Docker
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 06/07/2018
-ms.openlocfilehash: 2fdf0c24999891e48e1867e8fa7b4ba0f5302850
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 09/11/2018
+ms.openlocfilehash: 9e1ff03421f1a5d23878c74f13423cec9625c4c5
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106710"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45609978"
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>Quando scegliere .NET Framework per i contenitori Docker
 
@@ -23,23 +23,27 @@ Nella maggior parte dei casi per questo scenario, non sarà necessario eseguire 
 
 ## <a name="using-third-party-net-libraries-or-nuget-packages-not-available-for-net-core"></a>Utilizzo di pacchetti NuGet o di librerie .NET di terze parti non disponibili per .NET Core
 
-Le librerie di terze parti stanno rapidamente adottando [.NET Standard](../../net-standard.md), che consente la condivisione di codice tra tutte le versioni di .NET incluso .NET Core. Con la libreria .NET Standard 2.0 e versioni successive, la compatibilità della superficie dell'API tra framework diversi è aumentata in modo significativo e in.NET Core 2.x le applicazioni possono anche fare riferimento direttamente alle librerie .NET Framework esistenti (vedere la [compat shim](https://github.com/dotnet/standard/blob/master/docs/faq.md#how-does-net-standard-versioning-work)).
+Le librerie di terze parti stanno rapidamente adottando [.NET Standard](https://docs.microsoft.com/dotnet/articles/standard/library), che consente la condivisione di codice tra tutte le versioni di .NET incluso .NET Core. Con la libreria .NET Standard 2.0 e versioni successive la compatibilità della superficie dell'API tra framework diversi è aumentata in modo significativo e in .NET Core 2.x le applicazioni possono anche fare riferimento direttamente alle librerie .NET Framework esistenti (vedere la [compat shim](https://github.com/dotnet/standard/blob/master/docs/netstandard-20/README.md#net-framework-461-supporting-net-standard-20)).
 
-Tuttavia, nonostante questo avanzamento eccezionale a partire da .NET Standard 2.0 e .NET Core 2.0, in determinati casi per eseguire alcuni pacchetti NuGet potrebbe essere necessario usare Windows perché questi non supportano .NET Core. Se questi pacchetti sono vitali per l'applicazione, sarà necessario usare .NET Framework in contenitori Windows.
+A novembre 2017 è stato anche rilasciato [Windows Compatibility Pack](https://docs.microsoft.com/dotnet/core/porting/windows-compat-pack) che consente di estendere la superficie dell'API disponibile per .NET Standard 2.0 in Windows. Questo pacchetto consente di ricompilare la maggior parte del codice esistente per .NET Standard 2.x con modifiche minime o nulle, da eseguire in Windows.
+
+Tuttavia, nonostante questo avanzamento eccezionale a partire da .NET Standard 2.0 e .NET Core 2.1, in determinati casi per eseguire alcuni pacchetti NuGet potrebbe essere necessario usare Windows perché questi non supportano .NET Core. Se questi pacchetti sono vitali per l'applicazione, sarà necessario usare .NET Framework in contenitori Windows.
 
 ## <a name="using-net-technologies-not-available-for-net-core"></a>Utilizzo di tecnologie .NET non disponibili per .NET Core 
 
 Alcune tecnologie .NET Framework non sono disponibili nella versione corrente di .NET Core, ovvero la versione 2.1 al momento della stesura del presente documento. Alcune saranno disponibili in versioni future di .NET Core (.NET Core 2.x), ma altre non si applicano ai nuovi schemi di applicazioni basati su .NET Core ed è possibile che non vengano mai rese disponibili.
 
-L'elenco seguente illustra la maggior parte delle tecnologie non disponibili in .NET Core 2.1:
+L'elenco seguente illustra la maggior parte delle tecnologie non disponibili in .NET Core 2.x:
 
 -   Web Form ASP.NET. Questa tecnologia è disponibile solo in .NET Framework. Attualmente non è previsto il trasferimento di Web Form ASP.NET in .NET Core.
 
--   Servizi WCF. Anche quando una [libreria client WCF](https://github.com/dotnet/wcf) è disponibile per l'utilizzo di servizi WCF da .NET Core. Alla metà del 2017, l'implementazione del server WCF è disponibile solo in .NET Framework. Questo scenario potrebbe essere considerato per le versioni future di .NET Core.
+-   Servizi WCF. Anche se, dalla metà del 2017, è disponibile una [libreria WCF client](https://github.com/dotnet/wcf) per l'utilizzo di servizi WCF da .NET Core, l'implementazione di server WCF è disponibile solo in .NET Framework. Questo scenario potrebbe essere considerato per le versioni future di .NET Core. Anche alcune API sono considerate per l'inclusione in [Windows Compatibility Pack](https://docs.microsoft.com/dotnet/core/porting/windows-compat-pack).
 
 -   Servizi correlati ai flussi di lavoro. Windows Workflow Foundation (WF), Servizi flusso di lavoro (WCF e WF in un unico servizio) e WCF Data Services (in precedenza "ADO.NET Data Services") sono disponibili solo in .NET Framework. Al momento non è prevista l'introduzione in .NET Core.
 
 Oltre alle tecnologie elencate nella [roadmap per .NET Core](https://github.com/aspnet/Home/wiki/Roadmap) ufficiale, è possibile che in .NET Core vengano rese disponibili altre funzionalità. Per un elenco completo, osservare gli elementi contrassegnati come [port-to-core](https://github.com/dotnet/corefx/issues?q=is%3Aopen+is%3Aissue+label%3Aport-to-core) nella pagina CoreFX del sito GitHub. Si noti che questo elenco non rappresenta un impegno da parte di Microsoft per rendere disponibili tali componenti in .NET Core, ma mostra solo il desiderio della community di procedere in tal senso. Se si è interessati a uno dei componenti elencati in precedenza, è consigliabile partecipare alle discussioni su GitHub per far valere la propria opinione. Inoltre, se si ritiene di dover aggiungere alcune osservazioni, è possibile [inserire un nuovo problema nel repository CoreFX](https://github.com/dotnet/corefx/issues/new).
+
+Anche se .NET Core 3 (in corso di sviluppo al momento della stesura di questo articolo) includerà il supporto per molte delle API di .NET Framework esistenti, queste API sono progettate per il desktop e quindi non sono attualmente utili per i contenitori.
 
 ## <a name="using-a-platform-or-api-that-does-not-support-net-core"></a>Utilizzo di una piattaforma o di un'API che non supporta .NET Core
 
@@ -49,17 +53,17 @@ Nel frattempo, se una piattaforma o un servizio in Azure ancora non supporta .NE
 
 ### <a name="additional-resources"></a>Risorse aggiuntive
 
--   **.NET Core Guide**
-    [*https://docs.microsoft.com/dotnet/core/index*](../../../core/index.md) (Guida a .NET Core)
+-   **Guida a .NET Core**  
+    [https://docs.microsoft.com/dotnet/articles/core/index](https://docs.microsoft.com/dotnet/articles/core/index)
 
--   **Porting from .NET Framework to .NET Core**
-    [*https://docs.microsoft.com/dotnet/core/porting/index*](../../../core/porting/index.md) (Portabilità da .NET Framework a .NET Core)
+-   **Porting from .NET Framework to .NET Core** (Portabilità da .NET Framework a .NET Core)  
+    [https://docs.microsoft.com/dotnet/articles/core/porting/index](https://docs.microsoft.com/dotnet/articles/core/porting/index)
 
--   **.NET Framework on Docker Guide**
-    [*https://docs.microsoft.com/dotnet/framework/docker/*](../../../framework/docker/index.md) (Guida a .NET Framework su Docker)
+-   **.NET Framework on Docker Guide** (Guida a .NET Framework su Docker)  
+    [https://docs.microsoft.com/dotnet/articles/framework/docker/](https://docs.microsoft.com/dotnet/articles/framework/docker/)
 
--   **.NET Components Overview**
-    [*https://docs.microsoft.com/dotnet/standard/components*](../../components.md) (Panoramica dei componenti .NET)
+-   **.NET Components Overview** (Panoramica dei componenti .NET)  
+    [*https://docs.microsoft.com/dotnet/standard/components*](../../components.md)
 
 
 

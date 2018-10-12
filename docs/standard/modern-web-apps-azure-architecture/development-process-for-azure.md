@@ -4,12 +4,12 @@ description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Proc
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: bde771051af034e7da72e9648fb3b0f37a95fa01
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: a614cfe3d3437426893d8748165b2ef4d6389765
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404389"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47231245"
 ---
 # <a name="development-process-for-azure"></a>Processo di sviluppo per Azure
 
@@ -44,15 +44,15 @@ Durante lo sviluppo di applicazioni ASP.NET Core Microsoft offre gli strumenti n
 
 Il ciclo di vita dello sviluppo applicativo inizia dal computer di ogni sviluppatore quando l'applicazione viene scritta usando il linguaggio preferito e viene testata in locale. Gli sviluppatori possono scegliere il sistema di controllo del codice sorgente preferito e possono configurare l'integrazione continua (CI) e/o il recapito/distribuzione continua (CD) usando un server di compilazione o in base alle funzionalità di Azure predefinite.
 
-Per iniziare a sviluppare un'applicazione ASP.NET Core mediante CI/CD, è possibile usare Visual Studio Team Services o Team Foundation Server (TFS) dell'organizzazione.
+Per iniziare a sviluppare un'applicazione ASP.NET Core mediante CI/CD, è possibile usare Azure DevOps Services o Team Foundation Server (TFS) dell'organizzazione.
 
 ### <a name="initial-setup"></a>Configurazione iniziale
 
 Per creare una pipeline di versione per l'app, è necessario avere il codice dell'applicazione nel controllo del codice sorgente. Configurare un repository locale e connetterlo a un repository remoto in un progetto team. Seguire le istruzioni seguenti:
 
-- [Condividere il codice con Git e Visual Studio](https://docs.microsoft.com/vsts/git/share-your-code-in-git-vs) oppure
+- [Condividere il codice con Git e Visual Studio](https://docs.microsoft.com/azure/devops/git/share-your-code-in-git-vs) oppure
 
-- [Condividere il codice con il controllo della versione di Team Foundation e Visual Studio](https://docs.microsoft.com/vsts/tfvc/share-your-code-in-tfvc-vs)
+- [Condividere il codice con il controllo della versione di Team Foundation e Visual Studio](https://docs.microsoft.com/azure/devops/tfvc/share-your-code-in-tfvc-vs)
 
 Creare un servizio app di Azure in cui verrà distribuita l'applicazione. Creare un'app Web passando al pannello Servizi app nel portale di Azure. Fare clic su +Aggiungi, selezionare il modello di app Web, fare clic su Crea e specificare un nome e altri dettagli. L'app Web sarà accessibile da {name}.azurewebsites.net.
 
@@ -62,13 +62,13 @@ Creare un servizio app di Azure in cui verrà distribuita l'applicazione. Creare
 
 Il processo di compilazione CI eseguirà una compilazione automatica ogni volta che viene eseguito il commit di nuovo codice nel repository di controllo del codice sorgente del progetto. Ciò consente di verificare immediatamente che il codice venga compilato (e passi i test automatizzati) e possa essere potenzialmente distribuito. Questa compilazione CI produrrà un artefatto del pacchetto di distribuzione Web e lo pubblicherà per l'utilizzo da parte del processo CD.
 
-[Definire il processo di compilazione CI](https://docs.microsoft.com/vsts/build-release/apps/aspnet/build-aspnet-core#ci)
+[Definire il processo di compilazione CI](https://docs.microsoft.com/azure/devops/build-release/apps/aspnet/build-aspnet-core#ci)
 
 Assicurarsi di abilitare l'integrazione continua in modo che il sistema accodi una compilazione ogni volta che un utente del team esegue il commit di nuovo codice. Testare la compilazione e verificare che produca un pacchetto di distribuzione Web come uno dei relativi artefatti.
 
 Dopo aver eseguito la compilazione, il processo CD distribuirà i risultati della compilazione CI nell'app Web di Azure. Per procedere alla configurazione, creare e configurare una *Versione* che verrà distribuita nel servizio app di Azure.
 
-[Definire il processo della versione CD](https://docs.microsoft.com/vsts/build-release/apps/aspnet/build-aspnet-core#cd)
+[Definire il processo della versione CD](https://docs.microsoft.com/azure/devops/build-release/apps/aspnet/build-aspnet-core#cd)
 
 Dopo aver configurato la pipeline CI/CD, è possibile effettuare aggiornamenti nell'app Web ed eseguirne il commit nel controllo del codice sorgente per distribuirli.
 
@@ -86,7 +86,7 @@ Lo sviluppo di un'applicazione ASP.NET Core per la distribuzione in Azure non di
 
 #### <a name="step-2-application-code-repository"></a>Passaggio 2. Repository del codice dell'applicazione
 
-Quando si è pronti per condividere il codice con il proprio team, eseguire il push delle modifiche dal repository del codice sorgente locale al repository del codice sorgente condiviso del team. Se è stato usato un ramo personalizzato, questo passaggio prevede in genere l'unione del codice in un ramo condiviso, ad esempio per mezzo di una [richiesta pull](https://docs.microsoft.com/vsts/git/pull-requests).
+Quando si è pronti per condividere il codice con il proprio team, eseguire il push delle modifiche dal repository del codice sorgente locale al repository del codice sorgente condiviso del team. Se è stato usato un ramo personalizzato, questo passaggio prevede in genere l'unione del codice in un ramo condiviso, ad esempio per mezzo di una [richiesta pull](https://docs.microsoft.com/azure/devops/git/pull-requests).
 
 #### <a name="step-3-build-server-continuous-integration-build-test-package"></a>Passaggio 3. Server di compilazione: integrazione continua. compilazione, test, pacchetto
 
@@ -107,7 +107,7 @@ Mentre l'app Web è in esecuzione, è possibile monitorare l'integrità dell'app
 ## <a name="references"></a>Riferimenti
 
 **Compilare e distribuire l'app ASP.NET Core in Azure**  
-<https://docs.microsoft.com/vsts/build-release/apps/aspnet/build-aspnet-core>
+<https://docs.microsoft.com/azure/devops/build-release/apps/aspnet/build-aspnet-core>
 
 >[!div class="step-by-step"]
 [Precedente](test-asp-net-core-mvc-apps.md)

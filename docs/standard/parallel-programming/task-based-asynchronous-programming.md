@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e3dad3e33968b72d199b412c65f04a4079020f78
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6a879cce8eb429e2daeaa5db963b3d95d1e944da
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592589"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47171374"
 ---
 # <a name="task-based-asynchronous-programming"></a>Programmazione asincrona basata su attività
 La libreria Task Parallel Library (TPL) si basa sul concetto di *attività*, che rappresenta un'operazione asincrona. Per certi versi, un'attività è analoga a un thread o a un elemento di lavoro <xref:System.Threading.ThreadPool>, ma a un livello più generale di astrazione. L'espressione *parallelismo delle attività* fa riferimento a una o più attività indipendenti eseguite contemporaneamente. Le attività forniscono due vantaggi principali:  
@@ -59,10 +59,10 @@ La libreria Task Parallel Library (TPL) si basa sul concetto di *attività*, che
  [!code-csharp[TPL_TaskIntro#2](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/run1.cs#2)]
  [!code-vb[TPL_TaskIntro#2](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/run1.vb#2)]  
   
- È anche possibile usare il metodo <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> per creare e avviare un'attività in un'unica operazione. Usare questo metodo quando non occorre separare la creazione e la pianificazione ed è necessario avvalersi di opzioni aggiuntive di creazione delle attività o usare un'utilità di pianificazione specifica oppure quando si deve passare uno stato aggiuntivo all'attività tramite la proprietà <xref:System.Threading.Tasks.Task.AsyncState%2A>, come illustrato nell'esempio seguente.  
+ È anche possibile usare il metodo <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> per creare e avviare un'attività in un'unica operazione. Usare questo metodo quando non occorre separare la creazione e la pianificazione ed è necessario avvalersi di opzioni aggiuntive di creazione delle attività o usare un'utilità di pianificazione specifica oppure quando si deve passare uno stato aggiuntivo all'attività che è possibile recuperare tramite la proprietà <xref:System.Threading.Tasks.Task.AsyncState%2A?displayProperty=nameWithType>, come illustrato nell'esempio seguente.  
   
- [!code-csharp[TPL_TaskIntro#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/startnew1.cs#3)]
- [!code-vb[TPL_TaskIntro#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/startnew1.vb#3)]  
+ [!code-csharp[TPL_TaskIntro#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/asyncstate.cs#23)]
+ [!code-vb[TPL_TaskIntro#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/asyncstate.vb#23)]  
   
  <xref:System.Threading.Tasks.Task> e <xref:System.Threading.Tasks.Task%601> espongono ciascuna una proprietà statica <xref:System.Threading.Tasks.Task.Factory%2A> che restituisce un'istanza predefinita per <xref:System.Threading.Tasks.TaskFactory>, in modo che si possa chiamare il metodo come `Task.Factory.StartNew()`. Nell'esempio seguente, inoltre, poiché le attività sono di tipo <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>, ognuna di esse presenta una proprietà <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> pubblica che contiene il risultato del calcolo. Le attività vengono eseguite in modo asincrono e possono essere completate in qualsiasi ordine. Se si accede alla proprietà <xref:System.Threading.Tasks.Task%601.Result%2A> prima che il calcolo venga completato, la proprietà blocca il thread chiamante finché il valore non è disponibile.  
   
@@ -237,10 +237,10 @@ La libreria Task Parallel Library (TPL) si basa sul concetto di *attività*, che
  L'oggetto <xref:System.Threading.Tasks.TaskFactory> predefinito è accessibile come proprietà statica della classe <xref:System.Threading.Tasks.Task> o della classe <xref:System.Threading.Tasks.Task%601>. È anche possibile creare direttamente un'istanza di <xref:System.Threading.Tasks.TaskFactory> e specificare varie opzioni che includono un oggetto <xref:System.Threading.CancellationToken>, un'opzione <xref:System.Threading.Tasks.TaskCreationOptions>, un'opzione <xref:System.Threading.Tasks.TaskContinuationOptions> o un oggetto <xref:System.Threading.Tasks.TaskScheduler>. Tutte le opzioni specificate quando si crea la factory delle attività verranno applicate a tutte le attività create da tale factory, tranne nel caso in cui l'oggetto <xref:System.Threading.Tasks.Task> venga creato tramite l'enumerazione <xref:System.Threading.Tasks.TaskCreationOptions>. In tal caso, le opzioni dell'attività eseguono l'override di quelle della factory delle attività.  
   
 ## <a name="tasks-without-delegates"></a>Attività senza delegati  
- In alcuni casi è necessario usare un oggetto <xref:System.Threading.Tasks.Task> per incapsulare un'operazione asincrona eseguita da un componente esterno anziché dal delegato dell'utente. Se l'operazione si basa sul modello Begin/End del modello di programmazione asincrona, è possibile usare i metodi <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A>. In caso contrario, è possibile usare l'oggetto <xref:System.Threading.Tasks.TaskCompletionSource%601> per eseguire il wrapping dell'operazione in un'attività e in questo modo ottenere alcuni dei vantaggi della programmabilità di <xref:System.Threading.Tasks.Task>, ad esempio il supporto per la propagazione delle eccezioni e le continuazioni. Per altre informazioni, vedere <xref:System.Threading.Tasks.TaskCompletionSource%601>.  
+ In alcuni casi è necessario usare un oggetto <xref:System.Threading.Tasks.Task> per incapsulare un'operazione asincrona eseguita da un componente esterno anziché dal delegato dell'utente. Se l'operazione si basa sul modello Begin/End del modello di programmazione asincrona, è possibile usare i metodi <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A>. In caso contrario, è possibile usare l'oggetto <xref:System.Threading.Tasks.TaskCompletionSource%601> per eseguire il wrapping dell'operazione in un'attività e in questo modo ottenere alcuni dei vantaggi della programmabilità di <xref:System.Threading.Tasks.Task>, ad esempio il supporto per la propagazione delle eccezioni e le continuazioni. Per ulteriori informazioni, vedere <xref:System.Threading.Tasks.TaskCompletionSource%601>.  
   
 ## <a name="custom-schedulers"></a>Utilità di pianificazione personalizzate  
- Per la maggior parte degli sviluppatori di applicazioni o librerie non occorre determinare il processore in cui è in esecuzione l'attività né come quest'ultima sincronizza il proprio lavoro con le altre attività o come viene pianificata in <xref:System.Threading.ThreadPool?displayProperty=nameWithType>. Tali sviluppatori richiedono soltanto che l'attività venga eseguita con la maggiore efficienza possibile nel computer host. Se si richiede un controllo più accurato sui dettagli di pianificazione, la libreria Task Parallel Library (TPL) consente di configurare alcune impostazioni nell'utilità di pianificazione delle attività predefinita. Inoltre, tale libreria consente persino di fornire un'utilità di pianificazione personalizzata. Per altre informazioni, vedere <xref:System.Threading.Tasks.TaskScheduler>.  
+ Per la maggior parte degli sviluppatori di applicazioni o librerie non occorre determinare il processore in cui è in esecuzione l'attività né come quest'ultima sincronizza il proprio lavoro con le altre attività o come viene pianificata in <xref:System.Threading.ThreadPool?displayProperty=nameWithType>. Tali sviluppatori richiedono soltanto che l'attività venga eseguita con la maggiore efficienza possibile nel computer host. Se si richiede un controllo più accurato sui dettagli di pianificazione, la libreria Task Parallel Library (TPL) consente di configurare alcune impostazioni nell'utilità di pianificazione delle attività predefinita. Inoltre, tale libreria consente persino di fornire un'utilità di pianificazione personalizzata. Per ulteriori informazioni, vedere <xref:System.Threading.Tasks.TaskScheduler>.  
   
 ## <a name="related-data-structures"></a>Strutture di dati correlate  
  La libreria TPL presenta vari nuovi tipi pubblici che risultano utili sia negli scenari in parallelo sia in quelli sequenziali. Fra questi sono incluse varie classi di raccolte thread-safe, veloci e scalabili nello spazio dei nomi <xref:System.Collections.Concurrent?displayProperty=nameWithType> nonché molti nuovi tipi di sincronizzazione, ad esempio <xref:System.Threading.Semaphore?displayProperty=nameWithType> e <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType> che sono più efficienti dei relativi predecessori per tipi specifici di carichi di lavoro. Altri nuovi tipi di .NET Framework 4, ad esempio <xref:System.Threading.Barrier?displayProperty=nameWithType> e <xref:System.Threading.SpinLock?displayProperty=nameWithType>, forniscono funzionalità non disponibili nelle versioni precedenti. Per ulteriori informazioni, vedere [Strutture di dati per la programmazione in parallelo](../../../docs/standard/parallel-programming/data-structures-for-parallel-programming.md).  
@@ -267,6 +267,7 @@ La libreria Task Parallel Library (TPL) si basa sul concetto di *attività*, che
 |[Parallelismo dei dati](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)|Viene descritto come usare <xref:System.Threading.Tasks.Parallel.For%2A> e <xref:System.Threading.Tasks.Parallel.ForEach%2A> per creare cicli paralleli su dati.|  
 |[Programmazione parallela](../../../docs/standard/parallel-programming/index.md)|Nodo di livello principale per la programmazione parallela di .NET Framework.|  
   
-## <a name="see-also"></a>Vedere anche  
- [Programmazione parallela](../../../docs/standard/parallel-programming/index.md)  
- [Esempi di programmazione parallela con .NET Framework](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)
+## <a name="see-also"></a>Vedere anche
+
+- [Programmazione parallela](../../../docs/standard/parallel-programming/index.md)  
+- [Esempi di programmazione parallela con .NET Framework](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)
