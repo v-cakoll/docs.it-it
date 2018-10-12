@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5e5aea783640a2aa2c9f4fa7754b9a3a435d1f13
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 104a0018896eb95255cf4054f9402ce5160b95f7
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579067"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48584143"
 ---
 # <a name="generics-in-net"></a>Generics in .NET
 
@@ -115,7 +115,7 @@ ms.locfileid: "33579067"
   
 -   I delegati generici consentono di eseguire il callback indipendente dai tipi senza la necessità di creare più classi delegate. Ad esempio, il delegato generico <xref:System.Predicate%601> consente di creare un metodo per implementare i propri criteri di ricerca di un tipo particolare e di usare il proprio metodo con metodi di tipo <xref:System.Array> , ad esempio <xref:System.Array.Find%2A>, <xref:System.Array.FindLast%2A>e <xref:System.Array.FindAll%2A>.  
   
--   I generics ottimizzano il codice generato dinamicamente. Quando si usano i generics con il codice generato in modo dinamico non è necessario generare il tipo. In questo modo aumenta il numero di scenari in cui è possibile usare i metodi dinamici leggeri invece di generare interi assembly. Per altre informazioni, vedere Procedura: definire ed eseguire metodi dinamici e DynamicMethod.  
+-   I generics ottimizzano il codice generato dinamicamente. Quando si usano i generics con il codice generato in modo dinamico non è necessario generare il tipo. In questo modo aumenta il numero di scenari in cui è possibile usare i metodi dinamici leggeri invece di generare interi assembly. Per altre informazioni, vedere [Procedura: Definire ed eseguire metodi dinamici](../../../docs/framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md) e <xref:System.Reflection.Emit.DynamicMethod>.  
   
  Di seguito sono elencate alcune limitazioni di generics:  
   

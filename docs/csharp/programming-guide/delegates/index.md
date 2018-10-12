@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, delegates
 - delegates [C#]
 ms.assetid: 97de039b-c76b-4b9c-a27d-8c1e1c8d93da
-ms.openlocfilehash: 3924d070ea012faf33f1d808b92b1328626ef567
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 96de5601c60dd309fe5467414affd20b8bc93d87
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43805455"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48584206"
 ---
 # <a name="delegates-c-programming-guide"></a>Delegati (Guida per programmatori C#)
 Un [delegate](../../../csharp/language-reference/keywords/delegate.md) è un tipo che rappresenta riferimenti ai metodi con un elenco di parametri e un tipo restituito particolari. Quando si crea un'istanza di un delegato, è possibile associare l'istanza a qualsiasi metodo con una firma compatibile e un tipo restituito. Tramite l'istanza di delegato è possibile richiamare (o chiamare) il metodo.  
@@ -29,7 +29,7 @@ Un [delegate](../../../csharp/language-reference/keywords/delegate.md) è un tip
 ## <a name="delegates-overview"></a>Panoramica dei delegati  
  Di seguito sono riportate le proprietà dei delegati:  
   
--   Sono simili ai puntatori a funzione del linguaggio C++, ma sono indipendenti dai tipi.  
+-   I delegati sono simili ai puntatori a funzione del linguaggio C++, ma sono interamente orientati agli oggetti e, a differenza dei puntatori C++ a funzioni membro, incapsulano sia un'istanza che un metodo dell'oggetto.
   
 -   Consentono di passare metodi come parametri.  
   
