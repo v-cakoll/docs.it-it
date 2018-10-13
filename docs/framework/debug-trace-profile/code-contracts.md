@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 84526045-496f-489d-8517-a258cf76f040
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f7f7a779cc10b32d66a184107359b502cf094979
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 569be83b902e7634a0c22e78c3f3c3a23985076c
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45649217"
+ms.lasthandoff: 10/13/2018
+ms.locfileid: "49308552"
 ---
 # <a name="code-contracts"></a>Contratti di codice
 I contratti di codice consentono di specificare precondizioni, postcondizioni e invarianti dell'oggetto nel codice. Le precondizioni sono requisiti da soddisfare quando si accede a un metodo o a una proprietà. Le postcondizioni descrivono le aspettative al momento dell'uscita dal codice del metodo o della proprietà. Le invarianti dell'oggetto descrivono lo stato previsto per una classe in stato integro.  
@@ -90,7 +90,7 @@ Contract.EndContractBlock(); // All previous "if" checks are preconditions
   
 -   Un valore di prestato in una postcondizione fa riferimento al valore di un'espressione all'inizio di un metodo o di una proprietà. Usa l'espressione `Contract.OldValue<T>(e)`, dove `T` è il tipo di `e`. È possibile omettere l'argomento di tipo generico quando il compilatore è in grado di dedurre il tipo. Il compilatore C#, ad esempio, deduce sempre il tipo poiché accetta un argomento. Esistono diverse restrizioni relative a quanto può accadere in `e` e i contesti nei quali può essere visualizzata un'espressione Old. Un'espressione Old non può contenere un'altra espressione Old. In particolare, un'espressione Old deve fare riferimento a un valore esistente nello stato di precondizione del metodo. In altre parole, deve essere un'espressione valutabile finché la precondizione del metodo resta `true`. Di seguito sono riportate diverse istanze di questa regola.  
   
-    -   Il valore deve esistere nello stato di precondizione del metodo. Per fare riferimento a un campo in un oggetto, le precondizioni devono garantire che tale oggetto sia sempre non null.  
+    -   Il valore deve esistere nello stato di precondizione del metodo. Per fare riferimento a un campo in un oggetto, le precondizioni devono garantire che l'oggetto è sempre non null.  
   
     -   Non è possibile fare riferimento al valore restituito del metodo in un'espressione Old:  
   
