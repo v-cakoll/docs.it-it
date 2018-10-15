@@ -2,12 +2,12 @@
 title: Aggiornamento dinamico
 ms.date: 03/30/2017
 ms.assetid: 8b6ef19b-9691-4b4b-824c-3c651a9db96e
-ms.openlocfilehash: dea930de2103a24aa48b1d0a31a3cbf5fc0ae26c
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 9b26bde8e524275d2eef34afc3f6442e2ebeea6f
+ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44076719"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49323123"
 ---
 # <a name="dynamic-update"></a>Aggiornamento dinamico
 L'aggiornamento dinamico fornisce agli sviluppatori di applicazioni del flusso di lavoro un meccanismo per aggiornare la definizione del flusso di lavoro di un'istanza persistente del flusso di lavoro. Può servire a implementare una correzione di bug, nuovi requisiti o per implementare modifiche impreviste. In questo argomento viene fornita una panoramica sulla funzionalità di aggiornamento dinamico introdotta in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  
@@ -24,7 +24,7 @@ L'aggiornamento dinamico fornisce agli sviluppatori di applicazioni del flusso d
 4.  [Applicare la mappa di aggiornamento alle istanze del flusso di lavoro persistente desiderato](../../../docs/framework/windows-workflow-foundation/dynamic-update.md#Apply)  
   
 > [!NOTE]
->  Si noti che i passaggi da 1 a 3, relativi alla creazione della mappa di aggiornamento, possono essere eseguiti indipendentemente dal fatto che l'aggiornamento venga poi applicato o meno. In uno scenario comune, lo sviluppatore del flusso di lavoro crea la mappa di aggiornamento offline e un amministratore applica l'aggiornamento in un secondo momento.  
+>  Si noti che i passaggi da 1 a 3, relativi alla creazione della mappa di aggiornamento, possono essere eseguiti indipendentemente dal fatto che l'aggiornamento venga poi applicato o meno. Uno scenario comune che lo sviluppatore del flusso di lavoro verrà creata la mappa di aggiornamento offline e quindi l'amministratore applica l'aggiornamento in un secondo momento.  
   
  In questo argomento viene fornita una panoramica sul processo di aggiornamento dinamico per l'aggiunta di una nuova attività a un'istanza persistente di un flusso di lavoro XAML compilato.  
   
