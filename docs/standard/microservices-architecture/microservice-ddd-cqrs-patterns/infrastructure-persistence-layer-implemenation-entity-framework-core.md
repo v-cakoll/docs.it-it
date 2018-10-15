@@ -474,7 +474,7 @@ public IEnumerable<T> List(ISpecification<T> spec)
     [*https://ardalis.com/encapsulated-collections-in-entity-framework-core*](https://ardalis.com/encapsulated-collections-in-entity-framework-core) (Raccolte incapsulate in Entity Framework Core)</span><span class="sxs-lookup"><span data-stu-id="da846-250">**Steve Smith. Encapsulated Collections in Entity Framework Core**
 [*https://ardalis.com/encapsulated-collections-in-entity-framework-core*](https://ardalis.com/encapsulated-collections-in-entity-framework-core)</span></span>
 
--   <span data-ttu-id="da846-251">**Proprietà shadow **
+-   <span data-ttu-id="da846-251">\*\*Proprietà shadow \*\*
     [*https://docs.microsoft.com/ef/core/modeling/shadow-properties*](https://docs.microsoft.com/ef/core/modeling/shadow-properties)</span><span class="sxs-lookup"><span data-stu-id="da846-251">**Shadow Properties**
 [*https://docs.microsoft.com/ef/core/modeling/shadow-properties*](https://docs.microsoft.com/ef/core/modeling/shadow-properties)</span></span>
 

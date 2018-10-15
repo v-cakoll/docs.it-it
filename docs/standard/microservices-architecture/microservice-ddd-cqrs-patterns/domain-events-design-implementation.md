@@ -348,8 +348,8 @@ public class ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler
 [*http://dddcommunity.org/wp-content/uploads/files/pdf\_articles/Vernon\_2011\_2.pdf*](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)</span></span>
 
 -   <span data-ttu-id="a261b-291">**Jimmy Bogard. Strengthening your domain: Domain Events**
-    *<https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/> * (Rafforzamento del dominio: eventi del dominio)</span><span class="sxs-lookup"><span data-stu-id="a261b-291">**Jimmy Bogard. Strengthening your domain: Domain Events**
-*<https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/> *</span></span>
+    \*<https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/> \* (Rafforzamento del dominio: eventi del dominio)</span><span class="sxs-lookup"><span data-stu-id="a261b-291">**Jimmy Bogard. Strengthening your domain: Domain Events**
+\*<https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/> \*</span></span>
 
 -   <span data-ttu-id="a261b-292">**Tony Truong. Domain Events Pattern Example**
     [*https://www.tonytruong.net/domain-events-pattern-example/*](https://www.tonytruong.net/domain-events-pattern-example/) (Esempio di modello di eventi del dominio)</span><span class="sxs-lookup"><span data-stu-id="a261b-292">**Tony Truong. Domain Events Pattern Example**

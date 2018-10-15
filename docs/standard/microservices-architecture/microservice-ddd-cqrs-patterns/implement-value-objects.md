@@ -313,7 +313,7 @@ public class Address
 
 -   <span data-ttu-id="3479a-201">**Vaughn Vernon. Implementing Domain-Driven Design (Implementazione della progettazione basata su domini).**</span><span class="sxs-lookup"><span data-stu-id="3479a-201">**Vaughn Vernon. Implementing Domain-Driven Design.**</span></span> <span data-ttu-id="3479a-202">(Libro. Include una trattazione sugli oggetti valore) [*https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/*](https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/)</span><span class="sxs-lookup"><span data-stu-id="3479a-202">(Book; includes a discussion of value objects) [*https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/*](https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/)</span></span>
 
--   <span data-ttu-id="3479a-203">**Proprietà shadow **
+-   <span data-ttu-id="3479a-203">\*\*Proprietà shadow \*\*
     [*https://docs.microsoft.com/ef/core/modeling/shadow-properties*](https://docs.microsoft.com/ef/core/modeling/shadow-properties)</span><span class="sxs-lookup"><span data-stu-id="3479a-203">**Shadow Properties**
 [*https://docs.microsoft.com/ef/core/modeling/shadow-properties*](https://docs.microsoft.com/ef/core/modeling/shadow-properties)</span></span>
 
