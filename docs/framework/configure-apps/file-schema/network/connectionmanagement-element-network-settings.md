@@ -10,55 +10,55 @@ helpviewer_keywords:
 ms.assetid: bedccaab-12a2-4511-8f67-e961f249aec6
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: bc0b75db5b3f35087df70c9155a1ba3b39ceae4d
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 1736dd8fcb308bceee5f100149919ff9ec45510d
+ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028420"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49316324"
 ---
-# <a name="ltconnectionmanagementgt-element-network-settings"></a><span data-ttu-id="e7a0c-102">&lt;connectionManagement&gt; (impostazioni di rete)</span><span class="sxs-lookup"><span data-stu-id="e7a0c-102">&lt;connectionManagement&gt; Element (Network Settings)</span></span>
-<span data-ttu-id="e7a0c-103">Specifica il numero massimo di connessioni a un host di rete.</span><span class="sxs-lookup"><span data-stu-id="e7a0c-103">Specifies the maximum number of connections to a network host.</span></span>  
+# <a name="ltconnectionmanagementgt-element-network-settings"></a><span data-ttu-id="6495b-102">&lt;connectionManagement&gt; (impostazioni di rete)</span><span class="sxs-lookup"><span data-stu-id="6495b-102">&lt;connectionManagement&gt; Element (Network Settings)</span></span>
+<span data-ttu-id="6495b-103">Specifica il numero massimo di connessioni a un host di rete.</span><span class="sxs-lookup"><span data-stu-id="6495b-103">Specifies the maximum number of connections to a network host.</span></span>  
   
- <span data-ttu-id="e7a0c-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="e7a0c-104">\<configuration></span></span>  
-<span data-ttu-id="e7a0c-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="e7a0c-105">\<system.net></span></span>  
-<span data-ttu-id="e7a0c-106">\<connectionManagement ></span><span class="sxs-lookup"><span data-stu-id="e7a0c-106">\<connectionManagement></span></span>  
+ <span data-ttu-id="6495b-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="6495b-104">\<configuration></span></span>  
+<span data-ttu-id="6495b-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="6495b-105">\<system.net></span></span>  
+<span data-ttu-id="6495b-106">\<connectionManagement ></span><span class="sxs-lookup"><span data-stu-id="6495b-106">\<connectionManagement></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e7a0c-107">Sintassi</span><span class="sxs-lookup"><span data-stu-id="e7a0c-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6495b-107">Sintassi</span><span class="sxs-lookup"><span data-stu-id="6495b-107">Syntax</span></span>  
   
 ```xml  
 <connectionManagement>   
 </connectionManagement>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="e7a0c-108">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="e7a0c-108">Attributes and Elements</span></span>  
- <span data-ttu-id="e7a0c-109">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="e7a0c-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="6495b-108">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="6495b-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="6495b-109">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="6495b-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="e7a0c-110">Attributi</span><span class="sxs-lookup"><span data-stu-id="e7a0c-110">Attributes</span></span>  
- <span data-ttu-id="e7a0c-111">Nessuno.</span><span class="sxs-lookup"><span data-stu-id="e7a0c-111">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="6495b-110">Attributi</span><span class="sxs-lookup"><span data-stu-id="6495b-110">Attributes</span></span>  
+ <span data-ttu-id="6495b-111">Nessuno.</span><span class="sxs-lookup"><span data-stu-id="6495b-111">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="e7a0c-112">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="e7a0c-112">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="6495b-112">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="6495b-112">Child Elements</span></span>  
   
-|<span data-ttu-id="e7a0c-113">**Elemento**</span><span class="sxs-lookup"><span data-stu-id="e7a0c-113">**Element**</span></span>|<span data-ttu-id="e7a0c-114">**Descrizione**</span><span class="sxs-lookup"><span data-stu-id="e7a0c-114">**Description**</span></span>|  
+|<span data-ttu-id="6495b-113">**Elemento**</span><span class="sxs-lookup"><span data-stu-id="6495b-113">**Element**</span></span>|<span data-ttu-id="6495b-114">**Descrizione**</span><span class="sxs-lookup"><span data-stu-id="6495b-114">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="e7a0c-115">add</span><span class="sxs-lookup"><span data-stu-id="e7a0c-115">add</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-connectionmanagement-network-settings.md)|<span data-ttu-id="e7a0c-116">Aggiunge un indirizzo IP o nome DNS all'elenco di gestione delle connessioni.</span><span class="sxs-lookup"><span data-stu-id="e7a0c-116">Adds an IP address or DNS name to the connection management list.</span></span>|  
-|[<span data-ttu-id="e7a0c-117">clear</span><span class="sxs-lookup"><span data-stu-id="e7a0c-117">clear</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-connectionmanagement-network-settings.md)|<span data-ttu-id="e7a0c-118">Cancella l'elenco di gestione connessione.</span><span class="sxs-lookup"><span data-stu-id="e7a0c-118">Clears the connection management list.</span></span>|  
-|[<span data-ttu-id="e7a0c-119">remove</span><span class="sxs-lookup"><span data-stu-id="e7a0c-119">remove</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-connectionmanagement-network-settings.md)|<span data-ttu-id="e7a0c-120">Rimuove un indirizzo IP o nome DNS dall'elenco di gestione connessione.</span><span class="sxs-lookup"><span data-stu-id="e7a0c-120">Removes an IP address or DNS name from the connection management list.</span></span>|  
+|[<span data-ttu-id="6495b-115">add</span><span class="sxs-lookup"><span data-stu-id="6495b-115">add</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-connectionmanagement-network-settings.md)|<span data-ttu-id="6495b-116">Aggiunge un indirizzo IP o nome DNS all'elenco di gestione delle connessioni.</span><span class="sxs-lookup"><span data-stu-id="6495b-116">Adds an IP address or DNS name to the connection management list.</span></span>|  
+|[<span data-ttu-id="6495b-117">clear</span><span class="sxs-lookup"><span data-stu-id="6495b-117">clear</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-connectionmanagement-network-settings.md)|<span data-ttu-id="6495b-118">Cancella l'elenco di gestione connessione.</span><span class="sxs-lookup"><span data-stu-id="6495b-118">Clears the connection management list.</span></span>|  
+|[<span data-ttu-id="6495b-119">remove</span><span class="sxs-lookup"><span data-stu-id="6495b-119">remove</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-connectionmanagement-network-settings.md)|<span data-ttu-id="6495b-120">Rimuove un indirizzo IP o nome DNS dall'elenco di gestione connessione.</span><span class="sxs-lookup"><span data-stu-id="6495b-120">Removes an IP address or DNS name from the connection management list.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="e7a0c-121">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="e7a0c-121">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="6495b-121">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="6495b-121">Parent Elements</span></span>  
   
-|<span data-ttu-id="e7a0c-122">**Elemento**</span><span class="sxs-lookup"><span data-stu-id="e7a0c-122">**Element**</span></span>|<span data-ttu-id="e7a0c-123">**Descrizione**</span><span class="sxs-lookup"><span data-stu-id="e7a0c-123">**Description**</span></span>|  
+|<span data-ttu-id="6495b-122">**Elemento**</span><span class="sxs-lookup"><span data-stu-id="6495b-122">**Element**</span></span>|<span data-ttu-id="6495b-123">**Descrizione**</span><span class="sxs-lookup"><span data-stu-id="6495b-123">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="e7a0c-124">System.NET</span><span class="sxs-lookup"><span data-stu-id="e7a0c-124">system.net</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|<span data-ttu-id="e7a0c-125">Contiene le impostazioni di rete che specificano la modalità di connessione alla rete di .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="e7a0c-125">Contains settings that specify how the .NET Framework connects to the network.</span></span>|  
+|[<span data-ttu-id="6495b-124">System.NET</span><span class="sxs-lookup"><span data-stu-id="6495b-124">system.net</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|<span data-ttu-id="6495b-125">Contiene le impostazioni di rete che specificano la modalità di connessione alla rete di .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="6495b-125">Contains settings that specify how the .NET Framework connects to the network.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="e7a0c-126">Note</span><span class="sxs-lookup"><span data-stu-id="e7a0c-126">Remarks</span></span>  
- <span data-ttu-id="e7a0c-127">Il `connectionManagement` elemento definisce il numero massimo di connessioni a un server o un gruppo di server.</span><span class="sxs-lookup"><span data-stu-id="e7a0c-127">The `connectionManagement` element defines the maximum number of connections to a server or group of servers.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="6495b-126">Note</span><span class="sxs-lookup"><span data-stu-id="6495b-126">Remarks</span></span>  
+ <span data-ttu-id="6495b-127">Il `connectionManagement` elemento definisce il numero massimo di connessioni a un server o un gruppo di server.</span><span class="sxs-lookup"><span data-stu-id="6495b-127">The `connectionManagement` element defines the maximum number of connections to a server or group of servers.</span></span>  
   
-## <a name="configuration-files"></a><span data-ttu-id="e7a0c-128">File di configurazione</span><span class="sxs-lookup"><span data-stu-id="e7a0c-128">Configuration Files</span></span>  
- <span data-ttu-id="e7a0c-129">Questo elemento può essere usato nel file di configurazione dell'applicazione o nel file di configurazione del computer (Machine.config).</span><span class="sxs-lookup"><span data-stu-id="e7a0c-129">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="6495b-128">File di configurazione</span><span class="sxs-lookup"><span data-stu-id="6495b-128">Configuration Files</span></span>  
+ <span data-ttu-id="6495b-129">Questo elemento può essere usato nel file di configurazione dell'applicazione o nel file di configurazione del computer (Machine.config).</span><span class="sxs-lookup"><span data-stu-id="6495b-129">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="e7a0c-130">Esempio</span><span class="sxs-lookup"><span data-stu-id="e7a0c-130">Example</span></span>  
- <span data-ttu-id="e7a0c-131">Nell'esempio seguente consente di configurare un'applicazione per usare quattro connessioni al server www.contoso.com e due connessioni a tutti gli altri server.</span><span class="sxs-lookup"><span data-stu-id="e7a0c-131">The following example configures an application to use four connections to the server www.contoso.com and two connections to all other servers.</span></span>  
+## <a name="example"></a><span data-ttu-id="6495b-130">Esempio</span><span class="sxs-lookup"><span data-stu-id="6495b-130">Example</span></span>  
+ <span data-ttu-id="6495b-131">Nell'esempio seguente consente di configurare un'applicazione di usare quattro connessioni al server `www.contoso.com` e due connessioni a tutti gli altri server.</span><span class="sxs-lookup"><span data-stu-id="6495b-131">The following example configures an application to use four connections to the server `www.contoso.com` and two connections to all other servers.</span></span>  
   
 ```xml  
 <configuration>  
@@ -71,7 +71,7 @@ ms.locfileid: "48028420"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="e7a0c-132">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="e7a0c-132">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="6495b-132">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="6495b-132">See Also</span></span>  
  <xref:System.Net.ServicePoint>  
  <xref:System.Net.ServicePointManager>  
- [<span data-ttu-id="e7a0c-133">Schema delle impostazioni di rete</span><span class="sxs-lookup"><span data-stu-id="e7a0c-133">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+ [<span data-ttu-id="6495b-133">Schema delle impostazioni di rete</span><span class="sxs-lookup"><span data-stu-id="6495b-133">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
