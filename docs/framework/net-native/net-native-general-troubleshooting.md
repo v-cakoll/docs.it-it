@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: ee8c5e17-35ea-48a1-8767-83298caac1e8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0b53150c90e473e7c4ed32991c43ff0b8ca5b75b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 45a053d2aefa8a295e0e8d52818472647e4ef834
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396285"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347591"
 ---
 # <a name="net-native-general-troubleshooting"></a>Risoluzione dei problemi generale per .NET Native
 In questo argomento viene descritto come risolvere i problemi che potrebbero verificarsi durante lo sviluppo di app con [!INCLUDE[net_native](../../../includes/net-native-md.md)].  
@@ -36,9 +36,9 @@ In questo argomento viene descritto come risolvere i problemi che potrebbero ver
   
      **Risoluzione:** le eccezioni vengono generate perché .NET Native non ha fornito metadati o il codice di implementazione altrimenti disponibile attraverso la reflection. Per altre informazioni, vedere [Compilazione e .NET Native](../../../docs/framework/net-native/net-native-and-compilation.md). Per eliminare l'eccezione, si deve aggiungere una voce al proprio [file di direttive di runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md) in modo che la catena di strumenti di .NET Native possa rendere i metadati o il codice di implementazione disponibile in fase di esecuzione. Sono disponibili due strumenti di risoluzione dei problemi che genereranno la voce necessaria per l'aggiunta del file di direttive di runtime:  
   
-    -   Lo [strumento di risoluzione dei problemi MissingMetadataException](http://dotnet.github.io/native/troubleshooter/type.html) per i tipi.  
+    -   Lo [strumento di risoluzione dei problemi MissingMetadataException](https://dotnet.github.io/native/troubleshooter/type.html) per i tipi.  
   
-    -   Lo [strumento di risoluzione dei problemi MissingMetadataException](http://dotnet.github.io/native/troubleshooter/method.html) per i metodi.  
+    -   Lo [strumento di risoluzione dei problemi MissingMetadataException](https://dotnet.github.io/native/troubleshooter/method.html) per i metodi.  
   
      Per altre informazioni, vedere [Reflection e .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md).  
   

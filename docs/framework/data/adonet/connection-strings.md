@@ -1,26 +1,27 @@
 ---
 title: Stringhe di connessione in ADO.NET
-ms.date: 03/30/2017
+ms.date: 10/10/2018
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490
-ms.openlocfilehash: 1e6e2b6870195c99279639e1f4576a30b7126d4d
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 4dab2656ae8f39976b21f949c9548a3f718dfafc
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48583694"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347942"
 ---
 # <a name="connection-strings-in-adonet"></a>Stringhe di connessione in ADO.NET
-In .NET Framework 2.0 sono state introdotte nuove funzionalità per l'uso delle stringhe di connessione, tra cui l'introduzione di nuove parole chiave nelle classi di generatori di stringhe di connessione che facilitano la creazione di stringhe di connessione valide in fase di esecuzione.  
-  
-Una stringa di connessione contiene informazioni di inizializzazione che vengono passate come parametro da un provider di dati a un'origine dati. La sintassi dipende dal provider di dati e la stringa di connessione viene analizzata durante il tentativo di aprire una connessione. Gli errori di sintassi generano un'eccezione in fase di esecuzione, ma altri errori si verificano solo dopo che l'origine dati riceve informazioni sulla connessione. Una volta convalidata, l'origine dati applica le opzioni specificate nella stringa di connessione e apre la connessione.
-  
-Il formato di una stringa di connessione è un elenco delimitato da punti e virgola composto da coppie di parametri chiave/valore:
+
+Una stringa di connessione contiene informazioni di inizializzazione che vengono passate come parametro da un provider di dati a un'origine dati. Il provider di dati riceve la stringa di connessione come valore del <xref:System.Data.Common.DbConnection.ConnectionString?displayProperty=nameWithType> proprietà. Il provider consente di analizzare la stringa di connessione e garantisce che la sintassi sia corretta e che le parole chiave sono supportate. Il <xref:System.Data.Common.DbConnection.Open?displayProperty=nameWithType> metodo passa i parametri di connessione analizzato all'origine dati. L'origine dati viene effettuata un'ulteriore convalida e stabilisce una connessione.
+
+## <a name="connection-string-syntax"></a>Sintassi della stringa di connessione
+
+Una stringa di connessione è un elenco delimitato da punto e virgola di coppie chiave/valore parametro:
   
     keyword1=value; keyword2=value;
   
-Le parole chiave non sono tra maiuscole e minuscole. I valori, tuttavia, potrebbero essere tra maiuscole e minuscole, a seconda dell'origine dati. Entrambe le parole chiave e i valori possono contenere [spazi vuoti](https://en.wikipedia.org/wiki/Whitespace_character#Unicode), sebbene iniziali e finali di uno spazio vuoto viene ignorata nelle parole chiave e senza virgolette i valori.
+Le parole chiave non sono tra maiuscole e minuscole. I valori, tuttavia, potrebbero essere tra maiuscole e minuscole, a seconda dell'origine dati. Entrambe le parole chiave e i valori possono contenere [spazi vuoti](https://en.wikipedia.org/wiki/Whitespace_character#Unicode). Gli spazi iniziali e finali viene ignorato nelle parole chiave e senza virgolette i valori.
 
-Se il valore contiene il punto e virgola, [caratteri di controllo Unicode](https://en.wikipedia.org/wiki/Unicode_control_characters), iniziale o finale di uno spazio vuoto deve essere racchiuso tra virgolette singole o doppie, ad esempio:
+Se il valore contiene il punto e virgola, [caratteri di controllo Unicode](https://en.wikipedia.org/wiki/Unicode_control_characters), o iniziali o finali uno spazio vuoto, deve essere racchiuso tra virgolette singole o doppie. Ad esempio:
 
     Keyword=" whitespace  ";
     Keyword='special;character';
@@ -37,10 +38,12 @@ Le virgolette se stessi, nonché il segno di uguale, non richiede l'escape, in m
 
 Poiché ogni valore viene letto fino alla fine della stringa o il successivo punto e virgola, il valore nell'esempio di quest'ultimo è `a=b=c`, e il punto e virgola finale è facoltativo.
 
-La sintassi di una stringa di connessione valida varia a seconda del provider e, nel corso degli anni, si è evoluta dalle API iniziali quale ODBC. Il provider di dati .NET Framework per SQL Server (SqlClient)  incorpora numerosi elementi della sintassi precedente e, in genere, presenta una sintassi delle stringhe di connessione comuni più flessibile. Esistono spesso sinonimi ugualmente validi per gli elementi della sintassi delle stringhe di connessione, ma alcuni errori di sintassi e di ortografia possono causare problemi. Ad esempio "`Integrated Security=true`" è valido, mentre "`IntegratedSecurity=true`" genera un errore. Inoltre, le stringhe di connessione create in fase di esecuzione da input dell'utente non convalidato possono portare ad attacchi injection alle stringhe, compromettendo la sicurezza nell'origine dati.
-  
-Per risolvere questi problemi, in ADO.NET 2.0 sono stati introdotti nuovi generatori di stringhe di connessione per ogni provider di dati .NET Framework. Le parole chiave sono esposte come proprietà, consentendo la convalida della sintassi delle stringhe di connessione prima dell'invio all'origine dati.
-  
+Tutte le stringhe di connessione condividono la stessa sintassi di base descritta in precedenza. Il set di parole chiave riconosciute dipende dal provider, tuttavia e si è evoluto nel corso degli anni dalle precedenti API, ad esempio *ODBC*. Il *.NET Framework* provider di dati per *SQL Server* (`SqlClient`) supporta numerose parole chiave dalle API precedenti, ma è in genere più flessibile e accetta i sinonimi per molti della stringa di connessione comuni parole chiave.
+
+Errori di digitazione può provocare errori. Ad esempio, `Integrated Security=true` valido, ma `IntegratedSecurity=true` provoca un errore.
+
+Le stringhe di connessione costruite manualmente in fase di esecuzione dall'input dell'utente non convalidato sono vulnerabili agli attacchi injection di stringa e compromettano sicurezza nell'origine dati. Per risolvere questi problemi *ADO.NET* 2.0 ha introdotto [generatori di stringhe di connessione](../../../../docs/framework/data/adonet/connection-string-builders.md) per ogni *.NET Framework* provider di dati. I generatori di stringhe di connessione espongono parametri come proprietà fortemente tipizzate e consentono di convalidare la stringa di connessione prima che venga inviata all'origine dati.
+
 ## <a name="in-this-section"></a>In questa sezione  
  [Generatori di stringhe di connessione](../../../../docs/framework/data/adonet/connection-string-builders.md)  
  Viene illustrato come usare le classi `ConnectionStringBuilder` per creare stringhe di connessione valide in fase di esecuzione.
