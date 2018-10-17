@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aef77e6f2ec572ec0969166770aaf617cc933d67
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 99da0b0367270c4cea470a23ea97f0165a712a9b
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522330"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49349069"
 ---
 # <a name="get-started-with-the-net-framework"></a>Introduzione a .NET Framework
 
@@ -67,7 +67,7 @@ Uno sviluppatore può scegliere qualsiasi linguaggio di programmazione che suppo
 
 Per sviluppare app o componenti .NET Framework, eseguire le operazioni seguenti:
 
-1. Se non è già preinstallata nel sistema operativo, installare la versione di .NET Framework che verrà usata dall'app. La versione di produzione più recente è .NET Framework 4.7.2, preinstallata in Windows 10 April 2018 Update e disponibile per il download nelle versioni precedenti del sistema operativo Windows. Per i requisiti di sistema di .NET Framework, vedere [Requisiti di sistema](../../../docs/framework/get-started/system-requirements.md). Per informazioni sull'installazione di .NET Framework, vedere [Guida all'installazione](../../../docs/framework/install/guide-for-developers.md). Pacchetti aggiuntivi di .NET Framework vengono rilasciati fuori programma, ovvero all'occorrenza al di fuori di qualsiasi ciclo di rilascio regolare o pianificato. Per informazioni su questi pacchetti, vedere [.NET Framework e rilascio fuori programma](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md).
+1. Se non è già preinstallata nel sistema operativo, installare la versione di .NET Framework che verrà usata dall'app. La versione di produzione più recente è .NET Framework 4.7.2. Questa versione è preinstallata nell'aggiornamento del 10 aprile 2018 di Windows 10 e nell'aggiornamento di ottobre 2018 di Windows 10 ed è disponibile per il download nelle versioni precedenti del sistema operativo Windows. Per i requisiti di sistema di .NET Framework, vedere [Requisiti di sistema](../../../docs/framework/get-started/system-requirements.md). Per informazioni sull'installazione di .NET Framework, vedere [Guida all'installazione](../../../docs/framework/install/guide-for-developers.md). Pacchetti aggiuntivi di .NET Framework vengono rilasciati fuori programma, ovvero all'occorrenza al di fuori di qualsiasi ciclo di rilascio regolare o pianificato. Per informazioni su questi pacchetti, vedere [.NET Framework e rilascio fuori programma](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md).
 
 2. Selezionare uno o più linguaggi supportati da .NET Framework che si intende usare per lo sviluppo delle app. Sono disponibili numerosi linguaggi, tra cui [Visual Basic](../../visual-basic/index.md), [C#](../../csharp/index.md), [F#](../../fsharp/index.md) e C++/CLI di Microsoft. Un linguaggio di programmazione che consente di sviluppare app per .NET Framework è conforme alla [specifica CLI (Common Language Infrastructure)](https://go.microsoft.com/fwlink/?LinkId=199862).
 
