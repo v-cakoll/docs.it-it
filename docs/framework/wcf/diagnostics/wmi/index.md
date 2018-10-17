@@ -2,12 +2,12 @@
 title: Uso di Strumentazione gestione Windows (WMI) per la diagnostica
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
-ms.openlocfilehash: b7c898f1af91f639939e5480687b5967bf57d246
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 91d126eb75c9cac2823b756010351dd692b2e24e
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856205"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372707"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>Uso di Strumentazione gestione Windows (WMI) per la diagnostica
 Windows Communication Foundation (WCF) espone dati di ispezione di un servizio in fase di esecuzione tramite un provider di Strumentazione gestione Windows (WMI) di WCF.  
@@ -171,7 +171,7 @@ Whoami /user
 ### <a name="using-managed-code"></a>Uso di codice gestito  
  Per accedere a istanze WMI remote a livello di programmazione è anche possibile usare le classi fornite dallo spazio dei nomi <xref:System.Management>. Nell'esempio di codice seguente viene illustrato come eseguire questa procedura.  
   
-```  
+```csharp
 String wcfNamespace = String.Format(@"\\{0}\Root\ServiceModel",      
    this.serviceMachineName);  
   

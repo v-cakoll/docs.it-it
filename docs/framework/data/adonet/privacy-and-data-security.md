@@ -2,18 +2,18 @@
 title: Privacy e sicurezza dei dati
 ms.date: 03/30/2017
 ms.assetid: 46fa5839-adf7-4c7c-bce3-71e941fa7de9
-ms.openlocfilehash: dd74abcd95faf27485efcefa1a0a76e830df60fe
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 078b5e09e800511c3edfa78596b5bdb67ebcc6d7
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508864"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372515"
 ---
 # <a name="privacy-and-data-security"></a>Privacy e sicurezza dei dati
 La salvaguardia e la gestione di informazioni sensibili nelle applicazioni ADO.NET dipendono dai prodotti e dalle tecnologie sottostanti usati per crearle. ADO.NET non fornisce direttamente servizi per la protezione o la crittografia dei dati.  
   
 ## <a name="cryptography-and-hash-codes"></a>Crittografia e codici hash  
- In .NET Framework le classi nello spazio dei nomi <xref:System.Security.Cryptography> possono essere usate dalle applicazioni ADO.NET per impedire che i dati vengano letti o modificati da terze parti non autorizzate. In alcuni casi si tratta di wrapper presenti nelle CryptoAPI di Microsoft non gestite, in altri semplicemente di implementazioni gestite. Il [servizi di crittografia](https://msdn.microsoft.com/library/68a1e844-c63c-44af-9247-f6716eb23781) argomento fornisce una panoramica della crittografia in .NET Framework, viene descritta la modalità di implementazione e come eseguire specifiche attività di crittografia.  
+ In .NET Framework le classi nello spazio dei nomi <xref:System.Security.Cryptography> possono essere usate dalle applicazioni ADO.NET per impedire che i dati vengano letti o modificati da terze parti non autorizzate. In alcuni casi si tratta di wrapper presenti nelle CryptoAPI di Microsoft non gestite, in altri semplicemente di implementazioni gestite. Il [servizi di crittografia](../../../../docs/standard/security/cryptographic-services.md) argomento fornisce una panoramica della crittografia in .NET Framework, viene descritta la modalità di implementazione e come eseguire specifiche attività di crittografia.  
   
  Diversamente dalla crittografia, che consente di crittografare i dati e di decrittografarli in un secondo momento, l'hash dei dati è un processo irreversibile. Risulta utile quando si desidera impedire la manomissione dei dati verificando che non siano stati alterati. Con stringhe di input identiche, gli algoritmi di hash producono sempre valori di output brevi facilmente confrontabili. [Integrità dei dati con codici Hash](../../../../docs/standard/security/ensuring-data-integrity-with-hash-codes.md) viene descritto come generare e verificare i valori hash.  
   

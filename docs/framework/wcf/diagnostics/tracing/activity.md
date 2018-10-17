@@ -2,38 +2,38 @@
 title: Attività
 ms.date: 03/30/2017
 ms.assetid: 70471705-f55f-4da1-919f-4b580f172665
-ms.openlocfilehash: 3100d5bb60dc1b11d23b0705f4d6f23a3675ac51
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 00115d51cff40be726ccf94c3cac09242c0bdab8
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806832"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372369"
 ---
 # <a name="activity"></a>Attività
-In questo argomento descrive le tracce di attività nel modello di traccia di Windows Communication Foundation (WCF). Le attività sono unità di elaborazione che consentono all'utente di restringere l'ambito di un errore e quindi di individuarne le cause con maggiore facilità. Gli errori che si verificano nella stessa attività sono correlati in modo diretto. Si consideri ad esempio il caso di un'operazione che non riesce poiché la decrittografia di un messaggio ha avuto esito negativo. Le tracce relative alla non riuscita dell'operazione e della decrittografia del messaggio vengono visualizzate entrambe nella stessa attività, evidenziando in questo modo una correlazione diretta fra i due eventi di errore.  
+Questo argomento descrive le tracce di attività nel modello di traccia di Windows Communication Foundation (WCF). Le attività sono unità di elaborazione che consentono all'utente di restringere l'ambito di un errore e quindi di individuarne le cause con maggiore facilità. Gli errori che si verificano nella stessa attività sono correlati in modo diretto. Si consideri ad esempio il caso di un'operazione che non riesce poiché la decrittografia di un messaggio ha avuto esito negativo. Le tracce relative alla non riuscita dell'operazione e della decrittografia del messaggio vengono visualizzate entrambe nella stessa attività, evidenziando in questo modo una correlazione diretta fra i due eventi di errore.  
   
 ## <a name="configuring-activity-tracing"></a>Configurazione della traccia attività  
- WCF fornisce attività predefinite per le applicazioni di elaborazione (vedere [elenco delle attività](../../../../../docs/framework/wcf/diagnostics/tracing/activity-list.md)). È inoltre possibile definire attività a livello di programmazione allo scopo di raggruppare più tracce utente. Per ulteriori informazioni, vedere [la creazione di tracce di codice utente](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md).  
+ WCF fornisce attività predefinite per le applicazioni di elaborazione (vedere [elenco delle attività](../../../../../docs/framework/wcf/diagnostics/tracing/activity-list.md)). È inoltre possibile definire attività a livello di programmazione allo scopo di raggruppare più tracce utente. Per altre informazioni, vedere [creazione di tracce di codice utente](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md).  
   
- Per emettere tracce attività in fase di esecuzione, usare il `ActivityTracing` impostazione per il `System.ServiceModel` traccia di origine, WCF o negli altri origini di traccia personalizzate, come illustrato nel seguente codice di configurazione.  
+ Per emettere tracce attività in fase di esecuzione, usare il `ActivityTracing` impostazione per il `System.ServiceModel` traccia di origine, WCF o negli altri origini di traccia personalizzate, come dimostrato dal codice di configurazione seguente.  
   
 ```xml  
 <source name="System.ServiceModel" switchValue="Verbose,ActivityTracing">  
 ```  
   
- Per ulteriori informazioni sull'elemento di configurazione e gli attributi in uso, vedere il [configurazione traccia](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md) argomento.  
+ Per ulteriori informazioni sull'elemento di configurazione e sugli attributi utilizzati, vedere la [Configuring Tracing](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md) argomento.  
   
 ## <a name="viewing-activities"></a>Visualizzazione delle attività  
- È possibile visualizzare le attività e le utilità di [strumento Visualizzatore di tracce dei servizi (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). Quando la traccia attività è attiva, questo strumento recupera le tracce e le ordina in base all'attività. È inoltre possibile visualizzare i trasferimenti di traccia. Un trasferimento di traccia indica come le varie attività sono correlate l'una all'altra. È ad esempio possibile visualizzare un'attività che ha provocato l'avvio di un'altra attività, Una richiesta di messaggio, ad esempio, ha avviato un handshake di sicurezza per ottenere un token di conversazione protetta.  
+ È possibile visualizzare le attività e la relativa utilità nel [strumento Service Trace Viewer (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). Quando la traccia attività è attiva, questo strumento recupera le tracce e le ordina in base all'attività. È inoltre possibile visualizzare i trasferimenti di traccia. Un trasferimento di traccia indica come le varie attività sono correlate l'una all'altra. È ad esempio possibile visualizzare un'attività che ha provocato l'avvio di un'altra attività, Una richiesta di messaggio, ad esempio, ha avviato un handshake di sicurezza per ottenere un token di conversazione protetta.  
   
 ### <a name="correlating-activities-in-service-trace-viewer"></a>Correlazione delle attività nel visualizzatore delle tracce dei servizi  
  Lo strumento visualizzatore di tracce dei servizi fornisce due visualizzazioni di attività:  
   
 -   **Elenco** visualizzazione, in cui l'ID attività viene utilizzato per correlare direttamente le tracce tra processi. Le tracce associate a processi distinti, ad esempio client e servizio, ma aventi lo stesso ID attività vengono raggruppate nella stessa attività. Di conseguenza, sia l'errore che si verifica nel servizio che l'errore conseguente nel client, verranno inclusi nella stessa visualizzazione dell'attività nello strumento.  
   
--   **Grafico** visualizzazione, in cui le attività vengono raggruppate per processo. In questa visualizzazione, le tracce di un client e di un servizio aventi lo stesso ID attività vengono riportate in attività diverse. Per correlare le attività aventi lo stesso ID ma contenute in processi distinti, lo strumento mostra i flussi dei messaggi fra le attività correlate.  
+-   **Grafico** visualizzazione, in cui le attività vengono raggruppate da parte dei processi. In questa visualizzazione, le tracce di un client e di un servizio aventi lo stesso ID attività vengono riportate in attività diverse. Per correlare le attività aventi lo stesso ID ma contenute in processi distinti, lo strumento mostra i flussi dei messaggi fra le attività correlate.  
   
- Per ulteriori informazioni e per ottenere una visualizzazione grafica dello strumento Service Trace Viewer, vedere [strumento Visualizzatore di tracce dei servizi (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) e [utilizzando Service Trace Viewer per la visualizzazione di tracce correlate e Risoluzione dei problemi](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md).  
+ Per altre informazioni e per visualizzare una visualizzazione grafica dello strumento Service Trace Viewer, vedere [strumento Service Trace Viewer (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) e [utilizzando Service Trace Viewer per visualizzare le tracce correlate e Risoluzione dei problemi](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md).  
   
 ## <a name="defining-the-scope-of-an-activity"></a>Definizione dell'ambito di un'attività  
  Le attività vengono definite in fase di progettazione per indicare un'unità logica di esecuzione. Le tracce emesse con lo stesso identificatore di attività sono direttamente correlate, in quanto parte della stessa attività. Poiché le attività possono oltrepassare i limiti di endpoint (nel caso di una richiesta), per ogni attività vengono definiti due ambiti.  
@@ -45,16 +45,16 @@ In questo argomento descrive le tracce di attività nel modello di traccia di Wi
 ## <a name="trace-schema"></a>Schema di traccia  
  Le tracce possono essere emesse utilizzando qualsiasi schema e tra piattaforme Microsoft diverse. "e2e" (per "End to End") è uno schema di uso comune. Questo schema include un gAId a 128 bit, il nome dell'origine di traccia e l'ID del processo. In codice gestito, <xref:System.Diagnostics.XmlWriterTraceListener> emette tracce nello schema E2E.  
   
- Gli sviluppatori possono impostare l'AID emesso con una traccia impostando la proprietà <xref:System.Diagnostics.CorrelationManager.ActivityId%2A> con un GUID nell'archiviazione locale di thread (TLS, Thread Local Storage). Nell'esempio che segue viene illustrato quanto descritto.  
+ Gli sviluppatori possono impostare l'AID emesso con una traccia impostando la proprietà <xref:System.Diagnostics.CorrelationManager.ActivityId%2A> con un GUID nell'archiviazione thread-local (TLS, Thread Local Storage). Nell'esempio che segue viene illustrato quanto descritto.  
   
-```  
+```csharp
 // set the current Activity ID to a new GUID.  
 CorrelationManager.ActivityId = Guid.NewGuid();  
-```  
+```
   
  L'impostazione di gAId in TLS sarà evidente quando le tracce vengono emesse utilizzando un'origine di traccia, come illustrato nell'esempio seguente.  
   
-```  
+```csharp
 TraceSource traceSource = new TraceSource("myTraceSource");  
 traceSource.TraceEvent(TraceEventType.Warning, eventId, "Information");  
 ```  
@@ -66,13 +66,13 @@ traceSource.TraceEvent(TraceEventType.Warning, eventId, "Information");
   
 -   Start: indica l'inizio di un'attività. Una traccia "Start" fornisce un record di inizio di una nuova attività cardine di elaborazione. Tale traccia contiene un nuovo ID attività per una determinata origine di analisi in un processo specificato. Se tuttavia l'ID attività viene propagato fra più endpoint, viene visualizzata una traccia "Start" per ogni endpoint. Esempi di avvio di una nuova attività includono la creazione di un nuovo thread di elaborazione o l'immissione di un nuovo metodo pubblico.  
   
--   Stop: indica la fine di un'attività. Una traccia "Stop" fornisce un record di interruzione di un'attività cardine di elaborazione esistente. Tale traccia contiene un ID attività esistente per una determinata origine di analisi in un processo specificato. Se tuttavia l'ID attività viene propagato fra più endpoint, viene visualizzata una traccia "Stop" per ogni endpoint.  Terminazione di un thread di elaborazione o l'uscita da un metodo il cui inizio era stato denotato con una traccia "Start" sono esempi di interruzione di un'attività.  
+-   Stop: indica la fine di un'attività. Una traccia "Stop" fornisce un record di interruzione di un'attività cardine di elaborazione esistente. Tale traccia contiene un ID attività esistente per una determinata origine di analisi in un processo specificato. Se tuttavia l'ID attività viene propagato fra più endpoint, viene visualizzata una traccia "Stop" per ogni endpoint.  Terminazione di un thread di elaborazione o l'uscita da un metodo il cui inizio era stato denotato con una traccia "Start" esempi di interruzione di un'attività.  
   
--   Suspend: indica una sospensione nell'elaborazione di un'attività. Una traccia "Suspend" contiene un ID attività esistente la cui elaborazione si prevede la ripresa in un secondo momento. Non vengono emesse tracce con questo ID tra l'evento di sospensione e quello di ripresa dall'origine della traccia corrente. Ne è un esempio la sospensione di un'attività in caso di chiamata a una funzione della libreria esterna o di attesa in una risorsa quale una porta di completamento di I/O.  
+-   Suspend: indica una sospensione nell'elaborazione di un'attività. Una traccia "Suspend" contiene un ID attività esistente la cui elaborazione si prevede verrà ripresa in un secondo momento. Non vengono emesse tracce con questo ID tra l'evento di sospensione e quello di ripresa dall'origine della traccia corrente. Ne è un esempio la sospensione di un'attività in caso di chiamata a una funzione della libreria esterna o di attesa in una risorsa quale una porta di completamento di I/O.  
   
--   Resume: indica la ripresa dell'elaborazione di un'attività. Una traccia "Resume" contiene un id attività esistente la cui ultima traccia emessa dall'origine di traccia corrente è stata una traccia "Suspend". Negli esempi è inclusa la restituzione da una chiamata a una funzione della libreria esterna o la segnalazione per riprendere l'elaborazione da parte di una risorsa, ad esempio una porta di completamento di I/O.  
+-   Resume: indica la ripresa dell'elaborazione di un'attività. Una traccia "Resume" contiene un id attività esistente la cui ultima traccia emessa dall'origine della traccia corrente era "Suspend". Negli esempi è inclusa la restituzione da una chiamata a una funzione della libreria esterna o la segnalazione per riprendere l'elaborazione da parte di una risorsa, ad esempio una porta di completamento di I/O.  
   
--   Transfer: Dato che alcune attività sono causate da altre o sono correlate ad altre, possono essere correlate ad altre attività tramite tracce "Transfer". Un trasferimento registra la relazione diretta di un'attività con un'altra  
+-   Trasferimento: Perché alcune attività sono causate da altri utenti, o per correlarla ad altri utenti, possono essere correlate ad altre attività tramite tracce "Trasferire". Un trasferimento registra la relazione diretta di un'attività con un'altra  
   
  Le tracce Start e Stop non sono critiche per la correlazione. Possono tuttavia contribuire ad aumentare le prestazioni, il profiling e la convalida dell'ambito dell'attività.  
   
@@ -89,7 +89,7 @@ traceSource.TraceEvent(TraceEventType.Warning, eventId, "Information");
   
 -   Un'attività denota un limite di elaborazione che può essere significativo per l'amministratore del sistema o per le configurazioni supportate.  
   
--   Ogni metodo WCF, sia nel client e server, è vincolato dall'inizio di una nuova attività, quindi (termine del lavoro) che termina la nuova attività e la restituzione all'attività dell'ambiente.  
+-   Ogni metodo WCF, sia nel client e server, è limitato dall'inizio di una nuova attività, quindi (termine del lavoro) che termina la nuova attività e la restituzione all'attività dell'ambiente.  
   
 -   Le attività a esecuzione prolungata (in corso), ad esempio l'ascolto di connessioni o l'attesa di messaggi, sono rappresentate da marcatori di avvio/arresto corrispondenti.  
   

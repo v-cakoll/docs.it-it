@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: a5eada64-075b-4162-9655-ded84e4681f2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a9fefa302a269e08300f0393434b66ca8738a27b
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 5277b056c11de4c3e32d33c72bafc8f64ee17d05
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43777782"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49374555"
 ---
 # <a name="lttypeinstantiationgt-element-net-native"></a>Elemento &lt;TypeInstantiation&gt; (.NET Native)
 Applica i criteri di reflection di runtime a un tipo generico costruito.  
@@ -99,7 +99,7 @@ Applica i criteri di reflection di runtime a un tipo generico costruito.
  Se un elemento `<TypeInstantiation>` è figlio di un elemento [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md), [\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md) o [\<Type>](../../../docs/framework/net-native/type-element-net-native.md), sottopone a override le impostazioni dei criteri definite dall'elemento padre. Se un elemento [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) definisce una corrispondente definizione di tipo generico, l'elemento `<TypeInstantiation>` esegue l'override dei criteri di reflection di runtime solo per le istanze del tipo generico costruito specificato.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene usata la reflection per recuperare la definizione di tipo generico da un oggetto <xref:System.Collections.Generic.Dictionary%602> costruito. Viene anche usata la reflection per visualizzare informazioni sugli oggetti <xref:System.Type> che rappresentano tipi generici costruiti e definizioni di tipo generico. La variabile `b` nell'esempio è un controllo [TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx).  
+ Nell'esempio seguente viene usata la reflection per recuperare la definizione di tipo generico da un oggetto <xref:System.Collections.Generic.Dictionary%602> costruito. Viene anche usata la reflection per visualizzare informazioni sugli oggetti <xref:System.Type> che rappresentano tipi generici costruiti e definizioni di tipo generico. La variabile `b` nell'esempio è un <xref:Windows.UI.Xaml.Controls.TextBlock> controllo.  
   
  [!code-csharp[ProjectN_Reflection#2](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/makegenerictype1.cs#2)]  
   

@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
-ms.openlocfilehash: 904abff4f3cae5873fe3cc9705dee84f73e2a523
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 4b390ea0ffc6551d57a99a54985632135964fb7a
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004510"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49374807"
 ---
 # <a name="configuring-services-using-configuration-files"></a>Configurazione dei servizi tramite file di configurazione
 Configurazione di un servizio Windows Communication Foundation (WCF) con un file di configurazione ti offre la possibilità di fornire endpoint e i dati sul comportamento del servizio al momento della distribuzione invece che in fase di progettazione. In questo argomento vengono delineate le principali tecniche disponibili.  
   
  È un servizio WCF può essere configurato utilizzando il [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] la tecnologia di configurazione. In genere, gli elementi XML vengono aggiunti al file Web. config per un sito Internet Information Services (IIS) che ospita un servizio WCF. Gli elementi consentono di modificare dettagli, quali gli indirizzi degli endpoint (gli indirizzi effettivi usati per comunicare con il servizio), per i singoli computer. Inoltre, WCF include diversi elementi forniti dal sistema che consentono di selezionare rapidamente le funzionalità di base per un servizio. A partire da [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], WCF viene fornito con un nuovo modello di configurazione predefinito che semplifica i requisiti di configurazione WCF. Se non si specifica alcuna configurazione di WCF per un determinato servizio, il runtime configura automaticamente il servizio con alcuni endpoint standard e comportamento/associazione predefinito. In pratica, la creazione della configurazione è un'importante parte della programmazione di applicazioni WCF.  
   
- Per altre informazioni, vedere [configurazione di associazioni per i servizi](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md). Per un elenco di più comunemente utilizzati elementi, vedere [System-provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md). Per altre informazioni su endpoint, associazioni e comportamenti predefiniti, vedere [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) (Configurazione semplificata) e [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md) (Configurazione semplificata per servizi WCF).  
+ Per altre informazioni, vedere [configurazione di associazioni per i servizi](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md). Per un elenco delle domande più comunemente utilizzati elementi, vedere [System-provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md). Per altre informazioni su endpoint, associazioni e comportamenti predefiniti, vedere [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) (Configurazione semplificata) e [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md) (Configurazione semplificata per servizi WCF).  
   
 > [!IMPORTANT]
 >  Nel caso di distribuzione di scenari affiancati in cui vengono implementate due versioni diverse di un servizio, è necessario specificare nomi parziali di assembly a cui viene fatto riferimento nei file di configurazione. Questa operazione è necessaria perché il file di configurazione è condiviso tra tutte le versioni di un servizio che potrebbero essere in esecuzione in versioni diverse di .NET Framework.  

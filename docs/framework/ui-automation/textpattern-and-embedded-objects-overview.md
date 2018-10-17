@@ -9,16 +9,16 @@ helpviewer_keywords:
 ms.assetid: 93fdfbb9-0025-4b72-8ca0-0714adbb70d5
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: c3904ad60df3d9d7ce2b58d5911e4e19a2ebb7e3
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 78c511555065528d1ab34ee3ec9f8859a15bbc61
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193905"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372388"
 ---
 # <a name="textpattern-and-embedded-objects-overview"></a>Panoramica sugli oggetti incorporati e TextPattern
 > [!NOTE]
->  Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate sulle [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere [Windows Automation API: automazione dell'interfaccia utente](https://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere l'argomento sull' [API Automazione interfaccia utente di Windows](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  In questa panoramica è descritto come l' [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] espone oggetti incorporati, o elementi figlio, all'interno di un documento di testo o di un contenitore.  
   
@@ -45,7 +45,7 @@ Esempio di un flusso di testo con oggetti incorporati e le estensioni degli inte
   
  Quando è necessario scorrere il contenuto di un intervallo di testo, per garantire una corretta esecuzione del metodo <xref:System.Windows.Automation.Text.TextPatternRange.Move%2A> è prevista una serie di passaggi dietro le quinte.  
   
-1.  L'intervallo di testo viene normalizzato, ovvero viene compresso in un intervallo degenerato all'endpoint <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> . Ciò rende superfluo l'endpoint <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> . Questo passaggio è necessario rimuovere l'ambiguità nei casi in cui un intervallo di testo si estenda <xref:System.Windows.Automation.Text.TextUnit> limiti: ad esempio, "{l'U} RL [ http://www.microsoft.com ](https://www.microsoft.com) è incorporato nel testo" dove "{" e "}" rappresentano il testo endpoint dell'intervallo.  
+1.  L'intervallo di testo viene normalizzato, ovvero viene compresso in un intervallo degenerato all'endpoint <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> . Ciò rende superfluo l'endpoint <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> . Questo passaggio è necessario rimuovere l'ambiguità nei casi in cui un intervallo di testo si estenda <xref:System.Windows.Automation.Text.TextUnit> limiti: ad esempio, `{The URL https://www.microsoft.com is embedded in text` dove "{" e "}" rappresentano il testo endpoint dell'intervallo.  
   
 2.  L'intervallo risultante viene spostato indietro in <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> all'inizio del limite <xref:System.Windows.Automation.Text.TextUnit> richiesto.  
   
@@ -66,22 +66,22 @@ Esempi di regolazione di un intervallo di testo per Move() ed ExpandToEnclosingU
   
  } = <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End>  
   
-<a name="Hyperlink"></a>   
 ### <a name="hyperlink"></a>Hyperlink  
- **Esempio 1: intervallo di testo che contiene un collegamento ipertestuale con testo incorporato**  
+
+**Esempio 1: intervallo di testo che contiene un collegamento ipertestuale con testo incorporato**
   
- {L'URL [ http://www.microsoft.com ](https://www.microsoft.com) è incorporato nel testo}.  
+`{The URL https://www.microsoft.com is embedded in text}.`
   
 |Metodo chiamato|Risultato|  
 |-------------------|------------|  
-|<xref:System.Windows.Automation.Text.TextPatternRange.GetText%2A>|Restituisce la stringa "l'URL http://www.microsoft.com è incorporato nel testo".|  
+|<xref:System.Windows.Automation.Text.TextPatternRange.GetText%2A>|Restituisce la stringa `The URL https://www.microsoft.com is embedded in text`.|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>|Restituisce l' <xref:System.Windows.Automation.AutomationElement> più interno che racchiude l'intervallo di testo, in questo caso, l' <xref:System.Windows.Automation.AutomationElement> che rappresenta il provider di testo stesso.|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A>|Restituisce un <xref:System.Windows.Automation.AutomationElement> che rappresenta il controllo collegamento ipertestuale.|  
-|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> dove <xref:System.Windows.Automation.AutomationElement> è l'oggetto restituito dal metodo `GetChildren` precedente.|Restituisce l'intervallo che rappresenta "http://www.microsoft.com".|  
+|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> dove <xref:System.Windows.Automation.AutomationElement> è l'oggetto restituito dal metodo `GetChildren` precedente.|Restituisce l'intervallo che rappresenta "https://www.microsoft.com".|  
   
  **Esempio 2: intervallo di testo che si estende parzialmente su un collegamento ipertestuale con testo incorporato**  
   
- L'URL `http://{[www]}` è incorporato nel testo.  
+ L'URL `https://{[www]}` è incorporato nel testo.  
   
 |Metodo chiamato|Risultato|  
 |-------------------|------------|  
@@ -89,9 +89,9 @@ Esempi di regolazione di un intervallo di testo per Move() ed ExpandToEnclosingU
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>|Restituisce l' <xref:System.Windows.Automation.AutomationElement> più interno che racchiude l'intervallo di testo, in questo caso, il controllo collegamento ipertestuale.|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A>|Restituisce `null` poiché l'intervallo di testo non si estende sull'intera stringa dell'URL.|  
   
- **Esempio 3: intervallo di testo che si estende parzialmente sul contenuto di un contenitore di testo. Il contenitore di testo contiene un collegamento ipertestuale con testo incorporato che non fa parte dell'intervallo di testo.**  
+**Esempio 3: intervallo di testo che si estende parzialmente sul contenuto di un contenitore di testo. Il contenitore di testo contiene un collegamento ipertestuale con testo incorporato che non fa parte dell'intervallo di testo.**  
   
- {L'URL} [ http://www.microsoft.com ](https://www.microsoft.com) è incorporato nel testo.  
+`{The URL} [https://www.microsoft.com](https://www.microsoft.com) is embedded in text.`
   
 |Metodo chiamato|Risultato|  
 |-------------------|------------|  

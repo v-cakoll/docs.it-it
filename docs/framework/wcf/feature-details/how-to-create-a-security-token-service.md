@@ -10,11 +10,11 @@ helpviewer_keywords:
 ms.assetid: 98e82101-4cff-4bb8-a220-f7abed3556e5
 author: BrucePerlerMS
 ms.openlocfilehash: 6dbf0e2be0a75fccd84a82fe2b3c8ab41762de83
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49087726"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49374420"
 ---
 # <a name="how-to-create-a-security-token-service"></a>Procedura: creare un servizio token di sicurezza
 Un servizio token di sicurezza implementa il protocollo definito nella specifica WS-Trust. Questo protocollo definisce i formati e i modelli di scambio dei messaggi per il rilascio, il rinnovo, l'annullamento e la convalida di token di sicurezza. Un determinato servizio token di sicurezza fornisce una o più di queste funzionalità. In questo argomento viene descritto lo scenario più comune: l'implementazione del rilascio di token.  

@@ -1,32 +1,33 @@
 ---
-title: Stringhe di connessione
-ms.date: 03/30/2017
+title: Stringhe di connessione in ADO.NET Entity Framework
+ms.date: 10/15/2018
 ms.assetid: 78d516bc-c99f-4865-8ff1-d856bc1a01c0
-ms.openlocfilehash: 17d91c9b97e370afe3704d2a58f5228e3fec95f1
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 99b6b1b7a38477dc17d3960ee5bc0b63ec0cb819
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842178"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372486"
 ---
-# <a name="connection-strings"></a>Stringhe di connessione
+# <a name="connection-strings-in-the-adonet-entity-framework"></a>Stringhe di connessione in ADO.NET Entity Framework
 Una stringa di connessione contiene informazioni di inizializzazione che vengono passate come parametro da un provider di dati a un'origine dati. La sintassi dipende dal provider di dati e la stringa di connessione viene analizzata durante il tentativo di aprire una connessione. Le stringhe di connessione usate da Entity Framework contengono informazioni che consentono di connettersi al provider di dati ADO.NET sottostante che supporta Entity Framework, nonché informazioni sui file di modello e di mapping richiesti.  
   
  La stringa di connessione viene usata dal provider EntityClient quando si accede ai metadati di modello e di mapping e quando si effettua la connessione all'origine dati. Per impostare o accedere alla stringa di connessione, usare la proprietà <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> di <xref:System.Data.EntityClient.EntityConnection>. La classe <xref:System.Data.EntityClient.EntityConnectionStringBuilder> può essere usata a livello di codice per costruire o accedere ai parametri nella stringa di connessione. Per altre informazioni, vedere [procedura: compilare una stringa di connessione EntityConnection](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md).  
   
  Il [strumenti di Entity Data Model](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527) genera una stringa di connessione archiviata nel file di configurazione dell'applicazione. L'oggetto <xref:System.Data.Objects.ObjectContext> consente di recuperare automaticamente queste informazioni di connessione quando si creano query di oggetto. È possibile accedere all'oggetto <xref:System.Data.EntityClient.EntityConnection> usato da un'istanza di <xref:System.Data.Objects.ObjectContext> direttamente dalla proprietà <xref:System.Data.Objects.ObjectContext.Connection%2A>. Per altre informazioni, vedere [alla gestione delle connessioni e transazioni](https://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99).  
-  
+
+## <a name="connection-string-syntax"></a>Sintassi delle stringhe di connessione
+
+Per altre informazioni sulla sintassi generale per le stringhe di connessione, vedere [sintassi della stringa di connessione | Le stringhe di connessione ADO.NET](../connection-strings.md#connection-string-syntax).
+
 ## <a name="connection-string-parameters"></a>Parametri della stringa di connessione  
- Il formato di una stringa di connessione è un elenco delimitato da punti e virgola composto da coppie di parametri chiave/valore:  
-  
- `keyword1=value; keyword2=value;`  
-  
- Il segno di uguale (=) connette ogni parola chiave al relativo valore. Le parole chiave non fanno distinzione tra maiuscole e minuscole e gli spazi tra coppie chiave/valore vengono ignorati. È tuttavia possibile che tale distinzione sia valida per i valori, a seconda dell'origine dati. I valori contenenti punto e virgola, virgolette singole o virgolette doppie devono essere racchiusi tra virgolette doppie. Nella tabella seguente sono inclusi i nomi validi per i valori di parola chiave nella proprietà <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A>.  
+
+Nella tabella seguente sono inclusi i nomi validi per i valori di parola chiave nella proprietà <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A>.  
   
 |Parola chiave|Descrizione|  
 |-------------|-----------------|  
 |`Provider`|Obbligatoria se la parola chiave `Name` non è specificata. Nome del provider usato per recuperare l'oggetto <xref:System.Data.Common.DbProviderFactory> per il provider sottostante. Questo valore è costante.<br /><br /> Quando la parola chiave `Name` non è inclusa in una stringa di connessione di entità, per la parola chiave `Provider` è necessario specificare un valore non vuoto. Questa parola chiave e la parola chiave `Name` si escludono a vicenda.|  
-|`Provider Connection String`|Parametro facoltativo. Indica la stringa di connessione specifica del provider passata all'origine dati sottostante. Questa stringa di connessione viene espressa usando coppie parola chiave/valore valide per il provider di dati. Una parola chiave `Provider Connection String` non valida produrrà un errore di runtime quando viene valutata dall'origine dati.<br /><br /> Questa parola chiave e la parola chiave `Name` si escludono a vicenda.<br /><br /> Il valore della parola chiave `Provider Connection String` deve essere racchiuso tra virgolette. Di seguito è riportato un esempio:<br /><br /> `Provider Connection String ="Server=serverName; User ID = userID";`<br /><br /> L'esempio seguente non funzionerà:<br /><br /> `Provider Connection String =Server=serverName; User ID = userID`|  
+|`Provider Connection String`|Parametro facoltativo. Indica la stringa di connessione specifica del provider passata all'origine dati sottostante. Questa stringa di connessione contiene coppie parola chiave/valore valido per il provider di dati. Una parola chiave `Provider Connection String` non valida produrrà un errore di runtime quando viene valutata dall'origine dati.<br /><br /> Questa parola chiave e la parola chiave `Name` si escludono a vicenda.<br /><br /> Assicurarsi di eseguire l'escape il valore in base alla sintassi generale delle [stringhe di connessione ADO.NET](../../../../../docs/framework/data/adonet/connection-strings.md). Si consideri ad esempio la stringa di connessione seguente: `Server=serverName; User ID = userID`. È necessario essere sottoposta a escape perché contiene un punto e virgola. Poiché non contiene virgolette doppie, possono essere usati per eseguire l'escape:<br /><br /> `Provider Connection String ="Server=serverName; User ID = userID";`|  
 |`Metadata`|Obbligatoria se la parola chiave `Name` non è specificata. Elenco di percorsi di directory, file e risorse delimitato da barre verticali in cui cercare informazioni relative a metadati e mapping. Di seguito è riportato un esempio:<br /><br /> `Metadata=`<br /><br /> `c:\model &#124; c:\model\sql\mapping.msl;`<br /><br /> Gli spazi vuoti a ogni lato del separatore vengono ignorati.<br /><br /> Questa parola chiave e la parola chiave `Name` si escludono a vicenda.|  
 |`Name`|L'applicazione può eventualmente specificare il nome della connessione in un file di configurazione dell'applicazione che fornisce i valori della stringa di connessione parola chiave/valore obbligatori. In questo caso, non è possibile specificare tali valori direttamente nella stringa di connessione. L'utilizzo della parola chiave `Name` non è consentito in un file di configurazione.<br /><br /> Quando la parola chiave `Name` non è inclusa nella stringa di connessione, per la parola chiave Provider è necessario specificare valori non vuoti.<br /><br /> Questa parola chiave e tutte le altre parole chiave per la stringa di connessione si escludono a vicenda.|  
   

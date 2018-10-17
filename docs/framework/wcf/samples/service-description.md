@@ -2,12 +2,12 @@
 title: Descrizione del servizio
 ms.date: 03/30/2017
 ms.assetid: 7034b5d6-d608-45f3-b57d-ec135f83ff24
-ms.openlocfilehash: 1acd82fddd378a379023c7aa46ead2ce36c5b243
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: c31edae952b20823945403dd5aebb438bcbf0c11
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003346"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49374066"
 ---
 # <a name="service-description"></a>Descrizione del servizio
 L'esempio Descrizione del servizio illustra come un servizio può recuperare le informazioni di descrizione del servizio nella fase di esecuzione. L'esempio è basato sul [introduttiva](../../../../docs/framework/wcf/samples/getting-started-sample.md), con un'operazione di servizio aggiuntiva definita per restituire informazioni descrittive sul servizio. Le informazioni restituite elencano indirizzi di base e gli endpoint del servizio. Il servizio fornisce queste informazioni utilizzando le classi <xref:System.ServiceModel.OperationContext>, <xref:System.ServiceModel.ServiceHost> e <xref:System.ServiceModel.Description.ServiceDescription>.  
@@ -19,7 +19,7 @@ L'esempio Descrizione del servizio illustra come un servizio può recuperare le 
   
  Questo esempio utilizza una versione modificata del contratto della calcolatrice chiamata `IServiceDescriptionCalculator`. Il contratto definisce un'operazione del servizio aggiuntiva denominata `GetServiceDescriptionInfo` che restituisce una stringa su più righe al client che descrive l'indirizzo o gli indirizzi di base e l'endpoint o gli endpoint del servizio.  
   
-```  
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface IServiceDescriptionCalculator  
 {  
@@ -38,7 +38,7 @@ public interface IServiceDescriptionCalculator
   
  Il codice di implementazione per `GetServiceDescriptionInfo` utilizza la classe<xref:System.ServiceModel.Description.ServiceDescription> per elencare gli endpoint del servizio. Poiché gli endpoint del servizio possono avere indirizzi relativi, elenca per primi gli indirizzi di base del servizio. Per ottenere tutte di queste informazioni il codice recupera il contesto dell'operazione utilizzando <xref:System.ServiceModel.OperationContext.Current%2A>. La classe <xref:System.ServiceModel.ServiceHost> e l'oggetto <xref:System.ServiceModel.Description.ServiceDescription> sono recuperati dal contesto dell'operazione. Per elencare gli endpoint di base del servizio il codice scorre la raccolta <xref:System.ServiceModel.ServiceHostBase.BaseAddresses%2A> dell'host del servizio. Per elencare gli endpoint del servizio il codice scorre la raccolta degli endpoint della descrizione del servizio.  
   
-```  
+```csharp
 public string GetServiceDescriptionInfo()  
 {  
     string info = "";  
@@ -65,7 +65,7 @@ public string GetServiceDescriptionInfo()
   
  Quando si esegue l'esempio, le operazioni della calcolatrice, e in seguito le informazioni del servizio, vengono restituite dall'operazione `GetServiceDescriptionInfo`. Premere INVIO nella finestra del client per arrestare il client.  
   
-```  
+```console  
 Add(15,3) = 18  
 Subtract(145,76) = 69  
 Multiply(9,81) = 729  

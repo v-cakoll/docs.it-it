@@ -2,18 +2,19 @@
 title: Classe Operation
 ms.date: 03/30/2017
 ms.assetid: b19d1496-ef06-4d0c-b2ae-e728ec00cca0
-ms.openlocfilehash: d9256915afe9fdb8e4c91d186131fe41a7094c56
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 16de8b25594896349ea546d3def52dd256fe5c70
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49371589"
 ---
 # <a name="operation-class"></a>Classe Operation
 Operazione  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```csharp
 class Operation  
 {  
   string Action;  
@@ -49,7 +50,7 @@ class Operation
   
  Tipo di accesso: sola lettura  
   
- Indica che un'operazione è implementata in modo asincrono utilizzando un `Begin`[parentesi angolari aperte/chiuse] e `End`coppia di metodi [parentesi angolari aperte/chiuse] in un contratto di servizio.  
+ Indica che un'operazione è implementata in modo asincrono usando una `Begin`[apertura/chiusura parentesi quadre] e `End`coppia di metodi [parentesi quadre di apertura e chiusura] in un contratto di servizio.  
   
 ### <a name="behaviors"></a>comportamenti  
  Tipo di dati: matrice di Behavior  

@@ -2,12 +2,12 @@
 title: Gestione degli errori
 ms.date: 03/30/2017
 ms.assetid: c948841a-7db9-40ae-9b78-587d216cbcaf
-ms.openlocfilehash: 64b1af4b557d7792c7285866edc9aed08a0ef667
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 548d93e63440e256ddb54c3ca792a49817c9b059
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43486154"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372225"
 ---
 # <a name="error-handling"></a>Gestione degli errori
 ## <a name="error-handling-in-windows-communication-foundation"></a>Gestione degli errori in Windows Communication Foundation  
@@ -30,7 +30,7 @@ ms.locfileid: "43486154"
 ### <a name="dealing-with-unexpected-exceptions-using-an-ierrorhandler"></a>Gestione delle eccezioni impreviste usando IErrorHandler  
  Per risolvere le eccezioni impreviste, la linea di condotta consigliata consiste nel "hook" IErrorHandler. I gestori degli errori intercettano le eccezioni solo a livello di runtime di WCF (il livello "modello di servizio"), non a livello di canale. L'unico modo per collegare un oggetto IErrorHandler a livello di canale consiste nel creare un canale personalizzato, soluzione non consigliabile nella maggior parte degli scenari.  
   
- "Eccezione imprevista" è in genere un'eccezione irreversibile né un'eccezione di elaborazione; è, invece, un'eccezione utente imprevisto. Un'eccezione irreversibile (ad esempio, un'eccezione di memoria insufficiente): in genere gestita per il [gestore di eccezioni del modello di servizio](https://msdn.microsoft.com/library/system.servicemodel.dispatcher.exceptionhandler.aspx) automaticamente, non è in genere essere gestita in modo normale e l'unico motivo per gestire tale eccezione potrebbe essere affatto ottenere registrazioni aggiuntive o per restituire un'eccezione standard al client. Un'eccezione di elaborazione si verifica nell'elaborazione del messaggio, ad esempio a livello di serializzazione, di codificatore o di formattatore, e non può essere gestita con IErrorHandler, poiché in genere avviene troppo presto o troppo tardi nell'elaborazione perché il gestore possa intervenire. Analogamente, le eccezioni di trasporto non possono essere gestite a livello di IErrorHandler.  
+ "Eccezione imprevista" è in genere un'eccezione irreversibile né un'eccezione di elaborazione; è, invece, un'eccezione utente imprevisto. Un'eccezione irreversibile (ad esempio, un'eccezione di memoria insufficiente): in genere gestita per il [gestore di eccezioni del modello di servizio](xref:System.ServiceModel.Dispatcher.ExceptionHandler) automaticamente, non è in genere essere gestita in modo normale e l'unico motivo per gestire tale eccezione potrebbe essere affatto ottenere registrazioni aggiuntive o per restituire un'eccezione standard al client. Un'eccezione di elaborazione si verifica nell'elaborazione del messaggio, ad esempio a livello di serializzazione, di codificatore o di formattatore, e non può essere gestita con IErrorHandler, poiché in genere avviene troppo presto o troppo tardi nell'elaborazione perché il gestore possa intervenire. Analogamente, le eccezioni di trasporto non possono essere gestite a livello di IErrorHandler.  
   
  Con IErrorHandler è possibile controllare in modo esplicito il comportamento dell'applicazione quando viene generata un'eccezione. È possibile:  
   

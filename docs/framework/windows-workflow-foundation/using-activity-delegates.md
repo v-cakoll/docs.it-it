@@ -3,11 +3,11 @@ title: Utilizzo di delegati di attività
 ms.date: 03/30/2017
 ms.assetid: e33cf876-8979-440b-9b23-4a12d1139960
 ms.openlocfilehash: 7ed4032f8f8070648f8a2f0fcfb386101740f1ad
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48580880"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49374235"
 ---
 # <a name="using-activity-delegates"></a>Utilizzo di delegati di attività
 I delegati di attività consentono agli autori di attività di esporre callback con firme specifiche, per cui gli utenti dell'attività possono fornire gestori in base all'attività. Sono disponibili due tipi di delegati di attività: <xref:System.Activities.ActivityAction%601>, usato per definire i delegati di attività senza un valore restituito, e <xref:System.Activities.ActivityFunc%601>, usato per definire i delegati di attività con un valore restituito.  
@@ -44,7 +44,7 @@ Negli esempi di questo argomento viene usata la sintassi di inizializzazione ogg
  Sono disponibili più versioni generiche degli oggetti <xref:System.Activities.Statements.InvokeAction%601> e <xref:System.Activities.ActivityAction%601> forniti per passare uno o più argomenti.  
   
 ## <a name="using-activityfunc"></a>Uso di ActivityFunc  
- L'oggetto <xref:System.Activities.ActivityAction%601> è utile quando l'attività non restituisce alcun valore di risultato, mentre l'oggetto <xref:System.Activities.ActivityFunc%601> è usato quando viene restituito un valore di risultato. Quando si crea un'attività personalizzata che definisce un oggetto <xref:System.Activities.ActivityFunc%601>, usare un oggetto <xref:System.Activities.Expressions.InvokeFunc%601> per modellare la chiamata di tale oggetto <xref:System.Activities.ActivityFunc%601>. Nell'esempio seguente viene definita un'attività `WriteFillerText`. Per fornire il testo di riempimento, viene specificato un oggetto <xref:System.Activities.Expressions.InvokeFunc%601> che accetta un argomento Integer e dispone di un risultato di stringa. Una volta recuperato il testo di riempimento, viene visualizzato nella console tramite un'attività <xref:System.Activities.Statements.WriteLine>.  
+ L'oggetto <xref:System.Activities.ActivityAction%601> è utile quando l'attività non restituisce alcun valore di risultato, mentre l'oggetto <xref:System.Activities.ActivityFunc%601> è usato quando viene restituito un valore di risultato. Quando si crea un'attività personalizzata che definisce un oggetto <xref:System.Activities.ActivityFunc%601>, usare un oggetto <xref:System.Activities.Expressions.InvokeFunc%601> per modellare la chiamata di tale oggetto <xref:System.Activities.ActivityFunc%601>. Nell'esempio seguente viene definita un'attività `WriteFillerText` . Per fornire il testo di riempimento, viene specificato un oggetto <xref:System.Activities.Expressions.InvokeFunc%601> che accetta un argomento Integer e dispone di un risultato di stringa. Una volta recuperato il testo di riempimento, viene visualizzato nella console tramite un'attività <xref:System.Activities.Statements.WriteLine>.  
   
  [!code-csharp[CFX_ActivityExample#3](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#3)]  
   

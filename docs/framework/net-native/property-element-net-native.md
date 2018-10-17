@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: ad4ba56d-3bcb-4c10-ba90-1cc66e2175a1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 47ed75d377814a740edece2b6a69e44acbd8ef0c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 1b4541bc5a878739c17179576739fbe33384445d
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004351"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372065"
 ---
 # <a name="ltpropertygt-element-net-native"></a>Elemento &lt;Property&gt; (.NET Native)
 Applica i criteri di reflection di runtime a una proprietà.  
@@ -75,7 +75,7 @@ Applica i criteri di reflection di runtime a una proprietà.
   
  Il file applica il valore `All` ai criteri `Activate` per la classe `Book`, che consente di accedere ai costruttori della classe tramite la reflection. I criteri `Browse` per la classe `Book` vengono ereditati dal relativo spazio dei nomi padre. Questa proprietà è impostata su `Required Public`, che rende disponibili i metadati in fase di esecuzione.  
   
- Di seguito viene riportato il codice sorgente per l'esempio. La variabile `outputBlock` rappresenta un controllo [TextBlock](https://msdn.microsoft.com/library/windows.ui.xaml.controls.textblock.aspx).  
+ Di seguito viene riportato il codice sorgente per l'esempio. Il `outputBlock` variabile rappresenta un <xref:Windows.UI.Xaml.Controls.TextBlock> controllo.  
   
  [!code-csharp[ProjectN_Reflection#6](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/property1.cs#6)]  
   

@@ -2,12 +2,12 @@
 title: Operatori numerici e di confronto
 ms.date: 03/30/2017
 ms.assetid: 25b4a26a-06f2-4f80-87a9-76705ed46197
-ms.openlocfilehash: a7a455730860e2b11a5ceff5a70934502b312e19
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 733c1e494c29f04aa06a4159c3b1dae219f01b44
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515066"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372331"
 ---
 # <a name="numeric-and-comparison-operators"></a>Operatori numerici e di confronto
 Gli operatori aritmetici e di confronto funzionano correttamente in Common Language Runtime (CLR), ad eccezione di quanto descritto di seguito:  
@@ -59,5 +59,5 @@ Gli operatori aritmetici e di confronto funzionano correttamente in Common Langu
   
 ## <a name="see-also"></a>Vedere anche  
  [Tipi di dati e funzioni](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)  
- [Operatori C#](https://msdn.microsoft.com/library/0301e31f-22ad-49af-ac3c-d5eae7f0ac43)  
+ [Operatori C#](../../../../../../docs/csharp/language-reference/operators/index.md)  
  [Operatori](../../../../../visual-basic/language-reference/operators/index.md)

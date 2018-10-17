@@ -2,12 +2,12 @@
 title: 'Procedura: scambiare messaggi in una sessione affidabile'
 ms.date: 03/30/2017
 ms.assetid: 87cd0e75-dd2c-44c1-8da0-7b494bbdeaea
-ms.openlocfilehash: 6b204749ce86b79bf46b2d5c96be1b00dca9500d
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 53e5661bf140540cd0fc7a9fcb739b67488b8491
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44037376"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49374521"
 ---
 # <a name="how-to-exchange-messages-within-a-reliable-session"></a>Procedura: scambiare messaggi in una sessione affidabile
 
@@ -23,7 +23,7 @@ Per la copia di origine di questo esempio, vedere [sessioni affidabili WS](../..
 
    [!code-csharp[c_HowTo_UseReliableSession#1121](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/cs/service.cs#1121)]
 
-1. Implementare il contratto di servizio in una classe del servizio. Si noti che le informazioni di indirizzo o il binding non sono specificate nell'implementazione del servizio. Non è necessario scrivere codice per recuperare le informazioni di informazioni di indirizzo o il binding dal file di configurazione.
+1. Implementare il contratto di servizio in una classe del servizio. Si noti che le informazioni di indirizzo o il binding non sono specificate nell'implementazione del servizio. Non è necessario scrivere codice per recuperare le informazioni di indirizzo o il binding dal file di configurazione.
 
    [!code-csharp[c_HowTo_UseReliableSession#1122](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/cs/service.cs#1122)]
 
@@ -51,7 +51,7 @@ Per la copia di origine di questo esempio, vedere [sessioni affidabili WS](../..
 
    [!code-csharp[C_HowTo_UseReliableSession#1221](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/cs/client.cs#1221)]
 
-1. L'applicazione client generata contiene inoltre l'implementazione di `ClientCalculator`. Si noti che le informazioni di associazione e indirizzo non sono specificate nell'implementazione del servizio. Non è necessario scrivere codice per recuperare le informazioni di informazioni di indirizzo o il binding dal file di configurazione.
+1. L'applicazione client generata contiene inoltre l'implementazione di `ClientCalculator`. Si noti che le informazioni di associazione e indirizzo non sono specificate nell'implementazione del servizio. Non è necessario scrivere codice per recuperare le informazioni di indirizzo o il binding dal file di configurazione.
 
    [!code-csharp[C_HowTo_UseReliableSession#1222](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/cs/client.cs#1222)]
 

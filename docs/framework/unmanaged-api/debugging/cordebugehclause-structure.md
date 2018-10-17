@@ -14,12 +14,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 40820a805310786eeb0effd7c5284c1a70a6e70b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 83928696fc7fdfaf2eb944f4cdb9eebecdece0b3
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407600"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49373695"
 ---
 # <a name="cordebugehclause-structure"></a>Struttura CorDebugEHClause
 [Supportato in .NET Framework 4.5.2 e versioni successive]  
@@ -53,9 +53,9 @@ typedef struct _CorDebugEHClause {
 |`FilterOffset`|Offset, in byte, dall'inizio del corpo del metodo per un gestore di eccezioni basato sul filtro.|  
   
 ## <a name="remarks"></a>Note  
- Matrice di `CoreDebugEHClause` restituito da valori di [GetEHClauses](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-getehclauses-method.md) metodo.  
+ Matrice di `CoreDebugEHClause` restituito da valori di [GetEHClauses](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-getehclauses-method.md) (metodo).  
   
- Le informazioni sulla clausola di gestione delle eccezioni sono definite dalla specifica CLI. Per ulteriori informazioni, vedere [Standard ECMA-355: Common Language Infrastructure (CLI), 6a edizione](http://www.ecma-international.org/publications/standards/Ecma-335.htm).  
+ Le informazioni sulla clausola di gestione delle eccezioni sono definite dalla specifica CLI. Per altre informazioni, vedere [Standard ECMA-355: Common Language Infrastructure (CLI), 6a edizione](https://www.ecma-international.org/publications/standards/Ecma-335.htm).  
   
  Il campo `flags` può contenere i flag seguenti. Si noti che non sono definiti in CorDebug.idl o CorDebug.h.  
   
@@ -67,13 +67,13 @@ typedef struct _CorDebugEHClause {
 |`COR_ILEXCEPTION_CLAUSE_FAULT`|0x00000004|Clausola fault (una clausola `finally` che viene chiamata solo quando viene generata un'eccezione).|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo GetEHClauses](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-getehclauses-method.md)  

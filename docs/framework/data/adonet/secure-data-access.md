@@ -2,12 +2,12 @@
 title: Accesso sicuro ai dati
 ms.date: 03/30/2017
 ms.assetid: 473ebd69-21a3-4627-b95e-4e04d035c56f
-ms.openlocfilehash: 7083f68457aa8f87b01f523abc5742d24bafcbfd
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e5bb96a091dcd64f12d086d864643d00c34d8f17
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513787"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372462"
 ---
 # <a name="secure-data-access"></a>Accesso sicuro ai dati
 Per scrivere codice ADO.NET protetto, è necessario comprendere i meccanismi di sicurezza disponibili nell'archivio dati o nel database sottostante. Considerare inoltre le implicazioni di sicurezza di altre funzionalità o componenti che potrebbero essere inclusi nell'applicazione.  
@@ -88,7 +88,7 @@ Per scrivere codice ADO.NET protetto, è necessario comprendere i meccanismi di 
 |Risorsa|Descrizione|  
 |--------------|-----------------|  
 |[Interoperabilità con codice non gestito](../../../../docs/framework/interop/index.md)|Contiene argomenti in cui viene descritto come esporre componenti COM a .NET Framework e componenti .NET Framework a COM.|  
-|[Interoperabilità COM avanzata](https://msdn.microsoft.com/library/3ada36e5-2390-4d70-b490-6ad8de92f2fb)|Contiene componenti avanzati relativi, ad esempio, ad assembly di interoperabilità primari, threading e marshalling personalizzato.|  
+|[Interoperabilità COM avanzata](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx)|Contiene componenti avanzati relativi, ad esempio, ad assembly di interoperabilità primari, threading e marshalling personalizzato.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Protezione delle applicazioni ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  

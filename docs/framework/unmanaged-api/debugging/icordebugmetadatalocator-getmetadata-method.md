@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1149a3c3589cec0e952088a772ca036028c58ff5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b905c8bb89e4b163952b9640b53fc3992ba5ca10
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521354"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49373884"
 ---
 # <a name="icordebugmetadatalocatorgetmetadata-method"></a>Metodo ICorDebugMetaDataLocator::GetMetaData
 Chiede al debugger di restituire il percorso completo di un modulo i cui metadati sono necessari per completare un'operazione richiesta dal debugger.  
@@ -46,7 +46,7 @@ HRESULT GetMetaData(
  [in] Stringa con terminazione null che rappresenta il percorso completo del file. Se il percorso completo non è disponibile, il nome e l'estensione del file (*nomefile*. *estensione*).  
   
  `dwImageTimeStamp`  
- [in] Timestamp dalle intestazioni del file PE dell'immagine. Questo parametro può essere potenzialmente usato per un server di simboli ([SymSrv](https://msdn.microsoft.com/library/cc266470.aspx)) ricerca.  
+ [in] Timestamp dalle intestazioni del file PE dell'immagine. Questo parametro può essere potenzialmente usato per un server di simboli ([SymSrv](/windows/desktop/debug/using-symsrv)) ricerca.  
   
  `dwImageSize`  
  [in] Dimensioni dell'immagine dalle intestazioni del file PE. Questo parametro può essere potenzialmente usato per una ricerca in SymSrv.  

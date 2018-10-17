@@ -2,12 +2,12 @@
 title: Cenni preliminari sul flusso di messaggi
 ms.date: 03/30/2017
 ms.assetid: fb0899e1-84cc-4d90-b45b-dc5a50063943
-ms.openlocfilehash: 73ad66389d8458c0508c7a8cae28f54ca38ed574
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 54ffd8ec2349b2dd54ca61615b2fb1b997d02932
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841982"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372785"
 ---
 # <a name="message-flow-overview"></a>Cenni preliminari sul flusso di messaggi
 In un sistema distribuito che contiene servizi interconnessi è necessario determinare relazioni causali tra i servizi. È importante comprendere i vari componenti che appartengono a un flusso di richiesta per supportare scenari critici, ad esempio monitoraggio dello stato, risoluzione dei problemi e analisi della causa radice. Per abilitare la correlazione di tracce tra i vari servizi, in .NET Framework 4 è stato aggiunto supporto tramite le funzionalità seguenti:
@@ -52,13 +52,13 @@ In un sistema distribuito che contiene servizi interconnessi è necessario deter
 
 8.  In Program.cs nel client aggiungere l'istruzione Using seguente.
 
-    ```
+    ```csharp
     using System.Diagnostics;
     ```
 
 9. Nel metodo Main presente nel file program.cs del progetto client impostare il GUID della traccia in modo che venga propagato nel registro eventi.
 
-    ```
+    ```csharp
     Guid guid = Guid.NewGuid();
     Trace.CorrelationManager.ActivityId = guid;
     ```
