@@ -1,0 +1,100 @@
+---
+title: Cross-platform targeting
+description: Le procedure consigliate per la creazione di librerie .NET multipiattaforma.
+author: jamesnk
+ms.author: mairaw
+ms.date: 10/02/2018
+ms.openlocfilehash: 72fa891d5b1054af485a98d89b4efb11d6b0018b
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49374893"
+---
+# <a name="cross-platform-targeting"></a><span data-ttu-id="62a74-103">Cross-platform targeting</span><span class="sxs-lookup"><span data-stu-id="62a74-103">Cross-platform targeting</span></span>
+
+<span data-ttu-id="62a74-104">.NET moderne supporta più sistemi operativi e dispositivi.</span><span class="sxs-lookup"><span data-stu-id="62a74-104">Modern .NET supports multiple operating systems and devices.</span></span> <span data-ttu-id="62a74-105">È importante per le librerie open source .NET supportare gli sviluppatori tanti possibili, che si stia creando un sito Web ASP.NET ospitate in Azure o in un gioco di .NET in Unity.</span><span class="sxs-lookup"><span data-stu-id="62a74-105">It's important for .NET open-source libraries to support as many developers as possible, whether they're building an ASP.NET website hosted in Azure, or a .NET game in Unity.</span></span>
+
+## <a name="net-standard"></a><span data-ttu-id="62a74-106">.NET Standard</span><span class="sxs-lookup"><span data-stu-id="62a74-106">.NET Standard</span></span>
+
+<span data-ttu-id="62a74-107">.NET standard è il modo migliore per aggiungere il supporto multipiattaforma per una libreria .NET.</span><span class="sxs-lookup"><span data-stu-id="62a74-107">.NET Standard is the best way to add cross-platform support to a .NET library.</span></span> <span data-ttu-id="62a74-108">[.NET standard](../net-standard.md) è una specifica di API .NET che sono disponibili in tutte le implementazioni di .NET.</span><span class="sxs-lookup"><span data-stu-id="62a74-108">[.NET Standard](../net-standard.md) is a specification of .NET APIs that are available on all .NET implementations.</span></span> <span data-ttu-id="62a74-109">Scelta di .NET Standard consente di creare librerie che sono vincolate a usare le API in una determinata versione di .NET Standard, che significa che è utilizzabile da tutte le piattaforme che implementano tale versione di .NET Standard.</span><span class="sxs-lookup"><span data-stu-id="62a74-109">Targeting .NET Standard lets you produce libraries that are constrained to use APIs that are in a given version of .NET Standard, which means it's usable by all platforms that implement that version of the .NET Standard.</span></span>
+
+<span data-ttu-id="62a74-110">![.NET standard](./media/cross-platform-targeting/platforms-netstandard.png ".NET Standard")</span><span class="sxs-lookup"><span data-stu-id="62a74-110">![.NET Standard](./media/cross-platform-targeting/platforms-netstandard.png ".NET Standard")</span></span>
+
+<span data-ttu-id="62a74-111">Destinato a .NET Standard e completata la compilazione del progetto, non garantisce che la libreria verrà eseguita correttamente in tutte le piattaforme:</span><span class="sxs-lookup"><span data-stu-id="62a74-111">Targeting .NET Standard, and successfully compiling your project, doesn't guarantee the library will run successfully on all platforms:</span></span>
+
+1. <span data-ttu-id="62a74-112">API specifiche della piattaforma avrà esito negativo su altre piattaforme.</span><span class="sxs-lookup"><span data-stu-id="62a74-112">Platform-specific APIs will fail on other platforms.</span></span> <span data-ttu-id="62a74-113">Ad esempio, <xref:Microsoft.Win32.Registry?displayProperty=nameWithType> verrà eseguita correttamente in Windows e generare <xref:System.PlatformNotSupportedException> quando viene usato in qualsiasi altro sistema operativo.</span><span class="sxs-lookup"><span data-stu-id="62a74-113">For example, <xref:Microsoft.Win32.Registry?displayProperty=nameWithType> will succeed on Windows and throw <xref:System.PlatformNotSupportedException> when used on any other OS.</span></span>
+2. <span data-ttu-id="62a74-114">Le API possono comportarsi in modo diverso.</span><span class="sxs-lookup"><span data-stu-id="62a74-114">APIs can behave differently.</span></span> <span data-ttu-id="62a74-115">Ad esempio, la reflection API hanno diverse caratteristiche di prestazioni quando un'applicazione usa la compilazione ahead of time in iOS e UWP.</span><span class="sxs-lookup"><span data-stu-id="62a74-115">For example, reflection APIs have different performance characteristics when an application uses ahead-of-time compilation on iOS or UWP.</span></span>
+
+> [!TIP]
+> <span data-ttu-id="62a74-116">Il team di .NET [offre un analizzatore Roslyn](../analyzers/api-analyzer.md) che consentono di individuare i possibili problemi.</span><span class="sxs-lookup"><span data-stu-id="62a74-116">The .NET team [offers a Roslyn analyzer](../analyzers/api-analyzer.md) to help you discover possible issues.</span></span>
+
+<span data-ttu-id="62a74-117">**ESEGUIRE ✔️** iniziano con incluso un `netstandard2.0` destinazione.</span><span class="sxs-lookup"><span data-stu-id="62a74-117">**✔️ DO** start with including a `netstandard2.0` target.</span></span>
+
+> <span data-ttu-id="62a74-118">Le API di fuori di .NET Standard 2.0 non necessitano di più librerie di uso generico.</span><span class="sxs-lookup"><span data-stu-id="62a74-118">Most general-purpose libraries should not need APIs outside of .NET Standard 2.0.</span></span> <span data-ttu-id="62a74-119">.NET standard 2.0 è supportato da tutte le piattaforme moderne ed è il modo consigliato per supportare più piattaforme con una sola destinazione.</span><span class="sxs-lookup"><span data-stu-id="62a74-119">.NET Standard 2.0 is supported by all modern platforms and is the recommended way to support multiple platforms with one target.</span></span>
+
+<span data-ttu-id="62a74-120">**Si consiglia di evitare ❌** tra cui un `netstandard1.x` destinazione.</span><span class="sxs-lookup"><span data-stu-id="62a74-120">**❌ AVOID** including a `netstandard1.x` target.</span></span>
+
+> <span data-ttu-id="62a74-121">.NET standard 1.x viene distribuito come un set granulare dei pacchetti NuGet, che consente di creare un grafico di dipendenze di pacchetto di grandi dimensioni e determina gli sviluppatori di download di numerosi pacchetti durante la compilazione.</span><span class="sxs-lookup"><span data-stu-id="62a74-121">.NET Standard 1.x is distributed as a granular set of NuGet packages, which creates a large package dependency graph and results in developers downloading a lot of packages when building.</span></span> <span data-ttu-id="62a74-122">Piattaforme .NET moderne, tra cui .NET Framework 4.6.1, UWP e Xamarin, tutte supportano .NET Standard 2.0.</span><span class="sxs-lookup"><span data-stu-id="62a74-122">Modern .NET platforms, including .NET Framework 4.6.1, UWP and Xamarin, all support .NET Standard 2.0.</span></span> <span data-ttu-id="62a74-123">Necessario solo scegliere come destinazione .NET Standard 1.x se è necessario in modo specifico come destinazione una piattaforma meno recente.</span><span class="sxs-lookup"><span data-stu-id="62a74-123">You should only target .NET Standard 1.x if you specifically need to target an older platform.</span></span>
+
+<span data-ttu-id="62a74-124">**ESEGUIRE ✔️** includono un `netstandard2.0` di destinazione se è necessario un `netstandard1.x` destinazione.</span><span class="sxs-lookup"><span data-stu-id="62a74-124">**✔️ DO** include a `netstandard2.0` target if you require a `netstandard1.x` target.</span></span>
+
+> <span data-ttu-id="62a74-125">Tutte le piattaforme che supportano .NET Standard 2.0 useranno il `netstandard2.0` di destinazione e trarre vantaggio dall'avere un grafico di pacchetto più piccolo mentre piattaforme precedenti verranno comunque funzionare e cercare di usare il `netstandard1.x` destinazione.</span><span class="sxs-lookup"><span data-stu-id="62a74-125">All platforms supporting .NET Standard 2.0 will use the `netstandard2.0` target and benefit from having a smaller package graph while older platforms will still work and fall back to using the `netstandard1.x` target.</span></span>
+
+<span data-ttu-id="62a74-126">**NON ❌** includono una destinazione .NET Standard, se la libreria si basa su un modello di app specifici della piattaforma.</span><span class="sxs-lookup"><span data-stu-id="62a74-126">**❌ DO NOT** include a .NET Standard target if the library relies on a platform-specific app model.</span></span>
+
+> <span data-ttu-id="62a74-127">Ad esempio, una libreria del toolkit UWP controllo dipende da un modello di app che è disponibile solo in UWP.</span><span class="sxs-lookup"><span data-stu-id="62a74-127">For example, a UWP control toolkit library depends on an app model that is only available on UWP.</span></span> <span data-ttu-id="62a74-128">Specifico del modello App API non saranno disponibili in .NET Standard.</span><span class="sxs-lookup"><span data-stu-id="62a74-128">App model specific APIs will not be available in .NET Standard.</span></span>
+
+## <a name="multi-targeting"></a><span data-ttu-id="62a74-129">Multitargeting</span><span class="sxs-lookup"><span data-stu-id="62a74-129">Multi-targeting</span></span>
+
+<span data-ttu-id="62a74-130">In alcuni casi è necessario accedere alle API specifiche del framework dalle librerie.</span><span class="sxs-lookup"><span data-stu-id="62a74-130">Sometimes you need to access framework-specific APIs from your libraries.</span></span> <span data-ttu-id="62a74-131">Il modo migliore per chiamare le API specifiche del framework Usa il multitargeting, che compila il progetto per molte [Framework di destinazione .NET](../frameworks.md) invece che per uno solo.</span><span class="sxs-lookup"><span data-stu-id="62a74-131">The best way to call framework-specific APIs is using multi-targeting, which builds your project for many [.NET target frameworks](../frameworks.md) rather than for just one.</span></span>
+
+<span data-ttu-id="62a74-132">Per proteggere i tuoi utenti di dover compilare per singoli Framework, è consigliabile avere un output di .NET Standard oltre a uno o più output specifico del framework.</span><span class="sxs-lookup"><span data-stu-id="62a74-132">To shield your consumers from having to build for individual frameworks, you should strive to have a .NET Standard output plus one or more framework-specific outputs.</span></span> <span data-ttu-id="62a74-133">Con il multitargeting, tutti gli assembly vengono inseriti all'interno di un singolo pacchetto NuGet.</span><span class="sxs-lookup"><span data-stu-id="62a74-133">With multi-targeting, all assemblies are packaged inside a single NuGet package.</span></span> <span data-ttu-id="62a74-134">I consumer possono quindi fare riferimento il pacchetto stesso e NuGet sceglierà l'implementazione appropriata.</span><span class="sxs-lookup"><span data-stu-id="62a74-134">Consumers can then reference the same package and NuGet will pick the appropriate implementation.</span></span> <span data-ttu-id="62a74-135">La libreria .NET Standard serve come libreria di fallback che viene utilizzato ovunque, tranne nei casi in cui il pacchetto NuGet offre un'implementazione specifica di framework.</span><span class="sxs-lookup"><span data-stu-id="62a74-135">Your .NET Standard library serves as the fallback library that is used everywhere, except for the cases where your NuGet package offers a framework-specific implementation.</span></span> <span data-ttu-id="62a74-136">Il multitargeting consente di utilizzare la compilazione condizionale del codice e chiamare API specifiche del framework.</span><span class="sxs-lookup"><span data-stu-id="62a74-136">Multi-targeting allows you to use conditional compilation in your code and call framework-specific APIs.</span></span>
+
+<span data-ttu-id="62a74-137">![Pacchetto NuGet con più assembly](./media/cross-platform-targeting/nuget-package-multiple-assemblies.png "pacchetto NuGet con più assembly")</span><span class="sxs-lookup"><span data-stu-id="62a74-137">![NuGet package with multiple assemblies](./media/cross-platform-targeting/nuget-package-multiple-assemblies.png "NuGet package with multiple assemblies")</span></span>
+
+<span data-ttu-id="62a74-138">**Provare a ✔️** come destinazione le implementazioni di .NET oltre a .NET Standard.</span><span class="sxs-lookup"><span data-stu-id="62a74-138">**✔️ CONSIDER** targeting .NET implementations in addition to .NET Standard.</span></span>
+
+> <span data-ttu-id="62a74-139">Come destinazione le implementazioni di .NET consente di chiamare API specifiche della piattaforma che sono di fuori di .NET Standard.</span><span class="sxs-lookup"><span data-stu-id="62a74-139">Targeting .NET implementations allows you to call platform-specific APIs that are outside of .NET Standard.</span></span>
+>
+> <span data-ttu-id="62a74-140">Non eliminare il supporto per .NET Standard quando si esegue questa operazione.</span><span class="sxs-lookup"><span data-stu-id="62a74-140">Do not drop support for .NET Standard when you do this.</span></span> <span data-ttu-id="62a74-141">Al contrario, generare rispetto all'implementazione e offrono funzionalità API.</span><span class="sxs-lookup"><span data-stu-id="62a74-141">Instead, throw from the implementation and offer capability APIs.</span></span> <span data-ttu-id="62a74-142">In questo modo, la libreria può essere usata ovunque e supporta runtime light-up delle funzionalità.</span><span class="sxs-lookup"><span data-stu-id="62a74-142">This way, your library can be used anywhere and supports runtime light-up of features.</span></span>
+
+<span data-ttu-id="62a74-143">**Si consiglia di evitare ❌** usando più destinazioni con .NET Standard se il codice sorgente è lo stesso per tutte le destinazioni.</span><span class="sxs-lookup"><span data-stu-id="62a74-143">**❌ AVOID** using multi-targeting with .NET Standard if your source code is the same for all targets.</span></span>
+
+> <span data-ttu-id="62a74-144">L'assembly .NET Standard verrà utilizzato automaticamente da NuGet.</span><span class="sxs-lookup"><span data-stu-id="62a74-144">The .NET Standard assembly will automatically be used by NuGet.</span></span> <span data-ttu-id="62a74-145">Come destinazione le implementazioni di .NET singoli aumenta la `*.nupkg` dimensioni senza alcun vantaggio.</span><span class="sxs-lookup"><span data-stu-id="62a74-145">Targeting individual .NET implementations increases the `*.nupkg` size for no benefit.</span></span>
+
+<span data-ttu-id="62a74-146">**✔️ si consiglia** aggiunta di una destinazione `net461` quando esegue offerta un `netstandard2.0` destinazione.</span><span class="sxs-lookup"><span data-stu-id="62a74-146">**✔️ CONSIDER** adding a target for `net461` when you're offering a `netstandard2.0` target.</span></span> 
+
+> <span data-ttu-id="62a74-147">Uso di .NET Standard 2.0 da .NET Framework presenta alcuni problemi che sono stati risolti in .NET Framework 4.7.2.</span><span class="sxs-lookup"><span data-stu-id="62a74-147">Using .NET Standard 2.0 from .NET Framework has some issues that were addressed in .NET Framework 4.7.2.</span></span> <span data-ttu-id="62a74-148">È possibile migliorare l'esperienza per gli sviluppatori che sono ancora disponibili su .NET Framework 4.6.1 - 4.7.1, offrendo loro un file binario viene compilato per .NET Framework 4.6.1.</span><span class="sxs-lookup"><span data-stu-id="62a74-148">You can improve the experience for developers that are still on .NET Framework 4.6.1 - 4.7.1 by offering them a binary that is built for .NET Framework 4.6.1.</span></span>
+
+<span data-ttu-id="62a74-149">**Eseguire operazioni ✔️** distribuire tua libreria tramite un pacchetto NuGet.</span><span class="sxs-lookup"><span data-stu-id="62a74-149">**✔️ DO** distribute your library using a NuGet package.</span></span>
+
+> <span data-ttu-id="62a74-150">NuGet verrà selezionare la destinazione migliore per gli sviluppatori e schermare li dover scegliere l'implementazione appropriata.</span><span class="sxs-lookup"><span data-stu-id="62a74-150">NuGet will select the best target for the developer and shield them having to pick the appropriate implementation.</span></span>
+
+<span data-ttu-id="62a74-151">**Eseguire operazioni ✔️** usare un file di progetto `TargetFrameworks` proprietà in caso di multitargeting.</span><span class="sxs-lookup"><span data-stu-id="62a74-151">**✔️ DO** use a project file's `TargetFrameworks` property when multi-targeting.</span></span>
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <!-- This project will output netstandard2.0 and net461 assemblies -->
+    <TargetFrameworks>netstandard2.0;net461</TargetFrameworks>
+  </PropertyGroup>
+</Project>
+```
+
+<span data-ttu-id="62a74-152">**✔️ CONSIDERARE** usando [MSBuild.Sdk.Extras](https://github.com/onovotny/MSBuildSdkExtras) quando multitargeting per UWP e Xamarin poiché semplifica notevolmente il file di progetto.</span><span class="sxs-lookup"><span data-stu-id="62a74-152">**✔️ CONSIDER** using [MSBuild.Sdk.Extras](https://github.com/onovotny/MSBuildSdkExtras) when multi-targeting for UWP and Xamarin as it greatly simplifies your project file.</span></span>
+
+## <a name="older-targets"></a><span data-ttu-id="62a74-153">Destinazioni precedenti</span><span class="sxs-lookup"><span data-stu-id="62a74-153">Older targets</span></span>
+
+<span data-ttu-id="62a74-154">.NET supporta le versioni di destinazione di .NET Framework lunghi da supporto, nonché le piattaforme non sono più comunemente usati.</span><span class="sxs-lookup"><span data-stu-id="62a74-154">.NET supports targeting versions of the .NET Framework that are long out of support as well as platforms that are no longer commonly used.</span></span> <span data-ttu-id="62a74-155">Anche se ha valore eseguendo il lavoro di libreria in come destinata a numerosi possibili, che sia necessario ovviare alla mancanza di API può aggiungere significativo sovraccarico.</span><span class="sxs-lookup"><span data-stu-id="62a74-155">While there's value in making your library work on as many targets as possible, having to work around missing APIs can add significant overhead.</span></span> <span data-ttu-id="62a74-156">Crediamo che determinati Framework non sono più la pena di destinazione, prendere in considerazione la portata e le limitazioni.</span><span class="sxs-lookup"><span data-stu-id="62a74-156">We believe certain frameworks are no longer worth targeting, considering their reach and limitations.</span></span>
+
+<span data-ttu-id="62a74-157">**NON ❌** includono una destinazione di libreria di classi portabile (PCL).</span><span class="sxs-lookup"><span data-stu-id="62a74-157">**❌ DO NOT** include a Portable Class Library (PCL) target.</span></span> <span data-ttu-id="62a74-158">Ad esempio `portable-net45+win8+wpa81+wp8`.</span><span class="sxs-lookup"><span data-stu-id="62a74-158">For example, `portable-net45+win8+wpa81+wp8`.</span></span>
+
+> <span data-ttu-id="62a74-159">.NET standard è il modo moderni per lo sviluppo multipiattaforma .NET librerie di supporto e sostituisce librerie di classi portabili.</span><span class="sxs-lookup"><span data-stu-id="62a74-159">.NET Standard is the modern way to support cross-platform .NET libraries and replaces PCLs.</span></span>
+
+<span data-ttu-id="62a74-160">**NON ❌** includono le destinazioni per le piattaforme .NET che non sono più supportate.</span><span class="sxs-lookup"><span data-stu-id="62a74-160">**❌ DO NOT** include targets for .NET platforms that are no longer supported.</span></span> <span data-ttu-id="62a74-161">Ad esempio, `SL4`, `WP`.</span><span class="sxs-lookup"><span data-stu-id="62a74-161">For example, `SL4`, `WP`.</span></span>
+
+>[!div class="step-by-step"]
+<span data-ttu-id="62a74-162">[Precedente](./get-started.md)
+[Successivo](./strong-naming.md)</span><span class="sxs-lookup"><span data-stu-id="62a74-162">[Previous](./get-started.md)
+[Next](./strong-naming.md)</span></span>
