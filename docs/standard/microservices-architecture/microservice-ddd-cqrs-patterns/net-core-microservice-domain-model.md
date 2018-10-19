@@ -13,7 +13,7 @@ ms.locfileid: "46577535"
 ---
 # <a name="implementing-a-microservice-domain-model-with-net-core"></a>Implementazione di un modello di dominio del microservizio con .NET Core 
 
-La sezione precedente ha illustrato i principi e gli schemi fondamentali per la progettazione di un modello di dominio. È giunto ora il momento di esplorare i possibili modi per implementare il modello di dominio usando .NET Core (normale codice\#) e EF Core. Si noti che il modello di dominio sarà costituito semplicemente dal codice: avrà i requisiti del modello EF Core, ma non vere dipendenze su EF. Il modello di dominio non deve contenere dipendenze rigide o riferimenti a EF Core né a nessun altro ORM.
+La sezione precedente ha illustrato i principi e gli schemi fondamentali per la progettazione di un modello di dominio. È giunto ora il momento di esplorare i possibili modi per implementare il modello di dominio usando .NET Core (normale codice C#) e EF Core. Si noti che il modello di dominio sarà costituito semplicemente dal codice: avrà i requisiti del modello EF Core, ma non vere dipendenze su EF. Il modello di dominio non deve contenere dipendenze rigide o riferimenti a EF Core né a nessun altro ORM.
 
 ## <a name="domain-model-structure-in-a-custom-net-standard-library"></a>Struttura del modello di dominio in una libreria .NET Standard personalizzata
 
