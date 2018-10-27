@@ -2,24 +2,23 @@
 title: '&lt;security&gt; di &lt;wsDualHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 869c05e7-4ebe-467d-95ab-c8f8de4e6b9e
-author: BrucePerlerMS
-ms.openlocfilehash: 761eb9d111630d64d0fe4450c7a8950a8181366d
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
-ms.translationtype: MT
+ms.openlocfilehash: 77e7191b345e59116874e70aaa28241223938eea
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838288"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50045009"
 ---
-# <a name="ltsecuritygt-of-ltwsdualhttpbindinggt"></a><span data-ttu-id="6f5b9-102">&lt;security&gt; di &lt;wsDualHttpBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="6f5b9-102">&lt;security&gt; of &lt;wsDualHttpBinding&gt;</span></span>
-<span data-ttu-id="6f5b9-103">Definisce le funzionalità di sicurezza del [ \<wsDualHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).</span><span class="sxs-lookup"><span data-stu-id="6f5b9-103">Defines the security capabilities of the [\<wsDualHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).</span></span>  
+# <a name="ltsecuritygt-of-ltwsdualhttpbindinggt"></a><span data-ttu-id="a93c1-102">&lt;security&gt; di &lt;wsDualHttpBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="a93c1-102">&lt;security&gt; of &lt;wsDualHttpBinding&gt;</span></span>
+<span data-ttu-id="a93c1-103">Definisce le funzionalità di sicurezza del [ \<wsDualHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).</span><span class="sxs-lookup"><span data-stu-id="a93c1-103">Defines the security capabilities of the [\<wsDualHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).</span></span>  
   
- <span data-ttu-id="6f5b9-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="6f5b9-104">\<system.ServiceModel></span></span>  
-<span data-ttu-id="6f5b9-105">\<le associazioni ></span><span class="sxs-lookup"><span data-stu-id="6f5b9-105">\<bindings></span></span>  
-<span data-ttu-id="6f5b9-106">\<wsDualHttpBinding></span><span class="sxs-lookup"><span data-stu-id="6f5b9-106">\<wsDualHttpBinding></span></span>  
-<span data-ttu-id="6f5b9-107">\<binding></span><span class="sxs-lookup"><span data-stu-id="6f5b9-107">\<binding></span></span>  
-<span data-ttu-id="6f5b9-108">\<security></span><span class="sxs-lookup"><span data-stu-id="6f5b9-108">\<security></span></span>  
+ <span data-ttu-id="a93c1-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="a93c1-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="a93c1-105">\<le associazioni ></span><span class="sxs-lookup"><span data-stu-id="a93c1-105">\<bindings></span></span>  
+<span data-ttu-id="a93c1-106">\<wsDualHttpBinding></span><span class="sxs-lookup"><span data-stu-id="a93c1-106">\<wsDualHttpBinding></span></span>  
+<span data-ttu-id="a93c1-107">\<binding></span><span class="sxs-lookup"><span data-stu-id="a93c1-107">\<binding></span></span>  
+<span data-ttu-id="a93c1-108">\<security></span><span class="sxs-lookup"><span data-stu-id="a93c1-108">\<security></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6f5b9-109">Sintassi</span><span class="sxs-lookup"><span data-stu-id="6f5b9-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a93c1-109">Sintassi</span><span class="sxs-lookup"><span data-stu-id="a93c1-109">Syntax</span></span>  
   
 ```xml  
 <security mode="Message/None">  
@@ -30,42 +29,42 @@ ms.locfileid: "48838288"
 </security>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="6f5b9-110">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="6f5b9-110">Attributes and Elements</span></span>  
- <span data-ttu-id="6f5b9-111">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="6f5b9-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="a93c1-110">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="a93c1-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="a93c1-111">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="a93c1-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="6f5b9-112">Attributi</span><span class="sxs-lookup"><span data-stu-id="6f5b9-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="a93c1-112">Attributi</span><span class="sxs-lookup"><span data-stu-id="a93c1-112">Attributes</span></span>  
   
-|<span data-ttu-id="6f5b9-113">Attributo</span><span class="sxs-lookup"><span data-stu-id="6f5b9-113">Attribute</span></span>|<span data-ttu-id="6f5b9-114">Descrizione</span><span class="sxs-lookup"><span data-stu-id="6f5b9-114">Description</span></span>|  
+|<span data-ttu-id="a93c1-113">Attributo</span><span class="sxs-lookup"><span data-stu-id="a93c1-113">Attribute</span></span>|<span data-ttu-id="a93c1-114">Descrizione</span><span class="sxs-lookup"><span data-stu-id="a93c1-114">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="6f5b9-115">modalità</span><span class="sxs-lookup"><span data-stu-id="6f5b9-115">mode</span></span>|<span data-ttu-id="6f5b9-116">-Facoltativo.</span><span class="sxs-lookup"><span data-stu-id="6f5b9-116">-   Optional.</span></span> <span data-ttu-id="6f5b9-117">Specifica il tipo di sicurezza applicata.</span><span class="sxs-lookup"><span data-stu-id="6f5b9-117">Specifies the type of security that is applied.</span></span> <span data-ttu-id="6f5b9-118">Il valore predefinito è `Message`.</span><span class="sxs-lookup"><span data-stu-id="6f5b9-118">The default value is `Message`.</span></span> <span data-ttu-id="6f5b9-119">L'attributo è di tipo <xref:System.ServiceModel.WSDualHttpSecurityMode>.</span><span class="sxs-lookup"><span data-stu-id="6f5b9-119">This attribute is of type <xref:System.ServiceModel.WSDualHttpSecurityMode>.</span></span>|  
+|<span data-ttu-id="a93c1-115">modalità</span><span class="sxs-lookup"><span data-stu-id="a93c1-115">mode</span></span>|<span data-ttu-id="a93c1-116">-Facoltativo.</span><span class="sxs-lookup"><span data-stu-id="a93c1-116">-   Optional.</span></span> <span data-ttu-id="a93c1-117">Specifica il tipo di sicurezza applicata.</span><span class="sxs-lookup"><span data-stu-id="a93c1-117">Specifies the type of security that is applied.</span></span> <span data-ttu-id="a93c1-118">Il valore predefinito è `Message`.</span><span class="sxs-lookup"><span data-stu-id="a93c1-118">The default value is `Message`.</span></span> <span data-ttu-id="a93c1-119">L'attributo è di tipo <xref:System.ServiceModel.WSDualHttpSecurityMode>.</span><span class="sxs-lookup"><span data-stu-id="a93c1-119">This attribute is of type <xref:System.ServiceModel.WSDualHttpSecurityMode>.</span></span>|  
   
-## <a name="mode-attribute"></a><span data-ttu-id="6f5b9-120">Attributo mode</span><span class="sxs-lookup"><span data-stu-id="6f5b9-120">Mode Attribute</span></span>  
+## <a name="mode-attribute"></a><span data-ttu-id="a93c1-120">Attributo mode</span><span class="sxs-lookup"><span data-stu-id="a93c1-120">Mode Attribute</span></span>  
   
-|<span data-ttu-id="6f5b9-121">Valore</span><span class="sxs-lookup"><span data-stu-id="6f5b9-121">Value</span></span>|<span data-ttu-id="6f5b9-122">Descrizione</span><span class="sxs-lookup"><span data-stu-id="6f5b9-122">Description</span></span>|  
+|<span data-ttu-id="a93c1-121">Valore</span><span class="sxs-lookup"><span data-stu-id="a93c1-121">Value</span></span>|<span data-ttu-id="a93c1-122">Descrizione</span><span class="sxs-lookup"><span data-stu-id="a93c1-122">Description</span></span>|  
 |-----------|-----------------|  
-|<span data-ttu-id="6f5b9-123">None</span><span class="sxs-lookup"><span data-stu-id="6f5b9-123">None</span></span>|<span data-ttu-id="6f5b9-124">La sicurezza è disabilitata.</span><span class="sxs-lookup"><span data-stu-id="6f5b9-124">Security is disabled.</span></span>|  
-|<span data-ttu-id="6f5b9-125">Messaggio</span><span class="sxs-lookup"><span data-stu-id="6f5b9-125">Message</span></span>|<span data-ttu-id="6f5b9-126">La sicurezza è fornita mediante la sicurezza dei messaggi SOAP.</span><span class="sxs-lookup"><span data-stu-id="6f5b9-126">Security is provided using SOAP message security.</span></span>|  
+|<span data-ttu-id="a93c1-123">None</span><span class="sxs-lookup"><span data-stu-id="a93c1-123">None</span></span>|<span data-ttu-id="a93c1-124">La sicurezza è disabilitata.</span><span class="sxs-lookup"><span data-stu-id="a93c1-124">Security is disabled.</span></span>|  
+|<span data-ttu-id="a93c1-125">Messaggio</span><span class="sxs-lookup"><span data-stu-id="a93c1-125">Message</span></span>|<span data-ttu-id="a93c1-126">La sicurezza è fornita mediante la sicurezza dei messaggi SOAP.</span><span class="sxs-lookup"><span data-stu-id="a93c1-126">Security is provided using SOAP message security.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="6f5b9-127">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="6f5b9-127">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="a93c1-127">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="a93c1-127">Child Elements</span></span>  
   
-|<span data-ttu-id="6f5b9-128">Elemento</span><span class="sxs-lookup"><span data-stu-id="6f5b9-128">Element</span></span>|<span data-ttu-id="6f5b9-129">Descrizione</span><span class="sxs-lookup"><span data-stu-id="6f5b9-129">Description</span></span>|  
+|<span data-ttu-id="a93c1-128">Elemento</span><span class="sxs-lookup"><span data-stu-id="a93c1-128">Element</span></span>|<span data-ttu-id="a93c1-129">Descrizione</span><span class="sxs-lookup"><span data-stu-id="a93c1-129">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="6f5b9-130">\<messaggio ></span><span class="sxs-lookup"><span data-stu-id="6f5b9-130">\<message></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-of-wsdualhttpbinding.md)|<span data-ttu-id="6f5b9-131">Definisce le impostazioni di sicurezza per il messaggio.</span><span class="sxs-lookup"><span data-stu-id="6f5b9-131">Defines the settings for the message-level security.</span></span> <span data-ttu-id="6f5b9-132">L'elemento è di tipo <xref:System.ServiceModel.MessageSecurityOverHttp>.</span><span class="sxs-lookup"><span data-stu-id="6f5b9-132">This element is of type <xref:System.ServiceModel.MessageSecurityOverHttp>.</span></span>|  
+|[<span data-ttu-id="a93c1-130">\<messaggio ></span><span class="sxs-lookup"><span data-stu-id="a93c1-130">\<message></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-of-wsdualhttpbinding.md)|<span data-ttu-id="a93c1-131">Definisce le impostazioni di sicurezza per il messaggio.</span><span class="sxs-lookup"><span data-stu-id="a93c1-131">Defines the settings for the message-level security.</span></span> <span data-ttu-id="a93c1-132">L'elemento è di tipo <xref:System.ServiceModel.MessageSecurityOverHttp>.</span><span class="sxs-lookup"><span data-stu-id="a93c1-132">This element is of type <xref:System.ServiceModel.MessageSecurityOverHttp>.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="6f5b9-133">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="6f5b9-133">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="a93c1-133">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="a93c1-133">Parent Elements</span></span>  
   
-|<span data-ttu-id="6f5b9-134">Elemento</span><span class="sxs-lookup"><span data-stu-id="6f5b9-134">Element</span></span>|<span data-ttu-id="6f5b9-135">Descrizione</span><span class="sxs-lookup"><span data-stu-id="6f5b9-135">Description</span></span>|  
+|<span data-ttu-id="a93c1-134">Elemento</span><span class="sxs-lookup"><span data-stu-id="a93c1-134">Element</span></span>|<span data-ttu-id="a93c1-135">Descrizione</span><span class="sxs-lookup"><span data-stu-id="a93c1-135">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="6f5b9-136">\<binding></span><span class="sxs-lookup"><span data-stu-id="6f5b9-136">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)|<span data-ttu-id="6f5b9-137">Definisce tutte le funzionalità di associazione del [ \<wsDualHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).</span><span class="sxs-lookup"><span data-stu-id="6f5b9-137">Defines all binding capabilities of the [\<wsDualHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).</span></span>|  
+|[<span data-ttu-id="a93c1-136">\<binding></span><span class="sxs-lookup"><span data-stu-id="a93c1-136">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)|<span data-ttu-id="a93c1-137">Definisce tutte le funzionalità di associazione del [ \<wsDualHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).</span><span class="sxs-lookup"><span data-stu-id="a93c1-137">Defines all binding capabilities of the [\<wsDualHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="6f5b9-138">Note</span><span class="sxs-lookup"><span data-stu-id="6f5b9-138">Remarks</span></span>  
- <span data-ttu-id="6f5b9-139">Un'associazione duale espone l'indirizzo IP del client al servizio.</span><span class="sxs-lookup"><span data-stu-id="6f5b9-139">A dual binding exposes the IP address of the client to the service.</span></span> <span data-ttu-id="6f5b9-140">Nel client è necessario implementare un meccanismo di sicurezza in grado di garantire che il client si connetta solo a servizi ritenuti attendibili.</span><span class="sxs-lookup"><span data-stu-id="6f5b9-140">The client should use security to ensure that it only connects to services it trusts.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a93c1-138">Note</span><span class="sxs-lookup"><span data-stu-id="a93c1-138">Remarks</span></span>  
+ <span data-ttu-id="a93c1-139">Un'associazione duale espone l'indirizzo IP del client al servizio.</span><span class="sxs-lookup"><span data-stu-id="a93c1-139">A dual binding exposes the IP address of the client to the service.</span></span> <span data-ttu-id="a93c1-140">Nel client è necessario implementare un meccanismo di sicurezza in grado di garantire che il client si connetta solo a servizi ritenuti attendibili.</span><span class="sxs-lookup"><span data-stu-id="a93c1-140">The client should use security to ensure that it only connects to services it trusts.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6f5b9-141">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="6f5b9-141">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="a93c1-141">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a93c1-141">See Also</span></span>  
  <xref:System.ServiceModel.WSDualHttpSecurity>  
  <xref:System.ServiceModel.BasicHttpSecurity>  
- [<span data-ttu-id="6f5b9-142">Protezione di servizi e client</span><span class="sxs-lookup"><span data-stu-id="6f5b9-142">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [<span data-ttu-id="6f5b9-143">Associazioni</span><span class="sxs-lookup"><span data-stu-id="6f5b9-143">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
- [<span data-ttu-id="6f5b9-144">Configurazione di associazioni fornite dal sistema</span><span class="sxs-lookup"><span data-stu-id="6f5b9-144">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [<span data-ttu-id="6f5b9-145">Uso di associazioni per configurare servizi e client</span><span class="sxs-lookup"><span data-stu-id="6f5b9-145">Using Bindings to Configure Services and Clients</span></span>](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [<span data-ttu-id="6f5b9-146">\<binding></span><span class="sxs-lookup"><span data-stu-id="6f5b9-146">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)
+ [<span data-ttu-id="a93c1-142">Protezione di servizi e client</span><span class="sxs-lookup"><span data-stu-id="a93c1-142">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [<span data-ttu-id="a93c1-143">Associazioni</span><span class="sxs-lookup"><span data-stu-id="a93c1-143">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="a93c1-144">Configurazione di associazioni fornite dal sistema</span><span class="sxs-lookup"><span data-stu-id="a93c1-144">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [<span data-ttu-id="a93c1-145">Uso di associazioni per configurare servizi e client</span><span class="sxs-lookup"><span data-stu-id="a93c1-145">Using Bindings to Configure Services and Clients</span></span>](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
+ [<span data-ttu-id="a93c1-146">\<binding></span><span class="sxs-lookup"><span data-stu-id="a93c1-146">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)

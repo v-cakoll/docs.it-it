@@ -1,31 +1,36 @@
 ---
 title: Operatori vari (Visual Basic)
-ms.date: 07/20/2015
+ms.date: 10/18/2018
 helpviewer_keywords:
 - operators [Visual Basic]
 - operators [Visual Basic], miscellaneous
 ms.assetid: 2423b3c5-fc3f-479c-bcd2-2c6ebe92814f
-ms.openlocfilehash: 97a6612b1dddda17c2200a0073e5c1baa16cf0a1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ac01bf81926fcf8068d1d648486cfb61fba52cf0
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33598254"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453096"
 ---
-# <a name="miscellaneous-operators-visual-basic"></a><span data-ttu-id="8c9bf-102">Operatori vari (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8c9bf-102">Miscellaneous Operators (Visual Basic)</span></span>
-<span data-ttu-id="8c9bf-103">Di seguito sono riportati vari operatori definiti in Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="8c9bf-103">The following are miscellaneous operators defined in Visual Basic.</span></span>  
+# <a name="miscellaneous-operators-visual-basic"></a><span data-ttu-id="521fe-102">Operatori vari (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="521fe-102">Miscellaneous operators (Visual Basic)</span></span>
+<span data-ttu-id="521fe-103">Di seguito sono riportati vari operatori definiti in Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="521fe-103">The following are miscellaneous operators defined in Visual Basic.</span></span>  
   
- [<span data-ttu-id="8c9bf-104">Operatore AddressOf</span><span class="sxs-lookup"><span data-stu-id="8c9bf-104">AddressOf Operator</span></span>](../../../visual-basic/language-reference/operators/addressof-operator.md)  
+[<span data-ttu-id="521fe-104">?. operatore condizionale null</span><span class="sxs-lookup"><span data-stu-id="521fe-104">?. null-conditional operator</span></span>](null-conditional-operators.md)
+
+[<span data-ttu-id="521fe-105">? operatore condizionale null)</span><span class="sxs-lookup"><span data-stu-id="521fe-105">?() null-conditional operator</span></span>](null-conditional-operators.md)
+
+ [<span data-ttu-id="521fe-106">Operatore AddressOf</span><span class="sxs-lookup"><span data-stu-id="521fe-106">AddressOf operator</span></span>](../../../visual-basic/language-reference/operators/addressof-operator.md)  
   
- [<span data-ttu-id="8c9bf-105">Operatore Await</span><span class="sxs-lookup"><span data-stu-id="8c9bf-105">Await Operator</span></span>](../../../visual-basic/language-reference/operators/await-operator.md)  
+ [<span data-ttu-id="521fe-107">Await (operatore)</span><span class="sxs-lookup"><span data-stu-id="521fe-107">Await operator</span></span>](../../../visual-basic/language-reference/operators/await-operator.md)  
   
- [<span data-ttu-id="8c9bf-106">Operatore GetType</span><span class="sxs-lookup"><span data-stu-id="8c9bf-106">GetType Operator</span></span>](../../../visual-basic/language-reference/operators/gettype-operator.md)  
+ [<span data-ttu-id="521fe-108">Operatore GetType</span><span class="sxs-lookup"><span data-stu-id="521fe-108">GetType operator</span></span>](../../../visual-basic/language-reference/operators/gettype-operator.md)  
   
- [<span data-ttu-id="8c9bf-107">Espressione di funzione</span><span class="sxs-lookup"><span data-stu-id="8c9bf-107">Function Expression</span></span>](../../../visual-basic/language-reference/operators/function-expression.md)  
+ [<span data-ttu-id="521fe-109">Espressione di funzione</span><span class="sxs-lookup"><span data-stu-id="521fe-109">Function expression</span></span>](../../../visual-basic/language-reference/operators/function-expression.md)  
+
+ [<span data-ttu-id="521fe-110">Se operatore</span><span class="sxs-lookup"><span data-stu-id="521fe-110">If operator</span></span>](../../../visual-basic/language-reference/operators/if-operator.md)  
   
- [<span data-ttu-id="8c9bf-108">Operatore If</span><span class="sxs-lookup"><span data-stu-id="8c9bf-108">If Operator</span></span>](../../../visual-basic/language-reference/operators/if-operator.md)  
+ [<span data-ttu-id="521fe-111">Operatore TypeOf</span><span class="sxs-lookup"><span data-stu-id="521fe-111">TypeOf operator</span></span>](../../../visual-basic/language-reference/operators/typeof-operator.md)  
   
- [<span data-ttu-id="8c9bf-109">Operatore TypeOf</span><span class="sxs-lookup"><span data-stu-id="8c9bf-109">TypeOf Operator</span></span>](../../../visual-basic/language-reference/operators/typeof-operator.md)  
-  
-## <a name="see-also"></a><span data-ttu-id="8c9bf-110">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="8c9bf-110">See Also</span></span>  
- [<span data-ttu-id="8c9bf-111">Elenco degli operatori per funzionalità</span><span class="sxs-lookup"><span data-stu-id="8c9bf-111">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+## <a name="see-also"></a><span data-ttu-id="521fe-112">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="521fe-112">See Also</span></span>
+
+ [<span data-ttu-id="521fe-113">Elencata degli operatori per funzionalità</span><span class="sxs-lookup"><span data-stu-id="521fe-113">Operators listed by functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
