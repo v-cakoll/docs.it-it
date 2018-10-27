@@ -3,11 +3,11 @@ title: Estensibilità della sicurezza
 ms.date: 03/30/2017
 ms.assetid: 2afe044d-df4a-49a4-9865-38700474c3dd
 ms.openlocfilehash: afb11d240c25e6b9dbfd5b5c0a63759af8c534f5
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
-ms.translationtype: HT
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50041676"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50193578"
 ---
 # <a name="security-extensibility"></a>Estensibilità della sicurezza
 In questa sezione è inclusi esempi che descrivono la sicurezza personalizzata in Windows Communication Foundation (WCF).  

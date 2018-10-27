@@ -2,12 +2,12 @@
 title: 'Introduzione a F # in Visual Studio Code'
 description: 'Informazioni su come utilizzare F # con Visual Studio Code e Ionide plug-in suite.'
 ms.date: 05/28/2018
-ms.openlocfilehash: 1afe985a4fe73d18b1e47b071b119c15a4672022
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: e962be2796cf0d6eb90d459730659e492f864716
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874351"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192668"
 ---
 # <a name="get-started-with-f-in-visual-studio-code"></a>Introduzione a F # in Visual Studio Code
 
@@ -19,7 +19,7 @@ Per iniziare, assicurarsi di aver [F # e il plug-in Ionide correttamente install
 
 Per creare un nuovo progetto F #, aprire Visual Studio Code in una nuova cartella (è possibile specificare un nome qualsiasi).
 
-Successivamente, aprire la tavolozza delle comando (**Vista > tavolozza delle comando**) e digitare il comando seguente:
+Successivamente, aprire il riquadro comandi (**Visualizza > riquadro comandi**) e digitare il comando seguente:
 
 ```
 > F# new project

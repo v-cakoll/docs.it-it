@@ -8,14 +8,12 @@ helpviewer_keywords:
 - settings element
 - <settings> element
 ms.assetid: 189ce989-c39b-427d-b004-6b82a668b931
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 9d6189c736e1f2843a986c3a96f8547e9a231db0
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 87a944eca6ea4158f15c9911c6b13fd4d3c0921d
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48033233"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50191953"
 ---
 # <a name="ltsettingsgt-element-network-settings"></a>&lt;impostazioni&gt; (impostazioni di rete)
 Configura le opzioni di rete di base per lo spazio dei nomi <xref:System.Net?displayProperty=nameWithType>.  
@@ -68,5 +66,5 @@ Configura le opzioni di rete di base per lo spazio dei nomi <xref:System.Net?dis
  Questo elemento può essere usato nel file di configurazione dell'applicazione o nel file di configurazione del computer (Machine.config).  
   
 ## <a name="see-also"></a>Vedere anche  
- <xref:System.Net?displayProperty=nameWithType>  
- [Schema delle impostazioni di rete](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- <xref:System.Net?displayProperty=nameWithType>  
+- [Schema delle impostazioni di rete](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

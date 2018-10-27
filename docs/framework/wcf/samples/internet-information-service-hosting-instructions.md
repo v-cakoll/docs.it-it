@@ -3,11 +3,11 @@ title: Istruzioni per l'hosting su IIS (Internet Information Services)
 ms.date: 03/30/2017
 ms.assetid: 959a21c8-9d9d-4757-b255-4e57793ae9d6
 ms.openlocfilehash: 303fe47df987901b09cee8cc4292f12bcda2b74d
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
-ms.translationtype: HT
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50040004"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194007"
 ---
 # <a name="internet-information-service-hosting-instructions"></a>Istruzioni per l'hosting su IIS (Internet Information Services)
 Per eseguire gli esempi ospitati su Internet Information Services (IIS) è necessario assicurarsi che IIS sia installato correttamente e sia in esecuzione.  

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
-ms.openlocfilehash: 84640387e6d77e02d3b0d19b73c0d2b20d8d8831
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: c3f979d26c7e9c36fc242476ae5b3420b2e7d3ac
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48848309"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194085"
 ---
 # <a name="using-message-contracts"></a>Utilizzo dei contratti di messaggio
 In genere durante la compilazione di applicazioni Windows Communication Foundation (WCF), gli sviluppatori prestare particolare attenzione alle strutture dei dati e alle problematiche di serializzazione e non sono necessario occuparsi della struttura dei messaggi in cui sono trasportati i dati. Per queste applicazioni, la creazione dei contratti dati per i parametri o dei valori restituiti è semplice. (Per altre informazioni, vedere [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).)  
@@ -145,8 +145,8 @@ public class BankingTransaction
 ## <a name="controlling-whether-the-soap-body-parts-are-wrapped"></a>Controllo dell'incapsulamento di parti di corpo SOAP  
  Per impostazione predefinita, le parti di corpo SOAP vengono serializzate in un elemento incapsulato. Nel codice seguente, ad esempio, viene illustrato l'elemento wrapper `HelloGreetingMessage` generato dal nome del tipo <xref:System.ServiceModel.MessageContractAttribute> nel contratto di messaggio per il messaggio `HelloGreetingMessage`.  
   
- [!code-csharp[MessageHeaderAttribute#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/messageheaderattribute/cs/services.cs#3)]
- [!code-vb[MessageHeaderAttribute#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/messageheaderattribute/vb/services.vb#3)]  
+[!code-csharp[MessageHeaderAttribute#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/messageheaderattribute/cs/services.cs#3)]
+[!code-vb[MessageHeaderAttribute#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/messageheaderattribute/vb/services.vb#3)]  
   
  Per sopprimere l'elemento wrapper, impostare la proprietà <xref:System.ServiceModel.MessageContractAttribute.IsWrapped%2A> su `false`. Per controllare il nome e lo spazio dei nomi dell'elemento wrapper, utilizzare le proprietà <xref:System.ServiceModel.MessageContractAttribute.WrapperName%2A> e <xref:System.ServiceModel.MessageContractAttribute.WrapperNamespace%2A>.  
   
