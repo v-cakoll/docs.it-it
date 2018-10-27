@@ -12,14 +12,12 @@ helpviewer_keywords:
 - arithmetic operators [Visual Basic], Mod
 - math operators [Visual Basic]
 ms.assetid: 6ff7e40e-cec8-4c77-bff6-8ddd2791c25b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 456c19fc8e28517a0662b58e338028e1c75cd8c8
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: a04a294d5505180a41edeba4643d25667a301c1d
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47424402"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50170809"
 ---
 # <a name="mod-operator-visual-basic"></a>Operatore Mod (Visual Basic)
 Divide due numeri e restituisce solo il resto.  
@@ -90,7 +88,7 @@ End Module
  Quando si lavora con numeri a virgola mobile, tenere presente che non sempre hanno una rappresentazione decimale precisa in memoria. Questo può causare risultati imprevisti da determinate operazioni, ad esempio il confronto dei valori e `Mod` operatore. Per altre informazioni, vedere [tipi di dati di risoluzione dei problemi](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
   
 ## <a name="overloading"></a>Overload  
- Il `Mod` operatore può essere *sottoposto a overload*, il che significa che una classe o struttura può ridefinire il relativo comportamento. Se il codice applica `Mod` a un'istanza di una classe o struttura che include un overload di questo tipo, assicurarsi di comprendere il comportamento ridefinito. Per altre informazioni, vedere [routine di operatore](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ Il `Mod` operatore può essere *sottoposto a overload*, il che significa che una classe o struttura può ridefinire il relativo comportamento. Se il codice applica `Mod` a un'istanza di una classe o struttura che include un overload di questo tipo, assicurarsi di comprendere il comportamento ridefinito. Per altre informazioni, vedere [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Esempio  
  L'esempio seguente usa il `Mod` operatore divide due numeri e restituisce solo il resto. Se uno dei due numeri sono un numero a virgola mobile, il risultato è un numero a virgola mobile che rappresenta il resto.  

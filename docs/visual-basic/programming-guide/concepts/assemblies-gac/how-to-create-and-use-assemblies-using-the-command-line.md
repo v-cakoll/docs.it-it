@@ -1,17 +1,15 @@
 ---
-title: 'Procedura: creare e utilizzare assembly dalla riga di comando (Visual Basic)'
+title: 'Procedura: creare e usare assembly dalla riga di comando (Visual Basic)'
 ms.date: 03/14/2018
 ms.assetid: 229ff9fb-1bd1-403b-946b-526104864c60
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c02f694da4e03b666fa88ea6db8ddb2db4c9637d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: 3b9d3c45168020f22f7e263fdf59454e3789dd9e
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643289"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50036931"
 ---
-# <a name="how-to-create-and-use-assemblies-using-the-command-line-visual-basic"></a>Procedura: creare e utilizzare assembly dalla riga di comando (Visual Basic)
+# <a name="how-to-create-and-use-assemblies-using-the-command-line-visual-basic"></a>Procedura: creare e usare assembly dalla riga di comando (Visual Basic)
 Un assembly, o libreria a collegamento dinamico (DLL), viene collegato al programma in fase di esecuzione. Per illustrare la creazione e l'uso di una DLL, si consideri lo scenario seguente:  
   
 -   `MathLibrary.DLL`: il file libreria che contiene i metodi da chiamare in fase di esecuzione. In questo esempio la DLL contiene due metodi: `Add` e `Multiply`.  
@@ -83,7 +81,7 @@ End Module
   
  Questo file contiene l'algoritmo che usa i metodi della DLL: `Add` e `Multiply`. Inizia con l'analisi degli argomenti immessi dalla riga di comando: `num1` e `num2`. Quindi calcola la somma usando il metodo `Add` sulla classe `AddClass` e il prodotto usando il metodo `Multiply` sulla classe `MultiplyClass`.  
   
- Si noti che il `Imports` istruzione all'inizio del file consente di utilizzare i nomi di classe non qualificati per fare riferimento ai metodi della DLL in fase di compilazione, come indicato di seguito:  
+ Si noti che il `Imports` istruzione all'inizio del file consente di usare i nomi di classe non qualificati per fare riferimento ai metodi della DLL in fase di compilazione, come indicato di seguito:  
   
 ```vb  
 MultiplyClass.Multiply(num1, num2)  
@@ -107,7 +105,7 @@ UtilityMethods.MultiplyClass.Multiply(num1, num2)
 vbc -target:library -out:MathLibrary.DLL Add.vb Mult.vb  
 ```  
   
- Il [-destinazione (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/target.md) opzione del compilatore indica al compilatore di generare un file DLL anziché un file EXE. Il [-out (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/out.md) opzione del compilatore seguito da un nome di file utilizzato per specificare il nome del file DLL. In caso contrario il compilatore usa il primo file (`Add.vb`) come nome della DLL.  
+ Il [-target (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/target.md) opzione del compilatore indica al compilatore di generare un file DLL anziché un file EXE. Il [-out (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/out.md) opzione del compilatore seguita da un nome di file consente di specificare il nome del file DLL. In caso contrario il compilatore usa il primo file (`Add.vb`) come nome della DLL.  
   
  Per compilare il file eseguibile, `TestCode.exe`, usare la seguente riga di comando:  
   
@@ -115,9 +113,9 @@ vbc -target:library -out:MathLibrary.DLL Add.vb Mult.vb
 vbc -out:TestCode.exe -reference:MathLibrary.DLL TestCode.vb  
 ```  
   
- Il **-out** l'opzione del compilatore indica al compilatore di generare un file EXE e specifica il nome del file di output (`TestCode.exe`). Questa opzione del compilatore è opzionale. Il [-riferimenti (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md) opzione del compilatore specifica i file DLL che utilizza questo programma.  
+ Il **-out** l'opzione del compilatore indica al compilatore di generare un file EXE e specifica il nome del file di output (`TestCode.exe`). Questa opzione del compilatore è opzionale. Il [-riferimenti (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md) opzione del compilatore specifica i file DLL utilizzati dal programma.  
   
- Per ulteriori informazioni sulla compilazione dalla riga di comando, vedere e [compilazione dalla riga di comando](../../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md).  
+ Per altre informazioni sulla compilazione dalla riga di comando, vedere e [compilazione dalla riga di comando](../../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Nozioni di base sulla programmazione](../../../../visual-basic/programming-guide/concepts/index.md)  

@@ -7,17 +7,15 @@ helpviewer_keywords:
 - -debug compiler option [Visual Basic]
 - debug compiler option [Visual Basic]
 ms.assetid: c2b0bea5-1d5e-499f-9bd5-4f6c6b715ea2
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 18d74b8f0a7b319e08780a8db9175c7be16d932e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: 92ff9c5ea7352506c1949a77b4fb6291d63758d7
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33654148"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50040335"
 ---
 # <a name="-debug-visual-basic"></a>-debug (Visual Basic)
-Indica al compilatore di generare informazioni di debug e di inserirlo nei file di output.  
+Indica al compilatore di generare informazioni di debug e inserirle nel file di output.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -31,13 +29,13 @@ Indica al compilatore di generare informazioni di debug e di inserirlo nei file 
   
 |Termine|Definizione|  
 |---|---|  
-|`+` &#124; `-`|Facoltativo. Specifica di `+` o `/debug` indica al compilatore di generare informazioni di debug e inserirle in un file con estensione pdb. Specifica di `-` ha lo stesso effetto della mancata specifica `/debug`.|  
-|`full` &#124; `pdbonly`|Facoltativo. Specifica il tipo di informazioni di debug generate dal compilatore. Se non si specifica `/debug:pdbonly`, il valore predefinito è `full`, che consente di collegare un debugger al programma in esecuzione. Il `pdbonly` argomento consente il debug del codice sorgente quando il programma viene avviato nel debugger, ma in linguaggio assembly viene visualizzato solo quando il programma in esecuzione è collegato il debugger.|  
+|`+` &#124; `-`|Facoltativo. Che specifica `+` o `/debug` indica al compilatore di generare informazioni di debug e inserirle in un file con estensione pdb. Che specifica `-` ha lo stesso effetto se non si specifica `/debug`.|  
+|`full` &#124; `pdbonly`|Facoltativo. Specifica il tipo di informazioni di debug generate dal compilatore. Se non si specifica `/debug:pdbonly`, il valore predefinito è `full`, che consente di allegare un debugger al programma in esecuzione. Il `pdbonly` argomento consente il debug di codice sorgente quando il programma viene avviato nel debugger, ma viene visualizzato codice in linguaggio assembly solo quando il programma in esecuzione è collegato al debugger.|  
   
 ## <a name="remarks"></a>Note  
  Usare questa opzione per creare build di debug. Se non si specifica `/debug`, `/debug+`, o `/debug:full`, non sarà possibile eseguire il debug di file di output del programma.  
   
- Per impostazione predefinita, le informazioni di debug non viene generata (`/debug-`). Per generare informazioni di debug, specificare `/debug` o `/debug+`.  
+ Per impostazione predefinita, le informazioni di debug non generate (`/debug-`). Per generare informazioni di debug, specificare `/debug` o `/debug+`.  
   
  Per informazioni su come configurare le prestazioni di debug di un'applicazione, vedere [Semplificazione del debug di un'immagine](../../../framework/debug-trace-profile/making-an-image-easier-to-debug.md).  
   
@@ -46,7 +44,7 @@ Indica al compilatore di generare informazioni di debug e di inserirlo nei file 
 |1.  Con un progetto selezionato in **Esplora soluzioni**, scegliere **Proprietà** dal menu **Progetto**. <br />2.  Fare clic sulla scheda **Compila**.<br />3.  Fare clic su **Opzioni di compilazione avanzate**.<br />4.  Modificare il valore di **genera informazioni di Debug** casella.|  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente inserisce informazioni di debug nel file di output `App.exe`.  
+ Nell'esempio seguente inserisce le informazioni di debug nel file di output `App.exe`.  
   
 ```  
 vbc -debug -out:app.exe test.vb  

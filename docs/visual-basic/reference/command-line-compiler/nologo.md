@@ -7,17 +7,15 @@ helpviewer_keywords:
 - nologo compiler option [Visual Basic]
 - /nologo compiler option [Visual Basic]
 ms.assetid: 25ef54b6-d676-4639-a2d2-a747a158bc07
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 011c9499eaa728588e6181e33a96dd75b4a7b84b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 21c708ef632cc0ed923713cd49e22d44848b4db3
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33648541"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50037282"
 ---
 # <a name="-nologo-visual-basic"></a>-nologo (Visual Basic)
-Evita la visualizzazione di informazioni sul copyright e sui messaggi informativi durante la compilazione.  
+Evita la visualizzazione del banner del copyright e i messaggi informativi durante la compilazione.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -26,13 +24,13 @@ Evita la visualizzazione di informazioni sul copyright e sui messaggi informativ
 ```  
   
 ## <a name="remarks"></a>Note  
- Se si specifica `-nologo`, il compilatore non visualizza informazioni sul copyright. Per impostazione predefinita, l'opzione `-nologo` non è attiva.  
+ Se si specifica `-nologo`, il compilatore non viene visualizzato un banner del copyright. Per impostazione predefinita, l'opzione `-nologo` non è attiva.  
   
 > [!NOTE]
->  Il `-nologo` opzione non è disponibile all'interno dell'ambiente di sviluppo di Visual Studio; è disponibile solo durante la compilazione dalla riga di comando.  
+>  Il `-nologo` opzione non è disponibile all'interno dell'ambiente di sviluppo di Visual Studio, è disponibile solo durante la compilazione dalla riga di comando.  
   
 ## <a name="example"></a>Esempio  
- Il codice seguente Compila `T2.vb` e non visualizza informazioni sul copyright.  
+ Il codice seguente Compila `T2.vb` e non viene visualizzato un banner del copyright.  
   
 ```console
 vbc -nologo t2.vb  

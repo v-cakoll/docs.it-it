@@ -14,15 +14,16 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4ca28c0c440ea67716244670e2b636a3099987e1
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5146b0756d1aace14a294436a38b8d0e3e689c76
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452953"
 ---
 # <a name="datamemberfieldeditor-class"></a>Classe DataMemberFieldEditor
 
-Fornisce l'interfaccia utente per la modifica delle proprietà degli oggetti associati a dati, elencando tutte le proprietà del `DataSource` oggetto da selezionare l'origine del valore da.  
+Fornisce l'interfaccia utente per la modifica delle proprietà degli oggetti associati a dati elencando tutte le proprietà del `DataSource` per selezionare l'origine del valore dall'oggetto.  
   
 ## <a name="syntax"></a>Sintassi
   
@@ -31,13 +32,13 @@ internal class DataMemberFieldEditor : UITypeEditor
 ```
 
 > [!WARNING]
-> La `DataMemberFieldEditor` classe è interno e non ha significato essere utilizzato direttamente nel codice.
+> Il `DataMemberFieldEditor` classe è interno e non adatti a essere utilizzato direttamente nel codice.
 > 
-> Microsoft non supporta l'utilizzo di questa classe in un'applicazione di produzione in qualsiasi circostanza.
+> Microsoft non supporta l'uso di questa classe in un'applicazione di produzione in alcuna circostanza.
 
 ## <a name="requirements"></a>Requisiti
 
-**Namespace:** <xref:System.Windows.Forms.Design?displayProperty=nameWithType>  
+**Spazio dei nomi:** <xref:System.Windows.Forms.Design?displayProperty=nameWithType>  
   
 **Assembly:** Design (in Design)  
   
@@ -45,4 +46,4 @@ internal class DataMemberFieldEditor : UITypeEditor
   
 ## <a name="see-also"></a>Vedere anche
 
-<xref:System.Windows.Forms.Design?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.Design?displayProperty=nameWithType>

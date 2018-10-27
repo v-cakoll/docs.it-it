@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Data Contract
 ms.assetid: b124e9e0-cb73-4ae0-b9c3-e6cdf5eced98
-ms.openlocfilehash: a170423a5ae132c70710e22b5d61f57c46fdfc28
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: c2f16f74638341cfe6c6d0f3b25967082fc99c97
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43523764"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50180166"
 ---
 # <a name="basic-data-contract"></a>Contratto dati di base
 In questo esempio viene illustrato come implementare un contratto dati. I contratti dati consentono di passare dati strutturati a e da i servizi. In questo esempio si basa sul [introduttiva](../../../../docs/framework/wcf/samples/getting-started-sample.md) ma utilizza numeri complessi anziché tipi numerici di base.  
@@ -21,7 +21,7 @@ In questo esempio viene illustrato come implementare un contratto dati. I contra
   
  Il contratto di servizio per questo servizio utilizza numeri complessi, come illustrato nell'esempio di codice seguente.  
   
-```  
+```csharp
 // Define a service contract.  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface ICalculator  
@@ -39,7 +39,7 @@ public interface ICalculator
   
  Gli attributi <xref:System.Runtime.Serialization.DataContractAttribute> e <xref:System.Runtime.Serialization.DataMemberAttribute> sono stati applicati alla definizione della classe `ComplexNumber` per indicare quali campi della classe possono passare nella rete tra il client e il servizio, come illustrato nell'esempio di codice seguente.  
   
-```  
+```csharp
 [DataContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public class ComplexNumber  
 {  
@@ -58,7 +58,7 @@ public class ComplexNumber
   
  L'implementazione del servizio calcola e restituisce il risultato appropriato, accettando e restituendo numeri di tipo `ComplexNumber`.  
   
-```  
+```csharp
 // This is the service class that implements the service contract.  
 public class CalculatorService : ICalculator  
 {  
@@ -97,16 +97,20 @@ public class CalculatorService : ICalculator
   
  Anche l'implementazione del client utilizza numeri complessi. Il contratto di servizio e il contratto dati sono definiti nel file di origine generatedClient.cs, generato dal [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) dai metadati del servizio.  
   
-```  
+```csharp
 // Create a client.  
 DataContractCalculatorClient client = new DataContractCalculatorClient();  
 // Call the Add service operation.  
-ComplexNumber value1 = new ComplexNumber();   
-value1.Real = 1;   
-value1.Imaginary = 2;  
-ComplexNumber value2 = new ComplexNumber();   
-value2.Real = 3;  
-value2.Imaginary = 4;  
+ComplexNumber value1 = new ComplexNumber() 
+                    {
+                        Real = 1,   
+                        Imaginary = 2  
+                    };  
+ComplexNumber value2 = new ComplexNumber() 
+                    {
+                        Real = 3,  
+                        Imaginary = 4  
+                    };   
 ComplexNumber result = proxy.Add(value1, value2);  
 Console.WriteLine("Add({0} + {1}i, {2} + {3}i) = {4} + {5}i",  
       value1.Real, value1.Imaginary, value2.Real, value2.Imaginary,   
@@ -117,7 +121,7 @@ Console.WriteLine("Add({0} + {1}i, {2} + {3}i) = {4} + {5}i",
   
  Quando si esegue l'esempio, le richieste e le risposte dell'operazione vengono visualizzate nella finestra della console client. Premere INVIO nella finestra del client per arrestare il client.  
   
-```  
+```console  
 Add(1 + 2i, 3 + 4i) = 4 + 6i  
 Subtract(1 + 2i, 3 + 4i) = -2 + -2i  
 Multiply(2 + 3i, 4 + 7i) = -13 + 26i  

@@ -2,14 +2,12 @@
 title: '&lt;URI&gt; (impostazioni Uri)'
 ms.date: 03/30/2017
 ms.assetid: c22bab8b-477c-4ae4-8498-65ad409e0847
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: a58c27500c0258415c12a5fd8e552b3ee43f50e8
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
-ms.translationtype: MT
+ms.openlocfilehash: 3663fdc995be216351a1ce49ae86e5067d64144f
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48033207"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50035866"
 ---
 # <a name="lturigt-element-uri-settings"></a>&lt;URI&gt; (impostazioni Uri)
 Contiene le impostazioni che specificano come .NET Framework gestisce gli indirizzi web espressi tramite uniform resource identifier (URI).  

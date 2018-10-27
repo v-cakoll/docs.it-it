@@ -1,26 +1,26 @@
 ---
-title: 'Programmazione asincrona in F #'
-description: 'Informazioni su come la programmazione asincrona F # viene eseguita tramite un modello di programmazione a livello di linguaggio che è facile da usare e il linguaggio naturale.'
+title: Il linguaggio di programmazione asincronaF#
+description: Informazioni su come F# programmazione asincrona viene eseguita tramite un modello di programmazione a livello di linguaggio naturale per la lingua e facile da usare.
 ms.date: 06/20/2016
-ms.openlocfilehash: 93ecd05efc493489435214dcd7ae78fffcccec1f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: de07f1252df56e3dfec5ea7a34a283b1c9508523
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566873"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50034423"
 ---
-# <a name="async-programming-in-f"></a>Programmazione asincrona in F # #
+# <a name="async-programming-in-f"></a>Il linguaggio di programmazione asincronaF# #
 
 > [!NOTE]
-> Alcune imprecisioni sono stati individuati in questo articolo.  Da riscrivere.  Vedere [problema #666](https://github.com/dotnet/docs/issues/666) per informazioni sulle modifiche.
+> Alcune imprecisioni sono stati individuati in questo articolo.  Si viene riscritta.  Visualizzare [problema & 666](https://github.com/dotnet/docs/issues/666) per informazioni sulle modifiche.
 
-Programmazione F # può essere eseguita tramite un modello di programmazione a livello di linguaggio progettato per essere facile da usare e il linguaggio naturale.
+Async programming in F# può essere eseguita tramite un modello di programmazione a livello di linguaggio progettato per essere facile da usare e il linguaggio naturale.
 
-La base della programmazione asincrona in F # è `Async<'T>`, una rappresentazione di lavoro che può essere attivata per l'esecuzione in background, in cui `'T` è il tipo restituito tramite speciale `return` (parola chiave) o `unit` se non include il flusso di lavoro asincroni risultato da restituire.
+Il nucleo della programmazione F# viene `Async<'T>`, una rappresentazione di lavoro che può essere attivato per l'esecuzione in background, in cui `'T` è il tipo restituito tramite la speciale `return` (parola chiave) o `unit` se il flusso di lavoro asincroni non produce alcun risultato da restituire.
 
-Il concetto chiave per comprendere è che il tipo dell'espressione async `Async<'T>`, che è semplicemente un _specifica_ di lavoro da eseguire in un contesto asincrono. Non viene eseguita finché non viene esplicitamente avviata con una delle funzioni iniziale (ad esempio `Async.RunSynchronously`). Si tratta di un modo diverso pensare di eseguire il lavoro, alla fine viene piuttosto semplice in pratica.
+Il concetto chiave da comprendere è che il tipo dell'espressione async è `Async<'T>`, che è semplicemente un _specification_ del lavoro da eseguire in un contesto asincrono. Non viene eseguita fino a quando non è esplicitamente avviarlo con una delle funzioni iniziale (ad esempio `Async.RunSynchronously`). Anche se si tratta di pensare a lavorare in modo diverso, finisce per essere piuttosto semplice in pratica.
 
-Ad esempio, che si desidera scaricare il codice HTML da dotnetfoundation.org senza bloccare il thread principale. È possibile ottenere questo risultato simile al seguente:
+Ad esempio che si vuole scaricare il codice HTML da dotnetfoundation.org senza bloccare il thread principale. È possibile ottenere questo risultato simile al seguente:
 
 ```fsharp
 open System
@@ -41,23 +41,23 @@ let html = "https://dotnetfoundation.org" |> fetchHtmlAsync |> Async.RunSynchron
 printfn "%s" html
 ```
 
-E questo è sufficiente. A parte l'utilizzo di `async`, `let!`, e `return`, si tratta solo normale codice F #.
+E questo è sufficiente. A parte l'utilizzo di `async`, `let!`, e `return`, questo è solo normale F# codice.
 
 Esistono alcuni costrutti sintattici che vale la pena notare:
 
-*   `let!` Associa il risultato di un'espressione async (che viene eseguito in un altro contesto).
-*   `use!` funziona come `let!`, ma elimina le risorse associate, quando esce dall'ambito.
+*   `let!` Associa il risultato di un'espressione di async (che viene eseguito in un altro contesto).
+*   `use!` funziona come `let!`, ma elimina le risorse associate quando esce dall'ambito.
 *   `do!` attende un flusso di lavoro asincrono non restituisce alcun valore.
-*   `return` Restituisce semplicemente un risultato da un'espressione di tipo asincrono.
-*   `return!` esegue un altro flusso di lavoro asincrono e restituisce il valore restituito come risultato.
+*   `return` Restituisce semplicemente un risultato da un'espressione di async.
+*   `return!` esegue un altro flusso di lavoro asincrono e restituisce il relativo valore restituito come risultato.
 
-Inoltre, normale `let`, `use`, e `do` parole chiave possono essere utilizzate con le versioni asincrone come se fossero in una funzione normale.
+Inoltre, normal `let`, `use`, e `do` parole chiave possono essere usate insieme le versioni asincrone esattamente come accade in una funzione normale.
 
-## <a name="how-to-start-async-code-in-f"></a>Come avviare codice asincrono in F # #
+## <a name="how-to-start-async-code-in-f"></a>Come avviare il codice asincrono inF# #
 
-Come accennato in precedenza, il codice asincrono è una specifica di lavoro da eseguire in un altro contesto che deve essere avviata in modo esplicito. Di seguito sono due modi principali per ottenere questo risultato:
+Come accennato in precedenza, il codice asincrono è una specifica di lavoro da eseguire in un altro contesto che deve essere avviata in modo esplicito. Di seguito sono due modi principali per eseguire questa operazione:
 
-1.  `Async.RunSynchronously` Avvia un flusso di lavoro asincrono in un altro thread e attendere il risultato.
+1.  `Async.RunSynchronously` Avvia un flusso di lavoro asincrono in un altro thread e attende il relativo risultato.
 
 ```fsharp
 open System
@@ -99,17 +99,17 @@ Async.Start(workflow)
 printfn "%s" "uploadDataAsync is running in the background..."
  ```
 
-Esistono altri modi per avviare un flusso di lavoro asincroni disponibile per gli scenari più specifici. Sono descritti in dettaglio [negli argomenti di riferimento Async](https://msdn.microsoft.com/library/ee370232.aspx).
+Esistono altri modi per avviare un flusso di lavoro asincroni disponibile per gli scenari più specifici. Sono descritti in dettaglio [nel riferimento Async](https://msdn.microsoft.com/library/ee370232.aspx).
 
 ### <a name="a-note-on-threads"></a>Nota sulla thread
 
-La frase "in un altro thread" è indicata in precedenza, ma è importante sapere che **ciò non significa che i flussi di lavoro asincroni sono facciata per il multithreading**. Il flusso di lavoro effettivamente "passa" tra thread, richiesta di finanziamenti per una piccola quantità di tempo per eseguire operazioni utili. Quando un flusso di lavoro asincrono è in modo efficace "in attesa" (ad esempio, in attesa di una chiamata di rete restituire un valore), qualsiasi thread che è stata richiesta di finanziamenti al momento viene liberata fino a passare eseguire operazioni utili in un altro elemento. Questo consente di flussi di lavoro asincroni utilizzare il sistema in cui in che vengono eseguiti nel modo e li rende particolarmente efficaci per gli scenari dei / o di volumi elevati.
+La frase "in un altro thread" è indicato in precedenza, ma è importante sapere che **ciò non significa che i flussi di lavoro asincroni sono un'interfaccia per il multithreading**. Il flusso di lavoro effettivamente "passa" tra i thread, richiesta di finanziamenti per una piccola quantità di tempo per eseguire operazioni utili. Quando un flusso di lavoro asincrono è effettivamente "in attesa" (ad esempio, in attesa di una chiamata di rete restituire un valore), uno o più thread che è stata richiesta di finanziamenti al momento viene liberata fino a passare eseguire operazioni utili per qualcos'altro. Ciò consente asincrona dei flussi di lavoro usano il sistema che vengono eseguiti nel modo e li rende particolarmente efficaci per gli scenari dei / o di volumi elevati.
 
-## <a name="how-to-add-parallelism-to-async-code"></a>Come aggiungere codice asincrono di parallelismo
+## <a name="how-to-add-parallelism-to-async-code"></a>Come aggiungere il parallelismo a codice asincrono
 
-In alcuni casi può necessario per eseguire più processi asincroni in parallelo, raccogliere i risultati e interpretati in qualche modo. `Async.Parallel` Consente di eseguire queste operazioni senza dover usare Task Parallel Library, che comporta la necessità di forzare `Task<'T>` e `Async<'T>` tipi.
+In alcuni casi potrebbe necessarie per eseguire più operazioni asincrone in parallelo, raccogliere i risultati e interpretarli in qualche modo. `Async.Parallel` Consente di eseguire questa operazione senza dover usare Task Parallel Library, che comporta la necessità di soggetti a coercizione `Task<'T>` e `Async<'T>` tipi.
 
-Nell'esempio seguente utilizzerà `Async.Parallel` per scaricare il codice HTML da quattro parti comuni in parallelo, attendere il completamento di tali attività e quindi stampare il codice HTML che è stato scaricato.
+Nell'esempio seguente userà `Async.Parallel` per scaricare il codice HTML da quattro parti più diffusi in parallelo, attendere il completamento di tali attività e quindi stampa l'HTML che è stato scaricato.
 
 ```fsharp
 open System
@@ -144,48 +144,48 @@ for html in htmlList do
 
 ## <a name="important-info-and-advice"></a>Consigli e informazioni importanti
 
-*   Aggiungere "Async" alla fine di qualsiasi funzione che è possibile utilizzare
+*   Aggiungere "Async" alla fine di qualsiasi funzione che verrà utilizzi
 
- Si tratta di una convenzione di denominazione, semplificare le operazioni come il rilevamento di API. In particolare se sono presenti versioni sincrone e asincrone della stessa routine, è consigliabile indicare esplicitamente che è asincrono tramite il nome.
+ Anche se si tratta di una convenzione di denominazione, rende le cose, ad esempio l'individuazione di API più semplice. In particolare se sono presenti versioni sincrone e asincrone della routine stessa, è consigliabile dichiarare in modo esplicito che è asincrono tramite il nome.
 
-*   Restare in attesa il compilatore!
+*   Ascolto al compilatore.
 
- Il compilatore F # è molto rigido, rendendo quasi impossibile eseguire un'operazione troubling come eseguire il codice "async" in modo sincrono. Se si individua un avviso, che è un segno che il codice non verrà eseguito come si ritiene che verranno eseguite. Se il compilatore può rendere soddisfatti, l'esecuzione del codice probabilmente come previsto.
+ F#del compilatore è molto precise, rendendo quasi Impossibile operare preoccupante, ad esempio eseguire codice di "async" in modo sincrono. Se si riscontra un avviso, che è un segno più che il codice non verrà eseguito come pensi che si verifica. Se il compilatore può rendere felici, il codice molto probabilmente verrà eseguito come previsto.
 
-## <a name="for-the-cvb-programmer-looking-into-f"></a>Per i programmatori c# /VB C in F # #
+## <a name="for-the-cvb-programmer-looking-into-f"></a>Per il C#programmatore /VB analizzandoF# #
 
-In questa sezione presuppone che si abbia familiarità con il modello asincrono in c# o VB. Se il non computer [di programmazione asincrona in c#](../../../csharp/async.md) è un punto di partenza.
+In questa sezione presuppone si abbia familiarità con il modello async in C#/VB. Se non sei [programmazione asincrona in C# ](../../../csharp/async.md) è un punto di partenza.
 
-È presente una differenza fondamentale tra il modello asincrono di c# /VB C e il modello asincrono di F #.
+È presente una differenza fondamentale tra il C#modello asincrono /VB e il F# modello asincrono.
 
-Quando si chiama una funzione che restituisce un `Task` o `Task<'T>`, tale processo ha già iniziato l'esecuzione. L'handle restituito rappresenta un processo asincrono già in esecuzione. Al contrario, quando si chiama una funzione async in F #, di `Async<'a>` restituito rappresenta un processo che sarà **generato** a un certo punto. La comprensione di questo modello è potente, perché consente infatti di processi asincroni in F # per concatenare più semplice, eseguita in modo condizionale e avviare con una granularità più preciso del controllo.
+Quando si chiama una funzione che restituisce un `Task` o `Task<'T>`, tale processo ha già iniziato l'esecuzione. L'handle restituito rappresenta un processo asincrono già in esecuzione. Al contrario, quando si chiama una funzione asincrona F#, il `Async<'a>` restituito rappresenta un processo che sarà **generato** a un certo punto. Comprendere questo modello è potente, perché consente processi asincroni in F# di essere concatenate più semplice, eseguita in modo condizionale ed essere avviata con un livello di dettaglio più preciso del controllo.
 
-Esistono alcuni altri analogie e differenze non degni di nota.
+Esistono alcuni altri analogie e differenze da notare.
 
 ### <a name="similarities"></a>Analogie
 
-*   `let!`, `use!`, e `do!` sono analoghi alle `await` durante la chiamata dall'interno di un processo asincrono un `async{ }` blocco.
+*   `let!`, `use!`, e `do!` sono analoghe alle `await` quando si chiama un processo asincrono dall'interno una `async{ }` blocco.
 
- Tre parole chiave possono essere utilizzate solo all'interno di un `async { }` blocco, analoga a quanto `await` può essere richiamato solo all'interno di un `async` metodo. In breve, `let!` viene utilizzata quando si desidera acquisire e utilizzare un risultato, `use!` è lo stesso, ma per un elemento il cui risorse devono ottenere eliminate dopo essere stato utilizzato, e `do!` viene utilizzata quando si desidera attendere per un flusso di lavoro asincrono senza valore restituito di fine prima di proseguire.
+ Le tre parole chiave possono essere usate solo all'interno di un' `async { }` blocco, analoga a quanto `await` può essere richiamata solo all'interno di un `async` (metodo). In breve, `let!` viene utilizzata quando si vuole acquisire e usare un risultato `use!` è lo stesso, ma per un elemento le cui risorse devono ottenere pulite dopo l'uso, e `do!` viene utilizzata quando si vuole attendere per un flusso di lavoro asincrono senza valore restituito alla fine prima di procedere.
 
-*   F # supporta il parallelismo dei dati in modo analogo.
+*   F#supporta il parallelismo dei dati in modo analogo.
 
- Anche se opera in modo molto diverso, `Async.Parallel` corrisponde a `Task.WhenAll` per lo scenario di che i risultati di un set di processi asincroni quando vengono completate.
+ Anche se funziona in modo molto diverso `Async.Parallel` corrisponde a `Task.WhenAll` per lo scenario seguendo i risultati di una serie di processi asincroni quando vengono tutte completate.
 
 ### <a name="differences"></a>Differenze
 
-*   Annidati `let!` non è consentito, a differenza di annidati `await`
+*   Annidati `let!` non è consentita, a differenza di annidati `await`
 
- A differenza di `await`, che può essere nidificata in modo indefinito, `let!` non può e deve avere il relativo risultato associato prima di utilizzarlo all'interno di un altro `let!`, `do!`, o `use!`.
+ A differenza `await`, che possono essere annidati a tempo indeterminato `let!` non può e deve avere il relativo risultato associato prima di utilizzarlo in un'altra `let!`, `do!`, o `use!`.
 
-*   Supporto per l'annullamento è più semplice in F # rispetto a in c# o VB.
+*   Supporto dell'annullamento è più semplice in F# rispetto a C#/VB.
 
- Il supporto di annullamento di una metà di attività tramite l'esecuzione in C# /VB richiede il controllo di `IsCancellationRequested` proprietà o chiamare il metodo `ThrowIfCancellationRequested()` su un `CancellationToken` oggetto passato al metodo asincrono.
+ Che supportano l'annullamento di una metà di attività tramite l'esecuzione in C#/VB richiede il controllo di `IsCancellationRequested` proprietà o chiamare il metodo `ThrowIfCancellationRequested()` su un `CancellationToken` oggetto passato nel metodo asincrono.
 
-Al contrario, F # asincrono flussi di lavoro sono con maggiore naturalezza annullabile. Annullamento è un semplice processo in tre fasi.
+Al contrario, F# flussi di lavoro asincroni sono più naturalmente annullabile. L'annullamento è un semplice processo in tre fasi.
 
 1.  Creare un nuovo oggetto `CancellationTokenSource`.
-2.  Passare a una funzione di avvio.
+2.  Passare alla funzione in una funzione di partenza.
 3.  Chiamare `Cancel` sul token.
 
 Esempio:
@@ -193,6 +193,7 @@ Esempio:
 ```fsharp
 open System
 open System.Net
+open System.Threading
 
 let uploadDataAsync url data = 
     async {
@@ -204,7 +205,7 @@ let uploadDataAsync url data =
 let workflow = uploadDataAsync "https://url-to-upload-to.com" "hello, world!"
 
 let token = new CancellationTokenSource()
-Async.Start (workflow, token)
+Async.Start (workflow, token.Token)
 
 // Immediately cancel uploadDataAsync after it's been started.
 token.Cancel()
@@ -212,8 +213,8 @@ token.Cancel()
 
 E questo è sufficiente.
 
-## <a name="further-resources"></a>Ulteriori risorse:
+## <a name="further-resources"></a>Altre risorse:
 
-*   [Flussi di lavoro asincrono su MSDN](https://msdn.microsoft.com/library/dd233250.aspx)
-*   [Sequenze asincrone per F #](https://fsprojects.github.io/FSharp.Control.AsyncSeq/library/AsyncSeq.html)
-*   [Utilità di F # dati HTTP](https://fsharp.github.io/FSharp.Data/library/Http.html)
+*   [Flussi di lavoro asincroni su MSDN](https://msdn.microsoft.com/library/dd233250.aspx)
+*   [Sequenze asincrone perF#](https://fsprojects.github.io/FSharp.Control.AsyncSeq/library/AsyncSeq.html)
+*   [F#Utilità dei dati HTTP](https://fsharp.github.io/FSharp.Data/library/Http.html)

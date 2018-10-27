@@ -3,12 +3,12 @@ title: Uso di F# in Azure
 description: "Guida all'uso dei servizi di Azure con F #"
 author: sylvanc
 ms.date: 09/22/2016
-ms.openlocfilehash: b0efa919e846086e2dee131fb5791abc409b5bcb
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 96dec342379b06e997107cc5d6cc05e9fc737452
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48033545"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50033961"
 ---
 # <a name="using-f-on-azure"></a>Uso di F# in Azure
 
@@ -23,7 +23,7 @@ Nelle sezioni seguenti sono disponibili informazioni su come usare una serie di 
 
 Azure supporta un'ampia gamma di configurazioni di macchine virtuali (VM). Per informazioni, vedere [Macchine virtuali di Linux e Azure](https://azure.microsoft.com/services/virtual-machines/).
 
-Per installare F# in una macchina virtuale per l'esecuzione, la compilazione e/o gli script, vedere [Using F# on Linux](http://fsharp.org/use/linux) (Uso di F# in Linux) e [Using F# on Windows](http://fsharp.org/use/windows) (Uso di F# in Windows).
+Per installare F# in una macchina virtuale per l'esecuzione, la compilazione e/o gli script, vedere [Using F# on Linux](https://fsharp.org/use/linux) (Uso di F# in Linux) e [Using F# on Windows](https://fsharp.org/use/windows) (Uso di F# in Windows).
 
 
 ## <a name="using-azure-functions-with-f"></a>Uso di funzioni di Azure con F # #
@@ -34,7 +34,7 @@ Funzioni di Azure supporta F# come linguaggio di prima classe con un'efficiente,
 
 Altre risorse per l'uso di Funzioni di Azure e F#:
 
-* [Scale Up Azure Functions in F# Using Suave](https://blog.tamizhvendan.in/blog/2016/09/19/scale-up-azure-functions-in-f-number-using-suave/) (Estendere Funzioni di Azure in F # tramite Suave)
+* [Scale Up Azure Functions in F# Using Suave](https://blog.tamizhvendan.in/blog/2016/09/19/scale-up-azure-functions-in-f-number-using-suave/) (Estendere Funzioni di Azure in F# tramite Suave)
 * [How to create Azure function in F#](https://mnie.github.io/2016-09-08-AzureFunctions/) (Come creare un funzione di Azure in F#)
 * [Utilizzo del Provider di tipo Azure con funzioni di Azure](https://compositional-it.com/blog/2017/08-30-using-the-azure-type-provider-with-azure-functions/index.html)
 

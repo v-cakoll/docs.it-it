@@ -2,12 +2,12 @@
 title: 'Installazione di F #'
 description: 'Informazioni su come installare F # nel proprio ambiente.'
 ms.date: 08/28/2018
-ms.openlocfilehash: 909e1c07ff7f6d52db77a987639d1c749146fdca
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
-ms.translationtype: MT
+ms.openlocfilehash: d53ecdcba5411db62208cb683a0fad795711b77c
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120934"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50044645"
 ---
 # <a name="install-f"></a>Installazione di F # #
 
@@ -33,7 +33,7 @@ Al termine dell'installazione, scegliere "Avvia Visual Studio". È anche possibi
 
 ### <a name="macostabmacos"></a>[macOS](#tab/macos)
 
-[Mono](http://www.mono-project.com) serve [F # Interactive](../tutorials/fsharp-interactive/index.md) supportano. Il modo più semplice per installare Mono in macOS è tramite Homebrew. È sufficiente digitare quanto segue nel terminale:
+[Mono](https://www.mono-project.com) serve [F # Interactive](../tutorials/fsharp-interactive/index.md) supportano. Il modo più semplice per installare Mono in macOS è tramite Homebrew. È sufficiente digitare quanto segue nel terminale:
 
 ```console
 brew install mono

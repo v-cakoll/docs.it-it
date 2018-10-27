@@ -7,13 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF, authentication
 ms.assetid: 10e245f7-d31e-42e7-82a2-d5780325d372
-author: BrucePerlerMS
-ms.openlocfilehash: cbedab4064173186251defead8394735de033cf7
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 2a6fc82b21d8530214923bdadcad7f52da947c82
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196577"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50088819"
 ---
 # <a name="how-to-create-a-custom-security-token-authenticator"></a>Procedura: creare un autenticatore del token di sicurezza personalizzato
 In questo argomento viene illustrato come creare un autenticatore del token di sicurezza personalizzato e come integrarlo con un gestore del token di sicurezza personalizzato. Un autenticatore del token di sicurezza codi sicurezzantenuto di un token di sicurezza fornito con un messaggio in ingresso. Se la convalida ha esito positivo, l'autenticatore restituisce una raccolta di istanze <xref:System.IdentityModel.Policy.IAuthorizationPolicy> che, quando valutata, restituisce un set di attestazioni.  
@@ -26,9 +25,9 @@ In questo argomento viene illustrato come creare un autenticatore del token di s
   
 1.  Definire una nuova classe derivata dalla classe <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator>.  
   
-2.  Eseguire l'override del metodo <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.CanValidateTokenCore%2A>. Il metodo restituisce `true` o `false` a seconda che l'autenticatore personalizzato possa convalidare o meno il tipo di token in ingresso.  
+2.  Eseguire l'override del metodo <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.CanValidateTokenCore%2A> . Il metodo restituisce `true` o `false` a seconda che l'autenticatore personalizzato possa convalidare o meno il tipo di token in ingresso.  
   
-3.  Eseguire l'override del metodo <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.ValidateTokenCore%2A>. Questo metodo deve convalidare in modo appropriato il contenuto del token. Se il token supera la fase di convalida, restituisce una raccolta di istanze <xref:System.IdentityModel.Policy.IAuthorizationPolicy>. Nell'esempio seguente viene utilizzata un'implementazione di criteri di autorizzazione personalizzata che verrà creata nella procedura successiva.  
+3.  Eseguire l'override del metodo <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.ValidateTokenCore%2A> . Questo metodo deve convalidare in modo appropriato il contenuto del token. Se il token supera il passo di convalida, restituisce una raccolta di istanze <xref:System.IdentityModel.Policy.IAuthorizationPolicy>. Nell'esempio seguente viene utilizzata un'implementazione di criteri di autorizzazione personalizzata che verrà creata nella procedura successiva.  
   
      [!code-csharp[C_CustomTokenAuthenticator#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenauthenticator/cs/source.cs#1)]
      [!code-vb[C_CustomTokenAuthenticator#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenauthenticator/vb/source.vb#1)]  

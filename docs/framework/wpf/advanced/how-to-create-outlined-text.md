@@ -11,51 +11,53 @@ helpviewer_keywords:
 - linear gradient brush [WPF]
 - typography [WPF], outline effects
 ms.assetid: 4aa3cf6e-1953-4f26-8230-7c1409e5f28d
-ms.openlocfilehash: c79f5c1c6812b1175119133664e39995af29bd4f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 046ce6519e55e5782db0fe8adbc2a956251e12e4
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33544965"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50088780"
 ---
 # <a name="how-to-create-outlined-text"></a>Procedura: creare testo con contorni
-Nella maggior parte dei casi, quando si aggiungono ornamenti per le stringhe di testo il [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] un'applicazione, si utilizza il testo un insieme di caratteri discreti, o icone. Ad esempio, è possibile creare un pennello sfumato lineare e applicarlo al <xref:System.Windows.Controls.Control.Foreground%2A> proprietà di un <xref:System.Windows.Controls.TextBox> oggetto. Quando si visualizzano o si modifica la casella di testo, il pennello sfumato lineare viene applicato automaticamente al set di caratteri nella stringa di testo corrente.  
+Nella maggior parte dei casi, quando si aggiungono ornamento per le stringhe di testo di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] un'applicazione, si usa il testo in termini di una raccolta di caratteri discreti o glifi. Ad esempio, è possibile creare un pennello sfumato lineare e metterle in pratica per la <xref:System.Windows.Controls.Control.Foreground%2A> proprietà di un <xref:System.Windows.Controls.TextBox> oggetto. Quando si visualizzano o si modifica la casella di testo, il pennello sfumato lineare viene applicato automaticamente al set corrente di caratteri nella stringa di testo.  
   
  ![Testo visualizzato con pennello sfumato lineare](../../../../docs/framework/wpf/advanced/media/outlinedtext01.jpg "OutlinedText01")  
 Esempio di un pennello sfumato lineare applicato a una casella di testo  
   
- Tuttavia, è anche possibile convertire il testo in <xref:System.Windows.Media.Geometry> oggetti, che consente di creare altri tipi di testo RTF visivamente. Ad esempio, è possibile creare un <xref:System.Windows.Media.Geometry> oggetto in base alla struttura di una stringa di testo.  
+ Tuttavia, è anche possibile convertire testo in <xref:System.Windows.Media.Geometry> oggetti, consentendo di creare altri tipi di testo visivamente accattivanti. Ad esempio, è possibile creare un <xref:System.Windows.Media.Geometry> oggetto in base alla struttura di una stringa di testo.  
   
  ![Struttura di testo con pennello sfumato lineare](../../../../docs/framework/wpf/advanced/media/outlinedtext02.jpg "OutlinedText02")  
-Esempio di un pennello sfumato lineare applicato alla geometria della struttura del testo  
+Esempio di un pennello sfumato lineare applicato alla geometria del contorno del testo  
   
- Quando il testo viene convertito in un <xref:System.Windows.Media.Geometry> dell'oggetto, non è più un insieme di caratteri, non è possibile modificare i caratteri nella stringa di testo. Tuttavia, è possibile intervenire sull'aspetto del testo convertito modificandone le proprietà del tratto e del riempimento. Il tratto fa riferimento alla struttura del testo convertito, mentre il riempimento fa riferimento all'area all'interno della struttura del testo convertito.  
+ Quando il testo viene convertito in un <xref:System.Windows.Media.Geometry> dell'oggetto, non è più una raccolta di caratteri, non è possibile modificare i caratteri nella stringa di testo. Tuttavia, è possibile intervenire sull'aspetto del testo convertito modificandone le proprietà del tratto e del riempimento. Il tratto fa riferimento alla struttura del testo convertito, mentre il riempimento fa riferimento all'area all'interno della struttura del testo convertito.  
   
  Gli esempi seguenti illustrano alcuni modi per creare effetti visivi modificando il tratto e riempimento del testo convertito.  
   
  ![Testo con colori diversi per tratto e riempimento](../../../../docs/framework/wpf/advanced/media/outlinedtext03.jpg "OutlinedText03")  
 Esempio di impostazione di tratto e riempimento in colori diversi  
   
- ![Testo con tratto con immagine applicato alla traccia](../../../../docs/framework/wpf/advanced/media/outlinedtext04.jpg "OutlinedText04")  
+ ![Testo con pennello immagine applicato al tratto](../../../../docs/framework/wpf/advanced/media/outlinedtext04.jpg "OutlinedText04")  
 Esempio di un pennello immagine applicato al tratto  
   
- È inoltre possibile modificare il rettangolo delimitatore o evidenziazione, del testo convertito. Nell'esempio seguente viene illustrata una modalità di creazione di effetti visivi modificando il tratto e l'evidenziazione del testo convertito.  
+ È anche possibile modificare il rettangolo delimitatore, o un'evidenziazione, del testo convertito. L'esempio seguente illustra un modo per creare effetti visivi modificando il tratto ed evidenziazione del testo convertito.  
   
- ![Testo con tratto con immagine applicato alla traccia](../../../../docs/framework/wpf/advanced/media/outlinedtext05.jpg "OutlinedText05")  
+ ![Testo con pennello immagine applicato al tratto](../../../../docs/framework/wpf/advanced/media/outlinedtext05.jpg "OutlinedText05")  
 Esempio di un pennello immagine applicato al tratto ed evidenziazione  
   
 ## <a name="example"></a>Esempio  
- La chiave per la conversione del testo per un <xref:System.Windows.Media.Geometry> oggetto consiste nell'utilizzare il <xref:System.Windows.Media.FormattedText> oggetto. Dopo aver creato questo oggetto, è possibile utilizzare il <xref:System.Windows.Media.FormattedText.BuildGeometry%2A> e <xref:System.Windows.Media.FormattedText.BuildHighlightGeometry%2A> metodi per convertire il testo da <xref:System.Windows.Media.Geometry> oggetti. Il primo metodo restituisce la geometria di testo formattato. il secondo metodo restituisce che la geometria del testo formattato del rettangolo di selezione. Esempio di codice seguente viene illustrato come creare un <xref:System.Windows.Media.FormattedText> oggetto e recuperare le geometrie del testo formattato e il rettangolo di selezione.  
+ La chiave per la conversione del testo a un <xref:System.Windows.Media.Geometry> oggetto consiste nell'usare il <xref:System.Windows.Media.FormattedText> oggetto. Dopo aver creato questo oggetto, è possibile usare la <xref:System.Windows.Media.FormattedText.BuildGeometry%2A> e <xref:System.Windows.Media.FormattedText.BuildHighlightGeometry%2A> metodi per convertire il testo da <xref:System.Windows.Media.Geometry> oggetti. Il primo metodo restituisce la geometria del testo formattato; il secondo metodo restituisce che la geometria del testo formattato del rettangolo. Esempio di codice seguente viene illustrato come creare un <xref:System.Windows.Media.FormattedText> oggetto e recuperare le geometrie di testo formattato e il relativo riquadro delimitatore.  
   
  [!code-csharp[OutlineTextControlViewer#CreateText](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OutlineTextControlViewer/CSharp/OutlineTextControl.cs#createtext)]
  [!code-vb[OutlineTextControlViewer#CreateText](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/OutlineTextControlViewer/visualbasic/outlinetextcontrol.vb#createtext)]  
   
- Per visualizzare l'oggetto recuperato il <xref:System.Windows.Media.Geometry> oggetti, è necessario accedere il <xref:System.Windows.Media.DrawingContext> dell'oggetto che viene visualizzato il testo convertito. Questi esempi di codice, questa operazione viene eseguita tramite la creazione di un oggetto di controllo personalizzato derivato da una classe che supporta il rendering definito dall'utente.  
+ Per visualizzare l'oggetto recuperato il <xref:System.Windows.Media.Geometry> oggetti, è necessario accedere il <xref:System.Windows.Media.DrawingContext> dell'oggetto che viene visualizzato il testo convertito. Questi esempi di codice, questa operazione viene eseguita tramite la creazione di un oggetto di controllo personalizzato che deriva da una classe che supporta il rendering definite dall'utente.  
   
- Per visualizzare <xref:System.Windows.Media.Geometry> oggetti nel controllo personalizzato, fornire un override per il <xref:System.Windows.UIElement.OnRender%2A> metodo. Deve utilizzare il metodo sottoposto a override di <xref:System.Windows.Media.DrawingContext.DrawGeometry%2A> metodo consente di disegnare il <xref:System.Windows.Media.Geometry> oggetti.  
+ Per visualizzare <xref:System.Windows.Media.Geometry> oggetti nel controllo personalizzato, specificare una sostituzione per il <xref:System.Windows.UIElement.OnRender%2A> (metodo). Deve usare il metodo sottoposto a override il <xref:System.Windows.Media.DrawingContext.DrawGeometry%2A> metodo consente di disegnare la <xref:System.Windows.Media.Geometry> oggetti.  
   
  [!code-csharp[OutlineTextControlViewer#OnRender](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OutlineTextControlViewer/CSharp/OutlineTextControl.cs#onrender)]
  [!code-vb[OutlineTextControlViewer#OnRender](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/OutlineTextControlViewer/visualbasic/outlinetextcontrol.vb#onrender)]  
+  
+  Per l'origine dell'oggetto di controllo utente personalizzato di esempio, vedere [OutlineTextControl.cs per C# ](https://github.com/dotnet/samples/blob/master/snippets/csharp/VS_Snippets_Wpf/OutlineTextControlViewer/CSharp/OutlineTextControl.cs) e [OutlineTextControl.vb per Visual Basic](https://github.com/dotnet/samples/blob/master/snippets/visualbasic/VS_Snippets_Wpf/OutlineTextControlViewer/visualbasic/outlinetextcontrol.vb). 
   
 ## <a name="see-also"></a>Vedere anche  
  [Disegno di testo formattato](../../../../docs/framework/wpf/advanced/drawing-formatted-text.md)

@@ -9,14 +9,12 @@ helpviewer_keywords:
 - -optioncompare compiler option [Visual Basic]
 - /optioncompare compiler option [Visual Basic]
 ms.assetid: 7237b766-b44d-4cc5-9a3c-885348a7d9e4
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c1906710ef10634187782f9355146dfa7ccb7748
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1d50a3bb739bbde09fa10d2adf03ec7c1ff5d344
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33653403"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50180800"
 ---
 # <a name="-optioncompare"></a>-optioncompare
 Specifica la modalità con cui vengono confrontate le stringhe.  
@@ -28,13 +26,13 @@ Specifica la modalità con cui vengono confrontate le stringhe.
 ```  
   
 ## <a name="remarks"></a>Note  
- È possibile specificare `-optioncompare` in uno dei due formati: `-optioncompare:binary` per utilizzare confronti tra stringhe binarie e `-optioncompare:text` per utilizzare confronti tra stringhe di testo. Per impostazione predefinita, il compilatore utilizza `-optioncompare:binary`.  
+ È possibile specificare `-optioncompare` in uno dei due formati: `-optioncompare:binary` usare confronti di stringhe binarie e `-optioncompare:text` usare confronti di stringhe di testo. Per impostazione predefinita, il compilatore Usa `-optioncompare:binary`.  
   
- In Microsoft Windows, la tabella codici corrente determina l'ordinamento binario. Un tipico ordinamento binario è il seguente:  
+ In Microsoft Windows, la tabella codici corrente determina l'ordinamento binario. Come indicato di seguito è riportato un tipico ordinamento binario:  
   
  `A < B < E < Z < a < b < e < z < À < Ê < Ø < à < ê < ø`  
   
- Confronti tra stringhe basati su testo sono in base all'ordinamento senza distinzione tra maiuscole determinato dalle impostazioni locali del sistema. Un ordinamento testo tipico è la seguente:  
+ I confronti di stringhe basata su testo si basano su un ordinamento testo tra maiuscole e minuscole determinato dalle impostazioni locali del sistema. Come indicato di seguito è riportato un ordinamento testo tipico:  
   
  `(A = a) < (À = à) < (B=b) < (E=e) < (Ê = ê) < (Z=z) < (Ø = ø)`  
   
@@ -46,9 +44,9 @@ Specifica la modalità con cui vengono confrontate le stringhe.
   
 3.  Modificare il valore di **Option Compare** casella.  
   
-### <a name="to-set--optioncompare-programmatically"></a>Per impostare a livello di programmazione - optioncompare  
+### <a name="to-set--optioncompare-programmatically"></a>Per impostare a livello di codice - optioncompare  
   
--   Vedere [Option Compare (istruzione)](../../../visual-basic/language-reference/statements/option-compare-statement.md).  
+-   Visualizzare [istruzione Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md).  
   
 ## <a name="example"></a>Esempio  
  Il codice seguente Compila `ProjFile.vb` e confronti tra stringhe binarie.  

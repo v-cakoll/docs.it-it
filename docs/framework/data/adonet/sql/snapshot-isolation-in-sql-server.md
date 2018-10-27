@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 43ae5dd3-50f5-43a8-8d01-e37a61664176
-ms.openlocfilehash: 52c5dba1a21b0e8d8e5af1dc159941e5f4b4aa5f
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: d2683ead92eb4e76494e3e23bff1c688578a316d
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45970073"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50034299"
 ---
 # <a name="snapshot-isolation-in-sql-server"></a>Isolamento dello snapshot in SQL Server
 L'isolamento dello snapshot migliora la concorrenza per le applicazioni OLTP.  
@@ -24,7 +24,7 @@ L'isolamento dello snapshot migliora la concorrenza per le applicazioni OLTP.
   
  L'isolamento dello snapshot deve essere abilitato impostando l'opzione di database ALLOW_SNAPSHOT_ISOLATION ON prima di usarlo per le transazioni. Questa operazione attiva il meccanismo per archiviare le versioni delle righe nel database temporaneo (**tempdb**). È necessario abilitare l'isolamento dello snapshot in ciascun database in cui esso viene usato con l'istruzione ALTER DATABASE di Transact-SQL. In questo senso, l'isolamento dello snapshot differisce dai livelli di isolamento tradizionali di READ COMMITTED, REPEATABLE READ, SERIALIZABLE e READ UNCOMMITTED, che non richiedono alcuna configurazione. Le istruzioni seguenti attivano l'isolamento dello snapshot e sostituiscono il comportamento READ COMMITTED predefinito con SNAPSHOT:  
   
-```  
+```sql  
 ALTER DATABASE MyDatabase  
 SET ALLOW_SNAPSHOT_ISOLATION ON  
   
@@ -49,7 +49,7 @@ SET READ_COMMITTED_SNAPSHOT ON
   
 -   SERIALIZABLE è il livello di isolamento più restrittivo, in quanto blocca intere gamme di chiavi e trattiene i blocchi finché la transazione non è stata completata. Esso include il livello REPEATABLE READ e aggiunge la limitazione in base alla quale altre transazioni non possono inserire nuove righe negli intervalli letti dalla transazione finché quest'ultima non è stata completata.  
   
- Per altre informazioni, vedere l'argomento relativo ai livelli di isolamento nella documentazione online di SQL Server.  
+ Per altre informazioni, vedere la [Guida di controllo delle versioni delle righe e il blocco delle transazioni](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide).  
   
 ### <a name="snapshot-isolation-level-extensions"></a>Estensione del livello di isolamento dello snapshot  
  In SQL Server sono state introdotte estensioni ai livelli di isolamento SQL-92 sotto forma del livello di isolamento SNAPSHOT e un'implementazione aggiuntiva di READ COMMITTED. Il livello di isolamento READ_COMMITTED_SNAPSHOT può sostituire READ COMMITTED per tutte le transazioni.  
@@ -132,7 +132,7 @@ SqlTransaction sqlTran =
 ### <a name="using-lock-hints-with-snapshot-isolation"></a>Utilizzo degli hint di blocco con l'isolamento dello snapshot  
  Nell'esempio precedente la prima transazione seleziona i dati mentre una seconda transazione li aggiorna prima del completamento della prima transazione, causando un conflitto di aggiornamento nel momento in cui la prima transazione tenta di aggiornare la stessa riga. È possibile limitare le probabilità che si verifichi un conflitto di aggiornamento nelle transazioni snapshot a esecuzione prolungata fornendo hint di blocco all'inizio della transazione. Nell'istruzione SELECT seguente viene usato l'hint UPDLOCK per bloccare le righe selezionate:  
   
-```  
+```sql  
 SELECT * FROM TestSnapshotUpdate WITH (UPDLOCK)   
   WHERE PriKey BETWEEN 1 AND 3  
 ```  
@@ -143,4 +143,5 @@ SELECT * FROM TestSnapshotUpdate WITH (UPDLOCK)
   
 ## <a name="see-also"></a>Vedere anche  
  [SQL Server e ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)      
+ [Guida di controllo delle versioni delle righe e il blocco della transazione](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide)

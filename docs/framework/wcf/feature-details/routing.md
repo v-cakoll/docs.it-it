@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows communication Foundation [WCF], routing
 ms.assetid: bd56516c-420d-4c4e-97f9-f72d28d149a9
 ms.openlocfilehash: 50b6cb78f5fb20344d5f682d268b6e646c17fb9e
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49370829"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50048606"
 ---
 # <a name="routing"></a>Routing
 Negli argomenti di questa sezione viene illustrato il servizio di routing. Il servizio di routing è un intermediario SOAP generico configurabile che consente di configurare il routing basato sul contenuto, impostare il bridging del protocollo, gestire errori delle comunicazioni e aggiornare in modo dinamico la logica di routing in fase di esecuzione.  

@@ -6,14 +6,12 @@ helpviewer_keywords:
 - /main compiler option [Visual Basic]
 - -main compiler option [Visual Basic]
 ms.assetid: 83fc339d-6652-415d-b205-b5133319b5b0
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 51a527dfddd2b78ac1c0559420298a66eb4b63f3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eb9d38a7d6f74e5d8636f862c663c0ba0990baa5
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33652922"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50180232"
 ---
 # <a name="-main"></a>-principale
 Specifica la classe o il modulo che contiene la procedura `Sub Main`.  
@@ -26,14 +24,14 @@ Specifica la classe o il modulo che contiene la procedura `Sub Main`.
   
 ## <a name="arguments"></a>Argomenti  
  `location`  
- Obbligatorio. Il nome della classe o modulo che contiene il `Sub Main` stored procedure da chiamare all'avvio del programma. Ciò potrebbe essere nel formato **-main: module** oppure **-main:namespace.module**.  
+ Obbligatorio. Il nome della classe o modulo che contiene il `Sub Main` procedure da chiamare all'avvio del programma. Ciò potrebbe essere nel formato **-/Main: module** oppure **-main:namespace.module**.  
   
 ## <a name="remarks"></a>Note  
- Utilizzare questa opzione quando si crea un file eseguibile o un programma eseguibile. Se il **-principale** opzione viene omessa, il compilatore cerca una routine condivisa valida `Sub Main` in tutte le classi pubbliche e moduli.  
+ Usare questa opzione quando si crea un file eseguibile o un programma eseguibile Windows. Se il **-principale** opzione viene omessa, il compilatore cerca condiviso valido `Sub Main` in tutte le classi pubbliche e moduli.  
   
- Vedere [routine Main in Visual Basic](../../../visual-basic/programming-guide/program-structure/main-procedure.md) per una descrizione delle varie forme del `Main` stored procedure.  
+ Visualizzare [routine Main in Visual Basic](../../../visual-basic/programming-guide/program-structure/main-procedure.md) per una descrizione delle varie forme del `Main` procedure.  
   
- Quando `location` è una classe che eredita da <xref:System.Windows.Forms.Form>, il compilatore fornisce un valore predefinito `Main` routine che avvia l'applicazione se la classe non ha alcun `Main` stored procedure. Ciò consente di compilare il codice nella riga di comando che è stata creata nell'ambiente di sviluppo.  
+ Quando `location` è una classe che eredita da <xref:System.Windows.Forms.Form>, il compilatore fornisce un valore predefinito `Main` routine che avvia l'applicazione se la classe non ha alcun `Main` procedure. Ciò consente di compilare il codice nella riga di comando che è stata creata nell'ambiente di sviluppo.  
   
  [!code-vb[VbVbalrCompiler#16](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/main_1.vb)]  
   
@@ -43,7 +41,7 @@ Specifica la classe o il modulo che contiene la procedura `Sub Main`.
   
 2.  Fare clic sulla scheda **Applicazione** .  
   
-3.  Verificare che il **Attiva framework applicazione** casella di controllo è deselezionata.  
+3.  Assicurarsi che il **Abilita framework applicazione** casella di controllo è deselezionata.  
   
 4.  Modificare il valore di **oggetto di avvio** casella.  
   

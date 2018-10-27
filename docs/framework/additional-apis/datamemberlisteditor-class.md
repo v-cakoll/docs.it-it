@@ -14,16 +14,16 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ade78154e9911dfe8c837c8667eaca7d3a366431
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: MT
+ms.openlocfilehash: 8b934e5ee69c2e6ebd5cf4da7de2790669c68986
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742049"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50046090"
 ---
 # <a name="datamemberlisteditor-class"></a>Classe DataMemberListEditor
 
-Fornisce un'interfaccia utente di riepilogo a discesa per la modifica delle proprietà degli oggetti associati a dati (oggetti che sono non null `DataSource` proprietà), elencando tutte le proprietà del `DataSource` oggetto da selezionare l'origine del valore da.  
+Fornisce un'interfaccia utente di elenco a discesa per la modifica delle proprietà degli oggetti associati a dati (oggetti che sono non null `DataSource` proprietà) elencando tutte le proprietà del `DataSource` per selezionare l'origine del valore dall'oggetto.  
   
 ## <a name="syntax"></a>Sintassi
   
@@ -32,13 +32,13 @@ internal class DataMemberListEditor : UITypeEditor
 ```
 
 > [!WARNING]
-> La `DataMemberListEditor` classe è interno e non ha significato essere utilizzato direttamente nel codice.
+> Il `DataMemberListEditor` classe è interno e non adatti a essere utilizzato direttamente nel codice.
 > 
-> Microsoft non supporta l'utilizzo di questa classe in un'applicazione di produzione in qualsiasi circostanza.
+> Microsoft non supporta l'uso di questa classe in un'applicazione di produzione in alcuna circostanza.
   
 ## <a name="requirements"></a>Requisiti
 
-**Namespace:** <xref:System.Windows.Forms.Design?displayProperty=nameWithType>  
+**Spazio dei nomi:** <xref:System.Windows.Forms.Design?displayProperty=nameWithType>  
   
 **Assembly:** Design (in Design)  
   
@@ -46,4 +46,4 @@ internal class DataMemberListEditor : UITypeEditor
   
 ## <a name="see-also"></a>Vedere anche
 
-<xref:System.Windows.Forms.Design?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.Design?displayProperty=nameWithType>

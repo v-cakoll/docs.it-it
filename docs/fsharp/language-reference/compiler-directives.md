@@ -2,12 +2,12 @@
 title: Direttive per il compilatore (F#)
 description: 'Scopri le direttive del preprocessore del linguaggio F #, direttive di compilazione condizionale, le direttive di riga e direttive del compilatore.'
 ms.date: 05/16/2016
-ms.openlocfilehash: eeb33cd3b1d6a228555724a307bf2e2407c6b4c3
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 5ac375ac5acd0609a6556f9e0481d169df827c98
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042458"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181368"
 ---
 # <a name="compiler-directives"></a>Direttive per il compilatore
 
@@ -33,7 +33,7 @@ L'effetto della disabilitazione di un avviso si applica all'intero file, incluse
 
 ## <a name="conditional-compilation-directives"></a>Direttive di compilazione condizionale
 
-Il codice disattivato da una di queste direttive viene visualizzato in grigio nell'Editor di Visual StudioCode.
+Il codice disattivato da una di queste direttive viene visualizzato in grigio nell'Editor di codice di Visual Studio.
 
 >[!NOTE]
 Il comportamento delle direttive di compilazione condizionale non è lo stesso come in altri linguaggi. Ad esempio, è possibile usare espressioni booleane che includono simboli e `true` e `false` non hanno alcun significato speciale. I simboli usati nella direttiva `if` devono essere definiti dalla riga di comando o nelle impostazioni del progetto e non esiste alcuna direttiva per il preprocessore `define`.
