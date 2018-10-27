@@ -3,12 +3,12 @@ title: Guida a F#
 description: 'Questa guida viene fornita una panoramica della diversi materiali di formazione per F #, un linguaggio di programmazione funzionale che viene eseguita in .NET.'
 author: cartermp
 ms.date: 08/03/2018
-ms.openlocfilehash: d3e10b6eb99f35b8eddeaa1f0ae257dd17d5cc41
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 5cd5bd95373c8a52a8d2b2348a51970560e8b272
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43480678"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188365"
 ---
 # <a name="f-guide"></a>Guida a F#
 
@@ -56,7 +56,7 @@ La Guida a F # offre molte risorse per apprendere il linguaggio F #.
 
 Il [sito Web di frammenti di codice F #](http://www.fssnip.net) contiene un set di grandi dimensioni di frammenti di codice che illustra come eseguire praticamente qualsiasi operazione in F #, compreso tra "absolute Beginner" frammenti di codice altamente avanzate.
 
-Il [F # Software Foundation Slack](http://fsharp.org/guides/slack/) è un ottimo punto di partenza per principianti ed esperti nello stesso modo, è molto attiva e presenta alcune funzionalità di migliori programmatori del mondo F # disponibili per la chat. Si consiglia di unione.
+Il [F # Software Foundation Slack](https://fsharp.org/guides/slack/) è un ottimo punto di partenza per principianti ed esperti nello stesso modo, è molto attiva e presenta alcune funzionalità di migliori programmatori del mondo F # disponibili per la chat. Si consiglia di unione.
 
 ## <a name="the-f-software-foundation"></a>F# Software Foundation
 
@@ -64,4 +64,4 @@ Sebbene Microsoft sia lo sviluppatore principale del linguaggio F # e dei relati
 
 La missione della F# Software Foundation è promuovere, proteggere e migliorare il linguaggio di programmazione F# e supportare e agevolare la crescita di una comunità varia e internazionale di programmatori F#.
 
-Per altre informazioni e per prendere parte a questa iniziativa, vedere [fsharp.org](http://fsharp.org). È gratuito per l'aggiunta e la rete degli sviluppatori di F # in foundation è qualcosa che non si desidera continuare ad avvalerti!
+Per altre informazioni e per prendere parte a questa iniziativa, vedere [fsharp.org](https://fsharp.org). È gratuito per l'aggiunta e la rete degli sviluppatori di F # in foundation è qualcosa che non si desidera continuare ad avvalerti!

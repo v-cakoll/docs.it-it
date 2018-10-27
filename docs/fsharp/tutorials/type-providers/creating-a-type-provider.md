@@ -2,12 +2,12 @@
 title: 'Esercitazione: Creare un Provider di tipi (F #)'
 description: 'Informazioni su come creare il proprio provider di tipi F # in F # 3.0 esaminando i diversi provider di tipo semplice per illustrare i concetti di base.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 3c998377b2c3a408d536ef416f3799bf7f04b6bd
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: c9dedbeed3ee081a6b1e1ffffe843fc962d2c60b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397959"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183919"
 ---
 # <a name="tutorial-create-a-type-provider"></a>Esercitazione: Creare un Provider di tipi
 
@@ -353,7 +353,7 @@ t.AddMembersDelayed(fun () ->
           p.AddXmlDocDelayed(fun () -> 
               sprintf "This is StaticProperty%d on NestedType" i)
 
-          yield p ]
+          yield p ]
 
     staticPropsInNestedType)
 
@@ -748,7 +748,7 @@ In questa sezione viene illustrato come fornire un tipo che è possibile usare p
 
 - I nomi di intestazione sono un'unità di misura o avere il formato "Nome (unità)" e non contengono virgole.
 
-- Le unità sono tutte le unità Systeme International (SI) come le [Microsoft.FSharp.Data.UnitSystems.SI.UnitNames (modulo) (F #)](https://msdn.microsoft.com/library/3cb43485-11f5-4aa7-a779-558f19d4013b) modulo definisce.
+- Le unità sono tutte le unità di sistema International (SI) come le [Microsoft.FSharp.Data.UnitSystems.SI.UnitNames modulo (F#)](https://msdn.microsoft.com/library/3cb43485-11f5-4aa7-a779-558f19d4013b) modulo definisce.
 
 - Le unità sono tutti semplice (ad esempio, controllare) piuttosto che composta (ad esempio, misuratore/secondo).
 
@@ -1110,7 +1110,7 @@ Il meccanismo di provider in F # presenta le limitazioni seguenti:
 
 ## <a name="development-tips"></a>Suggerimenti per lo sviluppo
 
-Si potrebbero risultare utili i suggerimenti seguenti durante il processo di sviluppo.
+I suggerimenti seguenti potrebbero risultare utili durante il processo di sviluppo:
 
 ### <a name="run-two-instances-of-visual-studio"></a>Eseguire due istanze di Visual Studio
 

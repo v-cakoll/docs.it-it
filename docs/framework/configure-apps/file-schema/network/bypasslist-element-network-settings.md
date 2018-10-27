@@ -8,14 +8,12 @@ helpviewer_keywords:
 - bypasslist element
 - <bypasslist> element
 ms.assetid: 124446b7-abb1-4e5e-a492-b64398f268f1
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 3ca7ba9b0e534b5806570580b207da5314243d8f
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: c696017c153b63ba6f2d485855c969b2b45ba0ab
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47109040"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188534"
 ---
 # <a name="ltbypasslistgt-element-network-settings"></a>&lt;BypassList&gt; (impostazioni di rete)
 Fornisce un set di espressioni regolari che descrivono gli indirizzi che non usano un proxy.  
@@ -79,5 +77,5 @@ Fornisce un set di espressioni regolari che descrivono gli indirizzi che non usa
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- <xref:System.Net.WebProxy?displayProperty=nameWithType>  
- [Schema delle impostazioni di rete](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- <xref:System.Net.WebProxy?displayProperty=nameWithType>  
+- [Schema delle impostazioni di rete](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

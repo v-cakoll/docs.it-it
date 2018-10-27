@@ -5,13 +5,12 @@ helpviewer_keywords:
 - distributed application security [WCF]
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
-author: BrucePerlerMS
-ms.openlocfilehash: dfefa94db2bd286cb92a7fe09e5c4addb52ba8c8
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 1a601c03c8644f3f4b543864a774a35820c7d6bd
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47090542"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50189628"
 ---
 # <a name="distributed-application-security"></a>Protezione delle applicazioni distribuite
 Sicurezza di Windows Communication Foundation (WCF) viene suddiviso in tre aree funzionali principali: protezione del trasferimento, controllo degli accessi e il controllo. La protezione di trasferimento, oltre a offrire funzionalità di autenticazione, garantisce integrità e riservatezza. Questa area funzionale utilizza uno dei meccanismi seguenti: protezione a livello di trasporto, protezione a livello di messaggio e `TransportWithMessageCredential`.  

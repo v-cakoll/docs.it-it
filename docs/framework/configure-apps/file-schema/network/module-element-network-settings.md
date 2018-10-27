@@ -8,14 +8,12 @@ helpviewer_keywords:
 - module element
 - <module> element
 ms.assetid: 10318725-9666-4d65-ab61-b94c64e59f13
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 4d51010d6236103d252507802e14d01230d90219
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 2d263fd64475d119d536e7cef69896fcfa5ae42c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397189"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183698"
 ---
 # <a name="ltmodulegt-element-network-settings"></a>&lt;modulo&gt; (impostazioni di rete)
 Aggiunge un nuovo modulo proxy all'applicazione.  
@@ -75,5 +73,5 @@ Aggiunge un nuovo modulo proxy all'applicazione.
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- <xref:System.Net.IWebProxy?displayProperty=nameWithType>  
- [Schema delle impostazioni di rete](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- <xref:System.Net.IWebProxy?displayProperty=nameWithType>  
+- [Schema delle impostazioni di rete](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

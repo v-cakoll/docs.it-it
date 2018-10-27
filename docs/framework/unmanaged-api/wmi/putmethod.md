@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7cdf34ff6ae506ba209300685da3752820b250a2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 98ef688c1136a81a5b57c3fdfee73c53024186e7
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516750"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50191041"
 ---
 # <a name="putmethod-function"></a>PutMethod (funzione)
 Crea un metodo.
@@ -80,11 +80,11 @@ I seguenti valori restituiti da questa funzione sono definiti nel *WbemCli.h* fi
 
 Questa funzione esegue il wrapping di una chiamata per il [IWbemClassObject::PutMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-putmethod) (metodo).
 
-Questa chiamata al metodo è supportata solo se `ptr` è una definizione di classe CIM. Manipolazione di metodo non è disponibile dal [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx?f=255&MSPPError=-2147217396) puntatori che puntano a istanze CIM.
+Questa chiamata al metodo è supportata solo se `ptr` è una definizione di classe CIM. Manipolazione di metodo non è disponibile dal [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) puntatori che puntano a istanze CIM.
 
 Gli utenti non è possibile creare metodi con nomi che iniziano o terminano con un carattere di sottolineatura. Questo è riservato per le proprietà e classi di sistema.
 
-Per un metodo, il `in` e `out` sono descritti i parametri come proprietà nella [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx?f=255&MSPPError=-2147217396) oggetti.
+Per un metodo, il `in` e `out` sono descritti i parametri come proprietà nella [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) oggetti.
 
 Un' `[in/out]` parametro può essere definito aggiungendo la stessa proprietà per entrambi gli oggetti a cui punta il `pInSignature` e `pOutSignature` parametri. In questo caso, le proprietà condividono lo stesso **ID** valore del qualificatore.
 

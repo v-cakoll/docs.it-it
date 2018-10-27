@@ -6,14 +6,12 @@ helpviewer_keywords:
 - -delaysign compiler option [Visual Basic]
 - -delaysign compiler option [Visual Basic]
 ms.assetid: c76e61a4-1884-4252-9fb2-377f99caa690
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c979ada9984ef345ffbb6b5e29c2f30595c3074d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1459484b858137836fcfdcd9db46d8e99a06e9c7
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33654242"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185209"
 ---
 # <a name="-delaysign"></a>-delaysign
 Specifica se l'assembly avrà firma completa o parziale.  
@@ -26,16 +24,16 @@ Specifica se l'assembly avrà firma completa o parziale.
   
 ## <a name="arguments"></a>Argomenti  
  `+` &#124; `-`  
- Facoltativo. Usare `-delaysign-` se si desidera che l'assembly abbia firma completa. Utilizzare `-delaysign+` se si desidera inserire la chiave pubblica nell'assembly e riservare spazio per l'hash con segno. Il valore predefinito è `-delaysign-`.  
+ Facoltativo. Usare `-delaysign-` se si desidera che l'assembly abbia firma completa. Usare `-delaysign+` se si desidera inserire la chiave pubblica nell'assembly e riserva lo spazio per l'hash con segno. Il valore predefinito è `-delaysign-`.  
   
 ## <a name="remarks"></a>Note  
- Il `-delaysign` opzione non ha effetto solo se utilizzata con [- keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md) o [- keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md).  
+ Il `-delaysign` opzione non ha effetto solo se abbinata [- keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md) oppure [- keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md).  
   
- Quando si richiede un assembly con firma completa, il compilatore genera un hash per il file contenente il manifesto (i metadati dell'assembly) e firma tale hash con la chiave privata. La firma digitale risultante viene archiviata nel file contenente il manifesto. Quando un assembly è impostata la firma ritardata, il compilatore non calcola e archivia la firma ma riserva lo spazio nel file in modo che la firma possa essere aggiunta successivamente.  
+ Quando si richiede un assembly con firma completa, il compilatore genera un hash per il file contenente il manifesto (i metadati dell'assembly) e firma tale hash con la chiave privata. La firma digitale risultante viene archiviata nel file contenente il manifesto. Quando un assembly è impostata la firma ritardata, il compilatore non di calcolo e archiviare la firma, ma riserva lo spazio nel file in modo che la firma può essere aggiunto in un secondo momento.  
   
- Ad esempio, tramite `-delaysign+`, uno sviluppatore di un'organizzazione può distribuire versioni di prova senza segno di un assembly che i tester possono registrare con la global assembly cache e utilizzare. Al termine di lavoro per l'assembly, la persona responsabile per la chiave privata dell'organizzazione può firmare completamente l'assembly. In questo contesto protegge la chiave privata dell'organizzazione dalla divulgazione, consentendo a tutti gli sviluppatori di utilizzare gli assembly.  
+ Ad esempio, usando `-delaysign+`, uno sviluppatore di un'organizzazione può distribuire le versioni di test senza segno di un assembly che i tester possono registrarsi con la global assembly cache e usare. Al termine di lavoro nell'assembly, la persona responsabile della chiave privata dell'organizzazione possa firmare completamente l'assembly. In questo contesto protegge chiave privata dell'organizzazione dalla divulgazione, consentendo a tutti gli sviluppatori di utilizzare gli assembly.  
   
- Vedere [creazione e uso degli assembly](../../../framework/app-domains/create-and-use-strong-named-assemblies.md) per ulteriori informazioni su come firmare un assembly.  
+ Visualizzare [creazione e assembly con nome sicuro](../../../framework/app-domains/create-and-use-strong-named-assemblies.md) per altre informazioni su come firmare un assembly.  
   
 ### <a name="to-set--delaysign-in-the-visual-studio-integrated-development-environment"></a>Per impostare - delaysign nell'ambiente di sviluppo integrato di Visual Studio  
   

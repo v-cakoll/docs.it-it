@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: e4ab2c4c-9433-4eba-9e9a-096de406cafb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2c359c9b14452e82b7fd2425409b373ead430d3d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 561a6a5a8e778ab59a0d0f1f7f5327104ead2c79
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407079"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185534"
 ---
 # <a name="common-data-types-unmanaged-api-reference"></a>Tipi di dati comuni (riferimenti alle API non gestite)
 In questo argomento sono elencati i tipi di dati semplici usati dalle API non gestite per .NET Framework e definiti dalle istruzioni `typedef` di C/C++. Questi tipi di dati sono in genere alias di tipi di dati primitivi di C/C++. I valori di questi tipi di dati normalmente sono opachi, cioè vengono restituiti da una determinata funzione o metodo in modo da poter essere passati ad altre funzioni o metodi senza modifiche.  
@@ -33,8 +33,8 @@ In questo argomento sono elencati i tipi di dati semplici usati dalle API non ge
 |ObjectID|`typedef UINT_PTR ObjectID;`|corprof.h|Identificatore di un oggetto.|  
 |ProcessID|`typedef UINT_PTR ProcessID;`|corprof.h|Identificatore di un processo gestito.|  
 |ReJITID|`typedef UINT_PTR ReJITID;`|corprof.h|Identificatore di una funzione Just-In-Time.|  
-|TASKID|`typedef UINT64 TASKID;`|cordebug.h, mscoree.h|L'identificatore di un [ICLRTask](../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) istanza.|  
+|TASKID|`typedef UINT64 TASKID;`|cordebug.h, mscoree.h|L'identificatore di un' [ICLRTask](../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) istanza.|  
 |ThreadID|`typedef UINT_PTR ThreadID;`|corprof.h|Identificatore di un thread gestito.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimenti alle API non gestite](../../../docs/framework/unmanaged-api/index.md)
+- [Riferimenti alle API non gestite](../../../docs/framework/unmanaged-api/index.md)

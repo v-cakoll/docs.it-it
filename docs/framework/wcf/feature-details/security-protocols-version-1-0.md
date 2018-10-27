@@ -2,13 +2,12 @@
 title: Protocolli di sicurezza versione 1.0
 ms.date: 03/30/2017
 ms.assetid: ee3402d2-1076-410b-a3cb-fae0372bd7af
-author: BrucePerlerMS
-ms.openlocfilehash: 59d82fc3238f12b33f3111c88854b9d6348a5e27
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 684ab50b6dab4b97577acf7673ed14c53e5af13e
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086791"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183945"
 ---
 # <a name="security-protocols-version-10"></a>Protocolli di sicurezza versione 1.0
 I protocolli di sicurezza dei servizi Web forniscono meccanismi di sicurezza che soddisfano qualsiasi requisito di sicurezza aziendale esistente relativo alla messaggistica. Questa sezione vengono descritti i dettagli di Windows Communication Foundation (WCF) versione 1.0 (implementate nel <xref:System.ServiceModel.Channels.SecurityBindingElement>) per i protocolli di sicurezza dei servizi Web seguenti.  

@@ -2,12 +2,12 @@
 title: Panoramica della correlazione
 ms.date: 03/30/2017
 ms.assetid: edcc0315-5d26-44d6-a36d-ea554c418e9f
-ms.openlocfilehash: d831452c384e5aede6ede37af7de6e86b6772342
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.openlocfilehash: cc165bb4b74c70b740632c5cb873ed200b2283bb
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49372642"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185864"
 ---
 # <a name="correlation-overview"></a>Panoramica della correlazione
 La correlazione è il meccanismo che consente di correlare i messaggi del servizio flusso di lavoro l'uno all'altro o allo stato dell'istanza dell'applicazione, ad esempio una risposta a una richiesta iniziale o un particolare ID dell'ordine allo stato persistente di un flusso di lavoro di elaborazione di un ordine. In questo argomento vengono forniti cenni preliminari sulla correlazione. Gli altri argomenti in questa sezione forniscono informazioni aggiuntive per ogni tipo di correlazione.  
@@ -21,7 +21,7 @@ La correlazione è il meccanismo che consente di correlare i messaggi del serviz
 
 La correlazione basata sul protocollo usa il meccanismo di trasporto per correlare messaggi l'uno all'altro e all'istanza appropriata. Alcune correlazioni basate sul protocollo fornite dal sistema includono la correlazione request/reply e la correlazione basata sul contesto. Una correlazione request/reply viene usata per correlare una singola coppia di attività di messaggistica per formare un'operazione bidirezionale, ad esempio un elemento <xref:System.ServiceModel.Activities.Send> accoppiato a un elemento <xref:System.ServiceModel.Activities.ReceiveReply> o un elemento <xref:System.ServiceModel.Activities.Receive> accoppiato a un elemento <xref:System.ServiceModel.Activities.SendReply>. La progettazione del flusso di lavoro di Visual Studio fornisce anche un set di modelli di attività per implementare rapidamente questo modello. Una correlazione basata sul contesto è basata sul meccanismo di scambio del contesto descritto nella [specifica protocollo di scambio del contesto .NET](https://go.microsoft.com/fwlink/?LinkID=166059). Per usare la correlazione basata su contesto, è necessario usare un'associazione basata sul contesto, ad esempio <xref:System.ServiceModel.BasicHttpContextBinding>, <xref:System.ServiceModel.WSHttpContextBinding> o <xref:System.ServiceModel.NetTcpContextBinding> sull'endpoint.  
   
-Per altre informazioni sulla correlazione del protocollo, vedere [Duplex durevole](../../../../docs/framework/wcf/feature-details/durable-duplex-correlation.md) e [Request / Reply](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md). Per altre informazioni sull'uso dei modelli di attività di progettazione del flusso di lavoro di Visual Studio, vedere [attività di messaggistica](../../../../docs/framework/wcf/feature-details/messaging-activities.md). Per esempi di codice, vedere la [NetContextExchangeCorrelation](/previous-versions/dotnet/netframework-4.0/ee662963%28v%3dvs.100%29) esempio.  
+Per altre informazioni sulla correlazione del protocollo, vedere [Duplex durevole](../../../../docs/framework/wcf/feature-details/durable-duplex-correlation.md) e [Request / Reply](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md). Per altre informazioni sull'uso dei modelli di attività di progettazione del flusso di lavoro di Visual Studio, vedere [attività di messaggistica](../../../../docs/framework/wcf/feature-details/messaging-activities.md). Per esempi di codice, vedere la [NetContextExchangeCorrelation](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ee662963%28v%3dvs.100%29) esempio.  
   
 ## <a name="content-based-correlation"></a>Correlazione basata sul contenuto
 
@@ -29,4 +29,4 @@ La correlazione basata sul contenuto usa alcune informazioni nel messaggio per a
   
 ## <a name="see-also"></a>Vedere anche  
 
-- [NetContextExchangeCorrelation](/previous-versions/dotnet/netframework-4.0/ee662963%28v%3dvs.100%29)
+- [NetContextExchangeCorrelation](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ee662963%28v%3dvs.100%29)

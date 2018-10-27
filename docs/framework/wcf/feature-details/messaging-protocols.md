@@ -2,12 +2,12 @@
 title: Protocolli di messaggistica
 ms.date: 03/30/2017
 ms.assetid: 5b20bca7-87b3-4c8f-811b-f215b5987104
-ms.openlocfilehash: 7d94b917f3d8d2fd7faed28b9320edc240724e0b
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 4678980520266879b41bea6e10f075a2df116457
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46703011"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183854"
 ---
 # <a name="messaging-protocols"></a>Protocolli di messaggistica
 
@@ -47,7 +47,7 @@ Specifica o documento:
 
 In questo argomento vengono utilizzati i seguenti spazi dei nomi XML e i relativi prefissi associati:
 
-| Prefisso | Namespace Uniform Resource Identifier (URI) | [---|---| | s11 | `http://schemas.xmlsoap.org/soap/envelope`| | s12 | `http://www.w3.org/2003/05/soap-envelope`| | wsa | `http://www.w3.org/2004/08/addressing`| | wsam | `http://www.w3.org/2007/05/addressing/metadata`| | wsap | `http://schemas.xmlsoap.org/ws/2004/09/policy/addressing`| | wsa10 | `http://www.w3.org/2005/08/addressing`| | wsaw10 | `http://www.w3.org/2006/05/addressing/wsdl`| | xop | `http://www.w3.org/2004/08/xop/include`| | xmime |`http://www.w3.org/2004/06/xmlmime`<br /><br /> `http://www.w3.org/2005/05/xmlmime`| | dp |`http://schemas.microsoft.com/net/2006/06/duplex`|
+| Prefisso | Namespace Uniform Resource Identifier (URI) | [---|---| | s11 | `http://schemas.xmlsoap.org/soap/envelope` | | s12 | `http://www.w3.org/2003/05/soap-envelope` | | wsa | `http://www.w3.org/2004/08/addressing` | | wsam | `http://www.w3.org/2007/05/addressing/metadata` | | wsap | `http://schemas.xmlsoap.org/ws/2004/09/policy/addressing` | | wsa10 | `http://www.w3.org/2005/08/addressing` | | wsaw10 | `http://www.w3.org/2006/05/addressing/wsdl` | | xop | `http://www.w3.org/2004/08/xop/include` | | xmime |`http://www.w3.org/2004/06/xmlmime`<br /><br /> `http://www.w3.org/2005/05/xmlmime` | | punto di distribuzione |`http://schemas.microsoft.com/net/2006/06/duplex` |
 
 ## <a name="soap-11-and-soap-12"></a>SOAP 1.1 e SOAP 1.2
 
@@ -166,7 +166,7 @@ Contenuto della sezione, il richiedente invia il primo messaggio e il rispondito
 #### <a name="one-way-message"></a>Modello unidirezionale
 Quando un endpoint WCF è configurato per supportare messaggi aventi un determinato `Action` per seguire un modello unidirezionale, l'endpoint WCF segue i seguenti comportamenti e requisiti. Salvo diversamente specificato, per entrambe le versioni di WS-Addressing supportate in WCF si applicano i comportamenti e le regole:
 
-- R3311: il richiedente deve includere gli elementi `wsa:To` e `wsa:Action` nonché le intestazioni di tutti i parametri specificati nel riferimento a endpoint. Quando si utilizza la specifica WS-Addressing 2004/08 e il riferimento a endpoint specifica le proprietà di riferimento [reference properties], occorre aggiungere al messaggio anche le intestazioni corrispondenti.
+- R3311: il richiedente deve includere gli elementi `wsa:To` e `wsa:Action` nonché le intestazioni di tutti i parametri per riferimento specificati nel riferimento a endpoint. Quando si utilizza la specifica WS-Addressing 2004/08 e il riferimento a endpoint specifica le proprietà di riferimento [reference properties], occorre aggiungere al messaggio anche le intestazioni corrispondenti.
 
 - B3312: il richiedente può includere le intestazioni `MessageID` e `ReplyTo` e `FaultTo`. Dopo essere stati ignorati dall'infrastruttura del destinatario, questi elementi vengono passati all'applicazione.
 
@@ -190,20 +190,20 @@ Quando un endpoint WCF è configurato per un messaggio con un determinato `Actio
 ### <a name="web-services-addressing-faults"></a>Errori di indirizzamento dei servizi Web
 R3411: WCF genera gli errori seguenti definiti da WS-Addressing 2004/08.
 
-|Codice|Causa|
+| Codice | Causa |
 |----------|-----------|
-|`wsa:DestinationUnreachable`|Il messaggio in ingresso presenta un riferimento `ReplyTo` diverso dall'indirizzo per risposte definito per questo canale. Non esiste alcun endpoint in attesa presso l'indirizzo specificato nell'intestazione di destinazione.|
-|`wsa:ActionNotSupported`|I canali dell'infrastruttura o il dispatcher associato all'endpoint non riconoscono l'azione specificata nell'intestazione `Action`.|
+| `wsa:DestinationUnreachable` | Il messaggio in ingresso presenta un riferimento `ReplyTo` diverso dall'indirizzo per risposte definito per questo canale. Non esiste alcun endpoint in attesa presso l'indirizzo specificato nell'intestazione di destinazione. |
+| `wsa:ActionNotSupported` | I canali dell'infrastruttura o il dispatcher associato all'endpoint non riconoscono l'azione specificata nell'intestazione `Action`. |
 
 R3412: WCF genera gli errori seguenti definiti da WS-Addressing 1.0.
 
-|Codice|Causa|
+| Codice | Causa |
 |----------|-----------|
-|`wsa10:InvalidAddressingHeader`|Duplica `wsa:To`, `wsa:ReplyTo`, `wsa:From` o `wsa:MessageID`. Duplica `wsa:RelatesTo` con lo stesso `RelationshipType`.|
-|`wsa10:MessageAddressingHeaderRequired`|L'intestazione obbligatoria di indirizzamento è mancante.|
-|`wsa10:DestinationUnreachable`|Il messaggio in ingresso presenta un riferimento `ReplyTo` diverso dall'indirizzo per risposte definito per questo canale. Non esiste alcun endpoint in attesa presso l'indirizzo specificato nell'intestazione di destinazione.|
-|`wsa10:ActionNotSupported`|I canali dell'infrastruttura o il dispatcher associato all'endpoint non riconoscono l'azione specificata nell'intestazione `Action`.|
-|`wsa10:EndpointUnavailable`|Il canale RM restituisce questo errore per indicare che l'endpoint non elaborerà la sequenza basata sull'esame delle intestazioni di indirizzamento del messaggio `CreateSequence`.|
+| `wsa10:InvalidAddressingHeader` | Duplica `wsa:To`, `wsa:ReplyTo`, `wsa:From` o `wsa:MessageID`. Duplica `wsa:RelatesTo` con lo stesso `RelationshipType`. |
+| `wsa10:MessageAddressingHeaderRequired` | L'intestazione obbligatoria di indirizzamento è mancante. |
+| `wsa10:DestinationUnreachable` | Il messaggio in ingresso presenta un riferimento `ReplyTo` diverso dall'indirizzo per risposte definito per questo canale. Non esiste alcun endpoint in attesa presso l'indirizzo specificato nell'intestazione di destinazione. |
+| `wsa10:ActionNotSupported` | I canali dell'infrastruttura o il dispatcher associato all'endpoint non riconoscono l'azione specificata nell'intestazione `Action`. |
+| `wsa10:EndpointUnavailable` | Il canale RM restituisce questo errore per indicare che l'endpoint non elaborerà la sequenza basata sull'esame delle intestazioni di indirizzamento del messaggio `CreateSequence`. |
 
 Il codice delle tabelle precedenti viene mappato al codice `FaultCode` in SOAP 1.1 e al codice `SubCode` (in cui il codice corrisponde al mittente) in SOAP 1.2.
 

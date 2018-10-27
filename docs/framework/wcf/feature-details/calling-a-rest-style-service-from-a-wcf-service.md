@@ -2,12 +2,12 @@
 title: Chiamata di un servizio in stile REST da un servizio WCF
 ms.date: 03/30/2017
 ms.assetid: 77df81d8-7f53-4daf-8d2d-bf7996e94d5a
-ms.openlocfilehash: 8f520b1f77b9ca41b9fd2b8d51c1b935ab1e0a87
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: be9f15d35ec00ba91a06abf5a0a413b59452270b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33488511"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50184244"
 ---
 # <a name="calling-a-rest-style-service-from-a-wcf-service"></a>Chiamata di un servizio in stile REST da un servizio WCF
 Quando si chiama un servizio in stile REST da un normale un servizio WCF (basato su SOAP), il contesto dell'operazione sul metodo del servizio (contenente le informazioni sulla richiesta in entrata) sostituisce il contesto che deve essere utilizzato dalla richiesta in uscita. Ciò determina la modifica delle richieste HTTP GET in richieste HTTP. Per forzare il servizio WCF a utilizzare il giusto contesto per chiamare il servizio in stile REST, creare un nuovo oggetto <xref:System.ServiceModel.OperationContextScope> e chiamare il servizio in stile REST dall'ambito del contesto dell'operazione. In questo argomento viene descritto come creare un semplice esempio che illustra questa tecnica.  
@@ -80,7 +80,7 @@ public class NormalService : INormalInterface
 ```  
   
 ## <a name="create-the-client-proxy-for-the-rest-style-service"></a>Creare il proxy client per il servizio in stile REST  
- Utilizzando <!--zz<xref:System.ServiceModel.ClientBase%60>--> `System.ServiceModel.ClientBase` implementare il proxy del client. Per ogni metodo chiamato, un nuovo oggetto <xref:System.ServiceModel.OperationContextScope> viene creato e utilizzato per chiamare l'operazione.  
+ Usando <xref:System.ServiceModel.ClientBase%601> per implementare il proxy client. Per ogni metodo chiamato, un nuovo oggetto <xref:System.ServiceModel.OperationContextScope> viene creato e utilizzato per chiamare l'operazione.  
   
 ```csharp
 public class MyRestClient : ClientBase<IRestInterface>, IRestInterface

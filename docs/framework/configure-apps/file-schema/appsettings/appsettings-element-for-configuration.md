@@ -1,5 +1,5 @@
 ---
-title: '&lt;appSettings&gt; elemento per &lt;configurazione&gt;'
+title: '&lt;appSettings&gt; (elemento) per &lt;configurazione&gt;'
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/appSettings
@@ -9,16 +9,16 @@ helpviewer_keywords:
 ms.assetid: 39694cc4-6b84-45a6-9329-385a0d8b48fe
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: d17400536b911ce0be4d2bf105b0b4d99d0916df
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0ba57f51d3b1e78239677317933507ff009db035
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742965"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50190931"
 ---
-# <a name="appsettings-element-for-configuration"></a>\<appSettings > elemento per \<configurazione >
+# <a name="appsettings-element-for-configuration"></a>\<appSettings > (elemento) per \<configuration >
 
-Contiene le impostazioni dell'applicazione personalizzata. Si tratta di una sezione di configurazione predefiniti fornita da .NET Framework.
+Contiene impostazioni personalizzate dell'applicazione. Si tratta di una sezione di configurazione predefiniti fornita da .NET Framework.
 
 [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
 &nbsp;&nbsp;**\<appSettings >**
@@ -35,7 +35,7 @@ Contiene le impostazioni dell'applicazione personalizzata. Si tratta di una sezi
 
 |           | Descrizione |
 | --------- | ----------- |
-| **file**  | Attributo facoltativo.<br><br>Specifica un percorso relativo a un file esterno che contiene le impostazioni di configurazione dell'applicazione personalizzata. Il file specificato contiene le stesse impostazioni specificate nel  **\<aggiungere >**,  **\<rimuovere >**, e  **\<deselezionare >** elementi e utilizza la stessa coppia chiave/valore di formato di tali elementi.<br><br>Il percorso specificato è relativo al file di configurazione principale. Per un'applicazione Windows Forms, si tratta della cartella binaria (ad esempio */bin/debug*), non il percorso del file di configurazione dell'applicazione. Per le applicazioni Web Form, il percorso è relativo alla radice dell'applicazione, in cui il *Web. config* file si trova.<br><br>Si noti che viene ignorato l'attributo se il file specificato non è possibile trovare. |
+| **file**  | Attributo facoltativo.<br><br>Specifica il percorso relativo a un file esterno che contiene le impostazioni di configurazione dell'applicazione personalizzata. Il file specificato contenga lo stesso tipo di impostazioni che vengono specificate nella  **\<Aggiungi >**,  **\<rimuovere >**, e  **\<deselezionare >** elementi e utilizza la coppia chiave/valore stesso formato di tali elementi.<br><br>Il percorso specificato è relativo al file di configurazione principale. Per un'applicazione Windows Forms, si tratta della cartella binaria (ad esempio */bin/debug*), non il percorso del file di configurazione dell'applicazione. Per le applicazioni Web Form, il percorso è relativo alla radice dell'applicazione, in cui il *Web. config* file si trova.<br><br>Si noti che il runtime ignora l'attributo se il file specificato non è possibile trovare. |
 
 ## <a name="parent-element"></a>Elemento padre
 
@@ -47,17 +47,17 @@ Contiene le impostazioni dell'applicazione personalizzata. Si tratta di una sezi
 
 |     | Descrizione |
 | --- | ----------- |
-| [**\<add>**](~/docs/framework/configure-apps/file-schema/appsettings/add-element-for-appsettings.md) | Aggiunge un'impostazione applicazione personalizzata. |
-| [**\<clear>**](~/docs/framework/configure-apps/file-schema/appsettings/clear-element-for-appsettings.md) | Cancella tutte le impostazioni applicazione definiti in precedenza. |
-| [**\<remove>**](~/docs/framework/configure-apps/file-schema/appsettings/remove-element-for-appsettings.md) | Rimuove un'impostazione dell'applicazione definiti in precedenza. |
+| [**\<add>**](~/docs/framework/configure-apps/file-schema/appsettings/add-element-for-appsettings.md) | Aggiunge un'impostazione personalizzata dell'applicazione. |
+| [**\<clear>**](~/docs/framework/configure-apps/file-schema/appsettings/clear-element-for-appsettings.md) | Cancella tutte le impostazioni dell'applicazione definita in precedenza. |
+| [**\<remove>**](~/docs/framework/configure-apps/file-schema/appsettings/remove-element-for-appsettings.md) | Rimuove un'impostazione dell'applicazione definita in precedenza. |
 
 ## <a name="remarks"></a>Note
 
-Il  **\<appSettings >** elemento archivia informazioni di configurazione dell'applicazione personalizzata, ad esempio le stringhe di connessione di database, i percorsi di file, gli URL del servizio Web XML o qualsiasi altra informazione di configurazione personalizzato per un applicazione. Le coppie chiave/valore specificate nella  **\<appSettings >** elemento sono accessibili nel codice usando la <xref:System.Configuration.ConfigurationSettings> classe.
+Il  **\<appSettings >** elemento archivia le informazioni di configurazione dell'applicazione personalizzata, ad esempio le stringhe di connessione di database, i percorsi dei file, gli URL del servizio Web XML o qualsiasi altra informazione di configurazione personalizzati per un applicazione. Le coppie chiave/valore specificate nella  **\<appSettings >** elemento sono accessibili nel codice usando il <xref:System.Configuration.ConfigurationSettings> classe.
 
-È possibile utilizzare il **file** attributo la  **\<appSettings >** elemento del *Web. config* e file di configurazione dell'applicazione. Questo attributo specifica un file di configurazione che fornisce impostazioni aggiuntive o sostituisce le impostazioni specificate nel  **\<appSettings >** elemento. Il **file** attributo può essere utilizzato in origine controllo team scenari di sviluppo, ad esempio quando un utente desidera eseguire l'override delle impostazioni di progetto specificate in un file di configurazione dell'applicazione.
+È possibile usare la **file** attributo il  **\<appSettings >** elemento del *Web. config* e file di configurazione dell'applicazione. Questo attributo specifica un file di configurazione che fornisce impostazioni aggiuntive oppure esegue l'override le impostazioni specificate nella  **\<appSettings >** elemento. Il **file** attributo può essere utilizzato in origine controllo team scenari di sviluppo, ad esempio quando un utente desidera eseguire l'override delle impostazioni del progetto specificate in un file di configurazione dell'applicazione.
 
-File di configurazione specificati dal **file** attributo deve essere un nodo radice di  **\<appSettings >** anziché  **\<configurazione >**.
+I file di configurazione specificati dal **file** attributo deve essere un nodo radice del  **\<appSettings >** anziché  **\<configuration >**.
 
 ## <a name="example"></a>Esempio
 
@@ -82,8 +82,8 @@ Nell'esempio seguente viene illustrato un file di configurazione dell'applicazio
 
 ## <a name="configuration-file"></a>File di configurazione
 
-Questo elemento può essere usato nel file di configurazione dell'applicazione, i file di configurazione macchina (*Machine. config*), e *Web. config* file che non sono a livello di directory dell'applicazione.
+Questo elemento può essere usato nel file di configurazione dell'applicazione, file di configurazione computer (*Machine. config*), e *Web. config* file che non sono a livello di directory dell'applicazione.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Schema di file di configurazione per .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Schema di file di configurazione per .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)

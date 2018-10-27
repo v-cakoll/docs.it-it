@@ -6,14 +6,12 @@ helpviewer_keywords:
 - -recurse compiler option [Visual Basic]
 - recurse compiler option [Visual Basic]
 ms.assetid: 84a0b670-33ae-44c4-a46a-b90388809317
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bd5dde46cdea67825b14a6f5fa96a82c8bab8d3f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1edb648ec574c0052b7b8314f4ada710c8b0fe01
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33652422"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183334"
 ---
 # <a name="-recurse"></a>-recurse
 Compila i file di codice sorgente in tutte le directory figlio della directory specificata o della directory del progetto.  
@@ -32,19 +30,19 @@ Compila i file di codice sorgente in tutte le directory figlio della directory s
  Obbligatorio. I file da cercare. È consentito l'utilizzo di caratteri jolly.  
   
 ## <a name="remarks"></a>Note  
- È possibile utilizzare caratteri jolly in un nome file per compilare tutti i file corrispondenti nella directory del progetto senza utilizzare `-recurse`. Se non viene specificato alcun nome di file di output, il compilatore si basa il nome del file di output nel primo file di input elaborato. Si tratta in genere il primo file nell'elenco dei file compilati quando vengono visualizzati in ordine alfabetico. Per questo motivo, è consigliabile specificare un file di output utilizzando il `-out` opzione.  
+ È possibile usare caratteri jolly in un nome file per compilare tutti i file corrispondenti nella directory del progetto senza usare `-recurse`. Se viene specificato alcun nome di file di output, il compilatore si basa il nome del file di output nel primo file di input elaborato. Si tratta in genere il primo file nell'elenco dei file compilati quando viene visualizzato in ordine alfabetico. Per questo motivo, è consigliabile specificare un file di output usando il `-out` opzione.  
   
 > [!NOTE]
->  Il `-recurse` opzione non è disponibile all'interno dell'ambiente di sviluppo di Visual Studio; è disponibile solo durante la compilazione dalla riga di comando.  
+>  Il `-recurse` opzione non è disponibile all'interno dell'ambiente di sviluppo di Visual Studio, è disponibile solo durante la compilazione dalla riga di comando.  
   
 ## <a name="example"></a>Esempio  
- Il seguente comando Compila tutti i file di Visual Basic nella directory corrente.  
+ Il comando seguente compila tutti i file di Visual Basic nella directory corrente.  
   
 ```console
 vbc *.vb  
 ```  
   
- Il comando seguente consente di compilare tutti i file di Visual Basic il `Test\ABC` directory e delle directory di sotto di esso, quindi genera `Test.ABC.dll`.  
+ Il comando seguente compila tutti i file Visual Basic il `Test\ABC` directory e qualsiasi directory sotto di essa, quindi genera `Test.ABC.dll`.  
   
 ```console
 vbc -target:library -out:Test.ABC.dll -recurse:Test\ABC\*.vb  
