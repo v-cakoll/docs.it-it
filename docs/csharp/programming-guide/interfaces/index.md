@@ -5,12 +5,12 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: fba595cca4d96fc9cd0f0966f45d1668181b2ec9
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.openlocfilehash: 1365b3e0dbc2ae095698b66f2b527301fe474a00
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46321405"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49454434"
 ---
 # <a name="interfaces-c-programming-guide"></a>Interfacce (Guida per programmatori C#)
 
@@ -36,7 +36,7 @@ Per implementare un membro di interfaccia, il corrispondente membro della classe
   
 Quando una classe o una struct implementa un'interfaccia, la classe o la struct deve fornire un'implementazione per tutti i membri definiti dall'interfaccia. L'interfaccia stessa non fornisce funzionalità che una classe o struct possa ereditare come può ereditare le funzionalità delle classi base. Tuttavia, se una classe base implementa un'interfaccia, qualsiasi classe derivata dalla classe base eredita tale implementazione.  
   
-Nell'esempio seguente viene illustrata un'implementazione dell'interfaccia IEquatable<T\>. La classe di implementazione, `Car`, deve fornire un'implementazione del metodo <xref:System.IEquatable%601.Equals%2A>.  
+Nell'esempio seguente viene illustrata un'implementazione dell'interfaccia <xref:System.IEquatable%601>. La classe di implementazione, `Car`, deve fornire un'implementazione del metodo <xref:System.IEquatable%601.Equals%2A>.  
   
 [!code-csharp[csProgGuideInheritance#48](../classes-and-structs/codesnippet/CSharp/interfaces_2.cs)]  
   

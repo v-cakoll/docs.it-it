@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 05c8ad4436cbbe5659c66f16692119fac6593b7f
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.openlocfilehash: 4452ad2445f81659d04bca3d64885148895aeb88
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49372033"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50046749"
 ---
 # <a name="file-and-stream-io"></a>I/O di file e di flussi
 I/O (input/output) di file e di flussi fa riferimento al trasferimento di dati da o verso un supporto di archiviazione. In .NET Framework gli spazi dei nomi `System.IO` contengono i tipi che consentono la lettura e la scrittura, sia in modo sincrono che in modo asincrono, su flussi di dati e file. Questi spazi dei nomi contengono anche i tipi che eseguono la compressione e la decompressione dei file e i tipi che consentono la comunicazione tra le pipe e le porte seriali.  
@@ -122,7 +122,7 @@ Per le convenzioni di denominazione dei percorsi e i modi in cui esprimere un pe
 ## <a name="isolated-storage"></a>Spazio di memorizzazione isolato  
  L'archiviazione isolata è un meccanismo di archiviazione dati che offre isolamento e sicurezza definendo modi standardizzati di associare il codice ai dati salvati. L'archiviazione offre un file system virtuale che è isolato dall'utente, dall'assembly ed eventualmente dal dominio. Lo spazio di memorizzazione isolato è particolarmente utile quando l'applicazione non dispone delle autorizzazioni di accesso ai file dell'utente. È possibile salvare le impostazioni o i file per l'applicazione in modo tale che vengano controllati dai criteri di sicurezza del computer.  
   
- Lo spazio di archiviazione isolato non è disponibile per le app [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]; usare invece le classi di dati nello spazio dei nomi <xref:Windows.Storage?displayProperty=nameWithType>. Per altre informazioni, vedere [Application data](/previous-versions/windows/apps/hh464917%28v=win.10%29) (Dati delle applicazioni).  
+ Lo spazio di archiviazione isolato non è disponibile per le app [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]; usare invece le classi di dati nello spazio dei nomi <xref:Windows.Storage?displayProperty=nameWithType>. Per altre informazioni, vedere [Application data](https://docs.microsoft.com/previous-versions/windows/apps/hh464917%28v=win.10%29) (Dati delle applicazioni).  
   
  Le classi seguenti vengono spesso usate nell'implementazione dello spazio di memorizzazione isolato:  
   
