@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: a7eb98da-4a93-4692-8b59-9d670c79ffb2
 ms.openlocfilehash: 6471a8a8e257ea3bb6f26a8041694ef25151ad1a
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
-ms.translationtype: HT
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/27/2018
-ms.locfileid: "50037295"
+ms.locfileid: "50195944"
 ---
 # <a name="security-considerations-for-data"></a>Considerazioni sulla protezione per i dati
 Quando si lavora con i dati in Windows Communication Foundation (WCF), è necessario considerare un numero di categorie delle minacce. Nella tabella seguente sono elencate le più importanti categorie di minacce correlate all'elaborazione dati. WCF fornisce gli strumenti per mitigare queste minacce.  
