@@ -4,13 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS Security
 ms.assetid: 909333b3-35ec-48f0-baff-9a50161896f6
-author: BrucePerlerMS
-ms.openlocfilehash: f7ac352a61e2d0a7678007a1544c652376dffafc
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 3b19886b11def5c15425fc27f907b10314c73e0c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196395"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181566"
 ---
 # <a name="message-security-certificate"></a>Certificato di sicurezza dei messaggi
 In questo esempio viene illustrato come implementare un'applicazione che utilizza WS-Security con l'autenticazione del certificato X.509 v3 per il client e che richiede l'autenticazione del server utilizzando il certificato X.509 v3 del server. Questo esempio utilizza impostazioni predefinite tali che tutti i messaggi dell'applicazione tra client e server sono firmati e crittografati. In questo esempio si basa sul [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md) ed è costituito da un programma di console client e una libreria di servizi ospitati da Internet Information Services (IIS). Il servizio implementa un contratto che definisce un modello di comunicazione richiesta/risposta.  
@@ -298,7 +297,7 @@ Press <ENTER> to terminate client.
   
 3.  Avviare Client.exe da \client\bin. L'attività del client viene visualizzata nella finestra dell'applicazione console.  
   
-4.  Se il client e il servizio non è in grado di comunicare, vedere [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+4.  Se il client e il servizio non possono comunicare, vedere [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 ### <a name="to-run-the-sample-across-computers"></a>Per eseguire l'esempio tra più computer  
   
@@ -326,7 +325,7 @@ Press <ENTER> to terminate client.
   
 12. Sul server aprire un prompt dei comandi di Visual Studio con privilegi di amministratore ed eseguire ImportClientCert.bat. In questo modo viene importato il certificato del client dal file Client.cer nell'archivio LocalMachine - TrustedPeople.  
   
-13. Sul computer client avviare Client.exe da una finestra del prompt dei comandi. Se il client e il servizio non è in grado di comunicare, vedere [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+13. Sul computer client avviare Client.exe da una finestra del prompt dei comandi. Se il client e il servizio non possono comunicare, vedere [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 ### <a name="to-clean-up-after-the-sample"></a>Per eseguire la pulizia dopo l'esempio  
   

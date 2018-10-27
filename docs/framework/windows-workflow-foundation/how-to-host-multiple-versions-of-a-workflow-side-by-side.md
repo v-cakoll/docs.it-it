@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 09c575df-e0a3-4f3b-9e01-a7ac59d65287
-ms.openlocfilehash: 721ab72ab1f67d2dc42574ed0147fa7686e02fd1
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: 04586f22076b6e2cf4175c7d9d985820ef7885c6
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49316467"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181619"
 ---
 # <a name="how-to-host-multiple-versions-of-a-workflow-side-by-side"></a>Procedura: ospitare più versioni di un flusso di lavoro side-by-side
 `WorkflowIdentity` offre agli sviluppatori di applicazioni flusso di lavoro un modo per associare un nome e una versione a una definizione del flusso di lavoro. Consente inoltre di associare queste informazioni a un'istanza persistente del flusso di lavoro. Queste informazioni di identità possono essere usate dagli sviluppatori di applicazioni flusso di lavoro per scenari quali l'esecuzione affiancata di più versioni di una definizione del flusso di lavoro e costituiscono un elemento fondamentale per altre funzionalità come l'aggiornamento dinamico. In questo passaggio dell'esercitazione viene illustrato come usare `WorkflowIdentity` per ospitare più versioni di un flusso di lavoro contemporaneamente.
@@ -555,14 +555,15 @@ ms.locfileid: "49316467"
 
 2.  Avviare un nuovo flusso di lavoro facendo **nuova partita**. La versione del flusso di lavoro viene visualizzata nella finestra di stato e riflette la versione aggiornata dall'oggetto `WorkflowIdentity` associato. Prendere nota di `InstanceId` in modo da poter visualizzare il file di traccia per il flusso di lavoro quando viene completato e quindi immettere i tentativi fino al termine del gioco. Si noti in che modo la stima dell'utente viene visualizzata tra le informazioni riportate nella finestra di stato in base agli aggiornamenti alle attività `WriteLine`.
 
- **Immettere un numero compreso tra 1 e 10**
-**5 è troppo elevato.** 
- **Immettere un numero compreso tra 1 e 10**
-**3 è troppo elevato.** 
- **Immettere un numero compreso tra 1 e 10**
-**1 è troppo basso.** 
- **Immettere un numero compreso tra 1 e 10**
-**Congratulazioni, è stata ipotizzata il numero a sua 4 volta.**
+ **Immettere un numero compreso tra 1 e 10**  
+**5 è troppo alto.**  
+**Immettere un numero compreso tra 1 e 10**  
+**3 è troppo elevato.**  
+**Immettere un numero compreso tra 1 e 10**  
+**1 è troppo basso.**  
+**Immettere un numero compreso tra 1 e 10**  
+**Complimenti, è stata ipotizzata il numero a sua 4 volta.**  
+
     > [!NOTE]
     >  Viene visualizzato il testo aggiornato dalle attività `WriteLine`, ma non l'output dell'attività finale `WriteLine` aggiunta in questo argomento. Ciò accade perché la finestra di stato viene aggiornata dal gestore `PersistableIdle`. Poiché il flusso di lavoro viene completato e non risulta inattivo dopo l'attività finale, il gestore `PersistableIdle` non viene chiamato. Tuttavia, viene visualizzato un messaggio simile nella finestra di stato dal gestore `Completed`. Se necessario, è possibile aggiungere il codice al gestore `Completed` per estrarre il testo da `StringWriter` e per visualizzarlo nella finestra di stato.
 

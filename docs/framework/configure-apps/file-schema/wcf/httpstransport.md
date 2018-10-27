@@ -2,12 +2,12 @@
 title: '&lt;httpsTransport&gt;'
 ms.date: 03/30/2017
 ms.assetid: f6ed4bc0-7e38-4348-9259-30bf61eb9435
-ms.openlocfilehash: 972fc94234d5eeabcdb428bc5f0cff81e69cec9b
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: b31965d5c61969f673dfa5627e40567ea0a189a7
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850309"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181579"
 ---
 # <a name="lthttpstransportgt"></a>&lt;httpsTransport&gt;
 Specifica un trasporto HTTP per la trasmissione di messaggi SOAP per un'associazione personalizzata.  
@@ -49,7 +49,7 @@ Specifica un trasporto HTTP per la trasmissione di messaggi SOAP per un'associaz
 |allowCookies|Valore booleano che specifica se il client accetta cookie e li propaga alle richieste future. Il valore predefinito è `false`.<br /><br /> È possibile usare questo attributo quando si interagisce con servizi Web ASMX che usano cookie. In questo modo i cookie restituiti dal server vengono copiati automaticamente in tutte le richieste client future per quel servizio.|  
 |authenticationScheme|Specifica il protocollo usato per autenticare le richieste del client elaborate da un listener HTTP. Di seguito vengono elencati i valori validi:<br /><br /> -Digest: Specifica l'autenticazione del digest.<br />-Negotiate: Negozia con il client per determinare lo schema di autenticazione. Viene usato se il client e il server supportano entrambi Kerberos; in caso contrario, viene usato NTLM.<br />-Ntlm: Specifica l'autenticazione NTLM.<br />-Basic: Specifica l'autenticazione di base.<br />-Anonymous: Specifica l'autenticazione anonima.<br /><br /> Il valore predefinito è Anonymous. L'attributo è di tipo <xref:System.Net.AuthenticationSchemes>. Questo attributo può essere impostato solo una volta.|  
 |bypassProxyOnLocal|Valore booleano che indica se ignorare il server proxy per indirizzi locali. Il valore predefinito è `false`.<br /><br /> Un indirizzo locale corrisponde a un indirizzo che si trova nella rete LAN o nell'Intranet locale.<br /><br /> Windows Communication Foundation (WCF) ignora sempre il proxy se l'indirizzo del servizio inizia con `http://localhost`.<br /><br /> È necessario usare il nome host invece di localhost se si desidera che i client passino da un proxy quando comunicano con servizi nello stesso computer.|  
-|hostnameComparisonMode|Specifica la modalità di confronto del nome host HTTP usata per analizzare gli URI. I valori validi sono:<br /><br /> -StrongWildcard: ("+") corrisponde a tutti i possibili nomi host nel contesto dello schema specificato, porta e relativo URI.<br />-Valore esatto: senza caratteri jolly<br />-WeakWildcard: ("*") corrisponde a qualsiasi nome host possibile nel contesto dello schema specificato, porta e relativo UIR che non sono stati associati in modo esplicito o tramite il meccanismo di carattere jolly complesso.<br /><br /> L'impostazione predefinita è StrongWildcard. L'attributo è di tipo `System.ServiceModel.HostnameComparison`.|  
+|hostnameComparisonMode|Specifica la modalità di confronto del nome host HTTP usata per analizzare gli URI. I valori validi sono:<br /><br /> -StrongWildcard: ("+") corrisponde a tutti i possibili nomi host nel contesto dello schema specificato, porta e relativo URI.<br />-Valore esatto: senza caratteri jolly<br />-WeakWildcard: ("\*") corrisponde a qualsiasi nome host possibile nel contesto dello schema specificato, porta e relativo UIR che non sono stati associati in modo esplicito o tramite il meccanismo di carattere jolly complesso.<br /><br /> L'impostazione predefinita è StrongWildcard. L'attributo è di tipo `System.ServiceModel.HostnameComparison`.|  
 |manualAddressing|Valore booleano che consente all'utente di assumere il controllo dell'indirizzamento dei messaggi. Questa proprietà viene usata in genere in scenari di router, in cui è l'applicazione a determinare a quale delle tante destinazioni inviare un messaggio.<br /><br /> Quando è impostato su `true`, il canale presuppone che il messaggio sia già stato indirizzato e non aggiunge ulteriori informazioni. L'utente può indirizzare quindi individualmente ogni messaggio.<br /><br /> Quando è impostato su `false`, il meccanismo di indirizzamento predefinito di Windows Communication Foundation (WCF) crea automaticamente indirizzi per tutti i messaggi.<br /><br /> Il valore predefinito è `false`.|  
 |maxBufferPoolSize|Numero intero positivo che specifica la dimensione massima del pool di buffer. Il valore predefinito è 524288.<br /><br /> Molte parti di WCF usano buffer. La creazione e l'eliminazione dei buffer a ogni relativo uso sono operazioni onerose, analogamente a quelle di Garbage Collection dei buffer. Quando si usa un pool di buffer è possibile prelevare un buffer dal pool, usarlo e, al termine delle operazioni, riporlo nel pool. In questo modo è possibile evitare il sovraccarico dovuto alla creazione e all'eliminazione dei buffer.|  
 |maxBufferSize|Numero intero positivo che specifica la dimensione massima del buffer. L'impostazione predefinita è 524288.|  

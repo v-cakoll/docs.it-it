@@ -2,12 +2,12 @@
 title: Hello World con il servizio di routing
 ms.date: 03/30/2017
 ms.assetid: 0f4b0d5b-6522-4ad5-9f3a-baa78316d7d1
-ms.openlocfilehash: 52b5c3b167cbbfb032d8e6104a118c5c9384938e
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 25d0ce0663b60410912be94780fe8e89f6bf0d39
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845775"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50182542"
 ---
 # <a name="hello-world-with-the-routing-service"></a>Hello World con il servizio di routing
 Questo esempio viene illustrato il servizio di Routing di Windows Communication Foundation (WCF). Il servizio di Routing è un componente WCF che rende più semplice includere un router basato sul contenuto nell'applicazione. In questo esempio si adatta l'esempio di calcolatrice standard di WCF per comunicare con il servizio di Routing. In questo esempio, il client calcolatrice è configurato per inviare messaggi a un endpoint esposto dal router. Il servizio di routing è configurato per accettare tutti i messaggi ad esso inviati e per inoltrarli a un endpoint che corrisponde al servizio di calcolatrice. I messaggi inviati dal client vengono pertanto ricevuti dal router e reindirizzati al servizio di calcolatrice effettivo. I messaggi provenienti dal servizio di calcolatrice di backup vengono inviati nuovamente al router del servizio, che a sua volta li inoltra al client calcolatrice.
@@ -29,6 +29,7 @@ Questo esempio viene illustrato il servizio di Routing di Windows Communication 
 
      È necessario visualizzare il seguente output:
 
+    ```console
      Add(100,15.99) = 115.99
 
      Subtract(145,76.54) = 68.46
@@ -36,6 +37,7 @@ Questo esempio viene illustrato il servizio di Routing di Windows Communication 
      Multiply(9,81.25) = 731.25
 
      Divide(22,7) = 3.14285714285714
+    ```
 
 ## <a name="configurable-via-code-or-appconfig"></a>Configurabile tramite codice o App.Config
  L'esempio proposto è configurato per l'uso di un file App.config per la definizione del comportamento del router. È inoltre possibile modificare il nome del file App.config affinché non venga riconosciuto e rimuovere i commenti dalla chiamata al metodo in ConfigureRouterViaCode(). Entrambi i metodi restituiscono lo stesso comportamento da parte del router.

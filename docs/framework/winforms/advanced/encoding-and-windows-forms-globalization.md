@@ -19,15 +19,15 @@ helpviewer_keywords:
 - localization [Windows Forms], character sets
 - globalization [Windows Forms], character sets
 ms.assetid: 22e8965d-a712-42b3-8167-3ee346bd70f9
-ms.openlocfilehash: 9257a6b725839d8f433988ab76c4ce9ae349d950
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 1b1ac50bde87b22c3ce9ff7524edbf8750976788
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208572"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183113"
 ---
 # <a name="encoding-and-windows-forms-globalization"></a>Globalizzazione di Windows Form e codifica
-Le applicazioni Windows Forms sono completamente compatibili con Unicode, vale a dire che ogni carattere è rappresentato da un numero univoco, indipendentemente dalla piattaforma, dal programma o dal linguaggio in uso. Per ulteriori informazioni su Unicode, vedere il [sito Web di Unicode consortium](http://www.unicode.org).  
+Le applicazioni Windows Forms sono completamente compatibili con Unicode, vale a dire che ogni carattere è rappresentato da un numero univoco, indipendentemente dalla piattaforma, dal programma o dal linguaggio in uso. Per altre informazioni su Unicode, vedere la [sito Web del consorzio Unicode](https://www.unicode.org).  
   
 ## <a name="benefits-of-unicode"></a>Vantaggi di Unicode  
  I vantaggi dei form abilitati per Unicode includono la possibilità di lavorare con gli script solo Unicode, ad esempio l'Hindi. È anche possibile usare più lingue in un unico form. In Unicode tutti i caratteri sono lunghi due byte, quindi non occorrono operazioni complesse per rappresentare i caratteri DBCS. È anche possibile scrivere un singolo set di codice che funzionerà su tutte le piattaforme. Si tratta di una modifica rispetto alle versioni precedenti di Visual Basic, in cui era necessario scrivere codice diverso per piattaforme diverse, ad esempio Windows NT e [!INCLUDE[win98](../../../../includes/win98-md.md)].  

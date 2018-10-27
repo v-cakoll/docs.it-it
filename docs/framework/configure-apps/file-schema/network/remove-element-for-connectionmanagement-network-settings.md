@@ -10,14 +10,12 @@ helpviewer_keywords:
 - <connectionManagement>, remove element
 - remove element, connectionManagement
 ms.assetid: 94b81775-5a22-4975-8c47-8620c40c3f35
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: d249cc412a1638e62b57b4976adc23fdf8f36e80
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 03cac1523c0fce268c2df8d04134c0d5e88830e2
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48024584"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181553"
 ---
 # <a name="ltremovegt-element-for-connectionmanagement-network-settings"></a>&lt;rimuovere&gt; (elemento) per connectionManagement (impostazioni di rete)
 Rimuove un indirizzo IP o nome DNS dall'elenco di gestione connessione.  
@@ -62,7 +60,7 @@ Rimuove un indirizzo IP o nome DNS dall'elenco di gestione connessione.
  Questo elemento può essere usato nel file di configurazione dell'applicazione o nel file di configurazione del computer (Machine.config).  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente rimuove tutte le voci di elenco di gestione connessione per www.adventure-works.com il server e quindi configura un'applicazione per usare quattro connessioni al server www.contoso.com e due connessioni a tutti gli altri server.  
+ L'esempio seguente rimuove tutte le voci di elenco di gestione connessione per il server `www.adventure-works.com` e quindi configura un'applicazione di usare quattro connessioni al server `www.contoso.com` e due connessioni a tutti gli altri server.  
   
 ```xml  
 <configuration>  
@@ -77,6 +75,6 @@ Rimuove un indirizzo IP o nome DNS dall'elenco di gestione connessione.
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- <xref:System.Net.ServicePoint>  
- <xref:System.Net.ServicePointManager>  
- [Schema delle impostazioni di rete](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- <xref:System.Net.ServicePoint>  
+- <xref:System.Net.ServicePointManager>  
+- [Schema delle impostazioni di rete](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
