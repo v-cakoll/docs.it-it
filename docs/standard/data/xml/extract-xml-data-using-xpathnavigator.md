@@ -9,11 +9,11 @@ ms.assetid: 095b0987-ee4b-4595-a160-da1c956ad576
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d838f3d9f4c9400fbbef0fb24f5275eff2038c49
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47232677"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086778"
 ---
 # <a name="extract-xml-data-using-xpathnavigator"></a>Estrazione di dati XML con XPathNavigator
 Sono disponibili diversi metodi per rappresentare un documento XML in Microsoft .NET Framework, inclusi l'uso di una classe <xref:System.String> o l'uso delle classi <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter>, <xref:System.Xml.XmlDocument> o <xref:System.Xml.XPath.XPathDocument>. Per facilitare lo spostamento tra queste diverse rappresentazioni di un documento XML, la classe <xref:System.Xml.XPath.XPathNavigator> offre una serie di metodi e proprietà per estrarre i dati XML come oggetto <xref:System.String>, <xref:System.Xml.XmlReader> o come oggetto <xref:System.Xml.XmlWriter>.  

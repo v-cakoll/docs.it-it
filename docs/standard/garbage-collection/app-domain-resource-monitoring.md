@@ -11,11 +11,11 @@ ms.assetid: 318bedf8-7f35-4f00-b34a-2b7b8e3fa315
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 50d601d711579bce2e2651a1efc65d824a50d47a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47400699"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48266650"
 ---
 # <a name="application-domain-resource-monitoring"></a>Monitoraggio delle risorse del dominio applicazione
 Il monitoraggio delle risorse del dominio applicazione permette agli host di monitorare l'utilizzo di CPU e memoria da parte del dominio applicazione. Ciò risulta utile per gli host, come ASP.NET, che usano molti domini applicazione in un processo a esecuzione prolungata. L'host può scaricare il dominio applicazione di un'applicazione che influisce negativamente sulle prestazioni dell'intero processo, ma solo se è in grado di identificare l'applicazione problematica. Il monitoraggio delle risorse del dominio applicazione fornisce informazioni che possono essere usate per prendere questo tipo di decisioni.  

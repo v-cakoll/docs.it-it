@@ -3,13 +3,13 @@ title: Prerequisiti per .NET Core in Mac
 description: Versioni macOS supportate e dipendenze .NET Core necessarie per lo sviluppo, la distribuzione e l'esecuzione di applicazioni .NET Core su computer macOS.
 author: guardrex
 ms.author: mairaw
-ms.date: 09/27/2017
-ms.openlocfilehash: 31fee3bbc85daa66019b63e50b48509b79606fce
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.date: 10/03/2018
+ms.openlocfilehash: b5b3c6ea90a2cc4487e849af468d324b645834af
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36315066"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48584078"
 ---
 # <a name="prerequisites-for-net-core-on-macos"></a>Prerequisiti per .NET Core in macOS
 
@@ -23,7 +23,7 @@ Questo articolo illustra le versioni macOS supportate e le dipendenze .NET Core 
 
 * macOS 10.12 "Sierra" e versioni successive
 
-Per l'elenco completo di sistemi operativi supportati da .NET Core 2.x, le versioni di sistemi operativi non supportate e i criteri relativi al ciclo di vita, vedere [.NET Core 2.x Supported OS Versions](https://github.com/dotnet/core/blob/master/release-notes/2.0/2.0-supported-os.md) (.NET Core 2.x - Versioni di sistemi operativi supportate).
+Per l'elenco completo di sistemi operativi supportati da .NET Core 2.x, le versioni di sistemi operativi non supportate e i criteri relativi al ciclo di vita, vedere [.NET Core 2.x Supported OS Versions](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md) (.NET Core 2.x - Versioni di sistemi operativi supportate).
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
@@ -40,7 +40,7 @@ Per l'elenco completo di sistemi operativi, supportati da .NET Core 1.x, le vers
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
-Scaricare e installare .NET Core SDK da [.NET Downloads](https://www.microsoft.com/net/download/core) (Download di .NET). In caso di problemi con l'installazione in macOS, vedere l'argomento [Known issues](https://github.com/dotnet/core/tree/master/release-notes/2.0) (Problemi noti) per la versione installata.
+Scaricare e installare .NET Core SDK da [.NET Downloads](https://www.microsoft.com/net/download/core) (Download di .NET). In caso di problemi con l'installazione in macOS, vedere l'argomento [Known issues](https://github.com/dotnet/core/tree/master/release-notes/2.1) (Problemi noti) per la versione installata.
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 

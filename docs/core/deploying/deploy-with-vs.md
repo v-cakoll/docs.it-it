@@ -9,11 +9,11 @@ dev_langs:
 - vb
 ms.custom: vs-dotnet
 ms.openlocfilehash: 7a9410ca99f621ee6d0e8b263354ebc536f71a4a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47204297"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48584390"
 ---
 # <a name="deploying-net-core-apps-with-visual-studio"></a>Distribuzione di app .NET Core con Visual Studio
 
@@ -144,7 +144,7 @@ Per pubblicare l'app da Visual Studio eseguire le operazioni seguenti:
 
       1. Nella scheda **Pubblica** selezionare **Pubblica**. I file che costituiscono l'applicazione vengono salvati nel file system locale.
 
-      1. La scheda **Pubblica** ora visualizza un unico profilo **FolderProfile**. Le impostazioni di configurazione del profilo vengono visualizzate nella sezione **Riepilogo** della scheda. **Runtime di destinazione** identifica il runtime pubblicato e **Percorso di destinazione** identifica il percorso in cui sono stati salvati i file per la distribuzione autonoma.
+      1. La scheda **Pubblica** ora visualizza un unico profilo **FolderProfile**. Le impostazioni di configurazione del profilo vengono visualizzate nella sezione **Riepilogo** della scheda. Runtime di destinazione identifica il runtime pubblicato e **Percorso di destinazione** identifica il percorso in cui sono stati salvati i file per la distribuzione autonoma.
 
       1. Per impostazione predefinita tutti i file pubblicati vengono salvati in una singola directory. Per praticità è consigliabile creare un profilo separato per ogni runtime di destinazione e inserire i file pubblicati in una directory specifica per la piattaforma. Questo richiede la creazione di un profilo di pubblicazione separato per ogni piattaforma di destinazione. A questo punto ricompilare l'applicazione per ogni piattaforma procedendo nel modo seguente:
 

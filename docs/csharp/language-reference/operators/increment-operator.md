@@ -8,11 +8,11 @@ helpviewer_keywords:
 - ++ operator [C#]
 ms.assetid: e9dec353-070b-44fb-98ed-eb8fdf753feb
 ms.openlocfilehash: a52f614ce1bbfb8e9d9be686b277c1e69f6f9d35
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47202251"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48030470"
 ---
 # <a name="-operator-c-reference"></a>Operatore ++ (Riferimenti per C#)
 L'operatore di incremento (`++`) incrementa il suo operando di 1. L'operatore di incremento può apparire prima o dopo il suo operando: `++variable` e `variable++`.  

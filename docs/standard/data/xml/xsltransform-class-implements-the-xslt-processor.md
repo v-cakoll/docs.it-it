@@ -9,17 +9,17 @@ ms.assetid: 88373fe2-4a6b-44f9-8a62-8a3e348e3a46
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 81d0ce4f697935908b8ad7084560bd1adacbdf2d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47456077"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "47863496"
 ---
 # <a name="xsltransform-class-implements-the-xslt-processor"></a>Implementazione del processore XSLT da parte della classe XslTransform
 > [!NOTE]
 >  La classe <xref:System.Xml.Xsl.XslTransform> è obsoleta in [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]. È possibile eseguire le trasformazioni XSLT (Extensible Stylesheet Language for Transformations) usando la classe <xref:System.Xml.Xsl.XslCompiledTransform>. Per altre informazioni, vedere [Utilizzo della classe XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) e [Migrazione dalla classe XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md).  
   
- La classe <xref:System.Xml.Xsl.XslTransform> è un processore XSLT che implementa la raccomandazione XSL Transformations (XSLT) Version 1.0. Il metodo <xref:System.Xml.Xsl.XslTransform.Load%2A> individua e legge i fogli di stile, mentre il metodo <xref:System.Xml.Xsl.XslTransform.Transform%2A> trasforma il documento di origine. Come documento di origine per <xref:System.Xml.XPath.IXPathNavigable> può essere usato qualsiasi archivio che implementi l'interfaccia <xref:System.Xml.Xsl.XslTransform>. Poiché [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] implementa attualmente l'interfaccia <xref:System.Xml.XPath.IXPathNavigable> nel <xref:System.Xml.XmlDocument>, <xref:System.Xml.XmlDataDocument> e <xref:System.Xml.XPath.XPathDocument>, è possibile usare uno qualsiasi di questi elementi come documento di origine di input per una trasformazione.  
+ La classe <xref:System.Xml.Xsl.XslTransform> è un processore XSLT che implementa la raccomandazione XSL Transformations (XSLT) versione 1.0. Il metodo <xref:System.Xml.Xsl.XslTransform.Load%2A> individua e legge i fogli di stile, mentre il metodo <xref:System.Xml.Xsl.XslTransform.Transform%2A> trasforma il documento di origine. Come documento di origine per <xref:System.Xml.XPath.IXPathNavigable> può essere usato qualsiasi archivio che implementi l'interfaccia <xref:System.Xml.Xsl.XslTransform>. Poiché [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] implementa attualmente l'interfaccia <xref:System.Xml.XPath.IXPathNavigable> nel <xref:System.Xml.XmlDocument>, <xref:System.Xml.XmlDataDocument> e <xref:System.Xml.XPath.XPathDocument>, è possibile usare uno qualsiasi di questi elementi come documento di origine di input per una trasformazione.  
   
  L'oggetto <xref:System.Xml.Xsl.XslTransform> in [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] supporta solo la specifica XSLT 1.0, definita con lo spazio dei nomi seguente:  
   

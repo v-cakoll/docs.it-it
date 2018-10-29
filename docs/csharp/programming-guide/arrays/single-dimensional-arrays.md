@@ -6,11 +6,11 @@ helpviewer_keywords:
 - arrays [C#], single-dimensional
 ms.assetid: 2cec1196-1de0-49d2-baf2-c607c33310e8
 ms.openlocfilehash: c2f26fd74a596ada21eef578e58c9cd8e0305d6c
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47399385"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48027128"
 ---
 # <a name="single-dimensional-arrays-c-programming-guide"></a>Matrici unidimensionali (Guida per programmatori C#)
 
@@ -58,6 +58,6 @@ ms.locfileid: "47399385"
 
 - <xref:System.Array>  
 - [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
-- [Array](../../../csharp/programming-guide/arrays/index.md)  
+- [Matrici](../../../csharp/programming-guide/arrays/index.md)  
 - [Matrici multidimensionali](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)  
 - [Matrici irregolari](../../../csharp/programming-guide/arrays/jagged-arrays.md)

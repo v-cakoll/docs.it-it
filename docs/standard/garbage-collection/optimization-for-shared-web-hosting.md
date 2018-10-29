@@ -10,11 +10,11 @@ ms.assetid: be98c0ab-7ef8-409f-8a0d-cb6e5b75ff20
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7831e383a3048523909b79ac5a4706f3c1c48371
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47216133"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48033480"
 ---
 # <a name="optimization-for-shared-web-hosting"></a>Ottimizzazione per l'hosting Web condiviso
 L'amministratore di un server condiviso che ospita più siti Web di piccole dimensioni può ottimizzare le prestazioni e aumentare la capacità del sito aggiungendo l'impostazione `gcTrimCommitOnLowMemory` seguente al nodo `runtime` nel file Aspnet.config nella directory .NET:  

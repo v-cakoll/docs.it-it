@@ -13,11 +13,11 @@ ms.assetid: 7d10d11f-680f-4721-b047-fb136316b4cd
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8956726915ebe1c0b1c7654e62e2e28620274b4a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47205131"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48836284"
 ---
 # <a name="miscellaneous-constructs-in-regular-expressions"></a>Costrutti vari nelle espressioni regolari
 Le espressioni regolari in .NET includono tre costrutti vari di linguaggio. Uno consente di abilitare o disabilitare opzioni di corrispondenza specifiche all'interno di un modello dell'espressione regolare. I restanti due consentono di includere commenti in un'espressione regolare.  
@@ -42,7 +42,7 @@ Le espressioni regolari in .NET includono tre costrutti vari di linguaggio. Uno 
  Qualsiasi modifica nelle opzioni dell'espressione regolare definita dal costrutto `(?imnsx-imnsx)` rimane attiva fino alla fine del gruppo di inclusione.  
   
 > [!NOTE]
->  Il costrutto di raggruppamento `(?imnsx-imnsx:`*subexpression*`)` offre la stessa funzionalità per una sottoespressione. Per altre informazioni, vedere [Costrutti di raggruppamento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
+>  Il costrutto di raggruppamento `(?imnsx-imnsx:`*subexpression*`)` offre la stessa funzionalità per una sottoespressione. Per altre informazioni, vedere [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
   
  Nell'esempio seguente vengono usate le opzioni `i`, `n` e `x` per disabilitare la distinzione tra maiuscole e minuscole e abilitare le acquisizioni esplicite, nonché per ignorare lo spazio vuoto nel modello dell'espressione regolare all'interno di un'espressione regolare.  
   

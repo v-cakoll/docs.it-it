@@ -9,11 +9,11 @@ ms.assetid: dd6dc920-b011-418a-b3db-f1580a7d9251
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 870e800220031338557792fa612d4a3101e79f90
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47236017"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48024571"
 ---
 # <a name="creating-new-attributes-for-elements-in-the-dom"></a>Creazione di nuovi attributi per gli elementi nel DOM
 La creazione di nuovi attributi è diversa dalla creazione di altri tipi di nodi, perché gli attributi non sono nodi, ma proprietà di un nodo di elemento e sono contenuti in una classe **XmlAttributeCollection** associata all'elemento. Sono disponibili diversi modi per creare un attributo e associarlo a un elemento:  

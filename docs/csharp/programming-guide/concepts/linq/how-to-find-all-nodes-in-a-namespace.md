@@ -3,11 +3,11 @@ title: 'Procedura: Trovare tutti i nodi in uno spazio dei nomi (C#)'
 ms.date: 07/20/2015
 ms.assetid: 3a38b913-a53e-4d0e-a19d-8782bffd3364
 ms.openlocfilehash: 0675795da7c190e6d105ac61027c28f161961099
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47230956"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48033116"
 ---
 # <a name="how-to-find-all-nodes-in-a-namespace-c"></a>Procedura: Trovare tutti i nodi in uno spazio dei nomi (C#)
 È possibile applicare un filtro sullo spazio dei nomi di ogni elemento o attributo per trovare tutti i nodi inclusi in questo determinato spazio dei nomi.  

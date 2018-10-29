@@ -11,11 +11,11 @@ helpviewer_keywords:
 - try-catch statement [C#]
 ms.assetid: cb5503c7-bfa1-4610-8fc2-ddcd2e84c438
 ms.openlocfilehash: d1fd290444bc7841e32d955a4e7f2134afdbd484
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47193619"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48030892"
 ---
 # <a name="try-catch-c-reference"></a>try-catch (Riferimenti per C#)
 L'istruzione try-catch è costituita da un blocco `try` seguito da una o più clausole `catch`, che specificano i gestori per eccezioni diverse.  

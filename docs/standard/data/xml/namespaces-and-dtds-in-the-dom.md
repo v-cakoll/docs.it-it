@@ -6,11 +6,11 @@ ms.assetid: 1e9b55c4-76ad-4f54-8d96-7ce4b4cf1e05
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: bc8a1de8ab10eff88757720a35aa9668125cfbfa
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47203095"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48582161"
 ---
 # <a name="namespaces-and-dtds-in-the-dom"></a>Spazi dei nomi e DTD nel DOM (Document Object Model)
 Le DTD (Document Type Definition) rendono più complicato il supporto dello spazio dei nomi. Ad esempio, nel seguente codice XML sono presenti attributi predefiniti contenenti due punti nei nomi.  

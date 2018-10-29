@@ -8,12 +8,12 @@ helpviewer_keywords:
 - group keyword [C#]
 - group clause [C#]
 ms.assetid: c817242e-b12c-4baa-a57e-73ee138f34d1
-ms.openlocfilehash: 157bd07f3332883f010ef26ba920dae88276051b
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 8b2516b4e5b418e560d5763d8e551d2ab7646da3
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084677"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48584351"
 ---
 # <a name="group-clause-c-reference"></a>Clausola group (Riferimento C#)
 
@@ -53,7 +53,7 @@ L'esempio seguente illustra l'uso di un valore booleano per una chiave in modo d
 
 ### <a name="grouping-by-numeric-range"></a>Raggruppamento per intervallo numerico
 
-Nell'esempio seguente viene usata un'espressione per creare le chiavi di raggruppamento numeriche che rappresentano un intervallo percentile. Si noti l'uso di [let](let-clause.md) come comoda posizione di archiviazione del risultato della chiamata a un metodo, in modo da non dover chiamare il metodo due volte nella clausola `group`. Si può notare inoltre che nella clausola `group`, per evitare un'eccezione "divisione per zero", il codice verifica se lo studente non ha una media pari a zero. Per altre informazioni su come usare in modo sicuro i metodi nelle espressioni di query, vedere [Procedura: Gestire le eccezioni nelle espressioni di query](../../programming-guide/linq-query-expressions/how-to-handle-exceptions-in-query-expressions.md).
+Nell'esempio seguente viene usata un'espressione per creare le chiavi di raggruppamento numeriche che rappresentano un intervallo percentile. Si noti l'uso di [let](let-clause.md) come comoda posizione di archiviazione del risultato della chiamata a un metodo, in modo da non dover chiamare il metodo due volte nella clausola `group`. Per altre informazioni su come usare in modo sicuro i metodi nelle espressioni di query, vedere [Procedura: Gestire le eccezioni nelle espressioni di query](../../programming-guide/linq-query-expressions/how-to-handle-exceptions-in-query-expressions.md).
 
 [!code-csharp[cscsrefQueryKeywords#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#15)]
 

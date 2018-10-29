@@ -6,12 +6,12 @@ ms.date: 04/12/2018
 ms.technology: dotnet-standard
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c99f59478b61bd382d6bf9529d2921407cc70bc
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 19353bd068e3b04bc3d852c1e22db9c97ebef628
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44253156"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48583165"
 ---
 # <a name="whats-new-in-the-net-standard"></a>Novità di .NET Standard
 
@@ -55,7 +55,7 @@ Ecco alcune delle funzionalità aggiunte allo spazio dei nomi <xref:System> in .
 
 ### <a name="support-for-net-framework-libraries"></a>Supporto delle librerie di .NET Framework
 
-La stragrande maggioranza delle librerie è destinata a .NET Framework anziché a .NET Standard. La maggior parte delle chiamate in tali librerie, tuttavia, riguardano API incluse in .NET Standard 2.0. A partire da .NET Standard 2.0, è possibile accedere alle librerie .NET Framework da una libreria .NET Standard tramite uno [shim di compatibilità](https://github.com/dotnet/standard/blob/master/docs/planning/netstandard-20/README.md#assembly-unification). Questo livello di compatibilità è trasparente per gli sviluppatori. Non è necessario eseguire alcuna operazione per sfruttare i vantaggi delle librerie .NET Framework.
+La stragrande maggioranza delle librerie è destinata a .NET Framework anziché a .NET Standard. La maggior parte delle chiamate in tali librerie, tuttavia, riguardano API incluse in .NET Standard 2.0. A partire da .NET Standard 2.0, è possibile accedere alle librerie .NET Framework da una libreria .NET Standard tramite uno [shim di compatibilità](https://github.com/dotnet/standard/blob/master/docs/planning/netstandard-2.0/README.md#assembly-unification). Questo livello di compatibilità è trasparente per gli sviluppatori. Non è necessario eseguire alcuna operazione per sfruttare i vantaggi delle librerie .NET Framework.
 
 L'unico requisito è che le API chiamate dalla libreria di classi di .NET Framework siano incluse in .NET Standard 2.0.
 

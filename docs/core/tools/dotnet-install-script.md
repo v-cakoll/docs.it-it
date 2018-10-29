@@ -4,12 +4,12 @@ description: Informazioni sugli script dotnet-install per l'installazione degli 
 author: blackdwarf
 ms.author: mairaw
 ms.date: 09/11/2017
-ms.openlocfilehash: 8d1c6ebb30bd45575bb61206799c9c3e5c47ff0c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: ea14424297dcf1dab8711197bee1d3b3e19879c1
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004010"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48837076"
 ---
 # <a name="dotnet-install-scripts-reference"></a>Riferimento agli script dotnet-install
 
@@ -33,8 +33,8 @@ Gli script `dotnet-install` vengono usati per eseguire un'installazione non ammi
 
 È consigliabile usare la versione stabile ospitata nel [sito Web principale di .NET Core](https://dot.net). I percorsi diretti per gli script sono:
 
-* https://dot.net/v1/dotnet-install.sh (Bash, UNIX)
-* https://dot.net/v1/dotnet-install.ps1 (Powershell, Windows)
+* <https://dot.net/v1/dotnet-install.sh> (Bash, UNIX)
+* <https://dot.net/v1/dotnet-install.ps1> (Powershell, Windows)
 
 Gli script vengono usati principalmente negli scenari di automazione e nelle installazioni senza privilegi di amministratore. Sono disponibili due script, uno per PowerShell, che funziona in Windows, L'altro script è uno script bash che funziona su Linux/macOS. Entrambi gli script hanno lo stesso comportamento. Lo script bash legge anche le opzioni PowerShell, che possono quindi essere usate con lo script in sistemi Linux/macOS.
 

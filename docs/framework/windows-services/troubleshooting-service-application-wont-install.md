@@ -11,11 +11,11 @@ helpviewer_keywords:
 ms.assetid: 45c48e2e-b97d-44bc-8896-14f328e0ce33
 author: ghogen
 ms.openlocfilehash: 0912ff0909ffa5b22bed07543a2e514de4fb1ff5
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47207986"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48035831"
 ---
 # <a name="troubleshooting-service-application-won39t-install"></a>Risoluzione dei problemi: Impossibile installare l'applicazione di servizio
 Se l'applicazione di servizio non viene installata correttamente, verificare che la proprietà <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> per la classe del servizio sia impostata sullo stesso valore indicato nel programma di installazione per il servizio. Il valore deve essere uguale in entrambe le istanze per ottenere la corretta installazione del servizio.  

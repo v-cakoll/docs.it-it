@@ -6,11 +6,11 @@ helpviewer_keywords:
 - command line [C#]
 ms.assetid: 66e70056-dd20-453c-a9b3-507e0478b015
 ms.openlocfilehash: 4b6dfdbce131371553fc729206de29794266bfbe
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47216357"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48584325"
 ---
 # <a name="command-line-build-with-cscexe"></a>Compilazione dalla riga di comando con csc.exe
 È possibile richiamare il compilatore C# digitando il nome del relativo file eseguibile (*csc.exe*) da un prompt dei comandi.
@@ -28,7 +28,7 @@ Il file eseguibile *csc.exe* si trova in genere nella cartella Microsoft.NET\Fra
 > [!TIP]
 >  Quando si compila un progetto usando l'IDE di Visual Studio, è possibile visualizzare il comando **csc** e le relative opzioni del compilatore associate nella finestra **Output**. Per visualizzare queste informazioni, seguire le istruzioni in [Procedura: Visualizzare, salvare e configurare file di log di compilazione](/visualstudio/ide/how-to-view-save-and-configure-build-log-files#to-change-the-amount-of-information-included-in-the-build-log) per impostare il livello di dettaglio dei dati di log su **Normale** o **Dettagliato**. Al termine della ricompilazione del progetto, nella finestra **Output** cercare **csc** per trovare la chiamata del compilatore C#.
 
- **Contenuto dell'argomento**
+ **In questo argomento**
 
 - [Regole per la sintassi della riga di comando](#-rules-for-command-line-syntax-for-the-c-compiler)
 

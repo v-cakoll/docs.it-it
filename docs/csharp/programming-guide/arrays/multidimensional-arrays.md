@@ -6,11 +6,11 @@ helpviewer_keywords:
 - multidimensional arrays [C#]
 ms.assetid: 020ce02e-7dff-4273-8e53-bf0b33747232
 ms.openlocfilehash: a1d7a0a014c330682316e869f6727082fa3b31ef
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47421479"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48841084"
 ---
 # <a name="multidimensional-arrays-c-programming-guide"></a>Matrici multidimensionali (Guida per programmatori C#)
 
@@ -51,6 +51,6 @@ Le matrici possono avere più di una dimensione. La dichiarazione seguente, ad e
 ## <a name="see-also"></a>Vedere anche
 
 - [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
-- [Array](../../../csharp/programming-guide/arrays/index.md)  
+- [Matrici](../../../csharp/programming-guide/arrays/index.md)  
 - [Matrici unidimensionali](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)  
 - [Matrici irregolari](../../../csharp/programming-guide/arrays/jagged-arrays.md)

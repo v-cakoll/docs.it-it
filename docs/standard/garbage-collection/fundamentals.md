@@ -13,11 +13,11 @@ ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 741ddd0171244daceb4d5e283c0172e71b82f3d2
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47216981"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48582749"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Principi fondamentali di Garbage Collection
 <a name="top"></a> In Common Language Runtime (CLR) il Garbage Collector funge da gestore di memoria automatico, offrendo i seguenti vantaggi:  
@@ -88,7 +88,7 @@ ms.locfileid: "47216981"
   
 -   La memoria usata dagli oggetti allocati nell'heap gestito supera una soglia accettabile. Questa soglia viene continuamente modificata durante l'esecuzione del processo.  
   
--   Viene chiamato il metodo <xref:System.GC.Collect%2A?displayProperty=nameWithType>. Nella quasi totalità dei casi non è necessario chiamare questo metodo, in quanto il Garbage Collector viene eseguito senza interruzioni. Il metodo viene usato principalmente in situazioni eccezionali e per scopi di test.  
+-   Viene chiamato il metodo <xref:System.GC.Collect%2A?displayProperty=nameWithType> . Nella quasi totalità dei casi non è necessario chiamare questo metodo, in quanto il Garbage Collector viene eseguito senza interruzioni. Il metodo viene usato principalmente in situazioni eccezionali e per scopi di test.  
   
  [Torna all'inizio](#top)  
   
@@ -98,7 +98,7 @@ ms.locfileid: "47216981"
   
  Per ogni processo gestito esiste un heap gestito. Tutti i thread nel processo allocano memoria per gli oggetti sullo stesso heap.  
   
- Per riservare memoria, il Garbage Collector chiama la funzione [VirtualAlloc](https://msdn.microsoft.com/library/aa366887.aspx) Win32 e riserva un segmento di memoria alla volta per le applicazioni gestite. Il Garbage Collector riserva anche i segmenti secondo le esigenze e li rilascia al sistema operativo dopo aver cancellato tutti gli oggetti, chiamando la funzione [VirtualFree](https://msdn.microsoft.com/library/aa366892.aspx) Win32.  
+ Per riservare memoria, il Garbage Collector chiama la funzione [VirtualAlloc](https://msdn.microsoft.com/library/aa366887.aspx) Win32 e riserva un segmento di memoria alla volta per le applicazioni gestite. Il Garbage Collector riserva inoltre i segmenti secondo le esigenze e li rilascia al sistema operativo dopo aver cancellato tutti gli oggetti, chiamando la funzione [VirtualFree](https://msdn.microsoft.com/library/aa366892.aspx) Win32.  
   
 > [!IMPORTANT]
 >  La dimensione dei segmenti allocati dal Garbage Collector è specifica dell'implementazione ed è soggetta a modifiche in qualsiasi momento, tra cui aggiornamenti periodici. L'applicazione non deve dare per scontata o dipendere da una particolare dimensione del segmento, né provare a configurare la quantità di memoria disponibile per le allocazioni di segmenti.  
