@@ -3,11 +3,11 @@ title: Creazione di tracce di codice utente
 ms.date: 03/30/2017
 ms.assetid: fa54186a-8ffa-4332-b0e7-63867126fd49
 ms.openlocfilehash: 0664c11d8020ee5e712ce6d4843c85a1f30b11a3
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50049165"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200587"
 ---
 # <a name="emitting-user-code-traces"></a>Creazione di tracce di codice utente
 Oltre ad abilitare la traccia nella configurazione per raccogliere dati di strumentazione generati da Windows Communication Foundation (WCF), è possibile creare tracce a livello di programmazione nel codice utente. In questo modo è possibile creare attivamente dati di strumentazione che possono essere successivamente usati a scopo diagnostico. In questo argomento viene illustrata la procedura da seguire.  

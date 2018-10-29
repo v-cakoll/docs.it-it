@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
-ms.openlocfilehash: 4b390ea0ffc6551d57a99a54985632135964fb7a
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.openlocfilehash: 11d24bec46cfb190fe1a7c2a7b9ac78ac4d5e799
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49374807"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200862"
 ---
 # <a name="configuring-services-using-configuration-files"></a>Configurazione dei servizi tramite file di configurazione
 Configurazione di un servizio Windows Communication Foundation (WCF) con un file di configurazione ti offre la possibilità di fornire endpoint e i dati sul comportamento del servizio al momento della distribuzione invece che in fase di progettazione. In questo argomento vengono delineate le principali tecniche disponibili.  
@@ -186,9 +186,9 @@ Configurazione di un servizio Windows Communication Foundation (WCF) con un file
 ## <a name="behavior-merge"></a>Unione di comportamenti  
  La funzionalità di unione dei comportamenti semplifica la gestione di questi ultimi quando si desidera un set di comportamenti comuni da usare in modo coerente. Tale funzionalità consente di specificare i comportamenti a livelli diversi della gerarchia di configurazione e consente altresì ai servizi di ereditare i comportamenti da più livelli della gerarchia di configurazione. Per illustrare questo funzionamento, si presupponga di disporre del layout di directory virtuale seguente in IIS:  
   
- ~\Web.config~\Service.svc~\Child\Web.config~\Child\Service.svc  
+ `~\Web.config~\Service.svc~\Child\Web.config~\Child\Service.svc`
   
- Il file ~\Web.config contiene gli elementi seguenti:  
+ E il `~\Web.config` file ha il contenuto seguente:  
   
 ```xml  
 <configuration>  
