@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8d8dcd85-0a05-4c44-8861-4a0b3b90cca9
-ms.openlocfilehash: 4d1ee0671a45b12e70f8f43ed2ea83b0a22d6c98
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: e00b5ae2c72a4d4dcd2140e9c280d5bfda3531c2
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805860"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50197197"
 ---
 # <a name="service-channel-level-programming"></a>Programmazione client a livello di canale
-In questo argomento viene descritto come scrivere un'applicazione di servizio Windows Communication Foundation (WCF) senza utilizzare il <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> e il relativo modello a oggetti associato.  
+In questo argomento viene descritto come scrivere un'applicazione del servizio Windows Communication Foundation (WCF) senza usare il <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> e il modello a oggetti associato.  
   
 ## <a name="receiving-messages"></a>Ricezione di messaggi  
  Per prepararsi alla ricezione e all'elaborazione di messaggi, è necessario eseguire i passaggi seguenti:  
@@ -29,12 +29,12 @@ In questo argomento viene descritto come scrivere un'applicazione di servizio Wi
 5.  Chiudere tutti gli oggetti canale.  
   
 #### <a name="creating-a-binding"></a>Creazione di un'associazione  
- Il primo passaggio dell'attesa e della ricezione di messaggi consiste nel creare un'associazione. WCF sono disponibili varie associazioni predefinite o fornite dal sistema che possono essere utilizzate direttamente creando uno di essi. È inoltre possibile creare un'associazione personalizzata creando un'istanza della classe CustomBinding, operazione che viene eseguita nel codice dell'elenco 1.  
+ Il primo passaggio dell'attesa e della ricezione di messaggi consiste nel creare un'associazione. WCF viene fornito con diverse associazioni incorporate o fornite dal sistema che è possibile utilizzare direttamente creando uno di essi. È inoltre possibile creare un'associazione personalizzata creando un'istanza della classe CustomBinding, operazione che viene eseguita nel codice dell'elenco 1.  
   
  Nell'esempio di codice seguente viene creata un'istanza di <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> e viene aggiunto un elemento <xref:System.ServiceModel.Channels.HttpTransportBindingElement?displayProperty=nameWithType> alla raccolta Elements, una raccolta di elementi di associazione utilizzati per generare lo stack di canali. Nell'esempio, poiché la raccolta degli elementi presenta solo <xref:System.ServiceModel.Channels.HttpTransportBindingElement>, lo stack di canali risultante dispone solo del canale di trasporto HTTP.  
   
 #### <a name="building-a-channellistener"></a>Generazione di un listener di canale.  
- Dopo aver creato un'associazione, viene chiamato <!--zz<xref:System.ServiceModel.Channels.Binding.BuildChannelListener%601%2A?displayProperty=nameWithType>--> `System.ServiceModel.Channels.Binding.BuildChannelListener` per compilare il listener del canale in cui il parametro di tipo è il canale da creare. In questo esempio si utilizza <xref:System.ServiceModel.Channels.IReplyChannel?displayProperty=nameWithType> perché si desidera ascoltare i messaggi in arrivo in un modello di scambio di messaggi Request/Reply.  
+ Dopo avere creato un'associazione, si chiama il metodo <xref:System.ServiceModel.Channels.Binding.BuildChannelListener%2A?displayProperty=nameWithType> per generare il listener del canale in cui il parametro di tipo è il canale da creare. In questo esempio si usa <xref:System.ServiceModel.Channels.IReplyChannel?displayProperty=nameWithType> perché si desidera ascoltare i messaggi in arrivo in un modello di scambio di messaggi Request/Reply.  
   
  <xref:System.ServiceModel.Channels.IReplyChannel> viene utilizzato per ricevere messaggi di richiesta e restituire messaggi di risposta. La chiamata a <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A?displayProperty=nameWithType> restituisce un elemento <xref:System.ServiceModel.Channels.IRequestChannel?displayProperty=nameWithType>, utilizzabile per ricevere il messaggio di richiesta e restituire un messaggio di risposta.  
   

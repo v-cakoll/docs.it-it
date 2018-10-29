@@ -1,5 +1,5 @@
 ---
-title: '&lt;rimuovere&gt; elemento per &lt;appSettings&gt;'
+title: '&lt;rimuovere&gt; (elemento) per &lt;appSettings&gt;'
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/appSettings/remove
@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: 218c4464-e007-4539-803f-7c8b0a909fd8
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 21fedf064596979dbfb4190d9956da616295af3c
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e9b79a8319b320289f43adac5a82ef22fa5e32b0
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752117"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199695"
 ---
-# <a name="remove-element-for-appsettings"></a>\<rimuovere > elemento per \<appSettings >
+# <a name="remove-element-for-appsettings"></a>\<rimuovere > (elemento) per \<appSettings >
 
 Rimuove le impostazioni dell'applicazione personalizzata.
 
@@ -46,11 +46,11 @@ Rimuove le impostazioni dell'applicazione personalizzata.
 
 ## <a name="child-elements"></a>Elementi figlio
 
-Nessuno
+nessuno
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come rimuovere un'impostazione di configurazione personalizzato per `ApplicationName`:
+Nell'esempio seguente viene illustrato come rimuovere un'impostazione di configurazione personalizzati per `ApplicationName`:
 
 ```xml
 <appSettings>
@@ -60,4 +60,4 @@ Nell'esempio seguente viene illustrato come rimuovere un'impostazione di configu
 
 ## <a name="see-also"></a>Vedere anche
 
-[Schema di file di configurazione per .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Schema di file di configurazione per .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)

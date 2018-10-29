@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1f55050a-b2a3-4868-a3c0-da20826150f3
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 71d2edac1dd9a84c9d3c92049d2494c7c5bd54b0
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 9bf94c28522d42e1a763726469cf9b1a03ccd86e
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028218"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50196752"
 ---
 # <a name="cryptography-settings-schema"></a>Schema delle impostazioni di crittografia
 Lo schema delle impostazioni di crittografia contiene gli elementi che specificano come eseguire il mapping dei nomi descrittivi degli algoritmi alle classi che implementano gli algoritmi di crittografia.  
@@ -52,5 +52,5 @@ Lo schema delle impostazioni di crittografia contiene gli elementi che specifica
 |[**\<oidMap>**](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidmap-element.md)|Contiene i mapping di OID ASN.1 e classi.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [Servizi di crittografia](../../../../../docs/standard/security/cryptographic-services.md)
+- [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)

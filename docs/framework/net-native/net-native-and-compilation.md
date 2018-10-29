@@ -5,11 +5,11 @@ ms.assetid: e38ae4f3-3e3d-42c3-a4b8-db1aa9d84f85
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0a89474ddfe3bcde1c44271818b7e3c730469f48
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50036008"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199708"
 ---
 # <a name="net-native-and-compilation"></a>Compilazione e .NET Native
 Le applicazioni Windows 8.1 e Windows Desktop destinate a .NET Framework vengono per lo più scritte in un determinato linguaggio di programmazione e compilate in linguaggio intermedio (IL). In fase di esecuzione, un compilatore JIT è responsabile della compilazione del linguaggio intermedio in codice nativo per il computer locale prima che un metodo venga eseguito per la prima volta. Al contrario, la catena di strumenti .NET Native converte il codice sorgente in codice nativo in fase di compilazione. Questo argomento confronta .NET Native con altre tecnologie di compilazione disponibili per le app .NET Framework e fornisce una panoramica pratica del modo in cui .NET Native produce codice nativo, utile a comprendere il motivo per cui le eccezioni che si verificano nel codice compilato con .NET Native non si verificano nel codice con compilazione JIT.  
