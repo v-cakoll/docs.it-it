@@ -4,12 +4,12 @@ description: Architettura dei microservizi .NET per le applicazioni .NET in cont
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 79b63c376d25725b2bcb6c16cdb4d06e107d5c07
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 3c5f4c5a1dd1c1065be63ad916af078050c069c1
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47199008"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50033649"
 ---
 # <a name="creating-composite-ui-based-on-microservices-including-visual-ui-shape-and-layout-generated-by-multiple-microservices"></a>Creazione dell'interfaccia utente composita basata su microservizi, tra cui la forma visiva dell'interfaccia utente e il layout generato da più microservizi
 
@@ -42,10 +42,10 @@ Per altre informazioni sull'interfaccia utente composita basata sui microservizi
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
 -   **Composite UI using ASP.NET (Interfaccia utente composita con ASP.NET - Workshop di Particular)**
-    [*http://go.particular.net/workshop-composite-ui-demo*](http://go.particular.net/workshop-composite-ui-demo)
+    [*https://go.particular.net/workshop-composite-ui-demo*](https://go.particular.net/workshop-composite-ui-demo)
 
 -   **Ruben Oostinga. The Monolithic Frontend in the Microservices Architecture**
-    [*http://blog.xebia.com/the-monolithic-frontend-in-the-microservices-architecture/*](http://blog.xebia.com/the-monolithic-frontend-in-the-microservices-architecture/) (Front-end monolitico nell'architettura di microservizi)
+    [*https://xebia.com/blog/the-monolithic-frontend-in-the-microservices-architecture/*](https://xebia.com/blog/the-monolithic-frontend-in-the-microservices-architecture/) (Front-end monolitico nell'architettura di microservizi)
 
 -   **Mauro Servienti. The secret of better UI composition**
     [*https://particular.net/blog/secret-of-better-ui-composition*](https://particular.net/blog/secret-of-better-ui-composition) (Il segreto per una composizione ideale dell'interfaccia utente)

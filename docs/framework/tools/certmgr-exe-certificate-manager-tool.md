@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0a4cb3f126a51d6bf7027edb88b8fec74c6785d2
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9ad1cbd9da3a6b55dbb23eaf97c10e6090077fd8
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47231557"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50198484"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe (strumento di gestione certificati)
 Lo strumento di gestione certificati (Certmgr.exe) gestisce certificati, elenchi di scopi consentiti ai certificati ed elenchi di revoche di certificati (CRL, Certificate Revocation List).  
@@ -54,7 +54,7 @@ Lo strumento di gestione certificati (Certmgr.exe) gestisce certificati, elenchi
 |Opzione|Descrizione|  
 |------------|-----------------|  
 |**/add**|Aggiunge certificati, elenchi di scopi consentiti ai certificati e CRL a un archivio certificati.|  
-|**/all**|Aggiunge tutte le voci se usata con **/add**, le elimina se usata con **/del** e le visualizza se usata senza le opzioni **/add** o **/del**. Non è possibile usare l'opzione **/all** con **/put**.|  
+|**/all**|Aggiunge tutte le voci se usata con **/add**, le elimina se usata con **/del** e le visualizza se usata senza le opzioni /add o **/del**. Non è possibile usare l'opzione **/all** con **/put**.|  
 |**/c**|Aggiunge i certificati se usata con **/add**, li elimina se usata con **/del** e li salva se usata con **/put**. Visualizza certificati quando usata senza le opzioni **/add**, **/del** o **/put**.|  
 |**/CRL**|Aggiunge i CRL se usata con **/add**, li elimina se usata con **/del** e li salva se usata con **/put**. Visualizza CRL quando usata senza le opzioni **/add**, **/del** o **/put**.|  
 |**/CTL**|Aggiunge gli elenchi di scopi consentiti se usata con **/add**, li elimina se usata con **/del** e li salva se usata con **/put**. Visualizza gli elenchi di scopi consentiti quando usata senza le opzioni **/add**, **/del** o **/put**.|  
@@ -139,5 +139,5 @@ certmgr /put /c /s my newFile
   
 ## <a name="see-also"></a>Vedere anche  
  [Strumenti](../../../docs/framework/tools/index.md)  
- [Makecert.exe (Certificate Creation Tool)](https://msdn.microsoft.com/library/b0343f8e-9c41-4852-a85c-f8a0c408cf0d) (Makecert.exe, strumento di creazione certificati)  
+ [Makecert.exe (Certificate Creation Tool)](/windows/desktop/SecCrypto/makecert) (Makecert.exe, strumento di creazione certificati)  
  [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

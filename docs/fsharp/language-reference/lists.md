@@ -2,12 +2,12 @@
 title: Elenchi (F#)
 description: 'Informazioni sugli elenchi di F #, una serie ordinata e non modificabile di elementi dello stesso tipo.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 60e7edb56bdf498e3ba51aff028d8564eb68d0f1
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b48bf04f5ec490b49e63462affc0d4eadebe10ef
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47210162"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201624"
 ---
 # <a name="lists"></a>Elenchi
 
@@ -48,7 +48,7 @@ Un elenco vuoto viene specificato da una coppia di parentesi quadre al cui inter
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1305.fs)]
 
-È possibile concatenare gli elenchi con tipi compatibili usando l'operatore `@`, come nel codice seguente. Se `list1` è `[2; 3; 4]` e `list2` è `[100; 2; 3; 4 ]`, questo codice crea `list3` come `[2; 3; 4; 100; 2; 3; 4]`.
+È possibile concatenare gli elenchi con tipi compatibili usando l'operatore `@`, come nel codice seguente. Se `list1` è `[2; 3; 4]` e `list2` è `[100; 2; 3; 4]`, questo codice crea `list3` come `[2; 3; 4; 100; 2; 3; 4]`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1306.fs)]
 
@@ -446,5 +446,5 @@ Per informazioni su altre operazioni sugli elenchi, vedere l'argomento di riferi
 - [Riferimenti per il linguaggio F#](index.md)
 - [Tipi F#](fsharp-types.md)
 - [Sequenze](sequences.md)
-- [Array](arrays.md)
+- [Matrici](arrays.md)
 - [Opzioni](options.md)

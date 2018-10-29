@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: fea695be-617c-4977-9567-140e820436fc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fb7b096a6e9bf0f71649f260c4097d5e25476957
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 77f29cb14af90854fa18f421acbeb701928bcd76
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44210958"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50034354"
 ---
 # <a name="xslt-security-considerations"></a>Considerazioni sulla sicurezza XSLT
 Il linguaggio XSLT dispone di un'ampia gamma di funzionalità che offrono notevoli prestazioni e flessibilità. Sono incluse numerose funzionalità utili che possono essere usate anche da origini esterne. Per usare XSLT senza problemi, è necessario comprendere i tipi di problemi di sicurezza che si possono verificare durante l'uso di XSLT e le strategie di base che è possibile applicare per limitare tali rischi.  
@@ -32,14 +32,14 @@ Il linguaggio XSLT dispone di un'ampia gamma di funzionalità che offrono notevo
  Abilitare l'inserimento di script solo se il foglio di stile proviene da un'origine attendibile. Se non è possibile verificare l'origine del foglio di stile o se il foglio di stile non deriva da un'origine attendibile, passarlo in `null` per l'argomento delle impostazioni XSLT.  
   
 ## <a name="external-resources"></a>Risorse esterne  
- Il linguaggio XSLT dispone di funzioni come `xsl:import`, `xsl:include` o `document()`, dove il processore deve risolvere riferimenti all'URI. La classe <xref:System.Xml.XmlResolver> viene usata per risolvere risorse esterne. Può essere necessario risolvere le risorse esterne nei seguenti due casi:  
+ Il linguaggio XSLT dispone di funzionalità come `xsl:import`, `xsl:include` o `document()`, dove il processore deve risolvere riferimenti all'URI. La classe <xref:System.Xml.XmlResolver> viene usata per risolvere risorse esterne. Può essere necessario risolvere le risorse esterne nei seguenti due casi:  
   
 -   Quando si compila un foglio di stile, viene usato il tipo <xref:System.Xml.XmlResolver> per la risoluzione di `xsl:import` e `xsl:include`.  
   
 -   Quando si esegue la trasformazione, viene usato il tipo <xref:System.Xml.XmlResolver> per risolvere la funzione `document()`.  
   
     > [!NOTE]
-    >  Per impostazione predefinita, la funzione `document()` è disabilitata nella classe <xref:System.Xml.Xsl.XslCompiledTransform>. È possibile abilitare la funzione impostando la proprietà <xref:System.Xml.Xsl.XsltSettings.EnableDocumentFunction%2A?displayProperty=nameWithType> su `true` e passando l'oggetto <xref:System.Xml.Xsl.XsltSettings> al metodo <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A>.  
+    >  Per impostazione predefinita, la funzione `document()` è disabilitata nella classe <xref:System.Xml.Xsl.XslCompiledTransform>. È possibile abilitare la funzionalità impostando la proprietà <xref:System.Xml.Xsl.XsltSettings.EnableDocumentFunction%2A?displayProperty=nameWithType> su `true` e passando l'oggetto <xref:System.Xml.Xsl.XsltSettings> al metodo <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A>.  
   
  I metodi <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> e <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> includono ciascuno overload che accettano un tipo <xref:System.Xml.XmlResolver> come argomento. Se non viene specificato alcun tipo <xref:System.Xml.XmlResolver>, viene usato un tipo predefinito <xref:System.Xml.XmlUrlResolver> senza credenziali.  
   
@@ -60,4 +60,4 @@ Il linguaggio XSLT dispone di un'ampia gamma di funzionalità che offrono notevo
 
 - [Trasformazioni XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)  
 - [Risoluzione delle risorse esterne durante l'elaborazione XSLT](../../../../docs/standard/data/xml/resolving-external-resources-during-xslt-processing.md)  
-- [Sicurezza dall'accesso di codice](https://msdn.microsoft.com/library/23a20143-241d-4fe5-9d9f-3933fd594c03)
+- [Sicurezza dall'accesso di codice](../../../../docs/framework/misc/code-access-security.md)

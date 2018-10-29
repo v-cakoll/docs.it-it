@@ -3,12 +3,12 @@ title: Microservizi ospitati in Docker - C#
 description: Informazioni su come creare servizi ASP.NET Core in esecuzione in contenitori Docker
 ms.date: 06/08/2017
 ms.assetid: 87e93838-a363-4813-b859-7356023d98ed
-ms.openlocfilehash: 1f4b38243beb1210b1374bd701fac66b2fa72cc5
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: b1f7159a222ab4d68715844e9997ca922676bc80
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106350"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49454486"
 ---
 # <a name="microservices-hosted-in-docker"></a>Microservizi ospitati in Docker
 
@@ -41,7 +41,7 @@ Le attività aggiuntive per un'installazione Docker funzioneranno per un'applica
 Questa applicazione può essere eseguita in Windows, Linux, macOS o in un contenitore Docker.
 È necessario installare l'editor di codice preferito. Nelle descrizioni seguenti viene usato [Visual Studio Code](https://code.visualstudio.com/), un editor open source multipiattaforma, ma è possibile usare gli strumenti con cui si ha maggiore familiarità.
 
-È inoltre necessario installare il motore di Docker. Per le istruzioni di installazione relative alla piattaforma in uso, vedere la pagina [Docker Installation](http://www.docker.com/products/docker) (Installazione di Docker).
+È inoltre necessario installare il motore di Docker. Per le istruzioni di installazione relative alla piattaforma in uso, vedere la pagina [Docker Installation](https://docs.docker.com/install/overview/) (Installazione di Docker).
 È possibile installare Docker in diverse distribuzioni di Linux, macOS o Windows. La pagina citata sopra contiene sezioni per ciascuna delle installazioni disponibili.
 
 ## <a name="create-the-application"></a>Creare l'applicazione
@@ -75,7 +75,7 @@ dotnet run
 
 Questo comando prima ripristina le dipendenze necessarie per compilare l'applicazione e quindi compila l'applicazione.
 
-La configurazione predefinita è in ascolto su `http://localhost:5000`. È possibile aprire un browser e passare a tale pagina, dove viene visualizzato un messaggio "Hello World!" .
+La configurazione predefinita è in ascolto su `http://localhost:5000`. È possibile aprire un browser e passare a tale pagina, dove viene visualizzato un messaggio "Hello World!" trovata.
 
 Al termine, è possibile arrestare l'applicazione premendo <kbd>Ctrl</kbd>+<kbd>C</kbd>.
 

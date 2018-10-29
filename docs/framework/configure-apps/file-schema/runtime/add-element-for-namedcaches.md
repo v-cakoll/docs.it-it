@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: ce2a63a8-c829-4742-a6ea-72ee5d89f169
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 695ee744bdf2226f0647c4cdf142a2dca4e97a4a
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: b77ead51b4e064d223735ca52affdec434e5c818
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48033452"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50198185"
 ---
 # <a name="ltaddgt-element-for-ltnamedcachesgt"></a>&lt;aggiungere&gt; (elemento) per &lt;namedCaches&gt;
 Aggiunge un `namedCache` voce il `namedCaches` raccolta per una cache in memoria.  
@@ -79,4 +79,4 @@ Aggiunge un `namedCache` voce il `namedCaches` raccolta per una cache in memoria
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [\<namedCaches > (impostazioni Cache)](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)
+- [\<namedCaches > (impostazioni Cache)](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)

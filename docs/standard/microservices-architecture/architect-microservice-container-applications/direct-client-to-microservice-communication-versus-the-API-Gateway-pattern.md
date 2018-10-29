@@ -4,12 +4,12 @@ description: Architettura dei microservizi .NET per le applicazioni .NET in cont
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 06/07/2018
-ms.openlocfilehash: 1aaddc96ee509815da9fc4e6519e1fb454f74b13
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 00763a806c18b45b366068f865f4ecb4c5cd743b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198683"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50183607"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>Confronto tra schema API Gateway e comunicazione da client a microservizio diretta
 
@@ -84,13 +84,13 @@ In questo esempio il gateway API viene implementato sotto forma di servizio WebH
 
 Di conseguenza, i gateway API devono essere separati in base ai limiti aziendali e alle app client e non fungere da aggregatore singolo per tutti i microservizi interni.
 
-Quando si divide il livello API Gateway in più gateway API, se l'applicazione ha più app client, può esserci un elemento pivot primario quando si identificano i diversi tipi di gateway API, in modo da avere una facciata differente per le esigenze di ciascuna app client. Questo caso costituisce uno schema denominato “Backend for Frontend” ([BFF](http://samnewman.io/patterns/architectural/bff/)), in cui ogni gateway API può fornire un'API specifica per ogni tipo di app client, eventualmente anche basata sul fattore di forma del client, mediante l'implementazione di un codice dell'adattatore specifico che chiama più microservizi interni, come illustrato nell'immagine seguente:
+Quando si divide il livello API Gateway in più gateway API, se l'applicazione ha più app client, può esserci un elemento pivot primario quando si identificano i diversi tipi di gateway API, in modo da avere una facciata differente per le esigenze di ciascuna app client. Questo caso costituisce uno schema denominato “Backend for Frontend” ([BFF](https://samnewman.io/patterns/architectural/bff/)), in cui ogni gateway API può fornire un'API specifica per ogni tipo di app client, eventualmente anche basata sul fattore di forma del client, mediante l'implementazione di un codice dell'adattatore specifico che chiama più microservizi interni, come illustrato nell'immagine seguente:
 
 ![Diagramma di più gateway API personalizzati](./media/image13.1.png)
 
 **Figura 4-13.1**. Uso di più gateway API personalizzati
 
-L'immagine precedente mostra un'architettura semplificata con più gateway API con granularità fine. In questo caso, i limiti identificati per ogni gateway API si basano esclusivamente sullo schema "Backend for Frontend" ([BFF](http://samnewman.io/patterns/architectural/bff/)), pertanto sono basati solo sull'API necessaria per ciascuna app client. Ma in applicazioni di dimensioni più elevate è anche opportuno andare avanti e creare altri gateway API basati sui limiti aziendali come secondo elemento pivot di progettazione.
+L'immagine precedente mostra un'architettura semplificata con più gateway API con granularità fine. In questo caso, i limiti identificati per ogni gateway API si basano esclusivamente sullo schema "Backend for Frontend" ([BFF](https://samnewman.io/patterns/architectural/bff/)), pertanto sono basati solo sull'API necessaria per ciascuna app client. Ma in applicazioni di dimensioni più elevate è anche opportuno andare avanti e creare altri gateway API basati sui limiti aziendali come secondo elemento pivot di progettazione.
 
 ## <a name="main-features-in-the-api-gateway-pattern"></a>Funzionalità principali dello schema API Gateway
 
@@ -168,7 +168,7 @@ Dopo le sezioni iniziali di spiegazione degli schemi e dell'architettura, le sez
 
 - **Schema API Gateway** [*https://docs.microsoft.com/azure/architecture/microservices/gateway*](https://docs.microsoft.com/azure/architecture/microservices/gateway)
 
-- **Schema di aggregazione e composizione** [*http://microservices.io/patterns/data/api-composition.html*](http://microservices.io/patterns/data/api-composition.html)
+- **Schema di aggregazione e composizione** [*https://microservices.io/patterns/data/api-composition.html*](https://microservices.io/patterns/data/api-composition.html)
 
 - **Gestione API di Azure** [*https://azure.microsoft.com/services/api-management/*](https://azure.microsoft.com/services/api-management/)
 

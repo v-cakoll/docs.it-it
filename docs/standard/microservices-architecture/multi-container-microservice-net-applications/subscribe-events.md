@@ -4,12 +4,12 @@ description: Architettura di microservizi .NET per applicazioni .NET in contenit
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: 6cc5563f93915d1516e5a5f22a104012c1bb85d6
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 5e53e0a3578c19b09f5327f444d1a5c013ad4cd9
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106577"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194072"
 ---
 # <a name="subscribing-to-events"></a>Sottoscrizione di eventi
 
@@ -152,7 +152,7 @@ Per semplicità, nell'esempio eShopOnContainers viene usato il primo approccio (
 
 Il codice seguente mostra come creare una singola transazione che interessa più oggetti DbContext, ovvero un contesto correlato ai dati originali da aggiornare e un secondo contesto correlato alla tabella IntegrationEventLog.
 
-Si noti che la transazione nell'esempio di codice seguente non sarà resiliente se le connessioni al database presentano problemi nel momento in cui viene eseguito il codice. Questa situazione può verificarsi in sistemi basati sul cloud come Azure SQL DB, che potrebbe spostare database tra server. Per l'implementazione di transazioni resilienti in più contesti, vedere la sezione [Implementazione di connessioni SQL resilienti di Entity Framework Core](#implementing_resilient_EFCore_SQL_conns) più avanti in questa guida.
+Si noti che la transazione nell'esempio di codice seguente non sarà resiliente se le connessioni al database presentano problemi nel momento in cui viene eseguito il codice. Questa situazione può verificarsi in sistemi basati sul cloud come Azure SQL DB, che potrebbe spostare database tra server. Per l'implementazione di transazioni resilienti in più contesti, vedere la sezione [Implementazione di connessioni SQL resilienti di Entity Framework Core](../implement-resilient-applications/implement-resilient-entity-framework-core-sql-connections.md) più avanti in questa guida.
 
 Per chiarezza l'esempio seguente mostra l'intero processo in un unico frammento di codice. L'implementazione di eShopOnContainers viene in realtà sottoposta a refactoring e questa logica viene suddivisa in più classi in modo che sia più facilmente gestibile.
 
@@ -183,7 +183,7 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem productToUp
   catalogItem = productToUpdate; 
 
   // Just save the updated product if the Product's Price hasn't changed.
-  if !(raiseProductPriceChangedEvent) 
+  if (!raiseProductPriceChangedEvent) 
   {
       await _catalogContext.SaveChangesAsync();
   }
@@ -317,7 +317,7 @@ Se il flag di nuovo recapito è impostato, il ricevitore deve tenerlo in conside
 ### <a name="additional-resources"></a>Risorse aggiuntive
 
 -   **Forked eShopOnContainers using NServiceBus (Particular Software)**
-    [*http://go.particular.net/eShopOnContainers*](http://go.particular.net/eShopOnContainers) (eShopOnContainers con fork usando NServiceBus (Software Particular))
+    [*https://go.particular.net/eShopOnContainers*](https://go.particular.net/eShopOnContainers) (eShopOnContainers con fork usando NServiceBus (Software Particular))
 
 -   **Event Driven Messaging**
     [*http://soapatterns.org/design\_patterns/event\_driven\_messaging*](http://soapatterns.org/design_patterns/event_driven_messaging) (Messaggistica basata su eventi)
@@ -326,7 +326,7 @@ Se il flag di nuovo recapito è impostato, il ricevitore deve tenerlo in conside
     [*https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/*](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/) (Refactoring rispetto alla resilienza: valutazione dell'accoppiamento)
 
 -   **Canale di pubblicazione-sottoscrizione**
-    [*http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html*](http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
+    [*https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html*](https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
 
 -   **Communicating Between Bounded Contexts**
     [*https://msdn.microsoft.com/library/jj591572.aspx*](https://msdn.microsoft.com/library/jj591572.aspx) (Comunicazione tra contesti delimitati)

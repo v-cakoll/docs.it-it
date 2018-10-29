@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2c30799a-a826-46b4-a25d-c584027a6c67
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 45f8ad3bd9226ffd821fc792cdd4d0a6dac1a414
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5d46694d772aed7e92f95cc26da86985d4f8b0ff
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744629"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50191064"
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Procedura: firmare un assembly con un nome sicuro
 Sono disponibili diversi modi per firmare un assembly con un nome sicuro:  
@@ -98,9 +98,9 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
     ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creazione e utilizzo degli assembly con nome sicuro](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)  
- [Procedura: Creare una coppia di chiavi pubblica/privata](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)  
- [Al.exe (Assembly Linker)](../../../docs/framework/tools/al-exe-assembly-linker.md)  
- [Ritardo della firma di un assembly](../../../docs/framework/app-domains/delay-sign-assembly.md)  
- [Gestione delle firme di assembly e manifesti](/visualstudio/ide/managing-assembly-and-manifest-signing)  
- [Pagina Firma, Creazione progetti](https://msdn.microsoft.com/library/0k50fs3b)
+- [Creazione e utilizzo degli assembly con nome sicuro](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)  
+- [Procedura: Creare una coppia di chiavi pubblica/privata](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)  
+- [Al.exe (Assembly Linker)](../../../docs/framework/tools/al-exe-assembly-linker.md)  
+- [Ritardo della firma di un assembly](../../../docs/framework/app-domains/delay-sign-assembly.md)  
+- [Gestione delle firme di assembly e manifesti](/visualstudio/ide/managing-assembly-and-manifest-signing)  
+- [Pagina Firma, Creazione progetti](/visualstudio/ide/reference/signing-page-project-designer)

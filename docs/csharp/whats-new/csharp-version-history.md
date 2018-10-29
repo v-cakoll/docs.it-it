@@ -3,12 +3,12 @@ title: Cronologia di C# - Guida a C#
 description: Caratteristiche del linguaggio nelle prime versioni ed evoluzione successiva.
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 7a7030eb9479ebae553f3bb4d569c9a9f931db9a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 5e8ecdd971a043dc47c50b10c974d86f836818dc
+ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504413"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49316259"
 ---
 # <a name="the-history-of-c"></a>Cronologia di C# #
 
@@ -145,10 +145,10 @@ Con questa versione è stata introdotta un'altra caratteristica, che di per sé 
 
 La versione principale più recente di C# è la 7.0. Questa versione presenta alcune delle caratteristiche evolutive e innovative di C# 6.0, ma senza il compilatore come servizio. Ecco alcune delle nuove funzionalità:
 
-- [Variabili out](http://www.c-sharpcorner.com/article/out-variables-in-c-sharp-7-0/)
+- [Variabili out](https://www.c-sharpcorner.com/article/out-variables-in-c-sharp-7-0/)
 - [Tuple e decostruzione](https://www.thomaslevesque.com/2016/08/23/tuple-deconstruction-in-c-7/)
 - [Criteri di ricerca](./csharp-7.md#pattern-matching)
-- [Funzioni locali](http://www.infoworld.com/article/3182416/application-development/c-7-in-depth-exploring-local-functions.html)
+- [Funzioni locali](https://www.infoworld.com/article/3182416/application-development/c-7-in-depth-exploring-local-functions.html)
 - [Membri di espressioni corpo espansi](./csharp-7.md#more-expression-bodied-members)
 - [Variabili locali e valori restituiti per riferimento](./csharp-7.md#ref-locals-and-returns)
 

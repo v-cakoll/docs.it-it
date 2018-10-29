@@ -6,12 +6,12 @@ helpviewer_keywords:
 - walkthroughs [Visual Studio], Visual C#
 - Visual C#, walkthroughs
 ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
-ms.openlocfilehash: a2efaae7cd861842f92ba3cdedc5ae77beec9f6f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ae29c8fbe8d5d87ccee4d6a43a3c9285f0c41ee1
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47202236"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192564"
 ---
 # <a name="c-walkthroughs"></a>Procedure dettagliate di C#
 Le procedure dettagliate forniscono istruzioni specifiche per scenari comuni, che li rende un ottimo strumento per apprendere l'utilizzo del prodotto o di una determinata area funzionale.  
@@ -23,7 +23,7 @@ Le procedure dettagliate forniscono istruzioni specifiche per scenari comuni, ch
  [Accesso al Web con Async e Await](./programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
  Viene illustrato come creare una soluzione asincrona usando [async](../csharp/language-reference/keywords/async.md) e [await](../csharp/language-reference/keywords/await.md).  
   
- [Creazione di un componente di Windows Runtime in C# o Visual Basic e chiamata da JavaScript](https://msdn.microsoft.com/library/windows/apps/hh779077.aspx)  
+ [Creazione di un componente di Windows Runtime in C# o Visual Basic e chiamata da JavaScript](/windows/uwp/winrt-components/walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript)  
  Viene illustrato come creare un tipo [!INCLUDE[wrt](~/includes/wrt-md.md)], comprimerlo in un componente [!INCLUDE[wrt](~/includes/wrt-md.md)], quindi chiamare il componente da un'app [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] progettata per Windows usando JavaScript.  
   
  [Programmazione di Office (C# e Visual Basic)](../csharp/programming-guide/interop/walkthrough-office-programming.md)  

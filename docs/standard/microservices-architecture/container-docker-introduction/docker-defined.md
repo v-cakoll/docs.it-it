@@ -4,12 +4,12 @@ description: Architettura di microservizi .NET per applicazioni .NET in contenit
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 08/31/2018
-ms.openlocfilehash: b79e687d75f133b64e6e7dcb8dc78cce98e8b175
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 63f3714fce317d915b65075922b323f2aa5061f0
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47233198"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50185927"
 ---
 # <a name="what-is-docker"></a>Che cos'è Docker?
 
@@ -25,7 +25,7 @@ Gli sviluppatori possono usare gli ambienti di sviluppo in Windows, Linux o macO
 
 Per ospitare i contenitori negli ambienti di sviluppo e offrire strumenti di sviluppo aggiuntivi, Docker fornisce [Docker Community Edition (CE)](https://www.docker.com/community-edition) per Windows o per macOS. Questi i prodotti installano la macchina virtuale necessaria (host Docker) per l'hosting dei contenitori. Docker mette anche a disposizione [Docker Enterprise Edition (EE)](https://www.docker.com/enterprise-edition), progettato per lo sviluppo aziendale e usato dai team IT che compilano, distribuiscono ed eseguono applicazioni critiche di grandi dimensioni nell'ambiente di produzione.
 
-Per eseguire i [contenitori Windows](https://msdn.microsoft.com/en-us/virtualization/windowscontainers/about/about_overview), esistono due tipi di runtime:
+Per eseguire i [contenitori Windows](/virtualization/windowscontainers/about/), esistono due tipi di runtime:
 
 - I contenitori Windows Server offrono l'isolamento dell'applicazione tramite una tecnologia di isolamento dei processi e dello spazio dei nomi. Un contenitore Windows Server condivide un kernel con l'host del contenitore e con tutti i contenitori in esecuzione nell'host.
 

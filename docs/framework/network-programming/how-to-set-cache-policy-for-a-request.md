@@ -7,17 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - request cache policies
 ms.assetid: 39c15e40-586b-4ac9-9cce-146f74b7e545
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 03ddcbacf7de3753ca74c398e585447b2d769cd6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: f2e3e7ccc16dc24cf79574f8607245b66ea53cb1
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47210627"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50190658"
 ---
 # <a name="how-to-set-cache-policy-for-a-request"></a>Procedura: Impostare criteri di cache per una richiesta
-L'esempio seguente illustra l'impostazione di criteri di cache per una richiesta. L'input di esempio è un URI, ad esempio http://www.contoso.com/.  
+L'esempio seguente illustra l'impostazione di criteri di cache per una richiesta. L'input di esempio è un URI, ad esempio `http://www.contoso.com/`.  
   
 ## <a name="example"></a>Esempio  
  L'esempio di codice seguente crea un criterio di cache che consente di usare la risorsa richiesta dalla cache se non è rimasta nella cache per più di un giorno. L'esempio visualizza un messaggio che indica se la risorsa è stata usata dalla cache, ad esempio `"The response was retrieved from the cache : False."`, quindi visualizza la risorsa. Una richiesta può essere soddisfatta da qualsiasi cache tra il client e il server.  

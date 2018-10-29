@@ -3,12 +3,12 @@ title: Uso di F# in Azure
 description: "Guida all'uso dei servizi di Azure con F #"
 author: sylvanc
 ms.date: 09/22/2016
-ms.openlocfilehash: 96dec342379b06e997107cc5d6cc05e9fc737452
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: 1fbb85a07fc057c1b89a4c4a1ad356066cebf2b8
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50033961"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201504"
 ---
 # <a name="using-f-on-azure"></a>Uso di F# in Azure
 
@@ -40,7 +40,7 @@ Altre risorse per l'uso di Funzioni di Azure e F#:
 
 ## <a name="using-azure-storage-with-f"></a>Uso di archiviazione di Azure con F # #
 
-L'Archiviazione di Azure è un livello di base di servizi di archiviazione che si basa su affidabilità, disponibilità e scalabilità per soddisfare le esigenze dei clienti. I programmi F# possono interagire direttamente con servizi di Archiviazione di Azure, usando le tecniche illustrate negli articoli seguenti.
+L'Archiviazione di Azure è un livello di base di servizi di archiviazione che si basa su affidabilità, disponibilità e scalabilità per soddisfare le esigenze dei clienti. F#i programmi possono interagire direttamente con i servizi di archiviazione di Azure, usando le tecniche descritte negli articoli seguenti.
 
 * [Introduzione all'archiviazione BLOB di Azure con F#](blob-storage.md)
 * [Introduzione all'archiviazione file di Azure con F#](file-storage.md)

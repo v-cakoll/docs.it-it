@@ -9,12 +9,12 @@ helpviewer_keywords:
 - foreach statement [C#]
 - in keyword [C#]
 ms.assetid: 5a9c5ddc-5fd3-457a-9bb6-9abffcd874ec
-ms.openlocfilehash: d84c68eb102d55b31ba20a6b6b5c01b96963924d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 675e6b7fa925fe1822c2fc321d79afd13b5e4c51
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524249"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347683"
 ---
 # <a name="foreach-in-c-reference"></a>foreach, in (Riferimenti per C#)
 
@@ -47,7 +47,7 @@ A partire da C# 7.3, se la proprietà `Current` dell'enumeratore restituisce un 
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Istruzione foreach (specifica del linguaggio C#)](/dotnet/csharp/language-reference/language-specification/statements#the-foreach-statement)
+- [Istruzione foreach (specifica del linguaggio C#)](~/_csharplang/spec/statements.md#the-foreach-statement)
 - [Uso di foreach con matrici](../../programming-guide/arrays/using-foreach-with-arrays.md)
 - [for](for.md)
 - [Istruzioni di iterazione](iteration-statements.md)

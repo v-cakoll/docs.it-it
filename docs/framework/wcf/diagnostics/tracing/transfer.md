@@ -2,18 +2,18 @@
 title: Trasferimento
 ms.date: 03/30/2017
 ms.assetid: dfcfa36c-d3bb-44b4-aa15-1c922c6f73e6
-ms.openlocfilehash: aa7535aa393544077a9802b5c3255d6e5f6accda
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 360367803fc014c83ae377309b9029dafa3040bd
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33803000"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50202894"
 ---
 # <a name="transfer"></a>Trasferimento
 In questo argomento viene descritto il trasferimento nel modello di traccia di attività di Windows Communication Foundation (WCF).  
   
 ## <a name="transfer-definition"></a>Definizione di trasferimento  
- I trasferimenti tra le attività rappresentano le relazioni causali tra eventi nelle attività correlate all'interno di endpoint. Due attività sono correlate con i trasferimenti quando controllano i flussi tra queste attività, ad esempio, una chiamata al metodo che supera i limiti di attività. In WCF, quando sono byte in ingresso nel servizio, l'attività di ascolto viene trasferito all'attività di ricezione byte in cui viene creato l'oggetto messaggio. Per un elenco di scenari di traccia end-to-end e le loro rispettive attività e la traccia di progettazione, vedere [gli scenari di traccia End-To-End](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md).  
+ I trasferimenti tra le attività rappresentano le relazioni causali tra eventi nelle attività correlate all'interno di endpoint. Due attività sono correlate con i trasferimenti quando controllano i flussi tra queste attività, ad esempio, una chiamata al metodo che supera i limiti di attività. In WCF, al byte indicano ingresso nel servizio, l'attività di ascolto viene trasferito all'attività ricezione byte in cui viene creato l'oggetto del messaggio. Per un elenco di scenari di traccia end-to-end e la rispettiva attività e progettazione di traccia, vedere [scenari di traccia End-To-End](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md).  
   
  Per emettere tracce di trasferimento, usare l'impostazione `ActivityTracing` nell'origine di traccia, come illustrato nel codice di configurazione seguente.  
   
@@ -26,7 +26,7 @@ In questo argomento viene descritto il trasferimento nel modello di traccia di a
   
  Una traccia di trasferimento viene emessa dall'attività M all'attività N quando è presente un flusso di controllo tra M e N. N, ad esempio, esegue un lavoro per M a causa di una chiamata al metodo che attraversa i limiti delle attività. N potrebbe esistere già o può essere stato creato. N viene generato da M quando N è una nuova attività che esegue dei lavori per M.  
   
- Un trasferimento da M a N potrebbe non essere seguito da un trasferimento da N a M. Ciò accade perché M può generare lavoro in N e non tiene traccia di quando N lo completa. Di fatto, M può terminare prima che N completi l'attività. Ciò si verifica nell'attività "Open ServiceHost" (M) che genera le attività di Listener (N) e quindi termina. Un ritrasferimento da N a M significa che N ha completato il lavoro correlato a M.  
+ Un trasferimento da M a N potrebbe non essere seguito da un trasferimento da N a M. Ciò accade perché M può generare lavoro in N e non tiene traccia di quando N lo completa. Di fatto, M può terminare prima che N completi l'attività. In questo caso nell'attività "Open ServiceHost" (M) che genera le attività Listener (N) e quindi termina. Un ritrasferimento da N a M significa che N ha completato il lavoro correlato a M.  
   
  N può continuare a eseguire altre elaborazioni non correlate a M, ad esempio, un'attività dell'autenticatore esistente (N) che continua a ricevere richieste di accesso (M) da diverse attività di accesso.  
   
@@ -60,33 +60,44 @@ In questo argomento viene descritto il trasferimento nel modello di traccia di a
   
  Nell'esempio di codice seguente viene illustrato come procedere. In questo esempio si presuppone che venga effettuata una chiamata di blocco durante il trasferimento alla nuova attività e sono incluse tracce di sospensione/ripresa.  
   
-```  
+```csharp
 // 0. Create a trace source  
 TraceSource ts = new TraceSource("myTS");  
+
 // 1. remember existing ("ambient") activity for clean up  
 Guid oldGuid = Trace.CorrelationManager.ActivityId;  
 // this will be our new activity  
 Guid newGuid = Guid.NewGuid();   
+
 // 2. call transfer, indicating that we are switching to the new AID  
 ts.TraceTransfer(667, "Transferring.", newGuid);  
+
 // 3. Suspend the current activity.  
 ts.TraceEvent(TraceEventType.Suspend, 667, "Suspend: Activity " + i-1);  
+
 // 4. set the new AID in TLS  
 Trace.CorrelationManager.ActivityId = newGuid;  
+
 // 5. Emit the start trace  
 ts.TraceEvent(TraceEventType.Start, 667, "Boundary: Activity " + i);  
+
 // trace something  
 ts.TraceEvent(TraceEventType.Information, 667, "Hello from activity " + i);  
+
 // Perform Work  
 // some work.  
 // Return  
 ts.TraceEvent(TraceEventType.Information, 667, "Work complete on activity " + i);   
+
 // 6. Emit the transfer returning to the original activity  
 ts.TraceTransfer(667, "Transferring Back.", oldGuid);  
+
 // 7. Emit the End trace  
 ts.TraceEvent(TraceEventType.Stop, 667, "Boundary: Activity " + i);  
+
 // 8. Change the tls variable to the original AID  
 Trace.CorrelationManager.ActivityId = oldGuid;    
+
 // 9. Resume the old activity  
 ts.TraceEvent(TraceEventType.Resume, 667, "Resume: Activity " + i-1);  
 ```  

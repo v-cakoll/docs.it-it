@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5cdb12ae-1e37-4a62-8ec7-93d6dcc6e8d9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6fab54080a529a9b5a93c06a4f249a9c14ecd7af
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0d9341b90f876306ff2e964141c2c729d1cf0e5f
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743888"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50193826"
 ---
 # <a name="retrieving-setup-information-from-an-application-domain"></a>Recupero di informazioni di installazione da un dominio applicazione
 Ogni istanza di un dominio dell'applicazione è costituita da proprietà e da informazioni <xref:System.AppDomainSetup>. È possibile recuperare informazioni di installazione da un dominio dell'applicazione mediante la classe <xref:System.AppDomain?displayProperty=nameWithType>. Questa classe include diversi membri che recuperano informazioni di configurazione relative a un dominio dell'applicazione.  
@@ -37,5 +37,5 @@ Ogni istanza di un dominio dell'applicazione è costituita da proprietà e da in
  [!code-vb[AppDomain_Setup#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AppDomain_Setup/VB/source3.vb#3)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [Programmazione con i domini dell'applicazione](application-domains.md#programming-with-application-domains)  
- [Uso dei domini dell'applicazione](../../../docs/framework/app-domains/use.md)
+- [Programmazione con i domini dell'applicazione](application-domains.md#programming-with-application-domains)  
+- [Uso dei domini dell'applicazione](../../../docs/framework/app-domains/use.md)

@@ -4,12 +4,12 @@ description: Architettura di microservizi .NET per applicazioni .NET in contenit
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/06/2017
-ms.openlocfilehash: 7793a3ffded788698fcbc4ba28edefde44268989
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 4d6810e03414e8462dd90c4da686476da0b66032
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105771"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183503"
 ---
 # <a name="designing-a-ddd-oriented-microservice"></a>Progettazione di un microservizio orientato a DDD
 
@@ -57,7 +57,7 @@ L'eccellente libro di Eric Evans sulla [progettazione basata sui domini](https:/
 
 il livello in cui viene espresso il business. Quando si implementa un livello del modello di dominio del microservizio in .NET, tale livello viene codificato come libreria di classi con entità di dominio che consentono di acquisire i dati più il comportamento (metodi con logica).
 
-Secondo i principi di [Persistence Ignorance](http://deviq.com/persistence-ignorance/) e [Infrastructure Ignorance](https://ayende.com/blog/3137/infrastructure-ignorance), questo livello deve ignorare completamente i dettagli della persistenza dei dati. Le attività relative alla persistenza devono essere eseguite dal livello infrastruttura. Di conseguenza, questo livello non deve accettare dipendenze dirette dall'infrastruttura. In altre parole, una regola importante impone che le classi di entità del modello di dominio siano oggetti [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object).
+Secondo i principi di [Persistence Ignorance](https://deviq.com/persistence-ignorance/) e [Infrastructure Ignorance](https://ayende.com/blog/3137/infrastructure-ignorance), questo livello deve ignorare completamente i dettagli della persistenza dei dati. Le attività relative alla persistenza devono essere eseguite dal livello infrastruttura. Di conseguenza, questo livello non deve accettare dipendenze dirette dall'infrastruttura. In altre parole, una regola importante impone che le classi di entità del modello di dominio siano oggetti [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object).
 
 Le entità di dominio non devono presentare alcuna dipendenza diretta (ad esempio non devono derivare da una classe di base) da qualsiasi framework di infrastruttura di accesso dati come Entity Framework o NHibernate. In teoria, le entità di dominio non devono derivare da alcun tipo definito in un framework di infrastruttura né implementarlo.
 
@@ -83,7 +83,7 @@ Lo scopo è far sì che la logica di dominio nel livello del modello di dominio,
 
 Il livello infrastruttura è responsabile della persistenza dei dati inizialmente contenuti nelle entità di dominio (in memoria) nei database o altri archivi persistenti. Un esempio è costituito dall'uso del codice di Entity Framework Core per implementare le classi di schemi Repository che usano un elemento DBContext per rendere persistenti i dati in un database relazionale.
 
-In base ai principi di [Persistence Ignorance](http://deviq.com/persistence-ignorance/) e [Infrastructure Ignorance](https://ayende.com/blog/3137/infrastructure-ignorance) precedentemente citati, il livello infrastruttura non deve "contaminare" il livello del modello di dominio. È necessario mantenere le classi di entità di modello indipendenti dall'infrastruttura usata per rendere persistenti i dati (Entity Framework o qualsiasi altro framework) non accettando dipendenze rigide dai framework. La libreria di classi del livello del modello di dominio deve contenere solo il codice di dominio, semplicemente classi di entità [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object) che implementano il cuore del software e completamente scollegate delle tecnologie di infrastruttura.
+In base ai principi di [Persistence Ignorance](https://deviq.com/persistence-ignorance/) e [Infrastructure Ignorance](https://ayende.com/blog/3137/infrastructure-ignorance) precedentemente citati, il livello infrastruttura non deve "contaminare" il livello del modello di dominio. È necessario mantenere le classi di entità di modello indipendenti dall'infrastruttura usata per rendere persistenti i dati (Entity Framework o qualsiasi altro framework) non accettando dipendenze rigide dai framework. La libreria di classi del livello del modello di dominio deve contenere solo il codice di dominio, semplicemente classi di entità [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object) che implementano il cuore del software e completamente scollegate delle tecnologie di infrastruttura.
 
 In tal modo, i livelli o le librerie di classi e i progetti dipenderanno dal livello del modello di dominio (libreria), non viceversa, come illustrato nella figura 9-7.
 
@@ -96,7 +96,7 @@ Questa struttura di livello deve essere indipendente per ogni microservizio. Com
 #### <a name="additional-resources"></a>Risorse aggiuntive
 
 -   **DevIQ. Persistence Ignorance principle**
-    [*http://deviq.com/persistence-ignorance/*](http://deviq.com/persistence-ignorance/) (Principio del mancato riconoscimento della persistenza)
+    [*https://deviq.com/persistence-ignorance/*](https://deviq.com/persistence-ignorance/) (Principio del mancato riconoscimento della persistenza)
 
 -   **Oren Eini. Infrastructure Ignorance**
     [*https://ayende.com/blog/3137/infrastructure-ignorance*](https://ayende.com/blog/3137/infrastructure-ignorance) (Mancato riconoscimento dell'infrastruttura)

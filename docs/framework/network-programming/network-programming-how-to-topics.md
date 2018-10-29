@@ -7,14 +7,12 @@ helpviewer_keywords:
 - networking how-tos [.NET Framework]
 - network
 ms.assetid: 8fd6c675-9ea6-4fad-a412-e2c2c1f233d8
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 6ca48627df37a98265b9078e2bc93dd823823e45
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 5b9236b3dd9d40c3f5656fd050f25cbb12f6a1ec
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47193525"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50192358"
 ---
 # <a name="network-programming-how-to-topics"></a>Procedure per la programmazione di rete
 Di seguito vengono elencati i collegamenti ad alcune procedure contenute nella documentazione concettuale relativa alla programmazione di rete.  

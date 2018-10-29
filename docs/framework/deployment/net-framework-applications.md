@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 139d4cb1-5972-40f4-bdd8-1ce68e4dfb80
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7c999b6c391294a05eb7fae1d1f076f1d52b8c5c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9536b53531d3ee7575a51b8702b34b57338b4f8b
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391651"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50040907"
 ---
 # <a name="deploying-net-framework-applications"></a>Distribuzione di applicazioni .NET Framework
 Questa sezione della documentazione di .NET Framework contiene informazioni essenziali per la distribuzione delle applicazioni .NET Framework, incluse le linee guida per il caricamento degli assembly, la risoluzione dei riferimenti all'assembly e il miglioramento delle prestazioni dell'applicazione con la generazione delle immagini native.  
@@ -25,4 +25,4 @@ Questa sezione della documentazione di .NET Framework contiene informazioni esse
  Illustra come evitare problemi di identità del tipo che possono causare la generazione di eccezioni <xref:System.InvalidCastException>, <xref:System.MissingMethodException> e altri errori.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di sviluppo](../../../docs/framework/development-guide.md)
+- [Guida di sviluppo](../../../docs/framework/development-guide.md)

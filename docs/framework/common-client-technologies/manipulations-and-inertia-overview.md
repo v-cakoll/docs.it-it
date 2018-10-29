@@ -2,12 +2,12 @@
 title: Informazioni generali sulle modifiche e sull'inerzia
 ms.date: 03/30/2017
 ms.assetid: dd31b89b-eab6-45a1-8d0b-11e0eb84b234
-ms.openlocfilehash: 41c22dc305f8ef653705436544ab2342e55ed02a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6396c174b341b5ae937fa931488ee1bd3a5fcbd5
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521239"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50187819"
 ---
 # <a name="manipulations-and-inertia-overview"></a>Informazioni generali sulle modifiche e sull'inerzia
 Le *modifiche* consentono agli utenti di spostare, ruotare e ridimensionare elementi dell'interfaccia utente tramite *modificatori*. Un manipolatore può essere un mouse, uno stilo (in uno scenario abilitato per il tocco) o un dito.  
@@ -25,7 +25,7 @@ Le *modifiche* consentono agli utenti di spostare, ruotare e ridimensionare elem
   
  Immagine modificata da due manipolatori  
   
- L'elaborazione delle modifiche fornisce un framework che consente di monitorare un subset di manipolatori e di interpretarli collettivamente, anziché in modo indipendente. È possibile creare diversi oggetti del processore di modifica contemporaneamente, uno per ogni elemento dell'interfaccia utente da modificare in un'applicazione. Un processore di modifica viene informato sui dispositivi di input che può usare e segnala le modifiche tramite [eventi .NET](https://msdn.microsoft.com/library/17sde2xt.aspx).  
+ L'elaborazione delle modifiche fornisce un framework che consente di monitorare un subset di manipolatori e di interpretarli collettivamente, anziché in modo indipendente. È possibile creare diversi oggetti del processore di modifica contemporaneamente, uno per ogni elemento dell'interfaccia utente da modificare in un'applicazione. Un processore di modifica viene informato sui dispositivi di input che può usare e segnala le modifiche tramite [eventi .NET](../../../docs/standard/events/index.md).  
   
  Un processore di modifica non dispone di informazioni sul particolare elemento modificato. Un'applicazione applica separatamente le modifiche a un elemento specifico dell'applicazione. Ad esempio, un'applicazione applica le trasformazioni a un'immagine o la ridisegna per visualizzarla in una nuova posizione oppure con una nuova dimensione o orientamento.  
   
@@ -41,7 +41,7 @@ Le *modifiche* consentono agli utenti di spostare, ruotare e ridimensionare elem
  Quando i manipolatori vengono aggiunti, spostati o rimossi in un elemento dell'interfaccia utente, un'applicazione aggiorna l'oggetto <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D> chiamando il metodo <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.ProcessManipulators%2A>. Quando la modifica viene avviata per prima volta, viene generato l'evento <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Started>.  
   
 > [!NOTE]
->  L'elaborazione delle modifiche è più efficace se usata in un ambiente di aggiornamento basato su frame. L'uso dell'elaborazione di modifiche in un'applicazione Microsoft XNA non presenta problemi perché il framework XNA offre i corrispondenti aggiornamenti tramite il metodo [Game.Update](https://msdn.microsoft.com/library/microsoft.xna.framework.game.update.aspx). In un altro ambiente (ad esempio Windows Form) potrebbe essere necessario fornire una propria logica basata su frame per raccogliere le modifiche e inviarle periodicamente in batch al metodo <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.ProcessManipulators%2A>.  
+> L'elaborazione delle modifiche è più efficace se usata in un ambiente di aggiornamento basato su frame. L'uso dell'elaborazione di modifiche in un'applicazione Microsoft XNA non presenta problemi perché il framework XNA offre i corrispondenti aggiornamenti tramite il metodo [Game.Update](https://docs.microsoft.com/previous-versions/windows/xna/bb199616%28v%3dxnagamestudio.41%29). In un altro ambiente (ad esempio Windows Form) potrebbe essere necessario fornire una propria logica basata su frame per raccogliere le modifiche e inviarle periodicamente in batch al metodo <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.ProcessManipulators%2A>.  
   
  Quando cambia il numero o la posizione dei manipolatori, viene generato l'evento <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Delta>. Le proprietà dell'oggetto <xref:System.Windows.Input.Manipulations.Manipulation2DDeltaEventArgs> passato al gestore dell'evento <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Delta> specificano le modifiche apportate a origine, scala, rotazione e conversione dopo l'ultimo evento. L'origine della modifica cambia in caso di spostamento, aggiunta o rimozione dei manipolatori. I valori di conversione specificano l'entità del movimento di X o Y inclusa nella modifica.  
   

@@ -4,12 +4,12 @@ description: Architettura di microservizi .NET per applicazioni .NET in contenit
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/12/2017
-ms.openlocfilehash: 6003252d7e87428c7f954b57c3b67a041e3f3b15
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 663515e0a863ef703006df0f96b4bc8a2976ca78
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106476"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50205295"
 ---
 # <a name="implementing-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Implementazione del livello di persistenza dell'infrastruttura con Entity Framework Core
 
@@ -39,7 +39,7 @@ Dal momento che nella documentazione Microsoft è già disponibile un'introduzio
 
 ## <a name="infrastructure-in-entity-framework-core-from-a-ddd-perspective"></a>Infrastruttura in Entity Framework Core dal punto di vista della progettazione basata su dominio
 
-Dal punto di vista della progettazione basata su dominio, un'importante funzionalità di Entity Framework è data dalla possibilità di usare le entità di dominio POCO, note nella terminologia di Entity Framework come *entità Code First* POCO. Se si usano le entità di dominio POCO, le classi del modello di dominio non riconoscono la persistenza, risultando conformi ai principi di [Persistence Ignorance](http://deviq.com/persistence-ignorance/) e [Infrastructure Ignorance](https://ayende.com/blog/3137/infrastructure-ignorance).
+Dal punto di vista della progettazione basata su dominio, un'importante funzionalità di Entity Framework è data dalla possibilità di usare le entità di dominio POCO, note nella terminologia di Entity Framework come *entità Code First* POCO. Se si usano le entità di dominio POCO, le classi del modello di dominio non riconoscono la persistenza, risultando conformi ai principi di [Persistence Ignorance](https://deviq.com/persistence-ignorance/) e [Infrastructure Ignorance](https://ayende.com/blog/3137/infrastructure-ignorance).
 
 Per ogni schema di progettazione basata su dominio è consigliabile incapsulare le regole e il comportamento del dominio regole all'interno della classe di entità stessa, in modo che possa controllare invarianti, convalide e regole durante l'accesso a qualsiasi raccolta. Nella progettazione basata su dominio non è quindi buona norma consentire l'accesso pubblico a raccolte di oggetti valore o entità figlio. È invece opportuno esporre metodi che consentano di controllare come e quando è possibile aggiornare i campi e le raccolte di proprietà, nonché il comportamento e le azioni che devono essere eseguite in tale circostanza.
 
@@ -400,7 +400,7 @@ public abstract class BaseSpecification<T> : ISpecification<T>
 }
 ```
 
-La specifica seguente carica una singola entità carrello (basket) dato l'ID carrello (basketId) o l'ID acquirente (buyerId) a cui appartiene il carrello. Eseguirà il [caricamento eager](https://docs.microsoft.com/en-us/ef/core/querying/related-data) della raccolta Items del carrello.
+La specifica seguente carica una singola entità carrello (basket) dato l'ID carrello (basketId) o l'ID acquirente (buyerId) a cui appartiene il carrello. Eseguirà il [caricamento eager](https://docs.microsoft.com/ef/core/querying/related-data) della raccolta Items del carrello.
 
 ```csharp
 // SAMPLE QUERY SPECIFICATION IMPLEMENTATION
@@ -467,7 +467,7 @@ Anche se non è consigliabile restituire espressioni IQueryable da un repository
     [*https://docs.microsoft.com/ef/core/modeling/shadow-properties*](https://docs.microsoft.com/ef/core/modeling/shadow-properties)
 
 -   **The Specification pattern**
-    [*http://deviq.com/specification-pattern/*](http://deviq.com/specification-pattern/) (Schema Specification)
+    [*https://deviq.com/specification-pattern/*](https://deviq.com/specification-pattern/) (Schema Specification)
     
 
 >[!div class="step-by-step"]

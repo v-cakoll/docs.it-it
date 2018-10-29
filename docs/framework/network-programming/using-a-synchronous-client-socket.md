@@ -17,14 +17,12 @@ helpviewer_keywords:
 - Internet, sockets
 - client sockets
 ms.assetid: 945d00c6-7202-466c-9df9-140b84156d43
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: edc65f46b69ef3b72092c0182529b9127cc25911
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 8036421f937385edbaefb8df4ee3915798084c64
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47199698"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50192434"
 ---
 # <a name="using-a-synchronous-client-socket"></a>Uso di un socket client sincrono
 Un socket client sincrono sospende il programma dell'applicazione in attesa del completamento dell'operazione di rete. I socket sincroni non sono adatti per le applicazioni che fanno un uso massiccio della rete per le loro operazioni, ma consentono di abilitare l'accesso semplice ai servizi di rete per altre applicazioni.  

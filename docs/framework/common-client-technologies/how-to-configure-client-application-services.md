@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - client application services, configuring
 ms.assetid: 34a8688a-a32c-40d3-94be-c8e610c6a4e8
-ms.openlocfilehash: a65c216397f240b77eb81f88d8f2a2da122e1ccf
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 6f754a2a66187ac94d31d0d5a3a665c969652d26
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861624"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48846513"
 ---
 # <a name="how-to-configure-client-application-services"></a>Procedura: configurare i servizi delle applicazioni client
 In questo argomento viene descritto come usare **Creazione progetti** di Visual Studio per abilitare e configurare i servizi delle applicazioni client. È possibile usare i servizi delle applicazioni client per convalidare gli utenti e recuperare i ruoli utente e le impostazioni da un servizio dell'applicazione [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] esistente. Dopo la configurazione, è possibile accedere ai servizi abilitati nel codice dell'applicazione come descritto in [Cenni preliminari sui servizi delle applicazioni client](../../../docs/framework/common-client-technologies/client-application-services-overview.md). Per altre informazioni sui servizi delle applicazioni [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)], vedere l'argomento relativo ai [Panoramica sui servizi delle applicazioni ASP.NET](https://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013).  
   
- È possibile abilitare e configurare i servizi delle applicazioni client nella pagina **Servizi** di **Creazione progetti**. La pagina **Servizi** aggiorna i valori nel file app. config del progetto. Per accedere a **Creazione progetti**, usare il comando **Proprietà** nel menu **Progetto**. Per altre informazioni sulla pagina **Servizi**, vedere [Services Page, Project Designer](https://msdn.microsoft.com/library/bb398109) (Pagina Servizi, Creazione progetti).  
+ È possibile abilitare e configurare i servizi delle applicazioni client nella pagina **Servizi** di **Creazione progetti**. La pagina **Servizi** aggiorna i valori nel file app. config del progetto. Per accedere a **Creazione progetti**, usare il comando **Proprietà** nel menu **Progetto**. Per altre informazioni sulla pagina **Servizi**, vedere [Services Page, Project Designer](/visualstudio/ide/reference/services-page-project-designer) (Pagina Servizi, Creazione progetti).  
   
  La procedura seguente descrive come eseguire la configurazione di base per i servizi delle applicazioni client. Le opzioni di configurazione avanzata sono descritte nelle sezioni successive.  
   
@@ -143,7 +143,7 @@ In questo argomento viene descritto come usare **Creazione progetti** di Visual 
 ## <a name="see-also"></a>Vedere anche  
  [Servizi applicazioni client](../../../docs/framework/common-client-technologies/client-application-services.md)  
  [Cenni preliminari sui servizi delle applicazioni client](../../../docs/framework/common-client-technologies/client-application-services-overview.md)  
- [Pagina Servizi, Creazione progetti](https://msdn.microsoft.com/library/bb398109)  
+ [Pagina Servizi, Creazione progetti](/visualstudio/ide/reference/services-page-project-designer)  
  [Finestra di dialogo Impostazioni avanzate per i servizi](/visualstudio/ide/reference/advanced-settings-for-services-dialog-box)  
  [Procedura: implementare l'accesso utente con i servizi dell'applicazione client](../../../docs/framework/common-client-technologies/how-to-implement-user-login-with-client-application-services.md)  
  [Procedura dettagliata: uso di servizi delle applicazioni client](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md)  

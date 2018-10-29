@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 49b787ff-2741-4836-ad51-c3017dc592d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: baa66f11404e2cee83b4d4b32ba02544c9438d7f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7dab1474454f8169d8d0d80413c6fb95677fb4bf
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392509"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453393"
 ---
 # <a name="attributed-programming-model-overview-mef"></a>Panoramica sul modello di programmazione con attributi (MEF)
 In Managed Extensibility Framework (MEF) un *modello di programmazione* è un metodo particolare per definire l'insieme di oggetti concettuali su cui opera MEF, incluse le parti, le importazioni e le esportazioni. MEF usa questi oggetti, ma non specifica il modo in cui devono essere rappresentati. È quindi possibile usare una vasta gamma di modelli di programmazione, inclusi i modelli di programmazione personalizzati.  
@@ -144,7 +144,7 @@ End Class
 public class MyAddin  
 {  
     //Explicitly specifying a generic type.  
-    [Export(typeof(Func<int, string>)]  
+    [Export(typeof(Func<int, string>))]  
     public string DoSomething(int TheParam);  
 }  
 ```  
@@ -957,5 +957,5 @@ public class PartSeven
  `IPartImportsSatisfiedNotification` include un metodo con nome `OnImportsSatisfied`. Questo metodo è chiamato dal contenitore di composizione per qualsiasi parte che implementa l'interfaccia quando la composizione è stata completata e le importazioni della parte sono pronte per l'uso. Le parti sono create dal motore di composizione per completare le importazioni di altre parti. Prima dell'impostazione delle importazioni di una parte, sarà possibile eseguire inizializzazioni che si basano su o che modificano valori importati nel costruttore della parte solo se tali valori sono stati specificati come prerequisiti usando l'attributo `ImportingConstructor` . Questo è in genere il metodo preferito, ma in alcuni casi è possibile che l'aggiunta di costruttori non sia disponibile. In questi casi l'inizializzazione può essere eseguita in `OnImportsSatisfied`e la parte deve implementare `IPartImportsSatisfiedNotification`.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Video Channel 9: Aprire le applicazioni con Managed Extensibility Framework](http://channel9.msdn.com/events/TechEd/NorthAmerica/2009/DTL328)  
- [Video Channel 9: Managed Extensibility Framework (MEF) 2.0](http://channel9.msdn.com/posts/NET-45-Oleg-Lvovitch-and-Kevin-Ransom-Managed-Extensibility-Framework-MEF-20)
+ [Video Channel 9: Aprire le applicazioni con Managed Extensibility Framework](https://channel9.msdn.com/events/TechEd/NorthAmerica/2009/DTL328)  
+ [Video Channel 9: Managed Extensibility Framework (MEF) 2.0](https://channel9.msdn.com/posts/NET-45-Oleg-Lvovitch-and-Kevin-Ransom-Managed-Extensibility-Framework-MEF-20)

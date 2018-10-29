@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3f8ed5cce3e0c9e22679f54b13c84ea422f2100d
-ms.sourcegitcommit: 6c480773ae896f45af4671fb3e26611a50e4dd81
+ms.openlocfilehash: 54ca80e83511d6120669df634ae34ca0bf486bf3
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2018
-ms.locfileid: "35251064"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453450"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>Come il runtime individua gli assembly
 Per distribuire correttamente l'applicazione .NET Framework, è necessario comprendere in che modo Common Language Runtime individua e associa gli assembly che costituiscono l'applicazione. Per impostazione predefinita, il runtime tenta di eseguire l'associazione con la versione esatta di un assembly con cui è stata compilata l'applicazione. Questo comportamento predefinito può essere sottoposto a override dalle impostazioni del file di configurazione.  
@@ -215,7 +215,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
   
 -   Nome dell'assembly di riferimento: myAssembly  
   
--   Directory radice dell'applicazione: http://www.code.microsoft.com  
+-   Directory radice dell'applicazione: `http://www.code.microsoft.com`  
   
 -   Elemento [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) specificato nel file di configurazione: bin  
   
@@ -223,13 +223,13 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
   
  Il runtime esegue l'individuazione tramite probe dei seguenti URL:  
   
- http://www.code.microsoft.com/de/myAssembly.dll  
+ `http://www.code.microsoft.com/de/myAssembly.dll`
   
- http://www.code.microsoft.com/de/myAssembly/myAssembly.dll  
+ `http://www.code.microsoft.com/de/myAssembly/myAssembly.dll`
   
- http://www.code.microsoft.com/bin/de/myAssembly.dll  
+ `http://www.code.microsoft.com/bin/de/myAssembly.dll`
   
- http://www.code.microsoft.com/bin/de/myAssembly/myAssembly.dll  
+ `http://www.code.microsoft.com/bin/de/myAssembly/myAssembly.dll`
   
 ##### <a name="multiple-assemblies-with-the-same-name"></a>Più assembly con lo stesso nome  
  L'esempio seguente mostra come configurare più assembly con lo stesso nome.  
@@ -245,8 +245,8 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 #### <a name="other-locations-probed"></a>Altri percorsi con individuazione tramite probe  
  Il percorso dell'assembly può essere determinato anche usando il contesto di associazione corrente. Questa situazione si verifica spesso quando il metodo <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> viene usato in scenari di interoperabilità COM. Se un assembly usa il metodo <xref:System.Reflection.Assembly.LoadFrom%2A> per fare riferimento a un altro assembly, il percorso dell'assembly chiamante viene considerato come un suggerimento su dove trovare l'assembly di riferimento. Se viene trovata una corrispondenza, l'assembly viene caricato. Se non viene trovata alcuna corrispondenza, il runtime continua con la semantica di ricerca, quindi esegue una query in Windows Installer per richiedere l'assembly. Se non vengono forniti assembly corrispondenti alla richiesta di associazione, viene generata un'eccezione. Questa eccezione è <xref:System.TypeLoadException> nel codice gestito, se è stato fatto riferimento a un tipo, oppure <xref:System.IO.FileNotFoundException> se l'assembly in fase di caricamento non è stato trovato.  
   
- Se ad esempio Assembly1 fa riferimento ad Assembly2 e Assembly1 è stato scaricato da http://www.code.microsoft.com/utils, il percorso viene considerato come un suggerimento su dove trovare Assembly2.dll. Il runtime quindi verifica la presenza dell'assembly in http://www.code.microsoft.com/utils/Assembly2.dll e http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll. Se Assembly2 non viene trovato nei percorsi indicati, il runtime esegue una query in Windows Installer.  
+ Se ad esempio Assembly1 fa riferimento ad Assembly2 e Assembly1 è stato scaricato da `http://www.code.microsoft.com/utils`, il percorso viene considerato come un suggerimento su dove trovare Assembly2.dll. Il runtime quindi verifica la presenza dell'assembly in `http://www.code.microsoft.com/utils/Assembly2.dll` e `http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll`. Se Assembly2 non viene trovato nei percorsi indicati, il runtime esegue una query in Windows Installer.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedure consigliate per il caricamento di assembly](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  
- [Distribuzione](../../../docs/framework/deployment/index.md)
+- [Procedure consigliate per il caricamento di assembly](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  
+- [Distribuzione](../../../docs/framework/deployment/index.md)

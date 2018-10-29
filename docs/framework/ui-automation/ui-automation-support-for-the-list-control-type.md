@@ -8,16 +8,16 @@ helpviewer_keywords:
 ms.assetid: 0e959fcb-50f2-413b-948d-7167d279bc11
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 1ca4e0f0e0d88004d6c2059af4c774c916efd5ac
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 1ae62cca72831b0319243acd9c5bf7a2b86138c3
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035071"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50205269"
 ---
 # <a name="ui-automation-support-for-the-list-control-type"></a>Supporto per automazione interfaccia utente del tipo di controllo List
 > [!NOTE]
->  Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate sulle [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere [Windows Automation API: automazione dell'interfaccia utente](https://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere l'argomento sull' [API Automazione interfaccia utente di Windows](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  In questo argomento vengono fornite informazioni sul supporto di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] per il tipo di controllo elenco. In [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]un tipo di controllo è un set di condizioni che un controllo deve soddisfare per usare la proprietà <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> . Le condizioni includono linee guida specifiche per la struttura ad albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , i valori delle proprietà di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] e i pattern di controllo.  
   
@@ -36,21 +36,19 @@ ms.locfileid: "48035071"
   
  La visualizzazione controlli per un controllo che implementa il tipo di controllo elenco (ad esempio un controllo elenco) contiene:  
   
--   Zero o più elementi nel controllo elenco (gli elementi possono essere basati sui tipi di controllo ListItem o DataItem)  
+- Zero o più elementi all'interno del controllo elenco (gli elementi possono basarsi sui tipi di controllo voce di elenco o di elemento di dati).
   
--   Zero o più controlli gruppo in un controllo elenco  
+- Zero o più controlli di gruppo all'interno di un controllo elenco.
   
--   Zero, uno o due controlli barra di scorrimento  
+- Uno o due controlli barra di scorrimento.
   
--  
+La visualizzazione contenuto di un controllo che implementa il tipo di controllo elenco (ad esempio un controllo elenco) contiene:  
   
- La visualizzazione contenuto di un controllo che implementa il tipo di controllo elenco (ad esempio un controllo elenco) contiene:  
+- Zero o più elementi all'interno del controllo elenco (gli elementi possono basarsi sui tipi di controllo voce di elenco o di elemento di dati).
   
--   Zero o più elementi nel controllo elenco (gli elementi possono essere basati sui tipi di controllo ListItem o DataItem)  
-  
--   Zero o più gruppi nel controllo elenco  
-  
- Un controllo elenco non deve contenere elementi con una relazione gerarchica diversa dal raggruppamento. Se gli elementi hanno figli nell'albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , il contenitore elenco deve essere basato sul tipo di controllo Tree.  
+- Zero o più gruppi all'interno del controllo elenco.
+
+Un controllo elenco non deve contenere elementi con una relazione gerarchica diversa dal raggruppamento. Se gli elementi hanno figli nell'albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , il contenitore elenco deve essere basato sul tipo di controllo Tree.  
   
  Gli elementi selezionabili nel controllo elenco sono disponibili dai discendenti nell'albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] del controllo elenco. Tutti gli elementi nel controllo elenco devono appartenere allo stesso gruppo di selezione. Gli elementi selezionabili nell'elenco devono essere esposti come tipi di controllo ListItem (anziché DataItem).  
   
@@ -69,7 +67,7 @@ ms.locfileid: "48035071"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|List|Questo valore è uguale per tutti i framework dell'interfaccia utente.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"elenco"|Stringa localizzata corrispondente al tipo di controllo elenco.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|True|Il controllo elenco è sempre incluso nella visualizzazione contenuto dell'albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|Il controllo elenco è sempre incluso nella visualizzazione controlli dell'albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|Il controllo elenco è sempre incluso nella visualizzazione controlli dell'albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|True|Se il contenitore può accettare input da tastiera, il valore di questa proprietà deve essere True.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.HelpTextProperty>|Vedere le note.|Il testo della Guida per i controlli elenco deve illustrare il motivo per cui viene chiesto all'utente di effettuare una selezione da un elenco di opzioni. Ad esempio, "La selezione di un elemento dall'elenco consente di impostare la risoluzione per il monitor".|  
   

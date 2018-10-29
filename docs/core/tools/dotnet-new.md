@@ -3,13 +3,13 @@ title: Comando dotnet new - Interfaccia della riga di comando di .NET Core
 description: Il comando dotnet new consente di creare nuovi progetti .NET Core in base al modello specificato.
 author: mairaw
 ms.author: mairaw
-ms.date: 07/31/2018
-ms.openlocfilehash: 396c4ddf09854fa4582226bdb1422f8c929e459b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.date: 10/24/2018
+ms.openlocfilehash: 56d76f1dd54097f9cf20129d74057235290c273c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47208633"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188202"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -65,27 +65,27 @@ Modello di cui creare un'istanza quando viene richiamato il comando. Ogni modell
 
 Il comando contiene un elenco predefinito di modelli. Usare `dotnet new -l` per ottenere un elenco dei modelli disponibili. La tabella seguente descrive i modelli preinstallati con .NET Core SDK 2.1.300. Il linguaggio predefinito per il modello è indicato tra parentesi quadre.
 
-|Descrizione del modello                          | Nome del modello   | Linguaggi     |
-|----------------------------------------------|-----------------|---------------|
-| Applicazione console                          | `console`       | [C#], F#, VB  |
-| Libreria di classi                                | `classlib`      | [C#], F#, VB  |
-| Progetto di unit test                            | `mstest`        | [C#], F#, VB  |
-| Progetto di xUnit test                           | `xunit`         | [C#], F#, VB  |
-| Pagina Razor                                   | `page`          | [C#]          |
-| MVC ViewImports                              | `viewimports`   | [C#]          |
-| MVC ViewStart                                | `viewstart`     | [C#]          |
-| ASP.NET Core vuoto                           | `web`           | [C#], F#      |
-| App Web ASP.NET Core (Model-View-Controller) | `mvc`           | [C#], F#      |
-| App Web ASP.NET Core                         | `razor`         | [C#]          |
-| ASP.NET Core con Angular                    | `angular`       | [C#]          |
-| ASP.NET Core con React.js                   | `react`         | [C#]          |
-| ASP.NET Core con React.js e Redux         | `reactredux`    | [C#]          |
-| API Web ASP.NET Core                         | `webapi`        | [C#], F#      |
-| Libreria di classi Razor                          | `razorclasslib` | [C#]          |
-| File global.json                             | `globaljson`    |               |
-| Configurazione Nuget                                 | `nugetconfig`   |               |
-| Configurazione Web                                   | `webconfig`     |               |
-| File di soluzione                                | `sln`           |               |
+|Descrizione del modello                          | Nome del modello    | Linguaggi     |
+|----------------------------------------------|------------------|---------------|
+| Applicazione console                          | `console`        | [C#], F#, VB  |
+| Libreria di classi                                | `classlib`       | [C#], F#, VB  |
+| Progetto di unit test                            | `mstest`         | [C#], F#, VB  |
+| Progetto di xUnit test                           | `xunit`          | [C#], F#, VB  |
+| Pagina Razor                                   | `page`           | [C#]          |
+| MVC ViewImports                              | `viewimports`    | [C#]          |
+| MVC ViewStart                                | `viewstart`      | [C#]          |
+| ASP.NET Core vuoto                           | `web`            | [C#], F#      |
+| App Web ASP.NET Core (Model-View-Controller) | `mvc`            | [C#], F#      |
+| App Web ASP.NET Core                         | `razor`, `webapp`| [C#]          |
+| ASP.NET Core con Angular                    | `angular`        | [C#]          |
+| ASP.NET Core con React.js                   | `react`          | [C#]          |
+| ASP.NET Core con React.js e Redux         | `reactredux`     | [C#]          |
+| API Web ASP.NET Core                         | `webapi`         | [C#], F#      |
+| Libreria di classi Razor                          | `razorclasslib`  | [C#]          |
+| File global.json                             | `globaljson`     |               |
+| Configurazione Nuget                                 | `nugetconfig`    |               |
+| Configurazione Web                                   | `webconfig`      |               |
+| File di soluzione                                | `sln`            |               |
 
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 

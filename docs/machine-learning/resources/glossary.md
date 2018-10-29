@@ -1,16 +1,14 @@
 ---
 title: Glossario dell'apprendimento automatico
 description: Un glossario dei termini relativi all'apprendimento automatico.
-author: jralexander
-ms.author: johalex
 ms.date: 05/31/2018
 ms.topic: conceptual
-ms.openlocfilehash: 6b175a8e89479dae81a7e5769e8d10c09a193898
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 22fcd4d2bdf53efd046cd594af42afe50a853f61
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47081098"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453203"
 ---
 # <a name="machine-learning-glossary"></a>Glossario dell'apprendimento automatico
 
@@ -20,13 +18,13 @@ Di seguito sono riportati i principali termini relativi all'apprendimento automa
 
 Nell'ambito della [classificazione](#classification), l'accuratezza è il numero di elementi classificati correttamente diviso per il numero totale di elementi nel set di test. È compresa tra 0 (meno accurato) e 1 (più accurato). L'accuratezza è una delle metriche di valutazione delle prestazioni del modello. Deve essere considerata in combinazione con la [precisione](#precision), il [richiamo](#recall) e il [punteggio F](#f-score).
 
-API ML.NET correlate: <xref:Microsoft.ML.Models.BinaryClassificationMetrics.Accuracy?displayProperty=nameWithType>.
+API ML.NET correlate: <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.Accuracy?displayProperty=nameWithType>.
 
 ## <a name="area-under-the-curve-auc"></a>Area sottesa alla curva (AUC)
 
 Nella [classificazione binaria](#binary-classification), una metrica di valutazione costituita dal valore dell'area sotto la curva che traccia il tasso di veri positivi (sull'asse y) rispetto al tasso di falsi positivi (sull'asse x). È compresa tra 0,5 (peggiore) e 1 (migliore). È anche nota come area sottesa alla curva ROC (Receiver Operating Characteristic). Per altre informazioni, vedere l'articolo relativo alle curve [ROC (Receiver Operating Characteristic)](https://en.wikipedia.org/wiki/Receiver_operating_characteristic) su Wikipedia.
 
-API ML.NET correlate: <xref:Microsoft.ML.Models.BinaryClassificationMetrics.Auc?displayProperty=nameWithType>.
+API ML.NET correlate: <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.Auc?displayProperty=nameWithType>.
 
 ## <a name="binary-classification"></a>Classificazione binaria
 
@@ -40,7 +38,7 @@ Quando i dati vengono usati per stimare una categoria, l'attività di [apprendim
 
 Nell'ambito della [regressione](#regression), una metrica di valutazione che indica il livello di adattamento dei dati a un modello. È compreso tra 0 e 1. Un valore pari a 0 indica che i dati sono casuali o non possono essere adattati al modello. Un valore pari a 1 indica che il modello corrisponde esattamente ai dati. È noto anche come r<sup>2</sup>, R<sup>2</sup> o r al quadrato.
 
-API ML.NET correlate: <xref:Microsoft.ML.Models.RegressionMetrics.RSquared?displayProperty=nameWithType>.
+API ML.NET correlate: <xref:Microsoft.ML.Legacy.Models.RegressionMetrics.RSquared?displayProperty=nameWithType>.
 
 ## <a name="feature"></a>Funzionalità
 
@@ -54,7 +52,7 @@ La progettazione di funzionalità è il processo che comprende la definizione di
 
 Nell'ambito della [classificazione](#classification), una metrica di valutazione che consente di bilanciare la [precisione](#precision) e il [richiamo](#recall).
 
-API ML.NET correlate: <xref:Microsoft.ML.Models.BinaryClassificationMetrics.F1Score?displayProperty=nameWithType>.
+API ML.NET correlate: <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.F1Score?displayProperty=nameWithType>.
 
 ## <a name="hyperparameter"></a>Iperparametro
 
@@ -68,13 +66,13 @@ L'elemento da stimare con il modello di apprendimento automatico. Ad esempio, la
 
 Nell'ambito della [classificazione](#classification), una metrica di valutazione che caratterizza l'accuratezza di un classificatore. Minore è perdita di log, più accurato è il classificatore.
 
-API ML.NET correlate: <xref:Microsoft.ML.Models.BinaryClassificationMetrics.LogLoss?displayProperty=nameWithType>.
+API ML.NET correlate: <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.LogLoss?displayProperty=nameWithType>.
 
 ## <a name="mean-absolute-error-mae"></a>Errore assoluto medio (MAE)
 
 Nell'ambito della [regressione](#regression), una metrica di valutazione costituita dalla media di tutti gli errori del modello, dove un errore del modello è la distanza tra il valore di [etichetta](#label) stimato e il valore di etichetta corretto.
 
-API ML.NET correlate: <xref:Microsoft.ML.Models.RegressionMetrics.L1?displayProperty=nameWithType>.
+API ML.NET correlate: <xref:Microsoft.ML.Legacy.Models.RegressionMetrics.L1?displayProperty=nameWithType>.
 
 ## <a name="model"></a>Modello
 
@@ -100,13 +98,13 @@ Tutte le operazioni necessarie per adattare un modello a un set di dati. Una pip
 
 Nell'ambito della [classificazione](#classification), la precisione di una classe è il numero di elementi stimati correttamente come appartenenti alla classe diviso per il numero totale di elementi previsti come appartenenti alla classe.
 
-API ML.NET correlate: <xref:Microsoft.ML.Models.BinaryClassificationMetrics.NegativePrecision?displayProperty=nameWithType>, <xref:Microsoft.ML.Models.BinaryClassificationMetrics.PositivePrecision?displayProperty=nameWithType>.
+API ML.NET correlate: <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.NegativePrecision?displayProperty=nameWithType>, <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.PositivePrecision?displayProperty=nameWithType>.
 
 ## <a name="recall"></a>Richiamo
 
 Nell'ambito della [classificazione](#classification), il richiamo di una classe è il numero di elementi stimati correttamente come appartenenti alla classe diviso per il numero totale di elementi effettivamente appartenenti alla classe.
 
-API ML.NET correlate: <xref:Microsoft.ML.Models.BinaryClassificationMetrics.NegativeRecall?displayProperty=nameWithType>, <xref:Microsoft.ML.Models.BinaryClassificationMetrics.PositiveRecall?displayProperty=nameWithType>.
+API ML.NET correlate: <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.NegativeRecall?displayProperty=nameWithType>, <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.PositiveRecall?displayProperty=nameWithType>.
 
 ## <a name="regression"></a>Regressione
 
@@ -124,7 +122,7 @@ Nell'ambito della [regressione](#regression), una metrica di valutazione costitu
 
 Nell'ambito della [regressione](#regression), una metrica di valutazione costituita dalla radice quadrata della media dei quadrati degli errori.
 
-API ML.NET correlate: <xref:Microsoft.ML.Models.RegressionMetrics.Rms?displayProperty=nameWithType>.
+API ML.NET correlate: <xref:Microsoft.ML.Legacy.Models.RegressionMetrics.Rms?displayProperty=nameWithType>.
 
 ## <a name="supervised-machine-learning"></a>Apprendimento automatico con supervisione
 
