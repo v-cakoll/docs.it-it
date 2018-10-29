@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d4f896dcd78061284416468968ba5a9a5fbbda2f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: df6a35dcaebc681aa5463a014d3283c81efea617
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428540"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199864"
 ---
-# <a name="isymunmanagedbindergetreaderforfile-method"></a><span data-ttu-id="62ce3-102">Metodo ISymUnmanagedBinder::GetReaderForFile</span><span class="sxs-lookup"><span data-stu-id="62ce3-102">ISymUnmanagedBinder::GetReaderForFile Method</span></span>
-<span data-ttu-id="62ce3-103">Dato un'interfaccia di metadati e un nome di file, restituisce la corretta <<!--zz xref:ISymUnmanagedReader --> `ISymUnmanagedReader`> Struttura che verrà letti i simboli di debug associati al modulo.</span><span class="sxs-lookup"><span data-stu-id="62ce3-103">Given a metadata interface and a file name, returns the correct <<!--zz xref:ISymUnmanagedReader --> `ISymUnmanagedReader`> structure that will read the debugging symbols associated with the module.</span></span>  
+# <a name="isymunmanagedbindergetreaderforfile-method"></a><span data-ttu-id="c2a6a-102">Metodo ISymUnmanagedBinder::GetReaderForFile</span><span class="sxs-lookup"><span data-stu-id="c2a6a-102">ISymUnmanagedBinder::GetReaderForFile Method</span></span>
+<span data-ttu-id="c2a6a-103">Data un'interfaccia di metadati e un nome di file, restituisce il valore corretto [ISymUnmanagedReader](isymunmanagedreader-interface.md) interfaccia che leggerà i simboli di debug associati al modulo.</span><span class="sxs-lookup"><span data-stu-id="c2a6a-103">Given a metadata interface and a file name, returns the correct [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface that will read the debugging symbols associated with the module.</span></span>  
   
- <span data-ttu-id="62ce3-104">Questo metodo verrà aprire il file di programma (PDB) di database solo se si trova accanto al file eseguibile.</span><span class="sxs-lookup"><span data-stu-id="62ce3-104">This method will open the program database (PDB) file only if it is next to the executable file.</span></span> <span data-ttu-id="62ce3-105">È stato modificato per motivi di sicurezza.</span><span class="sxs-lookup"><span data-stu-id="62ce3-105">This change has been made for security purposes.</span></span> <span data-ttu-id="62ce3-106">Se occorre una ricerca più completa per il file PDB, usare il [ISymUnmanagedBinder2:: Getreaderforfile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) metodo.</span><span class="sxs-lookup"><span data-stu-id="62ce3-106">If you need a more extensive search for the PDB file, use the [ISymUnmanagedBinder2::GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) method.</span></span>  
+ <span data-ttu-id="c2a6a-104">Questo metodo verrà aperto il file di programma (PDB) del database solo se si trova accanto al file eseguibile.</span><span class="sxs-lookup"><span data-stu-id="c2a6a-104">This method will open the program database (PDB) file only if it is next to the executable file.</span></span> <span data-ttu-id="c2a6a-105">Per motivi di sicurezza è stata apportata questa modifica.</span><span class="sxs-lookup"><span data-stu-id="c2a6a-105">This change has been made for security purposes.</span></span> <span data-ttu-id="c2a6a-106">Se occorre una ricerca più completa per il file PDB, usare il [ISymUnmanagedBinder2::GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) (metodo).</span><span class="sxs-lookup"><span data-stu-id="c2a6a-106">If you need a more extensive search for the PDB file, use the [ISymUnmanagedBinder2::GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="62ce3-107">Sintassi</span><span class="sxs-lookup"><span data-stu-id="62ce3-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c2a6a-107">Sintassi</span><span class="sxs-lookup"><span data-stu-id="c2a6a-107">Syntax</span></span>  
   
 ```  
 HRESULT GetReaderForFile(  
@@ -39,25 +39,25 @@ HRESULT GetReaderForFile(
     [out, retval] ISymUnmanagedReader  **pRetVal);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="62ce3-108">Parametri</span><span class="sxs-lookup"><span data-stu-id="62ce3-108">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c2a6a-108">Parametri</span><span class="sxs-lookup"><span data-stu-id="c2a6a-108">Parameters</span></span>  
  `importer`  
- <span data-ttu-id="62ce3-109">[in] Un puntatore all'interfaccia di importazione dei metadati.</span><span class="sxs-lookup"><span data-stu-id="62ce3-109">[in] A pointer to the metadata import interface.</span></span>  
+ <span data-ttu-id="c2a6a-109">[in] Un puntatore all'interfaccia di importazione dei metadati.</span><span class="sxs-lookup"><span data-stu-id="c2a6a-109">[in] A pointer to the metadata import interface.</span></span>  
   
  `fileName`  
- <span data-ttu-id="62ce3-110">[in] Puntatore al nome del file.</span><span class="sxs-lookup"><span data-stu-id="62ce3-110">[in] A pointer to the file name.</span></span>  
+ <span data-ttu-id="c2a6a-110">[in] Puntatore al nome del file.</span><span class="sxs-lookup"><span data-stu-id="c2a6a-110">[in] A pointer to the file name.</span></span>  
   
  `searchPath`  
- <span data-ttu-id="62ce3-111">[in] Puntatore al percorso di ricerca.</span><span class="sxs-lookup"><span data-stu-id="62ce3-111">[in] A pointer to the search path.</span></span>  
+ <span data-ttu-id="c2a6a-111">[in] Puntatore al percorso di ricerca.</span><span class="sxs-lookup"><span data-stu-id="c2a6a-111">[in] A pointer to the search path.</span></span>  
   
  `pRetVal`  
- <span data-ttu-id="62ce3-112">[out] Un puntatore che viene impostato sull'oggetto restituito <<!--zz xref:ISymUnmanagedReader --> `ISymUnmanagedReader`> interfaccia.</span><span class="sxs-lookup"><span data-stu-id="62ce3-112">[out] A pointer that is set to the returned <<!--zz xref:ISymUnmanagedReader --> `ISymUnmanagedReader`> interface.</span></span>  
+ <span data-ttu-id="c2a6a-112">[out] Un puntatore che viene impostato sull'oggetto restituito [ISymUnmanagedReader](isymunmanagedreader-interface.md) interfaccia.</span><span class="sxs-lookup"><span data-stu-id="c2a6a-112">[out] A pointer that is set to the returned [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="62ce3-113">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="62ce3-113">Return Value</span></span>  
- <span data-ttu-id="62ce3-114">S_OK se il metodo ha esito positivo. in caso contrario, E_FAIL o un altro codice di errore.</span><span class="sxs-lookup"><span data-stu-id="62ce3-114">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="c2a6a-113">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="c2a6a-113">Return Value</span></span>  
+ <span data-ttu-id="c2a6a-114">S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o qualche altro codice di errore.</span><span class="sxs-lookup"><span data-stu-id="c2a6a-114">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="62ce3-115">Requisiti</span><span class="sxs-lookup"><span data-stu-id="62ce3-115">Requirements</span></span>  
- <span data-ttu-id="62ce3-116">**Intestazione:** CorSym. idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="62ce3-116">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c2a6a-115">Requisiti</span><span class="sxs-lookup"><span data-stu-id="c2a6a-115">Requirements</span></span>  
+ <span data-ttu-id="c2a6a-116">**Intestazione:** CorSym. idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="c2a6a-116">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="62ce3-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="62ce3-117">See Also</span></span>  
- [<span data-ttu-id="62ce3-118">Interfaccia ISymUnmanagedBinder</span><span class="sxs-lookup"><span data-stu-id="62ce3-118">ISymUnmanagedBinder Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-interface.md)  
- [<span data-ttu-id="62ce3-119">Metodo GetReaderForFile2</span><span class="sxs-lookup"><span data-stu-id="62ce3-119">GetReaderForFile2 Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md)
+## <a name="see-also"></a><span data-ttu-id="c2a6a-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c2a6a-117">See Also</span></span>  
+ [<span data-ttu-id="c2a6a-118">Interfaccia ISymUnmanagedBinder</span><span class="sxs-lookup"><span data-stu-id="c2a6a-118">ISymUnmanagedBinder Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-interface.md)  
+ [<span data-ttu-id="c2a6a-119">Metodo GetReaderForFile2</span><span class="sxs-lookup"><span data-stu-id="c2a6a-119">GetReaderForFile2 Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md)
