@@ -2,89 +2,89 @@
 title: 'Procedura dettagliata: accesso al Web con Async e Await (C#)'
 ms.date: 07/20/2015
 ms.assetid: c95d8d71-5a98-4bf0-aaf4-45fed2ebbacd
-ms.openlocfilehash: 24ce1e405019ef83ff6bcbb61552d6fc5d911935
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 8a97521bae7f5f16841aa4c8e4a157384739ee61
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47455749"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453281"
 ---
-# <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a><span data-ttu-id="697cc-102">Procedura dettagliata: accesso al Web con Async e Await (C#)</span><span class="sxs-lookup"><span data-stu-id="697cc-102">Walkthrough: Accessing the Web by Using async and await (C#)</span></span>
+# <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a><span data-ttu-id="92b71-102">Procedura dettagliata: accesso al Web con Async e Await (C#)</span><span class="sxs-lookup"><span data-stu-id="92b71-102">Walkthrough: Accessing the Web by Using async and await (C#)</span></span>
 
-<span data-ttu-id="697cc-103">È possibile scrivere programmi asincroni in modo più semplice e intuitivo usando le funzionalità async/await.</span><span class="sxs-lookup"><span data-stu-id="697cc-103">You can write asynchronous programs more easily and intuitively by using async/await features.</span></span> <span data-ttu-id="697cc-104">È possibile scrivere codice asincrono simile al codice sincrono e consentire al compilatore di gestire le complesse funzioni di callback e continuazione tipiche del codice asincrono.</span><span class="sxs-lookup"><span data-stu-id="697cc-104">You can write asynchronous code that looks like synchronous code and let the compiler handle the difficult callback functions and continuations that asynchronous code usually entails.</span></span>
+<span data-ttu-id="92b71-103">È possibile scrivere programmi asincroni in modo più semplice e intuitivo usando le funzionalità async/await.</span><span class="sxs-lookup"><span data-stu-id="92b71-103">You can write asynchronous programs more easily and intuitively by using async/await features.</span></span> <span data-ttu-id="92b71-104">È possibile scrivere codice asincrono simile al codice sincrono e consentire al compilatore di gestire le complesse funzioni di callback e continuazione tipiche del codice asincrono.</span><span class="sxs-lookup"><span data-stu-id="92b71-104">You can write asynchronous code that looks like synchronous code and let the compiler handle the difficult callback functions and continuations that asynchronous code usually entails.</span></span>
 
-<span data-ttu-id="697cc-105">Per altre informazioni sulla funzionalità Async, vedere [Programmazione asincrona con Async e Await (C#)](../../../../csharp/programming-guide/concepts/async/index.md).</span><span class="sxs-lookup"><span data-stu-id="697cc-105">For more information about the Async feature, see [Asynchronous Programming with async and await (C#)](../../../../csharp/programming-guide/concepts/async/index.md).</span></span>
+<span data-ttu-id="92b71-105">Per altre informazioni sulla funzionalità Async, vedere [Programmazione asincrona con Async e Await (C#)](../../../../csharp/programming-guide/concepts/async/index.md).</span><span class="sxs-lookup"><span data-stu-id="92b71-105">For more information about the Async feature, see [Asynchronous Programming with async and await (C#)](../../../../csharp/programming-guide/concepts/async/index.md).</span></span>
 
-<span data-ttu-id="697cc-106">Questa procedura dettagliata inizia con l'esecuzione di un'applicazione Windows Presentation Foundation (WPF) sincrona che somma il numero di byte in un elenco di siti Web.</span><span class="sxs-lookup"><span data-stu-id="697cc-106">This walkthrough starts with a synchronous Windows Presentation Foundation (WPF) application that sums the number of bytes in a list of websites.</span></span> <span data-ttu-id="697cc-107">La procedura dettagliata converte quindi l'applicazione in una soluzione asincrona usando le nuove funzionalità.</span><span class="sxs-lookup"><span data-stu-id="697cc-107">The walkthrough then converts the application to an asynchronous solution by using the new features.</span></span>
+<span data-ttu-id="92b71-106">Questa procedura dettagliata inizia con l'esecuzione di un'applicazione Windows Presentation Foundation (WPF) sincrona che somma il numero di byte in un elenco di siti Web.</span><span class="sxs-lookup"><span data-stu-id="92b71-106">This walkthrough starts with a synchronous Windows Presentation Foundation (WPF) application that sums the number of bytes in a list of websites.</span></span> <span data-ttu-id="92b71-107">La procedura dettagliata converte quindi l'applicazione in una soluzione asincrona usando le nuove funzionalità.</span><span class="sxs-lookup"><span data-stu-id="92b71-107">The walkthrough then converts the application to an asynchronous solution by using the new features.</span></span>
 
-<span data-ttu-id="697cc-108">Se non si vogliono compilare manualmente le applicazioni, è possibile scaricare l'esempio disponibile in [Async Sample: Accessing the Web Walkthrough (C# and Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) (Esempio asincrono: accesso alla procedura dettagliata Web (C# e Visual Basic).</span><span class="sxs-lookup"><span data-stu-id="697cc-108">If you don't want to build the applications yourself, you can download [Async Sample: Accessing the Web Walkthrough (C# and Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f).</span></span>
+<span data-ttu-id="92b71-108">Se non si vogliono compilare manualmente le applicazioni, è possibile scaricare l'esempio disponibile in [Async Sample: Accessing the Web Walkthrough (C# and Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) (Esempio asincrono: accesso alla procedura dettagliata Web (C# e Visual Basic).</span><span class="sxs-lookup"><span data-stu-id="92b71-108">If you don't want to build the applications yourself, you can download [Async Sample: Accessing the Web Walkthrough (C# and Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f).</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="697cc-109">Per eseguire gli esempi, è necessario avere installato Visual Studio 2012 o versioni successive e .NET Framework 4.5 o versioni successive nel computer.</span><span class="sxs-lookup"><span data-stu-id="697cc-109">To run the examples, you must have Visual Studio 2012 or newer and the .NET Framework 4.5 or newer installed on your computer.</span></span>
+> <span data-ttu-id="92b71-109">Per eseguire gli esempi, è necessario avere installato Visual Studio 2012 o versioni successive e .NET Framework 4.5 o versioni successive nel computer.</span><span class="sxs-lookup"><span data-stu-id="92b71-109">To run the examples, you must have Visual Studio 2012 or newer and the .NET Framework 4.5 or newer installed on your computer.</span></span>
 
-## <a name="create-a-wpf-application"></a><span data-ttu-id="697cc-110">Creare un'applicazione WPF</span><span class="sxs-lookup"><span data-stu-id="697cc-110">Create a WPF application</span></span>
+## <a name="create-a-wpf-application"></a><span data-ttu-id="92b71-110">Creare un'applicazione WPF</span><span class="sxs-lookup"><span data-stu-id="92b71-110">Create a WPF application</span></span>
 
-1.  <span data-ttu-id="697cc-111">Avviare Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="697cc-111">Start Visual Studio.</span></span>
+1.  <span data-ttu-id="92b71-111">Avviare Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="92b71-111">Start Visual Studio.</span></span>
 
-2.  <span data-ttu-id="697cc-112">Nella barra dei menu scegliere **File** > **Nuovo** > **Progetto**.</span><span class="sxs-lookup"><span data-stu-id="697cc-112">On the menu bar, choose **File** > **New** > **Project**.</span></span>
+2.  <span data-ttu-id="92b71-112">Nella barra dei menu scegliere **File** > **Nuovo** > **Progetto**.</span><span class="sxs-lookup"><span data-stu-id="92b71-112">On the menu bar, choose **File** > **New** > **Project**.</span></span>
 
-     <span data-ttu-id="697cc-113">Verrà visualizzata la finestra di dialogo **Nuovo progetto** .</span><span class="sxs-lookup"><span data-stu-id="697cc-113">The **New Project** dialog box opens.</span></span>
+     <span data-ttu-id="92b71-113">Verrà visualizzata la finestra di dialogo **Nuovo progetto** .</span><span class="sxs-lookup"><span data-stu-id="92b71-113">The **New Project** dialog box opens.</span></span>
 
-3.  <span data-ttu-id="697cc-114">Nel riquadro **Modelli installati**, scegliere Visual C# e quindi scegliere **Applicazione WPF** nell'elenco dei tipi di progetto.</span><span class="sxs-lookup"><span data-stu-id="697cc-114">In the **Installed Templates** pane, choose Visual C#, and then choose **WPF Application** from the list of project types.</span></span>
+3.  <span data-ttu-id="92b71-114">Nel riquadro **Modelli installati**, scegliere Visual C# e quindi scegliere **Applicazione WPF** nell'elenco dei tipi di progetto.</span><span class="sxs-lookup"><span data-stu-id="92b71-114">In the **Installed Templates** pane, choose Visual C#, and then choose **WPF Application** from the list of project types.</span></span>
 
-4.  <span data-ttu-id="697cc-115">Nella casella di testo **Nome** immettere `AsyncExampleWPF` e quindi scegliere il pulsante **OK**.</span><span class="sxs-lookup"><span data-stu-id="697cc-115">In the **Name** text box, enter `AsyncExampleWPF`, and then choose the **OK** button.</span></span>
+4.  <span data-ttu-id="92b71-115">Nella casella di testo **Nome** immettere `AsyncExampleWPF` e quindi scegliere il pulsante **OK**.</span><span class="sxs-lookup"><span data-stu-id="92b71-115">In the **Name** text box, enter `AsyncExampleWPF`, and then choose the **OK** button.</span></span>
 
-     <span data-ttu-id="697cc-116">Il nuovo progetto verrà visualizzato in **Esplora soluzioni**.</span><span class="sxs-lookup"><span data-stu-id="697cc-116">The new project appears in **Solution Explorer**.</span></span>
+     <span data-ttu-id="92b71-116">Il nuovo progetto verrà visualizzato in **Esplora soluzioni**.</span><span class="sxs-lookup"><span data-stu-id="92b71-116">The new project appears in **Solution Explorer**.</span></span>
 
-## <a name="design-a-simple-wpf-mainwindow"></a><span data-ttu-id="697cc-117">Progettare una finestra WPF MainWindow semplice</span><span class="sxs-lookup"><span data-stu-id="697cc-117">Design a simple WPF MainWindow</span></span>
+## <a name="design-a-simple-wpf-mainwindow"></a><span data-ttu-id="92b71-117">Progettare una finestra WPF MainWindow semplice</span><span class="sxs-lookup"><span data-stu-id="92b71-117">Design a simple WPF MainWindow</span></span>
 
-1.  <span data-ttu-id="697cc-118">Nell'Editor di codice di Visual Studio scegliere la scheda **MainWindow.xaml** .</span><span class="sxs-lookup"><span data-stu-id="697cc-118">In the Visual Studio Code Editor, choose the **MainWindow.xaml** tab.</span></span>
+1.  <span data-ttu-id="92b71-118">Nell'Editor di codice di Visual Studio scegliere la scheda **MainWindow.xaml** .</span><span class="sxs-lookup"><span data-stu-id="92b71-118">In the Visual Studio Code Editor, choose the **MainWindow.xaml** tab.</span></span>
 
-2.  <span data-ttu-id="697cc-119">Se la finestra **Casella degli strumenti** non è visibile, aprire il menu **Visualizza** e quindi scegliere **Casella degli strumenti**.</span><span class="sxs-lookup"><span data-stu-id="697cc-119">If the **Toolbox** window isn’t visible, open the **View** menu, and then choose **Toolbox**.</span></span>
+2.  <span data-ttu-id="92b71-119">Se la finestra **Casella degli strumenti** non è visibile, aprire il menu **Visualizza** e quindi scegliere **Casella degli strumenti**.</span><span class="sxs-lookup"><span data-stu-id="92b71-119">If the **Toolbox** window isn’t visible, open the **View** menu, and then choose **Toolbox**.</span></span>
 
-3.  <span data-ttu-id="697cc-120">Aggiungere un controllo **Button** e un controllo **TextBox** alla finestra **MainWindow**.</span><span class="sxs-lookup"><span data-stu-id="697cc-120">Add a **Button** control and a **TextBox** control to the **MainWindow** window.</span></span>
+3.  <span data-ttu-id="92b71-120">Aggiungere un controllo **Button** e un controllo **TextBox** alla finestra **MainWindow**.</span><span class="sxs-lookup"><span data-stu-id="92b71-120">Add a **Button** control and a **TextBox** control to the **MainWindow** window.</span></span>
 
-4.  <span data-ttu-id="697cc-121">Evidenziare il controllo **TextBox** e nella finestra **Proprietà** impostare i valori seguenti:</span><span class="sxs-lookup"><span data-stu-id="697cc-121">Highlight the **TextBox** control and, in the **Properties** window, set the following values:</span></span>
+4.  <span data-ttu-id="92b71-121">Evidenziare il controllo **TextBox** e nella finestra **Proprietà** impostare i valori seguenti:</span><span class="sxs-lookup"><span data-stu-id="92b71-121">Highlight the **TextBox** control and, in the **Properties** window, set the following values:</span></span>
 
-    -   <span data-ttu-id="697cc-122">Impostare la proprietà **Nome** su `resultsTextBox`.</span><span class="sxs-lookup"><span data-stu-id="697cc-122">Set the **Name** property to `resultsTextBox`.</span></span>
+    -   <span data-ttu-id="92b71-122">Impostare la proprietà **Nome** su `resultsTextBox`.</span><span class="sxs-lookup"><span data-stu-id="92b71-122">Set the **Name** property to `resultsTextBox`.</span></span>
 
-    -   <span data-ttu-id="697cc-123">Impostare la proprietà **Height** su 250.</span><span class="sxs-lookup"><span data-stu-id="697cc-123">Set the **Height** property to 250.</span></span>
+    -   <span data-ttu-id="92b71-123">Impostare la proprietà **Height** su 250.</span><span class="sxs-lookup"><span data-stu-id="92b71-123">Set the **Height** property to 250.</span></span>
 
-    -   <span data-ttu-id="697cc-124">Impostare la proprietà **Width** su 500.</span><span class="sxs-lookup"><span data-stu-id="697cc-124">Set the **Width** property to 500.</span></span>
+    -   <span data-ttu-id="92b71-124">Impostare la proprietà **Width** su 500.</span><span class="sxs-lookup"><span data-stu-id="92b71-124">Set the **Width** property to 500.</span></span>
 
-    -   <span data-ttu-id="697cc-125">Nel scheda **Testo** specificare un tipo di carattere a spaziatura fissa, ad esempio Lucida Console o Global Monospace.</span><span class="sxs-lookup"><span data-stu-id="697cc-125">On the **Text** tab, specify a monospaced font, such as Lucida Console or Global Monospace.</span></span>
+    -   <span data-ttu-id="92b71-125">Nel scheda **Testo** specificare un tipo di carattere a spaziatura fissa, ad esempio Lucida Console o Global Monospace.</span><span class="sxs-lookup"><span data-stu-id="92b71-125">On the **Text** tab, specify a monospaced font, such as Lucida Console or Global Monospace.</span></span>
 
-5.  <span data-ttu-id="697cc-126">Evidenziare il controllo **Button** e nella finestra **Proprietà** impostare i valori seguenti:</span><span class="sxs-lookup"><span data-stu-id="697cc-126">Highlight the **Button** control and, in the **Properties** window, set the following values:</span></span>
+5.  <span data-ttu-id="92b71-126">Evidenziare il controllo **Button** e nella finestra **Proprietà** impostare i valori seguenti:</span><span class="sxs-lookup"><span data-stu-id="92b71-126">Highlight the **Button** control and, in the **Properties** window, set the following values:</span></span>
 
-    -   <span data-ttu-id="697cc-127">Impostare la proprietà **Nome** su `startButton`.</span><span class="sxs-lookup"><span data-stu-id="697cc-127">Set the **Name** property to `startButton`.</span></span>
+    -   <span data-ttu-id="92b71-127">Impostare la proprietà **Nome** su `startButton`.</span><span class="sxs-lookup"><span data-stu-id="92b71-127">Set the **Name** property to `startButton`.</span></span>
 
-    -   <span data-ttu-id="697cc-128">Modificare il valore della proprietà **Content** da **Button** in **Start**.</span><span class="sxs-lookup"><span data-stu-id="697cc-128">Change the value of the **Content** property from **Button** to **Start**.</span></span>
+    -   <span data-ttu-id="92b71-128">Modificare il valore della proprietà **Content** da **Button** in **Start**.</span><span class="sxs-lookup"><span data-stu-id="92b71-128">Change the value of the **Content** property from **Button** to **Start**.</span></span>
 
-6.  <span data-ttu-id="697cc-129">Posizionare la casella di testo e il pulsante in modo che entrambi siano visualizzati nella finestra **MainWindow**.</span><span class="sxs-lookup"><span data-stu-id="697cc-129">Position the text box and the button so that both appear in the **MainWindow** window.</span></span>
+6.  <span data-ttu-id="92b71-129">Posizionare la casella di testo e il pulsante in modo che entrambi siano visualizzati nella finestra **MainWindow**.</span><span class="sxs-lookup"><span data-stu-id="92b71-129">Position the text box and the button so that both appear in the **MainWindow** window.</span></span>
 
-     <span data-ttu-id="697cc-130">Per altre informazioni su WPF XAML Designer, vedere [Creazione di un'interfaccia utente tramite XAML Designer](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio).</span><span class="sxs-lookup"><span data-stu-id="697cc-130">For more information about the WPF XAML Designer, see [Creating a UI by using XAML Designer](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio).</span></span>
+     <span data-ttu-id="92b71-130">Per altre informazioni su WPF XAML Designer, vedere [Creazione di un'interfaccia utente tramite XAML Designer](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio).</span><span class="sxs-lookup"><span data-stu-id="92b71-130">For more information about the WPF XAML Designer, see [Creating a UI by using XAML Designer](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio).</span></span>
 
-## <a name="add-a-reference"></a><span data-ttu-id="697cc-131">Aggiungere un riferimento</span><span class="sxs-lookup"><span data-stu-id="697cc-131">Add a reference</span></span>
+## <a name="add-a-reference"></a><span data-ttu-id="92b71-131">Aggiungere un riferimento</span><span class="sxs-lookup"><span data-stu-id="92b71-131">Add a reference</span></span>
 
-1.  <span data-ttu-id="697cc-132">In **Esplora soluzioni** evidenziare il nome del progetto.</span><span class="sxs-lookup"><span data-stu-id="697cc-132">In **Solution Explorer**, highlight your project's name.</span></span>
+1.  <span data-ttu-id="92b71-132">In **Esplora soluzioni** evidenziare il nome del progetto.</span><span class="sxs-lookup"><span data-stu-id="92b71-132">In **Solution Explorer**, highlight your project's name.</span></span>
 
-2.  <span data-ttu-id="697cc-133">Nella barra dei menu scegliere **Progetto** > **Aggiungi riferimento**.</span><span class="sxs-lookup"><span data-stu-id="697cc-133">On the menu bar, choose **Project** > **Add Reference**.</span></span>
+2.  <span data-ttu-id="92b71-133">Nella barra dei menu scegliere **Progetto** > **Aggiungi riferimento**.</span><span class="sxs-lookup"><span data-stu-id="92b71-133">On the menu bar, choose **Project** > **Add Reference**.</span></span>
 
-     <span data-ttu-id="697cc-134">Verrà visualizzata la finestra di dialogo **Gestione riferimenti**.</span><span class="sxs-lookup"><span data-stu-id="697cc-134">The **Reference Manager** dialog box appears.</span></span>
+     <span data-ttu-id="92b71-134">Verrà visualizzata la finestra di dialogo **Gestione riferimenti**.</span><span class="sxs-lookup"><span data-stu-id="92b71-134">The **Reference Manager** dialog box appears.</span></span>
 
-3.  <span data-ttu-id="697cc-135">Nella parte superiore della finestra di dialogo verificare che il progetto sia destinato a .NET Framework 4.5 o versione successiva.</span><span class="sxs-lookup"><span data-stu-id="697cc-135">At the top of the dialog box, verify that your project is targeting the .NET Framework 4.5 or higher.</span></span>
+3.  <span data-ttu-id="92b71-135">Nella parte superiore della finestra di dialogo verificare che il progetto sia destinato a .NET Framework 4.5 o versione successiva.</span><span class="sxs-lookup"><span data-stu-id="92b71-135">At the top of the dialog box, verify that your project is targeting the .NET Framework 4.5 or higher.</span></span>
 
-4.  <span data-ttu-id="697cc-136">Nella categoria **Assembly** scegliere **Framework** se non è già selezionato.</span><span class="sxs-lookup"><span data-stu-id="697cc-136">In the **Assemblies** category, choose **Framework** if it isn’t already chosen.</span></span>
+4.  <span data-ttu-id="92b71-136">Nella categoria **Assembly** scegliere **Framework** se non è già selezionato.</span><span class="sxs-lookup"><span data-stu-id="92b71-136">In the **Assemblies** category, choose **Framework** if it isn’t already chosen.</span></span>
 
-5.  <span data-ttu-id="697cc-137">Nell'elenco dei nomi selezionare la casella di controllo **System.Net.Http**.</span><span class="sxs-lookup"><span data-stu-id="697cc-137">In the list of names, select the **System.Net.Http** check box.</span></span>
+5.  <span data-ttu-id="92b71-137">Nell'elenco dei nomi selezionare la casella di controllo **System.Net.Http**.</span><span class="sxs-lookup"><span data-stu-id="92b71-137">In the list of names, select the **System.Net.Http** check box.</span></span>
 
-6.  <span data-ttu-id="697cc-138">Scegliere il pulsante **OK** per chiudere la finestra di dialogo.</span><span class="sxs-lookup"><span data-stu-id="697cc-138">Choose the **OK** button to close the dialog box.</span></span>
+6.  <span data-ttu-id="92b71-138">Scegliere il pulsante **OK** per chiudere la finestra di dialogo.</span><span class="sxs-lookup"><span data-stu-id="92b71-138">Choose the **OK** button to close the dialog box.</span></span>
 
-## <a name="add-necessary-using-directives"></a><span data-ttu-id="697cc-139">Aggiungere le direttive using necessarie</span><span class="sxs-lookup"><span data-stu-id="697cc-139">Add necessary using directives</span></span>
+## <a name="add-necessary-using-directives"></a><span data-ttu-id="92b71-139">Aggiungere le direttive using necessarie</span><span class="sxs-lookup"><span data-stu-id="92b71-139">Add necessary using directives</span></span>
 
-1.  <span data-ttu-id="697cc-140">In **Esplora soluzioni** aprire il menu di scelta rapida per MainWindow.xaml.cs e quindi scegliere **Visualizza codice**.</span><span class="sxs-lookup"><span data-stu-id="697cc-140">In **Solution Explorer**, open the shortcut menu for MainWindow.xaml.cs, and then choose **View Code**.</span></span>
+1.  <span data-ttu-id="92b71-140">In **Esplora soluzioni** aprire il menu di scelta rapida per MainWindow.xaml.cs e quindi scegliere **Visualizza codice**.</span><span class="sxs-lookup"><span data-stu-id="92b71-140">In **Solution Explorer**, open the shortcut menu for MainWindow.xaml.cs, and then choose **View Code**.</span></span>
 
-2.  <span data-ttu-id="697cc-141">Aggiungere le seguenti direttive `using` all'inizio del file di codice, se non sono già presenti.</span><span class="sxs-lookup"><span data-stu-id="697cc-141">Add the following `using` directives at the top of the code file if they’re not already present.</span></span>
+2.  <span data-ttu-id="92b71-141">Aggiungere le seguenti direttive `using` all'inizio del file di codice, se non sono già presenti.</span><span class="sxs-lookup"><span data-stu-id="92b71-141">Add the following `using` directives at the top of the code file if they’re not already present.</span></span>
 
     ```csharp
     using System.Net.Http;
@@ -92,11 +92,11 @@ ms.locfileid: "47455749"
     using System.IO;
     ```
 
-## <a name="create-a-synchronous-app"></a><span data-ttu-id="697cc-142">Creare un'app sincrona</span><span class="sxs-lookup"><span data-stu-id="697cc-142">Create a synchronous app</span></span>
+## <a name="create-a-synchronous-app"></a><span data-ttu-id="92b71-142">Creare un'app sincrona</span><span class="sxs-lookup"><span data-stu-id="92b71-142">Create a synchronous app</span></span>
 
-1.  <span data-ttu-id="697cc-143">Nella finestra di progettazione MainWindow.xaml fare doppio clic sul pulsante **Start** per creare il gestore eventi `startButton_Click` in MainWindow.xaml.cs.</span><span class="sxs-lookup"><span data-stu-id="697cc-143">In the design window, MainWindow.xaml, double-click the **Start** button to create the `startButton_Click` event handler in MainWindow.xaml.cs.</span></span>
+1.  <span data-ttu-id="92b71-143">Nella finestra di progettazione MainWindow.xaml fare doppio clic sul pulsante **Start** per creare il gestore eventi `startButton_Click` in MainWindow.xaml.cs.</span><span class="sxs-lookup"><span data-stu-id="92b71-143">In the design window, MainWindow.xaml, double-click the **Start** button to create the `startButton_Click` event handler in MainWindow.xaml.cs.</span></span>
 
-2.  <span data-ttu-id="697cc-144">In MainWindow.xaml.cs copiare il codice seguente nel corpo di `startButton_Click`:</span><span class="sxs-lookup"><span data-stu-id="697cc-144">In MainWindow.xaml.cs, copy the following code into the body of `startButton_Click`:</span></span>
+2.  <span data-ttu-id="92b71-144">In MainWindow.xaml.cs copiare il codice seguente nel corpo di `startButton_Click`:</span><span class="sxs-lookup"><span data-stu-id="92b71-144">In MainWindow.xaml.cs, copy the following code into the body of `startButton_Click`:</span></span>
 
     ```csharp
     resultsTextBox.Clear();
@@ -104,19 +104,19 @@ ms.locfileid: "47455749"
     resultsTextBox.Text += "\r\nControl returned to startButton_Click.";
     ```
 
-    <span data-ttu-id="697cc-145">Il codice chiama il metodo che controlla l'applicazione `SumPageSizes` e visualizza un messaggio quando il controllo torna a `startButton_Click`.</span><span class="sxs-lookup"><span data-stu-id="697cc-145">The code calls the method that drives the application, `SumPageSizes`, and displays a message when control returns to `startButton_Click`.</span></span>
+    <span data-ttu-id="92b71-145">Il codice chiama il metodo che controlla l'applicazione `SumPageSizes` e visualizza un messaggio quando il controllo torna a `startButton_Click`.</span><span class="sxs-lookup"><span data-stu-id="92b71-145">The code calls the method that drives the application, `SumPageSizes`, and displays a message when control returns to `startButton_Click`.</span></span>
 
-3.  <span data-ttu-id="697cc-146">Il codice per la soluzione sincrona contiene i quattro metodi seguenti:</span><span class="sxs-lookup"><span data-stu-id="697cc-146">The code for the synchronous solution contains the following four methods:</span></span>
+3.  <span data-ttu-id="92b71-146">Il codice per la soluzione sincrona contiene i quattro metodi seguenti:</span><span class="sxs-lookup"><span data-stu-id="92b71-146">The code for the synchronous solution contains the following four methods:</span></span>
 
-    -   <span data-ttu-id="697cc-147">`SumPageSizes`, che ottiene un elenco di URL delle pagine Web da `SetUpURLList` e quindi chiama `GetURLContents` e `DisplayResults` per elaborare ogni URL.</span><span class="sxs-lookup"><span data-stu-id="697cc-147">`SumPageSizes`, which gets a list of webpage URLs from `SetUpURLList` and then calls `GetURLContents` and `DisplayResults` to process each URL.</span></span>
+    -   <span data-ttu-id="92b71-147">`SumPageSizes`, che ottiene un elenco di URL delle pagine Web da `SetUpURLList` e quindi chiama `GetURLContents` e `DisplayResults` per elaborare ogni URL.</span><span class="sxs-lookup"><span data-stu-id="92b71-147">`SumPageSizes`, which gets a list of webpage URLs from `SetUpURLList` and then calls `GetURLContents` and `DisplayResults` to process each URL.</span></span>
 
-    -   <span data-ttu-id="697cc-148">`SetUpURLList`, che crea e restituisce un elenco di indirizzi web.</span><span class="sxs-lookup"><span data-stu-id="697cc-148">`SetUpURLList`, which makes and returns a list of web addresses.</span></span>
+    -   <span data-ttu-id="92b71-148">`SetUpURLList`, che crea e restituisce un elenco di indirizzi web.</span><span class="sxs-lookup"><span data-stu-id="92b71-148">`SetUpURLList`, which makes and returns a list of web addresses.</span></span>
 
-    -   <span data-ttu-id="697cc-149">`GetURLContents`, che scarica il contenuto di ogni sito Web e restituisce il contenuto come matrice di byte.</span><span class="sxs-lookup"><span data-stu-id="697cc-149">`GetURLContents`, which downloads the contents of each website and returns the contents as a byte array.</span></span>
+    -   <span data-ttu-id="92b71-149">`GetURLContents`, che scarica il contenuto di ogni sito Web e restituisce il contenuto come matrice di byte.</span><span class="sxs-lookup"><span data-stu-id="92b71-149">`GetURLContents`, which downloads the contents of each website and returns the contents as a byte array.</span></span>
 
-    -   <span data-ttu-id="697cc-150">`DisplayResults`, che visualizza il numero di byte nella matrice di byte per ogni URL.</span><span class="sxs-lookup"><span data-stu-id="697cc-150">`DisplayResults`, which displays  the number of bytes in the byte array for each URL.</span></span>
+    -   <span data-ttu-id="92b71-150">`DisplayResults`, che visualizza il numero di byte nella matrice di byte per ogni URL.</span><span class="sxs-lookup"><span data-stu-id="92b71-150">`DisplayResults`, which displays  the number of bytes in the byte array for each URL.</span></span>
 
-    <span data-ttu-id="697cc-151">Copiare i quattro metodi seguenti e incollarli nel gestore eventi `startButton_Click` in MainWindow.xaml.cs:</span><span class="sxs-lookup"><span data-stu-id="697cc-151">Copy the following four methods, and then paste them under the `startButton_Click` event handler in MainWindow.xaml.cs:</span></span>
+    <span data-ttu-id="92b71-151">Copiare i quattro metodi seguenti e incollarli nel gestore eventi `startButton_Click` in MainWindow.xaml.cs:</span><span class="sxs-lookup"><span data-stu-id="92b71-151">Copy the following four methods, and then paste them under the `startButton_Click` event handler in MainWindow.xaml.cs:</span></span>
 
     ```csharp
     private void SumPageSizes()
@@ -145,16 +145,16 @@ ms.locfileid: "47455749"
     {
         var urls = new List<string>
         {
-            "http://msdn.microsoft.com/library/windows/apps/br211380.aspx",
-            "http://msdn.microsoft.com",
-            "http://msdn.microsoft.com/library/hh290136.aspx",
-            "http://msdn.microsoft.com/library/ee256749.aspx",
-            "http://msdn.microsoft.com/library/hh290138.aspx",
-            "http://msdn.microsoft.com/library/hh290140.aspx",
-            "http://msdn.microsoft.com/library/dd470362.aspx",
-            "http://msdn.microsoft.com/library/aa578028.aspx",
-            "http://msdn.microsoft.com/library/ms404677.aspx",
-            "http://msdn.microsoft.com/library/ff730837.aspx"
+            "https://msdn.microsoft.com/library/windows/apps/br211380.aspx",
+            "https://msdn.microsoft.com",
+            "https://msdn.microsoft.com/library/hh290136.aspx",
+            "https://msdn.microsoft.com/library/ee256749.aspx",
+            "https://msdn.microsoft.com/library/hh290138.aspx",
+            "https://msdn.microsoft.com/library/hh290140.aspx",
+            "https://msdn.microsoft.com/library/dd470362.aspx",
+            "https://msdn.microsoft.com/library/aa578028.aspx",
+            "https://msdn.microsoft.com/library/ms404677.aspx",
+            "https://msdn.microsoft.com/library/ff730837.aspx"
         };
         return urls;
     }
@@ -190,17 +190,17 @@ ms.locfileid: "47455749"
         // is designed to be used with a monospaced font, such as
         // Lucida Console or Global Monospace.
         var bytes = content.Length;
-        // Strip off the "http://".
-        var displayURL = url.Replace("http://", "");
+        // Strip off the "https://".
+        var displayURL = url.Replace("https://", "");
         resultsTextBox.Text += string.Format("\n{0,-58} {1,8}", displayURL, bytes);
     }
     ```
 
-## <a name="test-the-synchronous-solution"></a><span data-ttu-id="697cc-152">Eseguire il test della soluzione sincrona</span><span class="sxs-lookup"><span data-stu-id="697cc-152">Test the synchronous solution</span></span>
+## <a name="test-the-synchronous-solution"></a><span data-ttu-id="92b71-152">Eseguire il test della soluzione sincrona</span><span class="sxs-lookup"><span data-stu-id="92b71-152">Test the synchronous solution</span></span>
 
-<span data-ttu-id="697cc-153">Premere **F5** per eseguire il programma e quindi scegliere il pulsante **Avvia**.</span><span class="sxs-lookup"><span data-stu-id="697cc-153">Choose the **F5** key to run the program, and then choose the **Start** button.</span></span>
+<span data-ttu-id="92b71-153">Premere **F5** per eseguire il programma e quindi scegliere il pulsante **Avvia**.</span><span class="sxs-lookup"><span data-stu-id="92b71-153">Choose the **F5** key to run the program, and then choose the **Start** button.</span></span>
 
-<span data-ttu-id="697cc-154">Verrà visualizzato un output simile all'elenco seguente:</span><span class="sxs-lookup"><span data-stu-id="697cc-154">Output that resembles the following list should appear:</span></span>
+<span data-ttu-id="92b71-154">Verrà visualizzato un output simile all'elenco seguente:</span><span class="sxs-lookup"><span data-stu-id="92b71-154">Output that resembles the following list should appear:</span></span>
 
 ```text
 msdn.microsoft.com/library/windows/apps/br211380.aspx        383832
@@ -219,55 +219,55 @@ Total bytes returned:  1834802
 Control returned to startButton_Click.
 ```
 
-<span data-ttu-id="697cc-155">Si noti che sono necessari alcuni secondi per visualizzare i conteggi.</span><span class="sxs-lookup"><span data-stu-id="697cc-155">Notice that it takes a few seconds to display the counts.</span></span> <span data-ttu-id="697cc-156">Durante tale periodo, il thread dell'interfaccia utente viene bloccato mentre attende il download delle risorse richieste.</span><span class="sxs-lookup"><span data-stu-id="697cc-156">During that time, the UI thread is blocked while it waits for requested resources to download.</span></span> <span data-ttu-id="697cc-157">Di conseguenza, è possibile spostare, ingrandire, ridurre o chiudere la finestra di visualizzazione dopo aver scelto il  pulsante **Start**.</span><span class="sxs-lookup"><span data-stu-id="697cc-157">As a result, you can't move, maximize, minimize, or even close the display window after you choose the  **Start** button.</span></span> <span data-ttu-id="697cc-158">Queste operazioni hanno esito negativo finché non vengono visualizzati i conteggi dei byte.</span><span class="sxs-lookup"><span data-stu-id="697cc-158">These efforts fail until the byte counts start to appear.</span></span> <span data-ttu-id="697cc-159">Se un sito Web non risponde, non si ha alcuna indicazione relativa al sito con esito negativo.</span><span class="sxs-lookup"><span data-stu-id="697cc-159">If a website isn’t responding, you have no indication of which site failed.</span></span> <span data-ttu-id="697cc-160">È inoltre difficile interrompere l'attesa e chiudere il programma.</span><span class="sxs-lookup"><span data-stu-id="697cc-160">It is difficult even to stop waiting and close the program.</span></span>
+<span data-ttu-id="92b71-155">Si noti che sono necessari alcuni secondi per visualizzare i conteggi.</span><span class="sxs-lookup"><span data-stu-id="92b71-155">Notice that it takes a few seconds to display the counts.</span></span> <span data-ttu-id="92b71-156">Durante tale periodo, il thread dell'interfaccia utente viene bloccato mentre attende il download delle risorse richieste.</span><span class="sxs-lookup"><span data-stu-id="92b71-156">During that time, the UI thread is blocked while it waits for requested resources to download.</span></span> <span data-ttu-id="92b71-157">Di conseguenza, è possibile spostare, ingrandire, ridurre o chiudere la finestra di visualizzazione dopo aver scelto il  pulsante **Start**.</span><span class="sxs-lookup"><span data-stu-id="92b71-157">As a result, you can't move, maximize, minimize, or even close the display window after you choose the  **Start** button.</span></span> <span data-ttu-id="92b71-158">Queste operazioni hanno esito negativo finché non vengono visualizzati i conteggi dei byte.</span><span class="sxs-lookup"><span data-stu-id="92b71-158">These efforts fail until the byte counts start to appear.</span></span> <span data-ttu-id="92b71-159">Se un sito Web non risponde, non si ha alcuna indicazione relativa al sito con esito negativo.</span><span class="sxs-lookup"><span data-stu-id="92b71-159">If a website isn’t responding, you have no indication of which site failed.</span></span> <span data-ttu-id="92b71-160">È inoltre difficile interrompere l'attesa e chiudere il programma.</span><span class="sxs-lookup"><span data-stu-id="92b71-160">It is difficult even to stop waiting and close the program.</span></span>
 
-## <a name="convert-geturlcontents-to-an-asynchronous-method"></a><span data-ttu-id="697cc-161">Convertire GetURLContents in un metodo asincrono</span><span class="sxs-lookup"><span data-stu-id="697cc-161">Convert GetURLContents to an asynchronous method</span></span>
+## <a name="convert-geturlcontents-to-an-asynchronous-method"></a><span data-ttu-id="92b71-161">Convertire GetURLContents in un metodo asincrono</span><span class="sxs-lookup"><span data-stu-id="92b71-161">Convert GetURLContents to an asynchronous method</span></span>
 
-1.  <span data-ttu-id="697cc-162">Per convertire la soluzione sincrona in una soluzione asincrona, il punto di partenza migliore è in `GetURLContents` perché le chiamate al metodo <xref:System.Net.HttpWebRequest><xref:System.Net.HttpWebRequest.GetResponse%2A> e al metodo <xref:System.IO.Stream><xref:System.IO.Stream.CopyTo%2A> sono i punti in cui l'applicazione accede al Web.</span><span class="sxs-lookup"><span data-stu-id="697cc-162">To convert the synchronous solution to an asynchronous solution, the best place to start is in `GetURLContents` because the calls to the <xref:System.Net.HttpWebRequest> method <xref:System.Net.HttpWebRequest.GetResponse%2A> and to the <xref:System.IO.Stream> method <xref:System.IO.Stream.CopyTo%2A> are where the application accesses the web.</span></span> <span data-ttu-id="697cc-163">.NET Framework semplifica la conversione fornendo versioni asincrone di entrambi i metodi.</span><span class="sxs-lookup"><span data-stu-id="697cc-163">The .NET Framework makes the conversion easy by supplying asynchronous versions of both methods.</span></span>
+1.  <span data-ttu-id="92b71-162">Per convertire la soluzione sincrona in una soluzione asincrona, il punto di partenza migliore è in `GetURLContents` perché le chiamate al metodo <xref:System.Net.HttpWebRequest><xref:System.Net.HttpWebRequest.GetResponse%2A> e al metodo <xref:System.IO.Stream><xref:System.IO.Stream.CopyTo%2A> sono i punti in cui l'applicazione accede al Web.</span><span class="sxs-lookup"><span data-stu-id="92b71-162">To convert the synchronous solution to an asynchronous solution, the best place to start is in `GetURLContents` because the calls to the <xref:System.Net.HttpWebRequest> method <xref:System.Net.HttpWebRequest.GetResponse%2A> and to the <xref:System.IO.Stream> method <xref:System.IO.Stream.CopyTo%2A> are where the application accesses the web.</span></span> <span data-ttu-id="92b71-163">.NET Framework semplifica la conversione fornendo versioni asincrone di entrambi i metodi.</span><span class="sxs-lookup"><span data-stu-id="92b71-163">The .NET Framework makes the conversion easy by supplying asynchronous versions of both methods.</span></span>
 
-     <span data-ttu-id="697cc-164">Per altre informazioni sui modelli usati in `GetURLContents`, vedere <xref:System.Net.WebRequest>.</span><span class="sxs-lookup"><span data-stu-id="697cc-164">For more information about the methods that are used in `GetURLContents`, see <xref:System.Net.WebRequest>.</span></span>
+     <span data-ttu-id="92b71-164">Per altre informazioni sui modelli usati in `GetURLContents`, vedere <xref:System.Net.WebRequest>.</span><span class="sxs-lookup"><span data-stu-id="92b71-164">For more information about the methods that are used in `GetURLContents`, see <xref:System.Net.WebRequest>.</span></span>
 
     > [!NOTE]
-    > <span data-ttu-id="697cc-165">Mentre si esegue la procedura descritta in questa procedura dettagliata, vengono visualizzati diversi errori del compilatore.</span><span class="sxs-lookup"><span data-stu-id="697cc-165">As you follow the steps in this walkthrough, several compiler errors appear.</span></span> <span data-ttu-id="697cc-166">È possibile ignorarli e continuare con la procedura dettagliata.</span><span class="sxs-lookup"><span data-stu-id="697cc-166">You can ignore them and continue with the walkthrough.</span></span>
+    > <span data-ttu-id="92b71-165">Mentre si esegue la procedura descritta in questa procedura dettagliata, vengono visualizzati diversi errori del compilatore.</span><span class="sxs-lookup"><span data-stu-id="92b71-165">As you follow the steps in this walkthrough, several compiler errors appear.</span></span> <span data-ttu-id="92b71-166">È possibile ignorarli e continuare con la procedura dettagliata.</span><span class="sxs-lookup"><span data-stu-id="92b71-166">You can ignore them and continue with the walkthrough.</span></span>
 
-     <span data-ttu-id="697cc-167">Modificare il metodo chiamato nella terza riga di `GetURLContents` da `GetResponse` nel metodo asincrono basato su attività <xref:System.Net.WebRequest.GetResponseAsync%2A>.</span><span class="sxs-lookup"><span data-stu-id="697cc-167">Change the method that's called in the third line of `GetURLContents` from `GetResponse` to the asynchronous, task-based <xref:System.Net.WebRequest.GetResponseAsync%2A> method.</span></span>
+     <span data-ttu-id="92b71-167">Modificare il metodo chiamato nella terza riga di `GetURLContents` da `GetResponse` nel metodo asincrono basato su attività <xref:System.Net.WebRequest.GetResponseAsync%2A>.</span><span class="sxs-lookup"><span data-stu-id="92b71-167">Change the method that's called in the third line of `GetURLContents` from `GetResponse` to the asynchronous, task-based <xref:System.Net.WebRequest.GetResponseAsync%2A> method.</span></span>
 
     ```csharp
     using (WebResponse response = webReq.GetResponseAsync())
     ```
 
-2.  <span data-ttu-id="697cc-168">`GetResponseAsync` restituisce <xref:System.Threading.Tasks.Task%601>.</span><span class="sxs-lookup"><span data-stu-id="697cc-168">`GetResponseAsync` returns a <xref:System.Threading.Tasks.Task%601>.</span></span> <span data-ttu-id="697cc-169">In questo caso, la *variabile di restituzione dell'attività*, `TResult`, è di tipo <xref:System.Net.WebResponse>.</span><span class="sxs-lookup"><span data-stu-id="697cc-169">In this case, the *task return variable*, `TResult`, has type <xref:System.Net.WebResponse>.</span></span> <span data-ttu-id="697cc-170">L'attività rappresenta una promessa di creazione di un oggetto `WebResponse` effettivo dopo il download dei dati richiesti e il completamento dell'esecuzione dell'attività.</span><span class="sxs-lookup"><span data-stu-id="697cc-170">The task is a promise to produce an actual `WebResponse` object after the requested data has been downloaded and the task has run to completion.</span></span>
+2.  <span data-ttu-id="92b71-168">`GetResponseAsync` restituisce <xref:System.Threading.Tasks.Task%601>.</span><span class="sxs-lookup"><span data-stu-id="92b71-168">`GetResponseAsync` returns a <xref:System.Threading.Tasks.Task%601>.</span></span> <span data-ttu-id="92b71-169">In questo caso, la *variabile di restituzione dell'attività*, `TResult`, è di tipo <xref:System.Net.WebResponse>.</span><span class="sxs-lookup"><span data-stu-id="92b71-169">In this case, the *task return variable*, `TResult`, has type <xref:System.Net.WebResponse>.</span></span> <span data-ttu-id="92b71-170">L'attività rappresenta una promessa di creazione di un oggetto `WebResponse` effettivo dopo il download dei dati richiesti e il completamento dell'esecuzione dell'attività.</span><span class="sxs-lookup"><span data-stu-id="92b71-170">The task is a promise to produce an actual `WebResponse` object after the requested data has been downloaded and the task has run to completion.</span></span>
 
-     <span data-ttu-id="697cc-171">Per recuperare il valore `WebResponse` dall'attività, applicare un operatore [await](../../../../csharp/language-reference/keywords/await.md) alla chiamata di `GetResponseAsync`, come mostrato nel codice riportato di seguito.</span><span class="sxs-lookup"><span data-stu-id="697cc-171">To retrieve the `WebResponse` value from the task, apply an [await](../../../../csharp/language-reference/keywords/await.md) operator to the call to `GetResponseAsync`, as the following code shows.</span></span>
+     <span data-ttu-id="92b71-171">Per recuperare il valore `WebResponse` dall'attività, applicare un operatore [await](../../../../csharp/language-reference/keywords/await.md) alla chiamata di `GetResponseAsync`, come mostrato nel codice riportato di seguito.</span><span class="sxs-lookup"><span data-stu-id="92b71-171">To retrieve the `WebResponse` value from the task, apply an [await](../../../../csharp/language-reference/keywords/await.md) operator to the call to `GetResponseAsync`, as the following code shows.</span></span>
 
     ```csharp
     using (WebResponse response = await webReq.GetResponseAsync())
     ```
 
-     <span data-ttu-id="697cc-172">L'operatore `GetURLContents` sospende l'esecuzione del metodo corrente `await` fino al completamento dell'attività attesa.</span><span class="sxs-lookup"><span data-stu-id="697cc-172">The `await` operator suspends the execution of the current method, `GetURLContents`, until the awaited task is complete.</span></span> <span data-ttu-id="697cc-173">Nel frattempo il controllo viene restituito al chiamante del metodo asincrono.</span><span class="sxs-lookup"><span data-stu-id="697cc-173">In the meantime, control returns to the caller of the current method.</span></span> <span data-ttu-id="697cc-174">In questo esempio, il metodo corrente è `GetURLContents` e il chiamante è `SumPageSizes`.</span><span class="sxs-lookup"><span data-stu-id="697cc-174">In this example, the current method is `GetURLContents`, and the caller is `SumPageSizes`.</span></span> <span data-ttu-id="697cc-175">Quando l'attività è terminata, l'oggetto promesso `WebResponse` viene generato come valore dell'attività attesa e assegnato alla variabile `response`.</span><span class="sxs-lookup"><span data-stu-id="697cc-175">When the task is finished, the promised `WebResponse` object is produced as the value of the awaited task and assigned to the variable `response`.</span></span>
+     <span data-ttu-id="92b71-172">L'operatore `GetURLContents` sospende l'esecuzione del metodo corrente `await` fino al completamento dell'attività attesa.</span><span class="sxs-lookup"><span data-stu-id="92b71-172">The `await` operator suspends the execution of the current method, `GetURLContents`, until the awaited task is complete.</span></span> <span data-ttu-id="92b71-173">Nel frattempo il controllo viene restituito al chiamante del metodo asincrono.</span><span class="sxs-lookup"><span data-stu-id="92b71-173">In the meantime, control returns to the caller of the current method.</span></span> <span data-ttu-id="92b71-174">In questo esempio, il metodo corrente è `GetURLContents` e il chiamante è `SumPageSizes`.</span><span class="sxs-lookup"><span data-stu-id="92b71-174">In this example, the current method is `GetURLContents`, and the caller is `SumPageSizes`.</span></span> <span data-ttu-id="92b71-175">Quando l'attività è terminata, l'oggetto promesso `WebResponse` viene generato come valore dell'attività attesa e assegnato alla variabile `response`.</span><span class="sxs-lookup"><span data-stu-id="92b71-175">When the task is finished, the promised `WebResponse` object is produced as the value of the awaited task and assigned to the variable `response`.</span></span>
 
-     <span data-ttu-id="697cc-176">L'istruzione precedente può essere suddivisa nelle due istruzioni seguenti per chiarire cosa accade.</span><span class="sxs-lookup"><span data-stu-id="697cc-176">The previous statement can be separated into the following two statements to clarify what happens.</span></span>
+     <span data-ttu-id="92b71-176">L'istruzione precedente può essere suddivisa nelle due istruzioni seguenti per chiarire cosa accade.</span><span class="sxs-lookup"><span data-stu-id="92b71-176">The previous statement can be separated into the following two statements to clarify what happens.</span></span>
 
     ```csharp
     //Task<WebResponse> responseTask = webReq.GetResponseAsync();
     //using (WebResponse response = await responseTask)
     ```
 
-     <span data-ttu-id="697cc-177">La chiamata a `webReq.GetResponseAsync` restituisce `Task(Of WebResponse)` o `Task<WebResponse>`.</span><span class="sxs-lookup"><span data-stu-id="697cc-177">The call to `webReq.GetResponseAsync` returns a `Task(Of WebResponse)` or `Task<WebResponse>`.</span></span> <span data-ttu-id="697cc-178">Viene quindi applicato un operatore await all'attività per recuperare il valore `WebResponse`.</span><span class="sxs-lookup"><span data-stu-id="697cc-178">Then an await operator is applied to the task to retrieve the `WebResponse` value.</span></span>
+     <span data-ttu-id="92b71-177">La chiamata a `webReq.GetResponseAsync` restituisce `Task(Of WebResponse)` o `Task<WebResponse>`.</span><span class="sxs-lookup"><span data-stu-id="92b71-177">The call to `webReq.GetResponseAsync` returns a `Task(Of WebResponse)` or `Task<WebResponse>`.</span></span> <span data-ttu-id="92b71-178">Viene quindi applicato un operatore await all'attività per recuperare il valore `WebResponse`.</span><span class="sxs-lookup"><span data-stu-id="92b71-178">Then an await operator is applied to the task to retrieve the `WebResponse` value.</span></span>
 
-     <span data-ttu-id="697cc-179">Se il metodo asincrono ha operazioni da eseguire che non dipendono dal completamento dell'attività, il metodo può continuare l'esecuzione tra queste due istruzioni, dopo la chiamata al metodo asincrono e prima che venga applicato l'operatore `await`.</span><span class="sxs-lookup"><span data-stu-id="697cc-179">If your async method has work to do that doesn’t depend on the completion of the task, the method can continue with that work between these two statements, after the call to the async method and before the `await` operator is applied.</span></span> <span data-ttu-id="697cc-180">Per esempi, vedere [Procedura: Eseguire più richieste Web in parallelo tramite async e await (C#)](../../../../csharp/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md) e [Procedura: Estendere la procedura dettagliata asincrona usando Task.WhenAll (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).</span><span class="sxs-lookup"><span data-stu-id="697cc-180">For examples, see [How to: Make Multiple Web Requests in Parallel by Using async and await (C#)](../../../../csharp/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md) and [How to: Extend the async Walkthrough by Using Task.WhenAll (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).</span></span>
+     <span data-ttu-id="92b71-179">Se il metodo asincrono ha operazioni da eseguire che non dipendono dal completamento dell'attività, il metodo può continuare l'esecuzione tra queste due istruzioni, dopo la chiamata al metodo asincrono e prima che venga applicato l'operatore `await`.</span><span class="sxs-lookup"><span data-stu-id="92b71-179">If your async method has work to do that doesn’t depend on the completion of the task, the method can continue with that work between these two statements, after the call to the async method and before the `await` operator is applied.</span></span> <span data-ttu-id="92b71-180">Per esempi, vedere [Procedura: Eseguire più richieste Web in parallelo tramite async e await (C#)](../../../../csharp/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md) e [Procedura: Estendere la procedura dettagliata asincrona usando Task.WhenAll (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).</span><span class="sxs-lookup"><span data-stu-id="92b71-180">For examples, see [How to: Make Multiple Web Requests in Parallel by Using async and await (C#)](../../../../csharp/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md) and [How to: Extend the async Walkthrough by Using Task.WhenAll (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).</span></span>
 
-3.  <span data-ttu-id="697cc-181">Poiché è stato aggiunto l'operatore `await` nel passaggio precedente, verrà generato un errore del compilatore.</span><span class="sxs-lookup"><span data-stu-id="697cc-181">Because you added the `await` operator in the previous step, a compiler error occurs.</span></span> <span data-ttu-id="697cc-182">L'operatore può essere usato solo nei metodi contrassegnati con il modificatore [async](../../../../csharp/language-reference/keywords/async.md).</span><span class="sxs-lookup"><span data-stu-id="697cc-182">The operator can be used only in methods that are marked with the [async](../../../../csharp/language-reference/keywords/async.md) modifier.</span></span> <span data-ttu-id="697cc-183">Ignorare l'errore mentre vengono ripetuti i passaggi di conversione per sostituire la chiamata a `CopyTo` con una chiamata a `CopyToAsync`.</span><span class="sxs-lookup"><span data-stu-id="697cc-183">Ignore the error while you repeat the conversion steps to replace the call to `CopyTo` with a call to `CopyToAsync`.</span></span>
+3.  <span data-ttu-id="92b71-181">Poiché è stato aggiunto l'operatore `await` nel passaggio precedente, verrà generato un errore del compilatore.</span><span class="sxs-lookup"><span data-stu-id="92b71-181">Because you added the `await` operator in the previous step, a compiler error occurs.</span></span> <span data-ttu-id="92b71-182">L'operatore può essere usato solo nei metodi contrassegnati con il modificatore [async](../../../../csharp/language-reference/keywords/async.md).</span><span class="sxs-lookup"><span data-stu-id="92b71-182">The operator can be used only in methods that are marked with the [async](../../../../csharp/language-reference/keywords/async.md) modifier.</span></span> <span data-ttu-id="92b71-183">Ignorare l'errore mentre vengono ripetuti i passaggi di conversione per sostituire la chiamata a `CopyTo` con una chiamata a `CopyToAsync`.</span><span class="sxs-lookup"><span data-stu-id="92b71-183">Ignore the error while you repeat the conversion steps to replace the call to `CopyTo` with a call to `CopyToAsync`.</span></span>
 
-    -   <span data-ttu-id="697cc-184">Modificare il nome del metodo chiamato in <xref:System.IO.Stream.CopyToAsync%2A>.</span><span class="sxs-lookup"><span data-stu-id="697cc-184">Change the name of the method that’s called to <xref:System.IO.Stream.CopyToAsync%2A>.</span></span>
+    -   <span data-ttu-id="92b71-184">Modificare il nome del metodo chiamato in <xref:System.IO.Stream.CopyToAsync%2A>.</span><span class="sxs-lookup"><span data-stu-id="92b71-184">Change the name of the method that’s called to <xref:System.IO.Stream.CopyToAsync%2A>.</span></span>
 
-    -   <span data-ttu-id="697cc-185">Il metodo `CopyTo` o `CopyToAsync` copia i byte nel relativo argomento `content` e non restituisce un valore significativo.</span><span class="sxs-lookup"><span data-stu-id="697cc-185">The `CopyTo` or `CopyToAsync` method copies bytes to its argument, `content`, and doesn’t return a meaningful value.</span></span> <span data-ttu-id="697cc-186">Nella versione sincrona, la chiamata a `CopyTo` è un'istruzione semplice che non restituisce un valore.</span><span class="sxs-lookup"><span data-stu-id="697cc-186">In the synchronous version, the call to `CopyTo` is a simple statement that doesn't return a value.</span></span> <span data-ttu-id="697cc-187">La versione asincrona `CopyToAsync` restituisce <xref:System.Threading.Tasks.Task>.</span><span class="sxs-lookup"><span data-stu-id="697cc-187">The asynchronous version, `CopyToAsync`, returns a <xref:System.Threading.Tasks.Task>.</span></span> <span data-ttu-id="697cc-188">L'attività è analoga a "Task(void)" e consente l'attesa del metodo.</span><span class="sxs-lookup"><span data-stu-id="697cc-188">The task functions like "Task(void)" and enables the method to be awaited.</span></span> <span data-ttu-id="697cc-189">Applicare `Await` o `await` alla chiamata a `CopyToAsync`, come mostrato nel codice riportato di seguito.</span><span class="sxs-lookup"><span data-stu-id="697cc-189">Apply `Await` or `await` to the call to `CopyToAsync`, as the following code shows.</span></span>
+    -   <span data-ttu-id="92b71-185">Il metodo `CopyTo` o `CopyToAsync` copia i byte nel relativo argomento `content` e non restituisce un valore significativo.</span><span class="sxs-lookup"><span data-stu-id="92b71-185">The `CopyTo` or `CopyToAsync` method copies bytes to its argument, `content`, and doesn’t return a meaningful value.</span></span> <span data-ttu-id="92b71-186">Nella versione sincrona, la chiamata a `CopyTo` è un'istruzione semplice che non restituisce un valore.</span><span class="sxs-lookup"><span data-stu-id="92b71-186">In the synchronous version, the call to `CopyTo` is a simple statement that doesn't return a value.</span></span> <span data-ttu-id="92b71-187">La versione asincrona `CopyToAsync` restituisce <xref:System.Threading.Tasks.Task>.</span><span class="sxs-lookup"><span data-stu-id="92b71-187">The asynchronous version, `CopyToAsync`, returns a <xref:System.Threading.Tasks.Task>.</span></span> <span data-ttu-id="92b71-188">L'attività è analoga a "Task(void)" e consente l'attesa del metodo.</span><span class="sxs-lookup"><span data-stu-id="92b71-188">The task functions like "Task(void)" and enables the method to be awaited.</span></span> <span data-ttu-id="92b71-189">Applicare `Await` o `await` alla chiamata a `CopyToAsync`, come mostrato nel codice riportato di seguito.</span><span class="sxs-lookup"><span data-stu-id="92b71-189">Apply `Await` or `await` to the call to `CopyToAsync`, as the following code shows.</span></span>
 
         ```csharp
         await responseStream.CopyToAsync(content);
         ```
 
-         <span data-ttu-id="697cc-190">L'istruzione precedente abbrevia le due righe di codice riportate di seguito.</span><span class="sxs-lookup"><span data-stu-id="697cc-190">The previous statement abbreviates the following two lines of code.</span></span>
+         <span data-ttu-id="92b71-190">L'istruzione precedente abbrevia le due righe di codice riportate di seguito.</span><span class="sxs-lookup"><span data-stu-id="92b71-190">The previous statement abbreviates the following two lines of code.</span></span>
 
         ```csharp
         // CopyToAsync returns a Task, not a Task<T>.
@@ -278,45 +278,45 @@ Control returned to startButton_Click.
         //await copyTask;
         ```
 
-4.  <span data-ttu-id="697cc-191">A questo punto, non rimane che modificare la firma del metodo in `GetURLContents`.</span><span class="sxs-lookup"><span data-stu-id="697cc-191">All that remains to be done in `GetURLContents` is to adjust the method signature.</span></span> <span data-ttu-id="697cc-192">È possibile usare l'operatore `await` solo nei metodi contrassegnati con il modificatore [async](../../../../csharp/language-reference/keywords/async.md).</span><span class="sxs-lookup"><span data-stu-id="697cc-192">You can use the `await` operator only in methods that are marked with the [async](../../../../csharp/language-reference/keywords/async.md) modifier.</span></span> <span data-ttu-id="697cc-193">Aggiungere il modificatore per contrassegnare il metodo come *metodo async*, come mostrato nel codice riportato di seguito.</span><span class="sxs-lookup"><span data-stu-id="697cc-193">Add the modifier to mark the method as an *async method*, as the following code shows.</span></span>
+4.  <span data-ttu-id="92b71-191">A questo punto, non rimane che modificare la firma del metodo in `GetURLContents`.</span><span class="sxs-lookup"><span data-stu-id="92b71-191">All that remains to be done in `GetURLContents` is to adjust the method signature.</span></span> <span data-ttu-id="92b71-192">È possibile usare l'operatore `await` solo nei metodi contrassegnati con il modificatore [async](../../../../csharp/language-reference/keywords/async.md).</span><span class="sxs-lookup"><span data-stu-id="92b71-192">You can use the `await` operator only in methods that are marked with the [async](../../../../csharp/language-reference/keywords/async.md) modifier.</span></span> <span data-ttu-id="92b71-193">Aggiungere il modificatore per contrassegnare il metodo come *metodo async*, come mostrato nel codice riportato di seguito.</span><span class="sxs-lookup"><span data-stu-id="92b71-193">Add the modifier to mark the method as an *async method*, as the following code shows.</span></span>
 
     ```csharp
     private async byte[] GetURLContents(string url)
     ```
 
-5.  <span data-ttu-id="697cc-194">Il tipo restituito di un metodo asincrono può essere solo <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601> o `void` in C#.</span><span class="sxs-lookup"><span data-stu-id="697cc-194">The return type of an async method can only be <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601>, or `void` in C#.</span></span> <span data-ttu-id="697cc-195">In genere il tipo restituito `void` si usa solo in un gestore eventi asincrono, dove `void` è obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="697cc-195">Typically, a return type of `void` is used only in an async event handler, where `void` is required.</span></span> <span data-ttu-id="697cc-196">In altri casi è possibile usare `Task(T)` se il metodo completato include un'istruzione [return](../../../../csharp/language-reference/keywords/return.md) che restituisce un valore di tipo T e si usa `Task` se il metodo completato non restituisce un valore significativo.</span><span class="sxs-lookup"><span data-stu-id="697cc-196">In other cases, you use `Task(T)` if the completed method has a [return](../../../../csharp/language-reference/keywords/return.md) statement that returns a value of type T, and you use `Task` if the completed method doesn’t return a meaningful value.</span></span> <span data-ttu-id="697cc-197">È possibile considerare il tipo restituito `Task` come avente lo stesso significato di "Task(void)".</span><span class="sxs-lookup"><span data-stu-id="697cc-197">You can think of the `Task` return type as meaning "Task(void)."</span></span>
+5.  <span data-ttu-id="92b71-194">Il tipo restituito di un metodo asincrono può essere solo <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601> o `void` in C#.</span><span class="sxs-lookup"><span data-stu-id="92b71-194">The return type of an async method can only be <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601>, or `void` in C#.</span></span> <span data-ttu-id="92b71-195">In genere il tipo restituito `void` si usa solo in un gestore eventi asincrono, dove `void` è obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="92b71-195">Typically, a return type of `void` is used only in an async event handler, where `void` is required.</span></span> <span data-ttu-id="92b71-196">In altri casi è possibile usare `Task(T)` se il metodo completato include un'istruzione [return](../../../../csharp/language-reference/keywords/return.md) che restituisce un valore di tipo T e si usa `Task` se il metodo completato non restituisce un valore significativo.</span><span class="sxs-lookup"><span data-stu-id="92b71-196">In other cases, you use `Task(T)` if the completed method has a [return](../../../../csharp/language-reference/keywords/return.md) statement that returns a value of type T, and you use `Task` if the completed method doesn’t return a meaningful value.</span></span> <span data-ttu-id="92b71-197">È possibile considerare il tipo restituito `Task` come avente lo stesso significato di "Task(void)".</span><span class="sxs-lookup"><span data-stu-id="92b71-197">You can think of the `Task` return type as meaning "Task(void)."</span></span>
 
-     <span data-ttu-id="697cc-198">Per altre informazioni, vedere [Tipi restituiti asincroni (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md).</span><span class="sxs-lookup"><span data-stu-id="697cc-198">For more information, see [Async Return Types (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md).</span></span>
+     <span data-ttu-id="92b71-198">Per altre informazioni, vedere [Tipi restituiti asincroni (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md).</span><span class="sxs-lookup"><span data-stu-id="92b71-198">For more information, see [Async Return Types (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md).</span></span>
 
-     <span data-ttu-id="697cc-199">Il metodo `GetURLContents` dispone di un'istruzione return che restituisce una matrice di byte.</span><span class="sxs-lookup"><span data-stu-id="697cc-199">Method `GetURLContents` has a return statement, and the statement returns a byte array.</span></span> <span data-ttu-id="697cc-200">Pertanto, il tipo restituito della versione asincrona è Task(T), dove T è una matrice di byte.</span><span class="sxs-lookup"><span data-stu-id="697cc-200">Therefore, the return type of the async version is Task(T), where T is a byte array.</span></span> <span data-ttu-id="697cc-201">Apportare le modifiche seguenti nella firma del metodo:</span><span class="sxs-lookup"><span data-stu-id="697cc-201">Make the following changes in the method signature:</span></span>
+     <span data-ttu-id="92b71-199">Il metodo `GetURLContents` dispone di un'istruzione return che restituisce una matrice di byte.</span><span class="sxs-lookup"><span data-stu-id="92b71-199">Method `GetURLContents` has a return statement, and the statement returns a byte array.</span></span> <span data-ttu-id="92b71-200">Pertanto, il tipo restituito della versione asincrona è Task(T), dove T è una matrice di byte.</span><span class="sxs-lookup"><span data-stu-id="92b71-200">Therefore, the return type of the async version is Task(T), where T is a byte array.</span></span> <span data-ttu-id="92b71-201">Apportare le modifiche seguenti nella firma del metodo:</span><span class="sxs-lookup"><span data-stu-id="92b71-201">Make the following changes in the method signature:</span></span>
 
-    -   <span data-ttu-id="697cc-202">Cambiare il tipo restituito in `Task<byte[]>`.</span><span class="sxs-lookup"><span data-stu-id="697cc-202">Change the return type to `Task<byte[]>`.</span></span>
+    -   <span data-ttu-id="92b71-202">Cambiare il tipo restituito in `Task<byte[]>`.</span><span class="sxs-lookup"><span data-stu-id="92b71-202">Change the return type to `Task<byte[]>`.</span></span>
 
-    -   <span data-ttu-id="697cc-203">Per convenzione, i metodi asincroni presentano nomi che terminano in "Async". Rinominare pertanto il metodo `GetURLContentsAsync`.</span><span class="sxs-lookup"><span data-stu-id="697cc-203">By convention, asynchronous methods have names that end in "Async," so rename the method `GetURLContentsAsync`.</span></span>
+    -   <span data-ttu-id="92b71-203">Per convenzione, i metodi asincroni presentano nomi che terminano in "Async". Rinominare pertanto il metodo `GetURLContentsAsync`.</span><span class="sxs-lookup"><span data-stu-id="92b71-203">By convention, asynchronous methods have names that end in "Async," so rename the method `GetURLContentsAsync`.</span></span>
 
-     <span data-ttu-id="697cc-204">Nel codice seguente sono illustrate queste modifiche.</span><span class="sxs-lookup"><span data-stu-id="697cc-204">The following code shows these changes.</span></span>
+     <span data-ttu-id="92b71-204">Nel codice seguente sono illustrate queste modifiche.</span><span class="sxs-lookup"><span data-stu-id="92b71-204">The following code shows these changes.</span></span>
 
     ```csharp
     private async Task<byte[]> GetURLContentsAsync(string url)
     ```
 
-     <span data-ttu-id="697cc-205">Dopo aver apportato queste modifiche, la conversione di `GetURLContents` in un metodo asincrono è completa.</span><span class="sxs-lookup"><span data-stu-id="697cc-205">With those few changes, the conversion of `GetURLContents` to an asynchronous method is complete.</span></span>
+     <span data-ttu-id="92b71-205">Dopo aver apportato queste modifiche, la conversione di `GetURLContents` in un metodo asincrono è completa.</span><span class="sxs-lookup"><span data-stu-id="92b71-205">With those few changes, the conversion of `GetURLContents` to an asynchronous method is complete.</span></span>
 
-## <a name="convert-sumpagesizes-to-an-asynchronous-method"></a><span data-ttu-id="697cc-206">Convertire SumPageSizes in un metodo asincrono</span><span class="sxs-lookup"><span data-stu-id="697cc-206">Convert SumPageSizes to an asynchronous method</span></span>
+## <a name="convert-sumpagesizes-to-an-asynchronous-method"></a><span data-ttu-id="92b71-206">Convertire SumPageSizes in un metodo asincrono</span><span class="sxs-lookup"><span data-stu-id="92b71-206">Convert SumPageSizes to an asynchronous method</span></span>
 
-1.  <span data-ttu-id="697cc-207">Ripetere i passaggi della procedura precedente per `SumPageSizes`.</span><span class="sxs-lookup"><span data-stu-id="697cc-207">Repeat the steps from the previous procedure for `SumPageSizes`.</span></span> <span data-ttu-id="697cc-208">In primo luogo, modificare la chiamata a `GetURLContents` in una chiamata asincrona.</span><span class="sxs-lookup"><span data-stu-id="697cc-208">First, change the call to `GetURLContents` to an asynchronous call.</span></span>
+1.  <span data-ttu-id="92b71-207">Ripetere i passaggi della procedura precedente per `SumPageSizes`.</span><span class="sxs-lookup"><span data-stu-id="92b71-207">Repeat the steps from the previous procedure for `SumPageSizes`.</span></span> <span data-ttu-id="92b71-208">In primo luogo, modificare la chiamata a `GetURLContents` in una chiamata asincrona.</span><span class="sxs-lookup"><span data-stu-id="92b71-208">First, change the call to `GetURLContents` to an asynchronous call.</span></span>
 
-    -   <span data-ttu-id="697cc-209">Modificare il nome del metodo chiamato da `GetURLContents` in `GetURLContentsAsync`, se non è ancora stato fatto.</span><span class="sxs-lookup"><span data-stu-id="697cc-209">Change the name of the method that’s called from `GetURLContents` to `GetURLContentsAsync`, if you haven't already done so.</span></span>
+    -   <span data-ttu-id="92b71-209">Modificare il nome del metodo chiamato da `GetURLContents` in `GetURLContentsAsync`, se non è ancora stato fatto.</span><span class="sxs-lookup"><span data-stu-id="92b71-209">Change the name of the method that’s called from `GetURLContents` to `GetURLContentsAsync`, if you haven't already done so.</span></span>
 
-    -   <span data-ttu-id="697cc-210">Applicare `await` all'attività restituita da `GetURLContentsAsync` per ottenere il valore della matrice di byte.</span><span class="sxs-lookup"><span data-stu-id="697cc-210">Apply `await` to the task that `GetURLContentsAsync` returns to obtain the byte array value.</span></span>
+    -   <span data-ttu-id="92b71-210">Applicare `await` all'attività restituita da `GetURLContentsAsync` per ottenere il valore della matrice di byte.</span><span class="sxs-lookup"><span data-stu-id="92b71-210">Apply `await` to the task that `GetURLContentsAsync` returns to obtain the byte array value.</span></span>
 
-     <span data-ttu-id="697cc-211">Nel codice seguente sono illustrate queste modifiche.</span><span class="sxs-lookup"><span data-stu-id="697cc-211">The following code shows these changes.</span></span>
+     <span data-ttu-id="92b71-211">Nel codice seguente sono illustrate queste modifiche.</span><span class="sxs-lookup"><span data-stu-id="92b71-211">The following code shows these changes.</span></span>
 
     ```csharp
     byte[] urlContents = await GetURLContentsAsync(url);
     ```
 
-     <span data-ttu-id="697cc-212">L'assegnazione precedente abbrevia le due righe di codice riportate di seguito.</span><span class="sxs-lookup"><span data-stu-id="697cc-212">The previous assignment abbreviates the following two lines of code.</span></span>
+     <span data-ttu-id="92b71-212">L'assegnazione precedente abbrevia le due righe di codice riportate di seguito.</span><span class="sxs-lookup"><span data-stu-id="92b71-212">The previous assignment abbreviates the following two lines of code.</span></span>
 
     ```csharp
     // GetURLContentsAsync returns a Task<T>. At completion, the task
@@ -325,31 +325,31 @@ Control returned to startButton_Click.
     //byte[] urlContents = await getContentsTask;
     ```
 
-2.  <span data-ttu-id="697cc-213">Apportare le modifiche seguenti nella firma del metodo:</span><span class="sxs-lookup"><span data-stu-id="697cc-213">Make the following changes in the method's signature:</span></span>
+2.  <span data-ttu-id="92b71-213">Apportare le modifiche seguenti nella firma del metodo:</span><span class="sxs-lookup"><span data-stu-id="92b71-213">Make the following changes in the method's signature:</span></span>
 
-    -   <span data-ttu-id="697cc-214">Contrassegnare il metodo con il modificatore `async`.</span><span class="sxs-lookup"><span data-stu-id="697cc-214">Mark the method with the `async` modifier.</span></span>
+    -   <span data-ttu-id="92b71-214">Contrassegnare il metodo con il modificatore `async`.</span><span class="sxs-lookup"><span data-stu-id="92b71-214">Mark the method with the `async` modifier.</span></span>
 
-    -   <span data-ttu-id="697cc-215">Aggiungere "Async" al nome del metodo.</span><span class="sxs-lookup"><span data-stu-id="697cc-215">Add "Async" to the method name.</span></span>
+    -   <span data-ttu-id="92b71-215">Aggiungere "Async" al nome del metodo.</span><span class="sxs-lookup"><span data-stu-id="92b71-215">Add "Async" to the method name.</span></span>
 
-    -   <span data-ttu-id="697cc-216">In questo caso non esiste alcuna variabile di restituzione dell'attività, T, perché `SumPageSizesAsync` non restituisce un valore per T. Il metodo non ha alcuna istruzione `return`. Tuttavia, il metodo deve restituire `Task` per poter essere un metodo di tipo awaitable.</span><span class="sxs-lookup"><span data-stu-id="697cc-216">There is no task return variable, T, this time because `SumPageSizesAsync` doesn’t return a value for T. (The method has no `return` statement.) However, the method must return a `Task` to be awaitable.</span></span> <span data-ttu-id="697cc-217">Cambiare quindi il tipo restituito del metodo da `void` in `Task`.</span><span class="sxs-lookup"><span data-stu-id="697cc-217">Therefore, change the return type of the method from `void` to `Task`.</span></span>
+    -   <span data-ttu-id="92b71-216">In questo caso non esiste alcuna variabile di restituzione dell'attività, T, perché `SumPageSizesAsync` non restituisce un valore per T. Il metodo non ha alcuna istruzione `return`. Tuttavia, il metodo deve restituire `Task` per poter essere un metodo di tipo awaitable.</span><span class="sxs-lookup"><span data-stu-id="92b71-216">There is no task return variable, T, this time because `SumPageSizesAsync` doesn’t return a value for T. (The method has no `return` statement.) However, the method must return a `Task` to be awaitable.</span></span> <span data-ttu-id="92b71-217">Cambiare quindi il tipo restituito del metodo da `void` in `Task`.</span><span class="sxs-lookup"><span data-stu-id="92b71-217">Therefore, change the return type of the method from `void` to `Task`.</span></span>
 
-    <span data-ttu-id="697cc-218">Nel codice seguente sono illustrate queste modifiche.</span><span class="sxs-lookup"><span data-stu-id="697cc-218">The following code shows these changes.</span></span>
+    <span data-ttu-id="92b71-218">Nel codice seguente sono illustrate queste modifiche.</span><span class="sxs-lookup"><span data-stu-id="92b71-218">The following code shows these changes.</span></span>
 
     ```csharp
     private async Task SumPageSizesAsync()
     ```
 
-     <span data-ttu-id="697cc-219">La conversione di `SumPageSizes` in `SumPageSizesAsync` è completa.</span><span class="sxs-lookup"><span data-stu-id="697cc-219">The conversion of `SumPageSizes` to `SumPageSizesAsync` is complete.</span></span>
+     <span data-ttu-id="92b71-219">La conversione di `SumPageSizes` in `SumPageSizesAsync` è completa.</span><span class="sxs-lookup"><span data-stu-id="92b71-219">The conversion of `SumPageSizes` to `SumPageSizesAsync` is complete.</span></span>
 
-## <a name="convert-startbuttonclick-to-an-asynchronous-method"></a><span data-ttu-id="697cc-220">Convertire startButton_Click in un metodo asincrono</span><span class="sxs-lookup"><span data-stu-id="697cc-220">Convert startButton_Click to an asynchronous method</span></span>
+## <a name="convert-startbuttonclick-to-an-asynchronous-method"></a><span data-ttu-id="92b71-220">Convertire startButton_Click in un metodo asincrono</span><span class="sxs-lookup"><span data-stu-id="92b71-220">Convert startButton_Click to an asynchronous method</span></span>
 
-1.  <span data-ttu-id="697cc-221">Nel gestore eventi modificare il nome del metodo chiamato da `SumPageSizes` in `SumPageSizesAsync`, se non è ancora stato fatto.</span><span class="sxs-lookup"><span data-stu-id="697cc-221">In the event handler, change the name of the called method from `SumPageSizes` to `SumPageSizesAsync`, if you haven’t already done so.</span></span>
+1.  <span data-ttu-id="92b71-221">Nel gestore eventi modificare il nome del metodo chiamato da `SumPageSizes` in `SumPageSizesAsync`, se non è ancora stato fatto.</span><span class="sxs-lookup"><span data-stu-id="92b71-221">In the event handler, change the name of the called method from `SumPageSizes` to `SumPageSizesAsync`, if you haven’t already done so.</span></span>
 
-2.  <span data-ttu-id="697cc-222">Poiché `SumPageSizesAsync` è un metodo asincrono, modificare il codice nel gestore eventi in modo che attenda il risultato.</span><span class="sxs-lookup"><span data-stu-id="697cc-222">Because `SumPageSizesAsync` is an async method, change the code in the event handler to await the result.</span></span>
+2.  <span data-ttu-id="92b71-222">Poiché `SumPageSizesAsync` è un metodo asincrono, modificare il codice nel gestore eventi in modo che attenda il risultato.</span><span class="sxs-lookup"><span data-stu-id="92b71-222">Because `SumPageSizesAsync` is an async method, change the code in the event handler to await the result.</span></span>
 
-     <span data-ttu-id="697cc-223">La chiamata a `SumPageSizesAsync` rispecchia la chiamata a `CopyToAsync` in `GetURLContentsAsync`.</span><span class="sxs-lookup"><span data-stu-id="697cc-223">The call to `SumPageSizesAsync` mirrors the call to `CopyToAsync` in `GetURLContentsAsync`.</span></span> <span data-ttu-id="697cc-224">La chiamata restituisce `Task` e non `Task(T)`.</span><span class="sxs-lookup"><span data-stu-id="697cc-224">The call returns a `Task`, not a `Task(T)`.</span></span>
+     <span data-ttu-id="92b71-223">La chiamata a `SumPageSizesAsync` rispecchia la chiamata a `CopyToAsync` in `GetURLContentsAsync`.</span><span class="sxs-lookup"><span data-stu-id="92b71-223">The call to `SumPageSizesAsync` mirrors the call to `CopyToAsync` in `GetURLContentsAsync`.</span></span> <span data-ttu-id="92b71-224">La chiamata restituisce `Task` e non `Task(T)`.</span><span class="sxs-lookup"><span data-stu-id="92b71-224">The call returns a `Task`, not a `Task(T)`.</span></span>
 
-     <span data-ttu-id="697cc-225">Come nelle procedure precedenti, è possibile convertire la chiamata tramite una o due istruzioni.</span><span class="sxs-lookup"><span data-stu-id="697cc-225">As in previous procedures, you can convert the call by using one statement or two statements.</span></span> <span data-ttu-id="697cc-226">Nel codice seguente sono illustrate queste modifiche.</span><span class="sxs-lookup"><span data-stu-id="697cc-226">The following code shows these changes.</span></span>
+     <span data-ttu-id="92b71-225">Come nelle procedure precedenti, è possibile convertire la chiamata tramite una o due istruzioni.</span><span class="sxs-lookup"><span data-stu-id="92b71-225">As in previous procedures, you can convert the call by using one statement or two statements.</span></span> <span data-ttu-id="92b71-226">Nel codice seguente sono illustrate queste modifiche.</span><span class="sxs-lookup"><span data-stu-id="92b71-226">The following code shows these changes.</span></span>
 
     ```csharp
     // One-step async call.
@@ -360,47 +360,47 @@ Control returned to startButton_Click.
     //await sumTask;
     ```
 
-3.  <span data-ttu-id="697cc-227">Per impedire la reentrancy accidentale dell'operazione, aggiungere l'istruzione seguente all'inizio di `startButton_Click` per disabilitare il pulsante **Start**.</span><span class="sxs-lookup"><span data-stu-id="697cc-227">To prevent accidentally reentering the operation, add the following statement at the top of `startButton_Click` to disable the **Start** button.</span></span>
+3.  <span data-ttu-id="92b71-227">Per impedire la reentrancy accidentale dell'operazione, aggiungere l'istruzione seguente all'inizio di `startButton_Click` per disabilitare il pulsante **Start**.</span><span class="sxs-lookup"><span data-stu-id="92b71-227">To prevent accidentally reentering the operation, add the following statement at the top of `startButton_Click` to disable the **Start** button.</span></span>
 
     ```csharp
     // Disable the button until the operation is complete.
     startButton.IsEnabled = false;
     ```
 
-     <span data-ttu-id="697cc-228">È possibile riabilitare il pulsante alla fine del gestore eventi.</span><span class="sxs-lookup"><span data-stu-id="697cc-228">You can reenable the button at the end of the event handler.</span></span>
+     <span data-ttu-id="92b71-228">È possibile riabilitare il pulsante alla fine del gestore eventi.</span><span class="sxs-lookup"><span data-stu-id="92b71-228">You can reenable the button at the end of the event handler.</span></span>
 
     ```csharp
     // Reenable the button in case you want to run the operation again.
     startButton.IsEnabled = true;
     ```
 
-     <span data-ttu-id="697cc-229">Per altre informazioni sulla reentrancy, vedere [Gestione della reentrancy nelle applicazioni asincrone (C#)](../../../../csharp/programming-guide/concepts/async/handling-reentrancy-in-async-apps.md).</span><span class="sxs-lookup"><span data-stu-id="697cc-229">For more information about reentrancy, see [Handling Reentrancy in Async Apps (C#)](../../../../csharp/programming-guide/concepts/async/handling-reentrancy-in-async-apps.md).</span></span>
+     <span data-ttu-id="92b71-229">Per altre informazioni sulla reentrancy, vedere [Gestione della reentrancy nelle applicazioni asincrone (C#)](../../../../csharp/programming-guide/concepts/async/handling-reentrancy-in-async-apps.md).</span><span class="sxs-lookup"><span data-stu-id="92b71-229">For more information about reentrancy, see [Handling Reentrancy in Async Apps (C#)](../../../../csharp/programming-guide/concepts/async/handling-reentrancy-in-async-apps.md).</span></span>
 
-4.  <span data-ttu-id="697cc-230">Aggiungere infine il modificatore `async` alla dichiarazione, in modo che il gestore eventi possa attendere `SumPagSizesAsync`.</span><span class="sxs-lookup"><span data-stu-id="697cc-230">Finally, add the `async` modifier to the declaration so that the event handler can await `SumPagSizesAsync`.</span></span>
+4.  <span data-ttu-id="92b71-230">Aggiungere infine il modificatore `async` alla dichiarazione, in modo che il gestore eventi possa attendere `SumPagSizesAsync`.</span><span class="sxs-lookup"><span data-stu-id="92b71-230">Finally, add the `async` modifier to the declaration so that the event handler can await `SumPagSizesAsync`.</span></span>
 
     ```csharp
     private async void startButton_Click(object sender, RoutedEventArgs e)
     ```
 
-     <span data-ttu-id="697cc-231">In genere, i nomi dei gestori eventi non vengono modificati.</span><span class="sxs-lookup"><span data-stu-id="697cc-231">Typically, the names of event handlers aren’t changed.</span></span> <span data-ttu-id="697cc-232">Il tipo restituito non viene modificato in `Task` perché i gestori evento devono restituire `void`.</span><span class="sxs-lookup"><span data-stu-id="697cc-232">The return type isn’t changed to `Task` because event handlers must return `void`.</span></span>
+     <span data-ttu-id="92b71-231">In genere, i nomi dei gestori eventi non vengono modificati.</span><span class="sxs-lookup"><span data-stu-id="92b71-231">Typically, the names of event handlers aren’t changed.</span></span> <span data-ttu-id="92b71-232">Il tipo restituito non viene modificato in `Task` perché i gestori evento devono restituire `void`.</span><span class="sxs-lookup"><span data-stu-id="92b71-232">The return type isn’t changed to `Task` because event handlers must return `void`.</span></span>
 
-     <span data-ttu-id="697cc-233">La conversione del progetto dall'elaborazione sincrona a quella asincrona è completa.</span><span class="sxs-lookup"><span data-stu-id="697cc-233">The conversion of the project from synchronous to asynchronous processing is complete.</span></span>
+     <span data-ttu-id="92b71-233">La conversione del progetto dall'elaborazione sincrona a quella asincrona è completa.</span><span class="sxs-lookup"><span data-stu-id="92b71-233">The conversion of the project from synchronous to asynchronous processing is complete.</span></span>
 
-## <a name="test-the-asynchronous-solution"></a><span data-ttu-id="697cc-234">Eseguire il test della soluzione asincrona</span><span class="sxs-lookup"><span data-stu-id="697cc-234">Test the asynchronous solution</span></span>
+## <a name="test-the-asynchronous-solution"></a><span data-ttu-id="92b71-234">Eseguire il test della soluzione asincrona</span><span class="sxs-lookup"><span data-stu-id="92b71-234">Test the asynchronous solution</span></span>
 
-1.  <span data-ttu-id="697cc-235">Premere **F5** per eseguire il programma e quindi scegliere il pulsante **Avvia**.</span><span class="sxs-lookup"><span data-stu-id="697cc-235">Choose the **F5** key to run the program, and then choose the **Start** button.</span></span>
+1.  <span data-ttu-id="92b71-235">Premere **F5** per eseguire il programma e quindi scegliere il pulsante **Avvia**.</span><span class="sxs-lookup"><span data-stu-id="92b71-235">Choose the **F5** key to run the program, and then choose the **Start** button.</span></span>
 
-2.  <span data-ttu-id="697cc-236">Viene visualizzato un output simile all'output della soluzione sincrona.</span><span class="sxs-lookup"><span data-stu-id="697cc-236">Output that resembles the output of the synchronous solution should appear.</span></span> <span data-ttu-id="697cc-237">Esistono tuttavia le differenze seguenti:</span><span class="sxs-lookup"><span data-stu-id="697cc-237">However, notice the following differences.</span></span>
+2.  <span data-ttu-id="92b71-236">Viene visualizzato un output simile all'output della soluzione sincrona.</span><span class="sxs-lookup"><span data-stu-id="92b71-236">Output that resembles the output of the synchronous solution should appear.</span></span> <span data-ttu-id="92b71-237">Esistono tuttavia le differenze seguenti:</span><span class="sxs-lookup"><span data-stu-id="92b71-237">However, notice the following differences.</span></span>
 
-    -   <span data-ttu-id="697cc-238">I risultati non vengono restituiti contemporaneamente, al termine dell'elaborazione.</span><span class="sxs-lookup"><span data-stu-id="697cc-238">The results don’t all occur at the same time, after the processing is complete.</span></span> <span data-ttu-id="697cc-239">Ad esempio, entrambi i programmi contengono una riga in `startButton_Click` che consente di cancellare la casella di testo.</span><span class="sxs-lookup"><span data-stu-id="697cc-239">For example, both programs contain a line in `startButton_Click` that clears the text box.</span></span> <span data-ttu-id="697cc-240">Lo scopo è quello di cancellare il contenuto della casella di testo tra le esecuzioni se si sceglie il pulsante **Start** per la seconda volta, dopo la visualizzazione di un set di risultati.</span><span class="sxs-lookup"><span data-stu-id="697cc-240">The intent is to clear the text box between runs if you choose the **Start** button for a second time, after one set of results has appeared.</span></span> <span data-ttu-id="697cc-241">Nella versione sincrona la casella di testo viene cancellata prima della seconda visualizzazione dei conteggi, ovvero quando vengono completati i download e il thread dell'interfaccia utente è libero di eseguire altre operazioni.</span><span class="sxs-lookup"><span data-stu-id="697cc-241">In the synchronous version, the text box is cleared just before the counts appear for the second time, when the downloads are completed and the UI thread is free to do other work.</span></span> <span data-ttu-id="697cc-242">Nella versione asincrona, la casella di testo viene cancellata subito dopo aver scelto il pulsante **Start**.</span><span class="sxs-lookup"><span data-stu-id="697cc-242">In the asynchronous version, the text box clears immediately after you choose the **Start** button.</span></span>
+    -   <span data-ttu-id="92b71-238">I risultati non vengono restituiti contemporaneamente, al termine dell'elaborazione.</span><span class="sxs-lookup"><span data-stu-id="92b71-238">The results don’t all occur at the same time, after the processing is complete.</span></span> <span data-ttu-id="92b71-239">Ad esempio, entrambi i programmi contengono una riga in `startButton_Click` che consente di cancellare la casella di testo.</span><span class="sxs-lookup"><span data-stu-id="92b71-239">For example, both programs contain a line in `startButton_Click` that clears the text box.</span></span> <span data-ttu-id="92b71-240">Lo scopo è quello di cancellare il contenuto della casella di testo tra le esecuzioni se si sceglie il pulsante **Start** per la seconda volta, dopo la visualizzazione di un set di risultati.</span><span class="sxs-lookup"><span data-stu-id="92b71-240">The intent is to clear the text box between runs if you choose the **Start** button for a second time, after one set of results has appeared.</span></span> <span data-ttu-id="92b71-241">Nella versione sincrona la casella di testo viene cancellata prima della seconda visualizzazione dei conteggi, ovvero quando vengono completati i download e il thread dell'interfaccia utente è libero di eseguire altre operazioni.</span><span class="sxs-lookup"><span data-stu-id="92b71-241">In the synchronous version, the text box is cleared just before the counts appear for the second time, when the downloads are completed and the UI thread is free to do other work.</span></span> <span data-ttu-id="92b71-242">Nella versione asincrona, la casella di testo viene cancellata subito dopo aver scelto il pulsante **Start**.</span><span class="sxs-lookup"><span data-stu-id="92b71-242">In the asynchronous version, the text box clears immediately after you choose the **Start** button.</span></span>
 
-    -   <span data-ttu-id="697cc-243">È importante notare che il thread dell'interfaccia utente non è bloccato durante il download.</span><span class="sxs-lookup"><span data-stu-id="697cc-243">Most importantly, the UI thread isn’t blocked during the downloads.</span></span> <span data-ttu-id="697cc-244">È possibile spostare o ridimensionare la finestra durante il download, il conteggio e la visualizzazione delle risorse Web.</span><span class="sxs-lookup"><span data-stu-id="697cc-244">You can move or resize the window while the web resources are being downloaded, counted, and displayed.</span></span> <span data-ttu-id="697cc-245">Se uno dei siti Web è lento o non risponde, è possibile annullare l'operazione scegliendo il pulsante **Chiudi** (il simbolo x su sfondo rosso nell'angolo superiore destro).</span><span class="sxs-lookup"><span data-stu-id="697cc-245">If one of the websites is slow or not responding, you can cancel the operation by choosing the **Close** button (the x in the red field in the upper-right corner).</span></span>
+    -   <span data-ttu-id="92b71-243">È importante notare che il thread dell'interfaccia utente non è bloccato durante il download.</span><span class="sxs-lookup"><span data-stu-id="92b71-243">Most importantly, the UI thread isn’t blocked during the downloads.</span></span> <span data-ttu-id="92b71-244">È possibile spostare o ridimensionare la finestra durante il download, il conteggio e la visualizzazione delle risorse Web.</span><span class="sxs-lookup"><span data-stu-id="92b71-244">You can move or resize the window while the web resources are being downloaded, counted, and displayed.</span></span> <span data-ttu-id="92b71-245">Se uno dei siti Web è lento o non risponde, è possibile annullare l'operazione scegliendo il pulsante **Chiudi** (il simbolo x su sfondo rosso nell'angolo superiore destro).</span><span class="sxs-lookup"><span data-stu-id="92b71-245">If one of the websites is slow or not responding, you can cancel the operation by choosing the **Close** button (the x in the red field in the upper-right corner).</span></span>
 
-## <a name="replace-method-geturlcontentsasync-with-a-net-framework-method"></a><span data-ttu-id="697cc-246">Sostituire GetURLContentsAsync con un metodo .NET Framework</span><span class="sxs-lookup"><span data-stu-id="697cc-246">Replace method GetURLContentsAsync with a .NET Framework method</span></span>
+## <a name="replace-method-geturlcontentsasync-with-a-net-framework-method"></a><span data-ttu-id="92b71-246">Sostituire GetURLContentsAsync con un metodo .NET Framework</span><span class="sxs-lookup"><span data-stu-id="92b71-246">Replace method GetURLContentsAsync with a .NET Framework method</span></span>
 
-1.  <span data-ttu-id="697cc-247">.NET Framework 4.5 fornisce molti metodi asincroni che è possibile usare.</span><span class="sxs-lookup"><span data-stu-id="697cc-247">The .NET Framework 4.5 provides many async methods that you can use.</span></span> <span data-ttu-id="697cc-248">Uno di essi, il <xref:System.Net.Http.HttpClient> metodo <xref:System.Net.Http.HttpClient.GetByteArrayAsync%28System.String%29>, risulta utile in modo specifico per questa procedura dettagliata.</span><span class="sxs-lookup"><span data-stu-id="697cc-248">One of them, the <xref:System.Net.Http.HttpClient> method <xref:System.Net.Http.HttpClient.GetByteArrayAsync%28System.String%29>, does just what you need for this walkthrough.</span></span> <span data-ttu-id="697cc-249">È possibile usarlo al posto del metodo `GetURLContentsAsync` creato in una procedura precedente.</span><span class="sxs-lookup"><span data-stu-id="697cc-249">You can use it instead of the `GetURLContentsAsync` method that you created in an earlier procedure.</span></span>
+1.  <span data-ttu-id="92b71-247">.NET Framework 4.5 fornisce molti metodi asincroni che è possibile usare.</span><span class="sxs-lookup"><span data-stu-id="92b71-247">The .NET Framework 4.5 provides many async methods that you can use.</span></span> <span data-ttu-id="92b71-248">Uno di essi, il <xref:System.Net.Http.HttpClient> metodo <xref:System.Net.Http.HttpClient.GetByteArrayAsync%28System.String%29>, risulta utile in modo specifico per questa procedura dettagliata.</span><span class="sxs-lookup"><span data-stu-id="92b71-248">One of them, the <xref:System.Net.Http.HttpClient> method <xref:System.Net.Http.HttpClient.GetByteArrayAsync%28System.String%29>, does just what you need for this walkthrough.</span></span> <span data-ttu-id="92b71-249">È possibile usarlo al posto del metodo `GetURLContentsAsync` creato in una procedura precedente.</span><span class="sxs-lookup"><span data-stu-id="92b71-249">You can use it instead of the `GetURLContentsAsync` method that you created in an earlier procedure.</span></span>
 
-     <span data-ttu-id="697cc-250">Il primo passaggio consiste nel creare un oggetto `HttpClient` nel metodo `SumPageSizesAsync`.</span><span class="sxs-lookup"><span data-stu-id="697cc-250">The first step is to create an `HttpClient` object in method `SumPageSizesAsync`.</span></span> <span data-ttu-id="697cc-251">Aggiungere la dichiarazione seguente all'inizio del metodo.</span><span class="sxs-lookup"><span data-stu-id="697cc-251">Add the following declaration at the start of the method.</span></span>
+     <span data-ttu-id="92b71-250">Il primo passaggio consiste nel creare un oggetto `HttpClient` nel metodo `SumPageSizesAsync`.</span><span class="sxs-lookup"><span data-stu-id="92b71-250">The first step is to create an `HttpClient` object in method `SumPageSizesAsync`.</span></span> <span data-ttu-id="92b71-251">Aggiungere la dichiarazione seguente all'inizio del metodo.</span><span class="sxs-lookup"><span data-stu-id="92b71-251">Add the following declaration at the start of the method.</span></span>
 
     ```csharp
     // Declare an HttpClient object and increase the buffer size. The
@@ -409,21 +409,21 @@ Control returned to startButton_Click.
         new HttpClient() { MaxResponseContentBufferSize = 1000000 };
     ```
 
-2.  <span data-ttu-id="697cc-252">In `SumPageSizesAsync,` sostituire la chiamata al metodo `GetURLContentsAsync` con una chiamata al metodo `HttpClient`.</span><span class="sxs-lookup"><span data-stu-id="697cc-252">In `SumPageSizesAsync,` replace the call to your `GetURLContentsAsync` method with a call to the `HttpClient` method.</span></span>
+2.  <span data-ttu-id="92b71-252">In `SumPageSizesAsync,` sostituire la chiamata al metodo `GetURLContentsAsync` con una chiamata al metodo `HttpClient`.</span><span class="sxs-lookup"><span data-stu-id="92b71-252">In `SumPageSizesAsync,` replace the call to your `GetURLContentsAsync` method with a call to the `HttpClient` method.</span></span>
 
     ```csharp
     byte[] urlContents = await client.GetByteArrayAsync(url);
     ```
 
-3.  <span data-ttu-id="697cc-253">Rimuovere o impostare come commento il metodo `GetURLContentsAsync` precedentemente scritto.</span><span class="sxs-lookup"><span data-stu-id="697cc-253">Remove or comment out the `GetURLContentsAsync` method that you wrote.</span></span>
+3.  <span data-ttu-id="92b71-253">Rimuovere o impostare come commento il metodo `GetURLContentsAsync` precedentemente scritto.</span><span class="sxs-lookup"><span data-stu-id="92b71-253">Remove or comment out the `GetURLContentsAsync` method that you wrote.</span></span>
 
-4.  <span data-ttu-id="697cc-254">Premere **F5** per eseguire il programma e quindi scegliere il pulsante **Avvia**.</span><span class="sxs-lookup"><span data-stu-id="697cc-254">Choose the **F5** key to run the program, and then choose the **Start** button.</span></span>
+4.  <span data-ttu-id="92b71-254">Premere **F5** per eseguire il programma e quindi scegliere il pulsante **Avvia**.</span><span class="sxs-lookup"><span data-stu-id="92b71-254">Choose the **F5** key to run the program, and then choose the **Start** button.</span></span>
 
-     <span data-ttu-id="697cc-255">Il comportamento di questa versione del progetto deve corrispondere al comportamento descritto nella procedura "Per eseguire il test della soluzione asincrona" ma con un intervento ridotto da parte dell'utente.</span><span class="sxs-lookup"><span data-stu-id="697cc-255">The behavior of this version of the project should match the behavior that the "To test the asynchronous solution" procedure describes but with even less effort from you.</span></span>
+     <span data-ttu-id="92b71-255">Il comportamento di questa versione del progetto deve corrispondere al comportamento descritto nella procedura "Per eseguire il test della soluzione asincrona" ma con un intervento ridotto da parte dell'utente.</span><span class="sxs-lookup"><span data-stu-id="92b71-255">The behavior of this version of the project should match the behavior that the "To test the asynchronous solution" procedure describes but with even less effort from you.</span></span>
 
-## <a name="example-code"></a><span data-ttu-id="697cc-256">codice di esempio</span><span class="sxs-lookup"><span data-stu-id="697cc-256">Example code</span></span>
+## <a name="example-code"></a><span data-ttu-id="92b71-256">codice di esempio</span><span class="sxs-lookup"><span data-stu-id="92b71-256">Example code</span></span>
 
-<span data-ttu-id="697cc-257">Il codice seguente contiene l'esempio completo della conversione da soluzione sincrona a soluzione asincrona usando il metodo `GetURLContentsAsync` asincrono precedentemente scritto.</span><span class="sxs-lookup"><span data-stu-id="697cc-257">The following code contains the full example of the conversion from a synchronous to an asynchronous solution by using the asynchronous `GetURLContentsAsync` method that you wrote.</span></span> <span data-ttu-id="697cc-258">Si noti che è molto simile alla soluzione sincrona originale.</span><span class="sxs-lookup"><span data-stu-id="697cc-258">Notice that it strongly resembles the original, synchronous solution.</span></span>
+<span data-ttu-id="92b71-257">Il codice seguente contiene l'esempio completo della conversione da soluzione sincrona a soluzione asincrona usando il metodo `GetURLContentsAsync` asincrono precedentemente scritto.</span><span class="sxs-lookup"><span data-stu-id="92b71-257">The following code contains the full example of the conversion from a synchronous to an asynchronous solution by using the asynchronous `GetURLContentsAsync` method that you wrote.</span></span> <span data-ttu-id="92b71-258">Si noti che è molto simile alla soluzione sincrona originale.</span><span class="sxs-lookup"><span data-stu-id="92b71-258">Notice that it strongly resembles the original, synchronous solution.</span></span>
 
 ```csharp
 using System;
@@ -507,16 +507,16 @@ namespace AsyncExampleWPF
         {
             List<string> urls = new List<string>
             {
-                "http://msdn.microsoft.com/library/windows/apps/br211380.aspx",
-                "http://msdn.microsoft.com",
-                "http://msdn.microsoft.com/library/hh290136.aspx",
-                "http://msdn.microsoft.com/library/ee256749.aspx",
-                "http://msdn.microsoft.com/library/hh290138.aspx",
-                "http://msdn.microsoft.com/library/hh290140.aspx",
-                "http://msdn.microsoft.com/library/dd470362.aspx",
-                "http://msdn.microsoft.com/library/aa578028.aspx",
-                "http://msdn.microsoft.com/library/ms404677.aspx",
-                "http://msdn.microsoft.com/library/ff730837.aspx"
+                "https://msdn.microsoft.com/library/windows/apps/br211380.aspx",
+                "https://msdn.microsoft.com",
+                "https://msdn.microsoft.com/library/hh290136.aspx",
+                "https://msdn.microsoft.com/library/ee256749.aspx",
+                "https://msdn.microsoft.com/library/hh290138.aspx",
+                "https://msdn.microsoft.com/library/hh290140.aspx",
+                "https://msdn.microsoft.com/library/dd470362.aspx",
+                "https://msdn.microsoft.com/library/aa578028.aspx",
+                "https://msdn.microsoft.com/library/ms404677.aspx",
+                "https://msdn.microsoft.com/library/ff730837.aspx"
             };
             return urls;
         }
@@ -564,15 +564,15 @@ namespace AsyncExampleWPF
             // is designed to be used with a monospaced font, such as
             // Lucida Console or Global Monospace.
             var bytes = content.Length;
-            // Strip off the "http://".
-            var displayURL = url.Replace("http://", "");
+            // Strip off the "https://".
+            var displayURL = url.Replace("https://", "");
             resultsTextBox.Text += string.Format("\n{0,-58} {1,8}", displayURL, bytes);
         }
     }
 }
 ```
 
-<span data-ttu-id="697cc-259">Il codice seguente contiene l'esempio completo della soluzione che usa il metodo `HttpClient`, `GetByteArrayAsync`.</span><span class="sxs-lookup"><span data-stu-id="697cc-259">The following code contains the full example of the solution that uses the `HttpClient` method, `GetByteArrayAsync`.</span></span>
+<span data-ttu-id="92b71-259">Il codice seguente contiene l'esempio completo della soluzione che usa il metodo `HttpClient`, `GetByteArrayAsync`.</span><span class="sxs-lookup"><span data-stu-id="92b71-259">The following code contains the full example of the solution that uses the `HttpClient` method, `GetByteArrayAsync`.</span></span>
 
 ```csharp
 using System;
@@ -661,16 +661,16 @@ namespace AsyncExampleWPF
         {
             List<string> urls = new List<string>
             {
-                "http://msdn.microsoft.com/library/windows/apps/br211380.aspx",
-                "http://msdn.microsoft.com",
-                "http://msdn.microsoft.com/library/hh290136.aspx",
-                "http://msdn.microsoft.com/library/ee256749.aspx",
-                "http://msdn.microsoft.com/library/hh290138.aspx",
-                "http://msdn.microsoft.com/library/hh290140.aspx",
-                "http://msdn.microsoft.com/library/dd470362.aspx",
-                "http://msdn.microsoft.com/library/aa578028.aspx",
-                "http://msdn.microsoft.com/library/ms404677.aspx",
-                "http://msdn.microsoft.com/library/ff730837.aspx"
+                "https://msdn.microsoft.com/library/windows/apps/br211380.aspx",
+                "https://msdn.microsoft.com",
+                "https://msdn.microsoft.com/library/hh290136.aspx",
+                "https://msdn.microsoft.com/library/ee256749.aspx",
+                "https://msdn.microsoft.com/library/hh290138.aspx",
+                "https://msdn.microsoft.com/library/hh290140.aspx",
+                "https://msdn.microsoft.com/library/dd470362.aspx",
+                "https://msdn.microsoft.com/library/aa578028.aspx",
+                "https://msdn.microsoft.com/library/ms404677.aspx",
+                "https://msdn.microsoft.com/library/ff730837.aspx"
             };
             return urls;
         }
@@ -681,21 +681,21 @@ namespace AsyncExampleWPF
             // is designed to be used with a monospaced font, such as
             // Lucida Console or Global Monospace.
             var bytes = content.Length;
-            // Strip off the "http://".
-            var displayURL = url.Replace("http://", "");
+            // Strip off the "https://".
+            var displayURL = url.Replace("https://", "");
             resultsTextBox.Text += string.Format("\n{0,-58} {1,8}", displayURL, bytes);
         }
     }
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="697cc-260">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="697cc-260">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="92b71-260">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="92b71-260">See also</span></span>
 
-- <span data-ttu-id="697cc-261">[Async Sample: Accessing the Web Walkthrough (C# and Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) (Esempio asincrono: accesso alla procedura dettagliata Web (C# e Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="697cc-261">[Async Sample: Accessing the Web Walkthrough (C# and Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)</span></span>
-- [<span data-ttu-id="697cc-262">async</span><span class="sxs-lookup"><span data-stu-id="697cc-262">async</span></span>](../../../../csharp/language-reference/keywords/async.md)
-- [<span data-ttu-id="697cc-263">await</span><span class="sxs-lookup"><span data-stu-id="697cc-263">await</span></span>](../../../../csharp/language-reference/keywords/await.md)
-- [<span data-ttu-id="697cc-264">Programmazione asincrona con Async e Await (C#)</span><span class="sxs-lookup"><span data-stu-id="697cc-264">Asynchronous Programming with async and await (C#)</span></span>](../../../../csharp/programming-guide/concepts/async/index.md)
-- [<span data-ttu-id="697cc-265">Tipi restituiti asincroni (C#)</span><span class="sxs-lookup"><span data-stu-id="697cc-265">Async Return Types (C#)</span></span>](../../../../csharp/programming-guide/concepts/async/async-return-types.md)
-- [<span data-ttu-id="697cc-266">Programmazione asincrona basata su attività</span><span class="sxs-lookup"><span data-stu-id="697cc-266">Task-based Asynchronous Programming (TAP)</span></span>](https://www.microsoft.com/en-us/download/details.aspx?id=19957)
-- [<span data-ttu-id="697cc-267">Procedura: Estendere la procedura dettagliata asincrona tramite Task.WhenAll (C#)</span><span class="sxs-lookup"><span data-stu-id="697cc-267">How to: Extend the async Walkthrough by Using Task.WhenAll (C#)</span></span>](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
-- [<span data-ttu-id="697cc-268">Procedura: Eseguire più richieste Web in parallelo tramite async e await (C#)</span><span class="sxs-lookup"><span data-stu-id="697cc-268">How to: Make Multiple Web Requests in Parallel by Using async and await (C#)</span></span>](../../../../csharp/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)
+- <span data-ttu-id="92b71-261">[Async Sample: Accessing the Web Walkthrough (C# and Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) (Esempio asincrono: accesso alla procedura dettagliata Web (C# e Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="92b71-261">[Async Sample: Accessing the Web Walkthrough (C# and Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)</span></span>
+- [<span data-ttu-id="92b71-262">async</span><span class="sxs-lookup"><span data-stu-id="92b71-262">async</span></span>](../../../../csharp/language-reference/keywords/async.md)
+- [<span data-ttu-id="92b71-263">await</span><span class="sxs-lookup"><span data-stu-id="92b71-263">await</span></span>](../../../../csharp/language-reference/keywords/await.md)
+- [<span data-ttu-id="92b71-264">Programmazione asincrona con Async e Await (C#)</span><span class="sxs-lookup"><span data-stu-id="92b71-264">Asynchronous Programming with async and await (C#)</span></span>](../../../../csharp/programming-guide/concepts/async/index.md)
+- [<span data-ttu-id="92b71-265">Tipi restituiti asincroni (C#)</span><span class="sxs-lookup"><span data-stu-id="92b71-265">Async Return Types (C#)</span></span>](../../../../csharp/programming-guide/concepts/async/async-return-types.md)
+- [<span data-ttu-id="92b71-266">Programmazione asincrona basata su attività</span><span class="sxs-lookup"><span data-stu-id="92b71-266">Task-based Asynchronous Programming (TAP)</span></span>](https://www.microsoft.com/en-us/download/details.aspx?id=19957)
+- [<span data-ttu-id="92b71-267">Procedura: Estendere la procedura dettagliata asincrona tramite Task.WhenAll (C#)</span><span class="sxs-lookup"><span data-stu-id="92b71-267">How to: Extend the async Walkthrough by Using Task.WhenAll (C#)</span></span>](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
+- [<span data-ttu-id="92b71-268">Procedura: Eseguire più richieste Web in parallelo tramite async e await (C#)</span><span class="sxs-lookup"><span data-stu-id="92b71-268">How to: Make Multiple Web Requests in Parallel by Using async and await (C#)</span></span>](../../../../csharp/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)

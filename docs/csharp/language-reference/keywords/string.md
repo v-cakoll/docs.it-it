@@ -10,104 +10,107 @@ helpviewer_keywords:
 - string literals [C#]
 - string keyword [C#]
 ms.assetid: 3037e558-fb22-494d-bca1-a15ade11b11a
-ms.openlocfilehash: 8b70f1c1dcb39dcdde6ba24a1bdcdfc3084cfc97
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ab2e69c60872aed19d46450f17becc918ffe2a38
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513100"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181459"
 ---
-# <a name="string-c-reference"></a><span data-ttu-id="4ed02-102">string (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="4ed02-102">string (C# Reference)</span></span>
-<span data-ttu-id="4ed02-103">Il tipo `string` rappresenta una sequenza di zero o più caratteri Unicode.</span><span class="sxs-lookup"><span data-stu-id="4ed02-103">The `string` type represents a sequence of zero or more Unicode characters.</span></span> <span data-ttu-id="4ed02-104">`string` è un alias per <xref:System.String> in .NET.</span><span class="sxs-lookup"><span data-stu-id="4ed02-104">`string` is an alias for <xref:System.String> in .NET.</span></span>  
-  
- <span data-ttu-id="4ed02-105">Sebbene `string` sia un tipo riferimento, gli operatori di uguaglianza (`==` e `!=`) vengono definiti per confrontare i valori degli oggetti `string` e non dei riferimenti.</span><span class="sxs-lookup"><span data-stu-id="4ed02-105">Although `string` is a reference type, the equality operators (`==` and `!=`) are defined to compare the values of `string` objects, not references.</span></span> <span data-ttu-id="4ed02-106">In questo modo il test di uguaglianza delle stringhe è più intuitivo.</span><span class="sxs-lookup"><span data-stu-id="4ed02-106">This makes testing for string equality more intuitive.</span></span> <span data-ttu-id="4ed02-107">Ad esempio:</span><span class="sxs-lookup"><span data-stu-id="4ed02-107">For example:</span></span>  
-  
-```csharp  
-string a = "hello";  
-string b = "h";  
-// Append to contents of 'b'  
-b += "ello";  
-Console.WriteLine(a == b);  
-Console.WriteLine((object)a == (object)b);  
-```  
-  
- <span data-ttu-id="4ed02-108">Viene visualizzato "True" e quindi "False" perché il contenuto delle stringhe è equivalente, ma `a` e `b` non fanno riferimento alla stessa istanza della stringa.</span><span class="sxs-lookup"><span data-stu-id="4ed02-108">This displays "True" and then "False" because the content of the strings are equivalent, but `a` and `b` do not refer to the same string instance.</span></span>  
-  
- <span data-ttu-id="4ed02-109">L'operatore + concatena le stringhe:</span><span class="sxs-lookup"><span data-stu-id="4ed02-109">The + operator concatenates strings:</span></span>  
-  
-```csharp  
-string a = "good " + "morning";  
-```  
-  
- <span data-ttu-id="4ed02-110">Questo crea un oggetto stringa contenente "good morning".</span><span class="sxs-lookup"><span data-stu-id="4ed02-110">This creates a string object that contains "good morning".</span></span>  
-  
- <span data-ttu-id="4ed02-111">Le stringhe sono *immutabili*: non è possibile modificare il contenuto di un oggetto stringa dopo la creazione dell'oggetto, sebbene la sintassi sembri indicare che è possibile apportare modifiche.</span><span class="sxs-lookup"><span data-stu-id="4ed02-111">Strings are *immutable*--the contents of a string object cannot be changed after the object is created, although the syntax makes it appear as if you can do this.</span></span> <span data-ttu-id="4ed02-112">Ad esempio, quando si scrive il codice, il compilatore crea un nuovo oggetto stringa per archiviare la nuova sequenza di caratteri e il nuovo oggetto viene assegnato a b.</span><span class="sxs-lookup"><span data-stu-id="4ed02-112">For example, when you write this code, the compiler actually creates a new string object to hold the new sequence of characters, and that new object is assigned to b.</span></span> <span data-ttu-id="4ed02-113">La stringa "h" è quindi idonea per Garbage Collection.</span><span class="sxs-lookup"><span data-stu-id="4ed02-113">The string "h" is then eligible for garbage collection.</span></span>  
-  
-```csharp
-string b = "h";  
-b += "ello";  
-```  
-  
- <span data-ttu-id="4ed02-114">L'operatore [] può essere usato per accedere in lettura ai singoli caratteri di un `string`:</span><span class="sxs-lookup"><span data-stu-id="4ed02-114">The [] operator can be used for readonly access to individual characters of a `string`:</span></span>  
-  
-```csharp  
-string str = "test";  
-char x = str[2];  // x = 's';  
-```  
-  
- <span data-ttu-id="4ed02-115">I valori letterali della stringa sono di tipo `string` e possono essere scritti in due formati, tra virgolette e @-quoted.</span><span class="sxs-lookup"><span data-stu-id="4ed02-115">String literals are of type `string` and can be written in two forms, quoted and @-quoted.</span></span> <span data-ttu-id="4ed02-116">I valori letterali della stringa tra virgolette sono racchiusi in virgolette doppie ("):</span><span class="sxs-lookup"><span data-stu-id="4ed02-116">Quoted string literals are enclosed in double quotation marks ("):</span></span>  
-  
-```csharp  
-"good morning"  // a string literal  
-```  
-  
- <span data-ttu-id="4ed02-117">I valori letterali della stringa possono contenere qualsiasi carattere letterale.</span><span class="sxs-lookup"><span data-stu-id="4ed02-117">String literals can contain any character literal.</span></span> <span data-ttu-id="4ed02-118">Sono incluse le sequenze di escape.</span><span class="sxs-lookup"><span data-stu-id="4ed02-118">Escape sequences are included.</span></span> <span data-ttu-id="4ed02-119">L'esempio seguente usa una sequenza di escape `\\` per la barra rovesciata, `\u0066` per la lettera f e `\n` per la nuova riga.</span><span class="sxs-lookup"><span data-stu-id="4ed02-119">The following example uses escape sequence `\\` for backslash, `\u0066` for the letter f, and `\n` for newline.</span></span>  
-  
-```csharp  
-string a = "\\\u0066\n";  
-Console.WriteLine(a);  
-```  
-  
-> [!NOTE]
->  <span data-ttu-id="4ed02-120">Il codice di escape `\udddd` (dove `dddd` è un numero a quattro cifre) rappresenta il carattere Unicode U+`dddd`.</span><span class="sxs-lookup"><span data-stu-id="4ed02-120">The escape code `\udddd` (where `dddd` is a four-digit number) represents the Unicode character U+`dddd`.</span></span> <span data-ttu-id="4ed02-121">Vengono riconosciuti anche i codici di escape Unicode a otto cifre: `\Udddddddd`.</span><span class="sxs-lookup"><span data-stu-id="4ed02-121">Eight-digit Unicode escape codes are also recognized: `\Udddddddd`.</span></span>  
-  
- <span data-ttu-id="4ed02-122">I valori letterali della stringa verbatim iniziano con `@` e sono anche racchiusi tra virgolette doppie.</span><span class="sxs-lookup"><span data-stu-id="4ed02-122">Verbatim string literals start with `@` and are also enclosed in double quotation marks.</span></span> <span data-ttu-id="4ed02-123">Ad esempio:</span><span class="sxs-lookup"><span data-stu-id="4ed02-123">For example:</span></span>  
-  
-```csharp  
-@"good morning"  // a string literal  
-```  
-  
- <span data-ttu-id="4ed02-124">Il vantaggio delle stringhe verbatim è che le sequenze di escape *non* sono elaborate, e quindi rendono più semplice scrivere, ad esempio, un nome completo del file:</span><span class="sxs-lookup"><span data-stu-id="4ed02-124">The advantage of verbatim strings is that escape sequences are *not* processed, which makes it easy to write, for example, a fully qualified file name:</span></span>  
-  
-```csharp  
-@"c:\Docs\Source\a.txt"  // rather than "c:\\Docs\\Source\\a.txt"  
-```  
-  
- <span data-ttu-id="4ed02-125">Per includere le virgolette doppie in una stringa @-quoted, duplicarla:</span><span class="sxs-lookup"><span data-stu-id="4ed02-125">To include a double quotation mark in an @-quoted string, double it:</span></span>  
-  
-```csharp  
-@"""Ahoy!"" cried the captain." // "Ahoy!" cried the captain.  
-```  
-  
- <span data-ttu-id="4ed02-126">Per altri usi del carattere speciale `@`, vedere [@ - identificatore verbatim](../tokens/verbatim.md).</span><span class="sxs-lookup"><span data-stu-id="4ed02-126">For other uses of the `@` special character, see [@ -- verbatim identifier](../tokens/verbatim.md).</span></span>  
-  
- <span data-ttu-id="4ed02-127">Per altre informazioni sulle stringhe in C#, vedere [Stringhe](../../../csharp/programming-guide/strings/index.md).</span><span class="sxs-lookup"><span data-stu-id="4ed02-127">For more information about strings in C#, see [Strings](../../../csharp/programming-guide/strings/index.md).</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="4ed02-128">Esempio</span><span class="sxs-lookup"><span data-stu-id="4ed02-128">Example</span></span>  
- [!code-csharp[csrefKeywordsTypes#17](../../../csharp/language-reference/keywords/codesnippet/CSharp/string_1.cs)]  
-  
-## <a name="c-language-specification"></a><span data-ttu-id="4ed02-129">Specifiche del linguaggio C#</span><span class="sxs-lookup"><span data-stu-id="4ed02-129">C# Language Specification</span></span>  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a><span data-ttu-id="4ed02-130">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="4ed02-130">See Also</span></span>
+# <a name="string-c-reference"></a><span data-ttu-id="ff679-102">string (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="ff679-102">string (C# Reference)</span></span>
 
-- [<span data-ttu-id="4ed02-131">Riferimenti per C#</span><span class="sxs-lookup"><span data-stu-id="4ed02-131">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="4ed02-132">Guida per programmatori C#</span><span class="sxs-lookup"><span data-stu-id="4ed02-132">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="4ed02-133">Procedure consigliate per l'uso delle stringhe</span><span class="sxs-lookup"><span data-stu-id="4ed02-133">Best Practices for Using Strings</span></span>](../../../standard/base-types/best-practices-strings.md)  
-- [<span data-ttu-id="4ed02-134">Parole chiave di C#</span><span class="sxs-lookup"><span data-stu-id="4ed02-134">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
-- [<span data-ttu-id="4ed02-135">Guida per programmatori C#</span><span class="sxs-lookup"><span data-stu-id="4ed02-135">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="4ed02-136">Tipi riferimento</span><span class="sxs-lookup"><span data-stu-id="4ed02-136">Reference Types</span></span>](../../../csharp/language-reference/keywords/reference-types.md)  
-- [<span data-ttu-id="4ed02-137">Tipi valore</span><span class="sxs-lookup"><span data-stu-id="4ed02-137">Value Types</span></span>](../../../csharp/language-reference/keywords/value-types.md)  
-- [<span data-ttu-id="4ed02-138">Operazioni di base su stringhe</span><span class="sxs-lookup"><span data-stu-id="4ed02-138">Basic String Operations</span></span>](../../../standard/base-types/basic-string-operations.md)  
-- [<span data-ttu-id="4ed02-139">Creazione di nuove stringhe</span><span class="sxs-lookup"><span data-stu-id="4ed02-139">Creating New Strings</span></span>](../../../standard/base-types/creating-new.md)  
-- [<span data-ttu-id="4ed02-140">Tabella di formattazione dei risultati numerici</span><span class="sxs-lookup"><span data-stu-id="4ed02-140">Formatting Numeric Results Table</span></span>](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)
+<span data-ttu-id="ff679-103">Il tipo `string` rappresenta una sequenza di zero o più caratteri Unicode.</span><span class="sxs-lookup"><span data-stu-id="ff679-103">The `string` type represents a sequence of zero or more Unicode characters.</span></span> <span data-ttu-id="ff679-104">`string` è un alias per <xref:System.String> in .NET.</span><span class="sxs-lookup"><span data-stu-id="ff679-104">`string` is an alias for <xref:System.String> in .NET.</span></span>
+
+<span data-ttu-id="ff679-105">Sebbene `string` sia un tipo riferimento, gli operatori di uguaglianza (`==` e `!=`) vengono definiti per confrontare i valori degli oggetti `string` e non dei riferimenti.</span><span class="sxs-lookup"><span data-stu-id="ff679-105">Although `string` is a reference type, the equality operators (`==` and `!=`) are defined to compare the values of `string` objects, not references.</span></span> <span data-ttu-id="ff679-106">In questo modo il test di uguaglianza delle stringhe è più intuitivo.</span><span class="sxs-lookup"><span data-stu-id="ff679-106">This makes testing for string equality more intuitive.</span></span> <span data-ttu-id="ff679-107">Ad esempio:</span><span class="sxs-lookup"><span data-stu-id="ff679-107">For example:</span></span>
+
+```csharp
+string a = "hello";
+string b = "h";
+// Append to contents of 'b'
+b += "ello";
+Console.WriteLine(a == b);
+Console.WriteLine((object)a == (object)b);
+```
+
+<span data-ttu-id="ff679-108">Viene visualizzato "True" e quindi "False" perché il contenuto delle stringhe è equivalente, ma `a` e `b` non fanno riferimento alla stessa istanza della stringa.</span><span class="sxs-lookup"><span data-stu-id="ff679-108">This displays "True" and then "False" because the content of the strings are equivalent, but `a` and `b` do not refer to the same string instance.</span></span>
+
+<span data-ttu-id="ff679-109">L'operatore + concatena le stringhe:</span><span class="sxs-lookup"><span data-stu-id="ff679-109">The + operator concatenates strings:</span></span>
+
+```csharp
+string a = "good " + "morning";
+```
+
+<span data-ttu-id="ff679-110">Questo crea un oggetto stringa contenente "good morning".</span><span class="sxs-lookup"><span data-stu-id="ff679-110">This creates a string object that contains "good morning".</span></span>
+
+<span data-ttu-id="ff679-111">Le stringhe sono *immutabili*: non è possibile modificare il contenuto di un oggetto stringa dopo la creazione dell'oggetto, sebbene la sintassi sembri indicare che è possibile apportare modifiche.</span><span class="sxs-lookup"><span data-stu-id="ff679-111">Strings are *immutable*--the contents of a string object cannot be changed after the object is created, although the syntax makes it appear as if you can do this.</span></span> <span data-ttu-id="ff679-112">Ad esempio, quando si scrive il codice, il compilatore crea un nuovo oggetto stringa per archiviare la nuova sequenza di caratteri e il nuovo oggetto viene assegnato a b.</span><span class="sxs-lookup"><span data-stu-id="ff679-112">For example, when you write this code, the compiler actually creates a new string object to hold the new sequence of characters, and that new object is assigned to b.</span></span> <span data-ttu-id="ff679-113">La stringa "h" è quindi idonea per Garbage Collection.</span><span class="sxs-lookup"><span data-stu-id="ff679-113">The string "h" is then eligible for garbage collection.</span></span>
+
+```csharp
+string b = "h";
+b += "ello";
+```
+
+<span data-ttu-id="ff679-114">L'operatore [] può essere usato per accedere in lettura ai singoli caratteri di un `string`:</span><span class="sxs-lookup"><span data-stu-id="ff679-114">The [] operator can be used for readonly access to individual characters of a `string`:</span></span>
+
+```csharp
+string str = "test";
+char x = str[2];  // x = 's';
+```
+
+<span data-ttu-id="ff679-115">I valori letterali della stringa sono di tipo `string` e possono essere scritti in due formati, tra virgolette e @-quoted.</span><span class="sxs-lookup"><span data-stu-id="ff679-115">String literals are of type `string` and can be written in two forms, quoted and @-quoted.</span></span> <span data-ttu-id="ff679-116">I valori letterali della stringa tra virgolette sono racchiusi in virgolette doppie ("):</span><span class="sxs-lookup"><span data-stu-id="ff679-116">Quoted string literals are enclosed in double quotation marks ("):</span></span>
+
+```csharp
+"good morning"  // a string literal
+```
+
+<span data-ttu-id="ff679-117">I valori letterali della stringa possono contenere qualsiasi carattere letterale.</span><span class="sxs-lookup"><span data-stu-id="ff679-117">String literals can contain any character literal.</span></span> <span data-ttu-id="ff679-118">Sono incluse le sequenze di escape.</span><span class="sxs-lookup"><span data-stu-id="ff679-118">Escape sequences are included.</span></span> <span data-ttu-id="ff679-119">L'esempio seguente usa una sequenza di escape `\\` per la barra rovesciata, `\u0066` per la lettera f e `\n` per la nuova riga.</span><span class="sxs-lookup"><span data-stu-id="ff679-119">The following example uses escape sequence `\\` for backslash, `\u0066` for the letter f, and `\n` for newline.</span></span>
+
+```csharp
+string a = "\\\u0066\n";
+Console.WriteLine(a);
+```
+
+> [!NOTE]
+> <span data-ttu-id="ff679-120">Il codice di escape `\udddd` (dove `dddd` è un numero a quattro cifre) rappresenta il carattere Unicode U+`dddd`.</span><span class="sxs-lookup"><span data-stu-id="ff679-120">The escape code `\udddd` (where `dddd` is a four-digit number) represents the Unicode character U+`dddd`.</span></span> <span data-ttu-id="ff679-121">Vengono riconosciuti anche i codici di escape Unicode a otto cifre: `\Udddddddd`.</span><span class="sxs-lookup"><span data-stu-id="ff679-121">Eight-digit Unicode escape codes are also recognized: `\Udddddddd`.</span></span>
+
+<span data-ttu-id="ff679-122">I valori letterali della stringa verbatim iniziano con `@` e sono anche racchiusi tra virgolette doppie.</span><span class="sxs-lookup"><span data-stu-id="ff679-122">Verbatim string literals start with `@` and are also enclosed in double quotation marks.</span></span> <span data-ttu-id="ff679-123">Ad esempio:</span><span class="sxs-lookup"><span data-stu-id="ff679-123">For example:</span></span>
+
+```csharp
+@"good morning"  // a string literal
+```
+
+<span data-ttu-id="ff679-124">Il vantaggio delle stringhe verbatim è che le sequenze di escape *non* sono elaborate, e quindi rendono più semplice scrivere, ad esempio, un nome completo del file:</span><span class="sxs-lookup"><span data-stu-id="ff679-124">The advantage of verbatim strings is that escape sequences are *not* processed, which makes it easy to write, for example, a fully qualified file name:</span></span>
+
+```csharp
+@"c:\Docs\Source\a.txt"  // rather than "c:\\Docs\\Source\\a.txt"
+```
+
+<span data-ttu-id="ff679-125">Per includere le virgolette doppie in una stringa @-quoted, duplicarla:</span><span class="sxs-lookup"><span data-stu-id="ff679-125">To include a double quotation mark in an @-quoted string, double it:</span></span>
+
+```csharp
+@"""Ahoy!"" cried the captain." // "Ahoy!" cried the captain.
+```
+
+<span data-ttu-id="ff679-126">Per altri usi del carattere speciale `@`, vedere [@ - identificatore verbatim](../tokens/verbatim.md).</span><span class="sxs-lookup"><span data-stu-id="ff679-126">For other uses of the `@` special character, see [@ -- verbatim identifier](../tokens/verbatim.md).</span></span>
+
+<span data-ttu-id="ff679-127">Per altre informazioni sulle stringhe in C#, vedere [Stringhe](../../programming-guide/strings/index.md).</span><span class="sxs-lookup"><span data-stu-id="ff679-127">For more information about strings in C#, see [Strings](../../programming-guide/strings/index.md).</span></span>
+
+## <a name="example"></a><span data-ttu-id="ff679-128">Esempio</span><span class="sxs-lookup"><span data-stu-id="ff679-128">Example</span></span>
+
+[!code-csharp[csrefKeywordsTypes#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#17)]  
+
+## <a name="c-language-specification"></a><span data-ttu-id="ff679-129">Specifiche del linguaggio C#</span><span class="sxs-lookup"><span data-stu-id="ff679-129">C# language specification</span></span>
+
+[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+
+## <a name="see-also"></a><span data-ttu-id="ff679-130">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="ff679-130">See also</span></span>
+
+- [<span data-ttu-id="ff679-131">Riferimenti per C#</span><span class="sxs-lookup"><span data-stu-id="ff679-131">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="ff679-132">Guida per programmatori C#</span><span class="sxs-lookup"><span data-stu-id="ff679-132">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="ff679-133">Procedure consigliate per l'uso delle stringhe</span><span class="sxs-lookup"><span data-stu-id="ff679-133">Best Practices for Using Strings</span></span>](../../../standard/base-types/best-practices-strings.md)
+- [<span data-ttu-id="ff679-134">Parole chiave di C#</span><span class="sxs-lookup"><span data-stu-id="ff679-134">C# Keywords</span></span>](index.md)
+- [<span data-ttu-id="ff679-135">Guida per programmatori C#</span><span class="sxs-lookup"><span data-stu-id="ff679-135">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="ff679-136">Tipi riferimento</span><span class="sxs-lookup"><span data-stu-id="ff679-136">Reference Types</span></span>](reference-types.md)
+- [<span data-ttu-id="ff679-137">Tipi valore</span><span class="sxs-lookup"><span data-stu-id="ff679-137">Value Types</span></span>](value-types.md)
+- [<span data-ttu-id="ff679-138">Operazioni di base su stringhe</span><span class="sxs-lookup"><span data-stu-id="ff679-138">Basic String Operations</span></span>](../../../standard/base-types/basic-string-operations.md)
+- [<span data-ttu-id="ff679-139">Creazione di nuove stringhe</span><span class="sxs-lookup"><span data-stu-id="ff679-139">Creating New Strings</span></span>](../../../standard/base-types/creating-new.md)
+- [<span data-ttu-id="ff679-140">Tabella di formattazione dei risultati numerici</span><span class="sxs-lookup"><span data-stu-id="ff679-140">Formatting Numeric Results Table</span></span>](formatting-numeric-results-table.md)

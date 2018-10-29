@@ -2,51 +2,51 @@
 title: Annullare un'attività asincrona o un elenco di attività (C#)
 ms.date: 07/20/2015
 ms.assetid: eec32dbb-70ea-4c88-bd27-fa2e34546914
-ms.openlocfilehash: 4dc41bc6005a75c06d2c6cc1f3e8d487449b563d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b4dc6aaca100008f81b55f3d853b1ccf89d50bb2
+ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47203865"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49316493"
 ---
-# <a name="cancel-an-async-task-or-a-list-of-tasks-c"></a><span data-ttu-id="a24fc-102">Annullare un'attività asincrona o un elenco di attività (C#)</span><span class="sxs-lookup"><span data-stu-id="a24fc-102">Cancel an async task or a list of tasks (C#)</span></span>
+# <a name="cancel-an-async-task-or-a-list-of-tasks-c"></a><span data-ttu-id="ffbaf-102">Annullare un'attività asincrona o un elenco di attività (C#)</span><span class="sxs-lookup"><span data-stu-id="ffbaf-102">Cancel an async task or a list of tasks (C#)</span></span>
 
-<span data-ttu-id="a24fc-103">È possibile impostare un pulsante che consenta di annullare un'applicazione asincrona se non si vuole attendere il suo completamento.</span><span class="sxs-lookup"><span data-stu-id="a24fc-103">You can set up a button that you can use to cancel an async application if you don't want to wait for it to finish.</span></span> <span data-ttu-id="a24fc-104">Seguendo gli esempi in questo argomento, è possibile aggiungere un pulsante di annullamento di un'applicazione che scarica il contenuto di un sito Web o di un elenco di siti Web.</span><span class="sxs-lookup"><span data-stu-id="a24fc-104">By following the examples in this topic, you can add a cancellation button to an application that downloads the contents of one website or a list of websites.</span></span>
+<span data-ttu-id="ffbaf-103">È possibile impostare un pulsante che consenta di annullare un'applicazione asincrona se non si vuole attendere il suo completamento.</span><span class="sxs-lookup"><span data-stu-id="ffbaf-103">You can set up a button that you can use to cancel an async application if you don't want to wait for it to finish.</span></span> <span data-ttu-id="ffbaf-104">Seguendo gli esempi in questo argomento, è possibile aggiungere un pulsante di annullamento di un'applicazione che scarica il contenuto di un sito Web o di un elenco di siti Web.</span><span class="sxs-lookup"><span data-stu-id="ffbaf-104">By following the examples in this topic, you can add a cancellation button to an application that downloads the contents of one website or a list of websites.</span></span>
 
-<span data-ttu-id="a24fc-105">Negli esempi viene usata l'interfaccia utente che illustra l'[ottimizzazione dell'applicazione Async (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md).</span><span class="sxs-lookup"><span data-stu-id="a24fc-105">The examples use the UI that [Fine-Tuning Your Async Application (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md) describes.</span></span>
+<span data-ttu-id="ffbaf-105">Negli esempi viene usata l'interfaccia utente che illustra l'[ottimizzazione dell'applicazione Async (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md).</span><span class="sxs-lookup"><span data-stu-id="ffbaf-105">The examples use the UI that [Fine-Tuning Your Async Application (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md) describes.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="a24fc-106">Per eseguire gli esempi, è necessario avere installato Visual Studio 2012 o versioni successive e .NET Framework 4.5 o versioni successive nel computer.</span><span class="sxs-lookup"><span data-stu-id="a24fc-106">To run the examples, you must have Visual Studio 2012 or newer and the .NET Framework 4.5 or newer installed on your computer.</span></span>
+> <span data-ttu-id="ffbaf-106">Per eseguire gli esempi, è necessario avere installato Visual Studio 2012 o versioni successive e .NET Framework 4.5 o versioni successive nel computer.</span><span class="sxs-lookup"><span data-stu-id="ffbaf-106">To run the examples, you must have Visual Studio 2012 or newer and the .NET Framework 4.5 or newer installed on your computer.</span></span>
 
-## <a name="cancel-a-task"></a><span data-ttu-id="a24fc-107">Annullare un'attività</span><span class="sxs-lookup"><span data-stu-id="a24fc-107">Cancel a task</span></span>
+## <a name="cancel-a-task"></a><span data-ttu-id="ffbaf-107">Annullare un'attività</span><span class="sxs-lookup"><span data-stu-id="ffbaf-107">Cancel a task</span></span>
 
-<span data-ttu-id="a24fc-108">Il primo esempio associa il pulsante **Annulla** con un'attività di download singola.</span><span class="sxs-lookup"><span data-stu-id="a24fc-108">The first example associates the **Cancel** button with a single download task.</span></span> <span data-ttu-id="a24fc-109">Se si sceglie il pulsante mentre l'applicazione sta scaricando il contenuto, il download viene annullato.</span><span class="sxs-lookup"><span data-stu-id="a24fc-109">If you choose the button while the application is downloading content, the download is canceled.</span></span>
+<span data-ttu-id="ffbaf-108">Il primo esempio associa il pulsante **Annulla** con un'attività di download singola.</span><span class="sxs-lookup"><span data-stu-id="ffbaf-108">The first example associates the **Cancel** button with a single download task.</span></span> <span data-ttu-id="ffbaf-109">Se si sceglie il pulsante mentre l'applicazione sta scaricando il contenuto, il download viene annullato.</span><span class="sxs-lookup"><span data-stu-id="ffbaf-109">If you choose the button while the application is downloading content, the download is canceled.</span></span>
 
-### <a name="download-the-example"></a><span data-ttu-id="a24fc-110">Scaricare l'esempio</span><span class="sxs-lookup"><span data-stu-id="a24fc-110">Download the example</span></span>
+### <a name="download-the-example"></a><span data-ttu-id="ffbaf-110">Scaricare l'esempio</span><span class="sxs-lookup"><span data-stu-id="ffbaf-110">Download the example</span></span>
 
-<span data-ttu-id="a24fc-111">È possibile scaricare il progetto completo di Windows Presentation Foundation (WPF) da [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Esempio di attività asincrona: ottimizzazione dell'applicazione) e seguire la procedura seguente.</span><span class="sxs-lookup"><span data-stu-id="a24fc-111">You can download the complete Windows Presentation Foundation (WPF) project from [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) and then follow these steps.</span></span>
+<span data-ttu-id="ffbaf-111">È possibile scaricare il progetto completo di Windows Presentation Foundation (WPF) da [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Esempio di attività asincrona: ottimizzazione dell'applicazione) e seguire la procedura seguente.</span><span class="sxs-lookup"><span data-stu-id="ffbaf-111">You can download the complete Windows Presentation Foundation (WPF) project from [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) and then follow these steps.</span></span>
 
-1.  <span data-ttu-id="a24fc-112">Decomprimere il file scaricato e quindi avviare Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="a24fc-112">Decompress the file that you downloaded, and then start Visual Studio.</span></span>
+1.  <span data-ttu-id="ffbaf-112">Decomprimere il file scaricato e quindi avviare Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="ffbaf-112">Decompress the file that you downloaded, and then start Visual Studio.</span></span>
 
-2.  <span data-ttu-id="a24fc-113">Nella barra dei menu scegliere **File** > **Apri** > **Progetto/soluzione**.</span><span class="sxs-lookup"><span data-stu-id="a24fc-113">On the menu bar, choose **File** > **Open** > **Project/Solution**.</span></span>
+2.  <span data-ttu-id="ffbaf-113">Nella barra dei menu scegliere **File** > **Apri** > **Progetto/soluzione**.</span><span class="sxs-lookup"><span data-stu-id="ffbaf-113">On the menu bar, choose **File** > **Open** > **Project/Solution**.</span></span>
 
-3.  <span data-ttu-id="a24fc-114">Nella finestra di dialogo **Apri progetto** aprire la cartella che contiene il codice di esempio che è stato decompresso e aprire il file di soluzione (SLN) per AsyncFineTuningCS.</span><span class="sxs-lookup"><span data-stu-id="a24fc-114">In the **Open Project** dialog box, open the folder that holds the sample code that you decompressed, and then open the solution (.sln) file for AsyncFineTuningCS.</span></span>
+3.  <span data-ttu-id="ffbaf-114">Nella finestra di dialogo **Apri progetto** aprire la cartella che contiene il codice di esempio che è stato decompresso e aprire il file di soluzione (SLN) per AsyncFineTuningCS.</span><span class="sxs-lookup"><span data-stu-id="ffbaf-114">In the **Open Project** dialog box, open the folder that holds the sample code that you decompressed, and then open the solution (.sln) file for AsyncFineTuningCS.</span></span>
 
-4.  <span data-ttu-id="a24fc-115">In **Esplora soluzioni** aprire il menu di scelta rapida per il progetto **CancelATask** e scegliere **Imposta come progetto di avvio**.</span><span class="sxs-lookup"><span data-stu-id="a24fc-115">In **Solution Explorer**, open the shortcut menu for the **CancelATask** project, and then choose **Set as StartUp Project**.</span></span>
+4.  <span data-ttu-id="ffbaf-115">In **Esplora soluzioni** aprire il menu di scelta rapida per il progetto **CancelATask** e scegliere **Imposta come progetto di avvio**.</span><span class="sxs-lookup"><span data-stu-id="ffbaf-115">In **Solution Explorer**, open the shortcut menu for the **CancelATask** project, and then choose **Set as StartUp Project**.</span></span>
 
-5.  <span data-ttu-id="a24fc-116">Premere **F5** per eseguire il progetto (oppure **CTRL**+**F5** per eseguire il progetto senza il debug).</span><span class="sxs-lookup"><span data-stu-id="a24fc-116">Choose the **F5** key to run the project (or, press **Ctrl**+**F5** to run the project without debugging it).</span></span>
+5.  <span data-ttu-id="ffbaf-116">Premere **F5** per eseguire il progetto (oppure **CTRL**+**F5** per eseguire il progetto senza il debug).</span><span class="sxs-lookup"><span data-stu-id="ffbaf-116">Choose the **F5** key to run the project (or, press **Ctrl**+**F5** to run the project without debugging it).</span></span>
 
 > [!TIP]
-> <span data-ttu-id="a24fc-117">Se non si vuole scaricare il progetto, è possibile rivedere i file MainWindow.xaml.cs alla fine di questo argomento.</span><span class="sxs-lookup"><span data-stu-id="a24fc-117">If you don't want to download the project, you can review the MainWindow.xaml.cs files at the end of this topic.</span></span>
+> <span data-ttu-id="ffbaf-117">Se non si vuole scaricare il progetto, è possibile rivedere i file MainWindow.xaml.cs alla fine di questo argomento.</span><span class="sxs-lookup"><span data-stu-id="ffbaf-117">If you don't want to download the project, you can review the MainWindow.xaml.cs files at the end of this topic.</span></span>
 
-### <a name="build-the-example"></a><span data-ttu-id="a24fc-118">Compilare l'esempio</span><span class="sxs-lookup"><span data-stu-id="a24fc-118">Build the example</span></span>
- <span data-ttu-id="a24fc-119">Le modifiche seguenti aggiungono un pulsante **Annulla** a un'applicazione che scarica un sito Web.</span><span class="sxs-lookup"><span data-stu-id="a24fc-119">The following changes add a **Cancel** button to an application that downloads a website.</span></span> <span data-ttu-id="a24fc-120">Se non si vuole scaricare o compilare l'esempio, è possibile rivedere il prodotto finale nella sezione "Esempi completi" alla fine di questo argomento.</span><span class="sxs-lookup"><span data-stu-id="a24fc-120">If you don't want to download or build the example, you can review the final product in the "Complete Examples" section at the end of this topic.</span></span> <span data-ttu-id="a24fc-121">Gli asterischi contrassegnano le modifiche nel codice.</span><span class="sxs-lookup"><span data-stu-id="a24fc-121">Asterisks mark the changes in the code.</span></span>
+### <a name="build-the-example"></a><span data-ttu-id="ffbaf-118">Compilare l'esempio</span><span class="sxs-lookup"><span data-stu-id="ffbaf-118">Build the example</span></span>
+ <span data-ttu-id="ffbaf-119">Le modifiche seguenti aggiungono un pulsante **Annulla** a un'applicazione che scarica un sito Web.</span><span class="sxs-lookup"><span data-stu-id="ffbaf-119">The following changes add a **Cancel** button to an application that downloads a website.</span></span> <span data-ttu-id="ffbaf-120">Se non si vuole scaricare o compilare l'esempio, è possibile rivedere il prodotto finale nella sezione "Esempi completi" alla fine di questo argomento.</span><span class="sxs-lookup"><span data-stu-id="ffbaf-120">If you don't want to download or build the example, you can review the final product in the "Complete Examples" section at the end of this topic.</span></span> <span data-ttu-id="ffbaf-121">Gli asterischi contrassegnano le modifiche nel codice.</span><span class="sxs-lookup"><span data-stu-id="ffbaf-121">Asterisks mark the changes in the code.</span></span>
 
- <span data-ttu-id="a24fc-122">Per compilare l'esempio passo a passo, seguire le istruzioni nella sezione "Download dell'esempio", ma scegliere **StarterCode** come **progetto di avvio** anziché **CancelATask**.</span><span class="sxs-lookup"><span data-stu-id="a24fc-122">To build the example yourself, step by step, follow the instructions in the "Downloading the Example" section, but choose **StarterCode** as the **StartUp Project** instead of **CancelATask**.</span></span>
+ <span data-ttu-id="ffbaf-122">Per compilare l'esempio passo a passo, seguire le istruzioni nella sezione "Download dell'esempio", ma scegliere **StarterCode** come **progetto di avvio** anziché **CancelATask**.</span><span class="sxs-lookup"><span data-stu-id="ffbaf-122">To build the example yourself, step by step, follow the instructions in the "Downloading the Example" section, but choose **StarterCode** as the **StartUp Project** instead of **CancelATask**.</span></span>
 
- <span data-ttu-id="a24fc-123">Aggiungere quindi le modifiche seguenti al file MainWindow.xaml.cs di tale progetto.</span><span class="sxs-lookup"><span data-stu-id="a24fc-123">Then add the following changes to the MainWindow.xaml.cs file of that project.</span></span>
+ <span data-ttu-id="ffbaf-123">Aggiungere quindi le modifiche seguenti al file MainWindow.xaml.cs di tale progetto.</span><span class="sxs-lookup"><span data-stu-id="ffbaf-123">Then add the following changes to the MainWindow.xaml.cs file of that project.</span></span>
 
-1.  <span data-ttu-id="a24fc-124">Dichiarare una variabile `CancellationTokenSource`, `cts`, che sia nell'ambito di accesso di tutti i metodi.</span><span class="sxs-lookup"><span data-stu-id="a24fc-124">Declare a `CancellationTokenSource` variable, `cts`, that’s in scope for all methods that access it.</span></span>
+1.  <span data-ttu-id="ffbaf-124">Dichiarare una variabile `CancellationTokenSource`, `cts`, che sia nell'ambito di accesso di tutti i metodi.</span><span class="sxs-lookup"><span data-stu-id="ffbaf-124">Declare a `CancellationTokenSource` variable, `cts`, that’s in scope for all methods that access it.</span></span>
 
     ```csharp
     public partial class MainWindow : Window
@@ -55,7 +55,7 @@ ms.locfileid: "47203865"
         CancellationTokenSource cts;
     ```
 
-2.  <span data-ttu-id="a24fc-125">Aggiungere il gestore eventi seguente per il pulsante **Annulla**.</span><span class="sxs-lookup"><span data-stu-id="a24fc-125">Add the following event handler for the **Cancel** button.</span></span> <span data-ttu-id="a24fc-126">Il gestore dell'evento usa il metodo <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> per inviare notifica a `cts` quando l'utente richiede l'annullamento.</span><span class="sxs-lookup"><span data-stu-id="a24fc-126">The event handler uses the <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> method to notify `cts` when the user requests cancellation.</span></span>
+2.  <span data-ttu-id="ffbaf-125">Aggiungere il gestore eventi seguente per il pulsante **Annulla**.</span><span class="sxs-lookup"><span data-stu-id="ffbaf-125">Add the following event handler for the **Cancel** button.</span></span> <span data-ttu-id="ffbaf-126">Il gestore dell'evento usa il metodo <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> per inviare notifica a `cts` quando l'utente richiede l'annullamento.</span><span class="sxs-lookup"><span data-stu-id="ffbaf-126">The event handler uses the <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> method to notify `cts` when the user requests cancellation.</span></span>
 
     ```csharp
     // ***Add an event handler for the Cancel button.
@@ -68,16 +68,16 @@ ms.locfileid: "47203865"
     }
     ```
 
-3.  <span data-ttu-id="a24fc-127">Apportare le modifiche seguenti nel gestore eventi per il pulsante **Avvio**, `startButton_Click`.</span><span class="sxs-lookup"><span data-stu-id="a24fc-127">Make the following changes in the event handler for the **Start** button, `startButton_Click`.</span></span>
+3.  <span data-ttu-id="ffbaf-127">Apportare le modifiche seguenti nel gestore eventi per il pulsante **Avvio**, `startButton_Click`.</span><span class="sxs-lookup"><span data-stu-id="ffbaf-127">Make the following changes in the event handler for the **Start** button, `startButton_Click`.</span></span>
 
-    -   <span data-ttu-id="a24fc-128">Creare un'istanza di `CancellationTokenSource`, `cts`.</span><span class="sxs-lookup"><span data-stu-id="a24fc-128">Instantiate the `CancellationTokenSource`, `cts`.</span></span>
+    -   <span data-ttu-id="ffbaf-128">Creare un'istanza di `CancellationTokenSource`, `cts`.</span><span class="sxs-lookup"><span data-stu-id="ffbaf-128">Instantiate the `CancellationTokenSource`, `cts`.</span></span>
 
         ```csharp
         // ***Instantiate the CancellationTokenSource.
         cts = new CancellationTokenSource();
         ```
 
-    -   <span data-ttu-id="a24fc-129">Nella chiamata a `AccessTheWebAsync`, che scarica il contenuto di un sito Web specifico, inviare la proprietà <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=nameWithType> di `cts` come argomento.</span><span class="sxs-lookup"><span data-stu-id="a24fc-129">In the call to `AccessTheWebAsync`, which downloads the contents of a specified website, send the <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=nameWithType> property of `cts` as an argument.</span></span> <span data-ttu-id="a24fc-130">La proprietà `Token` propaga il messaggio se viene richiesto l'annullamento.</span><span class="sxs-lookup"><span data-stu-id="a24fc-130">The `Token` property propagates the message if cancellation is requested.</span></span> <span data-ttu-id="a24fc-131">Aggiungere un blocco catch che visualizzi un messaggio se l'utente sceglie di annullare l'operazione di download.</span><span class="sxs-lookup"><span data-stu-id="a24fc-131">Add a catch block that displays a message if the user chooses to cancel the download operation.</span></span> <span data-ttu-id="a24fc-132">Il codice seguente illustra le modifiche.</span><span class="sxs-lookup"><span data-stu-id="a24fc-132">The following code shows the changes.</span></span>
+    -   <span data-ttu-id="ffbaf-129">Nella chiamata a `AccessTheWebAsync`, che scarica il contenuto di un sito Web specifico, inviare la proprietà <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=nameWithType> di `cts` come argomento.</span><span class="sxs-lookup"><span data-stu-id="ffbaf-129">In the call to `AccessTheWebAsync`, which downloads the contents of a specified website, send the <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=nameWithType> property of `cts` as an argument.</span></span> <span data-ttu-id="ffbaf-130">La proprietà `Token` propaga il messaggio se viene richiesto l'annullamento.</span><span class="sxs-lookup"><span data-stu-id="ffbaf-130">The `Token` property propagates the message if cancellation is requested.</span></span> <span data-ttu-id="ffbaf-131">Aggiungere un blocco catch che visualizzi un messaggio se l'utente sceglie di annullare l'operazione di download.</span><span class="sxs-lookup"><span data-stu-id="ffbaf-131">Add a catch block that displays a message if the user chooses to cancel the download operation.</span></span> <span data-ttu-id="ffbaf-132">Il codice seguente illustra le modifiche.</span><span class="sxs-lookup"><span data-stu-id="ffbaf-132">The following code shows the changes.</span></span>
 
         ```csharp
         try
@@ -98,9 +98,9 @@ ms.locfileid: "47203865"
         }
         ```
 
-4.  <span data-ttu-id="a24fc-133">In `AccessTheWebAsync` usare l'overload <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> del metodo `GetAsync` nel tipo <xref:System.Net.Http.HttpClient> per scaricare il contenuto di un sito Web.</span><span class="sxs-lookup"><span data-stu-id="a24fc-133">In `AccessTheWebAsync`, use the  <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> overload of the `GetAsync` method in the <xref:System.Net.Http.HttpClient> type to download the contents of a website.</span></span> <span data-ttu-id="a24fc-134">Passare `ct`, il parametro <xref:System.Threading.CancellationToken> di `AccessTheWebAsync`, come secondo argomento.</span><span class="sxs-lookup"><span data-stu-id="a24fc-134">Pass `ct`, the <xref:System.Threading.CancellationToken> parameter of `AccessTheWebAsync`, as the second argument.</span></span> <span data-ttu-id="a24fc-135">Il token trasporta il messaggio se l'utente sceglie il pulsante **Annulla**.</span><span class="sxs-lookup"><span data-stu-id="a24fc-135">The token carries the message if the user chooses the **Cancel** button.</span></span>
+4.  <span data-ttu-id="ffbaf-133">In `AccessTheWebAsync` usare l'overload <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> del metodo `GetAsync` nel tipo <xref:System.Net.Http.HttpClient> per scaricare il contenuto di un sito Web.</span><span class="sxs-lookup"><span data-stu-id="ffbaf-133">In `AccessTheWebAsync`, use the  <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> overload of the `GetAsync` method in the <xref:System.Net.Http.HttpClient> type to download the contents of a website.</span></span> <span data-ttu-id="ffbaf-134">Passare `ct`, il parametro <xref:System.Threading.CancellationToken> di `AccessTheWebAsync`, come secondo argomento.</span><span class="sxs-lookup"><span data-stu-id="ffbaf-134">Pass `ct`, the <xref:System.Threading.CancellationToken> parameter of `AccessTheWebAsync`, as the second argument.</span></span> <span data-ttu-id="ffbaf-135">Il token trasporta il messaggio se l'utente sceglie il pulsante **Annulla**.</span><span class="sxs-lookup"><span data-stu-id="ffbaf-135">The token carries the message if the user chooses the **Cancel** button.</span></span>
 
-     <span data-ttu-id="a24fc-136">Il codice seguente illustra tutte le modifiche in `AccessTheWebAsync`.</span><span class="sxs-lookup"><span data-stu-id="a24fc-136">The following code shows the changes in `AccessTheWebAsync`.</span></span>
+     <span data-ttu-id="ffbaf-136">Il codice seguente illustra tutte le modifiche in `AccessTheWebAsync`.</span><span class="sxs-lookup"><span data-stu-id="ffbaf-136">The following code shows the changes in `AccessTheWebAsync`.</span></span>
 
     ```csharp
     // ***Provide a parameter for the CancellationToken.
@@ -116,7 +116,7 @@ ms.locfileid: "47203865"
 
         // GetAsync returns a Task<HttpResponseMessage>.
         // ***The ct argument carries the message if the Cancel button is chosen.
-        HttpResponseMessage response = await client.GetAsync("http://msdn.microsoft.com/library/dd470362.aspx", ct);
+        HttpResponseMessage response = await client.GetAsync("https://msdn.microsoft.com/library/dd470362.aspx", ct);
 
         // Retrieve the website contents from the HttpResponseMessage.
         byte[] urlContents = await response.Content.ReadAsByteArrayAsync();
@@ -126,47 +126,47 @@ ms.locfileid: "47203865"
     }
     ```
 
-5.  <span data-ttu-id="a24fc-137">Se non si annulla il programma, viene prodotto l'output seguente.</span><span class="sxs-lookup"><span data-stu-id="a24fc-137">If you don’t cancel the program, it produces the following output.</span></span>
+5.  <span data-ttu-id="ffbaf-137">Se non si annulla il programma, viene prodotto l'output seguente.</span><span class="sxs-lookup"><span data-stu-id="ffbaf-137">If you don’t cancel the program, it produces the following output.</span></span>
 
     ```text
     Ready to download.
     Length of the downloaded string: 158125.
     ```
 
-     <span data-ttu-id="a24fc-138">Se si sceglie il pulsante **Annulla** prima che il programma termini il download del contenuto, viene prodotto l'output seguente.</span><span class="sxs-lookup"><span data-stu-id="a24fc-138">If you choose the **Cancel** button before the program finishes downloading the content, the program produces the following output.</span></span>
+     <span data-ttu-id="ffbaf-138">Se si sceglie il pulsante **Annulla** prima che il programma termini il download del contenuto, viene prodotto l'output seguente.</span><span class="sxs-lookup"><span data-stu-id="ffbaf-138">If you choose the **Cancel** button before the program finishes downloading the content, the program produces the following output.</span></span>
 
     ```text
     Ready to download.
     Download canceled.
     ```
 
-## <a name="cancel-a-list-of-tasks"></a><span data-ttu-id="a24fc-139">Annullare un elenco di attività</span><span class="sxs-lookup"><span data-stu-id="a24fc-139">Cancel a list of tasks</span></span>
+## <a name="cancel-a-list-of-tasks"></a><span data-ttu-id="ffbaf-139">Annullare un elenco di attività</span><span class="sxs-lookup"><span data-stu-id="ffbaf-139">Cancel a list of tasks</span></span>
 
-<span data-ttu-id="a24fc-140">È possibile estendere l'esempio precedente per annullare più attività associando la stessa istanza `CancellationTokenSource` con ogni attività.</span><span class="sxs-lookup"><span data-stu-id="a24fc-140">You can extend the previous example to cancel many tasks by associating the same `CancellationTokenSource` instance with each task.</span></span> <span data-ttu-id="a24fc-141">Se si sceglie il pulsante **Annulla**, vengono annullate tutte le attività che non sono ancora complete.</span><span class="sxs-lookup"><span data-stu-id="a24fc-141">If you choose the **Cancel** button, you cancel all tasks that aren’t yet complete.</span></span>
+<span data-ttu-id="ffbaf-140">È possibile estendere l'esempio precedente per annullare più attività associando la stessa istanza `CancellationTokenSource` con ogni attività.</span><span class="sxs-lookup"><span data-stu-id="ffbaf-140">You can extend the previous example to cancel many tasks by associating the same `CancellationTokenSource` instance with each task.</span></span> <span data-ttu-id="ffbaf-141">Se si sceglie il pulsante **Annulla**, vengono annullate tutte le attività che non sono ancora complete.</span><span class="sxs-lookup"><span data-stu-id="ffbaf-141">If you choose the **Cancel** button, you cancel all tasks that aren’t yet complete.</span></span>
 
-### <a name="download-the-example"></a><span data-ttu-id="a24fc-142">Scaricare l'esempio</span><span class="sxs-lookup"><span data-stu-id="a24fc-142">Download the example</span></span>
+### <a name="download-the-example"></a><span data-ttu-id="ffbaf-142">Scaricare l'esempio</span><span class="sxs-lookup"><span data-stu-id="ffbaf-142">Download the example</span></span>
 
-<span data-ttu-id="a24fc-143">È possibile scaricare il progetto completo di Windows Presentation Foundation (WPF) da [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Esempio di attività asincrona: ottimizzazione dell'applicazione) e seguire la procedura seguente.</span><span class="sxs-lookup"><span data-stu-id="a24fc-143">You can download the complete Windows Presentation Foundation (WPF) project from [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) and then follow these steps.</span></span>
+<span data-ttu-id="ffbaf-143">È possibile scaricare il progetto completo di Windows Presentation Foundation (WPF) da [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Esempio di attività asincrona: ottimizzazione dell'applicazione) e seguire la procedura seguente.</span><span class="sxs-lookup"><span data-stu-id="ffbaf-143">You can download the complete Windows Presentation Foundation (WPF) project from [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) and then follow these steps.</span></span>
 
-1.  <span data-ttu-id="a24fc-144">Decomprimere il file scaricato e quindi avviare Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="a24fc-144">Decompress the file that you downloaded, and then start Visual Studio.</span></span>
+1.  <span data-ttu-id="ffbaf-144">Decomprimere il file scaricato e quindi avviare Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="ffbaf-144">Decompress the file that you downloaded, and then start Visual Studio.</span></span>
 
-2.  <span data-ttu-id="a24fc-145">Nella barra dei menu scegliere **File** > **Apri** > **Progetto/soluzione**.</span><span class="sxs-lookup"><span data-stu-id="a24fc-145">On the menu bar, choose **File** > **Open** > **Project/Solution**.</span></span>
+2.  <span data-ttu-id="ffbaf-145">Nella barra dei menu scegliere **File** > **Apri** > **Progetto/soluzione**.</span><span class="sxs-lookup"><span data-stu-id="ffbaf-145">On the menu bar, choose **File** > **Open** > **Project/Solution**.</span></span>
 
-3.  <span data-ttu-id="a24fc-146">Nella finestra di dialogo **Apri progetto** aprire la cartella che contiene il codice di esempio che è stato decompresso e aprire il file di soluzione (SLN) per AsyncFineTuningCS.</span><span class="sxs-lookup"><span data-stu-id="a24fc-146">In the **Open Project** dialog box, open the folder that holds the sample code that you decompressed, and then open the solution (.sln) file for AsyncFineTuningCS.</span></span>
+3.  <span data-ttu-id="ffbaf-146">Nella finestra di dialogo **Apri progetto** aprire la cartella che contiene il codice di esempio che è stato decompresso e aprire il file di soluzione (SLN) per AsyncFineTuningCS.</span><span class="sxs-lookup"><span data-stu-id="ffbaf-146">In the **Open Project** dialog box, open the folder that holds the sample code that you decompressed, and then open the solution (.sln) file for AsyncFineTuningCS.</span></span>
 
-4.  <span data-ttu-id="a24fc-147">In **Esplora soluzioni** aprire il menu di scelta rapida per il progetto **CancelAListOfTasks** e scegliere **Imposta come progetto di avvio**.</span><span class="sxs-lookup"><span data-stu-id="a24fc-147">In **Solution Explorer**, open the shortcut menu for the **CancelAListOfTasks** project, and then choose **Set as StartUp Project**.</span></span>
+4.  <span data-ttu-id="ffbaf-147">In **Esplora soluzioni** aprire il menu di scelta rapida per il progetto **CancelAListOfTasks** e scegliere **Imposta come progetto di avvio**.</span><span class="sxs-lookup"><span data-stu-id="ffbaf-147">In **Solution Explorer**, open the shortcut menu for the **CancelAListOfTasks** project, and then choose **Set as StartUp Project**.</span></span>
 
-5.  <span data-ttu-id="a24fc-148">Premere **F5** per eseguire il progetto.</span><span class="sxs-lookup"><span data-stu-id="a24fc-148">Choose the **F5** key to run the project.</span></span>
+5.  <span data-ttu-id="ffbaf-148">Premere **F5** per eseguire il progetto.</span><span class="sxs-lookup"><span data-stu-id="ffbaf-148">Choose the **F5** key to run the project.</span></span>
 
-     <span data-ttu-id="a24fc-149">Premere **CTRL**+**F5** per eseguire il progetto senza il debug.</span><span class="sxs-lookup"><span data-stu-id="a24fc-149">Choose the **Ctrl**+**F5** keys to run the project without debugging it.</span></span>
+     <span data-ttu-id="ffbaf-149">Premere **CTRL**+**F5** per eseguire il progetto senza il debug.</span><span class="sxs-lookup"><span data-stu-id="ffbaf-149">Choose the **Ctrl**+**F5** keys to run the project without debugging it.</span></span>
 
-<span data-ttu-id="a24fc-150">Se non si vuole scaricare il progetto, è possibile rivedere i file MainWindow.xaml.cs alla fine di questo argomento.</span><span class="sxs-lookup"><span data-stu-id="a24fc-150">If you don't want to download the project, you can review the MainWindow.xaml.cs files at the end of this topic.</span></span>
+<span data-ttu-id="ffbaf-150">Se non si vuole scaricare il progetto, è possibile rivedere i file MainWindow.xaml.cs alla fine di questo argomento.</span><span class="sxs-lookup"><span data-stu-id="ffbaf-150">If you don't want to download the project, you can review the MainWindow.xaml.cs files at the end of this topic.</span></span>
 
-### <a name="build-the-example"></a><span data-ttu-id="a24fc-151">Compilare l'esempio</span><span class="sxs-lookup"><span data-stu-id="a24fc-151">Build the example</span></span>
+### <a name="build-the-example"></a><span data-ttu-id="ffbaf-151">Compilare l'esempio</span><span class="sxs-lookup"><span data-stu-id="ffbaf-151">Build the example</span></span>
 
-<span data-ttu-id="a24fc-152">Per estendere l'esempio passo a passo, seguire le istruzioni nella sezione "Download dell'esempio", ma scegliere **CancelATask** come **progetto di avvio**.</span><span class="sxs-lookup"><span data-stu-id="a24fc-152">To extend the example yourself, step by step, follow the instructions in the "Downloading the Example" section, but choose **CancelATask** as the **StartUp Project**.</span></span> <span data-ttu-id="a24fc-153">Aggiungere le modifiche seguenti a tale progetto.</span><span class="sxs-lookup"><span data-stu-id="a24fc-153">Add the following changes to that project.</span></span> <span data-ttu-id="a24fc-154">Gli asterischi contrassegnano le modifiche nel programma.</span><span class="sxs-lookup"><span data-stu-id="a24fc-154">Asterisks mark the changes in the program.</span></span>
+<span data-ttu-id="ffbaf-152">Per estendere l'esempio passo a passo, seguire le istruzioni nella sezione "Download dell'esempio", ma scegliere **CancelATask** come **progetto di avvio**.</span><span class="sxs-lookup"><span data-stu-id="ffbaf-152">To extend the example yourself, step by step, follow the instructions in the "Downloading the Example" section, but choose **CancelATask** as the **StartUp Project**.</span></span> <span data-ttu-id="ffbaf-153">Aggiungere le modifiche seguenti a tale progetto.</span><span class="sxs-lookup"><span data-stu-id="ffbaf-153">Add the following changes to that project.</span></span> <span data-ttu-id="ffbaf-154">Gli asterischi contrassegnano le modifiche nel programma.</span><span class="sxs-lookup"><span data-stu-id="ffbaf-154">Asterisks mark the changes in the program.</span></span>
 
-1.  <span data-ttu-id="a24fc-155">Aggiungere un metodo per creare un elenco di indirizzi Web.</span><span class="sxs-lookup"><span data-stu-id="a24fc-155">Add a method to create a list of web addresses.</span></span>
+1.  <span data-ttu-id="ffbaf-155">Aggiungere un metodo per creare un elenco di indirizzi Web.</span><span class="sxs-lookup"><span data-stu-id="ffbaf-155">Add a method to create a list of web addresses.</span></span>
 
     ```csharp
     // ***Add a method that creates a list of web addresses.
@@ -174,26 +174,26 @@ ms.locfileid: "47203865"
     {
         List<string> urls = new List<string>
         {
-            "http://msdn.microsoft.com",
-            "http://msdn.microsoft.com/library/hh290138.aspx",
-            "http://msdn.microsoft.com/library/hh290140.aspx",
-            "http://msdn.microsoft.com/library/dd470362.aspx",
-            "http://msdn.microsoft.com/library/aa578028.aspx",
-            "http://msdn.microsoft.com/library/ms404677.aspx",
-            "http://msdn.microsoft.com/library/ff730837.aspx"
+            "https://msdn.microsoft.com",
+            "https://msdn.microsoft.com/library/hh290138.aspx",
+            "https://msdn.microsoft.com/library/hh290140.aspx",
+            "https://msdn.microsoft.com/library/dd470362.aspx",
+            "https://msdn.microsoft.com/library/aa578028.aspx",
+            "https://msdn.microsoft.com/library/ms404677.aspx",
+            "https://msdn.microsoft.com/library/ff730837.aspx"
         };
         return urls;
     }
     ```
 
-2.  <span data-ttu-id="a24fc-156">Chiamare il metodo in `AccessTheWebAsync`.</span><span class="sxs-lookup"><span data-stu-id="a24fc-156">Call the method in `AccessTheWebAsync`.</span></span>
+2.  <span data-ttu-id="ffbaf-156">Chiamare il metodo in `AccessTheWebAsync`.</span><span class="sxs-lookup"><span data-stu-id="ffbaf-156">Call the method in `AccessTheWebAsync`.</span></span>
 
     ```csharp
     // ***Call SetUpURLList to make a list of web addresses.
     List<string> urlList = SetUpURLList();
     ```
 
-3.  <span data-ttu-id="a24fc-157">Aggiungere il ciclo seguente in `AccessTheWebAsync` per elaborare gli indirizzi Web nell'elenco.</span><span class="sxs-lookup"><span data-stu-id="a24fc-157">Add the following loop in `AccessTheWebAsync` to process each web address in the list.</span></span>
+3.  <span data-ttu-id="ffbaf-157">Aggiungere il ciclo seguente in `AccessTheWebAsync` per elaborare gli indirizzi Web nell'elenco.</span><span class="sxs-lookup"><span data-stu-id="ffbaf-157">Add the following loop in `AccessTheWebAsync` to process each web address in the list.</span></span>
 
     ```csharp
     // ***Add a loop to process the list of web addresses.
@@ -212,19 +212,19 @@ ms.locfileid: "47203865"
     }
     ```
 
-4.  <span data-ttu-id="a24fc-158">Poiché `AccessTheWebAsync` visualizza le lunghezze, il metodo non deve restituire nessun valore.</span><span class="sxs-lookup"><span data-stu-id="a24fc-158">Because `AccessTheWebAsync` displays the lengths, the method doesn't need to return anything.</span></span> <span data-ttu-id="a24fc-159">Rimuovere l'istruzione return e modificare il tipo restituito del metodo in <xref:System.Threading.Tasks.Task> anziché <xref:System.Threading.Tasks.Task%601>.</span><span class="sxs-lookup"><span data-stu-id="a24fc-159">Remove the return statement, and change the return type of the method to <xref:System.Threading.Tasks.Task> instead of <xref:System.Threading.Tasks.Task%601>.</span></span>
+4.  <span data-ttu-id="ffbaf-158">Poiché `AccessTheWebAsync` visualizza le lunghezze, il metodo non deve restituire nessun valore.</span><span class="sxs-lookup"><span data-stu-id="ffbaf-158">Because `AccessTheWebAsync` displays the lengths, the method doesn't need to return anything.</span></span> <span data-ttu-id="ffbaf-159">Rimuovere l'istruzione return e modificare il tipo restituito del metodo in <xref:System.Threading.Tasks.Task> anziché <xref:System.Threading.Tasks.Task%601>.</span><span class="sxs-lookup"><span data-stu-id="ffbaf-159">Remove the return statement, and change the return type of the method to <xref:System.Threading.Tasks.Task> instead of <xref:System.Threading.Tasks.Task%601>.</span></span>
 
     ```csharp
     async Task AccessTheWebAsync(CancellationToken ct)
     ```
 
-     <span data-ttu-id="a24fc-160">Chiamare il metodo da `startButton_Click` usando un'istruzione anziché un'espressione.</span><span class="sxs-lookup"><span data-stu-id="a24fc-160">Call the method from `startButton_Click` by using a statement instead of an expression.</span></span>
+     <span data-ttu-id="ffbaf-160">Chiamare il metodo da `startButton_Click` usando un'istruzione anziché un'espressione.</span><span class="sxs-lookup"><span data-stu-id="ffbaf-160">Call the method from `startButton_Click` by using a statement instead of an expression.</span></span>
 
     ```csharp
     await AccessTheWebAsync(cts.Token);
     ```
 
-5.  <span data-ttu-id="a24fc-161">Se non si annulla il programma, viene prodotto l'output seguente.</span><span class="sxs-lookup"><span data-stu-id="a24fc-161">If you don’t cancel the program, it produces the following output.</span></span>
+5.  <span data-ttu-id="ffbaf-161">Se non si annulla il programma, viene prodotto l'output seguente.</span><span class="sxs-lookup"><span data-stu-id="ffbaf-161">If you don’t cancel the program, it produces the following output.</span></span>
 
     ```text
     Length of the downloaded string: 35939.
@@ -244,7 +244,7 @@ ms.locfileid: "47203865"
     Downloads complete.
     ```
 
-     <span data-ttu-id="a24fc-162">Se si sceglie il pulsante **Annulla** prima di aver completato i download, l'output contiene le lunghezze dei download completati prima dell'annullamento.</span><span class="sxs-lookup"><span data-stu-id="a24fc-162">If you choose the **Cancel** button before the downloads are complete, the output contains the lengths of the downloads that completed before the cancellation.</span></span>
+     <span data-ttu-id="ffbaf-162">Se si sceglie il pulsante **Annulla** prima di aver completato i download, l'output contiene le lunghezze dei download completati prima dell'annullamento.</span><span class="sxs-lookup"><span data-stu-id="ffbaf-162">If you choose the **Cancel** button before the downloads are complete, the output contains the lengths of the downloads that completed before the cancellation.</span></span>
 
     ```text
     Length of the downloaded string: 35939.
@@ -256,15 +256,15 @@ ms.locfileid: "47203865"
     Downloads canceled.
     ```
 
-## <a name="complete-examples"></a><span data-ttu-id="a24fc-163">Esempi completi</span><span class="sxs-lookup"><span data-stu-id="a24fc-163">Complete examples</span></span>
+## <a name="complete-examples"></a><span data-ttu-id="ffbaf-163">Esempi completi</span><span class="sxs-lookup"><span data-stu-id="ffbaf-163">Complete examples</span></span>
 
-<span data-ttu-id="a24fc-164">Le sezioni seguenti contengono il codice per ognuno degli esempi precedenti.</span><span class="sxs-lookup"><span data-stu-id="a24fc-164">The following sections contain the code for each of the previous examples.</span></span> <span data-ttu-id="a24fc-165">Si noti che è necessario aggiungere un riferimento per <xref:System.Net.Http>.</span><span class="sxs-lookup"><span data-stu-id="a24fc-165">Notice that you must add a reference for <xref:System.Net.Http>.</span></span>
+<span data-ttu-id="ffbaf-164">Le sezioni seguenti contengono il codice per ognuno degli esempi precedenti.</span><span class="sxs-lookup"><span data-stu-id="ffbaf-164">The following sections contain the code for each of the previous examples.</span></span> <span data-ttu-id="ffbaf-165">Si noti che è necessario aggiungere un riferimento per <xref:System.Net.Http>.</span><span class="sxs-lookup"><span data-stu-id="ffbaf-165">Notice that you must add a reference for <xref:System.Net.Http>.</span></span>
 
-<span data-ttu-id="a24fc-166">È possibile scaricare i progetti da [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Esempio di attività asincrona: ottimizzazione dell'applicazione).</span><span class="sxs-lookup"><span data-stu-id="a24fc-166">You can download the projects from [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).</span></span>
+<span data-ttu-id="ffbaf-166">È possibile scaricare i progetti da [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Esempio di attività asincrona: ottimizzazione dell'applicazione).</span><span class="sxs-lookup"><span data-stu-id="ffbaf-166">You can download the projects from [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).</span></span>
 
-### <a name="example---cancel-a-task"></a><span data-ttu-id="a24fc-167">Esempio - Annullare un'attività</span><span class="sxs-lookup"><span data-stu-id="a24fc-167">Example - Cancel a task</span></span>
+### <a name="example---cancel-a-task"></a><span data-ttu-id="ffbaf-167">Esempio - Annullare un'attività</span><span class="sxs-lookup"><span data-stu-id="ffbaf-167">Example - Cancel a task</span></span>
 
-<span data-ttu-id="a24fc-168">Il codice seguente è il file completo del file MainWindow.xaml.cs per l'esempio che annulla un'attività singola.</span><span class="sxs-lookup"><span data-stu-id="a24fc-168">The following code is the complete MainWindow.xaml.cs file for the example that cancels a single task.</span></span>
+<span data-ttu-id="ffbaf-168">Il codice seguente è il file completo del file MainWindow.xaml.cs per l'esempio che annulla un'attività singola.</span><span class="sxs-lookup"><span data-stu-id="ffbaf-168">The following code is the complete MainWindow.xaml.cs file for the example that cancels a single task.</span></span>
 
 ```csharp
 using System;
@@ -350,7 +350,7 @@ namespace CancelATask
 
             // GetAsync returns a Task<HttpResponseMessage>.
             // ***The ct argument carries the message if the Cancel button is chosen.
-            HttpResponseMessage response = await client.GetAsync("http://msdn.microsoft.com/library/dd470362.aspx", ct);
+            HttpResponseMessage response = await client.GetAsync("https://msdn.microsoft.com/library/dd470362.aspx", ct);
 
             // Retrieve the website contents from the HttpResponseMessage.
             byte[] urlContents = await response.Content.ReadAsByteArrayAsync();
@@ -374,9 +374,9 @@ namespace CancelATask
 }
 ```
 
-### <a name="example---cancel-a-list-of-tasks"></a><span data-ttu-id="a24fc-169">Esempio - Annullare un elenco di attività</span><span class="sxs-lookup"><span data-stu-id="a24fc-169">Example - Cancel a list of tasks</span></span>
+### <a name="example---cancel-a-list-of-tasks"></a><span data-ttu-id="ffbaf-169">Esempio - Annullare un elenco di attività</span><span class="sxs-lookup"><span data-stu-id="ffbaf-169">Example - Cancel a list of tasks</span></span>
 
-<span data-ttu-id="a24fc-170">Il codice seguente è il file MainWindow.xaml.cs completo per l'esempio che annulla un elenco di attività.</span><span class="sxs-lookup"><span data-stu-id="a24fc-170">The following code is the complete MainWindow.xaml.cs file for the example that cancels a list of tasks.</span></span>
+<span data-ttu-id="ffbaf-170">Il codice seguente è il file MainWindow.xaml.cs completo per l'esempio che annulla un elenco di attività.</span><span class="sxs-lookup"><span data-stu-id="ffbaf-170">The following code is the complete MainWindow.xaml.cs file for the example that cancels a list of tasks.</span></span>
 
 ```csharp
 using System;
@@ -478,13 +478,13 @@ namespace CancelAListOfTasks
         {
             List<string> urls = new List<string>
             {
-                "http://msdn.microsoft.com",
-                "http://msdn.microsoft.com/library/hh290138.aspx",
-                "http://msdn.microsoft.com/library/hh290140.aspx",
-                "http://msdn.microsoft.com/library/dd470362.aspx",
-                "http://msdn.microsoft.com/library/aa578028.aspx",
-                "http://msdn.microsoft.com/library/ms404677.aspx",
-                "http://msdn.microsoft.com/library/ff730837.aspx"
+                "https://msdn.microsoft.com",
+                "https://msdn.microsoft.com/library/hh290138.aspx",
+                "https://msdn.microsoft.com/library/hh290140.aspx",
+                "https://msdn.microsoft.com/library/dd470362.aspx",
+                "https://msdn.microsoft.com/library/aa578028.aspx",
+                "https://msdn.microsoft.com/library/ms404677.aspx",
+                "https://msdn.microsoft.com/library/ff730837.aspx"
             };
             return urls;
         }
@@ -520,10 +520,10 @@ namespace CancelAListOfTasks
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="a24fc-171">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a24fc-171">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ffbaf-171">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="ffbaf-171">See also</span></span>
 
 - <xref:System.Threading.CancellationTokenSource>
 - <xref:System.Threading.CancellationToken>
-- [<span data-ttu-id="a24fc-172">Programmazione asincrona con Async e Await (C#)</span><span class="sxs-lookup"><span data-stu-id="a24fc-172">Asynchronous Programming with async and await (C#)</span></span>](../../../../csharp/programming-guide/concepts/async/index.md)
-- [<span data-ttu-id="a24fc-173">Ottimizzazione dell'applicazione Async (C#)</span><span class="sxs-lookup"><span data-stu-id="a24fc-173">Fine-Tuning Your Async Application (C#)</span></span>](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)
-- <span data-ttu-id="a24fc-174">[Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Esempio di attività asincrona: Ottimizzazione dell'applicazione)</span><span class="sxs-lookup"><span data-stu-id="a24fc-174">[Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)</span></span>
+- [<span data-ttu-id="ffbaf-172">Programmazione asincrona con Async e Await (C#)</span><span class="sxs-lookup"><span data-stu-id="ffbaf-172">Asynchronous Programming with async and await (C#)</span></span>](../../../../csharp/programming-guide/concepts/async/index.md)
+- [<span data-ttu-id="ffbaf-173">Ottimizzazione dell'applicazione Async (C#)</span><span class="sxs-lookup"><span data-stu-id="ffbaf-173">Fine-Tuning Your Async Application (C#)</span></span>](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)
+- <span data-ttu-id="ffbaf-174">[Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Esempio di attività asincrona: Ottimizzazione dell'applicazione)</span><span class="sxs-lookup"><span data-stu-id="ffbaf-174">[Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)</span></span>

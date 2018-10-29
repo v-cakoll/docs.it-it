@@ -2,47 +2,47 @@
 title: Annullare attività asincrone dopo un periodo di tempo (C#)
 ms.date: 07/20/2015
 ms.assetid: 194282c2-399f-46da-a7a6-96674e00b0b3
-ms.openlocfilehash: b95b87e1e93a9c8f8c74680a917a128d45172ed5
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 157b1de664254e9bdf9e4a5a381f8f35eeb10e9a
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397345"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453320"
 ---
-# <a name="cancel-async-tasks-after-a-period-of-time-c"></a><span data-ttu-id="0b497-102">Annullare attività asincrone dopo un periodo di tempo (C#)</span><span class="sxs-lookup"><span data-stu-id="0b497-102">Cancel async tasks after a period of time (C#)</span></span>
+# <a name="cancel-async-tasks-after-a-period-of-time-c"></a><span data-ttu-id="62619-102">Annullare attività asincrone dopo un periodo di tempo (C#)</span><span class="sxs-lookup"><span data-stu-id="62619-102">Cancel async tasks after a period of time (C#)</span></span>
 
-<span data-ttu-id="0b497-103">È possibile annullare un'operazione asincrona dopo un periodo di tempo tramite il metodo <xref:System.Threading.CancellationTokenSource.CancelAfter%2A?displayProperty=nameWithType> se non si vuole attendere fino al completamento dell'operazione.</span><span class="sxs-lookup"><span data-stu-id="0b497-103">You can cancel an asynchronous operation after a period of time by using the  <xref:System.Threading.CancellationTokenSource.CancelAfter%2A?displayProperty=nameWithType> method if you don't want to wait for the operation to finish.</span></span> <span data-ttu-id="0b497-104">Questo metodo pianifica l'annullamento di qualsiasi attività associata che non è stata completata nel periodo di tempo designato dall'espressione `CancelAfter`.</span><span class="sxs-lookup"><span data-stu-id="0b497-104">This method schedules the cancellation of any associated tasks that aren’t complete within the period of time that’s designated by the `CancelAfter` expression.</span></span>
+<span data-ttu-id="62619-103">È possibile annullare un'operazione asincrona dopo un periodo di tempo tramite il metodo <xref:System.Threading.CancellationTokenSource.CancelAfter%2A?displayProperty=nameWithType> se non si vuole attendere fino al completamento dell'operazione.</span><span class="sxs-lookup"><span data-stu-id="62619-103">You can cancel an asynchronous operation after a period of time by using the  <xref:System.Threading.CancellationTokenSource.CancelAfter%2A?displayProperty=nameWithType> method if you don't want to wait for the operation to finish.</span></span> <span data-ttu-id="62619-104">Questo metodo pianifica l'annullamento di qualsiasi attività associata che non è stata completata nel periodo di tempo designato dall'espressione `CancelAfter`.</span><span class="sxs-lookup"><span data-stu-id="62619-104">This method schedules the cancellation of any associated tasks that aren’t complete within the period of time that’s designated by the `CancelAfter` expression.</span></span>
 
-<span data-ttu-id="0b497-105">Questo esempio viene aggiunto al codice sviluppato in [Annullare un'attività asincrona o un elenco di attività (C#)](../../../../csharp/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md) per scaricare un elenco di siti Web e per visualizzare la lunghezza del contenuto di ogni sito.</span><span class="sxs-lookup"><span data-stu-id="0b497-105">This example adds to the code that’s developed in [Cancel an Async Task or a List of Tasks (C#)](../../../../csharp/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md) to download a list of websites and to display the length of the contents of each one.</span></span>
+<span data-ttu-id="62619-105">Questo esempio viene aggiunto al codice sviluppato in [Annullare un'attività asincrona o un elenco di attività (C#)](../../../../csharp/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md) per scaricare un elenco di siti Web e per visualizzare la lunghezza del contenuto di ogni sito.</span><span class="sxs-lookup"><span data-stu-id="62619-105">This example adds to the code that’s developed in [Cancel an Async Task or a List of Tasks (C#)](../../../../csharp/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md) to download a list of websites and to display the length of the contents of each one.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="0b497-106">Per eseguire gli esempi, è necessario avere installato Visual Studio 2012 o versioni successive e .NET Framework 4.5 o versioni successive nel computer.</span><span class="sxs-lookup"><span data-stu-id="0b497-106">To run the examples, you must have Visual Studio 2012 or newer and the .NET Framework 4.5 or newer installed on your computer.</span></span>
+> <span data-ttu-id="62619-106">Per eseguire gli esempi, è necessario avere installato Visual Studio 2012 o versioni successive e .NET Framework 4.5 o versioni successive nel computer.</span><span class="sxs-lookup"><span data-stu-id="62619-106">To run the examples, you must have Visual Studio 2012 or newer and the .NET Framework 4.5 or newer installed on your computer.</span></span>
 
-## <a name="download-the-example"></a><span data-ttu-id="0b497-107">Scaricare l'esempio</span><span class="sxs-lookup"><span data-stu-id="0b497-107">Download the example</span></span>
+## <a name="download-the-example"></a><span data-ttu-id="62619-107">Scaricare l'esempio</span><span class="sxs-lookup"><span data-stu-id="62619-107">Download the example</span></span>
 
-<span data-ttu-id="0b497-108">È possibile scaricare il progetto completo di Windows Presentation Foundation (WPF) da [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Esempio di attività asincrona: ottimizzazione dell'applicazione) e seguire la procedura seguente.</span><span class="sxs-lookup"><span data-stu-id="0b497-108">You can download the complete Windows Presentation Foundation (WPF) project from [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) and then follow these steps.</span></span>
+<span data-ttu-id="62619-108">È possibile scaricare il progetto completo di Windows Presentation Foundation (WPF) da [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Esempio di attività asincrona: ottimizzazione dell'applicazione) e seguire la procedura seguente.</span><span class="sxs-lookup"><span data-stu-id="62619-108">You can download the complete Windows Presentation Foundation (WPF) project from [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) and then follow these steps.</span></span>
 
-1.  <span data-ttu-id="0b497-109">Decomprimere il file scaricato e quindi avviare Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="0b497-109">Decompress the file that you downloaded, and then start Visual Studio.</span></span>
+1.  <span data-ttu-id="62619-109">Decomprimere il file scaricato e quindi avviare Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="62619-109">Decompress the file that you downloaded, and then start Visual Studio.</span></span>
 
-2.  <span data-ttu-id="0b497-110">Nella barra dei menu scegliere **File** > **Apri** > **Progetto/soluzione**.</span><span class="sxs-lookup"><span data-stu-id="0b497-110">On the menu bar, choose **File** > **Open** > **Project/Solution**.</span></span>
+2.  <span data-ttu-id="62619-110">Nella barra dei menu scegliere **File** > **Apri** > **Progetto/soluzione**.</span><span class="sxs-lookup"><span data-stu-id="62619-110">On the menu bar, choose **File** > **Open** > **Project/Solution**.</span></span>
 
-3.  <span data-ttu-id="0b497-111">Nella finestra di dialogo **Apri progetto** aprire la cartella che contiene il codice di esempio che è stato decompresso e aprire il file di soluzione (SLN) per AsyncFineTuningCS.</span><span class="sxs-lookup"><span data-stu-id="0b497-111">In the **Open Project** dialog box, open the folder that holds the sample code that you decompressed, and then open the solution (.sln) file for AsyncFineTuningCS.</span></span>
+3.  <span data-ttu-id="62619-111">Nella finestra di dialogo **Apri progetto** aprire la cartella che contiene il codice di esempio che è stato decompresso e aprire il file di soluzione (SLN) per AsyncFineTuningCS.</span><span class="sxs-lookup"><span data-stu-id="62619-111">In the **Open Project** dialog box, open the folder that holds the sample code that you decompressed, and then open the solution (.sln) file for AsyncFineTuningCS.</span></span>
 
-4.  <span data-ttu-id="0b497-112">In **Esplora soluzioni** aprire il menu di scelta rapida per il progetto **CancelAfterTime** e scegliere **Imposta come progetto di avvio**.</span><span class="sxs-lookup"><span data-stu-id="0b497-112">In **Solution Explorer**, open the shortcut menu for the **CancelAfterTime** project, and then choose **Set as StartUp Project**.</span></span>
+4.  <span data-ttu-id="62619-112">In **Esplora soluzioni** aprire il menu di scelta rapida per il progetto **CancelAfterTime** e scegliere **Imposta come progetto di avvio**.</span><span class="sxs-lookup"><span data-stu-id="62619-112">In **Solution Explorer**, open the shortcut menu for the **CancelAfterTime** project, and then choose **Set as StartUp Project**.</span></span>
 
-5.  <span data-ttu-id="0b497-113">Premere **F5** per eseguire il progetto.</span><span class="sxs-lookup"><span data-stu-id="0b497-113">Choose the **F5** key to run the project.</span></span> <span data-ttu-id="0b497-114">In alternativa, premere **CTRL**+**F5** per eseguire il progetto senza il debug.</span><span class="sxs-lookup"><span data-stu-id="0b497-114">(Or, press **Ctrl**+**F5** to run the project without debugging it).</span></span>
+5.  <span data-ttu-id="62619-113">Premere **F5** per eseguire il progetto.</span><span class="sxs-lookup"><span data-stu-id="62619-113">Choose the **F5** key to run the project.</span></span> <span data-ttu-id="62619-114">In alternativa, premere **CTRL**+**F5** per eseguire il progetto senza il debug.</span><span class="sxs-lookup"><span data-stu-id="62619-114">(Or, press **Ctrl**+**F5** to run the project without debugging it).</span></span>
 
-6.  <span data-ttu-id="0b497-115">Eseguire il programma più volte per verificare che l'output visualizzi il contenuto per tutti i siti Web, per nessun sito Web o per alcuni siti Web.</span><span class="sxs-lookup"><span data-stu-id="0b497-115">Run the program several times to verify that the output might show output for all websites, no websites, or some web sites.</span></span>
+6.  <span data-ttu-id="62619-115">Eseguire il programma più volte per verificare che l'output visualizzi il contenuto per tutti i siti Web, per nessun sito Web o per alcuni siti Web.</span><span class="sxs-lookup"><span data-stu-id="62619-115">Run the program several times to verify that the output might show output for all websites, no websites, or some web sites.</span></span>
 
-<span data-ttu-id="0b497-116">Se non si vuole scaricare il progetto, è possibile rivedere il file MainWindow.xaml.cs alla fine di questo argomento.</span><span class="sxs-lookup"><span data-stu-id="0b497-116">If you don't want to download the project, you can review the MainWindow.xaml.cs file at the end of this topic.</span></span>
+<span data-ttu-id="62619-116">Se non si vuole scaricare il progetto, è possibile rivedere il file MainWindow.xaml.cs alla fine di questo argomento.</span><span class="sxs-lookup"><span data-stu-id="62619-116">If you don't want to download the project, you can review the MainWindow.xaml.cs file at the end of this topic.</span></span>
 
-## <a name="build-the-example"></a><span data-ttu-id="0b497-117">Compilare l'esempio</span><span class="sxs-lookup"><span data-stu-id="0b497-117">Build the example</span></span>
+## <a name="build-the-example"></a><span data-ttu-id="62619-117">Compilare l'esempio</span><span class="sxs-lookup"><span data-stu-id="62619-117">Build the example</span></span>
 
-<span data-ttu-id="0b497-118">L'esempio riportato in questo argomento aggiunge codice al progetto sviluppato in [Annullare un'attività asincrona o un elenco di attività (C#)](../../../../csharp/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md) per annullare un elenco di attività.</span><span class="sxs-lookup"><span data-stu-id="0b497-118">The example in this topic adds to the project that's developed in [Cancel an Async Task or a List of Tasks (C#)](../../../../csharp/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md) to cancel a list of tasks.</span></span> <span data-ttu-id="0b497-119">L'esempio usa la stessa interfaccia utente, sebbene il pulsante **Annulla** non viene usato in modo esplicito.</span><span class="sxs-lookup"><span data-stu-id="0b497-119">The example uses the same UI, although the **Cancel** button isn’t used explicitly.</span></span>
+<span data-ttu-id="62619-118">L'esempio riportato in questo argomento aggiunge codice al progetto sviluppato in [Annullare un'attività asincrona o un elenco di attività (C#)](../../../../csharp/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md) per annullare un elenco di attività.</span><span class="sxs-lookup"><span data-stu-id="62619-118">The example in this topic adds to the project that's developed in [Cancel an Async Task or a List of Tasks (C#)](../../../../csharp/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md) to cancel a list of tasks.</span></span> <span data-ttu-id="62619-119">L'esempio usa la stessa interfaccia utente, sebbene il pulsante **Annulla** non viene usato in modo esplicito.</span><span class="sxs-lookup"><span data-stu-id="62619-119">The example uses the same UI, although the **Cancel** button isn’t used explicitly.</span></span>
 
-<span data-ttu-id="0b497-120">Per compilare l'esempio passo a passo, seguire le istruzioni nella sezione "Download dell'esempio", ma scegliere **CancelAListOfTasks** come **progetto di avvio**.</span><span class="sxs-lookup"><span data-stu-id="0b497-120">To build the example yourself, step by step, follow the instructions in the "Downloading the Example" section, but choose **CancelAListOfTasks** as the **StartUp Project**.</span></span> <span data-ttu-id="0b497-121">Aggiungere al progetto le modifiche illustrate in questo argomento.</span><span class="sxs-lookup"><span data-stu-id="0b497-121">Add the changes in this topic to that project.</span></span>
+<span data-ttu-id="62619-120">Per compilare l'esempio passo a passo, seguire le istruzioni nella sezione "Download dell'esempio", ma scegliere **CancelAListOfTasks** come **progetto di avvio**.</span><span class="sxs-lookup"><span data-stu-id="62619-120">To build the example yourself, step by step, follow the instructions in the "Downloading the Example" section, but choose **CancelAListOfTasks** as the **StartUp Project**.</span></span> <span data-ttu-id="62619-121">Aggiungere al progetto le modifiche illustrate in questo argomento.</span><span class="sxs-lookup"><span data-stu-id="62619-121">Add the changes in this topic to that project.</span></span>
 
-<span data-ttu-id="0b497-122">Per specificare un tempo massimo prima che le attività vengano contrassegnate come annullate, aggiungere una chiamata a `CancelAfter` al pulsante `startButton_Click`, come illustrato nell'esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="0b497-122">To specify a maximum time before the tasks are marked as canceled, add a call to `CancelAfter` to `startButton_Click`, as the following example shows.</span></span> <span data-ttu-id="0b497-123">L'aggiunta viene contrassegnata con asterischi.</span><span class="sxs-lookup"><span data-stu-id="0b497-123">The addition is marked with asterisks.</span></span>
+<span data-ttu-id="62619-122">Per specificare un tempo massimo prima che le attività vengano contrassegnate come annullate, aggiungere una chiamata a `CancelAfter` al pulsante `startButton_Click`, come illustrato nell'esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="62619-122">To specify a maximum time before the tasks are marked as canceled, add a call to `CancelAfter` to `startButton_Click`, as the following example shows.</span></span> <span data-ttu-id="62619-123">L'aggiunta viene contrassegnata con asterischi.</span><span class="sxs-lookup"><span data-stu-id="62619-123">The addition is marked with asterisks.</span></span>
 
 ```csharp
 private async void startButton_Click(object sender, RoutedEventArgs e)
@@ -74,7 +74,7 @@ private async void startButton_Click(object sender, RoutedEventArgs e)
 }
 ```
 
- <span data-ttu-id="0b497-124">Eseguire il programma più volte per verificare che l'output visualizzi il contenuto per tutti i siti Web, per nessun sito Web o per alcuni siti Web.</span><span class="sxs-lookup"><span data-stu-id="0b497-124">Run the program several times to verify that the output might show output for all websites, no websites, or some web sites.</span></span> <span data-ttu-id="0b497-125">L'output seguente rappresenta un esempio.</span><span class="sxs-lookup"><span data-stu-id="0b497-125">The following output is a sample.</span></span>
+ <span data-ttu-id="62619-124">Eseguire il programma più volte per verificare che l'output visualizzi il contenuto per tutti i siti Web, per nessun sito Web o per alcuni siti Web.</span><span class="sxs-lookup"><span data-stu-id="62619-124">Run the program several times to verify that the output might show output for all websites, no websites, or some web sites.</span></span> <span data-ttu-id="62619-125">L'output seguente rappresenta un esempio.</span><span class="sxs-lookup"><span data-stu-id="62619-125">The following output is a sample.</span></span>
 
 ```
 Length of the downloaded string: 35990.
@@ -86,13 +86,13 @@ Length of the downloaded string: 226091.
 Downloads canceled.
 ```
 
-## <a name="complete-example"></a><span data-ttu-id="0b497-126">Esempio completo</span><span class="sxs-lookup"><span data-stu-id="0b497-126">Complete example</span></span>
+## <a name="complete-example"></a><span data-ttu-id="62619-126">Esempio completo</span><span class="sxs-lookup"><span data-stu-id="62619-126">Complete example</span></span>
 
-<span data-ttu-id="0b497-127">Il codice seguente è il testo completo del file MainWindow.xaml.cs per l'esempio.</span><span class="sxs-lookup"><span data-stu-id="0b497-127">The following code is the complete text of the MainWindow.xaml.cs file for the example.</span></span> <span data-ttu-id="0b497-128">Gli asterischi contrassegnano gli elementi che sono stati aggiunti per questo esempio.</span><span class="sxs-lookup"><span data-stu-id="0b497-128">Asterisks mark the elements that were added for this example.</span></span>
+<span data-ttu-id="62619-127">Il codice seguente è il testo completo del file MainWindow.xaml.cs per l'esempio.</span><span class="sxs-lookup"><span data-stu-id="62619-127">The following code is the complete text of the MainWindow.xaml.cs file for the example.</span></span> <span data-ttu-id="62619-128">Gli asterischi contrassegnano gli elementi che sono stati aggiunti per questo esempio.</span><span class="sxs-lookup"><span data-stu-id="62619-128">Asterisks mark the elements that were added for this example.</span></span>
 
-<span data-ttu-id="0b497-129">Si noti che è necessario aggiungere un riferimento per <xref:System.Net.Http>.</span><span class="sxs-lookup"><span data-stu-id="0b497-129">Notice that you must add a reference for <xref:System.Net.Http>.</span></span>
+<span data-ttu-id="62619-129">Si noti che è necessario aggiungere un riferimento per <xref:System.Net.Http>.</span><span class="sxs-lookup"><span data-stu-id="62619-129">Notice that you must add a reference for <xref:System.Net.Http>.</span></span>
 
-<span data-ttu-id="0b497-130">È possibile scaricare il progetto da [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Esempio di attività asincrona: ottimizzazione dell'applicazione).</span><span class="sxs-lookup"><span data-stu-id="0b497-130">You can download the project from [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).</span></span>
+<span data-ttu-id="62619-130">È possibile scaricare il progetto da [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Esempio di attività asincrona: ottimizzazione dell'applicazione).</span><span class="sxs-lookup"><span data-stu-id="62619-130">You can download the project from [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).</span></span>
 
 ```csharp
 using System;
@@ -192,12 +192,12 @@ namespace CancelAfterTime
         {
             List<string> urls = new List<string>
             {
-                "http://msdn.microsoft.com",
-                "http://msdn.microsoft.com/library/windows/apps/br211380.aspx",
-                "http://msdn.microsoft.com/library/hh290136.aspx",
-                "http://msdn.microsoft.com/library/ee256749.aspx",
-                "http://msdn.microsoft.com/library/ms404677.aspx",
-                "http://msdn.microsoft.com/library/ff730837.aspx"
+                "https://msdn.microsoft.com",
+                "https://msdn.microsoft.com/library/windows/apps/br211380.aspx",
+                "https://msdn.microsoft.com/library/hh290136.aspx",
+                "https://msdn.microsoft.com/library/ee256749.aspx",
+                "https://msdn.microsoft.com/library/ms404677.aspx",
+                "https://msdn.microsoft.com/library/ff730837.aspx"
             };
             return urls;
         }
@@ -215,10 +215,10 @@ namespace CancelAfterTime
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="0b497-131">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="0b497-131">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="62619-131">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="62619-131">See also</span></span>
 
-- [<span data-ttu-id="0b497-132">Programmazione asincrona con Async e Await (C#)</span><span class="sxs-lookup"><span data-stu-id="0b497-132">Asynchronous Programming with async and await (C#)</span></span>](../../../../csharp/programming-guide/concepts/async/index.md)
-- [<span data-ttu-id="0b497-133">Procedura dettagliata: Accesso al Web con Async e Await (C#)</span><span class="sxs-lookup"><span data-stu-id="0b497-133">Walkthrough: Accessing the Web by Using async and await (C#)</span></span>](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [<span data-ttu-id="0b497-134">Annullare un'attività asincrona o un elenco di attività (C#)</span><span class="sxs-lookup"><span data-stu-id="0b497-134">Cancel an Async Task or a List of Tasks (C#)</span></span>](../../../../csharp/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)
-- [<span data-ttu-id="0b497-135">Ottimizzazione dell'applicazione Async (C#)</span><span class="sxs-lookup"><span data-stu-id="0b497-135">Fine-Tuning Your Async Application (C#)</span></span>](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)
-- <span data-ttu-id="0b497-136">[Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Esempio di attività asincrona: Ottimizzazione dell'applicazione)</span><span class="sxs-lookup"><span data-stu-id="0b497-136">[Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)</span></span>
+- [<span data-ttu-id="62619-132">Programmazione asincrona con Async e Await (C#)</span><span class="sxs-lookup"><span data-stu-id="62619-132">Asynchronous Programming with async and await (C#)</span></span>](../../../../csharp/programming-guide/concepts/async/index.md)
+- [<span data-ttu-id="62619-133">Procedura dettagliata: Accesso al Web con Async e Await (C#)</span><span class="sxs-lookup"><span data-stu-id="62619-133">Walkthrough: Accessing the Web by Using async and await (C#)</span></span>](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [<span data-ttu-id="62619-134">Annullare un'attività asincrona o un elenco di attività (C#)</span><span class="sxs-lookup"><span data-stu-id="62619-134">Cancel an Async Task or a List of Tasks (C#)</span></span>](../../../../csharp/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)
+- [<span data-ttu-id="62619-135">Ottimizzazione dell'applicazione Async (C#)</span><span class="sxs-lookup"><span data-stu-id="62619-135">Fine-Tuning Your Async Application (C#)</span></span>](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)
+- <span data-ttu-id="62619-136">[Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Esempio di attività asincrona: Ottimizzazione dell'applicazione)</span><span class="sxs-lookup"><span data-stu-id="62619-136">[Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)</span></span>
