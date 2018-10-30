@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6ab205ad12b60651443e0fc409e890ea93168ebd
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: e9c40b68a67219cd8f24874780281023974886e4
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48848075"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "49414855"
 ---
 # Novità di .NET Framework<a name="introduction"></a>
 
@@ -162,7 +162,7 @@ End Function
 
 **Supporto per le chiavi temporanee**
 
-L'importazione PFX può caricare chiavi private direttamente dalla memoria, ignorando il disco rigido. Quando il nuovo flag <xref:System.Security.Cryptography.X509Certificates.X509KeyStorageFlags.EphemeralKeySet?displayProperty=nameWithType> è specificato in un costruttore <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> o in uno degli overload del metodo <xref:System.Security.Cryptography.X509Certificates.X509Certificate2.Import%2A?displayProperty=nameWithType>, le chiavi private vengono caricate come chiavi temporanee. Ciò impedisce che le chiavi siano visibili sul disco. Tuttavia:
+L'importazione PFX può caricare chiavi private direttamente dalla memoria, ignorando il disco rigido. Quando il nuovo flag <xref:System.Security.Cryptography.X509Certificates.X509KeyStorageFlags.EphemeralKeySet?displayProperty=nameWithType> è specificato in un costruttore <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> o in uno degli overload del metodo <xref:System.Security.Cryptography.X509Certificates.X509Certificate2.Import%2A?displayProperty=nameWithType>, le chiavi private vengono caricate come chiavi temporanee. Ciò impedisce che le chiavi siano visibili sul disco. Tuttavia:
 
 - Poiché le chiavi non vengono gestite su disco, i certificati caricati con questo flag non sono candidati ottimali per l'aggiunta a un archivio X509.
 
@@ -182,7 +182,7 @@ A partire da .NET Framework 4.7.2 la classe <xref:System.Security.Cryptography.P
 
 **Lasciare aperto un flusso con wrapping dopo l'eliminazione di CryptoStream**
 
-A partire da .NET Framework 4.7.2 la classe <xref:System.Security.Cryptography.CryptoStream> dispone di un costruttore <xref:System.Security.Cryptography.CryptoStream.Dispose%2A> aggiuntivo per evitare la chiusura del flusso con wrapping. Per mantenere aperto il flusso con wrapping dopo l'eliminazione dell'istanza <xref:System.Security.Cryptography.CryptoStream>, chiamare il nuovo costruttore <xref:System.Security.Cryptography.CryptoStream> come indicato di seguito:
+A partire da .NET Framework 4.7.2 la classe <xref:System.Security.Cryptography.CryptoStream> dispone di un costruttore <xref:System.Security.Cryptography.CryptoStream.Dispose%2A> aggiuntivo per evitare la chiusura del flusso con wrapping. Per mantenere aperto il flusso con wrapping dopo l'eliminazione dell'istanza <xref:System.Security.Cryptography.CryptoStream>, chiamare il nuovo costruttore <xref:System.Security.Cryptography.CryptoStream> come indicato di seguito:
 
 ```csharp
 var cStream = new CryptoStream(stream, transform, mode, leaveOpen: true);
@@ -321,15 +321,15 @@ Il file di configurazione dell'applicazione specifica quindi un'implementazione 
 
 ```xml
 <configuration>
-  <configSections>
-    <section name="SqlColumnEncryptionEnclaveProviders" type="System.Data.SqlClient.SqlColumnEncryptionEnclaveProviderConfigurationSection,System.Data,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089"/> 
-  </configSections>
-  <SqlColumnEncryptionEnclaveProviders>
-    <providers>
+  <configSections>
+    <section name="SqlColumnEncryptionEnclaveProviders" type="System.Data.SqlClient.SqlColumnEncryptionEnclaveProviderConfigurationSection,System.Data,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089"/> 
+  </configSections>
+  <SqlColumnEncryptionEnclaveProviders>
+    <providers>
       <add name="Azure" type="Microsoft.SqlServer.Management.AlwaysEncrypted.AzureEnclaveProvider,MyApp"/>
       <add name="HGS" type="Microsoft.SqlServer.Management.AlwaysEncrypted.HGSEnclaveProvider,MyApp" />
-    </providers>
-  </SqlColumnEncryptionEnclaveProviders >
+    </providers>
+  </SqlColumnEncryptionEnclaveProviders >
 </configuration>
 ```
 
@@ -347,13 +347,13 @@ Il flusso base di Always Encrypted basato su enclave è il seguente:
 
 **Ricerca di ResourceDictionary in base all'origine**
 
-A partire da .NET Framework 4.7.2 un assistente di diagnostica può trovare i <xref:System.Windows.Xps.Packaging.IXpsFixedPageReader.ResourceDictionaries> creati da un URI di origine specificato. Questa funzionalità può essere usata dagli assistenti di diagnostica, non dalle applicazioni di produzione. Un assistente di diagnostica come la funzionalità di Visual Studio "Modifica e continuazione" consente all'utente di modificare un ResourceDictionary con lo scopo di implementare le modifiche applicate all'applicazione in esecuzione. Un passaggio per raggiungere questo obiettivo è il rilevamento di tutti i ResourceDictionary creati dall'applicazione a partire dal dizionario che viene modificato. Ad esempio un'applicazione può dichiarare un ResourceDictionary il cui contenuto viene copiato da un determinato URI di origine:
+A partire da .NET Framework 4.7.2, un assistente di diagnostica può trovare i <xref:System.Windows.Xps.Packaging.IXpsFixedPageReader.ResourceDictionaries> creati da un URI di origine specificato. Questa funzionalità può essere usata dagli assistenti di diagnostica, non dalle applicazioni di produzione. Un assistente di diagnostica come la funzionalità di Visual Studio "Modifica e continuazione" consente all'utente di modificare un ResourceDictionary con lo scopo di implementare le modifiche applicate all'applicazione in esecuzione. Un passaggio per raggiungere questo obiettivo è il rilevamento di tutti i ResourceDictionary creati dall'applicazione a partire dal dizionario che viene modificato. Ad esempio un'applicazione può dichiarare un ResourceDictionary il cui contenuto viene copiato da un determinato URI di origine:
 
 ```xml
 <ResourceDictionary Source="MyRD.xaml">
 ```
 
-Un assistente di diagnostica che modifica il codice originale in *MyRD.xaml* può usare la nuova funzionalità per trovare il dizionario. La funzionalità è implementata dal nuovo metodo statico <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.GetResourceDictionariesForSource%2A?displayProperty=nameWithType>. L'assistente di diagnostica chiama il nuovo metodo usando un URI assoluto che identifica il codice originale, come illustrato nel codice seguente:
+Un assistente di diagnostica che modifica il markup originale in *MyRD.xaml* può usare la nuova funzionalità per trovare il dizionario. La funzionalità è implementata dal nuovo metodo statico <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.GetResourceDictionariesForSource%2A?displayProperty=nameWithType>. L'assistente di diagnostica chiama il nuovo metodo usando un URI assoluto che identifica il codice originale, come illustrato nel codice seguente:
 
 ```csharp
 IEnumerable<ResourceDictionary> dictionaries = ResourceDictionaryDiagnostics.GetResourceDictionariesForSource(new Uri("pack://application:,,,/MyApp;component/MyRD.xaml"));
@@ -362,11 +362,11 @@ IEnumerable<ResourceDictionary> dictionaries = ResourceDictionaryDiagnostics.Get
 Dim dictionaries As IEnumerable(Of ResourceDictionary) = ResourceDictionaryDiagnostics.GetResourceDictionariesForSource(New Uri("pack://application:,,,/MyApp;component/MyRD.xaml"))
 ```
 
-Il metodo restituisce un oggetto enumerabile vuoto, a meno che non sia abilitato <xref:System.Windows.Diagnostics.VisualDiagnostics> e non sia impostata la variabile di ambiente [`ENABLE_XAML_DIAGNOSTICS_SOURCE_INFO`](xref:System.Windows.Diagnostics.VisualDiagnostics.GetXamlSourceInfo%2A).
+Il metodo restituisce un oggetto enumerabile vuoto, a meno che non sia abilitato  <xref:System.Windows.Diagnostics.VisualDiagnostics> e non sia impostata la variabile di ambiente [`ENABLE_XAML_DIAGNOSTICS_SOURCE_INFO`](xref:System.Windows.Diagnostics.VisualDiagnostics.GetXamlSourceInfo%2A).
 
 **Rilevamento di proprietari di ResourceDictionary**
 
-A partire da .NET Framework 4.7.2 un assistente di diagnostica può trovare i proprietari di un determinato <xref:Windows.UI.Xaml.ResourceDictionary>. Questa funzionalità può essere usata dagli assistenti di diagnostica, non dalle applicazioni di produzione. Ogni volta che viene apportata una modifica a un <xref:Windows.UI.Xaml.ResourceDictionary>, WPF trova automaticamente tutti i riferimenti [DynamicResource](../wpf/advanced/dynamicresource-markup-extension.md) che potrebbero essere interessati dalla modifica.
+A partire da .NET Framework 4.7.2 un assistente di diagnostica può trovare i proprietari di un determinato <xref:Windows.UI.Xaml.ResourceDictionary>. Questa funzionalità può essere usata dagli assistenti di diagnostica, non dalle applicazioni di produzione. Ogni volta che viene apportata una modifica a un <xref:Windows.UI.Xaml.ResourceDictionary>, WPF trova automaticamente tutti i riferimenti [DynamicResource](../wpf/advanced/dynamicresource-markup-extension.md) che potrebbero essere interessati dalla modifica.
 
 Un assistente di diagnostica come la funzionalità di Visual Studio "Modifica e continuazione" potrebbe richiedere di estendere questa funzionalità per gestire i riferimenti [StaticResource](../wpf/advanced/staticresource-markup-extension.md). Il primo passaggio in questo processo è il rilevamento dei proprietari del dizionario, ovvero di tutti gli oggetti la cui proprietà `Resources` fa riferimento al dizionario (direttamente o indirettamente tramite la proprietà <xref:System.Windows.ResourceDictionary.MergedDictionaries?displayProperty=nameWithType>). Questa fase è supportata da tre nuovi metodi statici implementati nella classe <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics?displayProperty=nameWithType>, uno per ogni tipo di base che dispone di una proprietà `Resources`:
 
@@ -376,11 +376,11 @@ Un assistente di diagnostica come la funzionalità di Visual Studio "Modifica e 
 
 - [`public static IEnumerable<Application> GetApplicationOwners(ResourceDictionary dictionary);`](xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.GetApplicationOwners%2A)
 
-Questi metodi restituiscono un oggetto enumerabile vuoto, a meno che non sia abilitato <xref:System.Windows.Diagnostics.VisualDiagnostics> e non sia impostata la variabile di ambiente [`ENABLE_XAML_DIAGNOSTICS_SOURCE_INFO`](xref:System.Windows.Diagnostics.VisualDiagnostics.GetXamlSourceInfo%2A).
+Questi metodi restituiscono un oggetto enumerabile vuoto, a meno che non sia abilitato <xref:System.Windows.Diagnostics.VisualDiagnostics> e non sia impostata la variabile di ambiente [`ENABLE_XAML_DIAGNOSTICS_SOURCE_INFO`](xref:System.Windows.Diagnostics.VisualDiagnostics.GetXamlSourceInfo%2A).
 
 **Ricerca di riferimenti StaticResource**
 
-Ora un assistente di diagnostica può ricevere una notifica ogni volta che viene risolto un riferimento [StaticResource](../wpf/advanced/staticresource-markup-extension.md). Questa funzionalità può essere usata dagli assistenti di diagnostica, non dalle applicazioni di produzione. Un assistente di diagnostica come la funzionalità di Visual Studio "Modifica e continuazione" potrebbe richiedere di aggiornare tutti gli usi di una risorsa quando il relativo valore in un <xref:Windows.UI.Xaml.ResourceDictionary> viene modificato. WPF esegue automaticamente questa operazione per i riferimenti [DynamicResource](../wpf/advanced/dynamicresource-markup-extension.md), ma evita deliberatamente l'esecuzione per i riferimenti [StaticResource](../wpf/advanced/staticresource-markup-extension.md). A partire da .NET Framework 4.7.2 l'assistente di diagnostica può usare queste notifiche per trovare tali usi della risorsa statica.
+Ora un assistente di diagnostica può ricevere una notifica ogni volta che viene risolto un riferimento [StaticResource](../wpf/advanced/staticresource-markup-extension.md). Questa funzionalità può essere usata dagli assistenti di diagnostica, non dalle applicazioni di produzione. Un assistente di diagnostica come la funzionalità di Visual Studio "Modifica e continuazione" potrebbe richiedere di aggiornare tutti gli usi di una risorsa quando il relativo valore in un <xref:Windows.UI.Xaml.ResourceDictionary> viene modificato. WPF esegue automaticamente questa operazione per i riferimenti [DynamicResource](../wpf/advanced/dynamicresource-markup-extension.md), ma evita deliberatamente l'esecuzione per i riferimenti [StaticResource](../wpf/advanced/staticresource-markup-extension.md). A partire da .NET Framework 4.7.2 l'assistente di diagnostica può usare queste notifiche per trovare tali usi della risorsa statica.
 
 La notifica viene implementata dal nuovo evento <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.StaticResourceResolved?displayProperty=nameWithType>:
 
@@ -392,7 +392,7 @@ public static event EventHandler<StaticResourceResolvedEventArgs> StaticResource
 Public Shared Event StaticResourceResolved As EventHandler(Of StaticResourceResolvedEventArgs)
 ```
 
-Questo evento viene generato ogni volta che il runtime risolve un riferimento [StaticResource](../wpf/advanced/staticresource-markup-extension.md). Gli argomenti <xref:System.Windows.Diagnostics.StaticResourceResolvedEventArgs> descrivono la risoluzione e indicano l'oggetto e la proprietà che ospitano il riferimento [StaticResource](../wpf/advanced/staticresource-markup-extension.md) e il <xref:Windows.UI.Xaml.ResourceDictionary> e la chiave usati per la risoluzione:
+Questo evento viene generato ogni volta che il runtime risolve un riferimento [StaticResource](../wpf/advanced/staticresource-markup-extension.md). Gli argomenti <xref:System.Windows.Diagnostics.StaticResourceResolvedEventArgs> descrivono la risoluzione e indicano l'oggetto e la proprietà che ospitano il riferimento [StaticResource](../wpf/advanced/staticresource-markup-extension.md) e il <xref:Windows.UI.Xaml.ResourceDictionary> e la chiave usati per la risoluzione:
 
 ```csharp
 public class StaticResourceResolvedEventArgs : EventArgs
@@ -407,7 +407,7 @@ public class StaticResourceResolvedEventArgs : EventArgs
 }
 ```
 
-L'evento non viene attivato (e la funzione di accesso `add` corrispondente viene ignorata), salvo se la classe <xref:System.Windows.Diagnostics.VisualDiagnostics> è attivata e la variabile di ambiente [`ENABLE_XAML_DIAGNOSTICS_SOURCE_INFO`](xref:System.Windows.Diagnostics.VisualDiagnostics.GetXamlSourceInfo%2A) è impostata.
+L'evento non viene attivato (e la funzione di accesso `add` corrispondente viene ignorata), a meno che la classe  <xref:System.Windows.Diagnostics.VisualDiagnostics> non sia abilitata e la variabile di ambiente [`ENABLE_XAML_DIAGNOSTICS_SOURCE_INFO`](xref:System.Windows.Diagnostics.VisualDiagnostics.GetXamlSourceInfo%2A) non sia impostata.
 
 #### <a name="clickonce"></a>ClickOnce
 
@@ -415,7 +415,7 @@ ClickOnce consente la distribuzione di applicazioni con supporto HDPI per Window
 
 ```xml
 <windowsSettings>
-   <dpiAware xmlns="http://schemas.microsoft.com/SMI/2005/WindowsSettings">true</dpiAware>
+   <dpiAware xmlns="http://schemas.microsoft.com/SMI/2005/WindowsSettings">true</dpiAware>
 </windowsSettings>
 ```
 
@@ -517,7 +517,7 @@ In .NET Framework 4.7 e versioni precedenti, ASP.NET consente agli sviluppatori 
 - [Windows Form](#wf47)
 - [Windows Presentation Foundation (WPF)](#WPF47)
 
-Per l'elenco delle nuove API aggiunte a .NET Framework 4.7, vedere l'argomento [.NET Framework 4.7 API Changes](https://github.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-api-changes.md) (Modifiche alle API di .NET Framework 4.7) su GitHub. Per l'elenco delle correzioni di bug e dei miglioramenti apportati alle funzionalità in .NET Framework 4.7, vedere l'argomento [.NET Framework 4.7 List of Changes](http://github.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-changes.md) (Elenco delle modifiche di .NET Framework 4.7) su GitHub.  Per altre informazioni, vedere l'[annuncio di .NET Framework 4.7](https://blogs.msdn.microsoft.com/dotnet/2017/04/05/announcing-the-net-framework-4-7/) in .NET Blog.
+Per l'elenco delle nuove API aggiunte a .NET Framework 4.7, vedere l'argomento [.NET Framework 4.7 API Changes](https://github.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-api-changes.md) (Modifiche alle API di .NET Framework 4.7) su GitHub. Per l'elenco delle correzioni di bug e dei miglioramenti apportati alle funzionalità in .NET Framework 4.7, vedere l'argomento [.NET Framework 4.7 List of Changes](https://github.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-changes.md) (Elenco delle modifiche di .NET Framework 4.7) su GitHub.  Per altre informazioni, vedere l'[annuncio di .NET Framework 4.7](https://blogs.msdn.microsoft.com/dotnet/2017/04/05/announcing-the-net-framework-4-7/) in .NET Blog.
 
 <a name="Core47" />
 
@@ -725,11 +725,11 @@ public interface ISessionStateModule : IHttpModule {
 <a name="Strings" />
 
 ### <a name="character-categories"></a>Categorie di caratteri
- I caratteri in [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] sono classificati in base allo [standard Unicode, versione 8.0.0](http://www.unicode.org/versions/Unicode8.0.0/). In [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] e [!INCLUDE[net_v461](../../../includes/net-v461-md.md)], i caratteri sono stati classificati in base alle categorie di caratteri Unicode 6.3.
+ I caratteri in [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] sono classificati in base allo [standard Unicode, versione 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/). In [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] e [!INCLUDE[net_v461](../../../includes/net-v461-md.md)], i caratteri sono stati classificati in base alle categorie di caratteri Unicode 6.3.
 
  Il supporto per Unicode 8.0 è limitato alla classificazione dei caratteri della classe <xref:System.Globalization.CharUnicodeInfo> e ai tipi e metodi basati sulla stessa. Sono inclusi la classe <xref:System.Globalization.StringInfo>, il metodo <xref:System.Char.GetUnicodeCategory%2A?displayProperty=nameWithType> in overload e le [classi di caratteri](../../../docs/standard/base-types/character-classes-in-regular-expressions.md) riconosciute dal motore delle espressioni regolari di .NET Framework.  Il confronto e l'ordinamento di stringhe e caratteri non sono interessati da questa modifica e continuano a basarsi sul sistema operativo sottostante o, nei sistemi Windows 7, sui dati dei caratteri provenienti da .NET Framework.
 
- Per informazioni sulle modifiche nelle categorie di caratteri da Unicode 6.0 a Unicode 7.0, vedere [The Unicode Standard, Version 7.0.0](http://www.unicode.org/versions/Unicode7.0.0/) nel sito Web The Unicode Consortium. Per informazioni sulle modifiche da Unicode 7.0 a Unicode 8.0, vedere [The Unicode Standard, Version 8.0.0](http://www.unicode.org/versions/Unicode8.0.0/) nel sito Web The Unicode Consortium.
+ Per informazioni sulle modifiche nelle categorie di caratteri da Unicode 6.0 a Unicode 7.0, vedere [The Unicode Standard, Version 7.0.0](https://www.unicode.org/versions/Unicode7.0.0/) nel sito Web The Unicode Consortium. Per informazioni sulle modifiche da Unicode 7.0 a Unicode 8.0, vedere [The Unicode Standard, Version 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/) nel sito Web The Unicode Consortium.
 
 <a name="Crypto462" />
 
@@ -1223,7 +1223,7 @@ L'API di profilatura non gestita è stata migliorata nel modo seguente:
 
      MVC, API Web e pagine Web sono riunite in un unico framework denominato MVC 6. Le app ASP.NET Core vengono compilate mediante gli strumenti in Visual Studio 2015 o versione successiva. Le applicazioni esistenti funzioneranno nel nuovo .NET Framework ma per compilare un'app che usa MVC 6 o SignalR 3 è necessario usare il sistema di progetto in Visual Studio 2015 o versione successiva.
 
-     Per informazioni, vedere [ASP.NET Core](http://go.microsoft.com/fwlink/?LinkId=518238).
+     Per informazioni, vedere [ASP.NET Core](/aspnet/core/).
 
 - **Aggiornamenti di ASP.NET**
 
@@ -1247,18 +1247,18 @@ L'API di profilatura non gestita è stata migliorata nel modo seguente:
 
     - **Supporto HTTP/2 (Windows 10)**
 
-         [HTTP/2](http://www.wikipedia.org/wiki/HTTP/2) è una nuova versione del protocollo HTTP che permette un utilizzo molto migliore della connessione, con meno round trip tra client e server, offrendo una latenza minore per il caricamento delle pagine Web per gli utenti.  Le pagine Web (a differenza dei servizi) traggono maggiori vantaggi dal protocollo HTTP/2, poiché ottimizza più elementi richiesti come parte di un'esperienza unica. Il supporto HTTP/2 è stato aggiunto ad ASP.NET in .NET Framework 4.6. Poiché la funzionalità di rete esiste a più livelli, si sono rese necessarie nuove funzionalità in Windows, IIS e ASP.NET per abilitare HTTP/2. È necessario eseguire Windows 10 per usare HTTP/2 con ASP.NET.
+         [HTTP/2](https://www.wikipedia.org/wiki/HTTP/2) è una nuova versione del protocollo HTTP che permette un utilizzo molto migliore della connessione, con meno round trip tra client e server, offrendo una latenza minore per il caricamento delle pagine Web per gli utenti.  Le pagine Web (a differenza dei servizi) traggono maggiori vantaggi dal protocollo HTTP/2, poiché ottimizza più elementi richiesti come parte di un'esperienza unica. Il supporto HTTP/2 è stato aggiunto ad ASP.NET in .NET Framework 4.6. Poiché la funzionalità di rete esiste a più livelli, si sono rese necessarie nuove funzionalità in Windows, IIS e ASP.NET per abilitare HTTP/2. È necessario eseguire Windows 10 per usare HTTP/2 con ASP.NET.
 
          HTTP/2 è anche supportato e attivato per impostazione predefinita per le app di Windows 10 Universal Windows Platform (UWP) che usano l'API <xref:System.Net.Http.HttpClient?displayProperty=nameWithType>.
 
-         Per consentire l'uso della funzionalità [PUSH_PROMISE](http://http2.github.io/http2-spec/#PUSH_PROMISE) nelle applicazioni ASP.NET, è stato aggiunto un nuovo metodo con due overload, <xref:System.Web.HttpResponse.PushPromise%28System.String%29> e <xref:System.Web.HttpResponse.PushPromise%28System.String%2CSystem.String%2CSystem.Collections.Specialized.NameValueCollection%29>, alla classe <xref:System.Web.HttpResponse>.
+         Per consentire l'uso della funzionalità [PUSH_PROMISE](https://http2.github.io/http2-spec/#PUSH_PROMISE) nelle applicazioni ASP.NET, è stato aggiunto un nuovo metodo con due overload, <xref:System.Web.HttpResponse.PushPromise%28System.String%29> e <xref:System.Web.HttpResponse.PushPromise%28System.String%2CSystem.String%2CSystem.Collections.Specialized.NameValueCollection%29>, alla classe <xref:System.Web.HttpResponse>.
 
         > [!NOTE]
         > Mentre ASP.NET Core supporta HTTP/2, il supporto della funzionalità PUSH PROMISE non è ancora stato aggiunto.
 
          Il browser e il server Web (IIS su Windows) eseguono tutte le operazioni. Gli utenti non dovranno eseguire alcuna operazione impegnativa.
 
-         Poiché la maggior parte dei [principali browser supporta HTTP/2](http://www.wikipedia.org/wiki/HTTP/2), è probabile che gli utenti trarranno vantaggio dal supporto HTTP/2, se supportato dal server in uso.
+         Poiché la maggior parte dei [principali browser supporta HTTP/2](https://www.wikipedia.org/wiki/HTTP/2), è probabile che gli utenti trarranno vantaggio dal supporto HTTP/2, se supportato dal server in uso.
 
     - **Supporto per Token Binding Protocol**
 
@@ -1681,7 +1681,7 @@ L'API di profilatura non gestita è stata migliorata nel modo seguente:
 
  I miglioramenti durante il debug delle app .NET Framework in Visual Studio 2013 includono:
 
-- Valori restituiti nel debugger di Visual Studio. Quando si esegue il debug di un'app gestita in Visual Studio 2013, nella finestra Auto vengono restituiti tipi e valori per i metodi. Queste informazioni sono disponibili per applicazioni desktop, Windows Store e Windows Phone. Per altre informazioni, vedere [Esaminare i valori restituiti dalle chiamate di metodo](https://msdn.microsoft.com/library/e3245b37-8e2e-4200-ba84-133726e95f1f\(v=vs.120\).aspx) in MSDN Library.
+- Valori restituiti nel debugger di Visual Studio. Quando si esegue il debug di un'app gestita in Visual Studio 2013, nella finestra Auto vengono restituiti tipi e valori per i metodi. Queste informazioni sono disponibili per applicazioni desktop, Windows Store e Windows Phone. Per altre informazioni, vedere [Esaminare i valori restituiti dalle chiamate di metodo](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/dn32325728%v=vs.120%29).
 
 - Modifica e continua per app a 64 bit. In Visual Studio 2013 è supportata la funzionalità Modifica e continuazione per le applicazioni gestite a 64 bit per desktop, Windows Store e Windows Phone. Le limitazioni esistenti restano valide per le app a 32 bit e a 64 bit. Vedere l'ultima sezione dell'articolo [Modifiche al codice supportate (C#)](/visualstudio/debugger/supported-code-changes-csharp).
 

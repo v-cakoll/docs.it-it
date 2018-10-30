@@ -5,12 +5,12 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: 1365b3e0dbc2ae095698b66f2b527301fe474a00
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: ce4580f9fab80cc85a281786d5de262d8de7a679
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49454434"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181514"
 ---
 # <a name="interfaces-c-programming-guide"></a>Interfacce (Guida per programmatori C#)
 
@@ -42,7 +42,7 @@ Nell'esempio seguente viene illustrata un'implementazione dell'interfaccia <xref
   
 Le proprietà e gli indicizzatori di una classe possono definire altre funzioni di accesso per una proprietà o un indicizzatore definito in un'interfaccia. Ad esempio, un'interfaccia può dichiarare una proprietà con una funzione di accesso [get](../../language-reference/keywords/get.md). La classe che implementa l'interfaccia può dichiarare la stessa proprietà con una funzione di accesso `get` o [set](../../language-reference/keywords/set.md). Tuttavia, se la proprietà o l'indicizzatore usa l'implementazione esplicita, le funzioni di accesso devono corrispondere. Per altre informazioni sull'implementazione esplicita, vedere [Implementazione esplicita dell'interfaccia](explicit-interface-implementation.md) e [Proprietà dell'interfaccia](../classes-and-structs/interface-properties.md).  
 
-Le Interfacce possono implementare altre interfacce. Una classe può includere un'interfaccia più volte tramite le classi base ereditate o tramite le interfacce implementate da altre interfacce. Tuttavia, la classe può fornire un'implementazione di un'interfaccia solo una volta e solo se la classe dichiara l'interfaccia durante la definizione della classe (`class ClassName : InterfaceName`). Se l'interfaccia viene ereditata perché è stata ereditata una classe base che implementa l'interfaccia, la classe base fornisce l'implementazione dei membri dell'interfaccia. Tuttavia, la classe derivata può reimplementare i membri dell'interfaccia invece di usare l'implementazione ereditata.  
+Le interfacce possono ereditare da altre interfacce. Una classe può includere un'interfaccia più volte tramite le classi di base ereditate o tramite le interfacce ereditate da altre interfacce. Tuttavia, la classe può fornire un'implementazione di un'interfaccia solo una volta e solo se la classe dichiara l'interfaccia durante la definizione della classe (`class ClassName : InterfaceName`). Se l'interfaccia viene ereditata perché è stata ereditata una classe base che implementa l'interfaccia, la classe base fornisce l'implementazione dei membri dell'interfaccia. Tuttavia, la classe derivata può reimplementare qualsiasi membro dell'interfaccia invece di usare l'implementazione ereditata.  
   
 Una classe base può implementare anche i membri di interfaccia usando membri virtuali. In tal caso, una classe derivata può modificare il comportamento dell'interfaccia eseguendo l'override dei membri virtuali. Per altre informazioni su membri virtuali, vedere [Polimorfismo](../classes-and-structs/polymorphism.md).  
   
