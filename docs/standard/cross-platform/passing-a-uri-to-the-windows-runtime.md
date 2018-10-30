@@ -12,11 +12,11 @@ ms.assetid: 3eb5ce6f-f304-4f87-8e81-0f25092f5ad4
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c5ce0d4ac2b95dc4d51e785e3a00026f56c13d2c
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50047423"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50220707"
 ---
 # <a name="passing-a-uri-to-the-windows-runtime"></a>Passaggio di un URI a Windows Runtime
 I metodi di Windows Runtime accettano solo URI assoluti. Se si passa un URI relativo a un metodo [!INCLUDE[wrt](../../../includes/wrt-md.md)], viene generata un'eccezione <xref:System.ArgumentException>. Motivo: quando si usa la [!INCLUDE[wrt](../../../includes/wrt-md.md)] nel codice di .NET Framework, il <xref:Windows.Foundation.Uri?displayProperty=nameWithType> classe viene visualizzata come <xref:System.Uri?displayProperty=nameWithType> in Intellisense. Il <xref:System.Uri?displayProperty=nameWithType> classe accetta URI relativi, ma il <xref:Windows.Foundation.Uri?displayProperty=nameWithType> non dalla classe. Questo accade anche per i metodi esposti nei componenti [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Se il componente espone un metodo che accetta un URI, la firma nel codice include <xref:System.Uri?displayProperty=nameWithType>. Tuttavia, per gli utenti del componente, la firma include <xref:Windows.Foundation.Uri?displayProperty=nameWithType>. Un URI che viene passato al componente deve essere un URI assoluto.  
