@@ -81,7 +81,7 @@ ms.locfileid: "48584143"
   
 -   Il termine generale *tipo generico* include sia tipi costruiti sia definizioni di tipo generico.  
   
--   La*covarianza* e la *controvarianza* of generic type parameters enable you to use constructed generic types whose type arguments are more derived (covariance) or less derived (controvarianza) than a target constructed type. La covarianza e la controvarianza sono definite collettivamente *varianza*. Per altre informazioni, vedere [Covarianza e controvarianza](../../../docs/standard/generics/covariance-and-contravariance.md).  
+-   La *covarianza* e la *controvarianza* dei parametri di tipo generico consentono di usare tipi generici costruiti i cui argomenti di tipo sono più derivati (covarianza) o meno derivati (controvarianza) rispetto a quelle di tipo costruito. La covarianza e la controvarianza sono definite collettivamente *varianza*. Per altre informazioni, vedere [Covarianza e controvarianza](../../../docs/standard/generics/covariance-and-contravariance.md).  
   
 -   I*vincoli* sono limiti imposti su parametri di tipo generico. Ad esempio, è possibile limitare un parametro di tipo a tipi che implementano l'interfaccia generica <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType>, per garantire la possibilità di ordinare le istanze del tipo. È anche possibile vincolare i parametri di tipo a tipi che dispongono di una determinata classe di base, con un costruttore predefinito, o che siano tipi riferimento o tipi di valore. Gli utenti di tipo generico non possono sostituire gli argomenti di tipo che non soddisfano i vincoli.  
   
