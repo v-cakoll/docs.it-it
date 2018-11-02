@@ -3,10 +3,10 @@ title: 'Campi espliciti: parola chiave val (F#)'
 description: "Informazioni su F # 'val' parola chiave, che viene usata per dichiarare un percorso per archiviare un valore in un tipo classe o struttura senza inizializzare il tipo."
 ms.date: 05/16/2016
 ms.openlocfilehash: 9cd06f7e90192be79490dd0ff67f118cce4339c3
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "45746381"
 ---
 # <a name="explicit-fields-the-val-keyword"></a>Campi espliciti: parola chiave val
@@ -67,7 +67,7 @@ L'output è `11 xyz`.
 
 I campi espliciti non sono destinati all'uso di routine. In generale, quando possibile è consigliabile usare un'associazione `let` in una classe anziché un campo esplicito. I campi espliciti sono utili in alcuni scenari di interoperabilità, ad esempio quando è necessario definire una struttura che verrà usata in una chiamata platform invoke per un'API nativa o in scenari di interoperabilità COM. Per altre informazioni, vedere [funzioni esterne](../functions/external-functions.md). Un'altra situazione in cui un campo esplicito potrebbe essere necessario è quando si lavora con un generatore di codice F# che genera classi senza un costruttore primario. I campi espliciti sono utili anche per le variabili di thread statiche o per costrutti simili. Per altre informazioni, vedere `System.ThreadStaticAttribute`.
 
-Quando le parole chiave `member val` vengono visualizzate insieme in una definizione di tipo è una definizione di una proprietà implementata automaticamente. Per altre informazioni, vedere [proprietà](properties.md).
+Quando le parole chiave `member val` vengono visualizzate insieme in una definizione di tipo è una definizione di una proprietà implementata automaticamente. Per ulteriori informazioni, vedi [Proprietà](properties.md).
 
 ## <a name="see-also"></a>Vedere anche
 

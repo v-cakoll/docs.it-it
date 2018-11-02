@@ -3,10 +3,10 @@ title: 'Linee guida per la formattazione del codice F #'
 description: 'Altre linee guida per la formattazione del codice F #.'
 ms.date: 05/14/2018
 ms.openlocfilehash: 0d7d2d1771710db55bf990f3a06079b2aec48fd7
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "43858005"
 ---
 # <a name="f-code-formatting-guidelines"></a>Linee guida per la formattazione del codice F #

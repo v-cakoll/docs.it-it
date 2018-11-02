@@ -1,57 +1,57 @@
 ---
-title: "Introduzione all'archiviazione di File di Azure con F #"
-description: Archiviare i dati del file nel cloud con l'archiviazione di File di Azure e montare la condivisione di file cloud da una macchina virtuale di Azure (VM) o da un'applicazione locale che esegue Windows.
+title: "Introduzione all'archiviazione File di Azure con F #"
+description: Store i dati dei file nel cloud con archiviazione File di Azure e montare la condivisione file nel cloud da una macchina virtuale di Azure (VM) o da un'applicazione in locale che esegue Windows.
 author: sylvanc
 ms.date: 09/20/2016
 ms.openlocfilehash: e772da5f81d2e6827295d0dfe150934a415eb3bb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "33569343"
 ---
-# <a name="get-started-with-azure-file-storage-using-f"></a>Introduzione all'archiviazione di File di Azure con F # #
+# <a name="get-started-with-azure-file-storage-using-f"></a>Introduzione all'archiviazione File di Azure con F # #
 
-Archiviazione di File di Azure è un servizio che offre le condivisioni file nel cloud utilizzando lo standard [protocollo Server Message Block (SMB)](https://msdn.microsoft.com/library/windows/desktop/aa365233.aspx). SMB 2.1 sia SMB 3.0 sono supportati. Con l'archiviazione di File di Azure, è possibile eseguire la migrazione di applicazioni legacy che si basano su condivisioni file in Azure rapidamente e senza costose. Le applicazioni in esecuzione in macchine virtuali di Azure o i servizi cloud o da client locali è possono montare una condivisione di file nel cloud, come un'applicazione desktop Monta una condivisione SMB tipico. Qualsiasi numero di componenti dell'applicazione può quindi montare e accedere alla condivisione di archiviazione di File contemporaneamente.
+Archiviazione File di Azure è un servizio che offre condivisioni file nel cloud usando lo standard [protocollo Server Message Block (SMB)](https://msdn.microsoft.com/library/windows/desktop/aa365233.aspx). Sono supportati sia SMB 2.1 che SMB 3.0. Con archiviazione File di Azure, è possibile eseguire la migrazione delle applicazioni legacy basate su condivisioni file in Azure velocemente e senza costose riscritture. Le applicazioni in esecuzione in macchine virtuali di Azure o servizi cloud o da client locali possono montare una condivisione file nel cloud, esattamente come un'applicazione desktop Monta una tipica condivisione SMB. Qualsiasi numero di componenti dell'applicazione può quindi montare e accedere contemporaneamente alla condivisione di archiviazione File.
 
-Per una panoramica concettuale di archiviazione di file, vedere [la Guida di .NET per l'archiviazione di file](/azure/storage/storage-dotnet-how-to-use-files).
+Per una panoramica concettuale dell'archiviazione file, vedi [la Guida di .NET per archiviazione file](/azure/storage/storage-dotnet-how-to-use-files).
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-Per usare questa Guida, è innanzitutto necessario [creare un account di archiviazione di Azure](/azure/storage/storage-create-storage-account).
-Per questo account, è necessario anche la chiave di accesso di archiviazione.
+Per usare questa Guida, è necessario innanzitutto [creare un account di archiviazione di Azure](/azure/storage/storage-create-storage-account).
+È necessario anche la chiave di accesso di archiviazione per questo account.
 
 ## <a name="create-an-f-script-and-start-f-interactive"></a>Creare un Script F # e avvio di F # Interactive
 
-Gli esempi in questo articolo è utilizzabile in un'applicazione di F # o uno script F #. Per creare uno script F #, creare un file con il `.fsx` estensione, ad esempio `files.fsx`, nell'ambiente di sviluppo F #.
+Gli esempi in questo articolo possono essere utilizzati in un'applicazione F # o uno script F #. Per creare uno script F #, creare un file con il `.fsx` estensione, ad esempio `files.fsx`, nell'ambiente di sviluppo F #.
 
-Successivamente, utilizzare un [Gestione pacchetti](package-management.md) , ad esempio [Paket](https://fsprojects.github.io/Paket/) o [NuGet](https://www.nuget.org/) per installare il `WindowsAzure.Storage` pacchetto e riferimento `WindowsAzure.Storage.dll` nello script utilizzando un `#r`direttiva.
+Successivamente, usare una [Gestione pacchetti](package-management.md) , ad esempio [Paket](https://fsprojects.github.io/Paket/) oppure [NuGet](https://www.nuget.org/) per installare il `WindowsAzure.Storage` pacchetto e riferimento `WindowsAzure.Storage.dll` nello script utilizzando un `#r`della direttiva.
 
 ### <a name="add-namespace-declarations"></a>Aggiungere le dichiarazioni dello spazio dei nomi
 
-Aggiungere il seguente `open` istruzioni all'inizio di `files.fsx` file:
+Aggiungere il codice seguente `open` istruzioni all'inizio del `files.fsx` file:
 
 [!code-fsharp[FileStorage](../../../samples/snippets/fsharp/azure/file-storage.fsx#L1-L5)]
 
 ### <a name="get-your-connection-string"></a>Ottenere la stringa di connessione
 
-Una stringa di connessione di archiviazione di Azure è necessario per questa esercitazione. Per ulteriori informazioni sulle stringhe di connessione, vedere [configurare stringhe di connessione di archiviazione](/azure/storage/storage-configure-connection-string).
+Una stringa di connessione di archiviazione di Azure è necessario per questa esercitazione. Per altre informazioni sulle stringhe di connessione, vedere [configurare le stringhe di connessione di archiviazione](/azure/storage/storage-configure-connection-string).
 
 Per l'esercitazione, si immetteranno la stringa di connessione nello script, simile al seguente:
 
 [!code-fsharp[FileStorage](../../../samples/snippets/fsharp/azure/file-storage.fsx#L11-L11)]
 
-Si tratta tuttavia **non è consigliabile** di progetti. La chiave di account di archiviazione è simile a quella radice per l'account di archiviazione. Prestare sempre attenzione proteggere la chiave di account di archiviazione. Evitare di distribuirlo ad altri utenti, a livello di codice, o il salvataggio in un file di testo che è accessibile ad altri utenti. È possibile rigenerare la chiave tramite il portale di Azure, se si ritiene che potrebbero essere state compromesse.
+Si tratta tuttavia **sconsigliato** progetti per il real. La chiave dell'account è simile alla password radice per l'account di archiviazione. Prestare sempre attenzione proteggere la chiave dell'account. Evitare di distribuirla ad altri utenti, hardcoded o salvarla in un file di testo normale accessibile ad altri utenti. È possibile rigenerare la chiave tramite il portale di Azure se si ritiene che possa essere stata compromessa.
 
-In applicazioni reali, il modo migliore per gestire la stringa di connessione di archiviazione è in un file di configurazione. Per recuperare la stringa di connessione da un file di configurazione, è possibile farlo:
+In applicazioni reali, il modo migliore per gestire la stringa di connessione di archiviazione è in un file di configurazione. Per recuperare la stringa di connessione da un file di configurazione, è possibile eseguire questa operazione:
 
 [!code-fsharp[FileStorage](../../../samples/snippets/fsharp/azure/file-storage.fsx#L13-L15)]
 
-Utilizzando Gestione configurazione di Azure è facoltativa. È inoltre possibile utilizzare un'API, ad esempio di .NET Framework `ConfigurationManager` tipo.
+Usando Gestione configurazione di Azure è facoltativa. È anche possibile usare un'API, ad esempio di .NET Framework `ConfigurationManager` tipo.
 
 ### <a name="parse-the-connection-string"></a>Analizzare la stringa di connessione
 
-Per analizzare la stringa di connessione, utilizzare:
+Per analizzare la stringa di connessione, usare:
 
 [!code-fsharp[FileStorage](../../../samples/snippets/fsharp/azure/file-storage.fsx#L21-L22)]
 
@@ -59,21 +59,21 @@ Verrà restituito un `CloudStorageAccount`.
 
 ### <a name="create-the-file-service-client"></a>Creare il client del servizio File
 
-Il `CloudFileClient` tipo consente di utilizzare i file memorizzati nell'archiviazione di File a livello di codice. Ecco un modo per creare il client del servizio:
+Il `CloudFileClient` tipo consente di utilizzare a livello di programmazione i file archiviati in archiviazione File. Ecco un modo per creare il client del servizio:
 
 [!code-fsharp[FileStorage](../../../samples/snippets/fsharp/azure/file-storage.fsx#L28-L28)]
 
-A questo punto si è pronti a scrivere codice che legge i dati da e scrive i dati in archiviazione di File.
+A questo punto si è pronti a scrivere codice che legge e scrive i dati in archiviazione File.
 
 ## <a name="create-a-file-share"></a>Creare una condivisione file
 
-In questo esempio viene illustrato come creare una condivisione file, se non esiste già:
+In questo esempio viene illustrato come creare una condivisione file se non esiste già:
 
 [!code-fsharp[FileStorage](../../../samples/snippets/fsharp/azure/file-storage.fsx#L34-L35)]
 
 ## <a name="create-a-root-directory-and-a-subdirectory"></a>Creare una directory radice e una sottodirectory
 
-In questo caso, ottenere la directory radice e ottenere una sottodirectory della directory principale. Creare entrambi se non sono già presenti.
+In questo caso, si ottiene la directory radice e ottenere una sottodirectory della radice. Creare entrambi se non sono già presenti.
 
 [!code-fsharp[FileStorage](../../../samples/snippets/fsharp/azure/file-storage.fsx#L41-L43)]
 
@@ -83,77 +83,77 @@ In questo esempio viene illustrato come caricare un file di testo.
 
 [!code-fsharp[FileStorage](../../../samples/snippets/fsharp/azure/file-storage.fsx#L49-L50)]
 
-### <a name="download-a-file-to-a-local-copy-of-the-file"></a>Scaricare una copia locale del file di un file
+### <a name="download-a-file-to-a-local-copy-of-the-file"></a>Scaricare un file in una copia locale del file
 
-Qui scaricare il file appena creato, aggiungendo il contenuto in un file locale.
+Qui è scaricare il file appena creato, l'accodamento del contenuto in un file locale.
 
 [!code-fsharp[FileStorage](../../../samples/snippets/fsharp/azure/file-storage.fsx#L56-L56)]
 
-### <a name="set-the-maximum-size-for-a-file-share"></a>Impostare la dimensione massima per una condivisione file
+### <a name="set-the-maximum-size-for-a-file-share"></a>Impostare le dimensioni massime per una condivisione file
 
-Nell'esempio seguente viene illustrato come controllare l'utilizzo corrente per una condivisione e come impostare la quota per la condivisione. `FetchAttributes` deve essere chiamato per popolare una condivisione `Properties`, e `SetProperties` per propagare le modifiche locali per l'archiviazione di File di Azure.
+L'esempio seguente viene illustrato come controllare l'utilizzo corrente per una condivisione e come impostare la quota per la condivisione. `FetchAttributes` deve essere chiamato per popolare una condivisione `Properties`, e `SetProperties` per propagare le modifiche locali con archiviazione File di Azure.
 
 [!code-fsharp[FileStorage](../../../samples/snippets/fsharp/azure/file-storage.fsx#L62-L72)]
 
-### <a name="generate-a-shared-access-signature-for-a-file-or-file-share"></a>Generare una firma di accesso condiviso per un file o una condivisione file
+### <a name="generate-a-shared-access-signature-for-a-file-or-file-share"></a>Generare una firma di accesso condiviso per un file o condivisione file
 
-È possibile generare una firma di accesso condiviso (SAS) per una condivisione file o per un singolo file. È anche possibile creare un criterio di accesso condiviso in una condivisione di file per gestire le firme di accesso condiviso. È consigliabile creare un criterio di accesso condiviso, in quanto forniscono un mezzo per revocare la firma di accesso condiviso, se questa deve essere compromessa.
+È possibile generare una firma di accesso condiviso (SAS) per una condivisione file o per un singolo file. È anche possibile creare un criterio di accesso condiviso in una condivisione file per gestire le firme di accesso condiviso. È consigliabile creare un criterio di accesso condiviso, in quanto forniscono un modo per revocare la firma di accesso condiviso se si deve essere compromesso.
 
-In questo caso, si crea un oggetto condiviso criteri in una condivisione di accessi e quindi utilizzare tale criterio per fornire i vincoli per una firma di accesso condiviso in un file nella condivisione.
+In questo caso, si crea un oggetto condiviso in una condivisione di criteri di accesso e quindi usare tale criterio per fornire i vincoli per una firma di accesso condiviso in un file nella condivisione.
 
 [!code-fsharp[FileStorage](../../../samples/snippets/fsharp/azure/file-storage.fsx#L78-L94)]
 
-Per ulteriori informazioni sulla creazione e utilizzo di firme di accesso condiviso, vedere [utilizzando di firme di accesso condiviso (SAS)](/azure/storage/storage-dotnet-shared-access-signature-part-1) e [creare e usare una firma di accesso condiviso all'archiviazione Blob](/azure/storage/storage-dotnet-shared-access-signature-part-2).
+Per altre informazioni sulla creazione e uso delle firme di accesso condiviso, vedere [uso di firme di accesso condiviso (SAS)](/azure/storage/storage-dotnet-shared-access-signature-part-1) e [creare e usare una firma di accesso condiviso con l'archiviazione Blob](/azure/storage/storage-dotnet-shared-access-signature-part-2).
 
 ### <a name="copy-files"></a>Copiare i file
 
-È possibile copiare un file in un altro file o in un blob o un blob in un file. Se si copia un blob in un file o un file in un blob, è *deve* utilizzare una firma di accesso condiviso (SAS) per autenticare l'oggetto di origine, anche se si copia nello stesso account di archiviazione.
+È possibile copiare un file in un altro file o in un blob o un blob in un file. Se si copia un blob in un file o un file in un blob, si *necessario* usare una firma di accesso condiviso (SAS) per autenticare l'oggetto di origine, anche se si copia nello stesso account di archiviazione.
 
 ### <a name="copy-a-file-to-another-file"></a>Copiare un file in un altro file
 
-In questo caso, si copia un file in un altro file nella stessa condivisione. Poiché questa operazione di copia copia tra file nello stesso account di archiviazione, è possibile utilizzare l'autenticazione chiave condivisa per eseguire la copia.
+In questo caso, si copia un file in un altro file nella stessa condivisione. Poiché questa operazione esegue la copia tra file nello stesso account di archiviazione, è possibile utilizzare l'autenticazione chiave condivisa per eseguire la copia.
 
 [!code-fsharp[FileStorage](../../../samples/snippets/fsharp/azure/file-storage.fsx#L100-L101)]
 
-### <a name="copy-a-file-to-a-blob"></a>Copia un file in un blob
+### <a name="copy-a-file-to-a-blob"></a>Copiare un file in un blob
 
-In questo caso, si crea un file e copiarlo in un blob nello stesso account di archiviazione. Creare una firma di accesso condiviso per il file di origine, il servizio utilizza per autenticare l'accesso al file di origine durante l'operazione di copia.
+In questo caso, si crea un file e copiarlo in un blob nello stesso account di archiviazione. Si crea una firma di accesso condiviso per il file di origine, il servizio Usa per autenticare l'accesso al file di origine durante l'operazione di copia.
 
 [!code-fsharp[FileStorage](../../../samples/snippets/fsharp/azure/file-storage.fsx#L107-L120)]
 
-È possibile copiare un blob in un file nello stesso modo. Se l'oggetto di origine è un blob, creare una firma di accesso condiviso per autenticare l'accesso ai blob durante l'operazione di copia.
+È possibile copiare un blob in un file nello stesso modo. Se l'oggetto di origine è un blob, creare una firma di accesso condiviso per autenticare l'accesso al blob durante l'operazione di copia.
 
-## <a name="troubleshooting-file-storage-using-metrics"></a>Risoluzione dei problemi utilizzando la metrica di archiviazione di File
+## <a name="troubleshooting-file-storage-using-metrics"></a>Risoluzione dei problemi di archiviazione di File con le metriche
 
-Analitica di archiviazione Azure supporta le metriche per l'archiviazione di File. Dati di metrica, è possibile tenere traccia delle richieste e diagnosticare i problemi.
+Analitica di archiviazione di Azure supporta le metriche per archiviazione File. Con i dati delle metriche, è possibile tenere traccia delle richieste e diagnosticare i problemi.
 
-È possibile abilitare la metrica per l'archiviazione di File dal [portale Azure](https://portal.azure.com), oppure è possibile farlo da F # simile al seguente:
+È possibile abilitare le metriche per archiviazione File dal [portale di Azure](https://portal.azure.com), oppure è possibile farlo da F# simile al seguente:
 
 [!code-fsharp[FileStorage](../../../samples/snippets/fsharp/azure/file-storage.fsx#L126-L140)]
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Vedere i collegamenti per ulteriori informazioni sull'archiviazione di File di Azure.
+Vedere i collegamenti seguenti per altre informazioni sull'archiviazione File di Azure.
 
-### <a name="conceptual-articles-and-videos"></a>Video e articoli concettuali
+### <a name="conceptual-articles-and-videos"></a>Articoli concettuali e video
 
-- [File di archiviazione Azure: una disposizione cloud SMB file system per Windows e Linux](https://azure.microsoft.com/resources/videos/azurecon-2015-azure-files-storage-a-frictionless-cloud-smb-file-system-for-windows-and-linux/)
-- [Come usare l'archiviazione di File di Azure con Linux](/azure/storage/storage-how-to-use-files-linux)
+- [Archiviazione file di Azure: file di SMB nel cloud del sistema per Windows e Linux](https://azure.microsoft.com/resources/videos/azurecon-2015-azure-files-storage-a-frictionless-cloud-smb-file-system-for-windows-and-linux/)
+- [Come usare archiviazione File di Azure con Linux](/azure/storage/storage-how-to-use-files-linux)
 
-### <a name="tooling-support-for-file-storage"></a>Gli strumenti di supporto per l'archiviazione di File
+### <a name="tooling-support-for-file-storage"></a>Supporto degli strumenti per archiviazione File
 
-- [Uso di Azure PowerShell con l'archiviazione di Azure](/azure/storage/storage-powershell-guide-full)
+- [Uso di Azure PowerShell con archiviazione di Azure](/azure/storage/storage-powershell-guide-full)
 - [Come usare AzCopy con archiviazione di Microsoft Azure](/azure/storage/storage-use-azcopy)
-- [Tramite l'interfaccia CLI di Azure con l'archiviazione di Azure](/azure/storage/storage-azure-cli#create-and-manage-file-shares)
+- [Tramite la CLI di Azure con archiviazione di Azure](/azure/storage/storage-azure-cli#create-and-manage-file-shares)
 
 ### <a name="reference"></a>Riferimenti
 
-- [Libreria Client di archiviazione per il riferimento di .NET](https://msdn.microsoft.com/library/azure/mt347887.aspx)
-- [Riferimento API REST di servizi file](/rest/api/storageservices/fileservices/File-Service-REST-API)
+- [Storage Client Library per .NET](https://msdn.microsoft.com/library/azure/mt347887.aspx)
+- [Riferimento API REST del servizio file](/rest/api/storageservices/fileservices/File-Service-REST-API)
 
 ### <a name="blog-posts"></a>Post di blog
 
-- [Archiviazione di File di Azure è disponibile](https://azure.microsoft.com/blog/azure-file-storage-now-generally-available/)
-- [Archiviazione di File all'interno di Azure](https://azure.microsoft.com/blog/inside-azure-file-storage/) 
-- [Introduzione a servizi di File di Microsoft Azure](https://blogs.msdn.microsoft.com/windowsazurestorage/2014/05/12/introducing-microsoft-azure-file-service/)
-- [Connessioni persistenti al file di Microsoft Azure](https://blogs.msdn.microsoft.com/windowsazurestorage/2014/05/26/persisting-connections-to-microsoft-azure-files/)
+- [Archiviazione File di Azure è ora disponibile a livello generale](https://azure.microsoft.com/blog/azure-file-storage-now-generally-available/)
+- [Inside Azure File Storage](https://azure.microsoft.com/blog/inside-azure-file-storage/) 
+- [Introduzione a servizio File di Microsoft Azure](https://blogs.msdn.microsoft.com/windowsazurestorage/2014/05/12/introducing-microsoft-azure-file-service/)
+- [Mantenimento delle connessioni ai file di Microsoft Azure](https://blogs.msdn.microsoft.com/windowsazurestorage/2014/05/26/persisting-connections-to-microsoft-azure-files/)

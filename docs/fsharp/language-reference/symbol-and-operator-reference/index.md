@@ -3,10 +3,10 @@ title: Riferimenti per simboli e operatori (F#)
 description: Informazioni sui simboli e operatori usati nel linguaggio di programmazione c#.
 ms.date: 04/04/2018
 ms.openlocfilehash: 0e36f6cfc75b7d2e79bcf7acb89d260fd4e9b1ad
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "47216827"
 ---
 # <a name="symbol-and-operator-reference"></a>Riferimenti per simboli e operatori
@@ -52,7 +52,7 @@ Nella tabella seguente sono descritti i simboli usati nel linguaggio F#, vengono
 |`.`|[Membri](../members/index.md)<br /><br />[Tipi primitivi](../primitive-types.md)|<ul><li>Accede a un membro e separa i singoli nomi in un nome completo.<br /></li><li>Consente di specificare un separatore decimale nei numeri a virgola mobile.<br /></li></ul>|
 |`..`|[Cicli: espressione `for...in`](../loops-for-in-expression.md)|<ul><li>Specifica un intervallo.<br /></li></ul>|
 |`.. ..`|[Cicli: espressione `for...in`](../loops-for-in-expression.md)|<ul><li>Specifica un intervallo con un incremento.<br /></li></ul>|
-|`.[...]`|[Array](../arrays.md)|<ul><li>Accede a un elemento di matrice.<br /></li></ul>|
+|`.[...]`|[Matrici](../arrays.md)|<ul><li>Accede a un elemento di matrice.<br /></li></ul>|
 |`/`|[Operatori aritmetici](arithmetic-operators.md)<br /><br />[Unità di misura](../units-of-measure.md)|<ul><li>Divide il lato sinistro (numeratore) per il lato destro (denominatore).<br /></li><li>Usato in unità di tipi di misura.<br /></li></ul>|
 |`/?`|[Operatori nullable](nullable-operators.md)|<ul><li>Divide il lato sinistro dal lato destro, quando il lato destro è un tipo nullable.<br /></li></ul>|
 |`//`||<ul><li>Indica l'inizio di un commento a riga singola.<br /></li></ul>|
@@ -95,7 +95,7 @@ Nella tabella seguente sono descritti i simboli usati nel linguaggio F#, vengono
 |`?>=?`, `?>?`, `?<=?`, `?<?`, `?=?`, `?<>?`, `?+?`, `?-?`, `?*?`, `?/?`|[Operatori nullable](nullable-operators.md)|<ul><li>Equivalente per i corrispondenti operatori non racchiusi da punti interrogativi, dove entrambi i lati sono tipi nullable.<br /></li></ul>|
 |`@`|[Elenchi](../lists.md)<br /><br />[Stringhe](../strings.md)|<ul><li>Concatena due elenchi.<br /></li><li>Quando si trova prima di una stringa letterale, indica che la stringa deve essere interpretata alla lettera, senza interpretazione dei caratteri di escape.<br /></li></ul>|
 |`[...]`|[Elenchi](../lists.md)|<ul><li>Delimita gli elementi di un elenco.<br /></li></ul>|
-|<code>[&#124;...&#124;]</code>|[Array](../arrays.md)|<ul><li>Delimita gli elementi di una matrice.<br /></li></ul>|
+|<code>[&#124;...&#124;]</code>|[Matrici](../arrays.md)|<ul><li>Delimita gli elementi di una matrice.<br /></li></ul>|
 |`[<...>]`|[Attributi](../attributes.md)|<ul><li>Delimita un attributo.<br /></li></ul>|
 |`\`|[Stringhe](../strings.md)|<ul><li>Effettua l'escape del carattere successivo. Usato nei valori letterali di stringa e carattere.<br /></li></ul>|
 |`^`|[Parametri di tipo risolti staticamente](../generics/statically-resolved-type-parameters.md)<br /><br />[Stringhe](../strings.md)|<ul><li>Specifica i parametri di tipo che devono essere risolti in fase di compilazione, non in fase di esecuzione.<br /></li><li>Concatena le stringhe.<br /></li></ul>|

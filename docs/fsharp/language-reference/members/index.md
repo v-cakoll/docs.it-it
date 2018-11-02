@@ -1,12 +1,12 @@
 ---
 title: Membri (F#)
-description: Informazioni sui membri di oggetto nel linguaggio di programmazione c#.
+description: Informazioni sui membri di oggetti di F# linguaggio di programmazione.
 ms.date: 05/16/2016
 ms.openlocfilehash: 6dcdb1d7fa061fb838d4aa8f7a2912fd168c3781
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "33562207"
 ---
 # <a name="members"></a>Membri

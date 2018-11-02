@@ -1,34 +1,34 @@
 ---
-title: 'Utilizzo di gestione dei pacchetti con F # per Azure'
-description: 'Utilizzare Paket o Nuget per gestire le dipendenze di Azure di F #'
+title: Usare Gestione pacchetti con F# per Azure
+description: Usare Paket o Nuget per gestire F# dipendenze di Azure
 author: sylvanc
 ms.date: 09/20/2016
 ms.openlocfilehash: fd9c4a15ab0741d44d6d5cf909b7219d310affb0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "33566971"
 ---
 # <a name="package-management-for-f-azure-dependencies"></a>Gestione dei pacchetti per le dipendenze F# di Azure
 
 Acquisizione di pacchetti per lo sviluppo di Azure è semplice quando si utilizza una gestione pacchetti. Esistono due opzioni [Paket](https://fsprojects.github.io/Paket/) e [NuGet](https://www.nuget.org/).
 
-## <a name="using-paket"></a>Utilizzando Paket
+## <a name="using-paket"></a>Usando Paket
 
-Se si utilizza [Paket](https://fsprojects.github.io/Paket/) come la gestione delle dipendenze, è possibile utilizzare il `paket.exe` strumento per aggiungere dipendenze di Azure. Ad esempio:
+Se si usa [Paket](https://fsprojects.github.io/Paket/) il gestore delle dipendenze, è possibile usare il `paket.exe` dello strumento per aggiungere dipendenze di Azure. Ad esempio:
 
     > paket add nuget WindowsAzure.Storage
 
-Oppure, se si utilizza [Mono](https://www.mono-project.com/) per lo sviluppo multipiattaforma con .NET:
+Oppure, se si usa [Mono](https://www.mono-project.com/) per sviluppo multipiattaforma con .NET:
 
     > mono paket.exe add nuget WindowsAzure.Storage
 
-Verrà aggiunta `WindowsAzure.Storage` al set di dipendenze di pacchetto per il progetto nella directory corrente, modificare il `paket.dependencies` file e scaricare il pacchetto. Se si hanno impostato le dipendenze in precedenza o si lavora con un progetto in cui sono state impostate dipendenze da un altro sviluppatore, è possibile risolvere e installare le dipendenze in locale simile al seguente:
+Verrà aggiunto `WindowsAzure.Storage` al set di dipendenze di pacchetto per il progetto nella directory corrente, modificare il `paket.dependencies` file e scaricare il pacchetto. Se si sono state impostate precedentemente le dipendenze, o si lavora con un progetto in cui le dipendenze sono state impostate da un altro sviluppatore, è possibile risolvere e installare le dipendenze in locale come segue:
 
     > paket install
 
-Oppure, per lo sviluppo Mono:
+Oppure, per lo sviluppo di Mono:
 
     > mono paket.exe install
 
@@ -36,25 +36,25 @@ Oppure, per lo sviluppo Mono:
 
     > paket update
 
-Oppure, per lo sviluppo Mono:
+Oppure, per lo sviluppo di Mono:
 
     > mono paket.exe update
 
 ## <a name="using-nuget"></a>Uso di Nuget
 
-Se si utilizza [NuGet](https://www.nuget.org/) come la gestione delle dipendenze, è possibile utilizzare il `nuget.exe` strumento per aggiungere dipendenze di Azure. Ad esempio:
+Se si usa [NuGet](https://www.nuget.org/) il gestore delle dipendenze, è possibile usare il `nuget.exe` dello strumento per aggiungere dipendenze di Azure. Ad esempio:
 
     > nuget install WindowsAzure.Storage -ExcludeVersion
 
-Oppure, per lo sviluppo Mono:
+Oppure, per lo sviluppo di Mono:
 
     > mono nuget.exe install WindowsAzure.Storage -ExcludeVersion
 
-Verrà aggiunta `WindowsAzure.Storage` al set di dipendenze di pacchetto per il progetto nella directory corrente e il download del pacchetto. Se si hanno impostato le dipendenze in precedenza o si lavora con un progetto in cui sono state impostate dipendenze da un altro sviluppatore, è possibile risolvere e installare le dipendenze in locale simile al seguente:
+Consente di aggiungere `WindowsAzure.Storage` nel set di dipendenze di pacchetto per il progetto nella directory corrente e scaricare il pacchetto. Se si sono state impostate precedentemente le dipendenze, o si lavora con un progetto in cui le dipendenze sono state impostate da un altro sviluppatore, è possibile risolvere e installare le dipendenze in locale come segue:
 
     > nuget restore 
 
-Oppure, per lo sviluppo Mono:
+Oppure, per lo sviluppo di Mono:
 
     > mono nuget.exe restore
 
@@ -62,23 +62,23 @@ Oppure, per lo sviluppo Mono:
 
     > nuget update
 
-Oppure, per lo sviluppo Mono:
+Oppure, per lo sviluppo di Mono:
 
     > mono nuget.exe update
 
 ## <a name="referencing-assemblies"></a>Assembly di riferimento
 
-Per utilizzare i pacchetti nello script F #, è necessario fare riferimento gli assembly inclusi nei pacchetti utilizzando un `#r` direttiva. Ad esempio:
+Per usare i pacchetti in di F# script, è necessario fare riferimento l'assembly inclusi nei pacchetti usando una `#r` direttiva. Ad esempio:
 
     > #r "packages/WindowsAzure.Storage/lib/net40/Microsoft.WindowsAzure.Storage.dll"
 
-Come si può notare, è necessario specificare il percorso relativo per la DLL e il nome completo della DLL, che potrebbe non essere esattamente lo stesso come il nome del pacchetto. Il percorso include una versione di framework ed eventualmente un numero di versione del pacchetto. Per trovare tutti gli assembly installati, è possibile utilizzare codice simile al seguente su una riga di comando di Windows:
+Come può notare, è necessario specificare il percorso relativo per la DLL e il nome completo della DLL, che potrebbe non essere esattamente lo stesso come il nome del pacchetto. Il percorso include una versione di framework e possibilmente un numero di versione del pacchetto. Per trovare tutti gli assembly installati, è possibile usare codice simile al seguente in una riga di comando di Windows:
 
     > cd packages/WindowsAzure.Storage
     > dir /s/b *.dll
 
-O in una shell Unix, simile a questo:
+In alternativa, in una shell Unix, simile a questo:
 
     > find packages/WindowsAzure.Storage -name "*.dll"
 
-Questa query fornirà i percorsi per gli assembly installati. Da qui, è possibile selezionare il percorso corretto per la versione di framework.
+Questo fornirà i percorsi agli assembly installato. Da qui, è possibile selezionare il percorso corretto per la versione di framework.
