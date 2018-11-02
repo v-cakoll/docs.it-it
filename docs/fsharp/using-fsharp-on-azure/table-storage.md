@@ -4,10 +4,10 @@ description: Store dati strutturati nel cloud con archiviazione tabelle di Azure
 author: sylvanc
 ms.date: 03/26/2018
 ms.openlocfilehash: 2d793ba8653833ff384f1824e303b08e05aba69b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "43519535"
 ---
 # <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>Introduzione all'archiviazione tabelle di Azure e l'API Table di Azure Cosmos DB con F # # 

@@ -2,12 +2,12 @@
 title: Panoramica di F#
 description: Esaminare alcune delle principali funzionalità del linguaggio in questa presentazione con esempi di codice di programmazione F#.
 ms.date: 02/28/2018
-ms.openlocfilehash: d129e2312ae3da64f04b3bbb0bbd0b4d77aad36e
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 7a512b5fead8de69f025e791b6086c60dbfc1b24
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42924521"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50235713"
 ---
 # <a name="tour-of-f"></a>Panoramica di F# #
 
@@ -193,6 +193,6 @@ Le classi sono ideali per un numero enorme di motivi, ad esempio quando è neces
 
 Ora che si è visto alcune delle principali funzionalità del linguaggio, dovrebbe essere pronti a scrivere i primi programmi F#.  Consulta [introduttiva](tutorials/getting-started/index.md) per informazioni su come configurare l'ambiente di sviluppo e scrivere il codice.
 
-I passaggi successivi per ottenere ulteriori possono essere qualsiasi, ma è consigliabile [funziona come valori di prima classe](introduction-to-functional-programming/functions-as-first-class-values.md) <!--[Introduction to Functional Programming in F#](introduction-to-functional-programming/index.md)--> per acquisire familiarità con concetti di programmazione funzionale.  Questi saranno essenziali nella creazione di applicazioni affidabili in F#.
+I passaggi successivi per ottenere ulteriori possono essere qualsiasi, ma è consigliabile [Introduzione alla programmazione funzionale in F# ](introduction-to-functional-programming/index.md) per acquisire familiarità con concetti di programmazione funzionale.  Questi saranno essenziali nella creazione di applicazioni affidabili in F#.
 
 Inoltre, consultare il [riferimenti al linguaggio F#](language-reference/index.md) per visualizzare una raccolta completa di contenuti concettuali su F#.

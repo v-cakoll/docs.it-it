@@ -3,10 +3,10 @@ title: Riferimenti per il linguaggio F#
 description: 'Trovare informazioni funzionalità del linguaggio F # da questo riferimento al token delle lingue, i concetti, tipi, le espressioni e gli argomenti supportati dal compilatore costrutto.'
 ms.date: 05/16/2016
 ms.openlocfilehash: adce37ee393673b7611ad24f385c8b8106f6ce86
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/15/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "45646415"
 ---
 # <a name="f-language-reference"></a>Riferimenti per il linguaggio F#
@@ -67,7 +67,7 @@ La tabella seguente illustra gli argomenti di riferimento disponibili che descri
 |[Elenchi](lists.md)|Descrive elenchi. Un elenco in F# è una serie ordinata e non modificabile di elementi dello stesso tipo.|
 |[Opzioni](options.md)|Descrive il tipo di opzione. Un'opzione in F# viene usata quando un valore può esistere o meno. Un'opzione ha un tipo sottostante e può contenere un valore di tale tipo o nessun valore.|
 |[Sequenze](sequences.md)|Descrive le sequenze. Una sequenza è una serie logica di elementi dello stesso tipo. Gli elementi individuali di una sequenza vengono calcolati solo se necessario, pertanto la rappresentazione potrebbe essere minore di quella indicata da un conteggio di elementi letterali.|
-|[Array](arrays.md)|Descrive matrici. Le matrici sono sequenze di dimensioni fisse, in base zero, o modificabili di elementi di dati consecutivi dello stesso tipo.|
+|[Matrici](arrays.md)|Descrive matrici. Le matrici sono sequenze di dimensioni fisse, in base zero, o modificabili di elementi di dati consecutivi dello stesso tipo.|
 |[Record](records.md)|Descrive record. I record rappresentano aggregazioni semplici di valori denominati, facoltativamente con membri.|
 |[Unioni discriminate](discriminated-unions.md)|Descrive le unioni discriminate, che offrono supporto per i valori che possono essere uno dei vari casi denominati con tipi e i valori potenzialmente diversi.|
 |[Enumerazioni](enumerations.md)|Descrive le enumerazioni, che sono tipi che hanno un set definito di valori denominati. È possibile usarle in sostituzione ai valori letterali per rendere il codice più leggibile e gestibile.|

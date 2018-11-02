@@ -3,10 +3,10 @@ title: Tipi di raccolta F#
 description: 'Informazioni sui tipi di raccolta F # e le differenze rispetto ai tipi di raccolte in .NET Framework.'
 ms.date: 05/16/2016
 ms.openlocfilehash: a3cfc3f06582c31a79dce43b583eca39f69ddf1e
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "43864761"
 ---
 # <a name="f-collection-types"></a>Tipi di raccolta F#
@@ -22,7 +22,7 @@ La tabella seguente illustra i tipi di raccolta F #.
 |Tipo|Descrizione|Collegamenti correlati|
 |----|-----------|-------------|
 |[List](https://msdn.microsoft.com/library/c627b668-477b-4409-91ed-06d7f1b3e4a7)|Una serie ordinata e non modificabile di elementi dello stesso tipo. Implementato come un elenco collegato.|[Elenchi](lists.md)<br /><br />[Modulo List](https://msdn.microsoft.com/library/a2264ba3-2d45-40dd-9040-4f7aa2ad9788)|
-|[matrice](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1)|Una raccolta a dimensione fissa, in base zero e modificabile di elementi dati consecutivi dello stesso tipo.|[Array](arrays.md)<br /><br />[Array (modulo)](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1)<br /><br />[Modulo Array2D](https://msdn.microsoft.com/library/ae1a9746-7817-4430-bcdb-a79c2411bbd3)<br /><br />[Modulo Array3D](https://msdn.microsoft.com/library/c8355e2d-add8-48a4-8aa6-1c57ae74c560)|
+|[matrice](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1)|Una raccolta a dimensione fissa, in base zero e modificabile di elementi dati consecutivi dello stesso tipo.|[Matrici](arrays.md)<br /><br />[Array (modulo)](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1)<br /><br />[Modulo Array2D](https://msdn.microsoft.com/library/ae1a9746-7817-4430-bcdb-a79c2411bbd3)<br /><br />[Modulo Array3D](https://msdn.microsoft.com/library/c8355e2d-add8-48a4-8aa6-1c57ae74c560)|
 |[Seq](https://msdn.microsoft.com/library/2f0c87c6-8a0d-4d33-92a6-10d1d037ce75)|Una serie logica di elementi che sono dello stesso tipo. Le sequenze sono particolarmente utili quando si hanno grandi dimensioni, raccolta ordinata di dati, ma non necessariamente prevediate di usare tutti gli elementi. Sequenza di singoli elementi vengono calcolati solo se necessario, quindi una sequenza può avere prestazioni migliori rispetto a un elenco, se non vengono utilizzati tutti gli elementi. Le sequenze sono rappresentate dal `seq<'T>` tipo, che è un alias per `IEnumerable<T>`. Pertanto, qualsiasi tipo .NET Framework che implementa `System.Collections.Generic.IEnumerable<'T>` può essere usato come una sequenza.|[Sequenze](sequences.md)<br /><br />[Seq (modulo)](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684)|
 |[Mappa](https://msdn.microsoft.com/library/975316ea-55e3-4987-9994-90897ad45664)|Un dizionario non modificabile di elementi. Gli elementi sono accessibili tramite chiave.|[Map (modulo)](https://msdn.microsoft.com/library/bfe61ead-f16c-416f-af98-56dbcbe23e4f)|
 |[Set](https://msdn.microsoft.com/library/50cebdce-0cd7-4c5c-8ebc-f3a9e90b38d8)|Un set non modificabile basato su alberi binari, in cui il confronto è la funzione di confronto strutturali F #, che usa potenzialmente le implementazioni del `System.IComparable` interfaccia sui valori di chiave.|[Modulo di set](https://msdn.microsoft.com/library/61efa732-d55d-4c32-993f-628e2f98e6a0)|

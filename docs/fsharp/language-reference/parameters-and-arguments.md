@@ -2,12 +2,12 @@
 title: Parametri e argomenti (F#)
 description: 'Informazioni sul supporto del linguaggio F # per la definizione dei parametri e passare argomenti a funzioni, metodi e proprietà.'
 ms.date: 05/16/2016
-ms.openlocfilehash: a1e2a70ca560bbb09d2cd10f47485cbe5c5e029d
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 6ccef89fe411096ed66f481dd4ae2d91259fe1c4
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123358"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50744457"
 ---
 # <a name="parameters-and-arguments"></a>Parametri e argomenti
 
@@ -111,6 +111,8 @@ Per altre informazioni, vedere [costruttori (F #)](https://msdn.microsoft.com/li
 
 È possibile specificare un parametro facoltativo per un metodo con un punto interrogativo davanti al nome del parametro. I parametri facoltativi vengono interpretati come tipo di opzione F #, pertanto è possibile eseguire le query in modo normale che i tipi di opzione sono sottoposti a query, usando un `match` espressione con `Some` e `None`. I parametri facoltativi sono consentiti solo per i membri, non su funzioni create tramite `let` associazioni.
 
+È possibile passare valori facoltativi esistenti al metodo in base al nome di parametro, ad esempio `?arg=None` oppure `?arg=Some(3)` o `?arg=arg`. Ciò può essere utile quando la compilazione di un metodo che passa gli argomenti facoltativi a un altro metodo.
+
 È anche possibile usare una funzione `defaultArg`, che imposta un valore predefinito di un argomento facoltativo. Il `defaultArg` funzione accetta il parametro facoltativo come primo argomento e il valore predefinito come il secondo.
 
 Nell'esempio seguente viene illustrato l'utilizzo di parametri facoltativi.
@@ -123,7 +125,29 @@ L'output è indicato di seguito.
 Baud Rate: 9600 Duplex: Full Parity: false
 Baud Rate: 4800 Duplex: Half Parity: false
 Baud Rate: 300 Duplex: Half Parity: true
+Baud Rate: 9600 Duplex: Full Parity: false
+Baud Rate: 9600 Duplex: Full Parity: false
+Baud Rate: 4800 Duplex: Half Parity: false
 ```
+
+Ai fini di C# e l'interoperabilità di Visual Basic è possibile usare gli attributi `[<Optional; DefaultParameterValue<(...)>]` in F#, in modo che i chiamanti possano visualizzare un argomento come facoltativi. Ciò equivale alla definizione dell'argomento come facoltativi nel C# come in `MyMethod(int i = 3)`.
+
+```fsharp
+open System
+open System.Runtime.InteropServices
+type C = 
+    static member Foo([<Optional; DefaultParameterValue("Hello world")>] message) =
+        printfn "%s" message
+```
+
+Il valore fornito come argomento per `DefaultParameterValue` deve corrispondere al tipo del parametro, ad esempio quanto segue non è consentito:
+
+```fsharp
+type C =
+    static member Wrong([<Optional; DefaultParameterValue("string")>] i:int) = ()
+```
+
+In questo caso, il compilatore genera un avviso e ignorerà entrambi gli attributi del tutto. Si noti che il valore predefinito `null` deve essere con annotazioni tipo, come in caso contrario, il compilatore deduce il tipo non corretto, vale a dire `[<Optional; DefaultParameterValue(null:obj)>] o:obj`.
 
 ## <a name="passing-by-reference"></a>Il passaggio per riferimento
 

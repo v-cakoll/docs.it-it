@@ -3,10 +3,10 @@ title: Eventi (F#)
 description: 'Informazioni su come gli eventi F # consentono di associare chiamate di funzione con le azioni utente, che sono importanti nella programmazione GUI.'
 ms.date: 05/16/2016
 ms.openlocfilehash: ce547bc9ec7b5e0ef9a7492c0889bb690e3040c2
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "43871933"
 ---
 # <a name="events"></a>Eventi
@@ -40,7 +40,7 @@ L'output è indicato di seguito.
 Event1 occurred! Object data: Hello World!
 ```
 
-Di seguito viene illustrata la funzionalità aggiuntiva fornita dal modulo `Event`. Nell'esempio di codice seguente viene illustrato l'utilizzo di base di `Event.create` per creare un evento e un metodo trigger, aggiungere due gestori eventi sotto forma di espressioni lambda e quindi attivare l'evento per eseguire entrambe le espressioni.
+Di seguito viene illustrata la funzionalità aggiuntiva fornita dal modulo `Event`. Nell'esempio di codice seguente viene illustrato l'utilizzo di base di `Event.create` per creare un evento e un metodo trigger, aggiungere due gestori eventi sotto forma di espressioni lambda e quindi attivare l'evento per eseguire entrambe le espressioni lambda.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3603.fs)]
 
