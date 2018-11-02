@@ -1,21 +1,21 @@
 ---
-title: Denominazione sicura e le librerie .NET
-description: Le procedure consigliate per sicuro delle librerie .NET di denominazione.
+title: Creazione di nomi sicuri e librerie .NET
+description: Procedure consigliate per la creazione di nomi sicuri per le librerie .NET.
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/16/2018
-ms.openlocfilehash: e3f7d443eb9acc84c800ea2611b803733085391c
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
-ms.translationtype: MT
+ms.openlocfilehash: 6f5743c7a8c6fdbdcdcf3aa80d2f92f2e04621f2
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49372806"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201452"
 ---
-# <a name="strong-naming"></a>Denominazione sicura
+# <a name="strong-naming"></a>Creazione di nomi sicuri
 
-Denominazione sicura fa riferimento a firmare un assembly con una chiave, producendo un [assembly con nome sicuro](../../framework/app-domains/strong-named-assemblies.md). Quando un assembly è sicuro, crea un'identità univoca in base al numero di versione nome e l'assembly e può aiutare a evitare i conflitti di assembly.
+La creazione di nomi sicuri si riferisce alla firma di un assembly con una chiave, per produrre un [assembly con nome sicuro](../../framework/app-domains/strong-named-assemblies.md). Quando un assembly ha un nome sicuro, viene creata un'identità univoca basata sul nome e sul numero di versione dell'assembly e ciò può aiutare a evitare i conflitti di assembly.
 
-Lo svantaggio di nome sicuro è che .NET Framework su Windows consente strict durante il caricamento degli assembly dopo che un assembly ha un nome sicuro. Un riferimento di assembly con nome sicuro debba corrispondere esattamente alla versione fa riferimento un assembly, imporre agli sviluppatori [configurare i reindirizzamenti di associazione](../../framework/configure-apps/redirect-assembly-versions.md) quando si usa l'assembly:
+Lo svantaggio dei nomi sicuri è che .NET Framework in Windows abilita il caricamento in modalità strict per gli assembly con nome sicuro. Un riferimento a un assembly con nome sicuro deve corrispondere esattamente alla versione a cui viene fatto riferimento da un assembly, quindi gli sviluppatori devono [configurare reindirizzamenti di binding](../../framework/configure-apps/redirect-assembly-versions.md) quando l'assembly viene usato:
 
 ```xml
 <configuration>
@@ -30,43 +30,45 @@ Lo svantaggio di nome sicuro è che .NET Framework su Windows consente strict du
 </configuration>
 ```
 
-Quando gli sviluppatori .NET si lamentano nome sicuro, cosa è in genere reclamo è il caricamento dell'assembly strict. Fortunatamente, questo problema è isolata e prevede di .NET Framework. La maggior parte delle altre implementazioni di .NET, Xamarin, UWP e .NET core non è il caricamento dell'assembly strict e rimuove lo svantaggio principale di nome sicuro.
+Quando gli sviluppatori .NET si lamentano dei nomi sicuri, in realtà ciò che non apprezzano è il caricamento degli assembly in modalità strict. Fortunatamente, questo problema riguarda solo .NET Framework. .NET Core, Xamarin, la piattaforma UWP e la maggior parte delle altre implementazioni .NET non prevedono il caricamento degli assembly in modalità strict, ovviando così al principale svantaggio dei nomi sicuri.
 
-Un aspetto importante del nome sicuro è costituito da virale: un nome sicuro assembly possono fare riferimento solo altri sicuro degli assembly con nome. Se la libreria non è sicura denominato, è stato escluso gli sviluppatori che stanno progettando un'applicazione o una raccolta che è necessario un nome sicuro dal loro utilizzo.
+Un aspetto importante dei nomi sicuri è che sono virali: un assembly con nome sicuro può fare riferimento solo ad altri assembly con nome sicuro. Se la libreria non ha un nome sicuro, gli sviluppatori che stanno progettando un'applicazione o una libreria che richiede nomi sicuri non la potranno usare.
 
-Sono i vantaggi del nome sicuro:
+I vantaggi dei nomi sicuri sono i seguenti:
 
-1. L'assembly può essere fatto riferimento e usato da altri assembly con nome sicuro.
+1. Altri assembly con nome sicuro possono fare riferimento all'assembly e usarlo.
 2. L'assembly può essere archiviato nella Global Assembly Cache (GAC).
-3. L'assembly può essere caricato affiancato con altre versioni dell'assembly. Il caricamento dell'assembly side-by-side è comunemente richieste dalle applicazioni con architetture di plug-in.
+3. L'assembly può essere caricato affiancato ad altre versioni dell'assembly. Il caricamento dell'assembly affiancato è comunemente richiesto dalle applicazioni con architetture plug-in.
 
-## <a name="create-strong-named-net-libraries"></a>Creare sicuro denominato librerie .NET
+## <a name="create-strong-named-net-libraries"></a>Creare librerie .NET con nome sicuro
 
-È necessario un nome sicuro le librerie .NET open source. Un assembly di denominazione sicura garantisce la maggior parte degli utenti può usarla e solo il caricamento dell'assembly strict influisce su .NET Framework.
+È consigliabile usare un nome sicuro per le librerie .NET open source. L'uso di un nome sicuro per un assembly garantisce che la maggior parte degli utenti possa usare l'assembly e il caricamento dell'assembly in modalità strict riguarda solo .NET Framework.
 
 > [!NOTE]
-> Questo materiale sussidiario è specifico di librerie .NET distribuite pubblicamente, ad esempio le librerie .NET pubblicati su NuGet.org. Nome sicuro non richiesti dalla maggior parte delle applicazioni .NET e non deve essere eseguita per impostazione predefinita.
+> Queste indicazioni si riferiscono alle librerie .NET distribuite pubblicamente, ad esempio le librerie .NET pubblicate in NuGet.org. Il nome sicuro non è richiesto dalla maggior parte delle applicazioni .NET e non deve essere usato per impostazione predefinita.
 
-**Provare a ✔️** sicuro gli assembly della libreria.
+**VALUTARE** l'uso di nomi sicuri per gli assembly della libreria.
 
-**Provare a ✔️** archiviare la chiave utilizzata per nome sicuro nel sistema di controllo di origine.
+**✔️ VALUTARE** l'aggiunta della chiave per la creazione di nomi sicuri nel sistema di controllo del codice sorgente.
 
 > Una chiave disponibile pubblicamente consente agli sviluppatori di modificare e ricompilare il codice sorgente della libreria con la stessa chiave.
+> 
+> Non rendere pubblica la chiave per la creazione di nomi sicuri se è stata usata in precedenza per concedere autorizzazioni speciali in [scenari di attendibilità parziale](/dotnet/framework/misc/using-libraries-from-partially-trusted-code). In caso contrario, si potrebbero compromettere gli ambienti esistenti.
 
 > [!IMPORTANT]
-> Quando un'identità del servizio di crittografia, è possibile definire [Authenticode](/windows-hardware/drivers/install/authenticode) e [firmare il pacchetto NuGet](/nuget/create-packages/sign-a-package) sono consigliati. Nome sicuro di non usare per motivi di sicurezza.
+> Quando si vuole indicare l'identità dell'editore del codice, usare [Authenticode](/windows-hardware/drivers/install/authenticode) e la [firma di pacchetti NuGet](/nuget/create-packages/sign-a-package). Non usare la sicurezza dall'accesso di codice come prevenzione per la sicurezza.
 
-**Provare a ✔️** incrementare la versione dell'assembly sulle modifiche di versione principale solo per consentire agli utenti di ridurre i reindirizzamenti di associazione e con quale frequenza vengono aggiornati.
+**✔️ VALUTARE** l'incremento della versione dell'assembly solo per le modifiche di versione principale, per aiutare gli utenti a ridurre i reindirizzamenti di binding e la frequenza di aggiornamento.
 
-> Altre informazioni, vedere [controllo delle versioni e la versione dell'assembly](./versioning.md#assembly-version).
+> Leggere altre informazioni su [controllo delle versioni e versione degli assembly](./versioning.md#assembly-version).
 
-**NON ❌** aggiungere, rimuovere o modificare la chiave di denominazione intenso.
+**❌ NON** aggiungere, rimuovere o modificare la chiave per la creazione di nomi sicuri.
 
-> Modifica della chiave di denominazione sicuro di un assembly viene modificato l'identità dell'assembly e interrompe il codice compilato che lo utilizza. Per altre informazioni, vedere [binario modifiche di rilievo](./breaking-changes.md#binary-breaking-change).
+> Se si modifica una chiave per la creazione di nomi sicuri di un assembly, viene modificata l'identità dell'assembly e il codice compilato che lo usa non funziona più. Per altre informazioni, vedere [Binary breaking change](./breaking-changes.md#binary-breaking-change) (Modifica che causa un'interruzione del codice binario).
 
-**NON ❌** pubblicare versioni sicuro e non nome sicuro della libreria. Ad esempio, `Contoso.Api` e `Contoso.Api.StrongNamed`.
+**❌NON** pubblicare versioni con nome sicuro e non sicuro della stessa libreria. Ad esempio, `Contoso.Api` e `Contoso.Api.StrongNamed`.
 
-> Pubblicazione due fork di pacchetti per gli sviluppatori eco-sistema. Inoltre, se un'applicazione finisce in entrambi i pacchetti base lo sviluppatore può verificarsi conflitti di nomi di tipo. Per quanto riguarda .NET sono diversi tipi in assembly diversi.
+> La pubblicazione di due pacchetti comporta la biforcazione dell'ecosistema di sviluppo. Se un'applicazione dipende da entrambi i pacchetti, inoltre, possono verificarsi conflitti di nomi di tipo. Per quanto riguarda .NET, si tratta di tipi diversi in assembly diversi.
 
 >[!div class="step-by-step"]
 [Precedente](./cross-platform-targeting.md)

@@ -1,27 +1,27 @@
 ---
-title: Librerie di NuGet e .NET
-description: Le procedure consigliate per la creazione di pacchetti con NuGet per librerie .NET.
+title: NuGet e librerie .NET
+description: Procedure consigliate per la creazione di pacchetti con NuGet per le librerie .NET.
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: d0ea462a7f52dd9a6b2f14be9ed5770160bf66b1
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
-ms.translationtype: MT
+ms.openlocfilehash: 479d1786c232ef1f843877169954e847453681c9
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49374502"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185622"
 ---
 # <a name="nuget"></a>NuGet
 
-NuGet è una gestione pacchetti per l'ecosistema .NET e agli sviluppatori il modo principale individuano e acquisire le librerie open source di .NET. [NuGet.org](https://www.nuget.org/), un servizio gratuito fornito da Microsoft per l'hosting dei pacchetti NuGet, è l'host primario per i pacchetti NuGet pubblici, ma è possibile pubblicare in servizi di NuGet personalizzati, ad esempio [MyGet](https://www.myget.org/) e [gli artefatti di Azure ](https://azure.microsoft.com/services/devops/artifacts/).
+NuGet è uno strumento di gestione pacchetti per l'ecosistema .NET e rappresenta il modo principale in cui gli sviluppatori individuano e acquisiscono librerie open source .NET. [NuGet.org](https://www.nuget.org/), un servizio gratuito fornito da Microsoft per l'hosting dei pacchetti NuGet, è l'host primario per i pacchetti NuGet pubblici, ma è possibile eseguire la pubblicazione in servizi NuGet personalizzati, come [MyGet](https://www.myget.org/) e [Azure Artifacts](https://azure.microsoft.com/services/devops/artifacts/).
 
 ![NuGet](./media/nuget/nuget-logo.png "NuGet")
 
 ## <a name="create-a-nuget-package"></a>Creare un pacchetto NuGet
 
-Un pacchetto NuGet (`*.nupkg`) è un file zip che contiene gli assembly .NET e i metadati associati.
+Un pacchetto NuGet (`*.nupkg`) è un file ZIP che contiene gli assembly .NET e i metadati associati.
 
-Esistono due modi principali per creare un pacchetto NuGet. Il modo più recente e consigliato consiste nel creare un pacchetto da un progetto in stile SDK (file di progetto il cui contenuto viene avviato con `<Project Sdk="Microsoft.NET.Sdk">`). Obiettivi e gli assembly vengono aggiunti automaticamente al pacchetto e rimanente dei metadati viene aggiunto al file di MSBuild, ad esempio numero di nome e la versione del pacchetto. La compilazione con il [ `dotnet pack` ](../../core/tools/dotnet-pack.md) comando output un `*.nupkg` file anziché gli assembly.
+Ci sono due modi principali per creare un pacchetto NuGet. Il modo più recente e consigliato consiste nel creare un pacchetto da un progetto in stile SDK (file di progetto il cui contenuto inizia con `<Project Sdk="Microsoft.NET.Sdk">`). Destinazioni e assembly vengono aggiunti automaticamente al pacchetto e i metadati rimanenti vengono aggiunti al file MSBuild, ad esempio numero di versione e nome del pacchetto. La compilazione con il comando [`dotnet pack`](../../core/tools/dotnet-pack.md) genera un file `*.nupkg` invece di assembly.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -34,71 +34,80 @@ Esistono due modi principali per creare un pacchetto NuGet. Il modo più recente
 </Project>
 ```
 
-È il modo meno recente di creazione di un pacchetto NuGet con un `*.nuspec` file e il `nuget.exe` lo strumento da riga di comando. Un file nuspec offre uno straordinario controllo ma è necessario specificare attentamente quali assembly e le destinazioni da includere nel pacchetto NuGet finale. È facile commette un errore o per un utente a dimenticare di aggiornare il file nuspec, quando si apportano modifiche. Il vantaggio di un file nuspec è consente di creare pacchetti NuGet per i framework che ancora non supportano un file di progetto basato su SDK.
+Il modo meno recente per creare un pacchetto NuGet consiste nell'usare un file `*.nuspec` e lo strumento da riga di comando `nuget.exe`. Un file nuspec offre uno straordinario controllo, ma è necessario specificare attentamente quali assembly e destinazioni includere nel pacchetto NuGet finale. È facile commette un errore o dimenticarsi di aggiornare il file nuspec quando si apportano modifiche. Il vantaggio di un file nuspec è la possibilità di usarlo per creare pacchetti NuGet per framework che ancora non supportano un file di progetto in stile SDK.
 
-**Provare a ✔️** utilizzando un file di progetto basato su SDK per creare il pacchetto NuGet.
+**✔️ VALUTARE** l'uso di un file di progetto in stile SDK per creare il pacchetto NuGet.
 
-**Provare a ✔️** configurazione SourceLink per aggiungere metadati di controllo di origine per l'assembly e il pacchetto NuGet.
+**✔️ VALUTARE** la configurazione di SourceLink per aggiungere metadati di controllo del codice sorgente agli assembly e al pacchetto NuGet.
 
 ## <a name="package-dependencies"></a>Dipendenze dei pacchetti
 
-Dipendenze dei pacchetti NuGet sono trattate in dettaglio nel [dipendenze](./dependencies.md) articolo.
+Le dipendenze dei pacchetti NuGet sono illustrate in dettaglio nell'articolo [Dipendenze](./dependencies.md).
 
-## <a name="important-nuget-package-metadata"></a>Metadati del pacchetto NuGet importanti
+## <a name="important-nuget-package-metadata"></a>Metadati importanti dei pacchetti NuGet
 
-Un pacchetto NuGet supporta molte [le proprietà dei metadati](/nuget/reference/nuspec). Nella tabella seguente contiene i metadati di core che devono fornire tutti i progetti open source:
+Un pacchetto NuGet supporta numerose [proprietà dei metadati](/nuget/reference/nuspec). La tabella seguente contiene i principali metadati che ogni progetto open source deve fornire:
 
-| Nome della proprietà di MSBuild              | Nome del file Nuspec              | Descrizione  |
+| Nome proprietà MSBuild              | Nome nuspec              | Descrizione  |
 | ---------------------------------- | ------------------------ | ------------ |
-| `PackageId`                        | `id`                       | L'identificatore del pacchetto. Un prefisso dall'identificatore può essere riservato se soddisfa le [criteri](/nuget/reference/id-prefix-reservation). |
-| `PackageVersion`                   | `version`                  | Versione del pacchetto NuGet. Per altre informazioni, vedere [versione del pacchetto NuGet](./versioning.md#nuget-package-version).             |
-| `Title`                            | `title`                    | Un titolo Converto del pacchetto. Per impostazione predefinita il `PackageId`.             |
-| `Description`                      | `description`              | Descrizione lunga del pacchetto visualizzato nell'interfaccia utente.             |
-| `Authors`                          | `authors`                  | Elenco delimitato dalla virgola di autori di pacchetti, corrispondenti ai nomi di profilo in nuget.org.             |
-| `PackageTags`                      | `tags`                     | Elenco delimitato da spazi di tag e parole chiave che descrivono il pacchetto. I tag vengono usati durante la ricerca di pacchetti.             |
-| `PackageIconUrl`                   | `iconUrl`                  | Un URL di un'immagine da usare come icona per il pacchetto. L'URL deve essere HTTPS e l'immagine deve essere di 64 x 64 e uno sfondo trasparente.             |
-| `PackageProjectUrl`                | `projectUrl`               | Un URL per il repository di origine o della home page del progetto.             |
-| `PackageLicenseUrl`                | `licenseUrl`               | Un URL della licenza di progetto. Può essere l'URL per il `LICENSE` file nel controllo del codice sorgente.             |
+| `PackageId`                        | `id`                       | Identificatore del pacchetto. Un prefisso dell'identificatore può essere riservato se soddisfa i [criteri](/nuget/reference/id-prefix-reservation). |
+| `PackageVersion`                   | `version`                  | Versione del pacchetto NuGet. Per altre informazioni, vedere [Versione dei pacchetti NuGet](./versioning.md#nuget-package-version).             |
+| `Title`                            | `title`                    | Titolo descrittivo del pacchetto. Il valore predefinito è `PackageId`.             |
+| `Description`                      | `description`              | Descrizione lunga del pacchetto visualizzata nell'interfaccia utente.             |
+| `Authors`                          | `authors`                  | Elenco di autori del pacchetto delimitati da virgole, corrispondenti ai nomi dei profili in nuget.org.             |
+| `PackageTags`                      | `tags`                     | Elenco di tag e parole chiave delimitati da spazi che descrivono il pacchetto. I tag vengono usati per la ricerca di pacchetti.             |
+| `PackageIconUrl`                   | `iconUrl`                  | URL di un'immagine da usare come icona per il pacchetto. L'URL deve essere di tipo HTTPS e l'immagine deve avere dimensioni di 64x64 e uno sfondo trasparente.             |
+| `PackageProjectUrl`                | `projectUrl`               | URL della home page del progetto o del repository di origine.             |
+| `PackageLicenseUrl`                | `licenseUrl`               | URL della licenza del progetto. Può essere l'URL del file `LICENSE` nel controllo del codice sorgente.             |
 
-**Provare a ✔️** scegliendo un nome del pacchetto NuGet con un prefisso che soddisfi prenotazione del prefisso di NuGet [criteri](/nuget/reference/id-prefix-reservation).
+**✔️ VALUTARE** la scelta di un nome di pacchetto NuGet con un prefisso che soddisfi i [criteri](/nuget/reference/id-prefix-reservation) per riservare il prefisso NuGet.
 
-**✔️ si consiglia** usando il `LICENSE` file nel controllo del codice sorgente come il `LicenseUrl`. Ad esempio, [LICENSE.md](https://github.com/JamesNK/Newtonsoft.Json/blob/c4af75c8e91ca0d75aa6c335e8c106780c4f7712/LICENSE.md).
+**✔️ VALUTARE** l'uso del file `LICENSE` nel controllo del codice sorgente come oggetto `LicenseUrl`. Ad esempio, [LICENSE.md](https://github.com/JamesNK/Newtonsoft.Json/blob/c4af75c8e91ca0d75aa6c335e8c106780c4f7712/LICENSE.md).
 
 > [!IMPORTANT]
-> Un progetto senza una licenza per impostazione predefinita [copyright esclusivo](https://choosealicense.com/no-permission/), rendendo impossibile la uso ad altri utenti.
+> Per un progetto senza una licenza viene applicato per impostazione predefinita il [copyright esclusivo](https://choosealicense.com/no-permission/), che ne impedisce l'uso da parte di altre persone.
 
-**Eseguire operazioni ✔️** usano un href HTTPS per l'icona del pacchetto.
+**✔️ USARE** un attributo href HTTPS per l'icona del pacchetto.
 
-> Siti come NuGet.org eseguano con abilitato per HTTPS e la visualizzazione di un'immagine non HTTPS creerà un avviso di contenuto misto.
+> I siti come NuGet.org vengono eseguiti con il protocollo HTTPS abilitato e la visualizzazione di un'immagine non HTTPS comporta la generazione di un avviso di contenuto misto.
 
-**Eseguire operazioni ✔️** usare un'immagine icona pacchetto 64 x 64 e con uno sfondo trasparente per ottenere una migliore visualizzazione.
+**✔️ USARE** un'immagine di icona del pacchetto con dimensioni di 64x64 e con uno sfondo trasparente per ottenere una migliore visualizzazione.
 
 ## <a name="pre-release-packages"></a>Pacchetti in versione non definitiva
 
-I pacchetti NuGet con un suffisso di versione sono considerati [definitive](/nuget/create-packages/prerelease-packages). Per impostazione predefinita, la UI Gestione pacchetti NuGet Mostra versioni stabili, a meno che un utente sceglie di versioni non definitive dei pacchetti, pacchetti di versioni non definitive le rendono ideali per i test di utente con limitazioni.
+I pacchetti NuGet con un suffisso di versione sono considerati [versioni non definitive](/nuget/create-packages/prerelease-packages). Per impostazione predefinita, l'interfaccia utente di Gestione pacchetti NuGet mostra le versioni stabili, a meno che un utente non scelga esplicitamente pacchetti in versione non definitiva, ideali per test utente limitati.
 
 ```xml
 <PackageVersion>1.0.1-beta1</PackageVersion>
 ```
 
 > [!NOTE]
-> Una stabile del pacchetto non può dipendere da un versione preliminare del pacchetto. È necessario verificare che il proprio pacchetto di versioni non definitive o dipendono da una versione stabile precedente.
+> Una pacchetto stabile non può dipendere da un pacchetto in versione non definitiva. È necessario impostare un pacchetto come versione non definitiva oppure fare in modo che dipenda da una versione stabile precedente.
 
-![Dipendenza del pacchetto di versioni non definitive NuGet](./media/nuget/nuget-prerelease-package.png "dipendenza versione preliminare del pacchetto NuGet")
+![Dipendenza dei pacchetti NuGet in versione non definitiva](./media/nuget/nuget-prerelease-package.png "Dipendenza dei pacchetti NuGet in versione non definitiva")
 
-**Eseguire operazioni ✔️** pubblicare un versione preliminare del pacchetto durante la verifica, la visualizzazione in anteprima o la sperimentazione.
+**✔️ PUBBLICARE** un pacchetto in versione non definitiva a scopi di test, anteprima o sperimentazione.
 
-**Eseguire operazioni ✔️** pubblicare un pacchetto stabile quando pronto in modo gli altri pacchetti stabili possono farvi riferimento.
+**✔️ PUBBLICARE** un pacchetto stabile quando è pronto, in modo che altri pacchetti stabili possano farvi riferimento.
 
 ## <a name="symbol-packages"></a>Pacchetti di simboli
 
-NuGet supporta [generazione di un pacchetto di simboli separati](/nuget/create-packages/symbol-packages) contenente il debug di file PDB insieme al pacchetto principale che contiene gli assembly .NET. L'idea di pacchetti di simboli è che siano ospitate in un server di simboli e vengono scaricati solo da uno strumento come Visual Studio su richiesta.
+I file di simboli (`*.pdb`) vengono prodotti dal compilatore .NET insieme agli assembly. I file di simboli mappano le posizioni di esecuzione al codice sorgente originale, in modo che sia possibile esaminare il codice sorgente mentre è in esecuzione usando un debugger. NuGet supporta la [generazione di un pacchetto di simboli separato](/nuget/create-packages/symbol-packages) contenente i file di simboli insieme al pacchetto principale che contiene gli assembly .NET. L'idea dei pacchetti di simboli è che siano ospitati in un server di simboli e scaricati solo da uno strumento come Visual Studio su richiesta.
 
-Attualmente l'host pubblica principale per i simboli - [SymbolSource](http://www.symbolsource.org/) -non supporta i file PDB portatili creato dallo stile di SDK progetti e pacchetti di simboli non sono utili.
+Attualmente l'host pubblico principale per i simboli, [SymbolSource](http://www.symbolsource.org/), non supporta i nuovi [file di simboli portabili](https://github.com/dotnet/core/blob/master/Documentation/diagnostics/portable_pdb.md) (`*.pdb`) creati dai progetti in stile SDK e i pacchetti di simboli non sono utili. Fino a quando non sarà disponibile un host consigliato per i pacchetti di simboli, i file di simboli possono essere incorporati nel pacchetto NuGet principale. Se si sta creando un pacchetto NuGet usando un progetto in stile SDK, è possibile incorporare i file di simboli impostando la proprietà `AllowedOutputExtensionsInPackageBuildOutputFolder`: 
 
-**Provare a ✔️** incorporamento di PDB nel pacchetto NuGet principale.
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+ <PropertyGroup>
+    <!-- Include symbol files (*.pdb) in the built .nupkg -->
+    <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
+  </PropertyGroup>
+</Project>
+```
 
-**Si consiglia di evitare ❌** creazione di un pacchetto di simboli che contiene i file PDB.
+**✔️ VALUTARE** l'incorporamento dei file di simboli nel pacchetto NuGet principale.
+
+**❌ EVITARE** di creare un pacchetto di simboli contenente file di simboli.
 
 >[!div class="step-by-step"]
 [Precedente](./strong-naming.md)

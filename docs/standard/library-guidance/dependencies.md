@@ -1,0 +1,101 @@
+---
+title: Dipendenze e librerie .NET
+description: Procedure consigliate per la gestione delle dipendenze NuGet nelle librerie .NET.
+author: jamesnk
+ms.author: mairaw
+ms.date: 10/02/2018
+ms.openlocfilehash: c5df30c606e77c9ef44387233b0072ab890f612f
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49400551"
+---
+# <a name="dependencies"></a>Dipendenze
+
+Il modo principale per aggiungere dipendenze a una libreria .NET consiste nel fare riferimento ai pacchetti NuGet. I riferimenti ai pacchetti NuGet consentono di riutilizzare rapidamente e di sfruttare le funzionalità già scritte, ma possono causare problemi per gli sviluppatori .NET. La corretta gestione delle dipendenze è importante per evitare che le modifiche apportate in altre librerie .NET impediscano il funzionamento della libreria .NET in uso e viceversa.
+
+## <a name="diamond-dependencies"></a>Dipendenze a rombo
+
+In un progetto .NET è comune la presenza di più versioni di un pacchetto nel relativo albero delle dipendenze. Ad esempio, un'app dipende da due pacchetti NuGet, ognuno dei quali dipende da versioni diverse dello stesso pacchetto. Nel grafo delle dipendenze dell'app è ora presente una dipendenza a rombo.
+
+![Dipendenza a rombo](./media/dependencies/diamond-dependency.png "Dipendenza a rombo")
+
+In fase di compilazione NuGet analizza tutti i pacchetti da cui un progetto dipende, incluse le dipendenze delle dipendenze. Quando vengono rilevate più versioni di un pacchetto, vengono valutate le regole per scegliere un pacchetto. È necessario unificare i pacchetti perché l'esecuzione affiancata di versioni diverse di un assembly nella stessa applicazione è problematica in .NET.
+
+La maggior parte delle dipendenze a rombo può essere risolta facilmente, tuttavia in alcune circostanze è possibile che si verifichino problemi:
+
+1. I **riferimenti ai pacchetti NuGet in conflitto** impediscono la risoluzione di una versione durante il ripristino dei pacchetti.
+2. Le **modifiche tra versioni che causano un'interruzione** provocano bug ed eccezioni in fase di esecuzione.
+3. L'**assembly del pacchetto ha un nome sicuro**, la versione dell'assembly è stata modificata e l'app è in esecuzione in .NET Framework. Sono richiesti reindirizzamenti di binding dell'assembly.
+
+Non è possibile sapere quali pacchetti verranno usati insieme ai propri. Un buon metodo per ridurre le probabilità che una dipendenza a rombo provochi il malfunzionamento della libreria consiste nel ridurre al minimo il numero di pacchetti da cui la libreria dipende.
+
+**✔️ ESAMINARE** la libreria .NET per individuare eventuali dipendenze non necessarie.
+
+## <a name="nuget-dependency-version-ranges"></a>Intervalli di versione delle dipendenze NuGet
+
+Un riferimento a un pacchetto specifica l'intervallo di pacchetti validi consentiti. In genere, la versione di riferimento del pacchetto nel file di progetto è la versione minima e non è previsto alcun limite massimo.
+
+```xml
+<!-- Accepts any version 1.0 and above. -->
+<PackageReference Include="ExamplePackage" Version="1.0" />
+```
+
+Le regole usate da NuGet per la risoluzione delle dipendenze sono [complesse](/nuget/consume-packages/dependency-resolution), ma NuGet cerca sempre la versione più bassa applicabile. NuGet privilegia la versione più bassa applicabile rispetto all'uso della versione più alta disponibile perché la più bassa presenta meno problemi di compatibilità.
+
+A causa della regola di ricerca della versione più bassa applicabile da parte di NuGet, non è necessario inserire una versione superiore o un intervallo esatto nei riferimenti ai pacchetti per evitare di ottenere la versione più recente. NuGet cerca già di trovare la versione più bassa e più compatibile.
+
+```xml
+<!-- Accepts 1.0 up to 1.x, but not 2.0 and higher. -->
+<PackageReference Include="ExamplePackage" Version="[1.0,2.0)" />
+
+<!-- Accepts exactly 1.0. -->
+<PackageReference Include="ExamplePackage" Version="[1.0]" />
+```
+
+I limiti superiori per la versione provocano un errore di NuGet in caso di conflitto. Ad esempio, una libreria accetta esattamente la versione 1.0, mentre un'altra libreria richiede la versione 2.0 o successiva. Sebbene nella versione 2.0 potrebbero essere state introdotte modifiche che causano un'interruzione, una dipendenza di versione rigida o con un limite superiore garantisce la generazione di un errore.
+
+![Conflitto di dipendenza a rombo](./media/dependencies/diamond-dependency-conflict.png "Conflitto di dipendenza a rombo")
+
+**❌ NON** creare riferimenti a pacchetti NuGet senza una versione minima.
+
+**❌ EVITARE** riferimenti ai pacchetti NuGet che richiedono una versione esatta.
+
+**❌ EVITARE** riferimenti ai pacchetti NuGet con un limite superiore di versione.
+
+## <a name="nuget-shared-source-packages"></a>Pacchetti di codice sorgente condiviso NuGet
+
+Un modo per ridurre le dipendenze esterne dei pacchetti NuGet consiste nel fare riferimento a pacchetti di codice sorgente condiviso. Un pacchetto di codice sorgente condiviso contiene [file di codice sorgente](/nuget/reference/nuspec#including-content-files) che vengono inclusi in un progetto quando vi viene fatto riferimento. Perché vengono inclusi solo i file di codice sorgente compilati con il resto del progetto, non c'è alcuna dipendenza esterna e di conseguenza non c'è possibilità di conflitto.
+
+I pacchetti di codice sorgente condiviso sono ideali per includere funzionalità di piccola entità. Ad esempio, un pacchetto di codice sorgente condiviso di metodi helper per l'esecuzione di chiamate HTTP.
+
+![Pacchetto di codice sorgente condiviso](./media/dependencies/shared-source-package.png "Pacchetto di codice sorgente condiviso")
+
+```xml
+<PackageReference Include="Microsoft.Extensions.Buffers.Testing.Sources" PrivateAssets="All" Version="1.0" />
+```
+
+![Progetto di codice sorgente condiviso](./media/dependencies/shared-source-project.png "Progetto di codice sorgente condiviso")
+
+I pacchetti di codice sorgente condiviso presentano alcune limitazioni. È possibile farvi riferimento solo tramite `PackageReference`, quindi i progetti `packages.config` precedenti sono esclusi. I pacchetti di codice sorgente condiviso, inoltre, possono essere usati solo da progetti con lo stesso tipo di linguaggio. A causa di queste limitazioni, è preferibile usare i pacchetti di codice sorgente condiviso per condividere funzionalità in un progetto open source.
+
+**✔️ VALUTARE** la possibilità di fare riferimento a pacchetti di codice sorgente condiviso per funzionalità interne di piccola entità.
+
+**✔️ VALUTARE** la possibilità di impostare un pacchetto come pacchetto di codice sorgente condiviso se fornisce funzionalità interne di piccola entità.
+
+**✔️ FARE RIFERIMENTO** ai pacchetti di codice sorgente condiviso con `PrivateAssets="All"`.
+
+> Questa impostazione indica a NuGet che il pacchetto deve essere usato solo in fase di sviluppo e non deve essere esposto come dipendenza pubblica.
+
+**❌ NON** inserire tipi di pacchetti di codice sorgente condiviso nell'API pubblica.
+
+> I tipi di codice sorgente condiviso vengono compilati nell'assembly di riferimento e non possono essere scambiati tra assembly diversi. Ad esempio, un tipo `IRepository` di codice sorgente condiviso in un progetto è un tipo diverso dallo stesso oggetto `IRepository` di codice sorgente condiviso in un altro progetto. I tipi nei pacchetti di codice sorgente condiviso devono avere visibilità `internal`.
+
+**❌ NON** pubblicare pacchetti di codice sorgente condiviso in nuget.org.
+
+> I pacchetti di codice sorgente condiviso contengono codice sorgente e possono essere usati solo da progetti con lo stesso tipo di linguaggio. Ad esempio, un pacchetto di codice sorgente condiviso C# non può essere usato da un'applicazione F#.
+
+>[!div class="step-by-step"]
+[Precedente](./nuget.md)
+[Successivo](./sourcelink.md)
