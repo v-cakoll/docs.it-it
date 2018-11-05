@@ -1,6 +1,6 @@
 ---
 title: 'Espressioni condizionali: if...then...else (F#)'
-description: Informazioni su come scrivere espressioni condizionali in F# per eseguire diversi rami del codice.
+description: 'Informazioni su come scrivere espressioni condizionali in F # per eseguire diversi rami del codice.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 10e4224bef772f00520cf5a0fff2f2920147c2fc
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -9,25 +9,25 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/02/2018
 ms.locfileid: "44177601"
 ---
-# <a name="conditional-expressions-ifthenelse"></a><span data-ttu-id="73bba-103">Espressioni condizionali: `if...then...else`</span><span class="sxs-lookup"><span data-stu-id="73bba-103">Conditional Expressions: `if...then...else`</span></span>
+# <a name="conditional-expressions-ifthenelse"></a><span data-ttu-id="550db-103">Espressioni condizionali: `if...then...else`</span><span class="sxs-lookup"><span data-stu-id="550db-103">Conditional Expressions: `if...then...else`</span></span>
 
-<span data-ttu-id="73bba-104">Il `if...then...else` espressione esegue diversi rami del codice e restituisce un valore diverso in base all'espressione booleana specificata.</span><span class="sxs-lookup"><span data-stu-id="73bba-104">The `if...then...else` expression runs different branches of code and also evaluates to a different value depending on the Boolean expression given.</span></span>
+<span data-ttu-id="550db-104">Il `if...then...else` espressione esegue diversi rami del codice e restituisce un valore diverso in base all'espressione booleana specificata.</span><span class="sxs-lookup"><span data-stu-id="550db-104">The `if...then...else` expression runs different branches of code and also evaluates to a different value depending on the Boolean expression given.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="73bba-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="73bba-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="550db-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="550db-105">Syntax</span></span>
 
 ```fsharp
 if boolean-expression then expression1 [ else expression2 ]
 ```
 
-## <a name="remarks"></a><span data-ttu-id="73bba-106">Note</span><span class="sxs-lookup"><span data-stu-id="73bba-106">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="550db-106">Note</span><span class="sxs-lookup"><span data-stu-id="550db-106">Remarks</span></span>
 
-<span data-ttu-id="73bba-107">Nella sintassi precedente *expression1* viene eseguita quando l'espressione booleana restituisce `true`; in caso contrario, *expression2* viene eseguito.</span><span class="sxs-lookup"><span data-stu-id="73bba-107">In the previous syntax, *expression1* runs when the Boolean expression evaluates to `true`; otherwise, *expression2* runs.</span></span>
+<span data-ttu-id="550db-107">Nella sintassi precedente *expression1* viene eseguita quando l'espressione booleana restituisce `true`; in caso contrario, *expression2* viene eseguito.</span><span class="sxs-lookup"><span data-stu-id="550db-107">In the previous syntax, *expression1* runs when the Boolean expression evaluates to `true`; otherwise, *expression2* runs.</span></span>
 
-<span data-ttu-id="73bba-108">A differenza di altri linguaggi, la `if...then...else` costrutto è un'espressione, non un'istruzione.</span><span class="sxs-lookup"><span data-stu-id="73bba-108">Unlike in other languages, the `if...then...else` construct is an expression, not a statement.</span></span> <span data-ttu-id="73bba-109">Ciò significa che produce un valore, ovvero il valore dell'ultima espressione nel ramo che esegue.</span><span class="sxs-lookup"><span data-stu-id="73bba-109">That means that it produces a value, which is the value of the last expression in the branch that executes.</span></span> <span data-ttu-id="73bba-110">I tipi di valori prodotti in ogni ramo devono corrispondere.</span><span class="sxs-lookup"><span data-stu-id="73bba-110">The types of the values produced in each branch must match.</span></span> <span data-ttu-id="73bba-111">Se è presente non espliciti `else` branch, il tipo è `unit`.</span><span class="sxs-lookup"><span data-stu-id="73bba-111">If there is no explicit `else` branch, its type is `unit`.</span></span> <span data-ttu-id="73bba-112">Pertanto, se il tipo del `then` ramo è qualsiasi tipo diverso da `unit`, deve essere presente un `else` ramo con lo stesso tipo restituito.</span><span class="sxs-lookup"><span data-stu-id="73bba-112">Therefore, if the type of the `then` branch is any type other than `unit`, there must be an `else` branch with the same return type.</span></span> <span data-ttu-id="73bba-113">Quando si concatenano `if...then...else` le espressioni, è possibile usare la parola chiave `elif` invece di `else if`; sono equivalenti.</span><span class="sxs-lookup"><span data-stu-id="73bba-113">When chaining `if...then...else` expressions together, you can use the keyword `elif` instead of `else if`; they are equivalent.</span></span>
+<span data-ttu-id="550db-108">A differenza di altri linguaggi, la `if...then...else` costrutto è un'espressione, non un'istruzione.</span><span class="sxs-lookup"><span data-stu-id="550db-108">Unlike in other languages, the `if...then...else` construct is an expression, not a statement.</span></span> <span data-ttu-id="550db-109">Ciò significa che produce un valore, ovvero il valore dell'ultima espressione nel ramo che esegue.</span><span class="sxs-lookup"><span data-stu-id="550db-109">That means that it produces a value, which is the value of the last expression in the branch that executes.</span></span> <span data-ttu-id="550db-110">I tipi di valori prodotti in ogni ramo devono corrispondere.</span><span class="sxs-lookup"><span data-stu-id="550db-110">The types of the values produced in each branch must match.</span></span> <span data-ttu-id="550db-111">Se è presente non espliciti `else` branch, il tipo è `unit`.</span><span class="sxs-lookup"><span data-stu-id="550db-111">If there is no explicit `else` branch, its type is `unit`.</span></span> <span data-ttu-id="550db-112">Pertanto, se il tipo del `then` ramo è qualsiasi tipo diverso da `unit`, deve essere presente un `else` ramo con lo stesso tipo restituito.</span><span class="sxs-lookup"><span data-stu-id="550db-112">Therefore, if the type of the `then` branch is any type other than `unit`, there must be an `else` branch with the same return type.</span></span> <span data-ttu-id="550db-113">Quando si concatenano `if...then...else` le espressioni, è possibile usare la parola chiave `elif` invece di `else if`; sono equivalenti.</span><span class="sxs-lookup"><span data-stu-id="550db-113">When chaining `if...then...else` expressions together, you can use the keyword `elif` instead of `else if`; they are equivalent.</span></span>
 
-## <a name="example"></a><span data-ttu-id="73bba-114">Esempio</span><span class="sxs-lookup"><span data-stu-id="73bba-114">Example</span></span>
+## <a name="example"></a><span data-ttu-id="550db-114">Esempio</span><span class="sxs-lookup"><span data-stu-id="550db-114">Example</span></span>
 
-<span data-ttu-id="73bba-115">L'esempio seguente illustra come usare il `if...then...else` espressione.</span><span class="sxs-lookup"><span data-stu-id="73bba-115">The following example illustrates how to use the `if...then...else` expression.</span></span>
+<span data-ttu-id="550db-115">L'esempio seguente illustra come usare il `if...then...else` espressione.</span><span class="sxs-lookup"><span data-stu-id="550db-115">The following example illustrates how to use the `if...then...else` expression.</span></span>
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4501.fs)]
 
@@ -38,6 +38,6 @@ How old are you? 9
 You are only 9 years old and already learning F#? Wow!
 ```
 
-## <a name="see-also"></a><span data-ttu-id="73bba-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="73bba-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="550db-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="550db-116">See also</span></span>
 
-- [<span data-ttu-id="73bba-117">Riferimenti per il linguaggio F#</span><span class="sxs-lookup"><span data-stu-id="73bba-117">F# Language Reference</span></span>](index.md)
+- [<span data-ttu-id="550db-117">Riferimenti per il linguaggio F#</span><span class="sxs-lookup"><span data-stu-id="550db-117">F# Language Reference</span></span>](index.md)
