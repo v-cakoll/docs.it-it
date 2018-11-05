@@ -1,6 +1,6 @@
 ---
 title: Criteri di ricerca [F#]
-description: Informazioni su come i modelli vengono usati in F# per confrontare i dati con strutture logiche, scomporre i dati in parti costituenti o estrarre informazioni dai dati.
+description: 'Informazioni su come i modelli vengono usati in F # per confrontare i dati con strutture logiche, scomporre i dati in parti costituenti o estrarre informazioni dai dati.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 5ad3d3e1a78246afdfa2948fd0fb84fa04686d30
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,7 +11,7 @@ ms.locfileid: "45991424"
 ---
 # <a name="pattern-matching"></a>Criteri di ricerca
 
-I modelli sono regole per la trasformazione dei dati di input. Vengono utilizzati nel linguaggio F# per confrontare i dati con una o più strutture logiche, scomporre i dati in parti costituenti o estrarre informazioni dai dati in vari modi.
+I modelli sono regole per la trasformazione dei dati di input. Vengono utilizzati nel linguaggio F # per confrontare i dati con una o più strutture logiche, scomporre i dati in parti costituenti o estrarre informazioni dai dati in vari modi.
 
 ## <a name="remarks"></a>Note
 

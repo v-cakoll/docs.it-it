@@ -1,6 +1,6 @@
 ---
 title: Opzioni (F#)
-description: Informazioni su come utilizzare F# opzione tipi quando un valore effettivo potrebbero non essere presente per una variabile o un valore denominato.
+description: 'Informazioni su come utilizzare F # opzione tipi quando un valore effettivo potrebbero non essere presente per una variabile o un valore denominato.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 0859cb42e72ef9e67551b884f5cf6130fb099a78
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,7 +11,7 @@ ms.locfileid: "46479520"
 ---
 # <a name="options"></a>Opzioni
 
-Il tipo di opzione in F# viene utilizzato quando un valore effettivo non potrebbero essere disponibili per una variabile o un valore denominato. Un'opzione ha un tipo sottostante e può contenere un valore di quel tipo, o potrebbe non contenere un valore.
+Il tipo di opzione in F # viene utilizzato quando un valore effettivo non potrebbero essere disponibili per una variabile o un valore denominato. Un'opzione ha un tipo sottostante e può contenere un valore di quel tipo, o potrebbe non contenere un valore.
 
 ## <a name="remarks"></a>Note
 
@@ -33,7 +33,7 @@ Le opzioni sono comunemente usate durante una ricerca non restituisce un risulta
 
 Nel codice precedente, un elenco viene effettuata in modo ricorsivo. La funzione `tryFindMatch` accetta una funzione di predicato `pred` che restituisce un valore booleano e un elenco per la ricerca. Se viene trovato un elemento che soddisfa il predicato, le entità finali di ricorsione e la funzione restituisce il valore come un'opzione nell'espressione `Some(head)`. La ricorsione termina quando esiste una corrispondenza per l'elenco vuoto. A questo punto il valore `head` non è stato trovato, e `None` viene restituito.
 
-Molte F# funzioni della libreria in cui la ricerca di una raccolta per un valore che può esistere o meno non restituiscono il `option` tipo. Per convenzione, queste funzioni iniziano con la `try` prefisso, ad esempio [ `Seq.tryFindIndex` ](https://msdn.microsoft.com/library/c357b221-edf6-4f68-bf40-82a3156d945a).
+Molte F # funzioni della libreria in cui la ricerca di una raccolta per un valore che può esistere o meno non restituiscono il `option` tipo. Per convenzione, queste funzioni iniziano con la `try` prefisso, ad esempio [ `Seq.tryFindIndex` ](https://msdn.microsoft.com/library/c357b221-edf6-4f68-bf40-82a3156d945a).
 
 Opzioni possono essere utile anche quando un valore potrebbe non esistere, ad esempio se è possibile che venga generata un'eccezione quando si tenta di costruire un valore. Questo aspetto è illustrato nell'esempio di codice seguente.
 

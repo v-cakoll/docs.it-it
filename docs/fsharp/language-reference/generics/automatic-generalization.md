@@ -1,6 +1,6 @@
 ---
 title: Generalizzazione automatica (F#)
-description: Informazioni su come F# generalizzati automaticamente gli argomenti e i tipi di funzioni in modo che funzionano con più tipi, laddove possibile.
+description: 'Informazioni su come F # generalizzati automaticamente gli argomenti e i tipi di funzioni in modo che funzionano con più tipi, laddove possibile.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 84de9cbb2b9fcf2488393f7dbdfc3b610cdcffb0
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,11 +11,11 @@ ms.locfileid: "43855777"
 ---
 # <a name="automatic-generalization"></a>Generalizzazione automatica
 
-F# Usa l'inferenza del tipo per valutare i tipi di funzioni ed espressioni. In questo argomento viene descritto come F# generalizzati automaticamente gli argomenti e i tipi di funzioni in modo che funzionano con più tipi quando possibile.
+F # Usa l'inferenza del tipo per valutare i tipi di funzioni ed espressioni. In questo argomento viene descritto come F # generalizzati automaticamente gli argomenti e i tipi di funzioni in modo che funzionano con più tipi quando possibile.
 
 ## <a name="automatic-generalization"></a>Generalizzazione automatica
 
-Il compilatore F#, quando esegue l'inferenza del tipo in una funzione, determina se un determinato parametro può essere generico. Il compilatore esamina ogni parametro e determina se la funzione ha una dipendenza dal tipo specifico di tale parametro. Se non esiste, il tipo viene dedotto come generici.
+Il compilatore F #, quando esegue l'inferenza del tipo in una funzione, determina se un determinato parametro può essere generico. Il compilatore esamina ogni parametro e determina se la funzione ha una dipendenza dal tipo specifico di tale parametro. Se non esiste, il tipo viene dedotto come generici.
 
 Esempio di codice seguente viene illustrata una funzione che il compilatore deduce automaticamente per essere generica.
 

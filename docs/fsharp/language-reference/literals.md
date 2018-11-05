@@ -1,6 +1,6 @@
 ---
 title: Valori letterali (F#)
-description: Informazioni sui tipi di valore letterali nel linguaggio di programmazione F#.
+description: 'Informazioni sui tipi di valore letterali nel linguaggio di programmazione F #.'
 ms.date: 05/16/2016
 ms.openlocfilehash: e6d34acd928edce8447c793105b08085ab0757b9
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -14,11 +14,11 @@ ms.locfileid: "44087625"
 > [!NOTE]
 I collegamenti di riferimento API in questo articolo si passerà a MSDN (per ora).
 
-In questo argomento fornisce una tabella che mostra come specificare il tipo di valore letterale in F#.
+In questo argomento fornisce una tabella che mostra come specificare il tipo di valore letterale in F #.
 
 ## <a name="literal-types"></a>Tipi letterali
 
-La tabella seguente illustra i tipi di valore letterali in F#. I caratteri che rappresentano cifre in notazione esadecimale non sono tra maiuscole e minuscole; caratteri che identificano il tipo di maiuscole e minuscole.
+La tabella seguente illustra i tipi di valore letterali in F #. I caratteri che rappresentano cifre in notazione esadecimale non sono tra maiuscole e minuscole; caratteri che identificano il tipo di maiuscole e minuscole.
 
 |Tipo|Descrizione|Prefissi o suffissi|Esempi|
 |----|-----------|----------------|--------|
@@ -47,7 +47,7 @@ La tabella seguente illustra i tipi di valore letterali in F#. I caratteri che r
 
 Le stringhe Unicode possono contenere codifiche esplicite che è possibile specificare utilizzando `\u` seguita da un codice esadecimale a 16 bit o le codifiche UTF-32 che è possibile specificare utilizzando `\U` seguita da un codice esadecimale a 32 bit che rappresenta un Unicode coppia di surrogati.
 
-A partire da F# 3.1, è possibile usare il `+` accedere per combinare i valori letterali stringa. È anche possibile usare i bit per bit o (`|||`) operatore per combinare i flag dell'enumerazione. Ad esempio, il codice seguente è valido in F# 3.1:
+A partire da F # 3.1, è possibile usare il `+` accedere per combinare i valori letterali stringa. È anche possibile usare i bit per bit o (`|||`) operatore per combinare i flag dell'enumerazione. Ad esempio, il codice seguente è valido in F # 3.1:
 
 ```fsharp
 [<Literal>]
@@ -82,7 +82,7 @@ let Numbers = (0x9F, 0o77, 0b1010)
 
 ## <a name="underscores-in-numeric-literals"></a>Caratteri di sottolineatura nei valori letterali numerici
 
-A partire da F# 4.1, è possibile separare cifre con il carattere di sottolineatura (`_`).
+A partire da F # 4.1, è possibile separare cifre con il carattere di sottolineatura (`_`).
 
 ```fsharp
 let DeadBeef = 0xDEAD_BEEF

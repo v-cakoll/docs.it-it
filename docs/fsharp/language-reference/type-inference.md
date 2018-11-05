@@ -1,6 +1,6 @@
 ---
 title: Inferenza del tipo (F#)
-description: Informazioni su come il compilatore F# deduce i tipi di valori, le variabili, parametri e valori restituiti.
+description: 'Informazioni su come il compilatore F # deduce i tipi di valori, le variabili, parametri e valori restituiti.'
 ms.date: 05/16/2016
 ms.openlocfilehash: fd826ac48fb9a70aa6f4ff746599c11b7e21a02e
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,15 +11,15 @@ ms.locfileid: "43865696"
 ---
 # <a name="type-inference"></a>Inferenza di tipi
 
-In questo argomento viene descritto come il compilatore F# deduce i tipi di valori, le variabili, parametri e valori restituiti.
+In questo argomento viene descritto come il compilatore F # deduce i tipi di valori, le variabili, parametri e valori restituiti.
 
 ## <a name="type-inference-in-general"></a>L'inferenza del tipo in generale
 
-L'idea di inferenza del tipo è che non è necessario specificare i tipi di costrutti F#, ad eccezione di quando il compilatore conseguenze lampanti non è possibile dedurre il tipo. L'omissione di informazioni sui tipi espliciti non significa che F# è un linguaggio tipizzato in modo dinamico o che i valori in F# sono debolmente tipizzata. F# è un linguaggio tipizzato in modo statico, il che significa che il compilatore deduce un tipo esatto di ogni costrutto durante la compilazione. Se non esiste informazioni sufficienti per consentire al compilatore di dedurre i tipi di ogni costrutto, è necessario fornire informazioni aggiuntive sui tipi, in genere mediante l'aggiunta di annotazioni del tipo esplicito in una posizione nel codice.
+L'idea di inferenza del tipo è che non è necessario specificare i tipi di costrutti F #, ad eccezione di quando il compilatore conseguenze lampanti non è possibile dedurre il tipo. L'omissione di informazioni sui tipi espliciti non significa che F # è un linguaggio tipizzato in modo dinamico o che i valori in F # sono debolmente tipizzata. F # è un linguaggio tipizzato in modo statico, il che significa che il compilatore deduce un tipo esatto di ogni costrutto durante la compilazione. Se non esiste informazioni sufficienti per consentire al compilatore di dedurre i tipi di ogni costrutto, è necessario fornire informazioni aggiuntive sui tipi, in genere mediante l'aggiunta di annotazioni del tipo esplicito in una posizione nel codice.
 
 ## <a name="inference-of-parameter-and-return-types"></a>Inferenza di tipi restituiti e parametri
 
-In un elenco di parametri, non è necessario specificare il tipo di ogni parametro. Ancora, F# è un linguaggio tipizzato in modo statico e pertanto ogni valore e l'espressione con un tipo definito in fase di compilazione. Per i tipi che non si specifica in modo esplicito, il compilatore deduce il tipo in base al contesto. Se il tipo non è in caso contrario specificato, si viene dedotto come generici. Se il codice Usa un valore in modo incoerente, in modo che non è disponibile un unico tipo derivato che soddisfi tutti gli usi di un valore, che il compilatore segnala un errore.
+In un elenco di parametri, non è necessario specificare il tipo di ogni parametro. Ancora, F # è un linguaggio tipizzato in modo statico e pertanto ogni valore e l'espressione con un tipo definito in fase di compilazione. Per i tipi che non si specifica in modo esplicito, il compilatore deduce il tipo in base al contesto. Se il tipo non è in caso contrario specificato, si viene dedotto come generici. Se il codice Usa un valore in modo incoerente, in modo che non è disponibile un unico tipo derivato che soddisfi tutti gli usi di un valore, che il compilatore segnala un errore.
 
 Il tipo restituito di una funzione è determinato dal tipo dell'ultima espressione nella funzione.
 
@@ -59,7 +59,7 @@ Il tipo viene dedotto per essere
 
 ## <a name="additional-information"></a>Informazioni aggiuntive
 
-L'inferenza del tipo è descritto più dettagliatamente nella specifica del linguaggio F#.
+L'inferenza del tipo è descritto più dettagliatamente nella specifica del linguaggio F #.
 
 ## <a name="see-also"></a>Vedere anche
 

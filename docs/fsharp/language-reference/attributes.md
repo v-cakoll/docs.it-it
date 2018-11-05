@@ -1,6 +1,6 @@
 ---
 title: Attributi (F#)
-description: Informazioni su come gli attributi di F# Abilita i metadati da applicare a un costrutto di programmazione.
+description: 'Informazioni su come gli attributi di F # Abilita i metadati da applicare a un costrutto di programmazione.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 3e7f1d0ff383e1070b3db72e633f80ea37150548
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -39,7 +39,7 @@ In questo esempio, l'attributo è `DllImportAttribute`, qui utilizzato nella sua
 
 Gli attributi sono un costrutto di programmazione .NET che consente a un oggetto noto come un *attributo* da associare a un tipo o altro elemento del programma. L'elemento del programma a cui viene applicato un attributo è noto come il *destinazione dell'attributo*. L'attributo contiene in genere i metadati relativi al valore di destinazione. In questo contesto, i metadati può essere tutti i dati sul tipo diverso da relativi campi e i membri.
 
-Gli attributi in F# possono essere applicati per i seguenti costrutti di programmazione: funzioni, metodi, assembly, moduli, tipi (classi, record, strutture, interfacce, delegati, enumerazioni, unioni e così via), costruttori, proprietà, campi, parametri, Digitare i parametri e valori restituiti. Atributy nejsou povolené. su `let` associazioni all'interno di classi, le espressioni o espressioni del flusso di lavoro.
+Gli attributi in F # possono essere applicati per i seguenti costrutti di programmazione: funzioni, metodi, assembly, moduli, tipi (classi, record, strutture, interfacce, delegati, enumerazioni, unioni e così via), costruttori, proprietà, campi, parametri, Digitare i parametri e valori restituiti. Atributy nejsou povolené. su `let` associazioni all'interno di classi, le espressioni o espressioni del flusso di lavoro.
 
 In genere, la dichiarazione di attributo viene visualizzata direttamente prima della dichiarazione dell'attributo di destinazione. Più dichiarazioni di attributo sono utilizzabile tra loro, come indicato di seguito.
 
@@ -59,7 +59,7 @@ Per le destinazioni degli attributi `assembly` e `module`, applicare gli attribu
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6606.fs)]
 
-Se si omette l'attributo di destinazione per un attributo applicato a un `do` associazione, il compilatore F# tenta di determinare l'attributo di destinazione appropriato per quell'attributo. Molte classi di attributo dispongono di un attributo di tipo `System.AttributeUsageAttribute` che include informazioni sulle possibili destinazioni supportate per l'attributo. Se il `System.AttributeUsageAttribute` indica che l'attributo supporta le funzioni come destinazione, l'attributo proviene da applicare al punto di ingresso principale del programma. Se il `System.AttributeUsageAttribute` indica che l'attributo supporta gli assembly come destinazioni, il compilatore prende l'attributo da applicare all'assembly. La maggior parte degli attributi non si applicano a entrambe le funzioni e assembly, ma in casi in cui avviene l'attributo non viene eseguito da applicare alla funzione principale del programma. Se l'attributo di destinazione viene specificato in modo esplicito, l'attributo viene applicato alla destinazione specificata.
+Se si omette l'attributo di destinazione per un attributo applicato a un `do` associazione, il compilatore F # tenta di determinare l'attributo di destinazione appropriato per quell'attributo. Molte classi di attributo dispongono di un attributo di tipo `System.AttributeUsageAttribute` che include informazioni sulle possibili destinazioni supportate per l'attributo. Se il `System.AttributeUsageAttribute` indica che l'attributo supporta le funzioni come destinazione, l'attributo proviene da applicare al punto di ingresso principale del programma. Se il `System.AttributeUsageAttribute` indica che l'attributo supporta gli assembly come destinazioni, il compilatore prende l'attributo da applicare all'assembly. La maggior parte degli attributi non si applicano a entrambe le funzioni e assembly, ma in casi in cui avviene l'attributo non viene eseguito da applicare alla funzione principale del programma. Se l'attributo di destinazione viene specificato in modo esplicito, l'attributo viene applicato alla destinazione specificata.
 
 Sebbene non sia in genere necessario specificare l'attributo di destinazione in modo esplicito, i valori validi per *destinazione* in un attributo vengono visualizzate nella tabella seguente, insieme a esempi di utilizzo.
 

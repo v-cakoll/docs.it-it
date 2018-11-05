@@ -1,6 +1,6 @@
 ---
 title: Funzioni inline (F#)
-description: Informazioni su come utilizzare F# le funzioni inline che sono integrate direttamente nel codice chiamante.
+description: 'Informazioni su come utilizzare F # le funzioni inline che sono integrate direttamente nel codice chiamante.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 47fca0fe34630792aeb0908b0cee02a927e2567d
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2

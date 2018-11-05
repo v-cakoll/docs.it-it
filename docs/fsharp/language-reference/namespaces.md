@@ -1,6 +1,6 @@
 ---
 title: Spazi dei nomi (F#)
-description: Informazioni su come uno spazio dei nomi in F# consente di organizzare il codice in aree di funzionalità correlate grazie alla possibilità di associare un nome a un raggruppamento di elementi di programma.
+description: 'Informazioni su come uno spazio dei nomi in F # consente di organizzare il codice in aree di funzionalità correlate grazie alla possibilità di associare un nome a un raggruppamento di elementi di programma.'
 ms.date: 04/24/2017
 ms.openlocfilehash: 769a1241f76ac32d3a6a80bd637078493119bb3c
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -74,7 +74,7 @@ Lo spazio dei nomi predefiniti `global` per inserire nomi nello spazio dei nomi 
 
 ## <a name="recursive-namespaces"></a>Spazi dei nomi ricorsiva
 
-F# 4.1 introduce la nozione di spazi dei nomi che consentono di tutto il codice indipendente si escludono a vicenda sono ricorsivi.  Questa operazione viene eseguita tramite `namespace rec`.  Uso di `namespace rec` possibile tentare di risolvere alcune aree problematiche in cui non riesca a scrivere il codice si escludono a vicenda referenziali tra i tipi e i moduli.  Di seguito è riportato un esempio:
+F # 4.1 introduce la nozione di spazi dei nomi che consentono di tutto il codice indipendente si escludono a vicenda sono ricorsivi.  Questa operazione viene eseguita tramite `namespace rec`.  Uso di `namespace rec` possibile tentare di risolvere alcune aree problematiche in cui non riesca a scrivere il codice si escludono a vicenda referenziali tra i tipi e i moduli.  Di seguito è riportato un esempio:
 
 ```fsharp
 namespace rec MutualReferences
@@ -115,12 +115,12 @@ module BananaHelpers =
         | Down -> b |> peelSides
 ```
 
-Si noti che l'eccezione `DontSqueezeTheBananaException` e la classe `Banana` entrambe fanno riferimento reciproco.  Inoltre, il modulo `BananaHelpers` e la classe `Banana` riferimento anche a altro.  Ciò non sarebbe possibile esprimere in F# se sono stati rimossi i `rec` parola chiave dal `MutualReferences` dello spazio dei nomi.
+Si noti che l'eccezione `DontSqueezeTheBananaException` e la classe `Banana` entrambe fanno riferimento reciproco.  Inoltre, il modulo `BananaHelpers` e la classe `Banana` riferimento anche a altro.  Ciò non sarebbe possibile esprimere in F # se sono stati rimossi i `rec` parola chiave dal `MutualReferences` dello spazio dei nomi.
 
-Questa funzionalità è disponibile anche per primo livello [moduli](modules.md) in F# 4.1 o versione successiva.
+Questa funzionalità è disponibile anche per primo livello [moduli](modules.md) in F # 4.1 o versione successiva.
 
 ## <a name="see-also"></a>Vedere anche
 
 - [Riferimenti per il linguaggio F#](index.md)
 - [Moduli](modules.md)
-- [1009-F# RFC FS - Consenti moduli e tipi referenziali si escludono a vicenda su ambiti più ampi all'interno dei file](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)
+- [1009-F # RFC FS - Consenti moduli e tipi referenziali si escludono a vicenda su ambiti più ampi all'interno dei file](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)

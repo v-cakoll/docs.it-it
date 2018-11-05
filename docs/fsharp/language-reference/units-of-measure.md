@@ -1,6 +1,6 @@
 ---
 title: Unità di misura (F#)
-description: Informazioni su a virgola mobile come e i valori interi con segno in F# possono essere associate unità di misura, che sono in genere usata per indicare lunghezza, volume e massa.
+description: 'Informazioni su a virgola mobile come e i valori interi con segno in F # possono essere associate unità di misura, che sono in genere usata per indicare lunghezza, volume e massa.'
 ms.date: 05/16/2016
 ms.openlocfilehash: ad2193e25f3c0cee6e73cd529ab43d1e4b6b549b
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,7 +11,7 @@ ms.locfileid: "45972517"
 ---
 # <a name="units-of-measure"></a>Unità di misura
 
-Virgola mobile e i valori interi con segno in F# possono essere associate unità di misura, che sono in genere usata per indicare lunghezza, volume, massa, e così via. Con le quantità con unità, è consentire al compilatore di verificare che le relazioni aritmetiche dispongono di unità corretta, che consente di evitare gli errori di programmazione.
+Virgola mobile e i valori interi con segno in F # possono essere associate unità di misura, che sono in genere usata per indicare lunghezza, volume, massa, e così via. Con le quantità con unità, è consentire al compilatore di verificare che le relazioni aritmetiche dispongono di unità corretta, che consente di evitare gli errori di programmazione.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -113,7 +113,7 @@ Per convertire un valore senza unità su un valore che dispone di unità, è pos
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6906.fs)]
 
-## <a name="units-of-measure-in-the-f-core-library"></a>Unità di misura nella raccolta di base F#
+## <a name="units-of-measure-in-the-f-core-library"></a>Unità di misura nella raccolta di base F #
 
 È disponibile in una libreria unit di `FSharp.Data.UnitSystems.SI` dello spazio dei nomi. Include le unità di sistema internazionale di misura in entrambi i form di simboli (, ad esempio `m` contatore) nel `UnitSymbols` sub-spazio dei nomi e il relativo nome completo (, ad esempio `meter` contatore) nel `UnitNames` spazio dei nomi secondario.
 

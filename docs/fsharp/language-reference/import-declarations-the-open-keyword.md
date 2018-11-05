@@ -1,6 +1,6 @@
 ---
 title: 'Dichiarazioni di importazione: parola chiave open (F#)'
-description: Informazioni sulle dichiarazioni di importazione di F# e come vengono specificati un modulo o dello spazio dei nomi cui elementi è possibile fare riferimento senza usare un nome completo.
+description: 'Informazioni sulle dichiarazioni di importazione di F # e come vengono specificati un modulo o dello spazio dei nomi cui elementi è possibile fare riferimento senza usare un nome completo.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 8cae4b4f5418689bfb0933b7db4ec23a313d5ed8
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -36,7 +36,7 @@ Il codice seguente viene illustrato come utilizzare il `open` (parola chiave) pe
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6801.fs)]
 
-Il compilatore F# non genera un errore o un avviso quando le ambiguità si verificano quando si verifica lo stesso nome in più di un modulo aperto o spazio dei nomi. Quando si verificano ambiguità, F# accorda priorità a più file aperti di recente modulo o dello spazio dei nomi. Ad esempio, nel codice seguente, `empty` significa `Seq.empty`, anche se `empty` si trova in entrambi i `List` e `Seq` moduli.
+Il compilatore F # non genera un errore o un avviso quando le ambiguità si verificano quando si verifica lo stesso nome in più di un modulo aperto o spazio dei nomi. Quando si verificano ambiguità, F # accorda priorità a più file aperti di recente modulo o dello spazio dei nomi. Ad esempio, nel codice seguente, `empty` significa `Seq.empty`, anche se `empty` si trova in entrambi i `List` e `Seq` moduli.
 
 ```fsharp
 open List
@@ -48,11 +48,11 @@ Pertanto, prestare attenzione quando si apre, ad esempio i moduli o spazi dei no
 
 ## <a name="namespaces-that-are-open-by-default"></a>Spazi dei nomi che sono aperte per impostazione predefinita
 
-Alcuni spazi dei nomi vengono utilizzati con una frequenza nel codice F# che sono aperti in modo implicito senza la necessità di una dichiarazione di importazione esplicita. La tabella seguente mostra gli spazi dei nomi che sono aperte per impostazione predefinita.
+Alcuni spazi dei nomi vengono utilizzati con una frequenza nel codice F # che sono aperti in modo implicito senza la necessità di una dichiarazione di importazione esplicita. La tabella seguente mostra gli spazi dei nomi che sono aperte per impostazione predefinita.
 
 |Spazio dei nomi|Descrizione|
 |---------|-----------|
-|`Microsoft.FSharp.Core`|Contiene le definizioni dei tipo F# di base per i tipi predefiniti, ad esempio `int` e `float`.|
+|`Microsoft.FSharp.Core`|Contiene le definizioni dei tipo F # di base per i tipi predefiniti, ad esempio `int` e `float`.|
 |`Microsoft.FSharp.Core.Operators`|Contiene operazioni aritmetiche di base, ad esempio `+` e `*`.|
 |`Microsoft.FSharp.Collections`|Contiene le classi di raccolte non modificabili, ad esempio `List` e `Array`.|
 |`Microsoft.FSharp.Control`|Contiene tipi per i costrutti di controllo, ad esempio la valutazione lazy e flussi di lavoro asincroni.|

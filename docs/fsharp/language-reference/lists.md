@@ -1,6 +1,6 @@
 ---
 title: Elenchi (F#)
-description: Informazioni sugli elenchi di F#, una serie ordinata e non modificabile di elementi dello stesso tipo.
+description: 'Informazioni sugli elenchi di F #, una serie ordinata e non modificabile di elementi dello stesso tipo.'
 ms.date: 05/16/2016
 ms.openlocfilehash: b48bf04f5ec490b49e63462affc0d4eadebe10ef
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -56,7 +56,7 @@ Sono disponibili nelle funzioni per l'esecuzione di operazioni sugli elenchi di 
 
 Poiché gli elenchi in F# non sono modificabili, qualsiasi operazione di modifica comporta la generazione di nuovi elenchi anziché la modifica di quelli esistenti.
 
-Gli elenchi in F# vengono implementati come elenchi collegati singolarmente, ovvero le operazioni che accedono solo all'elemento head dell'elenco sono o (1) e l'accesso all'elemento è O (*n*).
+Gli elenchi in F # vengono implementati come elenchi collegati singolarmente, ovvero le operazioni che accedono solo all'elemento head dell'elenco sono o (1) e l'accesso all'elemento è O (*n*).
 
 ## <a name="properties"></a>Proprietà
 

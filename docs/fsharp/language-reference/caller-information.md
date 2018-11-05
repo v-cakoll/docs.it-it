@@ -1,5 +1,5 @@
 ---
-title: Informazioni sul chiamante (F#)
+title: 'Informazioni sul chiamante (F #)'
 description: Viene descritto come utilizzare attributi di argomenti informativi sul chiamante per ottenere informazioni sul chiamante da un metodo.
 ms.date: 04/25/2017
 ms.openlocfilehash: 0f2f4b16804d9156d234cc29d1f72ebe80a5b556

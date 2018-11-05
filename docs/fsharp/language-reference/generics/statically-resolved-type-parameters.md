@@ -1,6 +1,6 @@
 ---
 title: Parametri di tipo risolti staticamente (F#)
-description: Informazioni su come utilizzare F# parametro di tipo risolti staticamente, che viene sostituito con un tipo effettivo in fase di compilazione anziché in fase di esecuzione.
+description: 'Informazioni su come utilizzare F # parametro di tipo risolti staticamente, che viene sostituito con un tipo effettivo in fase di compilazione anziché in fase di esecuzione.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 747917fef2746dcbf363ef4b717ace5e47229800
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -21,7 +21,7 @@ Oggetto *parametro di tipo risolti staticamente* è un parametro di tipo che vie
 
 ## <a name="remarks"></a>Note
 
-Nel linguaggio F#, sono disponibili due tipi distinti di parametri di tipo. Il primo tipo è il parametro di tipo generico standard. Questi aggiornamenti sono indicati da un apostrofo ('), come in `'T` e `'U`. Sono equivalenti ai parametri di tipo generico in altri linguaggi .NET Framework. L'altro tipo viene risolto in modo statico ed è indicato da un simbolo di punto di inserimento, come in `^T` e `^U`.
+Nel linguaggio F #, sono disponibili due tipi distinti di parametri di tipo. Il primo tipo è il parametro di tipo generico standard. Questi aggiornamenti sono indicati da un apostrofo ('), come in `'T` e `'U`. Sono equivalenti ai parametri di tipo generico in altri linguaggi .NET Framework. L'altro tipo viene risolto in modo statico ed è indicato da un simbolo di punto di inserimento, come in `^T` e `^U`.
 
 I parametri di tipo risolti staticamente sono particolarmente utili in combinazione con vincoli di membro, ovvero i vincoli che consentono di specificare che un argomento tipo deve avere una o più membri particolari per poter essere usato. Non è possibile creare questo tipo di vincolo con un parametro di tipo generico regolari.
 
@@ -36,13 +36,13 @@ Nella tabella seguente sono riepilogate le analogie e differenze tra i due tipi 
 |Utilizzare con i tipi|Può essere utilizzato nei tipi.|Non è utilizzabile sui tipi.|
 |Usare con le funzioni inline|No. Una funzione inline non possa essere parametrizzata con un parametro di tipo generico standard.|Sì. Impossibile utilizzare i parametri di tipo risolti staticamente in funzioni o metodi che non sono inline.|
 
-Molte funzioni F# core library, in particolare gli operatori, sono stati risolti in modo statico i parametri di tipo. Questi operatori e funzioni inline e comportare la generazione di codice efficace per calcoli numerici.
+Molte funzioni F # core library, in particolare gli operatori, sono stati risolti in modo statico i parametri di tipo. Questi operatori e funzioni inline e comportare la generazione di codice efficace per calcoli numerici.
 
 Metodi inline e funzioni che utilizzano operatori oppure utilizzano altre funzioni, parametri di tipo risolti staticamente anche possono usare parametri di tipo risolti staticamente stessi. Inferenza deduce spesso, tali funzioni inline per avere parametri di tipo risolti staticamente. L'esempio seguente illustra una definizione di operatore che si deduce che hanno un parametro di tipo risolti staticamente.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-3/snippet401.fs)]
 
-Il tipo risolto `(+@)` si basa sull'utilizzo di entrambe `(+)` e `(*)`, entrambi di che provocano l'inferenza del tipo per dedurre i vincoli sui parametri di tipo risolti staticamente membro. Il tipo risolto, come illustrato nell'interprete F#, è come indicato di seguito.
+Il tipo risolto `(+@)` si basa sull'utilizzo di entrambe `(+)` e `(*)`, entrambi di che provocano l'inferenza del tipo per dedurre i vincoli sui parametri di tipo risolti staticamente membro. Il tipo risolto, come illustrato nell'interprete F #, è come indicato di seguito.
 
 ```fsharp
 ^a -> ^c -> ^d
@@ -57,7 +57,7 @@ L'output è indicato di seguito.
 1.500000
 ```
 
-A partire da F# 4.1, è anche possibile specificare i nomi di tipo concreto nelle firme del parametro di tipo risolti staticamente.  Nelle versioni precedenti del linguaggio, il nome del tipo può effettivamente essere dedotto dal compilatore, ma non è stato effettivamente essere specificato nella firma.  A partire da F# 4.1, è anche possibile specificare i nomi di tipo concreto nelle firme del parametro di tipo risolti staticamente. Di seguito è riportato un esempio:
+A partire da F # 4.1, è anche possibile specificare i nomi di tipo concreto nelle firme del parametro di tipo risolti staticamente.  Nelle versioni precedenti del linguaggio, il nome del tipo può effettivamente essere dedotto dal compilatore, ma non è stato effettivamente essere specificato nella firma.  A partire da F # 4.1, è anche possibile specificare i nomi di tipo concreto nelle firme del parametro di tipo risolti staticamente. Di seguito è riportato un esempio:
 
 ```fsharp
 let inline konst x _ = x

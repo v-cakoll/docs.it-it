@@ -1,6 +1,6 @@
 ---
 title: Operatori bit per bit (F#)
-description: Informazioni sugli operatori bit per bit che sono disponibili nel linguaggio di programmazione F#.
+description: 'Informazioni sugli operatori bit per bit che sono disponibili nel linguaggio di programmazione F #.'
 ms.date: 07/20/2018
 ms.openlocfilehash: ed76fcf5f9c569a2f288cf260e99dc29fd65ef3b
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,11 +11,11 @@ ms.locfileid: "48581508"
 ---
 # <a name="bitwise-operators"></a>Operatori bit per bit
 
-Questo argomento descrive gli operatori bit per bit sono disponibili nel linguaggio F#.
+Questo argomento descrive gli operatori bit per bit sono disponibili nel linguaggio F #.
 
 ## <a name="summary-of-bitwise-operators"></a>Riepilogo degli operatori bit per bit
 
-Nella tabella seguente descrive gli operatori bit per bit supportati per i tipi integrali unboxed nel linguaggio F#.
+Nella tabella seguente descrive gli operatori bit per bit supportati per i tipi integrali unboxed nel linguaggio F #.
 
 |Operatore|Note|
 |--------|-----|

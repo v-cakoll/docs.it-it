@@ -1,6 +1,6 @@
 ---
 title: Metodi (F#)
-description: Informazioni su come un metodo di F# è una funzione associata a un tipo che vengono usate per esporre e implementare le funzionalità e il comportamento degli oggetti e tipi.
+description: 'Informazioni su come un metodo di F # è una funzione associata a un tipo che vengono usate per esporre e implementare le funzionalità e il comportamento degli oggetti e tipi.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 02d5a7d22d1ce79a06e15462637c373b33623f61
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -59,7 +59,7 @@ I metodi non inline possono essere utilizzato in modo ricorsivo all'interno del 
 
 ## <a name="instance-methods"></a>Metodi di istanza
 
-Metodi di istanza vengono dichiarati con il `member` parola chiave e un *autoidentificatore*, seguita da un punto (.) e il nome del metodo e i parametri. Come accade per `let` associazioni, il *elenco di parametri* può essere un modello. In genere, racchiuderlo tra (metodo) vengono visualizzati i parametri tra parentesi nel formato di tupla, ovvero i metodi modo F# quando vengono creati in altri linguaggi .NET Framework. Tuttavia, il currying (parametri separati da spazi) è anche comune, e sono supportati anche altri criteri.
+Metodi di istanza vengono dichiarati con il `member` parola chiave e un *autoidentificatore*, seguita da un punto (.) e il nome del metodo e i parametri. Come accade per `let` associazioni, il *elenco di parametri* può essere un modello. In genere, racchiuderlo tra (metodo) vengono visualizzati i parametri tra parentesi nel formato di tupla, ovvero i metodi modo F # quando vengono creati in altri linguaggi .NET Framework. Tuttavia, il currying (parametri separati da spazi) è anche comune, e sono supportati anche altri criteri.
 
 L'esempio seguente illustra la definizione e utilizzo di un metodo di istanza non astratta.
 
@@ -97,11 +97,11 @@ Nell'esempio seguente viene illustrata una classe derivata che esegue l'override
 
 ## <a name="overloaded-methods"></a>Metodi di overload
 
-Metodi di overload sono metodi che dispongono di nomi identici in un determinato tipo, ma che dispongono di argomenti diversi. In F#, gli argomenti facoltativi vengono in genere usati invece i metodi di overload. Tuttavia, i metodi di overload sono consentiti nella lingua, condizione che gli argomenti sono in formato di tupla, non sottoposto a currying.
+Metodi di overload sono metodi che dispongono di nomi identici in un determinato tipo, ma che dispongono di argomenti diversi. In F #, gli argomenti facoltativi vengono in genere usati invece i metodi di overload. Tuttavia, i metodi di overload sono consentiti nella lingua, condizione che gli argomenti sono in formato di tupla, non sottoposto a currying.
 
 ## <a name="optional-arguments"></a>Argomenti facoltativi
 
-A partire da F# 4.1, è possibile avere anche gli argomenti facoltativi con un valore di parametro predefinito nei metodi.  In modo da facilitare l'interoperabilità con codice c#.  Nell'esempio seguente viene illustrata la sintassi:
+A partire da F # 4.1, è possibile avere anche gli argomenti facoltativi con un valore di parametro predefinito nei metodi.  In modo da facilitare l'interoperabilità con codice c#.  Nell'esempio seguente viene illustrata la sintassi:
 
 ```fsharp
 // A class with a method M, which takes in an optional integer argument.

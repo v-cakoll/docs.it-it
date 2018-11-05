@@ -1,6 +1,6 @@
 ---
 title: 'Eccezioni: funzione raise (F#)'
-description: Informazioni su come viene usata la funzione 'raise' di F# per indicare che si è verificato un errore o condizione eccezionale.
+description: "Informazioni su come viene usata la funzione 'raise' di F # per indicare che si è verificato un errore o condizione eccezionale."
 ms.date: 05/16/2016
 ms.openlocfilehash: 537d274659d29404380bfdd56310ac267372bb98
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2

@@ -1,6 +1,6 @@
 ---
 title: Ereditarietà (C#)
-description: Informazioni su come specificare relazioni di ereditarietà F# usando la parola chiave 'inherit'.
+description: "Informazioni su come specificare relazioni di ereditarietà F # usando la parola chiave 'inherit'."
 ms.date: 05/16/2016
 ms.openlocfilehash: e4d79244fb9bada5db0c5c4c7179d4bfe6e21f3d
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -34,7 +34,7 @@ La parola chiave `base` è disponibile nelle classi derivate e fa riferimento al
 
 ## <a name="virtual-methods-and-overrides"></a>Le sostituzioni e metodi virtuali
 
-Metodi virtuali (e proprietà) funzionano in modo diverso in F# rispetto a altri linguaggi .NET. Per dichiarare un nuovo membro virtuale, Usa il `abstract` (parola chiave). A tale scopo, indipendentemente dal fatto che è fornire un'implementazione predefinita per il metodo. In questo modo una definizione completa di un metodo virtuale in una classe di base segue questo modello:
+Metodi virtuali (e proprietà) funzionano in modo diverso in F # rispetto a altri linguaggi .NET. Per dichiarare un nuovo membro virtuale, Usa il `abstract` (parola chiave). A tale scopo, indipendentemente dal fatto che è fornire un'implementazione predefinita per il metodo. In questo modo una definizione completa di un metodo virtuale in una classe di base segue questo modello:
 
 ```fsharp
 abstract member [method-name] : [type]

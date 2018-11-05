@@ -1,5 +1,5 @@
 ---
-title: Introduzione all'archiviazione tabelle di Azure con F#
+title: "Introduzione all'archiviazione tabelle di Azure con F #"
 description: Store dati strutturati nel cloud con archiviazione tabelle di Azure o Azure Cosmos DB.
 author: sylvanc
 ms.date: 03/26/2018
@@ -10,7 +10,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/02/2018
 ms.locfileid: "43519535"
 ---
-# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>Introduzione all'archiviazione tabelle di Azure e l'API Table di Azure Cosmos DB con F# # 
+# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>Introduzione all'archiviazione tabelle di Azure e l'API Table di Azure Cosmos DB con F # # 
 
 Archiviazione tabelle di Azure è un servizio che archivia dati NoSQL strutturati nel cloud. Archiviazione tabelle è un archivio di chiavi/attributi con una struttura senza schema. Poiché l'archiviazione tabelle è senza schema, è facile adattare i dati come le esigenze priva di. Accesso ai dati è rapido ed economico per tutti i tipi di applicazioni. Archiviazione tabelle è in genere costo notevolmente inferiore rispetto alle soluzioni SQL tradizionali per volumi simili di dati.
 
@@ -30,16 +30,16 @@ Per altre informazioni, vedere [Introduzione all'API tabelle di Azure Cosmos DB]
 
 ## <a name="about-this-tutorial"></a>Informazioni su questa esercitazione
 
-Questa esercitazione illustra come scrivere codice F# per eseguire alcune attività comuni usando l'API Azure Cosmos DB nella tabella, incluse la creazione e l'eliminazione di una tabella e inserimento, l'aggiornamento, eliminazione e query sui dati di tabella o archiviazione tabelle di Azure.
+Questa esercitazione illustra come scrivere codice F # per eseguire alcune attività comuni usando l'API Azure Cosmos DB nella tabella, incluse la creazione e l'eliminazione di una tabella e inserimento, l'aggiornamento, eliminazione e query sui dati di tabella o archiviazione tabelle di Azure.
 
 ## <a name="prerequisites"></a>Prerequisiti
 
 Per usare questa Guida, è necessario innanzitutto [creare un account di archiviazione di Azure](/azure/storage/storage-create-storage-account) oppure [account Azure Cosmos DB](https://azure.microsoft.com/try/cosmosdb/).
 
 
-## <a name="create-an-f-script-and-start-f-interactive"></a>Creare un Script F# e avvio di F# Interactive
+## <a name="create-an-f-script-and-start-f-interactive"></a>Creare un Script F # e avvio di F # Interactive
 
-Gli esempi in questo articolo possono essere utilizzati in un'applicazione F# o uno script F#. Per creare uno script F#, creare un file con il `.fsx` estensione, ad esempio `tables.fsx`, nell'ambiente di sviluppo F#.
+Gli esempi in questo articolo possono essere utilizzati in un'applicazione F # o uno script F #. Per creare uno script F #, creare un file con il `.fsx` estensione, ad esempio `tables.fsx`, nell'ambiente di sviluppo F #.
 
 Successivamente, usare una [Gestione pacchetti](package-management.md) , ad esempio [Paket](https://fsprojects.github.io/Paket/) oppure [NuGet](https://www.nuget.org/) per installare il `WindowsAzure.Storage` pacchetto e riferimento `WindowsAzure.Storage.dll` nello script utilizzando un `#r`della direttiva. Eseguire quindi un nuovo `Microsoft.WindowsAzure.ConfigurationManager` per ottenere lo spazio dei nomi Microsoft.Azure.
 

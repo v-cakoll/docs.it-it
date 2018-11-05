@@ -1,6 +1,6 @@
 ---
 title: Strutture (F#)
-description: Informazioni sulla struttura F#, un tipo di oggetto compatto spesso più efficiente rispetto a una classe per i tipi con una piccola quantità di dati e comportamento semplice.
+description: 'Informazioni sulla struttura F #, un tipo di oggetto compatto spesso più efficiente rispetto a una classe per i tipi con una piccola quantità di dati e comportamento semplice.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 08af88132dda28883e246b94585ff4ed8bd2f16a
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -64,7 +64,7 @@ type S(count1: Span<int>, count2: Span<int>) =
 
 `IsByRefLike` non implica `Struct`. Entrambi devono essere presenti nel tipo.
 
-Un "`byref`-ad esempio" struct in F# è un tipo di valore con associazione dello stack. Non viene allocato nell'heap gestito. Oggetto `byref`-come struct è utile per la programmazione ad alte prestazioni, come viene applicato con set di controlli accurati su durata e di non acquisizione. Le regole sono:
+Un "`byref`-ad esempio" struct in F # è un tipo di valore con associazione dello stack. Non viene allocato nell'heap gestito. Oggetto `byref`-come struct è utile per la programmazione ad alte prestazioni, come viene applicato con set di controlli accurati su durata e di non acquisizione. Le regole sono:
 
 * Possono essere utilizzati come parametri di funzione, i parametri dei metodi, variabili locali, metodo viene restituito.
 * Essi non può essere statico o istanza i membri di una classe o struct normali.
@@ -86,7 +86,7 @@ type S(count1: int, count2: int) =
 
 `IsReadOnly` non implica `Struct`. È necessario aggiungere entrambi disporre un `IsReadOnly` struct.
 
-Utilizzo di questo attributo genera metadati consentendo F# e c# sa di considerarla `inref<'T>` e `in ref`, rispettivamente.
+Utilizzo di questo attributo genera metadati consentendo F # e c# sa di considerarla `inref<'T>` e `in ref`, rispettivamente.
 
 Definizione di un valore modificabile all'interno di uno struct di sola lettura, viene generato un errore.
 

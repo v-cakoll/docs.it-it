@@ -1,6 +1,6 @@
 ---
 title: Operatori nullable (F#)
-description: Informazioni sugli operatori nullable che sono disponibili nel linguaggio di programmazione F#.
+description: 'Informazioni sugli operatori nullable che sono disponibili nel linguaggio di programmazione F #.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 42df74a56831fb0a5d6df34db4321f5b228993c2
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -15,7 +15,7 @@ Operatori nullable sono operatori di confronto o aritmetici binari che funzionan
 
 ## <a name="table-of-nullable-operators"></a>Tabella degli operatori Nullable
 
-La tabella seguente elenca gli operatori nullable supportati nel linguaggio F#.
+La tabella seguente elenca gli operatori nullable supportati nel linguaggio F #.
 
 |Ammette valori null a sinistra|Ammette valori null a destra|Entrambi i lati ammette valori null|
 |---|---|---|
@@ -55,7 +55,7 @@ L'output è `10.000000`.
 
 Query degli operatori nei campi di dati ammette valori null, ad esempio `sumByNullable`, esistono anche per l'utilizzo nelle espressioni di query. Gli operatori di query per i tipi non nullable non sono compatibili con tipo con i tipi nullable, pertanto è necessario usare la versione che ammette valori null dell'operatore di query appropriata quando si lavora con valori di dati ammette valori null. Per altre informazioni, vedere [espressioni di Query](../query-expressions.md).
 
-Nell'esempio seguente viene illustrato l'utilizzo degli operatori che ammette valori null in un'espressione di query F#. La prima query Mostra come scrivere una query senza un operatore che ammette valori null; la seconda query viene illustrata una query equivalente che usa un operatore che ammette valori null. Per il contesto completo, incluse le procedure configurare il database per usare questo codice di esempio, vedere [procedura dettagliata: accesso a un Database SQL dal provider di tipi utilizzando](../../tutorials/type-providers/accessing-a-sql-database.md).
+Nell'esempio seguente viene illustrato l'utilizzo degli operatori che ammette valori null in un'espressione di query F #. La prima query Mostra come scrivere una query senza un operatore che ammette valori null; la seconda query viene illustrata una query equivalente che usa un operatore che ammette valori null. Per il contesto completo, incluse le procedure configurare il database per usare questo codice di esempio, vedere [procedura dettagliata: accesso a un Database SQL dal provider di tipi utilizzando](../../tutorials/type-providers/accessing-a-sql-database.md).
 
 ```fsharp
 open System

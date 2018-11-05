@@ -1,6 +1,6 @@
 ---
 title: Celle di riferimento (F#)
-description: Informazioni su come le celle di riferimento di F# sono posizioni di archiviazione che consentono di creare valori modificabili con semantica di riferimento.
+description: 'Informazioni su come le celle di riferimento di F # sono posizioni di archiviazione che consentono di creare valori modificabili con semantica di riferimento.'
 ms.date: 05/16/2016
 ms.openlocfilehash: e2e1a91c62fd76e4992bc5ae11bb672766850718
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -74,7 +74,7 @@ L'output è indicato di seguito.
 
 Il campo `contents` viene fornito per garantire compatibilità con altre versioni di ML e comporta la generazione di un avviso durante la compilazione. Per disabilitare l'avviso, utilizzare l'opzione del compilatore `--mlcompatibility`. Per altre informazioni, vedere [Opzioni del compilatore](compiler-options.md).
 
-I programmatori c# devono sapere che `ref` in c# non è la stessa operazione come `ref` in F#. I costrutti equivalenti in F# sono [zkratka](byrefs.md), che sono un concetto diverso dalle celle di riferimento.
+I programmatori c# devono sapere che `ref` in c# non è la stessa operazione come `ref` in F #. I costrutti equivalenti in F # sono [zkratka](byrefs.md), che sono un concetto diverso dalle celle di riferimento.
 
 I valori contrassegnati come `mutable`può essere automaticamente promossa a `'a ref` acquisiti da una chiusura dei tag, vedere [valori](values/index.md).
 
