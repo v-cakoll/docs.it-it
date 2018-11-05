@@ -1,6 +1,6 @@
 ---
 title: Funzioni esterne (F#)
-description: Scopri il supporto del linguaggio F# per chiamare le funzioni in codice nativo.
+description: 'Scopri il supporto del linguaggio F # per chiamare le funzioni in codice nativo.'
 ms.date: 05/16/2016
 ms.openlocfilehash: db0d3362d867b07b333951f3380c6735ff471d5e
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,7 +11,7 @@ ms.locfileid: "45973105"
 ---
 # <a name="external-functions"></a>Funzioni esterne
 
-In questo argomento viene descritto il supporto del linguaggio F# per chiamare le funzioni in codice nativo.
+In questo argomento viene descritto il supporto del linguaggio F # per chiamare le funzioni in codice nativo.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -34,7 +34,7 @@ extern "C" void __declspec(dllexport) HelloWorld()
 }
 ```
 
-È possibile chiamare questa funzione da F# usando il codice seguente.
+È possibile chiamare questa funzione da F # usando il codice seguente.
 
 ```fsharp
 open System.Runtime.InteropServices
@@ -46,7 +46,7 @@ module InteropWithNative =
 InteropWithNative.HelloWorld()
 ```
 
-L'interoperabilità con codice nativo è detta *PInvoke* ed è una funzionalità di CLR. Per altre informazioni, vedere [Interoperabilità con codice non gestito](../../../../docs/framework/interop/index.md). Le informazioni contenute in tale sezione sono applicabile a F#.
+L'interoperabilità con codice nativo è detta *PInvoke* ed è una funzionalità di CLR. Per altre informazioni, vedere [Interoperabilità con codice non gestito](../../../../docs/framework/interop/index.md). Le informazioni contenute in tale sezione sono applicabile a F #.
 
 ## <a name="see-also"></a>Vedere anche
 

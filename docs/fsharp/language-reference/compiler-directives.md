@@ -1,6 +1,6 @@
 ---
 title: Direttive per il compilatore (F#)
-description: Scopri le direttive del preprocessore del linguaggio F#, direttive di compilazione condizionale, le direttive di riga e direttive del compilatore.
+description: 'Scopri le direttive del preprocessore del linguaggio F #, direttive di compilazione condizionale, le direttive di riga e direttive del compilatore.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 5ac375ac5acd0609a6556f9e0481d169df827c98
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -65,7 +65,7 @@ Nella tabella seguente viene elencata la direttiva del compilatore disponibile i
 |Direttiva|Descrizione|
 |---------|-----------|
 |`#light` ["on"&#124;"off"]|Abilita o disabilita la sintassi leggera per la compatibilità con altre versioni di ML. Per impostazione predefinita, la sintassi leggera è abilitata. La sintassi dettagliata è sempre abilitata. Pertanto, è possibile usare sia sintassi leggera che sintassi dettagliata. La direttiva `#light` da sola equivale a `#light "on"`. Se si specifica `#light "off"`, è necessario usare la sintassi dettagliata per tutti i costrutti del linguaggio. La sintassi nella documentazione per F# viene presentata partendo dal presupposto che venga usata la sintassi leggera. Per altre informazioni, vedere [sintassi dettagliata](verbose-syntax.md).|
-Per le direttive dell'interprete (fsi.exe), vedere [programmazione interattiva con F#](../tutorials/fsharp-interactive/index.md).
+Per le direttive dell'interprete (fsi.exe), vedere [programmazione interattiva con F #](../tutorials/fsharp-interactive/index.md).
 
 ## <a name="see-also"></a>Vedere anche
 

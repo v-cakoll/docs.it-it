@@ -1,6 +1,6 @@
 ---
 title: Espressioni di oggetto (F#)
-description: Informazioni su come usare le espressioni di oggetto F# quando si desidera evitare il codice aggiuntivo e l'overhead necessario per creare un nuovo tipo denominato.
+description: "Informazioni su come usare le espressioni di oggetto F # quando si desidera evitare il codice aggiuntivo e l'overhead necessario per creare un nuovo tipo denominato."
 ms.date: 05/16/2016
 ms.openlocfilehash: 1a971044d680d3bf5a6fff38affdaf001d5403b4
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2

@@ -1,6 +1,6 @@
 ---
 title: Estensioni di tipo (F#)
-description: Informazioni su come le estensioni di tipo F# consentono che aggiungere nuovi membri a un tipo di oggetto definito in precedenza.
+description: 'Informazioni su come le estensioni di tipo F # consentono che aggiungere nuovi membri a un tipo di oggetto definito in precedenza.'
 ms.date: 07/20/2018
 ms.openlocfilehash: 27238db1fd0803f62c32755fbc4ab7688f5c107e
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -127,7 +127,7 @@ L'opzione desiderata sono metodi statici che "float nello spazio" e possono esse
 
 ## <a name="extension-methods"></a>Metodi di estensione
 
-Infine, i metodi di estensione (talvolta denominati "c# stile i membri di estensione") possono essere dichiarati in F# come metodo di membro statico in una classe.
+Infine, i metodi di estensione (talvolta denominati "c# stile i membri di estensione") possono essere dichiarati in F # come metodo di membro statico in una classe.
 
 I metodi di estensione sono utili per quando si desidera definire le estensioni in un tipo generico che impostano la variabile di tipo. Ad esempio:
 
@@ -163,7 +163,7 @@ Le limitazioni seguenti sono anche disponibili per le estensioni di tipo:
 * Non è possibile definire le estensioni di tipo [abbreviazioni di tipo](type-abbreviations.md).
 * Le estensioni di tipo non sono valide per `byref<'T>` (anche se possono essere dichiarati).
 * Le estensioni di tipo non sono valide per gli attributi (anche se possono essere dichiarati).
-* È possibile definire le estensioni che eseguono l'overload di altri metodi con lo stesso nome, ma il compilatore F# assegna la priorità ai metodi di estensione nel caso di una chiamata ambigua.
+* È possibile definire le estensioni che eseguono l'overload di altri metodi con lo stesso nome, ma il compilatore F # assegna la priorità ai metodi di estensione nel caso di una chiamata ambigua.
 
 Infine, in presenza di più estensioni di tipo intrinseche per un tipo, tutti i membri devono essere univoci. Le estensioni di tipo facoltativo, membri nelle estensioni di tipo diverso nello stesso tipo possono avere gli stessi nomi. Errori di ambiguità si verificano solo se il codice client apre due ambiti diversi che definiscono gli stessi nomi di membro.
 
