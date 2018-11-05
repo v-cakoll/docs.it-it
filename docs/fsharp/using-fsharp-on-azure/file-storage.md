@@ -1,5 +1,5 @@
 ---
-title: "Introduzione all'archiviazione File di Azure con F #"
+title: Introduzione all'archiviazione File di Azure con F#
 description: Store i dati dei file nel cloud con archiviazione File di Azure e montare la condivisione file nel cloud da una macchina virtuale di Azure (VM) o da un'applicazione in locale che esegue Windows.
 author: sylvanc
 ms.date: 09/20/2016
@@ -10,7 +10,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/02/2018
 ms.locfileid: "33569343"
 ---
-# <a name="get-started-with-azure-file-storage-using-f"></a>Introduzione all'archiviazione File di Azure con F # #
+# <a name="get-started-with-azure-file-storage-using-f"></a>Introduzione all'archiviazione File di Azure con F# #
 
 Archiviazione File di Azure è un servizio che offre condivisioni file nel cloud usando lo standard [protocollo Server Message Block (SMB)](https://msdn.microsoft.com/library/windows/desktop/aa365233.aspx). Sono supportati sia SMB 2.1 che SMB 3.0. Con archiviazione File di Azure, è possibile eseguire la migrazione delle applicazioni legacy basate su condivisioni file in Azure velocemente e senza costose riscritture. Le applicazioni in esecuzione in macchine virtuali di Azure o servizi cloud o da client locali possono montare una condivisione file nel cloud, esattamente come un'applicazione desktop Monta una tipica condivisione SMB. Qualsiasi numero di componenti dell'applicazione può quindi montare e accedere contemporaneamente alla condivisione di archiviazione File.
 
@@ -21,9 +21,9 @@ Per una panoramica concettuale dell'archiviazione file, vedi [la Guida di .NET p
 Per usare questa Guida, è necessario innanzitutto [creare un account di archiviazione di Azure](/azure/storage/storage-create-storage-account).
 È necessario anche la chiave di accesso di archiviazione per questo account.
 
-## <a name="create-an-f-script-and-start-f-interactive"></a>Creare un Script F # e avvio di F # Interactive
+## <a name="create-an-f-script-and-start-f-interactive"></a>Creare un Script F# e avvio di F# Interactive
 
-Gli esempi in questo articolo possono essere utilizzati in un'applicazione F # o uno script F #. Per creare uno script F #, creare un file con il `.fsx` estensione, ad esempio `files.fsx`, nell'ambiente di sviluppo F #.
+Gli esempi in questo articolo possono essere utilizzati in un'applicazione F# o uno script F#. Per creare uno script F#, creare un file con il `.fsx` estensione, ad esempio `files.fsx`, nell'ambiente di sviluppo F#.
 
 Successivamente, usare una [Gestione pacchetti](package-management.md) , ad esempio [Paket](https://fsprojects.github.io/Paket/) oppure [NuGet](https://www.nuget.org/) per installare il `WindowsAzure.Storage` pacchetto e riferimento `WindowsAzure.Storage.dll` nello script utilizzando un `#r`della direttiva.
 

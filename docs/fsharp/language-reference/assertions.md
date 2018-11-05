@@ -1,6 +1,6 @@
 ---
 title: Asserzioni (F#)
-description: "Informazioni su come usare l'espressione 'assert' come una funzionalità di debug per testare le espressioni nel linguaggio di programmazione F #."
+description: Informazioni su come usare l'espressione 'assert' come una funzionalità di debug per testare le espressioni nel linguaggio di programmazione F#.
 ms.date: 05/16/2016
 ms.openlocfilehash: 85b1e839bfd19bada48b7f1821d15ddd8fa77754
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -27,7 +27,7 @@ Nella sintassi precedente *condizione* rappresenta un'espressione booleana che d
 
 Il controllo delle asserzioni è abilitato solo quando si esegue la compilazione in modalità Debug. vale a dire, se la costante `DEBUG` è definito. Nel sistema del progetto, per impostazione predefinita, il `DEBUG` costante è definita nella configurazione di Debug ma non nella configurazione di rilascio.
 
-Errore di asserzione non può essere intercettato tramite la gestione delle eccezioni di F #.
+Errore di asserzione non può essere intercettato tramite la gestione delle eccezioni di F#.
 
 >[!NOTE]
 Il `assert` funzione si risolve in <xref:System.Diagnostics.Debug.Assert*?displayProperty=nameWithType>.

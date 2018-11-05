@@ -1,6 +1,6 @@
 ---
-title: 'Espressioni Match (F #)'
-description: "Informazioni su come l'espressione di ricerca di F # offre controllo del branching basato sul confronto di un'espressione con un set di modelli."
+title: Espressioni Match (F#)
+description: Informazioni su come l'espressione di ricerca di F# offre controllo del branching basato sul confronto di un'espressione con un set di modelli.
 ms.date: 04/19/2018
 ms.openlocfilehash: e4cb82f20fe82bff562736557c2346562c557f59
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2

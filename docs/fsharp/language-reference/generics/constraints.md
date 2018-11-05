@@ -1,6 +1,6 @@
 ---
 title: Vincoli (F#)
-description: 'Informazioni sui vincoli di F # che si applicano ai parametri di tipo generico per specificare i requisiti per un argomento di tipo in una funzione o un tipo generico.'
+description: Informazioni sui vincoli di F# che si applicano ai parametri di tipo generico per specificare i requisiti per un argomento di tipo in una funzione o un tipo generico.
 ms.date: 05/16/2016
 ms.openlocfilehash: 9534db4ffd195022366af8c993658bd94f375f53
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -26,7 +26,7 @@ Esistono diversi vincoli diversi, che è possibile applicare per limitare i tipi
 |Vincolo|Sintassi|Descrizione|
 |----------|------|-----------|
 |Vincolo di tipo|*parametro di tipo* :&gt; *tipo*|Il tipo specificato deve essere uguale o derivare dal tipo specificato o, se il tipo è un'interfaccia, il tipo specificato deve implementare l'interfaccia.|
-|Vincolo Null|*parametro di tipo* : null|Il tipo specificato deve supportare il valore letterale null. Ciò include tutti i tipi di oggetti .NET ma non F # elenco, tupla, funzione, classe, record o i tipi di unione.|
+|Vincolo Null|*parametro di tipo* : null|Il tipo specificato deve supportare il valore letterale null. Ciò include tutti i tipi di oggetti .NET ma non F# elenco, tupla, funzione, classe, record o i tipi di unione.|
 |Vincolo membro esplicito|[(]*parametro di tipo* [or... o *parametro di tipo*)]: (*firma del membro*)|Almeno uno degli argomenti di tipo specificati deve avere un membro con la firma specificata. non destinato all'uso comune. I membri devono essere esplicitamente definiti sul tipo o parte di un'estensione di tipo implicito da destinazioni valide per un vincolo membro esplicito.|
 |Vincolo del costruttore|*parametro di tipo* : (new: unità -&gt; ' un)|Il tipo specificato deve avere un costruttore predefinito.|
 |Vincolo di tipo valore|: uno struct|Il tipo specificato deve essere un tipo di valore .NET.|
@@ -40,7 +40,7 @@ Esistono diversi vincoli diversi, che è possibile applicare per limitare i tipi
 
 I vincoli è talvolta necessario specificare durante la scrittura di parametri di tipo in modo esplicito, poiché senza un vincolo, il compilatore non ha modo di verificare che le funzionalità che si siano utilizzando sarà disponibile in qualsiasi tipo che può essere fornito in fase di esecuzione per il tipo parametro.
 
-I vincoli più comuni che è usare nel codice F # sono vincoli di tipo specificare classi base o interfacce. Gli altri vincoli vengono utilizzati dalla libreria di F # per implementare determinate funzionalità, ad esempio il vincolo membro esplicito, che viene usato per implementare l'overload di operatori per gli operatori aritmetici o viene fornito principalmente perché F # supporta completo set di vincoli è supportata da common language runtime.
+I vincoli più comuni che è usare nel codice F# sono vincoli di tipo specificare classi base o interfacce. Gli altri vincoli vengono utilizzati dalla libreria di F# per implementare determinate funzionalità, ad esempio il vincolo membro esplicito, che viene usato per implementare l'overload di operatori per gli operatori aritmetici o viene fornito principalmente perché F# supporta completo set di vincoli è supportata da common language runtime.
 
 Durante il processo di inferenza del tipo, alcuni vincoli vengono automaticamente dedotti dal compilatore. Ad esempio, se si usa il `+` operatore in una funzione, il compilatore deduce automaticamente di un vincolo per tipi di variabili utilizzate nell'espressione di membro esplicito.
 

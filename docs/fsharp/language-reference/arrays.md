@@ -1,6 +1,6 @@
 ---
 title: Matrici (F#)
-description: 'Informazioni su come creare e usare matrici nel linguaggio di programmazione F #.'
+description: Informazioni su come creare e usare matrici nel linguaggio di programmazione F#.
 ms.date: 05/16/2016
 ms.openlocfilehash: 27b73efc900ac2efc813fe66f81baa2e9ae1e843
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -57,7 +57,7 @@ Quando viene utilizzata la notazione di sezione, viene creata una nuova copia de
 
 ## <a name="array-types-and-modules"></a>I moduli e tipi di matrice
 
-Il tipo di tutte le matrici F # è il tipo .NET Framework <xref:System.Array?displayProperty=nameWithType>. Pertanto, le matrici F # supportano tutte le funzionalità disponibili in <xref:System.Array?displayProperty=nameWithType>.
+Il tipo di tutte le matrici F# è il tipo .NET Framework <xref:System.Array?displayProperty=nameWithType>. Pertanto, le matrici F# supportano tutte le funzionalità disponibili in <xref:System.Array?displayProperty=nameWithType>.
 
 Il modulo di libreria [ `Microsoft.FSharp.Collections.Array` ](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1) supporta operazioni su matrici unidimensionali. I moduli `Array2D`, `Array3D`, e `Array4D` contengono funzioni che supportano le operazioni su matrici a due, tre e quattro dimensioni, rispettivamente. È possibile creare matrici di dimensioni maggiore di quattro usando <xref:System.Array?displayProperty=nameWithType>.
 
@@ -218,7 +218,7 @@ matrix.[*, 1..3]
 matrix.[1..3, 1..3]
 ```
 
-A partire da F # 3.1, è possibile scomporre una matrice multidimensionale in sottomatrici della dimensione uguale o inferiore. Ad esempio, è possibile ottenere un vettore da una matrice, specificando una singola riga o colonna.
+A partire da F# 3.1, è possibile scomporre una matrice multidimensionale in sottomatrici della dimensione uguale o inferiore. Ad esempio, è possibile ottenere un vettore da una matrice, specificando una singola riga o colonna.
 
 ```fsharp
 // Get row 3 from a matrix as a vector:
@@ -228,7 +228,7 @@ matrix.[3, *]
 matrix.[*, 3]
 ```
 
-È possibile utilizzare questa sintassi di sezionamento per i tipi che implementano gli operatori di accesso di elemento e sottoposti a overload `GetSlice` metodi. Ad esempio, il codice seguente crea un tipo Matrix che esegue il wrapping della matrice 2D F #, implementa una proprietà dell'elemento per fornire supporto per l'indicizzazione della matrice e implementa tre versioni di `GetSlice`. Se è possibile utilizzare questo codice come modello per i tipi di matrice, è possibile usare tutte le operazioni di sezionamento descritte in questa sezione.
+È possibile utilizzare questa sintassi di sezionamento per i tipi che implementano gli operatori di accesso di elemento e sottoposti a overload `GetSlice` metodi. Ad esempio, il codice seguente crea un tipo Matrix che esegue il wrapping della matrice 2D F#, implementa una proprietà dell'elemento per fornire supporto per l'indicizzazione della matrice e implementa tre versioni di `GetSlice`. Se è possibile utilizzare questo codice come modello per i tipi di matrice, è possibile usare tutte le operazioni di sezionamento descritte in questa sezione.
 
 ```fsharp
 type Matrix<'T>(N: int, M: int) =
@@ -418,4 +418,4 @@ Il modulo [ `Array.Parallel` ](https://msdn.microsoft.com/library/60f30b77-5af4-
 ## <a name="see-also"></a>Vedere anche
 
 - [Riferimenti per il linguaggio F#](index.md)
-- [F #; Tipi](fsharp-types.md)
+- [F#; Tipi](fsharp-types.md)

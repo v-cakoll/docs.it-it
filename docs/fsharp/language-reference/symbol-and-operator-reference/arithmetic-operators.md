@@ -1,6 +1,6 @@
 ---
 title: Operatori aritmetici (F#)
-description: 'Informazioni sugli operatori aritmetici che sono disponibili nel linguaggio di programmazione F #.'
+description: Informazioni sugli operatori aritmetici che sono disponibili nel linguaggio di programmazione F#.
 ms.date: 04/04/2018
 ms.openlocfilehash: 008aa84b8736bb3a734ce8bb9713d34c17f1b76e
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,7 +11,7 @@ ms.locfileid: "45597439"
 ---
 # <a name="arithmetic-operators"></a>Operatori aritmetici
 
-Questo argomento descrive gli operatori aritmetici che sono disponibili nel linguaggio F #.
+Questo argomento descrive gli operatori aritmetici che sono disponibili nel linguaggio F#.
 
 ## <a name="summary-of-binary-arithmetic-operators"></a>Riepilogo degli operatori aritmetici binari
 
@@ -53,13 +53,13 @@ Numeri a virgola mobile non devono essere mai confrontati direttamente per verif
 
 ## <a name="overloaded-and-generic-operators"></a>Operatori di overload e generici
 
-Tutti gli operatori descritti in questo argomento vengono definiti nel **FSharp** dello spazio dei nomi. Gli operatori di vengono definiti tramite i parametri di tipo risolti staticamente. Ciò significa che sono presenti definizioni singoli per ogni tipo specifico che funziona con tale operatore. Tutti gli unario e binari operatori aritmetici e bit per bit sono in questa categoria. Gli operatori di confronto sono generici e di conseguenza funzionano con qualsiasi tipo, non appena aritmetici tipi primitivi. Unione discriminata e tipi di record hanno le proprie implementazioni personalizzate generate dal compilatore F #. Tipi di classe usano il metodo <xref:System.Object.Equals%2A>.
+Tutti gli operatori descritti in questo argomento vengono definiti nel **FSharp** dello spazio dei nomi. Gli operatori di vengono definiti tramite i parametri di tipo risolti staticamente. Ciò significa che sono presenti definizioni singoli per ogni tipo specifico che funziona con tale operatore. Tutti gli unario e binari operatori aritmetici e bit per bit sono in questa categoria. Gli operatori di confronto sono generici e di conseguenza funzionano con qualsiasi tipo, non appena aritmetici tipi primitivi. Unione discriminata e tipi di record hanno le proprie implementazioni personalizzate generate dal compilatore F#. Tipi di classe usano il metodo <xref:System.Object.Equals%2A>.
 
 Gli operatori generici sono personalizzabili. Per personalizzare le funzioni di confronto, eseguire l'override <xref:System.Object.Equals%2A> per fornire il proprio confronto di uguaglianza personalizzati e quindi implementare <xref:System.IComparable>. Il <xref:System.IComparable?displayProperty=nameWithType> interfaccia dispone di un singolo metodo, il <xref:System.IComparable.CompareTo%2A> (metodo).
 
 ## <a name="operators-and-type-inference"></a>Gli operatori e l'inferenza del tipo
 
-L'uso di un operatore in un'espressione vincola l'inferenza del tipo in tale operatore. Inoltre, l'utilizzo degli operatori impedisce la generalizzazione automatica, in quanto l'utilizzo degli operatori implica un tipo aritmetico. In assenza di qualsiasi altra informazione, il compilatore F # deduce `int` come tipo di espressioni aritmetiche. È possibile eseguire l'override di questo comportamento specificando un altro tipo. In questo modo i tipi di argomento e tipo restituito `function1` nel codice seguente vengono considerati `int`, ma i tipi per `function2` vengono considerati `float`.
+L'uso di un operatore in un'espressione vincola l'inferenza del tipo in tale operatore. Inoltre, l'utilizzo degli operatori impedisce la generalizzazione automatica, in quanto l'utilizzo degli operatori implica un tipo aritmetico. In assenza di qualsiasi altra informazione, il compilatore F# deduce `int` come tipo di espressioni aritmetiche. È possibile eseguire l'override di questo comportamento specificando un altro tipo. In questo modo i tipi di argomento e tipo restituito `function1` nel codice seguente vengono considerati `int`, ma i tipi per `function2` vengono considerati `float`.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3501.fs)]
 

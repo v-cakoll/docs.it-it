@@ -1,6 +1,6 @@
 ---
 title: Associazioni let (F#)
-description: "Informazioni su come usare un'associazione, che associa un identificatore con un valore o funzione ' let' F #."
+description: Informazioni su come usare un'associazione, che associa un identificatore con un valore o funzione ' let' F#.
 ms.date: 05/16/2016
 ms.openlocfilehash: 1a35b5a39f2768a18665b5c7fe768af0e7714577
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -110,7 +110,7 @@ let function3 x =
     function1 x
 ```
 
-Alcuni moduli presentano l'attributo [RequireQualifiedAccess](https://msdn.microsoft.com/library/8b9b6ade-0471-4413-ac5d-638cd0de5f15), il che significa che le funzioni che espongono devono essere qualificate con il nome del modulo. Ad esempio, il modulo elenco di F # ha questo attributo.
+Alcuni moduli presentano l'attributo [RequireQualifiedAccess](https://msdn.microsoft.com/library/8b9b6ade-0471-4413-ac5d-638cd0de5f15), il che significa che le funzioni che espongono devono essere qualificate con il nome del modulo. Ad esempio, il modulo elenco di F# ha questo attributo.
 
 Per altre informazioni sul controllo di accesso e i moduli, vedere [moduli](../modules.md) e [Access Control](../access-control.md).
 

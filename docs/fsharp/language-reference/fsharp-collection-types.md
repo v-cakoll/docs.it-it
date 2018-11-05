@@ -1,6 +1,6 @@
 ---
 title: Tipi di raccolta F#
-description: 'Informazioni sui tipi di raccolta F # e le differenze rispetto ai tipi di raccolte in .NET Framework.'
+description: Informazioni sui tipi di raccolta F# e le differenze rispetto ai tipi di raccolte in .NET Framework.
 ms.date: 05/16/2016
 ms.openlocfilehash: a3cfc3f06582c31a79dce43b583eca39f69ddf1e
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,13 +11,13 @@ ms.locfileid: "43864761"
 ---
 # <a name="f-collection-types"></a>Tipi di raccolta F#
 
-Esaminando questo argomento, è possibile determinare quale tipo F # raccolta migliore appropriato per una particolare necessità. Questi tipi di raccolta sono diversi dai tipi di raccolta in .NET Framework, ad esempio quelli nel `System.Collections.Generic` dello spazio dei nomi, in quanto i tipi di raccolta F # sono progettati da una prospettiva di programmazione funzionale piuttosto che da una prospettiva orientata agli oggetti. In particolare, solo la raccolta di matrice contiene elementi modificabili. Pertanto, quando si modifica una raccolta, si crea un'istanza della raccolta modificata invece di modifica della raccolta originale.
+Esaminando questo argomento, è possibile determinare quale tipo F# raccolta migliore appropriato per una particolare necessità. Questi tipi di raccolta sono diversi dai tipi di raccolta in .NET Framework, ad esempio quelli nel `System.Collections.Generic` dello spazio dei nomi, in quanto i tipi di raccolta F# sono progettati da una prospettiva di programmazione funzionale piuttosto che da una prospettiva orientata agli oggetti. In particolare, solo la raccolta di matrice contiene elementi modificabili. Pertanto, quando si modifica una raccolta, si crea un'istanza della raccolta modificata invece di modifica della raccolta originale.
 
 I tipi di raccolta anche differiscono nel tipo di struttura di data in cui sono archiviati gli oggetti. Strutture di dati, ad esempio tabelle hash, elenchi collegati e le matrici hanno le caratteristiche di prestazioni diverso e un set diverso di operazioni disponibili.
 
 ## <a name="f-collection-types"></a>Tipi di raccolta F#
 
-La tabella seguente illustra i tipi di raccolta F #.
+La tabella seguente illustra i tipi di raccolta F#.
 
 |Tipo|Descrizione|Collegamenti correlati|
 |----|-----------|-------------|
@@ -25,11 +25,11 @@ La tabella seguente illustra i tipi di raccolta F #.
 |[matrice](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1)|Una raccolta a dimensione fissa, in base zero e modificabile di elementi dati consecutivi dello stesso tipo.|[Matrici](arrays.md)<br /><br />[Array (modulo)](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1)<br /><br />[Modulo Array2D](https://msdn.microsoft.com/library/ae1a9746-7817-4430-bcdb-a79c2411bbd3)<br /><br />[Modulo Array3D](https://msdn.microsoft.com/library/c8355e2d-add8-48a4-8aa6-1c57ae74c560)|
 |[Seq](https://msdn.microsoft.com/library/2f0c87c6-8a0d-4d33-92a6-10d1d037ce75)|Una serie logica di elementi che sono dello stesso tipo. Le sequenze sono particolarmente utili quando si hanno grandi dimensioni, raccolta ordinata di dati, ma non necessariamente prevediate di usare tutti gli elementi. Sequenza di singoli elementi vengono calcolati solo se necessario, quindi una sequenza può avere prestazioni migliori rispetto a un elenco, se non vengono utilizzati tutti gli elementi. Le sequenze sono rappresentate dal `seq<'T>` tipo, che è un alias per `IEnumerable<T>`. Pertanto, qualsiasi tipo .NET Framework che implementa `System.Collections.Generic.IEnumerable<'T>` può essere usato come una sequenza.|[Sequenze](sequences.md)<br /><br />[Seq (modulo)](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684)|
 |[Mappa](https://msdn.microsoft.com/library/975316ea-55e3-4987-9994-90897ad45664)|Un dizionario non modificabile di elementi. Gli elementi sono accessibili tramite chiave.|[Map (modulo)](https://msdn.microsoft.com/library/bfe61ead-f16c-416f-af98-56dbcbe23e4f)|
-|[Set](https://msdn.microsoft.com/library/50cebdce-0cd7-4c5c-8ebc-f3a9e90b38d8)|Un set non modificabile basato su alberi binari, in cui il confronto è la funzione di confronto strutturali F #, che usa potenzialmente le implementazioni del `System.IComparable` interfaccia sui valori di chiave.|[Modulo di set](https://msdn.microsoft.com/library/61efa732-d55d-4c32-993f-628e2f98e6a0)|
+|[Set](https://msdn.microsoft.com/library/50cebdce-0cd7-4c5c-8ebc-f3a9e90b38d8)|Un set non modificabile basato su alberi binari, in cui il confronto è la funzione di confronto strutturali F#, che usa potenzialmente le implementazioni del `System.IComparable` interfaccia sui valori di chiave.|[Modulo di set](https://msdn.microsoft.com/library/61efa732-d55d-4c32-993f-628e2f98e6a0)|
 
 ### <a name="table-of-functions"></a>Tabella delle funzioni
 
-Questa sezione vengono confrontate le funzioni disponibili in tipi di raccolta F #. La complessità del calcolo della funzione viene specificata, dove N è la dimensione della prima raccolta e M è la dimensione della seconda raccolta, se presente. Un trattino (-) indica che questa funzione non è disponibile nella raccolta. Poiché le sequenze vengono valutate in modo differito, una funzione, ad esempio SEQ. Distinct potrebbe essere o (1) perché restituisce immediatamente, anche se ancora influisce sulle prestazioni della sequenza di enumerazione.
+Questa sezione vengono confrontate le funzioni disponibili in tipi di raccolta F#. La complessità del calcolo della funzione viene specificata, dove N è la dimensione della prima raccolta e M è la dimensione della seconda raccolta, se presente. Un trattino (-) indica che questa funzione non è disponibile nella raccolta. Poiché le sequenze vengono valutate in modo differito, una funzione, ad esempio SEQ. Distinct potrebbe essere o (1) perché restituisce immediatamente, anche se ancora influisce sulle prestazioni della sequenza di enumerazione.
 
 |Funzione|Matrice|List|Sequence|Mappa|Imposta|Descrizione|
 |--------|-----|----|--------|---|---|-----------|

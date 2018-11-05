@@ -1,6 +1,6 @@
 ---
 title: 'Gestione di risorse: parola chiave use (F#)'
-description: "Informazioni su di F # parola chiave 'use' e la funzione 'using', che è possibile controllare l'inizializzazione e il rilascio delle risorse."
+description: Informazioni su di F# parola chiave 'use' e la funzione 'using', che è possibile controllare l'inizializzazione e il rilascio delle risorse.
 ms.date: 05/16/2016
 ms.openlocfilehash: ffa1cb515139a3705920d9d9f79be1a69602f7d8
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -19,7 +19,7 @@ Il termine *risorsa* viene usato in diversi modi. Sì, è possibile i dati utili
 
 ## <a name="managing-resources"></a>Gestione di risorse
 
-Per Gestione risorse di un'applicazione efficiente e responsabilmente la risorsa, è necessario rilasciare le risorse in modo rapido e prevedibile. .NET Framework consente di eseguire questa operazione fornendo il `System.IDisposable` interfaccia. Un tipo che implementa `System.IDisposable` ha il `System.IDisposable.Dispose` metodo, che libera correttamente le risorse. Garantiscono che per le applicazioni ben scritte `System.IDisposable.Dispose` viene chiamato immediatamente quando qualsiasi oggetto che contiene una risorsa limitata non è più necessario. Fortunatamente, la maggior parte dei linguaggi .NET specificano il supporto per semplificare questa operazione, e F # non fa eccezione. Esistono due utili costrutti di linguaggio che supportano il modello dispose: il `use` binding e il `using` (funzione).
+Per Gestione risorse di un'applicazione efficiente e responsabilmente la risorsa, è necessario rilasciare le risorse in modo rapido e prevedibile. .NET Framework consente di eseguire questa operazione fornendo il `System.IDisposable` interfaccia. Un tipo che implementa `System.IDisposable` ha il `System.IDisposable.Dispose` metodo, che libera correttamente le risorse. Garantiscono che per le applicazioni ben scritte `System.IDisposable.Dispose` viene chiamato immediatamente quando qualsiasi oggetto che contiene una risorsa limitata non è più necessario. Fortunatamente, la maggior parte dei linguaggi .NET specificano il supporto per semplificare questa operazione, e F# non fa eccezione. Esistono due utili costrutti di linguaggio che supportano il modello dispose: il `use` binding e il `using` (funzione).
 
 ## <a name="use-binding"></a>Usare l'associazione
 

@@ -1,6 +1,6 @@
 ---
 title: Funzioni (F#)
-description: 'Altre informazioni sulle funzioni in F # e come F # supporta costrutti di programmazione funzionale più comuni.'
+description: Altre informazioni sulle funzioni in F# e come F# supporta costrutti di programmazione funzionale più comuni.
 ms.date: 05/16/2016
 ms.openlocfilehash: 717eba7e69398048d229173e07ccc376797171bb
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2

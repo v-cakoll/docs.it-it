@@ -1,6 +1,6 @@
 ---
-title: 'File delle firme (F #)'
-description: 'Informazioni su come usare file di firma F # per contenere le informazioni sulle firme pubbliche di un set di F # gli elementi del programma, ad esempio tipi, gli spazi dei nomi e i moduli.'
+title: File delle firme (F#)
+description: Informazioni su come usare file di firma F# per contenere le informazioni sulle firme pubbliche di un set di F# gli elementi del programma, ad esempio tipi, gli spazi dei nomi e i moduli.
 ms.date: 06/15/2018
 ms.openlocfilehash: f0836aa7f638dc9e2b066b0f46bbb6c086347615
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
