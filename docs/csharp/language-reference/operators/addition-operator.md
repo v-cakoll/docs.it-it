@@ -1,6 +1,6 @@
 ---
 title: + Operatore (Riferimenti per C#)
-ms.date: 07/20/2015
+ms.date: 10/22/2018
 f1_keywords:
 - +_CSharpKeyword
 helpviewer_keywords:
@@ -8,34 +8,57 @@ helpviewer_keywords:
 - concatenation operator [C#]
 - addition operator [C#]
 ms.assetid: 93e56486-bb42-43c1-bd43-60af11e64e67
-ms.openlocfilehash: b49694bc8937c58bd295f0f8e57c378802d0dfb9
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ae2774d96bc50afa271fffdea445e640e68c3647
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47232384"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192304"
 ---
-# <a name="-operator-c-reference"></a><span data-ttu-id="19b3d-102">Operatore + (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="19b3d-102">+ Operator (C# Reference)</span></span>
-<span data-ttu-id="19b3d-103">L'operatore `+` ha la funzione di operatore unario o binario.</span><span class="sxs-lookup"><span data-stu-id="19b3d-103">The `+` operator can function as either a unary or a binary operator.</span></span>  
-  
-## <a name="remarks"></a><span data-ttu-id="19b3d-104">Note</span><span class="sxs-lookup"><span data-stu-id="19b3d-104">Remarks</span></span>  
- <span data-ttu-id="19b3d-105">Gli operatori `+` unari sono predefiniti per tutti i tipi numerici.</span><span class="sxs-lookup"><span data-stu-id="19b3d-105">Unary `+` operators are predefined for all numeric types.</span></span> <span data-ttu-id="19b3d-106">Il risultato di un'operazione `+` unaria su un tipo numerico corrisponde al valore dell'operando.</span><span class="sxs-lookup"><span data-stu-id="19b3d-106">The result of a unary `+` operation on a numeric type is just the value of the operand.</span></span>  
-  
- <span data-ttu-id="19b3d-107">Gli operatori `+` binari sono predefiniti per i tipi numerici e stringa.</span><span class="sxs-lookup"><span data-stu-id="19b3d-107">Binary `+` operators are predefined for numeric and string types.</span></span> <span data-ttu-id="19b3d-108">Per i tipi numerici, + calcola la somma dei due operandi.</span><span class="sxs-lookup"><span data-stu-id="19b3d-108">For numeric types, + computes the sum of its two operands.</span></span> <span data-ttu-id="19b3d-109">Quando uno o entrambi gli operandi sono di tipo stringa, + concatena le rappresentazioni di stringa degli operandi.</span><span class="sxs-lookup"><span data-stu-id="19b3d-109">When one or both operands are of type string, + concatenates the string representations of the operands.</span></span>  
-  
- <span data-ttu-id="19b3d-110">I tipi delegati offrono anche un operatore `+` binario, che esegue la concatenazione dei delegati.</span><span class="sxs-lookup"><span data-stu-id="19b3d-110">Delegate types also provide a binary `+` operator, which performs delegate concatenation.</span></span>  
-  
- <span data-ttu-id="19b3d-111">I tipi definiti dall'utente possono eseguire l'overload degli operatori `+` unari e `+` binari.</span><span class="sxs-lookup"><span data-stu-id="19b3d-111">User-defined types can overload the unary `+` and binary `+` operators.</span></span> <span data-ttu-id="19b3d-112">Le operazioni sui tipi integrali sono generalmente consentite sull'enumerazione.</span><span class="sxs-lookup"><span data-stu-id="19b3d-112">Operations on integral types are generally allowed on enumeration.</span></span> <span data-ttu-id="19b3d-113">Per altre informazioni, vedere [operatore (Riferimenti per C#)](../../../csharp/language-reference/keywords/operator.md).</span><span class="sxs-lookup"><span data-stu-id="19b3d-113">For more information, see [operator (C# Reference)](../../../csharp/language-reference/keywords/operator.md).</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="19b3d-114">Esempio</span><span class="sxs-lookup"><span data-stu-id="19b3d-114">Example</span></span>  
- [!code-csharp[csRefOperators#28](../../../csharp/language-reference/operators/codesnippet/CSharp/addition-operator_1.cs)]  
-  
-## <a name="c-language-specification"></a><span data-ttu-id="19b3d-115">Specifiche del linguaggio C#</span><span class="sxs-lookup"><span data-stu-id="19b3d-115">C# Language Specification</span></span>  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a><span data-ttu-id="19b3d-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="19b3d-116">See Also</span></span>
+# <a name="-operator-c-reference"></a><span data-ttu-id="dc2a8-102">Operatore + (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="dc2a8-102">+ Operator (C# Reference)</span></span>
 
-- [<span data-ttu-id="19b3d-117">Riferimenti per C#</span><span class="sxs-lookup"><span data-stu-id="19b3d-117">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="19b3d-118">Guida per programmatori C#</span><span class="sxs-lookup"><span data-stu-id="19b3d-118">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="19b3d-119">Operatori C#</span><span class="sxs-lookup"><span data-stu-id="19b3d-119">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)  
-- [<span data-ttu-id="19b3d-120">operatore (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="19b3d-120">operator (C# Reference)</span></span>](../../../csharp/language-reference/keywords/operator.md)
+<span data-ttu-id="dc2a8-103">L'operatore `+` è supportato in due forme: un operatore + unario o un operatore addizione binario.</span><span class="sxs-lookup"><span data-stu-id="dc2a8-103">The `+` operator is supported in two forms: a unary plus operator or a binary addition operator.</span></span>
+
+<span data-ttu-id="dc2a8-104">I tipi definiti dall'utente possono eseguire l'[overload](../keywords/operator.md) degli operatori `+` unario e binario.</span><span class="sxs-lookup"><span data-stu-id="dc2a8-104">User-defined types can [overload](../keywords/operator.md) the unary and binary `+` operators.</span></span> <span data-ttu-id="dc2a8-105">Quando viene eseguito l'overload di un operatore `+`, viene anche aggiunto l'[operatore di assegnazione di addizione](addition-assignment-operator.md) `+=`.</span><span class="sxs-lookup"><span data-stu-id="dc2a8-105">When a binary `+` operator is overloaded, the [addition assignment operator](addition-assignment-operator.md) `+=` is also implicitly overloaded.</span></span>
+
+## <a name="unary-plus-operator"></a><span data-ttu-id="dc2a8-106">Operatore più unario</span><span class="sxs-lookup"><span data-stu-id="dc2a8-106">Unary plus operator</span></span>
+
+<span data-ttu-id="dc2a8-107">L'operatore `+` unario restituisce il valore del proprio operando.</span><span class="sxs-lookup"><span data-stu-id="dc2a8-107">The unary `+` operator returns the value of its operand.</span></span> <span data-ttu-id="dc2a8-108">È supportato da tutti i tipi numerici.</span><span class="sxs-lookup"><span data-stu-id="dc2a8-108">It's supported by all numeric types.</span></span>
+
+## <a name="numeric-addition"></a><span data-ttu-id="dc2a8-109">Addizione numerica</span><span class="sxs-lookup"><span data-stu-id="dc2a8-109">Numeric addition</span></span>
+
+<span data-ttu-id="dc2a8-110">Per i tipi numerici, l'operatore `+` calcola la somma dei due operandi:</span><span class="sxs-lookup"><span data-stu-id="dc2a8-110">For numeric types, the `+` operator computes the sum of its operands:</span></span>
+
+[!code-csharp-interactive[numeric addition](~/samples/snippets/csharp/language-reference/operators/AdditionExamples.cs#AddNumerics)]
+
+## <a name="string-concatenation"></a><span data-ttu-id="dc2a8-111">Concatenazione stringhe</span><span class="sxs-lookup"><span data-stu-id="dc2a8-111">String concatenation</span></span>
+
+<span data-ttu-id="dc2a8-112">Quando uno o entrambi gli operandi sono di tipo [stringa](../keywords/string.md), l'operatore `+` concatena le rappresentazioni di stringa dei due operandi:</span><span class="sxs-lookup"><span data-stu-id="dc2a8-112">When one or both operands are of type [string](../keywords/string.md), the `+` operator concatenates the string representations of its operands:</span></span>
+
+[!code-csharp-interactive[string concatenation](~/samples/snippets/csharp/language-reference/operators/AdditionExamples.cs#AddStrings)]
+
+<span data-ttu-id="dc2a8-113">A partire da C# 6, l'[interpolazione di stringhe](../tokens/interpolated.md) offre un pratico strumento per formattare le stringhe:</span><span class="sxs-lookup"><span data-stu-id="dc2a8-113">Starting with C# 6, [string interpolation](../tokens/interpolated.md) provides a more convenient way to format strings:</span></span>
+
+[!code-csharp-interactive[string interpolation](~/samples/snippets/csharp/language-reference/operators/AdditionExamples.cs#UseStringInterpolation)]
+
+## <a name="delegate-combination"></a><span data-ttu-id="dc2a8-114">Combinazione di delegati</span><span class="sxs-lookup"><span data-stu-id="dc2a8-114">Delegate combination</span></span>
+
+<span data-ttu-id="dc2a8-115">Per i tipi [delegate](../keywords/delegate.md), l'operatore `+` restituisce una nuova istanza di delegato che, quando viene richiamata, richiama il primo operando e quindi il secondo.</span><span class="sxs-lookup"><span data-stu-id="dc2a8-115">For [delegate](../keywords/delegate.md) types, the `+` operator returns a new delegate instance that, when invoked, invokes the first operand and then invokes the second operand.</span></span> <span data-ttu-id="dc2a8-116">Se uno degli operandi è `null`, l'operatore `+` restituisce il valore di un altro operando, che può essere anch'esso `null`.</span><span class="sxs-lookup"><span data-stu-id="dc2a8-116">If any of the operands is `null`, the `+` operator returns the value of another operand (which also might be `null`).</span></span> <span data-ttu-id="dc2a8-117">L'esempio seguente mostra in che modo è possibile combinare delegati con l'operatore `+`:</span><span class="sxs-lookup"><span data-stu-id="dc2a8-117">The following example shows how delegates can be combined with the `+` operator:</span></span>
+
+[!code-csharp-interactive[delegate combination](~/samples/snippets/csharp/language-reference/operators/AdditionExamples.cs#AddDelegates)]
+
+<span data-ttu-id="dc2a8-118">Per altre informazioni sui tipi delegate, vedere [Delegati](../../programming-guide/delegates/index.md).</span><span class="sxs-lookup"><span data-stu-id="dc2a8-118">For more information about delegate types, see [Delegates](../../programming-guide/delegates/index.md).</span></span>
+
+## <a name="c-language-specification"></a><span data-ttu-id="dc2a8-119">Specifiche del linguaggio C#</span><span class="sxs-lookup"><span data-stu-id="dc2a8-119">C# language specification</span></span>
+
+<span data-ttu-id="dc2a8-120">Per altre informazioni, vedere le sezioni [Operatore + unario](~/_csharplang/spec/expressions.md#unary-plus-operator) e [Operatore addizione](~/_csharplang/spec/expressions.md#addition-operator) della [specifica del linguaggio C#](../language-specification/index.md).</span><span class="sxs-lookup"><span data-stu-id="dc2a8-120">For more information, see the [Unary plus operator](~/_csharplang/spec/expressions.md#unary-plus-operator) and [Addition operator](~/_csharplang/spec/expressions.md#addition-operator) sections of the [C# language specification](../language-specification/index.md).</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="dc2a8-121">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="dc2a8-121">See also</span></span>
+
+- [<span data-ttu-id="dc2a8-122">Riferimenti per C#</span><span class="sxs-lookup"><span data-stu-id="dc2a8-122">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="dc2a8-123">Guida per programmatori C#</span><span class="sxs-lookup"><span data-stu-id="dc2a8-123">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="dc2a8-124">Operatori C#</span><span class="sxs-lookup"><span data-stu-id="dc2a8-124">C# Operators</span></span>](index.md)
+- [<span data-ttu-id="dc2a8-125">Interpolazione di stringhe</span><span class="sxs-lookup"><span data-stu-id="dc2a8-125">String interpolation</span></span>](../tokens/interpolated.md)
+- [<span data-ttu-id="dc2a8-126">Procedura: Concatenare più stringhe</span><span class="sxs-lookup"><span data-stu-id="dc2a8-126">How to: Concatenate Multiple Strings</span></span>](../../how-to/concatenate-multiple-strings.md)
+- [<span data-ttu-id="dc2a8-127">Delegati</span><span class="sxs-lookup"><span data-stu-id="dc2a8-127">Delegates</span></span>](../../programming-guide/delegates/index.md)
+- [<span data-ttu-id="dc2a8-128">Checked e Unchecked</span><span class="sxs-lookup"><span data-stu-id="dc2a8-128">Checked and unchecked</span></span>](../keywords/checked-and-unchecked.md)
