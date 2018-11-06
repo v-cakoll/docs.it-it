@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 060cbe06-2adf-4337-9e7b-961a5c840208
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bc8082175047271c92f9a9a17a49534ffc9546a9
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 9c637d9842c05f47bfcaa0431dd2f9f1ee29cc09
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45677149"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50181238"
 ---
 # <a name="how-to-write-text-to-a-file"></a>Procedura: Scrivere un testo in un file
 Questo argomento illustra diverse modalità con cui è possibile scrivere un testo in un file per le applicazioni .NET Framework o le app di [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] . Per scrivere un testo in un file vengono in genere usati le classi e i metodi seguenti:  
@@ -27,7 +27,7 @@ Questo argomento illustra diverse modalità con cui è possibile scrivere un tes
   
 -   <xref:System.IO.File> : da usare con le applicazioni .NET Framework. Fornisce i metodi statici per scrivere un testo in un file, ad esempio <xref:System.IO.File.WriteAllLines%2A> e <xref:System.IO.File.WriteAllText%2A>, o per aggiungere un testo in un file (<xref:System.IO.File.AppendAllLines%2A>, <xref:System.IO.File.AppendAllText%2A> o <xref:System.IO.File.AppendText%2A>).  
   
--   [FileIO](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.aspx) : da usare con le app di [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] . Contiene i metodi asincroni per scrivere un testo in un file ([WriteLinesAsync](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.writelinesasync.aspx) o [WriteTextAsync](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.writetextasync.aspx)) o per aggiungere un testo in un file ([AppendLinesAsync](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.appendlinesasync.aspx) o [AppendTextAsync](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.appendtextasync.aspx)).  
+-   <xref:Windows.Storage.FileIO>: da usare con le app [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]. Contiene metodi asincroni per scrivere testo in un file (<xref:Windows.Storage.FileIO.WriteLinesAsync%2A> o <xref:Windows.Storage.FileIO.WriteTextAsync%2A>) oppure per accodare testo in un file (<xref:Windows.Storage.FileIO.AppendLinesAsync%2A> o <xref:Windows.Storage.FileIO.AppendTextAsync%2A>).  
 
 - <xref:System.IO.Path>: da usare per su stringhe che contengono informazioni sul percorso di file o directory. Contiene il metodo <xref:System.IO.Path.Combine%2A>, che consente la concatenazione di stringhe per compilare un percorso di file o directory.
 
@@ -59,7 +59,7 @@ Questo argomento illustra diverse modalità con cui è possibile scrivere un tes
  [!code-vb[Conceptual.BasicIO.TextFiles#WriteFile](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/source.vb#writefile)]  
   
 ## <a name="example"></a>Esempio  
- L'esempio seguente mostra come scrivere l'input dell'utente in modo asincrono in un file di testo di un'applicazione [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] . Per motivi di sicurezza, l'apertura di un file da un'app di [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] richiede in genere l'uso di un controllo [FileOpenPicker](https://msdn.microsoft.com/library/windows/apps/windows.storage.pickers.fileopenpicker.aspx). In questo esempio, `FileOpenPicker` è filtrato per mostrare i file di testo.  
+ L'esempio seguente mostra come scrivere l'input dell'utente in modo asincrono in un file di testo di un'applicazione [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] . Per motivi di sicurezza, l'apertura di un file da un'app [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] richiede in genere l'uso di un controllo <xref:Windows.Storage.Pickers.FileOpenPicker>. In questo esempio, `FileOpenPicker` è filtrato per mostrare i file di testo.  
   
 ```xaml  
 <Page  

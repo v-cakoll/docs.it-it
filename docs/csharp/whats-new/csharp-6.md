@@ -3,12 +3,12 @@ title: Novità di C# 6 - Guida a C#
 description: Informazioni sulle nuove funzionalità di C# versione 6
 ms.date: 09/22/2016
 ms.assetid: 4d879f69-f889-4d3f-a781-75194e143400
-ms.openlocfilehash: f6f953eacc935d38cc7d45173109c96c52a5e2f3
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ad3515e1fc7d70e1377f007276c369d2884780f0
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47208185"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194033"
 ---
 # <a name="whats-new-in-c-6"></a>Novità di C# 6
 
@@ -28,7 +28,7 @@ La versione 6.0 di C# contiene molte funzionalità che consentono agli sviluppat
     - È possibile scrivere espressioni di formattazione delle stringhe usando espressioni inline anziché argomenti posizionali.
 * [Filtri eccezioni](#exception-filters):
     - È possibile intercettare le espressioni in base alle proprietà dell'eccezione o di un altro stato del programma. 
-* [Espressioni nameof](#nameof-expressions):
+* [Espressione `nameof`](#the-nameof-expression):
     - È possibile consentire al compilatore di generare rappresentazioni di stringa dei simboli.
 * [Await nei blocchi catch e finally](#await-in-catch-and-finally-blocks):
     - È possibile usare le espressioni `await` in posizioni che in precedenza non le consentivano.
@@ -92,7 +92,7 @@ Se l'aggiunta di questa sintassi non rimuove un metodo accessibile, si tratta di
 
 ### <a name="auto-property-initializers"></a>Inizializzatori di proprietà automatiche
 
-Gli *inizializzatori di proprietà automatiche* consentono di dichiarare il valore iniziale per una proprietà automatica come parte della dichiarazione di proprietà.  Nelle versioni precedenti queste proprietà dovevano avere dei setter che era necessario usare per inizializzare l'archiviazione dei dati usata dal campo sottostante. La classe dell'esempio seguente contiene il nome di uno studente e un elenco dei suoi voti:
+Gli *inizializzatori di proprietà automatiche* permettono di dichiarare il valore iniziale per una proprietà automatica come parte della dichiarazione di proprietà.  Nelle versioni precedenti queste proprietà dovevano avere dei setter che era necessario usare per inizializzare l'archiviazione dei dati usata dal campo sottostante. La classe dell'esempio seguente contiene il nome di uno studente e un elenco dei suoi voti:
 
 [!code-csharp[Construction](../../../samples/snippets/csharp/new-in-6/oldcode.cs#Construction)]
  
@@ -211,13 +211,13 @@ Verificare che il lato sinistro venga valutato una sola volta consente inoltre d
 
 ## <a name="string-interpolation"></a>Interpolazione di stringhe
 
-C# 6 contiene una nuova sintassi per la composizione di stringhe da una stringa di formato e di espressioni che vengono valutate per produrre altri valori di stringa.
+C# 6 contiene una nuova sintassi per la composizione di stringhe da una stringa e di espressioni incorporate che vengono valutate per produrre altri valori stringa.
 
-Di solito era necessario usare parametri posizionali in un metodo come `string.Format`:
+Di solito era necessario usare parametri posizionali in un metodo come <xref:System.String.Format%2A?displayProperty=nameWithType>:
 
 [!code-csharp[stringFormat](../../../samples/snippets/csharp/new-in-6/oldcode.cs#stringFormat)]
 
-Con C# 6 la nuova funzionalità di [interpolazione delle stringhe](../language-reference/tokens/interpolated.md) consente di incorporare le espressioni nella stringa di formato. Basta far precedere la stringa da `$`:
+Con C# 6 la nuova funzionalità di [interpolazione di stringhe](../language-reference/tokens/interpolated.md) permette di incorporare le espressioni in una stringa. Basta far precedere la stringa da `$`:
 
 [!code-csharp[stringInterpolation](../../../samples/snippets/csharp/new-in-6/newcode.cs#FullNameExpressionMember)]
 
@@ -225,20 +225,20 @@ Questo esempio usa espressioni di proprietà per le espressioni sostituite. È p
 
 [!code-csharp[stringInterpolationExpression](../../../samples/snippets/csharp/new-in-6/newcode.cs#stringInterpolationExpression)]
 
-Eseguendo l'esempio precedente si può vedere che l'output per `Grades.Average()` potrebbe avere più posizioni decimali del necessario. La sintassi di interpolazione delle stringhe supporta tutte le stringhe di formato disponibili usando i metodi di formattazione precedenti. Aggiungere le stringhe di formato tra parentesi graffe. Aggiungere `:` dopo l'espressione da formattare:
+Eseguendo l'esempio precedente si può vedere che l'output per `Grades.Average()` potrebbe avere più posizioni decimali del necessario. La sintassi di interpolazione delle stringhe supporta tutte le stringhe di formato disponibili usando i metodi di formattazione precedenti. Specificare la stringa di formato tra parentesi graffe. Aggiungere `:` dopo l'espressione da formattare:
 
 [!code-csharp[stringInterpolationFormat](../../../samples/snippets/csharp/new-in-6/newcode.cs#stringInterpolationFormat)]
 
 La riga di codice precedente formatta il valore per `Grades.Average()` come numero a virgola mobile con due cifre decimali.
 
-Il carattere `:` viene sempre interpretato come separatore tra l'espressione da formattare e la stringa di formato. Questo può causare problemi quando l'espressione usa il carattere `:` in altro modo, ad esempio come operatore condizionale:
+Il carattere `:` viene sempre interpretato come separatore tra l'espressione da formattare e la stringa di formato. Questo può causare problemi quando l'espressione usa un carattere `:` in un altro modo, ad esempio come [operatore condizionale](../language-reference/operators/conditional-operator.md):
 
 ```csharp
 public string GetGradePointPercentages() =>
     $"Name: {LastName}, {FirstName}. G.P.A: {Grades.Any() ? Grades.Average() : double.NaN:F2}";
 ```
 
-Nell'esempio precedente il carattere `:` viene analizzato come inizio della stringa di formato, non come parte dell'operatore condizionale. In tutti i casi in cui ciò accade è possibile racchiudere l'espressione tra parentesi per indurre il compilatore a interpretare l'espressione come previsto:
+Nell'esempio precedente il carattere `:` viene analizzato come inizio della stringa di formato, non come parte dell'operatore condizionale. In tutti i casi in cui questo avviene è possibile racchiudere l'espressione tra parentesi per indurre il compilatore a interpretare l'espressione nel modo desiderato:
 
 [!code-csharp[stringInterpolationConditional](../../../samples/snippets/csharp/new-in-6/newcode.cs#stringInterpolationConditional)]
 
@@ -249,19 +249,21 @@ Non vi sono limitazioni per le espressioni che si possono inserire tra parentesi
 Da questo esempio risulta che è anche possibile annidare un'espressione di interpolazione di stringhe all'interno di un'altra espressione di interpolazione di stringhe. Questo esempio è probabilmente più complesso del necessario nel codice di produzione,
 ma illustra in modo efficace la portata della funzionalità. Qualsiasi espressione C# può essere inserita tra parentesi graffe in una stringa interpolata.
 
+Per iniziare a usare l'interpolazione di stringhe, vedere l'esercitazione interattiva [Interpolazione di stringhe in C# ](../tutorials/intro-to-csharp/interpolated-strings.yml).
+
 ### <a name="string-interpolation-and-specific-cultures"></a>Interpolazione delle stringhe e impostazioni cultura specifiche
 
-Tutti gli esempi illustrati nella sezione precedente formattano le stringhe usando la lingua e le impostazioni cultura correnti del computer in cui viene eseguito il codice. Spesso può essere necessario formattare la stringa prodotta usando impostazioni cultura specifiche.
-A tale scopo, sfruttare il fatto che l'oggetto prodotto da un'interpolazione di stringhe può essere convertito in modo implicito in <xref:System.FormattableString>.
+Tutti gli esempi mostrati nella sezione precedente formattano le stringhe usando le impostazioni cultura correnti del computer in cui viene eseguito il codice. Spesso può essere necessario formattare la stringa prodotta usando impostazioni cultura specifiche.
+A tale scopo, sfruttare il fatto che l'oggetto prodotto da un'interpolazione di stringhe può essere convertito in modo implicito in <xref:System.FormattableString?displayProperty=nameWithType>.
 
-L'istanza di <xref:System.FormattableString> contiene la stringa di formato e i risultati della valutazione delle espressioni prima della conversione di queste in stringhe. È possibile usare i metodi pubblici di <xref:System.FormattableString> per specificare le impostazioni cultura quando si formatta una stringa. L'esempio seguente, ad esempio, produce una stringa con impostazioni cultura tedesche. Usa il carattere ',' come separatore decimale e il carattere '.' come separatore delle migliaia.
+L'istanza <xref:System.FormattableString> contiene la stringa di formato composito e i risultati della valutazione delle espressioni prima della loro conversione in stringhe. Usare i metodi <xref:System.FormattableString.ToString(System.IFormatProvider)> per specificare le impostazioni cultura quando si formatta una stringa. L'esempio seguente, ad esempio, produce una stringa con impostazioni cultura tedesche. Usa il carattere ',' come separatore decimale e il carattere '.' come separatore delle migliaia.
 
 ```csharp
 FormattableString str = $"Average grade is {s.Grades.Average()}";
 var gradeStr = str.ToString(new System.Globalization.CultureInfo("de-DE"));
 ```
 
-Per altre informazioni, vedere [Interpolazione di stringhe](../language-reference/tokens/interpolated.md).
+Per altre informazioni, vedere l'articolo [Interpolazione di stringhe](../language-reference/tokens/interpolated.md) e l'esercitazione [Interpolazione di stringhe in C#](../tutorials/string-interpolation.md).
 
 ## <a name="exception-filters"></a>Filtri eccezioni
 
@@ -311,7 +313,7 @@ Nel codice aggiungere un filtro eccezioni in modo tale che l'eventuale codice di
 Dopo aver aggiunto questo elemento al codice impostare il debugger in modo da interrompere tutte le eccezioni non gestite. Eseguire il programma nel debugger e il debugger si interrompe ogni volta che `PerformFailingOperation()` genera `RecoverableException`.
 Il debugger interrompe il programma perché la clausola catch non verrà eseguita a causa del filtro eccezioni che restituisce false.
 
-## <a name="nameof-expressions"></a>Espressioni `nameof`
+## <a name="the-nameof-expression"></a>Espressione `nameof`
 
 L'espressione `nameof` restituisce il nome di un simbolo. È un sistema efficace per garantire il funzionamento degli strumenti ogni volta che è necessario il nome di una variabile, una proprietà o un campo membro.
 
@@ -347,7 +349,7 @@ I dettagli sull'implementazione per l'aggiunta del supporto `await` all'interno 
 > [!NOTE]
 > Questo comportamento è il motivo per cui è consigliabile scrivere le clausole `catch` e `finally` con attenzione, per evitare l'introduzione di nuove eccezioni.
 
-## <a name="index-initializers"></a>Inizializzatori di indice.
+## <a name="index-initializers"></a>Inizializzatori di indice
 
 Gli *inizializzatori di indice* sono una delle due funzionalità che rendono gli inizializzatori di insieme più coerenti con l'uso degli indici. Nelle versioni precedenti di C# gli *inizializzatori di insieme* potevano essere usati solo con le raccolte di stili di sequenza, includendo <xref:System.Collections.Generic.Dictionary%602> mediante l'aggiunta di coppie chiave/valore racchiuse tra parentesi graffe:
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b59e0bda45b0b45b49c22d49ec2556fbcfef75d
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 2f3bf29b9b4d216483ea0c81cc787c80fc8b9e6f
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44221909"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453359"
 ---
 # <a name="globalization"></a>Globalizzazione
 La globalizzazione comporta la progettazione e lo sviluppo di un'app internazionalizzata che supporti interfacce localizzate e dati locali per utenti in più impostazioni cultura. Prima di iniziare la fase di progettazione, è necessario determinare quali impostazioni cultura verranno supportate dall'app. Sebbene un'app sia destinata per impostazione predefinita a singole impostazioni cultura o a una singola area, è possibile progettarla e scriverla in modo che possa essere facilmente estesa agli utenti di altre impostazioni cultura o aree.  
@@ -116,7 +116,7 @@ La globalizzazione comporta la progettazione e lo sviluppo di un'app internazion
   
  I confronti di uguaglianza talvolta comportano ricerche o confronti delle sottostringhe anziché chiamate al metodo <xref:System.String.Equals%2A?displayProperty=nameWithType>. In alcuni casi, si potrebbe usare la ricerca di una sottostringa per determinare se la sottostringa è uguale a un'altra stringa. Se lo scopo di questo confronto non è linguistico, anche la ricerca deve essere ordinale anziché dipendente dalle impostazioni cultura.  
   
- Nell'esempio seguente viene illustrato il rischio di una ricerca dipendente dalle impostazioni cultura su dati non linguistici. Il metodo `AccessesFileSystem` è progettato per impedire l'accesso al file system agli URI che iniziano con la sottostringa "FILE". A tale scopo, esegue un confronto dipendente dalle impostazioni cultura, con distinzione tra maiuscole e minuscole, dell'inizio dell'URI con la stringa "FILE". Poiché un'URI che accede al file system può iniziare con "FILE:" o "file:", il presupposto implicito è che la "i" (U+0069) è sempre l'equivalente minuscolo di "I" (U+0049). Tuttavia, in turco e in azerbaigiano, la versione in maiuscolo di "i" è "İ" (U+0130). A causa di questa discrepanza, il confronto dipendente dalle impostazioni cultura consente l'accesso al file system anche se non dovesse essere consentito.  
+ Nell'esempio seguente viene illustrato il rischio di una ricerca dipendente dalle impostazioni cultura su dati non linguistici. Il metodo `AccessesFileSystem` è progettato per impedire l'accesso al file system agli URI che iniziano con la sottostringa "FILE". A tale scopo, esegue un confronto dipendente dalle impostazioni cultura, con distinzione tra maiuscole e minuscole, dell'inizio dell'URI con la stringa "FILE". Poiché un URI che accede al file system può iniziare con "FILE:" o "file:", il presupposto implicito è che "i" (U+0069) sia sempre l'equivalente minuscolo di "I" (U+0049). Tuttavia, in turco e in azerbaigiano, la versione in maiuscolo di "i" è "İ" (U+0130). A causa di questa discrepanza, il confronto dipendente dalle impostazioni cultura consente l'accesso al file system anche se non dovesse essere consentito.  
   
  [!code-csharp[Conceptual.Globalization#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/equals1.cs#12)]
  [!code-vb[Conceptual.Globalization#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/equals1.vb#12)]  

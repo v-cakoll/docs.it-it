@@ -1,27 +1,28 @@
 ---
 title: Parola chiave ref (Riferimenti per C#)
-ms.date: 03/06/2018
+ms.date: 10/24/2018
 f1_keywords:
 - ref_CSharpKeyword
 - ref
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: e0b82de125246e95d8dce2a7afc20119a8a1fe4f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9165a388122eeda5ca0499c6d75c2266780a6004
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47207983"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195970"
 ---
 # <a name="ref-c-reference"></a>ref (Riferimenti per C#)
 
 La parola chiave `ref` indica un valore che viene passato per riferimento. Viene usata in quattro contesti diversi:
 
 - Nella firma di un metodo e in una chiamata al metodo, per passare un argomento a un metodo per riferimento. Per altre informazioni, vedere [Passaggio di un argomento per riferimento](#passing-an-argument-by-reference).
-- Nella firma di un metodo, per restituire un valore al chiamante per riferimento. Per altre informazioni, vedere [Valori restituiti di riferimento](#reference-return-values).
+- Nella firma di un metodo, per restituire un valore al chiamante per riferimento. Per altre informazioni, vedere [Valori di riferimento restituiti](#reference-return-values).
 - Nel corpo di un membro, per indicare che un valore restituito di riferimento è archiviato in locale come un riferimento che il chiamante intende modificare o, in generale, che una variabile locale accede a un altro valore per riferimento. Per altre informazioni, vedere [Variabili locali ref](#ref-locals).
-- In una dichiarazione `struct` per dichiarare `ref struct` o `ref readonly struct`. Per altre informazioni, vedere [Semantica di riferimento con i tipi valore](../../reference-semantics-with-value-types.md).
+- In una dichiarazione `struct` per dichiarare `ref struct` o `ref readonly struct`. Per altre informazioni, vedere [Tipi ref struct](#ref-struct-types).
+
 
 ## <a name="passing-an-argument-by-reference"></a>Passaggio di un argomento per riferimento
 
@@ -89,6 +90,8 @@ return ref DecimalArray[0];
 
 Affinché il chiamante modifichi lo stato dell'oggetto, il valore restituito di riferimento deve essere archiviato in una variabile definita in modo esplicito come [variabile locale ref](#ref-locals).
 
+Il metodo chiamato può anche dichiarare il valore restituito come `ref readonly` per restituire il valore per riferimento e specificare che il codice chiamante non può modificare il valore restituito. Il metodo chiamante può evitare la copia del valore restituito archiviando il valore in una variabile [ref readonly](#ref-readonly-locals) locale.
+
 Per un esempio, vedere [Esempio di valori restituiti e variabili locali ref](#a-ref-returns-and-ref-locals-example)
 
 ## <a name="ref-locals"></a>Variabili locali ref
@@ -111,6 +114,10 @@ ref VeryLargeStruct reflocal = ref veryLargeStruct;
 
 Si noti che nei due esempi la parola chiave `ref` deve essere usata in entrambe le posizioni. In caso contrario, il compilatore genera l'errore CS8172, "Non è possibile inizializzare una variabile per riferimento con un valore".
 
+## <a name="ref-readonly-locals"></a>Variabili ref readonly
+
+Una variabile locale ref readonly viene usata per fare riferimento ai valori restituiti dal metodo o dalla proprietà che include `ref readonly` nella propria firma e usa `return ref`. Una variabile `ref readonly` combina le proprietà di una variabile locale `ref` con una variabile `readonly`: è un alias per l'archiviazione cui è assegnata e non può essere modificata. 
+
 ## <a name="a-ref-returns-and-ref-locals-example"></a>Esempio di valori restituiti e variabili locali ref
 
 Nell'esempio seguente viene definita una classe `Book` che ha due campi <xref:System.String>, `Title` e `Author`. Definisce inoltre una classe `BookCollection` che include una matrice privata di oggetti `Book`. I singoli oggetti book vengono restituiti per riferimento chiamando il relativo metodo `GetBookByTitle`.
@@ -121,13 +128,30 @@ Quando il chiamante archivia il valore restituito dal metodo `GetBookByTitle` co
 
 [!code-csharp[csrefKeywordsMethodParams#6](~/samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/RefParameterModifier.cs#5)]
 
+## <a name="ref-struct-types"></a>Tipi ref struct
+
+L'aggiunta del modificatore `ref` a una dichiarazione `struct` specifica che le istanze di questo tipo devono essere allocate nello stack. In altre parole, questi tipi non possono mai essere creati nell'heap come membro di un'altra classe. La principale motivazione di questa funzionalità sono stati <xref:System.Span%601> e le strutture correlate.
+
+L'obiettivo di mantenere un tipo `ref struct` come variabile allocata nello stack comporta diverse regole che il compilatore applica per tutti i tipi `ref struct`.
+
+- Non è possibile eseguire il boxing di `ref struct`. Non è possibile assegnare un tipo `ref struct` a una variabile di tipo `object`, `dynamic` o qualsiasi tipo di interfaccia.
+- I tipi `ref struct` non possono implementare interfacce.
+- Non è possibile dichiarare `ref struct` come membro di una classe o di un normale struct.
+- Non è possibile dichiarare variabili locali che sono tipi `ref struct` nei metodi asincroni. È possibile dichiararle nei metodi sincroni che restituiscono tipi simili a <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601> o `Task`.
+- Non è possibile dichiarare variabili locali `ref struct` negli iteratori.
+- Non è possibile acquisire variabili `ref struct` in espressioni lambda o funzioni locali.
+
+Queste restrizioni evitano l'uso accidentale di un tipo `ref struct` in modo che possa essere alzato di livello nell'heap gestito.
+
+È possibile combinare i modificatori per dichiarare uno struct come `readonly ref`. `readonly ref struct` combina i vantaggi e le restrizioni delle dichiarazioni `ref struct` e `readonly struct`.
+
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Semantica di riferimento con i tipi valore](../../reference-semantics-with-value-types.md)  
+- [Scrivere codice efficiente e sicuro](../../write-safe-efficient-code.md)  
 - [Passaggio di parametri](../../programming-guide/classes-and-structs/passing-parameters.md)  
 - [Parametri dei metodi](method-parameters.md)  
 - [Riferimenti per C#](../index.md)  

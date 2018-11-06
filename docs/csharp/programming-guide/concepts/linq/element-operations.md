@@ -1,13 +1,13 @@
 ---
 title: Operazioni sugli elementi (C#)
-ms.date: 07/20/2015
+ms.date: 10/03/2018
 ms.assetid: 283206c9-3246-4c48-b01a-d9de409a7231
-ms.openlocfilehash: 14fdfbc38e1c25aa00056a42e116be98a489ce0f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: dbae8c0b3d98fe9674fbbeb432c1e42763e81026
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856890"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48836777"
 ---
 # <a name="element-operations-c"></a>Operazioni sugli elementi (C#)
 
@@ -25,8 +25,8 @@ Le operazioni sugli elementi restituiscono un singolo elemento specifico di una 
 |FirstOrDefault|Restituisce il primo elemento di una Collection o il primo elemento che soddisfa una condizione. Restituisce un valore predefinito se questo tipo di elemento non esiste.|Non applicabile.|<xref:System.Linq.Enumerable.FirstOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.FirstOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.FirstOrDefault%60%601%28System.Linq.IQueryable%7B%60%600%7D%29?displayProperty=nameWithType>|  
 |Ultimo|Restituisce l'ultimo elemento di una Collection o l'ultimo elemento che soddisfa una condizione.|Non applicabile.|<xref:System.Linq.Enumerable.Last%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Last%2A?displayProperty=nameWithType>|  
 |LastOrDefault|Restituisce l'ultimo elemento di una Collection o l'ultimo elemento che soddisfa una condizione. Restituisce un valore predefinito se questo tipo di elemento non esiste.|Non applicabile.|<xref:System.Linq.Enumerable.LastOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.LastOrDefault%2A?displayProperty=nameWithType>|  
-|Single|Restituisce l'unico elemento di una Collection o l'unico elemento che soddisfa una condizione.|Non applicabile.|<xref:System.Linq.Enumerable.Single%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Single%2A?displayProperty=nameWithType>|  
-|SingleOrDefault|Restituisce l'unico elemento di una Collection o l'unico elemento che soddisfa una condizione. Restituisce un valore predefinito se tale elemento non esiste o la Collection non contiene esattamente un elemento.|Non applicabile.|<xref:System.Linq.Enumerable.SingleOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SingleOrDefault%2A?displayProperty=nameWithType>|  
+|Single|Restituisce l'unico elemento di una raccolta o l'unico elemento che soddisfa una condizione. Genera un'eccezione <xref:System.InvalidOperationException> se non è presente alcun elemento o sono presenti più elementi da restituire. |Non applicabile.|<xref:System.Linq.Enumerable.Single%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Single%2A?displayProperty=nameWithType>|  
+|SingleOrDefault|Restituisce l'unico elemento di una raccolta o l'unico elemento che soddisfa una condizione. Restituisce un valore predefinito se non sono presenti elementi da restituire. Genera un'eccezione <xref:System.InvalidOperationException> se sono presenti più elementi da restituire. |Non applicabile.|<xref:System.Linq.Enumerable.SingleOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SingleOrDefault%2A?displayProperty=nameWithType>|  
   
 ## <a name="see-also"></a>Vedere anche
 

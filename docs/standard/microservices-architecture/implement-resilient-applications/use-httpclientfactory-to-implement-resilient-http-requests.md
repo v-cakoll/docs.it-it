@@ -4,12 +4,12 @@ description: HttpClientFactory è una solida factory, disponibile a partire da .
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 07/03/2018
-ms.openlocfilehash: 6fd30a9358ca9c07b2a6e2ec591e4c5d7db54ccb
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f2be3daf1b04613fa8afc1d17cbcbca2d338e062
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513213"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347929"
 ---
 # <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>Usare HttpClientFactory per l'implementazione di richieste HTTP resilienti
 
@@ -17,11 +17,11 @@ ms.locfileid: "43513213"
 
 ## <a name="issues-with-the-original-httpclient-class-available-in-net-core"></a>Problemi con la classe HttpClient originale disponibile in .NET Core
 
-La classe [HttpClient](https://docs.microsoft.com/dotnet/api/system.net.http.httpclient?view=netstandard-2.0) originale e ben nota può essere facilmente usata, ma in alcuni casi, non viene usata correttamente da molti sviluppatori. 
+La classe [HttpClient](https://docs.microsoft.com/dotnet/api/system.net.http.httpclient?view=netstandard-2.0) originale e ben nota può essere facilmente usata, ma in alcuni casi non viene usata correttamente da molti sviluppatori. 
 
 Come primo problema, sebbene questa classe sia eliminabile, il suo utilizzo con l'istruzione `using` non rappresenta la scelta migliore perché, anche quando si elimina l'oggetto `HttpClient`, il socket sottostante non viene rilasciato immediatamente e può generare quindi un problema serio di esaurimento di socket. Per altre informazioni su questo problema, vedere il post di blog [You're using HttpClient wrong and it is destabilizing your software](https://aspnetmonsters.com/2016/08/2016-08-27-httpclientwrong/) (Uso errato di HttpClient e conseguente destabilizzazione del software).
 
-La classe `HttpClient` è pertanto destinata a essere avviata una sola volta e a essere riusata nell'arco della vita di un'applicazione. La creazione di un'istanza di una classe `HttpClient` per ogni richiesta esaurisce il numero di socket disponibili con carichi voluminosi. Questo problema genera errori `SocketException`. I possibili approcci per risolvere il problema si basano sulla creazione dell'oggetto `HttpClient` come oggetto singleton o statico, come illustrato in questo [articolo di Microsoft sull'utilizzo della classe HttpClient](https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/console-webapiclient). 
+La classe `HttpClient` è pertanto destinata a essere avviata una sola volta e a essere riusata nell'arco della vita di un'applicazione. La creazione di un'istanza di una classe `HttpClient` per ogni richiesta esaurisce il numero di socket disponibili con carichi voluminosi. Questo problema genera errori `SocketException`. I possibili approcci per risolvere il problema si basano sulla creazione dell'oggetto `HttpClient` come oggetto singleton o statico, come illustrato in questo [articolo di Microsoft sull'utilizzo della classe HttpClient](https://docs.microsoft.com/dotnet/csharp/tutorials/console-webapiclient). 
 
 Esiste tuttavia un secondo problema con la classe `HttpClient` legato al suo utilizzo come oggetto singleton o statico. In questo caso un oggetto `HttpClient` singleton o statico non rispetta le modifiche DNS, come descritto in questo [problema nel repository di GitHub di .NET Core](https://github.com/dotnet/corefx/issues/11224). 
 
@@ -71,7 +71,7 @@ Semplicemente aggiungendo le classi di client tipizzato con AddHttpClient(), ogn
 
 ### <a name="httpclient-lifetimes"></a>Durate di HttpClient
 
-Ogni volta che si ottiene un oggetto `HttpClient` da IHttpClientFactory, viene restituita una nuova istanza di un oggetto `HttpClient`. Esisterà un HttpMessageHandler** per ogni client denominato o tipizzato. I`HttpClientFactory` eseguirà il pooling delle istanze di HttpMessageHandler create dalla factory per ridurre il consumo di risorse. Un'istanza di HttpMessageHandler può essere riusata dal pool quando si crea una nuova istanza di `HttpClient` se la relativa durata non è scaduta.
+Ogni volta che si ottiene un oggetto `HttpClient` da IHttpClientFactory, viene restituita una nuova istanza di un oggetto `HttpClient`. Esisterà un HttpMessageHandler** per ogni client denominato o tipizzato. `IHttpClientFactory` eseguirà il pooling delle istanze di HttpMessageHandler create dalla factory per ridurre il consumo di risorse. Un'istanza di HttpMessageHandler può essere riusata dal pool quando si crea una nuova istanza di `HttpClient` se la relativa durata non è scaduta.
 
 Il pooling dei gestori è opportuno poiché ogni gestore si occupa in genere di gestire le proprie connessioni HTTP sottostanti. La creazione di un numero superiore di gestori rispetto a quelli necessari può determinare ritardi di connessione. Alcuni gestori mantengono inoltre le connessioni aperte a tempo indefinito. Ciò può impedire al gestore di reagire alle modifiche DNS.
 
@@ -155,7 +155,7 @@ Il codice mostrato esegue finora solo normali richieste HTTP. La magia inizia ne
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
 -   **Using HttpClientFactory in .NET Core 2.1 (Uso della classe HttpClientFactory in .NET Core 2.1)**
-    [*https://docs.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1*](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1)
+    [*https://docs.microsoft.com/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1*](https://docs.microsoft.com/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1)
 
 
 -   **Repository di GitHub su HttpClientFactory**

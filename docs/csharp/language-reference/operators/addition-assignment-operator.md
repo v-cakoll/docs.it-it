@@ -1,46 +1,52 @@
 ---
 title: Operatore += (Riferimenti per C#)
-ms.date: 07/20/2015
+ms.date: 10/22/2018
 f1_keywords:
 - +=_CSharpKeyword
 helpviewer_keywords:
 - += operator [C#]
 - addition assignment operator (+=) [C#]
+- event subscription [C#]
 ms.assetid: 9cdf97e6-331d-492b-85e1-3ec3171484e9
-ms.openlocfilehash: bd0997ec5b7d79a41e01f9c2b17533293e412c1e
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: ee335e3e2e7d352d4e26b802bad2b08a05c666ab
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857507"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192031"
 ---
 # <a name="-operator-c-reference"></a>Operatore += (Riferimenti per C#)
-Operatore di assegnazione di addizione.  
-  
-## <a name="remarks"></a>Note  
- Un'espressione che usa l'operatore di assegnazione `+=`, ad esempio  
-  
-```csharp  
-x += y  
+
+Operatore di assegnazione di addizione.
+
+Un'espressione che usa l'operatore `+=`, ad esempio  
+
+```csharp
+x += y
 ```  
-  
- equivale a  
-  
-```csharp  
-x = x + y  
+
+equivale a  
+
+```csharp
+x = x + y
 ```  
+
+con la differenza che `x` viene valutato una sola volta.
   
- con la differenza che `x` viene valutato una sola volta. Il significato dell'[operatore +](../../../csharp/language-reference/operators/addition-operator.md) dipende dai tipi di `x` e `y` (addizione per gli operandi numerici, concatenazione per gli operandi stringa e così via).  
-  
- L'operatore `+=` non può essere sottoposto direttamente a overload. I tipi definiti dall'utente, tuttavia, possono eseguire l'overload dell'[operatore +](../../../csharp/language-reference/operators/addition-operator.md) (vedere [operator](../../../csharp/language-reference/keywords/operator.md)).  
-  
- L'operatore `+=` viene usato anche per specificare un metodo che verrà chiamato in risposta a un evento. I metodi di questo tipo sono chiamati gestori eventi. L'uso dell'operatore `+=` in questo contesto è detto *sottoscrizione di un evento*. Per altre informazioni, vedere [Procedura: sottoscrivere e annullare la sottoscrizione di eventi](../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md) e [Delegati](../../../csharp/programming-guide/delegates/index.md).  
-  
-## <a name="example"></a>Esempio  
- [!code-csharp[csRefOperators#35](../../../csharp/language-reference/operators/codesnippet/CSharp/addition-assignment-operator_1.cs)]  
+Per i tipi numerici, l'[operatore addizione](addition-operator.md) `+` calcola la somma dei due operandi. Quando uno o entrambi gli operandi sono di tipo [stringa](../keywords/string.md), concatena le rappresentazioni di stringa dei due operandi. Per i tipi delegati, l'operatore `+` restituisce una nuova istanza di delegato che è una combinazione dei due operandi.
+
+Se un tipo definito dall'utente esegue l'[overload](../keywords/operator.md) dell'[operatore addizione](addition-operator.md) `+`, viene eseguito l'overload in modo implicito dell'operatore di assegnazione di addizione `+=`.
+
+È anche possibile usare l'operatore `+=` per specificare un metodo del gestore eventi quando si sottoscrive un [evento](../keywords/event.md). Per altre informazioni, vedere [Procedura: sottoscrivere e annullare la sottoscrizione di eventi](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).
+
+Nell'esempio seguente viene illustrato l'uso dell'operatore `+=`:
+
+[!code-csharp-interactive[+= examples](~/samples/snippets/csharp/language-reference/operators/AdditionExamples.cs#AddAndAssign)]
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
-- [Operatori C#](../../../csharp/language-reference/operators/index.md)
+- [Riferimenti per C#](../index.md)
+- [Guida per programmatori C#](../../programming-guide/index.md)
+- [Operatori C#](index.md)
+- [Eventi](../../programming-guide/events/index.md)
+- [Delegati](../../programming-guide/delegates/index.md)

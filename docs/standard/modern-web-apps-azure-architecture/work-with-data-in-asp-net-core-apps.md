@@ -4,12 +4,12 @@ description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Usar
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: 7209789eb36dc717823625c0ae67357ee332086b
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 069bfacd1ae08b5c84d6e304b2f12f18e1eecb22
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404658"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49122851"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>Uso dei dati nelle app ASP.NET Core
 
@@ -91,7 +91,7 @@ var brandItems = await _context.CatalogBrands
 
 Nell'esempio precedente è importante aggiungere la chiamata a ToListAsync per eseguire immediatamente la query. In caso contrario, l'istruzione assegnerà oggetto IQueryable<SelectListItem> a brandItems, che non sarà eseguito finché non sarà enumerato. Esistono vantaggi e svantaggi nella restituzione di risultati IQueryable dai metodi. La query costruita da EF Core può essere ulteriormente modificata, ma può anche generare errori che si verificano solo in fase di esecuzione, se alla query vengono aggiunte operazioni che EF Core non può convertire. È generalmente preferibile passare tutti i filtri al metodo che esegue l'accesso ai dati e restituire una raccolta in memoria (ad esempio, List<T>) come risultato.
 
-EF Core tiene traccia delle modifiche apportate alle entità che vengono recuperate dalla persistenza. Per salvare le modifiche a un'entità rilevata, chiamare semplicemente il metodo SaveChanges in DbContext, assicurandosi che sia la stessa istanza di DbContext usata per recuperare l'entità. L'aggiunta e la rimozione delle entità avvengono direttamente nella proprietà DbSet appropriata, eseguendo nuovamente una chiamata al metodo SaveChanges per eseguire i comandi di database. Nell'esempio seguente vengono dimostrate le operazioni di aggiunta, aggiornamento e rimozione delle entità dalla persistenza.
+EF Core tiene traccia delle modifiche apportate alle entità che vengono recuperate dalla persistenza. Per salvare le modifiche a un'entità rilevata, chiamare semplicemente il metodo SaveChanges in DbContext, assicurandosi che sia la stessa istanza di DbContext usata per recuperare l'entità. L'aggiunta e la rimozione delle entità avvengono direttamente nella proprietà DbSet appropriata, con una chiamata a SaveChanges per eseguire i comandi di database. Nell'esempio seguente vengono dimostrate le operazioni di aggiunta, aggiornamento e rimozione delle entità dalla persistenza.
 
 ```csharp
 // create
@@ -281,7 +281,7 @@ Il linguaggio di query di DocumentDB è costituito da un'interfaccia semplice ma
 
 **Riferimenti a DocumentDB**
 
-- Introduzione a DocumentDB\
+- Introduzione a DocumentDB  
   <https://docs.microsoft.com/azure/documentdb/documentdb-introduction>
 
 ## <a name="other-persistence-options"></a>Altre opzioni di persistenza
@@ -298,7 +298,7 @@ Oltre alle opzioni di archiviazione con database relazionali e NoSQL, le applica
 
 **Riferimenti ad archiviazione di Azure**
 
-- Introduzione all'archiviazione di Azure\
+- Introduzione ad Archiviazione di Azure  
   <https://docs.microsoft.com/azure/storage/storage-introduction>
 
 ## <a name="caching"></a>Memorizzazione nella cache

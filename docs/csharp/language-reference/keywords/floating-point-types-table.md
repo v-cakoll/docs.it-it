@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ranges of floating-point types [C#]
 - types [C#], floating-point types
 ms.assetid: da886cc5-e01e-4f62-b3ec-6428c8f7a102
-ms.openlocfilehash: 804e6529e67785ed5bcdb0db9efaeccb6b3a1a61
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: c292303d1cf0b72d05ae6269d63a27555d2458b5
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45679544"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200470"
 ---
 # <a name="floating-point-types-table-c-reference"></a>Tabella dei tipi a virgola mobile (Riferimenti per C#)
 
@@ -20,8 +20,8 @@ La tabella seguente mostra la precisione e gli intervalli approssimativi per i t
   
 |Tipo|Intervallo approssimativo|Precisione|  
 |----------|-----------------------|---------------|  
-|[float](float.md)|Compreso tra ±1.5 x 10<sup>−45</sup> e ±3.4 x 10<sup>38</sup>|7 cifre|  
-|[double](double.md)|Compreso tra ±5,0 × 10<sup>−324</sup> e ±1,7 × 10<sup>308</sup>|15-16 cifre|  
+|[float](float.md)|Compreso tra ±1.5 x 10<sup>−45</sup> e ±3.4 x 10<sup>38</sup>|~6-9 cifre|  
+|[double](double.md)|Compreso tra ±5,0 × 10<sup>−324</sup> e ±1,7 × 10<sup>308</sup>|~15-17 cifre|  
 |[decimal](decimal.md)|Compreso tra ±1.0 x 10<sup>-28</sup> e ±7.9228 x 10<sup>28</sup>|28-29 cifre|  
   
 ## <a name="see-also"></a>Vedere anche

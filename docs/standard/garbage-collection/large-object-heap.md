@@ -8,12 +8,12 @@ helpviewer_keywords:
 - GC [.NET ], large object heap
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8dfe3fdbf71918a7ed2b6dccca24f58688bc14f2
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: cdbbf3138cad0a2fae311bf03476eebba23b7320
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003087"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50202907"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Heap oggetti grandi nei sistemi Windows
 
@@ -66,7 +66,7 @@ Figura 3: LOH dopo un'operazione GC di generazione 2
 
 ## <a name="when-is-a-large-object-collected"></a>Quando viene raccolto un oggetto di grandi dimensioni?
 
-In genere un'operazione GC avviene quando si verifica una delle 3 condizioni seguenti:
+In genere un'operazione GC avviene quando si verifica una delle tre condizioni seguenti:
 
 - L'allocazione supera la soglia della generazione 0 o degli oggetti grandi.
 
@@ -74,7 +74,7 @@ In genere un'operazione GC avviene quando si verifica una delle 3 condizioni seg
 
   Questo è lo scenario tipico: la maggior parte delle operazioni GC si verifica come conseguenza delle allocazioni nell'heap gestito.
 
-- Viene chiamato il metodo <xref:System.GC.Collect%2A?displayProperty=nameWithType>.
+- Viene chiamato il metodo <xref:System.GC.Collect%2A?displayProperty=nameWithType> .
 
   Se viene chiamato il metodo senza parametri <xref:System.GC.Collect?displayProperty=nameWithType> o se <xref:System.GC.MaxGeneration?displayProperty=nameWithType> viene passato come argomento a un altro overload, l'heap oggetti grandi viene raccolto insieme al resto dell'heap gestito.
 
@@ -164,7 +164,7 @@ Figura 4: LOH dopo un'operazione GC di generazione 2
 > [!NOTE]
 > È consigliabile usare gli eventi ETW anziché i contatori delle prestazioni, poiché ETW offre informazioni molto più complete.
 
-### <a name="etw"></a>ETW
+### <a name="etw-events"></a>eventi ETW
 
 Il Garbage Collector offre vari eventi ETW che favoriscono la comprensione delle operazioni dell'heap e del loro scopo. I post di blog seguenti illustrano come raccogliere e interpretare gli eventi GC con ETW:
 
@@ -204,7 +204,7 @@ Questo test molto semplice esegue solo l'allocazione di oggetti grandi dal relat
 
 ### <a name="a-debugger"></a>Un debugger
 
-Se è presente solo di un dump di memoria ed è necessario esaminare quali oggetti sono effettivamente inclusi nell'heap oggetti grandi, è possibile usare l'[estensione del debugger SoS](http://msdn2.microsoft.com/ms404370.aspx) disponibile in .NET.
+Se è presente solo di un dump di memoria ed è necessario esaminare quali oggetti sono effettivamente inclusi nell'heap oggetti grandi, è possibile usare l'[estensione del debugger SoS](../../../docs/framework/tools/sos-dll-sos-debugging-extension.md) disponibile in .NET.
 
 > [!NOTE]
 > I comandi di debug indicati in questa sezione sono applicabili ai [debugger di Windows](https://www.microsoft.com/whdc/devtools/debugging/default.mspx).

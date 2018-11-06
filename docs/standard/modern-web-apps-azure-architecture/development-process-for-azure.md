@@ -4,12 +4,12 @@ description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Proc
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: a614cfe3d3437426893d8748165b2ef4d6389765
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 487a303e5cf572cf4173423588ee7fb5a93cb394
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47231245"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185621"
 ---
 # <a name="development-process-for-azure"></a>Processo di sviluppo per Azure
 
@@ -94,7 +94,7 @@ Per ogni nuovo commit eseguito nel repository di codice dell'applicazione condiv
 
 #### <a name="step-4-build-server-continuous-delivery"></a>Passaggio 4. Server di compilazione: recapito continuo
 
-Dopo la compilazione, il processo di recapito continuo (CD) acquisirà gli artefatti di compilazione generati. Gli artefatti includeranno un pacchetto di distribuzione Web. Il server di compilazione distribuirà il pacchetto nel servizio app di Azure, sostituendo eventuali servizi esistenti con il servizio appena creato. Sebbene questo passaggio sia in genere destinato a un ambiente di gestione temporanea, alcune applicazioni eseguono la distribuzione direttamente nell'ambiente di produzione tramite un processo CD.
+Dopo la compilazione, il processo di recapito continuo acquisirà gli artefatti di compilazione generati. Gli artefatti includeranno un pacchetto di distribuzione Web. Il server di compilazione distribuirà il pacchetto nel servizio app di Azure, sostituendo eventuali servizi esistenti con il servizio appena creato. Sebbene questo passaggio sia in genere destinato a un ambiente di gestione temporanea, alcune applicazioni eseguono la distribuzione direttamente nell'ambiente di produzione tramite un processo CD.
 
 #### <a name="step-5-azure-app-service-web-app"></a>Passaggio 5. App Web del servizio app di Azure
 

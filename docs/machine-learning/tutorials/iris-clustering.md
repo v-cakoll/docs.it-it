@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 07/02/2018
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 46db9dc7ff425c483f1a9f61da5e806e598b16d5
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: bb41fd317507c14b46aea94e1ce576e390932a65
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37937166"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453190"
 ---
 # <a name="tutorial-use-mlnet-to-cluster-iris-flowers-clustering"></a>Esercitazione: usare ML.NET per raggruppare i fiori iris (clustering)
 
@@ -86,7 +86,7 @@ Rimuovere la definizione di classe esistente e aggiungere il codice seguente, ch
 
 `IrisData` è la classe dei dati di input e contiene le definizioni per ogni caratteristica del set di dati. Usare l'attributo [Column](xref:Microsoft.ML.Runtime.Api.ColumnAttribute) per specificare gli indici delle colonne di origine nel file del set di dati.
 
-La classe `ClusterPrediction` rappresenta l'output del modello di clustering applicato a un'istanza `IrisData`. Usare l'attributo [ColumnName](xref:Microsoft.ML.Runtime.Api.ColumnNameAttribute) per associare i campi `PredictedClusterId` e `Distances` rispettivamente alle colonne **PredictedLabel** e **Score**. In caso di attività di clustering queste colonne hanno il seguente significato:
+La classe `ClusterPrediction` rappresenta l'output del modello di clustering applicato a un'istanza `IrisData`. Usare l'attributo [ColumnName](xref:Microsoft.ML.Runtime.Api.ColumnNameAttribute) per associare i campi `PredictedClusterId` e `Distances` rispettivamente alle colonne **PredictedLabel** e **Score**. In caso di attività di clustering, queste colonne hanno il significato seguente:
 
 - La colonna **PredictedLabel** include l'ID del cluster stimato.
 - La colonna **Score** contiene una matrice con le distanze Euclidee quadrate rispetto ai centroidi del cluster. La lunghezza della matrice è uguale al numero di cluster.
@@ -138,19 +138,19 @@ Il primo passaggio da eseguire consiste nel caricare il set di dati del training
 
 [!code-csharp[Add step to load data](../../../samples/machine-learning/tutorials/IrisClustering/Program.cs#6)]
 
-Il passaggio successivo combina tutte le colonne delle caratteristiche nella colonna **Features** usando la classe di trasformazione <xref:Microsoft.ML.Transforms.ColumnConcatenator>. Per impostazione predefinita, un algoritmo di apprendimento elabora solo le funzionalità della colonna **Features**. Aggiungere il codice seguente:
+Il passaggio successivo combina tutte le colonne delle caratteristiche nella colonna **Features** usando la classe di trasformazione <xref:Microsoft.ML.Legacy.Transforms.ColumnConcatenator>. Per impostazione predefinita, un algoritmo di apprendimento elabora solo le funzionalità della colonna **Features**. Aggiungere il codice seguente:
 
 [!code-csharp[Add step to concatenate columns](../../../samples/machine-learning/tutorials/IrisClustering/Program.cs#7)]
 
 ## <a name="choose-a-learning-algorithm"></a>Scegliere un algoritmo di apprendimento
 
-Dopo aver aggiunto i dati alla pipeline e averli trasformati nel formato di input corretto, selezionare un **algoritmo di apprendimento**. L'algoritmo di apprendimento esegue il training del modello. ML.NET fornisce un algoritmo di apprendimento <xref:Microsoft.ML.Trainers.KMeansPlusPlusClusterer> che implementa l'[algoritmo k-means](https://en.wikipedia.org/wiki/K-means_clustering) con un metodo migliorato per la scelta dei centroidi del cluster iniziale.
+Dopo aver aggiunto i dati alla pipeline e averli trasformati nel formato di input corretto, selezionare un **algoritmo di apprendimento**. L'algoritmo di apprendimento esegue il training del modello. ML.NET fornisce un algoritmo di apprendimento <xref:Microsoft.ML.Legacy.Trainers.KMeansPlusPlusClusterer> che implementa l'[algoritmo k-means](https://en.wikipedia.org/wiki/K-means_clustering) con un metodo migliorato per la scelta dei centroidi del cluster iniziale.
 
 Aggiungere il codice seguente nel metodo `Train` dopo il codice di elaborazione dei dati aggiunto nel passaggio precedente:
 
 [!code-csharp[Add a learner step](../../../samples/machine-learning/tutorials/IrisClustering/Program.cs#8)]
 
-Usare la proprietà <xref:Microsoft.ML.Trainers.KMeansPlusPlusClusterer.K?displayProperty=nameWithType> per specificare il numero di cluster. Il codice precedente specifica che il set di dati deve essere suddiviso in tre cluster.
+Usare la proprietà <xref:Microsoft.ML.Legacy.Trainers.KMeansPlusPlusClusterer.K?displayProperty=nameWithType> per specificare il numero di cluster. Il codice precedente specifica che il set di dati deve essere suddiviso in tre cluster.
 
 ## <a name="train-the-model"></a>Eseguire il training del modello
 

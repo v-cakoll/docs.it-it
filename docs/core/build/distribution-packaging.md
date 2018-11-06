@@ -4,12 +4,12 @@ description: Informazione su come creare pacchetti e assegnare nome e versione a
 author: bleroy
 ms.author: mairaw
 ms.date: 06/28/2017
-ms.openlocfilehash: 084de6bbb3ce280beb0846431aeceacbb57d9a32
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: df1ba6a93106cd6b3ceafa93b7c548287878c3fe
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33217402"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48840495"
 ---
 # <a name="net-core-distribution-packaging"></a>Creazione di pacchetti di distribuzione di .NET Core
 
@@ -120,4 +120,4 @@ Un'alternativa all'uso dei pacchetti di patch è _aggiungere_ i pacchetti a una 
 
 ## <a name="building-packages"></a>Compilazione dei pacchetti
 
-Il repository https://github.com/dotnet/source-build contiene istruzioni su come compilare un file tarball di origine dell'SDK di .NET Core e tutti i relativi componenti. L'output del repository di compilazione dell'origine corrisponde al layout descritto nella prima sezione di questo articolo.
+Il repository [dotnet/source-build](https://github.com/dotnet/source-build) contiene istruzioni su come compilare un file tarball di origine di .NET Core SDK e tutti i relativi componenti. L'output del repository di compilazione dell'origine corrisponde al layout descritto nella prima sezione di questo articolo.

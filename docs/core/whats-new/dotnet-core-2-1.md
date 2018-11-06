@@ -1,15 +1,18 @@
 ---
 title: Novità di .NET Core 2.1
 description: Informazioni sulle nuove funzionalità in .NET Core 2.1.
+dev_langs:
+- csharp
+- vb
 author: rpetrusha
 ms.author: ronpet
-ms.date: 06/06/2018
-ms.openlocfilehash: aa80e6b7214f91c49803adde49a1e03d1971b3f6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.date: 10/10/2018
+ms.openlocfilehash: bf14e21ec4d390d8ab753bfa45533442ff4f6e68
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47400067"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120947"
 ---
 # <a name="whats-new-in-net-core-21"></a>Novità di .NET Core 2.1
 
@@ -166,9 +169,11 @@ Una delle attività importanti eseguite dal compilatore JIT è l'ottimizzazione 
 
 Senza questi tipi, quando si passano elementi quali una parte di una matrice o una sezione di un buffer di memoria, è necessario creare una copia di una parte dei dati prima di passarli a un metodo. Questi tipi forniscono una visualizzazione virtuale dei dati che elimina la necessità di un'allocazione di memoria e di operazioni di copia aggiuntive.
 
-L'esempio seguente usa un'istanza di <xref:System.Span%601> per fornire una visualizzazione virtuale di 10 elementi di una matrice.
+L'esempio seguente usa un'istanza <xref:System.Span%601> e un'istanza <xref:System.Memory%601> per fornire una visualizzazione virtuale di 10 elementi di una matrice.
 
 [!CODE-csharp[Span\<T>](~/samples/core/whats-new/whats-new-in-21/cs/program.cs)]
+
+[!CODE-vb[Memory\<T>](~/samples/core/whats-new/whats-new-in-21/vb/program.vb)]
 
 ### <a name="brotli-compression"></a>Compressione Brotli
 

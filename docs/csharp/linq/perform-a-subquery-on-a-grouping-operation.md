@@ -3,12 +3,12 @@ title: Eseguire una sottoquery su un'operazione di raggruppamento (LINQ in C#)
 description: Come eseguire una sottoquery su un'operazione di raggruppamento usando LINQ in C#.
 ms.date: 12/1/2016
 ms.assetid: d75a588e-9b6f-4f37-b195-f99ec8503855
-ms.openlocfilehash: 514db81b80557a3026589f00177910cc9446c0f4
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 19be93fe695982e93abea9a59153a4245dce4a60
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47193473"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48846318"
 ---
 # <a name="perform-a-subquery-on-a-grouping-operation"></a>Eseguire una sottoquery su un'operazione di raggruppamento
 
@@ -23,7 +23,11 @@ Per altre informazioni sulle continuazioni, vedere [into](../language-reference/
 > [!NOTE]
 > Questo esempio contiene riferimenti a oggetti definiti nel codice di esempio in [Eseguire una query su una raccolta di oggetti](query-a-collection-of-objects.md).
 
-[!code-csharp[csProgGuideLINQ#23](~/samples/snippets/csharp/concepts/linq/how-to-perform-a-subquery-on-a-grouping-operation_1.cs)]  
+[!code-csharp[csProgGuideLINQ#23](~/samples/snippets/csharp/concepts/linq/how-to-perform-a-subquery-on-a-grouping-operation_1.cs)] 
+
+La query nel frammento di codice precedente può essere scritta anche usando la sintassi del metodo. Il frammento di codice seguente è una query semanticamente equivalente scritta usando la sintassi del metodo.
+
+[!code-csharp[csProgGuideLINQ#86](~/samples/snippets/csharp/concepts/linq/how-to-perform-a-subquery-on-a-grouping-operation_2.cs)]
 
 ## <a name="see-also"></a>Vedere anche
 

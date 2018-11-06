@@ -5,12 +5,12 @@ ms.date: 03/20/2018
 helpviewer_keywords:
 - strings [C#], comparison
 - comparing strings [C#]
-ms.openlocfilehash: 3c841a1152613ec877bb6172dc8d053bf060b33b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 36529414d5b51e9e4ade7447ff6e5e908e5153ab
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515280"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188573"
 ---
 # <a name="how-to-compare-strings-in-c"></a>Come confrontare stringhe in C\#
 
@@ -45,7 +45,7 @@ per eseguire un confronto senza distinzione tra maiuscole/minuscole. È anche di
 ## <a name="linguistic-comparisons"></a>Confronti linguistici
 
 Le stringhe possono anche essere ordinate in base alle regole linguistiche delle impostazioni cultura correnti.
-Questo ordinamento è detto anche "ordinamento di Word". Quando si eseguono confronti linguistici, è possibile che a determinati caratteri Unicode non alfanumerici sia assegnata una valenza specifica. Ad esempio il trattino "-" può avere una valenza ridotta, pertanto le parole "co-op"e "coop" vengono visualizzate l'una accanto all'altra nell'ordinamento. Alcuni caratteri Unicode possono anche essere equivalenti a una sequenza di caratteri alfanumerici. L'esempio seguente usa la frase "Ballano per strada." in tedesco, con le notazioni "ss" e "ß". Dal punto di vista del confronto linguistico (in Windows), "ss" è equivalente al carattere tedesco Eszett "ß", sia nelle impostazioni cultura "en-US" che in quelle "de-DE".
+Questo ordinamento è detto anche "ordinamento di Word". Quando si esegue un confronto linguistico, è possibile che a determinati caratteri Unicode non alfanumerici venga assegnata una valenza specifica. Ad esempio il trattino "-" può avere una valenza ridotta, pertanto le parole "co-op"e "coop" vengono visualizzate l'una accanto all'altra nell'ordinamento. Alcuni caratteri Unicode possono anche essere equivalenti a una sequenza di caratteri alfanumerici. L'esempio seguente usa la frase "Ballano per strada." in tedesco, con le notazioni "ss" e "ß". Dal punto di vista del confronto linguistico (in Windows), "ss" è equivalente al carattere tedesco Eszett "ß", sia nelle impostazioni cultura "en-US" che in quelle "de-DE".
 
 [!code-csharp-interactive[Comparing strings using linguistic rules](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#3)]
 

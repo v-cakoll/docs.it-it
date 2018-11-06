@@ -1,56 +1,58 @@
 ---
 title: volatile (Riferimenti per C#)
-ms.date: 07/20/2015
+ms.date: 10/24/2018
 f1_keywords:
 - volatile_CSharpKeyword
 - volatile
 helpviewer_keywords:
 - volatile keyword [C#]
 ms.assetid: 78089bc7-7b38-4cfd-9e49-87ac036af009
-ms.openlocfilehash: be7e081b18702710c00b5b86a9bc152800f0cf3d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9950bb0e32787306dc34e2c006099332c06bda2b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526219"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199968"
 ---
 # <a name="volatile-c-reference"></a>volatile (Riferimenti per C#)
-La parola chiave `volatile` indica che un campo potrebbe essere modificato da più thread eseguiti contemporaneamente. Un campo dichiarato `volatile` non è soggetto a ottimizzazioni del compilatore che presuppongono l'accesso da parte di un singolo thread. Queste limitazioni garantiscono che tutti i thread considereranno scritture di tipo volatile eseguite da altri thread nell'ordine in cui sono stati eseguiti. Non c'è garanzia di un singolo ordinamento totale delle scritture volatili come osservato da tutti i thread di esecuzione.  
+
+La parola chiave `volatile` indica che un campo potrebbe essere modificato da più thread eseguiti contemporaneamente. Il compilatore, il sistema di runtime e anche l'hardware possono riordinare le letture e le scritture in posizioni di memoria per motivi di prestazioni. I campi dichiarati `volatile` non sono soggetti a queste ottimizzazioni. L'aggiunta del modificatore `volatile` garantisce che tutti thread osserveranno le scritture volatili eseguite da qualsiasi altro thread nell'ordine in cui sono state eseguite. Non c'è garanzia di un singolo ordinamento totale delle scritture volatili come osservato da tutti i thread di esecuzione.
   
- Il modificatore `volatile` si usa in genere per un campo a cui accedono più thread senza usare l'istruzione [lock](../../../csharp/language-reference/keywords/lock-statement.md) per serializzare l'accesso.  
+La parola chiave `volatile` può essere applicata ai campi di questi tipi:  
   
- La parola chiave `volatile` può essere applicata ai campi di questi tipi:  
+- Tipi di riferimento.  
+- Tipi di puntatore (in un contesto non sicuro). Si noti che sebbene il puntatore in sé possa essere volatile, non può esserlo l'oggetto a cui punta. In altre parole, non è possibile dichiarare un "puntatore a volatile".  
+- Tipi semplici come `sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `char`, `float` e `bool`.  
+- Tipo `enum` con uno di questi tipi di base: `byte`, `sbyte`, `short`, `ushort`, `int` o `uint`.  
+- Parametri di tipo generico noti come tipi di riferimento.
+- <xref:System.IntPtr> e <xref:System.UIntPtr>.  
+
+Altri tipi, inclusi `double` e `long`, non possono essere contrassegnati come `volatile`, perché non è possibile garantire che le letture e le scritture in campi di questi tipi siano atomiche. Per proteggere l'accesso multithread a questi tipi di campi, usare i membri della classe <xref:System.Threading.Interlocked> o proteggere l'accesso usando l'istruzione [`lock`](lock-statement.md).
+
+La parola chiave volatile può essere applicata solo a campi di un oggetto `class` o `struct`. Le variabili locali non possono essere dichiarate `volatile`.
   
--   Tipi di riferimento.  
+## <a name="example"></a>Esempio
+
+Nell'esempio riportato di seguito viene illustrato come dichiarare `volatile` una variabile di campo pubblico.  
   
--   Tipi di puntatore (in un contesto non sicuro). Si noti che sebbene il puntatore in sé possa essere volatile, non può esserlo l'oggetto a cui punta. In altre parole, non è possibile dichiarare un "puntatore a volatile".  
+[!code-csharp[declareVolatile](~/samples/snippets/csharp/language-reference/keywords/volatile/Program.cs#Declaration)]
+
+Nell'esempio seguente viene illustrato come un thread di lavoro o ausiliario può essere creato e usato per eseguire l'elaborazione in parallelo con quella del thread principale. Per informazioni di base sul multithreading, vedere [Managed Threading](../../../standard/threading/index.md) (Threading gestito) e [Threading (C#)](../../programming-guide/concepts/threading/index.md).  
   
--   Tipi come sbyte, byte, short, ushort, int, uint, char, float e bool.  
-  
--   Un tipo enum con uno dei seguenti tipi di base: byte, sbyte, short, ushort, int o uint.  
-  
--   Parametri di tipo generico noti come tipi di riferimento.  
-  
--   <xref:System.IntPtr> e <xref:System.UIntPtr>.  
-  
- La parola chiave volatile può essere applicata solo a campi di una classe o struct. Le variabili locali non possono essere dichiarate `volatile`.  
-  
-## <a name="example"></a>Esempio  
- Nell'esempio riportato di seguito viene illustrato come dichiarare `volatile` una variabile di campo pubblico.  
-  
- [!code-csharp[csrefKeywordsModifiers#24](../../../csharp/language-reference/keywords/codesnippet/CSharp/volatile_1.cs)]  
-  
-## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come un thread di lavoro o ausiliario può essere creato e usato per eseguire l'elaborazione in parallelo con quella del thread principale. Per informazioni di base sul multithreading, vedere [Managed Threading](../../../standard/threading/index.md) (Threading gestito) e [Threading (C#)](../../programming-guide/concepts/threading/index.md).  
-  
- [!code-csharp[csProgGuideThreading#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/volatile_2.cs)]  
-  
-## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+[!code-csharp[declareVolatile](~/samples/snippets/csharp/language-reference/keywords/volatile/Program.cs#Volatile)]
+
+Dopo aver aggiunto il modificatore `volatile` alla dichiarazione di `_shouldStop`, si otterranno sempre gli stessi risultati, analogamente all'estratto mostrato nel codice precedente. Tuttavia, senza il modificatore nel membro `_shouldStop`, il comportamento è imprevedibile. Il metodo `DoWork` può ottimizzare l'accesso ai membri, causando la lettura dei dati non aggiornati. A causa della natura della programmazione multithread, il numero di letture non aggiornate è imprevedibile. Esecuzioni diverse del programma produrranno risultati leggermente diversi.
+
+## <a name="c-language-specification"></a>Specifiche del linguaggio C#
+
+[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
-- [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)  
-- [Modificatori](../../../csharp/language-reference/keywords/modifiers.md)
+- [Specifica del linguaggio C#: parola chiave volatile](../../../../_csharplang/spec/classes.md#volatile-fields)
+- [Riferimenti per C#](../index.md)
+- [Guida per programmatori C#](../../programming-guide/index.md)
+- [Parole chiave di C#](index.md)
+- [Modificatori](modifiers.md)
+- [Istruzione lock](lock-statement.md)
+- Classe <xref:System.Threading.Interlocked>

@@ -4,12 +4,12 @@ description: Questo argomento descrive il processo di creazione di una soluzione
 author: guardrex
 ms.author: mairaw
 ms.date: 06/12/2017
-ms.openlocfilehash: 17d7cc5b085b4d47ebf1e5ed9a766be9d5d8b01f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: fbbbbc20b45981a41695eac73dcc251ef74a0cb6
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43530496"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50186018"
 ---
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Creazione di una soluzione .NET Core completa in macOS con Visual Studio per Mac
 
@@ -20,7 +20,7 @@ In questa esercitazione viene illustrato come creare un'applicazione che accetta
 > [!NOTE]
 > Microsoft considera di fondamentale importanza i commenti e i suggerimenti degli utenti. Sono disponibili due modi per comunicare al team di sviluppatori la propria opinione su Visual Studio per Mac:
 > * In Visual Studio per Mac scegliere **Aiuto** > **Segnala un problema** dal menu o **Segnala un problema** dalla schermata iniziale per visualizzare una finestra per la registrazione di un report sul bug. È possibile tenere traccia dei commenti e dei suggerimenti inviati nel portale della [community di sviluppatori](https://developercommunity.visualstudio.com/spaces/41/index.html).
-> * Per inviare un suggerimento, scegliere **Aiuto** > **Invia un suggerimento** dal menu o **Invia un suggerimento** dalla schermata iniziale per aprire la [pagina Web UserVoice di Visual Studio per Mac](https://visualstudio.uservoice.com/forums/563332-visual-studio-for-mac).
+> * Per inviare un suggerimento, scegliere **Aiuto** > **Invia un suggerimento** dal menu o **Invia un suggerimento** dalla schermata iniziale per aprire la [pagina Web Developer Community di Visual Studio per Mac](https://developercommunity.visualstudio.com/content/idea/post.html?space=41).
 
 ## <a name="prerequisites"></a>Prerequisiti
 
@@ -32,7 +32,7 @@ Per altre informazioni sui prerequisiti, vedere [Prerequisiti per .NET Core in M
 
 ## <a name="building-a-library"></a>Creazione di una libreria
 
-1. Nella schermata iniziale selezionare **Nuovo progetto**. Nella finestra di dialogo **Nuovo progetto**, nel nodo **Multiplatform** (Multipiattaforma), selezionare il modello **.NET Standard Library** (Libreria .NET Standard). Scegliere **Avanti**.
+1. Nella schermata iniziale selezionare **Nuovo progetto**. Nella finestra di dialogo **Nuovo progetto**, nel nodo **.NET Core**, selezionare il modello **Libreria .NET Standard**. Verrà creata una libreria .NET Standard che ha come destinazione .NET Core, nonché qualsiasi altra implementazione .NET che supporta la versione 2.0 di [.NET Standard](../../standard/net-standard.md). Scegliere **Avanti**.
 
    ![Finestra di dialogo Nuovo progetto](./media/using-on-mac-vs-full-solution/vsmacfull01.png)
 

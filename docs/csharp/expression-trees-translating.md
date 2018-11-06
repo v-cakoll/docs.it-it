@@ -3,12 +3,12 @@ title: Traduzione degli alberi delle espressioni
 description: Informazioni su come visitare ogni nodo in un albero delle espressioni, creando una copia modificata di tale albero delle espressioni.
 ms.date: 06/20/2016
 ms.assetid: b453c591-acc6-4e08-8175-97e5bc65958e
-ms.openlocfilehash: bd4aec2ef34e4dc972ae867c6b5070f92dcbc498
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 6fe35983119bba443ed9132ff0c52361e1f07da8
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45971895"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200535"
 ---
 # <a name="translating-expression-trees"></a>Traduzione degli alberi delle espressioni
 
@@ -64,7 +64,7 @@ Gli stessi nodi possono essere usati in uno o più alberi delle espressioni. Dal
 
 ## <a name="traversing-and-executing-an-addition"></a>Attraversamento ed esecuzione di un'addizione
 
-Esamineremo ora questi aspetti creando un secondo visitatore che percorre l'albero dei nodi di addizione e calcola il risultato. È possibile realizzare tale operazione apportando un paio di modifiche al visitatore che abbiamo visto fino a questo momento. In questa nuova versione, il visitatore restituisce la somma parziale dell'operazione di addizione fino a questo punto. Per un'espressione costante, la somma corrisponde semplicemente al valore dell'espressione costante. Per un'espressione di addizione, il risultato è la somma degli operandi sinistro e destro, dopo l'attraversamento degli alberi.
+Esamineremo ora questi aspetti creando un secondo visitatore che percorre l'albero dei nodi di addizione e calcola il risultato. A questo scopo, è possibile apportare un paio di modifiche al visitatore osservato fino a questo punto. In questa nuova versione, il visitatore restituisce la somma parziale dell'operazione di addizione fino a questo punto. Per un'espressione costante, la somma corrisponde semplicemente al valore dell'espressione costante. Per un'espressione di addizione, il risultato è la somma degli operandi sinistro e destro, dopo l'attraversamento degli alberi.
 
 ```csharp
 var one = Expression.Constant(1, typeof(int));

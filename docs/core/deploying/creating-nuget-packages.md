@@ -5,12 +5,12 @@ author: cartermp
 ms.author: mairaw
 ms.date: 06/20/2016
 ms.technology: dotnet-cli
-ms.openlocfilehash: 6be94c2e2cef443f69b2d6df7c2d490cb1fb629d
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 0be8d302568bc08d2c3dacfdf5738eff4b97d4b2
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44205062"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48848101"
 ---
 # <a name="how-to-create-a-nuget-package-with-cross-platform-tools"></a>Come creare un pacchetto NuGet con strumenti multipiattaforma
 
@@ -21,7 +21,7 @@ Per .NET Core 1.0, le librerie devono essere distribuite come pacchetti NuGet.  
 
 Si supponga di aver scritto una nuova libreria da distribuire tramite NuGet.  A questo scopo, è possibile creare un pacchetto NuGet con strumenti multipiattaforma.  L'esempio seguente presuppone l'esistenza di una libreria denominata **SuperAwesomeLibrary** che punta a `netstandard1.0`.
 
-Se si dispone di dipendenze transitive (ossia un progetto che dipende da un altro progetto), è necessario assicurarsi di ripristinare i pacchetti per l'intera soluzione con il comando `dotnet restore` prima di creare un pacchetto NuGet.  In caso contrario, il comando `dotnet pack` non funzionerà correttamente.
+In caso di dipendenze transitive, ovvero un progetto che dipende da un altro pacchetto, è necessario assicurarsi di ripristinare i pacchetti per l'intera soluzione con il comando `dotnet restore` prima di creare un pacchetto NuGet.  In caso contrario, il comando `dotnet pack` non funzionerà correttamente.
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 

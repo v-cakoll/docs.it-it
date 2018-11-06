@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 ms.assetid: 7667770e-d163-4ad6-a303-085cf73db2f2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9cb7807fbfc1fbaf039fd7aef04331210dfa7cfa
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 39b7228de775f4dc92e932731ad9967315437e6e
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47089935"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49121116"
 ---
 # <a name="mef-for-net-for-windows-store-apps"></a>MEF per .NET per app Windows Store
 <xref:System.Composition?displayProperty=nameWithType> e i relativi spazi dei nomi figlio contengono i tipi per sviluppare app [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] estendibili mediante Managed Extensibility Framework (MEF). Questi spazi dei nomi fanno parte del subset [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] per il sistema operativo [!INCLUDE[win8](../../../includes/win8-md.md)].  
   
- Questi spazi dei nomi non fanno parte della libreria di classi principale distribuita con .NET Framework. Per installare questi spazi dei nomi, aprire il progetto in [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], scegliere **Gestione pacchetti NuGet** dal menu **Progetto** e cercare online il pacchetto Microsoft.Composition.  
+ Questi spazi dei nomi non fanno parte della libreria di classi principale distribuita con .NET Framework. Per installare questi spazi dei nomi, aprire il progetto in Visual Studio, scegliere **Gestisci pacchetti NuGet** dal menu **Progetto** e cercare online il pacchetto Microsoft.Composition.  
   
 -   <xref:System.Composition?displayProperty=nameWithType> fornisce classi che costituiscono il framework MEF di base per le app [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].  
   

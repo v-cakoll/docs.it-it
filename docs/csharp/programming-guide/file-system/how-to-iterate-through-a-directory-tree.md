@@ -5,12 +5,12 @@ helpviewer_keywords:
 - iterating through folders [C#]
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
-ms.openlocfilehash: 1aac40793fabe152e18a1bf1b634058e85b31481
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a6725463b042d51e20e5b293d7177903d2d35956
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515761"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123631"
 ---
 # <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>Procedura: Scorrere un albero di directory (Guida per programmatori C#)
 Eseguire l'iterazione in un albero di directory significa accedere a ogni file in ogni sottodirectory annidata in una cartella radice specificata, a qualsiasi livello. Non è necessario aprire ogni file. È possibile recuperare semplicemente il nome del file o della sottodirectory come `string` oppure è possibile recuperare informazioni aggiuntive sotto forma di oggetto <xref:System.IO.FileInfo?displayProperty=nameWithType> o <xref:System.IO.DirectoryInfo?displayProperty=nameWithType>.  
@@ -54,7 +54,7 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
  Se è necessario archiviare il contenuto di un albero di directory, in memoria o su disco, l'opzione migliore consiste nell'archiviare solo la proprietà <xref:System.IO.FileSystemInfo.FullName%2A> (di tipo `string`) per ogni file. È quindi possibile usare questa stringa per creare un nuovo oggetto <xref:System.IO.FileInfo> o <xref:System.IO.DirectoryInfo> in base alle esigenze o aprire i file che richiedono un'elaborazione ulteriore.  
   
 ## <a name="robust-programming"></a>Programmazione efficiente  
- Un codice di iterazione file efficiente deve prendere in considerazione diversi aspetti complessi del file system. Per altre informazioni sul file system di Windows, vedere [NTFS Technical Reference](https://technet.microsoft.com/library/81cc8a8a-bd32-4786-a849-03245d68d8e4) (Riferimenti tecnici di NTFS).  
+ Un codice di iterazione file efficiente deve prendere in considerazione diversi aspetti complessi del file system. Per altre informazioni sul file system di Windows, vedere [NTFS Technical Reference](/windows-server/storage/file-server/ntfs-overview) (Informazioni tecniche di riferimento su NTFS).  
   
 ## <a name="see-also"></a>Vedere anche
 

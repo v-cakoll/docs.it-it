@@ -1,23 +1,23 @@
 ---
 title: Istruzione lock (Riferimenti per C#)
-description: Usare l'istruzione lock di C# per sincronizzare l'accesso dei thread alla risorsa condivisa
-ms.date: 08/28/2018
+description: Usare l'istruzione lock C# per sincronizzare l'accesso dei thread alla risorsa condivisa
+ms.date: 10/01/2018
 f1_keywords:
 - lock_CSharpKeyword
 - lock
 helpviewer_keywords:
 - lock keyword [C#]
 ms.assetid: 656da1a4-707e-4ef6-9c6e-6d13b646af42
-ms.openlocfilehash: 2b6fbfb2f81d7745c4effb9ea0087f34cc872a6c
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 802f447e1ae01020fa80fa3048e3783ea24db3d3
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858356"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48850101"
 ---
 # <a name="lock-statement-c-reference"></a>Istruzione lock (Riferimenti per C#)
 
-L'istruzione `lock` ottiene il blocco a esclusione reciproca per un oggetto specificato, esegue il blocco di un'istruzione e quindi rilascia il blocco. Mentre è attivo un blocco, il thread che contiene il blocco può ancora ottenere e rilasciare il blocco. Gli altri thread non possono ottenere il blocco e devono attendere finché il blocco non viene rilasciato.
+L'istruzione `lock` acquisisce il blocco a esclusione reciproca per un oggetto specificato, esegue un blocco di istruzioni e quindi rilascia il blocco. Mentre è attivo un blocco, il thread che contiene il blocco può ancora acquisire e rilasciare il blocco. Gli altri thread non possono acquisire il blocco e devono attendere finché il blocco non viene rilasciato.
 
 L'istruzione `lock` ha il formato
 
@@ -50,13 +50,11 @@ Non è possibile usare la parola chiave [await](await.md) nel corpo di un'istruz
 
 ## <a name="remarks"></a>Note
 
-Quando si sincronizza l'accesso thread a una risorsa condivisa, applicare il blocco a un'istanza dell'oggetto dedicata (ad esempio `private readonly object balanceLock = new object();`) o a un'altra istanza che ha poche probabilità di essere usata come oggetto di blocco da parti del codice non correlate. Evitare di usare la stessa istanza di oggetto di blocco per diverse risorse condivise. Questo può originare problemi di deadlock o conflitti di blocco. In particolare evitare di usare
+Quando si sincronizza l'accesso dei thread a una risorsa condivisa, applicare il blocco a un'istanza dell'oggetto dedicata (ad esempio `private readonly object balanceLock = new object();`) o a un'altra istanza che ha poche probabilità di essere usata come oggetto di blocco da parti del codice non correlate. Evitare di usare la stessa istanza di oggetto di blocco per diverse risorse condivise. Questo può originare problemi di deadlock o conflitti di blocco. In particolare, evitare di usare gli elementi seguenti come oggetti di blocco:
 
-- `this` (usabile dai chiamati come blocco),
-- istanze <xref:System.Type> (possono essere ottenute dall'operatore [typeof](typeof.md) o dalla reflection),
-- e infine istanze stringa, tra cui i valori letterali stringa,
-
-come oggetti di blocco.
+- `this`, perché potrebbe essere usato dai chiamanti come blocco.
+- Istanze <xref:System.Type>, in quanto possono essere ottenute dall'operatore [typeof](typeof.md) o dalla reflection.
+- Istanze stringa, tra cui i valori letterali stringa, in quanto potrebbero essere [centralizzate](/dotnet/api/system.string.intern#remarks).
 
 ## <a name="example"></a>Esempio
 

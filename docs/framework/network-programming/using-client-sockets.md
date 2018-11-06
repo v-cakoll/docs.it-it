@@ -16,14 +16,12 @@ helpviewer_keywords:
 - sockets, client sockets
 - client sockets
 ms.assetid: 81de9f59-8177-4d98-b25d-43fc32a98383
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: ee10681c8beddac06d5c4eae453f4070b2bf1b4e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ec789bcc5b675f3cde468f9464531a225e8c33db
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195550"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50198967"
 ---
 # <a name="using-client-sockets"></a>Uso di socket client
 Prima di poter avviare una conversazione tramite un <xref:System.Net.Sockets.Socket>, è necessario creare una pipe di dati tra l'applicazione e il dispositivo remoto. Anche se esistono altre famiglie di indirizzi di rete e protocolli, questo esempio mostra come creare una connessione TCP/IP a un servizio remoto.  
@@ -42,7 +40,7 @@ IPHostEntry ipHostInfo = Dns.Resolve("host.contoso.com");
 IPAddress ipAddress = ipHostInfo.AddressList[0];  
 ```  
   
- IANA (Internet Assigned Numbers Authority) definisce i numeri di porta per i servizi comuni. Per altre informazioni, vedere www.iana.org/assignments/port-numbers. Altri servizi possono avere numeri di porta registrati nell'intervallo da 1024 a 65.535. Il codice seguente combina l'indirizzo IP per host.contoso.com con un numero di porta per creare un endpoint remoto per una connessione.  
+ IANA (Internet Assigned Numbers Authority) definisce i numeri di porta per i servizi comuni. Per altre informazioni, vedere [Service Name and Transport Protocol Port Number Registry](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml) (Registro dei numeri di porta per nomi di servizio e protocolli di trasporto). Altri servizi possono avere numeri di porta registrati nell'intervallo da 1024 a 65.535. Il codice seguente combina l'indirizzo IP per host.contoso.com con un numero di porta per creare un endpoint remoto per una connessione.  
   
 ```vb  
 Dim ipe As New IPEndPoint(ipAddress, 11000)  

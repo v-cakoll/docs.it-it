@@ -3,12 +3,12 @@ title: Introduzione alla trasformazione della sintassi (API Roslyn)
 description: Introduzione all'attraversamento, all'esecuzione di query e all'esplorazione di alberi della sintassi.
 ms.date: 06/01/2018
 ms.custom: mvc
-ms.openlocfilehash: acba7ac590154ad8458d0d9a8abac55a12e96265
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 3f8d152a2e17bc9e480bd0a76488c563720a63b1
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47400790"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49122583"
 ---
 # <a name="get-started-with-syntax-transformation"></a>Introduzione alla trasformazione della sintassi
 
@@ -120,7 +120,7 @@ public override SyntaxNode VisitLocalDeclarationStatement(LocalDeclarationStatem
 ```
 
 > [!NOTE]
-> Molte API Roslyn dichiarano tipi restituiti che sono classi di base degli effettivi tipi di runtime restituiti. In molti scenari, un tipo di nodo può essere interamente sostituito da un altro tipo di nodo o perfino rimosso. In questo esempio, il metodo <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter.VisitLocalDeclarationStatement(Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax)> restituisce un <xref:Microsoft.CodeAnalysis.SyntaxNode>, anziché il tipo derivato <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax>. Il rewriter restituisce un nuovo nodo <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax> basato su quello esistente.
+> Molte API Roslyn dichiarano tipi restituiti che sono classi di base degli effettivi tipi di runtime restituiti. In molti scenari un tipo di nodo può essere interamente sostituito da un altro tipo di nodo o può essere addirittura rimosso. In questo esempio, il metodo <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter.VisitLocalDeclarationStatement(Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax)> restituisce un <xref:Microsoft.CodeAnalysis.SyntaxNode>, anziché il tipo derivato <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax>. Il rewriter restituisce un nuovo nodo <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax> basato su quello esistente.
 
 Questa guida introduttiva gestisce le dichiarazioni di variabili locali. È possibile estenderla ad altre dichiarazioni, ad esempio cicli `foreach`, cicli `for`, espressioni LINQ ed espressioni lambda. Inoltre, il rewriter trasformerà solo le dichiarazioni nella forma più semplice:
 

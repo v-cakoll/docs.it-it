@@ -4,12 +4,12 @@ description: Guida alla scelta dell'implementazione di .NET da prendere in consi
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: dbb5bd21d2fa43167a9624be2baec3f591d10920
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 01e7222ccd4a764f75481e58d4ac305daadfe1a8
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864962"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50202237"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Scelta di .NET Core o .NET Framework per le app server
 
@@ -87,7 +87,7 @@ Esistono tecnologie di .NET Framework non disponibili in .NET Core. Alcune potre
 
 * Applicazioni Web Form ASP.NET: Web Form ASP.NET è disponibile solo in .NET Framework, di conseguenza non è possibile usare ASP.NET Core per Web Form ASP.NET. Non è inoltre previsto il trasferimento di Web Form ASP.NET in .NET Core.
 
-* Applicazioni Pagine Web ASP.NET: Pagine Web ASP.NET non è incluso in ASP.NET Core. [Razor Pages](/aspnet/core/mvc/razor-pages/) di ASP.NET Core presenta molte somiglianze con Pagine Web.
+* Applicazioni Pagine Web ASP.NET: Pagine Web ASP.NET non è incluso in ASP.NET Core. 
 
 * Implementazione di servizi WCF: anche se è presente una [libreria WCF client](https://github.com/dotnet/wcf) per l'utilizzo di servizi WCF da .NET Core, l'implementazione di server WCF è attualmente disponibile solo in .NET Framework. Questo scenario non è attualmente previsto per .NET Core, ma verrà preso in considerazione per il futuro.
 
@@ -104,6 +104,7 @@ Alcune piattaforme Microsoft o di terze parti non supportano .NET Core. Alcuni s
 ## <a name="see-also"></a>Vedere anche
 
 * [Choose between ASP.NET and ASP.NET Core](/aspnet/core/choose-aspnet-framework) (Scegliere tra ASP.NET e ASP.NET Core)
+* [ASP.NET Core per .NET Framework](/aspnet/core#aspnet-core-targeting-net-framework)
 * [Framework di destinazione](frameworks.md)
 * [Guida a .NET Core](../core/index.md)  
 * [Porting from .NET Framework to .NET Core](../core/porting/index.md) (Portabilità da .NET Framework a .NET Core)  

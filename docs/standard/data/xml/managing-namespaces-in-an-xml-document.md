@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 682643fc-b848-4e42-8c0d-50deeaeb5f2a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c8d08d6fd6fb783f5cb8c7e714bffa2b655ffb41
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 620f9e59d65630895c01aff7d47c76876f3319d1
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44214823"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347799"
 ---
 # <a name="managing-namespaces-in-an-xml-document"></a>Gestione di spazi dei nomi in un documento XML
 Tramite gli spazi dei nomi XML è possibile associare i nomi degli attributi e degli elementi di un documento XML a URI personalizzati e predefiniti. Per creare queste associazioni, è possibile definire i prefissi per gli URI dello spazio dei nomi e usare i prefissi in questione per qualificare i nomi degli attributi e degli elementi nei dati XML. Con gli spazi dei nomi è possibile evitare i conflitti tra i nomi degli elementi e degli attributi e consentire la gestione e la convalida degli elementi e degli attributi con lo stesso nome in modi diversi.  
@@ -71,13 +71,13 @@ Tramite gli spazi dei nomi XML è possibile associare i nomi degli attributi e d
 |--------|---------|  
 |Aggiungere uno spazio dei nomi|Metodo <xref:System.Xml.XmlNamespaceManager.AddNamespace%2A>|  
 |Rimuovere uno spazio dei nomi|Metodo <xref:System.Xml.XmlNamespaceManager.RemoveNamespace%2A>|  
-|Trovare l'URI per lo spazio dei nomi predefinito|Proprietà <xref:System.Xml.XmlNamespaceManager.DefaultNamespace%2A>|  
+|Trovare l'URI per lo spazio dei nomi predefinito|Proprietà<xref:System.Xml.XmlNamespaceManager.DefaultNamespace%2A> |  
 |Trovare l'URI per un prefisso dello spazio dei nomi|Metodo <xref:System.Xml.XmlNamespaceManager.LookupNamespace%2A>|  
 |Trovare il prefisso per un URI dello spazio dei nomi|Metodo <xref:System.Xml.XmlNamespaceManager.LookupPrefix%2A>|  
 |Ottenere un elenco di spazi dei nomi nel nodo corrente|Metodo <xref:System.Xml.XmlNamespaceManager.GetNamespacesInScope%2A>|  
 |Creare l'ambito di uno spazio dei nomi|Metodi <xref:System.Xml.XmlNamespaceManager.PushScope%2A> e <xref:System.Xml.XmlNamespaceManager.PopScope%2A>|  
 |Verificare se un prefisso è definito nell'ambito corrente|Metodo <xref:System.Xml.XmlNamespaceManager.HasNamespace%2A>|  
-|Ottenere la tabella dei nomi usata per ricercare i prefissi e gli URI|Proprietà <xref:System.Xml.XmlNamespaceManager.NameTable%2A>|  
+|Ottenere la tabella dei nomi usata per ricercare i prefissi e gli URI|Proprietà<xref:System.Xml.XmlNamespaceManager.NameTable%2A> |  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -4,12 +4,12 @@ description: Informazioni sulle differenze tra i file csproj esistenti e .NET Co
 author: blackdwarf
 ms.author: mairaw
 ms.date: 09/22/2017
-ms.openlocfilehash: 1fd264da2863fbeb88900be0f6fe000acac08a09
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 3de168b8cebeb435a45861138aea26580663c135
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47216916"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50203956"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Aggiunte al formato csproj per .NET Core
 
@@ -72,7 +72,7 @@ Questa modifica non influisce sulle funzioni principali delle altre dichiarazion
 Per disabilitare **tutti i glob impliciti**, è possibile impostare la proprietà `<EnableDefaultItems>` su `false` come nell'esempio seguente:
 ```xml
 <PropertyGroup>
-    <EnableDefaultItems>false</EnableDefaultItems>
+    <EnableDefaultItems>false</EnableDefaultItems>
 </PropertyGroup>
 ```
 
@@ -92,10 +92,11 @@ Se il progetto contiene più framework di destinazione, i risultati del comando 
 ## <a name="additions"></a>Aggiornamenti
 
 ### <a name="sdk-attribute"></a>Attributo Sdk 
-L'elemento `<Project>` del file *.csproj* ha un nuovo attributo, denominato `Sdk`. `Sdk` specifica l'SDK che viene usato dal progetto. l'SDK, come descritto dal [documento sui livelli](cli-msbuild-architecture.md), è un set di [attività](/visualstudio/msbuild/msbuild-tasks) e [destinazioni](/visualstudio/msbuild/msbuild-targets) di MSBuild che consente di compilare codice .NET Core. Con gli strumenti di .NET Core vengono forniti due SDK principali:
+L'elemento `<Project>` del file *.csproj* ha un nuovo attributo, denominato `Sdk`. `Sdk` specifica l'SDK che viene usato dal progetto. l'SDK, come descritto dal [documento sui livelli](cli-msbuild-architecture.md), è un set di [attività](/visualstudio/msbuild/msbuild-tasks) e [destinazioni](/visualstudio/msbuild/msbuild-targets) di MSBuild che consente di compilare codice .NET Core. Con gli strumenti di .NET Core vengono forniti tre SDK principali:
 
 1. .NET Core SDK con l'ID di `Microsoft.NET.Sdk`
 2. .NET Core Web SDK con l'ID di `Microsoft.NET.Sdk.Web`
+3. .NET Core Razor Class Library SDK con l'ID di `Microsoft.NET.Sdk.Razor`
 
 Per usare gli strumenti di .NET Core e compilare il codice, è necessario impostare l'attributo `Sdk` su uno di questi ID nell'elemento `<Project>`. 
 
@@ -110,11 +111,11 @@ Elemento che specifica una dipendenza NuGet nel progetto. L'attributo `Include` 
 `Version` specifica la versione del pacchetto da ripristinare. L'attributo rispetta le regole dello schema di [numerazione delle versioni NuGet](/nuget/create-packages/dependency-versions#version-ranges). Il comportamento predefinito prevede la corrispondenza esatta della versione. Ad esempio, specificare `Version="1.2.3"` equivale alla notazione NuGet `[1.2.3]` per la versione esatta 1.2.3 del pacchetto.
 
 #### <a name="includeassets-excludeassets-and-privateassets"></a>IncludeAssets, ExcludeAssets e PrivateAssets
-L'attributo `IncludeAssets` specifica quali asset appartenenti al pacchetto specificato dall'elemento `<PackageReference>` devono essere usati. 
+L'attributo `IncludeAssets` specifica gli asset appartenenti al pacchetto specificato da `<PackageReference>` che devono essere usati. 
 
-L'attributo `ExcludeAssets` specifica quali asset appartenenti al pacchetto specificato dall'elemento `<PackageReference>` non devono essere usati.
+L'attributo `ExcludeAssets` specifica gli asset appartenenti al pacchetto specificato da `<PackageReference>` che non devono essere usati.
 
-L'attributo `PrivateAssets` specifica quali asset appartenenti al pacchetto specificato dall'elemento `<PackageReference>` devono essere usati. Specifica, inoltre, che tali asset non devono essere trasmessi al progetto successivo. 
+L'attributo `PrivateAssets` specifica gli asset appartenenti al pacchetto specificato da `<PackageReference>` che devono essere usati, indicando inoltre che non devono essere trasmessi al progetto successivo. 
 
 > [!NOTE]
 > `PrivateAssets` equivale all'elemento *project.json*/*xproj* `SuppressParent`.

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application services host [client application services]
 - client application services, walkthroughs
 ms.assetid: bb7c8950-4517-4dae-b705-b74a14059b26
-ms.openlocfilehash: b800848fc3cefb1f82fb5822007bc670c1684363
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: d09ad4b1f518ac6f4c42dffd4b3ca17249b95700
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43788928"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194319"
 ---
 # <a name="walkthrough-using-client-application-services"></a>Procedura dettagliata: utilizzo di servizi delle applicazioni client
 Questo argomento descrive come creare un'applicazione Windows che usa i servizi delle applicazioni client per autenticare gli utenti e recuperare impostazioni e ruoli utente.  
@@ -35,9 +35,8 @@ Questo argomento descrive come creare un'applicazione Windows che usa i servizi 
 -   Abilitare la modalità offline. Si fornirà una casella di controllo che consenta agli utenti di specificare lo stato della connessione. Si userà quindi questo valore per specificare se i provider di servizi delle applicazioni client dovranno usare localmente i dati memorizzati nella cache anziché accedere ai servizi Web. Infine, verrà autenticato di nuovo l'utente corrente dopo che l'applicazione torna in modalità online.  
   
 ## <a name="prerequisites"></a>Prerequisiti  
- Per completare questa procedura dettagliata, è necessario disporre del componente seguente:  
-  
--   [!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)].  
+
+Per completare la procedura dettagliata, è necessario Visual Studio.
   
 ## <a name="creating-the-client-application"></a>Creazione dell'applicazione client  
  È innanzitutto necessario creare un progetto Windows Form. Questa procedura dettagliata usa i Windows Form perché familiari a più persone. Il processo è tuttavia simile per i progetti Windows Presentation Foundation (WPF).  
@@ -69,7 +68,7 @@ Questo argomento descrive come creare un'applicazione Windows che usa i servizi 
  A questo punto l'applicazione è configurata per accedere a tutti e tre i servizi dallo stesso host. Nella sezione successiva verrà creato l'host come semplice applicazione del servizio Web in modo che sia possibile testare la configurazione client.  
   
 ## <a name="creating-the-application-services-host"></a>Creazione dell'host per i servizi delle applicazioni  
- In questa sezione verrà creata una semplice applicazione servizio Web in grado di accedere ai dati dell'utente da un file di database di SQL Server Compact locale. Quindi, il database verrà popolato usando lo [ASP.NET Web Site Administration Tool](https://msdn.microsoft.com/library/100ddd8b-7d11-4df9-91ef-0bbbe92e5aec). Questa semplice configurazione consente di testare rapidamente l'applicazione client. In alternativa, è possibile configurare l'host del servizio Web per accedere ai dati dell'utente da un database SQL Server completo o mediante le classi personalizzate <xref:System.Web.Security.MembershipProvider> e <xref:System.Web.Security.RoleProvider> . Per altre informazioni, vedere [Creazione e configurazione del database dei servizi dell'applicazione per SQL Server](https://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2).  
+ In questa sezione verrà creata una semplice applicazione servizio Web in grado di accedere ai dati dell'utente da un file di database di SQL Server Compact locale. Quindi, il database verrà popolato usando lo [ASP.NET Web Site Administration Tool](https://msdn.microsoft.com/library/100ddd8b-7d11-4df9-91ef-0bbbe92e5aec). Questa semplice configurazione consente di testare rapidamente l'applicazione client. In alternativa, è possibile configurare l'host del servizio Web per accedere ai dati dell'utente da un database SQL Server completo o mediante le classi personalizzate <xref:System.Web.Security.MembershipProvider> e <xref:System.Web.Security.RoleProvider> . Per altre informazioni, vedere [Creating and Configuring the Application Services Database for SQL Server](https://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2).  
   
  Nella procedura seguente viene creato e configurato il servizio Web di AppServices.  
   
@@ -389,7 +388,7 @@ Questo argomento descrive come creare un'applicazione Windows che usa i servizi 
      [!code-csharp[ClientApplicationServices#030](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#030)]
      [!code-vb[ClientApplicationServices#030](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#030)]  
   
- Se l'autenticazione viene eseguita correttamente, il provider di autenticazione del client imposta la proprietà <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> su un'istanza della classe <xref:System.Web.ClientServices.ClientRolePrincipal>. Questa classe implementa il metodo <xref:System.Security.Principal.IPrincipal.IsInRole%2A> in modo che il lavoro venga delegato al provider di ruoli configurato. Come in precedenza il codice dell'applicazione non richiede un riferimento diretto al provider di servizi.  
+ Se l'autenticazione viene eseguita correttamente, il provider di autenticazione del client imposta la proprietà <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> su un'istanza della classe <xref:System.Web.ClientServices.ClientRolePrincipal> . Questa classe implementa il metodo <xref:System.Security.Principal.IPrincipal.IsInRole%2A> in modo che il lavoro venga delegato al provider di ruoli configurato. Come in precedenza il codice dell'applicazione non richiede un riferimento diretto al provider di servizi.  
   
  È ora possibile eseguire l'applicazione e accedere come employee per non vedere il pulsante e come manager per visualizzarlo.  
   
@@ -455,7 +454,7 @@ Questo argomento descrive come creare un'applicazione Windows che usa i servizi 
   
 13. Aggiungere il metodo seguente alla fine della classe Form1.  
   
-     Questo codice gestisce l'evento <xref:System.Web.ClientServices.Providers.ClientSettingsProvider.SettingsSaved?displayProperty=nameWithType> e visualizza un messaggio di avviso se non è stato possibile salvare un'impostazione. L'evento <xref:System.Web.ClientServices.Providers.ClientSettingsProvider.SettingsSaved> non si verifica se il servizio delle impostazioni non è disponibile o se il cookie di autenticazione è scaduto. L'evento <xref:System.Web.ClientServices.Providers.ClientSettingsProvider.SettingsSaved> si verifica ad esempio se l'utente si è già disconnesso. È possibile testare questo gestore eventi aggiungendo il codice di disconnessione al metodo `SaveSettings` direttamente prima della chiamata al metodo <xref:System.Configuration.ApplicationSettingsBase.Save%2A>. Il codice di disconnessione che è possibile usare verrà descritto nella sezione successiva.  
+     Questo codice gestisce l'evento <xref:System.Web.ClientServices.Providers.ClientSettingsProvider.SettingsSaved?displayProperty=nameWithType> e visualizza un messaggio di avviso se non è stato possibile salvare un'impostazione. L'evento <xref:System.Web.ClientServices.Providers.ClientSettingsProvider.SettingsSaved> non si verifica se il servizio delle impostazioni non è disponibile o se il cookie di autenticazione è scaduto. L'evento <xref:System.Web.ClientServices.Providers.ClientSettingsProvider.SettingsSaved> si verifica ad esempio se l'utente si è già disconnesso. È possibile testare questo gestore eventi aggiungendo il codice di disconnessione al metodo `SaveSettings` direttamente prima della chiamata al metodo <xref:System.Configuration.ApplicationSettingsBase.Save%2A> . Il codice di disconnessione che è possibile usare verrà descritto nella sezione successiva.  
   
      [!code-csharp[ClientApplicationServices#090](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#090)]
      [!code-vb[ClientApplicationServices#090](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#090)]  

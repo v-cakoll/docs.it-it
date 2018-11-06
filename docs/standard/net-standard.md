@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 07/19/2018
 ms.technology: dotnet-standard
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: 91dbbefd247b5e175da7dc3560b6323cbec1972b
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: bdaaa22f20f21e823459914a900997050a6624a6
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45595561"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50186070"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -49,6 +49,8 @@ In generale, è consigliabile avere come destinazione la versione di .NET Standa
 
 1. Definire come destinazione la versione immediatamente precedente di .NET Standard e compilare il progetto.
 2. Se il progetto viene compilato correttamente, ripetere il passaggio 1. In caso contrario, definire come destinazione la versione immediatamente successiva che sarà la versione da usare.
+
+Tuttavia, la definizione di versioni precedenti di .NET Standard come destinazione introduce un numero di dipendenze di supporto. Se il progetto è destinato a .NET Standard 1.x, è consigliabile definire *anche* .NET Standard 2.0 come destinazione. Questo semplifica il grafico delle dipendenze per gli utenti della libreria che usano come ambiente di esecuzione framework compatibili con .NET Standard 2.0 e riduce il numero dei pacchetti da scaricare.
 
 ### <a name="net-standard-versioning-rules"></a>Regole per il controllo delle versioni di .NET standard
 

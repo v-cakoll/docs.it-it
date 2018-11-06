@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - class keyword [C#]
 ms.assetid: b95d8815-de18-4c3f-a8cc-a0a53bdf8690
-ms.openlocfilehash: 52ca30fe29025e637005b95ebc14fce8f320e8f4
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 3f30fb473b486efc8381faa9076b98763935b0ae
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084754"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086064"
 ---
 # <a name="class-c-reference"></a>class (Riferimenti per C#)
 
@@ -39,7 +39,7 @@ In C# è consentita solo l'eredità singola. In altre parole, una classe può er
 
 Una classe dichiarata direttamente all'interno di uno spazio dei nomi, non annidata all'interno di altre classi, può essere [public](../../../csharp/language-reference/keywords/public.md) o [internal](../../../csharp/language-reference/keywords/internal.md). Le classi sono `internal` per impostazione predefinita.
 
-I membri delle classi, incluse le classi annidate, possono essere [public](../../../csharp/language-reference/keywords/public.md), `protected internal`, [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md), [private](../../../csharp/language-reference/keywords/private.md) o `private protected`. I membri sono [private](../../../csharp/language-reference/keywords/private.md) per impostazione predefinita.
+I membri di classe, incluse le classi annidate, possono essere [public](public.md), [protected internal](protected-internal.md), [protected](protected.md), [internal](internal.md), [private](private.md) o [private protected](private-protected.md). I membri sono `private` per impostazione predefinita.
 
 Per altre informazioni, vedere [Access Modifiers](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md) (Modificatori di accesso).
 

@@ -19,17 +19,15 @@ helpviewer_keywords:
 - network resources, authentication
 - user authentication, digest
 ms.assetid: 8cce2742-8d52-4643-9dd2-64ddf38aa878
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 66b20c299252ff1f218a8131758e2cf03640aac6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: db39bdcaf2c3a4457028e30f9458a5626aa7e795
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47199538"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50190671"
 ---
 # <a name="basic-and-digest-authentication"></a>Autenticazione di base e del digest
-L'implementazione <xref:System.Net> dell'autenticazione di base e digest è conforme alla specifica RFC2617 - HTTP Authentication: Basic and Digest Authentication, disponibile in lingua inglese sul sito Web del World Wide Web Consortium all'indirizzo www.w3.org.  
+L'implementazione <xref:System.Net> dell'autenticazione di base e digest è conforme alla specifica RFC2617 - HTTP Authentication: Basic and Digest Authentication, disponibile nel sito Web del [World Wide Web Consortium](https://www.w3.org).  
   
  Per poter usare l'autenticazione di base e digest in un'applicazione, è necessario che vengano specificati un nome utente e una password nella proprietà <xref:System.Net.WebRequest.Credentials%2A> dell'oggetto <xref:System.Net.WebRequest> usato per richiedere dati da Internet, come illustrato nell'esempio seguente.  
   

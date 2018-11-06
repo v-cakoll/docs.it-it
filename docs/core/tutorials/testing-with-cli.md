@@ -4,12 +4,12 @@ description: Questa esercitazione illustra come organizzare e testare i progetti
 author: cartermp
 ms.author: mairaw
 ms.date: 09/10/2018
-ms.openlocfilehash: 8131e51577bcad9191c0cacb61317fa146bf476d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9984b4f43ca8c09cc0948cad7e6c176127384361
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47235387"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49415224"
 ---
 # <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a>Organizzazione e test di progetti con la riga di comando di .NET Core
 
@@ -101,7 +101,7 @@ Esercizio facoltativo: aggiungere un nuovo tipo di animale domestico, ad esempio
 
 ### <a name="testing-the-sample"></a>Test dell'esempio
 
-Il progetto `NewTypes` è attivo ed è stato organizzato inserendo i tipi associati agli animali da compagnia in una cartella. Creare il progetto di test e iniziare a creare test con il framework di test [xUnit](https://xunit.github.io/). Gli unit test consentono di verificare automaticamente che i tipi di animali domestici funzionino correttamente.
+Il progetto `NewTypes` è attivo ed è stato organizzato inserendo i tipi associati agli animali da compagnia in una cartella. Creare il progetto di test e iniziare a creare test con il framework di test [xUnit](https://xunit.github.io/). Il testing unità permette di controllare automaticamente il comportamento dei tipi di animali domestici per verificare che funzionino correttamente.
 
 Creare una cartella *test* contenente una sottocartella *NewTypesTests*. Al prompt dei comandi della cartella *NewTypesTests* eseguire `dotnet new xunit`. Questa operazione produce due file: *NewTypesTests.csproj* e *UnitTest1.cs*.
 

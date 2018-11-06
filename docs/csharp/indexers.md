@@ -3,12 +3,12 @@ title: Indicizzatori
 description: Informazioni sugli indicizzatori C# e su come implementano proprietà indicizzate, ovvero proprietà a cui si fa riferimento usando uno o più argomenti.
 ms.date: 06/20/2016
 ms.assetid: 0e9496da-e766-45a9-b92b-91820d4a350e
-ms.openlocfilehash: 012213a4cdf8b70ec919639a082d5700228dde6b
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: a13163cb6bd835dfdd16c83c905c134eb8a86e7d
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207495"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50197600"
 ---
 # <a name="indexers"></a>Indicizzatori
 

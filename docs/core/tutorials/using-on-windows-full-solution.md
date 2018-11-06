@@ -5,12 +5,12 @@ author: bleroy
 ms.author: mairaw
 ms.date: 11/16/2016
 ms.custom: vs-dotnet
-ms.openlocfilehash: 15537ea8c68b5c873bbf26ab0519a19de0b13230
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: b3e466511fcae447f5bb54b83f13b25bc90c6539
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45969561"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185079"
 ---
 # <a name="building-a-complete-net-core-solution-on-windows-using-visual-studio-2017"></a>Creazione di una soluzione .NET Core completa in Windows tramite Visual Studio 2017
 
@@ -24,7 +24,7 @@ Seguire le istruzioni nella [pagina dei prerequisiti](../windows-prerequisites.m
 
 ### <a name="writing-the-library"></a>Scrittura della libreria
 
-1. In Visual Studio scegli **File**, **Nuovo**, **Progetto**. Nella finestra di dialogo **Nuovo progetto** espandere il nodo **Visual C#**, scegliere il nodo **.NET Standard** e quindi **Libreria di classi (.NET Standard)**. 
+1. In Visual Studio scegli **File**, **Nuovo**, **Progetto**. Nella finestra di dialogo **Nuovo progetto** espandere il nodo **Visual C#**, scegliere il nodo **.NET Standard** e quindi **Libreria di classi (.NET Standard)**. Verrà creata una libreria .NET Standard che ha come destinazione .NET Core, nonché qualsiasi altra implementazione .NET che supporta la versione 2.0 di [.NET Standard](../../standard/net-standard.md).
 
 2. Assegnare il nome "Library" al progetto e il nome "Golden" alla soluzione. Lasciare selezionata l'opzione **Crea directory per soluzione**. Fare clic su **OK**.
 

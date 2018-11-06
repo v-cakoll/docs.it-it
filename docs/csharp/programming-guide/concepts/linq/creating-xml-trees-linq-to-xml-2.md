@@ -2,12 +2,12 @@
 title: Creazione di alberi in C# (LINQ to XML)
 ms.date: 08/31/2018
 ms.assetid: cc74234a-0bac-4327-9c8c-5a2ead15b595
-ms.openlocfilehash: 98bad6bfc3b563b39f9e58eadbff673f202646c1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9fb03800f04a3c0615fa5b7fc44eb078e224eebc
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502284"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452417"
 ---
 # <a name="creating-xml-trees-in-c-linq-to-xml"></a>Creazione di alberi in C# (LINQ to XML)
 In questa sezione vengono fornite informazioni sulla creazione di alberi XML in C#.  
@@ -168,7 +168,23 @@ Console.WriteLine(contacts);
   </Contact>  
 </Contacts>  
 ```  
+
+### <a name="creating-an-xelement-with-an-xattribute"></a>Creazione di un XElement con XAttribute
+ Se si passa un'istanza della classe <xref:System.Xml.Linq.XAttribute> come argomento del contenuto, il costruttore crea un elemento con un attributo:
+
+```csharp  
+XElement phone = new XElement("Phone",  
+    new XAttribute("Type", "Home"),  
+    "555-555-5555");  
+Console.WriteLine(phone);  
+```  
   
+ Questo esempio produce il seguente output:  
+  
+```xml  
+<Phone Type="Home">555-555-5555</Phone>
+```   
+
 ### <a name="creating-an-empty-element"></a>Creazione di un elemento vuoto  
  Per creare un oggetto <xref:System.Xml.Linq.XElement> vuoto, non viene passato nessun contenuto al costruttore. Nell'esempio seguente creato un elemento vuoto.  
   

@@ -4,12 +4,12 @@ description: Architettura di microservizi .NET per applicazioni .NET in contenit
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.openlocfilehash: aab939af29849ceeef76d6f61b3d4f59d701094c
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 25175e2a4409d53be412ae72be5af1c07c3ec68d
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105462"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199662"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Orchestrazione di microservizi e applicazioni a più contenitori per la scalabilità e la disponibilità elevate
 
@@ -39,7 +39,7 @@ I concetti di cluster e utilità di pianificazione sono strettamente correlati, 
 
 Kubernetes
 
-![https://pbs.twimg.com/media/Bt\_pEfqCAAAiVyz.png](./media/image24.png)
+![Logo di Kubernetes](./media/image24.png)
 
 > Kubernetes è un prodotto open source che offre funzionalità per l'infrastruttura dei cluster, la pianificazione dei contenitori e l'orchestrazione. Consente di automatizzare la distribuzione, il ridimensionamento e la gestione di contenitori di applicazioni in cluster di host.
 >
@@ -49,7 +49,7 @@ Kubernetes
 
 Docker Swarm
 
-![http://rancher.com/wp-content/themes/rancher-2016/assets/images/swarm.png?v=2016-07-10-am](./media/image25.png)
+![Logo di Docker Swarm](./media/image25.png)
 
 > Docker Swarm consente di creare cluster e pianificazioni per i contenitori Docker. Tramite Swarm è possibile trasformare un pool di host Docker in un singolo host Docker virtuale. I client possono inviare richieste API a Swarm con una procedura analoga a quella per gli host. Swarm semplifica infatti il ridimensionamento delle applicazioni in più host.
 >
@@ -59,7 +59,7 @@ Docker Swarm
 
 Mesosphere DC/OS
 
-![https://mesosphere.com/wp-content/uploads/2016/04/logo-horizontal-styled.png](./media/image26.png)
+![Logo di Mesosphere DC/OS](./media/image26.png)
 
 > Mesosphere Enterprise DC/OS, basata su Apache Mesos, è una piattaforma pronta per la produzione per l'esecuzione di contenitori e applicazioni distribuite.
 >
@@ -69,11 +69,11 @@ Mesosphere DC/OS
 
 Azure Service Fabric
 
-![https://azure.microsoft.com/svghandler/service-fabric?width=600&height=315](./media/image27.png)
+![Logo di Azure Service Fabric](./media/image27.png)
 
-> [Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview) è una piattaforma di microservizi Microsoft per la creazione di applicazioni. È un [agente di orchestrazione](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-resource-manager-introduction) di servizi e crea cluster di macchine virtuali. Service Fabric può distribuire servizi come contenitori o come processi semplici. Può anche combinare servizi nei processi con servizi nei contenitori entro la stessa applicazione e lo stesso cluster.
+> [Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview) è una piattaforma di microservizi Microsoft per la creazione di applicazioni. Si tratta di un [agente di orchestrazione](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-resource-manager-introduction) di servizi e crea cluster di computer. Service Fabric può distribuire servizi come contenitori o come processi semplici. Può anche combinare servizi nei processi con servizi nei contenitori entro la stessa applicazione e lo stesso cluster.
 >
-> Service Fabric offre [modelli di programmazione di Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-choose-framework) prescrittivi aggiuntivi e facoltativi, come [servizi con stato](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction) e [Reliable Actors](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-actors-introduction).
+> Service Fabric offre [modelli di programmazione di Service Fabric ](https://docs.microsoft.com/azure/service-fabric/service-fabric-choose-framework) prescrittivi aggiuntivi e facoltativi, come [servizi con stato](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction) e [Reliable Actors](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-actors-introduction).
 >
 > Service Fabric è maturo in Windows (anni di evoluzione in Windows), meno maturo in Linux. 
 > I contenitori Linux e Windows sono supportati in Service Fabric dal 2017.

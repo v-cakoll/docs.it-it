@@ -2,18 +2,18 @@
 title: Ricerca di testo nei documenti di Word (C#)
 ms.date: 07/20/2015
 ms.assetid: 82f86677-560b-49dc-a089-610409939b2a
-ms.openlocfilehash: 56a99dd548eb149f6fa85370cef6a114103ce91e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 3213855716ebcfc581f213a34417e579c133e385
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47235598"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200499"
 ---
 # <a name="finding-text-in-word-documents-c"></a>Ricerca di testo nei documenti di Word (C#)
 In questo argomento le query precedenti vengono estese in modo da individuare tutte le occorrenze di una stringa nel documento.  
   
 ## <a name="example"></a>Esempio  
- In questo esempio viene elaborato un documento WordprocessingML per individuare tutte le occorrenze di una stringa di testo specifica. A tale scopo, viene usata una query per ricercare la stringa "Hello". Questo esempio si basa su esempi precedenti di questa esercitazione. La nuova query è indicata nei commenti del codice riportato di seguito.  
+ Questo esempio elabora un documento WordprocessingML per individuare tutte le occorrenze di una stringa di testo specifica nel documento. A tale scopo, viene usata una query per ricercare la stringa "Hello". Questo esempio si basa su esempi precedenti di questa esercitazione. La nuova query è indicata nei commenti del codice riportato di seguito.  
   
  Per istruzioni sulla creazione del documento di origine di questo esempio, vedere [Creazione del documento Office Open XML di origine (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
   

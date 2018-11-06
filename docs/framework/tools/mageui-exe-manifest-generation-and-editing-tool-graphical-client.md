@@ -5,22 +5,23 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - MageUI.exe
 ms.assetid: f9e130a6-8117-49c4-839c-c988f641dc14
-ms.openlocfilehash: eb93e53e7b77ee2747bce3fb9a45d7061450e65c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9037e03398aa29d496f1a689e0e57bdb60fea5b9
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43501661"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48584389"
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (Strumento per la generazione e la modifica di manifesti, client grafico)
-MageUI.exe supporta le stesse funzionalità dello strumento da riga di comando Mage.exe, ma con un'interfaccia utente basata su Windows. Con questo strumento è possibile creare, modificare e firmare manifesti di distribuzione e di applicazione. I nuovi manifesti creati con MageUI.exe sono destinati a [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]. È necessario usare versioni precedenti di MageUI.exe per le versioni precedenti di .NET Framework. In caso di aggiunta o rimozione di assembly da un manifesto o di apposizione di una nuova firma a manifesti esistenti, MageUI.exe non aggiorna il manifesto per destinarlo a [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]. Per altre informazioni, vedere [Mage.exe (Strumento per la generazione e la modifica di manifesti)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md).  
-  
- Viene installato automaticamente con Visual Studio. Per eseguire lo strumento, usare il prompt dei comandi per sviluppatori o il prompt dei comandi di Visual Studio in Windows 7. Per altre informazioni, vedere [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
-  
- Due versioni di Mage.exe e MageUI.exe sono incluse come componenti del pacchetto d'installazione di [!INCLUDE[vs_dev10_long](../../../includes/vs-dev10-long-md.md)]. Per visualizzare le informazioni sulla versione, eseguire MageUI.exe, scegliere **?**, quindi **Informazioni su**. In questa documentazione viene descritta la versione 4.0.x.x di Mage.exe e MageUI.exe.  
-  
+
+MageUI.exe supporta le stesse funzionalità dello strumento da riga di comando Mage.exe, ma con un'interfaccia utente basata su Windows. Con questo strumento è possibile creare, modificare e firmare manifesti di distribuzione e di applicazione. I nuovi manifesti creati con MageUI.exe sono destinati a [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]. È necessario usare versioni precedenti di MageUI.exe per le versioni precedenti di .NET Framework. In caso di aggiunta o rimozione di assembly da un manifesto o di apposizione di una nuova firma a manifesti esistenti, MageUI.exe non aggiorna il manifesto per destinarlo a [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]. Per altre informazioni, vedere [Mage.exe (Strumento per la generazione e la modifica di manifesti)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md).
+
+ Viene installato automaticamente con Visual Studio. Per eseguire lo strumento, usare il prompt dei comandi per sviluppatori o il prompt dei comandi di Visual Studio in Windows 7. Per altre informazioni, vedere [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
+
+ Due versioni di Mage.exe e MageUI.exe sono incluse come componenti di Visual Studio. Per visualizzare le informazioni sulla versione, eseguire MageUI.exe, scegliere **?**, quindi **Informazioni su**. In questa documentazione viene descritta la versione 4.0.x.x di Mage.exe e MageUI.exe.
+
 > [!NOTE]
->  MageUI.exe non supporta l'elemento [compatibleFrameworks](/visualstudio/deployment/compatibleframeworks-element-clickonce-deployment) nel salvataggio di un manifesto di applicazione che è già stato firmato con un certificato usando MageUI.exe. È invece necessario usare [Mage.exe](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md).  
+> MageUI.exe non supporta l'elemento [compatibleFrameworks](/visualstudio/deployment/compatibleframeworks-element-clickonce-deployment) nel salvataggio di un manifesto di applicazione che è già stato firmato con un certificato usando MageUI.exe. È invece necessario usare [Mage.exe](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md).  
   
 ## <a name="uielement-list"></a>Elenco UIElement  
  Nella tabella riportata di seguito vengono elencate le voci disponibili nei menu e sulla barra degli strumenti.  

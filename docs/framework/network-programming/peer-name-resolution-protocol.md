@@ -2,14 +2,12 @@
 title: Protocollo PNRP (Peer Name Resolution Protocol)
 ms.date: 03/30/2017
 ms.assetid: 11940511-c124-4d91-ae31-d4ed6e81ee58
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: f17c5e7e2fa7a5eba66f0b9dd8c950a7464eea8e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: f04b0b2e27c03ed477c6ceb10a5cbe41e1c7ce7c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196753"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50185157"
 ---
 # <a name="peer-name-resolution-protocol"></a>Protocollo PNRP (Peer Name Resolution Protocol)
 Negli ambienti peer-to-peer, i peer usano sistemi di risoluzione dei nomi specifici per dedurre l'ubicazione di rete reciproca (indirizzi, protocolli e porte) dai nomi o altri tipi di identificatori. Nel passato, la risoluzione dei nomi peer era complicata dalla transitorietà intrinseca della connettività e da altri inconvenienti nel sistema DNS (Domain Name System).  
@@ -20,7 +18,7 @@ Negli ambienti peer-to-peer, i peer usano sistemi di risoluzione dei nomi specif
   
  A livello di sicurezza, i nomi di peer possono essere pubblicati come protetti o non protetti. PNRP usa la crittografia a chiave pubblica per proteggere i nomi di peer sicuri dallo spoofing. Con PNRP si possono assegnare nomi sia ai computer che ai servizi.  
   
--   Il protocollo PNRP (Peer Name Resolution Protocol) ha le proprietà seguenti:  
+Il protocollo PNRP (Peer Name Resolution Protocol) ha le proprietà seguenti:  
   
 -   È un protocollo distribuito e quasi del tutto senza server. I server sono necessari solo per il processo di bootstrap.  
   
@@ -30,21 +28,13 @@ Negli ambienti peer-to-peer, i peer usano sistemi di risoluzione dei nomi specif
   
 -   La risoluzione dei nomi tramite PNRP si estende oltre i computer, consentendo anche la risoluzione dei nomi per i servizi.  
   
--  
-  
 ## <a name="the-systemnetpeertopeer-namespace"></a>Spazio dei nomi System.Net.PeerToPeer  
   
 -   Le funzionalità del protocollo PNRP sono definite dallo spazio dei nomi <xref:System.Net.PeerToPeer> all'interno di .NET Framework versione 3.5. È disponibile un set di tipi che può essere usato per registrare e risolvere i nomi di peer con un servizio PNRP disponibile.  
   
--  
-  
 -   (È possibile creare e inizializzare resolver PNRP e resolver di peer personalizzati usando i tipi forniti dallo spazio dei nomi <xref:System.ServiceModel.PeerResolvers>.)  
   
--  
-  
 -   I tipi di base usati per registrare e risolvere i nomi con un servizio PNRP disponibile sono i seguenti:  
-  
--  
   
 -   <xref:System.Net.PeerToPeer.Cloud>: definisce le informazioni che descrivono un cloud PNRP disponibile, incluso il relativo ambito.  
   
@@ -56,12 +46,8 @@ Negli ambienti peer-to-peer, i peer usano sistemi di risoluzione dei nomi specif
   
 -   <xref:System.Net.PeerToPeer.PeerNameResolver>: definisce il processo per la risoluzione di un nome di peer negli endpoint di rete corrispondenti, inclusi sia i metodi sincroni che quelli asincroni per la risoluzione.  
   
--  
-  
--  
-  
 ## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.PeerResolvers>  
- <xref:System.Net.PeerToPeer>  
- [Esempi di programmazione di rete](../../../docs/framework/network-programming/network-programming-samples.md)  
- [PeerToPeer Technology Sample](https://go.microsoft.com/fwlink/?LinkID=179571) (Esempio di tecnologia PeerToPeer)
+- <xref:System.ServiceModel.PeerResolvers>  
+- <xref:System.Net.PeerToPeer>  
+- [Esempi di programmazione di rete](../../../docs/framework/network-programming/network-programming-samples.md)
+- [PeerToPeer Technology Sample](https://go.microsoft.com/fwlink/?LinkID=179571) (Esempio di tecnologia PeerToPeer)

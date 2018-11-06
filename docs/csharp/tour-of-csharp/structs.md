@@ -3,12 +3,12 @@ title: Struct C# - Panoramica del linguaggio C#
 description: Informazioni di base sui tipi di valori C# denominati struct
 ms.date: 08/10/2016
 ms.assetid: 88a74571-f741-4a31-a2b5-1ccf165535b8
-ms.openlocfilehash: dac0952e6a55a16ecefec79f9789f9e2d44aada1
-ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
+ms.openlocfilehash: 2b1870713b488f706f5f3a54413461052173bab6
+ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/11/2018
-ms.locfileid: "34058965"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49323097"
 ---
 # <a name="structs"></a>Struct
 
@@ -24,7 +24,7 @@ Un'alternativa consiste nel trasformare Point in un tipo struct.
 
 Viene ora creata un'istanza di un solo oggetto, quello relativo alla matrice, e le istanze di `Point` vengono memorizzate inline nella matrice.
 
-Con l'operatore `new` vengono chiamati i costruttori di struct, ma questo non implica l'allocazione di memoria. Anziché allocare dinamicamente un oggetto e restituire un riferimento a quest'ultimo, un costruttore di struct restituisce semplicemente il valore del tipo struct (in genere una posizione temporanea nello stack), che viene quindi copiato in base alle esigenze.
+I costruttori di struct vengono richiamati con l'operatore `new`, analogamente a un costruttore di classe. Tuttavia, invece di allocare in modo dinamico un oggetto nell'heap gestito e di restituire un riferimento a questo oggetto, un costruttore di struct restituisce semplicemente il valore di struct stesso, in genere in una posizione temporanea nello stack, che viene quindi copiato in base alle esigenze.
 
 Con le classi, due variabili possono fare riferimento allo stesso oggetto e pertanto le operazioni su una variabile possono influire sull'oggetto a cui fa riferimento l'altra. Con i tipi struct, ogni variabile ha una propria copia dei dati e le operazioni su una variabile non possono influire sull'altra. Ad esempio, l'output generato dal segmento di codice seguente dipende dal fatto che l'oggetto Point sia una classe o un tipo struct.
 

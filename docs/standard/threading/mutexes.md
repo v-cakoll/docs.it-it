@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 9dd06e25-12c0-4a9e-855a-452dc83803e2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 80379e46c6482a3e052c1283fb4aaba2c7df282e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 31c99d38cd608e93e9ee3467e0ce425835a3d572
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47207098"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201478"
 ---
 # <a name="mutexes"></a>Mutex
 È possibile usare un oggetto <xref:System.Threading.Mutex> per fornire l'accesso esclusivo a una risorsa. La classe <xref:System.Threading.Mutex> usa più risorse di sistema della classe <xref:System.Threading.Monitor>, ma è possibile eseguirne il marshalling fra i limiti del dominio dell'applicazione, può essere usata con più condizioni di attesa e può essere usata per sincronizzare i thread in processi diversi. Per un confronto dei meccanismi di sincronizzazione gestiti, vedere [Panoramica sulle primitive di sincronizzazione](../../../docs/standard/threading/overview-of-synchronization-primitives.md).  
@@ -51,11 +51,11 @@ ms.locfileid: "47207098"
   
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.Threading.Mutex>  
-- <xref:System.Threading.Mutex.%23ctor%2A>  
-- <xref:System.Security.AccessControl.MutexSecurity>  
-- <xref:System.Security.AccessControl.MutexAccessRule>  
-- [Threading](../../../docs/standard/threading/index.md)  
-- [Threading Objects and Features](../../../docs/standard/threading/threading-objects-and-features.md) (Oggetti e funzionalità del threading)  
-- [Monitoraggi](https://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db)  
-- [Threads and Threading](../../../docs/standard/threading/threads-and-threading.md) (Thread e threading)
+- <xref:System.Threading.Mutex?displayProperty=nameWithType>  
+- <xref:System.Threading.Mutex.%23ctor%2A?displayProperty=nameWithType>  
+- <xref:System.Security.AccessControl.MutexSecurity?displayProperty=nameWithType>  
+- <xref:System.Security.AccessControl.MutexAccessRule?displayProperty=nameWithType>
+- <xref:System.Threading.Monitor?displayProperty=nameWithType>  
+- [Oggetti e funzionalità del threading](threading-objects-and-features.md)  
+- [Thread e threading](threads-and-threading.md)
+- [Threading](index.md)  

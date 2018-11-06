@@ -3,16 +3,16 @@ title: Interpolazione di stringhe in C#
 description: Informazioni su come includere risultati di espressione formattati in una stringa di risultato in C# con interpolazione.
 author: pkulikov
 ms.date: 05/09/2018
-ms.openlocfilehash: b28890034cc0ab73f96c825b5548223e1c5cd1f4
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 1a5d451f6fef926f0f142c7f09f564ce95618b39
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086703"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188638"
 ---
 # <a name="string-interpolation-in-c"></a>Interpolazione di stringhe in C# #
 
-Questa esercitazione illustra come usare l'[interpolazione di stringhe](../language-reference/tokens/interpolated.md) per formattare e includere risultati di espressione in una stringa di risultato. Gli esempi presuppongono una buona familiarità con i concetti di base del linguaggio C# e con la formattazione dei tipi in .NET. Se non si ha familiarità con l'interpolazione di stringhe o con la formattazione dei tipi in .NET, vedere prima la [guida introduttiva interattiva all'interpolazione di stringhe](../quick-starts/interpolated-strings.yml). Per altre informazioni sulla formattazione dei tipi in .NET, vedere l'argomento [Formattazione di tipi in .NET](../../standard/base-types/formatting-types.md).
+Questa esercitazione illustra come usare l'[interpolazione di stringhe](../language-reference/tokens/interpolated.md) per formattare e includere risultati di espressione in una stringa di risultato. Gli esempi presuppongono una buona familiarità con i concetti di base del linguaggio C# e con la formattazione dei tipi in .NET. Se non si ha familiarità con l'interpolazione di stringhe o con la formattazione dei tipi in .NET, vedere prima l'[esercitazione interattiva sull'interpolazione di stringhe](../tutorials/intro-to-csharp/interpolated-strings.yml). Per altre informazioni sulla formattazione dei tipi in .NET, vedere l'argomento [Formattazione di tipi in .NET](../../standard/base-types/formatting-types.md).
 
 [!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 

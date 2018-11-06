@@ -1,26 +1,44 @@
 ---
 title: Sviluppo di applicazioni Web con ASP.NET
-ms.date: 10/10/2017
+ms.date: 09/25/2018
 helpviewer_keywords:
 - ASP.NET
 - .NET Framework, ASP.NET
 - dynamic Web applications [ASP.NET]
 ms.assetid: b7861df0-690a-4a58-bd12-f9d0123e40df
-ms.openlocfilehash: 9033927f714a6788a10d6966973ad2ac51d17945
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 51cc54d67d5b68e07f1dcfcb4c62f32cd509d51a
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44191384"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48580511"
 ---
-# <a name="developing-web-applications-with-aspnet"></a>Sviluppo di applicazioni Web con ASP.NET
-ASP.NET è una tecnologia .NET Framework per la creazione di applicazioni Web. I collegamenti seguenti vengono forniti per praticità:  
+# <a name="developing-web-apps-with-aspnet"></a>Sviluppo di app Web con ASP.NET
 
-- [Documentazione di ASP.NET Core](/aspnet/core/)   
-- [Documentazione di ASP.NET](/aspnet/overview)   
-- [ASP.NET MVC](https://go.microsoft.com/fwlink/p/?LinkID=227227)   
-- [ASP.NET Web Pages](https://go.microsoft.com/fwlink/p/?LinkId=251040)   
+ASP.NET è una tecnologia .NET Framework per la creazione di applicazioni Web. Per altre informazioni su ASP.NET, vedere:
+
+- [Documentazione di ASP.NET](/aspnet/overview)
+- [ASP.NET MVC](https://go.microsoft.com/fwlink/p/?LinkID=227227)
+- [ASP.NET Web Pages](https://go.microsoft.com/fwlink/p/?LinkId=251040)
 - [ASP.NET Web API](https://go.microsoft.com/fwlink/p/?LinkId=251041)  
+- [Creare un'app Web ASP.NET Framework in Azure](/azure/app-service/app-service-web-get-started-dotnet-framework)
+- 
+## <a name="developing-web-apps-with-aspnet-core"></a>Sviluppo di app Web con ASP.NET Core
+
+ASP.NET Core è una riprogettazione di ASP.NET 4.x. Ecco alcuni dei vantaggi di ASP.NET Core rispetto ad ASP.NET:
+
+- Multipiattaforma.
+- Più essenziale e più modulare.
+- Una storia unificata per la compilazione dell'interfaccia utente web e delle API web.
+
+Per un elenco completo dei vantaggi, vedere [Perché usare ASP.NET Core?](/aspnet/core#why-use-aspnet-core).
+
+Per altre informazioni su ASP.NET Core](/aspnet/core), vedere:
+
+- [Introduzione a Razor Pages](/aspnet/core/tutorials/razor-pages/razor-pages-start)
+- [Creare un'API Web](/aspnet/core/tutorials/first-web-api)
+- [Creare un'app Web ASP.NET Core in Azure](/azure/app-service/app-service-web-get-started-dotnet)
   
 ## <a name="see-also"></a>Vedere anche
- [Guida di sviluppo](../../docs/framework/development-guide.md)
+
+[Guida di sviluppo](../../docs/framework/development-guide.md)

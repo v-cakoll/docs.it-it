@@ -1,6 +1,6 @@
 ---
 title: as (Riferimenti per C#)
-ms.date: 07/20/2015
+ms.date: 10/11/2018
 f1_keywords:
 - as_CSharpKeyword
 - as
@@ -8,17 +8,19 @@ helpviewer_keywords:
 - type conversion [C#], as keyword
 - as keyword [C#]
 ms.assetid: a9be126b-cbf4-4990-a70d-d0e1983cad0e
-ms.openlocfilehash: aee80b3262ccd9432d7c311dddec47185b66d05f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ce3163f7d957df96a5c0304adc0b3083d8e20104
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47216176"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49122722"
 ---
 # <a name="as-c-reference"></a>as (Riferimenti per C#)
 È possibile usare l'operatore `as` per eseguire determinati tipi di conversioni tra tipi di riferimenti compatibili o [tipi nullable](../../../csharp/programming-guide/nullable-types/index.md). Il codice seguente illustra un esempio.  
   
 [!code-csharp[csrefKeywordsOperator#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsOperator/CS/csrefKeywordsOperators.cs#1)]
+
+Come mostrato nell'esempio, è necessario confrontare il risultato dell'espressione `as` con `null` per verificare se la conversione riesce. A partire da C# 7.0, è possibile usare l'espressione [is](is.md) per testare la corretta esecuzione di una conversione e assegnare in modo condizionale una variabile quando la conversione riesce. In molti scenari è più efficace dell'uso dell'operatore `as`. Per altre informazioni, vedere la sezione[Criterio del tipo](is.md#type) dell'articolo [Operatore `is`](is.md).
   
 ## <a name="remarks"></a>Note  
  L'operatore `as` è simile a un'operazione cast. Tuttavia, se la conversione non è possibile, `as` restituisce `null` anziché generare un'eccezione. Si consideri l'esempio seguente:  

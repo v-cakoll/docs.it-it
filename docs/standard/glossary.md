@@ -5,12 +5,12 @@ author: tdykstra
 ms.author: tdykstra
 ms.date: 07/08/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: 11fad691021ec897348177c67134750e72b4ff7c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 4ffcf56ba171192048a736b58ddcfa591fd3af58
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698484"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48840271"
 ---
 # <a name="net-glossary"></a>Glossario .NET
 
@@ -38,7 +38,7 @@ Vedere [Documentazione di ASP.NET Core](/aspnet/#pivot=core).
 
 ## <a name="assembly"></a>assembly
 
-File *DLL*/*EXE* contenente una raccolta di API che possono essere chiamate da app o altri assembly.
+File *DLL*/*EXE* che possono contenere una raccolta di API che possono essere chiamate da applicazioni o altri assembly.
 
 Un assembly può includere tipi, ad esempio interfacce, classi, strutture, enumerazioni e delegati. Gli assembly presenti nella cartella *bin* di un progetto sono anche denominati *binari*. Vedere anche [libreria](#library).
 
@@ -46,13 +46,13 @@ Un assembly può includere tipi, ad esempio interfacce, classi, strutture, enume
 
 Common Language Runtime.
 
-Il significato esatto dipende dal contesto, ma questo in genere si riferisce al runtime di .NET Framework. CLR gestisce allocazione e gestione della memoria. È inoltre una macchina virtuale che non solo esegue app, ma genera e compila codice al volo usando un compilatore JIT. L'implementazione corrente di Microsoft CLR è solo Windows.
+Il significato esatto dipende dal contesto, ma questo in genere si riferisce al runtime di .NET Framework. CLR gestisce allocazione e gestione della memoria. È inoltre una macchina virtuale che non solo esegue app, ma che genera e compila codice automaticamente usando un compilatore [JIT](#jit). L'implementazione corrente di Microsoft CLR è solo Windows.
 
 ## <a name="coreclr"></a>CoreCLR
 
 .NET Core Common Language Runtime.
 
-Questo tipo di CLR viene creato dalla stessa base di codice di CLR. In origine, CoreCLR era il runtime di Silverlight ed è stato progettato per l'esecuzione su più piattaforme, in particolare Windows e OS X. CoreCLR è ora incluso in .NET Core e rappresenta una versione semplificata di CLR. È comunque un runtime multipiattaforma, che ora include il supporto per molte distribuzioni di Linux. CoreCLR è anche una macchina virtuale con funzionalità JIT e di esecuzione del codice.
+Questo tipo di CLR viene creato dalla stessa base di codice di CLR. In origine, CoreCLR era il runtime di Silverlight ed è stato progettato per l'esecuzione su più piattaforme, in particolare Windows e OS X. CoreCLR è ora incluso in .NET Core e rappresenta una versione semplificata di CLR. È comunque un runtime [multipiattaforma](#cross-platform), che include ora il supporto per molte distribuzioni Linux. CoreCLR è anche una macchina virtuale con funzionalità JIT e di esecuzione del codice.
 
 ## <a name="corefx"></a>CoreFX
 
@@ -67,6 +67,10 @@ Runtime di .NET Core.
 A differenza di CLR/CoreCLR, CoreRT non è una macchina virtuale, ovvero non include le funzionalità per generare ed eseguire codice al volo perché non include un [JIT](#jit). Include invece la [Garbage Collection](#gc) e la funzionalità per l'identificazione del tipo di runtime (RTTI) e la reflection. Tuttavia, il sistema di tipi di questo runtime è progettato in modo tale da rendere superflui i metadati per la reflection. Si ottiene pertanto una toolchain [AOT](#aot) in grado di scollegare i metadati superflui e, più importante, identificare il codice non usato dall'app. CoreRT è in fase di sviluppo.
 
 Vedere [Intro to .NET Native and CoreRT](https://github.com/dotnet/corert/blob/master/Documentation/intro-to-corert.md) (Introduzione a .NET Native e CoreRT).
+
+## <a name="cross-platform"></a>multipiattaforma
+
+La possibilità di sviluppare ed eseguire un'applicazione che può essere usata in più sistemi operativi diversi, come Linux, Windows e iOS, senza dover riscrivere in modo specifico il codice per ciascuno. Questo permette di riutilizzare il codice e la coerenza tra le applicazioni in piattaforme diverse.
 
 ## <a name="ecosystem"></a>ecosistema
 
@@ -136,7 +140,7 @@ Vedere [Pacchetti, metapacchetti e framework](../core/packages.md)
 
 ## <a name="mono"></a>Mono
 
-Mono è un'implementazione di .NET usata principalmente quando è necessario un runtime di dimensioni ridotte. Si tratta del runtime su cui si basano le applicazioni Xamarin in Android, Mac, iOS, tvOS e watchOS ed è incentrato principalmente su app che richiedono un footprint ridotto.
+Mono è un'implementazione .NET [multipiattaforma](#cross-platform) open source che viene usata prevalentemente quando è necessario un runtime di dimensioni ridotte. Si tratta del runtime su cui si basano le applicazioni Xamarin in Android, Mac, iOS, tvOS e watchOS ed è incentrato principalmente su app che richiedono un footprint ridotto.
 
 Supporta tutte le versioni attualmente pubblicate di .NET Standard.
 

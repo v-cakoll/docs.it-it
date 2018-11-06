@@ -4,12 +4,12 @@ description: Il comando dotnet-sln rappresenta un'opzione comoda per aggiungere,
 author: mairaw
 ms.author: mairaw
 ms.date: 06/13/2018
-ms.openlocfilehash: 65ae402ef5519863886c8cf833598f5314b4bdad
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 2651e8e14ad43f41354b8165179f95f65e732f4c
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207795"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49121221"
 ---
 # <a name="dotnet-sln"></a>dotnet sln
 
@@ -95,3 +95,6 @@ Aggiungere più progetti C# a una soluzione usando un criterio GLOB:
 Rimuovere più progetti C# da una soluzione usando un criterio GLOB:
 
 `dotnet sln todo.sln remove **/*.csproj`
+
+> [!NOTE]
+> L'utilizzo dei caratteri jolly non è una funzionalità dell'interfaccia della riga di comando, ma piuttosto una funzionalità della shell dei comandi. Per espandere correttamente i file, è necessario usare una shell che supporta l'utilizzo dei caratteri jolly. Per altre informazioni sull'utilizzo dei caratteri jolly, vedere [Wikipedia](https://en.wikipedia.org/wiki/Glob_(programming)).

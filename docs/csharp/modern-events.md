@@ -3,12 +3,12 @@ title: Schema di eventi .NET Core aggiornato
 description: Informazioni su come lo schema di eventi .NET Core favorisca la flessibilità grazie alla compatibilità con le versioni precedenti e come implementare l'elaborazione sicura di eventi con sottoscrittori asincroni.
 ms.date: 06/20/2016
 ms.assetid: 9aa627c3-3222-4094-9ca8-7e88e1071e06
-ms.openlocfilehash: 8f28c3ea9d8cf3e8fc68953c79def5744eb5abe4
-ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
+ms.openlocfilehash: 3cab80a0f4fcd3343fdeff265135f1503c036514
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34827180"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188482"
 ---
 # <a name="the-updated-net-core-event-pattern"></a>Schema di eventi .NET Core aggiornato
 
@@ -18,7 +18,7 @@ L'articolo precedente descriveva gli schemi di eventi più comuni. .NET Core ha 
 
 Di conseguenza, la flessibilità è maggiore e viene offerta la compatibilità con le versioni precedenti. Si consideri innanzitutto la flessibilità. La classe System.EventArgs introduce un solo metodo: `MemberwiseClone()` che crea una copia superficiale dell'oggetto.
 Il metodo deve usare la reflection per implementare la funzionalità per tutte le classi derivate da `EventArgs`. Tale funzionalità risulta più semplice da creare in una classe derivata specifica. Ciò significa che la derivazione da System.EventArgs è un vincolo che limita la progettazione e non offre altri vantaggi.
-È possibile infatti modificare le definizioni di `FileFoundArgs` e `SearchDirectoryArgs` in modo che non derivino da `EventArgs`.
+Infatti, è possibile modificare le definizioni di `FileFoundArgs` e `SearchDirectoryArgs` in modo che non derivino da `EventArgs`.
 Il programma funzionerà esattamente allo stesso modo.
 
 È anche possibile modificare `SearchDirectoryArgs` in uno struct se si esegue una modifica aggiuntiva:

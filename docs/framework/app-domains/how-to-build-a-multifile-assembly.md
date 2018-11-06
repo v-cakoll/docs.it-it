@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Compilare un assembly su più file'
+title: 'Procedura: Compilare un assembly con più file'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -19,20 +19,20 @@ helpviewer_keywords:
 ms.assetid: 261c5583-8a76-412d-bda7-9b8ee3b131e5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 916db7ec9bee0c85db1f2fcf4db7a9f8a61f9be3
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 3072be4e870b64edcea32bb7159db8c64c50d840
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744083"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50183100"
 ---
-# <a name="how-to-build-a-multifile-assembly"></a>Procedura: Compilare un assembly su più file
-In questo articolo viene illustrato come creare un assembly su più file e viene visualizzato il codice che illustra ogni passaggio della procedura.  
+# <a name="how-to-build-a-multifile-assembly"></a>Procedura: Compilare un assembly con più file
+In questo articolo viene illustrato come creare un assembly con più file e viene visualizzato il codice che illustra ogni passaggio della procedura.  
   
 > [!NOTE]
->  L'IDE di Visual Studio per C# e Visual Basic può essere utilizzato esclusivamente per creare assembly su singolo file. Per creare assembly su più file, è necessario utilizzare i compilatori della riga di comando o Visual Studio con Visual C++.  
+>  L'IDE di Visual Studio per C# e Visual Basic può essere utilizzato esclusivamente per creare assembly con un singolo file. Per creare assembly con più file, è necessario utilizzare i compilatori della riga di comando o Visual Studio con Visual C++.  
   
-### <a name="to-create-a-multifile-assembly"></a>Per creare un assembly su più file  
+### <a name="to-create-a-multifile-assembly"></a>Per creare un assembly con più file  
   
 1.  Compilare in moduli di codice tutti i file contenenti spazi dei nomi a cui fanno riferimento altri moduli dell'assembly. L'estensione predefinita per i moduli di codice è .netmodule.  
   
@@ -67,14 +67,14 @@ In questo articolo viene illustrato come creare un assembly su più file e viene
      Specificare l'opzione **/t:module** poiché il modulo verrà aggiunto a un assembly in un passaggio successivo. Specificare l'opzione **/addmodule** poiché nel codice di `Client` sono presenti riferimenti allo spazio dei nomi creato dal codice in `Stringer.netmodule`. Il compilatore crea un modulo denominato `Client.netmodule` contenente un riferimento a un altro modulo, `Stringer.netmodule`.  
   
     > [!NOTE]
-    >  Nei compilatori di C# e di Visual Basic viene supportata la creazione diretta di assembly su più file utilizzando le due diverse sintassi descritte di seguito.  
+    >  Nei compilatori di C# e di Visual Basic viene supportata la creazione diretta di assembly con più file utilizzando le due diverse sintassi descritte di seguito.  
     >   
-    >  -   Un assembly su due file viene creato da due compilazioni:  
+    >  -   Un assembly con due file viene creato da due compilazioni:  
     >   
     >      [!code-cpp[Conceptual.Assembly.Multifile#5](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.multifile/cpp/client.cpp#5)]
       [!code-csharp[Conceptual.Assembly.Multifile#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.multifile/cs/client.cs#5)]
       [!code-vb[Conceptual.Assembly.Multifile#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.multifile/vb/client.vb#5)]  
-    > -   Un assembly su due file viene creato da una compilazione:  
+    > -   Un assembly con due file viene creato da una compilazione:  
     >   
     >      [!code-cpp[Conceptual.Assembly.Multifile#6](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.multifile/cpp/client.cpp#6)]
       [!code-csharp[Conceptual.Assembly.Multifile#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.multifile/cs/client.cs#6)]
@@ -97,7 +97,7 @@ In questo articolo viene illustrato come creare un assembly su più file e viene
      È possibile usare [MSIL Disassembler (Ildasm.exe)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) per esaminare i contenuti di un assembly o determinare se un file è un assembly o un modulo.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creazione degli assembly](../../../docs/framework/app-domains/create-assemblies.md)  
- [Procedura: Visualizzare il contenuto dell'assembly](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
- [Come il runtime individua gli assembly](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [Assembly su più file](../../../docs/framework/app-domains/multifile-assemblies.md)
+- [Creazione degli assembly](../../../docs/framework/app-domains/create-assemblies.md)  
+- [Procedura: Visualizzare il contenuto dell'assembly](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
+- [Come il runtime individua gli assembly](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+- [Assembly con più file](../../../docs/framework/app-domains/multifile-assemblies.md)

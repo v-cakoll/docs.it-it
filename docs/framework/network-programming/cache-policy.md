@@ -10,19 +10,17 @@ helpviewer_keywords:
 - content cache policies
 - expired content
 ms.assetid: 1a7e04ec-7872-41c2-96c6-52566dcb412b
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: afaa4389940bd16ee2685c2ed64fbec4626d96e1
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: bd115621db369a28a51e7c5de8dd4095eca80901
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47193148"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50199435"
 ---
 # <a name="cache-policy"></a>Criteri di cache
 I criteri di cache definiscono le regole usate per determinare se è possibile soddisfare una richiesta usando una copia della risorsa richiesta memorizzata nella cache. Anche se nelle applicazioni vengono specificati i requisiti di cache del client relativi alla validità, l'efficacia dei criteri di cache è determinata non solo dai requisiti di cache del client, ma anche dai requisiti di scadenza del contenuto del server e di riconvalida del server. Per garantire che all'applicazione client venga restituito il contenuto più aggiornato, l'interazione tra i criteri di cache del client e i requisiti del server determina sempre la creazione dei criteri di cache più conservativi.  
   
- I criteri di cache possono essere basati sulla posizione o sul tempo. I criteri di cache basati sulla posizione definiscono il livello di aggiornamento delle voci memorizzate nella cache in base alla posizione da cui è possibile ricavare la risorsa richiesta. I criteri di cache basati sul tempo definiscono il livello di aggiornamento delle voci memorizzate nella cache usando l'ora di recupero della risorsa, le intestazioni restituite con la risorsa e l'ora corrente. Nella maggior parte delle applicazioni è possibile usare i criteri di cache predefiniti basati sul tempo, che implementano i criteri di memorizzazione nella cache specificati in RFC 2616, disponibile all'indirizzo [http://www.ietf.org](http://www.ietf.org/).  
+ I criteri di cache possono essere basati sulla posizione o sul tempo. I criteri di cache basati sulla posizione definiscono il livello di aggiornamento delle voci memorizzate nella cache in base alla posizione da cui è possibile ricavare la risorsa richiesta. I criteri di cache basati sul tempo definiscono il livello di aggiornamento delle voci memorizzate nella cache usando l'ora di recupero della risorsa, le intestazioni restituite con la risorsa e l'ora corrente. Nella maggior parte delle applicazioni è possibile usare i criteri di cache predefiniti basati sul tempo, che implementano i criteri di memorizzazione nella cache specificati nel documento RFC 2616, disponibile nel sito Web [Internet Engineering Task Force (IETF)](https://www.ietf.org/).  
   
  Nella tabella seguente sono descritte le classi usate per specificare i criteri di cache.  
   

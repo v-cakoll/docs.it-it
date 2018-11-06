@@ -2,14 +2,12 @@
 title: Isolamento rete per app di Windows Store
 ms.date: 03/30/2017
 ms.assetid: b064497c-d956-46b8-838d-7a0223c7e200
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 97096d6fa41cd25a92c23cd47008b33fb6037190
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 537d94201b3e0ae92707c858f10032848a690004
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195407"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50182671"
 ---
 # <a name="network-isolation-for-windows-store-apps"></a>Isolamento rete per app di Windows Store
 Le classi negli spazi dei nomi <xref:System.Net>, <xref:System.Net.Http> e <xref:System.Net.Http.Headers> possono essere usate per sviluppare app di Windows Store o app desktop. Quando vengono usate in un'app di Windows Store, le classi in questi spazi dei nomi sono interessate dall'isolamento rete, parte del modello di sicurezza delle applicazioni usato da [!INCLUDE[win8](../../../includes/win8-md.md)]. Le funzionalità di rete appropriate devono essere abilitate nel manifesto dell'app per un'app di Windows Store affinché il sistema consenta l'accesso alla rete.  

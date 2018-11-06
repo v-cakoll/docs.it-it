@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5a9789669f6d896bfbaf4ccf5cbd0eccdd710980
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b4fe4c4f89056ae57c3516149a41a5a3bea4fcd2
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399717"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48848017"
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe (Assembly Linker)
 
 Lo strumento Assembly Linker consente di generare un file con un manifesto dell'assembly a partire da uno o più moduli o file di risorse. Un modulo è un file di linguaggio intermedio (IL) privo di manifesto dell'assembly.
 
 > [!NOTE]
-> A partire da [!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)], un manifesto Win32 viene incorporato automaticamente nell'assembly dai compilatori C# e Visual Basic. Per altre informazioni, vedere [/win32manifest (opzioni del compilatore C#)](~/docs/csharp/language-reference/compiler-options/win32manifest-compiler-option.md).
+> A partire da Visual Studio 2008, i compilatori C# e Visual Basic incorporano automaticamente un manifesto Win32 nell'assembly. Per altre informazioni, vedere [/win32manifest (opzioni del compilatore C#)](~/docs/csharp/language-reference/compiler-options/win32manifest-compiler-option.md).
 
 Viene installato automaticamente con Visual Studio. Per eseguire lo strumento, usare il prompt dei comandi per sviluppatori o il prompt dei comandi di Visual Studio in Windows 7. Per altre informazioni, vedere [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
 
@@ -40,8 +40,8 @@ al sources options
 | Origine | Descrizione |
 | ------ | ----------- |
 |`file`[,`target`]|Copia il contenuto del modulo `file` nel nome file specificato da `target`. Al termine dell'operazione di copia, *Al.exe* compila `target` in un assembly.|
-|**/embed[risorse]:** `file`[,`name`[,`private`]]|Incorpora la risorsa specificata da `file` nell'immagine contenente il manifesto dell'assembly. *Al.exe* copia i contenuti di `file` nell'immagine eseguibile di tipo PE.<br /><br /> Il parametro `name` è un identificatore interno per la risorsa. Per impostazione predefinita nell'assembly le risorse sono pubbliche, ovvero visibili ad altri assembly. La specifica del parametro `private` rende le risorse non visibili ad altri assembly.<br /><br /> Se `file` è un file di risorse .NET Framework creato ad esempio dal [generatore di file di risorse (*Resgen.exe*)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) oppure nell'ambiente di sviluppo, è possibile accedervi tramite i membri in <xref:System.Resources>. Per altre informazioni, vedere <xref:System.Resources.ResourceManager>. Per tutte le altre risorse, usare i metodi `GetManifestResource`* di <xref:System.Reflection.Assembly> per accedere alla risorsa in fase di esecuzione.<br /><br /> Se ad *Al.exe* vengono passati solo file di risorse, il file di output sarà un assembly di risorse satellite.|
-|**/link[risorse]:** `file`[,`name`[,`target`[,`private`]]]|Collega un file di risorse a un assembly. La risorsa specificata da `file` diventa parte dell'assembly; il file non viene copiato. Il parametro `file` può essere in qualsiasi formato di file. È possibile, ad esempio, specificare una DLL nativa come parametro `file`. La DLL nativa diventa quindi parte dell'assembly in modo che possa essere installata nella Global Assembly Cache e che sia possibile accedervi dal codice gestito nell'assembly. Per ottenere lo stesso risultato è anche possibile usare l'opzione del compilatore **/linkresource**. Per altre informazioni, vedere [/linkresource (Opzioni del compilatore C#)](~/docs/csharp/language-reference/compiler-options/linkresource-compiler-option.md).<br /><br /> Il parametro `name` è un identificatore interno per la risorsa. Il parametro `target` specifica un percorso e un nome file in cui *Al.exe* copia `file`*.* Al termine dell'operazione di copia, *Al.exe* compila `target` in un assembly. Per impostazione predefinita nell'assembly le risorse sono pubbliche, ovvero visibili ad altri assembly. La specifica del parametro `private` rende le risorse non visibili ad altri assembly.<br /><br /> Se `file` è un file di risorse .NET Framework creato ad esempio dal generatore di file di risorse (*Resgen.exe*) oppure nell'ambiente di sviluppo, è possibile accedervi tramite i membri dello spazio dei nomi <xref:System.Resources>. Per altre informazioni, vedere <xref:System.Resources.ResourceManager>. Per tutte le altre risorse, usare i metodi `GetManifestResource` * della classe <xref:System.Reflection.Assembly> per accedere alla risorsa in fase di esecuzione.<br /><br /> Se ad *Al.exe* vengono passati solo file di risorse, il file di output sarà un assembly di risorse satellite.|
+|**/embed[risorse]:** `file`[,`name`[,`private`]]|Incorpora la risorsa specificata da `file` nell'immagine contenente il manifesto dell'assembly. *Al.exe* copia i contenuti di `file` nell'immagine eseguibile di tipo PE.<br /><br /> Il parametro `name` è un identificatore interno per la risorsa. Per impostazione predefinita nell'assembly le risorse sono pubbliche, ovvero visibili ad altri assembly. La specifica del parametro `private` rende le risorse non visibili ad altri assembly.<br /><br /> Se `file` è un file di risorse .NET Framework creato ad esempio dal [generatore di file di risorse (*Resgen.exe*)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) oppure nell'ambiente di sviluppo, è possibile accedervi tramite i membri in <xref:System.Resources>. Per ulteriori informazioni, vedere <xref:System.Resources.ResourceManager>. Per tutte le altre risorse, usare i metodi `GetManifestResource`* di <xref:System.Reflection.Assembly> per accedere alla risorsa in fase di esecuzione.<br /><br /> Se ad *Al.exe* vengono passati solo file di risorse, il file di output sarà un assembly di risorse satellite.|
+|**/link[risorse]:** `file`[,`name`[,`target`[,`private`]]]|Collega un file di risorse a un assembly. La risorsa specificata da `file` diventa parte dell'assembly; il file non viene copiato. Il parametro `file` può essere in qualsiasi formato di file. È possibile, ad esempio, specificare una DLL nativa come parametro `file`. La DLL nativa diventa quindi parte dell'assembly in modo che possa essere installata nella Global Assembly Cache e che sia possibile accedervi dal codice gestito nell'assembly. Per ottenere lo stesso risultato è anche possibile usare l'opzione del compilatore **/linkresource**. Per altre informazioni, vedere [/linkresource (Opzioni del compilatore C#)](~/docs/csharp/language-reference/compiler-options/linkresource-compiler-option.md).<br /><br /> Il parametro `name` è un identificatore interno per la risorsa. Il parametro `target` specifica un percorso e un nome file in cui *Al.exe* copia `file`*.* Al termine dell'operazione di copia, *Al.exe* compila `target` in un assembly. Per impostazione predefinita nell'assembly le risorse sono pubbliche, ovvero visibili ad altri assembly. La specifica del parametro `private` rende le risorse non visibili ad altri assembly.<br /><br /> Se `file` è un file di risorse .NET Framework creato ad esempio dal generatore di file di risorse (*Resgen.exe*) oppure nell'ambiente di sviluppo, è possibile accedervi tramite i membri dello spazio dei nomi <xref:System.Resources>. Per ulteriori informazioni, vedere <xref:System.Resources.ResourceManager>. Per tutte le altre risorse, usare i metodi `GetManifestResource` * della classe <xref:System.Reflection.Assembly> per accedere alla risorsa in fase di esecuzione.<br /><br /> Se ad *Al.exe* vengono passati solo file di risorse, il file di output sarà un assembly di risorse satellite.|
 
 È possibile specificare le `options` seguenti. L'opzione **/out** è obbligatoria.
 
@@ -174,9 +174,9 @@ al t2.netmodule /target:exe /out:t2a.exe /main:MyClass.Main
 ```
 
 ## <a name="see-also"></a>Vedere anche
- 
-[Strumenti](../../../docs/framework/tools/index.md)  
-[*Sn.exe* (strumento Nome sicuro)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
-[*Gacutil.exe* (strumento Global Assembly Cache)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)  
-[Programmazione con gli assembly](../../../docs/framework/app-domains/programming-with-assemblies.md)  
-[Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+
+- [Strumenti](../../../docs/framework/tools/index.md)
+- [*Sn.exe* (strumento Nome sicuro)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)
+- [*Gacutil.exe* (strumento Global Assembly Cache)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)
+- [Programmazione con gli assembly](../../../docs/framework/app-domains/programming-with-assemblies.md)
+- [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

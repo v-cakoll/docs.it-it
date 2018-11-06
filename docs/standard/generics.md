@@ -1,29 +1,27 @@
 ---
-title: Panoramica di tipi generici (generics)
+title: Panoramica dei tipi generici (generics)
 description: Informazioni sul modo in cui i tipi generici (generics) vengono usati come modelli di codice che consentono di definire strutture di dati indipendenti dai tipi senza il commit di un tipo di dati effettivo.
 author: kuhlenh
 ms.author: wiwagn
-ms.date: 06/20/2016
-ms.technology: dotnet-standard
-ms.assetid: a315b111-8e48-446c-ab19-acb6405894a7
-ms.openlocfilehash: ad6216998dff70ca7e36b52b374c5ffb9fd0cd45
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 10/09/2018
+ms.openlocfilehash: 1d1899d482738bc6cc9f638b6a74eab8d4ca70c1
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575479"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49121181"
 ---
-# <a name="generic-types-generics-overview"></a>Panoramica di tipi generici (generics)
+# <a name="generic-types-overview"></a>Panoramica dei tipi generici
 
-I generics vengono usati sempre in C#, implicitamente o esplicitamente. Durante l'uso di LINQ in C#, si è mai notato che si stava usando IEnumerable<T>? Oppure, visualizzando un esempio online di un "repository generico" che comunica con database tramite Entity Framework, si è notato che la maggior parte dei metodi restituisce IQueryable<T>? Molti utenti e sviluppatori si chiedono che cosa rappresenta la **T** in questi esempi e perché è presente?
+Gli sviluppatori usano sempre generics in .NET, in modo implicito o esplicito. Quando si usa LINQ in .NET, forse non si è mai notato l'uso di <xref:System.Collections.Generic.IEnumerable%601>. Oppure, visualizzando un esempio online di un "repository generico" che comunica con database tramite Entity Framework, si è notato che la maggior parte dei metodi restituisce IQueryable<T>? Probabilmente ci si sarà chiesti che cos'è la **T** in questi esempi e perché è presente.
 
-Introdotto per la prima volta in .NET Framework 2.0, i generics comportavano modifiche al linguaggio C# e a Common Language Runtime (CLR). I **generics** sono essenzialmente un "modello di codice" che consente agli sviluppatori di definire strutture di dati [indipendenti dai tipi](https://msdn.microsoft.com/library/hbzz1a9a.aspx) senza il commit di un tipo di dati effettivo. Ad esempio, `List<T>` è una [raccolta generica](xref:System.Collections.Generic) che può essere dichiarata e usata con qualsiasi tipo: `List<int>`, `List<string>`, `List<Person>`, e così via.
+Introdotti per la prima volta in .NET Framework 2.0, i **generics** sono essenzialmente un "modello di codice" che permette agli sviluppatori di definire strutture dei dati [indipendenti dai tipi](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hbzz1a9a(v=vs.100)) senza il commit in un tipo di dati effettivo. Ad esempio, <xref:System.Collections.Generic.List%601> è una [raccolta generica](xref:System.Collections.Generic) che può essere dichiarata e usata con qualsiasi tipo, tra cui `List<int>`, `List<string>` o `List<Person>`.
 
-Quindi? Perché i generics sono utili? Per capire meglio questo meccanismo, è necessario esaminare una classe specifica prima e dopo l'aggiunta dei generics. Viene esaminata la classe `ArrayList`. In C# 1.0, gli elementi `ArrayList` erano di tipo `object`. Ciò vuol dire che qualsiasi elemento aggiunto veniva convertito automaticamente nel tipo `object`; la stessa cosa accade durante la lettura degli elementi dall'elenco (questo processo è noto come [conversione boxing](../../docs/csharp/programming-guide/types/boxing-and-unboxing.md) e unboxing rispettivamente). Le conversioni boxing e unboxing influiscono sulle prestazioni. Non è possibile tuttavia individuare in fase di compilazione il tipo effettivo dei dati nell'elenco. E ciò crea un codice fragile. I generics risolvono il problema, offrendo informazioni aggiuntive sul tipo di dati contenuti in ogni istanza dell'elenco. In parole semplici, è possibile aggiungere solo numeri interi al tipo `List<int>` e persone al tipo `List<Person>`, e così via.
+Per dimostrare l'utilità dei generics, verrà esaminata una classe specifica prima e dopo l'aggiunta di generics: <xref:System.Collections.ArrayList>. In .NET Framework 1.0 gli elementi `ArrayList` sono di tipo <xref:System.Object>. Questo significa che qualsiasi elemento aggiunto viene convertito automaticamente in `Object`. Lo stesso avviene quando gli elementi vengono letti dall'elenco. Questo processo è noto come [conversioni boxing e unboxing](../csharp/programming-guide/types/boxing-and-unboxing.md) e influisce sulle prestazioni. Soprattutto, tuttavia, non è possibile determinare in alcun modo il tipo di dati nell'elenco in fase di compilazione. E ciò crea un codice fragile. I generics risolvono il problema definendo il tipo di dati contenuto da ogni istanza dell'elenco. Ad esempio, è possibile aggiungere numeri interi solo a `List<int>` e persone solo a `List<Person>`.
 
-I generics sono anche disponibili in fase di esecuzione o **reified**. Ciò significa che il runtime sa quale tipo di struttura dei dati si sta usando e può eseguire un'archiviazione in memoria in modo più efficiente.
+I generics sono disponibili anche al runtime. Questo significa che il runtime riconosce il tipo di struttura dei dati usato e può archiviarlo in memoria in modo più efficiente.
 
-Questo è un breve programma che illustra l'efficienza di conoscere il tipo di struttura dei dati in fase di esecuzione:
+L'esempio seguente è un piccolo programma che mostra i vantaggi in termini di efficienza ottenuti dalla capacità di riconoscere il tipo di struttura dei dati al runtime:
 
 ```csharp
   using System;
@@ -55,18 +53,20 @@ Questo è un breve programma che illustra l'efficienza di conoscere il tipo di s
   }
 ```
 
-Il programma produce l'output seguente:
+Questo programma produce un output simile al seguente:
 
 ```console
-Generic Sort: System.Collections.Generic.List\`1[System.Int32] Time taken: 0.0789ms
-Non-Generic Sort: System.Collections.ArrayList Time taken: 2.4324ms
+Generic Sort: System.Collections.Generic.List`1[System.Int32]
+ Time taken: 0.0034ms
+Non-Generic Sort: System.Collections.ArrayList
+ Time taken: 0.2592ms
 ```
 
-La prima cosa che si può notare è che l'ordinamento dell'elenco generico è notevolmente più veloce dell'elenco non generico. È anche possibile notare che il tipo per un elenco generico è specifico ([System. Int32]), mentre il tipo per un elenco non generico è generalizzato. Poiché il runtime riconosce che il tipo generico `List<int>` è di tipo int, può archiviare gli elementi dell'elenco in una matrice sottostante di integer in memoria, mentre il tipo `ArrayList` non generico deve eseguire il cast di ogni elemento dell'elenco come oggetto archiviato in una matrice di oggetti in memoria. Come illustrato in questo esempio, i cast aggiuntivi richiedono tempo e rallentano l'ordinamento dell'elenco.
+La prima cosa che si può notare è che l'ordinamento dell'elenco generico è notevolmente più veloce rispetto a quello dell'elenco non generico. È anche possibile notare che il tipo per un elenco generico è specifico ([System. Int32]), mentre il tipo per un elenco non generico è generalizzato. Poiché il runtime riconosce che l'oggetto `List<int>` generico è di tipo <xref:System.Int32>, può archiviare in memoria gli elementi dell'elenco in una matrice di numeri interi sottostante, mentre l'oggetto `ArrayList` non generico deve eseguire il cast di ogni elemento dell'elenco in un oggetto. Come mostra l'esempio, i cast aggiuntivi richiedono tempo e rallentano l'ordinamento dell'elenco.
 
-Se il runtime riconosce il tipo generico, offre una migliore esperienza di debug. Quando si esegue il debug di un tipo generico in C#, si può sapere di quale tipo è ogni elemento nella struttura dei dati. Senza i generics, questo non sarebbe possibile.
+Un altro vantaggio della capacità del runtime di riconoscere il tipo dell'oggetto generico è una migliore esperienza di debug. Quando si esegue il debug di un tipo generico in C#, è possibile identificare il tipo di ogni elemento nella struttura dei dati. Senza i generics, questo non sarebbe possibile.
 
-## <a name="further-reading-and-resources"></a>Altre informazioni e risorse
+## <a name="see-also"></a>Vedere anche
 
-*   [Introduzione ai generics per C#](https://msdn.microsoft.com/library/ms379564.aspx)
-*   [Generics (Guida per programmatori C#)](../../docs/csharp/programming-guide/generics/index.md)
+- [Introduzione ai generics per C#](https://msdn.microsoft.com/library/ms379564.aspx)
+- [Generics (Guida per programmatori C#)](../../docs/csharp/programming-guide/generics/index.md)

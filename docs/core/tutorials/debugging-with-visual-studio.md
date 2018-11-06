@@ -5,12 +5,12 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 12/15/2017
 ms.custom: vs-dotnet
-ms.openlocfilehash: 4623f4efa8637bd30f378006a92bfc4965429182
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 53e4549f4790bc0756cd0ad0b903b3dc25d2f66a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47399229"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200124"
 ---
 # <a name="debug-your-hello-world-application-with-visual-studio-2017"></a>Debug dell'applicazione Hello World con Visual Studio 2017
 
@@ -166,7 +166,7 @@ Per impostare un punto di interruzione condizionale e verificare cosa succede qu
 ---
 ## <a name="stepping-through-a-program"></a>Esecuzione delle singole istruzioni di un programma
 
-Visual Studio consente anche di esaminare il programma una riga alla volta e di monitorarne l'esecuzione. In genere si imposta un punto di interruzione e si usa questa funzionalità per seguire il flusso del programma, anche attraverso una piccola parte del codice. Dal momento che il programma è di piccole dimensioni, è possibile esaminarlo per intero seguendo questa procedura:
+Visual Studio consente anche di esaminare il programma una riga alla volta e di monitorarne l'esecuzione. In genere si imposta un punto di interruzione e si usa questa funzionalità per seguire il flusso del programma attraverso una piccola parte del codice. Dal momento che il programma è di piccole dimensioni, è possibile esaminarlo per intero seguendo questa procedura:
 
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 1. Nella barra dei menu scegliere **Debug** > **Esegui istruzione** oppure premere F11. Visual Studio evidenzia e visualizza una freccia accanto alla riga di esecuzione successiva.

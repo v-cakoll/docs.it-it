@@ -12,26 +12,26 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: 08b63d67b6175d18bee1317cc8908d876fbb4039
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b23c43ebdb8d4277344949a18b1bc999b27d60e9
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47193727"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188612"
 ---
 # <a name="switch-c-reference"></a>switch (Riferimenti per C#)
 
 `switch` è un'istruzione di selezione che sceglie una sola *sezione opzioni* da eseguire da un elenco di candidati in base a un criterio di ricerca con l'*espressione di ricerca*.
 
-[!code-csharp[switch#1](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch1.cs#1)]
+[!code-csharp[switch#1](~/samples/snippets/csharp/language-reference/keywords/switch/switch1.cs#1)]
 
 L'istruzione `switch` viene spesso usata come alternativa a un costrutto [if-else](if-else.md) se una singola espressione viene testata in base a tre o più condizioni. Ad esempio, l'istruzione `switch` determina se una variabile di tipo `Color` ha uno dei tre valori:
 
-[!code-csharp[switch#3](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch3.cs#1)]
+[!code-csharp[switch#3](~/samples/snippets/csharp/language-reference/keywords/switch/switch3.cs#1)]
 
 È equivalente all'esempio seguente che usa un costrutto `if`-`else`.
 
-[!code-csharp[switch#3a](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch3a.cs#1)]
+[!code-csharp[switch#3a](~/samples/snippets/csharp/language-reference/keywords/switch/switch3a.cs#1)]
 
 ## <a name="the-match-expression"></a>Espressione di ricerca
 
@@ -98,7 +98,7 @@ Nell'esempio seguente viene illustrata un'istruzione `switch` che usa un'ampia g
 
 - Modificando l'ordine delle sezioni opzioni.
 
-- Usando un oggetto </a name="when"> quando la clausola </a> si trova nell'etichetta `case`.
+- Usando una [clausola when](#when) nell'etichetta `case`.
 
 ## <a name="the-default-case"></a>Case `default`
 
@@ -171,11 +171,11 @@ case null:
 
 Nell'esempio seguente viene usato il criterio del tipo per fornire informazioni sui vari generi di tipi di raccolta.
 
-[!code-csharp[switch#5](../../../../samples/snippets/csharp/language-reference/keywords/switch/type-pattern.cs#1)]
+[!code-csharp[type-pattern#1](~/samples/snippets/csharp/language-reference/keywords/switch/type-pattern.cs#1)]
 
 Senza criteri di ricerca, questo codice potrebbe essere scritto come segue. L'uso di criteri di ricerca del tipo produce codice più compatto e leggibile eliminando la necessità di verificare se il risultato di una conversione è un `null` o eseguire cast ripetuti.
 
-[!code-csharp[switch#6](../../../../samples/snippets/csharp/language-reference/keywords/switch/type-pattern2.cs#1)]
+[!code-csharp[type-pattern2#1](~/samples/snippets/csharp/language-reference/keywords/switch/type-pattern2.cs#1)]
 
 ## <a name="a-namewhen--the-case-statement-and-the-when-clause"></a><a name="when" /> Istruzione `case` e clausola `when`
 
@@ -183,13 +183,13 @@ A partire da C# 7.0, poiché le istruzioni case non devono escludersi a vicenda,
 
 Nell'esempio seguente viene definita una classe `Shape` di base, una classe `Rectangle` che deriva da `Shape` e una classe `Square` che deriva da `Rectangle`. L'esempio usa una clausola `when` per assicurarsi che `ShowShapeInfo` consideri un oggetto `Rectangle` a cui è stata assegnata pari lunghezza e larghezza di un elemento `Square`, anche nel caso in cui non sia stata creata un'istanza come oggetto `Square`. Il metodo non tenta di visualizzare informazioni su un oggetto `null` o su una forma la cui l'area è pari a zero.
 
-[!code-csharp[switch#8](../../../../samples/snippets/csharp/language-reference/keywords/switch/when-clause.cs#1)]
+[!code-csharp[when-clause#1](~/samples/snippets/csharp/language-reference/keywords/switch/when-clause.cs#1)]
 
 Si noti che non viene eseguita la clausola `when` nell'esempio che tenta di verificare se un oggetto `Shape` è `null`. Il criterio del tipo corretto da verificare per un `null` è `case null:`.
 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#
 
-Per altre informazioni, vedere la sezione relativa all'[istruzione switch](/dotnet/csharp/language-reference/language-specification/statements#the-switch-statement) nella [specifica del linguaggio C#](../language-specification/index.md). La specifica del linguaggio costituisce il riferimento ufficiale principale per la sintassi e l'uso di C#.
+Per altre informazioni, vedere la sezione relativa all'[istruzione switch](~/_csharplang/spec/statements.md#the-switch-statement) nella [specifica del linguaggio C#](../language-specification/index.md). La specifica del linguaggio costituisce il riferimento ufficiale principale per la sintassi e l'uso di C#.
 
 ## <a name="see-also"></a>Vedere anche
 

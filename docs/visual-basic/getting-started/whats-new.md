@@ -1,6 +1,6 @@
 ---
 title: Novità in Visual Basic
-ms.date: 02/15/2018
+ms.date: 10/04/2018
 f1_keywords:
 - VB.StartPage.WhatsNew
 helpviewer_keywords:
@@ -8,18 +8,16 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ae29553b6a431c3f20f0e5e34614842946532a9b
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 5c7786bd0dc8789d156959dcf94ac6bf8f4fb906
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925611"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194059"
 ---
 # <a name="whats-new-for-visual-basic"></a>Novità in Visual Basic
 
-Questo argomento elenca i nomi delle funzionalità principali per ogni versione di Visual Basic con le descrizioni dettagliate delle funzionalità nuove e migliorate nell'ultima versione del linguaggio.
+Questo argomento elenca i nomi delle funzionalità principali per ogni versione di Visual Basic, con descrizioni dettagliate delle funzionalità nuove e migliorate nelle più recenti versioni del linguaggio.
   
 ## <a name="current-version"></a>Versione corrente
 
@@ -69,6 +67,10 @@ Ad esempio, la seguente chiamata al metodo ha due argomenti posizionali tra un a
 ```vb
 StudentInfo.Display("Mary", age:=19, #9/21/1998#)
 ```
+
+[Modificatore di accesso ai membri `Private Protected`](../language-reference/modifiers/private-protected.md)
+
+Questa nuova combinazione di parole chiave definisce un membro accessibile da tutti i membri nella classe che lo contiene, oltre che dai tipi derivati dalla classe che lo contiene, ma solo se si trovano anche nell'assembly che lo contiene. Poiché le strutture non possono essere ereditate, è possibile applicare `Private Protected` solo ai membri di una classe.
 
 **Separatore esadecimale/binario/ottali iniziale**
 
@@ -153,7 +155,7 @@ Per altre informazioni, vedere [Reference Return Values](../programming-guide/la
 [Interpolazione di stringhe](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)  
  È possibile usare espressioni di interpolazione di stringhe per costruire stringhe.  Un'espressione di stringa interpolata è simile a una stringa di modello che contiene espressioni.  In relazione agli argomenti, è più facile comprendere una stringa interpolata che la [formattazione composita](../../standard/base-types/composite-format.md).  
   
-[Indicizzazione e accesso ai membri condizionali null](../../csharp/language-reference/operators/null-conditional-operators.md)  
+[Indicizzazione e accesso ai membri condizionali null](../language-reference/operators/null-conditional-operators.md)  
 È possibile verificare la presenza di valori null con una sintassi molto leggera prima di eseguire un'operazione di accesso ai membri (`?.`) o di indice (`?[]`).  Questi operatori consentono di scrivere meno codice per gestire i controlli null, soprattutto per l'ordinamento decrescente delle strutture di dati.  Se l'operando di sinistra o il riferimento a un oggetto è null, le operazioni restituiscono null.  
   
 [Valori letterali multilinea](../../visual-basic/programming-guide/language-features/strings/string-basics.md)  

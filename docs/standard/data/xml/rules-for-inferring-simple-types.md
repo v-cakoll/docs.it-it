@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 394624d6-4da0-430a-8a88-46efe40f14de
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dd5426de388ba2c7a22d66ce01d56a3139e36e38
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 2477b55f38167cc3497979d073f74d441a06f96d
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45615313"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123579"
 ---
 # <a name="rules-for-inferring-simple-types"></a>Regole per l'inferenza di tipi semplici
 Viene descritto come la classe <xref:System.Xml.Schema.XmlSchemaInference> inferisce il tipo di dati per attributi ed elementi.  
@@ -65,8 +65,9 @@ Viene descritto come la classe <xref:System.Xml.Schema.XmlSchemaInference> infer
   
  Quando viene rilevato il primo valore `attr2`, il tipo di `attr2` viene inferito come `unsignedByte` in base al valore `0`. Quando viene rilevato il secondo valore `attr2`, il tipo viene promosso a `string` in base al tipo inferito di `unsignedByte` e al valore corrente `true`, poiché la classe <xref:System.Xml.Schema.XmlSchemaInference> valuta i valori precedenti durante la promozione del tipo dedotto. Se tuttavia entrambe le istanze di `attr2` fossero state rilevate all'interno dello stesso documento XML e non in due documenti XML diversi come descritto in precedenza, `attr2` sarebbe stato inferito come `boolean`.  
   
-### <a name="ignored-attributes-from-the-httpwwww3org2001xmlschema-instance-namespace"></a>Attributi ignorati dallo spazio dei nomi http://www.w3.org/2001/XMLSchema-instance  
- Di seguito sono riportati gli attributi di definizione dello schema che vengono ignorati durante l'inferenza dello schema.  
+### <a name="ignored-attributes-from-the-httpswwww3org2001xmlschema-instance-namespace"></a>Attributi ignorati dallo spazio dei nomi <https://www.w3.org/2001/XMLSchema-instance>
+
+Di seguito sono riportati gli attributi di definizione dello schema che vengono ignorati durante l'inferenza dello schema.  
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  

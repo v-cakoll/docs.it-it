@@ -3,16 +3,16 @@ title: Controllo delle versioni di C# - Guida a C#
 description: Informazioni sul funzionamento del controllo delle versioni in C# e .NET
 ms.date: 01/08/2017
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.openlocfilehash: 949b7414116169cada62b48392f37809f26d7ff9
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: af81e5a8ad3165ce99a823f8b263cc798d5b6d2c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46585933"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183230"
 ---
 # <a name="versioning-in-c"></a>Controllo delle versioni in C# #
 
-In questa esercitazione si apprenderà il significato del controllo delle versioni in .NET. Si apprenderanno anche i fattori da considerare durante il controllo delle versioni della libreria, nonché durante l'aggiornamento a una nuova versione di una libreria.
+In questa esercitazione si apprenderà il significato del controllo delle versioni in .NET. Verranno anche presentati i fattori da considerare durante il controllo delle versioni della libreria e verrà descritto l'aggiornamento a una nuova versione di una libreria.
 
 ## <a name="authoring-libraries"></a>Creazione di librerie
 
@@ -20,7 +20,7 @@ Gli sviluppatori che hanno creato le librerie .NET per uso pubblico probabilment
 
 ### <a name="semantic-versioning"></a>Versionamento Semantico
 
-[Versionamento Semantico](http://semver.org/) (SemVer per brevità) è una convenzione di denominazione applicata alle versioni della libreria per indicare cardine specifici.
+[Versionamento Semantico](https://semver.org/) (SemVer per brevità) è una convenzione di denominazione applicata alle versioni della libreria per indicare cardine specifici.
 In teoria, le informazioni sulla versione applicate alla libreria consentono agli sviluppatori di determinare la compatibilità con i progetti che usano versioni precedenti di quella libreria.
 
 L'approccio di base a SemVer è il formato a 3 componenti `MAJOR.MINOR.PATCH`, dove:

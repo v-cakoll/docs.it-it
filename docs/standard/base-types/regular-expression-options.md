@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dbc5909a3d4ea1ba2747fcc694bf1f34e20e7d2b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 612550dd2e3cda4e3549bfc14c9ada712c6653bf
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47235887"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50197561"
 ---
 # <a name="regular-expression-options"></a>Opzioni di espressioni regolari
 <a name="Top"></a> Per impostazione predefinita, il confronto di una stringa di input con qualsiasi carattere letterale in un criterio di ricerca di espressioni regolari prevede la distinzione tra maiuscole e minuscole. Gli spazi vuoti in un criterio di ricerca di espressioni regolari vengono interpretati come caratteri di spazio vuoto letterali e i gruppi di acquisizione in un'espressione regolare sono denominati in modo sia implicito che esplicito. È possibile modificare questi e molti altri aspetti del comportamento predefinito delle espressioni regolari specificando le relative opzioni. Queste opzioni, elencate nella tabella seguente, possono essere incluse inline come parte del criterio di ricerca di espressioni regolari o in alternativa fornite a un costruttore della classe <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> o a un metodo statico dei criteri di ricerca come valore di enumerazione <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>.  
@@ -42,7 +42,7 @@ ms.locfileid: "47235887"
   
 -   Nel parametro `options` di un costruttore della classe <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> o di un metodo statico (`Shared` in Visual Basic) dei criteri di ricerca, ad esempio <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> o <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType>. Il parametro `options` è una combinazione OR bit per bit dei valori enumerati <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>.  
   
-     Quando vengono specificate opzioni per un'istanza di <xref:System.Text.RegularExpressions.Regex> usando il parametro `options` di un costruttore di classe, le opzioni vengono assegnate alla proprietà <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>. Tuttavia, la proprietà <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> non rispecchia le opzioni inline nel criterio di ricerca di espressioni regolari stesso.  
+     Quando vengono specificate le opzioni per un'istanza di <xref:System.Text.RegularExpressions.Regex> usando il parametro `options` di un costruttore di classe, le opzioni vengono assegnate alla proprietà <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>. Tuttavia, la proprietà <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> non rispecchia le opzioni inline nel criterio di ricerca di espressioni regolari stesso.  
   
      Nell'esempio seguente viene illustrato questo concetto. Il parametro `options` del metodo <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> viene usato per abilitare la corrispondenza senza distinzione tra maiuscole e minuscole e per ignorare gli spazi vuoti nel criterio durante l'identificazione delle parole che iniziano con la lettera "d".  
   

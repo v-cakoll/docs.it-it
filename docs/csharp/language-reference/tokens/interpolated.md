@@ -12,12 +12,12 @@ helpviewer_keywords:
 - interpolated string [C#]
 author: pkulikov
 ms.author: ronpet
-ms.openlocfilehash: 2009b3620bc4874520221a4ea847222feafca01b
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 2758a724b7e1e410fd1e1ba262db451b7f994164
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44251732"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50196989"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ - interpolazione di stringhe (Riferimenti per C#)
 
@@ -86,7 +86,7 @@ L'esempio seguente usa la conversione implicita a <xref:System.FormattableString
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
-Se non si ha familiarità con l'interpolazione di stringhe, vedere la guida introduttiva [Interpolazione di stringhe in C#](../../quick-starts/interpolated-strings.yml). Per altri esempi, vedere l'esercitazione [Interpolazione di stringhe in C#](../../tutorials/string-interpolation.md).
+Se non si ha familiarità con l'interpolazione di stringhe, vedere l'esercitazione interattiva [Interpolazione di stringhe in C#](../../tutorials/intro-to-csharp/interpolated-strings.yml). In alternativa, è possibile provare l'esercitazione [interpolazione di stringhe in C#](../../tutorials/string-interpolation.md) in locale nel computer.
 
 ## <a name="see-also"></a>Vedere anche
 

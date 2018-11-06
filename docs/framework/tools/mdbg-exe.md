@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 28a3f509-07e2-4dbe-81df-874c5e969cc4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: be32659a270cd7c6b7e3551594934926eabf0d31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2861d2364d2c29d15b25911524ef28aa78130913
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399769"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50202920"
 ---
 # <a name="mdbgexe-net-framework-command-line-debugger"></a>MDbg.exe (Debugger della riga di comando di .NET Framework)
 Il debugger della riga di comando di .NET Framework consente ai fornitori di strumenti e agli sviluppatori di applicazioni di individuare e correggere i bug nei programmi destinati a Common Language Runtime di .NET Framework. Questo strumento usa l'API di debug del runtime per offrire servizi di debug. È possibile usare MDbg.exe solo per eseguire il debug di codice gestito in quanto non esiste alcun supporto per il debug di codice non gestito.  
   
- Questo strumento è disponibile tramite NuGet. Per informazioni sull'installazione, vedere [MDbg 0.1.0](http://www.nuget.org/packages/MDbg/0.1.0). Per eseguire lo strumento, usare la console di Gestione pacchetti. Per altre informazioni su come usare la console di Gestione pacchetti, vedere [Using the Package Manager Console](http://docs.nuget.org/docs/start-here/Using-the-Package-Manager-Console) (Uso della console di Gestione pacchetti).  
+Questo strumento è disponibile tramite NuGet. Per informazioni sull'installazione, vedere [MDbg 0.1.0](https://www.nuget.org/packages/MDbg/0.1.0). Per eseguire lo strumento, usare la console di Gestione pacchetti. Per altre informazioni su come usare la console di Gestione pacchetti, vedere l'articolo [Console di Gestione pacchetti](/nuget/tools/package-manager-console).
   
- Al prompt di Gestione pacchetti, digitare quanto segue:  
+Al prompt di Gestione pacchetti, digitare quanto segue:  
   
 ## <a name="syntax"></a>Sintassi  
   

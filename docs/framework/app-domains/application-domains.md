@@ -14,28 +14,21 @@ helpviewer_keywords:
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ddf8f52ab98d0188235d8c9f97293adced4bfe90
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 2e1db5447be5f46873b6648fc6791426b2886a75
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698315"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50192616"
 ---
 # <a name="application-domains"></a>Domini applicazione
+
 I sistemi operativi e gli ambienti runtime forniscono solitamente una forma di isolamento tra le applicazioni. Windows, ad esempio, usa i processi per isolare le applicazioni. L'isolamento è necessario per garantire che il codice in esecuzione in un'applicazione non interferisca con altre applicazioni non correlate.  
   
  I domini applicazione forniscono un limite di isolamento per sicurezza, affidabilità e controllo delle versioni, nonché per lo scaricamento degli assembly. I domini applicazione vengono solitamente creati dagli host di runtime, che sono responsabili dell'avvio di Common Language Runtime prima dell'esecuzione di un'applicazione.  
   
- Negli argomenti contenuti in questa sezione della documentazione viene illustrato come usare i domini applicazione per fornire un isolamento tra gli assembly.  
-  
- In questa panoramica sono incluse le sezioni seguenti:  
-  
--   [Vantaggi dell'isolamento delle applicazioni](#benefits)  
-  
--   [Riferimento](#reference)  
-  
-<a name="benefits"></a>   
-## <a name="the-benefits-of-isolating-applications"></a>Vantaggi dell'isolamento delle applicazioni  
+## <a name="the-benefits-of-isolating-applications"></a>Vantaggi dell'isolamento delle applicazioni
+
  L'isolamento delle diverse applicazioni in esecuzione sullo stesso computer è sempre stato basato sui limiti dei processi. Ciascuna applicazione viene caricata in un processo separato che consente di isolarla dalle altre applicazioni in esecuzione.  
   
  Le applicazioni risultano isolate perché gli indirizzi di memoria sono relativi ai processi. Un puntatore di memoria passato da un processo a un altro non può essere usato in modo significativo nel processo di destinazione. Inoltre, non è possibile effettuare chiamate dirette tra due processi. È invece necessario usare un proxy, che fornisce un livello di riferimento indiretto.  
@@ -61,9 +54,9 @@ I sistemi operativi e gli ambienti runtime forniscono solitamente una forma di i
   
 -   Le autorizzazioni concesse al codice possono essere controllate dal dominio applicazione in cui il codice è in esecuzione.  
   
-  
-## <a name="application-domains-and-assemblies"></a>Domini applicazione e assembly  
- In questa sezione viene illustrata la relazione tra domini applicazione e assembly. Per eseguire il codice contenuto in un assembly, è necessario innanzitutto caricare l'assembly in un dominio applicazione. L'esecuzione di un'applicazione tipica implica il caricamento di diversi assembly in un dominio applicazione.  
+## <a name="application-domains-and-assemblies"></a>Domini applicazione e assembly
+
+ Questa sezione descrive la relazione tra assembly e domini applicazione. Per eseguire il codice contenuto in un assembly, è necessario innanzitutto caricare l'assembly in un dominio applicazione. L'esecuzione di un'applicazione tipica implica il caricamento di diversi assembly in un dominio applicazione.  
   
  Il modo in cui viene caricato un assembly determina se il codice con compilazione JIT può essere condiviso da più domini applicazione nel processo e se l'assembly può essere scaricato dal processo.  
   
@@ -95,21 +88,24 @@ I sistemi operativi e gli ambienti runtime forniscono solitamente una forma di i
   
 -   Tutte le dipendenze di un assembly devono essere individuate e caricate quando l'assembly viene caricato come indipendente dal dominio, poiché una dipendenza che non può essere caricata come indipendente dal dominio impedisce il caricamento dell'assembly come indipendente dal dominio.  
   
-## <a name="application-domains-and-threads"></a>Domini applicazione e thread  
+## <a name="application-domains-and-threads"></a>Domini applicazione e thread
+
  Il dominio di un'applicazione costituisce un limite di isolamento per sicurezza, controllo delle versioni, affidabilità e scaricamento di codice gestito. Un thread è il costrutto del sistema operativo usato da Common Language Runtime per eseguire il codice. In fase di esecuzione, tutto il codice gestito viene caricato in un dominio applicazione ed eseguito da uno o più thread gestiti.  
   
  Non esiste una relazione uno a uno tra domini applicazione e thread. È possibile eseguire diversi thread nello stesso dominio applicazione contemporaneamente e un particolare thread non è confinato a un singolo dominio applicazione. I thread possono quindi estendersi oltre i limiti dei domini applicazione. Non viene creato un nuovo thread per ogni dominio applicazione.  
   
- In qualsiasi momento, ogni thread viene eseguito in un dominio applicazione. In qualsiasi dominio applicazione potrebbero essere in esecuzione zero, uno o più thread. Il runtime tiene traccia dei thread in esecuzione nei diversi domini applicazione. In qualsiasi momento è possibile individuare il dominio in cui un thread viene eseguito chiamando il metodo <xref:System.Threading.Thread.GetDomain%2A?displayProperty=nameWithType>.  
-  
-### <a name="application-domains-and-cultures"></a>Domini applicazione e impostazioni cultura  
+ In qualsiasi momento, ogni thread viene eseguito in un dominio applicazione. In qualsiasi dominio applicazione potrebbero essere in esecuzione zero, uno o più thread. Il runtime tiene traccia dei thread in esecuzione nei diversi domini applicazione. In qualsiasi momento è possibile individuare il dominio in cui un thread viene eseguito chiamando il metodo <xref:System.Threading.Thread.GetDomain%2A?displayProperty=nameWithType>.
+
+### <a name="application-domains-and-cultures"></a>Domini applicazione e impostazioni cultura
+
  Le impostazioni cultura, rappresentate da un oggetto <xref:System.Globalization.CultureInfo>, sono associate ai thread. È possibile ottenere le impostazioni cultura associate al thread attualmente in esecuzione tramite la proprietà <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> e ottenere o impostare le impostazioni cultura associate al thread attualmente in esecuzione tramite la proprietà <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType>. Se le impostazioni cultura associate a un thread sono state impostate in modo esplicito tramite la proprietà <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType>, continueranno a essere associate al thread in questione quando da quest'ultimo vengono superati i limiti del dominio applicazione. In caso contrario, le impostazioni cultura associate al thread in un determinato momento sono determinate dal valore della proprietà <xref:System.Globalization.CultureInfo.DefaultThreadCurrentCulture%2A?displayProperty=nameWithType> nel dominio applicazione in cui il thread è in esecuzione:  
   
 -   Se il valore della proprietà non è `null`, le impostazioni cultura che vengono restituite dalla proprietà sono associate al thread e pertanto restituite dalle proprietà <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> e <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>.  
   
 -   Se il valore della proprietà è `null`, le impostazioni cultura correnti del sistema vengono associate al thread.  
   
-## <a name="programming-with-application-domains"></a>Programmazione con i domini applicazione  
+## <a name="programming-with-application-domains"></a>Programmazione con i domini applicazione
+
  I domini applicazione vengono solitamente creati e modificati direttamente a livello di codice dagli host di runtime. Tuttavia, anche un programma applicativo può richiedere talvolta l'utilizzo di domini applicazione. Un programma applicativo, ad esempio, potrebbe caricare il componente di un'applicazione in un dominio per poter scaricare il dominio e il componente senza dover interrompere l'intera applicazione.  
   
  La <xref:System.AppDomain> è l'interfaccia che consente di accedere ai domini applicazione a livello di codice. e include metodi per creare e scaricare domini, per creare istanze di tipi nei domini e per effettuare la registrazione per varie notifiche, come ad esempio quelle per scaricare i domini applicazione. La tabella riportata di seguito elenca i metodi di <xref:System.AppDomain> comunemente usati.  
@@ -126,7 +122,8 @@ I sistemi operativi e gli ambienti runtime forniscono solitamente una forma di i
   
  Anche le interfacce non gestite descritte nelle specifiche delle interfacce di hosting di Common Language Runtime forniscono l'accesso ai domini applicazione. Gli host di runtime possono usare tali interfacce dal codice non gestito per creare i domini applicazione e accedervi nell'ambito di un processo.  
   
-## <a name="complusloaderoptimization-environment-variable"></a>Variabile di ambiente COMPLUS_LoaderOptimization  
+## <a name="the-complusloaderoptimization-environment-variable"></a>Variabile di ambiente COMPLUS_LoaderOptimization
+
  Variabile di ambiente tramite cui vengono impostati i criteri predefiniti di ottimizzazione del caricatore di un'applicazione eseguibile.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -135,7 +132,8 @@ I sistemi operativi e gli ambienti runtime forniscono solitamente una forma di i
 COMPLUS_LoaderOptimization = 1  
 ```  
   
-### <a name="remarks"></a>Note  
+### <a name="remarks"></a>Note
+
  Tramite un'applicazione tipica vengono caricati diversi assembly in un dominio applicazione prima che il codice in essi contenuto possa essere eseguito.  
   
  Il modo in cui viene caricato l'assembly determina se il codice con compilazione JIT può essere condiviso da più domini applicazione nel processo.  
@@ -149,7 +147,8 @@ COMPLUS_LoaderOptimization = 1
 > [!CAUTION]
 >  Il flag di ambiente COMPLUS_LoaderOptimization è stato progettato per essere usato negli scenari di test e di diagnostica. L'abilitazione del flag può provocare notevoli rallentamenti e aumentare l'utilizzo della memoria.  
   
-### <a name="code-example"></a>Esempio di codice  
+### <a name="code-example"></a>Esempio di codice
+
  Per evitare il caricamento di tutti gli assembly come indipendenti dal dominio per il servizio IISADMIN, aggiungere `COMPLUS_LoaderOptimization=1` al valore multistringa dell'ambiente nella chiave HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\IISADMIN.  
   
 ```  
@@ -159,6 +158,9 @@ Type = REG_MULTI_SZ
 Value (to append) = COMPLUS_LoaderOptimization=1  
 ```  
   
-<a name="reference"></a>   
-## <a name="reference"></a>Riferimenti  
- <xref:System.MarshalByRefObject?displayProperty=nameWithType>
+## <a name="see-also"></a>Vedere anche
+
+- <xref:System.AppDomain?displayProperty=nameWithType>
+- <xref:System.MarshalByRefObject?displayProperty=nameWithType>
+- [Programmazione con i domini applicazione e gli assembly](index.md)
+- [Uso dei domini dell'applicazione](use.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - async method [C#]
 - async [C#]
 ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
-ms.openlocfilehash: 10f1d62c5aa29f2074106ab102775b9a0283d646
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 021a4291f550eca517cbdc9769c2a9f0aca99d1e
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510962"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199877"
 ---
 # <a name="async-c-reference"></a>async (Riferimenti per C#)
 Usare il modificatore `async` per specificare che un metodo, un'[espressione lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) o un [metodo anonimo](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) sia asincrono. Se si usa questo modificatore in un metodo o in un'espressione, viene indicato come *metodo asincrono*. L'esempio seguente definisce un metodo asincrono denominato `ExampleMethodAsync`: 
@@ -78,7 +78,7 @@ Specificare `Task<TResult>` come tipo restituito di un metodo asincrono se l'ist
   
 Utilizzare il tipo restituito `void` principalmente per definire gestori eventi, che richiedono tale tipo restituito. Il chiamante di un metodo asincrono che restituisce `void` non può attendere il metodo e non può acquisire eccezioni generate dal metodo.  
 
-A partire da C# 7.0, si restituisce un altro tipo, in genere un tipo valore, che ha un metodo `GetAwaiter` per ridurre al minimo le allocazioni di memoria nelle sezioni del codice critiche per le prestazioni. 
+A partire da C# 7.0, viene restituito un altro tipo, in genere un tipo valore, che ha un metodo `GetAwaiter` per ridurre al minimo le allocazioni di memoria nelle sezioni di codice critiche per le prestazioni. 
 
 Per altre informazioni ed esempi, vedere [Tipi restituiti asincroni](../../../csharp/programming-guide/concepts/async/async-return-types.md).  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - float keyword [C#]
 - floating-point numbers [C#], float keyword
 ms.assetid: 1e77db7b-dedb-48b7-8dd1-b055e96a9258
-ms.openlocfilehash: 98f89ba3d79f7679b69ce10fd875b3caf69c5257
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: da697aa6f1f429418a69d9f58a13f46a3da9ac74
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47157704"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50187179"
 ---
 # <a name="float-c-reference"></a>float (Riferimenti per C#)
 
@@ -21,7 +21,7 @@ La parola chiave `float` indica un tipo semplice che archivia valori a virgola m
 
 |Tipo|Intervallo approssimativo|Precisione|Tipo .NET|  
 |----------|-----------------------|---------------|-------------------------|  
-|`float`|Compreso tra ±1.5 x 10<sup>−45</sup> e ±3.4 x 10<sup>38</sup>|7 cifre|<xref:System.Single?displayProperty=nameWithType>|  
+|`float`|Compreso tra ±1.5 x 10<sup>−45</sup> e ±3.4 x 10<sup>38</sup>|~6-9 cifre|<xref:System.Single?displayProperty=nameWithType>|  
 
 ## <a name="literals"></a>Valori letterali
 
@@ -51,7 +51,7 @@ Un'espressione a virgola mobile può contenere gli insiemi di valori seguenti:
 
 - Insieme finito di valori diversi da zero
 
-Per altre informazioni su questi valori, vedere lo standard IEEE per l'aritmetica a virgola mobile binaria, disponibile nel sito Web [IEEE](http://www.ieee.org).
+Per altre informazioni su questi valori, vedere lo standard IEEE per l'aritmetica a virgola mobile binaria, disponibile nel sito Web [IEEE](https://www.ieee.org).
 
 ## <a name="example"></a>Esempio
 

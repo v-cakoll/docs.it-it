@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: f5fd156ba25352fb1f816349c5e130267f7da8c2
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: e4a4d58f154116974c7314e84f625b338cbfe204
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925844"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50038305"
 ---
 # <a name="methods"></a>Metodi #
 
@@ -114,7 +114,7 @@ L'esempio seguente definisce una classe (che è un tipo riferimento) denominata 
 <a name="byref"></a>
 ### <a name="passing-parameters-by-reference"></a>Passaggio di parametri per riferimento ###
 
-Si passa un parametro per riferimento quando si vuole modificare il valore di un argomento in un metodo e si vuole riflettere tale modifica quando il controllo torna al metodo chiamante. Per passare un parametro per riferimento, usare la parola chiave [`ref`](language-reference/keywords/ref.md) o [`out`](language-reference/keywords/out-parameter-modifier.md). È anche possibile passare un valore per riferimento per evitare la copia, ma comunque impedire modifiche usando la parola chiave [`in`](language-reference/keywords/in-parameter-modifier.md).
+È necessario passare un parametro per riferimento quando si vuole modificare il valore di un argomento in un metodo e questa modifica deve essere applicata quando il controllo torna al metodo chiamante. Per passare un parametro per riferimento, usare la parola chiave [`ref`](language-reference/keywords/ref.md) o [`out`](language-reference/keywords/out-parameter-modifier.md). È anche possibile passare un valore per riferimento per evitare la copia, ma comunque impedire modifiche usando la parola chiave [`in`](language-reference/keywords/in-parameter-modifier.md).
 
 L'esempio seguente è identico a quello precedente, ad eccezione del fatto che il valore viene passato per riferimento al metodo `ModifyValue`. Quando il valore del parametro è modificato nel metodo `ModifyValue`, la modifica del valore si riflette quando il controllo torna al chiamante.
 

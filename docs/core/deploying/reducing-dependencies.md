@@ -4,12 +4,12 @@ description: Ridurre le dipendenze dei pacchetti durante la creazione di libreri
 author: cartermp
 ms.author: mairaw
 ms.date: 06/20/2016
-ms.openlocfilehash: ae314800f789cee363728def8347b5e6990acb0b
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 6da7404415e8d485533fc1c9a619cb0706a26aca
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44193613"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50040881"
 ---
 # <a name="reducing-package-dependencies-with-projectjson"></a>Riduzione delle dipendenze dei pacchetti con project.json
 
@@ -36,7 +36,7 @@ Attualmente non è disponibile un comando `dotnet` ufficiale che consenta di rid
 È possibile individuare i pacchetti non necessari in uno dei modi seguenti:
 
 1. Tentativi ed errori.  Questo metodo fa riferimento alla rimozione di un pacchetto, al relativo ripristino, se la libreria continua a eseguire la compilazione, e alla ripetizione del processo.
-2. Tramite uno strumento come [ILSpy](http://ilspy.net) o [.NET Reflector](http://www.red-gate.com/products/dotnet-development/reflector) per la selezione dei riferimenti in modo da visualizzare quali vengono effettivamente usati dal codice.  A questo punto, è possibile rimuovere i pacchetti che non corrispondono ai tipi in uso.
+2. Tramite uno strumento come [ILSpy](https://github.com/icsharpcode/ILSpy#ilspy-------) o [.NET Reflector](https://www.red-gate.com/products/dotnet-development/reflector) per la selezione dei riferimenti in modo da visualizzare quali vengono effettivamente usati dal codice.  A questo punto, è possibile rimuovere i pacchetti che non corrispondono ai tipi in uso.
 
 ## <a name="example"></a>Esempio 
 
@@ -127,7 +127,7 @@ Successivamente, sovrascrivere i riferimenti dei pacchetti nella sezione `depend
 }
 ```
 
-Si tratta di numerosi pacchetti, molti dei quali certamente non necessari per l'estensione dei tipi di raccolta.  È possibile rimuovere manualmente i pacchetti o usare uno strumento come [ILSpy](http://ilspy.net) o [.NET Reflector](http://www.red-gate.com/products/dotnet-development/reflector) per identificare i pacchetti effettivamente usati dal codice.
+Si tratta di numerosi pacchetti, molti dei quali certamente non necessari per l'estensione dei tipi di raccolta.  È possibile rimuovere manualmente i pacchetti o usare uno strumento come [ILSpy](https://github.com/icsharpcode/ILSpy#ilspy-------) o [.NET Reflector](https://www.red-gate.com/products/dotnet-development/reflector/) per identificare i pacchetti effettivamente usati dal codice.
 
 Di seguito un esempio di pacchetto dopo la riduzione delle dipendenze:
 

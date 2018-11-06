@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7722a333-b974-47a2-a7c0-f09097fb644e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8e98862aba937724c799adef597260a06ed495f6
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: e7d7f791fbc68a526f428f4f79d9b379a23ca771
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44199765"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199487"
 ---
 # <a name="semaphore-and-semaphoreslim"></a>Semaphore e SemaphoreSlim
 La classe <xref:System.Threading.Semaphore?displayProperty=nameWithType> rappresenta un semaforo denominato (systemwide) o locale. È un semplice wrapper per l'oggetto semaforo Win32. I semafori Win32 sono semafori di conteggio che possono essere usati per controllare l'accesso a un pool di risorse.  

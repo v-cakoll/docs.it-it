@@ -7,50 +7,51 @@ helpviewer_keywords:
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e30b1a5a4d3b50c80edaac29cbd6b90f3ddd103b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 14bf011c3711a267b8cf5a1fc0497a347468387d
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43400503"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49121757"
 ---
 # <a name="how-to-create-com-wrappers"></a>Procedura: creare wrapper COM
-È possibile creare wrapper COM (Component Object Model) usando le funzionalità [!INCLUDE[vsprvsext](../../../includes/vsprvsext-md.md)] degli strumenti Tlbimp.exe e Regasm.exe di .NET Framework. Entrambi i metodi generano due tipi di wrapper COM:  
-  
--   Oggetto [Runtime Callable Wrapper](../../../docs/framework/interop/runtime-callable-wrapper.md) da una libreria dei tipi per l'esecuzione di un oggetto COM nel codice gestito.  
-  
--   Oggetto [COM Callable Wrapper](../../../docs/framework/interop/com-callable-wrapper.md) con le impostazioni del Registro di sistema richieste per l'esecuzione di un oggetto gestito in un'applicazione nativa.  
-  
- In [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] è possibile aggiungere il wrapper COM come riferimento al progetto.  
-  
-## <a name="wrapping-com-objects-in-a-managed-application"></a>Wrapping di oggetti COM in un'applicazione gestita  
-  
-#### <a name="to-create-a-runtime-callable-wrapper-using-visual-studio"></a>Per creare un Runtime Callable Wrapper con Visual Studio  
-  
-1.  Aprire il progetto per l'applicazione gestita.  
-  
-2.  Scegliere **Mostra tutti i file** dal menu **Progetto**.  
-  
-3.  Scegliere **Aggiungi riferimento** dal menu **Progetto**.  
-  
-4.  Nella finestra di dialogo Aggiungi riferimento fare clic sulla scheda **COM**, selezionare il componente che si vuole usare e fare clic su **OK**.  
-  
-     In **Esplora soluzioni** si noti che il componente COM viene aggiunto alla cartella Riferimenti nel progetto.  
-  
- È ora possibile scrivere codice per accedere all'oggetto COM. È possibile iniziare dichiarando l'oggetto, ad esempio con un'istruzione `Imports` per [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] o un'istruzione `Using` per [!INCLUDE[csprcslong](../../../includes/csprcslong-md.md)].  
-  
+
+È possibile creare wrapper COM (Component Object Model) usando le funzionalità di Visual Studio 2005 o gli strumenti .NET Framework Tlbimp.exe e Regasm.exe. Entrambi i metodi generano due tipi di wrapper COM:
+
+-   Oggetto [Runtime Callable Wrapper](../../../docs/framework/interop/runtime-callable-wrapper.md) da una libreria dei tipi per l'esecuzione di un oggetto COM nel codice gestito.
+
+-   Oggetto [COM Callable Wrapper](../../../docs/framework/interop/com-callable-wrapper.md) con le impostazioni del Registro di sistema richieste per l'esecuzione di un oggetto gestito in un'applicazione nativa.
+
+In Visual Studio 2005 è possibile aggiungere il wrapper COM come riferimento al progetto.
+
+## <a name="wrap-com-objects-in-a-managed-application"></a>Eseguire il wrapping di oggetti COM in un'applicazione gestita
+
+### <a name="to-create-a-runtime-callable-wrapper-using-visual-studio"></a>Per creare un Runtime Callable Wrapper con Visual Studio
+
+1.  Aprire il progetto per l'applicazione gestita.
+
+2.  Scegliere **Mostra tutti i file** dal menu **Progetto**.
+
+3.  Scegliere **Aggiungi riferimento** dal menu **Progetto**.
+
+4.  Nella finestra di dialogo Aggiungi riferimento fare clic sulla scheda **COM**, selezionare il componente che si vuole usare e fare clic su **OK**.
+
+     In **Esplora soluzioni** si noti che il componente COM viene aggiunto alla cartella Riferimenti nel progetto.
+
+È ora possibile scrivere codice per accedere all'oggetto COM. È possibile iniziare dichiarando l'oggetto, ad esempio con un'istruzione `Imports` per [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] o un'istruzione `Using` per [!INCLUDE[csprcslong](../../../includes/csprcslong-md.md)].
+
 > [!NOTE]
->  Per programmare componenti di Microsoft Office, installare innanzitutto gli [assembly di interoperabilità primari di Microsoft Office](https://go.microsoft.com/fwlink/?LinkId=50479) dall'Area download Microsoft. Nel passaggio 4 selezionare la versione più recente della libreria di oggetti disponibile per il prodotto Office desiderato, ad esempio la **libreria di oggetti di Microsoft Word 11.0**.  
+> Per programmare componenti di Microsoft Office, installare innanzitutto gli [assembly di interoperabilità primari di Microsoft Office](https://go.microsoft.com/fwlink/?LinkId=50479) dall'Area download Microsoft. Nel passaggio 4 selezionare la versione più recente della libreria di oggetti disponibile per il prodotto Office desiderato, ad esempio la **libreria di oggetti di Microsoft Word 11.0**.  
   
-#### <a name="to-create-a-runtime-callable-wrapper-using-net-framework-tools"></a>Per creare un Runtime Callable Wrapper con gli strumenti di .NET Framework  
+### <a name="to-create-a-runtime-callable-wrapper-using-net-framework-tools"></a>Per creare un Runtime Callable Wrapper con gli strumenti di .NET Framework  
   
 -   Eseguire lo strumento [Tlbimp.exe (utilità di importazione della libreria dei tipi)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md).  
   
  Questo strumento crea un assembly che contiene i metadati di runtime per i tipi definiti nella libreria dei tipi originale.  
   
-## <a name="wrapping-managed-objects-in-a-native-application"></a>Wrapping di oggetti gestiti in un'applicazione nativa  
+## <a name="wrap-managed-objects-in-a-native-application"></a>Eseguire il wrapping di oggetti gestiti in un'applicazione nativa  
   
-#### <a name="to-create-a-com-callable-wrapper-using-visual-studio"></a>Per creare un COM Callable Wrapper con Visual Studio  
+### <a name="to-create-a-com-callable-wrapper-using-visual-studio"></a>Per creare un COM Callable Wrapper con Visual Studio  
   
 1.  Creare un progetto libreria di classi per la classe gestita che si vuole eseguire in codice nativo. La classe deve disporre di un costruttore predefinito.  
   
@@ -62,16 +63,17 @@ ms.locfileid: "43400503"
   
 4.  Selezionare la casella di controllo **Registra per interoperabilità COM**.  
   
- Quando si compila il progetto, l'assembly viene automaticamente registrato per l'interoperabilità COM. Se si compila un'applicazione nativa in [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)], è possibile usare l'assembly scegliendo **Aggiungi riferimento** dal menu **Progetto**.  
+ Quando si compila il progetto, l'assembly viene automaticamente registrato per l'interoperabilità COM. Se si compila un'applicazione nativa in Visual Studio 2005, è possibile usare l'assembly scegliendo **Aggiungi riferimento** dal menu **Progetto**.  
   
-#### <a name="to-create-a-com-callable-wrapper-using-net-framework-tools"></a>Per creare un COM Callable Wrapper con gli strumenti di .NET Framework  
+### <a name="to-create-a-com-callable-wrapper-using-net-framework-tools"></a>Per creare un COM Callable Wrapper con gli strumenti di .NET Framework  
   
--   Eseguire lo strumento [Regasm.exe (strumento di registrazione di assembly)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md).  
+Eseguire lo strumento [Regasm.exe (strumento di registrazione di assembly)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md).  
   
- Questo strumento legge i metadati in un assembly e aggiunge le voci necessarie nel Registro di sistema. Di conseguenza, i client COM possono creare classi di .NET Framework in modo trasparente. È possibile usare l'assembly come se fosse una classe COM nativa.  
+Questo strumento legge i metadati in un assembly e aggiunge le voci necessarie nel Registro di sistema. Di conseguenza, i client COM possono creare classi di .NET Framework in modo trasparente. È possibile usare l'assembly come se fosse una classe COM nativa.  
   
- È possibile eseguire Regasm.exe su un assembly disponibile in qualsiasi directory e quindi eseguire [Gacutil.exe (strumento Global Assembly Cache)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) per spostarlo nella Global Assembly Cache. Lo spostamento dell'assembly non invalida le voci del Registro di sistema per la posizione, perché la Global Assembly Cache viene sempre esaminata se l'assembly non viene trovato in altre posizioni.  
+È possibile eseguire Regasm.exe su un assembly disponibile in qualsiasi directory e quindi eseguire [Gacutil.exe (strumento Global Assembly Cache)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) per spostarlo nella Global Assembly Cache. Lo spostamento dell'assembly non invalida le voci del Registro di sistema per la posizione, perché la Global Assembly Cache viene sempre esaminata se l'assembly non viene trovato in altre posizioni.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Runtime Callable Wrapper](../../../docs/framework/interop/runtime-callable-wrapper.md)  
- [COM Callable Wrapper](../../../docs/framework/interop/com-callable-wrapper.md)
+
+- [Runtime Callable Wrapper](../../../docs/framework/interop/runtime-callable-wrapper.md)  
+- [COM Callable Wrapper](../../../docs/framework/interop/com-callable-wrapper.md)

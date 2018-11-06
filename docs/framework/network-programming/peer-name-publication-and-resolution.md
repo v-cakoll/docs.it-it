@@ -2,28 +2,27 @@
 title: Pubblicazione e risoluzione di nomi di peer
 ms.date: 03/30/2017
 ms.assetid: f0370e08-9fa6-4ee5-ab78-9a58a20a7da2
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 436c84c948a867acedf69af1bc7b3e78c308ce54
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 98ccfc79a25d547c751d8153d0f290860e5eb743
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193551"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50184556"
 ---
 # <a name="peer-name-publication-and-resolution"></a>Pubblicazione e risoluzione di nomi di peer
+
 ## <a name="publishing-a-peer-name"></a>Pubblicazione di un nome di peer  
+
  Per pubblicare un nuovo ID PNRP, un peer esegue le operazioni seguenti:  
   
 -   Invia i messaggi di pubblicazione PNRP ai suoi vicini di cache (i peer che hanno registrato ID PNRP nel livello più basso della cache) per inizializzare le rispettive cache.  
   
 -   Sceglie casualmente nodi nel cloud che non sono adiacenti e invia loro richieste di risoluzione dei nomi PNRP per il proprio ID P2P. Il processo di determinazione dell'endpoint risultante inizializza le cache dei nodi casuali nel cloud con l'ID PNRP del peer di pubblicazione.  
   
--  
+I nodi della versione 2 PNRP non pubblicano ID PNRP se stanno solo risolvendo altri ID P2P. Il valore del Registro di sistema HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\PeerNet\PNRP\IPV6-Global\SearchOnly=1 (tipo REG_DWORD) specifica che i peer possono usare PNRP solo per la risoluzione dei nomi e mai per la pubblicazione dei nomi. Questo valore del Registro di sistema può essere configurato anche tramite Criteri di gruppo.  
   
- I nodi della versione 2 PNRP non pubblicano ID PNRP se stanno solo risolvendo altri ID P2P. Il valore del Registro di sistema HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\PeerNet\PNRP\IPV6-Global\SearchOnly=1 (tipo REG_DWORD) specifica che i peer possono usare PNRP solo per la risoluzione dei nomi e mai per la pubblicazione dei nomi. Questo valore del Registro di sistema può essere configurato anche tramite Criteri di gruppo.  
-  
-## <a name="resolving-a-peer-name"></a>Risoluzione di un nome di peer  
+## <a name="resolving-a-peer-name"></a>Risoluzione di un nome di peer
+
  L'individuazione di altri peer in una rete o cloud PNRP è un processo costituito da due fasi:  
   
 1.  Determinazione dell'endpoint  
@@ -44,11 +43,9 @@ ms.locfileid: "47193551"
   
 -   Se non trova l'ID PNRP e se nella sua cache non è presente alcun ID PNRP più simile a quello di destinazione, il peer che ha ricevuto la richiesta invia al richiedente una risposta con la situazione accertata. Il peer richiedente sceglie quindi il secondo ID PNRP più vicino.  
   
--  
-  
- Il peer richiedente continua questo processo con iterazioni successive, fino a individuare il nodo che ha registrato l'ID PNRP.  
+Il peer richiedente continua questo processo con iterazioni successive, fino a individuare il nodo che ha registrato l'ID PNRP.  
   
  All'interno dello spazio dei nomi <xref:System.Net.PeerToPeer> esiste una relazione molti-a-molti tra i record <xref:System.Net.PeerToPeer.PeerName> che contengono gli endpoint e i cloud o le reti PNRP in cui comunicano. In presenza di voci duplicate o non aggiornate o di più nodi con lo stesso nome di peer, i nodi PNRP possono ottenere informazioni aggiornate usando la classe <xref:System.Net.PeerToPeer.PeerNameResolver>. I metodi <xref:System.Net.PeerToPeer.PeerNameResolver> usano un singolo nome di peer per semplificare la prospettiva per i record dei nomi uno-a-molti per i peer e uno-a-molti per i cloud. Il meccanismo è simile all'esecuzione di una query tramite un join su una tabella relazionale. Al completamento, l'oggetto Resolver restituisce un <xref:System.Net.PeerToPeer.PeerNameRecordCollection> per il nome di peer specificato.  Ad esempio, un nome di peer comparirebbe in tutti i record di nomi di peer della raccolta, ordinati in base al cloud. Queste sono le istanze del nome di peer i cui dati di supporto potrebbero essere richiesti da un'applicazione basata sul protocollo PNRP.  
   
 ## <a name="see-also"></a>Vedere anche  
- <xref:System.Net.PeerToPeer>
+- <xref:System.Net.PeerToPeer>

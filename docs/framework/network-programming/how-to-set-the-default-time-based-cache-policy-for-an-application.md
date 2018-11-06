@@ -1,5 +1,5 @@
 ---
-title: "Procedura: Impostare criteri di cache predefiniti basati sull'ora per un'applicazione"
+title: "Procedura: Impostare criteri di cache predefiniti basati sul tempo per un'applicazione"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,17 +9,15 @@ helpviewer_keywords:
 - cache [.NET Framework], time-based policies
 - default time-based cache policy
 ms.assetid: 6bfce066-a2e7-4add-a05e-85c12ec9f07f
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 1e08026f8d1ec8b39f7ef3c2c34efad9e51b8fe9
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: cdb93f802d313c0812bb50236ff5962c44251b4e
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47235702"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50182918"
 ---
-# <a name="how-to-set-the-default-time-based-cache-policy-for-an-application"></a>Procedura: Impostare criteri di cache predefiniti basati sull'ora per un'applicazione
-I criteri di cache basati sul tempo predefiniti consentono di definire il comportamento della cache per un'applicazione in base alle intestazioni inviate con la risorsa memorizzata nella cache e al comportamento della cache definito nelle sezioni 13 e 14 del documento RFC 2616, disponibile all'indirizzo [http://www.ietf.org](http://www.ietf.org/). Questo è il comportamento della cache appropriato per la maggior parte delle applicazioni.  
+# <a name="how-to-set-the-default-time-based-cache-policy-for-an-application"></a>Procedura: Impostare criteri di cache predefiniti basati sul tempo per un'applicazione
+I criteri di cache predefiniti basati sul tempo consentono di definire il comportamento della cache per un'applicazione in base alle intestazioni inviate con la risorsa memorizzata nella cache e al comportamento della cache definito nelle sezioni 13 e 14 del documento RFC 2616, disponibile nel sito Web [Internet Engineering Task Force (IETF)](https://www.ietf.org/). Questo è il comportamento della cache appropriato per la maggior parte delle applicazioni.  
   
 ### <a name="to-set-the-default-automatic-policy-for-an-application"></a>Per impostare i criteri automatici predefiniti per un'applicazione  
   

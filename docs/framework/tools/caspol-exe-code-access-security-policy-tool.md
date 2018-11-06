@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c12444e435fa844095827411ba0e068303163bf4
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: cfb1e29229393b44c193c4e88005ebc350dbcc6f
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47201140"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086856"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (strumento per i criteri di sicurezza dall'accesso di codice)
 Lo strumento Criteri di sicurezza dall'accesso di codice (Caspol.exe) consente a utenti e amministratori di modificare i criteri di sicurezza definiti a livello di computer, di utente e di azienda.  
@@ -90,7 +90,7 @@ caspol [options]
 |**-pub** { **-cert** *cert_file_name* &#124;<br /><br /> **-file** *signed_file_name* &#124; **-hex** *hex_string* }|Specifica il codice che include l'editore di software specificato, come indicato da un file di certificato, da una firma su un file o dalla rappresentazione esadecimale di un certificato X509. Per altre informazioni su questa condizione di appartenenza, vedere <xref:System.Security.Policy.PublisherMembershipCondition?displayProperty=nameWithType>.|  
 |**-site** *website*|Specifica il codice che include il sito di origine specificato. Ad esempio:<br /><br /> `-site** www.proseware.com`<br /><br /> Per altre informazioni su questa condizione di appartenenza, vedere <xref:System.Security.Policy.SiteMembershipCondition?displayProperty=nameWithType>.|  
 |**-strong -file** *file_name* {*name* &#124; **-noname**} {*version* &#124; **-noversion**}|Specifica il codice che include un nome sicuro specifico, composto dal nome del file, dal nome dell'assembly sotto forma di stringa e dalla versione dell'assembly nel formato *major*.*minor*.*build*.*revision*. Ad esempio:<br /><br /> **-strong -file** myAssembly.exe myAssembly 1.2.3.4<br /><br /> Per altre informazioni su questa condizione di appartenenza, vedere <xref:System.Security.Policy.StrongNameMembershipCondition?displayProperty=nameWithType>.|  
-|**-url** *URL*|Specifica il codice che deriva dall'URL specificato. L'URL deve includere un protocollo, quale http:// o ftp://. È anche possibile usare un carattere jolly (\*) per specificare più assembly da un determinato URL. **Nota:** poiché un URL può essere identificato tramite più nomi, l'uso di un URL come condizione di appartenenza non è un metodo sicuro per determinare l'identità del codice. Se possibile, è consigliabile utilizzare una condizione di appartenenza con un nome sicuro, una condizione di appartenenza editore o una condizione di appartenenza hash. <br /><br /> Per altre informazioni su questa condizione di appartenenza, vedere <xref:System.Security.Policy.UrlMembershipCondition?displayProperty=nameWithType>.|  
+|**-url** *URL*|Specifica il codice che deriva dall'URL specificato. L'URL deve includere un protocollo, ad esempio `http://` o `ftp://`. È anche possibile usare un carattere jolly (\*) per specificare più assembly da un determinato URL. **Nota:** poiché un URL può essere identificato tramite più nomi, l'uso di un URL come condizione di appartenenza non è un metodo sicuro per determinare l'identità del codice. Se possibile, è consigliabile utilizzare una condizione di appartenenza con un nome sicuro, una condizione di appartenenza editore o una condizione di appartenenza hash. <br /><br /> Per altre informazioni su questa condizione di appartenenza, vedere <xref:System.Security.Policy.UrlMembershipCondition?displayProperty=nameWithType>.|  
 |**-zone** *zonename*|Specifica il codice con la zona di origine specificata. L'argomento *zonename* può essere impostato su **MyComputer**, **Intranet**, **Trusted**, **Internet** o **Untrusted**. Per ulteriori informazioni su questa condizione di appartenenza, vedere la classe <xref:System.Security.Policy.ZoneMembershipCondition>.|  
   
  L'argomento *flags*, utilizzabile con le opzioni **-addgroup** e **-chggroup**, viene specificato mediante uno degli argomenti elencati di seguito.  

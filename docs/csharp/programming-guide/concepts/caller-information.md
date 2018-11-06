@@ -2,12 +2,12 @@
 title: Informazioni sul chiamante (C#)
 ms.date: 07/20/2015
 ms.assetid: ffad3d24-2fb7-4641-9124-53b5bc91d339
-ms.openlocfilehash: 27f2e7624369061ff3089357c455ae51237e6dfa
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 4a0e4d6ecad1863832a33ba91485d0c12675cd57
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46586457"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50185274"
 ---
 # <a name="caller-information-c"></a>Informazioni sul chiamante (C#)
 
@@ -76,7 +76,7 @@ Nel grafico seguente vengono mostrati i nomi dei membri restituiti quando si uti
 |Costruttore statico|Stringa ".cctor"|
 |Distruttore|Stringa "Finalize"|
 |Operatori o conversioni definiti dall'utente|Nome generato per il membro, ad esempio "op_Addition".|
-|Costruttore dell'attributo|Nome del membro a cui viene applicato l'attributo. Se l'attributo è un qualsiasi elemento in un membro (ad esempio un parametro, un valore restituito o un parametro di tipo generico), il risultato è il nome del membro associato a tale elemento.|
+|Costruttore dell'attributo|Nome del metodo o della proprietà cui viene applicato l'attributo. Se l'attributo è un qualsiasi elemento in un membro (ad esempio un parametro, un valore restituito o un parametro di tipo generico), il risultato è il nome del membro associato a tale elemento.|
 |Nessun membro contenitore (ad esempio a livello di assembly o attributi applicati a tipi)|Valore predefinito del parametro facoltativo.|
 
 ## <a name="see-also"></a>Vedere anche

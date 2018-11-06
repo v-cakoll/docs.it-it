@@ -2,25 +2,34 @@
 title: Testing unità di librerie F# in .NET Core usando il test dotnet e NUnit
 description: Informazioni sui concetti relativi agli unit test per F# in .NET Core tramite un'esperienza interattiva per la creazione passo-passo di una soluzione di esempio con test dotnet e NUnit.
 author: rprouse
-ms.date: 12/01/2017
+ms.date: 10/04/2018
 dev_langs:
 - fsharp
-ms.openlocfilehash: c5653463ce43ab8660753aa03ef79ba10f339fac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: adadfc0358814f4600255aac7076f9ba6fbb4feb
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33215754"
+ms.lasthandoff: 10/13/2018
+ms.locfileid: "49308427"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-nunit"></a>Testing unità di librerie F# in .NET Core usando il test dotnet e NUnit
 
 In questa esercitazione viene illustrata un'esperienza interattiva di compilazione passo passo di una soluzione di esempio finalizzata all'apprendimento dei concetti base del testing unità. Se si preferisce seguire l'esercitazione usando una soluzione preesistente, [visualizzare o scaricare il codice di esempio](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-with-fsharp-nunit/) prima di iniziare. Per istruzioni sul download, vedere [Esempi ed esercitazioni](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
+## <a name="prerequisites"></a>Prerequisiti 
+- [.NET Core SDK 2.1 (v. 2.1.400)](https://www.microsoft.com/net/download) o versioni successive. 
+- Editor di testo o editor di codice a scelta.
+
 ## <a name="creating-the-source-project"></a>Creazione del progetto di origine
 
 Aprire una finestra della shell. Creare una directory denominata *unit-testing-with-fsharp* in cui archiviare la soluzione.
-In questa nuova directory eseguire [`dotnet new sln`](../tools/dotnet-new.md) per creare una nuova soluzione. Questo rende più semplice gestire sia la libreria di classi che il progetto di unit test.
-All'interno della directory della soluzione creare una directory *MathService*. La struttura della directory e dei file fino a questo momento è la seguente:
+In questa nuova directory eseguire il comando seguente per creare un nuovo file di soluzione per la libreria di classi e il progetto di test:
+
+```console
+dotnet new sln
+```
+
+Creare quindi una directory *MathService*. Finora è stata creata la struttura di directory e file seguente:
 
 ```
 /unit-testing-with-fsharp
@@ -28,22 +37,24 @@ All'interno della directory della soluzione creare una directory *MathService*. 
     /MathService
 ```
 
-Impostare *MathService* come directory corrente ed eseguire [`dotnet new classlib -lang F#`](../tools/dotnet-new.md) per creare il progetto di origine.  Per usare lo sviluppo basato su test (TDD) si creerà un'implementazione non funzionante del servizio matematico:
+Impostare *MathService* come directory corrente ed eseguire il comando seguente per creare il progetto di origine:
+
+```console
+dotnet new classlib -lang F#
+```
+
+Per usare lo sviluppo basato su test (TDD) , è necessario creare un'implementazione non funzionante del servizio matematico:
 
 ```fsharp
 module MyMath =
     let squaresOfOdds xs = raise (System.NotImplementedException("You haven't written a test yet!"))
 ```
 
-Tornare alla directory *unit-test-con-fsharp*. Eseguire [`dotnet sln add .\MathService\MathService.fsproj`](../tools/dotnet-sln.md) per aggiungere il progetto di libreria di classi alla soluzione.
+Tornare alla directory *unit-test-con-fsharp*. Eseguire il comando seguente per aggiungere il progetto di libreria di classi alla soluzione:
 
-## <a name="install-the-nunit-project-template"></a>Installare il modello di progetto NUnit
-
-È necessario installare i modelli di progetto di test NUnit prima di creare un progetto di test. Questa operazione deve essere eseguita una sola volta in ogni computer di sviluppo in cui verranno creati nuovi progetti NUnit. Eseguire [`dotnet new -i NUnit3.DotNetNew.Template`](../tools/dotnet-new.md) per installare i modelli NUnit.
-
- ```
- dotnet new -i NUnit3.DotNetNew.Template
- ```
+```console
+dotnet sln add .\MathService\MathService.fsproj
+```
 
 ## <a name="creating-the-test-project"></a>Creazione del progetto di test
 
@@ -58,7 +69,13 @@ Creare quindi la directory *MathService.Tests*. Di seguito è illustrata la stru
     /MathService.Tests
 ```
 
-Impostare *MathService.Tests* come directory corrente e creare un nuovo progetto usando [`dotnet new nunit -lang F#`](../tools/dotnet-new.md). Ciò crea un progetto di test che usa NUnit come framework di test. Il modello generato configura il Test Runner nel file *MathServiceTests.fsproj*:
+Impostare *MathService.Tests* come directory corrente e creare un nuovo progetto usando il comando seguente:
+
+```console
+dotnet new nunit -lang F#
+```
+
+Ciò crea un progetto di test che usa NUnit come framework di test. Il modello generato configura il Test Runner nel file *MathServiceTests.fsproj*:
 
 ```xml
 <ItemGroup>
@@ -70,7 +87,7 @@ Impostare *MathService.Tests* come directory corrente e creare un nuovo progetto
 
 Per creare ed eseguire unit test, il progetto di test richiede altri pacchetti. `dotnet new` nel passaggio precedente aggiunge NUnit e l'adattatore di test NUnit. Aggiungere ora la libreria di classi `MathService` come un'altra dipendenza del progetto. Usare il comando [`dotnet add reference`](../tools/dotnet-add-reference.md):
 
-```
+```console
 dotnet add reference ../MathService/MathService.fsproj
 ```
 
@@ -86,14 +103,18 @@ Il layout della soluzione finale è il seguente:
         MathService.fsproj
     /MathService.Tests
         Test Source Files
-        MathServiceTests.fsproj
+        MathService.Tests.fsproj
 ```
 
-Eseguire [`dotnet sln add .\MathService.Tests\MathService.Tests.fsproj`](../tools/dotnet-sln.md) nella directory *unit-testing-with-fsharp*.
+Eseguire il comando seguente nella directory *unit-testing-with-fsharp*:
+
+```console
+dotnet sln add .\MathService.Tests\MathService.Tests.fsproj
+```
 
 ## <a name="creating-the-first-test"></a>Creazione del primo test
 
-L'approccio di sviluppo basato su test richiede la creazione di un test con esito negativo. È quindi necessario che il test venga superato e che il processo venga ripetuto. Aprire *Tests.fs* e aggiungere il codice seguente:
+L'approccio di sviluppo basato su test richiede la creazione di un test con esito negativo. È quindi necessario che il test venga superato e che il processo venga ripetuto. Aprire *UnitTest1.fs* e aggiungere il codice seguente:
 
 ```fsharp
 namespace MathService.Tests
@@ -129,14 +150,14 @@ member this.TestEvenSequence() =
 
 Si noti che la sequenza `expected` è stata convertita in elenco. Il framework NUnit si basa su molti tipi .NET standard. Questa dipendenza indica che l'interfaccia pubblica e i risultati previsti supportano <xref:System.Collections.ICollection> invece di <xref:System.Collections.IEnumerable>.
 
-Quando si esegue il test, si noterà che non viene superato. Non è stata ancora creata l'implementazione. Fare in modo che questo test venga superato scrivendo il codice più semplice e funzionante nella classe `Mathservice`:
+Quando si esegue il test, si noterà che non viene superato. Non è stata ancora creata l'implementazione. Fare in modo che questo test venga superato scrivendo il codice più semplice nella classe *Library.fs* nel progetto MathService funzionante:
 
 ```csharp
 let squaresOfOdds xs =
     Seq.empty<int>
 ```
 
-Nella directory *unit-test-con-fsharp* eseguire di nuovo `dotnet test`. Il comando `dotnet test` esegue prima una compilazione del progetto `MathService` e quindi del progetto `MathService.Tests`. Dopo la compilazione di entrambi i progetti, verrà eseguito il test singolo, che viene superato.
+Nella directory *unit-test-con-fsharp* eseguire di nuovo `dotnet test`. Il comando `dotnet test` esegue prima una compilazione del progetto `MathService` e quindi del progetto `MathService.Tests`. Dopo la compilazione di entrambi i progetti, verranno eseguiti i test. Due test vengono ora superati.
 
 ## <a name="completing-the-requirements"></a>Completamento dei requisiti
 

@@ -5,12 +5,12 @@ ms.author: ronpet
 author: rpetrusha
 ms.date: 11/22/2016
 ms.assetid: b6a0539a-8ce5-4da7-adcf-44be345a2714
-ms.openlocfilehash: 2469e8a0fbf8181a720201637ab5ac5ef02055d4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 74ad1c5ddae69864b85099535e8b83a4504275a7
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43523525"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183130"
 ---
 # <a name="lambda-expressions"></a>Espressioni lambda #
 
@@ -52,7 +52,7 @@ Il compilatore usa solitamente l'inferenza del tipo per determinare i tipi di pa
 
 [!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/expression3.cs#3)]
 
-Si noti che nell'esempio precedente il corpo di un'espressione lambda dell'espressione può essere costituito da una chiamata al metodo. Se tuttavia si creano alberi delle espressioni valutati al di fuori di .NET Framework, ad esempio in SQL Server o in Entity Framework, non è consigliabile usare chiamate al metodo nelle espressioni lambda. I metodi non avranno infatti alcun significato fuori dal contesto dell'implementazione .NET. Se si sceglie comunque di usare le chiamate al metodo, testarle attentamente per assicurarsi che possano essere risolte correttamente.
+Si noti che nell'esempio precedente il corpo di un'espressione lambda dell'espressione può essere costituito da una chiamata al metodo. Se tuttavia si creano alberi delle espressioni valutati al di fuori di .NET Framework, ad esempio in SQL Server o in Entity Framework, non è consigliabile usare chiamate al metodo nelle espressioni lambda. I metodi non avranno infatti alcun significato fuori dal contesto dell'implementazione .NET. Se si sceglie comunque di usare chiamate di metodi in questo caso, assicurarsi di testarle attentamente per verificare che possano essere risolte correttamente.
 
 ## <a name="statement-lambdas"></a>Espressioni lambda dell'istruzione ##
 

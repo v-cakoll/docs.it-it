@@ -5,12 +5,12 @@ ms.custom: updateeachrelease
 author: rlander
 ms.author: mairaw
 ms.date: 04/10/2018
-ms.openlocfilehash: 6dafc118d9c5c68446a5c2ba4e14614396f301eb
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: eb62bfe992e5b3774c4a8123eb9ca3f790eaf0b9
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43744900"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50192876"
 ---
 # <a name="install-the-net-framework-on-windows-xp-and-windows-server-2003"></a>Installare .NET Framework in Windows XP e Windows Server 2003
 
@@ -21,7 +21,7 @@ ms.locfileid: "43744900"
 
 ![Impossibile avviare l'applicazione](./media/this-application-could-not-be-started.png)
 
-Queste istruzioni saranno utili per installare le versioni di .NET Framework necessarie. [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) è la versione più recente. Non è supportata in Windows XP e Windows Server 2003. È inclusa nell'[Aggiornamento di Windows 10 (aprile 2018)](https://www.microsoft.com/software-download/windows10).
+Queste istruzioni saranno utili per installare le versioni di .NET Framework necessarie. [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) è la versione più recente. Non è supportata in Windows XP e Windows Server 2003. Questa versione è inclusa nell'[Aggiornamento di Windows 10 (ottobre 2018)](https://support.microsoft.com/en-us/help/4028685/windows-10-get-the-update) e nell'[Aggiornamento di Windows 10 (aprile 2018)](https://www.microsoft.com/software-download/windows10).
 
 ## <a name="net-framework-403"></a>.NET Framework 4.0.3
 

@@ -3,12 +3,12 @@ title: Documentazione del codice con i commenti XML
 description: Informazioni su come documentare il codice con commenti della documentazione XML e generare un file di documentazione XML in fase di compilazione.
 ms.date: 02/14/2017
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: e211543a6a5cc5f6f29d8c195492b474eb24a38d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 09e6b4aa75aababcebba96693d6e73b29a30fc6a
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397059"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453268"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>Documentazione del codice con i commenti XML
 
@@ -51,7 +51,7 @@ Questo è il codice per la semplice libreria matematica:
 La libreria di esempio supporta quattro operazioni aritmetiche principali, ovvero `add`, `subtract`, `multiply` e `divide` su tipi di dati `int` e `double`.
 
 Si vuole ora creare un documento di riferimento all'API dal codice per sviluppatori di terze parti che usano la libreria ma non hanno accesso al codice sorgente.
-Come indicato precedentemente, è possibile usare i tag in formato documentazione XML per ottenere questo risultato. Verranno ora illustrati i tag XML standard supportati dal compilatore C#.
+Come accennato in precedenza, è possibile usare tag della documentazione XML a questo scopo. Verranno ora presentati i tag XML standard supportati dal compilatore C#.
 
 ### <a name="ltsummarygt"></a>&lt;summary&gt;
 

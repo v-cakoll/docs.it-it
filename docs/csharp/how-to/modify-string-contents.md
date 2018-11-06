@@ -3,12 +3,12 @@ title: 'Procedura: Modificare il contenuto delle stringhe - Guida a C#'
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: 23d52a52291b3d5c36fc2ed0f299ab82aa5ffabd
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 349269f8158f7d4db5e2058791087a258f504460
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44260178"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453437"
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>Procedura: Modificare il contenuto delle stringhe in C\#
 
@@ -65,7 +65,7 @@ Nell'esempio seguente viene illustrato come sostituire un gruppo di caratteri in
 ## <a name="unsafe-modifications-to-string"></a>Modifiche di tipo unsafe alle stringhe
 
 Il codice **unsafe** consente di modificare una stringa "sul posto" dopo che è stata creata. Il codice unsafe ignora molte funzionalità di .NET progettate per ridurre al minimo determinati tipi di bug nel codice. Per modificare una stringa sul posto è necessario usare il codice unsafe, perché la classe string è progettata come tipo **non modificabile**. Dopo che è stato creato, il valore di tale classe non cambia. Il codice unsafe aggira questa proprietà accedendo e modificando la memoria usata da un oggetto `string` senza usare i metodi `string` normali.
-L'esempio seguente viene incluso per i rari casi in cui si vuole modificare una stringa sul posto mediante codice unsafe. L'esempio illustra l'uso della parola chiave `fixed`. La parola chiave `fixed` impedisce a Garbage Collector (GC) di spostare l'oggetto stringa in memoria mentre il codice accede alla memoria usando il puntatore unsafe. Mostra anche un possibile effetto collaterale delle operazioni con codice unsafe sulle stringhe, legato al modo in cui il compilatore C# archivia (inserisce) le stringhe internamente. In generale questa tecnica va usata solo quando è assolutamente necessario. Per altre informazioni, vedere gli articoli relativi a [unsafe](../language-reference/keywords/unsafe.md) e [fixed](../language-reference/keywords/fixed-statement.md). La Guida di riferimento API per <xref:System.String.Intern%2A> include informazioni sulla centralizzazione delle stringhe.
+L'esempio seguente viene incluso per i rari casi in cui si vuole modificare una stringa sul posto mediante codice unsafe. L'esempio illustra l'uso della parola chiave `fixed`. La parola chiave `fixed` impedisce a Garbage Collector (GC) di spostare l'oggetto stringa in memoria mentre il codice accede alla memoria usando il puntatore unsafe. Mostra anche un possibile effetto collaterale delle operazioni con codice unsafe sulle stringhe, legato al modo in cui il compilatore C# archivia (inserisce) le stringhe internamente. In generale questa tecnica va usata solo quando è assolutamente necessario. Per altre informazioni, vedere gli articoli relativi a [unsafe](../language-reference/keywords/unsafe.md) e [fixed](../language-reference/keywords/fixed-statement.md). La Guida di riferimento alle API per <xref:System.String.Intern%2A> include informazioni sulla centralizzazione delle stringhe.
 
 [!code-csharp-interactive[unsafe ways to create a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#7)]
 

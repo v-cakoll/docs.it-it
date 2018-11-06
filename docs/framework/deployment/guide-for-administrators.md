@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f56ccbf549ce8f1750ba0bf9cf4a945007694258
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f646927d4ddf88ae117f6cacafc2e42df4e3abee
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502366"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195684"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>Guida alla distribuzione di .NET Framework per amministratori
 In questo articolo dettagliato vengono descritte le modalità in cui un amministratore di sistema può distribuire [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] e le relative dipendenze di sistema attraverso una rete usando Microsoft System Center Configuration Manager. L'articolo presuppone che tutti i computer client di destinazione soddisfino i requisiti minimi per .NET Framework. Per un elenco di requisiti software e hardware per l'installazione di [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], vedere [Requisiti di sistema di .NET Framework](../../../docs/framework/get-started/system-requirements.md).  
@@ -37,16 +37,16 @@ In questo articolo dettagliato vengono descritte le modalità in cui un amminist
 ## <a name="the-deployment-process"></a>Processo di distribuzione  
  Se si dispone dell'infrastruttura di supporto sul posto, è possibile usare System Center Configuration Manager 2012 per distribuire il pacchetto ridistribuibile di .NET Framework sui computer della rete. La creazione dell'infrastruttura include la creazione e la definizione di cinque aree primarie: raccolte, un pacchetto e un programma per il software, punti di distribuzione e distribuzioni.  
   
--   Le **raccolte** sono gruppi di risorse di Configuration Manager, ad esempio utenti, gruppi di utenti o computer, ai quali viene distribuito .NET Framework. Per altre informazioni, vedere [Raccolte in Configuration Manager](https://technet.microsoft.com/library/gg682169.aspx) nella libreria della documentazione di Configuration Manager.  
+-   Le **raccolte** sono gruppi di risorse di Configuration Manager, ad esempio utenti, gruppi di utenti o computer, ai quali viene distribuito .NET Framework. Per altre informazioni, vedere [Introduzione alle raccolte in System Center Configuration Manager](https://docs.microsoft.com/sccm/core/clients/manage/collections/introduction-to-collections) nella raccolta di documentazione di Configuration Manager.  
   
--   I **pacchetti e programmi** in genere rappresentano le applicazioni software da installare in un computer client, ma possono anche contenere singoli file, aggiornamenti o persino singoli comandi. Per altre informazioni, vedere [Pacchetti e programmi in Configuration Manager](https://technet.microsoft.com/library/gg699369.aspx) nella libreria della documentazione di Configuration Manager.  
+-   I **pacchetti e programmi** in genere rappresentano le applicazioni software da installare in un computer client, ma possono anche contenere singoli file, aggiornamenti o persino singoli comandi. Per altre informazioni, vedere [Pacchetti e programmi in System Center Configuration Manager](https://docs.microsoft.com/sccm/apps/deploy-use/packages-and-programs) nella raccolta di documentazione di Configuration Manager.  
   
--   I **punti di distribuzione** sono ruoli di sistema dei siti di Configuration Manager nei quali sono archiviati i file necessari per l'esecuzione del software nei computer client. Quando il client di Configuration Manager riceve ed elabora una distribuzione software, contatta un punto di distribuzione per scaricare il contenuto associato al software e avviare il processo di installazione. Per altre informazioni, vedere [Introduzione alla gestione dei contenuti in Configuration Manager](https://technet.microsoft.com/library/gg682083.aspx) nella libreria della documentazione di Configuration Manager.  
+-   I **punti di distribuzione** sono ruoli di sistema dei siti di Configuration Manager nei quali sono archiviati i file necessari per l'esecuzione del software nei computer client. Quando il client di Configuration Manager riceve ed elabora una distribuzione software, contatta un punto di distribuzione per scaricare il contenuto associato al software e avviare il processo di installazione. Per altre informazioni, vedere [Concetti di base della gestione dei contenuti in Configuration Manager](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management) nella raccolta di documentazione di Configuration Manager.  
   
--   Le **distribuzioni** indicano ai membri validi della raccolta di destinazione specificata di installare il pacchetto software. Per altre informazioni, vedere [Come distribuire le applicazioni in Configuration Manager](https://technet.microsoft.com/library/gg682082.aspx) nella libreria della documentazione di Configuration Manager.  
+-   Le **distribuzioni** indicano ai membri validi della raccolta di destinazione specificata di installare il pacchetto software. 
   
 > [!IMPORTANT]
->  Le procedure descritte in questo argomento includono impostazioni standard per creare e distribuire un pacchetto e un programma e potrebbero non illustrare tutte le impostazioni possibili. Per altre informazioni sulle opzioni di distribuzione di Configuration Manager, vedere [Libreria della documentazione di Configuration Manager](https://technet.microsoft.com/library/gg682041.aspx).  
+>  Le procedure descritte in questo argomento includono impostazioni standard per creare e distribuire un pacchetto e un programma e potrebbero non illustrare tutte le impostazioni possibili. Per altre informazioni sulle opzioni di distribuzione di Configuration Manager, vedere [Libreria della documentazione di Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg682041%28v=technet.10%29).  
   
 <a name="deploying_in_a_test_environment"></a>   
 ## <a name="deploying-the-net-framework"></a>Distribuzione di .NET Framework  
@@ -62,7 +62,7 @@ In questo articolo dettagliato vengono descritte le modalità in cui un amminist
   
 <a name="creating_a_collection"></a>   
 ### <a name="create-a-collection"></a>Creare una raccolta  
- In questo passaggio selezionare i computer in cui verrà distribuito il pacchetto e il programma e raggrupparli in una raccolta dispositivi. Per creare una raccolta in Configuration Manager, è possibile usare le regole di appartenenza dirette (dove vengono specificati manualmente i membri della raccolta) oppure regole di query (dove Configuration Manager determina i membri della raccolta in base ai criteri specificati). Per altre informazioni sulle regole di appartenenza, incluse query e regole dirette, vedere [Introduzione alle raccolte in Configuration Manager](https://technet.microsoft.com/library/gg682177.aspx) nella libreria della documentazione di Configuration Manager.  
+ In questo passaggio selezionare i computer in cui verrà distribuito il pacchetto e il programma e raggrupparli in una raccolta dispositivi. Per creare una raccolta in Configuration Manager, è possibile usare le regole di appartenenza dirette (dove vengono specificati manualmente i membri della raccolta) oppure regole di query (dove Configuration Manager determina i membri della raccolta in base ai criteri specificati). Per altre informazioni sulle regole di appartenenza, incluse query e regole dirette, vedere [Introduzione alle raccolte in System Center Configuration Manager](https://docs.microsoft.com/sccm/core/clients/manage/collections/introduction-to-collections) nella raccolta di documentazione di Configuration Manager.  
   
  Per creare una raccolta:  
   
@@ -83,8 +83,6 @@ In questo articolo dettagliato vengono descritte le modalità in cui un amminist
 8.  Nella pagina **Seleziona risorse** selezionare la casella di controllo per ogni computer a cui si vuole distribuire .NET Framework. Scegliere **Avanti** e completare la procedura guidata.  
   
 9. Nella pagina **Regole di appartenenza** della **Creazione guidata raccolta dispositivi** scegliere **Avanti** e completare la procedura guidata.  
-  
- Per altre informazioni sulle raccolte, vedere [Raccolte in Configuration Manager](https://technet.microsoft.com/library/bb693730.aspx) nella libreria della documentazione di Configuration Manager.  
   
 <a name="creating_a_package"></a>   
 ### <a name="create-a-package-and-program-for-the-net-framework-redistributable-package"></a>Creare un pacchetto e un programma per il pacchetto ridistribuibile di .NET Framework  
@@ -154,7 +152,7 @@ In questo articolo dettagliato vengono descritte le modalità in cui un amminist
   
 8.  Completare la procedura guidata.  
   
- Il pacchetto contiene tutte le informazioni necessarie per distribuire automaticamente .NET Framework 4.5. Prima di distribuire il pacchetto e il programma, verificare che siano installati nel punto di distribuzione. Vedere la sezione "Monitoraggio del contenuto" di [Operazioni e manutenzione per la gestione dei contenuti in Configuration Manager](https://technet.microsoft.com/library/gg712694.aspx#BKMK_MonitorContent) nella libreria della documentazione di Configuration Manager.  
+ Il pacchetto contiene tutte le informazioni necessarie per distribuire automaticamente .NET Framework 4.5. Prima di distribuire il pacchetto e il programma, verificare che siano installati nel punto di distribuzione. Vedere la sezione "Monitoraggio del contenuto" in [Monitorare il contenuto distribuito con System Center Configuration Manager](https://docs.microsoft.com/sccm/core/servers/deploy/configure/monitor-content-you-have-distributed) nella raccolta di documentazione di Configuration Manager.  
   
 <a name="deploying_package"></a>   
 ### <a name="deploy-the-package"></a>Distribuire il pacchetto  
@@ -193,27 +191,27 @@ In questo articolo dettagliato vengono descritte le modalità in cui un amminist
   
  **Active Directory, DNS, DHCP:**  
   
--   [Active Directory Domain Services per Windows Server 2008](https://technet.microsoft.com/library/dd378891.aspx)  
+-   [Active Directory Domain Services](/windows/desktop/ad/active-directory-domain-services)  
   
--   [Server DNS](https://technet.microsoft.com/library/cc732997.aspx)  
+-   [Domain Name System (DNS)](/windows-server/networking/dns/dns-top)  
   
--   [Server DHCP](https://technet.microsoft.com/library/cc896553.aspx)  
+-   [Dynamic Host Configuration Protocol (DHCP)](/windows-server/networking/technologies/dhcp/dhcp-top)  
   
  **SQL Server 2008:**  
   
--   [Installazione di SQL Server 2008 (video di SQL Server)](https://technet.microsoft.com/library/dd299415.aspx)  
+-   [Installazione di SQL Server 2008 (video di SQL Server)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/dd299415%28v=sql.100%29)  
   
 -   [SQL Server 2008 Security Overview for Database Administrators](https://download.microsoft.com/download/a/c/d/acd8e043-d69b-4f09-bc9e-4168b65aaa71/SQL2008SecurityOverviewforAdmins.docx) (Panoramica della sicurezza di SQL Server 2008 per gli amministratori di database)  
   
  **System Center 2012 Configuration Manager (punto di gestione, punto di distribuzione):**  
   
--   [Amministrazione del sito per System Center 2012 Configuration Manager](https://technet.microsoft.com/library/gg681983.aspx)  
+-   [Amministrazione del sito per System Center 2012 Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg681983%28v=technet.10%29)  
   
 -   [Configuration Manager Single Site Planning and Deployment](https://technet.microsoft.com/library/bb680961.aspx) (Pianificazione e distribuzione in modalità sito singolo di Configuration Manager)  
   
  **Client di System Center 2012 Configuration Manager per computer Windows:**  
   
--   [Distribuzione dei client per System Center 2012 Configuration Manager](https://technet.microsoft.com/library/gg699391.aspx)  
+-   [Distribuzione dei client per System Center 2012 Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg699391%28v=technet.10%29)  
   
 <a name="troubleshooting"></a>   
 ## <a name="troubleshooting"></a>Risoluzione dei problemi  
@@ -248,18 +246,18 @@ In questo articolo dettagliato vengono descritte le modalità in cui un amminist
 <a name="additional_error_codes"></a>   
 ### <a name="download-error-codes"></a>Scaricare i codici di errore  
   
--   [Background Intelligent Transfer Service (BITS) error codes](https://msdn.microsoft.com/library/aa362823.aspx) (Codici di errore del Servizio trasferimento intelligente in background (BITS))  
+-   [Background Intelligent Transfer Service (BITS) error codes](/windows/desktop/Bits/bits-return-values) (Codici di errore del Servizio trasferimento intelligente in background (BITS))  
   
--   [Codici di errore del moniker URL](https://msdn.microsoft.com/library/ms775145.aspx)  
+-   [Codici di errore del moniker URL](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775145%28v=vs.85%29)  
   
 -   [WinHttp error codes](/windows/desktop/WinHttp/error-messages) (Codici di errore WinHttp)  
   
  Altri codici di errore:  
   
--   [Windows Installer error codes](https://msdn.microsoft.com/library/aa368542.aspx) (Codici di errore di Windows Installer)  
+-   [Windows Installer error codes](/windows/desktop/msi/error-codes) (Codici di errore di Windows Installer)  
   
--   [Windows Update Agent result codes](https://technet.microsoft.com/library/cc720442.aspx) (Codici restituiti dall'Agente di Windows Update)  
+-   [Windows Update Agent result codes](/security-updates/WindowsUpdateServices/18127055) (Codici restituiti dall'Agente di Windows Update)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida alla distribuzione per gli sviluppatori](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
- [Requisiti di sistema](../../../docs/framework/get-started/system-requirements.md)
+- [Guida alla distribuzione per gli sviluppatori](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
+- [Requisiti di sistema](../../../docs/framework/get-started/system-requirements.md)

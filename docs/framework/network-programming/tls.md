@@ -1,7 +1,7 @@
 ---
 title: Procedure consigliate per Transport Layer Security (TLS) con .NET Framework
 description: Descrive le procedure consigliate per l'uso di Transport Layer Security (TLS) con .NET Framework
-ms.date: 03/15/2018
+ms.date: 10/22/2018
 helpviewer_keywords:
 - sending data, Internet security
 - protocols, Internet security
@@ -12,17 +12,16 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-author: blowdart
-ms.openlocfilehash: 96d37934b5e852b69c692bb1606d2998dac6f63a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9cb7dbdfb1ad221e00823d8d55e7fd3c52cabe8b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47424480"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194137"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>Procedure consigliate per Transport Layer Security (TLS) con .NET Framework
 
-Il protocollo Transport Layer Security (TLS) è uno standard del settore progettato per proteggere la riservatezza delle informazioni comunicate tramite Internet. [TLS 1.2](https://tools.ietf.org/html/rfc5246) è lo standard rilasciato più recente e include miglioramenti per la sicurezza rispetto alle versioni precedenti. TLS 1.2 verrà sostituito da [TLS 1.3](https://tools.ietf.org/html/draft-ietf-tls-tls13-22). Questo articolo presenta alcune raccomandazioni per proteggere le applicazioni .NET Framework che usano il protocollo TLS.
+Il protocollo Transport Layer Security (TLS) è uno standard del settore progettato per proteggere la riservatezza delle informazioni comunicate tramite Internet. [TLS 1.2](https://tools.ietf.org/html/rfc5246) è uno standard che offre miglioramenti per la sicurezza rispetto alle versioni precedenti. TLS 1.2 verrà sostituito dalla versione più recente dello standard, [TLS 1.3](https://tools.ietf.org/html/rfc8446), più veloce e che offre maggiore sicurezza. Questo articolo presenta alcune raccomandazioni per proteggere le applicazioni .NET Framework che usano il protocollo TLS.
 
 Per garantire la sicurezza delle applicazioni .NET Framework, la versione di TLS **non** deve essere hardcoded. Le applicazioni .NET Framework devono usare la versione di TLS supportata dal sistema operativo.
 
@@ -278,7 +277,7 @@ Per abilitare o riabilitare TLS 1.2 e/o TLS 1.1 in un sistema che li supporta, v
 | Windows Server 2008 | Il supporto per TLS 1.1 e TLS 1.2 richiede un aggiornamento. Vedere [Aggiornamento per aggiungere il supporto per TLS 1.1 e TLS 1.2 in Windows Server 2008 SP2](https://support.microsoft.com/help/4019276/update-to-add-support-for-tls-1-1-and-tls-1-2-in-windows-server-2008-s). |
 | Windows Vista | Non supportato. |
 
-Per informazioni su quali protocolli TLS/SSL sono abilitati per impostazione predefinita in ogni versione di Windows, vedere [Protocols in TLS/SSL (Schannel SSP)](https://msdn.microsoft.com/library/windows/desktop/mt808159) (Protocolli in TLS/SSL - Schannel SSP).
+Per informazioni su quali protocolli TLS/SSL sono abilitati per impostazione predefinita in ogni versione di Windows, vedere [Protocols in TLS/SSL (Schannel SSP)](/windows/desktop/SecAuthN/protocols-in-tls-ssl--schannel-ssp-) (Protocolli in TLS/SSL - Schannel SSP).
 
 **Requisiti per il supporto di TLS 1.2 con .NET Framework 3.5**
 
@@ -305,6 +304,6 @@ Se l'app è destinata a una versione di .NET Framework che non è disponibile ne
 
 ### <a name="azure-guest-os-registry-settings"></a>Impostazioni del Registro di sistema del sistema operativo guest di Azure
 
-Nell'immagine del sistema operativo guest di Azure per [Servizi cloud di Azure](https://azure.microsoft.com/services/cloud-services/) la chiave del Registro di sistema `SchUseStrongCrypto` è già impostata sul valore 1. Per altre informazioni, vedere [SchUseStrongCrypto](#schusestrongcrypto).
+L'immagine della famiglia del sistema operativo guest di Azure 5 per [Servizi cloud di Azure](https://azure.microsoft.com/services/cloud-services/) ha già la chiave del Registro di sistema `SchUseStrongCrypto` impostata sul valore 1. Per altre informazioni, vedere [SchUseStrongCrypto](#schusestrongcrypto).
 
 Impostare la chiave del Registro di sistema [SystemDefaultTlsVersions](#systemdefaulttlsversions) su 1. Vedere [Configurazione della sicurezza tramite il Registro di sistema di Windows](#configuring-security-via-the-windows-registry).

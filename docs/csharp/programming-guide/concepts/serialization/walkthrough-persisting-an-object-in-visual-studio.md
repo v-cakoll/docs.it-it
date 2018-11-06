@@ -1,12 +1,12 @@
 ---
 title: 'Procedura dettagliata: Persistenza di un oggetto tramite C#'
 ms.date: 04/26/2018
-ms.openlocfilehash: c3cff57f008eb524c2d2bec406431e4c41dca617
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 85c447ae43086cc789338e77555b7400a523662a
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47231492"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086077"
 ---
 # <a name="walkthrough-persisting-an-object-using-c"></a>Procedura dettagliata: Persistenza di un oggetto tramite C# #
 
@@ -28,6 +28,8 @@ In questa procedura verrà creato un oggetto `Loan` di base i cui dati verranno 
 
 > [!TIP]
 > È necessario installare un editor del codice? Provare [Visual Studio](https://visualstudio.com/downloads).
+
+* L'esempio richiede C# 7.3. Vedere [Selezionare la versione del linguaggio C#](../../../language-reference/configure-language-version.md) 
 
 È possibile esaminare il codice di esempio online [nel repository GitHub degli esempi .NET](https://github.com/dotnet/samples/tree/master/csharp/serialization).
 

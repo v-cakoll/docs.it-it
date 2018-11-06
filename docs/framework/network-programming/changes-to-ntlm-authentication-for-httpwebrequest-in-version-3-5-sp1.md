@@ -2,14 +2,12 @@
 title: Modifiche apportate all'autenticazione NTLM per HttpWebRequest nella versione 3.5 SP1
 ms.date: 03/30/2017
 ms.assetid: 8bf0b428-5a21-4299-8d6e-bf8251fd978a
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: b679c137d31c1212e1e6c82fd41f89b9de7a18d4
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: d20707bbecb7521408d2ea1a3d6a6e3d6e892504
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47231167"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50202868"
 ---
 # <a name="changes-to-ntlm-authentication-for-httpwebrequest-in-version-35-sp1"></a>Modifiche apportate all'autenticazione NTLM per HttpWebRequest nella versione 3.5 SP1
 In .NET Framework 3.5 SP1 e versioni successive sono state apportate modifiche per la sicurezza che influiscono sul modo in cui l'autenticazione integrata di Windows viene gestita da <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Security.NegotiateStream> e dalle classi correlate nello spazio dei nomi System.Net. Queste modifiche possono avere effetto sulle applicazioni che usano queste classi per eseguire richieste Web e ricevere risposte in cui viene usata l'autenticazione integrata di Windows basata su NTLM. Possono inoltre influire sulle applicazioni client e sui server Web configurati per l'utilizzo dell'autenticazione integrata di Windows.  
@@ -22,9 +20,9 @@ In .NET Framework 3.5 SP1 e versioni successive sono state apportate modifiche p
 ## <a name="changes"></a>Modifiche  
  Il processo di autenticazione basato su NTLM usato con l'autenticazione integrata di Windows include spesso una richiesta di verifica inviata dal computer di destinazione e quindi ritrasmessa al computer client. Quando un computer riceve una richiesta di verifica generata dal computer stesso, l'autenticazione ha esito negativo a meno che non si tratti di una connessione di loopback, ad esempio con indirizzo IPv4 127.0.0.1.  
   
- Quando si accede a un servizio in esecuzione su un server Web interno, viene in genere usato un URL simile a http://contoso/service o https://contoso/service. Il nome "contoso" spesso non corrisponde al nome del computer in cui viene distribuito il servizio. Per risolvere i nomi in indirizzi, <xref:System.Net> e gli spazi dei nomi correlati supportano l'utilizzo di Active Directory, DNS, NetBIOS, del file hosts del computer locale (in genere WINDOWS\system32\drivers\etc\hosts) o del file lmhosts del computer locale (in genere WINDOWS\system32\drivers\etc\lmhosts). Il nome "contoso" viene risolto in modo che le richieste a "contoso" vengono inviate al computer server appropriato.  
+ Quando si accede a un servizio in esecuzione su un server Web interno, viene in genere usato un URL simile a `http://contoso/service` o `https://contoso/service`. Il nome "contoso" spesso non corrisponde al nome del computer in cui viene distribuito il servizio. Per risolvere i nomi in indirizzi, <xref:System.Net> e gli spazi dei nomi correlati supportano l'utilizzo di Active Directory, DNS, NetBIOS, del file hosts del computer locale (in genere WINDOWS\system32\drivers\etc\hosts) o del file lmhosts del computer locale (in genere WINDOWS\system32\drivers\etc\lmhosts). Il nome "contoso" viene risolto in modo che le richieste a "contoso" vengono inviate al computer server appropriato.  
   
- Nel caso di distribuzioni di grandi dimensioni, è anche prassi comune assegnare alla distribuzione un singolo nome di server virtuale, senza che i nomi di computer sottostanti vengono mai usati dalle applicazioni client e dagli utenti finali. È ad esempio possibile che il nome del server sia www.contoso.com, ma che nella rete interna venga usato semplicemente il nome "contoso". Questo nome è definito come intestazione Host nella richiesta Web del client. Come specificato dal protocollo HTTP, il campo dell'intestazione della richiesta Host specifica l'host Internet e il numero di porta della risorsa richiesta. Queste informazioni vengono ottenute dall'URI di origine specificato dall'utente o dalla risorsa di riferimento, che in genere è un URL HTTP. In .NET Framework versione 4 queste informazioni possono essere impostate anche dal client usando la nuova proprietà <xref:System.Net.HttpWebRequest.Host%2A>.  
+ Nel caso di distribuzioni di grandi dimensioni, è anche prassi comune assegnare alla distribuzione un singolo nome di server virtuale, senza che i nomi di computer sottostanti vengono mai usati dalle applicazioni client e dagli utenti finali. È ad esempio possibile chiamare il server `www.contoso.com`, ma in una rete interna usare semplicemente "contoso". Questo nome è definito come intestazione Host nella richiesta Web del client. Come specificato dal protocollo HTTP, il campo dell'intestazione della richiesta Host specifica l'host Internet e il numero di porta della risorsa richiesta. Queste informazioni vengono ottenute dall'URI di origine specificato dall'utente o dalla risorsa di riferimento, che in genere è un URL HTTP. In .NET Framework versione 4 queste informazioni possono essere impostate anche dal client usando la nuova proprietà <xref:System.Net.HttpWebRequest.Host%2A>.  
   
  La classe <xref:System.Net.AuthenticationManager> controlla i componenti di autenticazione gestita ("moduli") che vengono usati dalle classi derivate di <xref:System.Net.WebRequest> e dalla classe <xref:System.Net.WebClient>. In <xref:System.Net.AuthenticationManager> è disponibile una proprietà che espone un oggetto <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A?displayProperty=nameWithType>, indicizzato in base alla stringa dell'URI, per consentire alle applicazioni di fornire una stringa SPN personalizzata da usare durante l'autenticazione.  
   
@@ -50,7 +48,7 @@ In .NET Framework 3.5 SP1 e versioni successive sono state apportate modifiche p
   
  7. Chiudere l'editor del Registro di sistema e quindi riavviare il servizio IISAdmin ed eseguire IISReset.  
   
- Una soluzione alternativa meno sicura consiste nel disabilitare il controllo del loopback, come descritto in [http://support.microsoft.com/kb/896861](https://go.microsoft.com/fwlink/?LinkID=179657). Questa operazione ha l'effetto di disabilitare la protezione contro attacchi di tipo reflection. È pertanto preferibile limitare l'impostazione di nomi alternativi a quelli che si presume vengano effettivamente usati dal computer.  
+ Una soluzione alternativa meno sicura consiste nel disabilitare il controllo di loopback, come descritto in <https://support.microsoft.com/kb/896861>. Questa operazione ha l'effetto di disabilitare la protezione contro attacchi di tipo reflection. È pertanto preferibile limitare l'impostazione di nomi alternativi a quelli che si presume vengano effettivamente usati dal computer.  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A?displayProperty=nameWithType>  

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3875b4f44a2c2aad5cc5021d55e22e99bb00a91e
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 463e31ff286b0022ac55f4f9f8e2a4478cceadc9
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43739828"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49400476"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (generatore di immagini native)
 Il generatore di immagini native (Ngen.exe) consente di migliorare le prestazioni delle applicazioni gestite. Questo strumento crea immagini native, ovvero file contenenti codice macchina compilato specifico del processore, e le installa nella cache delle immagini native del computer locale. Il runtime può usare le immagini native della cache anziché il compilatore Just-In-Time (JIT) per compilare l'assembly originale.  
@@ -523,7 +523,7 @@ ngen uninstall "ClientApp, Version=1.0.0.0, Culture=neutral,
 |NET Framework NGEN v4.0.30319|Yes|Yes|  
 |NET Framework NGEN v4.0.30319 64|No|Yes|  
   
- L'attività di immagine nativa è disponibile in .NET Framework 4.5 e versioni successive quando eseguita in Windows 8 o versioni successive. Nelle versioni precedenti di Windows .NET Framework usa il [Servizio immagini native][Native Image Service].  
+ L'attività di immagine nativa è disponibile in .NET Framework 4.5 e versioni successive, se in esecuzione in Windows 8 o versioni successive. Nelle versioni precedenti di Windows .NET Framework usa il [Servizio immagini native][Native Image Service].  
   
 ### <a name="task-lifetime"></a>Durata delle attività  
  L'utilità di pianificazione di Windows avvia, in genere, l'attività delle immagini native ogni notte quando il computer è inattivo. L'attività controlla ogni lavoro posticipato che viene accodato dai programmi di installazione, eventuali richieste di aggiornamento di immagine nativa posticipate ed eventuali creazioni automatiche di immagini. L'attività completa gli elementi di lavoro in sospeso e quindi viene chiusa. Se il computer diviene attivo mentre l'attività è in esecuzione, l'attività viene interrotta.  
