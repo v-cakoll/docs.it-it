@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8ef159de-b660-4bec-9213-c3fbc4d1c6f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0c8a619021f8e398c5c3dfc974b9130ecacb44d4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4f4f73ec60283e1ddf0fee0beaa76bdb68124698
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410033"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49122779"
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe (generatore di file di risorse)
 Il generatore di file di risorse (Resgen.exe) converte i file di testo (.txt o .restext) e i file di risorse basati su XML (.resx) in file binari Common Language Runtime (.resources) incorporabili in un eseguibile binario o in un assembly satellite di runtime. Vedere [Creazione di file di risorse](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md).  
@@ -319,7 +319,7 @@ resgen inputFilename [outputFilename] /str:language[,namespace,[classname[,filen
   
 -   Una proprietà `static` `Shared` (C#) o `ResourceManager` (Visual Basic) e di sola lettura, che restituisce l'istanza di <xref:System.Resources.ResourceManager> che gestisce la risorsa fortemente tipizzata.  
   
--   Una proprietà `Culture` statica, che consente di configurare le impostazioni cultura utilizzate per il recupero delle risorse. Per impostazione predefinita, il valore è `null`, il che significa che vengono utilizzate le attuali impostazioni cultura dell'interfaccia utente.  
+-   Una proprietà `Culture` statica, che consente di configurare le impostazioni cultura utilizzate per il recupero delle risorse. Per impostazione predefinita, il valore è `null`, che indica che vengono usate le impostazioni cultura dell'interfaccia utente correnti.  
   
 -   Una proprietà `static` (C#) o `Shared` (Visual Basic) di sola lettura per ogni risorsa nel file .resources. Il nome della proprietà è il nome della risorsa.  
   
