@@ -1,6 +1,6 @@
 ---
 title: Associazioni do nelle classi (F#)
-description: "Informazioni su come usare un'associazione in una definizione di classe che esegue azioni quando l'oggetto viene costruito oppure quando viene utilizzato innanzitutto il tipo ' do' F #."
+description: Informazioni su come usare un'associazione in una definizione di classe che esegue azioni quando l'oggetto viene costruito oppure quando viene utilizzato innanzitutto il tipo ' do' F#.
 ms.date: 05/16/2016
 ms.openlocfilehash: e54a5bde52bf6973cc338c929ba99e6fd5b53127
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2

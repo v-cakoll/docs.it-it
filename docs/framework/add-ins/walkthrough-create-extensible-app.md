@@ -14,11 +14,11 @@ ms.assetid: 694a33c5-a040-450d-aed5-ac49fc88ce61
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 63780583d035d6fab6b3a79424857b82a910ef09
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183893"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50744613"
 ---
 # <a name="walkthrough-creating-an-extensible-application"></a>Procedura dettagliata: creazione di un'applicazione estendibile
 Questa procedura dettagliata descrive come creare una pipeline per un componente aggiuntivo che esegue funzioni semplice calcolatrice. Se non illustra uno scenario reale; piuttosto, illustra le funzionalità di base di una pipeline e un componente aggiuntivo può come forniscono servizi per un host.  

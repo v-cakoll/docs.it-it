@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f8b8ec9b-0ba7-4dea-aadf-a93395cd804f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 06661cb2c34d1da9085fa2129cb0c3307b99097e
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 7590d5628f4951a8c7c2199f0e954007ed9fa962
+ms.sourcegitcommit: b5cd9d5d3b75a5537fc9ad8a3f085f0bb1845ee0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865553"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "50757426"
 ---
 # <a name="choosing-between-class-and-struct"></a>Scelta tra classi e struct
 Una delle decisioni di progettazione di base che deve affrontare ogni finestra di progettazione di framework è se un tipo di progettazione come una classe (un tipo riferimento) o uno struct (tipo di valore). Buona conoscenza delle differenze nel comportamento dei tipi di riferimento e tipi di valore è essenziale per effettuare questa scelta.  
@@ -28,7 +28,7 @@ Una delle decisioni di progettazione di base che deve affrontare ogni finestra d
   
  Successivamente, le matrici di riferimento sono tipi allocati out-of-line, vale a dire la matrice di elementi sono semplicemente i riferimenti alle istanze del tipo di riferimento che risiedono nell'heap. Matrici di tipi valore vengono allocate inline, vale a dire che gli elementi della matrice sono le istanze effettive del tipo di valore. Pertanto, le allocazioni e deallocazioni di matrici di tipi valore sono molto più economiche rispetto alle allocazioni e deallocazioni delle matrici di tipo riferimento. Inoltre, nella maggior parte dei casi le matrici di tipo valore presentano molto posizionamento ottimale dei riferimenti.  
   
- Differenza successiva è correlata all'utilizzo della memoria. I tipi di valore compattati quando esegue il cast a un tipo riferimento o una delle interfacce implementate. Ricevono unboxed quando esegue il cast nel tipo di valore. Poiché le finestre sono oggetti vengono allocati nell'heap e sottoposto a garbage collection, troppe operazioni conversione boxing e unboxing può avere un impatto negativo su heap, il garbage collector e infine le prestazioni dell'applicazione.  Al contrario, si verifica alcun tali boxing quando vengono eseguito il cast di tipi di riferimento.  
+ Differenza successiva è correlata all'utilizzo della memoria. I tipi di valore compattati quando esegue il cast a un tipo riferimento o una delle interfacce implementate. Ricevono unboxed quando esegue il cast nel tipo di valore. Poiché le finestre sono oggetti vengono allocati nell'heap e sottoposto a garbage collection, troppe operazioni conversione boxing e unboxing può avere un impatto negativo su heap, il garbage collector e infine le prestazioni dell'applicazione.  Al contrario, si verifica alcun tali boxing quando vengono eseguito il cast di tipi di riferimento. (Per altre informazioni, vedere [conversioni Boxing e Unboxing](../../csharp/programming-guide/types/boxing-and-unboxing.md)).
   
  Le assegnazioni dei tipi riferimento successivamente, copiare il riferimento, mentre le assegnazioni dei tipi valore copiare l'intero valore. Pertanto, le assegnazioni dei tipi di riferimento di grandi dimensioni sono più economiche rispetto all'assegnazione dei tipi di valori di grandi dimensioni.  
   

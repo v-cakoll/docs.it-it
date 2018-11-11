@@ -1,6 +1,6 @@
 ---
-title: 'Esercitazione: Creare un Provider di tipi (F #)'
-description: 'Informazioni su come creare il proprio provider di tipi F # in F # 3.0 esaminando i diversi provider di tipo semplice per illustrare i concetti di base.'
+title: 'Esercitazione: Creare un Provider di tipi (F#)'
+description: Informazioni su come creare il proprio provider di tipi F# in F# 3.0 esaminando i diversi provider di tipo semplice per illustrare i concetti di base.
 ms.date: 05/16/2016
 ms.openlocfilehash: c9dedbeed3ee081a6b1e1ffffe843fc962d2c60b
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,15 +11,15 @@ ms.locfileid: "50183919"
 ---
 # <a name="tutorial-create-a-type-provider"></a>Esercitazione: Creare un Provider di tipi
 
-Il meccanismo di provider in F # è una parte significativa del supporto per la programmazione avanzata di informazioni. Questa esercitazione illustra come creare il proprio provider di tipi attraverso lo sviluppo di diversi provider di tipo semplice per illustrare i concetti di base. Per altre informazioni sul meccanismo di provider di tipo in F #, vedere [provider di tipi](index.md).
+Il meccanismo di provider in F# è una parte significativa del supporto per la programmazione avanzata di informazioni. Questa esercitazione illustra come creare il proprio provider di tipi attraverso lo sviluppo di diversi provider di tipo semplice per illustrare i concetti di base. Per altre informazioni sul meccanismo di provider di tipo in F#, vedere [provider di tipi](index.md).
 
-L'ecosistema di F # contiene una gamma di provider di tipi per uso comune Internet e enterprise data services. Ad esempio:
+L'ecosistema di F# contiene una gamma di provider di tipi per uso comune Internet e enterprise data services. Ad esempio:
 
 - [FSharp](https://fsharp.github.io/FSharp.Data/) include il provider di tipi per formati di documenti JSON, XML, CSV e HTML.
 
-- [SQLProvider](https://fsprojects.github.io/SQLProvider/) fornisce accesso fortemente tipizzato ai database SQL tramite un mapping degli oggetti e LINQ F # le query su tali origini dati.
+- [SQLProvider](https://fsprojects.github.io/SQLProvider/) fornisce accesso fortemente tipizzato ai database SQL tramite un mapping degli oggetti e LINQ F# le query su tali origini dati.
 
-- [FSharp.Data.SqlClient](https://fsprojects.github.io/FSharp.Data.SqlClient/) dispone di un set di provider di tipi per la fase di compilazione selezionata incorporamento di T-SQL in F #.
+- [FSharp.Data.SqlClient](https://fsprojects.github.io/FSharp.Data.SqlClient/) dispone di un set di provider di tipi per la fase di compilazione selezionata incorporamento di T-SQL in F#.
 
 - [Typeproviders](https://fsprojects.github.io/FSharp.Data.TypeProviders/) è un precedente set di provider di tipi per l'uso solo con la programmazione di .NET Framework per l'accesso ai servizi di dati SQL, Entity Framework, OData e WSDL.
 
@@ -27,7 +27,7 @@ Se necessario, è possibile creare provider di tipi personalizzati, oppure è po
 
 ## <a name="before-you-start"></a>Prima di iniziare
 
-Il meccanismo di provider è progettato principalmente per l'inserimento di dati stabili e spazi di informazioni del servizio nell'esperienza di programmazione F #.
+Il meccanismo di provider è progettato principalmente per l'inserimento di dati stabili e spazi di informazioni del servizio nell'esperienza di programmazione F#.
 
 Questo meccanismo non è progettato per l'inserimento di spazi di informazioni cui lo schema cambia durante l'esecuzione del programma in modi che sono rilevanti per la logica del programma. Inoltre, il meccanismo non è progettato per intra-language metaprogrammazione, anche se tale dominio contiene alcuni utilizzi validi. È consigliabile usare questo meccanismo solo laddove necessario e in cui lo sviluppo di un provider di tipi produce un valore molto elevato.
 
@@ -35,7 +35,7 @@ Questo meccanismo non è progettato per l'inserimento di spazi di informazioni c
 
 Prima di iniziare, si potrebbero chiedere alle domande seguenti:
 
-- Si hanno uno schema per l'origine di informazioni? In questo caso, qual è il mapping a F # e sistema di tipi .NET?
+- Si hanno uno schema per l'origine di informazioni? In questo caso, qual è il mapping a F# e sistema di tipi .NET?
 
 - È possibile utilizzare un'API (tipizzata in modo dinamico) esistente come punto di partenza per l'implementazione?
 
@@ -53,7 +53,7 @@ Provider di tipi sono particolarmente adatti alle situazioni in cui lo schema è
 
 ## <a name="a-simple-type-provider"></a>Un Provider di tipi semplici
 
-Questo esempio è Samples. helloworldtypeprovider, simili agli esempi nel `examples` directory del [F # tipo Provider SDK](https://github.com/fsprojects/FSharp.TypeProviders.SDK/). Il provider rende disponibile un "spazio di tipo" che contiene 100 tipi cancellati, come illustrato nel codice seguente utilizzando sintassi della firma F # e omettendo i dettagli per tutti tranne `Type1`. Per altre informazioni sui tipi cancellati, vedere [informazioni dettagliate sulle cancellati forniti tipi](#details-about-erased-provided-types) più avanti in questo argomento.
+Questo esempio è Samples. helloworldtypeprovider, simili agli esempi nel `examples` directory del [F# tipo Provider SDK](https://github.com/fsprojects/FSharp.TypeProviders.SDK/). Il provider rende disponibile un "spazio di tipo" che contiene 100 tipi cancellati, come illustrato nel codice seguente utilizzando sintassi della firma F# e omettendo i dettagli per tutti tranne `Type1`. Per altre informazioni sui tipi cancellati, vedere [informazioni dettagliate sulle cancellati forniti tipi](#details-about-erased-provided-types) più avanti in questo argomento.
 
 ```fsharp
 namespace Samples.HelloWorldTypeProvider
@@ -128,7 +128,7 @@ type SampleTypeProvider(config: TypeProviderConfig) as this =
 do()
 ```
 
-Per usare questo provider, aprire un'istanza separata di Visual Studio, creare uno script F # e quindi aggiungere un riferimento al provider dallo script utilizzando #r come illustrato nel codice seguente:
+Per usare questo provider, aprire un'istanza separata di Visual Studio, creare uno script F# e quindi aggiungere un riferimento al provider dallo script utilizzando #r come illustrato nel codice seguente:
 
 ```fsharp
 #r @".\bin\Debug\Samples.HelloWorldTypeProvider.dll"
@@ -148,7 +148,7 @@ let data1 = Samples.HelloWorldTypeProvider.Type1.NestedType.StaticProperty35
 
 Cercare quindi i tipi nel `Samples.HelloWorldTypeProvider` dello spazio dei nomi che ha generato il provider di tipi.
 
-Prima di ricompilare il provider, assicurarsi che siano state chiuse tutte le istanze di Visual Studio e F # Interactive che usano la DLL del provider. In caso contrario, viene visualizzato un errore di compilazione perché l'output DLL verrà bloccata.
+Prima di ricompilare il provider, assicurarsi che siano state chiuse tutte le istanze di Visual Studio e F# Interactive che usano la DLL del provider. In caso contrario, viene visualizzato un errore di compilazione perché l'output DLL verrà bloccata.
 
 Per eseguire il debug di questo provider con istruzioni print, creare script che espone un problema con il provider e quindi usare il codice seguente:
 
@@ -175,7 +175,7 @@ In questa sezione illustra le sezioni principali dell'implementazione del provid
 type SampleTypeProvider(config: TypeProviderConfig) as this =
 ```
 
-Questo tipo deve essere pubblico ed è necessario contrassegnarla con il [TypeProvider](https://msdn.microsoft.com/library/bdf7b036-7490-4ace-b79f-c5f1b1b37947) in modo che il compilatore riconoscerà il provider di tipi quando un progetto F # separato fa riferimento all'assembly che contiene il tipo di attributo. Il *config* parametro è facoltativo e, se presente, contiene le informazioni di configurazione di scelta rapida per l'istanza del provider di tipi che consente di creare il compilatore F #.
+Questo tipo deve essere pubblico ed è necessario contrassegnarla con il [TypeProvider](https://msdn.microsoft.com/library/bdf7b036-7490-4ace-b79f-c5f1b1b37947) in modo che il compilatore riconoscerà il provider di tipi quando un progetto F# separato fa riferimento all'assembly che contiene il tipo di attributo. Il *config* parametro è facoltativo e, se presente, contiene le informazioni di configurazione di scelta rapida per l'istanza del provider di tipi che consente di creare il compilatore F#.
 
 Successivamente, si implementa il [ITypeProvider](https://msdn.microsoft.com/library/2c2b0571-843d-4a7d-95d4-0a7510ed5e2f) interfaccia. In questo caso, si utilizza il `TypeProviderForNamespaces` digitare dal `ProvidedTypes` API come tipo di base. Questo tipo di helper può indicare una raccolta finita di accuratamente fornita spazi dei nomi, ognuno dei quali direttamente contiene un numero finito di correzione, accuratamente i tipi forniti. In questo contesto, il provider *accuratamente* genera tipi anche se essi non sono necessari o usati.
 
@@ -255,7 +255,7 @@ let staticProp = ProvidedProperty(propertyName = "StaticProperty",
                                   getterCode = (fun args -> <@@ "Hello!" @@>))
 ```
 
-Ottiene questa proprietà restituisce sempre la stringa "Hello!". Il `GetterCode` per la proprietà viene utilizzata una quotation F #, che rappresenta il codice che genera il compilatore host per il recupero della proprietà. Per altre informazioni sulle offerte, vedere [citazioni di codice (F #)](https://msdn.microsoft.com/library/6f055397-a1f0-4f9a-927c-f0d7c6951155).
+Ottiene questa proprietà restituisce sempre la stringa "Hello!". Il `GetterCode` per la proprietà viene utilizzata una quotation F#, che rappresenta il codice che genera il compilatore host per il recupero della proprietà. Per altre informazioni sulle offerte, vedere [citazioni di codice (F#)](https://msdn.microsoft.com/library/6f055397-a1f0-4f9a-927c-f0d7c6951155).
 
 Aggiungere la documentazione XML per la proprietà.
 
@@ -276,7 +276,7 @@ let ctor = ProvidedConstructor(parameters = [ ],
                                invokeCode = (fun args -> <@@ "The object data" :> obj @@>))
 ```
 
-Il `InvokeCode` per il costruttore restituisce un quotation F #, che rappresenta il codice che il compilatore host genera l'errore quando viene chiamato il costruttore. Ad esempio, è possibile usare il costruttore seguente:
+Il `InvokeCode` per il costruttore restituisce un quotation F#, che rappresenta il codice che il compilatore host genera l'errore quando viene chiamato il costruttore. Ad esempio, è possibile usare il costruttore seguente:
 
 ```fsharp
 new Type10()
@@ -300,7 +300,7 @@ ProvidedConstructor(parameters = [ ProvidedParameter("data",typeof<string>) ],
                     invokeCode = (fun args -> <@@ (%%(args.[0]) : string) :> obj @@>))
 ```
 
-Il `InvokeCode` per il costruttore restituisce nuovamente una quotation F #, che rappresenta il codice che ha generato il compilatore host per una chiamata al metodo. Ad esempio, è possibile usare il costruttore seguente:
+Il `InvokeCode` per il costruttore restituisce nuovamente una quotation F#, che rappresenta il codice che ha generato il compilatore host per una chiamata al metodo. Ad esempio, è possibile usare il costruttore seguente:
 
 ```fsharp
 new Type10("ten")
@@ -318,7 +318,7 @@ instanceProp.AddXmlDocDelayed(fun () -> "This is an instance property")
 t.AddMember instanceProp
 ```
 
-Ottiene questa proprietà verrà restituita la lunghezza della stringa, ovvero l'oggetto di rappresentazione. Il `GetterCode` proprietà restituisce una quotation F # che specifica il codice per ottenere la proprietà generata dal compilatore host. Ad esempio `InvokeCode`, il `GetterCode` funzione restituisce una citazione. Il compilatore host chiama questa funzione con un elenco di argomenti. In questo caso, gli argomenti includono solo la singola espressione che rappresenta l'istanza sulla quale viene chiamato il metodo Get, che è possibile accedere usando `args.[0]`. L'implementazione di `GetterCode` quindi sottopone a splicing nell'offerta di risultato in corrispondenza del tipo cancellato `obj`, e viene utilizzato un cast per soddisfare il meccanismo del compilatore per il controllo dei tipi che l'oggetto è una stringa. La parte successiva della `makeOneProvidedType` fornisce un metodo di istanza con un parametro.
+Ottiene questa proprietà verrà restituita la lunghezza della stringa, ovvero l'oggetto di rappresentazione. Il `GetterCode` proprietà restituisce una quotation F# che specifica il codice per ottenere la proprietà generata dal compilatore host. Ad esempio `InvokeCode`, il `GetterCode` funzione restituisce una citazione. Il compilatore host chiama questa funzione con un elenco di argomenti. In questo caso, gli argomenti includono solo la singola espressione che rappresenta l'istanza sulla quale viene chiamato il metodo Get, che è possibile accedere usando `args.[0]`. L'implementazione di `GetterCode` quindi sottopone a splicing nell'offerta di risultato in corrispondenza del tipo cancellato `obj`, e viene utilizzato un cast per soddisfare il meccanismo del compilatore per il controllo dei tipi che l'oggetto è una stringa. La parte successiva della `makeOneProvidedType` fornisce un metodo di istanza con un parametro.
 
 ```fsharp
 let instanceMeth = 
@@ -370,7 +370,7 @@ L'esempio in questa sezione vengono fornite solo *cancellati tipi specificati*, 
 
 - Quando si scrive un provider per uno spazio di informazioni che è così grande e interconnessi che non è tecnicamente possibile per generare i tipi .NET reali per lo spazio di informazioni.
 
-In questo esempio, ogni fornito di tipo verrà cancellato al tipo `obj`, e tutti gli usi del tipo verranno visualizzato come tipo `obj` nel codice compilato. In effetti, gli oggetti sottostanti in questi esempi sono stringhe, ma il tipo verrà visualizzato come `System.Object` in .NET codice compilato. Come con tutti gli usi di cancellazione di tipo, è possibile usare la conversione boxing esplicito, conversione unboxing ed eseguendo il cast a compromettere cancellati i tipi. In questo caso, un'eccezione di cast non valida potrebbe quando l'oggetto viene usato. Un provider runtime è possibile definire un proprio tipo di rappresentazione privata per proteggersi da rappresentazioni false. Non è possibile definire i tipi cancellati in F # se stesso. Solo i tipi specificati possono essere cancellati. È necessario comprendere le ramificazioni, entrambi pratici e semantici, di usare uno tipi cancellati per il provider di tipo o un provider che fornisce cancellati tipi. Un tipo cancellato non dispone di alcun tipo .NET reale. Pertanto, non è possibile eseguire sul tipo di reflection accurata e si potrebbero compromettere i tipi cancellati se si usano i cast di runtime e altre tecniche che si basano sulla semantica del tipo esatto di runtime. Subversion dei tipi cancellati spesso comporta eccezioni di cast di tipo in fase di esecuzione.
+In questo esempio, ogni fornito di tipo verrà cancellato al tipo `obj`, e tutti gli usi del tipo verranno visualizzato come tipo `obj` nel codice compilato. In effetti, gli oggetti sottostanti in questi esempi sono stringhe, ma il tipo verrà visualizzato come `System.Object` in .NET codice compilato. Come con tutti gli usi di cancellazione di tipo, è possibile usare la conversione boxing esplicito, conversione unboxing ed eseguendo il cast a compromettere cancellati i tipi. In questo caso, un'eccezione di cast non valida potrebbe quando l'oggetto viene usato. Un provider runtime è possibile definire un proprio tipo di rappresentazione privata per proteggersi da rappresentazioni false. Non è possibile definire i tipi cancellati in F# se stesso. Solo i tipi specificati possono essere cancellati. È necessario comprendere le ramificazioni, entrambi pratici e semantici, di usare uno tipi cancellati per il provider di tipo o un provider che fornisce cancellati tipi. Un tipo cancellato non dispone di alcun tipo .NET reale. Pertanto, non è possibile eseguire sul tipo di reflection accurata e si potrebbero compromettere i tipi cancellati se si usano i cast di runtime e altre tecniche che si basano sulla semantica del tipo esatto di runtime. Subversion dei tipi cancellati spesso comporta eccezioni di cast di tipo in fase di esecuzione.
 
 ### <a name="choosing-representations-for-erased-provided-types"></a>Scelta di rappresentazioni per cancellare i tipi forniti
 
@@ -388,7 +388,7 @@ Per alcuni casi di utilizzo dei tipi forniti cancellati, non è necessaria alcun
 
 - Il set di oggetti possibili per un tipo fornito cancellati vengono chiamati relative rappresentazioni. Nell'esempio in questo documento, le rappresentazioni di tutti il cancellato fornito tipi `Type1..Type100` sono sempre oggetti stringa.
 
-Tutte le rappresentazioni di un tipo fornito devono essere compatibile con la cancellazione del tipo fornito. (In caso contrario, il compilatore F # genererà un errore per un utilizzo del provider del tipo, o verrà generato codice .NET non verificabile che non è valido. Un provider di tipi non è valido se restituisce un codice che fornisce una rappresentazione non valida.
+Tutte le rappresentazioni di un tipo fornito devono essere compatibile con la cancellazione del tipo fornito. (In caso contrario, il compilatore F# genererà un errore per un utilizzo del provider del tipo, o verrà generato codice .NET non verificabile che non è valido. Un provider di tipi non è valido se restituisce un codice che fornisce una rappresentazione non valida.
 
 È possibile scegliere una rappresentazione per gli oggetti forniti utilizzando uno degli approcci seguenti, che sono molto comuni:
 
@@ -469,7 +469,7 @@ Tenere presente quanto segue:
 
 - Ogni gruppo denominato comporta una proprietà specificata e l'accesso alla proprietà comporta un uso di un indicizzatore in caso di corrispondenza `Groups` raccolta.
 
-Il codice seguente è il nucleo della logica per implementare un provider di questo tipo, e questo esempio viene omesso l'aggiunta di tutti i membri per il tipo specificato. Per informazioni su ogni membro aggiunto, vedere la sezione appropriata più avanti in questo argomento. Per il codice completo, scaricare l'esempio dal [pacchetto di esempio F # 3.0](https://fsharp3sample.codeplex.com) sul sito Web Codeplex.
+Il codice seguente è il nucleo della logica per implementare un provider di questo tipo, e questo esempio viene omesso l'aggiunta di tutti i membri per il tipo specificato. Per informazioni su ogni membro aggiunto, vedere la sezione appropriata più avanti in questo argomento. Per il codice completo, scaricare l'esempio dal [pacchetto di esempio F# 3.0](https://fsharp3sample.codeplex.com) sul sito Web Codeplex.
 
 ```fsharp
 namespace Samples.FSharp.RegexTypeProvider
@@ -1052,7 +1052,7 @@ Ogni istanza di un provider di tipi può essere assegnato un `TypeProviderConfig
 
 ### <a name="invalidation"></a>Invalidamento
 
-I provider possono generare segnali di invalidamento per notificare al servizio di linguaggio F # che hanno modificato i presupposti dello schema. Quando si verifica l'invalidamento, viene eseguito il rollforward un typecheck se il provider è ospitato in Visual Studio. Questo segnale verrà ignorato quando il provider è ospitato in F # Interactive o dal compilatore F # (fsc.exe).
+I provider possono generare segnali di invalidamento per notificare al servizio di linguaggio F# che hanno modificato i presupposti dello schema. Quando si verifica l'invalidamento, viene eseguito il rollforward un typecheck se il provider è ospitato in Visual Studio. Questo segnale verrà ignorato quando il provider è ospitato in F# Interactive o dal compilatore F# (fsc.exe).
 
 ### <a name="caching-schema-information"></a>La memorizzazione nella cache le informazioni sullo Schema
 
@@ -1060,7 +1060,7 @@ I provider devono spesso memorizzare nella cache di accesso alle informazioni su
 
 ### <a name="backing-assembly"></a>Assembly di supporto
 
-Quando si compila un `.dll` o `.exe` file, il file con estensione DLL di supporto per i tipi generati viene collegato staticamente all'assembly risultante. Questo collegamento viene creato copiando le definizioni dei tipi di linguaggio intermedio (IL) e le risorse gestite dall'assembly sottostante nell'assembly finale. Quando si usa F # Interactive, il file con estensione DLL di backup non vengono copiato e invece viene caricato direttamente nel processo di F # Interactive.
+Quando si compila un `.dll` o `.exe` file, il file con estensione DLL di supporto per i tipi generati viene collegato staticamente all'assembly risultante. Questo collegamento viene creato copiando le definizioni dei tipi di linguaggio intermedio (IL) e le risorse gestite dall'assembly sottostante nell'assembly finale. Quando si usa F# Interactive, il file con estensione DLL di backup non vengono copiato e invece viene caricato direttamente nel processo di F# Interactive.
 
 ### <a name="exceptions-and-diagnostics-from-type-providers"></a>Le eccezioni e diagnostica dal provider di tipi
 
@@ -1070,11 +1070,11 @@ Tutti gli usi di tutti i membri di tipi specificati possono generare eccezioni. 
 
 - Provider di tipi non possono segnalare gli avvisi.
 
-- Quando un provider di tipi è ospitato nel compilatore F #, un ambiente di sviluppo F # o F # Interactive, vengono rilevate tutte le eccezioni da tale provider. La proprietà del messaggio è sempre il testo dell'errore e viene visualizzata nessuna analisi dello stack. Se si intende generare un'eccezione, è possibile generare gli esempi seguenti: `System.NotSupportedException`, `System.IO.IOException`, `System.Exception`.
+- Quando un provider di tipi è ospitato nel compilatore F#, un ambiente di sviluppo F# o F# Interactive, vengono rilevate tutte le eccezioni da tale provider. La proprietà del messaggio è sempre il testo dell'errore e viene visualizzata nessuna analisi dello stack. Se si intende generare un'eccezione, è possibile generare gli esempi seguenti: `System.NotSupportedException`, `System.IO.IOException`, `System.Exception`.
 
 #### <a name="providing-generated-types"></a>Che fornisce i tipi generati
 
-Finora, questo documento ha descritto come specificare i tipi cancellati. È anche possibile usare il meccanismo di provider in F # per fornire tipi generati, che vengono aggiunti come definizioni di tipi .NET reali in programma degli utenti. È necessario farvi riferimento generato tipi forniti tramite una definizione di tipo.
+Finora, questo documento ha descritto come specificare i tipi cancellati. È anche possibile usare il meccanismo di provider in F# per fornire tipi generati, che vengono aggiunti come definizioni di tipi .NET reali in programma degli utenti. È necessario farvi riferimento generato tipi forniti tramite una definizione di tipo.
 
 ```fsharp
 open Microsoft.FSharp.TypeProviders 
@@ -1082,7 +1082,7 @@ open Microsoft.FSharp.TypeProviders
 type Service = ODataService<"http://services.odata.org/Northwind/Northwind.svc/">
 ```
 
-Il codice helper ProvidedTypes-0.2 che fa parte della versione F # 3.0 offre solo supporto limitato per fornire tipi generati. Le istruzioni seguenti devono essere soddisfatte per una definizione di tipo generato:
+Il codice helper ProvidedTypes-0.2 che fa parte della versione F# 3.0 offre solo supporto limitato per fornire tipi generati. Le istruzioni seguenti devono essere soddisfatte per una definizione di tipo generato:
 
 - `isErased` deve essere impostata su `false`.
 
@@ -1102,9 +1102,9 @@ Ad esempio, per alcuni provider esistono una classe statica, ad esempio `DataTyp
 
 ### <a name="limitations-of-the-type-provider-mechanism"></a>Limitazioni del meccanismo di Provider di tipo
 
-Il meccanismo di provider in F # presenta le limitazioni seguenti:
+Il meccanismo di provider in F# presenta le limitazioni seguenti:
 
-- L'infrastruttura sottostante per il provider di tipi in F # non supporta la condizione generica tipi o metodi generici forniti.
+- L'infrastruttura sottostante per il provider di tipi in F# non supporta la condizione generica tipi o metodi generici forniti.
 
 - Il meccanismo non supporta i tipi annidati con parametri statici.
 
@@ -1120,9 +1120,9 @@ I suggerimenti seguenti potrebbero risultare utili durante il processo di svilup
 
 È possibile richiamare i provider di tipi utilizzando gli strumenti seguenti:
 
-- FSC.exe (compilatore della riga di comando di F #)
+- FSC.exe (compilatore della riga di comando di F#)
 
-- fsi.exe (compilatore The F # Interactive)
+- fsi.exe (compilatore The F# Interactive)
 
 - devenv.exe (Visual Studio)
 

@@ -9,17 +9,17 @@ helpviewer_keywords:
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: a145e3e1b73db6fdfbc5f1408231e78f55b559d1
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.openlocfilehash: 3827ebfe401938e4fa1b530672352123ae2ac826
+ms.sourcegitcommit: 0fbd677fcdc5bf46c4d827f492eaaa970edc07b6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45515138"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50235739"
 ---
 # <a name="c-programming-guide"></a>Guida per programmatori C#
 Questa sezione include informazioni dettagliate sulle principali funzionalità del linguaggio C# e sulle funzionalità accessibili a C# tramite .NET Framework.  
   
- La maggior parte di questa sezione presuppone che siano già noti i concetti principali relativi a C# e alla programmazione in generale. I principianti che non hanno alcuna dimestichezza con la programmazione o con C# possono visitare l'esercitazione interattiva [Guide introduttive per C#](../quick-starts/index.md) o [Getting Started with C#](https://www.microsoft.com/net/tutorials/csharp/getting-started) (Introduzione a C#), in cui non è richiesta alcuna conoscenza di programmazione.  
+ La maggior parte di questa sezione presuppone che siano già noti i concetti principali relativi a C# e alla programmazione in generale. I principianti che non hanno alcuna dimestichezza con la programmazione o con C# possono visitare le [esercitazioni di introduzione a C#](../tutorials/intro-to-csharp/index.md) o l'esercitazione interattiva [Getting Started with C#](https://www.microsoft.com/net/tutorials/csharp/getting-started) (Introduzione a C#), in cui non è richiesta alcuna conoscenza di programmazione.  
   
  Per informazioni su parole chiave, operatori e direttive per il preprocessore specifici, vedere [Riferimenti per C#](../../csharp/language-reference/index.md). Per informazioni sulla specifica del linguaggio C++, vedere [Specifiche del linguaggio C#](../../csharp/language-reference/language-specification/index.md).  
   
@@ -42,7 +42,7 @@ Questa sezione include informazioni dettagliate sulle principali funzionalità d
   
  [Delegati](../../csharp/programming-guide/delegates/index.md)  
  
- [Array](../../csharp/programming-guide/arrays/index.md)  
+ [Matrici](../../csharp/programming-guide/arrays/index.md)  
   
  [Stringhe](../../csharp/programming-guide/strings/index.md)  
   

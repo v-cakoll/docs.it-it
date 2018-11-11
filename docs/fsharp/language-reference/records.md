@@ -1,6 +1,6 @@
 ---
 title: Record (F#)
-description: 'Informazioni su come F # record rappresentano aggregazioni semplici di valori denominati, facoltativamente con membri.'
+description: Informazioni su come F# record rappresentano aggregazioni semplici di valori denominati, facoltativamente con membri.
 ms.date: 05/16/2016
 ms.openlocfilehash: 6103d96b6b80a9e2ed168755958dbe800f7fa862
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,7 +11,7 @@ ms.locfileid: "48261290"
 ---
 # <a name="records"></a>Record
 
-I record rappresentano aggregazioni semplici di valori denominati, facoltativamente con membri.  A partire da F # 4.1, può essere tipi riferimento o struct.  Si tratta di tipi di riferimento per impostazione predefinita.
+I record rappresentano aggregazioni semplici di valori denominati, facoltativamente con membri.  A partire da F# 4.1, può essere tipi riferimento o struct.  Si tratta di tipi di riferimento per impostazione predefinita.
 
 ## <a name="syntax"></a>Sintassi
 
