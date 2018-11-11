@@ -1,6 +1,6 @@
 ---
 title: 'Funzioni ricorsive: parola chiave rec (F#)'
-description: "Informazioni su come la parola chiave 'rec' di F # viene usata con la parola chiave 'let'. per definire una funzione ricorsiva."
+description: Informazioni su come la parola chiave 'rec' di F# viene usata con la parola chiave 'let'. per definire una funzione ricorsiva.
 ms.date: 05/16/2016
 ms.openlocfilehash: 5aab6ed8ab0fc3c0f0bcfc93c3ce6518ec53254f
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -30,7 +30,7 @@ function2-body
 
 ## <a name="remarks"></a>Note
 
-Funzioni ricorsive, le funzioni che chiamano se stesse, vengono identificate in modo esplicito nel linguaggio F #. Ciò rende disponibili l'identificatore che viene definito nell'ambito della funzione.
+Funzioni ricorsive, le funzioni che chiamano se stesse, vengono identificate in modo esplicito nel linguaggio F#. Ciò rende disponibili l'identificatore che viene definito nell'ambito della funzione.
 
 Il codice seguente illustra una funzione ricorsiva che calcola la *n*<sup>th</sup> numero di Fibonacci.
 

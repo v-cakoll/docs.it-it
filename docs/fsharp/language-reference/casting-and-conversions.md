@@ -1,6 +1,6 @@
 ---
 title: Cast e conversioni (F#)
-description: 'Informazioni su come il linguaggio di programmazione F # offre operatori di conversione per le conversioni aritmetiche tra vari tipi primitivi.'
+description: Informazioni su come il linguaggio di programmazione F# offre operatori di conversione per le conversioni aritmetiche tra vari tipi primitivi.
 ms.date: 05/16/2016
 ms.openlocfilehash: aca1a2523130ee485a7e7c9a6a45a410904cb246
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,17 +11,17 @@ ms.locfileid: "45677930"
 ---
 # <a name="casting-and-conversions-f"></a>Cast e conversioni (F#)
 
-In questo argomento viene descritto il supporto per le conversioni di tipo in F #.
+In questo argomento viene descritto il supporto per le conversioni di tipo in F#.
 
 ## <a name="arithmetic-types"></a>Tipi aritmetici
 
-F # fornisce gli operatori di conversione per le conversioni aritmetiche tra vari tipi di primitivi, ad esempio tra valori interi e tipi a virgola mobile. Gli operatori di conversione integrale e char sono stati verificati e form unchecked; gli operatori della virgola mobile e `enum` operatore di conversione non lo sono. I moduli deselezionati vengono definiti in `Microsoft.FSharp.Core.Operators` e i moduli selezionati sono definiti in `Microsoft.FSharp.Core.Operators.Checked`. I moduli selezionati verificare la presenza di overflow e generano un'eccezione di runtime se il valore risultante supera i limiti del tipo di destinazione.
+F# fornisce gli operatori di conversione per le conversioni aritmetiche tra vari tipi di primitivi, ad esempio tra valori interi e tipi a virgola mobile. Gli operatori di conversione integrale e char sono stati verificati e form unchecked; gli operatori della virgola mobile e `enum` operatore di conversione non lo sono. I moduli deselezionati vengono definiti in `Microsoft.FSharp.Core.Operators` e i moduli selezionati sono definiti in `Microsoft.FSharp.Core.Operators.Checked`. I moduli selezionati verificare la presenza di overflow e generano un'eccezione di runtime se il valore risultante supera i limiti del tipo di destinazione.
 
 Ognuno di questi operatori ha lo stesso nome come nome del tipo di destinazione. Ad esempio, nel codice seguente, in cui i tipi vengono annotati in modo esplicito, `byte` viene visualizzato con due significati diversi. La prima occorrenza è il tipo e il secondo è l'operatore di conversione.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4401.fs)]
 
-La tabella seguente illustra gli operatori di conversione definiti in F #.
+La tabella seguente illustra gli operatori di conversione definiti in F#.
 
 |Operatore|Descrizione|
 |--------|-----------|
@@ -67,11 +67,11 @@ Per altre informazioni, vedere [enumerazioni](enumerations.md).
 
 Conversione tra tipi in una gerarchia di oggetti è fondamentale per la programmazione orientata agli oggetti. Esistono due tipi di base delle conversioni: cast backup (l'upcast) e cast verso il basso (downcast). Eseguire il cast di una gerarchia indica che il cast da un riferimento all'oggetto derivato da un riferimento di oggetto di base. Un cast di questo tipo sarà sicuramente funzionante, purché sia la classe di base nella gerarchia di ereditarietà della classe derivata. Il downcast in una gerarchia, da un riferimento di oggetto di base a un riferimento all'oggetto derivato, ha esito positivo solo se l'oggetto è effettivamente un'istanza del tipo corretto di destinazione (derivato) o un tipo derivato dal tipo di destinazione.
 
-F # fornisce operatori per questi tipi di conversioni. Il `:>` viene eseguito il cast operatore nella gerarchia e `:?>` operatore viene eseguito il cast verso il basso della gerarchia.
+F# fornisce operatori per questi tipi di conversioni. Il `:>` viene eseguito il cast operatore nella gerarchia e `:?>` operatore viene eseguito il cast verso il basso della gerarchia.
 
 ### <a name="upcasting"></a>Upcast
 
-In molti linguaggi orientate a oggetti, è implicita; l'upcast in F #, le regole sono leggermente diverse. Upcast viene applicata automaticamente quando si passano argomenti ai metodi in un tipo di oggetto. Tuttavia, per le funzioni consentono di associazione in un modulo, l'upcast non è automatica, a meno che il tipo di parametro è dichiarato come tipo flessibile. Per altre informazioni, vedere [tipi flessibili](flexible-Types.md).
+In molti linguaggi orientate a oggetti, è implicita; l'upcast in F#, le regole sono leggermente diverse. Upcast viene applicata automaticamente quando si passano argomenti ai metodi in un tipo di oggetto. Tuttavia, per le funzioni consentono di associazione in un modulo, l'upcast non è automatica, a meno che il tipo di parametro è dichiarato come tipo flessibile. Per altre informazioni, vedere [tipi flessibili](flexible-Types.md).
 
 Il `:>` operatore esegue un cast statico, che significa che il successo del cast è determinato in fase di compilazione. Se un cast che usa `:>` viene compilato correttamente, è un cast valido e non dispone di alcuna possibilità di errore in fase di esecuzione.
 

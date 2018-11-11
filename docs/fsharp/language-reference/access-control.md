@@ -1,6 +1,6 @@
 ---
 title: Controllo di accesso (F#)
-description: "Informazioni su come controllare l'accesso agli elementi di programmazione, ad esempio i tipi, metodi e funzioni, il linguaggio di programmazione F #."
+description: Informazioni su come controllare l'accesso agli elementi di programmazione, ad esempio i tipi, metodi e funzioni, il linguaggio di programmazione F#.
 ms.date: 05/16/2016
 ms.openlocfilehash: 66a260d326acf07391e3775e5a7853654b4feee4
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -15,7 +15,7 @@ ms.locfileid: "43803974"
 
 ## <a name="basics-of-access-control"></a>Nozioni di base del controllo di accesso
 
-In F #, identificatori del controllo di accesso `public`, `internal`, e `private` è applicabile ai moduli, tipi, metodi, le definizioni di valore, funzioni, proprietà e i campi espliciti.
+In F#, identificatori del controllo di accesso `public`, `internal`, e `private` è applicabile ai moduli, tipi, metodi, le definizioni di valore, funzioni, proprietà e i campi espliciti.
 
 - `public` indica che l'entità sia accessibile da tutti i chiamanti.
 
@@ -24,13 +24,13 @@ In F #, identificatori del controllo di accesso `public`, `internal`, e `private
 - `private` indica che l'entità sia accessibile solo dal tipo o modulo che lo contiene.
 
 >[!NOTE]
-L'identificatore di accesso `protected` non viene usato in F #, anche se è accettabile se si utilizzano tipi creati in linguaggi che supportano `protected` accesso. Pertanto, se si esegue l'override di un metodo protetto, il metodo rimane accessibile solo all'interno della classe e i relativi discendenti.
+L'identificatore di accesso `protected` non viene usato in F#, anche se è accettabile se si utilizzano tipi creati in linguaggi che supportano `protected` accesso. Pertanto, se si esegue l'override di un metodo protetto, il metodo rimane accessibile solo all'interno della classe e i relativi discendenti.
 
 In generale, l'identificatore viene inserito davanti al nome dell'entità, tranne quando un `mutable` o `inline` identificatore viene usato, che appare dopo l'identificatore del controllo di accesso.
 
 Se non viene usato alcun identificatore di accesso, il valore predefinito è `public`, ad eccezione di `let` associazioni in un tipo, che sono sempre `private` al tipo.
 
-Le firme in F # forniscono un altro meccanismo per controllare l'accesso agli elementi del programma F #. Le firme non sono necessarie per il controllo di accesso. Per altre informazioni, vedere [Firme](signatures.md).
+Le firme in F# forniscono un altro meccanismo per controllare l'accesso agli elementi del programma F#. Le firme non sono necessarie per il controllo di accesso. Per altre informazioni, vedere [Firme](signatures.md).
 
 ## <a name="rules-for-access-control"></a>Regole di controllo di accesso
 

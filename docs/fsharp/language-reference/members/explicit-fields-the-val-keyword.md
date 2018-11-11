@@ -1,6 +1,6 @@
 ---
 title: 'Campi espliciti: parola chiave val (F#)'
-description: "Informazioni su F # 'val' parola chiave, che viene usata per dichiarare un percorso per archiviare un valore in un tipo classe o struttura senza inizializzare il tipo."
+description: Informazioni su F# 'val' parola chiave, che viene usata per dichiarare un percorso per archiviare un valore in un tipo classe o struttura senza inizializzare il tipo.
 ms.date: 05/16/2016
 ms.openlocfilehash: 9cd06f7e90192be79490dd0ff67f118cce4339c3
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2

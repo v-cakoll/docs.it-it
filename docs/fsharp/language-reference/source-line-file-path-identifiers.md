@@ -1,6 +1,6 @@
 ---
 title: Identificatori di riga, file e percorso di origine (F#)
-description: 'Informazioni su come utilizzare F # identificatore valori predefiniti che consentono di accedere il numero di riga di origine, directory e nome file del codice.'
+description: Informazioni su come utilizzare F# identificatore valori predefiniti che consentono di accedere il numero di riga di origine, directory e nome file del codice.
 ms.date: 05/16/2016
 ms.openlocfilehash: 14f710d1412c3420ec627dc30216ba2e89f16bcd
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -25,7 +25,7 @@ __SOURCE_FILE__
 
 Ognuno di questi valori ha tipo `string`.
 
-La tabella seguente riepiloga la riga di codice sorgente, file e gli identificatori di percorso che sono disponibili in F #. Questi identificatori non sono le macro del preprocessore; si tratta di valori predefiniti che sono riconosciuti dal compilatore.
+La tabella seguente riepiloga la riga di codice sorgente, file e gli identificatori di percorso che sono disponibili in F#. Questi identificatori non sono le macro del preprocessore; si tratta di valori predefiniti che sono riconosciuti dal compilatore.
 
 |Identificatore predefinito|Descrizione|
 |---------------------|-----------|

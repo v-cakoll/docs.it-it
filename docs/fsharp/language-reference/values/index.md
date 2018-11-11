@@ -1,6 +1,6 @@
 ---
 title: Valori (F#)
-description: 'Informazioni su come i valori in F # sono quantità che hanno un tipo specifico.'
+description: Informazioni su come i valori in F# sono quantità che hanno un tipo specifico.
 ms.date: 05/16/2016
 ms.openlocfilehash: f645481ce8395c11ae920aee06cbf07955aeb684
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2

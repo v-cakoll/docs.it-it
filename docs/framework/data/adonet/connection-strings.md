@@ -2,12 +2,12 @@
 title: Stringhe di connessione in ADO.NET
 ms.date: 10/10/2018
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490
-ms.openlocfilehash: 4dab2656ae8f39976b21f949c9548a3f718dfafc
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 078fdab257115296f9ff00330265cb14ff8674c8
+ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347942"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50409457"
 ---
 # <a name="connection-strings-in-adonet"></a>Stringhe di connessione in ADO.NET
 
@@ -19,9 +19,9 @@ Una stringa di connessione è un elenco delimitato da punto e virgola di coppie 
   
     keyword1=value; keyword2=value;
   
-Le parole chiave non sono tra maiuscole e minuscole. I valori, tuttavia, potrebbero essere tra maiuscole e minuscole, a seconda dell'origine dati. Entrambe le parole chiave e i valori possono contenere [spazi vuoti](https://en.wikipedia.org/wiki/Whitespace_character#Unicode). Gli spazi iniziali e finali viene ignorato nelle parole chiave e senza virgolette i valori.
+Le parole chiave non sono tra maiuscole e minuscole. I valori, tuttavia, potrebbero essere tra maiuscole e minuscole, a seconda dell'origine dati. Entrambe le parole chiave e i valori possono contenere [spazi vuoti](https://en.wikipedia.org/wiki/Whitespace_character#Unicode). Spazi vuoti iniziali e finali viene ignorato nelle parole chiave e senza virgolette i valori.
 
-Se il valore contiene il punto e virgola, [caratteri di controllo Unicode](https://en.wikipedia.org/wiki/Unicode_control_characters), o iniziali o finali uno spazio vuoto, deve essere racchiuso tra virgolette singole o doppie. Ad esempio:
+Se il valore contiene il punto e virgola, [caratteri di controllo Unicode](https://en.wikipedia.org/wiki/Unicode_control_characters), o iniziali o finali lo spazio vuoto, deve essere racchiuso tra virgolette singole o doppie. Ad esempio:
 
     Keyword=" whitespace  ";
     Keyword='special;character';

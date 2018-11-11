@@ -1,6 +1,6 @@
 ---
 title: Espressioni di query (F#)
-description: 'Informazioni sul supporto di espressione di query LINQ nel linguaggio di programmazione F #.'
+description: Informazioni sul supporto di espressione di query LINQ nel linguaggio di programmazione F#.
 ms.date: 05/16/2016
 ms.openlocfilehash: 6586d991dde550380d04c4d9831bb954eb94a715
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -14,7 +14,7 @@ ms.locfileid: "48033493"
 > [!NOTE]
 I collegamenti di riferimento all'API in questo articolo portano a MSDN.  Il riferimento all'API in Microsoft Docs (docs.microsoft.com) non è completo.
 
-Le espressioni di query consentono a un'origine dati di query e inserire i dati nel formato desiderato. Le espressioni di query forniscono il supporto per LINQ in F #.
+Le espressioni di query consentono a un'origine dati di query e inserire i dati nel formato desiderato. Le espressioni di query forniscono il supporto per LINQ in F#.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -24,7 +24,7 @@ query { expression }
 
 ## <a name="remarks"></a>Note
 
-Le espressioni di query sono un tipo di espressione di calcolo simile a espressioni di sequenza. Analogamente a come si specifica una sequenza fornendo il codice in un'espressione di sequenza, fornendo il codice in un'espressione di query è specificare un set di dati. In un'espressione di sequenza, il `yield` parola chiave identifica i dati devono essere restituiti come parte della sequenza risultante. Nelle espressioni di query, il `select` (parola chiave) esegue la stessa funzione. Oltre al `select` parola chiave F # supporta inoltre una serie di operatori di query sono molto simili le parti di un'istruzione SQL SELECT. Di seguito è riportato un esempio di un'espressione di query semplice, insieme al codice che si connette all'origine Northwind OData.
+Le espressioni di query sono un tipo di espressione di calcolo simile a espressioni di sequenza. Analogamente a come si specifica una sequenza fornendo il codice in un'espressione di sequenza, fornendo il codice in un'espressione di query è specificare un set di dati. In un'espressione di sequenza, il `yield` parola chiave identifica i dati devono essere restituiti come parte della sequenza risultante. Nelle espressioni di query, il `select` (parola chiave) esegue la stessa funzione. Oltre al `select` parola chiave F# supporta inoltre una serie di operatori di query sono molto simili le parti di un'istruzione SQL SELECT. Di seguito è riportato un esempio di un'espressione di query semplice, insieme al codice che si connette all'origine Northwind OData.
 
 ```fsharp
 // Use the OData type provider to create types that can be used to access the Northwind database.
@@ -56,7 +56,7 @@ Gli operatori di query consentono di specificare i dettagli della query, ad esem
 
 Solo le espressioni che possono essere convertite in SQL sono consentite nelle espressioni di query. Ad esempio, nessuna chiamata di funzione è consentita nelle espressioni quando si usa il `where` (operatore query).
 
-Tabella 1 sono illustrati gli operatori di query disponibili. Inoltre, vedere Table2, che mette a confronto le query SQL e l'equivalente F # le espressioni di query più avanti in questo argomento. Alcuni operatori di query non sono supportate da alcuni provider di tipi. In particolare, il provider di tipi OData è limitato negli operatori di query supportate a causa delle limitazioni in OData. Per altre informazioni, vedere [Provider di tipi ODataService (F #)](https://msdn.microsoft.com/library/bac609dd-9d12-4bf9-a662-24bdf4faa43e).
+Tabella 1 sono illustrati gli operatori di query disponibili. Inoltre, vedere Table2, che mette a confronto le query SQL e l'equivalente F# le espressioni di query più avanti in questo argomento. Alcuni operatori di query non sono supportate da alcuni provider di tipi. In particolare, il provider di tipi OData è limitato negli operatori di query supportate a causa delle limitazioni in OData. Per altre informazioni, vedere [Provider di tipi ODataService (F#)](https://msdn.microsoft.com/library/bac609dd-9d12-4bf9-a662-24bdf4faa43e).
 
 Questa tabella si presuppone un database nel formato seguente:
 
@@ -498,17 +498,17 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </td></tr>
 </table>
 
-## <a name="comparison-of-transact-sql-and-f-query-expressions"></a>Confronto di Transact-SQL e le espressioni di Query F #
-La tabella seguente illustra alcune query comuni di Transact-SQL e gli equivalenti in F #. Il codice in questa tabella presuppone anche nello stesso database della tabella precedente e lo stesso codice iniziale per configurare il provider di tipi.
+## <a name="comparison-of-transact-sql-and-f-query-expressions"></a>Confronto di Transact-SQL e le espressioni di Query F#
+La tabella seguente illustra alcune query comuni di Transact-SQL e gli equivalenti in F#. Il codice in questa tabella presuppone anche nello stesso database della tabella precedente e lo stesso codice iniziale per configurare il provider di tipi.
 
 
-### <a name="table-2-transact-sql-and-f-query-expressions"></a>Tabella 2. Transact-SQL e le espressioni di Query F #
+### <a name="table-2-transact-sql-and-f-query-expressions"></a>Tabella 2. Transact-SQL e le espressioni di Query F#
 
 
 <table style="width:100%">
   <tr>
     <th>Transact-SQL (non maiuscole / minuscole)</th>
-    <th>F # espressione di Query (maiuscole / minuscole)</th>
+    <th>F# espressione di Query (maiuscole / minuscole)</th>
   </tr>
 <tr><td>
 Selezionare tutti i campi dalla tabella.</br>
@@ -1864,7 +1864,7 @@ query {
 |> Seq.iter (fun (studentName, courseName) -> printfn "%s %s" studentName courseName)
 ```
 
-Ed ecco l'output completo quando viene eseguito questo codice in F # Interactive.
+Ed ecco l'output completo quando viene eseguito questo codice in F# Interactive.
 
 ```
 --> Referenced 'C:\Program Files (x86)\Reference Assemblies\Microsoft\FSharp\3.0\Runtime\v4.0\Type Providers\FSharp.Data.TypeProviders.dll'

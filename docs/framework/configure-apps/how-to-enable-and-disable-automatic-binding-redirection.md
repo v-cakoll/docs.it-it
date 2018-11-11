@@ -1,26 +1,38 @@
 ---
-title: 'Procedura: abilitare e disabilitare il reindirizzamento di associazione automatico'
-ms.date: 09/12/2018
+title: Abilitare o disabilitare i reindirizzamenti di associazione generato automaticamente
+ms.date: 10/30/2018
 helpviewer_keywords:
 - side-by-side execution, assembly binding redirection
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 5fca42f3-bdce-4b81-a704-61e42c89d3ba
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 9b9c9cbdb89ccf67942dcccee37ea410c6fa39a5
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 284c2a08f2b78d2c6a1ab9752a3f2283e87fd734
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036201"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "50980833"
 ---
 # <a name="how-to-enable-and-disable-automatic-binding-redirection"></a>Procedura: abilitare e disabilitare il reindirizzamento di associazione automatico
 
-Quando si esegue la compilazione di App in Visual Studio che hanno come destinazione il [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] e versioni successive, i reindirizzamenti di associazione possono essere aggiunte automaticamente al file di configurazione dell'app per eseguire l'override di unificazione degli assembly. I reindirizzamenti di associazione vengono aggiunti se l'app o i relativi componenti fanno riferimento a più di una versione dello stesso assembly, anche se è possibile specificare manualmente i reindirizzamenti di associazione nel file di configurazione dell'app. La funzionalità di reindirizzamento di associazione automatico influisce sulle App web e App desktop tradizionali destinate le [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] o versione successiva, anche se il comportamento è leggermente diverso per un'app web. È possibile abilitare il reindirizzamento di associazione automatico se sono presenti app destinate alle versioni precedenti di .NET Framework o per mantenere i reindirizzamenti di associazione creati manualmente.
+Quando si esegue la compilazione di App in Visual Studio che hanno come destinazione il [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] e versioni successive, i reindirizzamenti di associazione possono essere aggiunte automaticamente al file di configurazione dell'app per eseguire l'override di unificazione degli assembly. I reindirizzamenti di associazione vengono aggiunti se l'app o i relativi componenti fanno riferimento a più di una versione dello stesso assembly, anche se è possibile specificare manualmente i reindirizzamenti di associazione nel file di configurazione dell'app. La funzionalità di reindirizzamento di associazione automatico influisce sulle App web e App desktop destinate le [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] o versione successiva, anche se il comportamento è leggermente diverso per un'app web. È possibile abilitare il reindirizzamento di associazione automatico se si dispongono delle App esistenti destinati a versioni precedenti di .NET Framework, o se si vuole creare manualmente i reindirizzamenti di associazione, è possibile disabilitare questa funzionalità.
 
 ## <a name="disable-automatic-binding-redirects-in-desktop-apps"></a>Disabilitare i reindirizzamenti di associazione automatici nelle App desktop
 
-I reindirizzamenti di associazione automatici sono abilitati per impostazione predefinita per le app desktop tradizionali destinate a [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] e versioni successive. I reindirizzamenti di associazione vengono aggiunti al file di configurazione di output (app.config) quando l'applicazione viene compilata ed eseguire l'override dell'unificazione degli assembly che in caso contrario potrebbe essere eseguito. Il file app.config di origine non viene modificato. È possibile disabilitare questa funzionalità modificando il file di progetto per l'app.
+Reindirizzamenti di associazione automatici sono abilitati per impostazione predefinita per le app desktop di Windows che usano il [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] e versioni successive. I reindirizzamenti di associazione vengono aggiunti alla configurazione di output (**app. config**) del file quando l'app viene compilata ed eseguire l'override dell'unificazione degli assembly che in caso contrario, potrebbe essere eseguito. L'origine **app. config** file non viene modificato. È possibile disabilitare questa funzionalità modificando il file di progetto per l'app o deselezionando una casella di controllo nelle proprietà del progetto in Visual Studio.
+
+### <a name="disable-through-project-properties"></a>Disabilitare tramite le proprietà del progetto
+
+Se si dispone di Visual Studio 2017 versione 15.7 o successiva, è possibile disabilitare facilmente i reindirizzamenti di associazione generato automaticamente nelle pagine delle proprietà del progetto.
+
+1. Fare clic con il pulsante destro del mouse in **Esplora soluzioni** e scegliere **Proprietà**.
+
+2. Nel **Application** pagina, deselezionare il **genera automaticamente reindirizzamenti di binding** opzione.
+
+3. Premere **Ctrl**+**S** per salvare le modifiche.
+
+### <a name="disable-manually-in-the-project-file"></a>Disabilitare manualmente nel file di progetto
 
 1. Aprire il file di progetto per la modifica mediante uno dei metodi seguenti:
 
@@ -75,9 +87,9 @@ I reindirizzamenti di associazione automatici sono abilitati per impostazione pr
 
 ## <a name="enable-automatic-binding-redirects-in-web-apps"></a>Abilita reindirizzamenti di associazione automatici nelle App web
 
-I reindirizzamenti di associazione automatici vengono implementati in modo diverso per le app Web. Poiché il file di configurazione di origine (web.config) deve essere modificato per le app Web, i reindirizzamenti di associazione non vengono aggiunti automaticamente al file di configurazione. Visual Studio notifica, tuttavia, eventuali conflitti di associazione ed è possibile aggiungere reindirizzamenti di associazione per risolverli. Poiché viene sempre chiesto aggiungere reindirizzamenti di associazione, non è necessario disabilitare in modo esplicito questa funzionalità per un'app web.
+I reindirizzamenti di associazione automatici vengono implementati in modo diverso per le app Web. Poiché la configurazione dell'origine (**Web. config**) file deve essere modificato per le app web, i reindirizzamenti di associazione non vengono aggiunti automaticamente al file di configurazione. Visual Studio notifica, tuttavia, eventuali conflitti di associazione ed è possibile aggiungere reindirizzamenti di associazione per risolverli. Poiché viene sempre chiesto aggiungere reindirizzamenti di associazione, non è necessario disabilitare in modo esplicito questa funzionalità per un'app web.
 
-Per aggiungere reindirizzamenti di associazione in un file Web. config:
+Per aggiungere reindirizzamenti di associazione a un **Web. config** file:
 
 1. In Visual Studio compilare l'app e cercare eventuali avvisi di compilazione.
 
@@ -85,7 +97,7 @@ Per aggiungere reindirizzamenti di associazione in un file Web. config:
 
 2. In caso di conflitti di associazione a livello di assembly, viene visualizzato un avviso. Fare doppio clic su avviso oppure selezionare l'avviso e premere **invio**.
 
-   Verrà visualizzata una finestra di dialogo che consente di aggiungere automaticamente i reindirizzamenti di associazione necessari al file web.config di origine.
+   Finestra di dialogo che consente di aggiungere automaticamente l'associazione necessario reindirizza all'origine **Web. config** file viene visualizzato.
 
    ![Finestra di dialogo dell'autorizzazione reindirizzamento associazione](../../../docs/framework/configure-apps/media/clr-addbindingredirect.png "CLR_AddBindingRedirect")
 

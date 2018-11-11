@@ -1,6 +1,6 @@
 ---
-title: 'Introduzione a F # con gli strumenti da riga di comando'
-description: 'Informazioni su come creare una soluzione multiprogetto semplice in F # tramite la CLI di .NET Core in qualsiasi sistema operativo (Windows, macOs o Linux).'
+title: Introduzione a F# con gli strumenti da riga di comando
+description: Informazioni su come creare una soluzione multiprogetto semplice in F# tramite la CLI di .NET Core in qualsiasi sistema operativo (Windows, macOs o Linux).
 ms.date: 03/26/2018
 ms.openlocfilehash: 8a82970f33c8bbe1b8cdd8fb6499b59b16d3cbf3
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -9,15 +9,15 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/02/2018
 ms.locfileid: "45673909"
 ---
-# <a name="get-started-with-f-with-the-net-core-cli"></a>Introduzione a F # con la CLI di .NET Core
+# <a name="get-started-with-f-with-the-net-core-cli"></a>Introduzione a F# con la CLI di .NET Core
 
-Questo articolo illustra come è possibile iniziare a usare F # in qualsiasi sistema operativo (Windows, macOS o Linux) con la CLI di .NET Core. La chiamata passa attraverso la creazione di una soluzione multiprogetto con una libreria di classi che viene chiamata da un'applicazione console.
+Questo articolo illustra come è possibile iniziare a usare F# in qualsiasi sistema operativo (Windows, macOS o Linux) con la CLI di .NET Core. La chiamata passa attraverso la creazione di una soluzione multiprogetto con una libreria di classi che viene chiamata da un'applicazione console.
 
 ## <a name="prerequisites"></a>Prerequisiti
 
 Per iniziare, è necessario installare la versione più recente [.NET Core SDK](https://www.microsoft.com/net/download/).
 
-Questo articolo si presuppone che si conosca come usare una riga di comando e hanno un testo preferito editor. Se non ne usi già, [Visual Studio Code](get-started-vscode.md) è un'ottima opzione come editor di testo per F #.
+Questo articolo si presuppone che si conosca come usare una riga di comando e hanno un testo preferito editor. Se non ne usi già, [Visual Studio Code](get-started-vscode.md) è un'ottima opzione come editor di testo per F#.
 
 ## <a name="build-a-simple-multi-project-solution"></a>Creare una soluzione multiprogetto semplice
 
@@ -151,4 +151,4 @@ I used to be World but now I'm ""World"" thanks to JSON.NET!
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Successivamente, consultare il [Panoramica di F #](../tour.md) per altre informazioni sulle diverse funzionalità di F #.
+Successivamente, consultare il [Panoramica di F#](../tour.md) per altre informazioni sulle diverse funzionalità di F#.

@@ -1,6 +1,6 @@
 ---
 title: Sequenze (F#)
-description: 'Informazioni su come usare le sequenze di F #, quando si hanno grandi dimensioni, raccolta ordinata di dati, ma non necessariamente prevediate di usare tutti gli elementi.'
+description: Informazioni su come usare le sequenze di F#, quando si hanno grandi dimensioni, raccolta ordinata di dati, ma non necessariamente prevediate di usare tutti gli elementi.
 ms.date: 05/16/2016
 ms.openlocfilehash: cfe8d1e350a8ac46b7700c12aa84d250f8b35855
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -22,7 +22,7 @@ Oggetto *espressioni di sequenza* è un'espressione che restituisce una sequenza
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1502.fs)]
 
-Espressioni di sequenza sono costituite da espressioni F # che producono valori della sequenza. È possibile usare il `yield` (parola chiave) per produrre valori diventano parte della sequenza.
+Espressioni di sequenza sono costituite da espressioni F# che producono valori della sequenza. È possibile usare il `yield` (parola chiave) per produrre valori diventano parte della sequenza.
 
 Di seguito è riportato un esempio.
 
@@ -62,7 +62,7 @@ L'esempio seguente illustra l'uso di `yield!` combinare singoli sequenze in un'u
 
 Le sequenze supportano molte funzioni analoghe come [Elenca](lists.md). Le sequenze supportano anche operazioni come il raggruppamento e il conteggio usando funzioni di generazione chiavi. Le sequenze di supportano anche maggiori sono funzioni per l'estrazione di sottosequenze.
 
-Molti tipi di dati, ad esempio elenchi, matrici, set e le mappe sono implicitamente sequenze perché sono raccolte enumerabili. Una funzione che accetta una sequenza come un argomento funziona con una qualsiasi di F # tipi di dati comuni, oltre a qualsiasi tipo di dati .NET Framework che implementa `System.Collections.Generic.IEnumerable<'T>`. Questo va confrontato con una funzione che accetta un elenco come argomento, che può accettare solo gli elenchi. Il tipo `seq<'T>` è un'abbreviazione di tipo per `IEnumerable<'T>`. Ciò significa che qualsiasi tipo che implementa l'interfaccia generica `System.Collections.Generic.IEnumerable<'T>`, che include le matrici, elenchi, set e mappe in F # e la maggior parte dei tipi di raccolte .NET Framework, è compatibile con il `seq` digitare e possono essere utilizzati ovunque sia prevista una sequenza.
+Molti tipi di dati, ad esempio elenchi, matrici, set e le mappe sono implicitamente sequenze perché sono raccolte enumerabili. Una funzione che accetta una sequenza come un argomento funziona con una qualsiasi di F# tipi di dati comuni, oltre a qualsiasi tipo di dati .NET Framework che implementa `System.Collections.Generic.IEnumerable<'T>`. Questo va confrontato con una funzione che accetta un elenco come argomento, che può accettare solo gli elenchi. Il tipo `seq<'T>` è un'abbreviazione di tipo per `IEnumerable<'T>`. Ciò significa che qualsiasi tipo che implementa l'interfaccia generica `System.Collections.Generic.IEnumerable<'T>`, che include le matrici, elenchi, set e mappe in F# e la maggior parte dei tipi di raccolte .NET Framework, è compatibile con il `seq` digitare e possono essere utilizzati ovunque sia prevista una sequenza.
 
 ## <a name="module-functions"></a>Funzioni di modulo
 

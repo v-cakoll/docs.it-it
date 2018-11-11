@@ -1,6 +1,6 @@
 ---
 title: Enumerazioni (F#)
-description: 'Informazioni su come utilizzare F # enumerazioni anziché valori letterali per rendere il codice più leggibile e gestibile.'
+description: Informazioni su come utilizzare F# enumerazioni anziché valori letterali per rendere il codice più leggibile e gestibile.
 ms.date: 05/16/2016
 ms.openlocfilehash: 47fb353c2698f8b1474834ebbd1b0eff2c7f76e7
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -40,7 +40,7 @@ Il codice seguente illustra la dichiarazione e l'uso di un'enumerazione.
 
 I tipi enumerati possono avere uno dei seguenti tipi sottostanti: `sbyte`, `byte`, `int16`, `uint16`, `int32`, `uint32`, `int64`, `uint16`, `uint64`, e `char`. I tipi di enumerazione sono rappresentati in .NET Framework come tipi dalla quale vengono ereditati `System.Enum`, che a sua volta viene ereditata dalla `System.ValueType`. In questo modo, si tratta di tipi di valore che si trovano nello stack o inline nell'oggetto che contiene e qualsiasi valore del tipo sottostante è un valore valido dell'enumerazione. Ciò è importante quando i valori di criteri di ricerca su enumerazione, in quanto è necessario specificare un modello che memorizza nella cache i valori senza nome.
 
-Il `enum` funzione nella libreria di F # può essere utilizzata per generare un valore di enumerazione, anche un valore diverso da quello dell'oggetto predefinito, valori denominati. Si utilizza il `enum` funzione come indicato di seguito.
+Il `enum` funzione nella libreria di F# può essere utilizzata per generare un valore di enumerazione, anche un valore diverso da quello dell'oggetto predefinito, valori denominati. Si utilizza il `enum` funzione come indicato di seguito.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2103.fs)]
 

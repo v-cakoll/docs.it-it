@@ -1,5 +1,5 @@
 ---
-title: 'Copiare e aggiornare espressioni di Record (F #)'
+title: Copiare e aggiornare espressioni di Record (F#)
 description: Informazioni su come scrivere un 'copia e aggiorna record expression' in cui vengono copiati un esistente gli aggiornamenti dei record, campi specificati e restituisce il record aggiornato.
 author: ChrSteinert
 ms.date: 06/04/2016

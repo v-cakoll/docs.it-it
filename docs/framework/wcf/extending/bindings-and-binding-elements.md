@@ -5,11 +5,11 @@ helpviewer_keywords:
 - binding elements [WCF]
 ms.assetid: 765ff77b-7682-4ea3-90eb-e4d751e37379
 ms.openlocfilehash: ca013c939e3db2136ffa1504ae0eedd7b870d773
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.sourcegitcommit: 296183dbe35077b5c5e5e74d5fbe7f399bc507ee
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49372539"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "50982828"
 ---
 # <a name="bindings-and-binding-elements"></a>Associazioni ed elementi di associazione
 Le associazioni sono raccolte di elementi di configurazione speciale, chiamati *elementi di associazione*, vengono esaminati dal runtime del servizio ogni volta che un client o in fase di costruzione dell'endpoint di servizio. Il tipo e l'ordine degli elementi di un'associazione determinano la scelta e l'ordine di sovrapposizione dei canali di protocollo e di trasporto dello stack di canali di un endpoint.  
