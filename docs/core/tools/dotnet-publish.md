@@ -4,11 +4,11 @@ description: Il comando dotnet publish consente di pubblicare il progetto .NET C
 author: mairaw
 ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: a60777d613573076f41fba3e5ed610b236884063
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 17bacc92eea90072b95b2d42a87cb57e9fa0be67
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
+ms.lasthandoff: 11/07/2018
 ms.locfileid: "43511424"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
@@ -58,7 +58,7 @@ L'output del comando `dotnet publish` è pronto per la distribuzione in un siste
 
 `PROJECT`
 
-Progetto da pubblicare. Se non specificato, per impostazione predefinita il percorso corrisponde alla directory corrente.
+Progetto da pubblicare. Si tratta del percorso e del nome di un file di progetto [C#](csproj.md), F# o Visual Basic oppure del percorso di una directory contenente un file di progetto C#, F# o Visual Basic. Se non specificato, per impostazione predefinita il percorso corrisponde alla directory corrente.
 
 ## <a name="options"></a>Opzioni
 

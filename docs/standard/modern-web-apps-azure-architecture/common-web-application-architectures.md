@@ -4,12 +4,12 @@ description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Espl
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: ff483c9b555fdf394d11626536c28e7e07516d05
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: ae141b3d60a9968ee3fe59474e32a174bdb77e3b
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404632"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50757452"
 ---
 # <a name="common-web-application-architectures"></a>Architetture di applicazioni Web comuni
 
@@ -97,7 +97,7 @@ L'approccio più semplice alla scalabilità di un'applicazione Web in Azure cons
 
 ## <a name="clean-architecture"></a>Architettura pulita
 
-Le applicazioni che osservano il principio DIP (Dependency Inversion Principle, principio di inversione delle dipendenze) e il principio DDD (Domain-Driven Design, progettazione basata su domini) tendono ad arrivare a un'architettura simile. Nel corso degli anni, questa architettura è stata indicata con molti nomi diversi. Uno dei primi nomi è stato Architettura esagonale, seguito da "Porte-e-adattatori". Più di recente, è stata indicata come [Onion Architecture](http://jeffreypalermo.com/blog/the-onion-architecture-part-1/) (Architettura ad anelli) o [Clean Architecture](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html) (Architettura pulita). In questo e-book viene usato quest'ultimo nome, ovvero Architettura pulita.
+Le applicazioni che osservano il principio DIP (Dependency Inversion Principle, principio di inversione delle dipendenze) e il principio DDD (Domain-Driven Design, progettazione basata su domini) tendono ad arrivare a un'architettura simile. Nel corso degli anni, questa architettura è stata indicata con molti nomi diversi. Uno dei primi nomi è stato Architettura esagonale, seguito da "Porte-e-adattatori". Più di recente, è stata indicata come [Onion Architecture](https://jeffreypalermo.com/blog/the-onion-architecture-part-1/) (Architettura ad anelli) o [Clean Architecture](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html) (Architettura pulita). In questo e-book viene usato quest'ultimo nome, ovvero Architettura pulita.
 
 > [!NOTE]
 > È possibile usare il termine Architettura pulita per indicare le applicazioni compilate osservando i principi DDD così come quelle che non lo sono. Nel caso delle prime, questa combinazione può essere indicata come "Architettura DDD pulita".
@@ -307,7 +307,7 @@ Se si vuole aggiungere il supporto per Docker all'applicazione tramite Visual St
 > - **Architettura pulita**  
 >   <https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html>
 > - **Architettura ad anelli**  
->   <http://jeffreypalermo.com/blog/the-onion-architecture-part-1/>
+>   <https://jeffreypalermo.com/blog/the-onion-architecture-part-1/>
 > - **Schema repository**  
 >   <https://deviq.com/repository-pattern/>
 > - **Esempio di soluzione con Architettura pulita**  

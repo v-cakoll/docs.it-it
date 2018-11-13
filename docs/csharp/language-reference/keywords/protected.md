@@ -7,11 +7,11 @@ f1_keywords:
 helpviewer_keywords:
 - protected keyword [C#]
 ms.assetid: 05ce3794-6675-4025-bddb-eaaa0ec22892
-ms.openlocfilehash: cc3c8f81edb68fb26be560c8635e30dfd6e7b372
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6e3f72226d10910152f7a2139a5a1be35e681ec7
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2018
+ms.lasthandoff: 11/07/2018
 ms.locfileid: "50183178"
 ---
 # <a name="protected-c-reference"></a>protected (Riferimenti per C#)
@@ -46,9 +46,9 @@ Se si impostano i livelli di accesso di `x` e `y` su [privato](private.md), il c
 
 `'Point.x' is inaccessible due to its protection level.`
 
-## <a name="c-language-specification"></a>Specifiche del linguaggio C#
+## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+Per altre informazioni, vedere [Accessibilità dichiarata](~/_csharplang/spec/basic-concepts.md#declared-accessibility) in [Specifica del linguaggio C#](../language-specification/index.md). La specifica del linguaggio costituisce il riferimento ufficiale principale per la sintassi e l'uso di C#.
 
 ## <a name="see-also"></a>Vedere anche
 

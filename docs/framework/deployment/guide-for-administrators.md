@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f646927d4ddf88ae117f6cacafc2e42df4e3abee
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 844e9e53c752be0c993255fc356ade1723109b39
+ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195684"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50744587"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>Guida alla distribuzione di .NET Framework per amministratori
 In questo articolo dettagliato vengono descritte le modalità in cui un amministratore di sistema può distribuire [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] e le relative dipendenze di sistema attraverso una rete usando Microsoft System Center Configuration Manager. L'articolo presuppone che tutti i computer client di destinazione soddisfino i requisiti minimi per .NET Framework. Per un elenco di requisiti software e hardware per l'installazione di [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], vedere [Requisiti di sistema di .NET Framework](../../../docs/framework/get-started/system-requirements.md).  
@@ -176,8 +176,8 @@ In questo articolo dettagliato vengono descritte le modalità in cui un amminist
   
 9. Nella pagina **Esperienza utente** della procedura guidata, usare i valori predefiniti e scegliere **Avanti**.  
   
-    > [!WARNING]
-    >  Nell'ambiente di produzione potrebbero essere impostati criteri che richiedono selezioni diverse per la pianificazione dell'assegnazione. Per informazioni su queste opzioni, vedere [Advertisement Name Properties: Schedule Tab](https://technet.microsoft.com/library/bb694016.aspx) (Proprietà dei nomi degli annunci: scheda Pianificazione) nella libreria TechNet.  
+> [!WARNING]
+> Nell'ambiente di produzione potrebbero essere impostati criteri che richiedono selezioni diverse per la pianificazione dell'assegnazione. Per informazioni su queste opzioni, vedere [Advertisement Name Properties: Schedule Tab](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb694016%28v=technet.10%29) (Proprietà dei nomi degli annunci: scheda Pianificazione).
   
 10. Nella pagina di **Punti di distribuzione** della procedura guidata usare i valori predefiniti e scegliere **Avanti**.  
   
@@ -207,7 +207,7 @@ In questo articolo dettagliato vengono descritte le modalità in cui un amminist
   
 -   [Amministrazione del sito per System Center 2012 Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg681983%28v=technet.10%29)  
   
--   [Configuration Manager Single Site Planning and Deployment](https://technet.microsoft.com/library/bb680961.aspx) (Pianificazione e distribuzione in modalità sito singolo di Configuration Manager)  
+-   [Configuration Manager Single Site Planning and Deployment](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb680961%28v=technet.10%29) (Pianificazione e distribuzione in modalità sito singolo di Configuration Manager)  
   
  **Client di System Center 2012 Configuration Manager per computer Windows:**  
   

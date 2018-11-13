@@ -8,11 +8,11 @@ ms.assetid: 139d4cb1-5972-40f4-bdd8-1ce68e4dfb80
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9536b53531d3ee7575a51b8702b34b57338b4f8b
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: 0fbd677fcdc5bf46c4d827f492eaaa970edc07b6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50040907"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50235752"
 ---
 # <a name="deploying-net-framework-applications"></a>Distribuzione di applicazioni .NET Framework
 Questa sezione della documentazione di .NET Framework contiene informazioni essenziali per la distribuzione delle applicazioni .NET Framework, incluse le linee guida per il caricamento degli assembly, la risoluzione dei riferimenti all'assembly e il miglioramento delle prestazioni dell'applicazione con la generazione delle immagini native.  

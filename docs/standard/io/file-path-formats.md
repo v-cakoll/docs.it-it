@@ -9,12 +9,12 @@ helpviewer_keywords:
 - path formats, Windows
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5821d15e71492bd54fa6b5d891f2ff38a2902a06
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 05146467f321a3c83f3637e2eecc4c7c42dc4ba0
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47424389"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51214194"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Formati dei percorsi di file nei sistemi Windows
 
@@ -202,7 +202,7 @@ Si noti che è possibile passare contenenti più caratteri di `MAX_PATH` a [GetF
 Una peculiarità del file system di Windows che può confondere gli utenti e gli sviluppatori non Windows è che i nomi di percorsi e directory non fanno distinzione tra maiuscole e minuscole. In altre parole, i nomi di file e directory riflettono l'uso di maiuscole/minuscole delle stringhe usate quando sono stati creati. Ad esempio, la chiamata al metodo
 
 ```csharp
-Directory.Create(TeStDiReCtOrY);
+Directory.Create("TeStDiReCtOrY");
 ```
 crea una directory denominata TeStDiReCtOrY. Se si rinomina una directory o un file per modificare l'uso di maiuscole/minuscole, il nome del file o della directory riflette le maiuscole/minuscole usate quando è stato rinominato. Ad esempio, il codice seguente rinomina un file denominato test.txt in Test.txt:
 

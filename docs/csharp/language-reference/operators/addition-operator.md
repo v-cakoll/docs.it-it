@@ -8,18 +8,16 @@ helpviewer_keywords:
 - concatenation operator [C#]
 - addition operator [C#]
 ms.assetid: 93e56486-bb42-43c1-bd43-60af11e64e67
-ms.openlocfilehash: ae2774d96bc50afa271fffdea445e640e68c3647
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 27ea47d698b20f112880750ec0bc931f1917f142
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
+ms.lasthandoff: 11/07/2018
 ms.locfileid: "50192304"
 ---
 # <a name="-operator-c-reference"></a>Operatore + (Riferimenti per C#)
 
 L'operatore `+` è supportato in due forme: un operatore + unario o un operatore addizione binario.
-
-I tipi definiti dall'utente possono eseguire l'[overload](../keywords/operator.md) degli operatori `+` unario e binario. Quando viene eseguito l'overload di un operatore `+`, viene anche aggiunto l'[operatore di assegnazione di addizione](addition-assignment-operator.md) `+=`.
 
 ## <a name="unary-plus-operator"></a>Operatore più unario
 
@@ -48,6 +46,10 @@ Per i tipi [delegate](../keywords/delegate.md), l'operatore `+` restituisce una 
 [!code-csharp-interactive[delegate combination](~/samples/snippets/csharp/language-reference/operators/AdditionExamples.cs#AddDelegates)]
 
 Per altre informazioni sui tipi delegate, vedere [Delegati](../../programming-guide/delegates/index.md).
+
+## <a name="operator-overloadability"></a>Overload degli operatori
+
+I tipi definiti dall'utente possono eseguire l'[overload](../keywords/operator.md) degli operatori `+` unario e binario. Quando viene eseguito l'overload di un operatore `+`, viene anche aggiunto l'[operatore di assegnazione di addizione](addition-assignment-operator.md) `+=`.
 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#
 

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - type conversion [C#], as keyword
 - as keyword [C#]
 ms.assetid: a9be126b-cbf4-4990-a70d-d0e1983cad0e
-ms.openlocfilehash: ce3163f7d957df96a5c0304adc0b3083d8e20104
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: d6c9d44ff22881e6e5e7a542e1df41bbf77b23d8
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
+ms.lasthandoff: 11/07/2018
 ms.locfileid: "49122722"
 ---
 # <a name="as-c-reference"></a>as (Riferimenti per C#)
@@ -42,8 +42,9 @@ expression is type ? (type)expression : (type)null
 [!code-csharp[csrefKeywordsOperator#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsOperator/CS/csrefKeywordsOperators.cs#2)]
   
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
+
+Per altre informazioni, vedere [Operatore as](~/_csharplang/spec/expressions.md#the-as-operator) in [Specifica del linguaggio C#](../language-specification/index.md). La specifica del linguaggio costituisce il riferimento ufficiale principale per la sintassi e l'uso di C#.
+ 
 ## <a name="see-also"></a>Vedere anche  
 - [Riferimenti per C#](../../../csharp/language-reference/index.md)  
 - [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  

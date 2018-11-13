@@ -6,12 +6,12 @@ ms.author: ronpet
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
-ms.openlocfilehash: dd8baa481e51aa44c4c884b4b165bdf319ac1c4d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1b5099c73264f3175aa05094f4460c1c97774533
+ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576282"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50743963"
 ---
 # <a name="framework-libraries"></a>Librerie del framework
 
@@ -59,4 +59,4 @@ Le librerie di classi base offrono i tipi fondamentali e le funzionalità di uti
 
 Ci sono molti modelli per app, offerti da diverse società, che possono essere usati con .NET.
 
-*   [ASP.NET](http://asp.net): offre un framework Web per la creazione di siti Web e servizi. Supportato in Windows, Linux e macOS (dipende dalla versione ASP.NET).
+*   [ASP.NET](https://www.asp.net): offre un framework Web per la creazione di siti Web e servizi. Supportato in Windows, Linux e macOS (dipende dalla versione ASP.NET).
