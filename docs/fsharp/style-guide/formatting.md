@@ -1,6 +1,6 @@
 ---
-title: 'Linee guida per la formattazione del codice F #'
-description: 'Altre linee guida per la formattazione del codice F #.'
+title: Linee guida per la formattazione del codice F#
+description: Altre linee guida per la formattazione del codice F#.
 ms.date: 05/14/2018
 ms.openlocfilehash: 0d7d2d1771710db55bf990f3a06079b2aec48fd7
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -9,38 +9,38 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/02/2018
 ms.locfileid: "43858005"
 ---
-# <a name="f-code-formatting-guidelines"></a><span data-ttu-id="a3009-103">Linee guida per la formattazione del codice F #</span><span class="sxs-lookup"><span data-stu-id="a3009-103">F# code formatting guidelines</span></span>
+# <a name="f-code-formatting-guidelines"></a><span data-ttu-id="7c44b-103">Linee guida per la formattazione del codice F#</span><span class="sxs-lookup"><span data-stu-id="7c44b-103">F# code formatting guidelines</span></span>
 
-<span data-ttu-id="a3009-104">Questo articolo offre linee guida per la modalità di formattazione del codice in modo che sia il codice F #:</span><span class="sxs-lookup"><span data-stu-id="a3009-104">This article offers guidelines for how to format your code so that your F# code is:</span></span>
+<span data-ttu-id="7c44b-104">Questo articolo offre linee guida per la modalità di formattazione del codice in modo che sia il codice F#:</span><span class="sxs-lookup"><span data-stu-id="7c44b-104">This article offers guidelines for how to format your code so that your F# code is:</span></span>
 
-* <span data-ttu-id="a3009-105">In genere visualizzati come più leggibili</span><span class="sxs-lookup"><span data-stu-id="a3009-105">Generally viewed as more legible</span></span>
-* <span data-ttu-id="a3009-106">È in base alle convenzioni applicate formattando altri editor e strumenti in Visual Studio</span><span class="sxs-lookup"><span data-stu-id="a3009-106">Is in accordance with conventions applied by formatting tools in Visual Studio and other editors</span></span>
-* <span data-ttu-id="a3009-107">Simile ad altro codice online</span><span class="sxs-lookup"><span data-stu-id="a3009-107">Similar to other code online</span></span>
+* <span data-ttu-id="7c44b-105">In genere visualizzati come più leggibili</span><span class="sxs-lookup"><span data-stu-id="7c44b-105">Generally viewed as more legible</span></span>
+* <span data-ttu-id="7c44b-106">È in base alle convenzioni applicate formattando altri editor e strumenti in Visual Studio</span><span class="sxs-lookup"><span data-stu-id="7c44b-106">Is in accordance with conventions applied by formatting tools in Visual Studio and other editors</span></span>
+* <span data-ttu-id="7c44b-107">Simile ad altro codice online</span><span class="sxs-lookup"><span data-stu-id="7c44b-107">Similar to other code online</span></span>
 
-<span data-ttu-id="a3009-108">Queste indicazioni si basano [una guida completa alle convenzioni di formattazione F #](https://github.com/dungpa/fantomas/blob/master/docs/FormattingConventions.md) dal [Anh-Dung Phan](https://github.com/dungpa).</span><span class="sxs-lookup"><span data-stu-id="a3009-108">These guidelines are based on [A comprehensive guide to F# Formatting Conventions](https://github.com/dungpa/fantomas/blob/master/docs/FormattingConventions.md) by [Anh-Dung Phan](https://github.com/dungpa).</span></span>
+<span data-ttu-id="7c44b-108">Queste indicazioni si basano [una guida completa alle convenzioni di formattazione F#](https://github.com/dungpa/fantomas/blob/master/docs/FormattingConventions.md) dal [Anh-Dung Phan](https://github.com/dungpa).</span><span class="sxs-lookup"><span data-stu-id="7c44b-108">These guidelines are based on [A comprehensive guide to F# Formatting Conventions](https://github.com/dungpa/fantomas/blob/master/docs/FormattingConventions.md) by [Anh-Dung Phan](https://github.com/dungpa).</span></span>
 
-## <a name="general-rules-for-indentation"></a><span data-ttu-id="a3009-109">Regole generali per il rientro</span><span class="sxs-lookup"><span data-stu-id="a3009-109">General rules for indentation</span></span>
+## <a name="general-rules-for-indentation"></a><span data-ttu-id="7c44b-109">Regole generali per il rientro</span><span class="sxs-lookup"><span data-stu-id="7c44b-109">General rules for indentation</span></span>
 
-<span data-ttu-id="a3009-110">F # per impostazione predefinita, utilizza gli spazi vuoti significativi.</span><span class="sxs-lookup"><span data-stu-id="a3009-110">F# uses significant white space by default.</span></span> <span data-ttu-id="a3009-111">Le linee guida seguenti sono utili per fornire istruzioni su come organizzare alcune problematiche di che ciò può essere imposti.</span><span class="sxs-lookup"><span data-stu-id="a3009-111">The following guidelines are intended to provide guidance as to how to juggle some challenges this can impose.</span></span>
+<span data-ttu-id="7c44b-110">F# per impostazione predefinita, utilizza gli spazi vuoti significativi.</span><span class="sxs-lookup"><span data-stu-id="7c44b-110">F# uses significant white space by default.</span></span> <span data-ttu-id="7c44b-111">Le linee guida seguenti sono utili per fornire istruzioni su come organizzare alcune problematiche di che ciò può essere imposti.</span><span class="sxs-lookup"><span data-stu-id="7c44b-111">The following guidelines are intended to provide guidance as to how to juggle some challenges this can impose.</span></span>
 
-### <a name="using-spaces"></a><span data-ttu-id="a3009-112">Uso di spazi</span><span class="sxs-lookup"><span data-stu-id="a3009-112">Using spaces</span></span>
+### <a name="using-spaces"></a><span data-ttu-id="7c44b-112">Uso di spazi</span><span class="sxs-lookup"><span data-stu-id="7c44b-112">Using spaces</span></span>
 
-<span data-ttu-id="a3009-113">Quando il rientro è necessario, è necessario utilizzare spazi, tabulazioni non.</span><span class="sxs-lookup"><span data-stu-id="a3009-113">When indentation is required, you must use spaces, not tabs.</span></span> <span data-ttu-id="a3009-114">È necessario almeno uno spazio.</span><span class="sxs-lookup"><span data-stu-id="a3009-114">At least one space is required.</span></span> <span data-ttu-id="a3009-115">L'organizzazione può creare gli standard di codifica per specificare il numero di spazi da utilizzare per il rientro. due, tre o quattro spazi del rientro a ogni livello in cui si verifica il rientro è tipico.</span><span class="sxs-lookup"><span data-stu-id="a3009-115">Your organization can create coding standards to specify the number of spaces to use for indentation; two, three or four spaces of indentation at each level where indentation occurs is typical.</span></span>
+<span data-ttu-id="7c44b-113">Quando il rientro è necessario, è necessario utilizzare spazi, tabulazioni non.</span><span class="sxs-lookup"><span data-stu-id="7c44b-113">When indentation is required, you must use spaces, not tabs.</span></span> <span data-ttu-id="7c44b-114">È necessario almeno uno spazio.</span><span class="sxs-lookup"><span data-stu-id="7c44b-114">At least one space is required.</span></span> <span data-ttu-id="7c44b-115">L'organizzazione può creare gli standard di codifica per specificare il numero di spazi da utilizzare per il rientro. due, tre o quattro spazi del rientro a ogni livello in cui si verifica il rientro è tipico.</span><span class="sxs-lookup"><span data-stu-id="7c44b-115">Your organization can create coding standards to specify the number of spaces to use for indentation; two, three or four spaces of indentation at each level where indentation occurs is typical.</span></span>
 
-<span data-ttu-id="a3009-116">**Si consiglia di 4 spazi per il rientro.**</span><span class="sxs-lookup"><span data-stu-id="a3009-116">**We recommend 4 spaces per indentation.**</span></span>
+<span data-ttu-id="7c44b-116">**Si consiglia di 4 spazi per il rientro.**</span><span class="sxs-lookup"><span data-stu-id="7c44b-116">**We recommend 4 spaces per indentation.**</span></span>
 
-<span data-ttu-id="a3009-117">Ciò premesso, rientro dei programmi è una questione soggettiva.</span><span class="sxs-lookup"><span data-stu-id="a3009-117">That said, indentation of programs is a subjective matter.</span></span> <span data-ttu-id="a3009-118">Le variazioni sono OK, ma è la prima regola è necessario seguire *coerenza di rientro*.</span><span class="sxs-lookup"><span data-stu-id="a3009-118">Variations are OK, but the first rule you should follow is *consistency of indentation*.</span></span> <span data-ttu-id="a3009-119">Scegliere uno stile di rientro in genere accettato e usarlo in modo sistematico in tutta la codebase.</span><span class="sxs-lookup"><span data-stu-id="a3009-119">Choose a generally accepted style of indentation and use it systematically throughout your codebase.</span></span>
+<span data-ttu-id="7c44b-117">Ciò premesso, rientro dei programmi è una questione soggettiva.</span><span class="sxs-lookup"><span data-stu-id="7c44b-117">That said, indentation of programs is a subjective matter.</span></span> <span data-ttu-id="7c44b-118">Le variazioni sono OK, ma è la prima regola è necessario seguire *coerenza di rientro*.</span><span class="sxs-lookup"><span data-stu-id="7c44b-118">Variations are OK, but the first rule you should follow is *consistency of indentation*.</span></span> <span data-ttu-id="7c44b-119">Scegliere uno stile di rientro in genere accettato e usarlo in modo sistematico in tutta la codebase.</span><span class="sxs-lookup"><span data-stu-id="7c44b-119">Choose a generally accepted style of indentation and use it systematically throughout your codebase.</span></span>
 
-## <a name="formatting-blank-lines"></a><span data-ttu-id="a3009-120">Formattazione di righe vuote</span><span class="sxs-lookup"><span data-stu-id="a3009-120">Formatting blank lines</span></span>
+## <a name="formatting-blank-lines"></a><span data-ttu-id="7c44b-120">Formattazione di righe vuote</span><span class="sxs-lookup"><span data-stu-id="7c44b-120">Formatting blank lines</span></span>
 
-* <span data-ttu-id="a3009-121">Separati (funzione) e classe definizioni di primo livello con due righe vuote.</span><span class="sxs-lookup"><span data-stu-id="a3009-121">Separate top-level function and class definitions with two blank lines.</span></span>
-* <span data-ttu-id="a3009-122">Le definizioni di metodo all'interno di una classe sono separate da una singola riga vuota.</span><span class="sxs-lookup"><span data-stu-id="a3009-122">Method definitions inside a class are separated by a single blank line.</span></span>
-* <span data-ttu-id="a3009-123">Righe vuote aggiuntive possono essere usate (solo se necessario) per separare gruppi di funzioni correlate.</span><span class="sxs-lookup"><span data-stu-id="a3009-123">Extra blank lines may be used (sparingly) to separate groups of related functions.</span></span> <span data-ttu-id="a3009-124">È possibile omettere le righe vuote tra una serie di istruzioni a riga singola correlati (ad esempio, un set di implementazioni fittizie).</span><span class="sxs-lookup"><span data-stu-id="a3009-124">Blank lines may be omitted between a bunch of related one-liners (for example, a set of dummy implementations).</span></span>
-* <span data-ttu-id="a3009-125">Usare le righe vuote in funzioni, solo se necessario, per indicare sezioni logiche.</span><span class="sxs-lookup"><span data-stu-id="a3009-125">Use blank lines in functions, sparingly, to indicate logical sections.</span></span>
+* <span data-ttu-id="7c44b-121">Separati (funzione) e classe definizioni di primo livello con due righe vuote.</span><span class="sxs-lookup"><span data-stu-id="7c44b-121">Separate top-level function and class definitions with two blank lines.</span></span>
+* <span data-ttu-id="7c44b-122">Le definizioni di metodo all'interno di una classe sono separate da una singola riga vuota.</span><span class="sxs-lookup"><span data-stu-id="7c44b-122">Method definitions inside a class are separated by a single blank line.</span></span>
+* <span data-ttu-id="7c44b-123">Righe vuote aggiuntive possono essere usate (solo se necessario) per separare gruppi di funzioni correlate.</span><span class="sxs-lookup"><span data-stu-id="7c44b-123">Extra blank lines may be used (sparingly) to separate groups of related functions.</span></span> <span data-ttu-id="7c44b-124">È possibile omettere le righe vuote tra una serie di istruzioni a riga singola correlati (ad esempio, un set di implementazioni fittizie).</span><span class="sxs-lookup"><span data-stu-id="7c44b-124">Blank lines may be omitted between a bunch of related one-liners (for example, a set of dummy implementations).</span></span>
+* <span data-ttu-id="7c44b-125">Usare le righe vuote in funzioni, solo se necessario, per indicare sezioni logiche.</span><span class="sxs-lookup"><span data-stu-id="7c44b-125">Use blank lines in functions, sparingly, to indicate logical sections.</span></span>
 
-## <a name="formatting-comments"></a><span data-ttu-id="a3009-126">Formattazione di commenti</span><span class="sxs-lookup"><span data-stu-id="a3009-126">Formatting comments</span></span>
+## <a name="formatting-comments"></a><span data-ttu-id="7c44b-126">Formattazione di commenti</span><span class="sxs-lookup"><span data-stu-id="7c44b-126">Formatting comments</span></span>
 
-<span data-ttu-id="a3009-127">In genere preferire più commenti con barra doppia commenti del blocco di stile di Machine Learning.</span><span class="sxs-lookup"><span data-stu-id="a3009-127">Generally prefer multiple double-slash comments over ML-style block comments.</span></span>
+<span data-ttu-id="7c44b-127">In genere preferire più commenti con barra doppia commenti del blocco di stile di Machine Learning.</span><span class="sxs-lookup"><span data-stu-id="7c44b-127">Generally prefer multiple double-slash comments over ML-style block comments.</span></span>
 
 ```fsharp
 // Prefer this style of comments when you want
@@ -52,17 +52,17 @@ ms.locfileid: "43858005"
 *)
 ```
 
-<span data-ttu-id="a3009-128">Commenti inline devono convertire in maiuscolo la prima lettera.</span><span class="sxs-lookup"><span data-stu-id="a3009-128">Inline comments should capitalize the first letter.</span></span>
+<span data-ttu-id="7c44b-128">Commenti inline devono convertire in maiuscolo la prima lettera.</span><span class="sxs-lookup"><span data-stu-id="7c44b-128">Inline comments should capitalize the first letter.</span></span>
 
 ```fsharp
 let f x = x + 1 // Increment by one.
 ```
 
-## <a name="naming-conventions"></a><span data-ttu-id="a3009-129">Convenzioni di denominazione</span><span class="sxs-lookup"><span data-stu-id="a3009-129">Naming conventions</span></span>
+## <a name="naming-conventions"></a><span data-ttu-id="7c44b-129">Convenzioni di denominazione</span><span class="sxs-lookup"><span data-stu-id="7c44b-129">Naming conventions</span></span>
 
-### <a name="use-camelcase-for-class-bound-expression-bound-and-pattern-bound-values-and-functions"></a><span data-ttu-id="a3009-130">Usano la notazione camel per le funzioni e i valori associati a classe, espressione di associazione e con associazione a modello</span><span class="sxs-lookup"><span data-stu-id="a3009-130">Use camelCase for class-bound, expression-bound and pattern-bound values and functions</span></span>
+### <a name="use-camelcase-for-class-bound-expression-bound-and-pattern-bound-values-and-functions"></a><span data-ttu-id="7c44b-130">Usano la notazione camel per le funzioni e i valori associati a classe, espressione di associazione e con associazione a modello</span><span class="sxs-lookup"><span data-stu-id="7c44b-130">Use camelCase for class-bound, expression-bound and pattern-bound values and functions</span></span>
 
-<span data-ttu-id="a3009-131">È comune e accettati F # stile usano la notazione camel per tutti i nomi associati come variabili locali o in Criteri di corrispondenza e le definizioni di funzione.</span><span class="sxs-lookup"><span data-stu-id="a3009-131">It is common and accepted F# style to use camelCase for all names bound as local variables or in pattern matches and function definitions.</span></span>
+<span data-ttu-id="7c44b-131">È comune e accettati F# stile usano la notazione camel per tutti i nomi associati come variabili locali o in Criteri di corrispondenza e le definizioni di funzione.</span><span class="sxs-lookup"><span data-stu-id="7c44b-131">It is common and accepted F# style to use camelCase for all names bound as local variables or in pattern matches and function definitions.</span></span>
 
 ```fsharp
 // OK
@@ -75,7 +75,7 @@ let addIAndJ I J = I+J
 let AddIAndJ i j = i + j
 ```
 
-<span data-ttu-id="a3009-132">In locale con associazione a funzioni nelle classi devono inoltre usano la notazione camel.</span><span class="sxs-lookup"><span data-stu-id="a3009-132">Locally-bound functions in classes should also use camelCase.</span></span>
+<span data-ttu-id="7c44b-132">In locale con associazione a funzioni nelle classi devono inoltre usano la notazione camel.</span><span class="sxs-lookup"><span data-stu-id="7c44b-132">Locally-bound functions in classes should also use camelCase.</span></span>
 
 ```fsharp
 type MyClass() =
@@ -89,9 +89,9 @@ type MyClass() =
     member x.Result = doSomething()
 ```
 
-### <a name="use-camelcase-for-module-bound-public-functions"></a><span data-ttu-id="a3009-133">Usano la notazione camel per le funzioni pubbliche associata al modulo</span><span class="sxs-lookup"><span data-stu-id="a3009-133">Use camelCase for module-bound public functions</span></span>
+### <a name="use-camelcase-for-module-bound-public-functions"></a><span data-ttu-id="7c44b-133">Usano la notazione camel per le funzioni pubbliche associata al modulo</span><span class="sxs-lookup"><span data-stu-id="7c44b-133">Use camelCase for module-bound public functions</span></span>
 
-<span data-ttu-id="a3009-134">Quando una funzione associata al modulo fa parte di un'API pubblica, è necessario utilizzare camelCase:</span><span class="sxs-lookup"><span data-stu-id="a3009-134">When a module-bound function is part of a public API, it should use camelCase:</span></span>
+<span data-ttu-id="7c44b-134">Quando una funzione associata al modulo fa parte di un'API pubblica, è necessario utilizzare camelCase:</span><span class="sxs-lookup"><span data-stu-id="7c44b-134">When a module-bound function is part of a public API, it should use camelCase:</span></span>
 
 ```fsharp
 module MyAPI =
@@ -100,22 +100,22 @@ module MyAPI =
     let publicFunctionTwo param1 param2 param3 = ...
 ```
 
-### <a name="use-camelcase-for-internal-and-private-module-bound-values-and-functions"></a><span data-ttu-id="a3009-135">Usano la notazione camel per le funzioni e i valori associati a modulo interni e privati</span><span class="sxs-lookup"><span data-stu-id="a3009-135">Use camelCase for internal and private module-bound values and functions</span></span>
+### <a name="use-camelcase-for-internal-and-private-module-bound-values-and-functions"></a><span data-ttu-id="7c44b-135">Usano la notazione camel per le funzioni e i valori associati a modulo interni e privati</span><span class="sxs-lookup"><span data-stu-id="7c44b-135">Use camelCase for internal and private module-bound values and functions</span></span>
 
-<span data-ttu-id="a3009-136">Usano la notazione camel per i valori privati associata al modulo, inclusi i seguenti:</span><span class="sxs-lookup"><span data-stu-id="a3009-136">Use camelCase for private module-bound values, including the following:</span></span>
+<span data-ttu-id="7c44b-136">Usano la notazione camel per i valori privati associata al modulo, inclusi i seguenti:</span><span class="sxs-lookup"><span data-stu-id="7c44b-136">Use camelCase for private module-bound values, including the following:</span></span>
 
-* <span data-ttu-id="a3009-137">Funzioni ad hoc negli script</span><span class="sxs-lookup"><span data-stu-id="a3009-137">Ad hoc functions in scripts</span></span>
+* <span data-ttu-id="7c44b-137">Funzioni ad hoc negli script</span><span class="sxs-lookup"><span data-stu-id="7c44b-137">Ad hoc functions in scripts</span></span>
 
-* <span data-ttu-id="a3009-138">Valori che compongono l'implementazione interna di un tipo o un modulo</span><span class="sxs-lookup"><span data-stu-id="a3009-138">Values making up the internal implementation of a module or type</span></span>
+* <span data-ttu-id="7c44b-138">Valori che compongono l'implementazione interna di un tipo o un modulo</span><span class="sxs-lookup"><span data-stu-id="7c44b-138">Values making up the internal implementation of a module or type</span></span>
 
 ```fsharp
 let emailMyBossTheLatestResults =
     ...
 ```
 
-### <a name="use-camelcase-for-parameters"></a><span data-ttu-id="a3009-139">Usano la notazione camel per i parametri</span><span class="sxs-lookup"><span data-stu-id="a3009-139">Use camelCase for parameters</span></span>
+### <a name="use-camelcase-for-parameters"></a><span data-ttu-id="7c44b-139">Usano la notazione camel per i parametri</span><span class="sxs-lookup"><span data-stu-id="7c44b-139">Use camelCase for parameters</span></span>
 
-<span data-ttu-id="a3009-140">Tutti i parametri devono usano la notazione camel in base alle convenzioni di denominazione .NET.</span><span class="sxs-lookup"><span data-stu-id="a3009-140">All parameters should use camelCase in accordance with .NET naming conventions.</span></span>
+<span data-ttu-id="7c44b-140">Tutti i parametri devono usano la notazione camel in base alle convenzioni di denominazione .NET.</span><span class="sxs-lookup"><span data-stu-id="7c44b-140">All parameters should use camelCase in accordance with .NET naming conventions.</span></span>
 
 ```fsharp
 module MyModule =
@@ -125,9 +125,9 @@ type MyClass() =
     member this.MyMethod(paramOne, paramTwo) = ...
 ```
 
-### <a name="use-pascalcase-for-modules"></a><span data-ttu-id="a3009-141">Per i moduli usano la notazione Pascal</span><span class="sxs-lookup"><span data-stu-id="a3009-141">Use PascalCase for modules</span></span>
+### <a name="use-pascalcase-for-modules"></a><span data-ttu-id="7c44b-141">Per i moduli usano la notazione Pascal</span><span class="sxs-lookup"><span data-stu-id="7c44b-141">Use PascalCase for modules</span></span>
 
-<span data-ttu-id="a3009-142">Tutti i moduli (livello superiore, interni, privati, annidati) utilizzino PascalCase.</span><span class="sxs-lookup"><span data-stu-id="a3009-142">All modules (top-level, internal, private, nested) should use PascalCase.</span></span>
+<span data-ttu-id="7c44b-142">Tutti i moduli (livello superiore, interni, privati, annidati) utilizzino PascalCase.</span><span class="sxs-lookup"><span data-stu-id="7c44b-142">All modules (top-level, internal, private, nested) should use PascalCase.</span></span>
 
 ```fsharp
 module MyTopLevelModule
@@ -139,9 +139,9 @@ module Helpers =
     ...
 ```
 
-### <a name="use-pascalcase-for-type-declarations-members-and-labels"></a><span data-ttu-id="a3009-143">Usano la notazione Pascal per le dichiarazioni di tipi, membri e le etichette</span><span class="sxs-lookup"><span data-stu-id="a3009-143">Use PascalCase for type declarations, members, and labels</span></span>
+### <a name="use-pascalcase-for-type-declarations-members-and-labels"></a><span data-ttu-id="7c44b-143">Usano la notazione Pascal per le dichiarazioni di tipi, membri e le etichette</span><span class="sxs-lookup"><span data-stu-id="7c44b-143">Use PascalCase for type declarations, members, and labels</span></span>
 
-<span data-ttu-id="a3009-144">Classi, interfacce, strutture, enumerazioni, delegati, record e unioni discriminate devono essere denominate con PascalCase.</span><span class="sxs-lookup"><span data-stu-id="a3009-144">Classes, interfaces, structs, enumerations, delegates, records, and discriminated unions should all be named with PascalCase.</span></span> <span data-ttu-id="a3009-145">I membri all'interno di tipi e le etichette per i record e unioni discriminate devono inoltre usano la notazione Pascal.</span><span class="sxs-lookup"><span data-stu-id="a3009-145">Members within types and labels for records and discriminated unions should also use PascalCase.</span></span>
+<span data-ttu-id="7c44b-144">Classi, interfacce, strutture, enumerazioni, delegati, record e unioni discriminate devono essere denominate con PascalCase.</span><span class="sxs-lookup"><span data-stu-id="7c44b-144">Classes, interfaces, structs, enumerations, delegates, records, and discriminated unions should all be named with PascalCase.</span></span> <span data-ttu-id="7c44b-145">I membri all'interno di tipi e le etichette per i record e unioni discriminate devono inoltre usano la notazione Pascal.</span><span class="sxs-lookup"><span data-stu-id="7c44b-145">Members within types and labels for records and discriminated unions should also use PascalCase.</span></span>
 
 ```fsharp
 type IMyInterface =
@@ -159,19 +159,19 @@ type SchoolPerson =
     | Administrator
 ```
 
-### <a name="use-pascalcase-for-constructs-intrinsic-to-net"></a><span data-ttu-id="a3009-146">Usano la notazione Pascal per i costrutti intrinseci per .NET</span><span class="sxs-lookup"><span data-stu-id="a3009-146">Use PascalCase for constructs intrinsic to .NET</span></span>
+### <a name="use-pascalcase-for-constructs-intrinsic-to-net"></a><span data-ttu-id="7c44b-146">Usano la notazione Pascal per i costrutti intrinseci per .NET</span><span class="sxs-lookup"><span data-stu-id="7c44b-146">Use PascalCase for constructs intrinsic to .NET</span></span>
 
-<span data-ttu-id="a3009-147">Spazi dei nomi, le eccezioni, eventi e progetto /`.dll` nomi dovrebbero inoltre usano la notazione Pascal.</span><span class="sxs-lookup"><span data-stu-id="a3009-147">Namespaces, exceptions, events, and project/`.dll` names should also use PascalCase.</span></span> <span data-ttu-id="a3009-148">Non solo si rende il consumo da altri linguaggi .NET sembrano più naturali agli utenti, è anche coerenza con le convenzioni di denominazione .NET che probabile incontrare.</span><span class="sxs-lookup"><span data-stu-id="a3009-148">Not only does this make consumption from other .NET languages feel more natural to consumers, it's also consistent with .NET naming conventions that you are likely to encounter.</span></span>
+<span data-ttu-id="7c44b-147">Spazi dei nomi, le eccezioni, eventi e progetto /`.dll` nomi dovrebbero inoltre usano la notazione Pascal.</span><span class="sxs-lookup"><span data-stu-id="7c44b-147">Namespaces, exceptions, events, and project/`.dll` names should also use PascalCase.</span></span> <span data-ttu-id="7c44b-148">Non solo si rende il consumo da altri linguaggi .NET sembrano più naturali agli utenti, è anche coerenza con le convenzioni di denominazione .NET che probabile incontrare.</span><span class="sxs-lookup"><span data-stu-id="7c44b-148">Not only does this make consumption from other .NET languages feel more natural to consumers, it's also consistent with .NET naming conventions that you are likely to encounter.</span></span>
 
-### <a name="avoid-underscores-in-names"></a><span data-ttu-id="a3009-149">Evitare caratteri di sottolineatura nei nomi</span><span class="sxs-lookup"><span data-stu-id="a3009-149">Avoid underscores in names</span></span>
+### <a name="avoid-underscores-in-names"></a><span data-ttu-id="7c44b-149">Evitare caratteri di sottolineatura nei nomi</span><span class="sxs-lookup"><span data-stu-id="7c44b-149">Avoid underscores in names</span></span>
 
-<span data-ttu-id="a3009-150">In passato, alcune librerie F # sono utilizzati caratteri di sottolineatura nei nomi.</span><span class="sxs-lookup"><span data-stu-id="a3009-150">Historically, some F# libraries have used underscores in names.</span></span> <span data-ttu-id="a3009-151">Tuttavia, questo è non è più diffuso, in parte perché è in conflitto con le convenzioni di denominazione di .NET.</span><span class="sxs-lookup"><span data-stu-id="a3009-151">However, this is no longer widely accepted, partly because it clashes with .NET naming conventions.</span></span> <span data-ttu-id="a3009-152">Ciò premesso, alcuni programmatori F # usano caratteri di sottolineatura frequentemente, in parte per motivi storici e tolleranza d'errore e riguardo è importante.</span><span class="sxs-lookup"><span data-stu-id="a3009-152">That said, some F# programmers use underscores heavily, partly for historical reasons, and tolerance and respect is important.</span></span> <span data-ttu-id="a3009-153">Tuttavia, tenere presente che lo stile è spesso disliked da altri utenti che dispongono di una scelta sull'opportunità di usarlo.</span><span class="sxs-lookup"><span data-stu-id="a3009-153">However, be aware that the style is often disliked by others who have a choice about whether to use it.</span></span>
+<span data-ttu-id="7c44b-150">In passato, alcune librerie F# sono utilizzati caratteri di sottolineatura nei nomi.</span><span class="sxs-lookup"><span data-stu-id="7c44b-150">Historically, some F# libraries have used underscores in names.</span></span> <span data-ttu-id="7c44b-151">Tuttavia, questo è non è più diffuso, in parte perché è in conflitto con le convenzioni di denominazione di .NET.</span><span class="sxs-lookup"><span data-stu-id="7c44b-151">However, this is no longer widely accepted, partly because it clashes with .NET naming conventions.</span></span> <span data-ttu-id="7c44b-152">Ciò premesso, alcuni programmatori F# usano caratteri di sottolineatura frequentemente, in parte per motivi storici e tolleranza d'errore e riguardo è importante.</span><span class="sxs-lookup"><span data-stu-id="7c44b-152">That said, some F# programmers use underscores heavily, partly for historical reasons, and tolerance and respect is important.</span></span> <span data-ttu-id="7c44b-153">Tuttavia, tenere presente che lo stile è spesso disliked da altri utenti che dispongono di una scelta sull'opportunità di usarlo.</span><span class="sxs-lookup"><span data-stu-id="7c44b-153">However, be aware that the style is often disliked by others who have a choice about whether to use it.</span></span>
 
-<span data-ttu-id="a3009-154">Alcune eccezioni includono l'interoperabilità con i componenti nativi, in cui i caratteri di sottolineatura sono molto comuni.</span><span class="sxs-lookup"><span data-stu-id="a3009-154">Some exceptions includes interoperating with native components, where underscores are very common.</span></span>
+<span data-ttu-id="7c44b-154">Alcune eccezioni includono l'interoperabilità con i componenti nativi, in cui i caratteri di sottolineatura sono molto comuni.</span><span class="sxs-lookup"><span data-stu-id="7c44b-154">Some exceptions includes interoperating with native components, where underscores are very common.</span></span>
 
-### <a name="use-standard-f-operators"></a><span data-ttu-id="a3009-155">Usare gli operatori standard F #</span><span class="sxs-lookup"><span data-stu-id="a3009-155">Use standard F# operators</span></span>
+### <a name="use-standard-f-operators"></a><span data-ttu-id="7c44b-155">Usare gli operatori standard F#</span><span class="sxs-lookup"><span data-stu-id="7c44b-155">Use standard F# operators</span></span>
 
-<span data-ttu-id="a3009-156">Gli operatori seguenti vengono definiti nella libreria standard di F # e devono essere usati invece di definire gli equivalenti.</span><span class="sxs-lookup"><span data-stu-id="a3009-156">The following operators are defined in the F# standard library and should be used instead of defining equivalents.</span></span> <span data-ttu-id="a3009-157">Utilizzo di questi operatori è consigliata perché tende a rendere il codice più leggibile e idiomatico.</span><span class="sxs-lookup"><span data-stu-id="a3009-157">Using these operators is recommended as it tends to make code more readable and idiomatic.</span></span> <span data-ttu-id="a3009-158">Gli sviluppatori con esperienza in OCaml o altri linguaggi di programmazione funzionale possono essere abituati a diversi linguaggi.</span><span class="sxs-lookup"><span data-stu-id="a3009-158">Developers with a background in OCaml or other functional programming language may be accustomed to different idioms.</span></span> <span data-ttu-id="a3009-159">Nell'elenco seguente sono riepilogati gli operatori F # consigliati.</span><span class="sxs-lookup"><span data-stu-id="a3009-159">The following list summarizes the recommended F# operators.</span></span>
+<span data-ttu-id="7c44b-156">Gli operatori seguenti vengono definiti nella libreria standard di F# e devono essere usati invece di definire gli equivalenti.</span><span class="sxs-lookup"><span data-stu-id="7c44b-156">The following operators are defined in the F# standard library and should be used instead of defining equivalents.</span></span> <span data-ttu-id="7c44b-157">Utilizzo di questi operatori è consigliata perché tende a rendere il codice più leggibile e idiomatico.</span><span class="sxs-lookup"><span data-stu-id="7c44b-157">Using these operators is recommended as it tends to make code more readable and idiomatic.</span></span> <span data-ttu-id="7c44b-158">Gli sviluppatori con esperienza in OCaml o altri linguaggi di programmazione funzionale possono essere abituati a diversi linguaggi.</span><span class="sxs-lookup"><span data-stu-id="7c44b-158">Developers with a background in OCaml or other functional programming language may be accustomed to different idioms.</span></span> <span data-ttu-id="7c44b-159">Nell'elenco seguente sono riepilogati gli operatori F# consigliati.</span><span class="sxs-lookup"><span data-stu-id="7c44b-159">The following list summarizes the recommended F# operators.</span></span>
 
 ```fsharp
 x |> f // Forward pipeline
@@ -191,22 +191,22 @@ x &&& y // Bitwise and, also for working with “flags” enumeration
 x ^^^ y // Bitwise xor, also for working with “flags” enumeration
 ```
 
-### <a name="use-prefix-syntax-for-generics-foot-in-preference-to-postfix-syntax-t-foo"></a><span data-ttu-id="a3009-160">Utilizzare la sintassi di prefisso per i generics (`Foo<T>`) anziché la sintassi in forma suffissa (`T Foo`)</span><span class="sxs-lookup"><span data-stu-id="a3009-160">Use prefix syntax for generics (`Foo<T>`) in preference to postfix syntax (`T Foo`)</span></span>
+### <a name="use-prefix-syntax-for-generics-foot-in-preference-to-postfix-syntax-t-foo"></a><span data-ttu-id="7c44b-160">Utilizzare la sintassi di prefisso per i generics (`Foo<T>`) anziché la sintassi in forma suffissa (`T Foo`)</span><span class="sxs-lookup"><span data-stu-id="7c44b-160">Use prefix syntax for generics (`Foo<T>`) in preference to postfix syntax (`T Foo`)</span></span>
 
-<span data-ttu-id="a3009-161">F # eredita sia lo stile di Machine Learning suffisso di denominazione dei tipi generici (ad esempio, `int list`), nonché il prefisso stile .NET (ad esempio, `list<int>`).</span><span class="sxs-lookup"><span data-stu-id="a3009-161">F# inherits both the postfix ML style of naming generic types (for example, `int list`) as well as the prefix .NET style (for example, `list<int>`).</span></span> <span data-ttu-id="a3009-162">Preferisce lo stile di .NET, ad eccezione di quattro tipi specifici:</span><span class="sxs-lookup"><span data-stu-id="a3009-162">Prefer the .NET style, except for four specific types:</span></span>
+<span data-ttu-id="7c44b-161">F# eredita sia lo stile di Machine Learning suffisso di denominazione dei tipi generici (ad esempio, `int list`), nonché il prefisso stile .NET (ad esempio, `list<int>`).</span><span class="sxs-lookup"><span data-stu-id="7c44b-161">F# inherits both the postfix ML style of naming generic types (for example, `int list`) as well as the prefix .NET style (for example, `list<int>`).</span></span> <span data-ttu-id="7c44b-162">Preferisce lo stile di .NET, ad eccezione di quattro tipi specifici:</span><span class="sxs-lookup"><span data-stu-id="7c44b-162">Prefer the .NET style, except for four specific types:</span></span>
 
-1. <span data-ttu-id="a3009-163">Per gli elenchi F #, utilizzare la forma suffissa: `int list` anziché `list<int>`.</span><span class="sxs-lookup"><span data-stu-id="a3009-163">For F# Lists, use the postfix form: `int list` rather than `list<int>`.</span></span>
-2. <span data-ttu-id="a3009-164">Per opzioni di F #, utilizzare la forma suffissa: `int option` anziché `option<int>`.</span><span class="sxs-lookup"><span data-stu-id="a3009-164">For F# Options, use the postfix form: `int option` rather than `option<int>`.</span></span>
-3. <span data-ttu-id="a3009-165">Per le matrici di F #, usare il nome sintattico `int[]` invece `int array` o `array<int>`.</span><span class="sxs-lookup"><span data-stu-id="a3009-165">For F# arrays, use the syntactic name `int[]` rather than `int array` or `array<int>`.</span></span>
-4. <span data-ttu-id="a3009-166">Per le celle di riferimento, usare `int ref` invece `ref<int>` o `Ref<int>`.</span><span class="sxs-lookup"><span data-stu-id="a3009-166">For Reference Cells, use `int ref` rather than `ref<int>` or `Ref<int>`.</span></span>
+1. <span data-ttu-id="7c44b-163">Per gli elenchi F#, utilizzare la forma suffissa: `int list` anziché `list<int>`.</span><span class="sxs-lookup"><span data-stu-id="7c44b-163">For F# Lists, use the postfix form: `int list` rather than `list<int>`.</span></span>
+2. <span data-ttu-id="7c44b-164">Per opzioni di F#, utilizzare la forma suffissa: `int option` anziché `option<int>`.</span><span class="sxs-lookup"><span data-stu-id="7c44b-164">For F# Options, use the postfix form: `int option` rather than `option<int>`.</span></span>
+3. <span data-ttu-id="7c44b-165">Per le matrici di F#, usare il nome sintattico `int[]` invece `int array` o `array<int>`.</span><span class="sxs-lookup"><span data-stu-id="7c44b-165">For F# arrays, use the syntactic name `int[]` rather than `int array` or `array<int>`.</span></span>
+4. <span data-ttu-id="7c44b-166">Per le celle di riferimento, usare `int ref` invece `ref<int>` o `Ref<int>`.</span><span class="sxs-lookup"><span data-stu-id="7c44b-166">For Reference Cells, use `int ref` rather than `ref<int>` or `Ref<int>`.</span></span>
 
-<span data-ttu-id="a3009-167">Per tutti gli altri tipi, usare la forma prefissa.</span><span class="sxs-lookup"><span data-stu-id="a3009-167">For all other types, use the prefix form.</span></span>
+<span data-ttu-id="7c44b-167">Per tutti gli altri tipi, usare la forma prefissa.</span><span class="sxs-lookup"><span data-stu-id="7c44b-167">For all other types, use the prefix form.</span></span>
 
-## <a name="formatting-tuples"></a><span data-ttu-id="a3009-168">Formattazione di tuple</span><span class="sxs-lookup"><span data-stu-id="a3009-168">Formatting tuples</span></span>
+## <a name="formatting-tuples"></a><span data-ttu-id="7c44b-168">Formattazione di tuple</span><span class="sxs-lookup"><span data-stu-id="7c44b-168">Formatting tuples</span></span>
 
-<span data-ttu-id="a3009-169">Creazione di un'istanza di tupla devono essere racchiusi tra parentesi, e le virgole di delimitazione all'interno devono essere seguite da uno spazio singolo, ad esempio: `(1, 2)`, `(x, y, z)`.</span><span class="sxs-lookup"><span data-stu-id="a3009-169">A tuple instantiation should be parenthesized, and the delimiting commas within should be followed by a single space, for example: `(1, 2)`, `(x, y, z)`.</span></span>
+<span data-ttu-id="7c44b-169">Creazione di un'istanza di tupla devono essere racchiusi tra parentesi, e le virgole di delimitazione all'interno devono essere seguite da uno spazio singolo, ad esempio: `(1, 2)`, `(x, y, z)`.</span><span class="sxs-lookup"><span data-stu-id="7c44b-169">A tuple instantiation should be parenthesized, and the delimiting commas within should be followed by a single space, for example: `(1, 2)`, `(x, y, z)`.</span></span>
 
-<span data-ttu-id="a3009-170">Viene comunemente accettato per omettere le parentesi nei criteri di ricerca di tuple:</span><span class="sxs-lookup"><span data-stu-id="a3009-170">It is commonly accepted to omit parentheses in pattern matching of tuples:</span></span>
+<span data-ttu-id="7c44b-170">Viene comunemente accettato per omettere le parentesi nei criteri di ricerca di tuple:</span><span class="sxs-lookup"><span data-stu-id="7c44b-170">It is commonly accepted to omit parentheses in pattern matching of tuples:</span></span>
 
 ```fsharp
 let (x, y) = z // Destructuring
@@ -219,9 +219,9 @@ match x, y with
 | x, y -> 1
 ```
 
-## <a name="formatting-discriminated-union-declarations"></a><span data-ttu-id="a3009-171">Formattazione di dichiarazioni di unione discriminata</span><span class="sxs-lookup"><span data-stu-id="a3009-171">Formatting discriminated union declarations</span></span>
+## <a name="formatting-discriminated-union-declarations"></a><span data-ttu-id="7c44b-171">Formattazione di dichiarazioni di unione discriminata</span><span class="sxs-lookup"><span data-stu-id="7c44b-171">Formatting discriminated union declarations</span></span>
 
-<span data-ttu-id="a3009-172">Impostare un rientro `|` nella definizione del tipo da 4 spazi:</span><span class="sxs-lookup"><span data-stu-id="a3009-172">Indent `|` in type definition by 4 spaces:</span></span>
+<span data-ttu-id="7c44b-172">Impostare un rientro `|` nella definizione del tipo da 4 spazi:</span><span class="sxs-lookup"><span data-stu-id="7c44b-172">Indent `|` in type definition by 4 spaces:</span></span>
 
 ```fsharp
 // OK
@@ -237,9 +237,9 @@ type Volume =
 | ImperialPint of float
 ```
 
-## <a name="formatting-discriminated-unions"></a><span data-ttu-id="a3009-173">Formattazione di unioni discriminate</span><span class="sxs-lookup"><span data-stu-id="a3009-173">Formatting discriminated unions</span></span>
+## <a name="formatting-discriminated-unions"></a><span data-ttu-id="7c44b-173">Formattazione di unioni discriminate</span><span class="sxs-lookup"><span data-stu-id="7c44b-173">Formatting discriminated unions</span></span>
 
-<span data-ttu-id="a3009-174">Un'istanza le unioni discriminate suddivisi su più righe deve fornire dati in essi contenuti un nuovo ambito con rientro:</span><span class="sxs-lookup"><span data-stu-id="a3009-174">Instantiated Discriminated Unions that split across multiple lines should give contained data a new scope with indentation:</span></span>
+<span data-ttu-id="7c44b-174">Un'istanza le unioni discriminate suddivisi su più righe deve fornire dati in essi contenuti un nuovo ambito con rientro:</span><span class="sxs-lookup"><span data-stu-id="7c44b-174">Instantiated Discriminated Unions that split across multiple lines should give contained data a new scope with indentation:</span></span>
 
 ```fsharp
 let tree1 =
@@ -248,7 +248,7 @@ let tree1 =
          BinaryNode(BinaryValue 3, BinaryValue 4))
 ```
 
-<span data-ttu-id="a3009-175">La parentesi di chiusura può essere anche in una nuova riga:</span><span class="sxs-lookup"><span data-stu-id="a3009-175">The closing parenthesis can also be on a new line:</span></span>
+<span data-ttu-id="7c44b-175">La parentesi di chiusura può essere anche in una nuova riga:</span><span class="sxs-lookup"><span data-stu-id="7c44b-175">The closing parenthesis can also be on a new line:</span></span>
 
 ```fsharp
 let tree1 =
@@ -258,9 +258,9 @@ let tree1 =
     )
 ```
 
-## <a name="formatting-record-declarations"></a><span data-ttu-id="a3009-176">Dichiarazioni di record di formattazione</span><span class="sxs-lookup"><span data-stu-id="a3009-176">Formatting record declarations</span></span>
+## <a name="formatting-record-declarations"></a><span data-ttu-id="7c44b-176">Dichiarazioni di record di formattazione</span><span class="sxs-lookup"><span data-stu-id="7c44b-176">Formatting record declarations</span></span>
 
-<span data-ttu-id="a3009-177">Impostare un rientro `{` nel tipo di definizione da 4 spazi e avviare l'elenco dei campi nella stessa riga:</span><span class="sxs-lookup"><span data-stu-id="a3009-177">Indent `{` in type definition by 4 spaces and start the field list on the same line:</span></span>
+<span data-ttu-id="7c44b-177">Impostare un rientro `{` nel tipo di definizione da 4 spazi e avviare l'elenco dei campi nella stessa riga:</span><span class="sxs-lookup"><span data-stu-id="7c44b-177">Indent `{` in type definition by 4 spaces and start the field list on the same line:</span></span>
 
 ```fsharp
 // OK
@@ -286,7 +286,7 @@ type PostalAddress =
     }
 ```
 
-<span data-ttu-id="a3009-178">Inserire il token di apertura nella stessa riga e il token di chiusura in una nuova riga è valida, ma tenere presente che è necessario usare il [sintassi dettagliata](../language-reference/verbose-syntax.md) per definire i membri (il `with` parola chiave):</span><span class="sxs-lookup"><span data-stu-id="a3009-178">Placing the opening token on the same line and the closing token on a new line is also fine, but be aware that you need to use the [verbose syntax](../language-reference/verbose-syntax.md) to define members (the `with` keyword):</span></span>
+<span data-ttu-id="7c44b-178">Inserire il token di apertura nella stessa riga e il token di chiusura in una nuova riga è valida, ma tenere presente che è necessario usare il [sintassi dettagliata](../language-reference/verbose-syntax.md) per definire i membri (il `with` parola chiave):</span><span class="sxs-lookup"><span data-stu-id="7c44b-178">Placing the opening token on the same line and the closing token on a new line is also fine, but be aware that you need to use the [verbose syntax](../language-reference/verbose-syntax.md) to define members (the `with` keyword):</span></span>
 
 ```fsharp
 //  OK, but verbose syntax required
@@ -298,15 +298,15 @@ type PostalAddress = {
     member x.ZipAndCity = sprintf "%s %s" x.Zip x.City
 ```
 
-## <a name="formatting-records"></a><span data-ttu-id="a3009-179">Formattazione di record</span><span class="sxs-lookup"><span data-stu-id="a3009-179">Formatting records</span></span>
+## <a name="formatting-records"></a><span data-ttu-id="7c44b-179">Formattazione di record</span><span class="sxs-lookup"><span data-stu-id="7c44b-179">Formatting records</span></span>
 
-<span data-ttu-id="a3009-180">Record brevi possono essere scritti in una sola riga:</span><span class="sxs-lookup"><span data-stu-id="a3009-180">Short records can be written in one line:</span></span>
+<span data-ttu-id="7c44b-180">Record brevi possono essere scritti in una sola riga:</span><span class="sxs-lookup"><span data-stu-id="7c44b-180">Short records can be written in one line:</span></span>
 
 ```fsharp
 let point = { X = 1.0; Y = 0.0 }
 ```
 
-<span data-ttu-id="a3009-181">Record più lunghe deve utilizzare le nuove righe per le etichette:</span><span class="sxs-lookup"><span data-stu-id="a3009-181">Records that are longer should use new lines for labels:</span></span>
+<span data-ttu-id="7c44b-181">Record più lunghe deve utilizzare le nuove righe per le etichette:</span><span class="sxs-lookup"><span data-stu-id="7c44b-181">Records that are longer should use new lines for labels:</span></span>
 
 ```fsharp
 let rainbow =
@@ -314,7 +314,7 @@ let rainbow =
       Lackeys = ["Zippy"; "George"; "Bungle"] }
 ```
 
-<span data-ttu-id="a3009-182">Inserire il token di apertura nella stessa riga e il token di chiusura in una nuova riga è valida:</span><span class="sxs-lookup"><span data-stu-id="a3009-182">Placing the opening token on the same line and the closing token on a new line is also fine:</span></span>
+<span data-ttu-id="7c44b-182">Inserire il token di apertura nella stessa riga e il token di chiusura in una nuova riga è valida:</span><span class="sxs-lookup"><span data-stu-id="7c44b-182">Placing the opening token on the same line and the closing token on a new line is also fine:</span></span>
 
 ```fsharp
 let rainbow = {
@@ -330,13 +330,13 @@ let rainbow = {
 }
 ```
 
-<span data-ttu-id="a3009-183">Per gli elementi di elenco e la matrice si applicano le stesse regole.</span><span class="sxs-lookup"><span data-stu-id="a3009-183">The same rules apply for list and array elements.</span></span>
+<span data-ttu-id="7c44b-183">Per gli elementi di elenco e la matrice si applicano le stesse regole.</span><span class="sxs-lookup"><span data-stu-id="7c44b-183">The same rules apply for list and array elements.</span></span>
 
-## <a name="formatting-lists-and-arrays"></a><span data-ttu-id="a3009-184">Formattazione di elenchi e matrici</span><span class="sxs-lookup"><span data-stu-id="a3009-184">Formatting lists and arrays</span></span>
+## <a name="formatting-lists-and-arrays"></a><span data-ttu-id="7c44b-184">Formattazione di elenchi e matrici</span><span class="sxs-lookup"><span data-stu-id="7c44b-184">Formatting lists and arrays</span></span>
 
-<span data-ttu-id="a3009-185">Scrivere `x :: l` con spazi prima e dopo il `::` operator (`::` è un operatore di infissi, di conseguenza precedute e seguito da spazi) e `[1; 2; 3]` (`;` è un delimitatore, quindi seguito da uno spazio).</span><span class="sxs-lookup"><span data-stu-id="a3009-185">Write `x :: l` with spaces around the `::` operator (`::` is an infix operator, hence surrounded by spaces) and `[1; 2; 3]` (`;` is a delimiter, hence followed by a space).</span></span>
+<span data-ttu-id="7c44b-185">Scrivere `x :: l` con spazi prima e dopo il `::` operator (`::` è un operatore di infissi, di conseguenza precedute e seguito da spazi) e `[1; 2; 3]` (`;` è un delimitatore, quindi seguito da uno spazio).</span><span class="sxs-lookup"><span data-stu-id="7c44b-185">Write `x :: l` with spaces around the `::` operator (`::` is an infix operator, hence surrounded by spaces) and `[1; 2; 3]` (`;` is a delimiter, hence followed by a space).</span></span>
 
-<span data-ttu-id="a3009-186">Usare sempre almeno uno spazio tra due operatori simile a parentesi graffa distinti.</span><span class="sxs-lookup"><span data-stu-id="a3009-186">Always use at least one space between two distinct brace-like operators.</span></span> <span data-ttu-id="a3009-187">Ad esempio, lasciare uno spazio tra un `[` e un `{`.</span><span class="sxs-lookup"><span data-stu-id="a3009-187">For example, leave a space between a `[` and a `{`.</span></span>
+<span data-ttu-id="7c44b-186">Usare sempre almeno uno spazio tra due operatori simile a parentesi graffa distinti.</span><span class="sxs-lookup"><span data-stu-id="7c44b-186">Always use at least one space between two distinct brace-like operators.</span></span> <span data-ttu-id="7c44b-187">Ad esempio, lasciare uno spazio tra un `[` e un `{`.</span><span class="sxs-lookup"><span data-stu-id="7c44b-187">For example, leave a space between a `[` and a `{`.</span></span>
 
 ```fsharp
 // OK
@@ -354,7 +354,7 @@ let rainbow = {
  { IngredientName = "Lemon"; Quantity = 1 }]
 ```
 
-<span data-ttu-id="a3009-188">Gli elenchi e matrici suddivisi su più righe seguono una regola simile dei record:</span><span class="sxs-lookup"><span data-stu-id="a3009-188">Lists and arrays that split across multiple lines follow a similar rule as records do:</span></span>
+<span data-ttu-id="7c44b-188">Gli elenchi e matrici suddivisi su più righe seguono una regola simile dei record:</span><span class="sxs-lookup"><span data-stu-id="7c44b-188">Lists and arrays that split across multiple lines follow a similar rule as records do:</span></span>
 
 ```fsharp
 let pascalsTriangle = [|
@@ -370,15 +370,15 @@ let pascalsTriangle = [|
 |]
 ```
 
-## <a name="formatting-if-expressions"></a><span data-ttu-id="a3009-189">Formattazione se le espressioni</span><span class="sxs-lookup"><span data-stu-id="a3009-189">Formatting if expressions</span></span>
+## <a name="formatting-if-expressions"></a><span data-ttu-id="7c44b-189">Formattazione se le espressioni</span><span class="sxs-lookup"><span data-stu-id="7c44b-189">Formatting if expressions</span></span>
 
-<span data-ttu-id="a3009-190">Rientro di istruzioni condizionali varia a seconda di dimensioni delle espressioni che li compongono.</span><span class="sxs-lookup"><span data-stu-id="a3009-190">Indentation of conditionals depends on the sizes of the expressions that make them up.</span></span> <span data-ttu-id="a3009-191">Se `cond`, `e1` e `e2` sono brevi, è sufficiente scriverli su un'unica riga:</span><span class="sxs-lookup"><span data-stu-id="a3009-191">If `cond`, `e1` and `e2` are short, simply write them on one line:</span></span>
+<span data-ttu-id="7c44b-190">Rientro di istruzioni condizionali varia a seconda di dimensioni delle espressioni che li compongono.</span><span class="sxs-lookup"><span data-stu-id="7c44b-190">Indentation of conditionals depends on the sizes of the expressions that make them up.</span></span> <span data-ttu-id="7c44b-191">Se `cond`, `e1` e `e2` sono brevi, è sufficiente scriverli su un'unica riga:</span><span class="sxs-lookup"><span data-stu-id="7c44b-191">If `cond`, `e1` and `e2` are short, simply write them on one line:</span></span>
 
 ```fsharp
 if cond then e1 else e2
 ```
 
-<span data-ttu-id="a3009-192">Se uno dei due `cond`, `e1` o `e2` sono più lunghi, ma non su più righe:</span><span class="sxs-lookup"><span data-stu-id="a3009-192">If either `cond`, `e1` or `e2` are longer, but not multi-line:</span></span>
+<span data-ttu-id="7c44b-192">Se uno dei due `cond`, `e1` o `e2` sono più lunghi, ma non su più righe:</span><span class="sxs-lookup"><span data-stu-id="7c44b-192">If either `cond`, `e1` or `e2` are longer, but not multi-line:</span></span>
 
 ```fsharp
 if cond
@@ -386,7 +386,7 @@ then e1
 else e2
 ```
 
-<span data-ttu-id="a3009-193">Se le espressioni sono su più righe:</span><span class="sxs-lookup"><span data-stu-id="a3009-193">If any of the expressions are multi-line:</span></span>
+<span data-ttu-id="7c44b-193">Se le espressioni sono su più righe:</span><span class="sxs-lookup"><span data-stu-id="7c44b-193">If any of the expressions are multi-line:</span></span>
 
 ```fsharp
 if cond then
@@ -395,7 +395,7 @@ else
     e2
 ```
 
-<span data-ttu-id="a3009-194">Più istruzioni condizionali, con `elif` e `else` vengono rientrate nello stesso ambito come il `if`:</span><span class="sxs-lookup"><span data-stu-id="a3009-194">Multiple conditionals with `elif` and `else` are indented at the same scope as the `if`:</span></span>
+<span data-ttu-id="7c44b-194">Più istruzioni condizionali, con `elif` e `else` vengono rientrate nello stesso ambito come il `if`:</span><span class="sxs-lookup"><span data-stu-id="7c44b-194">Multiple conditionals with `elif` and `else` are indented at the same scope as the `if`:</span></span>
 
 ```fsharp
 if cond1 then e1
@@ -404,9 +404,9 @@ elif cond3 then e3
 else e4
 ```
 
-### <a name="pattern-matching-constructs"></a><span data-ttu-id="a3009-195">Costrutti di modello corrispondenti</span><span class="sxs-lookup"><span data-stu-id="a3009-195">Pattern matching constructs</span></span>
+### <a name="pattern-matching-constructs"></a><span data-ttu-id="7c44b-195">Costrutti di modello corrispondenti</span><span class="sxs-lookup"><span data-stu-id="7c44b-195">Pattern matching constructs</span></span>
 
-<span data-ttu-id="a3009-196">Usare un `|` per ogni clausola di una corrispondenza con alcun rientro.</span><span class="sxs-lookup"><span data-stu-id="a3009-196">Use a `|` for each clause of a match with no indentation.</span></span> <span data-ttu-id="a3009-197">Se l'espressione è breve, è possibile utilizzare una singola riga se ogni sottoespressione anche è semplice.</span><span class="sxs-lookup"><span data-stu-id="a3009-197">If the expression is short, you can consider using a single line if each subexpression is also simple.</span></span>
+<span data-ttu-id="7c44b-196">Usare un `|` per ogni clausola di una corrispondenza con alcun rientro.</span><span class="sxs-lookup"><span data-stu-id="7c44b-196">Use a `|` for each clause of a match with no indentation.</span></span> <span data-ttu-id="7c44b-197">Se l'espressione è breve, è possibile utilizzare una singola riga se ogni sottoespressione anche è semplice.</span><span class="sxs-lookup"><span data-stu-id="7c44b-197">If the expression is short, you can consider using a single line if each subexpression is also simple.</span></span>
 
 ```fsharp
 // OK
@@ -422,7 +422,7 @@ match l with
     | [] -> failwith "Couldn't find David"
 ```
 
-<span data-ttu-id="a3009-198">Se l'espressione a destra del criterio corrispondente freccia è troppo grande, spostarlo alla riga seguente, con rientro un unico passaggio dai `match` / `|`.</span><span class="sxs-lookup"><span data-stu-id="a3009-198">If the expression on the right of the pattern matching arrow is too large, move it to the following line, indented one step from the `match`/`|`.</span></span>
+<span data-ttu-id="7c44b-198">Se l'espressione a destra del criterio corrispondente freccia è troppo grande, spostarlo alla riga seguente, con rientro un unico passaggio dai `match` / `|`.</span><span class="sxs-lookup"><span data-stu-id="7c44b-198">If the expression on the right of the pattern matching arrow is too large, move it to the following line, indented one step from the `match`/`|`.</span></span>
 
 ```fsharp
 match lam with
@@ -434,7 +434,7 @@ match lam with
 
 ```
 
-<span data-ttu-id="a3009-199">Criteri di ricerca di funzioni anonime, a partire da `function`, devono in genere non impostare un rientro troppo lontano.</span><span class="sxs-lookup"><span data-stu-id="a3009-199">Pattern matching of anonymous functions, starting by `function`, should generally not indent too far.</span></span> <span data-ttu-id="a3009-200">Ad esempio, è bene il rientro di un ambito come segue:</span><span class="sxs-lookup"><span data-stu-id="a3009-200">For example, indenting one scope as follows is fine:</span></span>
+<span data-ttu-id="7c44b-199">Criteri di ricerca di funzioni anonime, a partire da `function`, devono in genere non impostare un rientro troppo lontano.</span><span class="sxs-lookup"><span data-stu-id="7c44b-199">Pattern matching of anonymous functions, starting by `function`, should generally not indent too far.</span></span> <span data-ttu-id="7c44b-200">Ad esempio, è bene il rientro di un ambito come segue:</span><span class="sxs-lookup"><span data-stu-id="7c44b-200">For example, indenting one scope as follows is fine:</span></span>
 
 ```fsharp
 lambdaList
@@ -444,7 +444,7 @@ lambdaList
     | Var v -> 1)
 ```
 
-<span data-ttu-id="a3009-201">Criteri di ricerca nelle funzioni definite dal `let` oppure `let rec` deve essere rientrati 4 spazi dopo l'avvio di `let`, anche se `function` parola chiave viene usata:</span><span class="sxs-lookup"><span data-stu-id="a3009-201">Pattern matching in functions defined by `let` or `let rec` should be indented 4 spaces after starting of `let`, even if `function` keyword is used:</span></span>
+<span data-ttu-id="7c44b-201">Criteri di ricerca nelle funzioni definite dal `let` oppure `let rec` deve essere rientrati 4 spazi dopo l'avvio di `let`, anche se `function` parola chiave viene usata:</span><span class="sxs-lookup"><span data-stu-id="7c44b-201">Pattern matching in functions defined by `let` or `let rec` should be indented 4 spaces after starting of `let`, even if `function` keyword is used:</span></span>
 
 ```fsharp
 let rec sizeLambda acc = function
@@ -453,11 +453,11 @@ let rec sizeLambda acc = function
     | Var v -> succ acc
 ```
 
-<span data-ttu-id="a3009-202">Non è consigliabile allineare le frecce.</span><span class="sxs-lookup"><span data-stu-id="a3009-202">We do not recommend aligning arrows.</span></span>
+<span data-ttu-id="7c44b-202">Non è consigliabile allineare le frecce.</span><span class="sxs-lookup"><span data-stu-id="7c44b-202">We do not recommend aligning arrows.</span></span>
 
-## <a name="formatting-trywith-expressions"></a><span data-ttu-id="a3009-203">Formattazione try / with espressioni</span><span class="sxs-lookup"><span data-stu-id="a3009-203">Formatting try/with expressions</span></span>
+## <a name="formatting-trywith-expressions"></a><span data-ttu-id="7c44b-203">Formattazione try / with espressioni</span><span class="sxs-lookup"><span data-stu-id="7c44b-203">Formatting try/with expressions</span></span>
 
-<span data-ttu-id="a3009-204">Criteri di ricerca nel tipo di eccezione devono essere rientrato allo stesso livello `with`.</span><span class="sxs-lookup"><span data-stu-id="a3009-204">Pattern matching on the exception type should be indented at the same level as `with`.</span></span>
+<span data-ttu-id="7c44b-204">Criteri di ricerca nel tipo di eccezione devono essere rientrato allo stesso livello `with`.</span><span class="sxs-lookup"><span data-stu-id="7c44b-204">Pattern matching on the exception type should be indented at the same level as `with`.</span></span>
 
 ```fsharp
 try
@@ -472,11 +472,11 @@ with
     printfn "A second that was a multiple of 3"
 ```
 
-## <a name="formatting-function-parameter-application"></a><span data-ttu-id="a3009-205">Formattazione dell'applicazione di parametro (funzione)</span><span class="sxs-lookup"><span data-stu-id="a3009-205">Formatting function parameter application</span></span>
+## <a name="formatting-function-parameter-application"></a><span data-ttu-id="7c44b-205">Formattazione dell'applicazione di parametro (funzione)</span><span class="sxs-lookup"><span data-stu-id="7c44b-205">Formatting function parameter application</span></span>
 
-<span data-ttu-id="a3009-206">In generale, la maggior parte delle applicazione di parametro di funzione viene eseguita nella stessa riga.</span><span class="sxs-lookup"><span data-stu-id="a3009-206">In general, most function parameter application is done on the same line.</span></span>
+<span data-ttu-id="7c44b-206">In generale, la maggior parte delle applicazione di parametro di funzione viene eseguita nella stessa riga.</span><span class="sxs-lookup"><span data-stu-id="7c44b-206">In general, most function parameter application is done on the same line.</span></span>
 
-<span data-ttu-id="a3009-207">Se si vuole applicare parametri a una funzione in una nuova riga, impostare un rientro per un ambito.</span><span class="sxs-lookup"><span data-stu-id="a3009-207">If you wish to apply parameters to a function on a new line, indent them by one scope.</span></span>
+<span data-ttu-id="7c44b-207">Se si vuole applicare parametri a una funzione in una nuova riga, impostare un rientro per un ambito.</span><span class="sxs-lookup"><span data-stu-id="7c44b-207">If you wish to apply parameters to a function on a new line, indent them by one scope.</span></span>
 
 ```fsharp
 // OK
@@ -496,7 +496,7 @@ let printVolumes x =
         (convertVolumeImperialPint x)
 ```
 
-<span data-ttu-id="a3009-208">Le stesse linee guida applicano per le espressioni lambda come argomenti della funzione.</span><span class="sxs-lookup"><span data-stu-id="a3009-208">The same guidelines apply for lambda expressions as function arguments.</span></span> <span data-ttu-id="a3009-209">Se il corpo di un'espressione lambda, il corpo può contenere un'altra riga, rientrata in base a un ambito</span><span class="sxs-lookup"><span data-stu-id="a3009-209">If the body of a lambda expression, the body can have another line, indented by one scope</span></span>
+<span data-ttu-id="7c44b-208">Le stesse linee guida applicano per le espressioni lambda come argomenti della funzione.</span><span class="sxs-lookup"><span data-stu-id="7c44b-208">The same guidelines apply for lambda expressions as function arguments.</span></span> <span data-ttu-id="7c44b-209">Se il corpo di un'espressione lambda, il corpo può contenere un'altra riga, rientrata in base a un ambito</span><span class="sxs-lookup"><span data-stu-id="7c44b-209">If the body of a lambda expression, the body can have another line, indented by one scope</span></span>
 
 ```fsharp
 let printListWithOffset a list1 =
@@ -512,13 +512,13 @@ let printListWithOffset a list1 =
         list1
 ```
 
-<span data-ttu-id="a3009-210">Tuttavia, se il corpo di un'espressione lambda su più righe, è consigliabile estrarla factoring in funzioni separate piuttosto che dispone di un costrutto multilinea applicato come un singolo argomento a una funzione.</span><span class="sxs-lookup"><span data-stu-id="a3009-210">However, if the body of a lambda expression is more than one line, consider factoring it out into a separate function rather than have a multi-line construct applied as a single argument to a function.</span></span>
+<span data-ttu-id="7c44b-210">Tuttavia, se il corpo di un'espressione lambda su più righe, è consigliabile estrarla factoring in funzioni separate piuttosto che dispone di un costrutto multilinea applicato come un singolo argomento a una funzione.</span><span class="sxs-lookup"><span data-stu-id="7c44b-210">However, if the body of a lambda expression is more than one line, consider factoring it out into a separate function rather than have a multi-line construct applied as a single argument to a function.</span></span>
 
-### <a name="formatting-infix-operators"></a><span data-ttu-id="a3009-211">Gli operatori infissi di formattazione</span><span class="sxs-lookup"><span data-stu-id="a3009-211">Formatting infix operators</span></span>
+### <a name="formatting-infix-operators"></a><span data-ttu-id="7c44b-211">Gli operatori infissi di formattazione</span><span class="sxs-lookup"><span data-stu-id="7c44b-211">Formatting infix operators</span></span>
 
-<span data-ttu-id="a3009-212">Operatori separati da spazi.</span><span class="sxs-lookup"><span data-stu-id="a3009-212">Separate operators by spaces.</span></span> <span data-ttu-id="a3009-213">Sono evidenti eccezioni a questa regola il `!` e `.` operatori.</span><span class="sxs-lookup"><span data-stu-id="a3009-213">Obvious exceptions to this rule are the `!` and `.` operators.</span></span>
+<span data-ttu-id="7c44b-212">Operatori separati da spazi.</span><span class="sxs-lookup"><span data-stu-id="7c44b-212">Separate operators by spaces.</span></span> <span data-ttu-id="7c44b-213">Sono evidenti eccezioni a questa regola il `!` e `.` operatori.</span><span class="sxs-lookup"><span data-stu-id="7c44b-213">Obvious exceptions to this rule are the `!` and `.` operators.</span></span>
 
-<span data-ttu-id="a3009-214">Le espressioni di infissi sono OK lineup nella stessa colonna:</span><span class="sxs-lookup"><span data-stu-id="a3009-214">Infix expressions are OK to lineup on same column:</span></span>
+<span data-ttu-id="7c44b-214">Le espressioni di infissi sono OK lineup nella stessa colonna:</span><span class="sxs-lookup"><span data-stu-id="7c44b-214">Infix expressions are OK to lineup on same column:</span></span>
 
 ```fsharp
 acc +
@@ -530,9 +530,9 @@ let function1 arg1 arg2 arg3 arg4 =
     arg3 + arg4
 ```
 
-### <a name="formatting-pipeline-operators"></a><span data-ttu-id="a3009-215">Formattazione operatori pipeline</span><span class="sxs-lookup"><span data-stu-id="a3009-215">Formatting pipeline operators</span></span>
+### <a name="formatting-pipeline-operators"></a><span data-ttu-id="7c44b-215">Formattazione operatori pipeline</span><span class="sxs-lookup"><span data-stu-id="7c44b-215">Formatting pipeline operators</span></span>
 
-<span data-ttu-id="a3009-216">Pipeline `|>` operatori devono essere inserito sotto le espressioni operano in base a.</span><span class="sxs-lookup"><span data-stu-id="a3009-216">Pipeline `|>` operators should go underneath the expressions they operate on.</span></span>
+<span data-ttu-id="7c44b-216">Pipeline `|>` operatori devono essere inserito sotto le espressioni operano in base a.</span><span class="sxs-lookup"><span data-stu-id="7c44b-216">Pipeline `|>` operators should go underneath the expressions they operate on.</span></span>
 
 ```fsharp
 // Preferred approach
@@ -555,9 +555,9 @@ let methods2 = System.AppDomain.CurrentDomain.GetAssemblies()
             |> Array.concat
 ```
 
-### <a name="formatting-modules"></a><span data-ttu-id="a3009-217">Formattazione di moduli</span><span class="sxs-lookup"><span data-stu-id="a3009-217">Formatting modules</span></span>
+### <a name="formatting-modules"></a><span data-ttu-id="7c44b-217">Formattazione di moduli</span><span class="sxs-lookup"><span data-stu-id="7c44b-217">Formatting modules</span></span>
 
-<span data-ttu-id="a3009-218">Il codice in un modulo locale deve essere rientrato rispetto al modulo, ma il codice in un modulo di primo livello non debba essere rientrato.</span><span class="sxs-lookup"><span data-stu-id="a3009-218">Code in a local module must be indented relative to the module, but code in a top-level module should not be indented.</span></span> <span data-ttu-id="a3009-219">Elementi Namespace non sono necessario impostare un rientro.</span><span class="sxs-lookup"><span data-stu-id="a3009-219">Namespace elements do not have to be indented.</span></span>
+<span data-ttu-id="7c44b-218">Il codice in un modulo locale deve essere rientrato rispetto al modulo, ma il codice in un modulo di primo livello non debba essere rientrato.</span><span class="sxs-lookup"><span data-stu-id="7c44b-218">Code in a local module must be indented relative to the module, but code in a top-level module should not be indented.</span></span> <span data-ttu-id="7c44b-219">Elementi Namespace non sono necessario impostare un rientro.</span><span class="sxs-lookup"><span data-stu-id="7c44b-219">Namespace elements do not have to be indented.</span></span>
 
 ```fsharp
 // A is a top-level module.
@@ -575,9 +575,9 @@ module A2 =
     let function2 a b = a*a - b*b
 ```
 
-### <a name="formatting-object-expressions-and-interfaces"></a><span data-ttu-id="a3009-220">Formattazione di espressioni di oggetto e interfacce</span><span class="sxs-lookup"><span data-stu-id="a3009-220">Formatting object expressions and interfaces</span></span>
+### <a name="formatting-object-expressions-and-interfaces"></a><span data-ttu-id="7c44b-220">Formattazione di espressioni di oggetto e interfacce</span><span class="sxs-lookup"><span data-stu-id="7c44b-220">Formatting object expressions and interfaces</span></span>
 
-<span data-ttu-id="a3009-221">Interfacce e le espressioni di oggetto devono essere allineate nello stesso modo con `member` viene applicato un rientro dopo 4 spazi.</span><span class="sxs-lookup"><span data-stu-id="a3009-221">Object expressions and interfaces should be aligned in the same way with `member` being indented after 4 spaces.</span></span>
+<span data-ttu-id="7c44b-221">Interfacce e le espressioni di oggetto devono essere allineate nello stesso modo con `member` viene applicato un rientro dopo 4 spazi.</span><span class="sxs-lookup"><span data-stu-id="7c44b-221">Object expressions and interfaces should be aligned in the same way with `member` being indented after 4 spaces.</span></span>
 
 ```fsharp
 let comparer =
@@ -589,9 +589,9 @@ let comparer =
               reversed.CompareTo (rev s2) }
 ```
 
-### <a name="formatting-white-space-in-expressions"></a><span data-ttu-id="a3009-222">Spazi vuoti nelle espressioni di formattazione</span><span class="sxs-lookup"><span data-stu-id="a3009-222">Formatting white space in expressions</span></span>
+### <a name="formatting-white-space-in-expressions"></a><span data-ttu-id="7c44b-222">Spazi vuoti nelle espressioni di formattazione</span><span class="sxs-lookup"><span data-stu-id="7c44b-222">Formatting white space in expressions</span></span>
 
-<span data-ttu-id="a3009-223">Evitare gli spazi vuoti estranei nelle espressioni F #.</span><span class="sxs-lookup"><span data-stu-id="a3009-223">Avoid extraneous white space in F# expressions.</span></span>
+<span data-ttu-id="7c44b-223">Evitare gli spazi vuoti estranei nelle espressioni F#.</span><span class="sxs-lookup"><span data-stu-id="7c44b-223">Avoid extraneous white space in F# expressions.</span></span>
 
 ```fsharp
 // OK
@@ -601,7 +601,7 @@ spam (ham.[1])
 spam ( ham.[ 1 ] )
 ```
 
-<span data-ttu-id="a3009-224">Gli argomenti denominati non necessario anche spazio che racchiudono il `=`:</span><span class="sxs-lookup"><span data-stu-id="a3009-224">Named arguments should also not have space surrounding the `=`:</span></span>
+<span data-ttu-id="7c44b-224">Gli argomenti denominati non necessario anche spazio che racchiudono il `=`:</span><span class="sxs-lookup"><span data-stu-id="7c44b-224">Named arguments should also not have space surrounding the `=`:</span></span>
 
 ```fsharp
 // OK

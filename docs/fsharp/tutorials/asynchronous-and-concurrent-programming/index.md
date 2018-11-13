@@ -7,7 +7,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/02/2018
 ms.locfileid: "25726588"
 ---
-# <a name="asynchronous-and-concurrent-programming-in-f"></a><span data-ttu-id="acada-101">Programmazione asincrona e simultanea inF#</span><span class="sxs-lookup"><span data-stu-id="acada-101">Asynchronous and Concurrent Programming in F#</span></span> #
+# <a name="asynchronous-and-concurrent-programming-in-f"></a><span data-ttu-id="cd66f-101">Programmazione asincrona e simultanea inF#</span><span class="sxs-lookup"><span data-stu-id="cd66f-101">Asynchronous and Concurrent Programming in F#</span></span> #
 
 > [!NOTE]
-<span data-ttu-id="acada-102">Questo documento è ancora in corso di preparazione.</span><span class="sxs-lookup"><span data-stu-id="acada-102">This is still in-progress.</span></span>
+<span data-ttu-id="cd66f-102">Questo documento è ancora in corso di preparazione.</span><span class="sxs-lookup"><span data-stu-id="cd66f-102">This is still in-progress.</span></span>
