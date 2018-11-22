@@ -2,11 +2,11 @@
 title: Codificatori personalizzati
 ms.date: 03/30/2017
 ms.assetid: fa0e1d7f-af36-4bf4-aac9-cd4eab95bc4f
-ms.openlocfilehash: cd8b9172278ce5bcca2965872d697b03698bd850
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: 036cbff9046df2d1179c5cc0921dd8d89757558b
+ms.sourcegitcommit: 8145ad08288bf141d68e3256cb1f7a3ad842ca33
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
+ms.lasthandoff: 11/22/2018
 ms.locfileid: "50034382"
 ---
 # <a name="custom-encoders"></a>Codificatori personalizzati
@@ -60,7 +60,7 @@ In questo argomento verranno illustrate le procedure per creare codificatori per
  Oltre a elaborare chiavi di dizionario dinamiche, i messaggi con sessione memorizzati nel buffer vengono ricevuti in modo univoco. Anziché creare un lettore sul documento ed elaborarlo, il codificatore binario usa la classe `MessagePatterns` interna per scomporre il flusso binario. L'idea è che la maggior parte dei messaggi hanno uno specifico set di intestazioni che vengono visualizzati in un determinato ordine quando generato da WCF. Il sistema del modello divide in due il messaggio in base a quanto previsto. In caso di esito positivo, inizializza un oggetto <xref:System.ServiceModel.Channels.MessageHeaders> senza analizzare il codice XML. In caso contrario ricorre al metodo standard.  
   
 ### <a name="mtom-encoding"></a>Codifica MTOM  
- Il <<!--zz xref:System.ServiceModel.Channels.MTOMMessageEncodingBindingElement --> `System.ServiceModel.Channels.MTOMMessageEncodingBindingElement`> classe ha una proprietà di configurazione aggiuntiva denominata <<!--zz xref:System.ServiceModel.Channels.MTOMMessageEncodingBindingElement --> `System.ServiceModel.Channels.MTOMMessageEncodingBindingElement`.MaxBufferSize%2A>. Questa proprietà impone un limite massimo alla quantità di dati che è consentito memorizzare nel buffer durante il processo di lettura di un messaggio. In alcuni casi gli Infoset XML (insiemi di informazioni XML) o altre parti MIME devono essere memorizzati nel buffer per riunire tutte le parti MIME in un unico messaggio.  
+ La classe <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> dispone di una proprietà di configurazione aggiuntiva denominata <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement.MaxBufferSize%2A>. Questa proprietà impone un limite massimo alla quantità di dati che è consentito memorizzare nel buffer durante il processo di lettura di un messaggio. In alcuni casi gli Infoset XML (insiemi di informazioni XML) o altre parti MIME devono essere memorizzati nel buffer per riunire tutte le parti MIME in un unico messaggio.  
   
  Per usare correttamente il protocollo HTTP, la classe del codificatore di messaggi MTOM interna fornisce alcune API interne per il metodo `GetContentType` (interno) e `WriteMessage`, un metodo pubblico che può essere sottoposto a override. Per garantire che i valori dell'intestazione HTTP concordino con i valori delle intestazioni MIME deve verificarsi un numero maggiore di comunicazioni.  
   
