@@ -1,20 +1,20 @@
 ---
 title: Flussi di lavoro asincroni (F#)
-description: Informazioni sul supporto in F# linguaggio di programmazione per l'esecuzione di calcoli in modo asincrono, in cui vengono eseguiti senza bloccare l'esecuzione di altre operazioni.
+description: Informazioni sul supporto in di F# linguaggio di programmazione per l'esecuzione di calcoli in modo asincrono, in cui vengono eseguiti senza bloccare l'esecuzione di altre operazioni.
 ms.date: 05/16/2016
-ms.openlocfilehash: 2a6d5f8b61d63a722744f8f71a037e8bc460c64f
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 720996106d2b90392eacc75eb99147691ee83334
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43861562"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297075"
 ---
 # <a name="asynchronous-workflows"></a>Flussi di lavoro asincroni
 
 > [!NOTE]
-Il collegamento al riferimento per l'API porta a MSDN.  Il riferimento all'API in Microsoft Docs (docs.microsoft.com) non è completo.
+> Il collegamento al riferimento per l'API porta a MSDN.  Il riferimento all'API in Microsoft Docs (docs.microsoft.com) non è completo.
 
-In questo argomento viene descritto il supporto in F# per l'esecuzione di calcoli in modo asincrono, vale a dire, senza bloccare l'esecuzione di altre operazioni. Ad esempio, i calcoli asincroni utilizzabile per scrivere applicazioni che dispongono di interfacce utente rimangano attive per gli utenti come l'applicazione viene eseguito altro lavoro.
+In questo argomento viene descritto il supporto in F# per l'esecuzione di calcoli in modo asincrono, vale a dire, senza bloccare l'esecuzione di altri di lavoro. Ad esempio, i calcoli asincroni utilizzabile per scrivere applicazioni che dispongono di interfacce utente rimangano attive per gli utenti come l'applicazione viene eseguito altro lavoro.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -41,17 +41,17 @@ let (result1 : Async<byte[]>) = stream.AsyncRead(bufferSize)
 let! (result2 : byte[])  = stream.AsyncRead(bufferSize)
 ```
 
-Oltre a `let!`, è possibile usare `use!` eseguire associazioni asincrone. La differenza tra `let!` e `use!` equivale alla differenza tra `let` e `use`. Per `use!`, l'oggetto viene eliminato alla chiusura dell'ambito corrente. Si noti che nella versione corrente del linguaggio F# `use!` non è consentito un valore essere inizializzato su null, anche se `use` viene.
+Oltre a `let!`, è possibile usare `use!` eseguire associazioni asincrone. La differenza tra `let!` e `use!` equivale alla differenza tra `let` e `use`. Per `use!`, l'oggetto viene eliminato alla chiusura dell'ambito corrente. Si noti che nell'attuale versione del F# Java `use!` non è consentito un valore essere inizializzato su null, anche se `use` viene.
 
 ## <a name="asynchronous-primitives"></a>Primitivi asincroni
 
-Viene chiamato un metodo che esegue una singola attività asincrona e restituisce il risultato un' *primitiva asincrona*, e queste sono progettate specificamente per l'uso con `let!`. Diversi primitivi asincroni sono definiti nella libreria di base F#. Questi due diversi metodi per le applicazioni Web sono definiti nel modulo [ `Microsoft.FSharp.Control.WebExtensions` ](https://msdn.microsoft.com/library/95ef17bc-ee3f-44ba-8a11-c90fcf4cf003): [ `WebRequest.AsyncGetResponse` ](https://msdn.microsoft.com/library/09a60c31-e6e2-4b5c-ad23-92a86e50060c) e [ `WebClient.AsyncDownloadString` ](https://msdn.microsoft.com/library/8a85a9b7-f712-4cac-a0ce-0a797f8ea32a). Entrambe le primitive di scaricano i dati da una pagina Web, data un URL. `AsyncGetResponse` Genera una `System.Net.WebResponse` oggetti, e `AsyncDownloadString` produce una stringa che rappresenta il codice HTML per una pagina Web.
+Viene chiamato un metodo che esegue una singola attività asincrona e restituisce il risultato un' *primitiva asincrona*, e queste sono progettate specificamente per l'uso con `let!`. Diversi primitivi asincroni sono definiti in di F# libreria di base. Questi due diversi metodi per le applicazioni Web sono definiti nel modulo [ `Microsoft.FSharp.Control.WebExtensions` ](https://msdn.microsoft.com/library/95ef17bc-ee3f-44ba-8a11-c90fcf4cf003): [ `WebRequest.AsyncGetResponse` ](https://msdn.microsoft.com/library/09a60c31-e6e2-4b5c-ad23-92a86e50060c) e [ `WebClient.AsyncDownloadString` ](https://msdn.microsoft.com/library/8a85a9b7-f712-4cac-a0ce-0a797f8ea32a). Entrambe le primitive di scaricano i dati da una pagina Web, data un URL. `AsyncGetResponse` Genera una `System.Net.WebResponse` oggetti, e `AsyncDownloadString` produce una stringa che rappresenta il codice HTML per una pagina Web.
 
 Sono inclusi diversi primitivi per le operazioni dei / o asincrone nel [ `Microsoft.FSharp.Control.CommonExtensions` ](https://msdn.microsoft.com/library/2edb67cb-6814-4a30-849f-b6dbdd042396) modulo. Questi metodi di estensione del `System.IO.Stream` classe vengono [ `Stream.AsyncRead` ](https://msdn.microsoft.com/library/85698aaa-bdda-47e6-abed-3730f59fda5e) e [ `Stream.AsyncWrite` ](https://msdn.microsoft.com/library/1b0a2751-e42a-47e1-bd27-020224adc618).
 
 È anche possibile scrivere i proprio primitivi asincroni mediante la definizione di una funzione il cui corpo completo è racchiuso in un blocco asincrono.
 
-Per usare i metodi asincroni in .NET Framework sono progettati per altri modelli asincroni con F# modello di programmazione asincrono, si crea una funzione che restituisce un F# `Async` oggetto. La libreria F# contiene funzioni che rendono questa operazione semplice.
+Usare i metodi asincroni in .NET Framework sono progettati per altri modelli asincroni con la F# modello di programmazione asincrona, si crea una funzione che restituisce un F# `Async` oggetto. Il F# libreria include funzioni che rendono questa operazione semplice.
 
 Un esempio dell'uso di flussi di lavoro asincroni è incluso in questo contesto. sono disponibili numerosi altri nella documentazione per i metodi del [Async (classe)](https://msdn.microsoft.com/library/03eb4d12-a01a-4565-a077-5e83f17cf6f7).
 

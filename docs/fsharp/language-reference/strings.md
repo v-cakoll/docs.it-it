@@ -1,24 +1,24 @@
 ---
 title: Stringhe (F#)
-description: Informazioni su come il tipo 'string' F# rappresenta il testo non modificabile come una sequenza di caratteri Unicode.
+description: Informazioni su come il F# di tipo 'stringa' rappresenta il testo non modificabile come sequenza di caratteri Unicode.
 ms.date: 05/16/2016
-ms.openlocfilehash: 21971602093bc84b0df47d4ae46a14fb936c28bb
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 158e30224fe50c2324e40d550b75e6abaf843597
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43799343"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296788"
 ---
 # <a name="strings"></a>Stringhe
 
 > [!NOTE]
-I collegamenti di riferimento all'API in questo articolo portano a MSDN.  Il riferimento all'API in Microsoft Docs (docs.microsoft.com) non è completo.
+> I collegamenti di riferimento all'API in questo articolo portano a MSDN.  Il riferimento all'API in Microsoft Docs (docs.microsoft.com) non è completo.
 
 Il `string` tipo rappresenta il testo non modificabile come sequenza di caratteri Unicode. `string` è un alias per `System.String` in .NET Framework.
 
 ## <a name="remarks"></a>Note
 
-Valori letterali stringa sono delimitati dal carattere di virgolette doppie ("). Il carattere barra rovesciata ( \\ ) viene usato per codificare alcuni caratteri speciali. La barra rovesciata e il carattere successivo insieme sono note come un *sequenza di escape*. Supportato in F# stringa nella tabella seguente vengono visualizzati i valori letterali di sequenze di escape.
+Valori letterali stringa sono delimitati dal carattere di virgolette doppie ("). Il carattere barra rovesciata ( \\ ) viene usato per codificare alcuni caratteri speciali. La barra rovesciata e il carattere successivo insieme sono note come un *sequenza di escape*. Supportato in sequenze di escape F# valori letterali stringa vengono visualizzati nella tabella seguente.
 
 |Carattere|Sequenza di escape|
 |---------|---------------|
@@ -78,7 +78,7 @@ L'esempio seguente illustra la concatenazione di stringhe.
 
 ## <a name="string-class"></a>Classe di stringa
 
-Poiché il tipo di stringa in F# è effettivamente un .NET Framework `System.String` digita, tutti i `System.String` membri sono disponibili. Ciò include la `+` operatore, che viene usato per concatenare le stringhe, il `Length` proprietà e il `Chars` proprietà, che restituisce la stringa come una matrice di caratteri Unicode. Per altre informazioni sulle stringhe, vedere `System.String`.
+Dal momento che la stringa di tipo F# è effettivamente un Framework .NET `System.String` digitare, tutti i `System.String` membri sono disponibili. Ciò include la `+` operatore, che viene usato per concatenare le stringhe, il `Length` proprietà e il `Chars` proprietà, che restituisce la stringa come una matrice di caratteri Unicode. Per altre informazioni sulle stringhe, vedere `System.String`.
 
 Tramite il `Chars` proprietà di `System.String`, è possibile accedere ai singoli caratteri in una stringa specificando un indice, come illustrato nel codice seguente.
 

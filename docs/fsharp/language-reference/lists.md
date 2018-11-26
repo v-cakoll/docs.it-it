@@ -1,18 +1,18 @@
 ---
 title: Elenchi (F#)
-description: Informazioni sugli elenchi di F#, una serie ordinata e non modificabile di elementi dello stesso tipo.
+description: Informazioni su F# sono elencati, una serie ordinata e non modificabile di elementi dello stesso tipo.
 ms.date: 05/16/2016
-ms.openlocfilehash: b48bf04f5ec490b49e63462affc0d4eadebe10ef
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: f7b9054226a1dd004ac78673a059bd1c35e325a5
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50201624"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297504"
 ---
 # <a name="lists"></a>Elenchi
 
 > [!NOTE]
-I collegamenti di riferimento all'API in questo articolo portano a MSDN.  Il riferimento all'API in Microsoft Docs (docs.microsoft.com) non è completo.
+> I collegamenti di riferimento all'API in questo articolo portano a MSDN.  Il riferimento all'API in Microsoft Docs (docs.microsoft.com) non è completo.
 
 Un elenco in F# è una serie ordinata e non modificabile di elementi dello stesso tipo. Per eseguire operazioni di base sugli elenchi, usare le funzioni nel [modulo List](https://msdn.microsoft.com/library/a2264ba3-2d45-40dd-9040-4f7aa2ad9788).
 
@@ -56,7 +56,7 @@ Sono disponibili nelle funzioni per l'esecuzione di operazioni sugli elenchi di 
 
 Poiché gli elenchi in F# non sono modificabili, qualsiasi operazione di modifica comporta la generazione di nuovi elenchi anziché la modifica di quelli esistenti.
 
-Gli elenchi in F# vengono implementati come elenchi collegati singolarmente, ovvero le operazioni che accedono solo all'elemento head dell'elenco sono o (1) e l'accesso all'elemento è O (*n*).
+Vengono elencati F# vengono implementati come elenchi collegati singolarmente, il che significa che le operazioni che accedono solo all'elemento head dell'elenco sono o (1) e l'accesso all'elemento è O (*n*).
 
 ## <a name="properties"></a>Proprietà
 

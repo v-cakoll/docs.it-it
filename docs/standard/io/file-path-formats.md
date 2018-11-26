@@ -2,19 +2,18 @@
 title: Formati dei percorsi di file nei sistemi Windows
 ms.date: 06/28/2018
 ms.technology: dotnet-standard
-ms.topic: article
 helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 05146467f321a3c83f3637e2eecc4c7c42dc4ba0
-ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
+ms.openlocfilehash: 1b79ff1991f1d9b803b0c35b4ae9565f70de0b56
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51214194"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296828"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Formati dei percorsi di file nei sistemi Windows
 
@@ -90,8 +89,8 @@ Il percorso del dispositivo DOS è costituito dai componenti seguenti:
 
    È disponibile un collegamento specifico per i percorsi UNC, chiamato `UNC`. Ad esempio:
 
-      `\\.\UNC\Server\Share\Test\Foo.txt`
-      `\\?\UNC\Server\Share\Test\Foo.txt`
+  `\\.\UNC\Server\Share\Test\Foo.txt`  
+  `\\?\UNC\Server\Share\Test\Foo.txt`
 
     Per i percorsi UNC del dispositivo, la parte server/condivisione costituisce il volume. Ad esempio, in `\\?\server1\e:\utilities\\filecomparer\` la parte server/condivisione è server1\utilities. Ciò risulta particolarmente importante quando si chiama un metodo come <xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType> con segmenti di directory relativi; non è mai possibile andare oltre il volume. 
 
@@ -114,7 +113,7 @@ Quasi tutti i percorsi passati alle API di Windows sono normalizzati. Durante la
 - Valuta i componenti di directory relativi (`.` per la directory corrente e `..` per la directory padre).
 - Elimina determinati caratteri.
 
-Questa normalizzazione avviene in modo implicito, ma è possibile eseguirla in modo esplicito chiamando il metodo <xref:System.IO.Path.GetFullPath%2A?displayProperty=nameWithType>, che esegue il wrapping di una chiamata alla [funzione GetFullPathName()](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea).aspx). È anche possibile chiamare la [funzione GetFullPathName()](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea).aspx) di Windows direttamente tramite P/Invoke. È anche possibile chiamare 
+Questa normalizzazione avviene in modo implicito, ma è possibile eseguirla in modo esplicito chiamando il metodo <xref:System.IO.Path.GetFullPath%2A?displayProperty=nameWithType>, che esegue il wrapping di una chiamata alla [funzione GetFullPathName()](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea). È anche possibile chiamare la [funzione GetFullPathName()](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) di Windows direttamente tramite P/Invoke.
 
 ### <a name="identifying-the-path"></a>Identificazione del percorso
 
