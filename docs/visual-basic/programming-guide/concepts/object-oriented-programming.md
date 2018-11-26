@@ -1,72 +1,58 @@
 ---
-title: Programmazione orientata a oggetti (Visual Basic)
+title: Programmazione orientata agli oggetti (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 49794de4-64c3-473c-b8ed-fe98835df69c
-ms.openlocfilehash: e8936eb9031ef68ea333835d8433e1ba1a45990f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 058d8b932e50f784d4a5cefa9fadfb31953687f0
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655967"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297088"
 ---
-# <a name="object-oriented-programming-visual-basic"></a>Programmazione orientata a oggetti (Visual Basic)
-Visual Basic fornisce supporto completo per la programmazione orientata agli oggetti inclusi incapsulamento, ereditarietà e polimorfismo.  
-  
- L'*incapsulamento* indica che un gruppo di proprietà, metodi e altri membri correlati vengono considerati come una singola unità o un singolo oggetto.  
-  
- L'*ereditarietà* indica la capacità di creare nuove classi sulla base di una classe esistente.  
-  
- Il *polimorfismo* indica la capacità di usare più classi in modo intercambiabile, anche se in ognuna di esse le stesse proprietà o gli stessi metodi sono implementati in modi diversi.  
-  
- In questa sezione vengono descritti i concetti seguenti:  
-  
--   [Classi e oggetti](#classes-and-objects)  
-  
-    -   [Membri di classi](#members)  
-  
-         [Proprietà e campi](#properties-and-fields)  
-  
-         [Metodi](#methods)  
-  
-         [Costruttori](#constructors)  
-  
-         [Distruttori](#destructors)  
-  
-         [Eventi](#events)  
-  
-         [Classi annidate](#nested-classes)  
-  
-    -   [Modificatori di accesso e livelli di accesso](#access-modifiers-and-access-levels)  
-  
-    -   [Istanze di classi](#instantiating-classes)  
-  
-    -   [I membri e classi condivise](#shared-classes-and-members)  
-  
-    -   [Tipi anonimi](#anonymous-types)  
-  
--   [Ereditarietà](#inheritance)  
-  
-    -   [Override di membri](#overriding-members)  
-  
--   [Interfacce](#interfaces)  
-  
--   [Generics](#generics)  
-  
--   [Delegati](#delegates)  
-  
-## <a name="classes-and-objects"></a>Classi e oggetti  
+# <a name="object-oriented-programming-visual-basic"></a>Programmazione orientata agli oggetti (Visual Basic)
+
+Visual Basic fornisce supporto completo per la programmazione orientata agli oggetti inclusi incapsulamento, ereditarietà e polimorfismo.
+
+ L'*incapsulamento* indica che un gruppo di proprietà, metodi e altri membri correlati vengono considerati come una singola unità o un singolo oggetto.
+
+ L'*ereditarietà* indica la capacità di creare nuove classi sulla base di una classe esistente.
+
+ Il *polimorfismo* indica la capacità di usare più classi in modo intercambiabile, anche se in ognuna di esse le stesse proprietà o gli stessi metodi sono implementati in modi diversi.
+
+ In questa sezione vengono descritti i concetti seguenti:
+
+- [Classi e oggetti](#classes-and-objects)
+  - [Membri di classi](#class-members)
+    - [Proprietà e campi](#properties-and-fields)
+    - [Metodi](#methods)
+    - [Costruttori](#constructors)
+    - [Distruttori](#destructors)
+    - [Eventi](#events)
+    - [Classi annidate](#nested-classes)
+  - [Modificatori di accesso e livelli di accesso](#access-modifiers-and-access-levels)
+    - [Istanze di classi](#instantiating-classes)
+    - [I membri e classi condivise](#shared-classes-and-members)
+    - [Tipi anonimi](#anonymous-types)
+- [Ereditarietà](#inheritance)
+  - [Override di membri](#overriding-members)
+- [Interfacce](#interfaces)
+- [Generics](#generics)
+- [Delegati](#delegates)
+
+## <a name="classes-and-objects"></a>Classi e oggetti
+
 I termini *classe* e *oggetto* vengono talvolta usati in modo intercambiabile. Di fatto, però, le classi descrivono il *tipo* degli oggetti, mentre gli oggetti sono *istanze* utilizzabili delle classi. L'atto di creare un oggetto viene pertanto chiamato *creazione di istanze*. Rifacendoci all'analogia precedente, la classe corrisponde al progetto iniziale e l'oggetto all'edificio realizzato in base a tale progetto.
 
 Per definire una classe:
 
-```vb  
+```vb
 Class SampleClass
 End Class
 ```
 
-Visual Basic fornisce inoltre una versione ridotta delle classi chiamate *strutture* che sono utili quando è necessario creare una matrice di oggetti di grandi dimensioni e non si desidera usare troppa memoria a tale scopo.
+Visual Basic fornisce anche una versione ridotta di classi denominate *strutture* che sono utili quando è necessario creare una matrice di oggetti di grandi dimensioni e scopo non si desidera usare troppa memoria adatto.
 
-Per definire una struttura:  
+Per definire una struttura:
 
 ```vb
 Structure SampleStructure
@@ -76,13 +62,14 @@ End Structure
 Per altre informazioni, vedere:
 
 - [Istruzione Class](../../../visual-basic/language-reference/statements/class-statement.md)
-
 - [Istruzione Structure](../../../visual-basic/language-reference/statements/structure-statement.md)
 
-### <a name="class-members"></a>Membri di classe
+### <a name="class-members"></a>Membri della classe
+
 Ogni classe può avere *membri di classe* diversi che includono proprietà che descrivono i dati della classe, i metodi che definiscono il comportamento della classe e gli eventi che offrono la comunicazione tra classi e oggetti diversi.
 
 #### <a name="properties-and-fields"></a>Proprietà e campi
+
 I campi e le proprietà rappresentano le informazioni contenute in un oggetto. I campi sono simili a variabili in quanto possono essere letti o impostati direttamente.
 
 Per definire un campo:
@@ -95,7 +82,7 @@ End Class
 
 Le proprietà dispongono di routine Get e Set, che forniscono un maggiore controllo sul modo in cui i valori vengono impostati o restituiti.
 
-Visual Basic consente di creare un campo privato per archiviare il valore della proprietà o utilizzare le cosiddette proprietà implementate automaticamente che creano automaticamente questo campo in background e fornire la logica di base per le routine della proprietà.
+Visual Basic consente di creare un campo privato per archiviare il valore della proprietà o usare le cosiddette proprietà implementate automaticamente che creano automaticamente questo campo in background e forniscono la logica di base per le routine della proprietà.
 
 Per definire una proprietà implementata automaticamente:
 
@@ -126,22 +113,19 @@ End Class
 La maggior parte delle proprietà dispone di metodi o di routine per impostare e ottenere il valore della proprietà. È possibile, tuttavia, creare proprietà di sola lettura o di sola scrittura per impedirne la modifica o la lettura. In Visual Basic è possibile utilizzare le parole chiave `ReadOnly` e `WriteOnly`. Tuttavia, le proprietà implementate automaticamente non possono essere di sola lettura o di sola scrittura.
 
 Per altre informazioni, vedere:
-  
--   [Istruzione Property](../../../visual-basic/language-reference/statements/property-statement.md)  
-  
--   [Istruzione Get](../../../visual-basic/language-reference/statements/get-statement.md)  
-  
--   [Istruzione Set](../../../visual-basic/language-reference/statements/set-statement.md)  
-  
--   [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)  
-  
--   [WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md)  
-  
-#### <a name="methods"></a>Metodi  
- Un *metodo* è un'azione che può essere eseguita da un oggetto.  
+
+- [Istruzione Property](../../../visual-basic/language-reference/statements/property-statement.md)
+- [Istruzione Get](../../../visual-basic/language-reference/statements/get-statement.md)
+- [Istruzione Set](../../../visual-basic/language-reference/statements/set-statement.md)
+- [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)
+- [WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md)
+
+#### <a name="methods"></a>Metodi
+
+ Un *metodo* è un'azione che può essere eseguita da un oggetto.
 
 > [!NOTE]
->  In Visual Basic, è possibile creare un metodo in due modi: se il metodo non restituisce un valore, viene utilizzata l'istruzione `Sub`, se invece un metodo restituisce un valore, viene utilizzata l'istruzione `Function`.
+> In Visual Basic, è possibile creare un metodo in due modi: se il metodo non restituisce un valore, viene utilizzata l'istruzione `Sub`, se invece un metodo restituisce un valore, viene utilizzata l'istruzione `Function`.
 
 Per definire un metodo di una classe:
 
@@ -166,19 +150,17 @@ Overloads Sub Display(ByVal theInteger As Integer)
 End Sub
 ```
 
-Nella maggior parte dei casi si dichiara un metodo all'interno di una definizione della classe. Tuttavia, Visual Basic supporta anche *metodi di estensione* che consentono di aggiungere metodi alla classe esistente di fuori della definizione effettiva della classe.
+Nella maggior parte dei casi si dichiara un metodo all'interno di una definizione della classe. Tuttavia, Visual Basic supporta anche *metodi di estensione* che consentono di aggiungere metodi a una classe esistente di fuori della definizione effettiva della classe.
 
 Per altre informazioni, vedere:
 
-- [Istruzione Function](../../../visual-basic/language-reference/statements/function-statement.md)  
+- [Istruzione Function](../../../visual-basic/language-reference/statements/function-statement.md)
+- [Istruzione Sub](../../../visual-basic/language-reference/statements/sub-statement.md)
+- [Overload](../../../visual-basic/language-reference/modifiers/overloads.md)
+- [Metodi di estensione](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)
 
-- [Istruzione Sub](../../../visual-basic/language-reference/statements/sub-statement.md)  
+#### <a name="constructors"></a>Costruttori
 
-- [Overload](../../../visual-basic/language-reference/modifiers/overloads.md)  
-
-- [Metodi di estensione](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)  
-
-#### <a name="constructors"></a>Costruttori  
 I costruttori sono metodi di classe che vengono eseguiti automaticamente durante la creazione di un oggetto di un tipo specifico. I costruttori in genere inizializzano i membri dati del nuovo oggetto. Un costruttore può essere eseguito solo una volta alla creazione di una classe. Inoltre, il codice nel costruttore viene sempre eseguito prima di qualsiasi altro codice in una classe. Tuttavia, è possibile creare più overload del costruttore esattamente come per qualsiasi altro metodo.
 
 Per definire un costruttore per una classe:
@@ -188,28 +170,31 @@ Class SampleClass
     Sub New(ByVal s As String)
         // Add code here.
     End Sub
-End Class 
+End Class
 ```
 
-Per ulteriori informazioni, vedere: [durata degli oggetti: come gli oggetti sono di creare e distruggere](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).
+Per altre informazioni, vedere: [durata degli oggetti: come gli oggetti sono creare ed eliminare definitivamente](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).
 
 #### <a name="destructors"></a>Distruttori
+
 I distruttori sono utilizzati per distruggere istanze di classi. In .NET Framework, il Garbage Collector gestisce l'allocazione e il rilascio di memoria per gli oggetti gestiti di un'applicazione. Potrebbero, tuttavia, essere necessari distruttori per pulire eventuali risorse non gestite create dall'applicazione. Può esistere un solo distruttore per classe.
 
 Per altre informazioni sui distruttori e sull'operazione di Garbage Collection in .NET Framework, vedere [Garbage Collection](../../../standard/garbage-collection/index.md).
 
 #### <a name="events"></a>Eventi
+
 Tramite gli eventi una classe o un oggetto sono in grado di segnalare ad altre classi o oggetti una situazione di interesse. La classe che invia o genera l'evento è chiamata *editore* e le classi che ricevono o gestiscono l'evento sono chiamate *sottoscrittori*. Per altre informazioni sugli eventi e sulla loro generazione e gestione, vedere [Eventi](../../../standard/events/index.md).
 
-- Per dichiarare gli eventi, utilizzare il [istruzione Event](../../../visual-basic/language-reference/statements/event-statement.md).
+- Per dichiarare gli eventi, usare il [istruzione Event](../../../visual-basic/language-reference/statements/event-statement.md).
 
-- Per generare eventi, utilizzare il [istruzione RaiseEvent](../../../visual-basic/language-reference/statements/raiseevent-statement.md).
+- Per generare gli eventi, usare il [istruzione RaiseEvent](../../../visual-basic/language-reference/statements/raiseevent-statement.md).
 
-- Per specificare i gestori eventi utilizzando una modalità dichiarativa, utilizzare il [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md) istruzione e [gestisce](../../../visual-basic/language-reference/statements/handles-clause.md) clausola.
+- Per specificare i gestori di eventi tramite una modalità dichiarativa, usare il [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md) istruzione e il [gestisce](../../../visual-basic/language-reference/statements/handles-clause.md) clausola.
 
-- Per essere in grado di aggiungere, rimuovere e modificare il gestore dell'evento associato a un evento, utilizzare il [istruzione AddHandler](../../../visual-basic/language-reference/statements/addhandler-statement.md) e [istruzione RemoveHandler](../../../visual-basic/language-reference/statements/removehandler-statement.md) insieme il [AddressOf Operatore](../../../visual-basic/language-reference/operators/addressof-operator.md).
+- Per essere in grado di aggiungere, rimuovere e modificare il gestore di evento associato a un evento in modo dinamico, usare il [istruzione AddHandler](../../../visual-basic/language-reference/statements/addhandler-statement.md) e [istruzione RemoveHandler](../../../visual-basic/language-reference/statements/removehandler-statement.md) assieme i [AddressOf Operatore](../../../visual-basic/language-reference/operators/addressof-operator.md).
 
-#### <a name="nested-classes"></a>Classi annidate  
+#### <a name="nested-classes"></a>Classi annidate
+
 Una classe definita all'interno di un'altra classe è denominata *annidata*. Per impostazione predefinita, la classe annidata è privata.
 
 ```vb
@@ -226,7 +211,8 @@ Per creare un'istanza della classe annidata, utilizzare il nome della classe dei
 Dim nestedInstance As Container.Nested = New Container.Nested()
 ```
 
-### <a name="access-modifiers-and-access-levels"></a>Modificatori di accesso e livelli di accesso  
+### <a name="access-modifiers-and-access-levels"></a>Modificatori di accesso e livelli di accesso
+
 Tutte le classi e i membri della classe possono specificare il livello di accesso offerto alle altre classi usando i *modificatori di accesso*.
 
 Sono disponibili i seguenti modificatori di accesso:
@@ -239,9 +225,10 @@ Sono disponibili i seguenti modificatori di accesso:
 |[Friend](../../../visual-basic/language-reference/modifiers/friend.md)|Il tipo o il membro è accessibile dal codice nello stesso assembly ma non da un altro assembly.|
 |`Protected Friend`|Il tipo o il membro è accessibile dal codice nello stesso assembly o da una classe derivata in un altro assembly.|
 
-Per ulteriori informazioni, vedere [accedere livelli in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
+Per altre informazioni, vedere [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
 
-### <a name="instantiating-classes"></a>Istanze di classi  
+### <a name="instantiating-classes"></a>Istanze di classi
+
 Per creare un oggetto, è necessario creare un'istanza di una classe.
 
 ```vb
@@ -267,35 +254,35 @@ Dim sampleObject = New SampleClass With
 Per altre informazioni, vedere:
 
 - [Operatore New](../../../visual-basic/language-reference/operators/new-operator.md)
-
 - [Inizializzatori di oggetto: tipi denominati e tipi anonimi](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
 
-###  <a name="Static"></a> Classi condivise e i membri  
- Un membro condiviso della classe è una proprietà, routine o campo condiviso da tutte le istanze di una classe.  
-  
- Per definire un membro condiviso:  
-  
-```vb  
-Class SampleClass  
-    Public Shared SampleString As String = "Sample String"  
-End Class  
-```  
-  
- Per accedere al membro condiviso, utilizzare il nome della classe senza creare un oggetto di questa classe:  
-  
-```vb  
-MsgBox(SampleClass.SampleString)  
-```  
-  
- I moduli condivisi in Visual Basic condividono solo i membri e non possono essere creata un'istanza. Membri condivisi non possono accedere inoltre non condivisi di proprietà, campi o metodi  
-  
- Per altre informazioni, vedere:  
-  
--   [Shared](../../../visual-basic/language-reference/modifiers/shared.md)  
-  
--   [Istruzione Module](../../../visual-basic/language-reference/statements/module-statement.md)  
-  
-### <a name="anonymous-types"></a>Tipi anonimi  
+### <a name="shared-classes-and-members"></a>I membri e classi condivise
+
+ Un membro condiviso della classe è una proprietà, routine o campo condiviso da tutte le istanze di una classe.
+
+ Per definire un membro condiviso:
+
+```vb
+Class SampleClass
+    Public Shared SampleString As String = "Sample String"
+End Class
+```
+
+ Per accedere al membro condiviso, usare il nome della classe senza creare un oggetto di questa classe:
+
+```vb
+MsgBox(SampleClass.SampleString)
+```
+
+ I moduli condivisi in Visual Basic sono condivisi solo i membri e non è possibile creare un'istanza. Non è possibile accedere anche membri condivisi non condivisi di proprietà, campi o metodi
+
+ Per altre informazioni, vedere:
+
+- [Shared](../../../visual-basic/language-reference/modifiers/shared.md)
+- [Istruzione Module](../../../visual-basic/language-reference/statements/module-statement.md)
+
+### <a name="anonymous-types"></a>Tipi anonimi
+
 I tipi anonimi consentono di creare oggetti senza scrivere una definizione della classe per il tipo di dati. La classe viene generata direttamente dal compilatore. La classe non ha un nome utilizzabile e contiene le proprietà specificate nella dichiarazione dell'oggetto.
 
 Per creare un'istanza di un tipo anonimo:
@@ -309,10 +296,11 @@ Dim sampleObject =
 Per altre informazioni, vedere [Tipi anonimi](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).
 
 ## <a name="inheritance"></a>Ereditarietà
-L'ereditarietà permette di creare una nuova classe che riutilizza, estende e modifica il comportamento definito in un'altra classe. La classe i cui membri vengono ereditati è denominata *classe base*, mentre la classe che eredita i membri è denominata *classe derivata*. Tuttavia, tutte le classi in Visual Basic ereditano in modo implicito dalla <xref:System.Object> classe che supporta la gerarchia di classi .NET e fornisce servizi di basso livello per tutte le classi.
+
+L'ereditarietà permette di creare una nuova classe che riutilizza, estende e modifica il comportamento definito in un'altra classe. La classe i cui membri vengono ereditati è denominata *classe base*, mentre la classe che eredita i membri è denominata *classe derivata*. Tuttavia, tutte le classi in Visual Basic ereditano in modo implicito dal <xref:System.Object> classe che supporta la gerarchia di classi .NET e fornisce servizi di basso livello a tutte le classi.
 
 > [!NOTE]
->  Visual Basic non supporta l'ereditarietà multipla. Vale a dire, è possibile specificare una sola classe base per una classe derivata.
+> Visual Basic non supporta l'ereditarietà multipla. Vale a dire, è possibile specificare una sola classe base per una classe derivata.
 
 Per ereditare da una classe base:
 
@@ -341,12 +329,11 @@ End Class
 Per altre informazioni, vedere:
 
 - [Istruzione Inherits](../../../visual-basic/language-reference/statements/inherits-statement.md)
-
 - [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)
-
 - [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)
 
 ### <a name="overriding-members"></a>Override di membri
+
 Per impostazione predefinita, in una classe derivata vengono ereditati tutti i membri della classe base relativa. Se si desidera modificare il comportamento del membro ereditato, è necessario eseguirne l'override. È possibile definire una nuova implementazione del metodo, della proprietà o dell'evento nella classe derivata.
 
 I seguenti modificatori consentono di controllare le modalità di override di proprietà e metodi:
@@ -360,6 +347,7 @@ I seguenti modificatori consentono di controllare le modalità di override di pr
 |[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)|Nasconde un membro ereditato da una classe base.|
 
 ## <a name="interfaces"></a>Interfacce
+
 Le interfacce, come le classi, consentono di definire un insieme di proprietà, metodi ed eventi. A differenza delle classi, però, le interfacce non forniscono l'implementazione. Esse sono infatti implementate dalle classi e definite come entità distinte da queste. Un'interfaccia rappresenta un contratto, in quanto è necessario che una classe che implementa un'interfaccia implementi ogni aspetto esattamente come è stato definito.
 
 Per definire un'interfaccia:
@@ -383,14 +371,13 @@ End Class
 
 Per altre informazioni, vedere:
 
-- [Interfacce](../../../visual-basic/programming-guide/language-features/interfaces/index.md)  
-
-- [Istruzione Interface](../../../visual-basic/language-reference/statements/interface-statement.md)  
-
-- [Istruzione Implements](../../../visual-basic/language-reference/statements/implements-statement.md)  
+- [Interfacce](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+- [Istruzione Interface](../../../visual-basic/language-reference/statements/interface-statement.md)
+- [Istruzione Implements](../../../visual-basic/language-reference/statements/implements-statement.md)
 
 ## <a name="generics"></a>Generics
-Classi, strutture, interfacce e metodi in .NET possono includere *parametri di tipo* che definiscono i tipi di oggetti che possono archiviare o utilizzare. L'esempio più comune di generics è una raccolta, dove è possibile specificare il tipo di oggetti da archiviare in una raccolta.  
+
+Possono includere classi, strutture, interfacce e metodi in .NET *parametri di tipo* che definiscono i tipi di oggetti che possono archiviare o usare. L'esempio più comune di generics è una raccolta, dove è possibile specificare il tipo di oggetti da archiviare in una raccolta.
 
 Per definire una classe generica:
 
@@ -409,15 +396,15 @@ sampleObject.Field = "Sample string"
 
 Per altre informazioni, vedere:
 
-- [Generics](~/docs/standard/generics/index.md)
-
-- [Tipi generici in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Generics](../../../standard/generics/index.md)
+- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 
 ## <a name="delegates"></a>Delegati
+
  Un *delegato* è un tipo che definisce una firma di metodo e può offrire un riferimento a qualsiasi metodo con una firma compatibile. Tramite il delegato è possibile invocare (o chiamare) il metodo. I delegati vengono utilizzati per passare metodi come argomenti ad altri metodi.
 
 > [!NOTE]
->  I gestori di evento non sono altro che metodi richiamati tramite delegati. Per altre informazioni sull'uso dei delegati nella gestione degli eventi, vedere [Eventi](../../../standard/events/index.md).
+> I gestori di evento non sono altro che metodi richiamati tramite delegati. Per altre informazioni sull'uso dei delegati nella gestione degli eventi, vedere [Eventi](../../../standard/events/index.md).
 
 Per creare un delegato:
 
@@ -444,10 +431,9 @@ End Class
 Per altre informazioni, vedere:
 
 - [Delegati](../../../visual-basic/programming-guide/language-features/delegates/index.md)
-
 - [Istruzione Delegate](../../../visual-basic/language-reference/statements/delegate-statement.md)
-
 - [Operatore AddressOf](../../../visual-basic/language-reference/operators/addressof-operator.md)
 
 ## <a name="see-also"></a>Vedere anche
- [Guida per programmatori Visual Basic](../../../visual-basic/programming-guide/index.md)
+
+- [Guida per programmatori Visual Basic](../../../visual-basic/programming-guide/index.md)

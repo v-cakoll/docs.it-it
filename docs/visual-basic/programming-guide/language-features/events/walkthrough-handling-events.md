@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WithEvents keyword [Visual Basic], walkthroughs
 - event handlers [Visual Basic], walkthroughs
 ms.assetid: f145b3fc-5ae0-4509-a2aa-1ff6934706bd
-ms.openlocfilehash: 35680c7476f48ca11ac4ddeda208c46c6b36c724
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: fe797885a9063a19efc3f35da9cdf62d7f271693
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44191996"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297166"
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a>Procedura dettagliata: gestione di eventi (Visual Basic)
 Questo è il secondo di due argomenti che illustrano come usare gli eventi. Il primo argomento, [procedura dettagliata: dichiarazione e generazione di eventi](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md), viene illustrato come dichiarare e generare eventi. Questa sezione Usa il form e classi da tale procedura dettagliata descrive come gestire gli eventi quando si verificano.  
@@ -45,7 +45,7 @@ Questo è il secondo di due argomenti che illustrano come usare gli eventi. Il p
     > [!NOTE]
     >  Il **Editor di codice** è utile, ma non obbligatorio per l'inserimento di nuovi gestori di eventi. In questa procedura dettagliata, è più diretto per copiare solo i gestori di eventi direttamente nel codice.  
   
-3.  Aggiungere il codice seguente al gestore eventi `mWidget_PercentDone`:  
+3.  Aggiungere il codice seguente al gestore eventi `mWidget_PercentDone` :  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#5](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_2.vb)]  
   
@@ -76,7 +76,7 @@ Questo è il secondo di due argomenti che illustrano come usare gli eventi. Il p
   
 #### <a name="to-call-the-longtask-method"></a>Per chiamare il metodo di LongTask  
   
--   Aggiungere il codice seguente al gestore eventi `Button1_Click`:  
+-   Aggiungere il codice seguente al gestore eventi `Button1_Click` :  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#8](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_5.vb)]  
   
@@ -95,7 +95,7 @@ Questo è il secondo di due argomenti che illustrano come usare gli eventi. Il p
 3.  Scegliere il **annullare** pulsante per arrestare l'attività. Si noti che l'aspetto del **annullare** pulsante non influisce immediatamente quando si fa clic. Il `Click` evento non può essere eseguita finché il `My.Application.DoEvents` istruzione consente l'elaborazione di eventi.  
   
     > [!NOTE]
-    >  Il `My.Application.DoEvents` metodo non elabora gli eventi in esattamente allo stesso modo del form. Ad esempio, in questa procedura dettagliata, è necessario fare clic il **annullare** due volte sul pulsante. Per consentire al modulo gestire gli eventi direttamente, è possibile utilizzare il multithreading. Per altre informazioni, vedere [Threading](../../../../visual-basic/programming-guide/concepts/threading/index.md).
+    >  Il `My.Application.DoEvents` metodo non elabora gli eventi in esattamente allo stesso modo del form. Ad esempio, in questa procedura dettagliata, è necessario fare clic il **annullare** due volte sul pulsante. Per consentire al modulo gestire gli eventi direttamente, è possibile utilizzare il multithreading. Per altre informazioni, vedere [Managed Threading](../../../../standard/threading/index.md).
   
  Può risultare interessante eseguire il programma con F11 e scorrere il codice una riga alla volta. Si può vedere chiaramente come l'esecuzione entra `LongTask`e quindi reimmesso `Form1` ogni volta che il `PercentDone` viene generato l'evento.  
   
