@@ -1,6 +1,6 @@
 ---
 title: Backtracking nelle espressioni regolari
-ms.date: 03/30/2017
+ms.date: 11/12/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 043b4ab00699062d8c1af5866fbeb3773c8ce9af
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 343249f5411d4e5c2335446e7c892b989c8033f2
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44039501"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297361"
 ---
 # <a name="backtracking-in-regular-expressions"></a>Backtracking nelle espressioni regolari
 <a name="top"></a> Il backtracking si verifica quando un modello di espressione regolare contiene [quantificatori](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) facoltativi o [costrutti di alternanza](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)e il motore delle espressioni regolari torna a uno stato salvato in precedenza per continuare la ricerca di una corrispondenza. Il backtracking è fondamentale per la potenza delle espressioni regolari. Consente alle espressioni di essere potenti e flessibili e di cercare una corrispondenza di modelli molto complessi. Questa tecnica presenta tuttavia anche alcuni svantaggi. Il backtracking spesso è il fattore più importante che influisce sulle prestazioni del motore delle espressioni regolari. Fortunatamente, lo sviluppatore è in grado di controllare il comportamento del motore delle espressioni regolari e il modo in cui viene utilizzato il backtracking. In questo argomento viene illustrato il funzionamento del backtracking e il modo in cui può essere controllato.  
@@ -99,7 +99,7 @@ ms.locfileid: "44039501"
   
 -   Confronta la "s" nel modello con la "s" che segue il carattere "e" corrispondente (la prima "s" in "expressions"). La corrispondenza ha esito positivo.  
   
- Quando si utilizza il backtracking, la ricerca di una corrispondenza tra il modello di espressione regolare e la stringa di input, con una lunghezza pari a 55 caratteri, richiede 67 operazioni di confronto. È interessante notare che se nel modello di espressione regolare venisse incluso un quantificatore lazy, .`*?(es)`, la ricerca di una corrispondenza dell'espressione regolare richiederebbe ulteriori confronti. In questo caso, anziché eseguire il backtracking dalla fine della stringa fino alla "r" in "expressions", il motore delle espressioni regolari dovrà eseguire il backtracking fino all'inizio della stringa per trovare una corrispondenza di "Es" richiedendo 113 confronti. In genere, se un modello di espressione regolare include un singolo costrutto di alternanza o un singolo quantificatore facoltativo, il numero di operazioni di confronto necessarie per trovare una corrispondenza del modello è più del doppio rispetto al numero di caratteri della stringa di input.  
+ Quando si utilizza il backtracking, la ricerca di una corrispondenza tra il modello di espressione regolare e la stringa di input, con una lunghezza pari a 55 caratteri, richiede 67 operazioni di confronto. In genere, se un modello di espressione regolare include un singolo costrutto di alternanza o un singolo quantificatore facoltativo, il numero di operazioni di confronto necessarie per trovare una corrispondenza del modello è più del doppio rispetto al numero di caratteri della stringa di input.  
   
  [Torna all'inizio](#top)  
   
@@ -176,7 +176,7 @@ ms.locfileid: "44039501"
 |Modello|Descrizione|  
 |-------------|-----------------|  
 |`^`|Inizia la ricerca della corrispondenza all'inizio della stringa.|  
-|`[0-9A-Z]`|Trova la corrispondenza di un carattere alfanumerico. Poiché il metodo <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> viene richiamato con l'opzione <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>, il confronto non rileva la distinzione tra maiuscole e minuscole.|  
+|`[0-9A-Z]`|Trova la corrispondenza di un carattere alfanumerico. Poiché il metodo <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> viene richiamato con l'opzione <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> , il confronto non rileva la distinzione tra maiuscole e minuscole.|  
 |`[-.\w]*`|Trova la corrispondenza di zero o più occorrenze di un trattino, un punto o un carattere alfanumerico.|  
 |`(?<=[0-9A-Z])`|Esegue la ricerca dell'ultimo carattere corrispondente e continua la ricerca della corrispondenza se si tratta di un carattere alfanumerico. Si noti che i caratteri alfanumerici sono un subset del set costituito da punti, trattini e tutti i caratteri alfanumerici.|  
 |`@`|Trova la corrispondenza di una chiocciola ("\@").|  
@@ -187,7 +187,7 @@ ms.locfileid: "44039501"
   
  `(?=` *sottoespressione* `)` è un'asserzione lookahead positiva, ovvero il carattere o i caratteri dopo la posizione corrente devono corrispondere a *sottoespressione*. `(?!`*sottoespressione*`)` è un'asserzione lookahead negativa, ovvero il carattere o i caratteri dopo la posizione corrente non devono corrispondere a *sottoespressione*. Le asserzioni lookahead positive e negative sono entrambe particolarmente utili quando *sottoespressione* è un subset della sottoespressione successiva.  
   
- Nell'esempio seguente vengono utilizzati due modelli di espressione regolare equivalenti per verificare un nome di tipo completo. Il primo modello è soggetto a una riduzione delle prestazioni a causa di un utilizzo eccessivo del backtracking. Il secondo modello modifica la prima espressione regolare sostituendo un quantificatore annidato con un'asserzione lookahead positiva. Nell'output dell'esempio viene visualizzato il tempo di esecuzione del metodo <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType>.  
+ Nell'esempio seguente vengono utilizzati due modelli di espressione regolare equivalenti per verificare un nome di tipo completo. Il primo modello è soggetto a una riduzione delle prestazioni a causa di un utilizzo eccessivo del backtracking. Il secondo modello modifica la prima espressione regolare sostituendo un quantificatore annidato con un'asserzione lookahead positiva. Nell'output dell'esempio viene visualizzato il tempo di esecuzione del metodo <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> .  
   
  [!code-csharp[Conceptual.RegularExpressions.Backtracking#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/cs/backtracking6.cs#6)]
  [!code-vb[Conceptual.RegularExpressions.Backtracking#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/vb/backtracking6.vb#6)]  
@@ -197,7 +197,7 @@ ms.locfileid: "44039501"
 |Modello|Descrizione|  
 |-------------|-----------------|  
 |`^`|Inizia la ricerca della corrispondenza all'inizio della stringa.|  
-|`([A-Z]\w*)+\.`|Trova la corrispondenza di un carattere alfabetico (A-Z) seguito da zero o più caratteri alfanumerici una o più volte seguiti da un punto. Poiché il metodo <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> viene richiamato con l'opzione <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>, il confronto non rileva la distinzione tra maiuscole e minuscole.|  
+|`([A-Z]\w*)+\.`|Trova la corrispondenza di un carattere alfabetico (A-Z) seguito da zero o più caratteri alfanumerici una o più volte seguiti da un punto. Poiché il metodo <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> viene richiamato con l'opzione <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> , il confronto non rileva la distinzione tra maiuscole e minuscole.|  
 |`(([A-Z]\w*)+\.)*`|Trova la corrispondenza del modello precedente zero o più volte.|  
 |`[A-Z]\w*`|Trova la corrispondenza di un carattere alfabetico seguito da zero o più caratteri alfanumerici.|  
 |`$`|Termina la ricerca della corrispondenza alla fine della stringa di input.|  
@@ -207,7 +207,7 @@ ms.locfileid: "44039501"
 |Modello|Descrizione|  
 |-------------|-----------------|  
 |`^`|Inizia la ricerca della corrispondenza all'inizio della stringa.|  
-|`(?=[A-Z])`|Esegue la ricerca fino primo carattere e continua la ricerca della corrispondenza se si tratta di un carattere alfabetico (A-Z). Poiché il metodo <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> viene richiamato con l'opzione <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>, il confronto non rileva la distinzione tra maiuscole e minuscole.|  
+|`(?=[A-Z])`|Esegue la ricerca fino primo carattere e continua la ricerca della corrispondenza se si tratta di un carattere alfabetico (A-Z). Poiché il metodo <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> viene richiamato con l'opzione <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> , il confronto non rileva la distinzione tra maiuscole e minuscole.|  
 |`\w+\.`|Trova la corrispondenza di uno o più caratteri alfanumerici seguiti da un punto.|  
 |`((?=[A-Z])\w+\.)*`|Trova la corrispondenza del modello di uno o più caratteri alfanumerici seguiti da un punto zero o più volte. Il carattere alfanumerico iniziale deve essere alfabetico.|  
 |`[A-Z]\w*`|Trova la corrispondenza di un carattere alfabetico seguito da zero o più caratteri alfanumerici.|  
@@ -221,4 +221,4 @@ ms.locfileid: "44039501"
 - [Linguaggio di espressioni regolari - Riferimento rapido](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
 - [Quantificatori](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)  
 - [Costrutti di alternanza](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)  
-- [Costrutti di raggruppamento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)
+- [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)

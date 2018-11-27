@@ -2,12 +2,12 @@
 title: Concetti di programmazione (C#)
 ms.date: 07/20/2015
 ms.assetid: 3227afd5-4794-484b-b83b-0f1f94a0476b
-ms.openlocfilehash: f71e05e05e3d027b6190142e8062ea3caf95edb7
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 216b23a30e8b1d58777fbccbf2956ae91534951b
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45615924"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296568"
 ---
 # <a name="programming-concepts-c"></a>Concetti di programmazione (C#)
 Questa sezione illustra i concetti della programmazione in linguaggio C#.  
@@ -28,7 +28,6 @@ Questa sezione illustra i concetti della programmazione in linguaggio C#.
 |[Programmazione orientata a oggetti (C#)](../../../csharp/programming-guide/concepts/object-oriented-programming.md)|Vengono descritti concetti comuni della programmazione orientata a oggetti, inclusi incapsulamento, ereditarietà e polimorfismo.|  
 |[Reflection (C#)](../../../csharp/programming-guide/concepts/reflection.md)|Viene illustrato in che modo è possibile usare la reflection per creare dinamicamente un'istanza di un tipo, associare il tipo a un oggetto esistente oppure ottenere il tipo da un oggetto esistente e richiamarne i metodi o accedere ai relativi campi e proprietà.|  
 |[Serializzazione (C#)](../../../csharp/programming-guide/concepts/serialization/index.md)|Vengono descritti i concetti chiave della serializzazione binaria, XML e SOAP.|  
-|[Threading (C#)](../../../csharp/programming-guide/concepts/threading/index.md)|Viene offerta una panoramica del modello di threading di .NET e viene illustrato come scrivere codice in grado di eseguire più attività contemporaneamente per migliorare le prestazioni e la velocità di risposta delle applicazioni.|  
   
 ## <a name="related-sections"></a>Sezioni correlate  
   
