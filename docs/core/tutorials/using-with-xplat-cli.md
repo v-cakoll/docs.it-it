@@ -5,12 +5,12 @@ author: cartermp
 ms.author: mairaw
 ms.date: 09/10/2018
 ms.technology: dotnet-cli
-ms.openlocfilehash: b31a0324c0d762e9898c681cc6581b3860d41f89
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 89839596509e1ffabd28b8903600a431b5a0ed9c
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48025571"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296802"
 ---
 # <a name="getting-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>Introduzione all'uso di .NET Core su Windows/Linux/macOS dalla riga di comando
 
@@ -47,7 +47,7 @@ Ecco una descrizione rapida dei comandi digitati:
    Il file di progetto specifica tutti gli elementi necessari per recuperare le dipendenze e compilare il programma.
 
    * Il tag `OutputType` specifica che si sta compilando un file eseguibile, ovvero un'applicazione console.
-   * Il tag `TargetFramework` specifica l'implementazione di .NET di destinazione. In uno scenario avanzato è possibile specificare più framework di destinazione ed eseguire la compilazione per ognuno di essi in un'unica operazione. In questa esercitazione verrà illustrata la procedura di compilazione solo per .NET Core 1.0.
+   * Il tag `TargetFramework` specifica l'implementazione di .NET di destinazione. In uno scenario avanzato è possibile specificare più framework di destinazione ed eseguire la compilazione per ognuno di essi in un'unica operazione. In questa esercitazione verrà illustrata la procedura di compilazione solo per .NET Core 2.1.
 
    `Program.cs`:
 

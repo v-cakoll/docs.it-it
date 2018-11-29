@@ -11,12 +11,12 @@ metadata:
   displayType: two-column
   interactive: csharp
   ms.custom: mvc
-  ms.openlocfilehash: d9992c65b2f5f0f73af9f3234ac389b1c8647337
-  ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+  ms.openlocfilehash: 7d6029e48c67259dc2fb28151196223f2490962f
+  ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
   ms.translationtype: HT
   ms.contentlocale: it-IT
-  ms.lasthandoff: 10/28/2018
-  ms.locfileid: "50200178"
+  ms.lasthandoff: 11/26/2018
+  ms.locfileid: "52297049"
 items:
 - durationInMinutes: 1
   content: >
@@ -98,10 +98,4 @@ items:
     > [!NOTE]
 
     > Questa esperienza di scrittura del codice online è in modalità di anteprima. Se si verificano problemi, segnalarli [nel repository dotnet/try](https://github.com/dotnet/try/issues).
-- content: >-
-    È stata completata l'esercitazione introduttiva "Hello C#".
-
-
-    Altre informazioni sull'uso del tipo `string` sono disponibili nell'argomento della [Guida per programmatori C#](../../programming-guide/index.md) dedicato alle [stringhe](../../programming-guide/strings/index.md).
-
-    [Suggerimenti pratici per l'utilizzo delle stringhe](../../how-to/index.md#working-with-strings).
+- content: "È stata completata l'esercitazione introduttiva \"Hello C#\". Fare clic sul collegamento **Numeri in C#** qui sotto per avviare la prossima esercitazione interattiva oppure visitare il [sito di .NET](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial) per scaricare .NET Core SDK, creare un progetto nel proprio computer e continuare a scrivere codice. Il passaggio \"Per continuare ad apprendere\" consente di tornare a queste esercitazioni.\n\nAltre informazioni sul tipo `string`:\n- Argomento della [Guida per programmatori C#](../../programming-guide/index.md) relativo alle [stringhe](../../programming-guide/strings/index.md). \n- [Suggerimenti pratici per l'utilizzo delle stringhe](../../how-to/index.md#working-with-strings)."

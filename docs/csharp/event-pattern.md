@@ -3,12 +3,12 @@ title: Schemi di eventi .NET standard
 description: Informazioni sugli schemi di eventi .NET standard e su come creare origini eventi standard e sottoscrivere ed elaborare gli eventi standard nel codice.
 ms.date: 06/20/2016
 ms.assetid: 8a3133d6-4ef2-46f9-9c8d-a8ea8898e4c9
-ms.openlocfilehash: 0b10c440f4d05533032aa94819ec879f6a1ca2a4
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 16a091dabe34a064ab3ee65a6d9f3e0ab36f1db4
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266769"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297036"
 ---
 # <a name="standard-net-event-patterns"></a>Schemi di eventi .NET standard
 
@@ -117,7 +117,7 @@ EventHandler<FileFoundArgs> onFileFound = (sender, eventArgs) =>
 
 ## <a name="adding-another-event-declaration"></a>Aggiunta di un'altra dichiarazione di evento
 
-Aggiungeremo ora un'altra funzionalità e dimostreremo altri idiomi del linguaggio per gli eventi. Aggiungiamo un overload del metodo `Search()` che attraversa tutte le sottodirectory alla ricerca dei file.
+Aggiungeremo ora un'altra funzionalità e dimostreremo altri idiomi del linguaggio per gli eventi. Aggiungiamo un overload del metodo `Search` che attraversa tutte le sottodirectory alla ricerca dei file.
 
 L'operazione potrebbe rivelarsi piuttosto lunga in una directory con molte sottodirectory. Aggiungiamo un evento che viene generato quando inizia la ricerca in una nuova directory. Questo consente ai sottoscrittori di tenere traccia dell'avanzamento e di aggiornare l'utente sullo stato dell'avanzamento. Tutti gli esempi creati finora sono pubblici. Rendiamo questo evento interno. Ciò significa che è possibile rendere interni anche i tipi utilizzati per gli argomenti.
 
@@ -133,7 +133,7 @@ Ora definire l'evento. Questa volta si userà una sintassi diversa. Oltre a usar
 
 Il codice che si scrive qui rispecchia per molti aspetti quello generato dal compilatore per le definizioni di evento di campo viste in precedenza. Si crea l'evento usando una sintassi molto simile a quella impiegata per le [proprietà](properties.md). Si noti che i gestori hanno nomi diversi: `add` e `remove`. Questi vengono chiamati per attivare la sottoscrizione all'evento o annullarla. Si noti che è necessario anche dichiarare un campo di backup privato per archiviare la variabile di evento. Viene inizializzata su null.
 
-Quindi aggiungiamo l'overload del metodo Search() che attraversa le sottodirectory e genera entrambi gli eventi. Il modo più semplice per eseguire questa operazione è usare un argomento predefinito per specificare che si desidera cercare in tutte le directory:
+Quindi, si aggiunge l'overload del metodo `Search` che attraversa le sottodirectory e genera entrambi gli eventi. Il modo più semplice per eseguire questa operazione è usare un argomento predefinito per specificare che si desidera cercare in tutte le directory:
 
 [!code-csharp[SearchImplementation](../../samples/csharp/events/Program.cs#FinalImplementation "Implementation to search directories")]
 

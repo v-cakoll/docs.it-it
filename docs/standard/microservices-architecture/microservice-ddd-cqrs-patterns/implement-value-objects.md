@@ -1,37 +1,37 @@
 ---
 title: Implementazione di oggetti valore
-description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Implementazione di oggetti valore
+description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Informazioni su dettagli e opzioni per implementare oggetti valore con le nuove funzionalità di Entity Framework.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 12/12/2017
-ms.openlocfilehash: 4ba2e48e742e580a1c96743fa89e413c488b8dc7
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 10/08/2018
+ms.openlocfilehash: 057e2e65f975c1de8f332b77c8a23d07329381e6
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106723"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297478"
 ---
-# <a name="implementing-value-objects"></a>Implementazione di oggetti valore
+# <a name="implement-value-objects"></a>Implementare oggetti valore
 
 Come descritto nelle sezioni precedenti relative a entità e aggregazioni, l'identità è un elemento fondamentale per le entità. Tuttavia, esistono numerosi oggetti ed elementi di dati in un sistema che non richiedono un'identità e la verifica dell'identità, ad esempio gli oggetti valore.
 
 Un oggetto valore può fare riferimento ad altre entità. Ad esempio, in un'applicazione che genera una route che descrive come passare da un punto a altro, questa route sarebbe un oggetto valore. Corrisponderebbe a uno snapshot di punti in una route specifica, tuttavia la route suggerita non avrebbe un'identità, anche se internamente potrebbe fare riferimento a entità come City, Road e così via.
 
-La figura 9-13 mostra l'oggetto valore Address all'interno dell'aggregazione Order.
+La figura 7-13 illustra l'oggetto valore Address all'interno dell'aggregazione Order.
 
-![](./media/image14.png)
+![Oggetto valore Address all'interno dell'aggregazione Order.](./media/image14.png)
 
-**Figura 9-13**. Oggetto valore Address all'interno dell'aggregazione Order
+**Figura 7-13**. Oggetto valore Address all'interno dell'aggregazione Order
 
-Come illustrato nella figura 9-13, un'entità è generalmente composta da più attributi. Ad esempio, l'entità `Order` può essere modellata come entità con un'identità, composta internamente da un set di attributi come OrderId, OrderDate, OrderItems e così via. Invece l'indirizzo, che è semplicemente un valore complesso costituito da paese, strada, città e così via, e che non ha un'identità in questo dominio, deve essere modellato e gestito come oggetto valore.
+Come illustrato nella figura 7-13, un'entità è generalmente composta da più attributi. Ad esempio, l'entità `Order` può essere modellata come entità con un'identità, composta internamente da un set di attributi come OrderId, OrderDate, OrderItems e così via. Invece l'indirizzo, che è semplicemente un valore complesso costituito da paese, strada, città e così via, e che non ha un'identità in questo dominio, deve essere modellato e gestito come oggetto valore.
 
 ## <a name="important-characteristics-of-value-objects"></a>Caratteristiche importanti degli oggetti valore
 
 Esistono due caratteristiche principali proprie degli oggetti valore:
 
--   Non hanno identità.
+- Non hanno identità.
 
--   Non sono modificabili.
+- Non sono modificabili.
 
 La prima caratteristica è già stata descritta. L'immutabilità è un requisito importante. Dopo aver creato l'oggetto, i valori di un oggetto valore non devono essere modificabili. Quindi, quando l'oggetto viene costruito, è necessario fornire i valori richiesti, ma non se ne deve consentire la modifica per l'intera durata dell'oggetto.
 
@@ -102,11 +102,11 @@ public abstract class ValueObject
 ```csharp
 public class Address : ValueObject
 {
-    public String Street { get; }
-    public String City { get; }
-    public String State { get; }
-    public String Country { get; }
-    public String ZipCode { get; }
+    public String Street { get; private set; }
+    public String City { get; private set; }
+    public String State { get; private set; }
+    public String Country { get; private set; }
+    public String ZipCode { get; private set; }
 
     private Address() { }
 
@@ -130,6 +130,12 @@ public class Address : ValueObject
     }
 }
 ```
+
+Si può vedere come questa implementazione dell'oggetto valore di Address non abbia alcuna identità, e quindi alcun campo ID, né a livello della classe Address, né a livello della classe ValueObject.
+
+L'assenza di un campo ID in una classe usata da Entity Framework non era possibile fino a EF Core 2.0 che consente invece di implementare migliori oggetti valore senza ID. Tutto ciò viene illustrato nella prossima sezione. 
+
+Si potrebbe sostenere che gli oggetti valore, essendo non modificabili, debbano essere di sola lettura (ovvero, proprietà di solo richiamo) e in effetti è vero. Tuttavia, gli oggetti valore vengono in genere serializzati e deserializzati per passare attraverso le code di messaggi e il fatto che siano di sola lettura impedisce al deserializzatore di assegnare valori. Vengono pertanto lasciati come "private set", con proprietà di sola lettura sufficienti a garantirne la praticità.
 
 ## <a name="how-to-persist-value-objects-in-the-database-with-ef-core-20"></a>Come rendere persistenti gli oggetti valore nel database con EF Core 2.0
 
@@ -164,10 +170,9 @@ Anche se ci sono alcune discrepanze tra lo schema dell'oggetto valore canonico i
 
 La funzionalità dei tipi di entità di proprietà è stata aggiunta a EF Core a partire dalla versione 2.0.
 
-Un tipo di entità di proprietà consente di eseguire il mapping dei tipi che non hanno un'identità definita in modo esplicito nel modello di dominio e che vengono usati come proprietà, ad esempio un oggetto valore, all'interno di qualsiasi entità. Un tipo di entità di proprietà condivide lo stesso tipo CLR con un altro tipo di entità. L'entità contenente la navigazione che lo definisce è l'entità del proprietario. Quando si esegue una query sul proprietario, i tipi di proprietà vengono inclusi per impostazione predefinita.
+Un tipo di entità di proprietà consente di eseguire il mapping dei tipi che non hanno un'identità definita in modo esplicito nel modello di dominio e che vengono usati come proprietà, ad esempio un oggetto valore, all'interno di qualsiasi entità. Un tipo di entità di proprietà condivide lo stesso tipo CLR con un altro tipo di entità, ovvero si tratta di una classe normale. L'entità contenente la navigazione che lo definisce è l'entità del proprietario. Quando si esegue una query sul proprietario, i tipi di proprietà vengono inclusi per impostazione predefinita.
 
-Osservando semplicemente il modello di dominio, un tipo di proprietà sembra non avere alcuna identità,
-invece la ha, ma la proprietà di navigazione del proprietario fa parte di questa identità.
+Osservando semplicemente il modello di dominio, un tipo di proprietà sembra non avere alcuna identità, invece la ha, ma la proprietà di navigazione del proprietario fa parte di questa identità.
 
 L'identità delle istanze dei tipi di proprietà non è del tutto esclusiva, ma è costituita da tre componenti:
 
@@ -175,7 +180,7 @@ L'identità delle istanze dei tipi di proprietà non è del tutto esclusiva, ma 
 
 - La proprietà di navigazione che punta alle istanze
 
-- Per le raccolte di tipi di proprietà, un componente indipendente (non ancora supportato in EF Core 2.0).
+- Per le raccolte di tipi di proprietà, un componente indipendente (non ancora supportato in EF Core 2.0, lo sarà nella versione 2.2).
 
 Ad esempio, nel modello di dominio degli ordini in eShopOnContainers, all'interno dell'entità Order, l'oggetto valore Address viene implementato come un tipo di entità di proprietà all'interno dell'entità del proprietario, ovvero l'entità Order. Address è un tipo la cui proprietà identità non è definita nel modello di dominio. Viene usato come proprietà del tipo Order per specificare l'indirizzo di spedizione per uno specifico ordine.
 
@@ -266,64 +271,64 @@ public class Address
 
 ### <a name="additional-details-on-owned-entity-types"></a>Altre informazioni sui tipi di entità di proprietà
 
-• I tipi di proprietà vengono definiti quando si configura una proprietà di navigazione per un particolare tipo usando l'API Fluent OwnsOne.
+- I tipi di proprietà vengono definiti quando si configura una proprietà di navigazione su un tipo particolare usando l'API Fluent OwnsOne.
 
-• La definizione di un tipo di proprietà nel modello di metadati è composta da: tipo di proprietario, proprietà di navigazione e tipo CLR del tipo di proprietà.
+- La definizione di un tipo di proprietà nel modello di metadati è composta da: tipo di proprietario, proprietà di navigazione e tipo CLR del tipo di proprietà.
 
-• L'identità (chiave) di un'istanza del tipo di proprietà in questo stack è composta dall'identità del tipo di proprietario e dalla definizione del tipo di proprietà.
+- L'identità (chiave) di un'istanza del tipo di proprietà in questo stack è composta dall'identità del tipo di proprietario e dalla definizione del tipo di proprietà.
 
 #### <a name="owned-entities-capabilities"></a>Funzionalità delle entità di proprietà:
 
-• Il tipo di proprietà può fare riferimento ad altre entità, sia di proprietà (tipi di proprietà annidati) che non (proprietà di navigazione con normale riferimento ad altre entità).
+- I tipi di proprietà possono fare riferimento ad altre entità, sia di proprietà (tipi di proprietà annidati) che non (proprietà di navigazione con normale riferimento ad altre entità).
 
-• È possibile eseguire il mapping dello stesso tipo CLR come tipi di proprietà diversi nella stessa entità del proprietario usando proprietà di navigazione distinte.
+- È possibile eseguire il mapping dello stesso tipo CLR come tipi di proprietà diversi nella stessa entità del proprietario usando proprietà di navigazione distinte.
 
-• La suddivisione di tabelle è configurata per convenzione, ma è possibile rifiutare esplicitamente eseguendo il mapping del tipo di proprietà in una tabella diversa usando ToTable.
+- La suddivisione di tabelle è configurata per convenzione, ma è possibile rifiutare esplicitamente eseguendo il mapping del tipo di proprietà in una tabella diversa usando ToTable.
 
-• Il caricamento eager viene eseguito automaticamente sui tipi di proprietà, ad esempio non è necessario chiamare include () per la query.
+- Il caricamento eager viene eseguito automaticamente sui tipi di proprietà, ovvero non è necessario chiamare Include() nella query.
+
+- Possono essere configurate con l'attributo \[Owned\], a partire da EF Core 2.1
 
 #### <a name="owned-entities-limitations"></a>Limitazioni delle entità di proprietà:
 
-• Non è possibile creare un elemento DbSet<T> di un tipo di proprietà (per impostazione predefinita).
+- Non è possibile creare un elemento DbSet\<T\> di un tipo di proprietà (per impostazione predefinita).
 
-• Non è possibile chiamare ModelBuilder.Entity<T>() nei tipi di proprietà (attualmente per impostazione predefinita).
+- Non è possibile chiamare ModelBuilder.Entity\<T\>() nei tipi di proprietà (attualmente per impostazione predefinita).
 
-• Per ora non sono supportate le raccolte di tipi di proprietà, ma lo saranno nelle versioni dopo EF Core 2.0.
+- Le raccolte di tipi di proprietà non sono ancora supportate (in EF Core 2.1, ma lo saranno nella versione 2.2).
 
-• Nessun supporto per la configurazione con un attributo.
+- Nessun supporto per i tipi di proprietà facoltativi (ovvero, nullable) di cui viene eseguito il mapping con il proprietario nella stessa tabella, ad esempio tramite la suddivisione di tabelle. Ciò è dovuto al fatto che il mapping viene eseguito per ogni proprietà e non è disponibile un valore sentinel separato per l'intero valore complesso Null.
 
-• Nessun supporto per i tipi di proprietà facoltativi (ad esempio nullable) di cui viene eseguito il mapping con il proprietario della tabella stessa, ad esempio con la suddivisione di tabelle. Ciò è dovuto al fatto che non è disponibile un sentinel separato per null.
-
-• Nessun supporto del mapping di ereditarietà per i tipi di proprietà, ma è possibile eseguire il mapping di due tipi di foglia delle stesse gerarchie di ereditarietà come tipi di proprietà diversi. EF Core non considera il fatto che fanno parte della stessa gerarchia.
+- Nessun supporto del mapping di ereditarietà per i tipi di proprietà, ma è possibile eseguire il mapping di due tipi di foglia delle stesse gerarchie di ereditarietà come tipi di proprietà diversi. EF Core non considera il fatto che fanno parte della stessa gerarchia.
 
 #### <a name="main-differences-with-ef6s-complex-types"></a>Principali differenze rispetto ai i tipi complessi di EF6
 
-• La suddivisione di tabelle è facoltativa, ossia si può scegliere di eseguirne in mapping a una tabella separata mantenendo lo stato di tipi di proprietà.
+- La suddivisione di tabelle è facoltativa, ossia si può scegliere di eseguirne il mapping a una tabella separata mantenendo lo stato di tipi di proprietà.
 
-• Possono fare riferimento ad altre entità, ad esempio possono fungere da lato dipendente nelle relazioni con altri tipi non di proprietà.
-
+- Possono fare riferimento ad altre entità, ovvero possono fungere da lato dipendente nelle relazioni con altri tipi non di proprietà.
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
--   **Martin Fowler. Modello ValueObject**
-    [*https://martinfowler.com/bliki/ValueObject.html*](https://martinfowler.com/bliki/ValueObject.html)
+- **Martin Fowler. Modello ValueObject** \
+  [*https://martinfowler.com/bliki/ValueObject.html*](https://martinfowler.com/bliki/ValueObject.html)
 
--   **Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software (Progettazione basata su domini: gestire le complessità nel software).** (Libro. Include una trattazione sugli oggetti valore) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+- **Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software (Progettazione basata su domini: gestire le complessità nel software).** (Libro. Include una trattazione sugli oggetti valore) \
+  [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
--   **Vaughn Vernon. Implementing Domain-Driven Design (Implementazione della progettazione basata su domini).** (Libro. Include una trattazione sugli oggetti valore) [*https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/*](https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/)
+- **Vaughn Vernon. Implementing Domain-Driven Design (Implementazione della progettazione basata su domini).** (Libro. Include una trattazione sugli oggetti valore) \
+  [*https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/*](https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/)
 
--   **Proprietà shadow **
-    [*https://docs.microsoft.com/ef/core/modeling/shadow-properties*](https://docs.microsoft.com/ef/core/modeling/shadow-properties)
+- **Proprietà shadow** \
+  [*https://docs.microsoft.com/ef/core/modeling/shadow-properties*](https://docs.microsoft.com/ef/core/modeling/shadow-properties)
 
--   **Complex types and/or value objects (Tipi complessi e/o oggetti valore)**. Discussione nel repository GitHub di EF Core (scheda Issues) [*https://github.com/aspnet/EntityFramework/issues/246*](https://github.com/aspnet/EntityFramework/issues/246)
+- **Complex types and/or value objects (Tipi complessi e/o oggetti valore)**. Discussione nel repository GitHub di EF Core (scheda Issues) \
+  [*https://github.com/aspnet/EntityFramework/issues/246*](https://github.com/aspnet/EntityFramework/issues/246)
 
--   **ValueObject.cs.** Classe oggetti valore di base in eShopOnContainers.
-    [*https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/ValueObject.cs*](https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/ValueObject.cs)
+- **ValueObject.cs.** Classe oggetti valore di base in eShopOnContainers.**  \
+  [*https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/SeedWork/ValueObject.cs*](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/SeedWork/ValueObject.cs)
 
--   **Address class (Classe di indirizzi).** Classe oggetti valore di esempio in eShopOnContainers.
-    [*https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Address.cs*](https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Address.cs)
-
-
+- **Address class (Classe di indirizzi).** Classe oggetti valore di esempio in eShopOnContainers. \
+  [*https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Address.cs*](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Address.cs)
 
 >[!div class="step-by-step"]
 [Precedente](seedwork-domain-model-base-classes-interfaces.md)

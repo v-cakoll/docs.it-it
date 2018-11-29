@@ -1,15 +1,15 @@
 ---
 title: Architettura logica e architettura fisica
-description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Architettura logica e architettura fisica
+description: Informazioni sulle differenze tra architetture logiche e architetture fisiche.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: bb5f0daf0bcf824d72bb104914de03532bd3f9f7
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.date: 09/20/2018
+ms.openlocfilehash: fe3833a4b65317e2ebbeb562e19b473ff0374ddd
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44213342"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296126"
 ---
 # <a name="logical-architecture-versus-physical-architecture"></a>Architettura logica e architettura fisica
 
@@ -17,7 +17,7 @@ A questo punto, è utile fermarsi per esaminare la distinzione tra architettura 
 
 Per iniziare, la creazione di microservizi non richiede l'uso di alcuna tecnologia specifica. Ad esempio, non è obbligatorio usare contenitori Docker per creare un'architettura basata su microservizi. I microservizi possono anche essere eseguiti come processi normali. I microservizi sono un'architettura logica.
 
-Inoltre, anche quando è possibile implementare un microservizio fisicamente come un singolo servizio, processo o contenitore (per semplicità, questo è l'approccio adottato per la versione iniziale di [eShopOnContainers](https://aka.ms/MicroservicesArchitecture)), questa parità tra microservizi aziendali e contenitori o servizi fisici non è necessariamente richiesta in tutti i casi quando si crea un'applicazione complessa di grandi dimensioni costituita da dozzine o centinaia di servizi.
+Inoltre, anche quando è possibile implementare un microservizio fisicamente come un singolo servizio, processo o contenitore (per semplicità, questo è l'approccio adottato per la versione iniziale di [eShopOnContainers](https://aka.ms/MicroservicesArchitecture)), questa parità tra microservizi aziendali e contenitori o servizi fisici non è necessariamente richiesta in tutti i casi quando si crea un'applicazione complessa di grandi dimensioni costituita da decine o centinaia di servizi.
 
 Qui sta la differenza tra l'architettura logica e l'architettura fisica di un'applicazione. L'architettura logica e i limiti logici di un sistema non presentano necessariamente un mapping di uno-a-uno rispetto all'architettura di distribuzione o fisica. Può verificarsi, ma spesso non accade.
 
@@ -27,14 +27,13 @@ Di conseguenza, un microservizio aziendale o un contesto delimitato è un'archit
 
 Come mostrato nella figura 4-8, il microservizio aziendale del catalogo può essere composto da numerosi servizi o processi. Questi possono essere costituiti da più servizi API Web ASP.NET o da altre tipologie di servizi che usano HTTP o altri protocolli. Inoltre, i servizi possono condividere gli stessi dati, purché siano coesi rispetto allo stesso dominio aziendale.
 
-![](./media/image8.png)
+![Diagramma del microservizio aziendale del catalogo, che contiene un servizio API, un servizio di ricerca e un database di SQL Server.](./media/image8.png)
 
 **Figura 4-8**. Microservizio aziendale con numerosi servizi fisici
 
-I servizi nell'esempio condividono lo stesso modello di dati perché il servizio API Web usa gli stessi dati del servizio di ricerca. Nell'implementazione fisica del microservizio aziendale, si divide questa funzionalità per poter ridimensionare ogni servizio interno in base alle esigenze. Nella maggior parte dei casi il servizio API Web potrebbe richiedere un maggior numero di istanze rispetto al servizio di ricerca o viceversa.
+I servizi nell'esempio condividono lo stesso modello di dati perché il servizio API Web usa gli stessi dati del servizio di ricerca. Quindi, nell'implementazione fisica del microservizio aziendale si divide questa funzionalità per poter ridimensionare ogni servizio interno in base alle esigenze. Nella maggior parte dei casi il servizio API Web potrebbe richiedere un maggior numero di istanze rispetto al servizio di ricerca o viceversa.
 
-In breve, l'architettura logica dei microservizi non deve sempre coincidere con l'architettura di distribuzione fisica. In questa guida ogni volta che viene citato un microservizio si intente un microservizio logico o aziendale che può essere mappato a uno o più servizi. Nella maggior parte dei casi, si tratterà di un singolo servizio, ma potrebbero anche essere più servizi.
-
+In breve, l'architettura logica dei microservizi non deve sempre coincidere con l'architettura di distribuzione fisica. In questa guida ogni volta che viene citato un microservizio si intente un microservizio logico o aziendale che può essere mappato a uno o più servizi (fisici). Nella maggior parte dei casi, si tratterà di un singolo servizio, ma potrebbero anche essere più servizi.
 
 >[!div class="step-by-step"]
 [Precedente](data-sovereignty-per-microservice.md)

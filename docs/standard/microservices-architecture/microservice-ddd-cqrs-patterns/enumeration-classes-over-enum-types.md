@@ -1,78 +1,75 @@
 ---
 title: Uso delle classi di enumerazione anziché dei tipi enum
-description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Uso delle classi di enumerazione anziché dei tipi enum
+description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Informazioni su come è possibile usare le classi di enumerazione anziché i tipi enum per risolvere alcune limitazioni di questi tipi.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 12/11/2017
-ms.openlocfilehash: 60d8c8e88cca19c92f6a1364bf2fbbf0500081c3
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.date: 10/08/2018
+ms.openlocfilehash: 57c4af55bab9b17da5809f912d7c2d0b76eba40b
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195723"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296711"
 ---
-# <a name="using-enumeration-classes-instead-of-enum-types"></a>Uso delle classi di enumerazione anziché dei tipi enum
+# <a name="use-enumeration-classes-instead-of-enum-types"></a>Usare le classi di enumerazione anziché i tipi enum
 
-Le [enumerazioni](../../../../docs/csharp/language-reference/keywords/enum.md) (o *tipi enum*) sono un sottile wrapper del linguaggio per un tipo integrale. È possibile limitarne l'uso quando si archivia un valore da un set di valori chiuso. La classificazione in base alle dimensioni (piccole, medie e grandi) rappresenta un buon esempio. L'uso delle enumerazioni per il flusso di controllo o per astrazioni più potenti può indicare difetti di programmazione noti come [code smell](https://deviq.com/code-smells/). Questo tipo di utilizzo determina un codice fragile con molte istruzioni del flusso di controllo che verificano i valori dell'enumerazione.
+Le [enumerazioni](../../../../docs/csharp/language-reference/keywords/enum.md) (o *tipi enum*) sono un sottile wrapper del linguaggio per un tipo integrale. È possibile limitarne l'uso quando si archivia un valore da un set di valori chiuso. La classificazione in base alle dimensioni (piccole, medie e grandi) rappresenta un buon esempio. L'uso delle enumerazioni per il flusso di controllo o per astrazioni più potenti può indicare difetti di programmazione noti come [code smell](http://deviq.com/code-smells/). Questo tipo di utilizzo determina un codice fragile con molte istruzioni del flusso di controllo che verificano i valori dell'enumerazione.
 
 In alternativa, è possibile creare classi di enumerazione che abilitano tutte le funzionalità avanzate di un linguaggio orientato a oggetti.
 
-Tuttavia, questo non è un argomento strategico e in molti casi, per semplicità è comunque possibile continuare a usare i normali [tipi enum](../../../../docs/csharp/language-reference/keywords/enum.md) se si preferisce.
+Tuttavia, questo non è un argomento strategico e in molti casi, per semplicità è comunque possibile continuare a usare i normali [tipi enum](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/enum) se si preferisce. Comunque, l'uso delle classi di enumerazione è più strettamente correlato a concetti aziendali.
 
-## <a name="implementing-an-enumeration-base-class"></a>Implementazione di una classe di base di enumerazione
+## <a name="implement-an-enumeration-base-class"></a>Implementare una classe di base di enumerazione
 
 Il microservizio degli ordini nell'app eShopOnContainers fornisce un'implementazione della classe di base di enumerazione di esempio, come mostrato di seguito:
 
 ```csharp
 public abstract class Enumeration : IComparable
 {
-    public string Name { get; }
-    public int Id { get; }
+    public string Name { get; private set; }
+
+    public int Id { get; private set; }
 
     protected Enumeration()
+    { }
+
+    protected Enumeration(int id, string name) 
     {
+        Id = id; 
+        Name = name; 
     }
 
-    protected Enumeration(int id, string name)
-    {
-        Id = id;
-        Name = name;
-    }
+    public override string ToString() => Name;
 
-    public override string ToString()
-    {
-        return Name;
-    }
-    
     public static IEnumerable<T> GetAll<T>() where T : Enumeration
     {
-        var fields = typeof(T).GetFields(BindingFlags.Public | BindingFlags.Static | BindingFlags.DeclaredOnly);
+        var fields = typeof(T).GetFields(BindingFlags.Public | 
+                                         BindingFlags.Static | 
+                                         BindingFlags.DeclaredOnly); 
 
         return fields.Select(f => f.GetValue(null)).Cast<T>();
     }
 
-    public override bool Equals(object obj)
+    public override bool Equals(object obj) 
     {
-        var otherValue = obj as Enumeration;
-        if (otherValue == null)
-        {
+        var otherValue = obj as Enumeration; 
+
+        if (otherValue == null) 
             return false;
-        }
+
         var typeMatches = GetType().Equals(obj.GetType());
         var valueMatches = Id.Equals(otherValue.Id);
+
         return typeMatches && valueMatches;
     }
 
-    public int CompareTo(object other)
-    {
-        return Id.CompareTo(((Enumeration)other).Id);
-    }
+    public int CompareTo(object other) => Id.CompareTo(((Enumeration)other).Id); 
 
-    // Other utility methods ...
+    // Other utility methods ... 
 }
 ```
 
-È possibile usare questa classe come un tipo in qualsiasi entità o oggetto valore, come per la classe di enumerazione CardType seguente:
+È possibile usare questa classe come un tipo in qualsiasi entità o oggetto valore, come per la classe `CardType` : `Enumeration` seguente:
 
 ```csharp
 public abstract class CardType : Enumeration
@@ -83,8 +80,7 @@ public abstract class CardType : Enumeration
 
     protected CardType(int id, string name)
         : base(id, name)
-    {
-    }
+    { }
 
     private class AmexCardType : CardType
     {
@@ -108,24 +104,29 @@ public abstract class CardType : Enumeration
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
--   **Enum's are evil—update**
-    [*https://www.planetgeek.ch/2009/07/01/enums-are-evil/*](https://www.planetgeek.ch/2009/07/01/enums-are-evil/) (Gli enum sono il male: aggiornamento)
+- **Enum's are evil—update** \ (Gli enum sono il male: aggiornamento)
+  [*https://www.planetgeek.ch/2009/07/01/enums-are-evil/*](https://www.planetgeek.ch/2009/07/01/enums-are-evil/)
 
--   **Daniel Hardman. How Enums Spread Disease — And How To Cure It**
-    [*https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/*](https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/) (In che modo gli enum diffondono malattie, e come curarle)
+- **Daniel Hardman. How Enums Spread Disease — And How To Cure It** \ (In che modo gli enum diffondono malattie e come curarle)
+  [*https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/*](https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/)
 
--   **Jimmy Bogard. Enumeration classes**
-    [*https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/*](https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/) (Classi di enumerazione)
+- **Jimmy Bogard. Enumeration classes** \ (Classi di enumerazione)
+  [*https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/*](https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/)
 
--   **Steve Smith. Enum Alternatives in C#**
-    [*https://ardalis.com/enum-alternatives-in-c*](https://ardalis.com/enum-alternatives-in-c) (Alternative agli enum in C#)
+- **Steve Smith. Enum Alternatives in C#** \ (Alternative agli enum in C#)
+  [*https://ardalis.com/enum-alternatives-in-c*](https://ardalis.com/enum-alternatives-in-c)
 
--   **Enumeration.cs.** Base Enumeration class in eShopOnContainers [*https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs*](https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs) (Classe di enumerazione di base in eShopOnContainers)
+- **Enumeration.cs.** Base Enumeration class in eShopOnContainers \ (Classe di enumerazione di base in eShopOnContainers)
+  [*https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs*](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs)
 
--   **CardType.cs**. Classe di enumerazione di esempio in eShopOnContainers.
-    [*https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/BuyerAggregate/CardType.cs*](https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/BuyerAggregate/CardType.cs)
+- **CardType.cs**. Classe di enumerazione di esempio in eShopOnContainers. \
+  [*https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/BuyerAggregate/CardType.cs*](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/BuyerAggregate/CardType.cs)
+    
+- **SmartEnum**. Ardalis - Classi che consentono di produrre enum fortemente tipizzati e più intelligenti in .NET. \
+  [*https://www.nuget.org/packages/Ardalis.SmartEnum/*](https://www.nuget.org/packages/Ardalis.SmartEnum/)
 
 
 >[!div class="step-by-step"]
 [Precedente](implement-value-objects.md)
 [Successivo](domain-model-layer-validations.md)
+

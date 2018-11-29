@@ -1,5 +1,5 @@
 ---
-title: Expression Trees
+title: Alberi delle espressioni
 description: Informazioni sugli alberi delle espressioni in .NET Core e su come usarli per rappresentare il codice sotto forma di strutture che è possibile esaminare, modificare ed eseguire.
 ms.date: 06/20/2016
 ms.assetid: aceb4719-0d5a-4b19-b01f-b51063bcc54f
@@ -10,7 +10,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/28/2018
 ms.locfileid: "50190736"
 ---
-# <a name="expression-trees"></a>Expression Trees
+# <a name="expression-trees"></a>Alberi delle espressioni
 
 Se si è usato LINQ, si ha esperienza con una ricca libreria in cui i tipi `Func` fanno parte del set di API. (Se non si ha familiarità con LINQ, è consigliabile prima leggere l'[esercitazione LINQ](linq/index.md) e l'esercitazione sulle [espressioni lambda](lambda-expressions.md).) Gli *alberi delle espressioni* offrono maggiore interazione con gli argomenti che sono funzioni.
 
