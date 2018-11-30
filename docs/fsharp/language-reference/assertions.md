@@ -1,13 +1,13 @@
 ---
 title: Asserzioni (F#)
-description: Informazioni su come usare l'espressione 'assert' come una funzionalità di debug per testare le espressioni nel linguaggio di programmazione F#.
+description: Informazioni su come usare l'espressione 'assert' come una funzionalità di debug per testare le espressioni in di F# linguaggio di programmazione.
 ms.date: 05/16/2016
-ms.openlocfilehash: 85b1e839bfd19bada48b7f1821d15ddd8fa77754
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: fbaf038f08cfc74e6cb262c110322dc586813c0c
+ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48842476"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52671907"
 ---
 # <a name="assertions"></a>Asserzioni
 
@@ -27,10 +27,10 @@ Nella sintassi precedente *condizione* rappresenta un'espressione booleana che d
 
 Il controllo delle asserzioni è abilitato solo quando si esegue la compilazione in modalità Debug. vale a dire, se la costante `DEBUG` è definito. Nel sistema del progetto, per impostazione predefinita, il `DEBUG` costante è definita nella configurazione di Debug ma non nella configurazione di rilascio.
 
-Errore di asserzione non può essere intercettato tramite la gestione delle eccezioni di F#.
+Errore di asserzione non può essere intercettato tramite F# gestione delle eccezioni.
 
->[!NOTE]
-Il `assert` funzione si risolve in <xref:System.Diagnostics.Debug.Assert*?displayProperty=nameWithType>.
+> [!NOTE]
+> Il `assert` funzione si risolve in <xref:System.Diagnostics.Debug.Assert*?displayProperty=nameWithType>.
 
 ## <a name="example"></a>Esempio
 

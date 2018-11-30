@@ -4,12 +4,12 @@ description: La piattaforma senza server di Azure fornisce funzionalità, tra cu
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: bf3196fa9fe51bfe88ac33162fb31a634a240417
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 6149e79f45422be0b4f1ebc719543efd1b0b750c
+ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "49369939"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52672280"
 ---
 # <a name="azure-serverless-platform"></a>Piattaforma senza server di Azure
 
@@ -22,5 +22,5 @@ La piattaforma senza server di Azure include funzioni di Azure, App per la logic
 In questo capitolo suddivide le nozioni di base di ogni componente.
 
 >[!div class="step-by-step"]
-[Precedente](serverless-design-examples.md)
-[Successivo](azure-functions.md)
+>[Precedente](serverless-design-examples.md)
+>[Successivo](azure-functions.md)

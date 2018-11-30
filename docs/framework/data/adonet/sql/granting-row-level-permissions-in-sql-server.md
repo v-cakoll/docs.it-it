@@ -2,12 +2,12 @@
 title: Concessione di autorizzazioni a livello di riga in SQL Server
 ms.date: 03/30/2017
 ms.assetid: a55aaa12-34ab-41cd-9dec-fd255b29258c
-ms.openlocfilehash: 4a4b45e13a16b357be28a1383648e98890567ea9
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 0ec68f013d08e3939d48a820b9fd52ce27a4f12d
+ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43873705"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52671973"
 ---
 # <a name="granting-row-level-permissions-in-sql-server"></a>Concessione di autorizzazioni a livello di riga in SQL Server
 In alcuni scenari è necessario controllare l'accesso a un livello caratterizzato da una maggior granularità rispetto a quanto consentito dalla semplice concessione, revoca o negazione delle autorizzazioni sui dati. Ad esempio, in un'applicazione di database usata in un ospedale potrebbe essere necessario consentire ai medici di visualizzare solo le informazioni correlate ai propri pazienti. Scenari simili sono presenti in molti ambienti, tra cui quelli delle applicazioni destinate al settore finanziario, legale, statale e militare. Per contribuire a gestire questi scenari, SQL Server 2016 fornisce una funzionalità di [sicurezza a livello di riga](https://msdn.microsoft.com/library/dn765131.aspx) che semplifica e centralizza la logica di accesso a livello di riga in un criterio di sicurezza. Per le versioni precedenti di SQL Server, una funzionalità simile può essere ottenuta usando le visualizzazioni per applicare filtri a livello di riga.  
@@ -21,7 +21,7 @@ In alcuni scenari è necessario controllare l'accesso a un livello caratterizzat
   
 -   Abilitare l'applicazione di filtri a livello di riga:  
   
-    -   Se si usa SQL Server 2016 o versioni successive, oppure [Database SQL di Azure](https://docs.microsoft.com/azure/sql-database/), creare un criterio di sicurezza che consente di aggiungere un predicato nella tabella per limitare le righe restituite a quelle che corrispondono a uno utente del database corrente (utilizzo di CURRENT_USER funzione predefinita) o il nome di account di accesso corrente (usando la funzione predefinita SUSER_SNAME ()):  
+    -   Se si usa SQL Server 2016 o versioni successive oppure il [database SQL di Azure](https://docs.microsoft.com/azure/sql-database/), creare un criterio di sicurezza che aggiunga un predicato nella tabella per limitare le righe restituite a quelle che corrispondono all'utente del database corrente (usando la funzione predefinita CURRENT_USER()) o il nome di accesso corrente (usando la funzione predefinita SUSER_SNAME()):  
   
         ```tsql  
         CREATE SCHEMA Security  
@@ -58,13 +58,6 @@ In alcuni scenari è necessario controllare l'accesso a un livello caratterizzat
 -   Negare al ruolo `public` tutte le autorizzazioni sulle tabelle (e sulle visualizzazioni, se pertinente). Gli utenti non potranno ereditare autorizzazioni da altri ruoli del database perché il predicato del filtro è basato su nomi utenti o di accesso e non su ruoli.  
   
 -   Concedere ai ruoli del database l'autorizzazione EXECUTE sulle stored procedure. Gli utenti potranno accedere ai dati solo tramite le stored procedure specificate.  
-  
-## <a name="external-resources"></a>Risorse esterne  
- Per altre informazioni, vedere la seguente risorsa.  
-  
-|||  
-|-|-|  
-|[Implementazione della sicurezza a livello di riga e di cella nei database classificati tramite SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=98227) sul sito TechCenter di SQL Server.|Viene descritto come usare la sicurezza a livello di riga e di cella per soddisfare requisiti di sicurezza dei database classificati.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Sicurezza a livello di riga](https://msdn.microsoft.com/library/dn765131.aspx)  
