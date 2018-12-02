@@ -4,12 +4,12 @@ description: Ciclo di vita delle applicazioni Docker in contenitori con piattafo
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: a2fe2c325377ec49f89199ad2e36c950ebab6a24
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 17dabb143a1948cbcfa748b4c3bbcff5a57d2c24
+ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50757348"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "52743269"
 ---
 # <a name="monolithic-applications"></a>Applicazioni monolitiche
 
@@ -69,7 +69,6 @@ Figura 4-4: pubblicazione di un contenitore in servizio App di Azure da Visual S
 
 Figura 4-4 mostra anche che il flusso di pubblicazione effettua il push di un'immagine tramite un registro contenitori, che può essere il registro contenitori di Azure (un registro vicino alle distribuzioni in Azure e protetto dall'account e gruppi di Azure Active Directory) o qualsiasi altro registro Docker ad esempio i registri di Docker Hub o in locale.
 
-
 >[!div class="step-by-step"]
-[Precedente](common-container-design-principles.md)
-[Successivo](state-and-data-in-docker-applications.md)
+>[Precedente](common-container-design-principles.md)
+>[Successivo](state-and-data-in-docker-applications.md)
