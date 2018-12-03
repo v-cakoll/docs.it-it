@@ -10,12 +10,12 @@ helpviewer_keywords:
 - string literals [C#]
 - string keyword [C#]
 ms.assetid: 3037e558-fb22-494d-bca1-a15ade11b11a
-ms.openlocfilehash: ab2e69c60872aed19d46450f17becc918ffe2a38
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 66b1729363878f69f868b8b8fd6e9e7011426f27
+ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181459"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52672004"
 ---
 # <a name="string-c-reference"></a>string (Riferimenti per C#)
 
@@ -108,7 +108,6 @@ Per altre informazioni sulle stringhe in C#, vedere [Stringhe](../../programming
 - [Guida per programmatori C#](../../programming-guide/index.md)
 - [Procedure consigliate per l'uso delle stringhe](../../../standard/base-types/best-practices-strings.md)
 - [Parole chiave di C#](index.md)
-- [Guida per programmatori C#](../../programming-guide/index.md)
 - [Tipi riferimento](reference-types.md)
 - [Tipi valore](value-types.md)
 - [Operazioni di base su stringhe](../../../standard/base-types/basic-string-operations.md)

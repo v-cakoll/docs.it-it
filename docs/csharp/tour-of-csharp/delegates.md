@@ -3,12 +3,12 @@ title: Delegati C# - Panoramica del linguaggio C#
 description: Informazioni sull'associazione tardiva con delegati C#
 ms.date: 08/10/2016
 ms.assetid: 3cc27357-3ac2-43a1-aad0-86a77b88f884
-ms.openlocfilehash: 1dcd078b275d951b049b0c5bb6e084a4083d042d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2744f774392ef021974535de535b063264ae9a54
+ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33360570"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52672037"
 ---
 # <a name="delegates"></a>Delegati
 
@@ -29,5 +29,5 @@ I delegati possono essere creati anche mediante funzioni anonime, ovvero "metodi
 Una proprietà interessante e utile di un delegato consiste nel fatto che non conosce o non prende in considerazione la classe del metodo a cui fa riferimento. Ciò che conta è che il metodo a cui un delegato fa riferimento abbia gli stessi parametri e restituisca lo stesso tipo del delegato in questione.
 
 >[!div class="step-by-step"]
-[Precedente](enums.md)
-[Successivo](attributes.md)
+>[Precedente](enums.md)
+>[Successivo](attributes.md)
