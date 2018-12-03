@@ -42,8 +42,8 @@ La funzionalità di telemetria di .NET Core SDK è abilitata per impostazione pr
 La funzionalità raccoglie i dati seguenti:
 
 - Il timestamp della chiamata&#8224;
-- Comando richiamato (ad esempio, "build") & #8224;
-- Indirizzo IP di tre ottetti usato per determinare la posizione geografica& #8224;
+- Comando richiamato (ad esempio, "build")&#8224;
+- Indirizzo IP di tre ottetti usato per determinare la posizione geografica&#8224;
 - `ExitCode` del comando
 - Test Runner usato (per i progetti di test)
 - Sistema operativo e relativa versione&#8224;
@@ -77,9 +77,9 @@ I dati pubblicati sono disponibili su base trimestrale e sono elencati in [dati 
 - OSVersion
 - VersioneSDK
 
-& #8224; Nella colonna *Occorrenze* è riportato il conteggio in aggregato dell'utilizzo da parte del comando di metriche di tale riga nel giorno in questione.
+&#8224; Nella colonna *Occorrenze* è riportato il conteggio in aggregato dell'utilizzo da parte del comando di metriche di tale riga nel giorno in questione.
 
-& #8225; In genere, nella colonna*Geografia* è riportato il nome di un Paese. In alcuni casi, continente Antartide viene visualizzato in questa colonna, a causa di ricercatori che utilizzano .NET Core in Antartide o dati della posizione non corretti.
+&#8225; In genere, nella colonna*Geografia* è riportato il nome di un Paese. In alcuni casi, continente Antartide viene visualizzato in questa colonna, a causa di ricercatori che utilizzano .NET Core in Antartide o dati della posizione non corretti.
 
 ### <a name="example"></a>Esempio
 
