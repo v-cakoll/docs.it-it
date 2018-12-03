@@ -4,12 +4,12 @@ description: Informazioni su come scegliere tra le app Web tradizionali e a pagi
 author: ardalis
 ms.author: wiwagn
 ms.date: 6/28/2018
-ms.openlocfilehash: 40b17d07b008c2a3a9457bffc26b612e6b5c9fe5
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: abeee719c15263fea04a3bcf80a6e41c43b640d2
+ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404147"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52745303"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>Scegliere tra app Web tradizionali e a pagina singola
 
@@ -73,7 +73,7 @@ Per creare applicazioni a pagina singola è necessario avere dimestichezza con J
 > - **Angular**  
 >   <https://angular.io>
 > - **Confronto tra diversi framework JavaScript**  
->   <https://javascriptreport.com/the-ultimate-guide-to-javascript-frameworks/>
+>   <https://jsreport.io/the-ultimate-guide-to-javascript-frameworks/>
 
 **L'applicazione deve già esporre un'API per altri client (interni o pubblici)**
 
@@ -91,5 +91,5 @@ La tabella seguente riepiloga alcuni fattori di base da considerare nella scelta
 | Esigenza di un'interfaccia utente dettagliata e complessa            | **Limitato**             | **Adeguato**             |
 
 >[!div class="step-by-step"]
-[Precedente](modern-web-applications-characteristics.md)
-[Successivo](architectural-principles.md)
+>[Precedente](modern-web-applications-characteristics.md)
+>[Successivo](architectural-principles.md)

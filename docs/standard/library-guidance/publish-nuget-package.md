@@ -4,12 +4,12 @@ description: Procedure consigliate per la pubblicazione delle librerie .NET in N
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: e0244d2a9d09382c289c74a45969bca0a1311445
-ms.sourcegitcommit: b5cd9d5d3b75a5537fc9ad8a3f085f0bb1845ee0
+ms.openlocfilehash: 036aa99c89790274628c40824be7e230d81850fe
+ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "50757309"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52672069"
 ---
 # <a name="publishing-a-nuget-package"></a>Pubblicazione di un pacchetto NuGet
 
@@ -43,5 +43,5 @@ I pacchetti NuGet sono pubblicati e utilizzati dai repository di pacchetti. Anch
 **✔️ ABILITARE** la notifica tramite posta elettronica quando un pacchetto viene pubblicato.
 
 >[!div class="step-by-step"]
-[Precedente](./sourcelink.md)
-[Successivo](./versioning.md)
+>[Precedente](sourcelink.md)
+>[Successivo](versioning.md)
