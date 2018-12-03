@@ -1,18 +1,18 @@
 ---
 title: Eventi (F#)
-description: Informazioni su come gli eventi F# consentono di associare chiamate di funzione con le azioni utente, che sono importanti nella programmazione GUI.
+description: Informazioni su come F# eventi consentono di associare chiamate di funzione con le azioni utente, che sono importanti nella programmazione GUI.
 ms.date: 05/16/2016
-ms.openlocfilehash: ce547bc9ec7b5e0ef9a7492c0889bb690e3040c2
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 82cde0e1df980a2ae204ad0923f4bac0769f0831
+ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43871933"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52745342"
 ---
 # <a name="events"></a>Eventi
 
 > [!NOTE]
-I collegamenti di riferimento all'API in questo articolo portano a MSDN.  Il riferimento all'API in Microsoft Docs (docs.microsoft.com) non è completo.
+> I collegamenti di riferimento all'API in questo articolo portano a MSDN.  Il riferimento all'API in Microsoft Docs (docs.microsoft.com) non è completo.
 
 Gli eventi consentono di associare chiamate di funzione alle azioni utente e sono importanti nella programmazione dell'interfaccia utente grafica. Gli eventi possono essere attivati anche dalle applicazioni o dal sistema operativo.
 
@@ -28,7 +28,7 @@ Il tipo del metodo `Add` è `('a -> unit) -> unit`. Il metodo del gestore eventi
 
 ## <a name="creating-custom-events"></a>Creazione di eventi personalizzati
 
-Gli eventi F# sono rappresentati da F# [evento](https://msdn.microsoft.com/library/f3b47c8a-4ee5-4ce8-9a72-ad305a17c4b9) classe che implementa il [IEvent](https://msdn.microsoft.com/library/8dbca0df-f8a1-40bd-8d50-aa26f6a8b862) interfaccia. `IEvent` è un'interfaccia che combina la funzionalità di altre due interfacce, a sua volta `System.IObservable<'T>` e [IDelegateEvent](https://msdn.microsoft.com/library/3d849465-6b8e-4fc5-b36c-2941d734268a). Gli oggetti `Event` dispongono pertanto di funzionalità equivalenti a quelle dei delegati in altri linguaggi, nonché della funzionalità aggiuntiva di `IObservable`, grazie a cui gli eventi F# supportano il filtraggio degli eventi e l'utilizzo delle espressioni lambda e delle funzioni di prima classe F# come gestori eventi. Questa funzionalità viene fornita nel [modulo di evento](https://msdn.microsoft.com/library/8b883baa-a460-4840-9baa-de8260351bc7).
+F#gli eventi sono rappresentati dal F# [evento](https://msdn.microsoft.com/library/f3b47c8a-4ee5-4ce8-9a72-ad305a17c4b9) classe che implementa il [IEvent](https://msdn.microsoft.com/library/8dbca0df-f8a1-40bd-8d50-aa26f6a8b862) interfaccia. `IEvent` è un'interfaccia che combina la funzionalità di altre due interfacce, a sua volta `System.IObservable<'T>` e [IDelegateEvent](https://msdn.microsoft.com/library/3d849465-6b8e-4fc5-b36c-2941d734268a). Gli oggetti `Event` dispongono pertanto di funzionalità equivalenti a quelle dei delegati in altri linguaggi, nonché della funzionalità aggiuntiva di `IObservable`, grazie a cui gli eventi F# supportano il filtraggio degli eventi e l'utilizzo delle espressioni lambda e delle funzioni di prima classe F# come gestori eventi. Questa funzionalità viene fornita nel [modulo di evento](https://msdn.microsoft.com/library/8b883baa-a460-4840-9baa-de8260351bc7).
 
 Per creare un evento in una classe che agisca come qualsiasi altro evento .NET Framework, aggiungere alla classe un'associazione `let` che definisce un oggetto `Event` come campo in una classe. È possibile specificare il tipo di argomento dell'evento desiderato come argomento tipo oppure lasciare vuoto il valore affinché il tipo appropriato venga dedotto dal compilatore. È inoltre necessario definire un membro dell'evento che espone l'evento come evento CLI. Il membro deve disporre di [CLIEvent](https://msdn.microsoft.com/library/d359f1dd-ffa5-42fb-8808-b4c8131a0333) attributo. Viene dichiarato come una proprietà e la relativa implementazione corrisponde a una chiamata per il [pubblica](https://msdn.microsoft.com/library/b0fdaad5-25e5-43d0-9c0c-ce37c4aeb68e) proprietà dell'evento. Gli utenti della classe possono utilizzare il metodo `Add` dell'evento pubblicato per aggiungere un gestore. L'argomento del metodo `Add` può essere un'espressione lambda. È possibile utilizzare la proprietà `Trigger` dell'evento per generare l'evento passando un argomento alla funzione del gestore. Questo aspetto è illustrato nell'esempio di codice seguente. In questo esempio, l'argomento tipo dedotto per l'evento è una tupla, che rappresenta gli argomenti per l'espressione lambda.
 
