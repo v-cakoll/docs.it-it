@@ -4,16 +4,16 @@ description: Guida all'architettura serverless. Informazioni su quando, come e p
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 6/26/2018
-ms.openlocfilehash: 89e5f387e218703a2f6311ef848b3d613a9279f7
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: a19784f42c63914e9cf8f42ee6408ec9aa46e4f3
+ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404825"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52745316"
 ---
-![](./media/Cover.jpg)
-
 # <a name="serverless-apps-architecture-patterns-and-azure-implementation"></a>App serverless: architettura, modelli e implementazione di Azure
+
+![](./media/Cover.jpg)
 
 > Download disponibile all'indirizzo: <https://aka.ms/serverless-ebook>
 
@@ -61,7 +61,7 @@ Collaboratori e revisori:
 
 ## <a name="introduction"></a>Introduzione
 
-Serverless è l'evoluzione delle piattaforme cloud nella direzione del codice nativo cloud puro. Un'infrastruttura serverless avvicina gli sviluppatori alla logica di business senza le preoccupazioni derivanti dall'infrastruttura. Questo modello non implica che non è richiesto "alcun server", ma piuttosto che sono richiesti "meno server". Il codice serverless è basato sugli eventi. Il codice può essere attivato da qualsiasi elemento, da una richiesta Web HTTP tradizionale a un timer o dal risultato del caricamento di un file. L'infrastruttura serverless consente la scalabilità immediata per soddisfare richieste diverse e offre la micro-fatturazione per un reale "pagamento a consumo". L'elaborazione serverless richiede un nuovo approccio e un nuovo modo di pensare alla compilazione delle applicazioni e non è la soluzione ideale per tutti i problemi. Come sviluppatore, è necessario stabilire:
+[Serverless](https://azure.microsoft.com/solutions/serverless/) è l'evoluzione delle piattaforme cloud nella direzione del codice nativo cloud puro. Un'infrastruttura serverless avvicina gli sviluppatori alla logica di business senza le preoccupazioni derivanti dall'infrastruttura. Questo modello non implica che non è richiesto "alcun server", ma piuttosto che sono richiesti "meno server". Il codice serverless è basato sugli eventi. Il codice può essere attivato da qualsiasi elemento, da una richiesta Web HTTP tradizionale a un timer o dal risultato del caricamento di un file. L'infrastruttura serverless consente la scalabilità immediata per soddisfare richieste diverse e offre la micro-fatturazione per un reale "pagamento a consumo". L'elaborazione serverless richiede un nuovo approccio e un nuovo modo di pensare alla compilazione delle applicazioni e non è la soluzione ideale per tutti i problemi. Come sviluppatore, è necessario stabilire:
 
 * Quali sono i vantaggi e gli svantaggi dell'elaborazione serverless?
 * Perché sarebbe opportuno considerare l'elaborazione serverless per le proprie applicazioni?
@@ -138,4 +138,4 @@ La prima parte di questa guida esamina i motivi per cui serverless è un'opzione
 La guida e gli esempi correlati sono in continua evoluzione, pertanto sono graditi commenti e suggerimenti. Se ci sono commenti sul modo in cui può essere migliorata la guida, usare la sezione commenti e suggerimenti nella parte inferiore di ogni pagina basata sui [problemi di GitHub](https://github.com/dotnet/docs/issues).
 
 >[!div class="step-by-step"]
-[avanti](architecture-approaches.md)
+>[avanti](architecture-approaches.md)

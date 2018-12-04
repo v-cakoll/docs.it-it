@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 567a4b8d-0e79-49dc-8df9-f4b1aa376a2a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7953e34f76e23e3f9f4913726adc4b2176b172c9
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 1f86ed838e1333a5475d72eabc4d4248fc256211
+ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45615326"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52672035"
 ---
 # <a name="backreference-constructs-in-regular-expressions"></a>Costrutti di backreference nelle espressioni regolari
 I backreference sono uno strumento utile per identificare un carattere ripetuto o una sottostringa all'interno di una stringa. Se la stringa di input contiene ad esempio più occorrenze di una sottostringa arbitraria, è possibile trovare la prima occorrenza con un gruppo di acquisizione e usare un backreference per trovare le occorrenze successive della sottostringa.  
@@ -64,7 +64,7 @@ I backreference sono uno strumento utile per identificare un carattere ripetuto 
   
  oppure:  
   
- `\k'` *name* `'`  
+ `\k'` *nome* `'`  
   
  dove *nome* è il nome di un gruppo di acquisizione definito nel modello di espressione regolare. Se nel modello di espressione regolare *nome* non è definito, si verifica un errore di analisi e il motore delle espressioni regolari genera un'eccezione <xref:System.ArgumentException>.  
   
@@ -103,7 +103,7 @@ Tuttavia, se *nome* è la rappresentazione stringa di un numero e al gruppo di a
 |Modello|Descrizione|  
 |-------------|-----------------|  
 |`(?<1>a)`|Trova la corrispondenza del carattere "a" e assegna il risultato al gruppo di acquisizione denominato `1`.|  
-|`(?<1>\1b)*`|Trova la corrispondenza dell'occorrenza 0 o 1 del gruppo denominato `1` con una "b" e assegna il risultato al gruppo di acquisizione denominato `1`.|  
+|`(?<1>\1b)*`|Trova 0 o più occorrenze del gruppo denominato `1` con una "b" e assegna il risultato al gruppo di acquisizione denominato `1`.|  
   
  [!code-csharp[RegularExpressions.Language.Backreferences#4](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference4.cs#4)]
  [!code-vb[RegularExpressions.Language.Backreferences#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference4.vb#4)]  
@@ -114,7 +114,7 @@ Tuttavia, se *nome* è la rappresentazione stringa di un numero e al gruppo di a
   
 2.  Passa al secondo carattere e trova una corrispondenza per la stringa "ab" con l'espressione `\1b` o "ab". Assegna il risultato "ab" a `\1`.  
   
-3.  Passa al quarto carattere. Per l'espressione `(?<1>\1b)` la corrispondenza individuata deve essere zero o più volte, ai fini di una corrispondenza corretta della stringa "abb" con l'espressione `\1b`. Assegna il risultato "abb" nuovamente a `\1`.  
+3.  Passa al quarto carattere. Per l'espressione `(?<1>\1b)*` la corrispondenza individuata deve essere zero o più volte, ai fini di una corrispondenza corretta della stringa "abb" con l'espressione `\1b`. Assegna il risultato "abb" nuovamente a `\1`.  
   
  In questo esempio `*` è un quantificatore di cicli, vale a dire che viene eseguito ripetutamente finché il motore delle espressioni regolari non trova una corrispondenza con il modello che definisce. I quantificatori di cicli non cancellano le definizioni di gruppi.  
   
