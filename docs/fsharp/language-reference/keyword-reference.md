@@ -1,21 +1,21 @@
 ---
 title: Riferimento per parole chiave (F#)
-description: Trova collegamenti per informazioni su tutte le parole chiave del linguaggio F#.
+description: Fare clic sui collegamenti alle informazioni relative a tutte le F# parole chiave del linguaggio.
 ms.date: 05/16/2016
 ms.openlocfilehash: 0016f68b2872183a2b4dd865ce229b6a76250b78
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.sourcegitcommit: 2151690e10d91545e2c20d6b5ad222c162b6b83d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2018
+ms.lasthandoff: 12/05/2018
 ms.locfileid: "43856024"
 ---
 # <a name="keyword-reference"></a>Riferimento per parole chiave
 
-In questo argomento contiene collegamenti a informazioni su tutte le parole chiave del linguaggio F#.
+In questo argomento contiene collegamenti a informazioni su tutti i F# parole chiave del linguaggio.
 
-## <a name="f-keyword-table"></a>Tabella di parola chiave F#
+## <a name="f-keyword-table"></a>F#Tabella delle parole chiave
 
-La tabella seguente illustra tutte le parole chiave F# in ordine alfabetico, insieme a brevi descrizioni e collegamenti agli argomenti rilevanti che contengono altre informazioni.
+La tabella seguente illustra tutti i F# parole chiave in ordine alfabetico, insieme a brevi descrizioni e collegamenti agli argomenti rilevanti che contengono altre informazioni.
 
 |Parola chiave|Collegamento|Descrizione|
 |-------|----|-----------|
@@ -90,7 +90,7 @@ La tabella seguente illustra tutte le parole chiave F# in ordine alfabetico, ins
 |`yield`|[Sequenze](sequences.md)|Usato in un'espressione di sequenza per produrre un valore per una sequenza.|
 |`yield!`|[Espressioni di calcolo](computation-expressions.md)<br /><br />[Flussi di lavoro asincroni](asynchronous-workflows.md)|Usato in un'espressione di calcolo per aggiungere il risultato di un'espressione di calcolo specificato da una raccolta di risultati per l'espressione di calcolo che lo contiene.|
 
-I token seguenti sono riservati in F#, perché sono parole chiave del linguaggio OCaml:
+I token seguenti sono riservati in F# perché sono parole chiave del linguaggio OCaml:
 
 * `asr`
 * `land`
@@ -103,7 +103,7 @@ I token seguenti sono riservati in F#, perché sono parole chiave del linguaggio
 
 Se si usa il `--mlcompatibility` opzione del compilatore, le parole chiave precedente possono essere utilizzati come identificatori.
 
-I token seguenti sono riservati come parole chiave per l'espansione futura del linguaggio F#:
+I token seguenti vengono usati esclusivamente come parole chiave per l'espansione futura del F# linguaggio:
 
 * `atomic`
 * `break`
