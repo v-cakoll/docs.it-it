@@ -4,12 +4,12 @@ description: Architettura di microservizi .NET per applicazioni .NET in contenit
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 06/08/2018
-ms.openlocfilehash: 723719b22c1c7de63f19f68acf91e6499c1a4e43
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 94239fc30292760b2bb28849f8c6ab72c7ceb33d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37875183"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144728"
 ---
 # <a name="handling-partial-failure"></a>Gestione degli errori parziali
 
@@ -39,7 +39,6 @@ Per ridurre al minimo l'impatto del problema, nella sezione "*L'integrazione di 
 
 Inoltre, è essenziale progettare i microservizi e le applicazioni client per la gestione degli errori parziali, ovvero creare microservizi e applicazioni client resilienti.
 
-
 >[!div class="step-by-step"]
-[Precedente](index.md)
-[Successivo](partial-failure-strategies.md)
+>[Precedente](index.md)
+>[Successivo](partial-failure-strategies.md)

@@ -4,12 +4,12 @@ description: Informazioni sulle differenze e sugli usi dello schema API Gateway 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 36b95f8b6308773dbb49cc68e4f8e2099bdd1ff0
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.openlocfilehash: c0c98733271e74e119373fe359b9aa6121930a40
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297311"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152643"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>Confronto tra schema API Gateway e comunicazione diretta da client a microservizio
 
@@ -194,5 +194,5 @@ Dopo le sezioni iniziali di spiegazione degli schemi e dell'architettura, le sez
   [*https://www.pogsdotnet.com/2018/08/api-gateway-in-nutshell.html*](https://www.pogsdotnet.com/2018/08/api-gateway-in-nutshell.html)
 
 >[!div class="step-by-step"]
-[Precedente](identify-microservice-domain-model-boundaries.md)
-[Successivo](communication-in-microservice-architecture.md)
+>[Precedente](identify-microservice-domain-model-boundaries.md)
+>[Successivo](communication-in-microservice-architecture.md)

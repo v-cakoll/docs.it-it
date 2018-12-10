@@ -4,12 +4,12 @@ description: Procedure consigliate per il controllo delle versioni delle libreri
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: f95c8ade1f91af5c13184b839b327c9397c6fe5a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: bacd3891c2fc15a1084f952ca913cf99b6d087dc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187858"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144559"
 ---
 # <a name="versioning"></a>Controllo delle versioni
 
@@ -35,7 +35,7 @@ L'identificatore del pacchetto NuGet combinato con la versione del pacchetto NuG
 
 Poiché la versione del pacchetto NuGet è la versione più visibile agli sviluppatori, è consigliabile aggiornarla tramite [Versionamento semantico (SemVer)](https://semver.org/). SemVer indica la rilevanza delle modifiche tra versioni e aiuta agli sviluppatori a prendere decisioni basate su informazioni aggiornate nella scelta della versione da usare. Il passaggio da `1.0` a `2.0`, ad esempio, indica la potenziale presenza di modifiche che causano un'interruzione.
 
-**✔️ VALUTARE** l'uso di [SemVer 2.0.0](https://semver.org/) per la gestione versioni del pacchetto NuGet.
+**✔️ DA CONSIDERARE** Usare [SemVer 2.0.0](https://semver.org/) per la gestione versioni del pacchetto NuGet.
 
 **✔️ USARE** la versione del pacchetto NuGet nella documentazione pubblica in quanto si tratta del numero di versione comunemente visualizzato dagli utenti.
 
@@ -97,5 +97,5 @@ La versione informativa dell'assembly viene usata per registrare informazioni ag
 > Lasciare che SourceLink generi automaticamente la versione contenente i metadati del controllo del codice sorgente e NuGet.
 
 >[!div class="step-by-step"]
-[Precedente](./publish-nuget-package.md)
-[Successivo](./breaking-changes.md)
+>[Precedente](publish-nuget-package.md)
+>[Successivo](breaking-changes.md)

@@ -4,12 +4,12 @@ description: Informazioni su come gestire gli errori HTTP con Polly e HttpClient
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 06/10/2018
-ms.openlocfilehash: c16f4c0f2ef09f346c8b46ff8089883cedcf0c7e
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 78de1440721e83459e455f5c31d10e52a1d3b1b6
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874897"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143987"
 ---
 # <a name="implement-http-call-retries-with-exponential-backoff-with-httpclientfactory-and-polly-policies"></a>Implementazione dei tentativi di chiamate HTTP con backoff esponenziale con i criteri di Polly e HttpClientFactory
 
@@ -85,8 +85,6 @@ Policy
 
     [*https://brooker.co.za/blog/2015/03/21/backoff.html*](https://brooker.co.za/blog/2015/03/21/backoff.html)
 
-
-
 >[!div class="step-by-step"]
-[Precedente](explore-custom-http-call-retries-exponential-backoff.md)
-[Successivo](implement-circuit-breaker-pattern.md)
+>[Precedente](explore-custom-http-call-retries-exponential-backoff.md)
+>[Successivo](implement-circuit-breaker-pattern.md)

@@ -4,12 +4,12 @@ description: Architettura di microservizi .NET per applicazioni .NET in contenit
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/11/2018
-ms.openlocfilehash: 74b3749077fdb375f84ddacd98221aa4afcf2f67
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 8044e3064ac372750c174d8b47c3f7a63d6bbd0b
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47401238"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149055"
 ---
 # <a name="decision-table-net-frameworks-to-use-for-docker"></a>Tabella decisioni: framework .NET da usare per Docker
 
@@ -88,5 +88,5 @@ La tabella decisioni seguente indica se usare .NET Framework o .NET Core. Tenere
 </table>
 
 >[!div class="step-by-step"]
-[Precedente](net-framework-container-scenarios.md)
-[Successivo](net-container-os-targets.md)
+>[Precedente](net-framework-container-scenarios.md)
+>[Successivo](net-container-os-targets.md)

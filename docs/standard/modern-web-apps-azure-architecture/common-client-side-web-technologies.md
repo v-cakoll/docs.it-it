@@ -4,12 +4,12 @@ description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Tecn
 author: ardalis
 ms.author: wiwagn
 ms.date: 6/28/2018
-ms.openlocfilehash: 692c1bf243c26ef6dcf441be9324e43d6a93fe50
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: eb5612e0cbdc52e397ba367b4cc744796174d06c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404606"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153891"
 ---
 # <a name="common-client-side-web-technologies"></a>Tecnologie Web lato client comuni
 
@@ -165,5 +165,5 @@ I framework JavaScript continuano a evolvere molto rapidamente. Usare le conside
 > <https://hackernoon.com/5-best-javascript-frameworks-in-2017-7a63b3870282>
 
 >[!div class="step-by-step"]
-[Precedente](common-web-application-architectures.md)
-[Successivo](develop-asp-net-core-mvc-apps.md)
+>[Precedente](common-web-application-architectures.md)
+>[Successivo](develop-asp-net-core-mvc-apps.md)

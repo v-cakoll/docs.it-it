@@ -4,12 +4,12 @@ description: L'architettura di microservizi non è destinata solo al back-end. D
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 597927b8eb5463fd3acc651d854404edc24ed96e
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.openlocfilehash: 95f6c9dca62f3c524a6530b344daaebb118040b9
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296477"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126038"
 ---
 # <a name="creating-composite-ui-based-on-microservices"></a>Creazione dell'interfaccia utente composita basata su microservizi
 
@@ -31,7 +31,7 @@ La figura 4-21 illustra una versione di questo approccio basato sull'interfaccia
 
 **Figura 4-21**. Esempio di applicazione con interfaccia utente composita modellata da microservizi back-end
 
-Ogni microservizio di composizione dell'interfaccia utente dovrebbe essere simile a un gateway API di piccole dimensioni. Tuttavia in questo caso ogni microservizio è responsabile di una piccola area dell'interfaccia utente.
+Ogni microservizio di composizione dell'interfaccia utente dovrebbe essere simile a un gateway API di piccole dimensioni,. Tuttavia in questo caso ogni microservizio è responsabile di una piccola area dell'interfaccia utente.
 
 Un approccio basato sull'interfaccia utente composita gestito dai microservizi può essere più o meno complesso a seconda delle tecnologie usate per l'interfaccia utente. Per compilare un' applicazione Web tradizionale, ad esempio, non si usano le stesse tecniche usate per compilare un'applicazione a pagina singola o per le app per dispositivi mobili native (come nello sviluppo di app Xamarin, che può essere più complesso con questo approccio).
 
@@ -57,5 +57,5 @@ Per altre informazioni sull'interfaccia utente composita basata sui microservizi
   [*https://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html*](https://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html)
 
 >[!div class="step-by-step"]
-[Precedente](microservices-addressability-service-registry.md)
-[Successivo](resilient-high-availability-microservices.md)
+>[Precedente](microservices-addressability-service-registry.md)
+>[Successivo](resilient-high-availability-microservices.md)

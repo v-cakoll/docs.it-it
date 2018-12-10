@@ -4,12 +4,12 @@ description: Architettura di microservizi .NET per le applicazioni nei contenito
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 9ce8d64dbd481d30c6687b8747b2091733ea76db
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.openlocfilehash: dc9149cb1a17e3af66abd995fd2a2196109e0e05
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297179"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145254"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Definizione dell'applicazione a più contenitori con docker-compose.yml 
 
@@ -86,7 +86,7 @@ services:
 
 La chiave radice in questo file sono i servizi. Sotto questa chiave si definiscono i servizi da distribuire ed eseguire quando si esegue il comando `docker-compose up` o si esegue la distribuzione da Visual Studio usando questo file docker-compose.yml. In questo caso nel file docker compose.yml sono stati definiti più servizi, come descritto nella tabella seguente.
 
-| Nome del servizio | Descrizione |
+| Nome del servizio | Description |
 |--------------|-------------|
 | webmvc       | Contenitore che include l'applicazione ASP.NET Core MVC che usa i microservizi da C\# sul lato server|
 | catalog.api  | Contenitore che include il microservizio API Web ASP.NET Core che gestisce i cataloghi |
@@ -471,5 +471,5 @@ Le immagini del runtime indicano anche l'impostazione automatica di aspnetcore\_
     [*https://docs.microsoft.com/en-us/dotnet/core/docker/building-net-docker-images*](https://docs.microsoft.com/en-us/dotnet/core/docker/building-net-docker-images)
 
 >[!div class="step-by-step"]
-[Precedente](data-driven-crud-microservice.md)
-[Successivo](database-server-container.md)
+>[Precedente](data-driven-crud-microservice.md)
+>[Successivo](database-server-container.md)

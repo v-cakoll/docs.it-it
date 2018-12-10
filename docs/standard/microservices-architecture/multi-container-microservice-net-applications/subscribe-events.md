@@ -4,12 +4,12 @@ description: Architettura di microservizi .NET per applicazioni .NET in contenit
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: d32c643e553dfe3ce52e3e2ce8aaf1ea3a296de6
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.openlocfilehash: b95e256bf8df7207eed0895587c0945f37b08ecb
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297312"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128954"
 ---
 # <a name="subscribing-to-events"></a>Sottoscrizione di eventi
 
@@ -127,7 +127,7 @@ Nel dettaglio il processo è il seguente:
 
 1.  L'applicazione avvia una transazione di database locale.
 
-2.  Quindi aggiorna lo stato delle entità di dominio e inserisce un evento nella tabella eventi di integrazione.
+2.  quindi aggiorna lo stato delle entità di dominio e inserisce un evento nella tabella eventi di integrazione
 
 3.  Infine esegue il commit della transazione, in modo da consentire di ottenere l'atomicità desiderata e quindi
 
@@ -390,9 +390,6 @@ Se il flag di nuovo recapito è impostato, il ricevitore deve tenerlo in conside
 -   **Reliability Guide** (Guida all'affidabilità), documentazione RabbitMQ <br/>
     [*https://www.rabbitmq.com/reliability.html\#consumer*](https://www.rabbitmq.com/reliability.html%23consumer)
 
-
-
-
 >[!div class="step-by-step"]
-[Precedente](rabbitmq-event-bus-development-test-environment.md)
-[Successivo](test-aspnet-core-services-web-apps.md)
+>[Precedente](rabbitmq-event-bus-development-test-environment.md)
+>[Successivo](test-aspnet-core-services-web-apps.md)

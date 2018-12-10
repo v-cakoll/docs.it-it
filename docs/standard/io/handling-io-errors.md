@@ -2,7 +2,9 @@
 title: Gestione degli errori di I/O in .NET
 ms.date: 08/27/2018
 ms.technology: dotnet-standard
-ms.topic: article
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - I/O, exception handling
 - I/O, errors
@@ -11,12 +13,12 @@ ms.author: ronpet
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 50dee427913e1ec94a06f1202966bb0f7f5f2099
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: d2ff4e69596e721f485d107317f261231615c5a6
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46696417"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126875"
 ---
 # <a name="handling-io-errors-in-net"></a>Gestione degli errori di I/O in .NET
 
@@ -47,15 +49,15 @@ A causa di questa dipendenza dal sistema operativo, con condizioni di eccezione 
 
 | Tipo di eccezione | .NET Core | .NET Framework |
 |---|---|---|
-| <xref:System.IO.IOException> | Yes | Yes |
+| <xref:System.IO.IOException> | Sì | Yes |
 | <xref:System.IO.FileNotFoundException> | Yes | Yes |
 | <xref:System.IO.DirectoryNotFoundException> | Yes | Yes |
 | <xref:System.IO.DriveNotFoundException?> | Yes | Yes |
 | <xref:System.IO.PathTooLongException> | Yes | Yes |
 | <xref:System.OperationCanceledException> | Yes | Yes |
-| <xref:System.UnauthorizedAccessException> | Yes | Yes |
-| <xref:System.ArgumentException> | .NET Core 2.0 e versioni precedenti| Yes |
-| <xref:System.NotSupportedException> | No | Yes |
+| <xref:System.UnauthorizedAccessException> | Yes | Sì |
+| <xref:System.ArgumentException> | .NET Core 2.0 e versioni precedenti| Sì |
+| <xref:System.NotSupportedException> | No | Sì |
 | <xref:System.Security.SecurityException> | No | Solo attendibilità limitata |
 
 ## <a name="handling-ioexception"></a>Gestione di IOException
@@ -71,7 +73,7 @@ Si noti che nel codice di gestione dell'eccezione, si dovrà gestire sempre per 
 
 Nel caso di <xref:System.IO.IOException>, è possibile ottenere altre informazioni sull'errore dalla proprietà [IOException.HResult](xref:System.Exception.HResult). Per convertire il valore HResult in un codice di errore Win32, si rimuovono i 16 bit superiori del valore da 32 bit. La tabella seguente elenca i codici di errore di cui potrebbe essere eseguito il wrapping in un'eccezione <xref:System.IO.IOException>.
 
-| HResult | Costante | Descrizione |
+| HResult | Costante | Description |
 | --- | --- | --- |
 | ERROR_SHARING_VIOLATION | 32 | Il nome del file è mancante oppure il file o la directory è in uso. |
 | ERROR_FILE_EXISTS | 80 | File già esistente. |

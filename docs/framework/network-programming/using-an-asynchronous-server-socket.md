@@ -17,12 +17,12 @@ helpviewer_keywords:
 - protocols, sockets
 - Internet, sockets
 ms.assetid: 813489a9-3efd-41b6-a33f-371d55397676
-ms.openlocfilehash: d51553b34f221283429d40a65e08f5ba58faf36a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 24bbbc304111b3735bc6e8f3965ef37e9374bda6
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50198863"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152513"
 ---
 # <a name="using-an-asynchronous-server-socket"></a>Uso di un socket server asincrono
 I socket server asincroni usano il modello di programmazione asincrona di .NET Framework per elaborare le richieste di servizio di rete. La classe <xref:System.Net.Sockets.Socket> segue il modello di denominazione asincrona di .NET Framework standard. Ad esempio, il metodo sincrono <xref:System.Net.Sockets.Socket.Accept%2A> corrisponde ai metodi asincroni <xref:System.Net.Sockets.Socket.BeginAccept%2A> e <xref:System.Net.Sockets.Socket.EndAccept%2A>.  
@@ -32,13 +32,14 @@ I socket server asincroni usano il modello di programmazione asincrona di .NET F
  Nell'esempio seguente, per iniziare ad accettare le richieste di connessione dalla rete, il metodo `StartListening` inizializza **Socket** e quindi usa il metodo **BeginAccept** per iniziare ad accettare nuove connessioni. Il metodo di callback per l'accettazione viene chiamato alla ricezione di una nuova richiesta di connessione sul socket. È responsabile del recupero dell'istanza di **Socket** che gestirà la connessione e del passaggio di tale **Socket** al thread che elaborerà la richiesta. Il metodo di callback per l'accettazione implementa il delegato <xref:System.AsyncCallback>, restituisce un void e accetta un singolo parametro di tipo <xref:System.IAsyncResult>. L'esempio seguente è la shell di un metodo di callback per l'accettazione.  
   
 ```vb  
-Sub acceptCallback(ar As IAsyncResult)  
+Sub AcceptCallback(ar As IAsyncResult)  
     ' Add the callback code here.  
-End Sub 'acceptCallback  
+End Sub 'AcceptCallback  
 ```  
   
 ```csharp  
-void acceptCallback( IAsyncResult ar) {  
+void AcceptCallback(IAsyncResult ar)
+{  
     // Add the callback code here.  
 }  
 ```  
@@ -47,26 +48,24 @@ void acceptCallback( IAsyncResult ar) {
   
 ```vb  
 listener.BeginAccept( _  
-    New AsyncCallback(SocketListener.acceptCallback),_  
+    New AsyncCallback(SocketListener.AcceptCallback),_  
     listener)  
 ```  
   
 ```csharp  
-listener.BeginAccept(  
-    new AsyncCallback(SocketListener.acceptCallback),   
-    listener);  
+listener.BeginAccept(new AsyncCallback(SocketListener.AcceptCallback), listener);  
 ```  
   
  I socket asincroni usano thread dal pool di thread di sistema per elaborare le connessioni in ingresso. Un thread è responsabile dell'accettazione di connessioni, un altro thread viene usato per gestire ogni connessione in ingresso e un altro thread è responsabile della ricezione di dati dalla connessione. Può trattarsi dello stesso thread, a seconda di quale thread viene assegnato dal pool di thread. Nell'esempio seguente la classe <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> sospende l'esecuzione del thread principale e segnala quando l'esecuzione può continuare.  
   
- L'esempio seguente mostra un metodo asincrono che crea un socket TCP/IP asincrono nel computer locale e inizia ad accettare connessioni. Si presuppone che esista un **ManualResetEvent** globale denominato `allDone`, che il metodo sia un membro di una classe denominata `SocketListener` e che sia stato definito un metodo di callback denominato `acceptCallback`.  
+ L'esempio seguente mostra un metodo asincrono che crea un socket TCP/IP asincrono nel computer locale e inizia ad accettare connessioni. Si presuppone che esista un **ManualResetEvent** globale denominato `allDone`, che il metodo sia un membro di una classe denominata `SocketListener` e che sia stato definito un metodo di callback denominato `AcceptCallback`.  
   
 ```vb  
 Public Sub StartListening()  
     Dim ipHostInfo As IPHostEntry = Dns.Resolve(Dns.GetHostName())  
     Dim localEP = New IPEndPoint(ipHostInfo.AddressList(0), 11000)  
   
-    Console.WriteLine("Local address and port : {0}", localEP.ToString())  
+    Console.WriteLine($"Local address and port : {localEP.ToString()}")  
   
     Dim listener As New Socket(localEP.Address.AddressFamily, _  
        SocketType.Stream, ProtocolType.Tcp)  
@@ -80,7 +79,7 @@ Public Sub StartListening()
   
             Console.WriteLine("Waiting for a connection...")  
             listener.BeginAccept(New _  
-                AsyncCallback(SocketListener.acceptCallback), _  
+                AsyncCallback(SocketListener.AcceptCallback), _  
                 listener)  
   
             allDone.WaitOne()  
@@ -93,52 +92,55 @@ End Sub 'StartListening
 ```  
   
 ```csharp  
-public void StartListening() {  
+public void StartListening()
+{  
     IPHostEntry ipHostInfo = Dns.Resolve(Dns.GetHostName());  
-    IPEndPoint localEP = new IPEndPoint(ipHostInfo.AddressList[0],11000);  
+    IPEndPoint localEP = new IPEndPoint(ipHostInfo.AddressList[0], 11000);  
   
-    Console.WriteLine("Local address and port : {0}",localEP.ToString());  
+    Console.WriteLine($"Local address and port : {localEP.ToString()}");  
   
-    Socket listener = new Socket( localEP.Address.AddressFamily,  
-        SocketType.Stream, ProtocolType.Tcp );  
+    Socket listener = new Socket(localEP.Address.AddressFamily, SocketType.Stream, ProtocolType.Tcp);  
   
-    try {  
+    try 
+    {  
         listener.Bind(localEP);  
         listener.Listen(10);  
   
-        while (true) {  
+        while (true)
+        {  
             allDone.Reset();  
   
             Console.WriteLine("Waiting for a connection...");  
-            listener.BeginAccept(  
-                new AsyncCallback(SocketListener.acceptCallback),   
-                listener );  
+            listener.BeginAccept(new AsyncCallback(SocketListener.AcceptCallback), listener);  
   
             allDone.WaitOne();  
         }  
-    } catch (Exception e) {  
+    }
+    catch (Exception e)
+    {  
         Console.WriteLine(e.ToString());  
     }  
   
-    Console.WriteLine( "Closing the listener...");  
+    Console.WriteLine("Closing the listener...");  
 }  
 ```  
   
- Il metodo di callback per l'accettazione (`acceptCallback` nell'esempio precedente) ha la responsabilità di segnalare al thread principale dell'applicazione di continuare l'elaborazione, di stabilire la connessione con il client e di avviare la lettura asincrona dei dati dal client. L'esempio seguente è la prima parte di un'implementazione del metodo `acceptCallback`. Questa sezione del metodo segnala al thread principale dell'applicazione di continuare l'elaborazione e stabilisce la connessione al client. Si presuppone l'esistenza di un **ManualResetEvent** globale denominato `allDone`.  
+ Il metodo di callback per l'accettazione (`AcceptCallback` nell'esempio precedente) ha la responsabilità di segnalare al thread principale dell'applicazione di continuare l'elaborazione, di stabilire la connessione con il client e di avviare la lettura asincrona dei dati dal client. L'esempio seguente è la prima parte di un'implementazione del metodo `AcceptCallback`. Questa sezione del metodo segnala al thread principale dell'applicazione di continuare l'elaborazione e stabilisce la connessione al client. Si presuppone l'esistenza di un **ManualResetEvent** globale denominato `allDone`.  
   
 ```vb  
-Public Sub acceptCallback(ar As IAsyncResult)  
+Public Sub AcceptCallback(ar As IAsyncResult)  
     allDone.Set()  
   
     Dim listener As Socket = CType(ar.AsyncState, Socket)  
     Dim handler As Socket = listener.EndAccept(ar)  
   
     ' Additional code to read data goes here.  
-End Sub 'acceptCallback  
+End Sub 'AcceptCallback  
 ```  
   
 ```csharp  
-public void acceptCallback(IAsyncResult ar) {  
+public void AcceptCallback(IAsyncResult ar) 
+{  
     allDone.Set();  
   
     Socket listener = (Socket) ar.AsyncState;  
@@ -160,7 +162,8 @@ End Class 'StateObject
 ```  
   
 ```csharp  
-public class StateObject {  
+public class StateObject 
+{  
     public Socket workSocket = null;  
     public const int BufferSize = 1024;  
     public byte[] buffer = new byte[BufferSize];  
@@ -168,12 +171,12 @@ public class StateObject {
 }  
 ```  
   
- La sezione del metodo `acceptCallback` che avvia la ricezione dei dati dal socket client inizializza prima di tutto un'istanza della classe `StateObject` e quindi chiama il metodo <xref:System.Net.Sockets.Socket.BeginReceive%2A> per avviare la lettura dei dati dal socket client in modo asincrono.  
+ La sezione del metodo `AcceptCallback` che avvia la ricezione dei dati dal socket client inizializza prima di tutto un'istanza della classe `StateObject` e quindi chiama il metodo <xref:System.Net.Sockets.Socket.BeginReceive%2A> per avviare la lettura dei dati dal socket client in modo asincrono.  
   
- L'esempio seguente mostra il metodo `acceptCallback` completo. Si presuppone che esista un **ManualResetEvent** globale denominato `allDone,`, che sia stata definita la classe `StateObject` e che sia stato definito il metodo `readCallback` in una classe denominata `SocketListener`.  
+ L'esempio seguente mostra il metodo `AcceptCallback` completo. Si presuppone che esista un **ManualResetEvent** globale denominato `allDone,`, che sia stata definita la classe `StateObject` e che sia stato definito il metodo `ReadCallback` in una classe denominata `SocketListener`.  
   
 ```vb  
-Public Shared Sub acceptCallback(ar As IAsyncResult)  
+Public Shared Sub AcceptCallback(ar As IAsyncResult)  
     ' Get the socket that handles the client request.  
     Dim listener As Socket = CType(ar.AsyncState, Socket)  
     Dim handler As Socket = listener.EndAccept(ar)  
@@ -185,12 +188,13 @@ Public Shared Sub acceptCallback(ar As IAsyncResult)
     Dim state As New StateObject()  
     state.workSocket = handler  
     handler.BeginReceive(state.buffer, 0, state.BufferSize, 0, _  
-        AddressOf AsynchronousSocketListener.readCallback, state)  
-End Sub 'acceptCallback  
+        AddressOf AsynchronousSocketListener.ReadCallback, state)  
+End Sub 'AcceptCallback  
 ```  
   
 ```csharp  
-public static void acceptCallback(IAsyncResult ar) {  
+public static void AcceptCallback(IAsyncResult ar)
+{  
     // Get the socket that handles the client request.  
     Socket listener = (Socket) ar.AsyncState;  
     Socket handler = listener.EndAccept(ar);  
@@ -201,17 +205,17 @@ public static void acceptCallback(IAsyncResult ar) {
     // Create the state object.  
     StateObject state = new StateObject();  
     state.workSocket = handler;  
-    handler.BeginReceive( state.buffer, 0, StateObject.BufferSize, 0,  
-        new AsyncCallback(AsynchronousSocketListener.readCallback), state);  
+    handler.BeginReceive(state.buffer, 0, StateObject.BufferSize, 0,  
+        new AsyncCallback(AsynchronousSocketListener.ReadCallback), state);  
 }  
 ```  
   
  Il metodo finale che deve essere implementato per il socket server asincrono è il metodo di callback per la lettura che restituisce i dati inviati dal client. Come nel caso del metodo di callback per l'accettazione, il metodo di callback per la lettura è un delegato **AsyncCallback**. Questo metodo legge uno o più byte dal socket client nel buffer di dati e quindi chiama di nuovo il metodo **BeginReceive** fino al completamento dei dati inviati dal client. Quando l'intero messaggio è stato letto dal client, la stringa viene visualizzata nella console e il socket server che gestisce la connessione al client viene chiuso.  
   
- L'esempio seguente implementa il metodo `readCallback`. Si presuppone che la classe `StateObject` sia definita.  
+ L'esempio seguente implementa il metodo `ReadCallback`. Si presuppone che la classe `StateObject` sia definita.  
   
 ```vb  
-Public Shared Sub readCallback(ar As IAsyncResult)  
+Public Shared Sub ReadCallback(ar As IAsyncResult)  
     Dim state As StateObject = CType(ar.AsyncState, StateObject)  
     Dim handler As Socket = state.workSocket  
   
@@ -222,21 +226,21 @@ Public Shared Sub readCallback(ar As IAsyncResult)
     If read > 0 Then  
         state.sb.Append(Encoding.ASCII.GetString(state.buffer, 0, read))  
         handler.BeginReceive(state.buffer, 0, state.BufferSize, 0, _  
-            AddressOf readCallback, state)  
+            AddressOf ReadCallback, state)  
     Else  
         If state.sb.Length > 1 Then  
             ' All the data has been read from the client;  
             ' display it on the console.  
             Dim content As String = state.sb.ToString()  
-            Console.WriteLine("Read {0} bytes from socket." + _  
-                ControlChars.Cr + " Data : {1}", content.Length, content)  
+            Console.WriteLine($"Read {content.Length} bytes from socket. {ControlChars.Cr} Data : {content}")  
         End If  
     End If  
-End Sub 'readCallback  
+End Sub 'ReadCallback  
 ```  
   
 ```csharp  
-public static void readCallback(IAsyncResult ar) {  
+public static void ReadCallback(IAsyncResult ar)
+{  
     StateObject state = (StateObject) ar.AsyncState;  
     Socket handler = state.WorkSocket;  
   
@@ -244,17 +248,20 @@ public static void readCallback(IAsyncResult ar) {
     int read = handler.EndReceive(ar);  
   
     // Data was read from the client socket.  
-    if (read > 0) {  
+    if (read > 0)
+    {  
         state.sb.Append(Encoding.ASCII.GetString(state.buffer,0,read));  
-        handler.BeginReceive(state.buffer,0,StateObject.BufferSize, 0,  
-            new AsyncCallback(readCallback), state);  
-    } else {  
-        if (state.sb.Length > 1) {  
+        handler.BeginReceive(state.buffer, 0, StateObject.BufferSize, 0,  
+            new AsyncCallback(ReadCallback), state);  
+    } 
+    else 
+    {  
+        if (state.sb.Length > 1) 
+        {  
             // All the data has been read from the client;  
             // display it on the console.  
             string content = state.sb.ToString();  
-            Console.WriteLine("Read {0} bytes from socket.\n Data : {1}",  
-               content.Length, content);  
+            Console.WriteLine($"Read {content.Length} bytes from socket.\n Data : {content}");
         }  
         handler.Close();  
     }  

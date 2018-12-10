@@ -4,20 +4,20 @@ description: Introduzione alla compilazione di librerie .NET.
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 6377e3fe606bf7603b418decdd0e3f9d2de6a510
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 05466de1469fc765570b8250301e8404cd5df173
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201243"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145725"
 ---
 # <a name="get-started"></a>Introduzione
 
-## <a name="cross-platform-targetingcross-platform-targetingmd"></a>[Specifica di destinazioni multipiattaforma](./cross-platform-targeting.md)
+## <a name="cross-platform-targetingcross-platform-targetingmd"></a>[Supporto multipiattaforma](./cross-platform-targeting.md)
 
 Come usare .NET Standard e il multitargeting per creare librerie multipiattaforma. .NET viene eseguito in molte posizioni e le librerie .NET di un buon livello devono cercare di supportare il maggior numero possibile di piattaforme e sviluppatori.
 
-## <a name="strong-namingstrong-namingmd"></a>[Creazione di nomi sicuri](./strong-naming.md)
+## <a name="strong-namingstrong-namingmd"></a>[Denominazione sicura](./strong-naming.md)
 
 Vengono fornite informazioni sui nomi sicuri e sui loro vantaggi e svantaggi. La scelta di un nome sicuro per una libreria .NET consente alla maggior parte degli sviluppatori di usare la libreria ed è una procedura consigliata.
 
@@ -46,5 +46,5 @@ Le librerie .NET di buon livello si evolvono nel tempo, con l'aggiunta di funzio
 Per una libreria .NET è importante trovare un equilibrio tra la stabilità per gli utenti esistenti e l'innovazione per il futuro. Vengono fornite informazioni sui diversi tipi di modifiche che causano un'interruzione e sulle strategie per aggiungere nuove funzionalità mantenendo la compatibilità con le versioni precedenti.
 
 >[!div class="step-by-step"]
-[Precedente](./index.md)
-[Successivo](./cross-platform-targeting.md)
+>[Precedente](index.md)
+>[Successivo](cross-platform-targeting.md)

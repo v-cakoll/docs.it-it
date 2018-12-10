@@ -2,18 +2,21 @@
 title: Formati dei percorsi di file nei sistemi Windows
 ms.date: 06/28/2018
 ms.technology: dotnet-standard
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1b79ff1991f1d9b803b0c35b4ae9565f70de0b56
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.openlocfilehash: 1ac96ac86fb3ebf35af9176a025f0a5f71451f88
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296828"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144858"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Formati dei percorsi di file nei sistemi Windows
 
@@ -29,7 +32,7 @@ Un percorso DOS standard può essere costituito da tre componenti:
 
 Se sono presenti tutti e tre i componenti, il percorso è assoluto. Se non si specifica alcun volume o lettera di unità e i nomi delle directory iniziano con il [carattere separatore di directory](<xref:System.IO.Path.DirectorySeparatorChar>), il percorso è relativo dalla radice dell'unità corrente. In caso contrario, il percorso è relativo alla directory corrente. La tabella seguente illustra alcuni percorsi possibili di directory e file.
 
-|Path  |Descrizione  |
+|Path  |Description  |
 | -- | -- |
 | `C:\Documents\Newsletters\Summer2018.pdf` | Percorso file assoluto dalla radice dell'unità C: |
 | `\Program Files\Custom Utilities\StringFinder.exe` | Percorso assoluto dalla radice dell'unità corrente. |
@@ -59,7 +62,7 @@ I percorsi UNC (Universal Naming Convention), che vengono usati per accedere all
 
 Di seguito sono riportati alcuni esempi di percorsi UNC:
 
-|Path  |Descrizione  |
+|Path  |Description  |
 | -- | -- |
 | `\\system07\C$\` | Directory radice dell'unità C: in `system07`. |
 | `\\Server2\Share\Test\Foo.txt` | File Foo.txt nella directory Test del volume \\\\Server2\\Share.|
@@ -203,30 +206,14 @@ Una peculiarità del file system di Windows che può confondere gli utenti e gli
 ```csharp
 Directory.Create("TeStDiReCtOrY");
 ```
+
+```vb
+Directory.Create("TeStDiReCtOrY")
+```
+
 crea una directory denominata TeStDiReCtOrY. Se si rinomina una directory o un file per modificare l'uso di maiuscole/minuscole, il nome del file o della directory riflette le maiuscole/minuscole usate quando è stato rinominato. Ad esempio, il codice seguente rinomina un file denominato test.txt in Test.txt:
 
-```csharp
-using System;
-using System.IO;
-
-class Example
-{
-   public static void Main()
-   {
-      var fi = new FileInfo(@".\test.txt");
-      fi.MoveTo(@".\Test.txt");
-   }
-}
-``` 
-```vb
-Imports System.IO
-
-Module Example
-   Public Sub Main()
-      Dim fi As New FileInfo(".\test.txt")
-      fi.MoveTo(".\Test.txt")
-   End Sub
-End Module
-```
+[!code-csharp[case-and-renaming](~/samples/snippets/standard/io/file-names/cs/rename.cs)]
+[!code-vb[case-and-renaming](~/samples/snippets/standard/io/file-names/vb/rename.vb)]
 
 Tuttavia, nei confronti tra i nomi di file e directory non viene fatta distinzione tra maiuscole e minuscole. Se si cerca un file denominato "test.txt", le API del file system .NET non fanno distinzione tra maiuscole e minuscole nel confronto. Test.txt, TEST.TXT, test.TXT e qualsiasi altra combinazione di lettere maiuscole e minuscole corrisponderanno a "test.txt".

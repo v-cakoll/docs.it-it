@@ -4,12 +4,12 @@ description: Architettura di microservizi .NET per applicazioni .NET in contenit
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/11/2018
-ms.openlocfilehash: e77065614423cd2e7fdb51258a8c7650280d0400
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 6ff6170fd1cdd0c69ecc8729cc8199cceea43ffa
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46537826"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128479"
 ---
 # <a name="general-guidance"></a>Indicazioni generali
 
@@ -45,7 +45,6 @@ L'uso di .NET Framework in Docker può migliorare le esperienze di distribuzione
 -   **Sample apps: Modernization of legacy ASP.NET web apps by using Windows Containers** (App di esempio: modernizzazione delle app Web ASP.NET legacy usando contenitori Windows)  
     https://aka.ms/eshopmodernizing
 
-
 >[!div class="step-by-step"]
-[Precedente](index.md)
-[Successivo](net-core-container-scenarios.md)
+>[Precedente](index.md)
+>[Successivo](net-core-container-scenarios.md)

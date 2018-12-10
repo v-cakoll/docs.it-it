@@ -4,12 +4,12 @@ description: Architettura di microservizi .NET per applicazioni .NET in contenit
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 08/31/2018
-ms.openlocfilehash: 63f3714fce317d915b65075922b323f2aa5061f0
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0493e7c08a742abed26ff00ce84b9d77da73ea63
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50185927"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153865"
 ---
 # <a name="what-is-docker"></a>Che cos'è Docker?
 
@@ -83,5 +83,5 @@ Un'immagine può essere considerata come un disco rigido di sola lettura ausilia
 Allo stesso modo, un contenitore può essere considerato come il "computer" con il disco rigido dell'immagine installato. Il contenitore, proprio come un computer, può essere acceso o spento.
 
 >[!div class="step-by-step"]
-[Precedente](index.md)
-[Successivo](docker-terminology.md)
+>[Precedente](index.md)
+>[Successivo](docker-terminology.md)

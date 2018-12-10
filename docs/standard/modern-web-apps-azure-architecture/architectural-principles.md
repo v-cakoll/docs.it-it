@@ -4,12 +4,12 @@ description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Prin
 author: ardalis
 ms.author: wiwagn
 ms.date: 6/28/2018
-ms.openlocfilehash: 2e0938fc67e02a52b99158b2ff07b9f32464e674
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 675ecc0dc6a90f3a4ab42861d850ed43a6c10bad
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404438"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146602"
 ---
 # <a name="architectural-principles"></a>Principi architetturali
 
@@ -116,5 +116,5 @@ Come minimo, ogni singola applicazione web deve puntare ad essere il proprio con
 > <https://martinfowler.com/bliki/BoundedContext.html>
 
 >[!div class="step-by-step"]
-[Precedente](choose-between-traditional-web-and-single-page-apps.md)
-[Successivo](common-web-application-architectures.md)
+>[Precedente](choose-between-traditional-web-and-single-page-apps.md)
+>[Successivo](common-web-application-architectures.md)

@@ -9,11 +9,11 @@ ms.assetid: 680a7382-957f-4f6e-b178-4e866004a07e
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 21dd9926684f51412384235d7b3af1aac280957a
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50035748"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155171"
 ---
 # <a name="net-framework-initialization-errors-managing-the-user-experience"></a>Errori di inizializzazione di .NET Framework: gestione dell'interfaccia utente
 Il sistema di attivazione di Common Language Runtime (CLR) determina la versione di CLR che verrà usata per eseguire il codice dell'applicazione gestita. In alcuni casi il sistema di attivazione potrebbe non riuscire a trovare una versione di CLR da caricare. In genere questa situazione si verifica quando un'applicazione richiede una versione di CLR che non è valida o non è installata in un determinato computer. Se la versione richiesta non viene trovata, il sistema di attivazione di CLR restituisce un codice di errore HRESULT dalla funzione o dall'interfaccia che è stata chiamata e visualizza un messaggio di errore all'utente che sta eseguendo l'applicazione. In questo articolo vengono elencati i codici HRESULT e viene illustrato come evitare che venga visualizzato il messaggio di errore.  
@@ -66,7 +66,7 @@ Messaggio di errore tipico per errori di inizializzazione
 ## <a name="ui-policy-for-clr-provided-hosts"></a>Criteri dell'interfaccia utente per gli host specificati da CLR  
  CLR include un set di host per diversi scenari che visualizzano tutti un messaggio di errore in caso di problemi nel caricamento della versione richiesta del runtime. Nella tabella seguente vengono elencati gli host e i criteri di messaggio di errore relativi.  
   
-|Host CLR|Descrizione|Criterio del messaggio di errore|Possibilità di disabilitare il messaggio di errore|  
+|Host CLR|Description|Criterio del messaggio di errore|Possibilità di disabilitare il messaggio di errore|  
 |--------------|-----------------|--------------------------|------------------------------------|  
 |Host EXE gestito|Avvia EXE gestiti.|Viene visualizzato in caso di versione di .NET Framework mancante|No|  
 |Host COM gestito|Carica componenti COM gestiti in un processo.|Viene visualizzato in caso di versione di .NET Framework mancante|Sì, impostando il flag SEM_FAILCRITICALERRORS|  

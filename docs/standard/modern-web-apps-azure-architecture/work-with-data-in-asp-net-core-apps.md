@@ -4,12 +4,12 @@ description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Usar
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: 069bfacd1ae08b5c84d6e304b2f12f18e1eecb22
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: efadf3a0d216197b05d6cd4cfe94ee3eb24bb18e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49122851"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147174"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>Uso dei dati nelle app ASP.NET Core
 
@@ -440,5 +440,5 @@ _cache.Get<CancellationTokenSource>("cts").Cancel();
 La memorizzazione nella cache può migliorare notevolmente le prestazioni delle pagine Web che richiedono più volte gli stessi valori dal database. Assicurarsi di misurare le prestazioni di accesso ai dati e delle pagine prima di applicare la memorizzazione nella cache e applicarla solo dove si ritiene sia necessario un miglioramento. La memorizzazione nella cache consuma le risorse di memoria del server Web e aumenta la complessità dell'applicazione, pertanto è importante non eseguire anzitempo l'ottimizzazione con questa tecnica.
 
 >[!div class="step-by-step"]
-[Precedente](develop-asp-net-core-mvc-apps.md)
-[Successivo](test-asp-net-core-mvc-apps.md)
+>[Precedente](develop-asp-net-core-mvc-apps.md)
+>[Successivo](test-asp-net-core-mvc-apps.md)

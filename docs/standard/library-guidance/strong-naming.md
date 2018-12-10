@@ -4,14 +4,14 @@ description: Procedure consigliate per la creazione di nomi sicuri per le librer
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/16/2018
-ms.openlocfilehash: 6f5743c7a8c6fdbdcdcf3aa80d2f92f2e04621f2
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 99905a795c4cdb3c79884716b39ed4e38cfe39d6
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201452"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128999"
 ---
-# <a name="strong-naming"></a>Creazione di nomi sicuri
+# <a name="strong-naming"></a>Denominazione sicura
 
 La creazione di nomi sicuri si riferisce alla firma di un assembly con una chiave, per produrre un [assembly con nome sicuro](../../framework/app-domains/strong-named-assemblies.md). Quando un assembly ha un nome sicuro, viene creata un'identità univoca basata sul nome e sul numero di versione dell'assembly e ciò può aiutare a evitare i conflitti di assembly.
 
@@ -47,7 +47,7 @@ I vantaggi dei nomi sicuri sono i seguenti:
 > [!NOTE]
 > Queste indicazioni si riferiscono alle librerie .NET distribuite pubblicamente, ad esempio le librerie .NET pubblicate in NuGet.org. Il nome sicuro non è richiesto dalla maggior parte delle applicazioni .NET e non deve essere usato per impostazione predefinita.
 
-**VALUTARE** l'uso di nomi sicuri per gli assembly della libreria.
+ **VALUTARE** l'uso di nomi sicuri per gli assembly della libreria.
 
 **✔️ VALUTARE** l'aggiunta della chiave per la creazione di nomi sicuri nel sistema di controllo del codice sorgente.
 
@@ -66,10 +66,10 @@ I vantaggi dei nomi sicuri sono i seguenti:
 
 > Se si modifica una chiave per la creazione di nomi sicuri di un assembly, viene modificata l'identità dell'assembly e il codice compilato che lo usa non funziona più. Per altre informazioni, vedere [Binary breaking change](./breaking-changes.md#binary-breaking-change) (Modifica che causa un'interruzione del codice binario).
 
-**❌NON** pubblicare versioni con nome sicuro e non sicuro della stessa libreria. Ad esempio, `Contoso.Api` e `Contoso.Api.StrongNamed`.
+**❌ DA NON FARE** Pubblicare versioni con nome sicuro e non sicuro della stessa libreria. Ad esempio, `Contoso.Api` e `Contoso.Api.StrongNamed`.
 
 > La pubblicazione di due pacchetti comporta la biforcazione dell'ecosistema di sviluppo. Se un'applicazione dipende da entrambi i pacchetti, inoltre, possono verificarsi conflitti di nomi di tipo. Per quanto riguarda .NET, si tratta di tipi diversi in assembly diversi.
 
 >[!div class="step-by-step"]
-[Precedente](./cross-platform-targeting.md)
-[Successivo](./nuget.md)
+>[Precedente](cross-platform-targeting.md)
+>[Successivo](nuget.md)

@@ -4,12 +4,12 @@ description: Architettura di microservizi .NET per applicazioni .NET in contenit
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 07/03/2018
-ms.openlocfilehash: b961ebd186953e614658915c7246e1c83c40e7e9
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 08467184f40611888a05c3aa1fa4783b73c6b8ee
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453152"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147262"
 ---
 # <a name="implement-the-circuit-breaker-pattern"></a>Implementazione dello schema Circuit Breaker
 
@@ -146,14 +146,11 @@ Ecco un riepilogo. I criteri di ripetizione provano più volte a eseguire la ric
 
 Infine, un'altra possibilità per `CircuitBreakerPolicy` prevede l'uso di `Isolate`, che forza l'apertura e mantiene aperto il circuito, e di `Reset`, che lo chiude nuovamente. È possibile usarli per creare un endpoint HTTP di utilità che richiama Isolate e Reset direttamente nei criteri.  Questo endpoint HTTP può essere anche usato, se adeguatamente protetto, nell'ambiente di produzione per isolare temporaneamente un sistema downstream, ad esempio quando si vuole eseguire l'aggiornamento di tale sistema. In alternativa, si può attivare il circuito manualmente per proteggere un sistema downstream che si sospetta essere in stato di errore.
 
-
 ## <a name="additional-resources"></a>Risorse aggiuntive
-
 
 -   **Schema Circuit Breaker**
     [*https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker*](https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker)
 
-
 >[!div class="step-by-step"]
-[Precedente](implement-http-call-retries-exponential-backoff-polly.md)
-[Successivo](monitor-app-health.md)
+>[Precedente](implement-http-call-retries-exponential-backoff-polly.md)
+>[Successivo](monitor-app-health.md)
