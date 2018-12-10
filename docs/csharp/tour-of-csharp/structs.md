@@ -3,12 +3,12 @@ title: Struct C# - Panoramica del linguaggio C#
 description: Informazioni di base sui tipi di valori C# denominati struct
 ms.date: 08/10/2016
 ms.assetid: 88a74571-f741-4a31-a2b5-1ccf165535b8
-ms.openlocfilehash: 2b1870713b488f706f5f3a54413461052173bab6
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: 6b165dd040213b33f91d1baf1b0fb4909101666d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49323097"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53142736"
 ---
 # <a name="structs"></a>Struct
 
@@ -35,5 +35,5 @@ Se `Point` è una classe, l'output è 20 perché a e b fanno riferimento allo st
 L'esempio precedente evidenzia due delle limitazioni dei tipi struct. In primo luogo, la copia di un intero tipo struct è in genere meno efficiente della copia di un riferimento all'oggetto. Di conseguenza, il passaggio dei parametri di assegnazione e valore può risultare molto più costoso con i tipi struct che con i tipi riferimento. In secondo luogo, ad eccezione dei parametri `in`, `ref` e `out`, non è possibile creare riferimenti ai tipi struct e questa condizione che ne limita l'uso in varie situazioni.
 
 >[!div class="step-by-step"]
-[Precedente](classes-and-objects.md)
-[Successivo](arrays.md)
+>[Precedente](classes-and-objects.md)
+>[Successivo](arrays.md)

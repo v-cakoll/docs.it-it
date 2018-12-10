@@ -4,25 +4,25 @@ description: Questo documento specifica i passaggi e il flusso di lavoro da segu
 author: bleroy
 ms.author: mairaw
 ms.date: 03/23/2017
-ms.openlocfilehash: 5a4b2734137f59b29535f302dd17fb94329d676f
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 0e089ff093ee76dbf9c1accda4145bd8b8fc82e6
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245589"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127589"
 ---
 # <a name="getting-started-with-net-core-on-macos"></a>Introduzione a .NET Core su macOS
 
 Questo documento specifica i passaggi e il flusso di lavoro da seguire per creare una soluzione .NET Core per macOS. Si imparerà come creare progetti, unit test, usare gli strumenti di debug e incorporare librerie di terze parti tramite [NuGet](https://www.nuget.org/).
 
 > [!NOTE]
-> In questo articolo [Visual Studio Code](http://code.visualstudio.com) viene usato su macOS.
+> In questo articolo [Visual Studio Code](https://code.visualstudio.com) viene usato su macOS.
 
 ## <a name="prerequisites"></a>Prerequisiti
 
 Installare [.NET Core SDK](https://www.microsoft.com/net/core). .NET Core SDK include la versione più recente del framework e del runtime di .NET Core.
 
-Installare [Visual Studio Code](http://code.visualstudio.com). Nel corso di questo articolo, si installeranno anche le estensioni di Visual Studio Code che migliorano l'esperienza di sviluppo in .NET Core.
+Installare [Visual Studio Code](https://code.visualstudio.com). Nel corso di questo articolo, si installeranno anche le estensioni di Visual Studio Code che migliorano l'esperienza di sviluppo in .NET Core.
 
 Installare l'estensione C# di Visual Studio Code aprendo Visual Studio Code e premendo <kbd>F1</kbd> per aprire la tavolozza di Visual Studio Code. Digitare **ext install** per visualizzare l'elenco delle estensioni. Selezionare l'estensione C#. Riavviare Visual Studio Code per attivare l'estensione. Per altre informazioni, vedere la [documentazione dell'estensione C# di Visual Studio Code](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md).
 

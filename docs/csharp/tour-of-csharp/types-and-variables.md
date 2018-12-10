@@ -3,12 +3,12 @@ title: Tipi e variabili C# - Panoramica del linguaggio C#
 description: Informazioni sulla definizione di tipi e la dichiarazione di variabili nel linguaggio C#
 ms.date: 08/10/2016
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.openlocfilehash: 752ff490ec91919dc54539c3e39f6d0c527d6260
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 34b724dff17feb699d797e9ed9aea25d85d8c5a9
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352135"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129519"
 ---
 # <a name="types-and-variables"></a>Tipi e variabili
 
@@ -116,5 +116,5 @@ In C# sono disponibili diversi tipi di *variabili*, inclusi campi, elementi matr
     - Riferimento `null` oppure riferimento a un'istanza di un tipo delegato compatibile
 
 >[!div class="step-by-step"]
-[Precedente](program-structure.md)
-[Successivo](expressions.md)
+>[Precedente](program-structure.md)
+>[Successivo](expressions.md)

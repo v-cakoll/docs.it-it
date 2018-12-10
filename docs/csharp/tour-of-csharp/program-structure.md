@@ -3,12 +3,12 @@ title: Struttura del programma C# - Panoramica del linguaggio C#
 description: Informazioni sui blocchi predefiniti di un programma C#
 ms.date: 08/10/2016
 ms.assetid: 984f0314-507f-47a0-af56-9011243f5e65
-ms.openlocfilehash: 9efd2542d449da5ddcd9d3170c2e598282a34c39
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: de10cd000b4028a66ce6dd6f21e39c013e38ecd2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34565751"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53131027"
 ---
 # <a name="program-structure"></a>Struttura del programma
 
@@ -52,5 +52,5 @@ In questo modo verrà creato un assembly eseguibile denominato `example.exe` che
 C# consente di archiviare il testo di origine di un programma in vari file di origine. Quando viene compilato un programma C# costituito da più file, tutti i file di origine vengono elaborati insieme e possono fare riferimento l'uno all'altro. A livello concettuale è come se tutti i file di origine fossero concatenati in un unico grande file prima di essere elaborati. Le dichiarazioni con prototipo non sono mai necessarie in C# perché, tranne che in rare eccezioni, l'ordine di dichiarazione non è significativo. C# non limita un file di origine alla dichiarazione di un solo tipo pubblico e non richiede che il nome del file di origine corrisponda a un tipo dichiarato nel file di origine.
 
 >[!div class="step-by-step"]
-[Precedente](index.md)
-[Successivo](types-and-variables.md)
+>[Precedente](index.md)
+>[Successivo](types-and-variables.md)

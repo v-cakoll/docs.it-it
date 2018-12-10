@@ -4,11 +4,11 @@ description: Informazioni su come caricare dati da più file per l'uso nella cre
 ms.date: 11/07/2018
 ms.custom: mvc,how-to
 ms.openlocfilehash: c9b34bd6bcbac62e9f9c33226f5d0feb41168392
-ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52672405"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150732"
 ---
 # <a name="load-data-from-multiple-files-for-machine-learning-processing---mlnet"></a>Caricare dati da più file per l'elaborazione dell'apprendimento automatico - ML.NET
 

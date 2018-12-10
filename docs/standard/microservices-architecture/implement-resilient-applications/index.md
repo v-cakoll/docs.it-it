@@ -4,12 +4,12 @@ description: Architettura di microservizi .NET per le applicazioni .NET incluse 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 06/08/2018
-ms.openlocfilehash: dc0db8f0cdfa77bcca467c3c632b3d93de8851d8
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: ec79221f0238d61f1ca1b2b7c58b1e16be7f4df4
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37875124"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53130794"
 ---
 # <a name="implementing-resilient-applications"></a>Implementazione di applicazioni resilienti
 
@@ -21,7 +21,6 @@ La resilienza è la capacità di correggere gli errori e continuare a funzionare
 
 I diversi componenti singoli dell'applicazione devono inoltre incorporare le funzionalità di monitoraggio dell'integrità. Seguendo le indicazioni riportate in questo capitolo, è possibile creare un'applicazione in grado di funzionare senza problemi malgrado tempi di inattività temporanei o le normali interruzioni che si verificano nelle distribuzioni complesse e basate su cloud.
 
-
 >[!div class="step-by-step"]
-[Precedente](../microservice-ddd-cqrs-patterns/microservice-application-layer-implementation-web-api.md)
-[Successivo](handle-partial-failure.md)
+>[Precedente](../microservice-ddd-cqrs-patterns/microservice-application-layer-implementation-web-api.md)
+>[Successivo](handle-partial-failure.md)

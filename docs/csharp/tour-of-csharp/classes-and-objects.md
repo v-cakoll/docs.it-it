@@ -3,12 +3,12 @@ title: Classi e oggetti in C# - Panoramica del linguaggio C#
 description: Introduzione a C# Leggere questa panoramica su classi, oggetti ed ereditarietà
 ms.date: 08/10/2016
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
-ms.openlocfilehash: 8e6b327c8391c3a3c97f7806f87dbb9656f0d00d
-ms.sourcegitcommit: 736ec4d3e2c74895b47a0d36126657b95da383c9
+ms.openlocfilehash: 51661a0728e9a68c0c646f493b648120897f95fd
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/30/2018
-ms.locfileid: "37140281"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147548"
 ---
 # <a name="classes-and-objects"></a>Classi e oggetti
 
@@ -294,5 +294,5 @@ Al Garbage Collector viene lasciata ampia scelta per decidere quando raccogliere
 L'istruzione `using` offre una soluzione più efficace per l'eliminazione di oggetti.
 
 >[!div class="step-by-step"]
-[Precedente](statements.md)
-[Successivo](structs.md)
+>[Precedente](statements.md)
+>[Successivo](structs.md)

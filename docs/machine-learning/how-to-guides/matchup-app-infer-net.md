@@ -2,20 +2,19 @@
 title: Creare un'app elenco di corrispondenze di gioco con Infer.NET e la programmazione probabilistica
 description: Informazioni su come usare la programmazione probabilistica con Infer.NET per creare un'app elenco di corrispondenze di gioco basata su una versione semplificata di TrueSkill.
 ms.date: 10/04/2018
-ms.topic: how-to
-ms.custom: mvc
-ms.openlocfilehash: 990fd60d809c893730bf2682946f89dbe59f36a5
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.custom: mvc,how-to
+ms.openlocfilehash: ceeb0f43e03c7ce93f105498f44bf243eec86bbf
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "49401697"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152468"
 ---
 # <a name="create-a-game-match-up-list-app-with-infernet-and-probabilistic-programming"></a>Creare un'app elenco di corrispondenze di gioco con Infer.NET e la programmazione probabilistica
 
 Questa guida pratica descrive la programmazione probabilistica tramite Infer.NET. La programmazione probabilistica è un approccio di apprendimento automatico in cui modelli personalizzati vengono espressi come programmi. Permette di integrare informazioni specifiche di un dominio nei modelli e rendere il sistema di apprendimento automatico maggiormente interpretabile. Supporta anche l'inferenza online, ovvero il processo di apprendere man mano che arrivano nuovi dati. Infer.NET viene usato in diversi prodotti Microsoft, tra cui Azure, Xbox e Bing.
 
-## <a name="what-is-probabilistic-programming"></a>Che cos'è la programmazione probabilistica? 
+## <a name="what-is-probabilistic-programming"></a>Che cos'è la programmazione probabilistica?
 
 La programmazione probabilistica permette di creare modelli statistici di processi reali. 
 

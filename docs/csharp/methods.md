@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: e4a4d58f154116974c7314e84f625b338cbfe204
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: 73cd8b703fe30e622a849fa20e33b529ea3db61d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50038305"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127446"
 ---
 # <a name="methods"></a>Metodi #
 
@@ -158,7 +158,7 @@ L'esempio seguente definisce un metodo, `ExampleMethod`, con un parametro obblig
 
 [!code-csharp[csSnippets.Methods#21](../../samples/snippets/csharp/concepts/methods/optional1.cs#21)]
 
-Se viene richiamato un metodo con più argomenti facoltativi usando argomenti posizionali, il chiamante deve specificare un argomento per tutti i parametri facoltativi, dal primo all'ultimo parametro per il quale è specificato un argomento. Nel caso del metodo `ExampleMethod`, ad esempio, se il chiamante specifica un argomento per il parametro `description`, deve specificarne uno anche per il parametro `optionalInt`. `opt.ExampleMethod(2, 2, "Addition of 2 and 2");` è una chiamata a un metodo valido; `opt.ExampleMethod(2, , "Addition of 2 and 0);` genera un errore di compilazione "Argomento mancante".
+Se viene richiamato un metodo con più argomenti facoltativi usando argomenti posizionali, il chiamante deve specificare un argomento per tutti i parametri facoltativi, dal primo all'ultimo parametro per il quale è specificato un argomento. Nel caso del metodo `ExampleMethod`, ad esempio, se il chiamante specifica un argomento per il parametro `description`, deve specificarne uno anche per il parametro `optionalInt`. `opt.ExampleMethod(2, 2, "Addition of 2 and 2");` è una chiamata a un metodo valido; `opt.ExampleMethod(2, , "Addition of 2 and 0");` genera un errore di compilazione "Argomento mancante".
 
 Se un metodo viene chiamato usando argomenti denominati o una combinazione di argomenti posizionali e denominati, il chiamante può omettere tutti gli argomenti successivi all'ultimo argomento posizionale nella chiamata al metodo.
 

@@ -4,12 +4,12 @@ description: Architettura dei microservizi .NET per le applicazioni .NET in cont
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 08/31/2018
-ms.openlocfilehash: 7113a229726368a65f4372b14c28da1165c22eee
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8304e4d0b06e7137c42e669191c4e9f0dd946dbb
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193916"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152682"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>Microservizi .NET: architettura per le applicazioni .NET incluse in contenitori
 
@@ -179,6 +179,5 @@ Il logo Docker con la balena è un marchio registrato di Docker, Inc. Usato su a
 
 Tutti gli altri marchi e logo appartengono ai rispettivi proprietari.
 
-
 >[!div class="step-by-step"]
-[avanti](container-docker-introduction/index.md)
+>[avanti](container-docker-introduction/index.md)
