@@ -4,24 +4,24 @@ description: Informazioni su come usare i normalizzatori per pre-elaborare i dat
 ms.date: 11/07/2018
 ms.custom: mvc,how-to
 ms.openlocfilehash: c8b959904705e996c97bdcd8b3444e754d14d046
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297618"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148834"
 ---
-# <a name="preprocess-training-data-with-normalizers-to-use-in-data-processing---mlnet"></a><span data-ttu-id="95146-103">Pre-elaborare i dati di training con normalizzatori da usare nell'elaborazione dei dati - ML.NET</span><span class="sxs-lookup"><span data-stu-id="95146-103">Preprocess training data with normalizers to use in data processing - ML.NET</span></span>
+# <a name="preprocess-training-data-with-normalizers-to-use-in-data-processing---mlnet"></a><span data-ttu-id="51c31-103">Pre-elaborare i dati di training con normalizzatori da usare nell'elaborazione dei dati - ML.NET</span><span class="sxs-lookup"><span data-stu-id="51c31-103">Preprocess training data with normalizers to use in data processing - ML.NET</span></span>
 
-<span data-ttu-id="95146-104">ML.NET espone alcuni [algoritmi parametrici e non parametrici](https://machinelearningmastery.com/parametric-and-nonparametric-machine-learning-algorithms/).</span><span class="sxs-lookup"><span data-stu-id="95146-104">ML.NET exposes a number of [parametric and non-parametric algorithms](https://machinelearningmastery.com/parametric-and-nonparametric-machine-learning-algorithms/).</span></span>
+<span data-ttu-id="51c31-104">ML.NET espone alcuni [algoritmi parametrici e non parametrici](https://machinelearningmastery.com/parametric-and-nonparametric-machine-learning-algorithms/).</span><span class="sxs-lookup"><span data-stu-id="51c31-104">ML.NET exposes a number of [parametric and non-parametric algorithms](https://machinelearningmastery.com/parametric-and-nonparametric-machine-learning-algorithms/).</span></span>
 
-<span data-ttu-id="95146-105">La scelta del normalizzatore **non** è importante quanto l'**uso** di un normalizzatore per il training di modelli parametrici lineari o di altro tipo.</span><span class="sxs-lookup"><span data-stu-id="95146-105">It's **not** as important which normalizer you choose as it is to **use** a normalizer when training linear or other parametric models.</span></span>
+<span data-ttu-id="51c31-105">La scelta del normalizzatore **non** è importante quanto l'**uso** di un normalizzatore per il training di modelli parametrici lineari o di altro tipo.</span><span class="sxs-lookup"><span data-stu-id="51c31-105">It's **not** as important which normalizer you choose as it is to **use** a normalizer when training linear or other parametric models.</span></span>
 
-<span data-ttu-id="95146-106">Includere sempre il normalizzatore direttamente nella pipeline di apprendimento di ML.NET in modo che:</span><span class="sxs-lookup"><span data-stu-id="95146-106">Always include the normalizer directly in the ML.NET learning pipeline, so it:</span></span>
+<span data-ttu-id="51c31-106">Includere sempre il normalizzatore direttamente nella pipeline di apprendimento di ML.NET in modo che:</span><span class="sxs-lookup"><span data-stu-id="51c31-106">Always include the normalizer directly in the ML.NET learning pipeline, so it:</span></span>
 
-- <span data-ttu-id="95146-107">il training venga eseguito solo sui dati di training e non sui dati di test,</span><span class="sxs-lookup"><span data-stu-id="95146-107">is only trained on the training data, and not on your test data,</span></span>
-- <span data-ttu-id="95146-108">venga correttamente applicato a tutti i nuovi dati in ingresso, senza che siano necessarie altre operazioni di pre-elaborazione in fase di stima.</span><span class="sxs-lookup"><span data-stu-id="95146-108">is correctly applied to all the new incoming data, without the need for extra pre-processing at prediction time.</span></span>
+- <span data-ttu-id="51c31-107">il training venga eseguito solo sui dati di training e non sui dati di test,</span><span class="sxs-lookup"><span data-stu-id="51c31-107">is only trained on the training data, and not on your test data,</span></span>
+- <span data-ttu-id="51c31-108">venga correttamente applicato a tutti i nuovi dati in ingresso, senza che siano necessarie altre operazioni di pre-elaborazione in fase di stima.</span><span class="sxs-lookup"><span data-stu-id="51c31-108">is correctly applied to all the new incoming data, without the need for extra pre-processing at prediction time.</span></span>
 
-<span data-ttu-id="95146-109">Di seguito è riportato un frammento di codice che illustra la normalizzazione nelle pipeline di apprendimento.</span><span class="sxs-lookup"><span data-stu-id="95146-109">Here's a snippet of code that demonstrates normalization in learning pipelines.</span></span> <span data-ttu-id="95146-110">Presuppone che venga usato il set di dati Iris:</span><span class="sxs-lookup"><span data-stu-id="95146-110">It assumes the Iris dataset:</span></span>
+<span data-ttu-id="51c31-109">Di seguito è riportato un frammento di codice che illustra la normalizzazione nelle pipeline di apprendimento.</span><span class="sxs-lookup"><span data-stu-id="51c31-109">Here's a snippet of code that demonstrates normalization in learning pipelines.</span></span> <span data-ttu-id="51c31-110">Presuppone che venga usato il set di dati Iris:</span><span class="sxs-lookup"><span data-stu-id="51c31-110">It assumes the Iris dataset:</span></span>
 
 ```csharp
 // Create a new context for ML.NET operations. It can be used for exception tracking and logging, 

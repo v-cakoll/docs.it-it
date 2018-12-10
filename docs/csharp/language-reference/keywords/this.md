@@ -1,5 +1,5 @@
 ---
-title: this (Riferimenti per C#)
+title: Parola chiave this (Riferimenti per C#)
 description: Parola chiave this (Riferimenti per C#)
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,49 +8,52 @@ f1_keywords:
 helpviewer_keywords:
 - this keyword [C#]
 ms.assetid: d4f827fe-4710-410b-89b8-867dad44b8a3
-ms.openlocfilehash: df1bf6a3e6d24b231bf5e3c7a960f49084c4e53a
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 52e7fce0ebeeccfbf5f56dbbcade9fae2890dfe1
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48026568"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53130814"
 ---
-# <a name="this-c-reference"></a><span data-ttu-id="1d432-103">this (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="1d432-103">this (C# Reference)</span></span>
-<span data-ttu-id="1d432-104">La parola chiave `this` fa riferimento all'istanza corrente della classe e viene anche usata come modificatore del primo parametro di un metodo di estensione.</span><span class="sxs-lookup"><span data-stu-id="1d432-104">The `this` keyword refers to the current instance of the class and is also used as a modifier of the first parameter of an extension method.</span></span>  
-  
-> [!NOTE]
->  <span data-ttu-id="1d432-105">Questo articolo illustra l'uso di `this` con istanze della classe.</span><span class="sxs-lookup"><span data-stu-id="1d432-105">This article discusses the use of `this` with class instances.</span></span> <span data-ttu-id="1d432-106">Per altre informazioni sull'uso nei metodi di estensione, vedere [Metodi di estensione](../../../csharp/programming-guide/classes-and-structs/extension-methods.md).</span><span class="sxs-lookup"><span data-stu-id="1d432-106">For more information about its use in extension methods, see [Extension Methods](../../../csharp/programming-guide/classes-and-structs/extension-methods.md).</span></span>  
-  
- <span data-ttu-id="1d432-107">Di seguito sono riportati gli usi comuni di `this`:</span><span class="sxs-lookup"><span data-stu-id="1d432-107">The following are common uses of `this`:</span></span>  
-  
--   <span data-ttu-id="1d432-108">Per qualificare i membri nascosti da nomi simili, ad esempio:</span><span class="sxs-lookup"><span data-stu-id="1d432-108">To qualify members hidden by similar names, for example:</span></span>  
-  
- [!code-csharp[csrefKeywordsAccess#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/this_1.cs)]  
-  
--   <span data-ttu-id="1d432-109">Per passare un oggetto come parametro ad altri metodi, ad esempio:</span><span class="sxs-lookup"><span data-stu-id="1d432-109">To pass an object as a parameter to other methods, for example:</span></span>  
-  
-    ```csharp  
-    CalcTax(this);  
-    ```  
-  
--   <span data-ttu-id="1d432-110">Per dichiarare gli indicizzatori, ad esempio:</span><span class="sxs-lookup"><span data-stu-id="1d432-110">To declare indexers, for example:</span></span>  
-  
- [!code-csharp[csrefKeywordsAccess#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/this_2.cs)]  
-  
- <span data-ttu-id="1d432-111">Le funzioni del membro statico, perché esistono a livello di classe e non come parte di un oggetto, non dispongono di un puntatore `this`.</span><span class="sxs-lookup"><span data-stu-id="1d432-111">Static member functions, because they exist at the class level and not as part of an object, do not have a `this` pointer.</span></span> <span data-ttu-id="1d432-112">È un errore fare riferimento a `this` in un metodo statico.</span><span class="sxs-lookup"><span data-stu-id="1d432-112">It is an error to refer to `this` in a static method.</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="1d432-113">Esempio</span><span class="sxs-lookup"><span data-stu-id="1d432-113">Example</span></span>  
- <span data-ttu-id="1d432-114">In questo esempio, `this` viene usato per qualificare i membri della classe `Employee`, `name` e `alias`, che sono nascosti da nomi simili.</span><span class="sxs-lookup"><span data-stu-id="1d432-114">In this example, `this` is used to qualify the `Employee` class members, `name` and `alias`, which are hidden by similar names.</span></span> <span data-ttu-id="1d432-115">Viene anche usato per passare un oggetto al metodo `CalcTax`, che appartiene a un'altra classe.</span><span class="sxs-lookup"><span data-stu-id="1d432-115">It is also used to pass an object to the method `CalcTax`, which belongs to another class.</span></span>  
-  
- [!code-csharp[csrefKeywordsAccess#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/this_3.cs)]  
-  
-## <a name="c-language-specification"></a><span data-ttu-id="1d432-116">Specifiche del linguaggio C#</span><span class="sxs-lookup"><span data-stu-id="1d432-116">C# Language Specification</span></span>  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a><span data-ttu-id="1d432-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="1d432-117">See Also</span></span>
+# <a name="this-c-reference"></a><span data-ttu-id="8ed02-103">this (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="8ed02-103">this (C# Reference)</span></span>
 
-- [<span data-ttu-id="1d432-118">Riferimenti per C#</span><span class="sxs-lookup"><span data-stu-id="1d432-118">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="1d432-119">Guida per programmatori C#</span><span class="sxs-lookup"><span data-stu-id="1d432-119">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="1d432-120">Parole chiave di C#</span><span class="sxs-lookup"><span data-stu-id="1d432-120">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
-- [<span data-ttu-id="1d432-121">base</span><span class="sxs-lookup"><span data-stu-id="1d432-121">base</span></span>](../../../csharp/language-reference/keywords/base.md)  
-- [<span data-ttu-id="1d432-122">Metodi</span><span class="sxs-lookup"><span data-stu-id="1d432-122">Methods</span></span>](../../../csharp/programming-guide/classes-and-structs/methods.md)
+<span data-ttu-id="8ed02-104">La parola chiave `this` fa riferimento all'istanza corrente della classe e viene anche usata come modificatore del primo parametro di un metodo di estensione.</span><span class="sxs-lookup"><span data-stu-id="8ed02-104">The `this` keyword refers to the current instance of the class and is also used as a modifier of the first parameter of an extension method.</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="8ed02-105">Questo articolo illustra l'uso di `this` con istanze della classe.</span><span class="sxs-lookup"><span data-stu-id="8ed02-105">This article discusses the use of `this` with class instances.</span></span> <span data-ttu-id="8ed02-106">Per altre informazioni sull'uso nei metodi di estensione, vedere [Metodi di estensione](../../../csharp/programming-guide/classes-and-structs/extension-methods.md).</span><span class="sxs-lookup"><span data-stu-id="8ed02-106">For more information about its use in extension methods, see [Extension Methods](../../../csharp/programming-guide/classes-and-structs/extension-methods.md).</span></span>
+
+<span data-ttu-id="8ed02-107">Di seguito sono riportati gli usi comuni di `this`:</span><span class="sxs-lookup"><span data-stu-id="8ed02-107">The following are common uses of `this`:</span></span>
+
+- <span data-ttu-id="8ed02-108">Per qualificare i membri nascosti da nomi simili, ad esempio:</span><span class="sxs-lookup"><span data-stu-id="8ed02-108">To qualify members hidden by similar names, for example:</span></span>
+
+  [!code-csharp[csrefKeywordsAccess#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsAccess/CS/csrefKeywordsAccess.cs#4)]  
+
+- <span data-ttu-id="8ed02-109">Per passare un oggetto come parametro ad altri metodi, ad esempio:</span><span class="sxs-lookup"><span data-stu-id="8ed02-109">To pass an object as a parameter to other methods, for example:</span></span>
+
+  ```csharp
+  CalcTax(this);
+  ```
+
+- <span data-ttu-id="8ed02-110">Per dichiarare gli indicizzatori, ad esempio:</span><span class="sxs-lookup"><span data-stu-id="8ed02-110">To declare indexers, for example:</span></span>
+
+  [!code-csharp[csrefKeywordsAccess#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsAccess/CS/csrefKeywordsAccess.cs#5)]
+
+<span data-ttu-id="8ed02-111">Le funzioni del membro statico, perché esistono a livello di classe e non come parte di un oggetto, non dispongono di un puntatore `this`.</span><span class="sxs-lookup"><span data-stu-id="8ed02-111">Static member functions, because they exist at the class level and not as part of an object, do not have a `this` pointer.</span></span> <span data-ttu-id="8ed02-112">È un errore fare riferimento a `this` in un metodo statico.</span><span class="sxs-lookup"><span data-stu-id="8ed02-112">It is an error to refer to `this` in a static method.</span></span>
+
+## <a name="example"></a><span data-ttu-id="8ed02-113">Esempio</span><span class="sxs-lookup"><span data-stu-id="8ed02-113">Example</span></span>
+
+<span data-ttu-id="8ed02-114">In questo esempio, `this` viene usato per qualificare i membri della classe `Employee`, `name` e `alias`, che sono nascosti da nomi simili.</span><span class="sxs-lookup"><span data-stu-id="8ed02-114">In this example, `this` is used to qualify the `Employee` class members, `name` and `alias`, which are hidden by similar names.</span></span> <span data-ttu-id="8ed02-115">Viene anche usato per passare un oggetto al metodo `CalcTax`, che appartiene a un'altra classe.</span><span class="sxs-lookup"><span data-stu-id="8ed02-115">It is also used to pass an object to the method `CalcTax`, which belongs to another class.</span></span>
+
+[!code-csharp[csrefKeywordsAccess#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsAccess/CS/csrefKeywordsAccess.cs#3)]
+
+## <a name="c-language-specification"></a><span data-ttu-id="8ed02-116">Specifiche del linguaggio C#</span><span class="sxs-lookup"><span data-stu-id="8ed02-116">C# language specification</span></span>
+
+[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+
+## <a name="see-also"></a><span data-ttu-id="8ed02-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="8ed02-117">See also</span></span>
+
+- [<span data-ttu-id="8ed02-118">Riferimenti per C#</span><span class="sxs-lookup"><span data-stu-id="8ed02-118">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="8ed02-119">Guida per programmatori C#</span><span class="sxs-lookup"><span data-stu-id="8ed02-119">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="8ed02-120">Parole chiave di C#</span><span class="sxs-lookup"><span data-stu-id="8ed02-120">C# Keywords</span></span>](index.md)
+- [<span data-ttu-id="8ed02-121">base</span><span class="sxs-lookup"><span data-stu-id="8ed02-121">base</span></span>](base.md)
+- [<span data-ttu-id="8ed02-122">Metodi</span><span class="sxs-lookup"><span data-stu-id="8ed02-122">Methods</span></span>](../../programming-guide/classes-and-structs/methods.md)

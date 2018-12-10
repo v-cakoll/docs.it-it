@@ -3,112 +3,112 @@ title: Istruzioni C# - Panoramica del linguaggio C#
 description: Le azioni di un programma C# vengono create mediante istruzioni
 ms.date: 11/06/2016
 ms.assetid: 5409c379-5622-4fae-88b5-1654276ea8d4
-ms.openlocfilehash: 2f25c07ccc0af27a503465b9414bf607c61d1b2e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 75f6c7bb29af7f9c809c5278c97d21683166a8e5
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351979"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154294"
 ---
-# <a name="statements"></a><span data-ttu-id="e5020-103">Istruzioni</span><span class="sxs-lookup"><span data-stu-id="e5020-103">Statements</span></span>
+# <a name="statements"></a><span data-ttu-id="a7ca9-103">Istruzioni</span><span class="sxs-lookup"><span data-stu-id="a7ca9-103">Statements</span></span>
 
-<span data-ttu-id="e5020-104">Le azioni di un programma vengono espresse mediante *istruzioni*.</span><span class="sxs-lookup"><span data-stu-id="e5020-104">The actions of a program are expressed using *statements*.</span></span> <span data-ttu-id="e5020-105">C# supporta numerosi tipi di istruzioni, alcune delle quali sono definite in termini di istruzioni nidificate.</span><span class="sxs-lookup"><span data-stu-id="e5020-105">C# supports several different kinds of statements, a number of which are defined in terms of embedded statements.</span></span>
+<span data-ttu-id="a7ca9-104">Le azioni di un programma vengono espresse mediante *istruzioni*.</span><span class="sxs-lookup"><span data-stu-id="a7ca9-104">The actions of a program are expressed using *statements*.</span></span> <span data-ttu-id="a7ca9-105">C# supporta numerosi tipi di istruzioni, alcune delle quali sono definite in termini di istruzioni nidificate.</span><span class="sxs-lookup"><span data-stu-id="a7ca9-105">C# supports several different kinds of statements, a number of which are defined in terms of embedded statements.</span></span>
 
-<span data-ttu-id="e5020-106">Un *blocco* consente di scrivere più istruzioni nei contesti in cui ne è consentita una sola.</span><span class="sxs-lookup"><span data-stu-id="e5020-106">A *block* permits multiple statements to be written in contexts where a single statement is allowed.</span></span> <span data-ttu-id="e5020-107">Un blocco è costituito da un elenco di istruzioni scritte tra i delimitatori `{` e `}`.</span><span class="sxs-lookup"><span data-stu-id="e5020-107">A block consists of a list of statements written between the delimiters `{` and `}`.</span></span>
+<span data-ttu-id="a7ca9-106">Un *blocco* consente di scrivere più istruzioni nei contesti in cui ne è consentita una sola.</span><span class="sxs-lookup"><span data-stu-id="a7ca9-106">A *block* permits multiple statements to be written in contexts where a single statement is allowed.</span></span> <span data-ttu-id="a7ca9-107">Un blocco è costituito da un elenco di istruzioni scritte tra i delimitatori `{` e `}`.</span><span class="sxs-lookup"><span data-stu-id="a7ca9-107">A block consists of a list of statements written between the delimiters `{` and `}`.</span></span>
 
-<span data-ttu-id="e5020-108">Le *istruzioni di dichiarazione* vengono usate per dichiarare le costanti e le variabili locali.</span><span class="sxs-lookup"><span data-stu-id="e5020-108">*Declaration statements* are used to declare local variables and constants.</span></span>
+<span data-ttu-id="a7ca9-108">Le *istruzioni di dichiarazione* vengono usate per dichiarare le costanti e le variabili locali.</span><span class="sxs-lookup"><span data-stu-id="a7ca9-108">*Declaration statements* are used to declare local variables and constants.</span></span>
 
-<span data-ttu-id="e5020-109">Le *istruzioni di espressione* vengono usate per valutare le espressioni.</span><span class="sxs-lookup"><span data-stu-id="e5020-109">*Expression statements* are used to evaluate expressions.</span></span> <span data-ttu-id="e5020-110">Le espressioni che possono essere usate come istruzioni includono le chiamate ai metodi, le allocazioni di oggetti mediante l'operatore `new`, le assegnazioni mediante `=` e gli operatori di assegnazione composta, le operazioni di incremento e decremento mediante gli operatori `++` e `--` e le espressioni `await`.</span><span class="sxs-lookup"><span data-stu-id="e5020-110">Expressions that can be used as statements include method invocations, object allocations using the `new` operator, assignments using `=` and the compound assignment operators, increment and decrement operations using the `++` and `--` operators and `await` expressions.</span></span>
+<span data-ttu-id="a7ca9-109">Le *istruzioni di espressione* vengono usate per valutare le espressioni.</span><span class="sxs-lookup"><span data-stu-id="a7ca9-109">*Expression statements* are used to evaluate expressions.</span></span> <span data-ttu-id="a7ca9-110">Le espressioni che possono essere usate come istruzioni includono le chiamate ai metodi, le allocazioni di oggetti mediante l'operatore `new`, le assegnazioni mediante `=` e gli operatori di assegnazione composta, le operazioni di incremento e decremento mediante gli operatori `++` e `--` e le espressioni `await`.</span><span class="sxs-lookup"><span data-stu-id="a7ca9-110">Expressions that can be used as statements include method invocations, object allocations using the `new` operator, assignments using `=` and the compound assignment operators, increment and decrement operations using the `++` and `--` operators and `await` expressions.</span></span>
 
-<span data-ttu-id="e5020-111">Le *istruzioni di selezione* vengono usate per selezionare una tra più istruzioni che è possibile eseguire sulla base del valore di alcune espressioni.</span><span class="sxs-lookup"><span data-stu-id="e5020-111">*Selection statements* are used to select one of a number of possible statements for execution based on the value of some expression.</span></span> <span data-ttu-id="e5020-112">In questo gruppo sono incluse le istruzioni `if` e `switch`.</span><span class="sxs-lookup"><span data-stu-id="e5020-112">In this group are the `if` and `switch` statements.</span></span>
+<span data-ttu-id="a7ca9-111">Le *istruzioni di selezione* vengono usate per selezionare una tra più istruzioni che è possibile eseguire sulla base del valore di alcune espressioni.</span><span class="sxs-lookup"><span data-stu-id="a7ca9-111">*Selection statements* are used to select one of a number of possible statements for execution based on the value of some expression.</span></span> <span data-ttu-id="a7ca9-112">In questo gruppo sono incluse le istruzioni `if` e `switch`.</span><span class="sxs-lookup"><span data-stu-id="a7ca9-112">In this group are the `if` and `switch` statements.</span></span>
 
-<span data-ttu-id="e5020-113">Le *istruzioni di iterazione* vengono usate per eseguire più volte un'istruzione nidificata.</span><span class="sxs-lookup"><span data-stu-id="e5020-113">*Iteration statements* are used to execute repeatedly an embedded statement.</span></span> <span data-ttu-id="e5020-114">In questo gruppo sono incluse le istruzioni `while`, `do`, `for` e `foreach`.</span><span class="sxs-lookup"><span data-stu-id="e5020-114">In this group are the `while`, `do`, `for`, and `foreach` statements.</span></span>
+<span data-ttu-id="a7ca9-113">Le *istruzioni di iterazione* vengono usate per eseguire più volte un'istruzione nidificata.</span><span class="sxs-lookup"><span data-stu-id="a7ca9-113">*Iteration statements* are used to execute repeatedly an embedded statement.</span></span> <span data-ttu-id="a7ca9-114">In questo gruppo sono incluse le istruzioni `while`, `do`, `for` e `foreach`.</span><span class="sxs-lookup"><span data-stu-id="a7ca9-114">In this group are the `while`, `do`, `for`, and `foreach` statements.</span></span>
 
-<span data-ttu-id="e5020-115">Le *istruzioni di spostamento* vengono usate per trasferire il controllo.</span><span class="sxs-lookup"><span data-stu-id="e5020-115">*Jump statements* are used to transfer control.</span></span> <span data-ttu-id="e5020-116">In questo gruppo sono incluse le istruzioni `break`, `continue`, `goto`, `throw`, `return` e `yield`.</span><span class="sxs-lookup"><span data-stu-id="e5020-116">In this group are the `break`, `continue`, `goto`, `throw`, `return`, and `yield` statements.</span></span>
+<span data-ttu-id="a7ca9-115">Le *istruzioni di spostamento* vengono usate per trasferire il controllo.</span><span class="sxs-lookup"><span data-stu-id="a7ca9-115">*Jump statements* are used to transfer control.</span></span> <span data-ttu-id="a7ca9-116">In questo gruppo sono incluse le istruzioni `break`, `continue`, `goto`, `throw`, `return` e `yield`.</span><span class="sxs-lookup"><span data-stu-id="a7ca9-116">In this group are the `break`, `continue`, `goto`, `throw`, `return`, and `yield` statements.</span></span>
 
-<span data-ttu-id="e5020-117">L'istruzione `try`...`catch` viene usata per rilevare le eccezioni che si verificano durante l'esecuzione di un blocco, mentre l'istruzione `try`...`finally` viene usata per specificare il codice di finalizzazione che viene eseguito sempre, indipendentemente dal fatto che si sia verificata un'eccezione.</span><span class="sxs-lookup"><span data-stu-id="e5020-117">The `try`...`catch` statement is used to catch exceptions that occur during execution of a block, and the `try`...`finally` statement is used to specify finalization code that is always executed, whether an exception occurred or not.</span></span>
+<span data-ttu-id="a7ca9-117">L'istruzione `try`...`catch` viene usata per rilevare le eccezioni che si verificano durante l'esecuzione di un blocco, mentre l'istruzione `try`...`finally` viene usata per specificare il codice di finalizzazione che viene eseguito sempre, indipendentemente dal fatto che si sia verificata un'eccezione.</span><span class="sxs-lookup"><span data-stu-id="a7ca9-117">The `try`...`catch` statement is used to catch exceptions that occur during execution of a block, and the `try`...`finally` statement is used to specify finalization code that is always executed, whether an exception occurred or not.</span></span>
 
-<span data-ttu-id="e5020-118">Le istruzioni `checked` e `unchecked` vengono usate per verificare il contesto di controllo dell'overflow per le conversioni e le operazioni aritmetiche di tipo integrale.</span><span class="sxs-lookup"><span data-stu-id="e5020-118">The `checked` and `unchecked` statements are used to control the overflow-checking context for integral-type arithmetic operations and conversions.</span></span>
+<span data-ttu-id="a7ca9-118">Le istruzioni `checked` e `unchecked` vengono usate per verificare il contesto di controllo dell'overflow per le conversioni e le operazioni aritmetiche di tipo integrale.</span><span class="sxs-lookup"><span data-stu-id="a7ca9-118">The `checked` and `unchecked` statements are used to control the overflow-checking context for integral-type arithmetic operations and conversions.</span></span>
 
-<span data-ttu-id="e5020-119">L'istruzione `lock` viene usata per ottenere il blocco a esclusione reciproca per un oggetto specificato, eseguire un'istruzione e quindi rilasciare il blocco.</span><span class="sxs-lookup"><span data-stu-id="e5020-119">The `lock` statement is used to obtain the mutual-exclusion lock for a given object, execute a statement, and then release the lock.</span></span>
+<span data-ttu-id="a7ca9-119">L'istruzione `lock` viene usata per ottenere il blocco a esclusione reciproca per un oggetto specificato, eseguire un'istruzione e quindi rilasciare il blocco.</span><span class="sxs-lookup"><span data-stu-id="a7ca9-119">The `lock` statement is used to obtain the mutual-exclusion lock for a given object, execute a statement, and then release the lock.</span></span>
 
-<span data-ttu-id="e5020-120">L'istruzione `using` viene usata per ottenere una risorsa, eseguire un'istruzione e quindi eliminare la risorsa.</span><span class="sxs-lookup"><span data-stu-id="e5020-120">The `using` statement is used to obtain a resource, execute a statement, and then dispose of that resource.</span></span>
+<span data-ttu-id="a7ca9-120">L'istruzione `using` viene usata per ottenere una risorsa, eseguire un'istruzione e quindi eliminare la risorsa.</span><span class="sxs-lookup"><span data-stu-id="a7ca9-120">The `using` statement is used to obtain a resource, execute a statement, and then dispose of that resource.</span></span>
 
-<span data-ttu-id="e5020-121">Di seguito vengono elencati i tipi di istruzione che è possibile usare e viene offerto un esempio di ciascuna.</span><span class="sxs-lookup"><span data-stu-id="e5020-121">The following lists the kinds of statements that can be used, and provides an example for each.</span></span>
+<span data-ttu-id="a7ca9-121">Di seguito vengono elencati i tipi di istruzione che è possibile usare e viene offerto un esempio di ciascuna.</span><span class="sxs-lookup"><span data-stu-id="a7ca9-121">The following lists the kinds of statements that can be used, and provides an example for each.</span></span>
 
-* <span data-ttu-id="e5020-122">Dichiarazione di variabile locale:</span><span class="sxs-lookup"><span data-stu-id="e5020-122">Local variable declaration:</span></span>
+* <span data-ttu-id="a7ca9-122">Dichiarazione di variabile locale:</span><span class="sxs-lookup"><span data-stu-id="a7ca9-122">Local variable declaration:</span></span>
 
  [!code-csharp[Declarations](../../../samples/snippets/csharp/tour/statements/Program.cs#L9-L15)]
 
-* <span data-ttu-id="e5020-123">Dichiarazione di costante locale:</span><span class="sxs-lookup"><span data-stu-id="e5020-123">Local constant declaration:</span></span>
+* <span data-ttu-id="a7ca9-123">Dichiarazione di costante locale:</span><span class="sxs-lookup"><span data-stu-id="a7ca9-123">Local constant declaration:</span></span>
 
  [!code-csharp[ConstantDeclarations](../../../samples/snippets/csharp/tour/statements/Program.cs#L17-L22)]
 
-* <span data-ttu-id="e5020-124">Istruzione di espressione:</span><span class="sxs-lookup"><span data-stu-id="e5020-124">Expression statement:</span></span>
+* <span data-ttu-id="a7ca9-124">Istruzione di espressione:</span><span class="sxs-lookup"><span data-stu-id="a7ca9-124">Expression statement:</span></span>
 
  [!code-csharp[Expressions](../../../samples/snippets/csharp/tour/statements/Program.cs#L24-L31)]
 
-* <span data-ttu-id="e5020-125">Istruzione `if`:</span><span class="sxs-lookup"><span data-stu-id="e5020-125">`if` statement:</span></span>
+* <span data-ttu-id="a7ca9-125">Istruzione `if`:</span><span class="sxs-lookup"><span data-stu-id="a7ca9-125">`if` statement:</span></span>
 
  [!code-csharp[IfStatement](../../../samples/snippets/csharp/tour/statements/Program.cs#L33-L43)]
 
-* <span data-ttu-id="e5020-126">Istruzione `switch`:</span><span class="sxs-lookup"><span data-stu-id="e5020-126">`switch` statement:</span></span>
+* <span data-ttu-id="a7ca9-126">Istruzione `switch`:</span><span class="sxs-lookup"><span data-stu-id="a7ca9-126">`switch` statement:</span></span>
 
  [!code-csharp[SwitchStatement](../../../samples/snippets/csharp/tour/statements/Program.cs#L45-L60)]
 
-* <span data-ttu-id="e5020-127">Istruzione `while`:</span><span class="sxs-lookup"><span data-stu-id="e5020-127">`while` statement:</span></span>
+* <span data-ttu-id="a7ca9-127">Istruzione `while`:</span><span class="sxs-lookup"><span data-stu-id="a7ca9-127">`while` statement:</span></span>
 
  [!code-csharp[WhileStatement](../../../samples/snippets/csharp/tour/statements/Program.cs#L62-L70)]
 
-* <span data-ttu-id="e5020-128">Istruzione `do`:</span><span class="sxs-lookup"><span data-stu-id="e5020-128">`do` statement:</span></span>
+* <span data-ttu-id="a7ca9-128">Istruzione `do`:</span><span class="sxs-lookup"><span data-stu-id="a7ca9-128">`do` statement:</span></span>
 
  [!code-csharp[DoStatement](../../../samples/snippets/csharp/tour/statements/Program.cs#L72-L81)]
 
-* <span data-ttu-id="e5020-129">Istruzione `for`:</span><span class="sxs-lookup"><span data-stu-id="e5020-129">`for` statement:</span></span>
+* <span data-ttu-id="a7ca9-129">Istruzione `for`:</span><span class="sxs-lookup"><span data-stu-id="a7ca9-129">`for` statement:</span></span>
 
  [!code-csharp[ForStatement](../../../samples/snippets/csharp/tour/statements/Program.cs#L83-L89)]
 
-* <span data-ttu-id="e5020-130">Istruzione `foreach`:</span><span class="sxs-lookup"><span data-stu-id="e5020-130">`foreach` statement:</span></span>
+* <span data-ttu-id="a7ca9-130">Istruzione `foreach`:</span><span class="sxs-lookup"><span data-stu-id="a7ca9-130">`foreach` statement:</span></span>
 
  [!code-csharp[ForEachStatement](../../../samples/snippets/csharp/tour/statements/Program.cs#L91-L97)]
 
-* <span data-ttu-id="e5020-131">Istruzione `break`:</span><span class="sxs-lookup"><span data-stu-id="e5020-131">`break` statement:</span></span>
+* <span data-ttu-id="a7ca9-131">Istruzione `break`:</span><span class="sxs-lookup"><span data-stu-id="a7ca9-131">`break` statement:</span></span>
 
  [!code-csharp[BreakStatement](../../../samples/snippets/csharp/tour/statements/Program.cs#L99-L108)]
 
-* <span data-ttu-id="e5020-132">Istruzione `continue`:</span><span class="sxs-lookup"><span data-stu-id="e5020-132">`continue` statement:</span></span>
+* <span data-ttu-id="a7ca9-132">Istruzione `continue`:</span><span class="sxs-lookup"><span data-stu-id="a7ca9-132">`continue` statement:</span></span>
 
  [!code-csharp[ContinueStatement](../../../samples/snippets/csharp/tour/statements/Program.cs#L110-L118)]
 
-* <span data-ttu-id="e5020-133">Istruzione `goto`:</span><span class="sxs-lookup"><span data-stu-id="e5020-133">`goto` statement:</span></span>
+* <span data-ttu-id="a7ca9-133">Istruzione `goto`:</span><span class="sxs-lookup"><span data-stu-id="a7ca9-133">`goto` statement:</span></span>
 
  [!code-csharp[GotoStatement](../../../samples/snippets/csharp/tour/statements/Program.cs#L120-L129)]
 
-* <span data-ttu-id="e5020-134">Istruzione `return`:</span><span class="sxs-lookup"><span data-stu-id="e5020-134">`return` statement:</span></span>
+* <span data-ttu-id="a7ca9-134">Istruzione `return`:</span><span class="sxs-lookup"><span data-stu-id="a7ca9-134">`return` statement:</span></span>
 
  [!code-csharp[ReturnStatement](../../../samples/snippets/csharp/tour/statements/Program.cs#L131-L139)]
 
-* <span data-ttu-id="e5020-135">Istruzione `yield`:</span><span class="sxs-lookup"><span data-stu-id="e5020-135">`yield` statement:</span></span>
+* <span data-ttu-id="a7ca9-135">Istruzione `yield`:</span><span class="sxs-lookup"><span data-stu-id="a7ca9-135">`yield` statement:</span></span>
 
  [!code-csharp[YieldStatement](../../../samples/snippets/csharp/tour/statements/Program.cs#L141-L155)]
 
-* <span data-ttu-id="e5020-136">Istruzioni `throw` e istruzioni `try`:</span><span class="sxs-lookup"><span data-stu-id="e5020-136">`throw` statements and `try` statements:</span></span>
+* <span data-ttu-id="a7ca9-136">Istruzioni `throw` e istruzioni `try`:</span><span class="sxs-lookup"><span data-stu-id="a7ca9-136">`throw` statements and `try` statements:</span></span>
 
  [!code-csharp[TryThrow](../../../samples/snippets/csharp/tour/statements/Program.cs#L157-L183)]
 
-* <span data-ttu-id="e5020-137">Istruzioni `checked` e `unchecked`:</span><span class="sxs-lookup"><span data-stu-id="e5020-137">`checked` and `unchecked` statements:</span></span>
+* <span data-ttu-id="a7ca9-137">Istruzioni `checked` e `unchecked`:</span><span class="sxs-lookup"><span data-stu-id="a7ca9-137">`checked` and `unchecked` statements:</span></span>
 
  [!code-csharp[CheckedUncheckedStatement](../../../samples/snippets/csharp/tour/statements/Program.cs#L185-L196)]
 
-* <span data-ttu-id="e5020-138">Istruzione `lock`:</span><span class="sxs-lookup"><span data-stu-id="e5020-138">`lock` statement:</span></span>
+* <span data-ttu-id="a7ca9-138">Istruzione `lock`:</span><span class="sxs-lookup"><span data-stu-id="a7ca9-138">`lock` statement:</span></span>
 
  [!code-csharp[LockStatement](../../../samples/snippets/csharp/tour/statements/Program.cs#L257-L273)]
 
-* <span data-ttu-id="e5020-139">Istruzione `using`:</span><span class="sxs-lookup"><span data-stu-id="e5020-139">`using` statement:</span></span>
+* <span data-ttu-id="a7ca9-139">Istruzione `using`:</span><span class="sxs-lookup"><span data-stu-id="a7ca9-139">`using` statement:</span></span>
 
  [!code-csharp[UsingStatement](../../../samples/snippets/csharp/tour/statements/Program.cs#L198-L206)]
 
 >[!div class="step-by-step"]
-<span data-ttu-id="e5020-140">[Precedente](expressions.md)
-[Successivo](classes-and-objects.md)</span><span class="sxs-lookup"><span data-stu-id="e5020-140">[Previous](expressions.md)
+><span data-ttu-id="a7ca9-140">[Precedente](expressions.md)
+>[Successivo](classes-and-objects.md)</span><span class="sxs-lookup"><span data-stu-id="a7ca9-140">[Previous](expressions.md)
 [Next](classes-and-objects.md)</span></span>
