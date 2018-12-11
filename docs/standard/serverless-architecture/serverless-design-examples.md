@@ -4,12 +4,12 @@ description: Comprendere la varietà di scenari supportati da architetture senza
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 0261b9f17f133942d635cf331d8cef414378bd90
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: cf46c601ac6aa401c7c37bd64c1f8981589ebd2e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "49369972"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146709"
 ---
 # <a name="serverless-design-examples"></a>Esempi di progettazione senza server
 
@@ -89,5 +89,5 @@ Un gateway API fornisce un singolo punto di ingresso per i client e quindi instr
 * [Utilizzo con la modifica del supporto del feed in Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/change-feed)
 
 >[!div class="step-by-step"]
-[Precedente](serverless-architecture-considerations.md)
-[Successivo](azure-serverless-platform.md)
+>[Precedente](serverless-architecture-considerations.md)
+>[Successivo](azure-serverless-platform.md)

@@ -2,12 +2,12 @@
 title: Configurazione della serializzazione in un servizio del flusso di lavoro
 ms.date: 03/30/2017
 ms.assetid: aa70b290-a2ee-4c3c-90ea-d0a7665096ae
-ms.openlocfilehash: 67d8807e5ff45db2e8662586861d969e14ceaa8d
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 63a5860bd428fd4ce7fe01d7901427c85b2d5609
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48583710"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154112"
 ---
 # <a name="configuring-serialization-in-a-workflow-service"></a>Configurazione della serializzazione in un servizio del flusso di lavoro
 Servizi flusso di lavoro sono servizi Windows Communication Foundation (WCF) e quindi avere la possibilità di usare uno di <xref:System.Runtime.Serialization.DataContractSerializer> (predefinito) o il <xref:System.Xml.Serialization.XmlSerializer>. Durante la scrittura dei servizi non del flusso di lavoro, il tipo di serializzatore da utilizzare viene specificato nel contratto del servizio o dell'operazione. Quando si creano servizi del flusso di lavoro WCF non si specificano questi contratti nel codice, ma piuttosto si generano in fase di runtime dall'inferenza del contratto. Per altre informazioni sull'inferenza del contratto, vedere [uso di contratti nel flusso di lavoro](../../../../docs/framework/wcf/feature-details/using-contracts-in-workflow.md).  Il serializzatore viene specificato tramite la proprietà <xref:System.ServiceModel.Activities.Receive.SerializerOption%2A> che può essere impostata come mostrato nella finestra di progettazione nell'illustrazione seguente.  
@@ -16,7 +16,7 @@ Servizi flusso di lavoro sono servizi Windows Communication Foundation (WCF) e q
   
  Il serializzatore può essere impostato anche nel codice, come mostrato nell'esempio seguente.  
   
-```  
+```csharp  
 Receive approveExpense = new Receive  
             {  
                 OperationName = "ApproveExpense",  

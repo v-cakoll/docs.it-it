@@ -1,15 +1,15 @@
 ---
-title: 'Procedura dettagliata: generazione SQL'
+title: 'Procedura dettagliata: Generazione SQL'
 ms.date: 03/30/2017
 ms.assetid: 16c38aaa-9927-4f3c-ab0f-81636cce57a3
 ms.openlocfilehash: cbc400671e5194494772580e77316af07b5669ff
-ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52672017"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149042"
 ---
-# <a name="walkthrough-sql-generation"></a>Procedura dettagliata: generazione SQL
+# <a name="walkthrough-sql-generation"></a>Procedura dettagliata: Generazione SQL
 In questo argomento viene illustrata la modalità di generazione SQL nel [Provider di esempio](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0). Nella query Entity SQL seguente viene usato il modello incluso nel provider di esempio:  
   
 ```  
@@ -105,7 +105,7 @@ LEFT OUTER JOIN [dbo].[InternationalOrders] AS [Extent5] ON [Extent4].[OrderID] 
    ) AS [Join3] ON [Extent1].[ProductID] = [Join3].[ProductID]  
 ```  
   
-## <a name="first-phase-of-sql-generation-visiting-the-expression-tree"></a>Prima fase della generazione SQL: visita dell'albero delle espressioni  
+## <a name="first-phase-of-sql-generation-visiting-the-expression-tree"></a>Prima fase della generazione SQL: Visita dell'albero delle espressioni  
  Nella figura seguente viene illustrato lo stato vuoto iniziale del visitatore.  Nell'argomento vengono illustrate solo le proprietà che si riferiscono alla descrizione della procedura dettagliata.  
   
  ![Diagramma](../../../../../docs/framework/data/adonet/ef/media/430180f5-4fb9-4bc3-8589-d566512d9703.gif "430180f5-4fb9-4bc3-8589-d566512d9703")  
@@ -136,7 +136,7 @@ LEFT OUTER JOIN [dbo].[InternationalOrders] AS [Extent5] ON [Extent4].[OrderID] 
   
  ![Diagramma](../../../../../docs/framework/data/adonet/ef/media/1ec61ed3-fcdd-4649-9089-24385be7e423.gif "1ec61ed3-fcdd-4649-9089-24385be7e423")  
   
- Per Join3, IsParentAJoin restituisce false e deve avviare un nuovo oggetto SqlSelectStatement (SelectStatement1) e inserirlo nello stack. L'elaborazione continua come per i join precedenti, viene inserito un nuovo ambito nello stack e gli elementi figlio vengono elaborati. L'elemento figlio di sinistra è un extent (Extent3) mentre l'elemento figlio di destra è un join (Join2) che deve inoltre avviare un nuovo oggetto SqlSelectStatement: SelectStatement2. Anche gli elementi figlio di Join2 sono extent e vengono aggregati in SelectStatement2.  
+ Per Join3, IsParentAJoin restituisce false e deve avviare un nuovo oggetto SqlSelectStatement (SelectStatement1) e inserirlo nello stack. L'elaborazione continua come per i join precedenti, viene inserito un nuovo ambito nello stack e gli elementi figlio vengono elaborati. L'elemento figlio di sinistra è un Extent (Extent3) e l'elemento figlio di destra è un join (Join2) che deve inoltre avviare un nuovo oggetto SqlSelectStatement: SelectStatement2. Anche gli elementi figlio di Join2 sono extent e vengono aggregati in SelectStatement2.  
   
  Lo stato del visitatore subito dopo la visita di Join2, ma prima che ne venga eseguita la post-elaborazione (ProcessJoinInputResult), viene illustrato nella figura che segue:  
   
@@ -192,7 +192,7 @@ FROM: "[dbo].[Orders]", " AS ", <symbol_Extent4>,
 " )", " AS ", <joinSymbol_Join3>, " ON ", , , <symbol_Extent1>, ".", "[ProductID]", " = ", , <joinSymbol_Join3>, ".", <symbol_ProductID>  
 ```  
   
-### <a name="second-phase-of-sql-generation-generating-the-string-command"></a>Seconda fase della generazione SQL: generazione della stringa di comando  
+### <a name="second-phase-of-sql-generation-generating-the-string-command"></a>Seconda fase della generazione SQL: Generazione della stringa di comando  
  Nella seconda fase vengono prodotti i nomi effettivi dei simboli e vengono descritti solo i simboli che rappresentano le colonne denominate "OrderID", in quanto in questo caso è necessario risolvere un conflitto. Tali nomi sono evidenziati in SqlSelectStatement. Si noti che i suffissi usati nella figura servono solo a indicare che si tratta di istanze differenti e non per rappresentare nuovi nomi, poiché in questa fase i nomi finali (probabilmente diversi da quelli originali) non sono stati ancora assegnati.  
   
  Il primo simbolo da rinominare è <symbol_OrderID>. Il nuovo nome assegnato è "OrderID1", dove 1 è contrassegnato come ultimo suffisso usato per "OrderID" e il simbolo è contrassegnato come da non rinominare. Viene quindi individuato il primo utilizzo di <symbol_OrderID_2>. Quest'ultimo viene rinominato in modo da usare il successivo suffisso disponibile ("OrderID2") e nuovamente contrassegnato come da non rinominare, in modo che non venga rinominato al successivo utilizzo. Questa stessa procedura viene eseguita anche per <symbol_OrderID_3>.  

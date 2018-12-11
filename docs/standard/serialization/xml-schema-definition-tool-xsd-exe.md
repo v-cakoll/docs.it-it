@@ -2,12 +2,12 @@
 title: XML Schema Definition Tool (Xsd.exe)
 ms.date: 03/30/2017
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
-ms.openlocfilehash: 23dea344b123b377224aad5816137aa246b8f596
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 01f980162a2d356c6c3ff31e4a0c01644b74d461
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850863"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143935"
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>XML Schema Definition Tool (Xsd.exe)
 Lo strumento XML Schema Definition (Xsd.exe) consente di generare classi Common Language Runtime o XML Schema da file XDR, XML e XSD o da classi di un assembly di runtime.  
@@ -35,7 +35,7 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
 |Opzione|Descrizione|  
 |------------|-----------------|  
 |**/h**[**elp**]|Visualizza la sintassi e le opzioni di comando dello strumento.|  
-|**/o**[**utputdir**]**:***directory*|Specifica la directory per i file di output. Questo argomento può apparire una sola volta. Il valore predefinito è la directory corrente.|  
+|**/o**[**utputdir**]**:**_directory_|Specifica la directory per i file di output. Questo argomento può apparire una sola volta. Il valore predefinito è la directory corrente.|  
 |**/?**|Visualizza la sintassi e le opzioni di comando dello strumento.|  
 |**/P[arameters]:** *file.xml*|Legge le opzioni per diverse modalità operative dal file con estensione xml specificato. La forma abbreviata è /p:. Per ulteriori informazioni, vedere la sezione Osservazioni successiva.|  
   
@@ -51,22 +51,22 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
   
 |Opzione|Descrizione|  
 |------------|-----------------|  
-|**/e**[**lemento**] **: * * * elemento*|Specifica l'elemento dello schema per il quale generare codice. Per impostazione predefinita, sono specificati tutti gli elementi. È possibile specificare questo argomento più volte.|  
+|**/e**[**lement**]**:**_elemento_|Specifica l'elemento dello schema per il quale generare codice. Per impostazione predefinita, sono specificati tutti gli elementi. È possibile specificare questo argomento più volte.|  
 |**/enableDataBinding**|Implementa l'interfaccia <xref:System.ComponentModel.INotifyPropertyChanged> su tutti i tipi generati per consentire l'associazione dati. La forma abbreviata è `/edb`.|  
 |**/enableLinqDataSet**|(forma abbreviata: `/eld`). Specifica che il dataset generato può essere sottoposto a query mediante LINQ to DataSet. Questa opzione viene utilizzata quando è specificata anche l'opzione per i /dataset . Per altre informazioni, vedere [LINQ to DataSet Overview](../../../docs/framework/data/adonet/linq-to-dataset-overview.md) (Panoramica di LINQ to DataSet) e [Querying Typed DataSets](../../../docs/framework/data/adonet/querying-typed-datasets.md) (Esecuzione di query su dataset tipizzati). Per informazioni generali sull'uso di LINQ, vedere [LINQ (Language Integrated Query)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d).|  
 |**/f**[**ields**]|Genera campi anziché proprietà. Per impostazione predefinita, vengono generate le proprietà.|  
-|**/l**[**anguage**] **: * * * language*|Specifica il linguaggio di programmazione da utilizzare. È possibile scegliere tra `CS` (C#, il linguaggio predefinito), `VB` (Visual Basic), `JS` (JScript) o `VJS` (Visual J#). È anche possibile specificare un nome completo per una classe che implementa <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>|  
-|**/n**[**amespace**] **: * * * lo spazio dei nomi*|Specifica lo spazio dei nomi del runtime per i tipi generati. Lo spazio dei nomi predefinito è `Schemas`.|  
+|**/l**[**anguage**]**:**_linguaggio_|Specifica il linguaggio di programmazione da utilizzare. È possibile scegliere tra `CS` (C#, il linguaggio predefinito), `VB` (Visual Basic), `JS` (JScript) o `VJS` (Visual J#). È anche possibile specificare un nome completo per una classe che implementa <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>|  
+|**/n**[**amespace**]**:**_dello spazio dei nomi_|Specifica lo spazio dei nomi del runtime per i tipi generati. Lo spazio dei nomi predefinito è `Schemas`.|  
 |**/nologo**|Evita la visualizzazione del messaggio di avvio.|  
 |**/order**|Genera identificatori di ordine espliciti su tutti i membri particella.|  
 |**/o[ut]:** *nomedirectory*|Specifica la directory di output in cui inserire i file. Il valore predefinito è la directory corrente.|  
-|**/u**[**ri**]**:***uri*|Specifica l'URI degli elementi dello schema per il quale generare codice. Questo URI, se presente, viene applicato a tutti gli elementi specificati con l'opzione `/element`.|  
+|**/u**[**ri**]**:**_uri_|Specifica l'URI degli elementi dello schema per il quale generare codice. Questo URI, se presente, viene applicato a tutti gli elementi specificati con l'opzione `/element`.|  
   
 ## <a name="dll-and-exe-file-options"></a>Opzioni per i file DLL ed EXE  
   
 |Opzione|Descrizione|  
 |------------|-----------------|  
-|**/t**[**ipo**] **: * * * typename*|Specifica il nome del tipo per il quale creare uno schema. È possibile specificare più argomenti type. Se *nometipo* non specifica uno spazio dei nomi, Xsd.exe associa tutti i tipi nell'assembly con il tipo specificato. Se *nometipo* specifica uno spazio dei nomi, viene associato solo il tipo specifico. Se *nometipo* termina con un asterisco (\*), vengono associati tutti i tipi che iniziano con la stringa che precede \*. Se si omette l'opzione `/type`, verranno generati schemi per tutti i tipi dell'assembly.|  
+|**/t**[**ype**]**:**_nometipo_|Specifica il nome del tipo per il quale creare uno schema. È possibile specificare più argomenti type. Se *nometipo* non specifica uno spazio dei nomi, Xsd.exe associa tutti i tipi nell'assembly con il tipo specificato. Se *nometipo* specifica uno spazio dei nomi, viene associato solo il tipo specifico. Se *nometipo* termina con un asterisco (\*), vengono associati tutti i tipi che iniziano con la stringa che precede \*. Se si omette l'opzione `/type`, verranno generati schemi per tutti i tipi dell'assembly.|  
   
 ## <a name="remarks"></a>Note  
  Nella tabella riportata di seguito vengono illustrate le operazioni eseguite da Xsd.exe.  

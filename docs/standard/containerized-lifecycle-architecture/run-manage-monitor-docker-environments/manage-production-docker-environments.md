@@ -4,12 +4,12 @@ description: Ciclo di vita delle applicazioni Docker in contenitori con piattafo
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 3bafdd9f6a6aa4f850fd28b6315e68c643d1f8c0
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f968b5199f838e35f336dfa8c7d15aa9e5298951
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50202855"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147294"
 ---
 # <a name="manage-production-docker-environments"></a>Gestire gli ambienti di produzione Docker
 
@@ -23,7 +23,7 @@ Cluster vengono distribuiti tramite set di scalabilità di macchine virtuali di 
 
 Tabella 6-1 sono elencati i comuni strumenti di gestione correlati alla loro gli agenti di orchestrazione, le utilità di pianificazione e la piattaforma di clustering.
 
-Tabella 6-1: strumenti di gestione di Docker
+Tabella 6-1: Strumenti di gestione di docker
 
 
 | Strumenti di gestione      | Descrizione           | Agenti di orchestrazione correlate |
@@ -44,7 +44,6 @@ Di seguito sono gli strumenti di gestione di Service Fabric:
 
 -   [Azure Service Fabric Explorer](https://docs.microsoft.com/azure/service-fabric/service-fabric-visualizing-your-cluster) è uno strumento dell'interfaccia utente web specializzato che fornisce informazioni dettagliate e alcune operazioni nel cluster di Service Fabric dal punto di vista della nodi/macchine virtuali e dal punto di vista dell'applicazione e i servizi.
 
-
 >[!div class="step-by-step"]
-[Precedente](run-microservices-based-applications-in-production.md)
-[Successivo](monitor-containerized-application-services.md)
+>[Precedente](run-microservices-based-applications-in-production.md)
+>[Successivo](monitor-containerized-application-services.md)
