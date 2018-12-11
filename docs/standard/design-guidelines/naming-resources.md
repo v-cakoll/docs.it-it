@@ -1,6 +1,6 @@
 ---
 title: Denominazione di risorse
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - names [.NET Framework], localized resources
@@ -9,39 +9,38 @@ helpviewer_keywords:
 - global applications, naming guidelines
 - international applications, naming guidelines
 ms.assetid: 8b0e97f3-7877-44fd-bc76-e05d36d5d79c
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a5b53fc383e6fc9a5f056bab4eabde9979cd734b
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+author: KrzysztofCwalina
+ms.openlocfilehash: 5331c82069bb289c282e746841f5a328e2e628f2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48260680"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53130891"
 ---
-# <a name="naming-resources"></a><span data-ttu-id="1cf31-102">Denominazione di risorse</span><span class="sxs-lookup"><span data-stu-id="1cf31-102">Naming Resources</span></span>
-<span data-ttu-id="1cf31-103">Poiché possono fare riferimento a risorse localizzabili tramite determinati oggetti come se fossero proprietà, convenzioni di denominazione per le risorse sono simili alle linee guida per la proprietà.</span><span class="sxs-lookup"><span data-stu-id="1cf31-103">Because localizable resources can be referenced via certain objects as if they were properties, the naming guidelines for resources are similar to property guidelines.</span></span>  
+# <a name="naming-resources"></a><span data-ttu-id="0fe3a-102">Denominazione di risorse</span><span class="sxs-lookup"><span data-stu-id="0fe3a-102">Naming Resources</span></span>
+<span data-ttu-id="0fe3a-103">Poiché possono fare riferimento a risorse localizzabili tramite determinati oggetti come se fossero proprietà, convenzioni di denominazione per le risorse sono simili alle linee guida per la proprietà.</span><span class="sxs-lookup"><span data-stu-id="0fe3a-103">Because localizable resources can be referenced via certain objects as if they were properties, the naming guidelines for resources are similar to property guidelines.</span></span>  
   
- <span data-ttu-id="1cf31-104">**✓ DO** utilizzare il sistema Pascal le chiavi di risorsa.</span><span class="sxs-lookup"><span data-stu-id="1cf31-104">**✓ DO** use PascalCasing in resource keys.</span></span>  
+ <span data-ttu-id="0fe3a-104">**✓ DO** utilizzare il sistema Pascal le chiavi di risorsa.</span><span class="sxs-lookup"><span data-stu-id="0fe3a-104">**✓ DO** use PascalCasing in resource keys.</span></span>  
   
- <span data-ttu-id="1cf31-105">**✓ DO** forniscono descrittivo anziché identificatori breve.</span><span class="sxs-lookup"><span data-stu-id="1cf31-105">**✓ DO** provide descriptive rather than short identifiers.</span></span>  
+ <span data-ttu-id="0fe3a-105">**✓ DO** forniscono descrittivo anziché identificatori breve.</span><span class="sxs-lookup"><span data-stu-id="0fe3a-105">**✓ DO** provide descriptive rather than short identifiers.</span></span>  
   
- <span data-ttu-id="1cf31-106">**X DO NOT** utilizzare parole chiave specifiche della lingua dei linguaggi CLR principale.</span><span class="sxs-lookup"><span data-stu-id="1cf31-106">**X DO NOT** use language-specific keywords of the main CLR languages.</span></span>  
+ <span data-ttu-id="0fe3a-106">**X DO NOT** utilizzare parole chiave specifiche della lingua dei linguaggi CLR principale.</span><span class="sxs-lookup"><span data-stu-id="0fe3a-106">**X DO NOT** use language-specific keywords of the main CLR languages.</span></span>  
   
- <span data-ttu-id="1cf31-107">**✓ DO** utilizzare solo caratteri alfanumerici e caratteri di sottolineatura nei nomi delle risorse.</span><span class="sxs-lookup"><span data-stu-id="1cf31-107">**✓ DO** use only alphanumeric characters and underscores in naming resources.</span></span>  
+ <span data-ttu-id="0fe3a-107">**✓ DO** utilizzare solo caratteri alfanumerici e caratteri di sottolineatura nei nomi delle risorse.</span><span class="sxs-lookup"><span data-stu-id="0fe3a-107">**✓ DO** use only alphanumeric characters and underscores in naming resources.</span></span>  
   
- <span data-ttu-id="1cf31-108">**✓ DO** utilizzare la seguente convenzione di denominazione per le risorse di messaggio eccezione.</span><span class="sxs-lookup"><span data-stu-id="1cf31-108">**✓ DO** use the following naming convention for exception message resources.</span></span>  
+ <span data-ttu-id="0fe3a-108">**✓ DO** utilizzare la seguente convenzione di denominazione per le risorse di messaggio eccezione.</span><span class="sxs-lookup"><span data-stu-id="0fe3a-108">**✓ DO** use the following naming convention for exception message resources.</span></span>  
   
- <span data-ttu-id="1cf31-109">L'identificatore della risorsa deve essere il nome del tipo di eccezione e un identificatore breve dell'eccezione:</span><span class="sxs-lookup"><span data-stu-id="1cf31-109">The resource identifier should be the exception type name plus a short identifier of the exception:</span></span>  
+ <span data-ttu-id="0fe3a-109">L'identificatore della risorsa deve essere il nome del tipo di eccezione e un identificatore breve dell'eccezione:</span><span class="sxs-lookup"><span data-stu-id="0fe3a-109">The resource identifier should be the exception type name plus a short identifier of the exception:</span></span>  
   
  `ArgumentExceptionIllegalCharacters`  
  `ArgumentExceptionInvalidName`  
  `ArgumentExceptionFileNameIsMalformed`  
   
- <span data-ttu-id="1cf31-110">*Parti protette da copyright © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*</span><span class="sxs-lookup"><span data-stu-id="1cf31-110">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
+ <span data-ttu-id="0fe3a-110">*Parti protette da copyright © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*</span><span class="sxs-lookup"><span data-stu-id="0fe3a-110">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
   
- <span data-ttu-id="1cf31-111">*Ristampato con l'autorizzazione di Pearson Education, Inc. da [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2a edizione](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) di Krzysztof Cwalina and Brad Abrams, pubblicato il 22 ottobre 2008 da Addison-Wesley Professional nella collana Microsoft Windows Development Series.*</span><span class="sxs-lookup"><span data-stu-id="1cf31-111">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
+ <span data-ttu-id="0fe3a-111">*Ristampato con l'autorizzazione di Pearson Education, Inc. dal [linee guida di progettazione di Framework: Convenzioni, linguaggi e modelli per le librerie .NET di riutilizzabile, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina e Brad Abrams, pubblicato il 22 ottobre 2008 da Addison-Wesley Professional come parte della serie di sviluppo di Microsoft Windows.*</span><span class="sxs-lookup"><span data-stu-id="0fe3a-111">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1cf31-112">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="1cf31-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0fe3a-112">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="0fe3a-112">See also</span></span>
 
-- [<span data-ttu-id="1cf31-113">Linee guida per la progettazione di Framework</span><span class="sxs-lookup"><span data-stu-id="1cf31-113">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)  
-- [<span data-ttu-id="1cf31-114">Convenzioni di denominazione</span><span class="sxs-lookup"><span data-stu-id="1cf31-114">Naming Guidelines</span></span>](../../../docs/standard/design-guidelines/naming-guidelines.md)
+- [<span data-ttu-id="0fe3a-113">Linee guida per la progettazione di Framework</span><span class="sxs-lookup"><span data-stu-id="0fe3a-113">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)  
+- [<span data-ttu-id="0fe3a-114">Convenzioni di denominazione</span><span class="sxs-lookup"><span data-stu-id="0fe3a-114">Naming Guidelines</span></span>](../../../docs/standard/design-guidelines/naming-guidelines.md)
