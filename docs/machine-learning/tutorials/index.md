@@ -1,23 +1,21 @@
 ---
-title: Esercitazioni di ML.NET
+title: Esercitazioni di Machine Learning per .NET - ML.NET
 description: Queste esercitazioni di ML.NET aiutano a creare soluzioni di intelligenza artificiale personalizzate e a integrarle nelle applicazioni .NET.
-ms.date: 10/03/2018
-ms.openlocfilehash: b842f3ee9373755e4907cf3288bab8d98846f110
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.custom: seodec18
+ms.date: 11/06/2018
+ms.openlocfilehash: ff3abd6158f630fc29e8eeab41e2831b6500e415
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836641"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53131040"
 ---
-# <a name="mlnet-tutorials"></a><span data-ttu-id="5b72a-103">Esercitazioni di ML.NET</span><span class="sxs-lookup"><span data-stu-id="5b72a-103">ML.NET tutorials</span></span>
+# <a name="net-machine-learning-tutorials---mlnet"></a><span data-ttu-id="9d09f-103">Esercitazioni di Machine Learning per .NET - ML.NET</span><span class="sxs-lookup"><span data-stu-id="9d09f-103">.NET Machine learning tutorials - ML.NET</span></span>
 
-<span data-ttu-id="5b72a-104">Le esercitazioni seguenti consentono di comprendere l'uso di [ML.NET](../index.md) per creare soluzioni di apprendimento automatico personalizzate e integrarle nelle applicazioni .NET:</span><span class="sxs-lookup"><span data-stu-id="5b72a-104">The following tutorials enable you to understand how to use [ML.NET](../index.md) to build custom machine learning solutions and integrate them into your .NET applications:</span></span>
+<span data-ttu-id="9d09f-104">Le esercitazioni seguenti consentono di comprendere l'uso di [ML.NET](../index.md) per creare soluzioni di apprendimento automatico personalizzate e integrarle nelle applicazioni .NET:</span><span class="sxs-lookup"><span data-stu-id="9d09f-104">The following tutorials enable you to understand how to use [ML.NET](../index.md) to build custom machine learning solutions and integrate them into your .NET applications:</span></span>
 
-- <span data-ttu-id="5b72a-105">[Analisi del sentiment](sentiment-analysis.md): illustra come applicare un'attività di **classificazione binaria** usando ML.NET.</span><span class="sxs-lookup"><span data-stu-id="5b72a-105">[Sentiment analysis](sentiment-analysis.md): demonstrates how to apply a **binary classification** task using ML.NET.</span></span>
-- <span data-ttu-id="5b72a-106">[Previsione tariffe dei taxi](taxi-fare.md): illustra come applicare un'attività di **regressione** usando ML.NET.</span><span class="sxs-lookup"><span data-stu-id="5b72a-106">[Taxi fare predictor](taxi-fare.md): demonstrates how to apply a **regression** task using ML.NET.</span></span>
-- <span data-ttu-id="5b72a-107">[Clustering Iris](iris-clustering.md): illustra come applicare un'attività di **clustering** usando ML.NET.</span><span class="sxs-lookup"><span data-stu-id="5b72a-107">[Iris clustering](iris-clustering.md): demonstrates how to apply a **clustering** task using ML.NET.</span></span>
+- <span data-ttu-id="9d09f-105">[Analisi del sentiment](sentiment-analysis.md): illustra come applicare un'attività di **classificazione binaria** usando ML.NET.</span><span class="sxs-lookup"><span data-stu-id="9d09f-105">[Sentiment analysis](sentiment-analysis.md): demonstrates how to apply a **binary classification** task using ML.NET.</span></span>
+- <span data-ttu-id="9d09f-106">[Previsione tariffe dei taxi](taxi-fare.md): illustra come applicare un'attività di **regressione** usando ML.NET.</span><span class="sxs-lookup"><span data-stu-id="9d09f-106">[Taxi fare predictor](taxi-fare.md): demonstrates how to apply a **regression** task using ML.NET.</span></span>
+- <span data-ttu-id="9d09f-107">[Clustering Iris](iris-clustering.md): illustra come applicare un'attività di **clustering** usando ML.NET.</span><span class="sxs-lookup"><span data-stu-id="9d09f-107">[Iris clustering](iris-clustering.md): demonstrates how to apply a **clustering** task using ML.NET.</span></span>
 
-> [!NOTE]
-> <span data-ttu-id="5b72a-108">Le esercitazioni illustrano come usare l'API `LearningPipeline` ML.NET introdotta in ML.NET 0.1.</span><span class="sxs-lookup"><span data-stu-id="5b72a-108">The tutorials demonstrate how to use the ML.NET `LearningPipeline` API introduced in ML.NET 0.1.</span></span> <span data-ttu-id="5b72a-109">Per informazioni sulla nuova API introdotta in ML.NET 0.6, vedere i [concetti generali relativi a ML.NET](https://github.com/dotnet/machinelearning/blob/master/docs/code/MlNetHighLevelConcepts.md) e la [guida di riferimento dettagliata su ML.NET](https://github.com/dotnet/machinelearning/blob/master/docs/code/MlNetCookBook.md).</span><span class="sxs-lookup"><span data-stu-id="5b72a-109">For information about the new API introduced in ML.NET 0.6, see [ML.NET high-level concepts](https://github.com/dotnet/machinelearning/blob/master/docs/code/MlNetHighLevelConcepts.md) and [ML.NET Cookbook](https://github.com/dotnet/machinelearning/blob/master/docs/code/MlNetCookBook.md).</span></span>
-
-<span data-ttu-id="5b72a-110">Per altri esempi in cui viene usato ML.NET, vedere il repository GitHub [dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples).</span><span class="sxs-lookup"><span data-stu-id="5b72a-110">For more examples that use ML.NET, check the [dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples) GitHub repository.</span></span>
+<span data-ttu-id="9d09f-108">Per altri esempi in cui viene usato ML.NET, vedere il repository GitHub [dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples).</span><span class="sxs-lookup"><span data-stu-id="9d09f-108">For more examples that use ML.NET, check the [dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples) GitHub repository.</span></span>

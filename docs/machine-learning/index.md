@@ -1,39 +1,51 @@
 ---
-title: Guida a ML.NET
+title: Guida ai contenuti su ML.NET
 description: Informazioni su come creare soluzioni di intelligenza artificiale personalizzate e integrarle nelle applicazioni .NET usando ML.NET.
-author: aditidugar
-ms.date: 05/07/2018
-ms.openlocfilehash: a5be91283d8b8d00b727ec43d1137a0a245175d3
-ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
+ms.date: 11/06/2018
+ms.custom: seodec18
+ms.openlocfilehash: 0ba32490e30051616ae5270a050d8666490c9eef
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "34862337"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126250"
 ---
-# <a name="mlnet-guide"></a><span data-ttu-id="0bacf-103">Guida a ML.NET</span><span class="sxs-lookup"><span data-stu-id="0bacf-103">ML.NET Guide</span></span>
+# <a name="mlnet-content-guide"></a><span data-ttu-id="53166-103">Guida ai contenuti su ML.NET</span><span class="sxs-lookup"><span data-stu-id="53166-103">ML.NET Content Guide</span></span>
 
-<span data-ttu-id="0bacf-104">ML.NET è un framework di apprendimento automatico gratuito, open source e multipiattaforma che consente di compilare soluzioni di apprendimento automatico personalizzate e di integrarle nelle applicazioni .NET.</span><span class="sxs-lookup"><span data-stu-id="0bacf-104">ML.NET is a free, open-source, and cross-platform machine learning framework that enables you to build custom machine learning solutions and integrate them into your .NET applications.</span></span> <span data-ttu-id="0bacf-105">Questa guida offre molte risorse sull'uso di ML.NET.</span><span class="sxs-lookup"><span data-stu-id="0bacf-105">This guide provides many resources about working with ML.NET.</span></span>
+<span data-ttu-id="53166-104">Questa guida illustra i concetti di base e fornisce esercitazioni e un riferimento all'API per usare ML.NET.</span><span class="sxs-lookup"><span data-stu-id="53166-104">This guide explains basic concepts and provides tutorials and an API reference for working with ML.NET.</span></span>
 
-<span data-ttu-id="0bacf-106">Per altre informazioni su ML.NET, vedere il post [Introducing ML.NET: Cross-platform, Proven and Open Source Machine Learning Framework](https://blogs.msdn.microsoft.com/dotnet/2018/05/07/introducing-ml-net-cross-platform-proven-and-open-source-machine-learning-framework/) (Presentazione di ML.NET: framework di apprendimento automatico multipiattaforma, affidabile e open source) nel blog .NET.</span><span class="sxs-lookup"><span data-stu-id="0bacf-106">For more information about ML.NET, see [Introducing ML.NET: Cross-platform, Proven and Open Source Machine Learning Framework](https://blogs.msdn.microsoft.com/dotnet/2018/05/07/introducing-ml-net-cross-platform-proven-and-open-source-machine-learning-framework/) post on the .NET blog.</span></span>
+> [!NOTE]
+> <span data-ttu-id="53166-105">Questa documentazione si riferisce a ML.NET, che è attualmente in anteprima.</span><span class="sxs-lookup"><span data-stu-id="53166-105">This documentation refers to ML.NET, which is currently in Preview.</span></span> <span data-ttu-id="53166-106">Il materiale potrà essere soggetto a modifiche.</span><span class="sxs-lookup"><span data-stu-id="53166-106">Material may be subject to change.</span></span> <span data-ttu-id="53166-107">Per altre informazioni, vedere l'[introduzione a ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).</span><span class="sxs-lookup"><span data-stu-id="53166-107">For more information, see the [ML.NET introduction](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).</span></span>
 
-## <a name="get-started"></a><span data-ttu-id="0bacf-107">Introduzione</span><span class="sxs-lookup"><span data-stu-id="0bacf-107">Get started</span></span>
+## <a name="get-started"></a><span data-ttu-id="53166-108">Introduzione</span><span class="sxs-lookup"><span data-stu-id="53166-108">Get started</span></span>
 
-<span data-ttu-id="0bacf-108">Per iniziare a usare ML.NET, vedere l'articolo [Iris Petal Prediction quickstart](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet/get-started) (Guida introduttiva alla previsione del tipo di petalo di un iris) o le [esercitazioni](tutorials/index.md) contenenti informazioni più approfondite.</span><span class="sxs-lookup"><span data-stu-id="0bacf-108">To get started with ML.NET, check out the [Iris Petal Prediction quickstart](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet/get-started) or the more in-depth [tutorials](tutorials/index.md).</span></span>
+<span data-ttu-id="53166-109">Per eseguire l'installazione e iniziare a compilare in ML.NET, seguire l'[esercitazione introduttiva](https://www.microsoft.com/net/learn/machinelearning-ai/ml-dotnet-get-started-tutorial).</span><span class="sxs-lookup"><span data-stu-id="53166-109">To install and start building in ML.NET, follow the [Get started tutorial](https://www.microsoft.com/net/learn/machinelearning-ai/ml-dotnet-get-started-tutorial).</span></span>
 
-<span data-ttu-id="0bacf-109">Se non si ha esperienza nell'apprendimento automatico, è anche possibile leggere l'articolo [Nozioni fondamentali sull'apprendimento automatico](resources/basics.md) contenente molte risorse utili.</span><span class="sxs-lookup"><span data-stu-id="0bacf-109">If you are new to machine learning, you can also review the [Machine Learning Basics](resources/basics.md), where you'll find machine learning resources to assist you.</span></span>
+<span data-ttu-id="53166-110">Per informazioni su ML.NET, vedere [Informazioni su ML.NET](what-is-mldotnet.md).</span><span class="sxs-lookup"><span data-stu-id="53166-110">To learn about ML.NET, see [What is ML.NET?](what-is-mldotnet.md)</span></span>
 
-## <a name="how-the-mlnet-guide-is-organized"></a><span data-ttu-id="0bacf-110">Organizzazione della Guida a ML.NET</span><span class="sxs-lookup"><span data-stu-id="0bacf-110">How the ML.NET guide is organized</span></span>
+<span data-ttu-id="53166-111">Per informazioni di base, vedere [Concetti fondamentali sul training dei modelli in ML.NET](basic-concepts-model-training-in-mldotnet.md).</span><span class="sxs-lookup"><span data-stu-id="53166-111">To understand basics, see [Basic concepts for model training in ML.NET](basic-concepts-model-training-in-mldotnet.md).</span></span>
 
-<span data-ttu-id="0bacf-111">La Guida a ML.NET è organizzata in varie sezioni.</span><span class="sxs-lookup"><span data-stu-id="0bacf-111">There are several sections in the ML.NET Guide.</span></span> <span data-ttu-id="0bacf-112">È possibile leggere le sezioni nell'ordine in cui sono presentate oppure è possibile passare direttamente a quelle ritenute di maggiore interesse.</span><span class="sxs-lookup"><span data-stu-id="0bacf-112">You can read them in order, or jump directly to what interests you the most.</span></span>
+## <a name="tutorials"></a><span data-ttu-id="53166-112">Esercitazioni</span><span class="sxs-lookup"><span data-stu-id="53166-112">Tutorials</span></span>
 
-<span data-ttu-id="0bacf-113">**[Esercitazioni](tutorials/index.md)**</span><span class="sxs-lookup"><span data-stu-id="0bacf-113">**[Tutorials](tutorials/index.md)**</span></span>
+<span data-ttu-id="53166-113">L'esercitazione [Analizzare il sentiment usando un modello di classificazione binaria](tutorials/sentiment-analysis.md) illustra come compilare un'app che determina se il sentiment è positivo o negativo.</span><span class="sxs-lookup"><span data-stu-id="53166-113">[Analyze sentiment using a binary classification model](tutorials/sentiment-analysis.md) shows you how to build an app that determines whether sentiment is positive or negative.</span></span>
 
-<span data-ttu-id="0bacf-114">Questa sezione include esercitazioni dettagliate che consentono di compilare modelli di apprendimento automatico personalizzati per scenari di sviluppo comuni.</span><span class="sxs-lookup"><span data-stu-id="0bacf-114">In this section, you find step-by-step tutorials that guide you through building custom machine learning models for common developer scenarios.</span></span>
+<span data-ttu-id="53166-114">L'esercitazione [Prevedere la tariffa di un taxi usando un modello di regressione](tutorials/taxi-fare.md) illustra come compilare un'app predittiva che usa diversi fattori dei dati cronologici per determinare la risposta.</span><span class="sxs-lookup"><span data-stu-id="53166-114">[Predict taxi fare using a regression model](tutorials/taxi-fare.md) shows you how to build a predictive app that uses many factors from historical data to determine the answer.</span></span>
 
-<span data-ttu-id="0bacf-115">**[Glossario](resources/glossary.md)**</span><span class="sxs-lookup"><span data-stu-id="0bacf-115">**[Glossary](resources/glossary.md)**</span></span>
+<span data-ttu-id="53166-115">L'esercitazione [Classificare i fiori di iris in base alle caratteristiche](tutorials/iris-clustering.md) illustra come usare un modello di clustering per analizzare il set di dati Iris.</span><span class="sxs-lookup"><span data-stu-id="53166-115">[Classify iris flowers by features](tutorials/iris-clustering.md) shows you how to use a clustering model to analyze the iris data set.</span></span> 
 
-<span data-ttu-id="0bacf-116">Contiene un elenco di termini relativi all'apprendimento automatico e le relative definizioni.</span><span class="sxs-lookup"><span data-stu-id="0bacf-116">Find a list of machine learning terminology and their definitions.</span></span>
+## <a name="how-to-guide"></a><span data-ttu-id="53166-116">Guida pratica</span><span class="sxs-lookup"><span data-stu-id="53166-116">How to guide</span></span>
 
-## <a name="api-reference"></a><span data-ttu-id="0bacf-117">API (riferimento)</span><span class="sxs-lookup"><span data-stu-id="0bacf-117">API reference</span></span>
+<span data-ttu-id="53166-117">La guida [Compilare un'app elenco di corrispondenze di gioco con Infer.NET e la programmazione probabilistica](how-to-guides/matchup-app-infer-net.md) illustra come compilare una versione semplificata di un'app di corrispondenze così come sarebbe visualizzata in un gioco per Xbox.</span><span class="sxs-lookup"><span data-stu-id="53166-117">[Build a game match-up list app with Infer.NET and probabilistic programming](how-to-guides/matchup-app-infer-net.md) shows you how to build a simplified version of a match-up app like you'd see in an Xbox game.</span></span>
 
-<span data-ttu-id="0bacf-118">Per informazioni sulla gamma di API disponibili, vedere le [informazioni di riferimento sulle API ML.NET](https://docs.microsoft.com/dotnet/api/?view=ml-dotnet).</span><span class="sxs-lookup"><span data-stu-id="0bacf-118">Check out the [ML.NET API Reference](https://docs.microsoft.com/dotnet/api/?view=ml-dotnet) to see the breadth of APIs available.</span></span>
+## <a name="resources"></a><span data-ttu-id="53166-118">Risorse</span><span class="sxs-lookup"><span data-stu-id="53166-118">Resources</span></span>
+
+<span data-ttu-id="53166-119">L'articolo [Glossario di Machine Learning](resources/glossary.md) contiene le definizioni dei termini chiave.</span><span class="sxs-lookup"><span data-stu-id="53166-119">[Machine learning glossary](resources/glossary.md) defines key terminology.</span></span>
+
+<span data-ttu-id="53166-120">L'articolo [Attività di Machine Learning](resources/tasks.md) descrive attività come la classificazione e il rilevamento anomalie.</span><span class="sxs-lookup"><span data-stu-id="53166-120">[Machine learning tasks](resources/tasks.md) describes tasks, such as classification and anomaly detection.</span></span> 
+
+<span data-ttu-id="53166-121">L'articolo [Trasformazioni di dati](resources/transforms.md) descrive le funzionalità di preparazione dei dati in ML.NET.</span><span class="sxs-lookup"><span data-stu-id="53166-121">[Data transforms](resources/transforms.md) describes data preparation capabilities in ML.NET.</span></span>
+
+
+## <a name="api-reference"></a><span data-ttu-id="53166-122">API (riferimento)</span><span class="sxs-lookup"><span data-stu-id="53166-122">API reference</span></span>
+
+<span data-ttu-id="53166-123">[Informazioni di riferimento sulle API ML.NET](https://docs.microsoft.com/dotnet/api/?view=ml-dotnet) descrive la gamma di API disponibili.</span><span class="sxs-lookup"><span data-stu-id="53166-123">[ML.NET API Reference](https://docs.microsoft.com/dotnet/api/?view=ml-dotnet) describes the breadth of APIs available.</span></span>
