@@ -1,15 +1,15 @@
 ---
-title: 'Gestione di risorse: parola chiave use (F#)'
+title: 'Gestione delle risorse: Parola chiave use (F#)'
 description: Scopri la F# parola chiave 'use' e la funzione 'using', che consentono di controllare l'inizializzazione e il rilascio delle risorse.
 ms.date: 05/16/2016
 ms.openlocfilehash: 300fb4113019f676625f75541d117458eab3f6ab
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296880"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147632"
 ---
-# <a name="resource-management-the-use-keyword"></a>Gestione di risorse: parola chiave use
+# <a name="resource-management-the-use-keyword"></a>Gestione delle risorse: Parola chiave use
 
 In questo argomento descrive la parola chiave `use` e il `using` (funzione), che consentono di controllare l'inizializzazione e il rilascio delle risorse.
 

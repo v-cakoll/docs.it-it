@@ -4,12 +4,12 @@ description: Serverless fornisce numerosi vantaggi e presenta difficoltà specif
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 055facf7ef46c18f8cda518da9a9f3e114dec1a2
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 6f4951dc85f739b92e56e84d0bd0262166181bd4
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "49369830"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128843"
 ---
 # <a name="conclusion"></a>Conclusione
 
@@ -30,4 +30,4 @@ Le seguenti considerazioni principali sono le conclusioni più importanti da que
 **Senza server come uno strumento, non della casella degli strumenti.** Senza server è non sulla soluzione esclusiva all'architettura delle applicazioni. È uno strumento che può essere usato come parte di un'applicazione ibrida che può contenere livelli tradizionali, monolite back-end e i contenitori. Un'infrastruttura senza server possono essere usate per migliorare soluzioni esistenti e non è un approccio di tipo tutto o niente per lo sviluppo di applicazioni.
 
 >[!div class="step-by-step"]
-[Precedente](serverless-business-scenarios.md)
+>[Precedente](serverless-business-scenarios.md)

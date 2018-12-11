@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0a90c33f-7ed7-4501-ad5f-6224c5da8e9b
-ms.openlocfilehash: 8b072c739b56d191e79b4cc2eff195adfe9da2eb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 61731c4d9590892bdae8e90717d77b4dddf1d71d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365670"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147619"
 ---
 # <a name="sql-clr-type-mismatches"></a>Tipi SQL-CLR non corrispondenti
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] consente di automatizzare la maggior parte delle operazioni di conversione tra il modello a oggetti e SQL Server. Alcune situazioni impediscono tuttavia che la conversione venga eseguita esattamente. Tali chiavi mancate corrispondenze tra i tipi di common language runtime (CLR) e i tipi di database di SQL Server sono riepilogate nelle sezioni seguenti. È possibile trovare altre informazioni sui mapping di tipo specifico e traduzione funzione [Mapping dei tipi CLR SQL](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md) e [tipi di dati e funzioni](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md).  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] consente di automatizzare la maggior parte delle operazioni di conversione tra il modello a oggetti e SQL Server. Alcune situazioni impediscono tuttavia che la conversione venga eseguita esattamente. Nelle sezioni seguenti sono riepilogate queste chiavi mancate corrispondenze tra i tipi common language runtime (CLR) e i tipi di database di SQL Server. È possibile trovare altre informazioni sui mapping dei tipi specifici e conversione di funzioni al [Mapping dei tipi SQL-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md) e [tipi di dati e funzioni](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md).  
   
 ## <a name="data-types"></a>Tipi di dati  
  La conversione tra CLR e SQL Server viene eseguita quando una query viene inviata al database e quando i risultati vengono restituiti al modello a oggetti. Nella query Transact-SQL seguente sono ad esempio necessarie due conversioni di valori:  
@@ -33,23 +33,23 @@ Select DateOfBirth From Customer Where CustomerId = @id
   
     -   **Booleano**. Per questi tipi può essere eseguito il mapping a un valore numerico o stringa di un bit o maggiore. È possibile eseguire il mapping di un valore letterale a un'espressione che restituisca lo stesso valore, ad esempio, `1=1` in SQL per `True` in CLS.  
   
-    -   **TimeSpan**. Questo tipo rappresenta la differenza tra due valori `DateTime` e non corrisponde al valore `timestamp` di SQL Server. In alcuni casi, è anche possibile eseguire il mapping del tipo <xref:System.TimeSpan?displayProperty=nameWithType> CLR al tipo `TIME` SQL Server. Il tipo `TIME` SQL Server consente di rappresentare solo valori positivi inferiori alle 24 ore. Il tipo <xref:System.TimeSpan> consente di rappresentare un intervallo molto più ampio.  
+    -   **Intervallo di tempo**. Questo tipo rappresenta la differenza tra due valori `DateTime` e non corrisponde al valore `timestamp` di SQL Server. In alcuni casi, è anche possibile eseguire il mapping del tipo <xref:System.TimeSpan?displayProperty=nameWithType> CLR al tipo `TIME` SQL Server. Il tipo `TIME` SQL Server consente di rappresentare solo valori positivi inferiori alle 24 ore. Il tipo <xref:System.TimeSpan> consente di rappresentare un intervallo molto più ampio.  
   
     > [!NOTE]
-    >  Specifiche di SQL Server [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] tipi <xref:System.Data.SqlTypes> non sono inclusi in questo confronto.  
+    >  Specifiche di SQL Server [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] digita <xref:System.Data.SqlTypes> non sono inclusi in questo confronto.  
   
 -   Mancate corrispondenze in SQL Server:  
   
-    -   **Tipi di carattere a lunghezza fissa**. Transact-SQL viene fatta distinzione tra categorie Unicode e non Unicode e include tre tipi distinti in ogni categoria: lunghezza fissa `nchar` / `char`, di lunghezza variabile `nvarchar` / `varchar`, e con una dimensione maggiore `ntext` / `text`. I tipi di carattere a lunghezza fissa possono essere mappati al tipo <xref:System.Char?displayProperty=nameWithType> CLR per il recupero di caratteri, ma in realtà non corrispondono esattamente allo stesso tipo sia in termini di conversione che di comportamento.  
+    -   **Tipi di carattere a lunghezza fissa**. Transact-SQL viene fatta distinzione tra categorie Unicode e non Unicode e sono disponibili tre tipi distinti di ogni categoria: lunghezza fissa `nchar` / `char`, di lunghezza variabile `nvarchar` / `varchar`, e con dimensioni maggiori `ntext` / `text`. I tipi di carattere a lunghezza fissa possono essere mappati al tipo <xref:System.Char?displayProperty=nameWithType> CLR per il recupero di caratteri, ma in realtà non corrispondono esattamente allo stesso tipo sia in termini di conversione che di comportamento.  
   
-    -   **Bit**. Anche se nel dominio `bit` è presente lo stesso numero di valori di `Nullable<Boolean>`, i due tipi sono diversi. `Bit` accetta valori `1` e `0` anziché `true` / `false`e non può essere usato come equivalente delle espressioni booleane.  
+    -   **Bit**. Anche se nel dominio `bit` è presente lo stesso numero di valori di `Nullable<Boolean>`, i due tipi sono diversi. `Bit` accetta i valori `1` e `0` invece di `true` / `false`e non può essere usato come equivalente delle espressioni booleane.  
   
     -   **Timestamp**. A differenza del tipo <xref:System.TimeSpan?displayProperty=nameWithType> CLR, il tipo `TIMESTAMP` SQL Server rappresenta un numero di 8 byte generato dal database, univoco per ogni aggiornamento e non basato sulla differenza tra valori <xref:System.DateTime>.  
   
-    -   **Money** e **SmallMoney**. Per questi tipi è possibile eseguire il mapping a <xref:System.Decimal>, ma si tratta di tipi fondamentalmente diversi e come tali vengono gestiti dalle funzioni e conversioni basate su server.  
+    -   **Denaro** e **SmallMoney**. Per questi tipi è possibile eseguire il mapping a <xref:System.Decimal>, ma si tratta di tipi fondamentalmente diversi e come tali vengono gestiti dalle funzioni e conversioni basate su server.  
   
 ### <a name="multiple-mappings"></a>Più mapping  
- Vi sono molti tipi di dati SQL Server che è possibile mappare a uno o più tipi di dati CLR, nonché molti tipi di dati CLR che è possibile mappare a uno o più tipi SQL Server. Anche se un mapping è supportato da LINQ to SQL, questo non significa che vi sia una perfetta corrispondenza tra i due tipi mappati tra CLR e SQL Server per quanto riguarda precisione, intervallo e semantica. Alcuni mapping possono includere differenze per quanto riguarda una o tutte queste dimensioni. È possibile trovare informazioni dettagliate su queste differenze potenziali per le varie possibilità di mapping in [Mapping dei tipi CLR SQL](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md).  
+ Vi sono molti tipi di dati SQL Server che è possibile mappare a uno o più tipi di dati CLR, nonché molti tipi di dati CLR che è possibile mappare a uno o più tipi SQL Server. Anche se un mapping è supportato da LINQ to SQL, questo non significa che vi sia una perfetta corrispondenza tra i due tipi mappati tra CLR e SQL Server per quanto riguarda precisione, intervallo e semantica. Alcuni mapping possono includere differenze per quanto riguarda una o tutte queste dimensioni. È possibile trovare informazioni dettagliate su queste differenze potenziali per le varie possibilità di mapping in [Mapping dei tipi SQL-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md).  
   
 ### <a name="user-defined-types"></a>Tipi definiti dall'utente  
  I tipi CLR definiti dall'utente sono progettati per consentire di colmare la lacuna nel sistema di tipi. Tuttavia, fanno emergere problemi che richiamano l'attenzione sul controllo delle versioni dei tipi. Una modifica nella versione sul client potrebbe non corrispondere a una modifica nel tipo archiviato sul server database. Una modifica di questo genere causa un altro tipo non corrispondente in cui la semantica del tipo potrebbe non corrispondere e la lacuna nel controllo delle versioni diventerà molto probabilmente visibile. Ulteriori problemi si verificano durante il refactoring delle gerarchie di ereditarietà nelle versioni successive.  
@@ -107,7 +107,7 @@ or col1 != col2
   
  Nel caso precedente è possibile ottenere un comportamento equivalente nella generazione di codice SQL, tuttavia la conversione potrebbe non riflettere esattamente l'intenzione.  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] non impone c# `null` o Visual Basic `nothing` la semantica di confronto in SQL. Gli operatori di confronto vengono sintatticamente convertiti negli equivalenti SQL. La semantica riflette la semantica SQL secondo quanto definito nelle impostazioni di connessione o del server. Due valori null sono considerati non uguali secondo le impostazioni di SQL Server predefinite, anche se è possibile modificare tali impostazioni per modificare la semantica. Indipendentemente da questa premessa, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] non considera le impostazioni del server nella conversione della query.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] non è previsto C# `null` o Visual Basic `nothing` la semantica di confronto in SQL. Gli operatori di confronto vengono sintatticamente convertiti negli equivalenti SQL. La semantica riflette la semantica SQL secondo quanto definito nelle impostazioni di connessione o del server. Due valori null sono considerati non uguali secondo le impostazioni di SQL Server predefinite, anche se è possibile modificare tali impostazioni per modificare la semantica. Indipendentemente da questa premessa, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] non considera le impostazioni del server nella conversione della query.  
   
  Un confronto con il valore letterale `null` (`nothing`) viene convertito nella versione SQL appropriata (`is null` o `is not null`).  
   
@@ -146,16 +146,16 @@ Where Col1 = Col2
   
  In effetti, la sottoclausola delle regole di confronto crea un *tipo limitato* non sostituibile.  
   
- In modo analogo, il criterio di ordinamento può essere significativamente diverso nei diversi sistemi di tipi. Questa differenza influisce sull'ordinamento dei risultati. <xref:System.Guid> viene ordinato in base a tutti i 16 byte in ordine lessicografico (`IComparable()`), mentre in T-SQL vengono confrontati i GUID in base all'ordine seguente: node(10-15), clock-seq(8-9), time-high(6-7), time-mid(4-5), time-low(0-3). Questo ordinamento veniva eseguito in SQL 7.0 dove i GUID generati da NT erano caratterizzati da tale ordine di ottetti. Questo approccio assicura che i GUID generati nello stesso cluster del nodo vengano uniti in ordine sequenziale in base al timestamp. L'approccio è inoltre utile per la compilazione di indici (gli inserimenti diventano aggiunte anziché I/O casuali). Successivamente questo ordine è stato codificato in Windows per evitare problemi di privacy, ma in SQL è stata mantenuta la compatibilità. Una soluzione alternativa consiste nell'usare <xref:System.Data.SqlTypes.SqlGuid> anziché <xref:System.Guid>.  
+ In modo analogo, il criterio di ordinamento può essere significativamente diverso nei diversi sistemi di tipi. Questa differenza influisce sull'ordinamento dei risultati. <xref:System.Guid> viene ordinato in base a tutti i 16 byte in ordine lessicografico (`IComparable()`), mentre in T-SQL vengono confrontati i GUID in base all'ordine seguente: node(10-15), clock-seq(8-9), time-high(6-7), time-mid(4-5), time-low(0-3). Questo ordinamento veniva eseguito in SQL 7.0 dove i GUID generati da NT erano caratterizzati da tale ordine di ottetti. Questo approccio assicura che i GUID generati nello stesso cluster del nodo vengano uniti in ordine sequenziale in base al timestamp. L'approccio è inoltre utile per la compilazione di indici (gli inserimenti diventano aggiunte anziché I/O casuali). Successivamente questo ordine è stato codificato in Windows per evitare problemi di privacy, ma in SQL è stata mantenuta la compatibilità. Soluzione alternativa consiste nell'usare <xref:System.Data.SqlTypes.SqlGuid> invece di <xref:System.Guid>.  
   
 ### <a name="operator-and-function-differences"></a>Differenze di operatori e funzioni  
  Operatori e funzioni essenzialmente simili presentano tuttavia una semantica leggermente diversa. Ad esempio:  
   
 -   In C# viene specificata una semantica di corto circuito basata su un ordine lessicale di operandi per gli operatori logici `&&` e `||`. D'altra parte, SQL è destinato alle query basate su set, pertanto consente all'utilità di ottimizzazione di stabilire più liberamente l'ordine di esecuzione. Di seguito sono riportate alcune implicazioni:  
   
-    -   Conversione semanticamente equivalente richiederebbe "`CASE` ... `WHEN` … `THEN`"Creazione in SQL per evitare di riordinare l'esecuzione dell'operando.  
+    -   Conversione semanticamente equivalente richiederebbe "`CASE` ... `WHEN` … `THEN`"un costrutto in SQL per evitare di riordinare l'esecuzione dell'operando.  
   
-    -   Una conversione non rigida per `AND` / `OR` operatori potrebbe provocare errori imprevisti se l'espressione c# si basa su valutazione il secondo operando in base al risultato della valutazione del primo operando.  
+    -   Una conversione non rigida al `AND` / `OR` operatori potrebbe provocare errori imprevisti se il C# espressione si basa sulla valutazione del secondo operando in corso in base al risultato della valutazione del primo operando.  
   
 -   La semantica della funzione `Round()` è diversa in [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] e in T-SQL.  
   
@@ -168,7 +168,7 @@ Where Col1 = Col2
     > [!NOTE]
     >  Questo comportamento dell'operatore `Like` si applica solo a C#; la parola chiave `Like` di Visual Basic rimane invariata.  
   
--   Overflow viene sempre controllato in SQL che però deve essere specificato in modo esplicito nel linguaggio c# (non in Visual Basic) per evitare wraparound. Date le colonne di valori integer C1, C2 e C3, se C1+C2 viene archiviato in C3 (aggiorna il set T C3 = C1 + C2).  
+-   Overflow viene sempre controllato in SQL, ma deve essere specificato in modo esplicito C# (non in Visual Basic) per evitare wraparound. Date le colonne di valori integer C1, C2 e C3, se C1+C2 viene archiviato in C3 (aggiorna il set T C3 = C1 + C2).  
   
     ```  
     create table T3 (  
@@ -186,7 +186,7 @@ Where Col1 = Col2
   
 -   In SQL viene eseguito l'arrotondamento aritmetico simmetrico, mentre in [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] viene usato un particolare tipo di arrotondamento. Per ulteriori dettagli, vedere l'articolo della Knowledge Base 196652.  
   
--   Per impostazione predefinita, in SQL non viene fatta distinzione tra maiuscole e minuscole nelle operazioni di confronto tra stringhe di caratteri per le impostazioni locali comuni. In Visual Basic e in C#, invece, viene fatta distinzione tra maiuscole e minuscole. Ad esempio `s == "Food"` (`s = "Food"` in Visual Basic) e `s == "Food"` può restituire risultati diversi se `s` è `food`.  
+-   Per impostazione predefinita, in SQL non viene fatta distinzione tra maiuscole e minuscole nelle operazioni di confronto tra stringhe di caratteri per le impostazioni locali comuni. In Visual Basic e in C#, invece, viene fatta distinzione tra maiuscole e minuscole. Ad esempio, `s == "Food"` (`s = "Food"` in Visual Basic) e `s == "Food"` può restituire risultati diversi se `s` è `food`.  
   
     ```  
     -- Assume default US-English locale (case insensitive).  
@@ -202,7 +202,7 @@ Where Col1 = Col2
  [!code-csharp[DLinqMismatch#6](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqMismatch/cs/Program.cs#6)]
  [!code-vb[DLinqMismatch#6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqMismatch/vb/Module1.vb#6)]  
   
--   Le funzioni o gli operatori applicati agli argomenti dei tipi di carattere a lunghezza fissa in SQL hanno una semantica significativamente diversa rispetto alle funzioni o agli operatori analoghi applicati a <xref:System.String?displayProperty=nameWithType> CLR. Anche questo può essere considerato come un'estensione del problema relativo alle controparti mancanti discusso nella sezione sui tipi.  
+-   Le funzioni o gli operatori applicati agli argomenti tipo di carattere a lunghezza fissa in SQL hanno una semantica significativamente diversa rispetto alle funzioni o agli operatori analoghi applicati a <xref:System.String?displayProperty=nameWithType> CLR. Anche questo può essere considerato come un'estensione del problema relativo alle controparti mancanti discusso nella sezione sui tipi.  
   
     ```  
     create table T4 (  
@@ -257,7 +257,7 @@ Where Col1 + Col2 > 4
 ```  
   
 ## <a name="performance-issues"></a>Problemi relativi alle prestazioni  
- Le differenze tra i tipi SQL Server e CLR possono comportare un calo delle prestazioni nel passaggio tra i sistemi di tipi CLR e SQL Server. Di seguito vengono indicati alcuni esempi di scenari che influenzano le prestazioni:  
+ Tenendo conto di alcuni-CLR di SQL Server le differenze di tipo possono comportare una riduzione delle prestazioni quando si usa tra CLR e SQL Server, sistemi di tipi. Di seguito vengono indicati alcuni esempi di scenari che influenzano le prestazioni:  
   
 -   Ordine di valutazione forzato per gli operatori And/Or logici  
   

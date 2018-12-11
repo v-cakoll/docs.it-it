@@ -4,12 +4,12 @@ description: Ciclo di vita delle applicazioni Docker in contenitori con piattafo
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 9b048beb0eb913fc6587dcc639a16df8153c550b
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 7454b25cdb1bede87c6f0bd179fcabd489922263
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123228"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154177"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Stato e dati nelle applicazioni di Docker
 
@@ -39,7 +39,7 @@ Figura 4-5 mostra che i volumi Docker normali possono essere inseriti nell'archi
 
 ![](./media/image5.png)
 
-Figura 4-5: i volumi di dati e origini dati esterne per i contenitori. app/contenitori
+Figura 4-5: I volumi di dati e origini dati esterne per i contenitori. app/contenitori
 
 A causa dell'impossibilità di gestire i dati condivisi tra contenitori che vengono eseguiti in host fisici separati, è consigliabile non usare volumi per i dati aziendali, a meno che l'host Docker è una host predefinita/VM, perché quando si usano i contenitori Docker in un agente di orchestrazione i contenitori devono essere spostati da uno a un altro host, a seconda delle ottimizzazioni da eseguire dal cluster.
 
@@ -49,7 +49,6 @@ Pertanto, i normali volumi di dati sono un meccanismo appropriato per lavorare c
 
 Origini dati remote e le cache, ad esempio Database SQL, DocumentDB o cache remote come Redis sarà quello utilizzato per lo sviluppo senza contenitori. Questo è uno dei modi Preferiti e collaudati per archiviare i dati di business dell'applicazione.
 
-
 >[!div class="step-by-step"]
-[Precedente](monolithic-applications.md)
-[Successivo](soa-applications.md)
+>[Precedente](monolithic-applications.md)
+>[Successivo](soa-applications.md)

@@ -2,12 +2,12 @@
 title: Dati di grandi dimensioni e flussi
 ms.date: 03/30/2017
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-ms.openlocfilehash: f381df2acdb370c6e84d3a00079578f8fceb69f3
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: a6c655e260aa75504e9a445458664b11d8e4d56d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44192574"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145137"
 ---
 # <a name="large-data-and-streaming"></a>Dati di grandi dimensioni e flussi
 Windows Communication Foundation (WCF) è un'infrastruttura di comunicazione basato su XML. Poiché i dati XML sono comunemente codificati in formato di testo standard definito nel [specifica XML 1.0](https://go.microsoft.com/fwlink/?LinkId=94838)connesse, architetti e sviluppatori di sistemi riguarda in genere il footprint di trasmissione (o dimensioni) di messaggi inviati tra la rete e la codifica basata su testo di XML comporta particolari difficoltà per il trasferimento efficiente di dati binari.  
@@ -15,7 +15,7 @@ Windows Communication Foundation (WCF) è un'infrastruttura di comunicazione bas
 ## <a name="basic-considerations"></a>Considerazioni di base  
  Per fornire informazioni complementari sulle informazioni seguenti per WCF, in questa sezione vengono evidenziate alcune preoccupazioni e considerazioni generali per le codifiche, i dati binari, e flussi che in genere si applicano alle infrastrutture di sistemi connessi.  
   
-### <a name="encoding-data-text-vs-binary"></a>Codifica dei dati: testo o Binario  
+### <a name="encoding-data-text-vs-binary"></a>Codifica dei dati: Visual Studio di testo. Binario  
  Gli sviluppatori hanno espresso preoccupazioni comuni, tra cui la percezione che il codice XML generi un notevole sovraccarico se paragonato ai formati binari a causa della natura ripetitiva dei tag di inizio e fine, l'osservazione che la codifica di valori numerici sia significativamente più grande poiché vengono espressi in valori di testo, e l'opinione che i dati binari non possono essere espressi in modo efficiente perché devono essere codificati appositamente per essere incorporati in un formato di testo.  
   
  Sebbene molte di queste e altre preoccupazioni simili siano valide, la differenza effettiva tra messaggi codificati in formato di testo-XML in un ambiente di servizi Web XML e messaggi con codifica binaria in un ambiente legacy di chiamata a procedura remota (RPC) è spesso molto meno significativa di quanto la considerazione iniziale possa suggerire.  
@@ -59,7 +59,7 @@ Windows Communication Foundation (WCF) è un'infrastruttura di comunicazione bas
  Durante l'invio di grandi quantità di dati è necessario impostare il `maxAllowedContentLength` impostazione di IIS (per altre informazioni, vedere [configurazione dei limiti delle richieste di IIS](https://go.microsoft.com/fwlink/?LinkId=253165)) e il `maxReceivedMessageSize` impostazioni dell'associazione (ad esempio [ System.ServiceModel.BasicHttpBinding.MaxReceivedMessageSize](xref:System.ServiceModel.HttpBindingBase.MaxReceivedMessageSize%2A) o <xref:System.ServiceModel.NetTcpBinding.MaxReceivedMessageSize%2A>). Il `maxAllowedContentLength` proprietà il valore predefinito è 28,6 e `maxReceivedMessageSize` proprietà il valore predefinito è 64 KB.  
   
 ## <a name="encodings"></a>Codifiche  
- Un' *codifica* definisce un set di regole che stabiliscono come presentare i messaggi in transito. Un' *codificatore* implementa tale codifica ed è responsabile, sul lato mittente, per la trasformazione un <xref:System.ServiceModel.Channels.Message> messaggi in memoria in un flusso di byte o un buffer di byte che possono essere inviati attraverso la rete. Sul lato destinatario, il codificatore trasforma una sequenza di byte in un messaggio in memoria.  
+ Un' *codifica* definisce un set di regole che stabiliscono come presentare i messaggi in transito. Un' *codificatore* implementa tale codifica ed è responsabile, sul lato mittente, per l'attivazione in memoria <xref:System.ServiceModel.Channels.Message> in un flusso di byte o un buffer di byte che possono essere inviati attraverso la rete. Sul lato destinatario, il codificatore trasforma una sequenza di byte in un messaggio in memoria.  
   
  WCF include tre codificatori e consente di scrivere e implementare codificatori personalizzati, se necessario.  
   
@@ -239,4 +239,4 @@ public class UploadStreamMessage
 >  La scelta di utilizzare trasferimenti memorizzati nel buffer o in flussi è una decisione specifica dell'endpoint. Per i trasporti HTTP, la modalità di trasferimento non si propaga attraverso una connessione o ai server proxy e agli altri intermediari. L'impostazione della modalità di trasferimento non si riflette nella descrizione dell'interfaccia del servizio. Dopo aver generato un client WCF per un servizio, è necessario modificare il file di configurazione per i servizi dovrà essere utilizzato per impostare la modalità di trasferimento con flusso. Per i trasporti TCP e named pipe, la modalità di trasferimento viene propagata come asserzione di criteri.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedura: Abilitare lo streaming](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
+ [Come si fa: Abilitare lo Streaming](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)

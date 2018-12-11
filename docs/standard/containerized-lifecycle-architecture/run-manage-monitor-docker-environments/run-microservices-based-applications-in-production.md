@@ -4,12 +4,12 @@ description: Ciclo di vita delle applicazioni Docker in contenitori con piattafo
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 18e6cb1fb5f496b66c89cb8e009a67894b8a76ad
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 003bf794f5427e7b2f10d1e04fd27605b980cdfe
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123150"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126302"
 ---
 # <a name="run-composed-and-microservices-based-applications-in-production-environments"></a>Eseguire applicazioni basate su microservizi e composte negli ambienti di produzione
 
@@ -33,7 +33,6 @@ Quando le applicazioni sono con scalabilità orizzontale tra più sistemi host, 
 
 Le funzionalità offerte da agenti di orchestrazione e utilità di pianificazione sono molto complesse per sviluppare e creare da zero e di conseguenza è in genere opportuno apportare uso di soluzioni di orchestrazione offerti dai fornitori.
 
-
 >[!div class="step-by-step"]
-[Precedente](index.md)
-[Successivo](manage-production-docker-environments.md)
+>[Precedente](index.md)
+>[Successivo](manage-production-docker-environments.md)

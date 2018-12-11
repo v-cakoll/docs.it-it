@@ -3,11 +3,11 @@ title: Client di test WCF (WcfTestClient.exe)
 ms.date: 03/30/2017
 ms.assetid: d4302855-677f-4640-aa90-c5d785d72fb7
 ms.openlocfilehash: 4e3531b91382c4d47aed73198bd8dd954ae4ca1f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181592"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149003"
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a>Client di test WCF (WcfTestClient.exe)
 Il Client di prova di Windows Communication Foundation (WCF) (WcfTestClient.exe) è un strumento GUI che consente agli utenti di immettere parametri di test, inviare tale input al servizio e Visualizza la risposta restituita dal servizio. Fornisce un servizio facile test combinazione con Host servizio WCF.  
@@ -136,7 +136,7 @@ Il Client di prova di Windows Communication Foundation (WCF) (WcfTestClient.exe)
 ## <a name="features-supported-by-wcf-test-client"></a>Funzionalità supportate da Client di prova WCF  
  Di seguito è riportato un elenco delle funzionalità supportate da Client di prova WCF:  
   
--   Chiamata al servizio: messaggio di richiesta/risposta e unidirezionale.  
+-   Chiamata al servizio: Richiesta/risposta e unidirezionale.  
   
 -   Associazioni: tutte le associazioni supportate da Svcutil.exe.  
   
@@ -156,7 +156,7 @@ Il Client di prova di Windows Communication Foundation (WCF) (WcfTestClient.exe)
   
 -   Sicurezza: [!INCLUDE[infocard](../../../includes/infocard-md.md)], certificato e nome utente/password.  
   
--   Associazioni: WSFederationbinding, qualsiasi associazione Context e associazione Https, WebHttpbinding (supporto per messaggi di riposta Json).  
+-   Binding: WSFederationbinding, qualsiasi associazione Context e associazione Https, WebHttpbinding (supporto di messaggi di risposta Json).  
   
 ## <a name="closing-wcf-test-client"></a>Chiusura di Client di test WCF  
  È possibile chiudere Client di prova WCF nei modi seguenti:  

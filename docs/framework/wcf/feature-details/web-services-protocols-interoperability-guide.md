@@ -3,11 +3,11 @@ title: Guida di interoperabilità dei protocolli di servizi Web
 ms.date: 03/30/2017
 ms.assetid: f2981678-ebdb-433d-899b-467f7df95fb2
 ms.openlocfilehash: 9aeceff9dc2b714016d2f7c379e538d885489bb9
-ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50744548"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154346"
 ---
 # <a name="web-services-protocols-interoperability-guide"></a>Guida di interoperabilità dei protocolli di servizi Web
 Windows Communication Foundation (WCF) implementi una serie di protocolli di servizi Web. Molti di questi protocolli includono diverse opzioni e punti estendibilità lasciati alla discrezione dell'implementatore. In questo argomento fornisce un elenco di protocolli di servizi Web che WCF implementa. Altri argomenti di questa sezione forniscono dettagli di implementazione per ogni protocollo supportato.  
@@ -23,7 +23,7 @@ Windows Communication Foundation (WCF) implementi una serie di protocolli di ser
 |-----------------------------|----------|  
 |HTTP 1.1|[RFC 2616](https://go.microsoft.com/fwlink/?LinkId=90372)|  
 |Associazione SOAP 1,1 HTTP|[Simple Object Access Protocol (SOAP) 1.1](https://go.microsoft.com/fwlink/?LinkId=90520), sezione 7|  
-|Associazione SOAP 1,2 HTTP|[SOAP versione 1.2 parte 2: Aggiunte (seconda edizione)](https://go.microsoft.com/fwlink/?LinkId=95329), sezione 7|  
+|Associazione SOAP 1,2 HTTP|[Versione di SOAP 1.2 parte 2: Aggiunte (seconda edizione)](https://go.microsoft.com/fwlink/?LinkId=95329), sezione 7|  
   
  <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> e <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> supportano le specifiche indicate nella tabella seguente.  
   
@@ -54,14 +54,14 @@ Windows Communication Foundation (WCF) implementi una serie di protocolli di ser
 |Specifica/documento|Collegamento|  
 |-----------------------------|----------|  
 |WSS: SOAP Message Security 1,0|[Web Services Security: SOAP Message Security 1,0](https://go.microsoft.com/fwlink/?LinkId=94684)|  
-|WSS: Username Token Profile 1.0|[Web Services Security Kerberos token Profile 1.0](https://go.microsoft.com/fwlink/?LinkId=95334)<br /><br /> Richiedi Password/@Type= PasswordText (impostazione predefinita)|  
+|WSS: Nome utente Token Profile 1.0|[Web Services Security Kerberos token Profile 1.0](https://go.microsoft.com/fwlink/?LinkId=95334)<br /><br /> Richiedi Password/@Type= PasswordText (impostazione predefinita)|  
 |WSS: X.509 Token Profile 1.0|[Web Services Security X.509 Certificate Token Profile](https://go.microsoft.com/fwlink/?LinkId=95335)|  
-|WSS: SAML 1.1 Token Profile 1.0|[Web Services Security: SAML Token Profile](https://go.microsoft.com/fwlink/?LinkId=96693)|  
-|WSS: SOAP Message Security 1.1|[Web Services Security: SOAP Message Security 1.1](https://go.microsoft.com/fwlink/?LinkId=91240)|  
+|WSS: 1.1 di SAML Token Profile 1,0|[Web Services Security: Profilo del Token SAML](https://go.microsoft.com/fwlink/?LinkId=96693)|  
+|WSS: Sicurezza dei messaggi SOAP 1.1|[Web Services Security: Sicurezza dei messaggi SOAP 1.1](https://go.microsoft.com/fwlink/?LinkId=91240)|  
 |WSS Username Token Profile 1.1|[Web Services Security UsernameToken Profile 1.1](https://go.microsoft.com/fwlink/?LinkId=95331)<br /><br /> non implementare la funzionalità di derivazione della chiave basata su password;<br /><br /> Richiedi Password/@Type= PasswordText (impostazione predefinita)|  
-|WSS: X509 Token Profile 1.1|[Web Services Security X.509 Certificate Token Profile 1.1](https://go.microsoft.com/fwlink/?LinkId=95332)|  
+|WSS: X509 token Profile 1.1|[Web Services Security X.509 Certificate Token Profile 1.1](https://go.microsoft.com/fwlink/?LinkId=95332)|  
 |WSS: Kerberos Token Profile 1.1|[Web Services Security Kerberos Token Profile 1.1](https://go.microsoft.com/fwlink/?LinkId=95333)|  
-|WSS: SAML 1.1 Token Profile 1.1|[Web Services Security SAML Token Profile 1,1](https://go.microsoft.com/fwlink/?LinkId=96694)|  
+|WSS: 1.1 di SAML Token Profile 1.1|[Web Services Security SAML Token Profile 1,1](https://go.microsoft.com/fwlink/?LinkId=96694)|  
 |WS-Secure Conversation|[Linguaggio di conversazione sicura dei servizi Web](https://go.microsoft.com/fwlink/?LinkId=95317)|  
 |WS-Trust 1.4|[Lingua dell'attendibilità dei servizi Web](https://go.microsoft.com/fwlink/?LinkId=169514)|  
 |WS-SecurityPolicy 2005/07|[Linguaggio di conversazione sicura dei servizi Web](https://go.microsoft.com/fwlink/?LinkId=95317)<br /><br /> Rettificato in base all'errata corrige inviato all'OASIS WS-SX TC.<br /><br /> [messaggio di ws-sx TC](https://go.microsoft.com/fwlink/?LinkId=96700)|  
@@ -78,7 +78,7 @@ Windows Communication Foundation (WCF) implementi una serie di protocolli di ser
   
 -   [XML Schema Part 1: Strutture Second Edition](https://go.microsoft.com/fwlink/?LinkId=3536)  
   
--   [XML Schema Part 2: I tipi di dati seconda edizione](https://go.microsoft.com/fwlink/?LinkId=40138)  
+-   [XML Schema Part 2: Tipi di dati seconda edizione](https://go.microsoft.com/fwlink/?LinkId=40138)  
   
 -   [WSDL 1.1](https://go.microsoft.com/fwlink/?LinkId=96160)  
   

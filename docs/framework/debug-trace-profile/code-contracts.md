@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 84526045-496f-489d-8517-a258cf76f040
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 569be83b902e7634a0c22e78c3f3c3a23985076c
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 721693166c561babb9d7825f480e92d14a5f347c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2018
-ms.locfileid: "49308552"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154437"
 ---
 # <a name="code-contracts"></a>Contratti di codice
 I contratti di codice consentono di specificare precondizioni, postcondizioni e invarianti dell'oggetto nel codice. Le precondizioni sono requisiti da soddisfare quando si accede a un metodo o a una proprietà. Le postcondizioni descrivono le aspettative al momento dell'uscita dal codice del metodo o della proprietà. Le invarianti dell'oggetto descrivono lo stato previsto per una classe in stato integro.  
@@ -23,13 +23,13 @@ I contratti di codice consentono di specificare precondizioni, postcondizioni e 
   
  I vantaggi dei contratti di codice includono:  
   
--   Test migliorati: i contratti di codice consentono la verifica statica, il controllo di runtime e la generazione di documentazione.  
+-   Test migliorati: I contratti di codice offrono verifica statica, il controllo di runtime e la generazione di documentazione.  
   
--   Strumenti di test automatici: è possibile usare i contratti di codice per generare unit test più significativi eliminando gli argomenti di test inutili che non soddisfano le precondizioni.  
+-   Strumenti di test automatico: È possibile usare i contratti di codice per generare unit test più significativi, filtrando gli argomenti di test inutili che non soddisfano le precondizioni.  
   
--   Verifica statica: lo strumento di controllo statico può rilevare eventuali violazioni dei contratti senza eseguire il programma. Verifica la presenza di contratti impliciti, ad esempio dereferenziazioni null e limiti di matrici, e di contratti espliciti.  
+-   Verifica statica: Il controllo statico può decidere se sono presenti eventuali violazioni dei contratti senza eseguire il programma. Verifica la presenza di contratti impliciti, ad esempio dereferenziazioni null e limiti di matrici, e di contratti espliciti.  
   
--   Documentazione di riferimento: il generatore di documentazione integra i file di documentazione XML esistenti con le informazioni sul contratto. Sono anche presenti fogli di stile utilizzabili con [Sandcastle](https://github.com/EWSoftware/SHFB) in modo che nelle pagine della documentazione generate siano contenute sezioni relative ai contratti.  
+-   Documentazione di riferimento: Il generatore di documentazione integra i file di documentazione XML esistenti con le informazioni del contratto. Sono anche presenti fogli di stile utilizzabili con [Sandcastle](https://github.com/EWSoftware/SHFB) in modo che nelle pagine della documentazione generate siano contenute sezioni relative ai contratti.  
   
  I contratti possono essere usati immediatamente da tutti i linguaggi di .NET Framework; non è necessario scrivere un parser o un compilatore speciale. Un componente aggiuntivo di Visual Studio consente di specificare il livello di analisi dei contratti di codice da eseguire. Gli analizzatori possono confermare che i contratti sono formalmente corretti (controllo del tipo e risoluzione dei nomi) e possono produrre un form compilato dei contratti nel formato MSIL (Microsoft Intermediate Language). La funzionalità di creazione dei contratti in Visual Studio consente di usare IntelliSense standard fornito dallo strumento.  
   
@@ -42,11 +42,15 @@ I contratti di codice consentono di specificare precondizioni, postcondizioni e 
   
  Ad esempio, la precondizione seguente indica che il parametro `x` non deve essere null.  
   
- `Contract.Requires( x != null );`  
+ ```csharp
+ Contract.Requires(x != null);
+ ```
   
  Se il codice deve generare una particolare eccezione in caso di errore di una precondizione, è possibile usare l'overload generico di <xref:System.Diagnostics.Contracts.Contract.Requires%2A> come descritto di seguito.  
   
- `Contract.Requires<ArgumentNullException>( x != null, "x" );`  
+ ```csharp
+ Contract.Requires<ArgumentNullException>(x != null, "x");
+ ```
   
 ### <a name="legacy-requires-statements"></a>Istruzioni Requires legacy  
  La maggior parte del codice contiene la convalida dei parametri sotto forma di codice `if`-`then`-`throw`. Gli strumenti dei contratti riconoscono queste istruzioni come precondizioni nei casi seguenti:  
@@ -57,12 +61,12 @@ I contratti di codice consentono di specificare precondizioni, postcondizioni e 
   
  Quando le istruzioni `if`-`then`-`throw` vengono visualizzate in questo formato, gli strumenti le riconoscono come istruzioni `requires` legacy. Se la sequenza `if`-`then`-`throw` non è seguita da altri contratti, terminare il codice con il metodo <xref:System.Diagnostics.Contracts.Contract.EndContractBlock%2A?displayProperty=nameWithType>.  
   
-```  
-if ( x == null ) throw new ...  
-Contract.EndContractBlock(); // All previous "if" checks are preconditions  
-```  
+```csharp
+if (x == null) throw new ...
+Contract.EndContractBlock(); // All previous "if" checks are preconditions
+```
   
- La condizione nel test precedente è una precondizione negata. La precondizione effettiva sarebbe `x != null`. Una precondizione negata è altamente limitata: deve essere scritta come mostrato nell'esempio precedente, quindi non deve contenere clausole `else` e il corpo della clausola `then` deve essere un'unica istruzione `throw`. Il test `if` è soggetto a regole di purezza e visibilità (vedere [Linee guida di utilizzo](#usage_guidelines)), ma l'espressione `throw` è soggetta solo a regole di purezza. Tuttavia, il tipo dell'eccezione generata deve essere visibile quanto il metodo in cui si verifica il contratto.  
+ La condizione nel test precedente è una precondizione negata. La precondizione effettiva sarebbe `x != null`. Una precondizione negata è altamente limitata: Deve essere scritta come mostrato nell'esempio precedente; vale a dire, quindi non deve contenere `else` clausole e il corpo del `then` clausola deve essere un singolo `throw` istruzione. Il test `if` è soggetto a regole di purezza e visibilità (vedere [Linee guida di utilizzo](#usage_guidelines)), ma l'espressione `throw` è soggetta solo a regole di purezza. Tuttavia, il tipo dell'eccezione generata deve essere visibile quanto il metodo in cui si verifica il contratto.  
   
 ## <a name="postconditions"></a>Postconditions  
  Le postcondizioni sono contratti per lo stato di un metodo nel momento in cui termina. La postcondizione viene controllata appena prima dell'uscita da un metodo. Il comportamento in fase di esecuzione delle postcondizioni con errori viene determinato dall'analizzatore di runtime.  
@@ -72,12 +76,16 @@ Contract.EndContractBlock(); // All previous "if" checks are preconditions
 ### <a name="standard-postconditions"></a>Postcondizioni standard  
  È possibile esprimere postcondizioni standard con il metodo <xref:System.Diagnostics.Contracts.Contract.Ensures%2A>. Le postcondizioni esprimono una condizione che deve essere `true` quando il metodo termina regolarmente.  
   
- `Contract.Ensures( this.F > 0 );`  
+ ```csharp
+ Contract.Ensures(this.F > 0);
+ ```
   
 ### <a name="exceptional-postconditions"></a>Postcondizioni eccezionali  
  Le postcondizioni eccezionali sono postcondizioni che devono essere `true` quando una particolare eccezione viene generata da un metodo. È possibile specificare queste postcondizioni tramite il metodo <xref:System.Diagnostics.Contracts.Contract.EnsuresOnThrow%2A?displayProperty=nameWithType>, come mostrato nell'esempio seguente.  
   
- `Contract.EnsuresOnThrow<T>( this.F > 0 );`  
+ ```csharp
+ Contract.EnsuresOnThrow<T>(this.F > 0);
+ ```
   
  L'argomento è la condizione che deve essere `true` quando viene generata un'eccezione che corrisponde a un sottotipo di `T`.  
   
@@ -86,7 +94,7 @@ Contract.EndContractBlock(); // All previous "if" checks are preconditions
 ### <a name="special-postconditions"></a>Postcondizioni speciali  
  I seguenti metodi possono essere usati solo all'interno di postcondizioni:  
   
--   È possibile fare riferimento ai valori restituiti dai metodi nelle postcondizioni usando l'espressione `Contract.Result<T>()`, dove `T` viene sostituito dal tipo restituito del metodo. Quando il compilatore non è in grado di dedurre il tipo, è necessario fornirlo in modo esplicito. Il compilatore C#, ad esempio, non è in grado di dedurre i tipi per i metodi che non accettano argomenti, pertanto richiede la seguente postcondizione: `Contract.Ensures(0 <Contract.Result<int>())`. I metodi con un tipo restituito `void` non possono fare riferimento a `Contract.Result<T>()` nelle relative postcondizioni.  
+-   È possibile fare riferimento ai valori restituiti dai metodi nelle postcondizioni usando l'espressione `Contract.Result<T>()`, dove `T` viene sostituito dal tipo restituito del metodo. Quando il compilatore non è in grado di dedurre il tipo, è necessario fornirlo in modo esplicito. Ad esempio, il C# compilatore è in grado di dedurre i tipi per i metodi che non accettano argomenti, è necessaria la seguente postcondizione: `Contract.Ensures(0 <Contract.Result<int>())` I metodi con tipo restituito `void` non può fare riferimento a `Contract.Result<T>()` nelle relative postcondizioni.  
   
 -   Un valore di prestato in una postcondizione fa riferimento al valore di un'espressione all'inizio di un metodo o di una proprietà. Usa l'espressione `Contract.OldValue<T>(e)`, dove `T` è il tipo di `e`. È possibile omettere l'argomento di tipo generico quando il compilatore è in grado di dedurre il tipo. Il compilatore C#, ad esempio, deduce sempre il tipo poiché accetta un argomento. Esistono diverse restrizioni relative a quanto può accadere in `e` e i contesti nei quali può essere visualizzata un'espressione Old. Un'espressione Old non può contenere un'altra espressione Old. In particolare, un'espressione Old deve fare riferimento a un valore esistente nello stato di precondizione del metodo. In altre parole, deve essere un'espressione valutabile finché la precondizione del metodo resta `true`. Di seguito sono riportate diverse istanze di questa regola.  
   
@@ -94,7 +102,7 @@ Contract.EndContractBlock(); // All previous "if" checks are preconditions
   
     -   Non è possibile fare riferimento al valore restituito del metodo in un'espressione Old:  
   
-        ```  
+        ```csharp
         Contract.OldValue(Contract.Result<int>() + x) // ERROR  
         ```  
   
@@ -102,30 +110,31 @@ Contract.EndContractBlock(); // All previous "if" checks are preconditions
   
     -   Un'espressione Old non può dipendere dalla variabile associata di un quantificatore se l'intervallo del quantificatore dipende dal valore restituito del metodo:  
   
-        ```  
-        Contract. ForAll (0,Contract. Result<int>(),  
-        i => Contract.OldValue(xs[i]) > 3); // ERROR  
+        ```csharp
+        Contract.ForAll(0, Contract.Result<int>(), i => Contract.OldValue(xs[i]) > 3); // ERROR
         ```  
   
     -   Un'espressione Old non può fare riferimento al parametro del delegato anonimo in una chiamata a <xref:System.Diagnostics.Contracts.Contract.ForAll%2A> o <xref:System.Diagnostics.Contracts.Contract.Exists%2A> a meno che non venga usata come indicizzatore o argomento di una chiamata al metodo:  
   
-        ```  
-        Contract. ForAll (0, xs .Length, i => Contract.OldValue(xs[i]) > 3); // OK  
-        Contract. ForAll (0, xs .Length, i => Contract.OldValue(i) > 3); // ERROR  
+        ```csharp
+        Contract.ForAll(0, xs.Length, i => Contract.OldValue(xs[i]) > 3); // OK
+        Contract.ForAll(0, xs.Length, i => Contract.OldValue(i) > 3); // ERROR
         ```  
   
     -   Un'espressione Old non può verificarsi nel corpo di un delegato anonimo se il valore dell'espressione dipende da uno dei parametri del delegato, a meno che quest'ultimo non sia un argomento del metodo <xref:System.Diagnostics.Contracts.Contract.ForAll%2A> o <xref:System.Diagnostics.Contracts.Contract.Exists%2A>:  
   
-        ```  
-        Method( ... (T t) => Contract.OldValue(... t ...) ... ); // ERROR  
+        ```csharp
+        Method(... (T t) => Contract.OldValue(... t ...) ...); // ERROR
         ```  
   
     -   I parametri `Out` presentano un problema in quanto i contratti vengono visualizzati prima del corpo del metodo e la maggior parte dei compilatori non consente riferimenti ai parametri `out` nelle postcondizioni. Per risolvere il problema, la classe <xref:System.Diagnostics.Contracts.Contract> fornisce il metodo <xref:System.Diagnostics.Contracts.Contract.ValueAtReturn%2A> che consente una postcondizione basata su un parametro `out`.  
   
-        ```  
-        public void OutParam(out int x) f  
-        Contract.Ensures(Contract.ValueAtReturn(out x) == 3);  
-        x = 3;  
+        ```csharp
+        public void OutParam(out int x)
+        {
+            Contract.Ensures(Contract.ValueAtReturn(out x) == 3);
+            x = 3;
+        }
         ```  
   
          Come per il metodo <xref:System.Diagnostics.Contracts.Contract.OldValue%2A>, è possibile omettere il parametro di tipo generico quando il compilatore è in grado di dedurre il tipo. Il rewriter del contratto sostituisce la chiamata al metodo con il valore del parametro `out`. Il metodo <xref:System.Diagnostics.Contracts.Contract.ValueAtReturn%2A> può essere visualizzato solo nelle postcondizioni. L'argomento del metodo deve essere un parametro `out` o un campo del parametro `out` di una struttura. Quest'ultimo è utile anche in caso di riferimento a campi nella postcondizione di un costruttore della struttura.  
@@ -138,14 +147,14 @@ Contract.EndContractBlock(); // All previous "if" checks are preconditions
   
  I metodi invarianti vengono contrassegnati ai fini dell'identificazione con l'attributo <xref:System.Diagnostics.Contracts.ContractInvariantMethodAttribute>. I metodi invarianti non devono contenere codice, fatta eccezione per una sequenza di chiamate al metodo <xref:System.Diagnostics.Contracts.Contract.Invariant%2A>, ognuna delle quali specifica una singola invariante, come mostrato nell'esempio seguente.  
   
-```  
+```csharp
 [ContractInvariantMethod]  
 protected void ObjectInvariant ()   
 {  
-Contract.Invariant(this.y >= 0);  
-Contract.Invariant(this.x > this.y);  
-...  
-}  
+    Contract.Invariant(this.y >= 0);
+    Contract.Invariant(this.x > this.y);
+    ...
+}
 ```  
   
  Le invarianti vengono definite in modo condizionale dal simbolo del preprocessore CONTRACTS_FULL. Durante il controllo in fase di esecuzione, le invarianti vengono controllate alla fine di ogni metodo pubblico. Se un'invariante menziona un metodo pubblico nella stessa classe, il controllo dell'invariante che avverrebbe normalmente alla fine di tale metodo viene disabilitato. Al contrario, il controllo viene eseguito solo alla fine della chiamata al metodo più esterna in quella classe. Ciò avviene anche se la classe viene immessa di nuovo a causa di una chiamata a un metodo in un'altra classe. Gli invarianti non vengono verificati per il finalizzatore di un oggetto e un <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> implementazione.  

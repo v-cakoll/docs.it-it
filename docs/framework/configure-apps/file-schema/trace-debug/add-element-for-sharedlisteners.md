@@ -10,28 +10,30 @@ helpviewer_keywords:
 ms.assetid: 1595e1bc-2492-421f-8384-7f382eb8eb57
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 93fdb548882422634e1d2456b4d37f434b278f8d
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 9e0a23411f4bc37a1e09460113d15f4861e0a190
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845372"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151161"
 ---
 # <a name="ltaddgt-element-for-ltsharedlistenersgt"></a>&lt;aggiungere&gt; (elemento) per &lt;sharedListeners&gt;
 Aggiunge un listener alla raccolta `sharedListeners`. `sharedListeners` è una raccolta di listener che eventuali [ \<origine >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md) oppure [ \<traccia >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md) può fare riferimento.  Per impostazione predefinita, nei listener di traccia le `sharedListeners` raccolta non vengono inserite in un `Listeners` raccolta. Devono essere aggiunti in base al nome per il [ \<origine >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md) oppure [ \<traccia >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md). Non è possibile ottenere il listener `sharedListeners` insieme nel codice in fase di esecuzione.  
   
  \<configuration>  
-\<System. Diagnostics >  
-\<sharedListeners > elemento  
-\<add>  
+&nbsp;&nbsp;\<System. Diagnostics >  
+&nbsp;&nbsp;&nbsp;&nbsp;\<sharedListeners > elemento  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<aggiungere >  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```xml  
 <add name="name"   
   type="TraceListenerClassName, Version, Culture, PublicKeyToken"  
-  initializeData="data"/>  
-```  
+  initializeData="data"
+  traceOutputOptions = "None"
+/>  
+```
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
@@ -43,7 +45,8 @@ Aggiunge un listener alla raccolta `sharedListeners`. `sharedListeners` è una r
 |`name`|Attributo obbligatorio.<br /><br /> Specifica il nome del listener che consente di aggiungere il listener condiviso a un `Listeners` raccolta.|  
 |`type`|Attributo obbligatorio.<br /><br /> Specifica il tipo del listener. È necessario usare una stringa che soddisfi i requisiti specificati nelle [Specifying Fully Qualified Type Names](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
 |`initializeData`|Attributo facoltativo.<br /><br /> La stringa passata al costruttore per la classe specificata.|  
-  
+|`traceOutputOptions`|Attributo facoltativo.<br/><br/>La rappresentazione di stringa di uno o più <xref:System.Diagnostics.TraceOptions> membri di enumerazione che indica i dati da scrivere nell'output di traccia. Più elementi sono separati da virgole. Il valore predefinito è "None".|
+
 ### <a name="child-elements"></a>Elementi figlio  
   
 |Elemento|Descrizione|  

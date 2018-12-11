@@ -2,17 +2,17 @@
 title: DataView
 ms.date: 03/30/2017
 ms.assetid: 0fe5dfa2-c1cd-435f-90b6-b4dd2e3ef34b
-ms.openlocfilehash: 75719e91daba189c1d93491a1db26acc80100bea
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 93789cf64653af863cbedbf1caeea886afb713f5
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514752"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129389"
 ---
 # <a name="dataviews"></a>DataView
-Un oggetto <xref:System.Data.DataView> consente di creare diverse visualizzazioni dei dati archiviati in un oggetto <xref:System.Data.DataTable>. Questa funzionalità è usata spesso nelle applicazioni di associazione dati. Usando un **DataView**, è possibile esporre i dati di una tabella applicando diversi tipi di ordinamento ed è possibile filtrare i dati da riga di stato o sulla base di un'espressione di filtro.  
+Un oggetto <xref:System.Data.DataView> consente di creare diverse visualizzazioni dei dati archiviati in un oggetto <xref:System.Data.DataTable>. Questa funzionalità è usata spesso nelle applicazioni di data binding. Usando un **DataView**, è possibile esporre i dati di una tabella applicando diversi tipi di ordinamento ed è possibile filtrare i dati da riga di stato o sulla base di un'espressione di filtro.  
   
- Oggetto **DataView** offre una visualizzazione dinamica dei dati nell'oggetto sottostante **DataTable**: il contenuto, ordinamento e l'appartenenza riflettono le modifiche appena si verificano. Questo comportamento è diverso dal **selezionare** metodo per il **DataTable**, che restituisce un <xref:System.Data.DataRow> matrice da una tabella basata su un particolare ordine di filtro e/o di ordinamento: thiscontent riflette le modifiche apportate il sottostanti nella tabella, ma l'appartenenza e l'ordinamento restano statici. Le funzionalità dinamiche del **DataView** lo rendono ideale per applicazioni di data binding.  
+ Oggetto **DataView** offre una visualizzazione dinamica dei dati nell'oggetto sottostante **DataTable**: il contenuto, ordinamento e l'appartenenza riflettono le modifiche appena si verificano. Questo comportamento è diverso dal **selezionare** metodo per il **DataTable**, che restituisce un <xref:System.Data.DataRow> matrice da una tabella basata su un particolare ordine di filtro e/o di ordinamento: questo contenuto riflette le modifiche apportate il sottostanti nella tabella, ma l'appartenenza e l'ordinamento restano statici. Le funzionalità dinamiche del **DataView** lo rendono ideale per applicazioni di data binding.  
   
  Oggetto **DataView** offre una visualizzazione dinamica di un singolo set di dati, molto simile a una vista di database, a cui è possibile applicare l'ordinamento diversi e criteri di filtro. A differenza di una vista di database, tuttavia, un **DataView** non può essere considerato come una tabella e non può fornire una visualizzazione di tabelle unite in join. Inoltre, non è possibile escludere colonne presenti nella tabella di origine, né aggiungere colonne, quali le colonne computazionali, che non sono presenti nella tabella di origine.  
   

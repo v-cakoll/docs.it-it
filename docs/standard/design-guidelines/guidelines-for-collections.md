@@ -1,16 +1,15 @@
 ---
 title: Linee guida per le raccolte
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 ms.assetid: 297b8f1d-b11f-4dc6-960a-8e990817304e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3571ebb2fdd2bcdfd8be1f0087d096e01f18790a
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+author: KrzysztofCwalina
+ms.openlocfilehash: 12f086ac92b449e074b9d39a563a20a3ebf2ff26
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45964841"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145582"
 ---
 # <a name="guidelines-for-collections"></a>Linee guida per le raccolte
 Qualsiasi tipo progettata specificamente per modificare un gruppo di oggetti con alcune caratteristiche comuni può essere considerato come una raccolta. È quasi sempre appropriato per questi tipi implementare <xref:System.Collections.IEnumerable> o <xref:System.Collections.Generic.IEnumerable%601>, pertanto in questa sezione è considerare solo i tipi che implementano una o entrambe queste interfacce a essere raccolte.  
@@ -109,7 +108,7 @@ Qualsiasi tipo progettata specificamente per modificare un gruppo di oggetti con
  **X DO NOT** ereditare le raccolte di base non generiche, ad esempio `CollectionBase`. Uso `Collection<T>`, `ReadOnlyCollection<T>`, e `KeyedCollection<TKey,TItem>` invece.  
   
 ### <a name="naming-custom-collections"></a>Denominazione di raccolte personalizzate  
- Raccolte (i tipi che implementano `IEnumerable`) vengono creati principalmente per due motivi: (1) per creare una nuova struttura di dati con le operazioni specifiche della struttura e spesso diverse caratteristiche di prestazioni rispetto alle strutture di dati esistente (ad esempio, <xref:System.Collections.Generic.List%601>, <xref:System.Collections.Generic.LinkedList%601>, <xref:System.Collections.Generic.Stack%601>) e (2) per creare una raccolta specializzata per mantenere un set specifico di elementi (ad esempio, <xref:System.Collections.Specialized.StringCollection>). Strutture di dati vengono spesso usate nell'implementazione interna di applicazioni e librerie. Raccolte specializzate sono principalmente a essere esposti nelle API (come i tipi di proprietà e parametri).  
+ Raccolte (i tipi che implementano `IEnumerable`) vengono creati principalmente per due motivi: (1) per creare una nuova struttura di dati con le operazioni specifiche della struttura e spesso diverse caratteristiche di prestazioni rispetto alle strutture di dati esistente (ad esempio, <xref:System.Collections.Generic.List%601>, <xref:System.Collections.Generic.LinkedList%601>, <xref:System.Collections.Generic.Stack%601>) e (2) per creare una raccolta specializzata per che contiene un set specifico di elementi (ad esempio, <xref:System.Collections.Specialized.StringCollection>). Strutture di dati vengono spesso usate nell'implementazione interna di applicazioni e librerie. Raccolte specializzate sono principalmente a essere esposti nelle API (come i tipi di proprietà e parametri).  
   
  **✓ DO** utilizzare il suffisso "Dictionary" nei nomi di astrazioni implementazione `IDictionary` o `IDictionary<TKey,TValue>`.  
   
@@ -127,7 +126,7 @@ Qualsiasi tipo progettata specificamente per modificare un gruppo di oggetti con
   
  *Parti protette da copyright © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*  
   
- *Ristampato con l'autorizzazione di Pearson Education, Inc. da [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2a edizione](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) di Krzysztof Cwalina and Brad Abrams, pubblicato il 22 ottobre 2008 da Addison-Wesley Professional nella collana Microsoft Windows Development Series.*  
+ *Ristampato con l'autorizzazione di Pearson Education, Inc. dal [linee guida di progettazione di Framework: Convenzioni, linguaggi e modelli per le librerie .NET di riutilizzabile, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina e Brad Abrams, pubblicato il 22 ottobre 2008 da Addison-Wesley Professional come parte della serie di sviluppo di Microsoft Windows.*  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -4,12 +4,12 @@ description: Ciclo di vita delle applicazioni Docker in contenitori con piattafo
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 4bdc4470624ce6e905ab858a2bd8b607c8d3d646
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 5630bfcc3173def670e2fa780d28024799b7c2a1
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47232924"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153923"
 ---
 # <a name="monitor-containerized-application-services"></a>Monitorare i servizi delle applicazioni in contenitori
 
@@ -25,13 +25,13 @@ Per quanto attiene a Docker, è possibile grafico gli eventi del ciclo di vita e
 
 ![esempio](./media/image1.png)
 
-Figura 6-1: Application Insights è monitoraggio di contenitori e host Docker
+Figura 6-1: Monitoraggio dei contenitori e host Docker di Application Insights
 
 Quando si esegue la [immagine Docker di Application Insights](https://hub.docker.com/r/microsoft/applicationinsights/) nell'host Docker, trarre vantaggio da quanto segue:
 
 -   Dati di telemetria su tutti i contenitori in esecuzione nell'host del ciclo di vita, avviare, arrestare e così via.
 
--   I contatori delle prestazioni per tutti i contenitori: CPU, memoria, utilizzo della rete e altro ancora.
+-   Contatori delle prestazioni per tutti i contenitori: CPU, memoria, utilizzo della rete e altro ancora.
 
 -   Se è installato anche [Application Insights SDK](https://docs.microsoft.com/azure/application-insights/app-insights-asp-net) nelle App in esecuzione nei contenitori, tutti i dati di telemetria di tali App avranno proprietà aggiuntive che identificano il contenitore e il computer host. Quindi, ad esempio, se si dispone di istanze di un'app in esecuzione in più di un host, facilmente sarà in grado di filtrare i dati di telemetria dell'app dall'host.
 
@@ -60,7 +60,7 @@ Oltre a fornire importanti servizi autonomamente, la soluzione contenitori di Op
 
 ![](./media/image2.png)
 
-Figura 6-2: informazioni sui contenitori di Docker illustrato da Operations Management Suite
+Figura 6-2: Informazioni sui contenitori di Docker illustrato da Operations Management Suite
 
 Application Insights e Operations Management Suite si concentrano sul monitoraggio attività. Application Insights, tuttavia, maggiormente incentrata sul monitoraggio di applicazioni autonomamente grazie alle relative SDK in esecuzione all'interno dell'app. Tuttavia, Operations Management Suite è molto più incentrato sull'infrastruttura per gli host, oltre che offre analisi approfondite dei log su larga scala offrendo un sistema molto flessibile basato sui dati/query di ricerca.
 
@@ -90,12 +90,12 @@ Usa Operations Management Suite contenitore soluzione, è possibile eseguire le 
 
 ![DockerPerfMetricsView](./media/image3.png){larghezza = altezza "5.78625 in" = "3,25 in"}
 
-Figura 6-3: metriche delle prestazioni di host Docker illustrato da Operations Management Suite
+Figura 6-3: Metriche delle prestazioni di host Docker illustrato da Operations Management Suite
 
 Il salvataggio delle query è una funzionalità standard in Operations Management Suite e consentono di mantenere le query si utili e si individuano le tendenze nel sistema.
 
 **Altre informazioni** per trovare informazioni sull'installazione e configurazione di Docker soluzione contenitori in [Operations Management Suite](https://microsoft.com/oms), andare a <https://docs.microsoft.com/azure/log-analytics/log-analytics-containers>.
 
 >[!div class="step-by-step"]
-[Precedente](manage-production-docker-environments.md)
-[Successivo](../key-takeaways/index.md)
+>[Precedente](manage-production-docker-environments.md)
+>[Successivo](../key-takeaways/index.md)

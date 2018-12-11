@@ -4,12 +4,12 @@ description: Ciclo di vita delle applicazioni Docker in contenitori con piattafo
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/19/2017
-ms.openlocfilehash: 993f1d18637f39b6df4d876db8a0fe86e34391e3
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: fa64562808bba9c9dea5a5eedc367af7decf83b7
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192720"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126900"
 ---
 # <a name="orchestrating-microservices-and-multicontainer-applications-for-high-scalability-and-availability"></a>Orchestrazione di microservizi e applicazioni multicontenitore per scalabilità e disponibilità elevate
 
@@ -19,7 +19,7 @@ Nella figura 4-6 illustra la distribuzione in un cluster di un'applicazione cost
 
 ![](./media/image6.png)
 
-Nella figura 4-6: un cluster di contenitori
+Nella figura 4-6: Cluster di contenitori
 
 Si tratta di un approccio apparentemente logico. Ma come si gestisce il bilanciamento del carico, il routing e orchestrare tali applicazioni composte?
 
@@ -35,12 +35,12 @@ Da un'architettura e sviluppo punto di vista, se si è aziendali di grandi dimen
 
 I concetti di cluster e utilità di pianificazione sono strettamente correlati, quindi i prodotti offerti da diversi fornitori includono spesso entrambi i set di funzionalità. Tabella 4-1 Elenca le piattaforme più importanti e scelte di software che disponibili per i cluster e le utilità di pianificazione. Questi cluster vengono generalmente offerti in cloud pubblici quali Azure.
 
-Tabella 4-1: piattaforme Software per il contenitore di clustering, orchestrazione e la pianificazione
+Tabella 4-1: Piattaforme software per il clustering, l'orchestrazione e la pianificazione dei contenitori
 
 | Piattaforma | Descrizione |
 |---|---|
-| Docker Swarm<br/> ![Logo di docker Swarm](./media/image7.png) | Docker Swarm offre la possibilità di pianificare i contenitori Docker e del cluster. Tramite Swarm è possibile trasformare un pool di host Docker in un singolo host Docker virtuale. I client possono inviare richieste API a Swarm nella stesso modo in cui avviene per gli host, vale a dire che Swarm semplifica infatti per la scalabilità delle applicazioni a più host. <br /><br /> Docker Swarm è un prodotto dell'azienda Docker. <br /><br /> Docker v1.12 o versioni successive può eseguire la modalità Swarm nativa e predefinita. |
-| Mesosphere DC/OS<br/>![Logo di mesosphere DC/OS](./media/image8.png) |  Mesosphere Enterprise DC/OS, basata su Apache Mesos, è una piattaforma pronta per la produzione per l'esecuzione di contenitori e applicazioni distribuite. <br /><br /> DC/OS esegue l'astrazione di una raccolta delle risorse disponibili nel cluster e le rende disponibili ai componenti basati su di esso. Marathon viene in genere usato come utilità di pianificazione integrata con DC/OS. |
+| Docker Swarm<br/> ![Logo di Docker Swarm](./media/image7.png) | Docker Swarm offre la possibilità di pianificare i contenitori Docker e del cluster. Tramite Swarm è possibile trasformare un pool di host Docker in un singolo host Docker virtuale. I client possono inviare richieste API a Swarm nella stesso modo in cui avviene per gli host, vale a dire che Swarm semplifica infatti per la scalabilità delle applicazioni a più host. <br /><br /> Docker Swarm è un prodotto dell'azienda Docker. <br /><br /> Docker v1.12 o versioni successive può eseguire la modalità Swarm nativa e predefinita. |
+| Mesosphere DC/OS<br/>![Logo di Mesosphere DC/OS](./media/image8.png) |  Mesosphere Enterprise DC/OS, basata su Apache Mesos, è una piattaforma pronta per la produzione per l'esecuzione di contenitori e applicazioni distribuite. <br /><br /> DC/OS esegue l'astrazione di una raccolta delle risorse disponibili nel cluster e le rende disponibili ai componenti basati su di esso. Marathon viene in genere usato come utilità di pianificazione integrata con DC/OS. |
 | Google Kubernetes<br />![Logo Google Kubernetes](./media/image9.png) | Kubernetes è un prodotto open source che offre funzionalità per l'infrastruttura dei cluster, la pianificazione dei contenitori e l'orchestrazione. In tal modo è possibile automatizzare la distribuzione, ridimensionamento e la gestione dei contenitori di applicazioni in cluster di host. <br /><br /> Kubernetes offre un'infrastruttura incentrata sui contenitori che raggruppa i contenitori di applicazioni in unità logiche per semplificarne la gestione e l'individuazione. |
 | Azure Service Fabric<br />![Logo di Azure Service Fabric](./media/image10.png) | [Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview) è una piattaforma di microservizi Microsoft per la creazione di applicazioni. È un [agente di orchestrazione](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-resource-manager-introduction) di servizi e crea cluster di macchine virtuali. Per impostazione predefinita, Service Fabric distribuisce e attiva i servizi come processi, ma Service Fabric può distribuire servizi in immagini contenitore Docker. Più importante, è possibile combinare servizi nei processi con i servizi in contenitori nella stessa applicazione. <br /><br /> A partire da maggio 2017, la funzionalità di Service Fabric supporta i servizi di distribuzione come contenitori Docker è in stato di anteprima. <br /><br /> È possibile sviluppare servizi di Service Fabric in molti modi, usando il [modelli di programmazione di Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-choose-framework) alla distribuzione [eseguibili guest](https://docs.microsoft.com/azure/service-fabric/service-fabric-deploy-existing-app) oltre a contenitori. Service Fabric supporta i modelli di applicazione prescrittivo, ad esempio [i servizi con stato](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction) e [Reliable Actors](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-actors-introduction).
 
@@ -64,13 +64,13 @@ Con il servizio contenitore di Azure, è possibile sfruttare le funzionalità di
 
 ![](./media/image11.png)
 
-Figura 4-7: opzioni nel servizio contenitore di Azure per il Clustering
+Figura 4-7: Opzioni per il clustering nel servizio contenitore di Azure
 
 Come illustrato nella figura 4-8, il servizio contenitore è semplicemente l'infrastruttura fornita da Azure per distribuire DC/OS, Kubernetes o Docker Swarm, ma non implementa alcun agente di orchestrazione aggiuntivo. Pertanto, il servizio contenitore è non un agente di orchestrazione, di conseguenza; è solo un'infrastruttura che sfrutta gli agenti di orchestrazione open source esistenti per i contenitori.
 
 ![](./media/image12.png)
 
-Figura 4-8: agenti di orchestrazione nel servizio contenitore
+Figura 4-8: Agenti di orchestrazione nel servizio contenitore
 
 Dal punto di vista dell'utilizzo, l'obiettivo del servizio contenitore di è fornire un ambiente di hosting di contenitori usando tecnologie e strumenti open source più diffusi. A questo scopo, espone gli endpoint API standard per l'agente di orchestrazione scelto. Usando questi endpoint, è possibile usare qualsiasi software che può comunicare con tali endpoint. Ad esempio, nel caso dell'endpoint Docker Swarm, è possibile usare la CLI di Docker. Per DC/OS è possibile scegliere di usare l'interfaccia della riga di comando di DC/OS.
 
@@ -121,7 +121,7 @@ Figura 4-9 viene illustrato come creare ed eseguire i microservizi in Service Fa
 
 ![](./media/image13.png)
 
-Figura 4-9: distribuzione di microservizi come processi o contenitori in Azure Service Fabric
+Figura 4-9: Distribuzione di microservizi come processi o contenitori in Azure Service Fabric
 
 Cluster di Service Fabric basati su host Linux e Windows può eseguire contenitori Linux Docker e i contenitori di Windows.
 
@@ -133,7 +133,7 @@ Come illustrato nella figura 4-10 e da una prospettiva di microservizio logico/a
 
 ![](./media/image14.png)
 
-Figura 4-10: microservizio aziendale con numerosi servizi con e senza stati in Service Fabric
+Figura 4-10: Microservizio aziendale con numerosi servizi con e senza stati in Service Fabric
 
 In ogni caso, quando si usano i servizi Reliable con stato di Service Fabric, si ottiene anche un microservizio logico o aziendale (Bounded Context) che in genere è costituito da più servizi fisici. Ognuno di essi, il servizio Gateway e servizio partizione potrebbe essere implementato come servizi API Web ASP.NET, come illustrato nella figura 4-10.
 
@@ -145,7 +145,7 @@ Per quanto riguarda i contenitori in Service Fabric, è anche possibile distribu
 
 ![](./media/image15.png)
 
-Figura 4-11: microservizio aziendale con numerosi servizi (contenitori) in Service Fabric
+Figura 4-11: Microservizio aziendale con numerosi servizi (contenitori) in Service Fabric
 
 Tuttavia, contenitori cosiddette "collaterali" (due contenitori che devono essere distribuiti insieme come parte di un servizio logico) sono possibili anche in Service Fabric. La cosa importante è che un microservizio aziendale è rappresentato dal limite logico intorno a diversi elementi coesivi. In molti casi, potrebbe essere un singolo servizio con un singolo modello di dati, ma in altri casi potrebbe essere diversi servizi fisici, nonché.
 
@@ -153,7 +153,7 @@ Al momento della stesura di questo documento (aprile 2017), in Service Fabric no
 
 ![](./media/image16.png)
 
-Microservizio aziendale figura 4-12: mappata a un'applicazione di Service Fabric con contenitori e servizi con stati
+Figura 4-12: Microservizio aziendale mappato a un'applicazione di Service Fabric con contenitori e servizi con stato
 
 Il supporto inoltre è diverso a seconda se si usano contenitori di Docker sui contenitori di Windows o Linux. Supporto per i contenitori in Service Fabric verrà espanso nelle prossime versioni. Per notizie aggiornate sul supporto di contenitori in Service Fabric, sul sito Web di Azure, leggere [Service Fabric e contenitori](https://docs.microsoft.com/azure/service-fabric/service-fabric-containers-overview).
 
@@ -165,7 +165,7 @@ Ma i servizi stessi possono rivelarsi con stati, il che significa che i dati si 
 
 ![](./media/image17.png)
 
-Figura 4-13: e i microservizi senza stato
+Figura 4-13: Microservizi con stato e senza stato
 
 Un approccio senza stato è perfettamente valido ed è più facile da implementare rispetto ai microservizi con stato perché l'approccio è simile ai modelli tradizionali e noti. Tuttavia, i microservizi senza stato impongono la latenza tra il processo e le origini dati, oltre a comportare più elementi quando si prova a migliorare le prestazioni con cache e code aggiuntive. Il risultato è che si può finire con architetture complesse che hanno un numero eccessivo di livelli.
 
@@ -179,7 +179,6 @@ Altri framework del microservizio che abilitano i servizi con stato, che support
 
 Si noti che anche i contenitori Docker sono senza stato. Se si vuole implementare un servizio con stato, è necessario uno dei framework prescrittivi e di livello superiore aggiuntivi di cui si è parlato in precedenza. Al momento della stesura di questo articolo, tuttavia, i servizi con stato in Service Fabric non sono supportati come contenitori, solo come microservizi normali. Supporto di servizi Reliable services in contenitori sarà disponibile nelle versioni future di Service Fabric.
 
-
 >[!div class="step-by-step"]
-[Precedente](soa-applications.md)
-[Successivo](docker-apps-development-environment.md)
+>[Precedente](soa-applications.md)
+>[Successivo](docker-apps-development-environment.md)

@@ -4,12 +4,12 @@ description: Modernizzare le applicazioni .NET esistenti con Cloud di Azure e i 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
-ms.openlocfilehash: af6151d04622c72acdb7f27ebb220bf611418b4c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 62a9a38ccbe696c34ef799b574c0f5a95bc8f726
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45743969"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147919"
 ---
 # <a name="conclusions"></a>Conclusioni
 
@@ -30,4 +30,4 @@ ms.locfileid: "45743969"
 - Microsoft Azure fornisce l'ambiente più completo e per modernizzare le applicazioni .NET Framework esistenti con contenitori Windows, infrastruttura cloud e servizi PaaS.
 
 >[!div class="step-by-step"]
-[Precedente](walkthroughs-technical-get-started-overview.md)
+>[Precedente](walkthroughs-technical-get-started-overview.md)

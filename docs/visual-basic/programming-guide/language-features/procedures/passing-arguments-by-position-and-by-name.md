@@ -23,11 +23,11 @@ helpviewer_keywords:
 - arguments [Visual Basic], listing by name
 ms.assetid: 1ad7358f-1da9-48da-a95b-f3c7ed41eff3
 ms.openlocfilehash: bdaa0351e288b85a3e35818c0f53ef4d772932e5
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296451"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151311"
 ---
 # <a name="passing-arguments-by-position-and-by-name-visual-basic"></a>Passaggio di argomenti in base alla posizione e al nome (Visual Basic)
 Quando si chiama un `Sub` o `Function` procedura, è possibile passare argomenti *in base alla posizione* , ovvero nell'ordine in cui appaiono nella definizione della stored procedure, oppure è possibile passare loro *in base al nome*, senza tener conto della posizione.  
@@ -64,7 +64,7 @@ Quando si chiama un `Sub` o `Function` procedura, è possibile passare argomenti
   
  Nell'esempio precedente, non è necessario indicare la posizione dell'omessi nessuna virgola aggiuntiva `age` argomento, poiché `birth` viene passato in base al nome.  
   
-Nelle versioni precedenti alla 15.5 di Visual Basic, quando si specificano argomenti per una combinazione di posizione e il nome, gli argomenti posizionali devono provenire tutte prima. Una volta che viene fornito un argomento in base al nome, tutti gli argomenti rimanenti devono essere passati per nome.  Ad esempio, la chiamata seguente al `Display` metodo viene visualizzato l'errore del compilatore [BC30241: previsto l'argomento denominato](../../../misc/bc30241.md).
+Nelle versioni precedenti alla 15.5 di Visual Basic, quando si specificano argomenti per una combinazione di posizione e il nome, gli argomenti posizionali devono provenire tutte prima. Una volta che viene fornito un argomento in base al nome, tutti gli argomenti rimanenti devono essere passati per nome.  Ad esempio, la chiamata seguente al `Display` metodo viene visualizzato l'errore del compilatore [BC30241: È previsto un argomento denominato](../../../misc/bc30241.md).
 
 [!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#6)] 
 
@@ -97,7 +97,7 @@ Per altre informazioni, vedere [impostando la versione del linguaggio Visual Bas
 ## <a name="see-also"></a>Vedere anche  
  [Routine](./index.md)  
  [Parametri e argomenti delle routine](./procedure-parameters-and-arguments.md)  
- [Procedura: Passare argomenti a una routine](./how-to-pass-arguments-to-a-procedure.md)  
+ [Come si fa: Passare argomenti a una routine](./how-to-pass-arguments-to-a-procedure.md)  
  [Passaggio di argomenti per valore e per riferimento](./passing-arguments-by-value-and-by-reference.md)  
  [Parametri facoltativi](./optional-parameters.md)  
  [Matrici di parametri](./parameter-arrays.md)  

@@ -4,12 +4,12 @@ description: Esplorazione delle varie architetture e le app supportate da archit
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: ea944a172154a1cff2b8f830cb8fc3fa24a15028
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 5f22f8b9894a23e5920adb2af3fdf02bce2877d7
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "49369957"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150303"
 ---
 # <a name="serverless-architecture"></a>Architettura senza server
 
@@ -42,7 +42,7 @@ Un problema comune è la migrazione di un'applicazione monolitica esistente nel 
 
 ![Migrazione di un monolito senza server](./media/serverless-monolith-migration.png)
 
-Per altre informazioni su questo approccio, guardare il video: [crea la tua app nel cloud con funzioni di Azure senza server](https://channel9.msdn.com/Events/Connect/2017/E102).
+Per altre informazioni su questo approccio, guardare il video: [Crea la tua app nel cloud con funzioni di Azure senza server](https://channel9.msdn.com/Events/Connect/2017/E102).
 
 ## <a name="web-apps"></a>App Web
 
@@ -74,5 +74,5 @@ Il volume di dispositivi e le informazioni spesso determina un'architettura guid
 La diffusione di Internet delle cose ha comportato diversi prodotti senza server che si occupano di problemi di IoT, in particolare, ad esempio [IoT Hub di Azure](https://docs.microsoft.com/azure/iot-hub). Le attività come registrazione del dispositivo, applicazione dei criteri, rilevamento e anche la distribuzione di codice per i dispositivi a automatizzate Serverless *bordo*. Il bordo fa riferimento ai dispositivi, ad esempio i sensori e attuatori connessi a, ma non una parte attiva del, Internet.
 
 >[!div class="step-by-step"]
-[Precedente](architecture-approaches.md)
-[Successivo](serverless-architecture-considerations.md)
+>[Precedente](architecture-approaches.md)
+>[Successivo](serverless-architecture-considerations.md)

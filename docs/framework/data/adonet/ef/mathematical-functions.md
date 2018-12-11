@@ -2,16 +2,16 @@
 title: Funzioni matematiche
 ms.date: 03/30/2017
 ms.assetid: b040c7cb-156d-40f2-9152-61065b18148c
-ms.openlocfilehash: e6c58d781d7138f8295f2d0a2f0db110ad4b1dd6
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 63f83532c399f77e268913da3198327345b9c2ee
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837310"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143675"
 ---
 # <a name="mathematical-functions"></a>Funzioni matematiche
 
-Il provider di dati .NET Framework per SQL Server (SqlClient) fornisce funzioni matematiche che eseguono calcoli in valori di input forniti come argomenti e restituiscono un risultato di tipo numerico. Tali funzioni si trovano nello spazio dei nomi SqlServer, disponibile quando si usa SqlClient. Una proprietà dello spazio dei nomi del provider consente a Entity Framework di individuare il prefisso usato dal provider per costrutti specifici, ad esempio tipi e funzioni. Nella tabella che segue sono illustrate le funzioni matematiche SqlClient.  
+Il provider di dati .NET Framework per SQL Server (SqlClient) fornisce funzioni matematiche che eseguono calcoli in valori di input forniti come argomenti e restituiscono un risultato di tipo numerico. Tali funzioni si trovano nello spazio dei nomi SqlServer, disponibile quando si usa SqlClient. Una proprietà dello spazio dei nomi del provider consente a Entity Framework di individuare il prefisso usato dal provider per costrutti specifici, ad esempio tipi e funzioni. La tabella seguente descrive le funzioni matematiche SqlClient.  
   
 ## <a name="absexpression"></a>Abs(Expression)
 
@@ -19,7 +19,7 @@ Esegue la funzione relativa al valore assoluto.
 
 **Argomenti**
 
-`expression`: `Int32`,`Int64`, `Double` o `Decimal`.
+`expression`: Un' `Int32`, `Int64`, `Double`, o `Decimal`.
 
 **Valore restituito**
 
@@ -35,7 +35,7 @@ Restituisce il valore dell'arcocoseno dell'espressione specificata.
 
 **Argomenti**
 
-`expression`: valore `Double`.
+`expression`: OGGETTO `Double`.
 
 **Valore restituito**
 
@@ -51,7 +51,7 @@ Restituisce il valore dell'arcoseno dell'espressione specificata.
 
 **Argomenti**
 
-`expression`: valore `Double`.
+`expression`: OGGETTO `Double`.
 
 **Valore restituito**
 
@@ -67,7 +67,7 @@ Restituisce il valore dell'arcotangente dell'espressione numerica specificata.
 
 **Argomenti**
 
-`expression`: valore `Double`.
+`expression`: OGGETTO `Double`.
 
 **Valore restituito**
 
@@ -83,7 +83,7 @@ Restituisce l'angolo, in radianti, la cui tangente è compresa tra le due espres
 
 **Argomenti**
 
-`expression`: valore `Double`.
+`expression`: OGGETTO `Double`.
 
 **Valore restituito**
 
@@ -99,7 +99,7 @@ Converte l'espressione specificata nel valore Integer più piccolo che è maggio
 
 **Argomenti**
 
-`expression`: `Int32`,`Int64`, `Double` o `Decimal`.
+`expression`: Un' `Int32`, `Int64`, `Double`, o `Decimal`.
 
 **Valore restituito**
 
@@ -116,7 +116,7 @@ Calcola il coseno trigonometrico dell'angolo specificato espresso in radianti.
 
 **Argomenti** 
 
-`expression`: valore `Double`. 
+`expression`: OGGETTO `Double`. 
 
 **Valore restituito** 
 
@@ -132,7 +132,7 @@ Calcola la cotangente trigonometrica dell'angolo specificato espresso in radiant
 
 **Argomenti** 
 
-`expression`: valore `Double`. 
+`expression`: OGGETTO `Double`. 
 
 **Valore restituito** 
 
@@ -148,7 +148,7 @@ Restituisce l'angolo corrispondente in gradi.
 
 **Argomenti** 
 
-`expression`: `Int32`,`Int64`, `Double` o `Decimal`. 
+`expression`: Un' `Int32`, `Int64`, `Double`, o `Decimal`. 
 
 **Valore restituito** 
 
@@ -164,7 +164,7 @@ Calcola il valore esponenziale dell'espressione numerica specificata.
 
 **Argomenti** 
 
-`expression`: valore `Double`. 
+`expression`: OGGETTO `Double`. 
 
 **Valore restituito** 
 
@@ -178,7 +178,7 @@ Converte l'espressione specificata nel valore Integer più grande che risulta mi
 
 **Argomenti** 
 
-`expression`: valore `Double`. 
+`expression`: OGGETTO `Double`. 
 
 **Valore restituito** 
 
@@ -195,7 +195,7 @@ Calcola il logaritmo naturale dell'espressione `float` specificata.
 
 **Argomenti** 
 
-`expression`: valore `Double`. 
+`expression`: OGGETTO `Double`. 
 
 **Valore restituito** 
 
@@ -211,7 +211,7 @@ Restituisce il logaritmo in base 10 dell'espressione `Double` specificata.
 
 **Argomenti** 
 
-`expression`: valore `Double`. 
+`expression`: OGGETTO `Double`. 
 
 **Valore restituito** 
 
@@ -258,7 +258,7 @@ Converte i gradi in radianti.
 
 **Argomenti** 
 
-`expression`: `Int32`,`Int64`, `Double` o `Decimal`. 
+`expression`: Un' `Int32`, `Int64`, `Double`, o `Decimal`. 
 
 **Valore restituito** 
 
@@ -326,7 +326,7 @@ Calcola il seno trigonometrico dell'angolo specificato, espresso in radianti, e 
 
 **Argomenti** 
 
-`expression`: valore `Double`. 
+`expression`: OGGETTO `Double`. 
 
 **Valore restituito** 
 
@@ -340,7 +340,7 @@ Restituisce la radice quadrata dell'espressione specificata.
 
 **Argomenti** 
 
-`expression`: valore `Double`. 
+`expression`: OGGETTO `Double`. 
 
 **Valore restituito** 
 
@@ -354,7 +354,7 @@ Restituisce la radice dell'espressione specificata.
 
 **Argomenti** 
 
-`expression`: valore `Double`. 
+`expression`: OGGETTO `Double`. 
 
 **Valore restituito** 
 
@@ -384,8 +384,8 @@ Calcola la tangente di un'espressione specificata.
 
 Per altre informazioni sulle funzioni matematiche supportate da SqlClient, vedere la documentazione relativa alla versione di SQL Server specificata nel file manifesto del provider SqlClient:  
   
-**SQL Server 2005:** [funzioni matematiche (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms177516(v=sql.90))  
-**SQL Server 2008:** [funzioni matematiche (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms177516(v=sql.100))  
-**SQL Server 2012 e versioni successive:** [funzioni matematiche (Transact-SQL)](/sql/t-sql/functions/mathematical-functions-transact-sql?view=sql-server-2017)   
+**SQL Server 2005:** [Funzioni matematiche (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms177516(v=sql.90))  
+**SQL Server 2008:** [Funzioni matematiche (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms177516(v=sql.100))  
+**SQL Server 2012 e versioni successive:** [Funzioni matematiche (Transact-SQL)](/sql/t-sql/functions/mathematical-functions-transact-sql?view=sql-server-2017)   
 
  [SqlClient per funzioni Entity Framework](sqlclient-for-ef-functions.md)

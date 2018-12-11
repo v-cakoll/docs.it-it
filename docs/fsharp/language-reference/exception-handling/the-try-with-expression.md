@@ -1,17 +1,17 @@
 ---
-title: 'Eccezioni: espressione try...with (F#)'
-description: Informazioni su come usare l'espressione 'try... con' di F# per la gestione delle eccezioni.
+title: 'Eccezioni: Try... with espressione (F#)'
+description: Informazioni su come usare il F# 'try... con' espressione per la gestione delle eccezioni.
 ms.date: 05/16/2016
-ms.openlocfilehash: 588960c0f8ccedb431c37d0f1314bf1a293b638c
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 946cf56f7abc4bd5e3a9f9acc52b868bd6c7f84a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44042166"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127407"
 ---
-# <a name="exceptions-the-trywith-expression"></a>Eccezioni: espressione try...with
+# <a name="exceptions-the-trywith-expression"></a>Eccezioni: Espressione try...with
 
-Questo argomento viene descritto il `try...with` espressione, l'espressione che viene usato per la gestione delle eccezioni nel linguaggio F#.
+Questo argomento viene descritto il `try...with` expression, l'espressione che viene usato per la gestione delle eccezioni nel F# lingua.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -32,7 +32,7 @@ Spesso, il fatto che si verificato un errore anche significa che vi è alcun val
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet5601.fs)]
 
-Le eccezioni possono essere le eccezioni .NET, o possono essere le eccezioni di F#. È possibile definire eccezioni F# tramite la `exception` (parola chiave).
+Le eccezioni possono essere le eccezioni .NET, o possono essere F# le eccezioni. È possibile definire F# le eccezioni tramite il `exception` parola chiave.
 
 È possibile usare un'ampia gamma di modelli per filtrare in base al tipo di eccezione e altre condizioni. Nella tabella seguente sono riepilogate le opzioni.
 
@@ -40,8 +40,8 @@ Le eccezioni possono essere le eccezioni .NET, o possono essere le eccezioni di 
 |-------|-----------|
 |:? *tipo di eccezione*|Corrisponde al tipo di eccezione .NET specificato.|
 |:? *tipo di eccezione* come *identificatore*|Corrisponde al tipo di eccezione .NET specificato, ma offre un valore denominato l'eccezione.|
-|*nome dell'eccezione*(*argomenti*)|Corrisponde a un tipo di eccezione F# e associa gli argomenti.|
-|*identifier*|Corrisponde a tutte le eccezioni e associa il nome dell'oggetto eccezione. Equivalente a **:? System. Exception come * * * identificatore*|
+|*nome dell'eccezione*(*argomenti*)|Corrisponde a un F# tipo di eccezione e associa gli argomenti.|
+|*identifier*|Corrisponde a tutte le eccezioni e associa il nome dell'oggetto eccezione. Equivalente a **:? System. Exception come**_identificatore_|
 |*Identificatore* quando *condizione*|Corrisponde a tutte le eccezioni se la condizione è true.|
 
 ## <a name="examples"></a>Esempi
@@ -50,14 +50,14 @@ Gli esempi di codice seguenti illustrano l'uso di vari modelli di gestore di ecc
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet5602.fs)]
 
->[!NOTE]
-Il `try...with` costrutto è un'espressione separata dal `try...finally` espressione. Pertanto, se il codice richiede sia un `with` blocco e un `finally` blocco, è necessario annidare le due espressioni.
+> [!NOTE]
+> Il `try...with` costrutto è un'espressione separata dal `try...finally` espressione. Pertanto, se il codice richiede sia un `with` blocco e un `finally` blocco, è necessario annidare le due espressioni.
 
->[!NOTE]
-È possibile usare `try...with` nei flussi di lavoro asincroni e altre espressioni di calcolo, in cui una versione personalizzata di case di `try...with` espressione viene usata. Per altre informazioni, vedere [flussi di lavoro asincroni](../asynchronous-workflows.md), e [espressioni di calcolo](../computation-expressions.md).
+> [!NOTE]
+> È possibile usare `try...with` nei flussi di lavoro asincroni e altre espressioni di calcolo, in cui una versione personalizzata di case di `try...with` espressione viene usata. Per altre informazioni, vedere [flussi di lavoro asincroni](../asynchronous-workflows.md), e [espressioni di calcolo](../computation-expressions.md).
 
 ## <a name="see-also"></a>Vedere anche
 
 - [Gestione delle eccezioni](index.md)
 - [Tipi di eccezione](exception-types.md)
-- [Eccezioni: espressione `try...finally`](the-try-finally-expression.md)
+- [Eccezioni: Il `try...finally` espressione](the-try-finally-expression.md)

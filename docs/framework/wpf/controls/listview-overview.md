@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], ListView
 - ListView controls [WPF], about ListView control
 ms.assetid: 989e12b0-260e-4570-95c6-489284003ce2
-ms.openlocfilehash: a3b5805808ce2e84e7713f07694464b75d83a391
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 7b237d43cce9f17ea7e893188dac943bb996c752
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46562281"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148912"
 ---
 # <a name="listview-overview"></a>Panoramica sul controllo ListView
 Il <xref:System.Windows.Controls.ListView> controllo fornisce l'infrastruttura per visualizzare un set di elementi di dati nel layout o visualizzazioni diverse. Ad esempio, un utente può scegliere di visualizzare gli elementi dei dati in una tabella e anche di ordinarne le colonne.  
@@ -75,13 +75,11 @@ Il <xref:System.Windows.Controls.ListView> controllo fornisce l'infrastruttura p
 ## <a name="sharing-the-same-view-mode"></a>Condivisione della stessa modalità di visualizzazione  
  Due <xref:System.Windows.Controls.ListView> controlli non possono condividere la stessa modalità di visualizzazione nello stesso momento. Se si prova a usare la stessa modalità di visualizzazione con più di uno <xref:System.Windows.Controls.ListView> controllare, viene generata un'eccezione.  
   
- Per specificare una modalità di visualizzazione che può essere usata contemporaneamente da più di un <xref:System.Windows.Controls.ListView>, usare i modelli o stili. Per un esempio di come definire le visualizzazioni come <xref:System.Windows.FrameworkElement.Resources%2A>, vedere [ListView con più visualizzazioni](https://go.microsoft.com/fwlink/?LinkID=160013).  
+ Per specificare una modalità di visualizzazione che può essere usata contemporaneamente da più di un <xref:System.Windows.Controls.ListView>, usare i modelli o stili.
   
 <a name="CreatingaCustomView"></a>   
 ## <a name="creating-a-custom-view-mode"></a>Creazione di una modalità di visualizzazione personalizzata  
- Le visualizzazioni personalizzate come <xref:System.Windows.Controls.GridView> derivano dal <xref:System.Windows.Controls.ViewBase> classe, che fornisce gli strumenti per visualizzare gli elementi di dati che sono rappresentati come astratta <xref:System.Windows.Controls.ListViewItem> oggetti.  
-  
- Per un esempio di una modalità di visualizzazione personalizzata, vedere [Esempio di ListView con visualizzazioni multiple](https://go.microsoft.com/fwlink/?LinkID=160013).  
+ Le visualizzazioni personalizzate come <xref:System.Windows.Controls.GridView> derivano dal <xref:System.Windows.Controls.ViewBase> classe, che fornisce gli strumenti per visualizzare gli elementi di dati che sono rappresentati come astratta <xref:System.Windows.Controls.ListViewItem> oggetti.    
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Windows.Controls.GridView>  

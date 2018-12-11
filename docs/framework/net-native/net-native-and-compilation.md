@@ -5,16 +5,16 @@ ms.assetid: e38ae4f3-3e3d-42c3-a4b8-db1aa9d84f85
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0a89474ddfe3bcde1c44271818b7e3c730469f48
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199708"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152526"
 ---
 # <a name="net-native-and-compilation"></a>Compilazione e .NET Native
 Le applicazioni Windows 8.1 e Windows Desktop destinate a .NET Framework vengono per lo più scritte in un determinato linguaggio di programmazione e compilate in linguaggio intermedio (IL). In fase di esecuzione, un compilatore JIT è responsabile della compilazione del linguaggio intermedio in codice nativo per il computer locale prima che un metodo venga eseguito per la prima volta. Al contrario, la catena di strumenti .NET Native converte il codice sorgente in codice nativo in fase di compilazione. Questo argomento confronta .NET Native con altre tecnologie di compilazione disponibili per le app .NET Framework e fornisce una panoramica pratica del modo in cui .NET Native produce codice nativo, utile a comprendere il motivo per cui le eccezioni che si verificano nel codice compilato con .NET Native non si verificano nel codice con compilazione JIT.  
   
-## <a name="net-native-generating-native-binaries"></a>.NET Native: generazione di file binari nativi  
+## <a name="net-native-generating-native-binaries"></a>.NET native: Generazione di file binari nativi  
  Un'applicazione destinata a .NET Framework e non compilata mediante la catena di strumenti .NET Native è costituita dall'assembly dell'applicazione, che include quanto segue:  
   
 -   [Metadati](../../../docs/standard/metadata-and-self-describing-components.md) che descrivono l'assembly, le relative dipendenze, i tipi che contiene e i relativi membri. Metadati usati per la reflection, l'accesso ad associazione tardiva e in alcuni casi dal compilatore e dagli strumenti di compilazione.  

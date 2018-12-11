@@ -1,15 +1,15 @@
 ---
-title: 'Funzioni ricorsive: parola chiave rec (F#)'
-description: Informazioni su come la parola chiave 'rec' di F# viene usata con la parola chiave 'let'. per definire una funzione ricorsiva.
+title: 'Funzioni ricorsive: Parola chiave rec (F#)'
+description: Informazioni su come il F# parola chiave 'rec' viene usato con la parola chiave 'let'. per definire una funzione ricorsiva.
 ms.date: 05/16/2016
-ms.openlocfilehash: 5aab6ed8ab0fc3c0f0bcfc93c3ce6518ec53254f
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 0db3ed7f85a1380654f2827b4773985b661589c7
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48024519"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127732"
 ---
-# <a name="recursive-functions-the-rec-keyword"></a>Funzioni ricorsive: parola chiave rec
+# <a name="recursive-functions-the-rec-keyword"></a>Funzioni ricorsive: Parola chiave rec
 
 Il `rec` parola chiave viene usata in combinazione con il `let` parola chiave per definire una funzione ricorsiva.
 
@@ -30,14 +30,14 @@ function2-body
 
 ## <a name="remarks"></a>Note
 
-Funzioni ricorsive, le funzioni che chiamano se stesse, vengono identificate in modo esplicito nel linguaggio F#. Ciò rende disponibili l'identificatore che viene definito nell'ambito della funzione.
+Funzioni ricorsive, le funzioni che chiamano se stesse, vengono identificate in modo esplicito nel F# linguaggio. Ciò rende disponibili l'identificatore che viene definito nell'ambito della funzione.
 
 Il codice seguente illustra una funzione ricorsiva che calcola la *n*<sup>th</sup> numero di Fibonacci.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet4001.fs)]
 
->[!NOTE]
-In pratica, codice come quello precedente è dispendioso di memoria e tempo processore dal momento che implica il ricalcolo di valori calcolati in precedenza.
+> [!NOTE]
+> In pratica, codice come quello precedente è dispendioso di memoria e tempo processore dal momento che implica il ricalcolo di valori calcolati in precedenza.
 
 I metodi sono implicitamente ricorsivo all'interno del tipo; non è necessario aggiungere il `rec` (parola chiave). Associazioni let nelle classi sono implicitamente non ricorsivo.
 

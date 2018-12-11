@@ -1,53 +1,53 @@
 ---
 title: Eseguire la migrazione a scenari di cloud ibrido
-description: Modernizzare le applicazioni .NET esistenti con i contenitori di Windows e Cloud di Azure | Eseguire la migrazione a scenari cloud ibridi
+description: Modernizzare le applicazioni .NET esistenti con contenitori Windows e il Cloud di Azure | Eseguire la migrazione a scenari di cloud ibrido
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
-ms.openlocfilehash: 8885ee8fce4f8c11c14ee8936f3ee0ffd89ece04
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: 3d6fc272854654d890559d5db032b05667627d94
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33957891"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147346"
 ---
 # <a name="migrate-to-hybrid-cloud-scenarios"></a>Eseguire la migrazione a scenari di cloud ibrido
 
-Non è possibile eseguire la migrazione di alcune organizzazioni e aziende alcune delle proprie applicazioni per cloud pubblici, come Microsoft Azure o qualsiasi altro cloud pubblico a causa di normative o ai propri criteri. Tuttavia, è probabile che un'organizzazione potrebbe traggono profitto dalla presenza di alcune delle proprie applicazioni nel cloud pubblico e altre applicazioni in locale. Ma può provocare un ambiente misto complessità eccessiva in ambienti a causa di diverse piattaforme e tecnologie utilizzate in cloud pubblici e ambienti locali.
+Non è possibile eseguire la migrazione di alcune organizzazioni e aziende alcune delle proprie applicazioni per cloud pubblici, ad esempio Microsoft Azure o qualsiasi altro cloud pubblico a causa delle normative o i propri criteri. Tuttavia, è probabile che qualsiasi organizzazione potrebbe trarre vantaggio dalla disponibilità di alcune delle proprie applicazioni nel cloud pubblico e altre applicazioni in locale. Ma può causare un ambiente misto complessità eccessiva negli ambienti a causa di diverse piattaforme e tecnologie utilizzate in cloud pubblici e ambienti locali.
 
-Microsoft offre la migliore soluzione di cloud ibrido, uno in cui è possibile ottimizzare le risorse esistenti in locale e nel cloud pubblico, mentre garantire la coerenza in un cloud ibrido di Azure. È possibile ottimizzare le competenze esistenti e ottenere un approccio flessibile e unificato per la compilazione di App eseguiti nel cloud o locale, grazie a Azure Stack (locale) e Azure (cloud pubblici).
+Microsoft offre la migliore soluzione cloud ibrida, uno in cui è possibile ottimizzare le risorse esistenti in locale e nel cloud pubblico, mentre garantire la coerenza in un cloud ibrido di Azure. È possibile ottimizzare le competenze esistenti e Ottieni un approccio flessibile e unificato alla creazione di App che è possibile eseguire nel cloud o in locale, grazie a Azure Stack (locale) e Azure (cloud pubblico).
 
-Quando si tratta di sicurezza, è possibile centralizzare la gestione e sicurezza tra il cloud ibrido. È possibile ottenere controllo su tutti gli asset, dal Data Center nel cloud, fornendo single sign-on per on-premise e App cloud. A tale scopo estendendo Active Directory in un cloud ibrido e, utilizzando la gestione delle identità.
+Quando si parla di sicurezza, è possibile centralizzare sicurezza e gestione tra il cloud ibrido. È possibile ottenere il controllo su tutti gli asset, dal Data Center nel cloud, fornendo l'accesso single sign-on in locale e le app cloud. A tale scopo mediante l'estensione Active Directory per un cloud ibrido e usando la gestione delle identità.
 
-Infine, è possibile distribuire e analizzare facilmente i dati, utilizzare linguaggi di query per le risorse cloud e locali e applicare analitica e completo di apprendimento in Azure per arricchire i dati, indipendentemente dalla relativa origine.
+Infine, è possibile distribuire e analizza con facilità i dati, usare gli stessi linguaggi di query per gli asset locali e cloud e applicare analitica e apprendimento avanzato in Azure per arricchire i dati, indipendentemente dalla relativa origine.
 
-## <a name="azure-stack"></a>Stack di Azure
+## <a name="azure-stack"></a>Azure Stack
 
-Stack di Azure è una piattaforma di cloud ibrido che consente di fornire servizi di Azure dal Data Center dell'organizzazione. Stack di Azure è progettato per supportare nuove opzioni per le moderne applicazioni negli scenari chiave, ad esempio il bordo e ambienti non connessi o sicurezza e conformità requisiti specifici.
+Azure Stack è una piattaforma di cloud ibrido che ti permette di offrire servizi di Azure dal Data Center dell'organizzazione. Azure Stack è progettato per supportare le nuove opzioni per le applicazioni moderne in scenari chiave, ad esempio edge e gli ambienti non connessi o sicurezza e conformità di requisiti specifici.
 
-Figura 4-13 mostra una panoramica della piattaforma di cloud ibrido true che Microsoft offre.
+Figura 4-13 mostra una panoramica della piattaforma di cloud ibrido davvero offerte da Microsoft.
 
-![Piattaforma di cloud ibrido di Microsoft con Stack di Azure e Azure](./media/image13.jpg)
+![Piattaforma di cloud ibrido Microsoft con Azure Stack e Azure](./media/image13.jpg)
 
-> **Figura 4-13.** Piattaforma di cloud ibrido di Microsoft con Stack di Azure e Azure
+> **Figura 4-13.** Piattaforma di cloud ibrido Microsoft con Azure Stack e Azure
 
-Stack di Azure viene offerto con due opzioni di distribuzione, in base alle esigenze:
+Azure Stack è disponibile in due opzioni di distribuzione, in base alle esigenze:
 
--   Sistemi Stack integrate di Azure
+-   Sistemi integrati di Azure Stack
 
--   Kit di sviluppo di Azure Stack
+-   Azure Stack Development Kit
 
-### <a name="azure-stack-integrated-systems"></a>Sistemi Stack integrate di Azure
+### <a name="azure-stack-integrated-systems"></a>Sistemi integrati di Azure Stack
 
-Sistemi di Stack integrato Azure sono disponibili tramite una relazione di partner Microsoft e hardware. La relazione viene creata una soluzione che offre l'innovazione paced cloud viene bilanciato con semplicità di gestione. Perché lo Stack di Azure viene presentato come un sistema integrato di hardware e software, si verifica la giusta quantità di flessibilità e controllo, quando ancora adozione innovazione dal cloud. Sistemi di Stack integrato Azure intervallo dimensioni da 4 a 12 nodi e congiuntamente sono supportati dal partner hardware Microsoft. Utilizzare sistemi Azure Stack integrato per implementare nuovi scenari per i carichi di lavoro di produzione.
+Sistemi integrati di Stack di Azure sono disponibili tramite una collaborazione dei partner Microsoft e hardware. La relazione viene creata una soluzione che offre l'innovazione paced cloud bilanciata con semplicità di gestione. Perché Azure Stack è disponibile come sistema integrato di hardware e software, otterrai la giusta quantità di flessibilità e controllo, durante l'adozione comunque l'innovazione dal cloud. Sistemi Azure Stack integrati dimensioni variano da 4 a 12 nodi e congiuntamente supportati dai partner hardware e Microsoft. Usare i sistemi integrati di Azure Stack per implementare nuovi scenari per i carichi di lavoro di produzione.
 
-### <a name="azure-stack-development-kit"></a>Kit di sviluppo di Azure Stack
+### <a name="azure-stack-development-kit"></a>Azure Stack Development Kit
 
-Kit di sviluppo di Microsoft Azure Stack è una distribuzione a nodo singolo dello Stack di Azure, è possibile utilizzare per valutare e informazioni sullo Stack di Azure. È anche possibile utilizzare Azure Stack Development Kit come un ambiente di sviluppo in cui è possibile sviluppare usando le API e strumenti che sono coerenti con Azure. Azure Kit di sviluppo dello Stack non deve essere utilizzato come un ambiente di produzione.
+Microsoft Azure Stack Development Kit è una distribuzione a nodo singolo di Azure Stack, che è possibile usare per valutare e ottenere informazioni su Azure Stack. È anche possibile usare Azure Stack Development Kit come un ambiente di sviluppo, in cui è possibile sviluppare usando le API e strumenti che siano coerenti con Azure. Azure Stack Development Kit non deve essere utilizzato come un ambiente di produzione.
 
 ### <a name="additional-resources"></a>Risorse aggiuntive
 
--   **Cloud ibridi di Azure**
+-   **Cloud ibrido di Azure**
 
     [https://www.microsoft.com/cloud-platform/hybrid-cloud](https://www.microsoft.com/cloud-platform/hybrid-cloud)
 
@@ -55,7 +55,7 @@ Kit di sviluppo di Microsoft Azure Stack è una distribuzione a nodo singolo del
 
     [https://azure.microsoft.com/overview/azure-stack/](https://azure.microsoft.com/overview/azure-stack/)
 
--   **Account del servizio Active Directory per i contenitori di Windows**
+-   **Account del servizio Active Directory per i contenitori Windows**
 
     [https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/manage-serviceaccounts](https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/manage-serviceaccounts)
 
@@ -63,10 +63,10 @@ Kit di sviluppo di Microsoft Azure Stack è una distribuzione a nodo singolo del
 
     [https://blogs.msdn.microsoft.com/containerstuff/2017/01/30/create-a-container-with-active-directory-support/](https://blogs.msdn.microsoft.com/containerstuff/2017/01/30/create-a-container-with-active-directory-support/)
 
--   **Licenze vantaggio ibrida di Azure**
+-   **Azure vantaggio Hybrid Use**
 
     [https://azure.microsoft.com/pricing/hybrid-use-benefit/](https://azure.microsoft.com/pricing/hybrid-use-benefit/)
 
 >[!div class="step-by-step"]
-[Precedente](modernize-your-apps-lifecycle-with-ci-cd-pipelines-and-devops-tools-in-the-cloud.md)
-[Successivo](../walkthroughs-technical-get-started-overview.md)
+>[Precedente](modernize-your-apps-lifecycle-with-ci-cd-pipelines-and-devops-tools-in-the-cloud.md)
+>[Successivo](../walkthroughs-technical-get-started-overview.md)

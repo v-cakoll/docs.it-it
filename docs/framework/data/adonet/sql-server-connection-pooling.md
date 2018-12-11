@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
-ms.openlocfilehash: f416ae8252d9991905da7eeaf4ce6398ff0e7461
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7086bdfbbd2ebace25f2999a0787bcee48494ab8
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514963"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147674"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>Pool di connessioni SQL Server (ADO.NET)
 Generalmente, la connessione a un server database comporta passaggi che richiedono molto tempo. È necessario, infatti, stabilire un canale fisico, ad esempio un socket oppure una named pipe. Deve verificarsi l'handshake iniziale con il server, deve essere analizzata l'informazione sulla stringa di connessione, la connessione deve essere autenticata dal server, sono necessarie verifiche per l'inserimento in un elenco nella transazione corrente e così via.  
@@ -31,7 +31,7 @@ Generalmente, la connessione a un server database comporta passaggi che richiedo
   
  Nell'esempio C# seguente vengono creati tre nuovi oggetti <xref:System.Data.SqlClient.SqlConnection>, ma per gestirli bastano solo due pool di connessioni. Si noti che la differenza tra la prima e la seconda stringa di connessione consiste nel valore assegnato a `Initial Catalog`.  
   
-```  
+```csharp
 using (SqlConnection connection = new SqlConnection(  
   "Integrated Security=SSPI;Initial Catalog=Northwind"))  
     {  
@@ -67,7 +67,7 @@ using (SqlConnection connection = new SqlConnection(
  Il pool di connessioni soddisfa le richieste di connessione grazie alla riallocazione delle connessioni rilasciate nel pool. Se le dimensioni massime del pool sono state raggiunte e non è disponibile alcuna connessione usabile, la richiesta viene accodata. Il pool tenta quindi di recuperare le connessioni fino alla scadenza del timeout (l'impostazione predefinita è 15 secondi). Se il pool non è in grado di soddisfare la richiesta prima che scada la connessione, viene generata un'eccezione.  
   
 > [!CAUTION]
->  Al termine dell'uso, si consiglia di chiudere sempre la connessione in modo che possa essere restituita al pool. È possibile farlo usando uno di `Close` o `Dispose` metodi del `Connection` dell'oggetto oppure aprendo tutte le connessioni all'interno di un `using` istruzione in c#, o un `Using` istruzione in Visual Basic. Le connessioni che non vengono chiuse in modo esplicito potrebbero non essere aggiunte o restituite al pool. Per altre informazioni, vedere [istruzione using](~/docs/csharp/language-reference/keywords/using-statement.md) oppure [procedura: eliminare una risorsa di sistema](~/docs/visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md) per Visual Basic.  
+>  Al termine dell'uso, si consiglia di chiudere sempre la connessione in modo che possa essere restituita al pool. È possibile farlo usando uno di `Close` o `Dispose` metodi del `Connection` dell'oggetto oppure aprendo tutte le connessioni all'interno di un `using` istruzione in c#, o un `Using` istruzione in Visual Basic. Le connessioni che non vengono chiuse in modo esplicito potrebbero non essere aggiunte o restituite al pool. Per altre informazioni, vedere [istruzione using](~/docs/csharp/language-reference/keywords/using-statement.md) o [come: Eliminare una risorsa di sistema](~/docs/visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md) per Visual Basic.  
   
 > [!NOTE]
 >  Non chiamare `Close` o `Dispose` su un oggetto `Connection`, `DataReader` o su qualsiasi altro oggetto gestito nel metodo `Finalize` della classe. Nei finalizzatori rilasciare solo le risorse non gestite che la classe controlla direttamente. Se nella classe non sono presenti risorse non gestite, non includere un metodo `Finalize` nella relativa definizione della classe. Per altre informazioni, vedere [Garbage Collection](../../../../docs/standard/garbage-collection/index.md).  

@@ -3,11 +3,11 @@ title: Unioni discriminate (F#)
 description: Informazioni su come usare F# unioni discriminate.
 ms.date: 05/16/2016
 ms.openlocfilehash: f833539f2e31ffc6db4182bdbd2088e6dc2bb2cc
-ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52672245"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154411"
 ---
 # <a name="discriminated-unions"></a>Unioni discriminate
 
@@ -39,7 +39,7 @@ type Shape =
     | Prism of width : float * float * height : float
 ```
 
-Il codice precedente viene dichiarata un'unione discriminata Shape, che può accettare valori di uno qualsiasi dei tre casi: rettangolo, cerchio e prisma. Ogni case dispone di un set di campi diverso. Il caso rettangolo dispone di due denominato i campi, entrambi di tipo `float`, che hanno i nomi larghezza e lunghezza. Il caso cerchio dispone di un unico campo denominato, radius. Il caso prisma dispone di tre campi, due dei quali (larghezza e altezza) vengono denominati i campi. I campi senza nome sono detti campi anonimi.
+Il codice precedente viene dichiarata un'unione discriminata Shape, che può accettare valori di uno qualsiasi dei tre casi: Rettangolo, cerchio e prisma. Ogni case dispone di un set di campi diverso. Il caso rettangolo dispone di due denominato i campi, entrambi di tipo `float`, che hanno i nomi larghezza e lunghezza. Il caso cerchio dispone di un unico campo denominato, radius. Il caso prisma dispone di tre campi, due dei quali (larghezza e altezza) vengono denominati i campi. I campi senza nome sono detti campi anonimi.
 
 Gli oggetti vengono costruiti fornendo valori per i campi denominati e anonimi seguendo gli esempi seguenti.
 

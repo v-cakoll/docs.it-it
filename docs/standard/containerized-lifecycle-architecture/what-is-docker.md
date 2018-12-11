@@ -4,12 +4,12 @@ description: Ciclo di vita delle applicazioni Docker in contenitori con piattafo
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/21/2017
-ms.openlocfilehash: 056fb613c078cc407380060dc11890406ac8cffd
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 360a404e38651b78acc3a52d8102a4dae71f3e30
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197678"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152710"
 ---
 # <a name="what-is-docker"></a>Che cos'è Docker?
 
@@ -49,9 +49,8 @@ Quando si usa Docker, gli sviluppatori non ascolterai ad esempio, "Funziona sul 
 
 ![](./media/image3.png)
 
-Figura 1-3: confronto tra le macchine virtuali tradizionali per i contenitori Docker
-
+Figura 1-3: Confronto tra le macchine virtuali tradizionali per i contenitori Docker
 
 >[!div class="step-by-step"]
-[Precedente](index.md)
-[Successivo](docker-terminology.md)
+>[Precedente](index.md)
+>[Successivo](docker-terminology.md)

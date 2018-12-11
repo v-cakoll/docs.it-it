@@ -1,19 +1,23 @@
 ---
 title: Panoramica di F#
 description: Esaminare alcune delle principali funzionalità del linguaggio in questa presentazione con esempi di codice di programmazione F#.
-ms.date: 02/28/2018
-ms.openlocfilehash: 7a512b5fead8de69f025e791b6086c60dbfc1b24
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.date: 11/06/2018
+ms.openlocfilehash: 32bf892e97b29fcaf426791ef9ada15c9c35b5ae
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50235713"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143741"
 ---
 # <a name="tour-of-f"></a>Panoramica di F# #
 
-Il modo migliore per informazioni su F# è per leggere e scrivere codice F#.  Questo articolo verrà agire come un tour dettagliato alcune delle principali funzionalità del linguaggio F# e offrono alcuni frammenti di codice che è possibile eseguire nel computer.  Per altre informazioni sull'impostazione di un ambiente di sviluppo, consultare [introduttiva](tutorials/getting-started/index.md).
+Il modo migliore per informazioni su F# è per leggere e scrivere codice F#. Questo articolo verrà agire come un tour dettagliato alcune delle principali funzionalità del linguaggio F# e offrono alcuni frammenti di codice che è possibile eseguire nel computer. Per altre informazioni sull'impostazione di un ambiente di sviluppo, consultare [introduttiva](tutorials/getting-started/index.md).
 
 Esistono due concetti primari in F#: tipi e funzioni.  Questa esercitazione verrà illustrate le funzionalità del linguaggio che rientrano in queste due concetti.
+
+## <a name="executing-the-code-online"></a>L'esecuzione del codice online
+
+Se non hai F# installato nel computer, è possibile eseguire tutti gli esempi in linea con il [REPL Fable](http://fable.io/repl/). Fable è un sottolinguaggio di F# che viene eseguita direttamente nel browser. Per visualizzare gli esempi che seguono in REPL, consultare **esempi > Scopri > Panoramica del F#**  nella barra dei menu a sinistra delle transazioni replica Fable
 
 ## <a name="functions-and-modules"></a>Funzioni e moduli
 
@@ -81,8 +85,8 @@ Elenchi, matrici e sequenze sono tre tipi di raccolta principale nella libreria 
 
 L'elaborazione di raccolte o le sequenze di elementi avviene in genere con [ricorsione](language-reference/functions/index.md#recursive-functions) in F#.  Sebbene F# offre supporto per i cicli e programmazione imperativa, la ricorsione è preferibile perché risulta più semplice garantire la correttezza.
 
->[!NOTE]
-Nell'esempio seguente usa i criteri di ricerca tramite la `match` espressione.  Questo costrutto fondamentale è trattato più avanti in questo articolo.
+> [!NOTE]
+> Nell'esempio seguente usa i criteri di ricerca tramite la `match` espressione.  Questo costrutto fondamentale è trattato più avanti in questo articolo.
 
 [!code-fsharp[RecursiveFunctions](../../samples/snippets/fsharp/tour.fs#L461-L500)]
 

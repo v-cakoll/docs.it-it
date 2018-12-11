@@ -1,5 +1,5 @@
 ---
-title: "Procedura dettagliata: creazione di un'applicazione estendibile"
+title: "Procedura dettagliata: Creazione di un'applicazione estendibile"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,13 +14,13 @@ ms.assetid: 694a33c5-a040-450d-aed5-ac49fc88ce61
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 63780583d035d6fab6b3a79424857b82a910ef09
-ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50744613"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155077"
 ---
-# <a name="walkthrough-creating-an-extensible-application"></a>Procedura dettagliata: creazione di un'applicazione estendibile
+# <a name="walkthrough-creating-an-extensible-application"></a>Procedura dettagliata: Creazione di un'applicazione estendibile
 Questa procedura dettagliata descrive come creare una pipeline per un componente aggiuntivo che esegue funzioni semplice calcolatrice. Se non illustra uno scenario reale; piuttosto, illustra le funzionalità di base di una pipeline e un componente aggiuntivo può come forniscono servizi per un host.  
   
  Questa procedura dettagliata descrive le attività seguenti:  
@@ -43,11 +43,11 @@ Questa procedura dettagliata descrive come creare una pipeline per un componente
   
 -   Esecuzione dell'applicazione host.  
   
- Questa pipeline passa solo tipi serializzabili (<xref:System.Double> e <xref:System.String>), tra l'host e il componente aggiuntivo. Per un esempio che illustra come passare raccolte di tipi di dati complessi, vedere [procedura dettagliata: passaggio di raccolte tra host e Add-Ins](https://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5).  
+ Questa pipeline passa solo tipi serializzabili (<xref:System.Double> e <xref:System.String>), tra l'host e il componente aggiuntivo. Per un esempio che illustra come passare raccolte di tipi di dati complessi, vedere [procedura dettagliata: Passaggio di raccolte tra host e componenti aggiuntivi](https://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5).  
   
  Il contratto per questa pipeline consente di definire un modello a oggetti delle quattro operazioni aritmetiche: aggiunta, sottrazione, moltiplicazione e divisione. L'host fornisce il componente aggiuntivo con un'equazione per calcolare, ad esempio 2 + 2, e il componente aggiuntivo restituisce il risultato all'host.  
   
- Versione 2 del componente aggiuntivo per la calcolatrice offre maggiori possibilità di calcolo e viene illustrato il controllo delle versioni. Viene descritto in [procedura dettagliata: abilitazione della compatibilità con le versioni precedenti come le modifiche di Host](https://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848).  
+ Versione 2 del componente aggiuntivo per la calcolatrice offre maggiori possibilità di calcolo e viene illustrato il controllo delle versioni. Viene descritto in [procedura dettagliata: L'abilitazione della compatibilità con le versioni precedenti in base alle modifiche dell'Host](https://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848).  
   
 ## <a name="prerequisites"></a>Prerequisiti  
  Per completare questa procedura dettagliata, sono necessari i seguenti elementi:  
@@ -86,7 +86,7 @@ Questa procedura dettagliata descrive come creare una pipeline per un componente
      Non è necessario inserire la struttura di cartelle della pipeline nella cartella dell'applicazione; viene eseguita qui solo per comodità. Nel passaggio appropriato, la procedura dettagliata illustra come modificare il codice, se la struttura di cartelle della pipeline si trova in una posizione diversa. Vedere la discussione dei requisiti di directory della pipeline [requisiti di sviluppo delle Pipeline](https://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5).  
   
     > [!NOTE]
-    >  Il `CalcV2` cartella non viene usata in questa procedura dettagliata; è un segnaposto per [questa procedura dettagliata: abilitazione della compatibilità con le versioni precedenti come le modifiche di Host](https://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848).  
+    >  Il `CalcV2` cartella non viene usata in questa procedura dettagliata; è un segnaposto per [procedura dettagliata: L'abilitazione della compatibilità con le versioni precedenti in base alle modifiche dell'Host](https://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848).  
   
 ## <a name="creating-the-contract-and-views"></a>Creazione del contratto e le viste  
  Il segmento di contratto per la pipeline definisce i `ICalc1Contract` interfaccia che definisce quattro metodi: `add`, `subtract`, `multiply`, e `divide`.  
@@ -355,7 +355,7 @@ Questa procedura dettagliata descrive come creare una pipeline per un componente
 4.  Tipo di **uscire** e premere il **invio** un tasto per chiudere l'applicazione.  
   
 ## <a name="see-also"></a>Vedere anche  
-- [Procedura dettagliata: Abilitazione della compatibilità con le versioni precedenti in base alle modifiche dell'Host](https://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
+- [Procedura dettagliata: L'abilitazione della compatibilità con le versioni precedenti in base alle modifiche dell'Host](https://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
 -  [Procedura dettagliata: Passaggio di raccolte tra host e componenti aggiuntivi](https://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5)  
 -  [Requisiti di sviluppo delle pipeline](https://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5)  
 -  [Contratti, viste e adattatori](https://msdn.microsoft.com/library/a6460173-9507-4b87-8c07-d4ee245d715c)  

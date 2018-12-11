@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 694ea153-e4db-41ae-96ac-9ac66dcb69a9
-ms.openlocfilehash: 0647f5aa4dd5bac054ed424780aa9fbe1c4bfa69
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ad0b639aec60fc1dc9b594ff774232699001db5d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362818"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53142920"
 ---
 # <a name="committing-a-transaction-in-single-phase-and-multi-phase"></a>Commit di una transazione in monofase e multifase
-Ogni risorsa utilizzata in una transazione viene gestita dalla gestione risorse (in seguito indicato con la sigla GR), le cui azioni vengono coordinate dalla gestione transazioni (in seguito indicato con la sigla GT). Il [l'integrazione di risorse come partecipanti in una transazione](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md) argomento viene illustrato come una risorsa (o più risorse) possono essere integrate in una transazione. Questo argomento descrive invece come coordinare il commit di una transazione fra le risorse integrate.  
+Ogni risorsa utilizzata in una transazione viene gestita dalla gestione risorse (in seguito indicato con la sigla GR), le cui azioni vengono coordinate dalla gestione transazioni (in seguito indicato con la sigla GT). Il [integrazione di risorse come partecipanti a una transazione](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md) argomento viene illustrato come è possano integrare una risorsa (o più risorse) in una transazione. Questo argomento descrive invece come coordinare il commit di una transazione fra le risorse integrate.  
   
  Al termine della transazione, l'applicazione richiede che venga eseguito il commit o il rollback della transazione. La gestione transazioni deve eliminare qualsiasi possibilità che si verifichino situazioni di incoerenza, come ad esempio nel caso di una transazione per cui alcuni gestori di risorse votano a favore del commit mentre altri votano a favore del rollback.  
   
- Se la transazione interessa più di una risorsa, è necessario eseguire un commit a due fasi. Il protocollo di commit a due fasi, che prevede una fase di preparazione e una fase di commit, garantisce che al termine della transazione venga eseguito coerentemente il commit oppure il rollback di tutte le modifiche apportate alle risorse. Tutti i partecipanti vengono quindi informati in merito al risultato finale. Per una descrizione dettagliata del protocollo commit in due fasi, consultare il manuale "*l'elaborazione delle transazioni: concetti e tecniche (Series Morgan Kaufmann nei sistemi di gestione di dati) ISBN:1558601902*" da Jim Gray.  
+ Se la transazione interessa più di una risorsa, è necessario eseguire un commit a due fasi. Il protocollo di commit a due fasi, che prevede una fase di preparazione e una fase di commit, garantisce che al termine della transazione venga eseguito coerentemente il commit oppure il rollback di tutte le modifiche apportate alle risorse. Tutti i partecipanti vengono quindi informati in merito al risultato finale. Per una descrizione dettagliata del protocollo 2PC, consultare il libro "*l'elaborazione delle transazioni: Concetti e tecniche (Morgan Kaufmann sui sistemi di gestione dati) ISBN:1558601902*"da Jim Gray.  
   
- Le prestazioni delle transazioni possono anche essere ottimizzate tramite il protocollo di commit monofase. Per ulteriori informazioni, vedere [ottimizzazione utilizzando il Commit a fase singola e Promotable Single Phase Notification](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md).  
+ Le prestazioni delle transazioni possono anche essere ottimizzate tramite il protocollo di commit monofase. Per altre informazioni, vedere [ottimizzazione mediante Commit monofase e notifica monofase promuovibile](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md).  
   
  Se si desidera soltanto ricevere informazioni sul risultato di una transazione senza partecipare alla votazione, è necessario essere registrati all'evento <xref:System.Transactions.Transaction.TransactionCompleted>.  
   
@@ -36,7 +36,7 @@ Ogni risorsa utilizzata in una transazione viene gestita dalla gestione risorse 
   
  Come illustrato nel semplice esempio seguente, il gestore di risorse che implementa l'interfaccia <xref:System.Transactions.IEnlistmentNotification> deve prima implementare il metodo <xref:System.Transactions.IEnlistmentNotification.Prepare%28System.Transactions.PreparingEnlistment%29>.  
   
-```  
+```csharp
 public void Prepare(PreparingEnlistment preparingEnlistment)  
 {  
      Console.WriteLine("Prepare notification received");  
@@ -75,7 +75,7 @@ public void Prepare(PreparingEnlistment preparingEnlistment)
   
  Ne consegue che il gestore di risorse deve implementare i metodi seguenti.  
   
-```  
+```csharp
 public void Commit (Enlistment enlistment)  
 {  
      // Do any work necessary when commit notification is received  
@@ -98,7 +98,7 @@ public void Rollback (Enlistment enlistment)
 ### <a name="implementing-indoubt"></a>Implementazione di InDoubt  
  Infine, è necessario implementare il metodo <xref:System.Transactions.IEnlistmentNotification.InDoubt%2A> per il gestore di risorse volatile. Questo metodo viene chiamato se la gestione transazioni perde il contatto con uno o più partecipanti, il cui stato risulta pertanto sconosciuto. In questo caso è necessario registrare questo problema in modo che in un secondo momento sia possibile verificare se uno o più partecipanti della transazione sono rimasti in uno stato incoerente.  
   
-```  
+```csharp
 public void InDoubt (Enlistment enlistment)  
 {  
      // log this  
@@ -107,7 +107,7 @@ public void InDoubt (Enlistment enlistment)
 ```  
   
 ## <a name="single-phase-commit-optimization"></a>Ottimizzazione mediante commit monofase  
- Il protocollo di commit monofase è più efficiente in fase di esecuzione, poiché tutti gli aggiornamenti vengono eseguiti senza alcuna coordinazione esplicita. Per ulteriori informazioni su questo protocollo, vedere [ottimizzazione utilizzando il Commit a fase singola e Promotable Single Phase Notification](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md).  
+ Il protocollo di commit monofase è più efficiente in fase di esecuzione, poiché tutti gli aggiornamenti vengono eseguiti senza alcuna coordinazione esplicita. Per altre informazioni in merito, vedere [ottimizzazione mediante Commit monofase e notifica monofase promuovibile](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Ottimizzazione mediante commit monofase e notifica monofase promuovibile](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)  

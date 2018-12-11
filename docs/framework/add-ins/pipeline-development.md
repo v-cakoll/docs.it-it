@@ -12,11 +12,11 @@ ms.assetid: 932788f2-b87d-44cf-82f9-04492a8b2722
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f981d667f3cbf35ab010ac5bd26a9ecd5c2aae11
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50135441"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151343"
 ---
 # <a name="pipeline-development"></a>Sviluppo pipeline
 La pipeline del componente aggiuntivo è il percorso dei segmenti di pipeline che l'applicazione host e il componente aggiuntivo deve usare per comunicare tra loro.  
@@ -80,7 +80,7 @@ Percorso di attivazione dal componente aggiuntivo all'host
   
      Descrive un componente aggiuntivo di calcolatrice che esegue l'addizione, sottrazione, moltiplicazione e divisione calcoli per l'host.  
   
--   [Procedura dettagliata: Abilitazione della compatibilità con le versioni precedenti in base alle modifiche dell'Host](https://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
+-   [Procedura dettagliata: L'abilitazione della compatibilità con le versioni precedenti in base alle modifiche dell'Host](https://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
   
      Descrive un componente aggiuntivo della calcolatrice con funzionalità di calcolo avanzate e su come mantenere la compatibilità con il componente aggiuntivo prima di calcolatrice.  
   

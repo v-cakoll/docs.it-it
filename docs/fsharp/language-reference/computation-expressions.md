@@ -1,13 +1,13 @@
 ---
 title: Espressioni di calcolo (F#)
-description: Informazioni su come creare una sintassi efficiente per la scrittura di calcoli in F# che possa essere sequenziata e combinati tramite costrutti del flusso di controllo e associazioni.
+description: Informazioni su come creare una sintassi efficiente per la scrittura di calcoli F# che può essere in sequenza e combinati tramite controllo costrutti del flusso e le associazioni.
 ms.date: 07/27/2018
-ms.openlocfilehash: 148d1a661fb7630782c6dc48507a66e7bdc1d56b
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: b1fee11f68e99e53d19b47bef9eca6298cce2f45
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48839869"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169846"
 ---
 # <a name="computation-expressions"></a>Espressioni di calcolo
 
@@ -22,7 +22,7 @@ I calcoli possono assumere molte forme. La forma più comune di calcolo è l'ese
 * Calcoli effectful
 * Calcoli propria
 
-Più in generale, esistono *sensibile al contesto* i calcoli che è necessario eseguire in determinate parti di un'applicazione. Scrittura di codice sensibile al contesto può essere problematico, in quanto è facile per i calcoli "perdite" di fuori di un determinato contesto senza astrazioni per impedire questa operazione. Queste astrazioni sono spesso difficili da scrivere da soli, motivo per cui F# offre un modo generalizzato per eseguire cosiddette **espressioni di calcolo**.
+Più in generale, esistono *sensibile al contesto* i calcoli che è necessario eseguire in determinate parti di un'applicazione. Scrittura di codice sensibile al contesto può essere problematico, in quanto è facile per i calcoli "perdite" di fuori di un determinato contesto senza astrazioni per impedire questa operazione. Queste astrazioni sono spesso difficili da scrivere da soli, motivo per cui F# ha un metodo generalizzato cosiddette **espressioni di calcolo**.
 
 Le espressioni di calcolo offrono un modello di sintassi e astrazione uniforme per la codifica dei calcoli sensibile al contesto.
 
@@ -61,9 +61,9 @@ expr { return! ... }
 expr { match! ... }
 ```
 
-Ognuna di queste parole chiave e altri standard F# le parole chiave sono disponibili solo in un'espressione di calcolo se sono stati definiti nel tipo di generatore di backup. È l'unica eccezione a questa `match!`, che è a sua volta zucchero sintattico per l'uso di `let!` seguita da un criterio di ricerca sul risultato.
+Ognuna di queste parole chiave e altri standard F# parole chiave sono disponibili solo in un'espressione di calcolo se sono stati definiti nel tipo di generatore di backup. È l'unica eccezione a questa `match!`, che è a sua volta zucchero sintattico per l'uso di `let!` seguita da un criterio di ricerca sul risultato.
 
-Il tipo di generatore è un oggetto che definisce i metodi speciali che controllano il modo in cui che vengono combinati i frammenti dell'espressione di calcolo; vale a dire i relativi metodi controllano il comportamento di espressione di calcolo. Un altro modo per descrivere una classe del generatore è dire che permette di personalizzare il funzionamento di molti costrutti F#, ad esempio cicli e associazioni.
+Il tipo di generatore è un oggetto che definisce i metodi speciali che controllano il modo in cui che vengono combinati i frammenti dell'espressione di calcolo; vale a dire i relativi metodi controllano il comportamento di espressione di calcolo. Un altro modo per descrivere una classe generatore viene dire che permette di personalizzare il funzionamento di molti F# costrutti, ad esempio cicli e associazioni.
 
 ### `let!`
 
@@ -179,7 +179,7 @@ let result = Async.RunSynchronously req
 
 ### `match!`
 
-A partire da F# 4.5, il `match!` parola chiave consente di rendere inline una chiamata a un altro calcolo corrispondenza di espressione e modello per il risultato:
+A partire da F# 4.5, la `match!` parola chiave consente di rendere inline una chiamata a un altro calcolo corrispondenza di espressione e modello per il risultato:
 
 ```fsharp
 let doThingsAsync url =
@@ -194,7 +194,7 @@ Quando si chiama un'espressione di calcolo con `match!`, potrà trarre il risult
 
 ## <a name="built-in-computation-expressions"></a>Espressioni di calcolo incorporato
 
-Libreria di base F# definisce tre espressioni di calcolo predefinito: [espressioni di sequenza](sequences.md), [flussi di lavoro asincroni](asynchronous-workflows.md), e [espressioni di Query](query-expressions.md).
+Il F# libreria di base definisce tre espressioni di calcolo incorporato: [Le espressioni di sequenza](sequences.md), [flussi di lavoro asincroni](asynchronous-workflows.md), e [espressioni di Query](query-expressions.md).
 
 ## <a name="creating-a-new-type-of-computation-expression"></a>Creare un nuovo tipo di espressione di calcolo
 
@@ -227,7 +227,7 @@ L'espressione annidata è nel formato seguente:
 builder.Run(builder.Delay(fun () -> {| cexpr |}))
 ```
 
-Nel codice precedente, le chiamate a `Run` e `Delay` vengono omessi se non sono definiti nella classe del generatore di espressioni di calcolo. Il corpo dell'espressione di calcolo, di seguito è indicato come `{| cexpr |}`, viene convertita in chiamate che riguardano i metodi della classe del generatore per le conversioni descritte nella tabella seguente. L'espressione di calcolo `{| cexpr |}` viene definito in modo ricorsivo in base a queste conversioni in cui `expr` è un'espressione F# e `cexpr` è un'espressione di calcolo.
+Nel codice precedente, le chiamate a `Run` e `Delay` vengono omessi se non sono definiti nella classe del generatore di espressioni di calcolo. Il corpo dell'espressione di calcolo, di seguito è indicato come `{| cexpr |}`, viene convertita in chiamate che riguardano i metodi della classe del generatore per le conversioni descritte nella tabella seguente. L'espressione di calcolo `{| cexpr |}` viene definito in modo ricorsivo in base a queste conversioni in cui `expr` sia un F# espressione e `cexpr` è un'espressione di calcolo.
 
 |Espressione|Conversione|
 |----------|-----------|
@@ -251,6 +251,7 @@ Nel codice precedente, le chiamate a `Run` e `Delay` vengono omessi se non sono 
 |<code>{&#124; cexpr1; cexpr2 &#124;}</code>|<code>builder.Combine({&#124;cexpr1 &#124;}, {&#124; cexpr2 &#124;})</code>|
 |<code>{&#124; other-expr; cexpr &#124;}</code>|<code>expr; {&#124; cexpr &#124;}</code>|
 |<code>{&#124; other-expr &#124;}</code>|`expr; builder.Zero()`|
+
 Nella tabella precedente, `other-expr` descrive un'espressione che non è elencata nella tabella. Una classe generatore non è necessario implementare tutti i metodi e supportano tutte le conversioni elencate nella tabella precedente. Tali costrutti che non sono implementati non sono disponibili nelle espressioni di calcolo di quel tipo. Ad esempio, se non si desidera supportare le `use` parola chiave nelle espressioni di calcolo, è possibile omettere la definizione di `Use` nella classe del generatore.
 
 Esempio di codice seguente illustra un'espressione di calcolo che incapsula un calcolo in una serie di passaggi che può essere valutato una sola operazione alla volta. Oggetto discriminate tipo unione, `OkOrException`, consente di codificare lo stato di errore dell'espressione valutato fino a questo momento. Questo codice illustra alcuni modelli tipici che è possibile usare nelle espressioni di calcolo, ad esempio le implementazioni di boilerplate di alcuni dei metodi del generatore.
@@ -266,7 +267,7 @@ module Eventually =
     // computation.
     let rec bind func expr =
         match expr with
-        | Done value -> NotYetDone (fun () -> func value)
+        | Done value -> func value
         | NotYetDone work -> NotYetDone (fun () -> bind func (work()))
 
     // Return the final value wrapped in the Eventually type.
@@ -372,13 +373,8 @@ comp |> step |> step
 
 // prints "x = 1"
 // prints "x = 2"
-// returns "NotYetDone <closure>"
-comp |> step |> step |> step |> step |> step |> step
-
-// prints "x = 1"
-// prints "x = 2"
 // returns "Done 7"
-comp |> step |> step |> step |> step |> step |> step |> step |> step
+comp |> step |> step |> step |> step 
 ```
 
 Un'espressione di calcolo ha un tipo sottostante, che restituisce l'espressione. Il tipo sottostante può rappresentare un risultato calcolato o un calcolo ritardato che può essere eseguito o può fornire un modo per eseguire l'iterazione attraverso un certo tipo di raccolta. Nell'esempio precedente, il tipo sottostante è stata **alla fine**. Per un'espressione di sequenza, il tipo sottostante è <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>. Per un'espressione di query, il tipo sottostante è <xref:System.Linq.IQueryable?displayProperty=nameWithType>. Per un flusso di lavoro asincrono, il tipo sottostante è [ `Async` ](https://msdn.microsoft.com/library/03eb4d12-a01a-4565-a077-5e83f17cf6f7). Il `Async` oggetto rappresenta il lavoro da eseguire per calcolare il risultato. Ad esempio, si chiama [ `Async.RunSynchronously` ](https://msdn.microsoft.com/library/0a6663a9-50f2-4d38-8bf3-cefd1a51fd6b) per eseguire un calcolo e restituire il risultato.

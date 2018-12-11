@@ -3,11 +3,11 @@ title: Traccia analitica WCF
 ms.date: 03/30/2017
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
 ms.openlocfilehash: a5e4b82bd28cae18f393a4143325623634d4bbaf
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181657"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147424"
 ---
 # <a name="wcf-analytic-tracing"></a>Traccia analitica WCF
 Questo esempio viene illustrato come aggiungere eventi di traccia nel flusso di tracce analitiche che Windows Communication Foundation (WCF) scrive in ETW in [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Le tracce analitiche hanno lo scopo di semplificare la visibilità all'interno dei servizi senza un'elevata riduzione delle prestazioni. In questo esempio viene illustrato come utilizzare il <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> API per scrivere eventi che si integrano con i servizi WCF.  
@@ -106,7 +106,7 @@ Questo esempio viene illustrato come aggiungere eventi di traccia nel flusso di 
 4.  Fare clic su **cancellare** per cancellare gli eventi.  
   
 ## <a name="known-issue"></a>Problema noto  
- È un problema noto durante il **Visualizzatore eventi** potrebbe non essere possibile decodificare gli eventi ETW. Si può vedere un messaggio di errore con la dicitura: "la descrizione per l'ID evento \<id > dall'origine Microsoft-Windows Server applicazioni-applicazioni non sono state trovate. Il componente che ha generato l'evento non è installato nel computer locale oppure l'installazione è danneggiata. È possibile installare o ripristinare il componente nel computer locale." Se si verifica questo errore, selezionare **Refresh** dalle **azioni** menu. L'evento dovrebbe procedere alla decodifica in modo corretto.  
+ È un problema noto durante il **Visualizzatore eventi** potrebbe non essere possibile decodificare gli eventi ETW. Viene visualizzato un messaggio di errore con la dicitura: "La descrizione per l'ID evento \<id > dall'origine Microsoft-Windows Server applicazioni-applicazioni nebyla nalezena. Il componente che ha generato l'evento non è installato nel computer locale oppure l'installazione è danneggiata. È possibile installare o ripristinare il componente nel computer locale." Se si verifica questo errore, selezionare **Refresh** dalle **azioni** menu. L'evento dovrebbe procedere alla decodifica in modo corretto.  
   
 > [!IMPORTANT]
 >  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  

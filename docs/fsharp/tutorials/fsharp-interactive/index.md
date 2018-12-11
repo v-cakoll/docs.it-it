@@ -2,20 +2,20 @@
 title: Riferimenti per F# Interactive (fsi.exe)
 description: Informazioni su come F# Interactive (fsi.exe) viene usato per eseguire F# in modo interattivo alla console o per l'esecuzione di codice F# script.
 ms.date: 05/16/2016
-ms.openlocfilehash: 459a2a4ba49ba0f55455797617781d010efecc0b
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 8f6d261c6570935b665fc8a826b0829b3953a587
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50195255"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153631"
 ---
 # <a name="interactive-programming-with-f"></a>Programmazione interattiva con F# #
 
 > [!NOTE]
-Questo articolo illustra attualmente solo l'esperienza per Windows.  Verrà riscritto.
+> Questo articolo illustra attualmente solo l'esperienza per Windows.  Verrà riscritto.
 
 > [!NOTE]
-Il collegamento al riferimento per l'API porta a MSDN.  Il riferimento all'API in Microsoft Docs (docs.microsoft.com) non è completo.
+> Il collegamento al riferimento per l'API porta a MSDN.  Il riferimento all'API in Microsoft Docs (docs.microsoft.com) non è completo.
 
 F# Interactive (fsi.exe) viene usato per eseguire il codice di F# in modo interattivo alla console o per eseguire script F#. In altre parole, F# Interactive esegue un REPL (Read, Evaluate, Print Loop) per il linguaggio F#.
 

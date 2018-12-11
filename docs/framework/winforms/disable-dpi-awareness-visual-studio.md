@@ -7,11 +7,11 @@ ms.technology: vs-ide-designers
 author: gewarren
 ms.author: gewarren
 ms.openlocfilehash: 2d3466476c33a3e5faa8be96d63f1d11442c5d70
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296737"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151265"
 ---
 # <a name="disable-dpi-awareness-in-visual-studio"></a>Disabilitare la compatibilità con DPI in Visual Studio
 
@@ -51,7 +51,7 @@ Quando Visual Studio viene eseguito come processo non compatibili con DPI, vengo
 
 Visual Studio è possibile contrassegnare come non compatibili con DPI modificando il Registro di sistema. Aprire **dell'Editor del Registro di sistema** e aggiungere una voce per il **HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers** sottochiave:
 
-**Voce**: c:\Programmi\Microsoft file (x86) \Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe
+**Voce**: C:\Programmi\Microsoft file (x86) \Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe
 
    > [!NOTE]
    > Se si usa l'edizione Professional o Enterprise di Visual Studio 2017, sostituire **Community** con **Professional** oppure **Enterprise** nella voce. Sostituire la lettera di unità in base alle esigenze.

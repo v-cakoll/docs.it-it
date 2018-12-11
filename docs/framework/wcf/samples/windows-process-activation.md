@@ -2,12 +2,12 @@
 title: Attivazione dei processi di Windows
 ms.date: 03/30/2017
 ms.assetid: 37b79642-1e6f-44b3-9777-98af57443bfa
-ms.openlocfilehash: fcfca1d58b7672cd9bcc7f8ba9afa861d140e3b3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bcac3a9860dd03ed048bc27969fa1e1f070e788a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33501520"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154791"
 ---
 # <a name="windows-process-activation"></a>Attivazione dei processi di Windows
 Contenuto della sezione sono inclusi esempi che illustrano l'attivazione del servizio tramite protocolli di rete.  
@@ -18,3 +18,6 @@ Contenuto della sezione sono inclusi esempi che illustrano l'attivazione del ser
   
  [Attivazione TCP](../../../../docs/framework/wcf/samples/tcp-activation.md)  
  Viene descritto come ospitare un servizio che utilizza i servizi di attivazione dei processi Windows (WAS) per attivare un servizio che comunica mediante il protocollo net.tcp.
+
+ [Attivazione MSMQ](../../../../docs/framework/wcf/samples/msmq-activation.md)  
+ Viene illustrato l'hosting di un servizio che usa servizi di attivazione processo Windows (WAS) per attivare un servizio che comunica mediante il protocollo NET. MSMQ.

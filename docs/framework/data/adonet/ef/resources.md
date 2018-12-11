@@ -2,12 +2,12 @@
 title: Risorse di Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 0bb04c18-4a14-42a4-baa9-a63d556c9f49
-ms.openlocfilehash: d32b88e0df0b29ccf7fb5e9ba2d5a43585e0fb44
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: bc1a5b76ecc038d8059b04f4dc222126e796f03d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509164"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128674"
 ---
 # <a name="entity-framework-resources"></a>Risorse di Entity Framework
 Le seguenti risorse esterne forniscono informazioni e supporto per la creazione di applicazioni Entity Framework.  
@@ -21,11 +21,11 @@ Le seguenti risorse esterne forniscono informazioni e supporto per la creazione 
  [Blog sulla progettazione di Entity Framework](https://go.microsoft.com/fwlink/?LinkId=186888)  
  Discussioni sulla progettazione e anteprime delle funzionalità per le future versioni di Entity Framework.  
   
- [Piattaforma dati di ricerca per categorie? Di Serie Entity Framework](https://go.microsoft.com/fwlink/?LinkId=124600)  
+ [Piattaforma dati di ricerca per categorie? Video Serie di Entity Framework](https://go.microsoft.com/fwlink/?LinkId=124600)  
  Contiene un set di video nei quali viene mostrato come compilare applicazioni usando vari componenti di Entity Framework.  
   
- [Domande frequenti su Entity Framework](https://go.microsoft.com/fwlink/?LinkID=213877)  
- Blog che contiene domande frequenti su Entity Framework.  
+ [Domande frequenti su Entity Framework](https://social.technet.microsoft.com/wiki/contents/articles/3737.entity-framework-faq.aspx)  
+ Wiki sezione contenente domande frequenti su Entity Framework.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica di Entity Framework](../../../../../docs/framework/data/adonet/ef/overview.md)  

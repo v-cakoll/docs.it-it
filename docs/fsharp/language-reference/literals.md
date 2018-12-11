@@ -1,20 +1,20 @@
 ---
 title: Valori letterali (F#)
-description: Informazioni sui tipi di valore letterali nel linguaggio di programmazione F#.
+description: Informazioni sui tipi di valore letterali in di F# linguaggio di programmazione.
 ms.date: 05/16/2016
-ms.openlocfilehash: e6d34acd928edce8447c793105b08085ab0757b9
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 7a531cd63c5a4dc1123834d481fc998216b0d82d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44087625"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53131339"
 ---
 # <a name="literals"></a>Valori letterali
 
 > [!NOTE]
-I collegamenti di riferimento API in questo articolo si passerà a MSDN (per ora).
+> I collegamenti di riferimento API in questo articolo si passerà a MSDN (per ora).
 
-In questo argomento fornisce una tabella che mostra come specificare il tipo di valore letterale in F#.
+In questo argomento fornisce una tabella che mostra come specificare il tipo di un valore letterale in F#.
 
 ## <a name="literal-types"></a>Tipi letterali
 
@@ -47,20 +47,20 @@ La tabella seguente illustra i tipi di valore letterali in F#. I caratteri che r
 
 Le stringhe Unicode possono contenere codifiche esplicite che è possibile specificare utilizzando `\u` seguita da un codice esadecimale a 16 bit o le codifiche UTF-32 che è possibile specificare utilizzando `\U` seguita da un codice esadecimale a 32 bit che rappresenta un Unicode coppia di surrogati.
 
-A partire da F# 3.1, è possibile usare il `+` accedere per combinare i valori letterali stringa. È anche possibile usare i bit per bit o (`|||`) operatore per combinare i flag dell'enumerazione. Ad esempio, il codice seguente è valido in F# 3.1:
+A partire dal F# 3.1, è possibile usare il `+` accedere per combinare i valori letterali stringa. È anche possibile usare i bit per bit o (`|||`) operatore per combinare i flag dell'enumerazione. Ad esempio, il codice seguente è valido in F# 3.1:
 
 ```fsharp
 [<Literal>]
-let Literal1 = "a" + "b"
+let literal1 = "a" + "b"
 
 [<Literal>]
-let FileLocation =   __SOURCE_DIRECTORY__ + "/" + __SOURCE_FILE__
+let fileLocation =   __SOURCE_DIRECTORY__ + "/" + __SOURCE_FILE__
 
 [<Literal>]
-let Literal2 = 1 ||| 64
+let literal2 = 1 ||| 64
 
 [<Literal>]
-let Literal3 = System.IO.FileAccess.Read ||| System.IO.FileAccess.Write
+let literal3 = System.IO.FileAccess.Read ||| System.IO.FileAccess.Write
 ```
 
 Non è consentito l'uso di altri operatori bit per bit.
@@ -85,11 +85,11 @@ let Numbers = (0x9F, 0o77, 0b1010)
 A partire da F# 4.1, è possibile separare cifre con il carattere di sottolineatura (`_`).
 
 ```fsharp
-let DeadBeef = 0xDEAD_BEEF
+let value = 0xDEAD_BEEF
 
-let DeadBeefAsBits = 0b1101_1110_1010_1101_1011_1110_1110_1111
+let valueAsBits = 0b1101_1110_1010_1101_1011_1110_1110_1111
 
-let ExampleSSN = 123_456_7890
+let exampleSSN = 123_456_7890
 ```
 
 ## <a name="see-also"></a>Vedere anche

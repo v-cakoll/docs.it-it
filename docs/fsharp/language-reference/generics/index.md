@@ -1,13 +1,13 @@
 ---
 title: Generics (F#)
-description: Informazioni su come usare funzioni F# generiche e tipi che consentono di scrivere codice che funziona con un'ampia gamma di tipi senza ripetere codice.
+description: Informazioni su come usare F# funzioni e tipi, che consentono di scrivere codice che funziona con un'ampia gamma di tipi senza ripetere codice generici.
 ms.date: 05/16/2016
-ms.openlocfilehash: fc061f19c6c7fa737f7ca05aae83fd42c0010b37
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 7eae69bc0286bff4997c6399c7417bde119c2204
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44084962"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147005"
 ---
 # <a name="generics"></a>Generics
 
@@ -71,8 +71,8 @@ Il codice seguente illustra l'uso delle funzioni definite nelle sezioni preceden
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1702.fs)]
 
->[!NOTE]
-Ci sono due modi per fare riferimento a un tipo generico in base al nome. Ad esempio, `list<int>` e `int list` sono due modi per fare riferimento a un tipo generico `list` che ha un solo argomento di tipo `int`. La seconda forma viene comunemente usata solo con i tipi F# predefiniti, ad esempio `list` e `option`. Se ci sono più argomenti di tipo, in genere si usa la sintassi `Dictionary<int, string>` ma è anche possibile usare la sintassi `(int, string) Dictionary`.
+> [!NOTE]
+> Ci sono due modi per fare riferimento a un tipo generico in base al nome. Ad esempio, `list<int>` e `int list` sono due modi per fare riferimento a un tipo generico `list` che ha un solo argomento di tipo `int`. La seconda forma viene comunemente usata solo con i tipi F# predefiniti, ad esempio `list` e `option`. Se ci sono più argomenti di tipo, in genere si usa la sintassi `Dictionary<int, string>` ma è anche possibile usare la sintassi `(int, string) Dictionary`.
 
 ## <a name="wildcards-as-type-arguments"></a>Caratteri jolly come argomenti di tipo
 

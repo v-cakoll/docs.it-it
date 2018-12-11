@@ -1,17 +1,17 @@
 ---
-title: Tipi di base (F#)
-description: Individua i tipi di base fondamentali usati nel linguaggio F#.
+title: I tipi di base (F#)
+description: Individua i tipi di base fondamentali utilizzati in di F# linguaggio.
 ms.date: 07/09/2018
-ms.openlocfilehash: 8f948d066323527b09b1d3f9f4167b95b1c875cf
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: a8a1154a211d8c87571b47cb41cb091096569472
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48026940"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145124"
 ---
 # <a name="basic-types"></a>Tipi di base
 
-Questo argomento elenca i tipi di base che sono definiti nel linguaggio F#. Questi tipi sono il più fondamentale in F#, che costituiscono la base di quasi tutti i programmi F#. Sono un soprainsieme di tipi primitivi di .NET.
+Questo argomento elenca i tipi di base definiti in di F# linguaggio. Questi tipi sono i più importanti in F#, che costituiscono la base di quasi tutte le F# program. Sono un soprainsieme di tipi primitivi di .NET.
 
 |Tipo|Tipo .NET|Descrizione|
 |----|---------|-----------|
@@ -34,8 +34,8 @@ Questo argomento elenca i tipi di base che sono definiti nel linguaggio F#. Ques
 |`float32`, `single`|<xref:System.Single>|Tipo a virgola mobile a 32 bit.|
 |`float`, `double`|<xref:System.Double>|Un tipo a virgola mobile a 64 bit.|
 
->[!NOTE]
-È possibile eseguire calcoli con numeri interi troppo grande per il tipo integer a 64 bit utilizzando il [bigint](https://msdn.microsoft.com/library/dc8be18d-4042-46c4-b136-2f21a84f6efa) tipo. `bigint` non è considerato un tipo di base. è un'abbreviazione per `System.Numerics.BigInteger`.
+> [!NOTE]
+> È possibile eseguire calcoli con numeri interi troppo grande per il tipo integer a 64 bit utilizzando il [bigint](https://msdn.microsoft.com/library/dc8be18d-4042-46c4-b136-2f21a84f6efa) tipo. `bigint` non è considerato un tipo di base. è un'abbreviazione per `System.Numerics.BigInteger`.
 
 ## <a name="see-also"></a>Vedere anche
 

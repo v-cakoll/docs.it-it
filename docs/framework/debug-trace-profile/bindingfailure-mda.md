@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 26ada5af-175c-4576-931a-9f07fa1723e9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1a75efaf6703858fdb48a3f09635da1be4463d34
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d6cf0c944fc904a50a5b652f666f50c457a60204
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364700"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53130834"
 ---
 # <a name="bindingfailure-mda"></a>MDA bindingFailure
 L'assistente al debug gestito `bindingFailure` viene attivato quando si verifica un errore nel caricamento di un assembly.  
@@ -77,7 +77,7 @@ L'assistente al debug gestito `bindingFailure` viene attivato quando si verifica
 ## <a name="example"></a>Esempio  
  L'esempio di codice seguente mostra una situazione che può comportare l'attivazione dell'assistente al debug gestito:  
   
-```  
+```csharp
 using System;  
 using System.Collections.Generic;  
 using System.Text;  

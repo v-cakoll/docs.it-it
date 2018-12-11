@@ -4,12 +4,12 @@ description: Griglia di eventi di Azure è una soluzione senza server per il rec
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: b2507da61cbea3b4bdc51c6eecfe4d784737e924
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 240542014a34235aea9fd0f8162748749f23eacf
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "49369963"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143662"
 ---
 # <a name="event-grid"></a>Griglia di eventi
 
@@ -123,7 +123,7 @@ In questo capitolo si è appreso sulla piattaforma Azure senza server che è cos
 * [Piani di servizio App](https://docs.microsoft.com/azure/app-service/azure-web-sites-web-hosting-plans-in-depth-overview)
 * [Application Insights](https://docs.microsoft.com/azure/application-insights)
 * [Application Insights Analitica](https://docs.microsoft.com/azure/application-insights/app-insights-analytics)
-* [Azure: Porta la tua app nel cloud con funzioni di Azure senza server](https://channel9.msdn.com/events/Connect/2017/E102)
+* [Azure: Crea la tua app nel cloud con funzioni di Azure senza server](https://channel9.msdn.com/events/Connect/2017/E102)
 * [Griglia di eventi di Azure](https://docs.microsoft.com/azure/azure-event-grid/overview)
 * [Schema di eventi di griglia di eventi Azure](https://docs.microsoft.com/azure/event-grid/event-schema)
 * [Hub eventi di Azure](https://docs.microsoft.com/azure/event-hubs)
@@ -142,5 +142,5 @@ In questo capitolo si è appreso sulla piattaforma Azure senza server che è cos
 * [Lavorare con i proxy di funzioni di Azure](https://docs.microsoft.com/azure/azure-functions/functions-proxies)
 
 >[!div class="step-by-step"]
-[Precedente](logic-apps.md)
-[Successivo](durable-azure-functions.md)
+>[Precedente](logic-apps.md)
+>[Successivo](durable-azure-functions.md)

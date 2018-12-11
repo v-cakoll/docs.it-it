@@ -1,16 +1,16 @@
 ---
-title: 'Servizio: errori di convalida e di autenticazione di sicurezza'
+title: 'Servizio: Errori di convalida e di autenticazione della protezione'
 ms.date: 03/30/2017
 ms.assetid: 55c98268-b1ad-459d-851b-25ef52248187
 ms.openlocfilehash: ba8da3ae6be6bd089690359f19e153da1e0b54fc
-ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50744249"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150901"
 ---
-# <a name="service-security-validation-and-authentication-failures"></a>Servizio: errori di convalida e di autenticazione di sicurezza
-Nome contatore: errori di convalida e di autenticazione di sicurezza  
+# <a name="service-security-validation-and-authentication-failures"></a>Servizio: Errori di convalida e di autenticazione della protezione
+Nome contatore: Errori di convalida e di autenticazione della protezione  
   
 ## <a name="description"></a>Descrizione  
  Questo contatore avanza ogni volta che un messaggio viene rifiutato a causa di un problema di sicurezza non coperto dal contatore "chiamate di sicurezza non autorizzate". Tra tali problemi si contano:  

@@ -4,21 +4,21 @@ description: Ciclo di vita delle applicazioni Docker in contenitori con piattafo
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/21/2017
-ms.openlocfilehash: bc13a0c8d6f14b8ea7ea2017009ba074f9a96ab3
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: fe65e9036c1e0bdf2afe05426c01e75d48f93439
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48580209"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152338"
 ---
-# <a name="introduction-to-the-microsoft-platform-and-tools-for-containerized-apps"></a>Introduzione alla piattaforma e agli strumenti Microsoft per le app in contenitori
+# <a name="introduction-to-the-microsoft-platform-andtools-for-containerized-apps"></a>Introduzione alla piattaforma Microsoft e strumenti per le App in contenitori
 
 
 La figura 3-1 mostra gli elementi fondanti del ciclo di vita delle app Docker, classificati per tipo di lavoro svolto da più team (sviluppo di app, processi dell'infrastruttura DevOps e gestione e operazioni IT). In genere nell'organizzazione i profili dell'utente tipo responsabile per ogni area sono diversi. Lo stesso vale per le competenze.
 
 ![](./media/image1.png)
 
-Figura 3-1: Elementi fondanti del ciclo di vita per applicazioni Docker in contenitori con piattaforma e strumenti Microsoft
+Figura 3-1: Concetti di base del ciclo di vita per applicazioni Docker in contenitori con piattaforma e strumenti Microsoft
 
 Un flusso di lavoro del ciclo di vita per applicazioni Docker in contenitori può essere inizialmente prescrittivo in base alle "scelte di prodotto per impostazione predefinita", permettendo agli sviluppatori di iniziare più rapidamente, ma è fondamentale che al livello sottostante vi sia un framework aperto in modo che il flusso di lavoro sia flessibile e in grado di adattarsi ai diversi contesti di ogni organizzazione o azienda. L'infrastruttura del flusso di lavoro (componenti e prodotti) deve essere sufficientemente flessibile per gestire l'ambiente che avrà ogni azienda in futuro ed essere addirittura in grado di scambiare prodotti di sviluppo o DevOps gli uni con gli altri. La flessibilità, l'apertura e l'ampia scelta di tecnologie nella piattaforma e nell'infrastruttura sono esattamente le priorità di Microsoft per le applicazioni Docker in contenitori, come spiegato nei capitoli seguenti.
 
@@ -34,7 +34,7 @@ Tabella 3-1: Flusso di lavoro DevOps aperto per qualsiasi tecnologia
 
 La piattaforma e gli strumenti Microsoft per app Docker in contenitori, come definito nella tabella 3-1, includono i componenti seguenti:
 
--   **Piattaforma per lo sviluppo di app Docker** Sviluppo di un servizio o di una raccolta di servizi che costituiscono un'"app". La piattaforma di sviluppo fornisce tutte le attività necessarie agli sviluppatori prima di inserire il codice in un repository di codice condiviso. I servizi di sviluppo, distribuiti come contenitori, sono molto simili allo sviluppo degli stessi servizi o app senza Docker. È possibile continuare a usare il linguaggio preferito (.NET, Node.js, Go e così via) e l'editor o l'IDE preferito, come Visual Studio o Visual Studio Code. Tuttavia, invece di considerare Docker una destinazione di distribuzione, è necessario sviluppare i servizi nell'ambiente Docker. È necessario eseguire la compilazione, i test e il debug del codice nei contenitori in locale, fornendo l'ambiente di destinazione in fase di sviluppo. Fornendo l'ambiente di destinazione in locale, i contenitori Docker eseguono la configurazione in modo da contribuire notevolmente al miglioramento del ciclo di vita DevOps. Visual Studio e Visual Studio Code includono estensioni per l'integrazione di contenitori Docker nel processo di sviluppo.
+-   **Piattaforma per lo sviluppo di app Docker** Sviluppo di un servizio o di una raccolta di servizi che costituiscono un'"app". La piattaforma di sviluppo fornisce tutte le attività necessarie agli sviluppatori prima di inserire il codice in un repository di codice condiviso. I servizi di sviluppo, distribuiti come contenitori, sono molto simili allo sviluppo degli stessi servizi o app senza Docker. Continuare a usare il linguaggio preferito (.NET, Node. js, Go e così via) e l'editor preferito o l'IDE come Visual Studio o Visual Studio Code. Tuttavia, invece di considerare Docker una destinazione di distribuzione, è necessario sviluppare i servizi nell'ambiente Docker. È necessario eseguire la compilazione, i test e il debug del codice nei contenitori in locale, fornendo l'ambiente di destinazione in fase di sviluppo. Fornendo l'ambiente di destinazione in locale, i contenitori Docker eseguono la configurazione in modo da contribuire notevolmente al miglioramento del ciclo di vita DevOps. Visual Studio e Visual Studio Code includono estensioni per l'integrazione di contenitori Docker nel processo di sviluppo.
 
 -   **DevOps per App Docker** gli sviluppatori che creano applicazioni Docker possono usare servizi di Azure DevOps o qualsiasi altro prodotto di terze parti, come Jenkins, per la compilazione di una serie completa automatici gestione del ciclo di vita delle applicazioni (ALM).
 
@@ -59,5 +59,5 @@ Con i servizi di Azure DevOps, gli sviluppatori possono creare incentrata su con
 In questo modo, Microsoft offre elementi di base completi per un ciclo di vita delle applicazioni Docker in contenitori end-to-end. Tuttavia, si tratta di *una raccolta di prodotti e tecnologie che consente selezione e integrazione con strumenti e processi esistenti in base alle preferenze*. La flessibilità di un ampio approccio con tutta la potenza e la completezza delle funzionalità pone Microsoft in una solida posizione per lo sviluppo di applicazioni Docker in contenitori.
 
 >[!div class="step-by-step"]
-[Precedente](../Docker-application-lifecycle/containers-foundation-for-devops-collaboration.md)
-[Successivo](../design-develop-containerized-apps/index.md)
+>[Precedente](../Docker-application-lifecycle/containers-foundation-for-devops-collaboration.md)
+>[Successivo](../design-develop-containerized-apps/index.md)

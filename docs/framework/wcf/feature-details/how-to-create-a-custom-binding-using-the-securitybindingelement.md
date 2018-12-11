@@ -1,5 +1,5 @@
 ---
-title: "Procedura: creare un'associazione personalizzata usando SecurityBindingElement"
+title: "Procedura: Creare un'associazione personalizzata usando SecurityBindingElement"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
 ms.openlocfilehash: df40d8dbd5af9acf9e9484ee7694df2bba7ad9f1
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181134"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155249"
 ---
-# <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>Procedura: creare un'associazione personalizzata usando SecurityBindingElement
+# <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>Procedura: Creare un'associazione personalizzata usando SecurityBindingElement
 Windows Communication Foundation (WCF) include diverse associazioni fornite dal sistema che possono essere configurate ma non forniscono totale flessibilità durante la configurazione di tutte le opzioni di protezione supportati da WCF. In questo argomento viene illustrato come creare direttamente un'associazione personalizzata di singoli elementi di associazione e vengono evidenziate alcune impostazioni di sicurezza che è possibile specificare durante la creazione di tale associazione. Per altre informazioni sulla creazione di associazioni personalizzate, vedere [estensione delle associazioni](../../../../docs/framework/wcf/extending/extending-bindings.md).  
   
 > [!WARNING]
@@ -25,7 +25,7 @@ Windows Communication Foundation (WCF) include diverse associazioni fornite dal 
   
  Al contrario, per creare un'associazione personalizzata, vengono creati e configurati gli elementi di associazione dai quali viene creato <xref:System.ServiceModel.Channels.CustomBinding>.  
   
- A tale scopo, vengono aggiunti singoli elementi di associazione a una raccolta rappresentata da un'istanza della classe <xref:System.ServiceModel.Channels.BindingElementCollection>, quindi la proprietà `Elements` di `CustomBinding` viene impostata allo stesso modo dell'oggetto. È necessario aggiungere gli elementi di associazione nell'ordine seguente: Transaction Flow, Reliable Session, Security, Composite Duplex, One-way, Stream Security, Message Encoding e Transport. Si noti che non tutti gli elementi di associazione elencati sono necessari in ogni associazione.  
+ A tale scopo, vengono aggiunti singoli elementi di associazione a una raccolta rappresentata da un'istanza della classe <xref:System.ServiceModel.Channels.BindingElementCollection>, quindi la proprietà `Elements` di `CustomBinding` viene impostata allo stesso modo dell'oggetto. È necessario aggiungere gli elementi di associazione nell'ordine seguente: Flusso delle transazioni, sessione affidabile, protezione, Duplex composito, unidirezionale, Stream Security, codifica dei messaggi e trasporto. Si noti che non tutti gli elementi di associazione elencati sono necessari in ogni associazione.  
   
 ## <a name="securitybindingelement"></a>SecurityBindingElement  
  Tre elementi di associazione sono correlati alla protezione a livello di messaggio e sono tutti derivati dalla classe <xref:System.ServiceModel.Channels.SecurityBindingElement>. I tre elementi sono <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>, <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> e <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>. <xref:System.ServiceModel.Channels.TransportSecurityBindingElement> viene utilizzato per fornire una protezione in modalità mista. Gli altri due elementi sono utilizzati quando la protezione è fornita dal livello di messaggio.  

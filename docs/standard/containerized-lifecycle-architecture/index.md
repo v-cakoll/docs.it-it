@@ -4,12 +4,12 @@ description: Ciclo di vita delle applicazioni Docker in contenitori con piattafo
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: e9f81c5fecc06b19ebd84cc4b2cc232686768a90
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: c2a6b9802bbb995939d33c5c40ef9c1afa1620e5
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106632"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148821"
 ---
 # <a name="introduction-to-containers-and-docker"></a>Introduzione ai contenitori e a Docker
 
@@ -27,10 +27,9 @@ Figura 1-1: Più contenitori in esecuzione in un host contenitore
 
 In questo esempio l'host Docker è un host contenitore e App 1, App 2, Svc 1 e Svc 2 sono applicazioni o servizi in contenitori.
 
-Un altro vantaggio offerto dai contenitori è la scalabilità. È possibile ottenere rapidamente scalabilità orizzontale creando nuovi contenitori per le attività a breve termine. Dal punto di vista di un'applicazione, la *creazione di un'istanza di un'immagine* (creazione di un contenitore) è analoga alla creazione di un'istanza di un processo, come un servizio o un'app Web. Per l'affidabilità, tuttavia, quando si eseguono più istanze della stessa immagine tra più server host, in genere si fa in modo che ogni contenitore (istanza dell'immagine) sia eseguito in un server host o in una macchina virtuale diversa in domini di errore differenti.
+Un altro vantaggio offerto dai contenitori è la scalabilità. È possibile ottenere rapidamente scalabilità orizzontale creando nuovi contenitori per le attività a breve termine. Dal punto di vista di un'applicazione, la *creazione di un'istanza di un'immagine* (creazione di un contenitore) è analoga alla creazione di un'istanza di un processo, come un servizio o un'app Web. Per garantire l'affidabilità, tuttavia, quando si eseguono più istanze della stessa immagine tra più server host, in genere consigliabile ogni contenitore (istanza dell'immagine) per l'esecuzione in un server host diverso o una macchina virtuale in diversi domini di errore.
 
 In breve, i contenitori offrono vantaggi in termini di isolamento, portabilità, flessibilità, scalabilità e controllo nel flusso di lavoro dell'intero ciclo di vita dell'applicazione. Il vantaggio più importante è l'isolamento fornito tra sviluppo e operazioni.
 
-
 >[!div class="step-by-step"]
-[avanti](what-is-docker.md)
+>[avanti](what-is-docker.md)

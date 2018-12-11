@@ -2,12 +2,12 @@
 title: '&lt;customBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 9da4f960-f64e-4d8a-894d-2b09eba5ce4b
-ms.openlocfilehash: 741f195a78c1716b95d8d4d88594207708ce6289
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: c927ba59ccdb6e5a717fcaccde9294845a2c41cc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123826"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153904"
 ---
 # <a name="ltcustombindinggt"></a>&lt;customBinding&gt;
 Fornisce il controllo completo dello stack di messaggistica per l'utente.  
@@ -290,9 +290,8 @@ Fornisce il controllo completo dello stack di messaggistica per l'utente.
   
  È inoltre possibile definire elementi di associazione personalizzati e inserirli tra i livelli appena elencati.  
   
- Per una discussione su come usare un'associazione personalizzata per modificare un'associazione fornita dal sistema, vedere [procedura: personalizzare un'associazione System-provided](../../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md).  
-  
-1.  
+ Per una discussione su come usare un'associazione personalizzata per modificare un'associazione fornita dal sistema, vedere [come: Personalizzare un'associazione fornita dal sistema](../../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md).  
+    
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.ServiceModel.Channels.Binding>  

@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - handling faults [WCF], sending
 ms.assetid: 7be6fb96-ce2a-450b-aebe-f932c6a4bc5d
-ms.openlocfilehash: 5a4b4dc79b0f0dad661d99fae6377d1c86b673b6
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 0bcab736aad1df84713c7a111d23b82a54ec4334
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33807707"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154047"
 ---
 # <a name="sending-and-receiving-faults"></a>Invio e ricezione degli errori
-Gli errori SOAP trasportano informazioni sulla condizione di errore da un servizio a un client e, nel caso duplex, da un client a un servizio in modo interoperativo. In genere, un servizio definisce un contenuto di errore personalizzato e specifica quali operazioni possono restituirlo. (Per ulteriori informazioni, vedere [definizione e gli errori specifica](../../../docs/framework/wcf/defining-and-specifying-faults.md).) In questo argomento vengono descritti il modo in cui un servizio o un client duplex può inviare tali errori quando si verifica la condizione di errore corrispondente e la modalità con cui un'applicazione client o server gestisce tali errori. Per una panoramica di gestione degli errori in applicazioni Windows Communication Foundation (WCF), vedere [specifica e gestione degli errori in contratti e servizi](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
+Gli errori SOAP trasportano informazioni sulla condizione di errore da un servizio a un client e, nel caso duplex, da un client a un servizio in modo interoperativo. In genere, un servizio definisce un contenuto di errore personalizzato e specifica quali operazioni possono restituirlo. (Per altre informazioni, vedere [definizione e specifica gli errori](../../../docs/framework/wcf/defining-and-specifying-faults.md).) In questo argomento vengono descritti il modo in cui un servizio o un client duplex può inviare tali errori quando si verifica la condizione di errore corrispondente e la modalità con cui un'applicazione client o server gestisce tali errori. Per una panoramica di gestione degli errori nelle applicazioni Windows Communication Foundation (WCF), vedere [se si specifica e gestione degli errori in contratti e servizi](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
   
 ## <a name="sending-soap-faults"></a>Invio di errori SOAP  
  Gli errori SOAP dichiarati sono quelli in cui un'operazione presenta un <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType> che specifica un tipo di errore SOAP personalizzato. Gli errori SOAP non dichiarati sono quelli che non vengono specificati nel contratto per un'operazione.  
@@ -32,20 +32,20 @@ Gli errori SOAP trasportano informazioni sulla condizione di errore da un serviz
  [!code-vb[FaultContractAttribute#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/faultcontractattribute/vb/services.vb#5)]  
   
 ### <a name="sending-undeclared-faults"></a>Invio di errori non dichiarati  
- Inviare gli errori non dichiarati possono essere molto utili per diagnosticare rapidamente e debug dei problemi nelle applicazioni WCF, tuttavia, l'utilità come uno strumento di debug è limitato. Più in generale, quando si esegue il debug è consigliabile utilizzare la proprietà <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType>. Quando si imposta questo valore su True, i client considerano questi errori come eccezioni <xref:System.ServiceModel.FaultException%601> di tipo <xref:System.ServiceModel.ExceptionDetail>.  
+ L'invio di errori non dichiarati possono essere molto utili per diagnosticare rapidamente e debug dei problemi nelle applicazioni WCF, tuttavia, l'utilità come uno strumento di debug è limitato. Più in generale, quando si esegue il debug è consigliabile utilizzare la proprietà <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType>. Quando si imposta questo valore su True, i client considerano questi errori come eccezioni <xref:System.ServiceModel.FaultException%601> di tipo <xref:System.ServiceModel.ExceptionDetail>.  
   
 > [!IMPORTANT]
->  Poiché le eccezioni gestite possono esporre informazioni interne dell'applicazione, se si imposta <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> oppure <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> a `true` può consentire ai client WCF di ottenere informazioni sulle eccezioni delle operazioni interne del servizio, incluse le informazioni informazioni personali o comunque riservate.  
+>  Poiché le eccezioni gestite possono esporre informazioni interne dell'applicazione, se si imposta <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> oppure <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> a `true` può consentire ai client WCF per ottenere informazioni sulle eccezioni delle operazioni di servizio interno, tra cui personale informazioni personali o comunque riservate.  
 >   
 >  Di conseguenza, l'impostazione della proprietà <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> o della proprietà <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> su `true` è consigliabile solo come modalità temporanea di debug di un'applicazione di servizio. Inoltre, il codice WSDL di un metodo che restituisce in questo modo eccezioni gestite senza tuttavia gestirle non contiene il contratto dell'eccezione <xref:System.ServiceModel.FaultException%601> di tipo <xref:System.ServiceModel.ExceptionDetail>. I client devono prevedere la possibilità di un errore SOAP sconosciuto (restituito ai client WCF come <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> oggetti) per ottenere correttamente le informazioni di debug.  
   
- Per inviare un errore SOAP non dichiarato, generare un oggetto <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> (ovvero, non l'eccezione generica <xref:System.ServiceModel.FaultException%601>) e passare la stringa al costruttore. Questa funzionalità è esposta alle applicazioni client WCF come un'eccezione <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> eccezione in cui la stringa è disponibile chiamando il <xref:System.ServiceModel.FaultException%601.ToString%2A?displayProperty=nameWithType> metodo.  
+ Per inviare un errore SOAP non dichiarato, generare un oggetto <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> (ovvero, non l'eccezione generica <xref:System.ServiceModel.FaultException%601>) e passare la stringa al costruttore. Questa funzionalità è esposta alle applicazioni client WCF come un'eccezione <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> eccezione in cui la stringa è disponibile chiamando il <xref:System.ServiceModel.FaultException%601.ToString%2A?displayProperty=nameWithType> (metodo).  
   
 > [!NOTE]
 >  Se si dichiara un errore SOAP di tipo stringa e quindi si genera nel servizio l'eccezione corrispondente a tale errore come eccezione <xref:System.ServiceModel.FaultException%601> in cui il parametro di tipo è una stringa <xref:System.String?displayProperty=nameWithType>, il valore di tale stringa viene assegnato alla proprietà <xref:System.ServiceModel.FaultException%601.Detail%2A?displayProperty=nameWithType> e non è ottenibile tramite il metodo <xref:System.ServiceModel.FaultException%601.ToString%2A?displayProperty=nameWithType>.  
   
 ## <a name="handling-faults"></a>Gestione degli errori  
- Nei client WCF, gli errori SOAP che si verificano durante la comunicazione di interesse per le applicazioni client vengono generati come eccezioni gestite. Sebbene esistano molte eccezioni che possono verificarsi durante l'esecuzione di tutti i programmi, le applicazioni usando il modello di programmazione client WCF possono prevedere di gestire le eccezioni dei due seguenti come risultato di comunicazione.  
+ Nei client WCF, gli errori SOAP che si verificano durante la comunicazione di interesse per le applicazioni client vengono generati come eccezioni gestite. Sebbene esistano molte eccezioni che possono verificarsi durante l'esecuzione di qualsiasi programma, le applicazioni usando il modello di programmazione client WCF possono prevedere di gestire le eccezioni dei due tipi seguente come risultato di comunicazione.  
   
 -   <xref:System.TimeoutException>  
   
@@ -62,7 +62,7 @@ Gli errori SOAP trasportano informazioni sulla condizione di errore da un serviz
  Le eccezioni <xref:System.ServiceModel.FaultException%601> vengono generate nel client quando un errore specificato nel contratto dell'operazione viene ricevuto in risposta a un'operazione bidirezionale, ovvero a un metodo avente un attributo <xref:System.ServiceModel.OperationContractAttribute> in cui la proprietà <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> è impostata su `false`.  
   
 > [!NOTE]
->  Quando un servizio WCF presenta il <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> oppure <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> impostata su `true` il client considera ciò come un identificatore non dichiarato <xref:System.ServiceModel.FaultException%601> di tipo <xref:System.ServiceModel.ExceptionDetail>. I client possono intercettare questo errore specifico oppure gestire l'errore in un blocco catch per l'eccezione <xref:System.ServiceModel.FaultException>.  
+>  Quando un servizio WCF presenta la <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> oppure <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> proprietà impostata su `true` il client considera ciò come un identificatore non dichiarato <xref:System.ServiceModel.FaultException%601> di tipo <xref:System.ServiceModel.ExceptionDetail>. I client possono intercettare questo errore specifico oppure gestire l'errore in un blocco catch per l'eccezione <xref:System.ServiceModel.FaultException>.  
   
  In genere, solo le eccezioni <xref:System.ServiceModel.FaultException%601>, <xref:System.TimeoutException> e <xref:System.ServiceModel.CommunicationException> sono di interesse per client e servizi.  
   
@@ -75,9 +75,9 @@ Gli errori SOAP trasportano informazioni sulla condizione di errore da un serviz
  Si tenga presente che una stessa operazione può restituire un numero qualsiasi di errori specificati. Ogni errore è un tipo univoco e deve essere gestito in modo individuale.  
   
 ### <a name="handle-exceptions-when-closing-the-channel"></a>Gestione delle eccezioni in caso di chiusura del canale  
- La maggior parte della discussione precedente ha a che fare con errori inviati durante l'elaborazione di messaggi dell'applicazione, vale a dire, i messaggi inviati dal client in modo esplicito quando l'applicazione client chiama operazioni sull'oggetto client WCF.  
+ La maggior parte della discussione precedente deve essere eseguita con errori inviati durante l'elaborazione di messaggi dell'applicazione, vale a dire, i messaggi inviati in modo esplicito dal client quando l'applicazione client chiama operazioni sull'oggetto client WCF.  
   
- Anche nel caso di oggetti locali, l'eliminazione dell'oggetto può generare oppure nascondere le eccezioni che si verificano durante il processo di riciclo. Un comportamento simile può verificarsi quando si utilizzano oggetti client WCF. La chiamata di un'operazione comporta l'invio di messaggi tramite una connessione stabilita. Se la connessione è già stata chiusa oppure non può essere chiusa in modo corretto, la chiusura del canale può generare eccezioni. Ciò si verifica anche se tutte le operazioni hanno eseguito la restituzione in modo corretto.  
+ Anche nel caso di oggetti locali, l'eliminazione dell'oggetto può generare oppure nascondere le eccezioni che si verificano durante il processo di riciclo. Qualcosa di simile può verificarsi quando si utilizzano oggetti client WCF. La chiamata di un'operazione comporta l'invio di messaggi tramite una connessione stabilita. Se la connessione è già stata chiusa oppure non può essere chiusa in modo corretto, la chiusura del canale può generare eccezioni. Ciò si verifica anche se tutte le operazioni hanno eseguito la restituzione in modo corretto.  
   
  In genere i canali dell'oggetto client vengono chiusi in uno dei casi seguenti:  
   
@@ -99,7 +99,7 @@ Gli errori SOAP trasportano informazioni sulla condizione di errore da un serviz
  Nell'esempio di codice seguente viene mostrato come gestire le eccezioni di errore SOAP in un'applicazione client di base, sia nel caso di errore dichiarato sia nel caso di errore non dichiarato.  
   
 > [!NOTE]
->  Questo esempio di codice non utilizza il costrutto `using`. Poiché la chiusura di canali può generare eccezioni, è consigliabile che le applicazioni creano un utilizzo di prima e quindi l'aperto, client WCF e chiudere il client WCF nello stesso blocco try. Per informazioni dettagliate, vedere [panoramica dei Client WCF](../../../docs/framework/wcf/wcf-client-overview.md) e [evitare problemi con l'istruzione Using](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md).  
+>  Questo esempio di codice non utilizza il costrutto `using`. Poiché la chiusura di canali può generare eccezioni, è consigliabile che le applicazioni creano un utilizzo di prima e quindi l'aperto, client WCF e chiudere il client WCF nello stesso blocco try. Per informazioni dettagliate, vedere [WCF Client Overview](../../../docs/framework/wcf/wcf-client-overview.md) e [utilizzare Chiudi e Interrompi per rilasciare le risorse del client WCF](../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md).  
   
  [!code-csharp[FaultContractAttribute#3](../../../samples/snippets/csharp/VS_Snippets_CFX/faultcontractattribute/cs/client.cs#3)]
  [!code-vb[FaultContractAttribute#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/faultcontractattribute/vb/client.vb#3)]  
@@ -109,4 +109,4 @@ Gli errori SOAP trasportano informazioni sulla condizione di errore da un serviz
  <xref:System.ServiceModel.FaultException%601>  
  <xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType>  
  [Eccezioni previste](../../../docs/framework/wcf/samples/expected-exceptions.md)  
- [Prevenzione dei problemi con l'istruzione Using](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)
+ [Utilizzare Chiudi e Interrompi per rilasciare le risorse del client WCF](../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md)

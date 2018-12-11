@@ -1,1 +1,1 @@
-Disponibile dalla 4.7
+Disponibile a partire da 4.7

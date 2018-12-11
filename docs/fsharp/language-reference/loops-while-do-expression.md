@@ -2,12 +2,12 @@
 title: 'Cicli: espressioni while...do (F#)'
 description: Vedere come while... tale espressione viene usata per l'esecuzione iterativa (ciclo) quando viene soddisfatta una condizione di test specificato.
 ms.date: 05/16/2016
-ms.openlocfilehash: 5cf4461669221f91cb50e238c25494f03a10bbc2
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 43e2098ad6c7f103babc2471aebe987040feb989
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45664709"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127277"
 ---
 # <a name="loops-whiledo-expression"></a>Espressione Loops: while...do
 
@@ -35,11 +35,11 @@ L'output del codice precedente è un flusso di numeri casuale compreso tra 1 e 2
 Found a 10!
 ```
 
->[!NOTE]
-È possibile usare `while...do` nelle espressioni di sequenza e altre espressioni di calcolo, nel qual caso una versione personalizzata del `while...do` espressione viene usata. Per altre informazioni, vedere [sequenze](sequences.md), [flussi di lavoro asincroni](asynchronous-workflows.md), e [espressioni di calcolo](computation-expressions.md).
+> [!NOTE]
+> È possibile usare `while...do` nelle espressioni di sequenza e altre espressioni di calcolo, nel qual caso una versione personalizzata del `while...do` espressione viene usata. Per altre informazioni, vedere [sequenze](sequences.md), [flussi di lavoro asincroni](asynchronous-workflows.md), e [espressioni di calcolo](computation-expressions.md).
 
 ## <a name="see-also"></a>Vedere anche
 
 - [Riferimenti per il linguaggio F#](index.md)
-- [Cicli: espressione `for...in`](loops-for-in-expression.md)
-- [Cicli: espressione `for...to`](loops-for-to-expression.md)
+- [Cicli: `for...in` Espressione](loops-for-in-expression.md)
+- [Cicli: `for...to` Espressione](loops-for-to-expression.md)

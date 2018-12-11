@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Visual Basic, arrays
 ms.assetid: dbf29737-b589-4443-bee6-a27588d9c67e
 ms.openlocfilehash: f8bd0f3eed8599f7f9e316df8274e8204a69c48f
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297452"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149900"
 ---
 # <a name="arrays-in-visual-basic"></a>Matrici in Visual Basic
 
@@ -126,7 +126,7 @@ Proprio come per le matrici unidimensionali, è possibile basarsi sull'inferenza
 
 [!code-vb[nested-type-inference](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#6)]
 
-Per altri esempi, vedere [Procedura: inizializzare una variabile di matrice in Visual Basic](../../language-features/arrays/how-to-initialize-an-array-variable.md).
+Per altri esempi, vedere [come: Inizializzare una variabile di matrice in Visual Basic](../../language-features/arrays/how-to-initialize-an-array-variable.md).
 
 ## <a name="iterating-through-an-array"></a>Iterazione su una matrice
 
@@ -299,9 +299,9 @@ Per altre informazioni sulle raccolte, vedere [Raccolte](../../concepts/collecti
 |Termine|Definizione|
 |----------|----------------|
 |[Array Dimensions in Visual Basic](../../language-features/arrays/array-dimensions.md)|Illustra il numero di dimensioni, o rango, e le dimensioni delle matrici.|
-|[Procedura: Inizializzare una variabile di matrice in Visual Basic](../../language-features/arrays/how-to-initialize-an-array-variable.md)|Descrive come popolare le matrici con valori iniziali.|
-|[Procedura: Ordinare una matrice in Visual Basic](../../language-features/arrays/how-to-sort-an-array.md)|Illustra come ordinare alfabeticamente gli elementi di una matrice.|
-|[Procedura: Assegnare una matrice a un'altra matrice](../../language-features/arrays/how-to-assign-one-array-to-another-array.md)|Descrive regole e passaggi per l'assegnazione di una matrice a un'altra variabile di matrice.|
+|[Come si fa: Inizializzare una variabile di matrice in Visual Basic](../../language-features/arrays/how-to-initialize-an-array-variable.md)|Descrive come popolare le matrici con valori iniziali.|
+|[Come si fa: Ordinare una matrice in Visual Basic](../../language-features/arrays/how-to-sort-an-array.md)|Illustra come ordinare alfabeticamente gli elementi di una matrice.|
+|[Come si fa: Assegnare una matrice a un'altra matrice](../../language-features/arrays/how-to-assign-one-array-to-another-array.md)|Descrive regole e passaggi per l'assegnazione di una matrice a un'altra variabile di matrice.|
 |[Risoluzione dei problemi relativi alle matrici](../../language-features/arrays/troubleshooting-arrays.md)|Illustra alcuni problemi comuni che si verificano quando si usano le matrici.|
 
 ## <a name="see-also"></a>Vedere anche

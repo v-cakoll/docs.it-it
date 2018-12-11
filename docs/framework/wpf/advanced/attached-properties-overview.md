@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - attached properties [WPF Designer]
 ms.assetid: 75928354-dc01-47e8-a018-8409aec1f32d
-ms.openlocfilehash: c9eed211b65e7069897718d98c301667a23aaec2
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: bcf218efeb7bff5f7457164411efed796314ba82
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46702907"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129480"
 ---
 # <a name="attached-properties-overview"></a>Cenni preliminari sulle proprietà associate
 
@@ -60,7 +60,7 @@ Lo scenario più comune in cui WPF definisce una proprietà associata è quando 
 
 ## Proprietà associate nel codice <a name="attached_properties_code"></a>
 
-Le proprietà associate in WPF non dispongono dei tipici [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] metodi "wrapper" per l'accesso facile ottenere o impostare. Ciò è dovuto al fatto che la proprietà associata non è necessariamente inclusa nello spazio dei nomi [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] per le istanze in cui la proprietà è impostata. Tuttavia, un processore XAML deve essere in grado di impostare tali valori quando il codice XAML viene analizzato. Per supportare un utilizzo efficace delle proprietà associata, il tipo di proprietario della proprietà associata deve implementare i metodi della funzione di accesso dedicati nel formato **ottenere * PropertyName*** e **impostare*PropertyName * * *. Questi metodi della funzione di accesso dedicati sono anche utili per ottenere o impostare la proprietà associata nel codice. Dal punto di vista del codice, una proprietà associata è simile a un campo sottostante che dispone di funzioni di accesso ai metodi anziché di funzioni di accesso alle proprietà e tale campo sottostante può trovarsi in qualsiasi oggetto senza che sia necessario definirlo in modo specifico.
+Le proprietà associate in WPF non dispongono dei tipici [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] metodi "wrapper" per l'accesso facile ottenere o impostare. Ciò è dovuto al fatto che la proprietà associata non è necessariamente inclusa nello spazio dei nomi [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] per le istanze in cui la proprietà è impostata. Tuttavia, un processore XAML deve essere in grado di impostare tali valori quando il codice XAML viene analizzato. Per supportare un utilizzo efficace delle proprietà associata, il tipo di proprietario della proprietà associata deve implementare i metodi della funzione di accesso dedicati nel formato **Get_PropertyName_** e **Set_PropertyName_**. Questi metodi della funzione di accesso dedicati sono anche utili per ottenere o impostare la proprietà associata nel codice. Dal punto di vista del codice, una proprietà associata è simile a un campo sottostante che dispone di funzioni di accesso ai metodi anziché di funzioni di accesso alle proprietà e tale campo sottostante può trovarsi in qualsiasi oggetto senza che sia necessario definirlo in modo specifico.
 
 L'esempio seguente illustra come impostare una proprietà associata nel codice. In questo esempio `myCheckBox` è un'istanza del <xref:System.Windows.Controls.CheckBox> classe.
 
@@ -91,14 +91,14 @@ Come indicato in precedenza, è necessario eseguire la registrazione come propri
 
 Se la classe definisce la proprietà associata esclusivamente per l'uso in altri tipi, quindi non deve derivare dalla classe <xref:System.Windows.DependencyObject>. Ma è necessario derivare da <xref:System.Windows.DependencyObject> se si segue il modello generale di WPF di avere la proprietà associata sia anche una proprietà di dipendenza.
 
-Definire la proprietà associata come proprietà di dipendenza dichiarando un `public static readonly` campo di tipo <xref:System.Windows.DependencyProperty>. È possibile definire questo campo usando il valore restituito del <xref:System.Windows.DependencyProperty.RegisterAttached%2A> (metodo). Il nome del campo deve corrispondere al nome di proprietà associata, viene aggiunto la stringa `Property`, seguire il modello WPF stabilito di denominazione dei campi di identificazione in base alle proprietà che rappresentano. Il provider di proprietà associata deve inoltre fornire statica **ottenere * PropertyName*** e **impostare * PropertyName*** metodi come funzioni di accesso per la proprietà associata; riesce a eseguire questa operazione comporterà la proprietà sistema sia in grado di usare la proprietà associata.
+Definire la proprietà associata come proprietà di dipendenza dichiarando un `public static readonly` campo di tipo <xref:System.Windows.DependencyProperty>. È possibile definire questo campo usando il valore restituito del <xref:System.Windows.DependencyProperty.RegisterAttached%2A> (metodo). Il nome del campo deve corrispondere al nome di proprietà associata, viene aggiunto la stringa `Property`, seguire il modello WPF stabilito di denominazione dei campi di identificazione in base alle proprietà che rappresentano. Il provider di proprietà associata deve inoltre fornire statica **Get_PropertyName_** e **Set_PropertyName_** metodi come funzioni di accesso per la proprietà associata; riesce a eseguire questa operazione comporterà la proprietà sistema sia in grado di usare la proprietà associata.
 
 > [!NOTE]
 > Se si omette di accesso get della proprietà associata, data binding per la proprietà non funzionerà negli strumenti di progettazione, ad esempio Visual Studio ed Expression Blend.
 
 #### <a name="the-get-accessor"></a>Funzione di accesso Get
 
-La firma per il **ottenere * PropertyName*** della funzione di accesso deve essere:
+La firma per il **Get_PropertyName_** della funzione di accesso deve essere:
 
 `public static object GetPropertyName(object target)`
 
@@ -108,7 +108,7 @@ La firma per il **ottenere * PropertyName*** della funzione di accesso deve esse
 
 #### <a name="the-set-accessor"></a>Funzione di accesso Set
 
-La firma per il **impostare * PropertyName*** della funzione di accesso deve essere:
+La firma per il **Set_PropertyName_** della funzione di accesso deve essere:
 
 `public static void SetPropertyName(object target, object value)`
 
@@ -116,7 +116,7 @@ La firma per il **impostare * PropertyName*** della funzione di accesso deve ess
 
 -   L'oggetto `value` può essere specificato come tipo più specifico nell'implementazione. Ad esempio, il <xref:System.Windows.Controls.DockPanel.SetDock%2A> come tipi di metodo <xref:System.Windows.Controls.Dock>, perché il valore può essere impostato solo su tale enumerazione. Tenere presente che il valore per questo metodo è l'input proveniente dal caricatore XAML quando rileva la proprietà associata in un utilizzo della proprietà associata nel markup. Tale input è il valore specificato come valore di attributo XAML nel markup. Pertanto, per il tipo usato devono essere disponibili la conversione di tipo, il serializzatore del valore o il supporto per l'estensione di markup, in modo da poter creare il tipo appropriato in base al valore dell'attributo, rappresentato in pratica semplicemente da una stringa.
 
-L'esempio seguente illustra la registrazione di proprietà di dipendenza (usando il <xref:System.Windows.DependencyProperty.RegisterAttached%2A> metodo), così come il **ottenere * PropertyName*** e **impostare * PropertyName*** le funzioni di accesso. Nell'esempio, la proprietà associata è denominata `IsBubbleSource`. Pertanto, le funzioni di accesso devono essere chiamate `GetIsBubbleSource` e `SetIsBubbleSource`.
+L'esempio seguente illustra la registrazione di proprietà di dipendenza (usando il <xref:System.Windows.DependencyProperty.RegisterAttached%2A> metodo), nonché il **Get_PropertyName_** e **Set_PropertyName_** funzioni di accesso. Nell'esempio, la proprietà associata è denominata `IsBubbleSource`. Pertanto, le funzioni di accesso devono essere chiamate `GetIsBubbleSource` e `SetIsBubbleSource`.
 
 [!code-csharp[WPFAquariumSln#RegisterAttachedBubbler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#registerattachedbubbler)]
 [!code-vb[WPFAquariumSln#RegisterAttachedBubbler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#registerattachedbubbler)]

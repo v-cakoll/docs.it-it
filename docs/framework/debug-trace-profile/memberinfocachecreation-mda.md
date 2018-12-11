@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5abdad23-1335-4744-8acb-934002c0b6fe
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e20a04e76fb26409396a4f0b9fbfc7d86f253e46
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5ebc449985a8e2617b278f04c91d243ca11b637e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392086"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145202"
 ---
 # <a name="memberinfocachecreation-mda"></a>MDA memberInfoCacheCreation
 L'assistente al debug gestito `memberInfoCacheCreation` viene attivato al momento della creazione di una cache <xref:System.Reflection.MemberInfo>. Si tratta di un'indicazione chiara di un programma che usa funzionalità di reflection onerose a livello di risorse.  
@@ -52,7 +52,7 @@ L'assistente al debug gestito `memberInfoCacheCreation` viene attivato al moment
 ## <a name="example"></a>Esempio  
  Questo codice di esempio attiverà l'assistente al debug gestito `memberInfoCacheCreation`.  
   
-```  
+```csharp
 using System;  
   
 public class Exe  

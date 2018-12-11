@@ -7,12 +7,12 @@ helpviewer_keywords:
 - reusing commonly defined objects [WPF]
 - XAML [WPF], reusing resources
 ms.assetid: 91580b89-a0a8-4889-aecb-fddf8e63175f
-ms.openlocfilehash: c43505497b947004ffb282346459967579d52375
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: e02c80f4c1fdacbfdcb50ed57d89cc9df1f277f9
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44199544"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126403"
 ---
 # <a name="xaml-resources"></a>Risorse XAML
 Una risorsa è un oggetto che è possibile riusare in posizioni diverse all'interno dell'applicazione. Sono esempi di risorse pennelli e stili. Questa panoramica viene descritto come usare le risorse di [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. È anche possibile creare e accedere alle risorse tramite il codice o in modo intercambiabile tra codice e [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Per altre informazioni, vedere [risorse e codice](../../../../docs/framework/wpf/advanced/resources-and-code.md).  
@@ -147,7 +147,7 @@ Una risorsa è un oggetto che è possibile riusare in posizioni diverse all'inte
   
  Che stile dispone effettivamente di una chiave: la chiave implicita `typeof(` <xref:System.Windows.Controls.Button> `)`. Nel markup, è possibile specificare una <xref:System.Windows.Style.TargetType%2A> direttamente come tipo di nome (o è possibile usare facoltativamente [{... x: Type}](../../../../docs/framework/xaml-services/x-type-markup-extension.md) per restituire un <xref:System.Type>.  
   
- Tramite i meccanismi di stile del tema predefinito utilizzati da [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], che lo stile viene applicato come stile di runtime di un <xref:System.Windows.Controls.Button> nella pagina, anche se il <xref:System.Windows.Controls.Button> stesso non tenta di specificare relativo <xref:System.Windows.FrameworkElement.Style%2A> proprietà o una risorsa specifica Fare riferimento allo stile. Lo stile definito nella pagina viene trovato prima nella sequenza di ricerca che nello stile del dizionario temi, tramite la stessa chiave di quest'ultimo. È possibile specificare semplicemente `<Button>Hello</Button>` in un punto qualsiasi nella pagina e lo stile definito con <xref:System.Windows.Style.TargetType%2A> di `Button` verrà applicata a tale pulsante. Se si desidera, è possibile usare in modo esplicito una chiave lo stile con lo stesso valore di tipo come <xref:System.Windows.Style.TargetType%2A>per maggiore chiarezza nel markup, ma che è facoltativo.  
+ Tramite i meccanismi di stile del tema predefinito utilizzati da [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], che lo stile viene applicato come stile di runtime di un <xref:System.Windows.Controls.Button> nella pagina, anche se il <xref:System.Windows.Controls.Button> stesso non tenta di specificare relativo <xref:System.Windows.FrameworkElement.Style%2A> proprietà o una risorsa specifica Fare riferimento allo stile. Lo stile definito nella pagina è stato trovato in precedenza nella sequenza di ricerca più lo stile del tema dizionario, usando la stessa chiave con lo stile del dizionario temi. È possibile specificare semplicemente `<Button>Hello</Button>` in un punto qualsiasi nella pagina e lo stile definito con <xref:System.Windows.Style.TargetType%2A> di `Button` verrà applicata a tale pulsante. Se si desidera, è possibile usare in modo esplicito una chiave lo stile con lo stesso valore di tipo come <xref:System.Windows.Style.TargetType%2A>per maggiore chiarezza nel markup, ma che è facoltativo.  
   
  Le chiavi implicite per gli stili non sono applicabili in un controllo se <xref:System.Windows.FrameworkElement.OverridesDefaultStyle%2A> viene `true` (si noti anche che <xref:System.Windows.FrameworkElement.OverridesDefaultStyle%2A> potrebbe essere impostato come parte del comportamento nativo per la classe del controllo, anziché in modo esplicito in un'istanza del controllo). Inoltre, per supportare le chiavi implicite per gli scenari di classe derivata, il controllo deve eseguire l'override <xref:System.Windows.FrameworkElement.DefaultStyleKey%2A> (tutti i controlli esistenti forniti come parte di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] eseguire questa operazione). Per altre informazioni sulla progettazione di controlli, temi e stili, vedere [linee guida per la progettazione di controlli di stile](../../../../docs/framework/wpf/controls/guidelines-for-designing-stylable-controls.md).  
   

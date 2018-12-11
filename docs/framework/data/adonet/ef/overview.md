@@ -2,12 +2,12 @@
 title: Cenni preliminari su Entity Framework
 ms.date: 09/17/2018
 ms.assetid: a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0
-ms.openlocfilehash: 35eb3b1503c8754752662aef0c5101251d60d49c
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: a6649744c4ad719c760ebc6ce5d97b51815c8ee6
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47216942"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145793"
 ---
 # <a name="entity-framework-overview"></a>Panoramica di Entity Framework
 
@@ -26,11 +26,11 @@ ms.locfileid: "47216942"
 
  Quando si usano gli strumenti di Entity Data Model, il modello concettuale, il modello di archiviazione e i mapping tra i due vengono espressi in schemi basati su XML e definiti in file con estensioni corrispondenti:
 
--   Il linguaggio CSDL (Conceptual Schema Definition Language) definisce il modello concettuale. CSDL è la [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]dell'implementazione del [Entity Data Model](../../../../../docs/framework/data/adonet/entity-data-model.md). L'estensione del file è csdl.
+- Il linguaggio CSDL (Conceptual Schema Definition Language) definisce il modello concettuale. CSDL è la [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]dell'implementazione del [Entity Data Model](../../../../../docs/framework/data/adonet/entity-data-model.md). L'estensione del file è csdl.
 
--   Il linguaggio SSDL (Store Schema Definition Language) definisce il modello di archiviazione, chiamato anche modello logico. L'estensione del file è ssdl.
+- Il linguaggio SSDL (Store Schema Definition Language) definisce il modello di archiviazione, chiamato anche modello logico. L'estensione del file è ssdl.
 
--   Il linguaggio MSL (Mapping Specification Language) definisce i mapping tra il modello di archiviazione e il modello concettuale. L'estensione del file è msl.
+- Il linguaggio MSL (Mapping Specification Language) definisce i mapping tra il modello di archiviazione e il modello concettuale. L'estensione del file è msl.
 
 Il modello di archiviazione e i mapping possono essere modificati in base alle esigenze senza che sia necessario modificare il modello concettuale, le classi di dati o il codice dell'applicazione. Poiché i modelli di archiviazione sono specifici del provider, è possibile usare un modello concettuale coerente in varie origini dati.
 
@@ -45,9 +45,9 @@ Il [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Usa questi mod
 
 Oltre a rappresentare una soluzione di mapping relazionale a oggetti, [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] è uno strumento che consente alle applicazioni di accedere e modificare i dati rappresentati come entità e relazioni nel modello concettuale. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] utilizza le informazioni nei file del modello e di mapping per tradurre le query di oggetto eseguite su tipi di entità rappresentati nel modello concettuale in query specifiche dell'origine dati. I risultati della query vengono materializzati in oggetti che il [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] gestisce. Il [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] disponibili i seguenti metodi per eseguire query di un modello concettuale e restituire oggetti:
 
--   [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]. Fornisce il supporto di Language-Integrated Query (LINQ) per eseguire query sui tipi di entità definiti in un modello concettuale. Per altre informazioni, vedere [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).
+- [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]. Fornisce il supporto di Language-Integrated Query (LINQ) per eseguire query sui tipi di entità definiti in un modello concettuale. Per altre informazioni, vedere [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).
 
--   [!INCLUDE[esql](../../../../../includes/esql-md.md)]. Un dialetto indipendente dall'archiviazione di SQL che interagisce direttamente con le entità nel modello concettuale e supporta [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] concetti. [!INCLUDE[esql](../../../../../includes/esql-md.md)] viene usato sia con query di oggetto e le query eseguite utilizzando il provider EntityClient. Per altre informazioni, vedere [Panoramica di Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md).
+- [!INCLUDE[esql](../../../../../includes/esql-md.md)]. Un dialetto indipendente dall'archiviazione di SQL che interagisce direttamente con le entità nel modello concettuale e supporta [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] concetti. [!INCLUDE[esql](../../../../../includes/esql-md.md)] viene usato sia con query di oggetto e le query eseguite utilizzando il provider EntityClient. Per altre informazioni, vedere [Panoramica di Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md).
 
 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] include il provider di dati EntityClient. Tale provider gestisce connessioni, converte query di entità in query specifiche dell'origine dati e restituisce un lettore dati usato da [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] per materializzare i dati dell'entità in oggetti. Quando la materializzazione degli oggetti non sia obbligatorio, consente inoltre al provider EntityClient, ad esempio uno standard [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] provider di dati, consentendo alle applicazioni di eseguire [!INCLUDE[esql](../../../../../includes/esql-md.md)] esegue una query e usare il lettore dati di sola lettura restituito. Per altre informazioni, vedere [EntityClient Provider per Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).
 
@@ -71,7 +71,7 @@ Combinazione con il [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md
 
 Per altre informazioni sul [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], vedere:
 
-[Guida introduttiva](../../../../../docs/framework/data/adonet/ef/getting-started.md) : fornisce informazioni su come iniziare subito e sviluppare App usando il [avvio rapido](https://msdn.microsoft.com/library/0bc534be-789f-4819-b9f6-76e51d961675), che illustra come creare una semplice [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] dell'applicazione.
+[Guida introduttiva](../../../../../docs/framework/data/adonet/ef/getting-started.md) : fornisce informazioni su come iniziare subito e sviluppare App usando il [avvio rapido](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399182(v=vs.100)), che illustra come creare una semplice [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] dell'applicazione.
 
 [Terminologia relativa a Entity Framework](../../../../../docs/framework/data/adonet/ef/terminology.md) -definisce molti dei termini introdotti da Entity Data Model e il [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] e che vengono usati in [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] documentazione.
 

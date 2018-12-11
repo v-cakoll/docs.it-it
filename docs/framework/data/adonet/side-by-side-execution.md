@@ -2,12 +2,12 @@
 title: Esecuzione side-by-side in ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 9f9ba96d-9f89-4f65-bb2f-6860879f4393
-ms.openlocfilehash: 7435f64afa9ce45a29f4d0a537219f31968eb3f5
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: f69a269e5f6370cf7c5a60920b3d5a47ce1079cb
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042153"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126614"
 ---
 # <a name="side-by-side-execution-in-adonet"></a>Esecuzione side-by-side in ADO.NET
 In [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] il supporto dell'esecuzione side-by-side indica la possibilità di eseguire un'applicazione in un computer in cui sono installate più versioni di [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] usando esclusivamente la versione per la quale è stata compilata l'applicazione stessa. Per informazioni dettagliate sulla configurazione di esecuzione side-by-side, vedere [esecuzione Side-by-Side](../../../../docs/framework/deployment/side-by-side-execution.md).  
@@ -47,7 +47,7 @@ In [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] il supporto d
   
  Si consideri l'esecuzione del gruppo di comandi seguente in una chiamata al metodo <xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A>.  
   
-```  
+```sql
 SET NOCOUNT ON;  
 SELECT * FROM dbo.Customers;  
 ```  
@@ -58,7 +58,7 @@ SELECT * FROM dbo.Customers;
   
  Per le applicazioni che possono essere eseguite sia sulle versioni successive che sulle versioni precedenti di [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], è possibile scrivere il codice in modo tale che il comportamento resti invariato indipendentemente dalla versione in cui viene eseguita l'applicazione. Per assicurarsi che un comando modifichi lo stato della connessione per tutti i comandi successivi, si consiglia di eseguire il comando tramite il metodo <xref:System.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A>. Per assicurarsi che un comando non modifichi lo stato della connessione per tutti i comandi successivi, si consiglia di includervi i comandi che ripristinano lo stato della connessione. Ad esempio:  
   
-```  
+```sql
 SET NOCOUNT ON;  
 SELECT * FROM dbo.Customers;  
 SET NOCOUNT OFF;  

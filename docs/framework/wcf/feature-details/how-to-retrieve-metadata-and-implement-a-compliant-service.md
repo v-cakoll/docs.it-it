@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: recuperare metadati e implementare un servizio conforme'
+title: 'Procedura: Recuperare i metadati e implementare un servizio conforme'
 ms.date: 03/30/2017
 ms.assetid: f6f3a2b9-c8aa-4b0b-832c-ec2927bf1163
 ms.openlocfilehash: dc7f5d97a5201698e8dc99e4523e3ab2925f6883
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185222"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148926"
 ---
-# <a name="how-to-retrieve-metadata-and-implement-a-compliant-service"></a>Procedura: recuperare metadati e implementare un servizio conforme
+# <a name="how-to-retrieve-metadata-and-implement-a-compliant-service"></a>Procedura: Recuperare i metadati e implementare un servizio conforme
 Spesso i servizi non vengono progettati e implementati dalla stessa persona. Negli ambienti dove le applicazioni interoperative svolgono un ruolo importante, i contratti possono essere progettati o descritti in WSDL (Web Services Description Language) e uno sviluppatore deve implementare un servizio che sia conforme al contratto fornito. È anche possibile eseguire la migrazione di un servizio esistente per Windows Communication Foundation (WCF) ma mantiene il formato di trasmissione. I contratti duplex richiedono inoltre ai chiamanti di implementare anche un contratto di callback.  
   
  In questi casi, è necessario usare il [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) (o un strumento equivalente) per generare un'interfaccia del contratto di servizio in un linguaggio gestito che è possibile implementare per soddisfare i requisiti del contratto. In genere il [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) viene usato per acquisire un contratto di servizio che viene usato con una channel factory o un tipo di client WCF e con un file di configurazione client che consente di impostare l'associazione corretta e l'indirizzo. Per usare il file di configurazione generato, è necessario modificarlo in un file di configurazione del servizio. Può inoltre essere necessario modificare il contratto di servizio.  
@@ -24,7 +24,7 @@ Spesso i servizi non vengono progettati e implementati dalla stessa persona. Neg
   
 3.  Se la descrizione WSDL non specifica un'azione di replica per tutte le operazioni, è possibile che la proprietà <xref:System.ServiceModel.OperationContractAttribute.ReplyAction%2A> dei contratti di operazione generati sia impostata sul carattere jolly (*). Rimuovere l'impostazione di questa proprietà. In caso contrario, quando vengono implementati i metadati del contratto di servizio, i metadati non possono essere esportati per tali operazioni.  
   
-4.  Implementare l'interfaccia in una classe e ospitare il servizio. Per un esempio, vedere [procedura: implementare un contratto di servizio](../../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md), oppure vedere una semplice implementazione riportata di seguito nella sezione esempio.  
+4.  Implementare l'interfaccia in una classe e ospitare il servizio. Per un esempio, vedere [come: Implementare un contratto di servizio](../../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md), oppure vedere una semplice implementazione riportata di seguito nella sezione esempio.  
   
 5.  Nella configurazione del client di file che il [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) che genera l'errore, modificare il [ \<client >](../../../../docs/framework/configure-apps/file-schema/wcf/client.md) sezione di configurazione per un [ \<services >](../../../../docs/framework/configure-apps/file-schema/wcf/services.md) sezione di configurazione. Per un esempio di file di configurazione dell'applicazione client generato, vedere la sezione "Esempio" seguente.  
   

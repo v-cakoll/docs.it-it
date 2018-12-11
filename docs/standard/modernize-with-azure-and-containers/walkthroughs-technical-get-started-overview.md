@@ -4,12 +4,12 @@ description: Modernizzare le applicazioni .NET esistenti con Cloud di Azure e i 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 1c23acc16698446bc07c0047b68186e21c2ceb2d
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.openlocfilehash: f5a9d0c7c1c45a6afca390e93384af4c8386fe09
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49372851"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150589"
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>Procedure dettagliate e technical panoramica introduttiva
 
@@ -36,7 +36,7 @@ Ognuna delle procedure dettagliate seguenti utilizza il nuovo esempio eShopLegac
 - **Distribuire le app basate su contenitori Windows in Azure Service Fabric**
 
 
-## <a name="walkthrough-1-tour-of-eshop-legacy-apps"></a>Procedura dettagliata 1: Presentazione dell'App legacy eShop
+## <a name="walkthrough-1-tour-of-eshop-legacy-apps"></a>Procedura dettagliata 1: Panoramica delle App legacy eShop
 
 ### <a name="technical-walkthrough-availability"></a>Istruzioni dettagliate su disponibilità
 
@@ -55,7 +55,7 @@ Sono disponibili in tutte le applicazioni di [repository GitHub eShopModernizing
 
 L'obiettivo principale di questa procedura dettagliata è semplicemente per acquisire familiarità con queste App e con il codice e configurazione. È possibile configurare le App in modo che possano generare e usare dati fittizi, senza usare il database SQL, a scopo di test. Questa configurazione facoltativa si basa sull'inserimento delle dipendenze, in modo disgiunto.
 
-### <a name="scenario-1-aspnet-web-apps"></a>Lo scenario 1: Le app Web ASP.NET
+### <a name="scenario-1-aspnet-web-apps"></a>Scenario 1: App Web ASP.NET
 
 La figura seguente illustra uno scenario semplice delle applicazioni web ASP.NET legacy originale.
 
@@ -70,7 +70,7 @@ La figura seguente mostra le schermate iniziale dell'app.
 
 Le dipendenze in ASP.NET 4.x o versioni precedenti (per MVC o Web Form) significa che queste applicazioni non verranno eseguito in .NET Core, a meno che il codice è completamente riscritto usando ASP.NET Core MVC. 
 
-### <a name="scenario-2-wcf-service-and-winforms-client-app-3-tier-app"></a>Scenario 2: Servizio WCF e client di Windows Forms app (app di livello 3)
+### <a name="scenario-2-wcf-service-and-winforms-client-app-3-tier-app"></a>Scenario 2: Client di Windows Forms app (app di livello 3) e un servizio WCF
 
 La figura seguente illustra uno scenario semplice dell'applicazione legacy a 3 livelli originale.
 
@@ -79,7 +79,7 @@ La figura seguente illustra uno scenario semplice dell'applicazione legacy a 3 l
 
 ### <a name="benefits"></a>Vantaggi
 
-I vantaggi di questa procedura dettagliata sono semplici: solo acquisire familiarità con le app iniziale e il codice.
+I vantaggi di questa procedura dettagliata sono semplici: Semplicemente acquisire familiarità con le app iniziale e il codice.
 
 ### <a name="next-steps"></a>Passaggi successivi
 
@@ -107,7 +107,7 @@ L'obiettivo di questa procedura dettagliata è descrive diverse opzioni per l'in
 
 Questa procedura dettagliata si basa su Visual Studio 2017 Tools per l'approccio di Docker, ma gli altri due approcci sono abbastanza simili dal punto di vista usando i Dockerfile.
 
-### <a name="scenario-1-containerized-aspnet-web-apps"></a>Scenario 1: Le app web ASP.NET nei contenitori
+### <a name="scenario-1-containerized-aspnet-web-apps"></a>Scenario 1: App web ASP.NET nei contenitori
 
 Nella figura seguente illustra lo scenario per applicazioni web legacy eShop nei contenitori.
 
@@ -159,19 +159,19 @@ L'obiettivo di questa procedura dettagliata è descrive le alternative più, che
 
 In questa procedura dettagliata vengono illustrati gli scenari diversi.
 
-#### <a name="scenario-a-deploy-to-an-azure-vm-from-a-dev-pc-through-docker-engine-connection"></a>Scenario a: Distribuisci in una VM di Azure da un PC di sviluppo tramite connessione al motore di Docker
+#### <a name="scenario-a-deploy-to-an-azure-vm-from-a-dev-pc-through-docker-engine-connection"></a>Scenario a: Distribuire in una VM di Azure da un PC di sviluppo tramite connessione al motore di Docker
 
 ![Distribuire in una VM di Azure da un computer di sviluppo tramite una connessione al motore di Docker](./media/image5-4.png)
 
 > **Figura 5-4.** Distribuire in una VM di Azure da un computer di sviluppo tramite una connessione al motore di Docker
 
-#### <a name="scenario-b-deploy-to-an-azure-vm-through-a-docker-registry"></a>Scenario b: distribuire una macchina virtuale di Azure tramite un registro Docker
+#### <a name="scenario-b-deploy-to-an-azure-vm-through-a-docker-registry"></a>Scenario b: Distribuire una macchina virtuale di Azure tramite un registro Docker
 
 ![Distribuire una macchina virtuale di Azure tramite un registro Docker](./media/image5-5.png)
 
 > **Figura 5-5.** Distribuire una macchina virtuale di Azure tramite un registro Docker
 
-#### <a name="scenario-c-deploy-to-an-azure-vm-from-cicd-pipelines-in-azure-devops-services"></a>Scenario c: distribuire una macchina virtuale di Azure dalla pipeline CI/CD in servizi di Azure DevOps
+#### <a name="scenario-c-deploy-to-an-azure-vm-from-cicd-pipelines-in-azure-devops-services"></a>Scenario di c: Distribuire in una VM di Azure dalla pipeline CI/CD in servizi di Azure DevOps
 
 ![Distribuire in una VM di Azure dalla pipeline CI/CD in servizi di Azure DevOps](./media/image5-6.png)
 
@@ -193,7 +193,7 @@ Esplorare il contenuto più approfondito su wiki di GitHub:
 
 [https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD))
 
-## <a name="walkthrough-4-deploy-your-windows-containers-based-apps-to-azure-container-instances-aci"></a>Procedura dettagliata 4: Distribuire le app basate su contenitori di Windows per le istanze di contenitore di Azure (ACI)
+## <a name="walkthrough-4-deploy-your-windows-containers-based-apps-to-azure-container-instances-aci"></a>Procedura dettagliata 4: Distribuire le app di Windows basata su contenitori in istanze di contenitore di Azure (ACI)
 
 ### <a name="technical-walkthrough-availability"></a>Istruzioni dettagliate su disponibilità
 
@@ -232,7 +232,7 @@ Esplorare il contenuto più approfondito su wiki di GitHub:
 [https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-Deploying-the-Apps-to-ACI-(Azure-Container-Instances)](https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-Deploying-the-Apps-to-ACI-(Azure-Container-Instances)TBD)
 
 
-## <a name="walkthrough-5-deploy-your-windows-containers-based-apps-to-kubernetes-in-azure-container-service"></a>Procedura dettagliata 5: Distribuire le app basate su contenitori di Windows in Kubernetes nel servizio contenitore di Azure
+## <a name="walkthrough-5-deploy-your-windows-containers-based-apps-to-kubernetes-in-azure-container-service"></a>Procedura dettagliata 5: Distribuire le app di Windows basata su contenitori in Kubernetes nel servizio contenitore di Azure
 
 ### <a name="technical-walkthrough-availability"></a>Istruzioni dettagliate su disponibilità
 
@@ -254,13 +254,13 @@ L'obiettivo di questa procedura dettagliata consiste nel comprendere come distri
 
 ### <a name="scenarios"></a>Scenari
 
-#### <a name="scenario-a-deploy-directly-to-a-kubernetes-cluster-from-a-dev-environment"></a>Scenario a: Distribuisci direttamente a un cluster Kubernetes da un ambiente di sviluppo
+#### <a name="scenario-a-deploy-directly-to-a-kubernetes-cluster-from-a-dev-environment"></a>Scenario a: Distribuire direttamente in un cluster Kubernetes da un ambiente di sviluppo
 
 ![Distribuire direttamente in un cluster Kubernetes da un ambiente di sviluppo](./media/image5-7.png)
 
 > **Figura 5-7.** Distribuire direttamente in un cluster Kubernetes da un ambiente di sviluppo
 
-#### <a name="scenario-b-deploy-to-a-kubernetes-cluster-from-cicd-pipelines-in-azure-devops-services"></a>Scenario b: distribuire in un cluster Kubernetes da CI/CD pipeline in servizi di Azure DevOps
+#### <a name="scenario-b-deploy-to-a-kubernetes-cluster-from-cicd-pipelines-in-azure-devops-services"></a>Scenario b: Distribuire un cluster Kubernetes dalla pipeline CI/CD in servizi di Azure DevOps
 
 ![Distribuire un cluster Kubernetes dalla pipeline CI/CD in servizi di Azure DevOps](./media/image5-8.png)
 
@@ -314,13 +314,13 @@ L'obiettivo di questa procedura dettagliata consiste nel comprendere come distri
 
 ### <a name="scenarios"></a>Scenari
 
-#### <a name="scenario-a-deploy-directly-to-a-service-fabric-cluster-from-a-dev-environment"></a>Scenario a: Distribuisci direttamente a un cluster di Service Fabric da un ambiente di sviluppo
+#### <a name="scenario-a-deploy-directly-to-a-service-fabric-cluster-from-a-dev-environment"></a>Scenario a: Distribuire direttamente in un cluster di Service Fabric da un ambiente di sviluppo
 
 ![Distribuire direttamente in un cluster di Service Fabric da un ambiente di sviluppo](./media/image5-9.png)
 
 > **Figura 5-9.** Distribuire direttamente in un cluster di Service Fabric da un ambiente di sviluppo
 
-### <a name="scenario-b-deploy-to-a-service-fabric-cluster-from-cicd-pipelines-in-azure-devops-services"></a>Scenario b: distribuire un cluster di Service Fabric da CI/CD pipeline in servizi di Azure DevOps
+### <a name="scenario-b-deploy-to-a-service-fabric-cluster-from-cicd-pipelines-in-azure-devops-services"></a>Scenario b: Distribuire in un cluster di Service Fabric dalla pipeline CI/CD in servizi di Azure DevOps
 
 ![Distribuire in un cluster di Service Fabric dalla pipeline CI/CD in servizi di Azure DevOps](./media/image5-10.png)
 
@@ -367,5 +367,5 @@ Esplorare il contenuto più approfondito su wiki di GitHub:
 [https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-How-to-deploy-your-Windows-Containers-based-apps-into-Azure-Service-Fabric-(Including-CI-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-How-to-deploy-your-Windows-Containers-based-apps-into-Azure-Service-Fabric-(Including-CI-CD))
 
 >[!div class="step-by-step"]
-[Precedente](lift-and-shift-existing-apps-devops/migrate-to-hybrid-cloud-scenarios.md)
-[Successivo](conclusions.md)
+>[Precedente](lift-and-shift-existing-apps-devops/migrate-to-hybrid-cloud-scenarios.md)
+>[Successivo](conclusions.md)

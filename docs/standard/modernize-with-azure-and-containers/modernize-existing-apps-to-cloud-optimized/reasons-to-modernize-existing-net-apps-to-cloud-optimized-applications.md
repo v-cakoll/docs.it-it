@@ -4,12 +4,12 @@ description: Modernizzare le applicazioni .NET esistenti con contenitori Windows
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 17838381f42a760caa7fba7e09ab798c6284bccb
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 8a59a78bbf7ec38f32b14e67d4cb35a9c2375e94
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45683203"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151063"
 ---
 # <a name="reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications"></a>Motivi per cui rinnovare le app .NET esistenti per le applicazioni ottimizzato per il Cloud
 
@@ -23,7 +23,7 @@ La conclusione è che quando un'organizzazione crea e gestisce le applicazioni c
 
 ## <a name="cloud-optimized-application-principles-and-tenets"></a>Principi e i principi dell'applicazione ottimizzato per il cloud 
 
-Miglioramenti nel cloud sono incentrati principalmente su due obiettivi: ridurre i costi e migliorare la crescita aziendale grazie al miglioramento dell'agilità. Questi obiettivi semplificando i processi e ridurre gli attriti quando si rilascia e distribuire applicazioni.
+Miglioramenti nel cloud sono incentrati principalmente su due obiettivi: Ridurre i costi e migliorare la crescita aziendale grazie al miglioramento dell'agilità. Questi obiettivi semplificando i processi e ridurre gli attriti quando si rilascia e distribuire applicazioni.
 
 L'applicazione è ottimizzato per il Cloud se can aggiuntivo un'agile modo-sviluppa la tua app in modo autonomo da altre App in locale e quindi rilasciare, distribuire, la scalabilità automatica, monitorare e risolvere i problemi dell'app nel cloud.
 
@@ -68,5 +68,5 @@ Tutti questi vantaggi forniscono in definitiva la riduzione dei costi chiave per
 Nelle sezioni seguenti, questi vantaggi sono illustrati in modo più dettagliato e sono collegati a tecnologie specifiche.
 
 >[!div class="step-by-step"]
-[Precedente](index.md)
-[Successivo](microsoft-technologies-in-cloud-optimized-applications.md)
+>[Precedente](index.md)
+>[Successivo](microsoft-technologies-in-cloud-optimized-applications.md)

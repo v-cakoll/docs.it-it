@@ -4,12 +4,12 @@ description: Ciclo di vita delle applicazioni Docker in contenitori con piattafo
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 3af174279e8b6f56a10413817b05ef68cfcabea5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8aa388c7c19f532829d64208a48b6e556e43d802
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202178"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152877"
 ---
 # <a name="common-container-design-principles"></a>Principi di progettazione comuni di contenitore
 
@@ -21,7 +21,6 @@ Nel modello di contenitore, un contenitore rappresenta un singolo processo. Con 
 
 È possibile trovare uno scenario in cui si desidera più processi in esecuzione in un singolo contenitore. In qualsiasi documento di architettura, non riguarda mai un "," né è sempre disponibile un' "sempre". Per gli scenari che richiedono più processi, un modello comune consiste nell'usare [Supervisore](http://supervisord.org/).
 
-
 >[!div class="step-by-step"]
-[Precedente](design-docker-applications.md)
-[Successivo](monolithic-applications.md)
+>[Precedente](design-docker-applications.md)
+>[Successivo](monolithic-applications.md)

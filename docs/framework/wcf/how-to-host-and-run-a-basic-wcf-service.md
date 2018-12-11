@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: ospitare ed eseguire un servizio Windows Communication Foundation di base'
+title: 'Procedura: Ospitare ed eseguire un servizio di base di Windows Communication Foundation'
 ms.date: 09/14/2018
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - WCF services [WCF]
 - WCF services [WCF], running
 ms.assetid: 31774d36-923b-4e2d-812e-aa190127266f
-ms.openlocfilehash: b79c3246b7c12a3a99a5c68586387fc30573dcb6
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 710ccd69d7b0f8cd8cd3e04729fd952308a3fb4a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46562294"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129376"
 ---
-# <a name="how-to-host-and-run-a-basic-windows-communication-foundation-service"></a>Procedura: ospitare ed eseguire un servizio Windows Communication Foundation di base
+# <a name="how-to-host-and-run-a-basic-windows-communication-foundation-service"></a>Procedura: Ospitare ed eseguire un servizio di base di Windows Communication Foundation
 
 Questa è la terza delle sei attività necessarie per creare un'applicazione Windows Communication Foundation (WCF). Per una panoramica di tutte e sei le attività, vedere l'argomento [Esercitazione introduttiva](../../../docs/framework/wcf/getting-started-tutorial.md).
 
@@ -149,7 +149,7 @@ End Module
 
 **Passaggio 4** : consentire lo scambio di metadati. I client utilizzeranno lo scambio di metadati per generare i proxy che saranno utilizzati per chiamare le operazioni del servizio. Per abilitare lo scambio di metadati, creare un'istanza di <xref:System.ServiceModel.Description.ServiceMetadataBehavior>, impostare la relativa proprietà <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> su `true` e aggiungere il comportamento alla raccolta <!--zz <xref:System.ServiceModel.ServiceHost.Behaviors%2A>  -->`System.ServiceModel.ServiceHost.Behaviors%2A` dell'istanza di <xref:System.ServiceModel.ServiceHost>.
 
-**Passaggio 5** : aprire il <xref:System.ServiceModel.ServiceHost> in ascolto dei messaggi in ingresso. Si noti che il codice attende che l'utente prema Invio. In caso contrario, l'applicazione verrà chiusa immediatamente e il servizio verrà arrestato. Si noti inoltre l'utilizzo di un blocco try/catch. Dopo la creazione di un'istanza di <xref:System.ServiceModel.ServiceHost>, tutto l'altro codice viene inserito in un blocco try/catch. Per altre informazioni su una rilevazione sicura delle eccezioni generate da <xref:System.ServiceModel.ServiceHost>, vedere [Avoiding Problems with the Using Statement](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md) (Prevenzione dei problemi con l'istruzione Using)
+**Passaggio 5** : aprire il <xref:System.ServiceModel.ServiceHost> in ascolto dei messaggi in ingresso. Si noti che il codice attende che l'utente prema Invio. In caso contrario, l'applicazione verrà chiusa immediatamente e il servizio verrà arrestato. Si noti inoltre l'utilizzo di un blocco try/catch. Dopo la creazione di un'istanza di <xref:System.ServiceModel.ServiceHost>, tutto l'altro codice viene inserito in un blocco try/catch. Per altre informazioni su una rilevazione sicura delle eccezioni generate da <xref:System.ServiceModel.ServiceHost>, vedere [utilizzare Chiudi e Interrompi per rilasciare le risorse del client WCF](../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md)
 
 > [!IMPORTANT]
 > Modificare app. config in gettingstartedlib diventano in modo da riflettere le modifiche apportate nel codice:
@@ -403,7 +403,7 @@ End Module
 Il servizio è ora in esecuzione. Nell'attività successiva, si crea un client WCF.
 
 > [!div class="nextstepaction"]
-> [Procedura: creare un client WCF](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
+> [Come si fa: Creare un client WCF](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
 
 Per altre informazioni, vedere [Troubleshooting the Getting Started Tutorial](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md) (Risoluzione dei problemi relativi all'esercitazione introduttiva).
 

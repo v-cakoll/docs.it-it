@@ -4,12 +4,12 @@ description: Comprendere le sfide di progettazione di applicazioni senza server,
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 5f175351cf42f3d9966add72750d64a4efe14e07
-ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.openlocfilehash: b12a09c0fcef7e7ff954a3f959fb9e3080a6e859
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "49370014"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155064"
 ---
 # <a name="serverless-architecture-considerations"></a>Considerazioni sull'architettura senza server
 
@@ -71,7 +71,7 @@ Un'architettura senza server può includere funzioni che si basano su altre funz
 
 ## <a name="managing-failure-and-providing-resiliency"></a>La gestione di errori e fornire resilienza
 
-È anche importante tenere in considerazione la *schema circuit breaker*: se per qualche motivo, un servizio continua a non riuscire, non è consigliabile chiamare più volte tale servizio. Al contrario, viene chiamato un servizio alternativo o un messaggio restituito fino a quando non viene ristabilita l'integrità dei servizi dipendenti. L'architettura senza server deve prendere in considerazione la strategia per la risoluzione e la gestione delle dipendenze tra servizi.
+È anche importante tenere in considerazione la *schema circuit breaker*: Se, per qualche motivo, un servizio continua ad avere esito negativo, non è consigliabile chiamare più volte tale servizio. Al contrario, viene chiamato un servizio alternativo o un messaggio restituito fino a quando non viene ristabilita l'integrità dei servizi dipendenti. L'architettura senza server deve prendere in considerazione la strategia per la risoluzione e la gestione delle dipendenze tra servizi.
 
 Per continuare il modello a interruttore, servizi devono essere resilienti e a tolleranza di errore. Tolleranza di errore si riferisce alla capacità dell'applicazione per continuare l'esecuzione anche dopo le eccezioni impreviste o stati non validi vengono rilevati. Tolleranza di errore è in genere una funzione del codice stesso e che la modalità è scritta gestire le eccezioni. Resilienza fa riferimento al modo in cui in grado di supportare l'app è in il ripristino da errori. La resilienza è spesso gestita dalla piattaforma senza server. La piattaforma deve essere in grado di creare rapidamente una nuova istanza della funzione senza server quando si verifica un errore di quello esistente. La piattaforma deve essere anche abbastanza intelligente da arrestare attivando nuove istanze quando ha esito negativo di ogni nuova istanza.
 
@@ -82,5 +82,5 @@ Per altre informazioni, vedere [implementazione dello schema Circuit Breaker](..
 Dei principali vantaggi degli strumenti senza server è la possibilità di eseguire l'aggiornamento di una funzione specifica senza dover ridistribuire l'intera applicazione. Per l'aggiornamento abbia esito positivo, le funzioni devono essere con controllo delle versioni in modo che servizi chiamandole vengono indirizzati alla versione corretta del codice. È importante anche una strategia per la distribuzione di nuove versioni. Un approccio comune consiste nell'usare "verde/blu le distribuzioni." La distribuzione verde è la funzione corrente. Una nuova versione "blu" viene distribuita nell'ambiente di produzione e testata. Durante il test passa, le versioni di verde e blue vengono scambiate in modo che la nuova versione viene fornito in tempo reale. Se vengono rilevati eventuali problemi, è possibile scambiare nuovamente. Il supporto di controllo delle versioni e le distribuzioni blue/green richiede una combinazione di creazione di funzioni per supportare le modifiche di versione e l'utilizzo con la piattaforma senza server per gestire le distribuzioni. Un possibile approccio consiste nell'utilizzare i proxy, che sono descritte nel [piattaforma senza server Azure](azure-functions.md#proxies) capitolo.
 
 >[!div class="step-by-step"]
-[Precedente](serverless-architecture.md)
-[Successivo](serverless-design-examples.md)
+>[Precedente](serverless-architecture.md)
+>[Successivo](serverless-design-examples.md)

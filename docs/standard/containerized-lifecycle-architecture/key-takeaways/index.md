@@ -4,16 +4,16 @@ description: Ciclo di vita delle applicazioni Docker in contenitori con piattafo
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 24a4e826ece691a6a1221b39c164bba2eef8a059
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 3783bdde100aa83bd7fbbc2a0f2ee616ef9a729d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45646246"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148632"
 ---
 # <a name="key-takeaways"></a>Considerazioni principali
 
--   Le soluzioni basate su contenitori offrono vantaggi significativi in termini di risparmio sui costi perché i contenitori rappresentano una soluzione ai problemi di distribuzione causati dalla mancanza di dipendenze negli ambienti di produzione. I processi DevOps e le operazioni di produzione risultano quindi notevolmente migliorati.
+-   Soluzioni basate su contenitori offrono vantaggi significativi in termini di risparmio sui costi perché i contenitori rappresentano una soluzione ai problemi di distribuzione causati dalla mancanza di dipendenze negli ambienti di produzione, di conseguenza, migliorare significativamente le operazioni di DevOps e di produzione .
 
 -   Docker sta diventando lo standard nel settore dei contenitori, supportato dai più importanti fornitori negli ecosistemi Linux e Windows, tra cui Microsoft. In futuro, Docker sarà probabilmente presente in qualsiasi data center nel cloud o locale.
 
@@ -26,4 +26,4 @@ ms.locfileid: "45646246"
 Servizi di Azure DevOps semplifica notevolmente l'ambiente DevOps designato per gli ambienti Docker dalle pipeline di distribuzione continua, inclusi ambienti Docker semplici o orchestrazione di contenitori e microservizi più avanzati basate su Azure.
 
 >[!div class="step-by-step"]
-[Precedente](../run-manage-monitor-docker-environments/monitor-containerized-application-services.md)
+>[Precedente](../run-manage-monitor-docker-environments/monitor-containerized-application-services.md)

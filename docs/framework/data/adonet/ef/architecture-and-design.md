@@ -2,17 +2,17 @@
 title: Architettura e progettazione
 ms.date: 03/30/2017
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
-ms.openlocfilehash: 5a0d8aac401a3485bc5f158bcda893ad9ab424e8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 281f321e45b019178aa82946eb451e56f5c04841
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43530470"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154262"
 ---
 # <a name="architecture-and-design"></a>Architettura e progettazione
-Il modulo di generazione SQL nel [Provider di esempio](https://go.microsoft.com/fwlink/?LinkId=180616) viene implementato come un visitatore dell'albero delle espressioni che rappresenta l'albero dei comandi. La generazione viene eseguita in un unico passaggio sull'albero delle espressioni.  
+Il modulo di generazione SQL nel [Provider di esempio](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) viene implementato come un visitatore dell'albero delle espressioni che rappresenta l'albero dei comandi. La generazione viene eseguita in un unico passaggio sull'albero delle espressioni.  
   
- I nodi dell'albero vengono elaborati dal basso verso l'alto. Prima viene prodotta una struttura intermedia: SqlSelectStatement o SqlBuilder. Entrambe implementano ISqlFragment. Successivamente da tale struttura viene prodotta l'istruzione SQL della stringa. Esistono due motivi per cui viene prodotta la struttura intermedia:  
+ I nodi dell'albero vengono elaborati dal basso verso l'alto. In primo luogo, viene prodotta una struttura intermedia: Oggetto SqlSelectStatement o SqlBuilder, entrambe implementano ISqlFragment. Successivamente da tale struttura viene prodotta l'istruzione SQL della stringa. Esistono due motivi per cui viene prodotta la struttura intermedia:  
   
 -   Un'istruzione SQL SELECT viene popolata in modo non corretto da un punto di vista logico. I nodi che partecipano alla clausola FROM vengono visitati prima di quelli che partecipano alla clausola WHERE, GROUP BY e ORDER BY.  
   
@@ -25,7 +25,7 @@ Il modulo di generazione SQL nel [Provider di esempio](https://go.microsoft.com/
  Nella seconda fase, durante la produzione della stringa effettiva, gli alias vengono rinominati.  
   
 ## <a name="data-structures"></a>Strutture di dati  
- In questa sezione illustra i tipi usati nel [Provider di esempio](https://go.microsoft.com/fwlink/?LinkId=180616) consente di compilare un'istruzione SQL.  
+ In questa sezione illustra i tipi usati nel [Provider di esempio](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) consente di compilare un'istruzione SQL.  
   
 ### <a name="isqlfragment"></a>ISqlFragment  
  Questa sezione analizza le classi che implementano l'interfaccia ISqlFragment che ha una duplice funzione:  
@@ -226,9 +226,9 @@ private bool IsParentAJoin{get}
  Il bidimensionalità degli alias di join viene realizzata durante la visita di un oggetto DbPropertyExpression, come descritto nella sezione intitolata DbPropertyExpression.  
   
 ### <a name="column-name-and-extent-alias-renaming"></a>Ridenominazione dei nomi di colonna e degli alias degli extent  
- È possibile risolvere il problema della ridenominazione dei nomi di colonna e degli alias degli extent mediante l'uso di simboli che vengono semplicemente sostituiti dagli alias nella seconda fase della generazione, descritta nella sezione intitolata Seconda fase della generazione SQL: generazione della stringa di comando.  
+ Il problema del nome di colonna e ridenominazione degli alias extent viene risolto usando i simboli che vengono semplicemente sostituiti con gli alias nella seconda fase della generazione, descritta nella sezione intitolata seconda fase della generazione di comandi SQL: Generazione della stringa di comando.  
   
-## <a name="first-phase-of-the-sql-generation-visiting-the-expression-tree"></a>Prima fase della generazione SQL: visita dell'albero delle espressioni  
+## <a name="first-phase-of-the-sql-generation-visiting-the-expression-tree"></a>Prima fase della generazione SQL: Visita dell'albero delle espressioni  
  Questa sezione descrive la prima fase di generazione SQL, quando viene visitata l'espressione che rappresenta la query e viene prodotta una struttura intermedia, ovvero un oggetto SqlSelectStatement o un oggetto SqlBuilder.  
   
  Questa sezione descrive i principi su cui si basa la visita di diverse categorie del nodo di espressione e vengono forniti dettagli relativi alla visita di tipi di espressione specifici.  
@@ -405,7 +405,7 @@ Not(All(input, x) => Not (Not Exists(Filter(input, not(x))) => Exists(Filter(inp
 IsEmpty(inut) = Not Exists(input)  
 ```  
   
-## <a name="second-phase-of-sql-generation-generating-the-string-command"></a>Seconda fase della generazione SQL: generazione della stringa di comando  
+## <a name="second-phase-of-sql-generation-generating-the-string-command"></a>Seconda fase della generazione SQL: Generazione della stringa di comando  
  In caso di generazione di una stringa di comando SQL, SqlSelectStatement produce alias effettivi per i simboli che risolvono il problema della ridenominazione dei nomi di colonna e degli alias degli extent.  
   
  La ridenominazione degli alias degli extent si verifica durante la scrittura dell'oggetto SqlSelectStatement in una stringa. Prima si crea un elenco di tutti gli alias usati dagli extent esterni. Ogni simbolo incluso in FromExtents (o AllJoinExtents se è non Null), viene rinominato se collide con alcuni degli extent esterni. Se la ridenominazione è necessaria, non creerà conflitti con nessun extent raccolto in AllExtentNames.  
