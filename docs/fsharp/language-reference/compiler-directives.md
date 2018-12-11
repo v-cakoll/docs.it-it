@@ -1,13 +1,13 @@
 ---
 title: Direttive per il compilatore (F#)
 description: Informazioni su F# le direttive del preprocessore del linguaggio, le direttive di compilazione condizionale, le direttive di riga e direttive del compilatore.
-ms.date: 05/16/2016
-ms.openlocfilehash: bb23096e03584f2a50cfe069075ba94a35c4753c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 12/10/2018
+ms.openlocfilehash: 7344785e37454d367aa4dfcfa1bacd01b68363d5
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126952"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239696"
 ---
 # <a name="compiler-directives"></a>Direttive per il compilatore
 
@@ -21,7 +21,7 @@ Nella tabella riportata di seguito sono elencate le direttive per il preprocesso
 
 |Direttiva|Descrizione|
 |---------|-----------|
-|`#if` *Simbolo*|Supporta la compilazione condizionale. Codice nella sezione dopo il `#if` è incluso se il *simbolo* è definito.|
+|`#if` *Simbolo*|Supporta la compilazione condizionale. Codice nella sezione dopo il `#if` è incluso se il *simbolo* è definito. Il simbolo può essere negato anche con `!`.|
 |`#else`|Supporta la compilazione condizionale. Contrassegna una sezione di codice da includere se il simbolo usato nella precedente direttiva `#if` non è definito.|
 |`#endif`|Supporta la compilazione condizionale. Contrassegna la fine di una sezione condizionale di codice.|
 |`#`[riga] *int*,<br/>`#`[riga] *int* *stringa*,<br/>`#`[riga] *int* *stringa verbatim*|Indica la riga e il nome di file del codice sorgente originale per il debug. Questa funzionalità viene fornita per gli strumenti che generano codice sorgente F#.|
@@ -46,6 +46,16 @@ Non esiste alcuna direttiva per il preprocessore `#define` in F#. È necessario 
 
 Le direttive di compilazione condizionale possono essere annidate. Il rientro non è significativo per le direttive per il preprocessore.
 
+È inoltre possibile escludere un simbolo con `!`. In questo esempio, un valore di stringa è un valore solo quando _non_ debug:
+
+```fsharp
+#if !DEBUG
+let str = "Not debugging!"
+#else
+let str = "Debugging!"
+#endif
+```
+
 ## <a name="line-directives"></a>Direttive di riga
 
 Durante la compilazione, il compilatore segnala errori nel codice F# facendo riferimento ai numeri di riga in cui si verifica ogni errore. Questi numeri di riga iniziano da 1 per la prima riga in un file. Tuttavia, se si genera codice sorgente F# da un altro strumento, i numeri di riga nel codice generato non sono generalmente di interesse, perché nel codice F# generato probabilmente gli errori sono causati da un'altra origine. La direttiva `#line` consente agli autori di strumenti che generano codice sorgente F# di passare le informazioni relative ai numeri di riga e ai file di origine originali al codice F# generato.
@@ -65,6 +75,7 @@ Nella tabella seguente viene elencata la direttiva del compilatore disponibile i
 |Direttiva|Descrizione|
 |---------|-----------|
 |`#light` ["on"&#124;"off"]|Abilita o disabilita la sintassi leggera per la compatibilità con altre versioni di ML. Per impostazione predefinita, la sintassi leggera è abilitata. La sintassi dettagliata è sempre abilitata. Pertanto, è possibile usare sia sintassi leggera che sintassi dettagliata. La direttiva `#light` da sola equivale a `#light "on"`. Se si specifica `#light "off"`, è necessario usare la sintassi dettagliata per tutti i costrutti del linguaggio. La sintassi nella documentazione per F# viene presentata partendo dal presupposto che venga usata la sintassi leggera. Per altre informazioni, vedere [sintassi dettagliata](verbose-syntax.md).|
+
 Per le direttive dell'interprete (fsi.exe), vedere [programmazione interattiva con F# ](../tutorials/fsharp-interactive/index.md).
 
 ## <a name="see-also"></a>Vedere anche
