@@ -74,7 +74,7 @@ La tabella seguente rispetta le convenzioni di denominazione e l'uso delle maius
 |-----------|------|------|----------|-------|
 | Tipi concreti | PascalCase | Sostantivo / aggettivali | Elenco, Double, complesso | Tipi concreti sono strutture, classi, enumerazioni, delegati, record e unioni. Anche se i nomi dei tipi sono in genere in minuscoli in OCaml, F# ha adottato lo schema di denominazione .NET per i tipi.
 | DLL           | PascalCase |                 | Fabrikam.Core.dll |  |
-| Tag di unione     | PascalCase | Sostantivo | Alcuni casi, aggiungere, operazione riuscita | Non usare un prefisso nelle API pubbliche. Se lo si desidera usare un prefisso quando interni, ad esempio ' digitare team = TAlpha | TBeta | TDelta.' |
+| Tag di unione     | PascalCase | Sostantivo | Alcuni casi, aggiungere, operazione riuscita | Non usare un prefisso nelle API pubbliche. Se lo si desidera usare un prefisso quando interni, ad esempio `digitare team = TAlpha | TBeta | TDelta.` |
 | event          | PascalCase | Verbo | ValueChanged / ValueChanging |  |
 | Eccezioni     | PascalCase |      | WebException | Nome deve terminare con "Exception". |
 | Campo          | PascalCase | Sostantivo | CurrentName  | |

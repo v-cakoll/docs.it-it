@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f5d106dd3b7b9a7a0aeedca86e63a6fccbb1cc27
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 9572a203336aa32f1a37a834b99bf0dac35c7f1c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44192484"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127927"
 ---
 # <a name="handling-and-raising-events"></a>Gestione e generazione di eventi
 Gli eventi in .NET Framework si basano sul modello di delegato. Il modello di delegato segue lo schema progettuale osservatore, che consente a un sottoscrittore di effettuare la registrazione con e ricevere notifiche da un provider. Un mittente dell'evento esegue il push di una notifica di evento, mentre un ricevitore di eventi riceve la notifica e definisce una risposta. In questo articolo viene descritto come implementare gli eventi nel codice, come usare gli eventi nelle applicazioni e i componenti principali del modello di delegato.  
@@ -80,7 +80,7 @@ Gli eventi in .NET Framework si basano sul modello di delegato. Il modello di de
   
 ## <a name="related-topics"></a>Argomenti correlati  
   
-|Titolo|Descrizione|  
+|Titolo|Description|  
 |-----------|-----------------|  
 |[Procedura: generare e utilizzare eventi](../../../docs/standard/events/how-to-raise-and-consume-events.md)|Contiene esempi di generazione e uso di eventi.|  
 |[Procedura: gestire più eventi mediante le relative proprietà](../../../docs/standard/events/how-to-handle-multiple-events-using-event-properties.md)|Viene illustrato come usare le proprietà degli eventi per gestire più eventi.|  

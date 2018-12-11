@@ -4,14 +4,15 @@ description: Seguire le esercitazioni per l'apprendimento di .NET Core per compi
 author: richlander
 ms.author: mairaw
 ms.date: 03/16/2017
-ms.openlocfilehash: 858fc0b95772d4be14363a1dbcfcd533040b8040
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.custom: seodec18
+ms.openlocfilehash: 16f468ffdff3ea4fff1ab2400ac7dd3d270c781c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33210146"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53130734"
 ---
-# <a name="net-core-tutorials"></a>Esercitazioni di .NET Core
+# <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>Imparare a usare e gli strumenti di .NET Core e .NET Core SDK esplorando queste esercitazioni
 
 Le esercitazioni seguenti includono informazioni e istruzioni sull'uso di .NET Core.
 

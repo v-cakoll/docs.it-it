@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 7b46a7d9-c6f1-46d1-a947-ae97471bba87
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2b1226f51143b912f85e94146948091891376e49
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c6447cd37e4718093acfb3a0e2db053c13a027d3
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33589919"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147456"
 ---
 # <a name="managed-threading"></a>Threading gestito
 Indipendentemente dal numero di processori usati nello sviluppo per i computer, l'applicazione dovrà offrire l'interazione più reattiva possibile con l'utente, anche se sono in corso altre attività. L'uso di più thread di esecuzione è uno dei modi più efficaci per mantenere la reattività dell'applicazione con l'utente e contemporaneamente usare il processore tra un evento utente e l'altro o persino durante gli eventi. Oltre a introdurre i concetti di base del threading, questa sezione è incentrata sui concetti di threading gestito e di uso del threading gestito.  
@@ -29,7 +29,7 @@ Indipendentemente dal numero di processori usati nello sviluppo per i computer, 
  Illustra come creare, avviare, sospendere, riprendere e interrompere i thread.  
   
  [Suggerimenti per l'utilizzo del threading gestito](../../../docs/standard/threading/managed-threading-best-practices.md)  
- Illustra i livelli di sincronizzazione, come evitare deadlock e race condition, computer a processore singolo e multiprocessore e altri problemi di threading.  
+ Illustra i livelli di sincronizzazione, come evitare deadlock e race condition e altri problemi di threading.  
   
  [Threading Objects and Features](../../../docs/standard/threading/threading-objects-and-features.md) (Oggetti e funzionalità del threading)  
  Descrive le classi gestite che è possibile usare per sincronizzare le attività dei thread e i dati di oggetti accessibili su thread differenti e fornisce una panoramica dei thread del pool.  
@@ -48,7 +48,7 @@ Indipendentemente dal numero di processori usati nello sviluppo per i computer, 
  [Domini dell'applicazione](../../../docs/framework/app-domains/application-domains.md)  
  Fornisce una panoramica dei domini dell'applicazione e del loro uso da parte di Common Language Runtime.  
   
- [I/O di file asincrono](../../../docs/standard/io/asynchronous-file-i-o.md)  
+ [Asynchronous File I/O](../../../docs/standard/io/asynchronous-file-i-o.md)  
  Vengono descritti il funzionamento di base dell'I/O asincrono e i relativi vantaggi in termini di prestazioni.  
   
  [Modello asincrono basato su attività (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)  

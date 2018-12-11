@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: a06a5144e91901417906f071efd8e19c10cf2cba
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 7034d37c141d79301bf108b9e7b41ab3e27e2572
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47170652"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143922"
 ---
 # <a name="strings-c-programming-guide"></a>Stringhe (Guida per programmatori C#)
 Una stringa è un oggetto di tipo <xref:System.String> il cui valore è testo. Internamente il testo viene archiviato come una raccolta di sola lettura sequenziale di oggetti <xref:System.Char>. Le stringhe C# non presentano un carattere di terminazione null alla fine, pertanto una stringa C# può contenere qualsiasi numero di caratteri null incorporati ('\0'). La proprietà <xref:System.String.Length%2A> di una stringa rappresenta il numero di oggetti `Char` in essa contenuti e non il numero di caratteri Unicode. Per accedere ai singoli punti di codice Unicode in una stringa usare l'oggetto <xref:System.Globalization.StringInfo>.  
@@ -70,11 +70,21 @@ Una stringa è un oggetto di tipo <xref:System.String> il cui valore è testo. I
 >  In fase di compilazione, le stringhe verbatim vengono convertite in stringhe normali con tutte le stesse sequenze di escape. Pertanto, se si visualizza una stringa verbatim nella finestra Espressioni di controllo del debugger, si vedranno i caratteri di escape aggiunti dal compilatore e non la versione verbatim del codice sorgente. Ad esempio, la stringa verbatim @"C:\files.txt" verrà visualizzata nella finestra delle espressioni di controllo come "C \\\files.txt".  
   
 ## <a name="format-strings"></a>Stringhe di formato  
- Una stringa di formato è una stringa il cui contenuto può essere determinato dinamicamente in fase di esecuzione. Si crea una stringa di formato tramite il metodo <xref:System.String.Format%2A> statico e incorporando tra parentesi graffe i segnaposto che verranno sostituiti da altri valori in fase di esecuzione. L'esempio seguente usa una stringa di formato per restituire il risultato di ogni iterazione di un ciclo:  
+ Una stringa di formato è una stringa il cui contenuto viene determinato dinamicamente in fase di esecuzione. Le stringhe di formato vengono create incorporando segnaposto o *espressioni interpolate* all'interno di parentesi graffe in una stringa. Tutti gli elementi all'interno delle parentesi graffe (`{...}`) restituiranno un valore e verranno visualizzati come stringa formattata in fase di esecuzione. Esistono due metodi per creare stringhe di formato: interpolazione di stringhe e formattazione composita.
+
+### <a name="string-interpolation"></a>Interpolazione di stringhe
+Le [*stringhe interpolate*](../../language-reference/tokens/interpolated.md), disponibili in C# 6.0 e versioni successive, vengono identificate dal carattere speciale `$` e includono le espressioni interpolate tra parentesi graffe. Se non si ha familiarità con l'interpolazione di stringhe, vedere l'[esercitazione interattiva Interpolazione di stringhe - C#](../../tutorials/intro-to-csharp/interpolated-strings.yml) per una veloce panoramica.
+
+Usare l'interpolazione di stringhe per migliorare la leggibilità e la gestibilità del codice. L'interpolazione di stringhe permette di ottenere gli stessi risultati del metodo `String.Format`, ma è più facile da usare e migliora la chiarezza inline.
+
+[!code-csharp[csProgGuideFormatStrings](~/samples/snippets/csharp/programming-guide/strings/Strings_1.cs#StringInterpolation)]
+
+### <a name="composite-formatting"></a>Formattazione composita
+<xref:System.String.Format%2A?displayProperty=nameWithType> utilizza segnaposto tra parentesi graffe per creare una stringa di formato. Questo esempio restituisce un output simile a quello del metodo di interpolazione di stringhe usato sopra.
   
- [!code-csharp[csProgGuideStrings#26](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_6.cs)]  
-  
- Un overload del metodo <xref:System.Console.WriteLine%2A> accetta una stringa di formato come parametro. Pertanto, è possibile incorporare solo un valore letterale stringa di formato senza una chiamata esplicita al metodo. Se tuttavia si usa il metodo <xref:System.Diagnostics.Trace.WriteLine%2A> per visualizzare l'output di debug nella finestra **Output** di Visual Studio è necessario chiamare in modo esplicito il metodo <xref:System.String.Format%2A>, perché <xref:System.Diagnostics.Trace.WriteLine%2A> accetta solo una stringa, non una stringa di formato. Per altre informazioni sulle stringhe di formato, vedere [Formattazione di tipi](../../../standard/base-types/formatting-types.md).  
+[!code-csharp[csProgGuideFormatStrings](~/samples/snippets/csharp/programming-guide/strings/Strings_1.cs#StringFormat)]
+
+Per altre informazioni sulla formattazione dei tipi .NET, vedere [Formattazione di tipi in .NET](../../../standard/base-types/formatting-types.md).
   
 ## <a name="substrings"></a>Sottostringhe  
  Una sottostringa è qualsiasi sequenza di caratteri contenuta in una stringa. Usare il metodo <xref:System.String.Substring%2A> per creare una nuova stringa da una parte della stringa originale. È possibile cercare una o più occorrenze di una sottostringa tramite il metodo <xref:System.String.IndexOf%2A>. Usare il metodo <xref:System.String.Replace%2A> per sostituire tutte le occorrenze di una sottostringa specificata con una nuova stringa. Come il metodo <xref:System.String.Substring%2A>, anche <xref:System.String.Replace%2A> restituisce una nuova stringa e non modifica la stringa originale. Per altre informazioni, vedere [Procedura: Cercare stringhe](../../how-to/search-strings.md) e [Procedura: Modificare il contenuto delle stringhe](../../how-to/modify-string-contents.md).  
@@ -115,7 +125,7 @@ string s = String.Empty;
   
 ## <a name="related-topics"></a>Argomenti correlati  
   
-|Argomento|Descrizione|  
+|Argomento|Description|  
 |-----------|-----------------|  
 |[Procedura: Modificare il contenuto delle stringhe](../../how-to/modify-string-contents.md)|Illustra le tecniche per trasformare le stringhe e modificare il contenuto di queste.|  
 |[Procedura: Confrontare stringhe](../../how-to/compare-strings.md)|Illustra come eseguire confronti di stringhe tra ordinali e impostazioni cultura.|  
@@ -125,7 +135,7 @@ string s = String.Empty;
 |[Procedura: Determinare se una stringa rappresenta un valore numerico](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)|Viene illustrato come analizzare in modo sicuro una stringa per verificare se ha un valore numerico valido.|  
 |[Interpolazione di stringhe](../../language-reference/tokens/interpolated.md)|Descrive la funzionalità di interpolazione di stringhe che offre una sintassi efficiente per formattare le stringhe.|
 |[Operazioni di base su stringhe](../../../../docs/standard/base-types/basic-string-operations.md)|Fornisce collegamenti ad argomenti che usano metodi <xref:System.String?displayProperty=nameWithType> e <xref:System.Text.StringBuilder?displayProperty=nameWithType> per eseguire operazioni di base sulle stringhe.|  
-|[Analisi di stringhe](../../../standard/base-types/parsing-strings.md)|Descrive come convertire le rappresentazioni stringa dei tipi di base .NET in istanze dei tipi corrispondenti.|  
+|[Parsing Strings](../../../standard/base-types/parsing-strings.md)|Descrive come convertire le rappresentazioni stringa dei tipi di base .NET in istanze dei tipi corrispondenti.|  
 |[Analisi di stringhe di data e ora in .NET](../../../standard/base-types/parsing-datetime.md)|Illustra come convertire una stringa come "24/01/2008" in un oggetto <xref:System.DateTime?displayProperty=nameWithType>.|  
 |[Confronto di stringhe](../../../../docs/standard/base-types/comparing.md)|Informazioni su come confrontare le stringhe ed esempi in C# e Visual Basic.|  
 |[Uso della classe StringBuilder](../../../standard/base-types/stringbuilder.md)|Descrive come creare e modificare oggetti stringa dinamici tramite la classe <xref:System.Text.StringBuilder>.|  

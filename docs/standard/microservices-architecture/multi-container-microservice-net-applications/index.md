@@ -1,15 +1,15 @@
 ---
 title: Progettazione e sviluppo di applicazioni .NET basate su più contenitori e microservizi
-description: Architettura di microservizi .NET per le applicazioni .NET incluse in contenitori | Progettazione e sviluppo di applicazioni .NET basate su più contenitori e microservizi
+description: Architettura di microservizi .NET per le applicazioni .NET incluse in contenitori | Informazioni sull'architettura esterna per la progettazione e lo sviluppo di applicazioni .NET basate su più contenitori e microservizi.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: 13abff090d42c5d59476612942560c126836dbb0
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 10/02/2018
+ms.openlocfilehash: 3bbf746aa9c0b66a097b8c4df2964b5679342fd0
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37104478"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144143"
 ---
 # <a name="designing-and-developing-multi-container-and-microservice-based-net-applications"></a>Progettazione e sviluppo di applicazioni .NET basate su più contenitori e microservizi
 
@@ -19,7 +19,6 @@ In precedenza ci si è interrogati sulla necessità di Docker per la compilazion
 
 Tuttavia, se si sa come progettare e sviluppare un'applicazione basata su microservizi che sia basata anche su contenitori Docker, sarà possibile progettare e sviluppare qualsiasi altro modello di applicazione più semplice. Ad esempio, si potrebbe progettare un'applicazione a tre livelli che richieda anche un approccio a più contenitori. Per questo motivo, e poiché le architetture di microservizi rappresentano una tendenza importante nel mondo dei contenitori, questa sezione è incentrata sull'implementazione di un'architettura di microservizi tramite i contenitori Docker.
 
-
 >[!div class="step-by-step"]
-[Precedente](../containerize-net-framework-applications/index.md)
-[Successivo](microservice-application-design.md)
+>[Precedente](../docker-application-development-process/docker-app-development-workflow.md)
+>[Successivo](microservice-application-design.md)

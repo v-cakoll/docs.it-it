@@ -1,15 +1,16 @@
 ---
-title: Risorse di ML.NET
+title: Risorse di Machine learning - ML.NET
 description: Queste risorse di ML.NET aiutano a creare soluzioni di intelligenza artificiale personalizzate e a integrarle nelle applicazioni .NET.
+ms.custom: seodec18
 ms.date: 07/27/2018
-ms.openlocfilehash: cea0f8fe30e01340c5eb671f39f28a6cbf33884c
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 98c89e921e24a0007c165d0a77e2abc34a4c8518
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43798036"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152214"
 ---
-# <a name="mlnet-resources"></a>Risorse di ML.NET
+# <a name="machine-learning-resources---mlnet"></a>Risorse di Machine learning - ML.NET
 
 Le risorse seguenti di [ML.NET](../index.md) possono essere utili per creare soluzioni di intelligenza artificiale personalizzate e integrarle nelle applicazioni .NET:
 

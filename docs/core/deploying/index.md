@@ -1,27 +1,30 @@
 ---
 title: Distribuzione di applicazioni .NET Core
-description: Distribuzione di un'applicazione .NET Core.
+description: Informazioni sui modi per distribuire un'applicazione .NET Core.
 author: rpetrusha
 ms.author: ronpet
-ms.date: 09/03/2018
-ms.openlocfilehash: 390af06e81788c3f64f255e5c85efdaa167274f4
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.date: 12/03/2018
+ms.custom: seodec18
+ms.openlocfilehash: bba4a76364f2951cabc3dde9866019459e9b3f06
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836628"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144715"
 ---
 # <a name="net-core-application-deployment"></a>Distribuzione di applicazioni .NET Core
 
-È possibile creare due tipi di distribuzioni per le applicazioni .NET Core:
+È possibile creare tre tipi di distribuzioni per le applicazioni .NET Core:
 
 - Distribuzione dipendente dal framework. Come suggerisce il nome, la distribuzione dipendente dal framework si basa sulla presenza di una versione condivisa a livello di sistema di .NET Core nel sistema di destinazione. Poiché .NET Core è già presente, l'app è anche portabile tra le installazioni di .NET Core. L'app contiene solo il proprio codice e le dipendenze di terze parti non sono comprese nelle librerie di .NET Core. Le distribuzioni dipendenti dal framework contengono file con estensione *dll* che possono essere avviati dalla riga di comando tramite l'[utilità dotnet](../tools/dotnet.md). Ad esempio, `dotnet app.dll` esegue un'applicazione denominata `app`.
 
 - Distribuzione autonoma. A differenza delle distribuzioni dipendenti dal framework, una distribuzione autonoma non si basa sulla presenza dei componenti condivisi nel sistema di destinazione. Tutti i componenti, inclusi librerie e runtime di .NET Core, sono inclusi nell'applicazione e isolati dalle altre applicazioni .NET Core. Le distribuzioni autonome includono un file eseguibile (ad esempio *app.exe* su piattaforme Windows per un'applicazione denominata `app`), che è una versione ridenominata dell'host .NET Core specifico della piattaforma, e un file con estensione *dll* (ad esempio *app.dll*), che indica l'applicazione.
 
+- File eseguibili dipendenti dal framework. Genera un file eseguibile che viene eseguito in una piattaforma di destinazione. Analogamente alle distribuzioni dipendenti dal framework, i file eseguibili dipendenti dal framework sono specifici della piattaforma e non sono autonomi. L'esecuzione di queste distribuzioni si basa ancora sulla presenza di una versione di .NET Core a livello di sistema condivisa. Diversamente da una distribuzione autonoma, l'app contiene solo il codice e le dipendenze di terze parti non sono comprese nelle librerie di .NET Core. I file eseguibili dipendenti dal framework generano un file eseguibile che viene eseguito nella piattaforma di destinazione.
+
 ## <a name="framework-dependent-deployments-fdd"></a>Distribuzioni dipendenti dal framework
 
-Per una distribuzione dipendente dal framework, vengono distribuite solo l'app e le dipendenze di terze parti. Non è necessario distribuire .NET Core, perché l'app userà la versione di .NET Core presente nel sistema di destinazione. Si tratta del modello di distribuzione predefinito per le app .NET Core e ASP.NET Core destinate a .NET Core.
+Per una distribuzione dipendente dal framework, vengono distribuite solo l'app e le dipendenze di terze parti. L'app userà la versione di .NET Core presente nel sistema di destinazione. Si tratta del modello di distribuzione predefinito per le app .NET Core e ASP.NET Core destinate a .NET Core.
 
 ### <a name="why-create-a-framework-dependent-deployment"></a>Perché creare una distribuzione dipendente dal framework?
 
@@ -31,11 +34,13 @@ Una distribuzione dipendente dal framework offre numerosi vantaggi:
 
 - La dimensione del pacchetto di distribuzione è ridotta. È sufficiente distribuire l'app e le relative dipendenze, non .NET Core.
 
+- A meno che non vengano sottoposte a override, le distribuzioni dipendenti dal framework useranno l'ultimo runtime servito installato nel sistema di destinazione. In questo modo l'applicazione può usare la versione di correzione più recente del runtime di .NET Core. 
+
 - Più app usano la stessa installazione di .NET Core, in questo modo si riduce sia lo spazio su disco sia l'utilizzo della memoria nei sistemi host.
 
 Sono presenti anche alcuni svantaggi:
 
-- L'app può essere eseguita solo se la versione di .NET Core di destinazione, o una versione successiva, è già installata nel sistema host.
+- L'app può essere eseguita solo se la versione di .NET Core specificata come destinazione dall'app [o una versione successiva](../versions/selection.md#framework-dependent-apps-roll-forward) è già installata nel sistema host.
 
 - Nelle versioni successive è possibile che il runtime e le librerie di .NET Core vengano modificate senza notificare l'utente. In rari casi, questo scenario può comportare la modifica del comportamento dell'app.
 
@@ -65,9 +70,31 @@ Sono presenti anche alcuni svantaggi:
 
 - La distribuzione di numerose app .NET Core autonome a un sistema comporta l'utilizzo di quantità significative di spazio su disco, poiché ogni app duplica i file di .NET Core.
 
+## <a name="framework-dependent-executables-fde"></a>File eseguibili dipendenti dal framework
+
+A partire da .NET Core 2.2, è possibile distribuire l'app come file eseguibile dipendente dal framework, con eventuali dipendenze di terze parti necessarie. L'app userà la versione di .NET Core installata nel sistema di destinazione.
+
+### <a name="why-deploy-a-framework-dependent-executable"></a>Perché distribuire un file eseguibile dipendente dal framework?
+
+Un file eseguibile dipendente dal framework offre numerosi vantaggi:
+
+- La dimensione del pacchetto di distribuzione è ridotta. È sufficiente distribuire l'app e le relative dipendenze, non .NET Core.
+
+- Più app usano la stessa installazione di .NET Core, in questo modo si riduce sia lo spazio su disco sia l'utilizzo della memoria nei sistemi host.
+
+- L'app può essere eseguita chiamando il file eseguibile pubblicato senza richiamare direttamente l'utilità `dotnet`.
+
+Sono presenti anche alcuni svantaggi:
+
+- L'app può essere eseguita solo se la versione di .NET Core specificata come destinazione dall'app [o una versione successiva](../versions/selection.md#framework-dependent-apps-roll-forward) è già installata nel sistema host.
+
+- Nelle versioni successive è possibile che il runtime e le librerie di .NET Core vengano modificate senza notificare l'utente. In rari casi, questo scenario può comportare la modifica del comportamento dell'app.
+
+- È necessario pubblicare l'app per ogni piattaforma di destinazione.
+
 ## <a name="step-by-step-examples"></a>Esempi dettagliati
 
-Per esempi dettagliati della distribuzione di app .NET Core con gli strumenti dell'interfaccia della riga di comando, vedere [Deploying .NET Core Apps with CLI Tools](deploy-with-cli.md) (Distribuzione di app .NET Core con gli strumenti dell'interfaccia della riga di comando). Per esempi dettagliati della distribuzione di app .NET Core con Visual Studio, vedere [Deploying .NET Core Apps with Visual Studio](deploy-with-vs.md) (Distribuzione di app .NET Core con Visual Studio). Ogni argomento include esempi delle distribuzioni seguenti:
+Per esempi dettagliati della distribuzione di app .NET Core con gli strumenti dell'interfaccia della riga di comando, vedere [Deploying .NET Core Apps with CLI Tools](deploy-with-cli.md) (Distribuzione di app .NET Core con gli strumenti dell'interfaccia della riga di comando). Per esempi dettagliati della distribuzione di app .NET Core con Visual Studio, vedere [Deploying .NET Core Apps with Visual Studio](deploy-with-vs.md) (Distribuzione di app .NET Core con Visual Studio). Ogni articolo include esempi delle distribuzioni seguenti:
 
 - Distribuzione dipendente dal framework
 - Distribuzione dipendente dal framework con dipendenze di terze parti

@@ -1,15 +1,15 @@
 ---
-title: Linee guida per le librerie open source
+title: Linee guida per le librerie .NET open source
 description: Procedure consigliate per gli sviluppatori nella creazione di librerie .NET di qualità.
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/17/2018
-ms.openlocfilehash: ca95cb5ba1ebf27464397b7850ac02aabded1a5b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a656094066eb43ffe64ab405784f4577621b5c46
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188625"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128070"
 ---
 # <a name="open-source-library-guidance"></a>Linee guida per le librerie open source
 
@@ -35,7 +35,7 @@ Ogni articolo presenta quattro tipi di suggerimenti: **Da fare**, **Da considera
 
 **✔️ DA FARE** Distribuire la libreria usando un pacchetto NuGet.
 
-In genere è utile osservare i suggerimenti di tipo **Da considerare**, ma esistono eccezioni giustificate alla regola e il fatto di non osservarli non deve rappresentare un problema:
+In genere è utile osservare le indicazioni di tipo **Da considerare**, ma esistono eccezioni giustificate alla regola e il fatto di non osservarla non deve rappresentare un problema:
 
 **✔️ DA CONSIDERARE** Usare [SemVer 2.0.0](https://semver.org/) per la gestione versioni del pacchetto NuGet.
 
@@ -48,4 +48,4 @@ E infine, i suggerimenti di tipo **Da non fare** indicano operazioni che quasi s
 **❌ DA NON FARE** Pubblicare versioni con nome sicuro e non sicuro della stessa libreria. Ad esempio, `Contoso.Api` e `Contoso.Api.StrongNamed`.
 
 >[!div class="step-by-step"]
-[avanti](./get-started.md)
+>[avanti](get-started.md)

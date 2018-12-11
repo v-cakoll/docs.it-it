@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2fcff6d701b177d125eddaffe74383446f5f7b2d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: af76322cac08d7cf4e7e30e503c7fa2c97414898
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577228"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154908"
 ---
 # <a name="collections-and-data-structures"></a>Raccolte e strutture di dati
 Dati simili possono spesso essere gestiti in modo più efficiente quando memorizzati e modificati come una raccolta. È possibile usare la classe <xref:System.Array?displayProperty=nameWithType> o le classi negli spazi dei nomi <xref:System.Collections>, <xref:System.Collections.Generic>, <xref:System.Collections.Concurrent> e System.Collections.Immutable per aggiungere, rimuovere e modificare singoli elementi o un intervallo di elementi nella raccolta.  
@@ -60,6 +60,7 @@ Dati simili possono spesso essere gestiti in modo più efficiente quando memoriz
 <a name="BKMK_Choosingacollection"></a>   
 ## <a name="choosing-a-collection"></a>Scelta di una raccolta  
  In generale, è necessario usare raccolte generiche. Nella tabella seguente vengono descritti alcuni scenari comuni di raccolta e le classi di raccolta che è possibile usare per gli scenari. Se si ha già familiarità con le raccolte generiche, questa tabella consente di scegliere la raccolta generica più adatta alla propria attività.  
+ 
 |Si desidera...|Opzioni di raccolta generica|Opzioni di raccolta non generica|Opzioni di raccolta thread-safe o non modificabile|  
 |-|-|-|-|  
 |Archiviare gli elementi come coppie chiave/valore per la ricerca rapida dalla chiave|<xref:System.Collections.Generic.Dictionary%602>|<xref:System.Collections.Hashtable><br /><br /> (Una raccolta di coppie chiave/valore che sono organizzate in base al codice hash della chiave).|<xref:System.Collections.Concurrent.ConcurrentDictionary%602><br /><br /> <xref:System.Collections.ObjectModel.ReadOnlyDictionary%602><br /><br /> <xref:System.Collections.Immutable.ImmutableDictionary%602>|  
@@ -74,7 +75,7 @@ Dati simili possono spesso essere gestiti in modo più efficiente quando memoriz
 <a name="BKMK_RelatedTopics"></a>   
 ## <a name="related-topics"></a>Argomenti correlati  
   
-|Titolo|Descrizione|  
+|Titolo|Description|  
 |-----------|-----------------|  
 |[Selezione di una classe Collection](../../../docs/standard/collections/selecting-a-collection-class.md)|Vengono descritte le diverse raccolte e come selezionarne una per lo scenario.|  
 |[Tipi di raccolte comunemente utilizzate](../../../docs/standard/collections/commonly-used-collection-types.md)|Vengono descritti i tipi di raccolta generici e non generici comunemente usati, quali <xref:System.Array?displayProperty=nameWithType>, <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> e <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>.|  
