@@ -1,5 +1,6 @@
 ---
-title: Tipi nullable (Guida per programmatori C#)
+title: Tipi nullable - Guida per programmatori C#
+ms.custom: seodec18
 description: Informazioni sui tipi nullable C# e su come usarli
 ms.date: 07/30/2018
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - C# language, nullable types
 - types [C#], nullable
 ms.assetid: e473cb01-28ca-42be-9cea-f717055d72c6
-ms.openlocfilehash: 2af0704abcad00c75a5d40bfe2d0523d07ee6a3f
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: cd5ac40ca73f7c528a903d5863f3cf5880738f11
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45658704"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53245123"
 ---
 # <a name="nullable-types-c-programming-guide"></a>Tipi nullable (Guida per programmatori C#)
 
@@ -52,7 +53,7 @@ I tipi nullable hanno le caratteristiche seguenti:
   
 - I tipi nullable nidificati non sono consentiti. La riga seguente non verrà compilata: `Nullable<Nullable<int>> n;`  
 
-Per altre informazioni, vedere gli argomenti [Utilizzo dei tipi nullable](using-nullable-types.md) e [Procedura: Identificare un tipo nullable](how-to-identify-a-nullable-type.md).
+Per altre informazioni, vedere gli argomenti [Uso dei tipi nullable](using-nullable-types.md) e [Procedura: Identificare un tipo nullable](how-to-identify-a-nullable-type.md).
   
 ## <a name="see-also"></a>Vedere anche
 

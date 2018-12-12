@@ -1,5 +1,6 @@
 ---
-title: Interoperabilità (Guida per programmatori C#)
+title: Interoperabilità - Guida per programmatori C#
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - COM interop
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - platform invoke, accessing APIs with C#
 - C# language, interoperability
 ms.assetid: 238bb95a-e962-4026-bbd5-197055bdb8ee
-ms.openlocfilehash: dc68a2a9c21f6fdb9b531bd07428325ac22ebfb6
-ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
+ms.openlocfilehash: f3cbfe564fb5820c9e0fa77b75f76be36dd718a4
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "50980648"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53235007"
 ---
 # <a name="interoperability-c-programming-guide"></a>Interoperabilità (Guida per programmatori C#)
 L'interoperabilità consente di preservare e sfruttare appieno gli investimenti effettuati in codice non gestito. Il codice eseguito sotto il controllo del Common Language Runtime (CLR) è detto *codice gestito*, mentre quello eseguito all'esterno è detto *codice non gestito*. Esempi di codice non gestito sono i componenti COM, COM+, C++, i componenti ActiveX e le API Microsoft Win32.  
@@ -32,7 +33,7 @@ L'interoperabilità consente di preservare e sfruttare appieno gli investimenti 
  [Procedura: Usare platform invoke per riprodurre un file audio](../../../csharp/programming-guide/interop/how-to-use-platform-invoke-to-play-a-wave-file.md)  
  Viene descritto come usare i servizi platform invoke per riprodurre un file audio con estensione wav nel sistema operativo Windows.  
   
- [Procedura dettagliata: Programmazione di Office](../../../csharp/programming-guide/interop/walkthrough-office-programming.md)  
+ [Procedura dettagliata: Programmazione Office](../../../csharp/programming-guide/interop/walkthrough-office-programming.md)  
  Viene illustrato come creare una cartella di lavoro di Excel o un documento di Word contenente un collegamento alla cartella di lavoro.  
   
  [Esempio di classe COM](../../../csharp/programming-guide/interop/example-com-class.md)  
@@ -47,4 +48,4 @@ Per altre informazioni, vedere [Concetti di base](~/_csharplang/spec/unsafe-code
 - <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType>  
 - [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
 - [Interoperabilità con codice non gestito](../../../../docs/framework/interop/index.md)  
-- [Procedura dettagliata: Programmazione di Office](../../../csharp/programming-guide/interop/walkthrough-office-programming.md)
+- [Procedura dettagliata: Programmazione Office](../../../csharp/programming-guide/interop/walkthrough-office-programming.md)

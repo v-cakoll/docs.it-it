@@ -1,16 +1,15 @@
 ---
-title: Strumenti dell'interfaccia della riga di comando aggiuntivi per .NET core - .NET Core
+title: Strumenti dell'interfaccia della riga di comando aggiuntivi per .NET core
 description: Panoramica degli strumenti aggiuntivi che è possibile installare e che supportano ed estendono la funzionalità di .NET Core.
 author: mlacouture
-ms.author: johalex
-ms.date: 01/19/2018
-ms.custom: seodec18
-ms.openlocfilehash: 695d1accba6d25d8b587dc86ad028e2281ff82e9
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/27/2018
+ms.custom: mvc, seodec18
+ms.openlocfilehash: 5f42cddc31204bba2aafaee0b909bbf92d232fde
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147843"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53243589"
 ---
 # <a name="net-core-additional-tools-overview"></a>Panoramica degli strumenti aggiuntivi per .NET Core
 
@@ -22,7 +21,8 @@ WCF (Windows Communication Foundation) Web Service Reference è un provider di s
 
 ## <a name="wcf-dotnet-svcutil-tooldotnet-svcutil-guidemd"></a>[Strumento WCF dotnet-svcutil](dotnet-svcutil-guide.md)
 
-Lo strumento WCF (Windows Communication Foundation) dotnet-svcutil consente di recuperare metadati da un servizio Web, in un percorso di rete o da un file WSDL e genera un file di origine compatibile con .NET Core che definisce una classe proxy WCF con metodi utilizzabili per accedere alle operazioni del servizio Web. Lo strumento **dotnet-svcutil** rappresenta un'alternativa al provider di servizi connessi di Visuali Studio [ **WCF Web Service Reference** ](wcf-web-service-reference-guide.md), disponibile per la prima volta con Visual Studio 2017 versione 15.5. Come strumento dell'interfaccia della riga di comando di .NET Core, **dotnet-svcutil** è disponibile come strumento multipiattaforma in Linux, macOS e Windows.
+Lo strumento WCF (Windows Communication Foundation) dotnet-svcutil consente di recuperare metadati da un servizio Web, in un percorso di rete o da un file WSDL e genera un file di origine compatibile con .NET Core che definisce una classe proxy WCF con metodi utilizzabili per accedere alle operazioni del servizio Web.
+Lo strumento **dotnet-svcutil** rappresenta un'alternativa al provider di servizi connessi di Visuali Studio [ **WCF Web Service Reference** ](wcf-web-service-reference-guide.md), disponibile per la prima volta con Visual Studio 2017 versione 15.5. Come strumento dell'interfaccia della riga di comando di .NET Core, **dotnet-svcutil** è disponibile come strumento multipiattaforma in Linux, macOS e Windows.
 
 ## <a name="wcf-dotnet-svcutilxmlserializer-tooldotnet-svcutilxmlserializer-guidemd"></a>[Strumento dotnet-svcutil.xmlserializer WCF](dotnet-svcutil.xmlserializer-guide.md)
 

@@ -1,16 +1,16 @@
 ---
 title: Testing unità in .NET Core e .NET Standard
-description: Testing unità in progetti .NET Core e .NET Standard.
+description: Questo articolo offre una breve panoramica del testing unità per i progetti .NET Core e .NET Standard.
 author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
 ms.custom: seodec18
-ms.openlocfilehash: b63b2706a9a97413a7166c87ae25cbe964e4610b
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 3fdacd5beb2c6cbfc631d58e99a8741f7a6b233c
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170015"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53243979"
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a>Testing unità in .NET Core e .NET Standard
 
@@ -30,6 +30,8 @@ Usare test automatizzati è un'ottima scelta per verificare che un'applicazione 
 > lI team di ASP.NET segue [queste convenzioni](https://github.com/aspnet/Home/wiki/Engineering-guidelines#unit-tests-and-functional-tests) per aiutare gli sviluppatori a usare nomi appropriati per classi di test e metodi.
 
 Quando si scrivono unit test, è consigliabile non introdurre dipendenze dall'infrastruttura. Le dipendenze rendono i test lenti e instabili. È consigliabile usarli solo con test di integrazione. È possibile evitare queste dipendenze nell'applicazione seguendo il [principio delle dipendenze esplicite](https://deviq.com/explicit-dependencies-principle/) e usando la tecnica di [inserimento delle dipendenze](/aspnet/core/fundamentals/dependency-injection). È anche possibile mantenere gli unit test in un progetto separato rispetto ai test di integrazione. In questo modo il progetto di unit test non avrà riferimenti o dipendenze dai pacchetti dell'infrastruttura.
+
+## <a name="next-steps"></a>Passaggi successivi
 
 Altre informazioni sul testing unità sono disponibili nei progetti .NET Core:
 

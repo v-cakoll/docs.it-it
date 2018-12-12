@@ -1,16 +1,17 @@
 ---
-title: Stringhe (Guida per programmatori C#)
+title: Stringhe - Guida per programmatori C#
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: 7034d37c141d79301bf108b9e7b41ab3e27e2572
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ba0c9abe9a38962ab19a204019abd3ac89ae6915
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143922"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236362"
 ---
 # <a name="strings-c-programming-guide"></a>Stringhe (Guida per programmatori C#)
 Una stringa è un oggetto di tipo <xref:System.String> il cui valore è testo. Internamente il testo viene archiviato come una raccolta di sola lettura sequenziale di oggetti <xref:System.Char>. Le stringhe C# non presentano un carattere di terminazione null alla fine, pertanto una stringa C# può contenere qualsiasi numero di caratteri null incorporati ('\0'). La proprietà <xref:System.String.Length%2A> di una stringa rappresenta il numero di oggetti `Char` in essa contenuti e non il numero di caratteri Unicode. Per accedere ai singoli punti di codice Unicode in una stringa usare l'oggetto <xref:System.Globalization.StringInfo>.  
@@ -36,7 +37,7 @@ Una stringa è un oggetto di tipo <xref:System.String> il cui valore è testo. I
   
  [!code-csharp[csProgGuideStrings#25](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_3.cs)]  
   
- Per altre informazioni su come creare nuove stringhe basate su modifiche quali operazioni di ricerca e sostituzione sulla stringa originale, vedere [Procedura: modificare il contenuto delle stringhe](../../how-to/modify-string-contents.md).  
+ Per altre informazioni su come creare nuove stringhe basate su modifiche quali operazioni di ricerca e sostituzione sulla stringa originale, vedere [Procedura: Modificare il contenuto delle stringhe](../../how-to/modify-string-contents.md).  
   
 ## <a name="regular-and-verbatim-string-literals"></a>Valori letterali stringa normali e verbatim  
  Usare valori letterali stringa normali quando è necessario incorporare caratteri di escape forniti da C#, come mostrato nell'esempio seguente:  
@@ -128,7 +129,7 @@ string s = String.Empty;
 |Argomento|Description|  
 |-----------|-----------------|  
 |[Procedura: Modificare il contenuto delle stringhe](../../how-to/modify-string-contents.md)|Illustra le tecniche per trasformare le stringhe e modificare il contenuto di queste.|  
-|[Procedura: Confrontare stringhe](../../how-to/compare-strings.md)|Illustra come eseguire confronti di stringhe tra ordinali e impostazioni cultura.|  
+|[Procedura: Confrontare le stringhe](../../how-to/compare-strings.md)|Illustra come eseguire confronti di stringhe tra ordinali e impostazioni cultura.|  
 |[Procedura: Concatenare più stringhe](../../how-to/concatenate-multiple-strings.md)|Illustra vari modi per unire più stringhe in una.|
 |[Procedura: Analizzare le stringhe con String.Split ](../../how-to/parse-strings-using-split.md)|Esempi di codice che illustrano come usare il metodo `String.Split` per analizzare le stringhe.|  
 |[Procedura: Cercare stringhe](../../how-to/search-strings.md)|Spiega come eseguire la ricerca di testo specifico o di motivi nelle stringhe.|  
