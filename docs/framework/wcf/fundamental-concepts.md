@@ -7,12 +7,12 @@ helpviewer_keywords:
 - fundamentals [WCF]
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
-ms.openlocfilehash: c19169d61a96314e9fcfad94b013af18440e1ff5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9957b937dd59f82a5d1962fee33593d7a0c1b7c1
+ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43503614"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53286559"
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Concetti fondamentali di Windows Communication Foundation
 Questo documento fornisce una panoramica generale dell'architettura Windows Communication Foundation (WCF). Il documento è concepito per spiegare i concetti principali e le modalità di interazione. Per un'esercitazione sulla creazione della versione più semplice di un servizio WCF e un client, vedere [esercitazione introduttiva](../../../docs/framework/wcf/getting-started-tutorial.md). Per altre informazioni sulla programmazione di WCF, vedere [programmazione WCF di base](../../../docs/framework/wcf/basic-wcf-programming.md).  
@@ -55,7 +55,7 @@ Questo documento fornisce una panoramica generale dell'architettura Windows Comm
  Costrutto che espone uno o più endpoint che a loro volta espongono una o più operazioni del servizio.  
   
  endpoint  
- Costrutto a cui vengono inviati o da cui vengono ricevuti (o entrambe le operazioni) i messaggi. Comprende un percorso (un indirizzo) che definisce dove i messaggi possono essere inviati, una specifica del meccanismo di comunicazione (un'associazione) che descrive come i messaggi devono essere inviati e una definizione per un set di messaggi che possono essere inviati o ricevuti (o entrambe le cose) da quel percorso (un contratto di servizio) che descrive quale messaggio può essere inviato.  
+ Costrutto a cui vengono inviati o da cui vengono ricevuti (o entrambe le operazioni) i messaggi. È costituito da un percorso (un indirizzo) che definisce dove possono essere inviati i messaggi, una specifica del meccanismo di comunicazione (un'associazione) che descrive come i messaggi devono essere inviati, e una definizione per un set di messaggi che possono essere inviati o ricevuti (o entrambi) che percorso (un contratto di servizio) che descrive quale messaggio può essere inviato.  
   
  Un servizio WCF viene esposto come una raccolta di endpoint.  
   
@@ -144,7 +144,7 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  Specifica che la riservatezza, l'integrità e l'autenticazione vengono fornite da meccanismi a livello del trasporto, ad esempio HTTPS. In caso di uso di un trasporto come HTTPS, questa modalità presenta il vantaggio di essere efficiente in termini di prestazioni e di essere ben compresa grazie alla sua prevalenza su Internet. Lo svantaggio consiste nel fatto che questo tipo di sicurezza viene applicato separatamente su ogni hop nel percorso di comunicazione, rendendo quest'ultima vulnerabile a un attacco di tipo "man in the middle".  
   
  modalità di sicurezza dei messaggi  
- Specifica che la sicurezza viene fornita implementando una o più delle specifiche di sicurezza, ad esempio la specifica denominata [Web Services Security: SOAP Message Security](https://go.microsoft.com/fwlink/?LinkId=94684). Ogni messaggio contiene i meccanismi necessari a fornire sicurezza durante il transito e a consentire ai destinatari di rilevare manomissioni e decrittografare i messaggi. A tale scopo, la sicurezza viene incapsulata all'interno di ogni messaggio, fornendo sicurezza end-to-end tra più hop. Poiché le informazioni sulla sicurezza diventano parte del messaggio, è anche possibile includere più tipi di credenziali con il messaggio (queste sono denominate *attestazioni*). Questo approccio presenta inoltre il vantaggio di consentire al messaggio di viaggiare in modo protetto su qualsiasi trasporto, anche se tra l'origine e la destinazione ne esistono diversi. Lo svantaggio di questo approccio consiste nella complessità dei meccanismi di crittografia adottati, con conseguenti implicazioni sulle prestazioni.  
+ Specifica che la sicurezza viene fornita implementando una o più delle specifiche di sicurezza, ad esempio la specifica denominata [Web Services Security: Sicurezza dei messaggi SOAP](https://go.microsoft.com/fwlink/?LinkId=94684). Ogni messaggio contiene i meccanismi necessari a fornire sicurezza durante il transito e a consentire ai destinatari di rilevare manomissioni e decrittografare i messaggi. A tale scopo, la sicurezza viene incapsulata all'interno di ogni messaggio, fornendo sicurezza end-to-end tra più hop. Poiché le informazioni sulla sicurezza diventano parte del messaggio, è anche possibile includere più tipi di credenziali con il messaggio (queste sono denominate *attestazioni*). Questo approccio presenta inoltre il vantaggio di consentire al messaggio di viaggiare in modo protetto su qualsiasi trasporto, anche se tra l'origine e la destinazione ne esistono diversi. Lo svantaggio di questo approccio consiste nella complessità dei meccanismi di crittografia adottati, con conseguenti implicazioni sulle prestazioni.  
   
  trasporto con modalità di sicurezza delle credenziali messaggio  
  Specifica l'utilizzo del livello trasporto per fornire riservatezza, autenticazione e integrità dei messaggi, mentre ogni messaggio può contenere più credenziali (attestazioni) richieste dai destinatari del messaggio.  

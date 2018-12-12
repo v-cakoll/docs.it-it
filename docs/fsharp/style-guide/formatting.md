@@ -1,27 +1,27 @@
 ---
-title: Linee guida per la formattazione del codice F#
-description: Altre linee guida per la formattazione del codice F#.
-ms.date: 05/14/2018
-ms.openlocfilehash: 0d7d2d1771710db55bf990f3a06079b2aec48fd7
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+title: F#linee guida per la formattazione del codice
+description: Per ulteriori linee guida per la formattazione, vedere F# codice.
+ms.date: 11/26/2018
+ms.openlocfilehash: edaa8c8b759377e71fcba705b30e8af9a8c2a716
+ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43858005"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53286546"
 ---
-# <a name="f-code-formatting-guidelines"></a>Linee guida per la formattazione del codice F#
+# <a name="f-code-formatting-guidelines"></a>F#linee guida per la formattazione del codice
 
-Questo articolo offre linee guida per la modalità di formattazione del codice in modo che sia il codice F#:
+Questo articolo offre linee guida per la modalità di formattazione del codice in modo che il F# codice è:
 
 * In genere visualizzati come più leggibili
 * È in base alle convenzioni applicate formattando altri editor e strumenti in Visual Studio
 * Simile ad altro codice online
 
-Queste indicazioni si basano [una guida completa alle convenzioni di formattazione F#](https://github.com/dungpa/fantomas/blob/master/docs/FormattingConventions.md) dal [Anh-Dung Phan](https://github.com/dungpa).
+Queste indicazioni si basano [una guida completa alla F# convenzioni di formattazione](https://github.com/dungpa/fantomas/blob/master/docs/FormattingConventions.md) dal [Anh-Dung Phan](https://github.com/dungpa).
 
 ## <a name="general-rules-for-indentation"></a>Regole generali per il rientro
 
-F# per impostazione predefinita, utilizza gli spazi vuoti significativi. Le linee guida seguenti sono utili per fornire istruzioni su come organizzare alcune problematiche di che ciò può essere imposti.
+F#Per impostazione predefinita, utilizza gli spazi vuoti significativi. Le linee guida seguenti sono utili per fornire istruzioni su come organizzare alcune problematiche di che ciò può essere imposti.
 
 ### <a name="using-spaces"></a>Uso di spazi
 
@@ -30,6 +30,63 @@ Quando il rientro è necessario, è necessario utilizzare spazi, tabulazioni non
 **Si consiglia di 4 spazi per il rientro.**
 
 Ciò premesso, rientro dei programmi è una questione soggettiva. Le variazioni sono OK, ma è la prima regola è necessario seguire *coerenza di rientro*. Scegliere uno stile di rientro in genere accettato e usarlo in modo sistematico in tutta la codebase.
+
+## <a name="formatting-white-space"></a>Formattazione di spazi vuoti
+
+F#è sensibile gli spazi vuoti. Sebbene la maggior parte delle semantica da spazi vuoti viene analizzata rientro corretto, esistono alcuni altri aspetti da considerare.
+
+### <a name="formatting-operators-in-arithmetic-expressions"></a>Formattazione di operatori nelle espressioni aritmetiche
+
+Usare sempre uno spazio bianco intorno binarie espressioni aritmetiche:
+
+```fsharp
+let subtractThenAdd x = x - 1 + 3
+```
+
+Unario `-` gli operatori devono avere sempre il valore che vengono ricompilati impedendo seguono immediatamente:
+
+```fsharp
+// OK
+let negate x = -x
+
+// Bad
+let negateBad x = - x
+```
+
+Aggiunta di un carattere di spazio vuoto dopo la `-` operatore può generare confusione per gli altri utenti.
+
+In breve, è importante sempre:
+
+* Operatori binari snippet di inclusione con uno spazio vuoto
+* Assenza di spazio vuoto finale dopo un operatore unario
+
+La linea guida per l'operatore aritmetico binaria è particolarmente importante. Esito negativo racchiudere un file binario `-` operatore, in combinazione con determinate opzioni di formattazione, potrebbe causare per interpretarlo come unario `-`.
+
+### <a name="surround-a-custom-operator-definition-with-white-space"></a>Racchiudere una definizione di operatore personalizzato con uno spazio vuoto
+
+Usare sempre gli spazi vuoti per racchiudere una definizione di operatore:
+
+```fsharp
+// OK
+let ( !> ) x f = f x
+
+// Bad
+let (!>) x f = f x
+```
+
+Per qualsiasi operatore personalizzato che inizia con `*`, è necessario aggiungere uno spazio vuoto all'inizio della definizione per evitare ambiguità un compilatore. Per questo motivo, è consigliabile che è sufficiente racchiudere le definizioni di tutti gli operatori con un singolo carattere di spazio vuoto.
+
+### <a name="surround-function-parameter-arrows-with-white-space"></a>Racchiudere le frecce di parametro di funzione con uno spazio vuoto
+
+Quando si definisce la firma di una funzione, usare uno spazio bianco intorno di `->` simbolo:
+
+```fsharp
+// OK
+type MyFun = int -> int -> string
+
+// Bad
+type MyFunBad = int->int->string
+```
 
 ## <a name="formatting-blank-lines"></a>Formattazione di righe vuote
 
@@ -62,7 +119,7 @@ let f x = x + 1 // Increment by one.
 
 ### <a name="use-camelcase-for-class-bound-expression-bound-and-pattern-bound-values-and-functions"></a>Usano la notazione camel per le funzioni e i valori associati a classe, espressione di associazione e con associazione a modello
 
-È comune e accettati F# stile usano la notazione camel per tutti i nomi associati come variabili locali o in Criteri di corrispondenza e le definizioni di funzione.
+È comune e accettati F# usano la notazione camel per tutti i nomi associati come variabili locali o nei criteri di corrispondenza e definizioni di funzioni di stile.
 
 ```fsharp
 // OK
@@ -165,13 +222,13 @@ Spazi dei nomi, le eccezioni, eventi e progetto /`.dll` nomi dovrebbero inoltre 
 
 ### <a name="avoid-underscores-in-names"></a>Evitare caratteri di sottolineatura nei nomi
 
-In passato, alcune librerie F# sono utilizzati caratteri di sottolineatura nei nomi. Tuttavia, questo è non è più diffuso, in parte perché è in conflitto con le convenzioni di denominazione di .NET. Ciò premesso, alcuni programmatori F# usano caratteri di sottolineatura frequentemente, in parte per motivi storici e tolleranza d'errore e riguardo è importante. Tuttavia, tenere presente che lo stile è spesso disliked da altri utenti che dispongono di una scelta sull'opportunità di usarlo.
+In passato, alcune F# librerie hanno utilizzati caratteri di sottolineatura nei nomi. Tuttavia, questo è non è più diffuso, in parte perché è in conflitto con le convenzioni di denominazione di .NET. Ciò premesso, alcune F# programmatori di utilizzare caratteri di sottolineatura frequentemente, in parte per motivi storici e tolleranza d'errore e riguardo è importante. Tuttavia, tenere presente che lo stile è spesso disliked da altri utenti che dispongono di una scelta sull'opportunità di usarlo.
 
 Alcune eccezioni includono l'interoperabilità con i componenti nativi, in cui i caratteri di sottolineatura sono molto comuni.
 
-### <a name="use-standard-f-operators"></a>Usare gli operatori standard F#
+### <a name="use-standard-f-operators"></a>Standard di utilizzo F# operatori
 
-Gli operatori seguenti vengono definiti nella libreria standard di F# e devono essere usati invece di definire gli equivalenti. Utilizzo di questi operatori è consigliata perché tende a rendere il codice più leggibile e idiomatico. Gli sviluppatori con esperienza in OCaml o altri linguaggi di programmazione funzionale possono essere abituati a diversi linguaggi. Nell'elenco seguente sono riepilogati gli operatori F# consigliati.
+Gli operatori seguenti vengono definiti di F# libreria standard e deve essere usato invece di definire gli equivalenti. Utilizzo di questi operatori è consigliata perché tende a rendere il codice più leggibile e idiomatico. Gli sviluppatori con esperienza in OCaml o altri linguaggi di programmazione funzionale possono essere abituati a diversi linguaggi. L'elenco seguente riepiloga l'elemento consigliato F# operatori.
 
 ```fsharp
 x |> f // Forward pipeline
@@ -193,11 +250,11 @@ x ^^^ y // Bitwise xor, also for working with “flags” enumeration
 
 ### <a name="use-prefix-syntax-for-generics-foot-in-preference-to-postfix-syntax-t-foo"></a>Utilizzare la sintassi di prefisso per i generics (`Foo<T>`) anziché la sintassi in forma suffissa (`T Foo`)
 
-F# eredita sia lo stile di Machine Learning suffisso di denominazione dei tipi generici (ad esempio, `int list`), nonché il prefisso stile .NET (ad esempio, `list<int>`). Preferisce lo stile di .NET, ad eccezione di quattro tipi specifici:
+F#eredita sia lo stile di Machine Learning suffisso di denominazione dei tipi generici (ad esempio, `int list`), nonché il prefisso stile .NET (ad esempio, `list<int>`). Preferisce lo stile di .NET, ad eccezione di quattro tipi specifici:
 
-1. Per gli elenchi F#, utilizzare la forma suffissa: `int list` anziché `list<int>`.
-2. Per opzioni di F#, utilizzare la forma suffissa: `int option` anziché `option<int>`.
-3. Per le matrici di F#, usare il nome sintattico `int[]` invece `int array` o `array<int>`.
+1. Per F# gli elenchi, usare la forma suffissa: `int list` anziché da `list<int>`.
+2. Per F# opzioni, utilizzare la forma suffissa: `int option` anziché da `option<int>`.
+3. Per F# le matrici, usare il nome sintattico `int[]` anziché da `int array` oppure `array<int>`.
 4. Per le celle di riferimento, usare `int ref` invece `ref<int>` o `Ref<int>`.
 
 Per tutti gli altri tipi, usare la forma prefissa.
@@ -286,16 +343,23 @@ type PostalAddress =
     }
 ```
 
-Inserire il token di apertura nella stessa riga e il token di chiusura in una nuova riga è valida, ma tenere presente che è necessario usare il [sintassi dettagliata](../language-reference/verbose-syntax.md) per definire i membri (il `with` parola chiave):
+Risultare se si sta dichiarando le implementazioni di interfaccia o i membri nel record consiste nell'inserire il token di apertura su una nuova riga e il token di chiusura in una nuova riga:
 
 ```fsharp
-//  OK, but verbose syntax required
-type PostalAddress = { 
-    Address: string
-    City: string
-    Zip: string
-} with
+// Declaring additional members on PostalAddress
+type PostalAddress =
+    { 
+        Address: string
+        City: string
+        Zip: string
+    } with
     member x.ZipAndCity = sprintf "%s %s" x.Zip x.City
+    
+type MyRecord =
+    {
+        SomeField : int
+    }
+    interface IMyInterface
 ```
 
 ## <a name="formatting-records"></a>Formattazione di record
@@ -314,27 +378,51 @@ let rainbow =
       Lackeys = ["Zippy"; "George"; "Bungle"] }
 ```
 
-Inserire il token di apertura nella stessa riga e il token di chiusura in una nuova riga è valida:
+Inserire l'apertura il contenuto a schede ambito su un token in una nuova riga, e il token di chiusura in una nuova riga è risultare se si è:
+
+* Spostamento record all'interno di codice con ambiti diversi rientro
+* Piping in una funzione
 
 ```fsharp
-let rainbow = {
-    Boss1 = "Jeffrey"
-    Boss2 = "Jeffrey"
-    Boss3 = "Jeffrey"
-    Boss4 = "Jeffrey"
-    Boss5 = "Jeffrey"
-    Boss6 = "Jeffrey"
-    Boss7 = "Jeffrey"
-    Boss8 = "Jeffrey"
-    Lackeys = ["Zippy"; "George"; "Bungle"]
-}
+let rainbow =
+    {
+        Boss1 = "Jeffrey"
+        Boss2 = "Jeffrey"
+        Boss3 = "Jeffrey"
+        Boss4 = "Jeffrey"
+        Boss5 = "Jeffrey"
+        Boss6 = "Jeffrey"
+        Boss7 = "Jeffrey"
+        Boss8 = "Jeffrey"
+        Lackeys = ["Zippy"; "George"; "Bungle"]
+    }
+    
+type MyRecord =
+    {
+        SomeField : int
+    }
+    interface IMyInterface
+
+let foo a =
+    a
+    |> Option.map (fun x ->
+        {
+            MyField = x
+        })
 ```
 
 Per gli elementi di elenco e la matrice si applicano le stesse regole.
 
 ## <a name="formatting-lists-and-arrays"></a>Formattazione di elenchi e matrici
 
-Scrivere `x :: l` con spazi prima e dopo il `::` operator (`::` è un operatore di infissi, di conseguenza precedute e seguito da spazi) e `[1; 2; 3]` (`;` è un delimitatore, quindi seguito da uno spazio).
+Scrivere `x :: l` con spazi prima e dopo il `::` operator (`::` è un operatore di infissi, di conseguenza precedute e seguito da spazi).
+
+Elenco e le matrici dichiarate in un'unica riga devono avere uno spazio dopo la parentesi di apertura e prima della parentesi di chiusura:
+
+```fsharp
+let xs = [ 1; 2; 3 ]
+let ys = [| 1; 2; 3; |]
+```
 
 Usare sempre almeno uno spazio tra due operatori simile a parentesi graffa distinti. Ad esempio, lasciare uno spazio tra un `[` e un `{`.
 
@@ -357,18 +445,21 @@ Usare sempre almeno uno spazio tra due operatori simile a parentesi graffa disti
 Gli elenchi e matrici suddivisi su più righe seguono una regola simile dei record:
 
 ```fsharp
-let pascalsTriangle = [|
-    [|1|]
-    [|1; 1|]
-    [|1; 2; 1|]
-    [|1; 3; 3; 1|]
-    [|1; 4; 6; 4; 1|]
-    [|1; 5; 10; 10; 5; 1|]
-    [|1; 6; 15; 20; 15; 6; 1|]
-    [|1; 7; 21; 35; 35; 21; 7; 1|]
-    [|1; 8; 28; 56; 70; 56; 28; 8; 1|]
-|]
+let pascalsTriangle =
+    [|
+        [|1|]
+        [|1; 1|]
+        [|1; 2; 1|]
+        [|1; 3; 3; 1|]
+        [|1; 4; 6; 4; 1|]
+        [|1; 5; 10; 10; 5; 1|]
+        [|1; 6; 15; 20; 15; 6; 1|]
+        [|1; 7; 21; 35; 35; 21; 7; 1|]
+        [|1; 8; 28; 56; 70; 56; 28; 8; 1|]
+    |]
 ```
+
+E come con i record, dichiarando l'apertura e la parentesi di chiusura in una riga separata facilitare lo spostamento di codice intorno e il piping nelle funzioni.
 
 ## <a name="formatting-if-expressions"></a>Formattazione se le espressioni
 
@@ -411,13 +502,13 @@ Usare un `|` per ogni clausola di una corrispondenza con alcun rientro. Se l'esp
 ```fsharp
 // OK
 match l with
-| { him = x; her = "Posh" } :: tail -> _
+| { him = x; her = "Posh" } :: tail -> x
 | _ :: tail -> findDavid tail
 | [] -> failwith "Couldn't find David"
 
 // Not OK
 match l with
-    | { him = x; her = "Posh" } :: tail -> _
+    | { him = x; her = "Posh" } :: tail -> x
     | _ :: tail -> findDavid tail
     | [] -> failwith "Couldn't find David"
 ```
@@ -591,7 +682,7 @@ let comparer =
 
 ### <a name="formatting-white-space-in-expressions"></a>Spazi vuoti nelle espressioni di formattazione
 
-Evitare gli spazi vuoti estranei nelle espressioni F#.
+Evitare gli spazi vuoti estranei nel F# le espressioni.
 
 ```fsharp
 // OK
@@ -610,3 +701,59 @@ let makeStreamReader x = new System.IO.StreamReader(path=x)
 // Not OK
 let makeStreamReader x = new System.IO.StreamReader(path = x)
 ```
+
+## <a name="formatting-attributes"></a>Attributi di formattazione
+
+[Gli attributi](../language-reference/attributes.md) vengono inseriti sopra un costrutto:
+
+```fsharp
+[<SomeAttribute>]
+type MyClass() = ...
+
+[<RequireQualifiedAccess>]
+module M =
+    let f x = x
+
+[<Struct>]
+type MyRecord =
+    { Label1: int
+      Label2: string }
+```
+
+### <a name="formatting-attributes-on-parameters"></a>Gli attributi dei parametri di formattazione
+
+Gli attributi possono essere anche punti di parametri. In questo caso, inserire quindi sulla stessa riga come parametro e prima del nome:
+
+```fsharp
+// Defines a class that takes an optional value as input defaulting to false.
+type C() =
+    member __.M([<Optional; DefaultParameterValue(false)>] doSomething: bool)
+```
+
+### <a name="formatting-multiple-attributes"></a>Formattazione di più attributi
+
+Quando vengono applicati più attributi a un costrutto che non è un parametro, devono essere posizionate in modo che sia presente un attributo per riga:
+
+```fsharp
+[<Struct>]
+[<IsByRefLike>]
+type MyRecord =
+    { Label1: int
+      Label2: string }
+```
+
+Quando applicato a un parametro, devono essere nella stessa riga e separati da un `;` separatore.
+
+## <a name="formatting-literals"></a>Valori letterali di formattazione
+
+[F#valori letterali](../language-reference/literals.md) utilizzando il `Literal` attributo dovrebbe deve inserire l'attributo su una riga e usare camelCase di denominazione:
+
+```fsharp
+[<Literal>]
+let path = __SOURCE_DIRECTORY__ + "/" + __SOURCE_FILE__
+
+[<Literal>]
+let myUrl = "www.mywebsitethatiamworkingwith.com"
+```
+
+Evitare di inserire l'attributo sulla stessa riga come valore.
