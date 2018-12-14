@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5169a0d0c28be4337bb57f8bcc70e78b40e4fa9e
-ms.sourcegitcommit: 3d42e1d73e21c35c540dd4adbea23efcbe1b8b0a
+ms.openlocfilehash: 213c27a4ddfa6134c4aaa8a76c71309a6496998d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36270474"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151135"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (strumento Nome sicuro)
 Lo strumento Nome sicuro (Sn.exe) consente di firmare assembly con [nomi sicuri](../../../docs/framework/app-domains/strong-named-assemblies.md). Lo strumento offre diverse opzioni per la gestione delle chiavi e la generazione e la verifica delle firme.  
@@ -28,9 +28,9 @@ Lo strumento Nome sicuro (Sn.exe) consente di firmare assembly con [nomi sicuri]
  Per altre informazioni sui nomi sicuri e sugli assembly con nomi sicuri, vedere [Assembly con nomi sicuri](../../../docs/framework/app-domains/strong-named-assemblies.md) e [Procedura: Firmare un assembly con un nome sicuro](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md).  
   
  Lo strumento Nome Sicuro viene installato automaticamente con Visual Studio. Per avviare lo strumento, usare il prompt dei comandi per lo sviluppatore (o il prompt dei comandi di Visual Studio in Windows 7). Per altre informazioni, vedere [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
-  
+
 > [!NOTE]
->  Nei computer a 64 bit, eseguire la versione a 32 bit di Sn.exe tramite il prompt dei comandi di Visual Studio e la versione a 64 bit tramite il prompt dei comandi di Visual Studio x64 Win64.  
+>  Nei computer a 64 bit, eseguire la versione a 32 bit di Sn.exe tramite il prompt dei comandi di Visual Studio e la versione a 64 bit tramite il prompt dei comandi di Visual Studio x64 Win64. 
   
  Al prompt dei comandi digitare quanto segue:  
   
@@ -85,6 +85,8 @@ sn [-quiet][option [parameter(s)]]
 > [!NOTE]
 >  Per i parametri come –**Vr** che scrivono in risorse protette, ad esempio il Registro di sistema, eseguire SN.exe come amministratore.  
   
+Lo strumento Nome sicuro presuppone che vengano generate coppie di chiavi pubblica/privata con l'identificatore dell'algoritmo `AT_SIGNATURE`. Le coppie di chiavi pubblica/privata generate con l'algoritmo `AT_KEYEXCHANGE` restituiscono un errore. 
+
 ## <a name="examples"></a>Esempi  
  Il comando che segue crea una nuova coppia casuale di chiavi e la archivia in `keyPair.snk`.  
   

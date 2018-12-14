@@ -1,21 +1,21 @@
 ---
-title: Distribuzione di app .NET Core con Visual Studio
-description: Informazioni sulla distribuzione di app .NET Core con Visual Studio
+title: Distribuire app .NET Core con Visual Studio
+description: Informazioni su come distribuire un'app .NET Core con Visual Studio.
 author: rpetrusha
 ms.author: ronpet
 ms.date: 09/03/2018
 dev_langs:
 - csharp
 - vb
-ms.custom: vs-dotnet
-ms.openlocfilehash: 7a9410ca99f621ee6d0e8b263354ebc536f71a4a
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.custom: vs-dotnet, seodec18
+ms.openlocfilehash: 095c0f02df0de0b276c3677095e224316ac76cff
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584390"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127108"
 ---
-# <a name="deploying-net-core-apps-with-visual-studio"></a>Distribuzione di app .NET Core con Visual Studio
+# <a name="deploy-net-core-apps-with-visual-studio"></a>Distribuire app .NET Core con Visual Studio
 
 È possibile distribuire un'app .NET Core come *distribuzione dipendente dal framework*, che include i file binari dell'applicazione ma dipende dalla presenza di .NET Core nel sistema di destinazione oppure come *distribuzione autonoma*, che include l'applicazione e i file binari di .NET Core. Per una panoramica della distribuzione di applicazioni .NET Core, vedere [Distribuzione di applicazioni .NET Core](index.md).
 
@@ -144,7 +144,7 @@ Per pubblicare l'app da Visual Studio eseguire le operazioni seguenti:
 
       1. Nella scheda **Pubblica** selezionare **Pubblica**. I file che costituiscono l'applicazione vengono salvati nel file system locale.
 
-      1. La scheda **Pubblica** ora visualizza un unico profilo **FolderProfile**. Le impostazioni di configurazione del profilo vengono visualizzate nella sezione **Riepilogo** della scheda. Runtime di destinazione identifica il runtime pubblicato e **Percorso di destinazione** identifica il percorso in cui sono stati salvati i file per la distribuzione autonoma.
+      1. La scheda **Pubblica** ora visualizza un unico profilo **FolderProfile**. Le impostazioni di configurazione del profilo vengono visualizzate nella sezione **Riepilogo** della scheda. **Runtime di destinazione** identifica il runtime pubblicato e **Percorso di destinazione** identifica il percorso in cui sono stati salvati i file per la distribuzione autonoma.
 
       1. Per impostazione predefinita tutti i file pubblicati vengono salvati in una singola directory. Per praticità è consigliabile creare un profilo separato per ogni runtime di destinazione e inserire i file pubblicati in una directory specifica per la piattaforma. Questo richiede la creazione di un profilo di pubblicazione separato per ogni piattaforma di destinazione. A questo punto ricompilare l'applicazione per ogni piattaforma procedendo nel modo seguente:
 

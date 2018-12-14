@@ -1,20 +1,20 @@
 ---
-title: Compilazione di una libreria di classi con Visual Basic e .NET Core in Visual Studio 2017
-description: Informazioni su come creare una libreria di classi scritta in Visual Basic usando Visual Studio 2017
+title: Compilazione di una libreria di classi .NET Core con Visual Basic in Visual Studio 2017
+description: Informazioni su come compilare una libreria di classi .NET Core scritta in Visual Basic usando Visual Studio 2017
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/07/2017
 dev_langs:
 - vb
-ms.custom: vs-dotnet
-ms.openlocfilehash: 52bbae330afe4a9ea376c6388a06941f74f6606a
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.custom: vs-dotnet, seodec18
+ms.openlocfilehash: fa1387eba60b4bf181df254e00bb3fdbe55bdaf6
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035974"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144702"
 ---
-# <a name="building-a-class-library-with-visual-basic-and-net-core-in-visual-studio-2017"></a>Compilazione di una libreria di classi con Visual Basic e .NET Core in Visual Studio 2017
+# <a name="build-a-class-library-with-visual-basic-and-the-net-core-sdk-in-visual-studio-2017"></a>Compilare una libreria di classi con Visual Basic e .NET Core SDK in Visual Studio 2017
 
 La *libreria di classi* definisce tipi e metodi chiamati da un'applicazione. Una libreria di classi che esegue la destinazione a .NET Standard 2.0 consente la chiamata alla libreria da qualsiasi implementazione di .NET che supporti questa versione di .NET Standard. Dopo aver completato la libreria di classi, è possibile decidere se si vuole distribuirla come componente di terze parti o se si vuole includerla come componente in bundle con una o più applicazioni.
 

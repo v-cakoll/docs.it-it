@@ -8,12 +8,12 @@ helpviewer_keywords:
 - from clause [C#]
 - from keyword [C#]
 ms.assetid: 1aefd18c-1314-47f8-99ec-9bcefb09e699
-ms.openlocfilehash: c8c124f44df292b8323560cce541cca2765e2790
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 9af24d9c2a99a9c763c6ad3aac9895e7dddcf8ee
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48033402"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129038"
 ---
 # <a name="from-clause-c-reference"></a>Clausola from (Riferimento C#)
 
@@ -33,9 +33,9 @@ Nell'esempio seguente `numbers` è l'origine dati e `num` è la variabile di int
 
 Tramite l'inferenza, il compilatore deriva il tipo della variabile di intervallo quando l'origine dati implementa <xref:System.Collections.Generic.IEnumerable%601>. Se, ad esempio, l'origine è di tipo `IEnumerable<Customer>`, la variabile di intervallo derivata tramite inferenza sarà `Customer`. È necessario specificare il tipo in modo esplicito solo quando l'origine è un tipo `IEnumerable` non generico, ad esempio <xref:System.Collections.ArrayList>. Per altre informazioni, vedere [Procedura: eseguire una query su un ArrayList con LINQ](../../programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md).
 
-Nell'esempio precedente si deriva tramite inferenza che `num` è di tipo `int`. Poiché la variabile di intervallo è fortemente tipizzata, è possibile chiamare metodi su di essa o usarla in altre operazioni. Ad esempio, invece di scrivere `select num`, è possibile scrivere `select num.ToString()` per fare in modo che l'espressione di query restituisca una sequenza di stringhe invece che di numeri interi. Oppure è possibile scrivere `select n + 10` per fare in modo che l'espressione restituisca la sequenza 14, 11, 13, 12 10. Per altre informazioni, vedere [Clausola select](select-clause.md).
+Nell'esempio precedente si deriva tramite inferenza che `num` è di tipo `int`. Poiché la variabile di intervallo è fortemente tipizzata, è possibile chiamare metodi su di essa o usarla in altre operazioni. Ad esempio, invece di scrivere `select num`, è possibile scrivere `select num.ToString()` per fare in modo che l'espressione di query restituisca una sequenza di stringhe invece che di numeri interi. Oppure è possibile scrivere `select num + 10` per fare in modo che l'espressione restituisca la sequenza 14, 11, 13, 12 10. Per altre informazioni, vedere [Clausola select](select-clause.md).
 
-La variabile di intervallo è analoga a una variabile di iterazione in un'istruzione [foreach](foreach-in.md) eccetto che per una differenza molto importante: una variabile di intervallo non archivia effettivamente mai i dati dall'origine. Si tratta semplicemente di un pratico aspetto sintattico che consente alla query di descrivere ciò che si verificherà quando la query verrà eseguita. Per altre informazioni, vedere [Introduzione alle query LINQ (C#)](../../programming-guide/concepts/linq/introduction-to-linq-queries.md).
+La variabile di intervallo è analoga a una variabile di iterazione in un'istruzione [foreach](foreach-in.md) eccetto che per una differenza molto importante: una variabile di intervallo non archivia effettivamente mai i dati dall'origine. Si tratta semplicemente di un pratico aspetto sintattico che consente alla query di descrivere ciò che si verificherà alla sua esecuzione. Per altre informazioni, vedere [Introduzione alle query LINQ (C#)](../../programming-guide/concepts/linq/introduction-to-linq-queries.md).
 
 ## <a name="compound-from-clauses"></a>Clausole from composte
 

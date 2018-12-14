@@ -1,18 +1,18 @@
 ---
-title: Glossario dell'apprendimento automatico
-description: Un glossario dei termini relativi all'apprendimento automatico.
-ms.date: 05/31/2018
-ms.topic: conceptual
-ms.openlocfilehash: 22fcd4d2bdf53efd046cd594af42afe50a853f61
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+title: Glossario dell'apprendimento automatico - ML.NET
+description: Glossario dei principali termini relativi all'apprendimento automatico, utili per la creazione di modelli personalizzati in ML.NET.
+ms.custom: seodec18
+ms.date: 12/06/2018
+ms.openlocfilehash: 4db28a62fccca2e8bedc9f48485a61b6f4ab1801
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453203"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150576"
 ---
-# <a name="machine-learning-glossary"></a>Glossario dell'apprendimento automatico
+# <a name="machine-learning-glossary-of-important-terms"></a>Glossario dell'apprendimento automatico
 
-Di seguito sono riportati i principali termini relativi all'apprendimento automatico, utili per la creazione di modelli personalizzati.
+Di seguito sono riportati i principali termini relativi all'apprendimento automatico, utili per la creazione di modelli personalizzati in ML.NET.
 
 ## <a name="accuracy"></a>Accuratezza
 
@@ -40,13 +40,13 @@ Nell'ambito della [regressione](#regression), una metrica di valutazione che ind
 
 API ML.NET correlate: <xref:Microsoft.ML.Legacy.Models.RegressionMetrics.RSquared?displayProperty=nameWithType>.
 
-## <a name="feature"></a>Funzionalità
+## <a name="feature"></a>Caratteristica
 
-Una proprietà misurabile del fenomeno misurato, in genere un valore numerico (double). Più funzionalità sono denominate **vettore di funzionalità**, generalmente archiviato come `double[]`. Le funzionalità definiscono le caratteristiche importanti del fenomeno misurato. Per altre informazioni, vedere l'articolo relativo alle [funzionalità](https://en.wikipedia.org/wiki/Feature_(machine_learning)) su Wikipedia.
+Una proprietà misurabile del fenomeno misurato, in genere un valore numerico (double). Più caratteristiche sono denominate **vettore di caratteristiche**, generalmente archiviato come `double[]`. Le caratteristiche definiscono gli aspetti importanti del fenomeno misurato. Per altre informazioni, vedere l'articolo relativo alle [caratteristiche](https://en.wikipedia.org/wiki/Feature_(machine_learning)) su Wikipedia.
 
-## <a name="feature-engineering"></a>Progettazione di funzionalità
+## <a name="feature-engineering"></a>Progettazione di caratteristiche
 
-La progettazione di funzionalità è il processo che comprende la definizione di un set di [funzionalità](#feature) e lo sviluppo di software che produce vettori di funzionalità dai dati disponibili sul fenomeno, ovvero l'estrazione di funzionalità. Per altre informazioni, vedere l'articolo relativo alla [progettazione di funzionalità](https://en.wikipedia.org/wiki/Feature_engineering) su Wikipedia.
+La progettazione di caratteristiche è il processo che comprende la definizione di un set di [caratteristiche](#feature) e lo sviluppo di software che produce vettori di caratteristiche dai dati disponibili sul fenomeno, ovvero l'estrazione di caratteristiche. Per altre informazioni, vedere l'articolo relativo alla [progettazione di caratteristiche](https://en.wikipedia.org/wiki/Feature_engineering) su Wikipedia.
 
 ## <a name="f-score"></a>Punteggio F
 
@@ -58,7 +58,7 @@ API ML.NET correlate: <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetri
 
 Un parametro di un algoritmo di apprendimento automatico. Alcuni esempi sono il numero di alberi da apprendere in una foresta delle decisioni o la dimensione di incremento in un algoritmo di discesa del gradiente. I valori degli *iperparametri* sono impostati prima di eseguire il training del modello e gestiscono il processo di individuazione dei parametri della funzione di stima, ad esempio i punti di confronto in un albero delle decisioni o i pesi in un modello di regressione lineare. Per altre informazioni, vedere l'articolo relativo agli [iperparametri](https://en.wikipedia.org/wiki/Hyperparameter_(machine_learning)) su Wikipedia.
 
-## <a name="label"></a>Label
+## <a name="label"></a>Etichetta
 
 L'elemento da stimare con il modello di apprendimento automatico. Ad esempio, la razza di un cane o il prezzo di un'azione in futuro.
 
@@ -76,7 +76,7 @@ API ML.NET correlate: <xref:Microsoft.ML.Legacy.Models.RegressionMetrics.L1?disp
 
 ## <a name="model"></a>Modello
 
-Tradizionalmente, i parametri per la funzione di stima. Ad esempio, i pesi in un modello di regressione lineare o i punti di divisione in un albero delle decisioni. In ML.NET, un modello contiene tutte le informazioni necessarie per stimare l'[etichetta](#label) di un oggetto di dominio, ad esempio immagine o testo. Questo significa che i modelli ML.NET includono i passaggi necessari per l'estrazione delle funzionalità, nonché i parametri per la funzione di stima.
+Tradizionalmente, i parametri per la funzione di stima. Ad esempio, i pesi in un modello di regressione lineare o i punti di divisione in un albero delle decisioni. In ML.NET, un modello contiene tutte le informazioni necessarie per stimare l'[etichetta](#label) di un oggetto di dominio, ad esempio immagine o testo. Questo significa che i modelli ML.NET includono i passaggi necessari per l'estrazione delle caratteristiche, nonché i parametri per la funzione di stima.
 
 ## <a name="multiclass-classification"></a>Classificazione multiclasse
 
@@ -84,15 +84,15 @@ Un caso di [classificazione](#classification) in cui l'[etichetta](#label) può 
 
 ## <a name="n-gram"></a>N-gramma
 
-Uno schema di estrazione delle funzionalità per i dati di testo: qualsiasi sequenza di N parole viene trasformata in un valore di [funzionalità](#feature).
+Uno schema di estrazione delle caratteristiche per i dati di testo: qualsiasi sequenza di N parole viene trasformata in un valore di [caratteristica](#feature).
 
-## <a name="numerical-feature-vector"></a>Vettore di funzionalità numerico
+## <a name="numerical-feature-vector"></a>Vettore di caratteristiche numerico
 
-Un vettore di [funzionalità](#feature) costituito solo da valori numerici. È simile a `double[]`.
+Un vettore di [caratteristiche](#feature) costituito solo da valori numerici. È simile a `double[]`.
 
 ## <a name="pipeline"></a>Pipeline
 
-Tutte le operazioni necessarie per adattare un modello a un set di dati. Una pipeline è costituita dai passaggi di importazione dei dati, trasformazione, estrazione delle funzionalità e apprendimento. Una volta eseguito il training, una pipeline si trasforma in un modello.
+Tutte le operazioni necessarie per adattare un modello a un set di dati. Una pipeline è costituita dai passaggi di importazione dei dati, trasformazione, estrazione delle caratteristiche e apprendimento. Una volta eseguito il training, una pipeline si trasforma in un modello.
 
 ## <a name="precision"></a>Precisione
 
@@ -132,7 +132,7 @@ Una sottoclasse di apprendimento automatico in cui un modello desiderato stima l
 
 Il processo di identificazione di un [modello](#model) per un determinato training set. Per un modello lineare, rappresenta l'individuazione dei pesi. Per una struttura ad albero, implica l'identificazione dei punti di divisione.
 
-## <a name="transform"></a>Transform
+## <a name="transform"></a>Trasformazione
 
 Un componente della [pipeline](#pipeline) che trasforma i dati, ad esempio da testo a vettori di numeri.
 

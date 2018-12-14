@@ -4,12 +4,12 @@ description: Informazioni sulle differenze tra i file csproj esistenti e .NET Co
 author: blackdwarf
 ms.author: mairaw
 ms.date: 09/22/2017
-ms.openlocfilehash: 3de168b8cebeb435a45861138aea26580663c135
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f2ab476ee20ae90a84de7a6ccc76ce72738c1343
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50203956"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143701"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Aggiunte al formato csproj per .NET Core
 
@@ -75,9 +75,6 @@ Per disabilitare **tutti i glob impliciti**, è possibile impostare la propriet�
     <EnableDefaultItems>false</EnableDefaultItems>
 </PropertyGroup>
 ```
-
-### <a name="recommendation"></a>Consiglio
-Con csproj è consigliabile rimuovere i GLOB predefiniti dal progetto e aggiungere solo i percorsi di file con GLOB per gli elementi necessari all'app o alla libreria per diversi scenari (ad esempio, runtime e creazione di pacchetti NuGet).
 
 ## <a name="how-to-see-the-whole-project-as-msbuild-sees-it"></a>Visualizzare l'intero progetto come lo vede MSBuild
 
@@ -195,8 +192,12 @@ Titolo del pacchetto facilmente comprensibile per l'utente, usato di solito per 
 ### <a name="authors"></a>Autori
 Elenco con valori delimitati da punto e virgola di autori di pacchetti, corrispondenti ai nomi di profilo in nuget.org. Questi, visualizzati nella raccolta NuGet in nuget.org, vengono usati per creare riferimenti incrociati ai pacchetti dello stesso autore.
 
-### <a name="description"></a>Descrizione
+### <a name="packagedescription"></a>PackageDescription
+
 Descrizione lunga del pacchetto per la visualizzazione dell'interfaccia utente.
+
+### <a name="description"></a>Description
+Descrizione lunga per l'assembly. Se `PackageDescription` non è specificata, questa proprietà viene usata anche come descrizione del pacchetto.
 
 ### <a name="copyright"></a>Copyright
 Informazioni sul copyright per il pacchetto.

@@ -1,22 +1,23 @@
-| .NET Standard              | [1.0] | [1.1]  | [1.2] | [1.3] | [1.4] | [1.5]      | [1.6]      | [2.0]      |
-|----------------------------|-------|--------|-------|-------|-------|------------|------------|------------|
-| .NET Core                  | 1.0   | 1.0    | 1.0   | 1.0   | 1.0   | 1.0        | 1.0        | 2.0        |
-| .NET Framework <sup>1</sup>| 4.5   | 4.5    | 4.5.1 | 4.6   | 4.6.1 | 4.6.1      | 4.6.1      | 4.6.1      |
-| Mono                       | 4.6   | 4.6    | 4.6   | 4.6   | 4.6   | 4.6        | 4.6        | 5.4        |
-| Xamarin.iOS                | 10.0  | 10.0   | 10.0  | 10.0  | 10.0  | 10.0       | 10.0       | 10.14      |
-| Xamarin.Mac                | 3.0   | 3.0    | 3.0   | 3.0   | 3.0   | 3.0        | 3.0        | 3.8        |
-| Xamarin.Android            | 7.0   | 7.0    | 7.0   | 7.0   | 7.0   | 7.0        | 7.0        | 8.0        |
-| Piattaforma UWP (Universal Windows Platform) | 10.0  | 10.0   | 10.0  | 10.0  | 10.0  | 10.0.16299 | 10.0.16299 | 10.0.16299 |
-| WINDOWS                    | 8.0   | 8.0    | 8.1   |       |       |            |            |            |
-| Windows Phone              | 8.1   | 8.1    | 8.1   |       |       |            |            |            |
-| Silverlight per Windows Phone  | 8.0   |        |       |       |       |            |            |            |
+| .NET Standard              | [1.0]  | [1.1]  | [1.2] | [1.3] | [1.4] | [1.5]      | [1.6]      | [2.0]      |
+|----------------------------|--------|--------|-------|-------|-------|------------|------------|------------|
+| .NET Core                  | 1.0    | 1.0    | 1.0   | 1.0   | 1.0   | 1.0        | 1.0        | 2.0        |
+| .NET Framework <sup>1</sup>| 4.5    | 4.5    | 4.5.1 | 4.6   | 4.6.1 | 4.6.1      | 4.6.1      | 4.6.1      |
+| Mono                       | 4.6    | 4.6    | 4.6   | 4.6   | 4.6   | 4.6        | 4.6        | 5.4        |
+| Xamarin.iOS                | 10.0   | 10.0   | 10.0  | 10.0  | 10.0  | 10.0       | 10.0       | 10.14      |
+| Xamarin.Mac                | 3.0    | 3.0    | 3.0   | 3.0   | 3.0   | 3.0        | 3.0        | 3.8        |
+| Xamarin.Android            | 7.0    | 7.0    | 7.0   | 7.0   | 7.0   | 7.0        | 7.0        | 8.0        |
+| Piattaforma UWP (Universal Windows Platform) | 10.0   | 10.0   | 10.0  | 10.0  | 10.0  | 10.0.16299 | 10.0.16299 | 10.0.16299 |
+| WINDOWS                    | 8.0    | 8.0    | 8.1   |       |       |            |            |            |
+| Windows Phone              | 8.1    | 8.1    | 8.1   |       |       |            |            |            |
+| Silverlight per Windows Phone  | 8.0    |        |       |       |       |            |            |            |
+| Unity                      | 2018.1 | 2018.1 | 2018.1| 2018.1| 2018.1| 2018.1     |  2018.1    | 2018.1     |
 
-<sup>1 Le versioni elencate per .NET Framework si applicano agli strumenti .NET Core SDK 2.0 e versioni successive. Le versioni precedenti usavano un altro mapping per .NET Standard 1.5 e versioni successive. È possibile [scaricare gli strumenti di .NET Core per Visual Studio 2015](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md) se non è possibile eseguire l'aggiornamento a Visual Studio 2017.</sup>
+<sup>1 Le versioni elencate per .NET Framework si applicano agli strumenti .NET Core 2.0 SDK e versioni successive. Le versioni precedenti usavano un altro mapping per .NET Standard 1.5 e versioni successive. È possibile [scaricare gli strumenti di .NET Core per Visual Studio 2015](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md) se non è possibile eseguire l'aggiornamento a Visual Studio 2017.</sup>
 
 - Le colonne rappresentano le versioni di .NET Standard. Ogni cella di intestazione è un collegamento a un documento che mostra quali API sono state aggiunte nella specifica versione di .NET Standard.
 - Le righe rappresentano le diverse implementazioni di .NET.
 - Il numero di versione in ogni cella indica la versione *minima* dell'implementazione necessaria per usare tale specifica versione di .NET Standard come destinazione.
-- Per una tabella interattiva, vedere [.NET Standard versions](http://immo.landwerth.net/netstandard-versions/#) (Versioni di .NET Standard).
+- Per una tabella interattiva, vedere [.NET Standard versions](https://immo.landwerth.net/netstandard-versions/#) (Versioni di .NET Standard).
 
 [1.0]: https://github.com/dotnet/standard/blob/master/docs/versions/netstandard1.0.md
 [1.1]: https://github.com/dotnet/standard/blob/master/docs/versions/netstandard1.1.md

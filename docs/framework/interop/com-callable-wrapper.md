@@ -1,6 +1,6 @@
 ---
 title: COM Callable Wrapper
-ms.date: 03/30/2017
+ms.date: 10/23/2018
 dev_langs:
 - csharp
 - vb
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d04be3b5-27b9-4f5b-8469-a44149fabf78
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 21f7b0d56a788b4161fb7e99899b4dd15a434152
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 75a8fb01fd22a7f84fadaf355a269b3ad3de63ab
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394966"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145176"
 ---
 # <a name="com-callable-wrapper"></a>COM Callable Wrapper
 Quando un client COM chiama un oggetto .NET, Common Language Runtime crea l'oggetto gestito e un COM Callable Wrapper (CCW) per l'oggetto. Incapaci di fare riferimento diretto a un oggetto .NET, i client COM usano il CCW come un proxy per l'oggetto gestito.  
@@ -62,7 +62,7 @@ Interfacce COM e COM Callable Wrapper
 |Interfaccia|Descrizione|  
 |---------------|-----------------|  
 |Interfaccia della classe (\_*nomeclasse*)|Interfaccia, esposta dal runtime e non definita esplicitamente, che espone tutte le interfacce, i metodi, le proprietà e i campi pubblici esplicitamente esposti su un oggetto gestito.|  
-|**IConnectionPoint** e **IconnectionPointContainer**|Interfaccia per oggetti che originano eventi basati su delegati (un'interfaccia per la registrazione di sottoscrittori di eventi).|  
+|**IConnectionPoint** e **IConnectionPointContainer**|Interfaccia per oggetti che originano eventi basati su delegati (un'interfaccia per la registrazione di sottoscrittori di eventi).|  
 |**IdispatchEx**|Interfaccia fornita dal runtime se la classe implementa **IExpando**. L'interfaccia **IDispatchEx** è un'estensione dell'interfaccia **IDispatch** che, diversamente da **IDispatch**, consente l'enumerazione, l'aggiunta, l'eliminazione e la chiamata dei membri con distinzione tra maiuscole e minuscole.|  
 |**IEnumVARIANT**|Interfaccia per classi Collection che enumera gli oggetti della raccolta se la classe implementa **IEnumerable**.|  
   
@@ -84,17 +84,17 @@ Public Class Mammal
 End Class  
 ```  
   
-```csharp  
-// Applies the ClassInterfaceAttribute to set the interface to dual.  
-[ClassInterface(ClassInterfaceType.AutoDual)]  
-// Implicitly extends System.Object.  
-public class Mammal  
-{  
-    void  Eat();  
-    void  Breathe():  
-    void  Sleep();  
-}  
-```  
+```csharp
+// Applies the ClassInterfaceAttribute to set the interface to dual.
+[ClassInterface(ClassInterfaceType.AutoDual)]
+// Implicitly extends System.Object.
+public class Mammal
+{
+    public void Eat() {}
+    public void Breathe() {}
+    public void Sleep() {}
+}
+```
   
  Il client COM può ottenere un puntatore a un'interfaccia della classe denominata `_Mammal`, descritta nella libreria dei tipi generata dall'[utilità di esportazione della libreria dei tipi (Tlbexp.exe)](../tools/tlbexp-exe-type-library-exporter.md). Se la classe `Mammal` implementa una o più interfacce, queste appariranno sotto la coclasse.  
   
@@ -139,12 +139,13 @@ coclass Mammal
 End Class  
 ```  
   
-```csharp  
-[ClassInterface(ClassInterfaceType.None)]  
-public class LoanApp : IExplicit {  
-    void M();  
-}  
-```  
+```csharp
+[ClassInterface(ClassInterfaceType.None)]
+public class LoanApp : IExplicit
+{
+    int IExplicit.M() { return 0; }
+}
+```
   
  Il valore **ClassInterfaceType.None** impedisce la generazione dell'interfaccia della classe quando i metadati della classe vengono esportati in una libreria dei tipi. Nel precedente esempio, i client COM possono accedere alla classe `LoanApp` solo tramite l'interfaccia `IExplicit`.  
   
@@ -163,20 +164,31 @@ public class LoanApp : IExplicit {
 End Class  
 ```  
   
-```csharp  
-[ClassInterface(ClassInterfaceType.AutoDispatch]  
-public class LoanApp : IAnother {  
-    void M();  
-}  
-```  
+```csharp
+[ClassInterface(ClassInterfaceType.AutoDispatch)]
+public class LoanApp
+{
+    public int M() { return 0; }
+}
+```
   
  Per ottenere il DispId di un membro di interfaccia in fase di esecuzione, i client COM possono chiamare **IDispatch.GetIdsOfNames**. Per richiamare un metodo sull'interfaccia, passare il DispId restituito come argomento a **IDispatch.Invoke**.  
   
 ### <a name="restrict-using-the-dual-interface-option-for-the-class-interface"></a>Limitare l'uso dell'opzione di interfaccia duale per l'interfaccia della classe.  
  Le interfacce duali permettono ai client COM di effettuare sia l'associazione anticipata che l'associazione tardiva ai membri di interfaccia. In fase di progettazione e durante il test, può risultare utile impostare l'interfaccia della classe su duale. Per una classe gestita (e le relative classi base) che non verrà mai modificata, questa opzione è accettabile. In tutti gli altri casi è preferibile evitare di impostare l'interfaccia della classe su duale.  
   
- Un'interfaccia duale generata automaticamente può essere appropriata in alcuni casi meno comuni. Nella maggior parte dei casi creerà invece complicazioni in relazione alla gestione delle versioni. Ad esempio, il funzionamento dei client COM che usano l'interfaccia della classe di una classe derivata verrà facilmente compromesso in conseguenza di modifiche della classe base. Quando la classe base è fornita da terzi, il layout dell'interfaccia della classe sarà fuori dal proprio controllo. Diversamente da un'interfaccia solo dispatch, un'interfaccia duale (**ClassInterface.AutoDual**) fornisce anche una descrizione dell'interfaccia della classe nella libreria dei tipi esportata. Tale descrizione invita i client ad associazione tardiva a inserire nella cache i DispId in fase di esecuzione.  
+ Un'interfaccia duale generata automaticamente può essere appropriata in alcuni casi meno comuni. Nella maggior parte dei casi creerà invece complicazioni in relazione alla gestione delle versioni. Ad esempio, il funzionamento dei client COM che usano l'interfaccia della classe di una classe derivata verrà facilmente compromesso in conseguenza di modifiche della classe base. Quando la classe base è fornita da terzi, il layout dell'interfaccia della classe sarà fuori dal proprio controllo. Diversamente da un'interfaccia solo dispatch, un'interfaccia duale (**ClassInterfaceType.AutoDual**) fornisce anche una descrizione dell'interfaccia della classe nella libreria dei tipi esportata. Tale descrizione invita i client ad associazione tardiva a inserire nella cache i DispId in fase di esecuzione.  
   
+### <a name="ensure-that-all-com-event-notifications-are-late-bound"></a>Verificare che tutte le notifiche degli eventi COM siano ad associazione tardiva.
+
+Per impostazione predefinita, le informazioni sui tipi COM sono incorporate direttamente negli assembly gestiti, eliminando così la necessità di assembly di interoperabilità primari. Tuttavia, uno dei limiti delle informazioni sui tipi incorporate è dato dal fatto che non è supportato il recapito di notifiche di eventi COM tramite chiamate vtable ad associazione anticipata, ma sono supportate solo le chiamate `IDispatch::Invoke` ad associazione tardiva.
+
+Se l'applicazione richiede chiamate ad associazione anticipata ai metodi dell'interfaccia di eventi COM, è possibile impostare la proprietà **Incorpora tipi di interoperabilità** di Visual Studio su `true` o includere l'elemento seguente nel file di progetto:
+
+```xml
+<EmbedInteropTypes>True</EmbedInteropTypes>
+```
+
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>  
  [Wrapper COM](com-wrappers.md)  

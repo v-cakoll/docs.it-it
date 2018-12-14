@@ -1,5 +1,5 @@
 ---
-title: Creazione del pacchetto e distribuzione delle risorse in applicazioni desktop
+title: Creazione di pacchetti e distribuzione delle risorse nelle app .NET
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -28,14 +28,14 @@ helpviewer_keywords:
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7aca04c191234686de5a15cb3dc1336080a3a344
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: b2f0ceced1749f42d57094a09f768c192b49ff4e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485703"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53131534"
 ---
-# <a name="packaging-and-deploying-resources-in-desktop-apps"></a>Creazione del pacchetto e distribuzione delle risorse in applicazioni desktop
+# <a name="packaging-and-deploying-resources-in-net-apps"></a>Creazione di pacchetti e distribuzione delle risorse nelle app .NET
 Per recuperare le risorse localizzate le applicazioni usano .NET Framework Resource Manager, rappresentato dalla classe <xref:System.Resources.ResourceManager>. Resource Manager presuppone l'uso di un modello hub e spoke per la creazione di pacchetti e la distribuzione delle risorse. L'hub è l'assembly principale che contiene il codice eseguibile non localizzabile e le risorse di un singolo set di impostazioni cultura, denominate impostazioni cultura neutre o predefinite. Le impostazioni cultura predefinite sono le impostazioni di fallback per l'applicazione, ovvero le impostazioni che vengono usate quando non si trovano le risorse localizzate. Ogni spoke si connette a un assembly satellite contenente le risorse di determinate impostazioni cultura, ma non contiene alcun codice.  
   
  Questo modello presenta diversi vantaggi:  
@@ -64,16 +64,17 @@ Per recuperare le risorse localizzate le applicazioni usano .NET Framework Resou
   
  Per migliorare le prestazioni di ricerca, applicare l'attributo <xref:System.Resources.NeutralResourcesLanguageAttribute> all'assembly principale e passare a tale attributo il nome della lingua neutra da usare con l'assembly principale.  
   
+### <a name="net-framework-resource-fallback-process"></a>Processo di fallback per le risorse di .NET Framework
+ Il processo di fallback per le risorse di .NET Framework include i passaggi seguenti:
+
 > [!TIP]
 >  L'elemento di configurazione [\<relativeBindForResources>](../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md) può contribuire a ottimizzare il processo di fallback delle risorse e il processo di probe degli assembly di risorse nel runtime. Per altre informazioni vedere la sezione [Ottimizzazione del processo di fallback delle risorse](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md#Optimizing).  
-  
- Il processo di fallback delle risorse include i seguenti passaggi:  
   
 1.  Il runtime ricerca nella [Global Assembly Cache](../../../docs/framework/app-domains/gac.md) un assembly corrispondente alle impostazioni cultura richieste per l'applicazione.  
   
      La Global Assembly Cache può archiviare assembly di risorse condivisi da più applicazioni. In tal modo non è necessario includere set di risorse specifici nella struttura di directory di ogni applicazione creata. Se il runtime rileva un riferimento all'assembly, cerca nell'assembly la risorsa richiesta. Se rileva la voce nell'assembly usa la risorsa richiesta. Se la voce non viene trovata la ricerca continua.  
   
-2.  Il runtime cerca quindi nella directory dell'assembly in esecuzione una directory corrispondente alle impostazioni cultura richieste. Se trova la directory cerca nella directory un assembly satellite valido per le impostazioni cultura richieste. Il runtime cerca quindi nell'assembly satellite la risorsa richiesta. Se trova la risorsa nell'assembly la usa direttamente. In caso contrario la ricerca continua.  
+2.  Il runtime cerca quindi nella directory dell'assembly in esecuzione una sottodirectory corrispondente alle impostazioni cultura richieste. Se trova la sottodirectory, cerca nella sottodirectory un assembly satellite valido per le impostazioni cultura richieste. Il runtime cerca quindi nell'assembly satellite la risorsa richiesta. Se trova la risorsa nell'assembly la usa direttamente. In caso contrario la ricerca continua.
   
 3.  Il runtime esegue una query in Windows Installer per determinare se l'assembly satellite va installato su richiesta. In tal caso il runtime gestisce l'installazione, carica l'assembly e cerca la risorsa richiesta. Se trova la risorsa nell'assembly la usa direttamente. In caso contrario la ricerca continua.  
   
@@ -81,7 +82,7 @@ Per recuperare le risorse localizzate le applicazioni usano .NET Framework Resou
   
 5.  Il runtime torna a eseguire una ricerca nella Global Assembly Cache, ma ora cerca l'assembly padre delle impostazioni cultura richieste. Se l'assembly padre esiste nella Global Assembly Cache il runtime cerca nell'assembly la risorsa richiesta.  
   
-     Le impostazioni cultura padre sono definite come impostazioni cultura di fallback appropriate. Gli elementi padre sono candidati ideali per il fallback, perché l'impostazione di una risorsa qualsiasi è preferibile alla generazione di un'eccezione. Questo processo consente anche di tornare a usare le risorse. Una determinata risorsa va inclusa nel livello padre solo se le impostazioni cultura figlio non richiedono la localizzazione della risorsa richiesta. Ad esempio se si specificano assembly satellite per en (inglese neutro), en-GB (inglese del Regno Unito) ed en-US (inglese degli Stati Uniti), il satellite en contiene la terminologia comune mentre i satelliti en-GB ed en-US possono offrire override per i termini diversi.  
+     Le impostazioni cultura padre sono definite come impostazioni cultura di fallback appropriate. Gli elementi padre sono candidati ideali per il fallback, perché l'impostazione di una risorsa qualsiasi è preferibile alla generazione di un'eccezione. Questo processo consente anche di tornare a usare le risorse. Una determinata risorsa va inclusa nel livello padre solo se le impostazioni cultura figlio non richiedono la localizzazione della risorsa richiesta. Se ad esempio si specificano assembly satellite per `en` (inglese neutro), `en-GB` (inglese del Regno Unito) ed `en-US` (inglese degli Stati Uniti), il satellite `en` contiene la terminologia comune, mentre i satelliti `en-GB` ed `en-US` possono fornire override solo per i termini diversi.
   
 6.  Il runtime cerca quindi nella directory dell'assembly in esecuzione una directory padre. Se esiste una directory padre il runtime cerca in tale directory un assembly satellite valido per le impostazioni cultura padre. Se il runtime trova l'assembly cerca nell'assembly la risorsa richiesta. Se trova la risorsa la usa direttamente. In caso contrario la ricerca continua.  
   
@@ -89,19 +90,19 @@ Per recuperare le risorse localizzate le applicazioni usano .NET Framework Resou
   
 8.  Il runtime genera l'evento <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> per indicare che non è stata trovata una risorsa di fallback appropriata. Se si sceglie di gestire l'evento, il gestore eventi può restituire un riferimento all'assembly satellite le cui risorse verranno usate per la ricerca. In caso contrario il gestore eventi restituisce `null` e la ricerca continua.  
   
-9. Il runtime esegue quindi la ricerca negli assembly padre come nei tre passaggi precedenti, su numerosi livelli potenziali. Ogni set di impostazioni cultura ha un solo set padre, definito dalla proprietà <xref:System.Globalization.CultureInfo.Parent%2A?displayProperty=nameWithType>, ma un set padre può a sua volta avere un proprio set padre. La ricerca di impostazioni cultura padre si interrompe quando la proprietà <xref:System.Globalization.CultureInfo.Parent%2A> di un set di impostazioni cultura restituisce <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>. Ai fini del fallback delle risorse le impostazioni cultura invariabili non sono considerate impostazioni cultura padre o impostazioni cultura che possono avere risorse.  
+9. Il runtime esegue quindi la ricerca negli assembly padre come nei tre passaggi precedenti, su numerosi livelli potenziali. Ogni set di impostazioni cultura ha un solo set padre, definito dalla proprietà <xref:System.Globalization.CultureInfo.Parent%2A?displayProperty=nameWithType>, ma un set padre può a sua volta avere un proprio set padre. La ricerca di impostazioni cultura padre si interrompe quando la proprietà <xref:System.Globalization.CultureInfo.Parent%2A> di un set di impostazioni cultura restituisce <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>. Ai fini del fallback delle risorse le impostazioni cultura inglese non dipendenti da paese/area geografica non sono considerate impostazioni cultura padre o impostazioni cultura che possono avere risorse.  
   
 10. Se dopo la ricerca nelle impostazioni cultura specificate in origine e in tutte le impostazioni cultura padre la risorsa non è stata trovata, viene usata la risorsa corrispondente alle impostazioni cultura predefinite (fallback). In genere le risorse delle impostazioni cultura predefinite sono incluse nell'assembly principale dell'applicazione. Tuttavia è possibile specificare il valore <xref:System.Resources.UltimateResourceFallbackLocation.Satellite> per la proprietà <xref:System.Resources.NeutralResourcesLanguageAttribute.Location%2A> dell'attributo <xref:System.Resources.NeutralResourcesLanguageAttribute> per indicare come posizione finale di fallback per le risorse un assembly satellite anziché l'assembly principale.  
   
     > [!NOTE]
-    >  La risorsa predefinita è l'unica risorsa che può essere compilata con l'assembly principale. Se non si specifica un assembly satellite tramite l'attributo <xref:System.Resources.NeutralResourcesLanguageAttribute>, la risorsa predefinita è il fallback finale (padre finale). È pertanto consigliabile includere sempre un set di risorse predefinito nell'assembly principale. Ciò evita la generazione di eccezioni. Se si include un file di risorse predefinito si offre un fallback per tutte le risorse e si garantisce che l'utente disponga di almeno una risorsa, anche se non specifica a livello di impostazioni cultura.  
+    >  La risorsa predefinita è l'unica risorsa che può essere compilata con l'assembly principale. Se non si specifica un assembly satellite tramite l'attributo <xref:System.Resources.NeutralResourcesLanguageAttribute>, la risorsa predefinita è il fallback finale (padre finale). È pertanto consigliabile includere sempre un set di risorse predefinito nell'assembly principale. Ciò evita la generazione di eccezioni. Se si include un file di risorse predefinito, si offre un fallback per tutte le risorse e si garantisce che l'utente disponga di almeno una risorsa, anche se questa non è specifica per le impostazioni cultura.
   
 11. Infine se il runtime non trova una risorsa per impostazioni cultura predefinite (fallback) viene generata un'eccezione <xref:System.Resources.MissingManifestResourceException> o <xref:System.Resources.MissingSatelliteAssemblyException> per indicare che la risorsa non è stata trovata.  
   
- Ad esempio, si supponga che tramite l'applicazione venga richiesta una risorsa localizzata in spagnolo (Messico) (impostazioni cultura es-MX). Il runtime cerca nella Global Assembly Cache l'assembly corrispondente a es-MX, ma non lo trova. Il runtime cerca quindi nella directory dell'assembly attualmente in esecuzione una directory es-MX. Se la ricerca non ha esito positivo, il runtime cerca nuovamente nella Global Assembly Cache un assembly padre corrispondente alle impostazioni cultura di fallback, in questo esempio es (spagnolo). Se l'assembly padre non viene trovato il runtime cerca in tutti i livelli potenziali di assembly padre le impostazioni cultura es-MX fino a trovare una risorsa corrispondente. Se non trova una risorsa, il runtime usa la risorsa delle impostazioni cultura predefinite.  
+ Si supponga ad esempio che l'applicazione richieda una risorsa localizzata in spagnolo (Messico) (impostazioni cultura `es-MX`). Il runtime cerca nella Global Assembly Cache l'assembly corrispondente a `es-MX`, ma non lo trova. Il runtime cerca quindi nella directory dell'assembly in esecuzione una directory `es-MX`. Se la ricerca non ha esito positivo, il runtime cerca nuovamente nella Global Assembly Cache un assembly padre corrispondente alle impostazioni cultura di fallback, in questo esempio `es` (spagnolo). Se l'assembly padre non viene trovato, il runtime cerca le impostazioni cultura `es-MX` in tutti i livelli potenziali di assembly padre finché non trova una risorsa corrispondente. Se non trova una risorsa, il runtime usa la risorsa delle impostazioni cultura predefinite.
   
 <a name="Optimizing"></a>   
-### <a name="optimizing-the-resource-fallback-process"></a>Ottimizzazione del processo di fallback per le risorse  
+#### <a name="optimizing-the-net-framework-resource-fallback-process"></a>Ottimizzazione del processo di fallback per le risorse di .NET Framework
  Se si verificano le seguenti condizioni, è possibile ottimizzare il processo con il quale il runtime cerca risorse negli assembly satellite  
   
 -   Gli assembly satellite vengono distribuiti nello stesso percorso in cui si trova l'assembly di codice. Se l'assembly di codice è installato nella [Global Assembly Cache](../../../docs/framework/app-domains/gac.md) anche gli assembly satellite vengono installati nella Global Assembly Cache. Se l'assembly di codice è installato in una directory gli assembly satellite vengono installati in cartelle specifiche della directory, corrispondenti alle impostazioni cultura.  
@@ -128,10 +129,44 @@ Per recuperare le risorse localizzate le applicazioni usano .NET Framework Resou
   
 -   Se il probe per un assembly di risorse specifico non riesce, il runtime non genera l'evento <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>.  
   
+
+### <a name="net-core-resource-fallback-process"></a>Processo di fallback per le risorse di .NET Core
+ Il processo di fallback per le risorse di .NET Core include i passaggi seguenti:
+
+1.  Il runtime prova a caricare un assembly satellite per le impostazioni cultura richieste.
+     * Cerca quindi nella directory dell'assembly in esecuzione una sottodirectory corrispondente alle impostazioni cultura richieste. Se trova la sottodirectory, cerca nella sottodirectory un assembly satellite valido per le impostazioni cultura richieste e lo carica.
+
+       > [!NOTE]
+       >  Nei sistemi operativi con file system che fanno distinzione tra maiuscole e minuscole, ovvero Linux e macOS, la ricerca di sottodirectory con il nome delle impostazioni cultura fa distinzione tra maiuscole e minuscole.  L'uso di maiuscole e minuscole nel nome della sottodirectory deve corrispondere esattamente a quello di <xref:System.Globalization.CultureInfo.Name?displayProperty=nameWithType>, ad esempio `es` o `es-MX`.
+
+       > [!NOTE]
+       > Se il programmatore ha derivato un contesto di caricamento dell'assembly personalizzato da <xref:System.Runtime.Loader.AssemblyLoadContext>, la situazione è più complicata.  Se l'assembly in esecuzione è stato caricato nel contesto personalizzato, il runtime carica l'assembly satellite nel contesto personalizzato.  I dettagli esulano dall'ambito di questo documento.  Vedere <xref:System.Runtime.Loader.AssemblyLoadContext>.
+
+     * Se non viene trovato un assembly satellite, <xref:System.Runtime.Loader.AssemblyLoadContext> genera l'evento <xref:System.Runtime.Loader.AssemblyLoadContext.Resolving?displayProperty=nameWithType> per indicare che non riesce a trovare l'assembly. Se si sceglie di gestire l'evento, il gestore eventi può caricare e restituire un riferimento all'assembly satellite.
+     * Se l'assembly satellite non viene ancora trovato, AssemblyLoadContext determina l'attivazione di un evento <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> da parte di AppDomain per indicare che non riesce a trovare l'assembly. Se si sceglie di gestire l'evento, il gestore eventi può caricare e restituire un riferimento all'assembly satellite.
+
+2. Se non viene trovato un assembly satellite, il runtime cerca la risorsa richiesta. Se trova la risorsa nell'assembly la usa direttamente. In caso contrario la ricerca continua.
+
+     > [!NOTE]
+     >  Per trovare una risorsa all'interno dell'assembly satellite, il runtime cerca il file di risorse richiesto da <xref:System.Resources.ResourceManager> per la proprietà <xref:System.Globalization.CultureInfo.Name?displayProperty=nameWithType> corrente.  All'interno del file di risorse cerca il nome della risorsa richiesta.  Se uno dei due non viene trovato, la risorsa viene considerata come non trovata.
+
+3. Il runtime cerca quindi gli assembly di impostazioni cultura padre su molti livelli potenziali, ripetendo ogni ora i passaggi 1 e 2.
+
+     Le impostazioni cultura padre sono definite come impostazioni cultura di fallback appropriate. Gli elementi padre sono candidati ideali per il fallback, perché l'impostazione di una risorsa qualsiasi è preferibile alla generazione di un'eccezione. Questo processo consente anche di tornare a usare le risorse. Una determinata risorsa va inclusa nel livello padre solo se le impostazioni cultura figlio non richiedono la localizzazione della risorsa richiesta. Se ad esempio si specificano assembly satellite per `en` (inglese neutro), `en-GB` (inglese del Regno Unito) ed `en-US` (inglese degli Stati Uniti), il satellite `en` contiene la terminologia comune, mentre i satelliti `en-GB` ed `en-US` forniscono override solo per i termini diversi.
+
+     Ogni set di impostazioni cultura ha un solo set padre, definito dalla proprietà <xref:System.Globalization.CultureInfo.Parent%2A?displayProperty=nameWithType>, ma un set padre può a sua volta avere un proprio set padre. La ricerca di impostazioni cultura padre si arresta quando la proprietà <xref:System.Globalization.CultureInfo.Parent%2A> di un set di impostazioni cultura restituisce <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>. Ai fini del fallback delle risorse, le impostazioni cultura inglese non dipendenti da paese/area geografica non sono considerate impostazioni cultura padre o impostazioni cultura che possono avere risorse.
+
+4. Se dopo la ricerca nelle impostazioni cultura specificate in origine e in tutte le impostazioni cultura padre la risorsa non è stata trovata, viene usata la risorsa corrispondente alle impostazioni cultura predefinite (fallback). In genere le risorse delle impostazioni cultura predefinite sono incluse nell'assembly principale dell'applicazione. È tuttavia possibile specificare il valore <xref:System.Resources.UltimateResourceFallbackLocation.Satellite?displayProperty.nameWithType> per la proprietà <xref:System.Resources.NeutralResourcesLanguageAttribute.Location%2A> per indicare che la posizione finale di fallback per le risorse è un assembly satellite anziché l'assembly principale.
+
+    > [!NOTE]
+    >  La risorsa predefinita è l'unica risorsa che può essere compilata con l'assembly principale. Se non si specifica un assembly satellite tramite l'attributo <xref:System.Resources.NeutralResourcesLanguageAttribute>, la risorsa predefinita è il fallback finale (padre finale). È pertanto consigliabile includere sempre un set di risorse predefinito nell'assembly principale. Ciò evita la generazione di eccezioni. Se si include un file di risorse predefinito, si offre un fallback per tutte le risorse e si garantisce che l'utente disponga di almeno una risorsa, anche se questa non è specifica per le impostazioni cultura.
+
+5. Se infine il runtime non trova un file di risorse per impostazioni cultura predefinite (fallback), viene generata un'eccezione <xref:System.Resources.MissingManifestResourceException> o <xref:System.Resources.MissingSatelliteAssemblyException> per indicare che la risorsa non è stata trovata.  Se il file di risorse viene trovato ma la risorsa richiesta non è presente, la richiesta restituisce `null`.
+
 ### <a name="ultimate-fallback-to-satellite-assembly"></a>Fallback finale a un assembly satellite  
  Se si vuole è possibile rimuovere risorse dall'assembly principale e specificare che il runtime caricherà le risorse di fallback finale da un assembly satellite corrispondente a impostazioni cultura specifiche. Per controllare il processo di fallback si usa il costruttore <xref:System.Resources.NeutralResourcesLanguageAttribute.%23ctor%28System.String%2CSystem.Resources.UltimateResourceFallbackLocation%29?displayProperty=nameWithType> e si specifica un valore per il parametro <xref:System.Resources.UltimateResourceFallbackLocation> che indica se Resource Manager estrarrà le risorse di fallback dall'assembly principale o da un assembly satellite.  
   
- Nell'esempio seguente l'attributo <xref:System.Resources.NeutralResourcesLanguageAttribute> viene usato per archiviare le risorse di fallback di un'applicazione in un assembly satellite per la lingua francese (fr).  L'esempio include due file di testo di risorse che definiscono un'unica risorsa stringa denominata `Greeting`. Il primo file, resources.fr.txt, contiene una risorsa per la lingua francese.  
+ Nell'esempio di .NET Framework seguente viene usato l'attributo <xref:System.Resources.NeutralResourcesLanguageAttribute> per archiviare le risorse di fallback di un'applicazione in un assembly satellite per la lingua francese (`fr`).  L'esempio include due file di testo di risorse che definiscono un'unica risorsa stringa denominata `Greeting`. Il primo file, resources.fr.txt, contiene una risorsa per la lingua francese.
   
 ```  
 Greeting=Bon jour!  
@@ -183,7 +218,6 @@ vbc Example1.vb
 ```  
 Bon jour!  
 ```  
-  
 ## <a name="suggested-packaging-alternative"></a>Proposta alternativa per la creazione dei pacchetti  
  Vincoli di tempo o di budget potrebbero rendere difficile la creazione di un set di risorse per ogni subset di impostazioni cultura supportato dall'applicazione. In alternativa è possibile creare un solo assembly satellite per impostazioni cultura padre usabili da tutte le impostazioni cultura secondarie correlate. Ad esempio è possibile offrire un singolo assembly satellite inglese (en) che viene recuperato da utenti che richiedono risorse di regioni specifiche di lingua inglese e un singolo assembly satellite tedesco (de) per gli utenti che richiedono risorse di regioni specifiche di lingua tedesca. Le richieste per il tedesco parlato in Germania (de-DE), in Austria (de-AT) e in Svizzera (de-CH) avranno come fallback l'assembly satellite tedesco (de). Le risorse predefinite sono il fallback finale e come tali sono quelle richieste dalla maggior parte degli utenti dell'applicazione, perciò vanno scelte con attenzione. Questo approccio consente di distribuire risorse meno specifiche a livello di impostazioni cultura, ma in grado di ridurre notevolmente i costi di localizzazione dell'applicazione.  
   

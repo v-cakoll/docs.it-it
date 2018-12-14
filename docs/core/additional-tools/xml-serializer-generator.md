@@ -1,17 +1,17 @@
 ---
-title: Uso dello strumento Microsoft per la generazione di serializzatori XML in .NET Core
-description: Panoramica dello strumento Microsoft per la generazione di serializzatori XML.
+title: Strumento Microsoft per la generazione di serializzatori XML - .NET Core
+description: Panoramica dello strumento Microsoft per la generazione di serializzatori XML. Usare lo strumento per la generazione di serializzatori XML per generare un assembly di serializzazione XML per i tipi contenuti nel progetto.
 author: mlacouture
 ms.author: johalex
 ms.date: 01/19/2017
 ms.topic: tutorial
-ms.custom: mvc
-ms.openlocfilehash: 98d85821784757db903c97e240c55a3d7bb656d5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.custom: mvc, seodec18
+ms.openlocfilehash: 3712ac35a9e08b04a0f555642f43055e9e6232e2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33214556"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151759"
 ---
 # <a name="using-microsoft-xml-serializer-generator-on-net-core"></a>Uso dello strumento Microsoft per la generazione di serializzatori XML in .NET Core
 
@@ -30,7 +30,7 @@ Lo [strumento per la generazione di serializzatori XML (sgen.exe)](../../standar
 
 Per completare questa esercitazione:
 
-* Installare [.NET Core SDK 2.1.3 o versione successiva](https://www.microsoft.com/net/download)
+* Installare [.NET Core 2.1 SDK o versione successiva](https://www.microsoft.com/net/download).
 * Installare l'editor del codice preferito, se non è già disponibile.
 
 > [!TIP]

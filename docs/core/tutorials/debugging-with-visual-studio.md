@@ -1,20 +1,18 @@
 ---
-title: Debug dell'applicazione .NET Core Hello World C# o Visual Basic con Visual Studio 2017
+title: Eseguire il debug dell'applicazione .NET Core Hello World con Visual Studio 2017
 description: Informazioni su come eseguire il debug di un'app Hello World scritta in C# o Visual Basic con Visual Studio 2017.
-author: BillWagner
-ms.author: wiwagn
 ms.date: 12/15/2017
-ms.custom: vs-dotnet
-ms.openlocfilehash: 53e4549f4790bc0756cd0ad0b903b3dc25d2f66a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.custom: vs-dotnet, seodec18
+ms.openlocfilehash: df153740e492b33c91b4cfc2f148a4113f1ab5d0
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200124"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147528"
 ---
-# <a name="debug-your-hello-world-application-with-visual-studio-2017"></a>Debug dell'applicazione Hello World con Visual Studio 2017
+# <a name="debug-your-c-or-visual-basic-net-core-hello-world-application-using-visual-studio-2017"></a>Eseguire il debug dell'applicazione .NET Core Hello World C# o Visual Basic con Visual Studio 2017
 
-Finora sono stati seguiti i passaggi nell'argomento [Compilare un'applicazione Hello World usando C# con .NET Core in Visual Studio 2017](.\with-visual-studio.md) o [Compilare un'applicazione Hello World in Visual Basic con .NET Core in Visual Studio 2017](vb-with-visual-studio.md), per creare un'applicazione console semplice. Dopo aver scritto e compilato l'applicazione, è possibile iniziare a testarla. Visual Studio include un set completo di strumenti di debug che è possibile usare durante il test e la risoluzione dei problemi dell'applicazione.
+Finora sono stati seguiti i passaggi nell'argomento [Compilare un'applicazione Hello World usando C# con .NET Core in Visual Studio 2017](with-visual-studio.md) o [Compilare un'applicazione Hello World in Visual Basic con .NET Core in Visual Studio 2017](vb-with-visual-studio.md), per creare un'applicazione console semplice. Dopo aver scritto e compilato l'applicazione, è possibile iniziare a testarla. Visual Studio include un set completo di strumenti di debug che è possibile usare durante il test e la risoluzione dei problemi dell'applicazione.
 
 ## <a name="debugging-in-debug-mode"></a>Debug in modalità di debug
 
@@ -228,4 +226,4 @@ Per compilare e testare la versione di rilascio dell'applicazione console, modif
 
 Quando si preme F5 o si sceglie **Compila soluzione** dal menu **Compila**, Visual Studio compila la versione di rilascio dell'applicazione console. A questo punto è possibile eseguirla e testarla come è stato fatto per la versione di debug.
 
-Dopo aver terminato il debug dell'applicazione, il passaggio successivo consiste nel pubblicare una versione distribuibile dell'applicazione. Per informazioni su come eseguire questa operazione, vedere [Pubblicazione dell'applicazione Hello World con Visual Studio 2017](./publishing-with-visual-studio.md).
+Dopo aver terminato il debug dell'applicazione, il passaggio successivo consiste nel pubblicare una versione distribuibile dell'applicazione. Per informazioni su come eseguire questa operazione, vedere [Pubblicazione dell'applicazione Hello World con Visual Studio 2017](publishing-with-visual-studio.md).

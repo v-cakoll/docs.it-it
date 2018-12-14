@@ -1,17 +1,18 @@
 ---
-title: Scelta della versione di .NET Core
-description: Informazioni su come .NET Core ricerca e sceglie le versioni runtime per un programma.
+title: Selezionare la versione di .NET Core da usare
+description: Informazioni su come .NET Core ricerca e sceglie automaticamente le versioni runtime per un programma. Questo articolo illustra anche come forzare una versione specifica.
 author: billwagner
 ms.author: wiwagn
 ms.date: 06/27/2018
-ms.openlocfilehash: 5f6ec628a93dd349b003dfc9b89f84ff7a93a05a
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.custom: seodec18
+ms.openlocfilehash: 3e9a60221a5769d124bcc137d9401367a7713abb
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841540"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127238"
 ---
-# <a name="net-core-version-selection"></a>Scelta della versione di .NET Core
+# <a name="select-the-net-core-version-to-use"></a>Selezionare la versione di .NET Core da usare
 
 [!INCLUDE [topic-appliesto-net-core-2plus](../../../includes/topic-appliesto-net-core-2plus.md)]
 
@@ -80,7 +81,7 @@ I framework di destinazione .NET Standard sono anche limitati al framework di de
 
 ## <a name="framework-dependent-apps-roll-forward"></a>Roll forward delle app dipendenti dal framework
 
-Si esegue un'applicazione dall'origine con [`dotnet run`](../tools/dotnet-run.md). `dotnet run` compila ed esegue un'applicazione. Il file eseguibile `dotnet` è l'**host** per l'applicazione negli ambienti di sviluppo.
+Quando si esegue un'applicazione dall'origine con [`dotnet run`](../tools/dotnet-run.md), da una [**distribuzione dipendente dal framework**](../deploying/index.md#framework-dependent-deployments-fdd) con [`dotnet myapp.dll`](../tools/dotnet.md#description) o da un [**file eseguibile dipendente dal framework**](../deploying/index.md#framework-dependent-executables-fde) con `myapp.exe`, il file eseguibile `dotnet` è l'**host** dell'applicazione.
 
 L'host sceglie la versione di patch più recente installata nel computer. Se ad esempio è stato specificato `netcoreapp2.0` nel file di progetto e `2.0.4` è il runtime .NET più recente installato, viene usato il runtime `2.0.4`.
 

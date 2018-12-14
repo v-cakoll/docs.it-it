@@ -1,18 +1,18 @@
 ---
-title: Compilazione di un'applicazione Hello World con .NET Core e C# in Visual Studio 2017
+title: Compilare un'applicazione Hello World usando C# con .NET Core in Visual Studio 2017
 description: Informazioni su come compilare una semplice applicazione console .NET Core con C# usando Visual Studio 2017.
 author: BillWagner
 ms.author: wiwagn
 ms.date: 09/13/2017
-ms.custom: vs-dotnet
-ms.openlocfilehash: 031c0a433391fbe4cdd40f6ce648f476787baf48
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.custom: vs-dotnet, seodec18
+ms.openlocfilehash: 9b28c1523196650c30a54ccaa86fe23ed60e96f9
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003022"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129623"
 ---
-# <a name="build-a-c-hello-world-application-with-net-core-in-visual-studio-2017"></a>Compilare un'applicazione Hello World usando C# con .NET Core in Visual Studio 2017
+# <a name="build-a-c-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>Compilare un'applicazione Hello World usando C# con .NET Core SDK in Visual Studio 2017
 
 Questo argomento offre un'introduzione dettagliata per la compilazione, il debug e la pubblicazione di una semplice applicazione console .NET Core usando C# in Visual Studio 2017. Visual Studio 2017 offre un ambiente di sviluppo completo per la creazione di applicazioni .NET Core. Se l'applicazione non ha alcuna dipendenza specifica della piattaforma, è possibile eseguirla su qualsiasi piattaforma usata come destinazione da .NET Core o su qualsiasi sistema in cui è installato .NET Core.
 

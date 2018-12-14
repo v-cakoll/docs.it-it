@@ -3,12 +3,12 @@ title: Esplorare il codice con il visualizzatore di sintassi Roslyn in Visual St
 description: Il visualizzatore di sintassi è uno strumento visivo che consente di esaminare i modelli che .NET Compiler Platform SDK genera per il codice.
 ms.date: 03/07/2018
 ms.custom: mvc, vs-dotnet
-ms.openlocfilehash: 97a058eed8c0babebd3a41ec91875bef83ac3527
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 9b283f656b5c468a2270abe9818a89218ce63d16
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45750206"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143564"
 ---
 # <a name="explore-code-with-the-roslyn-syntax-visualizer-in-visual-studio"></a>Esplorare il codice con il visualizzatore di sintassi Roslyn in Visual Studio
 
@@ -32,7 +32,7 @@ Creare un nuovo progetto usando il comando **File** > **Nuovo progetto**. È pos
 
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 ![Visualizzazione di un albero della sintassi di C#](media/syntax-visualizer/visualize-csharp.png)
-# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
 ![Visualizzazione di un albero della sintassi di Visual Studio](media/syntax-visualizer/visualize-visual-basic.png)
 
 ---
@@ -62,7 +62,7 @@ Fare clic con il pulsante destro su un elemento qualsiasi dell'albero e fare cli
 Sarà visualizzata una rappresentazione grafica del sottoalbero corrispondente all'elemento selezionato. Provare questi passaggi per il nodo **MethodDeclaration** corrispondente al metodo `Main()` nell'esempio di C#. Il grafico di sintassi visualizzato sarà simile al seguente:
 
 ![Visualizzazione di un grafico di sintassi di C#](media/syntax-visualizer/csharp-syntax-graph.png)
-# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
 
 Provare la stessa procedura per il nodo **SubBlock** corrispondente al metodo `Main()` nell'esempio di Visual Basic precedente. Il grafico di sintassi visualizzato sarà simile al seguente:
 
@@ -128,7 +128,7 @@ Controllare il simbolo che corrisponde a qualsiasi tipo, metodo, proprietà dich
 
 Gli esempi precedenti di Visual Basic possono essere facilmente replicati in C#. Digitare `using C = System.Console;` invece di `Imports C = System.Console` per l'alias. I passaggi precedenti in C# restituiscono gli stessi risultati nella finestra del visualizzatore.
 
-È possibile eseguire l'ispezione semantica solo sui nodi. Non è disponibile su token o elementi semplici. Non tutti i nodi contengono informazioni semantiche interessanti da controllare. Quando un nodo non contiene informazioni semantiche interessanti, facendo clic su **View * Symbol (if any)**(Visualizza simbolo * (se esiste)), la griglia delle proprietà sarà vuota.
+È possibile eseguire l'ispezione semantica solo sui nodi. Non è disponibile su token o elementi semplici. Non tutti i nodi contengono informazioni semantiche interessanti da controllare. Quando un nodo non contiene informazioni semantiche interessanti, facendo clic su **View \* Symbol (if any)** (Visualizza simbolo * se esistente) apparirà una griglia delle proprietà vuota.
 
 Altre informazioni sulle API per l'esecuzione dell'analisi semantica sono disponibile nel documento di anteprima [Usare la semantica](work-with-semantics.md).
 

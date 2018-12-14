@@ -3,12 +3,12 @@ title: Novità di C# 7.0 - Guida a C#
 description: Panoramica delle nuove funzionalità incluse nella prossima versione 7 del linguaggio C#.
 ms.date: 12/21/2016
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 734fdf962ef481a3b434e9ce17e535eadd52f420
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 0a8b20606e5133c45f26377ea1c2eba58a1aa3af
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47237384"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155288"
 ---
 # <a name="whats-new-in-c-70"></a>Novità di C# 7.0
 
@@ -22,7 +22,7 @@ C# 7.0 aggiunge diverse nuove funzionalità al linguaggio C#:
 * [Criteri di ricerca](#pattern-matching)
     - È possibile creare una logica di salto condizionato basata su tipi e valori arbitrari dei membri di tali tipi.
 * [Variabili locali e valori restituiti `ref`](#ref-locals-and-returns)
-    - Gli argomenti del metodo e le variabili locali possono essere riferimenti ad altre opzioni di memorizzazione.
+    - Le variabili locali del metodo e i valori restituiti possono essere riferimenti ad altre opzioni di memorizzazione.
 * [Funzioni locali](#local-functions)
     - È possibile annidare funzioni all'interno di altre funzioni per limitarne l'ambito e visibilità.
 * [Più membri con corpo di espressione](#more-expression-bodied-members)
@@ -280,6 +280,8 @@ Il linguaggio C# usa altre tre regole per evitare usi impropri delle variabili l
 L'aggiunta di variabili locali e valori restituiti ref abilita algoritmi più efficienti, evitando la copia dei valori o l'esecuzione ripetuta di operazioni di dereferenziazione.
 
 L'aggiunta di `ref` al valore restituito è una [modifica compatibile a livello di codice sorgente](version-update-considerations.md#source-compatible-changes). Il codice esistente viene compilato, ma il valore restituito ref viene copiato quando è assegnato. I chiamanti devono aggiornare l'archiviazione per il valore restituito in una variabile locale `ref` per archiviare il valore restituito come riferimento.
+
+Per altre informazioni, vedere l'articolo relativo alla [parola chiave ref](../language-reference/keywords/ref.md).
 
 ## <a name="local-functions"></a>Funzioni locali
 

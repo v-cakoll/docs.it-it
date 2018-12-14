@@ -4,12 +4,12 @@ description: Informazioni sui modelli personalizzati per qualsiasi tipo di file 
 author: guardrex
 ms.author: mairaw
 ms.date: 08/11/2017
-ms.openlocfilehash: 5cb160683ad373f1192945163495bf3e7957567b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 4e5dd11df8204d86009b0ece108ef877dc54f23e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525967"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126263"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>Modelli personalizzati per dotnet new
 
@@ -43,7 +43,7 @@ File e cartelle archiviati nel modello non sono limitati ai tipi di progetto .NE
 
 Il file *template.json* si trova in una cartella *.template.config* nella directory radice del modello. Il file fornisce informazioni di configurazione al motore del modello. Per la configurazione minima sono necessari i membri visualizzati nella tabella seguente, sufficiente per creare un modello funzionale.
 
-| Member            | Tipo          | Descrizione |
+| Member            | Tipo          | Description |
 | ----------------- | ------------- | ----------- |
 | `$schema`         | URI           | Lo schema JSON per il file *template.json*. Gli editor che supportano gli schemi JSON abilitano le funzionalità di modifica JSON quando viene specificato lo schema. Ad esempio, [Visual Studio Code](https://code.visualstudio.com/) richiede questo membro per abilitare IntelliSense. Usare un valore di `http://json.schemastore.org/template`. |
 | `author`          | stringa        | L'autore del modello. |
@@ -81,7 +81,7 @@ Attualmente il pacchetto di un modello personalizzato viene creato in Windows co
 
 Il contenuto della cartella del progetto e il relativo file *.template.config/template.json* vengono inseriti in una cartella denominata *content*. Accanto alla cartella *content* aggiungere un file [ *nuspec* ](/nuget/create-packages/creating-a-package), ovvero un file manifesto XML che descrive il contenuto di un pacchetto e guida il processo di creazione del pacchetto NuGet. All'interno di un elemento  **\<packageTypes>** nel file *nuspec*, includere un elemento  **\<packageType>** con un valore dell'attributo `name` di `Template`. La cartella *content* e il file *nuspec* devono trovarsi nella stessa directory. La tabella mostra gli elementi del file *nuspec* minimi necessari per produrre un modello come pacchetto NuGet.
 
-| Elemento            | Tipo   | Descrizione |
+| Elemento            | Tipo   | Description |
 | ------------------ | ------ | ----------- |
 | **\<authors>**     | stringa | Elenco con valori delimitati da virgola di autori di pacchetti, corrispondenti ai nomi di profili in nuget.org. Gli autori, visualizzati nella raccolta NuGet in nuget.org, vengono usati per creare riferimenti incrociati ai pacchetti dello stesso autore. |
 | **\<description>** | stringa | Descrizione lunga del pacchetto per la visualizzazione dell'interfaccia utente. |
@@ -129,7 +129,7 @@ dotnet new -u <NUGET_PACKAGE_ID>
 
 ### <a name="to-uninstall-a-template-from-a-local-nupkg-file"></a>Per disinstallare un modello da un file nupkg locale
 
-Per disinstallare il modello, non tentare di usare il percorso del file *nupkg*. *Il tentativo di disinstallare un modello usando `dotnet new -u <PATH_TO_NUPKG_FILE>` ha esito negativo.* Fare riferimento al pacchetto in base al relativo `id`:
+Per disinstallare il modello, non provare a usare il percorso del file *nupkg*. Il tentativo di disinstallare un modello usando `dotnet new -u <PATH_TO_NUPKG_FILE>` ha esito negativo. Fare riferimento al pacchetto in base al relativo `id`:
 
 ```console
 dotnet new -u <NUGET_PACKAGE_ID>
@@ -137,7 +137,7 @@ dotnet new -u <NUGET_PACKAGE_ID>
 
 ### <a name="to-uninstall-a-template-from-a-file-system-directory"></a>Per disinstallare un modello da una directory del file system
 
-`FILE_SYSTEM_DIRECTORY` è la cartella di progetto che contiene il progetto e la cartella *.template.config*:
+`FILE_SYSTEM_DIRECTORY` è la cartella di progetto che contiene il progetto e la cartella *.template.config*. Il percorso specificato deve essere il percorso assoluto. Il tentativo di disinstallare un modello usando un percorso relativo ha esito negativo. Per altre informazioni, vedere l'articolo [dotnet new](dotnet-new.md).
 
 ```console
 dotnet new -u <FILE_SYSTEM_DIRECTORY>
@@ -153,8 +153,8 @@ dotnet new <TEMPLATE>
 
 ## <a name="see-also"></a>Vedere anche
 
-* [Creare un modello personalizzato per dotnet new (esercitazione)](../tutorials/create-custom-template.md)  
-* [Wiki del repository GitHub dotnet/templating](https://github.com/dotnet/templating/wiki)  
-* [Repository GitHub dotnet/dotnet-template-samples](https://github.com/dotnet/dotnet-template-samples)  
-* [Come creare modelli personalizzati per dotnet new](https://blogs.msdn.microsoft.com/dotnet/2017/04/02/how-to-create-your-own-templates-for-dotnet-new/)  
-* Lo schema [*template.JSON* nell'archivio di schemi JSON](http://json.schemastore.org/template)  
+* [Creare un modello personalizzato per dotnet new (esercitazione)](../tutorials/create-custom-template.md)
+* [Wiki del repository GitHub dotnet/templating](https://github.com/dotnet/templating/wiki)
+* [Repository GitHub dotnet/dotnet-template-samples](https://github.com/dotnet/dotnet-template-samples)
+* [Come creare modelli personalizzati per dotnet new](https://blogs.msdn.microsoft.com/dotnet/2017/04/02/how-to-create-your-own-templates-for-dotnet-new/)
+* Lo schema [*template.JSON* nell'archivio di schemi JSON](http://json.schemastore.org/template)

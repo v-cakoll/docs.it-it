@@ -1,28 +1,29 @@
 ---
-title: Trasformazioni dati
+title: Trasformazioni dati in ML.NET
 description: Esplorare le diverse trasformazioni dati supportate in ML.NET.
+author: JRAlexander
 ms.date: 10/16/2018
-ms.openlocfilehash: 5df4598de6fcd08689d72c378f51d792860ef49c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c169319937dac13747935e451952bd75d4cc174d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187741"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143948"
 ---
-# <a name="data-transforms"></a>Trasformazioni dati
+# <a name="data-transforms-in-mlnet"></a>Trasformazioni dati in ML.NET
 
 Le tabelle seguenti contengono informazioni su tutte le trasformazioni dati supportate in ML.NET (selezionare il tipo di trasformazione dati per passare alla tabella corrispondente):
 
 * [Categorie](#categorical)
 * [Combinatori e separatori](#combiners-and-segregators)
-* [Selezione funzionalità](#feature-selection)
-* [Algoritmi di estrazione funzionalità](#featurizers)
+* [Selezione delle caratteristiche](#feature-selection)
+* [Algoritmi di estrazione delle caratteristiche](#featurizers)
 * [Analisi etichette](#label-parsing)
 * [Valori mancanti](#missing-values)
 * [Normalizzazione](#normalization)
 * [Filtri di riga](#row-filters)
 * [Schema](#schema)
-* [Elaborazione testo ed estrazione funzionalità](#text-processing-and-featurization)
+* [Elaborazione di testo ed estrazione delle caratteristiche](#text-processing-and-featurization)
 * [Varie](#miscellaneous)
 
 > [!NOTE]
@@ -30,39 +31,39 @@ Le tabelle seguenti contengono informazioni su tutte le trasformazioni dati supp
 
 ## <a name="categorical"></a>Categorie
 
-| Transform | Definizione |
+| Trasformazione | Definizione |
 | --- | --- |
 | <xref:Microsoft.ML.Legacy.Transforms.CategoricalHashOneHotVectorizer> | Codifica la variabile categorica con la codifica basata su hash. |
 | <xref:Microsoft.ML.Legacy.Transforms.CategoricalOneHotVectorizer> | Codifica la variabile categorica con la codifica one-hot in base a un dizionario di termini. |
 
 ## <a name="combiners-and-segregators"></a>Combinatori e separatori
 
-| Transform | Definizione |
+| Trasformazione | Definizione |
 | --- | --- |
 | <xref:Microsoft.ML.Legacy.Transforms.CombinerByContiguousGroupId> | Raggruppa i valori di una colonna scalare in un vettore in base a un ID gruppo contiguo. |
-| <xref:Microsoft.ML.Legacy.Transforms.FeatureCombiner> | Combina tutte le funzionalità in una colonna funzionalità. |
+| <xref:Microsoft.ML.Legacy.Transforms.FeatureCombiner> | Combina tutte le caratteristiche in una colonna. |
 | <xref:Microsoft.ML.Legacy.Transforms.ManyHeterogeneousModelCombiner> | Combina una sequenza di oggetti TransformModel e un oggetto PredictorModel in un singolo oggetto PredictorModel. |
 | <xref:Microsoft.ML.Legacy.Transforms.ModelCombiner> | Combina una sequenza di oggetti TransformModel in un singolo modello. |
 | <xref:Microsoft.ML.Legacy.Transforms.Segregator> | Separa le colonne vettore in sequenze di righe, operazione inversa del raggruppamento trasformazione. |
 | <xref:Microsoft.ML.Legacy.Transforms.TwoHeterogeneousModelCombiner> | Combina un oggetto TransformModel e un oggetto PredictorModel in un singolo oggetto PredictorModel. |
 
-## <a name="feature-selection"></a>Selezione funzionalità
+## <a name="feature-selection"></a>Selezione delle caratteristiche
 
-| Transform | Definizione |
+| Trasformazione | Definizione |
 | --- | --- |
 | <xref:Microsoft.ML.Legacy.Transforms.FeatureSelectorByCount> | Seleziona gli slot per i quali il conteggio dei valori non predefiniti è maggiore o uguale a una determinata soglia. |
 | <xref:Microsoft.ML.Legacy.Transforms.FeatureSelectorByMutualInformation> | Seleziona gli slot top k in tutte le colonne specificate ordinate in base alle relative informazioni reciproche con la colonna etichetta. |
 
-## <a name="featurizers"></a>Algoritmi di estrazione funzionalità
+## <a name="featurizers"></a>Algoritmi di estrazione delle caratteristiche
 
-| Transform | Definizione |
+| Trasformazione | Definizione |
 | --- | --- |
 | <xref:Microsoft.ML.Legacy.Transforms.HashConverter> | Converte i valori colonna in hash. Questa trasformazione accetta input numerici e di testo, sia con colonne singole che vettoriali. |
 | <xref:Microsoft.ML.Legacy.Transforms.TreeLeafFeaturizer> | Esegue il training di un ensemble di alberi o lo carica da un file, quindi esegue il mapping di un vettore delle caratteristiche numerico a tre output: 1. Un vettore che contiene i singoli output dell'albero dell'ensemble di alberi. 2. Un vettore che indica le foglie su cui si basa il vettore delle caratteristiche nell'ensemble di alberi. 3. Un vettore che indica i percorsi su cui si basa il vettore delle caratteristiche nell'ensemble di alberi. Se vengono specificati sia un file di modello che un algoritmo di training, il vettore userà il file di modello. Se non viene specificato alcun elemento, il vettore eseguirà il training di un modello FastTree predefinito. In questo modo è possibile gestire le etichette chiave eseguendo il training di un modello di regressione rispetto ai relativi indici permutati facoltativamente. |
 
 ## <a name="label-parsing"></a>Analisi etichette
 
-| Transform | Definizione |
+| Trasformazione | Definizione |
 | --- | --- |
 | <xref:Microsoft.ML.Legacy.Transforms.Dictionarizer> | Converte i valori di input (parole, numeri e così via) da indicizzare in un dizionario. |
 | <xref:Microsoft.ML.Legacy.Transforms.LabelColumnKeyBooleanConverter> | Trasforma l'etichetta in chiave o bool (se necessario) per renderla appropriata per la classificazione. |
@@ -72,7 +73,7 @@ Le tabelle seguenti contengono informazioni su tutte le trasformazioni dati supp
 
 ## <a name="missing-values"></a>Valori mancanti
 
-| Transform | Definizione |
+| Trasformazione | Definizione |
 | --- | --- |
 | <xref:Microsoft.ML.Legacy.Transforms.MissingValueHandler> | Consente di gestire i valori mancanti sostituendoli con il valore predefinito o con il valore medio/min/max (solo per le colonne non di testo). È possibile facoltativamente concatenare una colonna indicatore, se il tipo di colonna di input è numerico. |
 | <xref:Microsoft.ML.Legacy.Transforms.MissingValueIndicator> | Consente di creare una colonna di output booleana con lo stesso numero di slot della colonna di input in cui il valore di output è true se manca il valore nella colonna di input. |
@@ -82,7 +83,7 @@ Le tabelle seguenti contengono informazioni su tutte le trasformazioni dati supp
 
 ## <a name="normalization"></a>Normalization
 
-| Transform | Definizione |
+| Trasformazione | Definizione |
 | --- | --- |
 | <xref:Microsoft.ML.Legacy.Transforms.BinNormalizer> | I valori vengono assegnati in bin di isodensità e viene eseguito il mapping di un valore ai relativi elementi bin_number/number_of_bins. |
 | <xref:Microsoft.ML.Legacy.Transforms.ConditionalNormalizer> | Normalizza le colonne solo se necessario. |
@@ -94,7 +95,7 @@ Le tabelle seguenti contengono informazioni su tutte le trasformazioni dati supp
 
 ## <a name="row-filters"></a>Filtri di riga
 
-| Transform | Definizione |
+| Trasformazione | Definizione |
 | --- | --- |
 | <xref:Microsoft.ML.Legacy.Transforms.RowRangeFilter> | Filtra una vista dati in una colonna di tipo Single, Double o Key (contigua). Mantiene i valori che sono compresi nell'intervallo min/max specificato. Le righe NaN vengono sempre escluse tramite filtro. Se l'input è di tipo Key, i valori min/max vengono considerati percentuali del numero di valori. |
 | <xref:Microsoft.ML.Legacy.Transforms.RowSkipAndTakeFilter> | Consente di limitare l'input a un subset di righe in un offset facoltativo. Può essere usato per implementare il paging dei dati. |
@@ -103,7 +104,7 @@ Le tabelle seguenti contengono informazioni su tutte le trasformazioni dati supp
 
 ## <a name="schema"></a>Schema
 
-| Transform | Definizione |
+| Trasformazione | Definizione |
 | --- | --- |
 | <xref:Microsoft.ML.Legacy.Transforms.ColumnConcatenator> | Concatena due colonne dello stesso tipo di elemento. |
 | <xref:Microsoft.ML.Legacy.Transforms.ColumnCopier> | Duplica le colonne dal set di dati.|
@@ -114,9 +115,9 @@ Le tabelle seguenti contengono informazioni su tutte le trasformazioni dati supp
 | <xref:Microsoft.ML.Legacy.Transforms.NGramTranslator> | Produce un elenco di conteggi di n-grammi (sequenze di valori consecutivi di lunghezza 1-n) in un vettore specifico di chiavi. Tale operazione viene eseguita creando un dizionario di n-grammi e usando l'ID nel dizionario come indice nell'elenco. | 
 | <xref:Microsoft.ML.Legacy.Transforms.OptionalColumnCreator> | Se dopo la deserializzazione la colonna di origine non esiste, creare una colonna con il tipo corretto e i valori predefiniti. |
 
-## <a name="text-processing-and-featurization"></a>Elaborazione testo ed estrazione funzionalità
+## <a name="text-processing-and-featurization"></a>Elaborazione di testo ed estrazione delle caratteristiche
 
-| Transform | Definizione |
+| Trasformazione | Definizione |
 | --- | --- |
 | <xref:Microsoft.ML.Legacy.Transforms.CharacterTokenizer> | Tokenizer orientato ai caratteri in cui il testo viene considerato una sequenza di caratteri. |
 | <xref:Microsoft.ML.Legacy.Transforms.TextFeaturizer> | Una trasformazione che converte una raccolta di documenti di testo in vettori delle caratteristiche numerici. I vettori delle caratteristiche sono conteggi normalizzati di n-grammi (parola e/o carattere) in un determinato testo in formato token. |
@@ -126,7 +127,7 @@ Le tabelle seguenti contengono informazioni su tutte le trasformazioni dati supp
 
 ## <a name="miscellaneous"></a>Varie
 
-| Transform | Definizione |
+| Trasformazione | Definizione |
 | --- | --- |
 | <xref:Microsoft.ML.Legacy.Transforms.ApproximateBootstrapSampler> | Campionamento bootstrap approssimativo. |
 | <xref:Microsoft.ML.Legacy.Transforms.BinaryPredictionScoreColumnsRenamer> | Per la stima binaria rinomina le colonne PredictedLabel e Score per includere il nome della classe positiva.|

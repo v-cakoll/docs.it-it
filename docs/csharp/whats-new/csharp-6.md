@@ -3,12 +3,12 @@ title: Novità di C# 6 - Guida a C#
 description: Informazioni sulle nuove funzionalità di C# versione 6
 ms.date: 09/22/2016
 ms.assetid: 4d879f69-f889-4d3f-a781-75194e143400
-ms.openlocfilehash: ad3515e1fc7d70e1377f007276c369d2884780f0
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6aa070d54bb1b571d4fa51538b0521a554073cbc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194033"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146741"
 ---
 # <a name="whats-new-in-c-6"></a>Novità di C# 6
 
@@ -94,9 +94,9 @@ Se l'aggiunta di questa sintassi non rimuove un metodo accessibile, si tratta di
 
 Gli *inizializzatori di proprietà automatiche* permettono di dichiarare il valore iniziale per una proprietà automatica come parte della dichiarazione di proprietà.  Nelle versioni precedenti queste proprietà dovevano avere dei setter che era necessario usare per inizializzare l'archiviazione dei dati usata dal campo sottostante. La classe dell'esempio seguente contiene il nome di uno studente e un elenco dei suoi voti:
 
-[!code-csharp[Construction](../../../samples/snippets/csharp/new-in-6/oldcode.cs#Construction)]
+[!code-csharp[Student](../../../samples/snippets/csharp/new-in-6/oldcode.cs#Student)]
  
-Man mano che la classe aumenta, è possibile includere altri costruttori. Ogni costruttore deve inizializzare questo campo oppure verranno introdotti errori.
+Man mano che la classe aumenta, è possibile includere altri costruttori. Ogni costruttore deve inizializzare la proprietà Grades, altrimenti verranno introdotti errori.
 
 C# 6 consente di assegnare un valore iniziale per la memoria usata da una proprietà automatica nella dichiarazione di proprietà automatica:
 
@@ -104,7 +104,7 @@ C# 6 consente di assegnare un valore iniziale per la memoria usata da una propri
 
 Il membro `Grades` viene inizializzato dove è dichiarato. Ciò rende più semplice eseguire l'inizializzazione esattamente una sola volta. L'inizializzazione fa parte della dichiarazione di proprietà e rende più semplice l'equivalenza tra l'allocazione di memoria e l'interfaccia pubblica per gli oggetti `Student`.
 
-Gli inizializzatori di proprietà possono essere usati con proprietà di lettura/scrittura, nonché con proprietà di sola lettura, come illustrato di seguito.
+Gli inizializzatori di proprietà possono essere usati con proprietà di sola lettura, come illustrato sopra, e con proprietà di lettura/scrittura, come illustrato di seguito.
 
 [!code-csharp[ReadWriteInitialization](../../../samples/snippets/csharp/new-in-6/newcode.cs#ReadWriteInitialization)]
 

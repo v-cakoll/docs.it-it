@@ -1,19 +1,20 @@
 ---
-title: Portabilità in .NET Core - Librerie
+title: Convertire librerie per .NET Core
 description: Informazioni su come convertire progetti di libreria da .NET Framework a .NET Core.
 author: cartermp
 ms.author: mairaw
 ms.date: 07/14/2017
-ms.openlocfilehash: eb6b8506d8df218a053242cd0b8d3097fa6d9fd3
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.custom: seodec18
+ms.openlocfilehash: 2701027ce606c215ca9c2bd4bc665bc0600342dc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199851"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143584"
 ---
-# <a name="porting-to-net-core---libraries"></a>Portabilità in .NET Core - Librerie
+# <a name="port-net-framework-libraries-to-net-core"></a>Convertire librerie .NET Framework a .NET Core
 
-Questo articolo illustra la conversione del codice di librerie per .NET Core, in modo da supportare l'esecuzione multipiattaforma.
+Informazioni su come convertire il codice delle librerie .NET Framework a .NET Core, per l'esecuzione multipiattaforma e l'estensione della copertura delle app che lo usano.
 
 ## <a name="prerequisites"></a>Prerequisiti
 
@@ -73,34 +74,17 @@ Analogamente alla sicurezza dall'accesso di codice, la trasparenza della sicurez
 
 Usare i limiti di sicurezza forniti dal sistema operativo, ad esempio la virtualizzazione, i contenitori o gli account utente, per eseguire i processi con il set di privilegi più ridotto.
 
-## <a name="converting-a-pcl-project"></a>Conversione di un progetto PCL
+## <a name="retargeting-your-net-framework-code-to-net-framework-472"></a>Ridestinazione del codice .NET Framework a .NET Framework 4.7.2
 
-È possibile convertire le destinazioni di un progetto PCL a .NET Standard caricando la libreria in Visual Studio 2017 e seguendo questa procedura:
-
-1. Fare clic con il pulsante destro del mouse sul file del progetto e scegliere **Proprietà**.
-1. In **Libreria** selezionare **Imposta come destinazione la piattaforma standard .NET**.
-
-Se i pacchetti supportano NuGet 3.0, il progetto imposta .NET Standard come destinazione.
-
-Se i pacchetti non supportano NuGet 3.0, verrà visualizzata una finestra di dialogo di Visual Studio che richiede di disinstallare i pacchetti correnti. Se si riceve questo avviso, seguire questa procedura:
-
-1. Fare clic con il pulsante destro del mouse sul progetto e scegliere **Gestisci pacchetti NuGet**.
-1. Prendere nota dei pacchetti del progetto.
-1. Disinstallare i pacchetti, uno alla volta.
-1. Potrebbe essere necessario riavviare Visual Studio per completare il processo di disinstallazione. In questo caso, viene visualizzato un pulsante **Riavvia** nella finestra **Gestione pacchetti NuGet**.
-1. Dopo il ricaricamento, il progetto è destinato a .NET Standard. Aggiungere i pacchetti che è stato richiesto di disinstallare.
-
-## <a name="retargeting-your-net-framework-code-to-net-framework-462"></a>Ridestinazione del codice .NET Framework a .NET Framework 4.6.2
-
-Se il codice non ha come destinazione .NET Framework 4.6.2, è consigliabile ridestinarlo a .NET Framework 4.6.2. Questa operazione assicura la disponibilità delle più recenti alternative alle API nei casi in cui .NET Standard non supporta le API esistenti.
+Se il codice non ha come destinazione .NET Framework 4.7.2, è consigliabile ridestinarlo a .NET Framework 4.7.2. Questa operazione assicura la disponibilità delle più recenti alternative alle API nei casi in cui .NET Standard non supporta le API esistenti.
 
 Per ciascuno dei progetti Visual Studio che si vuole trasferire, effettuare le operazioni seguenti:
 
-1. Fare clic con il pulsante destro del mouse sul progetto e scegliere Proprietà.
-1. Nell'elenco a discesa **Versione .NET Framework di destinazione** selezionare **.NET Framework 4.6.2**.
+1. Fare clic con il pulsante destro del mouse sul progetto e scegliere **Proprietà**.
+1. Nell'elenco a discesa **Versione .NET Framework di destinazione** selezionare **.NET Framework 4.7.2**.
 1. Ricompilare i progetti.
 
-Poiché i progetti hanno ora come destinazione .NET Framework 4.6.2, usare tale versione come base per la conversione del codice.
+Poiché i progetti hanno ora come destinazione .NET Framework 4.7.2, usare tale versione come base per la conversione del codice.
 
 ## <a name="determining-the-portability-of-your-code"></a>Determinazione della portabilità del codice
 
@@ -151,7 +135,7 @@ Questo approccio potrebbe costituire la scelta migliore per progetti più comple
  
 A seconda delle dimensioni della codebase, la fase di analisi può richiedere diverso tempo. Il tempo dedicato a questa fase per comprendere appieno la portata delle modifiche necessarie e per elaborare un piano consente in genere di risparmiare tempo nel lungo termine, in particolare se la codebase è complessa.
 
-Il piano può comportare la necessità di modifiche significative della CodeBase, mantenendo tuttavia come destinazione .NET Framework 4.6.2. Si tratta di una versione più strutturata dell'approccio precedente. La modalità di esecuzione del piano dipende dalle caratteristiche della codebase.
+Il piano può comportare la necessità di modifiche significative della codebase, mantenendo tuttavia come destinazione .NET Framework 4.7.2. Si tratta di una versione più strutturata dell'approccio precedente. La modalità di esecuzione del piano dipende dalle caratteristiche della codebase.
 
 ### <a name="mixing-approaches"></a>Approcci combinati
 

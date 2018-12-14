@@ -1,19 +1,20 @@
 ---
-title: Roll forward del runtime di distribuzione autonoma
+title: Roll forward del runtime per le distribuzioni di app autonome di .NET Core.
 description: Informazioni sulle modifiche di dotnet publish per le distribuzioni autonome.
 author: jralexander
 ms.author: kdollard
 ms.date: 05/31/2018
-ms.openlocfilehash: 39a23917dec1aba5142839265c555da5c1e6f09c
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.custom: seodec18
+ms.openlocfilehash: dde00cf71f0d67c8c4380748e01a4ef5c17ebb4a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37071032"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126679"
 ---
 # <a name="self-contained-deployment-runtime-roll-forward"></a>Roll forward del runtime di distribuzione autonoma
 
-Le [distribuzioni di applicazioni autonome](index.md) .NET Core includono sia le librerie che il runtime .NET Core. A partire da .NET Core SDK 2.1.300 (.NET Core 2.1), le distribuzioni di applicazioni autonome [pubblicano nel computer il runtime della patch con il numero di versione più alto](https://github.com/dotnet/designs/pull/36). Per impostazione predefinita, [`dotnet publish`](../tools/dotnet-publish.md) per una distribuzione autonoma seleziona la versione più recente installata come parte dell'SDK nel computer di pubblicazione. Ciò consente l'esecuzione dell'applicazione distribuita con le correzioni, di sicurezza e di altro tipo, disponibili durante l'esecuzione di `publish`. Per ottenere una nuova patch, l'applicazione deve essere ripubblicata. Le applicazioni autonome vengono create specificando `-r <RID>` nel comando `dotnet publish` o specificando l'[identificatore di runtime](../rid-catalog.md) nel file di progetto (csproj o vbproj) o nella riga di comando.
+Le [distribuzioni di applicazioni autonome](index.md) .NET Core includono sia le librerie che il runtime .NET Core. A partire da .NET Core 2.1 SDK (versione 2.1.300), le distribuzioni di applicazioni autonome [pubblicano nel computer il runtime della patch con il numero di versione più alto](https://github.com/dotnet/designs/pull/36). Per impostazione predefinita, [`dotnet publish`](../tools/dotnet-publish.md) per una distribuzione autonoma seleziona la versione più recente installata come parte dell'SDK nel computer di pubblicazione. Ciò consente l'esecuzione dell'applicazione distribuita con le correzioni, di sicurezza e di altro tipo, disponibili durante l'esecuzione di `publish`. Per ottenere una nuova patch, l'applicazione deve essere ripubblicata. Le applicazioni autonome vengono create specificando `-r <RID>` nel comando `dotnet publish` o specificando l'[identificatore di runtime](../rid-catalog.md) nel file di progetto (csproj o vbproj) o nella riga di comando.
 
 ## <a name="patch-version-roll-forward-overview"></a>Panoramica del roll forward della versione della patch
 

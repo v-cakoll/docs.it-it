@@ -1,19 +1,20 @@
 ---
-title: Organizzare il progetto per il supporto di .NET Framework e .NET Core
+title: Organizzare i progetti per .NET Framework e .NET Core
 description: Indicazioni per i responsabili di progetti che desiderano compilare la propria soluzione affiancando .NET Framework e .NET Core.
 author: conniey
 ms.author: mairaw
 ms.date: 04/06/2017
-ms.openlocfilehash: f8ca0d08c9e3802c71d53c831592ee4388ab5512
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.custom: seodec18
+ms.openlocfilehash: cfb3670bda887792389c7cee3f65397e649304d5
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512266"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146927"
 ---
-# <a name="organizing-your-project-to-support-net-framework-and-net-core"></a>Organizzare il progetto per il supporto di .NET Framework e .NET Core
+# <a name="organize-your-project-to-support-both-net-framework-and-net-core"></a>Organizzare il progetto per il supporto sia di .NET Framework che di .NET Core
 
-Questo articolo offre indicazioni per i responsabili di progetto che intendono compilare la propria soluzione affiancando .NET Framework e .NET Core. Offre diverse opzioni per organizzare i progetti in modo da consentire agli sviluppatori di raggiungere tale obiettivo. L'elenco seguente visualizza alcuni scenari tipici da considerare per la scelta della modalità di configurazione del layout di progetto da usare con .NET Core. È possibile che l'elenco non includa tutti gli aspetti desiderati. Definire le priorità in base alle esigenze.
+Informazioni su come creare una soluzione che viene compilata sia per .NET Framework che per .NET Core side-by-side. Vedere le diverse opzioni per organizzare i progetti e poter raggiungere tale obiettivo. Ecco alcuni scenari tipici da considerare quando si decide quale modalità di configurazione del layout di progetto usare con .NET Core. È possibile che l'elenco non includa tutti gli aspetti desiderati. Definire le priorità in base alle esigenze.
 
 * [**Combinare progetti esistenti e progetti .NET Core in singoli progetti**][option-csproj]
 
@@ -75,7 +76,7 @@ Modifiche da notare:
 [example-initial-project]: media/project-structure/project.png "Progetto esistente"
 [example-initial-project-code]: https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library/
 
-[example-csproj]: media/project-structure/project.csproj.png "Creare un file csproj con più framework come destinazione"
+[example-csproj]: media/project-structure/project.csproj.png "Creare un file con estensione csproj con più framework come destinazione"
 [example-csproj-code]: https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj/
 [example-csproj-netcore]: https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj/src/Car/Car.csproj
 

@@ -4,12 +4,12 @@ description: Il comando dotnet new consente di creare nuovi progetti .NET Core i
 author: mairaw
 ms.author: mairaw
 ms.date: 10/24/2018
-ms.openlocfilehash: 56d76f1dd54097f9cf20129d74057235290c273c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a8d486f569f31d68d5659ac6a80d615474ef2506
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188202"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53131482"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -49,7 +49,7 @@ dotnet new [-h|--help]
 
 ---
 
-## <a name="description"></a>Descrizione
+## <a name="description"></a>Description
 
 Il comando `dotnet new` rappresenta un modo pratico per inizializzare un progetto .NET Core valido.
 
@@ -71,6 +71,7 @@ Il comando contiene un elenco predefinito di modelli. Usare `dotnet new -l` per 
 | Libreria di classi                                | `classlib`       | [C#], F#, VB  |
 | Progetto di unit test                            | `mstest`         | [C#], F#, VB  |
 | Progetto di xUnit test                           | `xunit`          | [C#], F#, VB  |
+| Progetto di NUnit test                           | `nunit`          | [C#], F#, VB  |
 | Pagina Razor                                   | `page`           | [C#]          |
 | MVC ViewImports                              | `viewimports`    | [C#]          |
 | MVC ViewStart                                | `viewstart`      | [C#]          |

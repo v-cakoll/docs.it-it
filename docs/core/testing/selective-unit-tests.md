@@ -1,15 +1,16 @@
 ---
-title: Esecuzione di unit test selettivi
-description: Illustra come utilizzare un'espressione di filtro per eseguire unit test selettivi con il comando dotnet test.
+title: Esecuzione di unit test selettivi - .NET Core
+description: Come usare un'espressione di filtro per eseguire unit test selettivi con il comando dotnet test in .NET Core.
 author: smadala
 ms.author: mairaw
 ms.date: 03/22/2017
-ms.openlocfilehash: 428e31014f5d8d487deb7c4b4317ebcef13c294d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.custom: seodec18
+ms.openlocfilehash: 3c24fb8cc5024399ae523801373b0fd8eff85f45
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517220"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151746"
 ---
 # <a name="running-selective-unit-tests"></a>Esecuzione di unit test selettivi
 

@@ -11,12 +11,12 @@ metadata:
   interactive: csharp
   nextTutorialHref: interpolated-strings.yml
   nextTutorialTitle: Interpolazione di stringhe in C#
-  ms.openlocfilehash: 492922177cf213400629fac79da30a51bdbf46e5
-  ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+  ms.openlocfilehash: a3db445f522bc3360629c17386cad4423fcd1b43
+  ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
   ms.translationtype: HT
   ms.contentlocale: it-IT
-  ms.lasthandoff: 10/28/2018
-  ms.locfileid: "50201665"
+  ms.lasthandoff: 12/10/2018
+  ms.locfileid: "53147161"
 items:
 - durationInMinutes: 1
   content: >
@@ -32,7 +32,7 @@ items:
   content: "I **cicli** rappresentano un altro concetto importante per la creazione di programmi di più grandi dimensioni. I cicli vengono usati per ripetere istruzioni che si vuole eseguire più volte. Provare questo codice nella finestra interattiva:\n\n```csharp\nint counter = 0;\nwhile (counter < 10)\n{\n  Console.WriteLine($\"Hello World! The counter is {counter}\");\n  counter++;\n}\n```\n\nL'istruzione `while` verifica una condizione ed esegue l'istruzione che segue `while`. Ripeterà la verifica della condizione e l'esecuzione di tali istruzioni fino a quando la condizione è false.\n\nQuesto esempio include un altro operatore nuovo. I caratteri `++` dopo la variabile `counter` rappresentano l'operatore di **incremento**. Questo operatore aggiunge 1 al valore del contatore e archivia il valore nella variabile contatore.\n\n> [!IMPORTANT]\n> Assicurarsi che la condizione del ciclo `while` passi a false quando si esegue il codice. In caso contrario, si crea un **ciclo infinito** in cui il programma non termina mai. Non è prevista una dimostrazione di questo scenario, perché in questo caso si verifica il timeout del motore che esegue il codice e il programma non produrrà alcun output.\n\nIl ciclo `while` testa la condizione prima di eseguire il codice dopo `while`. Il ciclo `do` ... `while` esegue prima il codice e poi controlla la condizione, come segue:\n\n```csharp\nint counter = 0;\ndo\n{\n  Console.WriteLine($\"Hello World! The counter is {counter}\");\n  counter++;\n} while (counter < 10);\n```\n\nQuesto ciclo `do` e il ciclo `while` precedente funzionano allo stesso modo. \n\nNella prossima lezione verrà presentata un'ultima istruzione di ciclo.\n\n> [!NOTE]\n> Questa esperienza di scrittura del codice online è in modalità di anteprima. Se si verificano problemi, segnalarli [nel repository dotnet/try](https://github.com/dotnet/try/issues).\n"
 - title: Usare il ciclo for
   durationInMinutes: 5
-  content: "Un'altra istruzione di ciclo comune nel codice C# è il ciclo `for`. Provare questo codice nella finestra interattiva:\n\n```csharp\nfor(int counter = 0; counter < 10; counter++)\n{\n  Console.WriteLine($\"Hello World! The counter is {counter}\");\n} \n```\n\nQuesto codice esegue le stesse operazioni di ciclo `while` e `do` già usate. L'istruzione `for` è composta da tre parti che ne controllano il funzionamento. \n\nLa prima parte è l'**inizializzatore for**: `for counter = 0;` dichiara che `counter` è la variabile di ciclo e imposta il valore iniziale su `0`.\n\nLa parte centrale è la **condizione for**: `counter < 10` dichiara che questo ciclo `for` continua l'esecuzione fino a quando il valore del contatore è minore di 10.\n\nLa parte finale è l'**iteratore for**: `counter++` specifica come modificare la variabile di ciclo dopo l'esecuzione del blocco successivo all'istruzione `for`. In questo caso, specifica che `counter` deve essere incrementato di 1 a ogni esecuzione del blocco.\n\nSperimentare da soli questi elementi. Eseguire queste prove:\n\n- Cambiare l'inizializzatore in modo che inizi da un valore diverso.\n- Cambiare la condizione in modo che si interrompa in corrispondenza di un valore diverso.\n\nAl termine, passare alla prossima lezione che prevede la scrittura di codice per usare quanto finora appreso.\n\n> [!NOTE]\n> Questa esperienza di scrittura del codice online è in modalità di anteprima. Se si verificano problemi, segnalarli [nel repository dotnet/try](https://github.com/dotnet/try/issues).\n"
+  content: "Un'altra istruzione di ciclo comune nel codice C# è il ciclo `for`. Provare questo codice nella finestra interattiva:\n\n```csharp\nfor(int counter = 0; counter < 10; counter++)\n{\n  Console.WriteLine($\"Hello World! The counter is {counter}\");\n} \n```\n\nQuesto codice esegue le stesse operazioni di ciclo `while` e `do` già usate. L'istruzione `for` è composta da tre parti che ne controllano il funzionamento. \n\nLa prima parte è l'**inizializzatore for**: `int counter = 0;` dichiara che `counter` è la variabile di ciclo e imposta il valore iniziale su `0`.\n\nLa parte centrale è la **condizione for**: `counter < 10` dichiara che questo ciclo `for` continua l'esecuzione fino a quando il valore del contatore è minore di 10.\n\nLa parte finale è l'**iteratore for**: `counter++` specifica come modificare la variabile di ciclo dopo l'esecuzione del blocco successivo all'istruzione `for`. In questo caso, specifica che `counter` deve essere incrementato di 1 a ogni esecuzione del blocco.\n\nSperimentare da soli questi elementi. Eseguire queste prove:\n\n- Cambiare l'inizializzatore in modo che inizi da un valore diverso.\n- Cambiare la condizione in modo che si interrompa in corrispondenza di un valore diverso.\n\nAl termine, passare alla prossima lezione che prevede la scrittura di codice per usare quanto finora appreso.\n\n> [!NOTE]\n> Questa esperienza di scrittura del codice online è in modalità di anteprima. Se si verificano problemi, segnalarli [nel repository dotnet/try](https://github.com/dotnet/try/issues).\n"
 - title: Combinare rami e cicli
   durationInMinutes: 12
   content: >
@@ -80,4 +80,17 @@ items:
 
     > Questa esperienza di scrittura del codice online è in modalità di anteprima. Se si verificano problemi, segnalarli [nel repository dotnet/try](https://github.com/dotnet/try/issues).
 - title: La procedura è stata completata.
-  content: "È stata completata l'esercitazione \"Cicli e rami\". \n\nÈ possibile continuare con queste esercitazioni nell'ambiente di sviluppo. Dopo aver acquisito familiarità con i concetti di base dello [sviluppo locale](local-environment.md), scegliere un'esercitazione. È possibile provare questo stesso esercizio, passare direttamente all'esercitazione seguente o riprendere l'inizio della serie con l'esercitazione [Numeri in C#](numbers-in-csharp-local.md).\n\nMaggiori informazioni su questi concetti sono disponibili in questi argomenti:\n\n[Istruzioni if ed else](../../language-reference/keywords/if-else.md)   \n[Istruzione while](../../language-reference/keywords/while.md)   \n[Istruzione do](../../language-reference/keywords/do.md)   \n[Istruzione for](../../language-reference/keywords/for.md)"
+  content: >-
+    È stata completata l'esercitazione interattiva "Rami e cicli". Fare clic sul collegamento **Stringhe interpolate** qui sotto per avviare la prossima esercitazione interattiva oppure visitare il [sito Web .NET](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial) per scaricare .NET Core SDK, creare un progetto nel proprio computer e continuare a scrivere codice. Il passaggio "Per continuare ad apprendere" consente di tornare a queste esercitazioni.
+
+
+    Maggiori informazioni su questi concetti sono disponibili in questi argomenti:
+
+
+    - [Istruzioni if ed else](../../language-reference/keywords/if-else.md)
+
+    - [Istruzione while](../../language-reference/keywords/while.md)
+
+    - [Istruzione do](../../language-reference/keywords/do.md)
+
+    - [Istruzione for](../../language-reference/keywords/for.md)

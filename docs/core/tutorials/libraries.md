@@ -1,15 +1,16 @@
 ---
 title: Sviluppo di librerie con strumenti multipiattaforma
-description: Informazioni su come creare librerie per .NET usando gli strumenti dell'interfaccia della riga di comando di .NET Core.
+description: Informazioni su come creare librerie .NET Core usando gli strumenti dell'interfaccia della riga di comando di .NET Core. Si creerà una libreria che supporta più framework.
 author: cartermp
 ms.author: mairaw
 ms.date: 05/01/2017
-ms.openlocfilehash: a6db7a15c484122600afd54814d19ea11bd1abc1
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.custom: seodec18
+ms.openlocfilehash: a8028883b3424588d0fb926dcb73f400a8c620dc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43256196"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148535"
 ---
 # <a name="developing-libraries-with-cross-platform-tools"></a>Sviluppo di librerie con strumenti multipiattaforma
 
@@ -19,9 +20,9 @@ Questo articolo illustra come scrivere librerie per .NET usando gli strumenti de
 
 È necessario che [l'SDK e l'interfaccia della riga di comando di .NET Core](https://www.microsoft.com/net/core) siano installati nel computer.
 
-Per le sezioni di questo documento relative alle versioni di .NET Framework è necessario avere [.NET Framework](http://getdotnet.azurewebsites.net/) installato in un computer Windows.
+Per le sezioni di questo documento relative alle versioni di .NET Framework è necessario avere [.NET Framework](https://dotnet.microsoft.com) installato in un computer Windows.
 
-Inoltre, se si desidera supportare destinazioni precedenti di .NET Framework, è necessario installare Targeting/Developer Pack per versioni precedenti del framework dalla [pagina delle piattaforme di destinazione .NET](http://getdotnet.azurewebsites.net/target-dotnet-platforms.html). Fare riferimento a questa tabella:
+Se si vuole anche supportare destinazioni precedenti di .NET Framework, è necessario installare Targeting/Developer Pack per versioni precedenti del framework dalla [pagina degli archivi dei download per .NET](https://dotnet.microsoft.com/download/archives). Fare riferimento a questa tabella:
 
 | Versione di .NET Framework | Pacchetto da scaricare                                       |
 | ---------------------- | ------------------------------------------------------ |
@@ -39,7 +40,7 @@ Se non si ha molta familiarità con .NET Standard, leggere l'articolo [.NET Stan
 
 In questo articolo è presente una tabella in cui le diverse versioni di .NET Standard sono associate alle varie implementazioni:
 
-[!INCLUDE [net-standard-table](~/includes/net-standard-table.md)]
+[!INCLUDE [net-standard-table](../../../includes/net-standard-table.md)]
 
 Ecco cosa significa questa tabella ai fini della creazione di una libreria:
 
@@ -136,7 +137,7 @@ Si noteranno tre modifiche principali:
 
 Il sistema di compilazione è in grado di riconoscere i seguenti simboli di preprocessore usati nelle direttive `#if`:
 
-[!INCLUDE [Preprocessor symbols](~/includes/preprocessor-symbols.md)]
+[!INCLUDE [Preprocessor symbols](../../../includes/preprocessor-symbols.md)]
 
 Ecco un esempio che usa la compilazione condizionale basata sulla destinazione:
 
@@ -167,7 +168,7 @@ namespace MultitargetLib
         // .NET Framework 4.0 does not have async/await
         public string GetDotNetCount()
         {
-            string url = "http://www.dotnetfoundation.org/";
+            string url = "https://www.dotnetfoundation.org/";
 
             var uri = new Uri(url);
 
@@ -187,7 +188,7 @@ namespace MultitargetLib
         // .NET 4.5+ can use async/await!
         public async Task<string> GetDotNetCountAsync()
         {
-            string url = "http://www.dotnetfoundation.org/";
+            string url = "https://www.dotnetfoundation.org/";
 
             // HttpClient is thread-safe, so no need to explicitly lock here
             var result = await _client.GetStringAsync(url);
@@ -213,7 +214,7 @@ Ogni directory contiene i file `.dll` per ciascuna destinazione.
 
 ## <a name="how-to-test-libraries-on-net-core"></a>Come testare le librerie in .NET Core
 
-È importante essere in grado di eseguire test tra diverse piattaforme. È possibile usare [xUnit](http://xunit.github.io/) o MSTest senza modifiche. Entrambi sono adatti per gli unit test della libreria in .NET Core. La modalità di configurazione della soluzione con progetti di test dipende dalla [struttura della soluzione](#structuring-a-solution). Nell'esempio seguente si presuppone che le directory di test e di origine si trovino nella stessa directory di livello superiore.
+È importante essere in grado di eseguire test tra diverse piattaforme. È possibile usare [xUnit](https://xunit.github.io/) o MSTest senza modifiche. Entrambi sono adatti per gli unit test della libreria in .NET Core. La modalità di configurazione della soluzione con progetti di test dipende dalla [struttura della soluzione](#structuring-a-solution). Nell'esempio seguente si presuppone che le directory di test e di origine si trovino nella stessa directory di livello superiore.
 
 > [!NOTE]
 > Questa procedura usa alcuni [comandi dell'interfaccia della riga di comando di .NET Core](../tools/index.md). Per altre informazioni, vedere [dotnet new](../tools/dotnet-new.md) e [dotnet sln](../tools/dotnet-sln.md).
@@ -253,7 +254,7 @@ Ogni directory contiene i file `.dll` per ciascuna destinazione.
    dotnet build
    ```
 
-   [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+   [!INCLUDE[DotNet Restore Note](../../../includes/dotnet-restore-note.md)]
 
 1. Verificare che xUnit sia in esecuzione con il comando `dotnet test`. Se si sceglie di usare MSTest, va invece eseguita l'utilità di test delle console MSTest.
     

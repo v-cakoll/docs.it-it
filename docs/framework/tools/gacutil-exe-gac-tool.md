@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4c7be9c8-72ae-481f-a01c-1a4716806e99
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 98423e6c103f7eb93b4bfa35ef19b6551c0df0e0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 806ccb1d33d9a7b66c740099864decd651c9213f
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399594"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144884"
 ---
 # <a name="gacutilexe-global-assembly-cache-tool"></a>Gacutil.exe (strumento Global Assembly Cache)
 Lo strumento Global Assembly Cache consente di visualizzare e modificare il contenuto della Global Assembly Cache e della Download Cache.  
@@ -45,7 +45,7 @@ gacutil [options] [assemblyName | assemblyPath | assemblyListFile]
 |--------------|-----------------|  
 |*assemblyName*|Nome di un assembly. È possibile fornire un nome di assembly parzialmente specificato, quale `myAssembly`, o un nome di assembly completo, quale `myAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0038abc9deabfle5`.|  
 |*assemblyPath*|Nome di un file contenente il manifesto di un assembly.|  
-|*assemblyListFile*|Percorso di un file di testo ANSI che elenca gli assembly da installare o disinstallare. Per usare un file di testo per installare assembly, specificare il percorso di ciascun assembly in una riga separata del file. I percorsi relativi vengono interpretati rispetto alla posizione di *assemblyListFile*. Per utilizzare un file di testo per disinstallare assembly, specificare il nome completo di ogni assembly in una riga separata del file. Vedere gli esempi di contenuto di *assemblyListFile* più avanti in questo argomento.|  
+|*assemblyListFile*|Percorso di un file di testo ANSI che elenca gli assembly da installare o disinstallare. Per usare un file di testo per installare assembly, specificare il percorso di ciascun assembly in una riga separata del file. I percorsi relativi vengono interpretati rispetto alla posizione di *assemblyListFile*. Per usare un file di testo per disinstallare assembly, specificare il nome completo di ogni assembly in una riga separata del file. Vedere gli esempi di contenuto di *assemblyListFile* più avanti in questo argomento.|  
   
 |Opzione|Descrizione|  
 |------------|-----------------|  
@@ -78,7 +78,7 @@ gacutil [options] [assemblyName | assemblyPath | assemblyListFile]
   
  Gacutil.exe offre opzioni che supportano un conteggio dei riferimenti simile allo schema di conteggio dei riferimenti supportato da Windows Installer. È possibile utilizzare Gacutil.exe per installare due applicazioni che installano lo stesso assembly in quanto consente di tenere traccia del numero di riferimenti all'assembly. Di conseguenza, l'assembly resta sul computer fino alla completa disinstallazione di entrambe le applicazioni. Se si utilizza Gacutil.exe per l'installazione di prodotti effettivi, utilizzare le opzioni che supportano il conteggio dei riferimenti. Usare le opzioni **/i** e **/r** insieme per installare un assembly e aggiungere un riferimento per il conteggio. Usare le opzioni **/u** e **/r** insieme per rimuovere un conteggio dei riferimenti per un assembly. Se le opzioni **/i** e **/u** vengono usate singolarmente, il conteggio dei riferimenti non sarà supportato. Queste opzioni sono utili durante lo sviluppo dei prodotti ma non per l'installazione di prodotti effettivi.  
   
- Usare le opzioni **/il** o **/ul** per installare o disinstallare un elenco di assembly archiviati in un file di testo ANSI. Il contenuto del file di testo deve essere formattato correttamente. Per utilizzare un file di testo per installare assembly, specificare il percorso di ciascun assembly in una riga separata del file. Nell'esempio che segue viene illustrato il contenuto di un file contenente assembly da installare.  
+ Usare le opzioni **/il** o **/ul** per installare o disinstallare un elenco di assembly archiviati in un file di testo ANSI. Il contenuto del file di testo deve essere formattato correttamente. Per usare un file di testo per installare assembly, specificare il percorso di ciascun assembly in una riga separata del file. Nell'esempio che segue viene illustrato il contenuto di un file contenente assembly da installare.  
   
 ```  
 myAssembly1.dll  
@@ -86,14 +86,30 @@ myAssembly2.dll
 myAssembly3.dll  
 ```  
   
- Per utilizzare un file di testo per disinstallare assembly, specificare il nome completo di ogni assembly in una riga separata del file. Nell'esempio che segue viene illustrato il contenuto di un file contenente assembly da disinstallare.  
+ Per usare un file di testo per disinstallare assembly, specificare il nome completo di ogni assembly in una riga separata del file. Nell'esempio che segue viene illustrato il contenuto di un file contenente assembly da disinstallare.  
   
 ```  
 myAssembly1,Version=1.1.0.0,Culture=en,PublicKeyToken=874e23ab874e23ab  
 myAssembly2,Version=1.1.0.0,Culture=en,PublicKeyToken=874e23ab874e23ab  
 myAssembly3,Version=1.1.0.0,Culture=en,PublicKeyToken=874e23ab874e23ab  
 ```  
-  
+
+> [!NOTE]
+>  Se si prova a installare un assembly con un nome di file più lungo rispetto a una lunghezza compresa tra 79 e 91 caratteri (esclusa l'estensione di file), è possibile che venga generato l'errore seguente:
+> ```
+> Failure adding assembly to the cache:   The file name is too long.
+> ```
+> Ciò avviene perché Gacutil.exe crea internamente un percorso con un numero massimo di caratteri definito da MAX_PATH e costituito dagli elementi seguenti:
+> - Radice della Global Assembly Cache: 34 caratteri (ad esempio, `C:\Windows\Microsoft.NET\assembly\`)
+> - Architettura: 7 o 9 caratteri (ad esempio, `GAC_32\`, `GAC_64\`, `GAC_MSIL`)
+> - AssemblyName: fino a 91 caratteri, a seconda delle dimensioni degli altri elementi (ad esempio, `System.Xml.Linq\`)
+> - AssemblyInfo: da 31 a 48 caratteri o un numero maggiore, costituito da:
+>   - Framework: 5 caratteri (ad esempio, `v4.0_`)
+>   - AssemblyVersion: da 8 a 24 caratteri (ad esempio, `9.0.1000.0_`)
+>   - AssemblyLanguage. da 1 a 8 caratteri (ad esempio, `de_`, `sr-Cyrl_`)
+>   - PublicKey: 17 caratteri (ad esempio, `31bf3856ad364e35\`)
+> - DllFileName: fino a 91 + 4 caratteri (ad esempio, `<AssemblyName>.dll`)
+
 ## <a name="examples"></a>Esempi  
  Il comando che segue installa l'assembly `mydll.dll` nella Global Assembly Cache.  
   

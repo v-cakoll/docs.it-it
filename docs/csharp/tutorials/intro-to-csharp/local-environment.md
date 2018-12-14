@@ -2,12 +2,12 @@
 title: Introduzione a C# - Acquisire familiarità con gli strumenti di sviluppo
 description: Questo articolo presenta un'introduzione di base agli strumenti usati per sviluppare applicazioni C# e .NET nel computer.
 ms.date: 10/23/2018
-ms.openlocfilehash: ec7e55fbf2a89a8ec45db956fc575edeb2283f56
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: cf5bf68c1497bf62826656aa9cd2bd981128d3a2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200162"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129987"
 ---
 # <a name="become-familiar-with-the-net-development-tools"></a>Acquisire familiarità con gli strumenti di sviluppo .NET
 
@@ -22,7 +22,7 @@ Per creare le applicazioni, si userà il comando [`dotnet new`](../../../core/to
 
 Gli altri comandi da usare sono [`dotnet build`](../../../core/tools/dotnet-build.md) per compilare l'eseguibile e [`dotnet run`](../../../core/tools/dotnet-run.md) per eseguire l'eseguibile.
 
-## <a name="pick-your-turorial"></a>Selezionare l'esercitazione
+## <a name="pick-your-tutorial"></a>Selezionare l'esercitazione
 
 È possibile iniziare con una qualsiasi delle esercitazioni seguenti:
 

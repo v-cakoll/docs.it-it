@@ -4,26 +4,26 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - pointers [C#], arithmetic operations
 ms.assetid: d4f0b623-827e-45ce-8649-cfcebc8692aa
-ms.openlocfilehash: 3694699466f7a200eecd5eef85f60fa19f9584a8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 91e621e7cddce50e97b061ecd7d77dae6f7ef3cb
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43862303"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129948"
 ---
 # <a name="arithmetic-operations-on-pointers-c-programming-guide"></a>Operazioni aritmetiche sui puntatori (Guida per programmatori C#)
-Questo argomento illustra l'uso degli operatori aritmetici `+` e **-** per modificare i puntatori.  
+Questo argomento illustra l'uso degli operatori aritmetici `+` e `-` per modificare i puntatori.  
   
 > [!NOTE]
 >  È possibile eseguire qualsiasi operazione aritmetica sui puntatori void.  
   
-## <a name="adding-and-subtracting-numeric-values-to-or-from-pointers"></a>Aggiunta e sottrazione di valori numerici dai puntatori  
- È possibile aggiungere un valore `n` di tipo [int](../../../csharp/language-reference/keywords/int.md), [uint](../../../csharp/language-reference/keywords/uint.md), [long](../../../csharp/language-reference/keywords/long.md) o [ulong](../../../csharp/language-reference/keywords/ulong.md) a un puntatore `p` di qualsiasi tipo, ad eccezione di `void*`. `p+n` è il puntatore risultante dall'aggiunta di `n * sizeof(p) to the address of p`. Analogamente, `p-n` è il puntatore risultante dalla sottrazione di `n * sizeof(p)` dall'indirizzo di `p`.  
+## <a name="adding-and-subtracting-numeric-values-to-or-from-pointers"></a>Aggiunta e sottrazione di valori numerici ai o dai puntatori  
+ È possibile aggiungere un valore `n` di tipo [int](../../../csharp/language-reference/keywords/int.md), [uint](../../../csharp/language-reference/keywords/uint.md), [long](../../../csharp/language-reference/keywords/long.md) o [ulong](../../../csharp/language-reference/keywords/ulong.md) a un puntatore. Se `p` è un puntatore di tipo `pointer-type*`, il risultato `p+n` è il puntatore risultante dall'aggiunta di `n * sizeof(pointer-type)` all'indirizzo di `p`. Analogamente, `p-n` è il puntatore risultante dalla sottrazione di `n * sizeof(pointer-type)` dall'indirizzo di `p`.  
   
 ## <a name="subtracting-pointers"></a>Sottrazione di puntatori  
  È anche possibile sottrarre puntatori dello stesso tipo. Il risultato è sempre il tipo `long`. Ad esempio, se `p1` e `p2` sono puntatori di tipo `pointer-type*`, l'espressione `p1-p2` è simile alla seguente:  
   
- `((long)p1 - (long)p2)/sizeof(pointer_type)`  
+ `((long)p1 - (long)p2)/sizeof(pointer-type)`  
   
  Non viene generata nessuna eccezione quando l'operazione aritmetica supera il dominio del puntatore e il risultato dipende dall'implementazione.  
   

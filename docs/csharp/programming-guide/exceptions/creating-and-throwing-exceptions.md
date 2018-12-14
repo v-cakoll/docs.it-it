@@ -7,12 +7,12 @@ helpviewer_keywords:
 - exceptions [C#], creating
 - exceptions [C#], throwing
 ms.assetid: 6bbba495-a115-4c6d-90cc-1f4d7b5f39e2
-ms.openlocfilehash: 43d566fed4e2963489da0b7a11c78a54740b7ab1
-ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
+ms.openlocfilehash: c81332307542608e2c7a3f3a5fa89900862f1e84
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "44260071"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145595"
 ---
 # <a name="creating-and-throwing-exceptions-c-programming-guide"></a>Creazione e generazione di eccezioni (Guida per programmatori C#)
 Le eccezioni vengono usate per indicare che si è verificato un errore durante l'esecuzione del programma. Vengono creati oggetti eccezione che descrivono un errore e quindi *generati* con la parola chiave [throw](../../../csharp/language-reference/keywords/throw.md). Il runtime cerca quindi il gestore di eccezioni più compatibile.  
@@ -41,7 +41,7 @@ Le eccezioni vengono usate per indicare che si è verificato un errore durante l
   
  Tutte le eccezioni contengono una proprietà denominata <xref:System.Exception.Message%2A>. Questa stringa deve essere impostata per spiegare il motivo dell'eccezione. Si noti che le informazioni sensibili alla sicurezza non devono essere inserite nel testo del messaggio. Oltre a <xref:System.Exception.Message%2A>, <xref:System.ArgumentException> contiene una proprietà denominata <xref:System.ArgumentException.ParamName%2A> che deve essere impostata sul nome dell'argomento che ha causato la generazione dell'eccezione. Nel caso di un setter di proprietà, <xref:System.ArgumentException.ParamName%2A> deve essere impostato su `value`.  
   
- I membri di metodi pubblici e protetti devono generare eccezioni quando non saranno in grado di completare le funzioni previste. La classe di eccezione generata deve essere l'eccezione più specifica disponibile che soddisfa le condizioni di errore. Queste eccezioni devono essere documentate come parte delle funzionalità della classe e le classi derivate o gli aggiornamenti per la classe originale devono conservare lo stesso comportamento per la compatibilità con le versioni precedenti.  
+ I metodi pubblici e protetti devono generare eccezioni quando non sono in grado di completare le funzioni previste. La classe di eccezione generata deve essere l'eccezione più specifica disponibile che soddisfa le condizioni di errore. Queste eccezioni devono essere documentate come parte delle funzionalità della classe e le classi derivate o gli aggiornamenti per la classe originale devono conservare lo stesso comportamento per la compatibilità con le versioni precedenti.  
   
 ## <a name="things-to-avoid-when-throwing-exceptions"></a>Comportamenti da evitare per la generazione di eccezioni  
  L'elenco seguente include operazioni da evitare durante la generazione di eccezioni:  

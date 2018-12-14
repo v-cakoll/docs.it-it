@@ -2,14 +2,13 @@
 title: Comando dotnet nuget delete - Interfaccia della riga di comando di .NET Core
 description: Il comando dotnet-nuget-delete rimuove dall'elenco o elimina un pacchetto dal server.
 author: karann-msft
-ms.author: mairaw
-ms.date: 06/01/2018
-ms.openlocfilehash: f4aa027a465c4adea1de13853063d03e8e295411
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.date: 12/04/2018
+ms.openlocfilehash: 451352ea652b77e44dcaf731d5b6cce230d1ef78
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50180880"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126835"
 ---
 # <a name="dotnet-nuget-delete"></a>dotnet nuget delete
 
@@ -21,16 +20,10 @@ ms.locfileid: "50180880"
 
 ## <a name="synopsis"></a>Riepilogo
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 ```
-dotnet nuget delete [<PACKAGE_NAME> <PACKAGE_VERSION>] [--force-english-output] [-k|--api-key] [--no-service-endpoint]
+dotnet nuget delete [<PACKAGE_NAME> <PACKAGE_VERSION>] [--force-english-output] [--interactive] [-k|--api-key] [--no-service-endpoint]
     [--non-interactive] [-s|--source]
-dotnet nuget delete [-h|--help]
-```
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
-```
-dotnet nuget delete [<PACKAGE_NAME> <PACKAGE_VERSION>] [--force-english-output] [-k|--api-key] [--non-interactive]
-    [-s|--source]
 dotnet nuget delete [-h|--help]
 ```
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
@@ -41,98 +34,86 @@ dotnet nuget delete [-h|--help]
 ```
 ---
 
-## <a name="description"></a>Descrizione
+## <a name="description"></a>Description
 
 Il comando `dotnet nuget delete` rimuove dall'elenco o elimina un pacchetto dal server. Per [nuget.org](https://www.nuget.org/) l'azione consiste nel rimuovere il pacchetto dall'elenco.
 
 ## <a name="arguments"></a>Argomenti
 
-`PACKAGE_NAME`
+* **`PACKAGE_NAME`**
 
-Nome/ID del pacchetto da eliminare.
+  Nome/ID del pacchetto da eliminare.
 
-`PACKAGE_VERSION`
+* **`PACKAGE_VERSION`**
 
-Versione del pacchetto da eliminare.
+  Versione del pacchetto da eliminare.
 
 ## <a name="options"></a>Opzioni
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
-`--force-english-output`
+* **`--force-english-output`**
 
- Impone all'applicazione l'esecuzione con una cultura invariante e di lingua inglese.
+  Impone all'applicazione l'esecuzione con una cultura invariante e di lingua inglese.
 
-`-h|--help`
+* **`-h|--help`**
 
-Stampa una breve guida per il comando.
+  Stampa una breve guida per il comando.
 
-`-k|--api-key <API_KEY>`
+* **`--interactive`**
 
-Chiave API per il server.
+  Consente al comando di bloccare operazioni quali l'autenticazione e richiede un intervento manuale. Opzione disponibile a partire da .NET Core 2.2 SDK.
 
-`--no-service-endpoint` Non aggiunge "api/v2/package" all'URL di origine.
+* **`-k|--api-key <API_KEY>`**
 
-`--non-interactive`
+  Chiave API per il server.
 
-Non richiede input o conferme dell'utente.
+* **`--no-service-endpoint`**
 
-`-s|--source <SOURCE>`
+  Non aggiunge "api/v2/package" all'URL di origine. Opzione disponibile a partire da .NET Core 2.1 SDK.
 
-Specifica l'URL del server. Gli URL supportati per nuget.org includono `https://www.nuget.org`, `https://www.nuget.org/api/v3` e `https://www.nuget.org/api/v2/package`. Per i feed privati, sostituire il nome host (ad esempio, `%hostname%/api/v3`).
+* **`--non-interactive`**
 
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+  Non richiede input o conferme dell'utente.
 
-`--force-english-output`
+* **`-s|--source <SOURCE>`**
 
- Impone all'applicazione l'esecuzione con una cultura invariante e di lingua inglese.
-
-`-h|--help`
-
-Stampa una breve guida per il comando.
-
-`-k|--api-key <API_KEY>`
-
-Chiave API per il server.
-
-`--non-interactive`
-
-Non richiede input o conferme dell'utente.
-
-`-s|--source <SOURCE>`
-
-Specifica l'URL del server. Gli URL supportati per nuget.org includono `https://www.nuget.org`, `https://www.nuget.org/api/v3` e `https://www.nuget.org/api/v2/package`. Per i feed privati, sostituire il nome host (ad esempio, `%hostname%/api/v3`).
+  Specifica l'URL del server. Gli URL supportati per nuget.org includono `https://www.nuget.org`, `https://www.nuget.org/api/v3` e `https://www.nuget.org/api/v2/package`. Per i feed privati, sostituire il nome host (ad esempio, `%hostname%/api/v3`).
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-`--force-english-output`
+* **`--force-english-output`**
 
- Impone all'applicazione l'esecuzione con una cultura invariante e di lingua inglese.
+  Impone all'applicazione l'esecuzione con una cultura invariante e di lingua inglese.
 
-`-h|--help`
+* **`-h|--help`**
 
-Stampa una breve guida per il comando.
+  Stampa una breve guida per il comando.
 
-`-k|--api-key <API_KEY>`
+* **`-k|--api-key <API_KEY>`**
 
-Chiave API per il server.
+  Chiave API per il server.
 
-`--non-interactive`
+* **`--non-interactive`**
 
-Non richiede input o conferme dell'utente.
+  Non richiede input o conferme dell'utente.
 
-`-s|--source <SOURCE>`
+* **`-s|--source <SOURCE>`**
 
-Specifica l'URL del server. Gli URL supportati per nuget.org includono `https://www.nuget.org`, `https://www.nuget.org/api/v3` e `https://www.nuget.org/api/v2/package`. Per i feed privati, sostituire il nome host (ad esempio, `%hostname%/api/v3`).
+  Specifica l'URL del server. Gli URL supportati per nuget.org includono `https://www.nuget.org`, `https://www.nuget.org/api/v3` e `https://www.nuget.org/api/v2/package`. Per i feed privati, sostituire il nome host (ad esempio, `%hostname%/api/v3`).
 
 ---
 
 ## <a name="examples"></a>Esempi
 
-Elimina la versione 1.0 del pacchetto `Microsoft.AspNetCore.Mvc`:
+* Elimina la versione 1.0 del pacchetto `Microsoft.AspNetCore.Mvc`:
 
-`dotnet nuget delete Microsoft.AspNetCore.Mvc 1.0`
+  ```console
+  dotnet nuget delete Microsoft.AspNetCore.Mvc 1.0
+  ```
 
-Elimina la versione 1.0 del pacchetto `Microsoft.AspNetCore.Mvc` senza richiedere all'utente credenziali o altro input:
+* Elimina la versione 1.0 del pacchetto `Microsoft.AspNetCore.Mvc` senza richiedere all'utente credenziali o altro input:
 
-`dotnet nuget delete Microsoft.AspNetCore.Mvc 1.0 --non-interactive`
+  ```console
+  dotnet nuget delete Microsoft.AspNetCore.Mvc 1.0 --non-interactive
+  ```

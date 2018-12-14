@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - for keyword [C#]
 ms.assetid: 34041a40-2c87-467a-9ffb-a0417d8f67a8
-ms.openlocfilehash: c6ef926d6fb2c79b7b7f71c3b24b86a7ab057c88
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6584889f527e1459090bea322720f0cd8d9694f6
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511728"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149237"
 ---
 # <a name="for-c-reference"></a>for (Riferimenti per C#)
 
@@ -105,14 +105,12 @@ L'esempio seguente definisce il ciclo `for` infinito:
 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+Per altre informazioni, vedere la sezione [L'istruzione for](~/_csharplang/spec/statements.md#the-for-statement) della [specifica del linguaggio C#](../language-specification/index.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Istruzione for (specifica del linguaggio C#)](/dotnet/csharp/language-reference/language-specification/statements#the-for-statement)
 - [Riferimenti per C#](../index.md)
 - [Guida per programmatori C#](../../programming-guide/index.md)
 - [Parole chiave di C#](index.md)
-- [foreach, in](foreach-in.md)
-- [Istruzione for (C++)](/cpp/cpp/for-statement-cpp)
 - [Istruzioni di iterazione](iteration-statements.md)
+- [foreach, in](foreach-in.md)

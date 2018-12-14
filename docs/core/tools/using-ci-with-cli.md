@@ -1,19 +1,17 @@
 ---
-title: Uso di .NET Core SDK e dei relativi strumenti in integrazione continua
+title: Uso di .NET Core SDK e dei relativi strumenti in integrazione continua (CI) - Interfaccia della riga di comando di .NET Core
 description: Informazioni sull'uso di .NET Core SDK e dei relativi strumenti nel server di compilazione.
 author: guardrex
-ms.author: mairaw
 ms.date: 05/18/2017
-ms.openlocfilehash: 207a6740f2a483d532c194b2bf8112898e9c3463
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.custom: seodec18
+ms.openlocfilehash: 7891430654b416a2b55fa837f276d991b56370cc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48033467"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53131391"
 ---
 # <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>Uso di .NET Core SDK e dei relativi strumenti in integrazione continua
-
-## <a name="overview"></a>Panoramica
 
 Questo documento illustra l'uso di .NET Core SDK e dei relativi strumenti in un server di compilazione. Il set di strumenti di .NET Core funziona interattivamente, quando uno sviluppatore digita i comandi al prompt dei comandi, e automaticamente, quando un server di integrazione continua (CI) esegue uno script di compilazione. I comandi, le opzioni, gli input e gli output sono uguali, e gli unici elementi da specificare sono un modo per acquisire gli strumenti e un sistema per compilare l'app. Questo documento illustra specificatamente gli scenari di acquisizione degli strumenti per CI e include consigli su come progettare e strutturare gli script di compilazione.
 
@@ -25,22 +23,22 @@ Sono disponibili programmi di installazione nativi per macOS, Linux e Windows. I
 
 Gli utenti di macOS devono usare i programmi di installazione PKG. In Linux è possibile scegliere di usare un sistema di gestione pacchetti basato su feed, ad esempio apt-get per Ubuntu o yum per CentOS, oppure i pacchetti stessi DEB o RPM. In Windows usare il programma di installazione MSI.
 
-I file binari stabili più recenti sono reperibili in [Get Started with .NET Core](https://aka.ms/dotnetcoregs) (Introduzione a .NET Core). Se si vuole usare gli strumenti della versione non definitiva più recente (e potenzialmente instabile), vedere i collegamenti riportati nel [repository GitHub dotnet/cli](https://github.com/dotnet/cli#installers-and-binaries). Per le distribuzioni di Linux, sono disponibili gli archivi `tar.gz` (noti anche come `tarballs`). Usare gli script di installazione all'interno degli archivi per installare .NET Core.
+I file binari stabili più recenti sono reperibili in [.NET downloads](https://dotnet.microsoft.com/download) (Download di .NET). Se si vuole usare gli strumenti della versione non definitiva più recente (e potenzialmente instabile), vedere i collegamenti riportati nel [repository GitHub dotnet/core-sdk](https://github.com/dotnet/core-sdk#installers-and-binaries). Per le distribuzioni di Linux, sono disponibili gli archivi `tar.gz` (noti anche come `tarballs`). Usare gli script di installazione all'interno degli archivi per installare .NET Core.
 
 ### <a name="using-the-installer-script"></a>Uso dello script di installazione
 
 L'uso dello script di installazione consente di installare il sistema senza privilegi amministrativi nel server di compilazione e offre un'automazione semplice per ottenere gli strumenti. Lo script esegue automaticamente il download e l'estrazione degli strumenti in un percorso predefinito o specificato per l'uso. È anche possibile specificare la versione degli strumenti che si vogliono installare e se si vuole installare l'intero SDK o solo il runtime condiviso.
 
-Lo script di installazione viene automatizzato per essere eseguito all'inizio della compilazione per recuperare e installare la versione necessaria dell'SDK. La *versione necessaria* è la versione dell'SDK più adatta per compilare i progetti. Lo script consente di installare l'SDK in una directory locale del server, eseguire gli strumenti dal percorso di installazione e quindi pulire (o consentire al servizio CI di eseguire la pulizia) al termine della compilazione. Ciò consente incapsulamento e isolamento per l'intero processo di compilazione. I riferimenti agli script di installazione sono reperibili nell'argomento [dotnet-install](dotnet-install-script.md).
+Lo script di installazione viene automatizzato per essere eseguito all'inizio della compilazione per recuperare e installare la versione necessaria dell'SDK. La *versione necessaria* è la versione dell'SDK più adatta per compilare i progetti. Lo script consente di installare l'SDK in una directory locale del server, eseguire gli strumenti dal percorso di installazione e quindi pulire (o consentire al servizio CI di eseguire la pulizia) al termine della compilazione. Ciò consente incapsulamento e isolamento per l'intero processo di compilazione. I riferimenti agli script di installazione sono reperibili nell'articolo [dotnet-install](dotnet-install-script.md).
 
 > [!NOTE]
 > **Azure DevOps Services**
 >
-> Quando si usa lo script di installazione, le dipendenze native non vengono installate automaticamente. È necessario installare le dipendenze native, se non sono già presenti nel sistema operativo. Vedere l'elenco dei prerequisiti nell'argomento [.NET Core native prerequisites](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md) (Prerequisiti nativi di .NET Core).
+> Quando si usa lo script di installazione, le dipendenze native non vengono installate automaticamente. È necessario installare le dipendenze native, se non sono già presenti nel sistema operativo. Per altre informazioni, vedere [Prerequisiti per .NET Core in Linux](../linux-prerequisites.md).
 
 ## <a name="ci-setup-examples"></a>Esempi di installazione di CI
 
-Questa sezione illustra un'installazione manuale tramite uno script di PowerShell o Bash e include la descrizione di alcune soluzioni CI SaaS (software come un servizio). Le soluzioni CI SaaS illustrate sono [Travis CI](https://travis-ci.org/), [AppVeyor](https://www.appveyor.com/) e [Compilazione](https://docs.microsoft.com/azure/devops/build-release/index).
+Questa sezione illustra un'installazione manuale tramite uno script di PowerShell o Bash e include la descrizione di alcune soluzioni CI SaaS (software come un servizio). Le soluzioni CI SaaS illustrate sono [Travis CI](https://travis-ci.org/), [AppVeyor](https://www.appveyor.com/) e [Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/index).
 
 ### <a name="manual-setup"></a>Installazione manuale
 
@@ -126,11 +124,11 @@ LOCALDOTNET="$INSTALLDIR/dotnet"
 
 È possibile configurare [Travis CI](https://travis-ci.org/) per installare .NET Core SDK usando il linguaggio `csharp` e la chiave `dotnet`. Per altre informazioni, vedere i documenti ufficiali di Travis CI in [Building a C#, F#, or Visual Basic Project](https://docs.travis-ci.com/user/languages/csharp/) (Compilazione di un progetto C#, F# o Visual Basic). Quando si accede alle informazioni su Travis CI si noti che l'identificatore del linguaggio `language: csharp` gestito dalla community funziona per tutti i linguaggi .NET, inclusi F# e Mono.
 
-Travis CI esegue entrambi i processi macOS (OS X 10.11, OS X 10.12) e Linux (Ubuntu 14.04) in una *matrice di compilazione*, in cui si specifica una combinazione di runtime, ambiente e esclusioni/inclusioni per includere le combinazioni di compilazione per l'app. Per altre informazioni, vedere il file [.travis.yml example](https://github.com/dotnet/docs/blob/master/.travis.yml) (Esempio di .travis.yml) e [Customizing the Build](https://docs.travis-ci.com/user/customizing-the-build) (Personalizzazione della compilazione) nella documentazione di Travis CI. Gli strumenti basati su MSBuild includono i runtime LTS (1.0.x) e Current (1.1.x) nel pacchetto. Per questo motivo, l'installazione dell'SDK installa tutti gli elementi necessari per la compilazione.
+Travis CI esegue entrambi i processi macOS e Linux in una *matrice di compilazione*, in cui si specifica una combinazione di runtime, ambiente ed esclusioni/inclusioni per includere le combinazioni di compilazione per l'app. Per altre informazioni, vedere il file [di esempio con estensione travis.yml](https://github.com/dotnet/docs/blob/master/.travis.yml) e [Customizing the Build](https://docs.travis-ci.com/user/customizing-the-build) (Personalizzazione della compilazione) nella documentazione di Travis CI. Gli strumenti basati su MSBuild includono i runtime LTS (1.0.x) e Current (1.1.x) nel pacchetto. Per questo motivo, l'installazione dell'SDK installa tutti gli elementi necessari per la compilazione.
 
 ### <a name="appveyor"></a>AppVeyor
 
-[AppVeyor](https://www.appveyor.com/) installa .NET Core 1.0.1 SDK con l'immagine di lavoro della build `Visual Studio 2017`. Sono disponibili altre immagini di build con diverse versioni di .NET Core SDK. Per altre informazioni, vedere [appveyor.yml example](https://github.com/dotnet/docs/blob/master/appveyor.yml) (Esempio di appveyor.yml) e l'argomento [Build worker images](https://www.appveyor.com/docs/build-environment/#build-worker-images) (Immagini di lavoro della build) nella documentazione di AppVeyor.
+[AppVeyor](https://www.appveyor.com/) installa .NET Core 1.0.1 SDK con l'immagine di lavoro della build `Visual Studio 2017`. Sono disponibili altre immagini di compilazione con versioni diverse di .NET Core SDK. Per altre informazioni, vedere l'esempio [appveyor.yml](https://github.com/dotnet/docs/blob/master/appveyor.yml) e l'articolo [Build worker images](https://www.appveyor.com/docs/build-environment/#build-worker-images) (Compilare immagini di lavoro) nella documentazione di AppVeyor.
 
 I file binari di .NET Core SDK vengono scaricati ed estratti in una sottodirectory tramite lo script di installazione e aggiunti alla variabile di ambiente `PATH`. Aggiungere una matrice di compilazione per eseguire test di integrazione con più versioni di .NET Core SDK:
 
@@ -151,32 +149,32 @@ Configurare Azure DevOps Services per compilare i progetti .NET Core usando uno 
 1. Eseguire lo script del [passaggio di installazione manuale](#manual-setup) usando i comandi.
 1. Creare una build composta da diverse attività di compilazione incorporate di Azure DevOps Services configurate per usare gli strumenti di .NET Core.
 
-Entrambe le soluzioni sono valide. Tramite uno script di installazione manuale, si controlla la versione degli strumenti ricevuti, dopo averli scaricati come parte della compilazione. La compilazione viene eseguita da uno script che deve essere creato. Questo argomento descrive solo l'opzione manuale. Per altre informazioni sulla creazione di una build con le attività di compilazione di Azure DevOps Services, vedere l'argomento [Integrazione e distribuzione continua](https://docs.microsoft.com/azure/devops/build-release/index).
+Entrambe le soluzioni sono valide. Tramite uno script di installazione manuale, si controlla la versione degli strumenti ricevuti, dopo averli scaricati come parte della compilazione. La compilazione viene eseguita da uno script che deve essere creato. Questo articolo descrive solo l'opzione manuale. Per altre informazioni sulla creazione di una build con le attività di compilazione di Azure DevOps Services, vedere la documentazione di [Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/index).
 
 Per usare uno script di installazione manuale in Azure DevOps Services, creare una nuova definizione di compilazione e specificare lo script da eseguire per l'istruzione di compilazione. Questa operazione viene eseguita tramite l'interfaccia utente di Azure DevOps Services:
 
 1. Iniziare con la creazione di una nuova definizione di compilazione. Quando viene visualizzata la schermata che offre un'opzione per definire il tipo di compilazione da creare, selezionare **Vuota**.
 
-   ![Selezione di una definizione vuota di compilazione](./media/using-ci-with-cli/screen1.png)
+   ![Selezione di una definizione vuota di compilazione](./media/using-ci-with-cli/select-empty-build-definition.png)
 
 1. Dopo aver configurato il repository per la compilazione, si viene indirizzati alle definizioni della compilazione. Selezionare **Aggiungi istruzione di compilazione**:
 
-   ![Aggiunta di un'istruzione di compilazione](./media/using-ci-with-cli/screen2.png)
+   ![Aggiunta di un'istruzione di compilazione](./media/using-ci-with-cli/add-build-step.png)
 
 1. Viene visualizzato il **catalogo delle attività**. Il catalogo include le attività da usare nella compilazione. Poiché è disponibile uno script, selezionare il pulsante **Aggiungi** di **PowerShell: Consente di eseguire uno script PowerShell**.
 
-   ![Aggiunta di un'istruzione di script di PowerShell](./media/using-ci-with-cli/screen3.png)
+   ![Aggiunta di un'istruzione di script di PowerShell](./media/using-ci-with-cli/add-powershell-script.png)
 
 1. Configurare l'istruzione di compilazione. Aggiungere lo script dal repository che si sta creando:
 
-   ![Specifica dello script di PowerShell da eseguire](./media/using-ci-with-cli/screen4.png)
+   ![Specifica dello script di PowerShell da eseguire](./media/using-ci-with-cli/powershell-script-path.png)
 
 ## <a name="orchestrating-the-build"></a>Orchestrazione della compilazione
 
-La maggior parte di questo documento illustra come acquisire gli strumenti di .NET Core e configurare i vari servizi CI senza specificare le informazioni su come orchestrare, o *compilare effettivamente*, il codice con .NET Core. Le scelte su come strutturare il processo di compilazione dipendono da molti fattori che non possono essere illustrati in modo generico. Per altre informazioni sull'orchestrazione delle compilazioni con ogni tecnologia, vedere le risorse e gli esempi inclusi nei set di documentazione di [Travis CI](https://travis-ci.org/), [AppVeyor](https://www.appveyor.com/) e [Azure DevOps Services](https://docs.microsoft.com/azure/devops/build-release/index).
+La maggior parte di questo documento illustra come acquisire gli strumenti di .NET Core e configurare i vari servizi CI senza specificare le informazioni su come orchestrare, o *compilare effettivamente*, il codice con .NET Core. Le scelte su come strutturare il processo di compilazione dipendono da molti fattori che non possono essere illustrati in modo generico. Per altre informazioni sull'orchestrazione delle compilazioni con ogni tecnologia, vedere le risorse e gli esempi inclusi nei set di documentazione di [Travis CI](https://travis-ci.org/), [AppVeyor](https://www.appveyor.com/) e [Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/index).
 
 Due approcci generali accettati nella strutturazione del processo di compilazione per il codice .NET Core tramite gli strumenti di .NET Core consistono nell'usare MSBuild direttamente o i comandi della riga di comando di .NET Core. L'approccio da adottare è determinato dal livello di esperienza con gli approcci e dai pro e contro in termini di complessità. MSBuild offre la possibilità di esprimere il processo di compilazione come attività e destinazioni, ma è accompagnato dalla complessità nel dover imparare la sintassi dei file di progetto di MSBuild. L'uso degli strumenti da riga di comando di .NET Core è probabilmente più semplice, ma richiede la scrittura logica di orchestrazione in un linguaggio di scripting, ad esempio `bash` o PowerShell.
 
 ## <a name="see-also"></a>Vedere anche
 
-* [Passaggi di acquisizione Ubuntu](https://www.microsoft.com/net/core#linuxubuntu)
+* [.NET Downloads - Linux](https://dotnet.microsoft.com/download?initial-os=linux) (Download di .NET - Linux)

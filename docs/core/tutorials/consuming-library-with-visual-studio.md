@@ -1,19 +1,19 @@
 ---
 title: Uso di una libreria .NET Standard in Visual Studio 2017
-description: Informazioni su come chiamare i membri di una libreria di classi con Visual Studio 2017.
+description: Compilare un'applicazione .NET Core che chiama i membri di un'altra libreria di classi con Visual Studio 2017.
 author: BillWagner
 ms.author: wiwagn
 ms.date: 06/05/2018
 dev_langs:
 - csharp
 - vb
-ms.custom: vs-dotnet
-ms.openlocfilehash: 52ec46c23bb928b49f034270ed1d510d1acf992e
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.custom: vs-dotnet, seodec18
+ms.openlocfilehash: 424933f4d221492b3127d0b847249821fee86b10
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45518165"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147320"
 ---
 # <a name="consuming-a-net-standard-library-in-visual-studio-2017"></a>Uso di una libreria .NET Standard in Visual Studio 2017
 
@@ -57,7 +57,7 @@ Dopo aver creato una libreria di classi .NET Standard seguendo i passaggi riport
 1. Se necessario, modificare la barra degli strumenti per compilare la versione di **debug** del progetto `ShowCase`. Compilare ed eseguire il programma selezionando la freccia verde nel pulsante **ShowCase**.
 
    ![Image](./media/consuming-library-with-visual-studio/toolbar.png)
-# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
 1. Aprire la soluzione `ClassLibraryProjects` creata in [Creazione di una libreria di classi con Visual Basic e .NET Core in Visual Studio 2017](vb-library-with-visual-studio.md). In **Esplora soluzioni**, fare clic con il pulsante destro del mouse sulla soluzione **ClassLibraryProjects** e scegliere **Aggiungi** > **Nuovo progetto** dal menu di scelta rapida.
 
 1. Nella finestra di dialogo **Aggiungi nuovo progetto**, espandere il nodo selezionare il nodo **Visual Basic** e selezionare **.NET Core** seguito dal modello di progetto **Console App (.NET Core)**. Nella casella di testo **Nome**, digitare "ShowCase", quindi selezionare il pulsante **OK**.

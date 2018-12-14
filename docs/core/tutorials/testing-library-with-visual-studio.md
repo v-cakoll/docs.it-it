@@ -1,19 +1,21 @@
 ---
 title: Test di una libreria di classi con .NET Core in Visual Studio 2017
-description: Informazioni su come testare una libreria di classi scritta in C# usando Visual Studio 2017
+description: Creare un progetto di unit test per la libreria di classi .NET Core. Verificare che la libreria di classi .NET Core funzioni correttamente con gli unit test.
 author: BillWagner
 ms.author: wiwagn
 ms.date: 08/07/2017
 dev_langs:
 - csharp
 - vb
-ms.custom: vs-dotnet
-ms.openlocfilehash: 04fef4f84658b3a8b82e4e71b62c3bab8537424d
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.custom:
+- vs-dotnet
+- seodoc18
+ms.openlocfilehash: e3b13126833e49681661e8834ce9f3d8a6c1133e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45990973"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144897"
 ---
 # <a name="testing-a-class-library-with-net-core-in-visual-studio-2017"></a>Test di una libreria di classi con .NET Core in Visual Studio 2017
 
@@ -52,7 +54,7 @@ Per creare un progetto unit test, seguire questa procedura:
 1. Nella finestra di dialogo **Gestione riferimenti** espandere il nodo **Progetti** e selezionare la casella accanto a **StringLibrary**. L'aggiunta di un riferimento all'assembly `StringLibrary` consente al compilatore di individuare i metodi **StringLibrary**. Selezionare il pulsante **OK**. Viene aggiunto un riferimento al progetto di libreria di classi `StringLibrary`.
 
    ![Gestione riferimenti](./media/testing-library-with-visual-studio/referencemanager.png)
-# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic) 
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb) 
 1. In **Esplora soluzioni** aprire il menu di scelta rapida per il nodo della soluzione **ClassLibraryProjects** e selezionare **Aggiungi** > **Nuovo progetto**.
 
 1. Nella finestra di dialogo **Aggiungi nuovo progetto** selezionare il nodo **Visual Basic**. Selezionare quindi il nodo **.NET Core** seguito dal modello di progetto **Progetto di test MSTest (.NET Core)**. Nella casella di testo **Nome** immettere "StringLibraryTest" come nome del progetto. Selezionare **OK** per creare il progetto unit test.
@@ -116,7 +118,7 @@ Per creare i metodi di test:
 1. Nella barra dei menu scegliere **File** > **Salva UnitTest1.cs con nome**. Nella finestra di dialogo **Salva file con nome** selezionare la freccia accanto al pulsante **Salva** e selezionare **Salva con codifica**.
 
    ![Finestra di dialogo Salva file con nome](./media/testing-library-with-visual-studio/savefileas.png)
-# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic) 
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb) 
 1. Nella finestra del codice *UnitTest1.vb* sostituire il codice con il seguente:
 
     [!CODE-vb[Test#1](../../../samples/snippets/core/tutorials/vb-library-with-visual-studio/testlib.vb)]

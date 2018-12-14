@@ -3,12 +3,12 @@ title: Tipi tupla - Guida a C#
 description: Informazioni sui tipi di tupla denominati e non denominati in C#
 ms.date: 05/15/2018
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: 572e926b6345fc27278f78d1faf2e3b27f017f2e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 32d089d36328d30de344e14fb7e88e80eacf5ed0
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50186031"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155132"
 ---
 # <a name="c-tuple-types"></a>Tipi tupla in C# #
 
@@ -88,7 +88,7 @@ Queste situazioni non causano errori del compilatore perché sarebbe una modific
 
 ## <a name="equality-and-tuples"></a>Uguaglianza e tuple
 
-A partire da C# 7.3, i tipi tupla supportano gli operatori `==` e `!=`. Questi operatori confrontano ogni membro dell'argomento a sinistra con ogni membro dell'argomento a destra in ordine. Questi confronti generano un corto circuito. L'operatore `==` interrompe la valutazione dei membri non appena una coppia è diversa. L'operatore `!=` interrompe la valutazione dei membri non appena una coppia è uguale. Gli esempi di codice seguenti usano `==`, ma tutte le regole di confronto si applicano anche a `!=`. L'esempio di codice seguente illustra un confronto di uguaglianza per due coppie di interi:
+A partire da C# 7.3, i tipi tupla supportano gli operatori `==` e `!=`. Questi operatori confrontano ogni membro dell'argomento a sinistra con ogni membro dell'argomento a destra in ordine. Questi confronti generano un corto circuito. Interromperanno la valutazione dei membri non appena una coppia è diversa. Gli esempi di codice seguenti usano `==`, ma tutte le regole di confronto si applicano anche a `!=`. L'esempio di codice seguente illustra un confronto di uguaglianza per due coppie di interi:
 
 [!code-csharp[TupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#Equality "Testing tuples for equality")]
 

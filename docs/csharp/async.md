@@ -4,12 +4,12 @@ description: Informazioni sul modello di programmazione asincrona a livello del 
 author: cartermp
 ms.date: 06/20/2016
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.openlocfilehash: e562ef9fffa5bf77fd5dee1cb19cee0a2492b986
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 12ecadb3fa3c6760af4884626f68b47ead2754d5
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49349095"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126497"
 ---
 # <a name="asynchronous-programming"></a>Programmazione asincrona
 
@@ -108,7 +108,7 @@ Rispondere a queste due domande prima di scrivere il codice:
     
 Se l'operazione è **associata a I/O**, usare `async` e `await` *senza* `Task.Run`.  *Non si deve* usare la libreria Task Parallel Library.  Il motivo viene illustrato nell'articolo [La programmazione asincrona in dettaglio](../standard/async-in-depth.md).
 
-Se l'operazione è **associata alla CPU** e si è interessati nella velocità di risposta, usare `async` e `await`, ma passare l'operazione a un altro thread *con* `Task.Run`.  Se l'operazione è appropriata per parallelismo e concorrenza, è consigliabile usare anche la libreria Task Parallel Library.
+Se l'operazione è **associata alla CPU** e si è interessati nella velocità di risposta, usare `async` e `await`, ma passare l'operazione a un altro thread *con* `Task.Run`.  Se l'operazione è appropriata per parallelismo e concorrenza, è consigliabile usare anche la libreria [Task Parallel Library](../standard/parallel-programming/task-parallel-library-tpl.md).
 
 È anche necessario valutare sempre l'esecuzione del codice.  Ad esempio, ci si potrebbe trovare in una situazione in cui l'operazione associata alla CPU non è abbastanza onerosa confrontata al sovraccarico di commutazioni di contesto durante il multithreading.  Ogni scelta presenta un compromesso ed è necessario selezionare il compromesso più adatto alla situazione.
 

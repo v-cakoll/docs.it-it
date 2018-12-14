@@ -7,11 +7,11 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 9165a388122eeda5ca0499c6d75c2266780a6004
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 99d02ca33025a5f80ff8fafde84447ba3df9f42a
+ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
+ms.lasthandoff: 12/04/2018
 ms.locfileid: "50195970"
 ---
 # <a name="ref-c-reference"></a>ref (Riferimenti per C#)
@@ -92,7 +92,7 @@ Affinché il chiamante modifichi lo stato dell'oggetto, il valore restituito di 
 
 Il metodo chiamato può anche dichiarare il valore restituito come `ref readonly` per restituire il valore per riferimento e specificare che il codice chiamante non può modificare il valore restituito. Il metodo chiamante può evitare la copia del valore restituito archiviando il valore in una variabile [ref readonly](#ref-readonly-locals) locale.
 
-Per un esempio, vedere [Esempio di valori restituiti e variabili locali ref](#a-ref-returns-and-ref-locals-example)
+Per un esempio, vedere [Esempio di valori restituiti e variabili locali ref](#a-ref-returns-and-ref-locals-example).
 
 ## <a name="ref-locals"></a>Variabili locali ref
 
@@ -113,6 +113,8 @@ ref VeryLargeStruct reflocal = ref veryLargeStruct;
 ```
 
 Si noti che nei due esempi la parola chiave `ref` deve essere usata in entrambe le posizioni. In caso contrario, il compilatore genera l'errore CS8172, "Non è possibile inizializzare una variabile per riferimento con un valore".
+
+A partire da C# 7.3, la variabile di iterazione dell'istruzione `foreach` può essere una variabile locale ref o locale ref readonly. Per altre informazioni, vedere l'articolo sull'[istruzione foreach](foreach-in.md).
 
 ## <a name="ref-readonly-locals"></a>Variabili ref readonly
 
@@ -152,6 +154,9 @@ Queste restrizioni evitano l'uso accidentale di un tipo `ref struct` in modo che
 ## <a name="see-also"></a>Vedere anche
 
 - [Scrivere codice efficiente e sicuro](../../write-safe-efficient-code.md)  
+- [Valori restituiti e variabili locali per riferimento](../../programming-guide/classes-and-structs/ref-returns.md)
+- [Espressione condizionale ref](../operators/conditional-operator.md#conditional-ref-expression)
+- [Operatore di assegnazione ref](../operators/assignment-operator.md#ref-assignment-operator)
 - [Passaggio di parametri](../../programming-guide/classes-and-structs/passing-parameters.md)  
 - [Parametri dei metodi](method-parameters.md)  
 - [Riferimenti per C#](../index.md)  

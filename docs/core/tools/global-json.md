@@ -3,14 +3,14 @@ title: panoramica di global.json
 description: Informazioni su come usare il file global.json per impostare la versione di .NET Core SDK durante l'esecuzione dei comandi dell'interfaccia della riga di comando di .NET Core.
 author: mairaw
 ms.author: mairaw
-ms.date: 07/30/2018
+ms.date: 12/03/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: 05ec296c4c8210c63c7c1b5ce63ef598ca6ac719
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 7cb118c16460ed593d210f5e816b2a6fd5af2ee3
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838078"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150854"
 ---
 # <a name="globaljson-overview"></a>panoramica di global.json
 
@@ -46,14 +46,14 @@ L'esempio seguente illustra il contenuto di un file *global.json*:
 ```json
 {
   "sdk": {
-    "version": "2.1.300"
+    "version": "2.2.100"
   }
 }
 ```
 
 ## <a name="globaljson-and-the-net-core-cli"></a>global.json e interfaccia della riga di comando di .NET Core
 
-È utile sapere quali versioni sono disponibili per configurarne una nel file *global.json*. È possibile trovare l'elenco completo degli SDK disponibili supportati nel sito [dei download di .NET](https://www.microsoft.com/net/download/all). A partire da .NET Core SDK 2.1 è possibile eseguire il comando seguente per verificare quali versioni SDK sono già installate nel computer:
+È utile sapere quali versioni sono disponibili per configurarne una nel file *global.json*. È possibile trovare l'elenco completo degli SDK disponibili supportati nel sito [dei download di .NET](https://www.microsoft.com/net/download/all). A partire da .NET Core 2.1 SDK, è possibile eseguire il comando seguente per verificare quali versioni dell'SDK sono già installate nel computer:
 
 ```console
 dotnet --list-sdks
@@ -64,7 +64,7 @@ Per installare altre versioni di .NET Core SDK nel computer, visitare il sito [d
 È possibile creare un nuovo file *global.json* nella directory corrente eseguendo il comando [dotnet new](dotnet-new.md), in modo simile al seguente esempio:
 
 ```console
-dotnet new globaljson --sdk-version 2.1.300
+dotnet new globaljson --sdk-version 2.2.100
 ```
 
 ## <a name="matching-rules"></a>Regole di corrispondenza
@@ -103,8 +103,8 @@ Questo avviso indica che il progetto è stato compilato usando una versione di a
 > [!WARNING]
 > Progetto di avvio '{startupProject}' framework di destinazione '.NETCoreApp' versione '{targetFrameworkVersion}'. Questa versione degli strumenti della riga di comando di Entity Framework Core .NET supporta solo la versione 2.0 o successive. Per informazioni sull'uso di versioni precedenti degli strumenti, vedere <https://go.microsoft.com/fwlink/?linkid=871254>
 
-A partire da .NET Core SDK 2.1 (v. 2.1.300), il comando `dotnet ef` viene incluso nel SDK. Questo avviso indica che il progetto è destinato a EF Core 1.0 o 1.1, che non è compatibile con .NET Core SDK 2.1 e versioni successive. Per compilare il progetto, installare .NET Core SDK 2.0 (v. 2.1.201) e versioni precedenti nel computer e definire la versione SDK desiderata usando il file *global.json*. Per altre informazioni sul comando `dotnet ef`, vedere [Strumenti da riga di comando di EF Core .NET](/ef/core/miscellaneous/cli/dotnet).
+A partire da .NET Core 2.1 SDK (versione 2.1.300), il comando `dotnet ef` è incluso nell'SDK. Questo avviso indica che il progetto è destinato a EF Core 1.0 o 1.1, che non è compatibile con .NET Core 2.1 SDK e versioni successive. Per compilare il progetto, installare .NET Core 2.0 SDK (versione 2.1.201) e versioni precedenti nel computer e definire la versione dell'SDK desiderata usando il file *global.json*. Per altre informazioni sul comando `dotnet ef`, vedere [Strumenti da riga di comando di EF Core .NET](/ef/core/miscellaneous/cli/dotnet).
 
 ## <a name="see-also"></a>Vedere anche
 
-* [Come vengono risolti gli SDK di progetto](/visualstudio/msbuild/how-to-use-project-sdk#how-project-sdks-are-resolved)
+- [Come vengono risolti gli SDK di progetto](/visualstudio/msbuild/how-to-use-project-sdk#how-project-sdks-are-resolved)
