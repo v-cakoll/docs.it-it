@@ -1,153 +1,204 @@
 ---
 title: Script dotnet-install
 description: Informazioni sugli script dotnet-install per l'installazione degli strumenti dell'interfaccia della riga di comando di .NET Core e del runtime condiviso.
-author: blackdwarf
-ms.author: mairaw
-ms.date: 09/11/2017
-ms.openlocfilehash: ea14424297dcf1dab8711197bee1d3b3e19879c1
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.date: 11/15/2018
+ms.openlocfilehash: 0f565fee3e4ff4bec65bd196f635e9e9601485c2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837076"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148324"
 ---
-# <a name="dotnet-install-scripts-reference"></a><span data-ttu-id="07f3b-103">Riferimento agli script dotnet-install</span><span class="sxs-lookup"><span data-stu-id="07f3b-103">dotnet-install scripts reference</span></span>
+# <a name="dotnet-install-scripts-reference"></a><span data-ttu-id="71446-103">Riferimento agli script dotnet-install</span><span class="sxs-lookup"><span data-stu-id="71446-103">dotnet-install scripts reference</span></span>
 
-## <a name="name"></a><span data-ttu-id="07f3b-104">nome</span><span class="sxs-lookup"><span data-stu-id="07f3b-104">Name</span></span>
+## <a name="name"></a><span data-ttu-id="71446-104">nome</span><span class="sxs-lookup"><span data-stu-id="71446-104">Name</span></span>
 
-<span data-ttu-id="07f3b-105">`dotnet-install.ps1` | `dotnet-install.sh`: script usato per l'installazione degli strumenti dell'interfaccia della riga di comando e del runtime condiviso di .NET Core.</span><span class="sxs-lookup"><span data-stu-id="07f3b-105">`dotnet-install.ps1` | `dotnet-install.sh` - Script used to install the .NET Core CLI tools and the shared runtime.</span></span>
+<span data-ttu-id="71446-105">`dotnet-install.ps1` | `dotnet-install.sh`: script usato per l'installazione degli strumenti dell'interfaccia della riga di comando e del runtime condiviso di .NET Core.</span><span class="sxs-lookup"><span data-stu-id="71446-105">`dotnet-install.ps1` | `dotnet-install.sh` - Script used to install the .NET Core CLI tools and the shared runtime.</span></span>
 
-## <a name="synopsis"></a><span data-ttu-id="07f3b-106">Riepilogo</span><span class="sxs-lookup"><span data-stu-id="07f3b-106">Synopsis</span></span>
+## <a name="synopsis"></a><span data-ttu-id="71446-106">Riepilogo</span><span class="sxs-lookup"><span data-stu-id="71446-106">Synopsis</span></span>
 
-<span data-ttu-id="07f3b-107">Windows:</span><span class="sxs-lookup"><span data-stu-id="07f3b-107">Windows:</span></span>
+<span data-ttu-id="71446-107">Windows:</span><span class="sxs-lookup"><span data-stu-id="71446-107">Windows:</span></span>
 
-`dotnet-install.ps1 [-Channel] [-Version] [-InstallDir] [-Architecture] [-SharedRuntime] [-DryRun] [-NoPath] [-AzureFeed] [-ProxyAddress] [--Verbose] [--Help]`
+`dotnet-install.ps1 [-Channel] [-Version] [-InstallDir] [-Architecture] [-SharedRuntime] [-Runtime] [-DryRun] [-NoPath] [-Verbose] [-AzureFeed] [-UncachedFeed] [-NoCdn] [-FeedCredential] [-ProxyAddress] [-ProxyUseDefaultCredentials] [-SkipNonVersionedFiles] [-Help]`
 
-<span data-ttu-id="07f3b-108">macOS/Linux:</span><span class="sxs-lookup"><span data-stu-id="07f3b-108">macOS/Linux:</span></span>
+<span data-ttu-id="71446-108">macOS/Linux:</span><span class="sxs-lookup"><span data-stu-id="71446-108">macOS/Linux:</span></span>
 
-`dotnet-install.sh [--channel] [--version] [--install-dir] [--architecture] [--shared-runtime] [--dry-run] [--no-path] [--azure-feed] [--verbose] [--help]`
+`dotnet-install.sh [--channel] [--version] [--install-dir] [--architecture] [--runtime] [--dry-run] [--no-path] [--verbose] [--azure-feed] [--uncached-feed] [--no-cdn] [--feed-credential] [--runtime-id] [--skip-non-versioned-files] [--help]`
 
-## <a name="description"></a><span data-ttu-id="07f3b-109">Descrizione</span><span class="sxs-lookup"><span data-stu-id="07f3b-109">Description</span></span>
+## <a name="description"></a><span data-ttu-id="71446-109">Description</span><span class="sxs-lookup"><span data-stu-id="71446-109">Description</span></span>
 
-<span data-ttu-id="07f3b-110">Gli script `dotnet-install` vengono usati per eseguire un'installazione non amministrativa di .NET Core SDK, che include gli strumenti dell'interfaccia della riga di comando e il runtime condiviso di .NET Core.</span><span class="sxs-lookup"><span data-stu-id="07f3b-110">The `dotnet-install` scripts are used to perform a non-admin installation of the .NET Core SDK, which includes the .NET Core CLI tools and the shared runtime.</span></span>
+<span data-ttu-id="71446-110">Gli script `dotnet-install` vengono usati per eseguire un'installazione non amministrativa di .NET Core SDK, che include gli strumenti dell'interfaccia della riga di comando e il runtime condiviso di .NET Core.</span><span class="sxs-lookup"><span data-stu-id="71446-110">The `dotnet-install` scripts are used to perform a non-admin installation of the .NET Core SDK, which includes the .NET Core CLI tools and the shared runtime.</span></span>
 
-<span data-ttu-id="07f3b-111">È consigliabile usare la versione stabile ospitata nel [sito Web principale di .NET Core](https://dot.net).</span><span class="sxs-lookup"><span data-stu-id="07f3b-111">We recommend that you use the stable version that is hosted on [.NET Core main website](https://dot.net).</span></span> <span data-ttu-id="07f3b-112">I percorsi diretti per gli script sono:</span><span class="sxs-lookup"><span data-stu-id="07f3b-112">The direct paths to the scripts are:</span></span>
+<span data-ttu-id="71446-111">È consigliabile usare la versione stabile ospitata nel [sito Web principale di .NET Core](https://dot.net).</span><span class="sxs-lookup"><span data-stu-id="71446-111">We recommend that you use the stable version that is hosted on [.NET Core main website](https://dot.net).</span></span> <span data-ttu-id="71446-112">I percorsi diretti per gli script sono:</span><span class="sxs-lookup"><span data-stu-id="71446-112">The direct paths to the scripts are:</span></span>
 
-* <span data-ttu-id="07f3b-113"><https://dot.net/v1/dotnet-install.sh> (Bash, UNIX)</span><span class="sxs-lookup"><span data-stu-id="07f3b-113"><https://dot.net/v1/dotnet-install.sh> (bash, UNIX)</span></span>
-* <span data-ttu-id="07f3b-114"><https://dot.net/v1/dotnet-install.ps1> (Powershell, Windows)</span><span class="sxs-lookup"><span data-stu-id="07f3b-114"><https://dot.net/v1/dotnet-install.ps1> (Powershell, Windows)</span></span>
+* <span data-ttu-id="71446-113"><https://dot.net/v1/dotnet-install.sh> (Bash, UNIX)</span><span class="sxs-lookup"><span data-stu-id="71446-113"><https://dot.net/v1/dotnet-install.sh> (bash, UNIX)</span></span>
+* <span data-ttu-id="71446-114"><https://dot.net/v1/dotnet-install.ps1> (Powershell, Windows)</span><span class="sxs-lookup"><span data-stu-id="71446-114"><https://dot.net/v1/dotnet-install.ps1> (Powershell, Windows)</span></span>
 
-<span data-ttu-id="07f3b-115">Gli script vengono usati principalmente negli scenari di automazione e nelle installazioni senza privilegi di amministratore.</span><span class="sxs-lookup"><span data-stu-id="07f3b-115">The main usefulness of these scripts is in automation scenarios and non-admin installations.</span></span> <span data-ttu-id="07f3b-116">Sono disponibili due script, uno per PowerShell, che funziona in Windows,</span><span class="sxs-lookup"><span data-stu-id="07f3b-116">There are two scripts: One is a PowerShell script that works on Windows.</span></span> <span data-ttu-id="07f3b-117">L'altro script è uno script bash che funziona su Linux/macOS.</span><span class="sxs-lookup"><span data-stu-id="07f3b-117">The other script is a bash script that works on Linux/macOS.</span></span> <span data-ttu-id="07f3b-118">Entrambi gli script hanno lo stesso comportamento.</span><span class="sxs-lookup"><span data-stu-id="07f3b-118">Both scripts have the same behavior.</span></span> <span data-ttu-id="07f3b-119">Lo script bash legge anche le opzioni PowerShell, che possono quindi essere usate con lo script in sistemi Linux/macOS.</span><span class="sxs-lookup"><span data-stu-id="07f3b-119">The bash script also reads PowerShell switches, so you can use PowerShell switches with the script on Linux/macOS systems.</span></span>
+<span data-ttu-id="71446-115">Gli script vengono usati principalmente negli scenari di automazione e nelle installazioni senza privilegi di amministratore.</span><span class="sxs-lookup"><span data-stu-id="71446-115">The main usefulness of these scripts is in automation scenarios and non-admin installations.</span></span> <span data-ttu-id="71446-116">Sono disponibili due script: uno è uno script PowerShell, che funziona in Windows, e l'altro è uno script Bash, che funziona in Linux/macOS.</span><span class="sxs-lookup"><span data-stu-id="71446-116">There are two scripts: one is a PowerShell script that works on Windows, and the other is a bash script that works on Linux/macOS.</span></span> <span data-ttu-id="71446-117">Entrambi gli script hanno lo stesso comportamento.</span><span class="sxs-lookup"><span data-stu-id="71446-117">Both scripts have the same behavior.</span></span> <span data-ttu-id="71446-118">Lo script bash legge anche le opzioni PowerShell, che possono quindi essere usate con lo script in sistemi Linux/macOS.</span><span class="sxs-lookup"><span data-stu-id="71446-118">The bash script also reads PowerShell switches, so you can use PowerShell switches with the script on Linux/macOS systems.</span></span>
 
-<span data-ttu-id="07f3b-120">Gli script di installazione scaricano il file ZIP/tarball da destinazioni di compilazione dell'interfaccia della riga di comando e lo installano nel percorso predefinito o in un percorso specificato da `-InstallDir|--install-dir`.</span><span class="sxs-lookup"><span data-stu-id="07f3b-120">The installation scripts download the ZIP/tarball file from the CLI build drops and proceed to install it in either the default location or in a location specified by `-InstallDir|--install-dir`.</span></span> <span data-ttu-id="07f3b-121">Per impostazione predefinita, lo script di installazione scarica e installa l'SDK.</span><span class="sxs-lookup"><span data-stu-id="07f3b-121">By default, the installation scripts download the SDK and install it.</span></span> <span data-ttu-id="07f3b-122">Se si vuole ottenere solo il runtime condiviso, è possibile specificare l'argomento `--shared-runtime`.</span><span class="sxs-lookup"><span data-stu-id="07f3b-122">If you wish to only obtain the shared runtime, specify the `--shared-runtime` argument.</span></span>
+<span data-ttu-id="71446-119">Gli script di installazione scaricano il file ZIP/tarball da destinazioni di compilazione dell'interfaccia della riga di comando e lo installano nel percorso predefinito o in un percorso specificato da `-InstallDir|--install-dir`.</span><span class="sxs-lookup"><span data-stu-id="71446-119">The installation scripts download the ZIP/tarball file from the CLI build drops and proceed to install it in either the default location or in a location specified by `-InstallDir|--install-dir`.</span></span> <span data-ttu-id="71446-120">Per impostazione predefinita, lo script di installazione scarica e installa l'SDK.</span><span class="sxs-lookup"><span data-stu-id="71446-120">By default, the installation scripts download the SDK and install it.</span></span> <span data-ttu-id="71446-121">Se si vuole ottenere solo il runtime condiviso, è possibile specificare l'argomento `--shared-runtime`.</span><span class="sxs-lookup"><span data-stu-id="71446-121">If you wish to only obtain the shared runtime, specify the `--shared-runtime` argument.</span></span>
 
-<span data-ttu-id="07f3b-123">Per impostazione predefinita, lo script aggiunge il percorso di installazione a $PATH per la sessione corrente.</span><span class="sxs-lookup"><span data-stu-id="07f3b-123">By default, the script adds the install location to the $PATH for the current session.</span></span> <span data-ttu-id="07f3b-124">Eseguire l'override di questo comportamento predefinito specificando l'argomento `--no-path`.</span><span class="sxs-lookup"><span data-stu-id="07f3b-124">Override this default behavior by specifying the `--no-path` argument.</span></span>
+<span data-ttu-id="71446-122">Per impostazione predefinita, lo script aggiunge il percorso di installazione a $PATH per la sessione corrente.</span><span class="sxs-lookup"><span data-stu-id="71446-122">By default, the script adds the install location to the $PATH for the current session.</span></span> <span data-ttu-id="71446-123">Eseguire l'override di questo comportamento predefinito specificando l'argomento `--no-path`.</span><span class="sxs-lookup"><span data-stu-id="71446-123">Override this default behavior by specifying the `--no-path` argument.</span></span>
 
-<span data-ttu-id="07f3b-125">Prima di eseguire lo script, installare le [dipendenze](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md) necessarie.</span><span class="sxs-lookup"><span data-stu-id="07f3b-125">Before running the script, install the required [dependencies](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md).</span></span>
+<span data-ttu-id="71446-124">Prima di eseguire lo script, installare le [dipendenze](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md) necessarie.</span><span class="sxs-lookup"><span data-stu-id="71446-124">Before running the script, install the required [dependencies](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md).</span></span>
 
-<span data-ttu-id="07f3b-126">È possibile installare una versione specifica usando l'argomento `--version`.</span><span class="sxs-lookup"><span data-stu-id="07f3b-126">You can install a specific version using the `--version` argument.</span></span> <span data-ttu-id="07f3b-127">La versione deve essere specificata con un numero a tre parti (ad esempio, 1.0.0-13232).</span><span class="sxs-lookup"><span data-stu-id="07f3b-127">The version must be specified as a 3-part version (for example, 1.0.0-13232).</span></span> <span data-ttu-id="07f3b-128">Se omessa, viene usata la versione `latest`.</span><span class="sxs-lookup"><span data-stu-id="07f3b-128">If omitted, it uses the `latest` version.</span></span>
+<span data-ttu-id="71446-125">È possibile installare una versione specifica usando l'argomento `--version`.</span><span class="sxs-lookup"><span data-stu-id="71446-125">You can install a specific version using the `--version` argument.</span></span> <span data-ttu-id="71446-126">La versione deve essere specificata con un numero a tre parti (ad esempio, 1.0.0-13232).</span><span class="sxs-lookup"><span data-stu-id="71446-126">The version must be specified as a three-part version (for example, 1.0.0-13232).</span></span> <span data-ttu-id="71446-127">Se non viene fornita, viene usata la versione `latest`.</span><span class="sxs-lookup"><span data-stu-id="71446-127">If not provided, it uses the `latest` version.</span></span>
 
-## <a name="options"></a><span data-ttu-id="07f3b-129">Opzioni</span><span class="sxs-lookup"><span data-stu-id="07f3b-129">Options</span></span>
+## <a name="options"></a><span data-ttu-id="71446-128">Opzioni</span><span class="sxs-lookup"><span data-stu-id="71446-128">Options</span></span>
 
-`-Channel <CHANNEL>`
+* **`-Channel <CHANNEL>`**
 
-<span data-ttu-id="07f3b-130">Specifica il canale di origine per l'installazione.</span><span class="sxs-lookup"><span data-stu-id="07f3b-130">Specifies the source channel for the installation.</span></span> <span data-ttu-id="07f3b-131">I valori possibili sono:</span><span class="sxs-lookup"><span data-stu-id="07f3b-131">The possible values are:</span></span>
+  <span data-ttu-id="71446-129">Specifica il canale di origine per l'installazione.</span><span class="sxs-lookup"><span data-stu-id="71446-129">Specifies the source channel for the installation.</span></span> <span data-ttu-id="71446-130">I valori possibili sono:</span><span class="sxs-lookup"><span data-stu-id="71446-130">The possible values are:</span></span>
 
-- <span data-ttu-id="07f3b-132">`Current` - Versione corrente</span><span class="sxs-lookup"><span data-stu-id="07f3b-132">`Current` - Current release</span></span>
-- <span data-ttu-id="07f3b-133">`LTS` - Canale di supporto a lungo termine (versione supportata corrente)</span><span class="sxs-lookup"><span data-stu-id="07f3b-133">`LTS` - Long-Term Support channel (current supported release)</span></span>
-- <span data-ttu-id="07f3b-134">Versione in due parti nel formato X.Y che rappresenta una versione specifica, ad esempio `2.0` o `1.0`</span><span class="sxs-lookup"><span data-stu-id="07f3b-134">Two-part version in X.Y format representing a specific release (for example, `2.0` or `1.0`)</span></span>
-- <span data-ttu-id="07f3b-135">Nome del ramo, ad esempio, `release/2.0.0`, `release/2.0.0-preview2` o `master` per la versione più recente dal ramo `master` (versioni notturne "all'avanguardia")</span><span class="sxs-lookup"><span data-stu-id="07f3b-135">Branch name [for example, `release/2.0.0`, `release/2.0.0-preview2`, or `master` for the latest from the `master` branch ("bleeding edge" nightly releases)]</span></span>
+  * <span data-ttu-id="71446-131">`Current`: versione più recente.</span><span class="sxs-lookup"><span data-stu-id="71446-131">`Current` - Most current release.</span></span>
+  * <span data-ttu-id="71446-132">`LTS`: canale di supporto a lungo termine (versione supportata più recente).</span><span class="sxs-lookup"><span data-stu-id="71446-132">`LTS` - Long-Term Support channel (most current supported release).</span></span>
+  * <span data-ttu-id="71446-133">Versione in due parti nel formato X.Y che rappresenta una versione specifica, ad esempio `2.0` o `1.0`.</span><span class="sxs-lookup"><span data-stu-id="71446-133">Two-part version in X.Y format representing a specific release (for example, `2.0` or `1.0`).</span></span>
+  * <span data-ttu-id="71446-134">Nome ramo.</span><span class="sxs-lookup"><span data-stu-id="71446-134">Branch name.</span></span> <span data-ttu-id="71446-135">Ad esempio, `release/2.0.0`, `release/2.0.0-preview2` o `master` (per le versione notturne).</span><span class="sxs-lookup"><span data-stu-id="71446-135">For example, `release/2.0.0`, `release/2.0.0-preview2`, or `master` (for nightly releases).</span></span>
 
-<span data-ttu-id="07f3b-136">Il valore predefinito è `LTS`.</span><span class="sxs-lookup"><span data-stu-id="07f3b-136">The default value is `LTS`.</span></span> <span data-ttu-id="07f3b-137">Per altre informazioni sui canali di supporto per .NET, vedere l'argomento [.NET Core Support Lifecycle](https://www.microsoft.com/net/core/support) (Ciclo di vita del supporto per .NET Core).</span><span class="sxs-lookup"><span data-stu-id="07f3b-137">For more information on .NET support channels, see the [.NET Core Support Lifecycle](https://www.microsoft.com/net/core/support) topic.</span></span>
+  <span data-ttu-id="71446-136">Il valore predefinito è `LTS`.</span><span class="sxs-lookup"><span data-stu-id="71446-136">The default value is `LTS`.</span></span> <span data-ttu-id="71446-137">Per altre informazioni sui canali di supporto per .NET, vedere la pagina [.NET Support Policy](https://www.microsoft.com/net/platform/support-policy#dotnet-core) (Criteri di supporto per .NET).</span><span class="sxs-lookup"><span data-stu-id="71446-137">For more information on .NET support channels, see the [.NET Support Policy](https://www.microsoft.com/net/platform/support-policy#dotnet-core) page.</span></span>
 
-`-Version <VERSION>`
+* **`-Version <VERSION>`**
 
-<span data-ttu-id="07f3b-138">Rappresenta una versione di build specifica.</span><span class="sxs-lookup"><span data-stu-id="07f3b-138">Represents a specific build version.</span></span> <span data-ttu-id="07f3b-139">I valori possibili sono:</span><span class="sxs-lookup"><span data-stu-id="07f3b-139">The possible values are:</span></span>
+  <span data-ttu-id="71446-138">Rappresenta una versione di build specifica.</span><span class="sxs-lookup"><span data-stu-id="71446-138">Represents a specific build version.</span></span> <span data-ttu-id="71446-139">I valori possibili sono:</span><span class="sxs-lookup"><span data-stu-id="71446-139">The possible values are:</span></span>
 
-- <span data-ttu-id="07f3b-140">`latest` - Ultima build sul canale (valore usato con l'opzione `-Channel`)</span><span class="sxs-lookup"><span data-stu-id="07f3b-140">`latest` - Latest build on the channel (used with the `-Channel` option)</span></span>
-- <span data-ttu-id="07f3b-141">`coherent` - Ultima build coerente sul canale; usa la combinazione di pacchetti stabile più recente (valore usato con le opzioni `-Channel` del nome di ramo)</span><span class="sxs-lookup"><span data-stu-id="07f3b-141">`coherent` - Latest coherent build on the channel; uses the latest stable package combination (used with Branch name `-Channel` options)</span></span>
-- <span data-ttu-id="07f3b-142">Versione in tre parti nel formato X.Y.Z che rappresenta una versione di build specifica; sostituisce l'opzione `-Channel`.</span><span class="sxs-lookup"><span data-stu-id="07f3b-142">Three-part version in X.Y.Z format representing a specific build version; supersedes the `-Channel` option.</span></span> <span data-ttu-id="07f3b-143">Ad esempio: `2.0.0-preview2-006120`</span><span class="sxs-lookup"><span data-stu-id="07f3b-143">For example: `2.0.0-preview2-006120`</span></span>
+  * <span data-ttu-id="71446-140">`latest`: ultima build sul canale (valore usato con l'opzione `-Channel`).</span><span class="sxs-lookup"><span data-stu-id="71446-140">`latest` - Latest build on the channel (used with the `-Channel` option).</span></span>
+  * <span data-ttu-id="71446-141">`coherent`: ultima build coerente sul canale. Usa la combinazione di pacchetti stabile più recente (valore usato con le opzioni `-Channel` del nome del ramo).</span><span class="sxs-lookup"><span data-stu-id="71446-141">`coherent` - Latest coherent build on the channel; uses the latest stable package combination (used with Branch name `-Channel` options).</span></span>
+  * <span data-ttu-id="71446-142">Versione in tre parti nel formato X.Y.Z che rappresenta una versione di build specifica; sostituisce l'opzione `-Channel`.</span><span class="sxs-lookup"><span data-stu-id="71446-142">Three-part version in X.Y.Z format representing a specific build version; supersedes the `-Channel` option.</span></span> <span data-ttu-id="71446-143">Ad esempio: `2.0.0-preview2-006120`.</span><span class="sxs-lookup"><span data-stu-id="71446-143">For example: `2.0.0-preview2-006120`.</span></span>
 
-<span data-ttu-id="07f3b-144">Se omesso, `-Version` viene impostato automaticamente su `latest`.</span><span class="sxs-lookup"><span data-stu-id="07f3b-144">If omitted, `-Version` defaults to `latest`.</span></span>
+  <span data-ttu-id="71446-144">Se non viene specificata, `-Version` viene impostata automaticamente su `latest`.</span><span class="sxs-lookup"><span data-stu-id="71446-144">If not specified, `-Version` defaults to `latest`.</span></span>
 
-`-InstallDir <DIRECTORY>`
+* **`-InstallDir <DIRECTORY>`**
 
-<span data-ttu-id="07f3b-145">Specifica il percorso di installazione.</span><span class="sxs-lookup"><span data-stu-id="07f3b-145">Specifies the installation path.</span></span> <span data-ttu-id="07f3b-146">Se la directory non esiste, verrà creata.</span><span class="sxs-lookup"><span data-stu-id="07f3b-146">The directory is created if it doesn't exist.</span></span> <span data-ttu-id="07f3b-147">Il valore predefinito è *%LocalAppData%\.dotnet*.</span><span class="sxs-lookup"><span data-stu-id="07f3b-147">The default value is *%LocalAppData%\.dotnet*.</span></span> <span data-ttu-id="07f3b-148">Si noti che i file binari vengono inseriti direttamente nella directory.</span><span class="sxs-lookup"><span data-stu-id="07f3b-148">Note that binaries are placed directly in the directory.</span></span>
+  <span data-ttu-id="71446-145">Specifica il percorso di installazione.</span><span class="sxs-lookup"><span data-stu-id="71446-145">Specifies the installation path.</span></span> <span data-ttu-id="71446-146">Se la directory non esiste, verrà creata.</span><span class="sxs-lookup"><span data-stu-id="71446-146">The directory is created if it doesn't exist.</span></span> <span data-ttu-id="71446-147">Il valore predefinito è *%LocalAppData%\Microsoft\dotnet*.</span><span class="sxs-lookup"><span data-stu-id="71446-147">The default value is *%LocalAppData%\Microsoft\dotnet*.</span></span> <span data-ttu-id="71446-148">I file binari vengono inseriti direttamente in questa directory.</span><span class="sxs-lookup"><span data-stu-id="71446-148">Binaries are placed directly in this directory.</span></span>
 
-`-Architecture <ARCHITECTURE>`
+* **`-Architecture <ARCHITECTURE>`**
 
-<span data-ttu-id="07f3b-149">Architettura dei file binari di .NET Core da installare.</span><span class="sxs-lookup"><span data-stu-id="07f3b-149">Architecture of the .NET Core binaries to install.</span></span> <span data-ttu-id="07f3b-150">I valori possibili sono `auto`, `x64` e `x86`.</span><span class="sxs-lookup"><span data-stu-id="07f3b-150">Possible values are `auto`, `x64`, and `x86`.</span></span> <span data-ttu-id="07f3b-151">Il valore predefinito è `auto`, che rappresenta l'architettura del sistema operativo attualmente in esecuzione.</span><span class="sxs-lookup"><span data-stu-id="07f3b-151">The default value is `auto`, which represents the currently running OS architecture.</span></span>
+  <span data-ttu-id="71446-149">Architettura dei file binari di .NET Core da installare.</span><span class="sxs-lookup"><span data-stu-id="71446-149">Architecture of the .NET Core binaries to install.</span></span> <span data-ttu-id="71446-150">I valori possibili sono `auto`, `x64` e `x86`.</span><span class="sxs-lookup"><span data-stu-id="71446-150">Possible values are `auto`, `x64`, and `x86`.</span></span> <span data-ttu-id="71446-151">Il valore predefinito è `auto`, che rappresenta l'architettura del sistema operativo attualmente in esecuzione.</span><span class="sxs-lookup"><span data-stu-id="71446-151">The default value is `auto`, which represents the currently running OS architecture.</span></span>
 
-`-SharedRuntime`
+* **`-SharedRuntime`**
 
-<span data-ttu-id="07f3b-152">Se impostata, questa opzione limita l'installazione al runtime condiviso.</span><span class="sxs-lookup"><span data-stu-id="07f3b-152">If set, this switch limits installation to the shared runtime.</span></span> <span data-ttu-id="07f3b-153">Non viene installato l'intero SDK.</span><span class="sxs-lookup"><span data-stu-id="07f3b-153">The entire SDK isn't installed.</span></span>
+  > [!NOTE]
+  > <span data-ttu-id="71446-152">Questo parametro è obsoleto e potrebbe essere rimosso in una versione futura dello script.</span><span class="sxs-lookup"><span data-stu-id="71446-152">This parameter is obsolete and may be removed in a future version of the script.</span></span> <span data-ttu-id="71446-153">L'alternativa consigliata è l'opzione `Runtime`.</span><span class="sxs-lookup"><span data-stu-id="71446-153">The recommended alternative is the `Runtime` option.</span></span>
 
-`-DryRun`
+  <span data-ttu-id="71446-154">Installa solo i bit del runtime condiviso, non l'intero SDK.</span><span class="sxs-lookup"><span data-stu-id="71446-154">Installs just the shared runtime bits, not the entire SDK.</span></span> <span data-ttu-id="71446-155">Ciò equivale a specificare `-Runtime dotnet`.</span><span class="sxs-lookup"><span data-stu-id="71446-155">This is equivalent to specifying `-Runtime dotnet`.</span></span>
 
-<span data-ttu-id="07f3b-154">Se impostata, lo script non esegue l'installazione, ma visualizza la riga di comando da usare per installare in modo coerente la versione attualmente richiesta dell'interfaccia della riga di comando di .NET Core.</span><span class="sxs-lookup"><span data-stu-id="07f3b-154">If set, the script won't perform the installation; but instead, it displays what command line to use to consistently install the currently requested version of the .NET Core CLI.</span></span> <span data-ttu-id="07f3b-155">Se ad esempio si specifica la versione `latest`, verrà visualizzato un collegamento con la versione specifica in modo che questo comando possa essere usato in modo deterministico in uno script di compilazione.</span><span class="sxs-lookup"><span data-stu-id="07f3b-155">For example if you specify version `latest`, it displays a link with the specific version so that this command can be used deterministically in a build script.</span></span> <span data-ttu-id="07f3b-156">Viene visualizzato anche il percorso del file binario se si preferisce installarlo o scaricarlo manualmente.</span><span class="sxs-lookup"><span data-stu-id="07f3b-156">It also displays the binary's location if you prefer to install or download it yourself.</span></span>
+* **`-Runtime <RUNTIME>`**
 
-`-NoPath`
+  <span data-ttu-id="71446-156">Installa solo il runtime condiviso, non l'intero SDK.</span><span class="sxs-lookup"><span data-stu-id="71446-156">Installs just the shared runtime, not the entire SDK.</span></span> <span data-ttu-id="71446-157">I valori possibili sono:</span><span class="sxs-lookup"><span data-stu-id="71446-157">The possible values are:</span></span>
 
-<span data-ttu-id="07f3b-157">Se impostata, il prefisso o la directory di installazione non viene esportata nel percorso per la sessione corrente.</span><span class="sxs-lookup"><span data-stu-id="07f3b-157">If set, the prefix/installdir are not exported to the path for the current session.</span></span> <span data-ttu-id="07f3b-158">Per impostazione predefinita, lo script modifica il percorso rendendo disponibili gli strumenti dell'interfaccia della riga di comando immediatamente dopo l'installazione.</span><span class="sxs-lookup"><span data-stu-id="07f3b-158">By default, the script will modify the PATH, which makes the CLI tools available immediately after install.</span></span>
+  * <span data-ttu-id="71446-158">`dotnet`: runtime condiviso `Microsoft.NETCore.App`.</span><span class="sxs-lookup"><span data-stu-id="71446-158">`dotnet` - the `Microsoft.NETCore.App` shared runtime.</span></span>
+  * <span data-ttu-id="71446-159">`aspnetcore`: runtime condiviso `Microsoft.AspNetCore.App`.</span><span class="sxs-lookup"><span data-stu-id="71446-159">`aspnetcore` - the `Microsoft.AspNetCore.App` shared runtime.</span></span>
 
-`-AzureFeed`
+* **`-DryRun`**
 
-<span data-ttu-id="07f3b-159">Specifica l'URL del feed di Azure per il programma di installazione.</span><span class="sxs-lookup"><span data-stu-id="07f3b-159">Specifies the URL for the Azure feed to the installer.</span></span> <span data-ttu-id="07f3b-160">È consigliabile non modificare questo valore.</span><span class="sxs-lookup"><span data-stu-id="07f3b-160">It isn't recommended that you change this value.</span></span> <span data-ttu-id="07f3b-161">Il valore predefinito è `https://dotnetcli.azureedge.net/dotnet`.</span><span class="sxs-lookup"><span data-stu-id="07f3b-161">The default is `https://dotnetcli.azureedge.net/dotnet`.</span></span>
+  <span data-ttu-id="71446-160">Se impostata, lo script non eseguirà l'installazione.</span><span class="sxs-lookup"><span data-stu-id="71446-160">If set, the script won't perform the installation.</span></span> <span data-ttu-id="71446-161">Visualizza invece la riga di comando da usare per installare in modo coerente la versione attualmente richiesta dell'interfaccia della riga di comando di .NET Core.</span><span class="sxs-lookup"><span data-stu-id="71446-161">Instead, it displays what command line to use to consistently install the currently requested version of the .NET Core CLI.</span></span> <span data-ttu-id="71446-162">Se ad esempio si specifica la versione `latest`, verrà visualizzato un collegamento con la versione specifica in modo che questo comando possa essere usato in modo deterministico in uno script di compilazione.</span><span class="sxs-lookup"><span data-stu-id="71446-162">For example, if you specify version `latest`, it displays a link with the specific version so that this command can be used deterministically in a build script.</span></span> <span data-ttu-id="71446-163">Viene visualizzato anche il percorso del file binario se si preferisce installarlo o scaricarlo manualmente.</span><span class="sxs-lookup"><span data-stu-id="71446-163">It also displays the binary's location if you prefer to install or download it yourself.</span></span>
 
-`-ProxyAddress`
+* **`-NoPath`**
 
-<span data-ttu-id="07f3b-162">Se impostata, il programma di installazione usa il proxy durante le richieste Web.</span><span class="sxs-lookup"><span data-stu-id="07f3b-162">If set, the installer uses the proxy when making web requests.</span></span> <span data-ttu-id="07f3b-163">(Valido solo per Windows)</span><span class="sxs-lookup"><span data-stu-id="07f3b-163">(Only valid for Windows)</span></span>
+  <span data-ttu-id="71446-164">Se impostata, la cartella di installazione non viene esportata nel percorso per la sessione corrente.</span><span class="sxs-lookup"><span data-stu-id="71446-164">If set, the installation folder isn't exported to the path for the current session.</span></span> <span data-ttu-id="71446-165">Per impostazione predefinita, lo script modifica il percorso rendendo disponibili gli strumenti dell'interfaccia della riga di comando immediatamente dopo l'installazione.</span><span class="sxs-lookup"><span data-stu-id="71446-165">By default, the script modifies the PATH, which makes the CLI tools available immediately after install.</span></span>
 
-`--verbose`
+* **`-Verbose`**
 
-<span data-ttu-id="07f3b-164">Visualizza le informazioni di diagnostica.</span><span class="sxs-lookup"><span data-stu-id="07f3b-164">Display diagnostics information.</span></span>
+  <span data-ttu-id="71446-166">Visualizza le informazioni di diagnostica.</span><span class="sxs-lookup"><span data-stu-id="71446-166">Displays diagnostics information.</span></span>
 
-`--help`
+* **`-AzureFeed`**
 
-<span data-ttu-id="07f3b-165">Stampa la Guida per lo script.</span><span class="sxs-lookup"><span data-stu-id="07f3b-165">Prints out help for the script.</span></span>
+  <span data-ttu-id="71446-167">Specifica l'URL del feed di Azure per il programma di installazione.</span><span class="sxs-lookup"><span data-stu-id="71446-167">Specifies the URL for the Azure feed to the installer.</span></span> <span data-ttu-id="71446-168">È consigliabile non modificare questo valore.</span><span class="sxs-lookup"><span data-stu-id="71446-168">We recommended that you don't change this value.</span></span> <span data-ttu-id="71446-169">Il valore predefinito è `https://dotnetcli.azureedge.net/dotnet`.</span><span class="sxs-lookup"><span data-stu-id="71446-169">The default value is `https://dotnetcli.azureedge.net/dotnet`.</span></span>
 
-## <a name="examples"></a><span data-ttu-id="07f3b-166">Esempi</span><span class="sxs-lookup"><span data-stu-id="07f3b-166">Examples</span></span>
+* **`-UncachedFeed`**
 
-<span data-ttu-id="07f3b-167">Installare la versione LTS (Long Term Support) più recente nel percorso predefinito:</span><span class="sxs-lookup"><span data-stu-id="07f3b-167">Install the latest long-term supported (LTS) version to the default location:</span></span>
+  <span data-ttu-id="71446-170">Consente di modificare l'URL per il feed non memorizzato nella cache usato da questo programma di installazione.</span><span class="sxs-lookup"><span data-stu-id="71446-170">Allows changing the URL for the uncached feed used by this installer.</span></span> <span data-ttu-id="71446-171">È consigliabile non modificare questo valore.</span><span class="sxs-lookup"><span data-stu-id="71446-171">We recommended that you don't change this value.</span></span>
 
-<span data-ttu-id="07f3b-168">Windows:</span><span class="sxs-lookup"><span data-stu-id="07f3b-168">Windows:</span></span>
+* **`-NoCdn`**
 
-`./dotnet-install.ps1 -Channel LTS`
+  <span data-ttu-id="71446-172">Disabilita il download dalla [Rete di distribuzione dei contenuti di Azure (rete CDN)](https://docs.microsoft.com/azure/cdn/cdn-overview) e usa direttamente il feed non memorizzato nella cache.</span><span class="sxs-lookup"><span data-stu-id="71446-172">Disables downloading from the [Azure Content Delivery Network (CDN)](https://docs.microsoft.com/azure/cdn/cdn-overview) and uses the uncached feed directly.</span></span>
 
-<span data-ttu-id="07f3b-169">macOS/Linux:</span><span class="sxs-lookup"><span data-stu-id="07f3b-169">macOS/Linux:</span></span>
+* **`-FeedCredential`**
 
-`./dotnet-install.sh --channel LTS`
+  <span data-ttu-id="71446-173">Usata come stringa di query da accodare al feed di Azure.</span><span class="sxs-lookup"><span data-stu-id="71446-173">Used as a query string to append to the Azure feed.</span></span> <span data-ttu-id="71446-174">Consente la modifica dell'URL per usare account di archiviazione BLOB pubblici.</span><span class="sxs-lookup"><span data-stu-id="71446-174">It allows changing the URL to use non-public blob storage accounts.</span></span>
 
-<span data-ttu-id="07f3b-170">Installare la versione più recente dal canale 2.0 nel percorso specificato:</span><span class="sxs-lookup"><span data-stu-id="07f3b-170">Install the latest version from 2.0 channel to the specified location:</span></span>
+* **`-ProxyAddress`**
 
-<span data-ttu-id="07f3b-171">Windows:</span><span class="sxs-lookup"><span data-stu-id="07f3b-171">Windows:</span></span>
+  <span data-ttu-id="71446-175">Se impostata, il programma di installazione usa il proxy durante le richieste Web.</span><span class="sxs-lookup"><span data-stu-id="71446-175">If set, the installer uses the proxy when making web requests.</span></span> <span data-ttu-id="71446-176">(Valido solo per Windows)</span><span class="sxs-lookup"><span data-stu-id="71446-176">(Only valid for Windows)</span></span>
 
-`./dotnet-install.ps1 -Channel 2.0 -InstallDir C:\cli`
+* **`ProxyUseDefaultCredentials`**
 
-<span data-ttu-id="07f3b-172">macOS/Linux:</span><span class="sxs-lookup"><span data-stu-id="07f3b-172">macOS/Linux:</span></span>
+  <span data-ttu-id="71446-177">Se impostata, il programma di installazione usa le credenziali dell'utente corrente quando si usa l'indirizzo proxy.</span><span class="sxs-lookup"><span data-stu-id="71446-177">If set, the installer uses the credentials of the current user when using proxy address.</span></span> <span data-ttu-id="71446-178">(Valido solo per Windows)</span><span class="sxs-lookup"><span data-stu-id="71446-178">(Only valid for Windows)</span></span>
 
-`./dotnet-install.sh --channel 2.0 --install-dir ~/cli`
+* **`-SkipNonVersionedFiles`**
 
-<span data-ttu-id="07f3b-173">Installare la versione 1.1.0 del runtime condiviso:</span><span class="sxs-lookup"><span data-stu-id="07f3b-173">Install the 1.1.0 version of the shared runtime:</span></span>
+  <span data-ttu-id="71446-179">Ignora l'installazione dei file senza versione, ad esempio *dotnet.exe*, se esistono già.</span><span class="sxs-lookup"><span data-stu-id="71446-179">Skips installing non-versioned files, such as *dotnet.exe*, if they already exist.</span></span>
 
-<span data-ttu-id="07f3b-174">Windows:</span><span class="sxs-lookup"><span data-stu-id="07f3b-174">Windows:</span></span>
+* **`-Help`**
 
-`./dotnet-install.ps1 -SharedRuntime -Version 1.1.0`
+  <span data-ttu-id="71446-180">Stampa la Guida per lo script.</span><span class="sxs-lookup"><span data-stu-id="71446-180">Prints out help for the script.</span></span>
 
-<span data-ttu-id="07f3b-175">macOS/Linux:</span><span class="sxs-lookup"><span data-stu-id="07f3b-175">macOS/Linux:</span></span>
+## <a name="examples"></a><span data-ttu-id="71446-181">Esempi</span><span class="sxs-lookup"><span data-stu-id="71446-181">Examples</span></span>
 
-`./dotnet-install.sh --shared-runtime --version 1.1.0`
+* <span data-ttu-id="71446-182">Installare la versione LTS (Long Term Support) più recente nel percorso predefinito:</span><span class="sxs-lookup"><span data-stu-id="71446-182">Install the latest long-term supported (LTS) version to the default location:</span></span>
 
-<span data-ttu-id="07f3b-176">Ottenere lo script e installare gli esempi di .NET Core CLI di una singola riga di codice:</span><span class="sxs-lookup"><span data-stu-id="07f3b-176">Obtain script and install .NET Core CLI one-liner examples:</span></span>
+  <span data-ttu-id="71446-183">Windows:</span><span class="sxs-lookup"><span data-stu-id="71446-183">Windows:</span></span>
 
-<span data-ttu-id="07f3b-177">Windows:</span><span class="sxs-lookup"><span data-stu-id="07f3b-177">Windows:</span></span>
+  ```powershell
+  ./dotnet-install.ps1 -Channel LTS
+  ```
 
-`@powershell -NoProfile -ExecutionPolicy unrestricted -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; &([scriptblock]::Create((Invoke-WebRequest -useb 'https://dot.net/v1/dotnet-install.ps1'))) <additional install-script args>"`
+  <span data-ttu-id="71446-184">macOS/Linux:</span><span class="sxs-lookup"><span data-stu-id="71446-184">macOS/Linux:</span></span>
 
-<span data-ttu-id="07f3b-178">macOS/Linux:</span><span class="sxs-lookup"><span data-stu-id="07f3b-178">macOS/Linux:</span></span>
+  ```bash
+  ./dotnet-install.sh --channel LTS
+  ```
 
-`curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin <additional install-script args>`
+* <span data-ttu-id="71446-185">Installare la versione più recente dal canale 2.0 nel percorso specificato:</span><span class="sxs-lookup"><span data-stu-id="71446-185">Install the latest version from 2.0 channel to the specified location:</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="07f3b-179">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="07f3b-179">See also</span></span>
+  <span data-ttu-id="71446-186">Windows:</span><span class="sxs-lookup"><span data-stu-id="71446-186">Windows:</span></span>
 
-* <span data-ttu-id="07f3b-180">[.NET Core releases](https://github.com/dotnet/core/releases) (Versioni di .NET Core)</span><span class="sxs-lookup"><span data-stu-id="07f3b-180">[.NET Core releases](https://github.com/dotnet/core/releases)</span></span>
-* <span data-ttu-id="07f3b-181">[.NET Core Runtime and SDK download archive](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md) (Archivio di download per runtime e SDK di .NET Core)</span><span class="sxs-lookup"><span data-stu-id="07f3b-181">[.NET Core Runtime and SDK download archive](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md)</span></span>
+  ```powershell
+  ./dotnet-install.ps1 -Channel 2.0 -InstallDir C:\cli
+  ```
+
+  <span data-ttu-id="71446-187">macOS/Linux:</span><span class="sxs-lookup"><span data-stu-id="71446-187">macOS/Linux:</span></span>
+
+  ```bash
+  ./dotnet-install.sh --channel 2.0 --install-dir ~/cli
+  ```
+
+* <span data-ttu-id="71446-188">Installare la versione 1.1.0 del runtime condiviso:</span><span class="sxs-lookup"><span data-stu-id="71446-188">Install the 1.1.0 version of the shared runtime:</span></span>
+
+  <span data-ttu-id="71446-189">Windows:</span><span class="sxs-lookup"><span data-stu-id="71446-189">Windows:</span></span>
+
+  ```powershell
+  ./dotnet-install.ps1 -SharedRuntime -Version 1.1.0
+  ```
+
+  <span data-ttu-id="71446-190">macOS/Linux:</span><span class="sxs-lookup"><span data-stu-id="71446-190">macOS/Linux:</span></span>
+
+  ```bash
+  ./dotnet-install.sh --shared-runtime --version 1.1.0
+  ```
+
+* <span data-ttu-id="71446-191">Ottenere lo script e installare la versione 2.1.2 versione dietro un proxy aziendale (solo Windows):</span><span class="sxs-lookup"><span data-stu-id="71446-191">Obtain script and install the 2.1.2 version behind a corporate proxy (Windows only):</span></span>
+
+  ```powershell
+  Invoke-WebRequest 'https://dot.net/v1/dotnet-install.ps1' -Proxy $env:HTTP_PROXY -ProxyUseDefaultCredentials -OutFile 'dotnet-install.ps1';
+  ./dotnet-install.ps1 -InstallDir '~/.dotnet' -Version '2.1.2' -ProxyAddress $env:HTTP_PROXY -ProxyUseDefaultCredentials;
+  ```
+
+* <span data-ttu-id="71446-192">Ottenere lo script e installare gli esempi di .NET Core CLI di una singola riga di codice:</span><span class="sxs-lookup"><span data-stu-id="71446-192">Obtain script and install .NET Core CLI one-liner examples:</span></span>
+
+  <span data-ttu-id="71446-193">Windows:</span><span class="sxs-lookup"><span data-stu-id="71446-193">Windows:</span></span>
+
+  ```powershell
+  @powershell -NoProfile -ExecutionPolicy unrestricted -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; &([scriptblock]::Create((Invoke-WebRequest -useb 'https://dot.net/v1/dotnet-install.ps1'))) <additional install-script args>"
+  ```
+
+  <span data-ttu-id="71446-194">macOS/Linux:</span><span class="sxs-lookup"><span data-stu-id="71446-194">macOS/Linux:</span></span>
+
+  ```bash
+  curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin <additional install-script args>
+  ```
+
+## <a name="see-also"></a><span data-ttu-id="71446-195">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="71446-195">See also</span></span>
+
+* <span data-ttu-id="71446-196">[.NET Core releases](https://github.com/dotnet/core/releases) (Versioni di .NET Core)</span><span class="sxs-lookup"><span data-stu-id="71446-196">[.NET Core releases](https://github.com/dotnet/core/releases)</span></span>
+* <span data-ttu-id="71446-197">[.NET Core Runtime and SDK download archive](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md) (Archivio di download per runtime e SDK di .NET Core)</span><span class="sxs-lookup"><span data-stu-id="71446-197">[.NET Core Runtime and SDK download archive](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md)</span></span>

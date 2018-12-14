@@ -2,38 +2,31 @@
 title: Comando dotnet nuget push - Interfaccia della riga di comando di .NET Core
 description: Il comando dotnet nuget push effettua il push di un pacchetto nel server e lo pubblica.
 author: karann-msft
-ms.author: mairaw
-ms.date: 09/04/2018
-ms.openlocfilehash: b9c0fad886cd1234325c58bf61b1a010bce421d9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.date: 12/04/2018
+ms.openlocfilehash: 090dbfbe3db83b2bb234867aed295ac416b27865
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50200026"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143061"
 ---
-# <a name="dotnet-nuget-push"></a><span data-ttu-id="04a84-103">dotnet nuget push</span><span class="sxs-lookup"><span data-stu-id="04a84-103">dotnet nuget push</span></span>
+# <a name="dotnet-nuget-push"></a><span data-ttu-id="93c11-103">dotnet nuget push</span><span class="sxs-lookup"><span data-stu-id="93c11-103">dotnet nuget push</span></span>
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a><span data-ttu-id="04a84-104">nome</span><span class="sxs-lookup"><span data-stu-id="04a84-104">Name</span></span>
+## <a name="name"></a><span data-ttu-id="93c11-104">nome</span><span class="sxs-lookup"><span data-stu-id="93c11-104">Name</span></span>
 
-<span data-ttu-id="04a84-105">`dotnet nuget push`: effettua il push di un pacchetto nel server e lo pubblica.</span><span class="sxs-lookup"><span data-stu-id="04a84-105">`dotnet nuget push` - Pushes a package to the server and publishes it.</span></span>
+<span data-ttu-id="93c11-105">`dotnet nuget push`: effettua il push di un pacchetto nel server e lo pubblica.</span><span class="sxs-lookup"><span data-stu-id="93c11-105">`dotnet nuget push` - Pushes a package to the server and publishes it.</span></span>
 
-## <a name="synopsis"></a><span data-ttu-id="04a84-106">Riepilogo</span><span class="sxs-lookup"><span data-stu-id="04a84-106">Synopsis</span></span>
+## <a name="synopsis"></a><span data-ttu-id="93c11-106">Riepilogo</span><span class="sxs-lookup"><span data-stu-id="93c11-106">Synopsis</span></span>
 
-# <a name="net-core-21tabnetcore21"></a>[<span data-ttu-id="04a84-107">.NET Core 2.1</span><span class="sxs-lookup"><span data-stu-id="04a84-107">.NET Core 2.1</span></span>](#tab/netcore21)
+# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="93c11-107">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="93c11-107">.NET Core 2.x</span></span>](#tab/netcore2x)
 ```
-dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output] [-k|--api-key] [-n|--no-symbols]
+dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output] [--interactive] [-k|--api-key] [-n|--no-symbols]
     [--no-service-endpoint] [-s|--source] [-sk|--symbol-api-key] [-ss|--symbol-source] [-t|--timeout]
 dotnet nuget push [-h|--help]
 ```
-# <a name="net-core-20tabnetcore20"></a>[<span data-ttu-id="04a84-108">.NET Core 2.0</span><span class="sxs-lookup"><span data-stu-id="04a84-108">.NET Core 2.0</span></span>](#tab/netcore20)
-```
-dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output] [-k|--api-key] [-n|--no-symbols]
-    [-s|--source] [-sk|--symbol-api-key] [-ss|--symbol-source] [-t|--timeout]
-dotnet nuget push [-h|--help]
-```
-# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="04a84-109">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="04a84-109">.NET Core 1.x</span></span>](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="93c11-108">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="93c11-108">.NET Core 1.x</span></span>](#tab/netcore1x)
 ```
 dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output] [-k|--api-key] [-n|--no-symbols]
     [-s|--source] [-sk|--symbol-api-key] [-ss|--symbol-source] [-t|--timeout]
@@ -41,160 +34,138 @@ dotnet nuget push [-h|--help]
 ```
 ---
 
-## <a name="description"></a><span data-ttu-id="04a84-110">Descrizione</span><span class="sxs-lookup"><span data-stu-id="04a84-110">Description</span></span>
+## <a name="description"></a><span data-ttu-id="93c11-109">Description</span><span class="sxs-lookup"><span data-stu-id="93c11-109">Description</span></span>
 
-<span data-ttu-id="04a84-111">Il comando `dotnet nuget push` effettua il push di un pacchetto nel server e lo pubblica.</span><span class="sxs-lookup"><span data-stu-id="04a84-111">The `dotnet nuget push` command pushes a package to the server and publishes it.</span></span> <span data-ttu-id="04a84-112">Il comando di push usa dettagli del server e delle credenziali presenti nel file di configurazione NuGet o nella catena di file di configurazione del sistema.</span><span class="sxs-lookup"><span data-stu-id="04a84-112">The push command uses server and credential details found in the system's NuGet config file or chain of config files.</span></span> <span data-ttu-id="04a84-113">Per altre informazioni sui file di configurazione, vedere [Configuring NuGet Behavior](/nuget/consume-packages/configuring-nuget-behavior) (Configurazione del comportamento di NuGet).</span><span class="sxs-lookup"><span data-stu-id="04a84-113">For more information on config files, see [Configuring NuGet Behavior](/nuget/consume-packages/configuring-nuget-behavior).</span></span> <span data-ttu-id="04a84-114">La configurazione predefinita di NuGet si ottiene caricando *%AppData%\NuGet\NuGet.config* (Windows) o *$HOME/.local/share* (Linux/macOS) e quindi caricando qualsiasi file *nuget.config* o *.nuget\nuget.config* dalla directory radice dell'unità nella directory corrente.</span><span class="sxs-lookup"><span data-stu-id="04a84-114">NuGet's default configuration is obtained by loading *%AppData%\NuGet\NuGet.config* (Windows) or *$HOME/.local/share* (Linux/macOS), then loading any *nuget.config* or *.nuget\nuget.config* starting from the root of drive and ending in the current directory.</span></span>
+<span data-ttu-id="93c11-110">Il comando `dotnet nuget push` effettua il push di un pacchetto nel server e lo pubblica.</span><span class="sxs-lookup"><span data-stu-id="93c11-110">The `dotnet nuget push` command pushes a package to the server and publishes it.</span></span> <span data-ttu-id="93c11-111">Il comando di push usa dettagli del server e delle credenziali presenti nel file di configurazione NuGet o nella catena di file di configurazione del sistema.</span><span class="sxs-lookup"><span data-stu-id="93c11-111">The push command uses server and credential details found in the system's NuGet config file or chain of config files.</span></span> <span data-ttu-id="93c11-112">Per altre informazioni sui file di configurazione, vedere [Configuring NuGet Behavior](/nuget/consume-packages/configuring-nuget-behavior) (Configurazione del comportamento di NuGet).</span><span class="sxs-lookup"><span data-stu-id="93c11-112">For more information on config files, see [Configuring NuGet Behavior](/nuget/consume-packages/configuring-nuget-behavior).</span></span> <span data-ttu-id="93c11-113">La configurazione predefinita di NuGet si ottiene caricando *%AppData%\NuGet\NuGet.config* (Windows) o *$HOME/.local/share* (Linux/macOS) e quindi caricando qualsiasi file *nuget.config* o *.nuget\nuget.config* dalla directory radice dell'unità nella directory corrente.</span><span class="sxs-lookup"><span data-stu-id="93c11-113">NuGet's default configuration is obtained by loading *%AppData%\NuGet\NuGet.config* (Windows) or *$HOME/.local/share* (Linux/macOS), then loading any *nuget.config* or *.nuget\nuget.config* starting from the root of drive and ending in the current directory.</span></span>
 
-## <a name="arguments"></a><span data-ttu-id="04a84-115">Argomenti</span><span class="sxs-lookup"><span data-stu-id="04a84-115">Arguments</span></span>
+## <a name="arguments"></a><span data-ttu-id="93c11-114">Argomenti</span><span class="sxs-lookup"><span data-stu-id="93c11-114">Arguments</span></span>
 
-`ROOT`
+* **`ROOT`**
 
-<span data-ttu-id="04a84-116">Specifica il percorso del file del pacchetto di cui eseguire il push.</span><span class="sxs-lookup"><span data-stu-id="04a84-116">Specifies the file path to the package to be pushed.</span></span>
+  <span data-ttu-id="93c11-115">Specifica il percorso del file del pacchetto di cui eseguire il push.</span><span class="sxs-lookup"><span data-stu-id="93c11-115">Specifies the file path to the package to be pushed.</span></span>
 
-## <a name="options"></a><span data-ttu-id="04a84-117">Opzioni</span><span class="sxs-lookup"><span data-stu-id="04a84-117">Options</span></span>
+## <a name="options"></a><span data-ttu-id="93c11-116">Opzioni</span><span class="sxs-lookup"><span data-stu-id="93c11-116">Options</span></span>
 
-# <a name="net-core-21tabnetcore21"></a>[<span data-ttu-id="04a84-118">.NET Core 2.1</span><span class="sxs-lookup"><span data-stu-id="04a84-118">.NET Core 2.1</span></span>](#tab/netcore21)
+# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="93c11-117">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="93c11-117">.NET Core 2.x</span></span>](#tab/netcore2x)
 
-`-d|--disable-buffering`
+* **`-d|--disable-buffering`**
 
-<span data-ttu-id="04a84-119">Disabilita la memorizzazione nel buffer quando si effettua il push a un server HTTP(S) per ridurre l'utilizzo della memoria.</span><span class="sxs-lookup"><span data-stu-id="04a84-119">Disables buffering when pushing to an HTTP(S) server to reduce memory usage.</span></span>
+  <span data-ttu-id="93c11-118">Disabilita la memorizzazione nel buffer quando si effettua il push a un server HTTP(S) per ridurre l'utilizzo della memoria.</span><span class="sxs-lookup"><span data-stu-id="93c11-118">Disables buffering when pushing to an HTTP(S) server to reduce memory usage.</span></span>
 
-`--force-english-output`
+* **`--force-english-output`**
 
-<span data-ttu-id="04a84-120">Impone all'applicazione l'esecuzione con una cultura invariante e di lingua inglese.</span><span class="sxs-lookup"><span data-stu-id="04a84-120">Forces the application to run using an invariant, English-based culture.</span></span>
+  <span data-ttu-id="93c11-119">Impone all'applicazione l'esecuzione con una cultura invariante e di lingua inglese.</span><span class="sxs-lookup"><span data-stu-id="93c11-119">Forces the application to run using an invariant, English-based culture.</span></span>
 
-`-h|--help`
+* **`-h|--help`**
 
-<span data-ttu-id="04a84-121">Stampa una breve guida per il comando.</span><span class="sxs-lookup"><span data-stu-id="04a84-121">Prints out a short help for the command.</span></span>
+<span data-ttu-id="93c11-120">Stampa una breve guida per il comando.</span><span class="sxs-lookup"><span data-stu-id="93c11-120">Prints out a short help for the command.</span></span>
 
-`-k|--api-key <API_KEY>`
+* **`--interactive`**
 
-<span data-ttu-id="04a84-122">Chiave API per il server.</span><span class="sxs-lookup"><span data-stu-id="04a84-122">The API key for the server.</span></span>
+  <span data-ttu-id="93c11-121">Consente al comando di bloccare operazioni quali l'autenticazione e richiede un intervento manuale.</span><span class="sxs-lookup"><span data-stu-id="93c11-121">Allows the command to block and requires manual action for operations like authentication.</span></span> <span data-ttu-id="93c11-122">Opzione disponibile a partire da .NET Core 2.2 SDK.</span><span class="sxs-lookup"><span data-stu-id="93c11-122">Option available since .NET Core 2.2 SDK.</span></span>
 
-`-n|--no-symbols`
+* **`-k|--api-key <API_KEY>`**
 
-<span data-ttu-id="04a84-123">Non effettua il push dei simboli (anche se presenti).</span><span class="sxs-lookup"><span data-stu-id="04a84-123">Doesn't push symbols (even if present).</span></span>
+  <span data-ttu-id="93c11-123">Chiave API per il server.</span><span class="sxs-lookup"><span data-stu-id="93c11-123">The API key for the server.</span></span>
 
-`--no-service-endpoint`
+* **`-n|--no-symbols`**
 
-<span data-ttu-id="04a84-124">Non aggiunge "api/v2/package" all'URL di origine.</span><span class="sxs-lookup"><span data-stu-id="04a84-124">Doesn't append "api/v2/package" to the source URL.</span></span>
+  <span data-ttu-id="93c11-124">Non effettua il push dei simboli (anche se presenti).</span><span class="sxs-lookup"><span data-stu-id="93c11-124">Doesn't push symbols (even if present).</span></span>
 
-`-s|--source <SOURCE>`
+* **`--no-service-endpoint`**
 
-<span data-ttu-id="04a84-125">Specifica l'URL del server.</span><span class="sxs-lookup"><span data-stu-id="04a84-125">Specifies the server URL.</span></span> <span data-ttu-id="04a84-126">Questa opzione è obbligatoria, a meno che il valore di configurazione `DefaultPushSource` non sia impostato nel file di configurazione NuGet.</span><span class="sxs-lookup"><span data-stu-id="04a84-126">This option is required unless `DefaultPushSource` config value is set in the NuGet config file.</span></span>
+  <span data-ttu-id="93c11-125">Non aggiunge "api/v2/package" all'URL di origine.</span><span class="sxs-lookup"><span data-stu-id="93c11-125">Doesn't append "api/v2/package" to the source URL.</span></span> <span data-ttu-id="93c11-126">Opzione disponibile a partire da .NET Core 2.1 SDK.</span><span class="sxs-lookup"><span data-stu-id="93c11-126">Option available since .NET Core 2.1 SDK.</span></span>
 
-`-sk|--symbol-api-key <API_KEY>`
+* **`-s|--source <SOURCE>`**
 
-<span data-ttu-id="04a84-127">Chiave API per il server di simboli.</span><span class="sxs-lookup"><span data-stu-id="04a84-127">The API key for the symbol server.</span></span>
+  <span data-ttu-id="93c11-127">Specifica l'URL del server.</span><span class="sxs-lookup"><span data-stu-id="93c11-127">Specifies the server URL.</span></span> <span data-ttu-id="93c11-128">Questa opzione è obbligatoria, a meno che il valore di configurazione `DefaultPushSource` non sia impostato nel file di configurazione NuGet.</span><span class="sxs-lookup"><span data-stu-id="93c11-128">This option is required unless `DefaultPushSource` config value is set in the NuGet config file.</span></span>
 
-`-ss|--symbol-source <SOURCE>`
+* **`-sk|--symbol-api-key <API_KEY>`**
 
-<span data-ttu-id="04a84-128">Specifica l'URL del server di simboli.</span><span class="sxs-lookup"><span data-stu-id="04a84-128">Specifies the symbol server URL.</span></span>
+  <span data-ttu-id="93c11-129">Chiave API per il server di simboli.</span><span class="sxs-lookup"><span data-stu-id="93c11-129">The API key for the symbol server.</span></span>
 
-`-t|--timeout <TIMEOUT>`
+* **`-ss|--symbol-source <SOURCE>`**
 
-<span data-ttu-id="04a84-129">Specifica il timeout (in secondi) per il push a un server.</span><span class="sxs-lookup"><span data-stu-id="04a84-129">Specifies the timeout for pushing to a server in seconds.</span></span> <span data-ttu-id="04a84-130">Il valore predefinito è 300 secondi (5 minuti).</span><span class="sxs-lookup"><span data-stu-id="04a84-130">Defaults to 300 seconds (5 minutes).</span></span> <span data-ttu-id="04a84-131">Se si specifica 0 (zero secondi), viene comunque applicato il valore predefinito.</span><span class="sxs-lookup"><span data-stu-id="04a84-131">Specifying 0 (zero seconds) applies the default value.</span></span>
+  <span data-ttu-id="93c11-130">Specifica l'URL del server di simboli.</span><span class="sxs-lookup"><span data-stu-id="93c11-130">Specifies the symbol server URL.</span></span>
 
-# <a name="net-core-20tabnetcore20"></a>[<span data-ttu-id="04a84-132">.NET Core 2.0</span><span class="sxs-lookup"><span data-stu-id="04a84-132">.NET Core 2.0</span></span>](#tab/netcore20)
+* **`-t|--timeout <TIMEOUT>`**
 
-`-d|--disable-buffering`
+  <span data-ttu-id="93c11-131">Specifica il timeout (in secondi) per il push a un server.</span><span class="sxs-lookup"><span data-stu-id="93c11-131">Specifies the timeout for pushing to a server in seconds.</span></span> <span data-ttu-id="93c11-132">Il valore predefinito è 300 secondi (5 minuti).</span><span class="sxs-lookup"><span data-stu-id="93c11-132">Defaults to 300 seconds (5 minutes).</span></span> <span data-ttu-id="93c11-133">Se si specifica 0 (zero secondi), viene comunque applicato il valore predefinito.</span><span class="sxs-lookup"><span data-stu-id="93c11-133">Specifying 0 (zero seconds) applies the default value.</span></span>
 
-<span data-ttu-id="04a84-133">Disabilita la memorizzazione nel buffer quando si effettua il push a un server HTTP(S) per ridurre l'utilizzo della memoria.</span><span class="sxs-lookup"><span data-stu-id="04a84-133">Disables buffering when pushing to an HTTP(S) server to reduce memory usage.</span></span>
+# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="93c11-134">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="93c11-134">.NET Core 1.x</span></span>](#tab/netcore1x)
 
-`--force-english-output`
+* **`-d|--disable-buffering`**
 
-<span data-ttu-id="04a84-134">Impone all'applicazione l'esecuzione con una cultura invariante e di lingua inglese.</span><span class="sxs-lookup"><span data-stu-id="04a84-134">Forces the application to run using an invariant, English-based culture.</span></span>
+  <span data-ttu-id="93c11-135">Disabilita la memorizzazione nel buffer quando si effettua il push a un server HTTP(S) per ridurre l'utilizzo della memoria.</span><span class="sxs-lookup"><span data-stu-id="93c11-135">Disables buffering when pushing to an HTTP(S) server to reduce memory usage.</span></span>
 
-`-h|--help`
+* **`--force-english-output`**
 
-<span data-ttu-id="04a84-135">Stampa una breve guida per il comando.</span><span class="sxs-lookup"><span data-stu-id="04a84-135">Prints out a short help for the command.</span></span>
+  <span data-ttu-id="93c11-136">Impone all'applicazione l'esecuzione con una cultura invariante e di lingua inglese.</span><span class="sxs-lookup"><span data-stu-id="93c11-136">Forces the application to run using an invariant, English-based culture.</span></span>
 
-`-k|--api-key <API_KEY>`
+* **`-h|--help`**
 
-<span data-ttu-id="04a84-136">Chiave API per il server.</span><span class="sxs-lookup"><span data-stu-id="04a84-136">The API key for the server.</span></span>
+  <span data-ttu-id="93c11-137">Stampa una breve guida per il comando.</span><span class="sxs-lookup"><span data-stu-id="93c11-137">Prints out a short help for the command.</span></span>
 
-`-n|--no-symbols`
+* **`-k|--api-key <API_KEY>`**
 
-<span data-ttu-id="04a84-137">Non effettua il push dei simboli (anche se presenti).</span><span class="sxs-lookup"><span data-stu-id="04a84-137">Doesn't push symbols (even if present).</span></span>
+  <span data-ttu-id="93c11-138">Chiave API per il server.</span><span class="sxs-lookup"><span data-stu-id="93c11-138">The API key for the server.</span></span>
 
-`-s|--source <SOURCE>`
+* **`-n|--no-symbols`**
 
-<span data-ttu-id="04a84-138">Specifica l'URL del server.</span><span class="sxs-lookup"><span data-stu-id="04a84-138">Specifies the server URL.</span></span> <span data-ttu-id="04a84-139">Questa opzione è obbligatoria, a meno che il valore di configurazione `DefaultPushSource` non sia impostato nel file di configurazione NuGet.</span><span class="sxs-lookup"><span data-stu-id="04a84-139">This option is required unless `DefaultPushSource` config value is set in the NuGet config file.</span></span>
+  <span data-ttu-id="93c11-139">Non effettua il push dei simboli (anche se presenti).</span><span class="sxs-lookup"><span data-stu-id="93c11-139">Doesn't push symbols (even if present).</span></span>
 
-`-sk|--symbol-api-key <API_KEY>`
+* **`-s|--source <SOURCE>`**
 
-<span data-ttu-id="04a84-140">Chiave API per il server di simboli.</span><span class="sxs-lookup"><span data-stu-id="04a84-140">The API key for the symbol server.</span></span>
+  <span data-ttu-id="93c11-140">Specifica l'URL del server.</span><span class="sxs-lookup"><span data-stu-id="93c11-140">Specifies the server URL.</span></span> <span data-ttu-id="93c11-141">Questa opzione è obbligatoria, a meno che il valore di configurazione `DefaultPushSource` non sia impostato nel file di configurazione NuGet.</span><span class="sxs-lookup"><span data-stu-id="93c11-141">This option is required unless `DefaultPushSource` config value is set in the NuGet config file.</span></span>
 
-`-ss|--symbol-source <SOURCE>`
+* **`-sk|--symbol-api-key <API_KEY>`**
 
-<span data-ttu-id="04a84-141">Specifica l'URL del server di simboli.</span><span class="sxs-lookup"><span data-stu-id="04a84-141">Specifies the symbol server URL.</span></span>
+  <span data-ttu-id="93c11-142">Chiave API per il server di simboli.</span><span class="sxs-lookup"><span data-stu-id="93c11-142">The API key for the symbol server.</span></span>
 
-`-t|--timeout <TIMEOUT>`
+* **`-ss|--symbol-source <SOURCE>`**
 
-<span data-ttu-id="04a84-142">Specifica il timeout (in secondi) per il push a un server.</span><span class="sxs-lookup"><span data-stu-id="04a84-142">Specifies the timeout for pushing to a server in seconds.</span></span> <span data-ttu-id="04a84-143">Il valore predefinito è 300 secondi (5 minuti).</span><span class="sxs-lookup"><span data-stu-id="04a84-143">Defaults to 300 seconds (5 minutes).</span></span> <span data-ttu-id="04a84-144">Se si specifica 0 (zero secondi), viene comunque applicato il valore predefinito.</span><span class="sxs-lookup"><span data-stu-id="04a84-144">Specifying 0 (zero seconds) applies the default value.</span></span>
+  <span data-ttu-id="93c11-143">Specifica l'URL del server di simboli.</span><span class="sxs-lookup"><span data-stu-id="93c11-143">Specifies the symbol server URL.</span></span>
 
-# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="04a84-145">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="04a84-145">.NET Core 1.x</span></span>](#tab/netcore1x)
+* **`-t|--timeout <TIMEOUT>`**
 
-`-d|--disable-buffering`
-
-<span data-ttu-id="04a84-146">Disabilita la memorizzazione nel buffer quando si effettua il push a un server HTTP(S) per ridurre l'utilizzo della memoria.</span><span class="sxs-lookup"><span data-stu-id="04a84-146">Disables buffering when pushing to an HTTP(S) server to reduce memory usage.</span></span>
-
-`--force-english-output`
-
-<span data-ttu-id="04a84-147">Impone all'applicazione l'esecuzione con una cultura invariante e di lingua inglese.</span><span class="sxs-lookup"><span data-stu-id="04a84-147">Forces the application to run using an invariant, English-based culture.</span></span>
-
-`-h|--help`
-
-<span data-ttu-id="04a84-148">Stampa una breve guida per il comando.</span><span class="sxs-lookup"><span data-stu-id="04a84-148">Prints out a short help for the command.</span></span>
-
-`-k|--api-key <API_KEY>`
-
-<span data-ttu-id="04a84-149">Chiave API per il server.</span><span class="sxs-lookup"><span data-stu-id="04a84-149">The API key for the server.</span></span>
-
-`-n|--no-symbols`
-
-<span data-ttu-id="04a84-150">Non effettua il push dei simboli (anche se presenti).</span><span class="sxs-lookup"><span data-stu-id="04a84-150">Doesn't push symbols (even if present).</span></span>
-
-`-s|--source <SOURCE>`
-
-<span data-ttu-id="04a84-151">Specifica l'URL del server.</span><span class="sxs-lookup"><span data-stu-id="04a84-151">Specifies the server URL.</span></span> <span data-ttu-id="04a84-152">Questa opzione è obbligatoria, a meno che il valore di configurazione `DefaultPushSource` non sia impostato nel file di configurazione NuGet.</span><span class="sxs-lookup"><span data-stu-id="04a84-152">This option is required unless `DefaultPushSource` config value is set in the NuGet config file.</span></span>
-
-`-sk|--symbol-api-key <API_KEY>`
-
-<span data-ttu-id="04a84-153">Chiave API per il server di simboli.</span><span class="sxs-lookup"><span data-stu-id="04a84-153">The API key for the symbol server.</span></span>
-
-`-ss|--symbol-source <SOURCE>`
-
-<span data-ttu-id="04a84-154">Specifica l'URL del server di simboli.</span><span class="sxs-lookup"><span data-stu-id="04a84-154">Specifies the symbol server URL.</span></span>
-
-`-t|--timeout <TIMEOUT>`
-
-<span data-ttu-id="04a84-155">Specifica il timeout (in secondi) per il push a un server.</span><span class="sxs-lookup"><span data-stu-id="04a84-155">Specifies the timeout for pushing to a server in seconds.</span></span> <span data-ttu-id="04a84-156">Il valore predefinito è 300 secondi (5 minuti).</span><span class="sxs-lookup"><span data-stu-id="04a84-156">Defaults to 300 seconds (5 minutes).</span></span> <span data-ttu-id="04a84-157">Se si specifica 0 (zero secondi), viene comunque applicato il valore predefinito.</span><span class="sxs-lookup"><span data-stu-id="04a84-157">Specifying 0 (zero seconds) applies the default value.</span></span>
+  <span data-ttu-id="93c11-144">Specifica il timeout (in secondi) per il push a un server.</span><span class="sxs-lookup"><span data-stu-id="93c11-144">Specifies the timeout for pushing to a server in seconds.</span></span> <span data-ttu-id="93c11-145">Il valore predefinito è 300 secondi (5 minuti).</span><span class="sxs-lookup"><span data-stu-id="93c11-145">Defaults to 300 seconds (5 minutes).</span></span> <span data-ttu-id="93c11-146">Se si specifica 0 (zero secondi), viene comunque applicato il valore predefinito.</span><span class="sxs-lookup"><span data-stu-id="93c11-146">Specifying 0 (zero seconds) applies the default value.</span></span>
 
 ---
 
-## <a name="examples"></a><span data-ttu-id="04a84-158">Esempi</span><span class="sxs-lookup"><span data-stu-id="04a84-158">Examples</span></span>
+## <a name="examples"></a><span data-ttu-id="93c11-147">Esempi</span><span class="sxs-lookup"><span data-stu-id="93c11-147">Examples</span></span>
 
-<span data-ttu-id="04a84-159">Esegue il push di *foo.nupkg* all'origine push predefinita, specificando una chiave API:</span><span class="sxs-lookup"><span data-stu-id="04a84-159">Pushes *foo.nupkg* to the default push source, specifying an API key:</span></span>
+* <span data-ttu-id="93c11-148">Esegue il push di *foo.nupkg* all'origine push predefinita, specificando una chiave API:</span><span class="sxs-lookup"><span data-stu-id="93c11-148">Pushes *foo.nupkg* to the default push source, specifying an API key:</span></span>
 
-`dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a`
+  ```console
+  dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a
+  ```
 
-<span data-ttu-id="04a84-160">Esegue il push di *foo.nupkg* all'origine push personalizzata `https://customsource`, specificando una chiave API:</span><span class="sxs-lookup"><span data-stu-id="04a84-160">Push *foo.nupkg* to the custom push source `https://customsource`, specifying an API key:</span></span>
+* <span data-ttu-id="93c11-149">Esegue il push di *foo.nupkg* all'origine push personalizzata `https://customsource`, specificando una chiave API:</span><span class="sxs-lookup"><span data-stu-id="93c11-149">Push *foo.nupkg* to the custom push source `https://customsource`, specifying an API key:</span></span>
 
-`dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://customsource/`
+  ```console
+  dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://customsource/
+  ```
 
-<span data-ttu-id="04a84-161">Effettua il push di *foo.nupkg* all'origine push predefinita:</span><span class="sxs-lookup"><span data-stu-id="04a84-161">Pushes *foo.nupkg* to the default push source:</span></span>
+* <span data-ttu-id="93c11-150">Effettua il push di *foo.nupkg* all'origine push predefinita:</span><span class="sxs-lookup"><span data-stu-id="93c11-150">Pushes *foo.nupkg* to the default push source:</span></span>
 
-`dotnet nuget push foo.nupkg`
+  ```console
+  dotnet nuget push foo.nupkg
+  ```
 
-<span data-ttu-id="04a84-162">Effettua il push di *foo.symbols.nupkg* all'origine simboli predefinita:</span><span class="sxs-lookup"><span data-stu-id="04a84-162">Pushes *foo.symbols.nupkg* to the default symbols source:</span></span>
+* <span data-ttu-id="93c11-151">Effettua il push di *foo.symbols.nupkg* all'origine simboli predefinita:</span><span class="sxs-lookup"><span data-stu-id="93c11-151">Pushes *foo.symbols.nupkg* to the default symbols source:</span></span>
 
-`dotnet nuget push foo.symbols.nupkg`
+  ```console
+  dotnet nuget push foo.symbols.nupkg
+  ```
 
-<span data-ttu-id="04a84-163">Esegue il push di *foo.nupkg* all'origine push predefinita, specificando un timeout di 360 secondi:</span><span class="sxs-lookup"><span data-stu-id="04a84-163">Pushes *foo.nupkg* to the default push source, specifying a 360-second timeout:</span></span>
+* <span data-ttu-id="93c11-152">Esegue il push di *foo.nupkg* all'origine push predefinita, specificando un timeout di 360 secondi:</span><span class="sxs-lookup"><span data-stu-id="93c11-152">Pushes *foo.nupkg* to the default push source, specifying a 360-second timeout:</span></span>
 
-`dotnet nuget push foo.nupkg --timeout 360`
+  ```console
+  dotnet nuget push foo.nupkg --timeout 360
+  ```
 
-<span data-ttu-id="04a84-164">Effettua il push di tutti i file con estensione *nupkg* presenti nella directory corrente all'origine push predefinita:</span><span class="sxs-lookup"><span data-stu-id="04a84-164">Pushes all *.nupkg* files in the current directory to the default push source:</span></span>
+* <span data-ttu-id="93c11-153">Effettua il push di tutti i file con estensione *nupkg* presenti nella directory corrente all'origine push predefinita:</span><span class="sxs-lookup"><span data-stu-id="93c11-153">Pushes all *.nupkg* files in the current directory to the default push source:</span></span>
 
-`dotnet nuget push *.nupkg`
+  ```console
+  dotnet nuget push *.nupkg
+  ```
