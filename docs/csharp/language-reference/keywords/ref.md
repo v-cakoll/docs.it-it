@@ -1,5 +1,6 @@
 ---
-title: Parola chiave ref (Riferimenti per C#)
+title: Parola chiave ref - Riferimenti per C#
+ms.custom: seodec18
 ms.date: 10/24/2018
 f1_keywords:
 - ref_CSharpKeyword
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 99d02ca33025a5f80ff8fafde84447ba3df9f42a
-ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
+ms.openlocfilehash: 187d2fb7399195c544bae59927d66e9853df5fa0
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/04/2018
-ms.locfileid: "50195970"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236323"
 ---
 # <a name="ref-c-reference"></a>ref (Riferimenti per C#)
 

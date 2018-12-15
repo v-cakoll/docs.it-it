@@ -1,5 +1,6 @@
 ---
-title: Creazione e generazione di eccezioni (Guida per programmatori C#)
+title: Creazione e generazione di eccezioni - Guida per programmatori C#
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - catching exceptions [C#]
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - exceptions [C#], creating
 - exceptions [C#], throwing
 ms.assetid: 6bbba495-a115-4c6d-90cc-1f4d7b5f39e2
-ms.openlocfilehash: c81332307542608e2c7a3f3a5fa89900862f1e84
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c7775de75ddbf274f3a1555c9f0daaf63bbee713
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145595"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53235345"
 ---
 # <a name="creating-and-throwing-exceptions-c-programming-guide"></a>Creazione e generazione di eccezioni (Guida per programmatori C#)
 Le eccezioni vengono usate per indicare che si è verificato un errore durante l'esecuzione del programma. Vengono creati oggetti eccezione che descrivono un errore e quindi *generati* con la parola chiave [throw](../../../csharp/language-reference/keywords/throw.md). Il runtime cerca quindi il gestore di eccezioni più compatibile.  

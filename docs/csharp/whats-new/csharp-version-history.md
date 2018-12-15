@@ -3,16 +3,28 @@ title: Cronologia di C# - Guida a C#
 description: Caratteristiche del linguaggio nelle prime versioni ed evoluzione successiva.
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: e58f719031cc614f728226232c09f54f6b874475
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ad05e803000393800764a4b3aa1bf6288f765fd4
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145332"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53245600"
 ---
 # <a name="the-history-of-c"></a>Cronologia di C# #
 
-Quali erano le caratteristiche del linguaggio nelle prime versioni e come si è evoluto negli anni successivi?
+Questo articolo include la cronologia di ogni versione principale del linguaggio C#. Il team di C# continua a innovare il prodotto e ad aggiungere nuove funzionalità. Informazioni dettagliate sullo stato delle funzionalità del linguaggio, include le funzionalità prese in considerazione per versioni future, sono reperibili [nel repository dotnet/roslyn](https://github.com/dotnet/roslyn/blob/master/docs/Language%20Feature%20Status.md) su GitHub.
+
+> [!IMPORTANT]
+> Per alcune funzionalità, il linguaggio C# si basa sui tipi e metodi inclusi in quella che la specifica C# definisce la *libreria standard*. La piattaforma .NET rende disponibili questi tipi e metodi in numerosi pacchetti. Un esempio è l'elaborazione delle eccezioni. Ogni istruzione o espressione `throw` viene controllata per assicurarsi che l'oggetto generato derivi da <xref:System.Exception>. Analogamente, ogni istruzione `catch` viene controllata per verificare che il tipo intercettato derivi da <xref:System.Exception>. In ogni versione potrebbero essere aggiunti nuovi requisiti. Per usare le funzionalità del linguaggio più recenti in ambienti meno recenti, potrebbe essere necessario installare librerie specifiche. Queste dipendenze sono documentate nella pagina per ogni versione specifica. Le informazioni sulle [relazioni tra linguaggio e libreria](relationships-between-language-and-library.md) possono essere utili per comprendere meglio questa dipendenza.
+
+Gli strumenti di compilazione per C# considerano la versione del linguaggio principale più recente la versione del linguaggio predefinita. Potrebbero esistere versioni intermedie tra le versioni principali, descritte in dettaglio in altri articoli in questa sezione. Per usare le funzionalità più recenti in una versione intermedia, è necessario [configurare la versione in lingua del compilatore](../language-reference/configure-language-version.md) e selezionare la versione. Sono state rilasciate tre versioni intermedie da C# 7.0:
+
+* [C# 7.3](csharp-7-3.md):
+  - C# 7.3 è attualmente disponibile in [Visual Studio 2017 versione 15.7](https://visualstudio.microsoft.com/vs/whatsnew/) e in [.NET Core 2.1 SDK 2.1.300 RC1](../../core/whats-new/index.md).
+* [C# 7.2](csharp-7-2.md):
+  - C# 7.2 è attualmente disponibile in [Visual Studio 2017 versione 15.5](https://visualstudio.microsoft.com/vs/whatsnew/) e in [.NET Core 2.0 SDK](../../core/whats-new/index.md).
+* [C# 7.1](csharp-7-1.md):
+  - Queste funzionalità sono state aggiunte in [Visual Studio 2017 versione 15.3](https://visualstudio.microsoft.com/vs/whatsnew/) e in [.NET Core 2.0 SDK](../../core/whats-new/index.md).
 
 ## <a name="c-version-10"></a>C# versione 1.0
 
@@ -113,7 +125,7 @@ C# versione 5.0 è una versione incentrata sul linguaggio. Quasi tutto l'impegno
 
 ### <a name="see-also"></a>Vedere anche
 
-* [Progetto di codice: Attributi informativi sul chiamante in C# 5.0](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
+* [Code Project: Caller Info Attributes in C# 5.0](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp) (Attributi informativi sul chiamante in C# 5.0)
 
 Gli attributi informativi sul chiamante consentono di recuperare facilmente informazioni sul contesto di esecuzione senza dover ricorrere a una grande quantità di codice di reflection boilerplate. Questi attributi hanno molte applicazioni nelle attività di diagnostica e di registrazione.
 
