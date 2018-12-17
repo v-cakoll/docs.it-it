@@ -4,11 +4,11 @@ description: Procedure consigliate per la gestione delle dipendenze NuGet nelle 
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: c5df30c606e77c9ef44387233b0072ab890f612f
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.openlocfilehash: 5566ab83040ce5dc23520401e3fc4bb619af4ec4
+ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2018
+ms.lasthandoff: 12/04/2018
 ms.locfileid: "49400551"
 ---
 # <a name="dependencies"></a>Dipendenze
@@ -60,7 +60,7 @@ I limiti superiori per la versione provocano un errore di NuGet in caso di confl
 
 **❌ NON** creare riferimenti a pacchetti NuGet senza una versione minima.
 
-**❌ EVITARE** riferimenti ai pacchetti NuGet che richiedono una versione esatta.
+**❌ DA EVITARE** Riferimenti ai pacchetti NuGet che richiedono una versione esatta.
 
 **❌ EVITARE** riferimenti ai pacchetti NuGet con un limite superiore di versione.
 
@@ -92,10 +92,12 @@ I pacchetti di codice sorgente condiviso presentano alcune limitazioni. È possi
 
 > I tipi di codice sorgente condiviso vengono compilati nell'assembly di riferimento e non possono essere scambiati tra assembly diversi. Ad esempio, un tipo `IRepository` di codice sorgente condiviso in un progetto è un tipo diverso dallo stesso oggetto `IRepository` di codice sorgente condiviso in un altro progetto. I tipi nei pacchetti di codice sorgente condiviso devono avere visibilità `internal`.
 
-**❌ NON** pubblicare pacchetti di codice sorgente condiviso in nuget.org.
+**❌ NON** pubblicare pacchetti di codice sorgente condiviso in NuGet.org.
 
 > I pacchetti di codice sorgente condiviso contengono codice sorgente e possono essere usati solo da progetti con lo stesso tipo di linguaggio. Ad esempio, un pacchetto di codice sorgente condiviso C# non può essere usato da un'applicazione F#.
+>
+> Pubblicare i pacchetti di codice sorgente condiviso in un [feed locale o MyGet](./publish-nuget-package.md) per usarli internamente all'interno del progetto.
 
 >[!div class="step-by-step"]
-[Precedente](./nuget.md)
-[Successivo](./sourcelink.md)
+>[Precedente](nuget.md)
+>[Successivo](sourcelink.md)

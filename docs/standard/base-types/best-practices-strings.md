@@ -1,5 +1,6 @@
 ---
 title: Procedure consigliate per l'uso delle stringhe in .NET
+description: Informazioni su come usare le stringhe in modo efficace in applicazioni .NET.
 ms.date: 09/13/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -19,12 +20,13 @@ helpviewer_keywords:
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6114553c6bcdac8521c80c10f470d4c38b15e738
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.custom: seodec18
+ms.openlocfilehash: f5ed250df1c8d4d96dee5a0561f952193078ddda
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47080338"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150973"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>Procedure consigliate per l'uso delle stringhe in .NET
 <a name="top"></a> .NET offre un ampio supporto per lo sviluppo di applicazioni localizzate e globalizzate e semplifica l'applicazione delle convenzioni relative alle impostazioni cultura correnti o alle impostazioni cultura specifiche quando si eseguono operazioni comuni come l'ordinamento e la visualizzazione delle stringhe. Tuttavia, l'ordinamento o il confronto delle stringhe non è sempre un'operazione con distinzione delle impostazioni cultura. Ad esempio, le stringhe usate internamente da un'applicazione in genere devono essere gestite in modo identico in tutte le impostazioni cultura. Quando i dati di stringa indipendenti dalle impostazioni cultura, ad esempio i tag XML, i tag HTML, i nomi utente, i percorsi di file e i nomi degli oggetti di sistema, vengono interpretati come dati con distinzione delle impostazioni cultura, nel codice dell'applicazione possono verificarsi bug complessi, riduzioni delle prestazioni e, in alcuni casi, problemi di sicurezza.  
@@ -85,7 +87,7 @@ ms.locfileid: "47080338"
 ## <a name="specifying-string-comparisons-explicitly"></a>Specifica esplicita per il confronto tra stringhe  
  Molti dei metodi di modifica delle stringhe in .NET sono di tipo overload. In genere, uno o più overload accettano le impostazioni predefinite, mentre altri accettano le impostazioni non predefinite, specificando invece una determinata procedura di confronto o modifica delle stringhe. La maggior parte dei metodi che non si basano sulle impostazioni predefinite include un parametro di tipo <xref:System.StringComparison>, che corrisponde a un'enumerazione che specifica in modo esplicito le regole per il confronto tra stringhe in base alle impostazioni cultura e alle maiuscole e minuscole. La tabella seguente descrive i membri dell'enumerazione <xref:System.StringComparison> .  
   
-|Membro StringComparison|Descrizione|  
+|Membro StringComparison|Description|  
 |-----------------------------|-----------------|  
 |<xref:System.StringComparison.CurrentCulture>|Esegue un confronto con distinzione tra maiuscole e minuscole usando le impostazioni cultura correnti.|  
 |<xref:System.StringComparison.CurrentCultureIgnoreCase>|Esegue un confronto senza distinzione tra maiuscole e minuscole usando le impostazioni cultura correnti.|  
@@ -144,15 +146,15 @@ I confronti di stringhe tramite versioni diverse di .NET oppure tramite .NET in 
   
 -   Overload <xref:System.String.Compare%2A?displayProperty=nameWithType> che non includono un parametro <xref:System.StringComparison>.  
   
--   Overload <xref:System.String.CompareTo%2A?displayProperty=nameWithType>.  
+-   Overload<xref:System.String.CompareTo%2A?displayProperty=nameWithType> .  
   
--   Metodo <xref:System.String.StartsWith%28System.String%29?displayProperty=nameWithType> predefinito e metodo <xref:System.String.StartsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> con un parametro `null`<xref:System.Globalization.CultureInfo>.  
+-   Metodo <xref:System.String.StartsWith%28System.String%29?displayProperty=nameWithType> predefinito e metodo <xref:System.String.StartsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> con un parametro `null`<xref:System.Globalization.CultureInfo> .  
   
--   Metodo <xref:System.String.EndsWith%28System.String%29?displayProperty=nameWithType> predefinito e metodo <xref:System.String.EndsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> con un parametro `null`<xref:System.Globalization.CultureInfo>.  
+-   Metodo <xref:System.String.EndsWith%28System.String%29?displayProperty=nameWithType> predefinito e metodo <xref:System.String.EndsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> con un parametro `null`<xref:System.Globalization.CultureInfo> .  
   
--   Overload <xref:System.String.IndexOf%2A?displayProperty=nameWithType> che accettano <xref:System.String> come parametro di ricerca e che non hanno un parametro <xref:System.StringComparison>.  
+-   Overload<xref:System.String.IndexOf%2A?displayProperty=nameWithType> che accettano <xref:System.String> come parametro di ricerca e che non hanno un parametro <xref:System.StringComparison> .  
   
--   Overload <xref:System.String.LastIndexOf%2A?displayProperty=nameWithType> che accettano <xref:System.String> come parametro di ricerca e che non hanno un parametro <xref:System.StringComparison>.  
+-   Overload<xref:System.String.LastIndexOf%2A?displayProperty=nameWithType> che accettano <xref:System.String> come parametro di ricerca e che non hanno un parametro <xref:System.StringComparison> .  
   
  In ogni caso, si consiglia di chiamare un overload con il parametro <xref:System.StringComparison> per rendere chiaro lo scopo della chiamata al metodo.  
   
@@ -242,8 +244,8 @@ I confronti di stringhe tramite versioni diverse di .NET oppure tramite .NET in 
 |----------|--------------|-----------------------------------------------------|  
 |Identificatori interni con distinzione tra maiuscole e minuscole.<br /><br /> Identificatori con distinzione tra maiuscole e minuscole in standard come XML e HTTP.<br /><br /> Impostazioni relative alla sicurezza con distinzione tra maiuscole e minuscole.|Identificatore non linguistico, con una corrispondenza esatta dei byte.|<xref:System.StringComparison.Ordinal>|  
 |Identificatori interni senza distinzione tra maiuscole e minuscole.<br /><br /> Identificatori senza distinzione tra maiuscole e minuscole in standard come XML e HTTP.<br /><br /> Percorsi di file.<br /><br /> Chiavi e valori del Registro di sistema.<br /><br /> Variabili di ambiente.<br /><br /> Identificatori di risorse (ad esempio, nomi di handle).<br /><br /> Impostazioni relative alla sicurezza senza distinzione tra maiuscole e minuscole.|Identificatore non linguistico, in cui la distinzione tra maiuscole e minuscole non è rilevante. In particolare, dati archiviati nella maggior parte dei servizi di sistema Windows.|<xref:System.StringComparison.OrdinalIgnoreCase>|  
-|Alcuni dati persistenti e linguisticamente rilevanti.<br /><br /> Visualizzazione di dati linguistici che richiedono un ordinamento fisso.|Dati indipendenti dalle impostazioni cultura, ma ancora linguisticamente rilevanti.|<xref:System.StringComparison.InvariantCulture><br /><br /> oppure<br /><br /> <xref:System.StringComparison.InvariantCultureIgnoreCase>|  
-|Dati visualizzati dall'utente.<br /><br /> La maggior parte dell'input utente.|Dati che richiedono personalizzazioni linguistiche locali.|<xref:System.StringComparison.CurrentCulture><br /><br /> oppure<br /><br /> <xref:System.StringComparison.CurrentCultureIgnoreCase>|  
+|Alcuni dati persistenti e linguisticamente rilevanti.<br /><br /> Visualizzazione di dati linguistici che richiedono un ordinamento fisso.|Dati indipendenti dalle impostazioni cultura, ma ancora linguisticamente rilevanti.|<xref:System.StringComparison.InvariantCulture><br /><br /> -oppure-<br /><br /> <xref:System.StringComparison.InvariantCultureIgnoreCase>|  
+|Dati visualizzati dall'utente.<br /><br /> La maggior parte dell'input utente.|Dati che richiedono personalizzazioni linguistiche locali.|<xref:System.StringComparison.CurrentCulture><br /><br /> -oppure-<br /><br /> <xref:System.StringComparison.CurrentCultureIgnoreCase>|  
   
  [Torna all'inizio](#top)  
   
@@ -254,7 +256,7 @@ I confronti di stringhe tramite versioni diverse di .NET oppure tramite .NET in 
 ### <a name="stringcompare"></a>String.Compare  
  Interpretazione predefinita: <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>.  
   
- Poiché si tratta dell'operazione più importante per l'interpretazione della stringa, tutte le istanze di queste chiamate al metodo devono essere esaminate per determinare se le stringhe devono essere interpretate in base alle impostazioni cultura correnti o devono essere dissociate dalle impostazioni cultura (simbolicamente). In genere, si tratta del secondo caso e deve pertanto essere utilizzato un confronto <xref:System.StringComparison.Ordinal?displayProperty=nameWithType>.  
+ Poiché si tratta dell'operazione più importante per l'interpretazione della stringa, tutte le istanze di queste chiamate al metodo devono essere esaminate per determinare se le stringhe devono essere interpretate in base alle impostazioni cultura correnti o devono essere dissociate dalle impostazioni cultura (simbolicamente). In genere, si tratta del secondo caso e deve pertanto essere utilizzato un confronto <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> .  
   
  La classe <xref:System.Globalization.CompareInfo?displayProperty=nameWithType>, restituita dalla proprietà <xref:System.Globalization.CultureInfo.CompareInfo%2A?displayProperty=nameWithType>, include anche un metodo <xref:System.Globalization.CompareInfo.Compare%2A> che fornisce numerose opzioni di corrispondenza (ordinale, con esclusione degli spazi vuoti, con esclusione del tipo Kana e così via) mediante l'enumerazione flag <xref:System.Globalization.CompareOptions>.  
   
@@ -305,17 +307,17 @@ I confronti di stringhe tramite versioni diverse di .NET oppure tramite .NET in 
 ## <a name="methods-that-perform-string-comparison-indirectly"></a>Metodi che eseguono indirettamente il confronto tra stringhe  
  Alcuni metodi non di tipo stringa in cui il confronto tra stringhe rappresenta l'operazione più importante usano il tipo <xref:System.StringComparer> . La classe <xref:System.StringComparer> include sei proprietà statiche che restituiscono istanze <xref:System.StringComparer> i cui metodi <xref:System.StringComparer.Compare%2A?displayProperty=nameWithType> eseguono i tipi di confronto tra stringhe seguenti:  
   
--   Confronti tra stringhe con distinzione delle impostazioni cultura usando le impostazioni cultura correnti. L'oggetto <xref:System.StringComparer> viene restituito dalla proprietà <xref:System.StringComparer.CurrentCulture%2A?displayProperty=nameWithType>.  
+-   Confronti tra stringhe con distinzione delle impostazioni cultura usando le impostazioni cultura correnti. L'oggetto <xref:System.StringComparer> viene restituito dalla proprietà <xref:System.StringComparer.CurrentCulture%2A?displayProperty=nameWithType> .  
   
--   Confronti senza distinzione tra maiuscole e minuscole usando le impostazioni cultura correnti. L'oggetto <xref:System.StringComparer> viene restituito dalla proprietà <xref:System.StringComparer.CurrentCultureIgnoreCase%2A?displayProperty=nameWithType>.  
+-   Confronti senza distinzione tra maiuscole e minuscole usando le impostazioni cultura correnti. L'oggetto <xref:System.StringComparer> viene restituito dalla proprietà <xref:System.StringComparer.CurrentCultureIgnoreCase%2A?displayProperty=nameWithType> .  
   
--   Confronti tra stringhe senza distinzione delle impostazioni cultura usando le regole di confronto per parola della lingua inglese. L'oggetto <xref:System.StringComparer> viene restituito dalla proprietà <xref:System.StringComparer.InvariantCulture%2A?displayProperty=nameWithType>.  
+-   Confronti tra stringhe senza distinzione delle impostazioni cultura usando le regole di confronto per parola della lingua inglese. L'oggetto <xref:System.StringComparer> viene restituito dalla proprietà <xref:System.StringComparer.InvariantCulture%2A?displayProperty=nameWithType> .  
   
 -   Confronti senza distinzione tra maiuscole e minuscole e senza distinzione delle impostazioni cultura usando le regole di confronto per parola della lingua inglese. L'oggetto <xref:System.StringComparer> viene restituito dalla proprietà <xref:System.StringComparer.InvariantCultureIgnoreCase%2A?displayProperty=nameWithType>.  
   
--   Confronto ordinale. L'oggetto <xref:System.StringComparer> viene restituito dalla proprietà <xref:System.StringComparer.Ordinal%2A?displayProperty=nameWithType>.  
+-   Confronto ordinale. L'oggetto <xref:System.StringComparer> viene restituito dalla proprietà <xref:System.StringComparer.Ordinal%2A?displayProperty=nameWithType> .  
   
--   Confronto ordinale senza distinzione tra maiuscole e minuscole. L'oggetto <xref:System.StringComparer> viene restituito dalla proprietà <xref:System.StringComparer.OrdinalIgnoreCase%2A?displayProperty=nameWithType>.  
+-   Confronto ordinale senza distinzione tra maiuscole e minuscole. L'oggetto <xref:System.StringComparer> viene restituito dalla proprietà <xref:System.StringComparer.OrdinalIgnoreCase%2A?displayProperty=nameWithType> .  
   
 ### <a name="arraysort-and-arraybinarysearch"></a>Array.Sort e Array.BinarySearch  
  Interpretazione predefinita: <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>.  

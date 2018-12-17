@@ -1,15 +1,15 @@
 ---
-title: Specifica di destinazioni multipiattaforma
+title: Specifica di destinazioni multipiattaforma per librerie .NET
 description: Procedure consigliate per la creazione di librerie .NET multipiattaforma.
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 72fa891d5b1054af485a98d89b4efb11d6b0018b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6bd310f2e4b7a9bd7bb550ed9c7da9ebabdf64ba
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50202816"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129714"
 ---
 # <a name="cross-platform-targeting"></a>Specifica di destinazioni multipiattaforma
 
@@ -59,7 +59,7 @@ Per evitare ai consumer di dover eseguire la compilazione per i singoli framewor
 >
 > Quando si esegue questa operazione, non eliminare il supporto per .NET Standard. Eseguire invece la generazione dall'implementazione e offrire API per le funzionalità. In questo modo, la libreria può essere usata ovunque e supporta l'abilitazione delle funzionalità in fase di esecuzione.
 
-**❌ EVITARE** di usare il multitargeting con .NET Standard se il codice sorgente è lo stesso per tutte le destinazioni.
+**❌ EVITARE** di usare il multitargeting e il targeting .NET se il codice sorgente è lo stesso per tutte le destinazioni.
 
 > L'assembly .NET Standard verrà usato automaticamente da NuGet. La scelta come destinazione di singole implementazioni .NET comporta un aumento delle dimensioni di `*.nupkg` senza offrire alcun vantaggio.
 
@@ -67,7 +67,7 @@ Per evitare ai consumer di dover eseguire la compilazione per i singoli framewor
 
 > L'uso di .NET Standard 2.0 da .NET Framework presenta alcuni problemi che sono stati risolti in .NET Framework 4.7.2. È possibile migliorare l'esperienza per gli sviluppatori che usano ancora .NET Framework 4.6.1-4.7.1 offrendo loro un file binario compilato per .NET Framework 4.6.1.
 
-**✔️ DISTRIBUIRE** la libreria usando un pacchetto NuGet.
+**✔️ DA FARE** Distribuire la libreria usando un pacchetto NuGet.
 
 > NuGet selezionerà la destinazione migliore per lo sviluppatore evitandogli di dover scegliere l'implementazione appropriata.
 
@@ -95,5 +95,5 @@ Per evitare ai consumer di dover eseguire la compilazione per i singoli framewor
 **❌ NON** includere destinazioni per piattaforme .NET che non sono più supportate. Ad esempio, `SL4`, `WP`.
 
 >[!div class="step-by-step"]
-[Precedente](./get-started.md)
-[Successivo](./strong-naming.md)
+>[Precedente](get-started.md)
+>[Successivo](strong-naming.md)

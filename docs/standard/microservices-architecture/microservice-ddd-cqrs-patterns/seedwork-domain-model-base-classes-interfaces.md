@@ -1,31 +1,31 @@
 ---
 title: Seedwork (classi di base riutilizzabili e interfacce per il modello di dominio)
-description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Seedwork (classi di base riutilizzabili e interfacce per il modello di dominio)
+description: Architettura dei microservizi .NET per applicazioni .NET in contenitori | Usare il concetto di cartella SeedWork come punto di partenza per avviare l'implementazione di un modello di dominio orientato a DDD.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 12/12/2017
-ms.openlocfilehash: 7a38d90caab2232c17d8d58ca0c57d5bb56b3ce9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.date: 10/08/2018
+ms.openlocfilehash: 9a7ddbc8a15e4064b4446ff322148720312e7937
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198393"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152227"
 ---
 # <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>Seedwork (classi di base riutilizzabili e interfacce per il modello di dominio)
 
-La cartella della soluzione contiene una cartella denominata *SeedWork*. La cartella *SeedWork* contiene classi di base personalizzate che è possibile usare come base per le entità di dominio e gli oggetti valore. È possibile usare queste classi di base per evitare codice ridondante in ogni classe di oggetti del dominio. La cartella per questi tipi di classi è denominata *SeedWork* e non *Framework* o qualcosa di simile. Viene denominata *SeedWork* perché la cartella contiene solo un piccolo subset di classi riutilizzabili che non può effettivamente essere considerato un framework. Il termine *Seedwork* è stato introdotto da [Michael Feathers](https://www.artima.com/forums/flat.jsp?forum=106&thread=8826) ed è diventato noto grazie a [Martin Fowler](https://martinfowler.com/bliki/Seedwork.html). Questa cartella può tuttavia essere denominata Common, SharedKernel o avere un nome simile.
+La cartella della soluzione contiene una cartella denominata *SeedWork*. Tale cartella contiene classi di base personalizzate che è possibile usare come base per le entità di dominio e gli oggetti valore. È possibile usare queste classi di base per evitare codice ridondante in ogni classe di oggetti del dominio. La cartella per questi tipi di classi è denominata *SeedWork* e non *Framework* o qualcosa di simile. Viene denominata *SeedWork* perché la cartella contiene solo un piccolo subset di classi riutilizzabili che non può effettivamente essere considerato un framework. Il termine *Seedwork* è stato introdotto da [Michael Feathers](https://www.artima.com/forums/flat.jsp?forum=106&thread=8826) ed è diventato noto grazie a [Martin Fowler](https://martinfowler.com/bliki/Seedwork.html). Questa cartella può tuttavia essere denominata Common, SharedKernel o avere un nome simile.
 
-La figura 9-12 illustra le classi che costituiscono la cartella Seedwork del modello di dominio nel microservizio degli ordini. La cartella contiene alcune classi di base personalizzate come Entity, ValueObject ed Enumeration e alcune interfacce. Queste interfacce (IRepository e IUnitOfWork) indicano al livello infrastruttura le implementazioni necessarie. Queste interfacce vengono usate anche dal livello dell'applicazione tramite l'inserimento delle dipendenze.
+La figura 7-12 illustra le classi che costituiscono la cartella SeedWork del modello di dominio nel microservizio degli ordini. La cartella contiene alcune classi di base personalizzate come Entity, ValueObject ed Enumeration e alcune interfacce. Queste interfacce (IRepository e IUnitOfWork) indicano al livello infrastruttura le implementazioni necessarie. Queste interfacce vengono usate anche dal livello dell'applicazione tramite l'inserimento delle dipendenze.
 
-![](./media/image13.PNG)
+![Il contenuto dettagliato della cartella SeedWork, che contiene le classi di base e le interfacce: Entity.cs, Enumeration.cs, IAggregateRoot.cs, IRepository.cs, IUnitOfWork.cs e ValueObject.cs](./media/image13.PNG)
 
-**Figura 9-12**. Set di esempio di classi di base e interfacce nella cartella"Seedwork" per il modello di dominio
+**Figura 7-12**. Set di esempio di classi di base e interfacce nella cartella"Seedwork" per il modello di dominio
 
 Si tratta di un tipo di riutilizzo che può essere copiato e incollato e che molti sviluppatori condividono nei progetti. Non è un framework formale. È possibile avere cartelle Seedwork in qualsiasi livello o libreria. Se il set di classi e interfacce aumenta di dimensioni, potrebbe essere tuttavia necessario creare un'unica libreria di classi.
 
 ## <a name="the-custom-entity-base-class"></a>Classe di base Entity personalizzata
 
-Il codice seguente è un esempio di una classe di base Entity in cui è possibile inserire il codice che può essere usato allo stesso modo da qualsiasi entità di dominio, ad esempio dall'ID entità, dagli [operatori di uguaglianza](/cpp/cpp/equality-operators-equal-equal-and-exclpt-equal), da un elenco di eventi di dominio per ogni entità e così via.
+Il codice seguente è un esempio di una classe di base Entity in cui è possibile inserire il codice che può essere usato allo stesso modo da qualsiasi entità di dominio, ad esempio dall'ID entità, dagli [operatori di uguaglianza](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/equality-comparison-operator), da un elenco di eventi di dominio per ogni entità e così via.
 
 ```csharp
 // COMPATIBLE WITH ENTITY FRAMEWORK CORE (1.1 and later)
@@ -105,13 +105,13 @@ public abstract class Entity
 }
 ```
 
-Il codice precedente che usa un elenco di eventi di dominio per ogni entità viene spiegato nelle prossime sezioni che riguardano gli eventi di dominio. 
+Il codice precedente che usa un elenco di eventi di dominio per ogni entità viene spiegato nelle prossime sezioni che riguardano gli eventi di dominio.
 
 ## <a name="repository-contracts-interfaces-in-the-domain-model-layer"></a>Contratti di repository (interfacce) nel livello del modello di dominio
 
-I contratti di repository sono semplicemente interfacce .NET che esprimono i requisiti di contratto dei repository da usare per ogni aggregato. 
+I contratti di repository sono semplicemente interfacce .NET che esprimono i requisiti di contratto dei repository da usare per ogni aggregato.
 
-I repository con codice di Entity Framework Core o qualsiasi altra dipendenza da infrastruttura e codice (Linq, SQL e così via), non devono essere implementati all'interno del modello di dominio, ma devono soltanto implementare le interfacce definite. 
+I repository con codice di Entity Framework Core o qualsiasi altra dipendenza da infrastruttura e codice (Linq, SQL e così via), non devono essere implementati all'interno del modello di dominio, ma devono soltanto implementare le interfacce definite nel modello di dominio.
 
 Un modello che spiega questa pratica, vale a dire l'inserimento delle interfacce di repository nel livello del modello di dominio, è il modello noto come "Interfaccia separata". Secondo quanto [spiega](https://www.martinfowler.com/eaaCatalog/separatedInterface.html) Martin Fowler è importante "usare il modello Interfaccia separata per definire un'interfaccia in un pacchetto, ma implementarla in un altro pacchetto. In questo modo il client che richiede la dipendenza all'interfaccia può essere totalmente ignaro dell'implementazione."
 
@@ -124,7 +124,7 @@ Nell'esempio seguente con l'interfaccia IOrderRepository vengono definite le ope
 public interface IOrderRepository : IRepository<Order>
 {
     Order Add(Order order);
-        
+
     void Update(Order order);
 
     Task<Order> GetAsync(int orderId);
@@ -139,10 +139,9 @@ public interface IRepository<T> where T : IAggregateRoot
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
--   **Martin Fowler. Interfaccia separata.**
-    [*https://www.martinfowler.com/eaaCatalog/separatedInterface.html*](https://www.martinfowler.com/eaaCatalog/separatedInterface.html)
-
+- **Martin Fowler. Separated Interface. (Interfaccia separata)** \
+  [*https://www.martinfowler.com/eaaCatalog/separatedInterface.html*](https://www.martinfowler.com/eaaCatalog/separatedInterface.html)
 
 >[!div class="step-by-step"]
-[Precedente](net-core-microservice-domain-model.md)
-[Successivo](implement-value-objects.md)
+>[Precedente](net-core-microservice-domain-model.md)
+>[Successivo](implement-value-objects.md)

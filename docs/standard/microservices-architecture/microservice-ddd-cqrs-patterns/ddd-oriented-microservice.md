@@ -1,17 +1,17 @@
 ---
 title: Progettazione di un microservizio orientato a DDD
-description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Progettazione di un microservizio orientato a DDD
+description: Architettura di microservizi .NET per applicazioni .NET incluse in contenitori | Progettazione del microservizio degli ordini orientato a DDD e dei relativi livelli dell'applicazione.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 11/06/2017
-ms.openlocfilehash: 4d6810e03414e8462dd90c4da686476da0b66032
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.date: 10/08/2018
+ms.openlocfilehash: 65a1a58d0c70c7e788aea420006c1ad617628f93
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183503"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145608"
 ---
-# <a name="designing-a-ddd-oriented-microservice"></a>Progettazione di un microservizio orientato a DDD
+# <a name="design-a-ddd-oriented-microservice"></a>Progettare un microservizio orientato a DDD
 
 La progettazione orientata al dominio (DDD) sostiene la modellazione basata sulla realtà di business in quanto rilevante per i casi d'uso. Nel contesto della compilazione delle applicazioni, DDD considera i problemi come domini. Vengono descritte singole aree di problemi, ad esempio i contesti delimitati (ogni contesto delimitato è correlato a un microservizio) e viene evidenziato un linguaggio comune che consente di comunicare su questi problemi. Vengono indicati inoltre numerosi schemi e concetti tecnici, ad esempio le entità di dominio con modelli avanzati (nessun [modello indipendente dal dominio](https://martinfowler.com/bliki/AnemicDomainModel.html)), oggetti valore, aggregazioni e regole di radici di aggregazione (o entità radice) per supportare l'implementazione interna. Questa sezione illustra la progettazione e l'implementazione di tali schemi interni.
 
@@ -33,21 +33,21 @@ Generalmente le applicazioni aziendali con complessità tecniche e aziendali not
 
 Ad esempio, è stato possibile caricare un'entità dal database. Parte delle informazioni, o un'aggregazione di informazioni che comprende dati aggiuntivi di altre entità, può quindi essere inviata all'interfaccia utente del client tramite un'API Web REST. L'entità di dominio è tuttavia contenuta nel livello del modello di dominio e non deve essere propagata ad altre aree a cui non appartiene, ad esempio al livello di presentazione.
 
-È necessario, inoltre, disporre di entità sempre valide (vedere la sezione [Progettazione di convalide nel livello del modello di dominio](#designing-validations-in-the-domain-model-layer)) controllate da radici di aggregazione (entità radice). Di conseguenza, le entità non devono essere associate a viste del client, perché a livello di interfaccia utente alcuni dati potrebbero non essere ancora convalidati. È qui che entra in gioco l'elemento ViewModel. ViewModel è un modello di dati destinato esclusivamente al livello di presentazione. Le entità di dominio non appartengono direttamente all'elemento ViewModel. È necessario invece effettuare la conversione tra elementi ViewModel ed entità di dominio e viceversa.
+È necessario, inoltre, disporre di entità sempre valide (vedere la sezione [Progettazione di convalide nel livello del modello di dominio](domain-model-layer-validations.md)) controllate da radici di aggregazione (entità radice). Di conseguenza, le entità non devono essere associate a viste del client, perché a livello di interfaccia utente alcuni dati potrebbero non essere ancora convalidati. È qui che entra in gioco l'elemento ViewModel. ViewModel è un modello di dati destinato esclusivamente al livello di presentazione. Le entità di dominio non appartengono direttamente all'elemento ViewModel. È necessario invece effettuare la conversione tra elementi ViewModel ed entità di dominio e viceversa.
 
 Per gestire la complessità, è importante disporre di un modello di dominio controllato da radici di aggregazione che assicurano che tutte le invarianti e le regole relative al gruppo di entità (aggregazione) vengano eseguite tramite un singolo punto di ingresso o controllo, la radice di aggregazione.
 
-La figura 9-5 illustra una progettazione a più livelli implementata nell'applicazione eShopOnContainers.
+La figura 7-5 illustra una progettazione a più livelli implementata nell'applicazione eShopOnContainers.
 
-![](./media/image6.png)
+![I tre livelli in un microservizio DDD, ad esempio per gli ordini. Ogni livello è un progetto di Visual Studio: il livello dell'applicazione è Ordering.API, il livello del dominio è Ordering.Domain e il livello dell'infrastruttura è Ordering.Infrastructure.](./media/image6.png)
 
-**Figura 9-5**. Livelli DDD nel microservizio degli ordini in eShopOnContainers
+**Figura 7-5**. Livelli DDD nel microservizio degli ordini in eShopOnContainers
 
-Si vuole progettare il sistema in modo che ogni livello comunichi solo con determinati altri livelli. Questo obiettivo può risultare più semplice se i livelli vengono implementati come librerie di classi diverse, in quanto è possibile identificare chiaramente quali dipendenze siano impostate tra le librerie. Ad esempio, il livello del modello di dominio non deve accettare una dipendenza da qualsiasi altro livello (le classi di modello di dominio devono essere oggetti Plain Old CLR Object, o[POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object)). Come illustrato nella figura 9-6, la libreria del livello **Ordering.Domain** presenta dipendenze solo dalle librerie .NET Core o dai pacchetti NuGet, ma da nessun'altra libreria personalizzata, ad esempio una libreria di dati o di persistenza.
+Si vuole progettare il sistema in modo che ogni livello comunichi solo con determinati altri livelli. Questo obiettivo può risultare più semplice se i livelli vengono implementati come librerie di classi diverse, in quanto è possibile identificare chiaramente quali dipendenze siano impostate tra le librerie. Ad esempio, il livello del modello di dominio non deve accettare una dipendenza da qualsiasi altro livello (le classi di modello di dominio devono essere oggetti Plain Old CLR Object, o[POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object)). Come illustrato nella figura 7-6, la libreria del livello **Ordering.Domain** presenta dipendenze solo dalle librerie .NET Core o dai pacchetti NuGet, ma da nessun'altra libreria personalizzata, ad esempio una libreria di dati o di persistenza.
 
-![](./media/image7.PNG)
+![La visualizzazione Esplora soluzioni delle dipendenze di Ordering.Domain dimostra che dipende solo dalle librerie .NET Core.](./media/image7.png)
 
-**Figura 9-6**. I livelli implementati come librerie consentono un migliore controllo delle dipendenze tra i livelli
+**Figura 7-6**. I livelli implementati come librerie consentono un migliore controllo delle dipendenze tra i livelli
 
 ### <a name="the-domain-model-layer"></a>Livello del modello di dominio
 
@@ -63,7 +63,7 @@ Le entità di dominio non devono presentare alcuna dipendenza diretta (ad esempi
 
 Framework ORM più recenti come Entity Framework Core consentono questo approccio, in modo che le classi di modello di dominio non siano collegate all'infrastruttura. Tuttavia, non sempre è possibile usare entità POCO con determinati framework e database NoSQL, ad esempio Actors e Reliable Collections in Azure Service Fabric.
 
-Anche quando è importante seguire il principio di Persistence Ignorance per il proprio modello di dominio, non è consigliabile ignorare i problemi di persistenza. È comunque molto importante comprendere il modello di dati fisici e il relativo mapping al proprio modello di oggetti entità. In caso contrario si potrebbero creare progetti impossibili.
+Anche quando è importante seguire il principio di mancato riconoscimento della persistenza per il proprio modello di dominio, non si devono ignorare i problemi di persistenza. È comunque molto importante comprendere il modello di dati fisici e il relativo mapping al proprio modello di oggetti entità. In caso contrario si potrebbero creare progetti impossibili.
 
 Ciò non significa che sia possibile spostare un modello progettato per un database relazionale direttamente in un database orientato ai documenti o NoSQL. In alcuni modelli di entità il modello potrebbe essere adatto, ma in genere non lo è. Esistono ancora vincoli che il modello di entità deve rispettare, a seconda della tecnologia di archiviazione e della tecnologia ORM.
 
@@ -85,26 +85,25 @@ Il livello infrastruttura è responsabile della persistenza dei dati inizialment
 
 In base ai principi di [Persistence Ignorance](https://deviq.com/persistence-ignorance/) e [Infrastructure Ignorance](https://ayende.com/blog/3137/infrastructure-ignorance) precedentemente citati, il livello infrastruttura non deve "contaminare" il livello del modello di dominio. È necessario mantenere le classi di entità di modello indipendenti dall'infrastruttura usata per rendere persistenti i dati (Entity Framework o qualsiasi altro framework) non accettando dipendenze rigide dai framework. La libreria di classi del livello del modello di dominio deve contenere solo il codice di dominio, semplicemente classi di entità [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object) che implementano il cuore del software e completamente scollegate delle tecnologie di infrastruttura.
 
-In tal modo, i livelli o le librerie di classi e i progetti dipenderanno dal livello del modello di dominio (libreria), non viceversa, come illustrato nella figura 9-7.
+I livelli o le librerie di classi e i progetti dipenderanno quindi dal livello del modello di dominio (libreria), non viceversa, come illustrato nella figura 7-7.
 
-![](./media/image8.png)
+![Dipendenze in un servizio DDD, il livello dell'applicazione dipende da dominio e infrastruttura e l'infrastruttura dipende dal dominio, ma il dominio non dipende da alcun livello.](./media/image8.png)
 
-**Figura 9-7**. Dipendenze tra livelli in DDD
+**Figura 7-7**. Dipendenze tra livelli in DDD
 
 Questa struttura di livello deve essere indipendente per ogni microservizio. Come notato in precedenza, è possibile implementare i microservizi più complessi seguendo gli schemi DDD e implementare microservizi più semplici basati sui dati (CRUD semplice in un unico livello) in modo più facile.
 
 #### <a name="additional-resources"></a>Risorse aggiuntive
 
--   **DevIQ. Persistence Ignorance principle**
-    [*https://deviq.com/persistence-ignorance/*](https://deviq.com/persistence-ignorance/) (Principio del mancato riconoscimento della persistenza)
+- **DevIQ. Persistence Ignorance principle** \ (Principio del mancato riconoscimento della persistenza)
+  [*https://deviq.com/persistence-ignorance/*](https://deviq.com/persistence-ignorance/)
 
--   **Oren Eini. Infrastructure Ignorance**
-    [*https://ayende.com/blog/3137/infrastructure-ignorance*](https://ayende.com/blog/3137/infrastructure-ignorance) (Mancato riconoscimento dell'infrastruttura)
+- **Oren Eini. Infrastructure Ignorance** \ (Mancato riconoscimento dell'infrastruttura)
+  [*https://ayende.com/blog/3137/infrastructure-ignorance*](https://ayende.com/blog/3137/infrastructure-ignorance)
 
--   **Angel Lopez. Layered Architecture In Domain-Driven Design**
-    [*https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/*](https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/)(Architettura a livelli nella progettazione basata su domini)
-
+- **Angel Lopez. Layered Architecture In Domain-Driven Design** \ (Architettura a livelli nella progettazione basata su domini)
+  [*https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/*](https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/)
 
 >[!div class="step-by-step"]
-[Precedente](cqrs-microservice-reads.md)
-[Successivo](microservice-domain-model.md)
+>[Precedente](cqrs-microservice-reads.md)
+>[Successivo](microservice-domain-model.md)

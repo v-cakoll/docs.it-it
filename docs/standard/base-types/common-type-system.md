@@ -1,5 +1,6 @@
 ---
 title: Common Type System
+description: Informazioni sul sistema dei tipi in .NET.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -17,12 +18,13 @@ helpviewer_keywords:
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6c8db725e25fe441c875a25cba97eb2090d4c071
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.custom: seodec18
+ms.openlocfilehash: e35ddc0346f73eafaece1bd17ab52e1b847e8e11
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47204202"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151226"
 ---
 # <a name="common-type-system"></a>Common Type System
 Common Type System definisce le modalità di dichiarazione, utilizzo e gestione dei tipi in Common Language Runtime e rappresenta una parte importante del supporto runtime per l'integrazione di più linguaggi. Le funzioni assolte dal sistema di tipi comuni sono le seguenti:  
@@ -71,7 +73,7 @@ Common Type System definisce le modalità di dichiarazione, utilizzo e gestione 
   
  Nella tabella seguente vengono descritte alcune delle caratteristiche che una classe può avere. Ogni linguaggio che supporta il runtime fornisce un modo per indicare che una classe o membro di classe dispone di una o più di queste caratteristiche. È tuttavia possibile che i singoli linguaggi di programmazione destinati a .NET non rendano disponibili tutte queste caratteristiche.  
   
-|Caratteristica|Descrizione|  
+|Caratteristica|Description|  
 |--------------------|-----------------|  
 |sealed|Specifica che da questo tipo non è possibile derivare un'altra classe.|  
 |implementa|Indica che la classe utilizza una o più interfacce fornendo implementazioni dei membri di interfaccia.|  
@@ -190,7 +192,7 @@ Common Type System definisce le modalità di dichiarazione, utilizzo e gestione 
 ### <a name="type-accessibility"></a>Accessibilità dei tipi  
  Tutti i tipi dispongono di un modificatore che ne regola l'accessibilità da parte di altri tipi. Nella tabella che segue si descrive l'accessibilità dei tipi supportata dal runtime.  
   
-|Accessibilità|Descrizione|  
+|Accessibilità|Description|  
 |-------------------|-----------------|  
 |public|Il tipo è accessibile da tutti gli assembly.|  
 |assembly|Il tipo è accessibile solo dall'interno dell'assembly.|  
@@ -295,7 +297,7 @@ Common Type System definisce le modalità di dichiarazione, utilizzo e gestione 
 ## <a name="characteristics-of-type-members"></a>Caratteristiche dei membri dei tipi  
  In Common Type System i membri dei tipi possono disporre di caratteristiche diverse, anche se non è necessario che i linguaggi le supportino tutte. Nella tabella riportata di seguito vengono descritte le caratteristiche dei membri.  
   
-|Caratteristica|Si applica a|Descrizione|  
+|Caratteristica|Si applica a|Description|  
 |--------------------|------------------|-----------------|  
 |abstract|Metodi, proprietà ed eventi|Il tipo non fornisce l'implementazione del metodo. I tipi che ereditano o implementano metodi astratti devono fornire un'implementazione per il metodo. L'unica eccezione si verifica nel caso in cui il tipo derivato sia esso stesso un tipo astratto. Tutti i metodi astratti sono virtuali.|  
 |private, gruppo, assembly, gruppo e assembly, gruppo o assembly o public|Tutti|Consente di definire l'accessibilità del membro.<br /><br /> private<br /> Accessibile solo dall'interno dello stesso tipo del membro o di un tipo annidato.<br /><br /> family<br /> Accessibile dall'interno dello stesso tipo del membro e dai tipi derivati che ereditano da esso.<br /><br /> assembly<br /> Accessibile solo nell'assembly nel quale il tipo viene definito.<br /><br /> family e assembly<br /> Accessibile solo dai tipi che sono qualificati sia per l'accesso di gruppo che di assembly.<br /><br /> family o assembly<br /> Accessibile solo dai tipi che sono qualificati per l'accesso di gruppo o per quello di assembly.<br /><br /> public<br /> Accessibile da qualsiasi tipo.|  

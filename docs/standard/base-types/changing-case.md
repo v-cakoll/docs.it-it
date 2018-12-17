@@ -1,5 +1,6 @@
 ---
-title: Modifica della combinazione di maiuscole e minuscole in .NET Framework
+title: Modifica della combinazione di maiuscole e minuscole in .NET
+description: Informazioni su come modificare la combinazione di maiuscole e minuscole delle stringhe in .NET.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,12 +16,13 @@ helpviewer_keywords:
 ms.assetid: 6805f81b-e9ad-4387-9f4c-b9bdb21b87c0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bd20db7fcc16f7781e093d59514c4be75705080a
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.custom: seodec18
+ms.openlocfilehash: 480e9a3f7d32bb891b54c7d2529affb45368545b
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003672"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128648"
 ---
 # <a name="changing-case-in-net"></a>Modifica della combinazione di maiuscole e minuscole in .NET
 Quando si scrive un'applicazione che accetta input dall'utente non si può conoscere la combinazione di maiuscole e minuscole che verrà usata durante l'immissione dei dati. Spesso è desiderabile che le la combinazione di maiuscole e minuscole nelle stringhe sia coerente, in particolare se le stringhe vengono visualizzate nell'interfaccia utente. La tabella seguente descrive tre metodi per la modifica della combinazione di maiuscole e minuscole. I primi due metodi forniscono un overload che accetta determinate impostazioni cultura.  

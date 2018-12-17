@@ -1,5 +1,6 @@
 ---
-title: Ancoraggi in espressioni regolari
+title: Ancoraggi in espressioni regolari .NET
+description: Informazioni su come usare gli ancoraggi nei criteri di espressioni regolari.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -17,17 +18,18 @@ helpviewer_keywords:
 ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ae07afa2ad2110591139d395ffd8e8cfa5e2347
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.custom: seodec18
+ms.openlocfilehash: d5d07dd290a857a0c6dbfcd9074d8d16ff47e6cd
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085186"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155038"
 ---
 # <a name="anchors-in-regular-expressions"></a>Ancoraggi in espressioni regolari
 <a name="top"></a> Gli ancoraggi, o asserzioni atomiche di larghezza zero, specificano una posizione della stringa in cui deve verificarsi una corrispondenza. Quando si usa un ancoraggio nell'espressione di ricerca, il motore delle espressioni regolari non avanza nella stringa né utilizza caratteri, ma cerca una corrispondenza solo nella posizione specificata. Ad esempio, `^` specifica che la corrispondenza deve iniziare all'inizio di una riga o stringa. Di conseguenza, l'espressione regolare `^http:` considera la corrispondenza "http:" solo quando si verifica all'inizio di una riga. La tabella seguente contiene gli ancoraggi supportati dalle espressioni regolari in .NET.  
   
-|Ancoraggio|Descrizione|  
+|Ancoraggio|Description|  
 |------------|-----------------|  
 |`^`|Per impostazione predefinita, la corrispondenza deve verificarsi all'inizio della stringa; in modalità multiriga, deve verificarsi all'inizio della riga. Per altre informazioni, vedere [Inizio di stringa o riga](#Start).|  
 |`$`|Per impostazione predefinita, la corrispondenza deve verificarsi alla fine della stringa oppure prima di `\n` alla fine della stringa; in modalità multiriga, deve verificarsi alla fine della riga oppure prima di `\n` alla fine della riga. Per altre informazioni, vedere [Fine di stringa o riga](#End).|  
@@ -53,7 +55,7 @@ ms.locfileid: "44085186"
   
  Il criterio di ricerca di espressioni regolari `^((\w+(\s?)){2,}),\s(\w+\s\w+),(\s\d{4}(-(\d{4}|present))?,?)+` è definito nel modo illustrato nella tabella seguente.  
   
-|Modello|Descrizione|  
+|Modello|Description|  
 |-------------|-----------------|  
 |`^`|La corrispondenza deve iniziare all'inizio della stringa di input (o all'inizio della riga se il metodo viene chiamato con l'opzione <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>).|  
 |`((\w+(\s?)){2,}`|Trova uno o più caratteri alfanumerici seguiti da nessuno o uno spazio esattamente due volte. Equivale al primo gruppo di acquisizione. Questa espressione definisce anche un secondo e un terzo gruppo di acquisizione: il secondo è costituito dalla parola acquisita, il terzo dagli spazi acquisiti.|  
@@ -73,7 +75,7 @@ ms.locfileid: "44085186"
   
  Se si usa `$` con l'opzione <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>, la corrispondenza può verificarsi anche alla fine di una riga. Notare che `$` corrisponde a `\n` , ma non a `\r\n` (combinazione di ritorno a capo e caratteri di nuova riga o CR/LF). Per trovare la combinazione di caratteri CR/LF, includere `\r?$` nel criterio di espressione regolare.  
   
- L'esempio seguente aggiunge l'ancoraggio `$` al criterio di espressione regolare usato nell'esempio della sezione [Inizio di stringa o riga](#Start) . Se usato con la stringa di input originale, che include cinque righe di testo, il metodo <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29?displayProperty=nameWithType> non riesce a trovare una corrispondenza, perché la fine della prima riga non corrisponde al criterio `$`. Quando la stringa di input originale viene suddivisa in una matrice di stringhe, il metodo <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29?displayProperty=nameWithType> riesce a trovare la corrispondenza in ognuna delle cinque righe. Quando il metodo <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> viene chiamato con il parametro `options` impostato su <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>, non viene trovata alcuna corrispondenza perché il criterio di espressione regolare non tiene conto dell'elemento di ritorno a capo (\u+000D). Tuttavia, quando il criterio di espressione regolare viene modificato sostituendo `$` con `\r?$`, la chiamata del metodo <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> con il parametro `options` impostato su <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> trova di nuovo cinque corrispondenze.  
+ L'esempio seguente aggiunge l'ancoraggio `$` al criterio di espressione regolare usato nell'esempio della sezione [Inizio di stringa o riga](#Start) . Se usato con la stringa di input originale, che include cinque righe di testo, il metodo <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29?displayProperty=nameWithType> non riesce a trovare una corrispondenza, perché la fine della prima riga non corrisponde al criterio `$` . Quando la stringa di input originale viene suddivisa in una matrice di stringhe, il metodo <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29?displayProperty=nameWithType> riesce a trovare la corrispondenza in ognuna delle cinque righe. Quando il metodo <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> viene chiamato con il parametro `options` impostato su <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>, non viene trovata alcuna corrispondenza perché il criterio di espressione regolare non tiene conto dell'elemento di ritorno a capo (\u+000D). Tuttavia, quando il criterio di espressione regolare viene modificato sostituendo `$` con `\r?$`, la chiamata del metodo <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> con il parametro `options` impostato su <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> trova di nuovo cinque corrispondenze.  
   
  [!code-csharp[Conceptual.RegEx.Language.Assertions#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.assertions/cs/endofstring1.cs#2)]
  [!code-vb[Conceptual.RegEx.Language.Assertions#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/endofstring1.vb#2)]  
@@ -82,7 +84,7 @@ ms.locfileid: "44085186"
   
 <a name="StartOnly"></a>   
 ## <a name="start-of-string-only-a"></a>Solo inizio di stringa: \A  
- L'ancoraggio `\A` specifica che la corrispondenza deve verificarsi all'inizio della stringa di input. L'ancoraggio è identico a `^`, ad eccezione del fatto che `\A` ignora l'opzione <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>. Di conseguenza, può trovare solo l'inizio della prima riga in una stringa di input con più righe.  
+ L'ancoraggio `\A` specifica che la corrispondenza deve verificarsi all'inizio della stringa di input. L'ancoraggio è identico a `^` , ad eccezione del fatto che `\A` ignora l'opzione <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> . Di conseguenza, può trovare solo l'inizio della prima riga in una stringa di input con più righe.  
   
  L'esempio seguente è simile agli esempi per gli ancoraggi `^` e `$` . L'esempio usa l'ancoraggio `\A` in un'espressione regolare che estrae informazioni sugli anni durante i quali sono esistite alcune squadre di baseball professionale. La stringa di input include cinque righe. La chiamata del metodo <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> trova solo la prima sottostringa nella stringa di input corrispondente al criterio di espressione regolare. Come mostrato nell'esempio, l'opzione <xref:System.Text.RegularExpressions.RegexOptions.Multiline> non ha alcun effetto.  
   
@@ -126,7 +128,7 @@ ms.locfileid: "44085186"
   
  L'espressione regolare `\G(\w+\s?\w*),?` viene interpretata come illustrato nella tabella seguente.  
   
-|Modello|Descrizione|  
+|Modello|Description|  
 |-------------|-----------------|  
 |`\G`|La corrispondenza deve iniziare nel punto in cui termina l'ultima corrispondenza.|  
 |`\w+`|Trova la corrispondenza di uno o più caratteri alfanumerici.|  
@@ -148,7 +150,7 @@ ms.locfileid: "44085186"
   
  Il criterio di ricerca di espressioni regolari viene interpretato come illustrato nella tabella seguente.  
   
-|Modello|Descrizione|  
+|Modello|Description|  
 |-------------|-----------------|  
 |`\b`|Inizia la corrispondenza sul confine di parola.|  
 |`are`|Trova la sottostringa "are".|  
@@ -168,7 +170,7 @@ ms.locfileid: "44085186"
   
  Il criterio di ricerca di espressioni regolari viene interpretato come illustrato nella tabella seguente.  
   
-|Modello|Descrizione|  
+|Modello|Description|  
 |-------------|-----------------|  
 |`\B`|La corrispondenza non deve iniziare nel confine di parola.|  
 |`qu`|Trova la sottostringa "qu".|  

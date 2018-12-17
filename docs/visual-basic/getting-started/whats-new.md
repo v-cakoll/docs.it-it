@@ -1,6 +1,6 @@
 ---
 title: Novità in Visual Basic
-ms.date: 10/04/2018
+ms.date: 10/24/2018
 f1_keywords:
 - VB.StartPage.WhatsNew
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 5c7786bd0dc8789d156959dcf94ac6bf8f4fb906
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e77dca6f87e5039f4aa668a8e08ec112c9eb1b9b
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194059"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146157"
 ---
 # <a name="whats-new-for-visual-basic"></a>Novità in Visual Basic
 
@@ -21,10 +21,13 @@ Questo argomento elenca i nomi delle funzionalità principali per ogni versione 
   
 ## <a name="current-version"></a>Versione corrente
 
-Visual Basic 15.5/Visual Studio 2017 versione 15.5  
-Per le funzionalità nuove, vedere [Visual Basic 15.5](#visual-basic-155)
+Visual Basic 15.8/Visual Studio 2017 versione 15.8  
+Per le nuove funzionalità, vedere [Visual Basic 15.8](#visual-basic-158)
 
 ## <a name="previous-versions"></a>Versioni precedenti
+
+Visual Basic 15.5/Visual Studio 2017 versione 15.5  
+Per le funzionalità nuove, vedere [Visual Basic 15.5](#visual-basic-155)
 
 Visual Basic 15.3/Visual Studio 2017 versione 15.3  
 Per le funzionalità nuove, vedere [Visual Basic 15.3](#visual-basic-153)
@@ -55,6 +58,39 @@ Operatori di scorrimento bit, dichiarazione di variabile del ciclo
 
 Visual Basic/Visual Studio .NET 2002   
 Prima versione di Visual Basic .NET
+
+## <a name="visual-basic-158"></a>Visual Basic 15.8
+
+**Ottimizzazione della conversione da virgola mobile a Integer**
+
+Nelle versioni precedenti di Visual Basic, le prestazioni della conversione dei valori [Double](../language-reference/data-types/double-data-type.md) e [Single](../language-reference/data-types/single-data-type.md) in valori Integer erano relativamente scarse. Visual Basic 15.8 migliora significativamente le prestazioni delle conversioni di valori da virgola mobile a Integer quando il valore restituito da uno dei metodi seguenti viene passato a una delle [funzioni intrinseche di conversione di interi di Visual Basic](../language-reference/functions/type-conversion-functions.md) (CByte, CShort, CInt, CLng, CSByte, CUShort, CUInt, CULng) o quando per il valore restituito da uno dei metodi seguenti viene eseguito il cast implicito a un tipo Integer e [Option Strict](~/docs/visual-basic/language-reference/statements/option-strict-statement.md) è `Off`:
+
+- <xref:Microsoft.VisualBasic.Conversion.Fix(System.Double)?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.Conversion.Fix(System.Object)?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.Conversion.Fix(System.Single)?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.Conversion.Int(System.Double)?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.Conversion.Int(System.Object)?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.Conversion.Int(System.Single)?displayProperty=nameWithType>
+- <xref:System.Math.Ceiling(System.Double)?displayProperty=nameWithType>
+- <xref:System.Math.Floor(System.Double)?displayProperty=nameWithType>
+- <xref:System.Math.Round(System.Double)?displayProperty=nameWithType>
+- <xref:System.Math.Truncate(System.Double)?displayProperty=nameWithType>
+
+Questa ottimizzazione consente un'esecuzione più rapida del codice, fino a due volte più rapida nei casi di esecuzione di un numero elevato di conversioni a tipi Integer. L'esempio seguente illustra alcune semplici chiamate di metodi interessati da questa ottimizzazione:
+
+```vb
+Dim s As Single = 173.7619
+Dim d As Double = s 
+
+Dim i1 As Integer = CInt(Fix(s))               ' Result: 173
+Dim b1 As Byte = CByte(Int(d))                 ' Result: 173
+Dim s1 AS Short = CShort(Math.Truncate(s))     ' Result: 173
+Dim i2 As Integer = CInt(Math.Ceiling(d))      ' Result: 174
+Dim i3 As Integer = CInt(Math.Round(s))        ' Result: 174
+
+```
+
+Si noti che in questo caso i valori a virgola mobile vengono troncati anziché arrotondati.
 
 ## <a name="visual-basic-155"></a>Visual Basic 15.5
 

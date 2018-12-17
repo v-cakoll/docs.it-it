@@ -1,6 +1,6 @@
 ---
 title: Suggerimenti per le eccezioni
-ms.date: 03/30/2017
+ms.date: 12/05.2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -9,26 +9,22 @@ dev_langs:
 helpviewer_keywords:
 - exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b6aa1049c531550687a2c6289ccd87e763ca2f58
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: fb2da0d37a3c72941e9ffdac52a6fdf24ec71b3a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199630"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149588"
 ---
 # <a name="best-practices-for-exceptions"></a>Procedure consigliate per le eccezioni
 
 Un'applicazione progettata correttamente gestisce eccezioni ed errori per impedire arresti anomali dell'applicazione. Questa sezione descrive le procedure consigliate per la gestione e la creazione di eccezioni.
 
-## <a name="use-trycatchfinally-blocks"></a>Usare blocchi try/catch/finally
+## <a name="use-trycatchfinally-blocks-to-recover-from-errors-or-release-resources"></a>Usare blocchi try/catch/finally per correggere errori o rilasciare risorse
 
-Usare blocchi `try`/`catch`/`finally` nel codice che può potenzialmente generare un'eccezione. 
+Usare i blocchi `try`/`catch` intorno al codice che può potenzialmente generare un'eccezione ***and*** che il codice non può correggere. Nei blocchi `catch` ordinare sempre le eccezioni dalla più derivata alla meno derivata. Tutte le eccezioni derivano da <xref:System.Exception>. Le eccezioni più derivate non vengono gestite da una clausola catch preceduta da una clausola catch per una classe di eccezione di base. Quando il codice non corregge un'eccezione, non recuperare l'eccezione. Abilitare i metodi nella parte superiore dello stack di chiamata per eseguire il ripristino, se possibile.
 
-Ordinare sempre le eccezioni in blocchi `catch` dalla più specifica alla meno specifica.
-
-Usare un blocco `finally` per pulire le risorse, indipendentemente dalla possibilità di ripristino.
+Pulire le risorse allocate con istruzioni `using` o blocchi `finally`. Preferire le istruzioni `using` per pulire automaticamente le risorse quando vengono generate eccezioni. Usare i blocchi `finally` per pulire le risorse che non implementano <xref:System.IDisposable>. Il codice in una clausola `finally` viene quasi sempre eseguito anche se vengono generate eccezioni.
 
 ## <a name="handle-common-conditions-without-throwing-exceptions"></a>Gestire le condizioni comuni senza generare eccezioni
 
@@ -58,11 +54,11 @@ Una classe può offrire metodi o proprietà che consentono di evitare di effettu
 [!code-csharp[Conceptual.Exception.Handling#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#5)]
 [!code-vb[Conceptual.Exception.Handling#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#5)]  
 
-Un altro metodo per evitare le eccezioni consiste nel restituire il valore Null per i casi di errore estremamente comuni anziché generare un'eccezione. Un caso di errore estremamente comune può essere considerato come un normale flusso di controllo. Restituendo Null in questi casi, si riduce l'impatto sulle prestazioni di un'applicazione.
+Un altro metodo per evitare le eccezioni consiste nel restituire il valore `null` per i casi di errore estremamente comuni anziché generare un'eccezione. Un caso di errore estremamente comune può essere considerato come un normale flusso di controllo. Restituendo `null` in questi casi, si riduce l'impatto sulle prestazioni di un'applicazione.
 
 ## <a name="throw-exceptions-instead-of-returning-an-error-code"></a>Generare eccezioni anziché restituire un codice di errore
 
-Le eccezioni garantiscono il rilevamento degli errori quando il codice chiamante non rileva un codice restituito. 
+Le eccezioni garantiscono il rilevamento degli errori quando il codice chiamante non rileva un codice restituito.
 
 ## <a name="use-the-predefined-net-exception-types"></a>Usare i tipi di eccezione .NET predefiniti
 
@@ -132,7 +128,7 @@ Una classe genera spesso la stessa eccezione da punti diversi dell'implementazio
   
 In alcuni casi è preferibile usare il costruttore dell'eccezione per compilare l'eccezione. Un esempio è una classe di eccezioni globali, ad esempio <xref:System.ArgumentException>.
 
-## <a name="clean-up-intermediate-results-when-throwing-an-exception"></a>Eliminare i risultati intermedi quando si genera un'eccezione
+## <a name="restore-state-when-methods-dont-complete-due-to-exceptions"></a>Ripristinare lo stato quando i metodi non sono completi a causa di eccezioni
 
 I chiamanti dovrebbero avere la garanzia che non si verifichino effetti secondari quando un'eccezione viene generata da un metodo. Ad esempio, se è presente un codice che trasferisce denaro prelevandolo da un conto e depositandolo in un altro conto e viene generata un'eccezione durante l'esecuzione del deposito, non si desidera che il prelievo rimanga attivo.
 
@@ -144,6 +140,8 @@ public void TransferFunds(Account from, Account to, decimal amount)
     to.Deposit(amount);
 }
 ```
+
+Il metodo riportato sopra non genera direttamente eccezioni, ma deve essere scritto a scopo difensivo in modo tale che se l'operazione di deposito non riesce, il prelievo venga respinto.
 
 Un modo per gestire questa situazione consiste nel rilevare eventuali eccezioni generate dalla transazione di deposito e annullare il prelievo.
 
@@ -172,8 +170,8 @@ catch (Exception ex)
     throw new TransferFundsException("Withdrawal failed", innerException: ex)
     {
         From = from,
-    To = to,
-    Amount = amount
+        To = to,
+        Amount = amount
     };
 }
 ```

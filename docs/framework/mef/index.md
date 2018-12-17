@@ -427,7 +427,7 @@ class Subtract : IOperation
 
  Aggiungere al progetto SimpleCalculator una nuova directory denominata `Extensions`. Assicurarsi di aggiungerla a livello di progetto e non a livello di soluzione. Aggiungere quindi alla soluzione un nuovo progetto Libreria di classi denominato `ExtendedOperations`. Il nuovo progetto verrà compilato in un assembly separato.
 
- Aprire la finestra di progettazione Proprietà progetto per il progetto ExtendedOperations e fare clic sulla scheda **Compila****.** Modificare **Percorso dell'output di compilazione** o **Percorso output** affinché punti alla directory Extensions nella directory del progetto SimpleCalculator (..\SimpleCalculator\Extensions\\).
+ Aprire la finestra di progettazione proprietà progetto per il progetto ExtendedOperations e fare clic il **compilare** oppure **compilazione** scheda. Modificare **Percorso dell'output di compilazione** o **Percorso output** affinché punti alla directory Extensions nella directory del progetto SimpleCalculator (..\SimpleCalculator\Extensions\\).
 
  In Module1.vb o Program.cs aggiungere la riga seguente al costruttore `Program`:
 

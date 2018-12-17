@@ -4,12 +4,12 @@ description: Architettura di microservizi .NET per applicazioni .NET in contenit
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 08/31/2018
-ms.openlocfilehash: 39a3c0e0aac2980e67a1c87a472d1a77baed6113
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 8bf26087564e4f592d5f89afc6da211c5d1cff57
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47216851"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150654"
 ---
 # <a name="docker-terminology"></a>Terminologia di Docker
 
@@ -51,7 +51,6 @@ Questa sezione elenca i termini e le definizioni che è necessario conoscere pri
 
 **Agente di orchestrazione**: strumento che semplifica la gestione di cluster e host Docker. Gli agenti di orchestrazione consentono di gestire immagini, contenitori e host tramite un'interfaccia della riga di comando o un'interfaccia utente grafica. È possibile gestire le reti di contenitori, le configurazioni, il bilanciamento del carico, l'individuazione di servizi, la disponibilità elevata, la configurazione dell'host Docker e altro ancora. Un agente di orchestrazione è responsabile dell'esecuzione, della distribuzione, del ridimensionamento e della correzione dei carichi di lavoro in una raccolta di nodi. In genere, i prodotti per l'agente di orchestrazione sono gli stessi che forniscono l'infrastruttura cluster, ad esempio Kubernetes, Azure Service Fabric e altre offerte disponibili sul mercato. 
 
-
 >[!div class="step-by-step"]
-[Precedente](docker-defined.md)
-[Successivo](docker-containers-images-registries.md)
+>[Precedente](docker-defined.md)
+>[Successivo](docker-containers-images-registries.md)

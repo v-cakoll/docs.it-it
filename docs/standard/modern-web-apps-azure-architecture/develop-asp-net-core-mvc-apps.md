@@ -4,12 +4,12 @@ description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Svil
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: de6b2e6650d173d325b2a717f5ee47506c307de7
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 7459173f21bd5219c2aa7b994ac2b2b44857375f
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2018
-ms.locfileid: "49308591"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152779"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Sviluppare app ASP.NET Core MVC
 
@@ -83,7 +83,7 @@ ASP.NET Core include il supporto incorporato e usa internamente una tecnica chia
 
 Lo static cling si verifica quando le classi chiamano metodi statici o accedono a proprietà statiche, un'operazione che comporta effetti collaterali o dipendenze nell'infrastruttura. Ad esempio, se è presente un metodo che chiama un metodo statico che a sua volta scrive in un database, il metodo è strettamente accoppiato al database. Qualsiasi elemento che interrompe la chiamata al database interromperà il metodo. Eseguire i test di questi tipi di metodi è notoriamente difficile poiché i test richiedono librerie di simulazione commerciali per simulare le chiamate statiche oppure possono essere eseguiti solo con un database di prova. Le chiamate statiche che non hanno alcuna dipendenza nell'infrastruttura, in particolare quelle che sono completamente senza stato, possono essere eseguite senza problemi e non hanno alcun effetto sull'accoppiamento o la testabilità (oltre all'accoppiamento del codice alla chiamata statica).
 
-Sebbene conoscano i rischi dello static cling e dello stato globale, molti sviluppatori eseguono comunque uno stretto accoppiamento del codice a implementazioni specifiche attraverso la creazione diretta delle istanze. "New is glue" vuole essere un promemoria di questo accoppiamento e non una condanna generale dell'uso della nuova parola chiave. Come con le chiamate a metodi statici, le nuove istanze dei tipi che non hanno dipendenze esterne in genere non accoppiano strettamente il codice ai dettagli di implementazione o rendono più difficile il test. Tuttavia, ogni volta che viene creata un'istanza di una classe, fermarsi a considerare se è consigliabile impostare come hardcoded l'istanza specifica in quella determinata posizione oppure richiedere l'istanza come dipendenza.
+Sebbene conoscano i rischi dello static cling e dello stato globale, molti sviluppatori eseguono comunque uno stretto accoppiamento del codice a implementazioni specifiche attraverso la creazione diretta delle istanze. "New is glue" vuole essere un promemoria di questo accoppiamento e non una condanna generale dell'uso della parola chiave `new`. Come con le chiamate a metodi statici, le nuove istanze dei tipi che non hanno dipendenze esterne in genere non accoppiano strettamente il codice ai dettagli di implementazione o rendono più difficile il test. Tuttavia, ogni volta che viene creata un'istanza di una classe, fermarsi a considerare se è consigliabile impostare come hardcoded l'istanza specifica in quella determinata posizione oppure richiedere l'istanza come dipendenza.
 
 ### <a name="declare-your-dependencies"></a>Dichiarare le dipendenze
 
@@ -559,5 +559,5 @@ _Per altre informazioni sulle opzioni di distribuzione di Azure, vedere il [capi
 >   <https://docs.microsoft.com/azure/application-gateway/application-gateway-introduction>
 
 >[!div class="step-by-step"]
-[Precedente](common-client-side-web-technologies.md)
-[Successivo](work-with-data-in-asp-net-core-apps.md)
+>[Precedente](common-client-side-web-technologies.md)
+>[Successivo](work-with-data-in-asp-net-core-apps.md)

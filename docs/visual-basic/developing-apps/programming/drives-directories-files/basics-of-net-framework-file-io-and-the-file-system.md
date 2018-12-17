@@ -9,12 +9,12 @@ helpviewer_keywords:
 - streams
 - streams, definition
 ms.assetid: 49d837c0-cf28-416f-8606-4d83d7b479ef
-ms.openlocfilehash: c978f79571494d9b716df4e8a42e7f40d20766f6
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: 5ce95d84782f02df1a4f9f362629bab776a8060c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39332955"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155025"
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>Nozioni fondamentali sul file system e sulla funzionalità di I/O di file di .NET Framework (Visual Basic)
 Le classi dello spazio dei nomi <xref:System.IO> si usano per lavorare con unità, file e directory.  
@@ -32,7 +32,7 @@ Le classi dello spazio dei nomi <xref:System.IO> si usano per lavorare con unit�
 ## <a name="stream-operations"></a>Operazioni di flusso  
  I dati contenuti nel flusso possono provenire dalla memoria, da un file o da un socket TCP/IP. Ai flussi è possibile applicare alcune operazioni fondamentali:  
   
--   Lettura. È possibile leggere da un flusso, trasferendo i dati dal flusso in una struttura di dati, ad esempio una stringa o una matrice di byte.  
+-   **Lettura**. È possibile leggere da un flusso, trasferendo i dati dal flusso in una struttura di dati, ad esempio una stringa o una matrice di byte.  
   
 -   **Scrittura**. È possibile scrivere in un flusso, trasferendo i dati da un'origine dati nel flusso.  
   
@@ -101,5 +101,5 @@ Le classi dello spazio dei nomi <xref:System.IO> si usano per lavorare con unit�
 ## <a name="see-also"></a>Vedere anche  
  [Composizione dei flussi](../../../../standard/io/composing-streams.md)  
  [I/O di file e di flussi](../../../../standard/io/index.md)  
- [I/O di file asincrono](../../../../standard/io/asynchronous-file-i-o.md)  
+ [Asynchronous File I/O](../../../../standard/io/asynchronous-file-i-o.md)  
  [Classes Used in .NET Framework File I/O and the File System (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/classes-used-in-net-framework-file-io-and-the-file-system.md) (Classi usate nel file system e nella funzionalità di I/O di file di .NET Framework (Visual Basic))

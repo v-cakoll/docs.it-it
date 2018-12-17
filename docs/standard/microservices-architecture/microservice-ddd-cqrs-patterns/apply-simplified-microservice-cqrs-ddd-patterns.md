@@ -1,23 +1,23 @@
 ---
 title: Applicazione di schemi CQRS e DDD semplificati in un microservizio
-description: Architettura dei microservizi .NET per le applicazioni .NET in contenitori | Applicazione di schemi CQRS e DDD semplificati in un microservizio
+description: Architettura dei microservizi .NET per le applicazioni .NET in contenitori | Riconoscere la relazione globale tra criteri CQRS e DDD.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: 5557a3d83d1f5f3016ff411157db1652d3ac50e2
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 10/08/2018
+ms.openlocfilehash: ef3260143c91c2500becd7c8c1a6cd0b81dbf3d2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106084"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148067"
 ---
-# <a name="applying-simplified-cqrs-and-ddd-patterns-in-a-microservice"></a>Applicazione di schemi CQRS e DDD semplificati in un microservizio
+# <a name="apply-simplified-cqrs-and-ddd-patterns-in-a-microservice"></a>Applicare modelli CQRS e DDD semplificati in un microservizio
 
 CQRS è uno schema architetturale che separa i modelli per la lettura e la scrittura dei dati. Il termine correlato [Command Query Separation (CQS)](https://martinfowler.com/bliki/CommandQuerySeparation.html) è stato originariamente definito da Bertrand Meyer nel suo libro *Object Oriented Software Construction*. L'idea di base è che è possibile dividere le operazioni di un sistema in due categorie nettamente distinte:
 
--   Query. Restituiscono un risultato, non modificano lo stato del sistema e sono prive di effetti collaterali.
+- Query. Restituiscono un risultato, non modificano lo stato del sistema e sono prive di effetti collaterali.
 
--   Comandi. Modificano lo stato di un sistema.
+- Comandi. Modificano lo stato di un sistema.
 
 CQS è un concetto semplice: riguarda i metodi all'interno di un oggetto, che si tratti di query o comandi. Ogni metodo restituisce lo stato oppure modifica lo stato, ma non esegue entrambe le operazioni. Anche un singolo oggetto di schema di repository può essere conforme a CQS. CQS può essere considerato un principio fondamentale per CQRS.
 
@@ -27,15 +27,14 @@ L'aspetto di separazione di CQRS viene ottenuto mediante il raggruppamento delle
 
 CQRS significa creare due oggetti per un'operazione di lettura/scrittura, dove in altri contesti ne è presente uno. Esistono diversi motivi per cui è consigliabile disporre di un database denormalizzato per le letture (informazioni in proposito sono disponibili nella documentazione più avanzata su CQRS). In questo caso, non useremo tale approccio, perché il nostro obiettivo è avere maggiore flessibilità nelle query invece di limitare le query con vincoli dagli schemi DDD come gli aggregati.
 
-Un esempio di questo tipo di servizio è il microservizio per gli ordini dell'applicazione di riferimento eShopOnContainers. Questo servizio implementa un microservizio basato su un approccio CQRS semplificato. Usa una singola origine dati o un singolo database, ma due modelli logici, più schemi DDD per il dominio transazionale, come illustrato nella figura 9-2.
+Un esempio di questo tipo di servizio è il microservizio per gli ordini dell'applicazione di riferimento eShopOnContainers. Questo servizio implementa un microservizio basato su un approccio CQRS semplificato. Usa una singola origine dati o un singolo database, ma due modelli logici, più schemi DDD per il dominio transazionale, come illustrato nella figura 7-2.
 
-![](./media/image2.png)
+![Il microservizio logico Ordinamento include il proprio database Ordinamento, che può essere incluso o meno nello stesso host Docker. Il fatto che il database sia incluso nello stesso host Docker è ottimale per lo sviluppo, ma non per la produzione.](./media/image2.png)
 
-**Figura 9-2**. Microservizio semplificato basato su CQRS e DDD
+**Figura 7-2**. Microservizio semplificato basato su CQRS e DDD
 
 Il livello dell'applicazione può essere la stessa API Web. L'aspetto di progettazione importante a questo proposito è che il microservizio ha suddiviso le query e i ViewModel (modelli di dati creati appositamente per le applicazioni client) dai comandi, dal modello di dominio e dalle transazioni seguendo lo schema CQRS. Questo approccio mantiene le query indipendenti da restrizioni e vincoli provenienti da schemi DDD che sono applicabili esclusivamente per le transazioni e gli aggiornamenti, come descritto nelle sezioni successive.
 
-
 >[!div class="step-by-step"]
-[Precedente](index.md)
-[Successivo](eshoponcontainers-cqrs-ddd-microservice.md)
+>[Precedente](index.md)
+>[Successivo](eshoponcontainers-cqrs-ddd-microservice.md)

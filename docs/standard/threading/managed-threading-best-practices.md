@@ -1,6 +1,6 @@
 ---
 title: Suggerimenti per l'utilizzo del threading gestito
-ms.date: 11/30/2017
+ms.date: 10/15/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -12,20 +12,20 @@ helpviewer_keywords:
 ms.assetid: e51988e7-7f4b-4646-a06d-1416cee8d557
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f95fb3ccab7362021a7a195ea199a1370e003dd2
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: ab33474fa8f3d62fb21c86a0699bbfcb75e7a270
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46562372"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150615"
 ---
-# <a name="managed-threading-best-practices"></a>Suggerimenti per l'utilizzo del threading gestito
+# <a name="managed-threading-best-practices"></a>Suggerimenti per l'uso del threading gestito
 Il multithreading richiede un'attenta programmazione. È possibile ridurre la complessità della maggior parte delle attività accodando le richieste di esecuzione tramite thread di pool di thread. In questo argomento vengono analizzate situazioni più complesse, come il coordinamento del lavoro di più thread o la gestione di thread che effettuano un blocco.  
   
 > [!NOTE]
 > A partire da .NET Framework 4, la libreria TPL (Task Parallel Library) e PLINQ specificano API che riducono, in parte, la complessità e i rischi associati alla programmazione multithread. Per altre informazioni, vedere [Programmazione parallela in .NET](../../../docs/standard/parallel-programming/index.md).  
   
-## <a name="deadlocks-and-race-conditions"></a>Deadlocks e race condition  
+## <a name="deadlocks-and-race-conditions"></a>Deadlock e race condition  
  Il multithreading consente di risolvere problemi di trasmissione dei dati e velocità di risposta, ma è anche causa di nuovi problemi: i deadlock e le race condition.  
   
 ### <a name="deadlocks"></a>Deadlock  
@@ -59,7 +59,7 @@ else {
 }  
 ```  
   
-### <a name="race-conditions"></a>Condizioni di traccia  
+### <a name="race-conditions"></a>Race condition  
  Una race condition è un bug che si verifica quando il risultato di un programma dipende da quale tra due o più thread raggiunge per primo un determinato blocco di codice. L'esecuzione ripetuta del programma produce ogni volta risultati diversi che non è possibile prevedere in anticipo.  
   
  Un semplice esempio di race condition è l'incremento di un campo. Si supponga che una classe possieda un campo **statico** (**Shared** in Visual Basic) che viene incrementato ogni volta che viene creata un'istanza della classe tramite codice come `objCt++;` (C#) o `objCt += 1` (Visual Basic). Per eseguire questa operazione, è necessario caricare il valore da `objCt` in un registro, incrementare il valore e archiviarlo in `objCt`.  
@@ -70,37 +70,18 @@ else {
   
  Le race condition possono verificarsi anche quando si sincronizzano le attività di più thread. Quando si scrive una riga di codice, è necessario considerare le possibili conseguenze nel caso in cui un thread venisse interrotto prima dell'esecuzione della riga o di una qualsiasi delle singole istruzioni del computer che costituiscono la riga e un altro thread lo raggiungesse.  
   
-## <a name="number-of-processors"></a>Numero di processori  
- La maggior parte dei computer possiede più processori (detti anche core), anche i piccoli dispositivi come tablet e telefoni. Se si sta sviluppando un software che funzionerà anche nei computer a processore singolo, si noti che il multithreading consente di risolvere diversi problemi per i computer a processore singolo e multiprocessore.  
-  
-### <a name="multiprocessor-computers"></a>Computer multiprocessore  
- Il multithreading consente di migliorare la velocità effettiva. Dieci processori possono decuplicare il lavoro di uno, ma solo a condizione che il lavoro sia suddiviso in modo tale che tutti e dieci possano funzionare contemporaneamente. I thread consentono di suddividere facilmente il lavoro e di sfruttare l'ulteriore capacità di elaborazione. Se si usa il multithreading su un computer multiprocessore:  
-  
--   Il numero di thread che è possibile eseguire contemporaneamente dipende dal numero dei processori.  
-  
--   Un thread in background viene eseguito solo quando il numero di thread in primo piano in esecuzione è inferiore al numero dei processori.  
-  
--   Quando si chiama il metodo <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> su un thread, l'avvio immediato dell'esecuzione dipende dal numero di processori e thread attualmente in attesa di esecuzione.  
-  
--   Le race condition possono verificarsi non solo perché i thread vengono interrotti inaspettatamente, ma anche perché è possibile che due thread in esecuzione su processori diversi competano per raggiungere lo stesso blocco di codice.  
-  
-### <a name="single-processor-computers"></a>Computer a processore singolo  
- Il multithreading consente di rendere più rapida la risposta all'utente del computer e di usare il tempo di inattività per attività in background. Se si usa il multithreading su un computer a processore singolo:  
-  
--   Viene sempre eseguito un solo thread per volta.  
-  
--   Viene eseguito un thread in background solo quando il thread utente principale è inattivo. Un thread in primo piano costantemente in esecuzione priva i thread in background del tempo del processore.  
-  
--   Quando si chiama il metodo <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> su un thread, quest'ultimo non viene eseguito finché il thread corrente non viene generato o interrotto dal sistema operativo.  
-  
--   Le race condition si verificano in genere perché il programmatore non ha previsto che un thread potesse venire interrotto in un momento inopportuno, consentendo talvolta a un altro thread di raggiungere per primo un blocco di codice.  
-  
 ## <a name="static-members-and-static-constructors"></a>Membri e costruttori statici  
  Una classe non viene inizializzata finché non termina l'esecuzione del relativo costruttore (costruttore `static` in C#, `Shared Sub New` in Visual Basic). Per impedire l'esecuzione di codice su un tipo non inizializzato, Common Language Runtime blocca tutte le chiamate degli altri thread ai membri `static` della classe (membri `Shared` in Visual Basic) fino al termine dell'esecuzione del costruttore.  
   
  Se ad esempio il costruttore di una classe avvia un nuovo thread e la routine del thread chiama un membro `static` della classe, il nuovo thread si bloccherà fino al completamento dell'esecuzione del costruttore.  
   
  Ciò è valido per qualsiasi tipo che può avere un costruttore `static`.  
+
+## <a name="number-of-processors"></a>Numero di processori
+
+L'architettura multithreading può essere influenzata dal fatto che nel sistema siano presenti più processori o ve ne sia solo uno. Per altre informazioni, vedere [Numero di processori](https://docs.microsoft.com/previous-versions/dotnet/netframework-1.1/1c9txz50(v%3dvs.71)#number-of-processors).
+
+Usare la proprietà <xref:System.Environment.ProcessorCount?displayProperty=nameWithType> per determinare il numero di processori disponibili in fase di esecuzione.
   
 ## <a name="general-recommendations"></a>Suggerimenti generali  
  Quando si usano più thread, attenersi alle seguenti linee guida:  
@@ -145,7 +126,7 @@ else {
     ```  
   
     > [!NOTE]
-    >  In .NET Framework versione 2.0 il metodo <xref:System.Threading.Interlocked.Add%2A> offre aggiornamenti atomici in incrementi maggiori di 1.  
+    > In .NET Framework 2.0 e versioni successive usare il metodo <xref:System.Threading.Interlocked.Add%2A> per incrementi atomici maggiori di 1.  
   
      Nel secondo esempio una variabile del tipo di riferimento viene aggiornata solo se corrisponde a un riferimento Null (`Nothing` in Visual Basic).  
   
@@ -183,7 +164,7 @@ else {
     ```  
   
     > [!NOTE]
-    >  In .NET Framework versione 2.0 il metodo <xref:System.Threading.Interlocked.CompareExchange%2A> presenta un overload generico che può essere usato per la sostituzione indipendente dai tipi di qualsiasi tipo di riferimento.  
+    > A partire da .NET Framework 2.0, l'overload del metodo <xref:System.Threading.Interlocked.CompareExchange%60%601%28%60%600%40%2C%60%600%2C%60%600%29> offre un'alternativa indipendente dai tipi per i tipo di riferimento.
   
 ## <a name="recommendations-for-class-libraries"></a>Suggerimenti per le librerie di classi  
  Si prendano in considerazione le linee guida riportate di seguito per la progettazione di librerie di classi per il multithreading:  

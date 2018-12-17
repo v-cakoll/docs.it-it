@@ -16,15 +16,15 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 792aa8da-918b-458e-b154-9836b97735f3
-ms.openlocfilehash: 2ef25c3d7db3f445ddf7f925eb73c85760f34dc5
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 492542743b27c709901267d5fd4e066a65158b85
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44211931"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129636"
 ---
 # <a name="event-based-asynchronous-pattern-overview"></a>Cenni preliminari sul modello asincrono basato su eventi
-Le applicazioni che eseguono più attività contemporaneamente, pur rimanendo disponibili all'utente, richiedono spesso una progettazione che preveda l'uso di più thread. Lo spazio dei nomi <xref:System.Threading> offre tutti gli strumenti necessari per creare applicazioni multithreading a elevate prestazioni, per l'uso dei quali è necessaria tuttavia una notevole esperienza nel campo della progettazione di software multithreading. Per applicazioni multithreading relativamente semplici, il componente <xref:System.ComponentModel.BackgroundWorker> rappresenta una soluzione adeguata. Per applicazioni asincrone più complesse, si consiglia di implementare una classe che segua il modello asincrono basato su eventi.  
+Le applicazioni che eseguono più attività contemporaneamente, pur rimanendo disponibili all'utente, richiedono spesso una progettazione che preveda l'uso di più thread. Lo spazio dei nomi <xref:System.Threading> offre tutti gli strumenti necessari per creare applicazioni multithreading a elevate prestazioni, per l'uso dei quali è necessaria tuttavia una notevole esperienza nel campo dell'ingegneria del software multithreading. Per applicazioni multithreading relativamente semplici, il componente <xref:System.ComponentModel.BackgroundWorker> rappresenta una soluzione adeguata. Per applicazioni asincrone più complesse, si consiglia di implementare una classe che segua il modello asincrono basato su eventi.  
   
  Tale modello consente di usufruire dei vantaggi offerti dalle applicazioni multithreading nascondendo al contempo gran parte degli aspetti complessi inerenti la progettazione multithreading. L'uso di una classe che supporta questo modello consente di:  
   
@@ -36,7 +36,7 @@ Le applicazioni che eseguono più attività contemporaneamente, pur rimanendo di
   
 -   Comunicare con operazioni asincrone in sospeso mediante un modello noto di eventi e delegati. Per altre informazioni sull'uso di gestori eventi e delegati, vedere [Eventi](../../../docs/standard/events/index.md).  
   
- Una classe che supporta il modello asincrono basato su eventi avrà uno o più metodi denominati *NomeMetodo***Async**. Tali metodi possono eseguire il mirroring delle versioni sincrone che eseguono la stessa operazione sul thread corrente. La classe può anche avere un evento *NomeMetodo***Completed** e un metodo *NomeMetodo***AsyncCancel** (o semplicemente **CancelAsync**).  
+ Una classe che supporta il modello asincrono basato su eventi avrà uno o più metodi denominati _NomeMetodo_**Async**. Tali metodi possono eseguire il mirroring delle versioni sincrone che eseguono la stessa operazione sul thread corrente. La classe può anche avere un evento _NomeMetodo_**Completed** e un metodo _NomeMetodo_**AsyncCancel** (o semplicemente **CancelAsync**).  
   
  <xref:System.Windows.Forms.PictureBox> è un componente tipico che supporta il modello asincrono basato su eventi. Per scaricare un'immagine in modo sincrono è possibile chiamare il relativo metodo <xref:System.Windows.Forms.PictureBox.Load%2A>, ma qualora le dimensioni dell'immagine fossero eccessive o la connessione di rete troppo lenta, l'esecuzione dell'applicazione verrà interrotta o sospesa fino al completamento dell'operazione di download e alla restituzione della chiamata a <xref:System.Windows.Forms.PictureBox.Load%2A>.  
   
@@ -48,7 +48,7 @@ Le applicazioni che eseguono più attività contemporaneamente, pur rimanendo di
 >  Il download potrebbe terminare non appena viene effettuata la richiesta di <xref:System.Windows.Forms.PictureBox.CancelAsync%2A>. In tal caso, la proprietà <xref:System.ComponentModel.AsyncCompletedEventArgs.Cancelled%2A> potrebbe non riflettere la richiesta di annullamento. Si tratta di una *race condition*, ovvero di un problema riscontrato comunemente nella programmazione multithreading. Per altre informazioni sui problemi inerenti la programmazione multithreading, vedere [Procedure consigliate per il threading gestito](../../../docs/standard/threading/managed-threading-best-practices.md).  
   
 ## <a name="characteristics-of-the-event-based-asynchronous-pattern"></a>Caratteristiche del modello asincrono basato su eventi  
- Sono disponibili diversi tipi di modello asincrono basato su eventi, a seconda della complessità delle operazioni supportate da una determinata classe. Le classi più semplici possono presentare un solo metodo *NomeMetodo***Async** e un evento *NomeMetodo***Completed** corrispondente. Le classi più complesse possono invece avere diversi metodi *NomeMetodo***Async**, ognuno dei quali con un evento *NomeMetodo***Completed** associato, nonché versioni sincrone di tali metodi. Per ogni metodo asincrono le classi possono supportare funzionalità di annullamento e creazione di rapporti sullo stato di avanzamento, nonché risultati incrementali.  
+ Sono disponibili diversi tipi di modello asincrono basato su eventi, a seconda della complessità delle operazioni supportate da una determinata classe. Le classi più semplici possono presentare un solo metodo _NomeMetodo_**Async** e un evento _NomeMetodo_**Completed** corrispondente. Le classi più complesse possono invece avere diversi metodi _NomeMetodo_**Async**, ognuno dei quali con un evento _NomeMetodo_**Completed** associato, nonché versioni sincrone di tali metodi. Per ogni metodo asincrono le classi possono supportare funzionalità di annullamento e creazione di rapporti sullo stato di avanzamento, nonché risultati incrementali.  
   
  Un metodo asincrono può anche supportare più chiamate in sospeso, ovvero più richiami concorrenti, consentendo al codice di chiamarlo un numero indeterminato di volte prima del completamento di altre operazioni in sospeso. Una gestione efficace di questa situazione può richiedere che l'applicazione tenga traccia del completamento di ogni operazione.  
   
@@ -118,14 +118,14 @@ public class AsyncExample
 >  È necessario specificare un valore univoco per il parametro `userState` nelle chiamate a overload a più richiami. La specifica di ID attività non univoci determina la generazione di una <xref:System.ArgumentException> da parte della classe asincrona.  
   
 ### <a name="canceling-pending-operations"></a>Annullamento delle operazioni in sospeso  
- È importante che sia possibile annullare le operazioni asincrone in qualsiasi momento prima che vengano completate. Le classi che implementano il modello asincrono basato su eventi avranno un metodo `CancelAsync` (se è presente un solo metodo asincrono) o *NomeMetodo***AsyncCancel** (se sono presenti più metodi asincroni).  
+ È importante che sia possibile annullare le operazioni asincrone in qualsiasi momento prima che vengano completate. Le classi che implementano il modello asincrono basato su eventi avranno un metodo `CancelAsync` (se è presente un solo metodo asincrono) o un metodo _NomeMetodo_**AsyncCancel** (se sono presenti più metodi asincroni).  
   
  I metodi che consentono più chiamate accettano un parametro `userState` che può essere usato per tenere traccia della durata di ogni attività. `CancelAsync` accetta un parametro `userState` che consente di annullare attività specifiche in sospeso.  
   
  I metodi che supportano una sola operazione in sospeso alla volta, come `Method1Async(string param)`, non sono annullabili.  
   
 ### <a name="receiving-progress-updates-and-incremental-results"></a>Ricezione di aggiornamenti sullo stato di avanzamento e di risultati incrementali  
- Per tenere traccia dello stato di avanzamento e dei risultati incrementali, una classe conforme al modello asincrono basato su eventi può facoltativamente fornire un evento, che in genere è denominato `ProgressChanged` o *NomeMetodo***ProgressChanged**, il cui gestore eventi accetta un parametro <xref:System.ComponentModel.ProgressChangedEventArgs>.  
+ Per tenere traccia dello stato di avanzamento e dei risultati incrementali, una classe conforme al modello asincrono basato su eventi può facoltativamente fornire un evento, che in genere è denominato `ProgressChanged` o _NomeMetodo_**ProgressChanged**, il cui gestore eventi accetta un parametro <xref:System.ComponentModel.ProgressChangedEventArgs>.  
   
  Il gestore eventi relativo all'evento `ProgressChanged` può esaminare la proprietà <xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A?displayProperty=nameWithType> per determinare la percentuale di completamento di un'attività asincrona. Questa proprietà ha il valore compreso tra 0 e 100 e può essere usata per aggiornare la proprietà <xref:System.Windows.Forms.ProgressBar.Value%2A> di un oggetto <xref:System.Windows.Forms.ProgressBar>. Se sono in sospeso più operazioni asincrone, è possibile usare la proprietà <xref:System.ComponentModel.ProgressChangedEventArgs.UserState%2A?displayProperty=nameWithType> per identificare l'operazione per la quale viene generato il rapporto sullo stato di avanzamento.  
   

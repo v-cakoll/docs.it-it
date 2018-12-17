@@ -1,5 +1,6 @@
 ---
-title: Costrutti di alternanza nelle espressioni regolari
+title: Costrutti di alternanza nelle espressioni regolari .NET
+description: Informazioni su come usare i costrutti di alternanza per la corrispondenza condizionale nelle espressioni regolari.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,12 +17,13 @@ helpviewer_keywords:
 ms.assetid: 071e22e9-fbb0-4ecf-add1-8d2424f9f2d1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6b653972fad71ce3a89c35598513b94f71fb4bf0
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.custom: seodec18
+ms.openlocfilehash: 6d9761d2e9904e865e7f6a17526327e1b04a1597
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839751"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53142931"
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>Costrutti di alternanza nelle espressioni regolari
 <a name="top"></a> I costrutti di alternanza modificano un'espressione regolare per abilitare la corrispondenza di tipo either/or o condizionale. .NET supporta tre costrutti di alternanza:  
@@ -43,7 +45,7 @@ ms.locfileid: "48839751"
   
  L'espressione regolare che usa il carattere `|` , `\bgr(a|e)y\b`, viene interpretata nel modo illustrato nella tabella seguente.  
   
-|Modello|Descrizione|  
+|Modello|Description|  
 |-------------|-----------------|  
 |`\b`|Inizia dal confine di una parola.|  
 |`gr`|Corrisponde ai caratteri "gr".|  
@@ -57,7 +59,7 @@ ms.locfileid: "48839751"
   
  L'espressione regolare `\b(\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b` viene interpretata come illustrato nella tabella seguente.  
   
-|Modello|Descrizione|  
+|Modello|Description|  
 |-------------|-----------------|  
 |`\b`|Inizia dal confine di una parola.|  
 |<code>(\d{2}-\d{7}&#124;\d{3}-\d{2}-\d{4})</code>|Corrisponde a una delle due opzioni seguenti: due cifre decimali seguite da un trattino seguito da sette cifre decimali oppure tre cifre decimali, un trattino, due cifre decimali, un altro trattino e quattro cifre decimali.|  
@@ -87,7 +89,7 @@ ms.locfileid: "48839751"
   
  Il criterio di ricerca di espressioni regolari `\b(?(\d{2}-)\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b` è interpretato nel modo illustrato nella tabella seguente.  
   
-|Modello|Descrizione|  
+|Modello|Description|  
 |-------------|-----------------|  
 |`\b`|Inizia dal confine di una parola.|  
 |`(?(\d{2}-)`|Determina se i tre caratteri successivi sono costituiti da due cifre seguite da un trattino.|  
@@ -118,7 +120,7 @@ ms.locfileid: "48839751"
   
  Il criterio di ricerca di espressioni regolari `\b(?<n2>\d{2}-)?(?(n2)\d{7}|\d{3}-\d{2}-\d{4})\b` è interpretato nel modo illustrato nella tabella seguente.  
   
-|Modello|Descrizione|  
+|Modello|Description|  
 |-------------|-----------------|  
 |`\b`|Inizia dal confine di una parola.|  
 |`(?<n2>\d{2}-)?`|Corrisponde a zero o una occorrenza di due cifre seguite da un trattino. Il nome di questo gruppo di acquisizione è `n2`.|  

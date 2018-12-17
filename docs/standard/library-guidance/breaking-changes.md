@@ -1,45 +1,45 @@
 ---
-title: Modifiche di rilievo apportate e librerie .NET
-description: Le procedure consigliate per lo spostamento delle modifiche di rilievo durante la creazione di librerie .NET.
+title: Modifiche di rilievo e librerie .NET
+description: Procedure consigliate per esplorare le modifiche di rilievo durante la creazione di librerie .NET.
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 83c01fdad7d836877bf692b87eeb0230219ded36
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
-ms.translationtype: MT
+ms.openlocfilehash: e0e62cda1b7475cd5d1f8bcd3558dc2fe7f6e07c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49370062"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148508"
 ---
-# <a name="breaking-changes"></a>Modifiche di rilievo
+# <a name="breaking-changes"></a>Modifiche che causano un'interruzione
 
-È importante per una libreria .NET trovare un equilibrio tra la stabilità per gli utenti esistenti e l'innovazione per il futuro. Gli autori di libreria fare affidamento a refactoring e rethinking codice fino a quando non è perfetto, ma gli utenti esistenti di rilievo ha un impatto negativo, in particolare per le librerie di basso livello.
+Per una libreria .NET è importante trovare un equilibrio tra la stabilità per gli utenti esistenti e l'innovazione per il futuro. Gli autori di libreria effettuano il refactoring e rielaborano il codice finché non è perfetto. Interrompere gli utenti esistenti ha tuttavia un impatto negativo, soprattutto per le librerie di basso livello.
 
-## <a name="project-types-and-breaking-changes"></a>Tipi di progetto e le modifiche di rilievo
+## <a name="project-types-and-breaking-changes"></a>Tipi di progetto e modifiche di rilievo
 
-Utilizzo di una libreria dalla community .NET cambia l'effetto delle modifiche di rilievo per sviluppatori di dati gestito dall'utente.
+A seconda di come una libreria viene usata dalla community .NET, cambia l'effetto delle modifiche di rilievo sullo sviluppo per utenti finali.
 
-* **Basso e medio livello librerie** come un serializzatore, il parser HTML, mapper relazionale a oggetti di database o framework web sono i più interessati da modifiche di rilievo.
+* Le **librerie di basso e medio livello**, ad esempio un serializzatore, il parser HTML, un Object-Relational Mapper (ORM) di database o un framework Web, sono gli elementi che più risentono delle modifiche di rilievo.
 
-  Blocchi predefiniti vengono utilizzati dagli sviluppatori per l'utente finale per compilare applicazioni e da altre librerie come dipendenze di NuGet. Ad esempio, si sta creando un'applicazione e si usa un client open source per chiamare un servizio web. Un aggiornamento di rilievo a una dipendenza che usa il client non che è possibile risolvere. Questo è il client open source che deve essere modificato e si ha alcun controllo su di esso. È necessario trovare versioni compatibili di librerie o inviare una correzione per la libreria client e attendere una nuova versione. La situazione peggiore è se si desidera utilizzare due librerie che dipendono dalle versioni incompatibili di una libreria di terza.
+  I pacchetti di blocchi predefiniti sono usati dagli sviluppatori per utenti finali per compilare le applicazioni, e da altre librerie come dipendenze NuGet. Ad esempio, un'applicazione viene compilata usando un client open source per chiamare un servizio Web. Un aggiornamento di rilievo a una dipendenza usata dal client non è un'operazione possibile. È il client open source che deve essere modificato, sul quale non si ha controllo. È necessario trovare versioni compatibili di librerie o inviare una correzione alla libreria client e attendere una nuova versione. Il caso peggiore è quando si vogliono usare due librerie che dipendono reciprocamente da versioni incompatibili di una terza libreria.
 
-* **Librerie di alto livello** come una suite di interfaccia utente sono meno sensibili alle modifiche di rilievo controlli.
+* Le **librerie di alto livello**, ad esempio una suite di controlli dell'interfaccia utente, sono meno sensibili alle modifiche di rilievo.
 
-  Librerie di alto livello vengono fatto riferimento diretto in un'applicazione dell'utente finale. Se si verificano modifiche di rilievo, lo sviluppatore può scegliere di aggiornare la versione più recente oppure può modificare l'applicazione per lavorare con le modifiche di rilievo.
+  Le librerie di alto livello hanno un riferimento diretto all'interno di un'applicazione per utenti finali. In caso di modifiche di rilievo, lo sviluppatore può scegliere di eseguire l'aggiornamento alla versione più recente oppure può modificare l'applicazione per accettare le modifiche di rilievo.
 
-**Eseguire operazioni ✔️** considerare come verrà usata la libreria. Quale effetto avrà le modifiche di rilievo su applicazioni e librerie che usano?
+**✔️ CONSIDERARE** quale sarà l'uso della libreria. Valutare l'effetto che le modifiche di rilievo avranno sulle applicazioni e sulle librerie in cui è usata la libreria.
 
-**Eseguire operazioni ✔️** ridurre al minimo le modifiche di rilievo quando si sviluppa una libreria .NET di basso livello.
+**✔️ RIDURRE AL MINIMO** le modifiche di rilievo quando si sviluppa una libreria .NET di basso livello.
 
-**Provare a ✔️** pubblicazione principale riscrittura di una raccolta come un nuovo pacchetto NuGet.
+**✔️CONSIDERARE**  la possibilità di pubblicare una riscrittura principale di una libreria come nuovo pacchetto NuGet.
 
 ## <a name="types-of-breaking-changes"></a>Tipi di modifiche di rilievo
 
-Modifiche di rilievo apportate possono essere suddivise in categorie diverse e non sono altrettanto con impatto elevati.
+Le modifiche di rilievo vengono classificate in categorie diverse e non hanno tutte lo stesso impatto.
 
-### <a name="source-breaking-change"></a>Modifica di rilievo di origine
+### <a name="source-breaking-change"></a>Modifica dell'origine
 
-Un'origine di modifica di rilievo non influisce sull'esecuzione del programma ma causerà errori di compilazione la volta successiva che l'applicazione viene ricompilata. Ad esempio, un nuovo overload può creare ambiguità nelle chiamate al metodo che erano in precedenza non ambigue, o un parametro rinominato interromperà i chiamanti che utilizzano parametri denominati.
+Una modifica dell'origine non ha effetto sull'esecuzione del programma, ma genererà errori di compilazione quando l'applicazione sarà ricompilata. Ad esempio, un nuovo overload può creare ambiguità nelle chiamate al metodo che non erano precedentemente ambigue, oppure un parametro rinominato interromperà i chiamanti che usano parametri denominati.
 
 ```csharp
 public class Task
@@ -48,35 +48,35 @@ public class Task
 }
 ```
 
-Poiché un'origine di modifica di rilievo è dannosa solo quando gli sviluppatori di compilare nuovamente le proprie applicazioni, è meno dirompenti modifica di rilievo. Gli sviluppatori possono risolvere facilmente il proprio codice di origine interrotto.
+Poiché la modifica dell'origine è dannosa solo quando gli sviluppatori ricompilano le applicazioni, è il tipo di modifica che comporta meno problemi. Gli sviluppatori possono risolvere facilmente il codice di origine interrotto.
 
-### <a name="behavior-breaking-change"></a>Modifica di rilievo di comportamento
+### <a name="behavior-breaking-change"></a>Modifica del comportamento
 
-Modifiche del comportamento sono il tipo più comune di modifica di rilievo: quasi qualsiasi modifica nel comportamento è stato possibile interrompere un utente. Modifiche alla raccolta, ad esempio le firme di metodo, le eccezioni generate o di input o output formati di dati, tutto da influire negativamente sui consumer della libreria. Anche una correzione di bug può qualificare modifiche a posteriori se gli utenti si basavano sui comportamenti interrotti in precedenza.
+Le modifiche del comportamento sono i tipi di modifica più comuni. Quasi tutte le modifiche del comportamento possono creare un'interruzione. Le modifiche alla libreria, ad esempio firme del metodo, eccezioni generate o formati di dati di input o output, possono avere tutte un effetto negativo sui consumer della libreria. Perfino la correzione di un bug può essere considerata una modifica di rilievo se gli utenti si basavano sul comportamento precedentemente interrotto.
 
-Aggiunta di funzionalità e comportamenti non corretti di miglioramento è positivo, ma senza care può risultare molto difficile per gli utenti esistenti eseguire l'aggiornamento. Uno degli approcci per aiutare gli sviluppatori di affrontare comportamento modifiche di rilievo è per nasconderle dietro le impostazioni. Le impostazioni consentono agli sviluppatori di aggiornare la versione più recente della libreria allo stesso tempo scelta acconsentire o rifiutare le modifiche di rilievo. Questa strategia consente agli sviluppatori di rimanere aggiornati, consentendo al contempo il proprio codice dispendiosa in termini di adattare nel corso del tempo.
+È una buona soluzione aggiungere funzionalità e migliorare i comportamenti non corretti. Tuttavia è consigliabile fare molta attenzione, poiché gli utenti esistenti potrebbero riscontrare difficoltà a eseguire l'upgrade. Per aiutare gli sviluppatori a gestire le modifiche del comportamento, è consigliabile nascondere tali modifiche nelle impostazioni. Le impostazioni consentono agli sviluppatori di eseguire l'aggiornamento alla versione più recente della libreria e al tempo stesso scegliere se accettare o rifiutare esplicitamente le modifiche di rilievo. Questa strategia consente agli sviluppatori di rimanere aggiornati, consentendo al codice usato di adattarsi nel tempo.
 
-Ad esempio, ASP.NET Core MVC include il concetto di una [versione di compatibilità](/aspnet/core/mvc/compatibility-version) che consente di modificare la funzionalità abilitata e disabilitata in `MvcOptions`.
+Ad esempio, ASP.NET Core MVC include il concetto di una [versione di compatibilità](/aspnet/core/mvc/compatibility-version) che consente di modificare la funzionalità abilitate e disabilitate in `MvcOptions`.
 
-**Provare a ✔️** lasciando le nuove funzionalità per impostazione predefinita, se interessa gli utenti esistenti e consentono agli sviluppatori di acconsentire esplicitamente alla funzionalità con un'impostazione.
+**✔️ CONSIDERARE** di lasciare disabilitate le nuove funzionalità per impostazione predefinita qualora abbiano effetto sugli utenti esistenti, e consentire agli sviluppatori di accettare esplicitamente la funzionalità con un'impostazione.
 
-### <a name="binary-breaking-change"></a>Modifica di rilievo binario
+### <a name="binary-breaking-change"></a>Modifica di tipo binario
 
-Un file binario modifica di rilievo accade quando si modifica l'API pubblica della libreria, in modo che gli assembly compilati con le versioni precedenti della libreria non sono più in grado di chiamare l'API. Ad esempio, la modifica di firma del metodo aggiungendo un nuovo parametro causa gli assembly compilati con la versione meno recente della libreria generare un <xref:System.MissingMethodException>.
+Una modifica di tipo binario si verifica quando viene modificata l'API pubblica della libreria. In questo caso gli assembly compilati sulla base delle versioni precedenti della libreria non possono più chiamare l'API. Ad esempio, se si modifica la firma del metodo aggiungendo una nuovo parametro, gli assembly compilati sulla base delle versioni precedenti della libreria genereranno un'eccezione di tipo <xref:System.MissingMethodException>.
 
-Un file binario modifica di rilievo consentono inoltre di suddividere un' **intero assembly**. Ridenominazione di un assembly con `AssemblyName` modificheranno l'identità dell'assembly, verrà aggiunta, rimozione o Modifica chiave denominazione sicuro dell'assembly. Una modifica di identità di un assembly può compromettere tutto il codice compilato che lo utilizza.
+Una modifica di tipo binario può interrompere anche un **intero assembly**. La rinomina di un assembly con `AssemblyName` modificherà l'identità dell'assembly, esattamente come succede se si aggiunge, rimuove o modifica la chiave per la creazione di nomi sicuri. La modifica di un'identità dell'assembly interrompe l'intero codice compilato in cui viene usata.
 
-**NON ❌** cambiare un nome di assembly.
+**❌ NON** modificare il nome di un assembly.
 
-**NON ❌** aggiungere, rimuovere o modificare la chiave di denominazione intenso.
+**❌ NON** aggiungere, rimuovere o modificare la chiave per la creazione di nomi sicuri.
 
-**Provare a ✔️** usando le classi base astratte anziché le interfacce.
+**✔️ CONSIDERARE** l'uso di classi di base astratte al posto di interfacce.
 
-> Aggiunta di qualsiasi elemento a un'interfaccia causerà esistenti i tipi che implementano l'esito negativo. Una classe base astratta consente di aggiungere un'implementazione virtuale predefinito.
+> Se si aggiunge un qualsiasi elemento a un'interfaccia, i tipi esistenti che la implementano non saranno eseguiti correttamente. Una classe di base astratta consente di aggiungere un'impostazione virtuale.
 
-**✔️ si consiglia** posizionare il <xref:System.ObsoleteAttribute> su tipi e membri che si intendono rimuovere. L'attributo deve avere le istruzioni per l'aggiornamento del codice non è più usare l'API obsoleta.
+**✔️ CONSIDERARE** di posizionare la classe <xref:System.ObsoleteAttribute> su tipi e membri che non saranno rimossi. L'attributo deve avere istruzioni per l'aggiornamento del codice affinché non sia più usata l'API obsoleta.
 
-> Il codice che chiama i tipi e metodi con il <xref:System.ObsoleteAttribute> genererà un avviso di compilazione con il messaggio fornito all'attributo. Gli avvisi consentono di chi utilizza il tempo di superficie API obsoleto per eseguire la migrazione in modo che quando viene rimossa l'API obsoleta, la maggior parte non sono più usarlo.
+> Il codice che chiama i tipi e i metodi con la classe <xref:System.ObsoleteAttribute> genererà un avviso di compilazione con il messaggio specificato per l'attributo. Gli avvisi consentono a chi usa la superficie dell'API obsoleta di avere il tempo necessario per eseguire la migrazione. In questo modo, al momento della rimozione dell'API obsoleta, non sarà più usata da molti.
 
 ```csharp
 public class Document
@@ -94,11 +94,15 @@ public class Document
 }
 ```
 
+**✔️ CONSIDERARE** di mantenere tipi e metodi con la classe <xref:System.ObsoleteAttribute> in modo illimitato nelle librerie di livello medio e basso.
+
+> La rimozione delle API è considerata una modifica di tipo binario. Valutare di mantenere tipi e metodi obsoleti se i costi di manutenzione sono bassi e non si richiedono interventi tecnici importanti alla libreria. Se i tipi e i metodi non vengono rimossi, si evita di assistere agli scenari peggiori descritti in precedenza.
+
 ## <a name="see-also"></a>Vedere anche
 
-* [Considerazioni sulla versione e aggiornamento per gli sviluppatori c#](../../csharp/whats-new/version-update-considerations.md)
-* [Una Guida definitiva per API-ultime modifiche in .NET](https://stackoverflow.com/questions/1456785/a-definitive-guide-to-api-breaking-changes-in-net)
-* [Regole di modifica di rilievo CoreFX](https://github.com/dotnet/corefx/blob/master/Documentation/coding-guidelines/breaking-change-rules.md)
+* [Considerazioni su versione e aggiornamento per gli sviluppatori C#](../../csharp/whats-new/version-update-considerations.md)
+* [A definitive guide to API-breaking changes in .NET](https://stackoverflow.com/questions/1456785/a-definitive-guide-to-api-breaking-changes-in-net) (Ottima guida alle modifiche di rilievo delle API in .NET)
+* [CoreFX Breaking Change Rules](https://github.com/dotnet/corefx/blob/master/Documentation/coding-guidelines/breaking-change-rules.md) (Regole di modifica di rilievo CoreFX)
 
 >[!div class="step-by-step"]
-[Precedente](./versioning.md)
+>[Precedente](versioning.md)

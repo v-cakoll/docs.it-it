@@ -1,6 +1,6 @@
 ---
 title: Formattazione composita
-ms.date: 03/30/2017
+ms.date: 10/26/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -15,31 +15,34 @@ helpviewer_keywords:
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 17ec17d3b90dc7248d1497be1f7d31a324ad10b2
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 60ccf478e974e24b437aa75bc9452033bd19a00f
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397933"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126861"
 ---
 # <a name="composite-formatting"></a>Formattazione composita
+
 La funzionalità di formattazione composta di .NET consente di usare come input un elenco di oggetti e una stringa di formato composto. Una stringa di formato composto è costituita da testo fisso alternato a segnaposto indicizzati, denominati elementi di formato, che corrispondono agli oggetti dell'elenco. L'operazione di formattazione produce una stringa risultato costituita dal testo fisso originale alternato alla rappresentazione di stringa degli oggetti dell'elenco.  
   
- La funzionalità di formattazione composita è supportata da metodi quali i seguenti:  
+> [!IMPORTANT]
+> Invece di usare le stringhe di formato composito, è possibile usare *stringhe interpolate* se il linguaggio e la versione del linguaggio in uso le supportano. Una stringa interpolata è una stringa che contiene *espressioni interpolate*. Ogni espressione interpolata viene risolta con il valore dell'espressione e inclusa nella stringa di risultato al momento dell'assegnazione della stringa. Per altre informazioni, vedere [Interpolazione di stringhe (Riferimenti per C#)](../../csharp/language-reference/tokens/interpolated.md) e [Stringhe interpolate (Riferimenti per Visual Basic)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md).
+
+La funzionalità di formattazione composita è supportata da metodi quali i seguenti:  
   
--   <xref:System.String.Format%2A?displayProperty=nameWithType>, che restituisce una stringa di risultato formattata.  
+- <xref:System.String.Format%2A?displayProperty=nameWithType>, che restituisce una stringa di risultato formattata.  
   
--   <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>, che aggiunge una stringa di risultato formattata a un oggetto <xref:System.Text.StringBuilder>.  
+- <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>, che aggiunge una stringa di risultato formattata a un oggetto <xref:System.Text.StringBuilder>.   
+- Alcuni overload del metodo di <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, che visualizza una stringa di risultato formattata nella console.  
   
--   Alcuni overload del metodo di <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, che visualizza una stringa di risultato formattata nella console.  
+- Alcuni overload del metodo di <xref:System.IO.TextWriter.WriteLine%2A?displayProperty=nameWithType>, che visualizza una stringa di risultato formattata in un flusso o in un file. Le classi derivate da <xref:System.IO.TextWriter>, come <xref:System.IO.StreamWriter> e <xref:System.Web.UI.HtmlTextWriter>, condividono questa funzionalità.  
   
--   Alcuni overload del metodo di <xref:System.IO.TextWriter.WriteLine%2A?displayProperty=nameWithType>, che visualizza una stringa di risultato formattata in un flusso o in un file. Le classi derivate da <xref:System.IO.TextWriter>, come <xref:System.IO.StreamWriter> e <xref:System.Web.UI.HtmlTextWriter>, condividono questa funzionalità.  
+- <xref:System.Diagnostics.Debug.WriteLine%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, che restituisce un messaggio formattato nei listener di traccia.  
   
--   <xref:System.Diagnostics.Debug.WriteLine%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, che restituisce un messaggio formattato nei listener di traccia.  
+- Metodi <xref:System.Diagnostics.Trace.TraceError%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace.TraceInformation%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> e <xref:System.Diagnostics.Trace.TraceWarning%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, che restituiscono messaggi formattati nei listener di traccia.  
   
--   Metodi <xref:System.Diagnostics.Trace.TraceError%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace.TraceInformation%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> e <xref:System.Diagnostics.Trace.TraceWarning%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, che restituiscono messaggi formattati nei listener di traccia.  
-  
--   Metodo di <xref:System.Diagnostics.TraceSource.TraceInformation%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, che scrive un metodo informativo nei listener di traccia.  
+- Metodo di <xref:System.Diagnostics.TraceSource.TraceInformation%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, che scrive un metodo informativo nei listener di traccia.  
   
 ## <a name="composite-format-string"></a>Stringa di formato composto  
  Una stringa di formato composto e un elenco di oggetti vengono usati come argomenti di metodi che supportano la funzionalità di formattazione composta. Una stringa di formato composto è costituita da zero o più esecuzioni di testo fisso alternate a uno o più elementi di formato. Il testo fisso corrisponde a una stringa di propria scelta e ogni elemento di formato corrisponde a un oggetto o una struttura boxed dell'elenco. La funzionalità di formattazione composta restituisce una nuova stringa risultato in cui ciascun elemento di formato viene sostituito dalla rappresentazione di stringa di origine dell'oggetto corrispondente dell'elenco.  

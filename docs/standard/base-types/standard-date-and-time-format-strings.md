@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4ca6109a61fb32cd148e69081da0772277743b6e
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: f4c6d10fad075a70d80bf6e5aa32edf0f89c42dc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873732"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151291"
 ---
 # <a name="standard-date-and-time-format-strings"></a>Stringhe di formato di data e ora standard
 Una stringa di formato data e ora standard usa un singolo identificatore di formato per definire la rappresentazione di testo di un valore di data e ora. Qualsiasi stringa di formato data e ora contenente più di un carattere, inclusi gli spazi, viene interpretata come una stringa di formato data e ora personalizzata. Per altre informazioni, vedere [Stringhe di formato di data e ora personalizzato](../../../docs/standard/base-types/custom-date-and-time-format-strings.md). Una stringa di formato standard o personalizzata può essere usata in due modi:  
@@ -39,7 +39,7 @@ Le stringhe di formato data e ora standard possono essere usate con i valori <xr
 
 <a name="table"></a> Nella tabella seguente vengono descritti gli identificatori di formato di data e ora standard. Se non specificato diversamente, un identificatore di formato di data e ora standard specifico genera una rappresentazione di stringa identica, indipendentemente dal fatto che venga usato con un valore <xref:System.DateTime> o con un valore <xref:System.DateTimeOffset>. Per altre informazioni sull'uso di stringhe di formato di data e ora standard, vedere la sezione [Note](#Notes).  
   
-|Identificatore di formato|Descrizione|Esempi|  
+|Identificatore di formato|Description|Esempi|  
 |----------------------|-----------------|--------------|  
 |"d"|Schema di data breve.<br /><br /> Altre informazioni: [Identificatore di formato di data breve ("d")](#ShortDate).|2009-06-15T13:45:30 -> 6/15/2009 (en-US)<br /><br /> 2009-06-15T13:45:30 -> 15/06/2009 (fr-FR)<br /><br /> 2009-06-15T13:45:30 -> 2009/06/15 (ja-JP)|  
 |"D"|Schema di data estesa.<br /><br /> Altre informazioni: [Identificatore di formato di data estesa ("D")](#LongDate).|2009-06-15T13:45:30 -> Monday, June 15, 2009 (en-US)<br /><br /> 2009-06-15T13:45:30 -> 15 июня 2009 г. (ru-RU)<br /><br /> 2009-06-15T13:45:30 -> Montag, 15. Juni 2009 (de-DE)|  
@@ -103,7 +103,7 @@ Le stringhe di formato data e ora standard possono essere usate con i valori <xr
   
  Nella tabella seguente sono elencate le proprietà dell'oggetto <xref:System.Globalization.DateTimeFormatInfo> che consentono di controllare la formattazione della stringa restituita.  
   
-|Proprietà|Descrizione|  
+|Proprietà|Description|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A>|Definisce il formato complessivo della stringa di risultato.|  
 |<xref:System.Globalization.DateTimeFormatInfo.DateSeparator%2A>|Definisce la stringa che separa i componenti relativi ad anno, mese e giorno di una data.|  
@@ -121,7 +121,7 @@ Le stringhe di formato data e ora standard possono essere usate con i valori <xr
   
  Nella tabella seguente sono elencate le proprietà dell'oggetto <xref:System.Globalization.DateTimeFormatInfo> che consentono di controllare la formattazione della stringa restituita.  
   
-|Proprietà|Descrizione|  
+|Proprietà|Description|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A>|Definisce il formato complessivo della stringa di risultato.|  
 |<xref:System.Globalization.DateTimeFormatInfo.DayNames%2A>|Definisce i nomi dei giorni localizzati che possono essere visualizzati nella stringa di risultato.|  
@@ -140,7 +140,7 @@ Le stringhe di formato data e ora standard possono essere usate con i valori <xr
   
  La stringa di risultato è influenzata dalle informazioni sulla formattazione di un oggetto <xref:System.Globalization.DateTimeFormatInfo> specifico. Nella tabella seguente sono elencate le proprietà dell'oggetto <xref:System.Globalization.DateTimeFormatInfo> che consentono di controllare la formattazione della stringa restituita. L'identificatore di formato personalizzato restituito dalle proprietà <xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A?displayProperty=nameWithType> e <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType> di alcune impostazioni cultura potrebbe non prevedere l'uso di tutte le proprietà.  
   
-|Proprietà|Descrizione|  
+|Proprietà|Description|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A>|Definisce il formato del componente relativo alla data della stringa di risultato.|  
 |<xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A>|Definisce il formato del componente relativo all'ora della stringa di risultato.|  
@@ -163,7 +163,7 @@ Le stringhe di formato data e ora standard possono essere usate con i valori <xr
   
  Nella tabella seguente sono elencate le proprietà dell'oggetto <xref:System.Globalization.DateTimeFormatInfo> che consentono di controllare la formattazione della stringa restituita. L'identificatore di formato personalizzato restituito dalla proprietà <xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A> di alcune impostazioni cultura potrebbe non prevedere l'uso di tutte le proprietà.  
   
-|Proprietà|Descrizione|  
+|Proprietà|Description|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A>|Definisce il formato complessivo della stringa di risultato.|  
 |<xref:System.Globalization.DateTimeFormatInfo.DayNames%2A>|Definisce i nomi dei giorni localizzati che possono essere visualizzati nella stringa di risultato.|  
@@ -185,7 +185,7 @@ Le stringhe di formato data e ora standard possono essere usate con i valori <xr
   
  La stringa di risultato è influenzata dalle informazioni sulla formattazione di un oggetto <xref:System.Globalization.DateTimeFormatInfo> specifico. Nella tabella seguente sono elencate le proprietà dell'oggetto <xref:System.Globalization.DateTimeFormatInfo> che consentono di controllare la formattazione della stringa restituita. L'identificatore di formato personalizzato restituito dalle proprietà <xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A?displayProperty=nameWithType> e <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType> di alcune impostazioni cultura potrebbe non prevedere l'uso di tutte le proprietà.  
   
-|Proprietà|Descrizione|  
+|Proprietà|Description|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A>|Definisce il formato del componente relativo alla data della stringa di risultato.|  
 |<xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A>|Definisce il formato del componente relativo all'ora della stringa di risultato.|  
@@ -207,7 +207,7 @@ Le stringhe di formato data e ora standard possono essere usate con i valori <xr
   
  La stringa di risultato è influenzata dalle informazioni sulla formattazione di un oggetto <xref:System.Globalization.DateTimeFormatInfo> specifico. Nella tabella seguente sono elencate le proprietà dell'oggetto <xref:System.Globalization.DateTimeFormatInfo> che consentono di controllare la formattazione della stringa restituita. L'identificatore di formato personalizzato restituito dalle proprietà <xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A?displayProperty=nameWithType> e <xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A?displayProperty=nameWithType> di alcune impostazioni cultura potrebbe non prevedere l'uso di tutte le proprietà.  
   
-|Proprietà|Descrizione|  
+|Proprietà|Description|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A>|Definisce il formato del componente relativo alla data della stringa di risultato.|  
 |<xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A>|Definisce il formato del componente relativo all'ora della stringa di risultato.|  
@@ -229,7 +229,7 @@ Le stringhe di formato data e ora standard possono essere usate con i valori <xr
   
  Nella tabella seguente sono elencate le proprietà dell'oggetto <xref:System.Globalization.DateTimeFormatInfo> che consentono di controllare la formattazione della stringa restituita.  
   
-|Proprietà|Descrizione|  
+|Proprietà|Description|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.MonthDayPattern%2A>|Definisce il formato complessivo della stringa di risultato.|  
 |<xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A>|Definisce i nomi dei mesi localizzati che possono essere visualizzati nella stringa di risultato.|  
@@ -255,7 +255,7 @@ Le stringhe di formato data e ora standard possono essere usate con i valori <xr
   
 -   I valori di data e ora <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType> non dispongono di informazioni sul fuso orario.  
   
- Poiché l'identificatore di formato standard O" o "o" è conforme a uno standard internazionale, l'operazione di formattazione o analisi che usa l'identificatore usa sempre le impostazioni cultura invarianti e il calendario gregoriano.  
+ Poiché l'identificatore di formato standard "O" o "o" è conforme a uno standard internazionale, l'operazione di formattazione o analisi che usa l'identificatore impiega sempre le impostazioni cultura invarianti e il calendario gregoriano.  
   
  Le stringhe passati ai metodi `Parse`, `TryParse`, `ParseExact` e `TryParseExact` di <xref:System.DateTime> e <xref:System.DateTimeOffset> possono essere analizzate usando l'identificatore di formato "O" o "o" se sono in uno di questi formati. Nel caso degli oggetti <xref:System.DateTime>, l'overload di analisi chiamato deve anche includere un parametro `styles` con un valore <xref:System.Globalization.DateTimeStyles.RoundtripKind?displayProperty=nameWithType>. Tenere presente che se si chiama un metodo di analisi con la stringa di formato personalizzata che corrisponde all'identificatore di formato "O" o "o", non si otterranno gli stessi risultati di "O" o "o". Il motivo è che i metodi di analisi che usano una stringa di formato personalizzata non possono analizzare la rappresentazione in formato stringa di valori di data e ora in cui manca un componente di fuso orario o che usano "Z" per indicare l'ora UTC.  
   
@@ -277,7 +277,7 @@ Le stringhe di formato data e ora standard possono essere usate con i valori <xr
   
  La stringa di risultato è influenzata dalle proprietà seguenti dell'oggetto <xref:System.Globalization.DateTimeFormatInfo> restituito dalla proprietà <xref:System.Globalization.DateTimeFormatInfo.InvariantInfo%2A?displayProperty=nameWithType> che rappresenta la lingua inglese.  
   
-|Proprietà|Descrizione|  
+|Proprietà|Description|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.RFC1123Pattern%2A>|Definisce il formato della stringa di risultato.|  
 |<xref:System.Globalization.DateTimeFormatInfo.AbbreviatedDayNames%2A>|Definisce i nomi dei giorni abbreviati che possono essere visualizzati nella stringa di risultato.|  
@@ -313,7 +313,7 @@ Le stringhe di formato data e ora standard possono essere usate con i valori <xr
   
  La stringa di risultato è influenzata dalle informazioni sulla formattazione di un oggetto <xref:System.Globalization.DateTimeFormatInfo> specifico. Nella tabella seguente sono elencate le proprietà dell'oggetto <xref:System.Globalization.DateTimeFormatInfo> che consentono di controllare la formattazione della stringa restituita. L'identificatore di formato personalizzato restituito dalla proprietà <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType> di alcune impostazioni cultura potrebbe non prevedere l'uso di tutte le proprietà.  
   
-|Proprietà|Descrizione|  
+|Proprietà|Description|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A>|Definisce il formato del componente relativo all'ora della stringa di risultato.|  
 |<xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A>|Definisce la stringa che separa i componenti relativi a ora, minuti e secondi di un orario.|  
@@ -333,7 +333,7 @@ Le stringhe di formato data e ora standard possono essere usate con i valori <xr
   
  Nella tabella seguente sono elencate le proprietà dell'oggetto <xref:System.Globalization.DateTimeFormatInfo> che consentono di controllare la formattazione della stringa restituita. L'identificatore di formato personalizzato restituito dalla proprietà <xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A?displayProperty=nameWithType> di alcune impostazioni cultura potrebbe non prevedere l'uso di tutte le proprietà.  
   
-|Proprietà|Descrizione|  
+|Proprietà|Description|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A>|Definisce il formato del componente relativo all'ora della stringa di risultato.|  
 |<xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A>|Definisce la stringa che separa i componenti relativi a ora, minuti e secondi di un orario.|  
@@ -366,7 +366,7 @@ Le stringhe di formato data e ora standard possono essere usate con i valori <xr
   
  Nella tabella seguente sono elencate le proprietà dell'oggetto <xref:System.Globalization.DateTimeFormatInfo> che consentono di controllare la formattazione della stringa restituita. L'identificatore di formato personalizzato restituito dalla proprietà <xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A> di alcune impostazioni cultura potrebbe non prevedere l'uso di tutte le proprietà.  
   
-|Proprietà|Descrizione|  
+|Proprietà|Description|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A>|Definisce il formato complessivo della stringa di risultato.|  
 |<xref:System.Globalization.DateTimeFormatInfo.DayNames%2A>|Definisce i nomi dei giorni localizzati che possono essere visualizzati nella stringa di risultato.|  
@@ -390,7 +390,7 @@ Le stringhe di formato data e ora standard possono essere usate con i valori <xr
   
  Nella tabella seguente sono elencate le proprietà dell'oggetto <xref:System.Globalization.DateTimeFormatInfo> che consentono di controllare la formattazione della stringa restituita.  
   
-|Proprietà|Descrizione|  
+|Proprietà|Description|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.YearMonthPattern%2A>|Definisce il formato complessivo della stringa di risultato.|  
 |<xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A>|Definisce i nomi dei mesi localizzati che possono essere visualizzati nella stringa di risultato.|  

@@ -4,12 +4,12 @@ description: Architettura di microservizi .NET per applicazioni .NET in contenit
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/11/2018
-ms.openlocfilehash: 5d42ec77958e056b75b0e379f8ab520ac926c72a
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: c1948693edbc197b8527ce8ce82c196206a16876
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47075576"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53131378"
 ---
 # <a name="official-net-docker-images"></a>Immagini Docker .NET ufficiali
 
@@ -41,7 +41,7 @@ Ciò che conta nella produzione è quanto velocemente è possibile distribuire e
 
 In questa immagine ottimizzata si inseriscono solo i binari e altro contenuto necessari per eseguire l'applicazione. Ad esempio, il contenuto creato dal comando dotnet publish contiene solo i file JS e CSS, le immagini e i file binari .NET compilati. Nel corso del tempo, si vedranno immagini contenenti pacchetti pre-JIT (la compilazione dal linguaggio intermedio al codice nativo che avviene in fase di esecuzione).
 
-Anche se sono presenti più versioni delle immagini .NET Core e ASP.NET Core, tutte queste versioni condividono uno o più livelli, incluso il livello di base. La quantità di spazio su disco necessaria per archiviare un'immagine è quindi ridotta ed è formata solo dal valore differenziale tra l'immagine personalizzata e l'immagine di base. Ne consegue quindi che il pull dell'immagine dal registro è veloce.
+Anche se sono presenti più versioni delle immagini .NET Core e ASP.NET Core, tutte queste versioni condividono uno o più livelli, incluso il livello di base. La quantità di spazio su disco necessaria per archiviare un'immagine è quindi ridotta ed è costituita solo dal valore differenziale tra l'immagine personalizzata e l'immagine di base. Ne consegue quindi che il pull dell'immagine dal registro è veloce.
 
 Durante l'esplorazione dei repository di immagini .NET nell'hub Docker, si troveranno più versioni delle immagini classificate o contrassegnate con tag. Questi tag consentono di decidere l'immagine da usare a seconda della versione necessaria, come quelle nella tabella seguente:
 
@@ -50,7 +50,6 @@ Durante l'esplorazione dei repository di immagini .NET nell'hub Docker, si trove
 | microsoft/dotnet:**2.1-aspnetcore-runtime** | ASP.NET Core, con ottimizzazioni ASP.NET Core e solo runtime, in Linux e Windows (multiarchitettura) |
 | microsoft/dotnet:**2.1-sdk**                | .NET Core, con SDK inclusi, in Linux e Windows (multiarchitettura)                                  |
 
-
 >[!div class="step-by-step"]
-[Precedente](net-container-os-targets.md)
-[Successivo](../architect-microservice-container-applications/index.md)
+>[Precedente](net-container-os-targets.md)
+>[Successivo](../architect-microservice-container-applications/index.md)

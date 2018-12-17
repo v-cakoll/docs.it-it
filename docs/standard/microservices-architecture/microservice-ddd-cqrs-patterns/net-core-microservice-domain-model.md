@@ -1,45 +1,45 @@
 ---
 title: Implementazione di un modello di dominio del microservizio con .NET Core
-description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Implementazione di un modello di dominio del microservizio con .NET Core
+description: Architettura di microservizi .NET per applicazioni .NET incluse in contenitori | Informazioni dettagliate sull'implementazione di un modello di dominio orientato a DDD.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 11/09/2017
-ms.openlocfilehash: bb11d87cacf5bb6cbc980c879b0c42fae76f6246
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.date: 10/08/2018
+ms.openlocfilehash: 1c21ba1cc4c02336a204b1fe91b72e5f3e89228c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46577535"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127134"
 ---
-# <a name="implementing-a-microservice-domain-model-with-net-core"></a>Implementazione di un modello di dominio del microservizio con .NET Core 
+# <a name="implement-a-microservice-domain-model-with-net-core"></a>Implementare un modello di dominio del microservizio con .NET Core 
 
 La sezione precedente ha illustrato i principi e gli schemi fondamentali per la progettazione di un modello di dominio. È giunto ora il momento di esplorare i possibili modi per implementare il modello di dominio usando .NET Core (normale codice C\#) e EF Core. Si noti che il modello di dominio sarà costituito semplicemente dal codice: avrà i requisiti del modello EF Core, ma non vere dipendenze su EF. Il modello di dominio non deve contenere dipendenze rigide o riferimenti a EF Core né a nessun altro ORM.
 
 ## <a name="domain-model-structure-in-a-custom-net-standard-library"></a>Struttura del modello di dominio in una libreria .NET Standard personalizzata
 
-L'organizzazione della cartella usata per l'applicazione di riferimento eShopOnContainers dimostra il modello DDD per l'applicazione. Un'organizzazione della cartella differente potrebbe comunicare in maniera più chiara le scelte di progettazione effettuate per la propria applicazione. Come si vede nella figura 9-10, nel modello di dominio di ordinamento sono presenti due aggregazioni: l'aggregazione order e l'aggregazione buyer. Ogni aggregazione è un gruppo di entità di dominio e oggetti valore, anche se è possibile avere un aggregato costituito da una singola entità di dominio (radice dell'aggregazione o entità radice).
+L'organizzazione della cartella usata per l'applicazione di riferimento eShopOnContainers dimostra il modello DDD per l'applicazione. Un'organizzazione della cartella differente potrebbe comunicare in maniera più chiara le scelte di progettazione effettuate per la propria applicazione. Come si vede nella figura 7-10, nel modello di dominio di ordinamento sono presenti due aggregazioni: l'aggregazione order e l'aggregazione buyer. Ogni aggregazione è un gruppo di entità di dominio e oggetti valore, anche se è possibile avere un aggregato costituito da una singola entità di dominio (radice dell'aggregazione o entità radice).
 
-![](./media/image11.png)
+![Nella visualizzazione Esplora soluzioni per il progetto Ordering.Domain appare la cartella AggregatesModel contenente le cartelle BuyerAggregate e OrderAggregate, ognuna delle quali contiene le proprie classi di entità, i file di oggetti valore e così via. ](./media/image11.png)
 
-**Figura 9-10**. Struttura del modello di dominio per il microservizio degli ordini in eShopOnContainers
+**Figura 7-10**. Struttura del modello di dominio per il microservizio degli ordini in eShopOnContainers
 
-In più, il livello del modello di dominio include i contratti del repository (interfacce) che rappresentano i requisiti dell'infrastruttura del modello di dominio. In altre parole, queste interfacce esprimono quali repository il livello di infrastruttura deve implementare e in che modo. È importante che l'implementazione dei repository sia posizionata fuori dal livello del modello di dominio, nella libreria di livello infrastruttura, in modo che il livello del modello di dominio non sia "contaminato" da API o classi delle tecnologie di infrastruttura, ad esempio Entity Framework.
+In più, il livello del modello di dominio include i contratti del repository (interfacce) che rappresentano i requisiti dell'infrastruttura del modello di dominio. In altre parole, queste interfacce indicano quali repository e metodi devono essere implementati dal livello infrastruttura. È importante che l'implementazione dei repository sia posizionata fuori dal livello del modello di dominio, nella libreria di livello infrastruttura, in modo che il livello del modello di dominio non sia "contaminato" da API o classi delle tecnologie di infrastruttura, ad esempio Entity Framework.
 
 È anche possibile visualizzare una cartella [SeedWork](https://martinfowler.com/bliki/Seedwork.html) che contiene le classi base personalizzate da usare come base per le entità di dominio e gli oggetti valore, in modo da non avere codice ridondante nella classe di oggetti di ciascun dominio.
 
-## <a name="structuring-aggregates-in-a-custom-net-standard-library"></a>Strutturazione di aggregazioni in una libreria .NET Standard personalizzata
+## <a name="structure-aggregates-in-a-custom-net-standard-library"></a>Strutturare aggregazioni in una libreria .NET Standard personalizzata
 
 Per aggregazione si intende un cluster di oggetti dominio raggruppati in modo da corrispondere alla coerenza delle transazioni. Tali oggetti possono essere istanze di entità (una delle quali è la radice di aggregazione o l'entità radice) oltre agli eventuali oggetti valore aggiuntivi.
 
-Per coerenza delle transazioni si intende garantire che un'aggregazione sia coerente e aggiornata al termine di un'azione di business. Ad esempio, l'aggregazione order dal modello di dominio del microservizio degli ordini eShopOnContainers è composta come illustrato nella figura 9-11.
+Per coerenza delle transazioni si intende garantire che un'aggregazione sia coerente e aggiornata al termine di un'azione di business. Ad esempio, l'aggregazione order dal modello di dominio del microservizio degli ordini eShopOnContainers è composta come illustrato nella figura 7-11.
 
-![](./media/image12.png)
+![Una visualizzazione dettagliata della cartella OrderAggregate: Address.cs è un oggetto valore, IOrderRepository è un'interfaccia di repository, Order.cs è una radice di aggregazione, OrderItem.cs è un'entità figlio e OrderStatus.cs è una classe di enumerazione.](./media/image12.png)
 
-**Figura 9-11**. Aggregazione order nella soluzione Visual Studio
+**Figura 7-11**. Aggregazione order nella soluzione Visual Studio
 
-Se si apre uno dei file in una cartella di aggregazione, si può vedere se è contrassegnato come classe base o interfaccia personalizzata, come entità o oggetto valore, così come implementato nella cartella [Seedwork](https://github.com/dotnet-architecture/eShopOnContainers/tree/master/src/Services/Ordering/Ordering.Domain/SeedWork).
+Se si apre uno dei file in una cartella di aggregazione, si può vedere se è contrassegnato come classe di base o interfaccia personalizzata, come entità o oggetto valore, secondo l'implementazione nella cartella [SeedWork](https://github.com/dotnet-architecture/eShopOnContainers/tree/master/src/Services/Ordering/Ordering.Domain/SeedWork).
 
-## <a name="implementing-domain-entities-as-poco-classes"></a>Implementazione di entità di dominio come classi POCO
+## <a name="implement-domain-entities-as-poco-classes"></a>Implementare entità di dominio come classi POCO
 
 Per implementare un modello di dominio in .NET è sufficiente creare classi POCO che implementano le entità di dominio. Nell'esempio seguente, la classe Order è definita come entità e anche come radice di aggregazione. Visto che la classe Order deriva dalla classe base Entity, è possibile riutilizzare il codice comune correlato alle entità. Tenere presente che queste classi base e interfacce sono definite dall'utente nel progetto del modello di dominio, così come il codice, ma non il codice dell'infrastruttura da un ORM come EF.
 
@@ -101,13 +101,13 @@ Un'interfaccia dei marcatori viene talvolta considerata come antipattern; tuttav
 
 La presenza di una radice di aggregazione significa che gran parte del codice relativa alle regole business e di coerenza delle entità dell'aggregazione dovrebbe essere implementata come metodi nella classe radice dell'aggregazione Order (ad esempio, AddOrderItem quando si aggiunge un oggetto OrderItem all'aggregazione). Non è consigliabile creare o aggiornare oggetti OrderItem in maniera indipendente o diretta; la classe AggregateRoot deve mantenere il controllo e la coerenza di qualsiasi operazione di aggiornamento rispetto alle entità figlio.
 
-## <a name="encapsulating-data-in-the-domain-entities"></a>Incapsulamento dei dati nelle entità di dominio
+## <a name="encapsulate-data-in-the-domain-entities"></a>Incapsulare i dati nelle entità di dominio
 
 Un problema comune nei modelli di entità è che espongono le proprietà di navigazione della raccolta come tipi elenco accessibili pubblicamente. In questo modo gli sviluppatori collaboratori possono modificare il contenuto di questi tipi di raccolta, che possono ignorare importanti regole di business relative alla raccolta, lasciando eventualmente l'oggetto in uno stato non valido. La soluzione consiste nell'esporre l'accesso in sola lettura alle raccolte correlate e nel fornire in modo esplicito i metodi che definiscono i modi in cui i client possono modificarle.
 
-Nel codice precedente, si noti che molti attributi sono di sola lettura o privati e aggiornabili solo dai metodi della classe; dunque qualsiasi aggiornamento tiene conto delle invarianti del dominio aziendale e la logica specificata all'interno dei metodi delle classi.
+Nel codice precedente molti attributi sono di sola lettura o privati e possono essere aggiornati solo dai metodi della classe, quindi qualsiasi aggiornamento tiene conto delle invarianti del dominio aziendale e della logica specificata all'interno dei metodi delle classi.
 
-Ad esempio, seguendo gli schemi DDD, *non* è consigliabile eseguire le operazioni seguenti da qualsiasi metodo del gestore dei comandi o classe del livello dell'applicazione:
+Ad esempio, seguendo gli schemi DDD, **non *è* consigliabile** eseguire le operazioni seguenti da qualsiasi metodo del gestore dei comandi o classe del livello dell'applicazione (in realtà per l'utente deve essere impossibile eseguire questa operazione):
 
 ```csharp
 // WRONG ACCORDING TO DDD PATTERNS – CODE AT THE APPLICATION LAYER OR
@@ -152,33 +152,31 @@ Anche la nuova operazione OrderItem(params) sarà controllata ed eseguita dal me
 
 Quando si usa Entity Framework Core 1.1 o versioni successive, un'entità DDD può essere espressa meglio perché consente di [eseguire il mapping ai campi](https://docs.microsoft.com/ef/core/modeling/backing-field) oltre alle proprietà. Ciò è utile quando si proteggono le raccolte di entità figlio oppure oggetti valore. Con questa funzionalità avanzata, è possibile usare i semplici campi privati anziché le proprietà e implementare gli aggiornamenti della raccolta di campi nei metodi pubblici e fornire l'accesso di sola lettura usando il metodo AsReadOnly.
 
-In DDD, aggiornare l'entità usando solo i metodi nell'entità (o costruttore) per controllare qualsiasi invariante e la coerenza dei dati, dunque le proprietà sono definite solo con una funzione di accesso Get. Le proprietà sono supportate da campi privati. I membri privati sono accessibili solo dall'interno della classe. Esiste tuttavia una sola eccezione: EF Core deve impostare anche questi campi.
+In DDD, aggiornare l'entità usando solo i metodi nell'entità (o costruttore) per controllare qualsiasi invariante e la coerenza dei dati, dunque le proprietà sono definite solo con una funzione di accesso Get. Le proprietà sono supportate da campi privati. I membri privati sono accessibili solo dall'interno della classe. Tuttavia, esiste un'eccezione: questi campi devono essere impostati anche in EF Core, in modo che venga restituito l'oggetto con i valori appropriati.
 
-
-### <a name="mapping-properties-with-only-get-accessors-to-the-fields-in-the-database-table"></a>Mapping delle proprietà solo con funzioni di accesso Get ai campi nella tabella di database
+### <a name="map-properties-with-only-get-accessors-to-the-fields-in-the-database-table"></a>Mappare le proprietà solo con funzioni di accesso Get ai campi nella tabella di database
 
 Il mapping delle proprietà alle colonne della tabella di database non è responsabilità del dominio, ma parte del livello di persistenza dell'infrastruttura. Ne facciamo cenno in questa sede in modo che il lettore sia al corrente delle nuove funzionalità disponibili in EF Core 1.1 o versioni successive in relazione a come è possibile modellare le entità. Altre informazioni su questo argomento sono illustrate nella sezione dedicata a infrastruttura e persistenza.
 
-Quando si usa Entity Framework Core 1.0, all'interno di DbContext è necessario eseguire il mapping delle proprietà che sono definite solo con getter ai campi effettivi nella tabella di database. Questa operazione viene eseguita con il metodo HasField della classe PropertyBuilder.
+Quando si usa Entity Framework Core 1.0 o versione successiva, all'interno di DbContext è necessario eseguire il mapping delle proprietà che sono definite solo con getter ai campi effettivi nella tabella di database. Questa operazione viene eseguita con il metodo HasField della classe PropertyBuilder.
 
-### <a name="mapping-fields-without-properties"></a>Mapping dei campi senza proprietà
+### <a name="map-fields-without-properties"></a>Mappare i campi senza proprietà
 
 Con la funzionalità in EF Core 1.1 o versione successiva per eseguire il mapping di colonne ai campi, è anche possibile non usare le proprietà. In alternativa, è possibile solo mappare le colonne da una tabella ai campi. Un caso di uso comune per questo oggetto è rappresentati dai campi privati per uno stato interno che non devono essere accessibili dall'esterno dell'entità.
 
-Ad esempio, nell'esempio di codice OrderAggregate precedente, sono presenti diversi campi privati, ad esempio il campo `_paymentMethodId`, che non hanno alcuna proprietà correlata per un getter o un setter. Tale campo potrebbe essere calcolato anche all'interno della logica di business dell'ordine e usato dai metodi dell'ordine, ma deve essere resa persistente nel database anche. Dunque, in EF Core (dalla versione 1.1) c'è un modo per eseguire il mapping di un campo senza una proprietà correlata a una colonna nel database. Anche questo è illustrato nella sezione [Livello infrastruttura](#the-infrastructure-layer) di questa guida.
+Ad esempio, nell'esempio di codice OrderAggregate precedente, sono presenti diversi campi privati, ad esempio il campo `_paymentMethodId`, che non hanno alcuna proprietà correlata per un getter o un setter. Tale campo potrebbe essere calcolato anche all'interno della logica di business dell'ordine e usato dai metodi dell'ordine, ma deve essere resa persistente nel database anche. Dunque, in EF Core (dalla versione 1.1) c'è un modo per eseguire il mapping di un campo senza una proprietà correlata a una colonna nel database. Anche questo è illustrato nella sezione [Livello infrastruttura](ddd-oriented-microservice.md#the-infrastructure-layer) di questa guida.
 
 ### <a name="additional-resources"></a>Risorse aggiuntive
 
--   **Vaughn Vernon. Modellazione di aggregazioni con DDD ed Entity Framework.** Si osservi che *non* si tratta di Entity Framework Core.
-    [*https://vaughnvernon.co/?p=879*](https://vaughnvernon.co/?p=879)
+- **Vaughn Vernon. Modellazione di aggregazioni con DDD ed Entity Framework.** Si osservi che *non* si tratta di Entity Framework Core. \
+  [*https://vaughnvernon.co/?p=879*](https://vaughnvernon.co/?p=879)
 
--   **Julie Lerman. Programmazione per DDD (Domain-Driven Design): suggerimenti per sviluppatori attenti ai dati**
-    [*https://msdn.microsoft.com/en-us/magazine/dn342868.aspx*](https://msdn.microsoft.com/en-us/magazine/dn342868.aspx)
+- **Julie Lerman. Programmazione per DDD (Domain-Driven Design): suggerimenti per sviluppatori attenti ai dati** \
+  [*https://msdn.microsoft.com/magazine/dn342868.aspx*](https://msdn.microsoft.com/en-us/magazine/dn342868.aspx)
 
--   **Udi Dahan. How to create fully encapsulated Domain Models**
-    [*http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/*](http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/) (Come creare modelli di dominio completamente incapsulati)
-
+- **Udi Dahan. How to create fully encapsulated Domain Models** \ (Come creare modelli di dominio completamente incapsulati)
+  [*http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/*](http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/)
 
 >[!div class="step-by-step"]
-[Precedente](microservice-domain-model.md)
-[Successivo](seedwork-domain-model-base-classes-interfaces.md)
+>[Precedente](microservice-domain-model.md)
+>[Successivo](seedwork-domain-model-base-classes-interfaces.md)

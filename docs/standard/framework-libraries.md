@@ -6,12 +6,12 @@ ms.author: ronpet
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
-ms.openlocfilehash: 1b5099c73264f3175aa05094f4460c1c97774533
-ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
+ms.openlocfilehash: b3cfc44c430a02ec9ffce75ebff5c8f9cc46505c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50743963"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143376"
 ---
 # <a name="framework-libraries"></a>Librerie del framework
 
@@ -53,7 +53,8 @@ Le librerie di classi base offrono i tipi fondamentali e le funzionalità di uti
 
 *   <xref:System.Net.Http.HttpClient>: un'API per inviare richieste HTTP e ricevere risposte HTTP da una risorsa identificata da un URI.
 *   <xref:System.Xml.Linq.XDocument>: un'API per il caricamento e l'esecuzione di query su documenti XML con LINQ.
-*   <xref:System.IO.StreamReader>: un'API per leggere file (<xref:System.IO.StringWriter>). Può essere usata anche per scrivere file.
+*   <xref:System.IO.StreamReader> : Un'API per la lettura dei file. 
+*   <xref:System.IO.StreamWriter> : Un'API per la scrittura dei file.
 
 ## <a name="app-model-apis"></a>API dei modelli per App
 

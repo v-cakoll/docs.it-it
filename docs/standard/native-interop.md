@@ -6,12 +6,12 @@ ms.author: ronpet
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 3c357112-35fb-44ba-a07b-6a1c140370ac
-ms.openlocfilehash: 7da86cfe483a2355c53206f4c491fbd07e4c3046
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2f427eb5d8f41f730d4263425e268213db92236d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591924"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143182"
 ---
 # <a name="native-interoperability"></a>Interoperabilità nativa
 
@@ -260,7 +260,7 @@ Entrambi gli esempi precedenti dipendono da parametri e in entrambi i casi i par
 
 Il termine **marshalling** indica il processo di trasformazione dei tipi quando questi devono passare dal codice gestito a quello nativo e viceversa.
 
-Il motivo per cui il marshalling è necessario è che i tipi presenti nel codice gestito e quelli presenti nel codice non gestito sono differenti. Nel codice gestito, ad esempio, si ha un elemento `String`, mentre nell'ambiente non gestito le stringhe possono essere Unicode ("wide"), non Unicode, con terminazione null, ASCII, e così via. Per impostazione predefinita, il sottosistema di P/Invoke tenterà di eseguire le operazioni necessarie in base al comportamento predefinito descritto in [MSDN](../../docs/framework/interop/default-marshaling-behavior.md). Tuttavia, per i casi in cui è necessario un controllo aggiuntivo, è possibile usare l'attributo `MarshalAs` per specificare il tipo previsto sul lato non gestito. Ad esempio, se si vuole che la stringa venga inviata come stringa ANSI con terminazione null, è possibile usare un codice simile al seguente:
+Il motivo per cui il marshalling è necessario è che i tipi presenti nel codice gestito e quelli presenti nel codice non gestito sono differenti. Nel codice gestito, ad esempio, si ha un elemento `String`, mentre nell'ambiente non gestito le stringhe possono essere Unicode ("wide"), non Unicode, con terminazione null, ASCII, e così via. Per impostazione predefinita, il sottosistema di P/Invoke tenterà di eseguire le operazioni necessarie in base al [comportamento predefinito](../../docs/framework/interop/default-marshaling-behavior.md). Tuttavia, per i casi in cui è necessario un controllo aggiuntivo, è possibile usare l'attributo [MarshalAs](xref:System.Runtime.InteropServicxes.MarshalAs) per specificare il tipo previsto sul lato non gestito. Ad esempio, se si vuole che la stringa venga inviata come stringa ANSI con terminazione null, è possibile usare un codice simile al seguente:
 
 ```csharp
 [DllImport("somenativelibrary.dll")]

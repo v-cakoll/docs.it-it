@@ -1,5 +1,6 @@
 ---
-title: Costrutti di backreference nelle espressioni regolari
+title: Costrutti di backreference nelle espressioni regolari .NET
+desription: Learn how to identify repeated text elements by using backreference constructs in a regular expression.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,12 +14,13 @@ helpviewer_keywords:
 ms.assetid: 567a4b8d-0e79-49dc-8df9-f4b1aa376a2a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1f86ed838e1333a5475d72eabc4d4248fc256211
-ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
+ms.custom: seodec18
+ms.openlocfilehash: 0b3de774159e528ea782d8b450f9e596aeb0daca
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52672035"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144780"
 ---
 # <a name="backreference-constructs-in-regular-expressions"></a>Costrutti di backreference nelle espressioni regolari
 I backreference sono uno strumento utile per identificare un carattere ripetuto o una sottostringa all'interno di una stringa. Se la stringa di input contiene ad esempio più occorrenze di una sottostringa arbitraria, è possibile trovare la prima occorrenza con un gruppo di acquisizione e usare un backreference per trovare le occorrenze successive della sottostringa.  
@@ -49,7 +51,7 @@ I backreference sono uno strumento utile per identificare un carattere ripetuto 
   
  L'esempio seguente consente di trovare caratteri alfanumerici doppi all'interno di una stringa. Viene definita un'espressione regolare `(\w)\1` costituita dagli elementi seguenti.  
   
-|Elemento|Descrizione|  
+|Elemento|Description|  
 |-------------|-----------------|  
 |`(\w)`|Trova la corrispondenza di un carattere alfanumerico e la assegna al primo gruppo di acquisizione.|  
 |`\1`|Trova la corrispondenza del carattere successivo, uguale al valore del primo gruppo di acquisizione.|  
@@ -70,7 +72,7 @@ I backreference sono uno strumento utile per identificare un carattere ripetuto 
   
  L'esempio seguente consente di trovare caratteri alfanumerici doppi all'interno di una stringa. Viene definita un'espressione regolare `(?<char>\w)\k<char>` costituita dagli elementi seguenti.  
   
-|Elemento|Descrizione|  
+|Elemento|Description|  
 |-------------|-----------------|  
 |`(?<char>\w)`|Trova la corrispondenza di un carattere alfanumerico e la assegna a un gruppo di acquisizione denominato `char`.|  
 |`\k<char>`|Trova la corrispondenza del carattere successivo, uguale al valore del gruppo di acquisizione denominato `char`.|  
@@ -100,7 +102,7 @@ Tuttavia, se *nome* è la rappresentazione stringa di un numero e al gruppo di a
   
  L'esempio seguente include un modello di espressione regolare `(?<1>a)(?<1>\1b)*`, che ridefinisce il gruppo denominato \1. Nella tabella seguente sono descritti i modelli di espressione regolare.  
   
-|Modello|Descrizione|  
+|Modello|Description|  
 |-------------|-----------------|  
 |`(?<1>a)`|Trova la corrispondenza del carattere "a" e assegna il risultato al gruppo di acquisizione denominato `1`.|  
 |`(?<1>\1b)*`|Trova 0 o più occorrenze del gruppo denominato `1` con una "b" e assegna il risultato al gruppo di acquisizione denominato `1`.|  
@@ -120,7 +122,7 @@ Tuttavia, se *nome* è la rappresentazione stringa di un numero e al gruppo di a
   
  Se un gruppo non ha acquisito alcuna sottostringa, un backreference a tale gruppo risulterà non definito e non troverà mai corrispondenza. Questo comportamento è illustrato dal modello delle espressioni regolari `\b(\p{Lu}{2})(\d{2})?(\p{Lu}{2})\b`, definito nel modo seguente:  
   
-|Modello|Descrizione|  
+|Modello|Description|  
 |-------------|-----------------|  
 |`\b`|Inizia la corrispondenza sul confine di parola.|  
 |`(\p{Lu}{2})`|Trova la corrispondenza di due maiuscole. Equivale al primo gruppo di acquisizione.|  

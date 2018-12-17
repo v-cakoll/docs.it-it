@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: b782bcb8-da6a-4c6a-805f-2eb46d504309
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f4d1010069e9d95488a99133f949ca112dc08f0e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 37ab502277cb413a116aa1301d1127f700097a45
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201598"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146576"
 ---
 # <a name="overview-of-synchronization-primitives"></a>Panoramica delle primitive di sincronizzazione
 
@@ -79,9 +79,9 @@ Per altre informazioni sui vantaggi e sugli svantaggi dell'uso del meccanismo di
 
 ### <a name="readerwriterlockslim-class"></a>Classe ReaderWriterLockSlim
 
-La classe <xref:System.Threading.ReaderWriterLockSlim?displayProperty=nameWithType> concede l'accesso esclusivo a una risorsa condivisa per la scrittura e permette a più thread di accedere alla risorsa simultaneamente per la lettura. È possibile usare <xref:System.Threading.ReaderWriterLockSlim> per sincronizzare l'accesso a una struttura dei dati condivisa che supporta operazioni di lettura thread-safe, ma richiede accesso esclusivo per eseguire le operazioni di scrittura. Quando un thread richiede l'accesso esclusivo, ad esempio chiamando il metodo <xref:System.Threading.ReaderWriterLockSlim.EnterWriteLock%2A?displayProperty=nameWithType>, le richieste del lettore successive vengono bloccate finché tutti i lettori esistenti non escono dal blocco e il writer non è entrato e uscito dal blocco.
+La classe <xref:System.Threading.ReaderWriterLockSlim?displayProperty=nameWithType> concede l'accesso esclusivo a una risorsa condivisa per la scrittura e permette a più thread di accedere alla risorsa simultaneamente per la lettura. È possibile usare <xref:System.Threading.ReaderWriterLockSlim> per sincronizzare l'accesso a una struttura dei dati condivisa che supporta operazioni di lettura thread-safe, ma richiede accesso esclusivo per eseguire le operazioni di scrittura. Quando un thread richiede l'accesso esclusivo, ad esempio chiamando il metodo <xref:System.Threading.ReaderWriterLockSlim.EnterWriteLock%2A?displayProperty=nameWithType>, le richieste di lettore e scrittore successive vengono bloccate finché tutti i lettori esistenti non escono dal blocco e lo scrittore non è entrato e uscito dal blocco.
   
-Per altre informazioni, vedere l'articolo [Blocchi in lettura/scrittura](reader-writer-locks.md) e le informazioni di riferimento sull'API <xref:System.Threading.ReaderWriterLockSlim>.
+Per altre informazioni, vedere le informazioni di riferimento sull'API <xref:System.Threading.ReaderWriterLockSlim>.
 
 ### <a name="semaphore-and-semaphoreslim-classes"></a>Classi Semaphore e SemaphoreSlim
 
@@ -134,7 +134,7 @@ Per altre informazioni, vedere l'articolo [Barrier](barrier.md) e le informazion
 
 La classe <xref:System.Threading.Interlocked?displayProperty=nameWithType> fornisce metodi statici che eseguono operazioni atomiche semplici su una variabile. Queste operazioni atomiche includono addizione, incremento e decremento, scambio e scambio condizionale in base a un confronto, oltre che l'operazione di lettura di un valore intero a 64 bit.
 
-Per altre informazioni, vedere l'articolo [Operazioni interlocked](interlocked-operations.md) e le informazioni di riferimento sull'API <xref:System.Threading.Interlocked>.
+Per altre informazioni, vedere le informazioni di riferimento sull'API <xref:System.Threading.Interlocked>.
 
 ## <a name="spinwait-structure"></a>Struttura SpinWait
 
