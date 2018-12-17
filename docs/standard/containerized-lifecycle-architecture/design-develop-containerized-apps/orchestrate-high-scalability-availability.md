@@ -50,7 +50,7 @@ Alcuni fornitori cloud offrono supporto per i contenitori Docker e Docker cluste
 
 Un'altra opzione consiste nell'usare Azure Service Fabric, che supporta anche Docker basato su contenitori Linux e Windows. Service Fabric viene eseguito in Azure o qualsiasi altro cloud, nonché [locali](https://docs.microsoft.com/azure/service-fabric/service-fabric-deploy-anywhere).
 
-## <a name="using-azure-container-service"></a>Uso del servizio contenitore di Azure
+## <a name="using-azure-container-service"></a>Uso del servizio Azure Container
 
 Un cluster Docker crea pool di host Docker e li espone come un singolo host Docker virtuale, per consentire di distribuire più contenitori nel cluster. Il cluster gestirà tutte le operazioni di gestione complesse come la scalabilità e l'integrità. Figura 4-7 rappresenta una modalità di mapping di un cluster Docker per applicazioni composte al servizio contenitore.
 
@@ -64,7 +64,7 @@ Con il servizio contenitore di Azure, è possibile sfruttare le funzionalità di
 
 ![](./media/image11.png)
 
-Figura 4-7: Opzioni per il clustering nel servizio contenitore di Azure
+Figura 4-7: Opzioni per il clustering nel servizio Azure Container
 
 Come illustrato nella figura 4-8, il servizio contenitore è semplicemente l'infrastruttura fornita da Azure per distribuire DC/OS, Kubernetes o Docker Swarm, ma non implementa alcun agente di orchestrazione aggiuntivo. Pertanto, il servizio contenitore è non un agente di orchestrazione, di conseguenza; è solo un'infrastruttura che sfrutta gli agenti di orchestrazione open source esistenti per i contenitori.
 

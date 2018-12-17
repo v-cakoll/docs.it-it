@@ -19,7 +19,7 @@ ms.locfileid: "53148632"
 
 -   Il contenitore Docker sta diventando l'unità di distribuzione standard per qualsiasi applicazione o servizio basato su server.
 
--   Gli agenti di orchestrazione Docker come quelli forniti nel servizio contenitore di Azure (sistema operativo per data center Mesosphere (DC/OS), Docker Swarm, Kubernetes) e in Azure Service Fabric sono fondamentali e indispensabili per qualsiasi applicazione multicontenitore o basata su microservizi con esigenze elevate in termini di complessità e scalabilità.
+-   Gli agenti di orchestrazione Docker come quelli forniti nel servizio Azure Container (sistema operativo per data center Mesosphere (DC/OS), Docker Swarm, Kubernetes) e in Azure Service Fabric sono fondamentali e indispensabili per qualsiasi applicazione multicontenitore o basata su microservizi con esigenze elevate in termini di complessità e scalabilità.
 
 -   Un ambiente DevOps end-to-end che supporta la distribuzione continua e l'integrazione continua connesso agli ambienti di produzione Docker offre flessibilità e, in definitiva, migliora il time-to-market delle applicazioni.
 

@@ -31,7 +31,7 @@ La complessità dello sviluppo di applicazioni in contenitori aumenta regolarmen
 
 -   Servizi di Azure DevOps può rafforzare il ciclo di vita DevOps con la distribuzione in più ambienti, non solo per gli ambienti di produzione, ma anche per i test, inclusi A / sperimentazione, B [versioni canary](https://martinfowler.com/bliki/CanaryRelease.html)e così via.
 
--   Le organizzazioni possono effettuare facilmente il provisioning di contenitori Docker da immagini private archiviate nel registro contenitori di Azure insieme a qualsiasi dipendenza dai componenti di Azure (dati, PaaS e così via) usando modelli di Azure Resource Manager con strumenti con cui hanno già familiarità.
+-   Le organizzazioni possono effettuare facilmente il provisioning di contenitori Docker da immagini private archiviate nel Registro Azure Container insieme a qualsiasi dipendenza dai componenti di Azure (dati, PaaS e così via) usando modelli di Azure Resource Manager con strumenti con cui hanno già familiarità.
 
 >[!div class="step-by-step"]
 >[Precedente](../design-develop-containerized-apps/set-up-windows-containers-with-powershell.md)

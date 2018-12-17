@@ -52,7 +52,7 @@ Per altre informazioni sull'architettura dei microservizi, vedere [.NET Microser
 
 I contenitori sono in genere usati insieme a un'architettura di microservizi, ma possano essere impiegati anche per creare contenitori di servizi o app Web basati su qualsiasi modello architettonico. È possibile usare .NET Framework su contenitori Windows, anche se le caratteristiche di modularità e leggerezza di .NET Core rendono questa piattaforma la scelta ideale per i contenitori. Quando si crea e si distribuisce un contenitore, la sua immagine risulta notevolmente più piccola con .NET Core rispetto a .NET Framework. Trattandosi di un'opzione multipiattaforma, è ad esempio possibile distribuire le app server in contenitori Docker di Linux.
 
-È possibile ospitare i contenitori Docker nell'infrastruttura Linux o Windows in uso oppure in un servizio cloud, ad esempio il [servizio contenitore di Azure](https://azure.microsoft.com/services/container-service/). Tale servizio consente infatti di gestire, orchestrare e ridimensionare applicazioni basate su contenitore nel cloud.
+È possibile ospitare i contenitori Docker nell'infrastruttura Linux o Windows in uso oppure in un servizio cloud, ad esempio il [servizio Azure Container](https://azure.microsoft.com/services/container-service/). Tale servizio consente infatti di gestire, orchestrare e ridimensionare applicazioni basate su contenitore nel cloud.
 
 ### <a name="a-need-for-high-performance-and-scalable-systems"></a>Esigenze di elevate prestazioni e scalabilità
 

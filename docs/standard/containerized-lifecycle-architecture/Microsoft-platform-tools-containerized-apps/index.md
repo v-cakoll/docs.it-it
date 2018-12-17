@@ -28,8 +28,8 @@ Tabella 3-1: Flusso di lavoro DevOps aperto per qualsiasi tecnologia
 
 | Host | Tecnologie Microsoft | Terze parti - Collegabili ad Azure |
 | ---------------------------| ----------------------------------------------------| --------------------------------------------------------------------------------|
-| Piattaforma per app Docker   | • Microsoft Visual Studio e Visual Studio Code<br /> • .NET<br /> • Servizio contenitore di Microsoft Azure<br /> • Azure Service Fabric<br /> • Registro contenitori di Azure<br /> | • Qualsiasi editor di codice (ad esempio, Sublime)<br /> • Qualsiasi linguaggio (Node.js, Java, Go e così via)<br /> • Qualsiasi agente di orchestrazione e utilità di pianificazione<br /> • Qualsiasi registro Docker<br /> |
-| DevOps per app Docker     | • Servizi di azure DevOps<br /> • Microsoft Team Foundation Server<br /> • Servizio contenitore di Azure<br /> • Azure Service Fabric<br /> | • GitHub, Git, Subversion e così via<br /> • Jenkins, Chef, Puppet, Velocity, CircleCI, TravisCI e così via<br /> • Docker Datacenter, Docker Swarm, Mesos DC/OS, Kubernetes e così via in locale<br /> |
+| Piattaforma per app Docker   | • Microsoft Visual Studio e Visual Studio Code<br /> • .NET<br /> • Servizio Azure Container di Microsoft Azure<br /> • Azure Service Fabric<br /> • Registro Azure Container<br /> | • Qualsiasi editor di codice (ad esempio, Sublime)<br /> • Qualsiasi linguaggio (Node.js, Java, Go e così via)<br /> • Qualsiasi agente di orchestrazione e utilità di pianificazione<br /> • Qualsiasi registro Docker<br /> |
+| DevOps per app Docker     | • Servizi di azure DevOps<br /> • Microsoft Team Foundation Server<br /> • Servizio Azure Container<br /> • Azure Service Fabric<br /> | • GitHub, Git, Subversion e così via<br /> • Jenkins, Chef, Puppet, Velocity, CircleCI, TravisCI e così via<br /> • Docker Datacenter, Docker Swarm, Mesos DC/OS, Kubernetes e così via in locale<br /> |
 | Gestione e monitoraggio  | • Operations Management Suite<br /> • Applications Insights<br /> | • Marathon, Chronos e così via<br />
 
 La piattaforma e gli strumenti Microsoft per app Docker in contenitori, come definito nella tabella 3-1, includono i componenti seguenti:
@@ -38,7 +38,7 @@ La piattaforma e gli strumenti Microsoft per app Docker in contenitori, come def
 
 -   **DevOps per App Docker** gli sviluppatori che creano applicazioni Docker possono usare servizi di Azure DevOps o qualsiasi altro prodotto di terze parti, come Jenkins, per la compilazione di una serie completa automatici gestione del ciclo di vita delle applicazioni (ALM).
 
-Con i servizi di Azure DevOps, gli sviluppatori possono creare incentrata su contenitori controllare DevOps per un processo rapido e iterativo che copre del codice sorgente ovunque (servizi DevOps di Azure-Git, GitHub, qualsiasi repository Git remoto o Subversion), integrazione continua (CI) , unit test, tra i test di integrazione di contenitori/servizi, recapito continuo (CD) e la gestione del rilascio (RM). Gli sviluppatori possono automatizzare il rilascio delle applicazioni Docker nel servizio contenitore di Azure, dagli ambienti di sviluppo a quelli di gestione temporanea e produzione.
+Con i servizi di Azure DevOps, gli sviluppatori possono creare incentrata su contenitori controllare DevOps per un processo rapido e iterativo che copre del codice sorgente ovunque (servizi DevOps di Azure-Git, GitHub, qualsiasi repository Git remoto o Subversion), integrazione continua (CI) , unit test, tra i test di integrazione di contenitori/servizi, recapito continuo (CD) e la gestione del rilascio (RM). Gli sviluppatori possono automatizzare il rilascio delle applicazioni Docker nel servizio Azure Container, dagli ambienti di sviluppo a quelli di gestione temporanea e produzione.
  
 -   Gestione e monitoraggio della produzione da parte dell'IT.
 
