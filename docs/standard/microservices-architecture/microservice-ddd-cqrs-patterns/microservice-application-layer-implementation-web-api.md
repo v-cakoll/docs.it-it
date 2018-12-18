@@ -1,29 +1,29 @@
 ---
 title: Implementazione del livello dell'applicazione di microservizi tramite l'API Web
-description: Architettura dei microservizi .NET per le applicazioni .NET in contenitori | Implementazione del livello dell'applicazione di microservizi tramite l'API Web
+description: Architettura di microservizi .NET per applicazioni .NET incluse in contenitori | Informazioni sull'inserimento di dipendenze e sugli schemi Mediator e i relativi dettagli di implementazione nel livello dell'applicazione API Web.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 12/12/2017
-ms.openlocfilehash: 1af8d0290eea26d57f4744bbd6d9819d886d4db4
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 10/08/2018
+ms.openlocfilehash: 332829d30f10dde49727c63e9e80a91f24e1123a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106554"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151187"
 ---
-# <a name="implementing-the-microservice-application-layer-using-the-web-api"></a>Implementazione del livello dell'applicazione di microservizi tramite l'API Web
+# <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Implementare il livello dell'applicazione del microservizio usando l'API Web
 
-## <a name="using-dependency-injection-to-inject-infrastructure-objects-into-your-application-layer"></a>Uso dell'inserimento delle dipendenze per inserire oggetti dell'infrastruttura nel livello dell'applicazione
+## <a name="use-dependency-injection-to-inject-infrastructure-objects-into-your-application-layer"></a>Usare l'inserimento delle dipendenze per inserire oggetti dell'infrastruttura nel livello dell'applicazione
 
-Come accennato in precedenza, il livello dell'applicazione può essere implementato come parte dell'elemento che si sta creando, ad esempio in un progetto API Web o in un progetto app Web MVC. Nel caso di un microservizio creato con ASP.NET Core, il livello dell'applicazione sarà in genere la libreria di API Web. Per separare ciò che proviene da ASP.NET Core (l'infrastruttura più i controlli) dal codice del livello dell'applicazione personalizzato, è facoltativamente possibile inserire il livello dell'applicazione in una libreria di classi separata.
+Come accennato in precedenza, il livello dell'applicazione può essere implementato come parte dell'elemento (assembly) che si sta creando, ad esempio in un progetto API Web o un progetto app Web MVC. Nel caso di un microservizio creato con ASP.NET Core, il livello dell'applicazione sarà in genere la libreria di API Web. Per separare ciò che proviene da ASP.NET Core (l'infrastruttura più i controlli) dal codice del livello dell'applicazione personalizzato, è facoltativamente possibile inserire il livello dell'applicazione in una libreria di classi separata.
 
-Il codice del livello dell'applicazione del microservizio degli ordini, ad esempio, viene direttamente implementato come parte del progetto **Ordering.API** (un progetto API Web ASP.NET Core), come illustrato nella figura 9-23.
+Il codice del livello dell'applicazione del microservizio degli ordini, ad esempio, viene direttamente implementato come parte del progetto **Ordering.API** (un progetto API Web ASP.NET Core), come illustrato nella figura 7-23.
 
-![](./media/image20.png)
+![La visualizzazione Esplora soluzioni del microservizio Ordering.API contiene le sottocartelle della cartella Application: Behaviors, Commands, DomainEventHandlers, IntegrationEvents, Models, Queries e Validations.](./media/image20.png)
 
-**Figura 9-23**. Livello dell'applicazione nel progetto API Web ASP.NET Core Ordering.API
+**Figura 7-23**. Livello dell'applicazione nel progetto API Web ASP.NET Core Ordering.API
 
-ASP.NET Core include un semplice [contenitore IoC predefinito](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection) (rappresentato dall'interfaccia IServiceProvider) che supporta l'inserimento del costruttore per impostazione predefinita, mentre ASP.NET rende disponibili determinati servizi tramite l'inserimento delle dipendenze. In ASP.NET Core il termine *servizio* indica qualsiasi tipo registrato che verrà inserito tramite l'inserimento delle dipendenze. I servizi del contenitore predefinito vengono configurati nel metodo ConfigureServices nella classe Startup dell'applicazione. Le dipendenze vengono implementate nei servizi necessari per un tipo.
+ASP.NET Core include un semplice [contenitore IoC predefinito](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection) (rappresentato dall'interfaccia IServiceProvider) che supporta l'inserimento del costruttore per impostazione predefinita, mentre ASP.NET rende disponibili determinati servizi tramite l'inserimento delle dipendenze. In ASP.NET Core il termine *servizio* indica qualsiasi tipo registrato che verrà inserito tramite l'inserimento delle dipendenze. I servizi del contenitore predefinito vengono configurati nel metodo ConfigureServices nella classe Startup dell'applicazione. Le dipendenze vengono implementate nei servizi necessari per un tipo e registrati nel contenitore IoC.
 
 È in genere necessario inserire dipendenze che implementano oggetti dell'infrastruttura. Un repository è un tipico esempio di dipendenza da inserire, ma è possibile inserire qualsiasi altra dipendenza dell'infrastruttura disponibile. Per implementazioni più semplici, è possibile inserire direttamente l'oggetto schema Unit of Work (oggetto DbContext EF), perché DBContext è anche l'implementazione degli oggetti persistenza dell'infrastruttura.
 
@@ -78,11 +78,11 @@ public class CreateOrderCommandHandler
 
 La classe usa i repository inseriti per eseguire la transazione e rendere permanenti le modifiche allo stato. Non è importante se tale classe è un gestore comando, un metodo del controller API Web ASP.NET Core o un [servizio dell'applicazione nella progettazione basata su domini](https://lostechies.com/jimmybogard/2008/08/21/services-in-domain-driven-design/). È in definitiva una semplice classe che usa repository, entità di dominio e altre funzionalità di coordinamento dell'applicazione in modo simile a un gestore comando. L'inserimento delle dipendenze funziona allo stesso modo per tutte le classi citate, come nell'esempio che usa l'inserimento delle dipendenze basato sul costruttore.
 
-### <a name="registering-the-dependency-implementation-types-and-interfaces-or-abstractions"></a>Registrazione dei tipi di implementazione delle dipendenze e interfacce o astrazioni
+### <a name="register-the-dependency-implementation-types-and-interfaces-or-abstractions"></a>Registrare i tipi di implementazione delle dipendenze e interfacce o astrazioni
 
 Prima di usare gli oggetti inseriti tramite i costruttori, è necessario sapere dove registrare le interfacce e le classi che generano gli oggetti inseriti nelle classi dell'applicazione tramite l'inserimento delle dipendenze, come nell'inserimento delle dipendenze basato sul costruttore, come illustrato prima.
 
-#### <a name="using-the-built-in-ioc-container-provided-by-aspnet-core"></a>Uso del contenitore IoC predefinito fornito da ASP.NET Core
+#### <a name="use-the-built-in-ioc-container-provided-by-aspnet-core"></a>Usare il contenitore IoC predefinito specificato da ASP.NET Core
 
 Quando si usa il contenitore IoC predefinito fornito da ASP.NET Core, si registrano i tipi che si vuole inserire nel metodo ConfigureServices nel file Startup.cs, come nel codice seguente:
 
@@ -105,21 +105,19 @@ public void ConfigureServices(IServiceCollection services)
 
 Lo schema più comune quando si registrano i tipi in un contenitore IoC prevede la registrazione di una coppia di tipi: un'interfaccia e la classe di implementazione correlata. Quando dunque si richiede un oggetto dal contenitore IoC tramite un costruttore, si richiede un oggetto di un determinato tipo di interfaccia. Nell'esempio precedente l'ultima riga indica che, quando uno dei costruttori ha una dipendenza da IMyCustomRepository (interfaccia o astrazione), il contenitore IoC inserirà un'istanza della classe di implementazione MyCustomSQLServerRepository.
 
-#### <a name="using-the-scrutor-library-for-automatic-types-registration"></a>Uso della libreria Scrutor per la registrazione automatica dei tipi
+#### <a name="use-the-scrutor-library-for-automatic-types-registration"></a>Usare la libreria Scrutor per la registrazione automatica dei tipi
 
 Quando si usa l'inserimento delle dipendenze in .NET Core, potrebbe essere necessario analizzare un assembly e registrarne automaticamente i tipi, per convenzione. Questa funzionalità non è attualmente disponibile in ASP.NET Core. È tuttavia possibile la libreria [Scrutor](https://github.com/khellang/Scrutor) a tale scopo. Questo approccio è utile quando è necessario registrare decine di tipi nel contenitore IoC.
 
 #### <a name="additional-resources"></a>Risorse aggiuntive
 
--   **Matthew King. Registrazione di servizi con Scrutor**
-    [*https://mking.net/blog/registering-services-with-scrutor*](https://mking.net/blog/registering-services-with-scrutor)
+- **Matthew King. Registrazione di servizi con Scrutor** \
+  [*https://www.mking.net/blog/registering-services-with-scrutor*](https://www.mking.net/blog/registering-services-with-scrutor)
 
-<!-- -->
+- **Kristian Hellang. Scrutor.** Repository GitHub. \
+  [*https://github.com/khellang/Scrutor*](https://github.com/khellang/Scrutor)
 
--   **Kristian Hellang. Scrutor.** Repository GitHub.
-    [*https://github.com/khellang/Scrutor*](https://github.com/khellang/Scrutor)
-
-#### <a name="using-autofac-as-an-ioc-container"></a>Uso di Autofac come contenitore IoC
+#### <a name="use-autofac-as-an-ioc-container"></a>Usare Autofac come contenitore IoC
 
 È anche possibile usare contenitori IoC aggiuntivi e collegarli alla pipeline ASP.NET Core, come nel microservizio degli ordini in eShopOnContainers, che usa [Autofac](https://autofac.org/). Quando si usa Autofac, in genere si registrano i tipi tramite i moduli, che consentono di dividere i tipi di registrazioni tra più file a seconda della posizione dei tipi, proprio come si potrebbero distribuire i tipi di applicazioni in più librerie di classi.
 
@@ -152,40 +150,42 @@ public class ApplicationModule : Autofac.Module
 }
 ```
 
+Autofac offre inoltre una funzionalità per [l'analisi degli assembly e la registrazione dei tipi in base alle convenzioni di denominazione](https://autofac.readthedocs.io/en/latest/register/scanning.html).
+
 Il processo di registrazione e i relativi concetti sono molto simili al modo in cui è possibile registrare i tipi con il contenitore IoC ASP.NET Core, ma la sintassi quando si usa Autofac è leggermente diversa.
 
 Nel codice di esempio l'astrazione IOrderRepository viene registrata con la classe di implementazione OrderRepository. Quando dunque un costruttore dichiara una dipendenza tramite l'astrazione o l'interfaccia IOrderRepository, il contenitore IoC inserirà un'istanza della classe OrderRepository.
 
 Il tipo di ambito di un'istanza determina come un'istanza viene condivisa tra le richieste per lo stesso servizio o dipendenza. Quando viene effettuata una richiesta per una dipendenza, il contenitore IoC può restituire quanto segue:
 
--   Una singola istanza per ogni ambito di durata (detta *con ambito* nel contenitore IoC ASP.NET Core).
+- Una singola istanza per ogni ambito di durata (detta *con ambito* nel contenitore IoC ASP.NET Core).
 
--   Una nuova istanza per ogni dipendenza (detta *temporanea* nel contenitore IoC ASP.NET Core).
+- Una nuova istanza per ogni dipendenza (detta *temporanea* nel contenitore IoC ASP.NET Core).
 
--   Una singola istanza condivisa tra tutti gli oggetti tramite il contenitore IoC (detta *singleton* nel contenitore IoC ASP.NET Core).
+- Una singola istanza condivisa tra tutti gli oggetti tramite il contenitore IoC (detta *singleton* nel contenitore IoC ASP.NET Core).
 
 #### <a name="additional-resources"></a>Risorse aggiuntive
 
--   **Introduzione all'inserimento delle dipendenze in ASP.NET Core**
-    [*https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection*](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection)
+- **Introduzione all'inserimento delle dipendenze in ASP.NET Core** \
+  [*https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection*](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection)
 
--   **Autofac.** Documentazione ufficiale.
-    [*http://docs.autofac.org/en/latest/*](http://docs.autofac.org/en/latest/)
+- **Autofac.** Documentazione ufficiale. \
+  [*http://docs.autofac.org/en/latest/*](http://docs.autofac.org/en/latest/)
 
--   **Comparing ASP.NET Core IoC container service lifetimes with Autofac IoC container instance scopes - Cesar de la Torre**
-    [*https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/*](https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/) (Confronto tra la durata del servizio contenitore ASP.NET Core IoC e gli ambiti delle istanze di contenitore Autofac IoC)
+- **Comparing ASP.NET Core IoC container service lifetimes with Autofac IoC container instance scopes - Cesar de la Torre** (Confronto tra la durata del servizio contenitore ASP.NET Core IoC e gli ambiti delle istanze di contenitore Autofac IoC) \
+  [*https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/*](https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/)
 
-## <a name="implementing-the-command-and-command-handler-patterns"></a>Implementazione degli schemi di comando e di gestore comando
+## <a name="implement-the-command-and-command-handler-patterns"></a>Implementare gli schemi Command e Command Handler
 
-Nell'esempio di inserimento delle dipendenze tramite costruttore illustrato nella sezione precedente il contenitore IoC ha inserito i repository tramite un costruttore in una classe. Ma esattamente dove sono stati inseriti? In un'API Web semplice (ad esempio, il microservizio catalogo in eShopOnContainers) li si inserisce nel livello dei controller MVC, in un costruttore del controller. Nel codice iniziale di questa sezione (la classe [CreateOrderCommandHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/Commands/CreateOrderCommandHandler.cs) del servizio Ordering.API in eShopOnContainers), tuttavia, l'inserimento delle dipendenze viene eseguito tramite il costruttore di un particolare gestore comando. Verrà ora illustrato che cos'è un gestore comando e perché usarlo.
+Nell'esempio di inserimento delle dipendenze tramite costruttore illustrato nella sezione precedente il contenitore IoC ha inserito i repository tramite un costruttore in una classe. Ma esattamente dove sono stati inseriti? In un'API Web semplice, ad esempio il microservizio catalogo in eShopOnContainers, vengono inseriti nel livello dei controller MVC, in un costruttore del controller, come parte della pipeline di richiesta di ASP.NET Core. Nel codice iniziale di questa sezione (la classe [CreateOrderCommandHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/Commands/CreateOrderCommandHandler.cs) del servizio Ordering.API in eShopOnContainers), tuttavia, l'inserimento delle dipendenze viene eseguito tramite il costruttore di un particolare gestore comando. Verrà ora illustrato che cos'è un gestore comando e perché usarlo.
 
 Lo schema Command è intrinsecamente correlato allo schema CQRS illustrato prima in questa guida. CQRS presenta due aree. La prima è quella delle query, in cui si usano query semplificate con il micro ORM [Dapper](https://github.com/StackExchange/dapper-dot-net), illustrato in precedenza. La seconda area è quella dei comandi, ovvero il punto iniziale delle transazioni e il canale di input dall'esterno del servizio.
 
-Come illustrato nella figura 9-24, lo schema si basa sull'accettazione dei comandi dal lato client, sulla loro elaborazione in base alle regole del modello di dominio e infine sulla persistenza degli stati con le transazioni.
+Come illustrato nella figura 7-24, lo schema si basa sull'accettazione dei comandi dal lato client, sulla loro elaborazione in base alle regole del modello di dominio e infine sulla persistenza degli stati con le transazioni.
 
-![](./media/image21.png)
+![Visualizzazione di alto livello del lato operazioni di scrittura in CQRS: l'app dell'interfaccia utente invia un comando attraverso l'API che raggiunge un CommandHandler, che dipende dal modello di dominio e dall'infrastruttura per aggiornare il database.](./media/image21.png)
 
-**Figura 9-24**. Panoramica generale dei comandi o "lato transazionale" nello schema CQRS
+**Figura 7-24**. Panoramica generale dei comandi o "lato transazionale" nello schema CQRS
 
 ### <a name="the-command-class"></a>Classe di comando
 
@@ -201,7 +201,7 @@ Una caratteristica importante di un comando è che deve essere elaborato una sol
 
 È consigliabile rendere idempotenti i comandi e gli aggiornamenti quando è opportuno per le regole business e gli invarianti del dominio. Per usare lo stesso esempio, se per qualsiasi motivo (logica di ripetizione dei tentativi, intrusioni e così via) lo stesso comando CreateOrder raggiunge più volte il sistema, è consigliabile identificarlo e assicurarsi di non creare più ordini. A questo scopo, è necessario associare alle operazioni qualche forma di identità e stabilire se il comando è già stato elaborato.
 
-Un comando viene inviato a un singolo ricevitore e non viene pubblicato. La pubblicazione è riservata agli eventi di integrazione che determinano un fatto, ovvero qualcosa che è accaduto e potrebbe essere interessante per i ricevitori dell'evento. Nel caso degli eventi, per l'entità di pubblicazione non è importante chi riceve l'evento o come lo gestisce, ma gli eventi di integrazione, di cui si è già parlato nelle sezioni precedenti, sono diversi.
+Un comando viene inviato a un singolo ricevitore e non viene pubblicato. La pubblicazione è riservata agli eventi che determinano un fatto, ovvero qualcosa che è accaduto e potrebbe essere interessante per i ricevitori dell'evento. Nel caso degli eventi, per l'entità di pubblicazione non è importante chi riceve l'evento o come lo gestisce, ma gli eventi di dominio o integrazione, di cui si è già parlato nelle sezioni precedenti, sono diversi.
 
 Un comando viene implementato con una classe contenente campi dati o raccolte con tutte le informazioni necessarie per eseguire tale comando. Un comando è un particolare tipo di DTO (Data Transfer Object), usato in modo specifico per richiedere modifiche o transazioni. Il comando in sé si basa esclusivamente sulle informazioni necessarie per elaborare il comando.
 
@@ -252,13 +252,13 @@ public class CreateOrderCommand
         _orderItems = new List<OrderItemDTO>();
     }
 
-    public CreateOrderCommand(List<OrderItemDTO> orderItems, string city,
+    public CreateOrderCommand(List<BasketItem> basketItems, string city,
         string street,
         string state, string country, string zipcode,
         string cardNumber, string cardHolderName, DateTime cardExpiration,
         string cardSecurityNumber, int cardTypeId) : this()
     {
-        _orderItems = orderItems;
+        _orderItems = MapToOrderItems(basketItems);
         City = city;
         Street = street;
         State = state;
@@ -287,6 +287,8 @@ In sostanza, la classe del comando contiene tutti i dati necessari per eseguire 
 
 Un'altra caratteristica dei comandi è di non essere modificabili, perché l'utilizzo previsto è che vengano elaborati direttamente dal modello di dominio. Non è necessario modificarli nell'arco della durata prevista. In una classe C\# l'immutabilità può essere realizzata anche senza setter o altri metodi che modificano lo stato interno.
 
+Tenere presente che se si intende o si prevede che i comandi vengano sottoposti a un processo di serializzazione/deserializzazione, le proprietà devono avere un setter privato e l'attributo `[DataMemeber]` (o `[JsonProperty]`), altrimenti il deserializzatore non sarà in grado di ricostruire l'oggetto nella destinazione con i valori richiesti.
+
 Ad esempio, la classe del comando per la creazione di un ordine è probabilmente simile, in termini di dati, all'ordine che si vuole creare, ma è altrettanto probabile che non siano necessari gli stessi attributi. CreateOrderCommand, ad esempio, non ha un ID ordine, perché l'ordine non è ancora stato creato.
 
 Molte classi di comandi possono essere semplici e richiedere solo alcuni campi per gli stati che devono essere modificati, ad esempio quando si deve solo modificare lo stato di un ordine da "in corso" a "pagato" o "spedito" usando un comando simile al seguente:
@@ -313,19 +315,21 @@ Alcuni sviluppatori preferiscono tenere gli oggetti richiesta dell'interfaccia u
 
 È consigliabile implementare una classe di gestore comando specifica per ogni comando. In tale classe, che è alla base del funzionamento dello schema, si useranno l'oggetto comando, gli oggetti dominio e gli oggetti del repository dell'infrastruttura. Il gestore comando è di fatto il cuore del livello dell'applicazione in termini di CQRS e progettazione basata su domini. Tutta la logica del dominio deve tuttavia essere contenuta nelle classi di dominio, ovvero le radici di aggregazione (entità radice), le entità figlio o i [servizi di dominio](https://lostechies.com/jimmybogard/2008/08/21/services-in-domain-driven-design/), ma non nel gestore comando, che è una classe del livello dell'applicazione.
 
+La classe del gestore comandi offre un efficace trampolino di lancio per il modo in cui si ottiene il principio di singola responsabilità (SRP, Single Responsibility Principle) menzionato in una sezione precedente.
+
 Un gestore comando riceve un comando e ottiene un risultato dall'aggregazione usata. Il risultato deve essere la corretta esecuzione del comando o un'eccezione. Se è un'eccezione, lo stato del sistema non dovrebbe risultare modificato.
 
 Il gestore comando in genere esegue questi passaggi:
 
--   Riceve l'oggetto comando, ad esempio un DTO (dal [Mediator](https://en.wikipedia.org/wiki/Mediator_pattern) o da un altro oggetto dell'infrastruttura).
+- Riceve l'oggetto comando, ad esempio un DTO (dal [Mediator](https://en.wikipedia.org/wiki/Mediator_pattern) o da un altro oggetto dell'infrastruttura).
 
--   Verifica che il comando sia valido (se non viene convalidato dal Mediator).
+- Verifica che il comando sia valido (se non viene convalidato dal Mediator).
 
--   Crea un'istanza della radice di aggregazione che è la destinazione del comando corrente.
+- Crea un'istanza della radice di aggregazione che è la destinazione del comando corrente.
 
--   Esegue il metodo sull'istanza della radice di aggregazione, ottenendo dal comando i dati necessari.
+- Esegue il metodo sull'istanza della radice di aggregazione, ottenendo dal comando i dati necessari.
 
--   Rende permanente il nuovo stato dell'aggregazione nel database correlato. Quest'ultima operazione è la transazione vera e propria.
+- Rende permanente il nuovo stato dell'aggregazione nel database correlato. Quest'ultima operazione è la transazione vera e propria.
 
 Un gestore comando in genere si occupa di una singola aggregazione basata sulla radice di aggregazione (entità radice). Se più aggregazioni devono essere interessate dalla ricezione di un singolo comando, è possibile usare gli eventi di dominio per propagare gli stati o le azioni in più aggregazioni.
 
@@ -384,28 +388,28 @@ public class CreateOrderCommandHandler
 
 I seguenti sono passaggi aggiuntivi che devono essere eseguiti da un gestore comando:
 
--   Usare i dati del comando per operare con i metodi e il comportamento della radice di aggregazione.
+- Usare i dati del comando per operare con i metodi e il comportamento della radice di aggregazione.
 
--   All'interno degli oggetti dominio, generare eventi di dominio mentre la transazione è in esecuzione, ma trasparente dal punto di vista del gestore comando.
+- All'interno degli oggetti dominio, generare eventi di dominio mentre la transazione è in esecuzione, ma trasparente dal punto di vista del gestore comando.
 
--   Se il risultato dell'operazione di aggregazione è positivo e dopo che la transazione è stata completata, generare il gestore comando degli eventi di integrazione, che potrebbe anche essere generato dalle classi dell'infrastruttura, ad esempio i repository.
+- Se il risultato dell'operazione di aggregazione è positivo e dopo che la transazione è stata completata, generare gli eventi di integrazione. che potrebbe anche essere generato dalle classi dell'infrastruttura, ad esempio i repository.
 
 #### <a name="additional-resources"></a>Risorse aggiuntive
 
--   **Mark Seemann. At the Boundaries, Applications are Not Object-Oriented (In corrispondenza dei limiti, le applicazioni non sono orientate a oggetti)**
-    [*http://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/*](http://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/)
+- **Mark Seemann. At the Boundaries, Applications are Not Object-Oriented** \ (In corrispondenza dei limiti, le applicazioni non sono orientate a oggetti)
+  [*http://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/*](http://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/)
 
--   **Comandi ed eventi**
-    [*http://cqrs.nu/Faq/commands-and-events*](http://cqrs.nu/Faq/commands-and-events)
+- **Comandi ed eventi** \
+  [*http://cqrs.nu/Faq/commands-and-events*](http://cqrs.nu/Faq/commands-and-events)
 
--   **What does a command handler do?**
-    [*http://cqrs.nu/Faq/command-handlers*](http://cqrs.nu/Faq/command-handlers) (Qual è la funzione di un gestore comandi?)
+- **What does a command handler do?** (Qual è la funzione di un gestore comandi?) \
+  [*http://cqrs.nu/Faq/command-handlers*](http://cqrs.nu/Faq/command-handlers)
 
--   **Jimmy Bogard. Domain Command Patterns - Handlers**
-    [*https://jimmybogard.com/domain-command-patterns-handlers/*](https://jimmybogard.com/domain-command-patterns-handlers/) (Modelli di comando di dominio - Gestori)
+- **Jimmy Bogard. Domain Command Patterns - Handlers** \ (Modelli di comando di dominio - Gestori)
+  [*https://jimmybogard.com/domain-command-patterns-handlers/*](https://jimmybogard.com/domain-command-patterns-handlers/)
 
--   **Jimmy Bogard. Domain Command Patterns - Validation**
-    [*https://jimmybogard.com/domain-command-patterns-validation/*](https://jimmybogard.com/domain-command-patterns-validation/) (Modelli di comando di dominio - Convalida)
+- **Jimmy Bogard. Domain Command Patterns - Validation** \ (Modelli di comando di dominio - Convalida)
+  [*https://jimmybogard.com/domain-command-patterns-validation/*](https://jimmybogard.com/domain-command-patterns-validation/)
 
 ## <a name="the-command-process-pipeline-how-to-trigger-a-command-handler"></a>Pipeline di elaborazione del comando: come attivare un gestore comando
 
@@ -413,17 +417,17 @@ La domanda successiva è come richiamare un gestore comando. È possibile chiama
 
 Le altre due principali opzioni, che sono quelle consigliate, sono:
 
--   Tramite un elemento schema Mediator in memoria.
+- Tramite un elemento schema Mediator in memoria.
 
--   Con una coda di messaggi asincroni, tra i controller e i gestori.
+- Con una coda di messaggi asincroni, tra i controller e i gestori.
 
-### <a name="using-the-mediator-pattern-in-memory-in-the-command-pipeline"></a>Uso dello schema Mediator (in memoria) nella pipeline del comando
+### <a name="use-the-mediator-pattern-in-memory-in-the-command-pipeline"></a>Usare lo schema Mediator (in memoria) nella pipeline del comando
 
-Come illustrato nella figura 9-25, in un approccio CQRS si usa un Mediator intelligente, simile a un bus in memoria, in grado di eseguire il reindirizzamento al gestore comandi appropriato in base al tipo di comando o DTO che viene ricevuto. Le singole frecce nere tra i componenti rappresentano le dipendenze tra gli oggetti (in molti casi inseriti tramite inserimento delle dipendenze) con le interazioni correlate.
+Come illustrato nella figura 7-25, in un approccio CQRS si usa un Mediator intelligente, simile a un bus in memoria, in grado di eseguire il reindirizzamento al gestore comandi appropriato in base al tipo di comando o DTO che viene ricevuto. Le singole frecce nere tra i componenti rappresentano le dipendenze tra gli oggetti (in molti casi inseriti tramite inserimento delle dipendenze) con le interazioni correlate.
 
-![](./media/image22.png)
+![Zoom avanti dall'immagine precedente: il controller ASP.NET Core invia il comando alla pipeline del comando di MediatR in modo che arrivi al gestore appropriato.](./media/image22.png)
 
-**Figura 9-25**. Uso dello schema Mediator in esecuzione in un singolo microservizio CQRS
+**Figura 7-25**. Uso dello schema Mediator in esecuzione in un singolo microservizio CQRS
 
 L'uso dello schema Mediator è sensato perché nelle applicazioni aziendali l'elaborazione delle richieste può essere complessa. Potrebbe essere necessario aggiungere un numero indeterminato di problematiche trasversali, ad esempio registrazione, convalide, controllo e sicurezza. In questi casi, è possibile affidarsi a una pipeline di Mediator (vedere [Mediator pattern](https://en.wikipedia.org/wiki/Mediator_pattern)) per fornire un mezzo per gestire questi comportamenti o problematiche trasversali aggiuntive.
 
@@ -431,17 +435,17 @@ Un Mediator è un oggetto che incapsula la modalità di questo processo: coordin
 
 Gli elementi Decorator e i comportamenti sono simili alla [programmazione orientata agli aspetti](https://en.wikipedia.org/wiki/Aspect-oriented_programming), che viene applicata solo a una pipeline di processi specifica gestita dal componente Mediator. Gli aspetti nella programmazione orientata agli aspetti, che implementano i problemi trasversali, vengono applicati in base ai *weaver degli aspetti* inseriti in fase di compilazione o in base all'intercettazione della chiamata all'oggetto. Si dice a volte che entrambi i tipici approcci alla programmazione orientata agli aspetti "fanno magie", perché non è facile vedere come funziona la programmazione orientata agli aspetti. Quando si affrontano problemi o bug gravi, può essere difficile eseguire il debug della programmazione orientata agli aspetti. D'altra parte, questi elementi Decorator/comportamenti sono espliciti e vengono applicati solo nel contesto del Mediator, quindi il debug è molto più prevedibile e semplice.
 
-Nel microservizio degli ordini di eShopOnContainers vengono implementati due comportamenti di esempio, una classe [LogBehavior](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Behaviors/LoggingBehavior.cs) e una classe [ValidatorBehavior](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Behaviors/ValidatorBehavior.cs). L'implementazione dei comportamenti viene illustrata nella sezione successiva che mostra come eShopOnContainers implementa i [comportamenti](https://github.com/jbogard/MediatR/wiki/Behaviors) di [MediatR 3](https://www.nuget.org/packages/MediatR/3.0.0).
+Nel microservizio degli ordini di eShopOnContainers vengono implementati due comportamenti di esempio, una classe [LogBehavior](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Behaviors/LoggingBehavior.cs) e una classe [ValidatorBehavior](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Behaviors/ValidatorBehavior.cs). L'implementazione dei comportamenti viene illustrata nella sezione successiva spiegando in che modo eShopOnContainers implementa i [comportamenti](https://github.com/jbogard/MediatR/wiki/Behaviors) di [MediatR 3](https://www.nuget.org/packages/MediatR/3.0.0).
 
-### <a name="using-message-queues-out-of-proc-in-the-commands-pipeline"></a>Uso delle code di messaggi (out-of-process) nella pipeline del comando
+### <a name="use-message-queues-out-of-proc-in-the-commands-pipeline"></a>Usare le code di messaggi (out-of-process) nella pipeline del comando
 
-È anche possibile usare i messaggi asincroni basati su broker o code di messaggi, come illustrato nella figura 9-26. Questa opzione può anche essere combinata con il componente Mediator subito prima del gestore comando.
+È anche possibile usare i messaggi asincroni basati su broker o code di messaggi, come illustrato nella figura 7-26. Questa opzione può anche essere combinata con il componente Mediator subito prima del gestore comando.
 
-![](./media/image23.png)
+![La pipeline del comando può essere gestita anche da una coda di messaggi a disponibilità elevata per recapitare i comandi al gestore appropriato.](./media/image23.png)
 
-**Figura 9-26**. Uso delle code di messaggi (comunicazione out-of-process e interprocesso) con i comandi CQRS
+**Figura 7-26**. Uso delle code di messaggi (comunicazione out-of-process e interprocesso) con i comandi CQRS
 
-L'uso di code di messaggi per accettare i comandi può rendere ancora più complessa la pipeline del comando, perché probabilmente sarà necessario dividere la pipeline in due processi connessi tramite la coda di messaggi esterna. È consigliabile servirsene se è necessario migliorare la scalabilità e le prestazioni in base alla messaggistica asincrona. Si consideri che, nel caso della figura 9-26, il controller inserisce solo il messaggio di comando nella coda e torna indietro. I gestori comando elaborano quindi i messaggi alla velocità stabilita. Ecco un vantaggio considerevole delle code: la coda di messaggi può fungere da buffer nei casi in cui è necessaria l'iperscalabilità, ad esempio per le quotazioni di borsa o altri scenari con un volume elevato di dati in ingresso.
+L'uso di code di messaggi per accettare i comandi può rendere ancora più complessa la pipeline del comando, perché probabilmente sarà necessario dividere la pipeline in due processi connessi tramite la coda di messaggi esterna. È consigliabile servirsene se è necessario migliorare la scalabilità e le prestazioni in base alla messaggistica asincrona. Si consideri che, nel caso della figura 7-26, il controller inserisce solo il messaggio di comando nella coda e torna indietro. I gestori comando elaborano quindi i messaggi alla velocità stabilita. Ecco un vantaggio considerevole delle code: la coda di messaggi può fungere da buffer nei casi in cui è necessaria l'iperscalabilità, ad esempio per le quotazioni di borsa o altri scenari con un volume elevato di dati in ingresso.
 
 A causa della natura asincrona delle code di messaggi, è tuttavia necessario capire come comunicare all'applicazione client l'esito positivo o negativo dell'elaborazione del comando. Di norma, è preferibile non usare mai i comandi di tipo "fire and forget". Ogni applicazione aziendale deve sapere se un comando è stato elaborato correttamente o quanto meno convalidato e accettato.
 
@@ -449,9 +453,9 @@ Poter rispondere al client dopo la convalida di un messaggio di comando inviato 
 
 Inoltre, i comandi asincroni sono comandi unidirezionali, che in molti casi potrebbero non essere necessari, come illustrato dall'interessante scambio seguente tra Burtsev Alexey e Greg Young nell'ambito di una [conversazione online](https://groups.google.com/forum/#!msg/dddcqrs/xhJHVxDx2pM/WP9qP8ifYCwJ):
 
-\[Burtsev Alexey\] Trovo una gran quantità di codice dove le persone usano la gestione dei comandi asincroni o la messaggistica basata su comandi unidirezionali senza alcun motivo per farlo (non devono eseguire operazioni lunghe, non devono eseguire codice asincrono esterno, non devono neppure attraversare il limite dell'applicazione per usare il bus di messaggi). Perché rendono tutto così complesso senza motivo? E finora non ho visto un solo esempio di codice CQRS con il blocco dei gestori comando, anche se funzionerebbe davvero bene nella maggior parte dei casi.
-
-\[Greg Young\] \[...\] non esiste un comando asincrono, che è in realtà un altro evento. Se devo accettare quello che tu mi invii e generare un evento se non sono d'accordo, non mi stai più dicendo di fare qualcosa. Mi stai dicendo che qualcosa è stato fatto. A prima vista, sembra una piccola differenza, ma le implicazioni sono molte.
+> \[Burtsev Alexey\] Trovo una gran quantità di codice dove le persone usano la gestione dei comandi asincroni o la messaggistica basata su comandi unidirezionali senza alcun motivo per farlo (non devono eseguire operazioni lunghe, non devono eseguire codice asincrono esterno, non devono neppure attraversare il limite dell'applicazione per usare il bus di messaggi). Perché rendono tutto così complesso senza motivo? E finora non ho visto un solo esempio di codice CQRS con il blocco dei gestori comando, anche se funzionerebbe davvero bene nella maggior parte dei casi.
+>
+> \[Greg Young\] \[...\] non esiste un comando asincrono, che è in realtà un altro evento. Se devo accettare quello che tu mi invii e generare un evento se non sono d'accordo, non mi stai più dicendo di fare qualcosa \[quindi, non è un comando\]. Mi stai dicendo che qualcosa è stato fatto. A prima vista, sembra una piccola differenza, ma le implicazioni sono molte.
 
 I comandi asincroni accrescono considerevolmente la complessità di un sistema, perché non esiste un modo semplice per indicare gli errori. I comandi asincroni non sono quindi consigliati se non quando sono necessari requisiti di ridimensionamento o in casi particolari quando si comunicano i microservizi interni tramite la messaggistica. In tali casi, è necessario progettare un sistema di segnalazione e ripristino separato per gli errori.
 
@@ -459,7 +463,7 @@ Nella versione iniziale di eShopOnContainers è stato deciso di usare l'elaboraz
 
 In ogni caso, la decisione deve essere presa in base ai requisiti aziendali dell'applicazione o del microservizio.
 
-## <a name="implementing-the-command-process-pipeline-with-a-mediator-pattern-mediatr"></a>Implementazione della pipeline di elaborazione del comando con uno schema Mediator (MediatR)
+## <a name="implement-the-command-process-pipeline-with-a-mediator-pattern-mediatr"></a>Implementare la pipeline di elaborazione del comando con uno schema Mediator (MediatR)
 
 Come implementazione di esempio, questa guida propone l'uso della pipeline in-process basata sullo schema Mediator per gestire l'inserimento dei comandi e instradare i comandi, in memoria, ai gestori comando appropriati. La guida propone anche l'applicazione di [comportamenti](https://github.com/jbogard/MediatR/wiki/Behaviors) per separare le problematiche trasversali.
 
@@ -469,7 +473,7 @@ L'uso dello schema Mediator consente di ridurre l'accoppiamento e di isolare le 
 
 Un altro valido motivo per usare lo schema Mediator è stato illustrato da Jimmy durante la revisione di questa guida:
 
-Penso che qui valga la pena parlare dei test, che offrono un quadro coerente del comportamento del sistema. Richiesta in ingresso, risposta in uscita. Questo aspetto è risultato piuttosto utile nella creazione di test dal comportamento coerente.
+> Penso che qui valga la pena parlare dei test, che offrono un quadro coerente del comportamento del sistema. Richiesta in ingresso, risposta in uscita. Questo aspetto è risultato piuttosto utile nella creazione di test dal comportamento coerente.
 
 Verrà prima di tutto esaminato un controller API Web di esempio, in cui è effettivamente possibile usare l'oggetto Mediator. Se non si usasse l'oggetto Mediator, sarebbe necessario inserire tutte le dipendenze per tale controller, ad esempio un oggetto logger e altri. Il costruttore sarebbe quindi piuttosto complesso. D'altra parte, se si usa l'oggetto Mediator, il costruttore del controller può essere molto più semplice, con solo alcune dipendenze invece di molte se ne fosse presente una per ogni operazione trasversale, come nell'esempio seguente:
 
@@ -495,9 +499,9 @@ public async Task<IActionResult> ExecuteBusinessOperation([FromBody]RunOpCommand
 }
 ```
 
-### <a name="implementing-idempotent-commands"></a>Implementazione di comandi idempotenti
+### <a name="implement-idempotent-commands"></a>Implementare i comandi idempotenti
 
-In eShopOnContainers un esempio più avanzato di quello precedente prevede l'invio di un oggetto CreateOrderCommand dal microservizio degli ordini. Poiché tuttavia il processo aziendale degli ordini è un po' più complesso e, in questo caso, inizia di fatto con il microservizio Basket, l'azione di invio dell'oggetto CreateOrderCommand viene eseguita da un gestore eventi di integrazione denominato [UserCheckoutAcceptedIntegrationEvent.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/IntegrationEvents/EventHandling/UserCheckoutAcceptedIntegrationEventHandler.cs) invece che da un semplice controller API Web chiamato dall'app client come nel più semplice esempio precedente. 
+In **eShopOnContainers** un esempio più avanzato di quello precedente prevede l'invio di un oggetto CreateOrderCommand dal microservizio degli ordini. Poiché tuttavia il processo aziendale degli ordini è un po' più complesso e, in questo caso, inizia di fatto con il microservizio Basket, l'azione di invio dell'oggetto CreateOrderCommand viene eseguita da un gestore eventi di integrazione denominato >UserCheckoutAcceptedIntegrationEvent.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/IntegrationEvents/EventHandling/UserCheckoutAcceptedIntegrationEventHandler.cs) anziché da un semplice controller API Web chiamato dall'app client come nel più semplice esempio precedente.
 
 L'azione di invio del comando a MediatR è però molto simile, come illustrato nel codice seguente.
 
@@ -519,7 +523,7 @@ result = await _mediator.Send(requestCreateOrder);
 
 Questo caso è tuttavia anche un po' più avanzato perché vengono anche implementati comandi idempotenti. Il processo CreateOrderCommand dovrebbe essere idempotente, quindi, se per qualsiasi motivo lo stesso messaggio viene duplicato in rete, ad esempio a causa di più tentativi, lo stesso ordine aziendale verrà elaborato più di una volta.
 
-Per l'implementazione viene eseguito il wrapping del comando aziendale (in questo caso CreateOrderCommand) che viene quindi incorporato in un generico IdentifiedCommand di cui viene tenuta traccia tramite un ID di ogni messaggio in arrivo dalla rete e che deve essere idempotente.
+Per l'implementazione viene eseguito il wrapping del comando aziendale (in questo caso CreateOrderCommand), che viene quindi incorporato in un generico IdentifiedCommand di cui viene tenuta traccia usando un ID di ogni messaggio in arrivo dalla rete che deve essere idempotente.
 
 Nel codice seguente è possibile osservare che IdentifiedCommand è semplicemente un oggetto DTO con un ID e l'oggetto comando aziendale di cui viene eseguito il wrapping.
 
@@ -583,7 +587,7 @@ public class IdentifiedCommandHandler<T, R> :
 
 Poiché IdentifiedCommand funge da busta del comando aziendale, quando il comando aziendale deve essere elaborato perché non è un ID ripetuto, prende tale comando aziendale interno e lo invia di nuovo al Mediator, come nell'ultima parte del codice illustrato sopra quando si esegue `_mediator.Send(message.Command)`, da [IdentifiedCommandHandler.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/IdentifiedCommandHandler.cs).
 
-Durante tale operazione, collegherà ed eseguirà il gestore comando aziendale, in questo caso CreateOrderCommandHandler, che sta eseguendo le transazioni nel database degli ordini, come illustrato nel codice seguente.
+Durante tale operazione, collegherà ed eseguirà il gestore comando aziendale, in questo caso [CreateOrderCommandHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/CreateOrderCommandHandler.cs), che sta eseguendo le transazioni nel database degli ordini, come illustrato nel codice seguente.
 
 ```csharp
 // CreateOrderCommandHandler.cs
@@ -630,7 +634,7 @@ public class CreateOrderCommandHandler
 }
 ```
 
-### <a name="registering-the-types-used-by-mediatr"></a>Registrazione dei tipi usati da MediatR
+### <a name="register-the-types-used-by-mediatr"></a>Registrare i tipi usati da MediatR
 
 Per consentire a MediatR di conoscere le classi di gestori comando, è necessario registrare le classi Mediator e le classi di gestori comando nel contenitore IoC. Per impostazione predefinita, MediatR usa Autofac come contenitore IoC, ma è anche possibile usare il contenitore IoC ASP.NET Core predefinito o qualsiasi altro contenitore supportato da MediatR.
 
@@ -655,9 +659,9 @@ public class MediatorModule : Autofac.Module
 }
 ```
 
-È qui che "avviene la vera e propria magia" con MediatR. 
+È qui che "avviene la vera e propria magia" con MediatR.
 
-Poiché ogni gestore comando implementa l'interfaccia IAsyncRequestHandler&lt;T&gt; generica, quando si registrano gli assembly, il codice registra con RegisteredAssemblyTypes tutti i tipi contrassegnati come RequestHandlers mentre correla gli elementi CommandHandler con i rispettivi comandi, grazie alla relazione stabilita nella classe CommandHandler, come nell'esempio seguente:
+Poiché ogni gestore comandi implementa l'interfaccia `IAsyncRequestHandler<T>` generica, quando si registrano gli assembly, il codice registra con `RegisteredAssemblyTypes` tutti i tipi contrassegnati come `IAsyncRequestHandler` mentre correla gli elementi `CommandHandlers` con i rispettivi `Commands`, grazie alla relazione stabilita nella classe `CommandHandler`, come nell'esempio seguente:
 
 ```csharp
 public class CreateOrderCommandHandler
@@ -665,9 +669,9 @@ public class CreateOrderCommandHandler
 {
 ```
 
-Questo è il codice che correla i comandi con i gestori comando. Il gestore è solo una semplice classe, ma eredita da RequestHandler&lt;T&gt; e MediatR verifica che venga richiamato con il payload corretto.
+Questo è il codice che correla i comandi con i gestori comando. Il gestore è solo una semplice classe, ma eredita da `RequestHandler<T>`, dove T è il tipo di comando, e MediatR verifica che venga richiamato con il payload corretto (il comando).
 
-## <a name="applying-cross-cutting-concerns-when-processing-commands-with-the-behaviors-in-mediatr"></a>Applicazione di problematiche trasversali quando si elaborano i comandi con i comportamenti in MediatR
+## <a name="apply-cross-cutting-concerns-when-processing-commands-with-the-behaviors-in-mediatr"></a>Applicare problematiche trasversali quando si elaborano i comandi con i comportamenti in MediatR
 
 Un aspetto da considerare è la possibilità di applicare problematiche trasversali alla pipeline Mediator. È anche possibile osservare alla fine del codice del modulo di registrazione di Autofac come registra un tipo di comportamento, in particolare una classe LoggingBehavior personalizzata e una classe ValidatorBehavior, ma è anche possibile aggiungere altri comportamenti personalizzati.
 
@@ -715,46 +719,9 @@ public class LoggingBehavior<TRequest, TResponse>
 }
 ```
 
-Semplicemente implementando la classe Decorator e decorando la relativa pipeline, tutti i comandi elaborati tramite MediatR registreranno le informazioni sull'esecuzione.
+Semplicemente implementando questa classe di comportamento e registrandola nella pipeline (nell'oggetto MediatorModule di cui sopra), tutti i comandi elaborati con MediatR registreranno le informazioni sull'esecuzione.
 
 Il microservizio degli ordini di eShopOnContainers applica anche un secondo comportamento per le convalide di base, la classe [ValidatorBehavior](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Behaviors/ValidatorBehavior.cs) che si basa sulla libreria [FluentValidation](https://github.com/JeremySkinner/FluentValidation), come illustrato nel codice seguente:
-
-```csharp
-public class ValidatorDecorator<TRequest, TResponse>
-    : IAsyncRequestHandler<TRequest, TResponse>
-    where TRequest : IAsyncRequest<TResponse>
-{
-    private readonly IAsyncRequestHandler<TRequest, TResponse> _inner;
-    private readonly IValidator<TRequest>[] _validators;
-
-    public ValidatorDecorator(
-        IAsyncRequestHandler<TRequest, TResponse> inner,
-        IValidator<TRequest>[] validators)
-    {
-        _inner = inner;
-        _validators = validators;
-    }
-
-    public async Task<TResponse> Handle(TRequest message)
-    {
-        var failures = _validators
-            .Select(v => v.Validate(message))
-            .SelectMany(result => result.Errors)
-            .Where(error => error != null)
-            .ToList();
-            if (failures.Any())
-            {
-                throw new OrderingDomainException(
-                $"Command Validation Errors for type {typeof(TRequest).Name}",
-                new ValidationException("Validation exception", failures));
-            }
-            var response = await _inner.Handle(message);
-        return response;
-    }
-}
-```
-
-Quindi in base alla libreria [FluentValidation](https://github.com/JeremySkinner/FluentValidation), è stata creata una convalida per i dati passati con CreateOrderCommand, come nel codice seguente:
 
 ```csharp
 public class ValidatorBehavior<TRequest, TResponse> 
@@ -786,7 +753,9 @@ public class ValidatorBehavior<TRequest, TResponse>
 }
 ```
 
-Quindi in base alla libreria FluentValidation, è stata creata una convalida per i dati passati con CreateOrderCommand, come nel codice seguente:
+In questo caso il comportamento genera un'eccezione se la convalida non riesce, ma è anche possibile restituire un oggetto risultato che contiene il risultato del comando se ha avuto esito positivo o i messaggi di convalida nel caso contrario. Questo probabilmente semplificherebbe la visualizzazione dei risultati della convalida per l'utente.
+
+Quindi in base alla libreria [FluentValidation](https://github.com/JeremySkinner/FluentValidation), è stata creata una convalida per i dati passati con CreateOrderCommand, come nel codice seguente:
 
 ```csharp
 public class CreateOrderCommandValidator : AbstractValidator<CreateOrderCommand>
@@ -827,45 +796,45 @@ In modo simile, è possibile implementare altri comportamenti per ulteriori aspe
 
 ##### <a name="the-mediator-pattern"></a>Schema Mediator
 
--   **Schema Mediator**
-    [*https://en.wikipedia.org/wiki/Mediator\_pattern*](https://en.wikipedia.org/wiki/Mediator_pattern)
+- **Schema Mediator** \
+  [*https://en.wikipedia.org/wiki/Mediator\_pattern*](https://en.wikipedia.org/wiki/Mediator_pattern)
 
 ##### <a name="the-decorator-pattern"></a>Schema Decorator
 
--   **Schema Decorator**
-    [*https://en.wikipedia.org/wiki/Decorator\_pattern*](https://en.wikipedia.org/wiki/Decorator_pattern)
+- **Schema Decorator** \
+  [*https://en.wikipedia.org/wiki/Decorator\_pattern*](https://en.wikipedia.org/wiki/Decorator_pattern)
 
 ##### <a name="mediatr-jimmy-bogard"></a>MediatR (Jimmy Bogard)
 
--   **MediatR.** Repository GitHub.
-    [*https://github.com/jbogard/MediatR*](https://github.com/jbogard/MediatR)
+- **MediatR.** Repository GitHub. \
+  [*https://github.com/jbogard/MediatR*](https://github.com/jbogard/MediatR)
 
--   **CQRS with MediatR and AutoMapper**
-    [*https://lostechies.com/jimmybogard/2015/05/05/cqrs-with-mediatr-and-automapper/*](https://lostechies.com/jimmybogard/2015/05/05/cqrs-with-mediatr-and-automapper/) (CQRS con MediatR e AutoMapper)
+- **CQRS with MediatR and AutoMapper** \ (CQRS con MediatR e AutoMapper)
+  [*https://lostechies.com/jimmybogard/2015/05/05/cqrs-with-mediatr-and-automapper/*](https://lostechies.com/jimmybogard/2015/05/05/cqrs-with-mediatr-and-automapper/)
 
--   **Put your controllers on a diet: POSTs and commands.**
-    [*https://lostechies.com/jimmybogard/2013/12/19/put-your-controllers-on-a-diet-posts-and-commands/*](https://lostechies.com/jimmybogard/2013/12/19/put-your-controllers-on-a-diet-posts-and-commands/) (Mettere a dieta i controller: POST e comandi)
+- **Put your controllers on a diet: POSTs and commands.** (Mettere a dieta i controller: POST e comandi) \
+  [*https://lostechies.com/jimmybogard/2013/12/19/put-your-controllers-on-a-diet-posts-and-commands/*](https://lostechies.com/jimmybogard/2013/12/19/put-your-controllers-on-a-diet-posts-and-commands/)
 
--   **Tackling cross-cutting concerns with a mediator pipeline**
-    [*https://lostechies.com/jimmybogard/2014/09/09/tackling-cross-cutting-concerns-with-a-mediator-pipeline/*](https://lostechies.com/jimmybogard/2014/09/09/tackling-cross-cutting-concerns-with-a-mediator-pipeline/) (Affrontare i problemi di montaggio incrociato con una pipeline MediatR)
+- **Tackling cross-cutting concerns with a mediator pipeline** \ (Affrontare i problemi di montaggio incrociato con una pipeline MediatR)
+  [*https://lostechies.com/jimmybogard/2014/09/09/tackling-cross-cutting-concerns-with-a-mediator-pipeline/*](https://lostechies.com/jimmybogard/2014/09/09/tackling-cross-cutting-concerns-with-a-mediator-pipeline/)
 
--   **CQRS and REST: the perfect match**
-    [*https://lostechies.com/jimmybogard/2016/06/01/cqrs-and-rest-the-perfect-match/*](https://lostechies.com/jimmybogard/2016/06/01/cqrs-and-rest-the-perfect-match/) (CQRS e REST: la coppia perfetta)
+- **CQRS and REST: the perfect match** \ (CQRS e REST: la coppia perfetta)
+  [*https://lostechies.com/jimmybogard/2016/06/01/cqrs-and-rest-the-perfect-match/*](https://lostechies.com/jimmybogard/2016/06/01/cqrs-and-rest-the-perfect-match/)
 
--   **MediatR Pipeline Examples**
-    [*https://lostechies.com/jimmybogard/2016/10/13/mediatr-pipeline-examples/*](https://lostechies.com/jimmybogard/2016/10/13/mediatr-pipeline-examples/) (Esempi di pipeline MediatR)
+- **MediatR Pipeline Examples** \ (Esempi di pipeline MediatR)
+  [*https://lostechies.com/jimmybogard/2016/10/13/mediatr-pipeline-examples/*](https://lostechies.com/jimmybogard/2016/10/13/mediatr-pipeline-examples/)
 
--   **Vertical Slice Test Fixtures for MediatR and ASP.NET Core**
-    *<https://lostechies.com/jimmybogard/2016/10/24/vertical-slice-test-fixtures-for-mediatr-and-asp-net-core/> * (Fixture di test per sezioni verticali per MediatR e ASP.NET Core)
+- **Vertical Slice Test Fixtures for MediatR and ASP.NET Core** \ (Fixture di test per sezioni verticali per MediatR e ASP.NET Core)
+  [*https://lostechies.com/jimmybogard/2016/10/24/vertical-slice-test-fixtures-for-mediatr-and-asp-net-core/*](https://lostechies.com/jimmybogard/2016/10/24/vertical-slice-test-fixtures-for-mediatr-and-asp-net-core/)
 
--   **MediatR Extensions for Microsoft Dependency Injection Released**
-    [*https://lostechies.com/jimmybogard/2016/07/19/mediatr-extensions-for-microsoft-dependency-injection-released/*](https://lostechies.com/jimmybogard/2016/07/19/mediatr-extensions-for-microsoft-dependency-injection-released/) (Rilascio delle estensioni MediatR per l'inserimento di dipendenze Microsoft)
+- **MediatR Extensions for Microsoft Dependency Injection Released** \ (Rilascio delle estensioni MediatR per l'inserimento di dipendenze Microsoft)
+  [*https://lostechies.com/jimmybogard/2016/07/19/mediatr-extensions-for-microsoft-dependency-injection-released/*](https://lostechies.com/jimmybogard/2016/07/19/mediatr-extensions-for-microsoft-dependency-injection-released/)
 
 ##### <a name="fluent-validation"></a>Convalida Fuent
 
--   **Jeremy Skinner. FluentValidation.** Repository GitHub.
-    [*https://github.com/JeremySkinner/FluentValidation*](https://github.com/JeremySkinner/FluentValidation)
+- **Jeremy Skinner. FluentValidation.** Repository GitHub. \
+  [*https://github.com/JeremySkinner/FluentValidation*](https://github.com/JeremySkinner/FluentValidation)
 
 >[!div class="step-by-step"]
-[Precedente](microservice-application-layer-web-api-design.md)
-[Successivo](../implement-resilient-applications/index.md)
+>[Precedente](microservice-application-layer-web-api-design.md)
+>[Successivo](../implement-resilient-applications/index.md)

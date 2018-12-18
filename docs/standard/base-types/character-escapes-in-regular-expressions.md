@@ -1,5 +1,6 @@
 ---
-title: Caratteri di escape nelle espressioni regolari
+title: Caratteri di escape nelle espressioni regolari .NET
+description: Informazioni sui caratteri speciali e i caratteri di escape nelle espressioni regolari .NET.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,12 +17,13 @@ helpviewer_keywords:
 ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9b390b1d3d935ad045d59dd6b3d2e42cdbe82dd7
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.custom: seodec18
+ms.openlocfilehash: 2643e6ec1edf9cd69d7530def1e2605e1af20de4
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837167"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152364"
 ---
 # <a name="character-escapes-in-regular-expressions"></a>Caratteri di escape nelle espressioni regolari
 La barra rovesciata (\\) in un'espressione regolare indica una delle situazioni seguenti:  
@@ -36,7 +38,7 @@ La barra rovesciata (\\) in un'espressione regolare indica una delle situazioni 
 ## <a name="character-escapes-in-net"></a>Caratteri di escape in .NET  
  La tabella seguente elenca i caratteri di escape supportati dalle espressioni regolari in .NET.  
   
-|Carattere o sequenza|Descrizione|  
+|Carattere o sequenza|Description|  
 |---------------------------|-----------------|  
 |Tutti i caratteri eccetto i seguenti:<br /><br /> . $ ^ { [ ( &#124; ) * + ? \ |I caratteri diversi da quelli elencati nella colonna **Carattere o sequenza** non hanno un significato speciale nelle espressioni regolari, ma corrispondono a se stessi.<br /><br /> I caratteri inclusi nella colonna **Carattere o sequenza** sono elementi speciali del linguaggio di espressioni regolari. Per trovare una corrispondenza con essi in un'espressione regolare, è necessario aggiungere un carattere di escape o includerli in un [gruppo di caratteri positivi](../../../docs/standard/base-types/character-classes-in-regular-expressions.md). Ad esempio, l'espressione regolare `\$\d+` o `[$]\d+` trova la corrispondenza con "$1200".|  
 |`\a`|Corrisponde a un carattere di controllo del segnale acustico di avviso, `\u0007`.|  
@@ -61,7 +63,7 @@ La barra rovesciata (\\) in un'espressione regolare indica una delle situazioni 
   
  L'espressione regolare `\G(.+)[\t|\u007c](.+)\r?\n` viene interpretata come illustrato nella tabella seguente.  
   
-|Modello|Descrizione|  
+|Modello|Description|  
 |-------------|-----------------|  
 |`\G`|Inizia la corrispondenza dove termina l'ultima corrispondenza.|  
 |`(.+)`|Trova la corrispondenza con qualsiasi carattere uno o più volte. Equivale al primo gruppo di acquisizione.|  

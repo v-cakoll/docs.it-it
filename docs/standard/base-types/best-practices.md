@@ -1,5 +1,6 @@
 ---
 title: Procedure consigliate per le espressioni regolari in .NET
+description: Informazioni su come creare espressioni regolari efficienti in .NET.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,12 +12,13 @@ helpviewer_keywords:
 ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 271042fc167331def9e427cd4fc8b510e5f2f32e
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.custom: serodec18
+ms.openlocfilehash: 02847a813566c4675f7df2c88fa2e4e1f6138ecb
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925724"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152812"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>Procedure consigliate per le espressioni regolari in .NET
 <a name="top"></a> Il motore delle espressioni regolari in .NET è uno strumento potente e completo che consente di elaborare il testo in base alle corrispondenze dei modelli invece che in base al confronto e alla corrispondenza con il testo letterale. Nella maggior parte dei casi, la corrispondenza dei modelli viene applicata in modo rapido ed efficiente. In alcuni casi, tuttavia, il motore delle espressioni regolari può risultare molto lento. In casi estremi, può anche sembrare che il motore non risponda durante l'elaborazione di un input relativamente piccolo per ore o perfino giorni.  
@@ -115,7 +117,7 @@ ms.locfileid: "42925724"
   
  L'espressione regolare `\p{Sc}+\s*\d+` usata in questo esempio verifica che la stringa di input sia costituita da un simbolo di valuta e da almeno una cifra decimale. Il modello viene definito come illustrato nella tabella seguente.  
   
-|Modello|Descrizione|  
+|Modello|Description|  
 |-------------|-----------------|  
 |`\p{Sc}+`|Trova la corrispondenza di uno o più caratteri nella categoria Unicode Symbol, Currency.|  
 |`\s*`|Trovare la corrispondenza di zero o più spazi vuoti.|  
@@ -136,7 +138,7 @@ ms.locfileid: "42925724"
   
  Il criterio di espressione regolare usato nell'esempio, `\b(\w+((\r?\n)|,?\s))*\w+[.?:;!]`, è definito nel modo illustrato nella tabella seguente.  
   
-|Modello|Descrizione|  
+|Modello|Description|  
 |-------------|-----------------|  
 |`\b`|Inizia la corrispondenza sul confine di parola.|  
 |`\w+`|Trova la corrispondenza di uno o più caratteri alfanumerici.|  
@@ -181,7 +183,7 @@ ms.locfileid: "42925724"
   
  L'utilizzo del backtracking comporta spesso una riduzione delle prestazioni delle applicazioni sebbene il backtracking non sia essenziale per una corrispondenza. Ad esempio, l'espressione regolare `\b\p{Lu}\w*\b` cerca una corrispondenza di tutte le parole che iniziano con un carattere maiuscolo, come illustrato nella tabella seguente.  
   
-|Modello|Descrizione|  
+|Modello|Description|  
 |-|-|  
 |`\b`|Inizia la corrispondenza sul confine di parola.|  
 |`\p{Lu}`|Trova la corrispondenza di un carattere maiuscolo.|  
@@ -204,7 +206,7 @@ ms.locfileid: "42925724"
   
  In questi casi, è possibile ottimizzare le prestazioni dell'espressione regolare rimuovendo i quantificatori annidati e sostituendo la sottoespressione esterna con un'asserzione lookahead o lookbehind di larghezza zero. Le asserzioni lookahead e lookbehind sono ancoraggi; non spostano il puntatore nella stringa di input, ma eseguono il lookahead e lookbehind per verificare se è stata soddisfatta una condizione specificata. Ad esempio, l'espressione regolare del numero parte può essere riscritta come `^[0-9A-Z][-.\w]*(?<=[0-9A-Z])\$$`. Tale modello di espressione regolare viene definito come illustrato nella tabella seguente.  
   
-|Modello|Descrizione|  
+|Modello|Description|  
 |-------------|-----------------|  
 |`^`|Inizia la corrispondenza all'inizio della stringa di input.|  
 |`[0-9A-Z]`|Trova la corrispondenza di un carattere alfanumerico. Il numero parte deve essere costituito da almeno uno di questi caratteri.|  
@@ -218,9 +220,9 @@ ms.locfileid: "42925724"
  [!code-csharp[Conceptual.RegularExpressions.BestPractices#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/backtrack4.cs#11)]
  [!code-vb[Conceptual.RegularExpressions.BestPractices#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/backtrack4.vb#11)]  
   
- Il linguaggio delle espressioni regolari in .NET include i seguenti elementi che è possibile usare per eliminare i quantificatori annidati. Per altre informazioni, vedere [Costrutti di raggruppamento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
+ Il linguaggio delle espressioni regolari in .NET include i seguenti elementi che è possibile usare per eliminare i quantificatori annidati. Per altre informazioni, vedere [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
   
-|Elemento di linguaggio|Descrizione|  
+|Elemento di linguaggio|Description|  
 |----------------------|-----------------|  
 |`(?=` `subexpression` `)`|Asserzione lookahead positiva di larghezza zero. Lookahead della posizione corrente per determinare se `subexpression` corrisponde alla stringa di input.|  
 |`(?!` `subexpression` `)`|Asserzione lookahead negativa di larghezza zero. Lookahead della posizione corrente per determinare se `subexpression` non corrisponde alla stringa di input.|  
@@ -258,7 +260,7 @@ ms.locfileid: "42925724"
   
  I costrutti di raggruppamento spesso vengono utilizzati solo in un'espressione regolare in modo tale che sia possibile applicarvi i quantificatori e che i gruppi acquisiti da queste sottoespressioni non vengano utilizzati successivamente. Ad esempio, l'espressione regolare `\b(\w+[;,]?\s?)+[.?!]` è progettata per acquisire un'intera frase. Nella tabella seguente vengono descritti gli elementi del linguaggio di tale modello di espressione regolare e il relativo effetto sulle raccolte <xref:System.Text.RegularExpressions.Match> e <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> dell'oggetto <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType>.  
   
-|Modello|Descrizione|  
+|Modello|Description|  
 |-------------|-----------------|  
 |`\b`|Inizia la corrispondenza sul confine di parola.|  
 |`\w+`|Trova la corrispondenza di uno o più caratteri alfanumerici.|  
@@ -283,7 +285,7 @@ ms.locfileid: "42925724"
   
 -   Usare l'opzione <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture>. Disabilita tutte le acquisizioni non denominate o implicite nel modello di espressione regolare. Quando si usa questa opzione, è possibile acquisire solo le sottostringhe che corrispondono ai gruppi denominati definiti con l'elemento del linguaggio `(?<name>subexpression)`. Il flag <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture> può essere passato al parametro `options` del costruttore della classe <xref:System.Text.RegularExpressions.Regex> o al parametro `options` di un metodo <xref:System.Text.RegularExpressions.Regex> statico corrispondente.  
   
--   Utilizzare l'opzione `n` nell'elemento del linguaggio `(?imnsx)`. Questa opzione disabilita tutte le acquisizioni non denominate o implicite dal punto nel modello di espressione regolare in corrispondenza del quale viene visualizzato l'elemento. Le acquisizioni vengono disabilitate fino alla fine del modello o finché l'opzione `(-n)` non abilita le acquisizioni non denominate o implicite. Per altre informazioni, vedere [Costrutti vari](../../../docs/standard/base-types/miscellaneous-constructs-in-regular-expressions.md).  
+-   Utilizzare l'opzione `n` nell'elemento del linguaggio `(?imnsx)`. Questa opzione disabilita tutte le acquisizioni non denominate o implicite dal punto nel modello di espressione regolare in corrispondenza del quale viene visualizzato l'elemento. Le acquisizioni vengono disabilitate fino alla fine del modello o finché l'opzione `(-n)` non abilita le acquisizioni non denominate o implicite. Per altre informazioni, vedere [Miscellaneous Constructs](../../../docs/standard/base-types/miscellaneous-constructs-in-regular-expressions.md).  
   
 -   Utilizzare l'opzione `n` nell'elemento del linguaggio `(?imnsx:subexpression)`. Questa opzione disabilita tutte le acquisizioni non denominate o implicite in `subexpression`. Vengono inoltre disabilitate tutte le acquisizioni dai gruppi di acquisizione annidati non denominati o impliciti.  
   
@@ -292,7 +294,7 @@ ms.locfileid: "42925724"
 <a name="RelatedTopics"></a>   
 ## <a name="related-topics"></a>Argomenti correlati  
   
-|Titolo|Descrizione|  
+|Titolo|Description|  
 |-----------|-----------------|  
 |[Dettagli sul comportamento delle espressioni regolari](../../../docs/standard/base-types/details-of-regular-expression-behavior.md)|Viene esaminata l'implementazione del motore delle espressioni regolari in .NET. L'argomento è incentrato sulla flessibilità delle espressioni regolari e sulla responsabilità dello sviluppatore al fine di garantire un funzionamento efficace e affidabile del motore delle espressioni regolari.|  
 |[Backtracking](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)|Viene illustrato il backtracking e il modo in cui influisce sulle prestazioni delle espressioni regolari e vengono esaminati gli elementi del linguaggio che forniscono le alternative al backtracking.|  
