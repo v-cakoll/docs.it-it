@@ -1,16 +1,17 @@
 ---
-title: Modificatori (Riferimenti per C#)
+title: Modificatori - Riferimenti per C#
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - keywords [C#], modifiers
 - modifiers [C#]
 ms.assetid: c96691dd-b357-49ec-b5ae-03ca214fadfb
-ms.openlocfilehash: 5000f94a954994769eda2ac09404ba6a71c4639b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 645fc4bf4a64443c3816dbaec1904e08fd8dde41
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524828"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53237327"
 ---
 # <a name="modifiers-c-reference"></a>Modificatori (Riferimenti per C#)
 I modificatori vengono utilizzati per modificare le dichiarazioni dei tipi e dei membri dei tipi. In questa sezione verranno descritti i modificatori C#.  

@@ -1,23 +1,24 @@
 ---
-title: Membri (Guida per programmatori C#)
+title: Membri - Guida per programmatori C#
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - types [C#], nested types
 - C# language, type members
 ms.assetid: 4a30a4ab-d690-4936-9124-92ce9448665a
-ms.openlocfilehash: dbfd0c48dc59b094af49e65d2ed4fcd4e2a70ff0
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: e8429df6ef633f11df50ee5526496f9688f845ea
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087558"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53245103"
 ---
 # <a name="members-c-programming-guide"></a>Membri (Guida per programmatori C#)
 Le classi e gli struct contengono membri che ne rappresentano i dati e il comportamento. I membri di una classe includono tutti i membri dichiarati nella classe, oltre a tutti i membri (ad eccezione di costruttori e finalizzatori) dichiarati in tutte le classi nella relativa gerarchia di ereditarietà. I membri privati nelle classi base vengono ereditati ma non sono accessibili dalle classi derivate.  
   
  Nella tabella seguente sono elencati i tipi di membri che possono essere contenuti in una classe o in uno struct:  
   
-|Member|Descrizione|  
+|Member|Description|  
 |------------|-----------------|  
 |[Campi](../../../csharp/programming-guide/classes-and-structs/fields.md)|I campi sono variabili dichiarate nell'ambito della classe. Un campo può essere un tipo numerico incorporato o un'istanza di un'altra classe. Una classe calendario può ad esempio avere un campo che contiene la data corrente.|  
 |[Costanti](../../../csharp/programming-guide/classes-and-structs/constants.md)|Le costanti sono campi o proprietà il cui valore è impostato in fase di compilazione e non può essere modificato.|  

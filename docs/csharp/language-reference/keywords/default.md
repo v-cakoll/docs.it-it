@@ -1,5 +1,6 @@
 ---
-title: default (Riferimenti per C#)
+title: default - Riferimenti per C#
+ms.custom: seodec18
 ms.date: 08/04/2017
 f1_keywords:
 - default
@@ -7,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - default keyword [C#]
 ms.assetid: 14c48aaa-7d35-4058-a1a4-f53353050579
-ms.openlocfilehash: e867de9ca18508445ee77c6c05aa12fe6b973d39
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: ae145e5711a1bccf062d705037cdd0e852ffe0c2
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857141"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53234760"
 ---
 # <a name="default-c-reference"></a>default (Riferimenti per C#)
 
 È possibile usare la parola chiave `default` nell'istruzione `switch` o in un'espressione con valore predefinito:
 
-- [Istruzione switch](switch.md): specifica l'etichetta predefinita.
+- [L'istruzione switch](switch.md): specifica il cursore predefinito.
 
-- [Espressioni con valore predefinito](../../programming-guide/statements-expressions-operators/default-value-expressions.md): generano il valore predefinito del tipo.
+- [Espressioni con valore predefinito](../../programming-guide/statements-expressions-operators/default-value-expressions.md): produce il valore predefinito di un tipo.
 
 ## <a name="see-also"></a>Vedere anche
 

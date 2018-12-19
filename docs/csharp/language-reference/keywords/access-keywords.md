@@ -1,15 +1,16 @@
 ---
-title: Parole chiave per l'accesso (Riferimenti per C#)
+title: Parole chiave per l'accesso - Riferimenti per C#
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - access keywords [C#]
 ms.assetid: 3b680d9c-0998-42df-8ba7-5783f7abda75
-ms.openlocfilehash: 7700c49a609a90faf9b3b8b90719a223952d7e9e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9ab459e6d65fc3b61308adff09ccd46372a665c3
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47233002"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53237766"
 ---
 # <a name="access-keywords-c-reference"></a>Parole chiave per l'accesso (Riferimenti per C#)
 In questa sezione vengono presentate le parole chiave per l'accesso seguenti:  

@@ -1,17 +1,18 @@
 ---
-title: 'Procedura: implementare e chiamare un metodo di estensione personalizzato (Guida per programmatori C#)'
+title: 'Procedura: Implementare e chiamare un metodo di estensione personalizzato - Guida per programmatori C#'
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - extension methods [C#], implementing and calling
 ms.assetid: 7dab2a56-cf8e-4a47-a444-fe610a02772a
-ms.openlocfilehash: 7a09fa34b88c024bdaa0197bf82471a6bd6c2ae8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 9f1f7994043288f8896b48a3f12d1c7ee93c3661
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43739233"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53245548"
 ---
-# <a name="how-to-implement-and-call-a-custom-extension-method-c-programming-guide"></a>Procedura: implementare e chiamare un metodo di estensione personalizzato (Guida per programmatori C#)
+# <a name="how-to-implement-and-call-a-custom-extension-method-c-programming-guide"></a>Procedura: Implementare e chiamare un metodo di estensione personalizzato (Guida per programmatori C#)
 Questo argomento illustra come implementare metodi di estensione personali per qualsiasi tipo .NET. Il codice client può usare i metodi di estensione aggiungendo un riferimento alla DLL che li contiene, e aggiungendo una direttiva [using](../../../csharp/language-reference/keywords/using-directive.md) che specifica lo spazio dei nomi in cui vengono definiti i metodi di estensione.  
   
 ## <a name="to-define-and-call-the-extension-method"></a>Per definire e chiamare il metodo di estensione  

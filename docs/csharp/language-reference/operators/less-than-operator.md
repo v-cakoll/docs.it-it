@@ -1,5 +1,6 @@
 ---
-title: Operatore &lt; (Riferimenti per C#)
+title: Operatore &lt; - Riferimenti per C#
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - <_CSharpKeyword
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - less than operator (<) [C#]
 - < operator [C#]
 ms.assetid: 38cb91e6-79a6-48ec-9c1e-7b71fd8d2b41
-ms.openlocfilehash: 382110985eaffd7ca4cf014d7991fc5ee87dc031
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3cc125471eee7bf0002e9844c2a1cdc05e8d4a03
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43530308"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241227"
 ---
 # <a name="lt-operator-c-reference"></a>Operatore &lt; (Riferimenti per C#)
 Tutti i tipi numerici e di enumerazione definiscono un operatore relazionale "minore di" (`<`), che restituisce `true` se il primo operando è minore del secondo, in caso contrario `false`.  

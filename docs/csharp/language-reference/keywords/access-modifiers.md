@@ -1,15 +1,16 @@
 ---
-title: Modificatori di accesso (Riferimenti per C#)
+title: Modificatori di accesso - Riferimenti per C#
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - access modifiers [C#]
 ms.assetid: 61c3fa51-c00f-48cb-9b49-c805dedd62d7
-ms.openlocfilehash: ff313df9683dbc76bab684ff484b746ad05e065a
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 0fb435a35b928cb78511d8969f1dfce9f94869eb
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45988192"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53242022"
 ---
 # <a name="access-modifiers-c-reference"></a>Modificatori di accesso (Riferimenti per C#)
 I modificatori di accesso sono parole chiave usate per specificare l'accessibilità dichiarata di un membro o di un tipo. In questa sezione vengono presentati i quattro modificatori di accesso:  
@@ -21,17 +22,17 @@ I modificatori di accesso sono parole chiave usate per specificare l'accessibili
   
  È possibile specificare i sei livelli di accessibilità seguenti usando i modificatori di accesso:  
   
-- [`public`](public.md): l'accesso non è limitato.  
+- [`public`](public.md): L'accesso non è limitato.  
   
-- [`protected`](protected.md): l'accesso è limitato alla classe o ai tipi derivati dalla classe che li contiene.  
+- [`protected`](protected.md): L'accesso è limitato alla classe o ai tipi derivati dalla classe che li contiene.  
   
-- [`internal`](internal.md): l'accesso è limitato all'assembly corrente.  
+- [`internal`](internal.md): L'accesso è limitato all'assembly corrente.  
   
-- [`protected internal`](protected-internal.md): l'accesso è limitato all'assembly corrente o ai tipi derivati dalla classe che li contiene.  
+- [`protected internal`](protected-internal.md): L'accesso è limitato all'assembly corrente o ai tipi derivati dalla classe che li contiene.  
   
-- [`private`](private.md): l'accesso è limitato al tipo contenitore.  
+- [`private`](private.md): L'accesso è limitato al tipo contenitore.  
 
-- [`private protected`](private-protected.md): l'accesso è limitato alla classe o ai tipi derivati dalla classe che li contiene all'interno dell'assembly corrente.  
+- [`private protected`](private-protected.md): L'accesso è limitato alla classe o ai tipi derivati dalla classe che li contiene all'interno dell'assembly corrente.  
   
  In questa sezione vengono presentati anche gli argomenti seguenti:  
   

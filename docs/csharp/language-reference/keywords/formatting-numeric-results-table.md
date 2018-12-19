@@ -1,5 +1,6 @@
 ---
-title: Tabella di formattazione dei risultati numerici (Riferimenti per C#)
+title: Tabella di formattazione dei risultati numerici - Riferimenti per C#
+ms.custom: seodec18
 description: Informazioni sulle stringhe in formato numerico standard di C#
 ms.date: 09/20/2018
 helpviewer_keywords:
@@ -7,18 +8,18 @@ helpviewer_keywords:
 - numeric formatting [C#]
 - String.Format method
 ms.assetid: 120ba537-4448-4c62-8676-7a8fdd98f496
-ms.openlocfilehash: 6f1cb5b49139cf9661e678cfc0ecc884a2749622
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 12fe89e3aa63e9d3d8c3f102fe5a01a5f2225375
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "47863702"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239969"
 ---
 # <a name="formatting-numeric-results-table-c-reference"></a>Tabella di formattazione dei risultati numerici (Riferimenti per C#)
 
 Nella tabella seguente vengono descritti gli identificatori di formato supportati per la formattazione dei risultati numerici. Il risultato formattato nell'ultima colonna corrisponde al valore <xref:System.Globalization.CultureInfo> "en-US".
 
-|Identificatore di formato|Descrizione|Esempi|Risultato|  
+|Identificatore di formato|Description|Esempi|Risultato|  
 |----------------------|-----------------|--------------|------------|  
 |C o c|Valuta|`string s = $"{2.5:C}";`<br /><br /> `string s = $"{-2.5:C}";`|$2.50<br /><br /> ($2.50)|  
 |D o d|Decimale|`string s = $"{25:D5}";`|00025|  

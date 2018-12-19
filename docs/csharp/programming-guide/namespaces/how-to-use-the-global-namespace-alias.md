@@ -1,19 +1,20 @@
 ---
-title: "Procedura: utilizzare l'alias dello spazio dei nomi globale (Guida per programmatori C#)"
+title: "Procedura: Usare l'alias dello spazio dei nomi globale - Guida per programmatori C#"
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - aliases [C#]
 - namespaces [C#], global namespace qualifier
 - global namespace [C#]
 ms.assetid: 98a1d89b-3c5a-44f7-8400-c4a3c0ec22a9
-ms.openlocfilehash: c15271abb55cb29a200185e4b512a76a4913d848
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 19d8d20ae630573b44399f8f5c5351f02b9fb1df
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "44514618"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236609"
 ---
-# <a name="how-to-use-the-global-namespace-alias-c-programming-guide"></a>Procedura: utilizzare l'alias dello spazio dei nomi globale (Guida per programmatori C#)
+# <a name="how-to-use-the-global-namespace-alias-c-programming-guide"></a>Procedura: Usare l'alias dello spazio dei nomi globale (Guida per programmatori C#)
 La possibilità di accedere a un membro nello [spazio dei nomi globale](../../../csharp/language-reference/keywords/namespace.md) è utile quando il membro può essere nascosto da un'altra entità con lo stesso nome.  
   
  Nel codice seguente, ad esempio, `Console` si risolve in `TestApp.Console` invece che nel tipo `Console` nello spazio dei nomi <xref:System>.  
@@ -50,5 +51,5 @@ La possibilità di accedere a un membro nello [spazio dei nomi globale](../../..
 - [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
 - [Spazi dei nomi](../../../csharp/programming-guide/namespaces/index.md)  
 - [. (operatore)](../../../csharp/language-reference/operators/member-access-operator.md)  
-- [Operatore ::](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
+- [:: (operatore)](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
 - [extern](../../../csharp/language-reference/keywords/extern.md)

@@ -1,19 +1,20 @@
 ---
-title: 'Procedura: eseguire codice di pulitura mediante finally (Guida per programmatori C#)'
+title: 'Procedura: Eseguire codice di pulitura mediante finally - Guida per programmatori C#'
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - try/finally blocks [C#]
 - exceptions [C#], try/finally block
 - exception handling [C#], try/finally block
 ms.assetid: 1b1e5aef-3f32-4a88-9d39-b5fffb33bdaf
-ms.openlocfilehash: 47e9bb368deb077ef10ce474683d81e0cb56cef8
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 67ef164232a27b8110dfcd108a0345d9d63e8f91
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44183785"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53244935"
 ---
-# <a name="how-to-execute-cleanup-code-using-finally-c-programming-guide"></a>Procedura: eseguire codice di pulitura mediante finally (Guida per programmatori C#)
+# <a name="how-to-execute-cleanup-code-using-finally-c-programming-guide"></a>Procedura: Eseguire codice di pulitura mediante finally (Guida per programmatori C#)
 Lo scopo di un'istruzione `finally` consiste nel garantire che la pulizia necessaria di oggetti, in genere oggetti che contengono risorse esterne, venga eseguita immediatamente, anche se viene generata un'eccezione. Un esempio di questo tipo di pulizia è la chiamata di <xref:System.IO.Stream.Close%2A> in un oggetto <xref:System.IO.FileStream> immediatamente dopo l'uso, invece di aspettare che l'oggetto venga sottoposto a Garbage Collection da Common Language Runtime, come illustrato di seguito:  
   
  [!code-csharp[csProgGuideExceptions#16](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/how-to-execute-cleanup-code-using-finally_1.cs)]  

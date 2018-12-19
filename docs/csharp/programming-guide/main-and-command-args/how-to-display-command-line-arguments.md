@@ -1,17 +1,18 @@
 ---
-title: 'Procedura: visualizzare gli argomenti della riga di comando (Guida per programmatori C#)'
+title: 'Procedura: Visualizzare gli argomenti della riga di comando - Guida per programmatori C#'
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#], displaying
 ms.assetid: b8479f2d-9e05-4d38-82da-2e61246e5437
-ms.openlocfilehash: a6067482b4a225abc31592affb2cfab38847cd53
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9b09f5a1991ab5545ab31b1879f30c383a0e9a9f
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502672"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236531"
 ---
-# <a name="how-to-display-command-line-arguments-c-programming-guide"></a>Procedura: visualizzare gli argomenti della riga di comando (Guida per programmatori C#)
+# <a name="how-to-display-command-line-arguments-c-programming-guide"></a>Procedura: Visualizzare gli argomenti della riga di comando (Guida per programmatori C#)
 Gli argomenti specificati per un file eseguibile dalla riga di comando sono accessibili tramite un parametro facoltativo per `Main`. Gli argomenti vengono specificati sotto forma di una matrice di stringhe. Ogni elemento della matrice contiene un solo argomento. Gli spazi vuoti tra gli argomenti vengono rimossi. Si considerino ad esempio le chiamate seguenti della riga di comando di un file eseguibile fittizio:  
   
 |Input riga di comando|Matrice di stringhe passate a Main|  

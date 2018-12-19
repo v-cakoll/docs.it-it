@@ -1,20 +1,21 @@
 ---
-title: Parole chiave contestuali (Riferimenti per C#)
+title: Parole chiave contestuali - Riferimenti per C#
+ms.custom: seodec18
 ms.date: 03/07/2017
 helpviewer_keywords:
 - contextual keywords [C#]
 ms.assetid: 7c76bc29-a754-4389-b0ab-f6b441018298
-ms.openlocfilehash: 7b5f79f41306d6e4a8d2f1aa432ba6c2e0879f74
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 3b8f9f124943d2092b65718f5dbf17831252a4a5
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47232950"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241396"
 ---
 # <a name="contextual-keywords-c-reference"></a>Parole chiave contestuali (Riferimenti per C#)
 Una parola chiave contestuale viene usata per conferire un significato particolare nel codice, ma non è una parola riservata in C#. Questa sezione presenta le seguenti parole chiave contestuali:  
   
-|Parola chiave|Descrizione|  
+|Parola chiave|Description|  
 |-------------|-----------------|  
 |[add](../../../csharp/language-reference/keywords/add.md)|Definisce una funzione di accesso eventi personalizzata che viene chiamata quando il codice client esegue la sottoscrizione all'evento.|  
 |[async](../../../csharp/language-reference/keywords/async.md)|Indica che il metodo specificato, l'espressione lambda o il metodo anonimo è asincrono.|  

@@ -1,5 +1,6 @@
 ---
-title: "Procedura: definire l'uguaglianza di valori per un tipo (Guida per programmatori C#)"
+title: "Procedura: Definire l'uguaglianza di valori per un tipo - Guida per programmatori C#"
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - overriding Equals method [C#]
@@ -8,14 +9,14 @@ helpviewer_keywords:
 - value equality [C#]
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
-ms.openlocfilehash: 8abcace9c648ba2132d2b6849ae1c9d347d6fd29
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a2d71994647e50afc8d343725e639b6e9d24831f
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126783"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53244427"
 ---
-# <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>Procedura: definire l'uguaglianza di valori per un tipo (Guida per programmatori C#)
+# <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>Procedura: Definire l'uguaglianza di valori per un tipo (Guida per programmatori C#)
 Quando si definisce una classe o uno struct, si decide se è opportuno creare una definizione personalizzata di uguaglianza di valore, o equivalenza, per il tipo. In genere, l'uguaglianza di valori viene implementata quando si prevede che oggetti del tipo vengano aggiunti a una raccolta, o quando lo scopo principale di tali oggetti consiste nell'archiviare un set di campi o di proprietà. È possibile basare la definizione di uguaglianza di valori su un confronto di tutti i campi e di tutte le proprietà nel tipo, oppure su un sottoinsieme. Ma in entrambi i casi e in entrambe le classi e gli struct, l'implementazione deve seguire le cinque garanzie di equivalenza:  
   
 1.  `x.Equals(x)` restituisce `true`. Questa viene denominata proprietà riflessiva.  
@@ -36,11 +37,11 @@ Quando si definisce una classe o uno struct, si decide se è opportuno creare un
   
 2.  Implementare l'interfaccia <xref:System.IEquatable%601?displayProperty=nameWithType> definendo un metodo `Equals` specifico per il tipo. È in questo passaggio che viene eseguito il confronto di equivalenza effettivo. Ad esempio, è possibile definire l'uguaglianza confrontando solo uno o due campi nel tipo. Non generare eccezioni da `Equals`. Solo per le classi: questo metodo deve esaminare solo i campi che vengono dichiarati nella classe. Deve chiamare `base.Equals` per esaminare i campi presenti nella classe di base. Non eseguire questa operazione se il tipo eredita direttamente da <xref:System.Object>, perché l'implementazione <xref:System.Object> di <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> esegue un controllo di uguaglianza dei riferimenti.  
   
-3.  Facoltativo ma consigliato: eseguire l'overload degli operatori [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) e [!=](../../../csharp/language-reference/operators/not-equal-operator.md).  
+3.  Facoltativo ma consigliato: eseguire l'overload degli operatori [ == ](../../../csharp/language-reference/operators/equality-comparison-operator.md) e [! =](../../../csharp/language-reference/operators/not-equal-operator.md).  
   
 4.  Eseguire l'override di <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType> in modo che due oggetti con uguaglianza di valori producano lo stesso codice hash.  
   
-5.  Facoltativo: per supportare le definizioni di "maggiore di" o "minore di", implementare l'interfaccia <xref:System.IComparable%601> per il tipo e sottoporre anche a overload gli operatori [<=](../../../csharp/language-reference/operators/less-than-equal-operator.md) e [>=](../../../csharp/language-reference/operators/greater-than-equal-operator.md).  
+5.  Facoltative: per supportare le definizioni di "maggiore di" o "minore di", implementare l'interfaccia <xref:System.IComparable%601> per il tipo e sottoporre anche a overload gli operatori [<=](../../../csharp/language-reference/operators/less-than-equal-operator.md) e [>=](../../../csharp/language-reference/operators/greater-than-equal-operator.md).  
   
  Nel primo esempio che segue viene illustrata l'implementazione di una classe. Nel secondo esempio viene illustrata l'implementazione di uno struct.  
   

@@ -1,17 +1,18 @@
 ---
-title: Classi e metodi parziali (Guida per programmatori C#)
+title: Classi e metodi parziali - Guida per programmatori C#
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - partial methods [C#]
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-ms.openlocfilehash: 2975b9e79824560c711e96382a9ccc03bdc72810
-ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
+ms.openlocfilehash: 222a47989537f09fd78c4a3b17fa8c1a5478d73f
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "43521169"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53243465"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>Classi e metodi parziali (Guida per programmatori C#)
 È possibile suddividere la definizione di una [classe](../../../csharp/language-reference/keywords/class.md) di uno [struct](../../../csharp/language-reference/keywords/struct.md), di un'[interfaccia](../../../csharp/language-reference/keywords/interface.md) o di un metodo tra due o più file di origine. Ogni file di origine contiene una sezione della definizione di tipo o metodo e tutte le parti vengono combinate al momento della compilazione dell'applicazione.  
@@ -109,7 +110,7 @@ ms.locfileid: "43521169"
   
 ## <a name="example-1"></a>Esempio 1  
   
-### <a name="description"></a>Descrizione  
+### <a name="description"></a>Description  
  Nell'esempio seguente i campi e il costruttore della classe `CoOrds` vengono dichiarati in una definizione parziale di classe, mentre il membro `PrintCoOrds` viene dichiarato in un'altra definizione parziale di classe.  
   
 ### <a name="code"></a>Codice  
@@ -117,7 +118,7 @@ ms.locfileid: "43521169"
   
 ## <a name="example-2"></a>Esempio 2  
   
-### <a name="description"></a>Descrizione  
+### <a name="description"></a>Description  
  L'esempio seguente dimostra che è anche possibile sviluppare struct e interfacce parziali.  
   
 ### <a name="code"></a>Codice  

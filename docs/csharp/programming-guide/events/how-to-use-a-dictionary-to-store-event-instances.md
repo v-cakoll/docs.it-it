@@ -1,17 +1,18 @@
 ---
-title: 'Procedura: utilizzare un dizionario per archiviare istanze di evento (Guida per programmatori C#)'
+title: 'Procedura: Usare un dizionario per archiviare istanze di evento - Guida per programmatori C#'
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - events [C#], storing instances in a Dictionary
 ms.assetid: 9512c64d-5aaf-40cd-b941-ca2a592f0064
-ms.openlocfilehash: c3a804ce1bf1f5ac8db47f0f0c1f37d1ca5f781b
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 819c81aed3a6f09a20e51285058dcc77749dd33a
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44213173"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53245142"
 ---
-# <a name="how-to-use-a-dictionary-to-store-event-instances-c-programming-guide"></a>Procedura: utilizzare un dizionario per archiviare istanze di evento (Guida per programmatori C#)
+# <a name="how-to-use-a-dictionary-to-store-event-instances-c-programming-guide"></a>Procedura: Usare un dizionario per archiviare istanze di evento (Guida per programmatori C#)
 È possibile usare `accessor-declarations` per esporre numerosi eventi senza allocare un campo per ogni evento, ma usando invece un dizionario per archiviare le istanze degli eventi. Ciò è utile solo se si hanno molti eventi, ma si prevede che la maggior parte di essi non verrà implementata.  
   
 ## <a name="example"></a>Esempio  

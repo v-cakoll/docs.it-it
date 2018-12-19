@@ -1,16 +1,17 @@
 ---
-title: Costruttori privati (Guida per programmatori C#)
+title: Costruttori privati - Guida per programmatori C#
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, private constructors
 - private constructors [C#]
 ms.assetid: 29eeaa7d-8d81-453c-94b9-0e2800172621
-ms.openlocfilehash: 5b387447046e4755287fc9f6a8813a19752799c2
-ms.sourcegitcommit: b5cd9d5d3b75a5537fc9ad8a3f085f0bb1845ee0
+ms.openlocfilehash: a0ff8f69f7725b40eaac01acef74857c2a99247c
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "50980716"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53240502"
 ---
 # <a name="private-constructors-c-programming-guide"></a>Costruttori privati (Guida per programmatori C#)
 Un costruttore privato è un costruttore di istanza speciale. Viene generalmente usato in classi contenenti solo membri statici. Se una classe ha uno o più costruttori privati ma non include alcun costruttore pubblico, le altre classi, ad eccezione di quelle annidate, non potranno creare istanze della classe. Ad esempio:  

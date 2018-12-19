@@ -1,5 +1,6 @@
 ---
-title: event (Riferimenti per C#)
+title: event - Riferimenti per C#
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - event
@@ -9,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - event keyword [C#]
 ms.assetid: 7858fd85-153b-4259-85d0-6aa13c35f174
-ms.openlocfilehash: 35a42692bc87da63c69d7ccbce1b49396a84f5a2
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: a0729324131c5b3d5c49618c715fc4081af40964
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44259701"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53240528"
 ---
 # <a name="event-c-reference"></a>event (Riferimenti per C#)
 La parola chiave `event` viene usata per dichiarare un evento in una classe autore.  
@@ -31,7 +32,7 @@ La parola chiave `event` viene usata per dichiarare un evento in una classe auto
 ## <a name="keywords-and-events"></a>Parole chiave ed eventi  
  Agli eventi si applicano le parole chiave seguenti.  
   
-|Parola chiave|Descrizione|Per altre informazioni|  
+|Parola chiave|Description|Per altre informazioni|  
 |-------------|-----------------|--------------------------|  
 |[static](../../../csharp/language-reference/keywords/static.md)|Rende l'evento disponibile per i chiamanti in qualsiasi momento, anche se non esiste alcuna istanza della classe.|[Classi statiche e membri di classi statiche](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)|  
 |[virtual](../../../csharp/language-reference/keywords/virtual.md)|Consente alle classi derivate di eseguire l'override del comportamento dell'evento tramite la parola chiave [override](../../../csharp/language-reference/keywords/override.md).|[Ereditarietà](../../../csharp/programming-guide/classes-and-structs/inheritance.md)|  

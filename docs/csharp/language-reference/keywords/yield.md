@@ -1,5 +1,6 @@
 ---
-title: yield (Riferimenti per C#)
+title: yield - Riferimenti per C#
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - yield
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - yield keyword [C#]
 ms.assetid: 1089194f-9e53-46a2-8642-53ccbe9d414d
-ms.openlocfilehash: be93b91ceaecdcf00029be57f07b9237a60c07b9
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: 7b718417fc421b9024e023964c4f29478b52c4ca
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261541"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239277"
 ---
 # <a name="yield-c-reference"></a>yield (Riferimenti per C#)
 Quando si usa la [parola chiave contestuale](../../../csharp/language-reference/keywords/index.md#contextual-keywords) `yield` in un'istruzione, si indica che il metodo, l'operatore o la funzione di accesso `get` in cui appare è un iteratore. Utilizzando `yield` per definire un iteratore, si elimina la necessità di una classe esplicita aggiuntiva (la classe che contiene lo stato per un'enumerazione, vedere <xref:System.Collections.Generic.IEnumerator%601> per un esempio) quando si implementano i modelli <xref:System.Collections.IEnumerable> e di <xref:System.Collections.IEnumerator> per un tipo di raccolta personalizzato.  

@@ -1,16 +1,17 @@
 ---
-title: Polimorfismo (Guida per programmatori C#)
+title: Polimorfismo - Guida per programmatori C#
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-ms.openlocfilehash: 25192d57955d15c5707816ee6c4a515893891507
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 489fdf87f973de6137587fc2280ef0fa72ab78ba
+ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43523393"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53286455"
 ---
 # <a name="polymorphism-c-programming-guide"></a>Polimorfismo (Guida per programmatori C#)
 Il polimorfismo è spesso definito il terzo pilastro della programmazione orientata a oggetti, dopo l'incapsulamento e l'ereditarietà. Polimorfismo è una parola che deriva dal greco e significa "multiforme". Il polimorfismo presenta due aspetti distinti:  
@@ -96,8 +97,7 @@ Il polimorfismo è spesso definito il terzo pilastro della programmazione orient
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
 - [Ereditarietà](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
 - [Classi e membri delle classi astratte e sealed](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)  
 - [Metodi](../../../csharp/programming-guide/classes-and-structs/methods.md)  

@@ -1,5 +1,6 @@
 ---
-title: Tabelle di riferimento per i tipi (Riferimenti per C#)
+title: Tabelle di riferimento per i tipi - Riferimenti per C#
+ms.custom: seodec18
 ms.date: 09/21/2018
 f1_keywords:
 - cs.referencetables
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - types [C#], reference tables
 - C# language, data types
 ms.assetid: 1d2b6a9b-31fd-4fa6-a7b2-bfd9c806ac8a
-ms.openlocfilehash: f75a1cf0b118becd940bd1aa8ac66550d0852773
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: ef924c6dd092947f0ec05c770a2cfbe12f48000a
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035844"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239402"
 ---
 # <a name="reference-tables-for-types-c-reference"></a>Tabelle di riferimento per i tipi (Riferimenti per C#)
 
 Nelle tabelle di riferimento seguenti sono riepilogati i tipi di C#:
 
-|Table|Descrizione|
+|Table|Description|
 |---------|---------|
 |[Tipi incorporati](built-in-types-table.md)|Elenca i tipi incorporati di C# e tipi .NET corrispondenti.|
 |[Tipi integrali](integral-types-table.md)|Fornisce una panoramica dei tipi integrali.|

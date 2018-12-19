@@ -1,5 +1,6 @@
 ---
-title: Utilizzo degli spazi dei nomi (Guida per programmatori C#)
+title: Uso degli spazi dei nomi - Guida per programmatori C#
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - cs.names
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - fully qualified names [C#]
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
-ms.openlocfilehash: 81876d1818a6e82764e4aea0ae2b6f9e091f0ba3
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: d29de118e928522dcc3a4b4ab32fe2d2c4d1f2f9
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123397"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53235782"
 ---
 # <a name="using-namespaces-c-programming-guide"></a>Utilizzo degli spazi dei nomi (Guida per programmatori C#)
 Gli spazi dei nomi vengono usati frequentemente nei programmi C# in due modi. In primo luogo, le classi di .NET Framework usano gli spazi dei nomi per organizzare numerose classi. In secondo luogo, dichiarando i propri spazi dei nomi è possibile controllare l'ambito dei nomi di classi e metodi nei progetti di programmazione più grandi.  
@@ -85,7 +86,7 @@ Gli spazi dei nomi vengono usati frequentemente nei programmi C# in due modi. In
   
  Questo metodo funziona, ma se un tipo denominato `Alias` dovesse essere introdotto successivamente, `Alias.` sarebbe associato a tale tipo. L'uso di `Alias::Exception` assicura che `Alias` sia trattato come un alias di spazio dei nomi e non venga erroneamente considerato un tipo.  
   
- Per altre informazioni sull'alias `global`, vedere l'argomento [Procedura: utilizzare l'alias dello spazio dei nomi globale](../../../csharp/programming-guide/namespaces/how-to-use-the-global-namespace-alias.md).  
+ Per altre informazioni sull'alias `global`, vedere l'argomento [Procedura: Usare l'alias dello spazio dei nomi globale](../../../csharp/programming-guide/namespaces/how-to-use-the-global-namespace-alias.md).  
   
 ## <a name="see-also"></a>Vedere anche
 
@@ -93,5 +94,5 @@ Gli spazi dei nomi vengono usati frequentemente nei programmi C# in due modi. In
 - [Spazi dei nomi](../../../csharp/programming-guide/namespaces/index.md)  
 - [Parole chiave per gli spazi dei nomi](../../../csharp/language-reference/keywords/namespace-keywords.md)  
 - [. (operatore)](../../../csharp/language-reference/operators/member-access-operator.md)  
-- [Operatore ::](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
+- [:: (operatore)](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
 - [extern](../../../csharp/language-reference/keywords/extern.md)

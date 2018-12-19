@@ -1,5 +1,6 @@
 ---
-title: Hello World -- Il primo programma (Guida per programmatori C#)
+title: Hello World -- Il primo programma - Guida per programmatori C#
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - cs.program
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - examples [C#], Hello World
 - Hello World example [C#]
 ms.assetid: 6493182a-b0b6-4539-a719-518a168cb730
-ms.openlocfilehash: 90f0ec6b88a2822cb3429948681c76c70f3d3f18
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 40c869d267dcabf4bd209b2ee86085f899a93231
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45593049"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236388"
 ---
 # <a name="hello-world----your-first-program-c-programming-guide"></a>Hello World -- Il primo programma (Guida per programmatori C#)
 La procedura seguente crea una versione C# del programma "Hello World!" tradizionale. Il programma visualizza la stringa `Hello World!`  
@@ -110,7 +111,7 @@ La procedura seguente crea una versione C# del programma "Hello World!" tradizio
   
     -   Abilitare le compilazioni da riga di comando da una finestra del prompt dei comandi standard.  
   
-         Vedere [How to: Set Environment Variables for the Visual Studio Command Line](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md) (Procedura: Impostare le variabili di ambiente per la riga di comando di Visual Studio).  
+         Vedere [Procedura: Impostare le variabili di ambiente per la riga di comando di Visual Studio](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md).  
   
 3.  Nella finestra del prompt dei comandi passare alla cartella che contiene il file `Hello.cs`.  
   
@@ -134,4 +135,4 @@ La procedura seguente crea una versione C# del programma "Hello World!" tradizio
 - [\<Applicazioni di esempio di C#](https://msdn.microsoft.com/library/9a9d7aaa-51d3-4224-b564-95409b0f3e15)  
 - [Riferimenti per C#](../../../csharp/language-reference/index.md)  
 - [Main() e argomenti della riga di comando](../../../csharp/programming-guide/main-and-command-args/index.md)  
-- [Getting Started with Visual C# and Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic) (Introduzione a Visual C# e Visual Basic)
+- [Guida introduttiva a Visual C# e Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)

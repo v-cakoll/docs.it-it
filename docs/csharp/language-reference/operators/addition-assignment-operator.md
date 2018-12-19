@@ -1,5 +1,6 @@
 ---
-title: Operatore += (Riferimenti per C#)
+title: Operatore += - Riferimenti per C#
+ms.custom: seodec18
 ms.date: 10/29/2018
 f1_keywords:
 - +=_CSharpKeyword
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - addition assignment operator (+=) [C#]
 - event subscription [C#]
 ms.assetid: 9cdf97e6-331d-492b-85e1-3ec3171484e9
-ms.openlocfilehash: ac9330e283cb58ae4e0ee7b644aa2c22bdf64c46
-ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
+ms.openlocfilehash: 5d48f2fe53a9bb6f781f8d35f1e0983bcaa30f88
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "50192031"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53240931"
 ---
 # <a name="-operator-c-reference"></a>Operatore += (Riferimenti per C#)
 
@@ -35,7 +36,7 @@ con la differenza che `x` viene valutato una sola volta.
   
 Per i tipi numerici, l'[operatore addizione](addition-operator.md) `+` calcola la somma dei due operandi. Quando uno o entrambi gli operandi sono di tipo [stringa](../keywords/string.md), concatena le rappresentazioni di stringa dei due operandi. Per i tipi delegati, l'operatore `+` restituisce una nuova istanza di delegato che è una combinazione dei due operandi.
 
-È anche possibile usare l'operatore `+=` per specificare un metodo del gestore eventi quando si sottoscrive un [evento](../keywords/event.md). Per altre informazioni, vedere [Procedura: sottoscrivere e annullare la sottoscrizione di eventi](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).
+È anche possibile usare l'operatore `+=` per specificare un metodo del gestore eventi quando si sottoscrive un [evento](../keywords/event.md). Per altre informazioni, vedere [Procedura: Eseguire e annullare la sottoscrizione a eventi](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).
 
 Nell'esempio seguente viene illustrato l'uso dell'operatore `+=`:
 

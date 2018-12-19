@@ -1,5 +1,6 @@
 ---
-title: $ - interpolazione di stringhe (Riferimenti per C#)
+title: $ - interpolazione di stringhe - Riferimenti per C#
+ms.custom: seodec18
 description: L'interpolazione di stringhe offro una sintassi più leggibile e pratica per la formattazione dell'output di tipo stringa rispetto alla formattazione composita tradizionale.
 ms.date: 03/26/2018
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - interpolated string [C#]
 author: pkulikov
 ms.author: ronpet
-ms.openlocfilehash: 2758a724b7e1e410fd1e1ba262db451b7f994164
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b6cac2b31f9ec1fd4775d4ed2ec2e9382502a0cc
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50196989"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53244804"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ - interpolazione di stringhe (Riferimenti per C#)
 
@@ -39,7 +40,7 @@ La struttura di un elemento con un'espressione interpolata è la seguente:
 
 Gli elementi tra parentesi quadre sono facoltativi. La tabella seguente descrive i singoli elementi:
 
-|Elemento|Descrizione|
+|Elemento|Description|
 |-------------|-----------------|
 |`interpolatedExpression`|Espressione che produce un risultato da formattare. La rappresentazione stringa del risultato `null` è <xref:System.String.Empty?displayProperty=nameWithType>.|
 |`alignment`|Espressione costante il cui valore definisce il numero minimo di caratteri della rappresentazione stringa del risultato dell'espressione interpolata. Se è positivo, la rappresentazione stringa è allineata a destra; se è negativo la rappresentazione stringa è allineata a sinistra. Per altre informazioni, vedere [Componente di allineamento](../../../standard/base-types/composite-formatting.md#alignment-component).|

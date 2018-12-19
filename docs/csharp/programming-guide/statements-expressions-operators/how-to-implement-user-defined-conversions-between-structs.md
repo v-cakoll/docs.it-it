@@ -1,17 +1,18 @@
 ---
-title: "Procedura: implementare conversioni tra struct definite dall'utente (Guida per programmatori C#)"
+title: "Procedura: Implementare conversioni tra struct definite dall'utente - Guida per programmatori C#"
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - user-defined conversions [C#]
 ms.assetid: 97839aef-8fbc-40d5-9769-6b569bc2710b
-ms.openlocfilehash: cff85d60c1b59f4d1ca028f8fc02fee5728fa3d6
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 85345203982679c0ab8dc9a6ae899312204c3230
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46696652"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241574"
 ---
-# <a name="how-to-implement-user-defined-conversions-between-structs-c-programming-guide"></a>Procedura: implementare conversioni tra struct definite dall'utente (Guida per programmatori C#)
+# <a name="how-to-implement-user-defined-conversions-between-structs-c-programming-guide"></a>Procedura: Implementare conversioni tra struct definite dall'utente (Guida per programmatori C#)
 Questo esempio definisce due struct, `RomanNumeral` e `BinaryNumeral`, e illustra le conversioni tra di loro.  
   
 ## <a name="example"></a>Esempio  

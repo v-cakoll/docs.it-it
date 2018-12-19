@@ -1,13 +1,14 @@
 ---
-title: protected internal (Riferimenti per C#)
+title: protected internal - Riferimenti per C#
+ms.custom: seodec18
 ms.date: 11/15/2017
 author: sputier
-ms.openlocfilehash: e5763830a29d4e627dbb8efa0e86fca536bbb26c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 09685e38e879de787b0f6bab8c189a8815433904
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193773"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53238650"
 ---
 # <a name="protected-internal-c-reference"></a>protected internal (Riferimenti per C#)
 

@@ -1,15 +1,16 @@
 ---
-title: Modificatore del parametro in (Riferimenti per C#)
+title: Modificatore del parametro in - Riferimenti per C#
+ms.custom: seodec18
 ms.date: 03/06/2018
 helpviewer_keywords:
 - parameters [C#], in
 - in parameters [C#]
-ms.openlocfilehash: 199d2d54a1937b9982131b8cc7f1c777f656d7a9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d08b135c92cab176e402fec73999083fe4309362
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199409"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236297"
 ---
 # <a name="in-parameter-modifier-c-reference"></a>Modificatore del parametro in (Riferimenti per C#)
 
@@ -54,7 +55,7 @@ Specificare `in` per gli argomenti presso il sito di chiamata è in genere facol
 
 In primo luogo, se si specifica `in` presso il sito di chiamata si impone al compilatore di selezionare un metodo definito con un parametro `in` corrispondente. In caso contrario, se due metodi si differenziano solo per la presenza di `in`, l'overload per valore rappresenta una corrispondenza migliore.
 
-In secondo luogo, se si specifica `in` si dichiara l'intenzione di passare un argomento per riferimento. L'argomento usato con `in` deve rappresentare una posizione a cui sia possibile fare riferimento direttamente. Sono valide le stesse regole generali di `out` e `ref`: non è possibile usare costanti, proprietà ordinarie o altre espressioni che producono valori. In caso contrario, l'omissione di `in` presso il sito di chiamata informa il compilatore che è consentito creare una variabile temporanea da passare per riferimento di sola lettura al metodo. Il compilatore crea una variabile temporanea per superare diverse restrizioni degli argomenti `in`:
+In secondo luogo, se si specifica `in` si dichiara l'intenzione di passare un argomento per riferimento. L'argomento usato con `in` deve rappresentare una posizione a cui sia possibile fare riferimento direttamente. Sono valide le stesse regole generali applicabili agli argomenti `out` e `ref`: non è possibile usare costanti, proprietà ordinarie o altre espressioni che producono valori. In caso contrario, l'omissione di `in` presso il sito di chiamata informa il compilatore che è consentito creare una variabile temporanea da passare per riferimento di sola lettura al metodo. Il compilatore crea una variabile temporanea per superare diverse restrizioni degli argomenti `in`:
 
 - Una variabile temporanea consente costanti in fase di compilazione come parametri `in`.
 - Una variabile temporanea consente proprietà o altre espressioni per i parametri `in`.

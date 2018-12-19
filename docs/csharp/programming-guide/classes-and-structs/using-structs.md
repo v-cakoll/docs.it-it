@@ -1,15 +1,16 @@
 ---
-title: Utilizzo di struct (Guida per programmatori C#)
+title: Uso di struct - Guida per programmatori C#
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - structs [C#], using
 ms.assetid: cea4a459-9eb9-442b-8d08-490e0797ba38
-ms.openlocfilehash: ed21bf44ebcc84a20bb228f9ba152e7348abc015
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b1e1405941cf9076e88aee5689ed933724727bb2
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521437"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53237103"
 ---
 # <a name="using-structs-c-programming-guide"></a>Utilizzo di struct (Guida per programmatori C#)
 Il tipo `struct` è adatto a rappresentare oggetti leggeri come `Point`, `Rectangle`e `Color`. Sebbene sia altrettanto conveniente rappresentare un punto con una [classe](../../../csharp/language-reference/keywords/class.md) con [proprietà implementate automaticamente](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md), lo [struct](../../../csharp/language-reference/keywords/struct.md) potrebbe essere più efficiente in alcuni scenari. Ad esempio, se si dichiara una matrice di 1000 oggetti `Point` , verrà allocata memoria aggiuntiva per fare riferimento a ogni oggetto. In questo caso, lo struct risulterebbe meno costoso. Dal momento che [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] contiene un oggetto denominato <xref:System.Drawing.Point>, lo struct in questo esempio è invece denominato "CoOrds".  
@@ -32,7 +33,7 @@ Il tipo `struct` è adatto a rappresentare oggetti leggeri come `Point`, `Rectan
   
 ## <a name="example-1"></a>Esempio 1  
   
-### <a name="description"></a>Descrizione  
+### <a name="description"></a>Description  
  Questo esempio mostra l'inizializzazione `struct` tramite costruttori con parametri e valore predefinito.  
   
 ### <a name="code"></a>Codice  
@@ -42,7 +43,7 @@ Il tipo `struct` è adatto a rappresentare oggetti leggeri come `Point`, `Rectan
   
 ## <a name="example-2"></a>Esempio 2  
   
-### <a name="description"></a>Descrizione  
+### <a name="description"></a>Description  
  Questo esempio illustra una funzionalità univoca per struct. Crea un oggetto CoOrds senza usare l'operatore `new` . Se si sostituisce la parola `struct` con la parola `class`, il programma non verrà compilato.  
   
 ### <a name="code"></a>Codice  

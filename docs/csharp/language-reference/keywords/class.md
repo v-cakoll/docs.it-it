@@ -1,5 +1,6 @@
 ---
-title: Parola chiave class (Riferimenti per C#)
+title: Parola chiave class - Riferimenti per C#
+ms.custom: seodec18
 ms.date: 07/18/2017
 f1_keywords:
 - class_CSharpKeyword
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - class keyword [C#]
 ms.assetid: b95d8815-de18-4c3f-a8cc-a0a53bdf8690
-ms.openlocfilehash: 3f30fb473b486efc8381faa9076b98763935b0ae
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: d436dee14280d86062834ac131bbe4775705d748
+ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086064"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53286494"
 ---
 # <a name="class-c-reference"></a>class (Riferimenti per C#)
 
@@ -93,7 +94,7 @@ L'accesso ai membri private di `Child` da `Main` sarebbe possibile solo se `Main
 
 I tipi dichiarati all'interno di una classe senza un modificatore di accesso vengono impostati automaticamente a `private`; in tal modo i membri dei dati in questo esempio sarebbero sempre `private`, anche se la parola chiave venisse rimossa.
 
-Infine, si noti che per l'oggetto creato usando il costruttore predefinito (`child3`), il campo age (età) è stato inizializzato su zero per impostazione predefinita.
+Infine, si noti che per l'oggetto creato usando il costruttore predefinito (`child3`), il campo `age` è stato inizializzato su zero per impostazione predefinita.
 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#
 
