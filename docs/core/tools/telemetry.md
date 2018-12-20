@@ -42,8 +42,8 @@ La funzionalità di telemetria di .NET Core SDK è abilitata per impostazione pr
 La funzionalità raccoglie i dati seguenti:
 
 - Il timestamp della chiamata&#8224;
-- Comando richiamato (ad esempio, "build") & #8224;
-- Indirizzo IP di tre ottetti usato per determinare la posizione geografica& #8224;
+- Comando richiamato (ad esempio, "build")&#8224;
+- Indirizzo IP di tre ottetti usato per determinare la posizione geografica&#8224;
 - `ExitCode` del comando
 - Test Runner usato (per i progetti di test)
 - Sistema operativo e relativa versione&#8224;
