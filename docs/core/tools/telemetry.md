@@ -71,7 +71,7 @@ I dati pubblicati sono disponibili su base trimestrale e sono elencati in [dati 
 - Timestamp
 - Occorrenze&#8224;
 - Comando
-- Geografia& #8225;
+- Geografia&#8225;
 - OSFamily
 - IDruntime
 - OSVersion
