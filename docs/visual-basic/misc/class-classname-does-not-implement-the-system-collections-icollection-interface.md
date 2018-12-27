@@ -1,18 +1,18 @@
 ---
-title: Classe &#39; &lt;classname&gt; &#39; non implementa l'interfaccia ICollection
+title: Della classe&lt;classname&gt;' non implementa l'interfaccia System.Collections.ICollection
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID100
 ms.assetid: cc73bbc6-a283-41e0-b750-61ef553e83b3
-ms.openlocfilehash: 8df1c1c3d79eedc240207397223b5699d3298266
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1e384bedecf41400e89d7af8cc35b0363f1a3bc6
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33637387"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53784144"
 ---
-# <a name="class-39ltclassnamegt39-does-not-implement-the-systemcollectionsicollection-interface"></a>Classe &#39; &lt;classname&gt; &#39; non implementa l'interfaccia ICollection
-La classe non implementa l'interfaccia `System.Collections.ICollection` , che definisce dimensioni, enumeratori e metodi di sincronizzazione per tutte le raccolte. Potrebbe essere necessario reinstallare Visual Studio.  
+# <a name="class-ltclassnamegt-does-not-implement-the-systemcollectionsicollection-interface"></a>Della classe&lt;classname&gt;' non implementa l'interfaccia System.Collections.ICollection
+La classe non implementa l'interfaccia `System.Collections.ICollection` , che definisce dimensioni, enumeratori e metodi di sincronizzazione per tutte le raccolte. È necessario reinstallare Visual Studio.  
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
