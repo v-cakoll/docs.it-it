@@ -1,15 +1,15 @@
 ---
-title: 'Campi espliciti: parola chiave val (F#)'
-description: Informazioni su F# 'val' parola chiave, che viene usata per dichiarare un percorso per archiviare un valore in un tipo classe o struttura senza inizializzare il tipo.
+title: 'Campi espliciti: Val (parola chiave)'
+description: Scopri la F# parola chiave 'val', che viene usata per dichiarare un percorso per archiviare un valore in un tipo classe o struttura senza inizializzare il tipo.
 ms.date: 05/16/2016
-ms.openlocfilehash: 9cd06f7e90192be79490dd0ff67f118cce4339c3
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 492541f6eeba94d2177e92de935fa524b9def567
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45746381"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53773627"
 ---
-# <a name="explicit-fields-the-val-keyword"></a>Campi espliciti: parola chiave val
+# <a name="explicit-fields-the-val-keyword"></a>Campi espliciti: Val (parola chiave)
 
 La parola chiave `val` viene usata per dichiarare un percorso per archiviare un valore in un tipo di classe o struttura senza inizializzarlo. Percorsi di archiviazione dichiarati in questo modo vengono chiamati *i campi espliciti*. Un altro uso della parola chiave `val` è in combinazione con la parola chiave `member` per dichiarare una proprietà implementata automaticamente. Per altre informazioni sulle proprietà implementate automaticamente, vedere [proprietà](properties.md).
 
@@ -64,6 +64,10 @@ Nel codice seguente viene illustrato come usare i campi espliciti in una struttu
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet6703.fs)]
 
 L'output è `11 xyz`.
+
+**Prestare attenzione**, se si desidera inizializzare la struttura con `mutable` campi senza `mutable` (parola chiave), le assegnazioni delle funzionalità sarà disponibile una copia della struttura che verrà eliminata subito dopo l'assegnazione. Non modifica pertanto la struttura.
+
+[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet6704.fs)]
 
 I campi espliciti non sono destinati all'uso di routine. In generale, quando possibile è consigliabile usare un'associazione `let` in una classe anziché un campo esplicito. I campi espliciti sono utili in alcuni scenari di interoperabilità, ad esempio quando è necessario definire una struttura che verrà usata in una chiamata platform invoke per un'API nativa o in scenari di interoperabilità COM. Per altre informazioni, vedere [funzioni esterne](../functions/external-functions.md). Un'altra situazione in cui un campo esplicito potrebbe essere necessario è quando si lavora con un generatore di codice F# che genera classi senza un costruttore primario. I campi espliciti sono utili anche per le variabili di thread statiche o per costrutti simili. Per altre informazioni, vedere `System.ThreadStaticAttribute`.
 

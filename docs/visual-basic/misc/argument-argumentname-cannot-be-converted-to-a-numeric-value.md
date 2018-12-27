@@ -1,17 +1,17 @@
 ---
-title: Argomento &#39; &lt;NomeArgomento&gt; &#39; non può essere convertito in un valore numerico
+title: Argomento '&lt;NomeArgomento&gt;' non può essere convertito in valore numerico
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgumentNotNumeric1
 ms.assetid: 1901c4d4-abbe-462f-a450-5d907d485e94
-ms.openlocfilehash: daf57db6fbb00ca2110128ec7d3a7d161edfcf55
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7cfa4dd85fb0dc3eac582a1c6f8e74628e874381
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33598956"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53770533"
 ---
-# <a name="argument-39ltargumentnamegt39-cannot-be-converted-to-a-numeric-value"></a>Argomento &#39; &lt;NomeArgomento&gt; &#39; non può essere convertito in un valore numerico
+# <a name="argument-ltargumentnamegt-cannot-be-converted-to-a-numeric-value"></a>Argomento '&lt;NomeArgomento&gt;' non può essere convertito in valore numerico
 È stata tentata una conversione di una variabile, ad esempio una stringa, in un valore numerico.  
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  

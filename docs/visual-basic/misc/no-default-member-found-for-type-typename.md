@@ -1,17 +1,17 @@
 ---
-title: Nessun membro predefinito trovato per il tipo &#39; &lt;typename&gt;&#39;
+title: Nessun membro predefinito trovato per il tipo '&lt;typename&gt;'
 ms.date: 07/20/2015
 f1_keywords:
 - vbrMissingMember_NoDefaultMemberFound1
 ms.assetid: 1869ecb8-7c6a-422f-86ac-5da96c6adc66
-ms.openlocfilehash: 89d03a9c3aa760e4e9dd26ba652bf80437fb5152
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f5829476642573b8dc250a1e29b7a21471014e97
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33637504"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53770611"
 ---
-# <a name="no-default-member-found-for-type-39lttypenamegt39"></a>Nessun membro predefinito trovato per il tipo &#39; &lt;typename&gt;&#39;
+# <a name="no-default-member-found-for-type-lttypenamegt"></a>Nessun membro predefinito trovato per il tipo '&lt;typename&gt;'
 Si è provato a effettuare una chiamata `Get` o `Set` di indice ad associazione tardiva.  
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  

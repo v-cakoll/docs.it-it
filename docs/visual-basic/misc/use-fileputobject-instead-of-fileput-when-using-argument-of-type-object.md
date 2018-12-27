@@ -1,17 +1,18 @@
 ---
-title: Utilizzare &#39;FilePutObject&#39; anziché &#39;FilePut&#39; quando si usano argomenti di tipo &#39;oggetto&#39;
+title: Quando si usano argomenti di tipo 'Object', utilizzare 'FilePutObject' anziché 'FilePut'
 ms.date: 07/20/2015
 f1_keywords:
 - vbrUseFilePutObject
 ms.assetid: d207b9b7-5898-4c13-8b03-9feefac5f726
-ms.openlocfilehash: 529352d98c175981c20861205ce04c8a2ebcdca9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: df7d7c54992984bcb1684e41f60ae8361a3aed03
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53774225"
 ---
-# <a name="use-39fileputobject39-instead-of-39fileput39-when-using-argument-of-type-39object39"></a>Utilizzare &#39;FilePutObject&#39; anziché &#39;FilePut&#39; quando si usano argomenti di tipo &#39;oggetto&#39;
-Il `FilePut` metodo include un argomento di tipo `Object`. Per evitare ambiguità, è opportuno usare`FilePutObject` invece di `FilePut` .  
+# <a name="use-fileputobject-instead-of-fileput-when-using-argument-of-type-object"></a>Quando si usano argomenti di tipo 'Object', utilizzare 'FilePutObject' anziché 'FilePut'
+Il metodo `FilePut` include un argomento di tipo `Object`. Per evitare ambiguità, è opportuno usare`FilePutObject` invece di `FilePut` .  
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
