@@ -1,13 +1,13 @@
 ---
-title: Identificatori di riga, file e percorso di origine (F#)
-description: Informazioni su come utilizzare F# identificatore valori predefiniti che consentono di accedere il numero di riga di origine, directory e nome file del codice.
+title: Identificatori di riga, di file e di percorso di origine
+description: Informazioni su come usare predefinito F# valori di identificatore che consentono di accedere all'origine della riga numero, directory e nome file del codice.
 ms.date: 05/16/2016
-ms.openlocfilehash: 14f710d1412c3420ec627dc30216ba2e89f16bcd
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 4b145fe1fe20e3d7f868558e33bab26204fb0125
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43865127"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53656011"
 ---
 # <a name="source-line-file-and-path-identifiers"></a>Identificatori di riga, di file e di percorso di origine
 
@@ -25,13 +25,14 @@ __SOURCE_FILE__
 
 Ognuno di questi valori ha tipo `string`.
 
-La tabella seguente riepiloga la riga di codice sorgente, file e gli identificatori di percorso che sono disponibili in F#. Questi identificatori non sono le macro del preprocessore; si tratta di valori predefiniti che sono riconosciuti dal compilatore.
+La tabella seguente riepiloga gli identificatori di riga, file e percorso di origine disponibili in F#. Questi identificatori non sono le macro del preprocessore; si tratta di valori predefiniti che sono riconosciuti dal compilatore.
 
 |Identificatore predefinito|Descrizione|
 |---------------------|-----------|
 |`__LINE__`|Restituisce il numero di riga corrente, prendere in considerazione `#line` direttive.|
 |`__SOURCE_DIRECTORY__`|Restituisce il percorso corrente completo della directory di origine, prendere in considerazione `#line` direttive.|
 |`__SOURCE_FILE__`|Restituisce il nome di file di origine corrente e il relativo percorso, prendere in considerazione `#line` direttive.|
+
 Per altre informazioni sul `#line` direttiva, vedere [direttive del compilatore](compiler-directives.md).
 
 ## <a name="example"></a>Esempio

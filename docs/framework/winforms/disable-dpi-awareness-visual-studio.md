@@ -1,17 +1,17 @@
 ---
 title: Disabilitare la compatibilità con DPI in Visual Studio
 description: Descrive le limitazioni di progettazione form di Windows su schermi HDPI e su come eseguire Visual Studio come un processo non compatibili con DPI.
-ms.date: 08/14/2018
+ms.date: 12/17/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-designers
 author: gewarren
 ms.author: gewarren
-ms.openlocfilehash: 2d3466476c33a3e5faa8be96d63f1d11442c5d70
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 0820450fb9ae257cba87b3055ea1dde91112b19e
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151265"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53655998"
 ---
 # <a name="disable-dpi-awareness-in-visual-studio"></a>Disabilitare la compatibilità con DPI in Visual Studio
 
@@ -29,7 +29,7 @@ In Visual Studio 2017 versione 15,8 e versioni successive, quando si apre un mod
 
 Legge il messaggio **ridimensionamento dello schermo principale è impostato su 200% (192 dpi). Ciò potrebbe causare problemi di rendering nella finestra di progettazione.**
 
-Se si non funzionano nella finestra di progettazione e non essere necessario modificare il layout del form, è possibile ignorare la barra informativa e continuare a lavorare nell'editor del codice o in altri tipi di finestre di progettazione. Solo le **finestra di progettazione Windows Form** è interessato. Se è necessario lavorare nel **finestra di progettazione Windows Form**, nella sezione successiva consente [risolvere il problema](#to-resolve-the-problem).
+Se si non funzionano nella finestra di progettazione e non essere necessario modificare il layout del form, è possibile ignorare la barra informativa e continuare a lavorare nell'editor del codice o in altri tipi di finestre di progettazione. (È anche possibile [disabilitare le notifiche](#disable-notifications) in modo che la barra informativa non vengono ancora visualizzati.) Solo le **finestra di progettazione Windows Form** è interessato. Se è necessario lavorare nel **finestra di progettazione Windows Form**, nella sezione successiva consente [risolvere il problema](#to-resolve-the-problem).
 
 ## <a name="to-resolve-the-problem"></a>Per risolvere il problema
 
@@ -68,6 +68,16 @@ Visual Studio è possibile contrassegnare come non compatibili con DPI modifican
 Per impostare la visualizzazione del ridimensionamento di impostazione al 100% in Windows 10, digitare **impostazioni di visualizzazione** nell'attività della casella di ricerca e quindi selezionare **Modifica impostazioni dello schermo**. Nel **le impostazioni** impostare nella finestra **modificare le dimensioni del testo, App e altri elementi** al **100%**.
 
 Impostazione dello schermo al 100% la scalabilità può essere inaccettabile, poiché l'interfaccia utente potrebbe rendere troppo piccolo per essere utilizzabile.
+
+## <a name="disable-notifications"></a>Disabilitare le notifiche
+
+È possibile scegliere di non ricevere una notifica di DPI scalabilità problemi in Visual Studio. Si potrebbe voler disabilitare le notifiche se non sono in uso nella finestra di progettazione, ad esempio.
+
+Per disabilitare le notifiche, scegliere **degli strumenti** > **opzioni** per aprire la **opzioni** finestra di dialogo. Quindi, scegliere **finestra di progettazione Windows Form** > **generali**e impostare **le notifiche di ridimensionamento DPI** per **False**.
+
+![Opzione di notifiche di Ridimensionamento in Visual Studio](media/disable-dpi-awareness-visual-studio/notifications-option.png)
+
+Se si desidera abilitare nuovamente in un secondo momento le notifiche di ridimensionamento, impostare la proprietà su **True**.
 
 ## <a name="troubleshoot"></a>Risolvere i problemi
 

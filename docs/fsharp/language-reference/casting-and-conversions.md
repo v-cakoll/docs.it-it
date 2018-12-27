@@ -1,13 +1,13 @@
 ---
-title: Cast e conversioni (F#)
-description: Informazioni su come il linguaggio di programmazione F# offre operatori di conversione per le conversioni aritmetiche tra vari tipi primitivi.
+title: Cast e conversioni
+description: Informazioni su come il F# linguaggio di programmazione offre operatori di conversione per le conversioni aritmetiche tra vari tipi primitivi.
 ms.date: 05/16/2016
-ms.openlocfilehash: aca1a2523130ee485a7e7c9a6a45a410904cb246
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 2a12d48106a267edfc67c9e7b3d3a7bd41d8261c
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45677930"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53655985"
 ---
 # <a name="casting-and-conversions-f"></a>Cast e conversioni (F#)
 
@@ -15,13 +15,13 @@ In questo argomento viene descritto il supporto per le conversioni di tipo in F#
 
 ## <a name="arithmetic-types"></a>Tipi aritmetici
 
-F# fornisce gli operatori di conversione per le conversioni aritmetiche tra vari tipi di primitivi, ad esempio tra valori interi e tipi a virgola mobile. Gli operatori di conversione integrale e char sono stati verificati e form unchecked; gli operatori della virgola mobile e `enum` operatore di conversione non lo sono. I moduli deselezionati vengono definiti in `Microsoft.FSharp.Core.Operators` e i moduli selezionati sono definiti in `Microsoft.FSharp.Core.Operators.Checked`. I moduli selezionati verificare la presenza di overflow e generano un'eccezione di runtime se il valore risultante supera i limiti del tipo di destinazione.
+F#Fornisce operatori di conversione per le conversioni aritmetiche tra vari tipi di primitivi, ad esempio tra valori interi e tipi a virgola mobile. Gli operatori di conversione integrale e char sono stati verificati e form unchecked; gli operatori della virgola mobile e `enum` operatore di conversione non lo sono. I moduli deselezionati vengono definiti in `Microsoft.FSharp.Core.Operators` e i moduli selezionati sono definiti in `Microsoft.FSharp.Core.Operators.Checked`. I moduli selezionati verificare la presenza di overflow e generano un'eccezione di runtime se il valore risultante supera i limiti del tipo di destinazione.
 
 Ognuno di questi operatori ha lo stesso nome come nome del tipo di destinazione. Ad esempio, nel codice seguente, in cui i tipi vengono annotati in modo esplicito, `byte` viene visualizzato con due significati diversi. La prima occorrenza è il tipo e il secondo è l'operatore di conversione.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4401.fs)]
 
-La tabella seguente illustra gli operatori di conversione definiti in F#.
+La tabella seguente illustra gli operatori di conversione definiti F#.
 
 |Operatore|Descrizione|
 |--------|-----------|
@@ -40,6 +40,7 @@ La tabella seguente illustra gli operatori di conversione definiti in F#.
 |`decimal`|Converti in `System.Decimal`.|
 |`char`|Converti in `System.Char`, un carattere Unicode.|
 |`enum`|Convertire in un tipo enumerato.|
+
 Oltre ai tipi primitivi incorporati, è possibile usare questi operatori con i tipi che implementano `op_Explicit` o `op_Implicit` metodi con firme appropriate. Ad esempio, il `int` operatore di conversione funziona con qualsiasi tipo che fornisce un metodo statico `op_Explicit` che accetta il tipo come parametro e restituisce `int`. Come eccezione speciale per la regola generale che non possono essere sottoposti a overload di metodi per il tipo restituito, è possibile farlo `op_Explicit` e `op_Implicit`.
 
 ## <a name="enumerated-types"></a>Tipi enumerati
@@ -67,7 +68,7 @@ Per altre informazioni, vedere [enumerazioni](enumerations.md).
 
 Conversione tra tipi in una gerarchia di oggetti è fondamentale per la programmazione orientata agli oggetti. Esistono due tipi di base delle conversioni: cast backup (l'upcast) e cast verso il basso (downcast). Eseguire il cast di una gerarchia indica che il cast da un riferimento all'oggetto derivato da un riferimento di oggetto di base. Un cast di questo tipo sarà sicuramente funzionante, purché sia la classe di base nella gerarchia di ereditarietà della classe derivata. Il downcast in una gerarchia, da un riferimento di oggetto di base a un riferimento all'oggetto derivato, ha esito positivo solo se l'oggetto è effettivamente un'istanza del tipo corretto di destinazione (derivato) o un tipo derivato dal tipo di destinazione.
 
-F# fornisce operatori per questi tipi di conversioni. Il `:>` viene eseguito il cast operatore nella gerarchia e `:?>` operatore viene eseguito il cast verso il basso della gerarchia.
+F#Fornisce operatori per questi tipi di conversioni. Il `:>` viene eseguito il cast operatore nella gerarchia e `:?>` operatore viene eseguito il cast verso il basso della gerarchia.
 
 ### <a name="upcasting"></a>Upcast
 

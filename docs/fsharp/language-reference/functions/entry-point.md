@@ -1,17 +1,17 @@
 ---
-title: Punto di ingresso (F#)
-description: Informazioni su come impostare il punto di ingresso a un programma F# che viene compilato come file eseguibile, in cui inizia formalmente l'esecuzione.
+title: Punto di ingresso
+description: Informazioni su come impostare il punto di ingresso un F# programma che viene compilato come file eseguibile, in cui inizia formalmente l'esecuzione.
 ms.date: 05/16/2016
-ms.openlocfilehash: 298500931d49c891a7a243295333df3a9f5d413e
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 915ab17b9a4fc7fd4d0ae344cb273b1d348a02f1
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45698390"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614349"
 ---
 # <a name="entry-point"></a>Punto di ingresso
 
-In questo argomento descrive il metodo utilizzato per impostare il punto di ingresso a un programma F#.
+In questo argomento viene descritto il metodo utilizzato per impostare il punto di ingresso un F# programma.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -24,7 +24,7 @@ let-function-binding
 
 Nella sintassi precedente, *associazione di funzione let* è la definizione di una funzione in un `let` associazione.
 
-Il punto di ingresso a un programma che viene compilato come file eseguibile è dove formalmente inizia l'esecuzione. È possibile specificare il punto di ingresso a un'applicazione F# applicando la `EntryPoint` dell'attributo del programma `main` (funzione). Questa funzione (creato tramite un `let` associazione) deve essere l'ultima funzione nell'ultimo file compilato. L'ultimo file compilato è l'ultimo file nel progetto o l'ultimo file che viene passata alla riga di comando.
+Il punto di ingresso a un programma che viene compilato come file eseguibile è dove formalmente inizia l'esecuzione. Si specifica il punto di ingresso per un F# applicazione applicando il `EntryPoint` dell'attributo del programma `main` (funzione). Questa funzione (creato tramite un `let` associazione) deve essere l'ultima funzione nell'ultimo file compilato. L'ultimo file compilato è l'ultimo file nel progetto o l'ultimo file che viene passata alla riga di comando.
 
 La funzione di punto di ingresso ha tipo `string array -> int`. Gli argomenti specificati nella riga di comando vengono passati al `main` funzione nella matrice di stringhe. Il primo elemento della matrice è il primo argomento. il nome del file eseguibile non è incluso nella matrice, come succede in altri linguaggi. Il valore restituito viene utilizzato come il codice di uscita del processo. Zero indica in genere eseguita correttamente. valori diversi da zero indicano un errore. Non sono previste convenzioni per il particolare significato dei codici restituiti diversi da zero; il significato dei codici restituiti è specifici dell'applicazione.
 

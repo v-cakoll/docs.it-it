@@ -1,17 +1,17 @@
 ---
-title: Record (F#)
-description: Informazioni su come F# record rappresentano aggregazioni semplici di valori denominati, facoltativamente con membri.
+title: Record
+description: Informazioni su come F# i record rappresentano aggregazioni semplici di valori denominati, facoltativamente con membri.
 ms.date: 05/16/2016
-ms.openlocfilehash: 6103d96b6b80a9e2ed168755958dbe800f7fa862
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: a499755383654ddaf76af12776ee93f27834b7b0
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48261290"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53656141"
 ---
 # <a name="records"></a>Record
 
-I record rappresentano aggregazioni semplici di valori denominati, facoltativamente con membri.  A partire da F# 4.1, può essere tipi riferimento o struct.  Si tratta di tipi di riferimento per impostazione predefinita.
+I record rappresentano aggregazioni semplici di valori denominati, facoltativamente con membri.  A partire da F# 4.1, reti virtuali possono essere tipi riferimento o struct.  Si tratta di tipi di riferimento per impostazione predefinita.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -89,6 +89,29 @@ let defaultRecord2 = { Field1 = 1; Field2 = 25 }
 // and leave the rest with default values.
 let rr3 = { defaultRecord1 with Field2 = 42 }
 ```
+
+## <a name="creating-mutually-recursive-records"></a>La creazione di record ricorsiva si escludono a vicenda
+
+Un intervallo di tempo durante la creazione di un record, è possibile fare in modo che dipendono da un altro tipo che si vuole definire in un secondo momento. Si tratta di un errore di compilazione se non si definiscono i tipi di record siano reciprocamente ricorsiva.
+
+Definizione dei record ricorsivo si escludono a vicenda viene eseguita con il `and` (parola chiave). Ciò consente di collegare i tipi di 2 o più record.
+
+Ad esempio, il codice seguente definisce una `Person` e `Address` tipo ricorsive reciproche:
+
+```fsharp
+// Create a Person type and use the Address type that is not defined
+type Person =
+  { Name: string
+    Age: int
+    Address: Address }
+// Define the Address type which is used in the Person record
+and Address =
+  { Line1: string
+    Line2: string
+    PostCode: string }
+```
+
+Se si dovesse definire l'esempio precedente senza i `and` (parola chiave), quindi, non sarà possibile compilare. Il `and` parola chiave è obbligatoria per le definizioni di ricorsivo si escludono a vicenda.
 
 ## <a name="pattern-matching-with-records"></a>Criteri di ricerca con i record
 

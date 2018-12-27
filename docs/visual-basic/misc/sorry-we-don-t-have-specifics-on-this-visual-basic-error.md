@@ -1,5 +1,5 @@
 ---
-title: Non vogliamo&#39;ha informazioni specifiche sull'errore Visual Basic
+title: Spiacenti, non abbiamo informazioni specifiche su questo errore di Visual Basic
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30234
@@ -3044,14 +3044,14 @@ f1_keywords:
 - bc30233
 - bc30829
 ms.assetid: 0938efc2-e205-450b-9314-99951fcbd702
-ms.openlocfilehash: e3d3ac14c51ef5665aba0879a85e03e662174e68
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a3af5e519b263b5b151640ac9c3d0576905eddb9
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192785"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53781739"
 ---
-# <a name="sorry-we-don39t-have-specifics-on-this-visual-basic-error"></a>Non vogliamo&#39;ha informazioni specifiche sull'errore Visual Basic
+# <a name="sorry-we-dont-have-specifics-on-this-visual-basic-error"></a>Spiacenti, non abbiamo informazioni specifiche su questo errore di Visual Basic
 Siamo spiacenti, ma non abbiamo informazioni specifiche sull'errore. È possibile cercare il numero dell'errore e il testo del messaggio per trovare informazioni sul Web. In alternativa, è possibile chiedere ad altri sviluppatori che usano uno di questi forum:  
   
  [Linguaggio Visual Basic](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vblanguage)  
