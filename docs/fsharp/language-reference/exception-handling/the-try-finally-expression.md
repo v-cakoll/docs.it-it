@@ -1,15 +1,15 @@
 ---
-title: 'Eccezioni: espressione try...finally (F#)'
-description: Informazioni su come F# ' try... finally' espressione consente di eseguire il codice di pulitura, anche se un blocco di codice genera un'eccezione.
+title: 'Eccezioni: Espressione try...finally'
+description: Informazioni su come il F# ' try... finally' espressione consente di eseguire il codice di pulitura, anche se un blocco di codice genera un'eccezione.
 ms.date: 05/16/2016
-ms.openlocfilehash: 546a6b0619de6f51044600dc1ead73c6d5211299
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 24613185818c8ea30b27dcf639b22af320c4b401
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45970318"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611620"
 ---
-# <a name="exceptions-the-tryfinally-expression"></a>Eccezioni: espressione try...finally
+# <a name="exceptions-the-tryfinally-expression"></a>Eccezioni: Espressione try...finally
 
 Il `try...finally` espressione consente di eseguire il codice di pulitura, anche se un blocco di codice genera un'eccezione.
 
@@ -50,4 +50,4 @@ Nel contesto delle espressioni di calcolo, tra cui espressioni di sequenza e flu
 ## <a name="see-also"></a>Vedere anche
 
 - [Gestione delle eccezioni](index.md)
-- [Eccezioni: espressione `try...with`](the-try-with-expression.md)
+- [Eccezioni: Il `try...with` espressione](the-try-with-expression.md)

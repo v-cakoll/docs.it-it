@@ -1,13 +1,13 @@
 ---
-title: Costruttori (F#)
+title: Costruttori
 description: Informazioni su come definire e usare i costruttori in F# per creare e inizializzare gli oggetti di classe e struttura.
 ms.date: 05/16/2016
-ms.openlocfilehash: ff2463f890034cce0bbaa85d9a5c93e50427cd03
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 34989e2877b29f6f9fe1f6cc05e3fd7c90a1306a
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45743917"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612075"
 ---
 # <a name="constructors"></a>Costruttori
 
@@ -42,7 +42,7 @@ Inoltre, le strutture hanno spesso i campi che vengono creati utilizzando il `va
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3502.fs)]
 
-Per altre informazioni, vedere [i campi espliciti: il `val` parola chiave](explicit-fields-the-val-keyword.md).
+Per altre informazioni, vedere [campi espliciti: Il `val` parola chiave](explicit-fields-the-val-keyword.md).
 
 ## <a name="executing-side-effects-in-constructors"></a>L'esecuzione di effetti collaterali nei costruttori
 

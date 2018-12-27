@@ -1,13 +1,13 @@
 ---
-title: 'Cicli: espressione for...to (F#)'
-description: Vedere come il ciclo for di F#.. su espressione viene usato per eseguire l'iterazione in un ciclo su un intervallo di valori di una variabile di ciclo.
+title: 'Espressione Loops: for...to'
+description: Vedere il F# for... su espressione viene usato per eseguire l'iterazione in un ciclo su un intervallo di valori di una variabile di ciclo.
 ms.date: 05/16/2016
-ms.openlocfilehash: 8160fd30c4f3afe8bb6b58f468802ef1c0ef32ee
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 041e98fa4bcc140aa3cd699f6ed35bf52c8b4175
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43800469"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612322"
 ---
 # <a name="loops-forto-expression"></a>Espressione Loops: for...to
 
@@ -39,5 +39,5 @@ Di seguito è riportato l'output del codice precedente.
 ## <a name="see-also"></a>Vedere anche
 
 - [Riferimenti per il linguaggio F#](index.md)
-- [Cicli: espressione `for...in`](loops-for-in-expression.md)
-- [Cicli: espressione `while...do`](loops-while-do-expression.md)
+- [Cicli: `for...in` Espressione](loops-for-in-expression.md)
+- [Cicli: `while...do` Espressione](loops-while-do-expression.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 58d2866c-37bd-4ffa-abaf-ff35926a2939
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8e5e33cd3d250b26f0a83a87c4f7ce438af22e96
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: d4189efbab9bfc85b6a992934604d5071a767163
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745890"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612543"
 ---
 # <a name="ltdisablefusionupdatesfromadmanagergt-element"></a>&lt;disableFusionUpdatesFromADManager&gt; elemento
 Specifica se è disabilitato il comportamento predefinito, ovvero consentire all'host di runtime di eseguire l'override delle impostazioni di configurazione per un dominio applicazione.  
@@ -54,18 +54,18 @@ Specifica se è disabilitato il comportamento predefinito, ovvero consentire all
 |`runtime`|Contiene informazioni sull'associazione degli assembly e sull'operazione di Garbage Collection.|  
   
 ## <a name="remarks"></a>Note  
- A partire dal [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], il comportamento predefinito consiste nel consentire la <xref:System.AppDomainManager> oggetto per eseguire l'override delle impostazioni di configurazione utilizzando il <xref:System.AppDomainSetup.ConfigurationFile%2A> proprietà o <xref:System.AppDomainSetup.SetConfigurationBytes%2A> metodo il <xref:System.AppDomainSetup> oggetto che viene passato all'implementazione del <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType> (metodo), in una sottoclasse di <xref:System.AppDomainManager>. Per il dominio applicazione predefinito, le impostazioni modificate si sostituiscono le impostazioni specificate dal file di configurazione dell'applicazione. Per altri domini applicazione, sostituiscono le impostazioni di configurazione che sono state passate al <xref:System.AppDomainManager.CreateDomain%2A?displayProperty=nameWithType> o <xref:System.AppDomain.CreateDomain%2A?displayProperty=nameWithType> metodo.  
+ Inizia con il [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], è il comportamento predefinito per consentire la <xref:System.AppDomainManager> oggetto eseguire l'override delle impostazioni di configurazione tramite il <xref:System.AppDomainSetup.ConfigurationFile%2A> proprietà o il <xref:System.AppDomainSetup.SetConfigurationBytes%2A> metodo del <xref:System.AppDomainSetup> oggetto che viene passato all'implementazione del <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType> metodo, in una sottoclasse di <xref:System.AppDomainManager>. Per il dominio applicazione predefinito, le impostazioni modificate si sostituiscono le impostazioni specificate per il file di configurazione dell'applicazione. Per altri domini applicazione, queste sostituiscono le impostazioni di configurazione che sono state passate per il <xref:System.AppDomainManager.CreateDomain%2A?displayProperty=nameWithType> o <xref:System.AppDomain.CreateDomain%2A?displayProperty=nameWithType> (metodo).  
   
- È possibile passare nuove informazioni di configurazione o passare null (`Nothing` in Visual Basic) per eliminare le informazioni di configurazione che è state passate.  
+ È possibile passare nuove informazioni di configurazione, o passa un valore null (`Nothing` in Visual Basic) per eliminare le informazioni di configurazione che è state passate.  
   
- Non passare le informazioni di configurazione sia il <xref:System.AppDomainSetup.ConfigurationFile%2A> proprietà e <xref:System.AppDomainSetup.SetConfigurationBytes%2A> metodo. Se si passano le informazioni di configurazione per entrambi, le informazioni passate per il <xref:System.AppDomainSetup.ConfigurationFile%2A> proprietà viene ignorata, poiché il <xref:System.AppDomainSetup.SetConfigurationBytes%2A> metodo esegue l'override delle informazioni di configurazione dal file di configurazione dell'applicazione. Se si utilizza il <xref:System.AppDomainSetup.ConfigurationFile%2A> proprietà, è possibile passare null (`Nothing` in Visual Basic) per il <xref:System.AppDomainSetup.SetConfigurationBytes%2A> eliminare qualsiasi byte di configurazione che sono state specificate nella chiamata al metodo di <xref:System.AppDomainManager.CreateDomain%2A?displayProperty=nameWithType> o <xref:System.AppDomain.CreateDomain%2A?displayProperty=nameWithType> (metodo).  
+ Non passare le informazioni di configurazione su entrambi i <xref:System.AppDomainSetup.ConfigurationFile%2A> proprietà e il <xref:System.AppDomainSetup.SetConfigurationBytes%2A> (metodo). Se si passa le informazioni di configurazione su entrambi, le informazioni passate per il <xref:System.AppDomainSetup.ConfigurationFile%2A> proprietà viene ignorata, perché il <xref:System.AppDomainSetup.SetConfigurationBytes%2A> metodo esegue l'override delle informazioni di configurazione dal file di configurazione dell'applicazione. Se si usa la <xref:System.AppDomainSetup.ConfigurationFile%2A> proprietà, è possibile passare null (`Nothing` in Visual Basic) per il <xref:System.AppDomainSetup.SetConfigurationBytes%2A> per eliminare qualsiasi byte di configurazione che sono state specificate nella chiamata al metodo il <xref:System.AppDomainManager.CreateDomain%2A?displayProperty=nameWithType> o <xref:System.AppDomain.CreateDomain%2A?displayProperty=nameWithType> (metodo).  
   
- Oltre alle informazioni di configurazione, è possibile modificare le impostazioni seguenti nella <xref:System.AppDomainSetup> oggetto che viene passato all'implementazione del <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType> metodo: <xref:System.AppDomainSetup.ApplicationBase%2A>, <xref:System.AppDomainSetup.ApplicationName%2A>, <xref:System.AppDomainSetup.CachePath%2A>, <xref:System.AppDomainSetup.DisallowApplicationBaseProbing%2A>, <xref:System.AppDomainSetup.DisallowBindingRedirects%2A> , <xref:System.AppDomainSetup.DisallowCodeDownload%2A>, <xref:System.AppDomainSetup.DisallowPublisherPolicy%2A>, <xref:System.AppDomainSetup.DynamicBase%2A>, <xref:System.AppDomainSetup.LoaderOptimization%2A>, <xref:System.AppDomainSetup.PrivateBinPath%2A>, <xref:System.AppDomainSetup.PrivateBinPathProbe%2A>, <xref:System.AppDomainSetup.ShadowCopyDirectories%2A>, e <xref:System.AppDomainSetup.ShadowCopyFiles%2A>.  
+ Oltre alle informazioni di configurazione, è possibile modificare le impostazioni seguenti nel <xref:System.AppDomainSetup> oggetto che viene passato all'implementazione del <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType> metodo: <xref:System.AppDomainSetup.ApplicationBase%2A>, <xref:System.AppDomainSetup.ApplicationName%2A>, <xref:System.AppDomainSetup.CachePath%2A>, <xref:System.AppDomainSetup.DisallowApplicationBaseProbing%2A>, <xref:System.AppDomainSetup.DisallowBindingRedirects%2A> , <xref:System.AppDomainSetup.DisallowCodeDownload%2A>, <xref:System.AppDomainSetup.DisallowPublisherPolicy%2A>, <xref:System.AppDomainSetup.DynamicBase%2A>, <xref:System.AppDomainSetup.LoaderOptimization%2A>, <xref:System.AppDomainSetup.PrivateBinPath%2A>, <xref:System.AppDomainSetup.PrivateBinPathProbe%2A>, <xref:System.AppDomainSetup.ShadowCopyDirectories%2A>, e <xref:System.AppDomainSetup.ShadowCopyFiles%2A>.  
   
- Come alternativa all'utilizzo di `<disableFusionUpdatesFromADManager>` elemento, è possibile disabilitare il comportamento predefinito creando un'impostazione del Registro di sistema o impostando una variabile di ambiente. Nel Registro di sistema, creare un valore DWORD denominato `COMPLUS_disableFusionUpdatesFromADManager` in `HKCU\Software\Microsoft\.NETFramework` o `HKLM\Software\Microsoft\.NETFramework`e impostare il valore su 1. Nella riga di comando, impostare la variabile di ambiente `COMPLUS_disableFusionUpdatesFromADManager` su 1.  
+ Come alternativa all'uso di `<disableFusionUpdatesFromADManager>` elemento, è possibile disabilitare il comportamento predefinito tramite la creazione di un'impostazione del Registro di sistema oppure impostando una variabile di ambiente. Nel Registro di sistema, creare un valore DWORD denominato `COMPLUS_disableFusionUpdatesFromADManager` sotto `HKCU\Software\Microsoft\.NETFramework` o `HKLM\Software\Microsoft\.NETFramework`e impostare il valore su 1. Nella riga di comando, impostare la variabile di ambiente `COMPLUS_disableFusionUpdatesFromADManager` su 1.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come disabilitare la possibilità di eseguire l'override delle impostazioni Fusion utilizzando il `<disableFusionUpdatesFromADManager>` elemento.  
+ Nell'esempio seguente viene illustrato come disabilitare la possibilità di eseguire l'override delle impostazioni Fusion usando il `<disableFusionUpdatesFromADManager>` elemento.  
   
 ```xml  
 <configuration>  
@@ -76,6 +76,6 @@ Specifica se è disabilitato il comportamento predefinito, ovvero consentire all
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Schema delle impostazioni di runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [Come il runtime individua gli assembly](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Schema delle impostazioni di runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [Come il runtime individua gli assembly](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

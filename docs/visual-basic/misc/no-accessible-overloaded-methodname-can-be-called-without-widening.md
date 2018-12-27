@@ -1,17 +1,17 @@
 ---
-title: 'Di overload non accessibile &#39; &lt;NomeMetodo&gt; &#39; può essere chiamato con questi argomenti senza una conversione widening: &lt;elenco&gt;'
+title: "Overload non accessibile '&lt;NomeMetodo&gt;' può essere chiamato con questi argomenti senza una conversione verso un: &lt;elenco&gt;"
 ms.date: 07/20/2015
 f1_keywords:
 - vbrAmbiguousCall_WideningConversion2
 ms.assetid: 5e74f5cf-80bd-4b48-b58a-465f981ec694
-ms.openlocfilehash: 48514398e9ee5eafb16f4838bb2c2b08fe61aff0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c305cbc4c91cd1a4df19933e771c640c11184339
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33636809"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53779127"
 ---
-# <a name="no-accessible-overloaded-39ltmethodnamegt39-can-be-called-with-these-arguments-without-a-widening-conversion-ltlistgt"></a>Di overload non accessibile &#39; &lt;NomeMetodo&gt; &#39; può essere chiamato con questi argomenti senza una conversione widening: &lt;elenco&gt;
+# <a name="no-accessible-overloaded-ltmethodnamegt-can-be-called-with-these-arguments-without-a-widening-conversion-ltlistgt"></a>Overload non accessibile '&lt;NomeMetodo&gt;' può essere chiamato con questi argomenti senza una conversione verso un: &lt;elenco&gt;
 Un metodo di overload è stato chiamato, ma nessun metodo può essere associato all'elenco di argomenti forniti senza una conversione verso un tipo di dati più grande.  
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  

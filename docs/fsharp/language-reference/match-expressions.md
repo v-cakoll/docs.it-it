@@ -1,13 +1,13 @@
 ---
-title: Espressioni Match (F#)
-description: Informazioni su come l'espressione di ricerca di F# offre controllo del branching basato sul confronto di un'espressione con un set di modelli.
+title: Espressioni Match
+description: Informazioni su come il F# espressione di ricerca fornisce controllo del branching basato sul confronto di un'espressione con un set di modelli.
 ms.date: 04/19/2018
-ms.openlocfilehash: e4cb82f20fe82bff562736557c2346562c557f59
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 8972cc012d2746cb720eeed1acee403948941425
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44221844"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611568"
 ---
 # <a name="match-expressions"></a>Espressioni Match
 
@@ -43,7 +43,7 @@ fun arg ->
     | ...
 ```
 
-Per altre informazioni sulle espressioni lambda, vedere [espressioni Lambda: I `fun` parola chiave](functions/lambda-expressions-the-fun-keyword.md).
+Per altre informazioni sulle espressioni lambda, vedere [espressioni Lambda: Il `fun` parola chiave](functions/lambda-expressions-the-fun-keyword.md).
 
 L'intero set di modelli devono coprire tutte le corrispondenze possibili della variabile di input. Spesso utilizzare il modello carattere jolly (`_`) come l'ultimo modello in modo che corrispondano eventuali valori di input in precedenza non corrispondenti.
 
@@ -82,6 +82,6 @@ foo() // returns 42
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per il linguaggio F#](index.md)  
-- [Criteri attivi](active-patterns.md)  
-- [Criteri di ricerca](pattern-matching.md)  
+- [Riferimenti per il linguaggio F#](index.md)
+- [Criteri attivi](active-patterns.md)
+- [Criteri di ricerca](pattern-matching.md)

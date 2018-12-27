@@ -1,13 +1,13 @@
 ---
-title: Tipi flessibili (F#)
-description: Informazioni su come utilizzare F# annotazione di tipo flessibile, che indica che un parametro, una variabile o un valore è un tipo compatibile con un tipo specificato.
+title: Tipi flessibili
+description: Informazioni su come usare F# dell'annotazione di tipo flessibile, che indica che un parametro, una variabile o un valore è un tipo compatibile con un tipo specificato.
 ms.date: 05/16/2016
-ms.openlocfilehash: b6c97c3cc19f15b2c8db74b2c55660a16b2858f7
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 32857cc317bc6b4b7baf53b623b551e8e0733e41
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "47210045"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613674"
 ---
 # <a name="flexible-types"></a>Tipi flessibili
 
@@ -65,7 +65,7 @@ seq [1; 2; 3; 4; ...]
 seq [1; 2; 3; 4; ...]
 ```
 
-In F#, come in altri linguaggi orientati, vi sono contesti in cui i tipi che implementano interfacce o tipi derivati vengono convertiti automaticamente a un tipo di interfaccia o un tipo di base. Negli argomenti diretti, ma non quando il tipo è in una posizione subordinata, come parte di un tipo più complesso, ad esempio un tipo restituito di un tipo di funzione o come argomento di tipo, si verificano queste conversioni automatiche. Di conseguenza, la notazione di tipo flessibile risulta particolarmente utile quando il tipo a che si applica fa parte di un tipo più complesso.
+In F#, come in altri linguaggi orientati, vi sono contesti in cui i tipi derivati o i tipi che implementano le interfacce vengono convertiti automaticamente a un tipo di interfaccia o un tipo di base. Negli argomenti diretti, ma non quando il tipo è in una posizione subordinata, come parte di un tipo più complesso, ad esempio un tipo restituito di un tipo di funzione o come argomento di tipo, si verificano queste conversioni automatiche. Di conseguenza, la notazione di tipo flessibile risulta particolarmente utile quando il tipo a che si applica fa parte di un tipo più complesso.
 
 ## <a name="see-also"></a>Vedere anche
 

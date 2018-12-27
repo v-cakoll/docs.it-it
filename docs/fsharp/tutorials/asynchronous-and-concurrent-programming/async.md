@@ -1,13 +1,13 @@
 ---
-title: Il linguaggio di programmazione asincronaF#
+title: Programmazione asincrona
 description: Informazioni su come F# programmazione asincrona viene eseguita tramite un modello di programmazione a livello di linguaggio naturale per la lingua e facile da usare.
 ms.date: 06/20/2016
-ms.openlocfilehash: de07f1252df56e3dfec5ea7a34a283b1c9508523
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: e18697708741eef066a76bbffe35882f3639bb68
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50195060"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614480"
 ---
 # <a name="async-programming-in-f"></a>Il linguaggio di programmazione asincronaF# #
 
@@ -191,24 +191,23 @@ Al contrario, F# flussi di lavoro asincroni sono più naturalmente annullabile. 
 Esempio:
 
 ```fsharp
-open System
-open System.Net
 open System.Threading
 
-let uploadDataAsync url data = 
+// Create a workflow which will loop forever.
+let workflow =
     async {
-        let uri = Uri(url)
-        use webClient = new WebClient()
-        webClient.UploadStringAsync(uri, data)
+        while true do
+            printfn "Working..."
+            do! Async.Sleep 1000
     }
+    
+let tokenSource = new CancellationTokenSource()
 
-let workflow = uploadDataAsync "https://url-to-upload-to.com" "hello, world!"
+// Start the workflow in the background
+Async.Start (workflow, tokenSource.Token)
 
-let token = new CancellationTokenSource()
-Async.Start (workflow, token.Token)
-
-// Immediately cancel uploadDataAsync after it's been started.
-token.Cancel()
+// Executing the next line will stop the workflow
+tokenSource.Cancel()
 ```
 
 E questo è sufficiente.

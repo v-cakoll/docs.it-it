@@ -2,12 +2,12 @@
 title: Supporto del flusso SqlClient
 ms.date: 03/30/2017
 ms.assetid: c449365b-470b-4edb-9d61-8353149f5531
-ms.openlocfilehash: a393274a7cf40b01399c5909c2d5ec4097ec9310
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: eeec8f2a88894762fd8dab93bf0b3b11941ba17a
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152890"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612998"
 ---
 # <a name="sqlclient-streaming-support"></a>Supporto del flusso SqlClient
 Supporto tra SQL Server e un'applicazione di streaming (Novità [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]) supporta i dati non strutturati nel server (documenti, immagini e file multimediali). Un database di SQL Server può archiviare oggetti binari di grandi dimensioni (BLOB), ma il recupero di BLOB possa usare molta memoria.  

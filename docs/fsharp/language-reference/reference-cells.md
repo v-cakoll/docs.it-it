@@ -1,13 +1,13 @@
 ---
-title: Celle di riferimento (F#)
-description: Informazioni su come le celle di riferimento di F# sono posizioni di archiviazione che consentono di creare valori modificabili con semantica di riferimento.
+title: Celle di riferimento
+description: Informazioni su come F# celle di riferimento sono posizioni di archiviazione che consentono di creare valori modificabili con semantica di riferimento.
 ms.date: 05/16/2016
-ms.openlocfilehash: e2e1a91c62fd76e4992bc5ae11bb672766850718
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: e4fcd3cf1abcf5f5e3b4d5439c9215b79ff8dbcd
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44192265"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612764"
 ---
 # <a name="reference-cells"></a>Celle di riferimento
 
@@ -57,6 +57,7 @@ Nella tabella seguente sono indicate le funzionalità disponibili nella cella di
 |`ref` (operatore)|Incapsula un valore in una nuova cella di riferimento.|`'a -> 'a ref`|`let ref x = { contents = x }`|
 |`Value` (proprietà)|Ottiene o imposta il valore sottostante.|`unit -> 'a`|`member x.Value = x.contents`|
 |`contents` (campo del record)|Ottiene o imposta il valore sottostante.|`'a`|`let ref x = { contents = x }`|
+
 È possibile accedere al valore sottostante in diversi modi. Il valore restituito dall'operatore di dereferenziazione (`!`) non è un valore assegnabile. Se pertanto si modifica il valore sottostante, è necessario utilizzare l'operatore di assegnazione (`:=`).
 
 Sia la proprietà `Value` che il campo `contents` sono valori assegnabili e possono pertanto essere utilizzati per accedere al valore sottostante o per modificare tale valore, come illustrato nel codice seguente.
@@ -74,7 +75,7 @@ L'output è indicato di seguito.
 
 Il campo `contents` viene fornito per garantire compatibilità con altre versioni di ML e comporta la generazione di un avviso durante la compilazione. Per disabilitare l'avviso, utilizzare l'opzione del compilatore `--mlcompatibility`. Per altre informazioni, vedere [Opzioni del compilatore](compiler-options.md).
 
-I programmatori c# devono sapere che `ref` in c# non è la stessa operazione come `ref` in F#. I costrutti equivalenti in F# sono [zkratka](byrefs.md), che sono un concetto diverso dalle celle di riferimento.
+C#i programmatori devono sapere che `ref` in C# non è la stessa funzione illustrata in `ref` in F#. Costruisce l'equivalente F# vengono [zkratka](byrefs.md), che sono un concetto diverso dalle celle di riferimento.
 
 I valori contrassegnati come `mutable`può essere automaticamente promossa a `'a ref` acquisiti da una chiusura dei tag, vedere [valori](values/index.md).
 

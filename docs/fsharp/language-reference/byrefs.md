@@ -1,17 +1,17 @@
 ---
-title: ByRef (F#)
-description: Informazioni su byref e tipi byref simili in F#, che vengono usati per la programmazione di basso livello.
+title: Zkratka
+description: Informazioni su byref e tipi byref simili in F#, che vengono utilizzati per la programmazione di basso livello.
 ms.date: 09/02/2018
-ms.openlocfilehash: 6131104e4325f77da84368c337f998c6b2b5309b
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: c45c061a1487c60c3361cd82a55357189754e29d
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48836881"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611581"
 ---
 # <a name="byrefs"></a>Zkratka
 
-F# ha due aree delle funzionalità principali relativi allo spazio di programmazione di basso livello:
+F#presenta due aree delle funzionalità principali relativi allo spazio di programmazione di basso livello:
 
 * Il `byref` / `inref` / `outref` tipi, ovvero un puntatori gestiti. Presentano le restrizioni sull'utilizzo in modo che non è possibile compilare un programma che non è valido in fase di esecuzione.
 * Oggetto `byref`-come struct, ovvero un [struttura](structures.md) che ha una semantica simile e le stesse restrizioni in fase di compilazione come `byref<'T>`. Un esempio è <xref:System.Span%601>.
@@ -107,18 +107,18 @@ Lo scopo di `outref<'T>` consiste nell'indicare che il puntatore deve essere let
 
 ### <a name="interop-with-c"></a>Interoperabilità con c# #
 
-C# supporta le `in ref` e `out ref` parole chiave, oltre a `ref` restituisce. La tabella seguente illustra in che modo F# interpreta c# genera di cosa:
+C# supporta le `in ref` e `out ref` parole chiave, oltre a `ref` restituisce. La tabella seguente illustra come F# interpreta cosa C# genera:
 
-|Costrutto di linguaggio c#|F# deduce|
+|Costrutto di linguaggio c#|F#deduce|
 |------------|---------|
 |`ref` Valore restituito|`outref<'T>`|
 |`ref readonly` Valore restituito|`inref<'T>`|
 |`in ref` Parametro|`inref<'T>`|
 |`out ref` Parametro|`outref<'T>`|
 
-Nella tabella seguente mostra F# genera di cosa:
+La tabella seguente illustra ciò che F# genera:
 
-|Costrutto F#|Costrutto generato|
+|F#costrutto|Costrutto generato|
 |------------|-----------------|
 |`inref<'T>` argomento|`[In]` attributo nell'argomento|
 |`inref<'T>` restituire|`modreq` attributo sul valore|
@@ -127,7 +127,7 @@ Nella tabella seguente mostra F# genera di cosa:
 
 ### <a name="type-inference-and-overloading-rules"></a>L'inferenza del tipo e le regole di overload
 
-Un `inref<'T>` tipo viene dedotto dal compilatore F# nei casi seguenti:
+Un' `inref<'T>` tipo viene dedotto per i F# compilatore nei casi seguenti:
 
 1. Un tipo restituito o parametro .NET con un `IsReadOnly` attributo.
 2. Il `this` indicatore di misura su un tipo struct che nessun campo modificabile.
@@ -165,20 +165,20 @@ type S(count1: Span<int>, count2: Span<int>) =
 
 `IsByRefLike` non implica `Struct`. Entrambi devono essere presenti nel tipo.
 
-Un "`byref`-ad esempio" struct in F# è un tipo di valore con associazione dello stack. Non viene allocato nell'heap gestito. Oggetto `byref`-come struct è utile per la programmazione ad alte prestazioni, come viene applicato con set di controlli accurati su durata e di non acquisizione. Le regole sono:
+Oggetto "`byref`-ad esempio" struct in F# è un tipo di valore con associazione dello stack. Non viene allocato nell'heap gestito. Oggetto `byref`-come struct è utile per la programmazione ad alte prestazioni, come viene applicato con set di controlli accurati su durata e di non acquisizione. Le regole sono:
 
 * Possono essere utilizzati come parametri di funzione, i parametri dei metodi, variabili locali, metodo viene restituito.
 * Essi non può essere statico o istanza i membri di una classe o struct normali.
 * Non è possibile acquisire da qualsiasi costrutto di chiusura (`async` metodi o espressioni lambda).
 * Non possono essere utilizzati come un parametro generico.
 
-Quest'ultimo punto è essenziale per la programmazione in F# pipeline stile come `|>` è una funzione generica che Parametrizza relativi tipi di input. Questa restrizione può essere assoluta per `|>` in futuro, perché è in linea e non esegue tutte le chiamate a funzioni generiche non inline nel relativo corpo.
+Quest'ultimo punto è essenziale per lo F# programmazione di tipo pipeline, come `|>` è una funzione generica che Parametrizza relativi tipi di input. Questa restrizione può essere assoluta per `|>` in futuro, perché è in linea e non esegue tutte le chiamate a funzioni generiche non inline nel relativo corpo.
 
 Anche se queste regole limitano molto fortemente utilizzo, a tale scopo per soddisfare la promessa di high performance computing in modo sicuro.
 
 ## <a name="byref-returns"></a>Valori restituiti ByRef
 
-Valori restituiti byref da funzioni F# o i membri possono essere generati e utilizzati. Quando si utilizza un `byref`-metodo di restituzione, il valore è dereferenziato in modo implicito. Ad esempio:
+Valori restituiti byref da F# funzioni o i membri possono essere prodotti e utilizzati. Quando si utilizza un `byref`-metodo di restituzione, il valore è dereferenziato in modo implicito. Ad esempio:
 
 ```fsharp
 let safeSum(bytes: Span<byte>) =

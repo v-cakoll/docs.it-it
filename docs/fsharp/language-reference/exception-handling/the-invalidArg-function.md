@@ -1,15 +1,15 @@
 ---
-title: 'Eccezioni: funzione invalidArg (F#)'
-description: Informazioni su come la funzione 'invalidArg' F# genera un'eccezione di argomento.
+title: 'Eccezioni: Funzione invalidArg'
+description: Informazioni su come il F# funzione 'invalidArg' genera un'eccezione di argomento.
 ms.date: 05/16/2016
-ms.openlocfilehash: 8bf65fae9392a88205e3cdec8b7d7a3ff42f8416
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 7fd8d48b80970dbbafc0c23a478b4ccf3490f3ee
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44180319"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613336"
 ---
-# <a name="exceptions-the-invalidarg-function"></a>Eccezioni: funzione invalidArg
+# <a name="exceptions-the-invalidarg-function"></a>Eccezioni: Funzione invalidArg
 
 Il `invalidArg` funzione genera un'eccezione di argomento.
 
@@ -39,7 +39,7 @@ System.ArgumentException: Month parameter out of range.
 
 - [Gestione delle eccezioni](index.md)
 - [Tipi di eccezione](exception-types.md)
-- [Eccezioni: espressione `try...with`](the-try-with-expression.md)
-- [Eccezioni: espressione `try...finally`](the-try-finally-expression.md)
+- [Eccezioni: Il `try...with` espressione](the-try-with-expression.md)
+- [Eccezioni: Il `try...finally` espressione](the-try-finally-expression.md)
 - [Eccezioni: funzione `raise`](the-raise-function.md)
-- [Eccezioni: funzione `failwith`](the-failwith-function.md)
+- [Eccezioni: Il `failwith` (funzione)](the-failwith-function.md)

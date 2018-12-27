@@ -1,13 +1,13 @@
 ---
-title: File delle firme (F#)
-description: Informazioni su come usare file di firma F# per contenere le informazioni sulle firme pubbliche di un set di F# gli elementi del programma, ad esempio tipi, gli spazi dei nomi e i moduli.
+title: File delle firme
+description: Informazioni su come usare F# per contenere le informazioni sulle firme pubbliche di un set di file di firma F# elementi, quali tipi, gli spazi dei nomi e i moduli del programma.
 ms.date: 06/15/2018
-ms.openlocfilehash: f0836aa7f638dc9e2b066b0f46bbb6c086347615
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 88938309a7c2bd12428f06ba8088141fd5349e80
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45991233"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613414"
 ---
 # <a name="signatures"></a>Firme
 
@@ -29,6 +29,7 @@ Se le informazioni nella firma di tipo non sono sufficienti a indicare se il tip
 |---------|-----------|
 |`[<Sealed>]`|Per un tipo senza membri astratti o che non deve essere esteso.|
 |`[<Interface>]`|Per un tipo che corrisponde a un'interfaccia.|
+
 Il compilatore genera un errore se gli attributi non sono coerenti tra la firma e la dichiarazione nel file di implementazione.
 
 Usare la parola chiave `val` per creare una firma per un valore o un valore di funzione. La parola chiave `type` introduce una firma di tipo.

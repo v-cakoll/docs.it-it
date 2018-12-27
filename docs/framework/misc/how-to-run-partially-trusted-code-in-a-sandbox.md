@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: eseguire codice parzialmente attendibile in un oggetto sandbox'
+title: 'Procedura: Eseguire codice parzialmente attendibile in un oggetto Sandbox'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - partially trusted code
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 05ab0874c980d9e6138ae2bfd720c6d89628613c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d5728bac27ae7de649806a3e026bb16560fffefa
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393273"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613219"
 ---
-# <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>Procedura: eseguire codice parzialmente attendibile in un oggetto sandbox
+# <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>Procedura: Eseguire codice parzialmente attendibile in un oggetto Sandbox
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
  Il termine sandboxing si riferisce all'esecuzione di codice in un ambiente di sicurezza con restrizioni che limita le autorizzazioni di accesso concesse al codice. Se, ad esempio, si dispone di una libreria gestita proveniente da un'origine non considerata completamente attendibile, è consigliabile non eseguirla come completamente attendibile. Inserire invece il codice in un ambiente sandbox che limita le autorizzazioni a quelle che si prevede siano necessarie (ad esempio, l'autorizzazione <xref:System.Security.Permissions.SecurityPermissionFlag.Execution>).  
@@ -30,7 +30,7 @@ ms.locfileid: "33393273"
   
  L'overload ha la firma seguente:  
   
-```  
+```csharp
 AppDomain.CreateDomain( string friendlyName,  
                         Evidence securityInfo,  
                         AppDomainSetup info,  
@@ -50,7 +50,7 @@ AppDomain.CreateDomain( string friendlyName,
   
 1.  Creare il set di autorizzazioni da concedere all'applicazione non attendibile. L'autorizzazione minima che è possibile concedere è <xref:System.Security.Permissions.SecurityPermissionFlag.Execution>. È anche possibile concedere autorizzazioni aggiuntive che si ritengono sicure per il codice non attendibile, ad esempio <xref:System.Security.Permissions.IsolatedStorageFilePermission>. Il codice seguente crea un nuovo set di autorizzazioni con solo l'autorizzazione <xref:System.Security.Permissions.SecurityPermissionFlag.Execution>.  
   
-    ```  
+    ```csharp
     PermissionSet permSet = new PermissionSet(PermissionState.None);  
     permSet.AddPermission(new SecurityPermission(SecurityPermissionFlag.Execution));  
     ```  
@@ -67,7 +67,7 @@ AppDomain.CreateDomain( string friendlyName,
   
 2.  Firmare l'assembly contenente la classe host (in questo esempio `Sandboxer`) che chiama il codice non attendibile. Aggiungere l'oggetto <xref:System.Security.Policy.StrongName> usato per firmare l'assembly alla matrice <xref:System.Security.Policy.StrongName> del parametro `fullTrustAssemblies` della chiamata a <xref:System.AppDomain.CreateDomain%2A>. La classe host deve essere eseguita come completamente attendibile per consentire l'esecuzione del codice parzialmente attendibile o per offrire servizi per l'applicazione parzialmente attendibile. Ecco come viene letto l'oggetto <xref:System.Security.Policy.StrongName> di un assembly:  
   
-    ```  
+    ```csharp
     StrongName fullTrustAssembly = typeof(Sandboxer).Assembly.Evidence.GetHostEvidence<StrongName>();  
     ```  
   
@@ -75,7 +75,7 @@ AppDomain.CreateDomain( string friendlyName,
   
 3.  Inizializzare il parametro <xref:System.AppDomainSetup> del metodo <xref:System.AppDomain.CreateDomain%2A>. Con questo parametro, è possibile controllare numerose impostazioni del nuovo oggetto <xref:System.AppDomain>. La proprietà <xref:System.AppDomainSetup.ApplicationBase%2A> è un'impostazione importante e deve essere diversa dalla proprietà <xref:System.AppDomainSetup.ApplicationBase%2A> per l'oggetto <xref:System.AppDomain> dell'applicazione host. Se le impostazioni di <xref:System.AppDomainSetup.ApplicationBase%2A> corrispondono, l'applicazione parzialmente attendibile può fare in modo che l'applicazione host carichi (come completamente attendibile) un'eccezione definita, che può quindi essere sfruttata. Questo è un altro motivo per cui non è consigliabile l'uso di un elemento catch (eccezione). Impostando la base dell'applicazione dell'host in modo diverso dalla base dell'applicazione in modalità sandbox, è possibile ridurre il rischio di exploit.  
   
-    ```  
+    ```csharp
     AppDomainSetup adSetup = new AppDomainSetup();  
     adSetup.ApplicationBase = Path.GetFullPath(pathToUntrusted);  
     ```  
@@ -84,7 +84,7 @@ AppDomain.CreateDomain( string friendlyName,
   
      La firma per il metodo è la seguente:  
   
-    ```  
+    ```csharp
     public static AppDomain CreateDomain(string friendlyName,   
         Evidence securityInfo, AppDomainSetup info, PermissionSet grantSet,   
         params StrongName[] fullTrustAssemblies)  
@@ -102,7 +102,7 @@ AppDomain.CreateDomain( string friendlyName,
   
     -   Il codice per creare il dominio applicazione è il seguente:  
   
-    ```  
+    ```csharp
     AppDomain newDomain = AppDomain.CreateDomain("Sandbox", null, adSetup, permSet, fullTrustAssembly);  
     ```  
   
@@ -118,7 +118,7 @@ AppDomain.CreateDomain( string friendlyName,
   
     -   È possibile eseguire la creazione in un oggetto <xref:System.Security.CodeAccessPermission.Assert%2A> per l'attendibilità totale (<xref:System.Security.Permissions.PermissionState.Unrestricted?displayProperty=nameWithType>), per poter creare un'istanza di una classe critica. Ciò avviene ogni volta che l'assembly non dispone di contrassegni di trasparenza e viene caricato come completamente attendibile. È pertanto necessario prestare attenzione a creare solo codice attendibile con questa funzione e si consiglia di creare solo istanze di classi completamente attendibili nel nuovo dominio applicazione.  
   
-    ```  
+    ```csharp
     ObjectHandle handle = Activator.CreateInstanceFrom(  
     newDomain, typeof(Sandboxer).Assembly.ManifestModule.FullyQualifiedName,  
            typeof(Sandboxer).FullName );  
@@ -126,53 +126,53 @@ AppDomain.CreateDomain( string friendlyName,
   
      Si noti che per creare un'istanza di una classe in un nuovo dominio, la classe deve estendere la classe <xref:System.MarshalByRefObject>.  
   
-    ```  
+    ```csharp
     class Sandboxer:MarshalByRefObject  
     ```  
   
 6.  Annullare il wrapping dell'istanza del nuovo dominio in un riferimento in questo dominio. Questo riferimento viene usato per eseguire codice non attendibile.  
   
-    ```  
+    ```csharp
     Sandboxer newDomainInstance = (Sandboxer) handle.Unwrap();  
     ```  
   
 7.  Chiamare il metodo `ExecuteUntrustedCode` nell'istanza della classe `Sandboxer` appena creata.  
   
-    ```  
+    ```csharp
     newDomainInstance.ExecuteUntrustedCode(untrustedAssembly, untrustedClass, entryPoint, parameters);  
     ```  
   
      Questa chiamata viene eseguita nel dominio applicazione in modalità sandbox, con autorizzazioni limitate.  
   
-    ```  
+    ```csharp
     public void ExecuteUntrustedCode(string assemblyName, string typeName, string entryPoint, Object[] parameters)  
+    {  
+        //Load the MethodInfo for a method in the new assembly. This might be a method you know, or   
+        //you can use Assembly.EntryPoint to get to the entry point in an executable.  
+        MethodInfo target = Assembly.Load(assemblyName).GetType(typeName).GetMethod(entryPoint);  
+        try  
         {  
-            //Load the MethodInfo for a method in the new assembly. This might be a method you know, or   
-            //you can use Assembly.EntryPoint to get to the entry point in an executable.  
-            MethodInfo target = Assembly.Load(assemblyName).GetType(typeName).GetMethod(entryPoint);  
-            try  
-            {  
-                // Invoke the method.  
-                target.Invoke(null, parameters);  
-            }  
-            catch (Exception ex)  
-            {  
-            //When information is obtained from a SecurityException extra information is provided if it is   
-            //accessed in full-trust.  
-                (new PermissionSet(PermissionState.Unrestricted)).Assert();  
-                Console.WriteLine("SecurityException caught:\n{0}", ex.ToString());  
-    CodeAccessPermission.RevertAssert();  
-                Console.ReadLine();  
-            }  
+            // Invoke the method.  
+            target.Invoke(null, parameters);  
         }  
+        catch (Exception ex)  
+        {  
+        //When information is obtained from a SecurityException extra information is provided if it is   
+        //accessed in full-trust.  
+            new PermissionSet(PermissionState.Unrestricted).Assert();  
+            Console.WriteLine("SecurityException caught:\n{0}", ex.ToString());  
+            CodeAccessPermission.RevertAssert();  
+            Console.ReadLine();  
+        }  
+    }  
     ```  
   
      Viene usato <xref:System.Reflection> per ottenere un handle di un metodo nell'assembly parzialmente attendibile. L'handle può essere usato per eseguire codice in modo sicuro con autorizzazioni minime.  
   
      Nel codice precedente, osservare l'oggetto <xref:System.Security.PermissionSet.Assert%2A> per l'autorizzazione di attendibilità totale prima di stampare <xref:System.Security.SecurityException>.  
   
-    ```  
-    new PermissionSet(PermissionState.Unrestricted)).Assert()  
+    ```csharp
+    new PermissionSet(PermissionState.Unrestricted).Assert()  
     ```  
   
      L'asserzione di attendibilità totale viene usata per ottenere informazioni estese da <xref:System.Security.SecurityException>. Senza l'oggetto <xref:System.Security.PermissionSet.Assert%2A>, il metodo <xref:System.Security.SecurityException.ToString%2A> di <xref:System.Security.SecurityException> individuerebbe la presenza di codice parzialmente attendibile nello stack e limiterebbe le informazioni restituite. Ciò potrebbe causare problemi di sicurezza se il codice parzialmente attendibile potesse leggere tali informazioni, ma i rischi vengono attenuati non concedendo <xref:System.Security.Permissions.UIPermission>. L'asserzione di attendibilità totale deve essere usata con cautela e solo quando si è certi di non consentire l'elevazione di codice parzialmente attendibile a codice completamente attendibile. Di norma, non chiamare codice non considerato attendibile nella stessa funzione e dopo avere chiamato un'asserzione di attendibilità totale. È consigliabile annullare sempre l'asserzione dopo averla usata.  
@@ -180,7 +180,7 @@ AppDomain.CreateDomain( string friendlyName,
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene implementata la procedura della sezione precedente. Nell'esempio un progetto denominato `Sandboxer` in una soluzione di Visual Studio contiene un progetto denominato `UntrustedCode`, che implementa la classe `UntrustedClass`. Questo scenario presuppone che sia stato scaricato un assembly di librerie contenente un metodo che restituisce `true` o `false` per indicare se il numero fornito è un numero di Fibonacci. Il metodo tenta invece di leggere un file dal computer. L'esempio seguente mostra il codice non attendibile.  
   
-```  
+```csharp
 using System;  
 using System.IO;  
 namespace UntrustedCode  
@@ -200,7 +200,7 @@ namespace UntrustedCode
   
  L'esempio seguente mostra il codice dell'applicazione `Sandboxer` che esegue il codice non attendibile.  
   
-```  
+```csharp
 using System;  
 using System.Collections.Generic;  
 using System.Linq;  
@@ -264,7 +264,7 @@ class Sandboxer : MarshalByRefObject
         {  
             // When we print informations from a SecurityException extra information can be printed if we are   
             //calling it with a full-trust stack.  
-            (new PermissionSet(PermissionState.Unrestricted)).Assert();  
+            new PermissionSet(PermissionState.Unrestricted).Assert();  
             Console.WriteLine("SecurityException caught:\n{0}", ex.ToString());  
             CodeAccessPermission.RevertAssert();  
             Console.ReadLine();  

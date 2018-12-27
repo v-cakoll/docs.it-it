@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 8c73f1a4373583530d5afde113c5c4ec049bcea4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 9f98d85e5fd01a631352f5db7bba6ed309449d68
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195892"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613518"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Scrittura di app grandi e reattive in .NET Framework
 Questo articolo include suggerimenti per il miglioramento delle prestazioni delle app .NET Framework di grandi dimensioni o di app che elaborano una quantità elevata di dati, ad esempio file o database. Questi suggerimenti derivano dalla riscrittura di compilatori C# e Visual Basic nel codice gestito e l'articolo include diversi esempi concreti tratti dal compilatore C#. 
@@ -31,17 +31,17 @@ Questo articolo include suggerimenti per il miglioramento delle prestazioni dell
 ### <a name="fact-1-dont-prematurely-optimize"></a>Considerazione 1: Non eseguire prematuramente l'ottimizzazione  
  La scrittura di codice più complesso del necessario comporta costi di gestione, debug e ottimizzazione. I programmatori esperti sono in grado di risolvere problemi di codifica e di scrivere codice più efficiente in modo intuitivo. A volte, però, ottimizzano il codice con troppo anticipo. Ad esempio, usano una tabella hash quando sarebbe sufficiente una semplice matrice o usano una procedura complessa per la memorizzazione nella cache, che può provocare la perdita di memoria, invece di ricalcolare semplicemente i valori. Anche se si è programmatori esperti, è consigliabile eseguire test relativi alle prestazioni e analizzare il codice in caso di problemi. 
   
-### <a name="fact-2-if-youre-not-measuring-youre-guessing"></a>Considerazione 2: Solo le misurazioni assicurano la precisione  
+### <a name="fact-2-if-youre-not-measuring-youre-guessing"></a>Considerazione 2: Se non si desidera misurare, assicurano  
  I profili e le misurazioni sono attendibili. I profili indicano se la CPU è caricata completamente o se si è verificato un blocco di I/O del disco. Specificano inoltre il tipo e la quantità di memoria allocata e se la CPU dedica molto tempo a operazioni di [Garbage Collection](../../../docs/standard/garbage-collection/index.md) (GC). 
   
  È consigliabile definire obiettivi per le prestazioni relative a esperienze utente o scenari chiave dell'app e scrivere test per la misurazione delle prestazioni. Esaminare i test che rilevano errori applicando un metodo scientifico: usare i profili come indicazione, definire ipotesi sulla natura del problema e testare le ipotesi tramite un esperimento o una modifica del codice. Stabilire misure di base per le prestazioni nel tempo grazie a testing regolare, in modo da potere isolare le modifiche che provocano una regressione nelle prestazioni. Un approccio rigoroso alle operazioni relative alle prestazioni permette di evitare di perdere tempo con aggiornamenti di codice superflui. 
   
-### <a name="fact-3-good-tools-make-all-the-difference"></a>Considerazione 3: La qualità degli strumenti è essenziale  
+### <a name="fact-3-good-tools-make-all-the-difference"></a>Considerazione 3: Strumenti utili la vera differenza  
  Gli strumenti efficaci permettono di individuare rapidamente i problemi principali a livello di prestazioni (CPU, memoria o disco) e semplificano l'individuazione del codice che provoca tali colli di bottiglia. Microsoft offre diversi strumenti relativi alle prestazioni, ad esempio il [profiler di Visual Studio](/visualstudio/profiling/beginners-guide-to-performance-profiling), lo [strumenti di analisi di Windows Phone](https://msdn.microsoft.com/library/e67e3199-ea43-4d14-ab7e-f7f19266253f) e [PerfView](https://www.microsoft.com/download/details.aspx?id=28567). 
   
  PerfView è uno strumento gratuito e straordinariamente efficace che permette di concentrarsi sui problemi essenziali, ad esempio I/O del disco, eventi GC e memoria. È possibile acquisire eventi ETW ([Event Tracing for Windows](../../../docs/framework/wcf/samples/etw-tracing.md)) relativi alle prestazioni e visualizzare con facilità le informazioni specifiche per app, processi, stack e thread. PerfView mostra la quantità e il tipo di memoria allocata dall'app e le quantità di memoria allocate da quali funzioni o stack di chiamata. Per informazioni dettagliate, vedere gli esaurienti argomenti, demo e video inclusi con lo strumento (ad esempio le [esercitazioni relative a PerfView](https://channel9.msdn.com/Series/PerfView-Tutorial) su Channel 9). 
   
-### <a name="fact-4-its-all-about-allocations"></a>Considerazione 4: Le allocazioni sono importantissime  
+### <a name="fact-4-its-all-about-allocations"></a>Considerazione 4: Le allocazioni è importantissime  
  Si potrebbe pensare che la creazione di un'app .NET Framework reattiva dipenda completamente dagli algoritmi, ad esempio dall'uso dell'ordinamento rapido invece dell'ordinamento a bolle, ma non è così. Il fattore principale nella creazione di un'app reattiva è costituito dall'allocazione della memoria, in particolare se le dimensioni dell'app sono molto elevate o se l'app elabora quantità elevate di dati. 
   
  Quasi tutte le operazioni relative alla creazione di esperienze IDE reattive con le API del nuovo compilatore comportano il tentativo di evitare allocazioni e la gestione delle strategie per la memorizzazione nella cache. Le tracce di PerfView mostrano che le prestazioni dei nuovi compilatori C# e Visual Basic è associato raramente alla CPU. I compilatori possono essere associati a I/O durante la lettura di centinaia di migliaia o di milioni di righe di codice, la lettura di metadati o l'emissione di codice generato. I ritardi dei thread dell'interfaccia utente sono quasi sempre dovuti a operazioni di Garbage Collection. Le operazioni di Garbage Collection di .NET Framework sono ottimizzate al massimo per le prestazioni e sono eseguite nella maggior parte dei casi simultaneamente all'esecuzione del codice dell'app. Una singola allocazione può tuttavia attivare una raccolta [gen2](../../../docs/standard/garbage-collection/fundamentals.md) dispendiosa, arrestando tutti i thread. 
@@ -278,7 +278,7 @@ private static string GetStringAndReleaseBuilder(StringBuilder sb)
 ### <a name="linq-and-lambdas"></a>LINQ ed espressioni lambda  
 Language-Integrated Query (LINQ), in combinazione con le espressioni lambda, è un esempio di una funzionalità di produttività. Tuttavia, l'uso può avere un impatto significativo sulle prestazioni nel corso del tempo e si potrebbe rilevare che è necessario riscrivere il codice.
   
- **Esempio 5: Espressioni lambda, List\<T> e IEnumerable\<T>**  
+ **Esempio 5: Le espressioni lambda, elenco\<T > e IEnumerable\<T >**  
   
  Questo esempio usa [LINQ e il codice di stile funzionale](https://blogs.msdn.com/b/charlie/archive/2007/01/26/anders-hejlsberg-on-linq-and-functional-programming.aspx) per individuare un simbolo nel modello del compilatore, a partire da una stringa di nome:  
   
@@ -361,7 +361,8 @@ public Symbol FindMatchingSymbol(string name)
  Il codice non usa metodi di estensione LINQ, espressioni lambda o enumeratori e non comporta allocazioni. L'assenza di allocazioni è dovuta al fatto che il compilatore è in grado di verificare che la raccolta `symbols` e un <xref:System.Collections.Generic.List%601> e può associare l'enumeratore esistente (una struttura) a una variabile locale con il tipo corretto per evitare la conversione boxing. La versione originale di questa funzione è un esempio ottimale delle capacità espressive di C# e della produttività di .NET Framework. La nuova versione, più efficiente, mantiene queste qualità senza aggiungere codice complesso da gestire. 
   
 ### <a name="async-method-caching"></a>Memorizzazione del metodo async nella cache  
- L'esempio seguente mostra un problema comune che si verifica quando si cerca di usare i risultati memorizzati nella cache in un metodo [async](https://msdn.microsoft.com/library/db854f91-ccef-4035-ae4d-0911fde808c7). 
+
+L'esempio seguente mostra un problema comune che si verifica quando si cerca di usare i risultati memorizzati nella cache in un metodo [async](../../csharp/programming-guide/concepts/async/index.md).
   
  **Esempio 6: Memorizzazione nella cache nei metodi async**  
   

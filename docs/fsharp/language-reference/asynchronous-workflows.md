@@ -1,13 +1,13 @@
 ---
-title: Flussi di lavoro asincroni (F#)
+title: Flussi di lavoro asincroni
 description: Informazioni sul supporto in di F# linguaggio di programmazione per l'esecuzione di calcoli in modo asincrono, in cui vengono eseguiti senza bloccare l'esecuzione di altre operazioni.
 ms.date: 05/16/2016
-ms.openlocfilehash: 720996106d2b90392eacc75eb99147691ee83334
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 7643a26469ee6a6cf15940f90611fd430beef42e
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127745"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610788"
 ---
 # <a name="asynchronous-workflows"></a>Flussi di lavoro asincroni
 

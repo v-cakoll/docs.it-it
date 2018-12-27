@@ -1,22 +1,22 @@
 ---
-title: Opzioni di valori (F#)
-description: Informazioni sul tipo di opzione valore F#, vale a dire una versione di uno struct del tipo di opzione.
+title: Opzioni di valori
+description: Scopri la F# tipo di opzione di valore, ovvero una versione di uno struct di tipo di opzione.
 ms.date: 06/16/2018
-ms.openlocfilehash: 978bd1713c16f7c050ccb097cb134973d10ef6f5
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: d5209e620d53e12e9344faea09321f640af21491
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50185836"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613427"
 ---
 # <a name="value-options"></a>Opzioni di valori
 
-Il tipo di valore opzione in F# viene usato quando contengono due situazioni seguenti:
+Il tipo di opzione del valore in F# viene utilizzato per contengono i seguenti due casi:
 
-1. Uno scenario è appropriato per un [F# opzione](options.md).
+1. Uno scenario è appropriato per un [ F# opzione](options.md).
 2. Usando un tipo struct offre un miglioramento delle prestazioni nel proprio scenario.
 
-Non tutti gli scenari sensibili alle prestazioni sono "risolto" utilizzo di struct. È necessario considerare il costo aggiuntivo di copia quando vengono utilizzati invece i tipi di riferimento. Tuttavia, grande programmi F# comunemente creare un'istanza di molti tipi facoltativi che passano attraverso i percorsi critici, poiché gli struct in alcuni casi possono produrre migliore prestazioni complessive in base alla durata di un programma.
+Non tutti gli scenari sensibili alle prestazioni sono "risolto" utilizzo di struct. È necessario considerare il costo aggiuntivo di copia quando vengono utilizzati invece i tipi di riferimento. Tuttavia, grande F# programmi comunemente creare molti tipi facoltativi che passano attraverso i percorsi critici, perché struct in alcuni casi possono produrre migliori prestazioni complessive in base alla durata di un programma.
 
 ## <a name="definition"></a>Definizione
 

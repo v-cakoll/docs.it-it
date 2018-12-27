@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b6f759523acab1a248b92c69b95227b878696bbf
-ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
+ms.openlocfilehash: b3cb060d46703e41c4751c92d8a35e0ff7f72976
+ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53286585"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53396955"
 ---
 # <a name="working-with-calendars"></a>Utilizzo di calendari
 
@@ -138,7 +138,7 @@ Tuttavia, esiste un'eccezione importante. Il valore (non inizializzato) predefin
 I calendari dividono in genere le date in ere. Tuttavia, il <xref:System.Globalization.Calendar> non supportano tutte le ere definite da un calendario e la maggior parte delle classi in .NET i <xref:System.Globalization.Calendar> classi supportano una sola era. Solo le classi <xref:System.Globalization.JapaneseCalendar> e <xref:System.Globalization.JapaneseLunisolarCalendar> supportano più ere.
 
 > [!IMPORTANT]
->  Una nuova era per il <xref:System.Globlalization.JapaneseCalendar> e <xref:System.Globalization.JapaneseLunisolarCalendar> inizia il 1 maggio 2019. Questa modifica interessa tutte le applicazioni che usano questi calendari. Visualizzare [la gestione di una nuova era del calendario giapponese in .NET](https://blogs.msdn.microsoft.com/dotnet/2018/11/14/handling-a-new-era-in-the-japanese-calendar-in-net/) per altre informazioni e per determinare se le applicazioni sono interessate. Visualizzare [preparare l'applicazione per la modifica giapponese](~/windows/uwp/design/globalizing/japanese-era-change) per informazioni su come testare le applicazioni su Windows per garantire la conformità per la modifica di era.
+>  Il 1° maggio 2019 ha inizio una nuova era in <xref:System.Globalization.JapaneseCalendar> e <xref:System.Globalization.JapaneseLunisolarCalendar>. Questo cambio interessa tutte le applicazioni che usano questi calendari. Vedere [Handling a new era in the Japanese calendar in .NET](https://blogs.msdn.microsoft.com/dotnet/2018/11/14/handling-a-new-era-in-the-japanese-calendar-in-net/) (Gestione di una nuova era nel calendario giapponese in .NET) per altre informazioni e per determinare se le proprie applicazioni sono interessate dal cambio. Visualizzare [preparare l'applicazione per la modifica giapponese](/windows/uwp/design/globalizing/japanese-era-change) per informazioni su come testare le applicazioni su Windows per garantire la conformità per la modifica di era.
 
 ### <a name="eras-and-era-names"></a>Ere e nomi di ere
 

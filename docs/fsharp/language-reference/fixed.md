@@ -1,17 +1,17 @@
 ---
-title: La parola chiave Fixed (F#)
-description: Informazioni su come è possibile 'pin' locale nello stack per impedire la raccolta con F# 'fixed' (parola chiave).
+title: La parola chiave fixed
+description: Informazioni su come è possibile aggiungere una variabile locale nello stack per impedire la raccolta con il F# 'fixed' (parola chiave).
 ms.date: 04/24/2017
-ms.openlocfilehash: 1bf1b2ad67d2dd7f854e569cfca7c06e8aec7f4c
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 7fdf66560f3e2ab7584b00c7e4584d7f6c161858
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45624509"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614341"
 ---
-# <a name="the-fixed-keyword"></a>La parola chiave Fixed
+# <a name="the-fixed-keyword"></a>La parola chiave fixed
 
-F# 4.1 introduce il `fixed` parola chiave, che consente di "aggiungere" una variabile locale nello stack per evitare che vengano raccolti o spostate durante la garbage collection.  Viene usato per gli scenari di programmazione di basso livello.
+F#4.1 introduce il `fixed` parola chiave, che consente di "aggiungere" una variabile locale nello stack per evitare che vengano raccolti o spostate durante la garbage collection.  Viene usato per gli scenari di programmazione di basso livello.
 
 ## <a name="syntax"></a>Sintassi
 

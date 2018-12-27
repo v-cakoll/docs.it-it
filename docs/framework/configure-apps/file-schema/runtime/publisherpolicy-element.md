@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4613407e-d0a8-4ef2-9f81-a6acb9fdc7d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2cc3b7220fe34f5dc049a3da71b160a88f82fdb1
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 4c81b403fa4d633428946d36960d5df32df76d21
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746098"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613778"
 ---
 # <a name="ltpublisherpolicygt-element"></a>&lt;publisherPolicy&gt; elemento
 Specifica se il runtime applica i criteri dell'editore.  
@@ -45,7 +45,7 @@ Specifica se il runtime applica i criteri dell'editore.
   
 ## <a name="apply-attribute"></a>applicare l'attributo  
   
-|Valore|Descrizione|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |`yes`|Applica i criteri dell'editore. Questa è l'impostazione predefinita.|  
 |`no`|Non si applica i criteri dell'editore.|  
@@ -61,11 +61,11 @@ Specifica se il runtime applica i criteri dell'editore.
 |`runtime`|Contiene informazioni sull'associazione degli assembly e sull'operazione di Garbage Collection.|  
   
 ## <a name="remarks"></a>Note  
- Quando un fornitore del componente rilascia una nuova versione di un assembly, può includere i criteri dell'editore in modo da applicazioni che utilizzano la versione precedente a questo punto utilizzare la nuova versione. Per specificare se applicare i criteri dell'editore per un particolare assembly, inserire il  **\<publisherPolicy >** elemento il  **\<dependentAssembly >** elemento.  
+ Quando un fornitore del componente rilascia una nuova versione di un assembly, il fornitore può includere un criterio server di pubblicazione in modo che le applicazioni che usano la versione precedente a questo punto usano la nuova versione. Per specificare se applicare i criteri dell'editore per un determinato assembly, inserire il  **\<publisherPolicy >** elemento il  **\<dependentAssembly >** elemento.  
   
- L'impostazione predefinita per il **applicare** attributo **Sì**. L'impostazione di **applicare** attributo **non** sostituzioni precedenti **Sì** le impostazioni per un assembly.  
+ L'impostazione predefinita per il **si applicano** attributo **yes**. Impostando il **si applicano** dell'attributo **alcun** sostituzioni quelli precedenti **Sì** le impostazioni per un assembly.  
   
- Autorizzazione è necessaria per un'applicazione ignorare in modo esplicito criteri editore utilizzando il [ \<publisherPolicy applicare = "no" / >](../../../../../docs/framework/configure-apps/file-schema/runtime/publisherpolicy-element.md) elemento nel file di configurazione dell'applicazione. L'autorizzazione viene concessa impostando il <xref:System.Security.Permissions.SecurityPermissionFlag> flag di <xref:System.Security.Permissions.SecurityPermission>. Per ulteriori informazioni, vedere [autorizzazione di sicurezza il reindirizzamento di Assembly](../../../../../docs/framework/configure-apps/assembly-binding-redirection-security-permission.md).  
+ L'autorizzazione è necessaria per un'applicazione ignorare in modo esplicito server di pubblicazione dei criteri tramite il [ \<publisherPolicy applicare = "no" / >](../../../../../docs/framework/configure-apps/file-schema/runtime/publisherpolicy-element.md) elemento nel file di configurazione dell'applicazione. L'autorizzazione viene concessa impostando il <xref:System.Security.Permissions.SecurityPermissionFlag> flag nella <xref:System.Security.Permissions.SecurityPermission>. Per altre informazioni, vedere [autorizzazione di sicurezza per il reindirizzamento di associazione Assembly](../../../../../docs/framework/configure-apps/assembly-binding-redirection-security-permission.md).  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente consente di disattivare i criteri dell'editore per l'assembly, `myAssembly`.  
@@ -86,7 +86,7 @@ Specifica se il runtime applica i criteri dell'editore.
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Schema delle impostazioni di runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [Come il runtime individua gli assembly](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [Reindirizzamento delle versioni di assembly](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+- [Schema delle impostazioni di runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [Come il runtime individua gli assembly](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+- [Reindirizzamento delle versioni di assembly](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

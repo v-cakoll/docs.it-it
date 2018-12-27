@@ -1,13 +1,13 @@
 ---
-title: Valori (F#)
-description: Informazioni su come i valori in F# sono quantità che hanno un tipo specifico.
+title: Valori
+description: Informazioni su come i valori di F# sono quantità che hanno un tipo specifico.
 ms.date: 05/16/2016
-ms.openlocfilehash: f645481ce8395c11ae920aee06cbf07955aeb684
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 5c1d4f1e59cbf092911d99a725654042bf3383b1
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45991168"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611880"
 ---
 # <a name="values"></a>Valori
 

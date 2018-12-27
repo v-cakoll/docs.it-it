@@ -8,12 +8,12 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework]
 ms.assetid: 5fbcaf4f-ea2a-4d20-b0d6-e61dee202b4b
 author: KrzysztofCwalina
-ms.openlocfilehash: 736069926a2a3fdc4856a51c5226f725b22c1d5f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 2317ed0dbe8a6e69452ac0721ffed1b9da50a907
+ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147606"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53396929"
 ---
 # <a name="framework-design-guidelines"></a>Linee guida per la progettazione di Framework
 In questa sezione vengono fornite linee guida per la progettazione di librerie che ne estendono e interagiscono con .NET Framework. L'obiettivo è garantire agli sviluppatori di librerie API uniformità e semplicità d'uso, fornendo un modello di programmazione unificato che è indipendente dal linguaggio di programmazione usato per lo sviluppo. È consigliabile seguire queste linee guida di progettazione durante lo sviluppo di classi e componenti in grado di estendere .NET Framework. Progettazione di librerie incoerente influisce negativamente sulla produttività degli sviluppatori e, scoraggia l'adozione.  
@@ -42,7 +42,7 @@ In questa sezione vengono fornite linee guida per la progettazione di librerie c
  Descrive linee guida per l'utilizzo di tipi comuni, ad esempio matrici, gli attributi e le raccolte, che supportano la serializzazione e l'overload degli operatori di uguaglianza.  
   
  [Modelli di progettazione comuni](../../../docs/standard/design-guidelines/common-design-patterns.md)  
- Vengono fornite linee guida per la scelta e implementare il modello dispose e le proprietà di dipendenza.  
+ Vengono fornite linee guida per la scelta e l'implementazione delle proprietà di dipendenza.  
   
  *Parti protette da copyright © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*  
   

@@ -2,16 +2,16 @@
 title: Sicurezza dei provider di tipi
 description: Informazioni sulla sicurezza del provider di tipo in F#, incluse le procedure modificare le impostazioni del trust per un provider di tipi.
 ms.date: 05/16/2016
-ms.openlocfilehash: 26f95ad3950b37a668c497f293b9941ed13a18c7
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 9ccb33d7298736c3d6b54980b6fe09bc9f2e0259
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43861907"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611191"
 ---
 # <a name="type-provider-security"></a>Sicurezza dei provider di tipi
 
-Provider di tipi sono assembly (DLL) fanno riferimento il progetto F# o uno script che contengono codice per connettersi alle origini dati esterne e questo tipo di informazioni della superficie di attacco nell'ambiente di tipo F#. In genere, codice negli assembly di riferimento viene eseguito solo durante la compilazione e quindi eseguire il codice (o nel caso di uno script, inviare il codice a F# Interactive). Tuttavia, un assembly del provider di tipo verrà eseguito all'interno di Visual Studio quando viene semplicemente il codice viene visualizzato nell'editor. Ciò accade perché i provider di tipo devono eseguire per aggiungere informazioni aggiuntive per l'editor, ad esempio le descrizioni comandi informazioni rapide, i completamenti IntelliSense e così via. Di conseguenza, vi sono considerazioni sulla sicurezza aggiuntiva per il tipo di assembly del provider, perché vengono eseguiti automaticamente all'interno del processo di Visual Studio.
+Provider di tipi sono assembly (DLL) fa riferimento il F# project o script che contengono codice per la connessione alle origini dati esterne e della superficie di attacco questo tipo di informazioni per il F# digitare "ambiente". In genere, viene eseguito solo codice negli assembly di riferimento quando si compila e quindi eseguire il codice (o nel caso di uno script, inviare il codice per F# interattivo). Tuttavia, un assembly del provider di tipo verrà eseguito all'interno di Visual Studio quando viene semplicemente il codice viene visualizzato nell'editor. Ciò accade perché i provider di tipo devono eseguire per aggiungere informazioni aggiuntive per l'editor, ad esempio le descrizioni comandi informazioni rapide, i completamenti IntelliSense e così via. Di conseguenza, vi sono considerazioni sulla sicurezza aggiuntiva per il tipo di assembly del provider, perché vengono eseguiti automaticamente all'interno del processo di Visual Studio.
 
 ## <a name="security-warning-dialog"></a>Avviso di sicurezza
 

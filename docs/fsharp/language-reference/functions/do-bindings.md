@@ -1,13 +1,13 @@
 ---
-title: Associazioni do (F#)
-description: Informazioni su come un 'do' associazione F# viene usato per eseguire codice senza definire una funzione o un valore.
+title: Associazioni do
+description: Informazioni su come un F# 'do' binding viene usato per eseguire codice senza definire una funzione o un valore.
 ms.date: 05/16/2016
-ms.openlocfilehash: 78dbf8da0fe40b5af566ad98693df1109eede7e4
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: d29f8557fda06097d2e85748ab6286f0415730b3
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45973144"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614519"
 ---
 # <a name="do-bindings"></a>Associazioni do
 

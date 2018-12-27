@@ -2,12 +2,12 @@
 title: F#linee guida per la formattazione del codice
 description: Per ulteriori linee guida per la formattazione, vedere F# codice.
 ms.date: 11/26/2018
-ms.openlocfilehash: edaa8c8b759377e71fcba705b30e8af9a8c2a716
-ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
+ms.openlocfilehash: e8e0af2ebffd0e2f3720896bf710961afa11e7bd
+ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53286546"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53396825"
 ---
 # <a name="f-code-formatting-guidelines"></a>F#linee guida per la formattazione del codice
 
@@ -442,20 +442,22 @@ Usare sempre almeno uno spazio tra due operatori simile a parentesi graffa disti
  { IngredientName = "Lemon"; Quantity = 1 }]
 ```
 
+Si applica la stessa delle linee guida per gli elenchi o matrici di tuple.
+
 Gli elenchi e matrici suddivisi su più righe seguono una regola simile dei record:
 
 ```fsharp
 let pascalsTriangle =
     [|
-        [|1|]
-        [|1; 1|]
-        [|1; 2; 1|]
-        [|1; 3; 3; 1|]
-        [|1; 4; 6; 4; 1|]
-        [|1; 5; 10; 10; 5; 1|]
-        [|1; 6; 15; 20; 15; 6; 1|]
-        [|1; 7; 21; 35; 35; 21; 7; 1|]
-        [|1; 8; 28; 56; 70; 56; 28; 8; 1|]
+        [| 1 |]
+        [| 1; 1 |]
+        [| 1; 2; 1 |]
+        [| 1; 3; 3; 1 |]
+        [| 1; 4; 6; 4; 1 |]
+        [| 1; 5; 10; 10; 5; 1 |]
+        [| 1; 6; 15; 20; 15; 6; 1 |]
+        [| 1; 7; 21; 35; 35; 21; 7; 1 |]
+        [| 1; 8; 28; 56; 70; 56; 28; 8; 1 |]
     |]
 ```
 

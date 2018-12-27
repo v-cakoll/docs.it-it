@@ -1,13 +1,13 @@
 ---
-title: Overload degli operatori (F#)
+title: Overload degli operatori
 description: Informazioni su come eseguire l'overload di operatori aritmetici in una classe o un tipo di record e a livello globale in F#.
 ms.date: 05/16/2016
-ms.openlocfilehash: 6232ebf215289e6a22b9d77fbd5fa67b82460486
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: c4b52b02522b750aa55ca6cf4097295e35ab1739
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44087299"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610762"
 ---
 # <a name="operator-overloading"></a>Overload degli operatori
 
@@ -47,11 +47,11 @@ Il carattere di operatore `.` non influisce sulla precedenza, in modo che, ad es
 
 Solo gli operatori `?` e `?<-` può iniziare con `?`.
 
-È disponibili una tabella che mostra la precedenza di tutti gli operatori in F# [riferimenti per simboli e operatore](symbol-and-operator-reference/index.md).
+Una tabella che mostra la precedenza di tutti gli operatori in F# sono disponibili nel [riferimenti per simboli e operatore](symbol-and-operator-reference/index.md).
 
 ## <a name="overloaded-operator-names"></a>Nomi degli operatori di overload
 
-Quando il compilatore F# compila un'espressione di operatore, viene generato un metodo che presenta un nome generato dal compilatore per tale operatore. Si tratta del nome che viene visualizzato il codice Microsoft intermediate language (MSIL) per il metodo, nonché reflection e IntelliSense. In genere, non è necessario usare questi nomi nel codice F#.
+Quando il F# compilatore compila un'espressione di operatore, viene generato un metodo che presenta un nome generato dal compilatore per tale operatore. Si tratta del nome che viene visualizzato il codice Microsoft intermediate language (MSIL) per il metodo, nonché reflection e IntelliSense. Non è in genere necessario usare questi nomi in F# codice.
 
 La tabella seguente illustra gli operatori standard e i relativi nomi generati.
 
@@ -151,7 +151,7 @@ Il codice seguente viene illustrato l'utilizzo dell'operatore di overload per im
 
 L'output del codice sopra riportato è `12`.
 
-È possibile ridefinire gli operatori aritmetici regolare in questo modo perché definiscono le regole di ambito per F# che appena definiti gli operatori hanno la precedenza sugli operatori incorporati.
+È possibile ridefinire gli operatori aritmetici regolare in questo modo perché gli ambiti di regole per F# impone che appena definiti gli operatori hanno la precedenza sugli operatori incorporati.
 
 La parola chiave `inline` viene spesso usato con gli operatori globali, che spesso sono piccole funzioni che si integrano meglio nel codice chiamante. Making operatore funzioni inline anche consente loro di lavorare con i parametri di tipo risolti staticamente per generare codice generico risolto staticamente. Per altre informazioni, vedere [funzioni Inline](functions/inline-functions.md) e [staticamente parametri di tipo risolti](generics/statically-resolved-type-parameters.md).
 

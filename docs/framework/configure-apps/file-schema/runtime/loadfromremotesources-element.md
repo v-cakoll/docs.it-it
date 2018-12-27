@@ -7,18 +7,18 @@ helpviewer_keywords:
 ms.assetid: 006d1280-2ac3-4db6-a984-a3d4e275046a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7a8858059159edddb4456561719c572fb9268be7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3070e293fc335bb24dd1234007307773d152ceee
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509483"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611399"
 ---
 # <a name="ltloadfromremotesourcesgt-element"></a>&lt;loadFromRemoteSources&gt; elemento
 Specifica se gli assembly caricati da origini remote devono essere concessa l'attendibilità in .NET Framework 4 e versioni successive.
   
 > [!NOTE]
->  Se a causa di un messaggio di errore nell'elenco di errori di progetto Visual Studio o un errore di compilazione, si viene reindirizzati a questo argomento, vedere [procedura: usare un Assembly dal Web in Visual Studio](https://msdn.microsoft.com/library/d8635b63-89a0-41aa-90f4-f351b2111070).  
+>  Se a causa di un messaggio di errore nell'elenco di errori di progetto Visual Studio o un errore di compilazione, si viene reindirizzati a questo argomento, vedere [come: Usare un Assembly dal Web in Visual Studio](https://msdn.microsoft.com/library/d8635b63-89a0-41aa-90f4-f351b2111070).  
   
  \<configuration>  
 \<runtime>  
@@ -42,7 +42,7 @@ Specifica se gli assembly caricati da origini remote devono essere concessa l'at
   
 ## <a name="enabled-attribute"></a>attributo Enabled  
   
-|Valore|Descrizione|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |`false`|Non concedere l'attendibilità totale alle applicazioni da origini remote. Questa è l'impostazione predefinita.|  
 |`true`|Concedere l'attendibilità totale alle applicazioni da origini remote.|  
@@ -74,7 +74,7 @@ so this load may be dangerous. If this load is not intended to sandbox the assem
 
 Per caricare l'assembly ed eseguire il codice, è necessario:
 
-- Creare in modo esplicito un ambiente sandbox per l'assembly (vedere [procedura: eseguire codice parzialmente attendibile in un ambiente Sandbox](../../../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)).
+- Creare in modo esplicito un ambiente sandbox per l'assembly (vedere [come: Eseguire codice parzialmente attendibile in un ambiente Sandbox](../../../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)).
 
 - Eseguire il codice dell'assembly con attendibilità totale. A tale scopo, la configurazione di `<loadFromRemoteSources>` elemento. Consente di specificare che gli assembly eseguiti in attendibilità parziale in versioni precedenti di .NET Framework ora eseguito con attendibilità totale in .NET Framework 4 e versioni successive.
 
@@ -117,8 +117,8 @@ Nell'esempio seguente viene illustrato come concedere l'attendibilità totale pe
 
 ## <a name="see-also"></a>Vedere anche
 
-[Utilizzi più impliciti dei criteri CAS: loadFromRemoteSources](https://go.microsoft.com/fwlink/p/?LinkId=266839)  
-[Procedura: eseguire codice parzialmente attendibile in un oggetto sandbox](../../../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)  
-[Schema delle impostazioni di runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-[Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)  
-<xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>  
+- [Utilizzi più impliciti dei criteri CAS: loadFromRemoteSources](https://go.microsoft.com/fwlink/p/?LinkId=266839)  
+- [Procedura: Eseguire codice parzialmente attendibile in un oggetto Sandbox](../../../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)  
+- [Schema delle impostazioni di runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>  

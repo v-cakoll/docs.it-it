@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: creare una modalità di visualizzazione personalizzata per un oggetto ListView'
+title: 'Procedura: Creare una modalità di visualizzazione personalizzata per un oggetto ListView'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - ListView controls [WPF], creating custom View mode
 ms.assetid: 71077349-eeb9-4344-ab29-b5df96df3314
-ms.openlocfilehash: 239fb2e9a364bd0265ff7cf644ee296878280cf3
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: d39f8829e7bdc89c05cda0f586298518908683f5
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44081808"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613024"
 ---
-# <a name="how-to-create-a-custom-view-mode-for-a-listview"></a>Procedura: creare una modalità di visualizzazione personalizzata per un oggetto ListView
+# <a name="how-to-create-a-custom-view-mode-for-a-listview"></a>Procedura: Creare una modalità di visualizzazione personalizzata per un oggetto ListView
 Questo esempio viene illustrato come creare una classe personalizzata <xref:System.Windows.Controls.ListView.View%2A> modalità per un <xref:System.Windows.Controls.ListView> controllo.  
   
 ## <a name="example"></a>Esempio  
@@ -40,7 +40,7 @@ Questo esempio viene illustrato come creare una classe personalizzata <xref:Syst
  [!code-csharp[ListViewCustomView#ListViewtileViewmode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewCustomView/CSharp/Window1.xaml.cs#listviewtileviewmode)]
  [!code-vb[ListViewCustomView#ListViewtileViewmode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ListViewCustomView/visualbasic/window1.xaml.vb#listviewtileviewmode)]  
   
- Per l'esempio completo, vedere [ListView con più visualizzazioni](https://go.microsoft.com/fwlink/?LinkID=160013).  
+ Per l'esempio completo, vedere [ListView con visualizzazioni Multiple (C#)](https://github.com/dotnet/samples/tree/master/snippets/csharp/VS_Snippets_Wpf/ListViewCustomView/CSharp) oppure [ListView con più Views(Visual Basic)](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/VS_Snippets_Wpf/ListViewCustomView/visualbasic).  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Windows.Controls.ListView>  

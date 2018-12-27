@@ -1,13 +1,13 @@
 ---
-title: Tuple (F#)
-description: Scopri la tupla F#, un raggruppamento di valori senza nome, ma ordinati, tipi potenzialmente diversi.
+title: Tuple
+description: Scopri la F# tupla, un raggruppamento di valori senza nome, ma ordinati, tipi potenzialmente diversi.
 ms.date: 05/16/2016
-ms.openlocfilehash: e7628e4c4b538c2fe52fca25d2597b10fec28d1c
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: a1fc31d4dc97c0921545e53b91dcde0547002006
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43749223"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611048"
 ---
 # <a name="tuples"></a>Tuple
 
@@ -22,7 +22,7 @@ struct(element, ... ,element )
 
 ## <a name="remarks"></a>Note
 
-Ciascuna *elemento* nella sintassi precedente può essere qualsiasi espressione valida con F#.
+Ciascuna *elemento* nella sintassi precedente può essere qualsiasi F# espressione.
 
 ## <a name="examples"></a>Esempi
 
@@ -88,7 +88,7 @@ int * float * string
 
 ## <a name="interoperation-with-c-tuples"></a>Interoperabilità con tuple in c#
 
-C# 7.0 ha introdotto le tuple del linguaggio.  Le tuple in c# sono strutture e sono equivalenti alle tuple di struct in F#.  Se è necessario per l'interoperabilità con c#, è necessario usare le tuple struct.
+C# 7.0 ha introdotto le tuple del linguaggio.  Le tuple in C# sono gli struct e sono equivalenti alle tuple di struct F#.  Se è necessario per l'interoperabilità con c#, è necessario usare le tuple struct.
 
 Si tratta di un'operazione semplice.  Si supponga, ad esempio passare una tupla a una classe c# e quindi utilizzare il risultato, che è anche una tupla:
 
@@ -103,7 +103,7 @@ namespace CSharpTupleInterop
 }
 ```
 
-Nel codice F#, è quindi possibile passare una tupla di uno struct come parametro e utilizzare il risultato come una tupla di uno struct.
+Nel F# code, è quindi possibile passare una tupla di uno struct come parametro e utilizzare il risultato come una tupla di uno struct.
 
 ```fsharp
 open TupleInterop
@@ -126,7 +126,7 @@ Poiché le tuple di riferimento e Struct Tuples hanno una rappresentazione sotto
 
 Questa sezione illustra la forma di tuple quando essi è compilati.  Le informazioni qui non sono necessari per la lettura a meno che non si usa .NET Framework 3.5 o inferiore.
 
-Le tuple vengono compilate in oggetti di uno dei vari tipi generici, tutte il nome `System.Tuple`, che sono sottoposti a overload in grado o sul numero di parametri di tipo. Tipi di tupla vengono visualizzati in questo modulo quando vengono visualizzati da un altro linguaggio, ad esempio c# o Visual Basic, oppure quando si usa uno strumento che non riconosce i costrutti F#. Il `Tuple` tipi sono stati introdotti in .NET Framework 4. Se la destinazione è una versione precedente di .NET Framework, il compilatore Usa le versioni di [System. Tuple](https://msdn.microsoft.com/library/5ac7953d-acdc-4a58-bfb7-c1f6406c0fa3) dalla versione 2.0 della libreria di base F#. I tipi in questa raccolta vengono utilizzati solo per le applicazioni che usano la versione 2.0, 3.0 e 3.5 versioni di .NET Framework. L'inoltro dei tipi viene usato per garantire la compatibilità binaria tra i componenti di .NET Framework 2.0 e .NET Framework 4 F#.
+Le tuple vengono compilate in oggetti di uno dei vari tipi generici, tutte il nome `System.Tuple`, che sono sottoposti a overload in grado o sul numero di parametri di tipo. Tipi di tupla appaiono in questa forma quando vengono visualizzati da un altro linguaggio, ad esempio C# o Visual Basic, o quando si utilizza uno strumento che non è a conoscenza di F# costruisce. Il `Tuple` tipi sono stati introdotti in .NET Framework 4. Se la destinazione è una versione precedente di .NET Framework, il compilatore Usa le versioni di [System. Tuple](https://msdn.microsoft.com/library/5ac7953d-acdc-4a58-bfb7-c1f6406c0fa3) dalla versione 2.0 del F# libreria di base. I tipi in questa raccolta vengono utilizzati solo per le applicazioni che usano la versione 2.0, 3.0 e 3.5 versioni di .NET Framework. L'inoltro dei tipi viene usato per garantire la compatibilità binaria tra .NET Framework 2.0 e .NET Framework 4 F# componenti.
 
 ### <a name="compiled-form-of-struct-tuples"></a>Formato compilato di tuple di Struct
 

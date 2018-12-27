@@ -1,17 +1,17 @@
 ---
-title: Funzioni esterne (F#)
-description: Scopri il supporto del linguaggio F# per chiamare le funzioni in codice nativo.
+title: Funzioni esterne
+description: Scopri la F# supporto del linguaggio per chiamare le funzioni in codice nativo.
 ms.date: 05/16/2016
-ms.openlocfilehash: db0d3362d867b07b333951f3380c6735ff471d5e
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 86ea78844fb812361233f8360c377465d83be203
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45973105"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611727"
 ---
 # <a name="external-functions"></a>Funzioni esterne
 
-In questo argomento viene descritto il supporto del linguaggio F# per chiamare le funzioni in codice nativo.
+Questo argomento viene descritto F# supporto del linguaggio per chiamare le funzioni in codice nativo.
 
 ## <a name="syntax"></a>Sintassi
 

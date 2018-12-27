@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 14e95627-dd79-4b82-ac85-e682aa3a31d8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 54036baee6fc2d7af49e818a1c112dec8eac80aa
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a5b0d3bfb7e4db2fec39f37c9fb794731cdf5bbc
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744912"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613297"
 ---
 # <a name="ltdependentassemblygt-element"></a>&lt;dependentAssembly&gt; elemento
-Incapsula i criteri di associazione e il percorso dell'assembly per ciascun assembly. Utilizzare uno `dependentAssembly` elemento per ogni assembly.  
+Incapsula i criteri di associazione e il percorso dell'assembly per ciascun assembly. Usare uno `dependentAssembly` (elemento) per ogni assembly.  
   
  \<configuration>  
 \<runtime>  
@@ -44,7 +44,7 @@ Incapsula i criteri di associazione e il percorso dell'assembly per ciascun asse
 |Elemento|Descrizione|  
 |-------------|-----------------|  
 |`assemblyIdentity`|Contiene le informazioni di identificazione dell'assembly. Questo elemento deve essere incluso in ogni `dependentAssembly` elemento.|  
-|`codeBase`|Specifica in cui il runtime trova un assembly condiviso se non è installato nel computer.|  
+|`codeBase`|Specifica in cui il runtime può trovare un assembly condiviso se non è installato nel computer.|  
 |`bindingRedirect`|Reindirizza una versione dell'assembly in un'altra.|  
 |`publisherPolicy`|Specifica se il runtime applica i criteri dell'editore per questo assembly.|  
   
@@ -57,7 +57,7 @@ Incapsula i criteri di associazione e il percorso dell'assembly per ciascun asse
 |`runtime`|Contiene informazioni sull'associazione degli assembly e sull'operazione di Garbage Collection.|  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come incapsulare le informazioni per due assembly.  
+ Nell'esempio seguente viene illustrato come incapsulare le informazioni per i due assembly.  
   
 ```xml  
 <configuration>  
@@ -81,6 +81,6 @@ Incapsula i criteri di associazione e il percorso dell'assembly per ciascun asse
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Schema delle impostazioni di runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [Reindirizzamento delle versioni di assembly](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+- [Schema delle impostazioni di runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [Reindirizzamento delle versioni di assembly](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

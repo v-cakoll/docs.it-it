@@ -1,17 +1,17 @@
 ---
-title: Risultati (F#)
-description: Informazioni su come usare il tipo 'Generare' di F# per semplificare la scrittura di codice a tolleranza di errore.
+title: Risultati
+description: Informazioni su come usare il F# 'Result' digitare che consentono di scrivere codice a tolleranza di errore.
 ms.date: 04/24/2017
-ms.openlocfilehash: a7ce2e1f6b8c6a32d99a2feaf9547c4b67b152b8
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 8b419412b406018a21f2c23103c8193fec8766f2
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44213040"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612712"
 ---
 # <a name="results"></a>Risultati
 
-A partire da F# 4.1, vi è un `Result<'T,'TFailure>` tipo che è possibile usare per la scrittura di codice a tolleranza di errore che può essere creato.
+A partire da F# 4.1, è presente un `Result<'T,'TFailure>` tipo di cui è possibile usare per la scrittura di codice a tolleranza di errore che può essere creato.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -27,9 +27,9 @@ type Result<'T,'TError> =
 
 ## <a name="remarks"></a>Note
 
-Si noti che il tipo di risultato è un [unione discriminata di struct](discriminated-unions.md#struct-discriminated-unions), ovvero un'altra funzionalità introdotta in F# 4.1.  Vengono applicate la semantica di uguaglianza strutturale.
+Si noti che il tipo di risultato è un [unione discriminata di struct](discriminated-unions.md#struct-discriminated-unions), che è un'altra funzionalità introdotta in F# 4.1.  Vengono applicate la semantica di uguaglianza strutturale.
 
-Il `Result` tipo viene generalmente utilizzato in monadic gestione degli errori, che è spesso detta [programmazione orientata ad ferroviarie](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html) all'interno della community di F#.  L'esempio di semplice seguente illustra questo approccio.
+Il `Result` tipo viene generalmente utilizzato in monadic gestione degli errori, che è noto anche come [programmazione orientata ad ferroviarie](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html) all'interno di F# della community.  L'esempio di semplice seguente illustra questo approccio.
 
 ```fsharp
 // Define a simple type which has fields that can be validated

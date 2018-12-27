@@ -1,13 +1,13 @@
 ---
-title: Proprietà (F#)
-description: Informazioni su F# le proprietà, che sono membri che rappresentano valori associati all'oggetto specificato.
+title: Proprietà
+description: Informazioni su F# proprietà, che sono membri che rappresentano valori associati a un oggetto.
 ms.date: 05/16/2016
-ms.openlocfilehash: 75d21415b44ccc1c26ef5f478d5f5de20c3412e8
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 8e74e0bc0850b5f07c4697f624d5393813bec6e0
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50197925"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614506"
 ---
 # <a name="properties"></a>Proprietà
 

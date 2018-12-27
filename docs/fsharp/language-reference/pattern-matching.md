@@ -1,21 +1,21 @@
 ---
-title: Criteri di ricerca [F#]
-description: Informazioni su come i modelli vengono usati in F# per confrontare i dati con strutture logiche, scomporre i dati in parti costituenti o estrarre informazioni dai dati.
+title: Criteri di ricerca
+description: Informazioni su come vengono usati i modelli F# per confrontare i dati con strutture logiche, scomporre i dati in parti costituenti o estrarre informazioni dai dati.
 ms.date: 05/16/2016
-ms.openlocfilehash: 5ad3d3e1a78246afdfa2948fd0fb84fa04686d30
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: bb6b41f6d15612e4a65abd4a3d5d7291d84a8f3c
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45991424"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613583"
 ---
 # <a name="pattern-matching"></a>Criteri di ricerca
 
-I modelli sono regole per la trasformazione dei dati di input. Vengono utilizzati nel linguaggio F# per confrontare i dati con una o più strutture logiche, scomporre i dati in parti costituenti o estrarre informazioni dai dati in vari modi.
+I modelli sono regole per la trasformazione dei dati di input. Vengono usati in tutto il F# lingua per confrontare i dati con una struttura logica o le strutture, decomporre i dati nelle parti costituenti o estrarre informazioni dai dati in vari modi.
 
 ## <a name="remarks"></a>Note
 
-I modelli vengono utilizzati in numerosi costrutti di linguaggio, ad esempio il `match` espressione. Vengono usati quando si elaborano argomenti per le funzioni nel `let` associazioni, le espressioni lambda e nei gestori di eccezioni associati il `try...with` espressione. Per altre informazioni, vedere [espressioni di ricerca](match-expressions.md), [associazioni let](functions/let-bindings.md), [espressioni Lambda: I `fun` parola chiave](functions/lambda-expressions-the-fun-keyword.md), e [eccezioni: il `try...with` Espressione](exception-handling/the-try-with-expression.md).
+I modelli vengono utilizzati in numerosi costrutti di linguaggio, ad esempio il `match` espressione. Vengono usati quando si elaborano argomenti per le funzioni nel `let` associazioni, le espressioni lambda e nei gestori di eccezioni associati il `try...with` espressione. Per altre informazioni, vedere [espressioni di ricerca](match-expressions.md), [associazioni let](functions/let-bindings.md), [espressioni Lambda: Il `fun` parola chiave](functions/lambda-expressions-the-fun-keyword.md), e [alle eccezioni: Il `try...with` espressione](exception-handling/the-try-with-expression.md).
 
 Ad esempio, nelle `match` espressione, il *pattern* è quello che segue il simbolo di barra verticale.
 
@@ -103,7 +103,7 @@ match shape with
 
 Modelli attivi consentono di definire la corrispondenza di modelli personalizzata più complessa. Per altre informazioni sui modelli attivi, vedere [modelli attivi](active-patterns.md).
 
-Il caso in cui l'identificatore è un'eccezione viene usato nel criterio di corrispondenza nel contesto dei gestori di eccezioni. Per informazioni sui criteri di ricerca nella gestione delle eccezioni, vedere [eccezioni: il `try...with` espressione](exception-handling/the-try-with-expression.md).
+Il caso in cui l'identificatore è un'eccezione viene usato nel criterio di corrispondenza nel contesto dei gestori di eccezioni. Per informazioni sui criteri di ricerca nella gestione delle eccezioni, vedere [alle eccezioni: Il `try...with` espressione](exception-handling/the-try-with-expression.md).
 
 ## <a name="variable-patterns"></a>Modelli variabili
 

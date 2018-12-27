@@ -1,13 +1,13 @@
 ---
-title: 'Cicli: espressioni for...in (F#)'
-description: Vedere come il ciclo for di F#.. nell'espressione costrutto di ciclo viene utilizzato per scorrere le corrispondenze di un modello in una raccolta enumerabile.
+title: 'Espressione Loops: for...in'
+description: Vedere il F# for... nell'espressione costrutto di ciclo viene utilizzato per scorrere le corrispondenze di un modello in una raccolta enumerabile.
 ms.date: 05/16/2016
-ms.openlocfilehash: c4fba1f1dea3993cafa2e37ad0f32d9fb2eed85a
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: adaf448a49cf53c63c41f9156d40ee5d1ad3caeb
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48027234"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614407"
 ---
 # <a name="loops-forin-expression"></a>Espressione Loops: for...in
 
@@ -136,5 +136,5 @@ Number of elements in list1: 5
 ## <a name="see-also"></a>Vedere anche
 
 - [Riferimenti per il linguaggio F#](index.md)
-- [Cicli: espressione `for...to`](loops-for-to-expression.md)
-- [Cicli: espressione `while...do`](loops-while-do-expression.md)
+- [Cicli: `for...to` Espressione](loops-for-to-expression.md)
+- [Cicli: `while...do` Espressione](loops-while-do-expression.md)

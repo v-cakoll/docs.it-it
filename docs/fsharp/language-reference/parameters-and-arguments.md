@@ -1,13 +1,13 @@
 ---
-title: Parametri e argomenti (F#)
-description: Informazioni sul supporto del linguaggio F# per la definizione dei parametri e passare argomenti a funzioni, metodi e proprietà.
+title: Parametri e argomenti
+description: Informazioni su F# supporto del linguaggio per la definizione dei parametri e passare argomenti a funzioni, metodi e proprietà.
 ms.date: 05/16/2016
-ms.openlocfilehash: 6ccef89fe411096ed66f481dd4ae2d91259fe1c4
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 08332ad9ab1c1a05f68ba27b2f1513ad0fe7c4d5
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50744457"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612478"
 ---
 # <a name="parameters-and-arguments"></a>Parametri e argomenti
 
@@ -109,7 +109,7 @@ Per altre informazioni, vedere [costruttori (F#)](https://msdn.microsoft.com/lib
 
 ## <a name="optional-parameters"></a>Parametri facoltativi
 
-È possibile specificare un parametro facoltativo per un metodo con un punto interrogativo davanti al nome del parametro. I parametri facoltativi vengono interpretati come tipo di opzione F#, pertanto è possibile eseguire le query in modo normale che i tipi di opzione sono sottoposti a query, usando un `match` espressione con `Some` e `None`. I parametri facoltativi sono consentiti solo per i membri, non su funzioni create tramite `let` associazioni.
+È possibile specificare un parametro facoltativo per un metodo con un punto interrogativo davanti al nome del parametro. I parametri facoltativi vengono interpretati come il F# opzione di tipo, in modo che è possibile eseguire le query in modo normale che i tipi di opzione sono sottoposti a query, usando una `match` espressione con `Some` e `None`. I parametri facoltativi sono consentiti solo per i membri, non su funzioni create tramite `let` associazioni.
 
 È possibile passare valori facoltativi esistenti al metodo in base al nome di parametro, ad esempio `?arg=None` oppure `?arg=Some(3)` o `?arg=arg`. Ciò può essere utile quando la compilazione di un metodo che passa gli argomenti facoltativi a un altro metodo.
 
@@ -151,7 +151,7 @@ In questo caso, il compilatore genera un avviso e ignorerà entrambi gli attribu
 
 ## <a name="passing-by-reference"></a>Il passaggio per riferimento
 
-Passaggio di un valore di F# per riferimento implica [zkratka](byrefs.md), che sono tipi puntatore gestito. Materiale sussidiario per il tipo da usare è il seguente:
+Il passaggio di un F# valore per riferimento implica [zkratka](byrefs.md), che sono tipi puntatore gestito. Materiale sussidiario per il tipo da usare è il seguente:
 
 * Usare `inref<'T>` se è necessario solo leggere il puntatore del mouse.
 * Usare `outref<'T>` se è necessario solo scrivere il puntatore del mouse.
@@ -186,7 +186,7 @@ Poiché il parametro è un puntatore e il valore è modificabile, qualsiasi modi
 
 In alcuni casi è necessario definire una funzione che accetta un numero arbitrario di parametri di tipo eterogeneo. Non sarebbe pratico creare tutti i possibili metodi di overload per conto di tutti i tipi che può essere usati. Le implementazioni di .NET forniscono supporto per tali metodi tramite la funzionalità di matrice di parametri. Un metodo che accetta una matrice di parametri nella sua firma può essere fornito con un numero arbitrario di parametri. I parametri vengono inseriti in una matrice. Il tipo degli elementi della matrice determina i tipi di parametro che possono essere passati alla funzione. Se si definisce la matrice di parametri con `System.Object` come tipo di elemento, quindi il codice client può passare i valori di qualsiasi tipo.
 
-In F#, matrici di parametri possono essere definite solo nei metodi. Non possono essere usate in funzioni autonome o funzioni definite nei moduli.
+In F#, le matrici di parametri possono essere definite solo nei metodi. Non possono essere usate in funzioni autonome o funzioni definite nei moduli.
 
 Per definire una matrice di parametri, utilizzare il `ParamArray` attributo. Il `ParamArray` attributo può essere applicato solo all'ultimo parametro.
 

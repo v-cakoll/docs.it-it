@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 02119ab6-1e91-448e-97ad-e7b2e5c4bbbd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 11e892d8ab9001d3670c801b43ba444aa24b2e41
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 32ffe48e7a65ab4ca2250eee65d188c0c7270c11
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743576"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611334"
 ---
 # <a name="ltappdomainresourcemonitoringgt-element"></a>&lt;appDomainResourceMonitoring&gt; elemento
 Indica al runtime di raccogliere statistiche su tutti i domini applicazione nel processo per la durata del processo.  
@@ -35,14 +35,14 @@ Indica al runtime di raccogliere statistiche su tutti i domini applicazione nel 
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|`enabled`|Attributo obbligatorio.<br /><br /> Specifica se il runtime raccoglie le statistiche per il monitoraggio delle risorse al dominio di applicazione.|  
+|`enabled`|Attributo obbligatorio.<br /><br /> Specifica se il runtime raccoglie le statistiche per il monitoraggio delle risorse del dominio applicazione.|  
   
 ## <a name="enabled-attribute"></a>Attributo enabled  
   
 |Valore|Descrizione|  
 |-----------|-----------------|  
-|`true`|Vengono raccolte statistiche per il monitoraggio delle risorse al dominio di applicazione.|  
-|`false`|Non vengono raccolte statistiche per il monitoraggio delle risorse al dominio di applicazione.|  
+|`true`|Statistiche di monitoraggio delle risorse del dominio dell'applicazione vengono raccolte.|  
+|`false`|Statistiche di monitoraggio delle risorse del dominio applicazione non vengono raccolte.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
@@ -55,14 +55,14 @@ Indica al runtime di raccogliere statistiche su tutti i domini applicazione nel 
 |`runtime`|Contiene informazioni sull'associazione degli assembly e sull'operazione di Garbage Collection.|  
   
 ## <a name="remarks"></a>Note  
- Monitoraggio delle risorse di dominio di applicazione è disponibile tramite la classe di dominio di applicazione gestita, l'hosting [ICLRAppDomainResourceMonitor](../../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md) interfaccia e event tracing for Windows (ETW). Quando il monitoraggio è abilitato, vengono raccolte statistiche per tutti i domini applicazione nel processo per tutta la durata del processo.  
+ Monitoraggio delle risorse del dominio applicazione è disponibile tramite la classe di dominio di applicazione gestita, l'hosting [ICLRAppDomainResourceMonitor](../../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md) interfaccia e event tracing for Windows (ETW). Quando il monitoraggio è abilitato, vengono raccolte statistiche per tutti i domini applicazione del processo per il ciclo di vita del processo.  
   
- Per abilitare il monitoraggio da codice gestito, utilizzare il <xref:System.AppDomain.MonitoringIsEnabled%2A> proprietà.  
+ Per abilitare il monitoraggio dal codice gestito, usare il <xref:System.AppDomain.MonitoringIsEnabled%2A> proprietà.  
   
- È disponibile solo in questo elemento di configurazione di [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] e versioni successive.  
+ Questo elemento di configurazione è disponibile solo nel [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] e versioni successive.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come abilitare il monitoraggio delle risorse al dominio di applicazione.  
+ Nell'esempio seguente viene illustrato come abilitare Monitoraggio risorse del dominio applicazione.  
   
 ```xml  
 <configuration>  
@@ -73,6 +73,6 @@ Indica al runtime di raccogliere statistiche su tutti i domini applicazione nel 
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>  
- [Schema delle impostazioni di runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>  
+- [Schema delle impostazioni di runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)

@@ -1,13 +1,13 @@
 ---
-title: Classi (F#)
-description: Informazioni su come le classi di F# sono tipi che rappresentano oggetti che possono avere proprietà, metodi ed eventi.
+title: Classi
+description: Informazioni su come F# le classi sono tipi che rappresentano oggetti che possono avere proprietà, metodi ed eventi.
 ms.date: 05/16/2016
-ms.openlocfilehash: 71cd713d192d28565e879b79b2fc9e0530e5f841
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 6bf838e98acecb89436d3e87809d9eb6da0c66d5
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48845736"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611178"
 ---
 # <a name="classes"></a>Classi
 
@@ -51,7 +51,7 @@ Si escludono a vicenda tipi ricorsiva, che sono tipi che fanno riferimento a alt
 
 ## <a name="constructors"></a>Costruttori
 
-Il costruttore è codice che crea un'istanza del tipo di classe. Costruttori di classi funzionano in modo diverso in F# rispetto ai colleghi in altri linguaggi .NET. In una classe di F#, è sempre presente un costruttore primario i cui argomenti sono descritti nel `parameter-list` che segue il nome del tipo e il cui corpo è costituito il `let` (e `let rec`) associazioni all'inizio della dichiarazione di classe e il `do`associazioni che seguono. Gli argomenti del costruttore primario sono nell'ambito della dichiarazione di classe.
+Il costruttore è codice che crea un'istanza del tipo di classe. Costruttori di classi funzionano in modo diverso in F# rispetto ai colleghi in altri linguaggi .NET. In un F# classe, è sempre presente un costruttore primario i cui argomenti sono descritti nel `parameter-list` che segue il nome del tipo e il cui corpo è costituito il `let` (e `let rec`) associazioni all'inizio della dichiarazione di classe e il `do` associazioni che seguono. Gli argomenti del costruttore primario sono nell'ambito della dichiarazione di classe.
 
 È possibile aggiungere costruttori aggiuntivi utilizzando la `new` (parola chiave) per aggiungere un membro, come indicato di seguito:
 
@@ -104,7 +104,7 @@ Gli argomenti di tipo vengono dedotti quando viene utilizzato il tipo. Nel codic
 
 ## <a name="specifying-inheritance"></a>Impostazione dell'ereditarietà
 
-Il `inherit` clausola identifica la classe di base diretta, se presente. In F#, è consentita una sola classe base diretta. Interfacce implementate da una classe non vengono considerate classi base. Le interfacce vengono discussi nel [interfacce](Interfaces.md) argomento.
+Il `inherit` clausola identifica la classe di base diretta, se presente. In F#, solo uno diretto della classe base è consentita. Interfacce implementate da una classe non vengono considerate classi base. Le interfacce vengono discussi nel [interfacce](Interfaces.md) argomento.
 
 È possibile accedere i metodi e le proprietà della classe base dalla classe derivata usando la parola chiave del linguaggio `base` come identificatore, seguito da un punto (.) e il nome del membro.
 
@@ -112,7 +112,7 @@ Per altre informazioni, vedere [Ereditarietà](inheritance.md).
 
 ## <a name="members-section"></a>Sezione membri
 
-È possibile definire statico o i metodi di istanza, le proprietà, le implementazioni dell'interfaccia, i membri astratti, le dichiarazioni di eventi e costruttori aggiuntivi in questa sezione. Let ed effettuare associazioni non può trovarsi in questa sezione. Poiché è possibile aggiungere membri a una varietà di tipi F#, oltre alle classi, questi vengono illustrati in un argomento separato [membri](members/index.md).
+È possibile definire statico o i metodi di istanza, le proprietà, le implementazioni dell'interfaccia, i membri astratti, le dichiarazioni di eventi e costruttori aggiuntivi in questa sezione. Let ed effettuare associazioni non può trovarsi in questa sezione. Poiché è possibile aggiungere membri a una varietà di F# tipi oltre alle classi, vengono descritti in un argomento separato [membri](members/index.md).
 
 ## <a name="mutually-recursive-types"></a>Si escludono a vicenda tipi ricorsiva
 
@@ -124,7 +124,7 @@ L'output è un elenco di tutti i file nella directory corrente.
 
 ## <a name="when-to-use-classes-unions-records-and-structures"></a>Quando usare le classi, unioni discriminate, record e strutture
 
-Data la varietà di tipi tra cui scegliere, è necessario avere una buona conoscenza di ciò che è progettato per ogni tipo per selezionare il tipo appropriato per una determinata situazione. Classi sono progettate per l'uso in contesti di programmazione orientata agli oggetti. La programmazione orientata agli oggetti è il paradigma principale usato dalle applicazioni che sono destinate a .NET Framework. Se il codice F# deve lavorare a stretto contatto con .NET Framework o a un'altra libreria orientate a oggetti e soprattutto se è necessario estendere da un sistema di tipi orientate a oggetti, ad esempio una libreria dell'interfaccia utente, le classi sono probabilmente appropriate.
+Data la varietà di tipi tra cui scegliere, è necessario avere una buona conoscenza di ciò che è progettato per ogni tipo per selezionare il tipo appropriato per una determinata situazione. Classi sono progettate per l'uso in contesti di programmazione orientata agli oggetti. La programmazione orientata agli oggetti è il paradigma principale usato dalle applicazioni che sono destinate a .NET Framework. Se il F# dispone di codice lavorare a stretto contatto con .NET Framework o a un'altra libreria orientate a oggetti e soprattutto se è necessario estendere da un sistema di tipi orientate a oggetti, ad esempio una libreria dell'interfaccia utente, le classi sono probabilmente appropriate.
 
 Se non si interagisce strettamente con il codice orientate a oggetti o se si sta scrivendo codice che è indipendente e pertanto protetti contro il frequente interazione con codice orientate a oggetti, è consigliabile usare record e unioni discriminate. Un singolo, anche pensiero – out unione discriminata, insieme a codice, corrispondenza dei appropriato può spesso essere utilizzato come un'alternativa più semplice per una gerarchia di oggetti. Per altre informazioni sulle unioni discriminate, vedere [unioni discriminate](discriminated-unions.md).
 

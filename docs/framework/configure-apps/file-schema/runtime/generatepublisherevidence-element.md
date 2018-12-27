@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: 7d208f50-e8d5-4a42-bc1a-1cf3590706a8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1f56bbef6ed6decf6be4246f649665db4cf0f766
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 3b2cd047367820d249272ca220669835975dbf2d
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746020"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611165"
 ---
 # <a name="ltgeneratepublisherevidencegt-element"></a>&lt;generatePublisherEvidence&gt; elemento
-Specifica se il runtime crea <xref:System.Security.Policy.Publisher> evidenza di sicurezza dall'accesso di codice (CAS).  
+Specifica se il runtime crea <xref:System.Security.Policy.Publisher> evidenza per la sicurezza dall'accesso di codice (CAS).  
   
  \<configuration>  
 \<runtime>  
@@ -41,7 +41,7 @@ Specifica se il runtime crea <xref:System.Security.Policy.Publisher> evidenza di
   
 |Valore|Descrizione|  
 |-----------|-----------------|  
-|`false`|Non creare <xref:System.Security.Policy.Publisher> evidenza.|  
+|`false`|Non crea <xref:System.Security.Policy.Publisher> evidenza.|  
 |`true`|Crea <xref:System.Security.Policy.Publisher> evidenza. Questa è l'impostazione predefinita.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
@@ -57,12 +57,12 @@ Specifica se il runtime crea <xref:System.Security.Policy.Publisher> evidenza di
 ## <a name="remarks"></a>Note  
   
 > [!NOTE]
->  Nel [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] e versioni successive, l'elemento non ha alcun effetto sui tempi di caricamento di assembly. Per ulteriori informazioni, vedere la sezione "Semplificazione dei criteri di sicurezza" in [modifiche della sicurezza](../../../../../docs/framework/security/security-changes.md).  
+>  Nel [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] e versioni successive, l'elemento non ha alcun effetto sui tempi di caricamento di assembly. Per altre informazioni, vedere la sezione "Semplificazione dei criteri di sicurezza" nella [modifiche della sicurezza](../../../../../docs/framework/security/security-changes.md).  
   
- Common language runtime (CLR) tenta di verificare la firma Authenticode in fase di caricamento per creare <xref:System.Security.Policy.Publisher> evidenza per l'assembly. Tuttavia, per impostazione predefinita, la maggior parte delle applicazioni non è necessario <xref:System.Security.Policy.Publisher> evidenza. Criteri di sicurezza standard per fare affidamento su di <xref:System.Security.Policy.PublisherMembershipCondition>. È consigliabile evitare il costo di esecuzione automatica non necessari associato alla verifica della firma dell'editore a meno che non viene eseguita in un computer con criteri di sicurezza personalizzato per l'applicazione o non sia progettata per soddisfare le richieste per <xref:System.Security.Permissions.PublisherIdentityPermission> in un ambiente parzialmente attendibile. (Le richieste per le autorizzazioni di identità sempre esito positivo in un ambiente completamente attendibile).  
+ Common language runtime (CLR) tenta di verificare la firma Authenticode in fase di caricamento per creare <xref:System.Security.Policy.Publisher> evidenza dell'assembly. Tuttavia, per impostazione predefinita, la maggior parte delle applicazioni non sono necessario <xref:System.Security.Policy.Publisher> evidenza. Criterio CAS standard non si basa sul <xref:System.Security.Policy.PublisherMembershipCondition>. È consigliabile evitare il costo di esecuzione automatica non necessari associato alla verifica della firma del server di pubblicazione, a meno che l'applicazione viene eseguita in un computer con criteri personalizzati di autorità di certificazione o non sia progettata per soddisfare le richieste per <xref:System.Security.Permissions.PublisherIdentityPermission> in un ambiente parzialmente attendibile. (Le richieste per le autorizzazioni di identità sempre esito positivo in un ambiente completamente attendibile).  
   
 > [!NOTE]
->  È consigliabile che i servizi utilizzino la `<generatePublisherEvidence>` elemento per migliorare le prestazioni di avvio.  Utilizzo di questo elemento consente inoltre di evitare ritardi che possono causare un timeout e l'annullamento dell'avvio del servizio.  
+>  È consigliabile che i servizi usano il `<generatePublisherEvidence>` elemento per migliorare le prestazioni di avvio.  Utilizzo di questo elemento consente inoltre di evitare ritardi che possono causare un timeout e l'annullamento dell'avvio del servizio.  
   
 ## <a name="configuration-file"></a>File di configurazione  
  Questo elemento può essere usato solo nel file di configurazione dell'applicazione.  
@@ -79,5 +79,5 @@ Specifica se il runtime crea <xref:System.Security.Policy.Publisher> evidenza di
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Schema delle impostazioni di runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Schema delle impostazioni di runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)
