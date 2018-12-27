@@ -11,22 +11,22 @@ helpviewer_keywords:
 ms.assetid: ad6442f6-1a9d-43b6-b733-04ac1b7f9b82
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 59e3f54f4d3ce0c191193ff63a3c2bce5b93a1bd
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: bbee999feba5839e66f8eb8c0faaa6e90ca85bd5
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43747168"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613323"
 ---
-# <a name="ltqualifyassemblygt-element"></a><span data-ttu-id="068d5-102">&lt;qualifyAssembly&gt; elemento</span><span class="sxs-lookup"><span data-stu-id="068d5-102">&lt;qualifyAssembly&gt; Element</span></span>
-<span data-ttu-id="068d5-103">Specifica il nome completo dell'assembly da caricare in modo dinamico quando viene usato un nome parziale.</span><span class="sxs-lookup"><span data-stu-id="068d5-103">Specifies the full name of the assembly that should be dynamically loaded when a partial name is used.</span></span>  
+# <a name="ltqualifyassemblygt-element"></a><span data-ttu-id="35d81-102">&lt;qualifyAssembly&gt; elemento</span><span class="sxs-lookup"><span data-stu-id="35d81-102">&lt;qualifyAssembly&gt; Element</span></span>
+<span data-ttu-id="35d81-103">Specifica il nome completo dell'assembly da caricare in modo dinamico quando viene usato un nome parziale.</span><span class="sxs-lookup"><span data-stu-id="35d81-103">Specifies the full name of the assembly that should be dynamically loaded when a partial name is used.</span></span>  
   
- <span data-ttu-id="068d5-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="068d5-104">\<configuration></span></span>  
-<span data-ttu-id="068d5-105">\<runtime></span><span class="sxs-lookup"><span data-stu-id="068d5-105">\<runtime></span></span>  
-<span data-ttu-id="068d5-106">\<assemblyBinding ></span><span class="sxs-lookup"><span data-stu-id="068d5-106">\<assemblyBinding></span></span>  
-<span data-ttu-id="068d5-107">\<qualifyAssembly ></span><span class="sxs-lookup"><span data-stu-id="068d5-107">\<qualifyAssembly></span></span>  
+ <span data-ttu-id="35d81-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="35d81-104">\<configuration></span></span>  
+<span data-ttu-id="35d81-105">\<runtime></span><span class="sxs-lookup"><span data-stu-id="35d81-105">\<runtime></span></span>  
+<span data-ttu-id="35d81-106">\<assemblyBinding ></span><span class="sxs-lookup"><span data-stu-id="35d81-106">\<assemblyBinding></span></span>  
+<span data-ttu-id="35d81-107">\<qualifyAssembly ></span><span class="sxs-lookup"><span data-stu-id="35d81-107">\<qualifyAssembly></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="068d5-108">Sintassi</span><span class="sxs-lookup"><span data-stu-id="068d5-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="35d81-108">Sintassi</span><span class="sxs-lookup"><span data-stu-id="35d81-108">Syntax</span></span>  
   
 ```xml  
       <qualifyAssembly partialName=  
@@ -34,34 +34,34 @@ ms.locfileid: "43747168"
                  fullName="FullAssemblyName"/>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="068d5-109">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="068d5-109">Attributes and Elements</span></span>  
- <span data-ttu-id="068d5-110">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="068d5-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="35d81-109">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="35d81-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="35d81-110">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="35d81-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="068d5-111">Attributi</span><span class="sxs-lookup"><span data-stu-id="068d5-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="35d81-111">Attributi</span><span class="sxs-lookup"><span data-stu-id="35d81-111">Attributes</span></span>  
   
-|<span data-ttu-id="068d5-112">Attributo</span><span class="sxs-lookup"><span data-stu-id="068d5-112">Attribute</span></span>|<span data-ttu-id="068d5-113">Descrizione</span><span class="sxs-lookup"><span data-stu-id="068d5-113">Description</span></span>|  
+|<span data-ttu-id="35d81-112">Attributo</span><span class="sxs-lookup"><span data-stu-id="35d81-112">Attribute</span></span>|<span data-ttu-id="35d81-113">Descrizione</span><span class="sxs-lookup"><span data-stu-id="35d81-113">Description</span></span>|  
 |---------------|-----------------|  
-|`partialName`|<span data-ttu-id="068d5-114">Attributo obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="068d5-114">Required attribute.</span></span><br /><br /> <span data-ttu-id="068d5-115">Specifica il nome parziale dell'assembly come appare nel codice.</span><span class="sxs-lookup"><span data-stu-id="068d5-115">Specifies the partial name of the assembly as it appears in the code.</span></span>|  
-|`fullName`|<span data-ttu-id="068d5-116">Attributo obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="068d5-116">Required attribute.</span></span><br /><br /> <span data-ttu-id="068d5-117">Specifica il nome completo dell'assembly come appare nella global assembly cache.</span><span class="sxs-lookup"><span data-stu-id="068d5-117">Specifies the full name of the assembly as it appears in the global assembly cache.</span></span>|  
+|`partialName`|<span data-ttu-id="35d81-114">Attributo obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="35d81-114">Required attribute.</span></span><br /><br /> <span data-ttu-id="35d81-115">Specifica il nome parziale dell'assembly come appare nel codice.</span><span class="sxs-lookup"><span data-stu-id="35d81-115">Specifies the partial name of the assembly as it appears in the code.</span></span>|  
+|`fullName`|<span data-ttu-id="35d81-116">Attributo obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="35d81-116">Required attribute.</span></span><br /><br /> <span data-ttu-id="35d81-117">Specifica il nome completo dell'assembly come appare nella global assembly cache.</span><span class="sxs-lookup"><span data-stu-id="35d81-117">Specifies the full name of the assembly as it appears in the global assembly cache.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="068d5-118">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="068d5-118">Child Elements</span></span>  
- <span data-ttu-id="068d5-119">Nessuno.</span><span class="sxs-lookup"><span data-stu-id="068d5-119">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="35d81-118">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="35d81-118">Child Elements</span></span>  
+ <span data-ttu-id="35d81-119">Nessuno.</span><span class="sxs-lookup"><span data-stu-id="35d81-119">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="068d5-120">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="068d5-120">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="35d81-120">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="35d81-120">Parent Elements</span></span>  
   
-|<span data-ttu-id="068d5-121">Elemento</span><span class="sxs-lookup"><span data-stu-id="068d5-121">Element</span></span>|<span data-ttu-id="068d5-122">Descrizione</span><span class="sxs-lookup"><span data-stu-id="068d5-122">Description</span></span>|  
+|<span data-ttu-id="35d81-121">Elemento</span><span class="sxs-lookup"><span data-stu-id="35d81-121">Element</span></span>|<span data-ttu-id="35d81-122">Descrizione</span><span class="sxs-lookup"><span data-stu-id="35d81-122">Description</span></span>|  
 |-------------|-----------------|  
-|`assemblyBinding`|<span data-ttu-id="068d5-123">Contiene le informazioni sul reindirizzamento della versione degli assembly e i relativi percorsi.</span><span class="sxs-lookup"><span data-stu-id="068d5-123">Contains information about assembly version redirection and the locations of assemblies.</span></span>|  
-|`configuration`|<span data-ttu-id="068d5-124">Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="068d5-124">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`runtime`|<span data-ttu-id="068d5-125">Contiene informazioni sull'associazione degli assembly e sull'operazione di Garbage Collection.</span><span class="sxs-lookup"><span data-stu-id="068d5-125">Contains information about assembly binding and garbage collection.</span></span>|  
+|`assemblyBinding`|<span data-ttu-id="35d81-123">Contiene le informazioni sul reindirizzamento della versione degli assembly e i relativi percorsi.</span><span class="sxs-lookup"><span data-stu-id="35d81-123">Contains information about assembly version redirection and the locations of assemblies.</span></span>|  
+|`configuration`|<span data-ttu-id="35d81-124">Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="35d81-124">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="35d81-125">Contiene informazioni sull'associazione degli assembly e sull'operazione di Garbage Collection.</span><span class="sxs-lookup"><span data-stu-id="35d81-125">Contains information about assembly binding and garbage collection.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="068d5-126">Note</span><span class="sxs-lookup"><span data-stu-id="068d5-126">Remarks</span></span>  
- <span data-ttu-id="068d5-127">La chiamata di <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> metodo usando nomi di assembly parziali fa in modo che common language runtime cercare l'assembly solo nella directory di base dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="068d5-127">Calling the <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> method using partial assembly names causes the common language runtime to look for the assembly only in the application base directory.</span></span> <span data-ttu-id="068d5-128">Usare la  **\<qualifyAssembly >** elemento nel file di configurazione dell'applicazione per fornire le informazioni sull'assembly (nome, versione, token di chiave pubblica e le impostazioni cultura) e causare common language runtime per la ricerca per l'assembly nella global assembly cache.</span><span class="sxs-lookup"><span data-stu-id="068d5-128">Use the **\<qualifyAssembly>** element in your application configuration file to provide the full assembly information (name, version, public key token, and culture) and cause the common language runtime to search for the assembly in the global assembly cache.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="35d81-126">Note</span><span class="sxs-lookup"><span data-stu-id="35d81-126">Remarks</span></span>  
+ <span data-ttu-id="35d81-127">La chiamata di <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> metodo usando nomi di assembly parziali fa in modo che common language runtime cercare l'assembly solo nella directory di base dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="35d81-127">Calling the <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> method using partial assembly names causes the common language runtime to look for the assembly only in the application base directory.</span></span> <span data-ttu-id="35d81-128">Usare la  **\<qualifyAssembly >** elemento nel file di configurazione dell'applicazione per fornire le informazioni sull'assembly (nome, versione, token di chiave pubblica e le impostazioni cultura) e causare common language runtime per la ricerca per l'assembly nella global assembly cache.</span><span class="sxs-lookup"><span data-stu-id="35d81-128">Use the **\<qualifyAssembly>** element in your application configuration file to provide the full assembly information (name, version, public key token, and culture) and cause the common language runtime to search for the assembly in the global assembly cache.</span></span>  
   
- <span data-ttu-id="068d5-129">Il **fullName** attributo deve includere quattro campi di identità dell'assembly: nome, versione, token di chiave pubblica e le impostazioni cultura.</span><span class="sxs-lookup"><span data-stu-id="068d5-129">The **fullName** attribute must include the four fields of assembly identity: name, version, public key token, and culture.</span></span> <span data-ttu-id="068d5-130">Il **partialName** attributo parzialmente deve fare riferimento a un assembly.</span><span class="sxs-lookup"><span data-stu-id="068d5-130">The **partialName** attribute must partially reference an assembly.</span></span> <span data-ttu-id="068d5-131">È necessario specificare almeno il nome dell'assembly testo (il caso più comune), ma è anche possibile includere una versione, token di chiave pubblica o le impostazioni cultura (o qualsiasi combinazione di quattro, ma non tutte e quattro).</span><span class="sxs-lookup"><span data-stu-id="068d5-131">You must specify at least the assembly's text name (the most common case), but you can also include version, public key token, or culture (or any combination of the four, but not all four).</span></span> <span data-ttu-id="068d5-132">Il **partialName** deve corrispondere al nome specificato nella chiamata.</span><span class="sxs-lookup"><span data-stu-id="068d5-132">The **partialName** must match the name specified in your call.</span></span> <span data-ttu-id="068d5-133">Ad esempio, non è possibile specificare `"math"` come il **partialName** attributo nel file di configurazione e chiamare `Assembly.Load("math, Version=3.3.3.3")` nel codice.</span><span class="sxs-lookup"><span data-stu-id="068d5-133">For example, you cannot specify `"math"` as the **partialName** attribute in your configuration file and call `Assembly.Load("math, Version=3.3.3.3")` in your code.</span></span>  
+ <span data-ttu-id="35d81-129">Il **fullName** attributo deve includere quattro campi di identità dell'assembly: nome, versione, token di chiave pubblica e le impostazioni cultura.</span><span class="sxs-lookup"><span data-stu-id="35d81-129">The **fullName** attribute must include the four fields of assembly identity: name, version, public key token, and culture.</span></span> <span data-ttu-id="35d81-130">Il **partialName** attributo parzialmente deve fare riferimento a un assembly.</span><span class="sxs-lookup"><span data-stu-id="35d81-130">The **partialName** attribute must partially reference an assembly.</span></span> <span data-ttu-id="35d81-131">È necessario specificare almeno il nome dell'assembly testo (il caso più comune), ma è anche possibile includere una versione, token di chiave pubblica o le impostazioni cultura (o qualsiasi combinazione di quattro, ma non tutte e quattro).</span><span class="sxs-lookup"><span data-stu-id="35d81-131">You must specify at least the assembly's text name (the most common case), but you can also include version, public key token, or culture (or any combination of the four, but not all four).</span></span> <span data-ttu-id="35d81-132">Il **partialName** deve corrispondere al nome specificato nella chiamata.</span><span class="sxs-lookup"><span data-stu-id="35d81-132">The **partialName** must match the name specified in your call.</span></span> <span data-ttu-id="35d81-133">Ad esempio, non è possibile specificare `"math"` come il **partialName** attributo nel file di configurazione e chiamare `Assembly.Load("math, Version=3.3.3.3")` nel codice.</span><span class="sxs-lookup"><span data-stu-id="35d81-133">For example, you cannot specify `"math"` as the **partialName** attribute in your configuration file and call `Assembly.Load("math, Version=3.3.3.3")` in your code.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="068d5-134">Esempio</span><span class="sxs-lookup"><span data-stu-id="068d5-134">Example</span></span>  
- <span data-ttu-id="068d5-135">L'esempio seguente consente in modo logico la chiamata `Assembly.Load("math")` in `Assembly.Load("math,version=1.0.0.0,publicKeyToken=a1690a5ea44bab32,culture=neutral")`.</span><span class="sxs-lookup"><span data-stu-id="068d5-135">The following example logically turns the call `Assembly.Load("math")` into `Assembly.Load("math,version=1.0.0.0,publicKeyToken=a1690a5ea44bab32,culture=neutral")`.</span></span>  
+## <a name="example"></a><span data-ttu-id="35d81-134">Esempio</span><span class="sxs-lookup"><span data-stu-id="35d81-134">Example</span></span>  
+ <span data-ttu-id="35d81-135">L'esempio seguente consente in modo logico la chiamata `Assembly.Load("math")` in `Assembly.Load("math,version=1.0.0.0,publicKeyToken=a1690a5ea44bab32,culture=neutral")`.</span><span class="sxs-lookup"><span data-stu-id="35d81-135">The following example logically turns the call `Assembly.Load("math")` into `Assembly.Load("math,version=1.0.0.0,publicKeyToken=a1690a5ea44bab32,culture=neutral")`.</span></span>  
   
 ```xml  
 <configuration>  
@@ -75,7 +75,7 @@ ms.locfileid: "43747168"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="068d5-136">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="068d5-136">See Also</span></span>  
- [<span data-ttu-id="068d5-137">Schema delle impostazioni di runtime</span><span class="sxs-lookup"><span data-stu-id="068d5-137">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [<span data-ttu-id="068d5-138">Come il runtime individua gli assembly</span><span class="sxs-lookup"><span data-stu-id="068d5-138">How the Runtime Locates Assemblies</span></span>](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [<span data-ttu-id="068d5-139">NIB: Riferimenti di Assembly parziali</span><span class="sxs-lookup"><span data-stu-id="068d5-139">NIB: Partial Assembly References</span></span>](https://msdn.microsoft.com/library/ec90f07a-398c-4306-9401-0fc5ff9cb59f)
+## <a name="see-also"></a><span data-ttu-id="35d81-136">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="35d81-136">See Also</span></span>  
+- [<span data-ttu-id="35d81-137">Schema delle impostazioni di runtime</span><span class="sxs-lookup"><span data-stu-id="35d81-137">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [<span data-ttu-id="35d81-138">Come il runtime individua gli assembly</span><span class="sxs-lookup"><span data-stu-id="35d81-138">How the Runtime Locates Assemblies</span></span>](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+- [<span data-ttu-id="35d81-139">NIB: Riferimenti ad Assembly parziali</span><span class="sxs-lookup"><span data-stu-id="35d81-139">NIB: Partial Assembly References</span></span>](https://msdn.microsoft.com/library/ec90f07a-398c-4306-9401-0fc5ff9cb59f)

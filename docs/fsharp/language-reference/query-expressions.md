@@ -1,30 +1,30 @@
 ---
-title: Espressioni di query (F#)
+title: Espressioni di query
 description: Informazioni sul supporto di espressione di query di LINQ in di F# linguaggio di programmazione.
 ms.date: 05/16/2016
-ms.openlocfilehash: 00398e7cb8876f9bbe11606b7a1024da9d2c35f3
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e4a36305b607f573c29744f50a841be078c8061f
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143764"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611373"
 ---
-# <a name="query-expressions"></a><span data-ttu-id="81a46-103">Espressioni di query</span><span class="sxs-lookup"><span data-stu-id="81a46-103">Query Expressions</span></span>
+# <a name="query-expressions"></a><span data-ttu-id="52077-103">Espressioni di query</span><span class="sxs-lookup"><span data-stu-id="52077-103">Query Expressions</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="81a46-104">I collegamenti di riferimento all'API in questo articolo portano a MSDN.</span><span class="sxs-lookup"><span data-stu-id="81a46-104">The API reference links in this article will take you to MSDN.</span></span>  <span data-ttu-id="81a46-105">Il riferimento all'API in Microsoft Docs (docs.microsoft.com) non è completo.</span><span class="sxs-lookup"><span data-stu-id="81a46-105">The docs.microsoft.com API reference is not complete.</span></span>
+> <span data-ttu-id="52077-104">I collegamenti di riferimento all'API in questo articolo portano a MSDN.</span><span class="sxs-lookup"><span data-stu-id="52077-104">The API reference links in this article will take you to MSDN.</span></span>  <span data-ttu-id="52077-105">Il riferimento all'API in Microsoft Docs (docs.microsoft.com) non è completo.</span><span class="sxs-lookup"><span data-stu-id="52077-105">The docs.microsoft.com API reference is not complete.</span></span>
 
-<span data-ttu-id="81a46-106">Le espressioni di query consentono a un'origine dati di query e inserire i dati nel formato desiderato.</span><span class="sxs-lookup"><span data-stu-id="81a46-106">Query expressions enable you to query a data source and put the data in a desired form.</span></span> <span data-ttu-id="81a46-107">Le espressioni di query forniscono il supporto per LINQ in F#.</span><span class="sxs-lookup"><span data-stu-id="81a46-107">Query expressions provide support for LINQ in F#.</span></span>
+<span data-ttu-id="52077-106">Le espressioni di query consentono a un'origine dati di query e inserire i dati nel formato desiderato.</span><span class="sxs-lookup"><span data-stu-id="52077-106">Query expressions enable you to query a data source and put the data in a desired form.</span></span> <span data-ttu-id="52077-107">Le espressioni di query forniscono il supporto per LINQ in F#.</span><span class="sxs-lookup"><span data-stu-id="52077-107">Query expressions provide support for LINQ in F#.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="81a46-108">Sintassi</span><span class="sxs-lookup"><span data-stu-id="81a46-108">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="52077-108">Sintassi</span><span class="sxs-lookup"><span data-stu-id="52077-108">Syntax</span></span>
 
 ```fsharp
 query { expression }
 ```
 
-## <a name="remarks"></a><span data-ttu-id="81a46-109">Note</span><span class="sxs-lookup"><span data-stu-id="81a46-109">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="52077-109">Note</span><span class="sxs-lookup"><span data-stu-id="52077-109">Remarks</span></span>
 
-<span data-ttu-id="81a46-110">Le espressioni di query sono un tipo di espressione di calcolo simile a espressioni di sequenza.</span><span class="sxs-lookup"><span data-stu-id="81a46-110">Query expressions are a type of computation expression similar to sequence expressions.</span></span> <span data-ttu-id="81a46-111">Analogamente a come si specifica una sequenza fornendo il codice in un'espressione di sequenza, fornendo il codice in un'espressione di query è specificare un set di dati.</span><span class="sxs-lookup"><span data-stu-id="81a46-111">Just as you specify a sequence by providing code in a sequence expression, you specify a set of data by providing code in a query expression.</span></span> <span data-ttu-id="81a46-112">In un'espressione di sequenza, il `yield` parola chiave identifica i dati devono essere restituiti come parte della sequenza risultante.</span><span class="sxs-lookup"><span data-stu-id="81a46-112">In a sequence expression, the `yield` keyword identifies data to be returned as part of the resulting sequence.</span></span> <span data-ttu-id="81a46-113">Nelle espressioni di query, il `select` (parola chiave) esegue la stessa funzione.</span><span class="sxs-lookup"><span data-stu-id="81a46-113">In query expressions, the `select` keyword performs the same function.</span></span> <span data-ttu-id="81a46-114">Oltre al `select` parola chiave F# supporta anche una serie di operatori di query sono molto simili le parti di un'istruzione SQL SELECT.</span><span class="sxs-lookup"><span data-stu-id="81a46-114">In addition to the `select` keyword, F# also supports a number of query operators that are much like the parts of a SQL SELECT statement.</span></span> <span data-ttu-id="81a46-115">Di seguito è riportato un esempio di un'espressione di query semplice, insieme al codice che si connette all'origine Northwind OData.</span><span class="sxs-lookup"><span data-stu-id="81a46-115">Here is an example of a simple query expression, along with code that connects to the Northwind OData source.</span></span>
+<span data-ttu-id="52077-110">Le espressioni di query sono un tipo di espressione di calcolo simile a espressioni di sequenza.</span><span class="sxs-lookup"><span data-stu-id="52077-110">Query expressions are a type of computation expression similar to sequence expressions.</span></span> <span data-ttu-id="52077-111">Analogamente a come si specifica una sequenza fornendo il codice in un'espressione di sequenza, fornendo il codice in un'espressione di query è specificare un set di dati.</span><span class="sxs-lookup"><span data-stu-id="52077-111">Just as you specify a sequence by providing code in a sequence expression, you specify a set of data by providing code in a query expression.</span></span> <span data-ttu-id="52077-112">In un'espressione di sequenza, il `yield` parola chiave identifica i dati devono essere restituiti come parte della sequenza risultante.</span><span class="sxs-lookup"><span data-stu-id="52077-112">In a sequence expression, the `yield` keyword identifies data to be returned as part of the resulting sequence.</span></span> <span data-ttu-id="52077-113">Nelle espressioni di query, il `select` (parola chiave) esegue la stessa funzione.</span><span class="sxs-lookup"><span data-stu-id="52077-113">In query expressions, the `select` keyword performs the same function.</span></span> <span data-ttu-id="52077-114">Oltre al `select` parola chiave F# supporta anche una serie di operatori di query sono molto simili le parti di un'istruzione SQL SELECT.</span><span class="sxs-lookup"><span data-stu-id="52077-114">In addition to the `select` keyword, F# also supports a number of query operators that are much like the parts of a SQL SELECT statement.</span></span> <span data-ttu-id="52077-115">Di seguito è riportato un esempio di un'espressione di query semplice, insieme al codice che si connette all'origine Northwind OData.</span><span class="sxs-lookup"><span data-stu-id="52077-115">Here is an example of a simple query expression, along with code that connects to the Northwind OData source.</span></span>
 
 ```fsharp
 // Use the OData type provider to create types that can be used to access the Northwind database.
@@ -46,23 +46,23 @@ query1
 |> Seq.iter (fun customer -> printfn "Company: %s Contact: %s" customer.CompanyName customer.ContactName)
 ```
 
-<span data-ttu-id="81a46-116">Nell'esempio di codice precedente, l'espressione di query è tra parentesi graffe.</span><span class="sxs-lookup"><span data-stu-id="81a46-116">In the previous code example, the query expression is in curly braces.</span></span> <span data-ttu-id="81a46-117">Il significato del codice nell'espressione, restituire ogni cliente nella tabella Customers nel database nei risultati della query.</span><span class="sxs-lookup"><span data-stu-id="81a46-117">The meaning of the code in the expression is, return every customer in the Customers table in the database in the query results.</span></span> <span data-ttu-id="81a46-118">Le espressioni di query restituiscono un tipo che implementa <xref:System.Linq.IQueryable%601> e <xref:System.Collections.Generic.IEnumerable%601>, quindi è possibile eseguire l'iterazione tramite il [Seq (modulo)](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684) come illustrato nell'esempio.</span><span class="sxs-lookup"><span data-stu-id="81a46-118">Query expressions return a type that implements <xref:System.Linq.IQueryable%601> and <xref:System.Collections.Generic.IEnumerable%601>, and so they can be iterated using the [Seq module](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684) as the example shows.</span></span>
+<span data-ttu-id="52077-116">Nell'esempio di codice precedente, l'espressione di query è tra parentesi graffe.</span><span class="sxs-lookup"><span data-stu-id="52077-116">In the previous code example, the query expression is in curly braces.</span></span> <span data-ttu-id="52077-117">Il significato del codice nell'espressione, restituire ogni cliente nella tabella Customers nel database nei risultati della query.</span><span class="sxs-lookup"><span data-stu-id="52077-117">The meaning of the code in the expression is, return every customer in the Customers table in the database in the query results.</span></span> <span data-ttu-id="52077-118">Le espressioni di query restituiscono un tipo che implementa <xref:System.Linq.IQueryable%601> e <xref:System.Collections.Generic.IEnumerable%601>, quindi è possibile eseguire l'iterazione tramite il [Seq (modulo)](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684) come illustrato nell'esempio.</span><span class="sxs-lookup"><span data-stu-id="52077-118">Query expressions return a type that implements <xref:System.Linq.IQueryable%601> and <xref:System.Collections.Generic.IEnumerable%601>, and so they can be iterated using the [Seq module](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684) as the example shows.</span></span>
 
-<span data-ttu-id="81a46-119">Ogni tipo di espressione di calcolo è compilato in una classe del generatore.</span><span class="sxs-lookup"><span data-stu-id="81a46-119">Every computation expression type is built from a builder class.</span></span> <span data-ttu-id="81a46-120">La classe del generatore per l'espressione di calcolo di query è `QueryBuilder`.</span><span class="sxs-lookup"><span data-stu-id="81a46-120">The builder class for the query computation expression is `QueryBuilder`.</span></span> <span data-ttu-id="81a46-121">Per altre informazioni, vedere [espressioni di calcolo](computation-expressions.md) e [classe LINQ. querybuilder](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d).</span><span class="sxs-lookup"><span data-stu-id="81a46-121">For more information, see [Computation Expressions](computation-expressions.md) and [Linq.QueryBuilder Class](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d).</span></span>
+<span data-ttu-id="52077-119">Ogni tipo di espressione di calcolo è compilato in una classe del generatore.</span><span class="sxs-lookup"><span data-stu-id="52077-119">Every computation expression type is built from a builder class.</span></span> <span data-ttu-id="52077-120">La classe del generatore per l'espressione di calcolo di query è `QueryBuilder`.</span><span class="sxs-lookup"><span data-stu-id="52077-120">The builder class for the query computation expression is `QueryBuilder`.</span></span> <span data-ttu-id="52077-121">Per altre informazioni, vedere [espressioni di calcolo](computation-expressions.md) e [classe LINQ. querybuilder](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d).</span><span class="sxs-lookup"><span data-stu-id="52077-121">For more information, see [Computation Expressions](computation-expressions.md) and [Linq.QueryBuilder Class](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d).</span></span>
 
-## <a name="query-operators"></a><span data-ttu-id="81a46-122">Operatori di query</span><span class="sxs-lookup"><span data-stu-id="81a46-122">Query Operators</span></span>
+## <a name="query-operators"></a><span data-ttu-id="52077-122">Operatori di query</span><span class="sxs-lookup"><span data-stu-id="52077-122">Query Operators</span></span>
 
-<span data-ttu-id="81a46-123">Gli operatori di query consentono di specificare i dettagli della query, ad esempio per inserire criteri sul record da restituire oppure specificano l'ordinamento dei risultati.</span><span class="sxs-lookup"><span data-stu-id="81a46-123">Query operators enable you to specify the details of the query, such as to put criteria on records to be returned, or specify the sorting order of results.</span></span> <span data-ttu-id="81a46-124">L'origine della query deve supportare l'operatore di query.</span><span class="sxs-lookup"><span data-stu-id="81a46-124">The query source must support the query operator.</span></span> <span data-ttu-id="81a46-125">Se si prova a usare un operatore di query non supportata, `System.NotSupportedException` verrà generata.</span><span class="sxs-lookup"><span data-stu-id="81a46-125">If you attempt to use an unsupported query operator, `System.NotSupportedException` will be thrown.</span></span>
+<span data-ttu-id="52077-123">Gli operatori di query consentono di specificare i dettagli della query, ad esempio per inserire criteri sul record da restituire oppure specificano l'ordinamento dei risultati.</span><span class="sxs-lookup"><span data-stu-id="52077-123">Query operators enable you to specify the details of the query, such as to put criteria on records to be returned, or specify the sorting order of results.</span></span> <span data-ttu-id="52077-124">L'origine della query deve supportare l'operatore di query.</span><span class="sxs-lookup"><span data-stu-id="52077-124">The query source must support the query operator.</span></span> <span data-ttu-id="52077-125">Se si prova a usare un operatore di query non supportata, `System.NotSupportedException` verrà generata.</span><span class="sxs-lookup"><span data-stu-id="52077-125">If you attempt to use an unsupported query operator, `System.NotSupportedException` will be thrown.</span></span>
 
-<span data-ttu-id="81a46-126">Solo le espressioni che possono essere convertite in SQL sono consentite nelle espressioni di query.</span><span class="sxs-lookup"><span data-stu-id="81a46-126">Only expressions that can be translated to SQL are allowed in query expressions.</span></span> <span data-ttu-id="81a46-127">Ad esempio, nessuna chiamata di funzione è consentita nelle espressioni quando si usa il `where` (operatore query).</span><span class="sxs-lookup"><span data-stu-id="81a46-127">For example, no function calls are allowed in the expressions when you use the `where` query operator.</span></span>
+<span data-ttu-id="52077-126">Solo le espressioni che possono essere convertite in SQL sono consentite nelle espressioni di query.</span><span class="sxs-lookup"><span data-stu-id="52077-126">Only expressions that can be translated to SQL are allowed in query expressions.</span></span> <span data-ttu-id="52077-127">Ad esempio, nessuna chiamata di funzione è consentita nelle espressioni quando si usa il `where` (operatore query).</span><span class="sxs-lookup"><span data-stu-id="52077-127">For example, no function calls are allowed in the expressions when you use the `where` query operator.</span></span>
 
-<span data-ttu-id="81a46-128">Tabella 1 sono illustrati gli operatori di query disponibili.</span><span class="sxs-lookup"><span data-stu-id="81a46-128">Table 1 shows available query operators.</span></span> <span data-ttu-id="81a46-129">Inoltre, vedere Table2, che mette a confronto le query SQL e l'equivalente F# eseguire query delle espressioni più avanti in questo argomento.</span><span class="sxs-lookup"><span data-stu-id="81a46-129">In addition, see Table2, which compares SQL queries and the equivalent F# query expressions later in this topic.</span></span> <span data-ttu-id="81a46-130">Alcuni operatori di query non sono supportate da alcuni provider di tipi.</span><span class="sxs-lookup"><span data-stu-id="81a46-130">Some query operators aren't supported by some type providers.</span></span> <span data-ttu-id="81a46-131">In particolare, il provider di tipi OData è limitato negli operatori di query supportate a causa delle limitazioni in OData.</span><span class="sxs-lookup"><span data-stu-id="81a46-131">In particular, the OData type provider is limited in the query operators that it supports due to limitations in OData.</span></span> <span data-ttu-id="81a46-132">Per altre informazioni, vedere [Provider di tipi ODataService (F#)](https://msdn.microsoft.com/library/bac609dd-9d12-4bf9-a662-24bdf4faa43e).</span><span class="sxs-lookup"><span data-stu-id="81a46-132">For more information, see [ODataService Type Provider (F#)](https://msdn.microsoft.com/library/bac609dd-9d12-4bf9-a662-24bdf4faa43e).</span></span>
+<span data-ttu-id="52077-128">Tabella 1 sono illustrati gli operatori di query disponibili.</span><span class="sxs-lookup"><span data-stu-id="52077-128">Table 1 shows available query operators.</span></span> <span data-ttu-id="52077-129">Inoltre, vedere Table2, che mette a confronto le query SQL e l'equivalente F# eseguire query delle espressioni più avanti in questo argomento.</span><span class="sxs-lookup"><span data-stu-id="52077-129">In addition, see Table2, which compares SQL queries and the equivalent F# query expressions later in this topic.</span></span> <span data-ttu-id="52077-130">Alcuni operatori di query non sono supportate da alcuni provider di tipi.</span><span class="sxs-lookup"><span data-stu-id="52077-130">Some query operators aren't supported by some type providers.</span></span> <span data-ttu-id="52077-131">In particolare, il provider di tipi OData è limitato negli operatori di query supportate a causa delle limitazioni in OData.</span><span class="sxs-lookup"><span data-stu-id="52077-131">In particular, the OData type provider is limited in the query operators that it supports due to limitations in OData.</span></span> <span data-ttu-id="52077-132">Per altre informazioni, vedere [Provider di tipi ODataService (F#)](https://msdn.microsoft.com/library/bac609dd-9d12-4bf9-a662-24bdf4faa43e).</span><span class="sxs-lookup"><span data-stu-id="52077-132">For more information, see [ODataService Type Provider (F#)](https://msdn.microsoft.com/library/bac609dd-9d12-4bf9-a662-24bdf4faa43e).</span></span>
 
-<span data-ttu-id="81a46-133">Questa tabella si presuppone un database nel formato seguente:</span><span class="sxs-lookup"><span data-stu-id="81a46-133">This table assumes a database in the following form:</span></span>
+<span data-ttu-id="52077-133">Questa tabella si presuppone un database nel formato seguente:</span><span class="sxs-lookup"><span data-stu-id="52077-133">This table assumes a database in the following form:</span></span>
 
 ![Diagramma di Database di esempio](../media/StudentCourseDB.png)
 
-<span data-ttu-id="81a46-135">Il codice nelle tabelle riportate di seguito presuppone anche il seguente codice di connessione di database.</span><span class="sxs-lookup"><span data-stu-id="81a46-135">The code in the tables that follow also assumes the following database connection code.</span></span> <span data-ttu-id="81a46-136">I progetti è necessario aggiungere riferimenti agli assembly System. Data, LINQ e Typeproviders.</span><span class="sxs-lookup"><span data-stu-id="81a46-136">Projects should add references to System.Data,  System.Data.Linq, and FSharp.Data.TypeProviders assemblies.</span></span> <span data-ttu-id="81a46-137">Il codice che crea il database è incluso alla fine di questo argomento.</span><span class="sxs-lookup"><span data-stu-id="81a46-137">The code that creates this database is included at the end of this topic.</span></span>
+<span data-ttu-id="52077-135">Il codice nelle tabelle riportate di seguito presuppone anche il seguente codice di connessione di database.</span><span class="sxs-lookup"><span data-stu-id="52077-135">The code in the tables that follow also assumes the following database connection code.</span></span> <span data-ttu-id="52077-136">I progetti è necessario aggiungere riferimenti agli assembly System. Data, LINQ e Typeproviders.</span><span class="sxs-lookup"><span data-stu-id="52077-136">Projects should add references to System.Data,  System.Data.Linq, and FSharp.Data.TypeProviders assemblies.</span></span> <span data-ttu-id="52077-137">Il codice che crea il database è incluso alla fine di questo argomento.</span><span class="sxs-lookup"><span data-stu-id="52077-137">The code that creates this database is included at the end of this topic.</span></span>
 
 ```fsharp
 open System
@@ -79,16 +79,16 @@ let db = schema.GetDataContext()
 let data = [ 1; 5; 7; 11; 18; 21]
 ```
 
-### <a name="table-1-query-operators"></a><span data-ttu-id="81a46-138">Tabella 1.</span><span class="sxs-lookup"><span data-stu-id="81a46-138">Table 1.</span></span> <span data-ttu-id="81a46-139">Operatori di query</span><span class="sxs-lookup"><span data-stu-id="81a46-139">Query Operators</span></span>
+### <a name="table-1-query-operators"></a><span data-ttu-id="52077-138">Tabella 1.</span><span class="sxs-lookup"><span data-stu-id="52077-138">Table 1.</span></span> <span data-ttu-id="52077-139">Operatori di query</span><span class="sxs-lookup"><span data-stu-id="52077-139">Query Operators</span></span>
 
 <table style="width:100%">
   <tr>
-    <th><span data-ttu-id="81a46-140">Operatore</span><span class="sxs-lookup"><span data-stu-id="81a46-140">Operator</span></span></th>
-    <th><span data-ttu-id="81a46-141">Descrizione</span><span class="sxs-lookup"><span data-stu-id="81a46-141">Description</span></span></th>
+    <th><span data-ttu-id="52077-140">Operatore</span><span class="sxs-lookup"><span data-stu-id="52077-140">Operator</span></span></th>
+    <th><span data-ttu-id="52077-141">Descrizione</span><span class="sxs-lookup"><span data-stu-id="52077-141">Description</span></span></th>
   </tr>
   <tr>
   <td><code>contains</code></td>
-<td><span data-ttu-id="81a46-142">Determina se gli elementi selezionati includono un elemento specificato.</span><span class="sxs-lookup"><span data-stu-id="81a46-142">Determines whether the selected elements include a specified element.</span></span><br/><br/>
+<td><span data-ttu-id="52077-142">Determina se gli elementi selezionati includono un elemento specificato.</span><span class="sxs-lookup"><span data-stu-id="52077-142">Determines whether the selected elements include a specified element.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -101,7 +101,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </tr>
 
 <tr>
-  <td><code>count</code></td><td><span data-ttu-id="81a46-143">Restituisce il numero di elementi selezionati.</span><span class="sxs-lookup"><span data-stu-id="81a46-143">Returns the number of selected elements.</span></span><br/><br/>
+  <td><code>count</code></td><td><span data-ttu-id="52077-143">Restituisce il numero di elementi selezionati.</span><span class="sxs-lookup"><span data-stu-id="52077-143">Returns the number of selected elements.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -112,7 +112,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 
 </td></tr>
 <tr>
-<td><code>last</code></td><td><span data-ttu-id="81a46-144">Seleziona l'ultimo elemento di quelli selezionati finora.</span><span class="sxs-lookup"><span data-stu-id="81a46-144">Selects the last element of those selected so far.</span></span><br/><br/>
+<td><code>last</code></td><td><span data-ttu-id="52077-144">Seleziona l'ultimo elemento di quelli selezionati finora.</span><span class="sxs-lookup"><span data-stu-id="52077-144">Selects the last element of those selected so far.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for number in data do
@@ -122,7 +122,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 
 </td></tr>
 <tr>
-<td><code>lastOrDefault</code></td><td><span data-ttu-id="81a46-145">Seleziona l'ultimo elemento di quelli selezionati finora o un valore predefinito se non viene trovato alcun elemento.</span><span class="sxs-lookup"><span data-stu-id="81a46-145">Selects the last element of those selected so far, or a default value if no element is found.</span></span><br/><br/>
+<td><code>lastOrDefault</code></td><td><span data-ttu-id="52077-145">Seleziona l'ultimo elemento di quelli selezionati finora o un valore predefinito se non viene trovato alcun elemento.</span><span class="sxs-lookup"><span data-stu-id="52077-145">Selects the last element of those selected so far, or a default value if no element is found.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for number in data do
@@ -132,7 +132,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>exactlyOne</code></td><td><span data-ttu-id="81a46-146">Seleziona il singolo elemento specifico selezionato finora.</span><span class="sxs-lookup"><span data-stu-id="81a46-146">Selects the single, specific element selected so far.</span></span> <span data-ttu-id="81a46-147">Se sono presenti più elementi, viene generata un'eccezione.</span><span class="sxs-lookup"><span data-stu-id="81a46-147">If multiple elements are present, an exception is thrown.</span></span><br/><br/>
+<td><code>exactlyOne</code></td><td><span data-ttu-id="52077-146">Seleziona il singolo elemento specifico selezionato finora.</span><span class="sxs-lookup"><span data-stu-id="52077-146">Selects the single, specific element selected so far.</span></span> <span data-ttu-id="52077-147">Se sono presenti più elementi, viene generata un'eccezione.</span><span class="sxs-lookup"><span data-stu-id="52077-147">If multiple elements are present, an exception is thrown.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -143,7 +143,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>exactlyOneOrDefault</code></td><td><span data-ttu-id="81a46-148">Seleziona il singolo elemento specifico di quelli selezionati finora o un valore predefinito se tale elemento non viene trovato.</span><span class="sxs-lookup"><span data-stu-id="81a46-148">Selects the single, specific element of those selected so far, or a default value if that element is not found.</span></span><br/><br/>
+<td><code>exactlyOneOrDefault</code></td><td><span data-ttu-id="52077-148">Seleziona il singolo elemento specifico di quelli selezionati finora o un valore predefinito se tale elemento non viene trovato.</span><span class="sxs-lookup"><span data-stu-id="52077-148">Selects the single, specific element of those selected so far, or a default value if that element is not found.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -154,7 +154,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>headOrDefault</code></td><td><span data-ttu-id="81a46-149">Seleziona il primo elemento di quelli selezionati finora o un valore predefinito se la sequenza non contiene elementi.</span><span class="sxs-lookup"><span data-stu-id="81a46-149">Selects the first element of those selected so far, or a default value if the sequence contains no elements.</span></span><br/><br/>
+<td><code>headOrDefault</code></td><td><span data-ttu-id="52077-149">Seleziona il primo elemento di quelli selezionati finora o un valore predefinito se la sequenza non contiene elementi.</span><span class="sxs-lookup"><span data-stu-id="52077-149">Selects the first element of those selected so far, or a default value if the sequence contains no elements.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -164,7 +164,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>select</code></td><td><span data-ttu-id="81a46-150">Proietta ogni elemento selezionato finora.</span><span class="sxs-lookup"><span data-stu-id="81a46-150">Projects each of the elements selected so far.</span></span><br/><br/>
+<td><code>select</code></td><td><span data-ttu-id="52077-150">Proietta ogni elemento selezionato finora.</span><span class="sxs-lookup"><span data-stu-id="52077-150">Projects each of the elements selected so far.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -173,7 +173,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>where</code></td><td><span data-ttu-id="81a46-151">Seleziona gli elementi in base a un predicato specificato.</span><span class="sxs-lookup"><span data-stu-id="81a46-151">Selects elements based on a specified predicate.</span></span><br/><br/>
+<td><code>where</code></td><td><span data-ttu-id="52077-151">Seleziona gli elementi in base a un predicato specificato.</span><span class="sxs-lookup"><span data-stu-id="52077-151">Selects elements based on a specified predicate.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -183,7 +183,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>minBy</code></td><td><span data-ttu-id="81a46-152">Seleziona un valore per ogni elemento selezionato finora e restituisce il valore minimo risultante.</span><span class="sxs-lookup"><span data-stu-id="81a46-152">Selects a value for each element selected so far and returns the minimum resulting value.</span></span><br/><br/>
+<td><code>minBy</code></td><td><span data-ttu-id="52077-152">Seleziona un valore per ogni elemento selezionato finora e restituisce il valore minimo risultante.</span><span class="sxs-lookup"><span data-stu-id="52077-152">Selects a value for each element selected so far and returns the minimum resulting value.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -192,7 +192,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>maxBy</code></td><td><span data-ttu-id="81a46-153">Seleziona un valore per ogni elemento selezionato finora e restituisce il valore massimo risultante.</span><span class="sxs-lookup"><span data-stu-id="81a46-153">Selects a value for each element selected so far and returns the maximum resulting value.</span></span><br/><br/>
+<td><code>maxBy</code></td><td><span data-ttu-id="52077-153">Seleziona un valore per ogni elemento selezionato finora e restituisce il valore massimo risultante.</span><span class="sxs-lookup"><span data-stu-id="52077-153">Selects a value for each element selected so far and returns the maximum resulting value.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -201,7 +201,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>groupBy</code></td><td><span data-ttu-id="81a46-154">Raggruppa gli elementi selezionati finora in base a un selettore di chiave specificata.</span><span class="sxs-lookup"><span data-stu-id="81a46-154">Groups the elements selected so far according to a specified key selector.</span></span><br/><br/>
+<td><code>groupBy</code></td><td><span data-ttu-id="52077-154">Raggruppa gli elementi selezionati finora in base a un selettore di chiave specificata.</span><span class="sxs-lookup"><span data-stu-id="52077-154">Groups the elements selected so far according to a specified key selector.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -211,7 +211,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>sortBy</code></td><td><span data-ttu-id="81a46-155">Ordina gli elementi selezionati finora in ordine crescente in base alla chiave di ordinamento specificata.</span><span class="sxs-lookup"><span data-stu-id="81a46-155">Sorts the elements selected so far in ascending order by the given sorting key.</span></span><br/><br/>
+<td><code>sortBy</code></td><td><span data-ttu-id="52077-155">Ordina gli elementi selezionati finora in ordine crescente in base alla chiave di ordinamento specificata.</span><span class="sxs-lookup"><span data-stu-id="52077-155">Sorts the elements selected so far in ascending order by the given sorting key.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -221,7 +221,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>sortByDescending</code></td><td><span data-ttu-id="81a46-156">Ordina gli elementi selezionati finora in ordine decrescente in base alla chiave di ordinamento specificata.</span><span class="sxs-lookup"><span data-stu-id="81a46-156">Sorts the elements selected so far in descending order by the given sorting key.</span></span><br/><br/>
+<td><code>sortByDescending</code></td><td><span data-ttu-id="52077-156">Ordina gli elementi selezionati finora in ordine decrescente in base alla chiave di ordinamento specificata.</span><span class="sxs-lookup"><span data-stu-id="52077-156">Sorts the elements selected so far in descending order by the given sorting key.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -231,7 +231,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>thenBy</code></td><td><span data-ttu-id="81a46-157">Esegue un ordinamento successivo degli elementi selezionati finora in ordine crescente in base alla chiave di ordinamento specificata.</span><span class="sxs-lookup"><span data-stu-id="81a46-157">Performs a subsequent ordering of the elements selected so far in ascending order by the given sorting key.</span></span> <span data-ttu-id="81a46-158">Questo operatore può essere usato solo dopo una <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>, o <code>thenByDescending</code>.</span><span class="sxs-lookup"><span data-stu-id="81a46-158">This operator may only be used after a <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>, or <code>thenByDescending</code>.</span></span><br/><br/>
+<td><code>thenBy</code></td><td><span data-ttu-id="52077-157">Esegue un ordinamento successivo degli elementi selezionati finora in ordine crescente in base alla chiave di ordinamento specificata.</span><span class="sxs-lookup"><span data-stu-id="52077-157">Performs a subsequent ordering of the elements selected so far in ascending order by the given sorting key.</span></span> <span data-ttu-id="52077-158">Questo operatore può essere usato solo dopo una <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>, o <code>thenByDescending</code>.</span><span class="sxs-lookup"><span data-stu-id="52077-158">This operator may only be used after a <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>, or <code>thenByDescending</code>.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -243,7 +243,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>thenByDescending</code></td><td><span data-ttu-id="81a46-159">Esegue un ordinamento successivo degli elementi selezionati finora in ordine decrescente in base alla chiave di ordinamento specificata.</span><span class="sxs-lookup"><span data-stu-id="81a46-159">Performs a subsequent ordering of the elements selected so far in descending order by the given sorting key.</span></span> <span data-ttu-id="81a46-160">Questo operatore può essere usato solo dopo una <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>, o <code>thenByDescending</code>.</span><span class="sxs-lookup"><span data-stu-id="81a46-160">This operator may only be used after a <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>, or <code>thenByDescending</code>.</span></span><br/><br/>
+<td><code>thenByDescending</code></td><td><span data-ttu-id="52077-159">Esegue un ordinamento successivo degli elementi selezionati finora in ordine decrescente in base alla chiave di ordinamento specificata.</span><span class="sxs-lookup"><span data-stu-id="52077-159">Performs a subsequent ordering of the elements selected so far in descending order by the given sorting key.</span></span> <span data-ttu-id="52077-160">Questo operatore può essere usato solo dopo una <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>, o <code>thenByDescending</code>.</span><span class="sxs-lookup"><span data-stu-id="52077-160">This operator may only be used after a <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>, or <code>thenByDescending</code>.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -255,7 +255,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>groupValBy</code></td><td><span data-ttu-id="81a46-161">Seleziona un valore per ogni elemento selezionato finora e raggruppa gli elementi in base alla chiave specificata.</span><span class="sxs-lookup"><span data-stu-id="81a46-161">Selects a value for each element selected so far and groups the elements by the given key.</span></span><br/><br/>
+<td><code>groupValBy</code></td><td><span data-ttu-id="52077-161">Seleziona un valore per ogni elemento selezionato finora e raggruppa gli elementi in base alla chiave specificata.</span><span class="sxs-lookup"><span data-stu-id="52077-161">Selects a value for each element selected so far and groups the elements by the given key.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -265,7 +265,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>join</code></td><td><span data-ttu-id="81a46-162">Correla due set di valori selezionati basati su chiavi corrispondenti.</span><span class="sxs-lookup"><span data-stu-id="81a46-162">Correlates two sets of selected values based on matching keys.</span></span> <span data-ttu-id="81a46-163">Si noti che l'ordine delle chiavi per l'operatore = consentire l'accesso in un'espressione di join sono significativo.</span><span class="sxs-lookup"><span data-stu-id="81a46-163">Note that the order of the keys around the = sign in a join expression is significant.</span></span> <span data-ttu-id="81a46-164">In tutti i join, se la riga viene suddiviso dopo il <code>-&gt;</code> simbolo, il rientro deve essere rientrato almeno per quanto riguarda la parola chiave <code>for</code>.</span><span class="sxs-lookup"><span data-stu-id="81a46-164">In all joins, if the line is split after the <code>-&gt;</code> symbol, the indentation must be indented at least as far as the keyword <code>for</code>.</span></span><br/><br/>
+<td><code>join</code></td><td><span data-ttu-id="52077-162">Correla due set di valori selezionati basati su chiavi corrispondenti.</span><span class="sxs-lookup"><span data-stu-id="52077-162">Correlates two sets of selected values based on matching keys.</span></span> <span data-ttu-id="52077-163">Si noti che l'ordine delle chiavi per l'operatore = consentire l'accesso in un'espressione di join sono significativo.</span><span class="sxs-lookup"><span data-stu-id="52077-163">Note that the order of the keys around the = sign in a join expression is significant.</span></span> <span data-ttu-id="52077-164">In tutti i join, se la riga viene suddiviso dopo il <code>-&gt;</code> simbolo, il rientro deve essere rientrato almeno per quanto riguarda la parola chiave <code>for</code>.</span><span class="sxs-lookup"><span data-stu-id="52077-164">In all joins, if the line is split after the <code>-&gt;</code> symbol, the indentation must be indented at least as far as the keyword <code>for</code>.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -276,7 +276,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>groupJoin</code></td><td><span data-ttu-id="81a46-165">Correla due set di valori selezionati basati su chiavi corrispondenti e raggruppa i risultati.</span><span class="sxs-lookup"><span data-stu-id="81a46-165">Correlates two sets of selected values based on matching keys and groups the results.</span></span> <span data-ttu-id="81a46-166">Si noti che l'ordine delle chiavi per l'operatore = consentire l'accesso in un'espressione di join sono significativo.</span><span class="sxs-lookup"><span data-stu-id="81a46-166">Note that the order of the keys around the = sign in a join expression is significant.</span></span><br/><br/>
+<td><code>groupJoin</code></td><td><span data-ttu-id="52077-165">Correla due set di valori selezionati basati su chiavi corrispondenti e raggruppa i risultati.</span><span class="sxs-lookup"><span data-stu-id="52077-165">Correlates two sets of selected values based on matching keys and groups the results.</span></span> <span data-ttu-id="52077-166">Si noti che l'ordine delle chiavi per l'operatore = consentire l'accesso in un'espressione di join sono significativo.</span><span class="sxs-lookup"><span data-stu-id="52077-166">Note that the order of the keys around the = sign in a join expression is significant.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -290,7 +290,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>leftOuterJoin</code></td><td><span data-ttu-id="81a46-167">Correla due set di valori selezionati basati su chiavi corrispondenti e raggruppa i risultati.</span><span class="sxs-lookup"><span data-stu-id="81a46-167">Correlates two sets of selected values based on matching keys and groups the results.</span></span> <span data-ttu-id="81a46-168">Se qualsiasi gruppo è vuoto, viene utilizzato invece un gruppo con un singolo valore predefinito.</span><span class="sxs-lookup"><span data-stu-id="81a46-168">If any group is empty, a group with a single default value is used instead.</span></span> <span data-ttu-id="81a46-169">Si noti che l'ordine delle chiavi per l'operatore = consentire l'accesso in un'espressione di join sono significativo.</span><span class="sxs-lookup"><span data-stu-id="81a46-169">Note that the order of the keys around the = sign in a join expression is significant.</span></span><br/><br/>
+<td><code>leftOuterJoin</code></td><td><span data-ttu-id="52077-167">Correla due set di valori selezionati basati su chiavi corrispondenti e raggruppa i risultati.</span><span class="sxs-lookup"><span data-stu-id="52077-167">Correlates two sets of selected values based on matching keys and groups the results.</span></span> <span data-ttu-id="52077-168">Se qualsiasi gruppo è vuoto, viene utilizzato invece un gruppo con un singolo valore predefinito.</span><span class="sxs-lookup"><span data-stu-id="52077-168">If any group is empty, a group with a single default value is used instead.</span></span> <span data-ttu-id="52077-169">Si noti che l'ordine delle chiavi per l'operatore = consentire l'accesso in un'espressione di join sono significativo.</span><span class="sxs-lookup"><span data-stu-id="52077-169">Note that the order of the keys around the = sign in a join expression is significant.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -302,7 +302,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>sumByNullable</code></td><td><span data-ttu-id="81a46-170">Seleziona un valore nullable per ogni elemento selezionato finora e restituisce la somma dei valori seguenti.</span><span class="sxs-lookup"><span data-stu-id="81a46-170">Selects a nullable value for each element selected so far and returns the sum of these values.</span></span> <span data-ttu-id="81a46-171">Se qualsiasi nullable non dispone di un valore, viene ignorato.</span><span class="sxs-lookup"><span data-stu-id="81a46-171">If any nullable does not have a value, it is ignored.</span></span><br/><br/>
+<td><code>sumByNullable</code></td><td><span data-ttu-id="52077-170">Seleziona un valore nullable per ogni elemento selezionato finora e restituisce la somma dei valori seguenti.</span><span class="sxs-lookup"><span data-stu-id="52077-170">Selects a nullable value for each element selected so far and returns the sum of these values.</span></span> <span data-ttu-id="52077-171">Se qualsiasi nullable non dispone di un valore, viene ignorato.</span><span class="sxs-lookup"><span data-stu-id="52077-171">If any nullable does not have a value, it is ignored.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -311,7 +311,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>minByNullable</code></td><td><span data-ttu-id="81a46-172">Seleziona un valore nullable per ogni elemento selezionato finora e restituisce il valore minimo dei valori seguenti.</span><span class="sxs-lookup"><span data-stu-id="81a46-172">Selects a nullable value for each element selected so far and returns the minimum of these values.</span></span> <span data-ttu-id="81a46-173">Se qualsiasi nullable non dispone di un valore, viene ignorato.</span><span class="sxs-lookup"><span data-stu-id="81a46-173">If any nullable does not have a value, it is ignored.</span></span><br/><br/>
+<td><code>minByNullable</code></td><td><span data-ttu-id="52077-172">Seleziona un valore nullable per ogni elemento selezionato finora e restituisce il valore minimo dei valori seguenti.</span><span class="sxs-lookup"><span data-stu-id="52077-172">Selects a nullable value for each element selected so far and returns the minimum of these values.</span></span> <span data-ttu-id="52077-173">Se qualsiasi nullable non dispone di un valore, viene ignorato.</span><span class="sxs-lookup"><span data-stu-id="52077-173">If any nullable does not have a value, it is ignored.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -320,7 +320,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>maxByNullable</code></td><td><span data-ttu-id="81a46-174">Seleziona un valore nullable per ogni elemento selezionato finora e restituisce il numero massimo di questi valori.</span><span class="sxs-lookup"><span data-stu-id="81a46-174">Selects a nullable value for each element selected so far and returns the maximum of these values.</span></span> <span data-ttu-id="81a46-175">Se qualsiasi nullable non dispone di un valore, viene ignorato.</span><span class="sxs-lookup"><span data-stu-id="81a46-175">If any nullable does not have a value, it is ignored.</span></span><br/><br/>
+<td><code>maxByNullable</code></td><td><span data-ttu-id="52077-174">Seleziona un valore nullable per ogni elemento selezionato finora e restituisce il numero massimo di questi valori.</span><span class="sxs-lookup"><span data-stu-id="52077-174">Selects a nullable value for each element selected so far and returns the maximum of these values.</span></span> <span data-ttu-id="52077-175">Se qualsiasi nullable non dispone di un valore, viene ignorato.</span><span class="sxs-lookup"><span data-stu-id="52077-175">If any nullable does not have a value, it is ignored.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -329,7 +329,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>averageByNullable</code></td><td><span data-ttu-id="81a46-176">Seleziona un valore nullable per ogni elemento selezionato finora e restituisce la media dei valori seguenti.</span><span class="sxs-lookup"><span data-stu-id="81a46-176">Selects a nullable value for each element selected so far and returns the average of these values.</span></span> <span data-ttu-id="81a46-177">Se qualsiasi nullable non dispone di un valore, viene ignorato.</span><span class="sxs-lookup"><span data-stu-id="81a46-177">If any nullable does not have a value, it is ignored.</span></span><br/><br/>
+<td><code>averageByNullable</code></td><td><span data-ttu-id="52077-176">Seleziona un valore nullable per ogni elemento selezionato finora e restituisce la media dei valori seguenti.</span><span class="sxs-lookup"><span data-stu-id="52077-176">Selects a nullable value for each element selected so far and returns the average of these values.</span></span> <span data-ttu-id="52077-177">Se qualsiasi nullable non dispone di un valore, viene ignorato.</span><span class="sxs-lookup"><span data-stu-id="52077-177">If any nullable does not have a value, it is ignored.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -338,7 +338,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>averageBy</code></td><td><span data-ttu-id="81a46-178">Seleziona un valore per ogni elemento selezionato finora e restituisce la media dei valori seguenti.</span><span class="sxs-lookup"><span data-stu-id="81a46-178">Selects a value for each element selected so far and returns the average of these values.</span></span><br/><br/>
+<td><code>averageBy</code></td><td><span data-ttu-id="52077-178">Seleziona un valore per ogni elemento selezionato finora e restituisce la media dei valori seguenti.</span><span class="sxs-lookup"><span data-stu-id="52077-178">Selects a value for each element selected so far and returns the average of these values.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -347,7 +347,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>distinct</code></td><td><span data-ttu-id="81a46-179">Seleziona elementi distinti tra gli elementi selezionati finora.</span><span class="sxs-lookup"><span data-stu-id="81a46-179">Selects distinct elements from the elements selected so far.</span></span><br/><br/>
+<td><code>distinct</code></td><td><span data-ttu-id="52077-179">Seleziona elementi distinti tra gli elementi selezionati finora.</span><span class="sxs-lookup"><span data-stu-id="52077-179">Selects distinct elements from the elements selected so far.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -358,7 +358,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>exists</code></td><td><span data-ttu-id="81a46-180">Determina se un elemento selezionato finora soddisfa una condizione.</span><span class="sxs-lookup"><span data-stu-id="81a46-180">Determines whether any element selected so far satisfies a condition.</span></span><br/><br/>
+<td><code>exists</code></td><td><span data-ttu-id="52077-180">Determina se un elemento selezionato finora soddisfa una condizione.</span><span class="sxs-lookup"><span data-stu-id="52077-180">Determines whether any element selected so far satisfies a condition.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -371,7 +371,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>find</code></td><td><span data-ttu-id="81a46-181">Seleziona il primo elemento selezionato finora che soddisfa una condizione specificata.</span><span class="sxs-lookup"><span data-stu-id="81a46-181">Selects the first element selected so far that satisfies a specified condition.</span></span><br/><br/>
+<td><code>find</code></td><td><span data-ttu-id="52077-181">Seleziona il primo elemento selezionato finora che soddisfa una condizione specificata.</span><span class="sxs-lookup"><span data-stu-id="52077-181">Selects the first element selected so far that satisfies a specified condition.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -380,7 +380,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>all</code></td><td><span data-ttu-id="81a46-182">Determina se tutti gli elementi selezionati finora soddisfano una condizione.</span><span class="sxs-lookup"><span data-stu-id="81a46-182">Determines whether all elements selected so far satisfy a condition.</span></span><br/><br/>
+<td><code>all</code></td><td><span data-ttu-id="52077-182">Determina se tutti gli elementi selezionati finora soddisfano una condizione.</span><span class="sxs-lookup"><span data-stu-id="52077-182">Determines whether all elements selected so far satisfy a condition.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -389,7 +389,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>head</code></td><td><span data-ttu-id="81a46-183">Seleziona il primo elemento tra quelli selezionati finora.</span><span class="sxs-lookup"><span data-stu-id="81a46-183">Selects the first element from those selected so far.</span></span><br/><br/>
+<td><code>head</code></td><td><span data-ttu-id="52077-183">Seleziona il primo elemento tra quelli selezionati finora.</span><span class="sxs-lookup"><span data-stu-id="52077-183">Selects the first element from those selected so far.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -398,7 +398,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>nth</code></td><td><span data-ttu-id="81a46-184">Seleziona l'elemento in corrispondenza dell'indice specificato tra quelli selezionati finora.</span><span class="sxs-lookup"><span data-stu-id="81a46-184">Selects the element at a specified index amongst those selected so far.</span></span><br/><br/>
+<td><code>nth</code></td><td><span data-ttu-id="52077-184">Seleziona l'elemento in corrispondenza dell'indice specificato tra quelli selezionati finora.</span><span class="sxs-lookup"><span data-stu-id="52077-184">Selects the element at a specified index amongst those selected so far.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for numbers in data do
@@ -407,7 +407,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>skip</code></td><td><span data-ttu-id="81a46-185">Ignora un numero specificato di elementi selezionati finora e quindi seleziona gli elementi rimanenti.</span><span class="sxs-lookup"><span data-stu-id="81a46-185">Bypasses a specified number of the elements selected so far and then selects the remaining elements.</span></span><br/><br/>
+<td><code>skip</code></td><td><span data-ttu-id="52077-185">Ignora un numero specificato di elementi selezionati finora e quindi seleziona gli elementi rimanenti.</span><span class="sxs-lookup"><span data-stu-id="52077-185">Bypasses a specified number of the elements selected so far and then selects the remaining elements.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -416,7 +416,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>skipWhile</code></td><td><span data-ttu-id="81a46-186">Ignora gli elementi in una sequenza finché una condizione specificata è true e quindi seleziona gli elementi rimanenti.</span><span class="sxs-lookup"><span data-stu-id="81a46-186">Bypasses elements in a sequence as long as a specified condition is true and then selects the remaining elements.</span></span><br/><br/>
+<td><code>skipWhile</code></td><td><span data-ttu-id="52077-186">Ignora gli elementi in una sequenza finché una condizione specificata è true e quindi seleziona gli elementi rimanenti.</span><span class="sxs-lookup"><span data-stu-id="52077-186">Bypasses elements in a sequence as long as a specified condition is true and then selects the remaining elements.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for number in data do
@@ -426,7 +426,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>sumBy</code></td><td><span data-ttu-id="81a46-187">Seleziona un valore per ogni elemento selezionato finora e restituisce la somma dei valori seguenti.</span><span class="sxs-lookup"><span data-stu-id="81a46-187">Selects a value for each element selected so far and returns the sum of these values.</span></span><br/><br/>
+<td><code>sumBy</code></td><td><span data-ttu-id="52077-187">Seleziona un valore per ogni elemento selezionato finora e restituisce la somma dei valori seguenti.</span><span class="sxs-lookup"><span data-stu-id="52077-187">Selects a value for each element selected so far and returns the sum of these values.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -435,7 +435,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>take</code></td><td><span data-ttu-id="81a46-188">Seleziona un numero specificato di elementi contigui tra quelli selezionati finora.</span><span class="sxs-lookup"><span data-stu-id="81a46-188">Selects a specified number of contiguous elements from those selected so far.</span></span><br/><br/>
+<td><code>take</code></td><td><span data-ttu-id="52077-188">Seleziona un numero specificato di elementi contigui tra quelli selezionati finora.</span><span class="sxs-lookup"><span data-stu-id="52077-188">Selects a specified number of contiguous elements from those selected so far.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -445,7 +445,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>takeWhile</code></td><td><span data-ttu-id="81a46-189">Seleziona gli elementi da una sequenza finché una condizione specificata è true e quindi ignora gli elementi rimanenti.</span><span class="sxs-lookup"><span data-stu-id="81a46-189">Selects elements from a sequence as long as a specified condition is true, and then skips the remaining elements.</span></span><br/><br/>
+<td><code>takeWhile</code></td><td><span data-ttu-id="52077-189">Seleziona gli elementi da una sequenza finché una condizione specificata è true e quindi ignora gli elementi rimanenti.</span><span class="sxs-lookup"><span data-stu-id="52077-189">Selects elements from a sequence as long as a specified condition is true, and then skips the remaining elements.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for number in data do
@@ -454,7 +454,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>sortByNullable</code></td><td><span data-ttu-id="81a46-190">Ordina gli elementi selezionati finora in ordine crescente in base alla chiave di ordinamento nullable specificata.</span><span class="sxs-lookup"><span data-stu-id="81a46-190">Sorts the elements selected so far in ascending order by the given nullable sorting key.</span></span><br/><br/>
+<td><code>sortByNullable</code></td><td><span data-ttu-id="52077-190">Ordina gli elementi selezionati finora in ordine crescente in base alla chiave di ordinamento nullable specificata.</span><span class="sxs-lookup"><span data-stu-id="52077-190">Sorts the elements selected so far in ascending order by the given nullable sorting key.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -464,7 +464,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>sortByNullableDescending</code></td><td><span data-ttu-id="81a46-191">Ordina gli elementi selezionati finora in ordine decrescente in base alla chiave di ordinamento nullable specificata.</span><span class="sxs-lookup"><span data-stu-id="81a46-191">Sorts the elements selected so far in descending order by the given nullable sorting key.</span></span><br/><br/>
+<td><code>sortByNullableDescending</code></td><td><span data-ttu-id="52077-191">Ordina gli elementi selezionati finora in ordine decrescente in base alla chiave di ordinamento nullable specificata.</span><span class="sxs-lookup"><span data-stu-id="52077-191">Sorts the elements selected so far in descending order by the given nullable sorting key.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -474,7 +474,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>thenByNullable</code></td><td><span data-ttu-id="81a46-192">Esegue un ordinamento successivo degli elementi selezionati finora in ordine crescente in base alla chiave di ordinamento nullable specificata.</span><span class="sxs-lookup"><span data-stu-id="81a46-192">Performs a subsequent ordering of the elements selected so far in ascending order by the given nullable sorting key.</span></span> <span data-ttu-id="81a46-193">Questo operatore può essere usato solo immediatamente dopo una <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>, o <code>thenByDescending</code>, o le relative varianti nullable.</span><span class="sxs-lookup"><span data-stu-id="81a46-193">This operator may only be used immediately after a <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>, or <code>thenByDescending</code>, or their nullable variants.</span></span><br/><br/>
+<td><code>thenByNullable</code></td><td><span data-ttu-id="52077-192">Esegue un ordinamento successivo degli elementi selezionati finora in ordine crescente in base alla chiave di ordinamento nullable specificata.</span><span class="sxs-lookup"><span data-stu-id="52077-192">Performs a subsequent ordering of the elements selected so far in ascending order by the given nullable sorting key.</span></span> <span data-ttu-id="52077-193">Questo operatore può essere usato solo immediatamente dopo una <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>, o <code>thenByDescending</code>, o le relative varianti nullable.</span><span class="sxs-lookup"><span data-stu-id="52077-193">This operator may only be used immediately after a <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>, or <code>thenByDescending</code>, or their nullable variants.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -485,7 +485,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>thenByNullableDescending</code></td><td><span data-ttu-id="81a46-194">Esegue un ordinamento successivo degli elementi selezionati finora in ordine decrescente in base alla chiave di ordinamento nullable specificata.</span><span class="sxs-lookup"><span data-stu-id="81a46-194">Performs a subsequent ordering of the elements selected so far in descending order by the given nullable sorting key.</span></span> <span data-ttu-id="81a46-195">Questo operatore può essere usato solo immediatamente dopo una <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>, o <code>thenByDescending</code>, o le relative varianti nullable.</span><span class="sxs-lookup"><span data-stu-id="81a46-195">This operator may only be used immediately after a <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>, or <code>thenByDescending</code>, or their nullable variants.</span></span><br/><br/>
+<td><code>thenByNullableDescending</code></td><td><span data-ttu-id="52077-194">Esegue un ordinamento successivo degli elementi selezionati finora in ordine decrescente in base alla chiave di ordinamento nullable specificata.</span><span class="sxs-lookup"><span data-stu-id="52077-194">Performs a subsequent ordering of the elements selected so far in descending order by the given nullable sorting key.</span></span> <span data-ttu-id="52077-195">Questo operatore può essere usato solo immediatamente dopo una <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>, o <code>thenByDescending</code>, o le relative varianti nullable.</span><span class="sxs-lookup"><span data-stu-id="52077-195">This operator may only be used immediately after a <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>, or <code>thenByDescending</code>, or their nullable variants.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -498,20 +498,20 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </td></tr>
 </table>
 
-## <a name="comparison-of-transact-sql-and-f-query-expressions"></a><span data-ttu-id="81a46-196">Confronto di Transact-SQL e F# espressioni di Query</span><span class="sxs-lookup"><span data-stu-id="81a46-196">Comparison of Transact-SQL and F# Query Expressions</span></span>
-<span data-ttu-id="81a46-197">La tabella seguente illustra alcune query comuni di Transact-SQL e gli equivalenti in F#.</span><span class="sxs-lookup"><span data-stu-id="81a46-197">The following table shows some common Transact-SQL queries and their equivalents in F#.</span></span> <span data-ttu-id="81a46-198">Il codice in questa tabella presuppone anche nello stesso database della tabella precedente e lo stesso codice iniziale per configurare il provider di tipi.</span><span class="sxs-lookup"><span data-stu-id="81a46-198">The code in this table also assumes the same database as the previous table and the same initial code to set up the type provider.</span></span>
+## <a name="comparison-of-transact-sql-and-f-query-expressions"></a><span data-ttu-id="52077-196">Confronto di Transact-SQL e F# espressioni di Query</span><span class="sxs-lookup"><span data-stu-id="52077-196">Comparison of Transact-SQL and F# Query Expressions</span></span>
+<span data-ttu-id="52077-197">La tabella seguente illustra alcune query comuni di Transact-SQL e gli equivalenti in F#.</span><span class="sxs-lookup"><span data-stu-id="52077-197">The following table shows some common Transact-SQL queries and their equivalents in F#.</span></span> <span data-ttu-id="52077-198">Il codice in questa tabella presuppone anche nello stesso database della tabella precedente e lo stesso codice iniziale per configurare il provider di tipi.</span><span class="sxs-lookup"><span data-stu-id="52077-198">The code in this table also assumes the same database as the previous table and the same initial code to set up the type provider.</span></span>
 
 
-### <a name="table-2-transact-sql-and-f-query-expressions"></a><span data-ttu-id="81a46-199">Tabella 2.</span><span class="sxs-lookup"><span data-stu-id="81a46-199">Table 2.</span></span> <span data-ttu-id="81a46-200">Transact-SQL e F# espressioni di Query</span><span class="sxs-lookup"><span data-stu-id="81a46-200">Transact-SQL and F# Query Expressions</span></span>
+### <a name="table-2-transact-sql-and-f-query-expressions"></a><span data-ttu-id="52077-199">Tabella 2.</span><span class="sxs-lookup"><span data-stu-id="52077-199">Table 2.</span></span> <span data-ttu-id="52077-200">Transact-SQL e F# espressioni di Query</span><span class="sxs-lookup"><span data-stu-id="52077-200">Transact-SQL and F# Query Expressions</span></span>
 
 
 <table style="width:100%">
   <tr>
-    <th><span data-ttu-id="81a46-201">Transact-SQL (non maiuscole / minuscole)</span><span class="sxs-lookup"><span data-stu-id="81a46-201">Transact-SQL (not case sensitive)</span></span></th>
-    <th><span data-ttu-id="81a46-202">F#Espressione (maiuscole / minuscole) di query</span><span class="sxs-lookup"><span data-stu-id="81a46-202">F# Query Expression (case sensitive)</span></span></th>
+    <th><span data-ttu-id="52077-201">Transact-SQL (non maiuscole / minuscole)</span><span class="sxs-lookup"><span data-stu-id="52077-201">Transact-SQL (not case sensitive)</span></span></th>
+    <th><span data-ttu-id="52077-202">F#Espressione (maiuscole / minuscole) di query</span><span class="sxs-lookup"><span data-stu-id="52077-202">F# Query Expression (case sensitive)</span></span></th>
   </tr>
 <tr><td>
-<span data-ttu-id="81a46-203">Selezionare tutti i campi dalla tabella.</span><span class="sxs-lookup"><span data-stu-id="81a46-203">Select all fields from table.</span></span></br>
+<span data-ttu-id="52077-203">Selezionare tutti i campi dalla tabella.</span><span class="sxs-lookup"><span data-stu-id="52077-203">Select all fields from table.</span></span></br>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 </code></pre>
@@ -526,7 +526,7 @@ query {
 
 </td></tr>
 <tr><td>
-<span data-ttu-id="81a46-204">Conteggio di record in una tabella.</span><span class="sxs-lookup"><span data-stu-id="81a46-204">Count records in a table.</span></span><br/>
+<span data-ttu-id="52077-204">Conteggio di record in una tabella.</span><span class="sxs-lookup"><span data-stu-id="52077-204">Count records in a table.</span></span><br/>
 
 <pre><code class="lang-sql">SELECT COUNT( * ) FROM Student
 </code></pre>
@@ -565,7 +565,7 @@ query {
 </code></pre>
 
 </td></tr><tr>
-<td><span data-ttu-id="81a46-205">Raggruppamento</span><span class="sxs-lookup"><span data-stu-id="81a46-205">Grouping</span></span><br/>
+<td><span data-ttu-id="52077-205">Raggruppamento</span><span class="sxs-lookup"><span data-stu-id="52077-205">Grouping</span></span><br/>
 
 <pre><code class="lang-sql">SELECT Student.Age, COUNT( * ) FROM Student
 GROUP BY Student.Age
@@ -587,7 +587,7 @@ query {
 }
 </code></pre>
 </td></tr><tr><td>
-<span data-ttu-id="81a46-206">Raggruppamento con condizione.</span><span class="sxs-lookup"><span data-stu-id="81a46-206">Grouping with condition.</span></span><br/>
+<span data-ttu-id="52077-206">Raggruppamento con condizione.</span><span class="sxs-lookup"><span data-stu-id="52077-206">Grouping with condition.</span></span><br/>
 
 <pre><code class="lang-sql">SELECT Student.Age, COUNT( * )
 FROM Student
@@ -607,7 +607,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-<span data-ttu-id="81a46-207">Raggruppamento con condizione numero.</span><span class="sxs-lookup"><span data-stu-id="81a46-207">Grouping with count condition.</span></span><br/>
+<span data-ttu-id="52077-207">Raggruppamento con condizione numero.</span><span class="sxs-lookup"><span data-stu-id="52077-207">Grouping with count condition.</span></span><br/>
 
 <pre><code class="lang-sql">SELECT Student.Age, COUNT( * )
 FROM Student
@@ -628,7 +628,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-<span data-ttu-id="81a46-208">Il raggruppamento, il conteggio e il riepilogo.</span><span class="sxs-lookup"><span data-stu-id="81a46-208">Grouping, counting, and summing.</span></span><br/>
+<span data-ttu-id="52077-208">Il raggruppamento, il conteggio e il riepilogo.</span><span class="sxs-lookup"><span data-stu-id="52077-208">Grouping, counting, and summing.</span></span><br/>
 
 <pre><code class="lang-sql">SELECT Student.Age, COUNT( * ), SUM(Student.Age) as total
 FROM Student
@@ -651,7 +651,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-<span data-ttu-id="81a46-209">Raggruppamento di, conteggio e ordinamento in base a conteggio.</span><span class="sxs-lookup"><span data-stu-id="81a46-209">Grouping, counting, and ordering by count.</span></span><br/>
+<span data-ttu-id="52077-209">Raggruppamento di, conteggio e ordinamento in base a conteggio.</span><span class="sxs-lookup"><span data-stu-id="52077-209">Grouping, counting, and ordering by count.</span></span><br/>
 
 <pre><code class="lang-sql">SELECT Student.Age, COUNT( * ) as myCount
 FROM Student
@@ -674,8 +674,8 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><span data-ttu-id="81a46-210">
-<code>IN</code> un set di valori specificati</span><span class="sxs-lookup"><span data-stu-id="81a46-210">
+</td></tr><tr><td><span data-ttu-id="52077-210">
+<code>IN</code> un set di valori specificati</span><span class="sxs-lookup"><span data-stu-id="52077-210">
 <code>IN</code> a set of specified values</span></span><br/>
 
 <pre><code class="lang-sql">SELECT *
@@ -698,8 +698,8 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><span data-ttu-id="81a46-211">
-<code>LIKE</code> e <code>TOP</code>.</span><span class="sxs-lookup"><span data-stu-id="81a46-211">
+</td></tr><tr><td><span data-ttu-id="52077-211">
+<code>LIKE</code> e <code>TOP</code>.</span><span class="sxs-lookup"><span data-stu-id="52077-211">
 <code>LIKE</code> and <code>TOP</code>.</span></span><br/>
 
 <pre><code class="lang-sql">-- '_e%' matches strings where the second character is 'e'
@@ -717,8 +717,8 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><span data-ttu-id="81a46-212">
-<code>LIKE</code> con criterio di corrispondenza set.</span><span class="sxs-lookup"><span data-stu-id="81a46-212">
+</td></tr><tr><td><span data-ttu-id="52077-212">
+<code>LIKE</code> con criterio di corrispondenza set.</span><span class="sxs-lookup"><span data-stu-id="52077-212">
 <code>LIKE</code> with pattern match set.</span></span><br/>
 
 <pre><code class="lang-sql">-- '[abc]%' matches strings where the first character is
@@ -735,8 +735,8 @@ WHERE Student.Name LIKE '[abc]%'
 }
 </code></pre>
 
-</td></tr><tr><td><span data-ttu-id="81a46-213">
-<code>LIKE</code> con modello di set di esclusione.</span><span class="sxs-lookup"><span data-stu-id="81a46-213">
+</td></tr><tr><td><span data-ttu-id="52077-213">
+<code>LIKE</code> con modello di set di esclusione.</span><span class="sxs-lookup"><span data-stu-id="52077-213">
 <code>LIKE</code> with set exclusion pattern.</span></span><br/>
 
 <pre><code class="lang-sql">-- '[^abc]%' matches strings where the first character is
@@ -755,8 +755,8 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><span data-ttu-id="81a46-214">
-<code>LIKE</code> in un campo, ma selezionare un campo diverso.</span><span class="sxs-lookup"><span data-stu-id="81a46-214">
+</td></tr><tr><td><span data-ttu-id="52077-214">
+<code>LIKE</code> in un campo, ma selezionare un campo diverso.</span><span class="sxs-lookup"><span data-stu-id="52077-214">
 <code>LIKE</code> on one field, but select a different field.</span></span><br/>
 
 <pre><code class="lang-sql">SELECT StudentID AS ID FROM Student
@@ -772,7 +772,7 @@ WHERE Student.Name LIKE '[^abc]%'
 }
 </code></pre>
 
-</td></tr><tr><td><span data-ttu-id="81a46-215"><code>LIKE</code>, con la ricerca della sottostringa.</span><span class="sxs-lookup"><span data-stu-id="81a46-215"><code>LIKE</code>, with substring search.</span></span><br/>
+</td></tr><tr><td><span data-ttu-id="52077-215"><code>LIKE</code>, con la ricerca della sottostringa.</span><span class="sxs-lookup"><span data-stu-id="52077-215"><code>LIKE</code>, with substring search.</span></span><br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 WHERE Student.Name like '%A%'
@@ -789,7 +789,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-<span data-ttu-id="81a46-216">Semplice <code>JOIN</code> con due tabelle.</span><span class="sxs-lookup"><span data-stu-id="81a46-216">Simple <code>JOIN</code> with two tables.</span></span><br/>
+<span data-ttu-id="52077-216">Semplice <code>JOIN</code> con due tabelle.</span><span class="sxs-lookup"><span data-stu-id="52077-216">Simple <code>JOIN</code> with two tables.</span></span><br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 JOIN CourseSelection
@@ -807,7 +807,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><span data-ttu-id="81a46-217"><code>LEFT JOIN</code> con due tabelle.</span><span class="sxs-lookup"><span data-stu-id="81a46-217"><code>LEFT JOIN</code> with two tables.</span></span><br/>
+</td></tr><tr><td><span data-ttu-id="52077-217"><code>LEFT JOIN</code> con due tabelle.</span><span class="sxs-lookup"><span data-stu-id="52077-217"><code>LEFT JOIN</code> with two tables.</span></span><br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 LEFT JOIN CourseSelection
@@ -826,7 +826,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><span data-ttu-id="81a46-218"><code>JOIN</code> con <code>COUNT</code></span><span class="sxs-lookup"><span data-stu-id="81a46-218"><code>JOIN</code> with <code>COUNT</code></span></span><br/>
+</td></tr><tr><td><span data-ttu-id="52077-218"><code>JOIN</code> con <code>COUNT</code></span><span class="sxs-lookup"><span data-stu-id="52077-218"><code>JOIN</code> with <code>COUNT</code></span></span><br/>
 
 <pre><code class="lang-sql">SELECT COUNT( * ) FROM Student
 JOIN CourseSelection
@@ -860,7 +860,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><span data-ttu-id="81a46-219">Misura Distinct count.</span><span class="sxs-lookup"><span data-stu-id="81a46-219">Distinct count.</span></span><br/>
+</td></tr><tr><td><span data-ttu-id="52077-219">Misura Distinct count.</span><span class="sxs-lookup"><span data-stu-id="52077-219">Distinct count.</span></span><br/>
 
 <pre><code class="lang-sql">SELECT DISTINCT COUNT(StudentID) FROM CourseSelection
 </code></pre>
@@ -909,7 +909,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><span data-ttu-id="81a46-220"><code>OR</code> con l'ordinamento</span><span class="sxs-lookup"><span data-stu-id="81a46-220"><code>OR</code> with ordering</span></span><br/>
+</td></tr><tr><td><span data-ttu-id="52077-220"><code>OR</code> con l'ordinamento</span><span class="sxs-lookup"><span data-stu-id="52077-220"><code>OR</code> with ordering</span></span><br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 WHERE Student.Age = 12 OR Student.Age = 13
@@ -927,7 +927,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><span data-ttu-id="81a46-221"><code>TOP</code>, <code>OR</code>e l'ordinamento.</span><span class="sxs-lookup"><span data-stu-id="81a46-221"><code>TOP</code>, <code>OR</code>, and ordering.</span></span><br/>
+</td></tr><tr><td><span data-ttu-id="52077-221"><code>TOP</code>, <code>OR</code>e l'ordinamento.</span><span class="sxs-lookup"><span data-stu-id="52077-221"><code>TOP</code>, <code>OR</code>, and ordering.</span></span><br/>
 
 <pre><code class="lang-sql">SELECT TOP 2 student.Name FROM Student
 WHERE Student.Age = 11 OR Student.Age = 12
@@ -949,7 +949,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><span data-ttu-id="81a46-222"><code>UNION</code> delle due query.</span><span class="sxs-lookup"><span data-stu-id="81a46-222"><code>UNION</code> of two queries.</span></span><br/>
+</td></tr><tr><td><span data-ttu-id="52077-222"><code>UNION</code> delle due query.</span><span class="sxs-lookup"><span data-stu-id="52077-222"><code>UNION</code> of two queries.</span></span><br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 UNION
@@ -974,7 +974,7 @@ let query2 =
 query2.Union (query1)
 </code></pre>
 
-</td></tr><tr><td><span data-ttu-id="81a46-223">Intersezione di due query.</span><span class="sxs-lookup"><span data-stu-id="81a46-223">Intersection of two queries.</span></span><br/>
+</td></tr><tr><td><span data-ttu-id="52077-223">Intersezione di due query.</span><span class="sxs-lookup"><span data-stu-id="52077-223">Intersection of two queries.</span></span><br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 INTERSECT
@@ -998,7 +998,7 @@ let query2 =
 query1.Intersect(query2)
 </code></pre>
 
-</td></tr><tr><td><span data-ttu-id="81a46-224"><code>CASE</code> condizione.</span><span class="sxs-lookup"><span data-stu-id="81a46-224"><code>CASE</code> condition.</span></span><br/>
+</td></tr><tr><td><span data-ttu-id="52077-224"><code>CASE</code> condizione.</span><span class="sxs-lookup"><span data-stu-id="52077-224"><code>CASE</code> condition.</span></span><br/>
 
 <pre><code class="lang-sql">SELECT student.StudentID,
 CASE Student.Age
@@ -1020,7 +1020,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><span data-ttu-id="81a46-225">Più case.</span><span class="sxs-lookup"><span data-stu-id="81a46-225">Multiple cases.</span></span><br/>
+</td></tr><tr><td><span data-ttu-id="52077-225">Più case.</span><span class="sxs-lookup"><span data-stu-id="52077-225">Multiple cases.</span></span><br/>
 
 <pre><code class="lang-sql">SELECT Student.StudentID,
 CASE Student.Age
@@ -1046,7 +1046,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><span data-ttu-id="81a46-226">Più tabelle.</span><span class="sxs-lookup"><span data-stu-id="81a46-226">Multiple tables.</span></span><br/>
+</td></tr><tr><td><span data-ttu-id="52077-226">Più tabelle.</span><span class="sxs-lookup"><span data-stu-id="52077-226">Multiple tables.</span></span><br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student, Course
 </code></pre>
@@ -1061,7 +1061,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><span data-ttu-id="81a46-227">Più join.</span><span class="sxs-lookup"><span data-stu-id="81a46-227">Multiple joins.</span></span><br/>
+</td></tr><tr><td><span data-ttu-id="52077-227">Più join.</span><span class="sxs-lookup"><span data-stu-id="52077-227">Multiple joins.</span></span><br/>
 
 <pre><code class="lang-sql">SELECT Student.Name, Course.CourseName
 FROM Student
@@ -1084,7 +1084,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><span data-ttu-id="81a46-228">Più left outer join.</span><span class="sxs-lookup"><span data-stu-id="81a46-228">Multiple left outer joins.</span></span><br/>
+</td></tr><tr><td><span data-ttu-id="52077-228">Più left outer join.</span><span class="sxs-lookup"><span data-stu-id="52077-228">Multiple left outer joins.</span></span><br/>
 
 <pre><code class="lang-sql">SELECT Student.Name, Course.CourseName
 FROM Student
@@ -1111,7 +1111,7 @@ query {
 
 </td></tr></table>
 
-<span data-ttu-id="81a46-229">Il codice seguente è utilizzabile per creare il database di esempio per questi esempi.</span><span class="sxs-lookup"><span data-stu-id="81a46-229">The following code can be used to create the sample database for these examples.</span></span>
+<span data-ttu-id="52077-229">Il codice seguente è utilizzabile per creare il database di esempio per questi esempi.</span><span class="sxs-lookup"><span data-stu-id="52077-229">The following code can be used to create the sample database for these examples.</span></span>
 
 <pre><code class="lang-sql">SET ANSI_NULLS ON
 GO
@@ -1233,7 +1233,7 @@ INSERT INTO CourseSelection (ID, StudentID, CourseID)
 VALUES(15, 7, 3);
 </code></pre>
 
-<span data-ttu-id="81a46-230">Il codice seguente contiene il codice di esempio che viene visualizzato in questo argomento.</span><span class="sxs-lookup"><span data-stu-id="81a46-230">The following code contains  the sample code that appears in this topic.</span></span>
+<span data-ttu-id="52077-230">Il codice seguente contiene il codice di esempio che viene visualizzato in questo argomento.</span><span class="sxs-lookup"><span data-stu-id="52077-230">The following code contains  the sample code that appears in this topic.</span></span>
 
 ```fsharp
 #if INTERACTIVE
@@ -1869,7 +1869,7 @@ query {
 |> Seq.iter (fun (studentName, courseName) -> printfn "%s %s" studentName courseName)
 ```
 
-<span data-ttu-id="81a46-231">Ed ecco l'output completo quando viene eseguito questo codice F# Interactive.</span><span class="sxs-lookup"><span data-stu-id="81a46-231">And here is the full output when this code is run in F# Interactive.</span></span>
+<span data-ttu-id="52077-231">Ed ecco l'output completo quando viene eseguito questo codice F# Interactive.</span><span class="sxs-lookup"><span data-stu-id="52077-231">And here is the full output when this code is run in F# Interactive.</span></span>
 
 ```
 --> Referenced 'C:\Program Files (x86)\Reference Assemblies\Microsoft\FSharp\3.0\Runtime\v4.0\Type Providers\FSharp.Data.TypeProviders.dll'
@@ -2433,8 +2433,8 @@ module Queries2 = begin
 end
 ```
 
-## <a name="see-also"></a><span data-ttu-id="81a46-232">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="81a46-232">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="52077-232">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="52077-232">See also</span></span>
 
-- [<span data-ttu-id="81a46-233">Riferimenti per il linguaggio F#</span><span class="sxs-lookup"><span data-stu-id="81a46-233">F# Language Reference</span></span>](index.md)
-- [<span data-ttu-id="81a46-234">Classe LINQ. querybuilder</span><span class="sxs-lookup"><span data-stu-id="81a46-234">Linq.QueryBuilder Class</span></span>](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d)
-- [<span data-ttu-id="81a46-235">Espressioni di calcolo</span><span class="sxs-lookup"><span data-stu-id="81a46-235">Computation Expressions</span></span>](Computation-Expressions.md)
+- [<span data-ttu-id="52077-233">Riferimenti per il linguaggio F#</span><span class="sxs-lookup"><span data-stu-id="52077-233">F# Language Reference</span></span>](index.md)
+- [<span data-ttu-id="52077-234">Classe LINQ. querybuilder</span><span class="sxs-lookup"><span data-stu-id="52077-234">Linq.QueryBuilder Class</span></span>](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d)
+- [<span data-ttu-id="52077-235">Espressioni di calcolo</span><span class="sxs-lookup"><span data-stu-id="52077-235">Computation Expressions</span></span>](Computation-Expressions.md)
