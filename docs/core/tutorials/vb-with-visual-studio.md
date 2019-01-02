@@ -7,12 +7,12 @@ ms.date: 08/07/2017
 dev_langs:
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 612de47c4d40d1272eb330a0343302109040f434
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e743cb496aca101b4594435c86e48951870cf8ef
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149380"
+ms.locfileid: "53170028"
 ---
 # <a name="build-a-net-core-visual-basic-hello-world-application-in-visual-studio-2017"></a>Creazione di un'applicazione .NET Core Hello World con Visual Basic in Visual Studio 2017
 
@@ -30,11 +30,11 @@ Di seguito viene descritta la creazione di una semplice applicazione console "He
 
 1. Avviare Visual Studio 2017. Selezionare **File** > **Nuovo** > **Progetto** dalla barra dei menu. Nella finestra di dialogo *Nuovo progetto** selezionare il nodo **Visual Basic** aggiungendo il nodo **.NET Core**. Selezionare quindi il modello di progetto **App console (.NET Core)**. Nella casella di testo **Nome** digitare "HelloWorld". Selezionare il pulsante **OK** .
 
-   ![Finestra di dialogo Nuovo progetto con App console selezionata](./media/vb-with-visual-studio/new-project.png)
+   ![Finestra di dialogo Nuovo progetto con App console selezionata](./media/vb-with-visual-studio/visual-studio-new-project.png)
    
 1. Visual Studio usa il modello per creare il progetto. Il modello App console di Visual Basic per .NET Core definisce automaticamente una classe, `Program`, con un singolo metodo, `Main` che accetta una matrice <xref:System.String> come argomento. `Main` è il punto di ingresso dell'applicazione, ovvero il metodo chiamato automaticamente dal runtime quando viene avviata l'applicazione. Gli argomenti della riga di comando forniti all'avvio dell'applicazione sono disponibili nella matrice *args*.
 
-   ![Visual Studio e il nuovo progetto HelloWorld](./media/vb-with-visual-studio/devenv.png)
+   ![Visual Studio e il nuovo progetto HelloWorld](./media/vb-with-visual-studio/visual-studio-main-window.png)
 
    Il modello crea una semplice applicazione "Hello World". Chiama il metodo <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> per visualizzare la stringa letterale "Hello World!" nella finestra della console. Facendo clic sul pulsante **HelloWorld** con la freccia verde sulla barra degli strumenti è possibile eseguire il programma in modalità debug. Se si esegue questa operazione, la finestra della console rimane visibile solo per un intervallo di tempo molto breve. Questo si verifica perché il metodo `Main` termina e l'applicazione viene chiusa non appena viene eseguita l'unica istruzione del metodo `Main`.
 
@@ -50,7 +50,7 @@ Di seguito viene descritta la creazione di una semplice applicazione console "He
 
 1. Eseguire il programma facendo clic sul pulsante **HelloWorld** con la freccia verde sulla barra degli strumenti.
 
-   ![Finestra della console con il messaggio Hello World che chiede di premere un tasto qualsiasi per continuare](./media/with-visual-studio/helloworld1.png)
+   ![Finestra della console con il messaggio Hello World che chiede di premere un tasto qualsiasi per continuare](./media/with-visual-studio/hello-world-console.png)
 
 1. Premere un tasto qualsiasi per chiudere la finestra della console.
 
@@ -64,7 +64,7 @@ Migliorare l'applicazione per richiedere il nome dell'utente e visualizzarlo ins
 
    Questo codice sostituisce le istruzioni <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, <xref:System.Console.Write%2A?displayProperty=nameWithType> e <xref:System.Console.ReadKey%2A?displayProperty=nameWithType> esistenti.
 
-   ![File di programma Visual Studio con il metodo Main aggiornato](./media/vb-with-visual-studio/codewindow.png)
+   ![File di programma Visual Studio con il metodo Main aggiornato](./media/vb-with-visual-studio/visual-basic-code-window.png)
 
    Il codice visualizza "What is your name?" nella console e attende che l'utente inserisca una stringa e prema INVIO. Archivia la stringa in una variabile denominata `name`. Recupera inoltre il valore della proprietà <xref:System.DateTime.Now?displayProperty=nameWithType>, contenente l'ora locale corrente, e lo assegna a una variabile denominata `currentDate`. Usa infine una [stringa interpolata](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) per visualizzare questi valori nella finestra della console.
 
@@ -72,7 +72,7 @@ Migliorare l'applicazione per richiedere il nome dell'utente e visualizzarlo ins
 
 1. Eseguire il programma in modalità debug in Visual Studio selezionando la freccia verde sulla barra degli strumenti, premendo F5 oppure scegliendo la voce di menu **Debug** > **Avvia debug**. Rispondere alla richiesta immettendo un nome e premendo il tasto INVIO.
 
-   ![Finestra della console con output del programma modificato](./media/with-visual-studio/helloworld2.png)
+   ![Finestra della console con output del programma modificato](./media/with-visual-studio/hello-world-update.png)
 
 1. Premere un tasto qualsiasi per chiudere la finestra della console.
 

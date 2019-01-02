@@ -1,15 +1,15 @@
 ---
 title: Usare ML.NET in uno scenario di classificazione binaria per l'analisi del sentiment
 description: Informazioni su come usare ML.NET in uno scenario di classificazione binaria per comprendere come usare la stima del sentiment al fine di eseguire l'azione appropriata.
-ms.date: 11/06/2018
+ms.date: 12/20/2018
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: cffce6258685502191e1dd33ef8282d664ea2d4c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 90f3b79226b16ac1ea4cbbe49ce07d95a138323b
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149653"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53779140"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>Esercitazione: Usare ML.NET in uno scenario di classificazione binaria per l'analisi del sentiment
 
@@ -53,8 +53,8 @@ Le fasi del flusso di lavoro sono le seguenti:
    * **Estrarre le caratteristiche (trasformare i dati)**
 3. **Compilare ed eseguire il training** 
    * **Eseguire il training del modello**
-   * **Valutare il modello**
-4. **Eseguire il modello**
+   * **Valutazione del modello**
+4. **Run**
    * **Utilizzare il modello**
 
 ### <a name="understand-the-problem"></a>Informazioni sul problema
@@ -122,7 +122,7 @@ Aggiungere le istruzioni `using` seguenti all'inizio del file *Program.cs*:
 * `_trainDataPath` contiene il percorso del set di dati usato per il training del modello.
 * `_testDataPath` contiene il percorso del set di dati usato per valutare il modello.
 * `_modelPath` contiene il percorso in cui è salvato il modello sottoposto a training.
-* `_reader` è l'istanza della classe <xref:Microsoft.ML.Runtime.Data.TextLoader> usata per caricare e trasformare i set di dati.
+* `_textLoader` è l'istanza della classe <xref:Microsoft.ML.Runtime.Data.TextLoader> usata per caricare e trasformare i set di dati.
 
 Aggiungere il codice seguente nella riga immediatamente sopra il metodo `Main` per specificare questi percorsi e la variabile `_textLoader`:
 
@@ -204,7 +204,7 @@ Chiamare quindi `mlContext.Transforms.Text.FeaturizeText` che estrae le caratter
 
 [!code-csharp[TextFeaturizingEstimator](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#7 "Add a TextFeaturizingEstimator")]
 
-Questo è il passaggio di pre-elaborazione/estrazione delle caratteristiche. Usando i componenti aggiuntivi disponibili in ML.NET, è possibile ottenere risultati migliori con il modello.
+Questo è il passaggio di pre-elaborazione/estrazione delle funzionalità. Usando i componenti aggiuntivi disponibili in ML.NET, è possibile ottenere risultati migliori con il modello.
 
 ## <a name="choose-a-learning-algorithm"></a>Scegliere un algoritmo di apprendimento
 
@@ -216,7 +216,7 @@ Aggiungere al metodo `Train` il codice seguente:
 
 ## <a name="train-the-model"></a>Eseguire il training del modello
 
-Il training del modello, <xref:Microsoft.ML.Runtime.Data.TransformerChain%601>, viene eseguito in base al set di dati caricato e trasformato. Dopo aver definito l'algoritmo di stima, si esegue il training del modello usando il metodo <xref:Microsoft.ML.Runtime.Data.EstimatorChain%601.Fit%2A> e fornendo i dati di training già caricati. Viene così restituito un modello da usare per le stime. `pipeline.Fit()` esegue il training della pipeline e restituisce un oggetto `Transformer` in base alla `DataView` passata. L'esperimento non viene eseguito finché questa operazione non è stata completata.
+Il training del modello, <xref:Microsoft.ML.Data.TransformerChain%601>, viene eseguito in base al set di dati caricato e trasformato. Dopo aver definito l'algoritmo di stima, si esegue il training del modello usando il metodo <xref:Microsoft.ML.Runtime.Data.EstimatorChain%601.Fit%2A> e fornendo i dati di training già caricati. Viene così restituito un modello da usare per le stime. `pipeline.Fit()` esegue il training della pipeline e restituisce un oggetto `Transformer` in base alla `DataView` passata. L'esperimento non viene eseguito finché questa operazione non è stata completata.
 
 Aggiungere al metodo `Train` il codice seguente:
 
@@ -328,7 +328,7 @@ Aggiungere un commento per testare la stima del modello sottoposto a training ne
 [!code-csharp[PredictionData](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#18 "Create test data for single prediction")]
 
 
- È possibile usare questo commento per eseguire una stima del sentiment positivo o negativo di una singola istanza dei dati relativi ai commenti. Per ottenere una stima, usare <xref:Microsoft.ML.Runtime.Data.PredictionFunction%602.Predict(%600)> sui dati. Si noti che i dati di input sono una stringa e che il modello include l'estrazione delle caratteristiche. La pipeline è sincronizzata durante il training e la stima. Non è necessario scrivere codice di pre-elaborazione/estrazione delle caratteristiche specifico per le stime e la stessa API gestisce sia le stime in batch che quelle eseguite una sola volta.
+ È possibile usare questo commento per eseguire una stima del sentiment positivo o negativo di una singola istanza dei dati relativi ai commenti. Per ottenere una stima, usare <xref:Microsoft.ML.Runtime.Data.PredictionFunction%602.Predict(%600)> sui dati. Si noti che i dati di input sono una stringa e che il modello include l'estrazione delle funzionalità. La pipeline è sincronizzata durante il training e la stima. Non è necessario scrivere codice di pre-elaborazione/estrazione delle funzionalità specifico per le stime e la stessa API gestisce sia le stime in batch che quelle eseguite una sola volta.
 
 [!code-csharp[Predict](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#19 "Create a prediction of sentiment")]
 
@@ -366,7 +366,7 @@ Aggiungere alcuni commenti per testare le stime del modello sottoposto a trainin
 
 Caricare il modello [!code-csharp[LoadTheModel](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#27 "Load the model")]
 
-Dopo aver creato un modello, è possibile usarlo per stimare il sentiment positivo o negativo dei dati relativi ai commenti usando il metodo <xref:Microsoft.ML.Core.Data.ITransformer.Transform(Microsoft.ML.Runtime.Data.IDataView)>. Per ottenere una stima, usare `Predict` sui nuovi dati. Si noti che i dati di input sono una stringa e che il modello include l'estrazione delle caratteristiche. La pipeline è sincronizzata durante il training e la stima. Non è necessario scrivere codice di pre-elaborazione/estrazione delle caratteristiche specifico per le stime e la stessa API gestisce sia le stime in batch che quelle eseguite una sola volta. Aggiungere il codice seguente al metodo `PredictWithModelLoadedFromFile` per le stime:
+Dopo aver creato un modello, è possibile usarlo per stimare il sentiment positivo o negativo dei dati relativi ai commenti usando il metodo <xref:Microsoft.ML.Core.Data.ITransformer.Transform(Microsoft.ML.Runtime.Data.IDataView)>. Per ottenere una stima, usare `Predict` sui nuovi dati. Si noti che i dati di input sono una stringa e che il modello include l'estrazione delle funzionalità. La pipeline è sincronizzata durante il training e la stima. Non è necessario scrivere codice di pre-elaborazione/estrazione delle funzionalità specifico per le stime e la stessa API gestisce sia le stime in batch che quelle eseguite una sola volta. Aggiungere il codice seguente al metodo `PredictWithModelLoadedFromFile` per le stime:
 
 [!code-csharp[Predict](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#28 "Create predictions of sentiments")]
 

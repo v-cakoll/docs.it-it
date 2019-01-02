@@ -2,14 +2,14 @@
 title: Migrazione da DNX all'interfaccia della riga di comando .NET Core
 description: Eseguire la migrazione dagli strumenti DNX agli strumenti dell'interfaccia della riga di comando di .NET Core.
 author: blackdwarf
-ms.author: mairaw
 ms.date: 06/20/2016
-ms.openlocfilehash: dd3c31b88b619799e6b2e2596127d64d84918ca0
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.custom: seodec18
+ms.openlocfilehash: 26cf812bdce565b5278b00c6965a61b6135e3df7
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43388774"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170704"
 ---
 # <a name="migrating-from-dnx-to-net-core-cli-projectjson"></a>Migrazione da DNX all'interfaccia della riga di comando di .NET Core (project.json)
 
@@ -49,7 +49,7 @@ Se si usa DNX, sono disponibili i comandi di uno dei tre componenti (DNX, DNU o 
 La tabella seguente mostra il mapping tra i comandi DNX/DNU e i corrispondenti comandi dell'interfaccia della riga di comando.
 
 
-| Comando DNX                       | Comando dell'interfaccia della riga di comando       | Descrizione                                                                                                       |
+| Comando DNX                       | Comando dell'interfaccia della riga di comando       | Description                                                                                                       |
 |--------------------------------   |----------------   |-----------------------------------------------------------------------------------------------------------------  |
 | dnx run                           | dotnet run        | Esegue il codice dall'origine.                                                                                             |
 | dnu build                         | dotnet build      | Crea un file binario IL (Intermediate Language) del codice.                                                                                  |

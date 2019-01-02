@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 68d1c539-6a47-4614-ab59-4b071c9d4b4c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9c43f75dc17d49fe34094829387673b0f1f1d028
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 7f7aa8a57fce9382cb67327e69048c2b05bb99da
+ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201582"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53397046"
 ---
 # <a name="best-practices-for-assembly-loading"></a>Procedure consigliate per il caricamento di assembly
 Questo articolo illustra come evitare problemi di identità del tipo che possono causare eccezioni <xref:System.InvalidCastException>, <xref:System.MissingMethodException> e altri errori. Nell'articolo vengono discussi i seguenti suggerimenti:  
@@ -154,7 +154,7 @@ Questo articolo illustra come evitare problemi di identità del tipo che possono
  Se non è possibile inserire tutti gli assembly nel percorso di esecuzione del probe, considerare alternative quali l'uso del modello del componente aggiuntivo di .NET Framework, l'inserimento degli assembly nella Global Assembly Cache o la creazione di domini applicazione.  
   
 ### <a name="consider-using-the-net-framework-add-in-model"></a>Considerare l'uso del modello del componente aggiuntivo di .NET Framework  
- Se si usa il contesto di origine del caricamento per implementare i componenti aggiuntivi, che in genere non vengono installati nella base dell'applicazione, usare il modello del componente aggiuntivo di .NET Framework. Questo modello fornisce l'isolamento a livello del dominio applicazione o del processo e non richiede alcuna gestione dei domini applicazione da parte dell'utente. Per informazioni sul modello del componente aggiuntivo, vedere [Componenti aggiuntivi ed estensibilità](../../../docs/framework/add-ins/index.md).  
+ Se si usa il contesto di origine del caricamento per implementare i componenti aggiuntivi, che in genere non vengono installati nella base dell'applicazione, usare il modello del componente aggiuntivo di .NET Framework. Questo modello fornisce l'isolamento a livello del dominio applicazione o del processo e non richiede alcuna gestione dei domini applicazione da parte dell'utente. Per informazioni sul modello del componente aggiuntivo, vedere [Componenti aggiuntivi ed estensibilità](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)).  
   
 ### <a name="consider-using-the-global-assembly-cache"></a>Considerare l'uso della Global Assembly Cache  
  L'inserimento degli assembly nella Global Assembly Cache consente di sfruttare il vantaggio di un percorso dell'assembly condiviso al di fuori della base dell'applicazione, senza rinunciare ai vantaggi del contesto di caricamento predefinito né avere gli svantaggi degli altri contesti.  
@@ -170,4 +170,3 @@ Questo articolo illustra come evitare problemi di identità del tipo che possono
 - <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>
 - <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=nameWithType>
 - <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>
-- [Componenti aggiuntivi ed estendibilità](../../../docs/framework/add-ins/index.md)

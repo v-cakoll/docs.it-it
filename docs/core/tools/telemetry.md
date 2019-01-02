@@ -2,14 +2,14 @@
 title: Telemetria di .NET Core SDK
 description: Informazioni sulle funzionalità di telemetria degli strumenti di .NET Core SDK che raccolgono informazioni sull'utilizzo per l'analisi, i dati raccolti e il modo in cui disabilitarli.
 author: richlander
-ms.author: mairaw
 ms.date: 06/20/2018
-ms.openlocfilehash: c8c6688b7b29c7e65c723e1f1ff31b3bd4c8c1ff
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.custom: seodec18
+ms.openlocfilehash: 8b0b546d70eab837c2e075f839990870ae9ea6b1
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129142"
+ms.locfileid: "53168845"
 ---
 # <a name="net-core-sdk-telemetry"></a>Telemetria di .NET Core SDK
 

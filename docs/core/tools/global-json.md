@@ -1,16 +1,14 @@
 ---
 title: panoramica di global.json
 description: Informazioni su come usare il file global.json per impostare la versione di .NET Core SDK durante l'esecuzione dei comandi dell'interfaccia della riga di comando di .NET Core.
-author: mairaw
-ms.author: mairaw
 ms.date: 12/03/2018
-ms.custom: updateeachrelease
-ms.openlocfilehash: 7cb118c16460ed593d210f5e816b2a6fd5af2ee3
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.custom: updateeachrelease, seodec18
+ms.openlocfilehash: e0f929a049812cac6f62e5218629c9b0add83de8
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150854"
+ms.locfileid: "53170769"
 ---
 # <a name="globaljson-overview"></a>panoramica di global.json
 
@@ -32,7 +30,7 @@ Specifica le informazioni sul .NET Core SDK da selezionare.
 
 #### <a name="version"></a>version
 
-Tipo: String
+Tipo: Stringa
 
 La versione del .NET Core SDK da usare.
 

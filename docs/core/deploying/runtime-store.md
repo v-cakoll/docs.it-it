@@ -2,15 +2,14 @@
 title: Archivio pacchetti di runtime
 description: Informazioni su come usare l'archivio pacchetti di runtime per specificare come destinazione i manifesti usati da .NET Core.
 author: bleroy
-ms.author: mairaw
 ms.date: 08/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: b9daac6f50008bf661ae0c727d3a3e0e53a0d6b4
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a190e148715547fde29d3a852183ea4d75065e79
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145215"
+ms.locfileid: "53170353"
 ---
 # <a name="runtime-package-store"></a>Archivio pacchetti di runtime
 
