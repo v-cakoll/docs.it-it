@@ -47,7 +47,7 @@ I vantaggi dei nomi sicuri sono i seguenti:
 > [!NOTE]
 > Queste indicazioni si riferiscono alle librerie .NET distribuite pubblicamente, ad esempio le librerie .NET pubblicate in NuGet.org. Il nome sicuro non è richiesto dalla maggior parte delle applicazioni .NET e non deve essere usato per impostazione predefinita.
 
- **VALUTARE** l'uso di nomi sicuri per gli assembly della libreria.
+**✔️ VALUTARE** l'uso di nomi sicuri per gli assembly della libreria.
 
 **✔️ VALUTARE** l'aggiunta della chiave per la creazione di nomi sicuri nel sistema di controllo del codice sorgente.
 

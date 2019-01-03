@@ -128,7 +128,7 @@ Controllare il simbolo che corrisponde a qualsiasi tipo, metodo, proprietà dich
 
 Gli esempi precedenti di Visual Basic possono essere facilmente replicati in C#. Digitare `using C = System.Console;` invece di `Imports C = System.Console` per l'alias. I passaggi precedenti in C# restituiscono gli stessi risultati nella finestra del visualizzatore.
 
-È possibile eseguire l'ispezione semantica solo sui nodi. Non è disponibile su token o elementi semplici. Non tutti i nodi contengono informazioni semantiche interessanti da controllare. Quando un nodo non contiene informazioni semantiche interessanti, facendo clic su **View \* Symbol (if any)** (Visualizza simbolo * se esistente) apparirà una griglia delle proprietà vuota.
+È possibile eseguire l'ispezione semantica solo sui nodi. Non è disponibile su token o elementi semplici. Non tutti i nodi contengono informazioni semantiche interessanti da controllare. Quando un nodo non contiene informazioni semantiche interessanti, facendo clic su **View \* Symbol (if any)** (Visualizza simbolo se esistente) apparirà una griglia delle proprietà vuota.
 
 Altre informazioni sulle API per l'esecuzione dell'analisi semantica sono disponibile nel documento di anteprima [Usare la semantica](work-with-semantics.md).
 
