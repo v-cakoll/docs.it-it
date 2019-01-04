@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: creare un servizio WCF che comunica tramite WebSockets'
+title: 'Procedura: Creare un servizio WCF che comunica tramite WebSockets'
 ms.date: 03/30/2017
 ms.assetid: bafbbd89-eab8-4e9a-b4c3-b7b0178e12d8
-ms.openlocfilehash: a9b3ae8d8dcac7844e241fa668e1199669d216e6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: bd9b1be3751d499ee3c6ee38ff4cee0e12046e6a
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196200"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030581"
 ---
-# <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a>Procedura: creare un servizio WCF che comunica tramite WebSockets
+# <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a>Procedura: Creare un servizio WCF che comunica tramite WebSockets
 I servizi e i client WCF possono usare l'associazione <xref:System.ServiceModel.NetHttpBinding> per comunicare tramite WebSockets.  La tecnologia WebSockets viene usata quando <xref:System.ServiceModel.NetHttpBinding> determina che il contratto di servizio definisce un contratto di callback. In questo argomento viene descritto come implementare un servizio e un client WCF in cui viene usato l'oggetto <xref:System.ServiceModel.NetHttpBinding> per comunicare tramite WebSockets.  
   
 ### <a name="define-the-service"></a>Definire il servizio  
@@ -295,7 +295,7 @@ namespace Client
 ```  
   
 ```xml  
-<!—App.config -->  
+<!--App.config -->  
 <?xml version="1.0" encoding="utf-8" ?>  
 <configuration>  
     <startup>   

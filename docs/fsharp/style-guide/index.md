@@ -2,12 +2,12 @@
 title: F#Guida di stile
 description: Informazioni sui cinque principi buone F# codice.
 ms.date: 12/10/2018
-ms.openlocfilehash: 7718df596bde9004fb9ba6143146f1f475d25683
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 9f47257626e04b09b546de2ae315d48d791678be
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168956"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030269"
 ---
 # <a name="f-style-guide"></a>F#Guida di stile
 
@@ -21,7 +21,7 @@ Infatti, i principi seguenti quando si scrive F# codice, soprattutto nei sistemi
 
 1. **Valido F# è di codice conciso, espressivo e componibili**
 
-    F#ha molte funzionalità che consentono di indicare le azioni in un minor numero di righe di codice e riutilizzare la funzionalità generica. Il F# libreria di base contiene anche numerosi tipi utili e funzioni per l'utilizzo di raccolte comuni dei dati. Composizione di funzioni personalizzate e quelli presenti il F# libreria di base (o altre librerie) sono una parte della routine idiomatico F# di programmazione. Come regola generale, se è possibile esprimere una soluzione a un problema in un minor numero di righe di codice, altri sviluppatori (o il self futuri) saranno apprezzabili. È anche consigliabile usare una libreria, ad esempio FSharp. core, il [vaste librerie .NET](https://docs.microsoft.com/dotnet/api/) che F# viene eseguito, o un pacchetto di terze parti sul [NuGet](https://www.nuget.org/) quando è necessario eseguire un'operazione non semplice.
+    F#ha molte funzionalità che consentono di indicare le azioni in un minor numero di righe di codice e riutilizzare la funzionalità generica. Il F# libreria di base contiene anche numerosi tipi utili e funzioni per l'utilizzo di raccolte comuni dei dati. Composizione di funzioni personalizzate e quelli presenti il F# libreria di base (o altre librerie) sono una parte della routine idiomatico F# di programmazione. Come regola generale, se è possibile esprimere una soluzione a un problema in un minor numero di righe di codice, altri sviluppatori (o il self futuri) saranno apprezzabili. È anche consigliabile usare una libreria, ad esempio FSharp. core, il [vaste librerie .NET](../../../api/index.md) che F# viene eseguito, o un pacchetto di terze parti sul [NuGet](https://www.nuget.org/) quando è necessario eseguire un'operazione non semplice.
 
 2. **Valido F# codice è interoperativo**
 

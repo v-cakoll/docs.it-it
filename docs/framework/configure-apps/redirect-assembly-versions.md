@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 88fb1a17-6ac9-4b57-8028-193aec1f727c
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: c4c96b874456297ede61c96e46fee8d90ebcafb6
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 67c94eeaa295b19e99f870780f555baff936889f
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123618"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030127"
 ---
 # <a name="redirecting-assembly-versions"></a>Reindirizzamento delle versioni di assembly
 
@@ -67,7 +67,7 @@ Se un altro progetto nell'app fa riferimento alla versione 1.0.0.0 dello stesso 
 
 `<bindingRedirect oldVersion="1.0.0.0" newVersion="2.0.0.0" />`
 
-È possibile abilitare il reindirizzamento di associazione automatico se l'app è destinata a versioni precedenti di .NET Framework. È possibile eseguire l'override di questo comportamento predefinito fornendo le informazioni di reindirizzamento di associazione nel file app. config per qualsiasi assembly o disattivando la funzionalità di reindirizzamento di associazione. Per informazioni su come attivare o disattivare questa funzionalità, vedere [procedura: abilitare e disabilitare il reindirizzamento di associazione automatico](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md).
+È possibile abilitare il reindirizzamento di associazione automatico se l'app è destinata a versioni precedenti di .NET Framework. È possibile eseguire l'override di questo comportamento predefinito fornendo le informazioni di reindirizzamento di associazione nel file app. config per qualsiasi assembly o disattivando la funzionalità di reindirizzamento di associazione. Per informazioni su come attivare o disattivare questa funzionalità, vedere [come: Abilitare e disabilitare il reindirizzamento di associazione automatico](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md).
 
 <a name="bypass_PP"></a>
 ### <a name="bypassing-publisher-policy"></a>Esclusione dei criteri editore
@@ -142,11 +142,11 @@ Se un altro progetto nell'app fa riferimento alla versione 1.0.0.0 dello stesso 
 
 ```xml
 <assemblyBinding xmlns="..." appliesTo="v3.5 ">
-  <!—.NET Framework version 3.5 redirects here -->
+  <!--.NET Framework version 3.5 redirects here -->
 </assemblyBinding>
 
 <assemblyBinding xmlns="..." appliesTo="v4.0.30319">
-  <!—.NET Framework version 4.0 redirects here -->
+  <!--.NET Framework version 4.0 redirects here -->
 </assemblyBinding>
 
 <assemblyBinding xmlns="...">
@@ -156,7 +156,7 @@ Se un altro progetto nell'app fa riferimento alla versione 1.0.0.0 dello stesso 
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura: abilitare e disabilitare il reindirizzamento di associazione automatico](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)
+- [Procedura: Abilitare e disabilitare il reindirizzamento di associazione automatico](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)
 - [\<bindingRedirect > elemento](../../../docs/framework/configure-apps/file-schema/runtime/bindingredirect-element.md)
 - [Autorizzazione di sicurezza per il reindirizzamento delle versioni di assembly](../../../docs/framework/configure-apps/assembly-binding-redirection-security-permission.md)
 - [Assembly in Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
@@ -166,4 +166,4 @@ Se un altro progetto nell'app fa riferimento alla versione 1.0.0.0 dello stesso 
 - [Configurazione delle app .NET Framework](http://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)
 - [Schema delle impostazioni di runtime](../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Schema dei file di configurazione](../../../docs/framework/configure-apps/file-schema/index.md)
-- [Procedura: creare criteri editore](../../../docs/framework/configure-apps/how-to-create-a-publisher-policy.md)
+- [Procedura: Creare criteri editore](../../../docs/framework/configure-apps/how-to-create-a-publisher-policy.md)

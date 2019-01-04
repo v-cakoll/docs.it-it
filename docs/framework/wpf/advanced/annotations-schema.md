@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Microsoft Annotations Framework [WPF]
 - documents [WPF], annotations
 ms.assetid: a893442b-e220-4603-bf6a-b01fefcb4b37
-ms.openlocfilehash: e463a087516dc45cb4bd879c77aef6fbeba2b546
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d2f3fa70673c7ae5819346ab152b74acf93a164c
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542015"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54029840"
 ---
 # <a name="annotations-schema"></a>Schema annotazioni
 Questo argomento descrive la definizione di XML Schema (XSD, XML Schema Definition) usata da Microsoft Annotations Framework per salvare e recuperare i dati di annotazione dell'utente.  
@@ -24,13 +24,13 @@ Questo argomento descrive la definizione di XML Schema (XSD, XML Schema Definiti
   
 -   Schema di base XML delle annotazioni (schema di base).  
   
- Lo Schema di base definisce la struttura XML primaria di un <xref:System.Windows.Annotations.Annotation>.  La maggior parte degli elementi XML definiti nello Schema Core corrispondono ai tipi nel <xref:System.Windows.Annotations> dello spazio dei nomi.  Lo schema principale espone tre punti di estensione in cui le applicazioni possono aggiungere i propri dati XML.  Questi punti di estensione includono il <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>e "Contenuto".  (Contenuto vengono forniti gli elementi sotto forma di un <xref:System.Xml.XmlElement> elenco.)  
+ Lo Schema principale definisce la struttura XML primaria di un <xref:System.Windows.Annotations.Annotation>.  La maggior parte degli elementi XML definiti nello Schema principale corrisponde ai tipi presenti il <xref:System.Windows.Annotations> dello spazio dei nomi.  Lo schema principale espone tre punti di estensione in cui le applicazioni possono aggiungere i propri dati XML.  Questi punti di estensione includono il <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>e "Content".  (Gli elementi vengono forniti sotto forma di contenuto un <xref:System.Xml.XmlElement> elenco.)  
   
- Lo Schema di Base descritte in questo argomento definisce le estensioni per il <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>e tipi inclusi con la versione di Windows Presentation Foundation (WPF) iniziale di contenuto.  
+ Lo Schema di Base descritte in questo argomento definisce le estensioni per il <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>e tipi inclusi con la versione di Windows Presentation Foundation (WPF) iniziale del contenuto.  
   
 <a name="CoreSchema"></a>   
 ## <a name="annotations-xml-core-schema"></a>Schema principale XML delle annotazioni  
- Lo Schema di base di annotazioni XML definisce la struttura XML che viene utilizzata per archiviare <xref:System.Windows.Annotations.Annotation> oggetti.  
+ La Schema principale XML delle annotazioni definisce la struttura XML che viene usata per archiviare <xref:System.Windows.Annotations.Annotation> oggetti.  
   
 ```xml  
 <xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified"  
@@ -182,7 +182,7 @@ Questo argomento descrive la definizione di XML Schema (XSD, XML Schema Definiti
   
 <a name="BaseSchema"></a>   
 ## <a name="annotations-xml-base-schema"></a>Schema di base XML delle annotazioni  
- Lo Schema di Base definisce la struttura XML per i tre elementi astratti definiti nello Schema Core: <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>, e <xref:System.Windows.Annotations.AnnotationResource.Contents%2A>.  
+ Lo Schema di Base definisce la struttura XML per i tre elementi astratti definiti nello Schema Core – <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>, e <xref:System.Windows.Annotations.AnnotationResource.Contents%2A>.  
   
 ```xml  
 <xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified"  
@@ -429,11 +429,11 @@ Questo argomento descrive la definizione di XML Schema (XSD, XML Schema Definiti
     </xsd:complexContent>  
   </xsd:complexType>  
   
-  <-- PageNumber element substitutes ContentLocatorPart and is used to locate a  
-  *  page in a FixedDocument.  PageNumber ContentLocatorPart is used in  
-  *   conjunction with the FixedTextRange ContentLocatorPart and it shows on with  
-  *   page are the coordinates defined in the FixedTextRange.  
-  *   Example of a PageNumber ContentLocatorPart:  
+  <!-- PageNumber element substitutes ContentLocatorPart and is used to locate a  
+  *    page in a FixedDocument.  PageNumber ContentLocatorPart is used in  
+  *    conjunction with the FixedTextRange ContentLocatorPart and it shows on with  
+  *    page are the coordinates defined in the FixedTextRange.  
+  *    Example of a PageNumber ContentLocatorPart:  
   *     
   *       <anb:PageNumber>  
   *         <anc:Item Name="Value" Value="1" />  
@@ -464,8 +464,8 @@ Questo argomento descrive la definizione di XML Schema (XSD, XML Schema Definiti
   <xsd:element name="Text" type="anb:TextContentType"  
                substitutionGroup="anc:Content"/>  
   
-  <-- Ink – contains XAML representing Sticky Note ink.  
-  *   Used in annotations of type InkStickyNote. -->  
+  <!-- Ink – contains XAML representing Sticky Note ink.  
+  *    Used in annotations of type InkStickyNote. -->  
   <xsd:complexType name="InkContentType">  
     <!-- See XAML schema for Ink content -->  
   </xsd:complexType>  
@@ -493,7 +493,7 @@ Questo argomento descrive la definizione di XML Schema (XSD, XML Schema Definiti
   
 <a name="SampleXML"></a>   
 ## <a name="sample-xml-produced-by-annotations-xmlstreamstore"></a>XML di esempio creato da Annotations XmlStreamStore  
- Il codice XML che segue viene illustrato l'output di un'annotazione <xref:System.Windows.Annotations.Storage.XmlStreamStore> e l'organizzazione di un file di esempio contenente tre annotazioni - un'evidenziazione, una testo nota sticky note e Sticky un input penna.  
+ Il codice XML seguente mostra l'output di un'annotazione <xref:System.Windows.Annotations.Storage.XmlStreamStore> e l'organizzazione di un file di esempio contenente tre annotazioni: un'evidenziazione, una nota di Memo e una nota a penna.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
