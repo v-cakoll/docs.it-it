@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 07/19/2018
 ms.technology: dotnet-standard
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: bdaaa22f20f21e823459914a900997050a6624a6
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: cfc830f50f2e77b85e46ebaf91e3c8658aa86c48
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50186070"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613596"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -35,7 +35,7 @@ Per trovare la versione più recente di .NET Standard che è possibile definire 
 
 1. Individuare la riga che indica l'implementazione di .NET usata per l'esecuzione.
 2. All'interno della riga, individuare la colonna che indica la versione in uso a partire da destra verso sinistra.
-3. L'intestazione di colonna indica la versione di .NET Standard supportata dall'attuale destinazione (e le eventuali versioni precedenti di .NET Standard ugualmente supportate).
+3. L'intestazione colonna indica la versione di .NET Standard supportata dall'attuale destinazione. È anche possibile impostare il supporto di qualsiasi versione di .NET Standard inferiore. Anche le versioni di .NET Standard superiori supporteranno l'implementazione.
 4. Ripetere questo processo per ogni piattaforma da definire come destinazione. Se si hanno più piattaforme di destinazione, usare la versione inferiore tra quelle disponibili. Ad esempio, se si vuole procedere all'esecuzione in .NET Framework 4.5 e .NET Core 1.0, la versione .NET Standard superiore che è possibile usare è .NET Standard 1.1.
 
 ### <a name="which-net-standard-version-to-target"></a>Quale versione di .NET Standard definire come destinazione
@@ -57,7 +57,7 @@ Tuttavia, la definizione di versioni precedenti di .NET Standard come destinazio
 Esistono due regole principali per il controllo delle versioni:
 
 - Additive: le versioni di .NET Standard sono cerchi concentrici da un punto di vista logico, ovvero le versioni successive includono tutte le API delle versioni precedenti. Non vengono apportate modifiche importanti tra una versione e l'altra.
-- Non modificabili: dopo essere state rilasciate, le versioni di .NET Standard sono bloccate. Le nuove API vengono prima rese disponibili in implementazioni di .NET specifiche, ad esempio .NET Core. Se la commissione di esame di .NET Standard ritiene che le nuove API debbano essere disponibili per tutte le implementazioni di .NET, vengono aggiunte in una nuova versione di .NET Standard.
+- Non modificabili: una volta fornite, le versioni di .NET Standard sono bloccate. Le nuove API vengono prima rese disponibili in implementazioni di .NET specifiche, ad esempio .NET Core. Se la commissione di esame di .NET Standard ritiene che le nuove API debbano essere disponibili per tutte le implementazioni di .NET, vengono aggiunte in una nuova versione di .NET Standard.
 
 ## <a name="specification"></a>Specifica
 

@@ -1,23 +1,24 @@
 ---
 title: Procedure consigliate per la scrittura di unit test
-description: Informazioni sulle procedure consigliate per la scrittura di unit test che migliorano la qualità del codice e la resilienza
+description: Informazioni sulle procedure consigliate per la scrittura di unit test che migliorano la qualità del codice e la resilienza per i progetti .NET Core e .NET Standard.
 author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
-ms.openlocfilehash: 00a0b999c9a08b04cb33bcb3a332513292beb363
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.custom: seodec18
+ms.openlocfilehash: 7db37fd4fcb76d4bfcfb21204a191fd43c9bb6b6
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143409"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53240723"
 ---
-# <a name="unit-testing-best-practices"></a>Procedure consigliate per gli unit test
+# <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>Procedure consigliate di testing unità con .NET Core e .NET Standard
 
-A cura di [John Reese](http://reesespieces.io) con ringraziamenti speciali a [Roy Osherove](http://osherove.com/)
-
-La scrittura di unit test offre numerosi vantaggi: facilitano la regressione, rappresentano fonti di documentazione e semplificano la progettazione ottimale. Tuttavia, unit test deboli e di difficile lettura possono causare seri problemi nella base codice.
+La scrittura di unit test offre numerosi vantaggi: facilitano la regressione, rappresentano fonti di documentazione e semplificano la progettazione ottimale. Tuttavia, unit test deboli e di difficile lettura possono causare seri problemi nella base codice. Questo articolo descrive alcune procedure consigliate per la progettazione di unit test per i progetti .NET Core e .NET Standard.
 
 In questa guida verranno descritte alcune procedure consigliate per scrivere unit test flessibili e di facile comprensione.
+
+A cura di [John Reese](http://reesespieces.io) con ringraziamenti speciali a [Roy Osherove](http://osherove.com/)
 
 ## <a name="why-unit-test"></a>L'utilità degli unit test
 

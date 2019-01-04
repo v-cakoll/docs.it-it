@@ -1,15 +1,13 @@
 ---
-title: Comando dotnet restore - Interfaccia della riga di comando di .NET Core
+title: Comando dotnet restore
 description: Informazioni sul ripristino delle dipendenze e degli strumenti specifici per il progetto tramite il comando dotnet-restore.
-author: mairaw
-ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: 504a0621beb8aea961133d2cc6d287ce17051c1c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 6f54671fcd1c17d2466d5a38027e02da5e7494e9
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127329"
+ms.locfileid: "53170782"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -164,6 +162,8 @@ Specifica un'origine dei pacchetti NuGet da usare durante l'operazione di ripris
 `--verbosity <LEVEL>`
 
 Imposta il livello di dettaglio del comando. I valori consentiti sono `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`.
+
+---
 
 ## <a name="examples"></a>Esempi
 

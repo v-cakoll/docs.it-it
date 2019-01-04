@@ -1,15 +1,16 @@
 ---
 title: Testare l'output pubblicato con dotnet vstest
-description: Informazioni su come eseguire test sull'output pubblicato con il comando dotnet vstest.
+description: Informazioni su come eseguire test sulle librerie pubblicate, invece che sul codice sorgente, con il comando dotnet vstest.
 author: kendrahavens
 ms.author: kehavens
 ms.date: 10/18/2017
-ms.openlocfilehash: e99000996f5dfa9f9d4f9b823e36ecbe325da835
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.custom: seodec18
+ms.openlocfilehash: 9d842f26336d0ddf5375d49676523086bb632684
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508133"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239527"
 ---
 # <a name="test-published-output-with-dotnet-vstest"></a>Testare l'output pubblicato con dotnet vstest
 
@@ -19,9 +20,11 @@ ms.locfileid: "43508133"
 dotnet vstest <MyPublishedTests>.dll
 ```
 
-dove `<MyPublishedTests>` è il nome del progetto di test pubblicato.
+Dove `<MyPublishedTests>` è il nome del progetto di test pubblicato.
 
-## <a name="example-of-running-tests-on-a-published-dll"></a>Esempio di esecuzione di test in una DLL pubblicata
+## <a name="example"></a>Esempio
+
+I comandi seguenti illustrano l'esecuzione dei test in una DLL pubblicata.
 
 ```
 dotnet new mstest -o MyProject.Tests

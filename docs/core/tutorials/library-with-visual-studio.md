@@ -5,12 +5,12 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 08/07/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 2af688057dbb3724ea03818157368ff0b54f0cf2
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 0c98f8c8fc4847570964d8d4ea8deb221164441d
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144575"
+ms.locfileid: "53168936"
 ---
 # <a name="build-a-net-standard-class-library-with-c-and-the-net-core-sdk-in-visual-studio-2017"></a>Compilare una libreria di classi .NET Standard con C# e .NET Core SDK in Visual Studio 2017
 
@@ -29,7 +29,7 @@ Iniziare creando una soluzione per il progetto di libreria di classi e per i pro
 
 1. Nella finestra di dialogo **Nuovo progetto** espandere il nodo **Altri tipi di progetti** e selezionare **Soluzioni di Visual Studio**. Assegnare alla soluzione il nome "ClassLibraryProjects" e selezionare il pulsante **OK**.
 
-   ![Finestra di dialogo Nuovo progetto](./media/library-with-visual-studio/newproject.png)
+   ![Finestra di dialogo Nuovo progetto con la nuova soluzione vuota evidenziata](./media/library-with-visual-studio/new-project-dialog.png)
 
 ## <a name="creating-the-class-library-project"></a>Creazione del progetto di libreria di classi
 
@@ -39,15 +39,15 @@ Creare un progetto di libreria di classi:
 
 1. Nella finestra di dialogo **Aggiungi nuovo progetto** espandere il nodo **Visual C#**, quindi selezionare il nodo **.NET Standard** seguito dal modello di progetto **Libreria di classi (.NET Standard)**. Nella casella di testo **Nome** immettere "StringLibrary" come nome del progetto. Scegliere **OK** per creare il progetto di libreria di classi.
 
-   ![Finestra di dialogo Aggiungi nuovo progetto](./media/library-with-visual-studio/libproject.png)
+   ![Finestra di dialogo Aggiungi nuovo progetto per libreria di classi](./media/library-with-visual-studio/add-new-library-project.png)
 
    La finestra di codice viene quindi aperta nell'ambiente di sviluppo di Visual Studio.
 
-   ![Finestra dell'applicazione di Visual Studio che illustra il codice del modello della libreria di classi predefinito](./media/library-with-visual-studio/stringlibrary.png)
+   ![Finestra dell'applicazione di Visual Studio che illustra il codice del modello della libreria di classi predefinito](./media/library-with-visual-studio/string-library-project.png)
 
 1. Assicurarsi che sia stata eseguita la destinazione della libreria alla versione corretta di .NET Standard. Fare clic con il pulsante destro del mouse sul progetto libreria nelle finestre di **Esplora soluzioni**, quindi selezionare **Proprietà**. La casella di testo **Framework di destinazione** indica che si sta eseguendo la destinazione a .NET 2.0 Standard.
 
-   ![Proprietà del progetto per la libreria di classi](./media/library-with-visual-studio/properties.png)
+   ![Proprietà del progetto per la libreria di classi](./media/library-with-visual-studio/library-project-properties.png)
 
 1. Nella finestra del codice sostituire il codice con il seguente:
 
@@ -57,7 +57,7 @@ Creare un progetto di libreria di classi:
 
 1. Nella barra dei menu selezionare **Compila** > **Compila soluzione**. Il progetto dovrebbe essere compilato senza errori.
 
-   ![Riquadro di output che illustra che la compilazione ha avuto esito positivo](./media/library-with-visual-studio/buildsucceeds.png)
+   ![Riquadro di output che illustra che la compilazione ha avuto esito positivo](./media/library-with-visual-studio/output-pane-successful-build.png)
 
 ## <a name="next-step"></a>Passaggio successivo
 

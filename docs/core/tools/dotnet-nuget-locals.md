@@ -1,14 +1,14 @@
 ---
-title: Comando dotnet nuget locals - Interfaccia della riga di comando di .NET Core
+title: Comando dotnet nuget locals
 description: Il comando dotnet nuget locals cancella o elenca le risorse NuGet locali, quali cache delle richieste HTTP, cache temporanea o cartella globale dei pacchetti a livello di computer.
 author: karann-msft
 ms.date: 12/04/2018
-ms.openlocfilehash: f9a5073fb065d85b76afedad31255ad758c67ee6
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d0f1c7c2e0b233c214cc48d026c19755fc047bfa
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130769"
+ms.locfileid: "53170756"
 ---
 # <a name="dotnet-nuget-locals"></a>dotnet nuget locals
 

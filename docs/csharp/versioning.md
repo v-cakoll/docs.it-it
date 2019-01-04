@@ -3,12 +3,12 @@ title: Controllo delle versioni di C# - Guida a C#
 description: Informazioni sul funzionamento del controllo delle versioni in C# e .NET
 ms.date: 01/08/2017
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.openlocfilehash: af81e5a8ad3165ce99a823f8b263cc798d5b6d2c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a0c75e2f1397f43fadf91d145e8b63de1d4d90eb
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183230"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53243491"
 ---
 # <a name="versioning-in-c"></a>Controllo delle versioni in C# #
 
@@ -39,11 +39,11 @@ Una nuova versione della libreria è compatibile a livello di codice sorgente co
 Di seguito sono riportati alcuni aspetti da considerare quando si tenta di gestire la compatibilità della libreria con le versioni precedenti:
 
 * Metodi virtuali: quando si trasforma un metodo virtuale in non virtuale nella nuova versione, sarà necessario aggiornare i progetti che eseguono l'override di tale metodo. Questa è una modifica sostanziale di grande impatto ed è fortemente sconsigliata.
-* Firme del metodo: quando l'aggiornamento del comportamento di un metodo richiede anche la modifica della firma, è necessario creare un overload in modo tale che il codice che chiama il metodo continui a funzionare.
+* Firme del metodo: quando l'aggiornamento del comportamento di un metodo richiede anche la modifica della firma, è consigliabile creare invece un overload in modo tale che il codice che chiama il metodo continui a funzionare.
 È sempre possibile modificare la firma del metodo precedente per chiamare la firma del nuovo metodo in modo che l'implementazione resti coerente.
 * [Attributo Obsolete](programming-guide/concepts/attributes/common-attributes.md#Obsolete): è possibile usare questo attributo nel codice per specificare le classi o i membri di classe deprecati che potrebbero essere rimossi nelle versioni future.
 Ciò consente di predisporre meglio gli sviluppatori che usano la libreria a eventuali modifiche di rilievo.
-* Argomenti di metodo facoltativi: se si rendono obbligatori argomenti di metodo che in precedenza erano facoltativi o si modifica il valore predefinito degli argomenti, tutto il codice che non specifica tali argomenti dovrà essere aggiornato.
+* Argomenti di metodo facoltativi: se si rendono obbligatori argomenti di metodo che in precedenza erano facoltativi o se ne modifica il valore predefinito, tutto il codice che non specifica questi argomenti dovrà essere aggiornato.
 > [!NOTE]
 > Rendere obbligatori gli argomenti facoltativi ha un impatto molto limitato, soprattutto se non modifica il comportamento del metodo.
 
@@ -62,7 +62,7 @@ Sia C# che l'ecosistema .NET offrono funzionalità e tecniche che consentono di 
 
 ### <a name="assembly-binding-redirection"></a>Reindirizzamento dell'associazione di assembly
 
-È possibile usare il file `app.config` per aggiornare la versione di una libreria usata dall'applicazione. Aggiungendo il cosiddetto un [ *reindirizzamento di binding* ](../framework/configure-apps/redirect-assembly-versions.md) è possibile usare la nuova versione della libreria senza dover ricompilare l'applicazione. Nell'esempio seguente viene illustrato come aggiornare il file `app.config` dell'applicazione per usare la versione di patch `1.0.1` di `ReferencedLibrary` anziché la versione `1.0.0` con cui è stata compilata in origine.
+È possibile usare il file `app.config` per aggiornare la versione di una libreria usata dall'applicazione. Aggiungendo un [*reindirizzamento di binding*](../framework/configure-apps/redirect-assembly-versions.md) è possibile usare la nuova versione della libreria senza dover ricompilare l'applicazione. Nell'esempio seguente viene illustrato come aggiornare il file `app.config` dell'applicazione per usare la versione di patch `1.0.1` di `ReferencedLibrary` anziché la versione `1.0.0` con cui è stata compilata in origine.
 
 ```xml
 <dependentAssembly>

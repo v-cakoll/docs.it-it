@@ -1,15 +1,15 @@
 ---
-title: Distribuire un'app in un contenitore con Docker - .NET Core
+title: Distribuire un'app in un contenitore con Docker
 description: Questa esercitazione illustra come creare un'applicazione .NET Core di base e come distribuirla in un contenitore con Docker.
 ms.date: 10/11/2018
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 8f08936142b0cc44baf268f100e228f68920b69d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: eed72553576f4154fe63b2e5cf035a781afe4b7c
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126368"
+ms.locfileid: "53169586"
 ---
 # <a name="how-to-containerize-a-net-core-application"></a>Come distribuire un'applicazione .NET Core in un contenitore
 
@@ -259,7 +259,7 @@ La procedura è stata completata. Sono state eseguite le attività seguenti:
 Ecco alcuni dei possibili argomenti con cui proseguire:
 
 * [Video introduttivo alle immagini Docker .NET](https://channel9.msdn.com/Shows/Code-Conversations/Introduction-to-NET-Docker-Images-with-Kendra-Havens?term=docker)
-* [Visual Studio, Docker & Azure Container Instances better together!](https://medium.com/@AliMazaheri/visual-studio-docker-azure-container-instances-better-together-bf8c2f0419ae) (I vantaggi dell'integrazione di Visual Studio, Docker e le istanze di contenitori di Azure)
+* [Visual Studio, Docker &amp; Azure Container Instances better together!](https://medium.com/@AliMazaheri/visual-studio-docker-azure-container-instances-better-together-bf8c2f0419ae) (I vantaggi dell'integrazione di Visual Studio, Docker e Istanze di Azure Container)
 * [Guide introduttive per Docker per Azure](https://docs.docker.com/docker-for-azure/#docker-community-edition-ce-for-azure)
 * [Deploy your app on Docker for Azure](https://docs.docker.com/docker-for-azure/deploy/) (Distribuire l'app in Docker per Azure)
 
@@ -280,4 +280,4 @@ In questo esempio vengono usate le immagini Docker seguenti
 * [ASP.NET Core on DockerHub](https://hub.docker.com/r/microsoft/aspnetcore/) (ASP.NET Core in DockerHub)
 * [Dockerize a .NET Core application](https://docs.docker.com/engine/examples/dotnetcore/) (Usare i contenitori Docker per un'applicazione .NET Core) - Esercitazione per Docker
 * [Working with Visual Studio Docker Tools](https://docs.microsoft.com/aspnet/core/publishing/visual-studio-tools-for-docker) (Uso degli strumenti Docker per Visual Studio)
-* [Deploying Docker Images from the Azure Container Registry to Azure Container Instances](https://blogs.msdn.microsoft.com/stevelasker/2017/07/28/deploying-docker-images-from-the-azure-container-registry-to-azure-container-instances/) (Distribuzione di immagini Docker dal Registro contenitori di Azure a Istanze di contenitore di Azure)
+* [Deploying Docker Images from the Azure Container Registry to Azure Container Instances](https://blogs.msdn.microsoft.com/stevelasker/2017/07/28/deploying-docker-images-from-the-azure-container-registry-to-azure-container-instances/) (Distribuzione di immagini Docker dal Registro Azure Container a Istanze di Azure Container)

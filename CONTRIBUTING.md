@@ -66,7 +66,9 @@ Assicurarsi di seguire la sintassi di Markdown appropriata. Per altre informazio
             /porting-overview
                 portability_report.png
 
-**Passaggio 4:** inviare una richiesta pull (PR) dal branch a `dotnet/docs/master`.
+**Passaggio 4:** Inviare una richiesta pull (PR) dal ramo a `dotnet/docs/master`.
+
+La richiesta pull dovrebbe avere *sempre* come destinazione il ramo master. È consigliabile non aprire *mai* una richiesta pull che ha come destinazione il ramo attivo.
 
 Ogni richiesta pull deve in genere fare riferimento a un problema alla volta. La richiesta pull può modificare uno o più file. Se è necessario apportare più correzioni in file diversi, è preferibile inviare richieste pull separate.
 
@@ -74,7 +76,7 @@ Se la richiesta pull tratta un problema esistente, aggiungere la parola chiave `
 
 Il team di .NET esaminerà la richiesta pull e informerà l'utente se sono necessari altri aggiornamenti o modifiche per l'approvazione.
 
-**Passaggio 5:** eseguire gli aggiornamenti necessari per il ramo come discusso con il team.
+**Passaggio 5:** Eseguire gli aggiornamenti necessari per il ramo, come discusso con il team.
 
 Dopo aver applicato il feedback e se la modifica viene approvata, i responsabili eseguiranno il merge della richiesta pull nel ramo master.
 

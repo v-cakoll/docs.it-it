@@ -2,14 +2,14 @@
 title: Creazione di pacchetti di distribuzione di .NET Core
 description: Informazione su come creare pacchetti e assegnare nome e versione ai pacchetti per la distribuzione di .NET Core.
 author: bleroy
-ms.author: mairaw
 ms.date: 06/28/2017
-ms.openlocfilehash: 41e8729d3058c2e3e1ea1cab9a8f28b3062bb93c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.custom: seodec18
+ms.openlocfilehash: be5767351ad1cdac15c73f718f67a0d120cf65b0
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145647"
+ms.locfileid: "53170418"
 ---
 # <a name="net-core-distribution-packaging"></a>Creazione di pacchetti di distribuzione di .NET Core
 
@@ -75,7 +75,7 @@ La parte rimanente della versione non è inclusa nel nome della versione. Ciò c
 
 Nella tabella seguente sono riportati i pacchetti consigliati.
 
-| nome                                    | Esempio                | Caso d'uso: installare...           | Contiene           | Dipendenze                                   | Versione            |
+| nome                                    | Esempio                | Caso d'uso: Installare...           | Contiene           | Dipendenze                                   | Versione            |
 |-----------------------------------------|------------------------|---------------------------------|--------------------|------------------------------------------------|--------------------|
 | dotnet-sdk-[major]                      | dotnet-sdk-2           | Sdk più recente per runtime major    |                    | dotnet-sdk-[major].[latestminor]               | \<versione SDK>     |
 | dotnet-sdk-[major].[minor]              | dotnet-sdk-2.1         | Sdk più recente per runtime specifico |                    | dotnet-sdk-[major].[minor].[latest sdk feat]xx | \<versione SDK>     |

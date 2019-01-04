@@ -1,13 +1,13 @@
 ---
-title: Comando dotnet msbuild - Interfaccia della riga di comando di .NET Core
+title: Comando dotnet msbuild
 description: Il comando dotnet msbuild consente di accedere alla riga di comando di MSBuild.
 ms.date: 12/03/2018
-ms.openlocfilehash: 93471ded9614502ab89d5afb19dd9992f068ef80
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: f025b5b92e57c7b804b9bdd59c8b4a4a806796da
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128047"
+ms.locfileid: "53169079"
 ---
 # <a name="dotnet-msbuild"></a>dotnet msbuild
 

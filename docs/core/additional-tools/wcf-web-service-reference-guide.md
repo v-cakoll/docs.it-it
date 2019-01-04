@@ -1,16 +1,15 @@
 ---
-title: Aggiungere WCF Web Service Reference - .NET Core
+title: WCF Web Service Reference Provider
 description: Panoramica dello strumento Microsoft WCF Web Service Reference Provider che aggiunge funzionalità per i progetti .NET Core e ASP.NET Core, come Aggiungi riferimento al servizio per i progetti .NET Framework.
 author: mlacouture
-ms.author: johalex
 ms.date: 04/19/2018
 ms.custom: mvc, seodec18
-ms.openlocfilehash: a1c5f389a5928a34ce1cbf13b2ef27a95b18d031
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3566a92e05c03cc77e59a14e3b2521a1d6d0758a
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148782"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53245574"
 ---
 # <a name="use-the-wcf-web-service-reference-provider-tool"></a>Usare lo strumento WCF Web Service Reference Provider
 

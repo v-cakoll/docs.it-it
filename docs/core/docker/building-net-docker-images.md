@@ -1,17 +1,15 @@
 ---
-title: Panoramica delle immagini Docker - .NET Core
+title: Panoramica delle immagini Docker
 description: Informazioni su come usare le immagini Docker per .NET Core pubblicate dal registro Docker. Si apprenderà anche come eseguire il pull delle immagini e compilare immagini personalizzate.
-author: jralexander
-ms.author: johalex
 ms.date: 11/06/2017
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 34ff6ce7d990412fa0ac4896d1e2e39b307681f0
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: dd8c6c500dc2177768e6cba0c1e303950e20d4f3
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145832"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53656037"
 ---
 # <a name="learn-about-docker-images-for-net-core"></a>Informazioni sulle immagini Docker per .NET Core
 
@@ -36,7 +34,7 @@ Quando si creano immagini Docker per gli sviluppatori, è opportuno concentrare 
 Perché tre immagini?
 Durante lo sviluppo, la compilazione e l'esecuzione di applicazioni nei contenitori, è necessario tenere conto di diverse priorità.
 
-* **Sviluppo:** le priorità sono la velocità di iterazione delle modifiche e la possibilità di eseguirne il debug. Le dimensioni dell'immagine non sono essenziali, mentre è importante la possibilità di apportare modifiche al codice e visualizzare rapidamente tali modifiche.
+* **Sviluppo:**  le priorità sono la velocità di iterazione delle modifiche e la possibilità di eseguirne il debug. Le dimensioni dell'immagine non sono essenziali, mentre è importante la possibilità di apportare modifiche al codice e visualizzare rapidamente tali modifiche.
 
 * **Compilazione:** questa immagine contiene tutti gli elementi necessari per compilare l'app, inclusi il compilatore ed eventuali altre dipendenze per ottimizzare i file binari.  L'immagine di compilazione viene usata per creare gli asset da includere in un'immagine di produzione. Questa immagine verrà usata per l'integrazione continuativa o in un ambiente di compilazione. Questo approccio consente a un agente di compilazione di compilare l'applicazione (con tutte le dipendenze necessarie) in un'istanza dell'immagine di compilazione. Per l'agente di compilazione è necessario soltanto sapere come eseguire questa immagine Docker.
 
@@ -275,7 +273,7 @@ La procedura è stata completata. Sono state eseguite le attività seguenti:
 Ecco alcuni dei possibili argomenti con cui proseguire:
 
 * [Working with Visual Studio Docker Tools](https://docs.microsoft.com/aspnet/core/publishing/visual-studio-tools-for-docker) (Uso degli strumenti Docker per Visual Studio)
-* [Deploying Docker Images from the Azure Container Registry to Azure Container Instances](https://blogs.msdn.microsoft.com/stevelasker/2017/07/28/deploying-docker-images-from-the-azure-container-registry-to-azure-container-instances/) (Distribuzione di immagini Docker dal Registro contenitori di Azure a Istanze di contenitore di Azure)
+* [Deploying Docker Images from the Azure Container Registry to Azure Container Instances](https://blogs.msdn.microsoft.com/stevelasker/2017/07/28/deploying-docker-images-from-the-azure-container-registry-to-azure-container-instances/) (Distribuzione di immagini Docker dal Registro Azure Container a Istanze di Azure Container)
 * [Debugging with Visual Studio Code](https://code.visualstudio.com/docs/nodejs/debugging-recipes#_nodejs-typescript-docker-container) (Debug con Visual Studio Code) 
 * [Getting hands on with Visual Studio for Mac, containers, and serverless code in the cloud](https://blogs.msdn.microsoft.com/visualstudio/2017/08/31/hands-on-with-visual-studio-for-mac-containers-serverless-code-in-the-cloud/#comments) (Informazioni su Visual Studio per Mac, contenitori e codice senza server nel cloud)
 * [Getting Started with Docker and Visual Studio for Mac Lab](https://github.com/Microsoft/vs4mac-labs/tree/master/Docker/Getting-Started) (Lab introduttivo per Docker e Visual Studio per Mac)

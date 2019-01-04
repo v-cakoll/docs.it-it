@@ -3,13 +3,13 @@ title: Controllo delle versioni e librerie .NET
 description: Procedure consigliate per il controllo delle versioni delle librerie .NET.
 author: jamesnk
 ms.author: mairaw
-ms.date: 10/02/2018
-ms.openlocfilehash: bacd3891c2fc15a1084f952ca913cf99b6d087dc
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 12/10/2018
+ms.openlocfilehash: e47b8a5ccad7c57d125e16f6e1d37fb91de31161
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144559"
+ms.locfileid: "53169599"
 ---
 # <a name="versioning"></a>Controllo delle versioni
 
@@ -77,12 +77,13 @@ La versione del file di assembly viene usata per visualizzare una versione di fi
 
 ![Esplora risorse](./media/versioning/win-properties.png "Esplora risorse")
 
-> [!NOTE]
-> Se questa versione non è conforme al formato `Major.Minor.Build.Revision`, viene generato un avviso di compilazione innocuo. L'avviso può essere ignorato senza problemi.
-
 **✔️ VALUTARE** la possibilità di includere un numero di build di integrazione continua come revisione AssemblyFileVersion.
 
 > Ad esempio, se si sta compilando la versione 1.0.0 del progetto e il numero di build di integrazione continua è 99, il valore di AssemblyFileVersion sarà 1.0.0.99.
+
+**✔️ USARE** il formato `Major.Minor.Build.Revision` per la versione del file.
+
+> La versione del file non viene mai usata da .NET, ma [Windows prevede che la versione del file](/windows/desktop/menurc/versioninfo-resource) usi il formato `Major.Minor.Build.Revision`. Se la versione non usa questo formato, viene generato un avviso.
 
 ### <a name="assembly-informational-version"></a>Versione informativa dell'assembly
 
@@ -91,6 +92,9 @@ La versione informativa dell'assembly viene usata per registrare informazioni ag
 ```xml
 <AssemblyInformationalVersion>The quick brown fox jumped over the lazy dog.</AssemblyInformationalVersion>
 ```
+
+> [!NOTE]
+> Le versioni precedenti di Visual Studio generano un avviso di compilazione se questa versione non usa il formato `Major.Minor.Build.Revision`. L'avviso può essere ignorato senza problemi.
 
 **❌ EVITARE** di impostare autonomamente la versione informativa dell'assembly.
 

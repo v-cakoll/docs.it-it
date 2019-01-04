@@ -4,12 +4,12 @@ description: Procedure consigliate per la creazione di pacchetti con NuGet per l
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 8ac01046f25176b781240baeba8bf1efb9376689
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4f33c9993d8eef4b18823d5c16f9f51c06afae88
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129610"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614545"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -44,7 +44,7 @@ Le dipendenze dei pacchetti NuGet sono illustrate in dettaglio nell'articolo [Di
 
 ## <a name="important-nuget-package-metadata"></a>Metadati importanti dei pacchetti NuGet
 
-Un pacchetto NuGet supporta numerose [proprietà dei metadati](/nuget/reference/nuspec). La tabella seguente contiene i principali metadati che ogni progetto open source deve fornire:
+Un pacchetto NuGet supporta numerose [proprietà dei metadati](/nuget/reference/nuspec). La tabella seguente contiene i principali metadati che deve offrire ogni pacchetto in NuGet.org:
 
 | Nome proprietà MSBuild              | Nome nuspec              | Description  |
 | ---------------------------------- | ------------------------ | ------------ |
@@ -56,14 +56,12 @@ Un pacchetto NuGet supporta numerose [proprietà dei metadati](/nuget/reference/
 | `PackageTags`                      | `tags`                     | Elenco di tag e parole chiave delimitati da spazi che descrivono il pacchetto. I tag vengono usati per la ricerca di pacchetti.             |
 | `PackageIconUrl`                   | `iconUrl`                  | URL di un'immagine da usare come icona per il pacchetto. L'URL deve essere di tipo HTTPS e l'immagine deve avere dimensioni di 64x64 e uno sfondo trasparente.             |
 | `PackageProjectUrl`                | `projectUrl`               | URL della home page del progetto o del repository di origine.             |
-| `PackageLicenseUrl`                | `licenseUrl`               | URL della licenza del progetto. Può essere l'URL del file `LICENSE` nel controllo del codice sorgente.             |
-
-**✔️ VALUTARE** la scelta di un nome di pacchetto NuGet con un prefisso che soddisfi i [criteri](/nuget/reference/id-prefix-reservation) per riservare il prefisso NuGet.
-
-**✔️ VALUTARE** l'uso del file `LICENSE` nel controllo del codice sorgente come oggetto `LicenseUrl`. Ad esempio, [LICENSE.md](https://github.com/JamesNK/Newtonsoft.Json/blob/c4af75c8e91ca0d75aa6c335e8c106780c4f7712/LICENSE.md).
+| `PackageLicenseExpression`         | `license`                  | [Identificatore SPDX](https://spdx.org/licenses/) della licenza del progetto. Solo le licenze con approvazione OSI e FSF possono usare un identificatore. Le altre licenze devono usare `PackageLicenseFile`. Altre informazioni sui [metadati `license`](/nuget/reference/nuspec#license). |
 
 > [!IMPORTANT]
-> Per un progetto senza una licenza viene applicato per impostazione predefinita il [copyright esclusivo](https://choosealicense.com/no-permission/), che ne impedisce l'uso da parte di altre persone.
+> Per un progetto senza una licenza viene applicato per impostazione predefinita il [copyright esclusivo](https://choosealicense.com/no-permission/), che ne impedisce a livello legale l'uso da parte di altre persone.
+
+**✔️ VALUTARE** la scelta di un nome di pacchetto NuGet con un prefisso che soddisfi i [criteri](/nuget/reference/id-prefix-reservation) per riservare il prefisso NuGet.
 
 **✔️ USARE** un attributo href HTTPS per l'icona del pacchetto.
 
@@ -73,9 +71,7 @@ Un pacchetto NuGet supporta numerose [proprietà dei metadati](/nuget/reference/
 
 **✔️ VALUTARE** la configurazione di [SourceLink](./sourcelink.md) per aggiungere metadati di controllo del codice sorgente agli assembly e al pacchetto NuGet.
 
-> SourceLink aggiunge automaticamente metadati `RepositoryUrl` e `RepositoryType` al pacchetto NuGet.
-> SourceLink aggiunge inoltre informazioni sul codice di origine esatto su cui è stato compilato il pacchetto.
-> Ad esempio, a un pacchetto creato da un repository Git verrà aggiunto l'hash commit come metadati.
+> SourceLink aggiunge automaticamente metadati `RepositoryUrl` e `RepositoryType` al pacchetto NuGet. SourceLink aggiunge inoltre informazioni sul codice di origine esatto su cui è stato compilato il pacchetto. Ad esempio, a un pacchetto creato da un repository Git verrà aggiunto l'hash commit come metadati.
 
 ## <a name="pre-release-packages"></a>Pacchetti in versione non definitiva
 

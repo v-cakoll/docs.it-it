@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 11/06/2018
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: a142ab98174182adf6f50cf6eedff27c82993f5e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 36da24f0cd2d2b9c4884101d97026307174f4130
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130507"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236349"
 ---
 # <a name="tutorial-predict-new-york-taxi-fares-using-a-regression-learner-with-mlnet"></a>Esercitazione: Eseguire una stima delle tariffe dei taxi a New York usando un algoritmo di apprendimento basato sulla regressione con ML.NET
 
@@ -38,7 +38,7 @@ In questa esercitazione si imparerà a:
 
 ## <a name="understand-the-problem"></a>Informazioni sul problema
 
-Questo problema riguarda la stima della tariffa di una corsa in taxi a New York. A prima vista, potrebbe sembrare dipendere semplicemente dalla distanza percorsa. Tuttavia, le società di taxi di New York applicano un addebito per quantità variabili di altri fattori, come i passeggeri aggiuntivi o il pagamento tramite carta di credito anziché in contanti.
+Questo problema riguarda la stima della tariffa di un viaggio in taxi a New York. A prima vista, potrebbe sembrare dipendere semplicemente dalla distanza percorsa. Tuttavia, le società di taxi di New York applicano un addebito per quantità variabili di altri fattori, come i passeggeri aggiuntivi o il pagamento tramite carta di credito anziché in contanti.
 
 ## <a name="select-the-appropriate-machine-learning-task"></a>Selezionare l'attività di apprendimento automatico appropriata
 
@@ -62,19 +62,19 @@ Si vuole stimare il valore del prezzo, ovvero un valore reale, in base ad altri 
 
 1. In **Esplora soluzioni** fare clic con il pulsante destro del mouse su ognuno dei file \*.csv e scegliere **Proprietà**. In **Avanzate** impostare il valore di **Copia nella directory di output** su **Copia se più recente**.
 
-1. Aprire il set di dati **taxi-fare-train.csv** e controllare le intestazioni di colonna nella prima riga. Esaminare ognuna delle colonne. Identificare i dati e decidere quali colonne sono **caratteristiche** e qual è l'**etichetta**.
+1. Aprire il set di dati **taxi-fare-train.csv** e controllare le intestazioni di colonna nella prima riga. Esaminare ognuna delle colonne. Identificare i dati e decidere quali colonne sono **funzionalità** e qual è l'**etichetta**.
 
-L'**etichetta** è l'identificatore della colonna che si vuole stimare. Le **caratteristiche** identificate vengono usate per stimare l'etichetta.
+L'**etichetta** è l'identificatore della colonna che si vuole stimare. Le **funzionalità** identificate vengono usate per stimare l'etichetta.
 
 Il set di dati fornito contiene le colonne seguenti:
 
-* **vendor_id:** l'ID della società di taxi è una caratteristica.
-* **rate_code:** il tipo di tariffa della corsa in taxi è una caratteristica.
-* **passenger_count:** il numero di passeggeri è una caratteristica.
-* **trip_time_in_secs:** il tempo impiegato per la corsa. Si vuole stimare la tariffa della corsa prima del termine. Al momento non si conosce la durata della corsa. Il tempo non è pertanto una caratteristica e si escluderà questa colonna dal modello.
-* **trip_distance:** la distanza della corsa è una caratteristica.
-* **payment_type:** il metodo di pagamento (contanti o carta di credito) è una caratteristica.
-* **fare_amount:** la tariffa totale per la corsa in taxi è l'etichetta.
+* **vendor_id:** l'ID della società di taxi è una funzionalità.
+* **rate_code:** il tipo di tariffa del viaggio in taxi è una funzionalità.
+* **passenger_count:** il numero di passeggeri è una funzionalità.
+* **trip_time_in_secs:** il tempo impiegato per il viaggio. Si vuole stimare la tariffa del viaggio prima del termine. Al momento non si conosce la durata del viaggio. Il tempo non è pertanto una funzionalità e si escluderà questa colonna dal modello.
+* **trip_distance:** la distanza del viaggio è una funzionalità.
+* **payment_type:** il metodo di pagamento (contanti o carta di credito) è una funzionalità.
+* **fare_amount:** la tariffa totale corrisposta per il viaggio in taxi è l'etichetta.
 
 ## <a name="create-data-classes"></a>Creare classi di dati
 
@@ -163,23 +163,23 @@ In ML.NET i dati sono simili a una visualizzazione SQL. Vengono valutati in moda
 
 Nei passaggi successivi si fa riferimento alle colonne in base ai nomi definiti nella classe `TaxiTrip`.
 
-Quando vengono eseguiti il training e la valutazione del modello, i valori nella colonna **Label** vengono considerati per impostazione predefinita come valori corretti da stimare. Dato che si vuole stimare la tariffa della corsa in taxi, copiare la colonna `FareAmount` nella colonna **Label**. A tale scopo, usare la classe di trasformazione `CopyColumnsEstimator` e aggiungere il codice seguente:
+Quando vengono eseguiti il training e la valutazione del modello, i valori nella colonna **Label** vengono considerati per impostazione predefinita come valori corretti da stimare. Dato che si vuole stimare la tariffa del viaggio in taxi, copiare la colonna `FareAmount` nella colonna **Label**. A tale scopo, usare la classe di trasformazione `CopyColumnsEstimator` e aggiungere il codice seguente:
 
 [!code-csharp[CopyColumnsEstimator](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#7 "Use the CopyColumnsEstimator")]
 
-Poiché l'algoritmo che esegue il training del modello richiede caratteristiche **numeriche**, è necessario trasformare i dati relativi alle categorie (`VendorId`, `RateCode` e `PaymentType`) in numeri. A questo scopo, usare la classe di trasformazione `OneHotEncodingEstimator`, che assegna valori chiave numerici diversi ai vari valori in ogni colonna e aggiunge il codice seguente:
+Poiché l'algoritmo che esegue il training del modello richiede funzionalità **numeriche**, è necessario trasformare i dati relativi alle categorie (`VendorId`, `RateCode` e `PaymentType`) in numeri. A questo scopo, usare la classe di trasformazione `OneHotEncodingEstimator`, che assegna valori chiave numerici diversi ai vari valori in ogni colonna e aggiunge il codice seguente:
 
 [!code-csharp[OneHotEncodingEstimator](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#8 "Use the OneHotEncodingEstimator")]
 
-L'ultimo passaggio della preparazione dei dati combina tutte le colonne di caratteristiche nella colonna **Features** usando la classe di trasformazione `ColumnConcatenatingEstimator`. Per impostazione predefinita, un algoritmo di apprendimento elabora solo le caratteristiche della colonna **Features**. Aggiungere il codice seguente:
+L'ultimo passaggio della preparazione dei dati combina tutte le colonne di funzionalità nella colonna **Features** usando la classe di trasformazione `ColumnConcatenatingEstimator`. Per impostazione predefinita, un algoritmo di apprendimento elabora solo le funzionalità della colonna **Features**. Aggiungere il codice seguente:
 
 [!code-csharp[ColumnConcatenatingEstimator](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#9 "Use the ColumnConcatenatingEstimator")]
 
 ## <a name="choose-a-learning-algorithm"></a>Scegliere un algoritmo di apprendimento
 
-Dopo aver aggiunto i dati alla pipeline e averli trasformati nel formato di input corretto, si seleziona un **algoritmo di apprendimento**. L'algoritmo di apprendimento esegue il training del modello. Per questo problema è stata scelta un'attività di **regressione** ed è quindi necessario usare un algoritmo di apprendimento `FastTreeRegressionTrainer`, che è uno degli algoritmi di apprendimento basati sulla regressione forniti da ML.NET.
+Dopo aver aggiunto i dati alla pipeline e averli trasformati nel formato di input corretto, si seleziona un **algoritmo di apprendimento**. L'algoritmo di apprendimento esegue il training del modello. Per questo problema è stata scelta un'attività di **regressione** ed è quindi necessario usare un algoritmo di apprendimento `FastTreeRegressionTrainer`, che è uno degli algoritmi di apprendimento basati sulla regressione disponibili in ML.NET.
 
-L'algoritmo di apprendimento `FastTreeRegressionTrainer` utilizza la tecnica di gradient boosting. Il gradient boosting è una tecnica di apprendimento automatico per i problemi di regressione. Compila ogni albero di regressione tenendo conto dei singoli passaggi. Usa una funzione di perdita predefinita per misurare l'errore in ogni passaggio e correggerlo in quello successivo. Il risultato è un modello di stima che è effettivamente un insieme dei modelli di stima più deboli. Per altre informazioni sull'incremento dei gradienti, vedere [Boosted Decision Tree Regression](/azure/machine-learning/studio-module-reference/boosted-decision-tree-regression) (Regressione dell'albero delle decisioni con incremento).
+L'algoritmo di apprendimento `FastTreeRegressionTrainer` utilizza la tecnica di gradient boosting. L'incremento dei gradienti è una tecnica di apprendimento automatico per i problemi di regressione. Compila ogni albero di regressione tenendo conto dei singoli passaggi. Usa una funzione di perdita predefinita per misurare l'errore in ogni passaggio e correggerlo in quello successivo. Il risultato è un modello di stima che è effettivamente un insieme dei modelli di stima più deboli. Per altre informazioni sull'incremento dei gradienti, vedere [Boosted Decision Tree Regression](/azure/machine-learning/studio-module-reference/boosted-decision-tree-regression) (Regressione dell'albero delle decisioni con incremento).
 
 Aggiungere il codice seguente nel metodo `Train` per includere l'algoritmo `FastTreeRegressionTrainer` nel codice di elaborazione dei dati aggiunto nel passaggio precedente:
 
@@ -309,11 +309,11 @@ Poiché si vuole caricare il modello dal file con estensione zip salvato, si cre
 
 [!code-csharp[MakePredictionFunction](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#22 "Create the PredictionFunction")]
   
-In questa esercitazione viene usato una sola corsa di test all'interno di questa classe. Successivamente, è possibile aggiungere altri scenari da sperimentare con il modello. Aggiungere una corsa per testare la stima dei costi del modello sottoposto a training nel metodo `Predict` creando un'istanza di `TaxiTrip`:
+In questa esercitazione viene usato un solo viaggio di test all'interno di questa classe. Successivamente, è possibile aggiungere altri scenari da sperimentare con il modello. Aggiungere una corsa per testare la stima dei costi del modello sottoposto a training nel metodo `Predict` creando un'istanza di `TaxiTrip`:
 
 [!code-csharp[PredictionData](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#23 "Create test data for single prediction")]
 
- È possibile usare questa corsa per stimare la tariffa in base a una singola istanza dei dati relativi alle corse in taxi. Per ottenere una stima, usare <xref:Microsoft.ML.Runtime.Data.PredictionFunction%602.Predict(%600)> sui dati. Si noti che i dati di input sono una stringa e che il modello include l'estrazione delle caratteristiche. La pipeline è sincronizzata durante il training e la stima. Non è necessario scrivere codice di pre-elaborazione/estrazione delle caratteristiche specifico per le stime e la stessa API gestisce sia le stime in batch che quelle eseguite una sola volta.
+ È possibile usare questa corsa per stimare la tariffa in base a una singola istanza dei dati relativi alle corse in taxi. Per ottenere una stima, usare <xref:Microsoft.ML.Runtime.Data.PredictionFunction%602.Predict(%600)> sui dati. Si noti che i dati di input sono una stringa e che il modello include l'estrazione delle funzionalità. La pipeline è sincronizzata durante il training e la stima. Non è necessario scrivere codice di pre-elaborazione/estrazione delle funzionalità specifico per le stime e la stessa API gestisce sia le stime in batch che quelle eseguite una sola volta.
 
 [!code-csharp[Predict](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#24 "Create a prediction of taxi fare")]
 

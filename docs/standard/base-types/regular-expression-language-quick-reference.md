@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 53f0f0d82ee751b66168fff68c31d952f480be2e
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 77a9863b4fb44bbe8142175a032bb052ee99cdae
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041616"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53779386"
 ---
 # <a name="regular-expression-language---quick-reference"></a>Linguaggio di espressioni regolari - Riferimento rapido
 <a name="top"></a> Un'espressione regolare è un modello per cui il motore delle espressioni regolari tenta di trovare una corrispondenza nel testo di input. Un modello è costituito da uno o più i valori letterali carattere, operatori o costrutti.  Per una breve introduzione, vedere [Espressioni regolari di .NET](../../../docs/standard/base-types/regular-expressions.md).  
@@ -30,7 +30,7 @@ ms.locfileid: "44041616"
   
  [Escape di caratteri](#character_escapes)  
  [Classi di caratteri](#character_classes)  
- [Punti di ancoraggio](#atomic_zerowidth_assertions)  
+ [Punti di ancoraggio](#anchors)  
  [Costrutti di raggruppamento](#grouping_constructs)  
  [Quantificatori](#quantifiers)  
  [Costrutti di backreference](#backreference_constructs)  
@@ -48,7 +48,7 @@ ms.locfileid: "44041616"
 ## <a name="character-escapes"></a>Caratteri di escape  
  Il carattere barra rovesciata (\\) in un'espressione regolare indica che il carattere successivo è un carattere speciale (come illustrato nella tabella seguente) oppure deve essere interpretato letteralmente. Per altre informazioni, vedere [Caratteri di escape](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md).  
   
-|Caratteri di escape|Descrizione|Modello|Corrispondenze|  
+|Caratteri di escape|Description|Modello|Corrispondenze|  
 |-----------------------|-----------------|-------------|-------------|  
 |`\a`|Trova la corrispondenza di un carattere di controllo del segnale acustico di avviso, \u0007.|`\a`|"\u0007" in "Error!" + '\u0007'|  
 |`\b`|In una classe di caratteri, trova la corrispondenza di un carattere backspace, \u0008.|`[\b]{3,}`|"\b\b\b\b" in "\b\b\b\b"|  
@@ -70,12 +70,12 @@ ms.locfileid: "44041616"
 ## <a name="character-classes"></a>Classi di caratteri  
  Una classe di caratteri trova la corrispondenza con uno qualsiasi di un set di caratteri. Le classi di caratteri includono gli elementi del linguaggio elencati nella tabella seguente. Per altre informazioni, vedere [Character Classes](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).  
   
-|Classe di caratteri|Descrizione|Modello|Corrispondenze|  
+|Classe di caratteri|Description|Modello|Corrispondenze|  
 |---------------------|-----------------|-------------|-------------|  
 |`[` *gruppo_caratteri* `]`|Trova la corrispondenza con qualsiasi carattere singolo in *gruppo_caratteri*. Per impostazione predefinita, viene effettuata la distinzione tra maiuscole e minuscole.|`[ae]`|"a" in "gray"<br /><br /> "a", "e" in "lane"|  
-|`[^` *gruppo_caratteri* `]`|Negazione: corrisponde a qualsiasi carattere singolo non incluso in *gruppo_caratteri*. Per impostazione predefinita, i caratteri in *gruppo_caratteri* rilevano la distinzione tra maiuscole e minuscole.|`[^aei]`|"r", "g", "n" in "reign"|  
-|`[` *primo* `-` *last* `]`|Intervallo di caratteri: trova la corrispondenza di qualsiasi carattere singolo nell'intervallo da *primo* a *ultimo*.|`[A-Z]`|"A", "B" in "AB123"|  
-|`.`|Carattere jolly: trova la corrispondenza di qualsiasi carattere singolo ad eccezione di "\n".<br /><br /> Per confrontare un carattere punto di valore letterale (. o `\u002E`), è necessario farlo precedere da un carattere di escape (`\.`).|`a.e`|"ave" in "nave"<br /><br /> "ate" in "water"|  
+|`[^` *gruppo_caratteri* `]`|Negazione: trova la corrispondenza con qualsiasi carattere singolo non incluso in *gruppo_caratteri*. Per impostazione predefinita, i caratteri in *gruppo_caratteri* rilevano la distinzione tra maiuscole e minuscole.|`[^aei]`|"r", "g", "n" in "reign"|  
+|`[` *primo* `-` *last* `]`|Intervallo di caratteri: trova la corrispondenza con qualsiasi carattere singolo nell'intervallo da *primo* a *ultimo*.|`[A-Z]`|"A", "B" in "AB123"|  
+|`.`|Carattere jolly: trova la corrispondenza con qualsiasi carattere singolo ad eccezione di \n.<br /><br /> Per confrontare un carattere punto di valore letterale (. o `\u002E`), è necessario farlo precedere da un carattere di escape (`\.`).|`a.e`|"ave" in "nave"<br /><br /> "ate" in "water"|  
 |`\p{` *nome* `}`|Trova la corrispondenza con qualsiasi carattere singolo incluso nel blocco denominato o nella categoria generale Unicode specificato in *nome*.|`\p{Lu}`<br /><br /> `\p{IsCyrillic}`|"C", "L" in "City Lights"<br /><br /> "Д", "Ж" in "ДЖem"|  
 |`\P{` *nome* `}`|Trova la corrispondenza di qualsiasi carattere singolo non incluso nel blocco denominato o nella categoria generale Unicode specificato in *nome*.|`\P{Lu}`<br /><br /> `\P{IsCyrillic}`|"i", "t", "y" in "City"<br /><br /> "e", "m" in "ДЖem"|  
 |`\w`|Trova la corrispondenza di qualsiasi carattere alfabetico.|`\w`|"I", "D", "A", "1", "3" in "ID A1.3"|  
@@ -87,11 +87,10 @@ ms.locfileid: "44041616"
   
  [Torna all'inizio](#top)  
   
-<a name="atomic_zerowidth_assertions"></a>   
 ## <a name="anchors"></a>Ancoraggi  
  Gli ancoraggi, o asserzioni atomiche di larghezza zero, determinano l'esito della ricerca di una corrispondenza in base alla posizione corrente nella stringa, ma non comportano l'avanzamento del motore nella stringa o l'utilizzo di caratteri. I metacaratteri elencati nella tabella seguente sono ancoraggi. Per altre informazioni, vedere [Ancoraggi](../../../docs/standard/base-types/anchors-in-regular-expressions.md).  
   
-|Asserzione|Descrizione|Modello|Corrispondenze|  
+|Asserzione|Description|Modello|Corrispondenze|  
 |---------------|-----------------|-------------|-------------|  
 |`^`|Per impostazione predefinita, la corrispondenza deve iniziare all'inizio della stringa; in modalità multiriga, deve iniziare all'inizio della riga.|`^\d{3}`|"901" in<br /><br /> "901-333-"|  
 |`$`|Per impostazione predefinita, la corrispondenza deve verificarsi alla fine della stringa oppure prima di `\n` alla fine della stringa; in modalità multiriga, deve verificarsi prima della fine della riga oppure prima di `\n` alla fine della riga.|`-\d{3}$`|"-333" in<br /><br /> "-901-333"|  
@@ -108,7 +107,7 @@ ms.locfileid: "44041616"
 ## <a name="grouping-constructs"></a>Costrutti di raggruppamento  
  I costrutti di raggruppamento delineano sottoespressioni di un'espressione regolare e in genere acquisiscono sottostringhe di una stringa di input. I costrutti di raggruppamento includono gli elementi del linguaggio elencati nella tabella seguente. Per altre informazioni, vedere [Grouping Constructs](grouping-constructs-in-regular-expressions.md).  
   
-|Costrutto di raggruppamento|Descrizione|Modello|Corrispondenze|  
+|Costrutto di raggruppamento|Description|Modello|Corrispondenze|  
 |------------------------|-----------------|-------------|-------------|  
 |`(` *sottoespressione* `)`|Acquisisce la sottoespressione corrispondente e le assegna un numero ordinale in base uno.|`(\w)\1`|"ee" in "deep"|  
 |`(?<` *nome* `>` *sottoespressione* `)`|Acquisisce la sottoespressione corrispondente in un gruppo denominato.|`(?<double>\w)\k<double>`|"ee" in "deep"|  
@@ -127,7 +126,7 @@ ms.locfileid: "44041616"
 ## <a name="quantifiers"></a>Quantificatori  
  Un quantificatore specifica il numero di istanze dell'elemento precedente, che può essere un carattere, un gruppo o una classe di caratteri, che devono essere presenti nella stringa di input affinché venga trovata una corrispondenza. I quantificatori includono gli elementi del linguaggio elencati nella tabella seguente. Per altre informazioni, vedere [Quantifiers](quantifiers-in-regular-expressions.md).  
   
-|Quantificatore|Descrizione|Modello|Corrispondenze|  
+|Quantificatore|Description|Modello|Corrispondenze|  
 |----------------|-----------------|-------------|-------------|  
 |`*`|Trova la corrispondenza dell'elemento precedente zero o più volte.|`\d*\.\d`|".0", "19.9", "219.9"|  
 |`+`|Trova la corrispondenza dell'elemento precedente una o più volte.|`"be+"`|"bee" in "been", "be" in "bent"|  
@@ -148,7 +147,7 @@ ms.locfileid: "44041616"
 ## <a name="backreference-constructs"></a>Costrutti di backreference  
  Un backreference consente a una sottoespressione di cui è stata trovata la corrispondenza in precedenza di essere identificata successivamente nella stessa espressione regolare. Nella tabella seguente sono elencati i costrutti di backreference supportati dalle espressioni regolari in .NET. Per altre informazioni, vedere [Backreference Constructs](backreference-constructs-in-regular-expressions.md).  
   
-|Costrutto di backreference|Descrizione|Modello|Corrispondenze|  
+|Costrutto di backreference|Description|Modello|Corrispondenze|  
 |-----------------------------|-----------------|-------------|-------------|  
 |`\` *numero*|Backreference. Trova la corrispondenza del valore di una sottoespressione numerata.|`(\w)\1`|"ee" in "seek"|  
 |`\k<` *nome* `>`|Backreference denominato. Trova la corrispondenza del valore di un'espressione denominata.|`(?<char>\w)\k<char>`|"ee" in "seek"|  
@@ -159,7 +158,7 @@ ms.locfileid: "44041616"
 ## <a name="alternation-constructs"></a>Costrutti di alternanza  
  I costrutti di alternanza modificano un'espressione regolare per abilitare la corrispondenza di tipo either/or. Questi costrutti includono gli elementi del linguaggio elencati nella tabella seguente. Per altre informazioni, vedere [Alternation Constructs](alternation-constructs-in-regular-expressions.md).  
   
-|Costrutto di alternanza|Descrizione|Modello|Corrispondenze|  
+|Costrutto di alternanza|Description|Modello|Corrispondenze|  
 |---------------------------|-----------------|-------------|-------------|  
 |<code>&#124;</code>|Trova la corrispondenza di qualsiasi elemento separato dal carattere di barra verticale (*&#124;).|<code>th(e&#124;is&#124;at)</code>|"the", "this" in "this is the day. "|  
 |`(?(` *expression* `)` *yes* <code>&#124;</code> *no* `)`|Corrisponde a *yes* se il criterio di espressione regolare definito da *expression* corrisponde. In caso contrario, corrisponde alla parte *no* facoltativa. *espressione* è interpretata come asserzione di larghezza zero.|<code>(?(A)A\d{2}\b&#124;\b\d{3}\b)</code>|"A10", "910" in "A10 C103 910"|  
@@ -171,7 +170,7 @@ ms.locfileid: "44041616"
 ## <a name="substitutions"></a>Sostituzioni  
  Le sostituzioni sono elementi del linguaggio di espressioni regolari supportati nei modelli di sostituzione. Per altre informazioni, vedere [Substitutions](substitutions-in-regular-expressions.md). I metacaratteri elencati nella tabella seguente sono asserzioni atomiche di larghezza zero.  
   
-|Carattere|Descrizione|Modello|Modello di sostituzione|Stringa di input|Stringa di risultato|  
+|Carattere|Description|Modello|Modello di sostituzione|Stringa di input|Stringa di risultato|  
 |---------------|-----------------|-------------|-------------------------|------------------|-------------------|  
 |`$` *number*|Sostituisce la sottostringa corrispondente al gruppo *numero*.|`\b(\w+)(\s)(\w+)\b`|`$3$2$1`|"one two"|"two one"|  
 |`${` *nome* `}`|Sostituisce la sottostringa corrispondente al gruppo denominato *nome*.|`\b(?<word1>\w+)(\s)(?<word2>\w+)\b`|`${word2} ${word1}`|"one two"|"two one"|  
@@ -179,7 +178,7 @@ ms.locfileid: "44041616"
 |`$&`|Sostituisce una copia dell'intera corrispondenza.|`\$?\d*\.?\d+`|`**$&**`|"$1.30"|"\*\*$1.30\*\*"|  
 |<code>$`</code>|Sostituisce tutto il testo della stringa di input prima della corrispondenza.|`B+`|<code>$`</code>|"AABBCC"|"AAAACC"|  
 |`$'`|Sostituisce tutto il testo della stringa di input successiva alla corrispondenza.|`B+`|`$'`|"AABBCC"|"AACCCC"|  
-|`$+`|Sostituisce l'ultimo gruppo acquisito.|`B+(C+)`|`$+`|"AABBCCDD"|AACCDD|  
+|`$+`|Sostituisce l'ultimo gruppo acquisito.|`B+(C+)`|`$+`|"AABBCCDD"|"AACCDD"|  
 |`$_`|Sostituisce l'intera stringa di input.|`B+`|`$_`|"AABBCC"|"AAAABBCCCC"|  
   
  [Torna all'inizio](#top)  
@@ -196,7 +195,7 @@ ms.locfileid: "44041616"
   
  Il motore delle espressioni regolari di .NET supporta le seguenti opzioni inline.  
   
-|Opzione|Descrizione|Modello|Corrispondenze|  
+|Opzione|Description|Modello|Corrispondenze|  
 |------------|-----------------|-------------|-------------|  
 |`i`|Usa la corrispondenza che non fa distinzione tra maiuscole e minuscole.|`\b(?i)a(?-i)a\w+\b`|"aardvark", "aaaAuto" in "aardvark AAAuto aaaAuto Adam breakfast"|  
 |`m`|Usare la modalità multiriga. `^` e `$` corrispondono all'inizio e alla fine di una riga, anziché all'inizio e alla fine della stringa di input.|Ad esempio, vedere la sezione "Modalità multiriga" in [Regular Expression Options](regular-expression-options.md).||  

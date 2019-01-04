@@ -3,12 +3,12 @@ title: Eseguire il debug dell'applicazione .NET Core Hello World con Visual Stud
 description: Informazioni su come eseguire il debug di un'app Hello World scritta in C# o Visual Basic con Visual Studio 2017.
 ms.date: 12/15/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: df153740e492b33c91b4cfc2f148a4113f1ab5d0
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b08744e784ffdde6682a6271888ae55d3fbd242b
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147528"
+ms.locfileid: "53170665"
 ---
 # <a name="debug-your-c-or-visual-basic-net-core-hello-world-application-using-visual-studio-2017"></a>Eseguire il debug dell'applicazione .NET Core Hello World C# o Visual Basic con Visual Studio 2017
 
@@ -18,7 +18,7 @@ Finora sono stati seguiti i passaggi nell'argomento [Compilare un'applicazione H
 
 Le modalità *Debug* e *Rilascio* sono due configurazioni di compilazione predefinite di Visual Studio. La configurazione di compilazione corrente viene visualizzata sulla barra degli strumenti. Nell'immagine della barra degli strumenti seguente è possibile vedere che Visual Studio è configurato per compilare l'applicazione in modalità **Debug**.
 
-   ![Barra degli strumenti di Visual Studio](./media/debugging-with-visual-studio/toolbar1.png)
+   ![Barra degli strumenti predefinita di Visual Studio con Debug evidenziata](./media/debugging-with-visual-studio/visual-studio-toolbar-debug.png)
 
 È necessario iniziare sempre eseguendo il test del programma in modalità Debug. La modalità Debug disattiva la maggior parte delle ottimizzazioni del compilatore e offre informazioni più dettagliate durante il processo di compilazione.
 
@@ -31,7 +31,7 @@ Eseguire il programma in modalità Debug e provare alcune funzionalità di debug
 
    Impostare un punto di interruzione sulla riga `Console.WriteLine($"\nHello, {name}, on {date:d} at {date:t}!");` facendo clic sul margine sinistro della finestra del codice. In alternativa, scegliere la voce di menu **Debug** > **Imposta/Rimuovi punto di interruzione** per la riga selezionata. Come mostrato nella figura seguente, Visual Studio indica la riga in cui è impostato il punto di interruzione evidenziando tale riga e visualizzando un cerchio rosso sul margine sinistro della finestra.
 
-   ![Finestra del programma in Visual Studio con punto di interruzione impostato](./media/debugging-with-visual-studio/setbreakpoint.png)
+   ![Finestra del programma in Visual Studio con punto di interruzione impostato](./media/debugging-with-visual-studio/set-breakpoint-in-editor.png)
 
 1. Eseguire il programma in modalità Debug scegliendo il pulsante **HelloWorld** con la freccia verde sulla barra degli strumenti, premendo F5 o scegliendo **Debug** > **Avvia debug**.
 
@@ -49,11 +49,11 @@ Eseguire il programma in modalità Debug e provare alcune funzionalità di debug
 
    Si noti che nella **Finestra di controllo immediato** vengono visualizzati il valore della variabile string e le proprietà del valore <xref:System.DateTime>. Inoltre, il valore delle variabili viene aggiornato nelle finestre **Auto** e **Variabili locali**.
 
-   ![Finestra Auto e Finestra controllo immediato](./media/debugging-with-visual-studio/autosimmediate.png)
+   ![Finestra Auto e Finestra controllo immediato](./media/debugging-with-visual-studio/autos-immediate-window.png)
 
 1. Continuare l'esecuzione del programma scegliendo il pulsante **Continua** sulla barra degli strumenti oppure scegliendo la voce di menu **Debug** > **Continua**. I valori visualizzati nella finestra della console corrispondono alle modifiche apportate nella **Finestra di controllo immediato**.
 
-   ![Finestra della console con il valore Jack digitato al prompt dei comandi What is your name? seguito da Hello Gracie 11/1/2016 at 11:59am](./media/debugging-with-visual-studio/changed.png)
+   ![Finestra della console con il valore Jack al prompt dei comandi What is your name? seguito da Hello Gracie](./media/debugging-with-visual-studio/debug-changed-value.png)
 
 1. Premere un tasto qualsiasi per chiudere l'applicazione e uscire dalla modalità di debug.
 # <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
@@ -61,7 +61,7 @@ Eseguire il programma in modalità Debug e provare alcune funzionalità di debug
 
    Impostare un punto di interruzione sulla riga `Console.WriteLine(vbCrLf + $"Hello, {name}, on {currentDate:d} at {currentDate:t}!")` facendo clic sul margine sinistro della finestra del codice. In alternativa, scegliere la voce di menu **Debug** > **Imposta/Rimuovi punto di interruzione** per la riga selezionata. Come mostrato nella figura seguente, Visual Studio indica la riga in cui è impostato il punto di interruzione evidenziando tale riga e visualizzando un cerchio rosso sul margine sinistro della finestra.
 
-   ![Finestra del programma in Visual Studio con punto di interruzione impostato](./media/debugging-with-visual-studio/vb-setbreakpoint.png)
+   ![Finestra del programma in Visual Studio con punto di interruzione impostato](./media/debugging-with-visual-studio/vb-set-breakpoint-in-editor.png)
 
 1. Eseguire il programma in modalità Debug scegliendo il pulsante **HelloWorld** con la freccia verde sulla barra degli strumenti, premendo F5 o scegliendo **Debug** > **Avvia debug**.
 
@@ -69,7 +69,7 @@ Eseguire il programma in modalità Debug e provare alcune funzionalità di debug
 
 1. L'esecuzione del programma si arresta quando raggiunge il punto di interruzione e prima che il metodo `Console.WriteLine` venga eseguito. Nella finestra **Auto** vengono visualizzati i valori delle variabili usate nella riga corrente. Nella finestra **Variabili locali** (visualizzabile facendo clic sulla scheda **Variabili locali**) vengono visualizzati i valori delle variabili definite nel metodo attualmente in esecuzione.
 
-   ![Finestra dell'applicazione in Visual Studio](./media/debugging-with-visual-studio/vb-break.png)
+   ![Finestra dell'applicazione in Visual Studio sul punto di interruzione](./media/debugging-with-visual-studio/vb-stop-at-breakpoint.png)
 
 1. È possibile modificare il valore delle variabili per vedere in che modo tale operazione influisce sul programma. Se la **Finestra di controllo immediato** non è visibile, visualizzarla scegliendo la voce di menu **Debug** > **Finestre** > **Controllo immediato**. La **Finestra di controllo immediato** consente di interagire con l'applicazione in fase di debug.
 
@@ -79,7 +79,7 @@ Eseguire il programma in modalità Debug e provare alcune funzionalità di debug
 
 1. Continuare l'esecuzione del programma scegliendo il pulsante **Continua** sulla barra degli strumenti oppure scegliendo la voce di menu **Debug** > **Continua**. I valori visualizzati nella finestra della console corrispondono alle modifiche apportate nella **Finestra di controllo immediato**.
 
-   ![Finestra della console che mostra i valori modificati immessi nella finestra di controllo immediato](./media/debugging-with-visual-studio/changed.png)
+   ![Finestra della console che mostra i valori modificati immessi nella finestra di controllo immediato](./media/debugging-with-visual-studio/debug-changed-value.png)
 
 1. Premere un tasto qualsiasi per chiudere l'applicazione e uscire dalla modalità di debug.
 ---
@@ -93,7 +93,7 @@ Per impostare un punto di interruzione condizionale e verificare cosa succede qu
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 1. Fare clic con il pulsante destro del mouse sul punto rosso che rappresenta il punto di interruzione. Scegliere **Condizioni** dal menu di scelta rapida per aprire la finestra di dialogo **Impostazioni del punto di interruzione**. Selezionare la casella per **Condizioni**.
 
-   ![Pannello Impostazioni del punto di interruzione](./media/debugging-with-visual-studio/breakpointsettings.png)
+   ![Editor con il pannello Impostazioni punto di interruzione - C#](./media/debugging-with-visual-studio/breakpoint-settings.png)
 
 1. Per l'**Espressione condizionale** sostituire "e.g. x == 5" con quanto segue:
 
@@ -119,7 +119,7 @@ Per impostare un punto di interruzione condizionale e verificare cosa succede qu
    ? name == String.Empty
    ```
 
-   ![Finestra di controllo immediato che restituisce un valore true dopo l'esecuzione dell'istruzione](./media/debugging-with-visual-studio/emptystring.png)
+   ![Finestra di controllo immediato che restituisce un valore true dopo l'esecuzione dell'istruzione - C#](./media/debugging-with-visual-studio/immediate-window-output.png)
 
 1. Selezionare il pulsante **Continua** sulla barra degli strumenti per continuare l'esecuzione del programma.
 
@@ -129,7 +129,7 @@ Per impostare un punto di interruzione condizionale e verificare cosa succede qu
 # <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
 1. Fare clic con il pulsante destro del mouse sul punto rosso che rappresenta il punto di interruzione. Scegliere **Condizioni** dal menu di scelta rapida per aprire la finestra di dialogo **Impostazioni del punto di interruzione**. Selezionare la casella per **Condizioni**.
 
-   ![Pannello Impostazioni del punto di interruzione](./media/debugging-with-visual-studio/vb-breakpointsettings.png)
+   ![Editor con il pannello Impostazioni del punto di interruzione - Visual Basic](./media/debugging-with-visual-studio/vb-breakpointsettings.png)
 
 1. Per l'**Espressione condizionale** sostituire "e.g. x = 5" con quanto segue:
 
@@ -154,7 +154,7 @@ Per impostare un punto di interruzione condizionale e verificare cosa succede qu
    ```vb
    ? String.IsNullOrEmpty(name)
    ```
-  ![Finestra di controllo immediato che restituisce un valore true dopo l'esecuzione dell'istruzione](./media/debugging-with-visual-studio/vb-emptystring.png)
+  ![Finestra di controllo immediato che restituisce un valore true dopo l'esecuzione dell'istruzione - Visual Basic](./media/debugging-with-visual-studio/vb-immediate-window-output.png)
 
 1. Selezionare il pulsante **Continua** sulla barra degli strumenti per continuare l'esecuzione del programma.
 
@@ -169,13 +169,13 @@ Visual Studio consente anche di esaminare il programma una riga alla volta e di 
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 1. Nella barra dei menu scegliere **Debug** > **Esegui istruzione** oppure premere F11. Visual Studio evidenzia e visualizza una freccia accanto alla riga di esecuzione successiva.
 
-   ![Finestra di Visual Studio](./media/debugging-with-visual-studio/stepinto1.png)
+   ![Metodo Esegui istruzione di Visual Studio - C#](./media/debugging-with-visual-studio/step-into-method.png)
 
    A questo punto, nella finestra **Auto** viene indicato che il programma ha definito una sola variabile, `args`. Poiché al programma non è stato passato alcun argomento della riga di comando, il relativo valore è una matrice di stringhe vuota. Visual Studio, inoltre, ha aperto una finestra della console vuota.
 
 1. Scegliere **Debug** > **Esegui istruzione** oppure premere F11. Visual Studio evidenzia ora la riga dell'esecuzione successiva. Come illustrato nella figura, l'esecuzione del codice tra l'ultima istruzione e questa ha richiesto 3 millisecondi. `args` rimane l'unica variabile dichiarata e la finestra della console resta vuota.
 
-   ![Finestra di Visual Studio](./media/debugging-with-visual-studio/stepinto2.png)
+   ![Origine metodo Esegui istruzione di Visual Studio - C#](./media/debugging-with-visual-studio/step-into-source-method.png)
 
 1. Scegliere **Debug** > **Esegui istruzione** oppure premere F11. Visual Studio evidenzia l'istruzione che include l'assegnazione della variabile `name`. Nella finestra **Auto** viene mostrato che `name` è `null`, mentre nella finestra della console viene visualizzata la stringa "What is your name?".
 
@@ -193,13 +193,13 @@ Visual Studio consente anche di esaminare il programma una riga alla volta e di 
 # <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
 1. Nella barra dei menu scegliere **Debug** > **Esegui istruzione** oppure premere F11. Visual Studio evidenzia e visualizza una freccia accanto alla riga di esecuzione successiva.
 
-   ![Finestra di Visual Studio](./media/debugging-with-visual-studio/vb-stepinto1.png)
+   ![Metodo Esegui istruzione di Visual Studio - Visual Basic](./media/debugging-with-visual-studio/vb-step-into-method.png)
 
    A questo punto, poiché al programma non è stato passato alcun argomento della riga di comando, la finestra **Auto** visualizza che il valore della variabile `args` è una matrice di stringhe vuota. Visual Studio, inoltre, ha aperto una finestra della console vuota.
 
 1. Scegliere **Debug** > **Esegui istruzione** oppure premere F11. Visual Studio evidenzia ora la riga dell'esecuzione successiva. Come illustrato nella figura, l'esecuzione del codice tra l'ultima istruzione e questa ha richiesto 3 millisecondi. `args` rimane l'unica variabile dichiarata e la finestra della console resta vuota.
 
-   ![Finestra di Visual Studio](./media/debugging-with-visual-studio/vb-stepinto2.png)
+   ![Origine metodo Esegui istruzione di Visual Studio - Visual Basic](./media/debugging-with-visual-studio/vb-step-into-source-method.png)
 
 1. Scegliere **Debug** > **Esegui istruzione** oppure premere F11. Visual Studio evidenzia l'istruzione che include l'assegnazione della variabile `name`. Nella finestra **Auto** viene mostrato che `name` è `Nothing`, mentre nella finestra della console viene visualizzata la stringa "What is your name?".
 
@@ -222,7 +222,7 @@ Dopo aver testato la compilazione di debug dell'applicazione, è necessario anch
 
 Per compilare e testare la versione di rilascio dell'applicazione console, modificare la configurazione di compilazione nella barra degli strumenti da **Debug** in **Rilascio**.
 
-![Image](./media/debugging-with-visual-studio/toolbar2.png)
+![Barra degli strumenti predefinita di Visual Studio con Debug evidenziata](./media/debugging-with-visual-studio/visual-studio-toolbar-release.png)
 
 Quando si preme F5 o si sceglie **Compila soluzione** dal menu **Compila**, Visual Studio compila la versione di rilascio dell'applicazione console. A questo punto è possibile eseguirla e testarla come è stato fatto per la versione di debug.
 

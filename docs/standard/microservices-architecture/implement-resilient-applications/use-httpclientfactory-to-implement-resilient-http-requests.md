@@ -4,12 +4,12 @@ description: HttpClientFactory è una solida factory, disponibile a partire da .
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 07/03/2018
-ms.openlocfilehash: 07ea85509b86eadd2c85dfe59ace674e2faae9a3
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 0ae4dadd6921a71217b50757ede19b8d54910185
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145111"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611035"
 ---
 # <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>Usare HttpClientFactory per l'implementazione di richieste HTTP resilienti
 
@@ -71,7 +71,7 @@ Semplicemente aggiungendo le classi di client tipizzato con AddHttpClient(), ogn
 
 ### <a name="httpclient-lifetimes"></a>Durate di HttpClient
 
-Ogni volta che si ottiene un oggetto `HttpClient` da IHttpClientFactory, viene restituita una nuova istanza di un oggetto `HttpClient`. Esisterà un HttpMessageHandler** per ogni client denominato o tipizzato. `IHttpClientFactory` eseguirà il pooling delle istanze di HttpMessageHandler create dalla factory per ridurre il consumo di risorse. Un'istanza di HttpMessageHandler può essere riusata dal pool quando si crea una nuova istanza di `HttpClient` se la relativa durata non è scaduta.
+Ogni volta che si ottiene un oggetto `HttpClient` da IHttpClientFactory, viene restituita una nuova istanza di un oggetto `HttpClient`. Esisterà un **HttpMessageHandler** per ogni client denominato o tipizzato. `IHttpClientFactory` eseguirà il pooling delle istanze di HttpMessageHandler create dalla factory per ridurre il consumo di risorse. Un'istanza di HttpMessageHandler può essere riusata dal pool quando si crea una nuova istanza di `HttpClient` se la relativa durata non è scaduta.
 
 Il pooling dei gestori è opportuno poiché ogni gestore si occupa in genere di gestire le proprie connessioni HTTP sottostanti. La creazione di un numero superiore di gestori rispetto a quelli necessari può determinare ritardi di connessione. Alcuni gestori mantengono inoltre le connessioni aperte a tempo indefinito. Ciò può impedire al gestore di reagire alle modifiche DNS.
 

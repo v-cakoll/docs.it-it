@@ -1,15 +1,13 @@
 ---
-title: Comando dotnet tool list - Interfaccia della riga di comando di .NET Core
+title: Comando dotnet tool list
 description: Il comando dotnet tool list visualizza lo strumento globale .NET Core specificato del computer.
-author: mairaw
-ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: e2bea974207d3098ed67b69ed16a72a03c44cd8b
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 0c17534beb80ed87a8f260342b0f82882a9e17b6
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841242"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169760"
 ---
 # <a name="dotnet-tool-list"></a>dotnet tool list
 
@@ -27,7 +25,7 @@ dotnet tool list <--tool-path>
 dotnet tool list <-h|--help>
 ```
 
-## <a name="description"></a>Descrizione
+## <a name="description"></a>Description
 
 Il comando `dotnet tool list` consente di visualizzare tutti gli strumenti globali .NET Core installati a livello utente nel computer (profilo utente corrente) o nel percorso specificato. Il comando visualizza il nome del pacchetto, la versione installata e il comando dello strumento globale. Per usare il comando, è necessario specificare che si vuole visualizzare tutti gli strumenti a livello utente con l'opzione `--global` oppure specificare un percorso personalizzato con l'opzione `--tool-path`.
 

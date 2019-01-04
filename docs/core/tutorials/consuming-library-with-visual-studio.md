@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 424933f4d221492b3127d0b847249821fee86b10
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ccf8d33b1017c3def137de7daec4373bfeec6305
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147320"
+ms.locfileid: "53168891"
 ---
 # <a name="consuming-a-net-standard-library-in-visual-studio-2017"></a>Uso di una libreria .NET Standard in Visual Studio 2017
 
@@ -32,19 +32,19 @@ Dopo aver creato una libreria di classi .NET Standard seguendo i passaggi riport
 
 1. Nella finestra di dialogo **Aggiungi nuovo progetto**, espandere il nodo selezionare il nodo **Visual C#** e selezionare **.NET Core** seguito dal modello di progetto **Console App (.NET Core)**. Nella casella di testo **Nome**, digitare "ShowCase", quindi selezionare il pulsante **OK**.
 
-   ![Finestra di dialogo Aggiungi nuovo progetto](./media/consuming-library-with-visual-studio/addnewproject.png)
+   ![Finestra di dialogo di Visual Studio Aggiungi nuovo progetto - C#](./media/consuming-library-with-visual-studio/add-new-project-dialog.png)
 
-1. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul progetto **ShowCase** e selezionare **Imposta come progetto di avvio** nel menu di scelta rapida. 
+1. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul progetto **ShowCase** e selezionare **Imposta come progetto di avvio** nel menu di scelta rapida.
 
-   ![Menu di scelta rapida di ShowCase](./media/consuming-library-with-visual-studio/setstartupproject.png)
+   ![Menu di scelta rapida del progetto di Visual Studio per impostare il progetto di avvio - C#](./media/consuming-library-with-visual-studio/set-startup-project-context-menu.png)
 
 1. All'inizio il progetto non ha accesso alla libreria di classi. Per consentire al progetto di chiamare metodi della libreria di classi, si crea un riferimento alla libreria di classi. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul nodo **Dipendenze** del progetto `ShowCase` e selezionare **Aggiungi riferimento**.
 
-   ![Menu di scelta rapida Dipendenze di ShowCase](./media/consuming-library-with-visual-studio/addreference.png)
+   ![Menu di scelta rapida per aggiungere riferimenti al progetto di Visual Studio - C#](./media/consuming-library-with-visual-studio/add-reference-context-menu.png)
 
 1. Nella finestra di dialogo **Gestione riferimenti** selezionare **StringLibrary**, il progetto della libreria di classi e fare clic su **OK**.
 
-   ![Gestione riferimenti](./media/consuming-library-with-visual-studio/referencemanager.png)
+   ![Finestra di dialogo Gestione riferimenti di Visual Studio - C#](./media/consuming-library-with-visual-studio/manage-project-references.png)
 
 1. Nella finestra del codice del file *Program.cs* sostituire tutto il codice con il codice seguente:
 
@@ -56,25 +56,25 @@ Dopo aver creato una libreria di classi .NET Standard seguendo i passaggi riport
 
 1. Se necessario, modificare la barra degli strumenti per compilare la versione di **debug** del progetto `ShowCase`. Compilare ed eseguire il programma selezionando la freccia verde nel pulsante **ShowCase**.
 
-   ![Image](./media/consuming-library-with-visual-studio/toolbar.png)
+   ![Barra degli strumenti di Visual Studio con il pulsante di debug - C#](./media/consuming-library-with-visual-studio/visual-studio-project-toolbar.png)
 # <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
 1. Aprire la soluzione `ClassLibraryProjects` creata in [Creazione di una libreria di classi con Visual Basic e .NET Core in Visual Studio 2017](vb-library-with-visual-studio.md). In **Esplora soluzioni**, fare clic con il pulsante destro del mouse sulla soluzione **ClassLibraryProjects** e scegliere **Aggiungi** > **Nuovo progetto** dal menu di scelta rapida.
 
 1. Nella finestra di dialogo **Aggiungi nuovo progetto**, espandere il nodo selezionare il nodo **Visual Basic** e selezionare **.NET Core** seguito dal modello di progetto **Console App (.NET Core)**. Nella casella di testo **Nome**, digitare "ShowCase", quindi selezionare il pulsante **OK**.
 
-   ![Finestra di dialogo Aggiungi nuovo progetto](./media/consuming-library-with-visual-studio/vb-addnewproject.png)
+   ![Finestra di dialogo di Visual Studio Aggiungi nuovo progetto - Visual Basic](./media/consuming-library-with-visual-studio/add-new-vb-project-dialog.png)
 
 1. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul progetto **ShowCase** e selezionare **Imposta come progetto di avvio** nel menu di scelta rapida. 
 
-   ![Menu di scelta rapida di ShowCase](./media/consuming-library-with-visual-studio/setstartupproject.png)
+   ![Menu di scelta rapida del progetto di Visual Studio per impostare il progetto di avvio - Visual Basic](./media/consuming-library-with-visual-studio/set-startup-project-context-menu.png)
 
 1. All'inizio il progetto non ha accesso alla libreria di classi. Per consentire al progetto di chiamare metodi della libreria di classi, si crea un riferimento alla libreria di classi. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul nodo **Dipendenze** del progetto `ShowCase` e selezionare **Aggiungi riferimento**.
 
-   ![Menu di scelta rapida Dipendenze di ShowCase](./media/consuming-library-with-visual-studio/addreference.png)
+   ![Menu di scelta rapida per aggiungere riferimenti al progetto di Visual Studio - Visual Basic](./media/consuming-library-with-visual-studio/add-reference-context-menu.png)
 
 1. Nella finestra di dialogo **Gestione riferimenti** selezionare **StringLibrary**, il progetto della libreria di classi e fare clic su **OK**.
 
-   ![Gestione riferimenti](./media/consuming-library-with-visual-studio/referencemanager.png)
+   ![Finestra di dialogo di Visual Studio Gestione riferimenti - Visual Basic](./media/consuming-library-with-visual-studio/manage-project-references.png)
 
 1. Nella finestra del codice del file *Program.vb* sostituire tutto il codice con il codice seguente:
 
@@ -86,7 +86,7 @@ Dopo aver creato una libreria di classi .NET Standard seguendo i passaggi riport
 
 1. Se necessario, modificare la barra degli strumenti per compilare la versione di **debug** del progetto `ShowCase`. Compilare ed eseguire il programma selezionando la freccia verde nel pulsante **ShowCase**.
 
-   ![Image](./media/consuming-library-with-visual-studio/toolbar.png)
+   ![Debug sulla barra degli strumenti - Visual Basic](./media/consuming-library-with-visual-studio/visual-studio-project-toolbar.png)
 ---
 
 È possibile eseguire il debug e pubblicare l'applicazione che usa questa libreria seguendo i passaggi illustrati in [Esecuzione del debug dell'applicazione C# Hello World con Visual Studio 2017](debugging-with-visual-studio.md) e [Pubblicazione dell'applicazione Hello World con Visual Studio 2017](publishing-with-visual-studio.md).
