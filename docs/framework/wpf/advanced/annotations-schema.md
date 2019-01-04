@@ -6,31 +6,31 @@ helpviewer_keywords:
 - Microsoft Annotations Framework [WPF]
 - documents [WPF], annotations
 ms.assetid: a893442b-e220-4603-bf6a-b01fefcb4b37
-ms.openlocfilehash: e463a087516dc45cb4bd879c77aef6fbeba2b546
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d2f3fa70673c7ae5819346ab152b74acf93a164c
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542015"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54029840"
 ---
-# <a name="annotations-schema"></a><span data-ttu-id="ab629-102">Schema annotazioni</span><span class="sxs-lookup"><span data-stu-id="ab629-102">Annotations Schema</span></span>
-<span data-ttu-id="ab629-103">Questo argomento descrive la definizione di XML Schema (XSD, XML Schema Definition) usata da Microsoft Annotations Framework per salvare e recuperare i dati di annotazione dell'utente.</span><span class="sxs-lookup"><span data-stu-id="ab629-103">This topic describes the XML schema definition (XSD) used by the Microsoft Annotations Framework to save and retrieve user annotation data.</span></span>  
+# <a name="annotations-schema"></a><span data-ttu-id="a9e1a-102">Schema annotazioni</span><span class="sxs-lookup"><span data-stu-id="a9e1a-102">Annotations Schema</span></span>
+<span data-ttu-id="a9e1a-103">Questo argomento descrive la definizione di XML Schema (XSD, XML Schema Definition) usata da Microsoft Annotations Framework per salvare e recuperare i dati di annotazione dell'utente.</span><span class="sxs-lookup"><span data-stu-id="a9e1a-103">This topic describes the XML schema definition (XSD) used by the Microsoft Annotations Framework to save and retrieve user annotation data.</span></span>  
   
- <span data-ttu-id="ab629-104">[!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] serializza i dati di annotazione di una rappresentazione interna in un formato XML.</span><span class="sxs-lookup"><span data-stu-id="ab629-104">The [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] serializes annotation data from an internal representation to an XML format.</span></span>  <span data-ttu-id="ab629-105">Il formato XML usato per questa conversione viene descritto dallo schema XSD di [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)].</span><span class="sxs-lookup"><span data-stu-id="ab629-105">The XML format used for this conversion is described by the [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] XSD Schema.</span></span>  <span data-ttu-id="ab629-106">Lo schema definisce il formato XML indipendente dall'implementazione che può essere usato per scambiare dati di annotazione tra le applicazioni.</span><span class="sxs-lookup"><span data-stu-id="ab629-106">The schema defines the implementation-independent XML format that can be used to exchange annotation data between applications.</span></span>  
+ <span data-ttu-id="a9e1a-104">[!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] serializza i dati di annotazione di una rappresentazione interna in un formato XML.</span><span class="sxs-lookup"><span data-stu-id="a9e1a-104">The [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] serializes annotation data from an internal representation to an XML format.</span></span>  <span data-ttu-id="a9e1a-105">Il formato XML usato per questa conversione viene descritto dallo schema XSD di [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)].</span><span class="sxs-lookup"><span data-stu-id="a9e1a-105">The XML format used for this conversion is described by the [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] XSD Schema.</span></span>  <span data-ttu-id="a9e1a-106">Lo schema definisce il formato XML indipendente dall'implementazione che può essere usato per scambiare dati di annotazione tra le applicazioni.</span><span class="sxs-lookup"><span data-stu-id="a9e1a-106">The schema defines the implementation-independent XML format that can be used to exchange annotation data between applications.</span></span>  
   
- <span data-ttu-id="ab629-107">La definizione XML Schema di [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] è costituita da due sottoschemi</span><span class="sxs-lookup"><span data-stu-id="ab629-107">The [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] XML schema definition consists of two subschemas</span></span>  
+ <span data-ttu-id="a9e1a-107">La definizione XML Schema di [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] è costituita da due sottoschemi</span><span class="sxs-lookup"><span data-stu-id="a9e1a-107">The [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] XML schema definition consists of two subschemas</span></span>  
   
--   <span data-ttu-id="ab629-108">Schema principale XML delle annotazioni (schema principale).</span><span class="sxs-lookup"><span data-stu-id="ab629-108">The Annotations XML Core Schema (Core Schema).</span></span>  
+-   <span data-ttu-id="a9e1a-108">Schema principale XML delle annotazioni (schema principale).</span><span class="sxs-lookup"><span data-stu-id="a9e1a-108">The Annotations XML Core Schema (Core Schema).</span></span>  
   
--   <span data-ttu-id="ab629-109">Schema di base XML delle annotazioni (schema di base).</span><span class="sxs-lookup"><span data-stu-id="ab629-109">The Annotations XML Base Schema (Base Schema).</span></span>  
+-   <span data-ttu-id="a9e1a-109">Schema di base XML delle annotazioni (schema di base).</span><span class="sxs-lookup"><span data-stu-id="a9e1a-109">The Annotations XML Base Schema (Base Schema).</span></span>  
   
- <span data-ttu-id="ab629-110">Lo Schema di base definisce la struttura XML primaria di un <xref:System.Windows.Annotations.Annotation>.</span><span class="sxs-lookup"><span data-stu-id="ab629-110">The Core Schema defines the primary XML structure of an <xref:System.Windows.Annotations.Annotation>.</span></span>  <span data-ttu-id="ab629-111">La maggior parte degli elementi XML definiti nello Schema Core corrispondono ai tipi nel <xref:System.Windows.Annotations> dello spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="ab629-111">The majority of XML elements defined in the Core Schema correspond to types in the <xref:System.Windows.Annotations> namespace.</span></span>  <span data-ttu-id="ab629-112">Lo schema principale espone tre punti di estensione in cui le applicazioni possono aggiungere i propri dati XML.</span><span class="sxs-lookup"><span data-stu-id="ab629-112">The Core Schema exposes three extension points where applications can add their own XML data.</span></span>  <span data-ttu-id="ab629-113">Questi punti di estensione includono il <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>e "Contenuto".</span><span class="sxs-lookup"><span data-stu-id="ab629-113">These extension points include the <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>, and "Content".</span></span>  <span data-ttu-id="ab629-114">(Contenuto vengono forniti gli elementi sotto forma di un <xref:System.Xml.XmlElement> elenco.)</span><span class="sxs-lookup"><span data-stu-id="ab629-114">(Content elements are provided in the form of an <xref:System.Xml.XmlElement> list.)</span></span>  
+ <span data-ttu-id="a9e1a-110">Lo Schema principale definisce la struttura XML primaria di un <xref:System.Windows.Annotations.Annotation>.</span><span class="sxs-lookup"><span data-stu-id="a9e1a-110">The Core Schema defines the primary XML structure of an <xref:System.Windows.Annotations.Annotation>.</span></span>  <span data-ttu-id="a9e1a-111">La maggior parte degli elementi XML definiti nello Schema principale corrisponde ai tipi presenti il <xref:System.Windows.Annotations> dello spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="a9e1a-111">The majority of XML elements defined in the Core Schema correspond to types in the <xref:System.Windows.Annotations> namespace.</span></span>  <span data-ttu-id="a9e1a-112">Lo schema principale espone tre punti di estensione in cui le applicazioni possono aggiungere i propri dati XML.</span><span class="sxs-lookup"><span data-stu-id="a9e1a-112">The Core Schema exposes three extension points where applications can add their own XML data.</span></span>  <span data-ttu-id="a9e1a-113">Questi punti di estensione includono il <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>e "Content".</span><span class="sxs-lookup"><span data-stu-id="a9e1a-113">These extension points include the <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>, and "Content".</span></span>  <span data-ttu-id="a9e1a-114">(Gli elementi vengono forniti sotto forma di contenuto un <xref:System.Xml.XmlElement> elenco.)</span><span class="sxs-lookup"><span data-stu-id="a9e1a-114">(Content elements are provided in the form of an <xref:System.Xml.XmlElement> list.)</span></span>  
   
- <span data-ttu-id="ab629-115">Lo Schema di Base descritte in questo argomento definisce le estensioni per il <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>e tipi inclusi con la versione di Windows Presentation Foundation (WPF) iniziale di contenuto.</span><span class="sxs-lookup"><span data-stu-id="ab629-115">The Base Schema described in this topic defines the extensions for the <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>, and Content types included with the initial Windows Presentation Foundation (WPF) release.</span></span>  
+ <span data-ttu-id="a9e1a-115">Lo Schema di Base descritte in questo argomento definisce le estensioni per il <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>e tipi inclusi con la versione di Windows Presentation Foundation (WPF) iniziale del contenuto.</span><span class="sxs-lookup"><span data-stu-id="a9e1a-115">The Base Schema described in this topic defines the extensions for the <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>, and Content types included with the initial Windows Presentation Foundation (WPF) release.</span></span>  
   
 <a name="CoreSchema"></a>   
-## <a name="annotations-xml-core-schema"></a><span data-ttu-id="ab629-116">Schema principale XML delle annotazioni</span><span class="sxs-lookup"><span data-stu-id="ab629-116">Annotations XML Core Schema</span></span>  
- <span data-ttu-id="ab629-117">Lo Schema di base di annotazioni XML definisce la struttura XML che viene utilizzata per archiviare <xref:System.Windows.Annotations.Annotation> oggetti.</span><span class="sxs-lookup"><span data-stu-id="ab629-117">The Annotations XML Core Schema defines the XML structure that is used to store <xref:System.Windows.Annotations.Annotation> objects.</span></span>  
+## <a name="annotations-xml-core-schema"></a><span data-ttu-id="a9e1a-116">Schema principale XML delle annotazioni</span><span class="sxs-lookup"><span data-stu-id="a9e1a-116">Annotations XML Core Schema</span></span>  
+ <span data-ttu-id="a9e1a-117">La Schema principale XML delle annotazioni definisce la struttura XML che viene usata per archiviare <xref:System.Windows.Annotations.Annotation> oggetti.</span><span class="sxs-lookup"><span data-stu-id="a9e1a-117">The Annotations XML Core Schema defines the XML structure that is used to store <xref:System.Windows.Annotations.Annotation> objects.</span></span>  
   
 ```xml  
 <xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified"  
@@ -181,8 +181,8 @@ ms.locfileid: "33542015"
 ```  
   
 <a name="BaseSchema"></a>   
-## <a name="annotations-xml-base-schema"></a><span data-ttu-id="ab629-118">Schema di base XML delle annotazioni</span><span class="sxs-lookup"><span data-stu-id="ab629-118">Annotations XML Base Schema</span></span>  
- <span data-ttu-id="ab629-119">Lo Schema di Base definisce la struttura XML per i tre elementi astratti definiti nello Schema Core: <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>, e <xref:System.Windows.Annotations.AnnotationResource.Contents%2A>.</span><span class="sxs-lookup"><span data-stu-id="ab629-119">The Base Schema defines the XML structure for the three abstract elements defined in the Core Schema – <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>, and <xref:System.Windows.Annotations.AnnotationResource.Contents%2A>.</span></span>  
+## <a name="annotations-xml-base-schema"></a><span data-ttu-id="a9e1a-118">Schema di base XML delle annotazioni</span><span class="sxs-lookup"><span data-stu-id="a9e1a-118">Annotations XML Base Schema</span></span>  
+ <span data-ttu-id="a9e1a-119">Lo Schema di Base definisce la struttura XML per i tre elementi astratti definiti nello Schema Core – <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>, e <xref:System.Windows.Annotations.AnnotationResource.Contents%2A>.</span><span class="sxs-lookup"><span data-stu-id="a9e1a-119">The Base Schema defines the XML structure for the three abstract elements defined in the Core Schema – <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>, and <xref:System.Windows.Annotations.AnnotationResource.Contents%2A>.</span></span>  
   
 ```xml  
 <xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified"  
@@ -429,11 +429,11 @@ ms.locfileid: "33542015"
     </xsd:complexContent>  
   </xsd:complexType>  
   
-  <-- PageNumber element substitutes ContentLocatorPart and is used to locate a  
-  *  page in a FixedDocument.  PageNumber ContentLocatorPart is used in  
-  *   conjunction with the FixedTextRange ContentLocatorPart and it shows on with  
-  *   page are the coordinates defined in the FixedTextRange.  
-  *   Example of a PageNumber ContentLocatorPart:  
+  <!-- PageNumber element substitutes ContentLocatorPart and is used to locate a  
+  *    page in a FixedDocument.  PageNumber ContentLocatorPart is used in  
+  *    conjunction with the FixedTextRange ContentLocatorPart and it shows on with  
+  *    page are the coordinates defined in the FixedTextRange.  
+  *    Example of a PageNumber ContentLocatorPart:  
   *     
   *       <anb:PageNumber>  
   *         <anc:Item Name="Value" Value="1" />  
@@ -464,8 +464,8 @@ ms.locfileid: "33542015"
   <xsd:element name="Text" type="anb:TextContentType"  
                substitutionGroup="anc:Content"/>  
   
-  <-- Ink – contains XAML representing Sticky Note ink.  
-  *   Used in annotations of type InkStickyNote. -->  
+  <!-- Ink – contains XAML representing Sticky Note ink.  
+  *    Used in annotations of type InkStickyNote. -->  
   <xsd:complexType name="InkContentType">  
     <!-- See XAML schema for Ink content -->  
   </xsd:complexType>  
@@ -492,8 +492,8 @@ ms.locfileid: "33542015"
 ```  
   
 <a name="SampleXML"></a>   
-## <a name="sample-xml-produced-by-annotations-xmlstreamstore"></a><span data-ttu-id="ab629-120">XML di esempio creato da Annotations XmlStreamStore</span><span class="sxs-lookup"><span data-stu-id="ab629-120">Sample XML Produced by Annotations XmlStreamStore</span></span>  
- <span data-ttu-id="ab629-121">Il codice XML che segue viene illustrato l'output di un'annotazione <xref:System.Windows.Annotations.Storage.XmlStreamStore> e l'organizzazione di un file di esempio contenente tre annotazioni - un'evidenziazione, una testo nota sticky note e Sticky un input penna.</span><span class="sxs-lookup"><span data-stu-id="ab629-121">The XML that follows shows the output of an Annotations <xref:System.Windows.Annotations.Storage.XmlStreamStore> and the organization of a sample file that contains three annotations - a highlight, a text sticky-note, and an ink stick-note.</span></span>  
+## <a name="sample-xml-produced-by-annotations-xmlstreamstore"></a><span data-ttu-id="a9e1a-120">XML di esempio creato da Annotations XmlStreamStore</span><span class="sxs-lookup"><span data-stu-id="a9e1a-120">Sample XML Produced by Annotations XmlStreamStore</span></span>  
+ <span data-ttu-id="a9e1a-121">Il codice XML seguente mostra l'output di un'annotazione <xref:System.Windows.Annotations.Storage.XmlStreamStore> e l'organizzazione di un file di esempio contenente tre annotazioni: un'evidenziazione, una nota di Memo e una nota a penna.</span><span class="sxs-lookup"><span data-stu-id="a9e1a-121">The XML that follows shows the output of an Annotations <xref:System.Windows.Annotations.Storage.XmlStreamStore> and the organization of a sample file that contains three annotations - a highlight, a text sticky-note, and an ink stick-note.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -581,10 +581,10 @@ ms.locfileid: "33542015"
 </anc:Annotations>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="ab629-122">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="ab629-122">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="a9e1a-122">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a9e1a-122">See Also</span></span>  
  <xref:System.Windows.Annotations>  
  <xref:System.Windows.Annotations.Storage>  
  <xref:System.Windows.Annotations.Annotation>  
  <xref:System.Windows.Annotations.Storage.AnnotationStore>  
  <xref:System.Windows.Annotations.Storage.XmlStreamStore>  
- [<span data-ttu-id="ab629-123">Cenni preliminari sulle annotazioni</span><span class="sxs-lookup"><span data-stu-id="ab629-123">Annotations Overview</span></span>](../../../../docs/framework/wpf/advanced/annotations-overview.md)
+ [<span data-ttu-id="a9e1a-123">Cenni preliminari sulle annotazioni</span><span class="sxs-lookup"><span data-stu-id="a9e1a-123">Annotations Overview</span></span>](../../../../docs/framework/wpf/advanced/annotations-overview.md)
