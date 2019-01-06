@@ -8,12 +8,12 @@ helpviewer_keywords:
 - serialization, guidelines
 - binary serialization, guidelines
 ms.assetid: ebbeddff-179d-443f-bf08-9c373199a73a
-ms.openlocfilehash: b47be45f00ee03d400383dd45dc6776cff3f816d
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 2a372ba995f409fc3dd12492e21af80b93d20b8c
+ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45742496"
+ms.lasthandoff: 01/05/2019
+ms.locfileid: "54058594"
 ---
 # <a name="serialization-guidelines"></a>Linee guida relative alla serializzazione
 In questo documento vengono elencate le linee guida da tenere presenti quando si progetta un'API da serializzare.  
@@ -99,7 +99,7 @@ In questo documento vengono elencate le linee guida da tenere presenti quando si
   
 1.  Evitare di progettare in maniera specifica i tipi per la serializzazione XML, a meno che non sia presente un motivo estremamente valido per controllare la forma del codice XML creato. Questa tecnologia è stata sostituita dalla serializzazione dei contratti dati descritta nella sezione precedente.  
   
-     In altre parole, non applicare attributi dallo spazio dei nomi <xref:System.Runtime.Serialization> ai nuovi tipi, a meno che non si sia certi che il tipo verrà utilizzato con la serializzazione XML. L'esempio seguente mostra come è possibile usare **System.Xml.Serialization** per controllare la forma del codice XML creato.  
+     In altre parole, non applicare attributi dallo spazio dei nomi <xref:System.Xml.Serialization> ai nuovi tipi, a meno che non si sia certi che il tipo verrà utilizzato con la serializzazione XML. L'esempio seguente mostra come è possibile usare **System.Xml.Serialization** per controllare la forma del codice XML creato.  
   
      [!code-csharp[SerializationGuidelines#6](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#6)]
      [!code-vb[SerializationGuidelines#6](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#6)]  

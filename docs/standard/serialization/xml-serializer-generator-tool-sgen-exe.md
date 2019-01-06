@@ -2,12 +2,12 @@
 title: Strumento per la generazione di serializzatori XML (Sgen.exe)
 ms.date: 03/30/2017
 ms.assetid: cc1d1f1c-fb26-4be9-885a-3fe84c81cec6
-ms.openlocfilehash: 1e11a4d762950b4227b0a9accef10500fd89886d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 2091c75f5aeef8b64ac9afa361f28dbe0b76530b
+ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148119"
+ms.lasthandoff: 01/05/2019
+ms.locfileid: "54058308"
 ---
 # <a name="xml-serializer-generator-tool-sgenexe"></a>Strumento per la generazione di serializzatori XML (Sgen.exe)
 Lo strumento per la generazione di serializzatori XML (Sgen.exe) consente di creare un assembly di serializzazione XML per i tipi in un assembly specificato al fine di migliorare le prestazioni di avvio di un oggetto <xref:System.Xml.Serialization.XmlSerializer> quando serializza o deserializza oggetti dei tipi specificati.  
@@ -22,19 +22,19 @@ sgen [options]
   
 |Opzione|Descrizione|  
 |------------|-----------------|  
-|**/a**[**ssembly**]**:**_nomefile_|Genera il codice di serializzazione per tutti i tipi contenuti nell'assembly o nell'eseguibile specificato da *nomefile*. È possibile indicare un solo nome file. Se questo argomento viene ripetuto, verrà utilizzato l'ultimo nome file.|  
-|**/c[ompiler]:** *opzioni*|Specifica l'opzione da passare al compilatore C#. Tutte le opzioni di csc.exe vengono supportate dopo essere state passate al compilatore. Questa opzione può essere utilizzata per specificare che l'assembly deve essere firmato e per indicare il file di chiave.|  
-|**/d**[**ebug**]|Genera un'immagine utilizzabile con un debugger.|  
-|**/f[orce]**|Impone la sovrascrittura di un assembly esistente con lo stesso nome. Il valore predefinito è **false**.|  
+|**/a\[assembly\]:**_nomefile_|Genera il codice di serializzazione per tutti i tipi contenuti nell'assembly o nell'eseguibile specificato da *nomefile*. È possibile indicare un solo nome file. Se questo argomento viene ripetuto, verrà utilizzato l'ultimo nome file.|  
+|**/c\[pirati\]:**_opzioni_|Specifica l'opzione da passare al compilatore C#. Tutte le opzioni di csc.exe vengono supportate dopo essere state passate al compilatore. Questa opzione può essere utilizzata per specificare che l'assembly deve essere firmato e per indicare il file di chiave.|  
+|**/d\[debug\]**|Genera un'immagine utilizzabile con un debugger.|  
+|**/f\[forza\]**|Impone la sovrascrittura di un assembly esistente con lo stesso nome. Il valore predefinito è **false**.|  
 |**/help o /?**|Visualizza la sintassi e le opzioni di comando dello strumento.|  
-|**/k**[**eep**]|Impedisce l'eliminazione dei file di origine generati e di altri file temporanei al termine della compilazione nell'assembly di serializzazione. Questa opzione può essere utilizzata per determinare se lo strumento genera codice di serializzazione per un determinato tipo.|  
-|**/n**[**ologo**]|Elimina la visualizzazione del messaggio di avvio Microsoft.|  
-|**/o**[**ut**]**:**_percorso_|Specifica la directory in cui salvare l'assembly generato. **Nota:**  Il nome dell'assembly generato è composto dal nome dell'assembly di input e da "xmlSerializers.dll".|  
-|**/p**[**roxytypes**]|Genera codice di serializzazione solo per i tipi proxy del servizio Web XML.|  
-|**/r**[**eference**]**:**_fileassembly_|Specifica gli assembly a cui fanno riferimento i tipi che richiedono la serializzazione XML. Accetta più file di assembly separati da virgole.|  
-|**/s**[**ilent**]|Evita la visualizzazione dei messaggi di operazione riuscita.|  
-|**/t**[**ype**]**:**_tipo_|Genera codice di serializzazione solo per il tipo specificato.|  
-|**/v**[**erbose**]|Visualizza output dettagliato per il debug. Elenca i tipi dell'assembly di destinazione che non possono essere serializzati con <xref:System.Xml.Serialization.XmlSerializer>.|  
+|**/k\[eni\]**|Impedisce l'eliminazione dei file di origine generati e di altri file temporanei al termine della compilazione nell'assembly di serializzazione. Questa opzione può essere utilizzata per determinare se lo strumento genera codice di serializzazione per un determinato tipo.|  
+|**/n\[ologo\]**|Elimina la visualizzazione del messaggio di avvio Microsoft.|  
+|**/o\[ut\]:**_percorso_|Specifica la directory in cui salvare l'assembly generato. **Nota:**  Il nome dell'assembly generato è composto dal nome dell'assembly di input e da "xmlSerializers.dll".|  
+|**/p\[roxytypes\]**|Genera codice di serializzazione solo per i tipi proxy del servizio Web XML.|  
+|**/r\[eference\]:**_assemblyfiles_|Specifica gli assembly a cui fanno riferimento i tipi che richiedono la serializzazione XML. Accetta più file di assembly separati da virgole.|  
+|**/s\[ilent\]**|Evita la visualizzazione dei messaggi di operazione riuscita.|  
+|**/t\[ipo\]:**_tipo_|Genera codice di serializzazione solo per il tipo specificato.|  
+|**/v\[erbose\]**|Visualizza output dettagliato per il debug. Elenca i tipi dell'assembly di destinazione che non possono essere serializzati con <xref:System.Xml.Serialization.XmlSerializer>.|  
 |**/?**|Visualizza la sintassi e le opzioni di comando dello strumento.|  
   
 ## <a name="remarks"></a>Note  
