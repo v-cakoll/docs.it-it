@@ -39,12 +39,12 @@ helpviewer_keywords:
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: acc51287a8c670da63d0ec421aa232864ea91c2b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b00d08f43874518e117739d4a9502bf9463db5c1
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50185849"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54029879"
 ---
 # <a name="net-class-library-overview"></a>Panoramica della libreria di classi .NET
 
@@ -86,7 +86,7 @@ Le implementazioni .NET includono classi, interfacce, delegati e tipi di valore 
   
  Nella tabella riportata di seguito sono elencati i tipi di base disponibili in .NET. con una breve descrizione di ogni tipo. Viene anche indicato il tipo corrispondente in Visual Basic, C#, C++, e F#.  
   
-|Category|Nome di classe|Descrizione|Tipo di dati di Visual Basic|Tipo di dati di C#|Tipo di dati C++/CLI|Tipo di dati F#|  
+|Category|Nome di classe|Description|Tipo di dati di Visual Basic|Tipo di dati di C#|Tipo di dati C++/CLI|Tipo di dati F#|  
 |--------------|----------------|-----------------|----------------------------|-------------------|---------------------|-----------------------|  
 |Integer|<xref:System.Byte>|Intero senza segno a 8 bit.|**Byte**|**byte**|**unsigned char**|**byte**|  
 ||<xref:System.SByte>|Intero con segno a 8 bit.<br /><br /> Non conforme a CLS.|**SByte**|**sbyte**|**char**<br /> oppure<br /> **signed** **char**|**sbyte**|  
@@ -94,7 +94,7 @@ Le implementazioni .NET includono classi, interfacce, delegati e tipi di valore 
 ||<xref:System.Int32>|Intero con segno a 32 bit.|**Integer**|**int**|**int**<br /><br /> oppure<br /><br /> **long**|**int**|  
 ||<xref:System.Int64>|Intero con segno a 64 bit.|**Long**|**long**|**__int64**|**int64**|  
 ||<xref:System.UInt16>|Intero senza segno a 16 bit.<br /><br /> Non conforme a CLS.|**UShort**|**ushort**|**unsigned short**|**uint16**|  
-||<xref:System.UInt32>|Intero senza segno a 32 bit.<br /><br /> Non conforme a CLS.|**UInteger**|**uint**|**unsigned int**<br /> oppure<br /> **unsigned long**|**uint32**|  
+||<xref:System.UInt32>|Intero senza segno a 32 bit.<br /><br /> Non conforme a CLS.|**UInteger**|**uint**|**unsigned int**<br /> -oppure-<br /> **unsigned long**|**uint32**|  
 ||<xref:System.UInt64>|Intero senza segno a 64 bit.<br /><br /> Non conforme a CLS.|**ULong**|**ulong**|**unsigned __int64**|**uint64**|  
 |Virgola mobile|<xref:System.Single>|Un numero a virgola mobile e precisione singola a 32 bit.|**Single**|**float**|**float**|**float32**</br> oppure</br>**single**|  
 ||<xref:System.Double>|Un numero a virgola mobile e precisione doppia a 64 bit.|**Double**|**double**|**double**|**float**</br> oppure </br> **double**|  
@@ -113,5 +113,5 @@ Le implementazioni .NET includono classi, interfacce, delegati e tipi di valore 
 ## <a name="see-also"></a>Vedere anche
 
 - [Common Type System](../../docs/standard/base-types/common-type-system.md)  
-- [Browser API .NET](https://docs.microsoft.com/dotnet/api)  
+- [Browser API .NET](../../api/index.md)  
 - [Panoramica](../../docs/framework/get-started/overview.md)

@@ -15,25 +15,25 @@ helpviewer_keywords:
 ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 20050bee696f9d47324f1b095b0b3c1120f78255
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 51e22407bd20cc6aa17b242948a83d698167590e
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47087330"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030158"
 ---
 # <a name="substitutions-in-regular-expressions"></a>Sostituzioni nelle espressioni regolari
-<a name="Top"></a> Le sostituzioni sono elementi di linguaggio riconosciuti solo all'interno dei criteri di sostituzione. Utilizzano un modello di espressione regolare per definire in tutto o in parte il testo che sostituirà il testo corrispondente nella stringa di input. Il criterio di sostituzione può essere costituito da una o più sostituzioni insieme a caratteri letterali. I criteri di sostituzione vengono forniti agli overload del metodo <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> che dispongono di un parametro `replacement` e al metodo <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType>. I metodi sostituiscono il criterio di ricerca con il criterio definito dal parametro `replacement` .  
+<a name="Top"></a> Le sostituzioni sono elementi di linguaggio riconosciuti solo all'interno dei criteri di sostituzione. Utilizzano un modello di espressione regolare per definire in tutto o in parte il testo che sostituirà il testo corrispondente nella stringa di input. Il criterio di sostituzione può essere costituito da una o più sostituzioni insieme a caratteri letterali. I criteri di sostituzione vengono forniti agli overload del metodo <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> che dispongono di un parametro `replacement` e al metodo <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> . I metodi sostituiscono il criterio di ricerca con il criterio definito dal parametro `replacement` .  
   
  .NET Framework definisce gli elementi di sostituzione elencati nella tabella riportata di seguito.  
   
-|Sostituzione|Descrizione|  
+|Sostituzione|Description|  
 |------------------|-----------------|  
 |`$` *numero*|Include nella stringa di sostituzione l'ultima sottostringa corrispondente al gruppo di acquisizione identificato da *numero*dove *numero* è un valore decimale. Per ulteriori informazioni, vedere [Sostituzione di un gruppo numerato](#Numbered).|  
 |`${` *name* `}`|Include nella stringa di sostituzione l'ultima sottostringa corrispondente al gruppo denominato definito da `(?<`*nome*`> )` . Per ulteriori informazioni, vedere [Sostituzione di un gruppo denominato](#Named).|  
 |`$$`|Include un solo simbolo letterale "$" nella stringa di sostituzione. Per ulteriori informazioni, vedere [Sostituzione di un simbolo "$"](#DollarSign).|  
 |`$&`|Include una copia dell'intera corrispondenza nella stringa di sostituzione. Per ulteriori informazioni, vedere [Sostituzione dell'intera corrispondenza](#EntireMatch).|  
-|<code>$\`</code>|Include nella stringa di sostituzione tutto il testo della stringa di input precedente alla corrispondenza. Per ulteriori informazioni, vedere [Sostituzione del testo prima della corrispondenza](#BeforeMatch).|  
+|``$` ``|Include nella stringa di sostituzione tutto il testo della stringa di input precedente alla corrispondenza. Per ulteriori informazioni, vedere [Sostituzione del testo prima della corrispondenza](#BeforeMatch).|  
 |`$'`|Include nella stringa di sostituzione tutto il testo della stringa di input successivo alla corrispondenza. Per ulteriori informazioni, vedere [Sostituzione del testo dopo la corrispondenza](#AfterMatch).|  
 |`$+`|Include nella stringa di sostituzione l'ultimo gruppo acquisito. Per ulteriori informazioni, vedere [Sostituzione dell'ultimo gruppo acquisito](#LastGroup).|  
 |`$_`|Include l'intera stringa di input nella stringa di sostituzione. Per ulteriori informazioni, vedere [Sostituzione dell'intera stringa di input](#EntireString).|  
@@ -63,7 +63,7 @@ ms.locfileid: "47087330"
   
  Il criterio di ricerca di espressioni regolari `\p{Sc}*(\s?\d+[.,]?\d*)\p{Sc}*` è definito nel modo illustrato nella tabella seguente.  
   
-|Modello|Descrizione|  
+|Modello|Description|  
 |-------------|-----------------|  
 |`\p{Sc}*`|Trovare la corrispondenza con zero o più caratteri di simboli valutari.|  
 |`\s?`|Trova la corrispondenza di uno o nessuno spazio vuoto.|  
@@ -89,7 +89,7 @@ ms.locfileid: "47087330"
   
  Il criterio di ricerca di espressioni regolari `\p{Sc}*(?<amount>\s?\d[.,]?\d*)\p{Sc}*` è definito nel modo illustrato nella tabella seguente.  
   
-|Modello|Descrizione|  
+|Modello|Description|  
 |-------------|-----------------|  
 |`\p{Sc}*`|Trovare la corrispondenza con zero o più caratteri di simboli valutari.|  
 |`\s?`|Trova la corrispondenza di uno o nessuno spazio vuoto.|  
@@ -111,7 +111,7 @@ ms.locfileid: "47087330"
   
  Il criterio di ricerca di espressioni regolari `\b(\d+)(\.(\d+))?` è definito nel modo illustrato nella tabella seguente.  
   
-|Modello|Descrizione|  
+|Modello|Description|  
 |-------------|-----------------|  
 |`\b`|Inizia la corrispondenza all'inizio di un confine di parola.|  
 |`(\d+)`|Trova la corrispondenza con una o più cifre decimali. Equivale al primo gruppo di acquisizione.|  
@@ -130,7 +130,7 @@ ms.locfileid: "47087330"
   
  Il criterio di ricerca di espressioni regolari `^(\w+\s?)+$` è definito nel modo illustrato nella tabella seguente.  
   
-|Modello|Descrizione|  
+|Modello|Description|  
 |-------------|-----------------|  
 |`^`|Inizia la corrispondenza all'inizio della stringa di input.|  
 |`(\w+\s?)+`|Ottiene una o più volte la corrispondenza con il modello di uno o più caratteri alfanumerici seguiti da zero o da uno spazio vuoto.|  
@@ -142,14 +142,14 @@ ms.locfileid: "47087330"
   
 <a name="BeforeMatch"></a>   
 ## <a name="substituting-the-text-before-the-match"></a>Sostituzione del testo prima della corrispondenza  
- La sostituzione <code>$\`</code> sostituisce la stringa corrispondente con l'intera stringa di input prima della corrispondenza. Ovvero, duplica la stringa di input fino alla corrispondenza e rimuove il testo corrispondente. Qualsiasi testo che segue il testo corrispondente resta invariato nella stringa di risultato. Se esistono più corrispondenze in una stringa di input, il testo di sostituzione viene derivato dalla stringa di input originale anziché dalla stringa in cui il testo è stato sostituito dalle corrispondenze precedenti. \(Nell'esempio viene illustrata una situazione di questo tipo.\) Se non esiste alcuna corrispondenza, la sostituzione <code>$\`</code> non ha alcun effetto.  
+ La sostituzione ``$` `` sostituisce la stringa corrispondente con l'intera stringa di input prima della corrispondenza. Ovvero, duplica la stringa di input fino alla corrispondenza e rimuove il testo corrispondente. Qualsiasi testo che segue il testo corrispondente resta invariato nella stringa di risultato. Se esistono più corrispondenze in una stringa di input, il testo di sostituzione viene derivato dalla stringa di input originale anziché dalla stringa in cui il testo è stato sostituito dalle corrispondenze precedenti. \(Nell'esempio viene illustrata una situazione di questo tipo.\) Se non esiste alcuna corrispondenza, la sostituzione ``$` `` non ha alcun effetto.  
   
- Nell'esempio seguente viene usato il criterio di espressione regolare `\d+` per trovare la corrispondenza con una sequenza di una o più cifre decimali nella stringa di input. La stringa di sostituzione <code>$`</code> sostituisce queste cifre con il testo che precede la corrispondenza.  
+ Nell'esempio seguente viene usato il criterio di espressione regolare `\d+` per trovare la corrispondenza con una sequenza di una o più cifre decimali nella stringa di input. La stringa di sostituzione ``$` `` sostituisce queste cifre con il testo che precede la corrispondenza.  
   
  [!code-csharp[Conceptual.Regex.Language.Substitutions#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.substitutions/cs/before1.cs#4)]
  [!code-vb[Conceptual.Regex.Language.Substitutions#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.substitutions/vb/before1.vb#4)]  
   
- In questo esempio, la stringa di input `"aa1bb2cc3dd4ee5"` contiene cinque corrispondenze. La tabella seguente illustra come la sostituzione <code>$`</code> fa in modo che il motore delle espressioni regolari sostituisca ogni corrispondenza nella stringa di input. Il testo inserito viene visualizzato in grassetto nella colonna dei risultati.  
+ In questo esempio, la stringa di input `"aa1bb2cc3dd4ee5"` contiene cinque corrispondenze. La tabella seguente illustra come la sostituzione ``$` `` fa in modo che il motore delle espressioni regolari sostituisca ogni corrispondenza nella stringa di input. Il testo inserito viene visualizzato in grassetto nella colonna dei risultati.  
   
 |Corrispondenza con|Posizione|Stringa prima della corrispondenza|Stringa di risultato|  
 |-----------|--------------|-------------------------|-------------------|  
@@ -193,7 +193,7 @@ ms.locfileid: "47087330"
   
  Il criterio di ricerca di espressioni regolari `\b(\w+)\s\1\b` è definito nel modo illustrato nella tabella seguente.  
   
-|Modello|Descrizione|  
+|Modello|Description|  
 |-------------|-----------------|  
 |`\b`|Inizia la corrispondenza sul confine di parola.|  
 |`(\w+)`|Trova la corrispondenza di uno o più caratteri alfanumerici. Equivale al primo gruppo di acquisizione.|  

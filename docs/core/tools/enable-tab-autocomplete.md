@@ -4,14 +4,14 @@ description: Questo articolo illustra come abilitare il completamento tramite ta
 author: thraka
 ms.author: adegeo
 ms.date: 12/17/2018
-ms.openlocfilehash: 10b2e13aad9821295efc5c36d1cad04f1a95477c
-ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
+ms.openlocfilehash: 783868fb8300dd4a25c62a108c1c0f7a485721df
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "53784393"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54029606"
 ---
-# <a name="how-to-enable-tab-completion-for-the-net-core-cli"></a>Come abilitare il completamento tramite TAB per l'interfaccia della riga di comando di .NET Core
+# <a name="how-to-enable-tab-completion-for-net-core-cli"></a>Come abilitare il completamento tramite TAB per l'interfaccia della riga di comando di .NET Core
 
 A partire da .NET Core 2.0 SDK, l'interfaccia della riga di comando di .NET Core supporta il completamento tramite TAB. Questo articolo descrive come configurare il completamento tramite TAB per tre shell: PowerShell, Bash e zsh. È possibile che il completamento automatico sia supportato anche in altre shell. Fare riferimento alla documentazione di tali shell per configurare il completamento automatico. I passaggi dovrebbero essere simili a quelli descritti in questo articolo.
 
@@ -28,7 +28,7 @@ migrate
 pack
 ```
 
-Se questo comando non funziona, assicurarsi che sia installato .NET Core 2.0 SDK o versioni successive. Se è installata la versione appropriata ma il comando non funziona, assicurarsi che il comando `dotnet` risolva in una versione di .NET Core 2.0 o successiva. Usare il comando `dotnet --version` per verificare la versione di `dotnet` in cui risolve il percorso corrente. Per altre informazioni, vedere [Selezionare la versione di .NET Core da usare](../versions/selection.md).
+Se questo comando non funziona, assicurarsi che sia installato .NET Core 2.0 SDK o versioni successive. Se è installata la versione appropriata ma il comando non funziona, assicurarsi che il comando `dotnet` risolva in .NET Core 2.0 SDK o una versione successiva. Usare il comando `dotnet --version` per verificare la versione di `dotnet` in cui risolve il percorso corrente. Per altre informazioni, vedere [Selezionare la versione di .NET Core da usare](../versions/selection.md).
 
 ### <a name="examples"></a>Esempi
 

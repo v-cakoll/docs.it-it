@@ -4,12 +4,12 @@ description: Architettura di microservizi .NET per applicazioni .NET in contenit
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 31f4807c956a8b4fb9381145f8e9b5eaffafe698
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 72a3e7ef8043e0016cefb45a4182b5c2e3061753
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149497"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54029710"
 ---
 # <a name="use-enumeration-classes-instead-of-enum-types"></a>Usare le classi di enumerazione anziché i tipi enum
 
@@ -17,7 +17,7 @@ Le [enumerazioni](../../../../docs/csharp/language-reference/keywords/enum.md) (
 
 In alternativa, è possibile creare classi di enumerazione che abilitano tutte le funzionalità avanzate di un linguaggio orientato a oggetti.
 
-Tuttavia, questo non è un argomento strategico e in molti casi, per semplicità è comunque possibile continuare a usare i normali [tipi enum](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/enum) se si preferisce. Comunque, l'uso delle classi di enumerazione è più strettamente correlato a concetti aziendali.
+Tuttavia, questo non è un argomento strategico e in molti casi, per semplicità è comunque possibile continuare a usare i normali [tipi enum](../../../csharp/language-reference/keywords/enum.md) se si preferisce. Comunque, l'uso delle classi di enumerazione è più strettamente correlato a concetti aziendali.
 
 ## <a name="implement-an-enumeration-base-class"></a>Implementare una classe di base di enumerazione
 

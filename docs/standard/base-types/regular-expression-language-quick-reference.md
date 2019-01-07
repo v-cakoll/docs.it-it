@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 77a9863b4fb44bbe8142175a032bb052ee99cdae
-ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
+ms.openlocfilehash: 09f2886173bd3a80691b78a6e3ea71b034ebe34a
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "53779386"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030399"
 ---
 # <a name="regular-expression-language---quick-reference"></a>Linguaggio di espressioni regolari - Riferimento rapido
 <a name="top"></a> Un'espressione regolare è un modello per cui il motore delle espressioni regolari tenta di trovare una corrispondenza nel testo di input. Un modello è costituito da uno o più i valori letterali carattere, operatori o costrutti.  Per una breve introduzione, vedere [Espressioni regolari di .NET](../../../docs/standard/base-types/regular-expressions.md).  
@@ -176,7 +176,7 @@ ms.locfileid: "53779386"
 |`${` *nome* `}`|Sostituisce la sottostringa corrispondente al gruppo denominato *nome*.|`\b(?<word1>\w+)(\s)(?<word2>\w+)\b`|`${word2} ${word1}`|"one two"|"two one"|  
 |`$$`|Sostituisce un valore letterale "$".|`\b(\d+)\s?USD`|`$$$1`|"103 USD"|"$103"|  
 |`$&`|Sostituisce una copia dell'intera corrispondenza.|`\$?\d*\.?\d+`|`**$&**`|"$1.30"|"\*\*$1.30\*\*"|  
-|<code>$`</code>|Sostituisce tutto il testo della stringa di input prima della corrispondenza.|`B+`|<code>$`</code>|"AABBCC"|"AAAACC"|  
+|``$` ``|Sostituisce tutto il testo della stringa di input prima della corrispondenza.|`B+`|``$` ``|"AABBCC"|"AAAACC"|  
 |`$'`|Sostituisce tutto il testo della stringa di input successiva alla corrispondenza.|`B+`|`$'`|"AABBCC"|"AACCCC"|  
 |`$+`|Sostituisce l'ultimo gruppo acquisito.|`B+(C+)`|`$+`|"AABBCCDD"|"AACCDD"|  
 |`$_`|Sostituisce l'intera stringa di input.|`B+`|`$_`|"AABBCC"|"AAAABBCCCC"|  
