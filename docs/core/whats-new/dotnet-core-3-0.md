@@ -51,7 +51,7 @@ Esistono alcune operazioni, ad esempio il collegamento e la pubblicazione della 
 
 Mentre .NET Core 2.1 supportava strumenti globali, .NET Core 3.0 ha ora strumenti locali. Gli strumenti locali sono simili agli strumenti globali, ma sono associati a una determinata posizione sul disco. Ciò consente di usare strumenti specifici per ogni progetto e ogni repository. Gli strumenti installati in locale non sono disponibili a livello globale.
 
-Gli strumenti locali si basano sul nome file manifesto `dotnet-tools.json` nella directory corrente. Questo file manifesto definisce gli strumenti che devono essere disponibili. Creando questo file manifesto nella radice del repository, si ha la certezza che chiunque cloni il codice non possa ripristinare e usare gli strumenti necessari per lavorare in modo corretto con il codice.
+Gli strumenti locali si basano sul nome file manifesto `dotnet-tools.json` nella directory corrente. Questo file manifesto definisce gli strumenti che devono essere disponibili. Creando questo file manifesto nella radice del repository, si ha la certezza che chiunque cloni il codice possa ripristinare e usare gli strumenti necessari per lavorare in modo corretto con il codice.
 
 Quando il file manifesto degli strumenti locali è disponibile, usare il comando seguente per scaricare e installare automaticamente tali strumenti in locale:
 
