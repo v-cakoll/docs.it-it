@@ -4,18 +4,18 @@ description: Architettura dei microservizi .NET per le applicazioni .NET in cont
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 08/31/2018
-ms.openlocfilehash: 8304e4d0b06e7137c42e669191c4e9f0dd946dbb
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 52435c31e77e7139b982829ae4ab33a5e0f9f045
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152682"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030438"
 ---
-# <a name="net-microservices-architecture-for-containerized-net-applications"></a>Microservizi .NET: architettura per le applicazioni .NET incluse in contenitori
+# <a name="net-microservices-architecture-for-containerized-net-applications"></a>Microservizi .NET: Architettura per le applicazioni .NET incluse in contenitori
 
 ![Copertina](./media/cover-small.png)
 
-**EDIZIONE v2.1.02** - aggiornato ad ASP.NET Core 2.1
+**EDIZIONE v2.1.03** - Aggiornato ad ASP.NET Core 2.1
 
 Questa guida offre un'introduzione allo sviluppo di applicazioni basate su microservizi e alla relativa gestione tramite i contenitori. Vengono descritti gli approcci alla progettazione e all'implementazione dell'architettura mediante i contenitori di .NET Core e Docker. 
 
@@ -88,9 +88,9 @@ Questa guida è stata scritta per aiutare il lettore a comprendere l'architettur
 
 Coautori:
 
-> **Cesar de la Torre**, Sr. PM, team del prodotto .NET, Microsoft Corp.
+> **Cesar de la Torre**, Senior PM, team del prodotto .NET, Microsoft Corp.
 >
-> **Bill Wagner**, Sr. Content Developer, C+E, Microsoft Corp.
+> **Bill Wagner**, Senior Content Developer, C+E, Microsoft Corp.
 >
 > **Mike Rousos**, Principal Software Engineer, team DevDiv CAT, Microsoft
 
@@ -110,15 +110,15 @@ Collaboratori e revisori:
 >
 > **Jimmy Nilsson**, cofondatore e CEO di Factor10
 >
-> **Glenn Condron**, Sr. Program Manager, team di ASP.NET
+> **Glenn Condron**, Senior Program Manager, team di ASP.NET
 >
 > **Mark Fussell**, Principal PM Lead, team di Azure Service Fabric, Microsoft
 >
 > **Diego Vega**, PM Lead, team di Entity Framework, Microsoft
 >
-> **Barry Dorrans**, Sr. Security Program Manager
+> **Barry Dorrans**, Senior Security Program Manager
 >
-> **Rowan Miller**, Sr. Program Manager, Microsoft
+> **Rowan Miller**, Senior Program Manager, Microsoft
 >
 > **Ankit Asthana**, Principal PM Manager, team di .NET, Microsoft
 >
@@ -140,13 +140,13 @@ Collaboratori e revisori:
 >
 > **Javier Valero**, Chief Operating Officer di Grupo Solutio
 >
-> **Pierre Millet**, Sr. Consultant, Microsoft
+> **Pierre Millet**, Senior Consultant, Microsoft
 >
 > **Michael Friis**, Product Manager, Docker Inc
 >
 > **Charles Lowell**, Software Engineer, team VS CAT, Microsoft
 >
-> **Miguel Veloso**, Sr. Consultant, Turing Challenge
+> **Miguel Veloso**, Senior Consultant, Turing Challenge
 
 
 ## <a name="copyright"></a>Copyright

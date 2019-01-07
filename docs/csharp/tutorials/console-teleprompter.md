@@ -3,12 +3,12 @@ title: Applicazione console
 description: Questa esercitazione illustra alcune funzionalità disponibili in .NET Core e nel linguaggio C#.
 ms.date: 03/06/2017
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.openlocfilehash: 9255ad9b1fefc828e767fb8e6ccc62b2eaf23fd6
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: dfd8124eb79690286e5cd876de57394a4d741328
+ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183620"
+ms.lasthandoff: 01/05/2019
+ms.locfileid: "54058399"
 ---
 # <a name="console-application"></a>Applicazione console
 
@@ -303,6 +303,8 @@ private static async Task GetInput(TelePrompterConfig config)
                 config.UpdateDelay(-10);
             else if (key.KeyChar == '<')
                 config.UpdateDelay(10);
+            else if (key.KeyChar == 'X' || key.KeyChar == 'x')
+                config.SetDone();
         } while (!config.Done);
     };
     await Task.Run(work);

@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 73cd8b703fe30e622a849fa20e33b529ea3db61d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8cb47d1c7eecebca42a65557b61d782a76266c2f
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127446"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030178"
 ---
 # <a name="methods"></a>Metodi #
 
@@ -197,10 +197,7 @@ In alcuni casi, si vuole che il metodo restituisca più di un singolo valore. A 
 public (string, string, string, int) GetPersonalInfo(string id)
 {
     PersonInfo per = PersonInfo.RetrieveInfoById(id);
-    if (per != null)
-       return (per.FirstName, per.MiddleName, per.LastName, per.Age);
-    else
-       return null;
+    return (per.FirstName, per.MiddleName, per.LastName, per.Age);
 }
 ```
 
@@ -208,8 +205,7 @@ Il chiamante può quindi usare la tupla restituita con codice simile al seguente
 
 ```csharp
 var person = GetPersonalInfo("111111111")
-if (person != null)
-   Console.WriteLine("{person.Item1} {person.Item3}: age = {person.Item4}");
+Console.WriteLine("{person.Item1} {person.Item3}: age = {person.Item4}");
 ```
 
 È anche possibile assegnare i nomi agli elementi della tupla nella definizione del tipo della tupla. L'esempio seguente mostra una versione alternativa del metodo `GetPersonalInfo` che usa elementi denominati:
@@ -218,10 +214,7 @@ if (person != null)
 public (string FName, string MName, string LName, int Age) GetPersonalInfo(string id)
 {
     PersonInfo per = PersonInfo.RetrieveInfoById(id);
-    if (per != null)
-       return (per.FirstName, per.MiddleName, per.LastName, per.Age);
-    else
-       return null;
+    return (per.FirstName, per.MiddleName, per.LastName, per.Age);
 }
 ```
 
@@ -229,8 +222,7 @@ La chiamata precedente al metodo `GetPersonInfo` può quindi essere modificata c
 
 ```csharp
 var person = GetPersonalInfo("111111111");
-if (person != null)
-   Console.WriteLine("{person.FName} {person.LName}: age = {person.Age}");
+Console.WriteLine("{person.FName} {person.LName}: age = {person.Age}");
 ```
 
 Se a un metodo viene passata una matrice come argomento e il metodo modifica il valore dei singoli elementi, non è necessario che il metodo restituisca la matrice, anche se è possibile scegliere di effettuare questa operazione per ragioni di stile o per il flusso funzionale di valori.  L'operazione non è necessaria perché C# passa tutti i tipi riferimento per valore e il valore di un riferimento a una matrice è il puntatore alla matrice. Nell'esempio seguente le modifiche al contenuto della matrice `values` eseguite nel metodo `DoubleValues` sono rilevabili da qualsiasi codice che include un riferimento alla matrice.

@@ -27,7 +27,7 @@ Sono necessarie conoscenze di base di [Git e GitHub.com](https://guides.github.c
 **Passaggio 1:** Ignorare questo passaggio per le piccole modifiche. Se si è interessati a scrivere nuovo contenuto o a revisionare completamente un contenuto esistente, aprire un [problema](https://github.com/dotnet/docs/issues) descrivendo che cosa si intende fare.
 Il contenuto all'interno della cartella **docs** è suddiviso in sezioni visibili nel sommario. Definire la posizione del sommario in cui verrà inserito l'argomento. Ottenere feedback sulla proposta.
 
--oppure-
+oppure
 
 È anche possibile scegliere tra i problemi esistenti per cui sono previsti i contributi della community. In [Projects for .NET Community contributors](https://github.com/dotnet/docs/projects/35) (Progetti per i collaboratori della community di .NET) sono elencati molti elementi di lavoro disponibili per i collaboratori della community. In base ai propri interessi e livello di impegno, è possibile scegliere tra i problemi nelle categorie seguenti:
 
@@ -39,7 +39,7 @@ Il contenuto all'interno della cartella **docs** è suddiviso in sezioni visibil
 
 È anche possibile esaminare l'elenco di [problemi aperti](https://github.com/dotnet/docs/issues) e proporsi per lavorare a quelli a cui si è interessati. I problemi aperti per il contributo sono contrassegnati dall'etichetta [up-for-grabs](https://github.com/dotnet/docs/labels/up-for-grabs). 
 
-**Passaggio 2:** Creare una copia tramite fork dei repository `/dotnet/docs`, `dotnet/samples` o `dotnet/dotnet-api-docs` in base alle esigenze e creare un ramo per le modifiche.
+**Passaggio 2:** Creare una copia tramite fork dei repository `dotnet/docs`, `dotnet/samples` o `dotnet/dotnet-api-docs` in base alle esigenze e creare un ramo per le modifiche.
 
 Per le piccole modifiche, è possibile usare l'interfaccia Web di GitHub. È sufficiente fare clic su **Edit the file in your fork of this project** (Modifica il file nel fork di questo progetto) nel file che si vuole modificare. GitHub crea automaticamente il nuovo ramo quando si inviano le modifiche.
 
@@ -101,7 +101,7 @@ Inoltre, tutti gli esempi nelle cartelle *core* e *standard* devono essere compi
 Queste directory potrebbe essere espanse man mano che vengono aggiunti nuovi contenuti al repository docs. Verranno, ad esempio, aggiunte directory Xamarin, come le directory `xamarin-ios` e `xamarin-android`.
 
 Ogni esempio completo creato deve contenere un file *readme.md*. Questo file deve contenere una breve descrizione dell'esempio (uno o due paragrafi). Il file *readme.md* deve indicare ai lettori quali informazioni otterranno esplorando questo esempio. Il file *readme.md* deve contenere anche un collegamento al documento live nel [sito della documentazione di .NET](https://docs.microsoft.com/dotnet/welcome).
-Per determinare dove un determinato file del repository esegue il mapping a tale sito, sostituire `/docs` nel percorso del repository con `http://docs.microsoft.com/dotnet/articles`.
+Per determinare dove un determinato file del repository esegue il mapping a tale sito, sostituire `/docs` nel percorso del repository con `https://docs.microsoft.com/dotnet`.
 
 L'argomento conterrà anche collegamenti all'esempio. Creare un collegamento diretto alla cartella dell'esempio in GitHub.
 

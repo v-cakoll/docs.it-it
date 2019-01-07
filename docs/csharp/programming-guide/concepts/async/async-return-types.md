@@ -2,12 +2,12 @@
 title: Tipi restituiti async (C#)
 ms.date: 05/29/2017
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-ms.openlocfilehash: 3d3c7d610dd1287d2c7284a5edd9c92810a74dba
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 3dfc0c0505d827009dd3d179453869d3af6ab210
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036240"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53774589"
 ---
 # <a name="async-return-types-c"></a>Tipi restituiti async (C#)
 I metodi asincroni possono avere i seguenti tipi restituiti:
@@ -33,7 +33,7 @@ Nell'esempio seguente il metodo asincrono `GetLeisureHours` contiene un'istruzio
 
 Quando `GetLeisureHours` viene chiamato da un'espressione await nel metodo `ShowTodaysInfo`, l'espressione recupera il valore intero (valore di `leisureHours`) archiviato nell'attività restituita dal metodo `GetLeisureHours`. Per altre informazioni sulle espressioni await, vedere [await](../../../../csharp/language-reference/keywords/await.md).  
   
-È possibile capire meglio il modo in cui ciò avviene separando la chiamata a `GetLeisureHours` dall'applicazione di `await`, come illustrato dal codice seguente. Una chiamata al metodo `GetLeisureHours` che non viene immediatamente attesa restituisce un tipo `Task<int>`, come ci si aspetterebbe dalla dichiarazione del metodo. Nell'esempio, l'attività viene assegnata alla variabile `infoTask`. Poiché `infoTask` è un <xref:System.Threading.Tasks.Task%601>, contiene una proprietà <xref:System.Threading.Tasks.Task%601.Result> di tipo `TResult`. In questo caso, `TResult` rappresenta un tipo Integer. Quando si applica `await` a `infoTask`, l'espressione await restituisce il contenuto della proprietà <xref:System.Threading.Tasks.Task%601.Result%2A> di `infoTask`. Il valore viene assegnato alla variabile `ret`.  
+È possibile capire meglio il modo in cui ciò avviene separando la chiamata a `GetLeisureHours` dall'applicazione di `await`, come illustrato dal codice seguente. Una chiamata al metodo `GetLeisureHours` che non viene immediatamente attesa restituisce un tipo `Task<int>`, come ci si aspetterebbe dalla dichiarazione del metodo. Nell'esempio, l'attività viene assegnata alla variabile `integerTask`. Poiché `integerTask` è un <xref:System.Threading.Tasks.Task%601>, contiene una proprietà <xref:System.Threading.Tasks.Task%601.Result> di tipo `TResult`. In questo caso, `TResult` rappresenta un tipo Integer. Quando si applica `await` a `integerTask`, l'espressione await restituisce il contenuto della proprietà <xref:System.Threading.Tasks.Task%601.Result%2A> di `integerTask`. Il valore viene assegnato alla variabile `ret`.  
   
 > [!IMPORTANT]
 >  La proprietà <xref:System.Threading.Tasks.Task%601.Result%2A> è una proprietà di blocco. Se si prova ad accedervi prima del completamento dell'attività, il thread attualmente attivo viene bloccato fino a quando l'attività non viene completata e il valore non è disponibile. Nella maggior parte dei casi, è consigliabile accedere al valore usando `await` invece di accedere direttamente alla proprietà. <br/> Nell'esempio precedente viene recuperato il valore della proprietà <xref:System.Threading.Tasks.Task%601.Result%2A> per bloccare il thread principale in modo che il metodo `ShowTodaysInfo` possa completare l'esecuzione prima del termine dell'applicazione.  

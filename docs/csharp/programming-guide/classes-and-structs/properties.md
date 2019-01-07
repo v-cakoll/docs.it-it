@@ -8,12 +8,12 @@ helpviewer_keywords:
 - properties [C#]
 - C# language, properties
 ms.assetid: e295a8a2-b357-4ee7-a12e-385a44146fa8
-ms.openlocfilehash: ec34d6f49a538ac106196c342a7ff0f9dad8b6d8
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: c37a273b4091d98ccc202f7d98859333658ccf7f
+ms.sourcegitcommit: 882a2f56bf6afdcb40d468e4ae9371296822b68c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242776"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53451209"
 ---
 # <a name="properties-c-programming-guide"></a>Proprietà (Guida per programmatori C#)
 
@@ -34,7 +34,7 @@ Una proprietà è un membro che fornisce un meccanismo flessibile per leggere, s
 
 Un modello di base per l'implementazione di una proprietà prevede l'uso di un campo sottostante privato per l'impostazione e il recupero del valore della proprietà. La funzione di accesso `get` restituisce il valore del campo privato e la funzione di accesso `set` può eseguire una convalida dei dati prima di assegnare un valore al campo privato. Entrambe le funzioni di accesso possono anche eseguire una conversione o un calcolo nei dati prima che vengano archiviati o restituiti.
 
-L'esempio seguente illustra il modello. Nell'esempio la classe `TimePeriod` rappresenta un intervallo di tempo. Internamente la classe archivia l'intervallo di tempo in secondi in un campo privato denominato `seconds`. Una proprietà di lettura/scrittura denominata `Hours` consente al cliente di specificare l'intervallo di tempo in ore. Entrambe le funzioni di accesso `get` e `set` eseguono la conversione necessaria tra ore e secondi. Inoltre, la funzione di accesso `set` convalida i dati e genera <xref:System.ArgumentOutOfRangeException> se il numero di ore non è valido. 
+L'esempio seguente illustra il modello. Nell'esempio la classe `TimePeriod` rappresenta un intervallo di tempo. Internamente la classe archivia l'intervallo di tempo in secondi in un campo privato denominato `_seconds`. Una proprietà di lettura/scrittura denominata `Hours` consente al cliente di specificare l'intervallo di tempo in ore. Entrambe le funzioni di accesso `get` e `set` eseguono la conversione necessaria tra ore e secondi. Inoltre, la funzione di accesso `set` convalida i dati e genera <xref:System.ArgumentOutOfRangeException> se il numero di ore non è valido. 
    
  [!code-csharp[Properties#1](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-1.cs)]  
   

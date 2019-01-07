@@ -11,22 +11,102 @@ metadata:
   interactive: csharp
   nextTutorialHref: list-collection.yml
   nextTutorialTitle: Raccolte in C#
-  ms.openlocfilehash: c8f93bd922b1003aafd50d5e95d92bcb492106c1
-  ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+  ms.openlocfilehash: c5d9ba80df952a58740ac2557bfc0011ef2ea539
+  ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
   ms.translationtype: HT
   ms.contentlocale: it-IT
-  ms.lasthandoff: 12/10/2018
-  ms.locfileid: "53149211"
+  ms.lasthandoff: 01/04/2019
+  ms.locfileid: "54030412"
 items:
 - durationInMinutes: 2
   content: >
     Questa esercitazione descrive come usare l'[interpolazione di stringhe](../../language-reference/tokens/interpolated.md) per inserire i valori in un'unica stringa. Descrive anche come controllare la formattazione del testo della stringa dei risultati. È necessario usare il browser per scrivere ed eseguire codice C# e visualizzare immediatamente i risultati.
 - title: Creare una stringa interpolata
   durationInMinutes: 2
-  content: "Eseguire il codice seguente nella finestra interattiva. A tale scopo, digitare il codice nella finestra interattiva (sostituire `<name>` con il proprio nome) e selezionare **Esegui**:\n\n```csharp\nvar name = \"<name>\";\nConsole.WriteLine($\"Hello, {name}. It's a pleasure to meet you!\");\n```\n\nQuando si esegue il codice, **Output** visualizza una stringa contenente il nome dell'utente nel messaggio di saluto. L'argomento di stringa della chiamata al metodo <xref:System.Console.WriteLine%2A> è una *stringa interpolata*. Si tratta di un tipo di modello che consente di costruire un'unica stringa detta *stringa di risultato* da una stringa che include codice incorporato. Le stringhe interpolate sono particolarmente utili per inserire valori in una stringa o per concatenare (unire) più stringhe. \n\nL'esempio precedente contiene i due elementi che devono essere presenti in ogni stringa interpolata: \n\n- Un valore letterale stringa che inizia con il carattere `$` prima delle virgolette inglesi aperte. Tra il simbolo `$` e le virgolette non devono essere presenti spazi. Per vedere che cosa accade se si include uno spazio, inserirne uno dopo il carattere `$` nella finestra interattiva ed eseguire il codice aggiornato. Il compilatore C# restituisce il messaggio \"Carattere '$' imprevisto\". \n\n- Una o più *espressioni interpolate*. Un'espressione interpolata è indicata tra parentesi graffe di apertura e chiusura (`{` e `}`). All'interno delle parentesi graffe è possibile inserire qualsiasi espressione C# che restituisce un valore, incluso `null`. \n\nOra si proveranno altri esempi di interpolazione di stringhe con altri tipi di dati.\n\n> [!NOTE]\n> Questa esperienza di scrittura del codice online è in modalità di anteprima. Se si verificano problemi, segnalarli [nel repository dotnet/try](https://github.com/dotnet/try/issues).\n"
+  content: >
+    Eseguire il codice seguente nella finestra interattiva. A tale scopo, digitare il codice nella finestra interattiva (sostituire `<name>` con il proprio nome) e selezionare **Esegui**:
+
+
+    ```csharp
+
+    var name = "<name>";
+
+    Console.WriteLine($"Hello, {name}. It's a pleasure to meet you!");
+
+    ```
+
+
+    Quando si esegue il codice, **Output** visualizza una stringa contenente il nome dell'utente nel messaggio di saluto. L'argomento di stringa della chiamata al metodo <xref:System.Console.WriteLine%2A> è una *stringa interpolata*. Si tratta di un tipo di modello che consente di costruire un'unica stringa detta *stringa di risultato* da una stringa che include codice incorporato. Le stringhe interpolate sono particolarmente utili per inserire valori in una stringa o per concatenare (unire) più stringhe.
+
+
+    L'esempio precedente contiene i due elementi che devono essere presenti in ogni stringa interpolata:
+
+
+    - Un valore letterale stringa che inizia con il carattere `$` prima delle virgolette inglesi aperte. Tra il simbolo `$` e le virgolette non devono essere presenti spazi. Per vedere che cosa accade se si include uno spazio, inserirne uno dopo il carattere `$` nella finestra interattiva ed eseguire il codice aggiornato. Il compilatore C# restituisce il messaggio "Carattere '$' imprevisto".
+
+
+    - Una o più *espressioni interpolate*. Un'espressione interpolata è indicata tra parentesi graffe di apertura e chiusura (`{` e `}`). All'interno delle parentesi graffe è possibile inserire qualsiasi espressione C# che restituisce un valore, incluso `null`.
+
+
+    Ora si proveranno altri esempi di interpolazione di stringhe con altri tipi di dati.
+
+
+    > [!NOTE]
+
+    > Questa esperienza di scrittura del codice online è in modalità di anteprima. Se si verificano problemi, segnalarli [nel repository dotnet/try](https://github.com/dotnet/try/issues).
 - title: Includere tipi di dati diversi
   durationInMinutes: 5
-  content: "Nel passaggio precedente è stata usata l'interpolazione di stringhe per inserire una stringa in un'altra. Il risultato di un'espressione interpolata può avere qualsiasi tipo di dati. Includiamo valori di vari tipi di dati in una stringa interpolata. \n\nNell'esempio seguente viene definito prima di tutto un tipo di dati [class](../../programming-guide/classes-and-structs/classes.md) `Vegetable` con la [proprietà](../../properties.md) `Name` e un [metodo](../../methods.md) `ToString` che esegue l'[override](../../language-reference/keywords/override.md) del comportamento del metodo <xref:System.Object.ToString?displayProperty=nameWithType>. Il [modificatore di accesso `public`](../../language-reference/keywords/public.md)rende tale metodo disponibile per qualsiasi codice client per ottenere la rappresentazione stringa di un'istanza di `Vegetable`. Nell'esempio il metodo `Vegetable.ToString` restituisce il valore della proprietà `Name` inizializzata nel [costruttore](../../programming-guide/classes-and-structs/constructors.md) `Vegetable`: `Vegetable(string name) => Name = name;`. Viene quindi creata un'istanza della classe `Vegetable` denominata `item` usando la [parola chiave `new`](../../language-reference/keywords/new-operator.md) e specificando un nome per il costruttore `Vegetable`. Infine, includere l'istanza in una stringa interpolata che contenga anche un valore <xref:System.DateTime>, un valore <xref:System.Decimal> e un valore di [enumerazione](../../programming-guide/enumeration-types.md)`Unit`. Eseguire il codice seguente nella finestra interattiva:\n\n```csharp\npublic class Vegetable\n{\n   public Vegetable(string name) => Name = name;\n\n   public string Name { get; }\n\n   public override string ToString() => Name;\n}\n\npublic enum Unit { item, kilogram, gram, dozen };\n\nvar item = new Vegetable(\"eggplant\");\nvar date = DateTime.Now;\nvar price = 1.99m;\nvar unit = Unit.item;\nConsole.WriteLine($\"On {date}, the price of {item} was {price} per {unit}.\");\n```\n\nL'espressione interpolata `item` nella stringa interpolata restituisce il testo \"eggplant\" nella stringa di risultato. Questo accade perché, quando il tipo di risultato dell'espressione non è una stringa, il risultato restituisce una stringa nel modo seguente:\n\n- Se l'espressione interpolata restituisce `null`, viene usata una stringa vuota (\"\" o <xref:System.String.Empty?displayProperty=nameWithType>).\n\n- Se l'espressione interpolata non restituisce `null`, in genere viene chiamato il metodo `ToString` del tipo di risultato. È possibile testare questo processo aggiornando l'implementazione del metodo `Vegetable.ToString`. Potrebbe anche non essere necessario implementare il metodo `ToString`, poiché ogni tipo prevede un'implementazione di questo metodo. Per il test di questo funzionamento, impostare come commento la definizione del metodo `Vegetable.ToString` nell'esempio (facendola precedere dal simbolo di commento `//`). Nell'output la stringa \"eggplant\" viene sostituita dal nome completo del tipo (lo spazio dei nomi definito da REPL di C# insieme al nome di tipo). Questo è il funzionamento predefinito del metodo <xref:System.Object.ToString?displayProperty=nameWithType>. Il comportamento predefinito del metodo `ToString` per un tipo di enumerazione prevede la restituzione della rappresentazione stringa di un valore usato nella definizione dell'enumerazione.    \n\nNell'output di questo esempio la data è troppo precisa (il prezzo delle melanzane non varia ogni secondo) e il valore del prezzo non indica una valuta. Nel passaggio successivo si apprenderà come risolvere questi problemi controllando la formattazione delle rappresentazioni di stringa dei risultati delle espressioni.\n\n> [!NOTE]\n> Questa esperienza di scrittura del codice online è in modalità di anteprima. Se si verificano problemi, segnalarli [nel repository dotnet/try](https://github.com/dotnet/try/issues).\n"
+  content: >
+    Nel passaggio precedente è stata usata l'interpolazione di stringhe per inserire una stringa in un'altra. Il risultato di un'espressione interpolata può avere qualsiasi tipo di dati. Includiamo valori di vari tipi di dati in una stringa interpolata.
+
+
+    Nell'esempio seguente viene definito prima di tutto un tipo di dati [class](../../programming-guide/classes-and-structs/classes.md) `Vegetable` con la [proprietà](../../properties.md) `Name` e un [metodo](../../methods.md) `ToString` che esegue l'[override](../../language-reference/keywords/override.md) del comportamento del metodo <xref:System.Object.ToString?displayProperty=nameWithType>. Il [modificatore di accesso `public`](../../language-reference/keywords/public.md)rende tale metodo disponibile per qualsiasi codice client per ottenere la rappresentazione stringa di un'istanza di `Vegetable`. Nell'esempio il metodo `Vegetable.ToString` restituisce il valore della proprietà `Name` inizializzata nel [costruttore](../../programming-guide/classes-and-structs/constructors.md) `Vegetable`: `Vegetable(string name) => Name = name;`. Viene quindi creata un'istanza della classe `Vegetable` denominata `item` usando la [parola chiave `new`](../../language-reference/keywords/new-operator.md) e specificando un nome per il costruttore `Vegetable`. Infine, includere l'istanza in una stringa interpolata che contenga anche un valore <xref:System.DateTime>, un valore <xref:System.Decimal> e un valore di [enumerazione](../../programming-guide/enumeration-types.md)`Unit`. Eseguire il codice seguente nella finestra interattiva:
+
+
+    ```csharp
+
+    public class Vegetable
+
+    {
+       public Vegetable(string name) => Name = name;
+
+       public string Name { get; }
+
+       public override string ToString() => Name;
+    }
+
+
+    public enum Unit { item, kilogram, gram, dozen };
+
+
+    var item = new Vegetable("eggplant");
+
+    var date = DateTime.Now;
+
+    var price = 1.99m;
+
+    var unit = Unit.item;
+
+    Console.WriteLine($"On {date}, the price of {item} was {price} per {unit}.");
+
+    ```
+
+
+    L'espressione interpolata `item` nella stringa interpolata restituisce il testo "eggplant" nella stringa di risultato. Questo accade perché, quando il tipo di risultato dell'espressione non è una stringa, il risultato restituisce una stringa nel modo seguente:
+
+
+    - Se l'espressione interpolata restituisce `null`, viene usata una stringa vuota ("" o <xref:System.String.Empty?displayProperty=nameWithType>).
+
+
+    - Se l'espressione interpolata non restituisce `null`, in genere viene chiamato il metodo `ToString` del tipo di risultato. È possibile testare questo processo aggiornando l'implementazione del metodo `Vegetable.ToString`. Potrebbe anche non essere necessario implementare il metodo `ToString`, poiché ogni tipo prevede un'implementazione di questo metodo. Per il test di questo funzionamento, impostare come commento la definizione del metodo `Vegetable.ToString` nell'esempio (facendola precedere dal simbolo di commento `//`). Nell'output la stringa "eggplant" viene sostituita dal nome completo del tipo (lo spazio dei nomi definito da REPL di C# insieme al nome di tipo). Questo è il funzionamento predefinito del metodo <xref:System.Object.ToString?displayProperty=nameWithType>. Il comportamento predefinito del metodo `ToString` per un tipo di enumerazione prevede la restituzione della rappresentazione stringa di un valore usato nella definizione dell'enumerazione.
+
+
+    Nell'output di questo esempio la data è troppo precisa (il prezzo delle melanzane non varia ogni secondo) e il valore del prezzo non indica una valuta. Nel passaggio successivo si apprenderà come risolvere questi problemi controllando la formattazione delle rappresentazioni di stringa dei risultati delle espressioni.
+
+
+    > [!NOTE]
+
+    > Questa esperienza di scrittura del codice online è in modalità di anteprima. Se si verificano problemi, segnalarli [nel repository dotnet/try](https://github.com/dotnet/try/issues).
 - title: Controllare la formattazione delle espressioni interpolate
   durationInMinutes: 5
   content: >
