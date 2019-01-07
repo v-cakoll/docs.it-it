@@ -9,105 +9,105 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 9fe75cf9524f6280bc649fb3784c21e4dd88adea
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 77aed78e7822e06b3b1e6c48b07790d93e09559c
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235784"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612725"
 ---
-# <a name="value-types-c-reference"></a><span data-ttu-id="955aa-102">Tipi valore (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="955aa-102">Value types (C# Reference)</span></span>
+# <a name="value-types-c-reference"></a><span data-ttu-id="6c3fd-102">Tipi valore (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="6c3fd-102">Value types (C# Reference)</span></span>
 
-<span data-ttu-id="955aa-103">Esistono due tipi di tipi valore:</span><span class="sxs-lookup"><span data-stu-id="955aa-103">There are two kinds of value types:</span></span>
+<span data-ttu-id="6c3fd-103">Esistono due tipi di tipi valore:</span><span class="sxs-lookup"><span data-stu-id="6c3fd-103">There are two kinds of value types:</span></span>
 
-- [<span data-ttu-id="955aa-104">Struct</span><span class="sxs-lookup"><span data-stu-id="955aa-104">Structs</span></span>](struct.md)
+- [<span data-ttu-id="6c3fd-104">Struct</span><span class="sxs-lookup"><span data-stu-id="6c3fd-104">Structs</span></span>](struct.md)
 
-- [<span data-ttu-id="955aa-105">Enumerazioni</span><span class="sxs-lookup"><span data-stu-id="955aa-105">Enumerations</span></span>](enum.md)
+- [<span data-ttu-id="6c3fd-105">Enumerazioni</span><span class="sxs-lookup"><span data-stu-id="6c3fd-105">Enumerations</span></span>](enum.md)
 
-## <a name="main-features-of-value-types"></a><span data-ttu-id="955aa-106">Funzionalità principali dei tipi valore</span><span class="sxs-lookup"><span data-stu-id="955aa-106">Main features of value types</span></span>
+## <a name="main-features-of-value-types"></a><span data-ttu-id="6c3fd-106">Funzionalità principali dei tipi valore</span><span class="sxs-lookup"><span data-stu-id="6c3fd-106">Main features of value types</span></span>
 
-<span data-ttu-id="955aa-107">Una variabile di un tipo valore contiene un valore del tipo.</span><span class="sxs-lookup"><span data-stu-id="955aa-107">A variable of a value type contains a value of the type.</span></span> <span data-ttu-id="955aa-108">Ad esempio, una variabile del tipo `int` potrebbe contenere il valore `42`.</span><span class="sxs-lookup"><span data-stu-id="955aa-108">For example, a variable of the `int` type might contain the value `42`.</span></span> <span data-ttu-id="955aa-109">Questo comportamento è diverso rispetto a una variabile di un tipo riferimento, che contiene un riferimento a un'istanza del tipo, noto anche come oggetto.</span><span class="sxs-lookup"><span data-stu-id="955aa-109">This differs from a variable of a reference type, which contains a reference to an instance of the type, also known as an object.</span></span> <span data-ttu-id="955aa-110">Quando si assegna un nuovo valore a una variabile di un tipo valore, viene copiato quel valore.</span><span class="sxs-lookup"><span data-stu-id="955aa-110">When you assign a new value to a variable of a value type, that value is copied.</span></span> <span data-ttu-id="955aa-111">Quando si assegna un nuovo valore a una variabile di un tipo riferimento, viene copiato il riferimento, non l'oggetto stesso.</span><span class="sxs-lookup"><span data-stu-id="955aa-111">When you assign a new value to a variable of a reference type, the reference is copied, not the object itself.</span></span>
+<span data-ttu-id="6c3fd-107">Una variabile di un tipo valore contiene un valore del tipo.</span><span class="sxs-lookup"><span data-stu-id="6c3fd-107">A variable of a value type contains a value of the type.</span></span> <span data-ttu-id="6c3fd-108">Ad esempio, una variabile del tipo `int` potrebbe contenere il valore `42`.</span><span class="sxs-lookup"><span data-stu-id="6c3fd-108">For example, a variable of the `int` type might contain the value `42`.</span></span> <span data-ttu-id="6c3fd-109">Questo comportamento è diverso rispetto a una variabile di un tipo riferimento, che contiene un riferimento a un'istanza del tipo, noto anche come oggetto.</span><span class="sxs-lookup"><span data-stu-id="6c3fd-109">This differs from a variable of a reference type, which contains a reference to an instance of the type, also known as an object.</span></span> <span data-ttu-id="6c3fd-110">Quando si assegna un nuovo valore a una variabile di un tipo valore, viene copiato quel valore.</span><span class="sxs-lookup"><span data-stu-id="6c3fd-110">When you assign a new value to a variable of a value type, that value is copied.</span></span> <span data-ttu-id="6c3fd-111">Quando si assegna un nuovo valore a una variabile di un tipo riferimento, viene copiato il riferimento, non l'oggetto stesso.</span><span class="sxs-lookup"><span data-stu-id="6c3fd-111">When you assign a new value to a variable of a reference type, the reference is copied, not the object itself.</span></span>
 
-<span data-ttu-id="955aa-112">Tutti i tipi valore sono derivati in modo implicito da <xref:System.ValueType?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="955aa-112">All value types are derived implicitly from the <xref:System.ValueType?displayProperty=nameWithType>.</span></span>  
-  
-<span data-ttu-id="955aa-113">A differenza dei tipi riferimento, non è possibile derivare un nuovo tipo da un tipo valore.</span><span class="sxs-lookup"><span data-stu-id="955aa-113">Unlike with reference types, you cannot derive a new type from a value type.</span></span> <span data-ttu-id="955aa-114">Tuttavia, come i tipi riferimento, gli struct possono implementare interfacce.</span><span class="sxs-lookup"><span data-stu-id="955aa-114">However, like reference types, structs can implement interfaces.</span></span>  
-  
-<span data-ttu-id="955aa-115">Le variabili del tipo valore non possono essere `null` per impostazione predefinita.</span><span class="sxs-lookup"><span data-stu-id="955aa-115">Value type variables cannot be `null` by default.</span></span> <span data-ttu-id="955aa-116">Le variabili dei [tipi nullable](../../../csharp/programming-guide/nullable-types/index.md) corrispondenti possono invece essere `null`.</span><span class="sxs-lookup"><span data-stu-id="955aa-116">However, variables of the corresponding [nullable types](../../../csharp/programming-guide/nullable-types/index.md) can be `null`.</span></span>
-  
-<span data-ttu-id="955aa-117">Ogni tipo valore ha un costruttore predefinito implicito che inizializza il valore predefinito di tale tipo.</span><span class="sxs-lookup"><span data-stu-id="955aa-117">Each value type has an implicit default constructor that initializes the default value of that type.</span></span> <span data-ttu-id="955aa-118">Per informazioni sui valori predefiniti dei tipi valore, vedere [Tabella dei valori predefiniti](default-values-table.md).</span><span class="sxs-lookup"><span data-stu-id="955aa-118">For information about default values of value types, see [Default values table](default-values-table.md).</span></span>  
-  
-## <a name="simple-types"></a><span data-ttu-id="955aa-119">Tipi semplici</span><span class="sxs-lookup"><span data-stu-id="955aa-119">Simple types</span></span>
+<span data-ttu-id="6c3fd-112">Tutti i tipi valore sono derivati in modo implicito da <xref:System.ValueType?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="6c3fd-112">All value types are derived implicitly from the <xref:System.ValueType?displayProperty=nameWithType>.</span></span>
 
-<span data-ttu-id="955aa-120">I *tipi semplici* sono un set di tipi struct predefiniti forniti da C# e comprendono i tipi seguenti:</span><span class="sxs-lookup"><span data-stu-id="955aa-120">The *simple types* are a set of predefined struct types provided by C# and comprise the following types:</span></span>
+<span data-ttu-id="6c3fd-113">A differenza dei tipi riferimento, non è possibile derivare un nuovo tipo da un tipo valore.</span><span class="sxs-lookup"><span data-stu-id="6c3fd-113">Unlike with reference types, you cannot derive a new type from a value type.</span></span> <span data-ttu-id="6c3fd-114">Tuttavia, come i tipi riferimento, gli struct possono implementare interfacce.</span><span class="sxs-lookup"><span data-stu-id="6c3fd-114">However, like reference types, structs can implement interfaces.</span></span>
 
-- <span data-ttu-id="955aa-121">[Tipi integrali](integral-types-table.md): i tipi numerici interi e il tipo [char](char.md)</span><span class="sxs-lookup"><span data-stu-id="955aa-121">[Integral types](integral-types-table.md): integer numeric types and the [char](char.md) type</span></span>
-- [<span data-ttu-id="955aa-122">Tipi a virgola mobile</span><span class="sxs-lookup"><span data-stu-id="955aa-122">Floating-point types</span></span>](floating-point-types-table.md)
-- [<span data-ttu-id="955aa-123">bool</span><span class="sxs-lookup"><span data-stu-id="955aa-123">bool</span></span>](bool.md)
+<span data-ttu-id="6c3fd-115">Le variabili del tipo valore non possono essere `null` per impostazione predefinita.</span><span class="sxs-lookup"><span data-stu-id="6c3fd-115">Value type variables cannot be `null` by default.</span></span> <span data-ttu-id="6c3fd-116">Le variabili dei [tipi nullable](../../../csharp/programming-guide/nullable-types/index.md) corrispondenti possono invece essere `null`.</span><span class="sxs-lookup"><span data-stu-id="6c3fd-116">However, variables of the corresponding [nullable types](../../../csharp/programming-guide/nullable-types/index.md) can be `null`.</span></span>
 
-<span data-ttu-id="955aa-124">I tipi semplici sono identificati tramite parole chiave, le quali sono in realtà semplicemente degli alias dei tipi struct predefiniti nello spazio dei nomi <xref:System>.</span><span class="sxs-lookup"><span data-stu-id="955aa-124">The simple types are identified through keywords, but these keywords are simply aliases for predefined struct types in the <xref:System> namespace.</span></span> <span data-ttu-id="955aa-125">Ad esempio, [int](int.md) è un alias di <xref:System.Int32?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="955aa-125">For example, [int](int.md) is an alias of <xref:System.Int32?displayProperty=nameWithType>.</span></span> <span data-ttu-id="955aa-126">Per un elenco completo degli alias, vedere [Tabella dei tipi incorporati](built-in-types-table.md).</span><span class="sxs-lookup"><span data-stu-id="955aa-126">For a complete list of aliases, see [Built-in types table](built-in-types-table.md).</span></span>
+<span data-ttu-id="6c3fd-117">Ogni tipo valore ha un costruttore predefinito implicito che inizializza il valore predefinito di tale tipo.</span><span class="sxs-lookup"><span data-stu-id="6c3fd-117">Each value type has an implicit default constructor that initializes the default value of that type.</span></span> <span data-ttu-id="6c3fd-118">Per informazioni sui valori predefiniti dei tipi valore, vedere [Tabella dei valori predefiniti](default-values-table.md).</span><span class="sxs-lookup"><span data-stu-id="6c3fd-118">For information about default values of value types, see [Default values table](default-values-table.md).</span></span>
 
-<span data-ttu-id="955aa-127">I tipi semplici si differenziano da altri tipi struct in quanto permettono alcune operazioni aggiuntive:</span><span class="sxs-lookup"><span data-stu-id="955aa-127">The simple types differ from other struct types in that they permit certain additional operations:</span></span>
+## <a name="simple-types"></a><span data-ttu-id="6c3fd-119">Tipi semplici</span><span class="sxs-lookup"><span data-stu-id="6c3fd-119">Simple types</span></span>
 
-- <span data-ttu-id="955aa-128">I tipi semplici possono essere inizializzati mediante valori letterali.</span><span class="sxs-lookup"><span data-stu-id="955aa-128">Simple types can be initialized by using literals.</span></span> <span data-ttu-id="955aa-129">Ad esempio, `'A'` è un valore letterale del tipo `char` e `2001` è un valore letterale del tipo `int`.</span><span class="sxs-lookup"><span data-stu-id="955aa-129">For example, `'A'` is a literal of the type `char` and `2001` is a literal of the type `int`.</span></span>
+<span data-ttu-id="6c3fd-120">I *tipi semplici* sono un set di tipi struct predefiniti forniti da C# e comprendono i tipi seguenti:</span><span class="sxs-lookup"><span data-stu-id="6c3fd-120">The *simple types* are a set of predefined struct types provided by C# and comprise the following types:</span></span>
 
-- <span data-ttu-id="955aa-130">È possibile dichiarare costanti dei tipi semplici con la parola chiave [const](const.md).</span><span class="sxs-lookup"><span data-stu-id="955aa-130">You can declare constants of the simple types with the [const](const.md) keyword.</span></span> <span data-ttu-id="955aa-131">Non sono ammesse costanti di altri tipi struct.</span><span class="sxs-lookup"><span data-stu-id="955aa-131">It's not possible to have constants of other struct types.</span></span>
+- <span data-ttu-id="6c3fd-121">[Tipi integrali](integral-types-table.md): i tipi numerici interi e il tipo [char](char.md)</span><span class="sxs-lookup"><span data-stu-id="6c3fd-121">[Integral types](integral-types-table.md): integer numeric types and the [char](char.md) type</span></span>
+- [<span data-ttu-id="6c3fd-122">Tipi a virgola mobile</span><span class="sxs-lookup"><span data-stu-id="6c3fd-122">Floating-point types</span></span>](floating-point-types-table.md)
+- [<span data-ttu-id="6c3fd-123">bool</span><span class="sxs-lookup"><span data-stu-id="6c3fd-123">bool</span></span>](bool.md)
 
-- <span data-ttu-id="955aa-132">Le espressioni costanti, in cui tutti gli operandi sono costanti di tipo semplice, vengono valutate in fase di compilazione.</span><span class="sxs-lookup"><span data-stu-id="955aa-132">Constant expressions, whose operands are all simple type constants, are evaluated at compile time.</span></span>
+<span data-ttu-id="6c3fd-124">I tipi semplici sono identificati tramite parole chiave, le quali sono in realtà semplicemente degli alias dei tipi struct predefiniti nello spazio dei nomi <xref:System>.</span><span class="sxs-lookup"><span data-stu-id="6c3fd-124">The simple types are identified through keywords, but these keywords are simply aliases for predefined struct types in the <xref:System> namespace.</span></span> <span data-ttu-id="6c3fd-125">Ad esempio, [int](int.md) è un alias di <xref:System.Int32?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="6c3fd-125">For example, [int](int.md) is an alias of <xref:System.Int32?displayProperty=nameWithType>.</span></span> <span data-ttu-id="6c3fd-126">Per un elenco completo degli alias, vedere [Tabella dei tipi incorporati](built-in-types-table.md).</span><span class="sxs-lookup"><span data-stu-id="6c3fd-126">For a complete list of aliases, see [Built-in types table](built-in-types-table.md).</span></span>
 
-<span data-ttu-id="955aa-133">Per altre informazioni, vedere la sezione [Tipi semplici](~/_csharplang/spec/types.md#simple-types) nella [specifica del linguaggio C#](../language-specification/index.md).</span><span class="sxs-lookup"><span data-stu-id="955aa-133">For more information, see the [Simple types](~/_csharplang/spec/types.md#simple-types) section of the [C# language specification](../language-specification/index.md).</span></span>
-  
-## <a name="initializing-value-types"></a><span data-ttu-id="955aa-134">Inizializzazione dei tipi valore</span><span class="sxs-lookup"><span data-stu-id="955aa-134">Initializing value types</span></span>
+<span data-ttu-id="6c3fd-127">I tipi semplici si differenziano da altri tipi struct in quanto permettono alcune operazioni aggiuntive:</span><span class="sxs-lookup"><span data-stu-id="6c3fd-127">The simple types differ from other struct types in that they permit certain additional operations:</span></span>
 
- <span data-ttu-id="955aa-135">Le variabili locali in C# devono essere inizializzate prima di poter essere usate.</span><span class="sxs-lookup"><span data-stu-id="955aa-135">Local variables in C# must be initialized before they are used.</span></span> <span data-ttu-id="955aa-136">È ad esempio possibile dichiarare una variabile locale senza inizializzazione, come nell'esempio seguente:</span><span class="sxs-lookup"><span data-stu-id="955aa-136">For example, you might declare a local variable without initialization as in the following example:</span></span>  
-  
-```csharp  
-int myInt;  
-```  
-  
- <span data-ttu-id="955aa-137">Non è possibile usarla prima di averla inizializzata.</span><span class="sxs-lookup"><span data-stu-id="955aa-137">You cannot use it before you initialize it.</span></span> <span data-ttu-id="955aa-138">È possibile inizializzarla mediante l'istruzione seguente:</span><span class="sxs-lookup"><span data-stu-id="955aa-138">You can initialize it using the following statement:</span></span>  
-  
-```csharp  
-myInt = new int();  // Invoke default constructor for int type.  
-```  
-  
- <span data-ttu-id="955aa-139">Questa istruzione è equivalente all'istruzione seguente:</span><span class="sxs-lookup"><span data-stu-id="955aa-139">This statement is equivalent to the following statement:</span></span>  
-  
-```csharp  
-myInt = 0;         // Assign an initial value, 0 in this example.  
-```  
-  
- <span data-ttu-id="955aa-140">Naturalmente, è possibile inserire la dichiarazione e l'inizializzazione nella stessa istruzione, come negli esempi seguenti:</span><span class="sxs-lookup"><span data-stu-id="955aa-140">You can, of course, have the declaration and the initialization in the same statement as in the following examples:</span></span>  
-  
-```csharp  
-int myInt = new int();  
-```  
-  
- <span data-ttu-id="955aa-141">- oppure -</span><span class="sxs-lookup"><span data-stu-id="955aa-141">–or–</span></span>  
-  
-```csharp  
-int myInt = 0;  
-```  
-  
- <span data-ttu-id="955aa-142">Usando l'operatore [new](new.md), viene chiamato il costruttore predefinito del tipo specifico e viene assegnato il valore predefinito alla variabile.</span><span class="sxs-lookup"><span data-stu-id="955aa-142">Using the [new](new.md) operator calls the default constructor of the specific type and assigns the default value to the variable.</span></span> <span data-ttu-id="955aa-143">Nell'esempio precedente, il costruttore predefinito assegna il valore `0` a `myInt`.</span><span class="sxs-lookup"><span data-stu-id="955aa-143">In the preceding example, the default constructor assigned the value `0` to `myInt`.</span></span> <span data-ttu-id="955aa-144">Per altre informazioni sui valori assegnati chiamando i costruttori predefiniti, vedere [Tabella dei valori predefiniti](default-values-table.md).</span><span class="sxs-lookup"><span data-stu-id="955aa-144">For more information about values assigned by calling default constructors, see [Default values table](default-values-table.md).</span></span>  
-  
- <span data-ttu-id="955aa-145">Con i tipi definiti dall'utente, usare [new](new.md) per richiamare il costruttore predefinito.</span><span class="sxs-lookup"><span data-stu-id="955aa-145">With user-defined types, use [new](new.md) to invoke the default constructor.</span></span> <span data-ttu-id="955aa-146">Ad esempio, l'istruzione seguente richiama il costruttore predefinito dello struct `Point`:</span><span class="sxs-lookup"><span data-stu-id="955aa-146">For example, the following statement invokes the default constructor of the `Point` struct:</span></span>  
-  
-```csharp  
-Point p = new Point(); // Invoke default constructor for the struct.  
-```  
-  
- <span data-ttu-id="955aa-147">Dopo questa chiamata, lo struct viene considerato definitivamente assegnato, ovvero tutti i relativi membri sono inizializzati sui valori predefiniti.</span><span class="sxs-lookup"><span data-stu-id="955aa-147">After this call, the struct is considered to be definitely assigned; that is, all its members are initialized to their default values.</span></span>  
-  
- <span data-ttu-id="955aa-148">Per altre informazioni sull'operatore `new`, vedere [new](new.md).</span><span class="sxs-lookup"><span data-stu-id="955aa-148">For more information about the `new` operator, see [new](new.md).</span></span>  
-  
- <span data-ttu-id="955aa-149">Per informazioni sulla formattazione dell'output dei tipi numerici, vedere [Tabella di formattazione dei risultati numerici](formatting-numeric-results-table.md).</span><span class="sxs-lookup"><span data-stu-id="955aa-149">For information about formatting the output of numeric types, see [Formatting numeric results table](formatting-numeric-results-table.md).</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="955aa-150">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="955aa-150">See also</span></span>
+- <span data-ttu-id="6c3fd-128">I tipi semplici possono essere inizializzati mediante valori letterali.</span><span class="sxs-lookup"><span data-stu-id="6c3fd-128">Simple types can be initialized by using literals.</span></span> <span data-ttu-id="6c3fd-129">Ad esempio, `'A'` è un valore letterale del tipo `char` e `2001` è un valore letterale del tipo `int`.</span><span class="sxs-lookup"><span data-stu-id="6c3fd-129">For example, `'A'` is a literal of the type `char` and `2001` is a literal of the type `int`.</span></span>
 
-- [<span data-ttu-id="955aa-151">Riferimenti per C#</span><span class="sxs-lookup"><span data-stu-id="955aa-151">C# Reference</span></span>](../index.md)  
-- [<span data-ttu-id="955aa-152">Guida per programmatori C#</span><span class="sxs-lookup"><span data-stu-id="955aa-152">C# Programming Guide</span></span>](../../programming-guide/index.md)  
-- [<span data-ttu-id="955aa-153">Parole chiave di C#</span><span class="sxs-lookup"><span data-stu-id="955aa-153">C# Keywords</span></span>](index.md)  
-- [<span data-ttu-id="955aa-154">Tipi</span><span class="sxs-lookup"><span data-stu-id="955aa-154">Types</span></span>](types.md)  
-- [<span data-ttu-id="955aa-155">Tabelle di riferimento per i tipi</span><span class="sxs-lookup"><span data-stu-id="955aa-155">Reference tables for types</span></span>](reference-tables-for-types.md)  
-- [<span data-ttu-id="955aa-156">Tipi riferimento</span><span class="sxs-lookup"><span data-stu-id="955aa-156">Reference Types</span></span>](reference-types.md)  
-- [<span data-ttu-id="955aa-157">Tipi nullable</span><span class="sxs-lookup"><span data-stu-id="955aa-157">Nullable types</span></span>](../../programming-guide/nullable-types/index.md)  
+- <span data-ttu-id="6c3fd-130">È possibile dichiarare costanti dei tipi semplici con la parola chiave [const](const.md).</span><span class="sxs-lookup"><span data-stu-id="6c3fd-130">You can declare constants of the simple types with the [const](const.md) keyword.</span></span> <span data-ttu-id="6c3fd-131">Non sono ammesse costanti di altri tipi struct.</span><span class="sxs-lookup"><span data-stu-id="6c3fd-131">It's not possible to have constants of other struct types.</span></span>
+
+- <span data-ttu-id="6c3fd-132">Le espressioni costanti, in cui tutti gli operandi sono costanti di tipo semplice, vengono valutate in fase di compilazione.</span><span class="sxs-lookup"><span data-stu-id="6c3fd-132">Constant expressions, whose operands are all simple type constants, are evaluated at compile time.</span></span>
+
+<span data-ttu-id="6c3fd-133">Per altre informazioni, vedere la sezione [Tipi semplici](~/_csharplang/spec/types.md#simple-types) nella [specifica del linguaggio C#](../language-specification/index.md).</span><span class="sxs-lookup"><span data-stu-id="6c3fd-133">For more information, see the [Simple types](~/_csharplang/spec/types.md#simple-types) section of the [C# language specification](../language-specification/index.md).</span></span>
+
+## <a name="initializing-value-types"></a><span data-ttu-id="6c3fd-134">Inizializzazione dei tipi valore</span><span class="sxs-lookup"><span data-stu-id="6c3fd-134">Initializing value types</span></span>
+
+<span data-ttu-id="6c3fd-135">Le variabili locali in C# devono essere inizializzate prima di poter essere usate.</span><span class="sxs-lookup"><span data-stu-id="6c3fd-135">Local variables in C# must be initialized before they are used.</span></span> <span data-ttu-id="6c3fd-136">È ad esempio possibile dichiarare una variabile locale senza inizializzazione, come nell'esempio seguente:</span><span class="sxs-lookup"><span data-stu-id="6c3fd-136">For example, you might declare a local variable without initialization as in the following example:</span></span>
+
+```csharp
+int myInt;
+```
+
+<span data-ttu-id="6c3fd-137">Non è possibile usarla prima di averla inizializzata.</span><span class="sxs-lookup"><span data-stu-id="6c3fd-137">You cannot use it before you initialize it.</span></span> <span data-ttu-id="6c3fd-138">È possibile inizializzarla mediante l'istruzione seguente:</span><span class="sxs-lookup"><span data-stu-id="6c3fd-138">You can initialize it using the following statement:</span></span>
+
+```csharp
+myInt = new int();  // Invoke default constructor for int type.
+```
+
+<span data-ttu-id="6c3fd-139">Questa istruzione è equivalente all'istruzione seguente:</span><span class="sxs-lookup"><span data-stu-id="6c3fd-139">This statement is equivalent to the following statement:</span></span>
+
+```csharp
+myInt = 0;         // Assign an initial value, 0 in this example.
+```
+
+<span data-ttu-id="6c3fd-140">Naturalmente, è possibile inserire la dichiarazione e l'inizializzazione nella stessa istruzione, come negli esempi seguenti:</span><span class="sxs-lookup"><span data-stu-id="6c3fd-140">You can, of course, have the declaration and the initialization in the same statement as in the following examples:</span></span>
+
+```csharp
+int myInt = new int();
+```
+
+<span data-ttu-id="6c3fd-141">- oppure -</span><span class="sxs-lookup"><span data-stu-id="6c3fd-141">–or–</span></span>
+
+```csharp
+int myInt = 0;
+```
+
+<span data-ttu-id="6c3fd-142">Usando l'operatore [new](new.md), viene chiamato il costruttore predefinito del tipo specifico e viene assegnato il valore predefinito alla variabile.</span><span class="sxs-lookup"><span data-stu-id="6c3fd-142">Using the [new](new.md) operator calls the default constructor of the specific type and assigns the default value to the variable.</span></span> <span data-ttu-id="6c3fd-143">Nell'esempio precedente, il costruttore predefinito assegna il valore `0` a `myInt`.</span><span class="sxs-lookup"><span data-stu-id="6c3fd-143">In the preceding example, the default constructor assigned the value `0` to `myInt`.</span></span> <span data-ttu-id="6c3fd-144">Per altre informazioni sui valori assegnati chiamando i costruttori predefiniti, vedere [Tabella dei valori predefiniti](default-values-table.md).</span><span class="sxs-lookup"><span data-stu-id="6c3fd-144">For more information about values assigned by calling default constructors, see [Default values table](default-values-table.md).</span></span>
+
+<span data-ttu-id="6c3fd-145">Con i tipi definiti dall'utente, usare [new](new.md) per richiamare il costruttore predefinito.</span><span class="sxs-lookup"><span data-stu-id="6c3fd-145">With user-defined types, use [new](new.md) to invoke the default constructor.</span></span> <span data-ttu-id="6c3fd-146">Ad esempio, l'istruzione seguente richiama il costruttore predefinito dello struct `Point`:</span><span class="sxs-lookup"><span data-stu-id="6c3fd-146">For example, the following statement invokes the default constructor of the `Point` struct:</span></span>
+
+```csharp
+Point p = new Point(); // Invoke default constructor for the struct.
+```
+
+<span data-ttu-id="6c3fd-147">Dopo questa chiamata, lo struct viene considerato definitivamente assegnato, ovvero tutti i relativi membri sono inizializzati sui valori predefiniti.</span><span class="sxs-lookup"><span data-stu-id="6c3fd-147">After this call, the struct is considered to be definitely assigned; that is, all its members are initialized to their default values.</span></span>
+
+<span data-ttu-id="6c3fd-148">Per altre informazioni sull'operatore `new`, vedere [new](new.md).</span><span class="sxs-lookup"><span data-stu-id="6c3fd-148">For more information about the `new` operator, see [new](new.md).</span></span>
+
+<span data-ttu-id="6c3fd-149">Per informazioni sulla formattazione dell'output dei tipi numerici, vedere [Tabella di formattazione dei risultati numerici](formatting-numeric-results-table.md).</span><span class="sxs-lookup"><span data-stu-id="6c3fd-149">For information about formatting the output of numeric types, see [Formatting numeric results table](formatting-numeric-results-table.md).</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="6c3fd-150">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="6c3fd-150">See also</span></span>
+
+- [<span data-ttu-id="6c3fd-151">Riferimenti per C#</span><span class="sxs-lookup"><span data-stu-id="6c3fd-151">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="6c3fd-152">Guida per programmatori C#</span><span class="sxs-lookup"><span data-stu-id="6c3fd-152">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="6c3fd-153">Parole chiave di C#</span><span class="sxs-lookup"><span data-stu-id="6c3fd-153">C# Keywords</span></span>](index.md)
+- [<span data-ttu-id="6c3fd-154">Tipi</span><span class="sxs-lookup"><span data-stu-id="6c3fd-154">Types</span></span>](types.md)
+- [<span data-ttu-id="6c3fd-155">Tabelle di riferimento per i tipi</span><span class="sxs-lookup"><span data-stu-id="6c3fd-155">Reference tables for types</span></span>](reference-tables-for-types.md)
+- [<span data-ttu-id="6c3fd-156">Tipi riferimento</span><span class="sxs-lookup"><span data-stu-id="6c3fd-156">Reference Types</span></span>](reference-types.md)
+- [<span data-ttu-id="6c3fd-157">Tipi nullable</span><span class="sxs-lookup"><span data-stu-id="6c3fd-157">Nullable types</span></span>](../../programming-guide/nullable-types/index.md)
