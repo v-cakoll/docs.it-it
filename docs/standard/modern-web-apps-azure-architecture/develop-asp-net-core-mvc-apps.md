@@ -4,12 +4,12 @@ description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Svil
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: 7459173f21bd5219c2aa7b994ac2b2b44857375f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: aed0ba4621eab91dd47df9ef760fdf8c39ff1103
+ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152779"
+ms.lasthandoff: 01/05/2019
+ms.locfileid: "54058503"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Sviluppare app ASP.NET Core MVC
 
@@ -69,13 +69,13 @@ Per le API Web, ASP.NET Core MVC supporta la [_negoziazione del contenuto_](/asp
 > ### <a name="references--mapping-requests-to-responses"></a>Riferimenti - Mapping delle richieste alle risposte
 >
 > - **Routing ad azioni del controller**
-> <https://docs.microsoft.com/aspnet/core/mvc/controllers/routing>
+ > <https://docs.microsoft.com/aspnet/core/mvc/controllers/routing>
 > - **Associazione di modelli**
-> <https://docs.microsoft.com/aspnet/core/mvc/models/model-binding>
+ > <https://docs.microsoft.com/aspnet/core/mvc/models/model-binding>
 > - **Convalida del modello**
-> <https://docs.microsoft.com/aspnet/core/mvc/models/validation>
+ > <https://docs.microsoft.com/aspnet/core/mvc/models/validation>
 > - **Filtri**
-> <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
+ > <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
 
 ## <a name="working-with-dependencies"></a>Uso delle dipendenze
 
@@ -213,7 +213,7 @@ Con l'aumento delle dimensioni delle applicazioni, diventa sempre più important
 
 Figura 7-2 Esecuzione della richiesta attraverso i filtri e pipeline della richiesta.
 
-Poiché i filtri vengono in genere implementati come attributi, è possibile applicare controller o azioni ai filtri. Quando vengono aggiunti in questo modo, i filtri specificati a livello di azione sostituiscono o sono basati sui filtri specificati a livello di controller che a loro volta sostituiscono i filtri globali. È possibile ad esempio usare l'attributo \[Route\] per creare route tra i controller e le azioni. Analogamente, l'autorizzazione può essere configurata a livello di controller e quindi sostituita da singole azioni, come illustrato nell'esempio seguente:
+I filtri vengono in genere implementati come attributi, quindi è possibile applicarli a controller o azioni (o persino a livello globale). Quando vengono aggiunti in questo modo, i filtri specificati a livello di azione sostituiscono o sono basati sui filtri specificati a livello di controller che a loro volta sostituiscono i filtri globali. È possibile ad esempio usare l'attributo \[Route\] per creare route tra i controller e le azioni. Analogamente, l'autorizzazione può essere configurata a livello di controller e quindi sostituita da singole azioni, come illustrato nell'esempio seguente:
 
 ```csharp
 [Authorize]
@@ -282,7 +282,7 @@ Per altre informazioni sull'implementazione di filtri e per scaricare un esempio
 > - **Aree**  
 >   <https://docs.microsoft.com/aspnet/core/mvc/controllers/areas>
 > - **MSDN Magazine - Funzionalità Feature Slices per ASP.NET Core MVC**  
- > <https://msdn.microsoft.com/magazine/mt763233.aspx>
+>   <https://msdn.microsoft.com/magazine/mt763233.aspx>
 > - **Filtri**  
 >   <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
 > - **MSDN - Real World ASP.NET Core MVC Filters (MSDN - Filtri reali di ASP.NET Core MVC)**  

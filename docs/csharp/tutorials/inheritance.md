@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 07/05/2018
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: 15e2ddd7e103857054973d6c4ed7401d6f91af0d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1938876bcf72fccd7582ede332d052fb3d759395
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502164"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53656193"
 ---
 # <a name="inheritance-in-c-and-net"></a>Ereditarietà in C# e .NET
 
@@ -98,7 +98,7 @@ public class B : A // Generates CS0534.
 }
 ```
 
-L'ereditarietà si applica solo alle classi e alle interfacce. Le altre categorie di tipi (struct, delegati ed enumerazioni) non supportano l'ereditarietà. Per queste regole, se si prova a compilare il codice come nell'esempio seguente, verrà generato l'errore del compilatore CS0527: "Il tipo 'ValueType' nell'elenco delle interfacce non è un'interfaccia". Il messaggio di errore indica che, sebbene sia possibile definire le interfacce implementate da un tipo struct, l'ereditarietà non è supportata.
+L'ereditarietà si applica solo alle classi e alle interfacce. Le altre categorie di tipi (struct, delegati ed enumerazioni) non supportano l'ereditarietà. Per queste regole, se si prova a compilare il codice come nell'esempio seguente, verrà generato l'errore del compilatore CS0527: "Il tipo 'ValueType' nell'elenco delle interfacce non è un'interfaccia." Il messaggio di errore indica che, sebbene sia possibile definire le interfacce implementate da un tipo struct, l'ereditarietà non è supportata.
 
 ```csharp
 using System;
@@ -152,7 +152,7 @@ Nella tabella seguente sono elencate le categorie di tipi che è possibile crear
 In genere l'ereditarietà consente di esprimere una relazione "è un" tra una classe di base e una o più classi derivate, in cui le classi derivate sono versioni specializzate della classe di base. La classe derivata è un tipo della classe di base. La classe `Publication` rappresenta ad esempio una pubblicazione di qualsiasi tipo e le classi `Book` e `Magazine` rappresentano tipi specifici di pubblicazioni.
 
 > [!NOTE]
-> Una classe o un tipo struct può implementare una o più interfacce. Anche se l'implementazione dell'interfaccia è spesso presentata come una soluzione alternativa all'ereditarietà singola o come modo per usare l'ereditarietà con struct, è stata ideata per esprimere una relazione diversa (una relazione "può fare") tra un'interfaccia e il relativo tipo di implementazione rispetto all'ereditarietà. Un'interfaccia definisce un subset di funzionalità che rende disponibili per i tipi di implementazione, ad esempio le funzionalità per verificare l'uguaglianza, confrontare o ordinare gli oggetti, nonché supportare la formattazione e l'analisi in base alle impostazioni cultura.
+> Una classe o uno struct può implementare una o più interfacce. Anche se l'implementazione dell'interfaccia è spesso presentata come una soluzione alternativa all'ereditarietà singola o come modo per usare l'ereditarietà con struct, è stata ideata per esprimere una relazione diversa (una relazione "può fare") tra un'interfaccia e il relativo tipo di implementazione rispetto all'ereditarietà. Un'interfaccia definisce un subset di funzionalità che rende disponibili per i tipi di implementazione, ad esempio le funzionalità per verificare l'uguaglianza, confrontare o ordinare gli oggetti, nonché supportare la formattazione e l'analisi in base alle impostazioni cultura.
 
 Si noti che "è un" esprime anche la relazione tra un tipo e un'istanza specifica di quel tipo. Nell'esempio seguente `Automobile` è una classe che ha tre proprietà univoche di sola lettura: `Make`, il produttore dell'automobile, `Model`, il tipo di automobile e `Year`, l'anno di produzione. La classe `Automobile` include anche un costruttore i cui argomenti vengono assegnati ai valori delle proprietà ed esegue l'override del metodo <xref:System.Object.ToString%2A?displayProperty=nameWithType> per generare una stringa che identifica in modo univoco l'istanza `Automobile` anziché la classe `Automobile`.
 
@@ -249,7 +249,7 @@ Oltre ai membri che eredita da `Publication`, la classe `Book` definisce i membr
 
 - Due costruttori
 
-  I due costruttori `Book` condividono tre parametri comuni. Due, *title* e *publisher*, corrispondono ai parametri del costruttore `Publication`. Il terzo è *author*, che viene archiviato in un campo privato `authorName`. Un costruttore include un parametro *isbn*, che viene archiviato nella proprietà automatica `ISBN`.
+  I due costruttori `Book` condividono tre parametri comuni. Due, *title* e *publisher*, corrispondono ai parametri del costruttore `Publication`. Il terzo è *author*, che viene archiviato in una proprietà `Author` pubblica non modificabile. Un costruttore include un parametro *isbn*, che viene archiviato nella proprietà automatica `ISBN`.
 
   Il primo costruttore usa la parola chiave [this](../language-reference/keywords/this.md) per chiamare l'altro costruttore. Il concatenamento di costruttori è un modello comune nella definizione dei costruttori. I costruttori con meno parametri forniscono i valori predefiniti quando chiamano il costruttore con il maggior numero di parametri.
 
@@ -257,11 +257,11 @@ Oltre ai membri che eredita da `Publication`, la classe `Book` definisce i membr
 
 - Una proprietà `ISBN` di sola lettura, che restituisce il numero ISBN (International Standard Book Number) dell'oggetto `Book`, un numero univoco a 10 o 13 cifre. Il numero ISBN viene fornito come argomento a uno dei costruttori `Book`. Il numero ISBN viene archiviato in un campo sottostante privato, che viene generato automaticamente dal compilatore.
 
-- Una proprietà `Author` di sola lettura. Il nome dell'autore viene fornito come argomento a entrambi i costruttori `Book` e viene archiviato nel campo privato `authorName`.
+- Una proprietà `Author` di sola lettura. Il nome dell'autore viene fornito come argomento a entrambi i costruttori `Book` e viene archiviato nella proprietà.
 
-- Due proprietà di sola lettura relative ai prezzi, `Price` e `Currency`. I relativi valori vengono forniti come argomenti in una chiamata al metodo `SetPrice`. Il prezzo viene archiviato in un campo privato, `bookPrice`. La proprietà `Currency` è il simbolo di valuta ISO a tre cifre, ad esempio USD per il dollaro statunitense, e viene archiviata nel campo privato `ISOCurrencySymbol`. I simboli di valuta ISO possono essere recuperati dalla proprietà <xref:System.Globalization.RegionInfo.ISOCurrencySymbol%2A>.
+- Due proprietà di sola lettura relative ai prezzi, `Price` e `Currency`. I relativi valori vengono forniti come argomenti in una chiamata al metodo `SetPrice`. La proprietà `Currency` è il simbolo di valuta ISO a tre cifre, ad esempio USD per il dollaro statunitense. I simboli di valuta ISO possono essere recuperati dalla proprietà <xref:System.Globalization.RegionInfo.ISOCurrencySymbol%2A>. Entrambe queste proprietà sono esternamente di sola lettura, ma possono essere entrambe impostate dal codice nella classe `Book`.
 
-- Un metodo `SetPrice`, che imposta i valori dei campi `bookPrice` e `ISOCurrencySymbol`. Si tratta dei valori restituiti dalle proprietà `Price` e `Currency`.
+- Un metodo `SetPrice`, che imposta i valori delle proprietà `Price` e `Currency`. Questi valori vengono restituiti dalle stesse proprietà.
 
 - Esegue l'override del metodo `ToString` ereditato da `Publication` e dei metodi <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> e <xref:System.Object.GetHashCode%2A> (ereditati da <xref:System.Object>).
 

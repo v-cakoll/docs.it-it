@@ -7,34 +7,34 @@ helpviewer_keywords:
 - types [C#], value types
 - types [C#], suffixes
 ms.assetid: 67d8f631-b6e3-4d83-9910-5ec497f8c5f3
-ms.openlocfilehash: d651350f46c0ec1947be9f4f586c341514356fd2
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 2475f63099e47beedc610b8815a8e39e1f7be77e
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244154"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611217"
 ---
 # <a name="value-types-table-c-reference"></a>Tabella dei tipi di valore (Riferimenti per C#)
 
-La tabella seguente mostra i tipi valore di C#.  
-  
-|Tipo valore|Category|Suffisso del tipo|  
-|----------------|--------------|-----------------|  
-|[bool](bool.md)|Booleano||  
-|[byte](byte.md)|Senza segno, numerico, [integrale](integral-types-table.md)||  
-|[char](char.md)|Senza segno, numerico, [integrale](integral-types-table.md)||  
-|[decimal](decimal.md)|Numerico, [virgola mobile](floating-point-types-table.md)|M o m|  
-|[double](double.md)|Numerico, [virgola mobile](floating-point-types-table.md)|D o d|  
-|[enum](enum.md)|Enumerazione||  
-|[float](float.md)|Numerico, [virgola mobile](floating-point-types-table.md)|F o f|  
-|[int](int.md)|Con segno, numerico, [integrale](integral-types-table.md)||  
-|[long](long.md)|Con segno, numerico, [integrale](integral-types-table.md)|L o l|  
-|[sbyte](sbyte.md)|Con segno, numerico, [integrale](integral-types-table.md)||  
-|[short](short.md)|Con segno, numerico, [integrale](integral-types-table.md)||  
-|[struct](struct.md)|Struttura definita dall'utente||  
-|[uint](uint.md)|Senza segno, numerico, [integrale](integral-types-table.md)|U o u|  
-|[ulong](ulong.md)|Senza segno, numerico, [integrale](integral-types-table.md)|UL, Ul, uL, ul, LU, Lu, lU o lu|  
-|[ushort](ushort.md)|Senza segno, numerico, [integrale](integral-types-table.md)||  
+La tabella seguente mostra i tipi valore di C#:
+
+|Tipo valore|Category|Suffisso del tipo|
+|----------------|--------------|-----------------|
+|[bool](bool.md)|Booleano||
+|[byte](byte.md)|Senza segno, numerico, [integrale](integral-types-table.md)||
+|[char](char.md)|Senza segno, numerico, [integrale](integral-types-table.md)||
+|[decimal](decimal.md)|Numerico, [virgola mobile](floating-point-types-table.md)|M o m|
+|[double](double.md)|Numerico, [virgola mobile](floating-point-types-table.md)|D o d|
+|[enum](enum.md)|Enumerazione||
+|[float](float.md)|Numerico, [virgola mobile](floating-point-types-table.md)|F o f|
+|[int](int.md)|Con segno, numerico, [integrale](integral-types-table.md)||
+|[long](long.md)|Con segno, numerico, [integrale](integral-types-table.md)|L o l|
+|[sbyte](sbyte.md)|Con segno, numerico, [integrale](integral-types-table.md)||
+|[short](short.md)|Con segno, numerico, [integrale](integral-types-table.md)||
+|[struct](struct.md)|Struttura definita dall'utente||
+|[uint](uint.md)|Senza segno, numerico, [integrale](integral-types-table.md)|U o u|
+|[ulong](ulong.md)|Senza segno, numerico, [integrale](integral-types-table.md)|UL, Ul, uL, ul, LU, Lu, lU o lu|
+|[ushort](ushort.md)|Senza segno, numerico, [integrale](integral-types-table.md)||
 
 ## <a name="remarks"></a>Note
 

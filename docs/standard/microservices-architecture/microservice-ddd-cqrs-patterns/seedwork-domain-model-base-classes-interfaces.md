@@ -4,12 +4,12 @@ description: Architettura dei microservizi .NET per applicazioni .NET in conteni
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 9a7ddbc8a15e4064b4446ff322148720312e7937
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3804ac13580a967bc95617acbce86a3a0c8e7292
+ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152227"
+ms.lasthandoff: 01/05/2019
+ms.locfileid: "54058542"
 ---
 # <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>Seedwork (classi di base riutilizzabili e interfacce per il modello di dominio)
 
@@ -17,7 +17,7 @@ La cartella della soluzione contiene una cartella denominata *SeedWork*. Tale ca
 
 La figura 7-12 illustra le classi che costituiscono la cartella SeedWork del modello di dominio nel microservizio degli ordini. La cartella contiene alcune classi di base personalizzate come Entity, ValueObject ed Enumeration e alcune interfacce. Queste interfacce (IRepository e IUnitOfWork) indicano al livello infrastruttura le implementazioni necessarie. Queste interfacce vengono usate anche dal livello dell'applicazione tramite l'inserimento delle dipendenze.
 
-![Il contenuto dettagliato della cartella SeedWork, che contiene le classi di base e le interfacce: Entity.cs, Enumeration.cs, IAggregateRoot.cs, IRepository.cs, IUnitOfWork.cs e ValueObject.cs](./media/image13.PNG)
+![Il contenuto dettagliato della cartella SeedWork, contenente le interfacce e le classi di base: Entity.cs, Enumeration.cs, IAggregateRoot.cs, IRepository.cs, IUnitOfWork.cs e ValueObject.cs](./media/image13.PNG)
 
 **Figura 7-12**. Set di esempio di classi di base e interfacce nella cartella"Seedwork" per il modello di dominio
 
@@ -25,7 +25,7 @@ Si tratta di un tipo di riutilizzo che può essere copiato e incollato e che mol
 
 ## <a name="the-custom-entity-base-class"></a>Classe di base Entity personalizzata
 
-Il codice seguente è un esempio di una classe di base Entity in cui è possibile inserire il codice che può essere usato allo stesso modo da qualsiasi entità di dominio, ad esempio dall'ID entità, dagli [operatori di uguaglianza](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/equality-comparison-operator), da un elenco di eventi di dominio per ogni entità e così via.
+Il codice seguente è un esempio di una classe di base Entity in cui è possibile inserire il codice che può essere usato allo stesso modo da qualsiasi entità di dominio, ad esempio dall'ID entità, dagli [operatori di uguaglianza](~/docs/csharp/language-reference/operators/equality-comparison-operator.md), da un elenco di eventi di dominio per ogni entità e così via.
 
 ```csharp
 // COMPATIBLE WITH ENTITY FRAMEWORK CORE (1.1 and later)

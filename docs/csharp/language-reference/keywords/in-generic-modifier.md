@@ -5,18 +5,18 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - contravariance, in keyword [C#]
 - in keyword [C#]
-ms.openlocfilehash: ea11fabd7974c67b1f1b3af017db1f34178bfae8
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: d43640cbde856ac1df8b5034f904da75de6b077c
+ms.sourcegitcommit: 8598d446303b545eed2d520a6ccd061c1a7d00cb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53238598"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53334782"
 ---
 # <a name="in-generic-modifier-c-reference"></a>in (Modificatore generico) (Riferimenti per C#)
 
 Per i parametri di tipo generico, la parola chiave `in` specifica che il parametro di tipo è controvariante. È possibile usare la parola chiave `in` in interfacce e delegati generici.
 
-La controvarianza consente di usare un tipo meno derivato di quello specificato dal parametro generico. Ciò consente la conversione implicita di classi che implementano interfacce varianti e la conversione implicita di tipi delegati. Nei parametri di tipo generico la covarianza e la controvarianza sono supportate per i tipi di riferimento, ma non per i tipi di valore.
+La controvarianza consente di usare un tipo meno derivato di quello specificato dal parametro generico. Ciò consente la conversione implicita di classi che implementano interfacce controvarianti e la conversione implicita di tipi delegati. Nei parametri di tipo generico la covarianza e la controvarianza sono supportate per i tipi di riferimento, ma non per i tipi di valore.
 
 Un tipo può essere dichiarato controvariante in un'interfaccia o in un delegato generico solo se definisce il tipo dei parametri di un metodo e non di un tipo restituito dal metodo. I parametri `In`, `ref` e `out` devono essere invarianti, ovvero non sono né covariante né controvariante.
 

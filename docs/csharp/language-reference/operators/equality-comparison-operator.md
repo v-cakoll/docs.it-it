@@ -1,31 +1,66 @@
 ---
 title: Operatore == - Riferimenti per C#
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 12/14/2018
 f1_keywords:
 - ==_CSharpKeyword
 helpviewer_keywords:
 - == operator [C#]
 - equality operator [C#]
 ms.assetid: 34c6b597-caa2-4855-a7cd-38ecdd11bd07
-ms.openlocfilehash: c6f93be4d422fe42787e36f5b86e2cccbfc645b7
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 6d86348eefc87e847267f262141ff49e5d51faae
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239014"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53655959"
 ---
 # <a name="-operator-c-reference"></a>Operatore == (Riferimenti per C#)
-Per i tipi valore predefiniti, l'operatore di uguaglianza (`==`) restituisce true se i valori degli operandi sono uguali, in caso contrario `false`. Per i tipi riferimento diversi da [string](../../../csharp/language-reference/keywords/string.md), `==` restituisce `true` se i due operandi fanno riferimento allo stesso oggetto. Per il tipo `string`, `==` confronta i valori delle stringhe.  
-  
-## <a name="remarks"></a>Note  
- I tipi valore definiti dall'utente possono eseguire l'overload dell'operatore `==` (vedere [operatore](../../../csharp/language-reference/keywords/operator.md)). Lo stesso vale per i tipi riferimento definiti dall'utente, anche se per impostazione predefinita `==` si comporta come descritto in precedenza per entrambi i tipi riferimento predefiniti e definiti dall'utente. Se `==` è sottoposto a overload, deve esserlo anche [!=](../../../csharp/language-reference/operators/not-equal-operator.md). Le operazioni sui tipi integrali sono generalmente consentite sull'enumerazione.  
-  
-## <a name="example"></a>Esempio  
- [!code-csharp[csRefOperators#36](../../../csharp/language-reference/operators/codesnippet/CSharp/equality-comparison-operator_1.cs)]  
-  
+
+L'operatore di uguaglianza `==` restituisce `true` se gli operandi sono uguali, `false` in caso contrario.
+
+## <a name="value-types-equality"></a>Uguaglianza dei tipi valore
+
+Gli operandi dei [tipi valore predefiniti](../keywords/value-types-table.md) sono uguali se i relativi valori sono uguali:
+
+[!code-csharp-interactive[value types equality](~/samples/snippets/csharp/language-reference/operators/EqualityAndNonEqualityExamples.cs#ValueTypesEquality)]
+
+> [!NOTE]
+> Per gli operatori relazionali `==`, `>`, `<` `>=`, e `<=`, se uno degli operandi non è un numero (<xref:System.Double.NaN?displayProperty=nameWithType> oppure <xref:System.Single.NaN?displayProperty=nameWithType>) il risultato dell'operazione è `false`. Questo significa che il valore `NaN` non è maggiore di, minore di, né uguale a qualsiasi altro valore `double` (o `float`). Per altre informazioni ed esempi, vedere l'articolo di riferimento per <xref:System.Double.NaN?displayProperty=nameWithType> o <xref:System.Single.NaN?displayProperty=nameWithType>.
+
+Due operandi dello stesso tipo [enum](../keywords/enum.md) sono uguali se i valori corrispondenti del tipo integrale sottostante sono uguali.
+
+Per impostazione predefinita, l'operatore `==` non è definito per un tipo [struct](../keywords/struct.md) definito dall'utente. Un tipo definito dall'utente può eseguire l'[overload](#operator-overloadability) dell'operatore `==`.
+
+A partire da C# 7.3, gli operatori `==` e [`!=`](not-equal-operator.md) sono supportati da [tuple](../../tuples.md) C#. Per altre informazioni, vedere la sezione [Uguaglianza e tuple](../../tuples.md#equality-and-tuples) nell'articolo [Tipi tupla in C#](../../tuples.md).
+
+## <a name="string-equality"></a>Uguaglianza di stringhe
+
+Due operandi [stringa](../keywords/string.md) sono uguali quando entrambi sono `null` o entrambe le istanze di stringa sono della stessa lunghezza e contengono caratteri identici in ogni posizione di carattere:
+
+[!code-csharp-interactive[string equality](~/samples/snippets/csharp/language-reference/operators/EqualityAndNonEqualityExamples.cs#StringEquality)]
+
+Questo è un confronto ordinale senza distinzione tra maiuscole e minuscole. Per altre informazioni su come confrontare le stringhe, vedere [Come confrontare stringhe in C#](../../how-to/compare-strings.md).
+
+## <a name="reference-types-equality"></a>Uguaglianza dei tipi riferimento
+
+Due operandi di tipo riferimento diversi da `string` sono uguali quando fanno riferimento allo stesso oggetto:
+
+[!code-csharp-interactive[reference type equality](~/samples/snippets/csharp/language-reference/operators/EqualityAndNonEqualityExamples.cs#ReferenceTypesEquality)]
+
+L'esempio mostra che l'operatore `==` è supportato dai tipi riferimento definiti dall'utente. Tuttavia, un tipo riferimento definito dall'utente può eseguire l'overload dell'operatore `==`. Se un tipo riferimento esegue l'overload dell'operatore `==`, usare il metodo <xref:System.Object.ReferenceEquals%2A?displayProperty=nameWithType> per verificare se due riferimenti di quel tipo fanno riferimento allo stesso oggetto.
+
+## <a name="operator-overloadability"></a>Overload degli operatori
+
+I tipi definiti dall'utente possono eseguire l'[overload](../keywords/operator.md) dell'operatore `==`. Se un tipo esegue l'overload dell'operatore di uguaglianza `==`, deve anche eseguire l'overload dell'[operatore di disuguaglianza](not-equal-operator.md) `!=`.
+
+## <a name="c-language-specification"></a>Specifiche del linguaggio C#
+
+Per altre informazioni, vedere la sezione [Operatori relazionali e di test del tipo](~/_csharplang/spec/expressions.md#relational-and-type-testing-operators) della [specifica del linguaggio C#](../language-specification/index.md).
+
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
-- [Operatori C#](../../../csharp/language-reference/operators/index.md)
+- [Riferimenti per C#](../index.md)
+- [Guida per programmatori C#](../../programming-guide/index.md)
+- [Operatori C#](index.md)
+- [Confronti di uguaglianza](../../programming-guide/statements-expressions-operators/equality-comparisons.md)

@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
-ms.openlocfilehash: fb2da0d37a3c72941e9ffdac52a6fdf24ec71b3a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 220e43ed6aadbcc443f4cf06310fe12e970abcf2
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149588"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030425"
 ---
 # <a name="best-practices-for-exceptions"></a>Procedure consigliate per le eccezioni
 

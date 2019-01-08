@@ -1,7 +1,7 @@
 ---
 title: Operatore != - Riferimenti per C#
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 12/14/2018
 f1_keywords:
 - '!=_CSharpKeyword'
 helpviewer_keywords:
@@ -9,26 +9,32 @@ helpviewer_keywords:
 - not equals operator (!=) [C#]
 - '!= operator [C#]'
 ms.assetid: eeff7a4e-ad6f-462d-9f8d-49e9b91c6c97
-ms.openlocfilehash: 15f1b5930117e608644a58343fb855562f36b21c
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 939b5664dba4345e62a43fb2f8d4d5379659d6aa
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237818"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610177"
 ---
 # <a name="-operator-c-reference"></a>Operatore != (Riferimenti per C#)
-L'operatore di disuguaglianza (`!=`) restituisce false se gli operandi sono uguali, in caso contrario true. Gli operatori di disuguaglianza sono predefiniti per tutti i tipi, inclusi string e object. I tipi definiti dall'utente possono eseguire l'overload dell'operatore `!=`.  
-  
-## <a name="remarks"></a>Note  
- Per i tipi valore predefiniti, l'operatore di disuguaglianza (`!=`) restituisce true se i valori degli operandi sono diversi, in caso contrario false. Per i tipi riferimento diversi da `string`, `!=` restituisce true se i due operandi fanno riferimento a oggetti diversi. Per il tipo `string`, `!=` confronta i valori delle stringhe.  
-  
- I tipi valore definiti dall'utente possono eseguire l'overload dell'operatore `!=` (vedere [operatore](../../../csharp/language-reference/keywords/operator.md)). Lo stesso vale per i tipi riferimento definiti dall'utente, anche se per impostazione predefinita `!=` si comporta come descritto in precedenza per entrambi i tipi riferimento predefiniti e definiti dall'utente. Se `!=` è sottoposto a overload, deve esserlo anche [==](../../../csharp/language-reference/operators/equality-comparison-operator.md). Le operazioni sui tipi integrali sono generalmente consentite sull'enumerazione.  
-  
-## <a name="example"></a>Esempio  
- [!code-csharp[csRefOperators#33](../../../csharp/language-reference/operators/codesnippet/CSharp/not-equal-operator_1.cs)]  
-  
+
+L'operatore di disuguaglianza `!=` restituisce `true` se gli operandi sono diversi, `false` in caso contrario. Per gli operandi dei [tipi predefiniti](../keywords/built-in-types-table.md), l'espressione `x != y` produce lo stesso risultato dell'espressione `!(x == y)`. Per altre informazioni, vedere l'articolo [Operatore ==](equality-comparison-operator.md).
+
+Nell'esempio seguente viene illustrato l'uso dell'operatore `!=`:
+
+[!code-csharp-interactive[non-equality examples](~/samples/snippets/csharp/language-reference/operators/EqualityAndNonEqualityExamples.cs#NonEquality)]
+
+## <a name="operator-overloadability"></a>Overload degli operatori
+
+I tipi definiti dall'utente possono eseguire l'[overload](../keywords/operator.md) dell'operatore `!=`. Se un tipo esegue l'overload dell'operatore di disuguaglianza `!=`, deve anche eseguire l'overload dell'[operatore di uguaglianza](equality-comparison-operator.md) `==`.
+
+## <a name="c-language-specification"></a>Specifiche del linguaggio C#
+
+Per altre informazioni, vedere la sezione [Operatori relazionali e di test del tipo](~/_csharplang/spec/expressions.md#relational-and-type-testing-operators) della [specifica del linguaggio C#](../language-specification/index.md).
+
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
-- [Operatori C#](../../../csharp/language-reference/operators/index.md)
+- [Riferimenti per C#](../index.md)
+- [Guida per programmatori C#](../../programming-guide/index.md)
+- [Operatori C#](index.md)
+- [Confronti di uguaglianza](../../programming-guide/statements-expressions-operators/equality-comparisons.md)

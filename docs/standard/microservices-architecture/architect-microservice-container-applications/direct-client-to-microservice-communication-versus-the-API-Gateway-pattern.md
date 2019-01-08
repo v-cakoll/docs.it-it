@@ -4,12 +4,12 @@ description: Informazioni sulle differenze e sugli usi dello schema API Gateway 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: c0c98733271e74e119373fe359b9aa6121930a40
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: eebbfa6579de4cd24f58371ed1c7ab9a5f2e1c00
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152643"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030542"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>Confronto tra schema API Gateway e comunicazione diretta da client a microservizio
 
@@ -41,7 +41,7 @@ L'interazione con più microservizi per compilare una singola schermata dell'int
 
 L'implementazione di soluzioni per la sicurezza e il montaggio incrociato, ad esempio la sicurezza e le autorizzazioni in ogni microservizio, possono richiedere un notevole impegno in termini di sviluppo. Un possibile approccio prevede di inserire questi servizi all'interno dell'host Docker o di un cluster interno, in modo da limitare l'accesso diretto dall'esterno e di implementare queste soluzioni di montaggio incrociato in una posizione centralizzata, ad esempio un gateway API.
 
-- In che modo le app client possono comunicare con i servizi che usano protocolli non adatti a Internet?*
+- *In che modo le app client possono comunicare con i servizi che usano protocolli non adatti a Internet?*
 
 In genere i protocolli usati sul lato server, ad esempio AMQP o i protocolli binari, non sono supportati nelle app client. Quindi, le richieste devono essere eseguite con protocolli come HTTP/HTTPS e trasferite in un secondo momento in altri protocolli. Un approccio *man-in-the-middle* può risultare utile per questa situazione.
 
@@ -59,7 +59,7 @@ Pertanto, può essere molto comodo per le applicazioni basate su microservizi di
 
 - **Troppi round trip**: una singola pagina/schermata nell'app client potrebbe richiedere diverse chiamate a più servizi. Ciò può comportare più round trip di rete tra il client e il server, aumentando in modo considerevole la latenza. Con l'aggregazione gestita in un livello intermedio è stato possibile migliorare le prestazioni e l'esperienza utente per l'app client.
 
-- **Problemi di sicurezza**: senza un gateway, tutti i microservizi devono essere esposti all'esterno, rendendo più ampia la superficie di attacco rispetto a quando si nascondono i microservizi interni non usati direttamente dalle app client. Minore è la superficie di attacco, maggiore è la sicurezza dell'applicazione.
+- **Problemi relativi alla sicurezza**: senza un gateway, tutti i microservizi devono essere esposti all'esterno, rendendo più ampia la superficie di attacco rispetto a quando si nascondono i microservizi interni non usati direttamente dalle app client. Minore è la superficie di attacco, maggiore è la sicurezza dell'applicazione.
 
 - **Problemi di montaggio incrociato**: ogni microservizio reso disponibile pubblicamente deve gestire problemi quali autorizzazione, SSL e così via. In molti casi questi problemi possono essere gestiti in un livello singolo così che i microservizi interni risultino semplificati.
 
@@ -172,7 +172,7 @@ Dopo le sezioni iniziali di spiegazione degli schemi e dell'architettura, le sez
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
-- **Charles Richardson. Pattern: API Gateway/Backend for Front-End (Schema: API Gateway/Backend for Frontend)** \
+- **Charles Richardson. Pattern: API Gateway/Backend for Front-End** \ (Schema: API Gateway/Back-end per front-end)
   [*https://microservices.io/patterns/apigateway.html*](https://microservices.io/patterns/apigateway.html)
 
 - **Schema API Gateway** \

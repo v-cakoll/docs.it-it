@@ -11,12 +11,12 @@ helpviewer_keywords:
 - cross-references [C#]
 - see C# XML tag
 ms.assetid: 0200de01-7e2f-45c4-9094-829d61236383
-ms.openlocfilehash: 1e799c975fe21dd2dd0354a9d658a271ded5fc2c
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 63476ff77f1a8286730f29149bb5b6b87779f144
+ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235689"
+ms.lasthandoff: 01/05/2019
+ms.locfileid: "54058412"
 ---
 # <a name="ltseegt-c-programming-guide"></a>&lt;see&gt; (Guida per programmatori C#)
 ## <a name="syntax"></a>Sintassi  
@@ -27,7 +27,7 @@ ms.locfileid: "53235689"
   
 #### <a name="parameters"></a>Parametri  
  cref = " `member`"  
- Riferimento a un membro o a un campo disponibile per essere chiamato dall'ambiente di compilazione corrente. Il compilatore controlla che l'elemento di codice specificato esista e passa `member` al nome dell'elemento nel *membro* XML.Place di output tra virgolette doppie (" ").  
+ Riferimento a un membro o a un campo disponibile per essere chiamato dall'ambiente di compilazione corrente. Il compilatore verifica l'esistenza dell'elemento di codice specificato e passa `member` al nome dell'elemento nel file XML di output. Racchiudere *member* tra virgolette doppie (" ").  
   
 ## <a name="remarks"></a>Note  
  Con il tag \<see> è possibile specificare un collegamento nel testo. Usare [\<seealso>](../../../csharp/programming-guide/xmldoc/seealso.md) per indicare che il testo deve essere inserito in una sezione Vedere anche. Usare l'[attributo cref](../../../csharp/programming-guide/xmldoc/cref-attribute.md) per creare collegamenti ipertestuali interni alle pagine della documentazione per gli elementi di codice.  

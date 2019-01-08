@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], integral types
 - ranges of integral types [C#]
 ms.assetid: 62e86126-46ff-40b0-9028-e61d7558268c
-ms.openlocfilehash: 1815f057e5cf26d64e5ff151f161cc56214efc1b
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 7f8e4a9dabb3e24293ae7fcc724e8787dd6d4cf5
+ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237987"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53396786"
 ---
 # <a name="integral-types-table-c-reference"></a>Tabella dei tipi integrali (Riferimenti per C#)
 
@@ -36,7 +36,7 @@ La tabella seguente elenca le dimensioni e gli intervalli dei tipi integrali, ch
   
 Se il valore rappresentato da un valore letterale Integer supera <xref:System.UInt64.MaxValue?displayProperty=nameWithType>, si verifica un errore di compilazione [CS1021](../../misc/cs1021.md).
 
-Usare la classe <xref:System.Numerics.BigInteger?displayProperty=nameWithType> per rappresentare un intero con segno arbitrariamente grande.
+Usare la struttura <xref:System.Numerics.BigInteger?displayProperty=nameWithType> per rappresentare un intero con segno arbitrariamente grande.
   
 ## <a name="see-also"></a>Vedere anche
 
@@ -48,3 +48,4 @@ Usare la classe <xref:System.Numerics.BigInteger?displayProperty=nameWithType> p
 - [Tabella dei valori predefiniti](default-values-table.md)
 - [Tabella di formattazione dei risultati numerici](formatting-numeric-results-table.md)
 - [Tabella dei tipi incorporati](built-in-types-table.md)
+- [Dati numerici in .NET](../../../standard/numerics.md)

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: e2fdb92ad2f044aa74201676ed8cb89bb51de5f5
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: dfbeb5ff94f39e8d8df03feea9ff55db748d2182
+ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239839"
+ms.lasthandoff: 01/05/2019
+ms.locfileid: "54058581"
 ---
 # <a name="readonly-c-reference"></a>readonly (Riferimenti per C#)
 
@@ -45,7 +45,7 @@ public readonly int y = 5;
 Questi contesti di costruttore sono anche gli unici contesti in cui è possibile passare un campo `readonly` come parametro [out](out-parameter-modifier.md) o [ref](ref.md).
 
 > [!NOTE]
-> La parola chiave `readonly` è diversa dalla parola chiave [const](const.md). Un campo `const` può essere inizializzato solo nella dichiarazione del campo. Un campo `readonly` può essere assegnato più volte nella dichiarazione del campo o in qualsiasi costruttore. I campi `readonly` possono quindi presentare valori diversi a seconda del costruttore usato. Inoltre, mentre un campo `const` rappresenta una costante in fase di compilazione, il campo `readonly` può essere usato per le costanti in fase di esecuzione, come nell'esempio seguente:
+> La parola chiave `readonly` è diversa dalla parola chiave [const](const.md). Un campo `const` può essere inizializzato solo nella dichiarazione del campo. Un campo `readonly` può essere assegnato più volte nella dichiarazione del campo e in qualsiasi costruttore. I campi `readonly` possono quindi presentare valori diversi a seconda del costruttore usato. Inoltre, mentre un campo `const` rappresenta una costante in fase di compilazione, il campo `readonly` può essere usato per le costanti in fase di esecuzione, come nell'esempio seguente:
 
 ```csharp
 public static readonly uint timeStamp = (uint)DateTime.Now.Ticks;

@@ -1,32 +1,44 @@
 ---
 title: Operatore &lt;= - Riferimenti per C#
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 12/18/2018
 f1_keywords:
 - <=_CSharpKeyword
 helpviewer_keywords:
 - less than or equal to operator (<=) [C#]
 - <= operator [C#]
 ms.assetid: bb0caec9-d253-4105-b8bc-5252233251e4
-ms.openlocfilehash: 950ba3fc02e015f2574d123d1fd9adc116aae045
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 30f42de68667756a8233fef4241bfd74ed4eff2a
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243452"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53656089"
 ---
 # <a name="lt-operator-c-reference"></a>Operatore &lt;= (Riferimenti per C#)
-Tutti i tipi numerici e di enumerazione definiscono un operatore relazionale "minore o uguale a" (`<=`), che restituisce `true` se il primo operando è inferiore o uguale al secondo, in caso contrario `false`.  
-  
-## <a name="remarks"></a>Note  
- I tipi definiti dall'utente possono eseguire l'overload dell'operatore `<=`. Per altre informazioni, vedere l'argomento relativo all'[operatore](../../../csharp/language-reference/keywords/operator.md). Se `<=` è sottoposto a overload, deve esserlo anche [>=](../../../csharp/language-reference/operators/greater-than-equal-operator.md). Le operazioni sui tipi integrali sono generalmente consentite sull'enumerazione.  
-  
-## <a name="example"></a>Esempio  
- [!code-csharp[csRefOperators#32](../../../csharp/language-reference/operators/codesnippet/CSharp/less-than-equal-operator_1.cs)]  
-  
+
+L'operatore relazionale "minore o uguale a" `<=` restituisce `true` se il primo operando è minore o uguale al secondo operando, `false` in caso contrario. Tutti i tipi numerici e di enumerazione supportano l'operatore `<=`. Per gli operandi dello stesso tipo [enum](../keywords/enum.md), i valori corrispondenti del tipo integrale sottostante vengono confrontati.
+
+> [!NOTE]
+> Per gli operatori relazionali `==`, `>`, `<` `>=`, e `<=`, se uno degli operandi non è un numero (<xref:System.Double.NaN?displayProperty=nameWithType> oppure <xref:System.Single.NaN?displayProperty=nameWithType>) il risultato dell'operazione è `false`. Questo significa che il valore `NaN` non è maggiore di, minore di, né uguale a qualsiasi altro valore `double` (o `float`). Per altre informazioni ed esempi, vedere l'articolo di riferimento per <xref:System.Double.NaN?displayProperty=nameWithType> o <xref:System.Single.NaN?displayProperty=nameWithType>.
+
+Nell'esempio seguente viene illustrato l'uso dell'operatore `<=`:
+
+[!code-csharp-interactive[less than or equal example](~/samples/snippets/csharp/language-reference/operators/GreaterAndLessOperatorsExamples.cs#LessOrEqual)]
+
+## <a name="operator-overloadability"></a>Overload degli operatori
+
+I tipi definiti dall'utente possono eseguire l'[overload](../keywords/operator.md) dell'operatore `<=`. Se un tipo esegue l'overload dell'operatore "minore o uguale a" `<=`, deve anche eseguire l'overload dell'[operatore "maggiore o uguale a"](greater-than-equal-operator.md) `>=`.
+
+## <a name="c-language-specification"></a>Specifiche del linguaggio C#
+
+Per altre informazioni, vedere la sezione [Operatori relazionali e di test del tipo](~/_csharplang/spec/expressions.md#relational-and-type-testing-operators) della [specifica del linguaggio C#](../language-specification/index.md).
+
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
-- [Operatori C#](../../../csharp/language-reference/operators/index.md)  
-- [explicit](../../../csharp/language-reference/keywords/explicit.md)
+- [Riferimenti per C#](../index.md)
+- [Guida per programmatori C#](../../programming-guide/index.md)
+- [Operatori C#](index.md)
+- [Operatore <](less-than-operator.md)
+- [Operatore ==](equality-comparison-operator.md)
+- <xref:System.IComparable%601?displayProperty=nameWithType>

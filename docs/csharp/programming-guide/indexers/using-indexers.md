@@ -5,12 +5,12 @@ ms.date: 10/03/2018
 helpviewer_keywords:
 - indexers [C#], about indexers
 ms.assetid: df70e1a2-3ce3-4aba-ad80-4b2f3538699f
-ms.openlocfilehash: ad5c6f68f5eb2f62d7c6f389e374e1b2db5417c6
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 8c0d145fab69e60a12ebb8b28f087ab643e508b9
+ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241918"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53397059"
 ---
 # <a name="using-indexers-c-programming-guide"></a>Uso di indicizzatori (Guida per programmatori C#)
 
@@ -57,7 +57,7 @@ Nell'esempio seguente viene illustrato come dichiarare un campo di matrice priva
   
 ## <a name="indexing-using-other-values"></a>Indicizzazione tramite altri valori
 
-C# non limita il tipo di indice a integer. Può ad esempio essere utile usare una stringa con un indicizzatore. Un indicizzatore di questo tipo potrebbe essere implementato eseguendo la ricerca della stringa nella raccolta e restituendo il valore appropriato. Poiché è possibile eseguire l'overload delle funzioni di accesso, le versioni con la stringa e il tipo integer possono coesistere.  
+C# non limita il tipo del parametro dell'indicizzatore a Integer. Può ad esempio essere utile usare una stringa con un indicizzatore. Un indicizzatore di questo tipo potrebbe essere implementato eseguendo la ricerca della stringa nella raccolta e restituendo il valore appropriato. Poiché è possibile eseguire l'overload delle funzioni di accesso, le versioni con la stringa e il tipo integer possono coesistere.  
   
 ## <a name="example-2"></a>Esempio 2  
   
