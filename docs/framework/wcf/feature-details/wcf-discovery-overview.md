@@ -2,18 +2,18 @@
 title: Panoramica di WCF Discovery
 ms.date: 03/30/2017
 ms.assetid: 84fad0e4-23b1-45b5-a2d4-c9cdf90bbb22
-ms.openlocfilehash: 24d758502e360a8368be25c506b8648b12a3eb20
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.openlocfilehash: 8f89a3b52728f10a0d0e0544f3663c9af13488c9
+ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44494252"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54084940"
 ---
 # <a name="wcf-discovery-overview"></a>Panoramica di WCF Discovery
 Le API di individuazione offrono un modello di programmazione unificato per la pubblicazione dinamica e l'individuazione di servizi Web utilizzando il protocollo WS-Discovery. Queste API consentono la pubblicazione dei servizi e l'individuazione di tali servizi da parte dei client. Una volta reso individuabile un servizio, quest'ultimo è in grado di inviare messaggi di annuncio nonché di essere in ascolto e di rispondere alle richieste di individuazione. I servizi individuabili possono inviare messaggi Hello per annunciare la propria presenza in rete e messaggi Bye per annunciare la propria uscita dalla rete. Per trovare un servizio, i client inviano una richiesta `Probe` contenente criteri specifici quali il tipo di contratto servizio, le parole chiave e l'ambito nella rete. I servizi ricevono la richiesta `Probe` e determinano se corrisponde ai criteri. Se un servizio corrisponde, risponde restituendo un messaggio `ProbeMatch` al client con le informazioni necessarie per contattare il servizio. I client possono inoltre inviare richieste `Resolve` che consentono loro di individuare i servizi che hanno modificato il relativo indirizzo endpoint. I servizi corrispondenti rispondono alle richieste `Resolve` restituendo al client un messaggio `ResolveMatch`.  
   
 ## <a name="ad-hoc-and-managed-modes"></a>Modalità ad hoc e gestita  
- L'API di individuazione supporta due diverse modalità, ovvero gestita (Managed) e ad hoc (Adhoc). Nella modalità gestita è presente un server centralizzato denominato proxy di individuazione che gestisce le informazioni relative ai servizi disponibili. Il proxy di individuazione può essere popolato con le informazioni sui servizi in diversi modi. I servizi possono ad esempio inviare al proxy di individuazione messaggi di annuncio in fase di avvio oppure il proxy può leggere i dati da un database o da un file di configurazione per determinare i servizi disponibili. La modalità di popolamento di un proxy di individuazione viene scelta dallo sviluppatore. I client utilizzano il proxy di individuazione per recuperare informazioni sui servizi disponibili. Quando un client cerca un servizio, invia un messaggio `Probe` al proxy di individuazione il quale determina se sono disponibili servizi noti corrispondenti a quello richiesto dal client. Se vengono individuate corrispondente il proxy di individuazione restituisce una risposta `ProbeMatch` al client. Il client può quindi contattare il servizio utilizzando direttamente le apposite informazioni restituite dal proxy. Il principio chiave per quanto concerne la modalità gestite consiste nel fatto che le richieste di individuazione vengono inviate in modo unicast a un'autorità, ovvero il proxy di individuazione. .NET Framework contiene componenti chiave che consentono di compilare un proxy personalizzato. I client e i servizi possono individuare il proxy in diversi modi:  
+ L'API di individuazione supporta due modalità diverse: Gestito e Ad Hoc. Nella modalità gestita è presente un server centralizzato denominato proxy di individuazione che gestisce le informazioni relative ai servizi disponibili. Il proxy di individuazione può essere popolato con le informazioni sui servizi in diversi modi. I servizi possono ad esempio inviare al proxy di individuazione messaggi di annuncio in fase di avvio oppure il proxy può leggere i dati da un database o da un file di configurazione per determinare i servizi disponibili. La modalità di popolamento di un proxy di individuazione viene scelta dallo sviluppatore. I client utilizzano il proxy di individuazione per recuperare informazioni sui servizi disponibili. Quando un client cerca un servizio, invia un messaggio `Probe` al proxy di individuazione il quale determina se sono disponibili servizi noti corrispondenti a quello richiesto dal client. Se vengono individuate corrispondente il proxy di individuazione restituisce una risposta `ProbeMatch` al client. Il client può quindi contattare il servizio utilizzando direttamente le apposite informazioni restituite dal proxy. Il principio chiave per quanto concerne la modalità gestite consiste nel fatto che le richieste di individuazione vengono inviate in modo unicast a un'autorità, ovvero il proxy di individuazione. .NET Framework contiene componenti chiave che consentono di compilare un proxy personalizzato. I client e i servizi possono individuare il proxy in diversi modi:  
   
 -   Il proxy può rispondere a messaggi ad hoc.  
   
@@ -74,7 +74,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), base
     // ** DISCOVERY ** //
     // Make the service discoverable by adding the discovery behavior
     ServiceDiscoveryBehavior discoveryBehavior = new ServiceDiscoveryBehavior();
-    serviceHost.Description.Behaviors.Add(new ServiceDiscoveryBehavior());
+    serviceHost.Description.Behaviors.Add(discoveryBehavior);
 
     // Send announcements on UDP multicast transport
     discoveryBehavior.AnnouncementEndpoints.Add(
@@ -155,7 +155,7 @@ class Client
   
 2.  Utilizzare un proxy di individuazione per comunicare per conto del servizio  
   
- Windows Server AppFabric dispone di una funzionalità di avvio automatico che consente al servizio di essere avviato prima di ricevere qualsiasi messaggio. Con l'impostazione della funzionalità di avvio automatico, un servizio ospitato in IIS/WAS può essere configurato per essere individuabile. Per altre informazioni sulle funzionalità avvio automatico, vedere [funzionalità di avvio automatico di Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=205545). Oltre ad abilitare la funzionalità di avvio automatico, è necessario configurare il servizio per l'individuazione. Per altre informazioni, vedere [procedura: aggiungere a livello di programmazione di individuazione a un Client e servizio WCF](../../../../docs/framework/wcf/feature-details/how-to-programmatically-add-discoverability-to-a-wcf-service-and-client.md)[Configuring Discovery in un File di configurazione](../../../../docs/framework/wcf/feature-details/configuring-discovery-in-a-configuration-file.md).  
+ Windows Server AppFabric dispone di una funzionalità di avvio automatico che consente al servizio di essere avviato prima di ricevere qualsiasi messaggio. Con l'impostazione della funzionalità di avvio automatico, un servizio ospitato in IIS/WAS può essere configurato per essere individuabile. Per altre informazioni sulle funzionalità avvio automatico, vedere [funzionalità di avvio automatico di Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=205545). Oltre ad abilitare la funzionalità di avvio automatico, è necessario configurare il servizio per l'individuazione. Per altre informazioni, vedere [Procedura: A livello di codice aggiungere funzionalità di individuazione a un Client e servizio WCF](../../../../docs/framework/wcf/feature-details/how-to-programmatically-add-discoverability-to-a-wcf-service-and-client.md)[configurazione dell'individuazione in un File di configurazione](../../../../docs/framework/wcf/feature-details/configuring-discovery-in-a-configuration-file.md).  
   
  Un proxy di individuazione può essere utilizzato per comunicare per conto del servizio WCF quando tale servizio non è in esecuzione. Il proxy può mettersi in ascolto del probe o risolvere i messaggi e rispondere al client. Il client può quindi inviare i messaggi direttamente al servizio. Quando il client invia un messaggio al servizio, verrà creata un'istanza di tale servizio per rispondere al messaggio. Per altre informazioni sull'implementazione, vedere proxy una scoperta [implementazione di un Proxy di individuazione](../../../../docs/framework/wcf/feature-details/implementing-a-discovery-proxy.md).  
   
