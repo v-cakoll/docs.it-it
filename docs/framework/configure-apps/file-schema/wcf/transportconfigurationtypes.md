@@ -2,29 +2,29 @@
 title: '&lt;transportConfigurationTypes&gt;'
 ms.date: 03/30/2017
 ms.assetid: 929c8b0a-5460-4f66-a098-2cb8d4e10b69
-ms.openlocfilehash: 422de17f4c1b42579eadc16c7ec1a0037903d1a9
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5a51450d198ea395098f8a6a38d9104d0fe8538b
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766946"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145471"
 ---
 # <a name="lttransportconfigurationtypesgt"></a>&lt;transportConfigurationTypes&gt;
 Rappresenta una raccolta di elementi di configurazione che identificano il tipo di un determinato trasporto. Può essere usato per aggiungere protocolli WAS personalizzati.  
   
  \<system.ServiceModel>  
-\<ServiceHostingEnvironment >  
+\<serviceHostingEnvironment >  
 \<transportConfigurationTypes >  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```xml  
-<serviceHostingEnvironment>   
-   <transportConfigurationTypes>  
-      <add name="String"  
-               transportConfigurationType="String"/>   
-   </transportConfigurationTypes>  
-</serviceHostingEnvironment>  
+<serviceHostingEnvironment>
+  <transportConfigurationTypes>
+    <add name="String"
+         transportConfigurationType="String" />
+  </transportConfigurationTypes>
+</serviceHostingEnvironment>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  

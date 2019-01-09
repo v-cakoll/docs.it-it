@@ -2,12 +2,12 @@
 title: '&lt;Parametro&gt;'
 ms.date: 03/30/2017
 ms.assetid: 0fb41e2d-64f7-44ab-993e-05892eac6d82
-ms.openlocfilehash: b9cccfe37e7658afbf2e49555e6c505497598fbb
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 82a2f5c46c698508695fe5f13f67059860a50713
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754054"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54148292"
 ---
 # <a name="ltparametergt"></a>&lt;Parametro&gt;
 Specifica il parametro generico quando un tipo dichiarato è un tipo generico.  
@@ -15,15 +15,15 @@ Specifica il parametro generico quando un tipo dichiarato è un tipo generico.
  \<Serialization >  
 \<dataContractSerializer >  
 \<declaredTypes > elemento  
-\<aggiungere > elemento per \<declaredTypes >  
+\<aggiungere > (elemento) per \<declaredTypes >  
 \<knownType > elemento  
 \<parametro > elemento  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```xml  
-<parameter index="integer"  
-                      type=String" />  
+<parameter index="Integer"
+           type="String" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
@@ -53,9 +53,9 @@ Specifica il parametro generico quando un tipo dichiarato è un tipo generico.
 |[\<knownType >](../../../../../docs/framework/configure-apps/file-schema/wcf/knowntype.md)|Specifica un tipo conosciuto restituibile da un campo o da una proprietà del tipo dichiarato.|  
   
 ## <a name="remarks"></a>Note  
- Per ulteriori informazioni sui tipi noti, vedere [tipi conosciuti di contratto dati](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md) e <xref:System.Runtime.Serialization.DataContractSerializer>.  
+ Per altre informazioni sui tipi noti, vedere [Data Contract Known Types](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md) e <xref:System.Runtime.Serialization.DataContractSerializer>.  
   
- Vedere il [ \<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md) per un esempio di utilizzo di questo elemento.  
+ Vedere le [ \<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md) per un esempio di utilizzo di questo elemento.  
   
  Questo elemento di configurazione non può avere contemporaneamente entrambi gli attributi. Se si impostano entrambi gli attributi, si verifica un'eccezione <xref:System.Configuration.ConfigurationErrorsException>.  
   

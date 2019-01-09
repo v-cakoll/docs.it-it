@@ -2,12 +2,12 @@
 title: '&lt;udpAnnoucementEndpoint&gt;'
 ms.date: 03/30/2017
 ms.assetid: 5b3fa9c5-f372-4df9-a9d6-1e426063b721
-ms.openlocfilehash: a6dbec19beb3800603bd745bacbd6cbcbcdaa739
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 8a6c874d7d2930b969f2cc9778534aa99eab78f5
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766790"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145822"
 ---
 # <a name="ltudpannoucementendpointgt"></a>&lt;udpAnnoucementEndpoint&gt;
 Questo elemento di configurazione definisce un endpoint standard usato dai servizi per inviare messaggi di annuncio su un'associazione UDP. Dispone di un contratto fisso e supporta due versioni di individuazione. Dispone inoltre di un'associazione UDP fissa e di un valore dell'indirizzo predefinito come indicato nelle specifiche WS-Discovery (WS-Discovery aprile 2005 o versione WS-Discovery 1.1). È possibile specificare l'indirizzo multicast da usare per l'invio e la ricezione dei messaggi di annuncio.  
@@ -18,16 +18,16 @@ Questo elemento di configurazione definisce un endpoint standard usato dai servi
 ## <a name="syntax"></a>Sintassi  
   
 ```xml  
-<system.serviceModel>  
+<system.serviceModel>
   <standardEndpoints>
     <announcementEndpoint>
-      <standardEndpoint discoveryVersion="WSDiscovery11/WSDiscoveryApril2005" 
+      <standardEndpoint discoveryVersion="WSDiscovery11/WSDiscoveryApril2005"
                         maxAnnouncementDelay="Timespan"
                         multicastAddress="Uri"
                         name="String" />
     </announcementEndpoint>
-  </standardEndpoints>  
-</system.serviceModel>  
+  </standardEndpoints>
+</system.serviceModel>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
@@ -58,25 +58,25 @@ Questo elemento di configurazione definisce un endpoint standard usato dai servi
  Nell'esempio seguente viene illustrato un client in ascolto di un annuncio su un trasporto multicast UDP con indirizzo multicast predefinito e trasporto multicast UDP con indirizzo multicast specificato.  
   
 ```xml  
-<services>  
-  <service name="ServiceAnnouncementListener">  
-      <endpoint name="udpAnnouncementEndpointStandard"  
-                kind="udpAnnouncementEndpoint"  
-                bindingConfiguration="..." />  
-      <endpoint name="udpAnnouncementEndpoint2"  
-                kind="udpAnnouncementEndpoint"  
-                endpointConfiguration="AnnouncementConfiguration3702"  
-                bindingConfiguration="..." />  
-...  
-  </service>  
-</services>  
-<standardEndpoints>  
-  <udpAnnouncementEndpoint>  
-     <standardEndpoint name="AnnouncementConfiguration2"   
-          version="WSDiscoveryApril2005"   
-          multicastAddress="soap.udp://239.255.255.250:3703"/>          
-  </udpAnnouncementEndpoint>  
-</standardEndpoints>  
+<services>
+  <service name="ServiceAnnouncementListener">
+    <endpoint name="udpAnnouncementEndpointStandard"
+              kind="udpAnnouncementEndpoint"
+              bindingConfiguration="..." />
+    <endpoint name="udpAnnouncementEndpoint2"
+              kind="udpAnnouncementEndpoint"
+              endpointConfiguration="AnnouncementConfiguration3702"
+              bindingConfiguration="..." />
+    ...
+  </service>
+</services>
+<standardEndpoints>
+  <udpAnnouncementEndpoint>
+    <standardEndpoint name="AnnouncementConfiguration2"
+                      version="WSDiscoveryApril2005"
+                      multicastAddress="soap.udp://239.255.255.250:3703"/>
+  </udpAnnouncementEndpoint>
+</standardEndpoints>
 ```  
   
 ## <a name="see-also"></a>Vedere anche  

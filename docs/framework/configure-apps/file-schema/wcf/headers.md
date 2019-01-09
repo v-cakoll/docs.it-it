@@ -1,15 +1,15 @@
 ---
-title: '&lt;intestazioni&gt;'
+title: '&lt;Intestazioni&gt;'
 ms.date: 03/30/2017
 ms.assetid: c79b897d-8ea3-40b5-a8b6-2471941f7ed3
-ms.openlocfilehash: 7683b07093719cda6b210a4174d47e5785d4644d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 84b9a9437d4b0dfae72a6e625b21f2b830eb28d8
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747151"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54147863"
 ---
-# <a name="ltheadersgt"></a>&lt;intestazioni&gt;
+# <a name="ltheadersgt"></a>&lt;Intestazioni&gt;
 Un endpoint può essere indirizzato da una o più intestazioni SOAP oltre che dal proprio URI di base. Ciò è utile, ad esempio, in presenza di scenari di intermediari SOAP in cui per un endpoint viene richiesto che nei relativi client siano incluse intestazioni SOAP destinate agli intermediari. Questo elemento di configurazione può essere usato per definire tali intestazioni di indirizzo personalizzate. Le voci nella raccolta di intestazioni dell'endpoint sono elementi XML definiti dall'utente. Ogni elemento deve essere in formato XML corretto.  
   
  \<system.ServiceModel>  
@@ -19,10 +19,10 @@ Un endpoint può essere indirizzato da una o più intestazioni SOAP oltre che da
 ## <a name="syntax"></a>Sintassi  
   
 ```xml  
-<headers>  
-    <Region xmlns="Uri">"String"</Region>  
-        <Member xmlns="Uri">"String"</Member>  
-</headers>  
+<headers>
+  <region xmlns="Uri">"String"</region>
+  <member xmlns="Uri">"String"</member>
+</headers>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
@@ -52,4 +52,4 @@ Un endpoint può essere indirizzato da una o più intestazioni SOAP oltre che da
  <xref:System.ServiceModel.EndpointAddress>  
  <xref:System.ServiceModel.EndpointAddress.Headers%2A>  
  <xref:System.ServiceModel.Channels.AddressHeaderCollection>  
- [Endpoint: indirizzi, associazioni e contratti](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+ [Endpoint: Gli indirizzi, associazioni e contratti](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)

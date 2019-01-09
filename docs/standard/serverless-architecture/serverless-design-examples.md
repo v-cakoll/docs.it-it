@@ -4,12 +4,12 @@ description: Comprendere la varietà di scenari supportati da architetture senza
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: cf46c601ac6aa401c7c37bd64c1f8981589ebd2e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d165746ff2f03b0edc59a9284052323a0c1fd05b
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53146709"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149677"
 ---
 # <a name="serverless-design-examples"></a>Esempi di progettazione senza server
 
@@ -65,7 +65,7 @@ Le funzioni senza server sono utilizzabile per facilitare una pipeline di dati. 
 
 ## <a name="stream-processing"></a>Elaborazione di Stream
 
-Dispositivi e sensori spesso generano flussi di dati che devono essere elaborati in tempo reale. Esistono una serie di tecnologie che è possibile acquisire i messaggi e i flussi provenienti da [hub eventi](https://docs.microsoft.com/azure/event-hubs/event-hubs-what-is-event-hubs) e [dell'IoT Hub](https://docs.microsoft.com/azure/iot-hub) al [del Bus di servizio](/service-bus). Indipendentemente dal trasporto, senza server è un meccanismo ideale per elaborare i messaggi e i flussi di dati non appena si verificano. Un'infrastruttura senza server possono essere ridimensionate rapidamente per soddisfare la domanda di grandi volumi di dati. Il codice senza server è possibile applicare la logica di business per analizzare i dati e l'output in un formato strutturato per azione e analitica.
+Dispositivi e sensori spesso generano flussi di dati che devono essere elaborati in tempo reale. Esistono una serie di tecnologie che è possibile acquisire i messaggi e i flussi provenienti da [hub eventi](https://docs.microsoft.com/azure/event-hubs/event-hubs-what-is-event-hubs) e [dell'IoT Hub](https://docs.microsoft.com/azure/iot-hub) al [del Bus di servizio](https://docs.microsoft.com/azure/service-bus). Indipendentemente dal trasporto, senza server è un meccanismo ideale per elaborare i messaggi e i flussi di dati non appena si verificano. Un'infrastruttura senza server possono essere ridimensionate rapidamente per soddisfare la domanda di grandi volumi di dati. Il codice senza server è possibile applicare la logica di business per analizzare i dati e l'output in un formato strutturato per azione e analitica.
 
 ![Elaborazione di flussi senza server](./media/serverless-stream-processing.png)
 

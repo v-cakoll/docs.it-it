@@ -2,12 +2,12 @@
 title: '&lt;compositeDuplex&gt;'
 ms.date: 03/30/2017
 ms.assetid: 725004d1-ce88-4405-a220-78e89844f81f
-ms.openlocfilehash: ce04eb96868da9760412e37d2335d020cc768ac9
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 4b84b4f2816dc68b7dcee784d957189728e5a4b2
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748347"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149049"
 ---
 # <a name="ltcompositeduplexgt"></a>&lt;compositeDuplex&gt;
 Definisce l'elemento di associazione usato quando il client deve esporre un endpoint affinché il servizio restituisca messaggi al client.  
@@ -21,7 +21,7 @@ Definisce l'elemento di associazione usato quando il client deve esporre un endp
 ## <a name="syntax"></a>Sintassi  
   
 ```xml  
-<compositeDuplex clientBaseAddress="URI" />  
+<compositeDuplex clientBaseAddress="URI" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
@@ -34,7 +34,7 @@ Definisce l'elemento di associazione usato quando il client deve esporre un endp
 |clientBaseAddress|URI che imposta l'indirizzo del canale di supporto in modalità duplex. Il servizio usa questo indirizzo per creare un contatto e stabilire una connessione con il client.<br /><br /> Se questo attributo non è impostato, un indirizzo predefinito "`full qualified name+default port\TemporaryIndigoAddress\guid`" viene generato. Il valore predefinito è `null`.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- Nessuno  
+ nessuno  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -50,7 +50,7 @@ Definisce l'elemento di associazione usato quando il client deve esporre un endp
 ## <a name="example"></a>Esempio  
   
 ```xml  
-<compositeDuplex clientBaseAddress="http://www.contoso.com" />  
+<compositeDuplex clientBaseAddress="http://www.contoso.com" />
 ```  
   
 ## <a name="see-also"></a>Vedere anche  

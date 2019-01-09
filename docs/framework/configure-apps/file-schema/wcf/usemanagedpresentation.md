@@ -2,12 +2,12 @@
 title: '&lt;useManagedPresentation&gt;'
 ms.date: 03/30/2017
 ms.assetid: 17a0dd77-af54-41db-a9d0-4b17ff42878f
-ms.openlocfilehash: 35af7f5e10594617807384c20ab706ad675d11ef
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a60e1e16b9b41cc5df4ded51cc05d6109dd7b3dc
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32755292"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54147707"
 ---
 # <a name="ltusemanagedpresentationgt"></a>&lt;useManagedPresentation&gt;
 Elemento di associazione usato per comunicare con un servizio token di sicurezza CardSpace che supporta il profilo CardSpace di WS-Trust. Questo elemento non ha attributo e è presente come un'opzione vuota.  
@@ -21,7 +21,7 @@ Elemento di associazione usato per comunicare con un servizio token di sicurezza
 ## <a name="syntax"></a>Sintassi  
   
 ```xml  
-<useManagedPresentation/>  
+<useManagedPresentation />
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
@@ -31,7 +31,7 @@ Elemento di associazione usato per comunicare con un servizio token di sicurezza
  Nessuno.  
   
 ### <a name="child-elements"></a>Elementi figlio  
- Nessuno  
+ nessuno  
   
 ### <a name="parent-elements"></a>Elementi padre  
   

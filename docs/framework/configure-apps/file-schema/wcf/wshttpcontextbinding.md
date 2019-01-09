@@ -2,12 +2,12 @@
 title: '&lt;wsHttpContextBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 1e40b5c9-0df2-4d66-afc5-a99d0e4ae7a4
-ms.openlocfilehash: 0757d02845fa4eaf32c432dcc7b9f8fc18333e54
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: a35012cbc075268fad5b371148c0fa276ffdad61
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841107"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150591"
 ---
 # <a name="ltwshttpcontextbindinggt"></a>&lt;wsHttpContextBinding&gt;
 Fornisce un contesto per l'associazione <xref:System.ServiceModel.WSHttpBinding> che richiede che il livello di protezione sia Sign.  
@@ -18,46 +18,46 @@ Fornisce un contesto per l'associazione <xref:System.ServiceModel.WSHttpBinding>
   
 ## <a name="syntax"></a>Sintassi  
   
-```xml
-<wsHttpContextBinding>  
-  <binding allowCookies="Boolean" 
-           bypassProxyOnLocal="Boolean"  
-           closeTimeout="TimeSpan" 
-           contextProtectionLevel="EncryptAndSign/None/Sign" 
-           hostNameComparisonMode="StrongWildCard/Exact/WeakWildcard" 
-           maxBufferPoolSize="integer" 
-           maxReceivedMessageSize="Integer" 
-           messageEncoding="Text/Mtom" 
-           name="string" 
-           openTimeout="TimeSpan" 
-           proxyAddress="URI" 
-           receiveTimeout="TimeSpan" 
-           sendTimeout="TimeSpan" 
-           textEncoding="UnicodeFffeTextEncoding/Utf16TextEncoding/Utf8TextEncoding"  
-           transactionFlow="Boolean"  
-           useDefaultWebProxy="Boolean">  
-    <reliableSession ordered="Boolean"  
-                     inactivityTimeout="TimeSpan"  
-                     enabled="Boolean" />  
-    <security mode="Message/None/Transport/TransportWithCredential">  
-      <transport clientCredentialType="Basic/Certificate/Digest/None/Ntlm/Windows"  
-                 proxyCredentialType="Basic/Digest/None/Ntlm/Windows"  
-                 realm="string"   
-                 defaultClientCredentialType="Basic/Certificate/Digest/None/Ntlm/Windows"  
-                 defaultProxyCredentialType="Basic/Digest/None/Ntlm/Windows"  
-                 defaultRealm="string" />  
-      <message clientCredentialType="Certificate/IssuedToken/None/UserName/Windows"  
-               algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes/TripleDesRsa15/Basic128Sha256/Basic192Sha256/TripleDesSha256/Basic128Sha256Rsa15/Basic192Sha256Rsa15/Basic256Sha256Rsa15/TripleDesSha256Rsa15"  
-               establishSecurityContext="Boolean"   
-               negotiateServiceCredential="Boolean" />  
-    </security>  
-    <readerQuotas maxArrayLength="Integer" 
-                  maxBytesPerRead="Integer" 
-                  maxDepth="Integer" 
-                  maxNameTableCharCount="Integer" 
+```xml  
+<wsHttpContextBinding>
+  <binding allowCookies="Boolean"
+           bypassProxyOnLocal="Boolean"
+           closeTimeout="TimeSpan"
+           contextProtectionLevel="EncryptAndSign/None/Sign"
+           hostNameComparisonMode="StrongWildCard/Exact/WeakWildcard"
+           maxBufferPoolSize="integer"
+           maxReceivedMessageSize="Integer"
+           messageEncoding="Text/Mtom"
+           name="string"
+           openTimeout="TimeSpan"
+           proxyAddress="URI"
+           receiveTimeout="TimeSpan"
+           sendTimeout="TimeSpan"
+           textEncoding="UnicodeFffeTextEncoding/Utf16TextEncoding/Utf8TextEncoding"
+           transactionFlow="Boolean"
+           useDefaultWebProxy="Boolean">
+    <reliableSession ordered="Boolean"
+                     inactivityTimeout="TimeSpan"
+                     enabled="Boolean" />
+    <security mode="Message/None/Transport/TransportWithCredential">
+      <transport clientCredentialType="Basic/Certificate/Digest/None/Ntlm/Windows"
+                 proxyCredentialType="Basic/Digest/None/Ntlm/Windows"
+                 realm="string"
+                 defaultClientCredentialType="Basic/Certificate/Digest/None/Ntlm/Windows"
+                 defaultProxyCredentialType="Basic/Digest/None/Ntlm/Windows"
+                 defaultRealm="string" />
+      <message clientCredentialType="Certificate/IssuedToken/None/UserName/Windows"
+               algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes/TripleDesRsa15/Basic128Sha256/Basic192Sha256/TripleDesSha256/Basic128Sha256Rsa15/Basic192Sha256Rsa15/Basic256Sha256Rsa15/TripleDesSha256Rsa15"
+               establishSecurityContext="Boolean"
+               negotiateServiceCredential="Boolean" />
+    </security>
+    <readerQuotas maxArrayLength="Integer"
+                  maxBytesPerRead="Integer"
+                  maxDepth="Integer"
+                  maxNameTableCharCount="Integer"
                   maxStringContentLength="Integer" />
-  </binding>  
-</wsHttpContextBinding>  
+  </binding>
+</wsHttpContextBinding>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
@@ -74,7 +74,7 @@ Fornisce un contesto per l'associazione <xref:System.ServiceModel.WSHttpBinding>
 |hostnameComparisonMode|Specifica la modalità di confronto del nome host HTTP usata per analizzare gli URI. L'attributo è di tipo <xref:System.ServiceModel.HostNameComparisonMode>, che indica se il nome host viene usato per raggiungere il servizio in caso di corrispondenza nell'URI. Il valore predefinito è <xref:System.ServiceModel.HostNameComparisonMode.StrongWildcard>, che ignora il nome host nella corrispondenza.|  
 |maxBufferPoolSize|Numero intero che specifica la dimensione del pool di buffer massima per questa associazione. Il valore predefinito è 524.288 byte (512 * 1024). Molte parti di Windows Communication Foundation (WCF) usano buffer. La creazione e l'eliminazione dei buffer a ogni relativo uso sono operazioni onerose, analogamente a quelle di Garbage Collection dei buffer. Quando si usa un pool di buffer è possibile prelevare un buffer dal pool, usarlo e, al termine delle operazioni, riporlo nel pool. In questo modo è possibile evitare il sovraccarico dovuto alla creazione e all'eliminazione dei buffer.|  
 |maxReceivedMessageSize|Integer positivo che specifica la dimensione massima del messaggio, incluse le intestazioni, che è possibile ricevere su un canale configurato con questa associazione. Il mittente di un messaggio che supera questo limite riceverà un errore SOAP. Il destinatario elimina il messaggio e crea una voce dell'evento nel registro di traccia. Il valore predefinito è 65536.|  
-|messageEncoding|Definisce il codificatore usato per codificare il messaggio. Di seguito vengono elencati i valori validi:<br /><br /> -Text: Usa un codificatore di messaggi di testo.<br />-Mtom: Usa un codificatore Message Transmission organizzazione Mechanism 1.0 (MTOM).<br />-Il valore predefinito è testo.<br /><br /> L'attributo è di tipo <xref:System.ServiceModel.WSMessageEncoding>.|  
+|messageEncoding|Definisce il codificatore usato per codificare il messaggio. Di seguito vengono elencati i valori validi:<br /><br /> -Text: Usare un codificatore di messaggi di testo.<br />-Mtom: Usa un codificatore Message Transmission organizzazione Mechanism 1.0 (MTOM).<br />-Il valore predefinito è testo.<br /><br /> L'attributo è di tipo <xref:System.ServiceModel.WSMessageEncoding>.|  
 |name|Stringa che contiene il nome della configurazione dell'associazione. Questo valore deve essere univoco perché viene usato per identificare l'associazione. A partire da [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], non è necessario che le associazioni e i comportamenti dispongano di un nome. Per altre informazioni sulla configurazione predefinita e associazioni privi di nome e i comportamenti, vedere [Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md) e [Simplified Configuration for WCF Services](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).|  
 |openTimeout|Valore <xref:System.TimeSpan> che specifica l'intervallo di tempo fornito per il completamento di un'operazione di apertura. Questo valore deve essere maggiore o uguale a <xref:System.TimeSpan.Zero>. L'impostazione predefinita è 00:01:00.|  
 |proxyAddress|URI che specifica l'indirizzo del proxy HTTP. Se `useSystemWebProxy` è `true`, questa impostazione deve essere `null`. Il valore predefinito è `null`.|  

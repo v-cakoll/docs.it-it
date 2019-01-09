@@ -2,15 +2,15 @@
 title: '&lt;bookmarkResumptionQueries&gt; di WCF'
 ms.date: 03/30/2017
 ms.assetid: ed086712-1dc7-4932-a592-d1116a0155f3
-ms.openlocfilehash: d2b3365f3793c114003bbd9b9da664448bbac243
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ba8c98557a859f4bd37b9aaca80a44c393429da4
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147646"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146082"
 ---
 # <a name="ltbookmarkresumptionqueriesgt-of-wcf"></a>&lt;bookmarkResumptionQueries&gt; di WCF
-
+  
 Rappresenta una raccolta di query usate per rilevare la riassunzione di un segnalibro all'interno di un'istanza del flusso di lavoro. La query è necessaria affinché un partecipante del rilevamento sottoscriva i record di riassunzione dei segnalibri.  
   
 Per altre informazioni sulle query relative ai profili di rilevamento, vedere [profili di rilevamento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).
@@ -25,7 +25,7 @@ Per altre informazioni sulle query relative ai profili di rilevamento, vedere [p
   
 ## <a name="syntax"></a>Sintassi  
   
-```xml
+```xml  
 <tracking>
   <profiles>
     <trackingProfile name="Name">
@@ -36,15 +36,15 @@ Per altre informazioni sulle query relative ai profili di rilevamento, vedere [p
       </workflow>
     </trackingProfile>
   </profiles>
-</tracking>  
-```
-
-## <a name="attributes-and-elements"></a>Attributi ed elementi
-
+</tracking>
+```  
+  
+## <a name="attributes-and-elements"></a>Attributi ed elementi  
+  
 Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### <a name="attributes"></a>Attributi
-
+### <a name="attributes"></a>Attributi  
+  
 Nessuno.  
   
 ### <a name="child-elements"></a>Elementi figlio  

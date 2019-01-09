@@ -2,12 +2,12 @@
 title: '&lt;namedPipeTransport&gt;'
 ms.date: 03/30/2017
 ms.assetid: 9fc3f42f-43e2-4ab1-8bc7-3c95a9220df1
-ms.openlocfilehash: 652cb551fb318d43d4284dbee48aeb994f056692
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: bf9229411143345847247f36de07b5c014d3f259
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746797"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149600"
 ---
 # <a name="ltnamedpipetransportgt"></a>&lt;namedPipeTransport&gt;
 Definisce un trasporto che induce un canale a trasferire messaggi usando named pipe quando è incluso in un'associazione personalizzata.  
@@ -20,22 +20,22 @@ Definisce un trasporto che induce un canale a trasferire messaggi usando named p
   
 ## <a name="syntax"></a>Sintassi  
   
-```xml
-<namedPipeTransport channelInitializationTimeout="TimeSpan"   
-                    connectionBufferSize="Integer"   
-                    hostNameComparisonMode="StrongWildcard/Exact/WeakWildcard"  
-                    manualAddressing="Boolean"   
-                    maxBufferPoolSize="Integer"  
-                    maxBufferSize="Integer"  
-                    maxOutputDelay="TimeSpan"  
-                    maxPendingAccepts="Integer"   
-                    maxPendingConnections="Integer"  
-                    maxReceivedMessageSize="Integer"   
-                    transferMode="Buffered/Streamed/StreamedRequest/StreamedResponse">  
-  <connectionPoolSettings groupName="String" 
-                          idleTimeout"TimeSpan"  
-                          maxOutboundConnectionsPerEndpopint="Integer" />  
-</namedPipeTransport>  
+```xml  
+<namedPipeTransport channelInitializationTimeout="TimeSpan"
+                    connectionBufferSize="Integer"
+                    hostNameComparisonMode="StrongWildcard/Exact/WeakWildcard"
+                    manualAddressing="Boolean"
+                    maxBufferPoolSize="Integer"
+                    maxBufferSize="Integer"
+                    maxOutputDelay="TimeSpan"
+                    maxPendingAccepts="Integer"
+                    maxPendingConnections="Integer"
+                    maxReceivedMessageSize="Integer"
+                    transferMode="Buffered/Streamed/StreamedRequest/StreamedResponse">
+  <connectionPoolSettings groupName="String"
+                          idleTimeout="TimeSpan"
+                          maxOutboundConnectionsPerEndpopint="Integer" />
+</namedPipeTransport>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
@@ -48,14 +48,14 @@ Nessuno.
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|ChannelInitializationTimeout|Ottiene o imposta un <xref:System.TimeSpan> che determina il tempo massimo di un canale può essere nello stato di inizializzazione prima della disconnessione.|  
+|ChannelInitializationTimeout|Ottiene o imposta un <xref:System.TimeSpan> che determina il tempo massimo di un canale può trovarsi nello stato di inizializzazione prima della disconnessione.|  
 |ConnectionBufferSize|Ottiene o imposta la dimensione del buffer utilizzato per trasmettere un blocco del messaggio serializzato in transito dal client o servizio.|  
 |hostNameComparisonMode|Ottiene o imposta un valore che indica se viene utilizzato il nome host per raggiungere il servizio in caso di corrispondenza dell'URI.|  
 |manualAddressing|Ottiene o imposta un valore che indica se è richiesto l'indirizzamento manuale del messaggio.|  
-|maxBufferPoolSize|Ottiene o imposta la dimensione massima, in byte, di tutti i pool di buffer utilizzati dal trasporto.|  
+|maxBufferPoolSize|Ottiene o imposta la dimensione massima, in byte, del pool di buffer utilizzati dal trasporto.|  
 |maxBufferSize|Ottiene o imposta la dimensione massima del buffer da utilizzare. Per i messaggi trasmessi come flusso, questo valore deve essere uguale o superiore alla dimensione massima possibile delle intestazioni di messaggio, che vengono lette in modalità di memorizzazione nel buffer.|  
 |maxOutputDelay|Ottiene o imposta l'intervallo di tempo massimo per cui un blocco di un messaggio o un messaggio intero può rimanere memorizzato nel buffer prima dell'invio.|  
-|maxPendingAccepts|Ottiene o imposta il numero massimo di canali di che un servizio può avere in attesa su un listener per l'elaborazione delle connessioni in ingresso per il servizio.|  
+|maxPendingAccepts|Ottiene o imposta il numero massimo di canali di che un servizio può avere in attesa di un listener per l'elaborazione delle connessioni in ingresso al servizio.|  
 |maxPendingConnections|Ottiene o imposta il numero massimo di connessioni in attesa dell'invio nel servizio.|  
 |maxReceivedMessageSize|Ottiene e imposta la dimensione massima consentita del messaggio, in byte, che possono essere ricevuti.|  
 |transferMode|Ottiene o imposta un valore che indica se i messaggi vengono memorizzati nel buffer o trasmessi con il trasporto orientato alla connessione.|  
@@ -79,7 +79,7 @@ L'elemento `namedPipeTransport` rappresenta il punto iniziale per la creazione d
 <xref:System.ServiceModel.Channels.CustomBinding>   
 [Trasporti](../../../../../docs/framework/wcf/feature-details/transports.md)   
 [Scelta di un trasporto](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)   
-[Associazioni](../../../../../docs/framework/wcf/bindings.md)   
+[associazioni](../../../../../docs/framework/wcf/bindings.md)   
 [Estensione delle associazioni](../../../../../docs/framework/wcf/extending/extending-bindings.md)   
 [Associazioni personalizzate](../../../../../docs/framework/wcf/extending/custom-bindings.md)   
 [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

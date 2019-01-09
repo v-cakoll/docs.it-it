@@ -2,12 +2,12 @@
 title: '&lt;mexTcpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 01baba8d-d784-4255-9ea2-7afff1482bf0
-ms.openlocfilehash: dbe9e6c3b7a515ee4b5bb147f973423df0f175ea
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a69f0af60d3f6723285ceb239a86775c9a1b510f
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187699"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54147174"
 ---
 # <a name="ltmextcpbindinggt"></a>&lt;mexTcpBinding&gt;
 Specifica le impostazioni per un'associazione usata per lo scambio di messaggi WS-MetadataExchange (WS-MEX) tramite TCP.  
@@ -19,15 +19,14 @@ Specifica le impostazioni per un'associazione usata per lo scambio di messaggi W
 ## <a name="syntax"></a>Sintassi  
   
 ```xml  
-<mexTcpBinding>  
-   <binding   
-       closeTimeout="TimeSpan"   
-       name="string"   
-       openTimeout="TimeSpan"   
-       receiveTimeout="TimeSpan"  
-       sendTimeout="TimeSpan">  
-   </binding>  
-</mexTcpBinding>  
+<mexTcpBinding>
+  <binding closeTimeout="TimeSpan"
+           name="string"
+           openTimeout="TimeSpan"
+           receiveTimeout="TimeSpan"
+           sendTimeout="TimeSpan">
+  </binding>
+</mexTcpBinding>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
@@ -55,7 +54,7 @@ Specifica le impostazioni per un'associazione usata per lo scambio di messaggi W
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.ServiceModel.Configuration.MexTcpBindingElement>  
  <xref:System.ServiceModel.Description.MetadataExchangeBindings.CreateMexTcpBinding%2A>  
- [Procedura: Pubblicare metadati per un servizio usando un file di configurazione](../../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)  
+ [Procedura: Pubblicare i metadati per un servizio utilizzando un File di configurazione](../../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)  
  [Pubblicazione e recupero di metadati su un'associazione personalizzata](../../../../../docs/framework/wcf/extending/publishing-and-retrieving-metadata-over-a-custom-binding.md)  
  [Metadati](../../../../../docs/framework/wcf/feature-details/metadata.md)  
  [Associazioni](../../../../../docs/framework/wcf/bindings.md)  

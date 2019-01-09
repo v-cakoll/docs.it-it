@@ -2,12 +2,12 @@
 title: '&lt;security&gt; di &lt;netMsmqBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 001d11a9-7439-498c-b09d-fca20eaf8cd3
-ms.openlocfilehash: 8be7582ce5db88d9a79698193c44d9c50bdea4cb
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ec164fa8830321f90f824f85841a379d577ab5af
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50184755"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54147798"
 ---
 # <a name="ltsecuritygt-of-ltnetmsmqbindinggt"></a>&lt;security&gt; di &lt;netMsmqBinding&gt;
 Definisce le impostazioni di sicurezza per un'associazione MSMQ. e specifica se è stata abilitata la sicurezza basata sul trasporto o la sicurezza SOAP. In tal caso, indica la modalità di autenticazione e i livelli di protezione in uso.  
@@ -21,15 +21,14 @@ Definisce le impostazioni di sicurezza per un'associazione MSMQ. e specifica se 
 ## <a name="syntax"></a>Sintassi  
   
 ```xml  
-<security mode="None/Transport/Message/Both">  
-   <transport msmqAuthenticationMode="None/WindowsDomain/Certificate"  
-      msmqEncryptionAlgorithm="RC4Stream/AES"  
-      msmqProtectionLevel="None/Sign/EncryptAndSign"  
-      msmqSecureHashAlgorithm="MD5/SHA1/SHA256/SHA512" />  
-      <message  
-      algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes/TripleDesRsa15/Basic128Sha256/Basic192Sha256/TripleDesSha256/Basic128Sha256Rsa15/Basic192Sha256Rsa15/Basic256Sha256Rsa15/TripleDesSha256Rsa15"  
-      clientCredentialType="None/Windows/UserName/Certificate/CardSpace"/>  
-</security>  
+<security mode="None/Transport/Message/Both">
+  <transport msmqAuthenticationMode="None/WindowsDomain/Certificate"
+             msmqEncryptionAlgorithm="RC4Stream/AES"
+             msmqProtectionLevel="None/Sign/EncryptAndSign"
+             msmqSecureHashAlgorithm="MD5/SHA1/SHA256/SHA512" />
+    <message algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes/TripleDesRsa15/Basic128Sha256/Basic192Sha256/TripleDesSha256/Basic128Sha256Rsa15/Basic192Sha256Rsa15/Basic256Sha256Rsa15/TripleDesSha256Rsa15"
+             clientCredentialType="None/Windows/UserName/Certificate/CardSpace" />
+</security>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
@@ -39,7 +38,7 @@ Definisce le impostazioni di sicurezza per un'associazione MSMQ. e specifica se 
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|modalità|Specifica il tipo di sicurezza che controlla integrità, riservatezza e autenticazione. Di seguito vengono elencati i valori validi:<br /><br /> -None: Disabilita la sicurezza.<br />-Transport: La protezione e autenticazione sono offerte dal trasporto. Si applica alla sicurezza del messaggio tra i due gestori delle code. Tra l'applicazione e il gestore della coda non viene offerta alcuna sicurezza. Le applicazioni Msmq esistenti sono funzionalmente equivalenti con questo tipo di modalità di sicurezza.<br />-Message: Specifica la sicurezza dell'applicazione-end. A livello del trasporto non viene offerta alcuna sicurezza. È simile alla sicurezza offerta da altre associazioni standard.<br />-Both: Offre sicurezza a livello di messaggistica SOAP sia il trasporto. A entrambi i livelli è richiesta la stessa credenziale.<br /><br /> L'impostazione predefinita è Transport. L'attributo è di tipo <xref:System.ServiceModel.NetMsmqSecurityMode>.|  
+|modalità|Specifica il tipo di sicurezza che controlla integrità, riservatezza e autenticazione. Di seguito vengono elencati i valori validi:<br /><br /> -None: Disabilita la sicurezza.<br />-Transport: Protezione e autenticazione sono offerte dal trasporto. Si applica alla sicurezza del messaggio tra i due gestori delle code. Tra l'applicazione e il gestore della coda non viene offerta alcuna sicurezza. Le applicazioni Msmq esistenti sono funzionalmente equivalenti con questo tipo di modalità di sicurezza.<br />-Messaggio: Specifica protezione end-end dell'applicazione. A livello del trasporto non viene offerta alcuna sicurezza. È simile alla sicurezza offerta da altre associazioni standard.<br />-Entrambi: Offre sicurezza a livello di messaggistica SOAP sia il trasporto. A entrambi i livelli è richiesta la stessa credenziale.<br /><br /> L'impostazione predefinita è Transport. L'attributo è di tipo <xref:System.ServiceModel.NetMsmqSecurityMode>.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
   

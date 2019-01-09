@@ -2,12 +2,12 @@
 title: '&lt;exposedMethod&gt;'
 ms.date: 03/30/2017
 ms.assetid: 61c938cd-4ee9-4b06-ab28-922ef491ab11
-ms.openlocfilehash: 2a26ca90f6a66592c246cc9e5aef50cfa53b4bdd
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c63689224e3bba69816f5904599425a235a51bae
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747382"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145237"
 ---
 # <a name="ltexposedmethodgt"></a>&lt;exposedMethod&gt;
 Rappresenta un metodo COM+ esposto quando l'interfaccia di un componente COM+ viene esposta come servizio Web.  
@@ -20,13 +20,13 @@ Rappresenta un metodo COM+ esposto quando l'interfaccia di un componente COM+ vi
 ## <a name="syntax"></a>Sintassi  
   
 ```xml  
-<comContracts>  
-  <comContract>  
-      <exposedMethods>  
-         <exposedMethod name="string" />  
-      </exposedMethods>  
-  </comContract>  
-</comContracts>  
+<comContracts>
+  <comContract>
+    <exposedMethods>
+      <exposedMethod name="String" />
+    </exposedMethods>
+  </comContract>
+</comContracts>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
@@ -54,21 +54,23 @@ Rappresenta un metodo COM+ esposto quando l'interfaccia di un componente COM+ vi
   
  `ComSvcConfig.exe /i /application:OnlineStore /contract:ItemOrders.Financial,IFinances.{TransferFunds,AddFunds,RemoveFunds} /hosting:complus`  
   
- Quando si esegue anche ComSvcConfig.exe, quindi genera il contratto di servizio seguente elenca i metodi indicati in precedenza come [ \<exposedMethod >](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethod.md) elementi.  
+ Quando si esegue anche il ComSvcConfig.exe, quindi genera il contratto di servizio seguente elenca i metodi indicati precedentemente come [ \<exposedMethod >](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethod.md) elementi.  
   
 ```xml  
-<comContract contractType="{C551FBA9-E3AA-4272-8C2A-84BD8D290AC7}" name="IFinances" namespace="http://contoso.com/services/financial">  
-    <exposedMethod name="TransferFunds"/>  
-    <exposedMethod name="AddFunds"/>  
-    <exposedMethod name="RemoveFunds"/>  
-</comContract>  
+<comContract contractType="{C551FBA9-E3AA-4272-8C2A-84BD8D290AC7}"
+             name="IFinances"
+             namespace="http://contoso.com/services/financial">
+  <exposedMethod name="TransferFunds"/>
+  <exposedMethod name="AddFunds"/>
+  <exposedMethod name="RemoveFunds"/>
+</comContract>
 ```  
   
- In fase di inizializzazione del servizio, il runtime tenta di generare un contratto di servizio analizzando e aggiungendo solo i metodi inclusi nell'elenco di [ \<exposedMethod >](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethod.md) elementi. Per ogni metodo di interfaccia non incluso nel contratto di servizio viene prodotta  una traccia.  
+ All'avvio del servizio, il runtime tenta di generare un contratto di servizio analizzando e aggiungendo solo i metodi inclusi nell'elenco degli [ \<exposedMethod >](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethod.md) elementi. Per ogni metodo di interfaccia non incluso nel contratto di servizio viene prodotta  una traccia.  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.ServiceModel.Configuration.ComMethodElementCollection>  
  <xref:System.ServiceModel.Configuration.ComMethodElement>  
  [\<comContracts>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)  
  [Integrazione con applicazioni COM+](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)  
- [Procedura: Configurare le impostazioni del servizio COM+](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+ [Procedura: Configurare le impostazioni di servizio COM+](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)

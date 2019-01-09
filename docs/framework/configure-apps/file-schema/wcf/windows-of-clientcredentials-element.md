@@ -2,12 +2,12 @@
 title: "&lt;windows&gt; dell'elemento &lt;clientCredentials&gt;"
 ms.date: 03/30/2017
 ms.assetid: 793e41c2-31ea-4159-abbc-2123bf097233
-ms.openlocfilehash: 9badcfafff4bc09a16b0b9a565a9ea5c01e26bb5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 780d73b747feae5495ad08cb2324e7d8f8de0d7d
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32767063"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54147473"
 ---
 # <a name="ltwindowsgt-of-ltclientcredentialsgt-element"></a>&lt;windows&gt; dell'elemento &lt;clientCredentials&gt;
 Specifica le impostazioni per una credenziale Windows da usare per rappresentare il client.  
@@ -22,10 +22,8 @@ Specifica le impostazioni per una credenziale Windows da usare per rappresentare
 ## <a name="syntax"></a>Sintassi  
   
 ```xml  
-<windows   
-    allowedImpersonationLevel="Identification/Impersonation/Delegation/Anonymous/None"  
-        allowNtlm="Boolean"  
-/>  
+<windows allowedImpersonationLevel="Identification/Impersonation/Delegation/Anonymous/None"
+         allowNtlm="Boolean" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
@@ -35,8 +33,8 @@ Specifica le impostazioni per una credenziale Windows da usare per rappresentare
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|`allowedImpersonationLevel`|Imposta la preferenza di rappresentazione che il client comunica al server. La modalità di rappresentazione selezionata dal client non viene imposta sul server. Di seguito vengono elencati i valori validi:<br /><br /> -Identificazione: Il server può ottenere l'identità e i privilegi del client, ma non può rappresentare il client.<br />-Rappresentazione: Il server può rappresentare il contesto di sicurezza del client nel sistema locale.<br />-Delegation: Il server può rappresentare il contesto di sicurezza del client nei sistemi remoti.<br />-Anonima: Il server non è possibile rappresentare o identificare il client.<br />-None: Un livello di rappresentazione non è assegnato.<br /><br /> L'impostazione predefinita è Identification. L'attributo è di tipo <xref:System.Security.Principal.TokenImpersonationLevel>.|  
-|`allowNtlm`|L'impostazione di questa proprietà su `true` consente di usare l'autenticazione NTLM se Kerberos non è disponibile.<br /><br /> Impostando questa proprietà su `false` fa sì che Windows Communication Foundation (WCF) per rendere i tentativi possibili per generare un'eccezione se viene usato NTLM. Si noti che l'impostazione di questa proprietà su `false` potrebbe non impedire l'invio di credenziali NTLM nella rete.|  
+|`allowedImpersonationLevel`|Imposta la preferenza di rappresentazione che il client comunica al server. La modalità di rappresentazione selezionata dal client non viene imposta sul server. Di seguito vengono elencati i valori validi:<br /><br /> -Identificazione: Il server può ottenere l'identità e i privilegi del client, ma non può rappresentare il client.<br />-Rappresentazione: Il server può rappresentare il contesto di sicurezza del client nel sistema locale.<br />-Delega: Il server può rappresentare il contesto di sicurezza del client nei sistemi remoti.<br />-Anonimo: Il server non può rappresentare o identificare il client.<br />-None: Non è assegnato un livello di rappresentazione.<br /><br /> L'impostazione predefinita è Identification. L'attributo è di tipo <xref:System.Security.Principal.TokenImpersonationLevel>.|  
+|`allowNtlm`|L'impostazione di questa proprietà su `true` consente di usare l'autenticazione NTLM se Kerberos non è disponibile.<br /><br /> Impostando questa proprietà su `false` fa sì che Windows Communication Foundation (WCF) per rendere un tutti i tentativi possibili per generare un'eccezione se viene usato NTLM. Si noti che l'impostazione di questa proprietà su `false` potrebbe non impedire l'invio di credenziali NTLM nella rete.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  

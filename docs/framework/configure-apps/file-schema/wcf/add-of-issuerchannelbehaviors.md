@@ -2,12 +2,12 @@
 title: '&lt;add&gt; di &lt;issuerChannelBehaviors&gt;'
 ms.date: 03/30/2017
 ms.assetid: 50710506-e28f-45dd-ab7e-bff6f44173db
-ms.openlocfilehash: 75531e8ed50ae89f379db23d228804612f4bfccb
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 072e3f4e961f6bf45e7c8b48c64cda36d385cf2b
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752455"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149540"
 ---
 # <a name="ltaddgt-of-ltissuerchannelbehaviorsgt"></a>&lt;add&gt; di &lt;issuerChannelBehaviors&gt;
 Aggiunge un comportamento di endpoint da usare durante le comunicazioni con un servizio STS.  
@@ -27,8 +27,8 @@ sezione endpointBehaviors
 ## <a name="syntax"></a>Sintassi  
   
 ```xml  
-<add issuerAddress="string"  
-     behaviorConfiguraton="string" />  
+<add issuerAddress="string"
+     behaviorConfiguraton="string" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
@@ -48,10 +48,10 @@ sezione endpointBehaviors
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<issuerChannelBehaviors >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md)|Contiene una raccolta di comportamenti dell'endpoint client Windows Communication Foundation (WCF) da utilizzare durante la comunicazione con i servizi STS specificati.|  
+|[\<issuerChannelBehaviors >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md)|Contiene una raccolta di comportamenti dell'endpoint client di Windows Communication Foundation (WCF) da utilizzare durante la comunicazione con i servizi STS specificati.|  
   
 ## <a name="remarks"></a>Note  
- `issuerAddress` contiene l'URI del servizio token di sicurezza con cui il client desidera comunicare. `behaviorConfiguration` punta a un comportamento dell'endpoint utilizzati dall'applicazione nei canali creati da Windows Communication Foundation (WCF) per ottenere i token emessi dai servizi Token di sicurezza.  
+ `issuerAddress` contiene l'URI del servizio token di sicurezza con cui il client desidera comunicare. `behaviorConfiguration` punta a un comportamento dell'endpoint utilizzati dall'applicazione nei canali creati da Windows Communication Foundation (WCF) per ottenere i token rilasciati dal servizio Token di sicurezza.  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.ServiceModel.Configuration.IssuedTokenClientElement.IssuerChannelBehaviors%2A>  
@@ -63,7 +63,7 @@ sezione endpointBehaviors
  [Federazione e token rilasciati](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
  [Protezione di servizi e client](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Protezione di client](../../../../../docs/framework/wcf/securing-clients.md)  
- [Procedura: Creare un client federato](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
+ [Procedura: Creare un Client federato](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
  [Procedura: Configurare un emittente locale](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)  
  [Federazione e token rilasciati](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
  [\<issuerChannelBehaviors >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md)

@@ -2,12 +2,12 @@
 title: '&lt;transport&gt; di &lt;netNamedPipeBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: d9eff52d-4bde-4586-b56a-b0ec24611f8d
-ms.openlocfilehash: c42132f774257589b9020248188ee8d972eb92ba
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 1624b93344e50b0406d314e285ce94786ba6dadc
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837050"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54148981"
 ---
 # <a name="lttransportgt-of-ltnetnamedpipebindinggt"></a>&lt;transport&gt; di &lt;netNamedPipeBinding&gt;
 Definisce le impostazioni di sicurezza del trasporto per una named pipe.  
@@ -22,13 +22,13 @@ Definisce le impostazioni di sicurezza del trasporto per una named pipe.
 ## <a name="syntax"></a>Sintassi  
   
 ```xml  
-<netNamedPipeBinding>  
-   <binding>  
-      <security mode="None/Transport">  
-            <transport protectionLevel="None/Sign/EncryptAndSign" />  
-      </security>  
-   </binding>  
-</netNamedPipeBinding>  
+<netNamedPipeBinding>
+  <binding>
+    <security mode="None/Transport">
+      <transport protectionLevel="None/Sign/EncryptAndSign" />
+    </security>
+  </binding>
+</netNamedPipeBinding>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
@@ -38,7 +38,7 @@ Definisce le impostazioni di sicurezza del trasporto per una named pipe.
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|protectionLevel|Definisce il livello di protezione della named pipe. La firma dei messaggi riduce il rischio di manomissione da parte di terzi durante il trasferimento. La crittografia fornisce riservatezza a livello di dati durante il trasporto. Di seguito vengono elencati i valori validi:<br /><br /> -None: Nessuna protezione.<br />-Sign: I messaggi vengono firmati.<br />-EncryptAndSign: I messaggi vengono crittografati e firmati.<br /><br /> Il valore predefinito è EncryptAndSign.|  
+|protectionLevel|Definisce il livello di protezione della named pipe. La firma dei messaggi riduce il rischio di manomissione da parte di terzi durante il trasferimento. La crittografia fornisce riservatezza a livello di dati durante il trasporto. Di seguito vengono elencati i valori validi:<br /><br /> -None: Nessuna protezione.<br />-Accesso: I messaggi vengono firmati.<br />-EncryptAndSign: I messaggi vengono crittografati e firmati.<br /><br /> Il valore predefinito è EncryptAndSign.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
  nessuno  

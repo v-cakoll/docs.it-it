@@ -2,12 +2,12 @@
 title: Elemento &lt;synchronousReceive&gt;
 ms.date: 03/30/2017
 ms.assetid: cc070387-3d11-4b02-a952-bc08ad2df05a
-ms.openlocfilehash: af1ca2ee1fe3c03c33f05e0c30c7b843b3720a36
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: bc89470900e50e4d3e522682b39b20e21a66b284
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753261"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54147382"
 ---
 # <a name="ltsynchronousreceivegt-element"></a>Elemento &lt;synchronousReceive&gt;
 Questo elemento di configurazione viene usato per specificare il comportamento in fase di esecuzione per la ricezione di messaggi in un servizio o in un'applicazione client. Non prevede attributi o elementi figlio.  
@@ -21,7 +21,7 @@ Questo elemento di configurazione viene usato per specificare il comportamento i
 ## <a name="syntax"></a>Sintassi  
   
 ```xml  
-<synchronousReceive />  
+<synchronousReceive />
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  

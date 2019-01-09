@@ -5,12 +5,12 @@ f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.ServiceModel/client
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#client
 ms.assetid: bf0f7031-76c8-4e7e-a6c6-9ad9119134be
-ms.openlocfilehash: b8a006d3dee4149569b3f5b573d9d765504b0d65
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 24defe7e01603f1b1be3023d07854091335d6c60
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752637"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54148643"
 ---
 # <a name="ltclientgt"></a>&lt;Client&gt;
 L'elemento `client` definisce un elenco di endpoint ai quali può connettersi un client.  
@@ -21,21 +21,21 @@ L'elemento `client` definisce un elenco di endpoint ai quali può connettersi un
 ## <a name="syntax"></a>Sintassi  
   
 ```xml  
-<system.serviceModel>  
-    <client>  
-        <endpoint>  
-        </endpoint>  
-                <metadata>  
-        </metadata>  
-    </client>  
-</system.serviceModel>  
+<system.serviceModel>
+  <client>
+    <endpoint>
+    </endpoint>
+    <metadata>
+    </metadata>
+  </client>
+</system.serviceModel>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
 ### <a name="attributes"></a>Attributi  
- Nessuno  
+ nessuno  
   
 ### <a name="child-elements"></a>Elementi figlio  
   
@@ -58,16 +58,18 @@ L'elemento `client` definisce un elenco di endpoint ai quali può connettersi un
 ## <a name="example"></a>Esempio  
   
 ```xml  
-<client>  
-    <endpoint address="/HelloWorld/"  
-              bindingConfiguration="usingDefaults"  
-              name="MyBinding"  
-              binding="customBinding"  
-              contract="HelloWorld">  
-    <addressProperties actingAs="http://www.microsoft.com/TestActor"  
-             identityData="BasicReadWrite" identityType="Spn" isAddressPrivate="false">  
-    </endpoint>  
-</client>  
+<client>
+  <endpoint address="/HelloWorld/"
+            bindingConfiguration="usingDefaults"
+            name="MyBinding"
+            binding="customBinding"
+            contract="HelloWorld">
+    <addressProperties actingAs="http://www.microsoft.com/TestActor"
+                       identityData="BasicReadWrite"
+                       identityType="Spn"
+                       isAddressPrivate="false">
+  </endpoint>
+</client>
 ```  
   
 ## <a name="see-also"></a>Vedere anche  

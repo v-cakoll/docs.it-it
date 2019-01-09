@@ -2,12 +2,12 @@
 title: Elemento &lt;serviceCertificate&gt; di &lt;clientCredentials&gt;
 ms.date: 03/30/2017
 ms.assetid: e50c0ac5-f0df-4c90-b54b-fc602c1f84ea
-ms.openlocfilehash: 1d54c39fd681e0686e419b7b73243703e9184d1f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 82fb39f15ea0dbf38d9c9b41d7fbdd50daebb823
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32750245"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54151982"
 ---
 # <a name="ltservicecertificategt-of-ltclientcredentialsgt-element"></a>Elemento &lt;serviceCertificate&gt; di &lt;clientCredentials&gt;
 Specifica un certificato da usare per l'autenticazione di un servizio presso il client.  
@@ -17,12 +17,12 @@ Specifica un certificato da usare per l'autenticazione di un servizio presso il 
 \<endpointBehaviors >  
 \<comportamento >  
 \<clientCredentials>  
-\<elemento serviceCertificate >  
+\<serviceCertificate >  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```xml  
-<serviceCertificate />  
+<serviceCertificate />
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  

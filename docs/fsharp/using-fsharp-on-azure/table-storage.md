@@ -1,16 +1,16 @@
 ---
-title: Introduzione all'archiviazione tabelle di Azure con F#
+title: Iniziare a usare archiviazione tabelle di AzureF#
 description: Store dati strutturati nel cloud con archiviazione tabelle di Azure o Azure Cosmos DB.
 author: sylvanc
 ms.date: 03/26/2018
-ms.openlocfilehash: 2d793ba8653833ff384f1824e303b08e05aba69b
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 45a5d845dcedb5c3ea07cc4540f66bad23338a88
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43519535"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54152073"
 ---
-# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>Introduzione all'archiviazione tabelle di Azure e l'API Table di Azure Cosmos DB con F# # 
+# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>Introduzione all'archiviazione tabelle di Azure e usando l'API Table di Azure Cosmos DBF# # 
 
 Archiviazione tabelle di Azure è un servizio che archivia dati NoSQL strutturati nel cloud. Archiviazione tabelle è un archivio di chiavi/attributi con una struttura senza schema. Poiché l'archiviazione tabelle è senza schema, è facile adattare i dati come le esigenze priva di. Accesso ai dati è rapido ed economico per tutti i tipi di applicazioni. Archiviazione tabelle è in genere costo notevolmente inferiore rispetto alle soluzioni SQL tradizionali per volumi simili di dati.
 
@@ -30,16 +30,16 @@ Per altre informazioni, vedere [Introduzione all'API tabelle di Azure Cosmos DB]
 
 ## <a name="about-this-tutorial"></a>Informazioni su questa esercitazione
 
-Questa esercitazione illustra come scrivere codice F# per eseguire alcune attività comuni usando l'API Azure Cosmos DB nella tabella, incluse la creazione e l'eliminazione di una tabella e inserimento, l'aggiornamento, eliminazione e query sui dati di tabella o archiviazione tabelle di Azure.
+Questa esercitazione illustra come scrivere F# codice per eseguire alcune attività comuni usando l'API Azure Cosmos DB nella tabella, incluse la creazione e l'eliminazione di una tabella e inserimento, l'aggiornamento, eliminazione e query sui dati di tabella o archiviazione tabelle di Azure.
 
 ## <a name="prerequisites"></a>Prerequisiti
 
 Per usare questa Guida, è necessario innanzitutto [creare un account di archiviazione di Azure](/azure/storage/storage-create-storage-account) oppure [account Azure Cosmos DB](https://azure.microsoft.com/try/cosmosdb/).
 
 
-## <a name="create-an-f-script-and-start-f-interactive"></a>Creare un Script F# e avvio di F# Interactive
+## <a name="create-an-f-script-and-start-f-interactive"></a>Creare un F# creare uno Script e avviare F# interattivo
 
-Gli esempi in questo articolo possono essere utilizzati in un'applicazione F# o uno script F#. Per creare uno script F#, creare un file con il `.fsx` estensione, ad esempio `tables.fsx`, nell'ambiente di sviluppo F#.
+Gli esempi in questo articolo possono essere utilizzati in un F# dell'applicazione o un oggetto F# dello script. Per creare un F# creare uno script, creare un file con il `.fsx` estensione, ad esempio `tables.fsx`, nella F# ambiente di sviluppo.
 
 Successivamente, usare una [Gestione pacchetti](package-management.md) , ad esempio [Paket](https://fsprojects.github.io/Paket/) oppure [NuGet](https://www.nuget.org/) per installare il `WindowsAzure.Storage` pacchetto e riferimento `WindowsAzure.Storage.dll` nello script utilizzando un `#r`della direttiva. Eseguire quindi un nuovo `Microsoft.WindowsAzure.ConfigurationManager` per ottenere lo spazio dei nomi Microsoft.Azure.
 
@@ -196,7 +196,7 @@ A questo punto, dopo aver appreso le nozioni di base dell'archiviazione tabelle,
 
 - [Introduzione ad Azure Cosmos DB API di tabella](https://docs.microsoft.com/azure/cosmos-db/table-introduction)
 - [Storage Client Library per .NET](https://docs.microsoft.com/dotnet/api/overview/azure/storage?view=azure-dotnet)
-- [Provider di tipi di archiviazione di Azure](http://fsprojects.github.io/AzureStorageTypeProvider/)
+- [Provider di tipi di archiviazione di Azure](https://fsprojects.github.io/AzureStorageTypeProvider/)
 - [Blog del Team di archiviazione di Azure](https://blogs.msdn.com/b/windowsazurestorage/)
 - [Configurazione delle stringhe di connessione](https://docs.microsoft.com/azure/storage/common/storage-configure-connection-string)
 - [Introduzione all'archiviazione tabelle di Azure in .NET](https://azure.microsoft.com/resources/samples/storage-table-dotnet-getting-started/)

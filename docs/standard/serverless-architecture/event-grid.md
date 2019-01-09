@@ -4,16 +4,16 @@ description: Griglia di eventi di Azure è una soluzione senza server per il rec
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 240542014a34235aea9fd0f8162748749f23eacf
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a10fc6a47322de5db40870b1b727edc5559a27f6
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143662"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145884"
 ---
 # <a name="event-grid"></a>Griglia di eventi
 
-[Griglia di eventi di Azure](/azure-event-grid/overview) fornisce infrastruttura senza server per le applicazioni basate su eventi. È possibile pubblicare in griglia di eventi da qualsiasi origine e utilizzare i messaggi da qualsiasi piattaforma. Griglia di eventi offre inoltre supporto incorporato per gli eventi dalle risorse di Azure per semplificare l'integrazione con le applicazioni. Ad esempio, è possibile sottoscrivere gli eventi di archiviazione blob per inviare notifiche all'app quando viene caricato un file. L'applicazione può quindi pubblica un messaggio di griglia di eventi personalizzati che verrà utilizzato da altri cloud o applicazioni in locale. Griglia di eventi è stata progettata per gestire in modo affidabile su larga scala. Si ottengono i vantaggi di pubblicazione e sottoscrizione a messaggi senza l'overhead della configurazione dell'infrastruttura necessaria.
+[Griglia di eventi di Azure](/azure/event-grid/overview) fornisce infrastruttura senza server per le applicazioni basate su eventi. È possibile pubblicare in griglia di eventi da qualsiasi origine e utilizzare i messaggi da qualsiasi piattaforma. Griglia di eventi offre inoltre supporto incorporato per gli eventi dalle risorse di Azure per semplificare l'integrazione con le applicazioni. Ad esempio, è possibile sottoscrivere gli eventi di archiviazione blob per inviare notifiche all'app quando viene caricato un file. L'applicazione può quindi pubblica un messaggio di griglia di eventi personalizzati che verrà utilizzato da altri cloud o applicazioni in locale. Griglia di eventi è stata progettata per gestire in modo affidabile su larga scala. Si ottengono i vantaggi di pubblicazione e sottoscrizione a messaggi senza l'overhead della configurazione dell'infrastruttura necessaria.
 
 ![Logo di griglia di eventi](./media/event-grid-logo.png)
 

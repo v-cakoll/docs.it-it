@@ -1,13 +1,13 @@
 ---
 title: Introduzione a F# con gli strumenti da riga di comando
-description: Informazioni su come creare una soluzione multiprogetto semplice in F# tramite la CLI di .NET Core in qualsiasi sistema operativo (Windows, macOs o Linux).
+description: Informazioni su come creare una soluzione multiprogetto semplice F# tramite la CLI di .NET Core in qualsiasi sistema operativo (Windows, macOs o Linux).
 ms.date: 03/26/2018
-ms.openlocfilehash: 8a82970f33c8bbe1b8cdd8fb6499b59b16d3cbf3
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: bc9b223fcf133ffe8b19d5284dcbd3c14a426235
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45673909"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54152099"
 ---
 # <a name="get-started-with-f-with-the-net-core-cli"></a>Introduzione a F# con la CLI di .NET Core
 
@@ -17,7 +17,7 @@ Questo articolo illustra come è possibile iniziare a usare F# in qualsiasi sist
 
 Per iniziare, è necessario installare la versione più recente [.NET Core SDK](https://www.microsoft.com/net/download/).
 
-Questo articolo si presuppone che si conosca come usare una riga di comando e hanno un testo preferito editor. Se non ne usi già, [Visual Studio Code](get-started-vscode.md) è un'ottima opzione come editor di testo per F#.
+Questo articolo si presuppone che si conosca come usare una riga di comando e hanno un testo preferito editor. Se non ne usi già, [Visual Studio Code](get-started-vscode.md) è un'ottima opzione come editor di testo F#.
 
 ## <a name="build-a-simple-multi-project-solution"></a>Creare una soluzione multiprogetto semplice
 
@@ -131,7 +131,7 @@ Aggiungere il `App` del progetto per il `FSNetCore` soluzione usando il `dotnet 
 dotnet sln add src/App/App.fsproj
 ```
 
-Ripristinare le dipendenze di NuGet `dotnet restore` ([vedere la nota](#dotnet-restore-note)) ed eseguire `dotnet build` per compilare il progetto.
+Ripristinare le dipendenze di NuGet `dotnet restore` ed eseguire `dotnet build` per compilare il progetto.
 
 Passare alla directory il `src/App` progetto console ed eseguire il progetto passando `Hello World` come argomenti:
 
@@ -151,4 +151,4 @@ I used to be World but now I'm ""World"" thanks to JSON.NET!
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Successivamente, consultare il [Panoramica di F#](../tour.md) per altre informazioni sulle diverse funzionalità di F#.
+Successivamente, consultare il [presentazione del F# ](../tour.md) per altre informazioni sui diversi F# funzionalità.
