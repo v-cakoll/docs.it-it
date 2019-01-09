@@ -2,12 +2,12 @@
 title: Elemento &lt;localClientSettings&gt;
 ms.date: 03/30/2017
 ms.assetid: 4680ace5-f4e1-4fcb-b9d8-a4a4af5cd7ae
-ms.openlocfilehash: a960a18c472bed64609947220dffedf9ec90945c
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 6ed73cc2a74efbba356b71f7941cb8b1113b22b8
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32750947"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146147"
 ---
 # <a name="ltlocalclientsettingsgt-element"></a>Elemento &lt;localClientSettings&gt;
 Specifica le impostazioni di sicurezza di un client locale per questa associazione.  
@@ -21,19 +21,19 @@ Specifica le impostazioni di sicurezza di un client locale per questa associazio
 ## <a name="syntax"></a>Sintassi  
   
 ```xml  
-<security>  
-   <localClientSettings cacheCookies="Boolean"  
-      cookieRenewalThresholdPercentage="Integer"  
-      detectReplays="Boolean"  
-      maxClockSkew="TimeSpan"  
-      maxCookieCachingTime="TimeSpan"  
-      reconnectTransportOnFailure="Boolean"  
-      replayCacheSize="Integer"  
-      replayWindow="TimeSpan"  
-      sessionKeyRenewalInterval="TimeSpan"  
-      sessionKeyRolloverInterval="TimeSpan"  
-      timestampValidityDuration="TimeSpan" />  
-</security>  
+<security>
+   <localClientSettings cacheCookies="Boolean"
+                        cookieRenewalThresholdPercentage="Integer"
+                        detectReplays="Boolean"
+                        maxClockSkew="TimeSpan"
+                        maxCookieCachingTime="TimeSpan"
+                        reconnectTransportOnFailure="Boolean"
+                        replayCacheSize="Integer"
+                        replayWindow="TimeSpan"
+                        sessionKeyRenewalInterval="TimeSpan"
+                        sessionKeyRolloverInterval="TimeSpan"
+                        timestampValidityDuration="TimeSpan" />
+</security>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
@@ -56,7 +56,7 @@ Specifica le impostazioni di sicurezza di un client locale per questa associazio
 |`timestampValidityDuration`|<xref:System.TimeSpan> positivo che specifica il periodo di validità di un timestamp. L'impostazione predefinita è "00:15:00".|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- Nessuno  
+ nessuno  
   
 ### <a name="parent-elements"></a>Elementi padre  
   

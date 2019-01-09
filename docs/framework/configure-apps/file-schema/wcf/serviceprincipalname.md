@@ -1,18 +1,18 @@
 ---
-title: '&lt;ServicePrincipalName&gt;'
+title: '&lt;servicePrincipalName&gt;'
 ms.date: 03/30/2017
 ms.assetid: 3f3b85d3-20f2-4cd8-8a6a-ee18befbd165
-ms.openlocfilehash: e5c1f5a6986d57d20180560b12f5c7c5540a590d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a22a905744980d0b370023e6236734a9bb0d6357
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32750726"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150643"
 ---
-# <a name="ltserviceprincipalnamegt"></a>&lt;ServicePrincipalName&gt;
+# <a name="ltserviceprincipalnamegt"></a>&lt;servicePrincipalName&gt;
 Specifica l'identità di un servizio in base al relativo nome dell'entità servizio (SPN, Service Principal Name).  
   
- Per ulteriori informazioni sull'impostazione del nome SPN, vedere [autenticazione e identità del servizio](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+ Per altre informazioni sull'impostazione del nome SPN, vedere [identità del servizio e autenticazione](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
  \<identità >  
 \<servicePrincipalName >  
@@ -20,7 +20,7 @@ Specifica l'identità di un servizio in base al relativo nome dell'entità servi
 ## <a name="syntax"></a>Sintassi  
   
 ```xml  
-<servicePrincipalName value = "String" />  
+<servicePrincipalName value="String" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
@@ -42,7 +42,7 @@ Specifica l'identità di un servizio in base al relativo nome dell'entità servi
 |[\<identità >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Specifica l'identità del servizio da autenticare presso il client.|  
   
 ## <a name="remarks"></a>Note  
- Un client protetto di Windows Communication Foundation (WCF) che si connette a un endpoint con questa identità usa il SPN quando esegue l'autenticazione SSPI con l'endpoint.  
+ Un client Windows Communication Foundation (WCF) sicuro che si connette a un endpoint con questa identità usa il nome SPN quando si esegue l'autenticazione SSPI con l'endpoint.  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.ServiceModel.Configuration.IdentityElement>  

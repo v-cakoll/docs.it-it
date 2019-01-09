@@ -2,12 +2,12 @@
 title: '&lt;security&gt; di &lt;customBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 243a5148-bbd1-447f-a8a5-6e7792c0a3f1
-ms.openlocfilehash: eb8cd4172a83d618f3fd83519a8d9d2f4c864067
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d0a14af56f888c5c4c2c3924625f2e6d45ed2eeb
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128953"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146251"
 ---
 # <a name="ltsecuritygt-of-ltcustombindinggt"></a>&lt;security&gt; di &lt;customBinding&gt;
 Specifica le opzioni di sicurezza di un'associazione personalizzata.  
@@ -21,25 +21,23 @@ Specifica le opzioni di sicurezza di un'associazione personalizzata.
 ## <a name="syntax"></a>Sintassi  
   
 ```xml  
-<security   
-   allowSerializedSigningTokenOnReply="Boolean"  
-   authenticationMode="AuthenticationMode"  
-      defaultAlgorithmSuite="SecurityAlgorithmSuite"  
-   includeTimestamp="Boolean"  
-      requireDerivedKeys="Boolean"  
-   keyEntropyMode="ClientEntropy/ServerEntropy/CombinedEntropy"   
-messageProtectionOrder="SignBeforeEncrypt/SignBeforeEncryptAndEncryptSignature/EncryptBeforeSign"  
-      messageSecurityVersion="WSSecurityJan2004/WSSecurityXXX2005"  
-   requireDerivedKeys="Boolean"  
-   requireSecurityContextCancellation="Boolean"  
-   requireSignatureConfirmation="Boolean"  
-      securityHeaderLayout=  
-              "Strict/Lax/LaxTimestampFirst/LaxTimestampLast">  
-   <issuedTokenParameters />  
-   <localClientSettings />  
-   <localServiceSettings />  
-   <secureConversationBootstrap />  
-</security>  
+<security allowSerializedSigningTokenOnReply="Boolean"
+          authenticationMode="AuthenticationMode"
+          defaultAlgorithmSuite="SecurityAlgorithmSuite"
+          includeTimestamp="Boolean"
+          requireDerivedKeys="Boolean"
+          keyEntropyMode="ClientEntropy/ServerEntropy/CombinedEntropy"
+          messageProtectionOrder="SignBeforeEncrypt/SignBeforeEncryptAndEncryptSignature/EncryptBeforeSign"
+          messageSecurityVersion="WSSecurityJan2004/WSSecurityXXX2005"
+          requireDerivedKeys="Boolean"
+          requireSecurityContextCancellation="Boolean"
+          requireSignatureConfirmation="Boolean"
+          securityHeaderLayout="Strict/Lax/LaxTimestampFirst/LaxTimestampLast">
+   <issuedTokenParameters />
+   <localClientSettings />
+   <localServiceSettings />
+   <secureConversationBootstrap />
+</security>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
@@ -114,57 +112,58 @@ messageProtectionOrder="SignBeforeEncrypt/SignBeforeEncryptAndEncryptSignature/E
  L'associazione personalizzata usa inoltre la sicurezza dei messaggi con tipo di credenziale di Windows, che è il tipo di credenziale predefinito. Questa operazione viene eseguita la [sicurezza](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) elemento di associazione. Il client e il servizio vengono autenticati mediante la sicurezza a livello di messaggio se il meccanismo di autenticazione Kerberos è disponibile. Se il meccanismo di autenticazione Kerberos non è disponibile, viene usata l'autenticazione NTLM. NTLM autentica il client con il servizio, ma non autentica il servizio con il client. Il [sicurezza](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) elemento di associazione è configurato per usare `SecureConversation` authenticationType, che comporta la creazione di una sessione di sicurezza nel client e il servizio. Questa operazione è necessaria per consentire il funzionamento del contratto duplex del servizio. Per altre informazioni sull'esecuzione di questo esempio, vedere [protezione di associazione personalizzata](../../../../../docs/framework/wcf/samples/custom-binding-security.md).  
   
 ```xml  
-<configuration>  
-  <system.serviceModel>  
-    <services>  
-      <service   
-          name="Microsoft.ServiceModel.Samples.CalculatorService"  
-          behaviorConfiguration="CalculatorServiceBehavior">  
-        <host>  
-          <baseAddresses>  
-            <!-- use following base address -->  
-            <add baseAddress="net.tcp://localhost:8000/ServiceModelSamples/Service"/>  
-          </baseAddresses>  
-        </host>  
-        <endpoint address=""  
-                    binding="customBinding"  
-                    bindingConfiguration="Binding1"   
-                    contract="Microsoft.ServiceModel.Samples.ICalculatorDuplex" />  
-        <!-- the mex endpoint is exposed at net.tcp://localhost:8000/ServiceModelSamples/service/mex -->  
-        <endpoint address="mex"  
-                  binding="mexTcpBinding"  
-                  contract="IMetadataExchange" />  
-      </service>  
-    </services>  
-  
-    <bindings>  
-      <!-- configure a custom binding -->  
-      <customBinding>  
-        <binding name="Binding1">  
-          <security authenticationMode="SecureConversation"  
-                     requireSecurityContextCancellation="true">  
-          </security>  
-          <textMessageEncoding messageVersion="Soap12WSAddressing10" writeEncoding="utf-8"/>  
-          <sslStreamSecurity requireClientCertificate="false"/>  
-          <tcpTransport/>  
-        </binding>  
-      </customBinding>  
-    </bindings>  
-  
-    <!--For debugging purposes set the includeExceptionDetailInFaults attribute to true-->  
-    <behaviors>  
-      <serviceBehaviors>  
-        <behavior name="CalculatorServiceBehavior">  
-          <serviceMetadata />  
-          <serviceDebug includeExceptionDetailInFaults="False" />  
-          <serviceCredentials>  
-            <serviceCertificate findValue="localhost" storeLocation="LocalMachine" storeName="My" x509FindType="FindBySubjectName"/>  
-          </serviceCredentials>  
-        </behavior>  
-      </serviceBehaviors>  
-    </behaviors>  
-  </system.serviceModel>  
-</configuration>  
+<configuration>
+  <system.serviceModel>
+    <services>
+      <service name="Microsoft.ServiceModel.Samples.CalculatorService"
+               behaviorConfiguration="CalculatorServiceBehavior">
+        <host>
+          <baseAddresses>
+            <!-- use following base address -->
+            <add baseAddress="net.tcp://localhost:8000/ServiceModelSamples/Service"/>
+          </baseAddresses>
+        </host>
+        <endpoint address=""
+                  binding="customBinding"
+                  bindingConfiguration="Binding1"
+                  contract="Microsoft.ServiceModel.Samples.ICalculatorDuplex" />
+        <!-- the mex endpoint is exposed at net.tcp://localhost:8000/ServiceModelSamples/service/mex -->
+        <endpoint address="mex"
+                  binding="mexTcpBinding"
+                  contract="IMetadataExchange" />
+      </service>
+    </services>
+    <bindings>
+      <!-- configure a custom binding -->
+      <customBinding>
+        <binding name="Binding1">
+          <security authenticationMode="SecureConversation"
+                    requireSecurityContextCancellation="true">
+          </security>
+          <textMessageEncoding messageVersion="Soap12WSAddressing10"
+                               writeEncoding="utf-8" />
+          <sslStreamSecurity requireClientCertificate="false" />
+          <tcpTransport />
+        </binding>
+      </customBinding>
+    </bindings>
+    <!--For debugging purposes set the includeExceptionDetailInFaults attribute to true-->
+    <behaviors>
+      <serviceBehaviors>
+        <behavior name="CalculatorServiceBehavior">
+          <serviceMetadata />
+          <serviceDebug includeExceptionDetailInFaults="False" />
+          <serviceCredentials>
+            <serviceCertificate findValue="localhost"
+                                storeLocation="LocalMachine"
+                                storeName="My"
+                                x509FindType="FindBySubjectName" />
+          </serviceCredentials>
+        </behavior>
+      </serviceBehaviors>
+    </behaviors>
+  </system.serviceModel>
+</configuration>
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
@@ -175,5 +174,5 @@ messageProtectionOrder="SignBeforeEncrypt/SignBeforeEncryptAndEncryptSignature/E
  [Estensione delle associazioni](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
  [Associazioni personalizzate](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
  [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
- [Come si fa: Creare un'associazione personalizzata usando SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
+ [Procedura: Creare un'associazione personalizzata usando SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
  [Sicurezza delle associazioni personalizzate](../../../../../docs/framework/wcf/samples/custom-binding-security.md)

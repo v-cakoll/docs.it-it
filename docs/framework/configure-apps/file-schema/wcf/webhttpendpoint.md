@@ -2,12 +2,12 @@
 title: '&lt;webHttpEndpoint&gt;'
 ms.date: 03/30/2017
 ms.assetid: ecaaeb6f-ebd0-411d-8b53-92477cd45347
-ms.openlocfilehash: 46691a36b62898583132b5668b06de5659926d66
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: ee14ce23370675782f4c25385c1786fdce11eba0
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32767089"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54151969"
 ---
 # <a name="ltwebhttpendpointgt"></a>&lt;webHttpEndpoint&gt;
 Questo elemento di configurazione definisce un endpoint standard con fisse [ \<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md) automaticamente l'associazione che aggiunge il [ \<webHttp >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md) comportamento. Usare questo endpoint per la scrittura di un servizio REST.  
@@ -18,16 +18,16 @@ Questo elemento di configurazione definisce un endpoint standard con fisse [ \<w
 ## <a name="syntax"></a>Sintassi  
   
 ```xml  
-<system.serviceModel>  
+<system.serviceModel>
   <standardEndpoints>
     <webHttpEndpoint>
-      <standardEndpoint automaticFormatSelectionEnabled="String" 
-                        defaultOutgoingResponseFormat="Xml/Json" 
-                        helpEnabled="Boolean" 
-                        webEndpointType="String"/>
+      <standardEndpoint automaticFormatSelectionEnabled="String"
+                        defaultOutgoingResponseFormat="Xml/Json"
+                        helpEnabled="Boolean"
+                        webEndpointType="String" />
     </webHttpEndpoint>
-  </standardEndpoints>  
-</system.serviceModel>  
+  </standardEndpoints>
+</system.serviceModel>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
