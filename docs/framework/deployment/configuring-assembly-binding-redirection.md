@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d266cbd8-bf91-41d1-baf0-afbc481a741f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3abf42790757708b235b3eab82ea9a11ff545215
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 37ff2b42ec338d31242a2391cea002fbe582c6dd
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50182866"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54029580"
 ---
 # <a name="configuring-assembly-binding-redirection"></a>Configurazione del reindirizzamento dell'associazione di assembly
 Per impostazione predefinita, le applicazioni usano l'insieme di assembly .NET Framework fornito con la versione di runtime usata per compilare l'applicazione. Per reindirizzare i riferimenti di associazione di assembly a una specifica versione degli assembly .NET Framework è possibile usare l'attributo **appliesTo** dell'elemento [\<assemblyBinding>](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) di un file di configurazione dell'applicazione. Questo attributo facoltativo usa un numero di versione di .NET Framework per indicare la versione a cui deve essere applicato. Se non si specifica l'attributo **appliesTo** l'elemento **\<assemblyBinding>** viene applicato a tutte le versioni di .NET Framework.  
@@ -40,22 +40,22 @@ Per impostazione predefinita, le applicazioni usano l'insieme di assembly .NET F
   
 ```xml  
 <assemblyBinding xmlns="..." appliesTo="v1.0.3705">   
-<! — .NET Framework version 1.0 redirects here. -->   
+  <!-- .NET Framework version 1.0 redirects here. -->   
 </assemblyBinding>   
   
 <assemblyBinding xmlns="..." appliesTo="v1.1.4322">   
-    <! — .NET Framework version 1.1 redirects here. -->   
+  <!-- .NET Framework version 1.1 redirects here. -->   
 </assemblyBinding>   
   
 <assemblyBinding xmlns="...">   
-<!-- Redirects meant for all versions of the .NET Framework. -->   
+  <!-- Redirects meant for all versions of the .NET Framework. -->   
 </assemblyBinding>  
 ```  
   
 ## <a name="debugging-configuration-file-errors"></a>Debug degli errori del file di configurazione  
- I file di configurazione vengono analizzati nel runtime al momento della creazione di un dominio applicazione e vengono quindi caricati in tale dominio applicazione. In Common Language Runtime, gli errori in un file di configurazione vengono gestiti ignorando la voce che genera l'errore. Un file di configurazione contenente XML in formato non corretto viene ignorato completamente. In caso di codice XML non valido, verranno ignorate solo le sezioni non valide.  
+ I file di configurazione vengono analizzati nel runtime al momento della creazione di un dominio applicazione e vengono quindi caricati in tale dominio applicazione. In Common Language Runtime, gli errori in un file di configurazione vengono gestiti ignorando la voce che genera l'errore. Un file di configurazione contenente XML in formato non corretto viene ignorato completamente.  In caso di codice XML non valido, verranno ignorate solo le sezioni non valide.  
   
  È possibile determinare se un file di configurazione viene usato determinando se si verificano reindirizzamenti dell'associazione di assembly. Per visualizzare gli assembly caricati usare [Fuslogvw.exe (Visualizzatore log associazioni assembly)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md). Per visualizzare tutte le associazioni di assembly è necessario impostare una voce per **ForceLog** nel Registro di sistema.  
   
 ## <a name="see-also"></a>Vedere anche  
-- [Procedura: abilitare e disabilitare il reindirizzamento di associazione automatico](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)
+- [Procedura: Abilitare e disabilitare il reindirizzamento di associazione automatico](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)
