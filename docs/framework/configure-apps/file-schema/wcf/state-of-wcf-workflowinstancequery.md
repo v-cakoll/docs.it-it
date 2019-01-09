@@ -2,12 +2,12 @@
 title: '&lt;stato&gt; di WCF, &lt;workflowInstanceQuery&gt;'
 ms.date: 03/30/2017
 ms.assetid: 40f21055-766c-4be9-86c4-d1d899007098
-ms.openlocfilehash: 427cba7a51bfb908171e476cd703c6a40fd6e144
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 168a6980e955f602ee60bff26461f06cb16c836a
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123215"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145926"
 ---
 # <a name="ltstategt-of-wcf-ltworkflowinstancequerygt"></a>&lt;stato&gt; di WCF, &lt;workflowInstanceQuery&gt;
 Rappresenta una raccolta di stati sottoscritti dell'istanza del flusso di lavoro rilevata che si riferiscono alla fase di creazione dei record di rilevamento.  
@@ -26,7 +26,7 @@ Rappresenta una raccolta di stati sottoscritti dell'istanza del flusso di lavoro
   
 ## <a name="syntax"></a>Sintassi  
   
-```xml
+```xml  
 <tracking>
   <profiles>
     <trackingProfile name="Name">
@@ -34,15 +34,15 @@ Rappresenta una raccolta di stati sottoscritti dell'istanza del flusso di lavoro
         <workflowInstanceQueries>
           <workflowInstanceQuery>
             <states>
-              <state name="Name"/>
+              <state name="Name" />
             </states>
           </workflowInstanceQuery>
         </workflowInstanceQueries>
       </workflow>
     </trackingProfile>
   </profiles>
-</tracking>  
-```
+</tracking>
+```  
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi
 
@@ -90,13 +90,13 @@ I valori di stato possibili sono descritti nella tabella seguente:
 
 La configurazione seguente sottoscrive i record di rilevamento a livello di istanza del flusso di lavoro per lo stato dell'istanza `Started` usando questa query.  
   
-```xml
+```xml  
 <workflowInstanceQueries>
-  <workflowInstanceQuery>  
-    <states>  
-      <state name="Started"/>  
-    </states>  
-  </workflowInstanceQuery>  
+  <workflowInstanceQuery>
+    <states>
+      <state name="Started" />
+    </states>
+  </workflowInstanceQuery>
 </workflowInstanceQueries>
 ```  
   

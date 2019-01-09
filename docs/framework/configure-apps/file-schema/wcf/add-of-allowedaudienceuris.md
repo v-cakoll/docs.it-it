@@ -2,12 +2,12 @@
 title: '&lt;add&gt; di &lt;allowedAudienceUris&gt;'
 ms.date: 03/30/2017
 ms.assetid: 4e7b7637-e0ea-4a91-988f-6b6ef28d9fc3
-ms.openlocfilehash: cfd18d6af5248e680b9520069fb34c412ee12b3f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5428b41cadebbb38716789fa0e275c244fe74311
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746628"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146236"
 ---
 # <a name="ltaddgt-of-ltallowedaudienceurisgt"></a>&lt;add&gt; di &lt;allowedAudienceUris&gt;
 Aggiunge un URI di destinazione al quale il token di sicurezza <xref:System.IdentityModel.Tokens.SamlSecurityToken> può essere destinato affinché venga considerato valido da un'istanza di <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>.  
@@ -19,14 +19,14 @@ Aggiunge un URI di destinazione al quale il token di sicurezza <xref:System.Iden
 \<serviceCredentials>  
 \<issuedTokenAuthentication >  
 \<allowedAudienceUris >  
-\<aggiungere > elemento per \<allowedAudienceUris >  
+\<aggiungere > (elemento) per \<allowedAudienceUris >  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```xml  
-<allowedAudienceUris>   
-   <add allowedAudienceUri="String"/>  
-</allowedAudienceUris>  
+<allowedAudienceUris>
+  <add allowedAudienceUri="String" />
+</allowedAudienceUris>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
@@ -56,7 +56,7 @@ Aggiunge un URI di destinazione al quale il token di sicurezza <xref:System.Iden
   
  Per altre informazioni, vedere <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>.  
   
- Per ulteriori informazioni sull'utilizzo di questo elemento di configurazione, vedere [procedura: configurare le credenziali in un servizio federativo](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md).  
+ Per altre informazioni sull'uso di questo elemento di configurazione, vedere [come: Configurare le credenziali in un servizio federativo](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>  

@@ -2,34 +2,37 @@
 title: '&lt;dispatcherSynchronization&gt;'
 ms.date: 03/30/2017
 ms.assetid: cc030f9c-4e38-4b14-94dc-9a0e41ec8e2d
-ms.openlocfilehash: 34c12a05ee363df6b6cfc9ff3809bab50ee8d522
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 86660620113b162a9a5260b7026a64455284d184
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747577"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54151462"
 ---
 # <a name="ltdispatchersynchronizationgt"></a>&lt;dispatcherSynchronization&gt;
-
-Specifica un comportamento dell'endpoint che consente a un servizio di inviare risposte in modo asincrono.
-
-\<System. ServiceModel > \<comportamenti > \<endpointBehaviors > \<comportamento >
-
-## <a name="syntax"></a>Sintassi
-
-```xml
-<dispatcherSynchronizationBehavior asynchronousSendEnabled="Boolean" 
+  
+Specifica un comportamento dell'endpoint che consente a un servizio di inviare risposte in modo asincrono.  
+  
+\<system.serviceModel>  
+\<i comportamenti >  
+\<endpointBehaviors >  
+\<comportamento >  
+  
+## <a name="syntax"></a>Sintassi  
+  
+```xml  
+<dispatcherSynchronizationBehavior asynchronousSendEnabled="Boolean"
                                    maxPendingReceives="Integer" />
-```
-
-## <a name="type"></a>Tipo
-
-`Type`
-
-## <a name="attributes-and-elements"></a>Attributi ed elementi
-
-Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.
-
+```  
+  
+## <a name="type"></a>Tipo  
+  
+`Type`  
+  
+## <a name="attributes-and-elements"></a>Attributi ed elementi  
+  
+Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
+  
 ### <a name="attributes"></a>Attributi
 
 | Attributo               | Descrizione       |

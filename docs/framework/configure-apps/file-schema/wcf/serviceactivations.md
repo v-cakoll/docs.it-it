@@ -2,15 +2,15 @@
 title: '&lt;serviceActivations&gt;'
 ms.date: 03/30/2017
 ms.assetid: 97e665b6-1c51-410b-928a-9bb42c954ddb
-ms.openlocfilehash: c62f2bd1a34aca31ea9f9d5de17840f2967b269c
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 82422716482eafe996534e3bf1a94b4c7a604a6d
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748529"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145120"
 ---
 # <a name="ltserviceactivationsgt"></a>&lt;serviceActivations&gt;
-Un elemento di configurazione che consente di aggiungere impostazioni che definiscono le impostazioni di attivazione di servizi virtuali che eseguono il mapping a tipi di servizi Windows Communication Foundation (WCF). In questo modo è possibile attivare servizi ospitati in WAS/IIS senza un file con estensione svc.  
+Elemento di configurazione che consente di aggiungere le impostazioni che definiscono le impostazioni di attivazione di servizi virtuali che eseguono il mapping ai tipi di servizio Windows Communication Foundation (WCF). In questo modo è possibile attivare servizi ospitati in WAS/IIS senza un file con estensione svc.  
   
  \<system.ServiceModel>  
 \<serviceHostingEnvironment >  
@@ -19,12 +19,12 @@ Un elemento di configurazione che consente di aggiungere impostazioni che defini
 ## <a name="syntax"></a>Sintassi  
   
 ```xml  
-<serviceHostingEnvironment>   
-   <serviceActivations>  
-      <add factory="String"  
-           service="String"/>  
-   </serviceActivations>  
-</serviceHostingEnvironment>  
+<serviceHostingEnvironment>
+  <serviceActivations>
+    <add factory="String"
+         service="String" />
+  </serviceActivations>
+</serviceHostingEnvironment>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
@@ -49,15 +49,15 @@ Un elemento di configurazione che consente di aggiungere impostazioni che defini
  Nell'esempio seguente viene illustrato come configurare le impostazioni di attivazione all'interno del file web.config.  
   
 ```xml  
-<configuration>  
-  <system.serviceModel>  
-    <serviceHostingEnvironment>  
-      <serviceActivations>  
-        <add service="GreetingService"/>  
-      </serviceActivations>  
-    </serviceHostingEnvironment>  
-  </system.serviceModel>  
-</configuration>  
+<configuration>
+  <system.serviceModel>
+    <serviceHostingEnvironment>
+      <serviceActivations>
+        <add service="GreetingService" />
+      </serviceActivations>
+    </serviceHostingEnvironment>
+  </system.serviceModel>
+</configuration>
 ```  
   
  L'utilizzo di questa configurazione consente di attivare GreetingService senza usare un file con estensione svc.  

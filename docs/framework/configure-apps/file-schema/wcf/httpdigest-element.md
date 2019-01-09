@@ -2,12 +2,12 @@
 title: Elemento &lt;httpDigest&gt;
 ms.date: 03/30/2017
 ms.assetid: 3da4f276-dfd9-4247-8c07-01d83618727c
-ms.openlocfilehash: 4f3edb4a525429bfc55c4e4cfaffbfc5726dcef8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2211c593090d697ae07350fcf7ac491b9d23e2d0
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521987"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150141"
 ---
 # <a name="lthttpdigestgt-element"></a>Elemento &lt;httpDigest&gt;
 Specifica una credenziale di tipo digest usata per autenticare il client presso un servizio.  
@@ -22,7 +22,7 @@ Specifica una credenziale di tipo digest usata per autenticare il client presso 
 ## <a name="syntax"></a>Sintassi  
   
 ```xml  
-<digest impersonationLevel="Identification/Impersonation/Delegation/Anonymous/None" />  
+<digest impersonationLevel="Identification/Impersonation/Delegation/Anonymous/None" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
@@ -32,7 +32,7 @@ Specifica una credenziale di tipo digest usata per autenticare il client presso 
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|`impersonationLevel`|Imposta la preferenza di rappresentazione che il client comunica al server. La modalità di rappresentazione selezionata dal client non viene imposta sul server. Di seguito vengono elencati i valori validi:<br /><br /> -Identificazione: Il server può ottenere l'identità e i privilegi del client, ma non può rappresentare il client.<br />-Rappresentazione: Il server può rappresentare il contesto di sicurezza del client nel sistema locale.<br />-Delegation: Il server può rappresentare il contesto di sicurezza del client nei sistemi remoti.<br />-Anonima: Il server non può rappresentare o identificare il client.<br />-None: Livello di rappresentazione non è assegnato.<br /><br /> L'impostazione predefinita è Identification. L'attributo è di tipo <xref:System.Security.Principal.TokenImpersonationLevel>.|  
+|`impersonationLevel`|Imposta la preferenza di rappresentazione che il client comunica al server. La modalità di rappresentazione selezionata dal client non viene imposta sul server. Di seguito vengono elencati i valori validi:<br /><br /> -Identificazione: Il server può ottenere l'identità e i privilegi del client, ma non può rappresentare il client.<br />-Rappresentazione: Il server può rappresentare il contesto di sicurezza del client nel sistema locale.<br />-Delega: Il server può rappresentare il contesto di sicurezza del client nei sistemi remoti.<br />-Anonimo: Il server non può rappresentare o identificare il client.<br />-None: Non è assegnato un livello di rappresentazione.<br /><br /> L'impostazione predefinita è Identification. L'attributo è di tipo <xref:System.Security.Principal.TokenImpersonationLevel>.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
  nessuno  

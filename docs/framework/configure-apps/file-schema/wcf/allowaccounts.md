@@ -2,24 +2,24 @@
 title: '&lt;allowAccounts&gt;'
 ms.date: 03/30/2017
 ms.assetid: 166923a9-a8ac-478f-92f9-529d9667f3a6
-ms.openlocfilehash: 097112a8b54467843554047882e55b62d7813c0c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 61310d530cfec2862fb64155777cd0e88132f748
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352877"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145939"
 ---
 # <a name="ltallowaccountsgt"></a>&lt;allowAccounts&gt;
-Contiene una raccolta di elementi di configurazione che specificano utente account per i processi che ospitano servizi Windows Communication Foundation (WCF) e viene concesso l'accesso al servizio di condivisione.  
+Contiene una raccolta di elementi di configurazione che specificano utente account per processi che ospitano servizi Windows Communication Foundation (WCF) e concesso l'accesso al servizio di condivisione.  
   
  \<system.serviceModel.activation>  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```xml  
-<allowAccounts>  
-   <add securityIdentifier="String"/>  
-</allowAccounts>  
+<allowAccounts>
+  <add securityIdentifier="String" />
+</allowAccounts>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
@@ -32,7 +32,7 @@ Contiene una raccolta di elementi di configurazione che specificano utente accou
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-allowaccounts.md)|Aggiunge un account utente per processi che ospitano servizi WCF e viene concesso l'accesso al servizio di condivisione|  
+|[\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-allowaccounts.md)|Aggiunge un account utente per processi che ospitano servizi WCF e vengono concesso l'accesso al servizio di condivisione|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   

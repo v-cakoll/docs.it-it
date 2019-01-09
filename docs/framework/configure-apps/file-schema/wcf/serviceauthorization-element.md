@@ -2,12 +2,12 @@
 title: Elemento &lt;serviceAuthorization&gt;
 ms.date: 03/30/2017
 ms.assetid: 18cddad5-ddcb-4839-a0ac-1d6f6ab783ca
-ms.openlocfilehash: cd5cb072f424927615b6e87d9193a9c200a8c48b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 6c69d10eb2f6cdf4546dd5895d196723417f5494
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32751454"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146004"
 ---
 # <a name="ltserviceauthorizationgt-element"></a>Elemento &lt;serviceAuthorization&gt;
 Specifica impostazioni che autorizzano accesso alle operazioni del servizio  
@@ -21,15 +21,14 @@ Specifica impostazioni che autorizzano accesso alle operazioni del servizio
 ## <a name="syntax"></a>Sintassi  
   
 ```xml  
-<serviceAuthorization  
-     impersonateCallerForAllOperations="Boolean"  
-      principalPermissionMode="None/UseWindowsGroups/UseAspNetRoles/Custom"  
-      roleProviderName="String"  
-      serviceAuthorizationManagerType="String" />  
-      <authorizationPolicies>  
-         <add policyType="String" />  
-      </authorizationPolicies>  
-</serviceAuthorization>  
+<serviceAuthorization impersonateCallerForAllOperations="Boolean"
+                      principalPermissionMode="None/UseWindowsGroups/UseAspNetRoles/Custom"
+                      roleProviderName="String"
+                      serviceAuthorizationManagerType="String">
+  <authorizationPolicies>
+    <add policyType="String" />
+  </authorizationPolicies>
+</serviceAuthorization>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
@@ -40,7 +39,7 @@ Specifica impostazioni che autorizzano accesso alle operazioni del servizio
 |Attributo|Descrizione|  
 |---------------|-----------------|  
 |impersonateCallerForAllOperations|Valore booleano che specifica se tutte le operazioni nel servizio rappresentano il chiamante. Il valore predefinito è `false`.<br /><br /> Quando un'operazione del servizio specifica rappresenta il chiamante, il contesto del thread viene commutato nel contesto del chiamante prima dell'esecuzione del servizio specificato.|  
-|principalPermissionMode|Imposta l'entità di sicurezza usata per eseguire operazioni nel server. Sono inclusi i valori seguenti:<br /><br /> -Nessuno<br />-UseWindowsGroups<br />-UseAspNetRoles<br />-Custom<br /><br /> Il valore predefinito è UseWindowsGroups. Il valore è di tipo <xref:System.ServiceModel.Description.PrincipalPermissionMode>. Per ulteriori informazioni sull'utilizzo di questo attributo, vedere [procedura: limitare l'accesso con la classe PrincipalPermissionAttribute](../../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md).|  
+|principalPermissionMode|Imposta l'entità di sicurezza usata per eseguire operazioni nel server. Sono inclusi i valori seguenti:<br /><br /> -None<br />-UseWindowsGroups<br />-UseAspNetRoles<br />-Custom<br /><br /> Il valore predefinito è UseWindowsGroups. Il valore è di tipo <xref:System.ServiceModel.Description.PrincipalPermissionMode>. Per altre informazioni sull'uso di questo attributo, vedere [come: Limitare l'accesso con la classe PrincipalPermissionAttribute](../../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md).|  
 |roleProviderName|Una stringa che specifica il nome del provider di ruoli che fornisce informazioni sui ruoli per un'applicazione di Windows Communication Foundation (WCF). Il valore predefinito è una stringa vuota.|  
 |ServiceAuthorizationManagerType|Stringa che contiene il tipo di gestione autorizzazione del servizio. Per altre informazioni, vedere <xref:System.ServiceModel.ServiceAuthorizationManager>.|  
   
@@ -59,43 +58,42 @@ Specifica impostazioni che autorizzano accesso alle operazioni del servizio
 ## <a name="remarks"></a>Note  
  Questa sezione contiene elementi che influiscono su autorizzazioni, provider del ruolo personalizzati e rappresentazioni.  
   
- L'attributo `principalPermissionMode` specifica i gruppi di utenti da usare quando si autorizza l'uso di un metodo protetto. Il valore predefinito è `UseWindowsGroups` e specifica che la ricerca degli ID che tentano di accedere a una determinata risorsa viene eseguita nei gruppi di Windows, ad esempio "Administrators" o "Users". È inoltre possibile specificare `UseAspNetRoles` per utilizzare un provider di ruoli personalizzato configurato nel \<System. Web > elemento, come illustrato nel codice seguente.  
+ L'attributo `principalPermissionMode` specifica i gruppi di utenti da usare quando si autorizza l'uso di un metodo protetto. Il valore predefinito è `UseWindowsGroups` e specifica che la ricerca degli ID che tentano di accedere a una determinata risorsa viene eseguita nei gruppi di Windows, ad esempio "Administrators" o "Users". È inoltre possibile specificare `UseAspNetRoles` usare un provider di ruoli personalizzato configurato nel \<System. Web > elemento, come illustrato nel codice seguente.  
   
 ```xml  
-<system.web>  
-  <membership defaultProvider="SqlProvider"   
-   userIsOnlineTimeWindow="15">  
-     <providers>  
-       <clear />  
-       <add   
-          name="SqlProvider"   
-          type="System.Web.Security.SqlMembershipProvider"   
-          connectionStringName="SqlConn"  
-          applicationName="MembershipProvider"  
-          enablePasswordRetrieval="false"  
-          enablePasswordReset="false"  
-          requiresQuestionAndAnswer="false"  
-          requiresUniqueEmail="true"  
-          passwordFormat="Hashed" />  
-     </providers>  
-   </membership>  
-  <!-- Other configuration code not shown.-->  
-</system.web>  
+<system.web>
+  <membership defaultProvider="SqlProvider"
+              userIsOnlineTimeWindow="15">
+    <providers>
+      <clear />
+      <add name="SqlProvider"
+           type="System.Web.Security.SqlMembershipProvider"
+           connectionStringName="SqlConn"
+           applicationName="MembershipProvider"
+           enablePasswordRetrieval="false"
+           enablePasswordReset="false"
+           requiresQuestionAndAnswer="false"
+           requiresUniqueEmail="true"
+           passwordFormat="Hashed" />
+    </providers>
+  </membership>
+  <!-- Other configuration code not shown. -->
+</system.web>
 ```  
   
  Nell'esempio di codice seguente viene illustrato l'uso di un elemento `roleProviderName` con l'attributo `principalPermissionMode`.  
   
 ```xml  
-<behaviors>  
-   <behavior name="ServiceBehaviour">  
-     <serviceAuthorization principalPermissionMode ="UseAspNetRoles"   
-                           roleProviderName ="SqlProvider" />  
-   </behavior>   
-<!-- Other configuration code not shown. -->  
-</behaviors>  
+<behaviors>
+  <behavior name="ServiceBehaviour">
+    <serviceAuthorization principalPermissionMode ="UseAspNetRoles"
+                          roleProviderName ="SqlProvider" />
+  </behavior>
+  <!-- Other configuration code not shown. -->
+</behaviors>
 ```  
   
- Per un esempio dettagliato dell'utilizzo di questo elemento di configurazione, vedere [autorizzare l'accesso alle operazioni del servizio](../../../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md) e [criteri di autorizzazione](../../../../../docs/framework/wcf/samples/authorization-policy.md).  
+ Per un esempio dettagliato dell'uso di questo elemento di configurazione, vedere [autorizzare l'accesso alle operazioni del servizio](../../../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md) e [criteri di autorizzazione](../../../../../docs/framework/wcf/samples/authorization-policy.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.ServiceModel.Configuration.ServiceAuthorizationElement>  

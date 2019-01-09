@@ -2,27 +2,38 @@
 title: '&lt;add&gt; di &lt;entries&gt;'
 ms.date: 03/30/2017
 ms.assetid: 3af4805b-dc72-4f68-b168-da4fba8c6170
-ms.openlocfilehash: a6960c16c84c13d905f0993ee3cfc1cf67df07fc
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5a61aefd92390eefb95d1f3e39236e53fa264990
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744980"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54151503"
 ---
 # <a name="ltaddgt-of-ltentriesgt"></a>&lt;add&gt; di &lt;entries&gt;
 Rappresenta una voce di routing che esegue il mapping di un filtro a un endpoint client definito in precedenza. I messaggi che corrispondono a questo filtro verranno inviati a questa destinazione.  
   
  \<system.serviceModel>  
 \<routing >  
-\<routingTables >  
-\<tabella >  
+\<filterTables >  
+\<filterTable >  
 \<le voci >  
 \<add>  
   
 ## <a name="syntax"></a>Sintassi  
   
-```xml
-   <routing>      <filterTables>        <filterTable name="String">          <entries>            <add backupList="String"                 endpointName="String"                  filterName="String"                  priority="Integer" />          </entries>        </table>      </routingTables></routing>  
+```xml  
+<routing>
+  <filterTables>
+    <filterTable name="String">
+      <entries>
+        <add backupList="String"
+             endpointName="String"
+             filterName="String"
+             priority="Integer" />
+      </entries>
+    </filterTable>
+  </filterTables>
+</routing>
 ```  
   
 ```csharp  

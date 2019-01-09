@@ -2,12 +2,12 @@
 title: '&lt;workflowInstanceQueries&gt; di WCF'
 ms.date: 03/30/2017
 ms.assetid: b0852f77-16e4-4d55-8eb7-a19feb0e8fc4
-ms.openlocfilehash: 300637031c64f7c9e072f04835fc3590348ddc9e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e3ad1139781c54cc1ca4e2d2b264f3f375b49108
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192694"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145562"
 ---
 # <a name="ltworkflowinstancequeriesgt-of-wcf"></a>&lt;workflowInstanceQueries&gt; di WCF
 
@@ -24,7 +24,7 @@ Per altre informazioni sulle query relative ai profili di rilevamento, vedere [p
   
 ## <a name="syntax"></a>Sintassi  
   
-```xml
+```xml  
 <tracking>
   <profiles>
     <trackingProfile name="Name">
@@ -32,7 +32,7 @@ Per altre informazioni sulle query relative ai profili di rilevamento, vedere [p
         <workflowInstanceQueries>
           <workflowInstanceQuery>
             <states>
-              <state name="Name"/>
+              <state name="Name" />
             </states>
           </workflowInstanceQuery>
         </workflowInstanceQueries>
@@ -40,7 +40,7 @@ Per altre informazioni sulle query relative ai profili di rilevamento, vedere [p
     </trackingProfile>
   </profiles>
 </tracking>
-```
+```  
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi
 
@@ -82,13 +82,13 @@ La configurazione seguente sottoscrive i record di rilevamento a livello di ista
   
 ```xml  
 <workflowInstanceQueries>
-  <workflowInstanceQuery>  
-    <states>  
-      <state name="Started"/>  
-    </states>  
-  </workflowInstanceQuery>  
+  <workflowInstanceQuery>
+    <states>
+      <state name="Started" />
+    </states>
+  </workflowInstanceQuery>
 </workflowInstanceQueries>
-```
+```  
   
 ## <a name="see-also"></a>Vedere anche
 

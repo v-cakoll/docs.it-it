@@ -2,35 +2,37 @@
 title: '&lt;serviceHostingEnvironment&gt;'
 ms.date: 03/30/2017
 ms.assetid: 4f8a7c4f-e735-4987-979a-b74fcdae2652
-ms.openlocfilehash: 1d9edec2c5bbddefe575952d591416353d603d33
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eee81f774382bf9bac3caaada0ae144e933cb630
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354320"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150318"
 ---
 # <a name="ltservicehostingenvironmentgt"></a>&lt;serviceHostingEnvironment&gt;
 Questo elemento definisce il tipo di cui l'ambiente host del servizio crea un'istanza per un determinato trasporto. Se questo elemento è vuoto, viene usato il tipo predefinito. Questo elemento può essere usato solo nei file di configurazione a livello di applicazione o computer.  
   
  \<system.ServiceModel>  
-\<ServiceHostingEnvironment >  
+\<serviceHostingEnvironment >  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```xml  
-<serviceHostingEnvironment aspNetCompatibilityEnabled="Boolean" 
-                           minFreeMemoryPercentageToActivateService="Integer" 
+<serviceHostingEnvironment aspNetCompatibilityEnabled="Boolean"
+                           minFreeMemoryPercentageToActivateService="Integer"
                            multipleSiteBindingsEnabled="Boolean">
   <baseAddressPrefixFilters>
     <add prefix="string" />
   </baseAddressPrefixFilters>
   <serviceActivations>
-    <add factory="String" service="String" />
+    <add factory="String"
+         service="String" />
   </serviceActivations>
   <transportConfigurationTypes>
-    <add name="String" transportConfigurationType="String" />
+    <add name="String"
+         transportConfigurationType="String" />
   </transportConfigurationTypes>
-</serviceHostingEnvironment>  
+</serviceHostingEnvironment>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
@@ -40,9 +42,9 @@ Questo elemento definisce il tipo di cui l'ambiente host del servizio crea un'is
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|aspNetCompatibilityEnabled|Valore booleano che indica se la modalità di compatibilità con ASP.NET è stata attivata per l'applicazione corrente. Il valore predefinito è `false`.<br /><br /> Quando questo attributo è impostato su `true`, le richieste ai servizi Windows Communication Foundation (WCF) passano attraverso la pipeline HTTP ASP.NET e non è consentita la comunicazione su protocolli non HTTP. Per ulteriori informazioni, vedere [servizi WCF e ASP.NET](../../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md).|  
-|minFreeMemoryPercentageToActivateService|Valore intero che specifica la quantità minima di memoria libera che deve essere disponibile per il sistema, prima di poter attivare un servizio WCF. **Attenzione:** se si specifica questo attributo con attendibilità parziale nel file Web. config di un servizio WCF otterrà un <xref:System.Security.SecurityException> quando viene eseguito il servizio.|  
-|multipleSiteBindingsEnabled|Valore booleano che specifica se sono abilitate più associazioni IIS per sito.<br /><br /> IIS è costituito da siti Web contenitori di applicazioni virtuali che includono directory virtuali. È possibile accedere all'applicazione in un sito tramite una o più associazioni IIS. Un'associazione IIS fornisce due tipi di informazioni: un protocollo di associazione e delle informazioni di associazione. Il protocollo di associazione definisce lo schema in base al quale ha luogo la comunicazione, mentre le informazioni di associazione sono usate per accedere al sito. Un esempio di protocollo di associazione è HTTP. Le informazioni di associazione possono contenere un indirizzo IP, una porta, un'intestazione host, e così via.<br /><br /> In IIS è disponibile il supporto per specificare più associazioni per sito, questo comporta la presenza di più indirizzi di base per schema. Tuttavia, un servizio Windows Communication Foundation (WCF) ospitato in un sito consente l'associazione a un solo indirizzo di base per schema.<br /><br /> Per abilitare più associazioni IIS per ogni sito per un servizio Windows Communication Foundation (WCF), impostare questo attributo su `true`. Si noti che l'associazione di più siti è supportata solo per il protocollo HTTP. L'indirizzo degli endpoint nel file di configurazione deve essere un URI completo.|  
+|aspNetCompatibilityEnabled|Valore booleano che indica se la modalità di compatibilità con ASP.NET è stata attivata per l'applicazione corrente. Il valore predefinito è `false`.<br /><br /> Quando questo attributo è impostato su `true`, le richieste ai servizi Windows Communication Foundation (WCF) passano attraverso la pipeline HTTP ASP.NET e comunicazione tra protocolli non HTTP non è consentito. Per altre informazioni, vedere [servizi WCF e ASP.NET](../../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md).|  
+|minFreeMemoryPercentageToActivateService|Valore intero che specifica la quantità minima di memoria libera che deve essere disponibile per il sistema, prima di poter attivare un servizio WCF. **Attenzione:**  Se si specifica questo attributo con attendibilità parziale nel file Web. config di un servizio WCF verrà generato un <xref:System.Security.SecurityException> quando viene eseguito il servizio.|  
+|multipleSiteBindingsEnabled|Valore booleano che specifica se sono abilitate più associazioni IIS per sito.<br /><br /> IIS è costituito da siti Web contenitori di applicazioni virtuali che includono directory virtuali. È possibile accedere all'applicazione in un sito tramite una o più associazioni IIS. Un'associazione IIS fornisce due tipi di informazioni: un protocollo di associazione e delle informazioni di associazione. Il protocollo di associazione definisce lo schema in base al quale ha luogo la comunicazione, mentre le informazioni di associazione sono usate per accedere al sito. Un esempio di protocollo di associazione è HTTP. Le informazioni di associazione possono contenere un indirizzo IP, una porta, un'intestazione host, e così via.<br /><br /> In IIS è disponibile il supporto per specificare più associazioni per sito, questo comporta la presenza di più indirizzi di base per schema. Tuttavia, un servizio Windows Communication Foundation (WCF) ospitato in un sito consente l'associazione a un solo indirizzo di base per schema.<br /><br /> Per abilitare più associazioni IIS per sito per un servizio Windows Communication Foundation (WCF), impostare questo attributo su `true`. Si noti che l'associazione di più siti è supportata solo per il protocollo HTTP. L'indirizzo degli endpoint nel file di configurazione deve essere un URI completo.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
   
@@ -87,7 +89,7 @@ Questo elemento definisce il tipo di cui l'ambiente host del servizio crea un'is
 ## <a name="code"></a>Codice  
   
 ```xml  
-<serviceHostingEnvironment aspNetCompatibilityEnabled="true"/>  
+<serviceHostingEnvironment aspNetCompatibilityEnabled="true"/>
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
