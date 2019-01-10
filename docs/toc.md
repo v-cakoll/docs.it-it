@@ -245,6 +245,7 @@
 ##### [Interpolazione di stringhe](csharp/tutorials/intro-to-csharp/interpolated-strings-local.md)
 ##### [Raccolte di elenchi](csharp/tutorials/intro-to-csharp/arrays-and-collections.md)
 ##### [Introduzione alle classi](csharp/tutorials/intro-to-csharp/introduction-to-classes.md)
+### [Esplorare C# 6](csharp/tutorials/exploration/csharp-6.yml)
 ### [Usare tipi riferimento nullable](csharp/tutorials/nullable-reference-types.md)
 ### [Applicazione console](csharp/tutorials/console-teleprompter.md)
 ### [Client REST](csharp/tutorials/console-webapiclient.md)
