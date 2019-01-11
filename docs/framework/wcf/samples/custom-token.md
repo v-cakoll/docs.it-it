@@ -2,12 +2,12 @@
 title: Token personalizzato
 ms.date: 03/30/2017
 ms.assetid: e7fd8b38-c370-454f-ba3e-19759019f03d
-ms.openlocfilehash: 8aa41a1f9651d0a385836178bc791c14706c17e4
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 6e743be961de2c6d7b09805e6f91d7710efe227e
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243049"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54223091"
 ---
 # <a name="custom-token"></a>Token personalizzato
 Questo esempio viene illustrato come aggiungere un'implementazione del token personalizzata in un'applicazione Windows Communication Foundation (WCF). Nell'esempio viene usato un `CreditCardToken` per passare in modo protetto le informazioni sulle carte di credito del client al servizio. Il token viene passato nell'intestazione del messaggio WS-Security e viene firmato e crittografato usando l'elemento di associazione di sicurezza simmetrica, il corpo del messaggio e altre intestazioni del messaggio. Questa operazione è utile nei casi in cui i token incorporati non sono sufficienti In questo esempio viene illustrato come fornire un token di sicurezza personalizzato a un servizio, invece di usare uno dei token incorporati. Il servizio implementa un contratto che definisce un modello di comunicazione richiesta/risposta.
@@ -609,7 +609,7 @@ string GetCallerCreditCardNumber()
   
 2.  Copiare i file di programma del servizio nella directory del servizio sul computer relativo. Ricordarsi di copiare CreditCardFile.txt. In caso contrario l'autenticatore della carta di credito non può convalidare le informazioni della carta di credito inviate dal client. Copiare i file Setup.bat e Cleanup.bat nel computer del servizio.  
   
-3.  È necessario disporre di un certificato server con il nome del soggetto che contiene il nome di dominio completo del computer. È possibile crearne uno usando Setup.bat se si modifica la variabile `%SERVER_NAME%` con il nome host completo del computer sul quale è ospitato il servizio. Si noti che è necessario eseguire il file Setup.bat in un prompt dei comandi di Visual Studio aperto con privilegi di amministratore.  
+3.  È necessario disporre di un certificato server con il nome del soggetto che contiene il nome di dominio completo del computer. È possibile crearne uno usando Setup.bat se si modifica la variabile `%SERVER_NAME%` con il nome host completo del computer sul quale è ospitato il servizio. Si noti che il file Setup. bat deve essere eseguito in un prompt dei comandi di per gli sviluppatori per Visual Studio aperto con privilegi di amministratore.  
   
 4.  Copiare il certificato server nell'archivio CurrentUser-TrustedPeople del client. Questo passaggio è necessario solo se il certificato server non è emesso da un'autorità emittente attendibile.  
   

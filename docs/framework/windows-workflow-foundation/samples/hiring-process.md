@@ -2,12 +2,12 @@
 title: Processo di assunzione
 ms.date: 03/30/2017
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
-ms.openlocfilehash: 41f5508ea5805581282389e0731a00dde7796bc0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0420a174705c12384509bf1d8022d664d7cb354e
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520638"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54223221"
 ---
 # <a name="hiring-process"></a>Processo di assunzione
 In questo esempio viene illustrato come implementare un processo aziendale tramite attività di messaggistica e due flussi di lavoro ospitati come servizi flusso di lavoro e appartenenti all'infrastruttura IT di una società fittizia denominata Contoso, Inc.  
@@ -114,7 +114,7 @@ In questo esempio viene illustrato come implementare un processo aziendale trami
 |Servizi flusso di lavoro|Il diagramma di flusso con la definizione del processo è ospitato in un servizio (in questo esempio il servizio è ospitato in un'applicazione console).|HiringRequestService|  
 |Attività di messaggistica|Il diagramma di flusso usa le attività di messaggistica per gli scopi seguenti:<br /><br /> -Per ottenere informazioni da parte dell'utente (per ricevere le decisioni e le informazioni correlate in ogni passaggio di approvazione).<br />-Per interagire con altri servizi esistenti (InboxService e OrgDataService, usati tramite riferimenti al servizio).|HiringRequestService|  
 |Correlazione basata sul contenuto|I messaggi di approvazione sono correlati alla proprietà ID della richiesta di assunzione:<br /><br /> -Quando viene avviato un processo, l'handle di correlazione viene inizializzata con l'ID della richiesta.<br />-I messaggi di approvazione in ingresso sono correlati al relativo ID (il primo parametro di ogni messaggio di approvazione è l'ID della richiesta).|HiringRequestService / ResumeRequestService|  
-|Attività personalizzate (dichiarative e basate sul codice)|Nell'esempio sono presenti diverse attività personalizzate:<br /><br /> -   `SaveActionTracking`Questa attività genera una classe personalizzata <xref:System.Activities.Tracking.TrackingRecord> (uso <xref:System.Activities.NativeActivityContext.Track%2A>). L'attività è stata creata usando codice imperativo che estende <xref:System.Activities.NativeActivity>.<br />-   `GetEmployeesByPositionTypes`: Questa attività riceve un elenco di ID di tipi di posizione e restituisce un elenco di persone con tale posizione in Contoso. L'attività è stata creata in modo dichiarativo (usando la finestra di progettazione delle attività).<br />-   `SaveHiringRequestInfo`Questa attività Salva le informazioni di un `HiringRequest` (uso `HiringRequestRepository.Save`). L'attività è stata creata usando codice imperativo che estende <xref:System.Activities.CodeActivity>.|HiringRequestService|  
+|Attività personalizzate (dichiarative e basate sul codice)|Nell'esempio sono presenti diverse attività personalizzate:<br /><br /> -   `SaveActionTracking`: Questa attività genera una classe personalizzata <xref:System.Activities.Tracking.TrackingRecord> (uso <xref:System.Activities.NativeActivityContext.Track%2A>). L'attività è stata creata usando codice imperativo che estende <xref:System.Activities.NativeActivity>.<br />-   `GetEmployeesByPositionTypes`: Questa attività riceve un elenco di ID di tipi di posizione e restituisce un elenco di persone con tale posizione in Contoso. L'attività è stata creata in modo dichiarativo (usando la finestra di progettazione delle attività).<br />-   `SaveHiringRequestInfo`: Questa attività Salva le informazioni di un `HiringRequest` (uso `HiringRequestRepository.Save`). L'attività è stata creata usando codice imperativo che estende <xref:System.Activities.CodeActivity>.|HiringRequestService|  
 |Persistenza di SQL Server fornita dal sistema|L'istanza di <xref:System.ServiceModel.Activities.WorkflowServiceHost> che ospita la definizione del processo del diagramma di flusso è configurata per usare la persistenza di SQL Server fornita dal sistema.|HiringRequestService / ResumeRequestService|  
 |Rilevamento personalizzato|Nell'esempio è incluso un partecipante del rilevamento personalizzato che salva la cronologia di un processo `HiringRequestProcess` (quest'ultimo registra l'azione eseguita nonché l'autore e il momento dell'esecuzione). Il codice sorgente si trova nella cartella Tracking di HiringRequestService.|HiringRequestService|  
 |Rilevamento ETW|Il rilevamento ETW fornito dal sistema viene configurato nel file App.config nel servizio HiringRequestService.|HiringRequestService|  
@@ -131,13 +131,13 @@ In questo esempio viene illustrato come implementare un processo aziendale trami
 ## <a name="data-storage"></a>Archivio dati  
  I dati vengono archiviati in un database di SQL Server denominato `ContosoHR` (lo script per la creazione di questo database si trova nella cartella `DbSetup`), mentre le istanze di flusso di lavoro vengono archiviate in un database di SQL Server denominato `InstanceStore` (gli script per la creazione per l'archivio di istanze sono parte della distribuzione di [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]).  
   
- Entrambi i database vengono creati eseguendo lo script Setup. cmd da un prompt dei comandi di Visual Studio.  
+ Entrambi i database vengono creati eseguendo lo script Setup. cmd da un prompt dei comandi di sviluppatori per Visual Studio.  
   
 ## <a name="running-the-sample"></a>Esecuzione dell'esempio  
   
 #### <a name="to-create-the-databases"></a>Per creare i database  
   
-1.  Aprire il prompt dei comandi di Visual Studio.  
+1.  Aprire un prompt dei comandi per gli sviluppatori per Visual Studio.  
   
 2.  Passare alla cartella dell'esempio.  
   

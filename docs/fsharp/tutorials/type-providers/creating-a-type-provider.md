@@ -2,12 +2,12 @@
 title: 'Esercitazione: Creare un Provider di tipi'
 description: Informazioni su come creare il proprio F# tipo di provider in F# 3.0 esaminando i diversi provider di tipo semplice per illustrare i concetti di base.
 ms.date: 05/16/2016
-ms.openlocfilehash: c5a68df5f0b89fe9496ad86ab88208e0ec4bcdc9
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: b16981b70db0896805754c60afa96a07623a1263
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614532"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54223208"
 ---
 # <a name="tutorial-create-a-type-provider"></a>Esercitazione: Creare un Provider di tipi
 
@@ -156,7 +156,7 @@ Per eseguire il debug di questo provider con istruzioni print, creare script che
 fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx
 ```
 
-Per eseguire il debug di questo provider con Visual Studio, aprire il prompt dei comandi di Visual Studio con credenziali amministrative ed eseguire il comando seguente:
+Per eseguire il debug di questo provider con Visual Studio, aprire il prompt dei comandi per gli sviluppatori per Visual Studio con credenziali amministrative ed eseguire il comando seguente:
 
 ```fsharp
 devenv.exe /debugexe fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx
