@@ -4,12 +4,12 @@ description: Esplorare i componenti di progettazione delle funzionalità support
 author: JRAlexander
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 72e4077151d35b9bff661c28c9a20626098a5c69
-ms.sourcegitcommit: 882a2f56bf6afdcb40d468e4ae9371296822b68c
+ms.openlocfilehash: c311aa59426b716ffcd2c53e890d2e3e380360a7
+ms.sourcegitcommit: 81bd16c7435a8c9183d2a7e878a2a5eff7d04584
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "53451092"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54249125"
 ---
 # <a name="machine-learning-data-transforms---mlnet"></a>Trasformazioni dati di apprendimento automatico - ML.NET
 
@@ -20,7 +20,7 @@ Le tabelle seguenti contengono informazioni su tutte le trasformazioni dati supp
 
 ## <a name="combiners-and-segregators"></a>Combinatori e separatori
 
-| Trasformazione | Definizione |
+| Transform | Definizione |
 | --- | --- |
 | <xref:Microsoft.ML.Transforms.GroupTransform> | Raggruppa i valori di una colonna scalare in un vettore in base a un ID gruppo contiguo. |
 | <xref:Microsoft.ML.Legacy.Transforms.FeatureCombiner> | Combina tutte le funzionalità in una colonna funzionalità. |
@@ -32,7 +32,7 @@ Le tabelle seguenti contengono informazioni su tutte le trasformazioni dati supp
 
 ## <a name="conversions"></a>Conversioni 
 
-| Trasformazione | Definizione |
+| Transform | Definizione |
 | --- | --- |
 | <xref:Microsoft.ML.Transforms.Conversions.HashingTransformer> | Esegue l'hashing di colonne a valore singolo o colonne vettore. Per le colonne vettore, esegue l'hashing di ogni slot separatamente. È in grado di eseguire l'hashing di valori di testo o valori di chiave. |
 | <xref:Microsoft.ML.Legacy.Transforms.HashConverter> | Converte i valori colonna in hash. Questa trasformazione accetta input numerici e di testo, sia con colonne singole che vettoriali. |
@@ -46,14 +46,14 @@ Le tabelle seguenti contengono informazioni su tutte le trasformazioni dati supp
 
 ## <a name="deep-learning"></a>Deep Learning
 
-| Trasformazione | Definizione |
+| Transform | Definizione |
 | --- | --- |
 | <xref:Microsoft.ML.Transforms.OnnxTransform> | Specifica i dati per un modello ONNX esistente e restituisce il punteggio (stima). |
 | <xref:Microsoft.ML.Transforms.TensorFlowTransform> | È in grado di assegnare il punteggio usando un modello TensorFlow con pre-training o di ripetere il training del modello TensorFlow. |
 
 ## <a name="feature-extraction"></a>Estrazione delle funzionalità
 
-| Trasformazione | Definizione |
+| Transform | Definizione |
 | --- | --- |
 | <xref:Microsoft.ML.Transforms.Text.CustomStopWordsRemovingTransform> | Rimuove l'elenco specificato di parole non significative confrontando i singoli token (confronto senza distinzione tra maiuscole e minuscole) con le parole non significative.| 
 | <xref:Microsoft.ML.Runtime.ImageAnalytics.ImageGrayscaleTransform> | Accetta una o più colonne ImageType e le converte in una rappresentazione in scala di grigi della stessa immagine.|
@@ -78,7 +78,7 @@ Le tabelle seguenti contengono informazioni su tutte le trasformazioni dati supp
 
 ## <a name="image-model-featurizers"></a>Algoritmi di estrazione delle funzionalità del modello di immagine
 
-| Trasformazione | Definizione |
+| Transform | Definizione |
 | --- | --- |
 | <xref:Microsoft.ML.Transforms.AlexNetExtension> | Metodo di estensione da usare con <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator> per poter usare un modello [AlexNet](https://en.wikipedia.org/wiki/AlexNet) con pre-training. Il pacchetto NuGet contenente questa estensione include anche il file di modello binario. | 
 | <xref:Microsoft.ML.Transforms.ResNet18Extension> | Metodo di estensione da usare con <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator> per poter usare un modello ResNet18 con pre-training. Il pacchetto NuGet contenente questa estensione include anche il file di modello binario. |
@@ -87,7 +87,7 @@ Le tabelle seguenti contengono informazioni su tutte le trasformazioni dati supp
 
 ## <a name="label-parsing"></a>Analisi etichette
 
-| Trasformazione | Definizione |
+| Transform | Definizione |
 | --- | --- |
 | <xref:Microsoft.ML.Legacy.Transforms.Dictionarizer> | Converte i valori di input (parole, numeri e così via) da indicizzare in un dizionario. |
 | <xref:Microsoft.ML.Legacy.Transforms.LabelColumnKeyBooleanConverter> | Trasforma l'etichetta in chiave o bool (se necessario) per renderla appropriata per la classificazione. |
@@ -98,16 +98,15 @@ Le tabelle seguenti contengono informazioni su tutte le trasformazioni dati supp
 
 ## <a name="missing-values"></a>Valori mancanti
 
-| Trasformazione | Definizione |
+| Transform | Definizione |
 | --- | --- |
 | <xref:Microsoft.ML.Transforms.MissingValueDroppingTransformer> | Elimina i valori mancanti dalle colonne. |
 | <xref:Microsoft.ML.Transforms.MissingValueIndicatorTransform> | Crea una colonna di output booleana con lo stesso numero di slot della colonna di input in cui il valore di output è true se manca il valore nella colonna di input. |
 | <xref:Microsoft.ML.Transforms.MissingValueReplacingTransformer> | Consente di gestire i valori mancanti sostituendoli con il valore predefinito o con il valore medio/min/max (solo per le colonne non di testo). |
-| <xref:Microsoft.ML.Transforms.MissingValueIndicatorTransform> | Crea una colonna di output booleana con lo stesso numero di slot della colonna di input in cui il valore di output è true se manca il valore nella colonna di input. |
 
-## <a name="normalization"></a>Normalizzazione
+## <a name="normalization"></a>Normalization
 
-| Trasformazione | Definizione |
+| Transform | Definizione |
 | --- | --- |
 | <xref:Microsoft.ML.Transforms.Projections.LpNormalizingTransformer> | Trasformazione di normalizzazione Lp-Norm (a livello di vettore/riga). |
 | <xref:Microsoft.ML.Transforms.Normalizers.MeanVarDblAggregator> | Calcola la media e la varianza per una colonna con valori vettoriali. Tiene traccia della media corrente e del valore M2 (somma dei quadrati delle differenze dei valori rispetto al valore medio), del numero di valori diversi da numeri e del numero di elementi diversi da zero. |
@@ -119,12 +118,12 @@ Le tabelle seguenti contengono informazioni su tutte le trasformazioni dati supp
 
 ## <a name="onnx"></a>Onnx
 
-| Trasformazione | Definizione |
+| Transform | Definizione |
 | --- | --- |
 | <xref:Microsoft.ML.Transforms.OnnxTransform> | Assegna punteggi ai modelli ONNX con pre-training che usano lo standard ONNX v1.2 |
 
 ## <a name="preprocessing"></a>Pre-elaborazione
-| Trasformazione | Definizione |
+| Transform | Definizione |
 | --- | --- |
 | <xref:Microsoft.ML.Transforms.BootstrapSamplingTransformer> | Approssima il campionamento bootstrap usando il campionamento Poisson. |
 | <xref:Microsoft.ML.Transforms.Projections.RandomFourierFeaturizingTransformer> | Produce una RFF (Random Fourier Feature). |
@@ -133,7 +132,7 @@ Le tabelle seguenti contengono informazioni su tutte le trasformazioni dati supp
 
 ## <a name="row-filters"></a>Filtri di riga
 
-| Trasformazione | Definizione |
+| Transform | Definizione |
 | --- | --- |
 | <xref:Microsoft.ML.Transforms.RowShufflingTransformer> | Seleziona in ordine casuale il tentativo casuale di esecuzione di un cursore usando un pool di un determinato numero di righe.  |
 | <xref:Microsoft.ML.Transforms.SkipFilter> | Consente di limitare l'input a un subset di righe ignorando un numero di righe. |
@@ -143,7 +142,7 @@ Le tabelle seguenti contengono informazioni su tutte le trasformazioni dati supp
 
 ## <a name="schema"></a>Schema
 
-| Trasformazione | Definizione |
+| Transform | Definizione |
 | --- | --- |
 | <xref:Microsoft.ML.Transforms.ColumnCopyingTransformer> | Duplica le colonne dal set di dati.|
 | <xref:Microsoft.ML.Transforms.ColumnSelectingTransformer> | Seleziona un set di colonne da eliminare o mantenere in un determinato input. |
@@ -154,20 +153,20 @@ Le tabelle seguenti contengono informazioni su tutte le trasformazioni dati supp
 
 ## <a name="tensorflow"></a>TensorFlow
 
-| Trasformazione | Definizione |
+| Transform | Definizione |
 | --- | --- |
 | <xref:Microsoft.ML.Transforms.TensorFlowTransform> | Assegna il punteggio usando un modello TensorFlow con pre-training o ripete il training del modello TensorFlow. |
 
 ## <a name="text-processing-and-featurization"></a>Elaborazione testo ed estrazione funzionalità
 
-| Trasformazione | Definizione |
+| Transform | Definizione |
 | --- | --- |
 | <xref:Microsoft.ML.Transforms.Text.TextNormalizingTransformer> | Trasformazione di normalizzazione del testo che consente la normalizzazione delle maiuscole/minuscole, la rimozione di segni diacritici, segni di punteggiatura e/o numeri. La trasformazione opera sull'input di testo e sul vettore di token/testo (vettore di ReadOnlyMemory). |
 | <xref:Microsoft.ML.Transforms.Text.TokenizingByCharactersTransformer> | Tokenizer orientato ai caratteri in cui il testo viene considerato una sequenza di caratteri. |
 
 ## <a name="time-series"></a>Serie temporale
 
-| Trasformazione | Definizione |
+| Transform | Definizione |
 | --- | --- |
 | <xref:Microsoft.ML.Runtime.TimeSeriesProcessing.ExponentialAverageTransform> | Accetta una media ponderata dei valori: ExpAvg(y_t) = a * y_t + (1-a) * ExpAvg(y_(t-1)). |
 | <xref:Microsoft.ML.Runtime.TimeSeriesProcessing.IidChangePointDetector> | Implementa la trasformazione di rilevamento del punto di modifica per una sequenza i.i.d. (campione casuale) in base alla stima kernel di densità adattiva e alle martingale. |
@@ -181,7 +180,7 @@ Le tabelle seguenti contengono informazioni su tutte le trasformazioni dati supp
 
 ## <a name="miscellaneous"></a>Varie
 
-| Trasformazione | Definizione |
+| Transform | Definizione |
 | --- | --- |
 | <xref:Microsoft.ML.Transforms.CompositeTransformer> | Crea una trasformazione dati composita. |
 | <xref:Microsoft.ML.Transforms.CustomMappingTransformer%602> | Genera colonne aggiuntive all'elemento `IDataView` specificato. Non modifica il numero di righe e può essere vista come un risultato dell'applicazione della funzione dell'utente a ogni riga dei dati di input.|

@@ -376,7 +376,7 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductNam
 ### <a name="supported-languages"></a>Lingue supportate
 Nella tabella seguente sono elencati i Language Pack di .NET Framework disponibili per [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] e per le relative versioni intermedie.
 
-|LCID|Lingua (paese/regione)|culture|
+|LCID|Lingua (paese/area)|culture|
 |----------|--------------------------------|-------------|
 |1025|Arabo (Arabia Saudita)|ar|
 |1028|Cinese (tradizionale)|zh-Hant|

@@ -4,12 +4,12 @@ description: Architettura di microservizi .NET per applicazioni .NET in contenit
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: f348e1dbb65f37f625c1dec243364af683c99b8a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d48c78e6ea63ea1a2f3dbfea6b9fec646493c751
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153683"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54148071"
 ---
 # <a name="design-validations-in-the-domain-model-layer"></a>Progettare convalide nel livello del modello di dominio
 
@@ -103,7 +103,7 @@ L'uso della convalida dei campi con le annotazioni dei dati, ad esempio, consent
   [*http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/*](http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/)
 
 - **Colin Jack. Domain Model Validation** \ (Convalida del modello di dominio)
-  [*http://colinjack.blogspot.com/2008/03/domain-model-validation.html*](http://colinjack.blogspot.com/2008/03/domain-model-validation.html)
+  [*https://colinjack.blogspot.com/2008/03/domain-model-validation.html*](https://colinjack.blogspot.com/2008/03/domain-model-validation.html)
 
 - **Jimmy Bogard. Validation in a DDD world** \ (Convalida in un mondo DDD)
   [*https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/*](https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/)

@@ -3,12 +3,12 @@ title: Cronologia di C# - Guida a C#
 description: Caratteristiche del linguaggio nelle prime versioni ed evoluzione successiva.
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: ad05e803000393800764a4b3aa1bf6288f765fd4
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: f5bf9a7de7c8681fa2ebb49ba1cf6991b9b137c9
+ms.sourcegitcommit: 90775b20343b6ad831af6f5380f8ab7553abb16b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245600"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54186228"
 ---
 # <a name="the-history-of-c"></a>Cronologia di C# #
 
@@ -28,7 +28,7 @@ Gli strumenti di compilazione per C# considerano la versione del linguaggio prin
 
 ## <a name="c-version-10"></a>C# versione 1.0
 
-Se ci si guarda indietro, ci si rende conto che C# versione 1.0 era molto simile a Java. Come affermato [negli obiettivi di progettazione dichiarati per ECMA](http://feeldotneteasy.blogspot.com/2011/01/c-design-goals.html), C# cercava di essere "un linguaggio orientato agli oggetti di utilizzo generico, semplice e moderno".  All'epoca, somigliare molto a Java significava aver raggiunto tali obiettivi di progettazione di allora.
+Se ci si guarda indietro, ci si rende conto che C# versione 1.0 era molto simile a Java. Come affermato [negli obiettivi di progettazione dichiarati per ECMA](https://feeldotneteasy.blogspot.com/2011/01/c-design-goals.html), C# cercava di essere "un linguaggio orientato agli oggetti di utilizzo generico, semplice e moderno".  All'epoca, somigliare molto a Java significava aver raggiunto tali obiettivi di progettazione di allora.
 
 Ma se si guarda ora com'era C# 1.0, la sensazione è di disorientamento. Mancavano le capacità asincrone predefinite e alcune delle semplici funzionalità relative ai generics che ora si danno per scontate. In realtà,i generics mancavano completamente.  E [LINQ](../linq/index.md)? Non era ancora disponibile. Queste aggiunte avrebbero richiesto ancora alcuni anni.
 
@@ -142,7 +142,7 @@ Le versioni 3.0 e 5.0 hanno aggiunto a C# nuove funzionalità eccezionali per un
 - [Propagazione Null](./csharp-6.md#null-conditional-operators)
 - [Interpolazione di stringhe](./csharp-6.md#string-interpolation)
 - [Operatore nameof](./csharp-6.md#the-nameof-expression)
-- [Inizializzatori di indice](csharp-6.md#index-initializers)
+- [Inizializzatori di indice](csharp-6.md#extension-add-methods-in-collection-initializers)
 
 Le altre nuove funzionalità includono:
 
@@ -168,7 +168,6 @@ Altre funzionalità:
 
 - [Variabili discard](./csharp-7.md#discards)
 - [Valori letterali binari e separatori di cifre](./csharp-7.md#numeric-literal-syntax-improvements)
-- [Valori restituiti e variabili locali ref](./csharp-7.md#ref-locals-and-returns)
 - [Espressioni throw](./csharp-7.md#throw-expressions)
 
 Tutte queste caratteristiche offrono nuove utili funzionalità agli sviluppatori, oltre alla possibilità di scrivere codice più pulito che mai. Una funzionalità di particolare rilievo è la possibilità di condensare la dichiarazione di variabili da usare con la parola chiave `out`, consentendo più valori restituiti tramite tupla.

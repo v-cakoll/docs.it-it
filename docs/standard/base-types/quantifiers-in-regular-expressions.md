@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 36b81212-6511-49ed-a8f1-ff080415312f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a982082611760e4f901c427af25a0a49a4e243a1
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 4718dadddb2ad88ece05312b2f2b7232271d5b0e
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48580465"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221388"
 ---
 # <a name="quantifiers-in-regular-expressions"></a>quantificatori in espressioni regolari
 I quantificatori specificano il numero di istanze di un carattere, un gruppo o una classe di caratteri che deve essere presente nell'input affinché venga trovata una corrispondenza.  Nella tabella seguente vengono elencati i quantificatori supportati da .NET.  
   
-|Quantificatore greedy|Quantificatore lazy|Descrizione|  
+|Quantificatore greedy|Quantificatore lazy|Description|  
 |-----------------------|---------------------|-----------------|  
 |`*`|`*?`|Trova la corrispondenza zero o più volte.|  
 |`+`|`+?`|Trova la corrispondenza una o più volte.|  
@@ -49,14 +49,14 @@ I quantificatori specificano il numero di istanze di un carattere, un gruppo o u
 ### <a name="match-zero-or-more-times-"></a>Trova la corrispondenza zero o più volte: *  
  Il quantificatore `*` trova la corrispondenza con l'elemento precedente zero o più volte. È equivalente al quantificatore `{0,}`. `*` è un quantificatore greedy il cui equivalente lazy è `*?`.  
   
- L'esempio seguente illustra questa espressione regolare. Delle nove cifre nella stringa di input, cinque corrispondono al criterio e quattro (`95`, `929`, `9129` e `9919`) no.  
+ L'esempio seguente illustra questa espressione regolare. Delle nove cifre nella stringa di input, cinque corrispondono al criterio e quattro (`95`, `929`, `9219` e `9919`) no.  
   
  [!code-csharp[RegularExpressions.Quantifiers#1](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Quantifiers/cs/Quantifiers1.cs#1)]
  [!code-vb[RegularExpressions.Quantifiers#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Quantifiers/vb/Quantifiers1.vb#1)]  
   
  Il criterio di ricerca di espressioni regolari è definito nel modo illustrato nella tabella seguente.  
   
-|Modello|Descrizione|  
+|Modello|Description|  
 |-------------|-----------------|  
 |`\b`|Inizia dal confine di una parola.|  
 |`91*`|Trova un "9" seguito da zero o più caratteri "1".|  
@@ -73,7 +73,7 @@ I quantificatori specificano il numero di istanze di un carattere, un gruppo o u
   
  Il criterio di ricerca di espressioni regolari è definito nel modo illustrato nella tabella seguente.  
   
-|Modello|Descrizione|  
+|Modello|Description|  
 |-------------|-----------------|  
 |`\b`|Inizia dal confine di una parola.|  
 |`an+`|Trova una "a" seguita da uno o più caratteri "n".|  
@@ -90,7 +90,7 @@ I quantificatori specificano il numero di istanze di un carattere, un gruppo o u
   
  Il criterio di ricerca di espressioni regolari è definito nel modo illustrato nella tabella seguente.  
   
-|Modello|Descrizione|  
+|Modello|Description|  
 |-------------|-----------------|  
 |`\b`|Inizia dal confine di una parola.|  
 |`an?`|Trova una "a" seguita da zero o un carattere "n".|  
@@ -106,7 +106,7 @@ I quantificatori specificano il numero di istanze di un carattere, un gruppo o u
   
  Il criterio di ricerca di espressioni regolari è definito nel modo illustrato nella tabella seguente.  
   
-|Modello|Descrizione|  
+|Modello|Description|  
 |-------------|-----------------|  
 |`\b`|Inizia dal confine di una parola.|  
 |`\d+`|Trova la corrispondenza con una o più cifre decimali.|  
@@ -124,7 +124,7 @@ I quantificatori specificano il numero di istanze di un carattere, un gruppo o u
   
  Il criterio di ricerca di espressioni regolari è definito nel modo illustrato nella tabella seguente.  
   
-|Modello|Descrizione|  
+|Modello|Description|  
 |-------------|-----------------|  
 |`\b`|Inizia dal confine di una parola.|  
 |`\d{2,}`|Trova la corrispondenza con almeno due cifre decimali.|  
@@ -149,7 +149,7 @@ I quantificatori specificano il numero di istanze di un carattere, un gruppo o u
   
  Il criterio di ricerca di espressioni regolari è definito nel modo illustrato nella tabella seguente.  
   
-|Modello|Descrizione|  
+|Modello|Description|  
 |-------------|-----------------|  
 |`\b`|Inizia dal confine di una parola.|  
 |`\w*?`|Trova la corrispondenza con zero o più caratteri alfanumerici, ma il minor numero di caratteri possibile.|  
@@ -175,7 +175,7 @@ I quantificatori specificano il numero di istanze di un carattere, un gruppo o u
   
  Il criterio di ricerca di espressioni regolari è definito nel modo illustrato nella tabella seguente.  
   
-|Modello|Descrizione|  
+|Modello|Description|  
 |-------------|-----------------|  
 |`^`|Trova la corrispondenza con l'inizio del flusso di input.|  
 |`\s*`|Trovare la corrispondenza di zero o più spazi vuoti.|  
@@ -194,7 +194,7 @@ I quantificatori specificano il numero di istanze di un carattere, un gruppo o u
   
  Il criterio di ricerca di espressioni regolari è definito nel modo illustrato nella tabella seguente.  
   
-|Modello|Descrizione|  
+|Modello|Description|  
 |-------------|-----------------|  
 |`\b`|Inizia dal confine di una parola.|  
 |`(\w{3,}?\.)`|Trova la corrispondenza con almeno 3 caratteri alfanumerici, ma il minor numero di caratteri possibile, seguiti da un carattere punto. Equivale al primo gruppo di acquisizione.|  
@@ -216,7 +216,7 @@ I quantificatori specificano il numero di istanze di un carattere, un gruppo o u
   
  Il criterio di ricerca di espressioni regolari è definito nel modo illustrato nella tabella seguente.  
   
-|Modello|Descrizione|  
+|Modello|Description|  
 |-------------|-----------------|  
 |`\b`|Inizia dal confine di una parola.|  
 |`[A-Z]`|Trova la corrispondenza con un carattere maiuscolo da A a Z.|  
@@ -260,7 +260,7 @@ I quantificatori specificano il numero di istanze di un carattere, un gruppo o u
   
  Per vedere in pratica la differenza tra un gruppo di acquisizione che definisce un numero minimo e massimo di acquisizioni e uno che definisce un numero fisso di acquisizioni, considerare i criteri di espressione regolare `(a\1|(?(1)\1)){0,2}` e `(a\1|(?(1)\1)){2}`. Entrambe le espressioni regolari sono costituite da un singolo gruppo di acquisizione, definito come illustrato nella tabella seguente.  
   
-|Criterio|Descrizione|  
+|Modello|Description|  
 |-------------|-----------------|  
 |`(a\1`|Trova la corrispondenza con "a" insieme al valore del primo gruppo acquisito...|  
 |<code>&#124;(?(1)</code>|… o verifica se è stato definito il primo gruppo acquisito. Si noti che il costrutto `(?(1)` non definisce un gruppo di acquisizione.|  

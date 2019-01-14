@@ -27,7 +27,7 @@ Sono necessarie conoscenze di base di [Git e GitHub.com](https://guides.github.c
 **Passaggio 1:** Ignorare questo passaggio per le piccole modifiche. Se si è interessati a scrivere nuovo contenuto o a revisionare completamente un contenuto esistente, aprire un [problema](https://github.com/dotnet/docs/issues) descrivendo che cosa si intende fare.
 Il contenuto all'interno della cartella **docs** è suddiviso in sezioni visibili nel sommario. Definire la posizione del sommario in cui verrà inserito l'argomento. Ottenere feedback sulla proposta.
 
-oppure
+-oppure-
 
 È anche possibile scegliere tra i problemi esistenti per cui sono previsti i contributi della community. In [Projects for .NET Community contributors](https://github.com/dotnet/docs/projects/35) (Progetti per i collaboratori della community di .NET) sono elencati molti elementi di lavoro disponibili per i collaboratori della community. In base ai propri interessi e livello di impegno, è possibile scegliere tra i problemi nelle categorie seguenti:
 
@@ -140,7 +140,7 @@ Il seguente elenco illustra alcune regole che è necessario tenere presenti quan
 
 ## <a name="contributor-license-agreement"></a>Contratto di licenza per contributi
 
-È necessario firmare il [contratto di licenza per contributi di .NET Foundation](https://cla.dotnetfoundation.org) (CLA) prima che la richiesta pull venga unita. Questa è una procedura da eseguire una volta sola per i progetti in .NET Foundation. Per altre informazioni, vedere [Contributor License Agreement](http://en.wikipedia.org/wiki/Contributor_License_Agreement) (Contratto di licenza per contributi) su Wikipedia.
+È necessario firmare il [contratto di licenza per contributi di .NET Foundation](https://cla.dotnetfoundation.org) (CLA) prima che la richiesta pull venga unita. Questa è una procedura da eseguire una volta sola per i progetti in .NET Foundation. Per altre informazioni, vedere [Contributor License Agreement](https://en.wikipedia.org/wiki/Contributor_License_Agreement) (Contratto di licenza per contributi) su Wikipedia.
 
 Contratto: [net-foundation-contribution-license-agreement.pdf](https://github.com/dotnet/home/blob/master/guidance/net-foundation-contribution-license-agreement.pdf)
 

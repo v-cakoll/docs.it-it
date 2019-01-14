@@ -1,17 +1,17 @@
 ---
-title: 'Procedura dettagliata: creazione di un pulsante tramite XAML'
+title: 'Procedura dettagliata: Creare un pulsante tramite XAML'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - buttons [WPF]
 ms.assetid: 138c41c4-1759-4bbf-8d77-77031a06a8a0
-ms.openlocfilehash: 96d54efbabbd95a24f1fb7118305ddbff4dfd110
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a28a027e3b804de8e40d8c7831e7556cc7f55188
+ms.sourcegitcommit: 81bd16c7435a8c9183d2a7e878a2a5eff7d04584
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525351"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54249151"
 ---
-# <a name="walkthrough-create-a-button-by-using-xaml"></a>Procedura dettagliata: creazione di un pulsante tramite XAML
+# <a name="walkthrough-create-a-button-by-using-xaml"></a>Procedura dettagliata: Creare un pulsante tramite XAML
 L'obiettivo di questa procedura dettagliata consiste nel comprendere come creare un pulsante animato per l'uso in un'applicazione Windows Presentation Foundation (WPF). Questa procedura dettagliata Usa stili e un modello per creare una risorsa pulsante personalizzato che consente il riutilizzo del codice e la separazione della logica di pulsante dalla dichiarazione del pulsante. Questa procedura dettagliata viene scritta interamente in [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
   
 > [!IMPORTANT]
@@ -28,9 +28,9 @@ L'obiettivo di questa procedura dettagliata consiste nel comprendere come creare
   
 1.  Avviare Visual Studio.  
   
-2.  **Creare un nuovo progetto WPF:** sul **File** dal menu **New**, quindi fare clic su **progetto**. Trovare il **applicazione di Windows (WPF)** modello e il nome del progetto "AnimatedButton". Verrà creata la struttura per l'applicazione.  
+2.  **Creare un nuovo progetto WPF:** Scegliere **Nuovo** dal menu **File**, quindi fare clic su **Progetto**. Trovare il **applicazione di Windows (WPF)** modello e il nome del progetto "AnimatedButton". Verrà creata la struttura per l'applicazione.  
   
-3.  **Aggiungere i pulsanti predefiniti di base:** tutti i file necessari per questa procedura dettagliata vengono forniti dal modello. Aprire il file Window1.xaml facendo doppio clic su di esso in Esplora soluzioni. Per impostazione predefinita, è presente un <xref:System.Windows.Controls.Grid> elemento in Window1.xaml. Rimuovere il <xref:System.Windows.Controls.Grid> elemento e aggiungere alcuni pulsanti per la [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] pagina digitando o copiando e incollando il seguente codice evidenziato in Window1.xaml:  
+3.  **Aggiungere i pulsanti predefiniti di base:** Tutti i file che necessari per questa procedura dettagliata vengono forniti dal modello. Aprire il file Window1.xaml facendo doppio clic su di esso in Esplora soluzioni. Per impostazione predefinita, è presente un <xref:System.Windows.Controls.Grid> elemento in Window1.xaml. Rimuovere il <xref:System.Windows.Controls.Grid> elemento e aggiungere alcuni pulsanti per la [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] pagina digitando o copiando e incollando il seguente codice evidenziato in Window1.xaml:  
   
     ```xaml  
     <Window x:Class="AnimatedButton.Window1"  
@@ -58,7 +58,7 @@ L'obiettivo di questa procedura dettagliata consiste nel comprendere come creare
   
 #### <a name="to-use-styles-to-set-basic-properties-on-the-buttons"></a>Come utilizzare gli stili per impostare le proprietà di base sui pulsanti  
   
-1.  **Definire un blocco di Resources:** aprire l'app. XAML e aggiungere il markup evidenziato seguente se non è già presente:  
+1.  **Definire un blocco Resources:** Aprire l'app. XAML e aggiungere il markup evidenziato seguente se non è già presente:  
   
     ```xaml  
     <Application x:Class="AnimatedButton.App"  
@@ -74,7 +74,7 @@ L'obiettivo di questa procedura dettagliata consiste nel comprendere come creare
   
      Ambito di risorse è determinato da in cui si definisce la risorsa. Definizione delle risorse in `Application.Resources` nell'app. XAML file consente la risorsa essere utilizzato da un punto qualsiasi nell'applicazione. Per altre informazioni sulla definizione dell'ambito delle risorse, vedere [risorse XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
   
-2.  **Creare uno stile e definire i valori delle proprietà di base:** aggiungere il markup seguente per il `Application.Resources` blocco. Questo codice crea un <xref:System.Windows.Style> che si applica a tutti i pulsanti nell'applicazione, impostare il <xref:System.Windows.FrameworkElement.Width%2A> dei pulsanti per 90 e il <xref:System.Windows.FrameworkElement.Margin%2A> a 10:  
+2.  **Creare uno stile e definire i valori delle proprietà di base:** Aggiungere il markup seguente per il `Application.Resources` blocco. Questo codice crea un <xref:System.Windows.Style> che si applica a tutti i pulsanti nell'applicazione, impostare il <xref:System.Windows.FrameworkElement.Width%2A> dei pulsanti per 90 e il <xref:System.Windows.FrameworkElement.Margin%2A> a 10:  
   
     ```xaml  
     <Application.Resources>  
@@ -91,7 +91,7 @@ L'obiettivo di questa procedura dettagliata consiste nel comprendere come creare
   
      È molto più che è possibile eseguire con gli stili, inclusi un'ampia gamma di modi per ottimizzare gli oggetti che vengono considerati come destinazione, specificando i valori di proprietà complessa e anche utilizzati come input per altri stili. Per altre informazioni, vedere [Applicazione di stili e modelli](../../../../docs/framework/wpf/controls/styling-and-templating.md).  
   
-3.  **Impostare il valore di una proprietà di stile a una risorsa:** grazie alle risorse in modo semplice riutilizzare i valori e oggetti comunemente definiti. È particolarmente utile definire valori complessi usando le risorse per rendere più modulare il codice. Aggiungere il markup evidenziato seguente a app. Xaml.  
+3.  **Impostare il valore di una proprietà di stile a una risorsa:** Risorse consentono di riutilizzare i valori e oggetti comunemente definiti in modo semplice. È particolarmente utile definire valori complessi usando le risorse per rendere più modulare il codice. Aggiungere il markup evidenziato seguente a app. Xaml.  
   
     ```xaml  
     <Application.Resources>  
@@ -121,7 +121,7 @@ L'obiettivo di questa procedura dettagliata consiste nel comprendere come creare
   
 #### <a name="to-use-the-template-to-define-the-look-of-the-button"></a>Usare il modello per definire l'aspetto del pulsante  
   
-1.  **Configurare il modello:** poiché i controlli come <xref:System.Windows.Controls.Button> hanno una <xref:System.Windows.Controls.Control.Template%2A> proprietà, è possibile definire il valore della proprietà modello proprio come gli altri valori di proprietà è stato impostato in un <xref:System.Windows.Style> usando un <xref:System.Windows.Setter>. Aggiungere il markup evidenziato seguente allo stile del pulsante.  
+1.  **Configurare il modello:** Poiché i controlli come <xref:System.Windows.Controls.Button> hanno un <xref:System.Windows.Controls.Control.Template%2A> proprietà, è possibile definire il valore della proprietà modello proprio come gli altri valori di proprietà è stato impostato in un <xref:System.Windows.Style> tramite un <xref:System.Windows.Setter>. Aggiungere il markup evidenziato seguente allo stile del pulsante.  
   
     ```xaml
     <Application.Resources>  
@@ -144,7 +144,7 @@ L'obiettivo di questa procedura dettagliata consiste nel comprendere come creare
     </Application.Resources>  
     ```  
   
-2.  **Presentazione del pulsante di ALTER:** a questo punto, è necessario definire il modello. Aggiungere il markup evidenziato seguente. Questo markup specifica due <xref:System.Windows.Shapes.Rectangle> elementi con gli angoli arrotondati, seguito da un <xref:System.Windows.Controls.DockPanel>. Il <xref:System.Windows.Controls.DockPanel> viene usato per ospitare il <xref:System.Windows.Controls.ContentPresenter> del pulsante. Oggetto <xref:System.Windows.Controls.ContentPresenter> consente di visualizzare il contenuto del pulsante. In questa procedura dettagliata, il contenuto è testo ("Pulsante 1", "Pulsante 2", "Pulsante 3"). Tutti i componenti del modello (i rettangoli e le <xref:System.Windows.Controls.DockPanel>) sono disposte all'interno di un <xref:System.Windows.Controls.Grid>.  
+2.  **Presentazione del pulsante di ALTER:** A questo punto, è necessario definire il modello. Aggiungere il markup evidenziato seguente. Questo markup specifica due <xref:System.Windows.Shapes.Rectangle> elementi con gli angoli arrotondati, seguito da un <xref:System.Windows.Controls.DockPanel>. Il <xref:System.Windows.Controls.DockPanel> viene usato per ospitare il <xref:System.Windows.Controls.ContentPresenter> del pulsante. Oggetto <xref:System.Windows.Controls.ContentPresenter> consente di visualizzare il contenuto del pulsante. In questa procedura dettagliata, il contenuto è testo ("Pulsante 1", "Pulsante 2", "Pulsante 3"). Tutti i componenti del modello (i rettangoli e le <xref:System.Windows.Controls.DockPanel>) sono disposte all'interno di un <xref:System.Windows.Controls.Grid>.  
   
     ```xaml  
     <Setter.Value>  
@@ -167,7 +167,7 @@ L'obiettivo di questa procedura dettagliata consiste nel comprendere come creare
   
      ![](../../../../docs/framework/wpf/controls/media/custom-button-animatedbutton-4.gif "custom_button_AnimatedButton_4")  
   
-3.  **Aggiungere un effetto cristallo al modello:** successivamente si aggiungerà l'effetto cristallo. È innanzitutto necessario creare alcune risorse che crea un effetto cristallo. Aggiungere queste sfumature risorse in un punto qualsiasi all'interno di `Application.Resources` blocco:  
+3.  **Aggiungere un effetto cristallo al modello:** Successivamente si aggiungerà l'effetto cristallo. È innanzitutto necessario creare alcune risorse che crea un effetto cristallo. Aggiungere queste sfumature risorse in un punto qualsiasi all'interno di `Application.Resources` blocco:  
   
     ```xaml  
     <Application.Resources>  
@@ -187,7 +187,7 @@ L'obiettivo di questa procedura dettagliata consiste nel comprendere come creare
   
      Queste risorse vengono usate come il <xref:System.Windows.Shapes.Shape.Fill%2A> per un rettangolo che abbiamo inserito il <xref:System.Windows.Controls.Grid> del modello di pulsante. Aggiungere il markup evidenziato seguente al modello.  
   
-    ```  
+    ```xaml
     <Setter.Value>  
       <ControlTemplate TargetType="{x:Type Button}">  
         <Grid Width="{TemplateBinding Width}" Height="{TemplateBinding Height}"  
@@ -249,13 +249,13 @@ L'obiettivo di questa procedura dettagliata consiste nel comprendere come creare
 ## <a name="create-button-interactivity"></a>Creare l'interattività del pulsante  
  In questa sezione si creerà i trigger di proprietà e i trigger di evento per modificare i valori delle proprietà ed eseguire animazioni in risposta alle azioni dell'utente, ad esempio spostando il puntatore del mouse su esso e fare clic su.  
   
- Un modo semplice per aggiungere interattività (puntatore del mouse, in uscita del mouse, fare clic e così via) consiste nel definire i trigger all'interno del modello o stile. Per creare un <xref:System.Windows.Trigger>, si definisce una proprietà "condition", ad esempio: il pulsante <xref:System.Windows.UIElement.IsMouseOver%2A> è uguale al valore della proprietà `true`. È quindi possibile definire metodi di impostazione (azioni) che si verificano quando viene soddisfatta la condizione del trigger.  
+ Un modo semplice per aggiungere interattività (puntatore del mouse, in uscita del mouse, fare clic e così via) consiste nel definire i trigger all'interno del modello o stile. Per creare un <xref:System.Windows.Trigger>, si definisce una proprietà "condition", ad esempio: Il pulsante <xref:System.Windows.UIElement.IsMouseOver%2A> è uguale al valore della proprietà `true`. È quindi possibile definire metodi di impostazione (azioni) che si verificano quando viene soddisfatta la condizione del trigger.  
   
 #### <a name="to-create-button-interactivity"></a>Per creare interattività del pulsante  
   
-1.  **Aggiungere i trigger dei modelli:** aggiungere il markup evidenziato per il modello.  
+1.  **Aggiungere trigger del modello:** Aggiungere il markup evidenziato per il modello.  
   
-    ```  
+    ```xaml
     <Setter.Value>  
       <ControlTemplate TargetType="{x:Type Button}">  
         <Grid Width="{TemplateBinding Width}"   
@@ -318,9 +318,9 @@ L'obiettivo di questa procedura dettagliata consiste nel comprendere come creare
     </Setter.Value>  
     ```  
   
-2.  **Aggiungere trigger di proprietà:** aggiungere il markup evidenziato per il `ControlTemplate.Triggers` blocco:  
+2.  **Aggiungere trigger di proprietà:** Aggiungere il markup evidenziato per il `ControlTemplate.Triggers` blocco:  
   
-    ```  
+    ```xaml
     <ControlTemplate.Triggers>  
   
       <!-- Set properties when mouse pointer is over the button. -->   <Trigger Property="IsMouseOver" Value="True">     <!-- Below are three property settings that occur when the           condition is met (user mouses over button).  -->     <!-- Change the color of the outer rectangle when user           mouses over it. -->     <Setter Property ="Rectangle.Stroke" TargetName="outerRectangle"       Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}" />     <!-- Sets the glass opacity to 1, therefore, the           glass "appears" when user mouses over it. -->     <Setter Property="Rectangle.Opacity" Value="1" TargetName="glassCube" />     <!-- Makes the text slightly blurry as though you           were looking at it through blurry glass. -->     <Setter Property="ContentPresenter.BitmapEffect"        TargetName="myContentPresenter">       <Setter.Value>         <BlurBitmapEffect Radius="1" />       </Setter.Value>     </Setter>   </Trigger>  
@@ -330,9 +330,9 @@ L'obiettivo di questa procedura dettagliata consiste nel comprendere come creare
   
      Premere F5 per eseguire l'applicazione e verificarne l'effetto quando si esegue il puntatore del mouse sui pulsanti.  
   
-3.  **Aggiungere un trigger di messa a fuoco:** successivamente, verrà aggiunto alcuni metodi di impostazione per gestire il caso in cui il pulsante è attivo (ad esempio, dopo un clic dell'utente).  
+3.  **Aggiungere un trigger di messa a fuoco:** Successivamente, aggiungiamo alcuni metodi di impostazione per gestire il caso in cui il pulsante è attivo (ad esempio, dopo un clic dell'utente).  
   
-    ```  
+    ```xaml  
     <ControlTemplate.Triggers>  
   
       <!-- Set properties when mouse pointer is over the button. -->  
@@ -361,9 +361,9 @@ L'obiettivo di questa procedura dettagliata consiste nel comprendere come creare
   
      Premere F5 per eseguire l'applicazione e fare clic su uno dei pulsanti. Si noti che il pulsante rimane evidenziato dopo aver selezionato perché è ancora evidenziato. Se si fa clic su un altro pulsante, il nuovo pulsante Ottiene lo stato attivo mentre il penultimo lo perde.  
   
-4.  **Aggiungere animazioni per** <xref:System.Windows.UIElement.MouseEnter> **e** <xref:System.Windows.UIElement.MouseLeave> **:** successivamente verranno aggiunte alcune animazioni per i trigger. Aggiungere il markup seguente in un punto qualsiasi all'interno del `ControlTemplate.Triggers` blocco.  
+4.  **Aggiungere animazioni per** <xref:System.Windows.UIElement.MouseEnter> **e** <xref:System.Windows.UIElement.MouseLeave> **:  ** Si aggiungerà quindi alcune animazioni per i trigger. Aggiungere il markup seguente in un punto qualsiasi all'interno del `ControlTemplate.Triggers` blocco.  
   
-    ```  
+    ```xaml
     <!-- Animations that start when mouse enters and leaves button. -->  
     <EventTrigger RoutedEvent="Mouse.MouseEnter">  
       <EventTrigger.Actions>  
@@ -398,9 +398,9 @@ L'obiettivo di questa procedura dettagliata consiste nel comprendere come creare
   
      Il secondo trigger evento (<xref:System.Windows.UIElement.MouseLeave>) interrompe semplicemente il primo. Quando si arresta un <xref:System.Windows.Media.Animation.Storyboard>, tutte le proprietà animate restituiscono i valori predefiniti. Pertanto, quando l'utente sposta il puntatore del mouse dal pulsante, il pulsante Torna al modo in cui che si trovava prima di spostata il puntatore del mouse su esso. Per altre informazioni sulle animazioni, vedere [Cenni preliminari sull'animazione](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).  
   
-5.  **Aggiungere un'animazione quando si fa clic sul pulsante:** il passaggio finale consiste nell'aggiungere un trigger per quando l'utente fa clic sul pulsante. Aggiungere il markup seguente in un punto qualsiasi all'interno del `ControlTemplate.Triggers` blocco:  
+5.  **Aggiungere un'animazione quando si fa clic sul pulsante:** Il passaggio finale consiste nell'aggiungere un trigger per quando l'utente fa clic sul pulsante. Aggiungere il markup seguente in un punto qualsiasi all'interno del `ControlTemplate.Triggers` blocco:  
   
-    ```  
+    ```xaml
     <!-- Animation fires when button is clicked, causing glass to spin.  -->  
     <EventTrigger RoutedEvent="Button.Click">  
       <EventTrigger.Actions>  
