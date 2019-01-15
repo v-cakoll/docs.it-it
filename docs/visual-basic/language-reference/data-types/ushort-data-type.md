@@ -16,12 +16,12 @@ helpviewer_keywords:
 - UShort data type
 - US literal type characters [Visual Basic]
 ms.assetid: 138db892-665d-4ba8-9cae-d8d91c4a8f39
-ms.openlocfilehash: f1ccb2f2e297ecac8f5ac96c0af42ff6bfb9363b
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 21d3b31fe19db7abf1a78d0c6d33abfbc2882089
+ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146043"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54307396"
 ---
 # <a name="ushort-data-type-visual-basic"></a>Tipo di dati UShort (Visual Basic)
 
@@ -33,7 +33,7 @@ Contiene interi senza segno a 16 bit (a 2 byte) nell'intervallo compreso tra 0 e
   
  Il valore predefinito di `UShort` è 0.  
 
-# <a name="literal-assignments"></a>Assegnazioni di valori letterali
+## <a name="literal-assignments"></a>Assegnazioni di valori letterali
 
 È possibile dichiarare e inizializzare un `UShort` variabile da assegnarle un valore letterale decimale, un valore letterale esadecimale, un valore letterale ottale, o (a partire da Visual Basic 2017) un valore letterale binario. Se il valore letterale integer è esterno all'intervallo di `UShort`, vale a dire se è minore di <xref:System.UInt16.MinValue?displayProperty=nameWithType> o maggiore di <xref:System.UInt16.MaxValue?displayProperty=nameWithType>, si verifica un errore di compilazione.
 
@@ -68,7 +68,7 @@ Dim number = &H_5826us
   
 -   **Conformità a CLS.** Il `UShort` tipo di dati non è in parte il [Common Language Specification](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), in modo che il codice conforme a CLS non è possibile utilizzare un componente che lo usa.
   
--   **Ampliamento.** Il `UShort` può ampliarsi nel tipo di dati `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single`, e `Double`. Ciò significa che è possibile convertire `UShort` a uno di questi tipi senza generare un <xref:System.OverflowException?displayProperty=nameWithType> errore.  
+-   **Widening.** Il `UShort` può ampliarsi nel tipo di dati `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single`, e `Double`. Ciò significa che è possibile convertire `UShort` a uno di questi tipi senza generare un <xref:System.OverflowException?displayProperty=nameWithType> errore.  
   
 -   **Caratteri tipo.** Aggiungendo i caratteri di tipo di valore letterale `US` a un valore letterale, se ne determina la `UShort` tipo di dati. `UShort` possiede alcun carattere di tipo identificatore.  
   

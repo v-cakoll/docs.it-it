@@ -1,5 +1,5 @@
 ---
-title: '&lt;rimuovere&gt; elemento per &lt;configSections&gt;'
+title: '&lt;rimuovere&gt; (elemento) per &lt;configSections&gt;'
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/configSections/remove
@@ -9,20 +9,20 @@ helpviewer_keywords:
 ms.assetid: ae4d82e0-e8fe-468c-81ab-46d63c4d66a8
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 6555981edeb6f7f088fb12c710d0146cf58d5be1
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 11a930120c375616d73faae68a6d6807c2f633cb
+ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752416"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54307227"
 ---
-# <a name="remove-element-for-configsections"></a>\<rimuovere > elemento per \<configSections >
+# <a name="remove-element-for-configsections"></a>\<rimuovere > (elemento) per \<configSections >
 
-Rimuove una sezione predefinita o il gruppo di sezione.
+Rimuove una sezione predefiniti o un gruppo di sezioni.
 
 [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[**\<configSections >**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<rimuovere >**
+&nbsp;&nbsp;[**\<configSections>**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**
 
 ## <a name="syntax"></a>Sintassi
 
@@ -34,27 +34,27 @@ Rimuove una sezione predefinita o il gruppo di sezione.
 
 |           | Descrizione |
 | --------- | ----------- |
-| **name**  | Attributo obbligatorio.<br><br>Specifica il nome della sezione o del gruppo di sezione da rimuovere. |
+| **name**  | Attributo obbligatorio.<br><br>Specifica il nome della sezione o il gruppo di sezioni da rimuovere. |
 
 ## <a name="parent-element"></a>Elemento padre
 
 |     | Descrizione |
 | --- | ----------- |
-| [**\<configSections >** elemento](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | Contiene le dichiarazioni dello spazio dei nomi e di sezione di configurazione. |
+| [**\<configSections >** elemento](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | Contiene le dichiarazioni dello spazio dei nomi e sezione di configurazione. |
 
-# <a name="child-elements"></a>Elementi figlio
+## <a name="child-elements"></a>Elementi figlio
 
-Nessuno
+nessuno
 
 ## <a name="remarks"></a>Note
 
-È possibile utilizzare il  **\<rimuovere >** elemento da rimuovere sezioni e gruppi dall'applicazione che sono stati definiti a un livello superiore nella gerarchia di file di configurazione.
+È possibile usare la  **\<rimuovere >** elemento da rimuovere sezioni e gruppi dall'applicazione che sono stati definiti a un livello superiore nella gerarchia di file di configurazione.
 
 ## <a name="example"></a>Esempio
 
 Nell'esempio seguente viene illustrato come utilizzare il  **\<rimuovere >** elemento in un file di configurazione dell'applicazione per rimuovere una sezione definita in precedenza nel file di configurazione del computer.
 
-Nel seguente codice di file di configurazione di computer viene dichiarata la sezione  **\<sampleSection >**:
+Il codice di file di configurazione macchina seguente dichiara la sezione  **\<sampleSection >**:
 
 ```xml
 <!-- Machine.config file -->
@@ -69,7 +69,7 @@ Nel seguente codice di file di configurazione di computer viene dichiarata la se
 </configuration>
 ```
 
-Il seguente codice di file di configurazione dell'applicazione rimuove il  **\<sampleSection >** sezione. Dopo la rimozione, l'applicazione non è possibile recuperare le impostazioni di  **\<sampleSection >**.
+Il codice di file di configurazione dell'applicazione seguente rimuove il  **\<sampleSection >** sezione. Dopo la rimozione, l'applicazione non è possibile recuperare le impostazioni in  **\<sampleSection >**.
 
 ```xml
 <!-- Application configuration file -->
@@ -82,7 +82,7 @@ Il seguente codice di file di configurazione dell'applicazione rimuove il  **\<s
 
 ## <a name="configuration-file"></a>File di configurazione
 
-Questo elemento può essere usato nel file di configurazione dell'applicazione, i file di configurazione macchina (*Machine. config*), e *Web. config* file che non sono a livello di directory dell'applicazione.
+Questo elemento può essere usato nel file di configurazione dell'applicazione, file di configurazione computer (*Machine. config*), e *Web. config* file che non sono a livello di directory dell'applicazione.
 
 ## <a name="see-also"></a>Vedere anche
 

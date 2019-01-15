@@ -2,12 +2,12 @@
 title: Forma dei documenti WordprocessingML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 2dfb446b-5a07-4c00-9ab3-a74ba734ff3a
-ms.openlocfilehash: 30ec7a0c6b03d0c6f00561ce08cb836aab3c167b
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 8f100078a5e764c8903512aca8bf5d46b9c9b056
+ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43777642"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54307097"
 ---
 # <a name="shape-of-wordprocessingml-documents-visual-basic"></a>Forma dei documenti WordprocessingML (Visual Basic)
 In questo argomento viene descritta la forma XML di un documento WordprocessingML.  
@@ -90,9 +90,9 @@ End Module
 ## <a name="external-resources"></a>Risorse esterne  
  [Introduzione ai formati file Office (2007) Open XML](https://docs.microsoft.com/previous-versions/office/developer/office-2007/aa338205(v=office.12))  
   
- [Overview of WordprocessingML](https://msdn.microsoft.com/en-us/library/aa212812(office.11).aspx) (Panoramica di WordprocessingML)  
+ [Overview of WordprocessingML](https://msdn.microsoft.com/library/aa212812(office.11).aspx) (Panoramica di WordprocessingML)  
   
- [Pagina di download Office 2003: XML Reference Schemas page](https://go.microsoft.com/fwlink/?LinkId=98095) (Schemi di riferimento XML)  
+ [Office 2003: Pagina di Download degli schemi di riferimento a XML](https://go.microsoft.com/fwlink/?LinkId=98095)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esercitazione: Manipolazione di contenuto in un documento WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
