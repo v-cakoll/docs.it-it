@@ -160,7 +160,7 @@ ms.locfileid: "54030399"
   
 |Costrutto di alternanza|Description|Modello|Corrispondenze|  
 |---------------------------|-----------------|-------------|-------------|  
-|<code>&#124;</code>|Trova la corrispondenza di qualsiasi elemento separato dal carattere di barra verticale (*&#124;).|<code>th(e&#124;is&#124;at)</code>|"the", "this" in "this is the day. "|  
+|<code>&#124;</code>|Trova la corrispondenza di qualsiasi elemento separato dal carattere di barra verticale (&#124;).|<code>th(e&#124;is&#124;at)</code>|"the", "this" in "this is the day. "|  
 |`(?(` *expression* `)` *yes* <code>&#124;</code> *no* `)`|Corrisponde a *yes* se il criterio di espressione regolare definito da *expression* corrisponde. In caso contrario, corrisponde alla parte *no* facoltativa. *espressione* è interpretata come asserzione di larghezza zero.|<code>(?(A)A\d{2}\b&#124;\b\d{3}\b)</code>|"A10", "910" in "A10 C103 910"|  
 |`(?(` *name* `)` *yes* <code>&#124;</code> *no* `)`|Corrisponde a *yes* se *nome*, un gruppo di acquisizione denominato o numerato, dispone di una corrispondenza.In caso contrario, corrisponde al *no*facoltativo.|<code>(?&lt;quoted&gt;&quot;)?(?(quoted).+?&quot;&#124;\S+\s)</code>|Dogs.jpg, "Yiska playing.jpg" in "Dogs.jpg "Yiska playing.jpg""|  
   
