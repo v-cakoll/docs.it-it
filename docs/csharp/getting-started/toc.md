@@ -1,9 +1,10 @@
-# [Introduzione](index.md)
-## [Introduzione al linguaggio C# e .NET Framework](introduction-to-the-csharp-language-and-the-net-framework.md)
-## [Creazione di un'applicazione C# Hello World con .NET Core in Visual Studio 2017](../../core/tutorials/with-visual-studio.md)
-### [Debug dell'applicazione C# Hello World con Visual Studio 2017](../../core/tutorials/debugging-with-visual-studio.md)
-### [Pubblicazione dell'applicazione Hello World con Visual Studio 2017](../../core/tutorials/publishing-with-visual-studio.md)
-## [Creazione di una libreria di classi con C# e .NET Core in Visual Studio 2017](../../core/tutorials/library-with-visual-studio.md)
-### [Test di una libreria di classi con .NET Core in Visual Studio 2017](../../core/tutorials/testing-library-with-visual-studio.md)
-### [Uso di una libreria .NET Standard in Visual Studio 2017](../../core/tutorials/consuming-library-with-visual-studio.md)
-## [Introduzione a C# e Visual Studio Code](../../core/tutorials/with-visual-studio-code.md)
+---
+ms.openlocfilehash: 899f6c8a4b6ee8bfb09ce7f380cfa08c2f93b2e1
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362839"
+---
+# [Getting Started](index.md)
+## [Introduction to the C# language and the .NET framework](introduction-to-the-csharp-language-and-the-net-framework.md)
