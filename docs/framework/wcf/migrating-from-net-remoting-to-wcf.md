@@ -2,12 +2,12 @@
 title: Migrazione da .NET Remoting a WCF
 ms.date: 03/30/2017
 ms.assetid: 16902a42-ef80-40e9-8c4c-90e61ddfdfe5
-ms.openlocfilehash: cca303cf9b906fd395e594111fae808ae4ab6435
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 1ebab76d63ae3328b158f1c03a61d2e2b3cbd8f9
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245678"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415975"
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>Migrazione da .NET Remoting a WCF
 In questo articolo viene descritto come eseguire la migrazione di un'applicazione che usa Servizi remoti .NET per l'uso di Windows Communication Foundation (WCF). Vengono confrontati concetti simili tra questi prodotti e quindi viene descritto come realizzare diversi scenari comuni di Servizi remoti .NET in WCF.  
@@ -307,9 +307,9 @@ catch (FaultException<CustomerServiceFault> fault)
   
  Una volta che è stata eseguita la migrazione a WCF di un'applicazione Servizi remoti .NET, è comunque importante rimuovere le dipendenze da Servizi remoti .NET. Questo garantisce che eventuali vulnerabilità di Servizi remoti .NET vengano rimosse dall'applicazione. Tali passaggi sono:  
   
--   **Interrompere l'uso di MarshalByRefObject.** Il tipo MarshalByRefObject esiste solo per Servizi remoti .NET e non viene usato da WCF. Tutti i tipi di applicazioni che usano la sottoclasse MarshalByRefObject devono essere rimossi o modificati. Il tipo MarshalByRefObject esiste solo per Servizi remoti .NET e non viene usato da WCF. Tutti i tipi di applicazioni che usano la sottoclasse MarshalByRefObject devono essere rimossi o modificati.  
+-   **Interrompere l'uso di MarshalByRefObject.** Il tipo MarshalByRefObject esiste solo per Servizi remoti .NET e non viene usato da WCF. Tutti i tipi di applicazioni che usano la sottoclasse MarshalByRefObject devono essere rimossi o modificati.  
   
--   **Interrompere l'uso di [Serializable] e ISerializable.** L'attributo [Serializable] e l'interfaccia ISerializable erano originariamente concepiti per la serializzazione di tipi all'interno di ambienti attendibili e vengono usati da Servizi remoti .NET. La serializzazione di WCF si basa sui tipi contrassegnati con [DataContract] e [DataMember]. I tipi di dati usati da un'applicazione devono essere modificati in modo da usare [DataContract] invece di ISerializable o [Serializable]. L'attributo [Serializable] e l'interfaccia ISerializable erano originariamente concepiti per la serializzazione di tipi all'interno di ambienti attendibili e vengono usati da Servizi remoti .NET. La serializzazione di WCF si basa sui tipi contrassegnati con [DataContract] e [DataMember]. I tipi di dati usati da un'applicazione devono essere modificati in modo da usare [DataContract] invece di ISerializable o [Serializable].  
+-   **Interrompere l'uso di [Serializable] e ISerializable.** L'attributo [Serializable] e l'interfaccia ISerializable erano originariamente concepiti per la serializzazione di tipi all'interno di ambienti attendibili e vengono usati da Servizi remoti .NET. La serializzazione di WCF si basa sui tipi contrassegnati con [DataContract] e [DataMember]. I tipi di dati usati da un'applicazione devono essere modificati in modo da usare [DataContract] invece di ISerializable o [Serializable].  
   
 ### <a name="migration-scenarios"></a>Scenari di migrazione  
  Verrà ora descritto come realizzare in WCF i seguenti scenari comuni di Servizi remoti .NET:  

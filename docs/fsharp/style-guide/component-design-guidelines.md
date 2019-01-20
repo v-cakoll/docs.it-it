@@ -2,12 +2,12 @@
 title: F#linee guida di progettazione componenti
 description: Le linee guida per la scrittura di informazioni su F# componenti destinati all'utilizzo da altri chiamanti.
 ms.date: 05/14/2018
-ms.openlocfilehash: bc8d4908912c4630f649ba30593d43a557278efa
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d72bfac1de5a57d5cce86f996f144af4bc181463
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145673"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415637"
 ---
 # <a name="f-component-design-guidelines"></a>F#linee guida di progettazione componenti
 
@@ -47,7 +47,7 @@ Documentazione XML nelle API pubbliche assicurarsi che gli utenti possono ottene
 type Point =
 
     /// Computes the distance between this point and another
-    member DistanceTo : otherPoint:Point -> float
+    member DistanceTo: otherPoint:Point -> float
 ```
 
 È possibile usare entrambi la versione abbreviata commenti in formato XML (`/// comment`), o commenti in formato XML standard (`///<summary>comment</summary>`).
@@ -80,11 +80,11 @@ La tabella seguente rispetta le convenzioni di denominazione e l'uso delle maius
 | Campo          | PascalCase | Sostantivo | CurrentName  | |
 | Tipi interfaccia |  PascalCase | Sostantivo / aggettivali | IDisposable | Nome deve iniziare con "I". |
 | Metodo |  PascalCase |  Verbo | ToString | |
-| Spazio dei nomi | PascalCase | | FSharp | In genere usano `<Organization>.<Technology>[.<Subnamespace>]`, eliminare anche se l'organizzazione se la tecnologia è indipendente dell'organizzazione. |
-| Parametri | camelCase | Sostantivo |  typeName, trasformazione, intervallo | |
+| Spazio dei nomi | PascalCase | | Microsoft.FSharp.Core | In genere usano `<Organization>.<Technology>[.<Subnamespace>]`, eliminare anche se l'organizzazione se la tecnologia è indipendente dell'organizzazione. |
+| Parametri | camelCase | Sostantivo |  typeName, transform, range | |
 | lasciare i valori (interni) | camelCase o PascalCase | Sostantivo / verbo |  getValue, myTable |
-| lasciare i valori (esterno) | camelCase o PascalCase | Sostantivo/verbo  | List. map, Dates.Today | i valori di associazione let sono pubblici spesso quando si seguono i modelli di progettazione funzionali tradizionale. Tuttavia, in genere usano la notazione Pascal quando l'identificatore può essere utilizzato da altri linguaggi .NET. |
-| Proprietà  | PascalCase  | Sostantivo / aggettivali  | IsEndOfFile, colore di sfondo  | Le proprietà booleane in genere l'utilizzo è e può e deve essere affermativa perché, come illustrato IsEndOfFile, non IsNotEndOfFile.
+| lasciare i valori (esterno) | camelCase o PascalCase | Noun/verb  | List.map, Dates.Today | i valori di associazione let sono pubblici spesso quando si seguono i modelli di progettazione funzionali tradizionale. Tuttavia, in genere usano la notazione Pascal quando l'identificatore può essere utilizzato da altri linguaggi .NET. |
+| Proprietà  | PascalCase  | Sostantivo / aggettivali  | IsEndOfFile, BackColor  | Le proprietà booleane in genere l'utilizzo è e può e deve essere affermativa perché, come illustrato IsEndOfFile, non IsNotEndOfFile.
 
 #### <a name="avoid-abbreviations"></a>Evitare le abbreviazioni
 
@@ -191,16 +191,16 @@ Usare i tipi di interfaccia per rappresentare una serie di operazioni. Ciò è p
 
 ```fsharp
 type Serializer =
-    abstract Serialize<'T> : preserveRefEq: bool -> value: 'T -> string
-    abstract Deserialize<'T> : preserveRefEq: bool -> pickle: string -> 'T
+    abstract Serialize<'T>: preserveRefEq: bool -> value: 'T -> string
+    abstract Deserialize<'T>: preserveRefEq: bool -> pickle: string -> 'T
 ```
 
 In alternativa a:
 
 ```fsharp
 type Serializer<'T> = {
-    Serialize : bool -> 'T -> string
-    Deserialize : bool -> string -> 'T
+    Serialize: bool -> 'T -> string
+    Deserialize: bool -> string -> 'T
 }
 ```
 
@@ -243,13 +243,13 @@ Utilizzo eccessivo di `[<AutoOpen>]` lead inquinato gli spazi dei nomi e l'attri
 In alcuni casi classi vengono utilizzate per la modellazione matematici costrutti come vettori. Quando il dominio in fase di modellazione include operatori noti, vengono definiti come membri intrinseci per la classe è utile.
 
 ```fsharp
-type Vector(x:float) =
+type Vector(x: float) =
 
     member v.X = x
 
-    static member (*) (vector:Vector, scalar:float) = Vector(vector.X * scalar)
+    static member (*) (vector: Vector, scalar: float) = Vector(vector.X * scalar)
 
-    static member (+) (vector1:Vector, vector2:Vector) = Vector(vector1.X + vector2.X)
+    static member (+) (vector1: Vector, vector2: Vector) = Vector(vector1.X + vector2.X)
 
 let v = Vector(5.0)
 
@@ -306,7 +306,7 @@ In F#, viene usato raramente ereditarietà dell'implementazione. Inoltre, le ger
 Ecco un buon esempio di uso di una tupla in un tipo restituito:
 
 ```fsharp
-val divrem : BigInteger -> BigInteger -> BigInteger * BigInteger
+val divrem: BigInteger -> BigInteger -> BigInteger * BigInteger
 ```
 
 Per restituire i tipi che contengono molti componenti, o se i componenti sono correlati a una singola entità identificabili, valutare l'uso di un tipo denominato anziché una tupla.
@@ -317,9 +317,9 @@ Se vi è un'operazione sincrona corrispondente denominata `Operation` che restit
 
 ```fsharp
 type SomeType =
-    member this.Compute(x:int) : int =
+    member this.Compute(x:int): int =
         ...
-    member this.AsyncCompute(x:int) : Async<int> =
+    member this.AsyncCompute(x:int): Async<int> =
         ...
 
 type System.ServiceModel.Channels.IInputChannel with
@@ -508,8 +508,8 @@ F#:
 ```fsharp
 [<NoEquality; NoComparison>]
 type MyRecord =
-    { FirstThing : int
-        SecondThing : string }
+    { FirstThing: int
+        SecondThing: string }
 ```
 
 C#:
@@ -574,7 +574,7 @@ type MyBadType() =
     [<CLIEvent>]
     member this.MyEvent = myEv.Publish
 
-type MyEventArgs(x:int) =
+type MyEventArgs(x: int) =
     inherit System.EventArgs()
     member this.X = x
 
@@ -596,7 +596,7 @@ Tuttavia, nonostante ciò, i metodi che restituiscono le attività sono la rappr
 /// A type in a component designed for use from other .NET languages
 type MyType() =
 
-    let compute (x: int) : Async<int> = async { ... }
+    let compute (x: int): Async<int> = async { ... }
 
     member this.ComputeAsync(x) = compute x |> Async.StartAsTask
 ```
@@ -606,7 +606,7 @@ Sarà spesso anche vuole accettare un token di annullamento esplicito:
 ```fsharp
 /// A type in a component designed for use from other .NET languages
 type MyType() =
-    let compute(x:int) : Async<int> = async { ... }
+    let compute(x: int): Async<int> = async { ... }
     member this.ComputeAsTask(x, cancellationToken) = Async.StartAsTask(compute x, cancellationToken)
 ```
 
@@ -617,14 +617,14 @@ In questo caso "F# tipi di funzione" significa che i tipi di "freccia" come `int
 Anziché il seguente:
 
 ```fsharp
-member this.Transform(f:int->int) =
+member this.Transform(f: int->int) =
     ...
 ```
 
 Eseguire questa operazione:
 
 ```fsharp
-member this.Transform(f:Func<int,int>) =
+member this.Transform(f: Func<int,int>) =
     ...
 ```
 
@@ -639,18 +639,18 @@ Modelli comuni di utilizzo per il F# tipo di opzione per le API sono preferibili
 ```fsharp
 member this.ReturnOption() = Some 3
 
-member this.ReturnBoolAndOut(outVal : byref<int>) =
+member this.ReturnBoolAndOut(outVal: byref<int>) =
     outVal <- 3
     true
 
-member this.ParamOption(x : int, y : int option) =
+member this.ParamOption(x: int, y: int option) =
     match y with
     | Some y2 -> x + y2
     | None -> x
 
-member this.ParamOverload(x : int) = x
+member this.ParamOverload(x: int) = x
 
-member this.ParamOverload(x : int, y : int) = x + y
+member this.ParamOverload(x: int, y: int) = x + y
 ```
 
 #### <a name="use-the-net-collection-interface-types-ienumerablet-and-idictionarykeyvalue-for-parameters-and-return-values"></a>Usare l'interfaccia di raccolta .NET i tipi di IEnumerable\<T\> e IDictionary\<chiave, valore\> per i parametri e valori restituiti
@@ -660,14 +660,14 @@ Evitare l'utilizzo di tipi, ad esempio le matrici .NET di raccolta concreti `T[]
 Invece di F# Elenca:
 
 ```fsharp
-member this.PrintNames(names : string list) =
+member this.PrintNames(names: string list) =
     ...
 ```
 
 Usare F# sequenze:
 
 ```fsharp
-member this.PrintNames(names : seq<string>) =
+member this.PrintNames(names: seq<string>) =
     ...
 ```
 
@@ -678,13 +678,13 @@ Evitare di altri utilizzi del tipo di unità. Si tratta di una buona:
 ```fsharp
 ✔ member this.NoArguments() = 3
 
-✔ member this.ReturnVoid(x : int) = ()
+✔ member this.ReturnVoid(x: int) = ()
 ```
 
 Si tratta di una non valido:
 
 ```fsharp
-member this.WrongUnit( x:unit, z:int) = ((), ())
+member this.WrongUnit( x: unit, z: int) = ((), ())
 ```
 
 #### <a name="check-for-null-values-on-vanilla-net-api-boundaries"></a>Verificare la presenza di valori null in "vanilla" dei limiti delle API .NET

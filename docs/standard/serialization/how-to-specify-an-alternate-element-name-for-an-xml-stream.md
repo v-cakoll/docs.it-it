@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: specificare un nome di elemento alternativo per un flusso XML'
+title: 'Procedura: Specificare un nome di elemento alternativo per un flusso XML'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,19 +12,18 @@ helpviewer_keywords:
 - classes, overriding
 - overriding classes
 ms.assetid: 5cc1c0b0-f94b-4525-9a41-88a582cd6668
-ms.openlocfilehash: 8cb6a66f9fc7a67ae99574e783fd889537b9b11a
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: f2dd56111bbc0ace76c2b71d208f1b753a2119b8
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582374"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415091"
 ---
-# <a name="how-to-specify-an-alternate-element-name-for-an-xml-stream"></a>Procedura: specificare un nome di elemento alternativo per un flusso XML
-[Esempio di codice](#cpconoverridingserializationofclasseswithxmlattributeoverridesclassanchor1)  
+# <a name="how-to-specify-an-alternate-element-name-for-an-xml-stream"></a>Procedura: Specificare un nome di elemento alternativo per un flusso XML
   
- Con [XmlSerializer](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx) è possibile generare più di un flusso XML con lo stesso set di classi. È consigliabile eseguire questa operazione poiché due diversi servizi Web XML richiedono le stesse informazioni di base, con solo piccole differenze. Si immagini ad esempio due servizi Web XML che elaborano ordini per libri e che pertanto richiedono i numeri ISBN. Un servizio usa il tag \<ISBN> mentre il secondo usa il tag \<BookID>. Si dispone di una classe denominata `Book` che contiene un campo denominato `ISBN`. Quando viene serializzata un'istanza della classe `Book`, per impostazione predefinita verrà utilizzato il nome del membro (ISBN) come nome dell'elemento del tag. Per il primo servizio Web XML, tale comportamento è quello previsto. Per inviare invece il flusso XML al secondo servizio Web XML, è necessario eseguire l'override della serializzazione in modo che il nome dell'elemento del tag sia `BookID`.  
+Con [XmlSerializer](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx) è possibile generare più di un flusso XML con lo stesso set di classi. È consigliabile eseguire questa operazione poiché due diversi servizi Web XML richiedono le stesse informazioni di base, con solo piccole differenze. Si immagini ad esempio due servizi Web XML che elaborano ordini per libri e che pertanto richiedono i numeri ISBN. Un servizio usa il tag \<ISBN> mentre il secondo usa il tag \<BookID>. Si dispone di una classe denominata `Book` che contiene un campo denominato `ISBN`. Quando viene serializzata un'istanza della classe `Book`, per impostazione predefinita verrà utilizzato il nome del membro (ISBN) come nome dell'elemento del tag. Per il primo servizio Web XML, tale comportamento è quello previsto. Per inviare invece il flusso XML al secondo servizio Web XML, è necessario eseguire l'override della serializzazione in modo che il nome dell'elemento del tag sia `BookID`.  
   
-### <a name="to-create-an-xml-stream-with-an-alternate-element-name"></a>Per creare un flusso XML con un nome dell'elemento alternativo  
+## <a name="to-create-an-xml-stream-with-an-alternate-element-name"></a>Per creare un flusso XML con un nome dell'elemento alternativo  
   
 1.  Creare un'istanza della classe <xref:System.Xml.Serialization.XmlElementAttribute>.  
   

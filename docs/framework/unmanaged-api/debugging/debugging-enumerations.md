@@ -8,22 +8,22 @@ helpviewer_keywords:
 ms.assetid: 3af9f584-f1b4-4154-aeaa-8fce7c9f8b50
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b81e7c2ffabdee78af34d00c48fb29c7525dea08
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5edd6dfb3dac05ce4614c43949f2ec4c19b5f742
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410468"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415949"
 ---
 # <a name="debugging-enumerations"></a>Enumerazioni di debug
 Questa sezione descrive le enumerazioni non gestite usate dall'API di debug.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Enumerazione CLR_DEBUGGING_PROCESS_FLAGS](../../../../docs/framework/unmanaged-api/debugging/clr-debugging-process-flags-enumeration.md)  
- Fornisce i valori utilizzati per il [ICLRDebugging:: OpenVirtualProcess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md) metodo.  
+ Fornisce i valori utilizzati per il [ICLRDebugging:: OpenVirtualProcess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md) (metodo).  
   
  [Enumerazione CLRDataEnumMemoryFlags](../../../../docs/framework/unmanaged-api/debugging/clrdataenummemoryflags-enumeration.md)  
- Indica le aree di memoria di una chiamata al [ICLRDataEnumMemoryRegions:: EnumMemoryRegions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md) deve includere metodo.  
+ Indica una chiamata a quali aree di memoria di [ICLRDataEnumMemoryRegions:: EnumMemoryRegions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md) deve includere (metodo).  
   
  [Enumerazione COR_PUB_ENUMPROCESS](../../../../docs/framework/unmanaged-api/debugging/cor-pub-enumprocess-enumeration.md)  
  Identifica il tipo di processo da enumerare.  
@@ -41,16 +41,16 @@ Questa sezione descrive le enumerazioni non gestite usate dall'API di debug.
  Descrive il motivo per cui una funzione esportata chiama il codice gestito.  
   
  CorDebugCreateProcessFlags  
- Fornisce opzioni di debug aggiuntive che possono essere utilizzate in una chiamata al [ICorDebug:: CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md) metodo.  
+ Fornisce opzioni aggiuntive di debug che possono essere utilizzate in una chiamata ai [ICorDebug:: CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md) (metodo).  
   
  [Enumerazione CorDebugDebugEventKind](../../../../docs/framework/unmanaged-api/debugging/cordebugdebugeventkind-enumeration.md)  
- Indica il tipo di evento le cui informazioni sono decodificate dal [DecodeEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md) metodo.  
+ Indica il tipo di evento le cui informazioni sono decodificate dal [DecodeEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md) (metodo).  
   
  [Enumerazione CorDebugDecodeEventFlagsWindows](../../../../docs/framework/unmanaged-api/debugging/cordebugdecodeeventflagswindows-enumeration.md)  
  Fornisce altre informazioni sugli eventi di debug nella piattaforma Windows.  
   
  CorDebugExceptionCallbackType  
- Indica il tipo di callback che viene eseguita da un [ICorDebugManagedCallback2:: Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md) evento.  
+ Indica il tipo di callback che viene eseguita da un [ICorDebugManagedCallback2::Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md) evento.  
   
  [Enumerazione CorDebugExceptionFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md)  
  Offre informazioni aggiuntive su un'eccezione.  
@@ -83,7 +83,7 @@ Questa sezione descrive le enumerazioni non gestite usate dall'API di debug.
  Contiene valori che influenzano il comportamento del compilatore JIT gestito.  
   
  [Enumerazione CorDebugJITCompilerFlagsDeprecated](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflagsdeprecated-enumeration.md)  
- Obsoleta. Utilizzare il `CORDEBUG_JIT_DEFAULT` appartenente il [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) enumerazione invece.  
+ Obsoleta. Usare la `CORDEBUG_JIT_DEFAULT` membro della [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) enumerazione invece.  
   
  CorDebugMappingResult  
  Fornisce informazioni su come è stato ottenuto il valore del puntatore dell'istruzione.  
@@ -95,7 +95,7 @@ Questa sezione descrive le enumerazioni non gestite usate dall'API di debug.
  Fornisce un valore che determina se un debugger carica immagini native (NGen) dalla cache delle immagini native.  
   
  [Enumerazione CorDebugPlatform](../../../../docs/framework/unmanaged-api/debugging/cordebugplatform-enumeration.md)  
- Fornisce i valori di piattaforma di destinazione vengono utilizzati dal [ICorDebugDataTarget:: GetPlatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) metodo.  
+ Fornisce i valori di piattaforma di destinazione utilizzati per il [ICorDebugDataTarget:: GetPlatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) (metodo).  
   
  [Enumerazione CorDebugRecordFormat](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md)  
  Descrive il formato dei dati in una matrice di byte che contiene informazioni su un evento di debug per le eccezioni native.  
@@ -134,11 +134,13 @@ Questa sezione descrive le enumerazioni non gestite usate dall'API di debug.
  Indica l'operazione che è stata eseguita su un'opzione di debug/traccia.  
   
  [Enumerazione VariableLocationType](../../../../docs/framework/unmanaged-api/debugging/variablelocationtype-enumeration.md)  
- Indica il tipo nativo di percorso di una variabile.  
+ Indica il tipo di percorso nativo di una variabile.  
   
  [Enumerazione WriteableMetadataUpdateMode](../../../../docs/framework/unmanaged-api/debugging/writeablemetadataupdatemode-enumeration.md)  
- Fornisce i valori che specificano se gli aggiornamenti in memoria ai metadati sono visibili a un debugger.  
-  
+ Fornisce i valori che specificano se gli aggiornamenti in memoria ai metadati sono visibili a un debugger. 
+
+ [Enumerazione ClrDataSourceType](../../../../docs/framework/unmanaged-api/debugging/clrdatasourcetype-enumeration.md) fornisce valori utilizzati dalla struttura CLRDATA_IL_ADDRESS_MAP.
+
 ## <a name="related-sections"></a>Sezioni correlate  
  [Coclassi di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-coclasses.md)  
   

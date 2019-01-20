@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 173ba2c2-ab34-49ae-b6a8-e5c49882bf05
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6c7415920d34fc231bf82dd00199c7e01eec7a73
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 23aa619d666f2e0b9eb67ab4cf8d4f92761865d3
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408112"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415325"
 ---
 # <a name="debugging-structures"></a>Strutture di debug
 Questa sezione descrive le strutture non gestite usate dall'API di debug.  
@@ -35,7 +35,7 @@ Questa sezione descrive le strutture non gestite usate dall'API di debug.
  Rappresenta le informazioni sullo stack frame da un oggetto di eccezione.  
   
  [Struttura CorDebugExceptionObjectStackFrame](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionobjectstackframe-structure.md)  
- Mappe un [!INCLUDE[wrt](../../../../includes/wrt-md.md)] GUID corrispondente [ICorDebugType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-interface.md) oggetto.  
+ Esegue il mapping una [!INCLUDE[wrt](../../../../includes/wrt-md.md)] GUID all'oggetto corrispondente [ICorDebugType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-interface.md) oggetto.  
   
  COR_ACTIVE_FUNCTION  
  Contiene informazioni sulle funzioni attualmente attive nei frame di un thread.  
@@ -77,7 +77,14 @@ Questa sezione descrive le strutture non gestite usate dall'API di debug.
  Archivia il numero di versione in quattro parti standard di Common Language Runtime.  
   
  [Struttura StackTrace_SimpleContext](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md)  
- Fornisce un contesto semplice che può essere usato invece di una struttura `CONTEXT` completa.  
+ Fornisce un contesto semplice che può essere usato invece di una struttura `CONTEXT` completa.
+
+ [Struttura CLRDATA_ADDRESS_RANGE](../../../../docs/framework/unmanaged-api/debugging/clrdata-address-range-structure.md) definisce un intervallo di indirizzi.
+ 
+ [Struttura CLRDATA_IL_ADDRESS_MAP](../../../../docs/framework/unmanaged-api/debugging/clrdata-il-address-map-structure.md) definisce un livello di integrità per il mapping dell'indirizzo
+ 
+ [Struttura DacpGetModuleAddress](../../../../docs/framework/unmanaged-api/debugging/dacpgetmoduleaddress-structure.md) definisce il contenitore per una richiesta del modulo di indirizzo.
+
   
 ## <a name="related-sections"></a>Sezioni correlate  
  [Coclassi di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-coclasses.md)  

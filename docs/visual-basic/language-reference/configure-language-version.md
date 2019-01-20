@@ -2,12 +2,12 @@
 title: Selezionare la versione del linguaggio Visual Basic
 description: Configurare il compilatore per eseguire la convalida della sintassi usando una specifica versione del compilatore.
 ms.date: 05/24/2018
-ms.openlocfilehash: 7628b5a7c27f5b26171d42e44a58598ef3d5d49f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 3b6d8055dbf64f2a5c38f46b6d66794fc48a1cea
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194722"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415104"
 ---
 # <a name="select-the-visual-basic-language-version"></a>Selezionare la versione del linguaggio Visual Basic
 
@@ -33,7 +33,7 @@ Esistono tre modi per impostare la versione del linguaggio:
 
 Il valore `latest` Usa la versione secondaria più recente del linguaggio Visual Basic. I valori validi sono:
 
-|Valore|Significato|
+|Value|Significato|
 |------------|-------------|
 |default|Il compilatore accetta tutte le sintassi di linguaggio valide dalla versione principale più recente supportata.|
 |9|Il compilatore accetta solo la sintassi inclusa in Visual Basic 9.0 o inferiore.|
@@ -60,7 +60,7 @@ Le stringhe speciali `default` e `latest` si risolvono rispettivamente nelle ver
 </Project>
 ```
 
-A questo punto, le compilazioni in tutte le sottodirectory della directory contenente file userà la sintassi di Visual Basic versione 15.5. Per altre informazioni, vedere l'articolo [Personalizzare la compilazione](/visualstudio/msbuild/customize-your-build.md).
+A questo punto, le compilazioni in tutte le sottodirectory della directory contenente file userà la sintassi di Visual Basic versione 15.5. Per altre informazioni, vedere l'articolo [Personalizzare la compilazione](/visualstudio/msbuild/customize-your-build).
 
 ## <a name="set-the-langversion-compiler-option"></a>Impostare l'opzione del compilatore langversion
 
