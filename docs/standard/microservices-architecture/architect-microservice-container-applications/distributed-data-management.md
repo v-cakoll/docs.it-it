@@ -4,12 +4,12 @@ description: Informazioni sulle problematiche e le soluzioni per la gestione dei
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: adfb3c0be33d18a991ee552a99a2d02cc3ec7bb3
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c3da158bf7a7ee2d4b979349299bba7487c9b1a2
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151031"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145991"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>Problemi e soluzioni per la gestione dei dati distribuiti
 
@@ -53,7 +53,7 @@ Tuttavia, in un'applicazione basata su microservizi le tabelle Product e Basket 
 
 **Figura 4-9**. Un microservizio non può accedere direttamente a una tabella in un altro microservizio
 
-Il microservizio Catalog non deve aggiornare direttamente la tabella Basket, perché la tabella Basket è di proprietà del microservizio Basket. Per eseguire un aggiornamento nel microservizio Basket, il microservizio Catalog deve usare la coerenza finale, probabilmente basandosi su comunicazioni asincrone come gli eventi di integrazione (comunicazione basata su messaggi ed eventi). Ecco come l'applicazione di riferimento [eShopOnContainers](http://aka.ms/eshoponcontainers) implementa questo tipo di coerenza tra i diversi microservizi.
+Il microservizio Catalog non deve aggiornare direttamente la tabella Basket, perché la tabella Basket è di proprietà del microservizio Basket. Per eseguire un aggiornamento nel microservizio Basket, il microservizio Catalog deve usare la coerenza finale, probabilmente basandosi su comunicazioni asincrone come gli eventi di integrazione (comunicazione basata su messaggi ed eventi). Ecco come l'applicazione di riferimento [eShopOnContainers](https://aka.ms/eshoponcontainers) implementa questo tipo di coerenza tra i diversi microservizi.
 
 Come dichiarato nel [teorema CAP](https://en.wikipedia.org/wiki/CAP_theorem), è necessario scegliere tra disponibilità e coerenza assoluta ACID. La maggior parte degli scenari basati su microservizio richiede disponibilità e scalabilità elevata anziché la coerenza assoluta. Le applicazioni mission-critical devono rimanere attive e in esecuzione e gli sviluppatori possono aggirare la coerenza assoluta usando tecniche per operare con la coerenza finale o debole. Si tratta dell'approccio adottato per la maggior parte delle architetture basate su microservizi.
 
@@ -101,7 +101,7 @@ Per altre informazioni sull'uso della comunicazione asincrona, vedere le sezioni
   [*https://docs.microsoft.com/azure/architecture/patterns/materialized-view*](https://docs.microsoft.com/azure/architecture/patterns/materialized-view)
 
 - **Charles Row. ACID vs. BASE: The Shifting pH of Database Transaction Processing** \ (ACID e BASE: il pH mutevole dell'elaborazione delle transazioni del database)
-  [*http://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/*](http://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/)
+  [*https://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/*](https://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/)
 
 - **Transazione di compensazione** \
   [*https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction*](https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction)

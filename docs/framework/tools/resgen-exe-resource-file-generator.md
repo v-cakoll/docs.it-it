@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8ef159de-b660-4bec-9213-c3fbc4d1c6f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4f4f73ec60283e1ddf0fee0beaa76bdb68124698
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 7b3d28b7af96dde30117ec952355958ca75ae559
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49122779"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54223169"
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe (generatore di file di risorse)
 Il generatore di file di risorse (Resgen.exe) converte i file di testo (.txt o .restext) e i file di risorse basati su XML (.resx) in file binari Common Language Runtime (.resources) incorporabili in un eseguibile binario o in un assembly satellite di runtime. Vedere [Creazione di file di risorse](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md).  
@@ -55,7 +55,7 @@ resgen /?
   
  Se si usa Resgen.exe per generare file binari RESOURCES, è possibile usare un compilatore di linguaggio per incorporare i file binari in assembly eseguibili oppure [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) per compilarli in assembly satellite.  
   
- Viene installato automaticamente con Visual Studio. Per eseguire lo strumento, usare il prompt dei comandi per sviluppatori o il prompt dei comandi di Visual Studio in Windows 7. Per altre informazioni, vedere [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Viene installato automaticamente con Visual Studio. Per eseguire lo strumento, usare il Prompt dei comandi per gli sviluppatori per Visual Studio o il prompt dei comandi di Visual Studio in Windows 7. Per altre informazioni, vedere [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
  Al prompt dei comandi digitare quanto segue:  
   
@@ -71,7 +71,7 @@ resgen filename.extension [outputDirectory]
   
 #### <a name="parameters"></a>Parametri  
   
-|Parametro o opzione|Descrizione|  
+|Parametro o opzione|Description|  
 |-------------------------|-----------------|  
 |`/define:` *simbolo1*[, *simbolo2*,...]|A partire da [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] supporta la compilazione condizionale in file di risorse basati su testo (.txt o .restext). Se *simbolo* corrisponde ad un simbolo incluso nel file di testo di input all'interno di un costrutto `#ifdef`, la risorsa di tipo stringa associata viene inclusa nel file RESOURCES. Se il file di testo di input include un'istruzione `#if !` con un simbolo non definito dall'opzione `/define`, la risorsa di tipo stringa associata viene inclusa nel file di risorse.<br /><br /> `/define` viene ignorato se è utilizzato con file non di testo. Nei simboli viene fatta distinzione tra maiuscole e minuscole.<br /><br /> Per altre informazioni su questa opzione, vedere [Compilazione condizionale di risorse](#Conditional) più avanti in questo argomento.|  
 |`useSourcePath`|Specifica che è necessario usare la directory corrente del file di input per risolvere i percorsi di file relativi.|  

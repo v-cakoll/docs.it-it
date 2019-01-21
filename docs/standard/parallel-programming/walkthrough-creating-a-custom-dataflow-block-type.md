@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: a6147146-0a6a-4d9b-ab0f-237b3c1ac691
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7f07f1a2a7c393d70befc42a2c5b090c2c27320c
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 380bcb6d2a2846d09267eeb3a0d637469ce9fba5
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43868617"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221089"
 ---
 # <a name="walkthrough-creating-a-custom-dataflow-block-type"></a>Procedura dettagliata: creazione di un tipo di blocco di flussi di dati personalizzato
 Anche se la libreria di flussi di dati TPL rende disponibili diversi tipi di blocchi di flussi di dati che offrono varie funzionalità, è anche possibile creare tipi di blocchi personalizzati. Questo documento descrive come creare un tipo di blocco di flussi di dati che implementi un comportamento personalizzato.  
@@ -53,7 +53,7 @@ Anche se la libreria di flussi di dati TPL rende disponibili diversi tipi di blo
  [!code-vb[TPLDataflow_SlidingWindowBlock#100](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_slidingwindowblock/vb/slidingwindowblock.vb#100)]  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
- Copiare il codice di esempio e incollarlo in un progetto di Visual Studio oppure incollarlo in un file denominato `SlidingWindowBlock.cs` (`SlidingWindowBlock.vb` per Visual Basic) e quindi eseguire il comando riportato di seguito in una finestra del prompt dei comandi di Visual Studio.  
+ Copiare il codice di esempio e incollarlo in un progetto di Visual Studio oppure incollarlo in un file denominato `SlidingWindowBlock.cs` (`SlidingWindowBlock.vb` per Visual Basic) e quindi eseguire il comando riportato di seguito in una finestra del prompt dei comandi per gli sviluppatori per Visual Studio.  
   
  Visual C#  
   

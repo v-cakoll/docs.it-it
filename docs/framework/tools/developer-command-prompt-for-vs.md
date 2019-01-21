@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 94fcf524-9045-4993-bfb2-e2d8bad44219
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cded8ce271ea0f3d1dbb8fc3d9a072ee4a23d1ee
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 6e648cdadb567919d320ea8a12d30b7be306e67a
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149172"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221232"
 ---
 # <a name="developer-command-prompt-for-visual-studio"></a>Prompt dei comandi per gli sviluppatori per Visual Studio
 
@@ -34,7 +34,7 @@ Si potrebbero avere più prompt dei comandi, in base alla versione di Visual Stu
 
 1. Nella casella di ricerca della barra delle applicazioni iniziare a digitare il nome dello strumento, ad esempio `dev` o `developer command prompt`. Verrà visualizzato un elenco di app installate che corrispondono ai criteri di ricerca. Se si sta cercando un prompt dei comandi diverso, provare a immettere un termine di ricerca diverso, ad esempio `prompt`.
 
-2. Scegliere **Prompt dei comandi per gli sviluppatori** (o il prompt dei comandi che si vuole usare).
+2. Scegliere **Prompt dei comandi per gli sviluppatori per Visual Studio** (o il prompt dei comandi che si vuole usare).
 
 ### <a name="in-windows-81"></a>In Windows 8.1
 

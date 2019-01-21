@@ -7,17 +7,17 @@ helpviewer_keywords:
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b4cece1227b5210cf839aff0658267ae480b23b6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: f0827634278f248089b105844dadf8959f953595
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196464"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221596"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe (strumento per la firma)
 Lo strumento Firma è uno strumento da riga di comando per la firma digitale dei file, la verifica delle firme e l'aggiunta di timestamp nei file.  
   
- Viene installato automaticamente con Visual Studio. Per eseguire lo strumento, usare il prompt dei comandi per sviluppatori o il prompt dei comandi di Visual Studio in Windows 7. Per altre informazioni, vedere [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Viene installato automaticamente con Visual Studio. Per eseguire lo strumento, usare il Prompt dei comandi per gli sviluppatori per Visual Studio (o il prompt dei comandi di Visual Studio in Windows 7). Per altre informazioni, vedere [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
  Al prompt dei comandi digitare quanto segue:  
   
@@ -29,7 +29,7 @@ signtool [command] [options] [file_name | ...]
   
 #### <a name="parameters"></a>Parametri  
   
-|Argomento|Descrizione|  
+|Argomento|Description|  
 |--------------|-----------------|  
 |`command`|Uno dei quattro comandi (`catdb`, `sign`, `Timestamp` o `Verify`) che specifica l'operazione da eseguire su un file. Per una descrizione di ogni comando, vedere la tabella successiva.|  
 |`options`|Opzione che modifica un comando. Oltre alle opzioni globali `/q` e `/v`, ciascun comando supporta un set univoco di opzioni.|  
@@ -37,7 +37,7 @@ signtool [command] [options] [file_name | ...]
   
  Lo strumento Firma supporta i comandi seguenti. Ogni comando è usato con set distinti di opzioni, elencati nelle rispettive sezioni.  
   
-|Comando|Descrizione|  
+|Comando|Description|  
 |-------------|-----------------|  
 |`catdb`|Aggiunge o rimuove un file di catalogo da un database di cataloghi. I database dei cataloghi vengono usati per la ricerca automatica di file di catalogo e sono identificati dal GUID. Per un elenco delle opzioni supportate dal comando `catdb`, vedere [Opzioni del comando catdb](../../../docs/framework/tools/signtool-exe.md#catdb).|  
 |`sign`|Firma digitalmente i file. Le firme digitali impediscono la manomissione dei file e consentono agli utenti di verificare il firmatario in base a un certificato di firma. Per un elenco delle opzioni supportate dal comando `sign`, vedere [Opzioni del comando sign](../../../docs/framework/tools/signtool-exe.md#sign).|  
@@ -46,7 +46,7 @@ signtool [command] [options] [file_name | ...]
   
  Le opzioni riportate di seguito si applicano a tutti i comandi dello strumento Firma.  
   
-|Opzione globale|Descrizione|  
+|Opzione globale|Description|  
 |-------------------|-----------------|  
 |**/q**|Non visualizza alcun output se il comando viene eseguito correttamente e visualizza un output minimo se il comando ha esito negativo.|  
 |**/v**|Visualizza un output dettagliato indipendentemente dall'esito del comando e visualizza messaggi di avviso.|  
@@ -56,7 +56,7 @@ signtool [command] [options] [file_name | ...]
 ## <a name="catdb-command-options"></a>Opzioni del comando catdb  
  Nella tabella seguente vengono illustrate le opzioni utilizzabili con il comando `catdb`.  
   
-|Opzione catdb|Descrizione|  
+|Opzione catdb|Description|  
 |------------------|-----------------|  
 |`/d`|Specifica che il database dei cataloghi predefinito viene aggiornato. Se non si usa né l'opzione `/d` né l'opzione `/g`, viene aggiornato il database dei driver e dei componenti del sistema.|  
 |`/g` *GUID*|Specifica che il database dei cataloghi identificato dall'identificatore univoco globale *GUID* è aggiornato.|  
@@ -67,7 +67,7 @@ signtool [command] [options] [file_name | ...]
 ## <a name="sign-command-options"></a>Opzioni del comando sign  
  Nella tabella seguente vengono illustrate le opzioni utilizzabili con il comando `sign`.  
   
-|Opzioni del comando sign|Descrizione|  
+|Opzioni del comando sign|Description|  
 |-------------------------|-----------------|  
 |`/a`|Seleziona automaticamente il miglior certificato di firma. Verranno trovati tutti i certificati validi che soddisfano tutte le condizioni specificate e verrà selezionato quello valido per il periodo più lungo. Se questa opzione non è presente, è prevista la presenza di un solo certificato di firma valido.|  
 |`/ac`  *file*|Aggiunge un altro certificato dal *file* al blocco di firme.|  
@@ -103,7 +103,7 @@ signtool [command] [options] [file_name | ...]
 ## <a name="timestamp-command-options"></a>Opzioni del comando TimeStamp  
  Nella tabella seguente vengono illustrate le opzioni utilizzabili con il comando `TimeStamp`.  
   
-|Opzione TimeStamp|Descrizione|  
+|Opzione TimeStamp|Description|  
 |----------------------|-----------------|  
 |`/p7`|Aggiunge un timestamp ai file PKCS #7.|  
 |`/t`  *URL*|Specifica l'URL del server di timestamp. È necessario che il file a cui viene aggiunto il timestamp sia stato precedentemente firmato. È richiesta l'opzione `/t` o `/tr`.|  
@@ -116,7 +116,7 @@ signtool [command] [options] [file_name | ...]
 <a name="Verify"></a>   
 ## <a name="verify-command-options"></a>Opzioni del comando Verify  
   
-|Opzione Verify|Descrizione|  
+|Opzione Verify|Description|  
 |-------------------|-----------------|  
 |`/a`|Specifica che tutti i metodi possono essere usati per verificare il file. Innanzitutto, viene effettuata una ricerca nei database dei cataloghi per determinare se il file è firmato in un catalogo. Se non risulta firmato in alcun catalogo, viene effettuato un tentativo di verifica della firma incorporata del file. Questa opzione è consigliata per la verifica di file che possono risultare firmati o non firmati all'interno di un catalogo. Gli esempi di questi file includono i file o i driver di Windows.|  
 |`/ad`|Trova il catalogo usando il database dei cataloghi predefinito.|  
@@ -129,7 +129,7 @@ signtool [command] [options] [file_name | ...]
 |`/hash` (`SHA1`&#124;`SHA256`)|Specifica un algoritmo hash facoltativo da usare quando si cerca un file in un catalogo.|  
 |`/kp`|Specifica che la verifica deve essere eseguita con i criteri di firma del driver in modalità kernel.|  
 |`/ms`|Usa semantica di verifica multipla. Questo è il comportamento predefinito di una chiamata [WinVerifyTrust](/windows/desktop/api/wintrust/nf-wintrust-winverifytrust) in [!INCLUDE[win8](../../../includes/win8-md.md)] e versioni successive.|  
-|`/o` *Versione*|Verifica il file in base alla versione del sistema operativo. *Versione* ha il formato seguente: *IDPiattaforma*:*VersionePrincipale*.*VersioneSecondaria*.*NumeroBuild*. *IDPiattaforma* rappresenta il valore sottostante di un membro dell'enumerazione <xref:System.PlatformID>. **Importante:**  è consigliabile l'uso dell'opzione `/o`. Se `/o` non è specificata, è possibile che vengano restituiti risultati imprevisti. Ad esempio, se non si include l'opzione `/o`, i cataloghi di sistema che vengono convalidati correttamente in un sistema operativo precedente potrebbero non essere convalidati correttamente in un sistema operativo più nuovo.|  
+|`/o` *Versione*|Verifica il file in base alla versione del sistema operativo. *Versione* ha il formato seguente: *IDPiattaforma*:*VersionePrincipale*.*VersioneSecondaria*.*NumeroBuild*. *IDPiattaforma* rappresenta il valore sottostante di un membro dell'enumerazione <xref:System.PlatformID>. **Importante:**  L'utilizzo dell'opzione `/o` è consigliato. Se `/o` non è specificata, è possibile che vengano restituiti risultati imprevisti. Ad esempio, se non si include l'opzione `/o`, i cataloghi di sistema che vengono convalidati correttamente in un sistema operativo precedente potrebbero non essere convalidati correttamente in un sistema operativo più nuovo.|  
 |`/p7`|Verifica i file PKCS #7. Non viene usato alcun criterio esistente per la convalida PKCS #7. La firma viene controllata e viene creata una catena per il certificato di firma.|  
 |`/pa`|Specifica che devono essere usati i criteri di verifica Authenticode predefiniti. Se l'opzione `/pa` non è specificata, vengono usati i criteri di verifica dei driver di Windows. Non è possibile usare questa opzione con le opzioni `catdb`.|  
 |`/pg` *GUIDCriteri*|Specifica i criteri di verifica in base al GUID. *GUIDCriteri* corrisponde all'IDAzione dei criteri di verifica. Non è possibile usare questa opzione con le opzioni `catdb`.|  
@@ -142,7 +142,7 @@ signtool [command] [options] [file_name | ...]
 ## <a name="return-value"></a>Valore restituito  
  Lo strumento Firma restituisce uno dei seguenti codici di uscita quando termina.  
   
-|Codice di uscita|Descrizione|  
+|Codice di uscita|Description|  
 |---------------|-----------------|  
 |0|Esecuzione completata correttamente.|  
 |1|Esecuzione non riuscita.|  

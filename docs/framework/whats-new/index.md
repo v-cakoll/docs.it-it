@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e9c40b68a67219cd8f24874780281023974886e4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: de919789c369c66c52a137bde811c56bf07a6ec9
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201018"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54416027"
 ---
 # Novità di .NET Framework<a name="introduction"></a>
 
@@ -242,9 +242,9 @@ Public GetOrAdd(Of TArg)(key As TKey, valueFactory As Func(Of TKey, TArg, TValue
 
 L'[inserimento di dipendenze (DI)](/aspnet/core/fundamentals/dependency-injection#overview-of-dependency-injection) separa gli oggetti e le relative dipendenze, in modo che il codice di un oggetto non deve più essere modificato solo perché è stata modificata una dipendenza. Quando si sviluppano applicazioni ASP.NET destinate a .NET Framework 4.7.2, è possibile:
 
-- Usare l'inserimento basato sui setter, basato sull'interfaccia e basato sul costruttore in [gestori e i moduli](https://msdn.microsoft.com/en-us/library/bb398986.aspx), [istanze di pagina](xref:System.Web.UI.Page) e [controlli utente](https://msdn.microsoft.com/en-us/library/y6wb1a0e.aspx) dei progetti di applicazione Web ASP.NET.
+- Usare l'inserimento basato sui setter, basato sull'interfaccia e basato sul costruttore in [gestori e i moduli](https://docs.microsoft.com/previous-versions/aspnet/bb398986(v=vs.100)), [istanze di pagina](xref:System.Web.UI.Page) e [controlli utente](https://docs.microsoft.com/previous-versions/aspnet/y6wb1a0e(v=vs.100)) dei progetti di applicazione Web ASP.NET.
 
-- Usare l'inserimento basato sui setter e basato sull'interfaccia in [gestori e moduli](https://msdn.microsoft.com/en-us/library/bb398986.aspx), [istanze di pagina](xref:System.Web.UI.Page) e [controlli utente](https://msdn.microsoft.com/en-us/library/y6wb1a0e.aspx) dei progetti di sito Web ASP.NET.
+- Usare l'inserimento basato sui setter e basato sull'interfaccia in [gestori e moduli](https://docs.microsoft.com/previous-versions/aspnet/bb398986(v=vs.100)), [istanze di pagina](xref:System.Web.UI.Page) e [controlli utente](https://docs.microsoft.com/previous-versions/aspnet/y6wb1a0e(v=vs.100)) dei progetti di sito Web ASP.NET.
 
 - Associare diversi framework di inserimento delle dipendenze.
 
@@ -681,7 +681,7 @@ End Class
 
 È quindi possibile creare il file di risorse DataAnnotation.Localization.fr.resx, la cui chiave è la stringa del messaggio di errore e il cui valore è il messaggio di errore localizzato. Il file deve essere salvato nella cartella `App.LocalResources`. Ad esempio, di seguito vengono riportati la chiave e il relativo valore in un messaggio di errore in lingua francese (fr):
 
-| nome                                 | Valore                                     |
+| nome                                 | Value                                     |
 | ------------------------------------ | ----------------------------------------- |
 | La classificazione deve essere compresa tra 1 e 10. | La note doit être comprise entre 1 et 10. |
 
@@ -787,7 +787,7 @@ End Function
 
  Per risolvere questo problema in [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], sono stati aggiunti i tre metodi seguenti alla classe base <xref:System.Security.Cryptography.ECDiffieHellman> per rappresentare in modo più chiaro le routine KDF e i relativi input:
 
-|Metodo ECDiffieHellman|Descrizione|
+|Metodo ECDiffieHellman|Description|
 |----------------------------|-----------------|
 |<xref:System.Security.Cryptography.ECDiffieHellman.DeriveKeyFromHash%28System.Security.Cryptography.ECDiffieHellmanPublicKey%2CSystem.Security.Cryptography.HashAlgorithmName%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%29>|Deriva il materiale della chiave usando la formula<br /><br /> HASH(secretPrepend &#124;&#124; *x* &#124;&#124; secretAppend)<br /><br /> HASH(secretPrepend OrElse *x* OrElse secretAppend)<br /><br /> dove *x* è il risultato calcolato dell'algoritmo EC Diffie-Hellman.|
 |<xref:System.Security.Cryptography.ECDiffieHellman.DeriveKeyFromHmac%28System.Security.Cryptography.ECDiffieHellmanPublicKey%2CSystem.Security.Cryptography.HashAlgorithmName%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%29>|Deriva il materiale della chiave usando la formula<br /><br /> HMAC(hmacKey, secretPrepend &#124;&#124; *x* &#124;&#124; secretAppend)<br /><br /> HMAC(hmacKey, secretPrepend OrElse *x* OrElse secretAppend)<br /><br /> dove *x* è il risultato calcolato dell'algoritmo EC Diffie-Hellman.|
@@ -1096,7 +1096,7 @@ Per altre informazioni su [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]
 
 <a name="Crypto" />
 
-### <a name="cryptography-support-for-x509-certificates-containing-ecdsa"></a>Crittografia: supporto di certificati X509 contenenti ECDSA
+### <a name="cryptography-support-for-x509-certificates-containing-ecdsa"></a>Crittografia: Supporto per i certificati X509 contenenti ECDSA
  In .NET Framework 4.6 è stato aggiunto il supporto RSACng per i certificati X509. [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] aggiunge il supporto di certificati X509 con ECDSA (Elliptic Curve Digital Signature Algorithm).
 
  Offrendo prestazioni migliori e trattandosi di un algoritmo di crittografia più sicuro rispetto a RSA, ECDSA rappresenta un'ottima scelta per ambienti in cui la scalabilità e le prestazioni TLS (Transport Layer Security) sono fattori importanti. L'implementazione di .NET Framework esegue il wrapping delle chiamate nelle funzionalità di Windows esistenti.
@@ -1641,7 +1641,7 @@ L'API di profilatura non gestita è stata migliorata nel modo seguente:
 
     - È possibile usare le API di Windows Runtime in librerie portabili destinate a Windows 8.1, Windows Phone 8.1 e Windows Phone Silverlight 8.1.
 
-    - È possibile includere XAML (tipi Windows.UI.XAML) nelle librerie portabili quando la destinazione è Windows 8.1 o Windows Phone 8.1. Sono supportati i modelli XAML seguenti: Pagina vuota, Dizionario risorse, Controllo basato su modelli e Controllo utente.
+    - È possibile includere XAML (tipi Windows.UI.XAML) nelle librerie portabili quando la destinazione è Windows 8.1 o Windows Phone 8.1. Sono supportati i modelli XAML seguenti:  Pagina vuota, Dizionario risorse, Controllo basato su modelli e Controllo utente.
 
     - È possibile creare una componente Windows Runtime portabile (.winmd file) da usare in app di Windows Store destinate a Windows 8.1 e Windows Phone 8.1.
 
@@ -1655,7 +1655,7 @@ L'API di profilatura non gestita è stata migliorata nel modo seguente:
 
  Le nuove funzionalità e i miglioramenti principali in .NET Framework 4.5.1 includono:
 
-- Reindirizzamento di associazione automatico per assembly. A partire da Visual Studio 2013, quando si compila un'app destinata a [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], è possibile aggiungere reindirizzamenti di associazione al file di configurazione dell'app se quest'ultima o i relativi componenti fanno riferimento a più versioni dello stesso assembly. È inoltre possibile abilitare questa funzionalità per i progetti destinati a versioni precedenti di .NET Framework. Per altre informazioni, vedere [Procedura: abilitare e disabilitare il reindirizzamento di associazione automatico](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md).
+- Reindirizzamento di associazione automatico per assembly. A partire da Visual Studio 2013, quando si compila un'app destinata a [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], è possibile aggiungere reindirizzamenti di associazione al file di configurazione dell'app se quest'ultima o i relativi componenti fanno riferimento a più versioni dello stesso assembly. È inoltre possibile abilitare questa funzionalità per i progetti destinati a versioni precedenti di .NET Framework. Per altre informazioni, vedere [Procedura: Abilitare e disabilitare il reindirizzamento di associazione automatico](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md).
 
 - Possibilità di raccogliere informazioni di diagnostica che consentono agli sviluppatori di migliorare le prestazioni delle applicazioni server e cloud. Per altre informazioni, vedere i metodi <xref:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityId%2A> e <xref:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityIdCore%2A> nella classe <xref:System.Diagnostics.Tracing.EventSource>.
 

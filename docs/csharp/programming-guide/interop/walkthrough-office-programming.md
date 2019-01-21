@@ -1,5 +1,5 @@
 ---
-title: 'Procedura dettagliata: programmazione di Office (C# e Visual Basic)'
+title: 'Procedura dettagliata: Programmazione di Office (C# e Visual Basic)'
 ms.date: 07/20/2015
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-ms.openlocfilehash: 997affa2f4cc5332339a49450d68ab3aaadffc4b
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 76d48b588db17a712ac698b604828520e38776a9
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47084800"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54223156"
 ---
-# <a name="walkthrough-office-programming-c-and-visual-basic"></a>Procedura dettagliata: programmazione di Office (C# e Visual Basic)
+# <a name="walkthrough-office-programming-c-and-visual-basic"></a>Procedura dettagliata: Programmazione di Office (C# e Visual Basic)
 Visual Studio offre funzionalità di C# e Visual Basic che migliorano la programmazione di Microsoft Office. Tra le utili funzionalità di C# sono disponibili gli argomenti denominati e facoltativi e i valori restituiti di tipo `dynamic`. Nella programmazione COM è possibile omettere la parola chiave `ref` e accedere alle proprietà indicizzate. Le funzionalità di Visual Basic includono le proprietà implementate automaticamente, le istruzioni nelle espressioni lambda e gli inizializzatori di insieme.
 
 Entrambi i linguaggi consentono di incorporare informazioni sul tipo, in modo da distribuire gli assembly che interagiscono con i componenti COM senza distribuire assembly di interoperabilità primari (PIA) al computer dell'utente. Per altre informazioni, vedere [Procedura dettagliata: Incorporamento dei tipi da assembly gestiti](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md).  
@@ -53,7 +53,7 @@ Per completare questa procedura dettagliata è necessario aver installato Micros
   
 1.  In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul nome del progetto e scegliere **Aggiungi riferimento**. Viene visualizzata la finestra di dialogo **Aggiungi riferimento**.  
   
-2.  Nella scheda **Assembly** selezionare **Microsoft.Office.Interop.Excel**, versione `<version>.0.0.0` (per conoscere il numero versione del prodotto Office, vedere [Versioni Microsoft](https://en.wikipedia.org/wiki/Microsoft_Office#Versions)) nell'elenco **Nome componente**. Tenere premuto CTRL e selezionare **Microsoft.Office.Interop.Word**, `version <version>.0.0.0`. Se gli assembly non sono visibili, può essere necessario verificare che siano installati e visualizzati (vedere [Procedura: Installare assembly di interoperabilità primari di Office](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies)).  
+2.  Nella scheda **Assembly** selezionare **Microsoft.Office.Interop.Excel**, versione `<version>.0.0.0` (per conoscere il numero versione del prodotto Office, vedere [Versioni Microsoft](https://en.wikipedia.org/wiki/Microsoft_Office#Versions)) nell'elenco **Nome componente**. Tenere premuto CTRL e selezionare **Microsoft.Office.Interop.Word**, `version <version>.0.0.0`. Se gli assembly non sono visibili, può essere necessario assicurarsi che siano installati e visualizzati (vedere [Procedura: Installare assembly di interoperabilità primari di Office](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies)).  
   
 3.  Fare clic su **OK**.  
   
@@ -157,11 +157,11 @@ Per completare questa procedura dettagliata è necessario aver installato Micros
   
 2.  Selezionare **Start**. Individuare **Microsoft Visual Studio \<versione >** e aprire un prompt dei comandi per gli sviluppatori.  
   
-3.  Digitare `ildasm` nella finestra del prompt dei comandi di Visual Studio e premere INVIO. Verrà visualizzata la finestra IL DASM.  
+3.  Digitare `ildasm` nella finestra del Prompt dei comandi per gli sviluppatori di Visual Studio e premere INVIO. Verrà visualizzata la finestra IL DASM.  
   
 4.  Nel menu **File** della finestra IL DASM selezionare **File** > **Apri**. Fare doppio clic su **Visual Studio \<versione>** e su **Progetti**. Aprire la cartella per il progetto e cercare nella cartella bin/Debug il file *nome progetto*.dll. Fare doppio clic su *nome progetto*.dll. Una nuova finestra consente di visualizzare gli attributi del progetto, oltre ai riferimenti ad altri moduli e assembly. Notare che gli spazi dei nomi `Microsoft.Office.Interop.Excel` e `Microsoft.Office.Interop.Word` sono inclusi nell'assembly. Per impostazione predefinita in Visual Studio, il compilatore importa i tipi necessari da un assembly di interoperabilità primario a cui si fa riferimento nell'assembly.  
   
-     Per altre informazioni, vedere [Procedura: Visualizzare il contenuto dell'assembly](../../../framework/app-domains/how-to-view-assembly-contents.md).  
+     Per altre informazioni, vedere [Procedura: Visualizzare il contenuto degli assembly](../../../framework/app-domains/how-to-view-assembly-contents.md).  
   
 5.  Fare doppio clic sull'icona **MANIFESTO**. Viene visualizzata una finestra che include un elenco di assembly che contengono gli elementi a cui fa riferimento il progetto. `Microsoft.Office.Interop.Excel` e `Microsoft.Office.Interop.Word` non sono inclusi nell'elenco. Poiché i tipi che è necessario importare nell'assembly per il progetto, i riferimenti a un assembly di interoperabilità primario non sono necessari. Ciò rende più semplice la distribuzione. Gli assembly di interoperabilità primari non devono essere presenti nel computer dell'utente e, poiché un'applicazione non richiede la distribuzione di una versione specifica di un assembly di interoperabilità primario, è possibile progettare applicazioni compatibili con più versioni di Office, a condizione che le API necessarie siano presenti in tutte le versioni.  
   
@@ -205,8 +205,8 @@ Per completare questa procedura dettagliata è necessario aver installato Micros
 - [Espressioni lambda (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)  
 - [Espressioni lambda (C#)](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
 - [Procedura: Usare proprietà indicizzate nella programmazione dell'interoperabilità COM](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md)  
-- [Procedura dettagliata: Incorporamento delle informazioni sui tipi da assembly di Microsoft Office](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies.md)  
+- [Procedura dettagliata: Incorporamento di informazioni sui tipi da assembly di Microsoft Office](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies.md)  
 - [Procedura dettagliata: Incorporamento dei tipi da assembly gestiti](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)  
-- [Procedura dettagliata: creazione del primo componente aggiuntivo VSTO per Excel](/visualstudio/vsto/walkthrough-creating-your-first-vsto-add-in-for-excel)  
+- [Procedura dettagliata: Creazione del primo componente aggiuntivo VSTO per Excel](/visualstudio/vsto/walkthrough-creating-your-first-vsto-add-in-for-excel)  
 - [Interoperabilità COM](../../../visual-basic/programming-guide/com-interop/index.md)  
 - [Interoperabilità](../../../csharp/programming-guide/interop/index.md)

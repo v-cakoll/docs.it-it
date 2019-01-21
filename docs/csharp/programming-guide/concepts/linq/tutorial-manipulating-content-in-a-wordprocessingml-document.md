@@ -2,21 +2,21 @@
 title: 'Esercitazione: Manipolazione di contenuto in un documento WordprocessingML (C#)'
 ms.date: 07/20/2015
 ms.assetid: bc9815f8-13d2-4f50-a4d1-b1c0d50d37b3
-ms.openlocfilehash: 64749bfda88b3bf9473fef08d5aef6490d2c37c7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2d906bb2310d4dd6c0ccd865a52ede441556dfda
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514782"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145159"
 ---
 # <a name="tutorial-manipulating-content-in-a-wordprocessingml-document-c"></a>Esercitazione: Manipolazione di contenuto in un documento WordprocessingML (C#)
 In questa esercitazione viene illustrato come applicare l'approccio delle trasformazioni funzionali e LINQ to XML per modificare documenti XML. Negli esempio in C# vengono eseguite query e modificate le informazioni in documenti WordprocessingML di Office Open XML salvati tramite Microsoft Word.  
   
- Per altre informazioni, vedere [Introduzione a WordprocessingML](http://ericwhite.com/blog/introduction-to-wordprocessingml-series/).  
+ Per altre informazioni, vedere [Introduzione a WordprocessingML](https://ericwhite.com/blog/introduction-to-wordprocessingml-series/).  
   
 ## <a name="in-this-section"></a>In questa sezione  
   
-|Argomento|Descrizione|  
+|Argomento|Description|  
 |-----------|-----------------|  
 |[Forma dei documenti WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md)|Viene fornita una rapida descrizione dei dettagli di un documento WordprocessingML.|  
 |[Creazione del documento Office Open XML di origine (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)|Vengono fornite istruzioni dettagliate per la creazione del documento di origine per le query riportate nell'esercitazione.|  
@@ -27,7 +27,7 @@ In questa esercitazione viene illustrato come applicare l'approccio delle trasfo
 |[Refactoring con una funzione pura (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)|Viene eseguito il refactoring con una funzione pura per semplificare ulteriormente il codice.|  
 |[Proiezione di XML in una forma diversa (C#)](../../../../csharp/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)|Viene completata una trasformazione XML proiettando XML in una forma diversa rispetto al documento originale.|  
 |[Ricerca di testo nei documenti di Word (C#)](../../../../csharp/programming-guide/concepts/linq/finding-text-in-word-documents.md)|Viene usata la query precedente per trovare una stringa di testo specificata in un documento.|  
-|[Dettagli di documenti WordprocessingML Office Open XML (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)|Vengono forniti dettagli sui documenti WordprocessingML di Office Open XML.|  
+|[Details of Office Open XML WordprocessingML Documents (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md) (Dettagli di documenti WordprocessingML Office Open XML (C#))|Vengono forniti dettagli sui documenti WordprocessingML di Office Open XML.|  
   
 ## <a name="see-also"></a>Vedere anche
 

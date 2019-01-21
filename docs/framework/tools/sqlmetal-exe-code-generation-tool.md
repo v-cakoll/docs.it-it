@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-ms.openlocfilehash: 94ed6328857f6e77cea150d69719322d3aaaea69
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 9bdffe76aaf9f41bfbba99bae9d2d3fa9b329d4a
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46002892"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221830"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (strumento per la generazione del codice)
 Lo strumento da riga di comando SqlMetal genera codice e mapping per il componente [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Mediante l'applicazione delle opzioni riportate più avanti in questo argomento è possibile usare SqlMetal per eseguire diverse operazioni, fra cui:  
@@ -30,7 +30,7 @@ Lo strumento da riga di comando SqlMetal genera codice e mapping per il componen
 > [!NOTE]
 >  Gli sviluppatori che usano Visual Studio possono usare anche [!INCLUDE[vs_ordesigner_long](../../../includes/vs-ordesigner-long-md.md)] per generare classi di entità. Quando si usano database di grandi dimensioni, l'approccio basato sulla riga di comando rappresenta la scelta più adeguata. In quanto strumento da riga di comando, SqlMetal può essere usato in un processo di compilazione.  
   
- Per eseguire lo strumento, usare il prompt dei comandi per sviluppatori o il prompt dei comandi di Visual Studio in Windows 7. Per altre informazioni, vedere [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md). Al prompt dei comandi digitare quanto segue:  
+ Per eseguire lo strumento, usare il Prompt dei comandi per gli sviluppatori per Visual Studio (o il prompt dei comandi di Visual Studio in Windows 7). Per altre informazioni, vedere [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md). Al prompt dei comandi digitare quanto segue:  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,18 +43,18 @@ sqlmetal [options] [<input file>]
   
  **Opzioni di connessione**  
   
-|Opzione|Descrizione|  
+|Opzione|Description|  
 |------------|-----------------|  
 |**/server:** *\<nome>*|Specifica il nome del server di database.|  
 |**/database:** *\<nome>*|Specifica il catalogo del database contenuto nel server.|  
-|**/user:** *\<nome>*|Specifica l'ID utente di accesso. Valore predefinito: autenticazione di Windows.|  
-|**/password:** *\<password>*|Specifica la password di accesso. Valore predefinito: autenticazione di Windows.|  
+|**/user:** *\<nome>*|Specifica l'ID utente di accesso. Valore predefinito: Usa autenticazione di Windows.|  
+|**/password:** *\<password>*|Specifica la password di accesso. Valore predefinito: Usa autenticazione di Windows.|  
 |**/conn:** *\<stringa di connessione>*|Specifica la stringa di connessione al database. Non può essere usata con l'opzione **/server**, **/database**, **/user**o **/password** .<br /><br /> Non includere il nome file nella stringa di connessione. Aggiungere invece il nome file alla riga di comando come file di input. La riga seguente, ad esempio, specifica "c:\northwnd.mdf" come file di input: **sqlmetal /code:"c:\northwind.cs" /language:csharp "c:\northwnd.mdf"**.|  
 |**/timeout:** *\<secondi>*|Specifica il valore di timeout quando SqlMetal accede al database. Valore predefinito: 0 (ovvero nessun limite di tempo).|  
   
  **Opzioni di estrazione**  
   
-|Opzione|Descrizione|  
+|Opzione|Description|  
 |------------|-----------------|  
 |**/views**|Estrae viste di database.|  
 |**/functions**|Estrae funzioni di database.|  
@@ -62,7 +62,7 @@ sqlmetal [options] [<input file>]
   
  **Opzioni di output**  
   
-|Opzione|Descrizione|  
+|Opzione|Description|  
 |------------|-----------------|  
 |**/dbml** *[:file]*|Invia l'output come file .dbml. Non può essere usata con l'opzione **/map** .|  
 |**/code** *[:file]*|Invia l'output come codice sorgente. Non può essere usata con l'opzione **/dbml** .|  
@@ -70,18 +70,18 @@ sqlmetal [options] [<input file>]
   
  **Varie**  
   
-|Opzione|Descrizione|  
+|Opzione|Description|  
 |------------|-----------------|  
 |**/language:** *\<linguaggio>*|Specifica il linguaggio del codice sorgente.<br /><br /> Valori validi per *\<linguaggio>*: vb, csharp.<br /><br /> Valore predefinito: derivato dall'estensione nel nome file del codice.|  
 |**/namespace:** *\<nome>*|Specifica lo spazio dei nomi del codice generato. Valore predefinito: nessuno spazio dei nomi.|  
 |**/context:** *\<tipo>*|Specifica il nome della classe del contesto dati. Valore predefinito: derivato dal nome del database.|  
 |**/entitybase:** *\<tipo>*|Specifica la classe base delle classi di entità nel codice generato. Valore predefinito: le entità non dispongono di classe base.|  
 |**/pluralize**|Rende automaticamente plurali o singolari i nomi delle classi e dei membri.<br /><br /> Opzione disponibile solo nella versione in lingua inglese degli Stati Uniti.|  
-|**/serialization:** *\<opzione>*|Genera classi serializzabili.<br /><br /> Valori validi per *\<opzione>*: None, Unidirectional. Valore predefinito: None.<br /><br /> Per altre informazioni, vedere [Serializzazione](../../../docs/framework/data/adonet/sql/linq/serialization.md).|  
+|**/serialization:** *\<opzione>*|Genera classi serializzabili.<br /><br /> Valori validi per *\<opzione>*: None, Unidirectional. Valore predefinito: Nessuno.<br /><br /> Per altre informazioni, vedere [Serializzazione](../../../docs/framework/data/adonet/sql/linq/serialization.md).|  
   
  **File di input**  
   
-|Opzione|Descrizione|  
+|Opzione|Description|  
 |------------|-----------------|  
 |**\<file input>**|Specifica un file .mdf di SQL Server Express, un file .sdf di [!INCLUDE[ssEW](../../../includes/ssew-md.md)] oppure un file .dbml intermedio.|  
   

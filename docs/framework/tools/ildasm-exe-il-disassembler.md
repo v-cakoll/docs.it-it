@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b8b69544b2d8041a3aa4cb566867b6c14b29f0f8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9ee829893d251b536448ba2ee78ea13e0d22ae41
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409110"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221739"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (Disassembler IL)
 
 Il disassembler IL è uno strumento complementare all'assembler IL (*Ilasm.exe*). *Ildasm.exe* accetta un file eseguibile di tipo PE contenente codice di linguaggio intermedio (IL) e crea un file di testo adatto come input per *Ilasm.exe*.
 
-Viene installato automaticamente con Visual Studio. Per eseguire lo strumento, usare il prompt dei comandi per sviluppatori o il prompt dei comandi di Visual Studio in Windows 7. Per altre informazioni, vedere [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
+Viene installato automaticamente con Visual Studio. Per eseguire lo strumento, usare il Prompt dei comandi per gli sviluppatori per Visual Studio (o il prompt dei comandi di Visual Studio in Windows 7). Per altre informazioni, vedere [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
 
 Al prompt dei comandi digitare quanto segue:
 
@@ -36,7 +36,7 @@ ildasm [options] [PEfilename] [options]
 
 Le opzioni che seguono sono disponibili per i file *.exe*, *.dll*, *.obj*, *.lib* e *.winmd*.
 
-| Opzione | Descrizione |
+| Opzione | Description |
 | ------ | ----------- |
 |**/out =**`filename`|Crea un file di output con `filename` specificato anziché visualizzare i risultati in un'interfaccia utente grafica.|
 |**/rtf**|Genera l'output in formato RTF (Rich Text Format). Non valida con l'opzione **/text**.|
@@ -46,7 +46,7 @@ Le opzioni che seguono sono disponibili per i file *.exe*, *.dll*, *.obj*, *.lib
 
 Le altre opzioni che seguono sono disponibili per i file *.exe*, *.dll* e *.winmd*.
 
-| Opzione | Descrizione |
+| Opzione | Description |
 | ------ | ----------- |
 |**/bytes**|Mostra i byte effettivi, in formato esadecimale, come commenti di istruzioni.|
 |**/caverbal**|Genera blob di attributi personalizzati in forma descrittiva. Il formato predefinito è quello binario.|
@@ -63,7 +63,7 @@ Le altre opzioni che seguono sono disponibili per i file *.exe*, *.dll* e *.winm
 
 Le opzioni che seguono sono valide per i file *.exe*, *.dll* e *.winmd* solo per l'output su file o su console.
 
-| Opzione | Descrizione |
+| Opzione | Description |
 | ------ | ----------- |
 |**/all**|Specifica una combinazione di opzioni **/header**, **/bytes**, **/stats**, **/classlist** e **/token**.|
 |**/classlist**|Include un elenco di classi definite nel modulo.|
@@ -78,13 +78,13 @@ Le opzioni che seguono sono valide per i file *.exe*, *.dll* e *.winmd* solo per
 
 Le opzioni che seguono sono valide per i file *.exe*, *.dll*, *.obj*, *.lib* e *.winmd* solo per l'output su file o console.
 
-| Opzione | Descrizione |
+| Opzione | Description |
 | ------ | ----------- |
 |**/metadata**[=`specifier`]|Mostra i metadati, dove `specifier` è:<br /><br /> **MDHEADER**: visualizza le informazioni sull'intestazione e le dimensioni dei metadati.<br /><br /> **HEX**: visualizza le informazioni in esadecimali e in testo normale.<br /><br /> **CSV**: visualizza i conteggi di record e le dimensioni di heap.<br /><br /> **UNREX**: visualizza i riferimenti esterni non risolti.<br /><br /> **SCHEMA**: visualizza le informazioni sull'intestazione e lo schema dei metadati.<br /><br /> **RAW**: visualizza le tabelle di metadati non elaborate.<br /><br /> **HEAPS**: visualizza gli heap non elaborati.<br /><br /> **VALIDATE**: convalida la coerenza dei metadati.<br /><br /> È possibile specificare **/metadata** più volte, con valori diversi per `specifier`.|
 
 Le opzioni che seguono sono valide per i file *.lib* solo per l'output su file o su console. 
 
-| Opzione | Descrizione |
+| Opzione | Description |
 | ------ | ----------- |
 |**/objectfile**=`filename`|Mostra i metadati di un singolo file oggetto nella libreria specificata.|
 

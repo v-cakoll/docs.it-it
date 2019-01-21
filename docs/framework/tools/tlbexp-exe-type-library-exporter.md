@@ -10,17 +10,17 @@ helpviewer_keywords:
 ms.assetid: a487d61b-d166-467b-a7ca-d8b52fbff42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 843b791177b57134483a7076dbc6ec979956ef60
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 68708d7555e44063e03ec05d245d55093faf0646
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004419"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221297"
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe (utilità di esportazione della libreria dei tipi)
 L'utilità di esportazione della libreria dei tipi genera una libreria di tipi che descrive i tipi definiti in un assembly di Common Language Runtime.  
   
- Viene installato automaticamente con Visual Studio. Per eseguire lo strumento, usare il prompt dei comandi per sviluppatori o il prompt dei comandi di Visual Studio in Windows 7. Per altre informazioni, vedere [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Viene installato automaticamente con Visual Studio. Per eseguire lo strumento, usare il Prompt dei comandi per gli sviluppatori per Visual Studio (o il prompt dei comandi di Visual Studio in Windows 7). Per altre informazioni, vedere [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
  Al prompt dei comandi digitare quanto segue:  
   
@@ -32,11 +32,11 @@ tlbexp assemblyName [options]
   
 #### <a name="parameters"></a>Parametri  
   
-|Argomento|Descrizione|  
+|Argomento|Description|  
 |--------------|-----------------|  
 |*assemblyName*|Assembly per il quale esportare una libreria dei tipi.|  
   
-|Opzione|Descrizione|  
+|Opzione|Description|  
 |------------|-----------------|  
 |**/asmpath:** *directory*|Specifica il percorso in cui eseguire la ricerca degli assembly. Se si utilizza questa opzione, è necessario specificare in modo esplicito i percorsi in cui eseguire la ricerca degli assembly a cui si fa riferimento, inclusa la directory corrente.<br /><br /> Quando si usa l'opzione **asmpath**, l'utilità di esportazione della libreria dei tipi non cerca un assembly nella Global Assembly Cache (GAC).|  
 |**/help**|Visualizza la sintassi e le opzioni di comando dello strumento.|  

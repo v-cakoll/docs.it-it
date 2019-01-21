@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 8104d208-7813-4a1d-8a75-58f9a7bcb8c9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9d00fb16ac5b71c8fb8f8560f68d20f1f33987d7
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: be9100f49fcf6ed2926489e8346123eb7c3cfc70
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44195387"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221349"
 ---
 # <a name="secannotateexe-net-security-annotator-tool"></a>SecAnnotate.exe (strumento .NET Security Annotator)
 Lo strumento .NET Security Annotator (SecAnnotate.exe) è un'applicazione da riga di comando che identifica le parti `SecurityCritical` e `SecuritySafeCritical` di uno o più assembly.  
   
  Un'estensione di Visual Studio, [Security Annotator](https://go.microsoft.com/fwlink/?LinkId=198007), offre un'interfaccia utente grafica a SecAnnotate.exe e consente di eseguire lo strumento da Visual Studio.  
   
- Viene installato automaticamente con Visual Studio. Per eseguire lo strumento, usare il prompt dei comandi per sviluppatori o il prompt dei comandi di Visual Studio in Windows 7. Per altre informazioni, vedere [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Viene installato automaticamente con Visual Studio. Per eseguire lo strumento, usare il Prompt dei comandi per gli sviluppatori per Visual Studio (o il prompt dei comandi di Visual Studio in Windows 7). Per altre informazioni, vedere [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
  Al prompt dei comandi, digitare quanto segue, i cui *parametri* vengono illustrati nella sezione seguente e gli *assembly* consistono di uno o più nomi di assembly separati da spazi vuoti:  
   
@@ -31,7 +31,7 @@ SecAnnotate.exe [parameters] [assemblies]
   
 #### <a name="parameters"></a>Parametri  
   
-|Opzione|Descrizione|  
+|Opzione|Description|  
 |------------|-----------------|  
 |`/a`<br /><br /> oppure<br /><br /> `/showstatistics`|Mostra le statistiche sull'utilizzo della trasparenza negli assembly analizzati.|  
 |`/d:` *directory*<br /><br /> oppure<br /><br /> `/referencedir:` *directory*|Specifica una directory in cui cercare gli assembly dipendenti durante l'annotazione.|  

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e32fa443-0778-4cc3-bf36-5c8ea297d296
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 73fa08f92a4572a501be65f05e8141c349cc003e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 17e8e00afd759a3408ca54930c15d0b8797ff947
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33400211"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222337"
 ---
 # <a name="fuslogvwexe-assembly-binding-log-viewer"></a>Fuslogvw.exe (Visualizzatore log associazioni assembly)
 Il Visualizzatore log associazione assembly consente di visualizzare i dettagli relativi alle associazioni di assembly. Queste informazioni facilitano la diagnosi delle cause dell'impossibilità di individuare un assembly in fase di esecuzione. Questi errori sono generalmente dovuti alla distribuzione di un assembly nel percorso errato, a un'immagine nativa che non è più valida o a una mancata corrispondenza di numeri di versione o impostazioni cultura. L'impossibilità da parte di Common Language Runtime di individuare un assembly produce generalmente un'eccezione <xref:System.TypeLoadException> nell'applicazione.  
@@ -24,7 +24,7 @@ Il Visualizzatore log associazione assembly consente di visualizzare i dettagli 
 > [!IMPORTANT]
 >  È necessario eseguire fuslogvw.exe con privilegi di amministratore.  
   
- Viene installato automaticamente con Visual Studio. Per eseguire lo strumento, usare il prompt dei comandi per gli sviluppatori (o il prompt dei comandi di Visual Studio in Windows 7) con credenziali di amministratore. Per altre informazioni, vedere [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Viene installato automaticamente con Visual Studio. Per eseguire lo strumento, usare il Prompt dei comandi per gli sviluppatori per Visual Studio o il prompt dei comandi di Visual Studio in Windows 7 con credenziali di amministratore. Per altre informazioni, vedere [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
  Al prompt dei comandi digitare quanto segue:  
   

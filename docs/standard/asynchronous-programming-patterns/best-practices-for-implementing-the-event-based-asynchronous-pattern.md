@@ -12,12 +12,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 4acd2094-4f46-4eff-9190-92d0d9ff47db
-ms.openlocfilehash: e50f455ab83b0b057f8ce3c32f874e6856632d70
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 37575ff080fca1514e4fd6e4e22243227c529dd2
+ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836959"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54084953"
 ---
 # <a name="best-practices-for-implementing-the-event-based-asynchronous-pattern"></a>Suggerimenti per l'implementazione del modello asincrono basato su eventi
 Il modello asincrono basato su eventi offre un sistema efficace per l'esposizione del comportamento asincrono nelle classi attraverso una semantica nota di eventi e delegati. Per implementare tale modello, è necessario soddisfare alcuni requisiti comportamentali specifici. Nelle sezioni riportate di seguito vengono illustrati i requisiti e le indicazioni da tenere presenti per l'implementazione di una classe che segue il modello asincrono basato su eventi.  
@@ -73,7 +73,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
   
 -   Se la classe supporta più chiamate simultanee, consentire allo sviluppatore di tenere traccia di ogni chiamata separatamente definendo l'overload di <em>NomeMetodo</em>**Async** che accetta un parametro di stato con valori di oggetto, o un ID attività, denominato `userSuppliedState`. Questo parametro deve essere sempre l'ultimo nella firma del metodo <em>NomeMetodo</em>**Async**.  
   
--   Se la classe definisce l'overload di <em>NomeMetodo</em>**Async** che accetta un parametro di stato con valori di oggetto, o un ID attività, tenere traccia del ciclo di vita dell'operazione con tale ID e specificarlo nuovamente nel gestore del completamento. Per l'esecuzione di tali operazioni sono disponibili classi di supporto specifiche. Per altre informazioni sulla gestione della concorrenza, vedere [Procedura: implementare un componente che supporta il modello asincrono basato su eventi](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md).  
+-   Se la classe definisce l'overload di <em>NomeMetodo</em>**Async** che accetta un parametro di stato con valori di oggetto, o un ID attività, tenere traccia del ciclo di vita dell'operazione con tale ID e specificarlo nuovamente nel gestore del completamento. Per l'esecuzione di tali operazioni sono disponibili classi di supporto specifiche. Per altre informazioni sulla gestione della concorrenza, vedere [Procedura: Implementare un componente che supporta il modello asincrono basato su eventi](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md).  
   
 -   Se la classe definisce il metodo <em>NomeMetodo</em>**Async** senza il parametro di stato e non supporta più chiamate simultanee, assicurarsi che qualsiasi tentativo di richiamare <em>NomeMetodo</em>**Async** prima del completamento della chiamata a <em>NomeMetodo</em>**Async** precedente generi un'eccezione di tipo <xref:System.InvalidOperationException>.  
   
@@ -127,7 +127,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
 > [!NOTE]
 >  È possibile aggirare queste regole se si vuole esplicitamente evitare l'uso dei criteri del modello di applicazione, pur usufruendo degli altri vantaggi derivanti dal modello asincrono basato su eventi. È ad esempio possibile creare una classe threading Free operante in Windows Form, purché agli sviluppatori siano chiare le restrizioni implicate. Le applicazioni console non sincronizzano l'esecuzione delle chiamate del metodo <xref:System.ComponentModel.AsyncOperation.Post%2A>. L'ordine di generazione degli eventi `ProgressChanged` potrebbe quindi non essere corretto. Se si vuole l'esecuzione serializzata delle chiamate al metodo <xref:System.ComponentModel.AsyncOperation.Post%2A>, implementare e installare una classe <xref:System.Threading.SynchronizationContext?displayProperty=nameWithType>.  
   
- Per altre informazioni sull'uso di <xref:System.ComponentModel.AsyncOperation> e <xref:System.ComponentModel.AsyncOperationManager> per abilitare le operazioni asincrone, vedere [Procedura: implementare un componente che supporta il modello asincrono basato su eventi](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md).  
+ Per altre informazioni sull'uso di <xref:System.ComponentModel.AsyncOperation> e <xref:System.ComponentModel.AsyncOperationManager> per consentire operazioni asincrone, vedere [Procedura: Implementare un componente che supporta il modello asincrono basato su eventi](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md).  
   
 ## <a name="guidelines"></a>Indicazioni  
   

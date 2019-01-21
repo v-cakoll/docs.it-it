@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 40f0208d-4618-47f7-85cf-4913d07d2d7d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bc0f266169a2d82bb76355febd58b2268907fe97
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 93705653169b5efce3e3a062b7490abc4ea39c30
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46540606"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54223117"
 ---
 # <a name="how-to-unlink-dataflow-blocks"></a>Procedura: scollegare i blocchi di flussi di dati
 In questo documento viene descritto come scollegare un blocco di flussi di dati di destinazione dalla relativa origine.
@@ -35,7 +35,7 @@ In questo documento viene descritto come scollegare un blocco di flussi di dati 
  Per abilitare il completamento delle chiamate rimanenti a `TrySolution` dopo che tramite una di esse viene calcolato un valore, il metodo `TrySolution` accetta un oggetto <xref:System.Threading.CancellationToken> che viene annullato dopo che la chiamata a `ReceiveFromAny(T)` ha restituito un valore. Tramite il metodo <xref:System.Threading.SpinWait.SpinUntil%2A> viene restituito un valore quando questo oggetto <xref:System.Threading.CancellationToken> viene annullato.  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
- Copiare il codice di esempio e incollarlo in un progetto di Visual Studio oppure incollarlo in un file denominato `DataflowReceiveAny.cs` (`DataflowReceiveAny.vb` per Visual Basic) e quindi eseguire il comando riportato di seguito in una finestra del prompt dei comandi di Visual Studio.  
+ Copiare il codice di esempio e incollarlo in un progetto di Visual Studio oppure incollarlo in un file denominato `DataflowReceiveAny.cs` (`DataflowReceiveAny.vb` per Visual Basic) e quindi eseguire il comando riportato di seguito in una finestra del prompt dei comandi per gli sviluppatori per Visual Studio.  
   
  Visual C#  
   

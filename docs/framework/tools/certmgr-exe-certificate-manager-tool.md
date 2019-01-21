@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ad1cbd9da3a6b55dbb23eaf97c10e6090077fd8
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 7e0274b1f1f0bc0ec6de7490c4602e5813e4d46f
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198484"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221609"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe (strumento di gestione certificati)
 Lo strumento di gestione certificati (Certmgr.exe) gestisce certificati, elenchi di scopi consentiti ai certificati ed elenchi di revoche di certificati (CRL, Certificate Revocation List).  
@@ -28,9 +28,9 @@ Lo strumento di gestione certificati (Certmgr.exe) gestisce certificati, elenchi
  Lo strumento viene installato automaticamente insieme a Visual Studio. Per avviare lo strumento, utilizzare il [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
 > [!NOTE]
->  Lo strumento di gestione dei certificati (Certmgr.exe) è un'utilità da riga di comando, da non confondere con lo snap-in certificati (Certmgr.msc) di Microsoft Management Console (MMC). Poiché Certmgr.msc in genere si trova nella directory di sistema di Windows, l'immissione di `certmgr` nella riga di comando potrebbe caricare lo snap-in anche se è stato aperto il prompt dei comandi di Visual Studio. Questo accade perché il percorso dello snap-in precede il percorso dello strumento di gestione dei certificati nella variabile di ambiente PATH. Se si verifica questo problema, è possibile eseguire i comandi Certmgr.exe specificando il percorso dell'eseguibile.  
+>  Lo strumento di gestione dei certificati (Certmgr.exe) è un'utilità da riga di comando, da non confondere con lo snap-in certificati (Certmgr.msc) di Microsoft Management Console (MMC). Poiché Certmgr.msc in genere si trova nella directory di sistema di Windows, l'immissione di `certmgr` nella riga di comando potrebbe caricare lo snap-in di MMC Certificati anche se è stato aperto il Prompt dei comandi per gli sviluppatori per Visual Studio. Questo accade perché il percorso dello snap-in precede il percorso dello strumento di gestione dei certificati nella variabile di ambiente PATH. Se si verifica questo problema, è possibile eseguire i comandi Certmgr.exe specificando il percorso dell'eseguibile.  
   
- Viene installato automaticamente con Visual Studio. Per eseguire lo strumento, usare il prompt dei comandi per sviluppatori o il prompt dei comandi di Visual Studio in Windows 7. Per altre informazioni, vedere [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Viene installato automaticamente con Visual Studio. Per eseguire lo strumento, usare il Prompt dei comandi per gli sviluppatori per Visual Studio (o il prompt dei comandi di Visual Studio in Windows 7). Per altre informazioni, vedere [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
  Per una panoramica dei certificati X.509, vedere [Utilizzo dei certificati](../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
@@ -46,15 +46,15 @@ Lo strumento di gestione certificati (Certmgr.exe) gestisce certificati, elenchi
   
 #### <a name="parameters"></a>Parametri  
   
-|Argomento|Descrizione|  
+|Argomento|Description|  
 |--------------|-----------------|  
 |*sourceStorename*|Archivio certificati contenente certificati, elenchi di scopi consentiti ai certificati o CRL da aggiungere, eliminare, salvare o visualizzare. Può trattarsi di un file di archivio o di un archivio di sistema.|  
 |*destinationStorename*|File o archivio certificati di output.|  
   
-|Opzione|Descrizione|  
+|Opzione|Description|  
 |------------|-----------------|  
 |**/add**|Aggiunge certificati, elenchi di scopi consentiti ai certificati e CRL a un archivio certificati.|  
-|**/all**|Aggiunge tutte le voci se usata con **/add**, le elimina se usata con **/del** e le visualizza se usata senza le opzioni /add o **/del**. Non è possibile usare l'opzione **/all** con **/put**.|  
+|**/all**|Aggiunge tutte le voci se usata con **/add**, le elimina se usata con **/del** e le visualizza se usata senza le opzioni **/add** o **/del**. Non è possibile usare l'opzione **/all** con **/put**.|  
 |**/c**|Aggiunge i certificati se usata con **/add**, li elimina se usata con **/del** e li salva se usata con **/put**. Visualizza certificati quando usata senza le opzioni **/add**, **/del** o **/put**.|  
 |**/CRL**|Aggiunge i CRL se usata con **/add**, li elimina se usata con **/del** e li salva se usata con **/put**. Visualizza CRL quando usata senza le opzioni **/add**, **/del** o **/put**.|  
 |**/CTL**|Aggiunge gli elenchi di scopi consentiti se usata con **/add**, li elimina se usata con **/del** e li salva se usata con **/put**. Visualizza gli elenchi di scopi consentiti quando usata senza le opzioni **/add**, **/del** o **/put**.|  

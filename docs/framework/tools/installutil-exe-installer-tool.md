@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 3f9d0533-f895-4897-b4ea-528284e0241d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ec7e498e0f0634d4f0e104247b430fb591f702ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8cd7826581a8750d0c5bc87b6223d51eb2b6cce2
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410147"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221947"
 ---
 # <a name="installutilexe-installer-tool"></a>Installutil.exe (Strumento Programma di installazione)
 Lo strumento Programma di installazione è un'utilità da riga di comando che consente di installare e disinstallare le risorse del server eseguendo i componenti del programma di installazione di assembly specificati. Questo strumento funziona insieme alle classi nello spazio dei nomi <xref:System.Configuration.Install>.  
   
- Viene installato automaticamente con Visual Studio. Per eseguire lo strumento, usare il prompt dei comandi per sviluppatori o il prompt dei comandi di Visual Studio in Windows 7. Per altre informazioni, vedere [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Viene installato automaticamente con Visual Studio. Per eseguire lo strumento, usare il Prompt dei comandi per gli sviluppatori per Visual Studio (o il prompt dei comandi di Visual Studio in Windows 7). Per altre informazioni, vedere [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
  Al prompt dei comandi digitare quanto segue:  
   
@@ -37,17 +37,17 @@ installutil [/u[ninstall]] [options] assembly [[options] assembly] ...
   
 #### <a name="parameters"></a>Parametri  
   
-|Argomento|Descrizione|  
+|Argomento|Description|  
 |--------------|-----------------|  
 |`assembly`|Nome file dell'assembly in cui eseguire i componenti del programma di installazione. Omettere questo parametro se si desidera specificare il nome sicuro dell'assembly utilizzando l'opzione `/AssemblyName`.|  
   
 <a name="options"></a>   
 ## <a name="options"></a>Opzioni  
   
-|Opzione|Descrizione|  
+|Opzione|Description|  
 |------------|-----------------|  
-|`/h[elp]`<br /><br /> oppure<br /><br /> `/?`|Visualizza la sintassi e le opzioni di comando dello strumento.|  
-|`/help` *assembly*<br /><br /> oppure<br /><br /> `/?` *assembly*|Visualizza le opzioni aggiuntive riconosciute dai singoli programmi di installazione all'interno dell'assembly specificato, insieme alla sintassi e alle opzioni di comando di InstallUtil.exe. Questa opzione aggiunge il testo restituito dalla proprietà <xref:System.Configuration.Install.Installer.HelpText%2A?displayProperty=nameWithType> di ogni componente del programma di installazione al testo della Guida di InstallUtil.exe.|  
+|`/h[elp]`<br /><br /> -oppure-<br /><br /> `/?`|Visualizza la sintassi e le opzioni di comando dello strumento.|  
+|`/help` *assembly*<br /><br /> -oppure-<br /><br /> `/?` *assembly*|Visualizza le opzioni aggiuntive riconosciute dai singoli programmi di installazione all'interno dell'assembly specificato, insieme alla sintassi e alle opzioni di comando di InstallUtil.exe. Questa opzione aggiunge il testo restituito dalla proprietà <xref:System.Configuration.Install.Installer.HelpText%2A?displayProperty=nameWithType> di ogni componente del programma di installazione al testo della Guida di InstallUtil.exe.|  
 |`/AssemblyName` "*assemblyName*<br /><br /> ,Version=*major.minor.build.revision*<br /><br /> ,Culture=*locale*<br /><br /> ,PublicKeyToken=*publicKeyToken*"|Specifica il nome sicuro di un assembly, che verrà registrato nella Global Assembly Cache. Il nome dell'assembly deve essere completo, con versione, impostazioni cultura e token di chiave pubblica. Il nome completo deve essere racchiuso tra virgolette.<br /><br /> Ad esempio, "myAssembly, Culture=neutral, PublicKeyToken=0038abc9deabfle5, Version=4.0.0.0" è un nome di assembly completo.|  
 |`/InstallStateDir=[` *directoryName* `]`|Specifica la directory del file con estensione InstallState contenente i dati utilizzati per la disinstallazione dell'assembly. La directory predefinita è quella che contiene l'assembly.|  
 |`/LogFile=`[*filename*]|Specifica il nome del file di log in cui è registrato lo stato dell'installazione. Per impostazione predefinita, se l'opzione `/LogFile` viene omessa, viene creato un file di log denominato *assemblyname*.InstallLog. Se *filename* viene omesso, non verrà generato alcun file di log.|  

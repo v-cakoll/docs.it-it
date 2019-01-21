@@ -12,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: ec0a8d63-11b3-4acd-b398-da1e37e97382
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d28c5e817e415e08c3a58c840e52cdfcbe286997
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dfb73f6637be96d7994a808b8d9a2c77c2896838
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409828"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221726"
 ---
 # <a name="tlbimpexe-type-library-importer"></a>Tlbimp.exe (utilità di importazione della libreria dei tipi)
 L'utilità di importazione della libreria dei tipi consente di convertire le definizioni dei tipi presenti in una libreria dei tipi COM nelle definizioni equivalenti in un assembly di Common Language Runtime. L'output di Tlbimp.exe è un file binario (assembly) che contiene i metadati di runtime per i tipi definiti all'interno della libreria dei tipi originale. È possibile esaminare questo file con strumenti quali [Ildasm.exe](ildasm-exe-il-disassembler.md).  
   
- Viene installato automaticamente con Visual Studio. Per eseguire lo strumento, usare il prompt dei comandi per sviluppatori o il prompt dei comandi di Visual Studio in Windows 7. Per altre informazioni, vedere [Prompt dei comandi](developer-command-prompt-for-vs.md).  
+ Viene installato automaticamente con Visual Studio. Per eseguire lo strumento, usare il Prompt dei comandi per gli sviluppatori per Visual Studio (o il prompt dei comandi di Visual Studio in Windows 7). Per altre informazioni, vedere [Prompt dei comandi](developer-command-prompt-for-vs.md).  
   
  Al prompt dei comandi digitare quanto segue:  
   
@@ -34,11 +34,11 @@ tlbimp tlbFile [options]
   
 #### <a name="parameters"></a>Parametri  
   
-|Argomento|Descrizione|  
+|Argomento|Description|  
 |--------------|-----------------|  
 |*tlbFile*|Nome di un file che contiene una libreria dei tipi COM.|  
   
-|Opzione|Descrizione|  
+|Opzione|Description|  
 |------------|-----------------|  
 |**/asmversion:** *versionnumber*|Specifica il numero di versione dell'assembly da produrre. Specificare *versionnumber* nel *formato major.minor.build.revision*.|  
 |**/company:** `companyinformation`|Aggiunge le informazioni sulla società all'assembly di output.|  

@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4009fe4910af81c685ee015c7801b040a90c25aa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0b149f21a2cb51740f0027f6b01984c628723939
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409789"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221759"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (Assembler IL)
 
 L'assembler IL genera un file eseguibile di tipo PE dal linguaggio intermedio (IL). Per altre informazioni su IL, vedere [Processo di esecuzione gestita](../../../docs/standard/managed-execution-process.md). È possibile eseguire il file eseguibile così ottenuto, contenente il codice IL e i metadati necessari, per determinare se il codice IL viene eseguito come previsto.
 
-Viene installato automaticamente con Visual Studio. Per eseguire lo strumento, usare il prompt dei comandi per sviluppatori o il prompt dei comandi di Visual Studio in Windows 7. Per altre informazioni, vedere [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
+Viene installato automaticamente con Visual Studio. Per eseguire lo strumento, usare il Prompt dei comandi per gli sviluppatori per Visual Studio (o il prompt dei comandi di Visual Studio in Windows 7). Per altre informazioni, vedere [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
 
 Al prompt dei comandi digitare quanto segue:
 
@@ -36,11 +36,11 @@ ilasm [options] filename [[options]filename...]
 
 #### <a name="parameters"></a>Parametri
 
-| Argomento | Descrizione |
+| Argomento | Description |
 | -------- | ----------- |
-|`filename`|Nome del file di origine .il. Questo file è formato da direttive di dichiarazione di metadati e istruzioni IL simboliche. È possibile fornire più argomenti di file di origine per produrre un unico file PE con *Ilasm.exe*. **Nota:** verificare che nell'ultima riga di codice del file di origine con estensione il sia presente uno spazio vuoto finale o un carattere di fine riga.|
+|`filename`|Nome del file di origine .il. Questo file è formato da direttive di dichiarazione di metadati e istruzioni IL simboliche. È possibile fornire più argomenti di file di origine per produrre un unico file PE con *Ilasm.exe*. **Nota:** Verificare che nell'ultima riga di codice del file di origine con estensione il sia presente uno spazio vuoto finale o un carattere di fine riga.|
 
-| Opzione | Descrizione |
+| Opzione | Description |
 | ------ | ----------- |
 |**/32bitpreferred**|Crea un'immagine con preferenza per i 32 bit (PE32).|
 |**/alignment:** `integer`|Imposta FileAlignment sul valore specificato da `integer` nell'intestazione NT facoltativa. Se la direttiva IL .alignment è specificata nel file, questa opzione ne esegue l'override.|
@@ -65,7 +65,7 @@ ilasm [options] filename [[options]filename...]
 |**/noautoinherit**|Disabilita l'ereditarietà predefinita da <xref:System.Object> quando non è specificata alcuna classe base.|
 |**/nocorstub**|Elimina la generazione dello stub CORExeMain.|
 |**/nologo**|Evita la visualizzazione del messaggio di avvio Microsoft.|
-|**/output:** `file.ext`|Specifica il nome e l'estensione del file di output. Per impostazione predefinita, il nome del file di output corrisponde al nome del primo file di origine. L'estensione predefinita è *.exe*. Se si specifica l'opzione **/dll**, l'estensione predefinita sarà *.dll*. **Nota:** se si specifica **/output**:myfile.dll, non verrà impostata l'opzione **/dll**. Se non si specifica **/dll**, si otterrà un file eseguibile denominato *myfile.dll*.|
+|**/output:** `file.ext`|Specifica il nome e l'estensione del file di output. Per impostazione predefinita, il nome del file di output corrisponde al nome del primo file di origine. L'estensione predefinita è *.exe*. Se si specifica l'opzione **/dll**, l'estensione predefinita sarà *.dll*. **Nota:** Se si specifica **/output**:myfile.dll, non viene impostata l'opzione **/dll**. Se non si specifica **/dll**, si otterrà un file eseguibile denominato *myfile.dll*.|
 |**/optimize**|Ottimizza le istruzioni long convertendole in short. Ad esempio, `br` viene convertito in `br.s`.|
 |**/pe64**|Crea un'immagine a 64 bit (PE32+).<br /><br /> Se non è specificato il processore di destinazione, l'impostazione predefinita è `/itanium`.|
 |**/pdb**|Crea un file PDB senza abilitare la traccia delle informazioni di debug.|

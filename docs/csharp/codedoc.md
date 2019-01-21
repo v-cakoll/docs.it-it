@@ -3,12 +3,12 @@ title: Documentazione del codice con i commenti XML
 description: Informazioni su come documentare il codice con commenti della documentazione XML e generare un file di documentazione XML in fase di compilazione.
 ms.date: 02/14/2017
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 4b01d7989b97cbae56fc04212e6c6753fd1252a9
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 70da976861a9bca024d41dd329dc7be043d67c94
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129664"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54151007"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>Documentazione del codice con i commenti XML
 
@@ -136,7 +136,7 @@ Ciò può essere qualsiasi tipo definito nel progetto o in un assembly di riferi
 
 ### <a name="ltparamgt"></a>&lt;param&gt;
 
-Il tag `<param>` viene usato per descrivere i parametri del metodo. Di seguito viene illustrato un esempio sul metodo `Add` double. Il parametro descritto dal tag viene specificato nell'attributo `name` **obbligatorio**.
+Il tag `<param>` viene usato per descrivere i parametri del metodo. Di seguito viene illustrato un esempio sul metodo `Add` double: Il parametro descritto dal tag viene specificato nell'attributo **obbligatorio** `name`.
 
 [!code-csharp[Param Tag](../../samples/snippets/csharp/concepts/codedoc/param-tag.cs)]
 
@@ -205,7 +205,7 @@ L'attributo `id` che può essere usato al posto di `name` rappresenta l'ID per i
 ### <a name="user-defined-tags"></a>Tag definiti dall'utente
 
 Tutti i tag specificati in precedenza rappresentano i tag riconosciuti dal compilatore C#. Gli utenti comunque possono definire tag personalizzati.
-Alcuni strumenti, ad esempio Sandcastle, offrono supporto per altri tag, ad esempio [`<event>`](http://ewsoftware.github.io/XMLCommentsGuide/html/81bf7ad3-45dc-452f-90d5-87ce2494a182.htm), [`<note>`](http://ewsoftware.github.io/XMLCommentsGuide/html/4302a60f-e4f4-4b8d-a451-5f453c4ebd46.htm) e per [documentare gli spazi dei nomi](http://ewsoftware.github.io/XMLCommentsGuide/html/BD91FAD4-188D-4697-A654-7C07FD47EF31.htm).
+Alcuni strumenti, ad esempio Sandcastle, offrono supporto per altri tag, ad esempio [`<event>`](https://ewsoftware.github.io/XMLCommentsGuide/html/81bf7ad3-45dc-452f-90d5-87ce2494a182.htm), [`<note>`](https://ewsoftware.github.io/XMLCommentsGuide/html/4302a60f-e4f4-4b8d-a451-5f453c4ebd46.htm) e per [documentare gli spazi dei nomi](https://ewsoftware.github.io/XMLCommentsGuide/html/BD91FAD4-188D-4697-A654-7C07FD47EF31.htm).
 Gli strumenti di creazione della documentazione interna o personalizzata possono anche essere usati con i tag standard e con più formati di output da HTML a PDF.
 
 ## <a name="recommendations"></a>Suggerimenti

@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: utilizzare JoinBlock per leggere dati da più origini'
+title: 'Procedura: usare JoinBlock per leggere dati da più origini'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: e9c1ada4-ac57-4704-87cb-2f5117f8151d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c49f7ad5162c9e2759ec8afed217451b4bcf04ff
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 0031e352fea845ca4831b4df3a67c9cc6b67e876
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44227623"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222285"
 ---
-# <a name="how-to-use-joinblock-to-read-data-from-multiple-sources"></a>Procedura: utilizzare JoinBlock per leggere dati da più origini
+# <a name="how-to-use-joinblock-to-read-data-from-multiple-sources"></a>Procedura: usare JoinBlock per leggere dati da più origini
 In questo documento viene spiegato come utilizzare la classe <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> per eseguire un'operazione quando i dati sono disponibili da più origini. Viene inoltre illustrato come utilizzare la modalità non greedy per consentire la condivisione in modo più efficiente di un'origine dati da parte di più blocchi join.
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
@@ -33,7 +33,7 @@ In questo documento viene spiegato come utilizzare la classe <xref:System.Thread
  Per consentire un utilizzo efficiente del pool condiviso di oggetti `MemoryResource`, in questo esempio viene specificato un oggetto <xref:System.Threading.Tasks.Dataflow.GroupingDataflowBlockOptions> con la proprietà <xref:System.Threading.Tasks.Dataflow.GroupingDataflowBlockOptions.Greedy%2A> impostata su `False` per creare oggetti <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> utilizzati in modalità non greedy. In un blocco join non greedy tutti i messaggi in ingresso vengono posticipati finché non ne è disponibile uno da ogni origine. Se uno dei messaggi posposti viene accettato da un altro blocco, tramite il blocco join viene riavviato il processo. La modalità non greedy consente ai blocchi join in cui vengono condivisi uno o più blocchi di origine di proseguire il lavoro mentre i dati vengono attesi dagli altri blocchi. In questo esempio, se un oggetto `MemoryResource` viene aggiunto al pool `memoryResources`, il primo blocco join utilizzato per ricevere la seconda origine dati può continuare. Se in questo esempio venisse utilizzata la modalità greedy, vale a dire l'impostazione predefinita, un blocco join potrebbe accettare l'oggetto `MemoryResource` e attendere che la seconda risorsa diventi disponibile. Tuttavia, se nell'altro blocco join è presente la seconda origine dati disponibile, non è possibile continuare perché l'oggetto `MemoryResource` è stato accettato dall'altro blocco join.  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
- Copiare il codice di esempio e incollarlo in un progetto di Visual Studio oppure incollarlo in un file denominato `DataflowNonGreedyJoin.cs` (`DataflowNonGreedyJoin.vb` per Visual Basic) e quindi eseguire il comando riportato di seguito in una finestra del prompt dei comandi di Visual Studio.  
+ Copiare il codice di esempio e incollarlo in un progetto di Visual Studio oppure incollarlo in un file denominato `DataflowNonGreedyJoin.cs` (`DataflowNonGreedyJoin.vb` per Visual Basic) e quindi eseguire il comando riportato di seguito in una finestra del prompt dei comandi per gli sviluppatori per Visual Studio.  
   
  Visual C#  
   

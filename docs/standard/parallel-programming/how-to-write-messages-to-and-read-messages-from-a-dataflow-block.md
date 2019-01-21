@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1a9bf078-aa82-46eb-b95a-f87237f028c5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 47a61a1d01984eeefb2f1f09774374dc29a774d3
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 638cd917bdb40fa5bbf1cb02857c71a0127d0e3f
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087809"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221154"
 ---
 # <a name="how-to-write-messages-to-and-read-messages-from-a-dataflow-block"></a>Procedura: scrivere messaggi in un blocco di flussi di dati e leggere messaggi da un blocco di flussi di dati
 In questo documento viene descritto come utilizzare la libreria del flusso di dati TPL per scrivere messaggi in un blocco di flussi di dati e per leggerli da quest'ultimo. La libreria del flusso di dati TPL fornisce sia metodi sincroni sia asincroni per la lettura e scrittura di messaggi da e in un blocco di flussi di dati. In questo documento viene utilizzata la classe <xref:System.Threading.Tasks.Dataflow.BufferBlock%601?displayProperty=nameWithType>. Mediante la classe <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> i messaggi vengono inseriti nel buffer; inoltre, essa viene utilizzata sia come origine sia come destinazione dei messaggi.  
@@ -52,7 +52,7 @@ In questo documento viene descritto come utilizzare la libreria del flusso di da
  [!code-vb[TPLDataflow_ReadWrite#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_readwrite/vb/dataflowreadwrite.vb#1)]  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
- Copiare il codice di esempio e incollarlo in un progetto di Visual Studio oppure incollarlo in un file denominato `DataflowReadWrite.cs` (`DataflowReadWrite.vb` per Visual Basic) e quindi eseguire il comando riportato di seguito in una finestra del prompt dei comandi di Visual Studio.  
+ Copiare il codice di esempio e incollarlo in un progetto di Visual Studio oppure incollarlo in un file denominato `DataflowReadWrite.cs` (`DataflowReadWrite.vb` per Visual Basic) e quindi eseguire il comando riportato di seguito in una finestra del prompt dei comandi per gli sviluppatori per Visual Studio.  
   
  Visual C#  
   
@@ -63,7 +63,7 @@ In questo documento viene descritto come utilizzare la libreria del flusso di da
  **vbc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowReadWrite.vb**  
   
 ## <a name="next-steps"></a>Passaggi successivi  
- In questo esempio viene mostrato come leggere da un blocco di messaggi e come scrivere in quest'ultimo direttamente. È anche possibile connettere i blocchi di flussi di dati per creare *pipeline*, che sono sequenze lineari di blocchi di flussi di dati, o *reti*, che sono grafici di blocchi di flussi di dati. I dati di origini in una pipeline o in una rete vengono propagati nelle destinazioni in modo asincrono quando i dati in questione diventano disponibili. Per un esempio che crea una pipeline di base del flusso di dati, vedere [Procedura dettagliata: creazione di una pipeline del flusso di dati](../../../docs/standard/parallel-programming/walkthrough-creating-a-dataflow-pipeline.md). Per un esempio che crea una rete del flusso di dati più complessa, vedere [Procedura dettagliata: Uso del flusso di dati in un'applicazione Windows Forms](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md).  
+ In questo esempio viene mostrato come leggere da un blocco di messaggi e come scrivere in quest'ultimo direttamente. È anche possibile connettere i blocchi di flussi di dati per creare *pipeline*, che sono sequenze lineari di blocchi di flussi di dati, o *reti*, che sono grafici di blocchi di flussi di dati. I dati di origini in una pipeline o in una rete vengono propagati nelle destinazioni in modo asincrono quando i dati in questione diventano disponibili. Per un esempio in cui viene creata una pipeline di base del flusso di dati, vedere [Procedura dettagliata: creazione di una pipeline del flusso di dati](../../../docs/standard/parallel-programming/walkthrough-creating-a-dataflow-pipeline.md). Per un esempio in cui viene creata una rete più complessa del flusso di dati, vedere [Procedura dettagliata: uso del flusso di dati in un'applicazione Windows Forms](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md).  
   
 ## <a name="see-also"></a>Vedere anche
 

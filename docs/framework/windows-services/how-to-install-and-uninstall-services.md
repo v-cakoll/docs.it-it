@@ -12,12 +12,12 @@ helpviewer_keywords:
 - installutil.exe tool
 ms.assetid: c89c5169-f567-4305-9d62-db31a1de5481
 author: ghogen
-ms.openlocfilehash: 265ee152bf106d0f97cca83552fe9a3e75fb4165
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 937c559130ea70ab125935ce26ecc5f9bd315ad1
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49349004"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221219"
 ---
 # <a name="how-to-install-and-uninstall-services"></a>Procedura: installare e disinstallare servizi
 Se si sta sviluppando un servizio Windows con .NET Framework, è possibile installare rapidamente l'applicazione di servizio tramite un'utilità della riga di comando denominata InstallUtil.exe. Se uno sviluppatore vuole rilasciare un servizio Windows che gli utenti possono installare e disinstallare, può usare InstallShield. Vedere [Distribuzione con Windows Installer](https://msdn.microsoft.com/library/121be21b-b916-43e2-8f10-8b080516d2a0).  
@@ -25,18 +25,18 @@ Se si sta sviluppando un servizio Windows con .NET Framework, è possibile insta
 > [!WARNING]
 >  Se si vuole disinstallare un servizio dal computer, non seguire i passaggi di questo articolo. Individuare invece il programma o il pacchetto software che ha installato il servizio e quindi scegliere **Installazione applicazioni** nel Pannello di controllo per disinstallare tale programma. Si noti che molti servizi sono parte integrante di Windows. Se vengono rimossi, il sistema potrebbe diventare instabile.  
   
- Per usare i passaggi descritti in questo articolo, è necessario prima aggiungere un programma di installazione del servizio al servizio Windows. Vedere [Procedura dettagliata: Creazione di un'applicazione di servizio Windows in Progettazione componenti](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md).  
+ Per usare i passaggi descritti in questo articolo, è necessario prima aggiungere un programma di installazione del servizio al servizio Windows. Vedere [Procedura dettagliata: creazione di un'applicazione di servizio Windows in Progettazione componenti](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md).  
   
  I progetti del servizio Windows non possono essere eseguiti direttamente dall'ambiente di sviluppo di Visual Studio premendo F5, perché è necessario installare il servizio prima dell'esecuzione del progetto.  
   
 > [!TIP]
->  È possibile avviare **Esplora server** e verificare che il servizio sia stato installato o disinstallato. Per altre informazioni, vedere Procedura: Accedere e inizializzare Esplora server-Esplora database.  
+>  È possibile avviare **Esplora server** e verificare che il servizio sia stato installato o disinstallato. Per altre informazioni, vedere Procedura: accedere e inizializzare Esplora server/Esplora database.  
   
 ### <a name="to-install-your-service-manually"></a>Per installare il servizio manualmente  
   
 1.  Nel menu **Start** di Windows o nella schermata **Start** scegliere **Visual Studio**, **Strumenti di Visual Studio**, **Prompt dei comandi per gli sviluppatori**.  
   
-     Verrà visualizzato un prompt dei comandi di Visual Studio.  
+     Viene visualizzato un prompt dei comandi per gli sviluppatori per Visual Studio.  
   
 2.  Accedere alla directory in cui si trova il file eseguibile compilato del progetto.  
   
@@ -46,13 +46,13 @@ Se si sta sviluppando un servizio Windows con .NET Framework, è possibile insta
     installutil <yourproject>.exe  
     ```  
   
-     Se si usa il prompt dei comandi di Visual Studio, InstallUtil.exe sarà nel percorso di sistema. In caso contrario, è possibile aggiungerlo al percorso o usare il percorso completo per richiamarlo. Questo strumento viene installato con .NET Framework e il percorso è `%WINDIR%\Microsoft.NET\Framework[64]\<framework_version>`. Ad esempio, per la versione a 32 bit di .NET Framework 4 o 4.5.*, se la directory di installazione di Windows è C:\Windows, il percorso è `C:\Windows\Microsoft.NET\Framework\v4.0.30319\InstallUtil.exe`. Per la versione a 64 bit di .NET Framework 4 o 4.5.\*, il percorso predefinito è `C:\Windows\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe`.  
+     Se si usa il prompt dei comandi per gli sviluppatori di Visual Studio, InstallUtil.exe sarà nel percorso di sistema. In caso contrario, è possibile aggiungerlo al percorso o usare il percorso completo per richiamarlo. Questo strumento viene installato con .NET Framework e il percorso è `%WINDIR%\Microsoft.NET\Framework[64]\<framework_version>`. Ad esempio, per la versione a 32 bit di .NET Framework 4 o 4.5.*, se la directory di installazione di Windows è C:\Windows, il percorso è `C:\Windows\Microsoft.NET\Framework\v4.0.30319\InstallUtil.exe`. Per la versione a 64 bit di .NET Framework 4 o 4.5.\*, il percorso predefinito è `C:\Windows\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe`.  
   
 ### <a name="to-uninstall-your-service-manually"></a>Per disinstallare il servizio manualmente  
   
 1.  Nel menu **Start** di Windows o nella schermata **Start** scegliere **Visual Studio**, **Strumenti di Visual Studio**, **Prompt dei comandi per gli sviluppatori**.  
   
-     Verrà visualizzato un prompt dei comandi di Visual Studio.  
+     Viene visualizzato un prompt dei comandi per gli sviluppatori per Visual Studio.  
   
 2.  Eseguire InstallUtil.exe dal prompt dei comandi con l'output del progetto come parametro:  
   

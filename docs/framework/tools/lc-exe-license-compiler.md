@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Windows Forms, control licenses
 - licensed controls [Windows Forms]
 ms.assetid: 2de803b8-495e-4982-b209-19a72aba0460
-ms.openlocfilehash: c5a8b38e819c323a06faad2edba586cb18d26edc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9f6daa696ecd7b91c6d53edaa447f2d64bca0fd7
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409078"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221206"
 ---
 # <a name="lcexe-license-compiler"></a>Lc.exe (Compilatore licenze)
 Il Compilatore licenze legge file di testo contenenti informazioni sulla licenza e produce un file binario che è possibile incorporare come risorsa in un eseguibile di Common Language Runtime.  
@@ -26,7 +26,7 @@ Il Compilatore licenze legge file di testo contenenti informazioni sulla licenza
   
  La compilazione incrociata fra 32 bit e 64 bit non è supportata quando si usa il Compilatore licenze nel corso della compilazione del progetto. Questo avviene perché il Compilatore licenze deve caricare assembly e non è consentito caricare assembly a 64 bit da un'applicazione a 32 bit e viceversa. In questo caso, usare il Compilatore licenze dalla riga di comando per compilare manualmente la licenza e specificare l'architettura corrispondente.  
   
- Viene installato automaticamente con Visual Studio. Per eseguire lo strumento, usare il prompt dei comandi per sviluppatori o il prompt dei comandi di Visual Studio in Windows 7. Per altre informazioni, vedere [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Viene installato automaticamente con Visual Studio. Per eseguire lo strumento, usare il Prompt dei comandi per gli sviluppatori per Visual Studio (o il prompt dei comandi di Visual Studio in Windows 7). Per altre informazioni, vedere [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
  Al prompt dei comandi digitare quanto segue:  
   
@@ -38,7 +38,7 @@ Il Compilatore licenze legge file di testo contenenti informazioni sulla licenza
 /i:modules [/nologo] [/v]  
 ```  
   
-|Opzione|Descrizione|  
+|Opzione|Description|  
 |------------|-----------------|  
 |**/complist:** *filename*|Specifica il nome di un file contenente l'elenco dei componenti provvisti di licenza da includere nel file LICENSES. A ciascun componente viene fatto riferimento mediante il nome completo, specificando un solo componente per riga.<br /><br /> Se si usa la riga di comando sarà possibile specificare un file separato per ciascun form del progetto. Lc.exe accetta più file di input e produce un unico file LICENSES.|  
 |**/h**[**elp**]|Visualizza la sintassi e le opzioni di comando dello strumento.|  

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: fc2585dc-965e-4632-ace7-73dd02684ed3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dd5963fee985633d843cc60f521b66000b84e55e
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 369559feca4edab6de587a3494588973e0c2e1b7
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44217191"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221063"
 ---
 # <a name="how-to-perform-action-when-a-dataflow-block-receives-data"></a>Procedura: eseguire un'azione alla ricezione di dati in un blocco di flussi di dati
 Tramite i tipi di *blocchi di flussi di esecuzione* viene chiamato un delegato fornito dall'utente alla ricezione dei dati. Le classi <xref:System.Threading.Tasks.Dataflow.ActionBlock%601?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602?displayProperty=nameWithType> sono tipi di blocchi di flussi di dati di esecuzione. È possibile utilizzare la parola chiave `delegate` (`Sub` in Visual Basic), <xref:System.Action%601>, <xref:System.Func%602> o un'espressione lambda, quando viene fornita una funzione lavoro a un blocco di flussi di dati di esecuzione. In questo documento viene descritto come utilizzare <xref:System.Func%602> e le espressioni lambda per eseguire l'azione nei blocchi di esecuzione.  
@@ -34,7 +34,7 @@ Tramite i tipi di *blocchi di flussi di esecuzione* viene chiamato un delegato f
  La sezione Riepilogo dei tipi delegati del documento [Flusso di dati](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md) riepiloga i tipi di delegati che è possibile fornire agli oggetti <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> e <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602>. Nella tabella viene inoltre specificato se il tipo delegato viene eseguito in modo sincrono o asincrono.  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
- Copiare il codice di esempio e incollarlo in un progetto di Visual Studio oppure incollarlo in un file denominato `DataflowExecutionBlocks.cs` (`DataflowExecutionBlocks.vb` per Visual Basic) e quindi eseguire il comando riportato di seguito in una finestra del prompt dei comandi di Visual Studio.  
+ Copiare il codice di esempio e incollarlo in un progetto di Visual Studio oppure incollarlo in un file denominato `DataflowExecutionBlocks.cs` (`DataflowExecutionBlocks.vb` per Visual Basic) e quindi eseguire il comando riportato di seguito in una finestra del prompt dei comandi per gli sviluppatori per Visual Studio.  
   
  Visual C#  
   

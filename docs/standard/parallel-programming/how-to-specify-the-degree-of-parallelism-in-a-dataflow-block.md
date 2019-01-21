@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e4088541-ee05-40db-95f5-147cfe62fde7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0b597cf93cdf249936a34b2c07b38d000c96333f
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 78459e6cc2b40c9f3b821e4c4b53aec0c2f543db
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45999205"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222759"
 ---
 # <a name="how-to-specify-the-degree-of-parallelism-in-a-dataflow-block"></a>Procedura: specificare il grado di parallelismo in un blocco di flussi di dati
 In questo documento viene descritto come impostare la proprietà <xref:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions.MaxDegreeOfParallelism%2A?displayProperty=nameWithType> per consentire a un blocco di flussi di dati di esecuzione di elaborare più messaggi alla volta. Questa operazione è utile quando è presente un blocco di flussi di dati in cui viene eseguito un calcolo di lunga durata ed è possibile trarre vantaggio dall'elaborazione di messaggi in parallelo. Nell'esempio viene usata la classe <xref:System.Threading.Tasks.Dataflow.ActionBlock%601?displayProperty=nameWithType> per eseguire più operazioni di flussi di dati contemporaneamente; tuttavia, è possibile specificare il massimo grado di parallelismo in uno dei tipi di blocchi di esecuzione predefiniti forniti dalla libreria del flusso di dati TPL, <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602?displayProperty=nameWithType>.
@@ -31,7 +31,7 @@ In questo documento viene descritto come impostare la proprietà <xref:System.Th
  [!code-vb[TPLDataflow_DegreeOfParallelism#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_degreeofparallelism/vb/dataflowdegreeofparallelism.vb#1)]  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
- Copiare il codice di esempio e incollarlo in un progetto di Visual Studio oppure incollarlo in un file denominato `DataflowDegreeOfParallelism.cs` (`DataflowDegreeOfParallelism.vb` per Visual Basic) e quindi eseguire il comando riportato di seguito in una finestra del prompt dei comandi di Visual Studio.  
+ Copiare il codice di esempio e incollarlo in un progetto di Visual Studio oppure incollarlo in un file denominato `DataflowDegreeOfParallelism.cs` (`DataflowDegreeOfParallelism.vb` per Visual Basic) e quindi eseguire il comando riportato di seguito in una finestra del prompt dei comandi per gli sviluppatori per Visual Studio.  
   
  Visual C#  
   

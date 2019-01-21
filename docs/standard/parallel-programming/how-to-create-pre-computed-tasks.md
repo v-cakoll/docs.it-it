@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Creare attività precalcolate'
+title: 'Procedura: creare attività precalcolate'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: a73eafa2-1f49-4106-a19e-997186029b58
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 47e4c5d721b37388a4008d100f5212057477c638
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: aa95eccfa39073bb8ccb3cb9c49e099ac1f90ab1
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44211658"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222101"
 ---
-# <a name="how-to-create-pre-computed-tasks"></a>Procedura: Creare attività precalcolate
+# <a name="how-to-create-pre-computed-tasks"></a>Procedura: creare attività precalcolate
 In questo documento viene descritto come utilizzare il metodo <xref:System.Threading.Tasks.Task.FromResult%2A?displayProperty=nameWithType> per recuperare i risultati di operazioni di download asincrone contenute in una cache. Tramite il metodo <xref:System.Threading.Tasks.Task.FromResult%2A> viene restituito un oggetto <xref:System.Threading.Tasks.Task%601> finito contenente il valore fornito come relativa proprietà <xref:System.Threading.Tasks.Task%601.Result%2A>. Questo metodo è utile quando si esegue un'operazione asincrona che restituisce un oggetto <xref:System.Threading.Tasks.Task%601> e il risultato di tale oggetto <xref:System.Threading.Tasks.Task%601> è già calcolato.  
   
 ## <a name="example"></a>Esempio  
@@ -29,7 +29,7 @@ In questo documento viene descritto come utilizzare il metodo <xref:System.Threa
  In questo esempio viene calcolato il tempo necessario per scaricare più stringhe due volte. Per il secondo set di operazioni di download deve essere impiegato meno tempo del primo poiché i risultati sono contenuti nella cache. Il metodo <xref:System.Threading.Tasks.Task.FromResult%2A> consente al metodo `DownloadStringAsync` di creare oggetti di <xref:System.Threading.Tasks.Task%601> contenenti questi risultati precalcolati.  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
- Copiare il codice di esempio e incollarlo in un progetto di Visual Studio oppure incollarlo in un file denominato `CachedDownloads.cs` (`CachedDownloads.vb` per Visual Basic) e quindi eseguire il comando riportato di seguito in una finestra del prompt dei comandi di Visual Studio.  
+ Copiare il codice di esempio e incollarlo in un progetto di Visual Studio oppure incollarlo in un file denominato `CachedDownloads.cs` (`CachedDownloads.vb` per Visual Basic) e quindi eseguire il comando riportato di seguito in una finestra del prompt dei comandi per gli sviluppatori per Visual Studio.  
   
  Visual C#  
   

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - /** */ delimiters for C# documentation tags
 - /// delimiter for C# documentation
 ms.assetid: 9b2bdd18-4f5c-4c0b-988e-fb992e0d233e
-ms.openlocfilehash: ce6b23edb10733de3134b5233413de8b535c11ac
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: c14b0470f7ea488fcb813b68174b5d1cb0d95786
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235293"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415585"
 ---
 # <a name="delimiters-for-documentation-tags-c-programming-guide"></a>Delimitatori per i tag della documentazione (Guida per programmatori C#)
 L'uso dei commenti XML relativi alla documentazione richiede la specifica di delimitatori per indicare al compilatore il punto di inizio e di fine di un commento relativo alla documentazione. È possibile usare con i tag della documentazione XML i tipi di delimitatori seguenti:  
@@ -38,7 +38,7 @@ L'uso dei commenti XML relativi alla documentazione richiede la specifica di del
   
 -   La sola parte del commento riportato di seguito che verrà elaborata è la riga che inizia con `<summary>`. I tre formati di tag producono gli stessi commenti.  
   
-    ```  
+    ```csharp  
     /** <summary>text</summary> */   
   
     /**   
@@ -52,7 +52,7 @@ L'uso dei commenti XML relativi alla documentazione richiede la specifica di del
   
 -   Il compilatore identifica il modello comune " * " all'inizio della seconda e della terza riga. Il modello non è incluso nell'output.  
   
-    ```  
+    ```csharp  
     /**   
      * <summary>   
      * text </summary>*/   
@@ -60,7 +60,7 @@ L'uso dei commenti XML relativi alla documentazione richiede la specifica di del
   
 -   Il compilatore non trova alcun modello comune nel commento seguente poiché il secondo carattere nella terza riga non è un asterisco. Di conseguenza, tutto il testo contenuto nella seconda e nella terza riga viene elaborato come parte del commento.  
   
-    ```  
+    ```csharp  
     /**   
      * <summary>   
        text </summary>  
@@ -69,7 +69,7 @@ L'uso dei commenti XML relativi alla documentazione richiede la specifica di del
   
 -   Nel commento seguente il compilatore non rileva alcun modello per due motivi. In primo luogo, il numero di spazi prima dell'asterisco non è coerente. In secondo luogo, la quinta riga inizia con una tabulazione senza corrispondenza degli spazi. Di conseguenza, tutto il testo dalla seconda alla quinta riga verrà elaborato come parte del commento.  
   
-    ```  
+    ```csharp  
     /**   
       * <summary>   
       * text   

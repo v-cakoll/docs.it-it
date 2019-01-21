@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 07/19/2018
 ms.technology: dotnet-standard
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: cfc830f50f2e77b85e46ebaf91e3c8658aa86c48
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: bf8b73d5785ad39180b47963130105b905f955c1
+ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613596"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54307539"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -65,7 +65,7 @@ La specifica di .NET Standard è un set standardizzato di API. La specifica vien
 
 ### <a name="official-artifacts"></a>Elementi ufficiali
 
-La specifica ufficiale è un insieme di file con estensione cs che definiscono le API che sono parte dello standard. La [directory ref](https://github.com/dotnet/standard/tree/master/netstandard/ref) nel [repository dotnet/standard](https://github.com/dotnet/standard) definisce le API di .NET Standard.
+La specifica ufficiale è un insieme di file con estensione cs che definiscono le API che sono parte dello standard. La [directory ref](https://github.com/dotnet/standard/tree/master/src/netstandard/ref) nel [repository dotnet/standard](https://github.com/dotnet/standard) definisce le API di .NET Standard.
 
 Il metapacchetto [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library) ([origine](https://github.com/dotnet/standard/blob/master/netstandard/pkg/NETStandard.Library.dependencies.props)) descrive il set di librerie che definiscono (in parte) una o più versioni di .NET Standard.
 

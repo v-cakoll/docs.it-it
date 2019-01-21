@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5220fe58-5aaf-4e8e-8bc3-b78c63025804
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3de5b196d6ec35febe4ba30f7ac41bacacf884cd
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: df81293a00ad79892618c71a901cea30efe766ec
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529108"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221310"
 ---
 # <a name="regsvcsexe-net-services-installation-tool"></a>Regsvcs.exe (strumento di installazione dei servizi .NET)
 Lo strumento di installazione dei servizi .NET effettua le seguenti operazioni:  
@@ -27,7 +27,7 @@ Lo strumento di installazione dei servizi .NET effettua le seguenti operazioni:
   
 -   Configura i servizi aggiunti alla classe a livello di codice.  
   
- Per eseguire lo strumento, usare il prompt dei comandi per sviluppatori o il prompt dei comandi di Visual Studio in Windows 7. Per altre informazioni, vedere [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Per eseguire lo strumento, usare il Prompt dei comandi per gli sviluppatori per Visual Studio (o il prompt dei comandi di Visual Studio in Windows 7). Per altre informazioni, vedere [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
  Al prompt dei comandi digitare quanto segue:  
   
@@ -41,11 +41,11 @@ Lo strumento di installazione dei servizi .NET effettua le seguenti operazioni:
   
 #### <a name="parameters"></a>Parametri  
   
-|Argomento|Descrizione|  
+|Argomento|Description|  
 |--------------|-----------------|  
 |*assemblyFile.dll*|File di assembly di origine. L'assembly deve essere firmato con un nome sicuro. Per altre informazioni, vedere [Firma di un assembly con un nome sicuro](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md).|  
   
-|Opzione|Descrizione|  
+|Opzione|Description|  
 |------------|-----------------|  
 |**/appdir:** *percorso*|Specifica la directory radice dell'applicazione.|  
 |**/appname:** *nomeApplicazione*|Specifica il nome dell'applicazione COM+ da trovare o creare.|  

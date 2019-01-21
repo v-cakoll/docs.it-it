@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 47a1d38c-fe9c-44aa-bd15-937bd5659b0b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e8b6237e41826d2bc95672ee2f6b19598eea19ab
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 2ad212117cc51c17b2a0f68a98bee24e1dd3fa05
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44252909"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221758"
 ---
 # <a name="how-to-implement-a-producer-consumer-dataflow-pattern"></a>Procedura: implementare un modello di flusso di dati producer-consumer
 In questo documento viene descritto come usare la libreria del flusso di dati TPL per implementare un modello producer-consumer. In questo modello, il *producer* invia messaggi a un blocco di messaggi e il *consumer* legge i messaggi dal blocco.  
@@ -33,7 +33,7 @@ In questo documento viene descritto come usare la libreria del flusso di dati TP
  [!code-vb[TPLDataflow_ProducerConsumer#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_producerconsumer/vb/dataflowproducerconsumer.vb#1)]  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
- Copiare il codice di esempio e incollarlo in un progetto di Visual Studio oppure incollarlo in un file denominato `DataflowProducerConsumer.cs` (`DataflowProducerConsumer.vb` per Visual Basic) e quindi eseguire il comando riportato di seguito in una finestra del prompt dei comandi di Visual Studio.  
+ Copiare il codice di esempio e incollarlo in un progetto di Visual Studio oppure incollarlo in un file denominato `DataflowProducerConsumer.cs` (`DataflowProducerConsumer.vb` per Visual Basic) e quindi eseguire il comando riportato di seguito in una finestra del prompt dei comandi per gli sviluppatori per Visual Studio.  
   
  Visual C#  
   

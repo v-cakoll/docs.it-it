@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XML [C#], tags
 - XML documentation [C#], tags
 ms.assetid: 6e98f7a9-38f4-4d74-b644-1ff1b23320fd
-ms.openlocfilehash: fb4d8d4dde38d7cbe1b0434c290dd922b2e328a3
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 7b2988273e7598b8653b3481c0ea713c5bb0f632
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245587"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415234"
 ---
 # <a name="recommended-tags-for-documentation-comments-c-programming-guide"></a>Tag consigliati per i commenti relativi alla documentazione (Guida per programmatori C#)
 Il compilatore C# elabora i commenti alla documentazione nel codice e li formatta come XML in un file il cui nome è stato specificato nell'opzione della riga di comando **/doc**. Per creare la documentazione finale basata sul file generato dal compilatore, è possibile creare uno strumento personalizzato o usare uno strumento come [Sandcastle](https://github.com/EWSoftware/SHFB).  
@@ -38,7 +38,7 @@ Il compilatore C# elabora i commenti alla documentazione nel codice e li formatt
   
  Se si vuole che nel testo di un commento alla documentazione vengano visualizzate parentesi angolari, usare `<` e `>`, come illustrato nell'esempio seguente.  
   
-```xml  
+```csharp  
 /// <summary cref="C < T >">  
 /// </summary>  
 ```  

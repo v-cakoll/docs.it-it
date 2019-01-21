@@ -7,17 +7,17 @@ helpviewer_keywords:
 ms.assetid: cbc2ee86-bdc8-4a65-a8f1-ba23bce3a699
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 998ebb76b536b04d617bafdb74a3014c68cf509d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fc01cf53b4af08973009027d124c50d0733a005a
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405564"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221050"
 ---
 # <a name="clrverexe-clr-version-tool"></a>Clrver.exe (Strumento della versione CLR)
 Lo strumento della versione CLR (Clrver.exe) segnala tutte le versioni di CRL (Common Language Runtime) installate nel computer.  
   
- Viene installato automaticamente con Visual Studio. Per eseguire lo strumento, usare il prompt dei comandi per sviluppatori o il prompt dei comandi di Visual Studio in Windows 7. Per altre informazioni, vedere [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Viene installato automaticamente con Visual Studio. Per eseguire lo strumento, usare il Prompt dei comandi per gli sviluppatori per Visual Studio (o il prompt dei comandi di Visual Studio in Windows 7). Per altre informazioni, vedere [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
  Al prompt dei comandi digitare quanto segue:  
   
@@ -29,7 +29,7 @@ clrver [option]
   
 ## <a name="options"></a>Opzioni  
   
-|Opzione|Descrizione|  
+|Opzione|Description|  
 |------------|-----------------|  
 |`-all`|Visualizza tutti i processi sul computer che utilizzano CLR.|  
 |*pid*|Visualizza le versioni di CLR utilizzate dal processo con l'ID processo (PID) specificato.|  

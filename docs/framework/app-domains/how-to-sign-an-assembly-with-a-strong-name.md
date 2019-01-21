@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: firmare un assembly con un nome sicuro'
+title: 'Procedura: Firmare un assembly con un nome sicuro'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 2c30799a-a826-46b4-a25d-c584027a6c67
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5d46694d772aed7e92f95cc26da86985d4f8b0ff
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c7edfc7cf3a55dc8d789b20540af6a4ad9b91299
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50191064"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221258"
 ---
-# <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Procedura: firmare un assembly con un nome sicuro
+# <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Procedura: Firmare un assembly con un nome sicuro
 Sono disponibili diversi modi per firmare un assembly con un nome sicuro:  
   
 -   Utilizzando la scheda di **Firma** nella finestra di dialogo **Proprietà** di un progetto in Visual Studio. Questo è il modo più semplice e più pratico per firmare un assembly con un nome sicuro.  
@@ -45,7 +45,7 @@ Sono disponibili diversi modi per firmare un assembly con un nome sicuro:
   
 ### <a name="to-create-and-sign-an-assembly-with-a-strong-name-by-using-the-assembly-linker"></a>Per creare e firmare un assembly con un nome sicuro utilizzando Assembly Linker  
   
--   Al [prompt dei comandi di Visual Studio](../../../docs/framework/tools/developer-command-prompt-for-vs.md) digitare il comando seguente:  
+-   Al [prompt dei comandi per gli sviluppatori per Visual Studio](../../../docs/framework/tools/developer-command-prompt-for-vs.md), digitare il comando seguente:  
   
      **al** **/out:**\<*assemblyName*> *\<moduleName>* **/keyfile:**\<*keyfileName*>  
   

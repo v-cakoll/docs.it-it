@@ -12,12 +12,12 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: b23c43ebdb8d4277344949a18b1bc999b27d60e9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 371b6e232e9d97df3ce34d69bcb10155c1242e1e
+ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188612"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54084719"
 ---
 # <a name="switch-c-reference"></a>switch (Riferimenti per C#)
 
@@ -59,7 +59,7 @@ Un'istruzione `switch` può contenere qualsiasi numero di sezioni opzioni e ogni
 
 [!code-csharp[switch#2](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch2.cs#1)]
 
-Viene eseguita una sola sezione opzioni in un'istruzione switch. C# non consente di continuare l'esecuzione da una sezione opzioni a quella successiva. Per questo motivo, il codice seguente genera un errore di compilazione CS0163: "Il controllo non può passare da un'etichetta case ("<case label>") a un'altra".
+Viene eseguita una sola sezione opzioni in un'istruzione switch. C# non consente di continuare l'esecuzione da una sezione opzioni a quella successiva. Per questo motivo, il codice seguente genera un errore di compilazione CS0163: "Il controllo non può passare da un'etichetta case (<case label>) a un'altra."
 
 ```csharp
 switch (caseSwitch)
@@ -88,7 +88,7 @@ Per informazioni sull'istruzione `switch` e sui criteri di ricerca, vedere [Crit
 
 Poiché C# 6 supporta solo il criterio costante e non consente la ripetizione di valori costanti, le etichette case definiscono valori che si escludono a vicenda e solo un criterio può corrispondere all'espressione di ricerca. Di conseguenza, l'ordine in cui vengono visualizzate le istruzioni `case` non è rilevante.
 
-In C# 7.0, tuttavia, poiché sono supportati altri criteri, le etichette case non devono necessariamente definire valori che si escludono a vicenda e più criteri possono corrispondere all'espressione di ricerca. Dal momento che vengono eseguite solo le istruzioni nella sezione opzione che contiene il criterio di prima corrispondenza, l'ordine in cui ora vengono visualizzate le istruzioni `case` è importante. Se C# rileva una sezione opzioni la cui istruzione o istruzioni case sono equivalenti a o sono subset di istruzioni precedenti, viene generato l'errore del compilatore CS8120: "Lo switch case è già stato gestito da un case precedente."
+In C# 7.0, tuttavia, poiché sono supportati altri criteri, le etichette case non devono necessariamente definire valori che si escludono a vicenda e più criteri possono corrispondere all'espressione di ricerca. Dal momento che vengono eseguite solo le istruzioni nella prima sezione opzione che contiene il criterio di corrispondenza, l'ordine in cui ora vengono visualizzate le istruzioni `case` è importante. Se C# rileva una sezione opzioni la cui istruzione o istruzioni case sono equivalenti a o sono subset di istruzioni precedenti, viene generato l'errore del compilatore CS8120: "Lo switch case è già stato gestito da un case precedente."
 
 Nell'esempio seguente viene illustrata un'istruzione `switch` che usa un'ampia gamma di criteri che non si escludono a vicenda. Se si sposta la sezione opzioni `case 0:` in modo che non sia più la prima sezione nell'istruzione `switch`, C# genera un errore del compilatore perché un numero intero il cui valore è uguale a zero è un sottoinsieme di tutti i numeri interi, che corrisponde al criterio definito dall'istruzione `case int val`.
 

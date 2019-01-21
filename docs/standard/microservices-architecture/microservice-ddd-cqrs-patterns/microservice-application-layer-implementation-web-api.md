@@ -4,12 +4,12 @@ description: Architettura di microservizi .NET per applicazioni .NET incluse in 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 332829d30f10dde49727c63e9e80a91f24e1123a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d37660d3e2a7640383347071adfe969325ddd77b
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151187"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54152112"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Implementare il livello dell'applicazione del microservizio usando l'API Web
 
@@ -19,7 +19,7 @@ Come accennato in precedenza, il livello dell'applicazione può essere implement
 
 Il codice del livello dell'applicazione del microservizio degli ordini, ad esempio, viene direttamente implementato come parte del progetto **Ordering.API** (un progetto API Web ASP.NET Core), come illustrato nella figura 7-23.
 
-![La visualizzazione Esplora soluzioni del microservizio Ordering.API contiene le sottocartelle della cartella Application: Behaviors, Commands, DomainEventHandlers, IntegrationEvents, Models, Queries e Validations.](./media/image20.png)
+![Visualizzazione Esplora soluzioni del microservizio Ordering.API, con le sottocartelle della cartella Applicazione visualizzate: Comportamenti, Comandi, DomainEventHandlers, IntegrationEvents, Modelli, Query e Convalide.](./media/image20.png)
 
 **Figura 7-23**. Livello dell'applicazione nel progetto API Web ASP.NET Core Ordering.API
 
@@ -397,7 +397,7 @@ I seguenti sono passaggi aggiuntivi che devono essere eseguiti da un gestore com
 #### <a name="additional-resources"></a>Risorse aggiuntive
 
 - **Mark Seemann. At the Boundaries, Applications are Not Object-Oriented** \ (In corrispondenza dei limiti, le applicazioni non sono orientate a oggetti)
-  [*http://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/*](http://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/)
+  [*https://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/*](https://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/)
 
 - **Comandi ed eventi** \
   [*http://cqrs.nu/Faq/commands-and-events*](http://cqrs.nu/Faq/commands-and-events)
