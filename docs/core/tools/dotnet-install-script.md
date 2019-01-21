@@ -1,13 +1,13 @@
 ---
 title: Script dotnet-install
 description: Informazioni sugli script dotnet-install per l'installazione degli strumenti dell'interfaccia della riga di comando di .NET Core e del runtime condiviso.
-ms.date: 11/15/2018
-ms.openlocfilehash: 0f565fee3e4ff4bec65bd196f635e9e9601485c2
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/16/2019
+ms.openlocfilehash: 5b266d484aae482d79674660417a834f03d53e4c
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148324"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362831"
 ---
 # <a name="dotnet-install-scripts-reference"></a>Riferimento agli script dotnet-install
 
@@ -73,7 +73,7 @@ Prima di eseguire lo script, installare le [dipendenze](https://github.com/dotne
 
 * **`-Architecture <ARCHITECTURE>`**
 
-  Architettura dei file binari di .NET Core da installare. I valori possibili sono `auto`, `x64` e `x86`. Il valore predefinito è `auto`, che rappresenta l'architettura del sistema operativo attualmente in esecuzione.
+  Architettura dei file binari di .NET Core da installare. I valori consentiti sono `<auto>`, `amd64`, `x64`, `x86`, `arm64` e `arm`. Il valore predefinito è `<auto>`, che rappresenta l'architettura del sistema operativo attualmente in esecuzione.
 
 * **`-SharedRuntime`**
 

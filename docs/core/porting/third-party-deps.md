@@ -4,16 +4,16 @@ description: Informazioni su come analizzare le dipendenze esterne per convertir
 author: cartermp
 ms.date: 12/04/2018
 ms.custom: seodec18
-ms.openlocfilehash: dce8e6cd4986b15cf926154b378964db4beef398
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 6451099bfc7f3afa5c9c1585862403a0a9fb2186
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170320"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415221"
 ---
 # <a name="analyze-your-dependencies-to-port-code-to-net-core"></a>Analizzare le dipendenze per convertire il codice per .NET Core
 
-Per convertire il codice a .NET Core o .NET Standard, è necessario conoscere le dipendenze. Le dipendenze esterne sono i [pacchetti NuGet](#analyze-referenced-nuget-packages-on-your-project) o le [DLL](#analyze-dependencies-that-arent-nuget-packages) a cui si fa riferimento nel progetto, ma che non si compilano. È necessario valutare le singole dipendenze e definire un piano di emergenza per quelle non compatibili con .NET Core. Ecco come determinare se una dipendenza è compatibile con .NET Core.
+Per convertire il codice a .NET Core o .NET Standard, è necessario conoscere le dipendenze. Le dipendenze esterne sono i [pacchetti NuGet](#analyze-referenced-nuget-packages-in-your-projects) o le [DLL](#analyze-dependencies-that-arent-nuget-packages) a cui si fa riferimento nel progetto, ma che non si compilano. È necessario valutare le singole dipendenze e definire un piano di emergenza per quelle non compatibili con .NET Core. Ecco come determinare se una dipendenza è compatibile con .NET Core.
 
 ## <a name="analyze-referenced-nuget-packages-in-your-projects"></a>Analizzare i pacchetti NuGet cui si fa riferimento nei progetti
 
@@ -77,7 +77,7 @@ Il risultato dell'analisi dei pacchetti NuGet può essere che i pacchetti suppor
 
 A partire da .NET Standard 2.0 è stata introdotta la modalità di compatibilità di .NET Framework. Questa modalità consente a progetti .NET Standard e .NET Core di gestire riferimenti a librerie .NET Framework. I riferimenti alle librerie .NET Framework non funzionano per tutti i progetti, ad esempio se la libreria usa API Windows Presentation Foundation (WPF), ma sono in grado di risolvere molti scenari di portabilità.
 
-Quando nel progetto si fa riferimento a pacchetti NuGet che supportano .NET Framework, ad esempio [Huitian.PowerCollections](https://www.nuget.org/packages/Huitian.PowerCollections), viene visualizzato un avviso di fallback del pacchetto ([NU1701](/nuget/reference/errors-and-warnings#nu1701)) simile all'esempio seguente:
+Quando nel progetto si fa riferimento a pacchetti NuGet che supportano .NET Framework, ad esempio [Huitian.PowerCollections](https://www.nuget.org/packages/Huitian.PowerCollections), viene visualizzato un avviso di fallback del pacchetto ([NU1701](/nuget/reference/errors-and-warnings/nu1701)) simile all'esempio seguente:
 
 `NU1701: Package ‘Huitian.PowerCollections 1.0.0’ was restored using ‘.NETFramework,Version=v4.6.1’ instead of the project target framework ‘.NETStandard,Version=v2.0’. This package may not be fully compatible with your project.`
 
@@ -91,7 +91,7 @@ Per eliminare l'avviso modificando il file di progetto, trovare la voce `Package
 </ItemGroup>
 ```
 
-Per altre informazioni sull'eliminazione degli avvisi del compilatore in Visual Studio, vedere [Non visualizzare avvisi per i pacchetti NuGet](/visualstudio/ide/how-to-suppress-compiler-warnings#suppressing-warnings-for-nuget-packages).
+Per altre informazioni sull'eliminazione degli avvisi del compilatore in Visual Studio, vedere [Non visualizzare avvisi per i pacchetti NuGet](/visualstudio/ide/how-to-suppress-compiler-warnings#suppress-warnings-for-nuget-packages).
 
 ### <a name="port-your-packages-to-packagereference"></a>Convertire i pacchetti a `PackageReference`
 
