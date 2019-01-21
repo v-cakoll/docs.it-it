@@ -1,94 +1,131 @@
 ---
 title: Inizializzatori di oggetto e di raccolte - Guida per programmatori C#
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 12/19/2018
 helpviewer_keywords:
 - object initializers [C#]
 - collection initializers [C#]
 ms.assetid: c58f3db5-d7d4-4651-bd2d-5a3a97357f61
-ms.openlocfilehash: 60c4e8c5b83ee1c279bf8e7f4905ef9f2cf814b4
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 1dc28ac218eb0325095641840834b40594ad67ab
+ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243166"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54084862"
 ---
-# <a name="object-and-collection-initializers-c-programming-guide"></a><span data-ttu-id="17a64-102">Inizializzatori di oggetto e di raccolte (Guida per programmatori C#)</span><span class="sxs-lookup"><span data-stu-id="17a64-102">Object and Collection Initializers (C# Programming Guide)</span></span>
-<span data-ttu-id="17a64-103">Gli inizializzatori di oggetto consentono di assegnare valori a qualsiasi proprietà o campo accessibile di un oggetto in fase di creazione senza dover richiamare un costruttore seguito da righe di istruzioni di assegnazione.</span><span class="sxs-lookup"><span data-stu-id="17a64-103">Object initializers let you assign values to any accessible fields or properties of an object at creation time without having to invoke a constructor followed by lines of assignment statements.</span></span> <span data-ttu-id="17a64-104">La sintassi dell'inizializzatore di oggetto consente di specificare gli argomenti per un costruttore o di omettere gli argomenti (e la sintassi di parentesi).</span><span class="sxs-lookup"><span data-stu-id="17a64-104">The object initializer syntax enables you to specify arguments for a constructor or omit the arguments (and parentheses syntax).</span></span>  <span data-ttu-id="17a64-105">Nell'esempio seguente viene illustrato come utilizzare un inizializzatore di oggetto con un tipo denominato, `Cat` e come richiamare il costruttore predefinito.</span><span class="sxs-lookup"><span data-stu-id="17a64-105">The following example shows how to use an object initializer with a named type, `Cat` and how to invoke the default constructor.</span></span> <span data-ttu-id="17a64-106">Si noti l'uso di proprietà implementate automaticamente nella classe `Cat`.</span><span class="sxs-lookup"><span data-stu-id="17a64-106">Note the use of auto-implemented properties in the `Cat` class.</span></span> <span data-ttu-id="17a64-107">Per altre informazioni, vedere [Proprietà implementate automaticamente](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md).</span><span class="sxs-lookup"><span data-stu-id="17a64-107">For more information, see [Auto-Implemented Properties](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md).</span></span>  
+# <a name="object-and-collection-initializers-c-programming-guide"></a><span data-ttu-id="29f60-102">Inizializzatori di oggetto e di raccolte (Guida per programmatori C#)</span><span class="sxs-lookup"><span data-stu-id="29f60-102">Object and Collection Initializers (C# Programming Guide)</span></span>
+
+<span data-ttu-id="29f60-103">C# consente di creare un'istanza di un oggetto o di una raccolta e di eseguire le assegnazioni di membri in un'unica istruzione.</span><span class="sxs-lookup"><span data-stu-id="29f60-103">C# lets you instantiate an object or collection and perform member assignments in a single statement.</span></span>
+
+## <a name="object-initializers"></a><span data-ttu-id="29f60-104">Inizializzatori di oggetto</span><span class="sxs-lookup"><span data-stu-id="29f60-104">Object initializers</span></span>
+
+<span data-ttu-id="29f60-105">Gli inizializzatori di oggetto consentono di assegnare valori a qualsiasi proprietà o campo accessibile di un oggetto in fase di creazione senza dover richiamare un costruttore seguito da righe di istruzioni di assegnazione.</span><span class="sxs-lookup"><span data-stu-id="29f60-105">Object initializers let you assign values to any accessible fields or properties of an object at creation time without having to invoke a constructor followed by lines of assignment statements.</span></span> <span data-ttu-id="29f60-106">La sintassi dell'inizializzatore di oggetto consente di specificare gli argomenti per un costruttore o di omettere gli argomenti (e la sintassi di parentesi).</span><span class="sxs-lookup"><span data-stu-id="29f60-106">The object initializer syntax enables you to specify arguments for a constructor or omit the arguments (and parentheses syntax).</span></span>  <span data-ttu-id="29f60-107">Nell'esempio seguente viene illustrato come utilizzare un inizializzatore di oggetto con un tipo denominato, `Cat` e come richiamare il costruttore predefinito.</span><span class="sxs-lookup"><span data-stu-id="29f60-107">The following example shows how to use an object initializer with a named type, `Cat` and how to invoke the default constructor.</span></span> <span data-ttu-id="29f60-108">Si noti l'uso di proprietà implementate automaticamente nella classe `Cat`.</span><span class="sxs-lookup"><span data-stu-id="29f60-108">Note the use of auto-implemented properties in the `Cat` class.</span></span> <span data-ttu-id="29f60-109">Per altre informazioni, vedere [Proprietà implementate automaticamente](auto-implemented-properties.md).</span><span class="sxs-lookup"><span data-stu-id="29f60-109">For more information, see [Auto-Implemented Properties](auto-implemented-properties.md).</span></span>  
   
- [!code-csharp[csProgGuideLINQ#39](../../../csharp/programming-guide/arrays/codesnippet/CSharp/object-and-collection-initializers_1.cs)]  
-  
- [!code-csharp[csProgGuideLINQ#45](../../../csharp/programming-guide/arrays/codesnippet/CSharp/object-and-collection-initializers_2.cs)] 
+[!code-csharp[ObjectInitializer1](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#CatDeclaration)]  
+[!code-csharp[ObjectInitializer1a](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#ObjectPropertyInitialization)]  
  
-<span data-ttu-id="17a64-108">La sintassi degli inizializzatori di oggetto consente di creare un'istanza e dopo assegna l'oggetto appena creato, con le relative proprietà assegnate, alla variabile nell'assegnazione.</span><span class="sxs-lookup"><span data-stu-id="17a64-108">The object initializers syntax allows you to create an instance, and after that it assigns the newly created object, with its assigned properties, to the variable in the assignment.</span></span>
-  
-## <a name="object-initializers-with-anonymous-types"></a><span data-ttu-id="17a64-109">Inizializzatori di oggetto con tipi anonimi</span><span class="sxs-lookup"><span data-stu-id="17a64-109">Object Initializers with anonymous types</span></span>  
- <span data-ttu-id="17a64-110">Anche se gli inizializzatori di oggetto possono essere usati in qualsiasi contesto, sono particolarmente utili nelle espressioni di query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="17a64-110">Although object initializers can be used in any context, they are especially useful in [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query expressions.</span></span> <span data-ttu-id="17a64-111">Le espressioni di query si avvalgono di frequente di [tipi anonimi](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md) che possono essere inizializzati solo con un inizializzatore di oggetto, come illustrato nella dichiarazione seguente.</span><span class="sxs-lookup"><span data-stu-id="17a64-111">Query expressions make frequent use of [anonymous types](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md), which can only be initialized by using an object initializer, as shown in the following declaration.</span></span>  
-  
+<span data-ttu-id="29f60-110">La sintassi degli inizializzatori di oggetto consente di creare un'istanza e dopo assegna l'oggetto appena creato, con le relative proprietà assegnate, alla variabile nell'assegnazione.</span><span class="sxs-lookup"><span data-stu-id="29f60-110">The object initializers syntax allows you to create an instance, and after that it assigns the newly created object, with its assigned properties, to the variable in the assignment.</span></span>
+
+<span data-ttu-id="29f60-111">A partire da C# 6, gli inizializzatori di oggetto possono impostare gli indicizzatori, oltre ad assegnare campi e proprietà.</span><span class="sxs-lookup"><span data-stu-id="29f60-111">Starting with C# 6, object initializers can set indexers, in addition to assigning fields and properties.</span></span> <span data-ttu-id="29f60-112">Si consideri questa classe `Matrix` di base:</span><span class="sxs-lookup"><span data-stu-id="29f60-112">Consider this basic `Matrix` class:</span></span>
+
+[!code-csharp[ObjectInitializer2](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#MatrixDeclaration)]  
+
+<span data-ttu-id="29f60-113">È possibile inizializzare la matrice di identità con il codice seguente:</span><span class="sxs-lookup"><span data-stu-id="29f60-113">You could initialize the identity matrix with the following code:</span></span>
+
+[!code-csharp[ObjectInitializer2a](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#MatrixInitialization)]  
+
+<span data-ttu-id="29f60-114">Qualsiasi indicizzatore accessibile che contiene un setter accessibile è utilizzabile come espressione in un inizializzatore di oggetto, indipendentemente dal numero o dai tipi degli argomenti.</span><span class="sxs-lookup"><span data-stu-id="29f60-114">Any accessible indexer that contains an accessible setter can be used as one of the expressions in an object initializer, regardless of the number or types of arguments.</span></span> <span data-ttu-id="29f60-115">Gli argomenti di indice formano il lato sinistro dell'assegnazione e il valore corrisponde al lato destro dell'espressione.</span><span class="sxs-lookup"><span data-stu-id="29f60-115">The index arguments form the left side of the assignment, and the value is the right side of the expression.</span></span>  <span data-ttu-id="29f60-116">Questi, ad esempio sono tutti validi se `IndexersExample` ha gli indicizzatori appropriati:</span><span class="sxs-lookup"><span data-stu-id="29f60-116">For example, these are all valid if `IndexersExample` has the appropriate indexers:</span></span>
+
+```csharp
+var thing = new IndexersExample {
+    name = "object one",
+    [1] = '1',
+    [2] = '4',
+    [3] = '9',
+    Baz = Math.PI,
+    ['C',4] = "Middle C"
+}
+```
+
+<span data-ttu-id="29f60-117">Perché la compilazione del codice precedente riesca, il tipo `IndexersExample` deve avere i membri seguenti:</span><span class="sxs-lookup"><span data-stu-id="29f60-117">For the preceding code to compile, the `IndexersExample` type must have the following members:</span></span>
+
+```csharp
+public string name;
+public double Size { set { ... }; }
+public char this[int i] { set { ... }; }
+public string this[char c, int i] {  set { ... }; }
+}
+```
+
+## <a name="object-initializers-with-anonymous-types"></a><span data-ttu-id="29f60-118">Inizializzatori di oggetto con tipi anonimi</span><span class="sxs-lookup"><span data-stu-id="29f60-118">Object Initializers with anonymous types</span></span>
+
+<span data-ttu-id="29f60-119">Anche se gli inizializzatori di oggetto possono essere usati in qualsiasi contesto, sono particolarmente utili nelle espressioni di query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="29f60-119">Although object initializers can be used in any context, they are especially useful in [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query expressions.</span></span> <span data-ttu-id="29f60-120">Le espressioni di query si avvalgono di frequente di [tipi anonimi](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md) che possono essere inizializzati solo con un inizializzatore di oggetto, come illustrato nella dichiarazione seguente.</span><span class="sxs-lookup"><span data-stu-id="29f60-120">Query expressions make frequent use of [anonymous types](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md), which can only be initialized by using an object initializer, as shown in the following declaration.</span></span>  
+
 ```csharp
 var pet = new { Age = 10, Name = "Fluffy" };  
-```  
+```
+
+<span data-ttu-id="29f60-121">I tipi anonimi consentono alla clausola `select` in un'espressione di query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] di trasformare gli oggetti della sequenza originale in oggetti i cui valori e la cui forma potrebbero essere diversi dall'originale.</span><span class="sxs-lookup"><span data-stu-id="29f60-121">Anonymous types enable the `select` clause in a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query expression to transform objects of the original sequence into objects whose value and shape may differ from the original.</span></span> <span data-ttu-id="29f60-122">Questo è utile se si desidera archiviare solo una parte delle informazioni di ogni oggetto di una sequenza.</span><span class="sxs-lookup"><span data-stu-id="29f60-122">This is useful if you want to store only a part of the information from each object in a sequence.</span></span> <span data-ttu-id="29f60-123">Nell'esempio seguente, si supponga che un oggetto prodotto (`p`) contenga diversi campi e metodi e che si sia interessati a creare solo una sequenza di oggetti che contengono il nome e il prezzo unitario del prodotto.</span><span class="sxs-lookup"><span data-stu-id="29f60-123">In the following example, assume that a product object (`p`) contains many fields and methods, and that you are only interested in creating a sequence of objects that contain the product name and the unit price.</span></span>  
   
- <span data-ttu-id="17a64-112">I tipi anonimi consentono alla clausola `select` in un'espressione di query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] di trasformare gli oggetti della sequenza originale in oggetti i cui valori e la cui forma potrebbero essere diversi dall'originale.</span><span class="sxs-lookup"><span data-stu-id="17a64-112">Anonymous types enable the `select` clause in a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query expression to transform objects of the original sequence into objects whose value and shape may differ from the original.</span></span> <span data-ttu-id="17a64-113">Questo è utile se si desidera archiviare solo una parte delle informazioni di ogni oggetto di una sequenza.</span><span class="sxs-lookup"><span data-stu-id="17a64-113">This is useful if you want to store only a part of the information from each object in a sequence.</span></span> <span data-ttu-id="17a64-114">Nell'esempio seguente, si supponga che un oggetto prodotto (`p`) contenga diversi campi e metodi e che si sia interessati a creare solo una sequenza di oggetti che contengono il nome e il prezzo unitario del prodotto.</span><span class="sxs-lookup"><span data-stu-id="17a64-114">In the following example, assume that a product object (`p`) contains many fields and methods, and that you are only interested in creating a sequence of objects that contain the product name and the unit price.</span></span>  
-  
- [!code-csharp[csProgGuideLINQ#40](../../../csharp/programming-guide/arrays/codesnippet/CSharp/object-and-collection-initializers_3.cs)]  
-  
- <span data-ttu-id="17a64-115">Quando questa query verrà eseguita, la variabile `productInfos` conterrà una sequenza di oggetti a cui sarà possibile accedere in un'istruzione `foreach` come illustrato in questo esempio:</span><span class="sxs-lookup"><span data-stu-id="17a64-115">When this query is executed, the `productInfos` variable will contain a sequence of objects that can be accessed in a `foreach` statement as shown in this example:</span></span>  
-  
+[!code-csharp[ObjectInitializer3](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#AnonymousUse)]  
+
+<span data-ttu-id="29f60-124">Quando questa query verrà eseguita, la variabile `productInfos` conterrà una sequenza di oggetti a cui sarà possibile accedere in un'istruzione `foreach` come illustrato in questo esempio:</span><span class="sxs-lookup"><span data-stu-id="29f60-124">When this query is executed, the `productInfos` variable will contain a sequence of objects that can be accessed in a `foreach` statement as shown in this example:</span></span>  
+
 ```csharp
 foreach(var p in productInfos){...}  
-```  
-  
- <span data-ttu-id="17a64-116">Ogni oggetto nel nuovo tipo anonimo dispone di due proprietà pubbliche che ricevono gli stessi nomi delle proprietà o dei campi nell'oggetto originale.</span><span class="sxs-lookup"><span data-stu-id="17a64-116">Each object in the new anonymous type has two public properties which receive the same names as the properties or fields in the original object.</span></span> <span data-ttu-id="17a64-117">È inoltre possibile rinominare un campo mentre si crea un tipo anonimo. Nell'esempio seguente il campo `UnitPrice` viene rinominato in `Price`.</span><span class="sxs-lookup"><span data-stu-id="17a64-117">You can also rename a field when you are creating an anonymous type; the following example renames the `UnitPrice` field to `Price`.</span></span>  
-  
+```
+
+<span data-ttu-id="29f60-125">Ogni oggetto nel nuovo tipo anonimo dispone di due proprietà pubbliche che ricevono gli stessi nomi delle proprietà o dei campi nell'oggetto originale.</span><span class="sxs-lookup"><span data-stu-id="29f60-125">Each object in the new anonymous type has two public properties that receive the same names as the properties or fields in the original object.</span></span> <span data-ttu-id="29f60-126">È inoltre possibile rinominare un campo mentre si crea un tipo anonimo. Nell'esempio seguente il campo `UnitPrice` viene rinominato in `Price`.</span><span class="sxs-lookup"><span data-stu-id="29f60-126">You can also rename a field when you are creating an anonymous type; the following example renames the `UnitPrice` field to `Price`.</span></span>  
+
 ```csharp
 select new {p.ProductName, Price = p.UnitPrice};  
-```  
+```
+
+## <a name="collection-initializers"></a><span data-ttu-id="29f60-127">Inizializzatori di raccolta</span><span class="sxs-lookup"><span data-stu-id="29f60-127">Collection initializers</span></span>
+
+<span data-ttu-id="29f60-128">Gli inizializzatori di raccolta consentono di specificare uno o più inizializzatori di elemento quando si inizializza un tipo di raccolta che implementa <xref:System.Collections.IEnumerable> e ha un metodo `Add` con una firma appropriata come metodo di istanza o metodo di estensione.</span><span class="sxs-lookup"><span data-stu-id="29f60-128">Collection initializers let you specify one or more element initializers when you initialize a collection type that implements <xref:System.Collections.IEnumerable> and has `Add` with the appropriate signature as an instance method or an extension method.</span></span> <span data-ttu-id="29f60-129">Gli inizializzatori di elemento possono essere valori semplici, espressioni o inizializzatori di oggetto.</span><span class="sxs-lookup"><span data-stu-id="29f60-129">The element initializers can be a simple value, an expression, or an object initializer.</span></span> <span data-ttu-id="29f60-130">Se si usa un inizializzatore di insieme, non è necessario specificare più chiamate, in quanto le chiamate vengono aggiunte dal compilatore automaticamente.</span><span class="sxs-lookup"><span data-stu-id="29f60-130">By using a collection initializer, you do not have to specify multiple calls; the compiler adds the calls automatically.</span></span>  
   
-## <a name="collection-initializers"></a><span data-ttu-id="17a64-118">Inizializzatori di raccolta</span><span class="sxs-lookup"><span data-stu-id="17a64-118">Collection initializers</span></span>  
- <span data-ttu-id="17a64-119">Gli inizializzatori di raccolta consentono di specificare uno o più inizializzatori di elemento quando si inizializza un tipo di raccolta che implementa <xref:System.Collections.IEnumerable> e ha un metodo `Add` con una firma appropriata come metodo di istanza o metodo di estensione.</span><span class="sxs-lookup"><span data-stu-id="17a64-119">Collection initializers let you specify one or more element initializers when you initialize a collection type that implements <xref:System.Collections.IEnumerable> and has `Add` with the appropriate signature as an instance method or an extension method.</span></span> <span data-ttu-id="17a64-120">Gli inizializzatori di elemento possono essere un semplice valore, un'espressione o un inizializzatore di oggetto.</span><span class="sxs-lookup"><span data-stu-id="17a64-120">The element initializers can be a simple value, an expression or an object initializer.</span></span> <span data-ttu-id="17a64-121">Se si utilizza un inizializzatore di raccolta, non è necessario specificare più chiamate al metodo `Add` della classe nel codice sorgente, in quanto le chiamate vengono aggiunte dal compilatore.</span><span class="sxs-lookup"><span data-stu-id="17a64-121">By using a collection initializer you do not have to specify multiple calls to the `Add` method of the class in your source code; the compiler adds the calls.</span></span>  
-  
- <span data-ttu-id="17a64-122">Negli esempi seguenti vengono illustrati due semplici inizializzatori di raccolta:</span><span class="sxs-lookup"><span data-stu-id="17a64-122">The following examples shows two simple collection initializers:</span></span>  
-  
+<span data-ttu-id="29f60-131">L'esempio seguente illustrati due inizializzatori di insieme semplici:</span><span class="sxs-lookup"><span data-stu-id="29f60-131">The following example shows two simple collection initializers:</span></span>  
+
 ```csharp
 List<int> digits = new List<int> { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };  
 List<int> digits2 = new List<int> { 0 + 1, 12 % 3, MakeInt() };  
-```  
-  
- <span data-ttu-id="17a64-123">Nell'inizializzatore di raccolta riportato di seguito vengono utilizzati inizializzatori di oggetto per inizializzare oggetti della classe `Cat` definiti in un esempio precedente.</span><span class="sxs-lookup"><span data-stu-id="17a64-123">The following collection initializer uses object initializers to initialize objects of the `Cat` class defined in a previous example.</span></span> <span data-ttu-id="17a64-124">Si noti che i singoli inizializzatori di oggetto sono racchiusi tra parentesi e separati da virgole.</span><span class="sxs-lookup"><span data-stu-id="17a64-124">Note that the individual object initializers are enclosed in braces and separated by commas.</span></span>  
-  
- [!code-csharp[csProgGuideLINQ#41](../../../csharp/programming-guide/arrays/codesnippet/CSharp/object-and-collection-initializers_4.cs)]  
-  
- <span data-ttu-id="17a64-125">È possibile specificare [null](../../../csharp/language-reference/keywords/null.md) come elemento in un inizializzatore di insieme se il metodo `Add` della raccolta lo consente.</span><span class="sxs-lookup"><span data-stu-id="17a64-125">You can specify [null](../../../csharp/language-reference/keywords/null.md) as an element in a collection initializer if the collection's `Add` method allows it.</span></span>  
-  
- [!code-csharp[csProgGuideLINQ#42](../../../csharp/programming-guide/arrays/codesnippet/CSharp/object-and-collection-initializers_5.cs)]  
-  
- <span data-ttu-id="17a64-126">È possibile specificare elementi indicizzati se la raccolta supporta l'indicizzazione.</span><span class="sxs-lookup"><span data-stu-id="17a64-126">You can specify indexed elements if the collection supports indexing.</span></span>  
-  
-```csharp
-var numbers = new Dictionary<int, string> {   
-    [7] = "seven",   
-    [9] = "nine",   
-    [13] = "thirteen"   
-};  
-```  
-  
-## <a name="examples"></a><span data-ttu-id="17a64-127">Esempi</span><span class="sxs-lookup"><span data-stu-id="17a64-127">Examples</span></span>
+```
 
- <span data-ttu-id="17a64-128">L'esempio seguente unisce i concetti di inizializzatori di oggetto e di insieme.</span><span class="sxs-lookup"><span data-stu-id="17a64-128">The following example combines the concepts of object and collection initializers.</span></span>
+<span data-ttu-id="29f60-132">Nell'inizializzatore di raccolta riportato di seguito vengono utilizzati inizializzatori di oggetto per inizializzare oggetti della classe `Cat` definiti in un esempio precedente.</span><span class="sxs-lookup"><span data-stu-id="29f60-132">The following collection initializer uses object initializers to initialize objects of the `Cat` class defined in a previous example.</span></span> <span data-ttu-id="29f60-133">Si noti che i singoli inizializzatori di oggetto sono racchiusi tra parentesi e separati da virgole.</span><span class="sxs-lookup"><span data-stu-id="29f60-133">Note that the individual object initializers are enclosed in braces and separated by commas.</span></span>  
+  
+[!code-csharp[ListInitializer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#ListInitializer)]  
+  
+<span data-ttu-id="29f60-134">È possibile specificare [null](../../language-reference/keywords/null.md) come elemento in un inizializzatore di insieme se il metodo `Add` della raccolta lo consente.</span><span class="sxs-lookup"><span data-stu-id="29f60-134">You can specify [null](../../language-reference/keywords/null.md) as an element in a collection initializer if the collection's `Add` method allows it.</span></span>  
+  
+[!code-csharp[ListInitializerNull](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#ListInitialerWithNull)]  
+  
+ <span data-ttu-id="29f60-135">È possibile specificare elementi indicizzati se la raccolta supporta l'indicizzazione in lettura/scrittura.</span><span class="sxs-lookup"><span data-stu-id="29f60-135">You can specify indexed elements if the collection supports read / write indexing.</span></span>
+  
+[!code-csharp[DictionaryInitializer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#DictionaryIndexerInitializer)]  
 
- [!code-csharp[csProgGuideLINQ#46](../../../csharp/programming-guide/arrays/codesnippet/CSharp/object-and-collection-initializers_6.cs)]  
- 
- <span data-ttu-id="17a64-129">Come mostrato nell'esempio seguente, un oggetto che implementa <xref:System.Collections.IEnumerable> contenente un metodo `Add` con più parametri consente inizializzatori di insieme con più elementi per ogni elemento nell'elenco corrispondente alla firma del metodo `Add`.</span><span class="sxs-lookup"><span data-stu-id="17a64-129">Shown in the following example, an object which implements <xref:System.Collections.IEnumerable> containing an `Add` method with multiple parameters allows for collection initializers with multiple elements per item in the list corresponding to the signature of the `Add` method.</span></span> 
- 
- [!code-csharp[csProgGuideLINQ#84](../../../csharp/programming-guide/arrays/codesnippet/CSharp/object-and-collection-initializers_7.cs)]
- 
- <span data-ttu-id="17a64-130">I metodi `Add` possono usare la parola chiave `params` per accettare un numero variabile di argomenti, come illustrato nell'esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="17a64-130">`Add` methods can use the `params` keyword to take a variable number of arguments as shown in the following example.</span></span> <span data-ttu-id="17a64-131">Questo esempio illustra l'implementazione personalizzata di un indicizzatore nonché l'inizializzazione di un insieme tramite indici.</span><span class="sxs-lookup"><span data-stu-id="17a64-131">This example demonstrates the custom implementation of an indexer as well to initialize a collection using indexes.</span></span>
- 
- [!code-csharp[csProgGuideLINQ#85](../../../csharp/programming-guide/arrays/codesnippet/CSharp/object-and-collection-initializers_8.cs)]
- 
-## <a name="see-also"></a><span data-ttu-id="17a64-132">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="17a64-132">See Also</span></span>
+<span data-ttu-id="29f60-136">L'esempio precedente genera codice che chiama <xref:System.Collections.Generic.Dictionary%602.Item(%600)> per impostare i valori.</span><span class="sxs-lookup"><span data-stu-id="29f60-136">The preceding sample generates code that calls the <xref:System.Collections.Generic.Dictionary%602.Item(%600)> to set the values.</span></span> <span data-ttu-id="29f60-137">A partire da C# 6, è possibile inizializzare dizionari e altri contenitori associativi usando la sintassi seguente.</span><span class="sxs-lookup"><span data-stu-id="29f60-137">Beginning with C# 6, you can initialize dictionaries and other associative containers using the following syntax.</span></span> <span data-ttu-id="29f60-138">Si noti che anziché la sintassi degli indicizzatori, con le parentesi e un'assegnazione, viene usato un oggetto con più valori:</span><span class="sxs-lookup"><span data-stu-id="29f60-138">Notice that instead of indexer syntax, with parentheses and an assignment, it uses an object with multiple values:</span></span>
 
-- [<span data-ttu-id="17a64-133">Guida per programmatori C#</span><span class="sxs-lookup"><span data-stu-id="17a64-133">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="17a64-134">Espressioni di query LINQ</span><span class="sxs-lookup"><span data-stu-id="17a64-134">LINQ Query Expressions</span></span>](../../../csharp/programming-guide/linq-query-expressions/index.md)  
-- [<span data-ttu-id="17a64-135">Tipi anonimi</span><span class="sxs-lookup"><span data-stu-id="17a64-135">Anonymous Types</span></span>](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)
+[!code-csharp[DictionaryAddInitializer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#DictionaryAddInitializer)]  
+
+<span data-ttu-id="29f60-139">Questo esempio di inizializzatore chiama <xref:System.Collections.Generic.Dictionary%602.Add(%600,%601)> per aggiungere i tre elementi nel dizionario.</span><span class="sxs-lookup"><span data-stu-id="29f60-139">This initializer example calls <xref:System.Collections.Generic.Dictionary%602.Add(%600,%601)> to add the three items into the dictionary.</span></span> <span data-ttu-id="29f60-140">Questi due modi diversi di inizializzazione delle raccolte associative hanno un comportamento leggermente diverso a causa delle chiamate di metodo generate dal compilatore.</span><span class="sxs-lookup"><span data-stu-id="29f60-140">These two different ways to initialize associative collections have slightly different behavior because of the method calls the compiler generates.</span></span> <span data-ttu-id="29f60-141">Con la classe `Dictionary` funzionano entrambe le varianti.</span><span class="sxs-lookup"><span data-stu-id="29f60-141">Both variants work with the `Dictionary` class.</span></span> <span data-ttu-id="29f60-142">È possibile che altri tipi supportino l'uno o l'altro in base all'API pubblica usata.</span><span class="sxs-lookup"><span data-stu-id="29f60-142">Other types may only support one or the other based on their public API.</span></span>
+
+## <a name="examples"></a><span data-ttu-id="29f60-143">Esempi</span><span class="sxs-lookup"><span data-stu-id="29f60-143">Examples</span></span>
+
+<span data-ttu-id="29f60-144">L'esempio seguente unisce i concetti di inizializzatori di oggetto e di insieme.</span><span class="sxs-lookup"><span data-stu-id="29f60-144">The following example combines the concepts of object and collection initializers.</span></span>
+
+[!code-csharp-interactive[InitializerExample](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#FullExample)]  
+
+<span data-ttu-id="29f60-145">L'esempio seguente illustra un oggetto che implementa <xref:System.Collections.IEnumerable> e contiene un metodo `Add` con più parametri. Usa un inizializzatore di insieme con più elementi per ogni voce nell'elenco corrispondente alla firma del metodo `Add`.</span><span class="sxs-lookup"><span data-stu-id="29f60-145">The following example shows an object that implements <xref:System.Collections.IEnumerable> and contains an `Add` method with multiple parameters, It uses a collection initializer with multiple elements per item in the list that correspond to the signature of the `Add` method.</span></span>
+
+[!code-csharp-interactive[InitializerListExample](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#FullListExample)]  
+
+<span data-ttu-id="29f60-146">I metodi `Add` possono usare la parola chiave `params` per accettare un numero variabile di argomenti, come illustrato nell'esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="29f60-146">`Add` methods can use the `params` keyword to take a variable number of arguments, as shown in the following example.</span></span> <span data-ttu-id="29f60-147">Questo esempio illustra anche l'implementazione personalizzata di un indicizzatore per l'inizializzazione di un insieme tramite indici.</span><span class="sxs-lookup"><span data-stu-id="29f60-147">This example also demonstrates the custom implementation of an indexer to initialize a collection using indexes.</span></span>
+
+[!code-csharp-interactive[InitializerListExample](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#FullDictionaryInitializer)]  
+
+## <a name="see-also"></a><span data-ttu-id="29f60-148">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="29f60-148">See Also</span></span>
+
+- [<span data-ttu-id="29f60-149">Guida per programmatori C#</span><span class="sxs-lookup"><span data-stu-id="29f60-149">C# Programming Guide</span></span>](../index.md)  
+- [<span data-ttu-id="29f60-150">Espressioni di query LINQ</span><span class="sxs-lookup"><span data-stu-id="29f60-150">LINQ Query Expressions</span></span>](../linq-query-expressions/index.md)  
+- [<span data-ttu-id="29f60-151">Tipi anonimi</span><span class="sxs-lookup"><span data-stu-id="29f60-151">Anonymous Types</span></span>](anonymous-types.md)
