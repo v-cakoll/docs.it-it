@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7ecce51f-db5f-4bd4-9321-cceb6fcb2a77
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b583df2eb6098fa28dd8999a6796e5053d13cab4
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 7ecdfff9d309a2e751d5f989760c42d6fa84fe99
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47114957"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54562518"
 ---
 # <a name="encrypting-data"></a>Crittografia dei dati
 La crittografia simmetrica e quella asimmetrica vengono eseguite usando processi diversi. La crittografia simmetrica viene eseguita sui flussi e di conseguenza è utile per crittografare grandi quantità di dati. La crittografia asimmetrica viene eseguita su un numero ridotto di byte e di conseguenza è utile solo per piccole quantità di dati.  
@@ -173,7 +173,7 @@ The connection failed.
 ## <a name="asymmetric-encryption"></a>Crittografia asimmetrica  
  Gli algoritmi asimmetrici vengono in genere usati per crittografare piccole quantità di dati, ad esempio per la crittografia di una chiave simmetrica e un vettore di inizializzazione. In genere, un utente che esegue la crittografia asimmetrica usa la chiave pubblica generata da un'altra parte. La classe <xref:System.Security.Cryptography.RSACryptoServiceProvider> viene fornita da .NET Framework a questo scopo.  
   
- L'esempio seguente usa le informazioni della chiave pubblica per crittografare una chiave simmetrica e un vettore di inizializzazione. Vengono inizializzate due matrici di byte che rappresentano la chiave pubblica di una terza parte. Viene inizializzato un oggetto <xref:System.Security.Cryptography.RSAParameters> su questi valori. Successivamente, il **RSAParameters** oggetto (insieme alla chiave pubblica che rappresenta) viene importato in un **RSACryptoServiceProvider** usando la <xref:System.Security.Cryptography.RSACryptoServiceProvider.ImportParameters%2A?displayProperty=nameWithType> (metodo). Vengono infine crittografati la chiave privata e il vettore di inizializzazione creati da una classe <xref:System.Security.Cryptography.RijndaelManaged> . Per questo esempio, è necessario che nei sistemi siano installati strumenti di crittografia a 128 bit.  
+ L'esempio seguente usa le informazioni della chiave pubblica per crittografare una chiave simmetrica e un vettore di inizializzazione. Vengono inizializzate due matrici di byte che rappresentano la chiave pubblica di una terza parte. Viene inizializzato un oggetto <xref:System.Security.Cryptography.RSAParameters> su questi valori. Quindi, l'oggetto **RSAParameters** (insieme alla chiave pubblica che rappresenta) viene importato in un oggetto **RSACryptoServiceProvider** usando il metodo <xref:System.Security.Cryptography.RSACryptoServiceProvider.ImportParameters%2A?displayProperty=nameWithType> . Vengono infine crittografati la chiave privata e il vettore di inizializzazione creati da una classe <xref:System.Security.Cryptography.RijndaelManaged> . Per questo esempio, è necessario che nei sistemi siano installati strumenti di crittografia a 128 bit.  
   
 ```vb  
 Imports System  
@@ -264,6 +264,6 @@ class Class1
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Generazione di chiavi per crittografia e decrittografia](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)  
-- [Decrittografia di dati](../../../docs/standard/security/decrypting-data.md)  
+- [Generazione di chiavi per crittografia e decrittografia](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)
+- [Decrittografia di dati](../../../docs/standard/security/decrypting-data.md)
 - [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)

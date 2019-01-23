@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: fb854070-248b-46cf-9dab-c322e2b4d624
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f850ec24530dd9a7d80f826461cacd9c249dd0de
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a5503e89006411887de9b0def929ac1155df5aa4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397988"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54537257"
 ---
 # <a name="ltsubtypesgt-element-net-native"></a>Elemento &lt;Subtypes&gt; (.NET Native)
 Applica i criteri di runtime a tutte le classi ereditate per il tipo contenitore.  
@@ -89,8 +89,8 @@ Applica i criteri di runtime a tutte le classi ereditate per il tipo contenitore
   
  [!code-csharp[ProjectN_Reflection#5](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/subtypes.cs#5)]  
   
-## <a name="see-also"></a>Vedere anche  
- [\<Tipo > elemento](../../../docs/framework/net-native/type-element-net-native.md)  
- [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [Elementi direttiva di runtime](../../../docs/framework/net-native/runtime-directive-elements.md)  
- [Impostazioni dei criteri delle direttive di runtime](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+## <a name="see-also"></a>Vedere anche
+- [\<Tipo > elemento](../../../docs/framework/net-native/type-element-net-native.md)
+- [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Elementi direttiva di runtime](../../../docs/framework/net-native/runtime-directive-elements.md)
+- [Impostazioni dei criteri delle direttive di runtime](../../../docs/framework/net-native/runtime-directive-policy-settings.md)

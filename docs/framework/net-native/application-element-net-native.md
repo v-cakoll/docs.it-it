@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: b4e9b37a-059b-4076-8f56-cb3f9cef0cd9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 60145611981b53d4778e7c52c6138b6a9b58a592
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 557b8a91c969a4c7e7b7a10c2117659a75ef9008
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394634"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54537291"
 ---
 # <a name="ltapplicationgt-element-net-native"></a>Elemento &lt;Application&gt; (.NET Native)
 Funge da contenitore per i tipi a livello di applicazione e i membri del tipo i cui metadati sono disponibili per la reflection in fase di esecuzione e applica criteri di reflection di runtime a tutti gli elementi del programma in un'applicazione.  
@@ -85,8 +85,8 @@ Elemento \<Application> (rd.xml)
   
 -   Come elemento che imposta i criteri a livello di applicazione per la reflection, la serializzazione e l'interoperabilità. Gli attributi dell'elemento `<Application>` definiscono i criteri a livello di applicazione, che possono essere sottoposti a override da elementi figlio definiti dall'elemento `<Application>` o [\<Library>](../../../docs/framework/net-native/library-element-net-native.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [\<Libreria > elemento](../../../docs/framework/net-native/library-element-net-native.md)  
- [\<Direttive > elemento](../../../docs/framework/net-native/directives-element-net-native.md)  
- [Elementi direttiva di runtime](../../../docs/framework/net-native/runtime-directive-elements.md)  
- [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+## <a name="see-also"></a>Vedere anche
+- [\<Libreria > elemento](../../../docs/framework/net-native/library-element-net-native.md)
+- [\<Direttive > elemento](../../../docs/framework/net-native/directives-element-net-native.md)
+- [Elementi direttiva di runtime](../../../docs/framework/net-native/runtime-directive-elements.md)
+- [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)

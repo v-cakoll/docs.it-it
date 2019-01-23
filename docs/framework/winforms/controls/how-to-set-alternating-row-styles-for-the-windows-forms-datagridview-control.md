@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: impostare stili di righe alterne per il controllo DataGridView di Windows Form'
+title: 'Procedura: Impostare stili di righe alterne per il controllo DataGridView di Windows Form'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - data grids [Windows Forms], row styles
 - rows [Windows Forms], data grids
 ms.assetid: 699ef759-458c-426d-ac87-7c7e71b018ae
-ms.openlocfilehash: 9d8c926935b879911d1503579c655a1ab6074681
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ba5aaec9e66f1d3c66bb50709f6fbd4afde893ae
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525296"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54562726"
 ---
-# <a name="how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control"></a>Procedura: impostare stili di righe alterne per il controllo DataGridView di Windows Form
+# <a name="how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control"></a>Procedura: Impostare stili di righe alterne per il controllo DataGridView di Windows Form
 I dati tabulari si presentano spesso agli utenti in un formato di tipo registro, in cui le righe alternano colori di sfondo diversi. Questo formato permette agli utenti di individuare più facilmente le celle di ogni riga, soprattutto nelle tabelle estese in larghezza con molte colonne.  
   
  Con il controllo <xref:System.Windows.Forms.DataGridView>, è possibile specificare informazioni di stile complete per le righe alterne. Sarà quindi possibile usare caratteristiche di stile, come il colore primo piano e il tipo di carattere, oltre al colore di sfondo, per differenziare le righe alterne.  
   
- Questa attività è supportata in Visual Studio.  Vedere anche [procedura: impostare stili di righe alterne per il Windows Forms DataGridView controllo usando la finestra di progettazione](https://msdn.microsoft.com/library/3z9sk148\(v=vs.110\)).  
+ Questa attività è supportata in Visual Studio.  Vedere anche [come: Impostare stili di righe alterne per il Windows Form controllo DataGridView utilizzando la finestra di progettazione](https://msdn.microsoft.com/library/3z9sk148\(v=vs.110\)).  
   
 ### <a name="to-set-alternating-row-styles-programmatically"></a>Per impostare stili di righe alterne a livello di codice  
   
@@ -43,12 +43,12 @@ I dati tabulari si presentano spesso agli utenti in un formato di tipo registro,
 ## <a name="robust-programming"></a>Programmazione efficiente  
  Per la massima scalabilità, è opportuno condividere gli oggetti <xref:System.Windows.Forms.DataGridViewCellStyle> su più righe, colonne o celle che usano lo stesso stile anziché impostare separatamente le proprietà di stile per ogni elemento. Per altre informazioni, vedere [procedure consigliate per ridimensionare il controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.DataGridView>  
- <xref:System.Windows.Forms.DataGridViewCellStyle>  
- [Formattazione e stile di base nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)  
- [Stili delle celle nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)  
- [Procedure consigliate per ridimensionare il controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md)  
- [Procedura: Impostare gli stili di carattere e colore nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.DataGridView>
+- <xref:System.Windows.Forms.DataGridViewCellStyle>
+- [Formattazione e stile di base nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)
+- [Stili delle celle nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)
+- [Procedure consigliate per ridimensionare il controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md)
+- [Procedura: Impostare gli stili di colore e tipo di carattere nel controllo DataGridView Windows Form](../../../../docs/framework/winforms/controls/how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control.md)

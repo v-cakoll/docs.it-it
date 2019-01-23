@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <webProxyScript> element
 - webProxyScript element
 ms.assetid: a13c26db-6218-4af3-9696-38f24b23bfac
-ms.openlocfilehash: 683c4c5e3f3f62d947ce244c66cc590eabe64f17
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 580fcb17c16c4f5de137b8aa298db68c44867c52
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195788"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54536269"
 ---
 # <a name="ltwebproxyscriptgt-element-network-settings"></a>&lt;webProxyScript&gt; (impostazioni di rete)
 Consente di configurare le caratteristiche dello script utilizzato per individuare i proxy Web.  
@@ -21,7 +21,7 @@ Consente di configurare le caratteristiche dello script utilizzato per individua
  \<configuration>  
 \<system.net>  
 \<Impostazioni >  
-\<webProxyScript >  
+\<webProxyScript>  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -47,12 +47,12 @@ Consente di configurare le caratteristiche dello script utilizzato per individua
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[Impostazioni](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Configura le opzioni di rete di base per lo spazio dei nomi <xref:System.Net>.|  
+|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Configura le opzioni di rete di base per lo spazio dei nomi <xref:System.Net>.|  
   
 ## <a name="remarks"></a>Note  
   
 ## <a name="configuration-files"></a>File di configurazione  
  Questo elemento può essere usato nel file di configurazione dell'applicazione o nel file di configurazione del computer (Machine.config).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedere anche
 - [Schema delle impostazioni di rete](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

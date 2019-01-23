@@ -2,12 +2,12 @@
 title: Esecuzione degli esempi di Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: db8a83da-95c1-4a21-a9d2-48caeb6398ea
-ms.openlocfilehash: 3e49a88fa5369cc2ad2251e48f3eca74fa7c4445
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 3ae982b49a0d54d59d889166375938560c0d0d1b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836914"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54535881"
 ---
 # <a name="running-the-windows-communication-foundation-samples"></a>Esecuzione degli esempi di Windows Communication Foundation
 Gli esempi di Windows Communication Foundation (WCF) possono essere eseguiti in una configurazione con singolo computer o tra computer. Nel modo in cui sono forniti, essi sono pronti per essere eseguiti su un solo computer. In una configurazione a più computer, è necessario modificare le impostazioni del file di configurazione di un esempio. Le procedure descritte di seguito spiegano come eseguire un esempio nello stesso computer e configurazioni su più computer. Notare che ci sono variazioni nei passaggi per servizi ospitati su Internet Information Services (IIS) e gli esempi indipendenti. La maggior parte degli esempi sono ospitati su IIS; vedere le informazioni leggimi dell'esempio per determinare come viene ospitato l'esempio.  
@@ -25,7 +25,7 @@ Gli esempi di Windows Communication Foundation (WCF) possono essere eseguiti in 
   
 3.  Eseguire Client.exe da \Client\Bin.\\, che si trova sotto la cartella specifica del linguaggio. L'attività del client viene visualizzata nella finestra della console client.  
   
-4.  Se il client e il servizio non è in grado di comunicare, vedere [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+4.  Se il client e il servizio non possono comunicare, vedere [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 ### <a name="to-run-the-sample-across-machines"></a>Per eseguire l'esempio tra più computer  
   
@@ -79,7 +79,7 @@ Gli esempi di Windows Communication Foundation (WCF) possono essere eseguiti in 
   
 -   Se il servizio è ospitato su IIS, per motivi di sicurezza, rimuovere la definizione della directory virtuale e le autorizzazioni concesse durante l'installazione quando si è finito di lavorare con gli esempi eseguendo il file batch denominato Cleanupvroot.bat.  
   
-## <a name="see-also"></a>Vedere anche  
- [Generazione degli esempi Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md)  
- [Esecuzione degli esempi di un gruppo di lavoro e tra più computer](https://msdn.microsoft.com/library/a451a525-e7ce-452d-9da9-620221260113)  
- [Suggerimenti per la risoluzione dei problemi](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)
+## <a name="see-also"></a>Vedere anche
+- [Generazione degli esempi Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md)
+- [Esecuzione degli esempi di un gruppo di lavoro e tra più computer](https://msdn.microsoft.com/library/a451a525-e7ce-452d-9da9-620221260113)
+- [Suggerimenti per la risoluzione dei problemi](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)

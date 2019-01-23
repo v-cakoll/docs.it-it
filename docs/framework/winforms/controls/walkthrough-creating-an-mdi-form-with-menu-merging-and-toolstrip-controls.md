@@ -1,5 +1,5 @@
 ---
-title: 'Procedura dettagliata: creazione di un form MDI con unione di menu e controlli ToolStrip'
+title: 'Procedura dettagliata: Creazione di un Form MDI con unione di Menu e controlli ToolStrip'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - MDI forms [Windows Forms], creating
 - MDI forms [Windows Forms], walkthroughs
 ms.assetid: fbab4221-74af-42d0-bbf4-3c97f7b2e544
-ms.openlocfilehash: 6236190340833e3f8810387e51ad53e1cb10d37b
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: 5924d37d946a8279297ecf479b621f6f827dd5a3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261628"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54536240"
 ---
-# <a name="walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls"></a>Procedura dettagliata: creazione di un form MDI con unione di menu e controlli ToolStrip
+# <a name="walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls"></a>Procedura dettagliata: Creazione di un Form MDI con unione di Menu e controlli ToolStrip
 Lo spazio dei nomi <xref:System.Windows.Forms?displayProperty=nameWithType> supporta le applicazioni MDI (Multiple Document Interface, interfaccia a documenti multipli), mentre il controllo <xref:System.Windows.Forms.MenuStrip> supporta l'unione di menu. I form MDI possono inoltre usare i controlli <xref:System.Windows.Forms.ToolStrip>.  
   
  Questa procedura dettagliata illustra come usare <xref:System.Windows.Forms.ToolStripPanel> controlli con un form MDI. Il form supporta anche l'unione dei menu con menu figlio. Nella procedura dettagliata vengono illustrate le attività seguenti:  
@@ -38,7 +38,7 @@ Lo spazio dei nomi <xref:System.Windows.Forms?displayProperty=nameWithType> supp
   
  Al termine, si avrà un form MDI che supporta l'unione di menu e movable <xref:System.Windows.Forms.ToolStrip> controlli.  
   
- Per copiare il codice in questo argomento come singolo listato, vedere [procedura: creare un Form MDI con unione di Menu e controlli ToolStrip](../../../../docs/framework/winforms/controls/how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls.md).  
+ Per copiare il codice in questo argomento come singolo listato, vedere [come: Creare un Form MDI con unione di Menu e controlli ToolStrip](../../../../docs/framework/winforms/controls/how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls.md).  
   
 > [!NOTE]
 >  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzare l'IDE di Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
@@ -107,7 +107,7 @@ Lo spazio dei nomi <xref:System.Windows.Forms?displayProperty=nameWithType> supp
   
 1.  Aggiungere un nuovo form denominato `ChildForm` al progetto.  
   
-     Per altre informazioni, vedere [procedura: aggiungere Windows Form a un progetto](https://msdn.microsoft.com/library/3d7bb25f-fd90-47cf-9378-fa0d764686c1).  
+     Per altre informazioni, vedere [Procedura: Aggiungi Windows Form a un progetto](https://msdn.microsoft.com/library/3d7bb25f-fd90-47cf-9378-fa0d764686c1).  
   
 2.  Dal **casella degli strumenti**, trascinare un <xref:System.Windows.Forms.MenuStrip> controllo nel form figlio.  
   
@@ -200,15 +200,15 @@ Lo spazio dei nomi <xref:System.Windows.Forms?displayProperty=nameWithType> supp
   
 -   Creare i menu di scelta rapida per i controlli con <xref:System.Windows.Forms.ContextMenuStrip>. Per altre informazioni, vedere [Cenni preliminari sul componente ContextMenu](../../../../docs/framework/winforms/controls/contextmenu-component-overview-windows-forms.md).  
   
--   Creato un form con un menu standard popolato automaticamente. Per altre informazioni, vedere [procedura dettagliata: inserimento di voci di Menu Standard in un Form](../../../../docs/framework/winforms/controls/walkthrough-providing-standard-menu-items-to-a-form.md).  
+-   Creato un form con un menu standard popolato automaticamente. Per altre informazioni, vedere [Procedura dettagliata: Inserimento di voci di Menu Standard in un Form](../../../../docs/framework/winforms/controls/walkthrough-providing-standard-menu-items-to-a-form.md).  
   
--   Assegnare il <xref:System.Windows.Forms.ToolStrip> controlla un aspetto professionale. Per altre informazioni, vedere [procedura: impostare il ToolStrip Renderer per un'applicazione](../../../../docs/framework/winforms/controls/how-to-set-the-toolstrip-renderer-for-an-application.md).  
+-   Assegnare il <xref:System.Windows.Forms.ToolStrip> controlla un aspetto professionale. Per altre informazioni, vedere [Procedura: Impostare il ToolStrip Renderer per un'applicazione](../../../../docs/framework/winforms/controls/how-to-set-the-toolstrip-renderer-for-an-application.md).  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Windows.Forms.MenuStrip>  
- <xref:System.Windows.Forms.ToolStrip>  
- <xref:System.Windows.Forms.StatusStrip>  
- [Procedura: Creare form padre MDI](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)  
- [Procedura: Creare form figlio MDI](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)  
- [Procedura: Inserire un MenuStrip in un menu a discesa MDI](../../../../docs/framework/winforms/controls/how-to-insert-a-menustrip-into-an-mdi-drop-down-menu-windows-forms.md)  
- [Controllo ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Windows.Forms.MenuStrip>
+- <xref:System.Windows.Forms.ToolStrip>
+- <xref:System.Windows.Forms.StatusStrip>
+- [Procedura: Creare form padre MDI](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)
+- [Procedura: Creare form figlio MDI](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)
+- [Procedura: Inserire un MenuStrip in un Menu a discesa MDI](../../../../docs/framework/winforms/controls/how-to-insert-a-menustrip-into-an-mdi-drop-down-menu-windows-forms.md)
+- [Controllo ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)

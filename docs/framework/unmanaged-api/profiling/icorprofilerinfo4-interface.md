@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 27cce8a77d4236829124b45650d5d0ac32a5150c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 78f9645ad31e7421e239089c5610f6523918228b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198003"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54536624"
 ---
 # <a name="icorprofilerinfo4-interface"></a>Interfaccia ICorProfilerInfo4
 Fornisce metodi che code profiler possono usare per comunicare con il common language runtime (CLR) per controllare il monitoraggio degli eventi e informazioni sulla richiesta. . Il `ICorProfilerInfo4` interfaccia è un'estensione di altro `ICorProfilerInfo` interfacce. Fornisce nuovi metodi per supportare la ricompilazione just-in-time (JIT), aggiunto nel [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
@@ -45,7 +45,7 @@ Fornisce metodi che code profiler possono usare per comunicare con il common lan
  CLR implementa i metodi dell'interfaccia `ICorProfilerInfo4` usando il modello a thread libero. Ogni metodo restituisce un valore HRESULT per indicare esito positivo o negativo. Per un elenco dei possibili codici restituiti, vedere il file CorError.h.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
@@ -53,6 +53,6 @@ Fornisce metodi che code profiler possono usare per comunicare con il common lan
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfacce di profilatura](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [Interfaccia ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfacce di profilatura](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [Interfaccia ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

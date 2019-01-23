@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: filtrare in un attributo (XPath-LINQ to XML) (Visual Basic)'
+title: 'Procedura: Filtro su un attributo (XPath-LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: ffefb9d6-45ec-4677-a396-dd9c2b36298f
-ms.openlocfilehash: ed9869045270cdc51388b192e8d6ab38005eba8e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ac494b2e453d48a40c2a9be6505d5deebc4a1235
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33641085"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54535866"
 ---
-# <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-visual-basic"></a>Procedura: filtrare in un attributo (XPath-LINQ to XML) (Visual Basic)
+# <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-visual-basic"></a>Procedura: Filtro su un attributo (XPath-LINQ to XML) (Visual Basic)
 In questo argomento viene illustrato come ottenere gli elementi discendente con un nome specificato e con un attributo con un valore specificato.  
   
  L'espressione XPath è:  
@@ -19,7 +19,7 @@ In questo argomento viene illustrato come ottenere gli elementi discendente con 
 ## <a name="example"></a>Esempio  
  In questo esempio vengono individuati tutti gli elementi discendente il cui nome è `Address` e in cui il valore dell'attributo `Type` è "Shipping".  
   
- Questo esempio usa il documento XML seguente: [File XML di esempio: più ordini di acquisto (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ Nell'esempio viene utilizzato il seguente documento XML:  [File XML di esempio: Più ordini di acquisto (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```vb  
 Dim po As XDocument = XDocument.Load("PurchaseOrders.xml")  
@@ -75,5 +75,5 @@ Results are identical
 </Address>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [LINQ to XML per gli utenti di XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a>Vedere anche
+- [LINQ to XML per gli utenti di XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

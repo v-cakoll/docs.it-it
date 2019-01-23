@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 777fa850fcab1d1a6191c605ecb2f2a181fddcc0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e44f84ed92f90a51ac1c5c7327d6de7b89887c7f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429919"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54536516"
 ---
 # <a name="ecustomdumpitemkind-enumeration"></a>Enumerazione ECustomDumpItemKind
-Riservato per un'estensione futura del [CustomDumpItem](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md) struttura.  
+Riservato per un'estensione futura della [CustomDumpItem](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md) struttura.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,14 +41,14 @@ typedef enum {
 |`DUMP_ITEM_None`|Riservato per utilizzi futuri.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Mscoree. H  
+ **Intestazione:** MSCorEE.h  
   
- **Libreria:** Mscoree. dll  
+ **Libreria:** MSCorEE.dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ICLRErrorReportingManager](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)  
- [Enumerazioni di hosting](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ICLRErrorReportingManager](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)
+- [Enumerazioni di hosting](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

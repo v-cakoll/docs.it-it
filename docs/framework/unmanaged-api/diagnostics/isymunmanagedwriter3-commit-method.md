@@ -17,11 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9e4e2cd49bdffd0a1293a5601cb44e4804e2b1ed
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 90ef45650b30fd57fb93d0e16eac6e34079745b1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54526236"
 ---
 # <a name="isymunmanagedwriter3commit-method"></a>Metodo ISymUnmanagedWriter3::Commit
 Conferma le modifiche apportate finora scritte nel flusso.  
@@ -33,10 +34,10 @@ HRESULT Commit();
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK se il metodo ha esito positivo. in caso contrario, E_FAIL o un altro codice di errore.  
+ S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o qualche altro codice di errore.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** CorSym. idl, CorSym.h  
+ **Intestazione:** CorSym.idl , CorSym.h  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ISymUnmanagedWriter3](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ISymUnmanagedWriter3](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-interface.md)

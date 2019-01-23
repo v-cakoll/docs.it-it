@@ -2,12 +2,12 @@
 title: Cenni preliminari sugli operatori di Query standard (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 302bd39e-2ec1-495b-94bf-37d370d6f05f
-ms.openlocfilehash: 27b144ae75054dbdc535b6ad894e4a5a0b8529e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1e665a9408deb5d5788301b1b24f39a4fd79fbc3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33653572"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54526496"
 ---
 # <a name="standard-query-operators-overview-visual-basic"></a>Cenni preliminari sugli operatori di Query standard (Visual Basic)
 Gli *operatori di query standard* sono metodi che costituiscono il modello LINQ. La maggior parte di questi metodi agisce sulle sequenze. Una sequenza è un oggetto il cui tipo implementa l'interfaccia <xref:System.Collections.Generic.IEnumerable%601> o l'interfaccia <xref:System.Linq.IQueryable%601>. Gli operatori di query standard forniscono le funzionalità di query che includono filtro, proiezione, aggregazione, ordinamento e altro ancora.  
@@ -64,7 +64,7 @@ MsgBox(output.ToString())
 ```  
   
 ## <a name="query-expression-syntax"></a>Sintassi delle espressioni di query  
- Alcuni degli operatori di query standard usati più di frequente dispongono di sintassi dedicata delle parole chiave per i linguaggi C# e Visual Basic che consente di chiamare gli operatori come parte di un'*espressione* di *query*. Per ulteriori informazioni sugli operatori di query standard che dedicate parole chiave e le relative sintassi, vedere [sintassi delle espressioni di Query per gli operatori Query Standard (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md).  
+ Alcuni degli operatori di query standard usati più di frequente dispongono di sintassi dedicata delle parole chiave per i linguaggi C# e Visual Basic che consente di chiamare gli operatori come parte di un'*espressione* di *query*. Per altre informazioni sugli operatori di query standard che sono parole chiave dedicate e le relative sintassi, vedere [sintassi di espressione di Query per operatori di Query Standard (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md).  
   
 ## <a name="extending-the-standard-query-operators"></a>Estensione degli operatori di query standard  
  È possibile estendere il set di operatori di query standard creando metodi specifici del dominio appropriati per la tecnologia o il dominio di destinazione. È possibile anche sostituire gli operatori di query standard con implementazioni personalizzate che forniscono servizi aggiuntivi, ad esempio la valutazione remota, la conversione delle query e l'ottimizzazione. Per un esempio, vedere <xref:System.Linq.Enumerable.AsEnumerable%2A>.  
@@ -74,19 +74,19 @@ MsgBox(output.ToString())
   
  [Ordinamento dei dati](../../../../visual-basic/programming-guide/concepts/linq/sorting-data.md)  
   
- [Operazioni sui set (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/set-operations.md)  
+ [Operazioni set (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/set-operations.md)  
   
- [Filtraggio dei dati (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/filtering-data.md)  
+ [Filtro dei dati (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/filtering-data.md)  
   
- [Operazioni quantificatore (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/quantifier-operations.md)  
+ [Operazioni del quantificatore (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/quantifier-operations.md)  
   
  [Operazioni di proiezione (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)  
   
- [Il partizionamento dei dati (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/partitioning-data.md)  
+ [Partizionamento dei dati (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/partitioning-data.md)  
   
- [Operazioni (Visual Basic) di join](../../../../visual-basic/programming-guide/concepts/linq/join-operations.md)  
+ [Join di operazioni (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/join-operations.md)  
   
- [Raggruppamento di dati (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/grouping-data.md)  
+ [Raggruppamento dei dati (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/grouping-data.md)  
   
  [Operazioni di generazione (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/generation-operations.md)  
   
@@ -94,16 +94,16 @@ MsgBox(output.ToString())
   
  [Operazioni sugli elementi (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/element-operations.md)  
   
- [La conversione dei tipi di dati (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/converting-data-types.md)  
+ [Conversione dei tipi di dati (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/converting-data-types.md)  
   
  [Operazioni di concatenazione (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/concatenation-operations.md)  
   
  [Operazioni di aggregazione (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/aggregation-operations.md)  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Linq.Enumerable>  
- <xref:System.Linq.Queryable>  
- [Introduzione a LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)  
- [Sintassi delle espressioni di query per gli operatori Query Standard (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)  
- [Classificazione degli operatori di Query Standard in base alla modalità di esecuzione (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)  
- [Metodi di estensione](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Linq.Enumerable>
+- <xref:System.Linq.Queryable>
+- [Introduzione a LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)
+- [Sintassi delle espressioni di query per operatori di Query Standard (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)
+- [Classificazione degli operatori Query Standard in base alla modalità di esecuzione (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)
+- [Metodi di estensione](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)

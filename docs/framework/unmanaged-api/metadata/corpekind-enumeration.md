@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b5869eb16bd768d58a6f27a83f2d8d51914a8aed
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3ab94bf7c55d4c19a4f3672ed86808575b8a2239
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443115"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54536915"
 ---
 # <a name="corpekind-enumeration"></a>Enumerazione CorPEKind
-Contiene valori che descrivono un file eseguibile portabile (PE), come restituito da una chiamata a [IMetaDataImport2:: GetPEKind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md).  
+Contiene valori che descrivono un file eseguibile portabile (PE), come restituito da una chiamata a [IMetaDataImport2::GetPEKind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -46,21 +46,21 @@ typedef enum CorPEKind {
 |Membro|Descrizione|  
 |------------|-----------------|  
 |`peNot`|Indica che questo non è un file PE.|  
-|`peILOnly`|Indica che il file PE contiene solo codice gestito.|  
-|`pe32BitRequired`|Indica che il file PE effettua chiamate Win32.|  
-|`pe32Plus`|Indica che il file PE viene eseguito su una piattaforma a 64 bit.|  
-|`pe32Unmanaged`|Indica che il file PE è codice nativo.|  
-|pe32BitPreferred|Indica che il file PE è indipendente dalla piattaforma e si preferisce essere caricati in un ambiente a 32 bit.|  
+|`peILOnly`|Indica che questo file PE contiene solo codice gestito.|  
+|`pe32BitRequired`|Indica che questo file PE effettua le chiamate a Win32.|  
+|`pe32Plus`|Indica che questo file PE viene eseguito su una piattaforma a 64 bit.|  
+|`pe32Unmanaged`|Indica che il file PE sia codice nativo.|  
+|pe32BitPreferred|Indica che il file PE è indipendente dalla piattaforma e preferite per poter essere caricato in un ambiente a 32 bit.|  
   
 ## <a name="remarks"></a>Note  
- Questi valori possono essere utilizzati in combinazioni bit per bit.  
+ Questi valori possono essere usati nelle combinazioni bit per bit.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorHdr. H  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Enumerazioni dei metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Vedere anche
+- [Enumerazioni dei metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

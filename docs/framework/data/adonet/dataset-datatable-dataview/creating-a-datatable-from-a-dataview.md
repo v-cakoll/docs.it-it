@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2d45cf41-d8ae-4409-af3e-a96a7e476d85
-ms.openlocfilehash: ccf95ff250cc7c23b1ff981087de0f1310472880
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: cda8693ad4f061d2260d4629b774c401b0daac26
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47424363"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54535944"
 ---
 # <a name="creating-a-datatable-from-a-dataview"></a>Creazione di un oggetto DataTable da un oggetto DataView
 Una volta recuperati i dati da un'origine dati e compilato un tipo <xref:System.Data.DataTable>, è possibile ordinare, filtrare o limitare i dati restituiti senza doverli recuperare nuovamente. Questo è reso possibile dalla classe <xref:System.Data.DataView>. Inoltre, se è necessario creare un nuovo <xref:System.Data.DataTable> dal <xref:System.Data.DataView>, è possibile utilizzare il <xref:System.Data.DataView.ToTable%2A> per copiare tutte le righe e colonne o un subset dei dati in un nuovo metodo <xref:System.Data.DataTable>. Il metodo <xref:System.Data.DataView.ToTable%2A> fornisce gli overload per:  
@@ -205,7 +205,7 @@ Console.WriteLine();
   
  }  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Data.DataView.ToTable%2A>  
- [DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Data.DataView.ToTable%2A>
+- [DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
+- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

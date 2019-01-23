@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 463bcf451574700d02f933d024ea5c24cedd259d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a3e6230d245ad36b8d5346aa3b6f8911ef008b61
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441815"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54526847"
 ---
 # <a name="loadstringrc-function"></a>Funzione LoadStringRC
-Converte un valore HRESULT in un messaggio di errore utilizzando le impostazioni cultura predefinite del thread corrente.  
+Converte un valore HRESULT in un messaggio di errore usando le impostazioni cultura predefinite del thread corrente.  
   
  Questa funzione è stata deprecata nel [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
   
@@ -44,7 +44,7 @@ HRESULT LoadStringRC (
  [in] Un valore HRESULT.  
   
  `szBuffer`  
- [out] Un buffer che contiene il messaggio di errore dopo il completamento.  
+ [out] Un buffer che contiene il messaggio di errore dopo il corretto completamento.  
   
  `iMax`  
  [in] Le dimensioni del buffer di messaggi di errore.  
@@ -53,7 +53,7 @@ HRESULT LoadStringRC (
  [in] Ignorato.  
   
 ## <a name="return-value"></a>Valore restituito  
- Questo metodo restituisce codici di errore standard del modello COM (Component Object), come definito nel file Winerror. H, oltre ai valori seguenti.  
+ Questo metodo restituisce codici di errore standard modello COM (Component Object), come definito nel file Winerror. H, oltre ai valori seguenti.  
   
 |Codice restituito|Descrizione|  
 |-----------------|-----------------|  
@@ -61,17 +61,17 @@ HRESULT LoadStringRC (
 |E_INVALIDARG|`szBuffer` è null o `iMax` è zero (0).|  
   
 ## <a name="remarks"></a>Note  
- Se il metodo non viene completata correttamente, `szBuffer` contiene una stringa vuota.  
+ Se il metodo non viene completato correttamente, `szBuffer` contiene una stringa vuota.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Mscoree. H  
+ **Intestazione:** MSCorEE.h  
   
- **Libreria:** Mscoree. dll e mscorwks. dll. Utilizzare MSCorEE.dll anziché Mscorwks.dll per assicurarsi che la versione corretta di .NET Framework di destinazione.  
+ **Libreria:** Mscoree. dll e mscorwks. dll. Usare Mscoree. dll invece di Mscorwks. dll per verificare che da usare come destinazione la versione corretta di .NET Framework.  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Funzione LoadStringRCEx](../../../../docs/framework/unmanaged-api/hosting/loadstringrcex-function.md)  
- [Funzioni di hosting CLR deprecate](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>Vedere anche
+- [Funzione LoadStringRCEx](../../../../docs/framework/unmanaged-api/hosting/loadstringrcex-function.md)
+- [Funzioni di hosting CLR deprecate](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

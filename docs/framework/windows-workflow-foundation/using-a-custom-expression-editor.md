@@ -2,19 +2,19 @@
 title: Utilizzo di un editor espressioni personalizzato
 ms.date: 03/30/2017
 ms.assetid: 0901b58b-e037-44a8-8281-f6f54361cfca
-ms.openlocfilehash: 4eb39fbd51cf4f1914f7fdca545f9c9fd8e83240
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3959fdb5b75ae6e48c19130cf6e825455d8f7103
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518577"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54526912"
 ---
 # <a name="using-a-custom-expression-editor"></a>Utilizzo di un editor espressioni personalizzato
 È possibile implementare un editor di espressioni personalizzato per fornire un'esperienza di modifica delle espressioni più dettagliata o più semplice. Esistono diversi scenari in cui è opportuno usare un editor di espressioni personalizzato:  
   
 -   Per fornire supporto per IntelliSense e altre funzionalità di modifica dettagliate in una finestra di progettazione flussi di lavoro riallocata. Questa funzionalità deve essere fornita perché l'editor di espressioni di Visual Studio predefinito non può essere usato in applicazioni riallocate.  
   
--   Per semplificare l'esperienza per gli utenti di analista aziendale, di modifica delle espressioni in modo che debbano non, ad esempio, obbligatorio per informazioni su Visual Basic o gestiscono le espressioni Visual Basic.  
+-   Per semplificare l'esperienza degli utenti business analyst, di modifica delle espressioni in modo che non, sono ad esempio, necessari per apprendere Visual Basic o gestire espressioni Visual Basic.  
   
  Per implementare un editor di espressioni personalizzato sono necessari tre passaggi di base:  
   
@@ -276,9 +276,9 @@ namespace WpfApplication1
 ```  
   
 ### <a name="notes"></a>Note  
- Se si utilizza un **ExpressionTextBox** controllo in un ActivityDesigner personalizzato, non è necessario creare e distruggere gli editor espressioni usando il <xref:System.Activities.Presentation.View.IExpressionEditorService.CreateExpressionEditor%2A> e <xref:System.Activities.Presentation.View.IExpressionEditorService.CloseExpressionEditors%2A> metodi di <xref:System.Activities.Presentation.View.IExpressionEditorService> interfaccia. Queste operazioni sono gestite dalla classe <xref:System.Activities.Presentation.View.ExpressionTextBox>.  
+ Se si usa un' **ExpressionTextBox** controllo in un ActivityDesigner personalizzato, non è necessario creare e distruggere gli editor di espressioni tramite il <xref:System.Activities.Presentation.View.IExpressionEditorService.CreateExpressionEditor%2A> e <xref:System.Activities.Presentation.View.IExpressionEditorService.CloseExpressionEditors%2A> metodi del <xref:System.Activities.Presentation.View.IExpressionEditorService> interfaccia. Queste operazioni sono gestite dalla classe <xref:System.Activities.Presentation.View.ExpressionTextBox>.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Activities.Presentation.View.IExpressionEditorService>  
- <xref:System.Activities.Presentation.View.IExpressionEditorInstance>  
- [Uso di ExpressionTextBox in un ActivityDesigner personalizzato](../../../docs/framework/windows-workflow-foundation/samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Activities.Presentation.View.IExpressionEditorService>
+- <xref:System.Activities.Presentation.View.IExpressionEditorInstance>
+- [Uso di ExpressionTextBox in un ActivityDesigner personalizzato](../../../docs/framework/windows-workflow-foundation/samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)

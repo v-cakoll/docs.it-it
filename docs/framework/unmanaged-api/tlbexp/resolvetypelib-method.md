@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: be2558e760be8519e528baeff438273c8871f320
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 6558d27f10e5b93dfe2c8053bb96434d49fd3c4a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42924469"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54537209"
 ---
 # <a name="resolvetypelib-method"></a>Metodo ResolveTypeLib
 Risolve il nome semplice di una libreria dei tipi, restituendo il relativo percorso completo.  
@@ -66,14 +66,14 @@ HRESULT ResolveTypeLib(
  Le implementazioni personalizzate di questa interfaccia devono restituire un [BSTR](https://docs.microsoft.com/previous-versions/windows/desktop/automat/bstr) che contiene il percorso completo della libreria dei tipi denominato nel `bstrSimpleName` parametro.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** TlbRef.idl, TlbRef. H  
+ **Intestazione:** TlbRef.idl, TlbRef.h  
   
- **Libreria:** TlbRef. lib  
+ **Libreria:** TlbRef.lib  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Funzioni di supporto Tlbexp](../../../../docs/framework/unmanaged-api/tlbexp/index.md)  
- [LoadTypeLibEx dell'](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)
+## <a name="see-also"></a>Vedere anche
+- [Funzioni di supporto Tlbexp](../../../../docs/framework/unmanaged-api/tlbexp/index.md)
+- [LoadTypeLibEx](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)

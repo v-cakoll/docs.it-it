@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 1929e854-23a0-4bb1-94be-e8aa3b609e32
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b89792f9579da2d72c0a7f90a983308b172093fb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 281582b04aabd8a18af8bf17091979385d009ee8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33390721"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54536542"
 ---
 # <a name="dangerous-permissions-and-policy-administration"></a>Autorizzazioni pericolose e amministrazione dei criteri
 Diverse operazioni protette per le quali .NET Framework fornisce le autorizzazioni possono potenzialmente consentire l'elusione del sistema di sicurezza. Queste autorizzazioni pericolose devono essere fornite solo a codice attendibile e solo se necessario. Non esiste in genere alcuna difesa contro malware se viene concesso questo tipo di autorizzazioni.  
   
 > [!NOTE]
->  In [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]sono state apportate importanti modifiche al modello di sicurezza e alla terminologia di .NET Framework. Per ulteriori informazioni su queste modifiche, vedere [modifiche della sicurezza](../../../docs/framework/security/security-changes.md).  
+>  In [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]sono state apportate importanti modifiche al modello di sicurezza e alla terminologia di .NET Framework. Per altre informazioni su queste modifiche, vedere [modifiche della sicurezza](../../../docs/framework/security/security-changes.md).  
   
  Le autorizzazioni pericolose sono illustrate nella tabella seguente.  
   
@@ -38,5 +38,5 @@ Diverse operazioni protette per le quali .NET Framework fornisce le autorizzazio
 |<xref:System.Security.Permissions.ReflectionPermission>||  
 |<xref:System.MemberAccessException>|Può usare i membri privati per aggirare i meccanismi di accessibilità.|  
   
-## <a name="see-also"></a>Vedere anche  
- [Linee guida per la generazione di codice sicuro](../../../docs/standard/security/secure-coding-guidelines.md)
+## <a name="see-also"></a>Vedere anche
+- [Linee guida per la generazione di codice sicuro](../../../docs/standard/security/secure-coding-guidelines.md)

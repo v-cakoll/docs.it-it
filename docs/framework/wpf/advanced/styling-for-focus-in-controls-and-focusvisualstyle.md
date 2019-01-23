@@ -6,12 +6,12 @@ helpviewer_keywords:
 - focus [WPF], visual styling
 - styles [WPF], focus visual style
 ms.assetid: 786ac576-011b-4d72-913b-558deccb9b35
-ms.openlocfilehash: 07dd5f015624e934ceb4fd38f23f7e780d185dfc
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: e1cbab51d1c59cb8402617fa3a17c5d18ff7ccb8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43744985"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54562594"
 ---
 # <a name="styling-for-focus-in-controls-and-focusvisualstyle"></a>Applicazione di stili per lo stato attivo nei controlli e FocusVisualStyle
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] offre due meccanismi paralleli per modificare l'aspetto visivo di un controllo che riceve lo stato attivo della tastiera. Il primo meccanismo consiste nell'usare setter di proprietà per proprietà, ad esempio <xref:System.Windows.UIElement.IsKeyboardFocused%2A> entro lo stile o il modello che viene applicato al controllo. Il secondo consiste nel fornire uno stile separato come valore del <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A> proprietà; la "dello stile di visualizzazione dello stato attivo" Crea un struttura ad albero visuale separato per uno strumento decorativo che viene disegnato sopra il controllo, anziché modificare la struttura ad albero visuale del controllo o altra interfaccia utente elemento sostituendola. Questo argomento descrive gli scenari appropriati a ogni meccanismo.  
@@ -76,8 +76,8 @@ ms.locfileid: "43744985"
 ### <a name="other-focus-properties"></a>Altre proprietà dello stato attivo  
  Se si desidera che tutte le possibili cause di modifica dello stato attivo per produrre un comportamento visivo, è consigliabile basare un setter o trigger la <xref:System.Windows.UIElement.IsFocused%2A> proprietà di dipendenza, o in alternativa nel <xref:System.Windows.UIElement.GotFocus> o <xref:System.Windows.UIElement.LostFocus> eventi usati per un <xref:System.Windows.EventSetter>.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>  
- [Applicazione di stili e modelli](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [Panoramica sullo stato attivo](../../../../docs/framework/wpf/advanced/focus-overview.md)  
- [Cenni preliminari sull'input](../../../../docs/framework/wpf/advanced/input-overview.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>
+- [Applicazione di stili e modelli](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Panoramica sullo stato attivo](../../../../docs/framework/wpf/advanced/focus-overview.md)
+- [Cenni preliminari sull'input](../../../../docs/framework/wpf/advanced/input-overview.md)

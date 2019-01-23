@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8f5eec26-b809-4aca-8778-7e202356d856
-ms.openlocfilehash: 5bd7ebefc03dbe6b44a199ba3123414e7b282c90
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: b7f92c0341a63df6bb5553d656469b374755aae7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45646808"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54562642"
 ---
 # <a name="datarows-and-datarowviews"></a>Oggetti DataRow e DataRowView
 In un <xref:System.Data.DataView> viene esposto una raccolta enumerabile di oggetti <xref:System.Data.DataRowView>. Il **DataRowView** oggetti espongono i valori come matrici di oggetti che vengono indicizzate per nome o il riferimento ordinale della colonna nella tabella sottostante. È possibile accedere la <xref:System.Data.DataRow> esposto dal **DataRowView** utilizzando la <xref:System.Data.DataRowView.Row%2A> proprietà del **DataRowView**.  
@@ -59,10 +59,10 @@ public static void WriteView(DataView thisDataView)
 }  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Data.DataRowVersion>  
- <xref:System.Data.DataViewRowState>  
- <xref:System.Data.DataView>  
- <xref:System.Data.DataRowView>  
- [DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Data.DataRowVersion>
+- <xref:System.Data.DataViewRowState>
+- <xref:System.Data.DataView>
+- <xref:System.Data.DataRowView>
+- [DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
+- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

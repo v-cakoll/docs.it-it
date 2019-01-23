@@ -2,23 +2,23 @@
 title: '&lt;clientCertificate&gt; di &lt;serviceCredentials&gt;'
 ms.date: 03/30/2017
 ms.assetid: 90ad03aa-2317-43dd-8a72-6d24cdcad15c
-ms.openlocfilehash: 7f777fd0e09a1bb9491f346a8e9806627aa63441
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: e1334e42149de29c4fc7534863f02ede93c638ad
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145497"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54536828"
 ---
 # <a name="ltclientcertificategt-of-ltservicecredentialsgt"></a>&lt;clientCertificate&gt; di &lt;serviceCredentials&gt;
 Definisce un certificato X.509 usato per firmare e crittografare i messaggi da un client a un servizio in un modello di comunicazione duplex.  
   
  \<system.ServiceModel>  
-\<i comportamenti >  
+\<behaviors>  
 \<serviceBehaviors>  
 \<serviceBehaviors>  
-\<comportamento >  
+\<behavior>  
 \<serviceCredentials>  
-\<clientCertificate >  
+\<clientCertificate>  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,7 +40,7 @@ Definisce un certificato X.509 usato per firmare e crittografare i messaggi da u
 |Elemento|Descrizione|  
 |-------------|-----------------|  
 |[\<authentication>](../../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)|Specifica le opzioni di autenticazione del certificato client.|  
-|[\<certificato >](../../../../../docs/framework/configure-apps/file-schema/wcf/certificate-of-clientcertificate-element.md)|Specifica il certificato da usare.|  
+|[\<certificate>](../../../../../docs/framework/configure-apps/file-schema/wcf/certificate-of-clientcertificate-element.md)|Specifica il certificato da usare.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -53,12 +53,12 @@ Definisce un certificato X.509 usato per firmare e crittografare i messaggi da u
   
  Il certificato impostato in questo elemento viene usato per crittografare i messaggi indirizzati al client solo per le associazioni configurate con la modalità di autenticazione di sicurezza dei messaggi `MutualCertificateDuplex`.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement>  
- <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.ClientCertificate%2A>  
- <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement>  
- <xref:System.ServiceModel.Description.ServiceCredentials.ClientCertificate%2A>  
- <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential>  
- [Procedura: Creare un contratto Duplex](../../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)  
- [Comportamenti di sicurezza](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
- [Uso di certificati](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement>
+- <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.ClientCertificate%2A>
+- <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement>
+- <xref:System.ServiceModel.Description.ServiceCredentials.ClientCertificate%2A>
+- <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential>
+- [Procedura: Creare un contratto Duplex](../../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
+- [Comportamenti di sicurezza](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
+- [Uso di certificati](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

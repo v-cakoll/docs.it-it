@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 22aaa1f3-596f-4733-93db-f4bcabcb5240
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a5c72919327c1186f5758f03680ff68037da3632
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e1c2cb79948f5bd762a0cd1b9fd83fd420a5821e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395245"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54537179"
 ---
 # <a name="ltparametergt-element-net-native"></a>Elemento &lt;Parameter&gt; (.NET Native)
 Applica criteri di reflection al tipo di argomento passato a un metodo.  
@@ -73,8 +73,8 @@ Applica criteri di reflection al tipo di argomento passato a un metodo.
 ## <a name="remarks"></a>Note  
  L'elemento `<Parameter>` è figlio dell'elemento [\<Method>](../../../docs/framework/net-native/method-element-net-native.md) e viene usato per applicare criteri a un parametro di metodo specifico. Il parametro del metodo specifico viene specificato per nome anziché in base al tipo. Almeno un attributo che rappresenta un tipo di criterio, ad esempio `Activate` o `Dynamic`, deve essere presente.  
   
-## <a name="see-also"></a>Vedere anche  
- [Elemento \<Method>](../../../docs/framework/net-native/method-element-net-native.md)  
- [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [Impostazioni dei criteri delle direttive di runtime](../../../docs/framework/net-native/runtime-directive-policy-settings.md)  
- [Elementi direttiva di runtime](../../../docs/framework/net-native/runtime-directive-elements.md)
+## <a name="see-also"></a>Vedere anche
+- [Elemento \<Method>](../../../docs/framework/net-native/method-element-net-native.md)
+- [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Impostazioni dei criteri delle direttive di runtime](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+- [Elementi direttiva di runtime](../../../docs/framework/net-native/runtime-directive-elements.md)
