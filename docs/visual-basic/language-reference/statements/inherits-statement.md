@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Inherits statement [Visual Basic]
 - Inherits statement [Visual Basic], syntax
 ms.assetid: 9e6fe042-9af3-4341-8093-fc3537770cf2
-ms.openlocfilehash: 4a98ada39a04730b46f40fe139e72d1855d9b067
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 329b4f68874d29d141001800ed326a454a878ab8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43739503"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54502898"
 ---
 # <a name="inherits-statement"></a>Inherits Statement
 Fa sì che la classe corrente o l'interfaccia in modo che erediti da un'altra classe o un set di interfacce di attributi, le variabili, proprietà, procedure ed eventi.  
@@ -28,7 +28,7 @@ Inherits basetypenames
   
 |Termine|Definizione|  
 |---|---|  
-|`basetypenames`|Obbligatorio. Il nome della classe da cui deriva questa classe.<br /><br /> oppure<br /><br /> I nomi delle interfacce da cui deriva questa interfaccia. Utilizzare le virgole per separare più nomi.|  
+|`basetypenames`|Obbligatorio. Il nome della classe da cui deriva questa classe.<br /><br /> -oppure-<br /><br /> I nomi delle interfacce da cui deriva questa interfaccia. Utilizzare le virgole per separare più nomi.|  
   
 ## <a name="remarks"></a>Note  
  Se usato, il `Inherits` istruzione deve essere la prima riga non vuota e non di commento in una definizione di classe o interfaccia. Deve seguire immediatamente la `Class` o `Interface` istruzione.  
@@ -63,9 +63,9 @@ Inherits basetypenames
   
  L'interfaccia denominata `thisInterface` ora include tutte le definizioni di <xref:System.IComparable>, <xref:System.IDisposable>, e <xref:System.IFormattable> interfacce membri ereditati forniscono rispettivamente per il confronto di tipo specifico di due oggetti, rilasciando le risorse allocate e che esprime il valore di un oggetto come un `String`. Una classe che implementa `thisInterface` deve implementare ogni membro di ogni interfaccia di base.  
   
-## <a name="see-also"></a>Vedere anche  
- [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)  
- [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)  
- [Oggetti e classi](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
- [Nozioni fondamentali sull'ereditarietà](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)  
- [Interfacce](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+## <a name="see-also"></a>Vedere anche
+- [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)
+- [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)
+- [Oggetti e classi](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+- [Nozioni fondamentali sull'ereditarietà](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
+- [Interfacce](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - methods [Windows Forms]
 - methods [Windows Forms], custom controls
 ms.assetid: 35d14fca-4bb4-4a27-8211-1f7a98ea27de
-ms.openlocfilehash: 9df2bc9257c3f697f30cbe8c679ffc88ec34517b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f65c34c965ddf19c7a287eeeaafe2583c97583ef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538113"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54506070"
 ---
 # <a name="method-implementation-in-custom-controls"></a>Implementazione dei metodi nei controlli personalizzati
 Un metodo viene implementato in un controllo nello stesso modo in cui avviene in qualsiasi altro componente.  
@@ -75,6 +75,6 @@ public void Spin(Widget driver)
 }  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Eventi](../../../../docs/standard/events/index.md)  
- [Proprietà dei controlli Windows Form](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)
+## <a name="see-also"></a>Vedere anche
+- [Eventi](../../../../docs/standard/events/index.md)
+- [Proprietà dei controlli Windows Form](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)

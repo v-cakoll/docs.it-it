@@ -1,5 +1,5 @@
 ---
-title: Funzione annidata non dispone di una firma compatibile con il delegato &#39; &lt;NomeDelegato&gt;&#39;
+title: Funzione annidata non ha una firma compatibile con il delegato &#39; &lt;NomeDelegato&gt;&#39;
 ms.date: 07/20/2015
 f1_keywords:
 - vbc36532
@@ -7,21 +7,21 @@ f1_keywords:
 helpviewer_keywords:
 - BC36532
 ms.assetid: 493f292c-d81e-40ef-8b47-61f020571829
-ms.openlocfilehash: 94c53d30ad9aea9386fbb1be3e65fa31719f7a2f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: abfda4ee6064ec9ea54b8a3c383d10f8263a1458
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33594471"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54506407"
 ---
-# <a name="nested-function-does-not-have-a-signature-that-is-compatible-with-delegate-39ltdelegatenamegt39"></a>Funzione annidata non dispone di una firma compatibile con il delegato &#39; &lt;NomeDelegato&gt;&#39;
-Un'espressione lambda è stata assegnata a un delegato che ha una firma compatibile. Nel codice seguente, ad esempio, è consigliabile delegare `Del` presenta due parametri di tipo integer.  
+# <a name="nested-function-does-not-have-a-signature-that-is-compatible-with-delegate-39ltdelegatenamegt39"></a>Funzione annidata non ha una firma compatibile con il delegato &#39; &lt;NomeDelegato&gt;&#39;
+Un'espressione lambda assegnata a un delegato che ha una firma compatibile. Nel codice seguente, ad esempio, è consigliabile delegare `Del` ha due parametri di tipo integer.  
   
 ```vb  
 Delegate Function Del(ByVal p As Integer, ByVal q As Integer) As Integer  
 ```  
   
- Se un'espressione lambda con un argomento è dichiarata come tipo, viene generato l'errore `Del`:  
+ L'errore viene generato se un'espressione lambda con un argomento è dichiarata come tipo `Del`:  
   
 ```vb  
 ' Neither of these is valid.   
@@ -33,8 +33,8 @@ Delegate Function Del(ByVal p As Integer, ByVal q As Integer) As Integer
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
--   Modificare la definizione del delegato o l'espressione lambda assegnata in modo che le firme compatibili.  
+-   Modificare la definizione del delegato o l'espressione lambda assegnata in modo che le firme sono compatibili.  
   
-## <a name="see-also"></a>Vedere anche  
- [Conversione di tipo relaxed del delegato](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)  
- [Espressioni lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
+## <a name="see-also"></a>Vedere anche
+- [Conversione di tipo relaxed del delegato](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
+- [Espressioni lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)

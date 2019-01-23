@@ -6,12 +6,12 @@ helpviewer_keywords:
 - LINQ queries [Visual Basic]
 - LINQ [Visual Basic], writing queries
 ms.assetid: 4affb732-3e9b-4479-aa31-1f9bd8183cbe
-ms.openlocfilehash: 4c04c00c5392d8ba363346b06c806ec79041c439
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: b49475bf7aea8d28ce057c7d4376cf7ad8285a0a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47109092"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54506251"
 ---
 # <a name="writing-your-first-linq-query-visual-basic"></a>Scrittura della prima query LINQ (Visual Basic)
 Una *query* è un'espressione che recupera dati da un'origine dati. Le query sono espresse in un linguaggio di query dedicato. Nel corso del tempo, sono stati sviluppati diversi linguaggi per diversi tipi di origini dati, ad esempio, SQL per i database relazionali e XQuery per XML. Ciò rende necessario per lo sviluppatore dell'applicazione per informazioni su un nuovo linguaggio di query per ogni tipo di origine dati o formato dati supportato.  
@@ -60,7 +60,7 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
  Per altre informazioni sulla creazione di tipi specifici di origini dati, vedere la documentazione dei diversi provider [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. (Per un elenco di questi provider, vedere [LINQ (Language-Integrated Query)](../../../../visual-basic/programming-guide/concepts/linq/index.md).) La regola di base è semplice: una [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] origine dati è qualsiasi oggetto che supporta il tipo generico <xref:System.Collections.Generic.IEnumerable%601> interfaccia o un'interfaccia che eredita da esso.  
   
 > [!NOTE]
->  I tipi, ad esempio <xref:System.Collections.ArrayList> che supportano non generica <xref:System.Collections.IEnumerable> interfaccia può essere utilizzata anche come [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] origini dati. Per un esempio che usa un' <xref:System.Collections.ArrayList>, vedere [procedura: eseguire una Query su un ArrayList con LINQ (Visual Basic)](how-to-query-an-arraylist-with-linq.md).  
+>  I tipi, ad esempio <xref:System.Collections.ArrayList> che supportano non generica <xref:System.Collections.IEnumerable> interfaccia può essere utilizzata anche come [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] origini dati. Per un esempio che usa un' <xref:System.Collections.ArrayList>, vedere [come: Eseguire una query su un ArrayList con LINQ (Visual Basic)](how-to-query-an-arraylist-with-linq.md).  
   
 ## <a name="the-query"></a>La Query  
  Nella query, si specificano quali informazioni si desidera recuperare dall'origine dati o origini. È inoltre possibile specificare come tali informazioni devono essere ordinate, raggruppate o strutturate prima che venga restituito. Per abilitare la creazione di query, Visual Basic è stato incorporato nuova sintassi della query nel linguaggio.  
@@ -120,9 +120,9 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Introduzione a LINQ in Visual Basic](getting-started-with-linq.md)  
-- [Inferenza del tipo di variabile locale](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
-- [Panoramica degli operatori query standard (Visual Basic)](standard-query-operators-overview.md)  
-- [Introduzione a LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
-- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
+- [Introduzione a LINQ in Visual Basic](getting-started-with-linq.md)
+- [Inferenza del tipo di variabile locale](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [Panoramica degli operatori query standard (Visual Basic)](standard-query-operators-overview.md)
+- [Introduzione a LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [Query](../../../../visual-basic/language-reference/queries/index.md)

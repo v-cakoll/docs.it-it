@@ -5,17 +5,17 @@ helpviewer_keywords:
 - WCF [WCF], troubleshooting
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
-ms.openlocfilehash: 368faf0881c5c0073fe8367a051b6c6c802b9110
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 5031538c49da34d0fc89442c1170e30ff56a6eff
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200854"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54505692"
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>Guida rapida alla risoluzione dei problemi di WCF
-In questo argomento viene elencata una serie di problemi noti rilevati dai clienti durante lo sviluppo di client e servizi WCF. Se il problema rilevato non presente in questo elenco, si consiglia di configurare la traccia del servizio. In tal modo verrà generato un file di traccia che è possibile visualizzare con il visualizzatore dei file di traccia e verranno ricevute informazioni dettagliate sulle eccezioni che si possono verificare nel servizio. Per altre informazioni sulla configurazione della traccia, vedere [Configuring Tracing](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md). Per altre informazioni sul visualizzatore dei file di traccia, vedere [Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  
+In questo argomento viene elencata una serie di problemi noti rilevati dai clienti durante lo sviluppo di client e servizi WCF. Se il problema rilevato non presente in questo elenco, si consiglia di configurare la traccia del servizio. In tal modo verrà generato un file di traccia che è possibile visualizzare con il visualizzatore dei file di traccia e verranno ricevute informazioni dettagliate sulle eccezioni che si possono verificare nel servizio. Per altre informazioni sulla configurazione della traccia, vedere: [Configurazione della traccia](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md). Per altre informazioni sul Visualizzatore dei file di traccia, vedere: [Strumento Visualizzatore di tracce (SvcTraceViewer.exe) del servizio](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  
   
-1.  [Dopo aver installato Windows 7 e IIS, quando si tenta di passare al servizio WCF viene visualizzato il seguente messaggio di errore HTTP 404.3 di file non trovato](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#bkmk_0)  
+1.  [Dopo aver installato Windows 7 e IIS, quando tenta di passare a un servizio WCF viene visualizzato il messaggio di errore seguente: Errore HTTP 404.3 – non trovato](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#bkmk_0)  
   
      Errore HTTP 404.3 - La pagina richiesta non può essere servita a causa della configurazione estensioni. Se la pagina è uno script, aggiungere un gestore. Se il file deve essere scaricato, aggiungere una mappa MIME. Errore dettagliato InformationModule StaticFileModule.  
   
@@ -37,12 +37,12 @@ In questo argomento viene elencata una serie di problemi noti rilevati dai clien
   
 10. [Utilizzando uno degli strumenti di traccia, viene generata un'eccezione EndpointNotFoundException. Qual è il problema?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q99)  
   
-11. [Quando si chiama un'applicazione HTTP Web WCF da un'applicazione SOAP WCF il servizio restituisce l'errore 405 Metodo non consentito](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BK_MK99)  
+11. [Quando si chiama un'applicazione HTTP Web WCF da un'applicazione SOAP WCF il servizio restituisce l'errore seguente: 405 metodo non consentito](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BK_MK99)  
   
  [Quale è l'indirizzo di base? In che modo è correlato a un indirizzo dell'endpoint?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q10)  
   
 <a name="bkmk_0"></a>   
-## <a name="after-installing-windows-7-and-iis-when-i-attempt-to-browse-to-a-wcf-service-i-get-the-following-error-message-http-error-4043--not-found"></a>Dopo aver installato Windows 7 e IIS, quando si tenta di passare al servizio WCF viene visualizzato il seguente messaggio di errore HTTP 404.3 di file non trovato  
+## <a name="after-installing-windows-7-and-iis-when-i-attempt-to-browse-to-a-wcf-service-i-get-the-following-error-message-http-error-4043--not-found"></a>Dopo aver installato Windows 7 e IIS, quando tenta di passare a un servizio WCF viene visualizzato il messaggio di errore seguente: Errore HTTP 404.3 – non trovato  
  Il messaggio di errore completo è:  
   
  Errore HTTP 404.3 - La pagina richiesta non può essere servita a causa della configurazione estensioni. Se la pagina è uno script, aggiungere un gestore. Se il file deve essere scaricato, aggiungere una mappa MIME. Errore dettagliato InformationModule StaticFileModule.  
@@ -51,7 +51,7 @@ In questo argomento viene elencata una serie di problemi noti rilevati dai clien
   
 <a name="BKMK_q1"></a>   
 ## <a name="sometimes-i-receive-a-messagesecurityexception-on-the-second-request-if-my-client-is-idle-for-a-while-after-the-first-request-what-is-happening"></a>A volte viene restituita un'eccezione MessageSecurityException alla seconda richiesta se il client è inattivo per un periodo di tempo dopo la prima richiesta. Qual è il problema?  
- La seconda richiesta può non riuscire principalmente per due ragioni: (1) la sessione è scaduta o (2) il server Web che sta ospitando il servizio è stato riciclato. Nel primo caso, la sessione è valida fino al timeout del servizio. Quando il servizio non riceve una richiesta dal client entro il periodo di tempo specificato nell'associazione del servizio (<xref:System.ServiceModel.Channels.Binding.ReceiveTimeout%2A>), il servizio termina la sessione di sicurezza. I messaggi client successivi determinano l'eccezione <xref:System.ServiceModel.Security.MessageSecurityException>. Il client deve ristabilire una sessione protetta con il servizio per inviare altri messaggi o utilizzare un token del contesto di sicurezza con stato. I token del contesto di sicurezza con stato consentono inoltre a una sessione protetta di restare attiva quando un server Web viene riciclato. Per altre informazioni sull'uso dei token di contesto di sicurezza con stato in una sessione protetta, vedere [procedura: creare un Token del contesto di sicurezza per una sessione protetta](../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md). In alternativa, è possibile disabilitare le sessioni protette. Quando si usa la [ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) associazione, è possibile impostare il `establishSecurityContext` proprietà `false` disattivare sessioni protette. Per disabilitare le sessioni protette per altre associazioni, è necessario creare un'associazione personalizzata. Per informazioni dettagliate sulla creazione di un'associazione personalizzata, vedere [Procedura: creare un'associazione personalizzata usando SecurityBindingElement](../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md). Prima di applicare qualsiasi opzione, è necessario conoscere i requisiti di sicurezza dell'applicazione.  
+ La seconda richiesta può non riuscire principalmente per due motivi: (1) la sessione è scaduta o (2) il server Web che ospita il servizio viene riciclato. Nel primo caso, la sessione è valida fino al timeout del servizio. Quando il servizio non riceve una richiesta dal client entro il periodo di tempo specificato nell'associazione del servizio (<xref:System.ServiceModel.Channels.Binding.ReceiveTimeout%2A>), il servizio termina la sessione di sicurezza. I messaggi client successivi determinano l'eccezione <xref:System.ServiceModel.Security.MessageSecurityException>. Il client deve ristabilire una sessione protetta con il servizio per inviare altri messaggi o utilizzare un token del contesto di sicurezza con stato. I token del contesto di sicurezza con stato consentono inoltre a una sessione protetta di restare attiva quando un server Web viene riciclato. Per altre informazioni sull'uso dei token di contesto di sicurezza con stato in una sessione protetta, vedere [come: Creare un contesto di sicurezza Token per una sessione protetta](../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md). In alternativa, è possibile disabilitare le sessioni protette. Quando si usa la [ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) associazione, è possibile impostare il `establishSecurityContext` proprietà `false` disattivare sessioni protette. Per disabilitare le sessioni protette per altre associazioni, è necessario creare un'associazione personalizzata. Per informazioni dettagliate sulla creazione di un'associazione personalizzata, vedere [come: Creare un'associazione personalizzata usando SecurityBindingElement](../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md). Prima di applicare qualsiasi opzione, è necessario conoscere i requisiti di sicurezza dell'applicazione.  
   
 <a name="BKMK_q2"></a>   
 ## <a name="my-service-starts-to-reject-new-clients-after-about-10-clients-are-interacting-with-it-what-is-happening"></a>Il servizio rifiuta nuovi client se sta interagendo già con 10 client. Qual è il problema?  
@@ -102,7 +102,7 @@ public class MyServiceHost : ServiceHost
   
 -   Potrebbe essere necessario aprire la porta all'applicazione. Per informazioni dettagliate, vedere [Firewall Instructions](../../../docs/framework/wcf/samples/firewall-instructions.md) negli esempi di SDK.  
   
--   Per altri possibili problemi, vedere l'argomento degli esempi [eseguiti esempi in un Workgroup and Across Machines](https://msdn.microsoft.com/library/a451a525-e7ce-452d-9da9-620221260113).  
+-   Per altri possibili problemi, vedere l'argomento degli esempi [Running the Samples in a Workgroup and Across Machines](https://msdn.microsoft.com/library/a451a525-e7ce-452d-9da9-620221260113).  
   
 -   Se il client sta utilizzando le credenziali di Windows e l'eccezione è <xref:System.ServiceModel.Security.SecurityNegotiationException>, configurare Kerberos come descritto di seguito.  
   
@@ -136,7 +136,7 @@ public class MyServiceHost : ServiceHost
   
 -   [Debug degli errori di autenticazione di Windows](../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)  
   
--   [Registrazione di nomi SPN Kerberos utilizzando HTTP. sys](https://go.microsoft.com/fwlink/?LinkId=86943)  
+-   [Registrazione di nomi SPN Kerberos utilizzando Http.sys](https://go.microsoft.com/fwlink/?LinkId=86943)  
   
 -   [Descrizione di Kerberos](https://go.microsoft.com/fwlink/?LinkId=86946)  
   
@@ -162,7 +162,7 @@ public class MyServiceHost : ServiceHost
   
  In questo caso, è necessario assegnare i privilegi di accesso in lettura all'account del processo per il file che contiene la chiave privata. Ad esempio, se il processo di lavoro IIS è in esecuzione con l'account Bob, è necessario assegnare a Bob l'accesso in lettura al file che contiene la chiave privata.  
   
- Per ulteriori informazioni su come concedere l'accesso all'account utente corretto per il file che contiene la chiave privata per un certificato X.509 specifico, vedere [Procedura: rendere accessibili a WCF i certificati X.509](../../../docs/framework/wcf/feature-details/how-to-make-x-509-certificates-accessible-to-wcf.md).  
+ Per altre informazioni su come assegnare all'account utente corretto accesso al file che contiene la chiave privata per un certificato X.509 specifico, vedere [come: Rendere accessibili a WCF i certificati X.509](../../../docs/framework/wcf/feature-details/how-to-make-x-509-certificates-accessible-to-wcf.md).  
   
 <a name="BKMK_q88"></a>   
 ## <a name="i-changed-the-first-parameter-of-an-operation-from-uppercase-to-lowercase-now-my-client-throws-an-exception-whats-happening"></a>In seguito alla modifica del primo parametro di un'operazione di passaggio da lettere maiuscole a lettere minuscole, il client genera un'eccezione. Qual è il problema?  
@@ -176,7 +176,7 @@ public class MyServiceHost : ServiceHost
   
 ```xml
 <endpoint   
-  address=http://localhost:8000/MyServer/  
+  address="http://localhost:8000/MyServer/"  
   binding="wsHttpBinding"  
   bindingConfiguration="WSHttpBinding_IMyContract"  
   behaviorConfiguration="MyClient"   
@@ -224,7 +224,7 @@ public class MyServiceHost : ServiceHost
 </bindings>  
 ```  
   
- Verrà visualizzato un errore simile al seguente: eccezione non gestita: AddressAlreadyInUseException: è già presente un listener su 0.0.0.0: 9000 endpoint IP è possibile risolvere questo errore, specificando un URL completo con una porta diversa per l'endpoint MEX come illustrato nel frammento di configurazione seguenti:  
+ Verrà visualizzato un errore simile al seguente: Eccezione non gestita: System.ServiceModel.AddressAlreadyInUseException: È già presente un listener su 0.0.0.0: 9000 endpoint IP che è possibile risolvere questo errore, specificando un URL completo con una porta diversa per l'endpoint MEX come illustrato nel frammento di configurazione seguenti:  
   
 ```xml
 <services>  
@@ -236,8 +236,8 @@ public class MyServiceHost : ServiceHost
 ```  
   
 <a name="BK_MK99"></a>   
-## <a name="when-calling-a-wcf-web-http-application-from-a-wcf-soap-application-the-service-returns-the-following-error-405-method-not-allowed"></a>Quando si chiama un'applicazione HTTP Web WCF da un'applicazione SOAP WCF il servizio restituisce l'errore 405 Metodo non consentito  
- La chiamata a un'applicazione HTTP Web WCF (un servizio che usa il <xref:System.ServiceModel.WebHttpBinding> e <xref:System.ServiceModel.Description.WebHttpBehavior>) da un WCF service può generare l'eccezione seguente: `Unhandled Exception: System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: il server remoto ha restituito una risposta non prevista : (405) metodo non consentito.' questa eccezione si verifica perché WCF sovrascrive in uscita <xref:System.ServiceModel.OperationContext> con la posta in arrivo <xref:System.ServiceModel.OperationContext>. Per risolvere questo problema, creare un oggetto <xref:System.ServiceModel.OperationContextScope> all'interno dell'operazione del servizio HTTP Web WCF. Ad esempio:  
+## <a name="when-calling-a-wcf-web-http-application-from-a-wcf-soap-application-the-service-returns-the-following-error-405-method-not-allowed"></a>Quando si chiama un'applicazione HTTP Web WCF da un'applicazione SOAP WCF il servizio restituisce l'errore seguente: 405 metodo non consentito  
+ La chiamata a un'applicazione HTTP Web WCF (un servizio che usa il <xref:System.ServiceModel.WebHttpBinding> e <xref:System.ServiceModel.Description.WebHttpBehavior>) da un WCF service può generare l'eccezione seguente: `Unhandled Exception: System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Il server remoto ha restituito una risposta non prevista: (405) metodo non consentito.' questa eccezione si verifica perché WCF sovrascrive in uscita <xref:System.ServiceModel.OperationContext> con la posta in arrivo <xref:System.ServiceModel.OperationContext>. Per risolvere questo problema, creare un oggetto <xref:System.ServiceModel.OperationContextScope> all'interno dell'operazione del servizio HTTP Web WCF. Ad esempio:  
   
 ```csharp
 public string Echo(string input)  
@@ -249,5 +249,5 @@ public string Echo(string input)
 }  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Debug degli errori di autenticazione di Windows](../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)
+## <a name="see-also"></a>Vedere anche
+- [Debug degli errori di autenticazione di Windows](../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)

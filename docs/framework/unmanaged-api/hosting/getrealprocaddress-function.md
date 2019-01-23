@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 256afe9a4304654ddb263a0671db7525f3bedcba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b31db6e6a8ecb3fa15f1a8690b007bdb536b97c0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429637"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54506550"
 ---
 # <a name="getrealprocaddress-function"></a>Funzione GetRealProcAddress
 Ottiene l'indirizzo della funzione specificata esportata dall'ultima versione installata di common language runtime (CLR).  
@@ -42,25 +42,25 @@ HRESULT GetRealProcAddress (
  [in] Il nome della funzione.  
   
  `ppv`  
- [out] Posizione che riceve un puntatore all'indirizzo della funzione.  
+ [out] Il percorso che riceve un puntatore all'indirizzo della funzione.  
   
 ## <a name="return-value"></a>Valore restituito  
- Questo metodo restituisce codici di errore standard del modello COM (Component Object), come definito nel file Winerror. H, oltre ai seguenti valori definiti in CorError.  
+ Questo metodo restituisce codici di errore standard modello COM (Component Object), come definito nel file Winerror. H, oltre ai valori seguenti definiti in CorError.  
   
 |Codice restituito|Descrizione|  
 |-----------------|-----------------|  
 |S_OK|Metodo completato correttamente.|  
 |E_POINTER|`ppv` non è valido.|  
-|CLR_E_SHIM_RUNTIMEEXPORT|La funzione non viene esportata dal runtime.|  
+|CLR_E_SHIM_RUNTIMEEXPORT|La funzione non viene esportata dalla fase di esecuzione.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Mscoree. H  
+ **Intestazione:** MSCorEE.h  
   
- **Libreria:** Mscoree. dll  
+ **Libreria:** MSCorEE.dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Funzioni di hosting CLR deprecate](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>Vedere anche
+- [Funzioni di hosting CLR deprecate](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

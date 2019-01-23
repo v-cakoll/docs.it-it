@@ -16,30 +16,30 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a6761ff204d299bc2db84e2e80d988306125a110
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4be027238d676d78a3ec29e4f2696f765291f29b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430821"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54504431"
 ---
 # <a name="iappdomainbinding-interface"></a>Interfaccia IAppDomainBinding
-Fornisce un metodo che viene chiamato da common language runtime (CLR) per notificare all'applicazione host che è stato creato un dominio applicazione.  
+Fornisce un metodo che viene chiamato da common language runtime (CLR) di notificare all'applicazione host che è stato creato un dominio dell'applicazione.  
   
 ## <a name="methods"></a>Metodi  
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo OnAppDomain](../../../../docs/framework/unmanaged-api/hosting/iappdomainbinding-onappdomain-method.md)|Chiamato da common language runtime (CLR) per notificare all'host che è stato creato un dominio applicazione.|  
+|[Metodo OnAppDomain](../../../../docs/framework/unmanaged-api/hosting/iappdomainbinding-onappdomain-method.md)|Chiamato da common language runtime (CLR) per notificare all'host che è stato creato un dominio dell'applicazione.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Mscoree. H  
+ **Intestazione:** MSCorEE.h  
   
- **Libreria:** inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfacce di hosting](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfacce di hosting](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

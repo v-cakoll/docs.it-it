@@ -2,12 +2,12 @@
 title: Attività
 ms.date: 03/30/2017
 ms.assetid: 70471705-f55f-4da1-919f-4b580f172665
-ms.openlocfilehash: 00115d51cff40be726ccf94c3cac09242c0bdab8
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 970f2978f65b2c1a2585a207d66e4b97fbe4af1a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453346"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54505588"
 ---
 # <a name="activity"></a>Attività
 Questo argomento descrive le tracce di attività nel modello di traccia di Windows Communication Foundation (WCF). Le attività sono unità di elaborazione che consentono all'utente di restringere l'ambito di un errore e quindi di individuarne le cause con maggiore facilità. Gli errori che si verificano nella stessa attività sono correlati in modo diretto. Si consideri ad esempio il caso di un'operazione che non riesce poiché la decrittografia di un messaggio ha avuto esito negativo. Le tracce relative alla non riuscita dell'operazione e della decrittografia del messaggio vengono visualizzate entrambe nella stessa attività, evidenziando in questo modo una correlazione diretta fra i due eventi di errore.  
@@ -64,15 +64,15 @@ traceSource.TraceEvent(TraceEventType.Warning, eventId, "Information");
 ## <a name="activity-lifetime"></a>Durata dell'attività  
  In termini rigorosi, l'evidenza di un'attività inizia la prima la prima volta che l'ID attività viene utilizzato in una traccia emessa e termina l'ultima volta che tale ID viene utilizzato in una traccia emessa. Un set predefinito di tipi di traccia viene fornito dallo spazio dei nomi <xref:System.Diagnostics>, che utilizza due tipi di traccia, Start e Stop, per contrassegnare in modo esplicito i limiti di durata dell'attività.  
   
--   Start: indica l'inizio di un'attività. Una traccia "Start" fornisce un record di inizio di una nuova attività cardine di elaborazione. Tale traccia contiene un nuovo ID attività per una determinata origine di analisi in un processo specificato. Se tuttavia l'ID attività viene propagato fra più endpoint, viene visualizzata una traccia "Start" per ogni endpoint. Esempi di avvio di una nuova attività includono la creazione di un nuovo thread di elaborazione o l'immissione di un nuovo metodo pubblico.  
+-   Avvia: Indica l'inizio di un'attività. Una traccia "Start" fornisce un record di inizio di una nuova attività cardine di elaborazione. Tale traccia contiene un nuovo ID attività per una determinata origine di analisi in un processo specificato. Se tuttavia l'ID attività viene propagato fra più endpoint, viene visualizzata una traccia "Start" per ogni endpoint. Esempi di avvio di una nuova attività includono la creazione di un nuovo thread di elaborazione o l'immissione di un nuovo metodo pubblico.  
   
--   Stop: indica la fine di un'attività. Una traccia "Stop" fornisce un record di interruzione di un'attività cardine di elaborazione esistente. Tale traccia contiene un ID attività esistente per una determinata origine di analisi in un processo specificato. Se tuttavia l'ID attività viene propagato fra più endpoint, viene visualizzata una traccia "Stop" per ogni endpoint.  Terminazione di un thread di elaborazione o l'uscita da un metodo il cui inizio era stato denotato con una traccia "Start" esempi di interruzione di un'attività.  
+-   Arresta: Indica la fine di un'attività. Una traccia "Stop" fornisce un record di interruzione di un'attività cardine di elaborazione esistente. Tale traccia contiene un ID attività esistente per una determinata origine di analisi in un processo specificato. Se tuttavia l'ID attività viene propagato fra più endpoint, viene visualizzata una traccia "Stop" per ogni endpoint.  Terminazione di un thread di elaborazione o l'uscita da un metodo il cui inizio era stato denotato con una traccia "Start" esempi di interruzione di un'attività.  
   
--   Suspend: indica una sospensione nell'elaborazione di un'attività. Una traccia "Suspend" contiene un ID attività esistente la cui elaborazione si prevede verrà ripresa in un secondo momento. Non vengono emesse tracce con questo ID tra l'evento di sospensione e quello di ripresa dall'origine della traccia corrente. Ne è un esempio la sospensione di un'attività in caso di chiamata a una funzione della libreria esterna o di attesa in una risorsa quale una porta di completamento di I/O.  
+-   Sospensione: Indica una sospensione dell'elaborazione di un'attività. Una traccia "Suspend" contiene un ID attività esistente la cui elaborazione si prevede verrà ripresa in un secondo momento. Non vengono emesse tracce con questo ID tra l'evento di sospensione e quello di ripresa dall'origine della traccia corrente. Ne è un esempio la sospensione di un'attività in caso di chiamata a una funzione della libreria esterna o di attesa in una risorsa quale una porta di completamento di I/O.  
   
--   Resume: indica la ripresa dell'elaborazione di un'attività. Una traccia "Resume" contiene un id attività esistente la cui ultima traccia emessa dall'origine della traccia corrente era "Suspend". Negli esempi è inclusa la restituzione da una chiamata a una funzione della libreria esterna o la segnalazione per riprendere l'elaborazione da parte di una risorsa, ad esempio una porta di completamento di I/O.  
+-   Resume: Indica la ripresa dell'elaborazione di un'attività. Una traccia "Resume" contiene un id attività esistente la cui ultima traccia emessa dall'origine della traccia corrente era "Suspend". Negli esempi è inclusa la restituzione da una chiamata a una funzione della libreria esterna o la segnalazione per riprendere l'elaborazione da parte di una risorsa, ad esempio una porta di completamento di I/O.  
   
--   Trasferimento: Perché alcune attività sono causate da altri utenti, o per correlarla ad altri utenti, possono essere correlate ad altre attività tramite tracce "Trasferire". Un trasferimento registra la relazione diretta di un'attività con un'altra  
+-   Trasferimento: Poiché alcune attività sono causate da altri utenti, o per correlarla ad altri utenti, possono essere correlate ad altre attività tramite tracce "Trasferire". Un trasferimento registra la relazione diretta di un'attività con un'altra  
   
  Le tracce Start e Stop non sono critiche per la correlazione. Possono tuttavia contribuire ad aumentare le prestazioni, il profiling e la convalida dell'ambito dell'attività.  
   
@@ -97,9 +97,9 @@ traceSource.TraceEvent(TraceEventType.Warning, eventId, "Information");
   
 -   Le attività rappresentano attività, non necessariamente degli oggetti. Un'attività deve essere interpretata come "Ciò si stava verificando quando. . . (si è verificata l'emissione di una traccia significativa)".  
   
-## <a name="see-also"></a>Vedere anche  
- [Configurazione delle funzionalità di traccia](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
- [Uso del visualizzatore di tracce dei servizi per la visualizzazione di tracce correlate e la risoluzione dei problemi](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
- [Scenari di traccia end-to-end](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  
- [Strumento Visualizzatore di tracce dei servizi (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)  
- [Creazione di tracce di codice utente](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md)
+## <a name="see-also"></a>Vedere anche
+- [Configurazione delle funzionalità di traccia](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
+- [Uso del visualizzatore di tracce dei servizi per la visualizzazione di tracce correlate e la risoluzione dei problemi](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
+- [Scenari di traccia end-to-end](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
+- [Strumento Visualizzatore di tracce dei servizi (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
+- [Creazione di tracce di codice utente](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md)

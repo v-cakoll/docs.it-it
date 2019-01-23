@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5d49ac70aceb76f69711ea4bf514f69697ac156c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 33bff2b72f2381fea461bb043506ee78f757dea8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447372"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54504903"
 ---
 # <a name="imetadataemitdefineparam-method"></a>Metodo IMetaDataEmit::DefineParam
-Crea una definizione di parametro con la firma specificata per il metodo a cui fa riferimento il token specificato e ottiene un token per la definizione di parametro.  
+Crea una definizione di parametro con la firma specificata per il metodo fa riferimento il token specificato e ottiene un token per la definizione di parametro.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -53,7 +53,7 @@ HRESULT DefineParam (
  [in] Il nome del parametro in formato Unicode.  
   
  `dwParamFlags`  
- [in] Flag per il parametro. Si tratta di una maschera di bit di `CorParamAttr` valori.  
+ [in] Flag per il parametro. Si tratta di una maschera di bit delle `CorParamAttr` valori.  
   
  `dwCPlusTypeFlag`  
  [in] `ELEMENT_TYPE_` *\** per il valore costante.  
@@ -68,17 +68,17 @@ HRESULT DefineParam (
  [out] Il `mdParamDef` token assegnato.  
   
 ## <a name="remarks"></a>Note  
- La sequenza di valori `ulParamSeq` iniziano con 1 per i parametri. Valore restituito è un numero di sequenza pari a 0.  
+ La sequenza di valori in `ulParamSeq` iniziano da 1 per i parametri. Valore restituito è un numero di sequenza pari a 0.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
- **Libreria:** usata come risorsa in Mscoree. dll  
+ **Libreria:** Usato come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [Interfaccia IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [Interfaccia IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

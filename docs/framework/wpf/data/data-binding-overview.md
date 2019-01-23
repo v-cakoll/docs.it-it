@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [WPF], about data binding
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
-ms.openlocfilehash: 1b34b3369e5a045f45251d3285f10bf74b6f0d33
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 4cce0d56a629ca01e0174235b1e84291e9fa2f57
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45990076"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54503209"
 ---
 # <a name="data-binding-overview"></a>Panoramica sul data binding
 Il data binding [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] rappresenta per le applicazioni un modo semplice e coerente di presentare i dati e di interagire con essi. È possibile eseguire il data binding degli elementi a diverse origini dati sotto forma di oggetti [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] e [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]. <xref:System.Windows.Controls.ContentControl>s, ad esempio <xref:System.Windows.Controls.Button> e <xref:System.Windows.Controls.ItemsControl>s, ad esempio <xref:System.Windows.Controls.ListBox> e <xref:System.Windows.Controls.ListView> dispongono di funzionalità incorporate per abilitare lo stile flessibile dei singoli elementi di dati o raccolte di elementi di dati. In cima ai dati è possibile generare visualizzazioni di ordinamento, filtro e raggruppamento.  
@@ -429,11 +429,11 @@ Il data binding [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-wi
 ## <a name="debugging-mechanism"></a>Meccanismo di debug  
  È possibile impostare la proprietà associata <xref:System.Diagnostics.PresentationTraceSources.TraceLevel%2A?displayProperty=nameWithType> su un oggetto correlato all'associazione per ricevere informazioni sullo stato di uno specifico binding.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Windows.Controls.DataErrorValidationRule>  
- [Novità di WPF versione 4.5](../../../../docs/framework/wpf/getting-started/whats-new.md)  
- [Eseguire l'associazione dei risultati di una query LINQ](../../../../docs/framework/wpf/data/how-to-bind-to-the-results-of-a-linq-query.md)  
- [Data binding](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
- [Demo di Data Binding](https://go.microsoft.com/fwlink/?LinkID=163703)  
- [Procedure relative alle proprietà](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)  
- [Procedura: Eseguire l'associazione a un'origine dati ADO.NET](../../../../docs/framework/wpf/data/how-to-bind-to-an-ado-net-data-source.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Windows.Controls.DataErrorValidationRule>
+- [Novità di WPF versione 4.5](../../../../docs/framework/wpf/getting-started/whats-new.md)
+- [Eseguire l'associazione dei risultati di una query LINQ](../../../../docs/framework/wpf/data/how-to-bind-to-the-results-of-a-linq-query.md)
+- [Data binding](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
+- [Demo di Data Binding](https://go.microsoft.com/fwlink/?LinkID=163703)
+- [Procedure relative alle proprietà](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+- [Procedura: Eseguire l'associazione a un'origine dati ADO.NET](../../../../docs/framework/wpf/data/how-to-bind-to-an-ado-net-data-source.md)

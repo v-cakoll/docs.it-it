@@ -2,12 +2,12 @@
 title: Host servizio WCF (WcfSvcHost.exe)
 ms.date: 03/30/2017
 ms.assetid: 8643a63d-a357-4c39-bd6c-cdfdf71e370e
-ms.openlocfilehash: 6f719756688af066a42c3f73a860038dad1e5a53
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 6a8ed677ceaf9b86b67ec2558eb4e31c23d4c57e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857219"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54505640"
 ---
 # <a name="wcf-service-host-wcfsvchostexe"></a>Host servizio WCF (WcfSvcHost.exe)
 Host del servizio Windows Communication Foundation (WCF) (WcfSvcHost.exe) consente di avviare il debugger di Visual Studio (F5) per ospitare e testare un servizio che è stato implementato automaticamente. È quindi possibile testare il servizio mediante Client di prova WCF (WcfTestClient.exe) o un client specifico per individuare e correggere qualsiasi errore potenziale.  
@@ -21,7 +21,7 @@ Host del servizio Windows Communication Foundation (WCF) (WcfSvcHost.exe) consen
 >  Host servizio WCF non supporta parzialmente attendibile. Se si desidera utilizzare un servizio WCF in attendibilità parziale, non utilizzare il modello di progetto libreria di servizi WCF in Visual Studio per compilare il servizio. In alternativa, è possibile creare un nuovo sito Web in Visual Studio scegliendo il modello sito Web del servizio WCF, che possa ospitare il servizio in un server Web in cui è supportato il Trust parziale di WCF.  
   
 ## <a name="project-types-hosted-by-wcf-service-host"></a>Tipi di progetto ospitati da Host servizio WCF  
- Host servizio WCF può ospitare i seguenti tipi di progetto di libreria del servizio WCF: WCF Service Library, libreria di servizio del flusso di lavoro sequenziale, libreria servizi flusso di lavoro macchina a stati e Syndication Service Library. Host servizio WCF può inoltre ospitare i servizi che possono essere aggiunti a un progetto libreria di servizio usando il **Aggiungi elemento** funzionalità. Questo include servizio WCF, servizio macchina a stati WF, servizio sequenziale WF, servizio macchina a stati WF XAML e servizio sequenziale WF XAML.  
+ Host servizio WCF può ospitare i seguenti tipi di progetto di libreria del servizio WCF: WCF Service Library, libreria di servizi flusso di lavoro sequenziale, libreria di servizio del flusso di lavoro macchina a stati e libreria di servizi di diffusione. Host servizio WCF può inoltre ospitare i servizi che possono essere aggiunti a un progetto libreria di servizio usando il **Aggiungi elemento** funzionalità. Questo include servizio WCF, servizio macchina a stati WF, servizio sequenziale WF, servizio macchina a stati WF XAML e servizio sequenziale WF XAML.  
   
  Tuttavia, è necessario notare che lo strumento non consentirà di configurare un host. Per questa attività, è necessario modificare manualmente il file App.config. Lo strumento non convalida nemmeno i file di configurazione definiti dall'utente.  
   
@@ -72,9 +72,9 @@ Host del servizio Windows Communication Foundation (WCF) (WcfSvcHost.exe) consen
   
  Il **Host servizio WCF** finestra principale contiene due menu:  
   
--   **File**: contiene il **Close** e **Exit** comandi. Quando fa clic su **Close**, il **Host servizio WCF** chiude la finestra di dialogo, ma i servizi continuano a essere ospitati. Quando fa clic su **Exit**, Host servizio WCF viene anche arrestato. Questo arresta anche tutti i servizi in hosting.  
+-   **File**: Contiene il **Close** e **uscita** comandi. Quando fa clic su **Close**, il **Host servizio WCF** chiude la finestra di dialogo, ma i servizi continuano a essere ospitati. Quando fa clic su **Exit**, Host servizio WCF viene anche arrestato. Questo arresta anche tutti i servizi in hosting.  
   
--   **Guida in linea**: contiene il **sulle** comando che contiene informazioni sulla versione. Contiene anche il **aiutare** comando che è possibile aprire un file della Guida.  
+-   **Guida in linea**: Contiene il **sulle** comando che contiene informazioni sulla versione. Contiene anche il **aiutare** comando che è possibile aprire un file della Guida.  
   
  Principale **Host servizio WCF** finestra contiene due aree:  
   
@@ -82,9 +82,9 @@ Host del servizio Windows Communication Foundation (WCF) (WcfSvcHost.exe) consen
   
     -   **Servizio**: Elenca tutti i servizi.  
   
-    -   **Stato**: elenca lo stato del servizio. I valori validi sono "Avviato", "Stopped" e "Error".  
+    -   **stato**: Elenca lo stato del servizio. I valori validi sono "Avviato", "Stopped" e "Error".  
   
-    -   **Indirizzo dei metadati**: consente di visualizzare l'indirizzo dei metadati dei servizi.  
+    -   **Indirizzo dei metadati**: Consente di visualizzare l'indirizzo dei metadati dei servizi.  
   
 -   La seconda area è **informazioni aggiuntive**. Visualizza una spiegazione dettagliata dello stato del servizio quando viene selezionata la riga del servizio specifica nel **servizio** area. Se lo stato è Errore, è possibile visualizzare il messaggio di errore completo sullo schermo.  
   
@@ -110,5 +110,5 @@ netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>
   
  Per altre informazioni su netsh.exe, vedere "[come usare lo strumento di Netsh.exe e opzioni della riga di comando](https://go.microsoft.com/fwlink/?LinkId=97877)".  
   
-## <a name="see-also"></a>Vedere anche  
- [Client di prova WCF (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)
+## <a name="see-also"></a>Vedere anche
+- [Client di prova WCF (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)

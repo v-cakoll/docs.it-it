@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f3a3cc21dbbcfa99ddcecb534bd2e337da005597
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8beb5e64b05f50ba61ced72fcdb7700d4b9f30e2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431178"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54505042"
 ---
 # <a name="createhistoryreader-function"></a>Funzione CreateHistoryReader
 Crea un lettore di cronologia per il file specificato.  
@@ -40,22 +40,22 @@ HRESULT CreateHistoryReader (
  [in] Il percorso del file.  
   
  `ppHistoryReader`  
- [out] Al termine, contiene un puntatore al reader della cronologia.  
+ [out] Al termine dell'esecuzione, contiene un puntatore per il Visualizzatore della cronologia.  
   
 ## <a name="return-value"></a>Valore restituito  
- Questo metodo restituisce codici di errore COM standard, come definito nel file Winerror. H, oltre a quelli descritti nella tabella seguente.  
+ Questo metodo restituisce i codici di errore COM standard, come definito nel file Winerror. H, oltre a quelli descritti nella tabella seguente.  
   
 |Codice restituito|Descrizione|  
 |-----------------|-----------------|  
-|S_OK|Indica che il metodo viene completato correttamente.|  
+|S_OK|Indica che il metodo è stato completato correttamente.|  
 |E_INVALIDARG|Indica che `wzFilePath` o `ppHistoryReader` sono impostate su un riferimento null.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Libreria:** Fusion. dll  
+ **Libreria:** Fusion.dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Funzioni statiche globali Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+## <a name="see-also"></a>Vedere anche
+- [Funzioni statiche globali Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)

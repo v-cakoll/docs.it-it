@@ -5,18 +5,18 @@ helpviewer_keywords:
 - XAML [XAML Services], XamlServices class
 - XamlServices class [XAML Services], how to use
 ms.assetid: 6ac27fad-3687-4d7a-add1-3e90675fdfde
-ms.openlocfilehash: 27c7a45a45e8bbe3594813b29344d1548eecda5e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bbb5f31516be4e977471ee1250502e58e252f1c5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33565912"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54503192"
 ---
 # <a name="xamlservices-class-and-basic-xaml-reading-or-writing"></a>Classe XAMLServices e lettura o scrittura di XAML di base
 <xref:System.Xaml.XamlServices> è una classe fornita dai servizi XAML di .NET Framework che può essere usata per rispondere alle esigenze di scenari XAML in cui non è richiesto l'accesso specifico al flusso del nodo XAML o alle informazioni sul sistema di tipi XAML ottenute da tali nodi. L'API<xref:System.Xaml.XamlServices> può essere riepilogata nel modo seguente: `Load` o `Parse` to suppot a XAML load path, `Save` to suppot a XAML save path, and `Transform` per fornire una tecnica che unisce un percorso di caricamento e un percorso di salvataggio. `Transform` può essere usato per passare da uno schema XAML a un altro. In questo argomento vengono riepilogate le classificazioni di ognuna di queste API e vengono descritte le differenze tra determinati overload dei metodi.  
   
 <a name="load"></a>   
-## <a name="load"></a>Carica  
+## <a name="load"></a>Load  
  Diversi overload di <xref:System.Xaml.XamlServices.Load%2A> implementano la logica completa per un percorso di caricamento. Il percorso di caricamento usa XAML in diversi formati e restituisce un flusso del nodo XAML. La maggior parte di questi percorsi di caricamento usa XAML in un formato di file di testo XML codificato. È tuttavia anche possibile caricare un flusso generale oppure un'origine XAML precaricata già inclusa in una implementazione <xref:System.Xaml.XamlReader> diversa.  
   
  L'overload più semplice per la maggior parte degli scenari è <xref:System.Xaml.XamlServices.Load%28System.String%29>. Questo overload dispone di un parametro `fileName` che rappresenta semplicemente il nome di un file di testo contenente il codice XAML da caricare. Costituisce la soluzione appropriata per scenari di applicazioni, ad esempio applicazioni con attendibilità totale in cui è stata eseguita in precedenza la serializzazione dello stato o dei dati nel computer locale. È anche utile per i framework in cui viene definito il modello di applicazione e si vuole caricare uno dei file standard che definisce il comportamento dell'applicazione, l'interfaccia utente di avvio o altre funzionalità definite dal framework che usano XAML.  
@@ -53,7 +53,7 @@ ms.locfileid: "33565912"
   
  In molti scenari l'albero degli oggetti salvato è correlata a un'operazione originale con cui è stato caricato il codice XAML con <xref:System.Xaml.XamlServices.Load%2A> o con un'altra API implementata da un modello di framework/applicazione. L'albero degli oggetti potrebbe presentare differenze determinate da cambiamenti di stato, modifiche nel punto in cui l'applicazione ha acquisito le impostazioni di runtime di un utente, codice XAML modificato perché l'applicazione è un'area di progettazione XAML e così via. Con o senza modifiche, il concetto di caricamento iniziale del codice XAML dal markup e del suo successivo ulteriore salvataggio, seguito dal confronto dei due formati di markup XAML, viene talvolta definito come una rappresentazione di round trip del codice XAML.  
   
- Quando si salva e si serializza un oggetto complesso impostato in un formato di markup, la sfida consiste nel raggiungere un bilanciamento ottimale tra una rappresentazione completa senza perdita di informazioni e l'eccesso di dettagli che rendono il codice XAML difficilmente leggibile. Inoltre, clienti di XAML diversi potrebbero oltretutto usare definizioni diverse o avere altre aspettative rispetto a tale modalità di bilanciamento. Le API <xref:System.Xaml.XamlServices.Save%2A> rappresentano una definizione di tale bilanciamento. Le API <xref:System.Xaml.XamlServices.Save%2A> usano il contesto dello schema XAML disponibile e le caratteristiche basate su CLR predefinite di <xref:System.Xaml.XamlType>, <xref:System.Xaml.XamlMember>, nonché altri concetti intrinseci di XAML e del sistema di tipi XAML per determinare la posizione in cui costrutti del flusso del nodo XAML specifici possono essere ottimizzati quando vengono nuovamente salvati nel markup. Ad esempio,i percorsi di salvataggio <xref:System.Xaml.XamlServices> possono usare il contesto dello schema XAML predefinito basato su CLR per risolvere <xref:System.Xaml.XamlType> per gli oggetti, determinare un oggetto <xref:System.Xaml.XamlType.ContentProperty%2A?displayProperty=nameWithType> e quindi omettere tag di elementi proprietà durante la scrittura della proprietà del contenuto XAML dell'oggetto.  
+ Quando si salva e si serializza un oggetto complesso impostato in un formato di markup, la sfida consiste nel raggiungere un bilanciamento ottimale tra una rappresentazione completa senza perdita di informazioni e l'eccesso di dettagli che rendono il codice XAML difficilmente leggibile. Inoltre, clienti di XAML diversi potrebbero oltretutto usare definizioni diverse o avere altre aspettative rispetto a tale modalità di bilanciamento. Le API <xref:System.Xaml.XamlServices.Save%2A> rappresentano una definizione di tale bilanciamento. Le API <xref:System.Xaml.XamlServices.Save%2A> usano il contesto dello schema XAML disponibile e le caratteristiche basate su CLR predefinite di <xref:System.Xaml.XamlType>, <xref:System.Xaml.XamlMember>, nonché altri concetti intrinseci di XAML e del sistema di tipi XAML per determinare la posizione in cui costrutti del flusso del nodo XAML specifici possono essere ottimizzati quando vengono nuovamente salvati nel markup. Ad esempio,i percorsi di salvataggio <xref:System.Xaml.XamlServices> possono usare il contesto dello schema XAML predefinito basato su CLR per risolvere <xref:System.Xaml.XamlType> per gli oggetti, determinare un oggetto <xref:System.Xaml.XamlType.ContentProperty%2A?displayProperty=nameWithType>e quindi omettere tag di elementi proprietà durante la scrittura della proprietà del contenuto XAML dell'oggetto.  
   
 <a name="transform"></a>   
 ## <a name="transform"></a>Transform  
@@ -61,7 +61,7 @@ ms.locfileid: "33565912"
   
  Per le operazioni che si basano sull'esame di ogni nodo in un flusso del nodo XAML, il metodo <xref:System.Xaml.XamlServices.Transform%2A>non viene in genere usato. È invece necessario definire una serie di operazioni del percorso di caricamento e di salvataggio personalizzate, quindi inserire la logica personalizzata. In uno dei percorsi, usare una coppia di writer XAML reader XAML intorno al ciclo del nodo. Ad esempio, caricare il codice XAML iniziale usando <xref:System.Xaml.XamlXmlReader> e avanzare nei nodi con chiamate <xref:System.Xaml.XamlXmlReader.Read%2A> successive. Operando a livello del flusso del nodo XAML, è ora possibile regolare i singoli nodi (tipi, membri, altri nodi) per applicare una trasformazione oppure lasciare il nodo invariato. Il nodo verrà quindi inviato in avanti all'API `Write` pertinente di un oggetto <xref:System.Xaml.XamlObjectWriter> e si scriverà l'oggetto. Per altre informazioni, vedere [Understanding XAML Node Stream Structures and Concepts](../../../docs/framework/xaml-services/understanding-xaml-node-stream-structures-and-concepts.md).  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Xaml.XamlObjectWriter>  
- <xref:System.Xaml.XamlServices>  
- [Servizi XAML](../../../docs/framework/xaml-services/index.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Xaml.XamlObjectWriter>
+- <xref:System.Xaml.XamlServices>
+- [Servizi XAML](../../../docs/framework/xaml-services/index.md)

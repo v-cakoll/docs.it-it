@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b3623c886a48cc938be017f955fbdac1df3f10f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a5e2501a5ab62c6aaef2b3f754f9eed10e4e4b97
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33437635"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54505023"
 ---
 # <a name="idebuggerthreadcontrolreleaseallruntimethreads-method"></a>Metodo IDebuggerThreadControl::ReleaseAllRuntimeThreads
-Notifica all'host che i servizi di debug stanno per rilasciare tutti i thread sono bloccati.  
+Notifica all'host che i servizi di debug stanno per rilasciare tutti i thread bloccati.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,16 +34,16 @@ HRESULT ReleaseAllRuntimeThreads ( );
 ```  
   
 ## <a name="remarks"></a>Note  
- Il `ReleaseAllRuntimeThreads` (metodo) non verrà mai chiamato su un thread di runtime. Se l'host dispone di un thread di runtime bloccato, è necessario rilasciare ora.  
+ Il `ReleaseAllRuntimeThreads` (metodo) non verrà mai chiamato su un thread di runtime. Se l'host dispone di un thread di runtime bloccato, deve rilasciare ora.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Mscoree. H  
+ **Intestazione:** MSCorEE.h  
   
- **Libreria:** inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia IDebuggerThreadControl](../../../../docs/framework/unmanaged-api/hosting/idebuggerthreadcontrol-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia IDebuggerThreadControl](../../../../docs/framework/unmanaged-api/hosting/idebuggerthreadcontrol-interface.md)
