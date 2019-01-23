@@ -2,12 +2,12 @@
 title: Concetti relativi alla sicurezza usati in WCF
 ms.date: 03/30/2017
 ms.assetid: 3b9dfcf5-4bf1-4f35-9070-723171c823a1
-ms.openlocfilehash: 9fe27f3f63f8c7fad1a4bbb0975a5255d5a16654
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 2dd820d4b6ba38f194074465ac7c1f40289fd928
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50189589"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54541794"
 ---
 # <a name="security-concepts-used-in-wcf"></a>Concetti relativi alla sicurezza usati in WCF
 Sicurezza di Windows Communication Foundation (WCF) viene generata su concetti già in uso e distribuita in varie infrastrutture di sicurezza.  
@@ -29,7 +29,7 @@ Sicurezza di Windows Communication Foundation (WCF) viene generata su concetti g
  I certificati X.509 costituiscono un form di credenziali primario utilizzato nelle applicazioni di sicurezza. Per altre informazioni su X.509 Vedere certificati [certificati chiave pubblica X.509](https://go.microsoft.com/fwlink/?LinkId=210213). I certificati X.509 vengono archiviati all'interno di un archivio certificati. I computer che eseguono Windows dispongono di vari tipi di archivi certificati, ognuno dei quali con un scopo diverso. Per altre informazioni sugli archivi diversi, vedere [archivi certificati](https://go.microsoft.com/fwlink/?LinkID=87787).  
   
 ## <a name="web-services-security-specifications"></a>Specifiche di sicurezza dei servizi Web  
- Le associazioni definite dal sistema supportano molte specifiche di sicurezza di servizi Web di uso comune. Per un elenco completo delle associazioni fornite dal sistema e le specifiche dei servizi web supportate, vedere: [protocolli di servizi Web supportati da associazioni di interoperabilità fornite dal sistema](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)  
+ Le associazioni definite dal sistema supportano molte specifiche di sicurezza di servizi Web di uso comune. Per un elenco completo delle associazioni fornite dal sistema e le specifiche dei servizi web supportate, vedere: [Protocolli di servizi Web supportati da associazioni di interoperabilità fornite dal sistema](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)  
   
 ## <a name="access-control-mechanisms"></a>Meccanismi del controllo di accesso  
  WCF fornisce numerosi modi per controllare l'accesso a un servizio o un'operazione, tra i quali:  
@@ -46,6 +46,6 @@ Sicurezza di Windows Communication Foundation (WCF) viene generata su concetti g
   
  Per altre informazioni su questi argomenti, vedere [meccanismi di controllo di accesso](../../../../docs/framework/wcf/feature-details/access-control-mechanisms.md)  
   
-## <a name="see-also"></a>Vedere anche  
- [Panoramica della sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Modello di sicurezza per Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>Vedere anche
+- [Panoramica della sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Modello di sicurezza per Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

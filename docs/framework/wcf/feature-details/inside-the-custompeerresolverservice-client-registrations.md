@@ -1,15 +1,15 @@
 ---
-title: 'CustomPeerResolverService: registrazioni client'
+title: 'Custompeerresolverservice: Registrazioni client'
 ms.date: 03/30/2017
 ms.assetid: 40236953-a916-4236-84a6-928859e1331a
-ms.openlocfilehash: 1f8b6f5ac3a41fdc7f817553693b0621ee0ea3de
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 90d40eb11dbfebf4a19ba4c42e0fd4b45a2b1e7a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494056"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54541781"
 ---
-# <a name="inside-the-custompeerresolverservice-client-registrations"></a>CustomPeerResolverService: registrazioni client
+# <a name="inside-the-custompeerresolverservice-client-registrations"></a>Custompeerresolverservice: Registrazioni client
 Ogni nodo della rete pubblica le informazioni sull'endpoint relative nel servizio resolver tramite la funzione `Register`. Il servizio resolver archivia queste informazioni come record di registrazione. Questo record contiene un identificatore univoco (RegistrationID) e informazioni sull'endpoint (PeerNodeAddress) per il nodo.  
   
 ## <a name="stale-records-and-expiration-time"></a>Record non aggiornati e data di scadenza  
@@ -26,12 +26,12 @@ Ogni nodo della rete pubblica le informazioni sull'endpoint relative nel servizi
   
  Per implementare il proprio servizio resolver, è necessario scrivere una funzione di manutenzione per rimuovere i record di registrazione non aggiornati. Sono disponibili diversi modi per eseguire questa operazione:  
   
--   **Manutenzione periodica**: impostare un timer in modo disattivi periodicamente ed esaminare l'archivio dati per eliminare i record obsoleti. Questo approccio è utilizzato da <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>.  
+-   **Manutenzione periodica**: Impostare un timer di spengano periodicamente ed esaminare l'archivio dati per eliminare i record obsoleti. Questo approccio è utilizzato da <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>.  
   
--   **Eliminazione passiva**: anziché cercare attivamente i record non aggiornati a intervalli regolari, è possibile identificare ed eliminare i record non aggiornati quando il servizio è già in esecuzione un'altra funzione. Questo approccio potrebbe potenzialmente rallentare i tempi di risposta alle richieste dei client resolver, ma elimina la necessità di un timer e potrebbe rivelarsi più efficiente qualora si preveda che un numero ridotto di nodi abbandoni la rete senza chiamare `Unregister`.  
+-   **Eliminazione passiva**: Anziché cercare attivamente i record non aggiornati a intervalli regolari, è possibile identificare ed eliminare i record non aggiornati quando il servizio è già in esecuzione un'altra funzione. Questo approccio potrebbe potenzialmente rallentare i tempi di risposta alle richieste dei client resolver, ma elimina la necessità di un timer e potrebbe rivelarsi più efficiente qualora si preveda che un numero ridotto di nodi abbandoni la rete senza chiamare `Unregister`.  
   
 ## <a name="registrationlifetime-and-refresh"></a>RegistrationLifetime e Refresh  
  Quando un nodo effettua la registrazione con un servizio resolver, riceve un oggetto <xref:System.ServiceModel.PeerResolvers.RegisterResponseInfo> dal servizio. La proprietà `RegistrationLifetime` di questo oggetto indica al nodo il tempo a sua disposizione prima che scada la registrazione e venga rimosso dal servizio resolver. Se, ad esempio, `RegistrationLifetime` è pari a 2 minuti, il nodo deve chiamare `Refresh` in meno di 2 minuti per assicurarsi che il record rimanga aggiornato e non venga eliminato. Quando il servizio resolver riceve una richiesta `Refresh`, cerca il record e reimposta la data di scadenza. Refresh restituisce un oggetto <xref:System.ServiceModel.PeerResolvers.RefreshResponseInfo> con una proprietà `RegistrationLifetime`.  
   
-## <a name="see-also"></a>Vedere anche  
- [Resolver del peer](../../../../docs/framework/wcf/feature-details/peer-resolvers.md)
+## <a name="see-also"></a>Vedere anche
+- [Resolver del peer](../../../../docs/framework/wcf/feature-details/peer-resolvers.md)

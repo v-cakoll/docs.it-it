@@ -2,12 +2,12 @@
 title: '&lt;httpTransport&gt;'
 ms.date: 03/30/2017
 ms.assetid: 8b30c065-b32a-4fa3-8eb4-5537a9c6b897
-ms.openlocfilehash: d03b92dc1e7b53a182b8065a6d4ac652f76291ba
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 1e6cb812d68d5f26a837ff3e1124034a8a648be4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147434"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54541079"
 ---
 # <a name="lthttptransportgt"></a>&lt;httpTransport&gt;
 Specifica un trasporto HTTP per la trasmissione di messaggi SOAP per un'associazione personalizzata.  
@@ -28,7 +28,7 @@ Specifica un trasporto HTTP per la trasmissione di messaggi SOAP per un'associaz
                keepAliveEnabled="Boolean"
                maxBufferSize="Integer"
                proxyAddress="Uri"
-               proxyAuthenticationScheme="None/Digest/Negotiate/Ntlm/Basic/Anonymous/IntegratedWindowsAuthentication"
+               proxyAuthenticationScheme="None/Digest/Negotiate/Ntlm/Basic/Anonymous"
                realm="String"
                transferMode="Buffered/Streamed/StreamedRequest/StreamedResponse"
                unsafeConnectionNtlmAuthentication="Boolean"
@@ -49,7 +49,7 @@ Specifica un trasporto HTTP per la trasmissione di messaggi SOAP per un'associaz
 |keepAliveEnabled|Valore booleano che specifica se eseguire una connessione permanente alla risorsa Internet.|  
 |maxBufferSize|Numero intero positivo che specifica la dimensione massima del buffer. L'impostazione predefinita è 524288.|  
 |proxyAddress|URI che specifica l'indirizzo del proxy HTTP. Se `useSystemWebProxy` è `true`, questa impostazione deve essere `null`. Il valore predefinito è `null`.|  
-|proxyAuthenticationScheme|Specifica il protocollo usato per l'autenticazione delle richieste client elaborate da un proxy HTTP. Di seguito vengono elencati i valori validi:<br /><br /> -None: Viene eseguita alcuna autenticazione.<br />-Digest: Specifica l'autenticazione digest.<br />-Negotiate: Negozia con il client per determinare lo schema di autenticazione. Viene usato se il client e il server supportano entrambi Kerberos; in caso contrario, viene usato NTLM.<br />-Ntlm: Specifica l'autenticazione NTLM.<br />-Base: Specifica l'autenticazione di base.<br />-Anonimo: Consente di specificare l'autenticazione anonima.<br />-IntegratedWindowsAuthentication: Specifica l'autenticazione Windows.<br /><br /> Il valore predefinito è Anonymous. L'attributo è di tipo <xref:System.Net.AuthenticationSchemes>.|  
+|proxyAuthenticationScheme|Specifica il protocollo usato per l'autenticazione delle richieste client elaborate da un proxy HTTP. Di seguito vengono elencati i valori validi:<br /><br /> -None: Viene eseguita alcuna autenticazione.<br />-Digest: Specifica l'autenticazione digest.<br />-Negotiate: Negozia con il client per determinare lo schema di autenticazione. Viene usato se il client e il server supportano entrambi Kerberos; in caso contrario, viene usato NTLM.<br />-Ntlm: Specifica l'autenticazione NTLM.<br />-Base: Specifica l'autenticazione di base.<br />-Anonimo: Consente di specificare l'autenticazione anonima.<br /><br /> Il valore predefinito è Anonymous. L'attributo è di tipo <xref:System.Net.AuthenticationSchemes>. Si noti che `IntegratedWindowsAuthentication` non è supportato.|  
 |realm|Stringa che specifica l'area di autenticazione da usare sul proxy/server. Il valore predefinito è una stringa vuota.<br /><br /> I server usano aree di autenticazione per separare risorse protette. Ogni partizione può avere schema di autenticazione e/o database di autorizzazione propri. Le aree vengono usate solo per l'autenticazione di base e classificata. Se un client viene autenticato correttamente, l'autenticazione è valida per tutte le risorse in una determinata area. Per una descrizione dettagliata delle aree, vedere RFC 2617 al [sito Web IETF](https://www.ietf.org).|  
 |transferMode|Specifica se i messaggi vengono memorizzati nel buffer o inviati nel flusso in una richiesta o una risposta. Di seguito vengono elencati i valori validi:<br /><br /> -Memorizzato nel buffer: I messaggi di richiesta e risposta vengono memorizzati nel buffer.<br />-Trasmessi: I messaggi di richiesta e risposta sono state trasmesse.<br />-StreamedRequest: Il messaggio di richiesta viene inviato nel flusso e quello di risposta viene memorizzato nel buffer.<br />-StreamedResponse: Il messaggio di richiesta viene memorizzato nel buffer e quello di risposta viene inviato nel flusso.<br /><br /> L'impostazione predefinita è Buffered. L'attributo è di tipo <xref:System.ServiceModel.TransferMode>.|  
 |unsafeConnectionNtlmAuthentication|Valore che specifica se nel server viene attivata la condivisione di connessioni non sicure. Il valore predefinito è `false`. Se abilitata, l'autenticazione NTLM viene eseguita una volta su ogni connessione TCP.|  
@@ -67,14 +67,14 @@ Specifica un trasporto HTTP per la trasmissione di messaggi SOAP per un'associaz
 ## <a name="remarks"></a>Note  
  L'elemento `httpTransport` rappresenta il punto iniziale per la creazione di un'associazione personalizzata che implementa il protocollo di trasporto HTTP. Quest'ultimo è il principale trasporto usato per scopi di interoperabilità. Questo trasporto è supportato da Windows Communication Foundation (WCF) per garantire l'interoperabilità con altri stack di servizi Web non WCF.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.Configuration.HttpTransportElement>  
- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
- <xref:System.ServiceModel.Channels.TransportBindingElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [Trasporti](../../../../../docs/framework/wcf/feature-details/transports.md)  
- [Scelta di un trasporto](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
- [Associazioni](../../../../../docs/framework/wcf/bindings.md)  
- [Estensione delle associazioni](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [Associazioni personalizzate](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.ServiceModel.Configuration.HttpTransportElement>
+- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>
+- <xref:System.ServiceModel.Channels.TransportBindingElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [Trasporti](../../../../../docs/framework/wcf/feature-details/transports.md)
+- [Scelta di un trasporto](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+- [Associazioni](../../../../../docs/framework/wcf/bindings.md)
+- [Estensione delle associazioni](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [Associazioni personalizzate](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

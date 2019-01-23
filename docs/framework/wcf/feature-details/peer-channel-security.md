@@ -2,12 +2,12 @@
 title: Protezione del canale peer
 ms.date: 03/30/2017
 ms.assetid: 2c59b164-3729-44f0-a967-f247c42de662
-ms.openlocfilehash: e66c532b253c8aa53ae508a72633fa255615e80f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 09979cee48522355631c79e0bdf4c0fba6be782e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494504"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54541755"
 ---
 # <a name="peer-channel-security"></a>Protezione del canale peer
 Il canale peer attiva diversi tipi di applicazioni distribuite che dipendono da messaggistica a più parti. Ne è un esempio la distribuzione di contenuto Internet, in cui un'origine attendibile distribuisce il contenuto (ad esempio aggiornamenti di supporti o software), un gruppo di amici si scambiano musica e foto o un team di colleghi lavora in modo collaborativo a un documento. Ognuno di questi scenari richiede un modello di sicurezza univoco. Il modello di sicurezza del canale peer ha lo scopo di affrontare tali scenari e offrire un modello sicuro per le rispettive esigenze di diversi modelli di identità, autenticazione e autorizzazione.  
@@ -33,7 +33,7 @@ Il canale peer attiva diversi tipi di applicazioni distribuite che dipendono da 
   
  Il canale peer non richiede un modello di identità specifico a condizione che l'applicazione scelga uno dei tipi di token supportati. Le applicazioni detengono la proprietà completa del ciclo di vita di queste identità e delle decisioni di autenticazione.  
   
-## <a name="see-also"></a>Vedere anche  
- [Protezione di applicazioni del canale peer](../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)  
- [Concetti relativi al canale peer](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)  
- [Creazione di un'applicazione del canale peer](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)
+## <a name="see-also"></a>Vedere anche
+- [Protezione di applicazioni del canale peer](../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)
+- [Concetti relativi al canale peer](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)
+- [Creazione di un'applicazione del canale peer](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)
