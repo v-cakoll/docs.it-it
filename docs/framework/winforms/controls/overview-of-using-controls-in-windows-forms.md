@@ -9,24 +9,24 @@ helpviewer_keywords:
 - controls [Windows Forms]
 - custom controls [Windows Forms]
 ms.assetid: fddbe951-4485-459d-a5fd-665ea346dbc1
-ms.openlocfilehash: 629a08a090178ffb1df1e9905182c9f246537533
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8ab1fa9ccbffc7ca9621e32e00455a9b75a91126
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33537362"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54533088"
 ---
 # <a name="overview-of-using-controls-in-windows-forms"></a>Cenni preliminari sull'utilizzo di controlli in Windows Form
-In questo argomento vengono descritti gli elementi fondamentali di un'applicazione Windows Form e fornisce un esempio semplice che utilizza i controlli e gestisce gli eventi in un'applicazione Windows Form.  
+In questo argomento descrive gli elementi essenziali di un'applicazione Windows Forms e fornisce un semplice esempio che usa i controlli e gestisce gli eventi in un'applicazione Windows Form.  
   
-## <a name="simple-windows-forms-applications"></a>Applicazioni Windows Form semplici  
- Come minimo, un'applicazione Windows Forms include gli elementi seguenti:  
+## <a name="simple-windows-forms-applications"></a>Semplice Windows Forms Application  
+ Come minimo, un'applicazione Windows Forms costituita dagli elementi seguenti:  
   
--   Una o più classi che derivano da <xref:System.Windows.Forms.Form?displayProperty=nameWithType>.  
+-   Uno o più classi che derivano da <xref:System.Windows.Forms.Form?displayProperty=nameWithType>.  
   
--   Oggetto `Main` metodo che richiama il `static` (`shared` in Visual Basic) <xref:System.Windows.Forms.Application.Run%2A> metodo e passa un <xref:System.Windows.Forms.Form> istanza a esso. Il <xref:System.Windows.Forms.Application.Run%2A> metodo elabora i messaggi dal sistema operativo per l'applicazione.  
+-   Oggetto `Main` metodo che richiama la `static` (`shared` in Visual Basic) <xref:System.Windows.Forms.Application.Run%2A> metodo e passa un <xref:System.Windows.Forms.Form> istanza ad esso. Il <xref:System.Windows.Forms.Application.Run%2A> metodo elabora i messaggi dal sistema operativo per l'applicazione.  
   
- Esempio di codice seguente mostra gli elementi essenziali di un'applicazione Windows Form.  
+ Esempio di codice seguente illustra gli elementi essenziali di un'applicazione Windows Form.  
   
 ```vb  
 Option Explicit  
@@ -74,8 +74,8 @@ public class MyForm : Form {
 }  
 ```  
   
-## <a name="using-controls-in-a-windows-forms-application"></a>Utilizzo dei controlli in un'applicazione Windows Form  
- Esempio di codice seguente illustra un'applicazione semplice che illustra come le applicazioni Windows Form usano i controlli e la gestione degli eventi. L'esempio è costituito da tre pulsanti di un form. ogni pulsante Modifica il colore di sfondo quando si fa clic.  
+## <a name="using-controls-in-a-windows-forms-application"></a>Uso di controlli in una Windows Forms Application  
+ Esempio di codice seguente illustra un'applicazione semplice che illustra come le applicazioni Windows Form usano i controlli e la gestione degli eventi. L'esempio è costituito da tre pulsanti in un form. ogni pulsante viene modificato il colore di sfondo quando si fa clic.  
   
 ```vb  
 Option Explicit  
@@ -223,6 +223,6 @@ public class MyForm : Form {
 }  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Sviluppo di controlli Windows Form personalizzati con .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
- [Nozioni fondamentali sullo sviluppo di controlli Windows Form](../../../../docs/framework/winforms/controls/windows-forms-control-development-basics.md)
+## <a name="see-also"></a>Vedere anche
+- [Sviluppo di controlli Windows Form personalizzati con .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
+- [Nozioni fondamentali sullo sviluppo di controlli Windows Form](../../../../docs/framework/winforms/controls/windows-forms-control-development-basics.md)

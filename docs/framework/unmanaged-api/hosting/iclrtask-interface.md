@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 94ba53e4af114773a347d15b7308dc4c3567154e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9d5f0bb07498203d3db57ac3948efddce4f050a2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33435706"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54533715"
 ---
 # <a name="iclrtask-interface"></a>Interfaccia ICLRTask
 Fornisce metodi che consentono all'host per effettuare richieste di common language runtime (CLR) o per fornire la notifica a CLR sull'attività associata.  
@@ -30,35 +30,35 @@ Fornisce metodi che consentono all'host per effettuare richieste di common langu
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo Abort](../../../../docs/framework/unmanaged-api/hosting/iclrtask-abort-method.md)|Richiede che Common Language Runtime di interrompere l'attività che corrente `ICLRTask` istanza.|  
-|[Metodo ExitTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-exittask-method.md)|Notifica a Common Language Runtime che l'attività associata all'oggetto corrente `ICLRTask` istanza sta terminando e tenta di arrestare l'attività normalmente.|  
-|[Metodo GetMemStats](../../../../docs/framework/unmanaged-api/hosting/iclrtask-getmemstats-method.md)|Ottiene informazioni statistiche sull'utilizzo di risorse di memoria da parte dell'attività rappresentata dall'oggetto corrente `ICLRTask` istanza.|  
-|[Metodo LocksHeld](../../../../docs/framework/unmanaged-api/hosting/iclrtask-locksheld-method.md)|Ottiene il numero di blocchi mantenuti attivi per l'attività.|  
-|[Metodo NeedsPriorityScheduling](../../../../docs/framework/unmanaged-api/hosting/iclrtask-needspriorityscheduling-method.md)|Ottiene un valore che indica se l'host deve assegnare una priorità alta alla ripianificazione dell'attività rappresentata dall'oggetto corrente `ICLRTask` istanza.|  
-|[Metodo Reset](../../../../docs/framework/unmanaged-api/hosting/iclrtask-reset-method.md)|Informa il CLR che l'host ha completato un'attività e consente di Riutilizzare corrente `ICLRTask` istanza per rappresentare un'altra attività.|  
-|[Metodo RudeAbort](../../../../docs/framework/unmanaged-api/hosting/iclrtask-rudeabort-method.md)|Il CLR di interrompere l'attività rappresentata dall'oggetto corrente `ICLRTask` istanza immediatamente, senza la garanzia che verranno eseguiti i finalizzatori.|  
+|[Metodo Abort](../../../../docs/framework/unmanaged-api/hosting/iclrtask-abort-method.md)|Richiede a CLR di interrompere l'attività che corrente `ICLRTask` istanza rappresenta.|  
+|[Metodo ExitTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-exittask-method.md)|Invia una notifica il runtime di cui l'attività associata all'oggetto corrente `ICLRTask` istanza sta terminando e tenta di arresto normale di attività.|  
+|[Metodo GetMemStats](../../../../docs/framework/unmanaged-api/hosting/iclrtask-getmemstats-method.md)|Ottiene le informazioni statistiche sull'utilizzo di risorse di memoria da parte dell'attività rappresentata dall'oggetto corrente `ICLRTask` istanza.|  
+|[Metodo LocksHeld](../../../../docs/framework/unmanaged-api/hosting/iclrtask-locksheld-method.md)|Ottiene il numero di blocchi attualmente mantenuti attivi per l'attività.|  
+|[Metodo NeedsPriorityScheduling](../../../../docs/framework/unmanaged-api/hosting/iclrtask-needspriorityscheduling-method.md)|Ottiene un valore che indica se l'host deve assegnare una priorità alta per l'attività rappresentata dall'istanza corrente di ripianificazione `ICLRTask` istanza.|  
+|[Metodo Reset](../../../../docs/framework/unmanaged-api/hosting/iclrtask-reset-method.md)|Indica a CLR l'host ha completato un'attività che consente a CLR di riutilizzare corrente `ICLRTask` per rappresentare un'altra attività.|  
+|[Metodo RudeAbort](../../../../docs/framework/unmanaged-api/hosting/iclrtask-rudeabort-method.md)|Fa in modo che CLR di interrompere l'attività rappresentata dall'oggetto corrente `ICLRTask` istanza immediatamente, senza la garanzia che i finalizzatori vengano eseguiti.|  
 |[Metodo SetTaskIdentifier](../../../../docs/framework/unmanaged-api/hosting/iclrtask-settaskidentifier-method.md)|Imposta un identificatore univoco per l'attività rappresentata dall'oggetto corrente `ICLRTask` istanza, per eseguire il debug.|  
-|[Metodo SwitchIn](../../../../docs/framework/unmanaged-api/hosting/iclrtask-switchin-method.md)|Notifica a Common Language Runtime che l'attività rappresentata dall'oggetto corrente `ICLRTask` istanza si trova in uno stato eseguibile.|  
-|[Metodo SwitchOut](../../../../docs/framework/unmanaged-api/hosting/iclrtask-switchout-method.md)|Notifica a Common Language Runtime che l'attività rappresentata dall'oggetto corrente `ICLRTask` istanza non è più in uno stato eseguibile.|  
-|[Metodo YieldTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-yieldtask-method.md)|Richiede che il tempo del processore verificare CLR disponibile ad altre attività. CLR non garantisce che l'attività verrà inserita in uno stato in grado di produrre il tempo di elaborazione.|  
+|[Metodo SwitchIn](../../../../docs/framework/unmanaged-api/hosting/iclrtask-switchin-method.md)|Invia una notifica il runtime di cui l'attività rappresentata dall'oggetto corrente `ICLRTask` istanza è in uno stato eseguibile.|  
+|[Metodo SwitchOut](../../../../docs/framework/unmanaged-api/hosting/iclrtask-switchout-method.md)|Invia una notifica il runtime di cui l'attività rappresentata dall'oggetto corrente `ICLRTask` istanza non è più in uno stato eseguibile.|  
+|[Metodo YieldTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-yieldtask-method.md)|Richiede che il tempo del processore di rendere CLR disponibile ad altre attività. CLR non garantisce che l'attività verrà inserito in uno stato in grado di produrre tempi di elaborazione.|  
   
 ## <a name="remarks"></a>Note  
- Un `ICLRTask` è la rappresentazione di un'attività per CLR. In qualsiasi momento durante l'esecuzione di codice, un'attività può essere descritta come in esecuzione o in attesa di esecuzione. L'host chiama il `ICLRTask::SwitchIn` metodo per notificare a Common Language Runtime che l'attività che corrente `ICLRTask` istanza si trova ora in uno stato eseguibile. Dopo una chiamata a `ICLRTask::SwitchIn`, l'host può pianificare l'attività in qualsiasi thread del sistema operativo, eccetto i casi in cui il runtime richiede l'affinità di thread, come specificato dalle chiamate al [IHostTaskManager:: BeginThreadAffinity](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-beginthreadaffinity-method.md) e [IHostTaskManager:: EndThreadAffinity](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-endthreadaffinity-method.md) metodi. Successivamente, il sistema operativo potrebbe decidere di rimuovere l'attività dal thread e inserirlo in uno stato non in esecuzione. Questa situazione può verificarsi, ad esempio, ogni volta che l'attività Blocca sulle primitive di sincronizzazione o attende il completamento delle operazioni i/o. L'host chiama [SwitchOut](../../../../docs/framework/unmanaged-api/hosting/iclrtask-switchout-method.md) per notificare a Common Language Runtime che l'attività rappresentata dall'oggetto corrente `ICLRTask` istanza non è più in uno stato eseguibile.  
+ Un `ICLRTask` è la rappresentazione di un'attività per il CLR. In qualsiasi momento durante l'esecuzione di codice, un'attività può essere descritta come in esecuzione o in attesa di esecuzione. L'host chiama il `ICLRTask::SwitchIn` metodo per notificare a CLR che l'attività che corrente `ICLRTask` istanza si trova ora in uno stato eseguibile. Dopo una chiamata a `ICLRTask::SwitchIn`, l'host può pianificare l'attività in qualsiasi thread del sistema operativo, tranne nei casi in cui il runtime richiede l'affinità di thread, come specificato dalle chiamate al [BeginThreadAffinity](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-beginthreadaffinity-method.md) e [EndThreadAffinity](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-endthreadaffinity-method.md) metodi. Successivamente, il sistema operativo potrebbe decidere di rimuovere l'attività del thread e inserirlo in uno stato non in esecuzione. Questa situazione può verificarsi, ad esempio, ogni volta che l'attività Blocca sulle primitive di sincronizzazione o in attesa di completamento delle operazioni i/o. L'host chiama [SwitchOut](../../../../docs/framework/unmanaged-api/hosting/iclrtask-switchout-method.md) per notificare a CLR che l'attività rappresentata dall'oggetto corrente `ICLRTask` istanza non è più in uno stato eseguibile.  
   
- In genere, un'attività termina alla fine dell'esecuzione del codice. A questo punto, l'host chiama `ICLRTask::ExitTask` per eliminare l'oggetto associato `ICLRTask`. Tuttavia, le attività possono essere riciclate tramite una chiamata a `ICLRTask::Reset`, che consente di `ICLRTask` l'istanza di nuovo. Questo approccio impedisce l'overhead di ripetutamente creazione ed eliminazione delle istanze.  
+ Un'attività è in genere termina alla fine dell'esecuzione del codice. A quel punto, l'host chiama `ICLRTask::ExitTask` distruggere associato `ICLRTask`. Tuttavia, le attività possono essere riciclate mediante una chiamata a `ICLRTask::Reset`, che consente la `ICLRTask` istanza per essere riusata. Questo approccio impedisce l'overhead di creazione e distruzione di istanze.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Mscoree. H  
+ **Intestazione:** MSCorEE.h  
   
- **Libreria:** inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ICLRTaskManager](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)  
- [Interfaccia IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)  
- [Interfaccia IHostTaskManager](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)  
- [Interfacce di hosting](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
- [Interfaccia ICLRTask2](../../../../docs/framework/unmanaged-api/hosting/iclrtask2-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ICLRTaskManager](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
+- [Interfaccia IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
+- [Interfaccia IHostTaskManager](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
+- [Interfacce di hosting](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Interfaccia ICLRTask2](../../../../docs/framework/unmanaged-api/hosting/iclrtask2-interface.md)

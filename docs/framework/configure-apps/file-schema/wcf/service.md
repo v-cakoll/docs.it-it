@@ -1,20 +1,20 @@
 ---
-title: '&lt;Servizio&gt;'
+title: '&lt;service&gt;'
 ms.date: 03/30/2017
 ms.assetid: 13123dd6-c4a9-4a04-a984-df184b851788
-ms.openlocfilehash: ef0ae70440323c1ede5deca60e88f29861760e68
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: e91e04c602fd867e329477015fc0a8354ae26a05
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145510"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54535008"
 ---
-# <a name="ltservicegt"></a>&lt;Servizio&gt;
+# <a name="ltservicegt"></a>&lt;service&gt;
 L'elemento `service` contiene le impostazioni di un servizio Windows Communication Foundation (WCF). Contiene anche endpoint che espongono il servizio.  
   
  \<system.ServiceModel>  
-\<Services >  
-\<servizio >  
+\<services>  
+\<service>  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,7 +39,7 @@ L'elemento `service` contiene le impostazioni di un servizio Windows Communicati
 |Elemento|Descrizione|  
 |-------------|-----------------|  
 |[\<endpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md)|Raccolta di elementi `endpoint` che espongono questo servizio.|  
-|[\<host >](../../../../../docs/framework/configure-apps/file-schema/wcf/host.md)|Specifica l'host dell'istanza del servizio. L'elemento è di tipo <xref:System.ServiceModel.Configuration.HostElement>.|  
+|[\<host>](../../../../../docs/framework/configure-apps/file-schema/wcf/host.md)|Specifica l'host dell'istanza del servizio. L'elemento è di tipo <xref:System.ServiceModel.Configuration.HostElement>.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -68,6 +68,6 @@ L'elemento `service` contiene le impostazioni di un servizio Windows Communicati
 </service>
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.Configuration.ServiceElement>  
- [Configurazione dei servizi](../../../../../docs/framework/wcf/configuring-services.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.ServiceModel.Configuration.ServiceElement>
+- [Configurazione dei servizi](../../../../../docs/framework/wcf/configuring-services.md)

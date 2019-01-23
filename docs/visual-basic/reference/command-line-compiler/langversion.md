@@ -1,19 +1,20 @@
 ---
-title: -/langversion (Visual Basic)
+title: -langversion (Visual Basic)
 ms.date: 03/10/2018
 helpviewer_keywords:
 - /langversion compiler option [Visual Basic]
 - langversion compiler option [Visual Basic]
 - -langversion compiler option [Visual Basic]
 ms.assetid: 59b7b0c8-2dde-4e9b-94e7-0237f7e0bafb
-ms.openlocfilehash: 82a7114027451d1342e6dc0846799933ce44d968
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6fffe264377474bba14f6f086b521ccf9bd04adf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54534459"
 ---
-# <a name="-langversion-visual-basic"></a>-/langversion (Visual Basic)
-Indica al compilatore di accettare solo la sintassi che è incluso nella versione specificata del linguaggio Visual Basic.  
+# <a name="-langversion-visual-basic"></a>-langversion (Visual Basic)
+Indica al compilatore di accettare solo sintassi inclusa nella versione specificata del linguaggio Visual Basic.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -23,12 +24,16 @@ Indica al compilatore di accettare solo la sintassi che è incluso nella version
   
 ## <a name="arguments"></a>Argomenti  
  `version`  
- Obbligatorio. La versione della lingua da utilizzare durante la compilazione. I valori accettati sono `9`, `9.0`, `10`, e `10.0`.  
+ Obbligatorio. Versione del linguaggio da utilizzare durante la compilazione. Valori accettati sono `9`, `10`, `11`, `12`, `14`, `15`, `15.3`, `15.5`, `default` e `latest`.
+
+ Uno dei numeri interi può anche essere specificato tramite `.0` come la versione secondaria, ad esempio, `11.0`.
+
+ È possibile visualizzare l'elenco di tutti i possibili valori specificando `-langversion:?` nella riga di comando.  
   
 ## <a name="remarks"></a>Note  
- Il `-langversion` opzione specifica quale il compilatore accetta di sintassi. Ad esempio, se si specifica che la lingua è 9.0, il compilatore genera errori di sintassi che è valida solo nella versione 10.0 e versioni successive.  
+ Il `-langversion` opzione specifica quale sintassi il compilatore accetta. Ad esempio, se si specifica che la versione del linguaggio è 9.0, il compilatore genera errori di sintassi che è valida solo nella versione 10.0 e versioni successive.  
   
- È possibile utilizzare questa opzione quando si sviluppano applicazioni che diverse versioni di .NET Framework. Ad esempio, se la destinazione è .NET Framework 3.5, è possibile utilizzare questa opzione per assicurarsi che non utilizzino la sintassi di linguaggio versione 10.0.  
+ È possibile usare questa opzione quando si sviluppano applicazioni destinati a versioni diverse di .NET Framework. Ad esempio, se si usa .NET Framework 3.5, è possibile utilizzare questa opzione per assicurarsi di non usare la sintassi di linguaggio versione 10.0.  
   
  È possibile impostare `-langversion` direttamente solo tramite la riga di comando. Per altre informazioni, vedere [Sviluppo per una versione specifica di .NET Framework](/visualstudio/ide/targeting-a-specific-dotnet-framework-version).  
   
@@ -39,7 +44,7 @@ Indica al compilatore di accettare solo la sintassi che è incluso nella version
 vbc -langversion:9.0 sample.vb  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Compilatore della riga di comando di Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
- [Esempi di righe di comando di compilazione](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
- [Sviluppo per una versione specifica di .NET Framework](/visualstudio/ide/targeting-a-specific-dotnet-framework-version)
+## <a name="see-also"></a>Vedere anche
+- [Compilatore della riga di comando di Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Esempi di righe di comando di compilazione](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Sviluppo per una versione specifica di .NET Framework](/visualstudio/ide/targeting-a-specific-dotnet-framework-version)

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - zeros, trailing
 - numbers [Visual Basic], floating point
 ms.assetid: 224a2795-4cd5-496c-8f7a-a4f05a06d45d
-ms.openlocfilehash: 98433c0f1d1008664bb994f3b43fe48a753a432c
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: cd94411629f18557f677a6d1f65bfc0dede43e83
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582723"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54534514"
 ---
 # <a name="single-data-type-visual-basic"></a>Tipo di dati Single (Visual Basic)
 Contiene con segno a 32 bit IEEE (4 byte) e con precisione singola numeri a virgola mobile con valore compreso tra - 3,4028235E + 38 e - 1,401298E-45 per valori negativi e tra 1,401298E-45 e 3,4028235E + 38 per i valori positivi. Numeri a precisione singola contengono un'approssimazione di un numero reale.  
@@ -39,7 +39,7 @@ Contiene con segno a 32 bit IEEE (4 byte) e con precisione singola numeri a virg
   
 -   **Precisione.** Quando si lavora con numeri a virgola mobile, tenere presente che non sempre hanno una rappresentazione esatta in memoria. Ciò potrebbe provocare risultati imprevisti da determinate operazioni, ad esempio il confronto dei valori e `Mod` operatore. Per altre informazioni, vedere [tipi di dati di risoluzione dei problemi](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
   
--   **Ampliamento.** Il `Single` può ampliarsi nel tipo di dati `Double`. Ciò significa che è possibile convertire `Single` al `Double` senza che si verifichi un <xref:System.OverflowException?displayProperty=nameWithType> errore.  
+-   **Widening.** Il `Single` può ampliarsi nel tipo di dati `Double`. Ciò significa che è possibile convertire `Single` al `Double` senza che si verifichi un <xref:System.OverflowException?displayProperty=nameWithType> errore.  
   
 -   **Zeri finali.** I tipi di dati a virgola mobile non è qualsiasi rappresentazione interna di 0 caratteri finali. Ad esempio, essi non viene fatta distinzione tra 4,2000 e 4.2. Di conseguenza, i caratteri 0 finali non vengono visualizzati quando si visualizzano o stampare valori a virgola mobile.  
   
@@ -47,12 +47,12 @@ Contiene con segno a 32 bit IEEE (4 byte) e con precisione singola numeri a virg
   
 -   **Tipo di Framework.** Il tipo corrispondente in .NET Framework è la struttura <xref:System.Single?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Single?displayProperty=nameWithType>  
- [Tipi di dati](../../../visual-basic/language-reference/data-types/index.md)  
- [Tipo di dati Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md)  
- [Tipo di dati Double](../../../visual-basic/language-reference/data-types/double-data-type.md)  
- [Funzioni di conversione del tipo](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [Riepilogo della conversione](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [Uso efficiente dei tipi di dati](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)  
- [Risoluzione dei problemi relativi ai tipi di dati](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Single?displayProperty=nameWithType>
+- [Tipi di dati](../../../visual-basic/language-reference/data-types/index.md)
+- [Tipo di dati Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md)
+- [Tipo di dati Double](../../../visual-basic/language-reference/data-types/double-data-type.md)
+- [Funzioni di conversione del tipo](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Riepilogo della conversione](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [Uso efficiente dei tipi di dati](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- [Risoluzione dei problemi relativi ai tipi di dati](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)

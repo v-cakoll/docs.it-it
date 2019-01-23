@@ -2,12 +2,12 @@
 title: Utilizzo della rappresentazione con la protezione del trasporto
 ms.date: 03/30/2017
 ms.assetid: 426df8cb-6337-4262-b2c0-b96c2edf21a9
-ms.openlocfilehash: 41670f36d459af49359cfc4add57cb59a49940d2
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 803edee3e051c40a65ad63db620c65bcdbdcae50
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187910"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54532708"
 ---
 # <a name="using-impersonation-with-transport-security"></a>Utilizzo della rappresentazione con la protezione del trasporto
 *Rappresentazione* è la capacità di un'applicazione server di assumere l'identità del client. In genere i servizi utilizzano la rappresentazione al momento della convalida dell'accesso alle risorse. L'applicazione server è in esecuzione tramite un account del servizio ma quando il server accetta una connessione client, rappresenta il client. In questo modo i controlli di accesso vengono eseguiti utilizzando le credenziali client. La protezione del trasporto è un meccanismo utilizzato sia per il passaggio delle credenziali che per la protezione della comunicazione tramite quelle credenziali. In questo argomento viene descritto l'utilizzo la sicurezza del trasporto in Windows Communication Foundation (WCF) con la funzionalità di rappresentazione. Per altre informazioni sulla rappresentazione tramite la sicurezza dei messaggi, vedere [delega e rappresentazione](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
@@ -54,8 +54,8 @@ ms.locfileid: "50187910"
   
  Per altre informazioni sul trasporto HTTP, vedere [scelta di un trasporto](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Delega e rappresentazione](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)  
- [Autorizzazione](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
- [Procedura: Rappresentare un client in un servizio](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)  
- [Informazioni sull'autenticazione HTTP](../../../../docs/framework/wcf/feature-details/understanding-http-authentication.md)
+## <a name="see-also"></a>Vedere anche
+- [Delega e rappresentazione](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)
+- [Autorizzazione](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
+- [Procedura: Rappresenta un Client in un servizio](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)
+- [Informazioni sull'autenticazione HTTP](../../../../docs/framework/wcf/feature-details/understanding-http-authentication.md)
