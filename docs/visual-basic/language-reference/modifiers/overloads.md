@@ -10,26 +10,26 @@ helpviewer_keywords:
 - Shadows keyword [Visual Basic]
 - signature, hiding by
 ms.assetid: 0c6820b8-25b2-4664-bc59-5ca93c99c042
-ms.openlocfilehash: b68c13d192845fc4bedf1b34a40165ccc1a5ff75
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b20dbf20c580d08553ae22f6a62ee33a7354db74
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33601914"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54624915"
 ---
 # <a name="overloads-visual-basic"></a>Overloads (Visual Basic)
 Specifica che una proprietà o una routine ridichiara una o più proprietà o routine esistenti con lo stesso nome.  
   
 ## <a name="remarks"></a>Note  
- *L'overload* è la pratica di fornire più di una definizione per un determinato nome di proprietà o routine nello stesso ambito. La ridichiarazione di una proprietà o routine con una firma diversa viene talvolta definita *nascondere con la firma*.  
+ *L'overload* è la pratica di fornire più di una definizione per un determinato nome di proprietà o routine nello stesso ambito. La ridichiarazione di una proprietà o routine con una firma diversa viene talvolta chiamata *nascondere con la firma*.  
   
 ## <a name="rules"></a>Regole  
   
 -   **Contesto della dichiarazione.** È possibile usare `Overloads` solo in un'istruzione per la dichiarazione di proprietà o routine.  
   
--   **Modificatori combinati.** Non è possibile specificare `Overloads` con [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md) nella stessa dichiarazione di routine.  
+-   **Modificatori combinati.** Non è possibile specificare `Overloads` assieme [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md) nella stessa dichiarazione di routine.  
   
--   **Differenze necessarie.** Il *firma* in questa dichiarazione deve essere diverso dalla firma di ogni proprietà o routine che esegue l'overload. La firma comprende il nome della proprietà o della routine e gli elementi seguenti:  
+-   **Differenze necessarie.** Il *firma* in questa dichiarazione deve essere diverso dalla firma di tutte le proprietà o routine che esegue l'overload. La firma comprende il nome della proprietà o della routine e gli elementi seguenti:  
   
     -   numero dei parametri  
   
@@ -59,7 +59,7 @@ Specifica che una proprietà o una routine ridichiara una o più proprietà o ro
   
 -   **Modificatore facoltativo.** Non è necessario usare il modificatore `Overloads` quando si definiscono più proprietà o routine in overload nella medesima classe. Se tuttavia si usa `Overloads` in una dichiarazione, è necessario usarlo in tutte.  
   
--   **Shadowing e overload.** `Overloads` può essere utilizzato anche per nascondere un membro esistente o un set di membri in overload, in una classe base. Quando si usa `Overloads` a questo scopo, è necessario dichiarare la proprietà o il metodo con lo stesso nome e lo stesso elenco di parametri del membro della classe base, senza specificare la parola chiave `Shadows`.  
+-   **Shadowing e overload.** `Overloads` è anche utilizzabile per nascondere un membro esistente o un set di membri in overload, in una classe base. Quando si usa `Overloads` a questo scopo, è necessario dichiarare la proprietà o il metodo con lo stesso nome e lo stesso elenco di parametri del membro della classe base, senza specificare la parola chiave `Shadows`.  
   
  Se si usa `Overrides`, il compilatore aggiunge implicitamente `Overloads` in modo che le API della libreria funzionino più facilmente con C#.  
   
@@ -73,9 +73,9 @@ Specifica che una proprietà o una routine ridichiara una o più proprietà o ro
   
  [Istruzione Sub](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>Vedere anche  
- [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)  
- [Overload della routine](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)  
- [Tipi generici in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [Routine di operatore](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)  
- [Procedura: Definire un operatore di conversione](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)
+## <a name="see-also"></a>Vedere anche
+- [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)
+- [Overload della routine](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)
+- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Routine di operatore](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)
+- [Procedura: Definire un operatore di conversione](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)
