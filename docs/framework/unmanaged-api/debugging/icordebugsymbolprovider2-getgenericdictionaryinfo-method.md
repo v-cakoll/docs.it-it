@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: ba28fe4e-5491-4670-bff7-7fde572d7593
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0c69be53a429e2f40741cc1e4c20fef3b7363654
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e5ed689ad7c456121f7687e7df09eca6c7ea617d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422975"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54502559"
 ---
 # <a name="icordebugsymbolprovider2getgenericdictionaryinfo-method"></a>Metodo ICorDebugSymbolProvider2::GetGenericDictionaryInfo
 Recupera una mappa di dizionari generici.  
@@ -35,7 +35,7 @@ HRESULT GetGenericDictionaryInfo(
   
 -   Oggetto [directory](#Directory) contenente gli indirizzi virtuali relativi (RVA) di tutti i dizionari inclusi nella mappa.  
   
--   Allineata byte [heap](#Heap) che contiene informazioni sull'istanza di oggetto. Viene avviato immediatamente dopo l'ultima voce di directory.  
+-   Un byte allineato [heap](#Heap) che contiene informazioni sulle creazione di istanze di oggetti. Viene avviato immediatamente dopo l'ultima voce di directory.  
   
 <a name="Directory"></a>   
 ## <a name="the-directory"></a>Directory  
@@ -47,9 +47,9 @@ HRESULT GetGenericDictionaryInfo(
   
 -   Il *N* seguono le voci di directory. Ogni voce è costituita da 8 byte in due segmenti di 4 byte:  
   
-    -   Byte da 0 a 3: RVA, ovvero l'indirizzo RVA (Relative Virtual Address) del dizionario.  
+    -   Byte 0 a 3: RVA; indirizzo virtuale relativo del dizionario.  
   
-    -   Byte da 4 a 7: Offset, ovvero un offset relativo all'inizio dell'heap.  
+    -   Byte 4-7: Offset; un offset rispetto all'inizio dell'heap.  
   
 <a name="Heap"></a>   
 ## <a name="the-heap"></a>Heap  
@@ -65,21 +65,21 @@ Heap Size = Stream.Length – (Directory Size + 4)
   
 -   Lunghezza in byte di questo elemento di informazioni sulla creazione di un'istanza, nel formato di metadati ECMA compresso. Il valore esclude le informazioni sulla lunghezza.  
   
--   Il numero di tipi di istanza generica, o *T*, nel formato di metadati ECMA compresso.  
+-   Il numero di tipi di istanza generica, oppure *T*, nel formato di metadati ECMA compresso.  
   
 -   *T* tipi, ognuno rappresentato nel formato di firma di tipo ECMA.  
   
  L'inclusione della lunghezza per ogni elemento dell'heap consente un ordinamento semplice della sezione della directory senza influire sull'heap.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ICorDebugSymbolProvider2](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider2-interface.md)  
- [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ICorDebugSymbolProvider2](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider2-interface.md)
+- [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

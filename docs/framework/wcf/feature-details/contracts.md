@@ -6,12 +6,12 @@ helpviewer_keywords:
 - contracts [WCF]
 - Windows Communication Foundation [WCF], contracts
 ms.assetid: c8364183-4ac1-480b-804a-c5e6c59a5d7d
-ms.openlocfilehash: 1960a9c547892119d1bc0fb7efb51dfa5498a9c2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ce9b03b1eae2a88a9e09449719b3a8e522409418
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43503242"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54499301"
 ---
 # <a name="contracts"></a>Contratti
 Questa sezione illustra come definire e implementare contratti di Windows Communication Foundation (WCF). Un contratto di servizio specifica quale endpoint comunica con il mondo esterno. A un livello più concreto, è un'istruzione su un set di messaggi specifici organizzati in modelli di scambio di messaggi di base (MEP, Message Exchange Pattern) quali, ad esempio, request/reply, unidirezionale e duplex. Se un contratto di servizio è un set logicamente correlato di scambi di messaggi, un'operazione di servizio è un singolo scambio di messaggi. Un'operazione `Hello` deve, ad esempio, accettare un messaggio (quindi il chiamante può annunciare il saluto) e può o non può restituire un messaggio (a seconda del livello di cortesia dell'operazione).  
@@ -65,7 +65,7 @@ Questa sezione illustra come definire e implementare contratti di Windows Commun
   
  Questo processo relativo ai requisiti aggiuntivi è importante tenere conto durante la progettazione, implementazione, la configurazione e che ospitano l'applicazione di servizio Windows Communication Foundation (WCF). Il contratto può, ad esempio, specificare che deve essere supportata una sessione. In questo caso sarà quindi necessario configurare le associazioni per supportare il requisito contrattuale o l'implementazione del servizio non funzionerà. Se il servizio richiede invece l'Autenticazione integrata di Windows ed è ospitato in Internet Information Services (IIS), nell'applicazione Web in cui risiede il servizio deve essere attivata l'Autenticazione integrata di Windows e disattivato il supporto di utenti anonimi. Per altre informazioni sulle funzionalità e l'impatto dei tipi di applicazione host del servizio diversi, vedere [Hosting](../../../../docs/framework/wcf/feature-details/hosting.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Endpoint: indirizzi, associazioni e contratti](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
- [Progettazione dei contratti di servizio](../../../../docs/framework/wcf/designing-service-contracts.md)  
- [Implementazione dei contratti di servizio](../../../../docs/framework/wcf/implementing-service-contracts.md)
+## <a name="see-also"></a>Vedere anche
+- [Endpoint: Gli indirizzi, associazioni e contratti](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+- [Progettazione dei contratti di servizio](../../../../docs/framework/wcf/designing-service-contracts.md)
+- [Implementazione dei contratti di servizio](../../../../docs/framework/wcf/implementing-service-contracts.md)

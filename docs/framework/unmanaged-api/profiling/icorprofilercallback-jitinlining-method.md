@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 844ac2a8aad4ce2cc6f70de2d5a53c7c0b6f4f6c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 53a8f9aefa4460493113c035aa05e971b05d5167
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33453144"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54500171"
 ---
 # <a name="icorprofilercallbackjitinlining-method"></a>Metodo ICorProfilerCallback::JITInlining
 Notifica al profiler che il compilatore just-in-time (JIT) sta per inserire una funzione in linea con un'altra funzione.  
@@ -41,24 +41,24 @@ HRESULT JITInlining(
  [in] L'ID della funzione in cui il `calleeId` funzione verrà inserita.  
   
  `calleeId`  
- [in] L'ID della funzione da inserire.  
+ [in] L'ID della funzione deve essere inserito.  
   
  `pfShouldInline`  
  [out] `true` per consentire l'inserimento; in caso contrario, `false`.  
   
 ## <a name="remarks"></a>Note  
- Il profiler può impostare `pfShouldInline` a `false` per impedire la `calleeId` funzione vengono inseriti il `callerId` (funzione). Inoltre, il profiler può disabilitare globalmente inserimento in linea con il valore COR_PRF_DISABLE_INLINING il [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) enumerazione.  
+ Il profiler può impostare `pfShouldInline` al `false` per impedire la `calleeId` funzione venga inserito nel `callerId` (funzione). Inoltre, il profiler a livello globale può disabilitare inserimento inline utilizzando il valore di COR_PRF_DISABLE_INLINING il [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) enumerazione.  
   
- Le funzioni inserite inline non genera eventi per entra o esce dalla. Pertanto, il profiler deve impostare `pfShouldInline` a `false` per produrre un grafico chiamate accurato. Impostazione `pfShouldInline` a `false` influirà sulle prestazioni, perché l'inserimento di inline in genere aumenta la velocità e riduce il numero di eventi di compilazione JIT distinti per il metodo inserito.  
+ Inserire le funzioni inline non generano eventi per entra o esce dalla. Pertanto, il profiler deve impostare `pfShouldInline` a `false` per produrre un grafico chiamate accurato. L'impostazione `pfShouldInline` a `false` influirà sulle prestazioni, perché l'inserimento di inline è in genere aumenta la velocità e riduce il numero di eventi di compilazione JIT separati per il metodo inserito.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

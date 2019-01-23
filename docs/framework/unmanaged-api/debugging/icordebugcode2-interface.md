@@ -1,5 +1,5 @@
 ---
-title: ICorDebugCode2 Interface1
+title: Interfaccia1 ICorDebugCode2
 ms.date: 03/30/2017
 api_name:
 - ICorDebugCode2
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 13803a8cc292da602b1b920a3879120c3e754ca4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8a5c28ec6c447f3fc3305e0faf51aa868d5a4c17
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33414558"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54499973"
 ---
-# <a name="icordebugcode2-interface1"></a>ICorDebugCode2 Interface1
+# <a name="icordebugcode2-interface1"></a>Interfaccia1 ICorDebugCode2
 Fornisce metodi che estendono le funzionalità di "ICorDebugCode".  
   
 ## <a name="methods"></a>Metodi  
@@ -31,7 +31,7 @@ Fornisce metodi che estendono le funzionalità di "ICorDebugCode".
 |Metodo|Descrizione|  
 |------------|-----------------|  
 |[Metodo GetCodeChunks](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)|Ottiene i blocchi di codice che è costituito da questo oggetto di codice.|  
-|[Metodo GetCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcompilerflags-method.md)|Ottiene i flag che specificano le condizioni in cui questo oggetto di codice è stato uno just-in-time (JIT) compilata o generato utilizzando il generatore di immagini native (Ngen.exe).|  
+|[Metodo GetCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcompilerflags-method.md)|Ottiene i flag che specificano le condizioni in cui questo oggetto di codice è stato entrambi just-in-time (JIT) compilate o generate usando il generatore di immagini native (Ngen.exe).|  
   
 ## <a name="remarks"></a>Note  
   
@@ -39,15 +39,15 @@ Fornisce metodi che estendono le funzionalità di "ICorDebugCode".
 >  Questa interfaccia non supporta la chiamata in modalità remota, tra computer o tra processi.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
-    
- [Interfaccia ICorDebugCode3](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-interface.md)  
- [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Interfaccia ICorDebugCode3](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-interface.md)
+- [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: consentire agli utenti di risolvere orari ambigui'
+title: 'Procedura: Consentire agli utenti di risolvere orari ambigui'
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 ms.assetid: bca874ee-5b68-4654-8bbd-3711220ef332
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 91e80f44934092007f6f842f0694789d49321446
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: ae6d16bda7a2cd6f2367129b737ec79d8193ebf9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863551"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54502715"
 ---
-# <a name="how-to-let-users-resolve-ambiguous-times"></a>Procedura: consentire agli utenti di risolvere orari ambigui
+# <a name="how-to-let-users-resolve-ambiguous-times"></a>Procedura: Consentire agli utenti di risolvere orari ambigui
 
 Un'ora ambigua è un'ora associata a più ore UTC (Coordinated Universal Time). Si verifica quando l'orologio viene riportato indietro, ad esempio durante la transizione dall'ora legale all'ora solare di un determinato fuso orario. Quando si gestisce un'ora ambigua è possibile eseguire una delle operazioni seguenti:
 
@@ -60,5 +60,5 @@ L'esempio presenta i requisiti seguenti:
 
 ## <a name="see-also"></a>Vedere anche
 
-* [Date, ore e fusi orari](../../../docs/standard/datetime/index.md)
-* [Procedura: Risolvere orari ambigui](../../../docs/standard/datetime/resolve-ambiguous-times.md)
+- [Date, ore e fusi orari](../../../docs/standard/datetime/index.md)
+- [Procedura: Risolvere orari ambigui](../../../docs/standard/datetime/resolve-ambiguous-times.md)

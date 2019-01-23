@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: utilizzare lo strumento XML Schema Definition per generare classi e documenti di XML Schema.'
+title: 'Procedura: Utilizzare lo strumento di definizione XML Schema per generare classi e documenti XML Schema.'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - generating XML classes using XML Schema Definition tool
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - XML Schema Definition tool, using to generate classes that conform to specific schema
 - XML Schema Definition tool, using to generate XML Schema Document
 ms.assetid: 51f0edc3-993d-4051-b7f2-77753694d3d1
-ms.openlocfilehash: 2edaf7ba540035fbf2f49ba78b41ab99f8889391
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 645d6290ec16a772d8c188e8781097e1d67b14ed
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48583048"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54501541"
 ---
-# <a name="how-to-use-the-xml-schema-definition-tool-to-generate-classes-and-xml-schema-documents"></a>Procedura: utilizzare lo strumento XML Schema Definition per generare classi e documenti di XML Schema.
+# <a name="how-to-use-the-xml-schema-definition-tool-to-generate-classes-and-xml-schema-documents"></a>Procedura: Utilizzare lo strumento di definizione XML Schema per generare classi e documenti XML Schema.
 Lo strumento XML Schema Definition (Xsd.exe) consente di generare un XML Schema che descrive una classe o di generare la classe definita da un XML Schema. Le procedure descritte di seguito mostrano come eseguire queste operazioni.  
   
 ### <a name="to-generate-classes-that-conform-to-a-specific-schema"></a>Per generare classi conformi a uno schema specifico  
@@ -54,10 +54,10 @@ Lo strumento XML Schema Definition (Xsd.exe) consente di generare un XML Schema 
   
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.Data.DataSet>  
-- [Strumento XML Schema Definition e serializzazione XML](../../../docs/standard/serialization/the-xml-schema-definition-tool-and-xml-serialization.md)  
-- [Introduzione alla serializzazione XML](../../../docs/standard/serialization/introducing-xml-serialization.md)  
-- [Strumento XML Schema Definition (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)  
-- <xref:System.Xml.Serialization.XmlSerializer>  
-- [Procedura: Serializzare un oggetto](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
+- <xref:System.Data.DataSet>
+- [Strumento XML Schema Definition e serializzazione XML](../../../docs/standard/serialization/the-xml-schema-definition-tool-and-xml-serialization.md)
+- [Introduzione alla serializzazione XML](../../../docs/standard/serialization/introducing-xml-serialization.md)
+- [Strumento XML Schema Definition (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)
+- <xref:System.Xml.Serialization.XmlSerializer>
+- [Procedura: Serializzare un oggetto](../../../docs/standard/serialization/how-to-serialize-an-object.md)
 - [Procedura: Deserializzare un oggetto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

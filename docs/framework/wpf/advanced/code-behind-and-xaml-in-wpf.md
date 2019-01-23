@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XAML [WPF], code-behind
 - code-behind files [WPF], XAML
 ms.assetid: 9df6d3c9-aed3-471c-af36-6859b19d999f
-ms.openlocfilehash: ee08dc22588264b25d40b3fd818ef9ee1da90319
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 39f98d11099a778a7b3915f39588138d41214af4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085673"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54502039"
 ---
 # <a name="code-behind-and-xaml-in-wpf"></a>Code-behind e XAML in WPF
 <a name="introduction"></a> Code-behind è un termine usato per descrivere il codice che è unita in join con gli oggetti definiti da commenti quando una [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pagina viene compilato dal markup. In questo argomento vengono descritti i requisiti per il code-behind, nonché un meccanismo di codice inline alternativo per il codice in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
@@ -58,8 +58,8 @@ ms.locfileid: "44085673"
 ## <a name="inline-code-limitations"></a>Limitazioni del codice inline  
  È consigliabile evitare o limitare l'uso di codice inline. In termini di architettura e codifica, mantenendo una separazione tra markup e code-behind mantiene i ruoli per gli sviluppatori e designer molto più distinti. A un livello più tecnico, il codice scritto per il codice inline può essere difficile, perché vengono sempre scritte nel [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] classe parziale generata e possono usare solo il mapping dello spazio dei nomi XML predefinito. Poiché non è possibile aggiungere `using` (istruzioni), è necessario qualificare numerose il [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] le chiamate effettuate. Il valore predefinito [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] mapping includono la maggior parte ma non tutte [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] spazi dei nomi presenti nel [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] assembly, sarà necessario qualificare completamente le chiamate a tipi e membri contenuti all'interno di altri spazi dei nomi CLR. È anche possibile definire nient'altro che la classe parziale nel codice inline e si fa riferimento a tutte le entità di codice utente devono esistere come un membro o una variabile all'interno della classe parziale generata. Altre funzionalità specifiche del linguaggio programmazione, ad esempio le macro o `#ifdef` nelle variabili globali o le variabili di compilazione, non sono disponibili. Per altre informazioni, vedere [tipo XAML intrinseco X:code](../../../../docs/framework/xaml-services/x-code-intrinsic-xaml-type.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Cenni preliminari su XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [Tipo XAML intrinseco x:Code](../../../../docs/framework/xaml-services/x-code-intrinsic-xaml-type.md)  
- [Compilazione di un'applicazione WPF](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)  
- [Descrizione dettagliata della sintassi XAML](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)
+## <a name="see-also"></a>Vedere anche
+- [Cenni preliminari su XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [Tipo XAML intrinseco x:Code](../../../../docs/framework/xaml-services/x-code-intrinsic-xaml-type.md)
+- [Compilazione di un'applicazione WPF](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)
+- [Descrizione dettagliata della sintassi XAML](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)

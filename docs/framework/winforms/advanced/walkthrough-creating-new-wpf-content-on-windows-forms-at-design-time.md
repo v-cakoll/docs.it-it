@@ -1,5 +1,5 @@
 ---
-title: 'Procedura dettagliata: creazione di nuovo contenuto WPF in Windows Form in fase di progettazione'
+title: 'Procedura dettagliata: Creare nuovo contenuto WPF in Windows Form in fase di progettazione'
 ms.date: 08/18/2018
 helpviewer_keywords:
 - interoperability [Windows Forms], WPF and Windows Forms
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - ElementHost control
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: 2e92d8e8-f0e4-4df7-9f07-2acf35cd798c
-ms.openlocfilehash: dc72b86a69d44ad282e30b000313b73211cad09c
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 9414eb8edc839b109aafa0c98fa3ed74a34a7d62
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45653273"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54500499"
 ---
-# <a name="walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time"></a>Procedura dettagliata: creazione di nuovo contenuto WPF in Windows Form in fase di progettazione
+# <a name="walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time"></a>Procedura dettagliata: Creare nuovo contenuto WPF in Windows Form in fase di progettazione
 
 Questo argomento descrive come creare un controllo Windows Presentation Foundation (WPF) da usare nelle applicazioni basate su Windows Form.
 
@@ -61,7 +61,7 @@ Creare un nuovo controllo WPF e aggiungerlo al progetto è facile come aggiunger
 
     - Il file UserControl1.xaml viene aperto in [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)].
 
-2. In visualizzazione Progettazione verificare che `UserControl1` sia selezionato. Per altre informazioni, vedere [procedura: selezionare e spostare elementi nella finestra di progettazione](https://msdn.microsoft.com/library/54cb70b6-b35b-46e4-a0cc-65189399c474).
+2. In visualizzazione Progettazione verificare che `UserControl1` sia selezionato. Per altre informazioni, vedere [Procedura: Selezionare e spostare gli elementi nell'area di progettazione](https://msdn.microsoft.com/library/54cb70b6-b35b-46e4-a0cc-65189399c474).
 
 3. Nel **le proprietà** finestra, impostare il valore della <xref:System.Windows.FrameworkElement.Width%2A> e <xref:System.Windows.FrameworkElement.Height%2A> le proprietà da **200**.
 
@@ -102,11 +102,11 @@ Il nuovo controllo WPF è pronto per l'uso sul form. Windows Form usa il <xref:S
 
 Windows Form e WPF sono tecnologie diverse progettate per interagire strettamente. Per migliorare l'aspetto e comportamento nelle applicazioni, procedere come segue:
 
-- Ospitare un controllo Windows Form in una pagina WPF. Per altre informazioni, vedere [procedura dettagliata: Hosting di controlli Windows Form in WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md).
+- Ospitare un controllo Windows Form in una pagina WPF. Per altre informazioni, vedere [Procedura dettagliata: Controllo che ospita un Windows Form in WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md).
 
-- Applicare stili di visualizzazione Windows Form al contenuto WPF. Per altre informazioni, vedere [Procedura: Abilitare stili di visualizzazione in un'applicazione ibrida](../../../../docs/framework/wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md).
+- Applicare stili di visualizzazione Windows Form al contenuto WPF. Per altre informazioni, vedere [Procedura: Abilitare gli stili di visualizzazione in un'applicazione ibrida](../../../../docs/framework/wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md).
 
-- Modificare lo stile del contenuto WPF. Per altre informazioni, vedere [procedura dettagliata: applicazione di stili di contenuto WPF](../../../../docs/framework/winforms/advanced/walkthrough-styling-wpf-content.md).
+- Modificare lo stile del contenuto WPF. Per altre informazioni, vedere [Procedura dettagliata: Applicazione degli stili WPF contenuto](../../../../docs/framework/winforms/advanced/walkthrough-styling-wpf-content.md).
 
 ## <a name="see-also"></a>Vedere anche
 

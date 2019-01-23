@@ -1,23 +1,23 @@
 ---
-title: '&lt;IssuedToken&gt;'
+title: '&lt;issuedToken&gt;'
 ms.date: 03/30/2017
 ms.assetid: b6eae4b7-a6cd-4e1a-b0f6-f407022550b0
-ms.openlocfilehash: a06d59c5dfb14e5f3346ff2424339659568a369a
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: ca2e1db2c9894163c113541ac4366c638d0e1df0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150188"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54501533"
 ---
-# <a name="ltissuedtokengt"></a>&lt;IssuedToken&gt;
+# <a name="ltissuedtokengt"></a>&lt;issuedToken&gt;
 Specifica un token personalizzato usato per autenticare un client presso un servizio.  
   
  \<system.ServiceModel>  
-\<i comportamenti >  
+\<behaviors>  
 sezione endpointBehaviors  
-\<comportamento >  
+\<behavior>  
 \<clientCredentials>  
-\<issuedToken >  
+\<issuedToken>  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -50,7 +50,7 @@ sezione endpointBehaviors
 |Elemento|Descrizione|  
 |-------------|-----------------|  
 |[\<localIssuer>](../../../../../docs/framework/configure-apps/file-schema/wcf/localissuer.md)|Specifica l'indirizzo dell'emittente locale del token e l'associazione usata per comunicare con l'endpoint.|  
-|[\<issuerChannelBehaviors >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md)|Specifica i comportamenti di endpoint da usare quando si contatta un'emittente locale.|  
+|[\<issuerChannelBehaviors>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md)|Specifica i comportamenti di endpoint da usare quando si contatta un'emittente locale.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -63,17 +63,17 @@ sezione endpointBehaviors
   
  Questa sezione contiene gli elementi usati per configurare un'autorità emittente locale di token oppure i comportamenti usati in un servizio token di sicurezza. Per istruzioni su come configurare un client di utilizzare un emittente locale, vedere [come: Configurare un emittente locale](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md).  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.Configuration.IssuedTokenClientElement>  
- <xref:System.ServiceModel.Configuration.ClientCredentialsElement>  
- <xref:System.ServiceModel.Description.ClientCredentials>  
- <xref:System.ServiceModel.Configuration.ClientCredentialsElement.IssuedToken%2A>  
- <xref:System.ServiceModel.Description.ClientCredentials.IssuedToken%2A>  
- <xref:System.ServiceModel.Security.IssuedTokenClientCredential>  
- [Comportamenti di sicurezza](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
- [Protezione di servizi e client](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Federazione e token rilasciati](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
- [Protezione di client](../../../../../docs/framework/wcf/securing-clients.md)  
- [Procedura: Creare un Client federato](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
- [Procedura: Configurare un emittente locale](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)  
- [Federazione e token rilasciati](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.ServiceModel.Configuration.IssuedTokenClientElement>
+- <xref:System.ServiceModel.Configuration.ClientCredentialsElement>
+- <xref:System.ServiceModel.Description.ClientCredentials>
+- <xref:System.ServiceModel.Configuration.ClientCredentialsElement.IssuedToken%2A>
+- <xref:System.ServiceModel.Description.ClientCredentials.IssuedToken%2A>
+- <xref:System.ServiceModel.Security.IssuedTokenClientCredential>
+- [Comportamenti di sicurezza](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
+- [Protezione di servizi e client](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Federazione e token rilasciati](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
+- [Protezione di client](../../../../../docs/framework/wcf/securing-clients.md)
+- [Procedura: Creare un Client federato](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [Procedura: Configurare un emittente locale](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)
+- [Federazione e token rilasciati](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b88a7b0672e15097c60afbe069ce5b78bd5c38d2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 50fd730876f43be5da45f38fa2d4694cbb2b2d1a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408141"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54502572"
 ---
 # <a name="cortypelayout-structure"></a>Struttura COR_TYPE_LAYOUT
 Fornisce informazioni sul layout di un oggetto in memoria.  
@@ -42,24 +42,24 @@ typedef struct COR_TYPE_LAYOUT {
   
 |Membro|Descrizione|  
 |------------|-----------------|  
-|`parentID`|L'identificatore del tipo padre di questo tipo. Questo sarà l'id di tipo NULL (token1 = 0, token2 = 0) se l'id di tipo corrisponde a <xref:System.Object?displayProperty=nameWithType>.|  
-|`objectSize`|Le dimensioni di base di un oggetto di questo tipo. Questa è la dimensione totale per gli oggetti con dimensioni non variabile.|  
+|`parentID`|L'identificatore del tipo padre per questo tipo. Questo sarà l'id di tipo NULL (token1 = 0, token2 = 0) se l'id del tipo corrisponde a <xref:System.Object?displayProperty=nameWithType>.|  
+|`objectSize`|Le dimensioni di base di un oggetto di questo tipo. Questa è la dimensione totale per gli oggetti con dimensione non variabile.|  
 |`numFields`|Il numero di campi inclusi negli oggetti di questo tipo.|  
-|`boxOffset`|Se questo tipo è boxed, inizio offset dei campi dell'oggetto. Questo campo è valido solo per i tipi di valore, ad esempio primitive e strutture.|  
+|`boxOffset`|Se questo tipo è di tipo boxed, inizio offset di campi di un oggetto. Questo campo è valido solo per i tipi di valore, ad esempio le primitive e strutture.|  
 |`type`|CorElementType a cui appartiene questo tipo.|  
   
 ## <a name="remarks"></a>Note  
- Se `numFields` è maggiore di zero, è possibile chiamare il [icordebugprocess5:: Gettypefields](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypefields-method.md) per ottenere informazioni sui campi in questo tipo. Se `type` è `ELEMENT_TYPE_STRING`, `ELEMENT_TYPE_ARRAY`, o `ELEMENT_TYPE_SZARRAY`, la dimensione degli oggetti di questo tipo di variabile ed è possibile passare il [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) struttura per il [icordebugprocess5:: Getarraylayout ](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getarraylayout-method.md) metodo.  
+ Se `numFields` è maggiore di zero, è possibile chiamare il [ICorDebugProcess5::GetTypeFields](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypefields-method.md) metodo per ottenere informazioni sui campi di questo tipo. Se `type` viene `ELEMENT_TYPE_STRING`, `ELEMENT_TYPE_ARRAY`, o `ELEMENT_TYPE_SZARRAY`, la dimensione degli oggetti di questo tipo è variabile ed è possibile passare il [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) struttura per il [ICorDebugProcess5::GetArrayLayout ](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getarraylayout-method.md) (metodo).  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Strutture di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [Debug](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Vedere anche
+- [Strutture di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [Debug](../../../../docs/framework/unmanaged-api/debugging/index.md)

@@ -12,21 +12,21 @@ helpviewer_keywords:
 ms.assetid: 7d4e7faa-2e4e-4379-ac76-f6cd7f2f8fac
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 5172a2be163e178b9c7115825fa5dba4ff073a96
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 3de58fa9df1f856a6612d01d3ec9748c37e4a13e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48027088"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54501321"
 ---
 # <a name="ltfiltergt-element-for-ltaddgt-for-ltsharedlistenersgt"></a>&lt;filtro&gt; (elemento) per &lt;aggiungere&gt; per &lt;sharedListeners&gt;
 Aggiunge un filtro a un listener nella raccolta `sharedListeners`.  
   
  \<configuration>  
-\<System. Diagnostics >  
+\<system.diagnostics>  
 \<sharedListeners > elemento  
 \<add>  
-\<Filtro >  
+\<filter>  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,7 +43,7 @@ Aggiunge un filtro a un listener nella raccolta `sharedListeners`.
 |Attributo|Descrizione|  
 |---------------|-----------------|  
 |**type**|Attributo obbligatorio.<br /><br /> Specifica il tipo del filtro. È possibile usare solo il nome completo del tipo (nel formato il <xref:System.Type.FullName%2A?displayProperty=nameWithType> proprietà), oppure è possibile usare il nome completo del tipo tra cui le informazioni sull'assembly (nel formato di <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType> proprietà). Per informazioni sulla creazione di un nome completo del tipo, vedere [Specifying Fully Qualified Type Names](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
-|**attributo initializeData**|Attributo facoltativo.<br /><br /> La stringa passata al costruttore per la classe specificata.|  
+|**initializeData**|Attributo facoltativo.<br /><br /> La stringa passata al costruttore per la classe specificata.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
@@ -87,8 +87,8 @@ Aggiunge un filtro a un listener nella raccolta `sharedListeners`.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Diagnostics.TraceFilter>  
- <xref:System.Diagnostics.TraceListener>  
- <xref:System.Diagnostics.TraceSource>  
- [Schema delle impostazioni di traccia e debug](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Diagnostics.TraceFilter>
+- <xref:System.Diagnostics.TraceListener>
+- <xref:System.Diagnostics.TraceSource>
+- [Schema delle impostazioni di traccia e debug](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

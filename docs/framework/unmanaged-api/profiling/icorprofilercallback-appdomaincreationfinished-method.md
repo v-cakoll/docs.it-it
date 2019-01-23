@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b0017cff43f7a1b1bdd90806f50abb374a96dadf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 48d43d9107d010b12167b977acd2e500437c039f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33450424"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54501712"
 ---
 # <a name="icorprofilercallbackappdomaincreationfinished-method"></a>Metodo ICorProfilerCallback::AppDomainCreationFinished
-Notifica al profiler che è stato creato un dominio applicazione.  
+Notifica al profiler che un dominio dell'applicazione sia stato creato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,21 +40,21 @@ HRESULT AppDomainCreationFinished(
  [in] Identifica il dominio di cui è stato creato.  
   
  `hrStatus`  
- [in] Un valore HRESULT che indica se la creazione del dominio applicazione è stata completata correttamente.  
+ [in] HRESULT che indica se la creazione del dominio dell'applicazione è stata completata.  
   
 ## <a name="remarks"></a>Note  
- L'ID dell'applicazione non è valido per qualsiasi richiesta di informazioni fino a quando il `AppDomainCreationFinished` metodo viene chiamato.  
+ L'ID dell'applicazione non è valido per qualsiasi richiesta di informazioni finché il `AppDomainCreationFinished` viene chiamato il metodo.  
   
- Alcune parti del caricamento del dominio applicazione potrebbero continuare dopo il `AppDomainCreationFinished` callback. Un HRESULT di errore in `hrStatus` indica un errore. Tuttavia, un HRESULT positivo in `hrStatus` indica solo che la prima parte della creazione del dominio applicazione è stata completata.  
+ Alcune parti del caricamento del dominio dell'applicazione potrebbero continuare dopo il `AppDomainCreationFinished` callback. Un HRESULT di errore in `hrStatus` indica un errore. Tuttavia, un HRESULT di esito positivo in `hrStatus` indica solo che la prima parte della creazione del dominio applicazione ha avuto esito positivo.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

@@ -2,12 +2,12 @@
 title: '&lt;customBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 9da4f960-f64e-4d8a-894d-2b09eba5ce4b
-ms.openlocfilehash: a7743f790c1080b601c7e92236723dbc721a849b
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: c67161ddd0698a74f073b10e79674529b198e9f7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54149902"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54500515"
 ---
 # <a name="ltcustombindinggt"></a>&lt;customBinding&gt;
 Fornisce il controllo completo dello stack di messaggistica per l'utente.  
@@ -290,16 +290,16 @@ Fornisce il controllo completo dello stack di messaggistica per l'utente.
  Per una discussione su come usare un'associazione personalizzata per modificare un'associazione fornita dal sistema, vedere [come: Personalizzare un'associazione fornita dal sistema](../../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md).  
     
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.Channels.Binding>  
- <xref:System.ServiceModel.Channels.BindingElement>  
- <xref:System.ServiceModel.Configuration.BindingsSection>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [\<binding>](../../../../../docs/framework/misc/binding.md)  
- [Associazioni](../../../../../docs/framework/wcf/bindings.md)  
- [Estensione delle associazioni](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [Associazioni personalizzate](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [Elemento customBinding](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
- [Associazioni](../../../../../docs/framework/wcf/bindings.md)  
- [Configurazione di associazioni fornite dal sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Uso di associazioni per configurare servizi e client](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.ServiceModel.Channels.Binding>
+- <xref:System.ServiceModel.Channels.BindingElement>
+- <xref:System.ServiceModel.Configuration.BindingsSection>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [Associazioni](../../../../../docs/framework/wcf/bindings.md)
+- [Estensione delle associazioni](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [Associazioni personalizzate](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [Elemento customBinding](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [Associazioni](../../../../../docs/framework/wcf/bindings.md)
+- [Configurazione di associazioni fornite dal sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Uso di associazioni per configurare servizi e client](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)

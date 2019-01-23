@@ -9,12 +9,12 @@ helpviewer_keywords:
 - unfreezing Freezable objects [WPF]
 - classes [WPF], Freezable
 ms.assetid: 89c71692-4f43-4057-b611-67c6a8a863a2
-ms.openlocfilehash: a4c0a137da74b276b1238d500057ce96756a1ae1
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 281c1c9556773446808f7bd4b4ef558805503cea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030373"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54499314"
 ---
 # <a name="freezable-objects-overview"></a>Cenni preliminari sugli oggetti Freezable
 In questo argomento viene descritto come creare e utilizzare in modo efficace <xref:System.Windows.Freezable> oggetti, che forniscono funzionalità speciali che consentono di migliorare le prestazioni dell'applicazione. Sono esempi di oggetti freezable pennelli, penne, trasformazioni, geometrie e animazioni.  
@@ -105,7 +105,7 @@ mc:Ignorable="PresentationOptions"
   
  Per altre informazioni, vedere la [mc: Ignorable attributo](../../../../docs/framework/wpf/advanced/mc-ignorable-attribute.md) pagina.  
   
-### <a name="unfreezing-a-freezable"></a>"L'operazione di sblocco" un oggetto Freezable  
+### <a name="unfreezing-a-freezable"></a>"Unfreezing" a Freezable  
  Una volta bloccate, una <xref:System.Windows.Freezable> non possono mai essere modificati o non è bloccato; tuttavia, è possibile creare un clone non bloccato usando le <xref:System.Windows.Freezable.Clone%2A> o <xref:System.Windows.Freezable.CloneCurrentValue%2A> (metodo).  
   
  Nell'esempio seguente viene impostato lo sfondo dei pulsanti con un pennello e che poi viene bloccato. È costituita il pennello usando la copia non bloccata la <xref:System.Windows.Freezable.Clone%2A> (metodo). Il clone viene modificato e utilizzato per modificare lo sfondo del pulsante da giallo a rosso.  
@@ -161,8 +161,8 @@ mc:Ignorable="PresentationOptions"
   
  Per un esempio di una classe personalizzata <xref:System.Windows.Freezable> classe, vedere la [esempio di animazione personalizzata](https://go.microsoft.com/fwlink/?LinkID=159981).  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Windows.Freezable>  
- [Esempio di animazione personalizzata](https://go.microsoft.com/fwlink/?LinkID=159981)  
- [Panoramica sulle proprietà di dipendenza](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
- [Proprietà di dipendenza personalizzate](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Windows.Freezable>
+- [Esempio di animazione personalizzata](https://go.microsoft.com/fwlink/?LinkID=159981)
+- [Panoramica sulle proprietà di dipendenza](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
+- [Proprietà di dipendenza personalizzate](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)

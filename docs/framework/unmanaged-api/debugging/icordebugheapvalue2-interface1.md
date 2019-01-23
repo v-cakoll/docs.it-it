@@ -1,5 +1,5 @@
 ---
-title: ICorDebugHeapValue2 Interface1
+title: Interfaccia1 ICorDebugHeapValue2
 ms.date: 03/30/2017
 api_name:
 - ICorDebugHeapValue2
@@ -16,21 +16,21 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5eb8fa52a3f599787edaa6c47c260f48aa143e61
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 447fd8c7a6c52cdebc39ffd9c62cea5890c18c3d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412149"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54499327"
 ---
-# <a name="icordebugheapvalue2-interface1"></a>ICorDebugHeapValue2 Interface1
-Un'estensione di ICorDebugHeapValue che fornisce supporto per common language runtime (CLR) gestisce.  
+# <a name="icordebugheapvalue2-interface1"></a>Interfaccia1 ICorDebugHeapValue2
+Estensione di ICorDebugHeapValue che fornisce il supporto per gli handle di common language runtime (CLR).  
   
 ## <a name="methods"></a>Metodi  
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo CreateHandle](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue2-createhandle-method.md)|Crea un handle del tipo specificato per questo `ICorDebugHeapValue2` oggetto.|  
+|[Metodo CreateHandle](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue2-createhandle-method.md)|Crea un handle del tipo specificato per l'oggetto `ICorDebugHeapValue2` oggetto.|  
   
 ## <a name="remarks"></a>Note  
   
@@ -38,13 +38,13 @@ Un'estensione di ICorDebugHeapValue che fornisce supporto per common language ru
 >  Questa interfaccia non supporta la chiamata in modalità remota, tra computer o tra processi.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

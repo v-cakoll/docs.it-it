@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a3d4609d79bb424cabc011122480f952f0f877f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b383c322f1119ff13ac4df9a8dc0563d26dcf895
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411234"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54499710"
 ---
 # <a name="icordebugcodegetversionnumber-method"></a>Metodo ICorDebugCode::GetVersionNumber
 Ottiene il numero in base 1 che identifica la versione del codice che rappresenta "ICorDebugCode".  
@@ -43,13 +43,13 @@ HRESULT GetVersionNumber (
  Il numero di versione viene incrementato ogni volta che modifica e continuazione (EnC) è un'operazione sul codice.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- 
+## <a name="see-also"></a>Vedere anche
+
