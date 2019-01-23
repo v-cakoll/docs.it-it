@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2d74ee7512f640ab906f1119f61e4998b5e882eb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4c998d70fa5dd41ab4c1656f129bb77767a8ab97
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445687"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54574625"
 ---
-# <a name="imetadataemit2setgenericparamprops-method"></a><span data-ttu-id="cbfb7-102">Metodo IMetaDataEmit2::SetGenericParamProps</span><span class="sxs-lookup"><span data-stu-id="cbfb7-102">IMetaDataEmit2::SetGenericParamProps Method</span></span>
-<span data-ttu-id="cbfb7-103">Imposta i valori delle proprietà per la definizione di parametro generico a cui fa riferimento il token specificato.</span><span class="sxs-lookup"><span data-stu-id="cbfb7-103">Sets property values for the generic parameter definition referenced by the specified token.</span></span>  
+# <a name="imetadataemit2setgenericparamprops-method"></a><span data-ttu-id="b4596-102">Metodo IMetaDataEmit2::SetGenericParamProps</span><span class="sxs-lookup"><span data-stu-id="b4596-102">IMetaDataEmit2::SetGenericParamProps Method</span></span>
+<span data-ttu-id="b4596-103">Imposta i valori di proprietà per la definizione di parametro generico a cui fanno riferimento al token specificato.</span><span class="sxs-lookup"><span data-stu-id="b4596-103">Sets property values for the generic parameter definition referenced by the specified token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cbfb7-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="cbfb7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b4596-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="b4596-104">Syntax</span></span>  
   
 ```  
 HRESULT SetGenericParamProps (  
@@ -39,31 +39,31 @@ HRESULT SetGenericParamProps (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="cbfb7-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="cbfb7-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="b4596-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="b4596-105">Parameters</span></span>  
  `gp`  
- <span data-ttu-id="cbfb7-106">[in] Il token per la definizione di parametro generico per il quale impostare i valori.</span><span class="sxs-lookup"><span data-stu-id="cbfb7-106">[in] The token for the generic parameter definition for which to set values.</span></span>  
+ <span data-ttu-id="b4596-106">[in] Il token per la definizione di parametro generico per il quale impostare i valori.</span><span class="sxs-lookup"><span data-stu-id="b4596-106">[in] The token for the generic parameter definition for which to set values.</span></span>  
   
  `dwParamFlags`  
- <span data-ttu-id="cbfb7-107">[in] Il valore di [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) enumerazione che descrive il tipo per il parametro generico.</span><span class="sxs-lookup"><span data-stu-id="cbfb7-107">[in] A value of the [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) enumeration that describes the type for the generic parameter.</span></span>  
+ <span data-ttu-id="b4596-107">[in] Valore di [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) enumerazione che descrive il tipo parametro generico.</span><span class="sxs-lookup"><span data-stu-id="b4596-107">[in] A value of the [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) enumeration that describes the type for the generic parameter.</span></span>  
   
  `szName`  
- <span data-ttu-id="cbfb7-108">[in] Facoltativo.</span><span class="sxs-lookup"><span data-stu-id="cbfb7-108">[in] Optional.</span></span> <span data-ttu-id="cbfb7-109">Il nome del parametro per il quale impostare i valori.</span><span class="sxs-lookup"><span data-stu-id="cbfb7-109">The name of the parameter for which to set values.</span></span>  
+ <span data-ttu-id="b4596-108">[in] Facoltativo.</span><span class="sxs-lookup"><span data-stu-id="b4596-108">[in] Optional.</span></span> <span data-ttu-id="b4596-109">Il nome del parametro per cui impostare i valori.</span><span class="sxs-lookup"><span data-stu-id="b4596-109">The name of the parameter for which to set values.</span></span>  
   
  `reserved`  
- <span data-ttu-id="cbfb7-110">[in] Riservato per l'estensibilità futura.</span><span class="sxs-lookup"><span data-stu-id="cbfb7-110">[in] Reserved for future extensibility.</span></span>  
+ <span data-ttu-id="b4596-110">[in] Riservato per un'estendibilità futura.</span><span class="sxs-lookup"><span data-stu-id="b4596-110">[in] Reserved for future extensibility.</span></span>  
   
  `rtkConstraints`  
- <span data-ttu-id="cbfb7-111">[in] Facoltativo.</span><span class="sxs-lookup"><span data-stu-id="cbfb7-111">[in] Optional.</span></span> <span data-ttu-id="cbfb7-112">Una matrice con terminazione zero vincoli di tipo.</span><span class="sxs-lookup"><span data-stu-id="cbfb7-112">A zero-terminated array of type constraints.</span></span> <span data-ttu-id="cbfb7-113">Membri della matrice devono essere un `mdTypeDef`, `mdTypeRef`, o `mdTypeSpec` token di metadati.</span><span class="sxs-lookup"><span data-stu-id="cbfb7-113">Array members must be an `mdTypeDef`, `mdTypeRef`, or `mdTypeSpec` metadata token.</span></span>  
+ <span data-ttu-id="b4596-111">[in] Facoltativo.</span><span class="sxs-lookup"><span data-stu-id="b4596-111">[in] Optional.</span></span> <span data-ttu-id="b4596-112">Una matrice con terminazione zero di vincoli di tipo.</span><span class="sxs-lookup"><span data-stu-id="b4596-112">A zero-terminated array of type constraints.</span></span> <span data-ttu-id="b4596-113">I membri della matrice devono essere un' `mdTypeDef`, `mdTypeRef`, o `mdTypeSpec` token di metadati.</span><span class="sxs-lookup"><span data-stu-id="b4596-113">Array members must be an `mdTypeDef`, `mdTypeRef`, or `mdTypeSpec` metadata token.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="cbfb7-114">Requisiti</span><span class="sxs-lookup"><span data-stu-id="cbfb7-114">Requirements</span></span>  
- <span data-ttu-id="cbfb7-115">**Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="cbfb7-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b4596-114">Requisiti</span><span class="sxs-lookup"><span data-stu-id="b4596-114">Requirements</span></span>  
+ <span data-ttu-id="b4596-115">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b4596-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="cbfb7-116">**Intestazione:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="cbfb7-116">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="b4596-116">**Intestazione:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="b4596-116">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="cbfb7-117">**Libreria:** usata come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="cbfb7-117">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="b4596-117">**Libreria:** Usato come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="b4596-117">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="cbfb7-118">**Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cbfb7-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="b4596-118">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b4596-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cbfb7-119">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="cbfb7-119">See Also</span></span>  
- [<span data-ttu-id="cbfb7-120">Interfaccia IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="cbfb7-120">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)  
- [<span data-ttu-id="cbfb7-121">Interfaccia IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="cbfb7-121">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+## <a name="see-also"></a><span data-ttu-id="b4596-119">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b4596-119">See also</span></span>
+- [<span data-ttu-id="b4596-120">Interfaccia IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="b4596-120">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="b4596-121">Interfaccia IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="b4596-121">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
