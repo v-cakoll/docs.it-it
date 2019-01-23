@@ -10,21 +10,21 @@ helpviewer_keywords:
 ms.assetid: 4ce36ac1-81ef-48e8-b8b2-b5a5b0e2adcb
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: c0ab15f6eca8b20653530583016eb849273c4ce1
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: c22263fd51b80e7bd99ada8452696debdcc44140
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47216866"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54507392"
 ---
 # <a name="ltaddgt-element-for-ltlistenersgt-for-ltsourcegt"></a>&lt;aggiungere&gt; (elemento) per &lt;listener&gt; per &lt;origine&gt;
 Aggiunge un listener alla raccolta `Listeners` per un'origine di traccia.  
   
  \<configuration>  
-\<System. Diagnostics >  
-\<origini >  
+\<system.diagnostics>  
+\<sources>  
 \<origine >  
-\<i listener >  
+\<listeners>  
 \<add>  
   
 ## <a name="syntax"></a>Sintassi  
@@ -120,8 +120,8 @@ Aggiunge un listener alla raccolta `Listeners` per un'origine di traccia.
 </configuration>   
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Diagnostics.TraceSource>  
- <xref:System.Diagnostics.TraceListener>  
- [Schema delle impostazioni di traccia e debug](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
- [Listener di traccia](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Diagnostics.TraceSource>
+- <xref:System.Diagnostics.TraceListener>
+- [Schema delle impostazioni di traccia e debug](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [Listener di traccia](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

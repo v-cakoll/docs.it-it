@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: creare testo con contorni'
+title: 'Procedura: Creare testo con contorni'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - linear gradient brush [WPF]
 - typography [WPF], outline effects
 ms.assetid: 4aa3cf6e-1953-4f26-8230-7c1409e5f28d
-ms.openlocfilehash: 046ce6519e55e5782db0fe8adbc2a956251e12e4
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: a06ef9adbd5740fee74be2e9d8d13a8a5bdc5b95
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50088780"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521478"
 ---
-# <a name="how-to-create-outlined-text"></a>Procedura: creare testo con contorni
+# <a name="how-to-create-outlined-text"></a>Procedura: Creare testo con contorni
 Nella maggior parte dei casi, quando si aggiungono ornamento per le stringhe di testo di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] un'applicazione, si usa il testo in termini di una raccolta di caratteri discreti o glifi. Ad esempio, è possibile creare un pennello sfumato lineare e metterle in pratica per la <xref:System.Windows.Controls.Control.Foreground%2A> proprietà di un <xref:System.Windows.Controls.TextBox> oggetto. Quando si visualizzano o si modifica la casella di testo, il pennello sfumato lineare viene applicato automaticamente al set corrente di caratteri nella stringa di testo.  
   
  ![Testo visualizzato con pennello sfumato lineare](../../../../docs/framework/wpf/advanced/media/outlinedtext01.jpg "OutlinedText01")  
@@ -59,5 +59,5 @@ Esempio di un pennello immagine applicato al tratto ed evidenziazione
   
   Per l'origine dell'oggetto di controllo utente personalizzato di esempio, vedere [OutlineTextControl.cs per C# ](https://github.com/dotnet/samples/blob/master/snippets/csharp/VS_Snippets_Wpf/OutlineTextControlViewer/CSharp/OutlineTextControl.cs) e [OutlineTextControl.vb per Visual Basic](https://github.com/dotnet/samples/blob/master/snippets/visualbasic/VS_Snippets_Wpf/OutlineTextControlViewer/visualbasic/outlinetextcontrol.vb). 
   
-## <a name="see-also"></a>Vedere anche  
- [Disegno di testo formattato](../../../../docs/framework/wpf/advanced/drawing-formatted-text.md)
+## <a name="see-also"></a>Vedere anche
+- [Disegno di testo formattato](../../../../docs/framework/wpf/advanced/drawing-formatted-text.md)

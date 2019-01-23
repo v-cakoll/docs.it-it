@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ef88af8c-8dfe-4556-8b56-81df960a900b
-ms.openlocfilehash: f4d4f6cdbb5ac6bae3af66d46599ec65aaae22f4
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b5535343b5ac40b12aa06ffb5b587e114f5cd757
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32761272"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521401"
 ---
 # <a name="null-comparisons"></a>Confronti Null
-Un valore `null` nell'origine dati indica che il valore è sconosciuto. Nella query [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] è possibile verificare la presenza di valori Null in modo che alcuni calcoli o confronti vengano eseguiti solo sulle righe che includono dati validi, ovvero non NULL. Tuttavia, la semantica dei valori Null di CLR può differire da quella dell'origine dati. La maggior parte dei database usa una versione della logica con tre valori per la gestione dei confronti di valori Null. Vale a dire un confronto con un valore null non restituisce `true` o `false`, viene restituito `unknown`. Spesso, ma non sempre, si tratta di un'implementazione di valori Null ANSI.  
+Un valore `null` nell'origine dati indica che il valore è sconosciuto. Nella query [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] è possibile verificare la presenza di valori Null in modo che alcuni calcoli o confronti vengano eseguiti solo sulle righe che includono dati validi, ovvero non NULL. Tuttavia, la semantica dei valori Null di CLR può differire da quella dell'origine dati. La maggior parte dei database usa una versione della logica con tre valori per la gestione dei confronti di valori Null. Vale a dire, un confronto con un valore null non restituiscono `true` oppure `false`, viene restituito `unknown`. Spesso, ma non sempre, si tratta di un'implementazione di valori Null ANSI.  
   
  Per impostazione predefinita, in SQL Server il confronto tra valori Null con il metodo Equals restituisce un valore Null. Nell'esempio seguente, le righe in cui `ShipDate` è null sono escluse dal set di risultati e l'istruzione [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] restituisce 0 righe.  
   
@@ -33,7 +33,7 @@ WHERE h.ShipDate IS Null
  [!code-vb[DP L2E Conceptual Examples#JoinOnNull](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#joinonnull)]  
   
 ## <a name="key-selectors"></a>Selettori di chiave  
- Oggetto *selettore di chiave* è una funzione usata negli operatori di query standard per estrarre una chiave da un elemento. Nella funzione del selettore di chiave un'espressione può essere confrontata con una costante. La semantica dei valori Null di CLR viene usata in caso di confronto tra un'espressione e una costante Null o tra due costanti Null. La semantica dei valori Null dell'archivio viene usata se vengono confrontate due colonne con valori Null nell'origine dati. I selettori di chiave sono disponibili in molti operatori di query standard per il raggruppamento e l'ordinamento, come <xref:System.Linq.Queryable.GroupBy%2A> e vengono usati per selezionare le chiavi in base alle quali ordinare o raggruppare i risultati delle query.  
+ Oggetto *selettore di chiave* è una funzione usata negli operatori query standard per estrarre una chiave da un elemento. Nella funzione del selettore di chiave un'espressione può essere confrontata con una costante. La semantica dei valori Null di CLR viene usata in caso di confronto tra un'espressione e una costante Null o tra due costanti Null. La semantica dei valori Null dell'archivio viene usata se vengono confrontate due colonne con valori Null nell'origine dati. I selettori di chiave sono disponibili in molti operatori di query standard per il raggruppamento e l'ordinamento, come <xref:System.Linq.Queryable.GroupBy%2A> e vengono usati per selezionare le chiavi in base alle quali ordinare o raggruppare i risultati delle query.  
   
 ## <a name="null-property-on-a-null-object"></a>Proprietà Null in un oggetto Null  
  In [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] le proprietà di un oggetto Null sono Null. Quando si tenta di fare riferimento a una proprietà di un oggetto Null in CLR, viene ricevuto un oggetto <xref:System.NullReferenceException>. Quando una query LINQ include una proprietà di un oggetto Null, è possibile che si verifichi un comportamento incoerente.  
@@ -44,7 +44,7 @@ WHERE h.ShipDate IS Null
  [!code-vb[DP L2E Conceptual Examples#CastResultsIsNull](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#castresultsisnull)]  
   
 ## <a name="passing-null-collections-to-aggregate-functions"></a>Passaggio di raccolte null a funzioni di aggregazione  
- In [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], quando si passa una raccolta che supporta `IQueryable` a una funzione di aggregazione, le operazioni di aggregazione vengono eseguite nel database. Potrebbero esserci delle differenze nei risultati di una query che è stata eseguita in memoria e una query che è stata eseguita nel database. Con una query in memoria, se non sono presenti corrispondenze, la query restituisce zero. A livello di database, la stessa query restituisce `null`. Se un `null` valore viene passato a una funzione di aggregazione LINQ, verrà generata un'eccezione. Per accettare i possibili `null` il cast di valori, i tipi e le proprietà di tipi che ricevono i risultati della query per i tipi nullable.  
+ Nelle [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], quando si passa una raccolta che supporta `IQueryable` a una funzione di aggregazione, le operazioni di aggregazione vengono eseguite a livello di database. Potrebbero essere presenti differenze nei risultati di una query che è stata eseguita in memoria e una query che è stata eseguita a livello di database. Con una query in memoria, se non sono presenti corrispondenze, la query restituisce zero. A livello di database, la stessa query restituisce `null`. Se un `null` valore viene passato a una funzione di aggregazione LINQ, verrà generata un'eccezione. Per accettare i possibili `null` valori, eseguire il cast ai tipi e le proprietà dei tipi che ricevono i risultati di query per i tipi nullable.  
   
-## <a name="see-also"></a>Vedere anche  
- [Espressioni in query di LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md)
+## <a name="see-also"></a>Vedere anche
+- [Espressioni in query di LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md)

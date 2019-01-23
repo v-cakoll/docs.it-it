@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 3e3e04de-99d1-4658-b716-44cb669d9589
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5cb0d058cd1ade65bfdc966819c0c41d9c1a9750
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3e9b8b6325900214865e31492b129e381de5c1c2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155093"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54507369"
 ---
 # <a name="windows-forms-add-configuration-element"></a>Windows Form aggiungere elemento di configurazione
 
@@ -109,6 +109,6 @@ A partire da .NET Framework 4.7, i controlli Windows Form generano un numero di 
 La scalabilità singolo o a più influenza la velocità di risposta percepita dell'interfaccia utente e l'aspetto visivo degli elementi dell'interfaccia utente come essi vengono ridimensionati. A partire da .NET Framework 4.7, Windows Forms Usa la scalabilità unico passaggio. Nelle versioni precedenti di .NET Framework, la scalabilità è stata eseguita tramite più passaggi, che ha causato alcuni controlli ridimensionare più di era necessario. Passaggio singolo ridimensionamento deve essere disabilitato solo se l'app dipende dal comportamento precedente.  
 
 ## <a name="see-also"></a>Vedere anche
- 
-[Sezione di configurazione di Windows Form](../../../../../docs/framework/configure-apps/file-schema/winforms/index.md)   
-[Supporto di valori DPI alti in Windows Form](../../../../../docs/framework/winforms/high-dpi-support-in-windows-forms.md)
+
+- [Sezione di configurazione di Windows Form](../../../../../docs/framework/configure-apps/file-schema/winforms/index.md)
+- [Supporto di valori DPI alti in Windows Form](../../../../../docs/framework/winforms/high-dpi-support-in-windows-forms.md)

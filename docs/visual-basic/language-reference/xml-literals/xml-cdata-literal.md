@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XML CDATA literal [Visual Basic]
 - XML literals [Visual Basic], CDATA
 ms.assetid: 9eafb6a4-dd9d-4866-85e8-0654c65abc44
-ms.openlocfilehash: 999531d8146748fe491255663f0d2d17d056bcd4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 71769c023ba77d40099ba0ba29ef363091e96831
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33603834"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521556"
 ---
 # <a name="xml-cdata-literal-visual-basic"></a>Valore letterale CDATA XML (Visual Basic)
 Un valore letterale che rappresenta un <xref:System.Xml.Linq.XCData> oggetto.  
@@ -38,26 +38,26 @@ Un valore letterale che rappresenta un <xref:System.Xml.Linq.XCData> oggetto.
  Oggetto <xref:System.Xml.Linq.XCData>.  
   
 ## <a name="remarks"></a>Note  
- Le sezioni CDATA XML contengono testo non elaborato che deve essere inclusa, ma non analizzato, con il codice XML che lo contiene. Una sezione CDATA XML può contenere qualsiasi testo. Sono inclusi caratteri XML riservati. La sezione CDATA XML termina con la sequenza "]] >". Ciò implica quanto segue:  
+ Le sezioni CDATA XML contengono testo non elaborato che deve essere inclusa, ma non analizzato, con il codice XML che lo contiene. Una sezione CDATA XML può contenere qualsiasi testo. Sono inclusi caratteri XML riservati. La sezione CDATA XML termina con la sequenza "]] >". Ciò implica quanto riportato di seguito:  
   
--   È possibile utilizzare un'espressione incorporata in un valore letterale CDATA XML perché i delimitatori di espressione incorporata sono contenuti CDATA XML validi.  
+-   È possibile usare un'espressione incorporata in un valore letterale CDATA XML perché i delimitatori di espressioni incorporate sono contenuto CDATA XML valido.  
   
 -   Le sezioni CDATA XML non possono essere annidate, perché `content` non può contenere il valore "]] >".  
   
  È possibile assegnare un valore letterale CDATA XML a una variabile o includerlo in un valore letterale elemento XML.  
   
 > [!NOTE]
->  Un valore letterale XML può estendersi su più righe ma non utilizza caratteri di continuazione di riga. In questo modo è possibile copiare il contenuto da un documento XML e incollarlo direttamente in un programma Visual Basic.  
+>  Un valore letterale XML può estendersi su più righe ma non utilizza caratteri di continuazione di riga. In questo modo è possibile copiare il contenuto da un documento XML e incollare il codice direttamente in un programma Visual Basic.  
   
- Il compilatore Visual Basic converte il valore letterale CDATA XML a una chiamata al <xref:System.Xml.Linq.XCData.%23ctor%2A> costruttore.  
+ Il compilatore Visual Basic consente di convertire il valore letterale CDATA XML a una chiamata al <xref:System.Xml.Linq.XCData.%23ctor%2A> costruttore.  
   
 ## <a name="example"></a>Esempio  
  L'esempio seguente crea una sezione CDATA che contiene il testo "può contenere un valore letterale \<XML > tag".  
   
  [!code-vb[VbXMLSamples#23](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-cdata-literal_1.vb)]  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Xml.Linq.XCData>  
- [Valore letterale elemento XML](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)  
- [Valori letterali XML](../../../visual-basic/language-reference/xml-literals/index.md)  
- [Creazione di XML in Visual Basic](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Xml.Linq.XCData>
+- [Valore letterale elemento XML](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
+- [Valori letterali XML](../../../visual-basic/language-reference/xml-literals/index.md)
+- [Creazione di XML in Visual Basic](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Byte data type
 - data types [Visual Basic], assigning
 ms.assetid: eed44dff-eaee-4937-a89f-444e418e74f6
-ms.openlocfilehash: 70e1028042807eb77fc74b30174e1962bc00f4c0
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8c9787d52667dc026d3fe62ac7f4b3de7e838a93
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192395"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54519788"
 ---
 # <a name="byte-data-type-visual-basic"></a>Tipo di dati byte (Visual Basic)
 Contiene interi senza segno a 8 bit (a 1 byte) in un intervallo compreso tra 0 e 255.
@@ -52,7 +52,7 @@ Dim number As Byte = &H_6A
   
 -   **Conversioni di formato.** Quando legge o scrive i file di Visual Basic o quando viene chiamato DLL, metodi e proprietà, è possibile convertire automaticamente tra formati di dati. Dati binari archiviati in `Byte` variabili e matrici vengono conservati durante le conversioni di formato. È consigliabile non usare un `String` variabili per i dati binari, perché il relativo contenuto può essere danneggiato durante la conversione tra formati ANSI e Unicode.
 
--   **Ampliamento.** Il `Byte` può ampliarsi nel tipo di dati `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single`, o `Double`. Ciò significa che è possibile convertire `Byte` a uno di questi tipi senza generare un <xref:System.OverflowException?displayProperty=nameWithType> errore.
+-   **Widening.** Il `Byte` può ampliarsi nel tipo di dati `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single`, o `Double`. Ciò significa che è possibile convertire `Byte` a uno di questi tipi senza generare un <xref:System.OverflowException?displayProperty=nameWithType> errore.
   
 -   **Caratteri tipo.** `Byte` non dispone di alcun carattere di tipo letterale o un carattere di tipo identificatore.
 
@@ -66,8 +66,8 @@ Dim number As Byte = &H_6A
 
 ## <a name="see-also"></a>Vedere anche
 
- <xref:System.Byte?displayProperty=nameWithType>  
- [Tipi di dati](../../../visual-basic/language-reference/data-types/index.md)  
- [Funzioni di conversione del tipo](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [Riepilogo della conversione](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [Uso efficiente dei tipi di dati](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- <xref:System.Byte?displayProperty=nameWithType>
+- [Tipi di dati](../../../visual-basic/language-reference/data-types/index.md)
+- [Funzioni di conversione del tipo](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Riepilogo della conversione](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [Uso efficiente dei tipi di dati](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

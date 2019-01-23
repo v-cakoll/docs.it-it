@@ -7,15 +7,15 @@ helpviewer_keywords:
 - Out keyword [Visual Basic]
 - covariance, Out keyword [Visual Basic]
 ms.assetid: c4418369-1518-4a46-9a1e-054c61038eca
-ms.openlocfilehash: 7ba774bfcd629a7518602d4b971e86a690b2dd83
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 367cbd373df2a38a56e5362f66bedd5c0ec24efb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33598153"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54522760"
 ---
 # <a name="out-generic-modifier-visual-basic"></a>Out (modificatore generico) (Visual Basic)
-Per i parametri di tipo generico, la `Out` (parola chiave) specifica che il tipo è covariante.  
+Per i parametri di tipo generico, la `Out` parola chiave specifica che il tipo è covariante.  
   
 ## <a name="remarks"></a>Note  
  La covarianza consente di usare un tipo più derivato di quello specificato dal parametro generico. Ciò consente la conversione implicita di classi che implementano interfacce varianti e la conversione implicita di tipi delegati.  
@@ -34,11 +34,11 @@ Per i parametri di tipo generico, la `Out` (parola chiave) specifica che il tipo
   
 -   Il parametro di tipo non viene usato come vincolo generico per i metodi di interfaccia.  
   
- In un delegato generico, un parametro di tipo può essere dichiarato covariante se viene utilizzata solo come un tipo restituito del metodo e non per gli argomenti del metodo.  
+ In un delegato generico, un parametro di tipo può essere dichiarato covariante se viene utilizzato solo come tipo restituito del metodo e non per gli argomenti del metodo.  
   
  La covarianza e la controvarianza sono supportate per i tipi di riferimento, ma non per i tipi di valore.  
   
- In Visual Basic, è possibile dichiarare gli eventi nelle interfacce covariante senza specificare il tipo delegato. Inoltre, interfacce covariante non possono avere, enumerazioni, strutture o classi annidate, ma può disporre di interfacce annidate.  
+ In Visual Basic, è possibile dichiarare gli eventi nelle interfacce covariante senza specificare il tipo delegato. Inoltre, covariante interfacce non è possibile hanno, enumerazioni, strutture o classi annidate, ma può disporre di interfacce annidate.  
   
 ## <a name="behavior"></a>Comportamento  
  Un'interfaccia che dispone di un parametro di tipo covariante consente ai metodi di restituire tipi più derivati di quelli specificati dal parametro di tipo. Poiché, ad esempio, in .NET Framework 4, nell'interfaccia <xref:System.Collections.Generic.IEnumerable%601>, il tipo T è covariante, è possibile assegnare un oggetto di tipo `IEnumerabe(Of String)` a un oggetto di tipo `IEnumerable(Of Object)` senza usare alcun metodo di conversione speciale.  
@@ -51,10 +51,10 @@ Per i parametri di tipo generico, la `Out` (parola chiave) specifica che il tipo
  [!code-vb[vbVarianceKeywords#3](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/out-generic-modifier_1.vb)]  
   
 ## <a name="example"></a>Esempio  
- L'esempio seguente illustra come dichiarare, creare un'istanza e richiamare un delegato generico covariante. Spiega inoltre come è possibile utilizzare la conversione implicita per i tipi delegati.  
+ L'esempio seguente illustra come dichiarare, creare un'istanza e richiamare un delegato generico covariante. Indica inoltre come è possibile usare la conversione implicita per i tipi delegati.  
   
  [!code-vb[vbVarianceKeywords#4](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/out-generic-modifier_2.vb)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Varianza nelle interfacce generiche](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)  
- [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)
+## <a name="see-also"></a>Vedere anche
+- [Varianza nelle interfacce generiche](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
+- [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - TypeArguments attribute in XAML [XAML Services]
 - XAML [XAML Services], x:TypeArguments attribute
 ms.assetid: 86561058-d393-4a44-b5c3-993a4513ea74
-ms.openlocfilehash: 28eda94914125f2c5849a471671c8e283475c82c
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.openlocfilehash: ef08a550ebd1784514bc47ae02089847c6f1b578
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46321392"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54520178"
 ---
 # <a name="xtypearguments-directive"></a>Direttiva x:TypeArguments
 Passa vincoli di tipo generico per il costruttore del tipo generico.  
@@ -81,8 +81,8 @@ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
   
  In WPF e quando la destinazione [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], è possibile usare le funzionalità di XAML 2009 con `x:TypeArguments` ma solo per XAML loose (XAML non è compilato dal markup). Il codice XAML compilato dal markup per WPF e il modulo BAML di XAML non supportano attualmente le parole chiave e le funzionalità di XAML 2009. Se è necessario di una compilazione di markup di XAML, è necessario operare con le restrizioni indicate nella sezione "XAML 2006 e WPF XAML utilizzi generici".  
   
-## <a name="see-also"></a>Vedere anche  
- [Direttiva x:Class](../../../docs/framework/xaml-services/x-class-directive.md)  
- [Estensione di markup x:Type](../../../docs/framework/xaml-services/x-type-markup-extension.md)  
- [Tipi incorporati per primitive del linguaggio XAML comuni](../../../docs/framework/xaml-services/built-in-types-for-common-xaml-language-primitives.md)  
- [Generics in XAML](../../../docs/framework/xaml-services/generics-in-xaml.md)
+## <a name="see-also"></a>Vedere anche
+- [Direttiva x:Class](../../../docs/framework/xaml-services/x-class-directive.md)
+- [Estensione di markup x:Type](../../../docs/framework/xaml-services/x-type-markup-extension.md)
+- [Tipi incorporati per primitive del linguaggio XAML comuni](../../../docs/framework/xaml-services/built-in-types-for-common-xaml-language-primitives.md)
+- [Generics in XAML](../../../docs/framework/xaml-services/generics-in-xaml.md)

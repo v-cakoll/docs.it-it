@@ -7,15 +7,15 @@ helpviewer_keywords:
 - Erase keyword [Visual Basic]
 - Erase statement [Visual Basic]
 ms.assetid: 7a8133d7-b750-4d74-8b66-ba1dd9778d4b
-ms.openlocfilehash: 317e2a7dc5facb08388f3a3e635734e4daed5eac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cab3da4465b4671d203036c2d9bcd40662dc234a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33601793"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54522440"
 ---
 # <a name="erase-statement-visual-basic"></a>Istruzione Erase (Visual Basic)
-Utilizzato per rilasciare le variabili di matrice e deallocare la memoria utilizzata per i relativi elementi.  
+Utilizzato per rilasciare le variabili di matrice e deallocare la memoria usata per i relativi elementi.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -28,15 +28,15 @@ Erase arraylist
  Obbligatorio. Elenco di variabili di matrice da cancellare. Nel caso di più variabili, è possibile separarle mediante virgole.  
   
 ## <a name="remarks"></a>Note  
- Il `Erase` istruzione può essere utilizzata solo a livello di routine. Ciò significa che è possibile rilasciare le matrici all'interno di una stored procedure, ma non a livello di classe o modulo.  
+ Il `Erase` istruzione può essere specificata solo a livello di routine. Ciò significa che è possibile rilasciare le matrici all'interno di una routine, ma non a livello di classe o modulo.  
   
- Il `Erase` istruzione equivale all'assegnazione `Nothing` per ogni variabile di matrice.  
+ Il `Erase` istruzione equivale all'assegnazione `Nothing` a ogni variabile di matrice.  
   
 ## <a name="example"></a>Esempio  
- L'esempio seguente usa il `Erase` istruzione per cancellare due matrici e liberare la memoria (1000 e 100 elementi, rispettivamente). Il `ReDim` istruzione assegna quindi una nuova istanza di matrice alla matrice tridimensionale.  
+ L'esempio seguente usa il `Erase` istruzione per due matrici di cancellare e liberare la memoria (1000 e 100 elementi, rispettivamente). Il `ReDim` istruzione quindi assegna una nuova istanza della matrice nella matrice tridimensionale.  
   
  [!code-vb[VbVbalrStatements#19](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/erase-statement_1.vb)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Nothing](../../../visual-basic/language-reference/nothing.md)  
- [Istruzione ReDim](../../../visual-basic/language-reference/statements/redim-statement.md)
+## <a name="see-also"></a>Vedere anche
+- [Nothing](../../../visual-basic/language-reference/nothing.md)
+- [Istruzione ReDim](../../../visual-basic/language-reference/statements/redim-statement.md)

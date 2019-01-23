@@ -1,5 +1,5 @@
 ---
-title: Disattivare la funzione (riferimenti alle API non gestita di WPF)
+title: Funzione Deactivate (riferimenti alle API WPF non gestite)
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -8,17 +8,17 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: 3e81be16-24c7-4399-b242-6268feaa49d7
-ms.openlocfilehash: 94f248cd8b37e142c5e256087d345b80cad3fec3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a279a90b7fa6c32faa7e95dd0c828ec2d9ef77c3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33536380"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54522757"
 ---
-# <a name="deactivate-function-wpf-unmanaged-api-reference"></a>Disattivare la funzione (riferimenti alle API non gestita di WPF)
-Questa API supporta l'infrastruttura di Windows Presentation Foundation (WPF) e non deve essere utilizzato direttamente dal codice.  
+# <a name="deactivate-function-wpf-unmanaged-api-reference"></a>Funzione Deactivate (riferimenti alle API WPF non gestite)
+Questa API supporta l'infrastruttura Windows Presentation Foundation (WPF) e non deve essere usato direttamente dal codice.  
   
- Utilizzata dall'infrastruttura di Windows Presentation Foundation (WPF) per la gestione di windows.  
+ Utilizzata dall'infrastruttura Windows Presentation Foundation (WPF) per la gestione di windows.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -27,7 +27,7 @@ void Deactivate()
 ```  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Visualizzare [requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **DLL:**  
   
@@ -37,5 +37,5 @@ void Deactivate()
   
  **Versione di .NET framework:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Riferimenti alle API non gestite di WPF](../../../../docs/framework/wpf/advanced/wpf-unmanaged-api-reference.md)
+## <a name="see-also"></a>Vedere anche
+- [Riferimenti alle API non gestite di WPF](../../../../docs/framework/wpf/advanced/wpf-unmanaged-api-reference.md)

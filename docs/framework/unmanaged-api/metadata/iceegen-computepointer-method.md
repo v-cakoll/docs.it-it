@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a1239546072192d6ff9497013ad7b7140ea13085
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 496082bbf89ceb93ba3dceef9a9222425db71784
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443242"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54522414"
 ---
 # <a name="iceegencomputepointer-method"></a>Metodo ICeeGen::ComputePointer
 Determina il buffer per la sezione di codice specificato.  
@@ -41,22 +41,22 @@ HRESULT ComputePointer (
   
 #### <a name="parameters"></a>Parametri  
  `section`  
- [in] La sezione di codice per il quale restituire un buffer.  
+ [in] La sezione di codice per cui restituire un buffer.  
   
  `RVA`  
- [in] L'indirizzo virtuale relativo del metodo per il quale ottenere un puntatore.  
+ [in] L'indirizzo virtuale relativo del metodo per cui ottenere un puntatore.  
   
  `lpBuffer`  
  [out] Puntatore al buffer restituito.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
- **Libreria:** usata come risorsa in Mscoree. dll  
+ **Libreria:** Usato come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

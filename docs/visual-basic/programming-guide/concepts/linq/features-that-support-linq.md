@@ -5,17 +5,17 @@ helpviewer_keywords:
 - Visual Basic, LINQ features
 - LINQ [Visual Basic], features supporting LINQ
 ms.assetid: c821bb50-b6f6-4cf9-8aba-2717e465bd3a
-ms.openlocfilehash: db2eff2f7c19a3c510e7b212f5bb406d7a885439
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: 557e3607443066a863946ff08958197a14662a88
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39199147"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54519382"
 ---
 # <a name="visual-basic-features-that-support-linq"></a>Funzionalità di Visual Basic che supportano LINQ
 Il nome [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] si riferisce alla tecnologia in Visual Basic che supporta la sintassi della query e altri linguaggio costruisce direttamente nel linguaggio. Con [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], non devi imparare un nuovo linguaggio di query su un'origine dati esterna. È possibile eseguire query sui dati archiviati in database relazionali, archivi XML o oggetti mediante Visual Basic. Questa integrazione delle funzionalità di query nel linguaggio consente in fase di compilazione cercano gli errori di sintassi e indipendenza dai tipi. Questa integrazione assicura anche che si conosce già la maggior parte di ciò che devi sapere per scrivere query complesse in Visual Basic.  
   
- Le sezioni seguenti descrivono i costrutti di linguaggio che supportano LINQ in maniera più approfondita che consentono di iniziare a leggere la documentazione introduttiva, esempi di codice e applicazioni di esempio. È anche possibile fare clic sui collegamenti per trovare una spiegazione più dettagliata del modo in cui le funzionalità del linguaggio si riuniscono per abilitare le query Linq. È un buon punto di partenza [procedura dettagliata: scrittura delle query in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md).  
+ Le sezioni seguenti descrivono i costrutti di linguaggio che supportano LINQ in maniera più approfondita che consentono di iniziare a leggere la documentazione introduttiva, esempi di codice e applicazioni di esempio. È anche possibile fare clic sui collegamenti per trovare una spiegazione più dettagliata del modo in cui le funzionalità del linguaggio si riuniscono per abilitare le query Linq. È un buon punto di partenza [procedura dettagliata: Scrittura di query in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md).  
   
 ## <a name="query-expressions"></a>Espressioni di query  
  Espressioni di query in Visual Basic possono essere espresso in una sintassi dichiarativa simile a quella di SQL o XQuery. In fase di compilazione, la sintassi di query viene convertita in chiamate al metodo di implementazione di un provider LINQ di ai metodi di estensione dell'operatore query standard. Le applicazioni controllano gli operatori query standard sono nell'ambito specificando lo spazio dei nomi appropriato con un `Imports` istruzione. Sintassi per un'espressione di query di Visual Basic è simile alla seguente:  
@@ -44,7 +44,7 @@ Il nome [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] si riferisce all
   
  [!code-vb[VbLINQVbFeatures#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_4.vb)]  
   
- Per altre informazioni, vedere [inizializzatori di oggetto: tipi denominati e anonimi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md).  
+ Per altre informazioni, vedere [gli inizializzatori di oggetto: Tipi denominati e anonimi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md).  
   
 ## <a name="anonymous-types"></a>Tipi anonimi  
  I tipi anonimi offrono un modo pratico per raggruppare temporaneamente un set di proprietà in un elemento che si desidera includere nei risultati della query. In questo modo è possibile scegliere qualsiasi combinazione di campi disponibili nella query, in qualsiasi ordine, senza definire un tipo di dati con nome per l'elemento.  
@@ -93,9 +93,9 @@ Il nome [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] si riferisce all
   
  Per altre informazioni, vedere [Espressioni lambda](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [LINQ (Language-Integrated Query) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)  
- [Introduzione a LINQ in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)  
- [LINQ e stringhe (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
- [Istruzione Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md)  
- [Istruzione Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
+## <a name="see-also"></a>Vedere anche
+- [LINQ (Language-Integrated Query) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)
+- [Introduzione a LINQ in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [LINQ e stringhe (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [Istruzione Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md)
+- [Istruzione Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)

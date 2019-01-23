@@ -10,20 +10,20 @@ helpviewer_keywords:
 - structures [Visual Basic], nested control
 - nested control statements [Visual Basic]
 ms.assetid: cf60b061-65d9-44a8-81f2-b0bdccd23a05
-ms.openlocfilehash: ec3d4d477290480cdfa0f5b1c88aa82c81040d11
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fec1b4dbca0a4c6979e52fc74ceeb3e8c7ac6cad
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33648072"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54520464"
 ---
 # <a name="nested-control-structures-visual-basic"></a>Strutture di controllo annidate (Visual Basic)
-È possibile inserire le istruzioni di controllo all'interno di altre istruzioni di controllo, ad esempio un `If...Then...Else` blocco all'interno di un `For...Next` ciclo. Un'istruzione di controllo posizionata all'interno di un'altra istruzione di controllo è detta *nidificata*.  
+È possibile inserire le istruzioni di controllo all'interno di altre istruzioni di controllo, ad esempio un `If...Then...Else` blocchi all'interno di un `For...Next` ciclo. Un'istruzione di controllo posizionata all'interno di un'altra istruzione di controllo viene detto *nidificata*.  
   
 ## <a name="nesting-levels"></a>Livelli di annidamento  
- Strutture di controllo in Visual Basic possono essere nidificate fino a un numero di livelli. È pratica comune per rendere più leggibile strutture annidate rientrare il corpo di ciascuna di esse. L'editor di sviluppo integrato (IDE) di ambiente automaticamente esegue questa operazione.  
+ Strutture di controllo in Visual Basic possono essere annidate a tutti i livelli desiderato. È pratica comune per rendere più leggibile strutture annidate rientrando il corpo della ognuno di essi. L'editor di sviluppo integrato (IDE) di ambiente automaticamente esegue questa operazione.  
   
- Nell'esempio seguente, la procedura `sumRows` per sommare positivo gli elementi di ogni riga della matrice.  
+ Nell'esempio seguente, la procedura `sumRows` somma tra gli elementi positivi di ogni riga della matrice.  
   
 ```  
 Public Sub sumRows(ByVal a(,) As Double, ByRef r() As Double)  
@@ -39,15 +39,15 @@ Public Sub sumRows(ByVal a(,) As Double, ByRef r() As Double)
 End Sub  
 ```  
   
- Nell'esempio precedente, il primo `Next` istruzione chiude il `For` ciclo e l'ultimo `Next` istruzione chiude esterna `For` ciclo.  
+ Nell'esempio precedente, il primo `Next` istruzione chiude interna `For` ciclo e l'ultima `Next` istruzione chiude esterna `For` ciclo.  
   
- Analogamente, in annidati `If` istruzioni, il `End If` istruzioni vengono applicate automaticamente al precedente più vicino `If` istruzione. Annidati `Do` cicli di lavoro in modo simile, con più interna `Loop` corrispondente alla più interna `Do` istruzione.  
+ Allo stesso modo, in annidati `If` (istruzioni), il `End If` istruzioni si applicano automaticamente per il più vicino prima `If` istruzione. Annidato `Do` cicli funzionano in modo analogo, con più interna `Loop` istruzione corrispondente più interna `Do` istruzione.  
   
 > [!NOTE]
->  Per molte strutture di controllo quando si fa clic su una parola chiave, vengono evidenziate tutte le parole chiave nella struttura. Ad esempio, quando fa clic su `If` in un `If...Then...Else` costruzione, tutte le istanze di `If`, `Then`, `ElseIf`, `Else`, e `End If` nella costruzione vengono evidenziati. Per spostarsi alla parola chiave evidenziata successiva o precedente, premere CTRL + MAIUSC + freccia giù o CTRL + MAIUSC + freccia su.  
+>  Per molte strutture di controllo, quando si fa clic su una parola chiave, sono evidenziate tutte le parole chiave nella struttura. Ad esempio, quando fa clic su `If` in un `If...Then...Else` costruzione, tutte le istanze di `If`, `Then`, `ElseIf`, `Else`, e `End If` nella costruzione di strutture vengono evidenziati. Per spostare alla parola chiave evidenziata successiva o precedente, premere CTRL + MAIUSC + freccia giù o CTRL + MAIUSC + freccia su.  
   
-## <a name="nesting-different-kinds-of-control-structures"></a>Annidamento di tipi diversi di strutture di controllo  
- È possibile annidare un tipo di struttura di controllo all'interno di un altro tipo. Nell'esempio seguente viene utilizzato un `With` blocco un `For Each` ciclo e nidificate `If` blocchi all'interno di `With` blocco.  
+## <a name="nesting-different-kinds-of-control-structures"></a>Nidificazione di diversi tipi di strutture di controllo  
+ È possibile annidare un tipo di struttura di controllo all'interno di un altro tipo. L'esempio seguente usa una `With` blocchi all'interno di un `For Each` ciclo e nidificate `If` blocca all'interno del `With` blocco.  
   
 ```  
 For Each ctl As System.Windows.Forms.Control In Me.Controls  
@@ -64,16 +64,16 @@ For Each ctl As System.Windows.Forms.Control In Me.Controls
 Next ctl  
 ```  
   
-## <a name="overlapping-control-structures"></a>Sovrapposizione di strutture di controllo  
- Non è possibile sovrapporre le strutture di controllo. Ciò significa che qualsiasi struttura annidata deve essere completamente contenuta all'interno della successiva struttura più interna. Ad esempio, la disposizione seguente non è valida perché il `For` ciclo termina prima del `With` termina.  
+## <a name="overlapping-control-structures"></a>La sovrapposizione di strutture di controllo  
+ Non è possibile sovrapporre le strutture di controllo. Ciò significa che qualsiasi struttura annidata debba essere completamente contenuta all'interno della successiva struttura più interna. Ad esempio, la disposizione seguente non è valida perché il `For` ciclo termina prima del `With` blocco termina.  
   
  ![Diagramma grafico di annidamento non valida](../../../../visual-basic/programming-guide/language-features/control-flow/media/nestexampleinvalid.gif "NestExampleInvalid")  
-Annidamento non valido di per e con strutture  
+Annidamento non valida di per e con strutture  
   
  Il compilatore Visual Basic rileva le strutture di controllo sovrapposte e segnala un errore in fase di compilazione.  
   
-## <a name="see-also"></a>Vedere anche  
- [Flusso di controllo](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)  
- [Strutture decisionali](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)  
- [Strutture di ciclo](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)  
- [Altre strutture di controllo](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)
+## <a name="see-also"></a>Vedere anche
+- [Flusso di controllo](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
+- [Strutture decisionali](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)
+- [Strutture di ciclo](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
+- [Altre strutture di controllo](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)

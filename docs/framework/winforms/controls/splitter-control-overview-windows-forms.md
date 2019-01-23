@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - Splitter control [Windows Forms], about Splitter control
 ms.assetid: e2b6ab83-dfdd-40ec-9762-850702c82dcb
-ms.openlocfilehash: 9d36a0cc7117ab88dc575f0f9531c93814243f4c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 583596ec44dd5318c199d6cfc33901dbd952b115
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33534118"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54522609"
 ---
 # <a name="splitter-control-overview-windows-forms"></a>Cenni preliminari sul controllo Splitter (Windows Form)
 > [!IMPORTANT]
->  Sebbene <xref:System.Windows.Forms.SplitContainer> sostituisce e aggiunge la funzionalità per il <xref:System.Windows.Forms.Splitter> controllo delle versioni precedenti, <xref:System.Windows.Forms.Splitter> viene mantenuto per compatibilità con le versioni precedenti e un utilizzo futuro, se si sceglie.  
+>  Sebbene <xref:System.Windows.Forms.SplitContainer> sostituisce e aggiunge funzionalità per il <xref:System.Windows.Forms.Splitter> controllo delle versioni precedenti, <xref:System.Windows.Forms.Splitter> è stato mantenuto per compatibilità con le versioni precedenti e per un uso futuro, se necessario.  
   
- Windows Form <xref:System.Windows.Forms.Splitter> controlli vengono usati per ridimensionare i controlli ancorati in fase di esecuzione. Il <xref:System.Windows.Forms.Splitter> controllo viene spesso usato nei form con controlli che dispongono di diverse lunghezze dei dati per la presentazione, ad esempio Esplora risorse, il cui riquadri contengono informazioni in momenti diversi.  
+ Windows Form <xref:System.Windows.Forms.Splitter> controlli vengono usati per ridimensionare i controlli ancorati in fase di esecuzione. Il <xref:System.Windows.Forms.Splitter> controllo viene spesso usato nei form con controlli che dispongono di diverse lunghezze dei dati per la presentazione, ad esempio Windows Explorer, la cui riquadri dati contengono informazioni diverse di larghezze in momenti diversi.  
   
 ## <a name="working-with-the-splitter-control"></a>Utilizzo del controllo barra di divisione  
- Quando l'utente posiziona il puntatore del mouse sul bordo alloggiamento di espansione di un controllo che può essere ridimensionato con un controllo splitter, il puntatore assume l'aspetto per indicare che è possibile ridimensionare il controllo. Con il controllo barra di divisione, l'utente può ridimensionare il controllo ancorato immediatamente precedente. Pertanto, per consentire all'utente di ridimensionare un controllo ancorato in fase di esecuzione, ancorare il controllo deve essere ridimensionato per un bordo di un contenitore e quindi ancorare un controllo splitter sullo stesso lato del contenitore.  
+ Quando l'utente fa riferimento il puntatore del mouse sul bordo di un controllo che può essere ridimensionato da un controllo barra di divisione non ancorato, il puntatore del mouse cambia il suo aspetto per indicare che è possibile ridimensionare il controllo. Con il controllo barra di divisione, l'utente può ridimensionare il controllo ancorato immediatamente precedente. Pertanto, per consentire all'utente di ridimensionare un controllo ancorato in fase di esecuzione, ancorare il controllo deve essere ridimensionato a un bordo di un contenitore e quindi ancorare un controllo splitter al lato del contenitore stesso.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Windows.Forms.SplitContainer>  
- [Procedura: Ancorare i controlli in Windows Form](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)  
- [Controlli da usare in Windows Form](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Windows.Forms.SplitContainer>
+- [Procedura: Ancorare i controlli in Windows Form](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)
+- [Controlli da usare in Windows Form](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

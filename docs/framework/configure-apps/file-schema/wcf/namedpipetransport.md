@@ -2,12 +2,12 @@
 title: '&lt;namedPipeTransport&gt;'
 ms.date: 03/30/2017
 ms.assetid: 9fc3f42f-43e2-4ab1-8bc7-3c95a9220df1
-ms.openlocfilehash: bf9229411143345847247f36de07b5c014d3f259
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: cdb2863ff376a92f7c4b679f4812b895ac3f2234
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54149600"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54518839"
 ---
 # <a name="ltnamedpipetransportgt"></a>&lt;namedPipeTransport&gt;
 Definisce un trasporto che induce un canale a trasferire messaggi usando named pipe quando è incluso in un'associazione personalizzata.  
@@ -16,7 +16,7 @@ Definisce un trasporto che induce un canale a trasferire messaggi usando named p
 \<le associazioni >  
 \<customBinding>  
 \<binding>  
-\<namePipeTransport >  
+\<namePipeTransport>  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -72,14 +72,14 @@ Questo trasporto usa URI nel formato "net.pipe://nomehost/percorso". Gli altri c
   
 L'elemento `namedPipeTransport` rappresenta il punto iniziale per la creazione di un'associazione personalizzata che implementa il protocollo di trasporto delle named pipe. Questo trasporto viene usato per la comunicazione da computer con Windows Communication Foundation (WCF) a WCF.  
   
-## <a name="see-also"></a>Vedere anche  
-<xref:System.ServiceModel.Configuration.NamedPipeTransportElement>   
-<xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>   
-<xref:System.ServiceModel.Channels.TransportBindingElement>   
-<xref:System.ServiceModel.Channels.CustomBinding>   
-[Trasporti](../../../../../docs/framework/wcf/feature-details/transports.md)   
-[Scelta di un trasporto](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)   
-[associazioni](../../../../../docs/framework/wcf/bindings.md)   
-[Estensione delle associazioni](../../../../../docs/framework/wcf/extending/extending-bindings.md)   
-[Associazioni personalizzate](../../../../../docs/framework/wcf/extending/custom-bindings.md)   
-[\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.ServiceModel.Configuration.NamedPipeTransportElement>
+- <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>
+- <xref:System.ServiceModel.Channels.TransportBindingElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [Trasporti](../../../../../docs/framework/wcf/feature-details/transports.md)
+- [Scelta di un trasporto](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+- [Associazioni](../../../../../docs/framework/wcf/bindings.md)
+- [Estensione delle associazioni](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [Associazioni personalizzate](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

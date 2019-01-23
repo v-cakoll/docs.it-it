@@ -2,12 +2,12 @@
 title: Riferimento a Entity SQL
 ms.date: 03/30/2017
 ms.assetid: 61ce7ee1-ffe2-477d-8a9f-835b0a11d900
-ms.openlocfilehash: ae0aec999d30d099467be690b8920d1413b564f0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 75f9c61a24ffdcba890ae04ccc5c656460c13088
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515498"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54522154"
 ---
 # <a name="entity-sql-reference"></a>Riferimento a Entity SQL
 
@@ -50,10 +50,10 @@ L'uguaglianza e l'ineguaglianza sono definite per qualsiasi tipo di oggetto con 
 |[= (uguale a)](equals-entity-sql.md)|Consente di confrontare due espressioni per verificare se sono uguali.|
 |[> (maggiore di)](greater-than-entity-sql.md)|Consente di confrontare due espressioni per determinare se l'espressione a sinistra ha un valore maggiore di quella a destra.|
 |[>= (maggiore di o uguale a)](greater-than-or-equal-to-entity-sql.md)|Consente di confrontare due espressioni per determinare se l'espressione a sinistra ha un valore maggiore o uguale a quella a destra.|
-|[VIENE \[NON\] NULL](isnull-entity-sql.md)|Consente di determinare se un'espressione di query è null.|
+|[IS \[NOT\] NULL](isnull-entity-sql.md)|Consente di determinare se un'espressione di query è null.|
 |[< (minore di)](less-than-entity-sql.md)|Consente di confrontare due espressioni per determinare se l'espressione a sinistra ha un valore minore di quella a destra.|
 |[<= (minore di o uguale a)](less-than-or-equal-to-entity-sql.md)|Consente di confrontare due espressioni per determinare se l'espressione a sinistra ha un valore minore o uguale a quella a destra.|
-|[\[NON\] BETWEEN](between-entity-sql.md)|Determina se un'espressione restituisce un valore incluso in un intervallo specificato.|
+|[\[NOT\] BETWEEN](between-entity-sql.md)|Determina se un'espressione restituisce un valore incluso in un intervallo specificato.|
 |[\!= (Diverso da)](not-equal-to-entity-sql.md)|Confronta due espressioni per determinare se l'espressione a sinistra non è uguale a quella a destra.|
 |[\[NON\] , AD ESEMPIO](like-entity-sql.md)|Determina se una determinata stringa di caratteri corrisponde a un modello specificato.|
 
@@ -108,7 +108,7 @@ Entity SQL sono disponibili diversi importanti operatori sui set. Ciò include o
 |[EXCEPT](except-entity-sql.md)|Restituisce una raccolta di tutti i valori distinti dall'espressione di query a sinistra dell'operando EXCEPT che non vengono inoltre restituite dall'espressione di query a destra dell'operando EXCEPT.|
 |[\[NON\] EXISTS](exists-entity-sql.md)|Determina se una raccolta è vuota.|
 |[FLATTEN](flatten-entity-sql.md)|Converte una raccolta di raccolte in una raccolta bidimensionale.|
-|[\[NON\] IN](in-entity-sql.md)|Determina se un valore corrisponde a qualsiasi valore in una raccolta.|
+|[\[NOT\] IN](in-entity-sql.md)|Determina se un valore corrisponde a qualsiasi valore in una raccolta.|
 |[INTERSECT](intersect-entity-sql.md)|Restituisce una raccolta di tutti i valori distinti restituiti da entrambe le espressioni di query a sinistra e a destra dell'operando INTERSECT.|
 |[OVERLAPS](overlaps-entity-sql.md)|Determina se due raccolte includono elementi comuni.|
 |[SET](set-entity-sql.md)|Usato per convertire una raccolta di oggetti in un set restituendo una nuova raccolta da cui sono stati rimossi tutti i duplicati.|
@@ -122,7 +122,7 @@ Entity SQL sono disponibili operazioni che consentono il tipo di un'espressione 
 |--------------|---------|
 |[CAST](cast-entity-sql.md)|Consente di convertire un'espressione da un tipo di dati a un altro.|
 |[COLLECTION](collection-entity-sql.md)|Utilizzato in una [funzione](function-entity-sql.md) operazione per dichiarare una raccolta di tipi di entità o tipi complessi.|
-|[VIENE \[NON\] OF](isof-entity-sql.md)|Determina se il tipo di un'espressione è del tipo specificato o di uno dei sottotipi.|
+|[IS \[NOT\] OF](isof-entity-sql.md)|Determina se il tipo di un'espressione è del tipo specificato o di uno dei sottotipi.|
 |[OFTYPE](oftype-entity-sql.md)|Restituisce una raccolta di oggetti da un'espressione di query appartenente a un tipo specifico.|
 |[Costruttore di tipo denominato](named-type-constructor-entity-sql.md)|Usato per creare istanze di tipi di entità o tipi complessi.|
 |[MULTISET](multiset-entity-sql.md)|Crea un'istanza di un multiset da un elenco di valori.|
@@ -142,4 +142,4 @@ Nella tabella seguente sono elencati altri operatori di Entity SQL:
 
 ## <a name="see-also"></a>Vedere anche
 
-[Linguaggio Entity SQL](entity-sql-language.md)
+- [Linguaggio Entity SQL](entity-sql-language.md)

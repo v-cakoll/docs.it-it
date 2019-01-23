@@ -2,21 +2,15 @@
 title: Routine in Visual Basic
 ms.date: 04/28/2017
 helpviewer_keywords:
-- procedures [Visual Basic], structured code
-- Visual Basic code, procedures
-- procedures [Visual Basic], types of
-- structured code [Visual Basic], procedures
-- procedures
+  - 'procedures [Visual Basic], structured code'
+  - 'Visual Basic code, procedures'
+  - 'procedures [Visual Basic], types of'
+  - 'structured code [Visual Basic], procedures'
+  - procedures
 ms.assetid: 9effbcf0-80a0-4d1a-98f4-2c6920592766
-ms.openlocfilehash: a4a168fd1fad75f5038044d49886782f391ceb1a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655136"
 ---
 # <a name="procedures-in-visual-basic"></a>Routine in Visual Basic
-Un *routine* è un blocco di Visual Basic istruzioni racchiuse tra un'istruzione di dichiarazione (`Function`, `Sub`, `Operator`, `Get`, `Set`) e un corrispondente `End` dichiarazione. Tutte le istruzioni eseguibili in Visual Basic devono trovarsi nella stessa routine.  
+Oggetto *routine* è un blocco di Visual Basic istruzioni racchiuse tra un'istruzione di dichiarazione (`Function`, `Sub`, `Operator`, `Get`, `Set`) e un corrispondente `End` dichiarazione. Le istruzioni eseguibili in Visual Basic devono trovarsi nella stessa routine.  
   
 ## <a name="calling-a-procedure"></a>Chiamata di una routine  
  Una routine viene richiamata da altre parti del codice. Questa operazione è nota come *chiamata di routine*. Al termine dell'esecuzione della routine, il controllo viene restituito al codice che ha richiamato la routine, noto come *codice chiamante*. Il codice chiamante è un'istruzione o un'espressione all'interno di un'istruzione, che specifica la routine tramite nome e le trasferisce il controllo.  
@@ -34,7 +28,7 @@ Un *routine* è un blocco di Visual Basic istruzioni racchiuse tra un'istruzione
  Nella maggior parte dei casi, una routine deve usare dati diversi ogni volta che viene chiamata. È possibile passare queste informazioni alla routine come parte della chiamata di routine. La routine definisce zero o più *parametri*, ognuno dei quali rappresenta un valore necessario da passare alla routine. A ogni parametro della definizione della routine corrisponde un *argomento* nella chiamata di routine. Un argomento rappresenta il valore passato al parametro corrispondente in una chiamata di routine specifica.  
   
 ## <a name="types-of-procedures"></a>Tipi di routine  
- Visual Basic utilizza diversi tipi di stored procedure:  
+ Visual Basic Usa diversi tipi di routine:  
   
 -   Le [routine Sub](./sub-procedures.md) eseguono operazioni ma non restituiscono un valore al codice chiamante.  
   
@@ -61,14 +55,14 @@ Un *routine* è un blocco di Visual Basic istruzioni racchiuse tra un'istruzione
   
 -   Dopo aver sviluppato le routine da usare in un programma, è possibile usarle in altri programmi, spesso senza modificarle o apportando modifiche minime. Questo consente di evitare la duplicazione del codice.  
   
-## <a name="see-also"></a>Vedere anche  
- [Procedura: Creare una routine](./how-to-create-a-procedure.md)  
- [Routine Sub](./sub-procedures.md)  
- [Routine Function](./function-procedures.md)  
- [Routine Property](./property-procedures.md)  
- [Routine di operatore](./operator-procedures.md)  
- [Parametri e argomenti delle routine](./procedure-parameters-and-arguments.md)  
- [Routine ricorsive](./recursive-procedures.md)  
- [Overload della routine](./procedure-overloading.md)  
- [Routine generiche in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)  
- [Oggetti e classi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+## <a name="see-also"></a>Vedere anche
+- [Procedura: Creare una stored Procedure](./how-to-create-a-procedure.md)
+- [Routine Sub](./sub-procedures.md)
+- [Routine Function](./function-procedures.md)
+- [Routine Property](./property-procedures.md)
+- [Routine di operatore](./operator-procedures.md)
+- [Parametri e argomenti delle routine](./procedure-parameters-and-arguments.md)
+- [Routine ricorsive](./recursive-procedures.md)
+- [Overload della routine](./procedure-overloading.md)
+- [Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)
+- [Oggetti e classi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

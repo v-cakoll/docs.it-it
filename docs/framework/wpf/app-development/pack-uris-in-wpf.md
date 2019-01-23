@@ -9,12 +9,12 @@ helpviewer_keywords:
 - loading non-resource files
 - application management [WPF]
 ms.assetid: 43adb517-21a7-4df3-98e8-09e9cdf764c4
-ms.openlocfilehash: 7addb503d0a7d4c7a4388144759e7f40264d7703
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 111b129b17d0fe473b0249c43e25ddc50bfe6fd6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522435"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513451"
 ---
 # <a name="pack-uris-in-wpf"></a>URI di tipo pack in WPF
 In Windows Presentation Foundation (WPF), [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] consentono di identificare e caricare i file in molti modi, inclusi i seguenti:  
@@ -46,7 +46,7 @@ In Windows Presentation Foundation (WPF), [!INCLUDE[TLA#tla_uri#plural](../../..
   
  ![Diagramma di pacchetti e parti](../../../../docs/framework/wpf/app-development/media/wpfpackurischemefigure1.PNG "WPFPackURISchemeFigure1")  
   
- Per identificare le parti, la specifica OPC sfrutta l'estensibilità di RFC 2396 (Uniform Resource Identifiers (URI): Generic Syntax) per definire il pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] dello schema.  
+ Per identificare le parti, la specifica OPC sfrutta l'estensibilità di RFC 2396 (Uniform Resource Identifiers (URI): Sintassi generica) per definire il pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] dello schema.  
   
  Lo schema specificato da un [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] è definito dal suo prefisso http, ftp e file sono esempi comuni. Il pacchetto [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] schema Usa "pack" come schema e contiene due componenti: autorità e percorso. Di seguito è riportato il formato per un pacchetto [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].  
   
@@ -89,7 +89,7 @@ In Windows Presentation Foundation (WPF), [!INCLUDE[TLA#tla_uri#plural](../../..
   
 -   **Autorità**: application:///.  
   
--   **Percorso**: nome del file di risorse che include il percorso relativo alla radice della cartella del progetto dell'assembly locale.  
+-   **Percorso**: Il nome del file di risorse, incluso il relativo percorso, relativo alla radice della cartella di progetto dell'assembly locale.  
   
  L'esempio seguente illustra il pacchetto [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] per un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] file di risorse che si trova nella radice della cartella del progetto dell'assembly locale.  
   
@@ -105,9 +105,9 @@ In Windows Presentation Foundation (WPF), [!INCLUDE[TLA#tla_uri#plural](../../..
   
 -   **Autorità**: application:///.  
   
--   **Percorso**: nome di un file di risorse compilato in un assembly a cui si fa riferimento. Il percorso deve essere conforme al formato seguente:  
+-   **Percorso**: Il nome di un file di risorse che viene compilato in un assembly di riferimento. Il percorso deve essere conforme al formato seguente:  
   
-     *NomeBreveAssembly*{*; Versione*] {*; PublicKey*]; component /*percorso*  
+     *AssemblyShortName*{*;Version*]{*;PublicKey*];component/*Path*  
   
     -   **NomeBreveAssembly**: nome breve dell'assembly a cui si fa riferimento.  
   
@@ -141,7 +141,7 @@ In Windows Presentation Foundation (WPF), [!INCLUDE[TLA#tla_uri#plural](../../..
   
 -   **Autorità**: application:///.  
   
--   **Percorso**: nome del file di contenuto contenente il percorso relativo alla posizione del file system del principale assembly eseguibile dell'applicazione.  
+-   **Percorso**: Il nome del file di contenuto, incluso il percorso relativo al percorso del file system dell'assembly eseguibile principale dell'applicazione.  
   
  L'esempio seguente illustra il pacchetto [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] per un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] file di contenuto che si trova nella stessa cartella dell'assembly eseguibile.  
   
@@ -160,7 +160,7 @@ In Windows Presentation Foundation (WPF), [!INCLUDE[TLA#tla_uri#plural](../../..
   
 -   **Autorità**: siteoforigin:///.  
   
--   **Percorso**: nome del file del sito di origine contenente il percorso relativo alla posizione da cui è stato avviato l'assembly eseguibile.  
+-   **Percorso**: Il nome del sito del file di origine, incluso il percorso relativo alla posizione da cui è stato avviato l'assembly eseguibile.  
   
  L'esempio seguente illustra il pacchetto [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] per un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] file sito di origine, archiviato nella posizione da cui viene avviato l'assembly eseguibile.  
   
@@ -281,7 +281,7 @@ In Windows Presentation Foundation (WPF), [!INCLUDE[TLA#tla_uri#plural](../../..
   
  Tabella 1 sono illustrati i vari di tipo pack assoluto [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] che è possibile specificare nel markup.  
   
- Tabella 1: URI di tipo pack assoluti nel markup  
+ Tabella 1: URI di tipo Pack assoluti nel Markup  
   
 |File|Di tipo pack assoluto [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]|  
 |----------|-------------------------------------------------------------------------------------------------------------------------|  
@@ -297,7 +297,7 @@ In Windows Presentation Foundation (WPF), [!INCLUDE[TLA#tla_uri#plural](../../..
   
  Tabella 2 sono illustrati i vari pack assoluti [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] che è possibile specificare nel markup.  
   
- Tabella 2: URI di tipo pack relativi nel markup  
+ Tabella 2: URI di tipo Pack relativi nel Markup  
   
 |File|Di tipo pack relativo [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]|  
 |----------|-------------------------------------------------------------------------------------------------------------------------|  
@@ -342,7 +342,7 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
   
  Tabella 3 illustra i vari pack assoluti [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] che è possibile specificare nel codice utilizzando <xref:System.Uri?displayProperty=nameWithType>.  
   
- Tabella 3: URI di tipo pack assoluti nel codice  
+ Tabella 3: URI di tipo Pack assoluti nel codice  
   
 |File|Di tipo pack assoluto [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]|  
 |----------|-------------------------------------------------------------------------------------------------------------------------|  
@@ -358,7 +358,7 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
   
  Tabella 4 sono illustrati i vari pack assoluti [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] che è possibile specificare nel codice utilizzando <xref:System.Uri?displayProperty=nameWithType>.  
   
- Tabella 4: URI di tipo pack relativi nel codice  
+ Tabella 4: URI di tipo Pack relativi nel codice  
   
 |File|Di tipo pack relativo [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]|  
 |----------|-------------------------------------------------------------------------------------------------------------------------|  
@@ -423,5 +423,5 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
   
  Per una panoramica dei temi [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], vedere [Styling and Templating](../../../../docs/framework/wpf/controls/styling-and-templating.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [File di dati e di risorse dell'applicazione WPF](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)
+## <a name="see-also"></a>Vedere anche
+- [File di dati e di risorse dell'applicazione WPF](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)

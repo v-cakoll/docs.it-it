@@ -2,12 +2,12 @@
 title: Guida di interoperabilità dei protocolli di servizi Web
 ms.date: 03/30/2017
 ms.assetid: f2981678-ebdb-433d-899b-467f7df95fb2
-ms.openlocfilehash: 9aeceff9dc2b714016d2f7c379e538d885489bb9
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 96fdf00b5d64f1ed588907fc2717388b30ae1d92
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154346"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521387"
 ---
 # <a name="web-services-protocols-interoperability-guide"></a>Guida di interoperabilità dei protocolli di servizi Web
 Windows Communication Foundation (WCF) implementi una serie di protocolli di servizi Web. Molti di questi protocolli includono diverse opzioni e punti estendibilità lasciati alla discrezione dell'implementatore. In questo argomento fornisce un elenco di protocolli di servizi Web che WCF implementa. Altri argomenti di questa sezione forniscono dettagli di implementazione per ogni protocollo supportato.  
@@ -61,7 +61,7 @@ Windows Communication Foundation (WCF) implementi una serie di protocolli di ser
 |WSS Username Token Profile 1.1|[Web Services Security UsernameToken Profile 1.1](https://go.microsoft.com/fwlink/?LinkId=95331)<br /><br /> non implementare la funzionalità di derivazione della chiave basata su password;<br /><br /> Richiedi Password/@Type= PasswordText (impostazione predefinita)|  
 |WSS: X509 token Profile 1.1|[Web Services Security X.509 Certificate Token Profile 1.1](https://go.microsoft.com/fwlink/?LinkId=95332)|  
 |WSS: Kerberos Token Profile 1.1|[Web Services Security Kerberos Token Profile 1.1](https://go.microsoft.com/fwlink/?LinkId=95333)|  
-|WSS: 1.1 di SAML Token Profile 1.1|[Web Services Security SAML Token Profile 1,1](https://go.microsoft.com/fwlink/?LinkId=96694)|  
+|WSS: 1.1 di SAML Token Profile 1.1|[Web Services Security SAML Token Profile 1.1](https://go.microsoft.com/fwlink/?LinkId=96694)|  
 |WS-Secure Conversation|[Linguaggio di conversazione sicura dei servizi Web](https://go.microsoft.com/fwlink/?LinkId=95317)|  
 |WS-Trust 1.4|[Lingua dell'attendibilità dei servizi Web](https://go.microsoft.com/fwlink/?LinkId=169514)|  
 |WS-SecurityPolicy 2005/07|[Linguaggio di conversazione sicura dei servizi Web](https://go.microsoft.com/fwlink/?LinkId=95317)<br /><br /> Rettificato in base all'errata corrige inviato all'OASIS WS-SX TC.<br /><br /> [messaggio di ws-sx TC](https://go.microsoft.com/fwlink/?LinkId=96700)|  
@@ -88,7 +88,7 @@ Windows Communication Foundation (WCF) implementi una serie di protocolli di ser
   
 -   [1.2 di WS-PolicyAttachment](https://go.microsoft.com/fwlink/?LinkId=96707)  
   
--   [1.1 di WS-MetadataExchange](https://go.microsoft.com/fwlink/?LinkId=94868)  
+-   [WS-MetadataExchange 1.1](https://go.microsoft.com/fwlink/?LinkId=94868)  
   
 -   [WS-Transfer Get per il recupero dei metadati](https://go.microsoft.com/fwlink/?LinkId=96708)  
   
@@ -100,13 +100,13 @@ Windows Communication Foundation (WCF) implementi una serie di protocolli di ser
   
 -   [Sicurezza di base del profilo 1.0 Working Draft](https://go.microsoft.com/fwlink/?LinkId=96711)  
   
-## <a name="see-also"></a>Vedere anche  
- [Protocolli di servizi Web supportati da associazioni di interoperabilità fornite dal sistema](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)  
- [Protocolli di messaggistica](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)  
- [Informazioni di riferimento sullo schema del contratto di dati](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  
- [WSDL e criteri](../../../../docs/framework/wcf/feature-details/wsdl-and-policy.md)  
- [Protocolli di sicurezza](../../../../docs/framework/wcf/feature-details/security-protocols.md)  
- [Protocollo Reliable Messaging versione 1.0](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-0.md)  
- [Protocollo Reliable Messaging versione 1.1](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-1.md)  
- [Protocolli di transazione](../../../../docs/framework/wcf/feature-details/transaction-protocols.md)  
- [Protocollo di scambio del contesto](../../../../docs/framework/wcf/feature-details/context-exchange-protocol.md)
+## <a name="see-also"></a>Vedere anche
+- [Protocolli di servizi Web supportati da associazioni di interoperabilità fornite dal sistema](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)
+- [Protocolli di messaggistica](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)
+- [Informazioni di riferimento sullo schema del contratto di dati](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)
+- [WSDL e criteri](../../../../docs/framework/wcf/feature-details/wsdl-and-policy.md)
+- [Protocolli di sicurezza](../../../../docs/framework/wcf/feature-details/security-protocols.md)
+- [Protocollo Reliable Messaging versione 1.0](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-0.md)
+- [Protocollo Reliable Messaging versione 1.1](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-1.md)
+- [Protocolli di transazione](../../../../docs/framework/wcf/feature-details/transaction-protocols.md)
+- [Protocollo di scambio del contesto](../../../../docs/framework/wcf/feature-details/context-exchange-protocol.md)

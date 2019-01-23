@@ -1,13 +1,7 @@
 ---
-title: Oggetti DataSet, DataTable e DataView
+title: 'Oggetti DataSet, DataTable e DataView'
 ms.date: 03/30/2017
 ms.assetid: 6d4c4b69-8919-4224-8a65-6cca1c61b48f
-ms.openlocfilehash: 0f537ad8ff468de54adc8bc820a060eaca357be9
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506249"
 ---
 # <a name="datasets-datatables-and-dataviews"></a>Oggetti DataSet, DataTable e DataView
 L'oggetto <xref:System.Data.DataSet> di ADO.NET è una rappresentazione di dati residente in memoria, che fornisce un modello di programmazione relazionale coerente indipendentemente dall'origine dati in esso contenuta. Un <xref:System.Data.DataSet> rappresenta un set completo di dati che include le tabelle in cui sono contenuti, ordinati e vincolati i dati e le relazioni tra le tabelle.  
@@ -78,6 +72,6 @@ L'oggetto <xref:System.Data.DataSet> di ADO.NET è una rappresentazione di dati 
  [Aggiunta di vincoli esistenti a un set di dati](../../../../../docs/framework/data/adonet/adding-existing-constraints-to-a-dataset.md)  
  Viene descritto come compilare un **DataSet** con informazioni relative alla chiave primaria provenienti da un'origine dati.  
   
-## <a name="see-also"></a>Vedere anche  
- [ADO.NET](../../../../../docs/framework/data/adonet/index.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vedere anche
+- [ADO.NET](../../../../../docs/framework/data/adonet/index.md)
+- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

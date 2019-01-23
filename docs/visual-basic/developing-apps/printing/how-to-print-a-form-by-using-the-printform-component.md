@@ -1,20 +1,20 @@
 ---
-title: 'Procedura: stampare un form utilizzando il componente PrintForm (Visual Basic)'
+title: 'Procedura: Stampare un Form tramite il componente PrintForm (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Form [Visual Basic], printing
 ms.assetid: df963bf6-3ee1-49f4-8b2e-1d95d1beb0be
-ms.openlocfilehash: 723524c7c9876d353624ad47d504ea2528a31cfe
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 0a1a62627390c8839625862b9d43d61fc07ebf12
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43422727"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521569"
 ---
-# <a name="how-to-print-a-form-by-using-the-printform-component-visual-basic"></a>Procedura: stampare un form utilizzando il componente PrintForm (Visual Basic)
+# <a name="how-to-print-a-form-by-using-the-printform-component-visual-basic"></a>Procedura: Stampare un Form tramite il componente PrintForm (Visual Basic)
 Il componente <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> consente di stampare rapidamente un'immagine di un form così come viene visualizzata sullo schermo senza usare un componente <xref:System.Drawing.Printing.PrintDocument> . Le procedure seguenti illustrano come stampare un form in una stampante, una finestra di anteprima di stampa e un file Encapsulated PostScript.  
   
- I controlli PowerPacks non sono inclusi in Visual Studio, ma è possibile scaricarli dal [area download](https://www.microsoft.com/en-us/download/details.aspx?id=25169).  
+ I controlli PowerPacks non sono più inclusi in Visual Studio, ma è possibile scaricarli dall' [Area download](https://www.microsoft.com/en-us/download/details.aspx?id=25169).  
   
 ### <a name="to-print-a-form-to-the-default-printer"></a>Per stampare un form sulla stampante predefinita  
   
@@ -62,10 +62,10 @@ Il componente <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> consent
     PrintForm1.Print()  
     ```  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrintAction%2A>  
- <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrintFileName%2A>  
- [Procedura: Stampare l'area client di un form](../../../visual-basic/developing-apps/printing/how-to-print-the-client-area-of-a-form.md)  
- [Procedura: Stampare aree client e non client di un form](../../../visual-basic/developing-apps/printing/how-to-print-client-and-non-client-areas-of-a-form.md)  
- [Procedura: Stampare un form scorrevole](../../../visual-basic/developing-apps/printing/how-to-print-a-scrollable-form.md)  
- [Componente PrintForm](../../../visual-basic/developing-apps/printing/printform-component.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrintAction%2A>
+- <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrintFileName%2A>
+- [Procedura: Stampare l'area client di un form](../../../visual-basic/developing-apps/printing/how-to-print-the-client-area-of-a-form.md)
+- [Procedura: Stampare aree client e non client di un form](../../../visual-basic/developing-apps/printing/how-to-print-client-and-non-client-areas-of-a-form.md)
+- [Procedura: Stampare un form scorrevole](../../../visual-basic/developing-apps/printing/how-to-print-a-scrollable-form.md)
+- [Componente PrintForm](../../../visual-basic/developing-apps/printing/printform-component.md)

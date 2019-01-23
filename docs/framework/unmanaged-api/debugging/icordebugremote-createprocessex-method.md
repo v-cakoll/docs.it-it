@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 06bdc3605d981acad68a97901627f361da4061c7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: efc46a0128a4fb9a0edaa86ad20689fda0c2710b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423319"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521777"
 ---
 # <a name="icordebugremotecreateprocessex-method"></a>Metodo ICorDebugRemote::CreateProcessEx
 Avvia un processo in un computer remoto all'interno del debugger.  
@@ -49,47 +49,47 @@ HRESULT CreateProcessEx (
   
 #### <a name="parameters"></a>Parametri  
  `pRemoteTarget`  
- [in] Puntatore a un [ICorDebugRemoteTarget (interfaccia)](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md). Utilizzato per determinare il computer remoto in cui verrà avviato il processo.  
+ [in] Puntatore a un [interfaccia ICorDebugRemoteTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md). Utilizzato per determinare il computer remoto in cui verrà avviato il processo.  
   
  `lpApplicationName`  
  [in] Puntatore a una stringa con terminazione null che specifica il modulo deve essere eseguito dal processo avviato. Il modulo viene eseguito nel contesto di sicurezza del processo chiamante.  
   
  `lpCommandLine`  
- [in] Puntatore a una stringa con terminazione null che specifica la riga di comando da eseguire tramite il processo avviato.  
+ [in] Puntatore a una stringa con terminazione null che specifica la riga di comando deve essere eseguito dal processo avviato.  
   
  `lpProcessAttributes`  
- [in] Non utilizzata per il debug remoto.  
+ [in] Non utilizzato per il debug remoto.  
   
  `lpThreadAttributes`  
- [in] Non utilizzata per il debug remoto.  
+ [in] Non utilizzato per il debug remoto.  
   
  `bInheritHandles`  
- [in] Non utilizzata per il debug remoto.  
+ [in] Non utilizzato per il debug remoto.  
   
  `dwCreationFlags`  
- [in] Non utilizzata per il debug remoto.  
+ [in] Non utilizzato per il debug remoto.  
   
  `lpEnvironment`  
  [in] Puntatore a un blocco di ambiente per il nuovo processo.  
   
  `lpCurrentDirectory`  
- [in] Puntatore a una stringa con terminazione null che specifica il percorso completo della directory corrente per il processo. Se questo parametro è null, il nuovo processo avranno la stessa unità e directory corrente del processo chiamante.  
+ [in] Puntatore a una stringa con terminazione null che specifica il percorso completo per directory corrente per il processo. Se questo parametro è null, il nuovo processo avrà la stessa unità e directory corrente del processo chiamante.  
   
  `lpStartupInfo`  
- [in] Non utilizzata per il debug remoto.  
+ [in] Non utilizzato per il debug remoto.  
   
  `lpProcessInformation`  
- [in] Non utilizzata per il debug remoto.  
+ [in] Non utilizzato per il debug remoto.  
   
  `debuggingFlags`  
- [in] Non utilizzata per il debug remoto.  
+ [in] Non utilizzato per il debug remoto.  
   
  `ppProcess`  
  [out] Un puntatore all'indirizzo di un oggetto "ICorDebugProcess (interfaccia)" che rappresenta il processo.  
   
 ## <a name="return-value"></a>Valore restituito  
  S_OK  
- L'ID processo avviato per il computer remoto e restituita un' "interfaccia ICorDebugProcess" per il debug.  
+ È stato avviato il processo nel computer remoto e restituita un' "interfaccia ICorDebugProcess" per il debug.  
   
  E_FAIL (o altri codici E_ restituiti)  
  Impossibile avviare il processo nel computer remoto e restituire un' "interfaccia ICorDebugProcess" per il debug.  
@@ -98,16 +98,16 @@ HRESULT CreateProcessEx (
  Debug in modalità mista non è supportato in Silverlight.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl  
+ **Intestazione:** CorDebug.idl  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
  **Versioni di .NET framework:** 4.5, 4, 3.5 SP1  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ICorDebugRemote](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-interface.md)  
- [Interfaccia ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)  
-    
- [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ICorDebugRemote](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-interface.md)
+- [Interfaccia ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+
+- [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

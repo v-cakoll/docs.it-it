@@ -2,15 +2,15 @@
 title: Chiamate non riuscite al secondo
 ms.date: 03/30/2017
 ms.assetid: e4ef3773-f650-4876-99cf-4d0c02aa03d4
-ms.openlocfilehash: ccb5908e9036650e3f21a9496649c8090c2e47b2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: bad37e0124698209955603c1b7d8a1aec4b87418
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43736322"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521049"
 ---
 # <a name="calls-failed-per-second"></a>Chiamate non riuscite al secondo
-Nome contatore: chiamate non riuscite al secondo  
+Nome contatore: Chiamate non riuscite al secondo  
   
 ## <a name="description"></a>Descrizione  
  Numero di chiamate al secondo con eccezioni non gestite presenti in questa operazione.  
@@ -21,5 +21,5 @@ Nome contatore: chiamate non riuscite al secondo
   
  Questo contatore viene incrementato ogni volta che si verifica un'eccezione non gestita in questa operazione.  
   
-## <a name="see-also"></a>Vedere anche  
- [Specifica e gestione degli errori in contratti e servizi](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+## <a name="see-also"></a>Vedere anche
+- [Specifica e gestione degli errori in contratti e servizi](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)

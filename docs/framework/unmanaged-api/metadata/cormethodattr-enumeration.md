@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8f144426996583d5058f70daed99d8a37cfb6bfb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1a69ca889e226168adb1b84ab64dc0f882c27606
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444666"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54520532"
 ---
 # <a name="cormethodattr-enumeration"></a>Enumerazione CorMethodAttr
 Contiene valori che descrivono le funzionalità di un metodo.  
@@ -68,37 +68,37 @@ typedef enum CorMethodAttr {
   
 |Membro|Descrizione|  
 |------------|-----------------|  
-|`mdMemberAccessMask`|Specifica l'accesso ai membri.|  
-|`mdPrivateScope`|Specifica che il membro non può far riferimento.|  
+|`mdMemberAccessMask`|Specifica l'accesso al membro.|  
+|`mdPrivateScope`|Specifica che il membro non è possibile fare riferimento.|  
 |`mdPrivate`|Specifica che il membro è accessibile solo dal tipo padre.|  
-|`mdFamANDAssem`|Specifica che il membro è accessibile soltanto i sottotipi in questo assembly.|  
-|`mdAssem`|Specifica che il membro è accessibile da qualsiasi utente nell'assembly.|  
+|`mdFamANDAssem`|Specifica che il membro è accessibile dai sottotipi solo in questo assembly.|  
+|`mdAssem`|Specifica che il membro è accessibile da tutti gli utenti nell'assembly.|  
 |`mdFamily`|Specifica che il membro è accessibile solo dal tipo e sottotipi.|  
-|`mdFamORAssem`|Specifica che il membro è accessibile dalle classi derivate e gli altri tipi nell'assembly.|  
+|`mdFamORAssem`|Specifica che il membro è accessibile dalle classi derivate e da altri tipi nell'assembly.|  
 |`mdPublic`|Specifica che il membro è accessibile da tutti i tipi con accesso all'ambito.|  
 |`mdStatic`|Specifica che il membro è definito come parte del tipo anziché come un membro di un'istanza.|  
-|`mdFinal`|Specifica che il metodo non può essere sottoposta a override.|  
-|`mdVirtual`|Specifica che il metodo può essere sottoposta a override.|  
-|`mdHideBySig`|Specifica che il metodo nasconde dal nome e firma, anziché solo per nome.|  
+|`mdFinal`|Specifica che il metodo non può essere sottoposto a override.|  
+|`mdVirtual`|Specifica che il metodo può essere sottoposto a override.|  
+|`mdHideBySig`|Specifica che il metodo è nascosto per nome e firma, anziché semplicemente dal nome.|  
 |`mdVtableLayoutMask`|Specifica il layout di tabella virtuale.|  
-|`mdReuseSlot`|Specifica che è possibile riutilizzare lo slot utilizzato per questo metodo in una tabella virtuale. Questa è l'impostazione predefinita.|  
+|`mdReuseSlot`|Specifica che lo slot usato per questo metodo nella tabella virtuale è possibile riutilizzare. Questa è l'impostazione predefinita.|  
 |`mdNewSlot`|Specifica che il metodo ottiene sempre un nuovo slot nella tabella virtuale.|  
 |`mdCheckAccessOnOverride`|Specifica che il metodo può essere sostituito dagli stessi tipi a cui è visibile.|  
-|`mdAbstract`|Specifica che il metodo non implementato.|  
+|`mdAbstract`|Specifica che il metodo non è implementato.|  
 |`mdSpecialName`|Specifica che il metodo è speciale e che il relativo nome viene descritto come.|  
-|`mdPinvokeImpl`|Specifica che l'implementazione del metodo viene inoltrato tramite PInvoke.|  
+|`mdPinvokeImpl`|Specifica che l'implementazione del metodo è inoltrata tramite PInvoke.|  
 |`mdUnmanagedExport`|Specifica che il metodo è un metodo gestito esportato in codice non gestito.|  
 |`mdReservedMask`|Riservato per uso interno da common language runtime.|  
 |`mdRTSpecialName`|Specifica che common language runtime deve verificare la codifica del nome del metodo.|  
-|`mdHasSecurity`|Specifica che il metodo dispone di protezione associata.|  
+|`mdHasSecurity`|Specifica che il metodo è associata una sicurezza.|  
 |`mdRequireSecObject`|Specifica che il metodo chiama un altro metodo contenente codice di sicurezza.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorHdr. H  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Enumerazioni dei metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Vedere anche
+- [Enumerazioni dei metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

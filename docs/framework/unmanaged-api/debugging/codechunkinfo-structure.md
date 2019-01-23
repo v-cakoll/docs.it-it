@@ -1,5 +1,5 @@
 ---
-title: CodeChunkInfo Structure1
+title: Struttura1 CodeChunkInfo
 ms.date: 03/30/2017
 api_name:
 - CodeChunkInfo
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6e3d138700ef06da7b40a88a768a41f3ffcb38eb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d658e360fcfd3fda837c6d7ccab9458594ce9641
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403240"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54522544"
 ---
-# <a name="codechunkinfo-structure1"></a>CodeChunkInfo Structure1
+# <a name="codechunkinfo-structure1"></a>Struttura1 CodeChunkInfo
 Rappresenta un singolo blocco di codice in memoria.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -40,21 +40,21 @@ typedef struct _CodeChunkInfo {
 |Membro|Descrizione|  
 |------------|-----------------|  
 |`startAddr`|Oggetto `CORDB_ADDRESS` valore che specifica l'indirizzo iniziale del blocco.|  
-|`length`|Le dimensioni in byte, del blocco.|  
+|`length`|Le dimensioni, in byte, del blocco.|  
   
 ## <a name="remarks"></a>Note  
- Il singolo blocco di codice è un'area di codice nativo che fa parte di un oggetto di codice, ad esempio una funzione.  
+ L'unico blocco di codice è un'area di codice nativo che fa parte di un oggetto di codice, ad esempio una funzione.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl  
+ **Intestazione:** CorDebug.idl  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Metodo GetCodeChunks](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)  
- [Strutture di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [Debug](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Vedere anche
+- [Metodo GetCodeChunks](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)
+- [Strutture di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [Debug](../../../../docs/framework/unmanaged-api/debugging/index.md)

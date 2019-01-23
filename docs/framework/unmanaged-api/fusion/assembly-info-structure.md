@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ed65181abab58117d539d23fcfeffe71ac19388
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b69aa42fc2ebb9f59cbf699d83b521704805ea5f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430570"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54519749"
 ---
 # <a name="assemblyinfo-structure"></a>Struttura ASSEMBLY_INFO
 Contiene informazioni relative a un assembly registrato nella global assembly cache.  
@@ -42,19 +42,19 @@ typedef struct _ASSEMBLY_INFO {
   
 |Membro|Descrizione|  
 |------------|-----------------|  
-|`cbAssemblyInfo`|Le dimensioni in byte, della struttura. Questo campo è riservato per l'estensibilità futura.|  
-|`dwAssemblyFlags`|Flag che indicano i dettagli di installazione sull'assembly. Sono supportati i seguenti valori:<br /><br /> -Il valore ASSEMBLYINFO_FLAG_INSTALLED, che indica che l'assembly è installato. Imposta sempre la versione corrente di .NET Framework `dwAssemblyFlags` su questo valore.<br />-Il valore ASSEMBLYINFO_FLAG_INSTALLED, che indica che l'assembly è un payload residente. La versione corrente di .NET Framework non viene mai `dwAssemblyFlags` su questo valore.|  
+|`cbAssemblyInfo`|Le dimensioni, in byte, della struttura. Questo campo è riservato per un'estendibilità futura.|  
+|`dwAssemblyFlags`|Flag che indicano i dettagli di installazione sull'assembly. Sono supportati i valori seguenti:<br /><br /> -Il valore ASSEMBLYINFO_FLAG_INSTALLED, che indica che l'assembly è installato. Imposta sempre la versione corrente di .NET Framework `dwAssemblyFlags` a questo valore.<br />-Il valore ASSEMBLYINFO_FLAG_INSTALLED, che indica che l'assembly è un payload residente. La versione corrente di .NET Framework non viene mai `dwAssemblyFlags` a questo valore.|  
 |`uliAssemblySizeInKB`|Dimensione totale, espressa in kilobyte, dei file che contiene l'assembly.|  
-|`pszCurrentAssemblyPathBuf`|Puntatore a un buffer di stringa che contiene il percorso corrente nel file manifesto. Il percorso deve terminare con un carattere null.|  
-|`cchBuf`|Il numero di caratteri wide, incluso il terminatore null, che `pszCurrentAssemblyPathBuf` contiene.|  
+|`pszCurrentAssemblyPathBuf`|Puntatore a un buffer di stringa che contiene il percorso corrente per il file manifesto. Il percorso deve terminare con un carattere null.|  
+|`cchBuf`|Il numero di caratteri "wide", incluso il carattere di terminazione null, che `pszCurrentAssemblyPathBuf` contiene.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Fusion. h  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Strutture Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)  
- [Global Assembly Cache](../../../../docs/framework/app-domains/gac.md)
+## <a name="see-also"></a>Vedere anche
+- [Strutture Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)
+- [Global Assembly Cache](../../../../docs/framework/app-domains/gac.md)

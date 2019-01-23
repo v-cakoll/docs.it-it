@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f31dad53f42fdd8f7ac3a0cb995b507ecc3590d5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 96ad0e34bf638c378f37e317f790696c2ac7cb25
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424443"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54519697"
 ---
 # <a name="isymunmanageddocumentfindclosestline-method"></a>Metodo ISymUnmanagedDocument::FindClosestLine
-Restituisce la riga più vicina che rappresenta un punto di sequenza, data una riga in questo documento che non può essere un punto di sequenza.  
+Restituisce la riga più vicina che rappresenta un punto di sequenza, data una riga in questo documento che possa o non sia un punto di sequenza.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,10 +40,10 @@ HRESULT FindClosestLine(
  [in] Una riga in questo documento.  
   
  `pRetVal`  
- [out] Un puntatore a una variabile che riceve la riga.  
+ [out] Puntatore a una variabile che riceve la riga.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK se il metodo ha esito positivo. in caso contrario, un codice di errore.  
+ S_OK se il metodo ha esito positivo; in caso contrario, un codice di errore.  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ISymUnmanagedDocument](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ISymUnmanagedDocument](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
