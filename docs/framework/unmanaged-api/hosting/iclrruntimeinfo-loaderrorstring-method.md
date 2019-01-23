@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 43a00d687c6a9ec42cb8573e70d181b4dc2c7d0e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5ce0a543b44bad4e3ae615d06e38c04cd0fb1207
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33433217"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54523662"
 ---
 # <a name="iclrruntimeinfoloaderrorstring-method"></a>Metodo ICLRRuntimeInfo::LoadErrorString
 Converte un valore HRESULT in un messaggio di errore appropriato per le impostazioni cultura specificate.  
@@ -45,16 +45,16 @@ HRESULT LoadErrorString(
   
 #### <a name="parameters"></a>Parametri  
  `iResourceID`  
- [in] HRESULT da convertire.  
+ [in] Il valore HRESULT da convertire.  
   
  `pwzBuffer`  
  [out] La stringa di messaggio associata all'HRESULT specificato.  
   
  `pcchBuffer`  
- [in, out] Le dimensioni di `pwzbuffer` per evitare sovraccarichi del buffer. Se `pwzbuffer` è null, `pcchBuffer` fornisce la dimensione prevista di `pwzbuffer` per consentire la preallocazione.  
+ [in, out] Le dimensioni di `pwzbuffer` per evitare i sovraccarichi del buffer. Se `pwzbuffer` è null, `pcchBuffer` fornisce le dimensioni previste del `pwzbuffer` per consentire la preallocazione.  
   
  `iLocaleID`  
- [in] L'identificatore delle impostazioni cultura. Per utilizzare le impostazioni cultura predefinite, è necessario specificare -1.  
+ [in] Identificatore delle impostazioni cultura. Per usare le impostazioni cultura predefinite, è necessario specificare -1.  
   
 ## <a name="return-value"></a>Valore restituito  
  Questo metodo restituisce gli specifici HRESULT seguenti, nonché gli errori di HRESULT che indicano la mancata riuscita del metodo.  
@@ -66,15 +66,15 @@ HRESULT LoadErrorString(
 |E_INVALIDARG|`pwzBuffer` è null.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Metahost. H  
+ **Intestazione:** MetaHost.h  
   
- **Libreria:** inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)  
- [Interfacce di hosting](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
- [Hosting](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
+- [Interfacce di hosting](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Hosting](../../../../docs/framework/unmanaged-api/hosting/index.md)

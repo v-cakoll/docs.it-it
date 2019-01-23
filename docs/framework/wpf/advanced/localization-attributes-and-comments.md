@@ -5,12 +5,12 @@ helpviewer_keywords:
 - localization [WPF], attributes
 - localization [WPF], comments
 ms.assetid: ead2d9ac-b709-4ec1-a924-39927a29d02f
-ms.openlocfilehash: 7cfcc9fa4dc3bc1450febb39500b7d96f92beac6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3032a0ca19f919344a3f73ea8689a222896093f1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33547267"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54523717"
 ---
 # <a name="localization-attributes-and-comments"></a>Attributi e commenti di localizzazione
 I commenti di localizzazione [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sono proprietà all'interno del codice sorgente [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] usate dagli sviluppatori per fornire regole e suggerimenti per la localizzazione. I commenti di localizzazione [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] contengono due set di informazioni: attributi di localizzabilità e commenti di localizzazione in formato libero. Gli attributi di localizzabilità vengono usati dall'API di localizzazione di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] per indicare le risorse da localizzare. I commenti in formato libero comprendono tutte le informazioni che l'autore dell'applicazione vuole includere.  
@@ -84,13 +84,13 @@ I commenti di localizzazione [!INCLUDE[TLA#tla_winclient](../../../../includes/t
   
  Questi attributi possono essere specificati in qualsiasi ordine e devono essere delimitati da uno spazio. Nel caso in cui vengano specificati attributi duplicati, l'ultimo sostituisce i precedenti. Ad esempio, Localization.Attributes = "Unmodifiable Modifiable" imposta Modifiability su Modifiable poiché questo è l'ultimo valore.  
   
- Gli attributi Modifiability e Readability sono di facile comprensione. L'attributo Category fornisce categorie predefinite che supportano il localizzatore nella traduzione del testo. Categorie quali Text, Label e Title offrono al localizzatore informazioni sulla modalità di traduzione del testo. Sono disponibili anche categorie speciali: None, Inherit, Ignore e NeverLocalize.  
+ Gli attributi Modifiability e Readability sono di facile comprensione. L'attributo Category fornisce categorie predefinite che supportano il localizzatore nella traduzione del testo. Categorie quali Text, Label e Title offrono al localizzatore informazioni sulla modalità di traduzione del testo. Sono disponibili anche categorie speciali: None, ereditano, ignorare e NeverLocalize.  
   
  La tabella seguente illustra il significato delle categorie speciali.  
   
 |Category|Significato|  
 |--------------|-------------|  
-|Nessuno|Per il valore di destinazione non è definita alcuna categoria.|  
+|nessuno|Per il valore di destinazione non è definita alcuna categoria.|  
 |Eredita|Il valore di destinazione eredita la categoria dall'elemento padre.|  
 |Ignora|Il valore di destinazione viene ignorato nel processo di localizzazione. Questa categoria influisce solo sul valore corrente e non sui nodi figlio.|  
 |NeverLocalize|Il valore corrente non può essere localizzato. Questa categoria viene ereditata dagli elementi figlio di un elemento.|  
@@ -99,8 +99,8 @@ I commenti di localizzazione [!INCLUDE[TLA#tla_winclient](../../../../includes/t
 ## <a name="localization-comments"></a>Commenti di localizzazione  
  La sezione Localization.Comments contiene le stringhe in formato libero relative al valore di destinazione. Gli sviluppatori dell'applicazione possono aggiungere informazioni per offrire ai localizzatori suggerimenti sulla modalità di traduzione del testo delle applicazioni. Il formato dei commenti può essere una qualsiasi stringa racchiusa tra "()". Usare '\\' come carattere di escape.  
   
-## <a name="see-also"></a>Vedere anche  
- [Globalizzazione per WPF](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)  
- [Utilizzare un layout automatico per creare un pulsante](../../../../docs/framework/wpf/advanced/how-to-use-automatic-layout-to-create-a-button.md)  
- [Usare una griglia per il layout automatico](../../../../docs/framework/wpf/advanced/how-to-use-a-grid-for-automatic-layout.md)  
- [Localizzare un'applicazione](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)
+## <a name="see-also"></a>Vedere anche
+- [Globalizzazione per WPF](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)
+- [Utilizzare un layout automatico per creare un pulsante](../../../../docs/framework/wpf/advanced/how-to-use-automatic-layout-to-create-a-button.md)
+- [Usare una griglia per il layout automatico](../../../../docs/framework/wpf/advanced/how-to-use-a-grid-for-automatic-layout.md)
+- [Localizzare un'applicazione](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)

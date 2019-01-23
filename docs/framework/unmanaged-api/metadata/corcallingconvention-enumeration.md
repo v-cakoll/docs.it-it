@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 468ad1acf55c4d1b4fc2b53730f16ee8630cf19b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4c27669c8473bd52d3b82a14d570340ac38d1e07
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444015"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54523246"
 ---
 # <a name="corcallingconvention-enumeration"></a>Enumerazione CorCallingConvention
 Contiene valori che descrivono i tipi di convenzioni di chiamata eseguite in codice gestito.  
@@ -60,20 +60,20 @@ typedef enum CorCallingConvention
 |`IMAGE_CEE_CS_CALLCONV_LOCAL_SIG`|Indica che la chiamata è per un metodo locale.|  
 |`IMAGE_CEE_CS_CALLCONV_PROPERTY`|Indica che la chiamata è per una proprietà.|  
 |`IMAGE_CEE_CS_CALLCONV_UNMGD`|Indica che la chiamata non gestita.|  
-|`IMAGE_CEE_CS_CALLCONV_GENERICINST`|Indica un'istanza di metodo generico.|  
+|`IMAGE_CEE_CS_CALLCONV_GENERICINST`|Indica una creazione di un'istanza di metodo generico.|  
 |`IMAGE_CEE_CS_CALLCONV_NATIVEVARARG`|Indica una chiamata di PInvoke a 64 bit a un metodo che accetta un numero variabile di parametri.|  
-|`IMAGE_CEE_CS_CALLCONV_MAX`|Viene descritto un valore a 4 bit non valido.|  
-|`IMAGE_CEE_CS_CALLCONV_MASK`|Indica che la convenzione di chiamata è descritta da ultimi quattro bit.|  
+|`IMAGE_CEE_CS_CALLCONV_MAX`|Descrive un valore a 4 bit non è valido.|  
+|`IMAGE_CEE_CS_CALLCONV_MASK`|Indica che la convenzione di chiamata è descritto dai bit ultime quattro.|  
 |`IMAGE_CEE_CS_CALLCONV_HASTHIS`|Indica che il primo bit descrive un `this` parametro.|  
-|`IMAGE_CEE_CS_CALLCONV_EXPLICITTHIS`|Indica che un `this` è descritto in modo esplicito nella firma del parametro.|  
-|`IMAGE_CEE_CS_CALLCONV_GENERIC`|Indica una firma di metodo generico con un numero di argomenti di tipo esplicito. Questo precede un numero di parametri comuni.|  
+|`IMAGE_CEE_CS_CALLCONV_EXPLICITTHIS`|Indica che un `this` parametro è descritto in modo esplicito nella firma.|  
+|`IMAGE_CEE_CS_CALLCONV_GENERIC`|Indica una firma di metodo generico con un numero di argomenti di tipo esplicito. Questa configurazione precede un numero di parametri comuni.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorHdr. H  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Enumerazioni dei metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Vedere anche
+- [Enumerazioni dei metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - ULong data type
 - UL literal type characters [Visual Basic]
 ms.assetid: 017e0702-774e-44ae-bedc-786b424ca84e
-ms.openlocfilehash: d901dc6c0a11db1beb08be821aec4dc1179832ff
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 82a2badc1bb22a55f753c9075562db3a5ee0d234
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54148370"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54522960"
 ---
 # <a name="ulong-data-type-visual-basic"></a>Tipo di dati ULong (Visual Basic)
 
@@ -72,7 +72,7 @@ Dim number = &H_00_00_0A_96_2F_AC_14_D7ul
   
      Inoltre, automazione non supporta valori interi a 64 bit in Windows 95, Windows 98, Windows ME o Windows 2000. Non è possibile passare un oggetto visivo di base `ULong` argomento a un componente di automazione in queste piattaforme.  
   
--   **Ampliamento.** Il `ULong` può ampliarsi nel tipo di dati `Decimal`, `Single`, e `Double`. Ciò significa che è possibile convertire `ULong` a uno di questi tipi senza generare un <xref:System.OverflowException?displayProperty=nameWithType> errore.  
+-   **Widening.** Il `ULong` può ampliarsi nel tipo di dati `Decimal`, `Single`, e `Double`. Ciò significa che è possibile convertire `ULong` a uno di questi tipi senza generare un <xref:System.OverflowException?displayProperty=nameWithType> errore.  
   
 -   **Caratteri tipo.** Aggiungendo i caratteri di tipo di valore letterale `UL` a un valore letterale, se ne determina la `ULong` tipo di dati. `ULong` possiede alcun carattere di tipo identificatore.
   
@@ -80,9 +80,9 @@ Dim number = &H_00_00_0A_96_2F_AC_14_D7ul
   
 ## <a name="see-also"></a>Vedere anche
 
- <xref:System.UInt64>  
- [Tipi di dati](../../../visual-basic/language-reference/data-types/index.md)  
- [Funzioni di conversione del tipo](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [Riepilogo della conversione](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [Procedura: Chiamare una funzione Windows che accetta tipi senza segno](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
- [Uso efficiente dei tipi di dati](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- <xref:System.UInt64>
+- [Tipi di dati](../../../visual-basic/language-reference/data-types/index.md)
+- [Funzioni di conversione del tipo](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Riepilogo della conversione](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [Procedura: Chiamare una funzione Windows che accetta tipi senza segno](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)
+- [Uso efficiente dei tipi di dati](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

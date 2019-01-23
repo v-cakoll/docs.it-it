@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - serialization [WCF], supported types
 ms.assetid: 7381b200-437a-4506-9556-d77bf1bc3f34
-ms.openlocfilehash: 9a6279b9850ce5cd3d23cffeaf233dec1b360deb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e61d257f9503d95764a5d1f6374d6e2a216fceaa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33504890"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54523402"
 ---
 # <a name="types-supported-by-the-data-contract-serializer"></a>Tipi supportati dal serializzatore dei contratti dati
-Windows Communication Foundation (WCF) usa il <xref:System.Runtime.Serialization.DataContractSerializer> come motore di serializzazione predefinito per convertire i dati in XML e convertire XML in dati. <xref:System.Runtime.Serialization.DataContractSerializer> è progettato per serializzare tipi di *contratto dati* . Supporta tuttavia molti altri tipi che possono essere considerati come tipi dotati di un contratto dati implicito. Nell'elenco seguente sono riportati tutti i tipi serializzabili:  
+Windows Communication Foundation (WCF) viene utilizzato il <xref:System.Runtime.Serialization.DataContractSerializer> come motore di serializzazione predefinito per convertire i dati in XML e per convertire XML in dati. <xref:System.Runtime.Serialization.DataContractSerializer> è progettato per serializzare tipi di *contratto dati* . Supporta tuttavia molti altri tipi che possono essere considerati come tipi dotati di un contratto dati implicito. Nell'elenco seguente sono riportati tutti i tipi serializzabili:  
   
 -   Tutti i tipi visibili pubblicamente con un costruttore che non dispone di parametri.  
   
--   Tipi di contratto dati. Questi sono i tipi ai quali è stato applicato l'attributo <xref:System.Runtime.Serialization.DataContractAttribute> . I nuovi tipi personalizzati che rappresentano oggetti business devono in genere essere creati come tipi di contratto dati. Per altre informazioni, vedere [utilizzando i contratti dati](../../../../docs/framework/wcf/feature-details/using-data-contracts.md) e [tipi serializzabili](../../../../docs/framework/wcf/feature-details/serializable-types.md).  
+-   Tipi di contratto dati. Questi sono i tipi ai quali è stato applicato l'attributo <xref:System.Runtime.Serialization.DataContractAttribute> . I nuovi tipi personalizzati che rappresentano oggetti business devono in genere essere creati come tipi di contratto dati. Per altre informazioni, vedere [Using Data Contracts](../../../../docs/framework/wcf/feature-details/using-data-contracts.md) e [tipi serializzabili](../../../../docs/framework/wcf/feature-details/serializable-types.md).  
   
 -   Tipi di raccolta. Questi sono i tipi che rappresentano elenchi di dati. Possono essere matrici normali di tipi, o tipi di raccolta, ad esempio <xref:System.Collections.ArrayList> e <xref:System.Collections.Generic.Dictionary%602>. L'attributo <xref:System.Runtime.Serialization.CollectionDataContractAttribute> può essere utilizzato per personalizzare la serializzazione di questi tipi, ma non è obbligatorio. Per altre informazioni, vedere [tipi di raccolta nei contratti dati](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md).  
   
@@ -27,7 +27,7 @@ Windows Communication Foundation (WCF) usa il <xref:System.Runtime.Serialization
 -   Altri tipi primitivi. Questi tipi non sono primitivi in .NET Framework, ma sono trattati come primitivi nel formato XML serializzato. Questi tipi sono <xref:System.DateTime>, <xref:System.DateTimeOffset>, <xref:System.TimeSpan>, <xref:System.Guid>, <xref:System.Uri>, <xref:System.Xml.XmlQualifiedName>e matrici di <xref:System.Byte>.  
   
     > [!NOTE]
-    >  Contrariamente ad altri tipi primitivi, <xref:System.DateTimeOffset> non è un tipo conosciuto per impostazione predefinita. Per altre informazioni, vedere [tipi conosciuti di contratto dati](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)).  
+    >  Contrariamente ad altri tipi primitivi, <xref:System.DateTimeOffset> non è un tipo conosciuto per impostazione predefinita. Per altre informazioni, vedere [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)).  
   
 -   Tipi contrassegnati con l'attributo <xref:System.SerializableAttribute> . Numerosi tipi inclusi nella libreria della classe di base [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] rientrano in questa categoria. <xref:System.Runtime.Serialization.DataContractSerializer> supporta completamente questo modello di programmazione della serializzazione utilizzato da .NET Framework Remoting, <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>e <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>, compreso il supporto per l'interfaccia <xref:System.Runtime.Serialization.ISerializable> .  
   
@@ -38,7 +38,7 @@ Windows Communication Foundation (WCF) usa il <xref:System.Runtime.Serialization
   
 -   Per serializzare o deserializzare un tipo che implementa <xref:System.Runtime.Serialization.ISerializable> in codice parzialmente attendibile tramite <xref:System.Runtime.Serialization.DataContractSerializer> è necessario disporre delle autorizzazioni <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A> e <xref:System.Security.Permissions.SecurityPermissionAttribute.UnmanagedCode%2A> .  
   
--   Quando si esegue codice WCF [attendibilità parziale](../../../../docs/framework/wcf/feature-details/partial-trust.md) modalità, la serializzazione e deserializzazione di `readonly` campi (entrambi `public` e `private`) non è supportata. Ciò è dovuto al fatto che IL generato non è verificabile e pertanto richiede autorizzazioni elevate.  
+-   Quando il codice WCF in esecuzione in [attendibilità parziale](../../../../docs/framework/wcf/feature-details/partial-trust.md) modalità, la serializzazione e deserializzazione dei `readonly` campi (entrambi `public` e `private`) non è supportato. Ciò è dovuto al fatto che IL generato non è verificabile e pertanto richiede autorizzazioni elevate.  
   
 -   Entrambe le classi <xref:System.Runtime.Serialization.DataContractSerializer> e <xref:System.Xml.Serialization.XmlSerializer> sono supportate in un ambiente di trust parziale. Tuttavia, l'utilizzo di <xref:System.Runtime.Serialization.DataContractSerializer> è soggetto alle condizioni seguenti:  
   
@@ -67,9 +67,9 @@ Windows Communication Foundation (WCF) usa il <xref:System.Runtime.Serialization
   
 -   Il tipo <xref:System.DBNull> viene trattato in modo speciale. È un tipo singleton e sulla deserializzazione il deserializzatore rispetta il vincolo singleton e punta tutti i riferimenti `DBNull` all'istanza singleton. Dato che `DBNull` è un tipo serializzabile, richiede l'autorizzazione <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A> .  
   
-## <a name="see-also"></a>Vedere anche  
- [Tipi XML e ADO.NET nei contratti di dati](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md)  
- [Uso di contratti di dati](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- [Tipi serializzabili](../../../../docs/framework/wcf/feature-details/serializable-types.md)  
- [Tipi di raccolta nei contratti di dati](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md)  
- [Tipi di enumerazione nei contratti di dati](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md)
+## <a name="see-also"></a>Vedere anche
+- [Tipi XML e ADO.NET nei contratti di dati](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md)
+- [Uso di contratti di dati](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [Tipi serializzabili](../../../../docs/framework/wcf/feature-details/serializable-types.md)
+- [Tipi di raccolta nei contratti di dati](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md)
+- [Tipi di enumerazione nei contratti di dati](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md)
