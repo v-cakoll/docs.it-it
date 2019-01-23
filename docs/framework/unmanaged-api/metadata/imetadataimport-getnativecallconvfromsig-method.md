@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 963d46aea4ab31e770cb845fe699208f6c8f9ac7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 752dcf90f790d6403c37fcee377c35656b655b36
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447240"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54491066"
 ---
-# <a name="imetadataimportgetnativecallconvfromsig-method"></a><span data-ttu-id="686ce-102">Metodo IMetaDataImport::GetNativeCallConvFromSig</span><span class="sxs-lookup"><span data-stu-id="686ce-102">IMetaDataImport::GetNativeCallConvFromSig Method</span></span>
-<span data-ttu-id="686ce-103">Ottiene la convenzione di chiamata nativa per il metodo rappresentato dal puntatore a firma specificato.</span><span class="sxs-lookup"><span data-stu-id="686ce-103">Gets the native calling convention for the method that is represented by the specified signature pointer.</span></span>  
+# <a name="imetadataimportgetnativecallconvfromsig-method"></a><span data-ttu-id="3e6c5-102">Metodo IMetaDataImport::GetNativeCallConvFromSig</span><span class="sxs-lookup"><span data-stu-id="3e6c5-102">IMetaDataImport::GetNativeCallConvFromSig Method</span></span>
+<span data-ttu-id="3e6c5-103">Ottiene la convenzione di chiamata nativa per il metodo rappresentato dal puntatore a firma specificato.</span><span class="sxs-lookup"><span data-stu-id="3e6c5-103">Gets the native calling convention for the method that is represented by the specified signature pointer.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="686ce-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="686ce-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3e6c5-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="3e6c5-104">Syntax</span></span>  
   
 ```  
 HRESULT GetNativeCallConvFromSig (  
@@ -37,26 +37,26 @@ HRESULT GetNativeCallConvFromSig (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="686ce-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="686ce-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="3e6c5-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="3e6c5-105">Parameters</span></span>  
  `pvSig`  
- <span data-ttu-id="686ce-106">[in] Un puntatore per la firma dei metadati del metodo per restituire la convenzione di chiamata.</span><span class="sxs-lookup"><span data-stu-id="686ce-106">[in] A pointer to the metadata signature of the method to return the calling convention for.</span></span>  
+ <span data-ttu-id="3e6c5-106">[in] Puntatore alla firma del metodo per restituire la convenzione di chiamata per i metadati.</span><span class="sxs-lookup"><span data-stu-id="3e6c5-106">[in] A pointer to the metadata signature of the method to return the calling convention for.</span></span>  
   
  `cbSig`  
- <span data-ttu-id="686ce-107">[in] Le dimensioni in byte di `pvSig`.</span><span class="sxs-lookup"><span data-stu-id="686ce-107">[in] The size in bytes of `pvSig`.</span></span>  
+ <span data-ttu-id="3e6c5-107">[in] La dimensione in byte di `pvSig`.</span><span class="sxs-lookup"><span data-stu-id="3e6c5-107">[in] The size in bytes of `pvSig`.</span></span>  
   
  `pCallConv`  
- <span data-ttu-id="686ce-108">[out] Puntatore alla convenzione di chiamata nativa.</span><span class="sxs-lookup"><span data-stu-id="686ce-108">[out] A pointer to the native calling convention.</span></span>  
+ <span data-ttu-id="3e6c5-108">[out] Puntatore alla convenzione di chiamata nativa.</span><span class="sxs-lookup"><span data-stu-id="3e6c5-108">[out] A pointer to the native calling convention.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="686ce-109">Requisiti</span><span class="sxs-lookup"><span data-stu-id="686ce-109">Requirements</span></span>  
- <span data-ttu-id="686ce-110">**Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="686ce-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3e6c5-109">Requisiti</span><span class="sxs-lookup"><span data-stu-id="3e6c5-109">Requirements</span></span>  
+ <span data-ttu-id="3e6c5-110">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3e6c5-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="686ce-111">**Intestazione:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="686ce-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="3e6c5-111">**Intestazione:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="3e6c5-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="686ce-112">**Libreria:** inclusa come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="686ce-112">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="3e6c5-112">**Libreria:** Inclusa come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="3e6c5-112">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="686ce-113">**Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="686ce-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="3e6c5-113">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3e6c5-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="686ce-114">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="686ce-114">See Also</span></span>  
- <xref:System.Runtime.InteropServices.CallingConvention>  
- [<span data-ttu-id="686ce-115">Interfaccia IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="686ce-115">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [<span data-ttu-id="686ce-116">Interfaccia IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="686ce-116">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="3e6c5-114">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="3e6c5-114">See also</span></span>
+- <xref:System.Runtime.InteropServices.CallingConvention>
+- [<span data-ttu-id="3e6c5-115">Interfaccia IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="3e6c5-115">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="3e6c5-116">Interfaccia IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="3e6c5-116">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
