@@ -9,18 +9,18 @@ helpviewer_keywords:
 - templates [WPF], ProgressBar
 - states [WPF], ProgressBar
 ms.assetid: 935aa600-16e6-4947-a905-37a189a583dd
-ms.openlocfilehash: 89aea3e80fe17ece8a17f62f62290d34ddd55c60
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 7e410642e6153ed8064b2ddfb38fddd9cce6f4de
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34456923"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54525379"
 ---
 # <a name="progressbar-styles-and-templates"></a>Stili e modelli di ProgressBar
-In questo argomento vengono descritti gli stili e modelli per il <xref:System.Windows.Controls.ProgressBar> controllo. È possibile modificare il valore predefinito <xref:System.Windows.Controls.ControlTemplate> per fornire al controllo un aspetto univoco. Per altre informazioni, vedere [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+In questo argomento descrive gli stili e modelli per la <xref:System.Windows.Controls.ProgressBar> controllo. È possibile modificare il valore predefinito <xref:System.Windows.Controls.ControlTemplate> per fornire al controllo un aspetto univoco. Per altre informazioni, vedere [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
   
 ## <a name="progressbar-parts"></a>Parti del controllo ProgressBar  
- La tabella seguente elenca le parti denominate la <xref:System.Windows.Controls.ProgressBar> controllo.  
+ La tabella seguente elenca le parti denominate di <xref:System.Windows.Controls.ProgressBar> controllo.  
   
 |Parte|Tipo|Descrizione|  
 |-|-|-|  
@@ -29,17 +29,17 @@ In questo argomento vengono descritti gli stili e modelli per il <xref:System.Wi
 |PART_GlowRect|<xref:System.Windows.FrameworkElement>|Oggetto che abbellisce l'indicatore di stato.|  
   
 ## <a name="progressbar-states"></a>Stati del controllo ProgressBar  
- Nella tabella seguente sono elencati gli stati visivi per la <xref:System.Windows.Controls.ProgressBar> controllo.  
+ La tabella seguente elenca gli stati visivi il <xref:System.Windows.Controls.ProgressBar> controllo.  
   
 |Nome VisualState|Nome VisualStateGroup|Descrizione|  
 |----------------------|---------------------------|-----------------|  
-|Determinata|CommonStates|<xref:System.Windows.Controls.ProgressBar> segnala lo stato di avanzamento in base il <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> proprietà.|  
-|Indeterminato|CommonStates|<xref:System.Windows.Controls.ProgressBar> segnala i progressi generico con un motivo ripetuto.|  
-|Valido|ValidationStates|Il controllo Usa il <xref:System.Windows.Controls.Validation> classe e <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `false`.|  
+|Indicatore|CommonStates|<xref:System.Windows.Controls.ProgressBar> segnala lo stato di base di <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> proprietà.|  
+|Indeterminato|CommonStates|<xref:System.Windows.Controls.ProgressBar> segnala lo stato di avanzamento generico con un motivo ripetuto.|  
+|Valido|ValidationStates|Il controllo Usa il <xref:System.Windows.Controls.Validation> classi e le <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `false`.|  
 |InvalidFocused|ValidationStates|Il <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `true` ha il controllo ha lo stato attivo.|  
 |InvalidUnfocused|ValidationStates|Il <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `true` ha il controllo non è attivo.|  
   
-## <a name="progressbar-controltemplate-example"></a>Esempio di ControlTemplate del controllo ProgressBar  
+## <a name="progressbar-controltemplate-example"></a>Esempio di ControlTemplate ProgressBar  
  Nell'esempio seguente viene illustrato come definire un <xref:System.Windows.Controls.ControlTemplate> per il <xref:System.Windows.Controls.ProgressBar> controllo.  
   
  [!code-xaml[ControlTemplateExamples#ProgressBar](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/progressbar.xaml#progressbar)]  
@@ -50,10 +50,10 @@ In questo argomento vengono descritti gli stili e modelli per il <xref:System.Wi
   
  Per l'esempio completo, vedere [Esempio di applicazione di stili con ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Windows.FrameworkElement.Style%2A>  
- <xref:System.Windows.Controls.ControlTemplate>  
- [Stili e modelli di Control](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
- [Personalizzazione dei controlli](../../../../docs/framework/wpf/controls/control-customization.md)  
- [Applicazione di stili e modelli](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Windows.FrameworkElement.Style%2A>
+- <xref:System.Windows.Controls.ControlTemplate>
+- [Stili e modelli di Control](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)
+- [Personalizzazione dei controlli](../../../../docs/framework/wpf/controls/control-customization.md)
+- [Applicazione di stili e modelli](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)

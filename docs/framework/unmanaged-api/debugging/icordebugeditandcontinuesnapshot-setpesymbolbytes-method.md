@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d6d18288fcd86df5b858e51878cb63f83160f099
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3a898b20a92ea3256635a64332e4f86dcd92dd69
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411814"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524078"
 ---
 # <a name="icordebugeditandcontinuesnapshotsetpesymbolbytes-method"></a>Metodo ICorDebugEditAndContinueSnapshot::SetPESymbolBytes
 `SetPESymbolBytes` è obsoleto. Non chiamare questo metodo.  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

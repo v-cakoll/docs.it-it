@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - WCF, security
 ms.assetid: f478c80d-792d-4e7a-96bd-a2ff0b6f65f9
-ms.openlocfilehash: c8918bce1d0e19e8f70be4ddbda892924a944e68
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 12eafa006e65527a70245c4332a34eb55f7d8af0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185235"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54525261"
 ---
 # <a name="security-overview"></a>Cenni preliminari sulla sicurezza
 Windows Communication Foundation (WCF) è una SOAP basata su messaggi piattaforma di programmazione distribuita e sicurezza dei messaggi tra client e servizi è essenziale per la protezione dei dati. WCF fornisce una piattaforma versatile e interoperativa per lo scambio di messaggi protetti basato sull'infrastruttura di sicurezza esistente e gli standard di sicurezza riconosciuti per i messaggi SOAP.  
@@ -68,7 +68,7 @@ Windows Communication Foundation (WCF) è una SOAP basata su messaggi piattaform
 ### <a name="standards-and-interoperability"></a>Standard e interoperabilità  
  In un panorama caratterizzato da grandi distribuzioni esistenti, l'omogeneità è rara. Le piattaforme di calcolo/comunicazione distribuite devono poter interagire con le tecnologie offerte dai diversi fornitori. Anche la sicurezza deve essere quindi interoperativa.  
   
- Per consentire sistemi di sicurezza interoperativi, le aziende che operano nell'industria dei servizi Web hanno creato una serie di standard. Specificamente riguardo alla sicurezza sono stati proposti alcuni standard noti: WS-Security: SOAP Message Security (accettato tra gli standard OASIS e già noto come WS-Security), WS-Trust, WS-SecureConversation e WS-SecurityPolicy.  
+ Per consentire sistemi di sicurezza interoperativi, le aziende che operano nell'industria dei servizi Web hanno creato una serie di standard. Specificamente riguardo alla sicurezza, sono stati proposti alcuni standard: WS-Security: Sicurezza dei messaggi SOAP (accettato dagli standard OASIS e già noto come WS-Security), WS-Trust, WS-SecureConversation e WS-SecurityPolicy.  
   
  WCF supporta un'ampia gamma di scenari di interoperabilità. La classe <xref:System.ServiceModel.BasicHttpBinding> è associata allo standard Basic Security Profile (BSP) e la classe <xref:System.ServiceModel.WSHttpBinding> è associata agli standard di sicurezza più recenti quali WS-Security 1.1 e WS-SecureConversation. Aderendo a questi standard, sicurezza WCF può interagire e integrarsi con i servizi Web ospitati nei sistemi operativi e piattaforme diverse da Microsoft Windows.  
   
@@ -95,21 +95,21 @@ Windows Communication Foundation (WCF) è una SOAP basata su messaggi piattaform
  In WCF, le funzionalità di controllo di accesso vengono fornite tramite l'integrazione con common language runtime (CLR) <xref:System.Security.Permissions.PrincipalPermissionAttribute> e tramite un set di API note come il *modello di identità*. Per informazioni dettagliate su controllo di accesso e autorizzazione basata sulle attestazioni, vedere [estensione di sicurezza](../../../../docs/framework/wcf/extending/extending-security.md).  
   
 ### <a name="auditing"></a>Controllo  
- *Il controllo* è la registrazione degli eventi di sicurezza nel registro eventi di Windows. È possibile registrare eventi relativi alla sicurezza, ad esempio le operazioni di autenticazione riuscite o non riuscite. Per altre informazioni, vedere [controllo](../../../../docs/framework/wcf/feature-details/auditing-security-events.md). Per informazioni dettagliate di programmazione, vedere [procedura: eventi di sicurezza controllo](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md).  
+ *Il controllo* è la registrazione degli eventi di sicurezza nel registro eventi di Windows. È possibile registrare eventi relativi alla sicurezza, ad esempio le operazioni di autenticazione riuscite o non riuscite. Per altre informazioni, vedere [controllo](../../../../docs/framework/wcf/feature-details/auditing-security-events.md). Per informazioni dettagliate di programmazione, vedere [come: Controllare gli eventi di sicurezza](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md).  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Security.Permissions.PrincipalPermissionAttribute>  
- [Protezione dei servizi](../../../../docs/framework/wcf/securing-services.md)  
- [Scenari di sicurezza comuni](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)  
- [Associazioni e sicurezza](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
- [Protezione di servizi e client](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Autenticazione](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
- [Autorizzazione](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
- [Federazione e token rilasciati](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
- [Controllo](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
- [Linee guida e procedure consigliate per la sicurezza](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
- [Configurazione dei servizi tramite file di configurazione](../../../../docs/framework/wcf/configuring-services-using-configuration-files.md)  
- [Associazioni fornite dal sistema](../../../../docs/framework/wcf/system-provided-bindings.md)  
- [Panoramica della creazione di endpoint](../../../../docs/framework/wcf/endpoint-creation-overview.md)  
- [Estensione della sicurezza](../../../../docs/framework/wcf/extending/extending-security.md)  
- [Modello di sicurezza per Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Security.Permissions.PrincipalPermissionAttribute>
+- [Protezione dei servizi](../../../../docs/framework/wcf/securing-services.md)
+- [Scenari di sicurezza comuni](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)
+- [Associazioni e sicurezza](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)
+- [Protezione di servizi e client](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Autenticazione](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)
+- [Autorizzazione](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
+- [Federazione e token rilasciati](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
+- [Controllo](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)
+- [Linee guida e procedure consigliate per la sicurezza](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)
+- [Configurazione dei servizi tramite file di configurazione](../../../../docs/framework/wcf/configuring-services-using-configuration-files.md)
+- [Associazioni fornite dal sistema](../../../../docs/framework/wcf/system-provided-bindings.md)
+- [Panoramica della creazione di endpoint](../../../../docs/framework/wcf/endpoint-creation-overview.md)
+- [Estensione della sicurezza](../../../../docs/framework/wcf/extending/extending-security.md)
+- [Modello di sicurezza per Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

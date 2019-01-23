@@ -12,12 +12,12 @@ helpviewer_keywords:
 - deferred execution
 - iteration variables [Visual Basic]
 ms.assetid: 3047d86e-0d49-40e2-928b-dc02e46c7984
-ms.openlocfilehash: 0b163ac4af4e487ccab4c18b7907eba5a31e5779
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0642a67a6550109ffe1068e6c6ce4605b14c25af
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509052"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524053"
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Introduzione a LINQ in Visual Basic
 Language-Integrated Query (LINQ) aggiunge funzionalità di query a Visual Basic e fornisce semplici e potenti funzionalità quando si lavora con tutti i tipi di dati. Anziché inviare una query a un database da elaborare, o utilizzare sintassi di query differenti per ogni tipo di dati che si stanno cercando, LINQ introduce le query come parte del linguaggio Visual Basic. Utilizza una sintassi unificata indipendentemente dal tipo di dati.  
@@ -177,7 +177,7 @@ Facoltativo. Oggetto [ `Take While` clausola](../../../../visual-basic/language-
   
  Quando si dispone di una connessione valida a un database di SQL Server, è possibile aggiungere un **classi LINQ to SQL** modello di elemento al progetto. Verrà visualizzato Object Relational Designer (O/R Designer). O/R Designer consente di trascinare gli elementi che si vuole accedere nel codice dal **Esplora Server**/**Esplora Database** nell'area di progettazione. Il file LINQ to SQL aggiunge un oggetto <xref:System.Data.Linq.DataContext> al progetto. Questo oggetto include proprietà e raccolte per tabelle e visualizzazioni alle quali si desidera accedere e metodi per le stored procedure che si desidera chiamare. Dopo avere salvato le modifiche nel file LINQ to SQL (.dbml), è possibile accedere a questi oggetti nel codice facendo riferimento all'oggetto <xref:System.Data.Linq.DataContext> che viene definito da O/R Designer. L'oggetto <xref:System.Data.Linq.DataContext> per il progetto viene denominato in base al nome del file LINQ to SQL. Ad esempio, un file LINQ to SQL denominato Northwind.dbml creerà un oggetto <xref:System.Data.Linq.DataContext> chiamato `NorthwindDataContext`.  
   
- Per esempi con istruzioni dettagliate, vedere [procedura: Query su un Database](how-to-query-a-database-by-using-linq.md) e [procedura: chiamare una Stored Procedure](how-to-call-a-stored-procedure-by-using-linq.md).  
+ Per esempi con istruzioni dettagliate, vedere [come: Query su un Database](how-to-query-a-database-by-using-linq.md) e [come: Chiamare una Stored Procedure](how-to-call-a-stored-procedure-by-using-linq.md).  
   
 ## <a name="visual-basic-features-that-support-linq"></a>Funzionalità di Visual Basic che supportano LINQ  
  Visual Basic include altre importanti funzionalità che semplificano l'uso di LINQ e ridurre la quantità di codice da scrivere per eseguire query LINQ. tra cui:  
@@ -224,21 +224,21 @@ Facoltativo. Oggetto [ `Take While` clausola](../../../../visual-basic/language-
 |[LINQ to XML](../../concepts/linq/linq-to-xml.md)|Sono incluse informazioni generali, indicazioni di programmazione ed esempi per LINQ to XML.|  
   
 ## <a name="how-to-and-walkthrough-topics"></a>Come e procedure dettagliate
- [Procedura: Eseguire query in un database](how-to-query-a-database-by-using-linq.md)  
+ [Procedura: Query su un Database](how-to-query-a-database-by-using-linq.md)  
   
- [Procedura: Chiamare una stored procedure](how-to-call-a-stored-procedure-by-using-linq.md)  
+ [Procedura: Chiamare una Stored Procedure](how-to-call-a-stored-procedure-by-using-linq.md)  
   
- [Procedura: Modificare dati in un database](how-to-modify-data-in-a-database-by-using-linq.md)  
+ [Procedura: Modificare i dati in un Database](how-to-modify-data-in-a-database-by-using-linq.md)  
   
  [Procedura: Combinare dati utilizzando join](how-to-combine-data-with-linq-by-using-joins.md)  
   
- [Procedura: Ordinare i risultati di query](how-to-sort-query-results-by-using-linq.md)  
+ [Procedura: Risultati della Query di ordinamento](how-to-sort-query-results-by-using-linq.md)  
   
- [Procedura: Filtrare i risultati di una query](how-to-filter-query-results-by-using-linq.md)  
+ [Procedura: Filtrare i risultati della Query](how-to-filter-query-results-by-using-linq.md)  
   
- [Procedura: Conteggio, somma o media di dati](how-to-count-sum-or-average-data-by-using-linq.md)  
+ [Procedura: Conteggio, somma o Media di dati](how-to-count-sum-or-average-data-by-using-linq.md)  
   
- [Procedura: Trovare il valore minimo o massimo in un risultato di query](how-to-find-the-minimum-or-maximum-value-in-a-query-result.md)  
+ [Procedura: Trovare il valore minimo o massimo in un risultato di Query](how-to-find-the-minimum-or-maximum-value-in-a-query-result.md)  
   
  [Procedura: Assegnare stored procedure per eseguire aggiornamenti, inserimenti ed eliminazioni (O/R Designer)](https://msdn.microsoft.com/library/e88224ab-ff61-4a3a-b6b8-6f3694546cac)  
   
@@ -247,9 +247,9 @@ Facoltativo. Oggetto [ `Take While` clausola](../../../../visual-basic/language-
   
 ## <a name="see-also"></a>Vedere anche
 
-- [LINQ (Language-Integrated Query)](../../concepts/linq/index.md)  
-- [Cenni preliminari su LINQ to XML in Visual Basic](../../language-features/xml/overview-of-linq-to-xml.md)  
-- [Panoramica di LINQ to DataSet](~/docs/framework/data/adonet/linq-to-dataset-overview.md)  
-- [LINQ to SQL](~/docs/framework/data/adonet/sql/linq/index.md)  
-- [Strumenti LINQ to SQL in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)  
+- [LINQ (Language-Integrated Query)](../../concepts/linq/index.md)
+- [Cenni preliminari su LINQ to XML in Visual Basic](../../language-features/xml/overview-of-linq-to-xml.md)
+- [Panoramica di LINQ to DataSet](~/docs/framework/data/adonet/linq-to-dataset-overview.md)
+- [LINQ to SQL](~/docs/framework/data/adonet/sql/linq/index.md)
+- [Strumenti LINQ to SQL in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)
 - [Metodi DataContext (O/R Designer)](/visualstudio/data-tools/datacontext-methods-o-r-designer)

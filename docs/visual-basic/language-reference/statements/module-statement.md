@@ -13,12 +13,12 @@ helpviewer_keywords:
 - classes [Visual Basic], vs. modules
 - declarations [Visual Basic], modules
 ms.assetid: a1243afc-14a5-45df-95d5-51118aeac362
-ms.openlocfilehash: 5628224a08fe5f12cf2a81b179c4998001174354
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 0503292dca81ef7b249b391f54c0aba2bba2cb10
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49349017"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524182"
 ---
 # <a name="module-statement"></a>Istruzione Module
 Dichiara il nome di un modulo e introduce la definizione delle variabili, proprietà, eventi e le procedure che comprende il modulo.  
@@ -67,7 +67,7 @@ End Module
 ## <a name="classes-and-modules"></a>Classi e moduli  
  Questi elementi presentano molte analogie, ma esistono alcune importanti differenze.  
   
--   **Terminologia.** Le versioni precedenti di Visual Basic riconoscono due tipi di moduli: *classe moduli* (file CLS) e *moduli standard* (file con estensione BAS). La versione corrente chiama questi *classi* e *moduli*, rispettivamente.  
+-   **Terminology.** Le versioni precedenti di Visual Basic riconoscono due tipi di moduli: *classe moduli* (file CLS) e *moduli standard* (file con estensione BAS). La versione corrente chiama questi *classi* e *moduli*, rispettivamente.  
   
 -   **Membri condivisi.** È possibile controllare se un membro di una classe è condivisa o membro di istanza.  
   
@@ -91,15 +91,15 @@ End Module
   
      L'ambito di ogni membro del modulo è l'intero modulo. Si noti che vengono sottoposti a tutti i membri *promozione tipo*, in modo che l'ambito da innalzare di livello per lo spazio dei nomi che contiene il modulo. Per altre informazioni, vedere [promozione tipo](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md).  
   
--   **Qualificazione.** È possibile avere più moduli in un progetto, ed è possibile dichiarare i membri con lo stesso nome in due o più moduli. Tuttavia, è necessario qualificare ogni riferimento a tale membro con il nome del modulo appropriato se il riferimento è esterna al modulo. Per altre informazioni, vedere [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
+-   **Qualification.** È possibile avere più moduli in un progetto, ed è possibile dichiarare i membri con lo stesso nome in due o più moduli. Tuttavia, è necessario qualificare ogni riferimento a tale membro con il nome del modulo appropriato se il riferimento è esterna al modulo. Per altre informazioni, vedere [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
   
 ## <a name="example"></a>Esempio  
  [!code-vb[VbVbalrStatements#69](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/module-statement_1.vb)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Istruzione Class](../../../visual-basic/language-reference/statements/class-statement.md)  
- [Istruzione Namespace](../../../visual-basic/language-reference/statements/namespace-statement.md)  
- [Istruzione Structure](../../../visual-basic/language-reference/statements/structure-statement.md)  
- [Istruzione Interface](../../../visual-basic/language-reference/statements/interface-statement.md)  
- [Istruzione Property](../../../visual-basic/language-reference/statements/property-statement.md)  
- [Promozione tipo](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md)
+## <a name="see-also"></a>Vedere anche
+- [Istruzione Class](../../../visual-basic/language-reference/statements/class-statement.md)
+- [Istruzione Namespace](../../../visual-basic/language-reference/statements/namespace-statement.md)
+- [Istruzione Structure](../../../visual-basic/language-reference/statements/structure-statement.md)
+- [Istruzione Interface](../../../visual-basic/language-reference/statements/interface-statement.md)
+- [Istruzione Property](../../../visual-basic/language-reference/statements/property-statement.md)
+- [Promozione tipo](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md)

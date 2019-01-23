@@ -2,19 +2,19 @@
 title: '&lt;aggiungere&gt; (elemento) per schemeSettings (impostazioni Uri)'
 ms.date: 03/30/2017
 ms.assetid: 594a7b3b-af23-4cfa-b616-0b2dddb1a705
-ms.openlocfilehash: 07bcaf470c68a4d400057b0fe19e96524b2859cb
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d64744cf3c88d5ec0f0edf1a31cdf184c3c8277e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50205178"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524104"
 ---
 # <a name="ltaddgt-element-for-schemesettings-uri-settings"></a>&lt;aggiungere&gt; (elemento) per schemeSettings (impostazioni Uri)
 Aggiunge un'impostazione di schema per un nome di schema.  
   
  \<configuration>  
-\<URI >  
-\<schemeSettings >  
+\<uri>  
+\<schemeSettings>  
 \<add>  
   
 ## <a name="syntax"></a>Sintassi  
@@ -37,7 +37,7 @@ Aggiunge un'impostazione di schema per un nome di schema.
   
 ## <a name="attribute-name-attribute"></a>{Nome dell'attributo} Attributo  
   
-|Valore|Descrizione|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |genericUriParserOptions|Le opzioni del parser per questo schema. L'unico valore supportato è genericUriParserOptions = "DontUnescapePathDotsAndSlashes".|  
   
@@ -81,11 +81,11 @@ Aggiunge un'impostazione di schema per un nome di schema.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
-- <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>  
-- <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>  
-- <xref:System.Configuration.UriSection?displayProperty=nameWithType>  
-- <xref:System.Configuration.UriSection.SchemeSettings%2A?displayProperty=nameWithType>  
-- <xref:System.GenericUriParserOptions?displayProperty=nameWithType>  
-- <xref:System.Uri?displayProperty=nameWithType>  
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>
+- <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>
+- <xref:System.Configuration.UriSection?displayProperty=nameWithType>
+- <xref:System.Configuration.UriSection.SchemeSettings%2A?displayProperty=nameWithType>
+- <xref:System.GenericUriParserOptions?displayProperty=nameWithType>
+- <xref:System.Uri?displayProperty=nameWithType>
 - [Schema delle impostazioni di rete](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

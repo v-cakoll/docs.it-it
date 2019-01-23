@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: implementare la logica di convalida negli oggetti personalizzati'
+title: 'Procedura: Implementare la logica di convalida negli oggetti personalizzati'
 ms.date: 08/02/2018
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - implementing validation logic on custom objects [WPF]
 - custom objects [WPF], implementing validation logic on
 ms.assetid: 751fda9b-44f9-4d63-b4f2-1df07ac41e0f
-ms.openlocfilehash: dbeddb5eb6996d5758717ddd2d4d5af0b6f57f3c
-ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
+ms.openlocfilehash: e2b77ef65c92ae596c5620c9122dcf3db0bf9462
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "33555964"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54525989"
 ---
-# <a name="how-to-implement-validation-logic-on-custom-objects"></a>Procedura: implementare la logica di convalida negli oggetti personalizzati
+# <a name="how-to-implement-validation-logic-on-custom-objects"></a>Procedura: Implementare la logica di convalida negli oggetti personalizzati
 In questo esempio viene illustrato come implementare la logica di convalida in un oggetto personalizzato e quindi eseguire l'associazione.  
   
 ## <a name="example"></a>Esempio  
@@ -32,7 +32,7 @@ In questo esempio viene illustrato come implementare la logica di convalida in u
   
  In alternativa, invece di usare la <xref:System.Windows.Controls.DataErrorValidationRule>, è possibile impostare il <xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A> proprietà `true`.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Windows.Controls.ExceptionValidationRule>  
- [Implementare la convalida dell'associazione](../../../../docs/framework/wpf/data/how-to-implement-binding-validation.md)  
- [Procedure relative alle proprietà](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Windows.Controls.ExceptionValidationRule>
+- [Implementare la convalida dell'associazione](../../../../docs/framework/wpf/data/how-to-implement-binding-validation.md)
+- [Procedure relative alle proprietà](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

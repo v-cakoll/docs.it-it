@@ -9,12 +9,12 @@ helpviewer_keywords:
 - callbacks
 ms.assetid: 48b55c60-495f-4089-9396-97f9122bba7c
 author: KrzysztofCwalina
-ms.openlocfilehash: c9ed52c5a313676baeba66f5cb79c7a56927babb
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3609d6ac4847cb081740fd698869df4976f83f8f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154424"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54525482"
 ---
 # <a name="events-and-callbacks"></a>Eventi e callback
 I callback sono punti di estendibilità che consentono un framework di eseguire il callback nel codice utente attraverso un delegato. Questi delegati vengono in genere passati al framework tramite un parametro di un metodo.  
@@ -45,5 +45,5 @@ I callback sono punti di estendibilità che consentono un framework di eseguire 
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Progettazione finalizzata all'estensibilità](../../../docs/standard/design-guidelines/designing-for-extensibility.md)  
+- [Progettazione finalizzata all'estensibilità](../../../docs/standard/design-guidelines/designing-for-extensibility.md)
 - [Linee guida per la progettazione di Framework](../../../docs/standard/design-guidelines/index.md)
