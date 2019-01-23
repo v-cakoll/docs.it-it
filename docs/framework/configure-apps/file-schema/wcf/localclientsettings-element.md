@@ -2,12 +2,12 @@
 title: Elemento &lt;localClientSettings&gt;
 ms.date: 03/30/2017
 ms.assetid: 4680ace5-f4e1-4fcb-b9d8-a4a4af5cd7ae
-ms.openlocfilehash: 6ed73cc2a74efbba356b71f7941cb8b1113b22b8
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 67e872ea44a502c5b0fcdc5c1d326aad91eaa8fa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146147"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600362"
 ---
 # <a name="ltlocalclientsettingsgt-element"></a>Elemento &lt;localClientSettings&gt;
 Specifica le impostazioni di sicurezza di un client locale per questa associazione.  
@@ -63,20 +63,20 @@ Specifica le impostazioni di sicurezza di un client locale per questa associazio
 |Elemento|Descrizione|  
 |-------------|-----------------|  
 |[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|Specifica le opzioni di sicurezza di un'associazione personalizzata.|  
-|[\<secureConversationBootstrap >](../../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)|Specifica i valori predefiniti usati per iniziare un servizio di conversazione protetta.|  
+|[\<secureConversationBootstrap>](../../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)|Specifica i valori predefiniti usati per iniziare un servizio di conversazione protetta.|  
   
 ## <a name="remarks"></a>Note  
  Le impostazioni sono locali nel senso che non sono derivate dai criteri di sicurezza del servizio.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.Configuration.LocalClientSecuritySettingsElement>  
- <xref:System.ServiceModel.Configuration.SecurityElementBase.LocalClientSettings%2A>  
- <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalClientSettings%2A>  
- <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [Associazioni](../../../../../docs/framework/wcf/bindings.md)  
- [Estensione delle associazioni](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [Associazioni personalizzate](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
- [Procedura: Creare un'associazione personalizzata usando SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
- [Sicurezza delle associazioni personalizzate](../../../../../docs/framework/wcf/samples/custom-binding-security.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.ServiceModel.Configuration.LocalClientSecuritySettingsElement>
+- <xref:System.ServiceModel.Configuration.SecurityElementBase.LocalClientSettings%2A>
+- <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalClientSettings%2A>
+- <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [Associazioni](../../../../../docs/framework/wcf/bindings.md)
+- [Estensione delle associazioni](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [Associazioni personalizzate](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [Procedura: Creare un'associazione personalizzata usando SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Sicurezza delle associazioni personalizzate](../../../../../docs/framework/wcf/samples/custom-binding-security.md)

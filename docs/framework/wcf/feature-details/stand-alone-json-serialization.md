@@ -2,19 +2,19 @@
 title: Serializzazione JSON autonoma
 ms.date: 03/30/2017
 ms.assetid: 312bd7b2-1300-4b12-801e-ebe742bd2287
-ms.openlocfilehash: b84e7dbb91c4f1e94ae0701dffcca50b7834df6c
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 29c7dd6ebde07632ef7742b5e9bdd846fc632258
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841044"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54618422"
 ---
 # <a name="stand-alone-json-serialization"></a>Serializzazione JSON autonoma
 JSON (JavaScript Object Notation) è un formato dati progettato specificatamente per essere utilizzato dal codice JavaScript in esecuzione su pagine Web all'interno del browser. È il formato dati predefinito usato dai servizi ASP.NET AJAX creati in Windows Communication Foundation (WCF).  
   
  Questo formato può essere utilizzato durante la creazione di servizi AJAX senza effettuare l'integrazione con ASP.NET: in questo caso, il formato predefinito è XML, ma è anche possibile scegliere JSON.  
   
- Infine, se è necessario disporre del supporto JSON ma non si sta creando un servizio AJAX, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> consente di serializzare direttamente oggetti di tipo .NET in dati JSON e di deserializzare tali dati in istanze di tipi .NET. Per una descrizione di come eseguire questa operazione, vedere [procedura: serializzare e deserializzare dati JSON](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md).  
+ Infine, se è necessario disporre del supporto JSON ma non si sta creando un servizio AJAX, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> consente di serializzare direttamente oggetti di tipo .NET in dati JSON e di deserializzare tali dati in istanze di tipi .NET. Per una descrizione di come eseguire questa operazione, vedere [come: Serializzare e deserializzare dati JSON](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md).  
   
  Tranne rare eccezioni, quando si lavora con JSON sono supportati gli stessi tipi .NET supportati da <xref:System.Runtime.Serialization.DataContractSerializer>. Per un elenco dei tipi supportati, vedere [tipi supportati dal serializzatore dei contratti dati](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md). L'elenco include la maggior parte dei tipi primitivi e dei tipi di matrice e di raccolta, nonché i tipi complessi che utilizzano <xref:System.Runtime.Serialization.DataContractAttribute> e <xref:System.Runtime.Serialization.DataMemberAttribute>.  
   
@@ -260,6 +260,6 @@ http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}
 ### <a name="valid-json-key-names"></a>Nomi di chiave JSON validi  
  Il serializzatore XML codifica i nomi delle chiavi che non sono nomi XML validi. Ad esempio, un membro dati con il nome "123" sarebbe necessario un nome codificato come "\_x0031\_\_x0032\_\_x0033\_" perché "123" è un nome di elemento XML non valido (inizia con un cifra). Una situazione simile può presentarsi con alcuni set di caratteri internazioni non validi per i nomi XML. Per una spiegazione di questo effetto del XML sull'elaborazione JSON, vedere [Mapping Between JSON and XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedere anche
 
 - [Supporto per JSON e altri formati di trasferimento dati](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8f8398c16b27836b772e8ac56ee1f7e8494f4be0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a253503f3046c004cc7109a31b5aa8fd8e8dc195
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403569"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54618051"
 ---
 # <a name="setmanifestfile-method"></a>Metodo SetManifestFile
-Consente di specificare o reimpostare il file manifesto che il linker utilizza quando viene creato l'assembly.  
+Consente di specificare o ripristinare il file manifesto che il linker Usa durante la creazione dell'assembly.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,19 +37,19 @@ HRESULT SetManifestFile(
 #### <a name="parameters"></a>Parametri  
  `pszFile`  
   
- Il nome del file manifesto il cui contenuto è inserito nel blob di risorse Win32.  
+ Il nome del file manifesto viene inserito il cui contenuto nell'oggetto blob di risorse Win32.  
   
 ## <a name="return-value"></a>Valore restituito  
- Se il metodo ha esito positivo, restituisce S_OK.  
+ Restituisce S_OK se il metodo ha esito positivo.  
   
 ## <a name="remarks"></a>Note  
- Chiamare questo metodo prima di richiedere la Win32ResBlob. Il valore di `pszFile` parametro è il nome del file manifesto il cui contenuto viene letto e inserito nelle risorse Win32 con l'ID di RT_MANIFEST. Quando viene chiamato con un parametro null, viene cancellato qualsiasi manifesti letti in precedenza. Ciò consente di reimpostare lo stato del linker al momento dell'inizializzazione.  
+ Chiamare questo metodo prima di richiedere il Win32ResBlob. Il valore della `pszFile` parametro è il nome del file manifesto il cui contenuto viene letto e inserire nelle risorse Win32 con l'ID di RT_MANIFEST. Quando viene chiamato con un parametro null, viene cancellata manifesto letta in precedenza. Ciò consente di reimpostare lo stato del linker al momento dell'inizializzazione.  
   
 ## <a name="requirements"></a>Requisiti  
  Richiede aLink.h  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia IALink3](../../../../docs/framework/unmanaged-api/alink/ialink3-interface.md)  
- [Alink (API)](../../../../docs/framework/unmanaged-api/alink/index.md)  
- [Interfaccia IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [Al.exe (Assembly Linker)](../../../../docs/framework/tools/al-exe-assembly-linker.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia IALink3](../../../../docs/framework/unmanaged-api/alink/ialink3-interface.md)
+- [Alink (API)](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [Interfaccia IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [Al.exe (Assembly Linker)](../../../../docs/framework/tools/al-exe-assembly-linker.md)

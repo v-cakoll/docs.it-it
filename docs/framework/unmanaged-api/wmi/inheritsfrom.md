@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4784e22d5a3eec031fbee00441958a62d66b52df
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 078950b4e46ea587c2f39986963ec129f4ec1f1e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47199788"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54618383"
 ---
 # <a name="inheritsfrom-function"></a>InheritsFrom (funzione)
 Determina se la classe o l'istanza corrente deriva da una classe padre specificata.
@@ -53,7 +53,7 @@ HRESULT InheritsFrom (
 
 I seguenti valori restituiti da questa funzione sono definiti nel *WbemCli.h* file di intestazione, oppure è possibile definirle come costanti nel codice:
 
-|Costante  |Valore  |Descrizione  |
+|Costante  |Value  |Descrizione  |
 |---------|---------|---------|
 | `WBEM_S_NO_ERROR` | 0 | L'oggetto corrente eredita da `wszAncestor`.  |
 | `WBEM_S_FALSE` | 1 | L'oggetto corrente non eredita da `wszAncestor`. |
@@ -64,11 +64,11 @@ I seguenti valori restituiti da questa funzione sono definiti nel *WbemCli.h* fi
 Questa funzione esegue il wrapping di una chiamata per il [IWbemClassObject::InheritsFrom](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-inheritsfrom) (metodo).
 
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** WMINet_Utils.idl  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Vedere anche  
-[WMI e contatori delle prestazioni (riferimenti alle API non gestite)](index.md)
+## <a name="see-also"></a>Vedere anche
+- [WMI e contatori delle prestazioni (riferimenti alle API non gestite)](index.md)

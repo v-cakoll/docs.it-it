@@ -2,12 +2,12 @@
 title: Varianza nelle interfacce generiche (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: cf4096d0-4bb3-45a9-9a6b-f01e29a60333
-ms.openlocfilehash: c18f014897ace71e437bd733ff6fcd1d4d8810dd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d39f1b125875f9a9f41ccb6b25a3a88fe577adba
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643458"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54618633"
 ---
 # <a name="variance-in-generic-interfaces-visual-basic"></a>Varianza nelle interfacce generiche (Visual Basic)
 In .NET framework 4 è stato introdotto il supporto della varianza per diverse interfacce generiche esistenti. Il supporto della varianza consente la conversione implicita delle classi che implementano tali interfacce. Le interfacce seguenti sono ora varianti:  
@@ -69,7 +69,7 @@ Sub Test()
 End Sub  
 ```  
   
- Per ulteriori esempi, vedere [utilizzando varianza nelle interfacce per le raccolte generiche (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md).  
+ Per altri esempi, vedere [uso della varianza nelle interfacce per le raccolte generiche (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md).  
   
  La varianza nelle interfacce generiche è supportata solo per i tipi di riferimento. I tipi di valore non supportano la varianza. Ad esempio, non è possibile convertire `IEnumerable(Of Integer)` in modo implicito in `IEnumerable(Of Object)` perché i valori integer sono rappresentati da un tipo di valore.  
   
@@ -91,8 +91,8 @@ Dim integers As IEnumerable(Of Integer) = New List(Of Integer)
 Dim listObjects As IEnumerable(Of Object) = New List(Of String)  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Uso della varianza nelle interfacce per le raccolte generiche (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md)  
- [Creazione di interfacce generiche varianti (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/creating-variant-generic-interfaces.md)  
- [Interfacce generiche](../../../../standard/generics/interfaces.md)  
- [Varianza nei delegati (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)
+## <a name="see-also"></a>Vedere anche
+- [Uso della varianza nelle interfacce per le raccolte generiche (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md)
+- [Creazione di interfacce generiche varianti (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/creating-variant-generic-interfaces.md)
+- [Interfacce generiche](../../../../standard/generics/interfaces.md)
+- [Varianza nei delegati (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)

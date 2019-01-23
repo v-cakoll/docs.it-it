@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3af512f3-87d9-4005-9e2f-abb1060ff43f
-ms.openlocfilehash: 29db884a88f5150cd93571ba8fa7bf72be2b8c69
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6e3a88f7b34c64480d69df1a06a113e392d8fe53
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514568"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54619383"
 ---
 # <a name="establishing-the-connection"></a>Stabilire una connessione
 Per eseguire la connessione a Microsoft SQL Server, usare l'oggetto <xref:System.Data.SqlClient.SqlConnection> del provider di dati .NET Framework per SQL Server. Per eseguire la connessione a un'origine dati OLE DB, usare l'oggetto <xref:System.Data.OleDb.OleDbConnection> del provider di dati .NET Framework per OLE DB. Per eseguire la connessione a un'origine dati ODBC, usare l'oggetto <xref:System.Data.Odbc.OdbcConnection> del provider di dati .NET Framework per ODBC. Per eseguire la connessione a un'origine dati Oracle, usare l'oggetto <xref:System.Data.OracleClient.OracleConnection> del provider di dati .NET Framework per Oracle. Per l'archiviazione sicura e recupero delle stringhe di connessione, vedere [protezione delle informazioni di connessione](../../../../docs/framework/data/adonet/protecting-connection-information.md).  
@@ -51,7 +51,7 @@ using (SqlConnection connection = new SqlConnection(connectionString))
 ### <a name="integrated-security-and-aspnet"></a>Sicurezza integrata e ASP.NET  
  La sicurezza integrata di SQL Server (connessioni trusted) consente di proteggere la connessione a SQL Server, poiché non espone l'identificatore utente e la password nella stringa di connessione ed è il metodo consigliato per l'autenticazione di una connessione. La sicurezza integrata usa l'identità di sicurezza corrente, o token, del processo in esecuzione. Per le applicazioni desktop, tale identità corrisponde solitamente all'identità dell'utente attualmente connesso.  
   
- L'identità di sicurezza delle applicazioni ASP.NET può essere impostata su diverse opzioni. Per comprendere meglio l'identità di sicurezza che un'applicazione ASP.NET usa quando ci si connette a SQL Server, vedere [rappresentazione ASP.NET](https://msdn.microsoft.com/library/a0cb3024-562f-4184-9d3c-095504787d3d), [autenticazione ASP.NET](https://msdn.microsoft.com/library/fc10b0ef-4ce4-4a7f-9174-886325221ee1), e [come: l'accesso SQL La sicurezza integrata di Windows usando server](https://msdn.microsoft.com/library/683f9c9f-4375-4de6-8111-943c4423fde5).  
+ L'identità di sicurezza delle applicazioni ASP.NET può essere impostata su diverse opzioni. Per comprendere meglio l'identità di sicurezza che un'applicazione ASP.NET usa quando ci si connette a SQL Server, vedere [rappresentazione ASP.NET](https://msdn.microsoft.com/library/a0cb3024-562f-4184-9d3c-095504787d3d), [autenticazione ASP.NET](https://msdn.microsoft.com/library/fc10b0ef-4ce4-4a7f-9174-886325221ee1), e [come: La sicurezza integrata di accesso SQL Server tramite Windows](https://msdn.microsoft.com/library/683f9c9f-4375-4de6-8111-943c4423fde5).  
   
 ## <a name="connecting-to-an-ole-db-data-source"></a>Connessione a un'origine dati OLE DB  
  Il Provider di dati .NET Framework per OLE DB fornisce la connettività a origini dati esposte tramite OLE DB (tramite SQLOLEDB, il Provider OLE DB per SQL Server), usando il **OleDbConnection** oggetto.  
@@ -142,8 +142,8 @@ OracleConnection nwindConn = new OracleConnection("Data Source=MyOracleServer;In
 nwindConn.Open();  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Connessione a un'origine dati](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
- [Stringhe di connessione](../../../../docs/framework/data/adonet/connection-strings.md)  
- [Pool di connessioni OLE DB, ODBC e Oracle](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vedere anche
+- [Connessione a un'origine dati](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
+- [Stringhe di connessione](../../../../docs/framework/data/adonet/connection-strings.md)
+- [Pool di connessioni OLE DB, ODBC e Oracle](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)
+- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

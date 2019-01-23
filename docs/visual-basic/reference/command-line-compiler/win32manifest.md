@@ -6,12 +6,12 @@ helpviewer_keywords:
 - win32manifest compiler option [Visual Basic]
 - -win32manifest compiler option [Visual Basic]
 ms.assetid: 9e3191b4-90db-41c8-966a-28036fd20005
-ms.openlocfilehash: 1982a70c4baacae5ffb35efd93d447c4d81b00b5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4f31f1c32770d292f275354e0c06928e4677b7a6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181108"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54618612"
 ---
 # <a name="-win32manifest-visual-basic"></a>-win32manifest (Visual Basic)
 Identifica un file manifesto dell'applicazione Win32 definito dall'utente da incorporare nel file eseguibile di tipo PE di un progetto.  
@@ -34,7 +34,7 @@ Identifica un file manifesto dell'applicazione Win32 definito dall'utente da inc
 > [!NOTE]
 >  Questa opzione e il [-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md) opzione si escludono a vicenda. Se si tenta di usare entrambe le opzioni nella stessa riga di comando, si otterrà un errore di compilazione.  
   
- Un'applicazione senza un manifesto dell'applicazione che specifica un livello di esecuzione richiesto sarà soggetta alla virtualizzazione dei file e del Registro di sistema con la funzionalità Controllo account utente in Windows Vista. Per altre informazioni sulla virtualizzazione, vedere [distribuzione ClickOnce in Windows Vista](/visualstudio/deployment/clickonce-deployment-on-windows-vista).  
+ Un'applicazione senza un manifesto dell'applicazione che specifica un livello di esecuzione richiesto sarà soggetta alla virtualizzazione dei file e del Registro di sistema con la funzionalità Controllo account utente in Windows Vista. Per altre informazioni sulla virtualizzazione, vedere [Distribuzione ClickOnce in Windows Vista](/visualstudio/deployment/clickonce-deployment-on-windows-vista).  
   
  L'applicazione sarà soggetta alla virtualizzazione se viene soddisfatta una delle condizioni seguenti:  
   
@@ -66,6 +66,6 @@ Identifica un file manifesto dell'applicazione Win32 definito dall'utente da inc
 </assembly>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Compilatore della riga di comando di Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
- [-nowin32manifest (Visual Basic)](../../../visual-basic/reference/command-line-compiler/nowin32manifest.md)
+## <a name="see-also"></a>Vedere anche
+- [Compilatore della riga di comando di Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [-nowin32manifest (Visual Basic)](../../../visual-basic/reference/command-line-compiler/nowin32manifest.md)

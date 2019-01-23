@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 00a28e0f7ab03af8d5f2fc0dda5274f9aaa4dca2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a3c20e2787eb8071b10e06b980572c347959fe3c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449095"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54619448"
 ---
 # <a name="imetadataimportenummethodsemantics-method"></a>Metodo IMetaDataImport::EnumMethodSemantics
 Enumera le proprietà e gli eventi di modifica delle proprietà a cui è correlato il metodo specificato.  
@@ -47,33 +47,33 @@ HRESULT EnumMethodSemantics (
  [in] Token MethodDef che limita l'ambito dell'enumerazione.  
   
  `rEventProp`  
- [out] Matrice utilizzata per archiviare gli eventi o proprietà.  
+ [out] Matrice utilizzata per archiviare le proprietà o eventi.  
   
  `cMax`  
  [in] Dimensione massima della matrice `rEventProp`.  
   
  `pcEventProp`  
- [out] Il numero di proprietà o eventi restituiti `rEventProp`.  
+ [out] Il numero di eventi o proprietà restituite `rEventProp`.  
   
 ## <a name="return-value"></a>Valore restituito  
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
 |`S_OK`|`EnumMethodSemantics` stato restituito correttamente.|  
-|`S_FALSE`|Non esistono eventi o proprietà da enumerare. In tal caso, `pcEventProp` è zero.|  
+|`S_FALSE`|Non esistono eventi o proprietà da enumerare. In tal caso, `pcEventProp` è uguale a zero.|  
   
 ## <a name="remarks"></a>Note  
- Definiscono molti tipi di common language runtime *proprietà* `Changed` gli eventi e `On` *proprietà* `Changed` metodi correlati alle rispettive proprietà. Ad esempio, il <xref:System.Windows.Forms.Control?displayProperty=nameWithType> tipo definisce un <xref:System.Windows.Forms.Control.Font%2A> proprietà, un <xref:System.Windows.Forms.Control.FontChanged> evento e un <xref:System.Windows.Forms.Control.OnFontChanged%2A> metodo. Il metodo di funzione di accesso set del <xref:System.Windows.Forms.Control.Font%2A> chiamate a proprietà <xref:System.Windows.Forms.Control.OnFontChanged%2A> metodo, che a sua volta genera il <xref:System.Windows.Forms.Control.FontChanged> evento. Chiamare `EnumMethodSemantics` utilizzando MethodDef per <xref:System.Windows.Forms.Control.OnFontChanged%2A> per ottenere riferimenti al <xref:System.Windows.Forms.Control.Font%2A> proprietà e <xref:System.Windows.Forms.Control.FontChanged> evento.  
+ Molti tipi di common language runtime definiscono *proprietà* `Changed` eventi e `On` *proprietà* `Changed` metodi correlati nelle relative proprietà. Ad esempio, il <xref:System.Windows.Forms.Control?displayProperty=nameWithType> tipo definisce un <xref:System.Windows.Forms.Control.Font%2A> proprietà, un <xref:System.Windows.Forms.Control.FontChanged> evento e un <xref:System.Windows.Forms.Control.OnFontChanged%2A> (metodo). Il metodo della funzione di accesso set della <xref:System.Windows.Forms.Control.Font%2A> proprietà chiamate <xref:System.Windows.Forms.Control.OnFontChanged%2A> metodo, che a sua volta genera il <xref:System.Windows.Forms.Control.FontChanged> evento. È necessario chiamare `EnumMethodSemantics` utilizzando MethodDef per <xref:System.Windows.Forms.Control.OnFontChanged%2A> per ottenere riferimenti al <xref:System.Windows.Forms.Control.Font%2A> proprietà e il <xref:System.Windows.Forms.Control.FontChanged> evento.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
- **Libreria:** inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [Interfaccia IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Interfaccia IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
