@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3ee2272a43d9f71cd49754a7f4233868b8bb9134
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d15f34c55f0ee261c65649e9d431944201c546f0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406592"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54506030"
 ---
-# <a name="cordebugintercept-enumeration"></a><span data-ttu-id="ad9ff-102">Enumerazione CorDebugIntercept</span><span class="sxs-lookup"><span data-stu-id="ad9ff-102">CorDebugIntercept Enumeration</span></span>
-<span data-ttu-id="ad9ff-103">Indica i tipi di codice che possono essere intercettati (ovvero in cui è possibile eseguire l'istruzione).</span><span class="sxs-lookup"><span data-stu-id="ad9ff-103">Indicates the types of code that can be intercepted (that is, stepped into).</span></span>  
+# <a name="cordebugintercept-enumeration"></a><span data-ttu-id="c43be-102">Enumerazione CorDebugIntercept</span><span class="sxs-lookup"><span data-stu-id="c43be-102">CorDebugIntercept Enumeration</span></span>
+<span data-ttu-id="c43be-103">Indica i tipi di codice che possono essere intercettati (ovvero in cui è possibile eseguire l'istruzione).</span><span class="sxs-lookup"><span data-stu-id="c43be-103">Indicates the types of code that can be intercepted (that is, stepped into).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ad9ff-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="ad9ff-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c43be-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="c43be-104">Syntax</span></span>  
   
 ```  
 typedef enum CorDebugIntercept {  
@@ -40,29 +40,29 @@ typedef enum CorDebugIntercept {
 } CorDebugIntercept;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="ad9ff-105">Membri</span><span class="sxs-lookup"><span data-stu-id="ad9ff-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="c43be-105">Membri</span><span class="sxs-lookup"><span data-stu-id="c43be-105">Members</span></span>  
   
-|<span data-ttu-id="ad9ff-106">Membro</span><span class="sxs-lookup"><span data-stu-id="ad9ff-106">Member</span></span>|<span data-ttu-id="ad9ff-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="ad9ff-107">Description</span></span>|  
+|<span data-ttu-id="c43be-106">Membro</span><span class="sxs-lookup"><span data-stu-id="c43be-106">Member</span></span>|<span data-ttu-id="c43be-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="c43be-107">Description</span></span>|  
 |------------|-----------------|  
-|`INTERCEPT_NONE`|<span data-ttu-id="ad9ff-108">Non è possibile intercettare alcun codice.</span><span class="sxs-lookup"><span data-stu-id="ad9ff-108">No code can be intercepted.</span></span>|  
-|`INTERCEPT_CLASS_INIT`|<span data-ttu-id="ad9ff-109">Un costruttore non può essere intercettato.</span><span class="sxs-lookup"><span data-stu-id="ad9ff-109">A constructor can be intercepted.</span></span>|  
-|`INTERCEPT_EXCEPTION_FILTER`|<span data-ttu-id="ad9ff-110">Un filtro eccezioni può essere intercettato.</span><span class="sxs-lookup"><span data-stu-id="ad9ff-110">An exception filter can be intercepted.</span></span>|  
-|`INTERCEPT_SECURITY`|<span data-ttu-id="ad9ff-111">Il codice che applica la sicurezza può essere intercettato.</span><span class="sxs-lookup"><span data-stu-id="ad9ff-111">Code that enforces security can be intercepted.</span></span>|  
-|`INTERCEPT_CONTEXT_POLICY`|<span data-ttu-id="ad9ff-112">I criteri di contesto possono essere intercettati.</span><span class="sxs-lookup"><span data-stu-id="ad9ff-112">A context policy can be intercepted.</span></span>|  
-|`INTERCEPT_INTERCEPTION`|<span data-ttu-id="ad9ff-113">Non usato.</span><span class="sxs-lookup"><span data-stu-id="ad9ff-113">Not used.</span></span>|  
-|`INTERCEPT_ALL`|<span data-ttu-id="ad9ff-114">Tutto il codice può essere intercettato.</span><span class="sxs-lookup"><span data-stu-id="ad9ff-114">All code can be intercepted.</span></span>|  
+|`INTERCEPT_NONE`|<span data-ttu-id="c43be-108">Non è possibile intercettare alcun codice.</span><span class="sxs-lookup"><span data-stu-id="c43be-108">No code can be intercepted.</span></span>|  
+|`INTERCEPT_CLASS_INIT`|<span data-ttu-id="c43be-109">Un costruttore non può essere intercettato.</span><span class="sxs-lookup"><span data-stu-id="c43be-109">A constructor can be intercepted.</span></span>|  
+|`INTERCEPT_EXCEPTION_FILTER`|<span data-ttu-id="c43be-110">Un filtro eccezioni può essere intercettato.</span><span class="sxs-lookup"><span data-stu-id="c43be-110">An exception filter can be intercepted.</span></span>|  
+|`INTERCEPT_SECURITY`|<span data-ttu-id="c43be-111">Il codice che applica la sicurezza può essere intercettato.</span><span class="sxs-lookup"><span data-stu-id="c43be-111">Code that enforces security can be intercepted.</span></span>|  
+|`INTERCEPT_CONTEXT_POLICY`|<span data-ttu-id="c43be-112">I criteri di contesto possono essere intercettati.</span><span class="sxs-lookup"><span data-stu-id="c43be-112">A context policy can be intercepted.</span></span>|  
+|`INTERCEPT_INTERCEPTION`|<span data-ttu-id="c43be-113">Non usato.</span><span class="sxs-lookup"><span data-stu-id="c43be-113">Not used.</span></span>|  
+|`INTERCEPT_ALL`|<span data-ttu-id="c43be-114">Tutto il codice può essere intercettato.</span><span class="sxs-lookup"><span data-stu-id="c43be-114">All code can be intercepted.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="ad9ff-115">Note</span><span class="sxs-lookup"><span data-stu-id="ad9ff-115">Remarks</span></span>  
- <span data-ttu-id="ad9ff-116">Utilizzare il [ICorDebugStepper:: SetInterceptMask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setinterceptmask-method.md) metodo per stabilire i tipi di codice che possono essere intercettati.</span><span class="sxs-lookup"><span data-stu-id="ad9ff-116">Use the [ICorDebugStepper::SetInterceptMask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setinterceptmask-method.md) method to establish the types of code that can be intercepted.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c43be-115">Note</span><span class="sxs-lookup"><span data-stu-id="c43be-115">Remarks</span></span>  
+ <span data-ttu-id="c43be-116">Usare la [ICorDebugStepper:: SetInterceptMask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setinterceptmask-method.md) metodo per stabilire i tipi di codice che può essere intercettato.</span><span class="sxs-lookup"><span data-stu-id="c43be-116">Use the [ICorDebugStepper::SetInterceptMask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setinterceptmask-method.md) method to establish the types of code that can be intercepted.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ad9ff-117">Requisiti</span><span class="sxs-lookup"><span data-stu-id="ad9ff-117">Requirements</span></span>  
- <span data-ttu-id="ad9ff-118">**Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ad9ff-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c43be-117">Requisiti</span><span class="sxs-lookup"><span data-stu-id="c43be-117">Requirements</span></span>  
+ <span data-ttu-id="c43be-118">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c43be-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ad9ff-119">**Intestazione:** Cordebug. idl, Cordebug. H</span><span class="sxs-lookup"><span data-stu-id="ad9ff-119">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="c43be-119">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c43be-119">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="ad9ff-120">**Libreria:** CorGuids. lib</span><span class="sxs-lookup"><span data-stu-id="ad9ff-120">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c43be-120">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c43be-120">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="ad9ff-121">**Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ad9ff-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="c43be-121">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c43be-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ad9ff-122">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="ad9ff-122">See Also</span></span>  
- [<span data-ttu-id="ad9ff-123">Enumerazioni di debug</span><span class="sxs-lookup"><span data-stu-id="ad9ff-123">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="c43be-122">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c43be-122">See also</span></span>
+- [<span data-ttu-id="c43be-123">Enumerazioni di debug</span><span class="sxs-lookup"><span data-stu-id="c43be-123">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
