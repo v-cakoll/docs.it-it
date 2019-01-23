@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - XML comments [Visual Basic], parsing [Visual Basic]
 ms.assetid: 78a15cd0-7708-4e79-85d1-c154b7a14a8c
-ms.openlocfilehash: 524a54443b8f2365252f11282ca29fc492bef351
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: aa31f0f618990d4e57520a1098ec80b722e1cbe3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43398573"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543669"
 ---
 # <a name="processing-the-xml-file-visual-basic"></a>Elaborazione del file XML (Visual Basic)
 Il compilatore genera una stringa identificativa (ID) per ciascun costrutto del codice che contiene tag per la creazione della documentazione. (Per informazioni su come contrassegnare il codice, vedere [tag di commento XML](../../../visual-basic/language-reference/xmldoc/index.md).) La stringa ID identifica in modo univoco il costrutto. I programmi che elaborano il file XML è possono usare la stringa ID per identificare il corrispondente [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] elemento metadati/reflection.  
@@ -25,7 +25,7 @@ Il compilatore genera una stringa identificativa (ID) per ciascun costrutto del 
 |Carattere|Descrizione|  
 |---|---|  
 |N|namespace<br /><br /> È possibile aggiungere i commenti della documentazione a uno spazio dei nomi, ma è possibile creare riferimenti CREF a loro, in cui è supportata.|  
-|T|tipo: `Class`, `Module`, `Interface`, `Structure`, `Enum`, `Delegate`|  
+|T|type: `Class`, `Module`, `Interface`, `Structure`, `Enum`, `Delegate`|  
 |F|campo: `Dim`|  
 |P|proprietà: `Property` (incluse le proprietà di impostazione predefinita)|  
 |M|metodo: `Sub`, `Function`, `Declare`, `Operator`|  
@@ -41,6 +41,6 @@ Il compilatore genera una stringa identificativa (ID) per ciascun costrutto del 
   
  [!code-vb[VbVbcnXmlDocComments#10](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/processing-the-xml-file_1.vb)]  
   
-## <a name="see-also"></a>Vedere anche  
- [/doc](../../../visual-basic/reference/command-line-compiler/doc.md)  
- [Procedura: Creare documentazione XML](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
+## <a name="see-also"></a>Vedere anche
+- [/doc](../../../visual-basic/reference/command-line-compiler/doc.md)
+- [Procedura: Creare documentazione XML](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)

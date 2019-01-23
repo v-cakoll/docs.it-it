@@ -1,18 +1,18 @@
 ---
-title: 'Esempi di sintassi di query basate sul metodo: filtro'
+title: 'Esempi di sintassi di Query basate sul metodo: Filtro'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: e40e314c-eb30-4f44-a054-41e511e35832
-ms.openlocfilehash: 45000713d0151172762fd797bad7d7736c78a620
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8dc65af84a3cdb4a5fe9744eb1c134670b76260a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43501570"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54509309"
 ---
-# <a name="method-based-query-syntax-examples-filtering"></a>Esempi di sintassi di query basate sul metodo: filtro
+# <a name="method-based-query-syntax-examples-filtering"></a>Esempi di sintassi di Query basate sul metodo: Filtro
 Gli esempi in questo argomento illustrano come usare il `Where` e `Where…Contains` metodi per eseguire una query il [modello Sales di AdventureWorks](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) usando la sintassi di query basate su metodo. Si noti che, in cui...`Contains` non può essere usato come parte di un [query compilata](../../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md).  
   
  Il modello Sales di AdventureWorks usato in questi esempi è compilato in base alle tabelle Contact, Address, Product, SalesOrderHeader e SalesOrderDetail del database di esempio AdventureWorks.  
@@ -65,5 +65,5 @@ Gli esempi in questo argomento illustrano come usare il `Where` e `Where…Conta
  [!code-csharp[DP L2E ArraysAndListsInQueries#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp l2e arraysandlistsinqueries/cs/program.cs#4)]
  [!code-vb[DP L2E ArraysAndListsInQueries#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp l2e arraysandlistsinqueries/vb/module1.vb#4)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Query in LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
+## <a name="see-also"></a>Vedere anche
+- [Query in LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

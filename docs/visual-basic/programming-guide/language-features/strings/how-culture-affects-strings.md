@@ -5,12 +5,12 @@ helpviewer_keywords:
 - locale [Visual Basic], effect on strings
 - strings [Visual Basic], locale dependence
 ms.assetid: c4664444-ee0d-47bf-bef1-eaa3c54bdd7f
-ms.openlocfilehash: 41fd612695fbeacbc7b53cb9e5dbf67939e73482
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: 9f796583e1e38c31960868b1e6f20288587fa076
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39332600"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543448"
 ---
 # <a name="how-culture-affects-strings-in-visual-basic"></a>Influenza delle impostazioni cultura sulle stringhe in Visual Basic
 Questa pagina della Guida viene illustrato come Visual Basic Usa informazioni sulle impostazioni cultura per eseguire confronti e le conversioni di stringa.  
@@ -36,7 +36,7 @@ Questa pagina della Guida viene illustrato come Visual Basic Usa informazioni su
  Per altre informazioni, vedere <xref:Microsoft.VisualBasic.Conversion.Str%2A> e <xref:Microsoft.VisualBasic.Conversion.Val%2A>.  
   
 ## <a name="using-a-specific-culture"></a>Usando impostazioni cultura  
- Si supponga che si sta sviluppando un'applicazione che invia una data (formattata sotto forma di stringa) a un servizio Web. In questo caso, l'applicazione deve usare impostazioni cultura specifiche per la conversione di stringa. Per illustrare il motivo, considerare i risultati ottenuti utilizzando la data <xref:System.DateTime.ToString> (metodo): se l'applicazione utilizza questo metodo per formattare la data 4 luglio 2005, restituisce "7/4/2005 12:00:00 AM" viene eseguito con impostazioni cultura inglese Stati Uniti (en-US), ma restituisce " 04.07.2005 00:00:00 "viene eseguito con le impostazioni cultura tedesco (de-DE).  
+ Si supponga che si sta sviluppando un'applicazione che invia una data (formattata sotto forma di stringa) a un servizio Web. In questo caso, l'applicazione deve usare impostazioni cultura specifiche per la conversione di stringa. Per illustrare il motivo, considerare i risultati ottenuti utilizzando la data <xref:System.DateTime.ToString> metodo: Se l'applicazione usa questo metodo per formattare la data 4 luglio 2005, viene restituito "7/4/2005 12:00:00 AM" viene eseguito con impostazioni cultura inglese Stati Uniti (en-US), ma restituisce "04.07.2005 00:00:00" viene eseguito con le impostazioni cultura tedesco (de-DE).  
   
  Quando è necessario eseguire una conversione di stringhe in un formato specifico delle impostazioni cultura, è consigliabile usare la `CultureInfo` classe che viene compilato nel [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. È possibile creare una nuova `CultureInfo` oggetto delle impostazioni cultura, passando il nome delle impostazioni cultura per il <xref:System.Globalization.CultureInfo.%23ctor%2A> costruttore. I nomi di impostazioni cultura supportate sono elencati nel <xref:System.Globalization.CultureInfo> pagina della Guida di classe.  
   
@@ -78,7 +78,7 @@ Questa pagina della Guida viene illustrato come Visual Basic Usa informazioni su
 ### <a name="security-considerations"></a>Considerazioni sulla sicurezza  
  Se decisioni relative alla sicurezza in base al risultato di un'operazione di modifica di maiuscole o confronto effettuate dall'applicazione, quindi l'operazione deve usare la <xref:System.String.Compare%2A?displayProperty=nameWithType> metodo e passare `Ordinal` o `OrdinalIgnoreCase` per il `comparisonType` argomento.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Globalization.CultureInfo>  
- [Introduzione alle stringhe in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)  
- [Funzioni di conversione del tipo](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Globalization.CultureInfo>
+- [Introduzione alle stringhe in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
+- [Funzioni di conversione del tipo](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)

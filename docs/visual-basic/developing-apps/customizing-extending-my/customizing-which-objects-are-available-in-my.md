@@ -5,30 +5,30 @@ helpviewer_keywords:
 - My namespace [Visual Basic], customizing
 - My namespace
 ms.assetid: 4e8279c2-ed5b-4681-8903-8a6671874000
-ms.openlocfilehash: b06e71784a4d02bcbcd755d14e57ef88c4322f7c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: caa9c2cadb9194161756f89b5acb16da0a955485
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592158"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543717"
 ---
 # <a name="customizing-which-objects-are-available-in-my-visual-basic"></a>Personalizzazione degli oggetti disponibili in My (Visual Basic)
-Questo argomento viene descritto come è possibile controllare quali `My` gli oggetti sono abilitati tramite l'impostazione del progetto `_MYTYPE` costante di compilazione condizionale. IDE di Visual Studio Integrated Development ambiente () consente di mantenere il `_MYTYPE` costante di compilazione condizionale per un progetto sincronizzata con il tipo di progetto.  
+In questo argomento viene descritto come è possibile controllare quali `My` gli oggetti vengono abilitati mediante l'impostazione del progetto `_MYTYPE` costante di compilazione condizionale. Mantiene la Visual Studio integrata sviluppo ambiente (IDE) di `_MYTYPE` costante di compilazione condizionale per un progetto sincronizzata con il tipo di progetto.  
   
 ## <a name="predefined-mytype-values"></a>Valori predefiniti di MyType  
- È necessario utilizzare il `/define` per impostare l'opzione del compilatore di `_MYTYPE` costante di compilazione condizionale. Quando si specifica il valore per il `_MYTYPE` costante, è necessario racchiudere il valore stringa in una barra rovesciata/virgolette (\\") le sequenze. Ad esempio, è possibile utilizzare:  
+ È necessario usare il `/define` opzione del compilatore per impostare il `_MYTYPE` costante di compilazione condizionale. Quando si specifica un valore personalizzato per il `_MYTYPE` costante, è necessario racchiudere il valore della stringa nella barra rovesciata/virgolette (\\") le sequenze. Ad esempio, è possibile usare:  
   
 ```  
 /define:_MYTYPE=\"WindowsForms\"  
 ```  
   
- Questa tabella vengono mostrate le operazioni di `_MYTYPE` viene impostata la costante di compilazione condizionale per diversi tipi di progetto.  
+ La tabella seguente mostra cosa la `_MYTYPE` viene impostata la costante di compilazione condizionale per diversi tipi di progetto.  
   
 |Tipo di progetto|Valore di MyType|  
 |------------------|--------------------|  
 |Libreria di classi|"Windows"|  
 |Applicazione console|"Console"|  
-|Web|"Web".|  
+|Web|"Web"|  
 |Libreria di controlli Web|"WebControl"|  
 |Applicazione Windows|"WindowsForms"|  
 |Applicazione di Windows, quando si avvia con personalizzato `Sub Main`|"WindowsFormsWithCustomSubMain"|  
@@ -37,47 +37,47 @@ Questo argomento viene descritto come è possibile controllare quali `My` gli og
 |Empty|"Vuoto"|  
   
 > [!NOTE]
->  Tutti i confronti di stringa di compilazione condizionale tra maiuscole e minuscole, indipendentemente dal modo in cui il `Option Compare` istruzione è impostata.  
+>  Tutti i confronti di stringhe di compilazione condizionale sono tra maiuscole e minuscole, indipendentemente dal modo in cui il `Option Compare` istruzione è impostata.  
   
-## <a name="dependent-my-compilation-constants"></a>Costanti di compilazione dipendenti My  
- Il `_MYTYPE` costante di compilazione condizionale, controlla a sua volta, i valori degli altri `_MY` costanti di compilazione:  
+## <a name="dependent-my-compilation-constants"></a>Costanti di compilazione My dipendenti  
+ Il `_MYTYPE` costante di compilazione condizionale, determina a sua volta, i valori degli altri `_MY` costanti di compilazione:  
   
 |_MYTYPE|_MYAPPLICATIONTYPE|_MYCOMPUTERTYPE|_MYFORMS|_MYUSERTYPE|_MYWEBSERVICES|  
 |--------------|-------------------------|----------------------|---------------|------------------|---------------------|  
 |"Console"|"Console"|"Windows"|Undefined|"Windows"|true|  
 |"Custom"|Undefined|Undefined|Undefined|Undefined|Undefined|  
 |"Vuoto"|Undefined|Undefined|Undefined|Undefined|Undefined|  
-|"Web".|Undefined|"Web".|false|"Web".|false|  
-|"WebControl"|Undefined|"Web".|false|"Web".|true|  
-|"Windows" o ""|"Windows"|"Windows"|Undefined|"Windows"|TRUE|  
+|"Web"|Undefined|"Web"|false|"Web"|false|  
+|"WebControl"|Undefined|"Web"|false|"Web"|true|  
+|"Windows" o ""|"Windows"|"Windows"|Undefined|"Windows"|true|  
 |"WindowsForms"|"WindowsForms"|"Windows"|true|"Windows"|true|  
 |"WindowsFormsWithCustomSubMain"|"Console"|"Windows"|true|"Windows"|true|  
   
- Per impostazione predefinita, le costanti di compilazione condizionale non definite risolte in `FALSE`. Quando si compila il progetto per eseguire l'override del comportamento predefinito, è possibile specificare valori per le costanti non definite.  
+ Per impostazione predefinita, le costanti di compilazione condizionale non definite risolte in `FALSE`. Quando si compila il progetto per eseguire l'override del comportamento predefinito, è possibile specificare i valori per le costanti non definite.  
   
 > [!NOTE]
->  Quando `_MYTYPE` è impostato su "Custom", il progetto contiene il `My` dello spazio dei nomi, ma non contiene oggetti. Tuttavia, l'impostazione `_MYTYPE` per "Vuoto" impedisce al compilatore di aggiungere il `My` dello spazio dei nomi e i relativi oggetti.  
+>  Quando `_MYTYPE` è impostata su "Custom", il progetto contiene il `My` dello spazio dei nomi, ma non contiene alcun oggetto. Tuttavia, impostando `_MYTYPE` per "Vuoto" impedisce al compilatore di aggiungere il `My` dello spazio dei nomi e i relativi oggetti.  
   
- Questa tabella vengono descritti gli effetti dei valori predefiniti del `_MY` costanti di compilazione.  
+ La tabella seguente descrive gli effetti dei valori predefiniti del `_MY` costanti di compilazione.  
   
 |Costante|Significato|  
 |--------------|-------------|  
-|`_MYAPPLICATIONTYPE`|Abilita `My.Application`, se la costante è "Finestre della Console,", "o"WindowsForms":<br /><br /> -La versione "Console" deriva da <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase>. e include meno membri rispetto alla versione "Windows".<br />-La versione "Windows" deriva da <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>e include meno membri rispetto alla versione "WindowsForms".<br />-La versione "WindowsForms" di `My.Application` deriva da <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>. Se il `TARGET` costante è definita come "winexe", quindi la classe include un `Sub Main` metodo.|  
-|`_MYCOMPUTERTYPE`|Abilita `My.Computer`, se la costante è "Web" o "Windows":<br /><br /> -La versione "Web" deriva da <xref:Microsoft.VisualBasic.Devices.ServerComputer>, e include meno membri rispetto alla versione "Windows".<br />-La versione "Windows" `My.Computer` deriva da <xref:Microsoft.VisualBasic.Devices.Computer>.|  
+|`_MYAPPLICATIONTYPE`|Abilita `My.Application`, se la costante è "Console", Windows, "o"Windows Form":<br /><br /> -La versione "Console" deriva da <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase>. e include meno membri rispetto alla versione "Windows".<br />-La versione "Windows" deriva da <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>e include meno membri rispetto alla versione di "Windows Form".<br />-La versione di "Windows Form" del `My.Application` deriva da <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>. Se il `TARGET` costante viene definita come "winexe", quindi la classe include una `Sub Main` (metodo).|  
+|`_MYCOMPUTERTYPE`|Abilita `My.Computer`, se la costante è "Web" o "Windows":<br /><br /> -La versione di "Web" deriva da <xref:Microsoft.VisualBasic.Devices.ServerComputer>, e include meno membri rispetto alla versione "Windows".<br />-La versione "Windows" del `My.Computer` deriva da <xref:Microsoft.VisualBasic.Devices.Computer>.|  
 |`_MYFORMS`|Abilita `My.Forms`, se la costante è `TRUE`.|  
-|`_MYUSERTYPE`|Abilita `My.User`, se la costante è "Web" o "Windows":<br /><br /> -La versione "Web" `My.User` associata con l'identità dell'utente della richiesta HTTP corrente.<br />-La versione "Windows" `My.User` è associata l'entità del thread corrente.|  
+|`_MYUSERTYPE`|Abilita `My.User`, se la costante è "Web" o "Windows":<br /><br /> -La versione di "Web" di `My.User` associato con l'identità dell'utente della richiesta HTTP corrente.<br />-La versione "Windows" di `My.User` associato con l'oggetto principal del thread corrente.|  
 |`_MYWEBSERVICES`|Abilita `My.WebServices`, se la costante è `TRUE`.|  
 |`_MYTYPE`|Abilita `My.Log`, `My.Request`, e `My.Response`, se la costante è "Web".|  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>  
- <xref:Microsoft.VisualBasic.Devices.Computer>  
- <xref:Microsoft.VisualBasic.Logging.Log>  
- <xref:Microsoft.VisualBasic.ApplicationServices.User>  
- [Dipendenza di My dal tipo di progetto](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)  
- [Compilazione condizionale](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)  
- [/define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)  
- [Oggetto My.Forms](../../../visual-basic/language-reference/objects/my-forms-object.md)  
- [Oggetto My.Request](../../../visual-basic/language-reference/objects/my-request-object.md)  
- [Oggetto My.Response](../../../visual-basic/language-reference/objects/my-response-object.md)  
- [Oggetto My.WebServices](../../../visual-basic/language-reference/objects/my-webservices-object.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>
+- <xref:Microsoft.VisualBasic.Devices.Computer>
+- <xref:Microsoft.VisualBasic.Logging.Log>
+- <xref:Microsoft.VisualBasic.ApplicationServices.User>
+- [Dipendenza di My dal tipo di progetto](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)
+- [Compilazione condizionale](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
+- [/define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)
+- [Oggetto My.Forms](../../../visual-basic/language-reference/objects/my-forms-object.md)
+- [Oggetto My.Request](../../../visual-basic/language-reference/objects/my-request-object.md)
+- [Oggetto My.Response](../../../visual-basic/language-reference/objects/my-response-object.md)
+- [Oggetto My.WebServices](../../../visual-basic/language-reference/objects/my-webservices-object.md)

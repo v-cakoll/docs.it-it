@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 90af7d01d78cf74cbb304e3b987d5fe58e23f76e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 420a02d2f7757c52d6e8ff92a9ca30e44938cd18
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50196700"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54546439"
 ---
 # <a name="formatfromrawvalue-function"></a>FormatFromRawValue (funzione)
 Converte un valore di dati sulle prestazioni non elaborati nel formato specificato o due valori di dati sulle prestazioni non elaborati se la conversione del formato è basata sul tempo.   
@@ -49,7 +49,7 @@ int FormatFromRawValue (
 `dwFormat`  
 [in] Il formato nel quale convertire i dati sulle prestazioni non elaborati. Può essere uno dei valori seguenti:
 
-|Costante  |Valore  |Descrizione |
+|Costante  |Value  |Descrizione |
 |---------|---------|---------|
 | `PDH_FMT_DOUBLE` |0x00000200 | Restituisce il valore calcolato come un valore a virgola mobile a precisione doppia. | 
 | `PDH_FMT_LARGE` | 0x00000400 | Restituisce il valore calcolato come intero a 64 bit. |
@@ -57,7 +57,7 @@ int FormatFromRawValue (
 
 Uno dei valori precedenti può essere introdotte con uno dei flag di ridimensionamento seguenti:
 
-|Costante  |Valore  |Descrizione |
+|Costante  |Value  |Descrizione |
 |---------|---------|---------|
 | `PDH_FMT_NOSCALE` | 0x00001000 | Non si applicano i fattori di scala del contatore. |
 | `PDH_FMT_1000` | 0x00002000 | Moltiplicare il valore finale per 1.000. | 
@@ -86,11 +86,11 @@ I valori seguenti vengono restituiti da questa funzione:
 Questa funzione esegue il wrapping di una chiamata per il [FormatFromRawValue](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ms231047%28v=vs.85%29) (funzione).
 
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Libreria:** PerfCounter. dll  
+ **Libreria:** PerfCounter.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Vedere anche  
-[WMI e contatori delle prestazioni (riferimenti alle API non gestite)](index.md)
+## <a name="see-also"></a>Vedere anche
+- [WMI e contatori delle prestazioni (riferimenti alle API non gestite)](index.md)

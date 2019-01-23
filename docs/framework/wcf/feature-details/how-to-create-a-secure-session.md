@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], creating a session
 ms.assetid: b6f42b5a-bbf7-45cf-b917-7ec9fa7ae110
-ms.openlocfilehash: c0e5281d227d343d8734809b27b57d8a2bead627
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c2e2b34c1d1589f26f3aea80384b5a96f1c64fb5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147593"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54544718"
 ---
 # <a name="how-to-create-a-secure-session"></a>Procedura: Creare una sessione protetta
 Fatta eccezione per il [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) associazione, le associazioni fornite dal sistema in Windows Communication Foundation (WCF) usano automaticamente sessioni protette quando è abilitata la sicurezza dei messaggi.  
@@ -83,5 +83,5 @@ Fatta eccezione per il [ \<basicHttpBinding >](../../../../docs/framework/config
      [!code-csharp[c_CreateSecureSession#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_createsecuresession/cs/secureservice.cs#2)]
      [!code-vb[c_CreateSecureSession#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_createsecuresession/vb/secureservice.vb#2)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Panoramica delle associazioni WCF](../../../../docs/framework/wcf/bindings-overview.md)
+## <a name="see-also"></a>Vedere anche
+- [Panoramica delle associazioni WCF](../../../../docs/framework/wcf/bindings-overview.md)

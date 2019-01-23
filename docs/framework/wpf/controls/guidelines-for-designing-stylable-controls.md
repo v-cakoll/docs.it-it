@@ -5,12 +5,12 @@ helpviewer_keywords:
 - style design for controls [WPF]
 - controls [WPF], style design
 ms.assetid: c52dde45-a311-4531-af4c-853371c4d5f4
-ms.openlocfilehash: 4e807a323f6b454b1f07c8e0a9f99b17c9723df7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 02333d05bc1c0f9804caa36af1a1842cba22908c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33558219"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54545030"
 ---
 # <a name="guidelines-for-designing-stylable-controls"></a>Linee guida per la progettazione di controlli a cui è possibile applicare degli stili
 Questo documento offre un riepilogo di una serie di procedure consigliate per la progettazione di un controllo a cui siano facilmente applicabili stili e modelli. Questo è il risultato di molti tentativi ed errori durante l’elaborazione degli stili dei controlli dei temi per il set di controlli [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] incorporato. La corretta applicazione degli stili è una funzione che non dipende solo dalla corretta progettazione del modello a oggetti ma anche dallo stile stesso. I destinatari di questo documento sono gli autori dei controlli, non gli autori degli stili.  
@@ -30,10 +30,10 @@ Questo documento offre un riepilogo di una serie di procedure consigliate per la
  Per un'introduzione all'applicazione di stili e modelli, vedere [Applicazione di stili e modelli](../../../../docs/framework/wpf/controls/styling-and-templating.md).  
   
 <a name="Before_You_Start__Understanding_Your_Control"></a>   
-## <a name="before-you-start-understanding-your-control"></a>Prima di iniziare: informazioni sul controllo  
+## <a name="before-you-start-understanding-your-control"></a>Prima di iniziare: Informazioni sul controllo  
  Prima di leggere queste linee guida, è importante aver compreso e definito l'uso comune del controllo. L'applicazione degli stili offre spesso una serie di possibilità che non seguono regole precise. I controlli creati per un ampio utilizzo (in un gran numero di applicazioni, da molti sviluppatori) presentano il problema che l'applicazione degli stili può essere usata per apportare modifiche di vasta portata all'aspetto visivo del controllo,  al punto che il controllo a cui è stato applicato uno stile potrebbe non corrispondere al progetto dell'autore. Poiché la flessibilità offerta dall'applicazione degli stili è essenzialmente illimitata, è possibile usare il concetto di uso comune per circoscrivere l’ambito delle proprie decisioni.  
   
- Per comprendere l'uso comune del controllo, è consigliabile valutare la proposta di valore del controllo. Quali sono i vantaggi che porta il controllo alla tabella e che nessun altro controllo può offrire? L'uso comune non è legato a uno specifico aspetto visivo, ma piuttosto alla filosofia del controllo e a una serie di ragionevoli aspettative per l'uso del controllo stesso. Questa considerazione consente di formulare delle ipotesi sul modello di composizione e sui comportamenti standard del controllo definiti dallo stile. In caso di <xref:System.Windows.Controls.ComboBox>, ad esempio, la comprensione dell'utilizzo comune non fornisce le informazioni dettagliate sulle se un particolare <xref:System.Windows.Controls.ComboBox> con angoli arrotondati, ma consentirà di comprendere il fatto che il <xref:System.Windows.Controls.ComboBox> richiede probabilmente una finestra popup e alcune modalità di attivazione e disattivazione è aperto.  
+ Per comprendere l'uso comune del controllo, è consigliabile valutare la proposta di valore del controllo. Quali sono i vantaggi che porta il controllo alla tabella e che nessun altro controllo può offrire? L'uso comune non è legato a uno specifico aspetto visivo, ma piuttosto alla filosofia del controllo e a una serie di ragionevoli aspettative per l'uso del controllo stesso. Questa considerazione consente di formulare delle ipotesi sul modello di composizione e sui comportamenti standard del controllo definiti dallo stile. Nel caso di <xref:System.Windows.Controls.ComboBox>, ad esempio, la comprensione di uso comune non sarà è alcuna informazione su se un particolare <xref:System.Windows.Controls.ComboBox> presenta angoli arrotondati, ma in questo caso sarà approfondite del fatto che il <xref:System.Windows.Controls.ComboBox> probabilmente richiede una finestra popup e alcune modalità di attivazione/disattivazione se è aperto.  
   
 <a name="General_Guidelines"></a>   
 ## <a name="general-guidelines"></a>Indicazioni generali  
@@ -73,7 +73,7 @@ Questo documento offre un riepilogo di una serie di procedure consigliate per la
   
     -   Gli elementi helper con nome devono essere identificati dall'elemento padre, che deve stabilire le impostazioni richieste nell'elemento helper.  
   
-    -   Le impostazioni richieste per gli elementi helper basati su tipi devono essere stabilite direttamente negli elementi stessi. Tale operazione potrebbe richiedere, da parte dell'elemento di supporto, l'esecuzione di una query sul contesto delle informazioni in cui viene usato, incluso l'oggetto `TemplatedParent` (il tipo di controllo del modello in cui viene usato). Ad esempio, <xref:System.Windows.Controls.ContentPresenter> associa automaticamente il `Content` proprietà del relativo `TemplatedParent` per relativo <xref:System.Windows.Controls.ContentPresenter.Content%2A> proprietà quando viene utilizzata un <xref:System.Windows.Controls.ContentControl> tipo derivato.  
+    -   Le impostazioni richieste per gli elementi helper basati su tipi devono essere stabilite direttamente negli elementi stessi. Tale operazione potrebbe richiedere, da parte dell'elemento di supporto, l'esecuzione di una query sul contesto delle informazioni in cui viene usato, incluso l'oggetto `TemplatedParent` (il tipo di controllo del modello in cui viene usato). Ad esempio, <xref:System.Windows.Controls.ContentPresenter> associa automaticamente il `Content` proprietà del relativo `TemplatedParent` a relativo <xref:System.Windows.Controls.ContentPresenter.Content%2A> proprietà quando viene utilizzata un <xref:System.Windows.Controls.ContentControl> tipo derivato.  
   
     -   Non è possibile ottimizzare allo stesso modo gli elementi helper autonomi, perché, per definizione, l'elemento helper e l'elemento padre non sono in grado di rilevarsi a vicenda.  
   
@@ -83,13 +83,13 @@ Questo documento offre un riepilogo di una serie di procedure consigliate per la
   
     1.  Associazione di proprietà. Esempio: associazione tra <xref:System.Windows.Controls.ComboBox.IsDropDownOpen%2A?displayProperty=nameWithType> e <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A?displayProperty=nameWithType>.  
   
-    2.  Modifiche delle proprietà attivate o animazioni delle proprietà. Esempio: stato del passaggio del mouse di un <xref:System.Windows.Controls.Button>.  
+    2.  Modifiche delle proprietà attivate o animazioni delle proprietà. Esempio: il passaggio del mouse lo stato di un <xref:System.Windows.Controls.Button>.  
   
     3.  Comando. Esempio: <xref:System.Windows.Controls.Primitives.ScrollBar.LineUpCommand>  /  <xref:System.Windows.Controls.Primitives.ScrollBar.LineDownCommand> in <xref:System.Windows.Controls.Primitives.ScrollBar>.  
   
     4.  Elementi helper autonomi. Esempio: <xref:System.Windows.Controls.Primitives.TabPanel> in <xref:System.Windows.Controls.TabControl>.  
   
-    5.  Tipi di helper basati su tipi. Esempio: <xref:System.Windows.Controls.ContentPresenter> in <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.Primitives.TickBar> in <xref:System.Windows.Controls.Slider>.  
+    5.  Tipi di helper basati su tipi. Esempio: <xref:System.Windows.Controls.ContentPresenter> nelle <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.Primitives.TickBar> in <xref:System.Windows.Controls.Slider>.  
   
     6.  Elementi helper con nome. Esempio: <xref:System.Windows.Controls.TextBox> in <xref:System.Windows.Controls.ComboBox>.  
   
@@ -118,6 +118,6 @@ Questo documento offre un riepilogo di una serie di procedure consigliate per la
   
 -   **Gli stili dei temi non devono necessariamente presentare una semantica dei "layout" coerente in tutti i temi**. L'uso dello stile predefinito, ad esempio, non deve garantire che un controllo abbia le stesse dimensioni in tutti i temi o che il contenuto abbia gli stessi margini o la stessa spaziatura interna in tutti i temi.  
   
-## <a name="see-also"></a>Vedere anche  
- [Applicazione di stili e modelli](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [Cenni preliminari sulla modifica di controlli](../../../../docs/framework/wpf/controls/control-authoring-overview.md)
+## <a name="see-also"></a>Vedere anche
+- [Applicazione di stili e modelli](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Cenni preliminari sulla modifica di controlli](../../../../docs/framework/wpf/controls/control-authoring-overview.md)

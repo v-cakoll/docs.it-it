@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1aea8cb4c180477fdd763a8af2f251db2d37d066
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3ef92fbe5ba99d93eaf06aacc7efd943136e9785
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33436637"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543198"
 ---
 # <a name="icorruntimehoststop-method"></a>Metodo ICorRuntimeHost::Stop
 Arresta l'esecuzione di codice in fase di esecuzione per il processo corrente.  
@@ -39,23 +39,23 @@ HRESULT Stop ();
 |-------------|-----------------|  
 |S_OK|L'operazione è riuscita.|  
 |S_FALSE|Impossibile completare l'operazione.|  
-|E_FAIL|Si è verificato un errore irreversibile sconosciuto. Se un metodo restituisce E_FAIL, common language runtime (CLR) non è più utilizzabile nel processo. Le chiamate successive a qualsiasi API di hosting restituiranno HOST_E_CLRNOTAVAILABLE.|  
+|E_FAIL|Si è verificato un errore irreversibile sconosciuto. Se un metodo viene restituito E_FAIL, common language runtime (CLR) non è più utilizzabile nel processo. Le chiamate successive a qualsiasi API di hosting restituiranno HOST_E_CLRNOTAVAILABLE.|  
 |HOST_E_CLRNOTAVAILABLE|CLR non è stato caricato in un processo oppure si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.|  
   
 ## <a name="remarks"></a>Note  
- In genere non è necessario chiamare il `Stop` metodo, perché il codice interrompe l'esecuzione quando il processo viene chiuso.  
+ In genere non è necessario chiamare il `Stop` metodo, perché il codice si interrompe l'esecuzione al momento della chiusura del processo.  
   
 > [!NOTE]
->  Dopo una chiamata a `Stop`, Common Language Runtime non è possibile reinizializzare nello stesso processo.  
+>  Dopo una chiamata a `Stop`, CLR non è possibile reinizializzare nello stesso processo.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Mscoree. H  
+ **Intestazione:** MSCorEE.h  
   
- **Libreria:** inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Inclusa come risorsa in Mscoree. dll  
   
  **Versioni di .NET framework:** 1.0, 1.1  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

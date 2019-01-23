@@ -2,12 +2,12 @@
 title: Gestione errori in un'attività Flowchart utilizzando TryCatch
 ms.date: 03/30/2017
 ms.assetid: 50922964-bfe0-4ba8-9422-0e7220d514fd
-ms.openlocfilehash: df3d93087744ce0fba597f5c9f1d2da4b71a50dd
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 56215ecf1b5f2b54333271f2086b831f564ff7c3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845645"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54507499"
 ---
 # <a name="fault-handling-in-a-flowchart-activity-using-trycatch"></a>Gestione errori in un'attività Flowchart utilizzando TryCatch
 In questo esempio viene illustrato come è possibile usare l'attività <xref:System.Activities.Statements.TryCatch> all'interno di un'attività del flusso di controllo complessa.
@@ -18,7 +18,7 @@ In questo esempio viene illustrato come è possibile usare l'attività <xref:Sys
 
 |Parametri|Descrizione|
 |----------------|-----------------|
-|promoCode|Codice promozione. Tipo: String<br /><br /> I valori possibili con descrizione tra parentesi:<br /><br /> -Un singolo (singolo)<br />-Mnk (sposato a senza bambini.) / pol<br />-Mwk (sposato / con bambini.)|
+|promoCode|Codice promozione. Tipo: Stringa<br /><br /> I valori possibili con descrizione tra parentesi:<br /><br /> -Un singolo (singolo)<br />-Mnk (sposato a senza bambini.) / pol<br />-Mwk (sposato / con bambini.)|
 |numKids|Numero di bambini. Tipo: int|
 
  L'attività `CreateFlowchartWithFaults` usa un'attività <xref:System.Activities.Statements.FlowSwitch%601> che passa l'argomento `promoCode` e calcola lo sconto usando la formula seguente.
@@ -27,7 +27,7 @@ In questo esempio viene illustrato come è possibile usare l'attività <xref:Sys
 |--------------------------|--------------------|
 |Single|10|
 |MNK|15|
-|MWK|15 + (1 – 1 /`numberOfKids`)\*10 **Nota:** potenzialmente, questo calcolo può generare un <xref:System.DivideByZeroException>. Viene quindi eseguito il wrapping del calcolo dello sconto in un'attività <xref:System.Activities.Statements.TryCatch> che rileva l'eccezione <xref:System.DivideByZeroException> e imposta lo sconto su zero.|
+|MWK|15 + (1 – 1 /`numberOfKids`)\*10 **Nota:**  Potenzialmente, questo calcolo può generare <xref:System.DivideByZeroException>. Viene quindi eseguito il wrapping del calcolo dello sconto in un'attività <xref:System.Activities.Statements.TryCatch> che rileva l'eccezione <xref:System.DivideByZeroException> e imposta lo sconto su zero.|
 
 #### <a name="to-use-this-sample"></a>Per usare questo esempio
 
@@ -46,6 +46,6 @@ In questo esempio viene illustrato come è possibile usare l'attività <xref:Sys
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\FlowChartWithFaultHandling`  
   
-## <a name="see-also"></a>Vedere anche  
- [Flussi di lavoro del diagramma di flusso](../../../../docs/framework/windows-workflow-foundation/flowchart-workflows.md)  
- [Eccezioni](../../../../docs/framework/windows-workflow-foundation/exceptions.md)
+## <a name="see-also"></a>Vedere anche
+- [Flussi di lavoro del diagramma di flusso](../../../../docs/framework/windows-workflow-foundation/flowchart-workflows.md)
+- [Eccezioni](../../../../docs/framework/windows-workflow-foundation/exceptions.md)

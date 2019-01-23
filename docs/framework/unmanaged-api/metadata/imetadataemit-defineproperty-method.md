@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5c250a577f2ccdbbfefb35225b880c0e4317db36
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 71cdfc6b05288fef020e1aed1870a9a155588d47
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448107"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543081"
 ---
 # <a name="imetadataemitdefineproperty-method"></a>Metodo IMetaDataEmit::DefineProperty
 Crea una definizione di proprietà per il tipo specificato, con l'oggetto specificato `get` e `set` funzioni di accesso, metodo e ottiene un token per tale definizione.  
@@ -69,7 +69,7 @@ HRESULT DefineProperty (
  [in] Il valore predefinito per la proprietà.  
   
  `cchValue`  
- [in] Il conteggio dei (Unicode) i caratteri `pValue`.  
+ [in] Il conteggio dei (Unicode) i caratteri in `pValue`.  
   
  `mdSetter`  
  [in] Il metodo che imposta il valore della proprietà.  
@@ -78,20 +78,20 @@ HRESULT DefineProperty (
  [in] Il metodo che ottiene il valore della proprietà.  
   
  `rmdOtherMethods[]`  
- [in] Matrice di altri metodi associato alla proprietà. Terminare la matrice con un `mdTokenNil`.  
+ [in] Matrice di altri metodi associati alla proprietà. Terminare la matrice con un `mdTokenNil`.  
   
  `pmdProp`  
  [out] Il `mdProperty` token assegnato.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
- **Libreria:** usata come risorsa in Mscoree. dll  
+ **Libreria:** Usato come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [Interfaccia IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [Interfaccia IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

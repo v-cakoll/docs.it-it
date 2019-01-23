@@ -2,12 +2,12 @@
 title: ServiceDescription e riferimento a WSDL
 ms.date: 03/30/2017
 ms.assetid: eedc025d-abd9-46b1-bf3b-61d2d5c95fd6
-ms.openlocfilehash: e70d653519c13d2f40fa2a579b674893e1b7ab02
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 59a7c1aabd3de8cc5948e8dbee3ac113cec658c7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33507361"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54544328"
 ---
 # <a name="servicedescription-and-wsdl-reference"></a>ServiceDescription e riferimento a WSDL
 Questo argomento viene descritto come Windows Communication Foundation (WCF) esegue il mapping di documenti Web Services Description Language (WSDL) da e verso <xref:System.ServiceModel.Description.ServiceDescription> istanze.  
@@ -17,7 +17,7 @@ Questo argomento viene descritto come Windows Communication Foundation (WCF) ese
   
  È inoltre possibile importare istanze <xref:System.ServiceModel.Description.ServiceEndpoint>, <xref:System.ServiceModel.Description.ContractDescription> e <xref:System.ServiceModel.Channels.Binding> da documenti WSDL usando il tipo `WsdlImporter`.  
   
- I documenti WSDL, esportati da WCF, importano qualsiasi definizione di XML Schema utilizzati da documenti XSD esterni. Per ogni spazio dei nomi di destinazione che i tipi di dati usano nel servizio viene esportato un documento XSD separato. Analogamente, per ogni spazio dei nomi di destinazione usato dai contratti di servizio viene esportato un documento WSDL separato.  
+ I documenti WSDL, esportati da WCF, importano eventuali definizioni di XML Schema utilizzate dai documenti di XML Schema esterni. Per ogni spazio dei nomi di destinazione che i tipi di dati usano nel servizio viene esportato un documento XSD separato. Analogamente, per ogni spazio dei nomi di destinazione usato dai contratti di servizio viene esportato un documento WSDL separato.  
   
 ### <a name="servicedescription"></a>ServiceDescription  
  Un'istanza <xref:System.ServiceModel.Description.ServiceDescription> esegue il mapping a un elemento `wsdl:service`. Un'istanza <xref:System.ServiceModel.Description.ServiceDescription> contiene una raccolta di istanze <xref:System.ServiceModel.Description.ServiceEndpoint>, ognuna delle quali esegue il mapping a singoli elementi `wsdl:port`.  
@@ -35,14 +35,14 @@ Questo argomento viene descritto come Windows Communication Foundation (WCF) ese
   
 |Proprietà|Mapping WSDL|  
 |----------------|------------------|  
-|`Name`|Il `wsdl:port` /@name valore per l'endpoint e `wsdl:binding` /@name valore per l'associazione dell'endpoint.|  
+|`Name`|Il `wsdl:port` /@name valore per l'endpoint e il `wsdl:binding` /@name valore per l'associazione dell'endpoint.|  
 |`Address`|Indirizzo per la definizione di `wsdl:port` per l'endpoint.<br /><br /> Il trasporto per l'endpoint determina il formato dell'indirizzo. Ad esempio, per i trasporti supportati WCF è possibile un indirizzo SOAP o un riferimento dell'endpoint.|  
-|`Binding`|Definizione di `wsdl:binding` per l'endpoint.<br /><br /> A differenza di `wsdl:binding` definizioni, le associazioni in WCF non vengono associate ad alcun contratto.|  
+|`Binding`|Definizione di `wsdl:binding` per l'endpoint.<br /><br /> A differenza di `wsdl:binding` definizioni, le associazioni in WCF non sono associate ad alcun contratto.|  
 |`Contract`|Definizione di `wsdl:portType` per l'endpoint.|  
 |`Behaviors`|I comportamenti dell'endpoint che implementano l'interfaccia <xref:System.ServiceModel.Description.IWsdlExportExtension> possono modificare l'elemento `wsdl:port` per l'endpoint.|  
   
 ### <a name="bindings"></a>Associazioni  
- L'istanza di associazione per un'istanza `ServiceEndpoint` esegue il mapping a una definizione di `wsdl:binding`. A differenza `wsdl:binding` definizioni, che devono essere associate a uno specifico `wsdl:portType` definizione, le associazioni WCF sono indipendenti da qualsiasi contratto.  
+ L'istanza di associazione per un'istanza `ServiceEndpoint` esegue il mapping a una definizione di `wsdl:binding`. A differenza `wsdl:binding` le definizioni, che devono essere associate a uno specifico `wsdl:portType` definizione, le associazioni WCF sono indipendenti da qualsiasi contratto.  
   
  Un'associazione è costituita da una raccolta di elementi di associazione. Ogni elemento descrive alcuni aspetti relativi alla modalità di comunicazione tra l'endpoint e i client. Un'associazione comprende inoltre una classe <xref:System.ServiceModel.Channels.MessageVersion> che indica le classi <xref:System.ServiceModel.EnvelopeVersion> e <xref:System.ServiceModel.Channels.AddressingVersion> per l'endpoint.  
   
@@ -59,7 +59,7 @@ Questo argomento viene descritto come Windows Communication Foundation (WCF) ese
  La classe <xref:System.ServiceModel.Channels.TransportBindingElement> per l'associazione determina l'URI (Uniform Resource Identifier) per un'associazione SOAP.  
   
 #### <a name="addressingversion"></a>AddressingVersion  
- L'oggetto `AddressingVersion` in un'associazione esegue il mapping alla versione di indirizzamento usata in `wsd:port`. WCF supporta SOAP 1.1 e SOAP 1.2 indirizzi e WS-Addressing 08/2004 e i riferimenti all'endpoint WS-Addressing 1.0.  
+ L'oggetto `AddressingVersion` in un'associazione esegue il mapping alla versione di indirizzamento usata in `wsd:port`. WCF supporta SOAP 1.1 e SOAP 1.2 indirizzi e WS-Addressing 08/2004 e riferimenti a endpoint WS-Addressing 1.0.  
   
 #### <a name="envelopeversion"></a>EnvelopeVersion  
  L'oggetto `EnvelopeVersion` in un'associazione esegue il mapping alla versione di SOAP usata in `wsdl:binding`. WCF supporta associazioni SOAP 1.1 e SOAP 1.2.  
@@ -75,7 +75,7 @@ Questo argomento viene descritto come Windows Communication Foundation (WCF) ese
 |`Operations`|Definizioni di `wsdl:operation` per il contratto.|  
   
 ### <a name="operations"></a>Operazioni  
- Un <xref:System.ServiceModel.Description.OperationDescription> istanza esegue il mapping a un `wsdl:portType` / `wsdl:operation`. Un elemento `OperationDescription` contiene una raccolta di istanze `MessageDescription` che descrivono i messaggi per l'operazione.  
+ Un' <xref:System.ServiceModel.Description.OperationDescription> istanza mappata a una `wsdl:portType` / `wsdl:operation`. Un elemento `OperationDescription` contiene una raccolta di istanze `MessageDescription` che descrivono i messaggi per l'operazione.  
   
  La modalità di esecuzione del mapping di `OperationDescription` a un documento WSDL è fortemente influenzata dai comportamenti di due operazioni: `DataContractSerializerOperationBehavior` e `XmlSerializerOperationBehavior`.  
   
@@ -101,10 +101,10 @@ Questo argomento viene descritto come Windows Communication Foundation (WCF) ese
   
 |Proprietà|Mapping WSDL|  
 |----------------|------------------|  
-|`XmlSerializerFormatAttribute`|Il `Style` esegue il mapping di proprietà per questo attributo per il `wsdl:binding` / `wsdl:operation` / `soap:operation` /@style valore per l'operazione.<br /><br /> Il `Use` esegue il mapping di proprietà per questo attributo per il `wsdl:binding` / `wsdl:operation` / `soap:operation`/ */@use i valori per tutti i messaggi nell'operazione.|  
+|`XmlSerializerFormatAttribute`|Il `Style` esegue il mapping di proprietà per questo attributo per il `wsdl:binding` / `wsdl:operation` / `soap:operation` /@style valore per l'operazione.<br /><br /> Il `Use` esegue il mapping di proprietà per questo attributo per il `wsdl:binding` / `wsdl:operation` / `soap:operation`/ */@use valori per tutti i messaggi durante l'operazione di.|  
   
 ### <a name="messages"></a>Messages  
- Oggetto `MessageDescription` istanza esegue il mapping a un `wsdl:message` a cui fa riferimento un `wsdl:portType` / `wsdl:operation` / `wsdl:input` o `wsdl:portType` / `wsdl:operation` / `wsdl:output`messaggio in un'operazione. Un elemento `MessageDescription` è costituito da un corpo e da intestazioni.  
+ Oggetto `MessageDescription` istanza mappata a una `wsdl:message` che fa riferimento un `wsdl:portType` / `wsdl:operation` / `wsdl:input` o una `wsdl:portType` / `wsdl:operation` / `wsdl:output`messaggio di un'operazione. Un elemento `MessageDescription` è costituito da un corpo e da intestazioni.  
   
 |Proprietà|Mapping WSDL|  
 |----------------|------------------|  
@@ -116,23 +116,23 @@ Questo argomento viene descritto come Windows Communication Foundation (WCF) ese
 |`ContractDescription.Name`, `OperationContract.Name`|Durante l'esportazione, utilizzato per derivare il `wsdl:message` /@name valore.|  
   
 #### <a name="message-body"></a>Corpo del messaggio  
- Oggetto `MessageBodyDescription` istanza esegue il mapping per il `wsdl:message` / `wsdl:part` le definizioni per il corpo di un messaggio. Il corpo del messaggio può essere wrapped o bare.  
+ A `MessageBodyDescription` istanza esegue il mapping per il `wsdl:message` / `wsdl:part` definizioni per il corpo di un messaggio. Il corpo del messaggio può essere wrapped o bare.  
   
 |Proprietà|Mapping WSDL|  
 |----------------|------------------|  
-|`WrapperName`|Se lo stile non è RPC, il `WrapperName` esegue il mapping al nome dell'elemento a cui fa riferimento il `wsdl:message` / `wsdl:part` con @name impostato su "parameters".|  
-|`WrapperNamespace`|Se lo stile non è RPC, il `WrapperNamespace` esegue il mapping allo spazio dei nomi di elemento per il `wsdl:message` / `wsdl:part` con @name impostato su "parameters".|  
+|`WrapperName`|Se lo stile non è RPC, il `WrapperName` esegue il mapping al nome dell'elemento a cui fanno riferimento le `wsdl:message` / `wsdl:part` con @name impostato su "parameters".|  
+|`WrapperNamespace`|Se lo stile non è RPC, il `WrapperNamespace` viene eseguito il mapping dello spazio dei nomi di elemento per il `wsdl:message` / `wsdl:part` con @name impostato su "parameters".|  
 |`Parts`|Parti del messaggio per questo corpo del messaggio.|  
-|`ReturnValue`|L'elemento figlio dell'elemento wrapper se un elemento wrapper esiste (stile incapsulato da documenti o stile RPC), il primo `wsdl:message` / `wsdl:part` nel messaggio.|  
+|`ReturnValue`|L'elemento figlio dell'elemento wrapper se un elemento wrapper esiste (stile incapsulato da documenti o stile RPC), in caso contrario il primo `wsdl:message` / `wsdl:part` nel messaggio.|  
   
 #### <a name="message-parts"></a>Parti del messaggio  
- Oggetto `MessagePartDescription` istanza esegue il mapping a un `wsdl:message` / `wsdl:part` e il tipo di XML schema o l'elemento che fa riferimento la parte di messaggio.  
+ Oggetto `MessagePartDescription` istanza mappata a una `wsdl:message` / `wsdl:part` e il tipo di XML schema o elemento che fa riferimento la parte del messaggio.  
   
 |Proprietà|Mapping WSDL|  
 |----------------|------------------|  
-|`Name`|Il `wsd:message` / `wsdl:part` /@name valore per la parte del messaggio e il nome dell'elemento che fa riferimento la parte di messaggio.|  
+|`Name`|Il `wsd:message` / `wsdl:part` /@name valore per la parte del messaggio e il nome dell'elemento che fa riferimento la parte del messaggio.|  
 |`Namespace`|Spazio dei nomi dell'elemento al quale fa riferimento la parte del messaggio.|  
-|`Index`|L'indice del `wsdl:message` / `wsdl:part` per il messaggio.|  
+|`Index`|L'indice della `wsdl:message` / `wsdl:part` per il messaggio.|  
 |`ProtectionLevel`|Asserzioni di protezione in un criterio di sicurezza associato alla definizione di `wsdl:message` per questa parte del messaggio. Nel criterio vengono impostati parametri per fare riferimento alla parte del messaggio specifica.|  
 |`MessageType`|Tipo di XML Schema dell'elemento al quale fa riferimento la parte del messaggio.|  
   
@@ -140,16 +140,16 @@ Questo argomento viene descritto come Windows Communication Foundation (WCF) ese
  Un'istanza `MessageHeaderDescription` è una parte del messaggio che esegue il mapping a un'associazione `soap:header` per la parte del messaggio.  
   
 ### <a name="faults"></a>Errori  
- Oggetto `FaultDescription` istanza esegue il mapping a un `wsdl:portType` / `wsdl:operation` / `wsdl:fault` definizione e l'identificatore associato `wsdl:message` definizione. L'elemento `wsdl:message` viene aggiunto allo stesso spazio dei nomi di destinazione del tipo di porta WSDL associato. L'elemento `wsdl:message` ha una sola parte di messaggio denominata "detail" che fa riferimento all'elemento XML Schema che corrisponde al valore della proprietà `DefaultType` per l'istanza `FaultDescription`.  
+ Oggetto `FaultDescription` istanza mappata a una `wsdl:portType` / `wsdl:operation` / `wsdl:fault` definizione e l'identificatore associato `wsdl:message` definizione. L'elemento `wsdl:message` viene aggiunto allo stesso spazio dei nomi di destinazione del tipo di porta WSDL associato. L'elemento `wsdl:message` ha una sola parte di messaggio denominata "detail" che fa riferimento all'elemento XML Schema che corrisponde al valore della proprietà `DefaultType` per l'istanza `FaultDescription`.  
   
 |Proprietà|Mapping WSDL|  
 |----------------|------------------|  
-|`Name`|Il `wsdl:portType` / `wsdl:operation` / `wsdl:fault` /@name valore per il messaggio di errore.|  
+|`Name`|Il `wsdl:portType` / `wsdl:operation` / `wsdl:fault` /@name valore per l'errore.|  
 |`Namespace`|Spazio dei nomi dell'elemento XML Schema al quale fa riferimento il messaggio di dettaglio dell'errore.|  
 |`Action`|Azione SOAP o WS-Addressing per l'errore.|  
 |`ProtectionLevel`|Asserzioni di protezione in un criterio di sicurezza associato alla definizione di `wsdl:message` per questo errore.|  
 |`DetailType`|Tipo XML Schema dell'elemento al quale fa riferimento il messaggio dettagliato.|  
 |`Name, ContractDescription.Name, OperationDescription.Name,`|Utilizzato per derivare il `wsdl:message` /@name valore per il messaggio di errore.|  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.Description>
+## <a name="see-also"></a>Vedere anche
+- <xref:System.ServiceModel.Description>
