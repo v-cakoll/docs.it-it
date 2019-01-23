@@ -2,12 +2,12 @@
 title: Servizio di routing
 ms.date: 03/30/2017
 ms.assetid: ca7c216a-5141-4132-8193-102c181d2eba
-ms.openlocfilehash: 139607614934aedbad9f76172b8e31fb02394d80
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b0d58e70d482532e3f148d3f4f92741f46221982
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522170"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54495305"
 ---
 # <a name="routing-service"></a>Servizio di routing
 Il servizio di routing è un intermediario SOAP generico che funge da router dei messaggi. La funzionalità principale del servizio di routing consiste nella capacità di indirizzare messaggi in base al relativo contenuto, il che rende possibile l'inoltro di un messaggio a un endpoint client in base a un valore presente all'interno del messaggio stesso, nell'intestazione o nel corpo.  
@@ -62,7 +62,7 @@ Il servizio di routing è un intermediario SOAP generico che funge da router dei
  Tramite il routing basato sul contenuto è possibile esporre un endpoint che riceve messaggi dalle applicazioni client esterne e quindi indirizza ogni messaggio all'endpoint interno appropriato in base a un valore all'interno del messaggio. Ciò si rivela utile se si desidera offrire un endpoint specifico per una varietà di applicazioni di back-end e presentare un endpoint dell'applicazione ai clienti in fase di esecuzione del factoring dell'applicazione in una varietà di servizi.  
   
 ### <a name="service-versioning"></a>Controllo delle versioni dei servizi  
- In fase di migrazione a una nuova versione della soluzione, potrebbe essere necessario gestire parallelamente anche la versione precedente per i clienti esistenti. Spesso è quindi necessario che i client che si connettono alla versione più recente usino un indirizzo diverso quando comunicando con la soluzione. Il servizio di routing consente di esporre un endpoint servizio per entrambe le versioni della soluzione indirizzando messaggi alla soluzione appropriata in base a informazioni specifiche della versione contenute nel messaggio. Per un esempio di tale implementazione, vedere [How To: controllo delle versioni del servizio](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md).  
+ In fase di migrazione a una nuova versione della soluzione, potrebbe essere necessario gestire parallelamente anche la versione precedente per i clienti esistenti. Spesso è quindi necessario che i client che si connettono alla versione più recente usino un indirizzo diverso quando comunicando con la soluzione. Il servizio di routing consente di esporre un endpoint servizio per entrambe le versioni della soluzione indirizzando messaggi alla soluzione appropriata in base a informazioni specifiche della versione contenute nel messaggio. Per un esempio di tale implementazione vedere [How To: Controllo delle versioni del servizio](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md).  
   
 ### <a name="priority-routing"></a>Routing prioritario  
  Se si fornisce un servizio per più client, è possibile stipulare con alcuni partner un contratto di servizio in base al quale i rispettivi dati devono essere elaborati separatamente rispetto ai dati degli altri client. Grazie a un filtro che cerca le informazioni specifiche del cliente contenute nel messaggio, è possibile indirizzare agevolmente i messaggi dei partner specifici a un endpoint creato per soddisfare i requisiti del contratto di servizio.  
@@ -105,7 +105,7 @@ Il servizio di routing è un intermediario SOAP generico che funge da router dei
   
 -   Configurazione dinamica  
   
-## <a name="see-also"></a>Vedere anche  
- [Introduzione al routing](../../../../docs/framework/wcf/feature-details/routing-introduction.md)  
- [Contratti di routing](../../../../docs/framework/wcf/feature-details/routing-contracts.md)  
- [Filtri per messaggi](../../../../docs/framework/wcf/feature-details/message-filters.md)
+## <a name="see-also"></a>Vedere anche
+- [Introduzione al routing](../../../../docs/framework/wcf/feature-details/routing-introduction.md)
+- [Contratti di routing](../../../../docs/framework/wcf/feature-details/routing-contracts.md)
+- [Filtri per messaggi](../../../../docs/framework/wcf/feature-details/message-filters.md)

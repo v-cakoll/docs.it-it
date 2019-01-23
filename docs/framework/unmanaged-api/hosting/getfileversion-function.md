@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b772de720a8c3b669bd3cbe9591637d931cb8763
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 349604404487501a692b9a2472ed32878c62d879
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430619"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494808"
 ---
 # <a name="getfileversion-function"></a>Funzione GetFileVersion
 Ottiene informazioni sulla versione di common language runtime (CLR) del file specificato, utilizzando il buffer specificato.  
@@ -47,17 +47,17 @@ HRESULT GetFileVersion (
  [in, out] Il buffer allocato per le informazioni sulla versione che viene restituiti.  
   
  `cchBuffer`  
- [in] Le dimensioni, in caratteri wide, di `szBuffer`.  
+ [in] Le dimensioni, in caratteri "wide", di `szBuffer`.  
   
  `dwLength`  
- [out] Le dimensioni, in byte, dell'oggetto restituito `szBuffer`.  
+ [out] Le dimensioni, in byte, del valore restituito `szBuffer`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Mscoree. H  
+ **Intestazione:** MSCorEE.h  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Funzioni di hosting CLR deprecate](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>Vedere anche
+- [Funzioni di hosting CLR deprecate](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

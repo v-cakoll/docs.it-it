@@ -1,15 +1,15 @@
 ---
-title: Creazione di un'intestazione personalizzata che viene firmata e- o crittografati
+title: Creazione di un'intestazione personalizzata che viene firmata e- o crittografata
 ms.date: 03/30/2017
 ms.assetid: e8668b37-c79f-4714-9de5-afcb88b9ff02
-ms.openlocfilehash: 4770d650cba5c182aa56d9ac7afa39e585512d4b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0f8f86bcb5494cd502d14aff1cf3c4cdf4f8dd33
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33490695"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494821"
 ---
-# <a name="creating-a-custom-header-that-is-signed-and-or-encrypted"></a>Creazione di un'intestazione personalizzata che viene firmata e- o crittografati
+# <a name="creating-a-custom-header-that-is-signed-and-or-encrypted"></a>Creazione di un'intestazione personalizzata che viene firmata e- o crittografata
 Quando si chiama un servizio non WCF tramite un client WCF, è talvolta necessario usare intestazioni SOAP personalizzate. In WCF è presente un bug di canonizzazione che impedisce l'uso di intestazioni personalizzate firmate e crittografate con un servizio non WCF. Il problema è causato dalla canonizzazione errata degli spazi dei nomi XML predefiniti ed è significativo solo in caso di chiamata di servizi non WCF con intestazioni personalizzate firmate e/o crittografate.  Quando il servizio riceve il messaggio che contiene l'intestazione firmata e/o crittografata non è in grado di verificare la firma. Questa soluzione evita il bug di canonizzazione, consente l'interoperabilità con i servizi non WCF, ma non impedisce l'interoperabilità con i servizi WCF.  
   
 ## <a name="defining-the-custom-header"></a>Definizione dell'intestazione personalizzata  
@@ -56,7 +56,7 @@ public  class MyMessageContract
 }  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Impostazione predefinita dei contratti di messaggio](../../../../docs/framework/wcf/samples/default-message-contract.md)  
- [Contratti di messaggio](../../../../docs/framework/wcf/samples/message-contracts.md)  
- [Uso di contratti di messaggio](../../../../docs/framework/wcf/feature-details/using-message-contracts.md)
+## <a name="see-also"></a>Vedere anche
+- [Impostazione predefinita dei contratti di messaggio](../../../../docs/framework/wcf/samples/default-message-contract.md)
+- [Contratti di messaggio](../../../../docs/framework/wcf/samples/message-contracts.md)
+- [Uso di contratti di messaggio](../../../../docs/framework/wcf/feature-details/using-message-contracts.md)

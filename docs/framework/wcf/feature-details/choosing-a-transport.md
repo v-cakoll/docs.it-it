@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - choosing transports [WCF]
 ms.assetid: b169462b-f7b6-4cf4-9fca-d306909ee8bf
-ms.openlocfilehash: e42e6f17a395edd8c765950832f2829a1aea1fe5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 30585263b4c7c9e1f5e593dde15b19e37d5da6a0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199663"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494444"
 ---
 # <a name="choosing-a-transport"></a>Scelta di un trasporto
 In questo argomento vengono descritti i criteri per la scelta tra i tre trasporti principali inclusi in Windows Communication Foundation (WCF): HTTP, TCP e named pipe. WCF include anche un Microsoft message queuing (noto anche come MSMQ) del trasporto, ma in questo documento non illustra il servizio Accodamento messaggi.  
@@ -45,7 +45,7 @@ In questo argomento vengono descritti i criteri per la scelta tra i tre trasport
  Quando la comunicazione è necessaria tra diverse applicazioni WCF in un singolo computer e si desidera impedire qualsiasi comunicazione da un altro computer, quindi utilizzare il trasporto di named pipe. Un vincolo ulteriore consiste nella possibilità di limitare i processi in esecuzione dal desktop remoto di Windows alla stessa sessione di Connessione desktop remoto, a meno che dispongano di privilegi elevati.  
   
 > [!WARNING]
->  Quando si usa il trasporto named pipe con una prenotazione URL debole con caratteri jolly su più siti ospitati in IIS, potrebbe verificarsi l'errore seguente: si è verificato un errore nel servizio di attivazione 'NetPipeActivator' del protocollo 'NET. pipe' durante il tentativo di ascolto per il sito '2', In questo modo il protocollo è temporaneamente disabilitato per il sito. Vedere il messaggio di eccezione per altri dettagli. URL: WeakWildcard:net.pipe:/\<nome computer > / stato: ConflictingRegistration Exception: nome processo: SMSvcHost Process ID: 1076 \  
+>  Quando si usa il trasporto named pipe con una prenotazione URL debole con caratteri jolly su più siti ospitati in IIS, potrebbe verificarsi l'errore seguente: Si è verificato un errore nel servizio di attivazione 'NetPipeActivator' del protocollo 'NET. pipe' durante il tentativo di ascolto per il sito '2', pertanto il protocollo è temporaneamente disattivato per il sito. Vedere il messaggio di eccezione per altri dettagli. URL: WeakWildcard:net.pipe:/\<nome computer > / stato: ConflictingRegistration Exception:  Nome processo: SMSvcHost Process ID: 1076\  
   
 ## <a name="decision-points-for-choosing-a-transport"></a>Fattori essenziali per la scelta di un trasporto  
  Nella tabella seguente vengono illustrati i fattori essenziali utilizzati per scegliere un trasporto. È necessario considerare qualsiasi attributo e trasporto aggiuntivo applicabile all'applicazione. Identificare gli attributi che sono importanti per l'applicazione, identificare i trasporti che possono essere agevolmente associati a ognuno degli attributi e quindi selezionare i trasporti che funzionano meglio con gli attributi utilizzati.  
@@ -61,16 +61,16 @@ In questo argomento vengono descritti i criteri per la scelta tra i tre trasport
 |Velocità effettiva|La velocità effettiva misura la quantità di dati che possono essere trasmessi ed elaborati in uno specifico periodo di tempo. Analogamente alla latenza, il trasporto scelto può influire sulla velocità effettiva per le operazioni del servizio. Per ottimizzare la velocità effettiva di un trasporto, è necessario ottimizzare sia il sovraccarico legato alla trasmissione del contenuto che il tempo trascorso in attesa del completamento dello scambio del messaggio. Sia il trasporti TCP che named pipe aggiungono un sovraccarico minimo al corpo del messaggio e supportano una forma duplex nativa che riduce l'attesa per le risposte del messaggio.|TCP, named pipe|  
 |Strumenti|Gli strumenti rappresentano la possibilità che un protocollo supporti applicazioni di terze parti per lo sviluppo, la diagnosi, l'hosting e altre attività. Lo sviluppo di strumenti e software da utilizzare con il protocollo HTTP comporta un investimento notevole.|HTTP|  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.BasicHttpBinding>  
- <xref:System.ServiceModel.WSHttpBinding>  
- <xref:System.ServiceModel.WSDualHttpBinding>  
- <xref:System.ServiceModel.WSFederationHttpBinding>  
- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
- <xref:System.ServiceModel.NetTcpBinding>  
- <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
- <xref:System.ServiceModel.NetNamedPipeBinding>  
- <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>  
- [Associazioni](../../../../docs/framework/wcf/feature-details/bindings.md)  
- [Associazioni fornite dal sistema](../../../../docs/framework/wcf/system-provided-bindings.md)  
- [Creazione di associazioni definite dall'utente](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.ServiceModel.BasicHttpBinding>
+- <xref:System.ServiceModel.WSHttpBinding>
+- <xref:System.ServiceModel.WSDualHttpBinding>
+- <xref:System.ServiceModel.WSFederationHttpBinding>
+- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>
+- <xref:System.ServiceModel.NetTcpBinding>
+- <xref:System.ServiceModel.Channels.TcpTransportBindingElement>
+- <xref:System.ServiceModel.NetNamedPipeBinding>
+- <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>
+- [Associazioni](../../../../docs/framework/wcf/feature-details/bindings.md)
+- [Associazioni fornite dal sistema](../../../../docs/framework/wcf/system-provided-bindings.md)
+- [Creazione di associazioni definite dall'utente](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)

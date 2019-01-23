@@ -17,18 +17,18 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d141d23f02b2abc92e3d4455aebe1a4057b6bb85
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ee68533e95deb4b6efaa9226c047599f233b3954
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426473"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494756"
 ---
 # <a name="isymunmanagedreaderinitialize-method"></a>Metodo ISymUnmanagedReader::Initialize
-Inizializza il lettore di simboli con l'interfaccia dell'utilità di importazione dei metadati che il lettore verrà associato, insieme al nome file del modulo.  
+Inizializza il lettore di simboli con l'interfaccia dell'utilità di importazione dei metadati che verrà associato, insieme al nome file del modulo di questo lettore.  
   
 > [!NOTE]
->  Questo metodo può essere chiamato una sola volta e deve essere chiamato prima di altri metodi di lettura.  
+>  Questo metodo può essere chiamato una sola volta e deve essere chiamato prima degli altri metodi di lettura.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,25 +42,25 @@ HRESULT Initialize (
   
 #### <a name="parameters"></a>Parametri  
  `importer`  
- [in] L'interfaccia dell'utilità di importazione dei metadati al quale verrà associato questo reader.  
+ [in] L'interfaccia dell'utilità di importazione di metadati con cui verrà associato questo lettore.  
   
  `filename`  
- [in] Il nome file del modulo. È possibile utilizzare il `pIStream` parametro invece.  
+ [in] Nome file del modulo. È possibile usare il `pIStream` parametro invece.  
   
  `searchPath`  
  [in] Il percorso di ricerca. Questo parametro è facoltativo.  
   
  `pIStream`  
- [in] Flusso di file, utilizzato come alternativa al parametro filename.  
+ [in] Il flusso di file, usato come alternativa per il parametro filename.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK se il metodo ha esito positivo. in caso contrario, E_FAIL o un altro codice di errore.  
+ S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o qualche altro codice di errore.  
   
 ## <a name="remarks"></a>Note  
- È necessario specificare uno solo del `filename` o `pIStream` parametri, non entrambi. Il parametro `searchPath` è facoltativo.  
+ È necessario specificare solo uno dei `filename` o il `pIStream` parametri, non entrambi. Il parametro `searchPath` è facoltativo.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** CorSym. idl, CorSym.h  
+ **Intestazione:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

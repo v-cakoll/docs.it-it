@@ -6,15 +6,15 @@ helpviewer_keywords:
 - Sub Expression [Visual Basic]
 - subroutines [Visual Basic], sub expressions
 ms.assetid: 36b6bfd1-6539-4d8f-a5eb-6541a745ffde
-ms.openlocfilehash: 602212e664fa3362742fb1ba0dc033610272d3af
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d27ca262aa2349d34d78844e0aea0f96a1ced65c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33603535"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54496309"
 ---
 # <a name="sub-expression-visual-basic"></a>Sottoespressione (Visual Basic)
-Dichiara i parametri e il codice che definiscono un'espressione lambda subroutine.  
+Dichiara i parametri e il codice che definiscono un'espressione lambda di subroutine.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -30,36 +30,36 @@ End Sub
   
 |Termine|Definizione|  
 |---|---|  
-|`parameterlist`|Facoltativo. Un elenco di nomi di variabili locali che rappresentano i parametri della procedura. Le parentesi devono essere presenti anche quando l'elenco è vuoto. Per ulteriori informazioni, vedere [elenco parametri](../../../visual-basic/language-reference/statements/parameter-list.md).|  
+|`parameterlist`|Facoltativo. Elenco di nomi delle variabili locali che rappresentano i parametri della procedura. Le parentesi devono essere presenti anche quando l'elenco è vuoto. Per altre informazioni, vedere [Parameter List](../../../visual-basic/language-reference/statements/parameter-list.md).|  
 |`statement`|Obbligatorio. Una singola istruzione.|  
 |`statements`|Obbligatorio. Un elenco di istruzioni.|  
   
 ## <a name="remarks"></a>Note  
- Oggetto *espressione lambda* è una subroutine che non dispone di un nome e che viene eseguita una o più istruzioni. È possibile usare qualsiasi un'espressione lambda che è possibile utilizzare un tipo delegato, tranne come argomento di `RemoveHandler`. Per ulteriori informazioni sui delegati e l'utilizzo delle espressioni lambda con i delegati, vedere [istruzione Delegate](../../../visual-basic/language-reference/statements/delegate-statement.md) e [conversione di tipo Relaxed del delegato](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).  
+ Oggetto *espressione lambda* è una subroutine che non dispone di un nome e che esegue una o più istruzioni. È possibile usare un'espressione lambda in qualsiasi punto che è possibile usare un tipo delegato, ad eccezione come argomento a `RemoveHandler`. Per altre informazioni sui delegati e l'uso delle espressioni lambda con i delegati, vedere [istruzione Delegate](../../../visual-basic/language-reference/statements/delegate-statement.md) e [conversione di tipo Relaxed del delegato](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).  
   
 ## <a name="lambda-expression-syntax"></a>Sintassi delle espressioni lambda  
- La sintassi di un'espressione lambda è simile a quello di una subroutine standard. Come indicato di seguito sono riportate le differenze:  
+ La sintassi di un'espressione lambda è simile a quello di una subroutine standard. Le differenze sono i seguenti:  
   
 -   Un'espressione lambda non ha un nome.  
   
 -   Un'espressione lambda non può avere un modificatore, ad esempio `Overloads` o `Overrides`.  
   
--   Il corpo di un'espressione lambda a riga singola deve essere un'istruzione, non è un'espressione. Il corpo può essere costituito da una chiamata a una routine sub, ma non una chiamata a una routine di funzione.  
+-   Il corpo di un'espressione lambda a riga singola deve essere un'istruzione, non un'espressione. Il corpo può essere costituito da una chiamata a una routine sub, ma non da una chiamata a una routine di funzione.  
   
 -   In un'espressione lambda, tutti i parametri devono avere specificati tipi di dati o tutti i parametri devono essere dedotti.  
   
--   Parametro facoltativo e `ParamArray` parametri non sono consentiti nelle espressioni lambda.  
+-   Facoltativo e `ParamArray` parametri non sono consentiti nelle espressioni lambda.  
   
--   Parametri generici non sono consentiti nelle espressioni lambda.  
+-   I parametri generici non sono consentiti nelle espressioni lambda.  
   
 ## <a name="example"></a>Esempio  
- Ecco un esempio di un'espressione lambda che scrive un valore nella console. L'esempio illustra entrambi la sintassi di espressione lambda a riga singola e su più righe di una subroutine. Per ulteriori esempi, vedere [espressioni Lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
+ Ecco un esempio di un'espressione lambda che scrive un valore nella console. L'esempio illustra sia la sintassi delle espressioni lambda a riga singola e a più righe di una subroutine. Per altri esempi, vedere [espressioni Lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
  [!code-vb[VbVbalrLambdas#15](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/sub-expression_1.vb)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Istruzione Sub](../../../visual-basic/language-reference/statements/sub-statement.md)  
- [Espressioni lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)  
- [Operatori ed espressioni](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)  
- [Istruzioni](../../../visual-basic/programming-guide/language-features/statements.md)  
- [Conversione di tipo relaxed del delegato](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
+## <a name="see-also"></a>Vedere anche
+- [Istruzione Sub](../../../visual-basic/language-reference/statements/sub-statement.md)
+- [Espressioni lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
+- [Operatori ed espressioni](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+- [Istruzioni](../../../visual-basic/programming-guide/language-features/statements.md)
+- [Conversione di tipo relaxed del delegato](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)

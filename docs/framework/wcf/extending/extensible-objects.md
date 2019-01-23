@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - extensible objects [WCF]
 ms.assetid: bc88cefc-31fb-428e-9447-6d20a7d452af
-ms.openlocfilehash: 95bd354e3aed8e0968debcac160383eb9c26cd0a
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: f2738d6e3a5fc75ab2f5714dc6644267e4fa1e29
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805197"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54495838"
 ---
 # <a name="extensible-objects"></a>Oggetti estensibili
 Questo modello viene usato per estendere le classi di runtime esistenti con nuove funzionalità oppure per aggiungere un nuovo stato a un oggetto. Le estensioni, allegate a uno degli oggetti estensibili, attivano i comportamenti in fasi molto diverse dell'elaborazione per accedere a stato e funzionalità condivisi allegati a un oggetto estensibile comune al quale possono accedere.  
   
-## <a name="the-iextensibleobjectt-pattern"></a>Il IExtensibleObject\<T > modello  
+## <a name="the-iextensibleobjectt-pattern"></a>Modello IExtensibleObject\<T > modello  
  Nel modello di oggetti estensibili sono disponibili tre interfacce: <xref:System.ServiceModel.IExtensibleObject%601>, <xref:System.ServiceModel.IExtension%601> e <xref:System.ServiceModel.IExtensionCollection%601>.  
   
  L'interfaccia <xref:System.ServiceModel.IExtensibleObject%601> viene implementata dai tipi che consentono agli oggetti <xref:System.ServiceModel.IExtension%601> di personalizzare la funzionalità.  
@@ -40,7 +40,7 @@ where T : IExtensibleObject<T>
   
  L'oggetto passato al metodo <xref:System.ServiceModel.IExtensionCollection%601.FindAll%2A> o al metodo <xref:System.ServiceModel.IExtensionCollection%601.Find%2A> non deve necessariamente essere <xref:System.ServiceModel.IExtension%601> (ad esempio, è possibile passare qualsiasi oggetto), ma l'estensione restituita è un'interfaccia <xref:System.ServiceModel.IExtension%601>.  
   
- Se nessuna estensione nella raccolta è un <xref:System.ServiceModel.IExtension%601>, <xref:System.ServiceModel.IExtensionCollection%601.Find%2A> restituisce un valore null e <xref:System.ServiceModel.IExtensionCollection%601.FindAll%2A> restituisce una raccolta vuota. Se più estensioni implementano <xref:System.ServiceModel.IExtension%601>, <xref:System.ServiceModel.IExtensionCollection%601.Find%2A> restituisce una di esse. Il valore restituito dal metodo <xref:System.ServiceModel.IExtensionCollection%601.FindAll%2A> è un'istantanea.
+ Se nessuna estensione nella raccolta è un' <xref:System.ServiceModel.IExtension%601>, <xref:System.ServiceModel.IExtensionCollection%601.Find%2A> restituisce null, e <xref:System.ServiceModel.IExtensionCollection%601.FindAll%2A> restituisce una raccolta vuota. Se più estensioni implementano <xref:System.ServiceModel.IExtension%601>, <xref:System.ServiceModel.IExtensionCollection%601.Find%2A> restituisce una di esse. Il valore restituito dal metodo <xref:System.ServiceModel.IExtensionCollection%601.FindAll%2A> è un'istantanea.
   
  Sono disponibili due scenari principali. Nel primo scenario la proprietà <xref:System.ServiceModel.IExtensibleObject%601.Extensions%2A> viene usa come un dizionario basato sui tipi per inserire lo stato su un oggetto allo scopo di consentire a un altro componente di ricercarlo usando il tipo.  
   
@@ -65,7 +65,7 @@ where T : IExtensibleObject<T>
   
  [!code-csharp[IInstanceContextInitializer#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/iinstancecontextinitializer/cs/initializer.cs#1)]  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.IExtensibleObject%601>  
- <xref:System.ServiceModel.IExtension%601>  
- <xref:System.ServiceModel.IExtensionCollection%601>
+## <a name="see-also"></a>Vedere anche
+- <xref:System.ServiceModel.IExtensibleObject%601>
+- <xref:System.ServiceModel.IExtension%601>
+- <xref:System.ServiceModel.IExtensionCollection%601>
