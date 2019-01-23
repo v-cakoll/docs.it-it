@@ -17,32 +17,32 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9ec44d4c2757555c74fe7fc27c26cc5fc87c4517
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7595b4a69dd327e448aade1e2dcba06100e55bf4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426687"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638682"
 ---
-# <a name="isymunmanagedwritersetuserentrypoint-method"></a><span data-ttu-id="d4f4a-102">Metodo ISymUnmanagedWriter::SetUserEntryPoint</span><span class="sxs-lookup"><span data-stu-id="d4f4a-102">ISymUnmanagedWriter::SetUserEntryPoint Method</span></span>
-<span data-ttu-id="d4f4a-103">Specifica il metodo definito dall'utente che è il punto di ingresso per questo modulo.</span><span class="sxs-lookup"><span data-stu-id="d4f4a-103">Specifies the user-defined method that is the entry point for this module.</span></span> <span data-ttu-id="d4f4a-104">Ad esempio, questo punto di ingresso potrebbe essere il metodo dell'utente principale invece stub generato dal compilatore prima del form principale.</span><span class="sxs-lookup"><span data-stu-id="d4f4a-104">For example, this entry point could be the user's main method instead of compiler-generated stubs before main.</span></span>  
+# <a name="isymunmanagedwritersetuserentrypoint-method"></a><span data-ttu-id="2056e-102">Metodo ISymUnmanagedWriter::SetUserEntryPoint</span><span class="sxs-lookup"><span data-stu-id="2056e-102">ISymUnmanagedWriter::SetUserEntryPoint Method</span></span>
+<span data-ttu-id="2056e-103">Specifica il metodo definito dall'utente che è il punto di ingresso per questo modulo.</span><span class="sxs-lookup"><span data-stu-id="2056e-103">Specifies the user-defined method that is the entry point for this module.</span></span> <span data-ttu-id="2056e-104">Ad esempio, il punto di ingresso potrebbe essere il metodo dell'utente principale invece stub generato dal compilatore prima main.</span><span class="sxs-lookup"><span data-stu-id="2056e-104">For example, this entry point could be the user's main method instead of compiler-generated stubs before main.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d4f4a-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="d4f4a-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2056e-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="2056e-105">Syntax</span></span>  
   
 ```  
 HRESULT SetUserEntryPoint(  
     [in] mdMethodDef entryMethod);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="d4f4a-106">Parametri</span><span class="sxs-lookup"><span data-stu-id="d4f4a-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="2056e-106">Parametri</span><span class="sxs-lookup"><span data-stu-id="2056e-106">Parameters</span></span>  
  `entryMethod`  
- <span data-ttu-id="d4f4a-107">[in] Scegliere il token di metadati per il metodo che è la voce dell'utente.</span><span class="sxs-lookup"><span data-stu-id="d4f4a-107">[in] The metadata token for the method that is the user entry point.</span></span>  
+ <span data-ttu-id="2056e-107">[in] Scegliere il token di metadati per il metodo che è la voce dell'utente.</span><span class="sxs-lookup"><span data-stu-id="2056e-107">[in] The metadata token for the method that is the user entry point.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="d4f4a-108">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="d4f4a-108">Return Value</span></span>  
- <span data-ttu-id="d4f4a-109">S_OK se il metodo ha esito positivo. in caso contrario, E_FAIL o un altro codice di errore.</span><span class="sxs-lookup"><span data-stu-id="d4f4a-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="2056e-108">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="2056e-108">Return Value</span></span>  
+ <span data-ttu-id="2056e-109">S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o qualche altro codice di errore.</span><span class="sxs-lookup"><span data-stu-id="2056e-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d4f4a-110">Requisiti</span><span class="sxs-lookup"><span data-stu-id="d4f4a-110">Requirements</span></span>  
- <span data-ttu-id="d4f4a-111">**Intestazione:** CorSym. idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="d4f4a-111">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2056e-110">Requisiti</span><span class="sxs-lookup"><span data-stu-id="2056e-110">Requirements</span></span>  
+ <span data-ttu-id="2056e-111">**Intestazione:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="2056e-111">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d4f4a-112">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="d4f4a-112">See Also</span></span>  
- [<span data-ttu-id="d4f4a-113">Interfaccia ISymUnmanagedWriter</span><span class="sxs-lookup"><span data-stu-id="d4f4a-113">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+## <a name="see-also"></a><span data-ttu-id="2056e-112">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="2056e-112">See also</span></span>
+- [<span data-ttu-id="2056e-113">Interfaccia ISymUnmanagedWriter</span><span class="sxs-lookup"><span data-stu-id="2056e-113">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

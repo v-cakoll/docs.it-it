@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4959d595030df476f5554841c2ae3c73a86a2c31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 70d2d4ed0d2b923b1095fd0ce898330c319fa5cf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446659"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54637372"
 ---
-# <a name="corserializationtype-enumeration"></a><span data-ttu-id="7be2e-102">Enumerazione CorSerializationType</span><span class="sxs-lookup"><span data-stu-id="7be2e-102">CorSerializationType Enumeration</span></span>
-<span data-ttu-id="7be2e-103">Specifica come un oggetto viene serializzato da common language runtime.</span><span class="sxs-lookup"><span data-stu-id="7be2e-103">Specifies how an object is serialized by the common language runtime.</span></span>  
+# <a name="corserializationtype-enumeration"></a><span data-ttu-id="d0ad2-102">Enumerazione CorSerializationType</span><span class="sxs-lookup"><span data-stu-id="d0ad2-102">CorSerializationType Enumeration</span></span>
+<span data-ttu-id="d0ad2-103">Specifica come un oggetto viene serializzato da common language runtime.</span><span class="sxs-lookup"><span data-stu-id="d0ad2-103">Specifies how an object is serialized by the common language runtime.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7be2e-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="7be2e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d0ad2-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="d0ad2-104">Syntax</span></span>  
   
 ```  
 typedef enum CorSerializationType {  
@@ -55,37 +55,37 @@ typedef enum CorSerializationType {
 } CorSerializationType;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="7be2e-105">Membri</span><span class="sxs-lookup"><span data-stu-id="7be2e-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="d0ad2-105">Membri</span><span class="sxs-lookup"><span data-stu-id="d0ad2-105">Members</span></span>  
   
-|<span data-ttu-id="7be2e-106">Membro</span><span class="sxs-lookup"><span data-stu-id="7be2e-106">Member</span></span>|<span data-ttu-id="7be2e-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="7be2e-107">Description</span></span>|  
+|<span data-ttu-id="d0ad2-106">Membro</span><span class="sxs-lookup"><span data-stu-id="d0ad2-106">Member</span></span>|<span data-ttu-id="d0ad2-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="d0ad2-107">Description</span></span>|  
 |------------|-----------------|  
-|`SERIALIZATION_TYPE_UNDEFINED`|<span data-ttu-id="7be2e-108">Serializzazione dell'oggetto è definita.</span><span class="sxs-lookup"><span data-stu-id="7be2e-108">Serialization of the object is undefined.</span></span>|  
-|`SERIALIZATION_TYPE_BOOLEAN`|<span data-ttu-id="7be2e-109">L'oggetto è serializzato come tipo booleano.</span><span class="sxs-lookup"><span data-stu-id="7be2e-109">Object is serialized as a Boolean type</span></span>|  
-|`SERIALIZATION_TYPE_CHAR`|<span data-ttu-id="7be2e-110">Oggetto viene serializzato come tipo di carattere.</span><span class="sxs-lookup"><span data-stu-id="7be2e-110">Object is serialized as a character type.</span></span>|  
-|`SERIALIZATION_TYPE_I1`|<span data-ttu-id="7be2e-111">Oggetto viene serializzato come un intero con segno a 1 byte.</span><span class="sxs-lookup"><span data-stu-id="7be2e-111">Object is serialized as a signed 1-byte integer.</span></span>|  
-|`SERIALIZATION_TYPE_U1`|<span data-ttu-id="7be2e-112">Oggetto viene serializzato come un intero senza segno a 1 byte.</span><span class="sxs-lookup"><span data-stu-id="7be2e-112">Object is serialized as an unsigned 1-byte integer.</span></span>|  
-|`SERIALIZATION_TYPE_I2`|<span data-ttu-id="7be2e-113">Oggetto viene serializzato come un intero con segno a 2 byte.</span><span class="sxs-lookup"><span data-stu-id="7be2e-113">Object is serialized as a signed 2-byte integer.</span></span>|  
-|`SERIALIZATION_TYPE_U2`|<span data-ttu-id="7be2e-114">Oggetto viene serializzato come un intero senza segno a 2 byte.</span><span class="sxs-lookup"><span data-stu-id="7be2e-114">Object is serialized as an unsigned 2-byte integer.</span></span>|  
-|`SERIALIZATION_TYPE_I4`|<span data-ttu-id="7be2e-115">Oggetto viene serializzato come un intero con segno a 4 byte.</span><span class="sxs-lookup"><span data-stu-id="7be2e-115">Object is serialized as a signed 4-byte integer.</span></span>|  
-|`SERIALIZATION_TYPE_U4`|<span data-ttu-id="7be2e-116">Oggetto viene serializzato come un intero senza segno a 4 byte.</span><span class="sxs-lookup"><span data-stu-id="7be2e-116">Object is serialized as an unsigned 4-byte integer.</span></span>|  
-|`SERIALIZATION_TYPE_I8`|<span data-ttu-id="7be2e-117">Oggetto viene serializzato come un intero con segno a 8 byte.</span><span class="sxs-lookup"><span data-stu-id="7be2e-117">Object is serialized as a signed 8-byte integer.</span></span>|  
-|`SERIALIZATION_TYPE_U8`|<span data-ttu-id="7be2e-118">Oggetto viene serializzato come un intero senza segno a 8 byte.</span><span class="sxs-lookup"><span data-stu-id="7be2e-118">Object is serialized as an unsigned 8-byte integer.</span></span>|  
-|`SERIALIZATION_TYPE_R4`|<span data-ttu-id="7be2e-119">Oggetto viene serializzato come un punto a virgola mobile a 4 byte.</span><span class="sxs-lookup"><span data-stu-id="7be2e-119">Object is serialized as a 4-byte floating point.</span></span>|  
-|`SERIALIZATION_TYPE_R8`|<span data-ttu-id="7be2e-120">Oggetto viene serializzato come un punto a virgola mobile a 8 byte.</span><span class="sxs-lookup"><span data-stu-id="7be2e-120">Object is serialized as an 8-byte floating point.</span></span>|  
-|`SERIALIZATION_TYPE_STRING`|<span data-ttu-id="7be2e-121">Oggetto viene serializzato come tipo System. String.</span><span class="sxs-lookup"><span data-stu-id="7be2e-121">Object is serialized as a System.String type.</span></span>|  
-|`SERIALIZATION_TYPE_SZARRAY`|<span data-ttu-id="7be2e-122">L'oggetto viene serializzato come unidimensionale, matrice di limite inferiore zero.</span><span class="sxs-lookup"><span data-stu-id="7be2e-122">Object is serialized as a single-dimensional, zero lower-bound array.</span></span>|  
-|`SERIALIZATION_TYPE_TYPE`|<span data-ttu-id="7be2e-123">Oggetto viene serializzato come tipo generico.</span><span class="sxs-lookup"><span data-stu-id="7be2e-123">Object is serialized as a generic type.</span></span>|  
-|`SERIALIZATION_TYPE_TAGGED_OBJECT`|<span data-ttu-id="7be2e-124">Oggetto viene serializzato come oggetto con tag.</span><span class="sxs-lookup"><span data-stu-id="7be2e-124">Object is serialized as a tagged object.</span></span>|  
-|`SERIALIZATION_TYPE_FIELD`|<span data-ttu-id="7be2e-125">Oggetto viene serializzato come un campo.</span><span class="sxs-lookup"><span data-stu-id="7be2e-125">Object is serialized as a field.</span></span>|  
-|`SERIALIZATION_TYPE_PROPERTY`|<span data-ttu-id="7be2e-126">Oggetto viene serializzato come proprietà.</span><span class="sxs-lookup"><span data-stu-id="7be2e-126">Object is serialized as a property.</span></span>|  
-|`SERIALIZATION_TYPE_ENUM`|<span data-ttu-id="7be2e-127">Oggetto viene serializzato come un'enumerazione.</span><span class="sxs-lookup"><span data-stu-id="7be2e-127">Object is serialized as an enumeration.</span></span>|  
+|`SERIALIZATION_TYPE_UNDEFINED`|<span data-ttu-id="d0ad2-108">Serializzazione dell'oggetto non è definita.</span><span class="sxs-lookup"><span data-stu-id="d0ad2-108">Serialization of the object is undefined.</span></span>|  
+|`SERIALIZATION_TYPE_BOOLEAN`|<span data-ttu-id="d0ad2-109">L'oggetto viene serializzato come un tipo Boolean</span><span class="sxs-lookup"><span data-stu-id="d0ad2-109">Object is serialized as a Boolean type</span></span>|  
+|`SERIALIZATION_TYPE_CHAR`|<span data-ttu-id="d0ad2-110">Oggetto viene serializzato come tipo di carattere.</span><span class="sxs-lookup"><span data-stu-id="d0ad2-110">Object is serialized as a character type.</span></span>|  
+|`SERIALIZATION_TYPE_I1`|<span data-ttu-id="d0ad2-111">Oggetto viene serializzato come un intero con segno a 1 byte.</span><span class="sxs-lookup"><span data-stu-id="d0ad2-111">Object is serialized as a signed 1-byte integer.</span></span>|  
+|`SERIALIZATION_TYPE_U1`|<span data-ttu-id="d0ad2-112">Oggetto viene serializzato come un intero senza segno a 1 byte.</span><span class="sxs-lookup"><span data-stu-id="d0ad2-112">Object is serialized as an unsigned 1-byte integer.</span></span>|  
+|`SERIALIZATION_TYPE_I2`|<span data-ttu-id="d0ad2-113">Oggetto viene serializzato come un intero con segno a 2 byte.</span><span class="sxs-lookup"><span data-stu-id="d0ad2-113">Object is serialized as a signed 2-byte integer.</span></span>|  
+|`SERIALIZATION_TYPE_U2`|<span data-ttu-id="d0ad2-114">Oggetto viene serializzato come un intero senza segno a 2 byte.</span><span class="sxs-lookup"><span data-stu-id="d0ad2-114">Object is serialized as an unsigned 2-byte integer.</span></span>|  
+|`SERIALIZATION_TYPE_I4`|<span data-ttu-id="d0ad2-115">Oggetto viene serializzato come un intero con segno a 4 byte.</span><span class="sxs-lookup"><span data-stu-id="d0ad2-115">Object is serialized as a signed 4-byte integer.</span></span>|  
+|`SERIALIZATION_TYPE_U4`|<span data-ttu-id="d0ad2-116">Oggetto viene serializzato come un intero senza segno a 4 byte.</span><span class="sxs-lookup"><span data-stu-id="d0ad2-116">Object is serialized as an unsigned 4-byte integer.</span></span>|  
+|`SERIALIZATION_TYPE_I8`|<span data-ttu-id="d0ad2-117">Oggetto viene serializzato come un intero con segno a 8 byte.</span><span class="sxs-lookup"><span data-stu-id="d0ad2-117">Object is serialized as a signed 8-byte integer.</span></span>|  
+|`SERIALIZATION_TYPE_U8`|<span data-ttu-id="d0ad2-118">Oggetto viene serializzato come un intero senza segno a 8 byte.</span><span class="sxs-lookup"><span data-stu-id="d0ad2-118">Object is serialized as an unsigned 8-byte integer.</span></span>|  
+|`SERIALIZATION_TYPE_R4`|<span data-ttu-id="d0ad2-119">Oggetto viene serializzato come virgola mobile a 4 byte.</span><span class="sxs-lookup"><span data-stu-id="d0ad2-119">Object is serialized as a 4-byte floating point.</span></span>|  
+|`SERIALIZATION_TYPE_R8`|<span data-ttu-id="d0ad2-120">Oggetto viene serializzato come un punto a virgola mobile a 8 byte.</span><span class="sxs-lookup"><span data-stu-id="d0ad2-120">Object is serialized as an 8-byte floating point.</span></span>|  
+|`SERIALIZATION_TYPE_STRING`|<span data-ttu-id="d0ad2-121">Oggetto viene serializzato come tipo System. String.</span><span class="sxs-lookup"><span data-stu-id="d0ad2-121">Object is serialized as a System.String type.</span></span>|  
+|`SERIALIZATION_TYPE_SZARRAY`|<span data-ttu-id="d0ad2-122">L'oggetto viene serializzato come un singolo-dimensionale, matrice di limite inferiore zero.</span><span class="sxs-lookup"><span data-stu-id="d0ad2-122">Object is serialized as a single-dimensional, zero lower-bound array.</span></span>|  
+|`SERIALIZATION_TYPE_TYPE`|<span data-ttu-id="d0ad2-123">Oggetto viene serializzato come tipo generico.</span><span class="sxs-lookup"><span data-stu-id="d0ad2-123">Object is serialized as a generic type.</span></span>|  
+|`SERIALIZATION_TYPE_TAGGED_OBJECT`|<span data-ttu-id="d0ad2-124">Oggetto viene serializzato come oggetto con tag.</span><span class="sxs-lookup"><span data-stu-id="d0ad2-124">Object is serialized as a tagged object.</span></span>|  
+|`SERIALIZATION_TYPE_FIELD`|<span data-ttu-id="d0ad2-125">Oggetto viene serializzato come un campo.</span><span class="sxs-lookup"><span data-stu-id="d0ad2-125">Object is serialized as a field.</span></span>|  
+|`SERIALIZATION_TYPE_PROPERTY`|<span data-ttu-id="d0ad2-126">Oggetto viene serializzato come una proprietà.</span><span class="sxs-lookup"><span data-stu-id="d0ad2-126">Object is serialized as a property.</span></span>|  
+|`SERIALIZATION_TYPE_ENUM`|<span data-ttu-id="d0ad2-127">Oggetto viene serializzato come enumerazione.</span><span class="sxs-lookup"><span data-stu-id="d0ad2-127">Object is serialized as an enumeration.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="7be2e-128">Requisiti</span><span class="sxs-lookup"><span data-stu-id="7be2e-128">Requirements</span></span>  
- <span data-ttu-id="7be2e-129">**Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7be2e-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d0ad2-128">Requisiti</span><span class="sxs-lookup"><span data-stu-id="d0ad2-128">Requirements</span></span>  
+ <span data-ttu-id="d0ad2-129">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d0ad2-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7be2e-130">**Intestazione:** CorHdr. H</span><span class="sxs-lookup"><span data-stu-id="7be2e-130">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="d0ad2-130">**Intestazione:** CorHdr. H</span><span class="sxs-lookup"><span data-stu-id="d0ad2-130">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="7be2e-131">**Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7be2e-131">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="d0ad2-131">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d0ad2-131">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7be2e-132">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="7be2e-132">See Also</span></span>  
- [<span data-ttu-id="7be2e-133">Enumerazioni dei metadati</span><span class="sxs-lookup"><span data-stu-id="7be2e-133">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="d0ad2-132">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="d0ad2-132">See also</span></span>
+- [<span data-ttu-id="d0ad2-133">Enumerazioni dei metadati</span><span class="sxs-lookup"><span data-stu-id="d0ad2-133">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
