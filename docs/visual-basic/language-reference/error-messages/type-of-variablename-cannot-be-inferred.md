@@ -1,5 +1,5 @@
 ---
-title: Tipo di &#39; &lt;variablename&gt; &#39; non può essere dedotto perché i limiti del ciclo e la variabile di passaggio si amplia nello stesso tipo
+title: Tipo di &#39; &lt;variablename&gt; &#39; non può essere dedotto perché i limiti del ciclo e la clausola dell'istruzione non si convertono allo stesso tipo
 ms.date: 07/20/2015
 f1_keywords:
 - bc30982
@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30982
 ms.assetid: 741e85d9-a747-42ad-a1e1-a3f1928aaff5
-ms.openlocfilehash: d6fdd9445b5336773d150c643c7bf1ca58a0c87a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1ae14426181778a78254db8a5cd968d60bbdc8f1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33597152"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631261"
 ---
-# <a name="type-of-39ltvariablenamegt39-cannot-be-inferred-because-the-loop-bounds-and-the-step-variable-do-not-widen-to-the-same-type"></a>Tipo di &#39; &lt;variablename&gt; &#39; non può essere dedotto perché i limiti del ciclo e la variabile di passaggio si amplia nello stesso tipo
-È stato scritto un `For...Next` ciclo in cui il compilatore non è possibile dedurre un tipo di dati per la variabile di controllo perché vengono soddisfatte le condizioni seguenti:  
+# <a name="type-of-39ltvariablenamegt39-cannot-be-inferred-because-the-loop-bounds-and-the-step-variable-do-not-widen-to-the-same-type"></a>Tipo di &#39; &lt;variablename&gt; &#39; non può essere dedotto perché i limiti del ciclo e la clausola dell'istruzione non si convertono allo stesso tipo
+È stato scritto un `For...Next` ciclo in cui il compilatore non è possibile dedurre un tipo di dati per la variabile di controllo ciclo perché vengono soddisfatte le condizioni seguenti:  
   
 -   Il tipo di dati della variabile di controllo del ciclo non è specificato con una clausola `As` .  
   
@@ -23,9 +23,9 @@ ms.locfileid: "33597152"
   
 -   Non esiste alcuna conversione standard tra i tipi di dati.  
   
- Pertanto, il compilatore non è possibile dedurre il tipo di dati della variabile di controllo di un ciclo.  
+ Pertanto, il compilatore non può dedurre il tipo di dati della variabile di controllo del ciclo.  
   
- Nell'esempio seguente, la variabile di passaggio è un carattere e i limiti del ciclo sono entrambe numeri interi. Poiché non esiste alcuna conversione standard tra i caratteri e numeri interi, viene restituito questo errore.  
+ Nell'esempio seguente, la clausola dell'istruzione è un carattere e i limiti del ciclo sono entrambe numeri interi. Perché non esiste alcuna conversione standard tra i caratteri e numeri interi, viene segnalato questo errore.  
   
 ```vb  
 Dim stepVar = "1"c  
@@ -42,7 +42,7 @@ Dim n = 20
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
--   Modificare i tipi di limiti del ciclo e passaggio in base alle esigenze in modo che almeno uno di essi è un tipo che gli altri vengono ampliati ai. Nell'esempio precedente, modificare il tipo di `stepVar` a `Integer`.  
+-   Modificare i tipi dei limiti del ciclo e passaggio in base alle esigenze in modo che almeno uno di essi è un tipo in cui gli altri ampliarsi. Nell'esempio precedente, modificare il tipo della `stepVar` a `Integer`.  
   
     ```  
     Dim stepVar = 1  
@@ -54,7 +54,7 @@ Dim n = 20
     Dim stepVar As Integer = 1  
     ```  
   
--   Utilizzare le funzioni di conversione esplicita per convertire i limiti del ciclo e passaggio per i tipi appropriati. Nell'esempio precedente, applicare il `Val` funzione `stepVar`.  
+-   Usare funzioni di conversione esplicita per convertire i limiti del ciclo e passaggio per i tipi appropriati. Nell'esempio precedente, si applicano i `Val` funzione `stepVar`.  
   
     ```  
     For i = 1 To 10 Step Val(stepVar)  
@@ -62,11 +62,11 @@ Dim n = 20
     Next  
     ```  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:Microsoft.VisualBasic.Conversion.Val%2A>  
- [Istruzione For...Next](../../../visual-basic/language-reference/statements/for-next-statement.md)  
- [Conversioni implicite ed esplicite](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
- [Inferenza del tipo di variabile locale](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
- [Istruzione Option Infer](../../../visual-basic/language-reference/statements/option-infer-statement.md)  
- [Funzioni di conversione del tipo](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [Conversioni di ampliamento e restrizione](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:Microsoft.VisualBasic.Conversion.Val%2A>
+- [Istruzione For...Next](../../../visual-basic/language-reference/statements/for-next-statement.md)
+- [Conversioni implicite ed esplicite](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
+- [Inferenza del tipo di variabile locale](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [Istruzione Option Infer](../../../visual-basic/language-reference/statements/option-infer-statement.md)
+- [Funzioni di conversione del tipo](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Conversioni di ampliamento e restrizione](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
