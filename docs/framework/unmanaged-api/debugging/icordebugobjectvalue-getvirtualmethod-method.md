@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 09db41c71ef21ed6422785d3127c11af08420110
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 55877f42d7def89cf29dc156ba7f7a4b6613c753
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417378"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559723"
 ---
 # <a name="icordebugobjectvaluegetvirtualmethod-method"></a>Metodo ICorDebugObjectValue::GetVirtualMethod
-`GetVirtualMethod` non è implementata in questa versione di .NET Framework.  
+`GetVirtualMethod` non è implementato in questa versione di .NET Framework.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,8 +37,8 @@ HRESULT GetVirtualMethod (
 ```  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
-## <a name="see-also"></a>Vedere anche  
-    
- 
+## <a name="see-also"></a>Vedere anche
+
+

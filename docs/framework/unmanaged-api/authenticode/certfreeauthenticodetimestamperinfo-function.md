@@ -10,15 +10,15 @@ api_type:
 ms.assetid: 3eb14c49-68c2-4516-ac89-e5bd7473831c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9c37a9af6a1532d03fa04ca151605cef7ab5244e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 27c16cb5d85ddffc1646bee893c5644682812025
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401768"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54560581"
 ---
 # <a name="certfreeauthenticodetimestamperinfo-function"></a>Funzione CertFreeAuthenticodeTimestamperInfo
-Libera le risorse allocate per il [AXL_AUTHENTICODE_TIMESTAMPER_INFO](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-timestamper-info-structure.md) struttura.  
+Libera le risorse allocate per la [AXL_AUTHENTICODE_TIMESTAMPER_INFO](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-timestamper-info-structure.md) struttura.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -30,10 +30,10 @@ HRESULT CertFreeAuthenticodeTimestamperInfo (
   
 #### <a name="parameters"></a>Parametri  
  `pTimestamperInfo`  
- [in, out] Informazioni relative a chi ha apposto il timestamp da rilasciare. Vedere il [AXL_AUTHENTICODE_TIMESTAMPER_INFO](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-timestamper-info-structure.md) struttura.  
+ [in, out] Informazioni relative a chi ha apposto il timestamp da rilasciare. Vedere le [AXL_AUTHENTICODE_TIMESTAMPER_INFO](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-timestamper-info-structure.md) struttura.  
   
 ## <a name="return-value"></a>Valore restituito  
  `S_OK` se la funzione ha esito positivo. In caso contrario, verrà restituito un codice di errore.  
   
-## <a name="see-also"></a>Vedere anche  
- [Authenticode](../../../../docs/framework/unmanaged-api/authenticode/index.md)
+## <a name="see-also"></a>Vedere anche
+- [Authenticode](../../../../docs/framework/unmanaged-api/authenticode/index.md)

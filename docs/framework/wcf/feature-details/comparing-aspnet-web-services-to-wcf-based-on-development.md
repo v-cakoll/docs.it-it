@@ -2,12 +2,12 @@
 title: Confronto tra servizi Web ASP.NET e WCF basato sullo sviluppo
 ms.date: 03/30/2017
 ms.assetid: f362d00e-ce82-484f-9d4f-27e579d5c320
-ms.openlocfilehash: c4c07d24ba322c957aac5ba9fa6ed3a5f337fb9a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 6bf9743410d3138efd5f3ea151b58f61e46ef683
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127368"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54496793"
 ---
 # <a name="comparing-aspnet-web-services-to-wcf-based-on-development"></a>Confronto tra servizi Web ASP.NET e WCF basato sullo sviluppo
 Windows Communication Foundation (WCF) è un'opzione di modalità di compatibilità ASP.NET per consentire alle applicazioni WCF di essere programmate e configurate, ad esempio servizi Web ASP.NET e riprodurne il comportamento. Le sezioni seguenti confrontare servizi Web ASP.NET e WCF basato sugli elementi necessari per sviluppare applicazioni usando entrambe le tecnologie.  
@@ -750,5 +750,5 @@ public void Receive(Message input)
 ## <a name="globalization"></a>Globalizzazione  
  Il linguaggio di configurazione di ASP.NET consente di specificare le impostazioni cultura per i singoli servizi. WCF non supporta questa impostazione di configurazione eccetto in modalità di compatibilità ASP.NET. Per localizzare un servizio WCF che non utilizza modalità di compatibilità ASP.NET, compilare il tipo di servizio in assembly specifici delle impostazioni cultura e disporre endpoint specifico delle impostazioni cultura separati per ogni assembly di impostazioni cultura specifiche.  
   
-## <a name="see-also"></a>Vedere anche  
- [Confronto tra i servizi Web ASP.NET e WCF in base a scopo e standard usati](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md)
+## <a name="see-also"></a>Vedere anche
+- [Confronto tra i servizi Web ASP.NET e WCF in base a scopo e standard usati](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md)

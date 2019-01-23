@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bdac4b5b7a4a64a5fc939a7d35718ef276717fe7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 36ded85cd2d8ebe49ee0b1e190266061cb56dfb7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415428"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54496741"
 ---
 # <a name="icordebugmanagedcallbackcreateappdomain-method"></a>Metodo ICorDebugManagedCallback::CreateAppDomain
-Notifica al debugger che è stato creato un dominio applicazione.  
+Notifica al debugger che è stato creato un dominio dell'applicazione.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,16 +41,16 @@ HRESULT CreateAppDomain (
  [in] Un puntatore a un oggetto ICorDebugProcess che rappresenta il processo in cui è stato creato il dominio dell'applicazione.  
   
  `pAppDomain`  
- [in] Un puntatore a un oggetto ICorDebugAppDomain che rappresenta il dominio applicazione che è stato creato.  
+ [in] Un puntatore a un oggetto ICorDebugAppDomain che rappresenta il dominio applicazione creato.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

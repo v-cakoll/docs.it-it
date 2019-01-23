@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 660da82f1e6d6d3ea8ba084885331c895bc64542
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 406fdfcfc0b6db988b317245aaaa4f4a643b2079
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424726"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54561400"
 ---
 # <a name="isymunmanageddocumentgetchecksum-method"></a>Metodo ISymUnmanagedDocument::GetCheckSum
 Ottiene il checksum.  
@@ -38,16 +38,16 @@ HRESULT GetCheckSum(
   
 #### <a name="parameters"></a>Parametri  
  `cData`  
- [in] La lunghezza del buffer fornito per il `data` parametro  
+ [in] La lunghezza del buffer fornito dal `data` parametro  
   
  `pcData`  
- [out] Le dimensioni e la lunghezza del valore di checksum, in byte.  
+ [out] Le dimensioni e lunghezza del checksum, in byte.  
   
  `data`  
  [out] Buffer che riceve il valore di checksum.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK se il metodo ha esito positivo. in caso contrario, un codice di errore.  
+ S_OK se il metodo ha esito positivo; in caso contrario, un codice di errore.  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ISymUnmanagedDocument](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ISymUnmanagedDocument](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

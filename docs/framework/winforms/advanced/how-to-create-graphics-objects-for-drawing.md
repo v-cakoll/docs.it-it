@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: creare oggetti Graphics per disegnare'
+title: 'Procedura: Creare oggetti Graphics per disegnare'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - images [Windows Forms], creating
 - GDI+, creating images
 ms.assetid: 162861f9-f050-445e-8abb-b2c43a918b8b
-ms.openlocfilehash: 54175e27ca46431299db369f67f02051ef08d0d2
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a21e049cb91ec29bcd46eb04efd78487da9a6317
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185196"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54497032"
 ---
-# <a name="how-to-create-graphics-objects-for-drawing"></a>Procedura: creare oggetti Graphics per disegnare
+# <a name="how-to-create-graphics-objects-for-drawing"></a>Procedura: Creare oggetti Graphics per disegnare
 Prima di poter creare linee e forme, il rendering del testo, o visualizzare e manipolare immagini con [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], è necessario creare un <xref:System.Drawing.Graphics> oggetto. Il <xref:System.Drawing.Graphics> oggetto rappresenta un [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] superficie di disegno ed è l'oggetto che viene usato per creare immagini grafiche.  
   
  Nell'utilizzo dei grafici sono disponibili due passaggi:  
@@ -33,11 +33,11 @@ Prima di poter creare linee e forme, il rendering del testo, o visualizzare e ma
   
 -   Riceve un riferimento a un oggetto grafico come parte del <xref:System.Windows.Forms.PaintEventArgs> nella <xref:System.Windows.Forms.Control.Paint> eventi di un form o controllo. Si tratta in genere come si ottiene un riferimento a un oggetto grafico durante la creazione di codice di disegno per un controllo. Allo stesso modo, è possibile ottenere un oggetto grafico come una proprietà del <xref:System.Drawing.Printing.PrintPageEventArgs> quando si gestiscono le <xref:System.Drawing.Printing.PrintDocument.PrintPage> evento per un <xref:System.Drawing.Printing.PrintDocument>.  
   
-     oppure  
+     -oppure-  
   
 -   Chiamare il <xref:System.Windows.Forms.Control.CreateGraphics%2A> metodo di un controllo o form per ottenere un riferimento a un <xref:System.Drawing.Graphics> oggetto che rappresenta la superficie di disegno di tale controllo o form. Usare questo metodo se si desidera disegnare su un form o controllo già esistente.  
   
-     oppure  
+     -oppure-  
   
 -   Creare un <xref:System.Drawing.Graphics> oggetti da qualsiasi oggetto che eredita da <xref:System.Drawing.Image>. Questo approccio è utile quando si desidera modificare un'immagine già esistente.  
   
@@ -166,12 +166,12 @@ Prima di poter creare linee e forme, il rendering del testo, o visualizzare e ma
     |Per eseguire il rendering|Vedere|  
     |---------------|---------|  
     |Linee|[Procedura: Disegnare una linea in un Windows Form](../../../../docs/framework/winforms/advanced/how-to-draw-a-line-on-a-windows-form.md)|  
-    |Forme|[Procedura: Creare una forma con contorno](../../../../docs/framework/winforms/advanced/how-to-draw-an-outlined-shape.md)|  
+    |Forme|[Procedura: Disegnare una forma con contorno](../../../../docs/framework/winforms/advanced/how-to-draw-an-outlined-shape.md)|  
     |Testo|[Procedura: Disegnare testo in un Windows Form](../../../../docs/framework/winforms/advanced/how-to-draw-text-on-a-windows-form.md)|  
     |Immagini|[Procedura: Eseguire il rendering delle immagini con GDI+](../../../../docs/framework/winforms/advanced/how-to-render-images-with-gdi.md)|  
   
-## <a name="see-also"></a>Vedere anche  
- [Introduzione alla programmazione grafica](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)  
- [Grafica e disegno in Windows Form](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
- [Linee, curve e forme](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
- [Procedura: Eseguire il rendering delle immagini con GDI+](../../../../docs/framework/winforms/advanced/how-to-render-images-with-gdi.md)
+## <a name="see-also"></a>Vedere anche
+- [Introduzione alla programmazione grafica](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)
+- [Grafica e disegno in Windows Form](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
+- [Linee, curve e forme](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)
+- [Procedura: Eseguire il rendering delle immagini con GDI+](../../../../docs/framework/winforms/advanced/how-to-render-images-with-gdi.md)

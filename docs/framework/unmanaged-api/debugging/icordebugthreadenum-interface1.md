@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ca683e5925325fae2470aca3cd67be39c12a055d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 100dc6c83c7c1d45ddb2ea0396c5115c4d79a7f8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423273"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54560360"
 ---
 # <a name="icordebugthreadenum-interface1"></a>ICorDebugThreadEnum Interface1
 Implementa i metodi ICorDebugEnum ed enumera le matrici ICorDebugThread.  
@@ -30,7 +30,7 @@ Implementa i metodi ICorDebugEnum ed enumera le matrici ICorDebugThread.
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo Next](../../../../docs/framework/unmanaged-api/debugging/icordebugthreadenum-next-method.md)|Ottiene il numero specificato di `ICorDebugThread` istanze nell'enumerazione, a partire dalla posizione corrente.|  
+|[Metodo Next](../../../../docs/framework/unmanaged-api/debugging/icordebugthreadenum-next-method.md)|Ottiene il numero specificato di `ICorDebugThread` istanze dall'enumerazione, iniziando in corrispondenza della posizione corrente.|  
   
 ## <a name="remarks"></a>Note  
   
@@ -38,13 +38,13 @@ Implementa i metodi ICorDebugEnum ed enumera le matrici ICorDebugThread.
 >  Questa interfaccia non supporta la chiamata in modalità remota, tra computer o tra processi.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

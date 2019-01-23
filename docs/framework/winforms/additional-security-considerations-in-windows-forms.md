@@ -7,12 +7,12 @@ helpviewer_keywords:
 - security [Windows Forms], calling APIs
 - Clipboard [Windows Forms], securing access
 ms.assetid: 15abda8b-0527-47c7-aedb-77ab595f2bf1
-ms.openlocfilehash: 0dc0ddaa1f64b75c0b4ccc1f5e73638576ea3da2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2d7f5bfc1532775d092fbee1ef9cdc3c7ed5efc6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43523482"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54496657"
 ---
 # <a name="additional-security-considerations-in-windows-forms"></a>Considerazioni aggiuntive sulla sicurezza in Windows Form
 Le impostazioni di sicurezza di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] potrebbero modificare l'esecuzione di un'applicazione in un ambiente ad attendibilità parziale rispetto al computer locale. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] limita l'accesso a tali risorse locali critiche, ad esempio il file system, la rete e le API non gestite. Le impostazioni di sicurezza influiscono sulla capacità di chiamare l'API Microsoft Win32 o altre API non verificabili dal sistema di sicurezza. La sicurezza influisce inoltre su altri aspetti dell'applicazione, inclusi l'accesso ai file e ai dati e la stampa. Per altre informazioni sull'accesso a file e dati in un ambiente ad attendibilità parziale, vedere [More Secure File and Data Access in Windows Forms](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md) (Accesso più sicuro a file e dati in Windows Form). Per altre informazioni sulla stampa in un ambiente ad attendibilità parziale, vedere [More Secure Printing in Windows Forms](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md) (Stampa più sicura in Windows Form).  
@@ -86,11 +86,11 @@ Le impostazioni di sicurezza di [!INCLUDE[dnprdnshort](../../../includes/dnprdns
   
  Se l'applicazione non è autorizzato a chiamare codice non gestito, l'applicazione deve richiedere <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> autorizzazione oppure è necessario prendere in considerazione modi alternativi di implementazione di funzionalità, in molti casi, Windows Form fornisce un'alternativa gestita alle API Win32 funzioni. Se non esistono metodi alternativi e l'applicazione deve accedere a codice non gestito, sarà necessario elevare le autorizzazioni per l'applicazione.  
   
- L'autorizzazione a chiamare codice non gestito consente a un'applicazione di eseguire praticamente qualsiasi operazione. Fornire pertanto tale autorizzazione solo alle applicazioni provenienti da fonti attendibili. In alternativa, a seconda dell'applicazione, la caratteristica che esegue la chiamata al codice non gestite potrebbe essere facoltativa oppure abilitata solo in un ambiente ad attendibilità totale. Per altre informazioni sulle autorizzazioni pericolose, vedere [Autorizzazioni pericolose e amministrazione dei criteri](../../../docs/framework/misc/dangerous-permissions-and-policy-administration.md). Per altre informazioni sull'elevazione delle autorizzazioni, vedere [NIB: General Security Policy Administration](https://msdn.microsoft.com/library/5121fe35-f0e3-402c-94ab-4f35b0a87b4b) (NIB: Amministrazione generale dei criteri di sicurezza).  
+ L'autorizzazione a chiamare codice non gestito consente a un'applicazione di eseguire praticamente qualsiasi operazione. Fornire pertanto tale autorizzazione solo alle applicazioni provenienti da fonti attendibili. In alternativa, a seconda dell'applicazione, la caratteristica che esegue la chiamata al codice non gestite potrebbe essere facoltativa oppure abilitata solo in un ambiente ad attendibilità totale. Per altre informazioni sulle autorizzazioni pericolose, vedere [Autorizzazioni pericolose e amministrazione dei criteri](../../../docs/framework/misc/dangerous-permissions-and-policy-administration.md). Per altre informazioni sull'elevazione delle autorizzazioni, vedere [NIB: Amministrazione generale dei criteri di sicurezza](https://msdn.microsoft.com/library/5121fe35-f0e3-402c-94ab-4f35b0a87b4b).  
   
-## <a name="see-also"></a>Vedere anche  
- [Accesso più sicuro a file e dati in Windows Form](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md)  
- [Stampa più sicura in Windows Forms](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md)  
- [Panoramica della sicurezza in Windows Forms](../../../docs/framework/winforms/security-in-windows-forms-overview.md)  
- [Sicurezza di Windows Form](../../../docs/framework/winforms/windows-forms-security.md)  
- [Sicurezza di applicazioni ClickOnce](/visualstudio/deployment/securing-clickonce-applications)
+## <a name="see-also"></a>Vedere anche
+- [Accesso più sicuro a file e dati in Windows Form](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md)
+- [Stampa più sicura in Windows Forms](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md)
+- [Panoramica della sicurezza in Windows Forms](../../../docs/framework/winforms/security-in-windows-forms-overview.md)
+- [Sicurezza di Windows Form](../../../docs/framework/winforms/windows-forms-security.md)
+- [Sicurezza di applicazioni ClickOnce](/visualstudio/deployment/securing-clickonce-applications)

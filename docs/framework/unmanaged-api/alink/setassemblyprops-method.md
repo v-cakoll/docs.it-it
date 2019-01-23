@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aed553a3a8d54b5229a122e76b61e3e58d4af3c1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 65d6e929a0a6fb5e1933a6c9216dfc5b56342113
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401966"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54560646"
 ---
 # <a name="setassemblyprops-method"></a>Metodo SetAssemblyProps
 Assegna la proprietà a livello di assembly.  
@@ -51,12 +51,12 @@ HRESULT SetAssemblyProps(
  Nuovo valore dell'opzione.  
   
 ## <a name="return-value"></a>Valore restituito  
- Se il metodo ha esito positivo, restituisce S_OK.  
+ Restituisce S_OK se il metodo ha esito positivo.  
   
 ## <a name="requirements"></a>Requisiti  
  Richiede alink.h.  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [Interfaccia IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [Alink (API)](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [Interfaccia IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [Alink (API)](../../../../docs/framework/unmanaged-api/alink/index.md)

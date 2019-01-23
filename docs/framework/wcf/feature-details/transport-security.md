@@ -2,12 +2,12 @@
 title: Protezione del trasporto
 ms.date: 03/30/2017
 ms.assetid: 86c94153-e48d-4539-b6cf-cd8060582e7f
-ms.openlocfilehash: 7fab84b830917c22d684a06dfbfb2dd540703845
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f9cb184c1fae3088f6bc682e4e54c63f201ac8c7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192499"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559931"
 ---
 # <a name="transport-security"></a>Protezione del trasporto
 Sicurezza del trasporto in Windows Communication Foundation (WCF) dipende dall'associazione selezionata. Il trasporto implementato dall'associazione determina l'effettivo meccanismo di sicurezza. Negli argomenti contenuti in questa sezione sono illustrati i meccanismi implementati e le rispettive opzioni.  
@@ -38,5 +38,5 @@ Sicurezza del trasporto in Windows Communication Foundation (WCF) dipende dall'a
 ## <a name="related-sections"></a>Sezioni correlate  
  [Protezione di servizi e client](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
   
-## <a name="see-also"></a>Vedere anche  
- [Programmazione delle funzionalità di sicurezza di WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
+## <a name="see-also"></a>Vedere anche
+- [Programmazione delle funzionalità di sicurezza di WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
