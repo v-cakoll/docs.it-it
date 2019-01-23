@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 660da82f1e6d6d3ea8ba084885331c895bc64542
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 406fdfcfc0b6db988b317245aaaa4f4a643b2079
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424726"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54561400"
 ---
-# <a name="isymunmanageddocumentgetchecksum-method"></a><span data-ttu-id="cc805-102">Metodo ISymUnmanagedDocument::GetCheckSum</span><span class="sxs-lookup"><span data-stu-id="cc805-102">ISymUnmanagedDocument::GetCheckSum Method</span></span>
-<span data-ttu-id="cc805-103">Ottiene il checksum.</span><span class="sxs-lookup"><span data-stu-id="cc805-103">Gets the checksum.</span></span>  
+# <a name="isymunmanageddocumentgetchecksum-method"></a><span data-ttu-id="cd5be-102">Metodo ISymUnmanagedDocument::GetCheckSum</span><span class="sxs-lookup"><span data-stu-id="cd5be-102">ISymUnmanagedDocument::GetCheckSum Method</span></span>
+<span data-ttu-id="cd5be-103">Ottiene il checksum.</span><span class="sxs-lookup"><span data-stu-id="cd5be-103">Gets the checksum.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cc805-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="cc805-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cd5be-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="cd5be-104">Syntax</span></span>  
   
 ```  
 HRESULT GetCheckSum(  
@@ -36,18 +36,18 @@ HRESULT GetCheckSum(
     [out, size_is(cData), length_is(*pcData)] BYTE data[]);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="cc805-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="cc805-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="cd5be-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="cd5be-105">Parameters</span></span>  
  `cData`  
- <span data-ttu-id="cc805-106">[in] La lunghezza del buffer fornito per il `data` parametro</span><span class="sxs-lookup"><span data-stu-id="cc805-106">[in] The length of the buffer provided by the `data` parameter</span></span>  
+ <span data-ttu-id="cd5be-106">[in] La lunghezza del buffer fornito dal `data` parametro</span><span class="sxs-lookup"><span data-stu-id="cd5be-106">[in] The length of the buffer provided by the `data` parameter</span></span>  
   
  `pcData`  
- <span data-ttu-id="cc805-107">[out] Le dimensioni e la lunghezza del valore di checksum, in byte.</span><span class="sxs-lookup"><span data-stu-id="cc805-107">[out] The size and length of the checksum, in bytes.</span></span>  
+ <span data-ttu-id="cd5be-107">[out] Le dimensioni e lunghezza del checksum, in byte.</span><span class="sxs-lookup"><span data-stu-id="cd5be-107">[out] The size and length of the checksum, in bytes.</span></span>  
   
  `data`  
- <span data-ttu-id="cc805-108">[out] Buffer che riceve il valore di checksum.</span><span class="sxs-lookup"><span data-stu-id="cc805-108">[out] The buffer that receives the checksum.</span></span>  
+ <span data-ttu-id="cd5be-108">[out] Buffer che riceve il valore di checksum.</span><span class="sxs-lookup"><span data-stu-id="cd5be-108">[out] The buffer that receives the checksum.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="cc805-109">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="cc805-109">Return Value</span></span>  
- <span data-ttu-id="cc805-110">S_OK se il metodo ha esito positivo. in caso contrario, un codice di errore.</span><span class="sxs-lookup"><span data-stu-id="cc805-110">S_OK if the method succeeds; otherwise, an error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="cd5be-109">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="cd5be-109">Return Value</span></span>  
+ <span data-ttu-id="cd5be-110">S_OK se il metodo ha esito positivo; in caso contrario, un codice di errore.</span><span class="sxs-lookup"><span data-stu-id="cd5be-110">S_OK if the method succeeds; otherwise, an error code.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cc805-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="cc805-111">See Also</span></span>  
- [<span data-ttu-id="cc805-112">Interfaccia ISymUnmanagedDocument</span><span class="sxs-lookup"><span data-stu-id="cc805-112">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+## <a name="see-also"></a><span data-ttu-id="cd5be-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="cd5be-111">See also</span></span>
+- [<span data-ttu-id="cd5be-112">Interfaccia ISymUnmanagedDocument</span><span class="sxs-lookup"><span data-stu-id="cd5be-112">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
