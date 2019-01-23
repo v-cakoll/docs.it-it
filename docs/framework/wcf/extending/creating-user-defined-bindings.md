@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - user-defined bindings [WCF]
 ms.assetid: c4960675-d701-4bc9-b400-36a752fdd08b
-ms.openlocfilehash: 7be7c156ec20a15cf8d1a12d8d1f429b6c2c33a9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6b3a5bbc93fa6465f70295cc6a3d7528039fb787
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50186057"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54548794"
 ---
 # <a name="creating-user-defined-bindings"></a>Creazione di associazioni definite dall'utente
 Esistono diversi modi per creare associazioni non fornite dal sistema:  
@@ -23,7 +23,7 @@ Esistono diversi modi per creare associazioni non fornite dal sistema:
 ## <a name="the-order-of-binding-elements"></a>Ordine degli elementi di associazione  
  Ogni elemento di associazione rappresenta una fase di elaborazione durante l'invio o la ricezione di messaggi. In fase di esecuzione, gli elementi di associazione creano i canali e i listener necessari per generare stack di canali in uscita e in ingresso.  
   
- Sono disponibili tre tipi di elementi di associazione: elementi di associazione di protocollo, elementi di associazione di codifica ed elementi di associazione del trasporto.  
+ Esistono tre tipi principali di elementi di associazione: Associazione di elementi, gli elementi di associazione di codifica e gli elementi di associazione di trasporto di protocollo.  
   
  Elementi di associazione di protocollo: rappresentano passaggi di elaborazione di livello superiore che agiscono sui messaggi. I canali e i listener creati da questi elementi di associazione possono aggiungere, rimuovere o modificare il contenuto del messaggio. Una determinata associazione può avere un numero arbitrario di elementi di associazione di protocollo, ognuno dei quali eredita da <xref:System.ServiceModel.Channels.BindingElement>. Windows Communication Foundation (WCF) include diversi elementi di associazione di protocollo, tra cui il <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> e il <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>.  
   
@@ -56,7 +56,7 @@ Binding customBinding = new CustomBinding(
 );  
 ```  
   
- La modalità di scrittura del nuovo elemento di associazione dipende dalla funzionalità esatta. Uno degli esempi [trasporto: UDP](../../../../docs/framework/wcf/samples/transport-udp.md), fornisce una descrizione dettagliata di come implementare un tipo di elemento di associazione.  
+ La modalità di scrittura del nuovo elemento di associazione dipende dalla funzionalità esatta. Uno degli esempi, [trasporto: UDP](../../../../docs/framework/wcf/samples/transport-udp.md), fornisce una descrizione dettagliata di come implementare un tipo di elemento di associazione.  
   
 ## <a name="creating-a-new-binding"></a>Creazione di una nuova associazione  
  Un elemento di associazione creato dall'utente può essere usato in due modi. Nella sezione precedente è stato illustrato il primo modo, ovvero tramite un'associazione personalizzata. Un'associazione personalizzata consente all'utente di creare una propria associazione basata su un set arbitrario di elementi di associazione, inclusi quelli creati dall'utente.  
@@ -118,6 +118,6 @@ public override BindingElementCollection CreateBindingElements()
 ## <a name="deriving-from-a-standard-binding"></a>Derivazione da un'associazione standard  
  Invece di creare una classe di associazioni completamente nuova, è possibile estendere una delle associazioni fornite dal sistema esistenti. Analogamente al caso precedente, è necessario eseguire l'override del metodo <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> e della proprietà <xref:System.ServiceModel.Channels.Binding.Scheme%2A>.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.Channels.Binding>  
- [Associazioni personalizzate](../../../../docs/framework/wcf/extending/custom-bindings.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.ServiceModel.Channels.Binding>
+- [Associazioni personalizzate](../../../../docs/framework/wcf/extending/custom-bindings.md)

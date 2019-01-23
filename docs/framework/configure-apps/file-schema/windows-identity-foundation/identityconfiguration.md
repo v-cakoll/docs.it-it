@@ -3,12 +3,12 @@ title: '&lt;identityConfiguration&gt;'
 ms.date: 03/30/2017
 ms.assetid: 1db76253-07da-447b-9e7a-3705c7228cf4
 author: BrucePerlerMS
-ms.openlocfilehash: 11ba7df79ead1693fc6828aeabde413237680737
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 7c20f3d00b71eacbf8409c3f848d550445468e5b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193775"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513100"
 ---
 # <a name="ltidentityconfigurationgt"></a>&lt;identityConfiguration&gt;
 Specifica le impostazioni di identità a livello di servizio.  
@@ -43,19 +43,19 @@ Specifica le impostazioni di identità a livello di servizio.
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<memorizza nella cache >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|Registra le cache usate per il rilevamento riproduzione token e i token di sessione. Può essere specificato a livello di servizio o in una raccolta di gestori di token di sicurezza. Facoltativo.|  
-|[\<certificateValidation >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)|Controllare le impostazioni che utilizzano i gestori di token per convalidare i certificati. Può essere specificato a livello di servizio o in una raccolta di gestori di token di sicurezza. Facoltativo.|  
-|[\<claimsAuthenticationManager >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthenticationmanager.md)|Registra un gestore di autenticazione delle attestazioni per le attestazioni in ingresso. Facoltativo.|  
-|[\<claimsAuthorizationManager >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md)|Registra un gestore di autorizzazione delle attestazioni per le attestazioni in ingresso. Facoltativo.|  
-|[\<claimTypeRequired >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimtyperequired.md)|Specifica il set di attestazioni necessarie per i token di sicurezza in ingresso. Facoltativo.|  
+|[\<caches>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|Registra le cache usate per il rilevamento riproduzione token e i token di sessione. Può essere specificato a livello di servizio o in una raccolta di gestori di token di sicurezza. Facoltativo.|  
+|[\<certificateValidation>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)|Controllare le impostazioni che utilizzano i gestori di token per convalidare i certificati. Può essere specificato a livello di servizio o in una raccolta di gestori di token di sicurezza. Facoltativo.|  
+|[\<claimsAuthenticationManager>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthenticationmanager.md)|Registra un gestore di autenticazione delle attestazioni per le attestazioni in ingresso. Facoltativo.|  
+|[\<claimsAuthorizationManager>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md)|Registra un gestore di autorizzazione delle attestazioni per le attestazioni in ingresso. Facoltativo.|  
+|[\<claimTypeRequired>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimtyperequired.md)|Specifica il set di attestazioni necessarie per i token di sicurezza in ingresso. Facoltativo.|  
 |[\<securityTokenHandlers>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|Specifica una raccolta di gestori di token di sicurezza. È possibile specificare zero o più raccolte di gestori di token di sicurezza. Facoltativo.|  
-|[\<tokenReplayDetection >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md)|Abilita rilevamento riproduzione token e specifica l'ora di scadenza per i token. Può essere specificato a livello di servizio o in una raccolta di gestori di token di sicurezza. Facoltativo.|  
+|[\<tokenReplayDetection>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md)|Abilita rilevamento riproduzione token e specifica l'ora di scadenza per i token. Può essere specificato a livello di servizio o in una raccolta di gestori di token di sicurezza. Facoltativo.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<System. IdentityModel >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md)|Fornisce la configurazione per l'attivazione di opzioni di Windows Identity Foundation (WIF) nelle applicazioni.|  
+|[\<system.identityModel>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md)|Fornisce la configurazione per l'attivazione di opzioni di Windows Identity Foundation (WIF) nelle applicazioni.|  
   
 ## <a name="remarks"></a>Note  
  Più identità è possibile definire configurazioni, ognuna con un nome univoco. Il comportamento è come segue:  
@@ -79,10 +79,10 @@ Specifica le impostazioni di identità a livello di servizio.
 > [!IMPORTANT]
 >  Specificare i seguenti elementi come elementi figlio del `<identityConfiguration>` elemento è stato deprecato, sebbene il comportamento è ancora supportato per la compatibilità con le versioni precedenti. Questi elementi invece dovrebbero, essere specificati sotto il [ \<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md) elemento.  
 >   
->  -   [\<audienceUris >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/audienceuris.md)  
-> -   [\<issuerNameRegistry >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuernameregistry.md)  
-> -   [\<issuerTokenResolver >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuertokenresolver.md)  
-> -   [\<serviceTokenResolver >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicetokenresolver.md)  
+>  -   [\<audienceUris>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/audienceuris.md)  
+> -   [\<issuerNameRegistry>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuernameregistry.md)  
+> -   [\<issuerTokenResolver>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuertokenresolver.md)  
+> -   [\<serviceTokenResolver>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicetokenresolver.md)  
   
 ## <a name="example"></a>Esempio  
  L'esempio seguente crea una configurazione di identità denominata "alternateConfiguration". La configurazione di identità specifica le impostazioni predefinite.  
@@ -93,6 +93,6 @@ Specifica le impostazioni di identità a livello di servizio.
 </system.identityModel>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.IdentityModel.Configuration.IdentityConfiguration>  
- <xref:System.IdentityModel.Configuration.IdentityConfigurationElement>
+## <a name="see-also"></a>Vedere anche
+- <xref:System.IdentityModel.Configuration.IdentityConfiguration>
+- <xref:System.IdentityModel.Configuration.IdentityConfigurationElement>

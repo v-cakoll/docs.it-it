@@ -6,36 +6,36 @@ helpviewer_keywords:
 - Web pages [Windows Forms], hosting in applications
 - Web pages [Windows Forms], Windows Forms controls
 ms.assetid: 12667861-5b5b-46bc-8fb5-675e25264c9f
-ms.openlocfilehash: 2a39e1332625d1614ea9e0243f2ac610e1f9287c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ca4e4beed068d47bef7a5cd4f7b05bde0a19de23
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538593"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54510794"
 ---
 # <a name="webbrowser-control-windows-forms"></a>Controllo WebBrowser (Windows Form)
-Windows Form `WebBrowser` controllo ospita le pagine Web e fornisce all'applicazione funzionalità di esplorazione.  
+I moduli di Windows `WebBrowser` controllo ospita pagine Web e offre funzionalità all'applicazione di Web browser.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Panoramica sul controllo WebBrowser](../../../../docs/framework/winforms/controls/webbrowser-control-overview.md)  
  Definisce il controllo e ne illustra le funzionalità chiave e le proprietà.  
   
  [Sicurezza dei controlli WebBrowser](../../../../docs/framework/winforms/controls/webbrowser-security.md)  
- Vengono descritti i problemi di sicurezza correlati al controllo.  
+ Vengono illustrati i problemi di sicurezza relativi al controllo.  
   
  [Procedura: Passare a un URL con il controllo WebBrowser](../../../../docs/framework/winforms/controls/how-to-navigate-to-a-url-with-the-webbrowser-control.md)  
- Di seguito viene illustrato come utilizzare il controllo per passare a un URL specifico.  
+ Viene illustrato come utilizzare il controllo per passare a un URL specifico.  
   
- [Procedura: Stampare con un controllo WebBrowser](../../../../docs/framework/winforms/controls/how-to-print-with-a-webbrowser-control.md)  
+ [Procedura: Stampa con un controllo WebBrowser](../../../../docs/framework/winforms/controls/how-to-print-with-a-webbrowser-control.md)  
  Viene illustrato come stampare una pagina Web senza visualizzarla.  
   
- [Procedura: Aggiungere funzionalità del browser Web a una Windows Forms Application](../../../../docs/framework/winforms/controls/how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)  
- Descrive come inizializzare il controllo da utilizzare come un Web browser.  
+ [Procedura: Aggiungere funzionalità del Browser Web a un'applicazione di Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)  
+ Viene descritto come inizializzare il controllo per l'utilizzo come un Web browser.  
   
  [Procedura: Creare un visualizzatore di documenti HTML in una Windows Forms Application](../../../../docs/framework/winforms/controls/how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)  
- Descrive come inizializzare il controllo da utilizzare come un visualizzatore HTML.  
+ Viene descritto come inizializzare il controllo per l'utilizzo come un visualizzatore HTML.  
   
- [Procedura: Implementare comunicazioni bidirezionali tra il codice DHTML e il codice dell'applicazione client](../../../../docs/framework/winforms/controls/implement-two-way-com-between-dhtml-and-client.md)  
+ [Procedura: Implementare comunicazioni bidirezionali tra codice DHTML e il codice dell'applicazione Client](../../../../docs/framework/winforms/controls/implement-two-way-com-between-dhtml-and-client.md)  
  Viene descritto come configurare la comunicazione bidirezionale tra il codice dell'applicazione e DHTML in una pagina Web ospitata dal controllo.  
   
  [Utilizzare il Document Object Model HTML gestito](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)  
@@ -78,5 +78,5 @@ Windows Form `WebBrowser` controllo ospita le pagine Web e fornisce all'applicaz
  <xref:System.Windows.Forms.WebBrowserRefreshOption>  
  Descrive questa enumerazione e tutti i relativi valori.  
   
-## <a name="see-also"></a>Vedere anche  
- [Controlli da usare in Windows Form](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a>Vedere anche
+- [Controlli da usare in Windows Form](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Procedura dettagliata: hosting di controlli Windows Form in WPF'
+title: 'Procedura dettagliata: Hosting di controlli Windows Form in WPF'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - hosting Windows Forms control in WPF [WPF]
 ms.assetid: 9cb88415-39b0-4c46-80c4-ff325b674286
-ms.openlocfilehash: 933a7bace2e6fab746d7ead01081a456ed437e66
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 2bbc3d249504bf8bb80dd29de3110002f0fd87e8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582359"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54548820"
 ---
-# <a name="walkthrough-hosting-a-windows-forms-control-in-wpf"></a>Procedura dettagliata: hosting di controlli Windows Form in WPF
+# <a name="walkthrough-hosting-a-windows-forms-control-in-wpf"></a>Procedura dettagliata: Hosting di controlli Windows Form in WPF
 
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] offre numerosi controlli con un insieme di funzionalità completo. Tuttavia, può a volte si desidera utilizzare [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] ai controlli di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] pagine. Ad esempio, potrebbe essere un investimento sostanziale nella esistente [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controlli o si può avere un [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controllo che fornisce funzionalità univoche.
 
@@ -24,7 +24,7 @@ Per un listato di codice completo delle attività illustrate in questa procedura
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-È necessario Visual Studio per completare questa procedura dettagliata.
+Per completare la procedura dettagliata, è necessario Visual Studio.
 
 ## <a name="hosting-the-windows-forms-control"></a>Hosting del controllo Windows Forms
 
@@ -69,6 +69,6 @@ Per un listato di codice completo delle attività illustrate in questa procedura
 - [Progettare XAML in Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
 - [Procedura dettagliata: Hosting di controlli Windows Form in WPF tramite XAML](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf-by-using-xaml.md)
 - [Procedura dettagliata: Hosting di controlli Windows Form compositi in WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
-- [Procedura dettaglia: hosting di un controllo WPF composito in Windows Form](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [Procedura dettagliata: Hosting di un controllo composito WPF in Windows Form](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
 - [Controlli Windows Form e controlli WPF equivalenti](../../../../docs/framework/wpf/advanced/windows-forms-controls-and-equivalent-wpf-controls.md)
 - [Esempio di hosting di un controllo Windows Forms in WPF](https://go.microsoft.com/fwlink/?LinkID=160057)

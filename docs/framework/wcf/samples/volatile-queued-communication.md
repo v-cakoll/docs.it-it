@@ -2,12 +2,12 @@
 title: Comunicazione volatile in coda
 ms.date: 03/30/2017
 ms.assetid: 0d012f64-51c7-41d0-8e18-c756f658ee3d
-ms.openlocfilehash: 55c2b695cdc672216ef6a76bef55bc0d427336a0
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: c6b72503cb90108e3ecc9a384cb8d7ad326a7c9a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48845941"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54548300"
 ---
 # <a name="volatile-queued-communication"></a>Comunicazione volatile in coda
 In questo esempio viene illustrato come eseguire la comunicazione volatile in coda sul trasporto dell'accodamento messaggi (MSMQ). Nell'esempio viene utilizzato <xref:System.ServiceModel.NetMsmqBinding>. Il servizio, in questo caso, è un'applicazione console indipendente che consente di osservare il servizio che riceve messaggi in coda.  
@@ -82,7 +82,7 @@ public static void Main()
  Il nome della coda MSMQ è specificato nella sezione appSettings del file di configurazione. L'endpoint per il servizio è definito nella sezione system.serviceModel del file di configurazione e specifica l'associazione `netMsmqBinding`.  
   
 > [!NOTE]
->  Nel nome della coda viene utilizzato un punto (.) per il computer locale e il separatore barra rovesciata nel percorso quando la coda viene creata utilizzando <xref:System.Messaging>. L'indirizzo dell'endpoint Windows Communication Foundation (WCF) specifica un NET. MSMQ: lo schema, viene usato "localhost" per il computer locale e barre nel percorso.  
+>  Nel nome della coda viene usato un punto (.) per il computer locale e il separatore barra rovesciata nel percorso quando la coda viene creata usando <xref:System.Messaging>. L'indirizzo dell'endpoint Windows Communication Foundation (WCF) specifica un NET. MSMQ: lo schema, viene usato "localhost" per il computer locale e barre nel percorso.  
   
  Anche le garanzie e la durabilità o volatilità dei messaggi sono specificate nella configurazione.  
   

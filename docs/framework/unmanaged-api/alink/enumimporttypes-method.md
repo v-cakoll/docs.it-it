@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 90319886dfe149a3d2d76451c1a8526299cf5b89
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4e437868138d7ae31d233853ecc0f709de3ee39d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401648"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54512723"
 ---
 # <a name="enumimporttypes-method"></a>Metodo EnumImportTypes
-Enumera ogni tipo di ogni ambito.  
+Enumera ogni tipo in ogni ambito.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -46,18 +46,18 @@ HRESULT EnumImportTypes(
  Numero massimo di tipi da recuperare.  
   
  `aTypeDefs`  
- Riceve token di tipo, non deve superare `dwMax`.  
+ Riceve i token, non deve superare di tipo `dwMax`.  
   
  `pdwCount`  
  Riceve il numero effettivo di tipo in `aTypeDefs`.  
   
 ## <a name="return-value"></a>Valore restituito  
- Se il metodo ha esito positivo, restituisce S_OK.  
+ Restituisce S_OK se il metodo ha esito positivo.  
   
 ## <a name="requirements"></a>Requisiti  
  Richiede alink.h  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [Interfaccia IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [Alink (API)](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [Interfaccia IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [Alink (API)](../../../../docs/framework/unmanaged-api/alink/index.md)

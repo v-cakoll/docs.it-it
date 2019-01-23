@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: visualizzare giorni specifici in grassetto con il controllo MonthCalendar Windows Form'
+title: 'Procedura: Visualizzare giorni specifici in grassetto con il Windows Form controllo MonthCalendar'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,19 +11,19 @@ helpviewer_keywords:
 - GetDayBold event
 - MonthCalendar control [Windows Forms], dates displayed in bold
 ms.assetid: 8b20db5b-8118-4825-90e8-2c45c186ac7d
-ms.openlocfilehash: 0ee89fb4cfb6ddbf975eb0e85e7dd1bab30f08d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f310d5e30acffdd358bc5108f39102387289562e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33528531"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54547787"
 ---
-# <a name="how-to-display-specific-days-in-bold-with-the-windows-forms-monthcalendar-control"></a>Procedura: visualizzare giorni specifici in grassetto con il controllo MonthCalendar Windows Form
-Windows Form <xref:System.Windows.Forms.MonthCalendar> controllo può visualizzare i giorni in grassetto, come date singolare o ripetute. È possibile farlo per evidenziarne date speciali, ad esempio le festività e i fine settimana.  
+# <a name="how-to-display-specific-days-in-bold-with-the-windows-forms-monthcalendar-control"></a>Procedura: Visualizzare giorni specifici in grassetto con il Windows Form controllo MonthCalendar
+I moduli di Windows <xref:System.Windows.Forms.MonthCalendar> controllo può visualizzare i giorni in grassetto, come le date singolare o ripetute. È possibile eseguire questa operazione per attirare l'attenzione su date speciali, ad esempio i fine settimana e festivi.  
   
- Questa funzionalità è controllata da tre proprietà. Il <xref:System.Windows.Forms.MonthCalendar.BoldedDates%2A> proprietà contiene singole date. Il <xref:System.Windows.Forms.MonthCalendar.AnnuallyBoldedDates%2A> proprietà contiene le date visualizzate in grassetto ogni anno. Il <xref:System.Windows.Forms.MonthCalendar.MonthlyBoldedDates%2A> proprietà contiene le date visualizzate in grassetto ogni mese. Ognuna di queste proprietà contiene una matrice di <xref:System.DateTime> oggetti. Per aggiungere o rimuovere una data da uno di questi elenchi, è necessario aggiungere o rimuovere un <xref:System.DateTime> oggetto.  
+ Questa funzionalità è controllata da tre proprietà. Il <xref:System.Windows.Forms.MonthCalendar.BoldedDates%2A> proprietà contiene date singole. Il <xref:System.Windows.Forms.MonthCalendar.AnnuallyBoldedDates%2A> proprietà contiene le date visualizzate in grassetto ogni anno. Il <xref:System.Windows.Forms.MonthCalendar.MonthlyBoldedDates%2A> proprietà contiene le date visualizzate in grassetto ogni mese. Ognuna di queste proprietà contiene una matrice di <xref:System.DateTime> oggetti. Per aggiungere o rimuovere una data da uno di questi elenchi, è necessario aggiungere o rimuovere un <xref:System.DateTime> oggetto.  
   
-### <a name="to-make-a-date-appear-in-bold-type"></a>Per visualizzare una data in grassetto  
+### <a name="to-make-a-date-appear-in-bold-type"></a>Come è possibile visualizzare una data in grassetto  
   
 1.  Creare il <xref:System.DateTime> oggetti.  
   
@@ -61,7 +61,7 @@ Windows Form <xref:System.Windows.Forms.MonthCalendar> controllo può visualizza
   
      - oppure -  
   
-     Per un set di date in grassetto contemporaneamente creando una matrice di <xref:System.DateTime> oggetti e l'assegnazione a una delle proprietà.  
+     Per un set di date in grassetto contemporaneamente mediante la creazione di una matrice di <xref:System.DateTime> oggetti e assegnarlo a una delle proprietà.  
   
     ```vb  
     Dim VacationDates As DateTime() = {myVacation1, myVacation2}  
@@ -78,9 +78,9 @@ Windows Form <xref:System.Windows.Forms.MonthCalendar> controllo può visualizza
     monthCalendar1->BoldedDates = VacationDates;  
     ```  
   
-### <a name="to-make-a-date-appear-in-the-regular-font"></a>Per visualizzare una data in caratteri normali  
+### <a name="to-make-a-date-appear-in-the-regular-font"></a>Come è possibile visualizzare una data nel tipo di carattere normale  
   
-1.  Visualizzare una singola data in grassetto in caratteri normali chiamando il <xref:System.Windows.Forms.MonthCalendar.RemoveBoldedDate%2A>, <xref:System.Windows.Forms.MonthCalendar.RemoveAnnuallyBoldedDate%2A>, o <xref:System.Windows.Forms.MonthCalendar.RemoveMonthlyBoldedDate%2A> metodo.  
+1.  Visualizzare una singola data in grassetto in caratteri normali chiamando il <xref:System.Windows.Forms.MonthCalendar.RemoveBoldedDate%2A>, <xref:System.Windows.Forms.MonthCalendar.RemoveAnnuallyBoldedDate%2A>, o <xref:System.Windows.Forms.MonthCalendar.RemoveMonthlyBoldedDate%2A> (metodo).  
   
     ```vb  
     MonthCalendar1.RemoveBoldedDate(myVacation1)  
@@ -99,7 +99,7 @@ Windows Form <xref:System.Windows.Forms.MonthCalendar> controllo può visualizza
   
      - oppure -  
   
-     Rimuovere tutte le date in grassetto da uno dei tre elenchi chiamando il <xref:System.Windows.Forms.MonthCalendar.RemoveAllBoldedDates%2A>, <xref:System.Windows.Forms.MonthCalendar.RemoveAllAnnuallyBoldedDates%2A>, o <xref:System.Windows.Forms.MonthCalendar.RemoveAllMonthlyBoldedDates%2A> metodo.  
+     Rimuovere tutte le date in grassetto da uno dei tre elenchi chiamando il <xref:System.Windows.Forms.MonthCalendar.RemoveAllBoldedDates%2A>, <xref:System.Windows.Forms.MonthCalendar.RemoveAllAnnuallyBoldedDates%2A>, o <xref:System.Windows.Forms.MonthCalendar.RemoveAllMonthlyBoldedDates%2A> (metodo).  
   
     ```vb  
     MonthCalendar1.RemoveAllBoldedDates()  
@@ -113,7 +113,7 @@ Windows Form <xref:System.Windows.Forms.MonthCalendar> controllo può visualizza
     monthCalendar1->RemoveAllBoldedDates();  
     ```  
   
-2.  Aggiornare l'aspetto del tipo di carattere chiamando il <xref:System.Windows.Forms.MonthCalendar.UpdateBoldedDates%2A> metodo.  
+2.  Aggiornare l'aspetto del tipo di carattere chiamando il <xref:System.Windows.Forms.MonthCalendar.UpdateBoldedDates%2A> (metodo).  
   
     ```vb  
     MonthCalendar1.UpdateBoldedDates()  
@@ -127,8 +127,8 @@ Windows Form <xref:System.Windows.Forms.MonthCalendar> controllo può visualizza
     monthCalendar1->UpdateBoldedDates();  
     ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Controllo MonthCalendar](../../../../docs/framework/winforms/controls/monthcalendar-control-windows-forms.md)  
- [Procedura: Selezionare un intervallo di date nel controllo MonthCalendar di Windows Form](../../../../docs/framework/winforms/controls/how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)  
- [Procedura: Modificare l'aspetto del controllo MonthCalendar di Windows Form](../../../../docs/framework/winforms/controls/how-to-change-monthcalendar-control-appearance.md)  
- [Procedura: Visualizzare più mesi nel controllo MonthCalendar di Windows Form](../../../../docs/framework/winforms/controls/display-more-than-one-month-wf-monthcalendar-control.md)
+## <a name="see-also"></a>Vedere anche
+- [Controllo MonthCalendar](../../../../docs/framework/winforms/controls/monthcalendar-control-windows-forms.md)
+- [Procedura: Selezionare un intervallo di date nel controllo MonthCalendar Windows Form](../../../../docs/framework/winforms/controls/how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)
+- [Procedura: Modificare l'aspetto del controllo MonthCalendar di Windows Form](../../../../docs/framework/winforms/controls/how-to-change-monthcalendar-control-appearance.md)
+- [Procedura: Visualizzare più mesi nel controllo MonthCalendar Windows Form](../../../../docs/framework/winforms/controls/display-more-than-one-month-wf-monthcalendar-control.md)

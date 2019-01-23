@@ -2,22 +2,22 @@
 title: Elemento &lt;httpDigest&gt;
 ms.date: 03/30/2017
 ms.assetid: 3da4f276-dfd9-4247-8c07-01d83618727c
-ms.openlocfilehash: 2211c593090d697ae07350fcf7ac491b9d23e2d0
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 146260a8f4b51ec51e749408b8351c7e71debab1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150141"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54510611"
 ---
 # <a name="lthttpdigestgt-element"></a>Elemento &lt;httpDigest&gt;
 Specifica una credenziale di tipo digest usata per autenticare il client presso un servizio.  
   
  \<system.ServiceModel>  
-\<i comportamenti >  
-\<endpointBehaviors >  
-\<comportamento >  
+\<behaviors>  
+\<endpointBehaviors>  
+\<behavior>  
 \<clientCredentials>  
-\<httpDigest >  
+\<httpDigest>  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -48,14 +48,14 @@ Specifica una credenziale di tipo digest usata per autenticare il client presso 
   
  Questa funzionalità deve essere abilitata con Active Directory in Windows e Internet Information Services (IIS). Per altre informazioni, vedere [l'autenticazione del Digest in IIS 6.0](https://go.microsoft.com/fwlink/?LinkId=88443).  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.Configuration.ClientCredentialsElement>  
- <xref:System.ServiceModel.Configuration.ClientCredentialsElement.HttpDigest%2A>  
- <xref:System.ServiceModel.Description.ClientCredentials>  
- <xref:System.ServiceModel.Description.ClientCredentials.HttpDigest%2A>  
- <xref:System.ServiceModel.Configuration.HttpDigestClientElement>  
- <xref:System.ServiceModel.Security.HttpDigestClientCredential>  
- [Comportamenti di sicurezza](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
- [Protezione di client](../../../../../docs/framework/wcf/securing-clients.md)  
- [Uso di certificati](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [Protezione di servizi e client](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.ServiceModel.Configuration.ClientCredentialsElement>
+- <xref:System.ServiceModel.Configuration.ClientCredentialsElement.HttpDigest%2A>
+- <xref:System.ServiceModel.Description.ClientCredentials>
+- <xref:System.ServiceModel.Description.ClientCredentials.HttpDigest%2A>
+- <xref:System.ServiceModel.Configuration.HttpDigestClientElement>
+- <xref:System.ServiceModel.Security.HttpDigestClientCredential>
+- [Comportamenti di sicurezza](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
+- [Protezione di client](../../../../../docs/framework/wcf/securing-clients.md)
+- [Uso di certificati](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Protezione di servizi e client](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

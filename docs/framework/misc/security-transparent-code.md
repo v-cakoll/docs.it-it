@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 4f3dd841-82f7-4659-aab0-6d2db2166c65
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6a491a87c896c76fa62f1702d1ef0e99fc404607
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dc39e4ee47041e70060465a7e220ae1d861d9053
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392889"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54510117"
 ---
 # <a name="security-transparent-code"></a>Codice SecurityTransparent
 <a name="top"></a>
@@ -21,7 +21,7 @@ ms.locfileid: "33392889"
  La sicurezza implica tre meccanismi che interagiscono tra loro: il sandboxing, le autorizzazioni e l'imposizione. Per sandboxing si intende la pratica basata sulla creazione di domini isolati in cui parte del codice viene trattata come codice completamente attendibile, mentre altro codice viene limitato con le autorizzazioni della concessione per il sandbox. Il codice dell'applicazione che viene eseguito all'interno della concessione del sandbox è considerato Transparent, ovvero non può eseguire operazioni che possono influire sulla sicurezza. La concessione impostata per il sandbox è determinata da un'evidenza (classe <xref:System.Security.Policy.Evidence>). L'evidenza identifica le autorizzazioni specifiche richieste dai sandbox e quali tipi di sandbox è possibile creare. L'imposizione consiste nel consentire l'esecuzione di codice Transparent solo all'interno della relativa concessione.  
   
 > [!IMPORTANT]
->  I criteri di sicurezza erano un elemento fondamentale nelle versioni precedenti di .NET Framework. A partire dal [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], criteri di sicurezza sono obsoleto. L'eliminazione dei criteri di sicurezza non corrisponde alla trasparenza della sicurezza. Per informazioni sugli effetti di questa modifica, vedere [migrazione e compatibilità di criteri di sicurezza di accesso di codice](../../../docs/framework/misc/code-access-security-policy-compatibility-and-migration.md).  
+>  I criteri di sicurezza erano un elemento fondamentale nelle versioni precedenti di .NET Framework. A partire dal [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], criteri di sicurezza sono obsoleto. L'eliminazione dei criteri di sicurezza non corrisponde alla trasparenza della sicurezza. Per informazioni sugli effetti di questa modifica, vedere [migrazione e compatibilità dei criteri di sicurezza dall'accesso di codice](../../../docs/framework/misc/code-access-security-policy-compatibility-and-migration.md).  
   
  In questo argomento viene descritto il modello di trasparenza in maggiore dettaglio. Include le sezioni seguenti:  
   
@@ -106,6 +106,6 @@ ms.locfileid: "33392889"
 ## <a name="transparency-enforcement"></a>Imposizione della trasparenza  
  Le regole di trasparenza non vengono applicate fino a quando la trasparenza non viene calcolata. In tale fase, viene generata un'eccezione <xref:System.InvalidOperationException> se una regola di trasparenza risulta violata. Il momento in cui viene calcolata la trasparenza dipende da vari fattori e non può essere previsto. Il calcolo avviene il più tardi possibile. In [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], il calcolo della trasparenza a livello di assembly si verifica prima di quanto avvenga in .NET Framework 2.0. L'unica garanzia è che il calcolo della trasparenza si verifica nel momento in cui è necessario. È un meccanismo analogo al modo in cui il compilatore JIT (Just-In-Time) può modificare il punto in cui un metodo viene compilato e gli eventuali errori in tale metodo vengono rilevati. Il calcolo della trasparenza è invisibile se il codice non contiene errori di trasparenza.  
   
-## <a name="see-also"></a>Vedere anche  
- [Il codice SecurityTransparent, livello 1](../../../docs/framework/misc/security-transparent-code-level-1.md)  
- [Codice SecurityTransparent, livello 2](../../../docs/framework/misc/security-transparent-code-level-2.md)
+## <a name="see-also"></a>Vedere anche
+- [Codice SecurityTransparent, livello 1](../../../docs/framework/misc/security-transparent-code-level-1.md)
+- [Codice SecurityTransparent, livello 2](../../../docs/framework/misc/security-transparent-code-level-2.md)

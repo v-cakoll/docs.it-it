@@ -5,41 +5,41 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d8072ede-0521-4670-9bec-1778ceeb875b
-ms.openlocfilehash: 20b46ce37d93119330e336f583ac68b5c1dc4c4b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a06c7d451d9ad2856092910065f1195a86c737ab
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33360261"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54548517"
 ---
 # <a name="formulate-joins-and-cross-product-queries"></a>Formulare query su prodotto incrociato e join
 Negli esempi riportati di seguito viene illustrato come combinare risultati da più tabelle.  
   
 ## <a name="example"></a>Esempio  
- L'esempio seguente usa navigazione con chiave esterna nel `From` clausola in Visual Basic (`from` clausola in c#) per selezionare tutti gli ordini per i clienti nell'area londinese.  
+ L'esempio seguente usa navigazione con chiave esterna nel `From` clausola in Visual Basic (`from` clausola in C#) per selezionare tutti gli ordini per i clienti di Londra.  
   
  [!code-csharp[DLinqQueryExamples#47](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#47)]
  [!code-vb[DLinqQueryExamples#47](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#47)]  
   
 ## <a name="example"></a>Esempio  
- L'esempio seguente usa navigazione con chiave esterna nel `Where` clausola in Visual Basic (`where` clausola in c#) per filtrare per out-of-stock `Products` cui `Supplier` è negli Stati Uniti.  
+ L'esempio seguente usa navigazione con chiave esterna nel `Where` clausola in Visual Basic (`where` clausola in C#) per filtrare per out-of-stock `Products` cui `Supplier` è negli Stati Uniti.  
   
  [!code-csharp[DLinqQueryExamples#48](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#48)]
  [!code-vb[DLinqQueryExamples#48](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#48)]  
   
 ## <a name="example"></a>Esempio  
- L'esempio seguente usa navigazione con chiave esterna nel `From` clausola in Visual Basic (`from` clausola in c#) per filtrare i dipendenti di Seattle ed elencare i territori.  
+ L'esempio seguente usa navigazione con chiave esterna nel `From` clausola in Visual Basic (`from` clausola in C#) per filtrare i dipendenti di Seattle ed elencare i territori.  
   
  [!code-csharp[DLinqQueryExamples#49](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#49)]  
   
 ## <a name="example"></a>Esempio  
- L'esempio seguente usa navigazione con chiave esterna nel `Select` clausola in Visual Basic (`select` clausola in c#) per filtrare le coppie di dipendenti in cui un dipendente riporta a altro ed entrambi sono della stessa `City`.  
+ L'esempio seguente usa navigazione con chiave esterna nel `Select` clausola in Visual Basic (`select` clausola in C#) per filtrare le coppie di dipendenti in cui un dipendente riporta a altro ed entrambi sono della stessa `City`.  
   
  [!code-csharp[DLinqQueryExamples#50](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#50)]
  [!code-vb[DLinqQueryExamples#50](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#50)]  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio di Visual Basic seguente esegue la ricerca di tutti i clienti e ordini, assicura che gli ordini siano associati ai clienti e garantisce che per ogni cliente nell'elenco, viene fornito un nome di contatto.  
+ Nell'esempio Visual Basic seguente cerca tutti i clienti e ordini, assicura che gli ordini sono associati ai clienti e garantisce che per ogni cliente nell'elenco, viene fornito un nome di contatto.  
   
  [!code-vb[DLinqQueryExamples#50v](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#50v)]  
   
@@ -79,5 +79,5 @@ Negli esempi riportati di seguito viene illustrato come combinare risultati da p
  [!code-csharp[DLinqQueryExamples#56](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#56)]
  [!code-vb[DLinqQueryExamples#56](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#56)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Esempi di query](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
+## <a name="see-also"></a>Vedere anche
+- [Esempi di query](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c683c8109970c05d9f666a9ed07535d95685cd43
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d8196267d1b7bd6ac2fb66fe8e099330e531b722
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420284"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513187"
 ---
 # <a name="icordebugtypeenum-interface1"></a>ICorDebugTypeEnum Interface1
 Implementa i metodi "ICorDebugEnum" ed enumera le matrici "ICorDebugType".  
@@ -30,7 +30,7 @@ Implementa i metodi "ICorDebugEnum" ed enumera le matrici "ICorDebugType".
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo Next](../../../../docs/framework/unmanaged-api/debugging/icordebugtypeenum-next-method.md)|Ottiene il numero specificato di `ICorDebugType` istanze nell'enumerazione, a partire dalla posizione corrente.|  
+|[Metodo Next](../../../../docs/framework/unmanaged-api/debugging/icordebugtypeenum-next-method.md)|Ottiene il numero specificato di `ICorDebugType` istanze dall'enumerazione, iniziando in corrispondenza della posizione corrente.|  
   
 ## <a name="remarks"></a>Note  
   
@@ -38,13 +38,13 @@ Implementa i metodi "ICorDebugEnum" ed enumera le matrici "ICorDebugType".
 >  Questa interfaccia non supporta la chiamata in modalità remota, tra computer o tra processi.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

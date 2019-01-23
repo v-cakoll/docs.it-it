@@ -27,12 +27,12 @@ helpviewer_keywords:
 - Visual Basic code, Sub procedures
 - Function procedures [Visual Basic], declaring
 ms.assetid: d3f21fb0-b804-4c99-97ed-583b23894cf1
-ms.openlocfilehash: 343ee168809fc63ef63559eda0fd018abde684e7
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 186238d8e823f028caaed2e2618d882d21e1358f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485742"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54548950"
 ---
 # <a name="declare-statement"></a>Declare Statement
 Dichiara un riferimento a una routine implementata in un file esterno.  
@@ -54,7 +54,7 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
 |Termine|Definizione|  
 |---|---|  
 |`attributelist`|Facoltativo. Visualizzare [elenco attributi](../../../visual-basic/language-reference/statements/attribute-list.md).|  
-|`accessmodifier`|Facoltativo. Può essere uno dei seguenti:<br /><br /> -   [Pubblico](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Protetto](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Privato](../../../visual-basic/language-reference/modifiers/private.md)<br />- [Protected Friend](../../language-reference/modifiers/protected-friend.md)<br />- [Private Protected](../../language-reference/modifiers/private-protected.md)<br /><br /> Visualizzare [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
+|`accessmodifier`|Facoltativo. Può essere uno dei seguenti:<br /><br /> -   [Public](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Protetto](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Private](../../../visual-basic/language-reference/modifiers/private.md)<br />- [Protected Friend](../../language-reference/modifiers/protected-friend.md)<br />- [Private Protected](../../language-reference/modifiers/private-protected.md)<br /><br /> Vedere [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
 |`Shadows`|Facoltativo. Visualizzare [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
 |`charsetmodifier`|Facoltativo. Specifica di set di caratteri e i file di informazioni di ricerca. Può essere uno dei seguenti:<br /><br /> -   [ANSI](../../../visual-basic/language-reference/modifiers/ansi.md) (impostazione predefinita)<br />-   [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)<br />-   [Automatico](../../../visual-basic/language-reference/modifiers/auto.md)|  
 |`Sub`|Facoltativo, ma uno `Sub` o `Function` devono essere visualizzati. Indica che la routine esterna non restituisce un valore.|  
@@ -63,7 +63,7 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
 |`Lib`|Obbligatorio. Introduce un `Lib` clausola che identifica il file esterno (DLL o risorsa codice) contenente una routine esterna.|  
 |`libname`|Obbligatorio. Nome del file che contiene la routine dichiarata.|  
 |`Alias`|Facoltativo. Indica che la routine viene dichiarata non può essere identificata all'interno del file per il nome specificato in `name`. Specificarne l'identificazione in `aliasname`.|  
-|`aliasname`|Obbligatorio se si usa il `Alias` (parola chiave). Stringa che identifica la procedura descritta in uno dei due modi:<br /><br /> Il nome del punto di ingresso della routine all'interno del file, all'interno delle virgolette (`""`)<br /><br /> oppure<br /><br /> Un simbolo di cancelletto (`#`) seguito da un integer che specifica il numero ordinale del punto di ingresso della routine all'interno del file|  
+|`aliasname`|Obbligatorio se si usa il `Alias` (parola chiave). Stringa che identifica la procedura descritta in uno dei due modi:<br /><br /> Il nome del punto di ingresso della routine all'interno del file, all'interno delle virgolette (`""`)<br /><br /> -oppure-<br /><br /> Un simbolo di cancelletto (`#`) seguito da un integer che specifica il numero ordinale del punto di ingresso della routine all'interno del file|  
 |`parameterlist`|Obbligatorio se la procedura accetta parametri. Visualizzare [elenco di parametri](../../../visual-basic/language-reference/statements/parameter-list.md).|  
 |`returntype`|Obbligatorio se `Function` specificato e `Option Strict` è `On`. Tipo di dati del valore restituito dalla procedura.|  
   
@@ -124,7 +124,7 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
   
     -   In una piattaforma di Unicode, ad esempio Windows NT, Windows 2000 o Windows XP, cercare prima di tutto la routine esterna senza modificarne il nome. Se il problema persiste, aggiungere "W" alla fine della routine esterna assegnare un nome e cercare nuovamente.  
   
--   **Meccanismo.** Visual Basic Usa .NET Framework *PInvoke* meccanismo (PInvoke) per risolvere e accedere alle routine esterne. Il `Declare` istruzione e <xref:System.Runtime.InteropServices.DllImportAttribute> classe entrambi usano questo meccanismo automaticamente e non è necessaria alcuna conoscenza di una chiamata PInvoke. Per altre informazioni, vedere [procedura dettagliata: chiamata delle API Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md).  
+-   **Meccanismo.** Visual Basic Usa .NET Framework *PInvoke* meccanismo (PInvoke) per risolvere e accedere alle routine esterne. Il `Declare` istruzione e <xref:System.Runtime.InteropServices.DllImportAttribute> classe entrambi usano questo meccanismo automaticamente e non è necessaria alcuna conoscenza di una chiamata PInvoke. Per altre informazioni, vedere [Procedura dettagliata: Chiamata delle API di Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md).  
   
 > [!IMPORTANT]
 >  Se la routine esterna viene eseguito all'esterno di common language runtime (CLR), si tratta *codice non gestito*. Quando si chiama questo tipo una routine, ad esempio una funzione API Win32 o un metodo COM, si potrà esporre l'applicazione a rischi di sicurezza. Per altre informazioni, vedere [Secure linee guida di codifica per il codice non gestito](../../../framework/security/secure-coding-guidelines-for-unmanaged-code.md).  
@@ -141,12 +141,12 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
   
  [!code-vb[VbVbalrStatements#1](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/declare-statement_3.vb)]  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:Microsoft.VisualBasic.ErrObject.LastDllError%2A>  
- [Istruzione Imports (tipo e spazio dei nomi .NET)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
- [Operatore AddressOf](../../../visual-basic/language-reference/operators/addressof-operator.md)  
- [Istruzione Function](../../../visual-basic/language-reference/statements/function-statement.md)  
- [Istruzione Sub](../../../visual-basic/language-reference/statements/sub-statement.md)  
- [Elenco dei parametri](../../../visual-basic/language-reference/statements/parameter-list.md)  
- [Istruzione Call](../../../visual-basic/language-reference/statements/call-statement.md)  
- [Procedura dettagliata: Chiamata delle API di Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:Microsoft.VisualBasic.ErrObject.LastDllError%2A>
+- [Istruzione Imports (tipo e spazio dei nomi .NET)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
+- [Operatore AddressOf](../../../visual-basic/language-reference/operators/addressof-operator.md)
+- [Istruzione Function](../../../visual-basic/language-reference/statements/function-statement.md)
+- [Istruzione Sub](../../../visual-basic/language-reference/statements/sub-statement.md)
+- [Elenco dei parametri](../../../visual-basic/language-reference/statements/parameter-list.md)
+- [Istruzione Call](../../../visual-basic/language-reference/statements/call-statement.md)
+- [Procedura dettagliata: Chiamata delle API di Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)

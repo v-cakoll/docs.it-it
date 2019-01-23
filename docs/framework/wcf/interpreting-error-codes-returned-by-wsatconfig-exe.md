@@ -2,12 +2,12 @@
 title: Interpretazione dei codici errore restituiti da wsatConfig.exe
 ms.date: 03/30/2017
 ms.assetid: ab65f22b-0d69-4c21-9aaf-74acef0ca102
-ms.openlocfilehash: 9df059618b45ae65ffb3e6e31a87d5531c79d947
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 70a917446415794f8d500818bdeff5b945834598
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33507360"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54510026"
 ---
 # <a name="interpreting-error-codes-returned-by-wsatconfigexe"></a>Interpretazione dei codici errore restituiti da wsatConfig.exe
 Questo argomento elenca tutti i codici errore generati dall'utilità di configurazione WS-AtomicTransaction (wsatConfig.exe) e azioni consigliate da intraprendere.  
@@ -16,7 +16,7 @@ Questo argomento elenca tutti i codici errore generati dall'utilità di configur
   
 |Codice di errore|Descrizione|Azione consigliata da intraprendere|  
 |----------------|-----------------|------------------------------------|  
-|0|L'operazione è stata completata|Nessuno|  
+|0|L'operazione è stata completata|nessuno|  
 |1|Errore imprevisto|Contattare Microsoft|  
 |2|Si è verificato un errore imprevisto durante il tentativo di contattare MSDTC per recuperare le impostazioni di sicurezza.|Assicurarsi che il servizio MSDTC non sia disabilitato e risolvere tutti i problemi elencati nell’Eccezione restituita.|  
 |3|L'account nel quale è stato eseguito WsatConfig.exe non dispone delle autorizzazioni necessarie per leggere le impostazioni di sicurezza di rete.|Eseguire WsatConfig.exe in un account utente dell'Amministratore.|  
@@ -44,7 +44,7 @@ Questo argomento elenca tutti i codici errore generati dall'utilità di configur
 |28|Opzione della riga di comando `-network` non valida.|Correggere l'opzione della riga di comando `-network` per specificare correttamente "abilita" o "disabilita".|  
 |29|Opzione della riga di comando `-maxTimeout` non valida.|Correggere l'opzione della riga di comando `-maxTimeout`come indicato. |  
 |30|Opzione della riga di comando `-timeout` non valida.|Correggere l'opzione della riga di comando `-timeout`come indicato. |  
-|31|Opzione della riga di comando `-traceLevel` non valida.|Correggere l'opzione della riga di comando `-traceLevel` per specificare uno dei seguenti valori validi:<br /><br /> -Off<br />-Errore<br />-   Critico<br />-Avviso<br />-Informazioni<br />-Verbose<br />-Tutto|  
+|31|Opzione della riga di comando `-traceLevel` non valida.|Correggere l'opzione della riga di comando `-traceLevel` per specificare uno dei seguenti valori validi:<br /><br /> -   Off<br />-Errore<br />-   Critico<br />-Avviso<br />-Informazioni<br />-Verbose<br />-Tutte|  
 |32|Opzione della riga di comando `-traceActivity` non valida.|Correggere l'opzione della riga di comando `-traceActivity` specificando "abilita" o "disabilita".|  
 |33|Opzione della riga di comando `-traceProp` non valida.|Correggere l'opzione della riga di comando `-traceProp` specificando "abilita" o "disabilita".|  
 |34|Opzione della riga di comando `-tracePII` non valida.|Correggere l'opzione della riga di comando `-tracePII` specificando "abilita" o "disabilita".|  
@@ -67,5 +67,5 @@ Questo argomento elenca tutti i codici errore generati dall'utilità di configur
 |55|Si è verificato un errore imprevisto nel tentativo di avvio della sessione di traccia ETW.|Contattare Microsoft.|  
 |56|Si è verificato un errore imprevisto nel tentativo di avvio della sessione di traccia ETW.|Contattare Microsoft.|  
   
-## <a name="see-also"></a>Vedere anche  
- [Utilità di configurazione WS-AtomicTransaction (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
+## <a name="see-also"></a>Vedere anche
+- [Utilità di configurazione WS-AtomicTransaction (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)

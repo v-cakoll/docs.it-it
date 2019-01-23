@@ -2,18 +2,18 @@
 title: Elemento &lt;endpoint&gt;
 ms.date: 03/30/2017
 ms.assetid: 2fc8fedc-78d0-4e87-8142-fbfd26c15a4e
-ms.openlocfilehash: ea95e2d16027869778e99cb217d5ea4f7ba7d21a
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: f0701f522874e9e77ba8cb8f013016dd66fbfa30
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147486"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54509701"
 ---
 # <a name="ltendpointgt-element"></a>Elemento &lt;endpoint&gt;
 Specifica le proprietà di associazione, contratto e indirizzo di endpoint del servizio usato per esporre servizi.  
   
  \<system.ServiceModel>  
-\<servizio >  
+\<service>  
 \<endpoint>  
   
 ## <a name="syntax"></a>Sintassi  
@@ -51,7 +51,7 @@ Specifica le proprietà di associazione, contratto e indirizzo di endpoint del s
 |endpointConfiguration|Stringa che specifica il nome dell'endpoint standard impostato dall'attributo `kind` che fa riferimento alle informazioni di configurazione aggiuntive di questo endpoint standard. Lo stesso nome deve essere definito nella sezione `<standardEndpoints>`.|  
 |isSystemEndpoint|Valore booleano che specifica se un endpoint è un endpoint di infrastruttura.|  
 |kind|Stringa che specifica il tipo di endpoint standard applicato. Il tipo deve essere registrato nella sezione `<extensions>` o in machine.config. Se non specificato, viene creato un endpoint del servizio comune.|  
-|listenUriMode|Specifica il modo in cui il trasporto considera l'elemento `ListenUri` fornito sul quale è in ascolto il servizio. I valori validi sono:<br /><br /> -Esplicita<br />-Univoco<br /><br /> Il valore predefinito è Explicit.|  
+|listenUriMode|Specifica il modo in cui il trasporto considera l'elemento `ListenUri` fornito sul quale è in ascolto il servizio. I valori validi sono:<br /><br /> -   Explicit<br />-Univoco<br /><br /> Il valore predefinito è Explicit.|  
 |listenUri|Stringa che specifica l'URI sul quale è in ascolto l'endpoint del servizio. Il valore predefinito è una stringa vuota.|  
 |name|Attributo facoltativo. Stringa che specifica il nome dell'endpoint del servizio. Il valore predefinito è costituito dalla concatenazione del nome dell'associazione e del nome della descrizione del contratto. È possibile che i servizi siano dotati di più endpoint, quindi l'attributo `name` dell'endpoint si differenzia dal nome del servizio.|  
   
@@ -59,8 +59,8 @@ Specifica le proprietà di associazione, contratto e indirizzo di endpoint del s
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<intestazioni >](../../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)|Raccolte di intestazioni di indirizzo.|  
-|[\<identità >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Identità che consente l'autenticazione di un endpoint da altri endpoint con i quali vengono scambiati messaggi.|  
+|[\<headers>](../../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)|Raccolte di intestazioni di indirizzo.|  
+|[\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Identità che consente l'autenticazione di un endpoint da altri endpoint con i quali vengono scambiati messaggi.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -84,9 +84,9 @@ Specifica le proprietà di associazione, contratto e indirizzo di endpoint del s
 </endpoint>
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.Configuration.ServiceEndpointElement>  
- <xref:System.ServiceModel.EndpointAddress>  
- <xref:System.ServiceModel.Description.ServiceEndpoint>  
- [Endpoint: Gli indirizzi, associazioni e contratti](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
- [Procedura: Creare un Endpoint del servizio nella configurazione](../../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.ServiceModel.Configuration.ServiceEndpointElement>
+- <xref:System.ServiceModel.EndpointAddress>
+- <xref:System.ServiceModel.Description.ServiceEndpoint>
+- [Endpoint: Gli indirizzi, associazioni e contratti](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+- [Procedura: Creare un Endpoint del servizio nella configurazione](../../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: decrittografare gli elementi XML con chiavi asimmetriche'
+title: 'Procedura: Decrittografare gli elementi XML con chiavi asimmetriche'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: dd5de491-dafe-4b94-966d-99714b2e754a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 96bee90c7cb3847f9c7059e1a0b1d737209b924f
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 647ac3898924810eb16cbeb8c67f00e6465c8d80
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44186000"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54547767"
 ---
-# <a name="how-to-decrypt-xml-elements-with-asymmetric-keys"></a>Procedura: decrittografare gli elementi XML con chiavi asimmetriche
+# <a name="how-to-decrypt-xml-elements-with-asymmetric-keys"></a>Procedura: Decrittografare gli elementi XML con chiavi asimmetriche
 È possibile usare le classi dello spazio dei nomi <xref:System.Security.Cryptography.Xml> per crittografare e decrittografare un elemento all'interno di un documento XML.  La crittografia XML consente di scambiare o archiviare dati XML crittografati in modo standard, garantendo un'adeguata protezione dei dati da letture non autorizzate.  Per altre informazioni sullo standard della crittografia XML, vedere la raccomandazione del World Wide Web Consortium (W3C) [XML Signature Syntax and Processing](https://www.w3.org/TR/xmldsig-core/).  
   
- L'esempio in questa procedura decrittografa un elemento XML che era stato crittografato mediante i metodi descritti in [procedura: crittografare gli elementi XML con chiavi asimmetriche](../../../docs/standard/security/how-to-encrypt-xml-elements-with-asymmetric-keys.md).  Trova un elemento <`EncryptedData`>, lo decrittografa e quindi lo sostituisce con l'elemento XML originale in testo non crittografato.  
+ L'esempio in questa procedura decrittografa un elemento XML che era stato crittografato mediante i metodi descritti in [come: Crittografare gli elementi XML con chiavi asimmetriche](../../../docs/standard/security/how-to-encrypt-xml-elements-with-asymmetric-keys.md).  Trova un elemento <`EncryptedData`>, lo decrittografa e quindi lo sostituisce con l'elemento XML originale in testo non crittografato.  
   
  Questo esempio decrittografa un elemento XML mediante due chiavi.  Recupera una chiave privata RSA generata in precedenza da un contenitore di chiavi e quindi usa la chiave RSA per decrittografare una chiave di sessione archiviata nell'elemento <`EncryptedKey`> dell'elemento <`EncryptedData`>.  L'esempio usa quindi la chiave di sessione per decrittografare l'elemento XML.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "44186000"
      [!code-vb[HowToDecryptXMLElementAsymmetric#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToDecryptXMLElementAsymmetric/vb/sample.vb#8)]  
   
 ## <a name="example"></a>Esempio  
- Questo esempio presuppone che sia presente un file denominato `test.xml` nella stessa directory del programma compilato  Presuppone anche che `test.xml` contiene un elemento XML che era stato crittografato mediante le tecniche descritte in [procedura: crittografare gli elementi XML con chiavi asimmetriche](../../../docs/standard/security/how-to-encrypt-xml-elements-with-asymmetric-keys.md).  
+ Questo esempio presuppone che sia presente un file denominato `test.xml` nella stessa directory del programma compilato  Presuppone anche che `test.xml` contiene un elemento XML che era stato crittografato mediante le tecniche descritte in [come: Crittografare gli elementi XML con chiavi asimmetriche](../../../docs/standard/security/how-to-encrypt-xml-elements-with-asymmetric-keys.md).  
   
  [!code-csharp[HowToDecryptXMLElementAsymmetric#1](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToDecryptXMLElementAsymmetric/cs/sample.cs#1)]
  [!code-vb[HowToDecryptXMLElementAsymmetric#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToDecryptXMLElementAsymmetric/vb/sample.vb#1)]  
@@ -83,5 +83,5 @@ ms.locfileid: "44186000"
   
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.Security.Cryptography.Xml>  
+- <xref:System.Security.Cryptography.Xml>
 - [Procedura: Crittografare gli elementi XML con chiavi asimmetriche](../../../docs/standard/security/how-to-encrypt-xml-elements-with-asymmetric-keys.md)

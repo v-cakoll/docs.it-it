@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31026
 ms.assetid: 5dd09785-bc10-4ae7-ba24-b795057aca31
-ms.openlocfilehash: 9b7a585dbe6b1da5e0f3b17e61e6407b52439601
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: de0f9fabdb2b64f0d246e2d169e60b35da2a28b6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33595046"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54511238"
 ---
 # <a name="unable-to-create-strong-named-assembly-from-key-file-39ltfilenamegt39-lterrorgt"></a>Non è possibile creare assembly con nome sicuro dal file di chiave &#39; &lt;filename&gt;&#39;: &lt;errore&gt;
 Impossibile creare un assembly con nome sicuro dal file di chiave specificato.  
@@ -23,5 +23,5 @@ Impossibile creare un assembly con nome sicuro dal file di chiave specificato.
   
 1.  Verificare che sia stato specificato il file di chiave corretto e che non è bloccato da un'altra applicazione.  
   
-## <a name="see-also"></a>Vedere anche  
- [Sn.exe (strumento nome sicuro)] [Sn.exe (strumento nome sicuro)](../../../framework/tools/sn-exe-strong-name-tool.md))
+## <a name="see-also"></a>Vedere anche
+- [Sn.exe (strumento nome sicuro)] [Sn.exe (strumento nome sicuro)](../../../framework/tools/sn-exe-strong-name-tool.md))

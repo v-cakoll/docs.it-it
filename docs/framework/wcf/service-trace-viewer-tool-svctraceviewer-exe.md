@@ -2,12 +2,12 @@
 title: Strumento Visualizzatore di tracce dei servizi (SvcTraceViewer.exe)
 ms.date: 03/30/2017
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-ms.openlocfilehash: a03c459355f18ad30849113f353e35e97b6141ae
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: f5401129601f84a5575a544490244f81b1e759ef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44251784"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54510598"
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Strumento Visualizzatore di tracce dei servizi (SvcTraceViewer.exe)
 Strumento Visualizzatore di tracce dei servizi Windows Communication Foundation (WCF) consente di analizzare le tracce di diagnostica vengono generate da WCF. Service Trace Viewer offre un modo per unire, visualizzare e filtrare i messaggi di traccia nel log in modo che è possibile diagnosticare, riparare e verificare i problemi del servizio WCF.  
@@ -191,7 +191,7 @@ Strumento Visualizzatore di tracce dei servizi Windows Communication Foundation 
 -   Mostra tracce dettagliate che non appartengono a messaggi. Tale opzione, se deselezionata, consente di escludere dal grafico le tracce di livello dettagliato, tranne nel caso di tracce di messaggio. Nella maggior parte dei casi le tracce di livello dettagliato sono meno importanti ai fini dell'analisi. Questa opzione è utile quando non si desidera analizzare le tracce di livello dettagliato al fine di concentrarsi esclusivamente sulle tracce più importanti.  
   
 ###### <a name="layout-mode"></a>Modalità di layout  
- Il visualizzatore presenta due modalità di Layout: **processo** e **Thread**. Questa impostazione definisce l'unità massima di organizzazione. La modalità di Layout predefinita è **processo**, il che significa che le attività vengono raggruppate da parte dei processi nel grafico.  
+ Il visualizzatore presenta due modalità di Layout: **Processo** e **Thread**. Questa impostazione definisce l'unità massima di organizzazione. La modalità di Layout predefinita è **processo**, il che significa che le attività vengono raggruppate da parte dei processi nel grafico.  
   
 ###### <a name="execution-list"></a>Elenco di esecuzione  
  In questo elenco a discesa è possibile selezionare quale processo o thread visualizzare nel grafico. Se ad esempio sono stati aperti i file di traccia di un servizio e di due client (A e B), per visualizzare nel grafico solo il servizio e il client A è possibile deselezionare nell'elenco il client B.  
@@ -227,11 +227,11 @@ Strumento Visualizzatore di tracce dei servizi Windows Communication Foundation 
 #### <a name="using-the-filter-toolbar"></a>Utilizzo della barra degli strumenti di filtro  
  La barra degli strumenti di filtro si trova nella parte superiore dello strumento. Se non è presente, è possibile attivarla nella **vista** menu. La barra è costituita da tre componenti:  
   
--   Cercare: **cercare** definisce l'oggetto da ricercare nell'operazione di filtro. Ad esempio, se si desidera trovare tutte le tracce generate nel contesto del processo X, impostare questo campo su X e il **Cerca In** campo "Nome processo". Quando si sceglie un filtro basato su tempo, questo campo diventa un controllo di selezione Datetime.  
+-   Cercare: **Cercare** definisce l'oggetto da ricercare nell'operazione di filtro. Ad esempio, se si desidera trovare tutte le tracce generate nel contesto del processo X, impostare questo campo su X e il **Cerca In** campo "Nome processo". Quando si sceglie un filtro basato su tempo, questo campo diventa un controllo di selezione Datetime.  
   
--   Cerca in: questo campo definisce il tipo di filtro da applicare.  
+-   Cerca: Questo campo definisce il tipo di filtro da applicare.  
   
--   Livello: questa impostazione definisce il livello minimo di traccia consentito dal filtro. Ad esempio, se il livello è impostato su Errore e successivi, consente di visualizzare soltanto le tracce di livello Errore e Critico. I criteri di questo filtro vengono applicati insieme ai criteri specificati in Cerca e Cerca in.  
+-   Livello: Questa impostazione definisce il livello di traccia minimo consentito dal filtro. Ad esempio, se il livello è impostato su Errore e successivi, consente di visualizzare soltanto le tracce di livello Errore e Critico. I criteri di questo filtro vengono applicati insieme ai criteri specificati in Cerca e Cerca in.  
   
  Il **Filtra ora** pulsante Avvia l'operazione di filtro. L'applicazione di alcuni filtri, specialmente quando riguarda set di dati di grandi dimensioni, richiede molto tempo. È possibile annullare l'operazione di filtro, premere il **arrestare** pulsante visualizzato nella barra di stato sotto il **operazioni** menu.  
   
@@ -286,7 +286,7 @@ Strumento Visualizzatore di tracce dei servizi Windows Communication Foundation 
   
 2.  Fare clic su **Filtra ora**e osservare il risultato dell'operazione.  
   
- Se il filtro utilizza più parametri, immetterli usando ';' come separatore nel **Find What** campo. Ad esempio, nella stringa seguente sono definiti 3 parametri: "1;findValue;text". Il Visualizzatore applica "1" per il {0} parametro del filtro. 'findValue' e 'text' vengono applicate a {1} e {2} rispettivamente.  
+ Se il filtro utilizza più parametri, immetterli usando ';' come separatore nel **Find What** campo. Ad esempio, la stringa seguente definisce 3 parametri: ‘1;findValue;text’. Il Visualizzatore applica "1" per il {0} parametro del filtro. 'findValue' e 'text' vengono applicate a {1} e {2} rispettivamente.  
   
 ###### <a name="sharing-custom-filters"></a>Condivisione di filtri personalizzati  
  I filtri personalizzati possono essere condivisi tra sessioni diverse e utenti diversi. È possibile esportare i filtri in un file di definizione e quindi importare questo file in un altro percorso.  
@@ -321,9 +321,9 @@ Strumento Visualizzatore di tracce dei servizi Windows Communication Foundation 
   
  La barra degli strumenti Trova si trova nella parte superiore del visualizzatore. Se non è presente, è possibile attivarla nella **vista** menu. La barra è costituita da due componenti:  
   
--   Trova: consente di immettere una parola chiave di ricerca.  
+-   Trova: Consente di immettere una parola chiave di ricerca.  
   
--   Cerca in: consente di definire l'ambito di ricerca. È possibile scegliere se eseguire la ricerca in tutte le attività o soltanto nell'attività corrente.  
+-   Cerca In: Consente di immettere l'ambito di ricerca. È possibile scegliere se eseguire la ricerca in tutte le attività o soltanto nell'attività corrente.  
   
  Nella finestra di dialogo Trova sono disponibili altre due opzioni:  
   
@@ -335,7 +335,7 @@ Strumento Visualizzatore di tracce dei servizi Windows Communication Foundation 
   
     -   L'opzione "Messaggio registrato" Cerca la parola chiave solo nei messaggi.  
   
--   Ignora attività radice: la ricerca ignora le tracce di attività "000000000000". Ciò consente di migliorare le prestazioni nei file di traccia di grandi dimensioni quando l'attività radice presenta migliaia di tracce, per lo più relative a trasferimenti.  
+-   Ignora attività radice: La ricerca ignora le tracce di attività "000000000000". Ciò consente di migliorare le prestazioni nei file di traccia di grandi dimensioni quando l'attività radice presenta migliaia di tracce, per lo più relative a trasferimenti.  
   
 ### <a name="navigating-traces"></a>Esplorazione delle tracce  
  Poiché le tracce vengono registrate in sequenza durante la fase di esecuzione dell'applicazione, l'esplorazione delle tracce può agevolarne il debug. Il Visualizzatore di tracce dei servizi offre varie opzioni di esplorazione delle tracce.  
@@ -343,21 +343,21 @@ Strumento Visualizzatore di tracce dei servizi Windows Communication Foundation 
 #### <a name="step-forward-or-backward"></a>Passo avanti o Passo indietro  
  Se si considera ogni traccia come una riga di codice nel programma, l'esecuzione di istruzioni in avanti è molto simile a "Esegui istruzione/routine" nell'ambiente di sviluppo integrato (IDE) di Visual Studio. A differenza di tale funzione, tuttavia, è inoltre possibile passare alla traccia precedente. Queste opzioni consentono di passare alla traccia successiva o precedente dell'attività.  
   
--   Passo avanti: Utilizzare il **attività** menu o premere "F10". È inoltre possibile utilizzare tasto di direzione "giù" nel riquadro delle tracce.  
+-   Passo avanti: Usare la **attività** menu o premere "F10". È inoltre possibile utilizzare tasto di direzione "giù" nel riquadro delle tracce.  
   
--   Passo indietro: Utilizzare il **attività** menu o premere "F9". È inoltre possibile utilizzare tasto di direzione "up" nel riquadro delle tracce.  
+-   Passaggio con le versioni precedenti: Usare la **attività** menu o premere "F9". È inoltre possibile utilizzare tasto di direzione "up" nel riquadro delle tracce.  
   
 > [!NOTE]
 >  Questo è possibile accedere a un'attività che si verificano in un processo diverso o anche in un computer diverso, poiché messaggi WCF possono contenere ID che si estendono su macchine attività.  
   
 #### <a name="follow-transfer"></a>Trasferimento successivo  
- Le tracce di trasferimento sono tracce speciali del file di traccia che descrivono il trasferimento dell'esecuzione da un'attività a un'altra. Ad esempio, potrà trasferire "Attività A" in "Attività B". In tal caso, viene creata una traccia transfer selezionando l'icona "Attività A" con il nome "A: attività" e il trasferimento. Questa traccia di trasferimento è un collegamento tra le due tracce. In "Attività B", potrebbe anche esserci una traccia di trasferimento alla fine dell'attività da ritrasferire al "Attività A". Questo funzionamento è simile alle chiamate di funzione dei programmi: A chiama B e quindi B restituisce il risultato.  
+ Le tracce di trasferimento sono tracce speciali del file di traccia che descrivono il trasferimento dell'esecuzione da un'attività a un'altra. Ad esempio, potrà trasferire "Attività A" in "Attività B". In tal caso, viene creata una traccia transfer nel "Attività di un" con il nome "a: Attività"e l'icona di trasferimento. Questa traccia di trasferimento è un collegamento tra le due tracce. In "Attività B", potrebbe anche esserci una traccia di trasferimento alla fine dell'attività da ritrasferire al "Attività A". Ciò è simile alle chiamate di funzione nei programmi: Un a chiama B, B restituisce quindi.  
   
  "Trasferimento successivo" è simile a "Esegui istruzione" in un debugger. consente di seguire il trasferimento dell'esecuzione da A a B, senza influire sulle altre tracce.  
   
  Esistono due modalità per eseguire questo tipo di esplorazione: tramite mouse o mediante tastiera.  
   
--   Tramite mouse: fare doppio clic sulla traccia di trasferimento nel riquadro delle tracce.  
+-   Tramite Mouse: Fare doppio clic sulla traccia di trasferimento nel riquadro delle tracce.  
   
 -   Mediante tastiera: Selezionare una traccia di trasferimento e utilizzare "Trasferimento successivo" nel **attività** menu o premere "F11"  
   
@@ -367,9 +367,9 @@ Strumento Visualizzatore di tracce dei servizi Windows Communication Foundation 
 #### <a name="jump-to-next-or-previous-transfer"></a>Vai al trasferimento successivo o Vai al trasferimento precedente  
  Durante l'analisi dell'attività corrente o delle attività selezionate, quando vengono selezionate più attività, può essere utile individuare rapidamente le attività a cui viene trasferita l'esecuzione. "Vai al trasferimento successivo" consente di individuare la traccia di trasferimento successiva dell'attività. Dopo aver trovato la traccia di trasferimento, è possibile utilizzare "Trasferimento successivo" per passare all'attività successiva.  
   
--   Vai al trasferimento successivo: usare la **attività** menu o premere "CTRL+F10".  
+-   Passare al trasferimento successivo: Usare la **attività** menu o premere "CTRL+F10".  
   
--   Vai al trasferimento precedente: utilizzare il **attività** menu o premere "CTRL+F9".  
+-   Vai al trasferimento precedente: Usare la **attività** menu o premere "CTRL+F9".  
   
 #### <a name="navigate-in-graph-view"></a>Esplorazione tramite la visualizzazione Grafico  
  Anche se lo spostamento nel riquadro attività e riquadro delle tracce è simile all'esecuzione del debug, usando **Graph** Vista fornisce una migliore esperienza di navigazione. Per altre informazioni vedere la sezione "Visualizzazione grafico".  
@@ -404,41 +404,41 @@ Strumento Visualizzatore di tracce dei servizi Windows Communication Foundation 
   
 |Icona|Descrizione|  
 |----------|-----------------|  
-|![Traccia di avviso](../../../docs/framework/wcf/media/7457c4ed-8383-4ac7-bada-bcb27409da58.gif "7457c4ed-8383-4ac7-bada-bcb27409da58")|Traccia di avviso: traccia generata al livello di avviso|  
-|![Traccia di errore](../../../docs/framework/wcf/media/7d908807-4967-4f6d-9226-d52125db69ca.gif "7d908807-4967-4f6d-9226-d52125db69ca")|Traccia di errore: traccia generata al livello di errore.|  
-|![Traccia di inizio dell'attività:](../../../docs/framework/wcf/media/8a728f91-5f80-4a95-afe8-0b6acd6e0317.gif "8a728f91-5f80-4a95-afe8-0b6acd6e0317")|Traccia di inizio dell’attività: traccia che indica l’inizio di un’attività, contenente il nome dell’attività. I progettisti dell’applicazione e gli sviluppatori devono definire una traccia d’inizio dell’attività per ogni ID attività per processo o thread.<br /><br /> Se l'ID attività viene propagato attraverso origini di traccia per la correlazione tra tracce, è possibile vedere più inizi per lo stesso ID attività (uno per ogni origine di traccia). La traccia di inizio viene emessa se è abilitata la funzione ActivityTracing per l'origine di traccia.|  
-|![Traccia di arresto dell'attività](../../../docs/framework/wcf/media/a0493e95-653e-4af8-84a4-4d09a400bc31.gif "a0493e95-653e-4af8-84a4-4d09a400bc31")|Traccia di interruzione dell’attività: traccia che indica l’interruzione di un’attività, . contenente il nome dell’attività. I progettisti dell’applicazione e gli sviluppatori devono definire una traccia d’interruzione dell’attività per ogni ID attività per origine di traccia. Nessuna traccia derivante da una determinata origine di traccia viene visualizzata dopo che venga generata un’interruzione dell’attività da parte dell’origine di traccia, a meno che la granularità del tempo di traccia non sia sufficientemente piccola. In questo caso, durante la visualizzazione, può verificarsi un’esecuzione interleave di due tracce della stessa durata, comprendenti un’interruzione. Se l'ID attività viene propagato attraverso origini di traccia per la correlazione tra tracce, è possibile vedere più Interruzioni per lo stesso ID attività (una per ogni origine di traccia). La traccia di interruzione viene emessa se è abilitata la funzione ActivityTracing per l'origine di traccia.|  
-|![Traccia di sospensione dell'attività](../../../docs/framework/wcf/media/6f7f4191-df2b-4592-8998-8379769e2d32.gif "6f7f4191-df2b-4592-8998-8379769e2d32")|Traccia di sospensione dell’attività: traccia che indica il tempo di sospensione di un’attività. Nessuna traccia è generata in un'attività sospesa finché l'attività non riprende. Un'attività sospesa indica che non si sta verificando nessuna elaborazione in quell'attività nell'ambito dell'origine della traccia. Le tracce di Sospensione/Ripresa sono utili per il profiling. La traccia di sospensione viene emessa se è abilitata la funzione ActivityTracing per l'origine di traccia.|  
-|![Attività di traccia di ripresa](../../../docs/framework/wcf/media/1060d9d2-c9c8-4e0a-9988-cdc2f7030f17.gif "1060d9d2-c9c8-4e0a-9988-cdc2f7030f17")|Traccia di ripresa dell'attività: traccia che indica il momento di ripresa di un’attività dopo la sospensione. Le tracce possono essere generate nuovamente in quell'attività. Le tracce di Sospensione/Ripresa sono utili per il profiling. La traccia di ripresa viene emessa se è abilitata la funzione ActivityTracing per l'origine di traccia.|  
-|![Transfer](../../../docs/framework/wcf/media/b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5.gif "b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5")|Trasferimento: traccia generata quando il flusso di controllo logico viene trasferito da un’attività all’altra. L'attività originaria del trasferimento può continuare ad eseguire le operazioni in parallelo con l'attività che riceve il trasferimento. La traccia di trasferimento viene emessa se è abilitata la funzione ActivityTracing per l'origine di traccia.|  
-|![Da trasferire](../../../docs/framework/wcf/media/1df215cb-b344-4f36-a20d-195999bda741.gif "1df215cb-b344-4f36-a20d-195999bda741")|Trasferimento da: traccia che definisce il trasferimento da un’altra attività all’attività corrente.|  
-|![Trasferire](../../../docs/framework/wcf/media/74255b6e-7c47-46ef-8e53-870c76b04c3f.gif "74255b6e-7c47-46ef-8e53-870c76b04c3f")|Trasferimento a: traccia che definisce il trasferimento di un flusso di controllo logico dall’attività corrente a un’altra attività.|  
+|![Traccia di avviso](../../../docs/framework/wcf/media/7457c4ed-8383-4ac7-bada-bcb27409da58.gif "7457c4ed-8383-4ac7-bada-bcb27409da58")|Traccia di avviso: Una traccia generata al livello di avviso|  
+|![Traccia di errore](../../../docs/framework/wcf/media/7d908807-4967-4f6d-9226-d52125db69ca.gif "7d908807-4967-4f6d-9226-d52125db69ca")|Traccia dell'errore: Una traccia generata al livello di errore.|  
+|![Traccia di inizio dell'attività:](../../../docs/framework/wcf/media/8a728f91-5f80-4a95-afe8-0b6acd6e0317.gif "8a728f91-5f80-4a95-afe8-0b6acd6e0317")|Traccia di inizio dell'attività Una traccia che contrassegna l'inizio di un'attività. contenente il nome dell’attività. I progettisti dell’applicazione e gli sviluppatori devono definire una traccia d’inizio dell’attività per ogni ID attività per processo o thread.<br /><br /> Se l'ID attività viene propagato attraverso origini di traccia per la correlazione tra tracce, è possibile vedere più inizi per lo stesso ID attività (uno per ogni origine di traccia). La traccia di inizio viene emessa se è abilitata la funzione ActivityTracing per l'origine di traccia.|  
+|![Traccia di arresto dell'attività](../../../docs/framework/wcf/media/a0493e95-653e-4af8-84a4-4d09a400bc31.gif "a0493e95-653e-4af8-84a4-4d09a400bc31")|Traccia di arresto dell'attività: Una traccia che contrassegna la fine di un'attività. . contenente il nome dell’attività. I progettisti dell’applicazione e gli sviluppatori devono definire una traccia d’interruzione dell’attività per ogni ID attività per origine di traccia. Nessuna traccia derivante da una determinata origine di traccia viene visualizzata dopo che venga generata un’interruzione dell’attività da parte dell’origine di traccia, a meno che la granularità del tempo di traccia non sia sufficientemente piccola. In questo caso, durante la visualizzazione, può verificarsi un’esecuzione interleave di due tracce della stessa durata, comprendenti un’interruzione. Se l'ID attività viene propagato attraverso origini di traccia per la correlazione tra tracce, è possibile vedere più Interruzioni per lo stesso ID attività (una per ogni origine di traccia). La traccia di interruzione viene emessa se è abilitata la funzione ActivityTracing per l'origine di traccia.|  
+|![Traccia di sospensione dell'attività](../../../docs/framework/wcf/media/6f7f4191-df2b-4592-8998-8379769e2d32.gif "6f7f4191-df2b-4592-8998-8379769e2d32")|Traccia di sospensione dell'attività: È in pausa una traccia che contrassegna l'avvio di un'attività. Nessuna traccia è generata in un'attività sospesa finché l'attività non riprende. Un'attività sospesa indica che non si sta verificando nessuna elaborazione in quell'attività nell'ambito dell'origine della traccia. Le tracce di Sospensione/Ripresa sono utili per il profiling. La traccia di sospensione viene emessa se è abilitata la funzione ActivityTracing per l'origine di traccia.|  
+|![Attività di traccia di ripresa](../../../docs/framework/wcf/media/1060d9d2-c9c8-4e0a-9988-cdc2f7030f17.gif "1060d9d2-c9c8-4e0a-9988-cdc2f7030f17")|Traccia di ripresa dell'attività: Una traccia che indica il momento di che ripresa di un'attività dopo che era stato sospeso. Le tracce possono essere generate nuovamente in quell'attività. Le tracce di Sospensione/Ripresa sono utili per il profiling. La traccia di ripresa viene emessa se è abilitata la funzione ActivityTracing per l'origine di traccia.|  
+|![Transfer](../../../docs/framework/wcf/media/b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5.gif "b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5")|Trasferimento: Una traccia generata quando il flusso di controllo logico viene trasferito da un'attività a un altro. L'attività originaria del trasferimento può continuare ad eseguire le operazioni in parallelo con l'attività che riceve il trasferimento. La traccia di trasferimento viene emessa se è abilitata la funzione ActivityTracing per l'origine di traccia.|  
+|![Da trasferire](../../../docs/framework/wcf/media/1df215cb-b344-4f36-a20d-195999bda741.gif "1df215cb-b344-4f36-a20d-195999bda741")|Trasferimento da: Una traccia che definisce il trasferimento da un'altra attività all'attività corrente.|  
+|![Trasferire](../../../docs/framework/wcf/media/74255b6e-7c47-46ef-8e53-870c76b04c3f.gif "74255b6e-7c47-46ef-8e53-870c76b04c3f")|Trasferimento a: Una traccia che definisce il trasferimento del flusso di controllo logico dall'attività corrente a un'altra attività.|  
   
 ### <a name="wcf-traces"></a>Tracce WCF  
   
 |Icona|Descrizione|  
 |----------|-----------------|  
-|![Traccia Log dei messaggi](../../../docs/framework/wcf/media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|Traccia Log dei messaggi: traccia che viene generata quando viene registrato un messaggio WCF tramite la funzionalità di registrazione dei messaggi, quando il `System.ServiceModel.MessageLogging` origine di traccia è abilitata. Facendo clic su questa traccia verrà visualizzato il messaggio. Ci sono quattro punti di registrazione configurabili per un messaggio: ServiceLevelSendRequest, TransportSend, TransportReceive e ServiceLevelReceiveRequest che possono essere specificati anche dall'attributo `messageSource` nella traccia del log dei messaggi.|  
-|![Traccia messaggio ricevuto](../../../docs/framework/wcf/media/de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c.gif "de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c")|Traccia messaggio ricevuto: traccia che viene generata quando viene ricevuto un messaggio WCF, se il `System.ServiceModel` origine di traccia è abilitata a livello di informazioni o dettagliato. Questa traccia è essenziale per visualizzare la freccia di correlazione di messaggi nell'attività **Graph** visualizzazione.|  
-|![Traccia messaggio inviato](../../../docs/framework/wcf/media/558943c4-17cf-4c12-9405-677e995ac387.gif "558943c4-17cf-4c12-9405-677e995ac387")|Traccia messaggio ricevuto: traccia che viene generata quando viene inviato un messaggio WCF se il `System.ServiceModel` origine di traccia è abilitata a livello di informazioni o dettagliato. Questa traccia è essenziale per visualizzare la freccia di correlazione di messaggi nell'attività **Graph** visualizzazione.|  
+|![Traccia Log dei messaggi](../../../docs/framework/wcf/media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|Traccia Log dei messaggi: Una traccia generata quando viene registrato un messaggio WCF tramite la funzionalità di registrazione dei messaggi, quando il `System.ServiceModel.MessageLogging` origine di traccia è abilitata. Facendo clic su questa traccia verrà visualizzato il messaggio. Esistono quattro punti di registrazione configurabili per un messaggio: ServiceLevelSendRequest, TransportSend, TransportReceive e ServiceLevelReceiveRequest che possono essere specificati anche dalla `messageSource` attributo nella traccia del log dei messaggi.|  
+|![Traccia messaggio ricevuto](../../../docs/framework/wcf/media/de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c.gif "de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c")|Traccia messaggio ricevuto: Una traccia generata quando viene ricevuto un messaggio WCF, se il `System.ServiceModel` origine di traccia è abilitata a livello di informazioni o dettagliato. Questa traccia è essenziale per visualizzare la freccia di correlazione di messaggi nell'attività **Graph** visualizzazione.|  
+|![Traccia messaggio inviato](../../../docs/framework/wcf/media/558943c4-17cf-4c12-9405-677e995ac387.gif "558943c4-17cf-4c12-9405-677e995ac387")|Traccia messaggio ricevuto: Una traccia generata quando viene inviato un messaggio WCF se il `System.ServiceModel` origine di traccia è abilitata a livello di informazioni o dettagliato. Questa traccia è essenziale per visualizzare la freccia di correlazione di messaggi nell'attività **Graph** visualizzazione.|  
   
 ### <a name="activities"></a>Attività  
   
 |Icona|Descrizione|  
 |----------|-----------------|  
-|![Activity](../../../docs/framework/wcf/media/wcfc-defaultactivityc.gif "wcfc_defaultActivityc")|Attività: indica che l'attività corrente è un'attività generica.|  
-|![Attività radice](../../../docs/framework/wcf/media/5dc8e0eb-1c32-4076-8c66-594935beaee9.gif "5dc8e0eb-1c32-4076-8c66-594935beaee9")|Attività radice: indica l'attività radice di un processo.|  
+|![Activity](../../../docs/framework/wcf/media/wcfc-defaultactivityc.gif "wcfc_defaultActivityc")|Attività: Indica che l'attività corrente è un'attività generica.|  
+|![Attività radice](../../../docs/framework/wcf/media/5dc8e0eb-1c32-4076-8c66-594935beaee9.gif "5dc8e0eb-1c32-4076-8c66-594935beaee9")|Attività radice: Indica l'attività radice di un processo.|  
   
 ### <a name="wcf-activities"></a>Attività WCF  
   
 |Icona|Descrizione|  
 |----------|-----------------|  
-|![Attività dell'ambiente](../../../docs/framework/wcf/media/29fa00ac-cf78-46e5-822d-56222fff61d1.gif "29fa00ac-cf78-46e5-822d-56222fff61d1")|Attività dell'ambiente: attività che crea, apre o chiude un host WCF o un client. Gli errori che si sono verificati durante queste fasi verranno visualizzati in questa attività.|  
-|![Attività Listen](../../../docs/framework/wcf/media/d7b135f6-ec7d-45d7-9913-037ab30e4c26.gif "d7b135f6-ec7d-45d7-9913-037ab30e4c26")|Attività Listen: attività che si registra tracce riferita a un listener. In questa attività, si possono visualizzare informazioni e richieste di connessione del listener.|  
-|![Attività ricezione byte](../../../docs/framework/wcf/media/2f628580-b80f-45a7-925b-616c96426c0e.gif "2f628580-b80f-45a7-925b-616c96426c0e")|Attività ricezione byte: attività che raduna tutte le tracce relative alla ricezione di byte in ingresso su una connessione tra due endpoint. Questa attività è essenziale nelle correlazioni con le attività del trasporto che propagano l'ID attività, ad esempio http.sys. Errori di connessione, quali interruzioni, verranno visualizzati in questa attività.|  
-|![Attività elaborazione messaggio](../../../docs/framework/wcf/media/wcfc-executionactivityiconc.GIF "wcfc_ExecutionActivityIconc")|Attività elaborazione messaggi: attività che raduna tracce relative alla creazione di un messaggio WCF. Gli errori causati da envelope errata o da messaggi in formato non valido verranno visualizzati nell'attività. In questa attività, è possibile controllare le intestazioni del messaggio per vedere se un ID attività è stato propagato dal chiamante. In questo caso, quando si passa all’attività di tipo ProcessAction (icona successiva), si può inoltre assegnare a tale attività l'ID attività propagato per la correlazione tra tracce di chiamante e chiamato.|  
-|![Traccia Log dei messaggi](../../../docs/framework/wcf/media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|Attività elaborazione azione: attività che raduna tutte le tracce correlate a una richiesta WCF tra due endpoint. Se `propagateActivity` è impostato su `true` su entrambi gli endpoint della configurazione, tutte le tracce da entrambi gli endpoint vengono incorporate in un'unica attività per correlazione diretta. Tale attività conterrà errori a causa dell’elaborazione nel trasporto o della sicurezza, che si estendono al limite del codice utente e viceversa (se esiste una risposta).|  
-|![Attività elaborazione messaggio](../../../docs/framework/wcf/media/wcfc-executionactivityiconc.GIF "wcfc_ExecutionActivityIconc")|Attività Esecuzione del codice utente: attività che raduna le tracce del codice utente per l'elaborazione di una richiesta.|  
+|![Attività dell'ambiente](../../../docs/framework/wcf/media/29fa00ac-cf78-46e5-822d-56222fff61d1.gif "29fa00ac-cf78-46e5-822d-56222fff61d1")|Attività dell'ambiente: Un'attività che crea, apre o chiude un host WCF o un client. Gli errori che si sono verificati durante queste fasi verranno visualizzati in questa attività.|  
+|![Attività Listen](../../../docs/framework/wcf/media/d7b135f6-ec7d-45d7-9913-037ab30e4c26.gif "d7b135f6-ec7d-45d7-9913-037ab30e4c26")|Attività Listen: Un'attività che si registra tracce riferite a un listener. In questa attività, si possono visualizzare informazioni e richieste di connessione del listener.|  
+|![Attività ricezione byte](../../../docs/framework/wcf/media/2f628580-b80f-45a7-925b-616c96426c0e.gif "2f628580-b80f-45a7-925b-616c96426c0e")|Attività ricezione byte: Attività che raduna tutte le tracce correlate alla ricezione di byte in ingresso su una connessione tra due endpoint. Questa attività è essenziale nelle correlazioni con le attività del trasporto che propagano l'ID attività, ad esempio http.sys. Errori di connessione, quali interruzioni, verranno visualizzati in questa attività.|  
+|![Attività elaborazione messaggio](../../../docs/framework/wcf/media/wcfc-executionactivityiconc.GIF "wcfc_ExecutionActivityIconc")|Attività elaborazione messaggio: Attività che raduna tracce riferite alla creazione di un messaggio WCF. Gli errori causati da envelope errata o da messaggi in formato non valido verranno visualizzati nell'attività. In questa attività, è possibile controllare le intestazioni del messaggio per vedere se un ID attività è stato propagato dal chiamante. In questo caso, quando si passa all’attività di tipo ProcessAction (icona successiva), si può inoltre assegnare a tale attività l'ID attività propagato per la correlazione tra tracce di chiamante e chiamato.|  
+|![Traccia Log dei messaggi](../../../docs/framework/wcf/media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|Attività elaborazione azione: Attività che raduna tutte le tracce relative a una richiesta WCF tra due endpoint. Se `propagateActivity` è impostato su `true` su entrambi gli endpoint della configurazione, tutte le tracce da entrambi gli endpoint vengono incorporate in un'unica attività per correlazione diretta. Tale attività conterrà errori a causa dell’elaborazione nel trasporto o della sicurezza, che si estendono al limite del codice utente e viceversa (se esiste una risposta).|  
+|![Attività elaborazione messaggio](../../../docs/framework/wcf/media/wcfc-executionactivityiconc.GIF "wcfc_ExecutionActivityIconc")|Eseguire l'attività di codice utente: Attività che raduna tracce di codice utente per l'elaborazione di una richiesta.|  
   
 ## <a name="troubleshooting"></a>Risoluzione dei problemi  
  Se non si dispone delle autorizzazioni di scrittura nel Registro di sistema, viene visualizzato il messaggio di errore seguente "Microsoft Service Trace Viewer non è stato registrato nel sistema" quando si usa il "`svctraceviewer /register`" comando per registrare lo strumento. In questo caso è necessario accedere utilizzando un account che abbia accesso in scrittura al Registro di sistema.  
@@ -449,7 +449,7 @@ Strumento Visualizzatore di tracce dei servizi Windows Communication Foundation 
   
  Se si apre un registro di traccia creato utilizzando un sistema operativo attivato per la lingua araba, è possibile che il filtro dell'ora non funzioni. Ad esempio, l'anno 2005 corrisponde all’anno 1427 del calendario arabo. L'intervallo di tempo supportato dal filtro dello strumento Visualizzatore di tracce dei servizi, tuttavia, non supporta una data antecedente al 1752. Questo può determinare l'impossibilità di selezionare una data corretta nel filtro. Per risolvere questo problema, è possibile creare un filtro personalizzato (**Visualizza/filtri personalizzati**) utilizzando un'espressione XPath per includere un intervallo di tempo specifico.  
   
-## <a name="see-also"></a>Vedere anche  
- [Uso del visualizzatore di tracce dei servizi per la visualizzazione di tracce correlate e la risoluzione dei problemi](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
- [Configurazione delle funzionalità di traccia](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
- [Traccia delle attività e propagazione per la correlazione tra tracce End-To-End](https://msdn.microsoft.com/library/2c11a905-64f8-47b5-bae5-a74fc666137e)
+## <a name="see-also"></a>Vedere anche
+- [Uso del visualizzatore di tracce dei servizi per la visualizzazione di tracce correlate e la risoluzione dei problemi](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
+- [Configurazione delle funzionalità di traccia](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
+- [Traccia delle attività e propagazione per la correlazione tra tracce End-To-End](https://msdn.microsoft.com/library/2c11a905-64f8-47b5-bae5-a74fc666137e)

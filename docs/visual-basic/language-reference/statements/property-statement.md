@@ -11,12 +11,12 @@ helpviewer_keywords:
 - property procedures [Visual Basic], Property statements
 - Property keyword [Visual Basic]
 ms.assetid: 3155edaf-8ebd-45c6-9cef-11d5d2dc8d38
-ms.openlocfilehash: 21ca15d6a6939d884c7e6abedc1f7919be079edd
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 4c92e7b3892fa35035935d5db317c72d74814ab8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43738146"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54512983"
 ---
 # <a name="property-statement"></a>Property Statement
 Dichiara il nome di una proprietà e le routine della proprietà utilizzate per archiviare e recuperare il valore della proprietà.  
@@ -66,7 +66,7 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
 
     - [Private Protected](../../language-reference/modifiers/private-protected.md)
   
-     Visualizzare [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+     Vedere [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
 -   `propertymodifiers`  
   
@@ -108,7 +108,7 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 -   `name`  
   
-     Obbligatorio. Nome della proprietà. Visualizzare [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
+     Obbligatorio. Nome della proprietà. Vedere [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
   
 -   `parameterlist`  
   
@@ -207,10 +207,10 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
  [!code-vb[VbVbalrStatements#51](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/property-statement_4.vb)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Proprietà implementate automaticamente](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)  
- [Oggetti e classi](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
- [Istruzione Get](../../../visual-basic/language-reference/statements/get-statement.md)  
- [Istruzione Set](../../../visual-basic/language-reference/statements/set-statement.md)  
- [Elenco dei parametri](../../../visual-basic/language-reference/statements/parameter-list.md)  
- [Default](../../../visual-basic/language-reference/modifiers/default.md)
+## <a name="see-also"></a>Vedere anche
+- [Proprietà implementate automaticamente](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)
+- [Oggetti e classi](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+- [Istruzione Get](../../../visual-basic/language-reference/statements/get-statement.md)
+- [Istruzione Set](../../../visual-basic/language-reference/statements/set-statement.md)
+- [Elenco dei parametri](../../../visual-basic/language-reference/statements/parameter-list.md)
+- [Default](../../../visual-basic/language-reference/modifiers/default.md)

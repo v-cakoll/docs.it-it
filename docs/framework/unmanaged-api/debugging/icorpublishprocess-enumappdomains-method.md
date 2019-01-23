@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5492d4e1245c6c0ce5c1eb98d25168c5d69d123b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a6f8f73eab1ee6e28a75263e06523a2b04ce62d9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423702"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54510559"
 ---
 # <a name="icorpublishprocessenumappdomains-method"></a>Metodo ICorPublishProcess::EnumAppDomains
-Ottiene un enumeratore per i domini applicazione nel processo di cui fa riferimento questo [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md).  
+Ottiene un enumeratore per i domini applicazione nel processo di cui viene fatto riferimento da questo [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,21 +37,21 @@ HRESULT EnumAppDomains (
   
 #### <a name="parameters"></a>Parametri  
  `ppEnum`  
- [out] Un puntatore all'indirizzo di un [ICorPublishAppDomainEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-interface.md) istanza che consente l'iterazione attraverso la raccolta di domini applicazione nel processo.  
+ [out] Un puntatore all'indirizzo di un [ICorPublishAppDomainEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-interface.md) istanza che consente l'iterazione nella raccolta di domini applicazione in questo processo.  
   
 ## <a name="remarks"></a>Note  
- L'elenco dei domini applicazione si basa su uno snapshot dei domini dell'applicazione che esiste quando il `EnumAppDomains` metodo viene chiamato. Questo metodo può essere chiamato più volte per creare un nuovo elenco aggiornato. Elenchi esistenti non influiranno le chiamate successive di questo metodo.  
+ L'elenco di domini applicazione si basa su uno snapshot dei domini applicazione che esiste quando il `EnumAppDomains` viene chiamato il metodo. Questo metodo può essere chiamato più volte per creare un nuovo elenco aggiornato. Elenchi esistenti non essere interessati dalle chiamate successive di questo metodo.  
   
  Se il processo è stato terminato, `EnumAppDomains` avrà esito negativo con un valore HRESULT di CORDBG_E_PROCESS_TERMINATED.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Corpub. idl, CorPub.h  
+ **Intestazione:** CorPub.idl, CorPub.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)

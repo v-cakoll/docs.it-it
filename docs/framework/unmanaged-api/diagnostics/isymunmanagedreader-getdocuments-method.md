@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0bcb0efab3b61f55bd5fdd3405799c7ac78ee521
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 68f2cc471a33d2c0ea92ceab59d5ba9ecb86e7f6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424651"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54509582"
 ---
 # <a name="isymunmanagedreadergetdocuments-method"></a>Metodo ISymUnmanagedReader::GetDocuments
 Restituisce una matrice di tutti i documenti definiti nell'archivio simboli.  
@@ -48,10 +48,10 @@ HRESULT GetDocuments (
  [out] Puntatore a una variabile che riceve la matrice del documento.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK se il metodo ha esito positivo. in caso contrario, E_FAIL o un altro codice di errore.  
+ S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o qualche altro codice di errore.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** CorSym. idl, CorSym.h  
+ **Intestazione:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

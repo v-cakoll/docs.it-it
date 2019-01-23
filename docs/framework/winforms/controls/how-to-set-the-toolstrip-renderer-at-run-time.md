@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: impostare il renderer ToolStrip in fase di esecuzione'
+title: 'Procedura: Impostare il ToolStrip Renderer in fase di esecuzione'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms]
 - MenuStrip control [Windows Forms]
 ms.assetid: 525e2347-0804-49aa-b9a3-9b2cabbf1c35
-ms.openlocfilehash: 98a027cb8cd913e3e2d00db16fc2f527159a1c87
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ddedae5bd7a58b7d8babca7f92bb261a10d2ddee
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47199827"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54511995"
 ---
-# <a name="how-to-set-the-toolstrip-renderer-at-run-time"></a>Procedura: impostare il renderer ToolStrip in fase di esecuzione
+# <a name="how-to-set-the-toolstrip-renderer-at-run-time"></a>Procedura: Impostare il ToolStrip Renderer in fase di esecuzione
 È possibile personalizzare l'aspetto del controllo <xref:System.Windows.Forms.ToolStrip> mediante la creazione di una classe `ProfessionalColorTable` personalizzata.  
   
 ## <a name="example"></a>Esempio  
@@ -48,12 +48,12 @@ ms.locfileid: "47199827"
   
 -   Riferimenti agli assembly System.Design, System.Drawing e System.Windows.Forms.  
   
- Per informazioni sulla compilazione di questo esempio dalla riga di comando per Visual Basic o Visual c#, vedere [compilazione dalla riga di comando](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oppure [con la creazione della riga di comando csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). È anche possibile compilare questo esempio in Visual Studio incollando il codice in un nuovo progetto.  Vedere anche [Procedura: Compilare ed eseguire un esempio di codice Windows Form completo tramite Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Per informazioni sulla compilazione di questo esempio dalla riga di comando per Visual Basic o Visual c#, vedere [compilazione dalla riga di comando](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oppure [con la creazione della riga di comando csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). È anche possibile compilare questo esempio in Visual Studio incollando il codice in un nuovo progetto.  Vedere anche [come: Compilare ed eseguire un esempio di codice completo di Windows Form con Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Windows.Forms.ToolStripManager>  
- <xref:System.Windows.Forms.ProfessionalColorTable>  
- <xref:System.Windows.Forms.MenuStrip>  
- <xref:System.Windows.Forms.ToolStrip>  
- <xref:System.Windows.Forms.ToolStripProfessionalRenderer>  
- [Controllo ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Windows.Forms.ToolStripManager>
+- <xref:System.Windows.Forms.ProfessionalColorTable>
+- <xref:System.Windows.Forms.MenuStrip>
+- <xref:System.Windows.Forms.ToolStrip>
+- <xref:System.Windows.Forms.ToolStripProfessionalRenderer>
+- [Controllo ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)

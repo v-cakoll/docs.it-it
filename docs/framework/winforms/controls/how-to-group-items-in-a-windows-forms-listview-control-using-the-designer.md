@@ -1,24 +1,24 @@
 ---
-title: 'Procedura: raggruppare elementi in un controllo ListView Windows Form utilizzando la finestra di progettazione'
+title: 'Procedura: Raggruppare elementi in un controllo di ListView Windows Form usando la finestra di progettazione'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ListView control [Windows Forms], grouping items
 - grouping
 - groups [Windows Forms], in Windows Forms controls
 ms.assetid: 8b615000-69d9-4c64-acaf-b54fa09b69e3
-ms.openlocfilehash: 40105ba9ffdc6f61cd9a9e382ba5d2610cbcbca2
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: d315172b4cb9a2a97ce66f3376d79b1f8065e55e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43749012"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54548417"
 ---
-# <a name="how-to-group-items-in-a-windows-forms-listview-control-using-the-designer"></a>Procedura: raggruppare elementi in un controllo ListView Windows Form utilizzando la finestra di progettazione
+# <a name="how-to-group-items-in-a-windows-forms-listview-control-using-the-designer"></a>Procedura: Raggruppare elementi in un controllo di ListView Windows Form usando la finestra di progettazione
 La caratteristica di raggruppamento del <xref:System.Windows.Forms.ListView> controllo consente di visualizzare insiemi di elementi correlati in gruppi. Questi gruppi vengono separati nella schermata dalle intestazioni del gruppo orizzontali che contengono i titoli di gruppo. È possibile usare <xref:System.Windows.Forms.ListView> gruppi per semplificare lo spostamento di elenchi di grandi dimensioni più facili raggruppando gli elementi in ordine alfabetico, per data o da qualsiasi altra forma di raggruppamento logico. L'immagine seguente mostra alcuni elementi raggruppati.  
   
  ![Gruppi ListView](../../../../docs/framework/winforms/controls/media/listviewgroups.gif "ListViewGroups")  
   
- La procedura seguente richiede un **applicazione di Windows** progetto con un form contenente un <xref:System.Windows.Forms.ListView> controllo. Per informazioni sulla configurazione di un progetto di questo tipo, vedere [procedura: creare un progetto di applicazione Windows](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa) e [procedura: aggiungere i controlli Windows Form](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).  
+ La procedura seguente richiede un **applicazione di Windows** progetto con un form contenente un <xref:System.Windows.Forms.ListView> controllo. Per informazioni sulla configurazione di un progetto di questo tipo, vedere [come: Creare un progetto di applicazione Windows](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa) e [come: Aggiungere controlli a un Windows Form](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).  
   
  Per abilitare il raggruppamento, è innanzitutto necessario creare uno o più <xref:System.Windows.Forms.ListViewGroup> gli oggetti a livello di codice o nella finestra di progettazione. Dopo aver definito un gruppo, è possibile assegnare elementi a esso.  
   
@@ -45,11 +45,11 @@ La caratteristica di raggruppamento del <xref:System.Windows.Forms.ListView> con
   
 3.  Selezionare il <xref:System.Windows.Forms.ListViewItem.Group%2A> proprietà e scegliere un gruppo di nell'elenco a discesa.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Windows.Forms.ListView>  
- <xref:System.Windows.Forms.ListView.Groups%2A>  
- <xref:System.Windows.Forms.ListViewGroup>  
- [Controllo ListView](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)  
- [Panoramica del controllo ListView](../../../../docs/framework/winforms/controls/listview-control-overview-windows-forms.md)  
- [Funzionalità di Windows XP e controlli di Windows Forms](https://msdn.microsoft.com/library/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)  
- [Procedura: Aggiungere e rimuovere elementi con il controllo ListView di Windows Form](../../../../docs/framework/winforms/controls/how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Windows.Forms.ListView>
+- <xref:System.Windows.Forms.ListView.Groups%2A>
+- <xref:System.Windows.Forms.ListViewGroup>
+- [Controllo ListView](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)
+- [Panoramica del controllo ListView](../../../../docs/framework/winforms/controls/listview-control-overview-windows-forms.md)
+- [Funzionalità di Windows XP e controlli di Windows Forms](https://msdn.microsoft.com/library/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)
+- [Procedura: Aggiungere e rimuovere elementi con il controllo ListView di Windows Form](../../../../docs/framework/winforms/controls/how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)

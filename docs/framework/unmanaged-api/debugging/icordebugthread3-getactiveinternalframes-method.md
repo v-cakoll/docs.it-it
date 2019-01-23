@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2ac87de35478e5eabdc8cdc3568baf2086923e38
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1995a344052439947d7893382eacb00920281d71
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423023"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54511082"
 ---
 # <a name="icordebugthread3getactiveinternalframes-method"></a>Metodo ICorDebugThread3::GetActiveInternalFrames
 Restituisce una matrice di frame interni ([ICorDebugInternalFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md) oggetti) nello stack.  
@@ -41,13 +41,13 @@ HRESULT GetActiveInternalFrames
   
 #### <a name="parameters"></a>Parametri  
  `cInternalFrames`  
- [in] Il numero di frame interni previsti in `ppInternalFrames`.  
+ [in] Il numero di frame interni previsto in `ppInternalFrames`.  
   
  `pcInternalFrames`  
- [out] Un puntatore a un `ULONG32` che contiene il numero di frame interni nello stack.  
+ [out] Un puntatore a un `ULONG32` che contiene il numero di frame interni dello stack.  
   
  `ppInternalFrames`  
- [in, out] Un puntatore all'indirizzo di una matrice di frame interni nello stack.  
+ [in, out] Un puntatore all'indirizzo di una matrice di frame interni dello stack.  
   
 ## <a name="return-value"></a>Valore restituito  
  Questo metodo restituisce gli specifici HRESULT seguenti, nonché gli errori di HRESULT che indicano la mancata riuscita del metodo.  
@@ -55,29 +55,29 @@ HRESULT GetActiveInternalFrames
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
 |S_OK|Il [ICorDebugInternalFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md) oggetto è stato creato correttamente.|  
-|E_INVALIDARG|`cInternalFrames` non è zero e `ppInternalFrames` viene `null`, o `pcInternalFrames` è `null`.|  
+|E_INVALIDARG|`cInternalFrames` non è uguale a zero e `ppInternalFrames` viene `null`, o `pcInternalFrames` è `null`.|  
 |HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)|`ppInternalFrames` è minore del numero di frame interni.|  
   
 ## <a name="exceptions"></a>Eccezioni  
   
 ## <a name="remarks"></a>Note  
- Frame interni sono strutture di dati nello stack dal runtime per archiviare dati temporanei.  
+ Frame interni sono strutture di dati inserite nello stack dal runtime per archiviare dati temporanei.  
   
- Quando si chiama innanzitutto `GetActiveInternalFrames`, è necessario impostare il `cInternalFrames` parametro su 0 (zero) e `ppInternalFrames` parametro su null. Quando `GetActiveInternalFrames` restituita innanzitutto, `pcInternalFrames` contiene il numero di frame interni nello stack.  
+ Quando si chiama innanzitutto `GetActiveInternalFrames`, è necessario impostare la `cInternalFrames` parametro su 0 (zero) e il `ppInternalFrames` parametro su null. Quando `GetActiveInternalFrames` restituisce prima, `pcInternalFrames` contiene il numero dei frame interni dello stack.  
   
- `GetActiveInternalFrames` deve quindi essere chiamato una seconda volta. È necessario passare il numero appropriato (`pcInternalFrames`) nei `cInternalFrames` parametro e specificare un puntatore a una matrice di dimensione appropriate in `ppInternalFrames`.  
+ `GetActiveInternalFrames` deve quindi essere chiamato una seconda volta. È necessario passare il numero appropriato (`pcInternalFrames`) nei `cInternalFrames` parametro, e specificare un puntatore a una matrice di dimensione appropriate in `ppInternalFrames`.  
   
- Utilizzare il [GetFrame](../../../../docs/framework/unmanaged-api/debugging/icordebugthread3-getactiveinternalframes-method.md) frame dello stack per restituire effettivo.  
+ Usare la [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugthread3-getactiveinternalframes-method.md) metodo restituisca effettivo stack frame.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Debug](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debug](../../../../docs/framework/unmanaged-api/debugging/index.md)

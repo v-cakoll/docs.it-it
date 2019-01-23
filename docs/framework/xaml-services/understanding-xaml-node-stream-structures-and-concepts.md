@@ -6,12 +6,12 @@ helpviewer_keywords:
 - nodes [XAML Services], XAML node stream
 - XAML [XAML Services], XAML node streams
 ms.assetid: 7c11abec-1075-474c-9d9b-778e5dab21c3
-ms.openlocfilehash: 100de0a897538527b76b1a53cf40d59a8804d3ae
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d237aa83a6bd1c6c68f96aa4fa58a88cfa23c2c8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519447"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54510143"
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>Informazioni su strutture e concetti del flusso del nodo XAML
 I reader XAML e i writer XAML implementati nei servizi XAML di .NET Framework sono basati sul concetto di progettazione di un flusso di nodi XAML. Il flusso di nodi XAML è una concettualizzazione di un set di nodi XAML. In questa concettualizzazione, un processore XAML attraversa la struttura delle relazioni tra i nodi in XAML, una alla volta. In qualsiasi momento, in un flusso di nodi XAML aperto è presente solo un record o una posizione corrente e molti aspetti dell'API segnalano unicamente le informazioni disponibili da tale posizione. Il nodo corrente in un flusso di nodi XAML può essere descritto come un oggetto, un membro o un valore. Trattando XAML come flusso di nodi XAML, i reader XAML possono comunicare con i writer XAML e consentire a un programma di visualizzare, interagire con o modificare i contenuti di un flusso di nodi XAML durante un'operazione relativa a un percorso di salvataggio o di caricamento che usa XAML. La progettazione delle API di reader e writer XAML e il concetto di flusso di nodi XAML sono analoghi a concetti e progettazioni di reader e writer correlati precedenti, come [!INCLUDE[TLA#tla_xmldom](../../../includes/tlasharptla-xmldom-md.md)] e le classi <xref:System.Xml.XmlReader> e <xref:System.Xml.XmlWriter> . Questo argomento illustra i concetti correlati al flusso di nodi XAML e descrive come scrivere routine che interagiscono con rappresentazioni XAML a livello di nodi XAML.  
@@ -80,7 +80,7 @@ while (xxr.Read()) {
  Vi sono altri modi, non legati al concetto di ciclo di nodi, per usare una rappresentazione XAML. Potrebbe ad esempio essere disponibile un reader XAML in grado di leggere un nodo indicizzato oppure di accedere direttamente ai nodi tramite `x:Name`, `x:Uid`o altri identificatori. I servizi XAML di .NET Framework non forniscono un'implementazione completa, ma forniscono un modello consigliato tramite servizi e tipi di supporto. Per altre informazioni, vedere <xref:System.Xaml.IXamlIndexingReader> e <xref:System.Xaml.XamlNodeList>.  
   
 > [!TIP]
->  Microsoft produce inoltre un rilascio fuori programma noto come Microsoft XAML Toolkit. Tale soluzione è al momento disponibile in una versione non definitiva. Per chi tuttavia è disposto a lavorare con componenti non definitivi, Microsoft XAML Toolkit fornisce alcune risorse interessanti per strumenti XAML e analisi statica del codice XAML. Microsoft XAML Toolkit include un'API DOM XAML, supporto per l'analisi FxCop e un contesto dello schema XAML per Silverlight. Per altre informazioni, vedere [Microsoft XAML Toolkit](https://code.msdn.microsoft.com/XAML).  
+>  Microsoft produce inoltre un rilascio fuori programma noto come Microsoft XAML Toolkit. Tale soluzione è al momento disponibile in una versione non definitiva. Per chi tuttavia è disposto a lavorare con componenti non definitivi, Microsoft XAML Toolkit fornisce alcune risorse interessanti per strumenti XAML e analisi statica del codice XAML. Microsoft XAML Toolkit include un'API DOM XAML, supporto per l'analisi FxCop e un contesto dello schema XAML per Silverlight. Per ulteriori informazioni, vedere la pagina relativa a [Microsoft XAML Toolkit](https://code.msdn.microsoft.com/XAML).  
   
 <a name="working_with_the_current_node"></a>   
 ## <a name="working-with-the-current-node"></a>Uso del nodo corrente  
@@ -194,17 +194,17 @@ public class GameBoard {
   
  L'elenco seguente illustra tutti i casi in cui si prevede che un reader XAML introduca un nodo membro direttiva XAML e il modo in cui tale nodo membro viene identificato nelle implementazioni dei servizi XAML di .NET Framework.  
   
--   **Testo di inizializzazione per un nodo oggetto:** il nome di questo nodo membro è `_Initialization`, rappresenta una direttiva XAML e viene definito nello spazio dei nomi XAML del linguaggio XAML. È possibile ottenere un'entità statica per esso da <xref:System.Xaml.XamlLanguage.Initialization%2A>.  
+-   **Testo di inizializzazione per un nodo oggetto:** Il nome di questo nodo membro è `_Initialization`, rappresenta una direttiva XAML e viene definito nello spazio dei nomi XAML del linguaggio XAML. È possibile ottenere un'entità statica per esso da <xref:System.Xaml.XamlLanguage.Initialization%2A>.  
   
--   **Parametri posizionali per un'estensione di markup:** il nome di questo nodo membro è `_PositionalParameters`e viene definito nello spazio dei nomi XAML del linguaggio XAML. Contiene sempre un elenco generico di oggetti, ognuno dei quali è un parametro posizionale pre-separato con il carattere delimitatore `,` come specificato nel codice XAML di input. È possibile ottenere un'entità statica per la direttiva di parametri posizionali da <xref:System.Xaml.XamlLanguage.PositionalParameters%2A>.  
+-   **Parametri posizionali per un'estensione di markup:** Il nome di questo nodo membro è `_PositionalParameters`, e viene definito nello spazio dei nomi XAML del linguaggio XAML. Contiene sempre un elenco generico di oggetti, ognuno dei quali è un parametro posizionale pre-separato con il carattere delimitatore `,` come specificato nel codice XAML di input. È possibile ottenere un'entità statica per la direttiva di parametri posizionali da <xref:System.Xaml.XamlLanguage.PositionalParameters%2A>.  
   
--   **Contenuto sconosciuto:** il nome di questo nodo membro è `_UnknownContent`. Nello specifico, si tratta di un oggetto <xref:System.Xaml.XamlDirective>e viene definito nello spazio dei nomi XAML del linguaggio XAML. Questa direttiva viene usata come elemento sentinel per i casi in cui un elemento oggetto XAML include contenuto nel codice XAML di origine, ma non è possibile determinare alcuna proprietà del contenuto nel contesto dello schema XAML attualmente disponibile. È possibile rilevare questo caso in un flusso di nodi XAML controllando la presenza di membri denominati `_UnknownContent`. Se non viene eseguita alcuna altra azione nel flusso di nodi XAML del percorso di caricamento, l'oggetto <xref:System.Xaml.XamlObjectWriter> predefinito genera un'eccezione nel caso di un tentativo di chiamare `WriteEndObject` quando viene rilevato il membro `_UnknownContent` in qualsiasi oggetto. L'oggetto <xref:System.Xaml.XamlXmlWriter> predefinito non genera un'eccezione e tratta il membro come implicito. È possibile ottenere un'entità statica per `_UnknownContent` da <xref:System.Xaml.XamlLanguage.UnknownContent%2A>.  
+-   **Contenuto sconosciuto:** Il nome di questo nodo membro è `_UnknownContent`. Nello specifico, si tratta di un oggetto <xref:System.Xaml.XamlDirective>e viene definito nello spazio dei nomi XAML del linguaggio XAML. Questa direttiva viene usata come elemento sentinel per i casi in cui un elemento oggetto XAML include contenuto nel codice XAML di origine, ma non è possibile determinare alcuna proprietà del contenuto nel contesto dello schema XAML attualmente disponibile. È possibile rilevare questo caso in un flusso di nodi XAML controllando la presenza di membri denominati `_UnknownContent`. Se non viene eseguita alcuna altra azione nel flusso di nodi XAML del percorso di caricamento, l'oggetto <xref:System.Xaml.XamlObjectWriter> predefinito genera un'eccezione nel caso di un tentativo di chiamare `WriteEndObject` quando viene rilevato il membro `_UnknownContent` in qualsiasi oggetto. L'oggetto <xref:System.Xaml.XamlXmlWriter> predefinito non genera un'eccezione e tratta il membro come implicito. È possibile ottenere un'entità statica per `_UnknownContent` da <xref:System.Xaml.XamlLanguage.UnknownContent%2A>.  
   
 -   **Proprietà di raccolta per una raccolta:** anche se il tipo CLR di supporto sottostante di una classe di raccolta in uso per XAML dispone in genere di una proprietà denominata dedicata che contiene gli elementi della raccolta, tale proprietà non è nota a un sistema di tipi XAML prima della risoluzione del tipo di supporto. Il flusso di nodi XAML introduce invece un segnaposto `Items` come membro del tipo XAML della raccolta. Nell'implementazione dei servizi XAML di .NET Framework il nome di questo membro/direttiva nel flusso di nodi è `_Items`. È possibile ottenere una costante per questa direttiva da <xref:System.Xaml.XamlLanguage.Items%2A>.  
   
      Si noti che un flusso di nodi XAML può contenere una proprietà Items con elementi che risultano non essere analizzabili in base alla risoluzione del tipo di supporto e al contesto dello schema XAML. Ad esempio,  
   
--   **Membri definiti da XML:** i membri `xml:base`, `xml:lang` e `xml:space` definiti da XML sono segnalati come direttive XAML denominate `base`, `lang`e `space` nelle implementazioni dei servizi XAML di .NET Framework. Lo spazio dei nomi per questi membri è lo spazio dei nomi XML `http://www.w3.org/XML/1998/namespace`. È possibile ottenere costanti per ognuno di essi da <xref:System.Xaml.XamlLanguage>.  
+-   **Membri definiti da XML:** Il codice XML definito `xml:base`, `xml:lang` e `xml:space` membri vengono segnalati come direttive XAML denominate `base`, `lang`, e `space` nelle implementazioni di servizi XAML di .NET Framework. Lo spazio dei nomi per questi membri è lo spazio dei nomi XML `http://www.w3.org/XML/1998/namespace`. È possibile ottenere costanti per ognuno di essi da <xref:System.Xaml.XamlLanguage>.  
   
 ## <a name="node-order"></a>Ordine dei nodi  
  In alcuni casi, <xref:System.Xaml.XamlXmlReader> modifica l'ordine dei nodi XAML nel flusso di nodi XAML rispetto all'ordine in cui i nodi vengono visualizzati nel markup o elaborati come XML. Lo scopo è quello di ordinare i nodi in modo tale che un oggetto <xref:System.Xaml.XamlObjectWriter> possa elaborare il flusso dei nodi solo procedendo in avanti.  Nei servizi XAML di .NET Framework, il reader XAML riordina i nodi anziché lasciare questa attività al writer XAML, per ottimizzare le prestazioni per i consumer di writer di oggetti XAML del flusso di nodi.  
@@ -217,7 +217,7 @@ public class GameBoard {
 ### <a name="getobject"></a>GetObject  
  `GetObject` rappresenta un nodo XAML in cui anziché costruire un nuovo oggetto, un writer di oggetti XAML deve ottenere il valore della proprietà che contiene l'oggetto. Un caso tipico in cui un nodo `GetObject` viene rilevato in un flusso di nodi XAML riguarda un oggetto raccolta o un oggetto dizionario, quando la proprietà che contiene l'oggetto è deliberatamente di sola lettura nel modello a oggetti del tipo di supporto. In questo scenario, la raccolta o il dizionario viene spesso creato e inizializzato (in genere come oggetto vuoto) dalla logica di inizializzazione di un tipo proprietario.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Xaml.XamlObjectReader>  
- [Servizi XAML](../../../docs/framework/xaml-services/index.md)  
- [Spazi dei nomi XAML](../../../docs/framework/xaml-services/xaml-namespaces-for-net-framework-xaml-services.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Xaml.XamlObjectReader>
+- [Servizi XAML](../../../docs/framework/xaml-services/index.md)
+- [Spazi dei nomi XAML](../../../docs/framework/xaml-services/xaml-namespaces-for-net-framework-xaml-services.md)

@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f08008a9-042e-4de9-94f3-4f0e502b1eb5
-ms.openlocfilehash: 1d9321a1db4f68195fb914f271fb98f904d2f963
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 473ea9963ce192f42e418bebc8e38971019350e3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43805806"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54548560"
 ---
 # <a name="datatable-edits"></a>Modifiche agli oggetti DataTable
 Quando si apportano modifiche ai valori di colonna in <xref:System.Data.DataRow>, le modifiche vengono inserite direttamente nello stato attuale della riga. Il <xref:System.Data.DataRowState> viene quindi impostato su **Modified**, e le modifiche vengono accettate o rifiutate tramite i <xref:System.Data.DataRow.AcceptChanges%2A> o <xref:System.Data.DataRow.RejectChanges%2A> metodi del **DataRow**. Il **DataRow** inoltre fornisce tre metodi che è possibile usare per sospendere lo stato della riga durante la modifica. Questi metodi sono <xref:System.Data.DataRow.BeginEdit%2A>, <xref:System.Data.DataRow.EndEdit%2A> e <xref:System.Data.DataRow.CancelEdit%2A>.  
   
- Quando si modifica valori di colonna in una **DataRow** direttamente, il **DataRow** gestisce i valori di colonna utilizzando il **corrente**, **predefinito**, e **Originale** le versioni di riga. Oltre a queste versioni di riga, il **BeginEdit**, **EndEdit**, e **CancelEdit** metodi usano una quarta versione: **proposto**. Per altre informazioni sulle versioni delle righe, vedere [stati e le versioni delle righe](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).  
+ Quando si modifica valori di colonna in una **DataRow** direttamente, il **DataRow** gestisce i valori di colonna utilizzando il **corrente**, **predefinito**, e **Originale** le versioni di riga. Oltre a queste versioni di riga, il **BeginEdit**, **EndEdit**, e **CancelEdit** metodi usano una quarta versione: **Proposta**. Per altre informazioni sulle versioni delle righe, vedere [stati e le versioni delle righe](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).  
   
  Il **proposto** versione di riga disponibile durante un'operazione di modifica iniziata chiamando **BeginEdit** e terminata tramite **EndEdit** o **CancelEdit,**  o chiamando **AcceptChanges** oppure **RejectChanges**.  
   
@@ -86,10 +86,10 @@ protected static void OnColumnChanged(
 }  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Data.DataRow>  
- <xref:System.Data.DataTable>  
- <xref:System.Data.DataRowVersion>  
- [Manipolazione di dati in un oggetto DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
- [Gestione di eventi DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Data.DataRow>
+- <xref:System.Data.DataTable>
+- <xref:System.Data.DataRowVersion>
+- [Manipolazione di dati in un oggetto DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
+- [Gestione di eventi DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)
+- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

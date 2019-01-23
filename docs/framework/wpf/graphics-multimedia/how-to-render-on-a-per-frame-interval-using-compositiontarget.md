@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: eseguire il rendering in un intervallo per frame tramite CompositionTarget'
+title: "Procedura: Eseguire il rendering in un intervallo per frame tramite l'oggetto CompositionTarget"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - CompositionTarget objects [WPF], rendering per frame
 - rendering per frame using CompositionTarget objects [WPF]
 ms.assetid: 701246cd-66b7-4d69-ada9-17b3b433d95d
-ms.openlocfilehash: cc043e6d225ad3dbe57a0924593fac0f68af7eb1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: afbaf6652351e056fb0ce31ffd9e69cf98a90e85
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526441"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54511225"
 ---
-# <a name="how-to-render-on-a-per-frame-interval-using-compositiontarget"></a>Procedura: eseguire il rendering in un intervallo per frame tramite CompositionTarget
+# <a name="how-to-render-on-a-per-frame-interval-using-compositiontarget"></a>Procedura: Eseguire il rendering in un intervallo per frame tramite l'oggetto CompositionTarget
 Il motore delle animazioni [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] offre molte funzionalità per la creazione di animazioni basate su fotogrammi. Esistono tuttavia scenari di applicazione in cui è necessario un controllo con granularità più fine sul rendering per fotogramma. Il <xref:System.Windows.Media.CompositionTarget> oggetto offre la possibilità di creare animazioni personalizzate basate su un callback per frame.  
   
  <xref:System.Windows.Media.CompositionTarget> è una classe statica che rappresenta l'area di visualizzazione in cui viene disegnata l'applicazione. Il <xref:System.Windows.Media.CompositionTarget.Rendering> evento viene generato ogni volta che viene disegnata la scena dell'applicazione. La frequenza dei fotogrammi di rendering è il numero di volte al secondo in cui viene disegnata la scena.  
@@ -40,6 +40,6 @@ Il motore delle animazioni [!INCLUDE[TLA2#tla_winclient](../../../../includes/tl
   
  Aggiunta o rimozione di un rendering <xref:System.EventHandler> delegato durante la generazione dell'evento verrà posticipata fino al termine dell'evento di attivazione. Questo comportamento è coerente con le procedure <xref:System.MulticastDelegate>-basato su eventi sono gestiti in Common Language Runtime (CLR). Si noti anche che gli eventi di rendering non verranno necessariamente chiamati in un ordine particolare. Se si dispone di più <xref:System.EventHandler> delegati che si basano su un particolare ordine, è necessario registrare un singolo <xref:System.Windows.Media.CompositionTarget.Rendering> evento e multiplex i delegati il corretto ordine manualmente.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Windows.Media.CompositionTarget>  
- [Cenni preliminari sul rendering della grafica WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Windows.Media.CompositionTarget>
+- [Cenni preliminari sul rendering della grafica WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)

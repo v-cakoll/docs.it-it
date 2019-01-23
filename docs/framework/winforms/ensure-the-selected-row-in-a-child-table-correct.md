@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: garantire che la riga selezionata in una tabella figlio rimanga nella posizione corretta'
+title: 'Procedura: Verificare che la riga selezionata in una tabella figlio rimanga nella posizione corretta'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - child tables row selection
 - current child position
 ms.assetid: c5fa2562-43a4-46fa-a604-52d8526a87bd
-ms.openlocfilehash: e1fdb007451c157e60a1ad723b5d2d06bc85ecdf
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: ef2c72fb941aa40eff85af4a83f6c76843dc2d6e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841229"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54547631"
 ---
-# <a name="how-to-ensure-the-selected-row-in-a-child-table-remains-at-the-correct-position"></a>Procedura: garantire che la riga selezionata in una tabella figlio rimanga nella posizione corretta
+# <a name="how-to-ensure-the-selected-row-in-a-child-table-remains-at-the-correct-position"></a>Procedura: Verificare che la riga selezionata in una tabella figlio rimanga nella posizione corretta
 Quando si usa il data binding in Windows Form, spesso i dati vengono mostrati in una visualizzazione denominata padre/figlio o master/dettagli Si tratta di uno scenario di data binding in cui i dati provenienti dalla stessa origine vengono visualizzati in due controlli. Se si modifica la selezione in un controllo, automaticamente vengono modificati anche i dati visualizzati nel secondo controllo. Ad esempio, il primo controllo può contenere un elenco di clienti e il secondo un elenco di ordini correlati al cliente selezionato nel primo controllo.  
   
  A partire da .NET Framework versione 2.0, quando si visualizzano i dati in una visualizzazione padre/figlio può essere necessario effettuare alcuni passaggi aggiuntivi per assicurarsi che la riga attualmente selezionata nella tabella figlio non venga reimpostata sulla prima riga della tabella. A tale scopo, è necessario memorizzare nella cache la posizione della tabella figlio e reimpostarla dopo aver modificato la tabella padre. In genere, la tabella figlio viene reimpostata la prima volta che si modifica un campo in una riga della tabella padre.  
@@ -35,7 +35,7 @@ Quando si usa il data binding in Windows Form, spesso i dati vengono mostrati in
      [!code-csharp[System.Windows.Forms.CurrencyManagerReset#4](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/CS/Form1.cs#4)]
      [!code-vb[System.Windows.Forms.CurrencyManagerReset#4](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/VB/Form1.vb#4)]  
   
-2.  Gestire l'evento <xref:System.Windows.Forms.CurrencyManager.ListChanged> per l'oggetto <xref:System.Windows.Forms.CurrencyManager> del binding e individuare un oggetto <xref:System.ComponentModel.ListChangedType> di <xref:System.ComponentModel.ListChangedType.Reset>.  
+2.  Gestire l'evento <xref:System.Windows.Forms.CurrencyManager.ListChanged> per l'oggetto <xref:System.Windows.Forms.CurrencyManager> dell'associazione e individuare un oggetto <xref:System.ComponentModel.ListChangedType> di <xref:System.ComponentModel.ListChangedType.Reset>.  
   
 3.  Controllare la posizione corrente dell'oggetto <xref:System.Windows.Forms.CurrencyManager>. Se è maggiore del primo elemento dell'elenco, in genere 0, salvarlo in una variabile.  
   
@@ -81,9 +81,9 @@ Quando si usa il data binding in Windows Form, spesso i dati vengono mostrati in
   
 -   Riferimenti agli assembly System, System.Data, System.Drawing, System.Windows.Forms e System.XML.  
   
- Per informazioni su come compilare questo esempio dalla riga di comando per Visual Basic o Visual c#, vedere [compilazione dalla riga di comando](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oppure [compilazione da riga di comando con csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). È anche possibile compilare questo esempio in Visual Studio incollando il codice in un nuovo progetto.  Vedere anche [Procedura: Compilare ed eseguire un esempio di codice Windows Form completo tramite Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Per informazioni su come compilare questo esempio dalla riga di comando per Visual Basic o Visual c#, vedere [compilazione dalla riga di comando](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oppure [compilazione da riga di comando con csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). È anche possibile compilare questo esempio in Visual Studio incollando il codice in un nuovo progetto.  Vedere anche [come: Compilare ed eseguire un esempio di codice completo di Windows Form con Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
-## <a name="see-also"></a>Vedere anche  
- [Procedura: Garantire la sincronizzazione di più controlli associati alla stessa origine dati](../../../docs/framework/winforms/multiple-controls-bound-to-data-source-synchronized.md)  
- [Componente BindingSource](../../../docs/framework/winforms/controls/bindingsource-component.md)  
- [Data binding e Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
+## <a name="see-also"></a>Vedere anche
+- [Procedura: Verificare che più controlli associati alla stessa origine dati rimangano sincronizzati](../../../docs/framework/winforms/multiple-controls-bound-to-data-source-synchronized.md)
+- [Componente BindingSource](../../../docs/framework/winforms/controls/bindingsource-component.md)
+- [Data binding e Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)

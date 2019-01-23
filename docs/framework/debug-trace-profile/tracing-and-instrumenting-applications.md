@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 33d940a051c3185d8a3a04e77ea5899de0475ffc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5947f1e84bc5b1f35f0bd479a9fc879dbe63c9f2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392957"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54547816"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>Traccia e strumentazione di applicazioni
 La traccia consente di monitorare l'esecuzione dell'applicazione mentre è in corso. È possibile aggiungere strumentazione di traccia e debug all'applicazione .NET Framework quando la si sviluppa e usare tale strumentazione sia mentre si sviluppa l'applicazione sia dopo la distribuzione. È possibile usare le classi <xref:System.Diagnostics.Trace?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug?displayProperty=nameWithType> e <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> per registrare le informazioni sugli errori e sull'esecuzione dell'applicazione in log, file di testo o altri dispositivi per un'analisi successiva.  
@@ -111,7 +111,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
  Con le istruzioni di traccia, è possibile evitare le complesse attività di analisi del codice sorgente originale, modifica, ricompilazione e tentativo di generare l'errore di run-time all'interno nell'ambiente di debug. Tenere presente che è possibile instrumentare un'applicazione non solo per visualizzare gli errori, ma anche per monitorare le prestazioni.  
   
 ## <a name="strategic-placement-of-trace-statements"></a>Posizionamento strategico delle istruzioni di traccia  
- È necessario prestare particolare attenzione durante il posizionamento delle istruzioni di traccia da usare in fase di esecuzione. È necessario valutare quali informazioni di traccia saranno necessarie in un'applicazione distribuita, in modo da includere tutti gli scenari di traccia probabili. Poiché le applicazioni che usano la traccia variano notevolmente, tuttavia, non vi sono linee guida generali per il posizionamento strategico della traccia. Per altre informazioni sul posizionamento delle istruzioni di traccia, vedere [Procedura: Aggiungere istruzioni di traccia al codice dell'applicazione](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md).  
+ È necessario prestare particolare attenzione durante il posizionamento delle istruzioni di traccia da usare in fase di esecuzione. È necessario valutare quali informazioni di traccia saranno necessarie in un'applicazione distribuita, in modo da includere tutti gli scenari di traccia probabili. Poiché le applicazioni che usano la traccia variano notevolmente, tuttavia, non vi sono linee guida generali per il posizionamento strategico della traccia. Per altre informazioni sul posizionamento delle istruzioni di traccia, vedere [come: Aggiungere istruzioni di traccia al codice dell'applicazione](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md).  
   
 ## <a name="output-from-tracing"></a>Output della traccia  
  L'output di traccia viene raccolto da oggetti denominati *listener*. Un listener è un oggetto che riceve l'output di traccia e lo scrive in un dispositivo di output (in genere una finestra, un log o un file di testo). Quando viene creato un listener di traccia, viene in genere aggiunto alla raccolta di proprietà <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType>, in modo che possa ricevere tutti gli output di traccia.  
@@ -136,20 +136,20 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
 > [!NOTE]
 >  In [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] i metodi **Debug.Write**, **Debug.WriteIf**, **Debug.WriteLine** e **Debug.WriteLineIf** sostituiscono il metodo **Debug.Print** disponibile nelle versioni precedenti di Visual Basic.  
   
- I metodi **Write** e **WriteLine** scrivono sempre il testo specificato. Per **Assert**, **WriteIf** e **WriteLineIf** è richiesto un argomento booleano tramite cui viene controllato se viene scritto o meno il testo specificato. Questa operazione viene eseguita solo se l'espressione è **true** (per **WriteIf** e **WriteLineIf**) o **false** (per **Assert**). Il metodo **Fail** scrive sempre il testo specificato. Per altre informazioni, vedere [Procedura: Aggiungere istruzioni di traccia al codice dell'applicazione](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md) e gli argomenti di riferimento su .NET Framework.  
+ I metodi **Write** e **WriteLine** scrivono sempre il testo specificato. Per **Assert**, **WriteIf** e **WriteLineIf** è richiesto un argomento booleano tramite cui viene controllato se viene scritto o meno il testo specificato. Questa operazione viene eseguita solo se l'espressione è **true** (per **WriteIf** e **WriteLineIf**) o **false** (per **Assert**). Il metodo **Fail** scrive sempre il testo specificato. Per altre informazioni, vedere [Procedura: Aggiungere istruzioni di traccia al codice dell'applicazione](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md) e il riferimento di .NET Framework.  
   
 ## <a name="security-concerns"></a>Problemi di sicurezza  
- Se non si disabilitano la traccia e il debug prima di distribuire un'applicazione ASP.NET, l'applicazione può rivelare informazioni su se stessa che potrebbero venire sfruttate da un programma dannoso. Per altre informazioni, vedere [Procedura: Compilare in modo condizionale con traccia e debug](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md), [Compilazione e creazione](/visualstudio/ide/compiling-and-building-in-visual-studio) e [Procedura: Creare, inizializzare e configurare opzioni di traccia](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md). Il debug può essere configurato anche tramite Internet Information Services (IIS).  
+ Se non si disabilitano la traccia e il debug prima di distribuire un'applicazione ASP.NET, l'applicazione può rivelare informazioni su se stessa che potrebbero venire sfruttate da un programma dannoso. Per altre informazioni, vedere [Procedura: Compilazione in modo condizionale con traccia e Debug](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md), [compilazione e creazione](/visualstudio/ide/compiling-and-building-in-visual-studio), e [come: Creare, inizializzare e configurare opzioni di traccia](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md). Il debug può essere configurato anche tramite Internet Information Services (IIS).  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Diagnostics.Trace>  
- <xref:System.Diagnostics.TraceSource>  
- [Contratti di codice](../../../docs/framework/debug-trace-profile/code-contracts.md)  
- [Tipi di progetto C#, F# e Visual Basic](/visualstudio/debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types)  
- [Procedura: aggiungere istruzioni di traccia al codice dell'applicazione](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)  
- [Procedura: Compilare in modo condizionale con traccia e debug](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)  
- [Procedura: Creare, inizializzare e configurare opzioni di traccia](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)  
- [Procedura: creare e inizializzare origini di traccia](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)  
- [Procedura: Usare TraceSource e filtri con listener di traccia](../../../docs/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners.md)  
- [Listener di traccia](../../../docs/framework/debug-trace-profile/trace-listeners.md)  
- [Opzioni di traccia](../../../docs/framework/debug-trace-profile/trace-switches.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Diagnostics.Trace>
+- <xref:System.Diagnostics.TraceSource>
+- [Contratti di codice](../../../docs/framework/debug-trace-profile/code-contracts.md)
+- [Tipi di progetto C#, F# e Visual Basic](/visualstudio/debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types)
+- [Procedura: Aggiungere istruzioni di traccia al codice dell'applicazione](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [Procedura: Compilare in modo condizionale con traccia e debug](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)
+- [Procedura: Creare, inizializzare e configurare opzioni di traccia](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
+- [Procedura: Creare e inizializzare origini di traccia](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)
+- [Procedura: Usare TraceSource e filtri con listener di traccia](../../../docs/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners.md)
+- [Listener di traccia](../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [Opzioni di traccia](../../../docs/framework/debug-trace-profile/trace-switches.md)

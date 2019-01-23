@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: 31f9e31d7cd91f9f89e131a7b506cf1a53fce7e4
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 33e811369d7f1d419eb593b430ab939279d3713b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030295"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54510195"
 ---
 # <a name="xaml-syntax-in-detail"></a>Descrizione dettagliata della sintassi XAML
 In questo argomento definisce le condizioni che vengono usate per descrivere gli elementi della sintassi XAML. Questi termini vengono utilizzati spesso in tutto il resto della presente documentazione, sia per la documentazione di WPF in modo specifico e per gli altri modelli che usano XAML o i concetti di base XAML abilitati per il supporto del linguaggio XAML a livello di System. Xaml. In questo argomento consente di espandere la terminologia di base introdotta nell'argomento [Cenni preliminari su XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md).  
@@ -315,10 +315,10 @@ In questo argomento definisce le condizioni che vengono usate per descrivere gli
   
  Ma in modo analogo *nomeTipo*. *nomeMembro* modulo per gli attributi *nomeTipoBase*. *memberName* non rappresenta uno stile nel markup ed è opportuno evitare.  
   
-## <a name="see-also"></a>Vedere anche  
- [Cenni preliminari su XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [XAML Namespace (x) Funzionalità del linguaggio](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)  
- [Estensioni XAML WPF](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md)  
- [Panoramica sulle proprietà di dipendenza](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
- [TypeConverter e XAML](../../../../docs/framework/wpf/advanced/typeconverters-and-xaml.md)  
- [Classi XAML e personalizzate per WPF](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)
+## <a name="see-also"></a>Vedere anche
+- [Cenni preliminari su XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [XAML Namespace (x) Funzionalità del linguaggio](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)
+- [Estensioni XAML WPF](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md)
+- [Panoramica sulle proprietà di dipendenza](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
+- [TypeConverter e XAML](../../../../docs/framework/wpf/advanced/typeconverters-and-xaml.md)
+- [Classi XAML e personalizzate per WPF](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)
