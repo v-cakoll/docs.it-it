@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9aef8c40be2456532bd6df6feb8d286cdaeefa7f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1beb76012d5f0351ee644c8dea89cabdbe2c8970
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445631"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555024"
 ---
 # <a name="imetadataassemblyimportenumexportedtypes-method"></a>Metodo IMetaDataAssemblyImport::EnumExportedTypes
-Enumera i tipi esportati a cui fa riferimento nel manifesto dell'assembly nell'ambito dei metadati corrente.  
+Enumera i tipi esportati a cui fa riferimento il manifesto dell'assembly nell'ambito dei metadati corrente.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,7 +40,7 @@ HRESULT EnumExportedTypes (
   
 #### <a name="parameters"></a>Parametri  
  `phEnum`  
- [in, out] Un puntatore all'enumeratore. Deve essere un valore null valore quando il `EnumExportedTypes` metodo viene chiamato per la prima volta.  
+ [in, out] Un puntatore all'enumeratore. Deve trattarsi di un valore null valore quando il `EnumExportedTypes` viene chiamato per la prima volta.  
   
  `rExportedTypes`  
  [out] L'enumerazione di `mdExportedType` i token di metadati.  
@@ -49,7 +49,7 @@ HRESULT EnumExportedTypes (
  [in] Il numero massimo di `mdExportedType` i token che possono essere inseriti nel `rExportedTypes` matrice.  
   
  `pcTokens`  
- [out] Il numero di `mdExportedType` token effettivamente inseriti in `rExportedTypes`.  
+ [out] I numerosi `mdExportedType` token effettivamente posizionati nella `rExportedTypes`.  
   
 ## <a name="return-value"></a>Valore restituito  
   
@@ -59,13 +59,13 @@ HRESULT EnumExportedTypes (
 |`S_FALSE`|Non sono presenti token da enumerare. In questo caso, `pcTokens` è impostato su zero.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforma:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforma:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
- **Libreria:** usata come risorsa in Mscoree. dll  
+ **Libreria:** Usato come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

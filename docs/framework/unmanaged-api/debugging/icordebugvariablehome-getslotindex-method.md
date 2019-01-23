@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 61014e067b2afb8b7e4be0488ed6a3c7f1bd6fc4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3534160e14c46bc3f8f5da81c4c14a3191a6238b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420700"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54553192"
 ---
 # <a name="icordebugvariablehomegetslotindex-method"></a>Metodo ICorDebugVariableHome::GetSlotIndex
-Ottiene l'indice dello slot gestito di una variabile locale.  
+Ottiene l'indice degli slot gestito di una variabile locale.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,27 +37,27 @@ HRESULT GetSlotIndex(
   
 #### <a name="parameters"></a>Parametri  
  `pSlotIndex`  
- [out] Un puntatore per l'indice dello slot di una variabile locale.  
+ [out] Un puntatore all'indice dello slot di una variabile locale.  
   
 ## <a name="return-value"></a>Valore restituito  
  Il metodo restituisce i valori seguenti.  
   
-|Valore|Descrizione|  
+|Value|Descrizione|  
 |-----------|-----------------|  
-|`S_OK`|La chiamata al metodo ha restituito un valore di indice dello slot in `pSlotIndex`.|  
-|`E_FAIL`|Corrente [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) istanza rappresenta un argomento di funzione.|  
+|`S_OK`|La chiamata al metodo ha restituito un valore di indice degli slot in `pSlotIndex`.|  
+|`E_FAIL`|L'oggetto corrente [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) istanza rappresenta un argomento di funzione.|  
   
 ## <a name="remarks"></a>Note  
- L'indice dello slot può essere utilizzato per recuperare i metadati per questa variabile locale.  
+ L'indice degli slot è utilizzabile per recuperare i metadati per questa variabile locale.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)

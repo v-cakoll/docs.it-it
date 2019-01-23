@@ -1,5 +1,5 @@
 ---
-title: "Procedura: rendere i dati disponibili per l'associazione in XAML"
+title: "Procedura: Rendere i dati disponibili per l'associazione in XAML"
 ms.date: 01/29/2018
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - data binding [WPF], making data available for binding
 - binding data [WPF], making data available for
 ms.assetid: 7103c2e8-0e31-4a13-bf12-ca382221a8d5
-ms.openlocfilehash: 09a6fca48c06efca6f06b9e0617de9095197bd17
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: 95871b6a8d11ad4086735bd3315c360885d027dd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261472"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555466"
 ---
-# <a name="how-to-make-data-available-for-binding-in-xaml"></a>Procedura: rendere i dati disponibili per l'associazione in XAML
+# <a name="how-to-make-data-available-for-binding-in-xaml"></a>Procedura: Rendere i dati disponibili per l'associazione in XAML
 In questo argomento illustra vari modi in cui è possibile rendere disponibili dati per l'associazione in [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], a seconda delle esigenze dell'applicazione.  
   
 ## <a name="example"></a>Esempio  
@@ -42,6 +42,6 @@ In questo argomento illustra vari modi in cui è possibile rendere disponibili d
   
  Per informazioni su molti aspetti è possibile specificare i dati a cui si esegue l'associazione, vedere [specificare l'origine del Binding](../../../../docs/framework/wpf/data/how-to-specify-the-binding-source.md). Per informazioni su quali tipi di dati è possibile associare a o come implementare il proprio [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] degli oggetti per l'associazione, vedere [Cenni preliminari sulle origini di associazione](../../../../docs/framework/wpf/data/binding-sources-overview.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Panoramica sul data binding](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Procedure relative alle proprietà](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a>Vedere anche
+- [Panoramica sul data binding](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [Procedure relative alle proprietà](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

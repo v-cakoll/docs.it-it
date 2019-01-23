@@ -8,29 +8,29 @@ helpviewer_keywords:
 - claims [WCF]
 - authorization [WCF], managing with the Identity Model
 ms.assetid: 099defbb-5d35-434e-9336-1a49b9ec7663
-ms.openlocfilehash: 84f4485a85f83e910cc75b04282e1ad04aee72c1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1f9881cd1a63e00aaf414f93c91885e57ea0b145
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33497026"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540562"
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>Gestione di attestazioni e autorizzazioni con il modello di identità
-L'autorizzazione è il processo volto a determinare quali entità dispongono delle autorizzazioni per modificare, visualizzare o altrimenti accedere a una risorsa del computer. In un'azienda, ad esempio, è possibile che l'accesso ai file dei dipendenti sia consentito solo ai responsabili. Windows Communication Foundation (WCF) supporta due meccanismi per l'elaborazione di autorizzazione. Il primo meccanismo consente di controllare l'autorizzazione utilizzando costrutti Common Language Runtime (CLR) esistenti. Il secondo è un modello basato sulle attestazioni, noto come il *modello di identità*. WCF utilizza il modello di identità per creare attestazioni dai messaggi in ingresso; Classi del modello di identità possono essere esteso per supportare nuovi tipi di attestazione per schemi di autorizzazione personalizzati. In questo argomento viene presentata una panoramica dei principali concetti di programmazione del modello di identità, nonché un elenco delle classi più importanti utilizzate da tale funzionalità.  
+L'autorizzazione è il processo volto a determinare quali entità dispongono delle autorizzazioni per modificare, visualizzare o altrimenti accedere a una risorsa del computer. In un'azienda, ad esempio, è possibile che l'accesso ai file dei dipendenti sia consentito solo ai responsabili. Windows Communication Foundation (WCF) supporta due meccanismi per l'esecuzione del processo di autorizzazione. Il primo meccanismo consente di controllare l'autorizzazione utilizzando costrutti Common Language Runtime (CLR) esistenti. Il secondo è un modello basato sulle attestazioni definito come il *modello di identità*. WCF utilizza il modello di identità per creare attestazioni dai messaggi in ingresso; Classi di modello di identità possono essere esteso per supportare nuovi tipi di attestazione per schemi di autorizzazione personalizzati. In questo argomento viene presentata una panoramica dei principali concetti di programmazione del modello di identità, nonché un elenco delle classi più importanti utilizzate da tale funzionalità.  
   
 ## <a name="identity-model-scenarios"></a>Scenari del modello di identità  
  Negli scenari seguenti viene illustrato l'utilizzo del modello di identità.  
   
-### <a name="scenario-1-supporting-identity-role-and-group-claims"></a>Scenario 1: supporto di attestazioni di identità, ruolo e gruppo  
+### <a name="scenario-1-supporting-identity-role-and-group-claims"></a>Scenario 1: Supporto di identità, ruolo e le attestazioni di gruppo  
  Gli utenti inviano i messaggi a un servizio Web. I requisiti del servizio Web per il controllo dell'accesso prevedono l'utilizzo di identità, ruoli o gruppi. Il mittente del messaggio viene mappato a un set di ruoli o gruppi. Le informazioni relative al ruolo o al gruppo vengono utilizzate per eseguire i controlli di accesso.  
   
-### <a name="scenario-2-supporting-rich-claims"></a>Scenario 2: supporto di attestazioni più dettagliate  
+### <a name="scenario-2-supporting-rich-claims"></a>Scenario 2: Supporto di attestazioni più dettagliate  
  Gli utenti inviano i messaggi a un servizio Web. I requisiti del servizio Web per il controllo dell'accesso prevedono un modello più dettagliato di quello basato su identità, ruoli o gruppo. Il servizio Web determina se un determinato utente può accedere a una particolare risorsa protetta utilizzando il modello basato su attestazioni più dettagliate. Ad esempio, a un utente potrebbe essere consentito leggere determinate informazioni, come quelle relative agli stipendi, a cui altri utenti non hanno accesso.  
   
-### <a name="scenario-3-mapping-disparate-claims"></a>Scenario 3: mapping di attestazioni di tipo diverso  
- Un utente invia un messaggio a un servizio Web. Le sue credenziali possono essere specificate in vari modi differenti, ovvero certificato X.509, token del nome utente o token Kerberos. Il servizio Web deve eseguire le verifiche per il controllo di accesso nello stesso modo, indipendentemente dal tipo di credenziali dell'utente. Se nel tempo vengono supportati tipi di credenziali aggiuntivi, è necessario che il sistema si evolva di conseguenza.  
+### <a name="scenario-3-mapping-disparate-claims"></a>Scenario 3: Mapping di attestazioni di tipo diverso  
+ Un utente invia un messaggio a un servizio Web. L'utente può specificare le credenziali in modi diversi: Certificato X.509, token del nome utente o token Kerberos. Il servizio Web deve eseguire le verifiche per il controllo di accesso nello stesso modo, indipendentemente dal tipo di credenziali dell'utente. Se nel tempo vengono supportati tipi di credenziali aggiuntivi, è necessario che il sistema si evolva di conseguenza.  
   
-### <a name="scenario-4-determining-access-to-multiple-resources"></a>Scenario 4: determinazione dell'accesso a più risorse  
+### <a name="scenario-4-determining-access-to-multiple-resources"></a>Scenario 4: Determinazione dell'accesso a più risorse  
  Un servizio Web tenta di accedere a più risorse. Il servizio determina a quali risorse protette ha accesso un determinato utente confrontando le attestazioni associate all'utente con le attestazioni necessarie per accedere alle risorse.  
   
 ## <a name="identity-model-terms"></a>Termini del modello di identità  
@@ -69,7 +69,7 @@ L'autorizzazione è il processo volto a determinare quali entità dispongono del
  A destra  
  Funzionalità su una risorsa. I diritti definiti dall'API del modello di identità sono proprietà della classe <xref:System.IdentityModel.Claims.Rights>. Esempi di diritti forniti dal sistema sono <xref:System.IdentityModel.Claims.Rights.Identity%2A> e <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>.  
   
- Valore  
+ Value  
  Elemento su cui viene attestato un diritto.  
   
 ## <a name="claims"></a>Attestazioni  
@@ -80,21 +80,21 @@ L'autorizzazione è il processo volto a determinare quali entità dispongono del
  Sebbene nell'ambito del modello di identità siano definiti vari tipi di attestazioni e diritti, il sistema è estensibile, consentendo in questo modo ai vari sistemi basati sull'infrastruttura del modello di identità di definire tipi di attestazione e diritti aggiuntivi in base alle esigenze.  
   
 ### <a name="identity-claims"></a>Attestazioni di identità  
- Un particolare diritto è quello dell'identità. Le attestazioni che possiedono questo diritto effettuano una dichiarazione sull'identità dell'entità. Ad esempio, un'attestazione di tipo "nome dell'entità utente" (UPN) con un valore di "someone@example.com" e un diritto di identità indica una determinata identità in un particolare dominio.  
+ Un particolare diritto è quello dell'identità. Le attestazioni che possiedono questo diritto effettuano una dichiarazione sull'identità dell'entità. Ad esempio, un'attestazione di tipo "user principal name" (UPN) con un valore di "someone@example.com" e un diritto di identità indica una determinata identità in un particolare dominio.  
   
 #### <a name="system-identity-claim"></a>Attestazione di identità di sistema  
- Il modello di identità definisce un sola attestazione di identità, ovvero System. L'attestazione di identità System indica che un'entità è l'applicazione corrente o il sistema.  
+ Il modello di identità definisce un'attestazione di identità: System. L'attestazione di identità System indica che un'entità è l'applicazione corrente o il sistema.  
   
 ### <a name="sets-of-claims"></a>Set di attestazioni  
  Il modello delle attestazioni che rappresentano l'identità è importante perché le attestazioni vengono sempre emesse da un'entità presente nel sistema, anche se tale entità è fondamentalmente un concetto indipendente. Le attestazioni vengono raggruppate in un set e ogni set ha un'emittente. Un emittente è un set di attestazioni. Tale relazione ricorsiva deve alla fine avere termine e qualsiasi set di attestazioni può essere il proprio emittente.  
   
  Nella figura seguente viene illustrato un esempio di tre set di attestazioni, in cui un set di attestazioni ha come emittente un altro set di attestazioni, che a sua volta ha come emittente il set di attestazioni System. I set di attestazioni formano pertanto una gerarchia che può avere una profondità arbitraria.  
   
- ![Gestione attestazioni e autorizzazioni](../../../../docs/framework/wcf/feature-details/media/claimshierarchy.gif "claimshierarchy")  
+ ![Gestione di attestazioni e autorizzazioni](../../../../docs/framework/wcf/feature-details/media/claimshierarchy.gif "claimshierarchy")  
   
  Più set di attestazioni possono avere come emittente lo stesso set di attestazioni, come illustrato nella figura seguente.  
   
- ![Gestione attestazioni e autorizzazioni](../../../../docs/framework/wcf/feature-details/media/multiplesetsofclaims.gif "multiplesetsofclaims")  
+ ![Gestione di attestazioni e autorizzazioni](../../../../docs/framework/wcf/feature-details/media/multiplesetsofclaims.gif "multiplesetsofclaims")  
   
  Ad eccezione di un set di attestazioni che è il proprio emittente, il modello di identità non fornisce alcun supporto che consenta ai set di attestazioni di formare un ciclo. Pertanto non potrà mai verificarsi una situazione in cui il set di attestazioni A viene emesso da set di attestazioni B che viene emesso dal set di attestazioni A. Inoltre, il modello di identità non fornisce alcun supporto che consenta ai set di attestazioni di avere più emittenti. Se due o più emittenti devono emettere un determinato set di attestazioni, è necessario utilizzare più set di attestazioni, ognuno contenente le stesse attestazioni, ma con emittenti diversi.  
   
@@ -122,10 +122,10 @@ L'autorizzazione è il processo volto a determinare quali entità dispongono del
 ### <a name="a-recap"></a>Riepilogo  
  Il modello di identità si basa sul concetto di attestazioni. Le attestazioni vengono raggruppate in set e aggregate in un contesto di autorizzazione. Un contesto di autorizzazione contiene un set di attestazioni ed è il risultato della valutazione di uno o più criteri di autorizzazione associati a un gestore autorizzazioni. Questi set di attestazioni possono quindi essere esaminati per determinare se i requisiti di accesso sono stati soddisfatti. Nella figura seguente vengono illustrate le relazioni tra questi vari concetti del modello di identità.  
   
- ![Gestione attestazioni e autorizzazioni](../../../../docs/framework/wcf/feature-details/media/xsi-recap.gif "xsi_recap")  
+ ![Gestione di attestazioni e autorizzazioni](../../../../docs/framework/wcf/feature-details/media/xsi-recap.gif "xsi_recap")  
   
 ## <a name="wcf-and-identity-model"></a>WCF e modello di identità  
- WCF utilizza l'infrastruttura del modello di identità come base per l'esecuzione di autorizzazione. In WCF, il <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> classe consente di specificare *autorizzazione* criteri come parte di un servizio. Tali criteri di autorizzazione sono note come *criteri di autorizzazione esterni*, e possono eseguire l'elaborazione delle attestazioni in base a criteri locali o mediante interazioni con un servizio remoto. Gestione autorizzazioni, rappresentata dal <xref:System.ServiceModel.ServiceAuthorizationManager> classe valuta i criteri di autorizzazione esterni con i criteri di autorizzazione che riconoscono i vari tipi (token) di credenziali e popola il cosiddetto un  *contesto di autorizzazione* con le attestazioni appropriate a un messaggio in arrivo. Il contesto di autorizzazione è rappresentato dalla classe <xref:System.IdentityModel.Policy.AuthorizationContext>.  
+ WCF Usa l'infrastruttura del modello di identità come base per l'esecuzione di autorizzazione. In WCF, il <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> classe consente di specificare *autorizzazione* criteri come parte di un servizio. Tali criteri di autorizzazione sono dette *criteri di autorizzazione esterni*, e possono eseguire l'elaborazione delle attestazioni in base a criteri locali o mediante interazioni con un servizio remoto. Il gestore dell'autorizzazione, rappresentato dal <xref:System.ServiceModel.ServiceAuthorizationManager> classe valuta i criteri di autorizzazione esterni con i criteri di autorizzazione che riconoscono i vari tipi (token) di credenziali e consente di popolare il cosiddetto un  *contesto di autorizzazione* con le attestazioni appropriate a un messaggio in arrivo. Il contesto di autorizzazione è rappresentato dalla classe <xref:System.IdentityModel.Policy.AuthorizationContext>.  
   
 ## <a name="identity-model-programming"></a>Programmazione del modello di identità  
  Nella tabella seguente viene descritto il modello a oggetti utilizzato per programmare le estensioni del modello di identità. Queste classi sono tutte contenute nello spazio dei nomi <xref:System.IdentityModel.Policy> o <xref:System.IdentityModel.Claims>.  
@@ -133,13 +133,13 @@ L'autorizzazione è il processo volto a determinare quali entità dispongono del
 |Classe|Descrizione|  
 |-----------|-----------------|  
 |Componente di autorizzazione|Classe del modello di identità che implementa l'interfaccia <xref:System.IdentityModel.Policy.IAuthorizationComponent>.|  
-|<xref:System.IdentityModel.Policy.IAuthorizationComponent>|Interfaccia che fornisce una sola proprietà stringa in sola lettura, ovvero Id. Il valore di questa proprietà è univoco per ogni istanza presente nel sistema che implementa questa interfaccia.|  
-|<xref:System.IdentityModel.Policy.AuthorizationContext>|Un *componente di autorizzazione* che contiene un set di `ClaimSet` istanze con zero o più proprietà; risultato della valutazione di uno o più criteri di autorizzazione.|  
+|<xref:System.IdentityModel.Policy.IAuthorizationComponent>|Un'interfaccia che fornisce una proprietà singola stringa di sola lettura: Id. Il valore di questa proprietà è univoco per ogni istanza presente nel sistema che implementa questa interfaccia.|  
+|<xref:System.IdentityModel.Policy.AuthorizationContext>|Un' *componente di autorizzazione* che contiene un set di `ClaimSet` istanze con zero o più proprietà; risultato della valutazione di uno o più criteri di autorizzazione.|  
 |<xref:System.IdentityModel.Claims.Claim>|Combinazione di tipo di attestazione, diritto e valore. Le parti relative al diritto e al valore sono vincolate dal tipo di attestazione.|  
 |<xref:System.IdentityModel.Claims.ClaimSet>|Classe base astratta. Raccolta di istanze di `Claim`.|  
 |<xref:System.IdentityModel.Claims.DefaultClaimSet>|Classe sealed. Implementazione della classe `ClaimSet`.|  
 |<xref:System.IdentityModel.Policy.EvaluationContext>|Classe base astratta. Passata a un criterio di autorizzazione durante la valutazione dei criteri.|  
-|<xref:System.IdentityModel.Policy.IAuthorizationPolicy>|Un'interfaccia derivata da `IAuthorizationComponent` e implementata da classi di criteri di autorizzazione.|  
+|<xref:System.IdentityModel.Policy.IAuthorizationPolicy>|Interfaccia derivata da `IAuthorizationComponent` e implementata da classi di criteri di autorizzazione.|  
 |<xref:System.IdentityModel.Claims.Rights>|Classe statica contenente i valori dei diritti predefiniti.|  
   
  Per la programmazione del modello di identità vengono inoltre utilizzate le classi seguenti, che però non si trovano nello spazio dei nomi <xref:System.IdentityModel.Policy> o <xref:System.IdentityModel.Claims>.  
@@ -155,27 +155,27 @@ L'autorizzazione è il processo volto a determinare quali entità dispongono del
   
 |Member|Descrizione|  
 |------------|-----------------|  
-|<xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>|Questo metodo viene implementato dalle classi derivate per eseguire controlli di accesso basati sulle attestazioni prima dell'esecuzione delle operazioni di un servizio. Tutte le informazioni contenute nell'oggetto <xref:System.ServiceModel.OperationContext> fornito o altrove possono essere esaminate per le decisioni relative al controllo di accesso. Se <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> restituisce `true`, l'accesso viene concesso e l'operazione può essere eseguita. Se `CheckAccessCore` restituisce `false`, l'accesso viene negato e l'operazione non viene eseguita. Per un esempio, vedere [procedura: creare un gestore autorizzazioni personalizzato per un servizio](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md).|  
+|<xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>|Questo metodo viene implementato dalle classi derivate per eseguire controlli di accesso basati sulle attestazioni prima dell'esecuzione delle operazioni di un servizio. Tutte le informazioni contenute nell'oggetto <xref:System.ServiceModel.OperationContext> fornito o altrove possono essere esaminate per le decisioni relative al controllo di accesso. Se <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> restituisce `true`, l'accesso viene concesso e l'operazione può essere eseguita. Se `CheckAccessCore` restituisce `false`, l'accesso viene negato e l'operazione non viene eseguita. Per un esempio, vedere [Procedura: Creare un gestore autorizzazioni personalizzato per un servizio](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md).|  
 |<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ServiceAuthorizationManager%2A>|Restituisce la classe <xref:System.ServiceModel.ServiceAuthorizationManager> per il servizio. <xref:System.ServiceModel.ServiceAuthorizationManager> è responsabile delle decisioni di autorizzazione.|  
 |<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ExternalAuthorizationPolicies%2A>|Raccolta dei criteri di autorizzazione personalizzati specificati per il servizio. Tali criteri vengono valutati in aggiunta a quelli associati alle credenziali nei messaggi in ingresso.|  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.IdentityModel.Policy.AuthorizationContext>  
- <xref:System.IdentityModel.Claims.Claim>  
- <xref:System.IdentityModel.Policy.EvaluationContext>  
- <xref:System.IdentityModel.Policy.IAuthorizationComponent>  
- <xref:System.IdentityModel.Policy.IAuthorizationPolicy>  
- <xref:System.IdentityModel.Claims.Rights>  
- <xref:System.IdentityModel.Claims>  
- <xref:System.IdentityModel.Policy>  
- <xref:System.IdentityModel.Tokens>  
- <xref:System.IdentityModel.Selectors>  
- [Attestazioni e token](../../../../docs/framework/wcf/feature-details/claims-and-tokens.md)  
- [Attestazioni e negazione dell'accesso alle risorse](../../../../docs/framework/wcf/feature-details/claims-and-denying-access-to-resources.md)  
- [Creazione di attestazioni e valori delle risorse](../../../../docs/framework/wcf/feature-details/claim-creation-and-resource-values.md)  
- [Procedura: Creare un'attestazione personalizzata](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)  
- [Procedura: Confrontare le attestazioni](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)  
- [Procedura: Creare criteri di autorizzazione personalizzati](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-policy.md)  
- [Procedura: Creare un gestore autorizzazioni personalizzato per un servizio](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
- [Panoramica della sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Autorizzazione](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.IdentityModel.Policy.AuthorizationContext>
+- <xref:System.IdentityModel.Claims.Claim>
+- <xref:System.IdentityModel.Policy.EvaluationContext>
+- <xref:System.IdentityModel.Policy.IAuthorizationComponent>
+- <xref:System.IdentityModel.Policy.IAuthorizationPolicy>
+- <xref:System.IdentityModel.Claims.Rights>
+- <xref:System.IdentityModel.Claims>
+- <xref:System.IdentityModel.Policy>
+- <xref:System.IdentityModel.Tokens>
+- <xref:System.IdentityModel.Selectors>
+- [Attestazioni e token](../../../../docs/framework/wcf/feature-details/claims-and-tokens.md)
+- [Attestazioni e negazione dell'accesso alle risorse](../../../../docs/framework/wcf/feature-details/claims-and-denying-access-to-resources.md)
+- [Creazione di attestazioni e valori delle risorse](../../../../docs/framework/wcf/feature-details/claim-creation-and-resource-values.md)
+- [Procedura: Creare un'attestazione personalizzata](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)
+- [Procedura: Confrontare le attestazioni](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)
+- [Procedura: Creare un criterio di autorizzazione personalizzato](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-policy.md)
+- [Procedura: Creare un gestore autorizzazioni personalizzato per un servizio](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
+- [Panoramica della sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Autorizzazione](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)

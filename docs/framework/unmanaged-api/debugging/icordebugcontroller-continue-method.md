@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 529a65285203ac831e1bcab9dc1bea69ac28a282
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 115a998f8be233c38efac1a301b4b24b7d861662
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412565"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540182"
 ---
 # <a name="icordebugcontrollercontinue-method"></a>Metodo ICorDebugController::Continue
 Riprende l'esecuzione dei thread gestiti dopo una chiamata a [metodo Stop](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-stop-method.md).  
@@ -37,25 +37,25 @@ HRESULT Continue (
   
 #### <a name="parameters"></a>Parametri  
  `fIsOutOfBand`  
- [in] Impostare su `true` Se continui da un evento out of band; in caso contrario, è impostato su `false`.  
+ [in] Impostare su `true` andare a un evento di out-of-band; in caso contrario, impostato su `false`.  
   
 ## <a name="remarks"></a>Note  
- `Continue` continua il processo dopo una chiamata al `ICorDebugController::Stop` metodo.  
+ `Continue` continua il processo dopo una chiamata al `ICorDebugController::Stop` (metodo).  
   
- Quando si esegue il debug in modalità mista, non chiamare `Continue` sul Win32 evento thread a meno che non si continui da un evento fuori banda.  
+ Quando si esegue il debug in modalità mista, non chiamare `Continue` in Win32 evento thread a meno che non si continui da un evento di out-of-band.  
   
- Un *evento in banda* è un evento gestito o un normale evento non gestito durante il quale il debugger supporta l'interazione con lo stato del processo gestito. In questo caso, il debugger riceve il [ICorDebugUnmanagedCallback::](../../../../docs/framework/unmanaged-api/debugging/icordebugunmanagedcallback-debugevent-method.md) callback con il relativo `fOutOfBand` parametro impostato su `false`.  
+ Un' *eventi in banda* è un evento gestito o un normale evento non gestito durante il quale il debugger supporta l'interazione con la gestione degli Stati del processo. In questo caso, il debugger riceve la [ICorDebugUnmanagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugunmanagedcallback-debugevent-method.md) callback con relativo `fOutOfBand` parametro impostato su `false`.  
   
- Un *out of band evento* è un evento non gestito durante il quale è possibile interagire con lo stato del processo gestito durante il processo viene arrestato a causa dell'evento. In questo caso, il debugger riceve il `ICorDebugUnmanagedCallback::DebugEvent` callback con il relativo `fOutOfBand` parametro impostato su `true`.  
+ Un' *evento out-of-band* è un evento non gestito durante il quale è possibile l'interazione con la gestione degli Stati del processo durante il processo viene arrestato a causa di un evento. In questo caso, il debugger riceve la `ICorDebugUnmanagedCallback::DebugEvent` callback con relativo `fOutOfBand` parametro impostato su `true`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- 
+## <a name="see-also"></a>Vedere anche
+

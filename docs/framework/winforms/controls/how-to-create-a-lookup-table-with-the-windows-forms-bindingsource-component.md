@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: creare una tabella di ricerca con il componente BindingSource di Windows Form'
+title: 'Procedura: Creare una tabella di ricerca con il componente BindingSource di Windows Form'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - lookup tables
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], creating a lookup table
 - BindingSource component [Windows Forms], examples
 ms.assetid: 622fce80-879d-44be-abbf-8350ec22ca2b
-ms.openlocfilehash: 83a34c9d1a4b3d1c2e9950d3c5427567022326b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 79459364fba51e8e10194a5e3681d6384beb16a7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33535584"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54539896"
 ---
-# <a name="how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component"></a>Procedura: creare una tabella di ricerca con il componente BindingSource di Windows Form
+# <a name="how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component"></a>Procedura: Creare una tabella di ricerca con il componente BindingSource di Windows Form
 Una tabella di ricerca è una tabella di dati che include una colonna che mostra i dati presenti nei record di una tabella correlata. Nelle procedure seguenti sarà usato un controllo <xref:System.Windows.Forms.ComboBox> per visualizzare il campo che include la relazione di chiave esterna dalla tabella padre alla tabella figlio.  
   
  Per semplificare la visualizzazione delle due tabelle e della relazione corrispondente, di seguito è disponibile un esempio di una tabella padre e una tabella figlio:  
@@ -49,7 +49,7 @@ Una tabella di ricerca è una tabella di dati che include una colonna che mostra
   
 ### <a name="to-create-the-user-interface"></a>Per creare l'interfaccia utente  
   
-1.  Dal **della casella degli strumenti**, trascinare un <xref:System.Windows.Forms.ComboBox> controllo nel form.  
+1.  Dal **casella degli strumenti**, trascinare un <xref:System.Windows.Forms.ComboBox> controllo nel form.  
   
      Il controllo mostrerà una colonna della tabella padre.  
   
@@ -91,8 +91,8 @@ Una tabella di ricerca è una tabella di dati che include una colonna che mostra
   
 8.  Associare i controlli diversi dal controllo <xref:System.Windows.Forms.ComboBox> e <xref:System.Windows.Forms.BindingNavigator> ai campi di dettagli da <xref:System.Windows.Forms.BindingSource> della tabella figlio (ad esempio, `OrdersBindingSource`) da visualizzare.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Windows.Forms.BindingSource>  
- [Componente BindingSource](../../../../docs/framework/winforms/controls/bindingsource-component.md)  
- [Controllo ComboBox](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md)  
- [Associare controlli ai dati in Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Windows.Forms.BindingSource>
+- [Componente BindingSource](../../../../docs/framework/winforms/controls/bindingsource-component.md)
+- [Controllo ComboBox](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md)
+- [Associare controlli ai dati in Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)

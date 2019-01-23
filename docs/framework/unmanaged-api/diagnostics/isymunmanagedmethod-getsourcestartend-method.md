@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1e15bab136540c73f8e1cff0e6bb52ec1d6c0063
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4ecb726f275a694fded2c486448a60b28fadb168
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426224"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54561868"
 ---
 # <a name="isymunmanagedmethodgetsourcestartend-method"></a>Metodo ISymUnmanagedMethod::GetSourceStartEnd
-Ottiene le posizioni di documento di inizio e di fine per l'origine di questo metodo. La prima posizione di matrice è l'inizio e la seconda è la fine.  
+Ottiene le posizioni del documento iniziale e finale per l'origine di questo metodo. La prima posizione della matrice è l'inizio e la seconda posizione matrice corrisponde alla fine.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,22 +39,22 @@ HRESULT GetSourceStartEnd(
   
 #### <a name="parameters"></a>Parametri  
  `docs`  
- [in] Avvio e chiusura di documenti di origine.  
+ [in] Le iniziali e finali documenti di origine.  
   
  `lines`  
- [in] Documenti di origine iniziali e finali righe corrispondenti.  
+ [in] Le righe iniziali e finali nel corrispondente dei documenti di origine.  
   
  `columns`  
- [in] Documenti di origine iniziali e finali di colonne corrispondenti.  
+ [in] Le colonne iniziali e finali nel corrispondente dei documenti di origine.  
   
  `pRetVal`  
- [out] `true` Se posizioni sono definite in caso contrario, `false`.  
+ [out] `true` se le posizioni sono state definite; in caso contrario, `false`.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK se il metodo ha esito positivo. in caso contrario, E_FAIL o un altro codice di errore.  
+ S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o qualche altro codice di errore.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** CorSym. idl, CorSym.h  
+ **Intestazione:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

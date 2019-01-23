@@ -1,5 +1,5 @@
 ---
-title: "Procedura: associare dati utilizzando un'origine dati del progetto (WCF Data Services)"
+title: "Procedura: Associare dati utilizzando un'origine dati di progetto (WCF Data Services)"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - data binding, WCF Data Services
 - WCF Data Services, data binding
 ms.assetid: 2477af0a-676f-44f7-b73d-e66208785509
-ms.openlocfilehash: 62a7e3bf7caf60c6a532dbffeb8aac8b6c59deb9
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 465585d93d7bb20208720dc360b2cf8e6bb5f0e4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44216529"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540754"
 ---
-# <a name="how-to-bind-data-using-a-project-data-source-wcf-data-services"></a>Procedura: associare dati utilizzando un'origine dati del progetto (WCF Data Services)
+# <a name="how-to-bind-data-using-a-project-data-source-wcf-data-services"></a>Procedura: Associare dati utilizzando un'origine dati di progetto (WCF Data Services)
 
 È possibile creare origini dati che si basano sugli oggetti dati generati in un'applicazione client WCF Data Services. Quando si aggiunge un riferimento a un servizio dati tramite il **Aggiungi riferimento al servizio** finestra di dialogo, un'origine dati del progetto viene creata con le classi dati client generate. Per ogni set di entità esposto dal servizio dati viene creata un'origine dati. È possibile creare form che visualizzino i dati del servizio mediante il trascinamento di questi elementi di origine dati dal **Zdroje dat** finestra nella finestra di progettazione. Questi elementi diventeranno controlli associati all'origine dati. Durante l'esecuzione, questa origine dati è associata a un'istanza del <xref:System.Data.Services.Client.DataServiceCollection%601> classe, che viene riempita con oggetti restituiti da una query al servizio dati. Per altre informazioni, vedere [associazione di dati a controlli](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md).
 
@@ -23,7 +23,7 @@ ms.locfileid: "44216529"
 
 ## <a name="use-a-project-data-source-in-a-wpf-window"></a>Usare un'origine dati del progetto in una finestra WPF
 
-1.  In Visual Studio in un progetto WPF aggiungere un riferimento al servizio dati Northwind. Per altre informazioni, vedere [procedura: aggiungere un riferimento al servizio dati](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md).
+1.  In Visual Studio in un progetto WPF aggiungere un riferimento al servizio dati Northwind. Per altre informazioni, vedere [Procedura: Aggiungere un riferimento al servizio dati](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md).
 
 2.  Nel **Zdroje dat** finestra, espandere il `Customers` nodo il **NorthwindEntities** origine dati del progetto.
 

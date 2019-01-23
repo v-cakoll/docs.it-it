@@ -1,5 +1,5 @@
 ---
-title: "Procedura: implementare l'interfaccia ITypedList"
+title: "Procedura: Implementare l'interfaccia ITypedList"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,18 +10,18 @@ helpviewer_keywords:
 - data binding [Windows Forms], implementing
 - IBindingList interface
 ms.assetid: 834cc15c-50bc-4a8b-a610-313d6a217357
-ms.openlocfilehash: 181879d3e41e0dd140c79a4c63d52e6999acf86d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3d12c0b82d9475981d0c72f082665b11135d8bb0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538067"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54562168"
 ---
-# <a name="how-to-implement-the-itypedlist-interface"></a>Procedura: implementare l'interfaccia ITypedList
+# <a name="how-to-implement-the-itypedlist-interface"></a>Procedura: Implementare l'interfaccia ITypedList
 Implementare il <xref:System.ComponentModel.ITypedList> interfaccia per abilitare l'individuazione dello schema per un elenco associabile.  
   
 ## <a name="example"></a>Esempio  
- Esempio di codice seguente viene illustrato come implementare il <xref:System.ComponentModel.ITypedList> interfaccia. Un tipo generico denominato `SortableBindingList` deriva il <xref:System.ComponentModel.BindingList%601> classe e implementa il <xref:System.ComponentModel.ITypedList> interfaccia. Una classe semplice denominata `Customer` fornisce i dati, che sono associati all'intestazione di un <xref:System.Windows.Forms.DataGridView> controllo.  
+ Esempio di codice seguente viene illustrato come implementare il <xref:System.ComponentModel.ITypedList> interfaccia. Un tipo generico denominato `SortableBindingList` deriva dal <xref:System.ComponentModel.BindingList%601> classe e implementa la <xref:System.ComponentModel.ITypedList> interfaccia. Una classe semplice denominata `Customer` fornisce i dati, che sono associati all'intestazione di un <xref:System.Windows.Forms.DataGridView> controllo.  
   
  [!code-csharp[System.ComponentModel.ITypedList#1](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.ITypedList/CS/SortableBindingList.cs#1)]
  [!code-vb[System.ComponentModel.ITypedList#1](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.ITypedList/VB/SortableBindingList.vb#1)]  
@@ -37,8 +37,8 @@ Implementare il <xref:System.ComponentModel.ITypedList> interfaccia per abilitar
   
 -   Riferimenti agli assembly System.Drawing e System.Windows.Forms.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.ComponentModel.ITypedList>  
- <xref:System.ComponentModel.BindingList%601>  
- <xref:System.ComponentModel.IBindingList>  
- [Data binding e Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.ComponentModel.ITypedList>
+- <xref:System.ComponentModel.BindingList%601>
+- <xref:System.ComponentModel.IBindingList>
+- [Data binding e Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)

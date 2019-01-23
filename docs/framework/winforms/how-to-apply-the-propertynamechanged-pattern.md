@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: applicare il modello PropertyNameChanged'
+title: 'Procedura: Applicare il modello PropertyNameChanged'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - data binding [Windows Forms], custom controls
 - PropertyNameChanged pattern [Windows Forms], applying
 ms.assetid: aa47ddf6-5223-40c4-833f-a78992194836
-ms.openlocfilehash: 775a27b1b4ba8143e297a3c4d323356a304073a0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 82856405ab3c9581b398f358e5bf9ecf989ce193
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33536746"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54539766"
 ---
-# <a name="how-to-apply-the-propertynamechanged-pattern"></a>Procedura: applicare il modello PropertyNameChanged
-Esempio di codice seguente viene illustrato come applicare il *PropertyName*modello Changed a un controllo personalizzato. Applicare questo modello quando si implementano controlli personalizzati che vengono utilizzati con il motore di associazione di dati di Windows Form.  
+# <a name="how-to-apply-the-propertynamechanged-pattern"></a>Procedura: Applicare il modello PropertyNameChanged
+Esempio di codice seguente viene illustrato come applicare la *PropertyName*Changed pattern a un controllo personalizzato. Applicare questo modello quando si implementano controlli personalizzati che vengono usati con il motore di data binding di Windows Form.  
   
 ## <a name="example"></a>Esempio  
  [!code-csharp[System.Windows.Forms.ChangeNotification#3](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ChangeNotification/CS/Form1.cs#3)]
@@ -26,9 +26,9 @@ Esempio di codice seguente viene illustrato come applicare il *PropertyName*mode
 ## <a name="compiling-the-code"></a>Compilazione del codice  
  Per compilare l'esempio di codice precedente:  
   
--   Incollare il codice in un file di codice vuoto. È necessario utilizzare il controllo personalizzato in un Windows Form che contiene un `Main` metodo.  
+-   Incollare il codice in un file di codice vuoto. È necessario usare il controllo personalizzato in un Form Windows che contiene un `Main` (metodo).  
   
-## <a name="see-also"></a>Vedere anche  
- [Procedura: Implementare l'interfaccia INotifyPropertyChanged](../../../docs/framework/winforms/how-to-implement-the-inotifypropertychanged-interface.md)  
- [Notifica delle modifiche nel data binding dei Windows Form](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)  
- [Data binding in Windows Form](../../../docs/framework/winforms/windows-forms-data-binding.md)
+## <a name="see-also"></a>Vedere anche
+- [Procedura: Implementare l'interfaccia INotifyPropertyChanged](../../../docs/framework/winforms/how-to-implement-the-inotifypropertychanged-interface.md)
+- [Notifica delle modifiche nel data binding dei Windows Form](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)
+- [Data binding in Windows Form](../../../docs/framework/winforms/windows-forms-data-binding.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 9f98d85e5fd01a631352f5db7bba6ed309449d68
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 03c2620913aff2ef2934e7c07574c130923c7139
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613518"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540663"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Scrittura di app grandi e reattive in .NET Framework
 Questo articolo include suggerimenti per il miglioramento delle prestazioni delle app .NET Framework di grandi dimensioni o di app che elaborano una quantità elevata di dati, ad esempio file o database. Questi suggerimenti derivano dalla riscrittura di compilatori C# e Visual Basic nel codice gestito e l'articolo include diversi esempi concreti tratti dal compilatore C#. 
@@ -463,12 +463,12 @@ class Compilation { /*...*/
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Video di presentazione di questo argomento](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)  
-- [Guida per principianti alla profilatura delle prestazioni](/visualstudio/profiling/beginners-guide-to-performance-profiling)  
-- [Prestazioni](../../../docs/framework/performance/index.md)  
-- [Suggerimenti sulle prestazioni .NET](https://msdn.microsoft.com/library/ms973839.aspx)  
-- [Windows Phone Performance Analysis Tool](https://msdn.microsoft.com/magazine/hh781024.aspx)  
-- [Trovare i colli di bottiglia dell'applicazione con Visual Studio Profiler](https://msdn.microsoft.com/magazine/cc337887.aspx)  
-- [Channel 9 esercitazioni di PerfView](https://channel9.msdn.com/Series/PerfView-Tutorial)  
+- [Video di presentazione di questo argomento](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)
+- [Guida per principianti alla profilatura delle prestazioni](/visualstudio/profiling/beginners-guide-to-performance-profiling)
+- [Prestazioni](../../../docs/framework/performance/index.md)
+- [Suggerimenti sulle prestazioni .NET](https://msdn.microsoft.com/library/ms973839.aspx)
+- [Windows Phone Performance Analysis Tool](https://msdn.microsoft.com/magazine/hh781024.aspx)
+- [Trovare i colli di bottiglia dell'applicazione con Visual Studio Profiler](https://msdn.microsoft.com/magazine/cc337887.aspx)
+- [Channel 9 esercitazioni di PerfView](https://channel9.msdn.com/Series/PerfView-Tutorial)
 - [.NET Compiler Platform SDK](../../csharp/roslyn-sdk/index.md)
 - [repository dotnet/roslyn su GitHub](https://github.com/dotnet/roslyn)

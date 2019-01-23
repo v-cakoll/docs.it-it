@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: creare caratteri e gruppi di caratteri'
+title: 'Procedura: Costruire i tipi di carattere e famiglie di caratteri'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,38 +8,38 @@ helpviewer_keywords:
 - font families [Windows Forms], constructing
 - fonts [Windows Forms], constructing
 ms.assetid: d3a4a223-9492-4b54-9afd-db1c31c3cefd
-ms.openlocfilehash: ceace5950ec135ea4d52081da7d1de7a820583ee
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6f939ab90252697d09d594e4d9300ec101c8f2e1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520890"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540676"
 ---
-# <a name="how-to-construct-font-families-and-fonts"></a>Procedura: creare caratteri e gruppi di caratteri
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] i caratteri con lo stesso carattere tipografico ma stili diversi in famiglie di caratteri. Ad esempio, la famiglia contiene i caratteri seguenti:  
+# <a name="how-to-construct-font-families-and-fonts"></a>Procedura: Costruire i tipi di carattere e famiglie di caratteri
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Raggruppa i tipi di carattere con lo stesso carattere tipografico, ma diversi stili in famiglie di caratteri. Ad esempio, il tipo di carattere Arial contiene i tipi di carattere seguenti:  
   
 -   Arial normale  
   
--   Arial grassetto  
+-   Arial in grassetto  
   
 -   Arial corsivo  
   
 -   Arial grassetto corsivo  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] vengono utilizzati quattro stili per creare i gruppi: normale, grassetto, corsivo e corsivo grassetto. Aggettivi come *restringere* e *arrotondato* non sono considerati stili; piuttosto fanno parte del nome di famiglia. Ad esempio, Arial Narrow è una famiglia di caratteri con i membri seguenti:  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] vengono utilizzati quattro stili per creare i gruppi: normale, grassetto, corsivo e grassetto corsivo. Aggettivi, ad esempio *restringere* e *arrotondato* non vengono considerati gli stili, piuttosto fanno parte del nome della famiglia. Ad esempio, Arial ristretto è una famiglia di caratteri con i membri seguenti:  
   
--   Arial normale "narrow"  
+-   Arial normale ridotta  
   
--   "Narrow" Arial grassetto  
+-   Arial "narrow" grassetto  
   
--   Arial corsivo "narrow"  
+-   Corsivo Narrow Arial  
   
 -   Arial Narrow grassetto corsivo  
   
- Prima di poter creare testo con [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], è necessario costruire un <xref:System.Drawing.FontFamily> oggetto e un <xref:System.Drawing.Font> oggetto. Il <xref:System.Drawing.FontFamily> oggetto specifica il tipo di carattere (ad esempio, Arial) e <xref:System.Drawing.Font> oggetto specifica la dimensione, stile e unità.  
+ Prima di poter creare testo con [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], è necessario costruire una <xref:System.Drawing.FontFamily> oggetto e un <xref:System.Drawing.Font> oggetto. Il <xref:System.Drawing.FontFamily> oggetto specifica il carattere tipografico (ad esempio, Arial) e il <xref:System.Drawing.Font> oggetto specifica le dimensioni, stile e unità.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene creato un stile normale carattere con dimensioni pari a 16 pixel. Nel codice seguente, il primo argomento passato per il <xref:System.Drawing.Font.%23ctor%2A> costruttore è la <xref:System.Drawing.FontFamily> oggetto. Il secondo argomento specifica le dimensioni del carattere, misurata in unità identificata dal quarto argomento. Il terzo argomento identificato lo stile.  
+ Nell'esempio seguente crea uno stile regolare del tipo di carattere Arial con dimensioni pari a 16 pixel. Nel codice seguente, il primo argomento passato per il <xref:System.Drawing.Font.%23ctor%2A> costruttore è la <xref:System.Drawing.FontFamily> oggetto. Il secondo argomento specifica le dimensioni del font misurata nelle unità specificate dal quarto argomento. Il terzo argomento identificato lo stile.  
   
  <xref:System.Drawing.GraphicsUnit.Pixel> è un membro del <xref:System.Drawing.GraphicsUnit> enumerazione, e <xref:System.Drawing.FontStyle.Regular> è un membro del <xref:System.Drawing.FontStyle> enumerazione.  
   
@@ -49,6 +49,6 @@ ms.locfileid: "33520890"
 ## <a name="compiling-the-code"></a>Compilazione del codice  
  L'esempio precedente è progettato per l'uso con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs> `e`, ovvero un parametro di <xref:System.Windows.Forms.PaintEventHandler>.  
   
-## <a name="see-also"></a>Vedere anche  
- [Uso di tipi di carattere e testo](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)  
- [Grafica e disegno in Windows Form](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
+## <a name="see-also"></a>Vedere anche
+- [Uso di tipi di carattere e testo](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)
+- [Grafica e disegno in Windows Form](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)

@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5e7ff0be-3f23-4996-a92c-bd54d65c3836
-ms.openlocfilehash: 4b2b35d3ca3f7bea5f64188420c17d386a1afa42
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 286199a595e7b34c25fcc13d37c5c913f269304d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45971981"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555193"
 ---
 # <a name="single-bulk-copy-operations"></a>Singole operazioni di copia di massa
 L'approccio più semplice per eseguire un'operazione di copia di massa in SQL Server consiste nell'eseguire una singola operazione in un database. Per impostazione predefinita, un'operazione di copia di massa viene eseguita come operazione isolata: l'operazione di copia avviene in modalità non transazionale, senza la possibilità di eseguirne il rollback.  
   
 > [!NOTE]
->  Per eseguire il rollback di una parte o dell'intera copia di massa quando si verifica un errore, è possibile usare una transazione gestita di <xref:System.Data.SqlClient.SqlBulkCopy> oppure eseguire la copia di massa in una transazione esistente. **SqlBulkCopy** funzionerà anche con <xref:System.Transactions> se la connessione viene inserita (in modo implicito o esplicito) in un **System. Transactions** delle transazioni.  
+>  Per eseguire il rollback di una parte o dell'intera copia bulk quando si verifica un errore, è possibile usare una transazione gestita di <xref:System.Data.SqlClient.SqlBulkCopy> oppure eseguire la copia bulk in una transazione esistente. **SqlBulkCopy** funzionerà anche con <xref:System.Transactions> se la connessione viene inserita (in modo implicito o esplicito) in un **System. Transactions** delle transazioni.  
 >   
 >  Per altre informazioni, vedere [transazioni e operazioni di copia Bulk](../../../../../docs/framework/data/adonet/sql/transaction-and-bulk-copy-operations.md).  
   
@@ -79,6 +79,6 @@ command.ExecuteNonQuery();
 }  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Operazioni di copia di massa in SQL Server](../../../../../docs/framework/data/adonet/sql/bulk-copy-operations-in-sql-server.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vedere anche
+- [Operazioni di copia di massa in SQL Server](../../../../../docs/framework/data/adonet/sql/bulk-copy-operations-in-sql-server.md)
+- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
