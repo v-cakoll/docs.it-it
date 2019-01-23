@@ -2,12 +2,12 @@
 title: Accodamento in WCF
 ms.date: 03/30/2017
 ms.assetid: e98d76ba-1acf-42cd-b137-0f8214661112
-ms.openlocfilehash: f04055df2c6d4b0a51b36040a5b377bb8738c534
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: fcdd38cf02157829bdc476cc289ea89ff8767487
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086596"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559466"
 ---
 # <a name="queuing-in-wcf"></a>Accodamento in WCF
 In questa sezione descrive come usare la comunicazione in coda in Windows Communication Foundation (WCF).  
@@ -48,7 +48,7 @@ In questa sezione descrive come usare la comunicazione in coda in Windows Commun
 #### <a name="exactlyonce-and-durable-properties"></a>Proprietà ExactlyOnce e Durable  
  Le proprietà `ExactlyOnce` e `Durable` incidono sulla modalità di trasferimento dei messaggi tra le code:  
   
--   `ExactlyOnce`: se è impostata su `true` (impostazione predefinita), il canale in coda assicura che il messaggio, se recapitato, non venga duplicato. Assicura inoltre che il messaggio non venga perso. Se il messaggio non può essere recapitato o se la durata del messaggio scade prima che il messaggio possa essere recapitato, il messaggio non riuscito, insieme al motivo dell'errore di recapito, viene registrato in una coda di messaggi non recapitabili. Se la proprietà è impostata su `false`, il canale in coda tenta di trasferire il messaggio. In questo caso, è possibile scegliere una coda di messaggi non recapitabili.  
+-   `ExactlyOnce`: Se impostato su `true` (impostazione predefinita), il canale in coda assicura che il messaggio, se recapitato, non vengano duplicato. Assicura inoltre che il messaggio non venga perso. Se il messaggio non può essere recapitato o se la durata del messaggio scade prima che il messaggio possa essere recapitato, il messaggio non riuscito, insieme al motivo dell'errore di recapito, viene registrato in una coda di messaggi non recapitabili. Se la proprietà è impostata su `false`, il canale in coda tenta di trasferire il messaggio. In questo caso, è possibile scegliere una coda di messaggi non recapitabili.  
   
 -   `Durable:` se è impostata su `true` (impostazione predefinita), il canale in coda assicura che MSMQ archivi il messaggio sul disco in modo permanente. Così, se il servizio MSMQ viene interrotto e riavviato, il messaggio sul disco viene trasferito alla coda di destinazione o recapitato al servizio. Se la proprietà è impostata su `false`, i messaggi vengono memorizzati in un archivio volatile e persi al momento dell'interruzione e del riavvio del servizio MSMQ.  
   
@@ -66,9 +66,9 @@ In questa sezione descrive come usare la comunicazione in coda in Windows Commun
   
  L'associazione dispone di due proprietà interessanti:  
   
--   `DeadLetterQueue`: questa proprietà è un'enumerazione che indica se è necessaria una coda di messaggi non recapitabili. Nel caso sia necessaria, l'enumerazione contiene anche il tipo di coda di messaggi non recapitabili. I valori sono `None`, `System` e `Custom`. Per altre informazioni sull'interpretazione di queste proprietà, vedere [utilizzando non recapitabili per gestire errori di trasferimento dei messaggi](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
+-   `DeadLetterQueue`: Questa proprietà è un'enumerazione che indica se è richiesta una coda di messaggi non recapitabili. Nel caso sia necessaria, l'enumerazione contiene anche il tipo di coda di messaggi non recapitabili. I valori sono `None`, `System` e `Custom`. Per altre informazioni sull'interpretazione di queste proprietà, vedere [utilizzando non recapitabili per gestire errori di trasferimento dei messaggi](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
   
--   `CustomDeadLetterQueue`: questa proprietà è l'indirizzo URI (Uniform Resource Identifier) della coda di messaggi non recapitabili specifica dell'applicazione. Questa operazione è necessaria se `DeadLetterQueue`.`Custom` è stato scelto.  
+-   `CustomDeadLetterQueue`: Questa proprietà è l'indirizzo di Uniform Resource Identifier (URI) della coda recapitabili specifiche dell'applicazione. Questa operazione è necessaria se `DeadLetterQueue`.`Custom` è stato scelto.  
   
 #### <a name="poison-message-handling-properties"></a>Proprietà di gestione dei messaggi non elaborabili  
  Quando il servizio legge un messaggio dalla coda di destinazione in una transazione, è possibile che non riesca a elaborarlo per vari motivi. Il messaggio viene quindi reinserito nella coda per essere nuovamente letto. Per gestire messaggi la cui elaborazione ripetutamente esito negativo, è possibile configurare nell'associazione un set di proprietà di gestione dei messaggi non elaborabili. Sono disponibili quattro proprietà: `ReceiveRetryCount`, `MaxRetryCycles`, `RetryCycleDelay` e `ReceiveErrorHandling`. Per altre informazioni su queste proprietà, vedere [messaggi non elaborabili](../../../../docs/framework/wcf/feature-details/poison-message-handling.md).  
@@ -83,13 +83,13 @@ In questa sezione descrive come usare la comunicazione in coda in Windows Commun
 #### <a name="other-properties"></a>Altre proprietà  
  Oltre alle proprietà precedenti, le altre proprietà specifiche di MSMQ esposte nell'associazione includono:  
   
--   `UseSourceJournal`: proprietà che indica che l'inserimento nel journal di origine è attivato. L'inserimento nel journal di origine è una funzionalità MSMQ che consente di tenere traccia dei messaggi correttamente trasmessi dalla coda di trasmissione.  
+-   `UseSourceJournal`: Una proprietà per indicare tale inserimento nel journal di origine è attivata. L'inserimento nel journal di origine è una funzionalità MSMQ che consente di tenere traccia dei messaggi correttamente trasmessi dalla coda di trasmissione.  
   
--   `UseMsmqTracing`: proprietà che indica che la traccia MSMQ è attivata. La traccia MSMQ consente di inviare messaggi di rapporto a una coda dei rapporti ogni volta che un messaggio lascia o arriva in un computer che ospita un gestore code MSMQ.  
+-   `UseMsmqTracing`: Una proprietà per indicare che la traccia MSMQ è attivata. La traccia MSMQ consente di inviare messaggi di rapporto a una coda dei rapporti ogni volta che un messaggio lascia o arriva in un computer che ospita un gestore code MSMQ.  
   
--   `QueueTransferProtocol`: enumerazione del protocollo da usare per i trasferimenti di messaggi da coda a coda. MSMQ implementa un protocollo di trasferimento da coda a coda nativo e un protocollo basato su SOAP denominato SRMP (SOAP Reliable Messaging Protocol). SRMP viene usato quando si usa il trasporto HTTP per i trasferimenti da coda a coda. Viene invece usato il protocollo SRMP protetto quando si usa HTTPS per i trasferimenti da coda a coda.  
+-   `QueueTransferProtocol`: Enumerazione del protocollo da usare per i trasferimenti di messaggi della coda a coda. MSMQ implementa un protocollo di trasferimento da coda a coda nativo e un protocollo basato su SOAP denominato SRMP (SOAP Reliable Messaging Protocol). SRMP viene usato quando si usa il trasporto HTTP per i trasferimenti da coda a coda. Viene invece usato il protocollo SRMP protetto quando si usa HTTPS per i trasferimenti da coda a coda.  
   
--   `UseActiveDirectory`: valore booleano che indica se è necessario usare Active Directory per la risoluzione degli indirizzi delle code. Per impostazione predefinita, questa funzionalità è disattivata. Per altre informazioni, vedere [gli endpoint di servizio e indirizzamento delle code](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md).  
+-   `UseActiveDirectory`: Valore booleano per indicare se è necessario usare Active Directory per la risoluzione degli indirizzi di coda. Per impostazione predefinita, questa funzionalità è disattivata. Per altre informazioni, vedere [gli endpoint di servizio e indirizzamento delle code](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md).  
   
 ### <a name="msmqintegrationbinding"></a>MsmqIntegrationBinding  
  Il `MsmqIntegrationBinding` viene usato quando si desidera che un endpoint WCF per comunicare con un'applicazione MSMQ esistente scritta in C, C++, COM o System.Messaging APIs.  
@@ -105,9 +105,9 @@ In questa sezione descrive come usare la comunicazione in coda in Windows Commun
 ### <a name="sample-code"></a>Codice di esempio  
  Per istruzioni dettagliate su come scrivere servizi WCF che usano MSMQ, vedere gli argomenti seguenti:  
   
--   [Procedura: Scambiare messaggi con endpoint WCF e con applicazioni di accodamento messaggi](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
+-   [Procedura: Scambiare messaggi con endpoint WCF e le applicazioni di Accodamento messaggi](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
   
--   [Procedura: Scambiare messaggi in coda con endpoint WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
+-   [Procedura: Lo scambio di messaggi in coda con endpoint WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
   
  Per un esempio di codice completo in cui viene illustrato l'uso di MSMQ in WCF, vedere gli argomenti seguenti:  
   
@@ -125,6 +125,6 @@ In questa sezione descrive come usare la comunicazione in coda in Windows Commun
   
 -   [Sicurezza dei messaggi nell'accodamento messaggi](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)  
   
-## <a name="see-also"></a>Vedere anche  
- [Endpoint di servizio e indirizzamento delle code](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)  
- [Hosting Web di un'applicazione in coda](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)
+## <a name="see-also"></a>Vedere anche
+- [Endpoint di servizio e indirizzamento delle code](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)
+- [Hosting Web di un'applicazione in coda](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)

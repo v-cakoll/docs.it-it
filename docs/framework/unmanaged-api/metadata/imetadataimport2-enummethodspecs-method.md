@@ -17,14 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6c2122c06c6e4f1137173f02e37fb0982864e7ec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4d660deb69e694a70a140b6d00c355442e3c5094
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54558905"
 ---
 # <a name="imetadataimport2enummethodspecs-method"></a>Metodo IMetaDataImport2::EnumMethodSpecs
-Ottiene un enumeratore per una matrice di MethodSpec token associato al specificato MethodDef o MemberRef token.  
+Ottiene un enumeratore per una matrice dei token MethodSpec Neobsahuje associati MethodDef specificato o MemberRef token.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,16 +44,16 @@ HRESULT EnumMethodSpecs (
  [in, out] Un puntatore all'enumeratore per `rMethodSpecs`.  
   
  `tk`  
- [in] Il token di MemberRef o MethodDef che rappresenta il metodo di cui i token MethodSpec da enumerare. Se il valore di `tk` è 0 (zero), verranno enumerati tutti i token MethodSpec nell'ambito.  
+ [in] Il token MethodDef o MemberRef che rappresenta il metodo il cui token MethodSpec Neobsahuje sono da enumerare. Se il valore di `tk` è 0 (zero), verranno enumerati tutti i token MethodSpec Neobsahuje nell'ambito.  
   
  `rMethodSpecs`  
- [out] Matrice di token MethodSpec da enumerare.  
+ [out] Matrice dei token MethodSpec Neobsahuje da enumerare.  
   
  `cMax`  
  [in] Il numero massimo di richiesto di token da inserire `rMethodSpecs`.  
   
  `pcMethodSpecs`  
- [out] Il numero restituito di token inseriti in `rMethodSpecs`.  
+ [out] Il numero restituito dei token inserito in `rMethodSpecs`.  
   
 ## <a name="return-value"></a>Valore restituito  
   
@@ -62,14 +63,14 @@ HRESULT EnumMethodSpecs (
 |`S_FALSE`|`phEnum` non ha membro elementi. In questo caso, `pcMethodSpecs` è impostato su 0 (zero).|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
- **Libreria:** usata come risorsa in Mscoree. dll  
+ **Libreria:** Usato come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)  
- [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

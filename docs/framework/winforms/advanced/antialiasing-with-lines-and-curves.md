@@ -9,42 +9,42 @@ helpviewer_keywords:
 - antialiasing [Windows Forms], smoothing modes
 - GDI+, antialiasing
 ms.assetid: 810da1a4-c136-4abf-88df-68e49efdd8d4
-ms.openlocfilehash: ccc75a535d8ef21cc780ae8e20d590631306bdc9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 364dffe3b4b63e3a369f87dd851ab54a975f881a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520383"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54496244"
 ---
 # <a name="antialiasing-with-lines-and-curves"></a>Anti-aliasing con linee e curve
-Quando si utilizza [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] per disegnare una linea, si forniscono i punti iniziale e finale della riga, ma non è necessario fornire le informazioni sui singoli pixel della riga. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] funziona in combinazione con il software dei driver di visualizzazione per determinare quali pixel verrà attivato per visualizzare la riga in un particolare dispositivo di visualizzazione.  
+Quando si usa [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] per disegnare una linea, si forniscono i punti iniziale e finale della linea, ma non è necessario fornire informazioni sui singoli pixel nella riga. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] funziona in combinazione con il software dei driver di visualizzazione per determinare i pixel che verranno attivati per visualizzare la linea in un dispositivo di visualizzazione particolare.  
   
-## <a name="aliasing"></a>Alias  
- Prendere in considerazione la linea rossa direttamente che unisce il punto (4, 2) per il punto (16, 10). Si supponga che il sistema di coordinate ha origine nell'angolo superiore sinistro e che l'unità di misura è il pixel. Si supponga inoltre che l'asse x punta a destra e i punti di asse y verso il basso. Nella figura seguente mostra una linea rossa tracciata su uno sfondo ingrandita.  
+## <a name="aliasing"></a>Aliasing  
+ Prendere in considerazione la linea rossa direttamente che va da punti (4, 2) per il punto (16, 10). Si supponga il sistema di coordinate è la sua origine nell'angolo superiore sinistro e che l'unità di misura è il pixel. Si supponga anche che l'asse x punta a destra e i punti di asse y verso il basso. Nella figura seguente mostra una visualizzazione ingrandita della riga di colore rosso disegnata su uno sfondo.  
   
  ![Linea, senza antialiasing](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art33.gif "AboutGdip02_Art33")  
   
- Il pixel rossi utilizzati per il rendering della linea sono opachi. Nella riga sono non presenti Nessun pixel semitrasparente. Questo tipo di rendering fornisce la riga di un aspetto irregolare, mentre la linea assomiglia scale. Questa tecnica di che rappresenta una riga con una scala è chiamata alias; la scala è un alias per la linea teorica.  
+ I pixel rosso usati per il rendering della linea sono opachi. Non esistono Nessun pixel parzialmente trasparente nella riga. Questo tipo di rendering fornisce la riga di un aspetto frastagliato, mentre la linea assomiglia scale. Questa tecnica di che rappresenta una riga con una scala è chiamata alias; la scala è un alias di linea teorica.  
   
-## <a name="antialiasing"></a>Anti-aliasing  
- Una tecnica più sofisticata per il rendering di una riga comporta l'utilizzo di pixel semitrasparente insieme ai pixel opachi. Pixel viene impostato su rosso puro, o per alcuni sfumatura di rosso e il colore di sfondo, a seconda di come chiudere siano alla riga. Questo tipo di rendering viene chiamato l'anti-aliasing e risultati in una riga che viene percepita come più uniforme. Nella figura seguente viene illustrato come determinate pixel vengono combinati con lo sfondo per produrre una riga di anti-aliasing.  
+## <a name="antialiasing"></a>anti-aliasing  
+ Una tecnica più sofisticata per il rendering di una riga comporta l'utilizzo di pixel parzialmente trasparente insieme ai pixel opaco. Pixel sono impostati su rosso puro, o a una fusione del red team e il colore di sfondo, a seconda di quanto si avvicina sono per la riga. Questo tipo di rendering viene chiamato anti-aliasing e risultati in una riga che viene percepita come più uniforme. La figura seguente mostra come fusione di alcuni pixel con sfondo per produrre una linea con anti-aliasing.  
   
  ![Antialiasing di una linea](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art34.gif "AboutGdip02_Art34")  
   
- Anti-aliasing, smussamento, possono inoltre essere applicate alle curve. Nella figura seguente mostra una visualizzazione di un'ellisse smussata ingrandita.  
+ Anti-aliasing, detto anche anti-aliasing, può essere applicato anche alle curve. Nella figura seguente mostra una visualizzazione ingrandita di un'ellisse equalizzata.  
   
  ![Antialiasing di curve](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art35.gif "AboutGdip02_Art35")  
   
- Nella figura seguente viene mostrata la stessa ellisse dimensioni effettive, senza e una volta con anti-aliasing.  
+ Nella figura seguente viene mostrata la stessa ellisse dimensioni effettive, una volta senza anti-aliasing e una volta con anti-aliasing.  
   
  ![Esempio di antialiasing](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art36.gif "AboutGdip02_Art36")  
   
- Per disegnare linee e curve che utilizzano l'anti-aliasing, creare un'istanza del <xref:System.Drawing.Graphics> e impostare il relativo <xref:System.Drawing.Graphics.SmoothingMode%2A> proprietà <xref:System.Drawing.Drawing2D.SmoothingMode.AntiAlias> o <xref:System.Drawing.Drawing2D.SmoothingMode.HighQuality>. Quindi chiamare uno dei metodi di disegno che stesso <xref:System.Drawing.Graphics> classe.  
+ Per tracciare linee e curve che utilizzano l'anti-aliasing, creare un'istanza del <xref:System.Drawing.Graphics> classe e impostare relativi <xref:System.Drawing.Graphics.SmoothingMode%2A> proprietà <xref:System.Drawing.Drawing2D.SmoothingMode.AntiAlias> o <xref:System.Drawing.Drawing2D.SmoothingMode.HighQuality>. Quindi chiamare uno dei metodi di disegno che stesso <xref:System.Drawing.Graphics> classe.  
   
  [!code-csharp[LinesCurvesAndShapes#81](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#81)]
  [!code-vb[LinesCurvesAndShapes#81](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#81)]  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Drawing.Drawing2D.SmoothingMode?displayProperty=nameWithType>  
- [Linee, curve e forme](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
- [Procedura: Usare l'antialiasing nel testo](../../../../docs/framework/winforms/advanced/how-to-use-antialiasing-with-text.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Drawing.Drawing2D.SmoothingMode?displayProperty=nameWithType>
+- [Linee, curve e forme](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)
+- [Procedura: Usare l'antialiasing nel testo](../../../../docs/framework/winforms/advanced/how-to-use-antialiasing-with-text.md)

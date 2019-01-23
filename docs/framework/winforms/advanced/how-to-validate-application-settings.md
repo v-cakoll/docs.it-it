@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: convalidare le impostazioni applicazione'
+title: 'Procedura: Convalidare le impostazioni applicazione'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,17 +9,17 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], validating
 ms.assetid: 9f145ada-4267-436a-aa4c-c4dcffd0afb7
-ms.openlocfilehash: aa8877150d654bf9659dbb34b91436c0ee9ff8b8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6ebdf1ee74e3ed41b02fdeb545ffc57aaa2d6d7d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33526295"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54496283"
 ---
-# <a name="how-to-validate-application-settings"></a>Procedura: convalidare le impostazioni applicazione
+# <a name="how-to-validate-application-settings"></a>Procedura: Convalidare le impostazioni applicazione
 In questo argomento viene illustrato come convalidare le impostazioni dell'applicazione prima dell'operazione che le rende persistenti.  
   
- Poiché le impostazioni dell'applicazione sono fortemente tipizzate, è necessario in qualche modo che gli utenti non possano assegnare dati di tipo non corretto a una determinata impostazione. Un utente potrebbe comunque provare ad assegnare un valore a un'impostazione che non rientra nei limiti accettabili, ad esempio, fornendo una data di nascita che ha luogo nel futuro. <xref:System.Configuration.ApplicationSettingsBase>, la classe padre di tutte le classi di impostazioni applicazione, espone quattro eventi da abilitare tali controllo dei limiti. La gestione di tali eventi inserisce tutto il codice di convalida in un'unica posizione, invece di distribuirlo in tutto il progetto.  
+ Poiché le impostazioni dell'applicazione sono fortemente tipizzate, è necessario in qualche modo che gli utenti non possano assegnare dati di tipo non corretto a una determinata impostazione. Un utente potrebbe comunque provare ad assegnare un valore a un'impostazione che non rientra nei limiti accettabili, ad esempio, fornendo una data di nascita che ha luogo nel futuro. <xref:System.Configuration.ApplicationSettingsBase>, la classe padre di tutte le classi di impostazioni dell'applicazione, espone quattro eventi per abilitare tale verifica dei limiti. La gestione di tali eventi inserisce tutto il codice di convalida in un'unica posizione, invece di distribuirlo in tutto il progetto.  
   
  L'evento da usare dipende da quando è necessario convalidare le impostazioni, come descritto nella tabella seguente.  
   
@@ -30,7 +30,7 @@ In questo argomento viene illustrato come convalidare le impostazioni dell'appli
 |<xref:System.Configuration.ApplicationSettingsBase.PropertyChanged>|Si verifica quando viene modificato il valore di una singola proprietà delle impostazioni.<br /><br /> Usare questo evento per convalidare una singola proprietà dopo che è stata modificata. Questo evento viene raramente usato per la convalida a meno che non sia necessario un lungo e asincrono processo di convalida.|  
 |<xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>|Si verifica prima che il gruppo di impostazioni della proprietà venga archiviato.<br /><br /> Usare questo evento per convalidare i valori per l'intero gruppo di proprietà prima che siano resi persistenti sul disco.|  
   
- In genere, non si usano tutti questi eventi all'interno della stessa applicazione ai fini della convalida. Ad esempio, è possibile soddisfare tutti i requisiti di convalida gestendo solo il <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> evento.  
+ In genere, non si usano tutti questi eventi all'interno della stessa applicazione ai fini della convalida. Ad esempio, è spesso possibile soddisfare tutti i requisiti di convalida gestendo solo il <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> evento.  
   
  Un gestore eventi esegue in genere una delle azioni seguenti quando rileva un valore non valido:  
   
@@ -38,11 +38,11 @@ In questo argomento viene illustrato come convalidare le impostazioni dell'appli
   
 -   Richiede informazioni all'utente del codice del server.  
   
--   Per gli eventi generati prima delle azioni associate, ad esempio <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> e <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>, utilizza il <xref:System.ComponentModel.CancelEventArgs> argomento per annullare l'operazione.  
+-   Per gli eventi generati prima delle azioni associate, quali <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> e <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>, viene utilizzato il <xref:System.ComponentModel.CancelEventArgs> argomento per annullare l'operazione.  
   
  Per altre informazioni sulla gestione degli eventi, vedere [Informazioni generali sui gestori eventi](../../../../docs/framework/winforms/event-handlers-overview-windows-forms.md).  
   
- Le procedure seguenti viene illustrato come verificare la data di nascita valido utilizzando il <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> o <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> evento. Le procedure sono state scritte in base al presupposto che le impostazioni dell'applicazione siano già state create. In questo esempio, si eseguirà il controllo di un'impostazione denominata `DateOfBirth`. Per altre informazioni sulle impostazioni dell'applicazione, vedere [Procedura: Creare impostazioni applicazioni](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md).  
+ Le procedure seguenti illustrano come testare una data di nascita sia valida usando il <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> o il <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> evento. Le procedure sono state scritte in base al presupposto che le impostazioni dell'applicazione siano già state create. In questo esempio, si eseguirà il controllo di un'impostazione denominata `DateOfBirth`. Per altre informazioni sulla creazione di impostazioni, vedere [come: Creare le impostazioni dell'applicazione](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md).  
   
 ### <a name="to-obtain-the-application-settings-object"></a>Per ottenere l'oggetto delle impostazioni dell'applicazione  
   
@@ -58,13 +58,13 @@ In questo argomento viene illustrato come convalidare le impostazioni dell'appli
         MySettings.Default   
         ```  
   
-         oppure  
+         -oppure-  
   
     -   Se si è uno sviluppatore di Visual Basic e si sono create le impostazioni dell'applicazione tramite Creazione progetti, è possibile recuperare le impostazioni usando [My.Settings Object](~/docs/visual-basic/language-reference/objects/my-settings-object.md).  
   
-         oppure  
+         -oppure-  
   
-    -   Se le impostazioni è stato creato mediante la derivazione da <xref:System.Configuration.ApplicationSettingsBase> direttamente, è necessario creare manualmente un'istanza della classe.  
+    -   Se le impostazioni sono state create mediante la derivazione da <xref:System.Configuration.ApplicationSettingsBase> direttamente, è necessario creare manualmente un'istanza della classe.  
   
         ```csharp  
         MyCustomSettings settings = new MyCustomSettings();  
@@ -78,9 +78,9 @@ In questo argomento viene illustrato come convalidare le impostazioni dell'appli
   
 ### <a name="to-validate-application-settings-when-a-setting-is-changing"></a>Per convalidare le impostazioni dell'applicazione durante la modifica di un'impostazione  
   
-1.  Se si è uno sviluppatore in c#, nel form o del controllo `Load` evento, aggiungere un gestore eventi per il <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> evento.  
+1.  Se si è un C# per gli sviluppatori, in un form o del controllo `Load` evento, aggiungere un gestore eventi per il <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> evento.  
   
-     oppure  
+     -oppure-  
   
      Se si è uno sviluppatore di Visual Basic, è necessario dichiarare la variabile `Settings` usando la parola chiave `WithEvents`.  
   
@@ -126,7 +126,7 @@ In questo argomento viene illustrato come convalidare le impostazioni dell'appli
   
 ### <a name="to-validate-application-settings-when-a-save-occurs"></a>Per convalidare le impostazioni applicazione durante un salvataggio  
   
-1.  Nel form o del controllo `Load` evento, aggiungere un gestore eventi per il <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> evento.  
+1.  In un form o del controllo `Load` evento, aggiungere un gestore eventi per il <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> evento.  
   
     ```csharp  
     public void Form1_Load(Object sender, EventArgs e)   
@@ -160,6 +160,6 @@ In questo argomento viene illustrato come convalidare le impostazioni dell'appli
     End Sub  
     ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Creazione di gestori eventi in Windows Form](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)  
- [Procedura: creare le impostazioni applicazione](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)
+## <a name="see-also"></a>Vedere anche
+- [Creazione di gestori eventi in Windows Form](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)
+- [Procedura: Creare le impostazioni dell'applicazione](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)

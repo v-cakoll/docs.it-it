@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: disegnare linee opache e semitrasparenti'
+title: 'Procedura: Disegnare linee opache e semitrasparenti'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - lines [Windows Forms], drawing alpha blended
 - alpha blending [Windows Forms], drawing lines
 ms.assetid: 8f2508af-f495-4223-b5cc-646cbbb520eb
-ms.openlocfilehash: f6667b3ac5bbe5dd82198f7bf23047f01cd7350a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6076ebf6cb75aa4fdb5cf5798b642597d8f84c80
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33524222"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559047"
 ---
-# <a name="how-to-draw-opaque-and-semitransparent-lines"></a>Procedura: disegnare linee opache e semitrasparenti
+# <a name="how-to-draw-opaque-and-semitransparent-lines"></a>Procedura: Disegnare linee opache e semitrasparenti
 Quando si disegna una linea, è necessario passare un oggetto <xref:System.Drawing.Pen> al metodo <xref:System.Drawing.Graphics.DrawLine%2A> della classe <xref:System.Drawing.Graphics>. Uno dei parametri del costruttore <xref:System.Drawing.Pen.%23ctor%2A> è un oggetto <xref:System.Drawing.Color>. Per disegnare una linea opaca, impostare il componente alfa del colore su 255. Per disegnare una linea semitrasparente, impostare il componente alfa su un valore qualsiasi compreso tra 1 e 254.  
   
  Quando si disegna una linea semitrasparente su uno sfondo, il colore della linea viene sfumato con i colori dello sfondo. Il componente alfa specifica come si combinano i colori della linea e dello sfondo. I valori alfa vicini a 0 rendono più intensi i colori di sfondo, mentre i valori alfa più vicini a 255 rendono più intenso il colore della linea.  
@@ -27,7 +27,7 @@ Quando si disegna una linea, è necessario passare un oggetto <xref:System.Drawi
   
  L'immagine seguente illustra l'output del codice riportato di seguito.  
   
- ![Opaco e semitrasparente](../../../../docs/framework/winforms/advanced/media/compqualline.png "compqualline")  
+ ![Opache e semitrasparenti](../../../../docs/framework/winforms/advanced/media/compqualline.png "compqualline")  
   
  [!code-csharp[System.Drawing.AlphaBlending#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlphaBlending/CS/Class1.cs#11)]
  [!code-vb[System.Drawing.AlphaBlending#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#11)]  
@@ -35,7 +35,7 @@ Quando si disegna una linea, è necessario passare un oggetto <xref:System.Drawi
 ## <a name="compiling-the-code"></a>Compilazione del codice  
  L'esempio precedente è progettato per l'uso con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs> `e`, ovvero un parametro del <xref:System.Windows.Forms.Control.Paint> gestore dell'evento.  
   
-## <a name="see-also"></a>Vedere anche  
- [Linee e riempimenti con fusione alfa](../../../../docs/framework/winforms/advanced/alpha-blending-lines-and-fills.md)  
- [Procedura: Assegnare uno sfondo trasparente al controllo](../../../../docs/framework/winforms/controls/how-to-give-your-control-a-transparent-background.md)  
- [Procedura: Disegnare con pennelli opachi e semitrasparenti](../../../../docs/framework/winforms/advanced/how-to-draw-with-opaque-and-semitransparent-brushes.md)
+## <a name="see-also"></a>Vedere anche
+- [Linee e riempimenti con fusione alfa](../../../../docs/framework/winforms/advanced/alpha-blending-lines-and-fills.md)
+- [Procedura: Assegnare al controllo uno sfondo trasparente](../../../../docs/framework/winforms/controls/how-to-give-your-control-a-transparent-background.md)
+- [Procedura: Disegnare con pennelli opachi e semitrasparenti](../../../../docs/framework/winforms/advanced/how-to-draw-with-opaque-and-semitransparent-brushes.md)

@@ -1,18 +1,18 @@
 ---
-title: '&lt;valore&gt; (Visual Basic)'
+title: '&lt;value&gt; (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - <value> XML tag
 - value XML tag
 ms.assetid: 0b84b02e-9e6d-41b5-a926-0d5dc76dacb5
-ms.openlocfilehash: ef14836c438cf6a1de300270d9882c1e53e716ee
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 92c8c2ac7b95e97b37c907e3837bc90dac384b33
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855933"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54558943"
 ---
-# <a name="ltvaluegt-visual-basic"></a>&lt;valore&gt; (Visual Basic)
+# <a name="ltvaluegt-visual-basic"></a>&lt;value&gt; (Visual Basic)
 Specifica la descrizione di una proprietà.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -35,5 +35,5 @@ Specifica la descrizione di una proprietà.
   
  [!code-vb[VbVbcnXmlDocComments#1](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/value_1.vb)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Tag di commento XML](../../../visual-basic/language-reference/xmldoc/index.md)
+## <a name="see-also"></a>Vedere anche
+- [Tag di commento XML](../../../visual-basic/language-reference/xmldoc/index.md)

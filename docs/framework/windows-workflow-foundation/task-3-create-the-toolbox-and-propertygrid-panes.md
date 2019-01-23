@@ -1,26 +1,26 @@
 ---
-title: 'Attività 3: creare i riquadri Casella degli strumenti e PropertyGrid'
+title: 'Attività 3: Creare la casella degli strumenti e PropertyGrid riquadri'
 ms.date: 03/30/2017
 ms.assetid: 72c1546a-eed5-4f0f-a616-719a163414f4
-ms.openlocfilehash: 9bfce22e9de1d6115cb88daddcd2dca355b6bae8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8e332c2caa43e1c9703272d7f2be16b545c44fd3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519750"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54558423"
 ---
-# <a name="task-3-create-the-toolbox-and-propertygrid-panes"></a>Attività 3: creare i riquadri Casella degli strumenti e PropertyGrid
-In questa attività si creerà il **della casella degli strumenti** e **PropertyGrid** riquadri e li aggiunge riallocato [!INCLUDE[wfd1](../../../includes/wfd1-md.md)].  
+# <a name="task-3-create-the-toolbox-and-propertygrid-panes"></a>Attività 3: Creare la casella degli strumenti e PropertyGrid riquadri
+In questa attività si creerà il **casella degli strumenti** e **PropertyGrid** riquadri e aggiungerle a riallocato [!INCLUDE[wfd1](../../../includes/wfd1-md.md)].  
   
- Per riferimento, il codice che deve essere nel file MainWindow.xaml.cs dopo aver completato le tre attività di [riallocazione della finestra di progettazione del flusso di lavoro](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md) serie di argomenti viene fornito alla fine di questo argomento.  
+ Per riferimento, il codice che deve essere nel file MainWindow.xaml.cs dopo aver completato le tre attività nel [riallocazione della finestra di progettazione del flusso di lavoro](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md) serie di argomenti viene fornito alla fine di questo argomento.  
   
 ### <a name="to-create-the-toolbox-and-add-it-to-the-grid"></a>Per creare la casella degli strumenti e aggiungerla alla griglia  
   
-1.  Aprire il progetto HostingApplication ottenuto seguendo la procedura descritta in [attività 2: ospitare la finestra di progettazione del flusso di lavoro](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md).  
+1.  Aprire il progetto HostingApplication ottenuto seguendo la procedura descritta in [attività 2: Ospitare la finestra di progettazione del flusso di lavoro](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md).  
   
-2.  Nel **Esplora** riquadro, il file MainWindow. XAML e scegliere **Visualizza codice**.  
+2.  Nel **Esplora soluzioni** riquadro, fare clic sul file MainWindow. XAML e selezionare **Visualizza codice**.  
   
-3.  Aggiungere un `GetToolboxControl` metodo il `MainWindow` classe che crea un <xref:System.Activities.Presentation.Toolbox.ToolboxControl>, aggiunge un nuovo **della casella degli strumenti** categoria per il **della casella degli strumenti**e assegna il <xref:System.Activities.Statements.Assign> e <xref:System.Activities.Statements.Sequence> tipi di attività per tale categoria.  
+3.  Aggiungere un `GetToolboxControl` metodo per il `MainWindow` classe che crea un <xref:System.Activities.Presentation.Toolbox.ToolboxControl>, aggiunge un nuovo **della casella degli strumenti** categoria per il **casella degli strumenti**e assegna la <xref:System.Activities.Statements.Assign> e <xref:System.Activities.Statements.Sequence> tipi di attività per tale categoria.  
   
     ```csharp  
     private ToolboxControl GetToolboxControl()  
@@ -49,7 +49,7 @@ In questa attività si creerà il **della casella degli strumenti** e **Property
     }  
     ```  
   
-4.  Aggiungere una privata `AddToolbox` metodo il `MainWindow` classe che inserisce il **della casella degli strumenti** nella colonna sinistra sulla griglia.  
+4.  Aggiungere una privata `AddToolbox` metodo per il `MainWindow` classe che inserisce il **della casella degli strumenti** nella colonna sinistra sulla griglia.  
   
     ```csharp  
     private void AddToolBox()  
@@ -73,13 +73,13 @@ In questa attività si creerà il **della casella degli strumenti** e **Property
     }  
     ```  
   
-6.  Premere F5 per compilare ed eseguire la soluzione. Il **della casella degli strumenti** contenente il <xref:System.Activities.Statements.Assign> e <xref:System.Activities.Statements.Sequence> attività devono essere visualizzate.  
+6.  Premere F5 per compilare ed eseguire la soluzione. Il **casella degli strumenti** contenente le <xref:System.Activities.Statements.Assign> e <xref:System.Activities.Statements.Sequence> attività devono essere visualizzate.  
   
 ### <a name="to-create-the-propertygrid"></a>Per creare il riquadro PropertyGrid  
   
-1.  Nel **Esplora** riquadro, il file MainWindow. XAML e scegliere **Visualizza codice**.  
+1.  Nel **Esplora soluzioni** riquadro, fare clic sul file MainWindow. XAML e selezionare **Visualizza codice**.  
   
-2.  Aggiungere il `AddPropertyInspector` metodo il `MainWindow` classe per inserire il **PropertyGrid** riquadro nella colonna più a destra sulla griglia.  
+2.  Aggiungere il `AddPropertyInspector` metodo per il `MainWindow` classe per posizionare il **PropertyGrid** riquadro in colonna all'estremità destra nella griglia.  
   
     ```csharp  
     private void AddPropertyInspector()  
@@ -103,7 +103,7 @@ In questa attività si creerà il **della casella degli strumenti** e **Property
     }  
     ```  
   
-4.  Premere F5 per compilare ed eseguire la soluzione. Il **della casella degli strumenti**, area di progettazione del flusso di lavoro, e **PropertyGrid** riquadri devono essere visualizzati e quando si trascina un <xref:System.Activities.Statements.Assign> attività o un <xref:System.Activities.Statements.Sequence> attività nell'area di disegno di progettazione, il griglia delle proprietà è necessario aggiornare a seconda dell'attività evidenziata.  
+4.  Premere F5 per compilare ed eseguire la soluzione. Il **casella degli strumenti**, canvas di progettazione del flusso di lavoro, e **PropertyGrid** riquadri devono essere visualizzati e quando si trascina un' <xref:System.Activities.Statements.Assign> attività o un <xref:System.Activities.Statements.Sequence> attività nell'area di progettazione, il griglia delle proprietà è necessario aggiornare a seconda dell'attività evidenziata.  
   
 ## <a name="example"></a>Esempio  
  Il file MainWindow.xaml.cs ora deve contenere il codice seguente.  
@@ -212,7 +212,7 @@ namespace HostingApplication
 }  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Riallocazione di Progettazione flussi di lavoro](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)  
- [Attività 1: Creare una nuova applicazione Windows Presentation Foundation](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md)  
- [Attività 2: Ospitare Progettazione flussi di lavoro](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md)
+## <a name="see-also"></a>Vedere anche
+- [Riallocazione di Progettazione flussi di lavoro](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)
+- [Attività 1: Creare una nuova applicazione Windows Presentation Foundation](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md)
+- [Attività 2: Host di progettazione del flusso di lavoro](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md)

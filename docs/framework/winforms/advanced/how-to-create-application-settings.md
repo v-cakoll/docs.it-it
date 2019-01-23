@@ -1,5 +1,5 @@
 ---
-title: "Procedura: creare le impostazioni dell'applicazione"
+title: "Procedura: Creare le impostazioni dell'applicazione"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], creating
 ms.assetid: 1e7aa347-af75-41e5-89ca-f53cab704f72
-ms.openlocfilehash: 7a84fc85b42f2b78ccafcae3c815847633b9916d
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: ac89851ce9c655ebef3acf2d55ef6659815ca4c9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48581875"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54558956"
 ---
-# <a name="how-to-create-application-settings"></a>Procedura: creare le impostazioni dell'applicazione
+# <a name="how-to-create-application-settings"></a>Procedura: Creare le impostazioni dell'applicazione
 Usando il codice gestito, è possibile creare nuove impostazioni dell'applicazione e associarle alle proprietà nel form o nei controlli del form, in modo che queste impostazioni vengano caricate e salvate automaticamente in fase di esecuzione.  
   
  Nella routine seguente, viene creata manualmente una classe wrapper che deriva da <xref:System.Configuration.ApplicationSettingsBase>. A questa classe è possibile aggiungere una proprietà accessibile pubblicamente per ogni impostazione dell'applicazione da esporre.  
   
- È anche possibile eseguire questa routine usando la quantità minima di codice nella finestra di progettazione di Visual Studio.  Vedere anche [procedura: creare applicazioni le impostazioni usando la finestra di progettazione](https://msdn.microsoft.com/library/wabtadw6\(v=vs.110\)).  
+ È anche possibile eseguire questa routine usando la quantità minima di codice nella finestra di progettazione di Visual Studio.  Vedere anche [come: Creare impostazioni dell'applicazione utilizzando la finestra di progettazione](https://msdn.microsoft.com/library/wabtadw6\(v=vs.110\)).  
   
 ### <a name="to-create-new-application-settings-programmatically"></a>Per creare nuove impostazioni dell'applicazione a livello di codice  
   
@@ -46,8 +46,8 @@ Usando il codice gestito, è possibile creare nuove impostazioni dell'applicazio
 ## <a name="net-framework-security"></a>Sicurezza di .NET Framework  
  Il provider di impostazioni predefinito, <xref:System.Configuration.LocalFileSettingsProvider>, memorizza le informazioni nei file di configurazione come testo normale. Questo riduce la protezione dell'accesso ai file fornito dal sistema operativo per l'utente corrente. Per questo motivo, è necessario prestare attenzione alle informazioni archiviate nei file di configurazione. Ad esempio, un utilizzo comune per le impostazioni dell'applicazione consiste nell'archiviare le stringhe di connessione che puntano all'archivio dati dell'applicazione. Tuttavia, per motivi di sicurezza, queste stringhe non devono includere le password. Per altre informazioni sulle stringhe di connessione, vedere <xref:System.Configuration.SpecialSetting>.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Configuration.SpecialSettingAttribute>  
- <xref:System.Configuration.LocalFileSettingsProvider>  
- [Cenni preliminari sulle impostazioni delle applicazioni](../../../../docs/framework/winforms/advanced/application-settings-overview.md)  
- [Procedura: Convalidare le impostazioni applicazione](../../../../docs/framework/winforms/advanced/how-to-validate-application-settings.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Configuration.SpecialSettingAttribute>
+- <xref:System.Configuration.LocalFileSettingsProvider>
+- [Cenni preliminari sulle impostazioni delle applicazioni](../../../../docs/framework/winforms/advanced/application-settings-overview.md)
+- [Procedura: Convalidare le impostazioni applicazione](../../../../docs/framework/winforms/advanced/how-to-validate-application-settings.md)
