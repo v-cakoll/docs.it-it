@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30686
 ms.assetid: 784fefec-ef57-48cf-b960-957df419b439
-ms.openlocfilehash: 65a10067284cad3bf56ecdc441ebefa0a740ef53
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1fae63506a35eb046676214a2b6c52977f24645d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590855"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54518644"
 ---
 # <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename1gt39-and-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename2gt39"></a>Accesso alla proprietà predefinita è ambiguo tra i membri di interfaccia ereditati &#39; &lt;defaultpropertyname&gt; &#39; dell'interfaccia &#39; &lt;interfacename1&gt; &#39; e &#39; &lt;defaultpropertyname&gt; &#39; dell'interfaccia &#39; &lt;interfacename2&gt;&#39;
-Un'interfaccia eredita da due interfacce, ognuno dei quali dichiara una proprietà predefinita con lo stesso nome. Il compilatore non è possibile risolvere un accesso alla proprietà predefinita senza qualifica. Questa condizione è illustrata nell'esempio seguente.  
+Un'interfaccia eredita da due interfacce, ognuno dei quali dichiara una proprietà predefinita con lo stesso nome. Il compilatore non è possibile risolvere un accesso a questa proprietà predefinito senza qualifica. Questa condizione è illustrata nell'esempio seguente.  
   
 ```  
 Public Interface Iface1  
@@ -35,19 +35,19 @@ Public Class testClass
 End Class  
 ```  
   
- Quando si specifica `testObj(1)`, il compilatore tenta di risolvere il problema per la proprietà predefinita. Tuttavia, esistono due possibili proprietà predefinite a causa di interfacce ereditate, il compilatore segnala l'errore.  
+ Quando si specifica `testObj(1)`, il compilatore cerca di risolvere il problema per la proprietà predefinita. Tuttavia, esistono due possibili proprietà predefinite a causa di interfacce ereditate, il compilatore segnala questo errore.  
   
  **ID errore:** BC30686  
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
--   Evitare di ereditare membri con lo stesso nome. Nell'esempio precedente, se `testObj` non è necessario uno qualsiasi dei membri di, ad esempio, `Iface2`, dichiararla come indicato di seguito:  
+-   Evitare di ereditare tutti i membri con lo stesso nome. Nell'esempio precedente, se `testObj` non è necessario uno qualsiasi dei membri di, ad esempio, `Iface2`, dichiararla come indicato di seguito:  
   
     ```  
     Dim testObj As Iface1  
     ```  
   
-     oppure  
+     -oppure-  
   
 -   Implementare l'interfaccia che eredita in una classe. È quindi possibile implementare ognuna delle proprietà ereditate con nomi diversi. Tuttavia, solo uno di essi può essere la proprietà predefinita della classe di implementazione. Questa condizione è illustrata nell'esempio seguente.  
   
@@ -63,5 +63,5 @@ End Class
     End Class  
     ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfacce](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfacce](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

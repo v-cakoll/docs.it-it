@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application startup [WPF]
 - performance [WPF], startup time
 ms.assetid: f0ec58d8-626f-4d8a-9873-c20f95e08b96
-ms.openlocfilehash: 8452c41bc6d60d18fa058966299e3ca2b989604f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6c72a69a1593c97ebda924e2b8aeb49a3cbefe1e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33541950"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527328"
 ---
 # <a name="application-startup-time"></a>Tempo di avvio delle applicazioni
 La quantità di tempo necessaria per avviare un'applicazione WPF può variare notevolmente. In questo argomento vengono descritte varie tecniche per ridurre il tempo di avvio percepito ed effettivo per un'applicazione Windows Presentation Foundation (WPF).  
@@ -24,9 +24,9 @@ La quantità di tempo necessaria per avviare un'applicazione WPF può variare no
  L'avvio a caldo si verifica quando la maggior parte delle pagine per i componenti principali di Common Language Runtime (CLR) sono già caricata in memoria, il che consente di risparmiare molto tempo per l'accesso al disco. Ecco perché un'applicazione gestita si avvia più rapidamente quando viene eseguita per la seconda volta.  
   
 ## <a name="implement-a-splash-screen"></a>Implementare la schermata iniziale  
- Nei casi in cui c'è un ritardo significativo e inevitabili tra l'avvio di un'applicazione e la visualizzazione della prima interfaccia utente, è possibile ottimizzare il tempo di avvio percepito usando una *schermata iniziale*. Questo approccio consente di visualizzare un'immagine quasi immediatamente dopo l'avvio dell'applicazione da parte dell'utente. Quando l'applicazione è pronta per la visualizzazione della prima interfaccia utente, la schermata iniziale si dissolve. A partire dal [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)], è possibile utilizzare la <xref:System.Windows.SplashScreen> classe per implementare una schermata iniziale. Vedere [Aggiungere una schermata iniziale in un'applicazione WPF](../../../../docs/framework/wpf/app-development/how-to-add-a-splash-screen-to-a-wpf-application.md).  
+ Nei casi in cui c'è un ritardo significativo e inevitabili tra l'avvio di un'applicazione e la visualizzazione della prima interfaccia utente, è possibile ottimizzare il tempo di avvio percepito usando una *schermata iniziale*. Questo approccio consente di visualizzare un'immagine quasi immediatamente dopo l'avvio dell'applicazione da parte dell'utente. Quando l'applicazione è pronta per la visualizzazione della prima interfaccia utente, la schermata iniziale si dissolve. A partire dal [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)], è possibile usare il <xref:System.Windows.SplashScreen> classe per implementare la schermata iniziale. Vedere [Aggiungere una schermata iniziale in un'applicazione WPF](../../../../docs/framework/wpf/app-development/how-to-add-a-splash-screen-to-a-wpf-application.md).  
   
- È anche possibile implementare la schermata iniziale con grafica Win32 nativa. Visualizzare l'implementazione prima di <xref:System.Windows.Application.Run%2A> metodo viene chiamato.  
+ È anche possibile implementare la schermata iniziale con grafica Win32 nativa. Visualizzare l'implementazione prima di <xref:System.Windows.Application.Run%2A> viene chiamato il metodo.  
   
 ## <a name="analyze-the-startup-code"></a>Analizzare il codice di avvio  
  Determinare il motivo di un avvio a freddo lento. La causa potrebbe essere il disco I/O, ma non sempre. In generale, è necessario ridurre l'uso di risorse esterne, ad esempio rete, servizi Web o disco.  
@@ -104,12 +104,12 @@ La quantità di tempo necessaria per avviare un'applicazione WPF può variare no
  Per prestazioni ottimali, applicare una comunicazione efficiente tra domini, riducendo le chiamate tra domini. Quando possibile, usare le chiamate senza argomenti oppure con argomenti di tipo primitivo.  
   
 ## <a name="use-the-neutralresourceslanguage-attribute"></a>Usare l'attributo NeutralResourcesLanguage  
- Utilizzare il <xref:System.Resources.NeutralResourcesLanguageAttribute> per specificare la lingua per il <xref:System.Resources.ResourceManager>. Questo approccio impedisce ricerche di assembly non riuscite.  
+ Usare la <xref:System.Resources.NeutralResourcesLanguageAttribute> per specificare le impostazioni cultura neutrali per il <xref:System.Resources.ResourceManager>. Questo approccio impedisce ricerche di assembly non riuscite.  
   
 ## <a name="use-the-binaryformatter-class-for-serialization"></a>Usare la classe BinaryFormatter per la serializzazione  
- Se è necessario utilizzare la serializzazione, utilizzare il <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> classe anziché la <xref:System.Xml.Serialization.XmlSerializer> classe. La <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> classe è implementata nella libreria di classi Base (BCL) nell'assembly mscorlib. dll. Il <xref:System.Xml.Serialization.XmlSerializer> viene implementata nell'assembly System.Xml.dll, che potrebbe essere una DLL aggiuntiva da caricare.  
+ Se è necessario utilizzare la serializzazione, usare il <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> classe anziché il <xref:System.Xml.Serialization.XmlSerializer> classe. Il <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> classe è implementata nella libreria di classe di Base (BCL) nell'assembly mscorlib. dll. Il <xref:System.Xml.Serialization.XmlSerializer> viene implementata nell'assembly XML. dll, che potrebbe essere una DLL aggiuntiva da caricare.  
   
- Se è necessario utilizzare il <xref:System.Xml.Serialization.XmlSerializer> (classe), è possibile ottenere prestazioni migliori se si pregenerazione l'assembly di serializzazione.  
+ Se è necessario usare il <xref:System.Xml.Serialization.XmlSerializer> (classe), è possibile ottenere prestazioni migliori se si genera prima l'assembly di serializzazione.  
   
 ## <a name="configure-clickonce-to-check-for-updates-after-startup"></a>Configurare ClickOnce per verificare gli aggiornamenti in seguito all'avvio  
  Se l'applicazione usa [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)], evitare l'accesso alla rete all'avvio configurando [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] per controllare il sito di distribuzione degli aggiornamenti in seguito all'avvio dell'applicazione.  
@@ -120,13 +120,13 @@ La quantità di tempo necessaria per avviare un'applicazione WPF può variare no
  La prima applicazione WPF da eseguire dopo un riavvio è il servizio PresentationFontCache. Il servizio memorizza nella cache i tipi di carattere del sistema, migliora l'accesso al tipo di carattere e le prestazioni complessive. Si verifica un sovraccarico all'avvio del servizio e in alcuni ambienti controllati, si consiglia di configurare l'avvio automatico del servizio al riavvio del sistema.  
   
 ## <a name="set-data-binding-programmatically"></a>Impostare il data binding a livello di codice  
- Anziché utilizzare XAML per impostare il <xref:System.Windows.FrameworkElement.DataContext%2A> in modo dichiarativo per la finestra principale, impostarlo a livello di codice nel <xref:System.Windows.Application.OnActivated%2A> metodo.  
+ Anziché usare XAML per impostare il <xref:System.Windows.FrameworkElement.DataContext%2A> in modo dichiarativo per la finestra principale, è consigliabile impostarlo a livello di codice nel <xref:System.Windows.Application.OnActivated%2A> (metodo).  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Windows.SplashScreen>  
- <xref:System.AppDomain>  
- <xref:System.Resources.NeutralResourcesLanguageAttribute>  
- <xref:System.Resources.ResourceManager>  
- [Aggiungere una schermata iniziale in un'applicazione WPF](../../../../docs/framework/wpf/app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)  
- [Ngen.exe (generatore di immagini native)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md)  
- [Elemento \<generatePublisherEvidence>](../../../../docs/framework/configure-apps/file-schema/runtime/generatepublisherevidence-element.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Windows.SplashScreen>
+- <xref:System.AppDomain>
+- <xref:System.Resources.NeutralResourcesLanguageAttribute>
+- <xref:System.Resources.ResourceManager>
+- [Aggiungere una schermata iniziale in un'applicazione WPF](../../../../docs/framework/wpf/app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)
+- [Ngen.exe (generatore di immagini native)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md)
+- [Elemento \<generatePublisherEvidence>](../../../../docs/framework/configure-apps/file-schema/runtime/generatepublisherevidence-element.md)

@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1d50c8b4-f550-4775-bbb6-eab6e874cb43
-ms.openlocfilehash: 1223dee7e307c032bd14be154b58972e51287c7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 352951c4ee6a96e0bf91b583ad61b431f490a624
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364503"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54518475"
 ---
 # <a name="group-elements-in-a-sequence"></a>Raggruppare elementi in una sequenza
 L'operatore <xref:System.Linq.Enumerable.GroupBy%2A> consente di raggruppare gli elementi di una sequenza. Negli esempi riportati di seguito viene usato il database Northwind.  
   
 > [!NOTE]
->  I valori di colonna null nelle query <xref:System.Linq.Enumerable.GroupBy%2A> possono a volte generare una <xref:System.InvalidOperationException>. Per ulteriori informazioni, vedere la sezione "GroupBy InvalidOperationException" di [risoluzione dei problemi](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).  
+>  I valori di colonna null nelle query <xref:System.Linq.Enumerable.GroupBy%2A> possono a volte generare una <xref:System.InvalidOperationException>. Per altre informazioni, vedere la sezione "GroupBy InvalidOperationException" del [Troubleshooting](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio riportato di seguito `Products` viene partizionato per `CategoryID`.  
@@ -72,6 +72,6 @@ L'operatore <xref:System.Linq.Enumerable.GroupBy%2A> consente di raggruppare gli
  [!code-csharp[DLinqQueryExamples#35](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#35)]
  [!code-vb[DLinqQueryExamples#35](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#35)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Esempi di query](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)  
- [Download di database di esempio](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+## <a name="see-also"></a>Vedere anche
+- [Esempi di query](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
+- [Download di database di esempio](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)

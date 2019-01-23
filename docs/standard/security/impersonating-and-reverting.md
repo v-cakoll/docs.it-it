@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b93d402c-6c28-4f50-b2bc-d9607dc3e470
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3bc5b4a9bef51ac1591bdeb21651cee624d552b2
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: bec065e2a78551b85fe766f1b81590b18f4679d7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45743024"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54516824"
 ---
 # <a name="impersonating-and-reverting"></a>Rappresentazione e ripristino
 Talvolta può essere necessario ottenere un token di account Windows per rappresentare un account Windows. Può essere necessario, ad esempio, che l'applicazione basata su ASP.NET agisca per conto di più utenti in momenti diversi. L'applicazione potrebbe accettare un token che rappresenta un amministratore da Internet Information Services (IIS), rappresentare tale utente, eseguire un'operazione e ripristinare l'identità precedente. In seguito potrebbe accettare un token da IIS che rappresenta un utente con meno diritti, eseguire un'operazione e di nuovo il ripristino.  
@@ -36,7 +36,7 @@ Talvolta può essere necessario ottenere un token di account Windows per rappres
     Dim ImpersonatedIdentity As New WindowsIdentity(hToken)  
     ```  
   
-3.  Iniziare la rappresentazione creando una nuova istanza di <xref:System.Security.Principal.WindowsImpersonationContext> classe e inizializzandola con il <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A?displayProperty=nameWithType> metodo della classe inizializzata, come illustrato nel codice seguente.  
+3.  Iniziare la rappresentazione creando una nuova istanza della classe <xref:System.Security.Principal.WindowsImpersonationContext> e inizializzandola con il metodo <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A?displayProperty=nameWithType> della classe inizializzata, come mostrato nel codice seguente.  
   
     ```csharp  
     WindowsImpersonationContext MyImpersonation = ImpersonatedIdentity.Impersonate();  
@@ -46,7 +46,7 @@ Talvolta può essere necessario ottenere un token di account Windows per rappres
     WindowsImpersonationContext MyImpersonation = ImpersonatedIdentity.Impersonate()  
     ```  
   
-4.  Quando si non è più necessario rappresentare, chiamare il <xref:System.Security.Principal.WindowsImpersonationContext.Undo%2A?displayProperty=nameWithType> metodo per ripristinare la rappresentazione, come illustrato nel codice seguente.  
+4.  Quando la rappresentazione non è più necessaria, chiamare il metodo <xref:System.Security.Principal.WindowsImpersonationContext.Undo%2A?displayProperty=nameWithType> per ripristinare la rappresentazione, come mostrato nel codice seguente.  
   
     ```csharp  
     MyImpersonation.Undo();  
@@ -62,7 +62,7 @@ Talvolta può essere necessario ottenere un token di account Windows per rappres
   
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.Security.Principal.WindowsIdentity>  
-- <xref:System.Security.Principal.WindowsImpersonationContext>  
-- [Oggetti Principal e Identity](../../../docs/standard/security/principal-and-identity-objects.md)  
+- <xref:System.Security.Principal.WindowsIdentity>
+- <xref:System.Security.Principal.WindowsImpersonationContext>
+- [Oggetti Principal e Identity](../../../docs/standard/security/principal-and-identity-objects.md)
 - [Interoperabilità con codice non gestito](../../../docs/framework/interop/index.md)

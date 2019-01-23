@@ -17,11 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0ddaddbbd050dc079fcf20551e90c895d2f4ef59
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8e03572a4eaa0251866e8bfc6ae2d01d955d7b8f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54516187"
 ---
 # <a name="imetadataemittranslatesigwithscope-method"></a>Metodo IMetaDataEmit::TranslateSigWithScope
 Importa un assembly nell'ambito corrente e ottiene una nuova firma dei metadati per l'ambito unito.  
@@ -49,16 +50,16 @@ HRESULT TranslateSigWithScope (
  [in] L'interfaccia per importare l'assembly (in cui è definita la firma).  
   
  `pbHashValue`  
- [in] Il blob hash per l'assembly.  
+ [in] Il blob di hash per l'assembly.  
   
  `cbHashValue`  
  [in] Il numero di byte in `pbHashValue`.  
   
  `import`  
- [in] L'interfaccia per l'ambito di importazione dei metadati.  
+ [in] L'interfaccia per l'ambito dei metadati di importazione.  
   
  `pbSigBlob`  
- [in] Firma da importare.  
+ [in] La firma da importare.  
   
  `cbSigBlob`  
  [in] Le dimensioni, in byte, di `pbSigBlob`.  
@@ -70,26 +71,26 @@ HRESULT TranslateSigWithScope (
  [in] L'interfaccia per l'ambito dei metadati di esportazione.  
   
  `pvTranslatedSig`  
- [out] Il buffer contenente il BLOB della firma convertita.  
+ [out] Il buffer per mantenere il blob della firma tradotti.  
   
  `cbTranslatedSigMax`  
  [in] La capacità, in byte, di `pvTranslatedSig`.  
   
  `pcbTranslatedSig`  
- [out] Il numero di byte effettivi nella firma convertita.  
+ [out] Il numero di byte effettivi nella firma tradotto.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
- **Libreria:** usata come risorsa in Mscoree. dll  
+ **Libreria:** Usato come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)  
- [Interfaccia IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)  
- [Interfaccia IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [Interfaccia IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)  
- [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [Interfaccia IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [Interfaccia IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [Interfaccia IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

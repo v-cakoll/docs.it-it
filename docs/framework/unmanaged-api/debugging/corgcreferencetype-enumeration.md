@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 822425b958422ba364a1f10903c7c312ba43fab9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 54ac36f6d0dba92742ea7a7acfadc194930ccd74
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408606"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54516443"
 ---
 # <a name="corgcreferencetype-enumeration"></a>Enumerazione CorGCReferenceType
 Identifica l'origine di un oggetto per la Garbage Collection.  
@@ -55,32 +55,32 @@ typedef enum {
 |`CorHandleStrong`|Un handle per un riferimento sicuro dalla tabella di handle degli oggetti.|  
 |`CorHandleStrongPinning`|Handle per un riferimento sicuro bloccato dalla tabella di handle degli oggetti.|  
 |`CorHandleWeakShort`|Handle per un riferimento debole dalla tabella di handle degli oggetti.|  
-|`CorHandleWeakRefCount`|Un handle a un oggetto con conteggio dei riferimenti debole dalla tabella di handle degli oggetti.|  
-|`CorHandleStrongRefCount`|Un handle a un oggetto con conteggio dei riferimenti dalla tabella di handle degli oggetti.|  
+|`CorHandleWeakRefCount`|Handle a un oggetto con conteggio dei riferimenti debole dalla tabella di handle degli oggetti.|  
+|`CorHandleStrongRefCount`|Handle a un oggetto con conteggio dei riferimenti dalla tabella di handle degli oggetti.|  
 |`CorHandleStrongDependent`|Handle per un oggetto dipendente dalla tabella di handle degli oggetti.|  
 |`CorHandleStrongAsyncPinned`|Un oggetto bloccato asincrono dalla tabella di handle degli oggetti.|  
 |`CorHandleStrongSizedByref`|Un handle sicuro che conserva una dimensione approssimativa della chiusura collettiva di tutti gli oggetti e di tutte le radici di oggetto in fase di Garbage Collection.|  
-|`CorReferenceStack`|Riferimento dallo stack gestito.|  
+|`CorReferenceStack`|Un riferimento dallo stack gestito.|  
 |`CorReferenceFinalizer`|Un riferimento dalla coda del finalizzatore.|  
-|CorHandleStrongOnly|Restituire solo i riferimenti forti della tabella di handle. Questo valore viene utilizzato il [icordebugprocess5:: Enumeratehandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) solo di metodo.|  
-|`CorHandleWeakOnly`|Restituire solo i riferimenti deboli della tabella di handle. Questo valore viene utilizzato il [icordebugprocess5:: Enumeratehandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) solo di metodo.|  
-|`CorHandleAll`|Restituire tutti i riferimenti dalla tabella di handle. Questo valore viene utilizzato il [icordebugprocess5:: Enumeratehandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) solo di metodo.|  
+|CorHandleStrongOnly|Restituire solo i riferimenti sicuri dalla tabella di handle. Questo valore viene usato per il [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) solo metodo.|  
+|`CorHandleWeakOnly`|Restituire solo i riferimenti deboli dalla tabella di handle. Questo valore viene usato per il [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) solo metodo.|  
+|`CorHandleAll`|Restituire tutti i riferimenti dalla tabella di handle. Questo valore viene usato per il [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) solo metodo.|  
   
 ## <a name="remarks"></a>Note  
  Il `CorGCReferenceType` enumerazione viene utilizzata come indicato di seguito:  
   
--   Come valore della `type` campo il [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) struttura, indica l'origine di un riferimento o un handle.  
+-   Come valore del `type` campo le [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) struttura, indica l'origine di un riferimento o un handle.  
   
--   Come il `types` argomento per il [icordebugprocess5:: Enumeratehandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) metodo, specifica i tipi di handle da includere nell'enumerazione.  
+-   Come le `types` argomento per il [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) metodo, specifica i tipi di handle da includere nell'enumerazione.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Enumerazioni di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>Vedere anche
+- [Enumerazioni di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

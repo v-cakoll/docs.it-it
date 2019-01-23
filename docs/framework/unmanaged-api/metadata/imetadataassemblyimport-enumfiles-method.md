@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a1995ed0b281978b45b01dbeda54b02094a30412
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 43a895446e0070476bde3d15d332f010265176e7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445739"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54515037"
 ---
 # <a name="imetadataassemblyimportenumfiles-method"></a>Metodo IMetaDataAssemblyImport::EnumFiles
-Enumera i file a cui fa riferimento nel manifesto dell'assembly corrente.  
+Enumera i file di cui viene fatto riferimento nel manifesto dell'assembly corrente.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,13 +43,13 @@ HRESULT EnumFiles (
  [in, out] Un puntatore all'enumeratore. Deve trattarsi di un valore null per la prima chiamata di questo metodo.  
   
  `rFiles`  
- [out] Matrice utilizzata per archiviare il `mdFile` i token di metadati.  
+ [out] La matrice utilizzata per archiviare il `mdFile` i token di metadati.  
   
  `cMax`  
  [in] Il numero massimo di `mdFile` i token che possono essere inseriti in `rFiles`.  
   
  `pcTokens`  
- [out] Il numero di `mdFile` token effettivamente inseriti in `rFiles`.  
+ [out] I numerosi `mdFile` token effettivamente posizionati nella `rFiles`.  
   
 ## <a name="return-value"></a>Valore restituito  
   
@@ -59,13 +59,13 @@ HRESULT EnumFiles (
 |`S_FALSE`|Non sono presenti token da enumerare. In questo caso, `pcTokens` è impostato su zero.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
- **Libreria:** usata come risorsa in Mscoree. dll  
+ **Libreria:** Usato come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

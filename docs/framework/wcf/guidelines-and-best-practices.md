@@ -8,18 +8,18 @@ helpviewer_keywords:
 - WCF, best practices
 - Windows Communication Foundation, guidelines
 ms.assetid: 5098ba46-6e8d-4e02-b0c5-d737f9fdad84
-ms.openlocfilehash: 54af876a361dfee7a00e3fd29f43f4b643b07913
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 2b3ce24a967a4c8a15facb3f0a5dbdc0243a06ee
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850440"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54515940"
 ---
 # <a name="guidelines-and-best-practices"></a>Linee guida e suggerimenti
 In questa sezione contiene argomenti che forniscono le linee guida per la creazione di applicazioni Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Procedure consigliate: Controllo delle versioni del contratto di dati](../../../docs/framework/wcf/best-practices-data-contract-versioning.md)  
+ [Procedure consigliate: Versioni di DataContract](../../../docs/framework/wcf/best-practices-data-contract-versioning.md)  
  Viene illustrato come e quando creare contratti dati che non determinano interruzioni quando vengono create versioni successive.  
   
  [Controllo delle versioni dei servizi](../../../docs/framework/wcf/service-versioning.md)  
@@ -44,8 +44,8 @@ In questa sezione contiene argomenti che forniscono le linee guida per la creazi
   
  [Programmazione WCF di base](../../../docs/framework/wcf/basic-wcf-programming.md)  
   
-## <a name="see-also"></a>Vedere anche  
- [Informazioni su Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)  
- [Esempi di Windows Communication Foundation](https://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
- [Panoramica dei concetti](../../../docs/framework/wcf/conceptual-overview.md)  
- [Creazione di client](../../../docs/framework/wcf/building-clients.md)
+## <a name="see-also"></a>Vedere anche
+- [Informazioni su Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)
+- [Esempi di Windows Communication Foundation](https://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)
+- [Panoramica dei concetti](../../../docs/framework/wcf/conceptual-overview.md)
+- [Creazione di client](../../../docs/framework/wcf/building-clients.md)

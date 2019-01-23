@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data contracts [WCF], collection types
 - collection types [WCF]
 ms.assetid: 9b45b28e-0a82-4ea3-8c33-ec0094aff9d5
-ms.openlocfilehash: 0399c89e926611b076072e6475c52bf31ae83637
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c0e65a6286ef4756bba305d41dce6ef2a85401dd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155184"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54516131"
 ---
 # <a name="collection-types-in-data-contracts"></a>Tipi di raccolta nei contratti dati
 Una *raccolta* costituisce un elenco di elementi di un certo tipo. In [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]tali elenchi possono essere rappresentati mediante matrici o una varietà di altri tipi (elenco generico, <xref:System.ComponentModel.BindingList%601>generico, <xref:System.Collections.Specialized.StringCollection>o <xref:System.Collections.ArrayList>). Una raccolta, ad esempio, può contenere un elenco di indirizzi per un determinato cliente. Queste raccolte vengono denominate *raccolte di elenchi*, indipendentemente dal tipo effettivo.  
@@ -71,7 +71,7 @@ Una *raccolta* costituisce un elenco di elementi di un certo tipo. In [!INCLUDE[
  [!code-csharp[c_collection_types_in_data_contracts#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_collection_types_in_data_contracts/cs/program.cs#1)]
  [!code-vb[c_collection_types_in_data_contracts#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_collection_types_in_data_contracts/vb/program.vb#1)]  
   
- Durante la serializzazione, quando il tipo dichiarato è un'interfaccia, il tipo dell'istanza effettivo utilizzato può essere qualsiasi tipo che implementa quell'interfaccia. Le restrizioni discusse in precedenza (la presenza di un costruttore predefinito e di un metodo `Add`) non sono applicabili. È ad esempio possibile impostare indirizzi in Customer2 su un'istanza della classe <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> generica di Address, anche se non si può dichiarare direttamente un membro dati di tipo <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>generico.  
+ Durante la serializzazione, quando il tipo dichiarato è un'interfaccia, il tipo dell'istanza effettivo utilizzato può essere qualsiasi tipo che implementa quell'interfaccia. Le restrizioni discusse in precedenza (la presenza di un costruttore predefinito e di un metodo `Add` ) non sono applicabili. È ad esempio possibile impostare indirizzi in Customer2 su un'istanza della classe <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> generica di Address, anche se non si può dichiarare direttamente un membro dati di tipo <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>generico.  
   
  Durante la deserializzazione, quando il tipo dichiarato è un'interfaccia, il motore di serializzazione sceglie un tipo che implementi l'interfaccia dichiarata e viene creata un'istanza del tipo. Meccanismo dei tipi noti (descritto nella [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)) non ha alcun effetto in questo contesto; la scelta del tipo è incorporata in WCF.  
   
@@ -226,7 +226,7 @@ Una *raccolta* costituisce un elenco di elementi di un certo tipo. In [!INCLUDE[
   
  Per impostazione predefinita i tipi non vengono generati per raccolte non personalizzate nel codice importato. I membri dati di tipi di raccolta di elenco sono importati come matrici e i membri dati di tipi di raccolta di dizionario sono importati come dizionario generico.  
   
- Per le raccolte personalizzate, tuttavia, vengono generati tipi separati, contrassegnati con l'attributo <xref:System.Runtime.Serialization.CollectionDataContractAttribute>. (il tipo di raccolta personalizzato contenuto nello schema è un tipo che non utilizza spazio dei nomi, nome, elemento ripetuto o nomi di elementi chiave/valore predefiniti). Si tratta di tipi vuoti che derivano da <xref:System.Collections.Generic.List%601> generico per i tipi di elenco e dal dizionario generico per i tipi di dizionario.  
+ Per le raccolte personalizzate, tuttavia, vengono generati tipi separati, contrassegnati con l'attributo <xref:System.Runtime.Serialization.CollectionDataContractAttribute> . (il tipo di raccolta personalizzato contenuto nello schema è un tipo che non utilizza spazio dei nomi, nome, elemento ripetuto o nomi di elementi chiave/valore predefiniti). Si tratta di tipi vuoti che derivano da <xref:System.Collections.Generic.List%601> generico per i tipi di elenco e dal dizionario generico per i tipi di dizionario.  
   
  È ad esempio possibile che nel server siano presenti i tipi seguenti.  
   
@@ -395,5 +395,5 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 ## <a name="collections-and-object-reference-preservation"></a>Raccolte e conservazione dei riferimenti all'oggetto  
  Quando un serializzatore opera in una modalità che consente di preservare i riferimenti all'oggetto, la conservazione dei riferimenti all'oggetto si applica anche alle raccolte. In particolare, l'identità dell'oggetto viene conservata sia per raccolte intere che per elementi singoli contenuti nelle raccolte. Per i dizionari, l'identità dell'oggetto viene conservata sia per oggetti coppia di chiave e valore che per oggetti chiave e valore singoli.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Runtime.Serialization.CollectionDataContractAttribute>
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Runtime.Serialization.CollectionDataContractAttribute>

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b6a217e2212bb900d7ba83ccdd9cb00d30454baf
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 9086cff38e0232d6054d6b1f590be6d8d76ed1af
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45749648"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527372"
 ---
 # <a name="loadtypelibwithresolver-function"></a>Funzione LoadTypeLibWithResolver
 Carica una libreria dei tipi e Usa il parametro fornito [interfaccia ITypeLibResolver](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) per risolvere eventuali librerie dei tipi riferimento internamente.  
@@ -43,9 +43,9 @@ HRESULT LoadTypeLibWithResolver(
  `regkind`  
  [in] Oggetto [enumerazione REGKIND](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/ne-oleauto-tagregkind) flag che controlla la modalità di registrazione della libreria dei tipi. I valori possibili sono:  
   
--   `REGKIND_DEFAULT`: Il comportamento di registrazione predefinito da utilizzare.  
+-   `REGKIND_DEFAULT`: Utilizzare il comportamento di registrazione predefinito.  
   
--   `REGKIND_REGISTER`: Registra questa libreria dei tipi.  
+-   `REGKIND_REGISTER`: Registrare questa libreria dei tipi.  
   
 -   `REGKIND_NONE`: Non registrare questa libreria dei tipi.  
   
@@ -85,14 +85,14 @@ HRESULT LoadTypeLibWithResolver(
  Se si chiama `LoadTypeLibWithResolver` direttamente, è necessario fornire il proprio [interfaccia ITypeLibResolver](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) implementazione.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** TlbRef. H  
+ **Intestazione:** TlbRef.h  
   
- **Libreria:** TlbRef. lib  
+ **Libreria:** TlbRef.lib  
   
  **Versione di .NET framework:** 3.5, 3.0, 2.0  
   
-## <a name="see-also"></a>Vedere anche  
- [Funzioni di supporto Tlbexp](../../../../docs/framework/unmanaged-api/tlbexp/index.md)  
- [Funzione LoadTypeLibEx dell'](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)
+## <a name="see-also"></a>Vedere anche
+- [Funzioni di supporto Tlbexp](../../../../docs/framework/unmanaged-api/tlbexp/index.md)
+- [Funzione LoadTypeLibEx dell'](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)

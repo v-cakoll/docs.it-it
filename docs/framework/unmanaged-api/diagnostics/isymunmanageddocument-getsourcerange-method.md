@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 00baed93bd9ab48c92de83dac76931c3149afc2b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a89c706ece0949ffa3c182d53b57221acf81b18d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424638"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54515070"
 ---
 # <a name="isymunmanageddocumentgetsourcerange-method"></a>Metodo ISymUnmanagedDocument::GetSourceRange
-Restituisce l'intervallo specificato dell'origine incorporata nel buffer specificato. Il buffer deve essere sufficientemente grande da contenere l'origine.  
+Restituisce l'intervallo specificato dell'origine incorporata al buffer specificato. Il buffer deve essere sufficientemente grande da contenere l'origine.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,7 +43,7 @@ HRESULT GetSourceRange(
   
 #### <a name="parameters"></a>Parametri  
  `startLine`  
- [in] Riga iniziale nel documento corrente.  
+ [in] La riga iniziale del documento corrente.  
   
  `startColumn`  
  [in] La colonna iniziale del documento corrente.  
@@ -52,7 +52,7 @@ HRESULT GetSourceRange(
  [in] La riga finale nel documento corrente.  
   
  `endColumn`  
- [in] La colonna finale nel documento corrente.  
+ [in] La colonna finale del documento corrente.  
   
  `cSourceBytes`  
  [in] Le dimensioni dell'origine, in byte.  
@@ -66,5 +66,5 @@ HRESULT GetSourceRange(
 ## <a name="return-value"></a>Valore restituito  
  S_OK se il metodo ha esito positivo.  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ISymUnmanagedDocument](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ISymUnmanagedDocument](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

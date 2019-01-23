@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: unire ToolStripPanels'
+title: 'Procedura: Unire controlli ToolStripPanel'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - toolbars [Windows Forms], joining together
 - ToolStripPanel control [Windows Forms], joining together
 ms.assetid: 4eadda6d-e3b8-4151-aaf2-a8d564fbe6b3
-ms.openlocfilehash: 5e1688fb00e6eefa4873284e1ea1ba29536d3227
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 899f3f790164d946e48d7f4d03d0cb43e67ab1f7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087831"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54517214"
 ---
-# <a name="how-to-join-toolstrippanels"></a>Procedura: unire ToolStripPanels
+# <a name="how-to-join-toolstrippanels"></a>Procedura: Unire controlli ToolStripPanel
 È possibile unire controlli <xref:System.Windows.Forms.ToolStrip> a un oggetto <xref:System.Windows.Forms.ToolStripPanel> in fase di esecuzione, che fornisce la flessibilità delle applicazioni di interfaccia a documenti multipli (MDI).  
   
 ## <a name="example"></a>Esempio  
@@ -29,9 +29,9 @@ ms.locfileid: "44087831"
   
 -   Riferimenti agli assembly System.Design, System.Drawing e System.Windows.Forms.  
   
- Per informazioni sulla compilazione di questo esempio dalla riga di comando per visual Basic o Visual c#, vedere [compilazione dalla riga di comando](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oppure [con la creazione della riga di comando csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). È anche possibile compilare questo esempio in Visual Studio incollando il codice in un nuovo progetto.  Vedere anche [Procedura: Compilare ed eseguire un esempio di codice Windows Form completo tramite Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Per informazioni sulla compilazione di questo esempio dalla riga di comando per visual Basic o Visual c#, vedere [compilazione dalla riga di comando](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oppure [con la creazione della riga di comando csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). È anche possibile compilare questo esempio in Visual Studio incollando il codice in un nuovo progetto.  Vedere anche [come: Compilare ed eseguire un esempio di codice completo di Windows Form con Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Windows.Forms.ToolStrip>  
- <xref:System.Windows.Forms.ToolStripPanel>  
- [Procedura: Usare ToolStripPanels per MDI](../../../../docs/framework/winforms/controls/how-to-use-toolstrippanels-for-mdi.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Windows.Forms.ToolStrip>
+- <xref:System.Windows.Forms.ToolStripPanel>
+- [Procedura: Usare ToolStripPanels per MDI](../../../../docs/framework/winforms/controls/how-to-use-toolstrippanels-for-mdi.md)

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: 9e8bcd4503ec840e46022a55cc08dc0610eaa60b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: c86ab6c7d5113f95b0fd93d194465c4af701f78a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512466"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513651"
 ---
 # <a name="threading-model"></a>Modello di threading
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] è stato progettato per semplificare il threading. Di conseguenza, la maggior parte delle [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] gli sviluppatori non sarà necessario scrivere un'interfaccia che usa più thread. Poiché i programmi con multithreading sono complessi ed è difficile eseguirne il debug, è preferibile evitarli quando sono disponibili soluzioni a thread singolo.  
@@ -54,7 +54,7 @@ ms.locfileid: "43512466"
  Il <xref:System.Windows.Threading.Dispatcher> Ordina gli elementi nella coda in base alla priorità. Ci sono dieci livelli che possono essere specificati quando si aggiunge un elemento verso il <xref:System.Windows.Threading.Dispatcher> coda. Queste priorità vengono mantenute nel <xref:System.Windows.Threading.DispatcherPriority> enumerazione. Informazioni dettagliate sui <xref:System.Windows.Threading.DispatcherPriority> livelli sono reperibili nel [!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)] documentazione.  
   
 <a name="samples"></a>   
-## <a name="threads-in-action-the-samples"></a>Thread in azione: esempi  
+## <a name="threads-in-action-the-samples"></a>Thread in azione: Gli esempi  
   
 <a name="prime_number"></a>   
 ### <a name="a-single-threaded-application-with-a-long-running-calculation"></a>Applicazione a thread singolo con calcolo a esecuzione prolungata  
@@ -217,5 +217,5 @@ ms.locfileid: "43512466"
   
  L'attività per [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] consiste nell'evitare la reentrancy imprevista senza reintrodurre la perdita di memoria, motivo per cui è non bloccano reentrancy ovunque.  
   
-## <a name="see-also"></a>Vedere anche  
- [Esempio di applicazione a thread singolo con calcolo a esecuzione prolungata](https://go.microsoft.com/fwlink/?LinkID=160038)
+## <a name="see-also"></a>Vedere anche
+- [Esempio di applicazione a thread singolo con calcolo a esecuzione prolungata](https://go.microsoft.com/fwlink/?LinkID=160038)

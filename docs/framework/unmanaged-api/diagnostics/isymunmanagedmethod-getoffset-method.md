@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6d88e9279f70c36fd8a9c626972e33305cded5fb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6485688c2964d477f0c5f68a3da714f084fa308f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424391"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54515303"
 ---
 # <a name="isymunmanagedmethodgetoffset-method"></a>Metodo ISymUnmanagedMethod::GetOffset
-Restituisce l'offset all'interno del metodo che corrisponde a una posizione specifica all'interno di un documento.  
+Restituisce l'offset all'interno di questo metodo che corrisponde a una determinata posizione all'interno di un documento.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -51,10 +51,10 @@ HRESULT GetOffset(
  [out] Un puntatore a un `ULONG32` che riceve gli offset.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK se il metodo ha esito positivo. in caso contrario, E_FAIL o un altro codice di errore.  
+ S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o qualche altro codice di errore.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** CorSym. idl, CorSym.h  
+ **Intestazione:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

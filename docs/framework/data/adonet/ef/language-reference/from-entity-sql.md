@@ -2,15 +2,15 @@
 title: FROM (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: ff3e3048-0d5d-4502-ae5c-9187fcbd0514
-ms.openlocfilehash: de2ad24e5c6399ed1ca91e3907da4a66c056e337
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a2550b667617ccf945acad79f0d63c52df118061
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32765815"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54516332"
 ---
 # <a name="from-entity-sql"></a>FROM (Entity SQL)
-Specifica la raccolta usata nelle [selezionare](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md) istruzioni.  
+Specifica la raccolta usata nella [seleziona](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md) istruzioni.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -96,14 +96,14 @@ LOB.Customers
 >  A differenza di [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] non è necessario un passaggio UNNEST esplicito.  
   
 > [!NOTE]
->  Gli operatori `CROSS` e `OUTER APPLY` sono stati introdotti in [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)]. In alcuni casi, è possibile che la pipeline della query produca istruzioni Transact-SQL contenenti gli operatori `CROSS APPLY` e/o `OUTER APPLY`. Poiché alcuni provider di back-end, incluse le versioni di SQL Server precedenti a [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)]non supporti questi operatori, tali query non possono essere eseguite su questi provider di back-end.  
+>  Gli operatori `CROSS` e `OUTER APPLY` sono stati introdotti in [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)]. In alcuni casi, è possibile che la pipeline della query produca istruzioni Transact-SQL contenenti gli operatori `CROSS APPLY` e/o `OUTER APPLY`. Poiché alcuni provider di back-end, incluse le versioni di SQL Server precedenti a [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)], questi operatori non sono supportati, tali query non possono essere eseguite su questi provider di back-end.  
 >   
 >  Di seguito sono elencati alcuni degli scenari tipici che potrebbero determinare la presenza degli operatori `CROSS APPLY` e/o `OUTER APPLY` nella query di output: una subquery correlata con paging, AnyElement su una subquery correlata o su una raccolta prodotta dalla navigazione, query LINQ che usano metodi di raggruppamento che accettano un selettore elemento, una query nella quale viene specificata in modo esplicito una clausola `CROSS APPLY` o `OUTER APPLY`, una query che presenta un costrutto `DEREF` su un costrutto `REF`.  
   
 ## <a name="multiple-collections-in-the-from-clause"></a>Più raccolte nella clausola FROM  
  La clausola `FROM` può contenere più raccolte separate da virgole. In questi casi, si presuppone che le raccolte siano unite in join, come se si trattasse di un CROSS JOIN a n vie.  
   
- Nell'esempio seguente, `C` e `D` sono raccolte indipendenti, ma `c.Names` dipende `C`.  
+ Nell'esempio riportato di seguito `C` e `D` sono raccolte indipendenti, ma `c.Names` dipende `C`.  
   
 ```  
 FROM C AS c, D AS d, c.Names AS e  
@@ -152,7 +152,7 @@ select c.Orders from Customers as c
 select {1} from {2, 3}  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Riferimento a Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
- [Espressioni di query](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)  
- [Tipi strutturati nullable](../../../../../../docs/framework/data/adonet/ef/language-reference/nullable-structured-types-entity-sql.md)
+## <a name="see-also"></a>Vedere anche
+- [Riferimento a Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Espressioni di query](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)
+- [Tipi strutturati nullable](../../../../../../docs/framework/data/adonet/ef/language-reference/nullable-structured-types-entity-sql.md)

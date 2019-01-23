@@ -17,11 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3c872f8e1316c735d3b717cbea6e995b14ca0133
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fc9633f7518aee233634bb7fbfac74c24b306eac
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54515602"
 ---
 # <a name="icatalogservicesnotautodone-method"></a>Metodo ICatalogServices::NotAutodone
 Questo metodo supporta l'infrastruttura .NET Framework e non può essere utilizzato direttamente dal codice.  
@@ -32,5 +33,5 @@ Questo metodo supporta l'infrastruttura .NET Framework e non può essere utilizz
 HRESULT NotAutodone ( );  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfacce di hosting](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfacce di hosting](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

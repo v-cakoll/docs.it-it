@@ -2,12 +2,12 @@
 title: DiffGram
 ms.date: 03/30/2017
 ms.assetid: 037f3991-7bbc-424b-b52e-8b03585d3e34
-ms.openlocfilehash: fd452efff2a26b66c06a7762b215df140047286d
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 573da0b608b3f74b9cf789a27a10183f3320f908
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085895"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513654"
 ---
 # <a name="diffgrams"></a>DiffGram
 DiffGram è un formato XML che consente di identificare le versioni correnti e originali degli elementi di dati. Il formato DiffGram viene usato dal tipo <xref:System.Data.DataSet> per caricare e conservare il contenuto e per serializzare tale contenuto in modo da consentirne il trasporto tramite una connessione di rete. Quando un <xref:System.Data.DataSet> viene scritto come DiffGram, tale DiffGram viene compilato con tutte le informazioni necessarie per ricreare accuratamente il contenuto, anche se non lo schema, del <xref:System.Data.DataSet>, inclusi sia i valori della colonna di **originale** e **corrente** versioni delle righe, le informazioni sull'errore di riga e l'ordine delle righe.  
@@ -73,7 +73,7 @@ DiffGram è un formato XML che consente di identificare le versioni correnti e o
  **\<diffgr:before>**  
  In questo blocco del formato DiffGram è contenuta la versione originale di una riga. Gli elementi in questo blocco corrispondono agli elementi nel ***DataInstance*** bloccato tramite il **diffgr: ID** annotazione.  
   
- **\<diffgr: Errors >**  
+ **\<diffgr:errors>**  
  Questo blocco del formato DiffGram contiene informazioni sull'errore per una determinata riga nella ***DataInstance*** blocco. Gli elementi in questo blocco corrispondono agli elementi nel ***DataInstance*** bloccato tramite il **diffgr: ID** annotazione.  
   
 ## <a name="diffgram-annotations"></a>Annotazioni DiffGram  
@@ -94,7 +94,7 @@ DiffGram è un formato XML che consente di identificare le versioni correnti e o
 |Annotazione|Descrizione|  
 |----------------|-----------------|  
 |**RowOrder**|Conserva l'ordine di riga dei dati originali e identifica l'indice di una riga in un particolare tipo <xref:System.Data.DataTable>.|  
-|**Nascosta**|Identifica una colonna con un **ColumnMapping** impostata su **MappingType**. L'attributo viene scritto nel formato **msdata: hidden** *[NomeColonna]*= "*valore*". Ad esempio: `<Customers diffgr:id="Customers1" msdata:hiddenContactTitle="Owner">`.<br /><br /> Notare che le colonne nascoste vengono scritte come attributo DiffGram solo se in tali colonne sono presenti dati. In caso contrario, vengono ignorate.|  
+|**Hidden**|Identifica una colonna con un **ColumnMapping** impostata su **MappingType**. L'attributo viene scritto nel formato **msdata: hidden** *[NomeColonna]*= "*valore*". Ad esempio: `<Customers diffgr:id="Customers1" msdata:hiddenContactTitle="Owner">`.<br /><br /> Notare che le colonne nascoste vengono scritte come attributo DiffGram solo se in tali colonne sono presenti dati. In caso contrario, vengono ignorate.|  
   
 ## <a name="sample-diffgram"></a>Esempio di DiffGram  
  Di seguito viene riportato un esempio di formato DiffGram. Questo esempio mostra il risultato di un aggiornamento a una riga prima della conferma delle modifiche. La riga con CustomerID pari a "ALFKI" è stata modificata, ma non aggiornata. Di conseguenza, è presente una **correnti** riga con un **diffgr: ID** pari a "Customers1" nel **\<** ***DataInstance*** **>** blocco e un **originale** riga con un **diffgr: ID** pari a "Customers1" nel  **\<diffgr: prima >** blocco. La riga con CustomerID "ANATR" include un **RowError**, quindi è annotata con `diffgr:hasErrors="true"` e si trova un elemento correlato nel  **\<diffgr: Errors >** blocco.  
@@ -131,9 +131,9 @@ DiffGram è un formato XML che consente di identificare le versioni correnti e o
 </diffgr:diffgram>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Uso di XML in un set di dati](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
- [Caricamento di un oggetto DataSet da XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)  
- [Scrittura del contenuto di DataSet come dati XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)  
- [Oggetti DataSet, DataTable e DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vedere anche
+- [Uso di XML in un set di dati](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
+- [Caricamento di un oggetto DataSet da XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
+- [Scrittura del contenuto di DataSet come dati XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)
+- [Oggetti DataSet, DataTable e DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

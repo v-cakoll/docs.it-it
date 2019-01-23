@@ -9,17 +9,17 @@ helpviewer_keywords:
 - Microsoft.VisualBasic namespace
 - members [Visual Basic], Visual Basic run-time library
 ms.assetid: f5e82c6e-3500-452b-bdb8-78f0d5477604
-ms.openlocfilehash: 438094d00375531752f575f1f99b3db4ddf4e2e3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ef6ce3fe62bd45716184ccbbb0f5a29f18e7477f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604588"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514803"
 ---
 # <a name="visual-basic-runtime-library-members"></a>Membri della libreria di runtime di Visual Basic
-Il `Microsoft.VisualBasic` dello spazio dei nomi contiene le classi, moduli, costanti ed enumerazioni che costituiscono la libreria di runtime di Visual Basic. Questi membri raccolta forniscono procedure, le proprietà e valori costanti che è possibile utilizzare nel codice. Ogni modulo e la classe rappresenta una particolare categoria di funzionalità.  
+Il `Microsoft.VisualBasic` dello spazio dei nomi contiene le classi, moduli, costanti ed enumerazioni che costituiscono la libreria di runtime di Visual Basic. Questi membri delle librerie di forniscono procedure, le proprietà e valori costanti che è possibile usare nel codice. Ogni modulo e classi rappresenta una determinata categoria di funzionalità.  
   
-## <a name="microsoftvisualbasiccollection-class"></a>Classe Microsoft.VisualBasic.Collection  
+## <a name="microsoftvisualbasiccollection-class"></a>Microsoft.VisualBasic.Collection Class  
   
 |||||  
 |---|---|---|---|  
@@ -32,7 +32,7 @@ Il `Microsoft.VisualBasic` dello spazio dei nomi contiene le classi, moduli, cos
 |---|---|---|---|  
 |<xref:Microsoft.VisualBasic.ComClassAttribute.ClassID%2A>|<xref:Microsoft.VisualBasic.ComClassAttribute.EventID%2A>|<xref:Microsoft.VisualBasic.ComClassAttribute.InterfaceID%2A>|<xref:Microsoft.VisualBasic.ComClassAttribute.InterfaceShadows%2A>|  
   
-## <a name="microsoftvisualbasiccontrolchars-class"></a>Classe Microsoft.VisualBasic.ControlChars  
+## <a name="microsoftvisualbasiccontrolchars-class"></a>Microsoft.VisualBasic.ControlChars Class  
   
 |||||  
 |---|---|---|---|  
@@ -40,7 +40,7 @@ Il `Microsoft.VisualBasic` dello spazio dei nomi contiene le classi, moduli, cos
 |<xref:Microsoft.VisualBasic.ControlChars.Lf>|<xref:Microsoft.VisualBasic.ControlChars.NewLine>|<xref:Microsoft.VisualBasic.ControlChars.NullChar>|<xref:Microsoft.VisualBasic.ControlChars.Quote>|  
 |<xref:Microsoft.VisualBasic.ControlChars.Tab>|<xref:Microsoft.VisualBasic.ControlChars.VerticalTab>|||  
   
-## <a name="microsoftvisualbasicconstants-class"></a>Classe Microsoft.VisualBasic.Constants  
+## <a name="microsoftvisualbasicconstants-class"></a>Microsoft.VisualBasic.Constants Class  
   
 |||||  
 |---|---|---|---|  
@@ -71,14 +71,14 @@ Il `Microsoft.VisualBasic` dello spazio dei nomi contiene le classi, moduli, cos
 |<xref:Microsoft.VisualBasic.Constants.vbVolume>|<xref:Microsoft.VisualBasic.Constants.vbWednesday>|<xref:Microsoft.VisualBasic.Constants.vbWide>|<xref:Microsoft.VisualBasic.Constants.vbYes>|  
 |<xref:Microsoft.VisualBasic.Constants.vbYesNo>|<xref:Microsoft.VisualBasic.Constants.vbYesNoCancel>|||  
   
-## <a name="microsoftvisualbasicconversion-module"></a>Modulo Microsoft.VisualBasic.Conversion  
+## <a name="microsoftvisualbasicconversion-module"></a>Microsoft.VisualBasic.Conversion Module  
   
 |||||  
 |---|---|---|---|  
 |<xref:Microsoft.VisualBasic.Conversion.ErrorToString%2A>|<xref:Microsoft.VisualBasic.Conversion.Fix%2A>|<xref:Microsoft.VisualBasic.Conversion.Hex%2A>|<xref:Microsoft.VisualBasic.Conversion.Int%2A>|  
 |<xref:Microsoft.VisualBasic.Conversion.Oct%2A>|<xref:Microsoft.VisualBasic.Conversion.Str%2A>|<xref:Microsoft.VisualBasic.Conversion.Val%2A>||  
   
-## <a name="microsoftvisualbasicdateandtime-module"></a>Modulo Microsoft.VisualBasic.DateAndTime  
+## <a name="microsoftvisualbasicdateandtime-module"></a>Microsoft.VisualBasic.DateAndTime Module  
   
 |||||  
 |---|---|---|---|  
@@ -97,7 +97,7 @@ Il `Microsoft.VisualBasic` dello spazio dei nomi contiene le classi, moduli, cos
 |<xref:Microsoft.VisualBasic.ErrObject.HelpContext%2A>|<xref:Microsoft.VisualBasic.ErrObject.HelpFile%2A>|<xref:Microsoft.VisualBasic.ErrObject.LastDllError%2A>|<xref:Microsoft.VisualBasic.ErrObject.Number%2A>|  
 |<xref:Microsoft.VisualBasic.ErrObject.Raise%2A>|<xref:Microsoft.VisualBasic.ErrObject.Raise%2A>|||  
   
-## <a name="microsoftvisualbasicfilesystem-module"></a>Modulo Microsoft.VisualBasic.FileSystem  
+## <a name="microsoftvisualbasicfilesystem-module"></a>Microsoft.VisualBasic.FileSystem Module  
   
 |||||  
 |---|---|---|---|  
@@ -112,7 +112,7 @@ Il `Microsoft.VisualBasic` dello spazio dei nomi contiene le classi, moduli, cos
 |<xref:Microsoft.VisualBasic.FileSystem.SetAttr%2A>|<xref:Microsoft.VisualBasic.FileSystem.SPC%2A>|<xref:Microsoft.VisualBasic.FileSystem.TAB%2A>|<xref:Microsoft.VisualBasic.FileSystem.Unlock%2A>|  
 |<xref:Microsoft.VisualBasic.FileSystem.Write%2A>|<xref:Microsoft.VisualBasic.FileSystem.WriteLine%2A>|||  
   
-## <a name="microsoftvisualbasicfinancial-module"></a>Modulo Microsoft.VisualBasic.Financial  
+## <a name="microsoftvisualbasicfinancial-module"></a>Microsoft.VisualBasic.Financial Module  
   
 |||||  
 |---|---|---|---|  
@@ -121,7 +121,7 @@ Il `Microsoft.VisualBasic` dello spazio dei nomi contiene le classi, moduli, cos
 |<xref:Microsoft.VisualBasic.Financial.PPmt%2A>|<xref:Microsoft.VisualBasic.Financial.PV%2A>|<xref:Microsoft.VisualBasic.Financial.Rate%2A>|<xref:Microsoft.VisualBasic.Financial.SLN%2A>|  
 |<xref:Microsoft.VisualBasic.Financial.SYD%2A>||||  
   
-## <a name="microsoftvisualbasicglobals-module"></a>Modulo Microsoft.VisualBasic.Globals  
+## <a name="microsoftvisualbasicglobals-module"></a>Microsoft.VisualBasic.Globals Module  
   
 |||||  
 |---|---|---|---|  
@@ -133,7 +133,7 @@ Il `Microsoft.VisualBasic` dello spazio dei nomi contiene le classi, moduli, cos
 |---|---|---|---|  
 |<xref:Microsoft.VisualBasic.HideModuleNameAttribute>||||  
   
-## <a name="microsoftvisualbasicinformation-module"></a>Modulo Microsoft.VisualBasic.Information  
+## <a name="microsoftvisualbasicinformation-module"></a>Microsoft.VisualBasic.Information Module  
   
 |||||  
 |---|---|---|---|  
@@ -143,7 +143,7 @@ Il `Microsoft.VisualBasic` dello spazio dei nomi contiene le classi, moduli, cos
 |<xref:Microsoft.VisualBasic.Information.SystemTypeName%2A>|<xref:Microsoft.VisualBasic.Information.TypeName%2A>|<xref:Microsoft.VisualBasic.Information.UBound%2A>|<xref:Microsoft.VisualBasic.Information.VarType%2A>|  
 |<xref:Microsoft.VisualBasic.Information.VbTypeName%2A>||||  
   
-## <a name="microsoftvisualbasicinteraction-module"></a>Modulo Microsoft.VisualBasic.Interaction  
+## <a name="microsoftvisualbasicinteraction-module"></a>Microsoft.VisualBasic.Interaction Module  
   
 |||||  
 |---|---|---|---|  
@@ -159,7 +159,7 @@ Il `Microsoft.VisualBasic` dello spazio dei nomi contiene le classi, moduli, cos
 |---|---|---|---|  
 |<xref:Microsoft.VisualBasic.MyGroupCollectionAttribute.CreateMethod%2A>|<xref:Microsoft.VisualBasic.MyGroupCollectionAttribute.DefaultInstanceAlias%2A>|<xref:Microsoft.VisualBasic.MyGroupCollectionAttribute.DisposeMethod%2A>|<xref:Microsoft.VisualBasic.MyGroupCollectionAttribute.MyGroupName%2A>|  
   
-## <a name="microsoftvisualbasicstrings-module"></a>Modulo Microsoft.VisualBasic.Strings  
+## <a name="microsoftvisualbasicstrings-module"></a>Microsoft.VisualBasic.Strings Module  
   
 |||||  
 |---|---|---|---|  
@@ -184,15 +184,15 @@ Il `Microsoft.VisualBasic` dello spazio dei nomi contiene le classi, moduli, cos
 |---|---|---|---|  
 |<xref:Microsoft.VisualBasic.VBFixedStringAttribute.Length%2A>||||  
   
-## <a name="microsoftvisualbasicvbmath-module"></a>Modulo Microsoft.VisualBasic.VbMath  
+## <a name="microsoftvisualbasicvbmath-module"></a>Microsoft.VisualBasic.VbMath Module  
   
 |||||  
 |---|---|---|---|  
 |<xref:Microsoft.VisualBasic.VBMath.Randomize%2A>|<xref:Microsoft.VisualBasic.VBMath.Rnd%2A>|||  
   
 ## <a name="microsoftvisualbasic-constants-and-enumerations"></a>Microsoft. VisualBasic costanti ed enumerazioni  
- Il `Microsoft.VisualBasic` dello spazio dei nomi fornisce costanti ed enumerazioni come parte della libreria di runtime di Visual Basic. Nel codice, è possibile utilizzare questi valori costanti. Ciascuna enumerazione rappresenta una particolare categoria di funzionalità. Per ulteriori informazioni, vedere [costanti ed enumerazioni](../../visual-basic/language-reference/constants-and-enumerations.md).  
+ Il `Microsoft.VisualBasic` dello spazio dei nomi fornisce le costanti ed enumerazioni come parte della libreria run-time Visual Basic. È possibile usare questi valori costanti nel codice. Ciascuna enumerazione rappresenta una determinata categoria di funzionalità. Per altre informazioni, vedere [costanti ed enumerazioni](../../visual-basic/language-reference/constants-and-enumerations.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Costanti ed enumerazioni](../../visual-basic/language-reference/constants-and-enumerations.md)  
- [Parole chiave](../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a>Vedere anche
+- [Costanti ed enumerazioni](../../visual-basic/language-reference/constants-and-enumerations.md)
+- [Parole chiave](../../visual-basic/language-reference/keywords/index.md)

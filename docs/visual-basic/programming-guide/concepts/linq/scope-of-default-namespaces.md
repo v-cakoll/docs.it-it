@@ -2,12 +2,12 @@
 title: Ambito degli spazi dei nomi predefinito in Visual Basic
 ms.date: 07/20/2015
 ms.assetid: d4cce80c-342f-4097-be8b-40ab0bfa90ba
-ms.openlocfilehash: a0c07c1b6ca4fea836bd37e4a311655fcb1d7878
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8c48273f3788e20e24832be8bf2013af22419fac
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645743"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527016"
 ---
 # <a name="scope-of-default-namespaces-in-visual-basic"></a>Ambito degli spazi dei nomi predefinito in Visual Basic
 Gli spazi dei nomi rappresentati nell'albero XML non sono inclusi nell'ambito delle query. Se il codice XML è incluso in uno spazio dei nomi predefinito, è comunque necessario dichiarare una variabile <xref:System.Xml.Linq.XNamespace> e combinarla con il nome locale per creare un nome completo da usare nella query.  
@@ -58,7 +58,7 @@ End of result set
 ## <a name="example"></a>Esempio  
  In questo esempio vengono illustrate la creazione di codice XML in uno spazio dei nomi e una query codificata correttamente.  
   
- Contrariamente all'esempio di codice errato precedente, l'approccio corretto quando si utilizza Visual Basic consiste nel dichiarare e inizializzare uno spazio dei nomi globale predefinito. In questo modo tutte le proprietà XML vengono inserite nello spazio dei nomi predefinito. Non è necessario apportare altre modifiche all'esempio per fare in modo che venga eseguito correttamente.  
+ Contrariamente all'esempio di codice errato precedente, l'approccio corretto quando si usa Visual Basic consiste nel dichiarare e inizializzare uno spazio dei nomi predefinito globale. In questo modo tutte le proprietà XML vengono inserite nello spazio dei nomi predefinito. Non è necessario apportare altre modifiche all'esempio per fare in modo che venga eseguito correttamente.  
   
 ### <a name="code"></a>Codice  
   
@@ -99,5 +99,5 @@ Result set follows:
 End of result set  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Utilizzo di spazi dei nomi XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+## <a name="see-also"></a>Vedere anche
+- [Utilizzo di spazi dei nomi XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)

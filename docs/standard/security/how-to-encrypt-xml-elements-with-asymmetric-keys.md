@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: crittografare gli elementi XML con chiavi asimmetriche'
+title: 'Procedura: Crittografare gli elementi XML con chiavi asimmetriche'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -19,21 +19,21 @@ helpviewer_keywords:
 ms.assetid: a164ba4f-e596-4bbe-a9ca-f214fe89ed48
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 61984d4778e42abf378a1369a86ba599d78980af
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 4a38c2264bac92e9c2c0627718bf53539e6bec72
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121324"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54518267"
 ---
-# <a name="how-to-encrypt-xml-elements-with-asymmetric-keys"></a>Procedura: crittografare gli elementi XML con chiavi asimmetriche
+# <a name="how-to-encrypt-xml-elements-with-asymmetric-keys"></a>Procedura: Crittografare gli elementi XML con chiavi asimmetriche
 È possibile usare le classi dello spazio dei nomi <xref:System.Security.Cryptography.Xml> per crittografare un elemento all'interno di un documento XML.  La crittografia XML consente di scambiare o archiviare dati XML crittografati in modo standard, garantendo un'adeguata protezione dei dati da letture non autorizzate.  Per altre informazioni sullo standard della crittografia XML, vedere la specifica World Wide Web Consortium (W3C) per la crittografia XML disponibile all'indirizzo <https://www.w3.org/TR/xmldsig-core/>.  
   
  È possibile usare la crittografia XML per sostituire qualsiasi elemento o documento XML con un elemento <`EncryptedData`> contenente i dati XML crittografati.  Nell'elemento <`EncryptedData`> possono essere inclusi anche sottoelementi in cui sono incluse informazioni sulle chiavi e sui processi usati durante la crittografia.  La crittografia XML consente a un documento di contenere più elementi crittografati e consente a un elemento di essere crittografato più volte.  Nell'esempio di codice relativo a questa procedura viene illustrato come creare un elemento <`EncryptedData`> insieme a diversi altri sottoelementi utilizzabili in un secondo momento durante la decrittografia.  
   
  Questo esempio crittografa un elemento XML mediante due chiavi.  L'esempio genera una coppia di chiavi pubblica/privata RSA e salva la coppia di chiavi in un contenitore di chiavi protetto.  L'esempio crea quindi una chiave di sessione separata usando l'algoritmo AES (Advanced Encryption Standard), definito anche algoritmo Rijndael.  La chiave di sessione AES viene usata dall'esempio per crittografare il documento XML e la chiave pubblica RSA viene usata per crittografare la chiave di sessione AES.  L'esempio salva infine la chiave di sessione AES crittografata e i dati XML crittografati nel documento XML entro un nuovo elemento <`EncryptedData`>.  
   
- Per decrittografare l'elemento XML, recuperare la chiave privata RSA dal contenitore di chiavi, usarla per decrittografare la chiave di sessione e quindi usare la chiave di sessione per decrittografare il documento.  Per altre informazioni su come decrittografare un elemento XML che era stato crittografato mediante questa procedura, vedere [procedura: decrittografare gli elementi XML con chiavi asimmetriche](../../../docs/standard/security/how-to-decrypt-xml-elements-with-asymmetric-keys.md).  
+ Per decrittografare l'elemento XML, recuperare la chiave privata RSA dal contenitore di chiavi, usarla per decrittografare la chiave di sessione e quindi usare la chiave di sessione per decrittografare il documento.  Per altre informazioni su come decrittografare un elemento XML che era stato crittografato mediante questa procedura, vedere [come: Decrittografare gli elementi XML con chiavi asimmetriche](../../../docs/standard/security/how-to-decrypt-xml-elements-with-asymmetric-keys.md).  
   
  Questo esempio è adatto per situazioni in cui più applicazioni devono condividere dati crittografati o in cui un'applicazione deve salvare dati crittografati tra un'esecuzione e l'altra.  
   
@@ -144,5 +144,5 @@ ms.locfileid: "49121324"
   
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.Security.Cryptography.Xml>  
+- <xref:System.Security.Cryptography.Xml>
 - [Procedura: Decrittografare gli elementi XML con chiavi asimmetriche](../../../docs/standard/security/how-to-decrypt-xml-elements-with-asymmetric-keys.md)

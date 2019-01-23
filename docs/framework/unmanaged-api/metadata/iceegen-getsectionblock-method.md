@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5da2936a46dcf3d8f69acc3367db64712165b0cb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: eb1268d9fd892a4400491aca7966d81a3e23f9c6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444061"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54515352"
 ---
 # <a name="iceegengetsectionblock-method"></a>Metodo ICeeGen::GetSectionBlock
-Ottiene un blocco di sezione di base di codice.  
+Ottiene un blocco di sezione del codice di base.  
   
  Questo metodo è obsoleto e non deve essere utilizzato.  
   
@@ -48,22 +48,22 @@ HRESULT GetSectionBlock (
  [in] La lunghezza del blocco da recuperare.  
   
  `align`  
- [in] Byte, relativo all'inizio della sezione, con la quale allineare il primo byte del blocco. Questa è la posizione del blocco all'interno della sezione.  
+ [in] Byte, rispetto all'inizio della sezione, con la quale allineare il primo byte del blocco. Questa è la posizione del blocco all'interno della sezione.  
   
  `ppBytes`  
  [out] Puntatore a una posizione che riceve l'indirizzo del blocco recuperato.  
   
 ## <a name="remarks"></a>Note  
- Chiamare `GetSectionBlock` solo se sono necessari requisiti speciali di sezione che non sono gestiti da altri metodi.  
+ Chiamare `GetSectionBlock` solo se si hanno requisiti di sezione speciale che non sono gestiti tramite altri metodi.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
- **Libreria:** usata come risorsa in Mscoree. dll  
+ **Libreria:** Usato come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
