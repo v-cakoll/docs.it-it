@@ -10,22 +10,22 @@ helpviewer_keywords:
 - <remove> element, webRequestModules
 - <webRequestModules>, remove element
 ms.assetid: dd84d2fe-2f4f-457a-9d3c-441d0d21cc10
-ms.openlocfilehash: 2f787206c503c047a34383e12c5676296e39c1fe
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 380438bbc6e0c93b26d2afb77ff6b04308c61caf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50190749"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54547066"
 ---
-# <a name="ltremovegt-element-for-webrequestmodules-network-settings"></a><span data-ttu-id="f8203-102">&lt;rimuovere&gt; (elemento) per webRequestModules (impostazioni di rete)</span><span class="sxs-lookup"><span data-stu-id="f8203-102">&lt;remove&gt; Element for webRequestModules (Network Settings)</span></span>
-<span data-ttu-id="f8203-103">Rimuove un modulo di richiesta Web personalizzato dall'applicazione.</span><span class="sxs-lookup"><span data-stu-id="f8203-103">Removes a custom Web request module from the application.</span></span>  
+# <a name="ltremovegt-element-for-webrequestmodules-network-settings"></a><span data-ttu-id="5a8f1-102">&lt;rimuovere&gt; (elemento) per webRequestModules (impostazioni di rete)</span><span class="sxs-lookup"><span data-stu-id="5a8f1-102">&lt;remove&gt; Element for webRequestModules (Network Settings)</span></span>
+<span data-ttu-id="5a8f1-103">Rimuove un modulo di richiesta Web personalizzato dall'applicazione.</span><span class="sxs-lookup"><span data-stu-id="5a8f1-103">Removes a custom Web request module from the application.</span></span>  
   
- <span data-ttu-id="f8203-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="f8203-104">\<configuration></span></span>  
-<span data-ttu-id="f8203-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="f8203-105">\<system.net></span></span>  
-<span data-ttu-id="f8203-106">\<webRequestModules ></span><span class="sxs-lookup"><span data-stu-id="f8203-106">\<webRequestModules></span></span>  
-<span data-ttu-id="f8203-107">\<rimuovere ></span><span class="sxs-lookup"><span data-stu-id="f8203-107">\<remove></span></span>  
+ <span data-ttu-id="5a8f1-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="5a8f1-104">\<configuration></span></span>  
+<span data-ttu-id="5a8f1-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="5a8f1-105">\<system.net></span></span>  
+<span data-ttu-id="5a8f1-106">\<webRequestModules></span><span class="sxs-lookup"><span data-stu-id="5a8f1-106">\<webRequestModules></span></span>  
+<span data-ttu-id="5a8f1-107">\<remove></span><span class="sxs-lookup"><span data-stu-id="5a8f1-107">\<remove></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f8203-108">Sintassi</span><span class="sxs-lookup"><span data-stu-id="f8203-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5a8f1-108">Sintassi</span><span class="sxs-lookup"><span data-stu-id="5a8f1-108">Syntax</span></span>  
   
 ```xml  
 <remove   
@@ -33,35 +33,35 @@ ms.locfileid: "50190749"
 />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="f8203-109">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="f8203-109">Attributes and Elements</span></span>  
- <span data-ttu-id="f8203-110">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="f8203-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="5a8f1-109">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="5a8f1-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="5a8f1-110">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="5a8f1-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="f8203-111">Attributi</span><span class="sxs-lookup"><span data-stu-id="f8203-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="5a8f1-111">Attributi</span><span class="sxs-lookup"><span data-stu-id="5a8f1-111">Attributes</span></span>  
   
-|<span data-ttu-id="f8203-112">**Attributo**</span><span class="sxs-lookup"><span data-stu-id="f8203-112">**Attribute**</span></span>|<span data-ttu-id="f8203-113">**Descrizione**</span><span class="sxs-lookup"><span data-stu-id="f8203-113">**Description**</span></span>|  
+|<span data-ttu-id="5a8f1-112">**Attributo**</span><span class="sxs-lookup"><span data-stu-id="5a8f1-112">**Attribute**</span></span>|<span data-ttu-id="5a8f1-113">**Descrizione**</span><span class="sxs-lookup"><span data-stu-id="5a8f1-113">**Description**</span></span>|  
 |-------------------|---------------------|  
-|`prefix`|<span data-ttu-id="f8203-114">Il prefisso URI per le richieste gestite da questo modulo di richiesta Web.</span><span class="sxs-lookup"><span data-stu-id="f8203-114">The URI prefix for requests handled by this Web request module.</span></span>|  
+|`prefix`|<span data-ttu-id="5a8f1-114">Il prefisso URI per le richieste gestite da questo modulo di richiesta Web.</span><span class="sxs-lookup"><span data-stu-id="5a8f1-114">The URI prefix for requests handled by this Web request module.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="f8203-115">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="f8203-115">Child Elements</span></span>  
- <span data-ttu-id="f8203-116">Nessuno.</span><span class="sxs-lookup"><span data-stu-id="f8203-116">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="5a8f1-115">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="5a8f1-115">Child Elements</span></span>  
+ <span data-ttu-id="5a8f1-116">Nessuno.</span><span class="sxs-lookup"><span data-stu-id="5a8f1-116">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="f8203-117">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="f8203-117">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="5a8f1-117">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="5a8f1-117">Parent Elements</span></span>  
   
-|<span data-ttu-id="f8203-118">**Elemento**</span><span class="sxs-lookup"><span data-stu-id="f8203-118">**Element**</span></span>|<span data-ttu-id="f8203-119">**Descrizione**</span><span class="sxs-lookup"><span data-stu-id="f8203-119">**Description**</span></span>|  
+|<span data-ttu-id="5a8f1-118">**Elemento**</span><span class="sxs-lookup"><span data-stu-id="5a8f1-118">**Element**</span></span>|<span data-ttu-id="5a8f1-119">**Descrizione**</span><span class="sxs-lookup"><span data-stu-id="5a8f1-119">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="f8203-120">webRequestModules</span><span class="sxs-lookup"><span data-stu-id="f8203-120">webRequestModules</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|<span data-ttu-id="f8203-121">Specifica i moduli da utilizzare per richiedere informazioni da host di rete.</span><span class="sxs-lookup"><span data-stu-id="f8203-121">Specifies modules to use to request information from network hosts.</span></span>|  
+|[<span data-ttu-id="5a8f1-120">webRequestModules</span><span class="sxs-lookup"><span data-stu-id="5a8f1-120">webRequestModules</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|<span data-ttu-id="5a8f1-121">Specifica i moduli da utilizzare per richiedere informazioni da host di rete.</span><span class="sxs-lookup"><span data-stu-id="5a8f1-121">Specifies modules to use to request information from network hosts.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="f8203-122">Note</span><span class="sxs-lookup"><span data-stu-id="f8203-122">Remarks</span></span>  
- <span data-ttu-id="f8203-123">Il `remove` elemento rimuove il modulo di richiesta Web registrato per il prefisso URI specificati.</span><span class="sxs-lookup"><span data-stu-id="f8203-123">The `remove` element removes the registered Web request module for the specified URI prefix.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5a8f1-122">Note</span><span class="sxs-lookup"><span data-stu-id="5a8f1-122">Remarks</span></span>  
+ <span data-ttu-id="5a8f1-123">Il `remove` elemento rimuove il modulo di richiesta Web registrato per il prefisso URI specificati.</span><span class="sxs-lookup"><span data-stu-id="5a8f1-123">The `remove` element removes the registered Web request module for the specified URI prefix.</span></span>  
   
- <span data-ttu-id="f8203-124">Il valore per il `prefix` attributo deve essere i caratteri iniziali di un URI valido, ad esempio, "`http`", o "`http://www.contoso.com`".</span><span class="sxs-lookup"><span data-stu-id="f8203-124">The value for the `prefix` attribute should be the leading characters of a valid URI -- for example, "`http`", or "`http://www.contoso.com`".</span></span>  
+ <span data-ttu-id="5a8f1-124">Il valore per il `prefix` attributo deve essere i caratteri iniziali di un URI valido, ad esempio, "`http`", o "`http://www.contoso.com`".</span><span class="sxs-lookup"><span data-stu-id="5a8f1-124">The value for the `prefix` attribute should be the leading characters of a valid URI -- for example, "`http`", or "`http://www.contoso.com`".</span></span>  
   
-## <a name="configuration-files"></a><span data-ttu-id="f8203-125">File di configurazione</span><span class="sxs-lookup"><span data-stu-id="f8203-125">Configuration Files</span></span>  
- <span data-ttu-id="f8203-126">Questo elemento può essere usato nel file di configurazione dell'applicazione o nel file di configurazione del computer (Machine.config).</span><span class="sxs-lookup"><span data-stu-id="f8203-126">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="5a8f1-125">File di configurazione</span><span class="sxs-lookup"><span data-stu-id="5a8f1-125">Configuration Files</span></span>  
+ <span data-ttu-id="5a8f1-126">Questo elemento può essere usato nel file di configurazione dell'applicazione o nel file di configurazione del computer (Machine.config).</span><span class="sxs-lookup"><span data-stu-id="5a8f1-126">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="f8203-127">Esempio</span><span class="sxs-lookup"><span data-stu-id="f8203-127">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="5a8f1-127">Esempio</span><span class="sxs-lookup"><span data-stu-id="5a8f1-127">Example</span></span>  
 
-<span data-ttu-id="f8203-128">L'esempio seguente rimuove il modulo di richiesta Web esistente per HTTP e registra un nuovo modulo di richiesta Web personalizzato per il protocollo HTTP richiede `www.contoso.com`.</span><span class="sxs-lookup"><span data-stu-id="f8203-128">The following example removes the existing Web request module for HTTP and then registers a new custom Web request module for HTTP requests to `www.contoso.com`.</span></span>
+<span data-ttu-id="5a8f1-128">L'esempio seguente rimuove il modulo di richiesta Web esistente per HTTP e registra un nuovo modulo di richiesta Web personalizzato per il protocollo HTTP richiede `www.contoso.com`.</span><span class="sxs-lookup"><span data-stu-id="5a8f1-128">The following example removes the existing Web request module for HTTP and then registers a new custom Web request module for HTTP requests to `www.contoso.com`.</span></span>
   
 ```xml  
 <configuration>  
@@ -77,6 +77,6 @@ ms.locfileid: "50190749"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="f8203-129">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="f8203-129">See Also</span></span>  
-- <xref:System.Net.WebRequest>  
-- [<span data-ttu-id="f8203-130">Schema delle impostazioni di rete</span><span class="sxs-lookup"><span data-stu-id="f8203-130">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a><span data-ttu-id="5a8f1-129">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="5a8f1-129">See also</span></span>
+- <xref:System.Net.WebRequest>
+- [<span data-ttu-id="5a8f1-130">Schema delle impostazioni di rete</span><span class="sxs-lookup"><span data-stu-id="5a8f1-130">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
