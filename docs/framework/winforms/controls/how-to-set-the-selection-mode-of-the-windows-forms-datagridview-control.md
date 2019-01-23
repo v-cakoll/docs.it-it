@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: impostare la modalità di selezione del controllo DataGridView di Windows Form'
+title: 'Procedura: Impostare la modalità di selezione del controllo DataGridView Windows Form'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,31 +9,31 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], selection mode
 - data grids [Windows Forms], selection mode
 ms.assetid: 2f241643-7f82-4583-8757-03494f63b465
-ms.openlocfilehash: d064dee497f1e5b07e74c5cd4e1d322ac0ff344e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 65fb7360d45baea4fff20d06316d3955f0064207
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33533556"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54539740"
 ---
-# <a name="how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control"></a><span data-ttu-id="314ed-102">Procedura: impostare la modalità di selezione del controllo DataGridView di Windows Form</span><span class="sxs-lookup"><span data-stu-id="314ed-102">How to: Set the Selection Mode of the Windows Forms DataGridView Control</span></span>
-<span data-ttu-id="314ed-103">Esempio di codice riportato di seguito viene illustrato come configurare un <xref:System.Windows.Forms.DataGridView> controllo in modo che facendo clic in un punto qualsiasi all'interno di una riga automaticamente selezionata l'intera riga, e che sia possibile selezionare solo una riga alla volta.</span><span class="sxs-lookup"><span data-stu-id="314ed-103">The following code example demonstrates how to configure a <xref:System.Windows.Forms.DataGridView> control so that clicking anywhere within a row automatically selects the entire row, and so that only one row at a time can be selected.</span></span>  
+# <a name="how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control"></a><span data-ttu-id="c0347-102">Procedura: Impostare la modalità di selezione del controllo DataGridView Windows Form</span><span class="sxs-lookup"><span data-stu-id="c0347-102">How to: Set the Selection Mode of the Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="c0347-103">Esempio di codice seguente viene illustrato come configurare un <xref:System.Windows.Forms.DataGridView> controllo in modo che selezionando un punto qualsiasi all'interno di una riga automaticamente selezionata l'intera riga, e possa essere scelte in modo che solo una riga alla volta.</span><span class="sxs-lookup"><span data-stu-id="c0347-103">The following code example demonstrates how to configure a <xref:System.Windows.Forms.DataGridView> control so that clicking anywhere within a row automatically selects the entire row, and so that only one row at a time can be selected.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="314ed-104">Esempio</span><span class="sxs-lookup"><span data-stu-id="314ed-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="c0347-104">Esempio</span><span class="sxs-lookup"><span data-stu-id="c0347-104">Example</span></span>  
  [!code-csharp[System.Windows.Forms.DataGridViewMisc#065](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#065)]
  [!code-vb[System.Windows.Forms.DataGridViewMisc#065](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#065)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="314ed-105">Compilazione del codice</span><span class="sxs-lookup"><span data-stu-id="314ed-105">Compiling the Code</span></span>  
- <span data-ttu-id="314ed-106">L'esempio presenta i requisiti seguenti:</span><span class="sxs-lookup"><span data-stu-id="314ed-106">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="c0347-105">Compilazione del codice</span><span class="sxs-lookup"><span data-stu-id="c0347-105">Compiling the Code</span></span>  
+ <span data-ttu-id="c0347-106">L'esempio presenta i requisiti seguenti:</span><span class="sxs-lookup"><span data-stu-id="c0347-106">This example requires:</span></span>  
   
--   <span data-ttu-id="314ed-107">Un controllo <xref:System.Windows.Forms.DataGridView> denominato `dataGridView1`.</span><span class="sxs-lookup"><span data-stu-id="314ed-107">A <xref:System.Windows.Forms.DataGridView> control named `dataGridView1`.</span></span>  
+-   <span data-ttu-id="c0347-107">Un controllo <xref:System.Windows.Forms.DataGridView> denominato `dataGridView1`.</span><span class="sxs-lookup"><span data-stu-id="c0347-107">A <xref:System.Windows.Forms.DataGridView> control named `dataGridView1`.</span></span>  
   
--   <span data-ttu-id="314ed-108">Riferimenti agli assembly <xref:System?displayProperty=nameWithType> e <xref:System.Windows.Forms?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="314ed-108">References to the <xref:System?displayProperty=nameWithType> and <xref:System.Windows.Forms?displayProperty=nameWithType> assemblies.</span></span>  
+-   <span data-ttu-id="c0347-108">Riferimenti agli assembly <xref:System?displayProperty=nameWithType> e <xref:System.Windows.Forms?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="c0347-108">References to the <xref:System?displayProperty=nameWithType> and <xref:System.Windows.Forms?displayProperty=nameWithType> assemblies.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="314ed-109">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="314ed-109">See Also</span></span>  
- <xref:System.Windows.Forms.DataGridView>  
- <xref:System.Windows.Forms.DataGridView.MultiSelect%2A>  
- <xref:System.Windows.Forms.DataGridView.SelectionMode%2A>  
- <xref:System.Windows.Forms.DataGridViewSelectionMode>  
- [<span data-ttu-id="314ed-110">Uso della selezione e degli Appunti con il controllo DataGridView di Windows Form</span><span class="sxs-lookup"><span data-stu-id="314ed-110">Selection and Clipboard Use with the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md)  
- [<span data-ttu-id="314ed-111">Modalità di selezione nel controllo DataGridView di Windows Form</span><span class="sxs-lookup"><span data-stu-id="314ed-111">Selection Modes in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/selection-modes-in-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a><span data-ttu-id="c0347-109">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c0347-109">See also</span></span>
+- <xref:System.Windows.Forms.DataGridView>
+- <xref:System.Windows.Forms.DataGridView.MultiSelect%2A>
+- <xref:System.Windows.Forms.DataGridView.SelectionMode%2A>
+- <xref:System.Windows.Forms.DataGridViewSelectionMode>
+- [<span data-ttu-id="c0347-110">Uso della selezione e degli Appunti con il controllo DataGridView di Windows Form</span><span class="sxs-lookup"><span data-stu-id="c0347-110">Selection and Clipboard Use with the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md)
+- [<span data-ttu-id="c0347-111">Modalità di selezione nel controllo DataGridView di Windows Form</span><span class="sxs-lookup"><span data-stu-id="c0347-111">Selection Modes in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/selection-modes-in-the-windows-forms-datagridview-control.md)

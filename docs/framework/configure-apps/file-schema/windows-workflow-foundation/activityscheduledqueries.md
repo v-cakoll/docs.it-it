@@ -3,25 +3,25 @@ title: '&lt;activityScheduledQueries&gt;'
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: ca6e82f1-54f2-48d6-899c-9873065b5547
-ms.openlocfilehash: 6192fea9a520a3f453593e5efac964a5d32a492f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 2285dfae84f078483c03d85801051e29b79e74c3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32756293"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54561842"
 ---
-# <a name="ltactivityscheduledqueriesgt"></a><span data-ttu-id="482ac-102">&lt;activityScheduledQueries&gt;</span><span class="sxs-lookup"><span data-stu-id="482ac-102">&lt;activityScheduledQueries&gt;</span></span>
-<span data-ttu-id="482ac-103">Rappresenta una raccolta di query usate per rilevare un'attività pianificata per l'esecuzione da parte di un'attività padre.</span><span class="sxs-lookup"><span data-stu-id="482ac-103">Represents a collection of queries that are used to track an activity scheduled for execution by a parent activity.</span></span> <span data-ttu-id="482ac-104">La query è necessaria affinché un partecipante del rilevamento sottoscriva i record pianificati dell'attività.</span><span class="sxs-lookup"><span data-stu-id="482ac-104">The query is necessary for a tracking participant to subscribe to activity scheduled records.</span></span>  
+# <a name="ltactivityscheduledqueriesgt"></a><span data-ttu-id="8c7e4-102">&lt;activityScheduledQueries&gt;</span><span class="sxs-lookup"><span data-stu-id="8c7e4-102">&lt;activityScheduledQueries&gt;</span></span>
+<span data-ttu-id="8c7e4-103">Rappresenta una raccolta di query usate per rilevare un'attività pianificata per l'esecuzione da parte di un'attività padre.</span><span class="sxs-lookup"><span data-stu-id="8c7e4-103">Represents a collection of queries that are used to track an activity scheduled for execution by a parent activity.</span></span> <span data-ttu-id="8c7e4-104">La query è necessaria affinché un partecipante del rilevamento sottoscriva i record pianificati dell'attività.</span><span class="sxs-lookup"><span data-stu-id="8c7e4-104">The query is necessary for a tracking participant to subscribe to activity scheduled records.</span></span>  
   
- <span data-ttu-id="482ac-105">Per ulteriori informazioni sulla query del profilo di rilevamento, vedere [profili di rilevamento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)</span><span class="sxs-lookup"><span data-stu-id="482ac-105">For more information on tracking profile queries, see [Tracking Profiles](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)</span></span>  
+ <span data-ttu-id="8c7e4-105">Per altre informazioni sulle query relative ai profili di rilevamento, vedere [profili di rilevamento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)</span><span class="sxs-lookup"><span data-stu-id="8c7e4-105">For more information on tracking profile queries, see [Tracking Profiles](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)</span></span>  
   
-<span data-ttu-id="482ac-106">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="482ac-106">\<system.serviceModel></span></span>  
-<span data-ttu-id="482ac-107">\<rilevamento ></span><span class="sxs-lookup"><span data-stu-id="482ac-107">\<tracking></span></span>  
-<span data-ttu-id="482ac-108">\<trackingProfile></span><span class="sxs-lookup"><span data-stu-id="482ac-108">\<trackingProfile></span></span>  
-<span data-ttu-id="482ac-109">\<flusso di lavoro ></span><span class="sxs-lookup"><span data-stu-id="482ac-109">\<workflow></span></span>  
-<span data-ttu-id="482ac-110">\<activityScheduledQueries ></span><span class="sxs-lookup"><span data-stu-id="482ac-110">\<activityScheduledQueries></span></span>  
+<span data-ttu-id="8c7e4-106">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="8c7e4-106">\<system.serviceModel></span></span>  
+<span data-ttu-id="8c7e4-107">\<tracking></span><span class="sxs-lookup"><span data-stu-id="8c7e4-107">\<tracking></span></span>  
+<span data-ttu-id="8c7e4-108">\<trackingProfile></span><span class="sxs-lookup"><span data-stu-id="8c7e4-108">\<trackingProfile></span></span>  
+<span data-ttu-id="8c7e4-109">\<flusso di lavoro ></span><span class="sxs-lookup"><span data-stu-id="8c7e4-109">\<workflow></span></span>  
+<span data-ttu-id="8c7e4-110">\<activityScheduledQueries></span><span class="sxs-lookup"><span data-stu-id="8c7e4-110">\<activityScheduledQueries></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="482ac-111">Sintassi</span><span class="sxs-lookup"><span data-stu-id="482ac-111">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8c7e4-111">Sintassi</span><span class="sxs-lookup"><span data-stu-id="8c7e4-111">Syntax</span></span>  
   
 ```xml  
 <tracking>
@@ -36,26 +36,26 @@ ms.locfileid: "32756293"
 </tracking>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="482ac-112">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="482ac-112">Attributes and Elements</span></span>  
- <span data-ttu-id="482ac-113">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="482ac-113">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="8c7e4-112">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="8c7e4-112">Attributes and Elements</span></span>  
+ <span data-ttu-id="8c7e4-113">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="8c7e4-113">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="482ac-114">Attributi</span><span class="sxs-lookup"><span data-stu-id="482ac-114">Attributes</span></span>  
- <span data-ttu-id="482ac-115">Nessuno.</span><span class="sxs-lookup"><span data-stu-id="482ac-115">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="8c7e4-114">Attributi</span><span class="sxs-lookup"><span data-stu-id="8c7e4-114">Attributes</span></span>  
+ <span data-ttu-id="8c7e4-115">Nessuno.</span><span class="sxs-lookup"><span data-stu-id="8c7e4-115">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="482ac-116">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="482ac-116">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="8c7e4-116">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="8c7e4-116">Child Elements</span></span>  
   
-|<span data-ttu-id="482ac-117">Elemento</span><span class="sxs-lookup"><span data-stu-id="482ac-117">Element</span></span>|<span data-ttu-id="482ac-118">Descrizione</span><span class="sxs-lookup"><span data-stu-id="482ac-118">Description</span></span>|  
+|<span data-ttu-id="8c7e4-117">Elemento</span><span class="sxs-lookup"><span data-stu-id="8c7e4-117">Element</span></span>|<span data-ttu-id="8c7e4-118">Descrizione</span><span class="sxs-lookup"><span data-stu-id="8c7e4-118">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="482ac-119">\<activityScheduledQuery ></span><span class="sxs-lookup"><span data-stu-id="482ac-119">\<activityScheduledQuery></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/activityscheduledquery.md)|<span data-ttu-id="482ac-120">Query usata per rilevare un'attività pianificata per l'esecuzione da parte di un'attività padre.</span><span class="sxs-lookup"><span data-stu-id="482ac-120">A query that is used to track an activity scheduled for execution by a parent activity.</span></span>|  
+|[<span data-ttu-id="8c7e4-119">\<activityScheduledQuery></span><span class="sxs-lookup"><span data-stu-id="8c7e4-119">\<activityScheduledQuery></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/activityscheduledquery.md)|<span data-ttu-id="8c7e4-120">Query usata per rilevare un'attività pianificata per l'esecuzione da parte di un'attività padre.</span><span class="sxs-lookup"><span data-stu-id="8c7e4-120">A query that is used to track an activity scheduled for execution by a parent activity.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="482ac-121">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="482ac-121">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="8c7e4-121">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="8c7e4-121">Parent Elements</span></span>  
   
-|<span data-ttu-id="482ac-122">Elemento</span><span class="sxs-lookup"><span data-stu-id="482ac-122">Element</span></span>|<span data-ttu-id="482ac-123">Descrizione</span><span class="sxs-lookup"><span data-stu-id="482ac-123">Description</span></span>|  
+|<span data-ttu-id="8c7e4-122">Elemento</span><span class="sxs-lookup"><span data-stu-id="8c7e4-122">Element</span></span>|<span data-ttu-id="8c7e4-123">Descrizione</span><span class="sxs-lookup"><span data-stu-id="8c7e4-123">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="482ac-124">\<flusso di lavoro ></span><span class="sxs-lookup"><span data-stu-id="482ac-124">\<workflow></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|<span data-ttu-id="482ac-125">Un elemento di configurazione che contiene tutte le query per un flusso di lavoro specifico identificato dal **activityDefinitionId** proprietà.</span><span class="sxs-lookup"><span data-stu-id="482ac-125">A configuration element that contains all queries for a specific workflow identified by the **activityDefinitionId** property.</span></span>|  
+|[<span data-ttu-id="8c7e4-124">\<workflow></span><span class="sxs-lookup"><span data-stu-id="8c7e4-124">\<workflow></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|<span data-ttu-id="8c7e4-125">Un elemento di configurazione che contiene tutte le query per un flusso di lavoro specifico identificato dal **activityDefinitionId** proprietà.</span><span class="sxs-lookup"><span data-stu-id="8c7e4-125">A configuration element that contains all queries for a specific workflow identified by the **activityDefinitionId** property.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="482ac-126">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="482ac-126">See Also</span></span>  
- <xref:System.ServiceModel.Activities.Tracking.Configuration.ActivityScheduledQueryElementCollection?displayProperty=nameWithType>       
- <xref:System.Activities.Tracking.ActivityScheduledQuery?displayProperty=nameWithType>       
- [<span data-ttu-id="482ac-127">Rilevamento e analisi del flusso di lavoro</span><span class="sxs-lookup"><span data-stu-id="482ac-127">Workflow Tracking and Tracing</span></span>](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
- [<span data-ttu-id="482ac-128">Profili di rilevamento</span><span class="sxs-lookup"><span data-stu-id="482ac-128">Tracking Profiles</span></span>](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+## <a name="see-also"></a><span data-ttu-id="8c7e4-126">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="8c7e4-126">See also</span></span>
+- <xref:System.ServiceModel.Activities.Tracking.Configuration.ActivityScheduledQueryElementCollection?displayProperty=nameWithType>
+- <xref:System.Activities.Tracking.ActivityScheduledQuery?displayProperty=nameWithType>
+- [<span data-ttu-id="8c7e4-127">Rilevamento e analisi del flusso di lavoro</span><span class="sxs-lookup"><span data-stu-id="8c7e4-127">Workflow Tracking and Tracing</span></span>](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [<span data-ttu-id="8c7e4-128">Profili di rilevamento</span><span class="sxs-lookup"><span data-stu-id="8c7e4-128">Tracking Profiles</span></span>](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
