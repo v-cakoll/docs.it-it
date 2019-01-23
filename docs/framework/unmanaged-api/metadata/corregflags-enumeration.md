@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f7b935b8f59e434c9da364be1986dbed654a1efd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 52b59a4e52d3e0cda7353ec1b39c5307bd7b218e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445809"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54532266"
 ---
 # <a name="corregflags-enumeration"></a>Enumerazione CorRegFlags
-Fornisce valori di flag usati per la registrazione quando si installa un modulo o immagine composita.  
+Fornisce i valori di flag usati per la registrazione quando si installa un modulo o un'immagine composita.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,17 +42,17 @@ typedef enum
 |Membro|Descrizione|  
 |------------|-----------------|  
 |`regNoCopy`|Specifica che i file non devono essere copiati nella destinazione.|  
-|`regConfig`|Specifica che il modulo o composita è una configurazione.|  
-|`regHasRefs`|Specifica che il modulo o l'insieme dispone di riferimenti alla classe.|  
+|`regConfig`|Specifica che il modulo o un insieme è una configurazione.|  
+|`regHasRefs`|Specifica che il modulo o un insieme contiene riferimenti a classi.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
- **Libreria:** inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Enumerazioni dei metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Vedere anche
+- [Enumerazioni dei metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

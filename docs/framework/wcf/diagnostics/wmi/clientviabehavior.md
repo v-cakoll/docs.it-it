@@ -2,12 +2,12 @@
 title: ClientViaBehavior
 ms.date: 03/30/2017
 ms.assetid: 594f6046-4752-4a54-9374-b256f8dd1431
-ms.openlocfilehash: 52388e81b231b625b2d6bec10ab2c0bfedadca31
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f8bf902c001974c164b2400e7af21a0413c3823d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197717"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54571685"
 ---
 # <a name="clientviabehavior"></a>ClientViaBehavior
 ClientViaBehavior  
@@ -30,7 +30,7 @@ class ClientViaBehavior : Behavior
 ### <a name="uri"></a>URI  
  Tipo di dati: stringa  
   
- Tipo di accesso: sola lettura  
+ Tipo di accesso: Sola lettura  
   
  ViaUri.  
   
@@ -40,5 +40,5 @@ class ClientViaBehavior : Behavior
 |---------|-----------------------------------|  
 |Spazio dei nomi|Definito in root\ServiceModel|  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.Description.ClientViaBehavior>
+## <a name="see-also"></a>Vedere anche
+- <xref:System.ServiceModel.Description.ClientViaBehavior>

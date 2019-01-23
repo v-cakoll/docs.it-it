@@ -1,5 +1,5 @@
 ---
-title: "Procedura: modificare l'input da tastiera in un controllo standard"
+title: "Procedura: Modificare l'Input da tastiera in un controllo Standard"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Windows Forms, modifying keyboard input
 - keyboards [Windows Forms], keyboard input
 ms.assetid: 626d3712-d866-4988-bcda-a2d5b36ec0ba
-ms.openlocfilehash: c109615b9a0eb61d18f7f44e3248d2b24934ee5f
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 98e6f4ddbaed5eff2bab53ee332f97253daf4409
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45742970"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54571743"
 ---
-# <a name="how-to-modify-keyboard-input-to-a-standard-control"></a>Procedura: modificare l'input da tastiera in un controllo standard
+# <a name="how-to-modify-keyboard-input-to-a-standard-control"></a>Procedura: Modificare l'Input da tastiera in un controllo Standard
 Windows Forms permette di usare e modificare l'input da tastiera. L'utilizzo di una chiave fa riferimento alla gestione di una chiave entro un metodo o un gestore eventi, in modo che altri metodi ed eventi successivi nella coda di messaggi non ricevano il valore della chiave. Per modifica di una chiave si intente la modifica del valore di una chiave, in modo che i metodi e i gestori eventi successivi nella coda di messaggi ricevano un valore di chiave diverso. Questo argomento illustra come completare queste attività.  
   
 ### <a name="to-consume-a-key"></a>Per usare una chiave  
@@ -65,9 +65,9 @@ Windows Forms permette di usare e modificare l'input da tastiera. L'utilizzo di 
   
 -   Riferimenti agli assembly System, System.Drawing e System.Windows.Forms.  
   
- Per informazioni sulla compilazione di questo esempio dalla riga di comando per Visual Basic o Visual c#, vedere [compilazione dalla riga di comando](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oppure [con la creazione della riga di comando csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). È anche possibile compilare questo esempio in Visual Studio incollando il codice in un nuovo progetto.  Vedere anche [Procedura: Compilare ed eseguire un esempio di codice Windows Form completo tramite Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Per informazioni sulla compilazione di questo esempio dalla riga di comando per Visual Basic o Visual c#, vedere [compilazione dalla riga di comando](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oppure [con la creazione della riga di comando csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). È anche possibile compilare questo esempio in Visual Studio incollando il codice in un nuovo progetto.  Vedere anche [come: Compilare ed eseguire un esempio di codice completo di Windows Form con Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
-## <a name="see-also"></a>Vedere anche  
- [Input da tastiera in un'applicazione Windows Forms](../../../docs/framework/winforms/keyboard-input-in-a-windows-forms-application.md)  
- [Input dell'utente in una Windows Forms Application](../../../docs/framework/winforms/user-input-in-a-windows-forms-application.md)  
- [Funzionamento dell'input da tastiera](../../../docs/framework/winforms/how-keyboard-input-works.md)
+## <a name="see-also"></a>Vedere anche
+- [Input da tastiera in un'applicazione Windows Forms](../../../docs/framework/winforms/keyboard-input-in-a-windows-forms-application.md)
+- [Input dell'utente in una Windows Forms Application](../../../docs/framework/winforms/user-input-in-a-windows-forms-application.md)
+- [Funzionamento dell'input da tastiera](../../../docs/framework/winforms/how-keyboard-input-works.md)

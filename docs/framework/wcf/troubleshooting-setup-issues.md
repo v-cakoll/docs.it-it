@@ -2,12 +2,12 @@
 title: Risoluzione dei problemi di installazione
 ms.date: 03/30/2017
 ms.assetid: 1644f885-c408-4d5f-a5c7-a1a907bc8acd
-ms.openlocfilehash: 13828bee07dd455cd2b94d20d4afa7ea416ce186
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 69cc6bce08f3d98d3d63570005582bc6f50240bf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840547"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54532552"
 ---
 # <a name="troubleshooting-setup-issues"></a>Risoluzione dei problemi di installazione
 Questo argomento descrive come risolvere i problemi di installazione Windows Communication Foundation (WCF).  
@@ -38,17 +38,17 @@ Questo argomento descrive come risolvere i problemi di installazione Windows Com
   
 4.  È possibile che nel registro eventi o nel file di log sia elencata un'eccezione simile a una delle seguenti:  
   
-     ServiceModelReg [11:09:59:046]: System.ApplicationException: Risultato imprevisto 3 durante l'esecuzione di E:\WINDOWS\system32\wbem\mofcomp.exe con "E:\WINDOWS\Microsoft.NET\Framework\v3.0\Windows Communication Foundation\ServiceModel.mof"  
+     ServiceModelReg [11:09:59:046]: System.ApplicationException: Unexpected result 3 executing E:\WINDOWS\system32\wbem\mofcomp.exe with "E:\WINDOWS\Microsoft.NET\Framework\v3.0\Windows Communication Foundation\ServiceModel.mof"  
   
      oppure:  
   
-     ServiceModelReg [07:19:33:843]: System.TypeInitializationException: L'inizializzatore di tipo di 'System.Management.ManagementPath' ha generato un'eccezione. ---> System.Runtime.InteropServices.COMException (0x80040154): Recupero della class factory COM per il componente con CLSID {CF4CC405-E2C5-4DDD-B3CE-5E7582D8C9FA} non riuscito a causa del seguente errore: 80040154.  
+     ServiceModelReg [07:19:33:843]: System.TypeInitializationException: L'inizializzatore di tipo per 'System.Management.ManagementPath' ha generato un'eccezione. ---> System.Runtime.InteropServices.COMException (0x80040154): Il recupero della class factory COM per il componente con CLSID {CF4CC405-E2C5-4DDD-B3CE-5E7582D8C9FA} non è riuscita a causa dell'errore seguente: 80040154.  
   
      oppure:  
   
-     ServiceModelReg [07:19:32:750]: System.IO.FileNotFoundException: Impossibile caricare il file o l'assembly 'C:\WINDOWS\system32\wbem\mofcomp.exe' o una delle relative dipendenze. Impossibile trovare il file specificato.  
+     ServiceModelReg [07:19:32:750]: System.IO.FileNotFoundException: Non è stato possibile caricare file o l'assembly 'C:\WINDOWS\system32\wbem\mofcomp.exe' o una delle relative dipendenze. Impossibile trovare il file specificato.  
   
-     Nome file: 'C:\WINDOWS\system32\wbem\mofcomp.exe  
+     Nome del file: 'C:\WINDOWS\system32\wbem\mofcomp.exe  
   
  Per risolvere il problema descritto in precedenza, è necessario eseguire la procedura seguente.  
   
@@ -73,5 +73,5 @@ Questo argomento descrive come risolvere i problemi di installazione Windows Com
 aspnet_regiis.exe -i -enable  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Istruzioni di configurazione](../../../docs/framework/wcf/samples/set-up-instructions.md)
+## <a name="see-also"></a>Vedere anche
+- [Istruzioni di configurazione](../../../docs/framework/wcf/samples/set-up-instructions.md)
