@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows Forms, layout
 - Margin property [Windows Forms]
 ms.assetid: 3781b5a1-3085-4072-bed0-44670c23ffdc
-ms.openlocfilehash: 7f0469a879bab7aac8e572cc666dfa9d168103ea
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: be5d1ae308b9412f914f1cde91d1cc5834212df8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43488339"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54570551"
 ---
 # <a name="margin-and-padding-in-windows-forms-controls"></a>Margini e spaziatura nei controlli Windows Form
 Per molte applicazioni è estremamente importante la sistemazione precisa dei controlli nel form. A tale scopo, lo spazio dei nomi <xref:System.Windows.Forms?displayProperty=nameWithType> offre diversi strumenti di layout. Due tra le più importanti sono le proprietà <xref:System.Windows.Forms.Control.Margin%2A> e <xref:System.Windows.Forms.Control.Padding%2A>.  
@@ -25,12 +25,12 @@ Per molte applicazioni è estremamente importante la sistemazione precisa dei co
   
  ![Spaziatura e margini per Windows Form controlli](../../../../docs/framework/winforms/controls/media/vs-winformpadmargin.gif "VS_WinFormPadMargin")  
   
- È disponibile supporto in fase di progettazione per questa funzionalità in Visual Studio.  Vedere anche [procedura dettagliata: definizione del layout orizzontale Windows Form usando spaziatura, margini e la proprietà AutoSize](https://msdn.microsoft.com/library/3z3f9e8b\(v=vs.110\)).  
+ È disponibile supporto in fase di progettazione per questa funzionalità in Visual Studio.  Vedere anche [procedura dettagliata: Definire il layout dei Windows Form controlli con spaziatura, margini e la proprietà AutoSize](https://msdn.microsoft.com/library/3z3f9e8b\(v=vs.110\)).  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Windows.Forms.Control.AutoSize%2A>  
- <xref:System.Windows.Forms.Control.Margin%2A>  
- <xref:System.Windows.Forms.Control.Padding%2A>  
- <xref:System.Windows.Forms.Control.LayoutEngine%2A>  
- <xref:System.Windows.Forms.TableLayoutPanel>  
- <xref:System.Windows.Forms.FlowLayoutPanel>
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Windows.Forms.Control.AutoSize%2A>
+- <xref:System.Windows.Forms.Control.Margin%2A>
+- <xref:System.Windows.Forms.Control.Padding%2A>
+- <xref:System.Windows.Forms.Control.LayoutEngine%2A>
+- <xref:System.Windows.Forms.TableLayoutPanel>
+- <xref:System.Windows.Forms.FlowLayoutPanel>

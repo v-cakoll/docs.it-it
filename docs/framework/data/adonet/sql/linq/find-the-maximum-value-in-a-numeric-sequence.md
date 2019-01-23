@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 70d7c058-0280-4815-a008-6f290093591a
-ms.openlocfilehash: c93b322c755036c8bf7150bb5c96b9c32b6dc9b4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 26b7fe7448b9338802f8b8f5e2e91486d1883bbd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353817"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54570239"
 ---
 # <a name="find-the-maximum-value-in-a-numeric-sequence"></a>Trovare il valore massimo in una sequenza numerica
 Per trovare il valore massimo in una sequenza di valori numerici, usare l'operatore <xref:System.Linq.Enumerable.Max%2A>.  
@@ -71,6 +71,6 @@ Per trovare il valore massimo in una sequenza di valori numerici, usare l'operat
   
  `Carnarvon Tigers`  
   
-## <a name="see-also"></a>Vedere anche  
- [Query di aggregazione](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)  
- [Download di database di esempio](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+## <a name="see-also"></a>Vedere anche
+- [Query di aggregazione](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)
+- [Download di database di esempio](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
