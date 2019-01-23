@@ -2,12 +2,12 @@
 title: Ricerca di individuazione e FindCriteria
 ms.date: 03/30/2017
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
-ms.openlocfilehash: 7c389a4f0b8fb9789db33fe3edbb01a1d6302137
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 21bfde1dae99a09e278a51ed330166551d4dca8c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836803"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54493313"
 ---
 # <a name="discovery-find-and-findcriteria"></a>Ricerca di individuazione e FindCriteria
 Un'operazione di ricerca dell'individuazione viene inizializzata da un client per individuare uno o più servizi ed è una delle azioni principali nell'ambito dell'individuazione. L'esecuzione di una ricerca invia un messaggio WS-Discovery Probe sulla rete. I servizi che corrispondono ai criteri specificati inviano una risposta con i messaggi WS-Discovery ProbeMatch. Per altre informazioni sui messaggi di individuazione, vedere la [specifica WS-Discovery](https://go.microsoft.com/fwlink/?LinkID=122347).  
@@ -64,8 +64,8 @@ FindResponse findResponse = discoveryClient.Find(findCriteria);
 Console.WriteLine("Found {0} ICalculatorService endpoint(s).", findResponse.Endpoints.Count)  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Panoramica di WCF Discovery](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
- [Utilizzo del canale client di individuazione](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)  
- [Individuazione con ambiti](../../../../docs/framework/wcf/samples/discovery-with-scopes-sample.md)  
- [Funzionalità di base](../../../../docs/framework/wcf/samples/basic-sample.md)
+## <a name="see-also"></a>Vedere anche
+- [Panoramica di WCF Discovery](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
+- [Utilizzo del canale client di individuazione](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)
+- [Individuazione con ambiti](../../../../docs/framework/wcf/samples/discovery-with-scopes-sample.md)
+- [Funzionalità di base](../../../../docs/framework/wcf/samples/basic-sample.md)

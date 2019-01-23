@@ -2,23 +2,23 @@
 title: Funzioni di aggregazione (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: acfd3149-f519-4c6e-8fe1-b21d243a0e58
-ms.openlocfilehash: 63e366f323b38a24c4d067681b47d8a8b96125b2
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e606d0e355bb715cfa0536ad9e33f08f5f692951
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32765581"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492052"
 ---
 # <a name="aggregate-functions-entity-sql"></a>Funzioni di aggregazione (Entity SQL)
 Un'aggregazione è un construct di linguaggio che condensa una raccolta in un scalare come parte di un'operazione di gruppo. Le aggregazioni [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sono disponibili in due formati:  
   
--   [!INCLUDE[esql](../../../../../../includes/esql-md.md)] funzioni di raccolta che possono essere utilizzate ovunque in un'espressione. È incluso l'utilizzo di funzioni di aggregazione nelle proiezioni e di predicati che agiscono sulle raccolte. Le funzioni di raccolta sono la modalità preferibile di specificare aggregazioni in [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
+-   [!INCLUDE[esql](../../../../../../includes/esql-md.md)] funzioni di raccolta possono essere usate ovunque in un'espressione. È incluso l'utilizzo di funzioni di aggregazione nelle proiezioni e di predicati che agiscono sulle raccolte. Le funzioni di raccolta sono la modalità preferibile di specificare aggregazioni in [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
 -   Aggregazioni di gruppo in espressioni di query che dispongono di una clausola GROUP BY. Come in [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], le aggregazioni di gruppo accettano DISTINCT e ALL come modificatori all'input di aggregazione.  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tenta innanzitutto di interpretare un'espressione come funzione di raccolta e se l'espressione è nel contesto di un'espressione SELECT la interpreta come aggregazione di gruppo.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tenta innanzitutto di interpretare un'espressione come funzione di raccolta e se l'espressione è nel contesto di un'espressione SELECT, interpreta come aggregazione di gruppo.  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] definisce un operatore di aggregazione speciale chiamato [GROUPPARTITION](../../../../../../docs/framework/data/adonet/ef/language-reference/grouppartition-entity-sql.md). Questo operatore consente di ottenere un riferimento al set di input raggruppato. Questo consente di ottenere query di raggruppamento più avanzate, dove i risultati della clausola GROUP BY possono essere usati in posizioni diverse dalle funzioni di raccolta o di aggregazione di gruppo.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] definisce un operatore di aggregazione speciale denominato [GROUPPARTITION](../../../../../../docs/framework/data/adonet/ef/language-reference/grouppartition-entity-sql.md). Questo operatore consente di ottenere un riferimento al set di input raggruppato. Questo consente di ottenere query di raggruppamento più avanzate, dove i risultati della clausola GROUP BY possono essere usati in posizioni diverse dalle funzioni di raccolta o di aggregazione di gruppo.  
   
 ## <a name="collection-functions"></a>Funzioni di raccolta  
  Le funzioni di raccolta operano su raccolte e restituiscono un valore scalare. Ad esempio, se `orders` è una raccolta di tutti gli oggetti `orders`, è possibile calcolare la prima data di spedizione usando l'espressione seguente:  
@@ -42,5 +42,5 @@ Un'aggregazione è un construct di linguaggio che condensa una raccolta in un sc
   
  Le espressioni usate nella clausola GROUP BY vengono valutate usando lo stesso ambito della risoluzione dei nomi che sarebbe visibile all'espressione con la clausola WHERE.  
   
-## <a name="see-also"></a>Vedere anche  
- [Funzioni](../../../../../../docs/framework/data/adonet/ef/language-reference/functions-entity-sql.md)
+## <a name="see-also"></a>Vedere anche
+- [Funzioni](../../../../../../docs/framework/data/adonet/ef/language-reference/functions-entity-sql.md)

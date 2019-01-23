@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Handles keyword [Visual Basic]
 ms.assetid: 1b051c0e-f499-42f6-acb5-6f4f27824b40
-ms.openlocfilehash: 15ce6a25aa5f403a2e55beb57b3693095743e52f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 45fa54d7f7a3e167ffe0545cc3edf6a24900b2b3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33603717"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492962"
 ---
 # <a name="handles-clause-visual-basic"></a>Clausola Handles (Visual Basic)
 Dichiara che una routine gestisce un evento specificato.  
@@ -33,9 +33,9 @@ proceduredeclaration Handles eventlist
 ## <a name="remarks"></a>Note  
  Usare la parola chiave `Handles` alla fine di una dichiarazione di routine per fare in modo che la routine gestisca eventi generati da una variabile oggetto dichiarata con la parola chiave `WithEvents` . La parola chiave `Handles` può anche essere usata in una classe derivata per gestire eventi da una classe base.  
   
- La parola chiave `Handles` e l'istruzione `AddHandler` consentono entrambe di specificare che quelle particolari routine gestiscono particolari eventi, ma esistono alcune differenze. Usare la parola chiave `Handles` quando si definisce una routine, per specificare che questa gestisce un particolare evento. L'istruzione `AddHandler` connette le routine agli eventi in fase di esecuzione. Per ulteriori informazioni, vedere [istruzione AddHandler](../../../visual-basic/language-reference/statements/addhandler-statement.md).  
+ La parola chiave `Handles` e l'istruzione `AddHandler` consentono entrambe di specificare che quelle particolari routine gestiscono particolari eventi, ma esistono alcune differenze. Usare la parola chiave `Handles` quando si definisce una routine, per specificare che questa gestisce un particolare evento. L'istruzione `AddHandler` connette le routine agli eventi in fase di esecuzione. Per altre informazioni, vedere [istruzione AddHandler](../../../visual-basic/language-reference/statements/addhandler-statement.md).  
   
- Per gli eventi personalizzati, l'applicazione richiama la funzione di accesso `AddHandler` dell'evento quando aggiunge la routine come gestore eventi. Per ulteriori informazioni sugli eventi personalizzati, vedere [istruzione Event](../../../visual-basic/language-reference/statements/event-statement.md).  
+ Per gli eventi personalizzati, l'applicazione richiama la funzione di accesso `AddHandler` dell'evento quando aggiunge la routine come gestore eventi. Per altre informazioni sugli eventi personalizzati, vedere [istruzione Event](../../../visual-basic/language-reference/statements/event-statement.md).  
   
 ## <a name="example"></a>Esempio  
  [!code-vb[VbVbalrEvents#2](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/handles-clause_1.vb)]  
@@ -45,7 +45,7 @@ proceduredeclaration Handles eventlist
  [!code-vb[VbVbalrEvents#3](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/handles-clause_2.vb)]  
   
 ## <a name="example"></a>Esempio  
- L'esempio seguente contiene due gestori di eventi di pulsante per un **applicazione WPF** progetto.  
+ L'esempio seguente contiene due gestori eventi dei pulsanti per un **WPF Application** progetto.  
   
  [!code-vb[VbVbalrEvents#41](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/handles-clause_3.vb)]  
   
@@ -54,10 +54,10 @@ proceduredeclaration Handles eventlist
   
  [!code-vb[VbVbalrEvents#42](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/handles-clause_4.vb)]  
   
-## <a name="see-also"></a>Vedere anche  
- [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md)  
- [Istruzione AddHandler](../../../visual-basic/language-reference/statements/addhandler-statement.md)  
- [Istruzione RemoveHandler](../../../visual-basic/language-reference/statements/removehandler-statement.md)  
- [Istruzione Event](../../../visual-basic/language-reference/statements/event-statement.md)  
- [Istruzione RaiseEvent](../../../visual-basic/language-reference/statements/raiseevent-statement.md)  
- [Eventi](../../../visual-basic/programming-guide/language-features/events/index.md)
+## <a name="see-also"></a>Vedere anche
+- [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md)
+- [Istruzione AddHandler](../../../visual-basic/language-reference/statements/addhandler-statement.md)
+- [Istruzione RemoveHandler](../../../visual-basic/language-reference/statements/removehandler-statement.md)
+- [Istruzione Event](../../../visual-basic/language-reference/statements/event-statement.md)
+- [Istruzione RaiseEvent](../../../visual-basic/language-reference/statements/raiseevent-statement.md)
+- [Eventi](../../../visual-basic/programming-guide/language-features/events/index.md)

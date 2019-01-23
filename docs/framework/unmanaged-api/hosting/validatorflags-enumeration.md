@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 20ce52108c1024ad3e07051b226aa65612580e2b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e982fa7f6354f341ff4718440f345e282a1d20d3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441390"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492222"
 ---
 # <a name="validatorflags-enumeration"></a>Enumerazione ValidatorFlags
-Contiene valori che indicano il tipo di convalida che deve essere eseguita in una chiamata al [ICLRValidator:: Validate](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-validate-method.md) metodo.  
+Contiene valori che indicano il tipo di convalida che deve essere eseguita in una chiamata per il [ICLRValidator](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-validate-method.md) (metodo).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,19 +44,19 @@ enum ValidatorFlags {
 |------------|-----------------|  
 |`VALIDATOR_CHECK_ILONLY`|Specifica che solo il Microsoft intermediate language (MSIL) nel file eseguibile deve essere convalidato.|  
 |`VALIDATOR_CHECK_PEFORMAT_ONLY`|Specifica che solo il formato del file eseguibile deve essere convalidato.|  
-|`VALIDATOR_EXTRA_VERBOSE`|Specifica che tutti i tipi di convalida devono essere eseguiti e segnalati a.|  
+|`VALIDATOR_EXTRA_VERBOSE`|Specifica che tutti i tipi di convalida devono essere eseguiti e segnalati in.|  
 |`VALIDATOR_NOCHECK_PEFORMAT`|Specifica che il formato del file eseguibile non deve essere convalidato.|  
-|`VALIDATOR_SHOW_SOURCE_LINES`|Specifica che i messaggi di errore di convalida devono includere le righe di codice sorgente che generano errori di convalida. Valore di questo campo non è valido in .NET Framework versione 2.0.|  
+|`VALIDATOR_SHOW_SOURCE_LINES`|Specifica che i messaggi di errore di convalida devono includere le righe di codice sorgente che generano errori di convalida. Questo valore del campo non è valido in .NET Framework versione 2.0.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** IValidator. idl, IValidator.h  
+ **Intestazione:** IValidator. idl, IValidator. H  
   
- **Libreria:** Mscoree. dll  
+ **Libreria:** MSCorEE.dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ICLRErrorReportingManager](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)  
- [Enumerazioni di hosting](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ICLRErrorReportingManager](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)
+- [Enumerazioni di hosting](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

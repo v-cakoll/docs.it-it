@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9bcf8919037d5b79f3819fffec02708886064b40
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0561f76c70da603d50b96ce5b5162efac4eff2de
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33453203"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492977"
 ---
 # <a name="icorprofilerinfogettokenandmetadatafromfunction-method"></a>Metodo ICorProfilerInfo::GetTokenAndMetadataFromFunction
-Ottiene il token di metadati e un'istanza di interfaccia di metadati che può essere utilizzata con il token per la funzione specificata.  
+Ottiene il token di metadati e un'istanza di interfaccia di metadati che può essere utilizzata a fronte del token per la funzione specificata.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,22 +42,22 @@ HRESULT GetTokenAndMetaDataFromFunction(
  [in] L'ID della funzione per cui ottenere il token di metadati e l'interfaccia di metadati.  
   
  `riid`  
- [in] L'ID di riferimento dell'interfaccia di metadati per l'istanza di.  
+ [in] L'ID di riferimento dell'interfaccia di metadati per ottenere l'istanza di.  
   
  `ppImport`  
- [out] Un puntatore all'indirizzo dell'istanza di interfaccia di metadati che può essere utilizzato sulla base del token per la funzione specificata.  
+ [out] Un puntatore all'indirizzo dell'istanza dell'interfaccia di metadati che può essere utilizzato a fronte del token per la funzione specificata.  
   
  `pToken`  
  [out] Puntatore al token di metadati per la funzione specificata.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

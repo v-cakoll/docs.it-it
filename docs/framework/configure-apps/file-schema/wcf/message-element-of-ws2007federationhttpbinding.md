@@ -2,12 +2,12 @@
 title: Elemento &lt;message&gt; di &lt;ws2007FederationHttpBinding&gt;
 ms.date: 03/30/2017
 ms.assetid: 52cd941d-e230-4c82-8b29-333a7d20eca8
-ms.openlocfilehash: 278464503b5576b5562de58a7cb3350aad9faa7a
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 280d92978dba44d3347699959fb2cab3b98faca1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145952"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54493807"
 ---
 # <a name="ltmessagegt-element-of-ltws2007federationhttpbindinggt"></a>Elemento &lt;message&gt; di &lt;ws2007FederationHttpBinding&gt;
 Definisce le impostazioni per la sicurezza a livello di messaggio per il [ \<ws2007FederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md) elemento.  
@@ -116,7 +116,7 @@ Definisce le impostazioni per la sicurezza a livello di messaggio per il [ \<ws2
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<claimTypeRequirements >](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-element.md)|Specifica una raccolta di tipi di attestazione per questa associazione. Ciascun elemento è di tipo <xref:System.ServiceModel.Configuration.ClaimTypeElement>.|  
+|[\<claimTypeRequirements>](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-element.md)|Specifica una raccolta di tipi di attestazione per questa associazione. Ciascun elemento è di tipo <xref:System.ServiceModel.Configuration.ClaimTypeElement>.|  
 |[\<issuer>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuer.md)|Specifica un endpoint che emette un token di sicurezza. L'elemento è di tipo <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement>.|  
 |[\<issuerMetadata>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuermetadata.md)|Specifica l'indirizzo dell'endpoint dell'emittente.|  
 |[\<tokenRequestParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/tokenrequestparameters.md)|Raccolta di parametri della richiesta di token. Ciascun parametro è un elemento XML.|  
@@ -127,12 +127,13 @@ Definisce le impostazioni per la sicurezza a livello di messaggio per il [ \<ws2
 |-------------|-----------------|  
 |[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md)|Definisce le impostazioni di sicurezza per un'associazione.|  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.FederatedMessageSecurityOverHttp>  
- <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement.Message%2A>  
- <xref:System.ServiceModel.WSFederationHttpSecurity.Message%2A>  
- `System.ServiceModel.Configuration.FederatedMessageSecurityElement` [Protezione di servizi e client](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Associazioni](../../../../../docs/framework/wcf/bindings.md)  
- [Configurazione di associazioni fornite dal sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Uso di associazioni per configurare servizi e client](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<binding>](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.ServiceModel.FederatedMessageSecurityOverHttp>
+- <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement.Message%2A>
+- <xref:System.ServiceModel.WSFederationHttpSecurity.Message%2A>
+ `System.ServiceModel.Configuration.FederatedMessageSecurityElement` 
+- [Protezione di servizi e client](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Associazioni](../../../../../docs/framework/wcf/bindings.md)
+- [Configurazione di associazioni fornite dal sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Uso di associazioni per configurare servizi e client](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)

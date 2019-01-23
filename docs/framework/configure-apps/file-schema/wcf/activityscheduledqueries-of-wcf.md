@@ -2,12 +2,12 @@
 title: '&lt;activityScheduledQueries&gt; di WCF'
 ms.date: 03/30/2017
 ms.assetid: e351329f-9676-4f11-9b19-f4bac82f36fc
-ms.openlocfilehash: d6bc2360ccdeebe291de495e6ee5c7e22f26590a
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 5430058049e8a09c1e2a289e1f997338c23b9d94
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145575"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492156"
 ---
 # <a name="ltactivityscheduledqueriesgt-of-wcf"></a>&lt;activityScheduledQueries&gt; di WCF
 Rappresenta una raccolta di query usate per rilevare un'attività pianificata per l'esecuzione da parte di un'attività padre. La query è necessaria affinché un partecipante del rilevamento sottoscriva i record pianificati dell'attività.  
@@ -15,11 +15,11 @@ Rappresenta una raccolta di query usate per rilevare un'attività pianificata pe
 Per altre informazioni sulle query relative ai profili di rilevamento, vedere [profili di rilevamento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
   
 \<system.serviceModel>  
-\<rilevamento >  
+\<tracking>  
 \<i profili >  
 \<trackingProfile>  
 \<flusso di lavoro >  
-\<activityScheduledQueries >  
+\<activityScheduledQueries>  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -50,15 +50,15 @@ Nessuno.
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<activityScheduledQuery >](activityscheduledquery-of-wcf.md)|Query usata per rilevare un'attività pianificata per l'esecuzione da parte di un'attività padre.|  
+|[\<activityScheduledQuery>](activityscheduledquery-of-wcf.md)|Query usata per rilevare un'attività pianificata per l'esecuzione da parte di un'attività padre.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<flusso di lavoro >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|Elemento di configurazione contenente tutte le query per un flusso di lavoro specifico identificato dalla proprietà `activityDefinitionId`.|  
+|[\<workflow>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|Elemento di configurazione contenente tutte le query per un flusso di lavoro specifico identificato dalla proprietà `activityDefinitionId`.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedere anche
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.ActivityScheduledQueryElementCollection>
 - <xref:System.Activities.Tracking.ActivityScheduledQuery>

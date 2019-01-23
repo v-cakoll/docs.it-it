@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ccd68284-f3a8-47b8-bc3f-92e5fe3a1640
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fec1fb5a2dc3d6589f49d4a5864dabfb03a5477c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 17530537e6d74b247aaf8708efed28ef169f9d57
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393055"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54491246"
 ---
 # <a name="runtime-profiling"></a>Profilatura runtime
 La profilatura è un metodo di raccolta dei dati sulle prestazioni in qualsiasi scenario di sviluppo o distribuzione. Questa sezione è destinata agli sviluppatori e agli amministratori di sistema che vogliono raccogliere le informazioni sulle prestazioni delle applicazioni.  
@@ -42,7 +42,7 @@ La profilatura è un metodo di raccolta dei dati sulle prestazioni in qualsiasi 
   
 6.  Nella casella di riepilogo **Istanze dell'oggetto selezionato** fare clic su **\<Tutte le istanze>** per specificare che si vuole monitorare il contatore delle prestazioni per Common Language Runtime globalmente, cioè a livello di sistema.  
   
-     oppure  
+     -oppure-  
   
      Nella casella di riepilogo **Istanze dell'oggetto selezionato** fare clic su un nome dell'applicazione per monitorare il relativo contatore delle prestazioni.  
   
@@ -66,5 +66,5 @@ La profilatura è un metodo di raccolta dei dati sulle prestazioni in qualsiasi 
 |<xref:System.Diagnostics.PerformanceCounterInstaller?displayProperty=nameWithType>|Specifica un programma di installazione per il componente `PerformanceCounter` .|  
 |<xref:System.Diagnostics.PerformanceCounterType?displayProperty=nameWithType>|Specifica la formula per calcolare il metodo `NextValue` per `PerformanceCounter`.|  
   
-## <a name="see-also"></a>Vedere anche  
- [Contatori delle prestazioni](../../../docs/framework/debug-trace-profile/performance-counters.md)
+## <a name="see-also"></a>Vedere anche
+- [Contatori delle prestazioni](../../../docs/framework/debug-trace-profile/performance-counters.md)

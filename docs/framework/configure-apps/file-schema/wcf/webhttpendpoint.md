@@ -2,18 +2,18 @@
 title: '&lt;webHttpEndpoint&gt;'
 ms.date: 03/30/2017
 ms.assetid: ecaaeb6f-ebd0-411d-8b53-92477cd45347
-ms.openlocfilehash: ee14ce23370675782f4c25385c1786fdce11eba0
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: b69ace451e90c824cdf8b911d596fdd158eb3f73
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151969"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54491719"
 ---
 # <a name="ltwebhttpendpointgt"></a>&lt;webHttpEndpoint&gt;
 Questo elemento di configurazione definisce un endpoint standard con fisse [ \<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md) automaticamente l'associazione che aggiunge il [ \<webHttp >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md) comportamento. Usare questo endpoint per la scrittura di un servizio REST.  
   
 \<system.ServiceModel>  
-\<standardEndpoints >  
+\<standardEndpoints>  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -49,8 +49,8 @@ Questo elemento di configurazione definisce un endpoint standard con fisse [ \<w
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<standardEndpoints >](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|Raccolta di endpoint standard rappresentati da endpoint predefiniti con una o più delle relative proprietà (indirizzo, associazione, contratto) fisse.|  
+|[\<standardEndpoints>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|Raccolta di endpoint standard rappresentati da endpoint predefiniti con una o più delle relative proprietà (indirizzo, associazione, contratto) fisse.|  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.Description.WebHttpEndpoint>  
- <xref:System.ServiceModel.Configuration.WebHttpEndpointElement>
+## <a name="see-also"></a>Vedere anche
+- <xref:System.ServiceModel.Description.WebHttpEndpoint>
+- <xref:System.ServiceModel.Configuration.WebHttpEndpointElement>

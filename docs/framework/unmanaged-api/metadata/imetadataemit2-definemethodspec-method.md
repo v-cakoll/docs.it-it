@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 85b17199ad40d8b3fbf4e1a0271828e5a5ac7991
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2d56209e030939f53e3f72fe0c8a10db2160dd19
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445260"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492520"
 ---
 # <a name="imetadataemit2definemethodspec-method"></a>Metodo IMetaDataEmit2::DefineMethodSpec
 Crea un'istanza generica di un metodo e ottiene un token per la definizione.  
@@ -43,23 +43,23 @@ HRESULT DefineMethodSpec (
  [in] Un token per il metodo di cui creare l'istanza generica. Il token deve essere di tipo `mdMethodDef` o `mdMemberRef`.  
   
  `pvSigBlob`  
- [in] Puntatore a firma COM+ binaria del metodo.  
+ [in] Puntatore alla firma binaria COM+ del metodo.  
   
  `cbSibBlob`  
  [in] Le dimensioni, in byte, di `pvSigBlob`.  
   
  `pmi`  
- [out] Un token di definizione dei metadati della firma del metodo.  
+ [out] Un token per la definizione di firma dei metadati del metodo.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
- **Libreria:** usata come risorsa in Mscoree. dll  
+ **Libreria:** Usato come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)  
- [Interfaccia IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [Interfaccia IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

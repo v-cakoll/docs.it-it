@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4bb91423b2eaeda7d945cf14553609fd33ce9b0c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8ef293daea1a768c26adf05d14107a42889226e0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443489"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54491285"
 ---
 # <a name="cormethodimpl-enumeration"></a>Enumerazione CorMethodImpl
 Contiene valori che descrivono funzionalità di implementazione dei metodi.  
@@ -61,26 +61,26 @@ typedef enum CorMethodImpl {
 |`miCodeTypeMask`|Flag che descrivono il tipo di codice.|  
 |`miIL`|Specifica che l'implementazione del metodo è Microsoft intermediate language (MSIL).|  
 |`miNative`|Specifica che l'implementazione del metodo è nativa.|  
-|`miOPTIL`|Specifica che l'implementazione del metodo OPTIL.|  
+|`miOPTIL`|Specifica che l'implementazione del metodo è implementato in OPTIL.|  
 |`miRuntime`|Specifica che l'implementazione del metodo è fornito da common language runtime.|  
 |`miManagedMask`|Flag che indicano se il codice sia gestito o meno.|  
-|`miUnmanaged`|Specifica che l'implementazione del metodo non è gestito.|  
-|`miManaged`|Specifica che l'implementazione del metodo gestito.|  
+|`miUnmanaged`|Specifica che l'implementazione del metodo non gestito.|  
+|`miManaged`|Specifica che l'implementazione del metodo è gestita.|  
 |`miForwardRef`|Specifica che il metodo è definito. Questo flag viene utilizzato principalmente in scenari di tipo merge.|  
-|`miPreserveSig`|Specifica che la firma del metodo non può essere alterata per una conversione HRESULT.|  
+|`miPreserveSig`|Specifica che la firma del metodo non può essere alterata per una conversione di HRESULT.|  
 |`miInternalCall`|Riservato per uso interno da common language runtime.|  
-|`miSynchronized`|Specifica che il metodo è a thread singolo mediante il relativo corpo.|  
+|`miSynchronized`|Specifica che il metodo è a thread singolo attraverso il relativo corpo.|  
 |`miNoInlining`|Specifica che il metodo non può essere impostato come inline.|  
-|`miAggressiveInlining`|Specifica che il metodo deve essere resa inline se possibile.|  
+|`miAggressiveInlining`|Specifica che il metodo deve essere impostato come inline se possibile.|  
 |`miNoOptimization`|Specifica che il metodo non deve essere ottimizzato.|  
 |`miMaxMethodImplVal`|Il valore massimo valido per un `CorMethodImpl`.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorHdr. H  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Enumerazioni dei metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Vedere anche
+- [Enumerazioni dei metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

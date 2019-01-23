@@ -2,12 +2,12 @@
 title: '&lt;security&gt; di &lt;ws2007HttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: fdda0ff7-b462-4e26-af52-e87ddab71945
-ms.openlocfilehash: a7bb6816c5b34e608b5010aba308ccd9d870d398
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 6a07fb258a0a7c01293eddaf1eab4f82c4f632cb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145903"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54493755"
 ---
 # <a name="ltsecuritygt-of-ltws2007httpbindinggt"></a>&lt;security&gt; di &lt;ws2007HttpBinding&gt;
 Rappresenta le impostazioni di sicurezza utilizzate con il [ \<ws2007HttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md) elemento.  
@@ -59,7 +59,7 @@ Rappresenta le impostazioni di sicurezza utilizzate con il [ \<ws2007HttpBinding
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<trasporto >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-ws2007httpbinding.md)|Definisce le impostazioni di sicurezza del trasporto. Questo elemento corrisponde al tipo <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>. Queste impostazioni vengono applicate solo quando la modalità è impostata su Transport.|  
+|[\<transport>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-ws2007httpbinding.md)|Definisce le impostazioni di sicurezza del trasporto. Questo elemento corrisponde al tipo <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>. Queste impostazioni vengono applicate solo quando la modalità è impostata su Transport.|  
 |[\<messaggio >](../../../../../docs/framework/configure-apps/file-schema/wcf/message-of-ws2007httpbinding.md)|Definisce le impostazioni di sicurezza per il messaggio. Questo elemento corrisponde al tipo <xref:System.ServiceModel.Configuration.MessageSecurityOverHttpElement>. Queste impostazioni non vengono applicate quando la modalità è impostata su Transport.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
@@ -71,14 +71,14 @@ Rappresenta le impostazioni di sicurezza utilizzate con il [ \<ws2007HttpBinding
 ## <a name="remarks"></a>Note  
  Questo elemento è progettato per essere interoperabile con i servizi che implementano le specifiche WS-*. La sicurezza basata sul trasporto di questa associazione è SSL (Secure Sockets Layer) su HTTP, ovvero HTTPS.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.WSHttpSecurity>  
- <xref:System.ServiceModel.WSHttpBinding.Security%2A>  
- <xref:System.ServiceModel.Configuration.WSHttpBindingElement.Security%2A>  
- <xref:System.ServiceModel.Configuration.WSHttpSecurityElement>  
- <xref:System.ServiceModel.BasicHttpSecurity>  
- [Protezione di servizi e client](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Associazioni](../../../../../docs/framework/wcf/bindings.md)  
- [Configurazione di associazioni fornite dal sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Uso di associazioni per configurare servizi e client](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<binding>](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.ServiceModel.WSHttpSecurity>
+- <xref:System.ServiceModel.WSHttpBinding.Security%2A>
+- <xref:System.ServiceModel.Configuration.WSHttpBindingElement.Security%2A>
+- <xref:System.ServiceModel.Configuration.WSHttpSecurityElement>
+- <xref:System.ServiceModel.BasicHttpSecurity>
+- [Protezione di servizi e client](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Associazioni](../../../../../docs/framework/wcf/bindings.md)
+- [Configurazione di associazioni fornite dal sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Uso di associazioni per configurare servizi e client](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)

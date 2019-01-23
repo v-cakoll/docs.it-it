@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], architecture
 ms.assetid: f60d9bc5-8ade-4471-8ecf-5a07a936c82d
-ms.openlocfilehash: e6e7d9fe6764120e3d676b9d2cbd248e7491e504
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d67da4cedc4bd9bad468197db4a2ad60d054894a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152630"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492598"
 ---
 # <a name="wcf-client-overview"></a>Panoramica dei client WCF
 Questa sezione descrive come proteggere le applicazioni client, come configurare, creare e usare un client Windows Communication Foundation (WCF) e cosa fare delle applicazioni client.  
@@ -166,11 +166,11 @@ End Interface
  [!code-csharp[S_DualHttp#134](../../../samples/snippets/csharp/VS_Snippets_CFX/s_dualhttp/cs/program.cs#134)]  
   
 ## <a name="calling-services-asynchronously"></a>Chiamate ai servizi in modo asincrono  
- La modalità in cui vengono chiamate le operazioni dipende interamente dallo sviluppatore client. Ciò è dovuto al fatto che i messaggi che costituiscono un'operazione possono essere mappati a metodi sincroni o asincroni quando vengono espressi in codice gestito. Pertanto, se si desidera compilare un client che chiama operazioni in modo asincrono, è possibile usare Svcutil.exe per generare codice client asincrono usando l'opzione `/async`. Per altre informazioni, vedere [come: Chiamare operazioni del servizio in modo asincrono](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md).  
+ La modalità in cui vengono chiamate le operazioni dipende interamente dallo sviluppatore client. Ciò è dovuto al fatto che i messaggi che costituiscono un'operazione possono essere mappati a metodi sincroni o asincroni quando vengono espressi in codice gestito. Pertanto, se si desidera compilare un client che chiama operazioni in modo asincrono, è possibile usare Svcutil.exe per generare codice client asincrono usando l'opzione `/async`. Per altre informazioni, vedere [Procedura: Chiamare operazioni del servizio in modo asincrono](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md).  
   
 ## <a name="calling-services-using-wcf-client-channels"></a>Chiamate ai servizi mediante canali client di WCF  
  I tipi di client WCF estendono <xref:System.ServiceModel.ClientBase%601>, che a sua volta deriva da <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType> interfaccia da esporre il sistema di canali sottostante. È possibile richiamare servizi usando il contratto di servizio di destinazione con la classe <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>. Per informazioni dettagliate, vedere [architettura Client WCF](../../../docs/framework/wcf/feature-details/client-architecture.md).  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>  
- <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>
+## <a name="see-also"></a>Vedere anche
+- <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>
+- <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6025a31f26c635ac40dcc2e35e7017be1c81feba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 22eae4d59cbd6eba14e5784526c33774300a8367
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423013"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54493716"
 ---
 # <a name="icordebugstackwalksetcontext-method"></a>Metodo ICorDebugStackWalk::SetContext
 Imposta il [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) contesto corrente dell'oggetto a un contesto valido per il thread.  
@@ -37,7 +37,7 @@ HRESULT SetContext([in] CorDebugSetContextFlag flag,
   
 #### <a name="parameters"></a>Parametri  
  `flag`  
- [in] Oggetto [CorDebugSetContextFlag](../../../../docs/framework/unmanaged-api/debugging/cordebugsetcontextflag-enumeration.md) flag che indica se il contesto proviene dal frame attivo nello stack o ottenuta un contesto di rimozione dello stack.  
+ [in] Oggetto [CorDebugSetContextFlag](../../../../docs/framework/unmanaged-api/debugging/cordebugsetcontextflag-enumeration.md) flag che indica se il contesto proviene dal frame attivo nello stack, o un contesto ottenuto dalla rimozione dello stack.  
   
  `contextSize`  
  [in] Le dimensioni allocate del `CONTEXT` buffer.  
@@ -58,21 +58,21 @@ HRESULT SetContext([in] CorDebugSetContextFlag flag,
 ## <a name="exceptions"></a>Eccezioni  
   
 ## <a name="remarks"></a>Note  
- Questo metodo non modifica il contesto del thread corrente.  
+ Questo metodo non modifica il contesto corrente del thread.  
   
- Impostazione del contesto corrente per un contesto non valido può provocare risultati imprevisti dal walker dello stack.  
+ Impostazione del contesto corrente per un contesto non valido può causare risultati imprevedibili dal percorso chiamate dello stack.  
   
- È possibile recuperare una copia bit per bit esatta di questo contesto chiamando immediatamente il [ICorDebugStackWalk::](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getcontext-method.md) metodo.  
+ È possibile recuperare una copia bit per bit esatta di questo contesto chiamando immediatamente la [ICorDebugStackWalk:: GetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getcontext-method.md) (metodo).  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Debug](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debug](../../../../docs/framework/unmanaged-api/debugging/index.md)

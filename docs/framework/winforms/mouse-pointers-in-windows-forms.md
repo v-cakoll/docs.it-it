@@ -9,28 +9,28 @@ helpviewer_keywords:
 - cursors [Windows Forms], setting
 - mouse [Windows Forms], cursors
 ms.assetid: c3400d85-de5b-42e8-abc3-d6088d69ee53
-ms.openlocfilehash: ed6312cb386d1557d4217a330318664b4e87c330
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 02f93a85ecaa13f5f72cd0f31a1f5ffc24c59f68
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539517"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54491779"
 ---
 # <a name="mouse-pointers-in-windows-forms"></a>Puntatori del mouse in Windows Form
-Il puntatore del mouse *puntatore*, talvolta detto, il cursore è una bitmap che specifica un punto di stato attivo nella schermata per l'input dell'utente con il mouse. In questo argomento viene fornita una panoramica del puntatore del mouse in Windows Form e vengono descritti alcuni modi per modificare e controllare il puntatore del mouse.  
+Il puntatore del mouse *puntatore*, talvolta detta il cursore è una bitmap che specifica un punto di stato attivo nella schermata di input dell'utente con il mouse. Questo argomento viene fornita una panoramica del puntatore del mouse in Windows Forms e illustra alcuni dei modi per modificare e controllare il puntatore del mouse.  
   
-## <a name="accessing-the-mouse-pointer"></a>L'accesso il puntatore del Mouse  
- Il puntatore del mouse è rappresentato dal <xref:System.Windows.Forms.Cursor> classe e ogni <xref:System.Windows.Forms.Control> ha un <xref:System.Windows.Forms.Control.Cursor%2A?displayProperty=nameWithType> proprietà che specifica il puntatore per il controllo. Il <xref:System.Windows.Forms.Cursor> classe contiene proprietà che descrivono il puntatore, ad esempio il <xref:System.Windows.Forms.Cursor.Position%2A> e <xref:System.Windows.Forms.Cursor.HotSpot%2A> proprietà e metodi che è possono modificare l'aspetto dell'indicatore di misura, ad esempio il <xref:System.Windows.Forms.Cursor.Show%2A>, <xref:System.Windows.Forms.Cursor.Hide%2A>, e <xref:System.Windows.Forms.Cursor.DrawStretched%2A> metodi.  
+## <a name="accessing-the-mouse-pointer"></a>L'accesso al puntatore del Mouse  
+ Il puntatore del mouse è rappresentato dal <xref:System.Windows.Forms.Cursor> classe e ognuno <xref:System.Windows.Forms.Control> ha una <xref:System.Windows.Forms.Control.Cursor%2A?displayProperty=nameWithType> proprietà che specifica il puntatore per il controllo. Il <xref:System.Windows.Forms.Cursor> classe contiene proprietà che descrivono il puntatore, ad esempio il <xref:System.Windows.Forms.Cursor.Position%2A> e <xref:System.Windows.Forms.Cursor.HotSpot%2A> proprietà e metodi che è possano modificare l'aspetto dell'indicatore di misura, ad esempio il <xref:System.Windows.Forms.Cursor.Show%2A>, <xref:System.Windows.Forms.Cursor.Hide%2A>, e <xref:System.Windows.Forms.Cursor.DrawStretched%2A> metodi.  
   
 ## <a name="controlling-the-mouse-pointer"></a>Controllare il puntatore del Mouse  
- Può talvolta si desidera limitare l'area in cui il puntatore del mouse, può essere utilizzato o modificare la posizione del mouse. È possibile ottenere o impostare la posizione corrente del mouse, utilizzare il <xref:System.Windows.Forms.Cursor.Position%2A> proprietà del <xref:System.Windows.Forms.Cursor>. Inoltre, è possibile limitare l'area è possibile utilizzare il puntatore del mouse impostazione di <xref:System.Windows.Forms.Cursor.Clip%2A> proprietà. Per impostazione predefinita, l'area di visualizzazione è l'intero schermo.  
+ In alcuni casi è consigliabile limitare l'area in cui il puntatore del mouse può essere utilizzato o modificare la posizione del mouse. È possibile ottenere o impostare la posizione corrente del mouse tramite il <xref:System.Windows.Forms.Cursor.Position%2A> proprietà del <xref:System.Windows.Forms.Cursor>. Inoltre, è possibile limitare l'area può essere utilizzato il puntatore del mouse opzione offre il <xref:System.Windows.Forms.Cursor.Clip%2A> proprietà. Per impostazione predefinita, l'area di visualizzazione è l'intera schermata.  
   
 ## <a name="changing-the-mouse-pointer"></a>Modifica il puntatore del Mouse  
- Modifica il puntatore del mouse è un aspetto importante di inviare commenti e suggerimenti per l'utente. Ad esempio, il puntatore del mouse può essere modificato nei gestori del <xref:System.Windows.Forms.Control.MouseEnter> e <xref:System.Windows.Forms.Control.MouseLeave> gli eventi per informare l'utente che si verificano i calcoli e per limitare l'interazione dell'utente nel controllo. In alcuni casi, il puntatore del mouse verrà modificato a causa di eventi di sistema, ad esempio quando l'applicazione è coinvolto in un'operazione di trascinamento e rilascio.  
+ Modifica il puntatore del mouse è un aspetto importante di come inviare un feedback all'utente. Ad esempio, il puntatore del mouse può essere modificato nei gestori del <xref:System.Windows.Forms.Control.MouseEnter> e <xref:System.Windows.Forms.Control.MouseLeave> eventi comunica all'utente che si verificano i calcoli e limitare l'interazione dell'utente nel controllo. In alcuni casi, il puntatore del mouse verrà modificato a causa di eventi di sistema, ad esempio quando l'applicazione è coinvolto in un'operazione di trascinamento e rilascio.  
   
- La modalità principale per modificare il puntatore del mouse è impostando il <xref:System.Windows.Forms.Control.Cursor%2A?displayProperty=nameWithType> o <xref:System.Windows.Forms.Control.DefaultCursor%2A> proprietà di un controllo a un nuovo <xref:System.Windows.Forms.Cursor>. Per esempi di quando il puntatore del mouse, vedere l'esempio di codice la <xref:System.Windows.Forms.Cursor> classe. Inoltre, il <xref:System.Windows.Forms.Cursors> classe espone un set di <xref:System.Windows.Forms.Cursor> oggetti per molti tipi diversi di puntatori, ad esempio un puntatore che è simile a una mano. Per visualizzare il puntatore di attesa, rappresentato da una clessidra, ogni volta che il puntatore del mouse sul controllo, utilizzare il <xref:System.Windows.Forms.Control.UseWaitCursor%2A> proprietà la <xref:System.Windows.Forms.Control> classe.  
+ Il modo principale per modificare il puntatore del mouse consiste nell'impostare il <xref:System.Windows.Forms.Control.Cursor%2A?displayProperty=nameWithType> oppure <xref:System.Windows.Forms.Control.DefaultCursor%2A> proprietà di un controllo a un nuovo <xref:System.Windows.Forms.Cursor>. Per esempi di modifica il puntatore del mouse, vedere l'esempio di codice il <xref:System.Windows.Forms.Cursor> classe. Inoltre, il <xref:System.Windows.Forms.Cursors> classe espone un set di <xref:System.Windows.Forms.Cursor> oggetti per molti tipi diversi di puntatori, ad esempio un puntatore che rappresenta una mano. Per visualizzare il puntatore di attesa, che è simile a una clessidra, ogni volta che si trova il puntatore del mouse sul controllo, usare il <xref:System.Windows.Forms.Control.UseWaitCursor%2A> proprietà del <xref:System.Windows.Forms.Control> classe.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Windows.Forms.Cursor>  
- [Input del mouse in un'applicazione Windows Forms](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)  
- [Funzionalità di trascinamento della selezione in Windows Forms](../../../docs/framework/winforms/drag-and-drop-functionality-in-windows-forms.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Windows.Forms.Cursor>
+- [Input del mouse in un'applicazione Windows Forms](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)
+- [Funzionalità di trascinamento della selezione in Windows Forms](../../../docs/framework/winforms/drag-and-drop-functionality-in-windows-forms.md)

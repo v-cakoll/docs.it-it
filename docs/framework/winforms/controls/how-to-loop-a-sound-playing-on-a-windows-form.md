@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: riprodurre un suono ripetutamente in un Windows Form'
+title: 'Procedura: Riprodurre un suono ripetutamente in un Windows Form'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - sounds [Windows Forms], looping
 - playing sounds [Windows Forms], looping
 ms.assetid: ea95dd46-10a3-46c0-8263-4b205f00df7f
-ms.openlocfilehash: e6b227915a98bb757b559d229ebc1ee757ffb25c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 93793fae418b33c954c9d597f020c8daf8cfedfd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43480117"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54493404"
 ---
-# <a name="how-to-loop-a-sound-playing-on-a-windows-form"></a>Procedura: riprodurre un suono ripetutamente in un Windows Form
+# <a name="how-to-loop-a-sound-playing-on-a-windows-form"></a>Procedura: Riprodurre un suono ripetutamente in un Windows Form
 Nell'esempio di codice seguente un suono viene riprodotto ripetutamente. Quando viene eseguito il codice nel gestore dell'evento `stopPlayingButton_Click`, l'eventuale riproduzione corrente di un suono viene interrotta. Se non è in corso di riproduzione alcun suono, non accadrà nulla.  
   
 ## <a name="example"></a>Esempio  
@@ -31,7 +31,7 @@ Nell'esempio di codice seguente un suono viene riprodotto ripetutamente. Quando 
   
 -   Sostituzione del nome del file `"c:\Windows\Media\chimes.wav"` con un nome file valido.  
   
- Per informazioni sulla compilazione di questo esempio dalla riga di comando per visual Basic o Visual c#, vedere [compilazione dalla riga di comando](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oppure [con la creazione della riga di comando csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). È anche possibile compilare questo esempio in Visual Studio incollando il codice in un nuovo progetto.  Vedere anche [Procedura: Compilare ed eseguire un esempio di codice Windows Form completo tramite Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Per informazioni sulla compilazione di questo esempio dalla riga di comando per visual Basic o Visual c#, vedere [compilazione dalla riga di comando](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oppure [con la creazione della riga di comando csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). È anche possibile compilare questo esempio in Visual Studio incollando il codice in un nuovo progetto.  Vedere anche [come: Compilare ed eseguire un esempio di codice completo di Windows Form con Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
 ## <a name="robust-programming"></a>Programmazione efficiente  
  Le operazioni sui file devono essere racchiuse tra blocchi di gestione delle eccezioni appropriati.  
@@ -53,7 +53,7 @@ Nell'esempio di codice seguente un suono viene riprodotto ripetutamente. Quando 
 ## <a name="net-framework-security"></a>Sicurezza di .NET Framework  
  Non basarsi sul nome del file per prendere decisioni in merito al relativo contenuto. È possibile ad esempio che il file Form1.vb non sia un file di origine di Visual Basic. Prima di usare i dati nell'applicazione verificare tutti gli input.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Media.SoundPlayer.PlayLooping%2A>  
- [Procedura: Riprodurre un suono da un Windows Form](../../../../docs/framework/winforms/controls/how-to-play-a-sound-from-a-windows-form.md)  
- [Panoramica della classe SoundPlayer](../../../../docs/framework/winforms/controls/soundplayer-class-overview.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Media.SoundPlayer.PlayLooping%2A>
+- [Procedura: Riprodurre un suono da un Windows Form](../../../../docs/framework/winforms/controls/how-to-play-a-sound-from-a-windows-form.md)
+- [Panoramica della classe SoundPlayer](../../../../docs/framework/winforms/controls/soundplayer-class-overview.md)

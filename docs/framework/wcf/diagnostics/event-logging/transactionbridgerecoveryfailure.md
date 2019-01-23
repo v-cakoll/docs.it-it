@@ -2,23 +2,23 @@
 title: TransactionBridgeRecoveryFailure
 ms.date: 03/30/2017
 ms.assetid: a53891d9-67ea-4ead-8d38-3193cb57cd37
-ms.openlocfilehash: 65288a01f7a58dd82f6a54ac12ab1b11074879b1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c87f1d4a15b86029f4918a113ed1c0b4d479a977
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33467713"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54491480"
 ---
 # <a name="transactionbridgerecoveryfailure"></a>TransactionBridgeRecoveryFailure
-ID: 146  
+Id: 146  
   
- Gravità: errore  
+ Gravità: Error  
   
  Categoria: TransactionBridge  
   
 ## <a name="description"></a>Descrizione  
  Questo evento indica che si sono verificati errori di MSDTC TransactionBridge durante il ripristino. È una condizione irreversibile, con conseguente chiusura del servizio MSDTC. Nell'evento vengono specificati l'eccezione, il nome del processo e l'ID del processo. .  
   
-## <a name="see-also"></a>Vedere anche  
- [Registrazione eventi](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
- [Riferimenti generali sugli eventi](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+## <a name="see-also"></a>Vedere anche
+- [Registrazione eventi](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
+- [Riferimenti generali sugli eventi](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

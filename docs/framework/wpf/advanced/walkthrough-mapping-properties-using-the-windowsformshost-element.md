@@ -1,5 +1,5 @@
 ---
-title: "Procedura dettagliata: mapping di proprietà tramite l'elemento WindowsFormsHost"
+title: "Procedura dettagliata: Mapping di proprietà tramite l'elemento WindowsFormsHost"
 ms.date: 08/18/2018
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - mapping properties [WPF]
 - WindowsFormsHost element property mapping [WPF]
 ms.assetid: 74809167-bf8e-48b7-a2e7-b4ea08bc7d8c
-ms.openlocfilehash: 4841ce260adfb5d0c0d4b0f359ac9998521d584b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 943137017dcc1f8b347441669add13c3ab056f7d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529647"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54493651"
 ---
-# <a name="walkthrough-mapping-properties-using-the-windowsformshost-element"></a>Procedura dettagliata: mapping di proprietà tramite l'elemento WindowsFormsHost
+# <a name="walkthrough-mapping-properties-using-the-windowsformshost-element"></a>Procedura dettagliata: Mapping di proprietà tramite l'elemento WindowsFormsHost
 
 Questa procedura dettagliata illustra come usare il <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A> proprietà a cui mappare [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] delle proprietà alle proprietà corrispondenti in un ambiente host [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controllo.
 
@@ -160,4 +160,4 @@ Configurare i mapping delle proprietà chiamando i metodi descritti precedenteme
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Mapping di proprietà di Windows Form e WPF](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)
 - [Progettare XAML in Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
-- [Procedura dettagliata: hosting di controlli Windows Form in WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)
+- [Procedura dettagliata: Hosting di controlli Windows Form in WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)

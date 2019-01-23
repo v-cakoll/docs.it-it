@@ -16,17 +16,17 @@ helpviewer_keywords:
 - naming conventions [Visual Basic], naming conflicts
 - namespaces
 ms.assetid: cffac744-ab8c-4f1f-ba50-732c22ab4b88
-ms.openlocfilehash: 6b320d21c33fa798ca2fd3ef5a04363d141f99f2
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: b56644cdf44ac5bd9c755d1ee7ba7013c0245293
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48030444"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492312"
 ---
 # <a name="namespaces-in-visual-basic"></a>Spazi dei nomi in Visual Basic
 Gli spazi dei nomi organizzano gli oggetti definiti in un assembly. Gli assembly possono contenere più spazi dei nomi, che a loro volta possono contenere altri spazi dei nomi. Gli spazi dei nomi consentono di evitare problemi di ambiguità e di semplificare i riferimenti quando si usano gruppi di oggetti di grandi dimensioni, ad esempio librerie di classi.  
   
- Ad esempio, [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] definisce la classe <xref:System.Windows.Forms.ListBox> nello spazio dei nomi <xref:System.Windows.Forms?displayProperty=nameWithType>. Il frammento di codice seguente illustra come dichiarare una variabile usando il nome completo per questa classe:  
+ Ad esempio, [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] definisce la classe <xref:System.Windows.Forms.ListBox> nello spazio dei nomi <xref:System.Windows.Forms?displayProperty=nameWithType> . Il frammento di codice seguente illustra come dichiarare una variabile usando il nome completo per questa classe:  
   
  [!code-vb[VbVbalrApplication#6](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_1.vb)]  
   
@@ -81,7 +81,7 @@ Namespace SpecialSpace
 End Namespace  
 ```  
   
- Di conseguenza, il compilatore di Visual Basic non è in grado di risolvere il riferimento a <xref:System.Int32?displayProperty=nameWithType> perché `SpecialSpace.System` non definisce `Int32`. Per iniziare la catena di qualificazione al livello più esterno della libreria di classi di .NET Framework è possibile usare la parola chiave `Global` . In questo modo si può specificare lo spazio dei nomi <xref:System?displayProperty=nameWithType> o qualsiasi altro spazio dei nomi nella libreria di classi. Questa condizione è illustrata nell'esempio seguente.  
+ Di conseguenza, il compilatore di Visual Basic non è in grado di risolvere il riferimento a <xref:System.Int32?displayProperty=nameWithType>perché `SpecialSpace.System` non definisce `Int32`. Per iniziare la catena di qualificazione al livello più esterno della libreria di classi di .NET Framework è possibile usare la parola chiave `Global` . In questo modo si può specificare lo spazio dei nomi <xref:System?displayProperty=nameWithType> o qualsiasi altro spazio dei nomi nella libreria di classi. Questa condizione è illustrata nell'esempio seguente.  
   
 ```vb  
 Namespace SpecialSpace  
@@ -109,7 +109,7 @@ End Namespace
   
  In una dichiarazione dello spazio dei nomi la parola chiave `Global` non può essere annidata in un altro spazio dei nomi.  
   
- È possibile usare la [pagina dell'applicazione, creazione progetti (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic) per visualizzare e modificare le **radice Namespace** del progetto.  Per i nuovi progetti, come **spazio dei nomi radice** predefinito viene usato il nome del progetto. Per impostare `Global` come spazio dei nomi di primo livello, è possibile cancellare la voce **Spazio dei nomi radice** in modo da lasciare vuota la casella. La cancellazione della voce **Spazio dei nomi radice** elimina la necessità di usare la parola chiave `Global` nelle dichiarazioni degli spazi dei nomi.  
+ È possibile usare [Application Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic) per visualizzare e modificare lo **spazio dei nomi radice** del progetto.  Per i nuovi progetti, come **spazio dei nomi radice** predefinito viene usato il nome del progetto. Per impostare `Global` come spazio dei nomi di primo livello, è possibile cancellare la voce **Spazio dei nomi radice** in modo da lasciare vuota la casella. La cancellazione della voce **Spazio dei nomi radice** elimina la necessità di usare la parola chiave `Global` nelle dichiarazioni degli spazi dei nomi.  
   
  Se un'istruzione `Namespace` dichiara un nome che è anche uno spazio dei nomi in .NET Framework e la parola chiave `Global` non viene usata in un nome completo, lo spazio dei nomi di .NET Framework non sarà più disponibile. Per abilitare l'accesso allo spazio dei nomi di .NET Framework senza usare la parola chiave `Global` , è possibile includere `Global` nell'istruzione `Namespace` .  
   
@@ -121,10 +121,10 @@ End Namespace
   
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.Windows.Forms.ListBox>  
-- <xref:System.Windows.Forms?displayProperty=nameWithType>  
-- [Assembly e Global Assembly Cache](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
-- [Procedura: Creare e usare assembly dalla riga di comando](../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)  
-- [Riferimenti e istruzione Imports](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)  
-- [Istruzione Imports (tipo e spazio dei nomi .NET)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
+- <xref:System.Windows.Forms.ListBox>
+- <xref:System.Windows.Forms?displayProperty=nameWithType>
+- [Assembly e Global Assembly Cache](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+- [Procedura: Creare e usare assembly dalla riga di comando](../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)
+- [Riferimenti e istruzione Imports](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)
+- [Istruzione Imports (tipo e spazio dei nomi .NET)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
 - [Scrittura di codice nelle soluzioni Office](/visualstudio/vsto/writing-code-in-office-solutions) 
