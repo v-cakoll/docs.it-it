@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5a3d7d3bb05a878f4d9832cf39a8e8863929c4e5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bba34b7f0956e602de690b8aa30d955acc526e8f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403214"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54529489"
 ---
 # <a name="enumcustomattributes-method"></a>Metodo EnumCustomAttributes
 Recupera gli attributi personalizzati a livello di assembly.  
@@ -44,24 +44,24 @@ HRESULT EnumCustomAttributes(
  Handle dell'enumeratore.  
   
  `tkType`  
- Tipo degli attributi da enumerare. Utilizzare `mdTokenNill` per tutti gli attributi.  
+ Tipo degli attributi da enumerare. Usare `mdTokenNill` per tutti gli attributi.  
   
  `rCustomValues`  
  Riceve i token di attributi personalizzati.  
   
  `cMax`  
- Specifica le dimensioni di `rCustomValues` matrice.  
+ Specifica la dimensione di `rCustomValues` matrice.  
   
  `pcCustomValues`  
- Facoltativamente riceve il numero di valori token.  
+ Facoltativamente, riceve il numero di valori del token.  
   
 ## <a name="return-value"></a>Valore restituito  
- Se il metodo ha esito positivo, restituisce S_OK.  
+ Restituisce S_OK se il metodo ha esito positivo.  
   
 ## <a name="requirements"></a>Requisiti  
  Richiede alink.h  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [Interfaccia IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [Alink (API)](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [Interfaccia IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [Alink (API)](../../../../docs/framework/unmanaged-api/alink/index.md)

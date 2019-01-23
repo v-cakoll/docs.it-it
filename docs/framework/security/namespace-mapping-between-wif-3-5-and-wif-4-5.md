@@ -3,12 +3,12 @@ title: Mapping dello spazio dei nomi tra WIF 3.5 e WIF 4.5
 ms.date: 03/30/2017
 ms.assetid: a092d98c-444d-4336-a644-63c2e11e96c8
 author: BrucePerlerMS
-ms.openlocfilehash: f3de86e19d440a43f18b3a16ad4af749a476d1dd
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 701a6f2c148796fedee0312e73621f4a7753a04d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195902"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54529447"
 ---
 # <a name="namespace-mapping-between-wif-35-and-wif-45"></a>Mapping dello spazio dei nomi tra WIF 3.5 e WIF 4.5
 A partire da .NET 4.5, Windows Identity Foundation (WIF) è stato completamente integrato in .NET Framework. Questa integrazione ha comportato modifiche dei nomi e alcuni consolidamenti degli spazi dei nomi WIF e della superficie dell'API. In questo argomento sono disponibili indicazioni e un mapping generale tra gli spazi dei nomi WIF 3.5 e gli spazi dei nomi WIF 4.5. Le informazioni non sono da considerarsi esaustive, ma lo scopo è piuttosto quello di offrire indicazioni generali su dove trovare classi note di WIF 3.5 in WIF 4.5. Per altre informazioni dettagliate sulle differenze tra WIF 3.5 e WIF 4.5, vedere [Novità di Windows Identity Foundation 4.5](../../../docs/framework/security/whats-new-in-wif.md). Per istruzioni su come eseguire la migrazione di applicazioni compilate con WIF 3.5 a WIF 4.5, vedere [Linee guida per la migrazione di un'applicazione compilata con le versioni di WIF dalla 3.5 alla 4.5](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md).  
@@ -44,6 +44,6 @@ A partire da .NET 4.5, Windows Identity Foundation (WIF) è stato completamente 
 |`Microsoft.IdentityModel.Web.Controls`|Non implementato in WIF 4.5|Le classi in `Microsoft.IdentityModel.Web.Controls` implementavano il controllo dell'accesso passivo federato, non esistente in WIF 4.5.|  
 |`Microsoft.IdentityModel.WindowsTokenService`|Non implementato in WIF 4.5|-|  
   
-## <a name="see-also"></a>Vedere anche  
- [Novità di Windows Identity Foundation 4.5](../../../docs/framework/security/whats-new-in-wif.md)  
- [Linee guida per la migrazione di un'applicazione compilata con le versioni di WIF dalla 3.5 alla 4.5](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md)
+## <a name="see-also"></a>Vedere anche
+- [Novità di Windows Identity Foundation 4.5](../../../docs/framework/security/whats-new-in-wif.md)
+- [Linee guida per la migrazione di un'applicazione compilata con le versioni di WIF dalla 3.5 alla 4.5](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md)

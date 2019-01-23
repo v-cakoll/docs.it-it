@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7dfa36b4-e773-4c75-a3ff-ff1af3ce4c4f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9f3e5b3c4dcec98f293b4d6444d781705c700f88
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6300195cafeedd8823e0b10b4ee0ebf9ff8e2055
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397962"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54528069"
 ---
 # <a name="sql-server-programming-and-host-protection-attributes"></a>programmazione per SQL Server e attributi di protezione host
-Per poter caricare ed eseguire codice gestito in un host di SQL Server, è necessario soddisfare i requisiti dell'host sia per la sicurezza dall'accesso di codice che per la protezione delle risorse dell'host.  I requisiti di sicurezza dall'accesso di codice sono specificati da uno di tre set di autorizzazioni di SQL Server: SAFE, EXTERNAL-ACCESS o UNSAFE. L'esecuzione del codice nell'ambito del set di autorizzazioni SAFE o EXTERNAL-ACCESS deve evitare alcuni tipi o membri con l'attributo <xref:System.Security.Permissions.HostProtectionAttribute> applicato. <xref:System.Security.Permissions.HostProtectionAttribute> non è un'autorizzazione di sicurezza, ma piuttosto una garanzia di affidabilità perché identifica specifici costrutti del codice, tipi o metodi, che l'host potrebbe non consentire.  L'uso di <xref:System.Security.Permissions.HostProtectionAttribute> impone un modello di programmazione che contribuisce alla protezione della stabilità dell'host.  
+Per poter caricare ed eseguire codice gestito in un host di SQL Server, è necessario soddisfare i requisiti dell'host sia per la sicurezza dall'accesso di codice che per la protezione delle risorse dell'host.  I requisiti di sicurezza di accesso di codice sono specificati da uno dei tre set di autorizzazioni di SQL Server: -SAFE, EXTERNAL-ACCESS o UNSAFE. L'esecuzione del codice nell'ambito del set di autorizzazioni SAFE o EXTERNAL-ACCESS deve evitare alcuni tipi o membri con l'attributo <xref:System.Security.Permissions.HostProtectionAttribute> applicato. <xref:System.Security.Permissions.HostProtectionAttribute> non è un'autorizzazione di sicurezza, ma piuttosto una garanzia di affidabilità perché identifica specifici costrutti del codice, tipi o metodi, che l'host potrebbe non consentire.  L'uso di <xref:System.Security.Permissions.HostProtectionAttribute> impone un modello di programmazione che contribuisce alla protezione della stabilità dell'host.  
   
 ## <a name="host-protection-attributes"></a>Attributi di protezione dell'host  
  Gli attributi di protezione dell'host identificano i tipi o membri non idonei per il modello di programmazione dell'host e che rappresentano i seguenti livelli crescenti di minaccia per l'affidabilità:  
@@ -53,13 +53,13 @@ Per poter caricare ed eseguire codice gestito in un host di SQL Server, è neces
 |`System.Windows.Forms`|Proprietà <xref:System.Windows.Forms.AutoCompleteStringCollection.SyncRoot%2A?displayProperty=nameWithType>|  
   
 ## <a name="sql-server-permission-sets"></a>Set di autorizzazioni di SQL Server  
- SQL Server consente agli utenti di specificare i requisiti di affidabilità per il codice distribuito in un database. Al caricamento degli assembly nel database, l'autore dell'assembly può specificare uno di tre set di autorizzazioni per tale assembly: SAFE, EXTERNAL-ACCESS o UNSAFE.  
+ SQL Server consente agli utenti di specificare i requisiti di affidabilità per il codice distribuito in un database. Quando gli assembly vengono caricati nel database, l'autore dell'assembly può specificare uno dei tre set di autorizzazioni per tale assembly: -SAFE, EXTERNAL-ACCESS o UNSAFE.  
   
 |Set di autorizzazioni|SAFE|EXTERNAL-ACCESS|UNSAFE|  
 |--------------------|----------|----------------------|------------|  
 |Sicurezza dall'accesso di codice|Sola esecuzione|Esecuzione più accesso alle risorse esterne|Senza restrizioni|  
 |Restrizioni relative al modello di programmazione|Yes|Yes|Nessuna restrizione|  
-|Requisito di verificabilità|Yes|Sì|No|  
+|Requisito di verificabilità|Yes|Yes|No|  
 |Possibilità di chiamare codice nativo|No|No|Yes|  
   
  SAFE è la modalità più affidabile e sicura con le restrizioni associate in termini di modello di programmazione consentito. Il codice SAFE dispone di funzionalità di sicurezza e affidabilità elevata. Agli assembly SAFE vengono concesse autorizzazioni sufficienti per l'esecuzione, l'esecuzione di calcoli e l'accesso al database locale. Gli assembly SAFE devono essere indipendenti dai tipi in modo verificabile e non possono chiamare codice non gestito.  
@@ -75,6 +75,6 @@ Per poter caricare ed eseguire codice gestito in un host di SQL Server, è neces
   
  Considerati questi aspetti, SQL Server non consente l'uso di variabili statiche e membri dati statici. Per gli assembly SAFE ed EXTERNAL-ACCESS, SQL Server esamina i metadati dell'assembly nella fase CREATE ASSEMBLY e la creazione di tali assembly ha esito negativo se viene rilevato l'uso di membri dati e variabili statici.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Security.Permissions.HostProtectionAttribute>  
- <xref:System.Security.Permissions.HostProtectionResource>
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Security.Permissions.HostProtectionAttribute>
+- <xref:System.Security.Permissions.HostProtectionResource>

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dbf447e1325b4acaa26c9bb16d7d1a736eb20a29
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4d2e75d357b1f56df676163744015a1a3f77c17b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33453551"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530752"
 ---
 # <a name="icorprofilercallbackjitcompilationfinished-method"></a>Metodo ICorProfilerCallback::JITCompilationFinished
-Notifica al profiler che il compilatore di just-in-time (JIT) ha terminato la compilazione di una funzione.  
+Notifica al profiler che il compilatore JIT just-in-time ha terminato la compilazione di una funzione.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,22 +41,22 @@ HRESULT JITCompilationFinished(
  [in] L'ID della funzione che è stata compilata.  
   
  `hrStatus`  
- [in] Un valore che indica se la compilazione è stata completata.  
+ [in] Un valore che indica se la compilazione ha avuto esito positivo.  
   
  `fIsSafeToBlock`  
- [in] Un valore che indica al profiler se il blocco verrà influiscono sul funzionamento di runtime. Il valore è `true` se il blocco può provocare il runtime di attesa per il thread chiamante da questo callback; in caso contrario, `false`.  
+ [in] Un valore che indica al profiler, se il blocco avrà effetto sul funzionamento del runtime. Il valore è `true` se il blocco può causare il runtime di attesa per il thread chiamante restituire da questo callback; in caso contrario, `false`.  
   
- Anche se il valore `true` non danneggerà la fase di esecuzione, possono distorcere i risultati della profilatura.  
+ Anche se un valore di `true` non danneggerà la fase di esecuzione, possono distorcere i risultati della profilatura.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [Metodo JITCompilationStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [Metodo JITCompilationStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md)

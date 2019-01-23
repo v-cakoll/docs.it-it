@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00959326-aa9d-44d0-af61-54933d4adc7f
-ms.openlocfilehash: 44f0763aa09b2a9d036d13c9995d7ea978908d4c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 3eb18a3e48c185d59879e86801a7df5e6080d7a4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188092"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54529161"
 ---
 # <a name="transport-security-overview"></a>Panoramica sulla sicurezza del trasporto
 Meccanismi di sicurezza del trasporto in Windows Communication Foundation (WCF) dipendono l'associazione e il trasporto utilizzato. Ad esempio, quando si utilizza la classe <xref:System.ServiceModel.WSHttpBinding>, il trasporto è HTTP e il meccanismo principale per la sicurezza del trasporto è SSL (Secure Sockets Layer) su HTTP, comunemente noto come HTTP. Questo argomento descrive i meccanismi di sicurezza di trasporto principali utilizzati nelle associazioni fornite dal sistema di WCF.  
@@ -47,19 +47,19 @@ Meccanismi di sicurezza del trasporto in Windows Communication Foundation (WCF) 
  Nelle sezioni seguenti vengono illustrati altri tipi di credenziali client.  
   
 #### <a name="basic"></a>Di base  
- Questo tipo corrisponde al metodo di autenticazione di base di IIS. Quando si utilizza questa modalità, il server IIS deve essere configurato con gli account utente di Windows e le autorizzazioni del file system NTFS appropriate. Per altre informazioni sulle [!INCLUDE[iis601](../../../../includes/iis601-md.md)], vedere [abilitazione dell'autenticazione di base e configurazione del nome dell'area di autenticazione](https://go.microsoft.com/fwlink/?LinkId=88592). Per altre informazioni sulle [!INCLUDE[iisver](../../../../includes/iisver-md.md)], vedere [IIS 7.0 Beta: configurare l'autenticazione di base](https://go.microsoft.com/fwlink/?LinkId=88593).  
+ Questo tipo corrisponde al metodo di autenticazione di base di IIS. Quando si utilizza questa modalità, il server IIS deve essere configurato con gli account utente di Windows e le autorizzazioni del file system NTFS appropriate. Per altre informazioni sulle [!INCLUDE[iis601](../../../../includes/iis601-md.md)], vedere [abilitazione dell'autenticazione di base e configurazione del nome dell'area di autenticazione](https://go.microsoft.com/fwlink/?LinkId=88592). Per altre informazioni sulle [!INCLUDE[iisver](../../../../includes/iisver-md.md)], vedere [IIS 7.0 Beta: Configurare l'autenticazione di base](https://go.microsoft.com/fwlink/?LinkId=88593).  
   
 #### <a name="certificate"></a>Certificato  
- In IIS è disponibile un'opzione affinché i client debbano eseguire l'accesso con un certificato. Questa funzionalità consente inoltre di eseguire il mapping di un certificato client a un account di Windows. Per altre informazioni sulle [!INCLUDE[iis601](../../../../includes/iis601-md.md)], vedere [abilitazione dei certificati in IIS 6.0](https://go.microsoft.com/fwlink/?LinkId=88594). Per altre informazioni sulle [!INCLUDE[iisver](../../../../includes/iisver-md.md)], vedere [IIS 7.0 Beta: configurazione dei certificati del Server in IIS 7.0](https://go.microsoft.com/fwlink/?LinkId=88595).  
+ In IIS è disponibile un'opzione affinché i client debbano eseguire l'accesso con un certificato. Questa funzionalità consente inoltre di eseguire il mapping di un certificato client a un account di Windows. Per altre informazioni sulle [!INCLUDE[iis601](../../../../includes/iis601-md.md)], vedere [abilitazione dei certificati in IIS 6.0](https://go.microsoft.com/fwlink/?LinkId=88594). Per altre informazioni sulle [!INCLUDE[iisver](../../../../includes/iisver-md.md)], vedere [IIS 7.0 Beta: Configurazione dei certificati del Server in IIS 7.0](https://go.microsoft.com/fwlink/?LinkId=88595).  
   
 #### <a name="digest"></a>Digest  
- L'autenticazione digest è simile all'autenticazione di base, ma offre il vantaggio di inviare le credenziali come un hash, anziché in testo non crittografato. Per altre informazioni sulle [!INCLUDE[iis601](../../../../includes/iis601-md.md)], vedere [l'autenticazione del Digest in IIS 6.0](https://go.microsoft.com/fwlink/?LinkID=88443). Per altre informazioni sulle [!INCLUDE[iisver](../../../../includes/iisver-md.md)], vedere [IIS 7.0 Beta: configurazione dell'autenticazione Digest](https://go.microsoft.com/fwlink/?LinkId=88596).  
+ L'autenticazione digest è simile all'autenticazione di base, ma offre il vantaggio di inviare le credenziali come un hash, anziché in testo non crittografato. Per altre informazioni sulle [!INCLUDE[iis601](../../../../includes/iis601-md.md)], vedere [l'autenticazione del Digest in IIS 6.0](https://go.microsoft.com/fwlink/?LinkID=88443). Per altre informazioni sulle [!INCLUDE[iisver](../../../../includes/iisver-md.md)], vedere [IIS 7.0 Beta: Configurare l'autenticazione del Digest](https://go.microsoft.com/fwlink/?LinkId=88596).  
   
 #### <a name="windows"></a>WINDOWS  
- Questo tipo corrisponde al metodo di autenticazione integrata di Windows di IIS. In caso di impostazione su questo valore, si prevede inoltre che il server sia in un dominio Windows che utilizza il protocollo Kerberos come controller di dominio. Se il server non è in un dominio con supporto Kerberos o se il sistema Kerberos ha esito negativo, è possibile utilizzare il valore NTLM (NT LAN Manager) descritto nella sezione successiva. Per altre informazioni sulle [!INCLUDE[iis601](../../../../includes/iis601-md.md)], vedere [l'autenticazione integrata di Windows in IIS 6.0](https://go.microsoft.com/fwlink/?LinkId=88597). Per altre informazioni sulle [!INCLUDE[iisver](../../../../includes/iisver-md.md)], vedere [IIS 7.0 Beta: configurazione dei certificati del Server in IIS 7.0](https://go.microsoft.com/fwlink/?LinkId=88595).  
+ Questo tipo corrisponde al metodo di autenticazione integrata di Windows di IIS. In caso di impostazione su questo valore, si prevede inoltre che il server sia in un dominio Windows che utilizza il protocollo Kerberos come controller di dominio. Se il server non è in un dominio con supporto Kerberos o se il sistema Kerberos ha esito negativo, è possibile utilizzare il valore NTLM (NT LAN Manager) descritto nella sezione successiva. Per altre informazioni sulle [!INCLUDE[iis601](../../../../includes/iis601-md.md)], vedere [l'autenticazione integrata di Windows in IIS 6.0](https://go.microsoft.com/fwlink/?LinkId=88597). Per altre informazioni sulle [!INCLUDE[iisver](../../../../includes/iisver-md.md)], vedere [IIS 7.0 Beta: Configurazione dei certificati del Server in IIS 7.0](https://go.microsoft.com/fwlink/?LinkId=88595).  
   
 #### <a name="ntlm"></a>NTLM  
- Consente al server di utilizzare NTLM per l'autenticazione se il protocollo Kerberos ha esito negativo. Per altre informazioni sulla configurazione di IIS in [!INCLUDE[iis601](../../../../includes/iis601-md.md)], vedere [forzatura dell'autenticazione NTLM](https://go.microsoft.com/fwlink/?LinkId=88598). Per [!INCLUDE[iisver](../../../../includes/iisver-md.md)], l'autenticazione di Windows include l'autenticazione NTLM. Per altre informazioni, vedere [IIS 7.0 Beta: configurazione dei certificati del Server in IIS 7.0](https://go.microsoft.com/fwlink/?LinkID=88595).  
+ Consente al server di utilizzare NTLM per l'autenticazione se il protocollo Kerberos ha esito negativo. Per altre informazioni sulla configurazione di IIS in [!INCLUDE[iis601](../../../../includes/iis601-md.md)], vedere [forzatura dell'autenticazione NTLM](https://go.microsoft.com/fwlink/?LinkId=88598). Per [!INCLUDE[iisver](../../../../includes/iisver-md.md)], l'autenticazione di Windows include l'autenticazione NTLM. Per altre informazioni, vedere [IIS 7.0 Beta: Configurazione dei certificati del Server in IIS 7.0](https://go.microsoft.com/fwlink/?LinkID=88595).  
   
 ## <a name="wshttpbinding"></a>WsHttpBinding  
  La classe <xref:System.ServiceModel.WSHttpBinding> è progettata per essere interoperabile con i servizi che implementano le specifiche WS - *. La sicurezza basata sul trasporto di questa associazione è SSL (Secure Sockets Layer) su HTTP, ovvero HTTPS. Per creare un'applicazione WCF che usa SSL, utilizzare IIS per ospitare l'applicazione. In alternativa, se si sta creando un'applicazione indipendente, utilizzare lo strumento HttpCfg.exe per associare un certificato X.509 a una porta specifica in un computer. Il numero di porta viene specificato come parte dell'applicazione WCF come indirizzo dell'endpoint. Quando si utilizza la modalità di trasporto, l'indirizzo dell'endpoint deve includere il protocollo HTTPS; in caso contrario verrà generata un'eccezione in fase di esecuzione. Per altre informazioni, vedere [protezione del trasporto HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
@@ -120,5 +120,5 @@ Meccanismi di sicurezza del trasporto in Windows Communication Foundation (WCF) 
 ## <a name="msmqintegrationbinding-and-netmsmqbinding"></a>MsmqIntegrationBinding e NetMsmqBinding  
  Per una descrizione completa del trasporto della protezione con Accodamento messaggi (precedentemente chiamato MSMQ), vedere [protezione dei messaggi mediante protezione del trasporto](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Programmazione delle funzionalità di sicurezza di WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
+## <a name="see-also"></a>Vedere anche
+- [Programmazione delle funzionalità di sicurezza di WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)

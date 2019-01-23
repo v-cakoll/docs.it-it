@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 78203093-f242-4572-9b31-9495b10926aa
-ms.openlocfilehash: 9b55c0a188f7e5857ddc5021c820be847ce63600
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f92558798267760eb6cfd1bfc6365451cdcc1c62
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358830"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54529993"
 ---
 # <a name="find-the-minimum-value-in-a-numeric-sequence"></a>Trovare il valore minimo in una sequenza numerica
 Usare l'operatore <xref:System.Linq.Enumerable.Min%2A> affinché venga restituito il valore minimo da una sequenza di valori numerici.  
@@ -71,6 +71,6 @@ Usare l'operatore <xref:System.Linq.Enumerable.Min%2A> affinché venga restituit
   
  `Konbu`  
   
-## <a name="see-also"></a>Vedere anche  
- [Query di aggregazione](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)  
- [Download di database di esempio](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+## <a name="see-also"></a>Vedere anche
+- [Query di aggregazione](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)
+- [Download di database di esempio](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)

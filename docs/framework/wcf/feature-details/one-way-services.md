@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF [WCF], one-way service contracts
 - service contracts [WCF], defining one-way
 ms.assetid: 19053a36-4492-45a3-bfe6-0365ee0205a3
-ms.openlocfilehash: 03efc27f2ba54ca22f03e3ece84770fe0dcadbb3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ad285b5a0fa37867b1b80b3d7293a976fbd12c61
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494374"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527796"
 ---
 # <a name="one-way-services"></a>Servizi unidirezionali
 Il comportamento predefinito di un'operazione del servizio segue il modello request-reply, in base al quale il client resta in attesa del messaggio di risposta, anche se l'operazione del servizio è rappresentata nel codice come metodo `void`. Con un'operazione unidirezionale, viene invece trasmesso solo un messaggio. Il destinatario non invia un messaggio di risposta, né il mittente ne aspetta uno.  
@@ -20,7 +20,7 @@ Il comportamento predefinito di un'operazione del servizio segue il modello requ
   
 -   Quando il client deve chiamare operazioni e il risultato dell'operazione non influisce su di esso a livello di operazione.  
   
--   Quando si utilizza la classe <xref:System.ServiceModel.NetMsmqBinding> o la classe <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>. (Per ulteriori informazioni su questo scenario, vedere [code in WCF](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md).)  
+-   Quando si utilizza la classe <xref:System.ServiceModel.NetMsmqBinding> o la classe <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>. (Per altre informazioni su questo scenario, vedere [code in WCF](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md).)  
   
  Quando un'operazione è unidirezionale, non ci sarà alcun messaggio di risposta per trasportare le informazioni di errore al client. È possibile rilevare le condizioni di errore utilizzando le funzionalità dell'associazione sottostante, ad esempio le sessioni affidabili, o progettando un contratto di servizio duplex che utilizza due operazioni unidirezionali, ovvero un contratto unidirezionale dal client al servizio per chiamare l'operazione del servizio e un altro contratto unidirezionale tra il servizio e il client in modo che il servizio possa inviare gli errori al client utilizzando un callback implementato dal client.  
   
@@ -41,10 +41,10 @@ public interface IOneWayCalculator
 }  
 ```  
   
- Per un esempio completo, vedere il [unidirezionale](../../../../docs/framework/wcf/samples/one-way.md) esempio.  
+ Per un esempio completo, vedere la [unidirezionale](../../../../docs/framework/wcf/samples/one-way.md) esempio.  
   
 ## <a name="clients-blocking-with-one-way-operations"></a>Blocco dei client con operazioni unidirezionali  
- È importante tenere presente che mentre alcune applicazioni unidirezionali eseguono la restituzione non appena i dati in uscita vengono scritti nella connessione di rete, in vari scenari l'implementazione di un'associazione o di un servizio può causare un client WCF bloccare utilizzano operazioni unidirezionali. Nelle applicazioni client WCF, l'oggetto client WCF non restituisce fino a quando i dati in uscita sono stati scritti nella connessione di rete. Questo vale per tutti i modelli di scambio dei messaggi, comprese le operazioni bidirezionali; ciò significa che qualsiasi problema durante la scrittura dei dati sul trasporto impedisce al client di eseguire la restituzione. A seconda del problema, il risultato potrebbe essere un'eccezione o un ritardo nell'invio di messaggi al servizio.  
+ È importante tenere presente che alcune applicazioni unidirezionali eseguono restituito non appena i dati in uscita vengono scritti nella connessione di rete, in diversi scenari l'implementazione di un'associazione o di un servizio può causare un client WCF bloccare l'uso di operazioni unidirezionali. Nelle applicazioni client WCF, l'oggetto client WCF non termina finché i dati in uscita sono stato scritto per la connessione di rete. Questo vale per tutti i modelli di scambio dei messaggi, comprese le operazioni bidirezionali; ciò significa che qualsiasi problema durante la scrittura dei dati sul trasporto impedisce al client di eseguire la restituzione. A seconda del problema, il risultato potrebbe essere un'eccezione o un ritardo nell'invio di messaggi al servizio.  
   
  Ad esempio, se il trasporto non è in grado di individuare l'endpoint, viene generata un'eccezione <xref:System.ServiceModel.EndpointNotFoundException?displayProperty=nameWithType> senza molto ritardo. È tuttavia possibile che per qualche motivo il servizio non sia in grado di leggere i dati fuori transito, impedendo così all'operazione di invio del trasporto client di eseguire la restituzione. In questi casi, se viene superato il periodo di <xref:System.ServiceModel.Channels.Binding.SendTimeout%2A?displayProperty=nameWithType> sull'associazione del trasporto client, viene generata una <xref:System.TimeoutException?displayProperty=nameWithType>, ma non prima che il periodo di timeout sia scaduto. È inoltre possibile che siano generati così tanti messaggi su un servizio che il servizio non è in grado di elaborarli oltre un certo punto. Anche in questo caso il client unidirezionale si blocca fino a quando il servizio non può elaborare i messaggi o fino a quando non viene generata un'eccezione.  
   
@@ -54,5 +54,5 @@ public interface IOneWayCalculator
   
  È invece consigliabile esaminare i vari controlli sul servizio e sul client e quindi testare gli scenari dell'applicazione per determinare la configurazione migliore su ogni lato. Ad esempio, se l'utilizzo di sessioni blocca l'elaborazione di messaggi nel servizio, è possibile impostare la proprietà <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> su <xref:System.ServiceModel.InstanceContextMode.PerCall>, in modo che ogni messaggio possa essere elaborato da un'istanza diversa del servizio, e impostare la proprietà <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> su <xref:System.ServiceModel.ConcurrencyMode.Multiple> per consentire a più di un thread alla volta di inviare messaggi. Un altro approccio consiste nell'aumentare le quote di lettura delle associazioni del servizio e del client.  
   
-## <a name="see-also"></a>Vedere anche  
- [Unidirezionale](../../../../docs/framework/wcf/samples/one-way.md)
+## <a name="see-also"></a>Vedere anche
+- [Unidirezionale](../../../../docs/framework/wcf/samples/one-way.md)

@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: usare i filtri'
+title: 'Procedura: Usare i filtri'
 ms.date: 03/30/2017
 ms.assetid: f2c7255f-c376-460e-aa20-14071f1666e5
-ms.openlocfilehash: aee0f2e4fbf3b4e0802803b76aa557f2dec668bb
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 1d521162f2878a00d4d8ff7515ca2aabf32db97e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840758"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530989"
 ---
-# <a name="how-to-use-filters"></a>Procedura: usare i filtri
+# <a name="how-to-use-filters"></a>Procedura: Usare i filtri
 In questo argomento vengono descritti i passaggi di base necessari per creare una configurazione di routing che usa più filtri. In questo esempio, i messaggi vengono indirizzati a due implementazioni di un servizio di calcolo, regularCalc e roundingCalc. Entrambe le implementazioni supportano le stesse operazioni; tuttavia uno dei servizi arrotonda tutti i calcoli all'integer più vicino prima della restituzione. Un'applicazione client deve essere in grado di indicare se usare la versione del servizio che esegue l'arrotondamento. Se non viene espressa alcuna preferenza in merito al servizio da usare, il carico viene bilanciato tra i due servizi. Le operazioni esposte da entrambi servizi sono:  
   
 -   Add  
@@ -325,5 +325,5 @@ In questo argomento vengono descritti i passaggi di base necessari per creare un
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Servizi di routing](../../../../docs/framework/wcf/samples/routing-services.md)
+## <a name="see-also"></a>Vedere anche
+- [Servizi di routing](../../../../docs/framework/wcf/samples/routing-services.md)

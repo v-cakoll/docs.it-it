@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a7eb98da-4a93-4692-8b59-9d670c79ffb2
-ms.openlocfilehash: 6471a8a8e257ea3bb6f26a8041694ef25151ad1a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5c7451e5e914c372c8631922001cfec5e84a586c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195944"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527952"
 ---
 # <a name="security-considerations-for-data"></a>Considerazioni sulla protezione per i dati
 Quando si lavora con i dati in Windows Communication Foundation (WCF), è necessario considerare un numero di categorie delle minacce. Nella tabella seguente sono elencate le più importanti categorie di minacce correlate all'elaborazione dati. WCF fornisce gli strumenti per mitigare queste minacce.  
@@ -205,7 +205,7 @@ Quando si lavora con i dati in Windows Communication Foundation (WCF), è necess
   
 -   Attributo<xref:System.Runtime.Serialization.KnownTypeAttribute> applicato a un tipo.  
   
--   Attributo `KnownTypeAttribute` che specifica un metodo che restituisce un elenco di tipi.  
+-   Attributo`KnownTypeAttribute` che specifica un metodo che restituisce un elenco di tipi.  
   
 -   Attributo`ServiceKnownTypeAttribute` .  
   
@@ -223,9 +223,9 @@ Quando si lavora con i dati in Windows Communication Foundation (WCF), è necess
   
  Quando si scrive un metodo che restituisce un elenco di tipi noti o si passa direttamente un elenco al costruttore <xref:System.Runtime.Serialization.DataContractSerializer> , assicurarsi che il codice preposto alla creazione dell'elenco sia sicuro e agisca solo su dati attendibili.  
   
- Se in questa configurazione si specificano tipi noti, assicurarsi che il file di configurazione sia sicuro. Utilizzare sempre nomi sicuri nella configurazione, specificando la chiave pubblica dell'assembly firmato dove risiede il tipo, senza specificare la versione del tipo da caricare. Il caricatore del tipo sceglie automaticamente la versione più recente, se possibile. Se si specifica una particolare versione nella configurazione si corre il rischio seguente: in un tipo può essere contenuta una vulnerabilità di sicurezza che verrà corretta in una versione futura, ma la versione con la vulnerabilità continua a essere caricata perché specificata in modo esplicito nella configurazione.  
+ Se in questa configurazione si specificano tipi noti, assicurarsi che il file di configurazione sia sicuro. Utilizzare sempre nomi sicuri nella configurazione, specificando la chiave pubblica dell'assembly firmato dove risiede il tipo, senza specificare la versione del tipo da caricare. Il caricatore del tipo sceglie automaticamente la versione più recente, se possibile. Se si specifica una particolare versione nella configurazione, si corre il rischio seguente: Un tipo può avere una vulnerabilità di sicurezza che può essere risolti in una versione futura, ma la versione viene caricato perché è specificato in modo esplicito nella configurazione.  
   
- La presenza di troppi tipi noti produce un'altra conseguenza: <xref:System.Runtime.Serialization.DataContractSerializer> crea una cache del codice di serializzazione/deserializzazione nel dominio dell'applicazione, con una voce per ogni tipo da serializzare e deserializzare. Il contenuto della cache non viene eliminato finché è in esecuzione il dominio dell'applicazione. Un pirata informatico consapevole del fatto che un'applicazione utilizza molti tipi noti può causare la deserializzazione di tutti questi tipi, facendo in modo che la cache utilizzi una quantità di memoria estremamente grande.  
+ Presenza di troppi tipi noti produce un'altra conseguenza: Il <xref:System.Runtime.Serialization.DataContractSerializer> crea una cache di codice di serializzazione/deserializzazione nel dominio dell'applicazione, con una voce per ogni tipo da serializzare e deserializzare. Il contenuto della cache non viene eliminato finché è in esecuzione il dominio dell'applicazione. Un pirata informatico consapevole del fatto che un'applicazione utilizza molti tipi noti può causare la deserializzazione di tutti questi tipi, facendo in modo che la cache utilizzi una quantità di memoria estremamente grande.  
   
 ### <a name="preventing-types-from-being-in-an-unintended-state"></a>Come impedire che i tipi abbiano uno stato imprevisto  
  Per un tipo possono sussistere vincoli di coerenza interni da applicare necessariamente. Si deve prestare attenzione per evitare di infrangerli durante la deserializzazione.  
@@ -254,7 +254,7 @@ Quando si lavora con i dati in Windows Communication Foundation (WCF), è necess
   
 -   Fare attenzione quando si utilizzano tipi legacy contrassegnati con l'attributo <xref:System.SerializableAttribute> . Molti di essi sono progettati per essere utilizzati con la comunicazione remota di [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] per l'utilizzo esclusivamente con dati attendibili. I tipi esistenti contrassegnati con questo attributo possono non essere stati progettati tenendo presente la sicurezza dello stato.  
   
--   Non affidarsi alla proprietà <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> dell'attributo `DataMemberAttribute` per garantire la presenza di dati per quanto riguarda la sicurezza dello stato. I dati potrebbero sempre essere `null`, `zero` o `invalid`.  
+-   Non affidarsi alla proprietà <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> dell'attributo `DataMemberAttribute` per garantire la presenza di dati per quanto riguarda la sicurezza dello stato. I dati potrebbero sempre essere `null`, `zero`o `invalid`.  
   
 -   Non considerare mai attendibile un oggetto grafico deserializzato da un'origine dati non attendibile senza prima convalidarlo. Ogni singolo oggetto può essere in uno stato coerente, ma l'oggetto grafico nell'insieme potrebbe non esserlo, inoltre, anche se la modalità di mantenimento è disattivata, se l'oggetto grafico viene deserializzato può contenere più riferimenti allo stesso oggetto o riferimenti circolari. Per altre informazioni, vedere [serializzazione e deserializzazione](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).  
   
@@ -353,8 +353,8 @@ Quando si lavora con i dati in Windows Communication Foundation (WCF), è necess
   
 -   In generale, quando si utilizza un componente che accetta quote, è necessario comprenderne le implicazioni a livello di sicurezza e impostarle su valori sicuri.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Runtime.Serialization.DataContractSerializer>  
- <xref:System.Xml.XmlDictionaryReader>  
- <xref:System.Xml.Serialization.XmlSerializer>  
- [Tipi noti di contratto di dati](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- <xref:System.Xml.XmlDictionaryReader>
+- <xref:System.Xml.Serialization.XmlSerializer>
+- [Tipi noti di contratto di dati](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)

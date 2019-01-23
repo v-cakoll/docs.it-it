@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ac69bab45ccd39b6a055fe4d2f74950ab47da779
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b07d75b6a8839f9a223ef2c0be52830e107e4088
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447032"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527601"
 ---
 # <a name="imetadataimportfindfield-method"></a>Metodo IMetaDataImport::FindField
-Ottiene un puntatore al FieldDef token per il campo che è racchiuso da specificato <xref:System.Type> e con la firma di nome e i metadati specificata.  
+Ottiene un puntatore a FieldDef token per il campo che è racchiuso da specificato <xref:System.Type> e avente il nome e i metadati della firma specificata.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,36 +41,36 @@ HRESULT FindField (
   
 #### <a name="parameters"></a>Parametri  
  `td`  
- [in] Il token TypeDef per la classe o interfaccia che racchiude il campo per la ricerca. Se questo valore è `mdTokenNil`, la ricerca verrà eseguita per una variabile globale.  
+ [in] Il token TypeDef per la classe o interfaccia che racchiude il campo da cercare. Se questo valore è `mdTokenNil`, la ricerca viene eseguita per una variabile globale.  
   
  `szName`  
- [in] Il nome del campo per la ricerca.  
+ [in] Il nome del campo da cercare.  
   
  `pvSigBlob`  
  [in] Un puntatore per la firma binaria dei metadati del campo.  
   
  `cbSigBlob`  
- [in] Le dimensioni in byte di `pvSigBlob`.  
+ [in] La dimensione in byte di `pvSigBlob`.  
   
  `pmb`  
  [out] Puntatore al token FieldDef corrispondente.  
   
 ## <a name="remarks"></a>Note  
- Specificare il campo utilizzando la classe o interfaccia di inclusione (`td`), il nome (`szName`) e facoltativamente la firma (`pvSigBlob`).  
+ Si specifica il campo utilizzando la classe o interfaccia contenitore (`td`), il relativo nome (`szName`) e facoltativamente la firma (`pvSigBlob`).  
   
- La firma passata a `FindField` deve essere stata generata nell'ambito corrente, in quanto le firme sono associate a un particolare ambito. Una firma è possibile incorporare un token che identifica il tipo di classe o un valore che lo contiene. Il token è un indice nella tabella TypeDef locale. Non è possibile generare una firma in fase di esecuzione all'esterno del contesto dell'ambito corrente e utilizzare tale firma come input per `FindField`.  
+ La firma è passato a `FindField` deve essere stata generata nell'ambito corrente, in quanto le firme sono associate a un particolare ambito. Una firma possibile incorporare un token che identifica il tipo di classe o valore di inclusione. (Il token è un indice nella tabella di TypeDef locale). Non è possibile generare una firma in fase di esecuzione all'esterno del contesto dell'ambito corrente e usare tale firma come input per `FindField`.  
   
- `FindField` Consente di individuare solo i campi che sono stati definiti direttamente nella classe o interfaccia. non trova i campi ereditati.  
+ `FindField` Trova solo i campi che sono stati definiti direttamente nella classe o interfaccia. i campi ereditati non viene trovato.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
- **Libreria:** inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [Interfaccia IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Interfaccia IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

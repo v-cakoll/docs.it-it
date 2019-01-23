@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: creare criteri editore'
+title: 'Procedura: Creare criteri editore'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - publisher policy assembly
@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: e7cac3c7e6c588a82e9dfff169ba7b7aa72c35f8
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 3969f066c0a17424d2c4527d2b4661b30f5bb6d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838474"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530525"
 ---
-# <a name="how-to-create-a-publisher-policy"></a>Procedura: creare criteri editore
+# <a name="how-to-create-a-publisher-policy"></a>Procedura: Creare criteri editore
 I fornitori di assembly possono indicare che le applicazioni devono utilizzare una versione più recente di un assembly includendo un file dei criteri editore con l'assembly aggiornato. File dei criteri editore specifica il reindirizzamento di assembly e le impostazioni della codebase e Usa lo stesso formato di un file di configurazione dell'applicazione. File dei criteri editore viene compilato in un assembly e inserito nella global assembly cache.  
   
  Esistono tre passaggi coinvolti nella creazione di un criterio server di pubblicazione:  
@@ -63,7 +63,7 @@ I fornitori di assembly possono indicare che le applicazioni devono utilizzare u
   
     -   Il *publisherPolicyAssemblyFile* argomento è il nome dell'assembly dei criteri editore risultante da questo comando. Nome file dell'assembly deve seguire il formato:  
   
-         **policy.** *majorNumber* **.** *minorNumber* **.** *mainAssemblyName* **. dll**  
+         **policy.** *majorNumber* **.** *minorNumber* **.** *mainAssemblyName* **.dll**  
   
     -   Il *keyPairFile* argomento è il nome del file contenente la coppia di chiavi. È necessario firmare l'assembly e assembly dei criteri editore con la stessa coppia di chiavi.  
   
@@ -91,7 +91,7 @@ I fornitori di assembly possono indicare che le applicazioni devono utilizzare u
   
 1.  Digitare il comando seguente al prompt dei comandi:  
   
-     **gacutil /i***publisherPolicyAssemblyFile*  
+     **gacutil /i**  *publisherPolicyAssemblyFile*  
   
      Il seguente comando aggiunge `policy.1.0.myAssembly.dll` alla global assembly cache.  
   
@@ -102,11 +102,11 @@ I fornitori di assembly possono indicare che le applicazioni devono utilizzare u
     > [!IMPORTANT]
     >  Impossibile aggiungere l'assembly dei criteri editore nella global assembly cache, a meno che il file dei criteri editore originale si trova nella stessa directory dell'assembly.  
   
-## <a name="see-also"></a>Vedere anche  
- [Programmazione con gli assembly](../../../docs/framework/app-domains/programming-with-assemblies.md)  
- [Come il runtime individua gli assembly](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [Configurazione di applicazioni](../../../docs/framework/configure-apps/index.md)  
- [Configurazione delle app .NET Framework](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)  
- [Schema delle impostazioni di runtime](../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Schema dei file di configurazione](../../../docs/framework/configure-apps/file-schema/index.md)  
- [Reindirizzamento delle versioni di assembly](../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+## <a name="see-also"></a>Vedere anche
+- [Programmazione con gli assembly](../../../docs/framework/app-domains/programming-with-assemblies.md)
+- [Come il runtime individua gli assembly](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Configurazione di applicazioni](../../../docs/framework/configure-apps/index.md)
+- [Configurazione delle app .NET Framework](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)
+- [Schema delle impostazioni di runtime](../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [Schema dei file di configurazione](../../../docs/framework/configure-apps/file-schema/index.md)
+- [Reindirizzamento delle versioni di assembly](../../../docs/framework/configure-apps/redirect-assembly-versions.md)

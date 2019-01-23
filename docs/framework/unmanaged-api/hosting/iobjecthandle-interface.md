@@ -16,29 +16,30 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fa16b67f11e5d4f44ef88daf27e0014ae8690769
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b9f6bf0dc0fb92d8b5bb7e3f4d017eed85d85338
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54531205"
 ---
 # <a name="iobjecthandle-interface"></a>Interfaccia IObjectHandle
-Fornisce un metodo per gli oggetti Unwrap effettuare il marshalling in base al valore di riferimento indiretto.  
+Fornisce un metodo per riferimento indiretto di oggetti marshalling per valore rimozione del wrapping.  
   
 ## <a name="methods"></a>Metodi  
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo Unwrap](../../../../docs/framework/unmanaged-api/hosting/iobjecthandle-unwrap-method.md)|Annulla il wrapping un oggetto di effettuare il marshalling in base al valore di riferimento indiretto.|  
+|[Metodo Unwrap](../../../../docs/framework/unmanaged-api/hosting/iobjecthandle-unwrap-method.md)|Annulla il wrapping di un oggetto di effettuare il marshalling per valore da un riferimento indiretto.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Mscoree. H  
+ **Intestazione:** MSCorEE.h  
   
- **Libreria:** inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfacce di hosting](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfacce di hosting](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

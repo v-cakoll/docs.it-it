@@ -1,18 +1,18 @@
 ---
-title: 'Procedura: esportare metadati dagli endpoint del servizio'
+title: 'Procedura: Esportare metadati dagli endpoint di servizio'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: b6c4dfd0-f270-43ec-961a-e16eb6af2f2c
-ms.openlocfilehash: 9235498956f53d69b3024d1db023f3eb0908d2aa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 86ad062f7b7ee3dd2927f8b5b103adfd719a963d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33491543"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54529992"
 ---
-# <a name="how-to-export-metadata-from-service-endpoints"></a>Procedura: esportare metadati dagli endpoint del servizio
+# <a name="how-to-export-metadata-from-service-endpoints"></a>Procedura: Esportare metadati dagli endpoint di servizio
 In questo argomento viene illustrato come esportare metadati da endpoint del servizio.  
   
 ### <a name="to-export-metadata-from-service-endpoints"></a>Per esportare metadati dagli endpoint del servizio  
@@ -55,7 +55,7 @@ In questo argomento viene illustrato come esportare metadati da endpoint del ser
 ## <a name="compiling-the-code"></a>Compilazione del codice  
  Durante la compilazione di Program.cs fare riferimento a System.ServiceModel.dll.  
   
-## <a name="see-also"></a>Vedere anche  
- [Panoramica dell'architettura dei metadati](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)  
- [Uso di metadati](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
- [Endpoint: indirizzi, associazioni e contratti](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+## <a name="see-also"></a>Vedere anche
+- [Panoramica dell'architettura dei metadati](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)
+- [Uso di metadati](../../../../docs/framework/wcf/feature-details/using-metadata.md)
+- [Endpoint: Gli indirizzi, associazioni e contratti](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)

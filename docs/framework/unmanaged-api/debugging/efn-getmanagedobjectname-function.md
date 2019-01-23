@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9f13fad537a6847ba6e19c939e72df86036e28ff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c4eddb1461ad448a1a1718db8a11173e5e2e4a17
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402204"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527783"
 ---
 # <a name="efngetmanagedobjectname-function"></a>Funzione _EFN_GetManagedObjectName
-Ottiene il nome di un tipo utilizzando il puntatore all'oggetto gestito fornito.  
+Ottiene il nome di un tipo usando il puntatore all'oggetto gestito specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,7 +42,7 @@ HRESULT _EFN_GetManagedObjectName(
  [in] Puntatore al client di debug.  
   
  `objAddr`  
- [in] Puntatore a un oggetto gestito.  
+ [in] Un puntatore all'oggetto gestito.  
   
  szName  
  [out] Il nome del tipo.  
@@ -51,14 +51,14 @@ HRESULT _EFN_GetManagedObjectName(
  [out] Il numero di caratteri disponibili nel buffer di stringa.  
   
 ## <a name="remarks"></a>Note  
- Se non è presente nessun codice gestito sul thread attualmente in contesto, la funzione restituisce HRESULT SOS_E_NOMANAGEDCODE con un valore funzionalità 0xa0 e un codice di errore di 0x1000.  
+ Se non vi è nessun codice gestito sul thread attualmente nel contesto, la funzione restituisce HRESULT SOS_E_NOMANAGEDCODE con un valore di impianto pari a 0xa0 e un codice di errore di 0x1000.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** SOS_Stacktrace. h  
+ **Intestazione:** SOS_Stacktrace.h  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Funzioni statiche globali di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+## <a name="see-also"></a>Vedere anche
+- [Funzioni statiche globali di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
