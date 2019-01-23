@@ -2,57 +2,57 @@
 title: '&lt;byteStreamMessageEncoding&gt;'
 ms.date: 03/30/2017
 ms.assetid: bbadd8dd-60a2-4007-b959-89373a8a7d60
-ms.openlocfilehash: 9d38f16cdeb8b769f4026ccb29f9129e93ef031c
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 92ae3dc10e0ae734a3113e22f175f4d010ca55b8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146459"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54541859"
 ---
-# <a name="ltbytestreammessageencodinggt"></a><span data-ttu-id="07d41-102">&lt;byteStreamMessageEncoding&gt;</span><span class="sxs-lookup"><span data-stu-id="07d41-102">&lt;byteStreamMessageEncoding&gt;</span></span>
-<span data-ttu-id="07d41-103">Specifica la codifica dei messaggi come flusso di byte, con l'opzione che consente di specificare la codifica dei caratteri.</span><span class="sxs-lookup"><span data-stu-id="07d41-103">Specifies the message encoding as a stream of bytes, with the option to specify the character encoding.</span></span>  
+# <a name="ltbytestreammessageencodinggt"></a><span data-ttu-id="07fa8-102">&lt;byteStreamMessageEncoding&gt;</span><span class="sxs-lookup"><span data-stu-id="07fa8-102">&lt;byteStreamMessageEncoding&gt;</span></span>
+<span data-ttu-id="07fa8-103">Specifica la codifica dei messaggi come flusso di byte, con l'opzione che consente di specificare la codifica dei caratteri.</span><span class="sxs-lookup"><span data-stu-id="07fa8-103">Specifies the message encoding as a stream of bytes, with the option to specify the character encoding.</span></span>  
   
- <span data-ttu-id="07d41-104">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="07d41-104">\<system.serviceModel></span></span>  
-<span data-ttu-id="07d41-105">\<le associazioni ></span><span class="sxs-lookup"><span data-stu-id="07d41-105">\<bindings></span></span>  
-<span data-ttu-id="07d41-106">\<customBinding></span><span class="sxs-lookup"><span data-stu-id="07d41-106">\<customBinding></span></span>  
-<span data-ttu-id="07d41-107">\<binding></span><span class="sxs-lookup"><span data-stu-id="07d41-107">\<binding></span></span>  
-<span data-ttu-id="07d41-108">\<binaryMessageEncoding></span><span class="sxs-lookup"><span data-stu-id="07d41-108">\<binaryMessageEncoding></span></span>  
+ <span data-ttu-id="07fa8-104">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="07fa8-104">\<system.serviceModel></span></span>  
+<span data-ttu-id="07fa8-105">\<le associazioni ></span><span class="sxs-lookup"><span data-stu-id="07fa8-105">\<bindings></span></span>  
+<span data-ttu-id="07fa8-106">\<customBinding></span><span class="sxs-lookup"><span data-stu-id="07fa8-106">\<customBinding></span></span>  
+<span data-ttu-id="07fa8-107">\<binding></span><span class="sxs-lookup"><span data-stu-id="07fa8-107">\<binding></span></span>  
+<span data-ttu-id="07fa8-108">\<binaryMessageEncoding></span><span class="sxs-lookup"><span data-stu-id="07fa8-108">\<binaryMessageEncoding></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="07d41-109">Sintassi</span><span class="sxs-lookup"><span data-stu-id="07d41-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="07fa8-109">Sintassi</span><span class="sxs-lookup"><span data-stu-id="07fa8-109">Syntax</span></span>  
   
 ```xml  
 <byteStreamMessageEncoding />
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="07d41-110">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="07d41-110">Attributes and Elements</span></span>  
- <span data-ttu-id="07d41-111">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="07d41-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="07fa8-110">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="07fa8-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="07fa8-111">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="07fa8-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="07d41-112">Attributi</span><span class="sxs-lookup"><span data-stu-id="07d41-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="07fa8-112">Attributi</span><span class="sxs-lookup"><span data-stu-id="07fa8-112">Attributes</span></span>  
   
-|<span data-ttu-id="07d41-113">Attributo</span><span class="sxs-lookup"><span data-stu-id="07d41-113">Attribute</span></span>|<span data-ttu-id="07d41-114">Descrizione</span><span class="sxs-lookup"><span data-stu-id="07d41-114">Description</span></span>|  
+|<span data-ttu-id="07fa8-113">Attributo</span><span class="sxs-lookup"><span data-stu-id="07fa8-113">Attribute</span></span>|<span data-ttu-id="07fa8-114">Descrizione</span><span class="sxs-lookup"><span data-stu-id="07fa8-114">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="07d41-115">messageVersion</span><span class="sxs-lookup"><span data-stu-id="07d41-115">messageVersion</span></span>|<span data-ttu-id="07d41-116">Specifica la versione SOAP dei messaggi inviati usando l'associazione.</span><span class="sxs-lookup"><span data-stu-id="07d41-116">Specifies the SOAP version of the messages sent using the binding.</span></span> <span data-ttu-id="07d41-117">È possibile impostare questa proprietà solo sul valore relativo alla versione del messaggio <xref:System.ServiceModel.Channels.MessageVersion.None%2A>.</span><span class="sxs-lookup"><span data-stu-id="07d41-117">This property can only be set to the message version value of <xref:System.ServiceModel.Channels.MessageVersion.None%2A>.</span></span> <span data-ttu-id="07d41-118">Il codificatore di messaggi del flusso di byte non supporta altre versioni del messaggio.</span><span class="sxs-lookup"><span data-stu-id="07d41-118">The byte stream message encoder does not support any other message versions.</span></span><br /><br /> <span data-ttu-id="07d41-119">L'attributo è di tipo <xref:System.ServiceModel.Channels.MessageVersion>.</span><span class="sxs-lookup"><span data-stu-id="07d41-119">This attribute is of type <xref:System.ServiceModel.Channels.MessageVersion>.</span></span>|  
+|<span data-ttu-id="07fa8-115">messageVersion</span><span class="sxs-lookup"><span data-stu-id="07fa8-115">messageVersion</span></span>|<span data-ttu-id="07fa8-116">Specifica la versione SOAP dei messaggi inviati usando l'associazione.</span><span class="sxs-lookup"><span data-stu-id="07fa8-116">Specifies the SOAP version of the messages sent using the binding.</span></span> <span data-ttu-id="07fa8-117">È possibile impostare questa proprietà solo sul valore relativo alla versione del messaggio <xref:System.ServiceModel.Channels.MessageVersion.None%2A>.</span><span class="sxs-lookup"><span data-stu-id="07fa8-117">This property can only be set to the message version value of <xref:System.ServiceModel.Channels.MessageVersion.None%2A>.</span></span> <span data-ttu-id="07fa8-118">Il codificatore di messaggi del flusso di byte non supporta altre versioni del messaggio.</span><span class="sxs-lookup"><span data-stu-id="07fa8-118">The byte stream message encoder does not support any other message versions.</span></span><br /><br /> <span data-ttu-id="07fa8-119">L'attributo è di tipo <xref:System.ServiceModel.Channels.MessageVersion>.</span><span class="sxs-lookup"><span data-stu-id="07fa8-119">This attribute is of type <xref:System.ServiceModel.Channels.MessageVersion>.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="07d41-120">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="07d41-120">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="07fa8-120">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="07fa8-120">Child Elements</span></span>  
   
-|<span data-ttu-id="07d41-121">Elemento</span><span class="sxs-lookup"><span data-stu-id="07d41-121">Element</span></span>|<span data-ttu-id="07d41-122">Descrizione</span><span class="sxs-lookup"><span data-stu-id="07d41-122">Description</span></span>|  
+|<span data-ttu-id="07fa8-121">Elemento</span><span class="sxs-lookup"><span data-stu-id="07fa8-121">Element</span></span>|<span data-ttu-id="07fa8-122">Descrizione</span><span class="sxs-lookup"><span data-stu-id="07fa8-122">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="07d41-123">\<readerQuotas></span><span class="sxs-lookup"><span data-stu-id="07d41-123">\<readerQuotas></span></span>](https://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|<span data-ttu-id="07d41-124">Definisce i vincoli sulla complessità dei messaggi SOAP che possono essere elaborati dagli endpoint configurati con questa associazione.</span><span class="sxs-lookup"><span data-stu-id="07d41-124">Defines the constraints on the complexity of SOAP messages that can be processed by endpoints configured with this binding.</span></span> <span data-ttu-id="07d41-125">L'elemento è di tipo <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.</span><span class="sxs-lookup"><span data-stu-id="07d41-125">This element is of type <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.</span></span>|  
+|[<span data-ttu-id="07fa8-123">\<readerQuotas></span><span class="sxs-lookup"><span data-stu-id="07fa8-123">\<readerQuotas></span></span>](https://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|<span data-ttu-id="07fa8-124">Definisce i vincoli sulla complessità dei messaggi SOAP che possono essere elaborati dagli endpoint configurati con questa associazione.</span><span class="sxs-lookup"><span data-stu-id="07fa8-124">Defines the constraints on the complexity of SOAP messages that can be processed by endpoints configured with this binding.</span></span> <span data-ttu-id="07fa8-125">L'elemento è di tipo <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.</span><span class="sxs-lookup"><span data-stu-id="07fa8-125">This element is of type <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="07d41-126">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="07d41-126">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="07fa8-126">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="07fa8-126">Parent Elements</span></span>  
   
-|<span data-ttu-id="07d41-127">Elemento</span><span class="sxs-lookup"><span data-stu-id="07d41-127">Element</span></span>|<span data-ttu-id="07d41-128">Descrizione</span><span class="sxs-lookup"><span data-stu-id="07d41-128">Description</span></span>|  
+|<span data-ttu-id="07fa8-127">Elemento</span><span class="sxs-lookup"><span data-stu-id="07fa8-127">Element</span></span>|<span data-ttu-id="07fa8-128">Descrizione</span><span class="sxs-lookup"><span data-stu-id="07fa8-128">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="07d41-129">\<binding></span><span class="sxs-lookup"><span data-stu-id="07d41-129">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)|<span data-ttu-id="07d41-130">Definisce tutte le funzionalità di associazione dell'associazione personalizzata.</span><span class="sxs-lookup"><span data-stu-id="07d41-130">Defines all binding capabilities of the custom binding.</span></span>|  
+|[<span data-ttu-id="07fa8-129">\<binding></span><span class="sxs-lookup"><span data-stu-id="07fa8-129">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)|<span data-ttu-id="07fa8-130">Definisce tutte le funzionalità di associazione dell'associazione personalizzata.</span><span class="sxs-lookup"><span data-stu-id="07fa8-130">Defines all binding capabilities of the custom binding.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="07d41-131">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="07d41-131">See Also</span></span>  
- <xref:System.ServiceModel.Configuration.ByteStreamMessageEncodingElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>  
- <xref:System.ServiceModel.Channels.ByteStreamMessageEncodingBindingElement>  
- [<span data-ttu-id="07d41-132">Codifica dei messaggi</span><span class="sxs-lookup"><span data-stu-id="07d41-132">Message Encoding</span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-encoding.md)  
- [<span data-ttu-id="07d41-133">Scelta di un codificatore di messaggi</span><span class="sxs-lookup"><span data-stu-id="07d41-133">Choosing a Message Encoder</span></span>](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)  
- [<span data-ttu-id="07d41-134">Associazioni</span><span class="sxs-lookup"><span data-stu-id="07d41-134">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
- [<span data-ttu-id="07d41-135">Estensione delle associazioni</span><span class="sxs-lookup"><span data-stu-id="07d41-135">Extending Bindings</span></span>](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [<span data-ttu-id="07d41-136">Associazioni personalizzate</span><span class="sxs-lookup"><span data-stu-id="07d41-136">Custom Bindings</span></span>](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [<span data-ttu-id="07d41-137">\<customBinding></span><span class="sxs-lookup"><span data-stu-id="07d41-137">\<customBinding></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a><span data-ttu-id="07fa8-131">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="07fa8-131">See also</span></span>
+- <xref:System.ServiceModel.Configuration.ByteStreamMessageEncodingElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>
+- <xref:System.ServiceModel.Channels.ByteStreamMessageEncodingBindingElement>
+- [<span data-ttu-id="07fa8-132">Codifica dei messaggi</span><span class="sxs-lookup"><span data-stu-id="07fa8-132">Message Encoding</span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-encoding.md)
+- [<span data-ttu-id="07fa8-133">Scelta di un codificatore di messaggi</span><span class="sxs-lookup"><span data-stu-id="07fa8-133">Choosing a Message Encoder</span></span>](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)
+- [<span data-ttu-id="07fa8-134">Associazioni</span><span class="sxs-lookup"><span data-stu-id="07fa8-134">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)
+- [<span data-ttu-id="07fa8-135">Estensione delle associazioni</span><span class="sxs-lookup"><span data-stu-id="07fa8-135">Extending Bindings</span></span>](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [<span data-ttu-id="07fa8-136">Associazioni personalizzate</span><span class="sxs-lookup"><span data-stu-id="07fa8-136">Custom Bindings</span></span>](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [<span data-ttu-id="07fa8-137">\<customBinding></span><span class="sxs-lookup"><span data-stu-id="07fa8-137">\<customBinding></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
