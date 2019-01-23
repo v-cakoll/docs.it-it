@@ -2,17 +2,17 @@
 title: Codificatori personalizzati
 ms.date: 03/30/2017
 ms.assetid: fa0e1d7f-af36-4bf4-aac9-cd4eab95bc4f
-ms.openlocfilehash: 036cbff9046df2d1179c5cc0921dd8d89757558b
-ms.sourcegitcommit: 8145ad08288bf141d68e3256cb1f7a3ad842ca33
+ms.openlocfilehash: a438ad327cdd75e981af2ef8ca3999a2f482a2b3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "50034382"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54509363"
 ---
 # <a name="custom-encoders"></a>Codificatori personalizzati
 In questo argomento verranno illustrate le procedure per creare codificatori personalizzati.  
   
- In Windows Communication Foundation (WCF), si utilizza un *associazione* per specificare la modalità di trasferimento dei dati attraverso una rete tra endpoint. Un'associazione è costituita da una sequenza di *elementi di associazione*. Un'associazione include elementi di associazione di protocollo facoltativo, ad esempio sicurezza, un *codificatore di messaggi* elemento di associazione e un elemento di associazione di trasporto obbligatorio. Un codificatore di messaggi è rappresentato da un elemento di associazione di codifica dei messaggi. In WCF sono inclusi tre codificatori di messaggi: Binary, Message Transmission Optimization Mechanism (MTOM) e il testo.  
+ In Windows Communication Foundation (WCF), si utilizza un *associazione* per specificare la modalità di trasferimento dei dati attraverso una rete tra endpoint. Un'associazione è costituita da una sequenza di *elementi di associazione*. Un'associazione include elementi di associazione di protocollo facoltativo, ad esempio sicurezza, un *codificatore di messaggi* elemento di associazione e un elemento di associazione di trasporto obbligatorio. Un codificatore di messaggi è rappresentato da un elemento di associazione di codifica dei messaggi. In WCF sono inclusi tre codificatori di messaggi: File binario, MTOM (MTOM) e testo.  
   
  Un elemento di associazione di codifica dei messaggi serializza un oggetto <xref:System.ServiceModel.Channels.Message> in uscita e lo passa al trasporto oppure riceve dal trasporto il formato serializzato di un messaggio e lo passa al livello protocollo o, se non è presente, all'applicazione.  
   
@@ -30,11 +30,11 @@ In questo argomento verranno illustrate le procedure per creare codificatori per
   
  WCF fornisce i seguenti tipi di elemento di associazione derivato dal <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> classe che può fornire per il testo, binaria e MTOM codifica Message Transmission Optimization Mechanism (MTOM):  
   
--   <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>: il codificatore più interoperativo, ma il meno efficiente, per i messaggi XML. In genere un servizio Web o un client di servizio Web è in grado di comprendere codice XML in formato testo. La trasmissione di grandi blocchi di dati binari in formato testo non è tuttavia efficiente.  
+-   <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>: Il codificatore più interoperativo, ma il meno efficiente per i messaggi XML. In genere un servizio Web o un client di servizio Web è in grado di comprendere codice XML in formato testo. La trasmissione di grandi blocchi di dati binari in formato testo non è tuttavia efficiente.  
   
--   <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>: rappresenta l'elemento di associazione che specifica la codifica dei caratteri e la versione dei messaggi usate per i messaggi XML basati su un sistema binario. Questo approccio è più efficiente delle opzioni di codifica, ma la meno interoperativa in quanto è supportata solo per gli endpoint WCF.  
+-   <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>: Rappresenta l'elemento di associazione che specifica la codifica dei caratteri e la versione dei messaggi utilizzate per messaggi XML basati su file binario. Questo approccio è più efficiente delle opzioni di codifica, ma la meno interoperativa in quanto è supportata solo per gli endpoint WCF.  
   
--   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>: rappresenta l'elemento di associazione che specifica la codifica dei caratteri e la versione dei messaggi usate per una codifica dei messaggi tramite MTOM (Message Transmission Optimization Mechanism). MTOM è una tecnologia efficiente per la trasmissione di dati binari nei messaggi di WCF. Il codificatore MTOM cerca un equilibrio tra efficienza e interoperabilità. La codifica MTOM trasmette la maggior parte del codice XML in formato testo, ma ottimizza grandi blocchi di dati binari trasmettendoli senza introdurre modifiche e senza convertirli in formato testo.  
+-   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>: Rappresenta l'elemento di associazione che specifica la codifica dei caratteri e la versione dei messaggi utilizzate per un codifica dei messaggi tramite Message Transmission Optimization Mechanism (MTOM). MTOM è una tecnologia efficiente per la trasmissione di dati binari nei messaggi di WCF. Il codificatore MTOM cerca un equilibrio tra efficienza e interoperabilità. La codifica MTOM trasmette la maggior parte del codice XML in formato testo, ma ottimizza grandi blocchi di dati binari trasmettendoli senza introdurre modifiche e senza convertirli in formato testo.  
   
  L'elemento di associazione crea una classe <xref:System.ServiceModel.Channels.MessageEncoderFactory>di tipo Text, Binary o MTOM. La factory crea un'istanza <xref:System.ServiceModel.Channels.MessageEncoderFactory> di tipo Text, Binary o MTOM. In genere è presente una sola istanza. Se tuttavia vengono usate le sessioni, a ogni sessione può essere fornito un codificatore diverso. In questo modo il codificatore dei messaggi in formato binario è in grado di coordinare dizionari dinamici (vedere Infrastruttura XML).  
   
@@ -89,12 +89,12 @@ In questo argomento verranno illustrate le procedure per creare codificatori per
   
  Associare quindi il codificatore <xref:System.ServiceModel.Channels.MessageEncoderFactory> personalizzato allo stack dell'elemento di associazione usato per configurare il servizio o il client eseguendo l'override del metodo <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A> per restituire un'istanza di questa factory.  
   
- Sono disponibili due esempi forniti con WCF che illustrano questo processo con codice di esempio: [codificatore di messaggi personalizzato: codificatore di testo personalizzato](../../../../docs/framework/wcf/samples/custom-message-encoder-custom-text-encoder.md) e [codificatore di messaggi personalizzato: codificatore di compressione](../../../../docs/framework/wcf/samples/custom-message-encoder-compression-encoder.md).  
+ Sono disponibili due esempi forniti con WCF che illustrano questo processo con codice di esempio: [Codificatore di messaggi personalizzato: Codificatore di testi personalizzato](../../../../docs/framework/wcf/samples/custom-message-encoder-custom-text-encoder.md) e [codificatore di messaggi personalizzato: Codificatore di compressione](../../../../docs/framework/wcf/samples/custom-message-encoder-compression-encoder.md).  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>  
- <xref:System.ServiceModel.Channels.MessageEncoderFactory>  
- <xref:System.ServiceModel.Channels.MessageEncoder>  
- [Panoramica dell'architettura di trasferimento dati](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md)  
- [Scelta di un codificatore di messaggi](../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)  
- [Scelta di un trasporto](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>
+- <xref:System.ServiceModel.Channels.MessageEncoderFactory>
+- <xref:System.ServiceModel.Channels.MessageEncoder>
+- [Panoramica dell'architettura di trasferimento dati](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md)
+- [Scelta di un codificatore di messaggi](../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)
+- [Scelta di un trasporto](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
