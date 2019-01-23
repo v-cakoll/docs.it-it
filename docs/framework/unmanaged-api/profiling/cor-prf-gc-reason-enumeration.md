@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 63f6ea4a348b3035a1f0b1d3e00f61f689915fa2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 13740920e8db5d44b71cd3c324742945c64b3e59
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33450099"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54498960"
 ---
 # <a name="corprfgcreason-enumeration"></a>Enumerazione COR_PRF_GC_REASON
 Indica il motivo per cui è in corso la Garbage Collection.  
@@ -39,17 +39,17 @@ typedef enum {
   
 |Membro|Descrizione|  
 |------------|-----------------|  
-|`COR_PRF_GC_INDUCED`|Operazione di garbage collection è stata causata da un <xref:System.GC.Collect%2A> metodo.|  
+|`COR_PRF_GC_INDUCED`|L'operazione di garbage collection è stata causata da un <xref:System.GC.Collect%2A> (metodo).|  
 |`COR_PRF_GC_OTHER`|Il motivo è specificato.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Enumerazioni di profilatura](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+## <a name="see-also"></a>Vedere anche
+- [Enumerazioni di profilatura](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

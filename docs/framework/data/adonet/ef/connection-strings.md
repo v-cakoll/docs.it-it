@@ -2,17 +2,17 @@
 title: Stringhe di connessione in ADO.NET Entity Framework
 ms.date: 10/15/2018
 ms.assetid: 78d516bc-c99f-4865-8ff1-d856bc1a01c0
-ms.openlocfilehash: 99b6b1b7a38477dc17d3960ee5bc0b63ec0cb819
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d01218713319b84eb700b3be7ab71fe51357ac46
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193994"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54497459"
 ---
 # <a name="connection-strings-in-the-adonet-entity-framework"></a>Stringhe di connessione in ADO.NET Entity Framework
 Una stringa di connessione contiene informazioni di inizializzazione che vengono passate come parametro da un provider di dati a un'origine dati. La sintassi dipende dal provider di dati e la stringa di connessione viene analizzata durante il tentativo di aprire una connessione. Le stringhe di connessione usate da Entity Framework contengono informazioni che consentono di connettersi al provider di dati ADO.NET sottostante che supporta Entity Framework, nonché informazioni sui file di modello e di mapping richiesti.  
   
- La stringa di connessione viene usata dal provider EntityClient quando si accede ai metadati di modello e di mapping e quando si effettua la connessione all'origine dati. Per impostare o accedere alla stringa di connessione, usare la proprietà <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> di <xref:System.Data.EntityClient.EntityConnection>. La classe <xref:System.Data.EntityClient.EntityConnectionStringBuilder> può essere usata a livello di codice per costruire o accedere ai parametri nella stringa di connessione. Per altre informazioni, vedere [procedura: compilare una stringa di connessione EntityConnection](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md).  
+ La stringa di connessione viene usata dal provider EntityClient quando si accede ai metadati di modello e di mapping e quando si effettua la connessione all'origine dati. Per impostare o accedere alla stringa di connessione, usare la proprietà <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> di <xref:System.Data.EntityClient.EntityConnection>. La classe <xref:System.Data.EntityClient.EntityConnectionStringBuilder> può essere usata a livello di codice per costruire o accedere ai parametri nella stringa di connessione. Per altre informazioni, vedere [Procedura: Compilare una stringa di connessione EntityConnection](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md).  
   
  Il [strumenti di Entity Data Model](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527) genera una stringa di connessione archiviata nel file di configurazione dell'applicazione. L'oggetto <xref:System.Data.Objects.ObjectContext> consente di recuperare automaticamente queste informazioni di connessione quando si creano query di oggetto. È possibile accedere all'oggetto <xref:System.Data.EntityClient.EntityConnection> usato da un'istanza di <xref:System.Data.Objects.ObjectContext> direttamente dalla proprietà <xref:System.Data.Objects.ObjectContext.Connection%2A>. Per altre informazioni, vedere [alla gestione delle connessioni e transazioni](https://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99).  
 
@@ -48,7 +48,7 @@ Metadata=res://<assemblyFullName>/<resourceName>.
   
 |Opzione|Descrizione|  
 |-|-|  
-|`assemblyFullName`|Nome completo di un assembly con la risorsa incorporata. Include il nome semplice, il nome della versione, la lingua supportata e la chiave pubblica, nel modo seguente:<br /><br /> `ResourceLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null`<br /><br /> Le risorse possono essere incorporate in qualsiasi assembly accessibile dall'applicazione.<br /><br /> Se si specifica un carattere jolly (\*) per `assemblyFullName`, il runtime di Entity Framework cercherà le risorse nei percorsi seguenti, nell'ordine indicato:<br /><br /> 1.  L'assembly chiamante.<br />2.  Gli assembly a cui si fa riferimento.<br />3.  Gli assembly nella directory bin di un'applicazione.<br /><br /> Se i file non sono in uno di questi percorsi, verrà generata un'eccezione. **Nota:** quando si usa carattere jolly (*), Entity Framework deve esaminare tutti gli assembly per le risorse con il nome corretto. Per migliorare le prestazioni, specificare il nome dell'assembly anziché il carattere jolly.|  
+|`assemblyFullName`|Nome completo di un assembly con la risorsa incorporata. Include il nome semplice, il nome della versione, la lingua supportata e la chiave pubblica, nel modo seguente:<br /><br /> `ResourceLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null`<br /><br /> Le risorse possono essere incorporate in qualsiasi assembly accessibile dall'applicazione.<br /><br /> Se si specifica un carattere jolly (\*) per `assemblyFullName`, il runtime di Entity Framework cercherà le risorse nei percorsi seguenti, nell'ordine indicato:<br /><br /> 1.  L'assembly chiamante.<br />2.  Gli assembly a cui si fa riferimento.<br />3.  Gli assembly nella directory bin di un'applicazione.<br /><br /> Se i file non sono in uno di questi percorsi, verrà generata un'eccezione. **Nota:**  Quando si usa un carattere jolly (*), la ricerca di risorse con il nome corretto deve essere eseguita in tutti gli assembly. Per migliorare le prestazioni, specificare il nome dell'assembly anziché il carattere jolly.|  
 |`resourceName`|Nome della risorsa inclusa, ad esempio AdvendtureWorksModel.csdl. I servizi di metadati cercheranno solo i file o le risorse con estensione csdl, ssdl o msl. Se la parola chiave `resourceName` non è specificata, verranno caricate tutte le risorse dei metadati. Le risorse devono disporre di nomi univoci all'interno di un assembly. Se più file con lo stesso nome sono definiti in directory diverse nell'assembly, la parola chiave `resourceName` deve includere la struttura di cartelle prima del nome della risorsa, ad esempio NomeCartella.NomeFile.csdl.<br /><br /> `resourceName` non è obbligatoria quando si specifica un carattere jolly (*) per `assemblyFullName`.|  
   
 > [!NOTE]
@@ -108,8 +108,8 @@ Metadata=.\
   
  La risoluzione della stringa di sostituzione `DataDirectory` e l'operatore ~ è non ricorsiva. Ad esempio, quando `DataDirectory` include il carattere `~`, si verificherà un'eccezione. In questo modo viene impedita una ricorsione infinita.  
   
-## <a name="see-also"></a>Vedere anche  
- [Uso di provider di dati](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)  
- [Considerazioni sulla distribuzione](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  
- [Gestione di connessioni e transazioni](https://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)  
- [Stringhe di connessione](../../../../../docs/framework/data/adonet/connection-strings.md)
+## <a name="see-also"></a>Vedere anche
+- [Uso di provider di dati](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)
+- [Considerazioni sulla distribuzione](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)
+- [Gestione di connessioni e transazioni](https://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)
+- [Stringhe di connessione](../../../../../docs/framework/data/adonet/connection-strings.md)

@@ -8,26 +8,26 @@ helpviewer_keywords:
 - custom controls [Windows Forms], property methods
 - ShouldPersist method
 ms.assetid: 7b6c5e00-3771-46b4-9142-5a80d5864a5e
-ms.openlocfilehash: 8d7645e8de5edee711c30bbe7edde8ba7b5b1dab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 23b4ddb3399c12f5bf3c387991676e7ea93b8a29
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529792"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54497433"
 ---
 # <a name="defining-default-values-with-the-shouldserialize-and-reset-methods"></a>Definizione dei valori predefiniti utilizzando i metodi ShouldSerialize e Reset
-`ShouldSerialize` e `Reset` sono metodi facoltativi che è possibile fornire per una proprietà, se la proprietà non presenta un valore predefinito semplice. Se la proprietà ha un valore predefinito semplice, è consigliabile applicare la <xref:System.ComponentModel.DefaultValueAttribute> e fornire invece il valore predefinito per il costruttore di classe di attributo. Uno di questi meccanismi Abilita le funzionalità seguenti nella finestra di progettazione:  
+`ShouldSerialize` e `Reset` sono metodi facoltativi che è possibile specificare per una proprietà, se la proprietà non presenta un valore predefinito semplice. Se la proprietà ha un valore predefinito semplice, è consigliabile applicare il <xref:System.ComponentModel.DefaultValueAttribute> e fornire invece il valore predefinito per il costruttore di classe di attributo. Uno di questi meccanismi Abilita le funzionalità seguenti nella finestra di progettazione:  
   
 -   La proprietà fornisce un'indicazione visiva nel Visualizzatore proprietà se è stato modificato rispetto al valore predefinito.  
   
--   L'utente può fare clic su proprietà e scegliere **reimpostare** per ripristinare la proprietà sul valore predefinito.  
+-   L'utente può fare doppio clic sulla proprietà e scegliere **reimpostare** per ripristinare la proprietà sul valore predefinito.  
   
 -   La finestra di progettazione genera codice più efficiente.  
   
     > [!NOTE]
-    >  Applicare il <xref:System.ComponentModel.DefaultValueAttribute> o fornire `Reset` *PropertyName* e `ShouldSerialize` *PropertyName* metodi. Non utilizzare entrambi.  
+    >  Entrambi si applicano i <xref:System.ComponentModel.DefaultValueAttribute> o fornire `Reset` *PropertyName* e `ShouldSerialize` *PropertyName* metodi. Non utilizzare entrambi.  
   
- Il `Reset` *PropertyName* metodo imposta una proprietà sul valore predefinito, come illustrato nel frammento di codice seguente.  
+ Il `Reset` *NomeProprietà* metodo imposta una proprietà sul valore predefinito, come illustrato nel frammento di codice seguente.  
   
 ```vb  
 Public Sub ResetMyFont()  
@@ -42,9 +42,9 @@ public void ResetMyFont() {
 ```  
   
 > [!NOTE]
->  Se una proprietà non ha un `Reset` metodo, non è contrassegnato con un <xref:System.ComponentModel.DefaultValueAttribute>e non dispone di un valore predefinito fornito nella relativa dichiarazione, la `Reset` opzione per tale proprietà è disabilitata nel menu di scelta rapida del **proprietà** finestra di progettazione Windows Form in Visual Studio.  
+>  Se una proprietà non ha un `Reset` metodo, non è contrassegnato con un <xref:System.ComponentModel.DefaultValueAttribute>e non dispone di un valore predefinito fornito nella relativa dichiarazione, il `Reset` opzione per tale proprietà è disabilitata nel menu di scelta rapida del **proprietà** finestra di progettazione Windows Form in Visual Studio.  
   
- Utilizzare le finestre di progettazione, ad esempio Visual Studio il `ShouldSerialize` *PropertyName* metodo per verificare se una proprietà è stato modificato rispetto al valore predefinito e per scrivere codice nel form solo in una proprietà viene modificato, consentendo un codice più efficiente generazione. Ad esempio:  
+ Finestre di progettazione, ad esempio Visual Studio usare il `ShouldSerialize` *NomeProprietà* metodo per verificare se una proprietà è stata modificata rispetto al valore predefinito e per scrivere codice nel form solo in una proprietà viene modificato, consentendo in tal modo per il codice più efficiente generazione. Ad esempio:  
   
 ```vb  
 'Returns true if the font has changed; otherwise, returns false.  
@@ -141,9 +141,9 @@ public class MyControl : Control {
 }  
 ```  
   
- In questo caso, anche quando il valore della variabile privata accede il `MyFont` proprietà `null`, non vengono visualizzati nel Visualizzatore proprietà `null`; al contrario, viene visualizzato il <xref:System.Windows.Forms.Control.Font%2A> proprietà dell'elemento padre, se non è `null`, il valore predefinito o <xref:System.Windows.Forms.Control.Font%2A> valore definito <xref:System.Windows.Forms.Control>. In questo modo il valore predefinito per `MyFont` non è possibile impostare semplicemente e un <xref:System.ComponentModel.DefaultValueAttribute> non può essere applicato a questa proprietà. Al contrario, il `ShouldSerialize` e `Reset` necessario implementare i metodi per la `MyFont` proprietà.  
+ In questo caso, anche quando il valore della variabile privata accessibile dal `MyFont` proprietà è `null`, il Visualizzatore proprietà non viene visualizzata `null`; in alternativa, viene visualizzato il <xref:System.Windows.Forms.Control.Font%2A> proprietà dell'elemento padre, se non è `null`, o il valore predefinito <xref:System.Windows.Forms.Control.Font%2A> valore definito <xref:System.Windows.Forms.Control>. In questo modo il valore predefinito per `MyFont` non è possibile impostare semplicemente e un <xref:System.ComponentModel.DefaultValueAttribute> non può essere applicato a questa proprietà. Al contrario, il `ShouldSerialize` e `Reset` devono essere implementati i metodi per il `MyFont` proprietà.  
   
-## <a name="see-also"></a>Vedere anche  
- [Proprietà dei controlli Windows Form](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)  
- [Definizione di una proprietà](../../../../docs/framework/winforms/controls/defining-a-property-in-windows-forms-controls.md)  
- [Eventi di modifica delle proprietà](../../../../docs/framework/winforms/controls/property-changed-events.md)
+## <a name="see-also"></a>Vedere anche
+- [Proprietà dei controlli Windows Form](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)
+- [Definizione di una proprietà](../../../../docs/framework/winforms/controls/defining-a-property-in-windows-forms-controls.md)
+- [Eventi di modifica delle proprietà](../../../../docs/framework/winforms/controls/property-changed-events.md)

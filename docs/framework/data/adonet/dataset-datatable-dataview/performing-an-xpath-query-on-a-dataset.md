@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e828566-fffe-4d38-abb2-4d68fd73f663
-ms.openlocfilehash: a1718429360d79c4628e9948eb1b052c3ac01964
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 357fad55c3c47a5697df7887f251074238a5ff4d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086167"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54498238"
 ---
 # <a name="performing-an-xpath-query-on-a-dataset"></a>Esecuzione di una query XPath in un dataset
 La relazione tra un oggetto sincronizzato <xref:System.Data.DataSet> e <xref:System.Xml.XmlDataDocument> consente di utilizzare XML servizi che accedono, ad esempio la query XML Path Language (XPath), il **XmlDataDocument** e possono eseguire determinate funzionalità in modo più semplice rispetto all'accesso ai **set di dati** direttamente. Ad esempio, invece di usare la **selezionare** metodo di un <xref:System.Data.DataTable> spostarsi nelle relazioni ad altre tabelle in una **set di dati**, è possibile eseguire una query XPath in un **XmlDataDocument**  sincronizzato con il **set di dati**, per ottenere un elenco di elementi XML sotto forma di un <xref:System.Xml.XmlNodeList>. I nodi il **XmlNodeList**, eseguire il cast come <xref:System.Xml.XmlElement> nodi, può quindi essere passato al **GetRowFromElement** metodo del **XmlDataDocument**, per restituire una corrispondenza <xref:System.Data.DataRow> riferimenti alle righe della tabella in sincronizzato **set di dati**.  
   
- Nell'esempio di codice seguente viene eseguita una query XPath "nipote". Il **set di dati** sono presenti tre tabelle: **clienti**, **ordini**, e **OrderDetails**. Nell'esempio, è prima di tutto viene creata una relazione padre-figlio tra il **clienti** e **ordini** tabelle così come tra la **ordini** e **OrderDetails** tabelle. Viene quindi eseguita una query XPath per restituire un **XmlNodeList** dei **clienti** nodi in cui un nipote **OrderDetails** nodo dispone di un **ProductID**nodi con valore 43. In sostanza, l'esempio Usa la query XPath per determinare quali clienti hanno ordinato il prodotto che ha il **ProductID** 43.  
+ Nell'esempio di codice seguente viene eseguita una query XPath "nipote". Il **set di dati** viene riempita con tre tabelle: **I clienti**, **ordini**, e **OrderDetails**. Nell'esempio, è prima di tutto viene creata una relazione padre-figlio tra il **clienti** e **ordini** tabelle così come tra la **ordini** e **OrderDetails** tabelle. Viene quindi eseguita una query XPath per restituire un **XmlNodeList** dei **clienti** nodi in cui un nipote **OrderDetails** nodo dispone di un **ProductID**nodi con valore 43. In sostanza, l'esempio Usa la query XPath per determinare quali clienti hanno ordinato il prodotto che ha il **ProductID** 43.  
   
 ```vb  
 ' Assumes that connection is a valid SqlConnection.  
@@ -101,6 +101,6 @@ foreach (XmlNode xmlNode in nodeList)
 }  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Sincronizzazione di DataSet e XmlDataDocument](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vedere anche
+- [Sincronizzazione di DataSet e XmlDataDocument](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)
+- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

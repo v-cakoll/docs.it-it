@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9dcddb5766894a30f1ccb2552a09abe7153c6eea
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ae7bbc41d0e2cca1cf25a5ec34535b20fc9163d1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33434952"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54498255"
 ---
 # <a name="iclrruntimehostexecuteindefaultappdomain-method"></a>Metodo ICLRRuntimeHost::ExecuteInDefaultAppDomain
 Chiama il metodo specificato nel tipo specificato nell'assembly gestito specificato.  
@@ -41,19 +41,19 @@ HRESULT ExecuteInDefaultAppDomain (
   
 #### <a name="parameters"></a>Parametri  
  `pwzAssemblyPath`  
- [in] Il percorso di <xref:System.Reflection.Assembly> che definisce il <xref:System.Type> è il cui metodo da richiamare.  
+ [in] Il percorso per il <xref:System.Reflection.Assembly> che definisce il <xref:System.Type> il cui metodo deve essere richiamato.  
   
  `pwzTypeName`  
  [in] Il nome del <xref:System.Type> che definisce il metodo da richiamare.  
   
  `pwzMethodName`  
- [in] Il nome del metodo da richiamare.  
+ [in] Nome del metodo da richiamare.  
   
  `pwzArgument`  
- [in] Il parametro di stringa da passare al metodo.  
+ [in] Il parametro della stringa da passare al metodo.  
   
  `pReturnValue`  
- [out] Il valore integer restituito dal metodo richiamato.  
+ [out] Valore intero restituito dal metodo richiamato.  
   
 ## <a name="return-value"></a>Valore restituito  
   
@@ -62,9 +62,9 @@ HRESULT ExecuteInDefaultAppDomain (
 |S_OK|`ExecuteInDefaultAppDomain` stato restituito correttamente.|  
 |HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) non è stato caricato in un processo oppure si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.|  
 |HOST_E_TIMEOUT|Timeout della chiamata.|  
-|HOST_E_NOT_OWNER|Il chiamante non dispone del blocco.|  
-|HOST_E_ABANDONED|Un evento è stato annullato mentre un thread bloccato o fiber era in attesa su di esso.|  
-|E_FAIL|Si è verificato un errore irreversibile sconosciuto. Se un metodo restituisce E_FAIL, il CRL non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiranno HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_NOT_OWNER|Il chiamante non possiede il blocco.|  
+|HOST_E_ABANDONED|Un evento è stato annullato durante un thread bloccato o fiber è rimasta in attesa su di esso.|  
+|E_FAIL|Si è verificato un errore irreversibile sconosciuto. Se un metodo viene restituito E_FAIL, il CRL non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiranno HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Note  
  Il metodo richiamato deve avere la firma seguente:  
@@ -73,16 +73,16 @@ HRESULT ExecuteInDefaultAppDomain (
 static int pwzMethodName (String pwzArgument)  
 ```  
   
- dove `pwzMethodName` rappresenta il nome del metodo richiamato, e `pwzArgument` rappresenta il valore di stringa passato come parametro al metodo. Se il valore HRESULT è impostato su S_OK, `pReturnValue` è impostata sul valore integer restituito dal metodo richiamato. In caso contrario, `pReturnValue` non è impostata.  
+ in cui `pwzMethodName` rappresenta il nome del metodo richiamato, e `pwzArgument` rappresenta il valore di stringa passato come parametro al metodo. Se il valore HRESULT è impostato su S_OK, `pReturnValue` è impostata sul valore integer restituito dal metodo richiamato. In caso contrario, `pReturnValue` non è impostata.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Mscoree. H  
+ **Intestazione:** MSCorEE.h  
   
- **Libreria:** inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)

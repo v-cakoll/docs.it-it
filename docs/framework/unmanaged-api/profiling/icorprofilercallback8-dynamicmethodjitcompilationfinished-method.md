@@ -10,11 +10,12 @@ api_type:
 - COM
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 49b5ead8b5428d855b7dab81dced1de6325fd07b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: addaf6333914c9f0ea36d67e3eb96577fef79e1e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54497918"
 ---
 # <a name="icorprofilercallback8dynamicmethodjitcompilationfinished-method"></a>Metodo ICorProfilerCallback8::DynamicMethodJITCompilationFinished
 [Supportato in .NET Framework 4.7 e versioni successive]  
@@ -33,30 +34,30 @@ HRESULT DynamicMethodJITCompilationFinished(
   
 #### <a name="parameters"></a>Parametri  
 [in] `functionId`  
-Identificatore della funzione in memoria per la quale JIT viene avviata la compilazione.   
+L'identificatore della funzione in memoria per la quale JIT viene avviata la compilazione.   
 
 [in] `hrStatus`   
-Un valore che indica se la compilazione JIT ha avuto esito positivo.
+Un valore che indica se la compilazione JIT è riuscita.
 
 [in] `fIsSafeToBlock`   
-`true` per indicare che il blocco potrebbe essere il runtime di attesa per il thread chiamante restituire da questo callback; `false` per indicare che il blocco non avranno effetto l'operazione di runtime.  
+`true` per indicare che il blocco può causare il runtime di attesa per il thread chiamante restituire da questo callback; `false` per indicare che il blocco non avrà effetto il funzionamento del runtime.  
 
 ## <a name="remarks"></a>Note  
 
-Questo callback viene attivato ogni volta che ha terminato la compilazione JIT di un metodo dinamico. Sono inclusi diversi gli stub di linguaggio intermedio e metodi LCG. L'obiettivo consiste nello specificare writer profiler con le informazioni necessarie per identificare il metodo compilato agli utenti.
+Questo callback viene attivato ogni volta che ha terminato la compilazione JIT di un metodo dinamico. Sono inclusi vari stub a livello di integrità e i metodi LCG. L'obiettivo consiste nel fornire gli autori di profiler con le informazioni necessarie per identificare il metodo compilato per gli utenti.
 
 > [!NOTE]
-> `functionId` non è possibile utilizzare i valori per risolvere i relativi token di metadati, perché i metodi dinamici non hanno metadati.
+> `functionId` valori non possono essere usati per risolvere i relativi token di metadati, perché i metadati non dispongono di metodi dinamici.
 
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Metodo DynamicMethodJITCompilationStarted](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md)  
- [Interfaccia ICorProfilerCallback8](icorprofilercallback8-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Metodo DynamicMethodJITCompilationStarted](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md)
+- [Interfaccia ICorProfilerCallback8](icorprofilercallback8-interface.md)

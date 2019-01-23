@@ -2,12 +2,12 @@
 title: ServiceDebugBehavior
 ms.date: 03/30/2017
 ms.assetid: a5ec9061-1e95-43fb-b0d9-dbd0a7bc3c44
-ms.openlocfilehash: 68b2350f257bc95d8e17f4b9049d67c7f67becae
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: d6f0e4741aa10bff450a29cfd7a9e63e226c6495
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49452862"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54498882"
 ---
 # <a name="servicedebugbehavior"></a>ServiceDebugBehavior
 ServiceDebugBehavior  
@@ -34,35 +34,35 @@ class ServiceDebugBehavior : Behavior
 ### <a name="httphelppageenabled"></a>HttpHelpPageEnabled  
  Tipo di dati: booleano  
   
- Tipo di accesso: sola lettura  
+ Tipo di accesso: Sola lettura  
   
  Definisce se il servizio pubblica il relativo WSDL all'indirizzo controllato dall'attributo `HttpGetUrl`.  
   
 ### <a name="httphelppageurl"></a>HttpHelpPageUrl  
  Tipo di dati: stringa  
   
- Tipo di accesso: sola lettura  
+ Tipo di accesso: Sola lettura  
   
  Imposta il percorso in cui è pubblicato il WSDL del servizio per il recupero tramite HTTP.  
   
 ### <a name="httpshelppageenabled"></a>HttpsHelpPageEnabled  
  Tipo di dati: booleano  
   
- Tipo di accesso: sola lettura  
+ Tipo di accesso: Sola lettura  
   
  Definisce se il servizio pubblica il relativo WSDL su HTTPS all'indirizzo controllato dall'attributo `HttpsGetUrl`.  
   
 ### <a name="httpshelppageurl"></a>HttpsHelpPageUrl  
  Tipo di dati: stringa  
   
- Tipo di accesso: sola lettura  
+ Tipo di accesso: Sola lettura  
   
  Imposta il percorso in cui è pubblicato il WSDL del servizio per il recupero tramite HTTPS.  
   
 ### <a name="includeexceptiondetailinfaults"></a>IncludeExceptionDetailInFaults  
  Tipo di dati: booleano  
   
- Tipo di accesso: sola lettura  
+ Tipo di accesso: Sola lettura  
   
  Specifica se includere informazioni di eccezione nei dettagli degli errori SOAP restituiti ai client a fini di debug.  
   
@@ -72,5 +72,5 @@ class ServiceDebugBehavior : Behavior
 |---------|-----------------------------------|  
 |Spazio dei nomi|Definito in root\ServiceModel|  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.Description.ServiceDebugBehavior>
+## <a name="see-also"></a>Vedere anche
+- <xref:System.ServiceModel.Description.ServiceDebugBehavior>
