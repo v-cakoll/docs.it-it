@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1a431c82450ddcc563a1d3d92bb61a64d723a007
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 49b93c220c8745b63d1463b2236f253112b1a545
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413140"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543893"
 ---
-# <a name="icordebugerrorinfoenumnext-method"></a><span data-ttu-id="34207-102">Metodo ICorDebugErrorInfoEnum::Next</span><span class="sxs-lookup"><span data-stu-id="34207-102">ICorDebugErrorInfoEnum::Next Method</span></span>
-<span data-ttu-id="34207-103">`ICorDebugErrorInfoEnum::Next` è obsoleto.</span><span class="sxs-lookup"><span data-stu-id="34207-103">`ICorDebugErrorInfoEnum::Next` is obsolete.</span></span> <span data-ttu-id="34207-104">Non chiamare questo metodo.</span><span class="sxs-lookup"><span data-stu-id="34207-104">Do not call this method.</span></span>  
+# <a name="icordebugerrorinfoenumnext-method"></a><span data-ttu-id="fa987-102">Metodo ICorDebugErrorInfoEnum::Next</span><span class="sxs-lookup"><span data-stu-id="fa987-102">ICorDebugErrorInfoEnum::Next Method</span></span>
+<span data-ttu-id="fa987-103">`ICorDebugErrorInfoEnum::Next` è obsoleto.</span><span class="sxs-lookup"><span data-stu-id="fa987-103">`ICorDebugErrorInfoEnum::Next` is obsolete.</span></span> <span data-ttu-id="fa987-104">Non chiamare questo metodo.</span><span class="sxs-lookup"><span data-stu-id="fa987-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="34207-105">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="34207-105">See Also</span></span>  
- [<span data-ttu-id="34207-106">Interfacce di debug</span><span class="sxs-lookup"><span data-stu-id="34207-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="fa987-105">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="fa987-105">See also</span></span>
+- [<span data-ttu-id="fa987-106">Interfacce di debug</span><span class="sxs-lookup"><span data-stu-id="fa987-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
