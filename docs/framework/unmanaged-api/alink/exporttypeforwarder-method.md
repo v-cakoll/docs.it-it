@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5b28c18d55b91d6315003229295ab0e6781be183
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 03949fb52d23e3b0f107f9f1d5208208369c3960
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406305"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54574613"
 ---
 # <a name="exporttypeforwarder-method"></a>Metodo ExportTypeForwarder
-Aggiunge un server d'inoltro per la tabella dei tipi dell'assembly specificato.  
+Aggiunge un server d'inoltro per la tabella di tipo dell'assembly specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,24 +39,24 @@ HRESULT ExportTypeForwarder(
   
 #### <a name="parameters"></a>Parametri  
  `tkAssemblyRef`  
- Riferimento all'assembly a cui fa riferimento il server d'inoltro del tipo.  
+ Riferimento all'assembly a cui fa riferimento il server d'inoltro.  
   
  `pszTypename`  
  Nome completo del tipo da esportare.  
   
  `dwFlags`  
- `ComType` flag, ad esempio `tdPublic` o `tdNested`. Questo valore può essere passato a [DefineExportedType (metodo)](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md).  
+ `ComType` ad esempio i flag `tdPublic` o `tdNested`. Questo valore può essere passato a [metodo DefineExportedType](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md).  
   
  `pType`  
  Riceve il token del tipo esportato. Ciò è necessario solo per la creazione di tipi annidati.  
   
 ## <a name="return-value"></a>Valore restituito  
- Se il metodo ha esito positivo, restituisce S_OK.  
+ Restituisce S_OK se il metodo ha esito positivo.  
   
 ## <a name="requirements"></a>Requisiti  
  Richiede alink.h  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [Interfaccia IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [Alink (API)](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [Interfaccia IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [Alink (API)](../../../../docs/framework/unmanaged-api/alink/index.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 75d1ce526d4cba025ea6e9db8281023969e7cb0c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: aebfd41a232a3284f79e4229a8845bf5a34f9d1f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448511"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54574768"
 ---
 # <a name="imetadataimportenummethodimpls-method"></a>Metodo IMetaDataImport::EnumMethodImpls
 Enumera i token MethodBody e MethodDeclaration che rappresentano i metodi del tipo specificato.  
@@ -54,7 +54,7 @@ HRESULT EnumMethodImpls (
  [out] Matrice in cui archiviare i token MethodDeclaration.  
   
  `cMax`  
- [in] La dimensione massima del `rMethodBody` e `rMethodDecl` matrici.  
+ [in] Le dimensioni massime del `rMethodBody` e `rMethodDecl` matrici.  
   
  `pcTokens`  
  [in] Il numero effettivo di metodi restituiti in `rMethodBody` e `rMethodDecl`.  
@@ -64,17 +64,17 @@ HRESULT EnumMethodImpls (
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
 |`S_OK`|`EnumMethodImpls` stato restituito correttamente.|  
-|`S_FALSE`|Non sono presenti token di metodo da enumerare. In tal caso, `pcTokens` è zero.|  
+|`S_FALSE`|Non sono presenti token di metodo da enumerare. In tal caso, `pcTokens` è uguale a zero.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
- **Libreria:** inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [Interfaccia IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Interfaccia IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
