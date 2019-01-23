@@ -11,12 +11,12 @@ helpviewer_keywords:
 - signatures, event handling
 ms.assetid: 67b3c6e2-6a8f-480d-a78f-ebeeaca1b95a
 author: KrzysztofCwalina
-ms.openlocfilehash: 54f98b3c685b77ecb9fe659522c599662aa8243c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 530c68ea5342263acd07f8dc8a8c8ce889652503
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129090"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54632023"
 ---
 # <a name="event-design"></a>Progettazione di eventi
 Gli eventi sono la forma più diffuso di callback (costrutti che consentono al framework di effettuare chiamate nel codice utente). Altri meccanismi di callback che includono membri accettando i delegati, i membri virtuali e basata sull'interfaccia plug-in. I dati di studi di utilizzabilità indicano che la maggior parte degli sviluppatori sono più a proprio agio usando gli eventi che usano altri meccanismi di callback. Gli eventi sono perfettamente integrati con Visual Studio e linguaggi.  
@@ -72,5 +72,5 @@ Gli eventi sono la forma più diffuso di callback (costrutti che consentono al f
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Linee guida di progettazione dei membri](../../../docs/standard/design-guidelines/member.md)  
+- [Linee guida di progettazione dei membri](../../../docs/standard/design-guidelines/member.md)
 - [Linee guida per la progettazione di Framework](../../../docs/standard/design-guidelines/index.md)
