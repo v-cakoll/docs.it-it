@@ -1,5 +1,5 @@
 ---
-title: '&lt;disableFusionUpdatesFromADManager&gt; elemento'
+title: '&lt;disableFusionUpdatesFromADManager&gt; Element'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - disableFusionUpdatesFromADManager element
@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 58d2866c-37bd-4ffa-abaf-ff35926a2939
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d4189efbab9bfc85b6a992934604d5071a767163
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 4ceaf0b51677a17a2f2a8c0d9d9316cb5b9b34cb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612543"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54547241"
 ---
-# <a name="ltdisablefusionupdatesfromadmanagergt-element"></a>&lt;disableFusionUpdatesFromADManager&gt; elemento
+# <a name="ltdisablefusionupdatesfromadmanagergt-element"></a>&lt;disableFusionUpdatesFromADManager&gt; Element
 Specifica se è disabilitato il comportamento predefinito, ovvero consentire all'host di runtime di eseguire l'override delle impostazioni di configurazione per un dominio applicazione.  
   
  \<configurazione > elemento  
 \<runtime > elemento  
-\<disableFusionUpdatesFromADManager >  
+\<disableFusionUpdatesFromADManager>  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -75,7 +75,7 @@ Specifica se è disabilitato il comportamento predefinito, ovvero consentire all
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
-- [Schema delle impostazioni di runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+## <a name="see-also"></a>Vedere anche
+- [Schema delle impostazioni di runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [Come il runtime individua gli assembly](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
