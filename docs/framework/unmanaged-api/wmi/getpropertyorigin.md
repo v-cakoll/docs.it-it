@@ -16,19 +16,19 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 86c512f25c40f201d818b6789c6410bfb095b878
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: b61c0359b8b18cb5082b1739defc65371476af25
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865270"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54529921"
 ---
-# <a name="getpropertyorigin-function"></a><span data-ttu-id="8920d-103">GetPropertyOrigin (funzione)</span><span class="sxs-lookup"><span data-stu-id="8920d-103">GetPropertyOrigin function</span></span>
-<span data-ttu-id="8920d-104">Determina la classe in cui viene dichiarata una proprietà.</span><span class="sxs-lookup"><span data-stu-id="8920d-104">Determines the class in which a property is declared.</span></span>
+# <a name="getpropertyorigin-function"></a><span data-ttu-id="75b5e-103">GetPropertyOrigin (funzione)</span><span class="sxs-lookup"><span data-stu-id="75b5e-103">GetPropertyOrigin function</span></span>
+<span data-ttu-id="75b5e-104">Determina la classe in cui viene dichiarata una proprietà.</span><span class="sxs-lookup"><span data-stu-id="75b5e-104">Determines the class in which a property is declared.</span></span>
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
-## <a name="syntax"></a><span data-ttu-id="8920d-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="8920d-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="75b5e-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="75b5e-105">Syntax</span></span>  
   
 ```  
 HRESULT GetPropertyOrigin (
@@ -39,46 +39,46 @@ HRESULT GetPropertyOrigin (
 ); 
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="8920d-106">Parametri</span><span class="sxs-lookup"><span data-stu-id="8920d-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="75b5e-106">Parametri</span><span class="sxs-lookup"><span data-stu-id="75b5e-106">Parameters</span></span>
 
 `vFunc`  
-<span data-ttu-id="8920d-107">[in] Questo parametro è inutilizzato.</span><span class="sxs-lookup"><span data-stu-id="8920d-107">[in] This parameter is unused.</span></span>
+<span data-ttu-id="75b5e-107">[in] Questo parametro è inutilizzato.</span><span class="sxs-lookup"><span data-stu-id="75b5e-107">[in] This parameter is unused.</span></span>
 
 `ptr`  
-<span data-ttu-id="8920d-108">[in] Un puntatore a un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) istanza.</span><span class="sxs-lookup"><span data-stu-id="8920d-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
+<span data-ttu-id="75b5e-108">[in] Un puntatore a un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) istanza.</span><span class="sxs-lookup"><span data-stu-id="75b5e-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
 
 `wszMethodName`  
-<span data-ttu-id="8920d-109">[in] Il nome della proprietà per l'oggetto la cui classe proprietaria viene richiesto.</span><span class="sxs-lookup"><span data-stu-id="8920d-109">[in] The name of the property for the object whose owning class is being requested.</span></span> 
+<span data-ttu-id="75b5e-109">[in] Il nome della proprietà per l'oggetto la cui classe proprietaria viene richiesto.</span><span class="sxs-lookup"><span data-stu-id="75b5e-109">[in] The name of the property for the object whose owning class is being requested.</span></span> 
 
 `pstrClassName`  
-<span data-ttu-id="8920d-110">[out] Riceve il nome della classe cui appartiene la proprietà.</span><span class="sxs-lookup"><span data-stu-id="8920d-110">[out] Receives the name of the class that owns the property.</span></span>
+<span data-ttu-id="75b5e-110">[out] Riceve il nome della classe cui appartiene la proprietà.</span><span class="sxs-lookup"><span data-stu-id="75b5e-110">[out] Receives the name of the class that owns the property.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="8920d-111">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="8920d-111">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="75b5e-111">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="75b5e-111">Return value</span></span>
 
-<span data-ttu-id="8920d-112">I seguenti valori restituiti da questa funzione sono definiti nel *WbemCli.h* file di intestazione, oppure è possibile definirle come costanti nel codice:</span><span class="sxs-lookup"><span data-stu-id="8920d-112">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
+<span data-ttu-id="75b5e-112">I seguenti valori restituiti da questa funzione sono definiti nel *WbemCli.h* file di intestazione, oppure è possibile definirle come costanti nel codice:</span><span class="sxs-lookup"><span data-stu-id="75b5e-112">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
 
-|<span data-ttu-id="8920d-113">Costante</span><span class="sxs-lookup"><span data-stu-id="8920d-113">Constant</span></span>  |<span data-ttu-id="8920d-114">Valore</span><span class="sxs-lookup"><span data-stu-id="8920d-114">Value</span></span>  |<span data-ttu-id="8920d-115">Descrizione</span><span class="sxs-lookup"><span data-stu-id="8920d-115">Description</span></span>  |
+|<span data-ttu-id="75b5e-113">Costante</span><span class="sxs-lookup"><span data-stu-id="75b5e-113">Constant</span></span>  |<span data-ttu-id="75b5e-114">Value</span><span class="sxs-lookup"><span data-stu-id="75b5e-114">Value</span></span>  |<span data-ttu-id="75b5e-115">Descrizione</span><span class="sxs-lookup"><span data-stu-id="75b5e-115">Description</span></span>  |
 |---------|---------|---------|
-|`WBEM_E_FAILED` | <span data-ttu-id="8920d-116">0x80041001</span><span class="sxs-lookup"><span data-stu-id="8920d-116">0x80041001</span></span> | <span data-ttu-id="8920d-117">Si è verificato un errore generale.</span><span class="sxs-lookup"><span data-stu-id="8920d-117">There has been a general failure.</span></span> |
-|`WBEM_E_NOT_FOUND` | <span data-ttu-id="8920d-118">0x80041002</span><span class="sxs-lookup"><span data-stu-id="8920d-118">0x80041002</span></span> | <span data-ttu-id="8920d-119">La proprietà specificata non è stata trovata.</span><span class="sxs-lookup"><span data-stu-id="8920d-119">The specified property was not found.</span></span> |
-|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="8920d-120">0x80041008</span><span class="sxs-lookup"><span data-stu-id="8920d-120">0x80041008</span></span> | <span data-ttu-id="8920d-121">Un parametro non è valido.</span><span class="sxs-lookup"><span data-stu-id="8920d-121">A parameter is not valid.</span></span> |
-|`WBEM_E_OUT_OF_MEMORY` | <span data-ttu-id="8920d-122">0x80041006</span><span class="sxs-lookup"><span data-stu-id="8920d-122">0x80041006</span></span> | <span data-ttu-id="8920d-123">Memoria insufficiente è disponibile per completare l'operazione.</span><span class="sxs-lookup"><span data-stu-id="8920d-123">Not enough memory is available to complete the operation.</span></span> |
-|`WBEM_S_NO_ERROR` | <span data-ttu-id="8920d-124">0</span><span class="sxs-lookup"><span data-stu-id="8920d-124">0</span></span> | <span data-ttu-id="8920d-125">La chiamata di funzione è riuscita.</span><span class="sxs-lookup"><span data-stu-id="8920d-125">The function call was successful.</span></span>  |
+|`WBEM_E_FAILED` | <span data-ttu-id="75b5e-116">0x80041001</span><span class="sxs-lookup"><span data-stu-id="75b5e-116">0x80041001</span></span> | <span data-ttu-id="75b5e-117">Si è verificato un errore generale.</span><span class="sxs-lookup"><span data-stu-id="75b5e-117">There has been a general failure.</span></span> |
+|`WBEM_E_NOT_FOUND` | <span data-ttu-id="75b5e-118">0x80041002</span><span class="sxs-lookup"><span data-stu-id="75b5e-118">0x80041002</span></span> | <span data-ttu-id="75b5e-119">La proprietà specificata non è stata trovata.</span><span class="sxs-lookup"><span data-stu-id="75b5e-119">The specified property was not found.</span></span> |
+|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="75b5e-120">0x80041008</span><span class="sxs-lookup"><span data-stu-id="75b5e-120">0x80041008</span></span> | <span data-ttu-id="75b5e-121">Un parametro non è valido.</span><span class="sxs-lookup"><span data-stu-id="75b5e-121">A parameter is not valid.</span></span> |
+|`WBEM_E_OUT_OF_MEMORY` | <span data-ttu-id="75b5e-122">0x80041006</span><span class="sxs-lookup"><span data-stu-id="75b5e-122">0x80041006</span></span> | <span data-ttu-id="75b5e-123">Memoria insufficiente è disponibile per completare l'operazione.</span><span class="sxs-lookup"><span data-stu-id="75b5e-123">Not enough memory is available to complete the operation.</span></span> |
+|`WBEM_S_NO_ERROR` | <span data-ttu-id="75b5e-124">0</span><span class="sxs-lookup"><span data-stu-id="75b5e-124">0</span></span> | <span data-ttu-id="75b5e-125">La chiamata di funzione è riuscita.</span><span class="sxs-lookup"><span data-stu-id="75b5e-125">The function call was successful.</span></span>  |
   
-## <a name="remarks"></a><span data-ttu-id="8920d-126">Note</span><span class="sxs-lookup"><span data-stu-id="8920d-126">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="75b5e-126">Note</span><span class="sxs-lookup"><span data-stu-id="75b5e-126">Remarks</span></span>
 
-<span data-ttu-id="8920d-127">Questa funzione esegue il wrapping di una chiamata per il [IWbemClassObject::GetPropertyOrigin](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getpropertyorigin) (metodo).</span><span class="sxs-lookup"><span data-stu-id="8920d-127">This function wraps a call to the [IWbemClassObject::GetPropertyOrigin](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getpropertyorigin) method.</span></span>
+<span data-ttu-id="75b5e-127">Questa funzione esegue il wrapping di una chiamata per il [IWbemClassObject::GetPropertyOrigin](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getpropertyorigin) (metodo).</span><span class="sxs-lookup"><span data-stu-id="75b5e-127">This function wraps a call to the [IWbemClassObject::GetPropertyOrigin](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getpropertyorigin) method.</span></span>
 
-<span data-ttu-id="8920d-128">Poiché una classe può ereditare le proprietà da uno o più classi base, gli sviluppatori spesso vogliono determinare la proprietà in cui è definito un metodo specifico.</span><span class="sxs-lookup"><span data-stu-id="8920d-128">Because a class can inherit properties from one or more base classes, developers often want to determine the property in which a given method is defined.</span></span>
+<span data-ttu-id="75b5e-128">Poiché una classe può ereditare le proprietà da uno o più classi base, gli sviluppatori spesso vogliono determinare la proprietà in cui è definito un metodo specifico.</span><span class="sxs-lookup"><span data-stu-id="75b5e-128">Because a class can inherit properties from one or more base classes, developers often want to determine the property in which a given method is defined.</span></span>
 
-<span data-ttu-id="8920d-129">Il `pstrClassName` parametro non deve puntare a un valore valido `BSTR` prima di chiamare la funzione poiché si tratta di un `out` parametro; questo puntatore non viene deallocato dopo la funzione restituisce.</span><span class="sxs-lookup"><span data-stu-id="8920d-129">The `pstrClassName` parameter must not point to a valid `BSTR` before the function is called because this is an `out` parameter; this pointer is not deallocated after the function returns.</span></span>
+<span data-ttu-id="75b5e-129">Il `pstrClassName` parametro non deve puntare a un valore valido `BSTR` prima di chiamare la funzione poiché si tratta di un `out` parametro; questo puntatore non viene deallocato dopo la funzione restituisce.</span><span class="sxs-lookup"><span data-stu-id="75b5e-129">The `pstrClassName` parameter must not point to a valid `BSTR` before the function is called because this is an `out` parameter; this pointer is not deallocated after the function returns.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="8920d-130">Requisiti</span><span class="sxs-lookup"><span data-stu-id="8920d-130">Requirements</span></span>  
-<span data-ttu-id="8920d-131">**Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8920d-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="75b5e-130">Requisiti</span><span class="sxs-lookup"><span data-stu-id="75b5e-130">Requirements</span></span>  
+<span data-ttu-id="75b5e-131">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="75b5e-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8920d-132">**Intestazione:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="8920d-132">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="75b5e-132">**Intestazione:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="75b5e-132">**Header:** WMINet_Utils.idl</span></span>  
   
- <span data-ttu-id="8920d-133">**Versioni di .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="8920d-133">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="75b5e-133">**Versioni di .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="75b5e-133">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8920d-134">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="8920d-134">See also</span></span>  
-[<span data-ttu-id="8920d-135">WMI e contatori delle prestazioni (riferimenti alle API non gestite)</span><span class="sxs-lookup"><span data-stu-id="8920d-135">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="75b5e-134">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="75b5e-134">See also</span></span>
+- [<span data-ttu-id="75b5e-135">WMI e contatori delle prestazioni (riferimenti alle API non gestite)</span><span class="sxs-lookup"><span data-stu-id="75b5e-135">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
