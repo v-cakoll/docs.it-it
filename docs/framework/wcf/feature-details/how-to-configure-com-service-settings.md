@@ -1,17 +1,17 @@
 ---
-title: 'Procedura: configurare le impostazioni del servizio COM+'
+title: 'Procedura: Configurare le impostazioni di servizio COM+'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM+ [WCF], configuring service settings
 ms.assetid: f42a55a8-3af8-4394-9fdd-bf12a93780eb
-ms.openlocfilehash: 9cbeb03e21ed3b8ec272d47815ac7e9c48d77499
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 8deb7be51cdf3273a57d6777b103123636a2d2f8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49348770"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54637398"
 ---
-# <a name="how-to-configure-com-service-settings"></a>Procedura: configurare le impostazioni del servizio COM+
+# <a name="how-to-configure-com-service-settings"></a>Procedura: Configurare le impostazioni di servizio COM+
 Quando l'interfaccia di un'applicazione viene aggiunta o rimossa usando lo strumento di configurazione del servizio COM+, la configurazione del servizio Web viene aggiornata nel file di configurazione dell'applicazione. Nella modalità di hosting COM+, il file Application config viene inserito nella Directory radice dell'applicazione (%PROGRAMFILES%\ComPlus applicazioni\\{appid} è l'impostazione predefinita). In entrambe le modalità di hosting Web il file Web.config è posizionato nella directory vroot specificata.  
   
 > [!NOTE]
@@ -96,5 +96,5 @@ public interface IFinancesContract : IDisposable
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
-* [Integrazione con applicazioni COM+](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
+## <a name="see-also"></a>Vedere anche
+- [Integrazione con applicazioni COM+](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)

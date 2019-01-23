@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: eseguire la migrazione di servizi Web ASP.NET compatibili AJAX a WCF'
+title: 'Procedura: Eseguire la migrazione di servizi Web ASP.NET compatibili AJAX a WCF'
 ms.date: 03/30/2017
 ms.assetid: 1428df4d-b18f-4e6d-bd4d-79ab3dd5147c
-ms.openlocfilehash: cd630fa8a583b5d1efdaefaf899cb6e345e7c7ad
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: de90f4b89f182c55dec3f6fee6836c64535aa2d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840914"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638288"
 ---
-# <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>Procedura: eseguire la migrazione di servizi Web ASP.NET compatibili AJAX a WCF
+# <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>Procedura: Eseguire la migrazione di servizi Web ASP.NET compatibili AJAX a WCF
 In questo argomento descrive le procedure necessarie per eseguire la migrazione di un servizio ASP.NET AJAX di base a un servizio compatibile con AJAX Windows Communication Foundation (WCF) equivalente. Viene illustrato come creare una versione WCF equivalente a livello funzionale di un servizio ASP.NET AJAX. I due servizi possono quindi essere usati contemporaneamente, o il servizio WCF è utilizzabile per sostituire il servizio ASP.NET AJAX.
 
  La migrazione di una versione esistente di ASP.NET AJAX servizio a un servizio AJAX WCF offre i vantaggi seguenti:
@@ -22,11 +22,11 @@ In questo argomento descrive le procedure necessarie per eseguire la migrazione 
 
  Il codice generato dalle procedure descritte in questo argomento viene fornito nell'esempio riportato dopo le procedure stesse.
 
- Per altre informazioni sull'esposizione di un servizio WCF tramite un endpoint compatibile con AJAX, vedere la [procedura: utilizzare la configurazione per aggiungere un Endpoint ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md) argomento.
+ Per altre informazioni sull'esposizione di un servizio WCF tramite un endpoint compatibile con AJAX, vedere il [come: Utilizzare la configurazione per aggiungere un Endpoint ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md) argomento.
 
 ### <a name="to-create-and-test-the-aspnet-web-service-application"></a>Per creare e testare l'applicazione del servizio Web ASP.NET
 
-1.  Aprire Visual Studio 2012.
+1.  Open Visual Studio 2012.
 
 2.  Dal **File** dal menu **New**, quindi **progetto**, quindi **Web**, quindi selezionare **applicazione servizio Web ASP.NET** .
 
@@ -36,7 +36,7 @@ In questo argomento descrive le procedure necessarie per eseguire la migrazione 
 
 5.  Dal **compilare** dal menu **Compila soluzione**.
 
-6.  Dal **Debug** dal menu **Avvia senza eseguire debug**.
+6.  Scegliere **Avvia senza eseguire debug** dal menu **Debug**.
 
 7.  Nella pagina Web generata, selezionare l'operazione `HelloWorld`.
 
@@ -213,4 +213,4 @@ d.Add("two", 2);
 |Caratteri di escape|Sempre con un carattere di escape barra (/); non consente mai caratteri JSON non validi senza carattere di escape, ad esempio "\n".|Con un carattere di escape barra (/) per i valori DateTime.|
 
 ## <a name="see-also"></a>Vedere anche
- [Procedura: Usare la configurazione per aggiungere un endpoint ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)
+- [Procedura: Utilizzare la configurazione per aggiungere un Endpoint ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)

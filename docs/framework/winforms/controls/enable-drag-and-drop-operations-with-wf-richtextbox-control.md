@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: abilitare operazioni di trascinamento con il controllo RichTextBox Windows Form'
+title: 'Procedura: Abilitare le operazioni di trascinamento e rilascio con il controllo RichTextBox di Windows Form'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,21 +11,21 @@ helpviewer_keywords:
 - text boxes [Windows Forms], drag-and-drop operations
 - RichTextBox control [Windows Forms], drag-and-drop operations
 ms.assetid: ca167d1c-2014-4cf0-96a0-20598470be3b
-ms.openlocfilehash: 3adafd9b821dd9366a3ad5080154ab7eb5a2d2f8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ccf98ee1afe82b2e76679406a08e98e6f4e6fb15
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529766"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54637466"
 ---
-# <a name="how-to-enable-drag-and-drop-operations-with-the-windows-forms-richtextbox-control"></a>Procedura: abilitare operazioni di trascinamento con il controllo RichTextBox Windows Form
+# <a name="how-to-enable-drag-and-drop-operations-with-the-windows-forms-richtextbox-control"></a>Procedura: Abilitare le operazioni di trascinamento e rilascio con il controllo RichTextBox di Windows Form
 Le operazioni di trascinamento della selezione del controllo <xref:System.Windows.Forms.RichTextBox> di Windows Form vengono eseguite gestendo gli eventi <xref:System.Windows.Forms.RichTextBox.DragEnter> e <xref:System.Windows.Forms.RichTextBox.DragDrop> . Quindi, le operazioni di trascinamento della selezione risultano molto semplici con il controllo <xref:System.Windows.Forms.RichTextBox> .  
   
 ### <a name="to-enable-drag-operations-in-a-richtextbox-control"></a>Per abilitare le operazioni di trascinamento in un controllo RichTextBox  
   
 1.  Impostare la proprietà <xref:System.Windows.Forms.RichTextBox.AllowDrop%2A> del controllo <xref:System.Windows.Forms.RichTextBox> su `true`.  
   
-2.  Scrivere il codice nel gestore eventi per l'evento <xref:System.Windows.Forms.RichTextBox.DragEnter> . Usare un'istruzione `if` per assicurarsi che i dati trascinati siano di un tipo accettabile (in questo caso, testo). La proprietà <xref:System.Windows.Forms.DragEventArgs.Effect%2A?displayProperty=nameWithType> può essere impostata su uno qualsiasi dei valori dell'enumerazione <xref:System.Windows.Forms.DragDropEffects>.  
+2.  Scrivere il codice nel gestore eventi per l'evento <xref:System.Windows.Forms.RichTextBox.DragEnter> . Usare un'istruzione `if` per assicurarsi che i dati trascinati siano di un tipo accettabile (in questo caso, testo). La proprietà <xref:System.Windows.Forms.DragEventArgs.Effect%2A?displayProperty=nameWithType> può essere impostata su uno qualsiasi dei valori dell'enumerazione <xref:System.Windows.Forms.DragDropEffects> .  
   
     ```vb  
     Private Sub RichTextBox1_DragEnter(ByVal sender As Object, _   
@@ -164,8 +164,8 @@ Le operazioni di trascinamento della selezione del controllo <xref:System.Window
   
      Quando si rilascia il pulsante del mouse, il testo selezionato viene rilasciato (ossia, viene generato l'evento <xref:System.Windows.Forms.RichTextBox.DragDrop> ) e viene inserito all'interno del controllo <xref:System.Windows.Forms.RichTextBox> .  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Windows.Forms.RichTextBox>  
- [Procedura: Eseguire operazioni di trascinamento e rilascio tra applicazioni](../../../../docs/framework/winforms/advanced/how-to-perform-drag-and-drop-operations-between-applications.md)  
- [Controllo RichTextBox](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)  
- [Controlli da usare in Windows Form](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Windows.Forms.RichTextBox>
+- [Procedura: Eseguire operazioni di trascinamento e rilascio tra applicazioni](../../../../docs/framework/winforms/advanced/how-to-perform-drag-and-drop-operations-between-applications.md)
+- [Controllo RichTextBox](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)
+- [Controlli da usare in Windows Form](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

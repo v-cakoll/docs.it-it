@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 8241523f-d8e1-4fb6-bf6a-b29bfe07b38a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 009d70423a3eb29c97f3279a288c37623dac927e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fed8097c472be487256840f289c1d8252d978a93
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397273"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54637108"
 ---
 # <a name="runtime-directives-rdxml-configuration-file-reference"></a>Riferimento a file di configurazione di direttive di runtime (rd.xml)
 Un file di direttive di runtime (rd.xml) è un file di configurazione XML che specifica se gli elementi del programma designato sono disponibili per la reflection. Ecco un esempio di un file di direttive di runtime:  
@@ -459,6 +459,6 @@ Un file di direttive di runtime (rd.xml) è un file di configurazione XML che sp
   
  Per altre informazioni, vedere la sezione relativa alle differenze nei serializzatori in [Migrating Your Windows Store App to .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md) (Migrazione dell'app di Windows Store a .NET Native).  
   
-## <a name="see-also"></a>Vedere anche  
- [Elementi direttiva di runtime](../../../docs/framework/net-native/runtime-directive-elements.md)  
- [Reflection e .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)
+## <a name="see-also"></a>Vedere anche
+- [Elementi direttiva di runtime](../../../docs/framework/net-native/runtime-directive-elements.md)
+- [Reflection e .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)

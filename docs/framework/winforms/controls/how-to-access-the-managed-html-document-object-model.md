@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Accedere al Document Object Model HTML gestito'
+title: 'Procedura: Accedere al modello a oggetti documenti HTML gestito'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - HTML DOM [Windows Forms], accessing
 - managed HTML DOM [Windows Forms], accessing
 ms.assetid: 40fa5cd5-1ed8-42f6-a93f-9ac01608bbeb
-ms.openlocfilehash: 175a29322fe2af13992e267b3fc3308b70212272
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8799ac9897771a7cdf5a1e473914f461e435c061
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33527661"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54637151"
 ---
-# <a name="how-to-access-the-managed-html-document-object-model"></a>Procedura: Accedere al Document Object Model HTML gestito
+# <a name="how-to-access-the-managed-html-document-object-model"></a>Procedura: Accedere al modello a oggetti documenti HTML gestito
 È possibile accedere a Document Object Model (DOM) HTML gestito da due tipi di applicazione:  
   
 -   Un'applicazione Windows Form (con estensione EXE) che ha ospitato il controllo gestito <xref:System.Windows.Forms.WebBrowser>. Queste due tecnologie sono complementari: il controllo <xref:System.Windows.Forms.WebBrowser> visualizza la pagina all'utente e DOM HTML rappresenta la struttura logica del documento.  
@@ -24,7 +24,7 @@ ms.locfileid: "33527661"
   
 ### <a name="to-access-dom-from-a-windows-forms-application"></a>Per accedere a DOM da un'applicazione Windows Form  
   
-1.  Ospitare un controllo <xref:System.Windows.Forms.WebBrowser> nell'applicazione Windows Form e verificare la presenza dell'evento <xref:System.Windows.Forms.WebBrowser.DocumentCompleted>. Per altre informazioni su come ospitare i controlli e verificare gli eventi, vedere [Eventi](../../../../docs/standard/events/index.md).  
+1.  Ospitare un controllo <xref:System.Windows.Forms.WebBrowser> nell'applicazione Windows Forms e verificare la presenza dell'evento <xref:System.Windows.Forms.WebBrowser.DocumentCompleted>. Per altre informazioni su come ospitare i controlli e verificare gli eventi, vedere [Eventi](../../../../docs/standard/events/index.md).  
   
 2.  Recuperare la classe <xref:System.Windows.Forms.HtmlDocument> per la pagina corrente accedendo alla proprietà <xref:System.Windows.Forms.WebBrowser.Document%2A> del controllo <xref:System.Windows.Forms.WebBrowser>.  
 
@@ -45,5 +45,5 @@ ms.locfileid: "33527661"
   
 1.  L'applicazione o la classe <xref:System.Windows.Forms.UserControl> richiederà l'attendibilità totale per accedere a DOM HTML gestito. Se si distribuisce un'applicazione Windows Form con [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)], è possibile richiedere l'attendibilità totale con l'elevazione delle autorizzazioni o la distribuzione di applicazioni attendibili. Per informazioni, vedere [Protezione di applicazioni ClickOnce](/visualstudio/deployment/securing-clickonce-applications).  
   
-## <a name="see-also"></a>Vedere anche  
- [Utilizzare il Document Object Model HTML gestito](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)
+## <a name="see-also"></a>Vedere anche
+- [Utilizzare il Document Object Model HTML gestito](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)

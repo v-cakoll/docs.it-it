@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 009f1482de6e1daea21766300b4fb6a3ab0ffc8c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3fc212321b28545f62f0a1c2965281d02ac73e40
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432288"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638106"
 ---
 # <a name="corgcstats-structure"></a>Struttura COR_GC_STATS
-Fornisce informazioni statistiche sul meccanismo di garbage collection di common language runtime (CLR).  
+Fornisce statistiche sul meccanismo di garbage collection di common language runtime (CLR).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -48,24 +48,24 @@ typedef struct _COR_GC_STATS {
   
 |Membro|Descrizione|  
 |------------|-----------------|  
-|`Flags`|Indica i valori del campo devono essere calcolati e restituiti.|  
-|`ExplicitGCCount`|Indica il numero di operazioni di garbage collection che è stata imposta da una richiesta esterna.|  
+|`Flags`|Indica i valori dei campi devono essere calcolati e restituiti.|  
+|`ExplicitGCCount`|Indica il numero di operazioni di garbage collection che sono stati obbligati da una richiesta esterna.|  
 |`GenCollectionsTaken`|Indica il numero di operazioni di garbage collection eseguite per ogni generazione.|  
-|`CommittedKBytes`|Numero totale di kilobyte sottoposti a commit in tutti gli heap.|  
-|`ReservedKBytes`|Numero totale di kilobyte riservati in tutti gli heap.|  
-|`Gen0HeapSizeKBytes`|La dimensione, espressa in kilobyte, dell'heap di generazione 0.|  
-|`Gen1HeapSizeKBytes`|La dimensione, espressa in kilobyte, dell'heap di generazione 1.|  
-|`Gen2HeapSizeKBytes`|La dimensione, espressa in kilobyte, dell'heap di generazione 2.|  
-|`LargeObjectHeapSizeKBytes`|La dimensione, espressa in kilobyte, dell'heap oggetti grandi.|  
-|`KBytesPromotedFromGen0`|La dimensione, espressa in kilobyte, gli oggetti promossi dalla generazione 0 alla generazione 1.|  
-|`KBytesPromotedFromGen1`|La dimensione, espressa in kilobyte, gli oggetti promossi dalla generazione 1 alla generazione 2.|  
+|`CommittedKBytes`|Il numero totale di kilobyte eseguito il commit in tutti gli heap.|  
+|`ReservedKBytes`|Il numero totale di kilobyte riservato in tutti gli heap.|  
+|`Gen0HeapSizeKBytes`|Dimensione, espressa in kilobyte, dell'heap di generazione 0.|  
+|`Gen1HeapSizeKBytes`|Dimensione, espressa in kilobyte, dell'heap di generazione 1.|  
+|`Gen2HeapSizeKBytes`|Dimensione, espressa in kilobyte, dell'heap di generazione 2.|  
+|`LargeObjectHeapSizeKBytes`|Dimensione, espressa in kilobyte, dell'heap oggetti grandi.|  
+|`KBytesPromotedFromGen0`|Dimensione, espressa in kilobyte, gli oggetti promossi dalla generazione 0 alla generazione 1.|  
+|`KBytesPromotedFromGen1`|Dimensione, espressa in kilobyte, gli oggetti promossi dalla generazione 1 alla generazione 2.|  
   
 ## <a name="remarks"></a>Note  
- Il [ICLRGCManager:: GetStats](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md) metodo richiede il `Flags` campo il `COR_GC_STATS` struttura sia impostato su uno o più valori del [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) enumerazione per specificare quali le statistiche devono essere impostate.  
+ Il [ICLRGCManager](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md) metodo richiede il `Flags` campo il `COR_GC_STATS` struttura viene impostata su uno o più valori del [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) enumerazione per specificare quali le statistiche devono essere impostate.  
   
- Nella tabella seguente viene eseguito il mapping le statistiche fornite da questa struttura per le due [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) valori di enumerazione, `COR_GC_COUNTS` e `COR_GC_MEMORYUSAGE`.  
+ Nella tabella seguente viene eseguito il mapping le statistiche fornite da questa struttura per i due [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) valori di enumerazione `COR_GC_COUNTS` e `COR_GC_MEMORYUSAGE`.  
   
-|Specificato da COR_GC_COUNTS|Specificato da COR_GC_MEMORYUSAGE|  
+|Specificato dal COR_GC_COUNTS|Specificato dal COR_GC_MEMORYUSAGE|  
 |----------------------------------|---------------------------------------|  
 |`ExplicitGCCount`<br /><br /> `GenCollectionsTaken`|`CommittedKBytes`<br /><br /> `ReservedKBytes`<br /><br /> `Gen0HeapSizeKBytes`<br /><br /> `Gen1HeapSizeKBytes`<br /><br /> `Gen2HeapSizeKBytes`<br /><br /> `LargeObjectHeapSizeKBytes`<br /><br /> `KBytesPromotedFromGen0`<br /><br /> `KBytesPromotedFromGen1`|  
   
@@ -78,15 +78,15 @@ pCLRGCManager->GetStats(&GCStats);
 ```  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** GCHost. idl  
+ **Intestazione:** GCHost.idl  
   
- **Libreria:** inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Strutture di hosting](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)  
- [Gestione automatica della memoria](../../../../docs/standard/automatic-memory-management.md)  
- [Garbage Collection](../../../../docs/standard/garbage-collection/index.md)
+## <a name="see-also"></a>Vedere anche
+- [Strutture di hosting](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
+- [Gestione automatica della memoria](../../../../docs/standard/automatic-memory-management.md)
+- [Garbage Collection](../../../../docs/standard/garbage-collection/index.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4959d595030df476f5554841c2ae3c73a86a2c31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 70d2d4ed0d2b923b1095fd0ce898330c319fa5cf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446659"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54637372"
 ---
 # <a name="corserializationtype-enumeration"></a>Enumerazione CorSerializationType
 Specifica come un oggetto viene serializzato da common language runtime.  
@@ -59,8 +59,8 @@ typedef enum CorSerializationType {
   
 |Membro|Descrizione|  
 |------------|-----------------|  
-|`SERIALIZATION_TYPE_UNDEFINED`|Serializzazione dell'oggetto è definita.|  
-|`SERIALIZATION_TYPE_BOOLEAN`|L'oggetto è serializzato come tipo booleano.|  
+|`SERIALIZATION_TYPE_UNDEFINED`|Serializzazione dell'oggetto non è definita.|  
+|`SERIALIZATION_TYPE_BOOLEAN`|L'oggetto viene serializzato come un tipo Boolean|  
 |`SERIALIZATION_TYPE_CHAR`|Oggetto viene serializzato come tipo di carattere.|  
 |`SERIALIZATION_TYPE_I1`|Oggetto viene serializzato come un intero con segno a 1 byte.|  
 |`SERIALIZATION_TYPE_U1`|Oggetto viene serializzato come un intero senza segno a 1 byte.|  
@@ -70,22 +70,22 @@ typedef enum CorSerializationType {
 |`SERIALIZATION_TYPE_U4`|Oggetto viene serializzato come un intero senza segno a 4 byte.|  
 |`SERIALIZATION_TYPE_I8`|Oggetto viene serializzato come un intero con segno a 8 byte.|  
 |`SERIALIZATION_TYPE_U8`|Oggetto viene serializzato come un intero senza segno a 8 byte.|  
-|`SERIALIZATION_TYPE_R4`|Oggetto viene serializzato come un punto a virgola mobile a 4 byte.|  
+|`SERIALIZATION_TYPE_R4`|Oggetto viene serializzato come virgola mobile a 4 byte.|  
 |`SERIALIZATION_TYPE_R8`|Oggetto viene serializzato come un punto a virgola mobile a 8 byte.|  
 |`SERIALIZATION_TYPE_STRING`|Oggetto viene serializzato come tipo System. String.|  
-|`SERIALIZATION_TYPE_SZARRAY`|L'oggetto viene serializzato come unidimensionale, matrice di limite inferiore zero.|  
+|`SERIALIZATION_TYPE_SZARRAY`|L'oggetto viene serializzato come un singolo-dimensionale, matrice di limite inferiore zero.|  
 |`SERIALIZATION_TYPE_TYPE`|Oggetto viene serializzato come tipo generico.|  
 |`SERIALIZATION_TYPE_TAGGED_OBJECT`|Oggetto viene serializzato come oggetto con tag.|  
 |`SERIALIZATION_TYPE_FIELD`|Oggetto viene serializzato come un campo.|  
-|`SERIALIZATION_TYPE_PROPERTY`|Oggetto viene serializzato come proprietà.|  
-|`SERIALIZATION_TYPE_ENUM`|Oggetto viene serializzato come un'enumerazione.|  
+|`SERIALIZATION_TYPE_PROPERTY`|Oggetto viene serializzato come una proprietà.|  
+|`SERIALIZATION_TYPE_ENUM`|Oggetto viene serializzato come enumerazione.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorHdr. H  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Enumerazioni dei metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Vedere anche
+- [Enumerazioni dei metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

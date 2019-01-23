@@ -1,24 +1,24 @@
 ---
-title: 'Procedura: popolare raccolte di oggetti da più origini (LINQ) (Visual Basic)'
+title: 'Procedura: Popolare le raccolte di oggetti da più origini (LINQ) (Visual Basic)'
 ms.date: 06/22/2018
 ms.assetid: 63062a22-e6a9-42c0-b357-c7c965f58f33
-ms.openlocfilehash: 6560f853874f9b9a9aeb53bd0678540004fdfcc1
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: 0228d152539abe3bf0db5a8e5bf4581eaf957b31
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37070863"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638821"
 ---
-# <a name="how-to-populate-object-collections-from-multiple-sources-linq-visual-basic"></a>Procedura: popolare raccolte di oggetti da più origini (LINQ) (Visual Basic)
+# <a name="how-to-populate-object-collections-from-multiple-sources-linq-visual-basic"></a>Procedura: Popolare le raccolte di oggetti da più origini (LINQ) (Visual Basic)
 
 In questo esempio viene illustrato come unire dati da origini diverse in una sequenza di tipi nuovi.
 
 > [!NOTE]
-> Non tentare di aggiungere dati in memoria o i dati nel file system con i dati che è ancora in un database. Questi join tra domini possono generare risultati non definiti a causa dei diversi modi in cui vengono definite le operazioni di join per le query di database e per altri tipi di origini. È anche possibile che tale operazione possa generare un'eccezione di memoria insufficiente se la quantità di dati nel database è piuttosto grande. Per creare un join di dati di un database con i dati in memoria, chiamare prima `ToList` o `ToArray` nella query di database e quindi creare il join nella raccolta restituita.
+> Non provare a creare un join di dati in memoria o nel file system con dati che sono ancora in un database. Questi join tra domini possono generare risultati non definiti a causa dei diversi modi in cui vengono definite le operazioni di join per le query di database e per altri tipi di origini. È anche possibile che tale operazione possa generare un'eccezione di memoria insufficiente se la quantità di dati nel database è piuttosto grande. Per creare un join di dati di un database con i dati in memoria, chiamare prima `ToList` o `ToArray` nella query di database e quindi creare il join nella raccolta restituita.
 
 ## <a name="to-create-the-data-file"></a>Per creare il file di dati
 
-- Copiare i file Names. csv e scores nella cartella del progetto, come descritto in [procedura: unire contenuto da diversi file (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md).
+- Copiare i file Names. csv e scores. csv nella cartella del progetto, come descritto in [come: Unire contenuto da file non analoghi (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md).
 
 ## <a name="example"></a>Esempio
 
@@ -100,9 +100,9 @@ End Class
 ' The average score of Tucker Michael is 92
 ```
 
-Nel [clausola Select](../../../../visual-basic/language-reference/queries/select-clause.md) clausola, un inizializzatore di oggetto viene utilizzata per creare un'istanza di ogni nuovo `Student` oggetto usando i dati dalle due origini.
+Nel [clausola Select](../../../../visual-basic/language-reference/queries/select-clause.md) clausola, un inizializzatore di oggetto viene utilizzata per creare un'istanza di ogni nuovo `Student` oggetto utilizzando i dati dalle due origini.
 
-Se non è necessario archiviare i risultati di una query, i tipi anonimi possono essere più conveniente di tipi denominati. I tipi denominati sono necessari se si passano i risultati della query al di fuori del metodo in cui viene eseguita la query. Nell'esempio seguente viene eseguita la stessa attività dell'esempio precedente, ma vengono usati i tipi anonimi anziché i tipi denominati:
+Se non è necessario archiviare i risultati della query, può essere più utile usare i tipi anonimi rispetto ai tipi denominati. I tipi denominati sono necessari se si passano i risultati della query al di fuori del metodo in cui viene eseguita la query. Nell'esempio seguente viene eseguita la stessa attività dell'esempio precedente, ma vengono usati i tipi anonimi anziché i tipi denominati:
 
 ```vb
 ' Merge the data by using an anonymous type.
@@ -132,10 +132,10 @@ Next
 
 Creare e compilare un progetto destinato a una delle opzioni seguenti:
 
-- .NET framework versione 3.5 con un riferimento a DLL.
-- .NET framework versione 4.0 o versione successiva.
-- Versione di .NET core 1.0 o versione successiva.
+- .NET Framework versione 3.5 con un riferimento a System.Core.dll.
+- .NET Framework versione 4.0 o successiva.
+- .NET Core versione 1.0 o successiva.
 
 ## <a name="see-also"></a>Vedere anche
 
-[LINQ e stringhe (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ e stringhe (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

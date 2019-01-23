@@ -1,15 +1,15 @@
 ---
-title: 'Procedura dettagliata: modifica dei dati (C#)'
+title: 'Procedura dettagliata: La modifica dei dati (C#)'
 ms.date: 03/30/2017
 ms.assetid: 24adfbe0-0ad6-449f-997d-8808e0770d2e
-ms.openlocfilehash: b9b19d4f9a1fb56ddabbf3584c1fb7bb29cd6d6f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a4346479337820f33cc908c0fd191ee7258a3db6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357660"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54637307"
 ---
-# <a name="walkthrough-manipulating-data-c"></a>Procedura dettagliata: modifica dei dati (C#)
+# <a name="walkthrough-manipulating-data-c"></a>Procedura dettagliata: La modifica dei dati (C#)
 In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] end-to-end di base per l'aggiunta, la modifica e l'eliminazione dei dati in un database. Si utilizzerà una copia del database di esempio Northwind per aggiungere un cliente, modificare il nome di un cliente ed eliminare un ordine.  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
@@ -49,19 +49,19 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
 -   Invio delle modifiche al database Northwind.  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>Creazione di una soluzione LINQ to SQL  
- In questa prima attività, viene creata una soluzione Visual Studio che contiene i riferimenti necessari per compilare ed eseguire un [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] progetto.  
+ In questa prima attività, si crea una soluzione di Visual Studio che contiene i riferimenti necessari per compilare ed eseguire un [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] progetto.  
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>Per creare una soluzione LINQ to SQL  
   
 1.  In Visual Studio **File** dal menu **New**, quindi fare clic su **progetto**.  
   
-2.  Nel **tipi di progetto** riquadro il **nuovo progetto** la finestra di dialogo, fare clic su **Visual c#**.  
+2.  Nel **tipi di progetto** nel riquadro le **nuovo progetto** nella finestra di dialogo fare clic su **Visual C#** .  
   
 3.  Nel riquadro **Modelli** fare clic su **Applicazione console**.  
   
-4.  Nel **nome** digitare **LinqDataManipulationApp**.  
+4.  Nel **Name** , digitare **LinqDataManipulationApp**.  
   
-5.  Nel **percorso** verificare in cui si desidera archiviare i file di progetto.  
+5.  Nel **posizione** verificare in cui si desidera archiviare i file di progetto.  
   
 6.  Fare clic su **OK**.  
   
@@ -70,9 +70,9 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
   
 #### <a name="to-add-systemdatalinq"></a>Per aggiungere System.Data.Linq  
   
-1.  In **Esplora**, fare doppio clic su **riferimenti**, quindi fare clic su **Aggiungi riferimento**.  
+1.  Nelle **Esplora soluzioni**, fare doppio clic su **riferimenti**, quindi fare clic su **Aggiungi riferimento**.  
   
-2.  Nel **Aggiungi riferimento** la finestra di dialogo, fare clic su **.NET**, fare clic sull'assembly LINQ e quindi fare clic su **OK**.  
+2.  Nel **Aggiungi riferimento** finestra di dialogo, fare clic su **.NET**, fare clic sull'assembly e quindi fare clic su **OK**.  
   
      L'assembly verrà aggiunto al progetto.  
   
@@ -85,9 +85,9 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
   
 #### <a name="to-add-the-northwind-code-file-to-the-project"></a>Per aggiungere il file di codice di Northwind al progetto  
   
-1.  Nel **progetto** menu, fare clic su **Aggiungi elemento esistente**.  
+1.  Nel **Project** menu, fare clic su **Aggiungi elemento esistente**.  
   
-2.  Nel **Aggiungi elemento esistente** la finestra di dialogo, passare a c:\linqtest6\northwind.cs e quindi fare clic su **Aggiungi**.  
+2.  Nel **Aggiungi elemento esistente** finestra di dialogo, passare a c:\linqtest6\northwind.cs e quindi fare clic su **Add**.  
   
      Il file northwind.cs viene aggiunto al progetto.  
   
@@ -104,7 +104,7 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
   
      Oggetto **Console** verrà visualizzata la finestra.  
   
-     È possibile chiudere l'applicazione premendo INVIO nella **Console** finestra, oppure facendo clic **Termina debug** in Visual Studio **eseguire il Debug** menu.  
+     È possibile chiudere l'applicazione premendo INVIO nella **Console** finestra, oppure facendo clic **arresta debug** in Visual Studio **Debug** menu.  
   
 ## <a name="creating-a-new-entity"></a>Creazione di una nuova entità  
  La creazione di una nuova entità è un processo semplice. È possibile creare oggetti, ad esempio `Customer`, usando la parola chiave `new`.  
@@ -161,5 +161,5 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
 > [!NOTE]
 >  Dopo avere aggiunto il nuovo oggetto Customer mediante l'invio delle modifiche, non sarà possibile eseguire nuovamente questa soluzione così com'è. Per eseguire nuovamente la soluzione, modificare il nome del cliente e l'ID dell'oggetto Customer da aggiungere.  
   
-## <a name="see-also"></a>Vedere anche  
- [Apprendimento tramite procedure dettagliate](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+## <a name="see-also"></a>Vedere anche
+- [Apprendimento tramite procedure dettagliate](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
