@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f3fc25f76ef0f848fc29ffbed12b653d1c59c1f2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b57a8bcc584ffd209def5a84a99b15daa7480ee6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423884"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54534943"
 ---
-# <a name="icorpublishprocessismanaged-method"></a><span data-ttu-id="95069-102">Metodo ICorPublishProcess::IsManaged</span><span class="sxs-lookup"><span data-stu-id="95069-102">ICorPublishProcess::IsManaged Method</span></span>
-<span data-ttu-id="95069-103">Ottiene un valore che indica se il processo a cui fa riferimento questo [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) è noto al codice gestito.</span><span class="sxs-lookup"><span data-stu-id="95069-103">Gets a value that indicates whether the process referenced by this [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) is known to have managed code.</span></span>  
+# <a name="icorpublishprocessismanaged-method"></a><span data-ttu-id="6e010-102">Metodo ICorPublishProcess::IsManaged</span><span class="sxs-lookup"><span data-stu-id="6e010-102">ICorPublishProcess::IsManaged Method</span></span>
+<span data-ttu-id="6e010-103">Ottiene un valore che indica se il processo di cui viene fatto riferimento da questo [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) è noto al codice gestito.</span><span class="sxs-lookup"><span data-stu-id="6e010-103">Gets a value that indicates whether the process referenced by this [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) is known to have managed code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="95069-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="95069-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6e010-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="6e010-104">Syntax</span></span>  
   
 ```  
 HRESULT IsManaged (  
@@ -35,21 +35,21 @@ HRESULT IsManaged (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="95069-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="95069-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="6e010-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="6e010-105">Parameters</span></span>  
  `pbManaged`  
- <span data-ttu-id="95069-106">[out] Un puntatore a un valore booleano che indica se il processo con codice gestito.</span><span class="sxs-lookup"><span data-stu-id="95069-106">[out] A pointer to a Boolean value that indicates whether the process has managed code.</span></span> <span data-ttu-id="95069-107">Il valore è `true` se il processo dispone di codice gestito; in caso contrario, `false`.</span><span class="sxs-lookup"><span data-stu-id="95069-107">The value is `true` if the process has managed code; otherwise, `false`.</span></span>  
+ <span data-ttu-id="6e010-106">[out] Un puntatore a un valore booleano che indica se il processo con codice gestito.</span><span class="sxs-lookup"><span data-stu-id="6e010-106">[out] A pointer to a Boolean value that indicates whether the process has managed code.</span></span> <span data-ttu-id="6e010-107">Il valore è `true` se il processo dispone di codice gestito; in caso contrario, `false`.</span><span class="sxs-lookup"><span data-stu-id="6e010-107">The value is `true` if the process has managed code; otherwise, `false`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="95069-108">Note</span><span class="sxs-lookup"><span data-stu-id="95069-108">Remarks</span></span>  
- <span data-ttu-id="95069-109">Rispetto alla versione corrente di `ICorPublishProcess` consente l'accesso solo ai processi con codice gestito, `IsManaged` restituisce sempre `true`.</span><span class="sxs-lookup"><span data-stu-id="95069-109">Since the current version of `ICorPublishProcess` allows access only to processes that have managed code, `IsManaged` always returns `true`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="6e010-108">Note</span><span class="sxs-lookup"><span data-stu-id="6e010-108">Remarks</span></span>  
+ <span data-ttu-id="6e010-109">Poiché la versione corrente di `ICorPublishProcess` consenta l'accesso solo ai processi con codice gestito, `IsManaged` restituisce sempre `true`.</span><span class="sxs-lookup"><span data-stu-id="6e010-109">Since the current version of `ICorPublishProcess` allows access only to processes that have managed code, `IsManaged` always returns `true`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="95069-110">Requisiti</span><span class="sxs-lookup"><span data-stu-id="95069-110">Requirements</span></span>  
- <span data-ttu-id="95069-111">**Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="95069-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6e010-110">Requisiti</span><span class="sxs-lookup"><span data-stu-id="6e010-110">Requirements</span></span>  
+ <span data-ttu-id="6e010-111">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6e010-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="95069-112">**Intestazione:** Corpub. idl, CorPub.h</span><span class="sxs-lookup"><span data-stu-id="95069-112">**Header:** CorPub.idl, CorPub.h</span></span>  
+ <span data-ttu-id="6e010-112">**Intestazione:** CorPub.idl, CorPub.h</span><span class="sxs-lookup"><span data-stu-id="6e010-112">**Header:** CorPub.idl, CorPub.h</span></span>  
   
- <span data-ttu-id="95069-113">**Libreria:** CorGuids. lib</span><span class="sxs-lookup"><span data-stu-id="95069-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="6e010-113">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6e010-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="95069-114">**Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="95069-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="6e010-114">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6e010-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="95069-115">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="95069-115">See Also</span></span>  
- [<span data-ttu-id="95069-116">Interfaccia ICorPublishProcess</span><span class="sxs-lookup"><span data-stu-id="95069-116">ICorPublishProcess Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)
+## <a name="see-also"></a><span data-ttu-id="6e010-115">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="6e010-115">See also</span></span>
+- [<span data-ttu-id="6e010-116">Interfaccia ICorPublishProcess</span><span class="sxs-lookup"><span data-stu-id="6e010-116">ICorPublishProcess Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)

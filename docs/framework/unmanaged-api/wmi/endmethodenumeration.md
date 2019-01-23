@@ -16,19 +16,19 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 42ee188c2a622d0bed2985e56e49997d2934686f
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: a098afe1702e9559a2784ea0716a0a61216e9fd4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44078499"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54535216"
 ---
-# <a name="endmethodenumeration-function"></a><span data-ttu-id="3c829-103">EndMethodEnumeration (funzione)</span><span class="sxs-lookup"><span data-stu-id="3c829-103">EndMethodEnumeration function</span></span>
-<span data-ttu-id="3c829-104">Termina una sequenza di enumerazione avviata con una chiamata per il [BeginMethodEnumeration funzione](beginmethodenumeration.md).</span><span class="sxs-lookup"><span data-stu-id="3c829-104">Terminates an enumeration sequence started with a call to the [BeginMethodEnumeration function](beginmethodenumeration.md).</span></span>  
+# <a name="endmethodenumeration-function"></a><span data-ttu-id="2aa06-103">EndMethodEnumeration (funzione)</span><span class="sxs-lookup"><span data-stu-id="2aa06-103">EndMethodEnumeration function</span></span>
+<span data-ttu-id="2aa06-104">Termina una sequenza di enumerazione avviata con una chiamata per il [BeginMethodEnumeration funzione](beginmethodenumeration.md).</span><span class="sxs-lookup"><span data-stu-id="2aa06-104">Terminates an enumeration sequence started with a call to the [BeginMethodEnumeration function](beginmethodenumeration.md).</span></span>  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
-## <a name="syntax"></a><span data-ttu-id="3c829-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="3c829-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2aa06-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="2aa06-105">Syntax</span></span>  
   
 ```  
 HRESULT EndMethodEnumeration (
@@ -37,35 +37,35 @@ HRESULT EndMethodEnumeration (
 ); 
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="3c829-106">Parametri</span><span class="sxs-lookup"><span data-stu-id="3c829-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="2aa06-106">Parametri</span><span class="sxs-lookup"><span data-stu-id="2aa06-106">Parameters</span></span>
 
 `vFunc`  
-<span data-ttu-id="3c829-107">[in] Questo parametro è inutilizzato.</span><span class="sxs-lookup"><span data-stu-id="3c829-107">[in] This parameter is unused.</span></span>
+<span data-ttu-id="2aa06-107">[in] Questo parametro è inutilizzato.</span><span class="sxs-lookup"><span data-stu-id="2aa06-107">[in] This parameter is unused.</span></span>
 
 `ptr`  
-<span data-ttu-id="3c829-108">[in] Un puntatore a un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) istanza.</span><span class="sxs-lookup"><span data-stu-id="3c829-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
+<span data-ttu-id="2aa06-108">[in] Un puntatore a un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) istanza.</span><span class="sxs-lookup"><span data-stu-id="2aa06-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="3c829-109">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="3c829-109">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="2aa06-109">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="2aa06-109">Return value</span></span>
 
-<span data-ttu-id="3c829-110">I seguenti valori restituiti da questa funzione sono definiti nel *WbemCli.h* file di intestazione, oppure è possibile definirle come costanti nel codice:</span><span class="sxs-lookup"><span data-stu-id="3c829-110">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
+<span data-ttu-id="2aa06-110">I seguenti valori restituiti da questa funzione sono definiti nel *WbemCli.h* file di intestazione, oppure è possibile definirle come costanti nel codice:</span><span class="sxs-lookup"><span data-stu-id="2aa06-110">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
 
-|<span data-ttu-id="3c829-111">Costante</span><span class="sxs-lookup"><span data-stu-id="3c829-111">Constant</span></span>  |<span data-ttu-id="3c829-112">Valore</span><span class="sxs-lookup"><span data-stu-id="3c829-112">Value</span></span>  |<span data-ttu-id="3c829-113">Descrizione</span><span class="sxs-lookup"><span data-stu-id="3c829-113">Description</span></span>  |
+|<span data-ttu-id="2aa06-111">Costante</span><span class="sxs-lookup"><span data-stu-id="2aa06-111">Constant</span></span>  |<span data-ttu-id="2aa06-112">Valore</span><span class="sxs-lookup"><span data-stu-id="2aa06-112">Value</span></span>  |<span data-ttu-id="2aa06-113">Descrizione</span><span class="sxs-lookup"><span data-stu-id="2aa06-113">Description</span></span>  |
 |---------|---------|---------|
-|`WBEM_E_UNEXPECTED` | <span data-ttu-id="3c829-114">0x8004101d</span><span class="sxs-lookup"><span data-stu-id="3c829-114">0x8004101d</span></span> | <span data-ttu-id="3c829-115">Si è verificato un errore interno.</span><span class="sxs-lookup"><span data-stu-id="3c829-115">An internal error occurred.</span></span> |
-|`WBEM_S_NO_ERROR` | <span data-ttu-id="3c829-116">0</span><span class="sxs-lookup"><span data-stu-id="3c829-116">0</span></span> | <span data-ttu-id="3c829-117">La chiamata di funzione è riuscita.</span><span class="sxs-lookup"><span data-stu-id="3c829-117">The function call was successful.</span></span>  |
+|`WBEM_E_UNEXPECTED` | <span data-ttu-id="2aa06-114">0x8004101d</span><span class="sxs-lookup"><span data-stu-id="2aa06-114">0x8004101d</span></span> | <span data-ttu-id="2aa06-115">Si è verificato un errore interno.</span><span class="sxs-lookup"><span data-stu-id="2aa06-115">An internal error occurred.</span></span> |
+|`WBEM_S_NO_ERROR` | <span data-ttu-id="2aa06-116">0</span><span class="sxs-lookup"><span data-stu-id="2aa06-116">0</span></span> | <span data-ttu-id="2aa06-117">La chiamata di funzione è riuscita.</span><span class="sxs-lookup"><span data-stu-id="2aa06-117">The function call was successful.</span></span>  |
   
-## <a name="remarks"></a><span data-ttu-id="3c829-118">Note</span><span class="sxs-lookup"><span data-stu-id="3c829-118">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="2aa06-118">Note</span><span class="sxs-lookup"><span data-stu-id="2aa06-118">Remarks</span></span>
 
-<span data-ttu-id="3c829-119">Questa funzione esegue il wrapping di una chiamata per il [IWbemClassObject::EndMethodEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-endmethodenumeration) (metodo).</span><span class="sxs-lookup"><span data-stu-id="3c829-119">This function wraps a call to the [IWbemClassObject::EndMethodEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-endmethodenumeration) method.</span></span>
+<span data-ttu-id="2aa06-119">Questa funzione esegue il wrapping di una chiamata per il [IWbemClassObject::EndMethodEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-endmethodenumeration) (metodo).</span><span class="sxs-lookup"><span data-stu-id="2aa06-119">This function wraps a call to the [IWbemClassObject::EndMethodEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-endmethodenumeration) method.</span></span>
 
-<span data-ttu-id="3c829-120">Il chiamante ha inizio la sequenza di enumerazione utilizzando [funzione BeginMethodEnumeration](beginmethodenumeration.md)e quindi chiama il [NextMethod funzione](nextmethod.md )fino a quando il metodo restituisce `WBEM_S_NO_MORE_DATA`.</span><span class="sxs-lookup"><span data-stu-id="3c829-120">The caller begins the enumeration sequence using [BeginMethodEnumeration function](beginmethodenumeration.md), and then calls the [NextMethod function](nextmethod.md )until the method  returns `WBEM_S_NO_MORE_DATA`.</span></span> <span data-ttu-id="3c829-121">Il chiamante, facoltativamente, termina la sequenza chiamando `EndMethodEnumeration`.</span><span class="sxs-lookup"><span data-stu-id="3c829-121">The caller optionally finishes the sequence by calling `EndMethodEnumeration`.</span></span> <span data-ttu-id="3c829-122">Il chiamante può terminare l'enumerazione all'inizio chiamando `EndMethodEnumeration` in qualsiasi momento.</span><span class="sxs-lookup"><span data-stu-id="3c829-122">The caller may terminate the enumeration early by calling `EndMethodEnumeration` at any time.</span></span>
+<span data-ttu-id="2aa06-120">Il chiamante ha inizio la sequenza di enumerazione utilizzando [funzione BeginMethodEnumeration](beginmethodenumeration.md)e quindi chiama il [NextMethod funzione](nextmethod.md )fino a quando il metodo restituisce `WBEM_S_NO_MORE_DATA`.</span><span class="sxs-lookup"><span data-stu-id="2aa06-120">The caller begins the enumeration sequence using [BeginMethodEnumeration function](beginmethodenumeration.md), and then calls the [NextMethod function](nextmethod.md )until the method  returns `WBEM_S_NO_MORE_DATA`.</span></span> <span data-ttu-id="2aa06-121">Il chiamante, facoltativamente, termina la sequenza chiamando `EndMethodEnumeration`.</span><span class="sxs-lookup"><span data-stu-id="2aa06-121">The caller optionally finishes the sequence by calling `EndMethodEnumeration`.</span></span> <span data-ttu-id="2aa06-122">Il chiamante può terminare l'enumerazione all'inizio chiamando `EndMethodEnumeration` in qualsiasi momento.</span><span class="sxs-lookup"><span data-stu-id="2aa06-122">The caller may terminate the enumeration early by calling `EndMethodEnumeration` at any time.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="3c829-123">Requisiti</span><span class="sxs-lookup"><span data-stu-id="3c829-123">Requirements</span></span>  
- <span data-ttu-id="3c829-124">**Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3c829-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2aa06-123">Requisiti</span><span class="sxs-lookup"><span data-stu-id="2aa06-123">Requirements</span></span>  
+ <span data-ttu-id="2aa06-124">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2aa06-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3c829-125">**Intestazione:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="3c829-125">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="2aa06-125">**Intestazione:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="2aa06-125">**Header:** WMINet_Utils.idl</span></span>  
   
- <span data-ttu-id="3c829-126">**Versioni di .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="3c829-126">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="2aa06-126">**Versioni di .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="2aa06-126">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3c829-127">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="3c829-127">See also</span></span>  
-[<span data-ttu-id="3c829-128">WMI e contatori delle prestazioni (riferimenti alle API non gestite)</span><span class="sxs-lookup"><span data-stu-id="3c829-128">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="2aa06-127">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="2aa06-127">See also</span></span>
+- [<span data-ttu-id="2aa06-128">WMI e contatori delle prestazioni (riferimenti alle API non gestite)</span><span class="sxs-lookup"><span data-stu-id="2aa06-128">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
