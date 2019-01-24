@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], addresses
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
-ms.openlocfilehash: 59b3aa87056cc2d32512c8b9ea68c0a6d5935814
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 816b4138f395298e2fbf8b4de4cac63c0794657b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48847408"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730945"
 ---
 # <a name="endpoint-addresses"></a>Indirizzi endpoint
 A ogni endpoint è associato un indirizzo, che è utilizzato per individuarlo e identificarlo. L'indirizzo è costituito principalmente da un URI (Uniform Resource Identifier) che specifica il percorso dell'endpoint. L'indirizzo dell'endpoint è rappresentato nel modello di programmazione di Windows Communication Foundation (WCF) per il <xref:System.ServiceModel.EndpointAddress> classe, che contiene un facoltativo <xref:System.ServiceModel.EndpointAddress.Identity%2A> proprietà che abilita l'autenticazione dell'endpoint da altri endpoint che scambiare messaggi con esso e un set di facoltativo <xref:System.ServiceModel.EndpointAddress.Headers%2A> proprietà definiscono qualsiasi altra intestazione SOAP richiesta per raggiungere il servizio. Le intestazioni facoltative forniscono dettagli aggiuntivi e più precisi sull'indirizzo per identificare o interagire con l'endpoint del servizio. L'indirizzo di un endpoint è rappresentato in transito come riferimento all'endpoint di WS-Addressing (EPR).  
@@ -46,9 +46,9 @@ A ogni endpoint è associato un indirizzo, che è utilizzato per individuarlo e 
   
  Nell'esempio seguente vengono illustrati i componenti che possono essere presenti in un'associazione IIS:  
   
--   Protocollo di associazione: HTTP  
+-   Il protocollo di associazione: HTTP  
   
--   Informazioni di associazione: indirizzo IP, porta, intestazione host  
+-   Informazioni di associazione: Indirizzo IP, porta, intestazione Host  
   
  IIS può specificare più associazioni per ogni sito, il che comporta più indirizzi di base per ogni schema. Nelle versioni precedenti a [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)], WCF non supporta più indirizzi per uno schema e, se sono stati specificati, ha generato un <xref:System.ArgumentException> durante l'attivazione.  
   
@@ -82,7 +82,7 @@ A ogni endpoint è associato un indirizzo, che è utilizzato per individuarlo e 
  Gli indirizzi di base forniti da IIS possono disporre di indirizzi associati ad altri schemi non presenti nell'elenco `baseAddressPrefixFilters`. Questi indirizzi non vengono filtrati.  
   
 ## <a name="multiple-iis-binding-support-in-net-framework-4-and-later"></a>Supporto per più binding IIS in .NET Framework 4 e versioni successive  
- A partire da .NET 4, è possibile abilitare il supporto di più binding in IIS senza dover scegliere un indirizzo di base unico, impostando la proprietà <xref:System.ServiceModel.ServiceHostingEnvironment> dell'oggetto <xref:System.ServiceModel.ServiceHostingEnvironment.MultipleSiteBindingsEnabled%2A> su true. Questo supporto è limitato agli schemi del protocollo HTTP.  
+ A partire da .NET 4, è possibile abilitare il supporto di più associazioni in IIS senza dover scegliere un indirizzo di base unico, impostando la proprietà <xref:System.ServiceModel.ServiceHostingEnvironment> dell'oggetto <xref:System.ServiceModel.ServiceHostingEnvironment.MultipleSiteBindingsEnabled%2A> su true. Questo supporto è limitato agli schemi del protocollo HTTP.  
   
  Di seguito è riportato un esempio di codice di configurazione che usa multipleSiteBindingsEnabled in [ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md).  
   
@@ -137,6 +137,6 @@ A ogni endpoint è associato un indirizzo, che è utilizzato per individuarlo e 
   
  In alcuni scenari, un endpoint riceve tutti i messaggi che arrivano sul trasporto sottostante e non solo quelli con l'intestazione `To` appropriata. Affinché ciò sia possibile, l'utente può utilizzare la classe <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter>.  
   
-## <a name="see-also"></a>Vedere anche  
- [Specifica di un indirizzo dell'endpoint](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)  
- [Identità del servizio e autenticazione](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+## <a name="see-also"></a>Vedere anche
+- [Specifica di un indirizzo dell'endpoint](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)
+- [Identità del servizio e autenticazione](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

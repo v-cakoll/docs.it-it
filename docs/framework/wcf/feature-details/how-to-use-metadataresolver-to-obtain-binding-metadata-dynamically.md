@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: usare la classe MetadataResolver per ottenere dinamicamente i metadati di associazione'
+title: 'Procedura: Usare la classe MetadataResolver per ottenere dinamicamente i metadati di associazione'
 ms.date: 03/30/2017
 ms.assetid: 56ffcb99-fff0-4479-aca0-e3909009f605
-ms.openlocfilehash: cffe47f301c1943a0d97e3a95a5b7c24979b4f69
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9887f74902a1f324f57e39a61a48b5826127cba9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33490679"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54735974"
 ---
-# <a name="how-to-use-metadataresolver-to-obtain-binding-metadata-dynamically"></a>Procedura: usare la classe MetadataResolver per ottenere dinamicamente i metadati di associazione
+# <a name="how-to-use-metadataresolver-to-obtain-binding-metadata-dynamically"></a>Procedura: Usare la classe MetadataResolver per ottenere dinamicamente i metadati di associazione
 In questo argomento viene illustrato come utilizzare la classe <xref:System.ServiceModel.Description.MetadataResolver> per ottenere dinamicamente i metadati di associazione.  
   
 ### <a name="to-dynamically-obtain-binding-metadata"></a>Per ottenere dinamicamente i metadati di associazione  
@@ -45,5 +45,5 @@ In questo argomento viene illustrato come utilizzare la classe <xref:System.Serv
     }  
     ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Metadati](../../../../docs/framework/wcf/feature-details/metadata.md)
+## <a name="see-also"></a>Vedere anche
+- [Metadati](../../../../docs/framework/wcf/feature-details/metadata.md)

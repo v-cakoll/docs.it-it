@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: riempire figure aperte'
+title: 'Procedura: Riempire figure aperte'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,19 +8,20 @@ helpviewer_keywords:
 - open figures [Windows Forms], filling
 - figures [Windows Forms], filling
 ms.assetid: 5a36b0e4-f1f4-46c0-a85a-22ae98491950
-ms.openlocfilehash: b7422ae2a4dc4d59fd337ab2294caa0d65057bae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b4dd37decd86d625a9cdf8a6b4027dfaec0c0ff1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730750"
 ---
-# <a name="how-to-fill-open-figures"></a>Procedura: riempire figure aperte
-È possibile inserire un percorso passando un <xref:System.Drawing.Drawing2D.GraphicsPath> dell'oggetto per il <xref:System.Drawing.Graphics.FillPath%2A> metodo. Il <xref:System.Drawing.Graphics.FillPath%2A> metodo compila il percorso secondo la modalità di riempimento (alternativo o culling) attualmente impostato per il percorso. Se il percorso contiene figure aperte, il percorso viene inserito come se fossero chiuse. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] chiude una figura tracciando una linea retta tra il punto finale e il punto iniziale.  
+# <a name="how-to-fill-open-figures"></a>Procedura: Riempire figure aperte
+È possibile compilare un percorso passando un <xref:System.Drawing.Drawing2D.GraphicsPath> dell'oggetto per il <xref:System.Drawing.Graphics.FillPath%2A> (metodo). Il <xref:System.Drawing.Graphics.FillPath%2A> metodo inserisce il percorso secondo la modalità di riempimento (alternativo o dei vertici) attualmente impostato per il percorso. Se il percorso include figure aperte, il percorso viene inserito come se fossero chiuse. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] chiude una figura tracciando una linea retta tra il punto finale al punto di partenza.  
   
 ## <a name="example"></a>Esempio  
- L'esempio seguente crea un percorso che abbia una figura aperta (un arco) e una figura chiusa (un'ellisse). Il <xref:System.Drawing.Graphics.FillPath%2A> metodo compila il percorso in base alla modalità di riempimento predefinito, ovvero <xref:System.Drawing.Drawing2D.FillMode.Alternate>.  
+ L'esempio seguente crea un percorso che abbia una figura aperta (un arco) e una figura chiusa (un'ellisse). Il <xref:System.Drawing.Graphics.FillPath%2A> metodo inserisce il percorso secondo la modalità di riempimento predefinito, ovvero <xref:System.Drawing.Drawing2D.FillMode.Alternate>.  
   
- Nella figura seguente mostra l'output del codice di esempio. Si noti che il percorso viene riempito (in base a <xref:System.Drawing.Drawing2D.FillMode.Alternate>) come se figura aperta sono stati chiusi da una linea retta tra il punto finale e il punto iniziale.  
+ Nella figura seguente mostra l'output del codice di esempio. Si noti che il percorso viene riempito (in base alla <xref:System.Drawing.Drawing2D.FillMode.Alternate>) come se nella figura open sono stati chiusi da una linea retta tra il punto finale al punto di partenza.  
   
  ![Percorso di apertura file](../../../../docs/framework/winforms/advanced/media/fillopenpath.png "FillOpenPath")  
   
@@ -30,6 +31,6 @@ ms.lasthandoff: 05/04/2018
 ## <a name="compiling-the-code"></a>Compilazione del codice  
  L'esempio precedente è progettato per l'uso con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs> `e`, un parametro del gestore eventi <xref:System.Windows.Forms.Control.Paint>.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Drawing.Drawing2D.GraphicsPath>  
- [Percorsi di oggetti Graphics in GDI+](../../../../docs/framework/winforms/advanced/graphics-paths-in-gdi.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Drawing.Drawing2D.GraphicsPath>
+- [Percorsi di oggetti Graphics in GDI+](../../../../docs/framework/winforms/advanced/graphics-paths-in-gdi.md)

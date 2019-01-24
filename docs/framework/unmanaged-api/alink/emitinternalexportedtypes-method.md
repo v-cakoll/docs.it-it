@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 55b9d185804f25c7431f2696d67753cc3ba02d1f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 68373e9277a9d87bba6941259588f25a92af90a3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402041"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54710547"
 ---
 # <a name="emitinternalexportedtypes-method"></a>Metodo EmitInternalExportedTypes
-Genera tipi aggiunti all'assembly. Chiamare questo metodo una volta noto tipi interni sono stati aggiunti.  
+Genera tipi aggiunti all'assembly. Chiamare questo metodo una volta noto sono stati aggiunti i tipi interni.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,12 +40,12 @@ HRESULT EmitInternalExportedTypes(
  ID dell'assembly.  
   
 ## <a name="return-value"></a>Valore restituito  
- Se il metodo ha esito positivo, restituisce S_OK.  
+ Restituisce S_OK se il metodo ha esito positivo.  
   
 ## <a name="requirements"></a>Requisiti  
  Richiede alink.h  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [Interfaccia IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [Alink (API)](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [Interfaccia IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [Alink (API)](../../../../docs/framework/unmanaged-api/alink/index.md)

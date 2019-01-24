@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cebf5f1101abed29bc325cec2390b4fd13056e4a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 64382f0d405e84b2be78aac982b085fec35cb37b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33459970"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54675098"
 ---
 # <a name="icorprofilerinfo4getcodeinfo3-method"></a>Metodo ICorProfilerInfo4::GetCodeInfo3
 Ottiene gli ambiti di codice nativo associati alla versione ricompilata in JIT della funzione specificata.  
@@ -59,25 +59,25 @@ HRESULT GetCodeInfo3(
  Il `GetCodeInfo3` è simile al metodo [GetCodeInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getcodeinfo2-method.md), ad eccezione del fatto che ottiene l'ID ricompilata in JIT della funzione che contiene l'indirizzo IP specificato.  
   
 > [!NOTE]
->  `GetCodeInfo3` può attivare una garbage collection, mentre [GetCodeInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getcodeinfo2-method.md) No. Per ulteriori informazioni, vedere il [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md) HRESULT.  
+>  `GetCodeInfo3` può attivare una garbage collection, mentre [GetCodeInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getcodeinfo2-method.md) No. Per altre informazioni, vedere la [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md) HRESULT.  
   
  Gli ambiti vengono ordinati in sequenza crescente in base all'offset CIL (Common Intermediate Language).  
   
- Dopo `GetCodeInfo3` viene restituito, è necessario verificare che il `codeInfos` buffer sia abbastanza grande per contenere tutti i [COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md) strutture. A tale scopo, confrontare il valore di `cCodeInfos` con il valore del parametro `cchName`. Se `cCodeInfos` diviso la dimensione di un [COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md) struttura è inferiore a `pcCodeInfos`, allocare una maggiore `codeInfos` memorizzare nel buffer, aggiornare `cCodeInfos` con la nuova dimensione e chiamare `GetCodeInfo3` nuovo.  
+ Dopo aver `GetCodeInfo3` viene restituito, è necessario verificare che il `codeInfos` buffer sia abbastanza grande per contenere tutti il [COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md) strutture. A tale scopo, confrontare il valore di `cCodeInfos` con il valore del parametro `cchName`. Se `cCodeInfos` diviso per la dimensione di un [COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md) struttura è minore `pcCodeInfos`, allocare una maggiore `codeInfos` memorizzare nel buffer, aggiornare `cCodeInfos` con la nuova dimensione e chiamare `GetCodeInfo3` anche in questo caso.  
   
- In alternativa, è possibile chiamare innanzitutto `GetCodeInfo3` con un buffer `codeInfos` di lunghezza zero per ottenere le dimensioni del buffer corrette. È quindi possibile impostare il `codeInfos` il valore restituito in dimensioni del buffer `pcCodeInfos`, moltiplicato per la dimensione di un [COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md) struttura e chiamare `GetCodeInfo3` nuovamente.  
+ In alternativa, è possibile chiamare innanzitutto `GetCodeInfo3` con un buffer `codeInfos` di lunghezza zero per ottenere le dimensioni del buffer corrette. È quindi possibile impostare il `codeInfos` dimensioni sul valore restituito nel buffer `pcCodeInfos`moltiplicato per le dimensioni di un [COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md) struttura e chiamare `GetCodeInfo3` nuovamente.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Metodo GetCodeInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getcodeinfo2-method.md)  
- [Interfaccia ICorProfilerInfo4](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)  
- [Interfacce di profilatura](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [Profilatura](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a>Vedere anche
+- [Metodo GetCodeInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getcodeinfo2-method.md)
+- [Interfaccia ICorProfilerInfo4](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)
+- [Interfacce di profilatura](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [Profilatura](../../../../docs/framework/unmanaged-api/profiling/index.md)

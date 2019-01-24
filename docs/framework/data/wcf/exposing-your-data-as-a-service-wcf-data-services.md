@@ -6,20 +6,20 @@ helpviewer_keywords:
 - getting started, WCF Data Services
 - WCF Data Services, getting started
 ms.assetid: df0bbcee-f66f-4a88-abb4-4e73c8b9c908
-ms.openlocfilehash: ba316aeda0a0a7e80af8e37a6a62e88652b9635b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8e598dde0d85b1d7d4208bf2475a0f6f6eee34a6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520415"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700988"
 ---
 # <a name="expose-your-data-as-a-service-wcf-data-services"></a>Esporre i dati come servizio (WCF Data Services)
 
 WCF Data Services si integra con Visual Studio che consentono di definire con facilità i servizi per l'esposizione dei dati come [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed. La creazione di un servizio dati che espone un feed OData prevede i passaggi di base seguenti:
 
-1.  **Definire il modello di dati.** WCF Data Services supporta in modo nativo i modelli di dati basati sul [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md). Per altre informazioni, vedere [procedura: creare un servizio dati utilizzando un'origine dati ADO.NET Entity Framework](../../../../docs/framework/data/wcf/create-a-data-service-using-an-adonet-ef-data-wcf.md).
+1.  **Definire il modello di dati.** WCF Data Services supporta in modo nativo i modelli di dati basati sul [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md). Per altre informazioni, vedere [Procedura: Creare un servizio dati tramite un'origine dati ADO.NET Entity Framework](../../../../docs/framework/data/wcf/create-a-data-service-using-an-adonet-ef-data-wcf.md).
 
-     WCF Data Services supporta inoltre i modelli di dati basati su oggetti common language runtime (CLR) che restituiscono un'istanza di <xref:System.Linq.IQueryable%601> interfaccia. In questo modo è possibile distribuire servizi dati basati su elenchi, matrici e raccolte di .NET Framework. Per consentire l'esecuzione di operazioni di creazione, aggiornamento ed eliminazione su queste strutture di dati, è inoltre necessario implementare l'interfaccia <xref:System.Data.Services.IUpdatable>. Per altre informazioni, vedere [procedura: creare un servizio dati utilizzando il Provider di Reflection](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md).
+     WCF Data Services supporta inoltre i modelli di dati basati su oggetti common language runtime (CLR) che restituiscono un'istanza di <xref:System.Linq.IQueryable%601> interfaccia. In questo modo è possibile distribuire servizi dati basati su elenchi, matrici e raccolte di .NET Framework. Per consentire l'esecuzione di operazioni di creazione, aggiornamento ed eliminazione su queste strutture di dati, è inoltre necessario implementare l'interfaccia <xref:System.Data.Services.IUpdatable>. Per altre informazioni, vedere [Procedura: Creare un servizio dati tramite il Provider di Reflection](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md).
 
      Per scenari più avanzati, WCF Data Services include un set di provider che consentono di definire un modello di dati basato su tipi di dati con associazione tardiva. Per altre informazioni, vedere [provider di servizi dati personalizzati](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md).
 
