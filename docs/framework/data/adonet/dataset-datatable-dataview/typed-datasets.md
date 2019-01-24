@@ -2,12 +2,12 @@
 title: Dataset tipizzati
 ms.date: 03/30/2017
 ms.assetid: 033d2548-cf24-4c05-8179-67d8b009c048
-ms.openlocfilehash: 68721bcdbce6bf6d3279d6018ce6bc48d65c55a3
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 3a61005f0064ec9ba0bbe70b759394d3691018de
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45591186"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54680361"
 ---
 # <a name="typed-datasets"></a>Dataset tipizzati
 Oltre all'accesso ad associazione tardiva ai valori tramite variabili tipizzate in modo debole, nel tipo <xref:System.Data.DataSet> è disponibile l'accesso ai dati tramite una metafora tipizzata in modo sicuro. Tabelle e colonne che fanno parte del **set di dati** sono accessibili tramite nomi descrittivi e variabili fortemente tipizzate.  
@@ -23,6 +23,6 @@ Oltre all'accesso ad associazione tardiva ai valori tramite variabili tipizzate 
  [Annotazione di oggetti DataSet tipizzati](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/annotating-typed-datasets.md)  
  Viene descritto come annotare lo schema XML Schema definition language (XSD) utilizzato per generare una classe fortemente tipizzata **set di dati**per assegnare **DataSet** nomi descrittivi di elementi senza alterare lo schema sottostante.  
   
-## <a name="see-also"></a>Vedere anche  
- [Oggetti DataSet, DataTable e DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vedere anche
+- [Oggetti DataSet, DataTable e DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

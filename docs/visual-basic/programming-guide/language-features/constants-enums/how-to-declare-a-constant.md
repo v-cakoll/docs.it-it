@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: dichiarare una costante (Visual Basic)'
+title: 'Procedura: Dichiarare una costante (Visual Basic)'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.constant
@@ -23,14 +23,14 @@ helpviewer_keywords:
 - module-level constants and variables
 - Object data type [Visual Basic], declaring constants
 ms.assetid: f901b4fa-481f-4621-822e-427060577ad1
-ms.openlocfilehash: ce45e4df7f74cd68bde0fb2adba10197a11edb1b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: e45ca7eeca9ce178abf3ab5cab6d791f799f1d09
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43394314"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54678837"
 ---
-# <a name="how-to-declare-a-constant-visual-basic"></a>Procedura: dichiarare una costante (Visual Basic)
+# <a name="how-to-declare-a-constant-visual-basic"></a>Procedura: Dichiarare una costante (Visual Basic)
 Si utilizza il `Const` istruzione per dichiarare una costante e impostarne il valore. Dichiarando una costante, si assegna un nome significativo su un valore. Una volta che viene dichiarata una costante, non può essere modificato o assegnato un nuovo valore.  
   
  Consente di dichiarare una costante all'interno di una routine o nella sezione delle dichiarazioni di un modulo, classe o struttura. Classe o le costanti a livello di struttura vengono `Private` per impostazione predefinita, ma possono anche essere dichiarati come `Public`, `Friend`, `Protected`, o `Protected Friend` per il livello di accesso di codice appropriato.  
@@ -65,14 +65,25 @@ Si utilizza il `Const` istruzione per dichiarare una costante e impostarne il va
     Public Const Four As Integer = 4, Five As Integer = 5, Six As Integer = 44  
     ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Istruzione Const](../../../../visual-basic/language-reference/statements/const-statement.md)  
- [Tipi di dati costanti e letterali](constant-and-literal-data-types.md)  
- [Cenni preliminari sulle costanti](constants-overview.md) [procedura: dichiarare una costante](how-to-declare-a-constant.md) [costanti definite dall'utente](user-defined-constants.md) [i tipi di dati costanti e letterali](constant-and-literal-data-types.md) [come: gruppo I valori delle costanti correlate](how-to-group-related-constant-values-together.md) [Cenni preliminari sulle enumerazioni](enumerations-overview.md) [procedura: dichiarare enumerazioni](how-to-declare-enumerations.md) [procedura: fare riferimento a un membro di enumerazione](how-to-refer-to-an-enumeration-member.md) [Qualifica di nomi ed enumerazioni](enumerations-and-name-qualification.md) [procedura: scorrere un'enumerazione](how-to-iterate-through-an-enumeration.md) [procedura: determinare la stringa associata a un valore di enumerazione](how-to-determine-the-string-associated-with-an-enumeration-value.md) [Quando usare un'enumerazione](when-to-use-an-enumeration.md)
+## <a name="see-also"></a>Vedere anche
+- [Istruzione Const](../../../../visual-basic/language-reference/statements/const-statement.md)
+- [Tipi di dati costanti e letterali](constant-and-literal-data-types.md)
+- [Cenni preliminari sulle costanti](constants-overview.md)
+- [Procedura: Dichiarare una costante](how-to-declare-a-constant.md)
+- [Costanti definite dall'utente](user-defined-constants.md)
+- [Tipi di dati costanti e letterali](constant-and-literal-data-types.md)
+- [Procedura: Raggruppare i valori costanti correlate](how-to-group-related-constant-values-together.md)
+- [Cenni preliminari sulle enumerazioni](enumerations-overview.md)
+- [Procedura: Dichiarare un'enumerazione](how-to-declare-enumerations.md)
+- [Procedura: Fare riferimento a un membro di enumerazione](how-to-refer-to-an-enumeration-member.md)
+- [Qualifica di nomi ed enumerazioni](enumerations-and-name-qualification.md)
+- [Procedura: Scorrere un'enumerazione](how-to-iterate-through-an-enumeration.md)
+- [Procedura: Determinare la stringa associata a un valore di enumerazione](how-to-determine-the-string-associated-with-an-enumeration-value.md)
+- [Quando usare un'enumerazione](when-to-use-an-enumeration.md)
 
- [Cenni preliminari sulle enumerazioni](enumerations-overview.md)  
- [Cenni preliminari sulle costanti](constants-overview.md)  
- [Procedura: dichiarare un'enumerazione](how-to-declare-enumerations.md)  
- [Qualifica di nomi ed enumerazioni](enumerations-and-name-qualification.md)  
- [Istruzione Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)  
- [Costanti ed enumerazioni](../../../../visual-basic/language-reference/constants-and-enumerations.md)
+- [Cenni preliminari sulle enumerazioni](enumerations-overview.md)
+- [Cenni preliminari sulle costanti](constants-overview.md)
+- [Procedura: Dichiarare un'enumerazione](how-to-declare-enumerations.md)
+- [Qualifica di nomi ed enumerazioni](enumerations-and-name-qualification.md)
+- [Istruzione Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [Costanti ed enumerazioni](../../../../visual-basic/language-reference/constants-and-enumerations.md)

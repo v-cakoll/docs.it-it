@@ -10,12 +10,12 @@ helpviewer_keywords:
 - extending glass frames into applications [WPF]
 - glass frames [WPF], extending into applications
 ms.assetid: 74388a3a-4b69-4a9d-ba1f-e107636bd660
-ms.openlocfilehash: 93eda6d6a13d6a510f2aeb06ab1c66d0cd40927f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 9df6adbf9208ee58044b0ba6ef606d693c9dca7a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858330"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54705823"
 ---
 # <a name="extend-glass-frame-into-a-wpf-application"></a>Estendere l'effetto cristallo a un'applicazione WPF
 In questo argomento viene illustrato come estendere il [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] fotogramma effetto cristallo all'area client di un'applicazione Windows Presentation Foundation (WPF).  
@@ -149,7 +149,7 @@ void OnLoaded(object sender, RoutedEventArgs e)
   
  ![Estensione dell'effetto cristallo a un'applicazione WPF.](../../../../docs/framework/wpf/graphics-multimedia/media/wpfextendedglassintoclient.PNG "WPFextendedGlassIntoClient")  
   
-## <a name="see-also"></a>Vedere anche  
- [Panoramica di gestione finestre desktop](/windows/desktop/dwm/dwm-overview)  
- [Cenni preliminari sulla sfocatura Gestione finestre desktop](/windows/desktop/dwm/blur-ovw)  
- [DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea)
+## <a name="see-also"></a>Vedere anche
+- [Panoramica di gestione finestre desktop](/windows/desktop/dwm/dwm-overview)
+- [Cenni preliminari sulla sfocatura Gestione finestre desktop](/windows/desktop/dwm/blur-ovw)
+- [DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea)

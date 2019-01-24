@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: 09c80fc9-1ba5-4192-89f7-3a79b2e4b024
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a5b9be3050da21c0a99931ca70cf990b0b8bf1fe
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 711903656d8bcce3a2d213af68160707a55a48e4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612303"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700000"
 ---
 # <a name="ltprobinggt-element"></a>&lt;individuazione tramite probe&gt; elemento
 Specifica le sottodirectory di base dell'applicazione per common language runtime per la ricerca quando il caricamento degli assembly.  
   
  \<configuration>  
 \<runtime>  
-\<assemblyBinding >  
-\<probing >  
+\<assemblyBinding>  
+\<probing>  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -65,8 +65,8 @@ Specifica le sottodirectory di base dell'applicazione per common language runtim
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
-- [Schema delle impostazioni di runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)  
-- [Specifica della posizione di un assembly](../../../../../docs/framework/configure-apps/specify-assembly-location.md)  
+## <a name="see-also"></a>Vedere anche
+- [Schema delle impostazioni di runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Specifica della posizione di un assembly](../../../../../docs/framework/configure-apps/specify-assembly-location.md)
 - [Come il runtime individua gli assembly](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

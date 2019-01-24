@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: disegnare forme con i controlli OvalShape e RectangleShape (Visual Studio)'
+title: 'Procedura: Disegnare forme con i controlli OvalShape e RectangleShape (Visual Studio)'
 ms.date: 07/20/2015
 dev_langs:
 - csharp
@@ -9,36 +9,37 @@ helpviewer_keywords:
 - shapes, drawing
 - RectangleShape control [Visual Basic]
 ms.assetid: 0275b4c6-7a13-46c8-90f3-61db308c6b5d
-ms.openlocfilehash: f87865ba3aebe5739b87d6ae6bfeaa957af726d8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fe937236332591f6065e618c49ca5cf2c54b987c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701222"
 ---
-# <a name="how-to-draw-shapes-with-the-ovalshape-and-rectangleshape-controls-visual-studio"></a>Procedura: disegnare forme con i controlli OvalShape e RectangleShape (Visual Studio)
+# <a name="how-to-draw-shapes-with-the-ovalshape-and-rectangleshape-controls-visual-studio"></a>Procedura: Disegnare forme con i controlli OvalShape e RectangleShape (Visual Studio)
 Il controllo <xref:Microsoft.VisualBasic.PowerPacks.OvalShape> consente di disegnare cerchi e ovali in un form o in un contenitore, sia in fase di progettazione che in fase di esecuzione. Il controllo <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape> può essere usato per disegnare quadrati, rettangoli o rettangoli con angoli arrotondati in un form o in un contenitore. Anche questo controllo può essere usato sia in fase di progettazione che in fase di esecuzione.  
   
  È possibile personalizzare l'aspetto delle forme modificandone la larghezza, il colore e lo stile del bordo. Lo sfondo di una forma è trasparente per impostazione predefinita. È possibile personalizzare lo sfondo per visualizzare un colore a tinta unita, un motivo, un riempimento sfumato (una transizione da un colore a altro) o un'immagine.  
   
 ### <a name="to-draw-a-simple-shape-at-design-time"></a>Per disegnare una forma semplice in fase di progettazione  
   
-1.  Trascinare il <xref:Microsoft.VisualBasic.PowerPacks.OvalShape> o <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape> controllo il **Visual Basic Power Packs** scheda (per l'installazione, vedere [controlli di Visual Basic Power Pack](../../../visual-basic/developing-apps/windows-forms/power-packs-controls.md)) nel **della casella degli strumenti** per un controllo form o del contenitore.  
+1.  Trascinare il <xref:Microsoft.VisualBasic.PowerPacks.OvalShape> o <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape> controllare dalle **Visual Basic Power Packs** scheda (per installare, vedere [controlli Power Pack Visual Basic](../../../visual-basic/developing-apps/windows-forms/power-packs-controls.md)) nel **casella degli strumenti** per un form o un controllo contenitore.  
   
 2.  Trascinare i quadratini di ridimensionamento e di spostamento per impostare le dimensioni e la posizione della forma.  
   
-     È anche possibile ridimensionare e posizionare la forma modificando il `Size` e `Position` le proprietà di **proprietà** finestra.  
+     È anche possibile ridimensionare e posizionare la forma modificando la `Size` e `Position` delle proprietà nel **proprietà** finestra.  
   
-     Per creare un rettangolo con angoli arrotondati, selezionare il `CornerRadius` proprietà il **proprietà** finestra e impostarlo su un valore maggiore di 0.  
+     Per creare un rettangolo con angoli arrotondati, selezionare il `CornerRadius` proprietà il **proprietà** finestra e impostarlo su un valore che è maggiore di 0.  
   
-3.  Nel **proprietà** finestra, facoltativamente, impostare proprietà facoltative aggiuntive per modificare l'aspetto della forma.  
+3.  Nel **proprietà** finestra, se lo si desidera impostare proprietà facoltative aggiuntive per modificare l'aspetto della forma.  
   
 ### <a name="to-draw-a-simple-shape-at-run-time"></a>Per disegnare una forma semplice in fase di esecuzione  
   
 1.  Scegliere **Aggiungi riferimento** dal menu **Progetto**.  
   
-2.  Nel **Aggiungi riferimento** nella finestra di dialogo **Microsoft.VisualBasic.PowerPacks.VS**, quindi fare clic su **OK**.  
+2.  Nel **Aggiungi riferimento** finestra di dialogo **Microsoft.VisualBasic.PowerPacks.VS**, quindi fare clic su **OK**.  
   
-3.  Nel **Editor di codice**, aggiungere un `Imports` o `using` istruzione nella parte superiore del modulo:  
+3.  Nel **Editor di codice**, aggiungere un' `Imports` o `using` informativa nella parte superiore del modulo:  
   
 ```vb  
 Imports Microsoft.VisualBasic.PowerPacks  
@@ -70,9 +71,9 @@ using Microsoft.VisualBasic.PowerPacks;
   
 #### <a name="to-draw-a-circle-that-has-a-custom-border"></a>Per disegnare un cerchio con un bordo personalizzato  
   
-1.  Trascinare il `OvalShape` controllo il **Visual Basic Power Packs** nella scheda il **della casella degli strumenti** a un controllo form o del contenitore.  
+1.  Trascinare il `OvalShape` controllare dal **Visual Basic Power Packs** scheda il **casella degli strumenti** a un form o un controllo contenitore.  
   
-2.  Nel **proprietà** finestra, nel `Size` impostata, `Height` e `Width` su valori uguali.  
+2.  Nel **delle proprietà** finestra, nel `Size` proprietà, impostata `Height` e `Width` su valori uguali.  
   
 3.  Impostare la proprietà `BorderColor` sul colore desiderato.  
   
@@ -82,9 +83,9 @@ using Microsoft.VisualBasic.PowerPacks;
   
 #### <a name="to-draw-a-circle-that-has-a-solid-fill"></a>Per disegnare un cerchio con un riempimento a tinta unita  
   
-1.  Trascinare il `OvalShape` controllo il **Visual Basic Power Packs** nella scheda il **della casella degli strumenti** a un controllo form o del contenitore.  
+1.  Trascinare il `OvalShape` controllare dal **Visual Basic Power Packs** scheda il **casella degli strumenti** a un form o un controllo contenitore.  
   
-2.  Nel **proprietà** finestra, nel `Size` impostata, `Height` e `Width` su valori uguali.  
+2.  Nel **delle proprietà** finestra, nel `Size` proprietà, impostata `Height` e `Width` su valori uguali.  
   
 3.  Impostare la proprietà `BackColor` sul colore desiderato.  
   
@@ -92,9 +93,9 @@ using Microsoft.VisualBasic.PowerPacks;
   
 #### <a name="to-draw-a-circle-that-has-a-patterned-fill"></a>Per disegnare un cerchio con un motivo di riempimento  
   
-1.  Trascinare il `OvalShape` controllo il **Visual Basic Power Packs** nella scheda il **della casella degli strumenti** a un controllo form o del contenitore.  
+1.  Trascinare il `OvalShape` controllare dal **Visual Basic Power Packs** scheda il **casella degli strumenti** a un form o un controllo contenitore.  
   
-2.  Nel **proprietà** finestra, nel `Size` impostata, `Height` e `Width` su valori uguali.  
+2.  Nel **delle proprietà** finestra, nel `Size` proprietà, impostata `Height` e `Width` su valori uguali.  
   
 3.  Impostare la proprietà `BackColor` sul colore di sfondo desiderato.  
   
@@ -106,9 +107,9 @@ using Microsoft.VisualBasic.PowerPacks;
   
 #### <a name="to-draw-a-circle-that-has-a-gradient-fill"></a>Per disegnare un cerchio con un riempimento sfumato  
   
-1.  Trascinare il `OvalShape` controllo il **Visual Basic Power Packs** nella scheda il **della casella degli strumenti** a un controllo form o del contenitore.  
+1.  Trascinare il `OvalShape` controllare dal **Visual Basic Power Packs** scheda il **casella degli strumenti** a un form o un controllo contenitore.  
   
-2.  Nel **proprietà** finestra, nel `Size` impostata, `Height` e `Width` su valori uguali.  
+2.  Nel **delle proprietà** finestra, nel `Size` proprietà, impostata `Height` e `Width` su valori uguali.  
   
 3.  Impostare la proprietà `FillColor` sul colore iniziale desiderato.  
   
@@ -118,18 +119,18 @@ using Microsoft.VisualBasic.PowerPacks;
   
 #### <a name="to-draw-a-circle-that-is-filled-with-an-image"></a>Per disegnare un cerchio con un'immagine di riempimento  
   
-1.  Trascinare il `OvalShape` controllo il **Visual Basic Power Packs** nella scheda il **della casella degli strumenti** a un controllo form o del contenitore.  
+1.  Trascinare il `OvalShape` controllare dal **Visual Basic Power Packs** scheda il **casella degli strumenti** a un form o un controllo contenitore.  
   
-2.  Nel **proprietà** finestra, nel `Size` impostata, `Height` e `Width` su valori uguali.  
+2.  Nel **delle proprietà** finestra, nel `Size` proprietà, impostata `Height` e `Width` su valori uguali.  
   
-3.  Selezionare il `BackgroundImage` proprietà e fare clic su di **i puntini di sospensione** pulsante (…).  
+3.  Selezionare il `BackgroundImage` proprietà e scegliere il **puntini di sospensione** pulsante (...).  
   
-4.  Nel **Seleziona risorsa** la finestra di dialogo, selezionare un'immagine da visualizzare. Se non è elencato alcuna risorsa immagine, fare clic su **importazione** per passare al percorso di un'immagine.  
+4.  Nel **Seleziona risorsa** finestra di dialogo, selezionare un'immagine da visualizzare. Se non è elencato alcuna risorsa immagine, fare clic su **importazione** per passare al percorso di un'immagine.  
   
 5.  Fare clic su **OK** per inserire l'immagine.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:Microsoft.VisualBasic.PowerPacks.OvalShape>  
- <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape>  
- [Introduzione ai controlli Line e Shape](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-line-and-shape-controls-visual-studio.md)  
- [Procedura: Disegnare linee con il controllo LineShape](../../../visual-basic/developing-apps/windows-forms/how-to-draw-lines-with-the-lineshape-control-visual-studio.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:Microsoft.VisualBasic.PowerPacks.OvalShape>
+- <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape>
+- [Introduzione ai controlli Line e Shape](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-line-and-shape-controls-visual-studio.md)
+- [Procedura: Disegnare linee con il controllo LineShape](../../../visual-basic/developing-apps/windows-forms/how-to-draw-lines-with-the-lineshape-control-visual-studio.md)

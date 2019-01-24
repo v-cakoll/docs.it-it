@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a7b21179faec0b6f37b8084c9ee8a0bfd327193e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1ef6583587b960d74c83350b061be3c2e36fd4f9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443564"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722677"
 ---
 # <a name="iceegentruncatesection-method"></a>Metodo ICeeGen::TruncateSection
-Tronca la sezione di codice specificati dalla lunghezza specificata.  
+Tronca la sezione di codice specificato per la lunghezza specificata.  
   
  Questo metodo è obsoleto e non deve essere utilizzato.  
   
@@ -43,19 +43,19 @@ HRESULT TruncateSection (
  [in] La sezione da troncare.  
   
  `len`  
- [in] La lunghezza in byte, da cui si desidera troncare la sezione.  
+ [in] La lunghezza, espressa in byte, da cui si desidera troncare la sezione.  
   
 ## <a name="remarks"></a>Note  
- Chiamare `TruncateSection` solo se sono necessari requisiti speciali di sezione che non sono gestiti da altri metodi.  
+ Chiamare `TruncateSection` solo se si hanno requisiti di sezione speciale che non sono gestiti tramite altri metodi.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
- **Libreria:** usata come risorsa in Mscoree. dll  
+ **Libreria:** Usato come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

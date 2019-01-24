@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f489ab29726292f6c55151169ad9efc6f0fbfbcf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b1ee5044c2223d3ff90cf10b53cad4e1b353d87c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407794"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726510"
 ---
 # <a name="cordebuguserstate-enumeration"></a>Enumerazione CorDebugUserState
 Indica lo stato utente di un thread.  
@@ -52,23 +52,23 @@ typedef enum CorDebugUserState {
 |`USER_UNSTARTED`|Il thread non ha avviato l'esecuzione.|  
 |`USER_STOPPED`|Il thread è stato terminato.|  
 |`USER_WAIT_SLEEP_JOIN`|Il thread è in attesa di un altro thread completare un'attività.|  
-|`USER_SUSPENDED`|Il thread è stata sospesa.|  
-|`USER_UNSAFE_POINT`|Il thread è in un punto unsafe. Il thread è in esecuzione un punto in cui potrebbe bloccare l'operazione di garbage collection.<br /><br /> Eseguire il debug sia possibile inviare eventi da punti non sicuri, ma la sospensione di un thread in un punto unsafe molto probabile che un deadlock fino alla ripresa del thread. I punti sicuri e sono determinati dal just-in-time (JIT) e implementazione di garbage collection.|  
-|`USER_THREADPOOL`|Il thread è dal pool di thread.|  
+|`USER_SUSPENDED`|Il thread è stato sospeso.|  
+|`USER_UNSAFE_POINT`|Il thread è in un punto non sicuro. Vale a dire, il thread è in un punto nell'esecuzione in cui potrebbe bloccare l'operazione di garbage collection.<br /><br /> Eseguire il debug gli eventi possono essere inviati dai punti di tipo unsafe, ma la sospensione di un thread in un punto dell'unsafe molto probabilmente provocherà un deadlock finché non viene ripreso il thread. I punti sicuri e sono determinati dalla just-in-time (JIT) e dall'implementazione di garbage collection.|  
+|`USER_THREADPOOL`|Il thread è il pool di thread.|  
   
 ## <a name="remarks"></a>Note  
- Lo stato utente di un thread è lo stato in cui il thread è presente quando si esamina il debugger. Un thread può avere una combinazione di stati utente.  
+ Lo stato utente di un thread è lo stato in cui il thread ha quando lo esamina il debugger. Un thread può avere una combinazione di stati utente.  
   
- Utilizzare il [GetUserState](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getuserstate-method.md) metodo per recuperare lo stato utente di un thread.  
+ Usare la [GetUserState](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getuserstate-method.md) metodo per recuperare lo stato utente del thread.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Enumerazioni di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>Vedere anche
+- [Enumerazioni di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

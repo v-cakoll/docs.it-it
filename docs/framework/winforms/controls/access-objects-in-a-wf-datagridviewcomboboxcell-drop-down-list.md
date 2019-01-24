@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: accedere agli oggetti in un elenco a discesa DataGridViewComboBoxCell Windows Form'
+title: 'Procedura: Accedere agli oggetti in un elenco a discesa DataGridViewComboBoxCell Windows Form'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,25 +9,25 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], in DataGridView control
 - combo boxes [Windows Forms], accessing objects in DataGridViewComboBoxCell drop-down lists
 ms.assetid: bcbe794a-d1fa-47f8-b5a3-5f085b32097d
-ms.openlocfilehash: 2758841031be9ca9f0a5eb5e57165191d6870e87
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a1dac7e44894d5c96adadd45671793b4cd1d1681
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529402"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54680261"
 ---
-# <a name="how-to-access-objects-in-a-windows-forms-datagridviewcomboboxcell-drop-down-list"></a>Procedura: accedere agli oggetti in un elenco a discesa DataGridViewComboBoxCell Windows Form
-Ad esempio il <xref:System.Windows.Forms.ComboBox> (controllo), il <xref:System.Windows.Forms.DataGridViewComboBoxColumn> e <xref:System.Windows.Forms.DataGridViewComboBoxCell> tipi consentono di aggiungere oggetti arbitrari agli elenchi a discesa. Con questa funzionalità, è possibile rappresentare stati complessi in un elenco a discesa senza la necessità di archiviare oggetti corrispondenti in una raccolta separata.  
+# <a name="how-to-access-objects-in-a-windows-forms-datagridviewcomboboxcell-drop-down-list"></a>Procedura: Accedere agli oggetti in un elenco a discesa DataGridViewComboBoxCell Windows Form
+Ad esempio la <xref:System.Windows.Forms.ComboBox> (controllo), il <xref:System.Windows.Forms.DataGridViewComboBoxColumn> e <xref:System.Windows.Forms.DataGridViewComboBoxCell> tipi consentono di aggiungere oggetti arbitrari agli elenchi a discesa. Con questa funzionalità, è possibile rappresentare gli stati complessi in un elenco a discesa senza la necessità di archiviare oggetti corrispondenti in una raccolta separata.  
   
- A differenza di <xref:System.Windows.Forms.ComboBox> (controllo), il <xref:System.Windows.Forms.DataGridView> tipi non hanno un <xref:System.Windows.Forms.ComboBox.SelectedItem%2A> proprietà per il recupero dell'oggetto attualmente selezionato. In alternativa, è necessario impostare il <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A?displayProperty=nameWithType> o <xref:System.Windows.Forms.DataGridViewComboBoxCell.ValueMember%2A?displayProperty=nameWithType> proprietà sul nome di una proprietà nell'oggetto business. Quando l'utente effettua una selezione, la proprietà dell'oggetto business indicata imposta la cella <xref:System.Windows.Forms.DataGridViewCell.Value%2A> proprietà.  
+ A differenza di <xref:System.Windows.Forms.ComboBox> (controllo), il <xref:System.Windows.Forms.DataGridView> tipi non è un <xref:System.Windows.Forms.ComboBox.SelectedItem%2A> proprietà per il recupero dell'oggetto attualmente selezionato. In alternativa, è necessario impostare il <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A?displayProperty=nameWithType> o <xref:System.Windows.Forms.DataGridViewComboBoxCell.ValueMember%2A?displayProperty=nameWithType> proprietà sul nome di una proprietà nell'oggetto business. Quando l'utente effettua una selezione, la proprietà indicata dell'oggetto business imposta la cella <xref:System.Windows.Forms.DataGridViewCell.Value%2A> proprietà.  
   
- Per recuperare l'oggetto business tramite il valore della cella, il `ValueMember` proprietà deve indicare una proprietà che restituisce un riferimento all'oggetto business stesso. Pertanto, se il tipo dell'oggetto business non è disponibile sotto controllo, è necessario aggiungere tale proprietà estendendo il tipo tramite l'ereditarietà.  
+ Per recuperare l'oggetto business tramite il valore della cella, il `ValueMember` proprietà deve indicare una proprietà che restituisce un riferimento all'oggetto di business stesso. Pertanto, se il tipo dell'oggetto business non controllati dall'utente, è necessario aggiungere questo tipo di proprietà dall'estensione del tipo tramite l'ereditarietà.  
   
- Le procedure seguenti viene illustrato come compilare un elenco a discesa con oggetti business e recuperare gli oggetti tramite la cella <xref:System.Windows.Forms.DataGridViewCell.Value%2A> proprietà.  
+ Le procedure seguenti illustrano come compilare un elenco a discesa con gli oggetti business e recuperare gli oggetti tramite la cella <xref:System.Windows.Forms.DataGridViewCell.Value%2A> proprietà.  
   
-### <a name="to-add-business-objects-to-the-drop-down-list"></a>Per aggiungere oggetti business per l'elenco a discesa  
+### <a name="to-add-business-objects-to-the-drop-down-list"></a>Per aggiungere gli oggetti business per l'elenco a discesa  
   
-1.  Creare un nuovo <xref:System.Windows.Forms.DataGridViewComboBoxColumn> e popolare il relativo <xref:System.Windows.Forms.DataGridViewComboBoxColumn.Items%2A> insieme. In alternativa, è possibile impostare la colonna <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DataSource%2A> proprietà alla raccolta di oggetti business. In tal caso, tuttavia, non è possibile aggiungere "non assegnati" all'elenco di riepilogo a discesa senza creare un oggetto business corrispondente nella raccolta.  
+1.  Creare una nuova <xref:System.Windows.Forms.DataGridViewComboBoxColumn> e popolare il <xref:System.Windows.Forms.DataGridViewComboBoxColumn.Items%2A> raccolta. In alternativa, è possibile impostare la colonna <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DataSource%2A> proprietà alla raccolta di oggetti business. In tal caso, tuttavia, non è possibile aggiungere "non assegnati" per l'elenco a discesa senza creare un oggetto business corrispondente nella raccolta.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewComboBoxObjectBinding#110](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/CS/form1.cs#110)]
      [!code-vb[System.Windows.Forms.DataGridViewComboBoxObjectBinding#110](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/vb/form1.vb#110)]  
@@ -42,23 +42,23 @@ Ad esempio il <xref:System.Windows.Forms.ComboBox> (controllo), il <xref:System.
      [!code-csharp[System.Windows.Forms.DataGridViewComboBoxObjectBinding#310](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/CS/form1.cs#310)]
      [!code-vb[System.Windows.Forms.DataGridViewComboBoxObjectBinding#310](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/vb/form1.vb#310)]  
   
-### <a name="to-retrieve-the-currently-selected-business-object"></a>Per recuperare l'oggetto business attualmente selezionato  
+### <a name="to-retrieve-the-currently-selected-business-object"></a>Per recuperare l'oggetto business attualmente selezionata  
   
--   Ottenere la cella <xref:System.Windows.Forms.DataGridViewCell.Value%2A> proprietà ed eseguirne il cast al tipo di oggetto business.  
+-   Ottiene la cella <xref:System.Windows.Forms.DataGridViewCell.Value%2A> proprietà ed eseguirne il cast al tipo di oggetto business.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewComboBoxObjectBinding#120](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/CS/form1.cs#120)]
      [!code-vb[System.Windows.Forms.DataGridViewComboBoxObjectBinding#120](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/vb/form1.vb#120)]  
   
 ## <a name="example"></a>Esempio  
- L'esempio completo viene illustrato l'utilizzo di oggetti business in un elenco a discesa. Nell'esempio, un <xref:System.Windows.Forms.DataGridView> è associato a una raccolta di `Task` oggetti. Ogni `Task` oggetto ha un `AssignedTo` proprietà che indica il `Employee` oggetto attualmente assegnato a tale attività. Il `Assigned To` colonna viene visualizzato il `Name` assegnato il valore di proprietà per ogni dipendente, o "non assegnati" se il `Task.AssignedTo` valore della proprietà è `null`.  
+ L'esempio completo viene illustrato l'utilizzo di oggetti business in un elenco a discesa. Nell'esempio, un <xref:System.Windows.Forms.DataGridView> è associato a una raccolta di `Task` oggetti. Ciascuna `Task` oggetto ha un `AssignedTo` proprietà che indica il `Employee` oggetto attualmente assegnato a tale attività. Il `Assigned To` colonna vengono visualizzati la `Name` valore della proprietà per ogni dipendente assegnato, o "non assegnati" se il `Task.AssignedTo` valore della proprietà è `null`.  
   
- Per visualizzare il comportamento di questo esempio, eseguire la procedura seguente:  
+ Per visualizzare il comportamento di questo esempio, procedere come segue:  
   
-1.  Modificare le assegnazioni di `Assigned To` colonna selezionando valori diversi dagli elenchi a discesa oppure premendo CTRL + 0 in una cella di casella combinata.  
+1.  Modificare le assegnazioni nel `Assigned To` colonna selezionando valori diversi dagli elenchi a discesa o premendo CTRL + 0 in una cella di casella combinata.  
   
-2.  Fare clic su `Generate Report` per visualizzare le assegnazioni correnti. Ciò dimostra che una modifica di `Assigned To` colonna Aggiorna automaticamente il `tasks` insieme.  
+2.  Fare clic su `Generate Report` per visualizzare le assegnazioni correnti. Ciò dimostra che una modifica nel `Assigned To` colonna Aggiorna automaticamente il `tasks` raccolta.  
   
-3.  Fare clic su un `Request Status` pulsante per chiamare il `RequestStatus` metodo dell'oggetto corrente `Employee` oggetto per la riga. Ciò dimostra che l'oggetto selezionato è stato recuperato correttamente.  
+3.  Fare clic su un `Request Status` il pulsante per chiamare il `RequestStatus` metodo dell'oggetto corrente `Employee` oggetto per la riga. Ciò dimostra che l'oggetto selezionato è stato recuperato.  
   
  [!code-csharp[System.Windows.Forms.DataGridViewComboBoxObjectBinding#000](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/CS/form1.cs#000)]
  [!code-vb[System.Windows.Forms.DataGridViewComboBoxObjectBinding#000](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/vb/form1.vb#000)]  
@@ -68,16 +68,16 @@ Ad esempio il <xref:System.Windows.Forms.ComboBox> (controllo), il <xref:System.
   
 -   Riferimenti agli assembly System e System.Windows.Forms.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Windows.Forms.DataGridView>  
- <xref:System.Windows.Forms.DataGridViewComboBoxColumn>  
- <xref:System.Windows.Forms.DataGridViewComboBoxColumn.Items%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DataSource%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.DataGridViewComboBoxCell>  
- <xref:System.Windows.Forms.DataGridViewComboBoxCell.Items%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.DataGridViewComboBoxCell.DataSource%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.DataGridViewComboBoxCell.ValueMember%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.DataGridViewCell.Value%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.ComboBox>  
- [Visualizzazione di dati nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Windows.Forms.DataGridView>
+- <xref:System.Windows.Forms.DataGridViewComboBoxColumn>
+- <xref:System.Windows.Forms.DataGridViewComboBoxColumn.Items%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DataSource%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.DataGridViewComboBoxCell>
+- <xref:System.Windows.Forms.DataGridViewComboBoxCell.Items%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.DataGridViewComboBoxCell.DataSource%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.DataGridViewComboBoxCell.ValueMember%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.DataGridViewCell.Value%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.ComboBox>
+- [Visualizzazione di dati nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 48617022940d889abedb9a9d25f04782371c4a5f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ad04e90d1855e2de89aa6515bf16424de95ffa26
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33451945"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54696438"
 ---
 # <a name="corprfmoduleflags-enumeration"></a>Enumerazione COR_PRF_MODULE_FLAGS
 Specifica le proprietà di un modulo.  
@@ -47,23 +47,23 @@ typedef enum
 |------------|-----------------|  
 |COR_PRF_MODULE_DISK|Il modulo è stato caricato dal disco.|  
 |COR_PRF_MODULE_NGEN|Il modulo è stato generato dal generatore di immagini Native (Ngen.exe).|  
-|COR_PRF_MODULE_DYNAMIC|Il modulo è stato creato dai metodi di <xref:System.Reflection.Emit?displayProperty=nameWithType> dello spazio dei nomi.|  
+|COR_PRF_MODULE_DYNAMIC|Il modulo è stato creato dai metodi nel <xref:System.Reflection.Emit?displayProperty=nameWithType> dello spazio dei nomi.|  
 |COR_PRF_MODULE_COLLECTIBLE|La durata del modulo viene gestita dal garbage collector.|  
-|COR_PRF_MODULE_RESOURCE|Il modulo non contiene metadati e viene utilizzato esclusivamente come risorsa. L'equivalente gestito di questo bit è la <xref:System.Reflection.Module.IsResource%2A?displayProperty=nameWithType> metodo.|  
-|COR_PRF_MODULE_FLAT_LAYOUT|Il layout del modulo in memoria non è strutturato, non è stato eseguito il mapping. Se un modulo è questo bit impostato, i profiler che leggono informazioni direttamente dall'intestazione del file (PE) eseguibile portabile saranno necessario prestare attenzione durante l'interpretazione degli indirizzi virtuali relativi (RVA) nell'intestazione.|  
-|COR_PRF_MODULE_WINDOWS_RUNTIME|Il flag di tipo di contenuto di Windows Runtime è impostato nei metadati per l'assembly dal modulo. Questo vale per tutti i moduli di metadati di Windows (con estensione winmd).|  
+|COR_PRF_MODULE_RESOURCE|Il modulo non contiene metadati e viene usato esclusivamente come risorsa. L'equivalente gestito di questo bit è la <xref:System.Reflection.Module.IsResource%2A?displayProperty=nameWithType> (metodo).|  
+|COR_PRF_MODULE_FLAT_LAYOUT|Il layout del modulo in memoria è flat, non è mappata. Se un modulo ha questo bit impostato, i profiler che leggono informazioni direttamente dall'intestazione del file (PE) eseguibile portabile saranno necessario prestare attenzione durante l'interpretazione di indirizzi virtuali relativi (RVA) nell'intestazione.|  
+|COR_PRF_MODULE_WINDOWS_RUNTIME|Il flag di tipo di contenuto di Windows Runtime è impostato nei metadati per l'assembly del modulo. Ciò avviene per tutti i moduli di metadati Windows (con estensione winmd).|  
   
 ## <a name="remarks"></a>Note  
- Bit da COR_PRF_MODULE_FLAGS vengono restituiti al profiler nel `pdwModuleFlags` parametro di output di [ICorProfilerInfo3:: Getmoduleinfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getmoduleinfo2-method.md) metodo. Alcune combinazioni di due o più flag sono possibili, ma non tutte le combinazioni sono possibili.  
+ BITS da COR_PRF_MODULE_FLAGS vengono restituiti al profiler, vedere la `pdwModuleFlags` parametro di output la [ICorProfilerInfo3::GetModuleInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getmoduleinfo2-method.md) (metodo). Alcune combinazioni di due o più flag sono possibili, ma non tutte le combinazioni possibili.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Enumerazioni di profilatura](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+## <a name="see-also"></a>Vedere anche
+- [Enumerazioni di profilatura](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

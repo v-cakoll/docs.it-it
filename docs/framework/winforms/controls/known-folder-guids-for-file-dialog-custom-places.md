@@ -6,18 +6,18 @@ helpviewer_keywords:
 - Custom Places [Windows Forms], Known Folder GUIDs
 - Windows Vista Known Folder GUIDs [Windows Forms], Custom Places
 ms.assetid: d8d8b544-8b4d-4da5-ba3a-b05e93244778
-ms.openlocfilehash: 69fa8837f616969e018e4ec7191f0b30a2df5b62
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 97d516e1c3ae99d639dea676f3f6798b6e7a849f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33541564"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54679396"
 ---
 # <a name="known-folder-guids-for-file-dialog-custom-places"></a>GUID di cartella nota per percorsi personalizzati della finestra di dialogo File.
-Si utilizza un <xref:System.Guid> per specificare un [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] cartella nota quando si aggiungono cartelle di un <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> insieme. Nota GUID della cartella non tra maiuscole e minuscole e vengono definiti nel file KnownFolders il [!INCLUDE[winSDK](../../../../includes/winsdk-md.md)].  
+Usa un' <xref:System.Guid> per specificare un [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] cartella nota quando si aggiungono le cartelle da un <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> raccolta. Noto GUID di cartella non sono tra maiuscole e minuscole e vengono definiti nel file KnownFolders. H di [!INCLUDE[winSDK](../../../../includes/winsdk-md.md)].  
   
 > [!NOTE]
->  In alcuni casi, una cartella nota aggiunta per il <xref:System.Windows.Forms.FileDialogCustomPlacesCollection> non verranno visualizzate nel **collegamenti Preferiti** area. Ad esempio, se la cartella nota specificata non è presente nel computer che esegue l'applicazione, la cartella nota non visualizzata.  
+>  In alcuni casi, aggiungere una cartella nota di <xref:System.Windows.Forms.FileDialogCustomPlacesCollection> non verranno visualizzati nei **collegamenti Preferiti** area. Ad esempio, se la cartella nota specificato non è presente nel computer che esegue l'applicazione, nella cartella noto non viene visualizzata.  
   
 ## <a name="list-of-guids"></a>Elenco di GUID  
  La tabella seguente elenca [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] cartelle note e i relativi <xref:System.Guid>.  
@@ -70,7 +70,7 @@ Si utilizza un <xref:System.Guid> per specificare un [!INCLUDE[wiprlhext](../../
  Contatti  
  56784854-C6CB-462B-8169-88E350ACB882  
   
- Pannello di controllo  
+ ControlPanel  
  82A74AEB-AEB4-465C-A014-D097EE346D63  
   
  Cookie  
@@ -118,7 +118,7 @@ Si utilizza un <xref:System.Guid> per specificare un [!INCLUDE[wiprlhext](../../
  Musica  
  4BD8D571-6D19-48D3-BE97-422220080E43  
   
- Risorse di rete  
+ NetHood  
  C5ABBF53-E17F-4121-8900-86626FC2C973  
   
  Rete  
@@ -133,13 +133,13 @@ Si utilizza un <xref:System.Guid> per specificare un [!INCLUDE[wiprlhext](../../
  Immagini  
  33E28130-4E1E-4676-835A-98395C3BC3BB  
   
- Playlist  
+ Elenchi di riproduzione  
  DE92C1C7-837F-4F69-A3BB-86E631204A23  
   
  Stampanti  
  76FC4E2D-D6AD-4519-A663-37BD56068185  
   
- Risorse di stampa  
+ PrintHood  
  9274BD8D-CFD1-41C3-B35E-B13F55A758F4  
   
  Profilo  
@@ -193,13 +193,13 @@ Si utilizza un <xref:System.Guid> per specificare un [!INCLUDE[wiprlhext](../../
  PublicVideos  
  2400183A-6185-49FB-A2D8-4A392A602BA3  
   
- Avvio veloce  
+ QuickLaunch  
  52A4F021-7B75-48A9-9F6B-4B87A210BC8F  
   
  Recenti  
  AE50C081-EBD2-438A-8655-8A092E34987A  
   
- Registrazioni TV  
+ RecordedTV  
  BD85E001-112E-431E-983B-7B15AC09FFF1  
   
  RecycleBin  
@@ -223,10 +223,10 @@ Si utilizza un <xref:System.Guid> per specificare un [!INCLUDE[wiprlhext](../../
  SampleVideos  
  859EAD94-2E85-48AD-A71A-0969CB56A6CD  
   
- Partite salvate  
+ SavedGames  
  4C5C32FF-BB9D-43B0-B5B4-2D72E54EAAA4  
   
- savedSearches  
+ SavedSearches  
  7D1D3A04-DEBB-4115-95CF-2F29DA2920DA  
   
  SEARCH_CSC  
@@ -247,7 +247,7 @@ Si utilizza un <xref:System.Guid> per specificare un [!INCLUDE[wiprlhext](../../
  SidebarParts  
  A75D362E-50FC-4FB7-AC2C-A8BEAA314493  
   
- Menu  
+ StartMenu  
  625B53C3-AB48-4EC1-BA1F-A1EF4146FC19  
   
  Avvio  
@@ -286,6 +286,6 @@ Si utilizza un <xref:System.Guid> per specificare un [!INCLUDE[wiprlhext](../../
  WINDOWS  
  F38BF404-1D43-42F2-9305-67DE0B28FC23  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Windows.Forms.FileDialogCustomPlace>  
- [Procedura: Aggiungere un percorso personalizzato a una finestra di dialogo File](../../../../docs/framework/winforms/controls/how-to-add-a-custom-place-to-a-file-dialog-box.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Windows.Forms.FileDialogCustomPlace>
+- [Procedura: Aggiungere un percorso personalizzato a una finestra di dialogo File](../../../../docs/framework/winforms/controls/how-to-add-a-custom-place-to-a-file-dialog-box.md)

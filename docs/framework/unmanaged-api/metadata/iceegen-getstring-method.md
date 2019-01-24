@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f7ac5ef95ca3705b11cfda51d7fd1aca7400abc4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3d8d6a0ebecb4fbb9ba277844710c775d80648e5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443073"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54716817"
 ---
 # <a name="iceegengetstring-method"></a>Metodo ICeeGen::GetString
-Ottiene la stringa archiviata nell'indirizzo virtuale relativo specificato.  
+Ottiene la stringa archiviata all'indirizzo virtuale relativo specificato.  
   
  Questo metodo è obsoleto e non deve essere utilizzato.  
   
@@ -40,19 +40,19 @@ HRESULT GetString (
   
 #### <a name="parameters"></a>Parametri  
  `RVA`  
- [in] L'indirizzo virtuale relativo, della stringa da restituire.  
+ [in] L'indirizzo virtuale relativo della stringa da restituire.  
   
  `lpString`  
  [out] La stringa restituita.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
- **Libreria:** usata come risorsa in Mscoree. dll  
+ **Libreria:** Usato come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

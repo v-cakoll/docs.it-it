@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 339ec145-826c-46d2-8cf2-3acd252cd072
-ms.openlocfilehash: cd910b35f82f816158cb686a283e44e3b8b6b33b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d3c343d3cf5068e473efbd62de019a25cf19dc10
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359972"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54702574"
 ---
 # <a name="determine-if-any-or-all-elements-in-a-sequence-satisfy-a-condition"></a>Determinare se alcuni o tutti gli elementi di una sequenza soddisfano una condizione
 L'operatore <xref:System.Linq.Enumerable.All%2A> restituisce `true` se tutti gli elementi in una sequenza soddisfanno una condizione.  
@@ -18,7 +18,7 @@ L'operatore <xref:System.Linq.Enumerable.All%2A> restituisce `true` se tutti gli
  L'operatore <xref:System.Linq.Queryable.Any%2A> restituisce `true` se un elemento qualsiasi in una sequenza soddisfa una condizione.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene restituita una sequenza di clienti con almeno un ordine. Il `Where` / `where` clausola restituisce `true` se il dato `Customer` presenti `Order`.  
+ Nell'esempio seguente viene restituita una sequenza di clienti con almeno un ordine. Il `Where` / `where` clausola restituisca `true` se il determinato `Customer` include uno `Order`.  
   
  [!code-csharp[DLinqQueryExamples#37](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#37)]
  [!code-vb[DLinqQueryExamples#37](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#37)]  
@@ -33,5 +33,5 @@ L'operatore <xref:System.Linq.Enumerable.All%2A> restituisce `true` se tutti gli
   
  [!code-csharp[DLinqQueryExamples#38](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#38)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Esempi di query](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
+## <a name="see-also"></a>Vedere anche
+- [Esempi di query](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)

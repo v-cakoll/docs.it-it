@@ -2,12 +2,12 @@
 title: Raccolte di schemi Oracle
 ms.date: 03/30/2017
 ms.assetid: 89a75de8-dee8-45e2-a97f-254d7e62e7e1
-ms.openlocfilehash: 342c4cbe994eb983713be0f258e3a029df6739f8
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 80623a1abcaeee642b9206edc106d1a4ea74d63b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44217347"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54694464"
 ---
 # <a name="oracle-schema-collections"></a>Raccolte di schemi Oracle
 Il provider di dati Microsoft .NET Framework per Oracle, oltre alle raccolte di schemi comuni, supporta le seguenti raccolte di schemi specifici:  
@@ -107,15 +107,15 @@ Il provider di dati Microsoft .NET Framework per Oracle, oltre alle raccolte di 
 |SECONDARY|Stringa|Indica se l'indice è un oggetto secondario creato dal metodo ODCIIndexCreate di Oracle9i Data Cartridge (Y&#124;N).|  
 |BUFFER_POOL|String|Il nome del pool di buffer predefinito da usare per il blocchi dell'indice.|  
 |USER_STATS|String|Indica se le statistiche sono state immesse direttamente dall'utente.|  
-|DURATION|String|Indica la durata di una tabella temporanea. 1) SYS$SESSION: le righe vengono mantenute per la durata della sessione. 2) SYS$TRANSACTION: le righe vengono eliminate dopo COMMIT. 3) Null per una tabella permanente.|  
+|DURATION|Stringa|Indica la durata di una tabella temporanea: 1) SYS$ SESSION: le righe vengono mantenute per tutta la durata della sessione, 2) SYS$ TRANSACTION: le righe vengono eliminate dopo il COMMIT, 3) Null per una tabella permanente.|  
 |PCT_DIRECT_ACCESS|Decimal|Indica la percentuale di righe con guess uguale a VALID per un indice secondario in una tabella con indice.|  
 |ITYP_OWNER|String|Indica il proprietario del tipo di indice per un indice di dominio.|  
 |ITYP_NAME|String|Indica il nome del tipo di indice per un indice di dominio.|  
 |PARAMETERS|String|Indica la stringa del parametro per un indice di dominio.|  
 |GLOBAL_STATS|String|Per gli indici partizionati, indica se le statistiche sono state raccolte analizzando l'intero indice (YES) o se sono state valutate in base alle statistiche sulle partizioni e sottopartizioni dell'indice sottostanti (NO).|  
 |DOMIDX_STATUS|String|Riflette lo stato dell'indice di dominio. NULL: l'indice specificato non è un indice di dominio. VALID: l'indice è un indice di dominio valido. IDXTYP_INVLD: il tipo di indice dell'indice di dominio non è valido.|  
-|DOMIDX_OPSTATUS|String|Riflette lo stato di un'operazione eseguita su un indice di dominio. NULL: l'indice specificato non è un indice di dominio. VALID: l'operazione è stata eseguita senza errori. FAILED: si è verificato un errore e l'operazione non è stata eseguita correttamente.|  
-|FUNCIDX_STATUS|String|Indica lo stato di un indice basato sulla funzione. NULL: non si tratta di un indice basato sulla funzione. ENABLED: l'indice basato sulla funzione è abilitato. DISABLED: l'indice basato sulla funzione è disabilitato.|  
+|DOMIDX_OPSTATUS|Stringa|Riflette lo stato di un'operazione eseguita su un indice di dominio. NULL: l'indice specificato non è un indice di dominio. VALID: l'operazione è stata eseguita senza errori. FAILED: si è verificato un errore e l'operazione non è stata eseguita correttamente.|  
+|FUNCIDX_STATUS|Stringa|Indica lo stato di un indice basato su funzioni. NULL: questo non è basato sulla funzione di indice, abilitato: l'indice basato sulla funzione è abilitato, DISABILITATO: l'indice basato su funzioni è disabilitato.|  
 |JOIN_INDEX|String|Indica se l'indice è un indice di join o meno.|  
   
 ## <a name="indexcolumns"></a>IndexColumns  
@@ -379,5 +379,5 @@ Il provider di dati Microsoft .NET Framework per Oracle, oltre alle raccolte di 
 |CHAR_LENGTH|Decimal|Il limite dei caratteri per i dati di tipo stringa.|  
 |CHAR_USED|String|Indica se il limite di byte (B) o il limite di caratteri (C) è ufficiale per la stringa.|  
   
-## <a name="see-also"></a>Vedere anche  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vedere anche
+- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

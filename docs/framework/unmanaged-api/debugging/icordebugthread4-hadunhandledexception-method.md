@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8215ddfd0f59f835d0b0dcd278b8cae9c12027d2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7415e7b5ee03353e8e0e45cf46aa47c4266109af
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422110"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54704303"
 ---
 # <a name="icordebugthread4hadunhandledexception-method"></a>Metodo ICorDebugThread4::HadUnhandledException
-Indica se il thread è già verificata un'eccezione non gestita.  
+Indica se il thread è stato mai un'eccezione non gestita.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,29 +37,29 @@ HRESULT GetBlockingObjects (
   
 #### <a name="parameters"></a>Parametri  
  `ppBlockingObjectEnum`  
- [out] Un puntatore all'indirizzo di un'enumerazione ordinata di [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) strutture.  
+ [out] Un puntatore all'indirizzo di un'enumerazione di ordinato [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) strutture.  
   
 ## <a name="return-value"></a>Valore restituito  
  Questo metodo restituisce gli specifici HRESULT seguenti, nonché gli errori di HRESULT che indicano la mancata riuscita del metodo.  
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|S_OK|Il thread è verificata un'eccezione non gestita dal momento della creazione.|  
-|S_FALSE|Il thread non è stato mai un'eccezione non gestita.|  
+|S_OK|Il thread è verificata un'eccezione non gestita dopo la creazione.|  
+|S_FALSE|Il thread non è mai stato un'eccezione non gestita.|  
   
 ## <a name="remarks"></a>Note  
- Questo metodo indica se il thread è già verificata un'eccezione non gestita. Quando viene attivato il callback di eccezione non gestita o native ad associazione JIT viene avviato, viene garantito che questo metodo per restituire S_OK. Non c'è garanzia che il [ICorDebugThread. GetCurrentException](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getcurrentexception-method.md) metodo restituirà l'eccezione non gestita; tuttavia, verranno eseguite se il processo non ancora ripreso dopo aver ottenuto il callback di eccezione non gestita o dopo il associazione JIT nativa. Inoltre, è possibile (anche se improbabile) abbia più di un thread con un'eccezione non gestita in fase di associazione JIT nativa viene attivato. In questo caso non è possibile determinare quale eccezione ha attivato l'associazione JIT.  
+ Questo metodo indica se il thread è stato mai un'eccezione non gestita. Quando viene attivato il callback di eccezione non gestita o native ad associazione JIT viene avviata, questo metodo garantisce la restituzione S_OK. Non c'è garanzia che il [ICorDebugThread. GetCurrentException](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getcurrentexception-method.md) metodo restituirà un'eccezione non gestita; tuttavia, si verifica se il processo non ancora ripreso dopo aver ottenuto il callback di eccezione non gestita o al momento associazione JIT nativa. Inoltre, è possibile (nonostante sia improbabile) che più thread con un'eccezione non gestita al momento native ad associazione JIT viene attivato. In tal caso non è possibile determinare l'eccezione che ha attivato l'associazione JIT.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ICorDebugThread4](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-interface.md)  
- [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Debug](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ICorDebugThread4](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-interface.md)
+- [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debug](../../../../docs/framework/unmanaged-api/debugging/index.md)

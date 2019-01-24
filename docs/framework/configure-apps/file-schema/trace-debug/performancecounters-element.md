@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: a71f605b-c7d9-4501-a5c3-abcbb964a43f
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 69d6deafb6aad88f5d379c7e8d4ac707e4c51815
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: a7b32f9cf797729aa0ca0d176b31732d06e73907
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48032465"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701924"
 ---
 # <a name="ltperformancecountersgt-element"></a>&lt;performanceCounters&gt; elemento
 Specifica le dimensioni della memoria globale condivisa dai contatori delle prestazioni.  
   
  \<configuration>  
-\<System. Diagnostics >  
+\<system.diagnostics>  
 \<performanceCounters>  
   
 ## <a name="syntax"></a>Sintassi  
@@ -37,7 +37,7 @@ Specifica le dimensioni della memoria globale condivisa dai contatori delle pres
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|FileMappingSize|Attributo obbligatorio.<br /><br /> Specifica le dimensioni, in byte, della memoria globale condivisa dai contatori delle prestazioni. Il valore predefinito è 524288.|  
+|filemappingsize|Attributo obbligatorio.<br /><br /> Specifica le dimensioni, in byte, della memoria globale condivisa dai contatori delle prestazioni. Il valore predefinito è 524288.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
@@ -56,8 +56,8 @@ Specifica le dimensioni della memoria globale condivisa dai contatori delle pres
   
  Per le dimensioni della memoria condivisa separata, il valore della chiave DWORD FileMappingSize nel Registro di sistema chiave HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\\*\<il nome di categoria >* \Performance viene fatto riferimento in primo luogo, seguito dal valore specificato per la memoria condivisa globale nel file di configurazione. Se il valore FileMappingSize non esiste, quindi le dimensioni di memoria condivisa separata sono impostata su un quarto (1 e 4) l'impostazione globale nel file di configurazione.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Diagnostics.PerformanceCounter>  
- <xref:System.Diagnostics.PerformanceCounterCategory>  
- <xref:System.Diagnostics.PerformanceCounter.InstanceLifetime%2A>  
- <xref:System.Diagnostics.PerformanceCounterInstanceLifetime>
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Diagnostics.PerformanceCounter>
+- <xref:System.Diagnostics.PerformanceCounterCategory>
+- <xref:System.Diagnostics.PerformanceCounter.InstanceLifetime%2A>
+- <xref:System.Diagnostics.PerformanceCounterInstanceLifetime>

@@ -2,12 +2,12 @@
 title: Accodamento messaggi in Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: 6d718eb0-9f61-4653-8a75-d2dac8fb3520
-ms.openlocfilehash: cbbbab700a6602fa02160733c383a0fcaa84297b
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: fa8bb6036b38456066922c0c2991a4893a22c117
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850674"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54676653"
 ---
 # <a name="message-queuing-to-windows-communication-foundation"></a>Accodamento messaggi in Windows Communication Foundation
 Questo esempio dimostra come un'applicazione di Accodamento messaggi (MSMQ) può inviare un messaggio MSMQ a un servizio Windows Communication Foundation (WCF). Il servizio è un'applicazione console indipendente che consente di osservare il servizio che riceve messaggi in coda.  
@@ -153,7 +153,7 @@ Console.ReadLine();
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MsmqToWcf`  
   
-## <a name="see-also"></a>Vedere anche  
- [Code in WCF](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)  
- [Procedura: Scambiare messaggi con endpoint WCF e con applicazioni di accodamento messaggi](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
- [Accodamento messaggi](https://go.microsoft.com/fwlink/?LinkId=94968)
+## <a name="see-also"></a>Vedere anche
+- [Code in WCF](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)
+- [Procedura: Scambiare messaggi con endpoint WCF e le applicazioni di Accodamento messaggi](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
+- [Accodamento messaggi](https://go.microsoft.com/fwlink/?LinkId=94968)

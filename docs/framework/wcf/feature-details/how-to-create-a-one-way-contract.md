@@ -1,21 +1,21 @@
 ---
-title: 'Procedura: creare un contratto unidirezionale'
+title: 'Procedura: Creare un contratto unidirezionale'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 85084cd9-31cc-4e95-b667-42ef01336622
-ms.openlocfilehash: 80cab35b14dd3b7663405038f2afdea362cdb792
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f7636d7013c236e0c51e5326a84ae47f2f98e283
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33490773"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54693623"
 ---
-# <a name="how-to-create-a-one-way-contract"></a>Procedura: creare un contratto unidirezionale
+# <a name="how-to-create-a-one-way-contract"></a>Procedura: Creare un contratto unidirezionale
 In questo argomento vengono illustrati i passaggi di base per creare metodi che utilizzano un contratto unidirezionale. Tali metodi richiamano operazioni in un servizio Windows Communication Foundation (WCF) da un client, ma non prevede una risposta. Questo tipo di contratto può essere utilizzato, ad esempio, per pubblicare notifiche a numerosi sottoscrittori. È anche possibile utilizzare contratti unidirezionali durante la creazione di un contratto duplex (bidirezionale) che consente ai client e ai server di comunicare fra loro indipendentemente in modo che uno sia in grado di avviare chiamate all'altro. In particolare, questo può consentire al server di eseguire chiamate unidirezionali al client che vengono trattate da quest'ultimo come eventi. Per informazioni dettagliate sulla specifica di metodi bidirezionali, vedere la proprietà <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> e la classe <xref:System.ServiceModel.OperationContractAttribute>.  
   
- Per ulteriori informazioni sulla creazione di un'applicazione client per un contratto duplex, vedere [procedura: servizi di accesso con un contratto unidirezionale e i contratti Request/Reply](../../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md). Per un esempio funzionante, vedere il [unidirezionale](../../../../docs/framework/wcf/samples/one-way.md) esempio.  
+ Per altre informazioni sulla creazione di un'applicazione client per un contratto duplex, vedere [come: Accedere ai servizi con un contratto unidirezionale e i contratti Request / Reply](../../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md). Per un esempio funzionante, vedere la [unidirezionale](../../../../docs/framework/wcf/samples/one-way.md) esempio.  
   
 ### <a name="to-create-a-one-way-contract"></a>Per creare un contratto unidirezionale  
   
@@ -31,10 +31,10 @@ In questo argomento vengono illustrati i passaggi di base per creare metodi che 
  [!code-csharp[S_Service_Session#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_service_session/cs/service.cs#1)]
  [!code-vb[S_Service_Session#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_service_session/vb/service.vb#1)]  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.ServiceContractAttribute>  
- <xref:System.ServiceModel.OperationContractAttribute>  
- [Progettazione e implementazione di servizi](../../../../docs/framework/wcf/designing-and-implementing-services.md)  
- [Procedura: Definire un contratto di servizio](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)  
- [Sessione](../../../../docs/framework/wcf/samples/session.md)  
- [Procedura: Creare un contratto duplex](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.ServiceModel.ServiceContractAttribute>
+- <xref:System.ServiceModel.OperationContractAttribute>
+- [Progettazione e implementazione di servizi](../../../../docs/framework/wcf/designing-and-implementing-services.md)
+- [Procedura: Definire un contratto di servizio](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)
+- [Sessione](../../../../docs/framework/wcf/samples/session.md)
+- [Procedura: Creare un contratto Duplex](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)

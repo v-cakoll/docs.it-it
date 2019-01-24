@@ -1,19 +1,19 @@
 ---
-title: "Procedura: implementare la convalida dell'associazione"
+title: "Procedura: Implementare la convalida dell'associazione"
 ms.date: 03/30/2017
 helpviewer_keywords:
 - validation of binding [WPF]
 - data binding [WPF], validation of binding
 - binding [WPF], validation of
 ms.assetid: eb98b33d-9866-49ae-b981-bc5ff20d607a
-ms.openlocfilehash: 5e91ab9fbd2fdeb0aa5d836a1eedfb5e0b45ecba
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e752ad5c3160ac7b73adac55b02a06bf802190ed
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510452"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54678356"
 ---
-# <a name="how-to-implement-binding-validation"></a>Procedura: implementare la convalida dell'associazione
+# <a name="how-to-implement-binding-validation"></a>Procedura: Implementare la convalida dell'associazione
 In questo esempio viene illustrato come utilizzare un <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> e un trigger di stile per fornire indicazioni visive per informare l'utente quando viene immesso un valore non valido, in base una regola di convalida personalizzata.  
   
 ## <a name="example"></a>Esempio  
@@ -37,6 +37,6 @@ In questo esempio viene illustrato come utilizzare un <xref:System.Windows.Contr
   
  Si noti che se non si specifica un oggetto personalizzato <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> viene visualizzato il modello di errore predefinito per fornire un feedback visivo all'utente quando si verifica un errore di convalida. Per altre informazioni, vedere "Convalida dei dati" in [Panoramica sul data binding](../../../../docs/framework/wpf/data/data-binding-overview.md). [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornisce anche una regola di convalida integrata che controlla le eccezioni generate durante l'aggiornamento della proprietà di origine del binding. Per altre informazioni, vedere <xref:System.Windows.Controls.ExceptionValidationRule>.  
   
-## <a name="see-also"></a>Vedere anche  
- [Panoramica sul data binding](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Procedure relative alle proprietà](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a>Vedere anche
+- [Panoramica sul data binding](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [Procedure relative alle proprietà](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

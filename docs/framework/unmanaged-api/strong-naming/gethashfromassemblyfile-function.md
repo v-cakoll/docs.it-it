@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5e9c0abcd395caf09ebe11e060a4b922e78ad1e6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 83e3ba8644af1f630b5c9ad5268ec44750badc88
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33457932"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54682052"
 ---
 # <a name="gethashfromassemblyfile-function"></a>Funzione GetHashFromAssemblyFile
-Ottiene un hash del file di assembly specificato, usando l'algoritmo hash specificato.  
+Ottiene un hash del file di assembly specificato usando l'algoritmo hash specificato.  
   
- Questa funzione è stata deprecata. Utilizzare il [:: GetHashFromAssemblyFile](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfile-method.md) metodo invece.  
+ Questa funzione è stata deprecata. Usare la [GetHashFromAssemblyFile](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfile-method.md) metodo invece.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,7 +45,7 @@ HRESULT GetHashFromAssemblyFile (
  [in] Il percorso del file di cui eseguire l'hashing.  
   
  `piHashAlg`  
- [in, out] Costante che specifica l'algoritmo hash. Utilizzare zero per l'algoritmo hash predefinito.  
+ [in, out] Costante che specifica l'algoritmo hash. Usa lo zero per l'algoritmo hash predefinito.  
   
  `pbHash`  
  [out] Il buffer di hash restituito.  
@@ -57,15 +57,15 @@ HRESULT GetHashFromAssemblyFile (
  [out] La dimensione restituita, in byte, di `pbHash`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** StrongName. H  
+ **Intestazione:** StrongName.h  
   
- **Libreria:** inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Metodo GetHashFromAssemblyFile](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfile-method.md)  
- [Metodo GetHashFromAssemblyFileW](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfilew-method.md)  
- [Interfaccia ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Metodo GetHashFromAssemblyFile](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfile-method.md)
+- [Metodo GetHashFromAssemblyFileW](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfilew-method.md)
+- [Interfaccia ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

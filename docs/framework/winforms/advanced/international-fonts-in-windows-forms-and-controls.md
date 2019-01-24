@@ -13,22 +13,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2c3066df-9bac-479a-82b2-79e484b346a3
-ms.openlocfilehash: b2738f174c9837a2ba83c1306f4617f39ce17de1
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 1f9afd575e2de04e0b11556ad34436839e13d968
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208571"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54693240"
 ---
 # <a name="international-fonts-in-windows-forms-and-controls"></a>Caratteri internazionali in Windows Form e controlli
 
-Nelle applicazioni internazionali, il metodo consigliato per la selezione del carattere è utilizzare il fallback laddove possibile. Per fallback si intende che il sistema determina quali il carattere di script a cui appartiene.
+Nelle applicazioni internazionali, il metodo consigliato per la selezione del carattere è utilizzare il fallback laddove possibile. Si intende fallback del tipo di carattere che il sistema determina ciò che il carattere di script appartiene.
 
-## <a name="using-font-fallback"></a>Tramite il fallback
+## <a name="using-font-fallback"></a>Usa il fallback del tipo di carattere
 
-Per sfruttare i vantaggi di questa funzionalità, non vengono impostate le <xref:System.Drawing.Font> proprietà per il form o qualsiasi altro elemento. L'applicazione utilizzerà automaticamente il carattere di sistema predefinito, che differisce da una lingua localizzata del sistema operativo a un altro. Quando viene eseguita l'applicazione, il sistema viene fornito automaticamente il tipo di carattere corretto per la lingua selezionata nel sistema operativo.
+Per sfruttare i vantaggi di questa funzionalità, non vengono impostate le <xref:System.Drawing.Font> proprietà per il form o qualsiasi altro elemento. L'applicazione userà automaticamente il carattere di sistema predefinito, che è diverso da una lingua localizzata del sistema operativo a un altro. Quando viene eseguita l'applicazione, il sistema fornirà automaticamente il tipo di carattere per le impostazioni cultura selezionate del sistema operativo.
 
-È un'eccezione alla regola di non impostare il tipo di carattere, ovvero per modificare lo stile del carattere. Questo potrebbe essere importante per un'applicazione in cui l'utente fa clic su un pulsante per visualizzare testo in una casella di testo in grassetto. A tale scopo, è necessario scrivere una funzione per modificare lo stile del carattere della casella di testo da visualizzare in grassetto, in base a qualsiasi carattere del form è. È importante chiamare questa funzione in due posizioni: il pulsante <xref:System.Windows.Forms.Control.Click> gestore dell'evento e il <xref:System.Windows.Forms.Control.FontChanged> gestore dell'evento. Se la funzione viene chiamata solo nel <xref:System.Windows.Forms.Control.Click> gestore eventi e altre parti di codice cambia la famiglia di caratteri dell'intero form, la casella di testo non viene modificato con il resto del form.
+Si verifica un'eccezione alla regola di non impostare il tipo di carattere, ovvero per modificare lo stile del carattere. Questo potrebbe essere importante per un'applicazione in cui l'utente fa clic su un pulsante per visualizzare testo in una casella di testo in grassetto. A tale scopo, si scriverebbe una funzione per modificare lo stile del carattere della casella di testo in grassetto, basato sul tipo di carattere qualsiasi del form. È importante chiamare questa funzione in due posizioni: nel pulsante <xref:System.Windows.Forms.Control.Click> gestore dell'evento e il <xref:System.Windows.Forms.Control.FontChanged> gestore dell'evento. Se la funzione viene chiamata solo nel <xref:System.Windows.Forms.Control.Click> gestore dell'evento e altre parti di codice modifica la famiglia di caratteri dell'intero form, la casella di testo non cambia con il resto del form.
 
 ```vb
 Private Sub MakeBold()
@@ -74,7 +74,7 @@ private void Form1_FontChanged(object sender, System.EventArgs e)
 }
 ```
 
-Tuttavia, quando si localizza l'applicazione, il tipo di carattere grassetto potrebbe essere visualizzato in modo inadeguato per determinate lingue. Se si tratta di un problema, si desidera che i localizzatori di hanno la possibilità di passare il tipo di carattere da grassetto in testo normale. Poiché i localizzatori non sono in genere gli sviluppatori e non hanno accesso al codice sorgente, solo per i file di risorse, questa opzione deve essere impostata nei file di risorse. A tale scopo, impostare il <xref:System.Drawing.Font.Bold%2A> proprietà `true`. Ciò comporta l'impostazione del tipo di carattere viene scritto i file di risorse, in cui potrà essere modificata. È quindi scrivere codice dopo il `InitializeComponent` per reimpostare il tipo di carattere dal qualsiasi carattere del form, ma utilizzando lo stile del carattere specificato nel file di risorse.
+Tuttavia, quando si localizza l'applicazione, il tipo di carattere grassetto potrebbe essere visualizzato in modo inadeguato per alcune lingue. Se si tratta di un problema, si desidera che i localizzatori per avere la possibilità di passare il tipo di carattere da grassetto al testo normale. Poiché i localizzatori non sono in genere gli sviluppatori e non hanno accesso al codice sorgente, solo ai file di risorse, questa opzione deve essere impostata nei file di risorse. A tale scopo, è necessario impostare il <xref:System.Drawing.Font.Bold%2A> proprietà `true`. Ciò comporta l'impostazione del tipo di carattere in corso di scrittura per i file di risorse, dove potrà essere modificata. Sarà quindi necessario scrivere codice dopo la `InitializeComponent` base è qualsiasi carattere del form per reimpostare il tipo di carattere, ma usando lo stile del carattere specificati nel file di risorse.
 
 ```vb
 TextBox1.Font = New System.Drawing.Font(Me.Font, TextBox1.Font.Style)
@@ -86,5 +86,5 @@ textBox1.Font = new System.Drawing.Font(this.Font, textBox1.Font.Style);
   
 ## <a name="see-also"></a>Vedere anche
 
-[Globalizzazione di applicazioni Windows Form](globalizing-windows-forms.md)  
-[Uso di tipi di carattere e testo](using-fonts-and-text.md)
+- [Globalizzazione di applicazioni Windows Form](globalizing-windows-forms.md)
+- [Uso di tipi di carattere e testo](using-fonts-and-text.md)

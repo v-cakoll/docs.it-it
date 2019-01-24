@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: b6ab2d48-6eee-4bab-97a3-046b3b0a5470
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 301d36820ed5ae1d6ba1cfd2961221095b02bea6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 675e2e4d5022f0260450f9f0b2025f215b3ead7e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33386405"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54708286"
 ---
 # <a name="overlappedfreeerror-mda"></a>MDA overlappedFreeError
 L'assistente al debug gestito `overlappedFreeError` viene attivato quando il metodo <xref:System.Threading.Overlapped.Free%28System.Threading.NativeOverlapped%2A%29?displayProperty=nameWithType> viene chiamato prima del completamento dell'attività sovrapposta.  
@@ -50,7 +50,7 @@ L'assistente al debug gestito `overlappedFreeError` viene attivato quando il met
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [Diagnostica degli errori tramite gli assistenti al debug gestito](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- [Marshalling di interoperabilità](../../../docs/framework/interop/interop-marshaling.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Runtime.InteropServices.MarshalAsAttribute>
+- [Diagnostica degli errori tramite gli assistenti al debug gestito](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Marshalling di interoperabilità](../../../docs/framework/interop/interop-marshaling.md)

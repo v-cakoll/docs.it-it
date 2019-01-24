@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: creare fusi orari senza regole di regolazione'
+title: 'Procedura: Creare fusi orari senza regole di regolazione'
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: a6af8647-7893-4f29-95a9-d94c65a6e8dd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3e06232a4e262b13439516114e65c81c07ba24ab
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: cb3ffc7b6f1f7baec7ce6beb5a50b706ff78bfa1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44192964"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54681716"
 ---
-# <a name="how-to-create-time-zones-without-adjustment-rules"></a>Procedura: creare fusi orari senza regole di regolazione
+# <a name="how-to-create-time-zones-without-adjustment-rules"></a>Procedura: Creare fusi orari senza regole di regolazione
 
 Le informazioni del fuso orario preciso richiesto da un'applicazione potrebbero non essere presente in un sistema specifico per diversi motivi:
 
@@ -34,7 +34,7 @@ In questi casi, è possibile chiamare il <xref:System.TimeZoneInfo.CreateCustomT
 > [!IMPORTANT]
 > Fusi orari personalizzati creati tramite la chiamata di <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> (metodo) non vengono aggiunti al Registro di sistema. Al contrario, è possibile accedervi solo tramite il riferimento all'oggetto restituito dal <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> chiamata al metodo.
 
-In questo argomento viene illustrato come creare un fuso orario senza regole di regolazione. Per creare un fuso orario che supporta regole di regolazione dell'ora legale, vedere [procedura: creare fusi orari con regole di regolazione](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md).
+In questo argomento viene illustrato come creare un fuso orario senza regole di regolazione. Per creare un fuso orario che supporta regole di regolazione dell'ora legale, vedere [come: Creare fusi orari con regole di regolazione](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md).
 
 ### <a name="to-create-a-time-zone-without-adjustment-rules"></a>Per creare un fuso orario senza regole di regolazione
 
@@ -72,6 +72,6 @@ L'esempio presenta i requisiti seguenti:
 
 ## <a name="see-also"></a>Vedere anche
 
-* [Date, ore e fusi orari](../../../docs/standard/datetime/index.md)
-* [Panoramica sui fusi orari](../../../docs/standard/datetime/time-zone-overview.md)
-* [Procedura: Creare fusi orari con regole di regolazione](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md)
+- [Date, ore e fusi orari](../../../docs/standard/datetime/index.md)
+- [Panoramica sui fusi orari](../../../docs/standard/datetime/time-zone-overview.md)
+- [Procedura: Creare fusi orari con regole di regolazione](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md)

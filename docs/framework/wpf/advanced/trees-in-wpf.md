@@ -6,12 +6,12 @@ helpviewer_keywords:
 - element tree [WPF]
 - visual tree [WPF]
 ms.assetid: e83f25e5-d66b-4fc7-92d2-50130c9a6649
-ms.openlocfilehash: e6173916ad64a60d3727b5d35bb2a2302b881b38
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 69c91a595861dacd3dcd92666684514bc3b6f4ed
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004484"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690410"
 ---
 # <a name="trees-in-wpf"></a>Strutture ad albero in WPF
 In molte tecnologie gli elementi e i componenti sono organizzati in una struttura ad albero in cui gli sviluppatori modificano direttamente i nodi degli oggetti nell'albero per influire sul rendering o sul comportamento di un'applicazione. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] usa anche molte metafore correlate alla struttura ad albero per definire le relazioni tra gli elementi del programma. In genere gli sviluppatori WPF possono creare un'applicazione nel codice o definire parti dell'applicazione in XAML usando come riferimento concettuale la metafora della struttura ad albero di oggetti, ma chiameranno un'API specifica o useranno un markup specifico a tale scopo anziché un'API di modifica della struttura ad albero di oggetti generica simile a quella usata nel modello DOM XML. WPF espone due classi di helper che forniscono una visualizzazione albero metafora <xref:System.Windows.LogicalTreeHelper> e <xref:System.Windows.Media.VisualTreeHelper>. Nella documentazione di WPF vengono inoltre usati i termini struttura ad albero visuale e albero logico, in quanto tali strutture ad albero sono utili per la comprensione del comportamento di alcune funzionalità chiave di WPF. In questo argomento definisce ciò che rappresentano la struttura ad albero visuale e albero logico, vengono illustrate tali strutture ad albero correlazione tra un concetto di albero di oggetti complessiva e introduce <xref:System.Windows.LogicalTreeHelper> e <xref:System.Windows.Media.VisualTreeHelper>s.  
@@ -86,9 +86,9 @@ In molte tecnologie gli elementi e i componenti sono organizzati in una struttur
   
  La ricerca delle risorse può però estendersi anche oltre l'albero logico diretto. Per il markup dell'applicazione, la ricerca delle risorse può proseguire verso l'altro nei dizionari risorse a livello di applicazione e quindi verso il supporto dei temi e i valori di sistema a cui viene fatto riferimento come chiavi o proprietà statiche. Se i riferimenti alle risorse sono dinamici, i temi stessi possono fare riferimento anche ai valori di sistema esterni all'albero logico del tema. Per altre informazioni sui dizionari risorse e sulla logica di ricerca, vedere [Risorse XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Cenni preliminari sull'input](../../../../docs/framework/wpf/advanced/input-overview.md)  
- [Cenni preliminari sul rendering della grafica WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [Cenni preliminari sugli eventi indirizzati](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
- [Inizializzazione di elementi oggetto non presenti in una struttura ad albero di oggetti](../../../../docs/framework/wpf/advanced/initialization-for-object-elements-not-in-an-object-tree.md)  
- [Architettura WPF](../../../../docs/framework/wpf/advanced/wpf-architecture.md)
+## <a name="see-also"></a>Vedere anche
+- [Cenni preliminari sull'input](../../../../docs/framework/wpf/advanced/input-overview.md)
+- [Cenni preliminari sul rendering della grafica WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [Cenni preliminari sugli eventi indirizzati](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
+- [Inizializzazione di elementi oggetto non presenti in una struttura ad albero di oggetti](../../../../docs/framework/wpf/advanced/initialization-for-object-elements-not-in-an-object-tree.md)
+- [Architettura WPF](../../../../docs/framework/wpf/advanced/wpf-architecture.md)
