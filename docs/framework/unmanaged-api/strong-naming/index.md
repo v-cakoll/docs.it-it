@@ -2,18 +2,12 @@
 title: Denominazione sicura (riferimenti alle API non gestite)
 ms.date: 03/30/2017
 helpviewer_keywords:
-- strong naming [.NET Framework], using the unmanaged API
-- native API reference [.NET Framework], strong naming
-- unmanaged API reference [.NET Framework], strong naming
+  - 'strong naming [.NET Framework], using the unmanaged API'
+  - 'native API reference [.NET Framework], strong naming'
+  - 'unmanaged API reference [.NET Framework], strong naming'
 ms.assetid: 428c68b6-a7b4-44be-b280-75905f46612c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5eb67e9b9f8f972075a98415de63d50585974823
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193955"
 ---
 # <a name="strong-naming-unmanaged-api-reference"></a>Denominazione sicura (riferimenti alle API non gestite)
 L'API di denominazione sicura consente a un client di amministrare la firma con nome sicuro per gli assembly.  
@@ -111,6 +105,6 @@ L'API di denominazione sicura consente a un client di amministrare la firma con 
  [Struttura PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)  
  Rappresenta la chiave pubblica di una coppia di chiavi pubblica/privata in formato binario.  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)  
- [Riferimenti alle API non gestite](../../../../docs/framework/unmanaged-api/index.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [Riferimenti alle API non gestite](../../../../docs/framework/unmanaged-api/index.md)
