@@ -17,42 +17,42 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a9bd144717decd16a84d2f005d84a22b4ef824d8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0e6109796d633c5facf5c0b07e0793cb8f7dc77e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33452231"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54549811"
 ---
-# <a name="icorprofilercallbackexceptionunwindfinallyenter-method"></a><span data-ttu-id="e2380-102">Metodo ICorProfilerCallback::ExceptionUnwindFinallyEnter</span><span class="sxs-lookup"><span data-stu-id="e2380-102">ICorProfilerCallback::ExceptionUnwindFinallyEnter Method</span></span>
-<span data-ttu-id="e2380-103">Notifica al profiler che la fase di rimozione dell'eccezione gestione sta entrando in un `finally` clausola contenuta nella funzione specificata.</span><span class="sxs-lookup"><span data-stu-id="e2380-103">Notifies the profiler that the unwind phase of exception handling is entering a `finally` clause contained in the specified function.</span></span>  
+# <a name="icorprofilercallbackexceptionunwindfinallyenter-method"></a><span data-ttu-id="292d5-102">Metodo ICorProfilerCallback::ExceptionUnwindFinallyEnter</span><span class="sxs-lookup"><span data-stu-id="292d5-102">ICorProfilerCallback::ExceptionUnwindFinallyEnter Method</span></span>
+<span data-ttu-id="292d5-103">Notifica al profiler che la fase di rimozione dell'eccezione gestione sta entrando in un `finally` clausola contenuta nella funzione specificata.</span><span class="sxs-lookup"><span data-stu-id="292d5-103">Notifies the profiler that the unwind phase of exception handling is entering a `finally` clause contained in the specified function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e2380-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="e2380-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="292d5-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="292d5-104">Syntax</span></span>  
   
 ```  
 HRESULT ExceptionUnwindFinallyEnter(  
     [in] FunctionID functionId);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="e2380-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="e2380-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="292d5-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="292d5-105">Parameters</span></span>  
  `functionId`  
- <span data-ttu-id="e2380-106">[in] L'ID della funzione che contiene il `finally` clausola.</span><span class="sxs-lookup"><span data-stu-id="e2380-106">[in] The ID of the function that contains the `finally` clause.</span></span>  
+ <span data-ttu-id="292d5-106">[in] L'ID della funzione che contiene il `finally` clausola.</span><span class="sxs-lookup"><span data-stu-id="292d5-106">[in] The ID of the function that contains the `finally` clause.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="e2380-107">Note</span><span class="sxs-lookup"><span data-stu-id="e2380-107">Remarks</span></span>  
- <span data-ttu-id="e2380-108">Il profiler non deve bloccare nella sua implementazione di questo metodo perché lo stack potrebbe non essere in uno stato che consente operazioni di garbage collection e pertanto non può essere attivata preemptive operazione di garbage collection.</span><span class="sxs-lookup"><span data-stu-id="e2380-108">The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled.</span></span> <span data-ttu-id="e2380-109">Se il profiler qui si blocca e viene eseguito un tentativo di operazione di garbage collection, il runtime si bloccherà finché non restituisce questo callback.</span><span class="sxs-lookup"><span data-stu-id="e2380-109">If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="292d5-107">Note</span><span class="sxs-lookup"><span data-stu-id="292d5-107">Remarks</span></span>  
+ <span data-ttu-id="292d5-108">Il profiler non deve bloccare nella propria implementazione di questo metodo perché lo stack potrebbe non essere in uno stato che consente operazioni di garbage collection e pertanto non è possibile abilitare preemptive operazione di garbage collection.</span><span class="sxs-lookup"><span data-stu-id="292d5-108">The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled.</span></span> <span data-ttu-id="292d5-109">Se il profiler si blocca qui e viene tentata la garbage collection, il runtime si bloccherà fino a quando non viene restituito questo callback.</span><span class="sxs-lookup"><span data-stu-id="292d5-109">If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.</span></span>  
   
- <span data-ttu-id="e2380-110">Implementazione del profiler di questo metodo non è necessario chiamare codice gestito o causare in alcun modo un'allocazione di memoria gestita.</span><span class="sxs-lookup"><span data-stu-id="e2380-110">The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.</span></span>  
+ <span data-ttu-id="292d5-110">Implementazione del profiler di questo metodo non deve chiamare codice gestito o in qualsiasi modo causa un'allocazione di memoria gestita.</span><span class="sxs-lookup"><span data-stu-id="292d5-110">The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e2380-111">Requisiti</span><span class="sxs-lookup"><span data-stu-id="e2380-111">Requirements</span></span>  
- <span data-ttu-id="e2380-112">**Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e2380-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="292d5-111">Requisiti</span><span class="sxs-lookup"><span data-stu-id="292d5-111">Requirements</span></span>  
+ <span data-ttu-id="292d5-112">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="292d5-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e2380-113">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="e2380-113">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="292d5-113">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="292d5-113">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="e2380-114">**Libreria:** CorGuids. lib</span><span class="sxs-lookup"><span data-stu-id="e2380-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="292d5-114">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="292d5-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="e2380-115">**Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e2380-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="292d5-115">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="292d5-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e2380-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="e2380-116">See Also</span></span>  
- [<span data-ttu-id="e2380-117">Interfaccia ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="e2380-117">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [<span data-ttu-id="e2380-118">Metodo GetNotifiedExceptionClauseInfo</span><span class="sxs-lookup"><span data-stu-id="e2380-118">GetNotifiedExceptionClauseInfo Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getnotifiedexceptionclauseinfo-method.md)  
- [<span data-ttu-id="e2380-119">Metodo ExceptionUnwindFinallyLeave</span><span class="sxs-lookup"><span data-stu-id="e2380-119">ExceptionUnwindFinallyLeave Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionunwindfinallyleave-method.md)
+## <a name="see-also"></a><span data-ttu-id="292d5-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="292d5-116">See also</span></span>
+- [<span data-ttu-id="292d5-117">Interfaccia ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="292d5-117">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="292d5-118">Metodo GetNotifiedExceptionClauseInfo</span><span class="sxs-lookup"><span data-stu-id="292d5-118">GetNotifiedExceptionClauseInfo Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getnotifiedexceptionclauseinfo-method.md)
+- [<span data-ttu-id="292d5-119">Metodo ExceptionUnwindFinallyLeave</span><span class="sxs-lookup"><span data-stu-id="292d5-119">ExceptionUnwindFinallyLeave Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionunwindfinallyleave-method.md)
