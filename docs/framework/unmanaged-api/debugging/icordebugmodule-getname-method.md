@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bebee019595143d25e950719ad62d9e10b76a3e9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2ae9bc5925634f8bba71731a0c51eb19cf9eec04
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418906"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663953"
 ---
-# <a name="icordebugmodulegetname-method"></a><span data-ttu-id="bc86d-102">Metodo ICorDebugModule::GetName</span><span class="sxs-lookup"><span data-stu-id="bc86d-102">ICorDebugModule::GetName Method</span></span>
-<span data-ttu-id="bc86d-103">Ottiene il nome del file del modulo.</span><span class="sxs-lookup"><span data-stu-id="bc86d-103">Gets the file name of the module.</span></span>  
+# <a name="icordebugmodulegetname-method"></a><span data-ttu-id="cbeb0-102">Metodo ICorDebugModule::GetName</span><span class="sxs-lookup"><span data-stu-id="cbeb0-102">ICorDebugModule::GetName Method</span></span>
+<span data-ttu-id="cbeb0-103">Ottiene il nome del file del modulo.</span><span class="sxs-lookup"><span data-stu-id="cbeb0-103">Gets the file name of the module.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bc86d-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="bc86d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cbeb0-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="cbeb0-104">Syntax</span></span>  
   
 ```  
 HRESULT GetName(  
@@ -37,28 +37,28 @@ HRESULT GetName(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="bc86d-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="bc86d-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="cbeb0-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="cbeb0-105">Parameters</span></span>  
  `cchname`  
- <span data-ttu-id="bc86d-106">[in] Dimensione della matrice `szName`.</span><span class="sxs-lookup"><span data-stu-id="bc86d-106">[in] The size of the `szName` array.</span></span>  
+ <span data-ttu-id="cbeb0-106">[in] Dimensione della matrice `szName`.</span><span class="sxs-lookup"><span data-stu-id="cbeb0-106">[in] The size of the `szName` array.</span></span>  
   
  `pcchName`  
- <span data-ttu-id="bc86d-107">[in] Puntatore alla lunghezza del nome restituito.</span><span class="sxs-lookup"><span data-stu-id="bc86d-107">[in] A pointer to the length of the returned name.</span></span>  
+ <span data-ttu-id="cbeb0-107">[in] Puntatore alla lunghezza del nome restituito.</span><span class="sxs-lookup"><span data-stu-id="cbeb0-107">[in] A pointer to the length of the returned name.</span></span>  
   
  `szName`  
- <span data-ttu-id="bc86d-108">[out] Matrice che archivia il nome restituito.</span><span class="sxs-lookup"><span data-stu-id="bc86d-108">[out] An array that stores the returned name.</span></span>  
+ <span data-ttu-id="cbeb0-108">[out] Matrice che archivia il nome restituito.</span><span class="sxs-lookup"><span data-stu-id="cbeb0-108">[out] An array that stores the returned name.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="bc86d-109">Note</span><span class="sxs-lookup"><span data-stu-id="bc86d-109">Remarks</span></span>  
- <span data-ttu-id="bc86d-110">Il `GetName` metodo restituisce un HRESULT S_OK se il nome di file del modulo corrisponde al nome sul disco.</span><span class="sxs-lookup"><span data-stu-id="bc86d-110">The `GetName` method returns an S_OK HRESULT if the module's file name matches the name on disk.</span></span> <span data-ttu-id="bc86d-111">`GetName` Restituisce un HRESULT di S_FALSE se il nome viene creato, ad esempio per un modulo dinamico o in memoria.</span><span class="sxs-lookup"><span data-stu-id="bc86d-111">`GetName` returns an S_FALSE HRESULT if the name is fabricated, such as for a dynamic or in-memory module.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="cbeb0-109">Note</span><span class="sxs-lookup"><span data-stu-id="cbeb0-109">Remarks</span></span>  
+ <span data-ttu-id="cbeb0-110">Il `GetName` metodo restituisce un HRESULT S_OK se il nome del modulo file corrisponda al nome del disco.</span><span class="sxs-lookup"><span data-stu-id="cbeb0-110">The `GetName` method returns an S_OK HRESULT if the module's file name matches the name on disk.</span></span> <span data-ttu-id="cbeb0-111">`GetName` Restituisce un HRESULT S_FALSE se il nome viene creato, ad esempio per un modulo dinamico o in memoria.</span><span class="sxs-lookup"><span data-stu-id="cbeb0-111">`GetName` returns an S_FALSE HRESULT if the name is fabricated, such as for a dynamic or in-memory module.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="bc86d-112">Requisiti</span><span class="sxs-lookup"><span data-stu-id="bc86d-112">Requirements</span></span>  
- <span data-ttu-id="bc86d-113">**Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bc86d-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="cbeb0-112">Requisiti</span><span class="sxs-lookup"><span data-stu-id="cbeb0-112">Requirements</span></span>  
+ <span data-ttu-id="cbeb0-113">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="cbeb0-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="bc86d-114">**Intestazione:** Cordebug. idl, Cordebug. H</span><span class="sxs-lookup"><span data-stu-id="bc86d-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="cbeb0-114">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="cbeb0-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="bc86d-115">**Libreria:** CorGuids. lib</span><span class="sxs-lookup"><span data-stu-id="bc86d-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="cbeb0-115">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="cbeb0-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="bc86d-116">**Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bc86d-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="cbeb0-116">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cbeb0-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bc86d-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="bc86d-117">See Also</span></span>  
-    
- 
+## <a name="see-also"></a><span data-ttu-id="cbeb0-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="cbeb0-117">See also</span></span>
+
+
