@@ -6,12 +6,12 @@ helpviewer_keywords:
 - event handlers [WPF], weak event pattern
 - IWeakEventListener interface [WPF]
 ms.assetid: e7c62920-4812-4811-94d8-050a65c856f6
-ms.openlocfilehash: 52692bf165927ba50ab55e4c0f8bbc92b23d2272
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: ad0b30c9f628148f77761ff3af810b484c5ae583
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415988"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54632920"
 ---
 # <a name="weak-event-patterns"></a>Modelli di eventi deboli
 Nelle applicazioni, è possibile che i gestori associati alle origini evento non verranno distrutto in combinazione con l'oggetto listener che è associato il gestore per l'origine. Questa situazione può causare perdite di memoria. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] introduce un modello di progettazione che può essere utilizzato per risolvere questo problema, fornendo una classe di gestione dedicato per determinati eventi e implementando un'interfaccia nei listener per l'evento. Questo schema progettuale è noto come il *modello di eventi deboli*.  
@@ -130,8 +130,8 @@ Nelle applicazioni, è possibile che i gestori associati alle origini evento non
     SomeEventWeakEventManager.RemoveHandler(source, OnSomeEvent);  
     ```  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Windows.WeakEventManager>  
- <xref:System.Windows.IWeakEventListener>  
- [Cenni preliminari sugli eventi indirizzati](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
- [Panoramica sul data binding](../../../../docs/framework/wpf/data/data-binding-overview.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Windows.WeakEventManager>
+- <xref:System.Windows.IWeakEventListener>
+- [Cenni preliminari sugli eventi indirizzati](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
+- [Panoramica sul data binding](../../../../docs/framework/wpf/data/data-binding-overview.md)

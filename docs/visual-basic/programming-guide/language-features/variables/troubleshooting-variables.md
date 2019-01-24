@@ -5,15 +5,15 @@ helpviewer_keywords:
 - troubleshooting [Visual Basic], variables
 - variables [Visual Basic], troubleshooting
 ms.assetid: 928a2dc8-e565-4ae4-8ba3-80cc0cb50090
-ms.openlocfilehash: f08a52add4e735ce794ecef2c3bd4b186b3c01a3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a8fdf11887d9ed7a52ac0d5f1abc81dcbb7932a4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655695"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54618909"
 ---
 # <a name="troubleshooting-variables-in-visual-basic"></a>Risoluzione dei problemi relativi alle variabili in Visual Basic
-Questa pagina elenca alcuni problemi comuni che possono verificarsi quando si lavora con variabili in Visual Basic.  
+Questa pagina elenca alcuni problemi comuni che possono verificarsi quando si lavora con le variabili in Visual Basic.  
   
 ## <a name="unable-to-access-members-of-an-object"></a>Impossibile accedere ai membri di un oggetto  
  Se il codice tenta di accedere a una proprietà o metodo su un oggetto, possono verificarsi due diversi errori:  
@@ -29,10 +29,10 @@ Questa pagina elenca alcuni problemi comuni che possono verificarsi quando si la
  In questo esempio `p` può usare solo i membri della classe <xref:System.Object> stessa, che non includono la proprietà `Left` . D'altra parte, `q` è stata dichiarata con il tipo <xref:System.Windows.Forms.Label>, perciò può usare tutti i metodi e le proprietà della classe <xref:System.Windows.Forms.Label> nello spazio dei nomi <xref:System.Windows.Forms> .  
   
 ### <a name="correct-approach"></a>Approccio corretto  
- Per poter accedere a tutti i membri di un oggetto di una determinata classe, dichiarare la variabile oggetto con il tipo di tale classe dove possibile. Se questo è non possibile, ad esempio quando non si conosce il tipo di oggetto in fase di compilazione, è necessario impostare `Option Strict` su `Off` e dichiarare la variabile come [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md). In questo modo oggetti di qualsiasi tipo possono essere assegnati alla variabile, perciò occorre eseguire i passaggi necessari per assicurarsi che l'oggetto attualmente assegnato sia di un tipo accettabile. È possibile utilizzare il [operatore TypeOf](../../../../visual-basic/language-reference/operators/typeof-operator.md) per effettuare questa operazione.  
+ Per poter accedere a tutti i membri di un oggetto di una determinata classe, dichiarare la variabile oggetto con il tipo di tale classe dove possibile. Se questo è non possibile, ad esempio quando non si conosce il tipo di oggetto in fase di compilazione, è necessario impostare `Option Strict` su `Off` e dichiarare la variabile come [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md). In questo modo oggetti di qualsiasi tipo possono essere assegnati alla variabile, perciò occorre eseguire i passaggi necessari per assicurarsi che l'oggetto attualmente assegnato sia di un tipo accettabile. È possibile usare la [operatore TypeOf](../../../../visual-basic/language-reference/operators/typeof-operator.md) per stabilirlo.  
   
 ## <a name="other-components-cannot-access-your-variable"></a>Altri componenti non possono accedere alla variabile  
- I nomi di Visual Basic vengono *distinzione*. Se due nomi differiscono solo nelle maiuscole, il compilatore li interpreta come un unico nome. Ad esempio, se si ha `ABC` e `abc` , il compilatore li interpreta come se facessero riferimento allo stesso elemento dichiarato.  
+ I nomi di Visual Basic sono *maiuscole e minuscole*. Se due nomi differiscono solo nelle maiuscole, il compilatore li interpreta come un unico nome. Ad esempio, se si ha `ABC` e `abc` , il compilatore li interpreta come se facessero riferimento allo stesso elemento dichiarato.  
   
  Il Common Language Runtime (CLR) usa invece l'associazione *che distingue fra maiuscole e minuscole* . Perciò, quando si genera un assembly o una DLL e la si rende disponibile ad altri assembly, i nomi distinguono fra maiuscole e minuscole. Se ad esempio si definisce una classe con un elemento denominato `ABC`e altri assembly usano la classe mediante il Common Language Runtime, devono fare riferimento all'elemento come `ABC`. Se in seguito si ricompila la classe e si cambia il nome dell'elemento in `abc`, gli altri assembly che usano la classe non possono più accedere a quell'elemento. Pertanto, quando si rilascia una versione aggiornata di un assembly, non si devono modificare le maiuscole e le minuscole degli elementi pubblici.  
   
@@ -47,13 +47,13 @@ Questa pagina elenca alcuni problemi comuni che possono verificarsi quando si la
 ### <a name="correct-approach"></a>Approccio corretto  
  Evitare l'uso di variabili con lo stesso nome ma un ambito diverso. Se si usano altri assembly o progetti, evitare il più possibile l'uso di nomi definiti in questi componenti esterni. Se si hanno più variabili con lo stesso nome, assicurarsi di qualificare ogni riferimento a esso. Per altre informazioni, vedere [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Variabili](../../../../visual-basic/programming-guide/language-features/variables/index.md)  
- [Dichiarazione di variabile](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)  
- [Variabili oggetto](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)  
- [Dichiarazione di variabili oggetto](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)  
- [Procedura: accedere ai membri di un oggetto](../../../../visual-basic/programming-guide/language-features/variables/how-to-access-members-of-an-object.md)  
- [Valori di variabili oggetto](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)  
- [Procedura: determinare a quale tipo fa riferimento una variabile oggetto](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-what-type-an-object-variable-refers-to.md)  
- [Riferimenti a elementi dichiarati](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
- [Nomi di elementi dichiarati](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
+## <a name="see-also"></a>Vedere anche
+- [Variabili](../../../../visual-basic/programming-guide/language-features/variables/index.md)
+- [Dichiarazione di variabile](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+- [Variabili oggetto](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
+- [Dichiarazione di variabili oggetto](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
+- [Procedura: Accedere ai membri di un oggetto](../../../../visual-basic/programming-guide/language-features/variables/how-to-access-members-of-an-object.md)
+- [Valori di variabili oggetto](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
+- [Procedura: Determinare a quale tipo fa riferimento a una variabile di oggetto](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-what-type-an-object-variable-refers-to.md)
+- [Riferimenti a elementi dichiarati](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [Nomi di elementi dichiarati](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)

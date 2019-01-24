@@ -9,33 +9,33 @@ helpviewer_keywords:
 - GDI+, metafiles
 - metafiles
 ms.assetid: 51da872c-c783-440f-8bf6-1e580a966c31
-ms.openlocfilehash: 73cacb7f701768b42121c31cfbc4f26905961231
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7562de76d3875e25404a6aef68355f120184b840
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33525096"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54627616"
 ---
 # <a name="metafiles-in-gdi"></a>Metafile in GDI+
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] fornisce la <xref:System.Drawing.Imaging.Metafile> classe in modo che è possibile registrare e visualizzare metafile. Un metafile, denominato anche immagine vettore, è un'immagine che viene archiviata come una sequenza di comandi e le impostazioni di disegno. I comandi e le impostazioni di registrazione un <xref:System.Drawing.Imaging.Metafile> oggetto può essere archiviato in memoria o salvato in un file o flusso.  
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] fornisce il <xref:System.Drawing.Imaging.Metafile> classe in modo che è possibile registrare e visualizzare metafile. Un metafile, denominato anche immagine vettoriale, è un'immagine che viene archiviata come una sequenza di comandi e le impostazioni di disegno. I comandi e le impostazioni registrate un <xref:System.Drawing.Imaging.Metafile> oggetto può essere archiviato in memoria o salvato in un file o flusso.  
   
-## <a name="metafile-formats"></a>Formati Metafile  
+## <a name="metafile-formats"></a>Formati di metafile  
  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] è possibile visualizzare metafile che sono stati archiviati nei formati seguenti:  
   
--   Metafile di Windows (WMF)  
+-   Windows Metafile (WMF)  
   
 -   Enhanced Metafile (EMF)  
   
--   EMF +  
+-   EMF+  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] è in grado di registrare metafile in formato EMF e EMF +, ma non nel formato WMF.  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] è in grado di registrare i metafile in formato EMF e EMF +, ma non nel formato di WMF.  
   
- EMF + è un'estensione di EMF che consente [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] record da archiviare. Esistono due varianti nel formato EMF +: EMF + solo ed EMF + Dual. Metafile EMF + solo contengono solo [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] record. È possibile visualizzare tali metafile da [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] ma non dal [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]. Metafile EMF + contengono [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] e [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] record. Ogni [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] record in un formato EMF + Dual metafile è associato a un'alternativa [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] record. È possibile visualizzare tali metafile da [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] o [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)].  
+ EMF + è un'estensione di formato EMF che consenta [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] record da archiviare. Esistono due varianti nel formato EMF +: EMF + solo ed EMF + Dual. EMF + solo metafile contengono solo [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] record. È possibile visualizzare tale metafile per [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] ma non da [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]. Metafile EMF + Dual contengono [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] e [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] record. Ciascuna [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] record in un formato EMF + Dual metafile è associato a un'alternativa [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] record. È possibile visualizzare tale metafile per [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] o tramite [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)].  
   
- L'esempio seguente mostra un metafile precedentemente salvato come file. Metafile viene visualizzato con il relativo angolo superiore sinistro a (100, 100).  
+ L'esempio seguente mostra un metafile salvato in precedenza come file. Viene visualizzato il metafile con relativo angolo superiore sinistro a (100, 100).  
   
  [!code-csharp[System.Drawing.ImagesBitmapsMetafiles#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.ImagesBitmapsMetafiles#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/VB/Class1.vb#21)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Immagini, bitmap e metafile](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)
+## <a name="see-also"></a>Vedere anche
+- [Immagini, bitmap e metafile](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)

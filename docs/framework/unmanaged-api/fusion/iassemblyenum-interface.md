@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f4af4d0a6049c789db371d84b564d261453968b1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6e3b49654252ad18e9ad4d9e5128b78bd23baee6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431139"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54602858"
 ---
 # <a name="iassemblyenum-interface"></a>Interfaccia IAssemblyEnum
 Rappresenta un enumeratore per una matrice di `IAssemblyName` oggetti.  
@@ -30,17 +30,17 @@ Rappresenta un enumeratore per una matrice di `IAssemblyName` oggetti.
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo Clone](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-clone-method.md)|Crea una copia superficiale di questo `IAssemblyEnum` oggetto.|  
+|[Metodo Clone](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-clone-method.md)|Crea una copia superficiale dell'oggetto `IAssemblyEnum` oggetto.|  
 |[Metodo GetNextAssembly](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-getnextassembly-method.md)|Ottiene un puntatore al successivo `IAssemblyName` contenuti in questo `IAssemblyEnum` oggetto.|  
 |[Metodo Reset](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-reset-method.md)|Reimposta la `IAssemblyEnum` oggetti sulla propria posizione inizia.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Fusion. h  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfacce Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
- [Interfaccia IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfacce Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+- [Interfaccia IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)

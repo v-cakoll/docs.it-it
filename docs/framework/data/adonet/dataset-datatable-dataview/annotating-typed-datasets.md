@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f82aaa62-321e-4c8a-b51b-9d1114700170
-ms.openlocfilehash: c66a11e0662cd007797243c136ec0617ce5be47c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 737f98dd11d6172bb79aaa925ac153c64728e9ff
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513147"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54629608"
 ---
 # <a name="annotating-typed-datasets"></a>Annotazione di dataset tipizzati
 Le annotazioni consentono di modificare i nomi degli elementi nel <xref:System.Data.DataSet> tipizzato senza modificare lo schema sottostante. Modifica i nomi degli elementi dello schema sottostante causerebbe l'oggetto tipizzato **set di dati** per fare riferimento a oggetti che non esiste nell'origine dati, nonché perderebbe un riferimento agli oggetti che sono presenti nell'origine dati.  
@@ -64,7 +64,7 @@ Le annotazioni consentono di modificare i nomi degli elementi nel <xref:System.D
   
 |Oggetto/Metodo/Evento|Default|Annotazione|  
 |---------------------------|-------------|----------------|  
-|**Oggetto DataTable**|TableNameDataTable|typedPlural|  
+|**DataTable**|TableNameDataTable|typedPlural|  
 |**DataTable** metodi|NewTableNameRow<br /><br /> AddTableNameRow<br /><br /> DeleteTableNameRow|typedName|  
 |**DataRowCollection**|TableName|typedPlural|  
 |**DataRow**|TableNameRow|typedName|  
@@ -222,9 +222,9 @@ protected static void OnCustomerChanged(object sender, CustomerDataSet.CustomerC
     }  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Data.DataColumnCollection>  
- <xref:System.Data.DataSet>  
- [Set di dati tipizzati](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)  
- [Oggetti DataSet, DataTable e DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Data.DataColumnCollection>
+- <xref:System.Data.DataSet>
+- [Set di dati tipizzati](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)
+- [Oggetti DataSet, DataTable e DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

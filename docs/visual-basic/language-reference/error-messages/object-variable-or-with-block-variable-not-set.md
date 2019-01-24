@@ -4,35 +4,35 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID91
 ms.assetid: 2f03e611-f0ed-465c-99a2-a816e034faa3
-ms.openlocfilehash: b2bd1be83f57dbdc7a64b407dc1052074e19c74b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bde0150e1e20fb96d079e21b593f1ac6e27e6af7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33597664"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54611371"
 ---
 # <a name="object-variable-or-with-block-variable-not-set"></a>Variabile oggetto o variabile del blocco With non impostata
 Riferimento a una variabile oggetto non valido.   L'errore può essere determinato da numerose cause:  
   
--   Una variabile è stata dichiarata senza specificare un tipo. Se una variabile viene dichiarata senza specificare un tipo, il valore predefinito per digitare `Object`.  
+-   Una variabile è stata dichiarata senza specificare un tipo. Se una variabile viene dichiarata senza specificare un tipo, per impostazione predefinita per digitare `Object`.  
   
      Ad esempio, una variabile dichiarata con `Dim x` saranno di tipo `Object;` una variabile dichiarata con `Dim x As String` saranno di tipo `String`.  
   
     > [!TIP]
-    >  Il `Option Strict` istruzione la tipizzazione implicita che comporta un `Object` tipo. Se si omette il tipo, si verificherà un errore in fase di compilazione. Vedere [Option Strict (istruzione)](../../../visual-basic/language-reference/statements/option-strict-statement.md).  
+    >  Il `Option Strict` istruzione la tipizzazione implicita che comporta un `Object` tipo. Se si omette il tipo, si verificherà un errore in fase di compilazione. Visualizzare [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md).  
   
--   Si sta tentando di fare riferimento a un oggetto che è stato impostato su `Nothing`  
+-   Si sta provando a fare riferimento a un oggetto che è stato impostato su `Nothing`  
   
      .  
   
--   Si sta tentando di accedere a un elemento di una variabile di matrice non è stato dichiarato in modo corretto.  
+-   Si sta tentando di accedere a un elemento di una variabile di matrice che non è stata dichiarata in modo corretto.  
   
-     Ad esempio, una matrice dichiarata come `products() As String` genererà l'errore se si tenta di fare riferimento a un elemento della matrice `products(3) = "Widget"`. La matrice non dispone di elementi e viene considerata come un oggetto.  
+     Ad esempio, una matrice dichiarata come `products() As String` attiveranno l'errore se si tenta di fare riferimento a un elemento della matrice `products(3) = "Widget"`. La matrice dispone di alcun elemento e viene considerata come un oggetto.  
   
--   Si sta tentando di accedere a codice all'interno di un `With...End With` blocco prima che il blocco è stato inizializzato.   Oggetto `With...End With` blocco deve essere inizializzato mediante l'esecuzione di `With` il punto di ingresso di istruzione.  
+-   Sta tentando di accedere a codice all'interno di un `With...End With` blocco prima che il blocco è stato inizializzato.   Oggetto `With...End With` blocco deve essere inizializzato mediante l'esecuzione di `With` punto di ingresso di istruzione.  
   
 > [!NOTE]
->  Nelle versioni precedenti di Visual Basic o VBA questo errore è stato attivato anche assegnando un valore a una variabile senza utilizzare il `Set` (parola chiave) (`x = "name"` anziché `Set x = "name"`). Il `Set` (parola chiave) non è più valida in Visual Basic .net.  
+>  Nelle versioni precedenti di Visual Basic o VBA questo errore è stato attivato anche assegnando un valore a una variabile senza usare la `Set` parola chiave (`x = "name"` invece di `Set x = "name"`). Il `Set` parola chiave non è più valido in Visual Basic .net.  
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
@@ -44,15 +44,15 @@ Option Strict On
 
      When you run the project, a compiler error will appear in the **Error List** for any variable that was specified without a type.  
   
-2.  Se non si desidera abilitare `Option Strict`, cercare nel codice per eventuali variabili che sono state specificate senza un tipo (`Dim x` anziché `Dim x As String`) e aggiungere il tipo previsto per la dichiarazione.  
+2.  Se non si vuole abilitare `Option Strict`, il codice per tutte le variabili che sono stati specificati senza un tipo di ricerca (`Dim x` invece di `Dim x As String`) e aggiungere il tipo desiderato alla dichiarazione.  
   
-3.  Assicurarsi che invece non fa riferimento a una variabile oggetto che è stata impostata su `Nothing`.  Cercare nel codice per la parola chiave `Nothing`e modificare il codice in modo che l'oggetto non è impostato su `Nothing` fino a quando non dopo che è stato fatto riferimento.  
+3.  Assicurarsi che invece non si fa riferimento a una variabile oggetto che è stata impostata su `Nothing`.  Eseguire ricerche nel codice per la parola chiave `Nothing`e modificare il codice in modo che l'oggetto non è impostato su `Nothing` fino a quando non dopo che si è fatto riferimento.  
   
-4.  Assicurarsi che tutte le variabili di matrice vengono dimensionate prima di accedervi. È possibile assegnare una dimensione al momento della creazione della matrice (`Dim x(5) As String` anziché `Dim x() As String`), oppure utilizzare il `ReDim` (parola chiave) per impostare le dimensioni della matrice prima che si accede.  
+4.  Assicurarsi che tutte le variabili di matrice vengono dimensionate prima di accedervi. È possibile assegnare una dimensione al momento della creazione della matrice (`Dim x(5) As String` invece di `Dim x() As String`), oppure usare il `ReDim` parola chiave per impostare le dimensioni della matrice prima che si accede.  
   
-5.  Verificare che il `With` blocco viene inizializzato tramite l'esecuzione di `With` il punto di ingresso di istruzione.  
+5.  Assicurarsi che il `With` blocco viene inizializzato tramite l'esecuzione di `With` punto di ingresso di istruzione.  
   
-## <a name="see-also"></a>Vedere anche  
- [Dichiarazione di variabili oggetto](../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)  
- [Istruzione ReDim](../../../visual-basic/language-reference/statements/redim-statement.md)  
- [Istruzione With...End With](../../../visual-basic/language-reference/statements/with-end-with-statement.md)
+## <a name="see-also"></a>Vedere anche
+- [Dichiarazione di variabili oggetto](../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
+- [Istruzione ReDim](../../../visual-basic/language-reference/statements/redim-statement.md)
+- [Istruzione With...End With](../../../visual-basic/language-reference/statements/with-end-with-statement.md)

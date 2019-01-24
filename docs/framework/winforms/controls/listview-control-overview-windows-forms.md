@@ -8,22 +8,22 @@ helpviewer_keywords:
 - ListView control [Windows Forms], about ListView control
 - list views
 ms.assetid: c9ef56c1-3bb1-4101-9f4e-e95e720f2756
-ms.openlocfilehash: ab2d0d9456f64f215ddbc0003833db1858f0ce1a
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 3ac1bc5482d00419ec8a41815633150e30b4039a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45744102"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54613987"
 ---
 # <a name="listview-control-overview-windows-forms"></a>Cenni preliminari sul controllo ListView (Windows Form)
-Il controllo <xref:System.Windows.Forms.ListView> di Windows Forms visualizza un elenco di elementi con icone. È possibile usare una visualizzazione elenco per creare un'interfaccia utente simile al riquadro destro di Esplora risorse. Il controllo dispone di quattro modalità di visualizzazione: LargeIcon, SmallIcon, elenco e dettagli.  
+Il controllo <xref:System.Windows.Forms.ListView> di Windows Forms visualizza un elenco di elementi con icone. È possibile usare una visualizzazione elenco per creare un'interfaccia utente simile al riquadro destro di Esplora risorse. Il controllo dispone di quattro modalità di visualizzazione: LargeIcon SmallIcon, elenco e dettagli.  
   
 ## <a name="what-you-can-do-with-the-listview-control"></a>Operazioni eseguibili con il controllo ListView  
   
 > [!NOTE]
->  Modalità di visualizzazione aggiuntiva, Tile, disponibile solo in Windows XP e il sistema operativo Windows Server 2003. Per altre informazioni, vedere [procedura: abilitare la visualizzazione affiancata in un controllo ListView di Windows Form](../../../../docs/framework/winforms/controls/how-to-enable-tile-view-in-a-windows-forms-listview-control.md).  
+>  Modalità di visualizzazione aggiuntiva, Tile, disponibile solo in Windows XP e il sistema operativo Windows Server 2003. Per altre informazioni, vedere [Procedura: Abilitare la visualizzazione affiancata in un Windows Form controllo ListView](../../../../docs/framework/winforms/controls/how-to-enable-tile-view-in-a-windows-forms-listview-control.md).  
   
- La modalità LargeIcon visualizza icone grandi accanto al testo dell'elemento; gli elementi vengono visualizzati in più colonne, se il controllo è sufficientemente grande. La modalità di SmallIcon è lo stesso ad eccezione del fatto che visualizzi le icone piccole. La modalità elenco Visualizza icone piccole ma è sempre in una singola colonna. La modalità dei dettagli Visualizza gli elementi in più colonne. Per informazioni dettagliate, vedere [procedura: aggiungere colonne al controllo ListView Windows Form](../../../../docs/framework/winforms/controls/how-to-add-columns-to-the-windows-forms-listview-control.md). La modalità di visualizzazione è determinata dal <xref:System.Windows.Forms.ListView.View%2A> proprietà. Tutte le modalità di visualizzazione possono visualizzare le immagini da elenchi di immagini. Per informazioni dettagliate, vedere [procedura: visualizzare icone per il controllo ListView di Windows Form](../../../../docs/framework/winforms/controls/how-to-display-icons-for-the-windows-forms-listview-control.md).  
+ La modalità LargeIcon visualizza icone grandi accanto al testo dell'elemento; gli elementi vengono visualizzati in più colonne, se il controllo è sufficientemente grande. La modalità di SmallIcon è lo stesso ad eccezione del fatto che visualizzi le icone piccole. La modalità elenco Visualizza icone piccole ma è sempre in una singola colonna. La modalità dei dettagli Visualizza gli elementi in più colonne. Per informazioni dettagliate, vedere [come: Aggiungere colonne per i Windows Form controllo ListView](../../../../docs/framework/winforms/controls/how-to-add-columns-to-the-windows-forms-listview-control.md). La modalità di visualizzazione è determinata dal <xref:System.Windows.Forms.ListView.View%2A> proprietà. Tutte le modalità di visualizzazione possono visualizzare le immagini da elenchi di immagini. Per informazioni dettagliate, vedere [come: Visualizzare icone per i Windows Form controllo ListView](../../../../docs/framework/winforms/controls/how-to-display-icons-for-the-windows-forms-listview-control.md).  
   
  Nella tabella seguente sono elencate alcune delle <xref:System.Windows.Forms.ListView> membri e le viste sono validi in.  
   
@@ -47,16 +47,16 @@ Il controllo <xref:System.Windows.Forms.ListView> di Windows Forms visualizza un
   
  Il <xref:System.Windows.Forms.ListView> controllo supporta inoltre gli stili e altre funzionalità disponibili nella piattaforma Windows XP, inclusi il raggruppamento, la visualizzazione affiancata e segni di inserimento. Per altre informazioni, vedere [funzionalità di Windows XP e Windows Forms Controls](https://msdn.microsoft.com/library/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0).  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Windows.Forms.ListView>  
- [Controllo ListView](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)  
- [Procedura: Aggiungere e rimuovere elementi con il controllo ListView di Windows Form](../../../../docs/framework/winforms/controls/how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)  
- [Procedura: Aggiungere colonne al controllo ListView di Windows Form](../../../../docs/framework/winforms/controls/how-to-add-columns-to-the-windows-forms-listview-control.md)  
- [Procedura: Visualizzare icone per il controllo ListView di Windows Form](../../../../docs/framework/winforms/controls/how-to-display-icons-for-the-windows-forms-listview-control.md)  
- [Procedura: Visualizzare elementi secondari nelle colonne con il controllo ListView di Windows Form](../../../../docs/framework/winforms/controls/how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md)  
- [Procedura: Selezionare un elemento nel controllo ListView di Windows Form](../../../../docs/framework/winforms/controls/how-to-select-an-item-in-the-windows-forms-listview-control.md)  
- [Procedura: Raggruppare elementi in un controllo ListView di Windows Form](../../../../docs/framework/winforms/controls/how-to-group-items-in-a-windows-forms-listview-control.md)  
- [Procedura: Visualizzare un segno di inserimento in un controllo ListView per Windows Form](../../../../docs/framework/winforms/controls/how-to-display-an-insertion-mark-in-a-windows-forms-listview-control.md)  
- [Procedura: Aggiungere funzionalità di ricerca a un controllo ListView](../../../../docs/framework/winforms/controls/how-to-add-search-capabilities-to-a-listview-control.md)  
- [Procedura: Aggiungere informazioni personalizzate a un controllo TreeView o ListView (Windows Form)](../../../../docs/framework/winforms/controls/add-custom-information-to-a-treeview-or-listview-control-wf.md)  
- [Procedura: Creare un'interfaccia utente a più riquadri con Windows Form](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Windows.Forms.ListView>
+- [Controllo ListView](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)
+- [Procedura: Aggiungere e rimuovere elementi con il controllo ListView di Windows Form](../../../../docs/framework/winforms/controls/how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+- [Procedura: Aggiungere colonne al controllo ListView Windows Form](../../../../docs/framework/winforms/controls/how-to-add-columns-to-the-windows-forms-listview-control.md)
+- [Procedura: Visualizzare le icone per il controllo ListView di Windows Form](../../../../docs/framework/winforms/controls/how-to-display-icons-for-the-windows-forms-listview-control.md)
+- [Procedura: Visualizzare elementi secondari nelle colonne con il controllo ListView di Windows Form](../../../../docs/framework/winforms/controls/how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md)
+- [Procedura: Selezionare un elemento nel controllo ListView Windows Form](../../../../docs/framework/winforms/controls/how-to-select-an-item-in-the-windows-forms-listview-control.md)
+- [Procedura: Raggruppare elementi in un controllo ListView di Windows Form](../../../../docs/framework/winforms/controls/how-to-group-items-in-a-windows-forms-listview-control.md)
+- [Procedura: Visualizzare un segno di inserimento in un controllo ListView di Windows Form](../../../../docs/framework/winforms/controls/how-to-display-an-insertion-mark-in-a-windows-forms-listview-control.md)
+- [Procedura: Aggiungere le funzionalità di ricerca a un controllo ListView](../../../../docs/framework/winforms/controls/how-to-add-search-capabilities-to-a-listview-control.md)
+- [Procedura: Aggiungere informazioni personalizzate a un controllo TreeView o ListView (Windows Form)](../../../../docs/framework/winforms/controls/add-custom-information-to-a-treeview-or-listview-control-wf.md)
+- [Procedura: Creare un'interfaccia utente a più riquadri con Windows Form](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)

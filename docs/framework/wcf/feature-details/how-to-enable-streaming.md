@@ -1,18 +1,18 @@
 ---
-title: 'Procedura: attivare il flusso'
+title: 'Procedura: Abilitare lo Streaming'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6ca2cf4b-c7a1-49d8-a79b-843a90556ba4
-ms.openlocfilehash: b28764c4bad88511096ab09fd71cc2a73c735096
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2521b6ac237a76cac64cebca91bbaa792bba2c67
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493638"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54627655"
 ---
-# <a name="how-to-enable-streaming"></a>Procedura: attivare il flusso
+# <a name="how-to-enable-streaming"></a>Procedura: Abilitare lo Streaming
 Windows Communication Foundation (WCF) può inviare messaggi utilizzando trasferimenti con flusso o memorizzati nel buffer. Nella modalità predefinita, ovvero trasferimento con memorizzazione nel buffer, un messaggio deve essere recapitato completamente prima che un destinatario possa leggerlo. Nella modalità di trasferimento con flusso, il destinatario può iniziare a elaborare il messaggio prima che esso venga recapitato completamente. La modalità di trasmissione con flusso è utile quando le informazioni passate sono lunghe e possono essere elaborate in serie. La modalità di trasmissione con flusso è utile anche quando il messaggio è troppo grande da memorizzare completamente nel buffer.  
   
  Per attivare il flusso, definire correttamente `OperationContract` e attivare il flusso a livello di trasporto.  
@@ -74,6 +74,6 @@ Windows Communication Foundation (WCF) può inviare messaggi utilizzando trasfer
      [!code-csharp[c_HowTo_EnableStreaming#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming/cs/service.cs#2)]
      [!code-vb[c_HowTo_EnableStreaming#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_enablestreaming/vb/service.vb#2)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Dati di grandi dimensioni e streaming](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)  
- [Stream](../../../../docs/framework/wcf/samples/stream.md)
+## <a name="see-also"></a>Vedere anche
+- [Dati di grandi dimensioni e streaming](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)
+- [Stream](../../../../docs/framework/wcf/samples/stream.md)

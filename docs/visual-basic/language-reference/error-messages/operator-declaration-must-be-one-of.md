@@ -1,5 +1,5 @@
 ---
-title: "Dichiarazione dell'operatore deve essere uno di: +,-, *,-, -, ^, &amp;, Like, Mod e, Or, Xor, non, &lt; &lt;, &gt; &gt;, =, &lt; &gt;, &lt;, &lt;=, &gt; , &gt;=, CType, IsTrue, IsFalse"
+title: "La dichiarazione dell'operatore deve essere uno di: +,-, *,-, -, ^, &amp;, Like, Mod e, Or, Xor, non &lt; &lt;, &gt; &gt;, =, &lt; &gt;, &lt;, &lt;=, &gt; , &gt;=, CType, IsTrue, IsFalse"
 ms.date: 07/20/2015
 f1_keywords:
 - bc33000
@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC33000
 ms.assetid: 15c5d8eb-3a8c-4141-8f41-33151afabf97
-ms.openlocfilehash: eb1e7e8088ec8661be2469aff043c0f1a96e4d01
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f32935dd4aaccd3040655b418badc13c1988c1b8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33595020"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54622273"
 ---
-# <a name="operator-declaration-must-be-one-of----amp-like-mod-and-or-xor-not-ltlt-gtgt"></a>Dichiarazione dell'operatore deve essere uno di: +,-, *,\,/, ^, &amp;, Like, Mod e, Or, Xor, non, &lt; &lt;, &gt; &gt;...
-È possibile dichiarare solo gli operatori che sono idoneo per l'overload. Nella tabella seguente elenca gli operatori che è possibile dichiarare.  
+# <a name="operator-declaration-must-be-one-of----amp-like-mod-and-or-xor-not-ltlt-gtgt"></a>La dichiarazione dell'operatore deve essere uno di: +,-, *,\,/, ^, &amp;, Like, Mod e, Or, Xor, non &lt; &lt;, &gt; &gt;...
+È possibile dichiarare solo gli operatori che sono idoneo per l'overload. Nella tabella seguente vengono elencati gli operatori che è possibile dichiarare.  
   
 |Tipo|Operatori|  
 |----------|---------------|  
@@ -33,9 +33,9 @@ ms.locfileid: "33595020"
   
 2.  Se è necessario eseguire l'overload di un operatore che non può essere sottoposto a overload direttamente, creare una routine `Function` che accetti i parametri appropriati e restituisca il valore appropriato.  
   
-## <a name="see-also"></a>Vedere anche  
- [Istruzione Operator](../../../visual-basic/language-reference/statements/operator-statement.md)  
- [Routine di operatore](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)  
- [Procedura: Definire un operatore](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)  
- [Procedura: Definire un operatore di conversione](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)  
- [Istruzione Function](../../../visual-basic/language-reference/statements/function-statement.md)
+## <a name="see-also"></a>Vedere anche
+- [Istruzione Operator](../../../visual-basic/language-reference/statements/operator-statement.md)
+- [Routine di operatore](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)
+- [Procedura: Definire un operatore](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)
+- [Procedura: Definire un operatore di conversione](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)
+- [Istruzione Function](../../../visual-basic/language-reference/statements/function-statement.md)

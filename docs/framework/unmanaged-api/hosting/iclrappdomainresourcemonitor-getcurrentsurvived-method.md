@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7c179ba23be07e8ff77e1397ed753d4287b22440
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 648a2c044920b7524ad96ff656e83268ffd55652
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33435285"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54612216"
 ---
 # <a name="iclrappdomainresourcemonitorgetcurrentsurvived-method"></a>Metodo ICLRAppDomainResourceMonitor::GetCurrentSurvived
-Ottiene il numero di byte esclusi l'ultima procedura completa di garbage collection bloccante e che fa riferimento il dominio applicazione corrente.  
+Ottiene il numero di byte esclusi dall'ultima completa di garbage collection di blocco e che fa riferimento il dominio applicazione corrente.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,10 +38,10 @@ HRESULT STDMETHODCALLTYPE GetCurrentSurvived(
   
 #### <a name="parameters"></a>Parametri  
  `dwAppDomainId`  
- [in] ID del dominio di applicazione richiesto.  
+ [in] L'ID del dominio dell'applicazione richiesta.  
   
  `pAppDomainBytesSurvived`  
- [out] Puntatore al numero di byte rimasti dopo l'ultima garbage collection vengono mantenuti attivi da questo dominio applicazione. Dopo una raccolta completa, questo numero è preciso e completo. Dopo una raccolta temporanea, questo numero è potenzialmente incompleto. Questo parametro può essere `null`.  
+ [out] Puntatore al numero di byte rimasti dopo l'ultima garbage collection che vengono mantenuti attivi da questo dominio applicazione. Dopo una raccolta completa, questo numero è preciso e completo. Dopo una raccolta temporanea, questo numero è potenzialmente incompleto. Questo parametro può essere `null`.  
   
  `pRuntimeBytesSurvived`  
  [out] Puntatore al numero totale di byte rimasti dall'ultima garbage collection. Dopo una raccolta completa, questo numero rappresenta il numero di byte che vengono mantenuti attivi negli heap gestiti. Dopo una raccolta temporanea, questo numero rappresenta il numero di byte mantenuti attivi in generazioni temporanee. Questo parametro può essere `null`.  
@@ -52,24 +52,24 @@ HRESULT STDMETHODCALLTYPE GetCurrentSurvived(
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
 |S_OK|Metodo completato correttamente.|  
-|COR_E_APPDOMAINUNLOADED|Il dominio applicazione è stato scaricato o non esiste.|  
+|COR_E_APPDOMAINUNLOADED|Il dominio dell'applicazione è stato scaricato o non esiste.|  
   
 ## <a name="remarks"></a>Note  
- Le statistiche vengono aggiornate solo dopo una procedura completa di garbage collection; bloccante ovvero, si verifica una raccolta che include tutte le generazioni e che interrompe l'applicazione durante la raccolta. Ad esempio, il <xref:System.GC.Collect?displayProperty=nameWithType> overload del metodo esegue una procedura completa di Garbage collection bloccante. Garbage collection simultanea avviene in background e non blocca l'applicazione.  
+ Le statistiche vengono aggiornate solo dopo una procedura completa di blocco della garbage collection; vale a dire, si verifica una raccolta che include tutte le generazioni e che l'applicazione durante la raccolta viene arrestata. Ad esempio, il <xref:System.GC.Collect?displayProperty=nameWithType> overload del metodo esegue una procedura completa di Garbage collection di blocco. Garbage collection simultanea avviene in background e non blocca l'applicazione.  
   
- Il `GetCurrentSurvived` metodo equivale a non gestito di gestito <xref:System.AppDomain.MonitoringSurvivedMemorySize%2A?displayProperty=nameWithType> proprietà.  
+ Il `GetCurrentSurvived` metodo è l'equivalente gestito di managed <xref:System.AppDomain.MonitoringSurvivedMemorySize%2A?displayProperty=nameWithType> proprietà.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Metahost. H  
+ **Intestazione:** MetaHost.h  
   
- **Libreria:** inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ICLRAppDomainResourceMonitor](../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)  
- [Monitoraggio delle risorse del dominio dell'applicazione](../../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md)  
- [Interfacce di hosting](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
- [Hosting](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ICLRAppDomainResourceMonitor](../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)
+- [Monitoraggio delle risorse del dominio dell'applicazione](../../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md)
+- [Interfacce di hosting](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Hosting](../../../../docs/framework/unmanaged-api/hosting/index.md)

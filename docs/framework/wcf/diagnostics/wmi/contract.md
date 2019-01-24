@@ -2,12 +2,12 @@
 title: Contract1
 ms.date: 03/30/2017
 ms.assetid: aa00f6b3-7e1f-4213-841a-206463fca20b
-ms.openlocfilehash: 12e9cbf5232ebbad33ccc4fdca33233997d27357
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c602ea2b708fced37c5b309596fe2312be21e741
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194670"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603560"
 ---
 # <a name="contract"></a>Contratto
 Contratto  
@@ -38,63 +38,63 @@ class Contract
 ### <a name="appdomainid"></a>AppDomainId  
  Tipo di dati: sint32  
   
- Tipo di accesso: sola lettura  
+ Tipo di accesso: Sola lettura  
   
  ID del dominio applicazione che ospita il contratto.  
   
-### <a name="behaviors"></a>Comportamenti  
- Tipo di dati: matrice di Behavior  
+### <a name="behaviors"></a>comportamenti  
+ Tipo di dati: Matrice di Behavior  
   
- Tipo di accesso: sola lettura  
+ Tipo di accesso: Sola lettura  
   
  Comportamenti associati al contratto.  
   
 ### <a name="name"></a>nome  
  Tipo di dati: stringa  
   
- Tipo di accesso: sola lettura  
+ Tipo di accesso: Sola lettura  
   
  Nome del contratto in WSDL.  
   
 ### <a name="namespace"></a>Spazio dei nomi  
  Tipo di dati: stringa  
   
- Tipo di accesso: sola lettura  
+ Tipo di accesso: Sola lettura  
   
  Spazio dei nomi dell'elemento `portType` in WSDL.  
   
 ### <a name="operations"></a>Operazioni  
- Tipo di dati: matrice di Operation  
+ Tipo di dati: Matrice di Operation  
   
- Tipo di accesso: sola lettura  
+ Tipo di accesso: Sola lettura  
   
  Operazioni di questo contratto.  
   
 ### <a name="processid"></a>ProcessId  
  Tipo di dati: sint32  
   
- Tipo di accesso: sola lettura  
+ Tipo di accesso: Sola lettura  
   
  ID del processo che ospita il contratto.  
   
 ### <a name="ref"></a>ref  
- Tipo di dati: contratto  
+ Tipo di dati: Contratto  
   
- Tipo di accesso: sola lettura  
+ Tipo di accesso: Sola lettura  
   
  Tipo di callback se il contratto è duplex.  
   
 ### <a name="sessionmode"></a>SessionMode  
  Tipo di dati: stringa  
   
- Tipo di accesso: sola lettura  
+ Tipo di accesso: Sola lettura  
   
  Indica se il contratto richiede che l'associazione di questo contratto utilizzi le sessioni del canale.  
   
 ### <a name="type"></a>Tipo  
  Tipo di dati: stringa  
   
- Tipo di accesso: sola lettura  
+ Tipo di accesso: Sola lettura  
   
  Tipo del contratto.  
   
@@ -104,5 +104,5 @@ class Contract
 |---------|-----------------------------------|  
 |Spazio dei nomi|Definito in root\ServiceModel|  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.Description.ContractDescription>
+## <a name="see-also"></a>Vedere anche
+- <xref:System.ServiceModel.Description.ContractDescription>

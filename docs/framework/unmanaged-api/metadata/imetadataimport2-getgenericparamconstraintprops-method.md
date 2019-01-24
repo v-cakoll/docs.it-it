@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c1d76dcd581b54d54d6b44505e09476993b2930c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a7761c2f15cd51bff798e1b12c3a5824930b344d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446817"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617720"
 ---
 # <a name="imetadataimport2getgenericparamconstraintprops-method"></a>Metodo IMetaDataImport2::GetGenericParamConstraintProps
 Ottiene i metadati associati al vincolo del parametro generico rappresentato dal token di vincolo specificato.  
@@ -45,17 +45,17 @@ HRESULT GetGenericParamConstraintProps (
  [out] Puntatore al token che rappresenta il parametro generico che è vincolato.  
   
  `ptkConstraintType`  
- [out] Un puntatore a un token TypeDef o TypeRef TypeSpec che rappresenta un vincolo su `ptGenericParam`.  
+ [out] Un puntatore a un token TypeDef, TypeRef o TypeSpec che rappresenta un vincolo su `ptGenericParam`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
- **Libreria:** usata come risorsa in Mscoree. dll  
+ **Libreria:** Usato come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)  
- [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

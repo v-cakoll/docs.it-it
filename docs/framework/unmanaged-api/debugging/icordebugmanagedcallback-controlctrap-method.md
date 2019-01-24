@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a9758de5c2801f2c55b7eca149569016ec5b9243
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f13800bcecbf6e7bdc5fede4e11c2ea15ecdec93
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412753"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603898"
 ---
 # <a name="icordebugmanagedcallbackcontrolctrap-method"></a>Metodo ICorDebugManagedCallback::ControlCTrap
-Notifica al debugger che CTRL + C viene intercettato nel processo sottoposto a debug.  
+Notifica al debugger che CTRL + C viene intercettata nel processo di cui è in corso il debug.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,26 +37,26 @@ HRESULT ControlCTrap (
   
 #### <a name="parameters"></a>Parametri  
  `pProcess`  
- [in] Un puntatore a un oggetto ICorDebugProcess che rappresenta il processo in cui viene intercettato CTRL + C.  
+ [in] Un puntatore a un oggetto ICorDebugProcess che rappresenta il processo in cui viene intercettata CTRL + C.  
   
 ## <a name="return-value"></a>Valore restituito  
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|S_OK|Il debugger gestirà la trap CTRL + C.|  
-|S_FALSE|Il debugger non gestirà la trap CTRL + C.|  
+|S_OK|Il debugger gestirà le trap di CTRL + C.|  
+|S_FALSE|Il debugger non gestirà il trap CTRL + C.|  
   
 ## <a name="remarks"></a>Note  
- Per questo callback, vengono arrestati tutti i domini applicazione all'interno del processo.  
+ Per questo callback vengono arrestati tutti i domini applicazione all'interno del processo.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

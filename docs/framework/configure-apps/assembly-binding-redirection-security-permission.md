@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 24a5cdff-7ed9-4195-93f3-edf6899019fc
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: e6690a4f11bb1a88e2d77c67ccb29056c8e03f96
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: d4483d11903d61135585a2b6c2c33eff48300151
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47088661"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616014"
 ---
 # <a name="assembly-binding-redirection-security-permission"></a>Autorizzazione di sicurezza per il reindirizzamento delle versioni di assembly
 Il reindirizzamento esplicito dell'associazione di assembly in un file di configurazione di un'applicazione richiede un'autorizzazione di sicurezza, che vale per il reindirizzamento degli assembly .NET Framework e di quelli di altri produttori. L'autorizzazione viene concessa impostando il <xref:System.Security.Permissions.SecurityPermissionFlag> flag nella <xref:System.Security.Permissions.SecurityPermission>. Gli assembly gestiti non dispongono di autorizzazioni per impostazione predefinita.  
@@ -25,14 +25,14 @@ Il reindirizzamento esplicito dell'associazione di assembly in un file di config
   
 |Zona|Impostazione del flag BindingRedirects|  
 |----------|-----------------------------------|  
-|Area attendibile (computer locale)|**VIA**|  
-|Area Intranet|**VIA**|  
+|Area attendibile (computer locale)|**ON**|  
+|Area Intranet|**ON**|  
 |Area Internet|**OFF**|  
 |Zone non attendibili|**OFF**|  
   
  Un amministratore può modificare queste impostazioni di sicurezza per il supporto o limitare gli scenari specifici in un determinato computer. Non sono disponibili strumenti per la modifica di **BindingRedirects** flag impostazione dal valore predefinito; un amministratore deve modificare manualmente il file Security. config nel computer dell'utente.  
   
-## <a name="see-also"></a>Vedere anche  
- [File dei criteri editore ed esecuzione Side-by-Side](https://msdn.microsoft.com/library/97a042be-4d72-40c3-91c0-76fd36bdf133)  
- [Procedura: abilitare e disabilitare il reindirizzamento di associazione automatico](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)  
- [Esecuzione side-by-side](../../../docs/framework/deployment/side-by-side-execution.md)
+## <a name="see-also"></a>Vedere anche
+- [File dei criteri editore ed esecuzione Side-by-Side](https://msdn.microsoft.com/library/97a042be-4d72-40c3-91c0-76fd36bdf133)
+- [Procedura: Abilitare e disabilitare il reindirizzamento di associazione automatico](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)
+- [Esecuzione side-by-side](../../../docs/framework/deployment/side-by-side-execution.md)

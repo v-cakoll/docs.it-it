@@ -3,12 +3,12 @@ title: Novità di Windows Identity Foundation 4.5
 ms.date: 03/30/2017
 ms.assetid: 3b381f04-593b-471f-bd33-0362be1aade5
 author: BrucePerlerMS
-ms.openlocfilehash: 673294ccdb76e6016169a4e2b4e7713ba63fa1e7
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: deb75494b2813aac3182270b027391b87fdeb0f7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836816"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54619610"
 ---
 # <a name="what39s-new-in-windows-identity-foundation-45"></a>Novità di Windows Identity Foundation 4.5
 La prima versione di Windows Identity Foundation (WIF) è stata rilasciata come download autonomo ed è nota come WIF 3.5 perché è stata introdotta nello stesso periodo di .NET 3.5 SP1. Con .NET 4.5 WIF è diventato parte di .NET Framework. La disponibilità delle classi WIF direttamente nel framework consente una maggiore integrazione dell'identità basata sulle attestazioni in .NET, semplificando l'uso delle attestazioni. Le applicazioni scritte per WIF 3.5 devono essere modificate per sfruttare il nuovo modello. Per informazioni, vedere [Linee guida per la migrazione di un'applicazione compilata con le versioni di WIF dalla 3.5 alla 4.5](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md).  
@@ -43,7 +43,7 @@ La prima versione di Windows Identity Foundation (WIF) è stata rilasciata come 
   
 ## <a name="wcf-changes-as-a-result-of-wif-integration"></a>Modifiche a WCF come conseguenza dell'integrazione di WIF:  
   
--   Il modello di identità basato sulle attestazioni di WCF è stato sostituito da WIF. Ciò significa che le classi negli spazi dei nomi <xref:System.IdentityModel.Claims?displayProperty=nameWithType>, <xref:System.IdentityModel.Policy?displayProperty=nameWithType> e <xref:System.IdentityModel.Selectors?displayProperty=nameWithType> devono essere eliminate a favore dell'utilizzo delle classi di WIF.  
+-   Il modello di identità basato sulle attestazioni di WCF è stato sostituito da WIF. Ciò significa che le classi negli spazi dei nomi <xref:System.IdentityModel.Claims?displayProperty=nameWithType>, <xref:System.IdentityModel.Policy?displayProperty=nameWithType> e <xref:System.IdentityModel.Selectors?displayProperty=nameWithType> devono essere rilasciate a favore dell'utilizzo delle classi di WIF.  
   
 -   WIF viene ora abilitato in un servizio WCF specificando l'attributo `useIdentityConfiguration` nell'elemento `<system.serviceModel>`/`<behaviors>`/`<serviceBehaviors>`/`<serviceCredentials>` come nel codice XML seguente:  
   
@@ -56,8 +56,8 @@ La prima versione di Windows Identity Foundation (WIF) è stata rilasciata come 
   
      Quando si usa **Identity and Access Tool per Visual Studio 2012** (vedere **Modifiche all'esperienza con Visual Studio** in precedenza), lo strumento aggiunge un elemento `<serviceCredentials>` con l'attributo `useIdentityConfiguration` impostato sul file di configurazione. Aggiunge anche un elemento [\<system.identityModel>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) corrispondente che contiene le impostazioni di configurazione di WIF, un binding e altre impostazioni necessarie per l'outsourcing dell'autenticazione al servizio token di sicurezza scelto.  
   
-## <a name="see-also"></a>Vedere anche  
- [Linee guida per la migrazione di un'applicazione compilata con le versioni di WIF dalla 3.5 alla 4.5](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md)  
- [Mapping dello spazio dei nomi tra WIF 3.5 e WIF 4.5](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)  
- [Riferimento per le API di WIF](../../../docs/framework/security/wif-api-reference.md)  
- [Guida di riferimento per la configurazione di WIF](../../../docs/framework/security/wif-configuration-reference.md)
+## <a name="see-also"></a>Vedere anche
+- [Linee guida per la migrazione di un'applicazione compilata con le versioni di WIF dalla 3.5 alla 4.5](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md)
+- [Mapping dello spazio dei nomi tra WIF 3.5 e WIF 4.5](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)
+- [Riferimento per le API di WIF](../../../docs/framework/security/wif-api-reference.md)
+- [Guida di riferimento per la configurazione di WIF](../../../docs/framework/security/wif-configuration-reference.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - classes [WPF], mapping namespaces to
 - namespaces [WPF]
 ms.assetid: 5c0854e3-7470-435d-9fe2-93eec9d3634e
-ms.openlocfilehash: 9e93d3cd417d0d075fcebb8327ec51799884f8d6
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: a484ba1e5d0c7a51e7e4c3edbf341bf40345fd2d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664644"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54633915"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a>Spazi dei nomi XAML e mapping dello spazio dei nomi per XAML WPF
 Questo argomento approfondisce la presenza e lo scopo dei due mapping dello spazio dei nomi XAML nel tag radice di ogni file XAML WPF. L'argomento descrive anche come produrre mapping simili per l'uso di elementi definiti nel codice e/o all'interno di assembly separati.  
@@ -115,7 +115,7 @@ End Namespace
   
  [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] usa uno spazio dei nomi della finestra di progettazione in genere mappato al prefisso `d:`. I modelli di progetto più recenti per WPF possono eseguire preventivamente il mapping di questo spazio dei nomi XAML per supportare lo scambio di XAML tra [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] e altri ambienti di progettazione. Questo spazio dei nomi XAML di progettazione è usato per trasmettere lo stato di progettazione durante la sequenza di andata e ritorno dell'interfaccia utente basata su XAML nella finestra di progettazione. Questo spazio dei nomi viene usato anche per funzionalità quali `d:IsDataSource`, che abilitano origini dati di runtime in una finestra di progettazione.  
   
- Un altro prefisso che è possibile vedere mappato è `mc:`. `mc:` è finalizzato alla compatibilità dei markup e usa un modello di compatibilità dei markup non necessariamente specifico di XAML. In alcuni casi, è possibile usare le funzionalità di compatibilità dei markup per scambiare XAML tra framework o tra altri limiti di implementazione di supporto, per lavorare tra contesti di schemi XAML, per garantire la compatibilità per modalità limitate nelle finestre di progettazione e così via. Per altre informazioni sui concetti di compatibilità dei markup e sulla relazione con WPF, vedere [Funzionalità del linguaggio per la compatibilità dei markup (mc:)](../../../../docs/framework/wpf/advanced/markup-compatibility-mc-language-features.md).  
+ Un altro prefisso che è possibile vedere mappato è `mc:`. `mc:` è finalizzato alla compatibilità dei markup e usa un modello di compatibilità dei markup non necessariamente specifico di XAML. In alcuni casi, è possibile usare le funzionalità di compatibilità dei markup per scambiare XAML tra framework o tra altri limiti di implementazione di supporto, per lavorare tra contesti di schemi XAML, per garantire la compatibilità per modalità limitate nelle finestre di progettazione e così via. Per altre informazioni su concetti di compatibilità dei markup e sulla loro relazione con WPF, vedere [compatibilità dei Markup (mc:) Funzionalità del linguaggio](../../../../docs/framework/wpf/advanced/markup-compatibility-mc-language-features.md).  
   
 ## <a name="wpf-and-assembly-loading"></a>WPF e caricamento di assembly  
  Il contesto dello schema XAML per WPF si integra con il modello applicazione WPF, che a sua volta Usa il concetto definito da CLR di <xref:System.AppDomain>. La sequenza seguente descrive come contesto dello schema XAML interpreta la modalità di caricare gli assembly o trovare i tipi in fase di esecuzione o in fase di progettazione, in base all'utilizzo WPF di <xref:System.AppDomain> e ad altri fattori.  
@@ -136,6 +136,6 @@ End Namespace
   
  Il codice BAML (generato tramite PresentationBuildTask) usa tutti i passaggi, anche se non deve contenere nomi di assembly non qualificati.  
   
-## <a name="see-also"></a>Vedere anche  
- [Understanding XML Namespaces](https://go.microsoft.com/fwlink/?LinkId=98069)  
- [Cenni preliminari su XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+## <a name="see-also"></a>Vedere anche
+- [Understanding XML Namespaces](https://go.microsoft.com/fwlink/?LinkId=98069)
+- [Cenni preliminari su XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)

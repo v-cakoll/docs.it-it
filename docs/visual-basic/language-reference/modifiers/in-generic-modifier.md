@@ -7,12 +7,12 @@ helpviewer_keywords:
 - contravariance, In keyword [Visual Basic]
 - In keyword [Visual Basic]
 ms.assetid: 59bb13c5-fe96-42b8-8286-86293d1661c5
-ms.openlocfilehash: d1d9209cd583ac96ece59660ad29c76a66d3395a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4d5909e6ee7436b7e4f7baa30bfe81eb8ba5441e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33597432"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54625750"
 ---
 # <a name="in-generic-modifier-visual-basic"></a>In (modificatore generico) (Visual Basic)
 Per i parametri di tipo generico, la parola chiave `In` specifica che il parametro di tipo è controvariante.  
@@ -25,11 +25,11 @@ Per i parametri di tipo generico, la parola chiave `In` specifica che il paramet
 ## <a name="rules"></a>Regole  
  È possibile usare la parola chiave `In` in interfacce e delegati generici.  
   
- Un parametro di tipo può essere dichiarato controvariante in un'interfaccia generica o delegato se viene utilizzata solo come tipo di argomenti del metodo e non come un tipo restituito del metodo. `ByRef` parametri non possono essere di tipo covarianti o controvariante.  
+ Un parametro di tipo può essere dichiarato controvariante in un'interfaccia o delegato generico se viene utilizzato solo come tipo di argomenti del metodo e non come tipo restituito del metodo. `ByRef` parametri non possono essere covarianti o controvarianti.  
   
  Covarianza e controvarianza sono supportate per i tipi di riferimento e non è supportate per i tipi di valore.  
   
- In Visual Basic, è possibile dichiarare gli eventi nelle interfacce controvarianti senza specificare il tipo delegato. Inoltre, interfacce controvariante non è possibile avere, enumerazioni, strutture o classi annidate, ma può disporre di interfacce annidate.  
+ In Visual Basic, è possibile dichiarare gli eventi nelle interfacce controvariante senza specificare il tipo delegato. Inoltre, controvariante interfacce non è possibile hanno, enumerazioni, strutture o classi annidate, ma può disporre di interfacce annidate.  
   
 ## <a name="behavior"></a>Comportamento  
  Un'interfaccia che dispone di un parametro di tipo controvariante consente ai metodi di accettare argomenti di tipi meno derivati di quelli specificati dal parametro di tipo di interfaccia. Poiché, ad esempio, in .NET Framework 4, nell'interfaccia <xref:System.Collections.Generic.IComparer%601>, il tipo T è controvariante, è possibile assegnare un oggetto di tipo `IComparer(Of Person)` a un oggetto di tipo `IComparer(Of Employee)` senza usare alcun metodo di conversione speciale se `Person` eredita `Employee`.  
@@ -46,6 +46,6 @@ Per i parametri di tipo generico, la parola chiave `In` specifica che il paramet
   
  [!code-vb[vbVarianceKeywords#2](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/in-generic-modifier_2.vb)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Varianza nelle interfacce generiche](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)  
- [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)
+## <a name="see-also"></a>Vedere anche
+- [Varianza nelle interfacce generiche](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
+- [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)

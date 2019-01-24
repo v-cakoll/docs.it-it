@@ -2,12 +2,12 @@
 title: Mapping del tipo SQL-CLR
 ms.date: 07/23/2018
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
-ms.openlocfilehash: d5c0072d8561efa1211de191a1f2b6f3a1e55b7b
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 5c8c6456d108975ec927e28ac80c8dcca1567b46
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837336"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617343"
 ---
 # <a name="sql-clr-type-mapping"></a>Mapping del tipo SQL-CLR
 In LINQ to SQL viene eseguito il mapping del modello di dati di un database relazionale a un modello a oggetti espresso nel linguaggio di programmazione desiderato. Quando viene eseguita l'applicazione, LINQ to SQL converte in SQL le query LINQ (Language Integrated Query) nel modello a oggetti e le invia al database per l'esecuzione. Quando il database restituisce i risultati, questi vengono nuovamente convertiti da LINQ to SQL in oggetti che è possibile usare nel linguaggio di programmazione desiderato.  
@@ -38,7 +38,7 @@ In LINQ to SQL viene eseguito il mapping del modello di dati di un database rela
 ## <a name="default-type-mapping"></a>Mapping dei tipi predefiniti  
  È possibile creare automaticamente il modello a oggetti o il file di mapping esterno tramite Progettazione relazionale oggetti o lo strumento da riga di comando SQLMetal. I mapping dei tipi predefiniti per questi strumenti definiscono i tipi CLR scelti per il mapping alle colonne nel database di SQL Server. Per altre informazioni sull'uso di questi strumenti, vedere [creazione del modello a oggetti](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md).  
   
- È inoltre possibile usare il metodo <xref:System.Data.Linq.DataContext.CreateDatabase%2A> per creare un database di SQL Server basato sulle informazioni sul mapping nel modello a oggetti o nel file di mapping esterno. I mapping dei tipi predefiniti per il metodo <xref:System.Data.Linq.DataContext.CreateDatabase%2A> definiscono il tipo di colonne di SQL Server create per eseguire il mapping ai tipi CLR nel modello a oggetti. Per altre informazioni, vedere [procedura: creazione di un Database in modo dinamico](../../../../../../docs/framework/data/adonet/sql/linq/how-to-dynamically-create-a-database.md).  
+ È inoltre possibile usare il metodo <xref:System.Data.Linq.DataContext.CreateDatabase%2A> per creare un database di SQL Server basato sulle informazioni sul mapping nel modello a oggetti o nel file di mapping esterno. I mapping dei tipi predefiniti per il metodo <xref:System.Data.Linq.DataContext.CreateDatabase%2A> definiscono il tipo di colonne di SQL Server create per eseguire il mapping ai tipi CLR nel modello a oggetti. Per altre informazioni, vedere [Procedura: Creazione di un Database in modo dinamico](../../../../../../docs/framework/data/adonet/sql/linq/how-to-dynamically-create-a-database.md).  
   
 <a name="BehaviorMatrix"></a>   
 ## <a name="type-mapping-run-time-behavior-matrix"></a>Matrice del comportamento in fase di esecuzione del mapping dei tipi  
@@ -256,8 +256,8 @@ In LINQ to SQL viene eseguito il mapping del modello di dati di un database rela
   
  LINQ to SQL non supporta altri mapping per tali tipi vari.  Per altre informazioni, vedere la [tipo di Mapping di matrice fase di esecuzione comportamento](#BehaviorMatrix).  
   
-## <a name="see-also"></a>Vedere anche  
- [Mapping basato su attributi](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)  
- [External Mapping](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md) (Mapping esterno)  
- [Tipi di dati e funzioni](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)  
- [Tipi SQL-CLR non corrispondenti](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)
+## <a name="see-also"></a>Vedere anche
+- [Mapping basato su attributi](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)
+- [External Mapping](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md) (Mapping esterno)
+- [Tipi di dati e funzioni](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+- [Tipi SQL-CLR non corrispondenti](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)

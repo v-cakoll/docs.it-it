@@ -1,15 +1,15 @@
 ---
-title: Creazione di documento di origine Office Open XML (Visual Basic)
+title: Creazione del documento di origine Office Open XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 61ccd6fb-0c47-4075-afdf-5b5021330f21
-ms.openlocfilehash: 3db168b2c2971c3b44e54aefc24a9e08edb232d3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 124f22e3a4b3e43dd454aca9389691a89debcf6f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33640443"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617447"
 ---
-# <a name="creating-the-source-office-open-xml-document-visual-basic"></a>Creazione di documento di origine Office Open XML (Visual Basic)
+# <a name="creating-the-source-office-open-xml-document-visual-basic"></a>Creazione del documento di origine Office Open XML (Visual Basic)
 In questo argomento viene illustrato come creare il documento WordprocessingML di Office Open XML usato in altri esempi di questa esercitazione. Seguendo queste istruzioni, l'output ottenuto sarà uguale a quello indicato in ogni esempio.  
   
  Tuttavia, gli esempi presentati in questa esercitazione funzioneranno con qualsiasi documento WordprocessingML valido.  
@@ -53,5 +53,5 @@ In questo argomento viene illustrato come creare il documento WordprocessingML d
     > [!NOTE]
     >  Se si usa Microsoft Word 2003, selezionare **Documento di Word 2007** nell'elenco a discesa **Tipo file**.  
   
-## <a name="see-also"></a>Vedere anche  
- [Esercitazione: Manipolazione di contenuto in un documento WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+## <a name="see-also"></a>Vedere anche
+- [Esercitazione: Manipolazione di contenuto in un documento WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

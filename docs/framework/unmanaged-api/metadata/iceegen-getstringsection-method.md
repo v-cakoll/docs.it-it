@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0a8617c9e818ec514c912a85373c916559d89df3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c4ccbff4a4967e7525ee4e51650a4f53e5458666
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443037"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54605518"
 ---
 # <a name="iceegengetstringsection-method"></a>Metodo ICeeGen::GetStringSection
-Ottiene una rappresentazione di stringa della sezione di codice a cui fa riferimento l'handle specificato.  
+Ottiene una rappresentazione di stringa della sezione di codice fa riferimento l'handle specificato.  
   
  Questo metodo è obsoleto e non deve essere utilizzato.  
   
@@ -39,16 +39,16 @@ HRESULT GetStringSection (
   
 #### <a name="parameters"></a>Parametri  
  `section`  
- [in, out] Handle alla sezione di codice.  
+ [in, out] Handle per la sezione di codice.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
- **Libreria:** usata come risorsa in Mscoree. dll  
+ **Libreria:** Usato come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

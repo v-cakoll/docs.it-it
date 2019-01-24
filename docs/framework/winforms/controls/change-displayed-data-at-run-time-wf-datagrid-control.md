@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: modificare i dati visualizzati in fase di esecuzione nel controllo DataGrid Windows Form'
+title: 'Procedura: Modificare i dati visualizzati in fase di esecuzione nel controllo DataGrid Windows Form'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,27 +10,27 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], data binding
 - cells [Windows Forms], changing DataGrid cell values
 ms.assetid: 0c7a6d00-30de-416e-8223-0a81ddb4c1f8
-ms.openlocfilehash: 1059f774ae8d2c203d7a4f5c02c597b4686304f7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fc0fe47d728a196de81f7bf099e3a25ac2bb9211
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33526914"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54605565"
 ---
-# <a name="how-to-change-displayed-data-at-run-time-in-the-windows-forms-datagrid-control"></a>Procedura: modificare i dati visualizzati in fase di esecuzione nel controllo DataGrid Windows Form
+# <a name="how-to-change-displayed-data-at-run-time-in-the-windows-forms-datagrid-control"></a>Procedura: Modificare i dati visualizzati in fase di esecuzione nel controllo DataGrid Windows Form
 > [!NOTE]
 >  Benché il controllo <xref:System.Windows.Forms.DataGridView> sostituisca il controllo <xref:System.Windows.Forms.DataGrid> aggiungendovi funzionalità, il controllo <xref:System.Windows.Forms.DataGrid> viene mantenuto per compatibilità con le versioni precedenti e per un eventuale uso futuro. Per altre informazioni, vedere [Differenze tra i controlli DataGridView e DataGrid Windows Form](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
- Dopo aver creato un Windows Form <xref:System.Windows.Forms.DataGrid> utilizzando le funzionalità in fase di progettazione, è inoltre possibile modificare dinamicamente gli elementi del <xref:System.Data.DataSet> oggetto della griglia in fase di esecuzione. Ciò può includere le modifiche dei singoli valori della tabella o dell'origine dati a cui è associata la <xref:System.Windows.Forms.DataGrid> controllo. Vengono apportate modifiche ai singoli valori tramite la <xref:System.Data.DataSet> oggetto, non il <xref:System.Windows.Forms.DataGrid> controllo.  
+ Dopo aver creato un controllo Windows Form <xref:System.Windows.Forms.DataGrid> usando le funzionalità in fase di progettazione, è anche possibile modificare dinamicamente gli elementi del <xref:System.Data.DataSet> oggetti della griglia in fase di esecuzione. Può includere le modifiche dei singoli valori di tabella o la modifica origine dati a cui è associata il <xref:System.Windows.Forms.DataGrid> controllo. Vengono apportate modifiche ai singoli valori tramite il <xref:System.Data.DataSet> dell'oggetto, non il <xref:System.Windows.Forms.DataGrid> controllo.  
   
 ### <a name="to-change-data-programmatically"></a>Per modificare i dati a livello di codice  
   
-1.  Specificare la tabella desiderata di <xref:System.Data.DataSet> oggetto e riga e campo della tabella e impostare la cella per il nuovo valore desiderato.  
+1.  Specificare la tabella desiderata di <xref:System.Data.DataSet> oggetto e il valore desiderato di righe e campo dalla tabella e impostare la cella uguale a quello nuovo.  
   
     > [!NOTE]
-    >  Per specificare la prima tabella della <xref:System.Data.DataSet> o la prima riga della tabella, usare 0.  
+    >  Per specificare la tabella prima di <xref:System.Data.DataSet> o la prima riga della tabella, usare 0.  
   
-     Nell'esempio seguente viene illustrato come modificare la seconda voce della prima riga della prima tabella di un set di dati, fare clic su `Button1`. Il <xref:System.Data.DataSet> (`ds`) e le tabelle (`0` e `1`) creati in precedenza.  
+     Nell'esempio seguente viene illustrato come modificare la seconda voce della prima riga della tabella prima di un set di dati, fare clic su `Button1`. Il <xref:System.Data.DataSet> (`ds`) e le tabelle (`0` e `1`) creati in precedenza.  
   
     ```vb  
     Protected Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  
@@ -64,13 +64,13 @@ ms.locfileid: "33526914"
        gcnew System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-     In fase di esecuzione è possibile utilizzare il <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> metodo a cui associare il <xref:System.Windows.Forms.DataGrid> controllo a un'origine dati diversa. Ad esempio, è possibile disporre di più [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] controlli di dati, ciascuno connesso a un database diverso.  
+     In fase di esecuzione è possibile usare la <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> metodo a cui associare il <xref:System.Windows.Forms.DataGrid> controllo a un'origine dati diversa. Ad esempio, si possono invece avere diversi [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] controlli dei dati, ciascuna connessa a un database diverso.  
   
 ### <a name="to-change-the-datasource-programmatically"></a>Per modificare l'origine dati a livello di codice  
   
-1.  Impostare il <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> metodo per il nome dell'origine dati e della tabella che si desidera associare.  
+1.  Impostare il <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> al nome dell'origine dati e della tabella che si desidera associare al metodo.  
   
-     Nell'esempio seguente viene illustrato come modificare l'origine dati utilizzando il <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> metodo da un [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] controllo dati (adoPubsAuthors) connesso alla tabella Authors del database Pubs.  
+     Nell'esempio seguente viene illustrato come modificare l'origine dati utilizzando il <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> metodo a un [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] controllo dati (adoPubsAuthors) che è connessa alla tabella Authors nel database Pubs.  
   
     ```vb  
     Private Sub ResetSource()  
@@ -93,8 +93,8 @@ ms.locfileid: "33526914"
        }  
     ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Oggetti DataSet ADO.NET](../../../../docs/framework/data/adonet/ado-net-datasets.md)  
- [Procedura: Eliminare o nascondere colonne nel controllo DataGrid Windows Form](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)  
- [Procedura: Aggiungere tabelle e colonne al controllo DataGrid Windows Form](../../../../docs/framework/winforms/controls/how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)  
- [Procedura: Associare il controllo DataGrid Windows Form a un'origine dati](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
+## <a name="see-also"></a>Vedere anche
+- [Oggetti DataSet ADO.NET](../../../../docs/framework/data/adonet/ado-net-datasets.md)
+- [Procedura: Eliminare o nascondere colonne nel controllo DataGrid Windows Form](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+- [Procedura: Aggiungere tabelle e colonne al controllo DataGrid Windows Form](../../../../docs/framework/winforms/controls/how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
+- [Procedura: Associare il controllo DataGrid di Windows Form a un'origine dati](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)

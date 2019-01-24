@@ -10,12 +10,12 @@ helpviewer_keywords:
 - '*= operator [Visual Basic]'
 - compound assignment statements [Visual Basic]
 ms.assetid: 96c86509-6eb8-4682-8226-3852e049376f
-ms.openlocfilehash: 3863e6c7416057507e8ae569804ed4a1be6a5b50
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3aa1d563b9657d4e80425b8c2d29e069ca2ef06a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604159"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54601883"
 ---
 # <a name="-operator-visual-basic"></a>Operatore *= (Visual Basic)
 Moltiplica il valore di una variabile o proprietà per il valore di un'espressione e assegna il risultato alla variabile o proprietà.  
@@ -28,28 +28,28 @@ variableorproperty *= expression
   
 ## <a name="parts"></a>Parti  
  `variableorproperty`  
- Obbligatorio. Qualsiasi variabile o proprietà numerica.  
+ Obbligatorio. Qualsiasi variabile numerica o una proprietà.  
   
  `expression`  
  Obbligatorio. Qualsiasi espressione numerica.  
   
 ## <a name="remarks"></a>Note  
- L'elemento sul lato sinistro del `*=` operatore può essere una semplice variabile scalare, una proprietà o un elemento della matrice. La variabile o proprietà non può essere [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
+ L'elemento sul lato sinistro del `*=` operatore può essere una variabile semplice scalare, una proprietà o un elemento della matrice. La variabile o proprietà non può essere [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
   
- Il `*=` operatore prima Moltiplica il valore dell'espressione (sul lato destro dell'operatore di) per il valore della variabile o proprietà (sul lato sinistro dell'operatore). L'operatore assegna il risultato dell'operazione per la variabile o proprietà.  
+ Il `*=` operatore prima Moltiplica il valore dell'espressione (sul lato destro dell'operatore) per il valore della variabile o proprietà (sul lato sinistro dell'operatore). L'operatore assegna il risultato dell'operazione per la variabile o proprietà.  
   
 ## <a name="overloading"></a>Overload  
- Il [* operatore](../../../visual-basic/language-reference/operators/multiplication-operator.md) può essere *overload*, il che significa che una classe o struttura ridefinire il comportamento quando un operando ha il tipo di quella classe o struttura. L'overload di `*` operatore influisce sul comportamento del `*=` operatore. Se il codice utilizza `*=` in una classe o struttura che esegue l'overload `*`, assicurarsi di comprendere il comportamento ridefinito. Per ulteriori informazioni, vedere [routine di operatore](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ Il [* Operator](../../../visual-basic/language-reference/operators/multiplication-operator.md) può essere *sottoposto a overload*, il che significa che una classe o struttura può ridefinire il comportamento quando un operando ha il tipo di quella classe o struttura. L'overload di `*` operatore influisce sul comportamento del `*=` operatore. Se il codice usi `*=` in una classe o struttura che esegue l'overload `*`, assicurarsi di comprendere il comportamento ridefinito. Per altre informazioni, vedere [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Esempio  
- L'esempio seguente usa il `*=` operatore per moltiplicare una `Integer` variabile da un secondo e assegnare il risultato alla prima variabile.  
+ L'esempio seguente usa il `*=` operatore per moltiplicare una `Integer` variabile da un secondo e assegna il risultato per la prima variabile.  
   
  [!code-vb[VbVbalrOperators#5](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/multiplication-assignment-operator_1.vb)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Operatore *](../../../visual-basic/language-reference/operators/multiplication-operator.md)  
- [Operatori di assegnazione](../../../visual-basic/language-reference/operators/assignment-operators.md)  
- [Operatori aritmetici](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
- [Precedenza tra gli operatori in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [Elenco degli operatori per funzionalità](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
- [Istruzioni](../../../visual-basic/programming-guide/language-features/statements.md)
+## <a name="see-also"></a>Vedere anche
+- [Operatore *](../../../visual-basic/language-reference/operators/multiplication-operator.md)
+- [Operatori di assegnazione](../../../visual-basic/language-reference/operators/assignment-operators.md)
+- [Operatori aritmetici](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
+- [Precedenza tra gli operatori in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Elenco degli operatori per funzionalità](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [Istruzioni](../../../visual-basic/programming-guide/language-features/statements.md)

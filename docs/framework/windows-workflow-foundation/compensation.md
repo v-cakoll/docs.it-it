@@ -2,12 +2,12 @@
 title: Compensazione
 ms.date: 03/30/2017
 ms.assetid: 722e9766-48d7-456c-9496-d7c5c8f0fa76
-ms.openlocfilehash: 840730acd9289fd394906c49186846e3204c4a99
-ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
+ms.openlocfilehash: e8a7140e677b553d07014d0ac5a77dd1c7488f53
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47863468"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54607605"
 ---
 # <a name="compensation"></a>Compensazione
 La compensazione in Windows Workflow Foundation (WF) è il meccanismo mediante il quale in precedenza il lavoro completato può essere annullato o compensato (seguendo la logica definita dall'applicazione) quando si verifica un errore successivo. Contenuto della sezione viene illustrato come usare la compensazione nei flussi di lavoro.  
@@ -50,7 +50,7 @@ La compensazione in Windows Workflow Foundation (WF) è il meccanismo mediante i
  **ReserveFlight: Ticket è riservato.**  
 **ManagerApproval: Approvazione del responsabile ricevuto.**   
 **PurchaseFlight: Ticket viene acquistata.**   
-**Flusso di lavoro completato con stato: chiuso.**    
+**Flusso di lavoro completato con stato: Chiuso.**    
 > [!NOTE]
 >  Nelle attività di esempio in questo argomento, quale `ReserveFlight`, vengono visualizzati nome e scopo nella console per consentire di illustrare l'ordine in cui vengono eseguite le attività quando si verifica la compensazione.  
   
@@ -92,11 +92,11 @@ La compensazione in Windows Workflow Foundation (WF) è il meccanismo mediante i
  Quando viene richiamato il flusso di lavoro, l'eccezione della condizione di errore simulata viene gestita dall'applicazione host in <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A>, il flusso di lavoro viene annullato e la logica di compensazione viene richiamata.  
   
  **ReserveFlight: Ticket è riservato.**  
-**SimulatedErrorCondition: Generazione di un'eccezione ApplicationException.**   
+**SimulatedErrorCondition: Generare un'eccezione ApplicationException.**   
 **Eccezione non gestita del flusso di lavoro:**   
-**System. ApplicationException: Condizione di errore simulata nel flusso di lavoro.**   
-**CancelFlight: Ticket viene annullata.**   
-**Flusso di lavoro completato con stato: annullata.**    
+**System.ApplicationException: Condizione di errore simulata nel flusso di lavoro.**   
+**CancelFlight: Ticket è stato annullato.**   
+**Flusso di lavoro completato con stato: Annullato.**    
 ### <a name="cancellation-and-compensableactivity"></a>Annullamento e CompensableActivity  
  Se le attività in <xref:System.Activities.Statements.CompensableActivity.Body%2A> di un oggetto <xref:System.Activities.Statements.CompensableActivity> non sono state completate e l'attività è annullata, vengono eseguite le attività in <xref:System.Activities.Statements.CompensableActivity.CancellationHandler%2A>.  
   
@@ -161,12 +161,12 @@ Activity wf = new Sequence()
   
  Quando viene richiamato il flusso di lavoro, l'eccezione della condizione di errore simulata viene gestita dall'applicazione host in <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A>, il flusso di lavoro viene annullato e viene richiamata la logica di cancellazione di <xref:System.Activities.Statements.CompensableActivity>. In questo esempio, la logica di compensazione e la logica di annullamento hanno obiettivi differenti. Se <xref:System.Activities.Statements.CompensableActivity.Body%2A> è stato completato correttamente, questo significa che è stato effettuato il prelievo dalla carta di credito e il volo è stato prenotato, pertanto la compensazione dovrebbe annullare entrambi i passaggi. In questo esempio, l'annullamento del volo annulla automaticamente l'addebito sulla carta di credito. Tuttavia, se <xref:System.Activities.Statements.CompensableActivity> viene annullato, questo significa che <xref:System.Activities.Statements.CompensableActivity.Body%2A> non è stato completato e la logica di <xref:System.Activities.Statements.CompensableActivity.CancellationHandler%2A> deve essere in grado di determinare il metodo migliore di gestire l'annullamento. In questo esempio, <xref:System.Activities.Statements.CompensableActivity.CancellationHandler%2A> annulla l'addebito sulla carta di credito, tuttavia, poiché `ReserveFlight` era l'ultima attività in <xref:System.Activities.Statements.CompensableActivity.Body%2A>, non tenta di annullare il volo. Dal momento che `ReserveFlight` era l'ultima attività in <xref:System.Activities.Statements.CompensableActivity.Body%2A>, se fosse stata completata correttamente, l'oggetto <xref:System.Activities.Statements.CompensableActivity.Body%2A> sarebbe stato completato e non sarebbe stato possibile alcun annullamento.  
   
- **ChargeCreditCard: Carta di credito addebito per volo.**  
-**SimulatedErrorCondition: Generazione di un'eccezione ApplicationException.**   
+ **ChargeCreditCard: Addebito di carta di credito per volo.**  
+**SimulatedErrorCondition: Generare un'eccezione ApplicationException.**   
 **Eccezione non gestita del flusso di lavoro:**   
-**System. ApplicationException: Condizione di errore simulata nel flusso di lavoro.**   
-**CancelCreditCard: Annullamento delle spese della carta di credito.**   
-**Flusso di lavoro completato con stato: annullata.**  Per altre informazioni sull'annullamento, vedere [annullamento](../../../docs/framework/windows-workflow-foundation/modeling-cancellation-behavior-in-workflows.md).  
+**System.ApplicationException: Condizione di errore simulata nel flusso di lavoro.**   
+**CancelCreditCard: Annulla l'addebito sulla carta di credito.**   
+**Flusso di lavoro completato con stato: Annullato.**  Per altre informazioni sull'annullamento, vedere [annullamento](../../../docs/framework/windows-workflow-foundation/modeling-cancellation-behavior-in-workflows.md).  
   
 ### <a name="explicit-compensation-using-the-compensate-activity"></a>Compensazione esplicita tramite l'attività Compensate  
  Nella sezione precedente è stata illustrata la compensazione implicita. Si tratta di un tipo di compensazione che può risultare appropriata per scenari semplici, ma se occorre un controllo più esplicito sulla pianificazione della gestione della compensazione è possibile usare l'attività <xref:System.Activities.Statements.Compensate>. Per iniziare il processo di compensazione con l'attività <xref:System.Activities.Statements.Compensate>, viene usato l'oggetto <xref:System.Activities.Statements.CompensationToken> dell'oggetto <xref:System.Activities.Statements.CompensableActivity> per il quale si desidera la compensazione. L'attività <xref:System.Activities.Statements.Compensate> può essere usata per iniziare la compensazione su qualsiasi oggetto <xref:System.Activities.Statements.CompensableActivity> completato che non è stato confermato o compensato. Ad esempio, un'attività <xref:System.Activities.Statements.Compensate> potrebbe essere usata nella sezione <xref:System.Activities.Statements.TryCatch.Catches%2A> di un'attività <xref:System.Activities.Statements.TryCatch> o in qualsiasi momento dopo il completamento dell'oggetto <xref:System.Activities.Statements.CompensableActivity>. In questo esempio l'attività <xref:System.Activities.Statements.Compensate> viene usata nella sezione <xref:System.Activities.Statements.TryCatch.Catches%2A> di un'attività <xref:System.Activities.Statements.TryCatch> per invertire l'azione dell'oggetto <xref:System.Activities.Statements.CompensableActivity>.  
@@ -245,9 +245,9 @@ Activity wf = new Sequence()
  Quando il flusso di lavoro viene richiamato, l'output seguente viene visualizzato nella console.  
   
  **ReserveFlight: Ticket è riservato.**  
-**SimulatedErrorCondition: Generazione di un'eccezione ApplicationException.**   
-**CancelFlight: Ticket viene annullata.**   
-**Flusso di lavoro completato con stato: chiuso.**    
+**SimulatedErrorCondition: Generare un'eccezione ApplicationException.**   
+**CancelFlight: Ticket è stato annullato.**   
+**Flusso di lavoro completato con stato: Chiuso.**    
 ### <a name="confirming-compensation"></a>Conferma della compensazione  
  Per impostazione predefinita, le attività compensabili possono essere compensate in qualsiasi momento una volta completate. In alcuni casi però questo potrebbe non essere appropriato. Nell'esempio precedente la compensazione relativa alla prenotazione del biglietto consisteva nell'annullamento della prenotazione. Tuttavia, una volta completato il volo, questo passaggio di compensazione non è più valido. La conferma dell'attività compensabile richiama l'attività specificata da <xref:System.Activities.Statements.CompensableActivity.ConfirmationHandler%2A>. Un possibile utilizzo consiste nel consentire a qualsiasi risorsa necessaria di eseguire la compensazione da rilasciare. Una volta confermata, un'attività compensabile non può essere compensata e se si tenta tale operazione, verrà generata un'eccezione <xref:System.InvalidOperationException>. Quando un flusso di lavoro viene completato correttamente, tutte le attività compensabili non confermate e non compensate completate correttamente vengono confermate nell'ordine inverso rispetto al completamento. In questo esempio il volo è prenotato, acquistato e completato, quindi l'attività compensabile è confermata. Per confermare un oggetto <xref:System.Activities.Statements.CompensableActivity>, usare l'attività <xref:System.Activities.Statements.Confirm> e specificare l'oggetto <xref:System.Activities.Statements.CompensationToken> dell'oggetto <xref:System.Activities.Statements.CompensableActivity> da confermare.  
   
@@ -316,9 +316,9 @@ Quando il flusso di lavoro viene richiamato, l'output seguente viene visualizzat
 **ReserveFlight: Ticket è riservato.**  
 **ManagerApproval: Approvazione del responsabile ricevuto.**   
 **PurchaseFlight: Ticket viene acquistata.**   
-**TakeFlight: Volo viene completata.**   
-**ConfirmFlight: Volo non è stato usato, Nessun compenso possibili.**   
-**Flusso di lavoro completato con stato: chiuso.**   
+**TakeFlight: Flight è stata completata.**   
+**ConfirmFlight: Flight non è stato usato, Nessun compenso possibili.**   
+**Flusso di lavoro completato con stato: Chiuso.**   
 
 ## <a name="nesting-compensation-activities"></a>Annidamento delle attività di compensazione  
 
@@ -326,7 +326,7 @@ Un oggetto <xref:System.Activities.Statements.CompensableActivity> può essere p
   
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.Activities.Statements.CompensableActivity>  
-- <xref:System.Activities.Statements.Compensate>  
-- <xref:System.Activities.Statements.Confirm>  
+- <xref:System.Activities.Statements.CompensableActivity>
+- <xref:System.Activities.Statements.Compensate>
+- <xref:System.Activities.Statements.Confirm>
 - <xref:System.Activities.Statements.CompensationToken>

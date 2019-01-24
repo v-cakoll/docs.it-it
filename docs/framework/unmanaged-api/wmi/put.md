@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1ec8fe889885b555cbf9a95cd34b7330efff27f2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3c37bae87f56745cf75031923db820ec2439fe04
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518756"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54625770"
 ---
 # <a name="put-function"></a>Funzione Put
 Imposta una proprietà denominata su un nuovo valore.
@@ -66,13 +66,13 @@ HRESULT Put (
 
 I seguenti valori restituiti da questa funzione sono definiti nel *WbemCli.h* file di intestazione, oppure è possibile definirle come costanti nel codice:
 
-|Costante  |Valore  |Descrizione  |
+|Costante  |Value  |Descrizione  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | Si è verificato un errore generale. |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Uno o più parametri non vengono. |
 |`WBEM_E_INVALID_PROPERTY_TYPE` | 0x8004102a | Il tipo di proprietà non è riconosciuto. Questo valore viene restituito durante la creazione di istanze della classe se la classe esiste già. |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Memoria insufficiente è disponibile per completare l'operazione. |
-| `WBEM_E_TYPE_MISMATCH` | 0x80041005 | Per le istanze: indica che `pVal` punta a un `VARIANT` di un tipo non corretto per la proprietà. <br/> Per le definizioni delle classi: la proprietà esiste già nella classe padre e il nuovo tipo COM è diverso dal vecchio tipo COM. |
+| `WBEM_E_TYPE_MISMATCH` | 0x80041005 | Per le istanze: Indica che `pVal` punta a un `VARIANT` di un tipo non corretto per la proprietà. <br/> Per le definizioni di classe: La proprietà esiste già nella classe padre e il nuovo tipo COM è diverso dal vecchio tipo COM. |
 |`WBEM_S_NO_ERROR` | 0 | La chiamata di funzione è riuscita. |
   
 ## <a name="remarks"></a>Note
@@ -94,11 +94,11 @@ Usare la `vtType` parametro solo durante la creazione di nuove proprietà in una
 Per un esempio, vedere la [IWbemClassObject::Put](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-put) (metodo).
 
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** WMINet_Utils.idl  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Vedere anche  
-[WMI e contatori delle prestazioni (riferimenti alle API non gestite)](index.md)
+## <a name="see-also"></a>Vedere anche
+- [WMI e contatori delle prestazioni (riferimenti alle API non gestite)](index.md)

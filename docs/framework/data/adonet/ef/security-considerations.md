@@ -2,12 +2,12 @@
 title: Considerazioni sulla sicurezza (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 25d313f9c6f71d946ed8d9cc5db2e99dc84983b3
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 41812dab1f92e20e3742661d13c9f0e4fb81b46e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45591951"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54612827"
 ---
 # <a name="security-considerations-entity-framework"></a>Considerazioni sulla sicurezza (Entity Framework)
 In questo argomento vengono illustrate alcune considerazioni sulla sicurezza che riguardano in modo particolare lo sviluppo, la distribuzione e l'esecuzione di applicazioni [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. È consigliabile inoltre seguire le raccomandazioni relative alla creazione di applicazioni [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] protette. Per altre informazioni, vedere [Cenni preliminari sulla sicurezza](../../../../../docs/framework/data/adonet/security-overview.md).  
@@ -46,7 +46,7 @@ In questo argomento vengono illustrate alcune considerazioni sulla sicurezza che
   
 -   Usare i generatori di stringhe di connessione durante la creazione dinamica delle connessioni.  
   
-     Se è necessario costruire stringhe di connessione in fase di runtime, usare la classe <xref:System.Data.EntityClient.EntityConnectionStringBuilder>. Questa classe del generatore di stringhe consente di impedire attacchi injection delle stringhe di connessione attraverso la convalida e l'esecuzione dell'escape delle informazioni di input non valide. Per altre informazioni, vedere [procedura: compilare una stringa di connessione EntityConnection](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md). Usare anche la classe di generatori di stringhe adatta per costruire la stringa di connessione origine dati che fa parte di [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] stringa di connessione. Per informazioni sui generatori di stringhe di connessione per i provider ADO.NET, vedere [generatori di stringhe di connessione](../../../../../docs/framework/data/adonet/connection-string-builders.md).  
+     Se è necessario costruire stringhe di connessione in fase di runtime, usare la classe <xref:System.Data.EntityClient.EntityConnectionStringBuilder>. Questa classe del generatore di stringhe consente di impedire attacchi injection delle stringhe di connessione attraverso la convalida e l'esecuzione dell'escape delle informazioni di input non valide. Per altre informazioni, vedere [Procedura: Compilare una stringa di connessione EntityConnection](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md). Usare anche la classe di generatori di stringhe adatta per costruire la stringa di connessione origine dati che fa parte di [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] stringa di connessione. Per informazioni sui generatori di stringhe di connessione per i provider ADO.NET, vedere [generatori di stringhe di connessione](../../../../../docs/framework/data/adonet/connection-string-builders.md).  
   
  Per altre informazioni, vedere [Protezione delle informazioni di connessione](../../../../../docs/framework/data/adonet/protecting-connection-information.md).  
   
@@ -161,7 +161,7 @@ In questo argomento vengono illustrate alcune considerazioni sulla sicurezza che
 #### <a name="do-not-accept-metadataworkspace-objects-from-untrusted-sources"></a>Non accettare oggetti MetadataWorkspace da fonti non attendibili.  
  Le applicazioni non devono accettare istanze della classe <xref:System.Data.Metadata.Edm.MetadataWorkspace> da fonti non attendibili. Al contrario, è necessario costruire in modo esplicito un'area di lavoro e popolarla a partire da tale origine.  
   
-## <a name="see-also"></a>Vedere anche  
- [Protezione delle applicazioni ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [Considerazioni sulla distribuzione](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  
- [Considerazioni sulla migrazione](../../../../../docs/framework/data/adonet/ef/migration-considerations.md)
+## <a name="see-also"></a>Vedere anche
+- [Protezione delle applicazioni ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [Considerazioni sulla distribuzione](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)
+- [Considerazioni sulla migrazione](../../../../../docs/framework/data/adonet/ef/migration-considerations.md)

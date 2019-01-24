@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: aa5930ad-f3d7-40aa-b6f6-c6edcd5c64f7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b8c7616a3187cd5fa28f231dffd15b0bfeea4b7f
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: c5b74f2608022d48dbd7e63e4ddf6112c333e3f4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48025506"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54604401"
 ---
 # <a name="principal-and-identity-objects"></a>Oggetti Principal e Identity
 Codice gestito può individuare l'identità o il ruolo di un principale tramite un <xref:System.Security.Principal.IPrincipal> oggetto che contiene un riferimento a un <xref:System.Security.Principal.IIdentity> oggetto. Può essere utile paragonare oggetti Identity e Principal a concetti familiari quali account utente e di gruppo. Nella maggior parte degli ambienti di rete, gli account utente rappresentano utenti o programmi, mentre gli account di gruppo rappresentano determinate categorie di utenti e i diritti che essi detengono. Analogamente, gli oggetti Identity di .NET Framework rappresentano utenti, mentre i ruoli rappresentano appartenenze e contesti di sicurezza. In .NET Framework l'oggetto Principal incapsula sia un oggetto Identity che un ruolo. Le applicazioni di .NET Framework concedono diritti al principale sulla base dell'identità che esso presenta oppure, più comunemente, al ruolo che esso riveste.  
@@ -44,9 +44,9 @@ Codice gestito può individuare l'identità o il ruolo di un principale tramite 
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura: Creare un oggetto WindowsPrincipal](../../../docs/standard/security/how-to-create-a-windowsprincipal-object.md)  
-- [Procedura: Creare oggetti GenericPrincipal e GenericIdentity](../../../docs/standard/security/how-to-create-genericprincipal-and-genericidentity-objects.md)  
-- [Sostituzione di oggetti Principal](../../../docs/standard/security/replacing-a-principal-object.md)  
-- [Rappresentazione e ripristino](../../../docs/standard/security/impersonating-and-reverting.md)  
-- [Sicurezza basata sui ruoli](../../../docs/standard/security/role-based-security.md)  
+- [Procedura: Creare un oggetto WindowsPrincipal](../../../docs/standard/security/how-to-create-a-windowsprincipal-object.md)
+- [Procedura: Creare oggetti GenericPrincipal e GenericIdentity](../../../docs/standard/security/how-to-create-genericprincipal-and-genericidentity-objects.md)
+- [Sostituzione di oggetti Principal](../../../docs/standard/security/replacing-a-principal-object.md)
+- [Rappresentazione e ripristino](../../../docs/standard/security/impersonating-and-reverting.md)
+- [Sicurezza basata sui ruoli](../../../docs/standard/security/role-based-security.md)
 - [Concetti chiave sulla sicurezza](../../../docs/standard/security/key-security-concepts.md)

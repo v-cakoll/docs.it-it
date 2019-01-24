@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f50a5cb1f16be44b03cd94b69fdf32efa9e9007b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5227de340bec85620f8c8d45538ad9a9d7f688fb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425142"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54630957"
 ---
 # <a name="isymunmanagedreadergetnamespaces-method"></a>Metodo ISymUnmanagedReader::GetNamespaces
-Ottiene gli spazi dei nomi definiti in ambito globale all'interno dell'archivio simboli.  
+Ottiene gli spazi dei nomi definiti in ambito globale all'interno di questo archivio dei simboli.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,16 +43,16 @@ HRESULT GetNamespaces (
  [in] Le dimensioni della matrice di spazi dei nomi.  
   
  `pcNameSpaces`  
- [out] Un puntatore a una variabile che riceve la lunghezza dell'elenco dello spazio dei nomi.  
+ [out] Un puntatore a una variabile che riceve la lunghezza dell'elenco lo spazio dei nomi.  
   
  `namespaces`  
- [out] Un puntatore a una variabile che riceve l'elenco di spazio dei nomi.  
+ [out] Puntatore a una variabile che riceve l'elenco di spazi dei nomi.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK se il metodo ha esito positivo. in caso contrario, E_FAIL o un altro codice di errore.  
+ S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o qualche altro codice di errore.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** CorSym. idl, CorSym.h  
+ **Intestazione:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

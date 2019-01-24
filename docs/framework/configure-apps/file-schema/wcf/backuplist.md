@@ -1,21 +1,21 @@
 ---
-title: '&lt;BackupList&gt;'
+title: '&lt;backupList&gt;'
 ms.date: 03/30/2017
 ms.assetid: a3d9d1f9-4a53-45e9-a880-86c8bee0b833
-ms.openlocfilehash: 1a6a7ac42b379dd8fb2ba80cf6a3a38998c26a59
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: c11fd38e7c40f740d4c1c36ab87c44744ed0daab
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146550"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54627983"
 ---
-# <a name="ltbackuplistgt"></a>&lt;BackupList&gt;
+# <a name="ltbackuplistgt"></a>&lt;backupList&gt;
 Rappresenta una sezione di configurazione per la definizione di un elenco di backup che enumera un set di endpoint che si desidera il servizio di Routing da usare nel caso in cui non è possibile raggiungere l'endpoint primario. Se il primo endpoint dell'elenco non funziona, il servizio di routing eseguirà automaticamente il failover nel successivo endpoint dell'elenco.  In questo modo è possibile migliorare rapidamente l'affidabilità all'applicazione senza che sia necessario indicare all'applicazione client come gestire modelli complessi o la posizione in cui i servizi sono distribuiti.  
   
  \<system.serviceModel>  
-\<routing >  
-\<backupLists >  
-\<backupList >  
+\<routing>  
+\<backupLists>  
+\<backupList>  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -48,7 +48,7 @@ Rappresenta una sezione di configurazione per la definizione di un elenco di bac
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<routing >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|Elenco di endpoint di backup.|  
+|[\<routing>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|Elenco di endpoint di backup.|  
   
 ## <a name="remarks"></a>Note  
  Questa sezione include una raccolta ordinata di endpoint ai quali verrà trasmesso un messaggio nel caso venga generata un'eccezione di comunicazione durante l'invio all'endpoint primario.  
@@ -73,5 +73,5 @@ Rappresenta una sezione di configurazione per la definizione di un elenco di bac
 </backupLists>
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.Routing.Configuration.BackupEndpointCollection?displayProperty=nameWithType>    
+## <a name="see-also"></a>Vedere anche
+- <xref:System.ServiceModel.Routing.Configuration.BackupEndpointCollection?displayProperty=nameWithType>

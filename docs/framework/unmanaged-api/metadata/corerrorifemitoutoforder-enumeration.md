@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d4e9d03dcf4603f9470f8f2509050eb6f875746a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 084f0bbab130cd4e7334184fe9baa322c0487942
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442640"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616771"
 ---
 # <a name="corerrorifemitoutoforder-enumeration"></a>Enumerazione CorErrorIfEmitOutOfOrder
 Contiene valori di flag che indicano in quali condizioni è necessario generare un messaggio di errore per notificare che i metadati sono stati emessi senza ordine.  
@@ -48,20 +48,20 @@ typedef enum CorErrorIfEmitOutOfOrder {
 |Membro|Descrizione|  
 |------------|-----------------|  
 |`MDErrorOutOfOrderDefault`|Indica il comportamento predefinito, che non genera messaggi di errore.|  
-|`MDErrorOutOfOrderNone`|Indica che il compilatore non deve generare messaggi di errore.|  
-|`MDErrorOutOfOrderAll`|Indica che il compilatore deve generare un messaggio di errore quando un campo, proprietà, evento, un metodo, o parametro è emesso senza ordine.|  
-|`MDMethodOutOfOrder`|Indica che il compilatore deve generare un messaggio di errore quando un metodo è emesso senza ordine.|  
-|`MDFieldOutOfOrder`|Indica che il compilatore deve generare un messaggio di errore quando un campo è emesso senza ordine.|  
-|`MDParamOutOfOrder`|Indica che il compilatore deve generare un messaggio di errore quando un parametro è emesso senza ordine.|  
-|`MDPropertyOutOfOrder`|Indica che il compilatore deve generare un messaggio di errore quando una proprietà è emesso senza ordine.|  
-|`MDEventOutOfOrder`|Indica che il compilatore deve generare un messaggio di errore quando un evento è emesso senza ordine.|  
+|`MDErrorOutOfOrderNone`|Indica che il compilatore non deve generare i messaggi di errore.|  
+|`MDErrorOutOfOrderAll`|Indica che il compilatore deve generare un messaggio di errore quando un campo, proprietà, eventi, metodo o parametro viene generato nell'ordine errato.|  
+|`MDMethodOutOfOrder`|Indica che il compilatore deve generare un messaggio di errore quando un metodo viene generato nell'ordine errato.|  
+|`MDFieldOutOfOrder`|Indica che il compilatore deve generare un messaggio di errore quando un campo viene generato nell'ordine errato.|  
+|`MDParamOutOfOrder`|Indica che il compilatore deve generare un messaggio di errore quando un parametro viene generato nell'ordine errato.|  
+|`MDPropertyOutOfOrder`|Indica che il compilatore deve generare un messaggio di errore quando una proprietà viene emessa fuori sequenza.|  
+|`MDEventOutOfOrder`|Indica che il compilatore deve generare un messaggio di errore quando viene generato un evento non in ordine.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorHdr. H  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Enumerazioni dei metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Vedere anche
+- [Enumerazioni dei metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

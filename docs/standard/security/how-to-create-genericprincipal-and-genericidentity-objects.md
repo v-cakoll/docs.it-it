@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: creare oggetti GenericPrincipal e GenericIdentity'
+title: 'Procedura: Creare oggetti GenericPrincipal e GenericIdentity'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 465694cf-258b-4747-9dae-35b01a5bcdbb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 79b5e05fe9133eb2282eedefa001e64ece5e0f57
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 0567fd12bee19e860373affdf0fdc286d6d5405a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028759"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54608063"
 ---
-# <a name="how-to-create-genericprincipal-and-genericidentity-objects"></a>Procedura: creare oggetti GenericPrincipal e GenericIdentity
+# <a name="how-to-create-genericprincipal-and-genericidentity-objects"></a>Procedura: Creare oggetti GenericPrincipal e GenericIdentity
 È possibile usare la <xref:System.Security.Principal.GenericIdentity> classe in combinazione con il <xref:System.Security.Principal.GenericPrincipal> classe per creare uno schema di autorizzazione che esista indipendentemente da un dominio di Windows.  
   
 ### <a name="to-create-a-genericprincipal-object"></a>Per creare un oggetto GenericPrincipal  
@@ -142,8 +142,8 @@ Is this a Manager? True
   
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.Security.Principal.GenericIdentity>  
-- <xref:System.Security.Principal.GenericPrincipal>  
-- <xref:System.Security.Permissions.PrincipalPermission>  
-- [Sostituzione di oggetti Principal](../../../docs/standard/security/replacing-a-principal-object.md)  
+- <xref:System.Security.Principal.GenericIdentity>
+- <xref:System.Security.Principal.GenericPrincipal>
+- <xref:System.Security.Permissions.PrincipalPermission>
+- [Sostituzione di oggetti Principal](../../../docs/standard/security/replacing-a-principal-object.md)
 - [Oggetti Principal e Identity](../../../docs/standard/security/principal-and-identity-objects.md)

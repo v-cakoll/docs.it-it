@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0a38c35f0acd47c9183c043e1c436413a309b138
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 925edf6226ed955d097821a42a79425d076c208b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426075"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54621278"
 ---
 # <a name="inotifysink2onsynccallout-method"></a>Metodo INotifySink2::OnSyncCallOut
 Viene richiamato quando una chiamata non è più valido.  
@@ -40,21 +40,21 @@ HRESULT OnSyncCallOut
   
 #### <a name="parameters"></a>Parametri  
  `in_CallID`  
- [in] ID di chiamata che non è più valido. Vedere [Struttura CALL_ID](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).  
+ [in] ID della chiamata che non è più valido. Visualizzare [Struttura CALL_ID](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).  
   
  `out_ppBuffer`  
- [out] Buffer di chiamata.  
+ [out] Chiamare il buffer.  
   
  `out_pBufferSize`  
- [out] Dimensione del buffer di chiamata, in byte.  
+ [out] Dimensioni del buffer di chiamate, espressa in byte.  
   
 ## <a name="return-value"></a>Valore restituito  
  S_OK se il metodo ha esito positivo.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** ProtocolNotify2. idl  
+ **Intestazione:** ProtocolNotify2.idl  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)  
- [Interfaccia INotifySource2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)  
- [Interfaccia INotifyConnection2](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
+- [Interfaccia INotifySource2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
+- [Interfaccia INotifyConnection2](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)

@@ -9,15 +9,15 @@ helpviewer_keywords:
 - While statement [Visual Basic]
 - While...End While statements [Visual Basic]
 ms.assetid: b931d1ce-e8ed-44d8-a13d-92a4f5458a1e
-ms.openlocfilehash: 9f46a6ec65faef4448bdd25e30a6cc0c605cd0f2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 72263ddb7930373ab2a4843ea08974cb08d1b42f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604731"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617326"
 ---
 # <a name="whileend-while-statement-visual-basic"></a>Istruzione While...End While (Visual Basic)
-Esegue una serie di istruzioni purché una determinata condizione è `True`.  
+Esegue una serie di istruzioni purché una determinata condizione sia `True`.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,44 +35,44 @@ End While
   
 |Termine|Definizione|  
 |---|---|  
-|`condition`|Obbligatorio. `Boolean` Espressione. Se `condition` è `Nothing`, Visual Basic lo considera come `False`.|  
+|`condition`|Obbligatorio. `Boolean` espressione. Se `condition` viene `Nothing`, Visual Basic lo considera come `False`.|  
 |`statements`|Facoltativo. Uno o più istruzioni che seguono `While`, che ogni fase di esecuzione `condition` è `True`.|  
 |`Continue While`|Facoltativo. Trasferisce il controllo all'iterazione successiva del `While` blocco.|  
 |`Exit While`|Facoltativo. Trasferisce il controllo fuori il `While` blocco.|  
 |`End While`|Obbligatorio. Termina la definizione del blocco `While`.|  
   
 ## <a name="remarks"></a>Note  
- Utilizzare un `While...End While` struttura quando si desidera ripetere un set di istruzioni un numero indefinito di volte, fino a quando una condizione non `True`. Se si desidera maggiore flessibilità su dove la condizione di test o per quale risultato si esegue il test, potrebbe preferire il [si... Istruzione di ciclo](../../../visual-basic/language-reference/statements/do-loop-statement.md). Se si desidera ripetere le istruzioni di un numero di volte, il [per... Istruzione successiva](../../../visual-basic/language-reference/statements/for-next-statement.md) è in genere una scelta migliore.  
+ Usare un `While...End While` struttura quando si desidera ripetere un set di istruzioni un numero indefinito di volte in cui, purché una condizione resta `True`. Se si desidera maggiore flessibilità su dove la condizione di test o per quale risultato si esegue il test, si potrebbe preferire il [si... Istruzione di ciclo](../../../visual-basic/language-reference/statements/do-loop-statement.md). Se si desidera ripetere un determinato numero di volte, le istruzioni di [per... Istruzione Next](../../../visual-basic/language-reference/statements/for-next-statement.md) è in genere una scelta migliore.  
   
 > [!NOTE]
->  Il `While` (parola chiave) viene usato anche nel [si... Istruzione di ciclo](../../../visual-basic/language-reference/statements/do-loop-statement.md), [clausola Skip While](../../../visual-basic/language-reference/queries/skip-while-clause.md) e [clausola Take While](../../../visual-basic/language-reference/queries/take-while-clause.md).  
+>  Il `While` parola chiave viene usata anche nel [è... Istruzione di ciclo](../../../visual-basic/language-reference/statements/do-loop-statement.md), il [clausola Skip While](../../../visual-basic/language-reference/queries/skip-while-clause.md) e il [clausola Take While](../../../visual-basic/language-reference/queries/take-while-clause.md).  
   
- Se `condition` è `True`tutti del `statements` esecuzione fino a quando il `End While` viene rilevata un'istruzione. Il controllo ritorna quindi per il `While` istruzione e `condition` viene nuovamente verificata. Se `condition` è ancora `True`, il processo viene ripetuto. Se dispone di `False`, il controllo passa all'istruzione che segue il `End While` istruzione.  
+ Se `condition` è `True`, tutti i del `statements` esecuzione finché il `End While` viene rilevata l'istruzione. Il controllo ritorna quindi per la `While` istruzione e `condition` viene nuovamente verificata. Se `condition` resta `True`, il processo viene ripetuto. In caso affermativo `False`, il controllo passa all'istruzione che segue il `End While` istruzione.  
   
- Il `While` sempre istruzione verifica la condizione prima di avviare il ciclo. Ciclo continua finché la condizione rimane `True`. Se `condition` è `False` quando si inizia il ciclo, non eseguire ancora una volta.  
+ Il `While` sempre istruzione verifica la condizione prima che venga avviato il ciclo. Esecuzione del ciclo continua finché la condizione rimane `True`. Se `condition` è `False` quando si immissione prima di tutto il ciclo, non viene eseguito neppure una volta.  
   
- Il `condition` in genere i risultati di un confronto di due valori, ma possono essere qualsiasi espressione che restituisce un [tipo di dati Boolean](../../../visual-basic/language-reference/data-types/boolean-data-type.md) valore (`True` o `False`). Questa espressione può includere un valore di un altro tipo di dati, ad esempio un tipo numerico, che è stato convertito in `Boolean`.  
+ Il `condition` generalmente i risultati da un confronto di due valori, ma possono essere qualsiasi espressione che restituisce un [tipo di dati booleano](../../../visual-basic/language-reference/data-types/boolean-data-type.md) valore (`True` o `False`). Questa espressione può includere un valore di un altro tipo di dati, ad esempio un tipo numerico, che è stato convertito in `Boolean`.  
   
- È possibile annidare `While` inserendo un ciclo all'interno di altra. È inoltre possibile annidare tipi diversi di strutture di controllo all'interno di un altro. Per ulteriori informazioni, vedere [strutture di controllo nidificate](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).  
+ È possibile annidare `While` inserendo un ciclo all'interno di altra. È inoltre possibile annidare tipi diversi di strutture di controllo all'interno di loro. Per altre informazioni, vedere [strutture di controllo annidate](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).  
   
 ## <a name="exit-while"></a>Uscita durante  
- Il [uscire mentre](../../../visual-basic/language-reference/statements/exit-statement.md) istruzione può fornire un altro modo per uscire da un `While` ciclo. `Exit While` Trasferisce immediatamente il controllo all'istruzione che segue il `End While` istruzione.  
+ Il [uscire mentre](../../../visual-basic/language-reference/statements/exit-statement.md) istruzione può fornire un altro modo per chiudere un `While` ciclo. `Exit While` Trasferisce il controllo all'istruzione che segue immediatamente il `End While` istruzione.  
   
- In genere si usa `Exit While` dopo la valutazione di alcune condizioni (ad esempio, in un `If...Then...Else` struttura). È possibile uscire da un ciclo se si rileva una condizione che rende Impossibile continuare la ripetizione, ad esempio una richiesta di terminazione o di un valore errato o non necessarie. È possibile utilizzare `Exit While` quando si testa una condizione che potrebbe causare un *ciclo infinito*, ovvero un ciclo che è stato possibile eseguire un numero estremamente elevato o persino infinito di volte. È quindi possibile utilizzare `Exit While` per interrompere il ciclo.  
+ In genere si usa `Exit While` dopo che viene valutata una condizione (ad esempio, in un `If...Then...Else` struttura). È possibile uscire da un ciclo se si rileva una condizione che rende inutili o impossibili da continuare a eseguire iterazioni, ad esempio un valore errato o una richiesta di terminazione. È possibile usare `Exit While` quando si testa una condizione che potrebbe causare un' *ciclo infinito*, ovvero un ciclo che è stato possibile eseguire un numero estremamente grande o infinito di volte. È quindi possibile usare `Exit While` per interrompere il ciclo.  
   
- È possibile inserire un numero qualsiasi di `Exit While` istruzioni in un punto qualsiasi di `While` ciclo.  
+ È possibile inserire un numero qualsiasi di `Exit While` istruzioni in qualsiasi punto nel `While` ciclo.  
   
- Se utilizzato all'interno di cicli `While` cicli, `Exit While` trasferisce il controllo all'esterno del ciclo più interno e del successivo livello superiore di annidamento.  
+ Quando usata all'interno di cicli `While` cicli, `Exit While` trasferisce il controllo all'esterno del ciclo più interno e nel livello superiore successivo di annidamento.  
   
- Il `Continue While` istruzione trasferisce immediatamente il controllo all'iterazione successiva del ciclo. Per ulteriori informazioni, vedere [istruzione Continue](../../../visual-basic/language-reference/statements/continue-statement.md).  
+ Il `Continue While` istruzione immediatamente trasferisce il controllo all'iterazione successiva del ciclo. Per altre informazioni, vedere [istruzione Continue](../../../visual-basic/language-reference/statements/continue-statement.md).  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente, le istruzioni nel ciclo di continuano l'esecuzione fino a quando il `index` variabile è maggiore di 10.  
+ Nell'esempio seguente, le istruzioni nel ciclo continuano fino a incontrare il `index` variabile è maggiore di 10.  
   
  [!code-vb[VbVbalrStatements#171](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/while-end-while-statement_1.vb)]  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato l'utilizzo del `Continue While` e `Exit While` istruzioni.  
+ Nell'esempio seguente viene illustrato l'utilizzo dei `Continue While` e `Exit While` istruzioni.  
   
  [!code-vb[VbVbalrStatements#172](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/while-end-while-statement_2.vb)]  
   
@@ -81,11 +81,11 @@ End While
   
  [!code-vb[VbVbalrStatements#173](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/while-end-while-statement_3.vb)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Strutture di ciclo](../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)  
- [Istruzione Do...Loop](../../../visual-basic/language-reference/statements/do-loop-statement.md)  
- [Istruzione For...Next](../../../visual-basic/language-reference/statements/for-next-statement.md)  
- [Tipo di dati Boolean](../../../visual-basic/language-reference/data-types/boolean-data-type.md)  
- [Strutture di controllo annidate](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)  
- [Istruzione Exit](../../../visual-basic/language-reference/statements/exit-statement.md)  
- [Istruzione Continue](../../../visual-basic/language-reference/statements/continue-statement.md)
+## <a name="see-also"></a>Vedere anche
+- [Strutture di ciclo](../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
+- [Istruzione Do...Loop](../../../visual-basic/language-reference/statements/do-loop-statement.md)
+- [Istruzione For...Next](../../../visual-basic/language-reference/statements/for-next-statement.md)
+- [Tipo di dati Boolean](../../../visual-basic/language-reference/data-types/boolean-data-type.md)
+- [Strutture di controllo annidate](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)
+- [Istruzione Exit](../../../visual-basic/language-reference/statements/exit-statement.md)
+- [Istruzione Continue](../../../visual-basic/language-reference/statements/continue-statement.md)

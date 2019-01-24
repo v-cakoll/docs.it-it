@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: stampare un Windows Form'
+title: 'Procedura: Stampare un Windows Form'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,34 +10,34 @@ helpviewer_keywords:
 - printing a form
 - printing [Windows Forms], printing a form
 ms.assetid: c8dff5f8-f56a-4c07-ae31-64643b31f8fc
-ms.openlocfilehash: 42940654a0754ac3616ca7983af07d20607f480f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5e672f40797a90111daefed0be74c941d4cc37b8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33522269"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54628136"
 ---
-# <a name="how-to-print-a-windows-form"></a>Procedura: stampare un Windows Form
-Come parte del processo di sviluppo, in genere verrà da stampare una copia di Windows Form. Esempio di codice seguente viene illustrato come stampare una copia del modulo corrente utilizzando il <xref:System.Drawing.Graphics.CopyFromScreen%2A> metodo.  
+# <a name="how-to-print-a-windows-form"></a>Procedura: Stampare un Windows Form
+Come parte del processo di sviluppo, è in genere opportuno stampare una copia di Windows Form. Esempio di codice seguente viene illustrato come stampare una copia del modulo corrente usando il <xref:System.Drawing.Graphics.CopyFromScreen%2A> (metodo).  
   
 ## <a name="example"></a>Esempio  
  [!code-csharp[System.Drawing.Graphics.CopyFromScreen#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Graphics.CopyFromScreen/CS/Form1.cs#1)]
  [!code-vb[System.Drawing.Graphics.CopyFromScreen#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Graphics.CopyFromScreen/VB/Form1.vb#1)]  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
- Questo è un esempio di codice completo che contiene un `Main` metodo.  
+ Questo è un esempio di codice completo che contiene un `Main` (metodo).  
   
 ## <a name="robust-programming"></a>Programmazione efficiente  
  Le seguenti condizioni possono generare un'eccezione:  
   
--   Non si dispone dell'autorizzazione per accedere alla stampante.  
+-   Non hai le autorizzazioni per accedere alla stampante.  
   
 -   Non è installata alcuna stampante.  
   
 ## <a name="net-framework-security"></a>Sicurezza di .NET Framework  
- Per eseguire questo esempio di codice, è necessario disporre dell'autorizzazione per accedere alla stampante che è utilizzare con il computer.  
+ Per eseguire questo esempio di codice, è necessario disporre dell'autorizzazione per accedere alla stampante utilizzata con il computer.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Drawing.Printing.PrintDocument>  
- [Procedura: Eseguire il rendering delle immagini con GDI+](../../../../docs/framework/winforms/advanced/how-to-render-images-with-gdi.md)  
- [Procedura: stampare grafica in Windows Forms](../../../../docs/framework/winforms/advanced/how-to-print-graphics-in-windows-forms.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Drawing.Printing.PrintDocument>
+- [Procedura: Eseguire il rendering delle immagini con GDI+](../../../../docs/framework/winforms/advanced/how-to-render-images-with-gdi.md)
+- [Procedura: Stampare grafica in Windows Form](../../../../docs/framework/winforms/advanced/how-to-print-graphics-in-windows-forms.md)

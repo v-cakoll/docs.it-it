@@ -2,12 +2,12 @@
 title: Stringhe di connessione in ADO.NET
 ms.date: 10/10/2018
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490
-ms.openlocfilehash: 078fdab257115296f9ff00330265cb14ff8674c8
-ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
+ms.openlocfilehash: c765eee661858499240344cb5059fe1fa9a58ab5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50409457"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54627564"
 ---
 # <a name="connection-strings-in-adonet"></a>Stringhe di connessione in ADO.NET
 
@@ -57,6 +57,6 @@ Le stringhe di connessione costruite manualmente in fase di esecuzione dall'inpu
  [Protezione delle informazioni di connessione](../../../../docs/framework/data/adonet/protecting-connection-information.md)  
  Vengono illustrate tecniche per proteggere le informazioni usate per la connessione a un'origine dati.
   
-## <a name="see-also"></a>Vedere anche  
- [Connessione a un'origine dati](/cpp/data/odbc/connecting-to-a-data-source)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vedere anche
+- [Connessione a un'origine dati](/cpp/data/odbc/connecting-to-a-data-source)
+- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

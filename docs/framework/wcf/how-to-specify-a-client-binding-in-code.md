@@ -1,25 +1,25 @@
 ---
-title: "Procedura: specificare un'associazione al client in codice"
+title: "Procedura: Specificare un'associazione al Client nel codice"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6bee5da4-adf7-42e6-8f78-63a9e5c6dbad
-ms.openlocfilehash: 3a05c60b6e68f87c31e74774bf0b50e535477b56
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c04febff886dda57ed86d8410c952926d192026b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33498371"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54632842"
 ---
-# <a name="how-to-specify-a-client-binding-in-code"></a>Procedura: specificare un'associazione al client in codice
+# <a name="how-to-specify-a-client-binding-in-code"></a>Procedura: Specificare un'associazione al Client nel codice
 Questo esempio illustra un client creato in modo da utilizzare un servizio di calcolatrice. Inoltre, l'associazione a tale client viene specificata in modo imperativo in codice. Il client accede al servizio `CalculatorService` che implementa l'interfaccia `ICalculator`. Sia il servizio sia il client utilizzano la classe <xref:System.ServiceModel.BasicHttpBinding>.  
   
- Questa procedura presuppone che il servizio di calcolatrice sia in esecuzione. Per informazioni sulla compilazione del servizio, vedere [procedura: specificare un'associazione al servizio nella configurazione](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md). Viene inoltre utilizzata la [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)fornito da Windows Communication Foundation (WCF) per generare automaticamente i componenti client. Lo strumento genera il codice client di accesso al servizio.  
+ Questa procedura presuppone che il servizio di calcolatrice sia in esecuzione. Per informazioni sulla creazione del servizio, vedere [come: Specificare un'associazione al servizio nella configurazione](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md). Viene inoltre utilizzata la [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)Windows Communication Foundation (WCF) offre per generare automaticamente i componenti client. Lo strumento genera il codice client di accesso al servizio.  
   
  Il client viene compilato in due parti. Lo strumento Svcutil.exe genera la classe `ClientCalculator` che implementa l'interfaccia `ICalculator`. Questa applicazione client viene quindi costruita creando un'istanza della classe `ClientCalculator` e specificando in codice l'associazione e l'indirizzo del servizio.  
   
- Per la copia di origine di questo esempio, vedere il [BasicBinding](../../../docs/framework/wcf/samples/basicbinding.md) esempio.  
+ Per la copia di origine di questo esempio, vedere la [BasicBinding](../../../docs/framework/wcf/samples/basicbinding.md) esempio.  
   
 ### <a name="to-specify-a-custom-binding-in-code"></a>Per specificare in codice un'associazione personalizzata  
   
@@ -46,5 +46,5 @@ Questo esempio illustra un client creato in modo da utilizzare un servizio di ca
   
 5.  Compilare ed eseguire il client.  
   
-## <a name="see-also"></a>Vedere anche  
- [Uso di associazioni per configurare servizi e client](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+## <a name="see-also"></a>Vedere anche
+- [Uso di associazioni per configurare servizi e client](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
