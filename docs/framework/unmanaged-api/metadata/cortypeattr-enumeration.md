@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0f71e59eb13321517de61315d3ba06b96c5458f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: af90055c0a51e61d4032e45d6fa4a4914ddd045f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449273"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667937"
 ---
 # <a name="cortypeattr-enumeration"></a>Enumerazione CorTypeAttr
 Contiene valori che indicano i metadati del tipo.  
@@ -79,46 +79,46 @@ typedef enum CorTypeAttr {
   
 |Membro|Descrizione|  
 |------------|-----------------|  
-|`tdVisibilityMask`|Usato per informazioni sulla visibilità del tipo.|  
+|`tdVisibilityMask`|Utilizzato per informazioni sul tipo di visibilità.|  
 |`tdNotPublic`|Specifica che il tipo non è in ambito pubblico.|  
 |`tdPublic`|Specifica che il tipo sia in ambito pubblico.|  
 |`tdNestedPublic`|Specifica che il tipo è annidato e con visibilità pubblica.|  
 |`tdNestedPrivate`|Specifica che il tipo è annidato e con visibilità privata.|  
-|`tdNestedFamily`|Specifica che il tipo è annidato e con visibilità famiglia.|  
+|`tdNestedFamily`|Specifica che il tipo è annidato e con visibilità della famiglia.|  
 |`tdNestedAssembly`|Specifica che il tipo è annidato e con visibilità dell'assembly.|  
-|`tdNestedFamANDAssem`|Specifica che il tipo è annidato e con visibilità famiglia e assembly.|  
-|`tdNestedFamORAssem`|Specifica che il tipo è annidato e con visibilità famiglia o assembly.|  
-|`tdLayoutMask`|Ottiene informazioni sul layout per il tipo.|  
-|`tdAutoLayout`|Specifica che i campi di questo tipo sono disposti automaticamente.|  
-|`tdSequentialLayout`|Specifica che i campi di questo tipo sono disposti in sequenza.|  
+|`tdNestedFamANDAssem`|Specifica che il tipo è annidato e con visibilità dell'assembly e della famiglia.|  
+|`tdNestedFamORAssem`|Specifica che il tipo è annidato e con visibilità dell'assembly o della famiglia.|  
+|`tdLayoutMask`|Ottiene le informazioni sul layout per il tipo.|  
+|`tdAutoLayout`|Specifica che i campi di questo tipo vengono disposti automaticamente.|  
+|`tdSequentialLayout`|Specifica che i campi di questo tipo vengono disposti in ordine sequenziale.|  
 |`tdExplicitLayout`|Specifica che il layout campo viene fornito in modo esplicito.|  
-|`tdClassSemanticsMask`|Ottiene le informazioni semantiche sul tipo.|  
+|`tdClassSemanticsMask`|Ottiene informazioni semantiche sul tipo.|  
 |`tdClass`|Specifica che il tipo è una classe.|  
 |`tdInterface`|Specifica che il tipo è un'interfaccia.|  
 |`tdAbstract`|Specifica che il tipo è astratto.|  
 |`tdSealed`|Specifica che il tipo non può essere estesa.|  
 |`tdSpecialName`|Specifica che il nome della classe è speciale. Viene descritto il relativo nome come.|  
-|`tdImport`|Specifica che il tipo è stato importato.|  
+|`tdImport`|Specifica che il tipo viene importato.|  
 |`tdSerializable`|Specifica che il tipo è serializzabile.|  
 |`tdWindowsRuntime`|Specifica che questo tipo è un [!INCLUDE[wrt](../../../../includes/wrt-md.md)] tipo.|  
-|`tdStringFormatMask`|Ottiene informazioni sulla codifica e formattate come stringhe.|  
-|`tdAnsiClass`|Specifica che il tipo interpreta LPTSTR come ANSI.|  
-|`tdUnicodeClass`|Specifica che il tipo interpreta LPTSTR come Unicode.|  
-|`tdAutoClass`|Specifica che il tipo interpreta LPTSTR automaticamente.|  
-|`tdCustomFormatClass`|Specifica che il tipo è una codifica non standard, come specificato da `CustomFormatMask`.|  
-|`tdCustomFormatMask`|Utilizzare questa maschera per ottenere le informazioni di codifica non standard per l'interoperabilità nativa. Il significato dei valori di questi due bit non è specificato.|  
-|`tdBeforeFieldInit`|Specifica che il tipo deve essere inizializzato prima al primo tentativo di accedere a un campo statico.|  
-|`tdForwarder`|Specifica che il tipo è esportato e un server d'inoltro.|  
+|`tdStringFormatMask`|Ottiene informazioni su come le stringhe vengono codificate e formattate.|  
+|`tdAnsiClass`|Specifica che questo tipo interpreta LPTSTR come ANSI.|  
+|`tdUnicodeClass`|Specifica che questo tipo interpreta LPTSTR come Unicode.|  
+|`tdAutoClass`|Specifica che questo tipo interpreta LPTSTR automaticamente.|  
+|`tdCustomFormatClass`|Specifica che il tipo ha una codifica non standard, come specificato da `CustomFormatMask`.|  
+|`tdCustomFormatMask`|Usare questa maschera per ottenere informazioni di codifica non standard per l'interoperabilità nativa. Il significato dei valori di questi due bit non è specificato.|  
+|`tdBeforeFieldInit`|Specifica che il tipo deve essere inizializzato prima del primo tentativo di accedere a un campo statico.|  
+|`tdForwarder`|Specifica che il tipo viene esportato e un server d'inoltro.|  
 |`tdReservedMask`|Questo flag e i flag seguenti vengono utilizzati internamente da common language runtime.|  
 |`tdRTSpecialName`|Specifica che common language runtime deve verificare la codifica dei nomi.|  
-|`tdHasSecurity`|Specifica che il tipo dispone di protezione associata.|  
+|`tdHasSecurity`|Specifica che il tipo è associata una sicurezza.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorHdr. H  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Enumerazioni dei metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Vedere anche
+- [Enumerazioni dei metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

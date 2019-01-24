@@ -5,12 +5,12 @@ helpviewer_keywords:
 - printing [WPF]
 - print system management [WPF]
 ms.assetid: 5f3d391a-4afd-49ee-ad99-ceb737c0c8a8
-ms.openlocfilehash: e9b54cd7e59a5a410bfc5c0fb1ba4973c5e482af
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 0bf581155bb32951a4614818edb50837f608939e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837115"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726442"
 ---
 # <a name="printing-how-to-topics"></a>Procedure relative alla stampa
 Gli argomenti in questa sezione illustrano come usare la stampa e le funzionalità di gestione del sistema di stampa è incluso con [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] , nonché il nuovo [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] percorso di stampa.  
@@ -31,7 +31,7 @@ Gli argomenti in questa sezione illustrano come usare la stampa e le funzionalit
  [Enumerare un sottoinsieme di code di stampa](../../../../docs/framework/wpf/advanced/how-to-enumerate-a-subset-of-print-queues.md)  
  Istruzioni per la generazione di un elenco delle stampanti con determinate caratteristiche.  
   
- [NOTINBUILD: Procedura: estendere lo Schema di stampa e creare nuove classi di sistema di stampa](https://msdn.microsoft.com/library/a3600218-1ea5-478a-9853-6560464f2885)  
+ [NOTINBUILD: Procedura: Estendere lo Schema di stampa e creare nuove classi di sistema di stampa](https://msdn.microsoft.com/library/a3600218-1ea5-478a-9853-6560464f2885)  
  Analisi approfondita del codice gestito come i programmatori possono estendere lo Schema di stampa a dispositivi di stampa speciali o le stampanti con funzionalità nuove o non comuni.  
   
  [Ottenere le proprietà dell'oggetto del sistema di stampa senza reflection](../../../../docs/framework/wpf/advanced/how-to-get-print-system-object-properties-without-reflection.md)  
@@ -46,10 +46,10 @@ Gli argomenti in questa sezione illustrano come usare la stampa e le funzionalit
  [Convalidare e unire PrintTicket](../../../../docs/framework/wpf/advanced/how-to-validate-and-merge-printtickets.md)  
  Istruzioni per la verifica che un ticket di stampa sia valido e che non richieda alcuna operazione che non è supportata dalla stampante.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Printing>  
- <xref:System.Printing.IndexedProperties>  
- <xref:System.Printing.Interop>  
- [Panoramica della stampa](../../../../docs/framework/wpf/advanced/printing-overview.md)  
- [Documenti in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [XPS](https://www.microsoft.com/xps)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Printing>
+- <xref:System.Printing.IndexedProperties>
+- <xref:System.Printing.Interop>
+- [Panoramica della stampa](../../../../docs/framework/wpf/advanced/printing-overview.md)
+- [Documenti in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [XPS](https://www.microsoft.com/xps)

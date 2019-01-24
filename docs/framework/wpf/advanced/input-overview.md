@@ -24,12 +24,12 @@ helpviewer_keywords:
 - focus [WPF]
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
-ms.openlocfilehash: 4492b92268828943d222fbf624781bc0b9ce7901
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 481d19ca8a7222f26b8d22864c790031c14ffa8c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842788"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592588"
 ---
 # <a name="input-overview"></a>Cenni preliminari sull'input
 <a name="introduction"></a> Il [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornisce un potente sottosistema [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] per ottenere input da un'ampia gamma di dispositivi, tra cui il mouse, tastiera, tocco e stilo. Questo argomento descrive i servizi forniti da [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] e illustra l'architettura dei sistemi di input.
@@ -243,7 +243,7 @@ ms.locfileid: "48842788"
 
  Quando gli oggetti rispondono alle manipolazioni, si può fare in modo che sembrino avere un'inerzia. In questo modo, gli oggetti possono simulare il mondo fisico. Ad esempio se si spinge un libro su un tavolo con sufficiente forza, il libro continuerà a muoversi anche dopo che lo si lascia. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] consente di simulare questo comportamento generando eventi di manipolazione dopo che le dita dell'utente rilasciano l'oggetto.
 
- Per informazioni su come creare un'applicazione che consente all'utente di spostare, ridimensionare e ruotare un oggetto, vedere [Procedura dettagliata: creazione della prima applicazione a tocco](../../../../docs/framework/wpf/advanced/walkthrough-creating-your-first-touch-application.md).
+ Per informazioni su come creare un'applicazione che consente all'utente di spostare, ridimensionare e ruotare un oggetto, vedere [procedura dettagliata: Creazione della prima applicazione Touch](../../../../docs/framework/wpf/advanced/walkthrough-creating-your-first-touch-application.md).
 
  Il <xref:System.Windows.UIElement> definisce gli eventi di manipolazione seguenti.
 
@@ -391,4 +391,8 @@ ms.locfileid: "48842788"
  Sono disponibili risorse aggiuntive che illustrano più dettagliatamente gli elementi del framework [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] e il routing degli eventi. Per altre informazioni generali, vedere [Cenni preliminari sull'esecuzione di comandi](../../../../docs/framework/wpf/advanced/commanding-overview.md), [Cenni preliminari sullo stato attivo](../../../../docs/framework/wpf/advanced/focus-overview.md), [Cenni preliminari sugli elementi di base](../../../../docs/framework/wpf/advanced/base-elements-overview.md), [Strutture ad albero in WPF](../../../../docs/framework/wpf/advanced/trees-in-wpf.md) e [Cenni preliminari sugli eventi indirizzati](../../../../docs/framework/wpf/advanced/routed-events-overview.md).
 
 ## <a name="see-also"></a>Vedere anche
- [Panoramica sullo stato attivo](../../../../docs/framework/wpf/advanced/focus-overview.md) [cenni Overview](../../../../docs/framework/wpf/advanced/commanding-overview.md) [panoramica degli eventi indirizzati](../../../../docs/framework/wpf/advanced/routed-events-overview.md) [Cenni preliminari sugli elementi di Base](../../../../docs/framework/wpf/advanced/base-elements-overview.md) [proprietà](../../../../docs/framework/wpf/advanced/properties-wpf.md)
+- [Panoramica sullo stato attivo](../../../../docs/framework/wpf/advanced/focus-overview.md)
+- [Panoramica sull'esecuzione di comandi](../../../../docs/framework/wpf/advanced/commanding-overview.md)
+- [Cenni preliminari sugli eventi indirizzati](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
+- [Cenni preliminari sugli elementi di base](../../../../docs/framework/wpf/advanced/base-elements-overview.md)
+- [Proprietà](../../../../docs/framework/wpf/advanced/properties-wpf.md)

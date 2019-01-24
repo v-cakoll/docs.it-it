@@ -16,28 +16,28 @@ helpviewer_keywords:
 ms.assetid: a33fd5f9-2de9-4653-a4f0-d9df25082c4d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 29a3254bb5ccfe422a1c2d7d156975c0887d9273
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2f55e282309d21b78c0aad9e7ada687f23628379
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33390663"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54725675"
 ---
 # <a name="link-demands"></a>Richieste di collegamento
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
  Una richiesta di collegamento determina l'esecuzione di un controllo di sicurezza in fase di compilazione JIT, durante il quale viene esaminato solo l'assembly chiamante immediato del codice. Il collegamento si verifica quando il codice è associato a un riferimento a un tipo, quale un riferimento a un puntatore a funzione o una chiamata al metodo. Se l'assembly chiamante non dispone delle autorizzazioni sufficienti per collegarsi al codice, il collegamento non viene autorizzato e in fase di caricamento ed esecuzione del codice viene generata un'eccezione di runtime. Le richieste di collegamento possono essere sottoposte a override nelle classi che ereditano dal codice.  
   
- Mediante questo tipo di richiesta non viene eseguita un'analisi completa dello stack e permane il rischio che il codice sia soggetto ad attacchi subdoli. Ad esempio, se un metodo nell'assembly A è protetto da una richiesta di collegamento, un chiamante diretto nell'assembly B viene valutato in base alle autorizzazioni dell'Assembly B.  Tuttavia, la richiesta di collegamento non restituirà un metodo nell'assembly C se indirettamente chiama il metodo nell'assembly utilizzando il metodo nell'assembly B. La richiesta di collegamento specifica che solo le autorizzazioni di indirizzare i chiamanti nell'assembly chiamante immediato devono disporre di collegamento al codice. Non vengono specificate le autorizzazioni necessarie a tutti i chiamanti per l'esecuzione del codice.  
+ Mediante questo tipo di richiesta non viene eseguita un'analisi completa dello stack e permane il rischio che il codice sia soggetto ad attacchi subdoli. Ad esempio, se un metodo nell'assembly A è protetto da una richiesta di collegamento, un chiamante diretto nell'assembly B viene valutato in base alle autorizzazioni dell'Assembly B.  Tuttavia, la richiesta di collegamento non restituirà un metodo nell'assembly C se il metodo chiamato indirettamente nell'assembly usando il metodo nell'assembly B. La richiesta di collegamento specifica che solo le autorizzazioni di indirizzare i chiamanti nell'assembly chiamante immediato devono avere il collegamento al codice. Non vengono specificate le autorizzazioni necessarie a tutti i chiamanti per l'esecuzione del codice.  
   
  I modificatori di percorso chiamate nello stack <xref:System.Security.CodeAccessPermission.Assert%2A>, <xref:System.Security.CodeAccessPermission.Deny%2A> e <xref:System.Security.CodeAccessPermission.PermitOnly%2A> non influiscono sulla valutazione delle richieste di collegamento.  poiché queste non eseguono una verifica del percorso chiamate nello stack.  
   
- Se un metodo protetto da una richiesta di collegamento si accede tramite [Reflection](../../../docs/framework/reflection-and-codedom/reflection.md), quindi una richiesta di collegamento viene controllato il chiamante immediato del codice tramite reflection. Tale comportamento si verifica sia per l'individuazione che per la chiamata di metodi realizzate mediante reflection. Si supponga ad esempio di codice utilizza la reflection per restituire un <xref:System.Reflection.MethodInfo> dell'oggetto che rappresenta un metodo protetto da una richiesta di collegamento e viene quindi passato **MethodInfo** oggetto ad altro codice che utilizza l'oggetto per richiamare il metodo originale. In questo caso il controllo della richiesta di collegamento viene eseguito due volte: una volta per il codice che restituisce il **MethodInfo** oggetto e una volta per il codice che lo richiama.  
+ Se un metodo protetto da una richiesta di collegamento si accede attraverso [Reflection](../../../docs/framework/reflection-and-codedom/reflection.md), quindi una richiesta di collegamento viene controllato il chiamante immediato del codice tramite reflection. Tale comportamento si verifica sia per l'individuazione che per la chiamata di metodi realizzate mediante reflection. Si supponga ad esempio di codice Usa la reflection per restituire un <xref:System.Reflection.MethodInfo> dell'oggetto che rappresenta un metodo protetto da una richiesta di collegamento e quindi passa tale **MethodInfo** oggetto ad altro codice che utilizza l'oggetto per richiamare il metodo originale. In questo caso il controllo della richiesta di collegamento viene eseguito due volte: una volta per il codice che restituisce il **MethodInfo** oggetto e una volta per il codice che lo richiama.  
   
 > [!NOTE]
 >  Una richiesta di collegamento effettuata su un costruttore di classe statico non consente di proteggere il costruttore, poiché i costruttori statici vengono chiamati dal sistema, all'esterno del percorso di esecuzione del codice dell'applicazione. Quando una richiesta di collegamento viene applicata a un'intera classe, tale richiesta non consente quindi di proteggere l'accesso a un costruttore statico, anche se consente di proteggere il resto della classe.  
   
- Il frammento di codice seguente specifica in modo dichiarativo che a ogni codice collegato al metodo `ReadData` deve essere assegnata l'autorizzazione `CustomPermission`. Questa autorizzazione è un'autorizzazione personalizzata ipotetica e non esiste in .NET Framework. La richiesta viene eseguita passando un **SecurityAction. LinkDemand** flag per il `CustomPermissionAttribute`.  
+ Il frammento di codice seguente specifica in modo dichiarativo che a ogni codice collegato al metodo `ReadData` deve essere assegnata l'autorizzazione `CustomPermission`. Questa autorizzazione è un'autorizzazione personalizzata ipotetica e non esiste in .NET Framework. La richiesta viene effettuata mediante il passaggio di un **SecurityAction. LinkDemand** flag per il `CustomPermissionAttribute`.  
   
 ```vb  
 <CustomPermissionAttribute(SecurityAction.LinkDemand)> _  
@@ -54,6 +54,6 @@ public static string ReadData()
 }  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Attributi](../../../docs/standard/attributes/index.md)  
- [Sicurezza dall'accesso di codice](../../../docs/framework/misc/code-access-security.md)
+## <a name="see-also"></a>Vedere anche
+- [Attributi](../../../docs/standard/attributes/index.md)
+- [Sicurezza dall'accesso di codice](../../../docs/framework/misc/code-access-security.md)

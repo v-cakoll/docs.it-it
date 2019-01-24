@@ -1,16 +1,16 @@
 ---
-title: 'Procedura: partizionamento dei dati del servizio'
+title: 'Procedura: Partizionamento dei dati del servizio'
 ms.date: 03/30/2017
 ms.assetid: 1ccff72e-d76b-4e36-93a2-e51f7b32dc83
-ms.openlocfilehash: 47e84555e38d2a71b7741c18de5f67349a622798
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3755a9ecb61148bcc426e9d510dc2eab1c34eeb4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33491802"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54590630"
 ---
-# <a name="how-to-service-data-partitioning"></a>Procedura: partizionamento dei dati del servizio
-In questo argomento vengono descritti i passaggi di base necessari per partizionare messaggi tra più istanze dello stesso servizio di destinazione. Il partizionamento dei dati del servizio viene in genere utilizzato quando è necessario ridimensionare un servizio per fornire un livello migliore di qualità del servizio o gestire richieste da diversi clienti in modo specifico. I messaggi da un valore elevato o ai clienti di "Oro", ad esempio, potrebbe essere necessario per l'elaborazione una priorità più alta rispetto ai messaggi da un cliente standard.  
+# <a name="how-to-service-data-partitioning"></a>Procedura: Partizionamento dei dati del servizio
+In questo argomento vengono descritti i passaggi di base necessari per partizionare messaggi tra più istanze dello stesso servizio di destinazione. Il partizionamento dei dati del servizio viene in genere utilizzato quando è necessario ridimensionare un servizio per fornire un livello migliore di qualità del servizio o gestire richieste da diversi clienti in modo specifico. Ad esempio, i messaggi provenienti da valore elevato o "Gold" clienti potrebbe essere necessario per l'elaborazione una priorità più alta rispetto ai messaggi da un cliente standard.  
   
  In questo esempio i messaggi vengono indirizzati a una o due istanze del servizio regularCalc. Entrambe le istanze del servizio sono identiche. Il servizio rappresentato dall'endpoint di calculator1 elabora tuttavia i messaggi ricevuti dai clienti di valore elevato, mentre l'endpoint di calculator2 elabora i messaggi ricevuti dagli altri clienti  
   
@@ -85,7 +85,7 @@ In questo argomento vengono descritti i passaggi di base necessari per partizion
     </filterTables>  
     ```  
   
-4.  Per valutare i messaggi in ingresso rispetto ai filtri contenuti nella tabella, è necessario associare la tabella dei filtri agli endpoint servizio tramite il comportamento di routing. Nell'esempio seguente viene illustrata l'associazione di "filterTable1" agli endpoint servizio:  
+4.  Per valutare i messaggi in ingresso rispetto ai filtri contenuti nella tabella, è necessario associare la tabella dei filtri agli endpoint servizio tramite il comportamento di routing. L'esempio seguente illustra l'associazione di "filterTable1" agli endpoint servizio:  
   
     ```xml  
     <behaviors>  
@@ -173,5 +173,5 @@ In questo argomento vengono descritti i passaggi di base necessari per partizion
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Servizi di routing](../../../../docs/framework/wcf/samples/routing-services.md)
+## <a name="see-also"></a>Vedere anche
+- [Servizi di routing](../../../../docs/framework/wcf/samples/routing-services.md)

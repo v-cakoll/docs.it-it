@@ -2,12 +2,12 @@
 title: Risoluzione dei problemi
 ms.date: 03/30/2017
 ms.assetid: 8cd4401c-b12c-4116-a421-f3dcffa65670
-ms.openlocfilehash: 6fe4f789ca64c0646b77fdb66b0c6e2b73763293
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 62cc7a0567b9eb82c24c329a7ae8fb3e52f0f0c8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47108351"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54586410"
 ---
 # <a name="troubleshooting"></a>Risoluzione dei problemi
 Nelle informazioni seguenti vengono illustrati alcuni problemi che è possibile incontrare nelle applicazioni [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] e vengono forniti suggerimenti per evitare o altrimenti ridurre l'effetto di questi problemi.  
@@ -37,7 +37,7 @@ Nelle informazioni seguenti vengono illustrati alcuni problemi che è possibile 
   
  In caso contrario, viene generata un'eccezione <xref:System.Data.SqlClient.SqlException>.  
   
- Per altre informazioni, vedere [procedura: eliminare righe dal Database](../../../../../../docs/framework/data/adonet/sql/linq/how-to-delete-rows-from-the-database.md).  
+ Per altre informazioni, vedere [Procedura: Eliminare le righe dal Database](../../../../../../docs/framework/data/adonet/sql/linq/how-to-delete-rows-from-the-database.md).  
   
 ## <a name="expression-not-queryable"></a>Espressione che non può essere sottoposta a query  
  Se viene visualizzato il "espressione [espressione] non è disponibile per query; Probabilmente manca un riferimento all'assembly" errore, verificare quanto segue:  
@@ -69,6 +69,6 @@ Nelle informazioni seguenti vengono illustrati alcuni problemi che è possibile 
 ## <a name="oncreated-partial-method"></a>Metodo parziale OnCreated()  
  Il metodo `OnCreated()` generato viene chiamato ogni volta che viene chiamato il costruttore dell'oggetto, incluso lo scenario in cui [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] chiama il costruttore per creare una copia dei valori originali. Tenere conto di questo comportamento se si implementa il metodo `OnCreated()` nella classe parziale personalizzata.  
   
-## <a name="see-also"></a>Vedere anche  
- [Supporto per il debug](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)  
- [Domande frequenti](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)
+## <a name="see-also"></a>Vedere anche
+- [Supporto per il debug](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)
+- [Domande frequenti](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)

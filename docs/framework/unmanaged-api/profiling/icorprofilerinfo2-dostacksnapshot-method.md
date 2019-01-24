@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3c65e48595f2b49abe06e649898649d76a0668a0
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: d107653d34689814ae97ca4012d0fd2e2c4190dc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45969785"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54727274"
 ---
 # <a name="icorprofilerinfo2dostacksnapshot-method"></a>Metodo ICorProfilerInfo2::DoStackSnapshot
 Descrive i frame gestiti nello stack per il thread specificato e invia informazioni al profiler tramite un callback.  
@@ -73,7 +73,7 @@ HRESULT DoStackSnapshot(
   
  L'ordine in cui viene esaminato lo stack è il contrario del modo in cui i frame sono stati inseriti nello stack: foglia ultimo fotogramma (inserito per ultimo) prima di tutto, principale fotogramma (inserito per primo).  
   
- Per altre informazioni sulla programmazione del profiler per esaminare chiamate negli stack gestiti, vedere [analisi dello Stack del Profiler in .NET Framework 2.0: concetti di base e](https://go.microsoft.com/fwlink/?LinkId=73638).  
+ Per altre informazioni sulla programmazione del profiler per esaminare chiamate negli stack gestiti, vedere [analisi dello Stack del Profiler in .NET Framework 2.0: Concetti di base e](https://go.microsoft.com/fwlink/?LinkId=73638).  
   
  Un percorso stack può essere sincrono o asincrono, come illustrato nelle sezioni seguenti.  
   
@@ -100,7 +100,7 @@ HRESULT DoStackSnapshot(
  È inoltre disponibile un rischio di deadlock se si chiama `DoStackSnapshot` da un thread che ha creato il profiler in modo che è possibile analizzare lo stack di un thread di destinazione distinto. La prima volta che il thread è stato creato viene inserito determinati `ICorProfilerInfo*` metodi (inclusi `DoStackSnapshot`), CLR dovrà eseguire per ogni thread, l'inizializzazione di CLR specifici su tale thread. Se il profiler ha sospeso il thread di destinazione cui stack desiderata per esaminare e se il thread di destinazione è successo a un blocco di proprietà necessario per eseguire tale inizializzazione per ogni thread, si verificherà un deadlock. Per evitare il deadlock, effettuare una chiamata iniziale in `DoStackSnapshot` dal thread profiler creato per verificare il thread di destinazione un oggetto separato, ma non sospendere il thread di destinazione prima di tutto. Questa chiamata iniziale assicura che l'inizializzazione di singoli thread può essere completato senza deadlock. Se `DoStackSnapshot` ha esito positivo e i report almeno un frame, da quel punto, sarà sicuro per il thread profiler-creazione di sospendere qualsiasi thread di destinazione e chiamare `DoStackSnapshot` per analizzare lo stack di thread di destinazione.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
@@ -108,6 +108,6 @@ HRESULT DoStackSnapshot(
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
- [Interfaccia ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [Interfaccia ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: rispondere alla selezione di controlli CheckBox Windows Form'
+title: 'Procedura: Rispondere a un Windows Form controlli CheckBox'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,19 +12,19 @@ helpviewer_keywords:
 - double-clicks
 - check boxes [Windows Forms], responding to events
 ms.assetid: c39f901e-8899-43b6-aa31-939cbf7089fb
-ms.openlocfilehash: aa8a15d4f55fb1dd47fdf004fa05091ec88fe03e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cf9a7c51c0054c34dbce40f3a2dfa68c62f3a4e2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539737"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726325"
 ---
-# <a name="how-to-respond-to-windows-forms-checkbox-clicks"></a>Procedura: rispondere alla selezione di controlli CheckBox Windows Form
-Ogni volta che un utente fa clic su un Windows Form <xref:System.Windows.Forms.CheckBox> (controllo), il <xref:System.Windows.Forms.Control.Click> si verifica l'evento. È possibile programmare l'applicazione esegua un'azione a seconda dello stato della casella di controllo.  
+# <a name="how-to-respond-to-windows-forms-checkbox-clicks"></a>Procedura: Rispondere a un Windows Form controlli CheckBox
+Ogni volta che un utente fa clic su un controllo Windows Form <xref:System.Windows.Forms.CheckBox> (controllo), il <xref:System.Windows.Forms.Control.Click> evento si verifica. È possibile programmare l'applicazione per eseguire un'azione a seconda dello stato della casella di controllo.  
   
 ### <a name="to-respond-to-checkbox-clicks"></a>Per rispondere alle selezioni la casella di controllo  
   
-1.  Nel <xref:System.Windows.Forms.Control.Click> gestore dell'evento, utilizzare il <xref:System.Windows.Forms.CheckBox.Checked%2A> proprietà per determinare lo stato del controllo e di eseguire qualsiasi azione necessaria.  
+1.  Nel <xref:System.Windows.Forms.Control.Click> gestore eventi, usare il <xref:System.Windows.Forms.CheckBox.Checked%2A> proprietà per determinare lo stato del controllo ed eseguire tutte le azioni necessarie.  
   
     ```vb  
     Private Sub CheckBox1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles CheckBox1.Click  
@@ -71,16 +71,16 @@ Ogni volta che un utente fa clic su un Windows Form <xref:System.Windows.Forms.C
     ```  
   
     > [!NOTE]
-    >  Se l'utente tenta di fare doppio clic su di <xref:System.Windows.Forms.CheckBox> (controllo), verranno elaborati separatamente ogni clic, vale a dire, il <xref:System.Windows.Forms.CheckBox> controllo non supporta l'evento di doppio clic.  
+    >  Se l'utente tenta di fare doppio clic il <xref:System.Windows.Forms.CheckBox> (controllo), a ogni clic verranno elaborate separatamente, vale a dire, il <xref:System.Windows.Forms.CheckBox> controllo non supporta l'evento doppio clic.  
   
     > [!NOTE]
-    >  Quando il <xref:System.Windows.Forms.CheckBox.AutoCheck%2A> proprietà `true` (impostazione predefinita), il <xref:System.Windows.Forms.CheckBox> viene selezionato o deselezionato quando viene selezionato automaticamente. In caso contrario, è necessario impostare manualmente il <xref:System.Windows.Forms.CheckBox.Checked%2A> proprietà quando il <xref:System.Windows.Forms.Control.Click> si verifica l'evento.  
+    >  Quando la <xref:System.Windows.Forms.CheckBox.AutoCheck%2A> proprietà è `true` (impostazione predefinita), il <xref:System.Windows.Forms.CheckBox> selezionata o deselezionata quando viene selezionato automaticamente. In caso contrario, è necessario impostare manualmente le <xref:System.Windows.Forms.CheckBox.Checked%2A> proprietà quando il <xref:System.Windows.Forms.Control.Click> evento si verifica.  
   
-     È inoltre possibile utilizzare il <xref:System.Windows.Forms.CheckBox> controllo per determinare le azioni da intraprendere.  
+     È anche possibile usare il <xref:System.Windows.Forms.CheckBox> controllo per determinare le azioni da intraprendere.  
   
 ### <a name="to-determine-a-course-of-action-when-a-check-box-is-clicked"></a>Per stabilire una linea di condotta quando una casella di controllo si fa clic su  
   
-1.  Utilizzare un'istruzione case per il valore di query di <xref:System.Windows.Forms.CheckBox.CheckState%2A> proprietà per determinare le azioni da intraprendere. Quando il <xref:System.Windows.Forms.CheckBox.ThreeState%2A> è impostata su `true`, la <xref:System.Windows.Forms.CheckBox.CheckState%2A> proprietà può restituire tre possibili valori, che rappresentano la casella selezionata, la casella deselezionata o un terzo stato indeterminato in cui viene visualizzata con un in grigio aspetto per indicare che l'opzione è disponibile.  
+1.  Usare un'istruzione case per il valore di query di <xref:System.Windows.Forms.CheckBox.CheckState%2A> proprietà per determinare le azioni da intraprendere. Quando la <xref:System.Windows.Forms.CheckBox.ThreeState%2A> è impostata su `true`, il <xref:System.Windows.Forms.CheckBox.CheckState%2A> proprietà può restituire tre possibili valori, che rappresentano la casella selezionata, la casella è deselezionata, o un terzo stato indeterminato in cui viene visualizzata la finestra con un grigio aspetto per indicare che l'opzione non è disponibile.  
   
     ```vb  
     Private Sub CheckBox1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles CheckBox1.Click  
@@ -133,10 +133,10 @@ Ogni volta che un utente fa clic su un Windows Form <xref:System.Windows.Forms.C
     ```  
   
     > [!NOTE]
-    >  Quando il <xref:System.Windows.Forms.CheckBox.ThreeState%2A> è impostata su `true`, <xref:System.Windows.Forms.CheckBox.Checked%2A> restituisce proprietà `true` per entrambi <xref:System.Windows.Forms.CheckState.Checked> e <xref:System.Windows.Forms.CheckState.Indeterminate>.  
+    >  Quando la <xref:System.Windows.Forms.CheckBox.ThreeState%2A> è impostata su `true`, il <xref:System.Windows.Forms.CheckBox.Checked%2A> restituisce proprietà `true` per entrambi <xref:System.Windows.Forms.CheckState.Checked> e <xref:System.Windows.Forms.CheckState.Indeterminate>.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Windows.Forms.CheckBox>  
- [Panoramica sul controllo CheckBox](../../../../docs/framework/winforms/controls/checkbox-control-overview-windows-forms.md)  
- [Procedura: Impostare opzioni con i controlli CheckBox di Windows Form](../../../../docs/framework/winforms/controls/how-to-set-options-with-windows-forms-checkbox-controls.md)  
- [Controllo CheckBox](../../../../docs/framework/winforms/controls/checkbox-control-windows-forms.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Windows.Forms.CheckBox>
+- [Panoramica sul controllo CheckBox](../../../../docs/framework/winforms/controls/checkbox-control-overview-windows-forms.md)
+- [Procedura: Impostare le opzioni con i controlli CheckBox di Windows Form](../../../../docs/framework/winforms/controls/how-to-set-options-with-windows-forms-checkbox-controls.md)
+- [Controllo CheckBox](../../../../docs/framework/winforms/controls/checkbox-control-windows-forms.md)

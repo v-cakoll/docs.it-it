@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <httpWebRequest> element
 - httpWebRequest element
 ms.assetid: 52acd9d2-5bdc-4dc4-9c2a-f0a476ccbb31
-ms.openlocfilehash: 0d3feb168acbd623270a2038bf06a3c97126bd05
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 1a883b2e57d0f055237d68e4f69651ef496795ab
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50205152"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54590029"
 ---
 # <a name="lthttpwebrequestgt-element-network-settings"></a>&lt;httpWebRequest&gt; (impostazioni di rete)
 Consente di personalizzare i parametri della richiesta Web.  
@@ -21,7 +21,7 @@ Consente di personalizzare i parametri della richiesta Web.
  \<configuration>  
 \<system.net>  
 \<Impostazioni >  
-\<httpWebRequest >  
+\<httpWebRequest>  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -53,7 +53,7 @@ Consente di personalizzare i parametri della richiesta Web.
   
 |**Elemento**|**Descrizione**|  
 |-----------------|---------------------|  
-|[Impostazioni](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Configura le opzioni di rete di base per lo spazio dei nomi <xref:System.Net>.|  
+|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Configura le opzioni di rete di base per lo spazio dei nomi <xref:System.Net>.|  
   
 ## <a name="remarks"></a>Note  
  Per impostazione predefinita, .NET Framework applica rigorosamente RFC 2616 per l'analisi dell'URI. Alcune risposte server possono includere caratteri di controllo in campi non consentiti, che provoca il <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> metodo consente di generare un <xref:System.Net.WebException>. Se **useUnsafeHeaderParsing** è impostata su **true**, <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> non viene generata in questo caso, tuttavia, l'applicazione sarà vulnerabile a diversi strumenti di analisi di attacchi di URI. La soluzione migliore consiste nel modificare il server in modo che la risposta non include i caratteri di controllo.  
@@ -76,6 +76,6 @@ Consente di personalizzare i parametri della richiesta Web.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
-- <xref:System.Net.HttpWebRequest.MaximumResponseHeadersLength%2A>  
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Net.HttpWebRequest.MaximumResponseHeadersLength%2A>
 - [Schema delle impostazioni di rete](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

@@ -1,25 +1,25 @@
 ---
-title: 'Procedura dettagliata: eseguire query tra relazioni (Visual Basic)'
+title: 'Procedura dettagliata: Eseguire query tra relazioni (Visual Basic)'
 ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: a7da43e3-769f-4e07-bcd6-552b8bde66f4
-ms.openlocfilehash: aa98a823a5d97d86144ea2f76953e990cde8edec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2246ad1f9f36af2f8f4383647ccb97ee7be3b64b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355204"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585471"
 ---
-# <a name="walkthrough-querying-across-relationships-visual-basic"></a>Procedura dettagliata: eseguire query tra relazioni (Visual Basic)
-Questa procedura dettagliata viene illustrato l'utilizzo di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *associazioni* per rappresentare relazioni di chiave esterna nel database.  
+# <a name="walkthrough-querying-across-relationships-visual-basic"></a>Procedura dettagliata: Eseguire query tra relazioni (Visual Basic)
+Questa procedura dettagliata viene illustrato come utilizzare [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *associazioni* per rappresentare le relazioni di chiave esterna nel database.  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
  Questa procedura dettagliata è stata scritta usando Impostazioni di sviluppo di Visual Basic.  
   
 ## <a name="prerequisites"></a>Prerequisiti  
- È necessario avere completato [procedura dettagliata: oggetti modello e Query semplici (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-visual-basic.md). Questa procedura dettagliata si basa su tale procedura dettagliata, inclusa la presenza del file northwnd.mdf in c:\linqtest.  
+ È necessario avere completato [procedura dettagliata: Query (Visual Basic) e modello a oggetti semplice](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-visual-basic.md). Questa procedura dettagliata si basa su tale procedura dettagliata, inclusa la presenza del file northwnd.mdf in c:\linqtest.  
   
 ## <a name="overview"></a>Panoramica  
  La procedura dettagliata è costituita da tre attività principali:  
@@ -89,7 +89,7 @@ Questa procedura dettagliata viene illustrato l'utilizzo di [!INCLUDE[vbtecdlinq
 5.  Nel **File** menu, fare clic su **Salva tutto** se si desidera salvare questa applicazione.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
- Nella procedura successiva ([procedura dettagliata: modifica di dati (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-visual-basic.md)) viene illustrato come modificare i dati. Per tale procedura dettagliata non è necessario avere salvato le due procedure dettagliate di questa serie già completate.  
+ Procedura dettagliata seguente ([procedura dettagliata: Gestione dei dati (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-visual-basic.md)) viene illustrato come modificare i dati. Per tale procedura dettagliata non è necessario avere salvato le due procedure dettagliate di questa serie già completate.  
   
-## <a name="see-also"></a>Vedere anche  
- [Apprendimento tramite procedure dettagliate](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+## <a name="see-also"></a>Vedere anche
+- [Apprendimento tramite procedure dettagliate](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

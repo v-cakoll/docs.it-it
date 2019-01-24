@@ -9,31 +9,31 @@ helpviewer_keywords:
 - Auto keyword [Visual Basic]
 - Auto keyword [Visual Basic], marshaling strings
 ms.assetid: bf79ba95-a62c-48a5-916f-0ac7a52c13ec
-ms.openlocfilehash: 414998b4bef526060e7ba4f584fa071fbd0acaa5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c128ab9982ae7ccd5fff34020f2750f703da16a1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33595875"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664603"
 ---
 # <a name="auto-visual-basic"></a>Auto (Visual Basic)
-Specifica che Visual Basic deve eseguire il marshalling di stringhe in base alle regole di .NET Framework in base al nome esterno della routine esterna che viene dichiarato.  
+Specifica che Visual Basic deve eseguire il marshalling di stringhe in base alle regole di .NET Framework in base al nome esterno della routine esterna viene dichiarato.  
   
- Quando si chiama una routine definita all'esterno del progetto, il compilatore Visual Basic non hanno accesso alle informazioni necessari per chiamare correttamente la routine. Queste informazioni includono la procedura in cui si trova, come viene identificato, la sequenza di chiamata e tipo restituito e il set di caratteri stringa viene utilizzata. Il [istruzione Declare](../../../visual-basic/language-reference/statements/declare-statement.md) crea un riferimento a una routine esterna e fornisce le informazioni necessarie.  
+ Quando si chiama una routine definita all'esterno del progetto, il compilatore Visual Basic è privo di accesso alle informazioni necessario per chiamare correttamente la routine. Queste informazioni includono la procedura in cui si trova, come viene identificato, la sequenza di chiamata e tipo restituito e il carattere stringa set utilizzato. Il [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md) crea un riferimento a una routine esterna e fornisce le informazioni necessarie.  
   
- Il `charsetmodifier` parte il `Declare` istruzione fornisce le informazioni sul set di caratteri per il marshalling di stringhe durante una chiamata alla routine esterna. Influisce anche sulle modalità di ricerca di file esterno per il nome della routine esterna. Il `Auto` modificatore specifica che Visual Basic deve eseguire il marshalling di stringhe in base alle regole di .NET Framework e che è necessario determinare il carattere di base impostato della piattaforma in fase di esecuzione ed eventualmente modificare il nome della routine esterna se esegue la ricerca iniziale ha esito negativo. Per ulteriori informazioni, vedere "Set di caratteri" in [istruzione Declare](../../../visual-basic/language-reference/statements/declare-statement.md).  
+ Il `charsetmodifier` parte nel `Declare` istruzione fornisce le informazioni sul set di caratteri per il marshalling di stringhe durante una chiamata alla routine esterna. Influisce anche sulla modalità di ricerca di file esterno per il nome della routine esterna. Il `Auto` modificatore specifica che Visual Basic deve effettuare il marshalling delle stringhe in base alle regole di .NET Framework e che è necessario determinare il carattere di base impostato della piattaforma in fase di esecuzione ed eventualmente modificare il nome della routine esterna se esegue una ricerca iniziale si verifica un errore. Per altre informazioni, vedere "Set di caratteri" nella [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md).  
   
- Se non viene specificato alcun modificatore del set di caratteri, `Ansi` è l'impostazione predefinita.  
+ Se non viene specificato alcun modificatore del set di caratteri, `Ansi` è il valore predefinito.  
   
 ## <a name="remarks"></a>Note  
- Il `Auto` modificatore può essere utilizzato in questo contesto:  
+ Il `Auto` modificatore può essere usato in questo contesto:  
   
  [Istruzione Declare](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
 ## <a name="smart-device-developer-notes"></a>Note per gli sviluppatori di Smart Device  
  Questa parola chiave non è supportata.  
   
-## <a name="see-also"></a>Vedere anche  
- [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md)  
- [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)  
- [Parole chiave](../../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a>Vedere anche
+- [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md)
+- [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)
+- [Parole chiave](../../../visual-basic/language-reference/keywords/index.md)

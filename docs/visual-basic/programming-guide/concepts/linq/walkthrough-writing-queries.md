@@ -7,14 +7,14 @@ helpviewer_keywords:
 - LINQ [Visual Basic], writing queries
 - writing LINQ queries [Visual Basic]
 ms.assetid: f0045808-b9fe-4d31-88d1-473d9957211e
-ms.openlocfilehash: 6c5f7d288d805a6a25afa9a5b32a4550aaa76ec3
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.openlocfilehash: c3639070ddbb3c0eb41707d5cc5fbc7a46555a65
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46480656"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54666579"
 ---
-# <a name="walkthrough-writing-queries-in-visual-basic"></a>Procedura dettagliata: Scrittura delle query in Visual Basic
+# <a name="walkthrough-writing-queries-in-visual-basic"></a>Procedura dettagliata: Scrittura di query in Visual Basic
 Questa procedura dettagliata illustra come è possibile usare le funzionalità del linguaggio Visual Basic per scrivere [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] le espressioni di query. La procedura dettagliata illustra come creare query in un elenco di oggetti per studenti, come eseguire la query e come modificarli. Le query integrare diverse funzionalità tra cui i tipi anonimi, inferenza del tipo locale e gli inizializzatori di oggetto.  
   
  Dopo aver completato questa procedura dettagliata, sarà possibile passare agli esempi e documentazione per lo specifico [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] provider si è interessati. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] provider sono inclusi [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)], e [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
@@ -43,11 +43,11 @@ Questa procedura dettagliata illustra come è possibile usare le funzionalità d
 -   Definire un `Student` classe e creare un elenco di istanze della classe.  
   
     > [!IMPORTANT]
-    >  Il codice necessario per definire il `Student` classe e creare l'elenco utilizzato nella procedura dettagliata è forniti esempi [procedura: creare un elenco di elementi](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md). È possibile copiarlo da tale posizione e incollarlo nel progetto. Il nuovo codice sostituisce il codice che si verificava quando è stato creato il progetto.  
+    >  Il codice necessario per definire le `Student` classe e creare l'elenco utilizzato nella procedura dettagliata gli esempi viene fornito [come: Creare un elenco di elementi](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md). È possibile copiarlo da tale posizione e incollarlo nel progetto. Il nuovo codice sostituisce il codice che si verificava quando è stato creato il progetto.  
   
 #### <a name="to-add-a-new-student-to-the-students-list"></a>Per aggiungere un nuovo studente all'elenco degli studenti  
   
--   Seguire il modello nel `getStudents` metodo per aggiungere un'altra istanza del `Student` classe all'elenco. Aggiungere gli studenti vengono introdotti gli inizializzatori di oggetto. Per altre informazioni, vedere [inizializzatori di oggetto: tipi denominati e anonimi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md).  
+-   Seguire il modello nel `getStudents` metodo per aggiungere un'altra istanza del `Student` classe all'elenco. Aggiungere gli studenti vengono introdotti gli inizializzatori di oggetto. Per altre informazioni, vedere [gli inizializzatori di oggetto: Tipi denominati e anonimi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md).  
   
 ## <a name="create-a-query"></a>Creare una query  
  Quando viene eseguita, la query è stato aggiunto in questa sezione produce un elenco degli studenti con una classificazione academic li inserisce i primi dieci. Poiché la query seleziona l'intero `Student` ogni volta, il tipo del risultato della query di oggetto è `IEnumerable(Of Student)`. Tuttavia, il tipo della query in genere non è specificato nelle definizioni di query. Al contrario, il compilatore Usa l'inferenza del tipo locale per determinare il tipo. Per altre informazioni, vedere [Local Type Inference](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md). Variabile di intervallo della query, `currentStudent`, funge da riferimento a ogni `Student` istanza dell'origine `students`, che fornisce accesso alle proprietà di ogni oggetto `students`.  
@@ -144,11 +144,11 @@ Questa procedura dettagliata illustra come è possibile usare le funzionalità d
   
 ## <a name="see-also"></a>Vedere anche
 
-- [LINQ (Language-Integrated Query) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)  
-- [Introduzione a LINQ in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)  
-- [Inferenza del tipo di variabile locale](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
-- [Inizializzatori di oggetto: tipi denominati e tipi anonimi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
-- [Tipi anonimi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
-- [Introduzione a LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
-- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
+- [LINQ (Language-Integrated Query) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)
+- [Introduzione a LINQ in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [Inferenza del tipo di variabile locale](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [Inizializzatori di oggetto: Tipi denominati e anonimi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [Tipi anonimi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
+- [Introduzione a LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [Query](../../../../visual-basic/language-reference/queries/index.md)

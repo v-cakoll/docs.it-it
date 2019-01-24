@@ -22,12 +22,12 @@ helpviewer_keywords:
 - argument passing [Visual Basic], by position
 - arguments [Visual Basic], listing by name
 ms.assetid: 1ad7358f-1da9-48da-a95b-f3c7ed41eff3
-ms.openlocfilehash: bdaa0351e288b85a3e35818c0f53ef4d772932e5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 78c5303461ecf25a1487e072f4f6be25bde98dca
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151311"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587463"
 ---
 # <a name="passing-arguments-by-position-and-by-name-visual-basic"></a>Passaggio di argomenti in base alla posizione e al nome (Visual Basic)
 Quando si chiama un `Sub` o `Function` procedura, è possibile passare argomenti *in base alla posizione* , ovvero nell'ordine in cui appaiono nella definizione della stored procedure, oppure è possibile passare loro *in base al nome*, senza tener conto della posizione.  
@@ -94,12 +94,12 @@ Per altre informazioni, vedere [impostando la versione del linguaggio Visual Bas
   
 È possibile passare una matrice di parametri in base al nome. Infatti, quando si chiama la procedura, si fornisce un numero indefinito di argomenti delimitati da virgole per la matrice di parametri e il compilatore non è possibile associare più di un argomento con lo stesso nome.  
   
-## <a name="see-also"></a>Vedere anche  
- [Routine](./index.md)  
- [Parametri e argomenti delle routine](./procedure-parameters-and-arguments.md)  
- [Come si fa: Passare argomenti a una routine](./how-to-pass-arguments-to-a-procedure.md)  
- [Passaggio di argomenti per valore e per riferimento](./passing-arguments-by-value-and-by-reference.md)  
- [Parametri facoltativi](./optional-parameters.md)  
- [Matrici di parametri](./parameter-arrays.md)  
- [Optional](../../../../visual-basic/language-reference/modifiers/optional.md)  
- [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)
+## <a name="see-also"></a>Vedere anche
+- [Routine](./index.md)
+- [Parametri e argomenti delle routine](./procedure-parameters-and-arguments.md)
+- [Procedura: Passare argomenti a una routine](./how-to-pass-arguments-to-a-procedure.md)
+- [Passaggio di argomenti per valore e per riferimento](./passing-arguments-by-value-and-by-reference.md)
+- [Parametri facoltativi](./optional-parameters.md)
+- [Matrici di parametri](./parameter-arrays.md)
+- [Optional](../../../../visual-basic/language-reference/modifiers/optional.md)
+- [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)

@@ -7,20 +7,20 @@ helpviewer_keywords:
 - controls [WPF], FlowDocumentScrollViewer
 - FlowDocumentScrollViewer control [WPF]
 ms.assetid: 727b0a0a-b845-4aa9-9fd4-98f42ed738b4
-ms.openlocfilehash: 6ed1cc33b8b9a694669bb506c81a2c3b4d87fe61
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fa504c1269d6c57607204ea78919517c7d07f3eb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550826"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54593992"
 ---
 # <a name="flowdocumentscrollviewer"></a>FlowDocumentScrollViewer
-Il <xref:System.Windows.Controls.FlowDocumentScrollViewer> controllo consente di visualizzare <xref:System.Windows.Documents.FlowDocument> contenuto in un contenitore a scorrimento. Si differenzia <xref:System.Windows.Controls.FlowDocumentPageViewer>, che visualizza il contenuto per ogni pagina.  
+Il <xref:System.Windows.Controls.FlowDocumentScrollViewer> controllo consente di visualizzare <xref:System.Windows.Documents.FlowDocument> contenuto in un contenitore scorrevole. Si differenzia <xref:System.Windows.Controls.FlowDocumentPageViewer>, che visualizza il contenuto in base a una per ogni pagina.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Windows.Controls.FlowDocumentReader>  
- <xref:System.Windows.Controls.FlowDocumentPageViewer>  
- <xref:System.Windows.Controls.FlowDocumentScrollViewer>  
- <xref:System.Windows.Documents.FlowDocument>  
- [Documenti in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [Cenni preliminari sui documenti dinamici](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Windows.Controls.FlowDocumentReader>
+- <xref:System.Windows.Controls.FlowDocumentPageViewer>
+- <xref:System.Windows.Controls.FlowDocumentScrollViewer>
+- <xref:System.Windows.Documents.FlowDocument>
+- [Documenti in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [Cenni preliminari sui documenti dinamici](../../../../docs/framework/wpf/advanced/flow-document-overview.md)

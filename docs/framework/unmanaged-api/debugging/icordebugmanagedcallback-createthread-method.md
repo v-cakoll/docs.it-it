@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9721d88c8ce138b19c98f113d9eb034c5e1c55dd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: dd48fae74665f079100b128990656f3a6d002d43
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417690"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54586527"
 ---
 # <a name="icordebugmanagedcallbackcreatethread-method"></a>Metodo ICorDebugManagedCallback::CreateThread
-Notifica al debugger che un thread ha avviato l'esecuzione di codice gestito.  
+Notifica al debugger che ha avviato un thread esegue codice gestito.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,16 +44,16 @@ HRESULT CreateThread (
  [in] Un puntatore a un oggetto ICorDebugThread che rappresenta il thread.  
   
 ## <a name="remarks"></a>Note  
- Il thread viene posizionato in corrispondenza dell'istruzione di codice gestito prima deve essere eseguito.  
+ Il thread viene collocato nella prima istruzione di codice gestito deve essere eseguito.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

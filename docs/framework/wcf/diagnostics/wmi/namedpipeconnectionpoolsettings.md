@@ -2,12 +2,12 @@
 title: NamedPipeConnectionPoolSettings
 ms.date: 03/30/2017
 ms.assetid: 079bccb8-54b5-4436-a43d-5567763f72ce
-ms.openlocfilehash: 77d8403947d341ea2efcef98bbf166f94f75f31f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 3dddfa878e3cb5bd89fb76009d0dba530debb297
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188729"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54725077"
 ---
 # <a name="namedpipeconnectionpoolsettings"></a>NamedPipeConnectionPoolSettings
 NamedPipeConnectionPoolSettings  
@@ -32,21 +32,21 @@ class NamedPipeConnectionPoolSettings
 ### <a name="groupname"></a>GroupName  
  Tipo di dati: stringa  
   
- Tipo di accesso: sola lettura  
+ Tipo di accesso: Sola lettura  
   
  Nome del gruppo del pool di connessioni utilizzato dall'elemento di associazione.  
   
 ### <a name="idletimeout"></a>IdleTimeout  
  Tipo di dati: DateTime  
   
- Tipo di accesso: sola lettura  
+ Tipo di accesso: Sola lettura  
   
  Periodo massimo di inattività della connessione prima che venga interrotta.  
   
 ### <a name="maxoutboundconnectionsperendpoint"></a>MaxOutboundConnectionsPerEndpoint  
  Tipo di dati: sint32  
   
- Tipo di accesso: sola lettura  
+ Tipo di accesso: Sola lettura  
   
  Numero massimo di connessioni in uscita per ogni endpoint sul client.  
   
@@ -56,5 +56,5 @@ class NamedPipeConnectionPoolSettings
 |---------|-----------------------------------|  
 |Spazio dei nomi|Definito in root\ServiceModel|  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.Channels.NamedPipeConnectionPoolSettings>
+## <a name="see-also"></a>Vedere anche
+- <xref:System.ServiceModel.Channels.NamedPipeConnectionPoolSettings>
