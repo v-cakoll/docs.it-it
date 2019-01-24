@@ -5,12 +5,6 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 12/03/2018
 ms.custom: seodec18
-ms.openlocfilehash: bb520d852462b0bc12df46fd178d09da36b7ccfe
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415689"
 ---
 # <a name="net-core-application-deployment"></a>Distribuzione di applicazioni .NET Core
 
@@ -98,7 +92,7 @@ Per esempi dettagliati della distribuzione di app .NET Core con gli strumenti de
 
 ## <a name="see-also"></a>Vedere anche
 
-* [Distribuzione di app .NET Core con strumenti dell'interfaccia della riga di comando](deploy-with-cli.md)
-* [Distribuzione di app .NET Core con Visual Studio](deploy-with-vs.md)
-* [Pacchetti, metapacchetti e framework](../packages.md)
-* [Catalogo dei RID (Runtime IDentifier) di .NET Core](../rid-catalog.md)
+- [Distribuzione di app .NET Core con strumenti dell'interfaccia della riga di comando](deploy-with-cli.md)
+- [Distribuzione di app .NET Core con Visual Studio](deploy-with-vs.md)
+- [Pacchetti, metapacchetti e framework](../packages.md)
+- [Catalogo dei RID (Runtime IDentifier) di .NET Core](../rid-catalog.md)

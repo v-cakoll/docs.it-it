@@ -3,18 +3,13 @@ title: Introduzione a .NET Framework
 ms.custom: updateeachrelease
 ms.date: 04/10/2018
 helpviewer_keywords:
-- .NET Framework, getting started
-- getting started [.NET Framework]
+  - '.NET Framework, getting started'
+  - 'getting started [.NET Framework]'
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6d241f0f0c10be4a73c7ac55930e5dd24ef0b1e2
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453135"
 ---
+
 # <a name="get-started-with-the-net-framework"></a>Introduzione a .NET Framework
 
 .NET Framework è un ambiente di esecuzione runtime in cui vengono gestite le app destinate a .NET Framework. È costituito da Common Language Runtime, che fornisce la gestione della memoria e altri servizi di sistema, e da un'ampia libreria di classi, che consente ai programmatori di sfruttare codice affidabile per tutte le aree principali dello sviluppo di app.
@@ -77,7 +72,7 @@ Per altre informazioni sullo sviluppo di app destinate a .NET Framework, vedere 
 
 ## <a name="related-topics"></a>Argomenti correlati
 
-| Titolo | Descrizione |
+| Titolo | Description |
 | ----- |------------ |
 | [Panoramica](../../../docs/framework/get-started/overview.md) | Vengono fornite informazioni dettagliate per gli sviluppatori che realizzano app destinate a .NET Framework. |
 | [Guida all'installazione](../../../docs/framework/install/index.md) | Vengono fornite informazioni sull'installazione di .NET Framework. |  
@@ -89,7 +84,7 @@ Per altre informazioni sullo sviluppo di app destinate a .NET Framework, vedere 
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida a .NET Framework](../../../docs/framework/index.md)   
-- [Novità](../../../docs/framework/whats-new/index.md)   
-- [Browser API .NET](/dotnet/api/)   
+- [Guida a .NET Framework](../../../docs/framework/index.md)
+- [Novità](../../../docs/framework/whats-new/index.md)
+- [Browser API .NET](/dotnet/api/)
 - [Guida di sviluppo](../../../docs/framework/development-guide.md)
