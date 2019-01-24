@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 35900aa2-5615-4174-8212-ba184c6b82fb
-ms.openlocfilehash: d3cbf4fa0eb0b261bb752370c95cdfb2bca0b7e6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8df63cb425f8e113a73fee1b0a6bd61683ed27ef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517763"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54578844"
 ---
 # <a name="inserting-an-image-from-a-file"></a>Inserimento di un'immagine da un file
 È possibile scrivere un oggetto binario di grandi dimensioni (BLOB, Binary Large Object) in un database come dati binari o come dati di tipo carattere, a seconda del tipo di campo dell'origine dati. BLOB è un termine generico che si riferisce ai tipi di dati `text`, `ntext` e `image`, che in genere contengono documenti e immagini.  
@@ -130,9 +130,9 @@ public static byte[] GetPhoto(string filePath)
 }  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Uso di comandi per modificare i dati](../../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)  
- [Recupero di dati binari](../../../../../docs/framework/data/adonet/retrieving-binary-data.md)  
- [Dati binari e con valori elevati SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
- [Mapping dei tipi di dati SQL Server](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vedere anche
+- [Uso di comandi per modificare i dati](../../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)
+- [Recupero di dati binari](../../../../../docs/framework/data/adonet/retrieving-binary-data.md)
+- [Dati binari e con valori elevati SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
+- [Mapping dei tipi di dati SQL Server](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
+- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

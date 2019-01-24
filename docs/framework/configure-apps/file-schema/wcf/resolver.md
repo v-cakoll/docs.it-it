@@ -2,12 +2,12 @@
 title: '&lt;resolver&gt;'
 ms.date: 03/30/2017
 ms.assetid: 0c00200c-f135-4e5c-a024-76b72bcbc021
-ms.openlocfilehash: 67afce36acc8e7c2ff1f176275f1d021a61cc603
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 2a3e0de2bb5d2ed022f53aa5e498f338eaf56ca8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146264"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54578599"
 ---
 # <a name="ltresolvergt"></a>&lt;resolver&gt;
 Specifica un resolver peer usato per risolvere un ID della rete di peer in un insieme di indirizzi di nodo peer che rappresenta alcuni nodi che partecipano nella rete.  
@@ -16,7 +16,7 @@ Specifica un resolver peer usato per risolvere un ID della rete di peer in un in
 \<le associazioni >  
 \<netPeerBinding>  
 \<binding>  
-\<resolver >  
+\<resolver>  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,7 +40,7 @@ Specifica un resolver peer usato per risolvere un ID della rete di peer in un in
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<intestazioni >](../../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)|Specifica le impostazioni di un servizio resolver peer personalizzato.|  
+|[\<headers>](../../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)|Specifica le impostazioni di un servizio resolver peer personalizzato.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -51,11 +51,11 @@ Specifica un resolver peer usato per risolvere un ID della rete di peer in un in
 ## <a name="remarks"></a>Note  
  Un resolver di nomi peer è un servizio di individuazione usato dai canali peer per trovare i nodi che partecipano a una rete peer. Un resolver di nomi peer consente inoltre di "registrare" un nodo in una rete di peer, ovvero di renderlo individuabile e disponibile all'interno della rete. Per altre informazioni sui resolver del peer, vedere [i resolver del Peer](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md).  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.PeerResolver>  
- <xref:System.ServiceModel.PeerResolvers.PeerResolverSettings>  
- <xref:System.ServiceModel.NetPeerTcpBinding.Resolver%2A>  
- <xref:System.ServiceModel.Configuration.NetPeerTcpBindingElement.Resolver%2A>  
- <xref:System.ServiceModel.Configuration.PeerResolverElement>  
- [Resolver del peer](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md)  
- [Aggiunta di un Resolver personalizzato a un'applicazione PeerChannel](https://msdn.microsoft.com/library/12aa3787-2962-439c-ad27-46523c8b0419)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.ServiceModel.PeerResolver>
+- <xref:System.ServiceModel.PeerResolvers.PeerResolverSettings>
+- <xref:System.ServiceModel.NetPeerTcpBinding.Resolver%2A>
+- <xref:System.ServiceModel.Configuration.NetPeerTcpBindingElement.Resolver%2A>
+- <xref:System.ServiceModel.Configuration.PeerResolverElement>
+- [Resolver del peer](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md)
+- [Aggiunta di un Resolver personalizzato a un'applicazione PeerChannel](https://msdn.microsoft.com/library/12aa3787-2962-439c-ad27-46523c8b0419)
