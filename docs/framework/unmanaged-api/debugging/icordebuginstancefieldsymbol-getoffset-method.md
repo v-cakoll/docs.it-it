@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 ms.assetid: 7e470150-2b92-4425-989c-315f48964fd2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c77ac2eac1022fa591066901f48eaf609b5367af
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b8e78a7358f62ab83c7ecba63eac9f021fc4932d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413563"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54636374"
 ---
-# <a name="icordebuginstancefieldsymbolgetoffset-method"></a><span data-ttu-id="03534-102">Metodo ICorDebugInstanceFieldSymbol::GetOffset</span><span class="sxs-lookup"><span data-stu-id="03534-102">ICorDebugInstanceFieldSymbol::GetOffset Method</span></span>
-<span data-ttu-id="03534-103">Ottiene l'offset, in byte, di questo campo di istanza nella relativa classe padre.</span><span class="sxs-lookup"><span data-stu-id="03534-103">Gets the offset in bytes of this instance field in its parent class.</span></span>  
+# <a name="icordebuginstancefieldsymbolgetoffset-method"></a><span data-ttu-id="17e3f-102">Metodo ICorDebugInstanceFieldSymbol::GetOffset</span><span class="sxs-lookup"><span data-stu-id="17e3f-102">ICorDebugInstanceFieldSymbol::GetOffset Method</span></span>
+<span data-ttu-id="17e3f-103">Ottiene l'offset, in byte, di questo campo di istanza nella relativa classe padre.</span><span class="sxs-lookup"><span data-stu-id="17e3f-103">Gets the offset in bytes of this instance field in its parent class.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="03534-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="03534-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="17e3f-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="17e3f-104">Syntax</span></span>  
   
 ```  
 HRESULT GetOffset(  
@@ -22,24 +22,24 @@ HRESULT GetOffset(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="03534-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="03534-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="17e3f-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="17e3f-105">Parameters</span></span>  
  `pcbOffset`  
- <span data-ttu-id="03534-106">Puntatore al numero di byte di offset di questo campo di istanza nella relativa classe padre.</span><span class="sxs-lookup"><span data-stu-id="03534-106">A pointer to the number of bytes that this instance field is offset in its parent class.</span></span>  
+ <span data-ttu-id="17e3f-106">Puntatore al numero di byte di offset di questo campo di istanza nella relativa classe padre.</span><span class="sxs-lookup"><span data-stu-id="17e3f-106">A pointer to the number of bytes that this instance field is offset in its parent class.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="03534-107">Note</span><span class="sxs-lookup"><span data-stu-id="03534-107">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="17e3f-107">Note</span><span class="sxs-lookup"><span data-stu-id="17e3f-107">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="03534-108">Questo metodo è disponibile solo con .NET Native.</span><span class="sxs-lookup"><span data-stu-id="03534-108">This method is available with .NET Native only.</span></span>  
+>  <span data-ttu-id="17e3f-108">Questo metodo è disponibile solo con .NET Native.</span><span class="sxs-lookup"><span data-stu-id="17e3f-108">This method is available with .NET Native only.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="03534-109">Requisiti</span><span class="sxs-lookup"><span data-stu-id="03534-109">Requirements</span></span>  
- <span data-ttu-id="03534-110">**Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="03534-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="17e3f-109">Requisiti</span><span class="sxs-lookup"><span data-stu-id="17e3f-109">Requirements</span></span>  
+ <span data-ttu-id="17e3f-110">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="17e3f-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="03534-111">**Intestazione:** Cordebug. idl, Cordebug. H</span><span class="sxs-lookup"><span data-stu-id="03534-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="17e3f-111">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="17e3f-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="03534-112">**Libreria:** CorGuids. lib</span><span class="sxs-lookup"><span data-stu-id="03534-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="17e3f-112">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="17e3f-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="03534-113">**Versioni di .NET framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="03534-113">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
+ <span data-ttu-id="17e3f-113">**Versioni di .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="17e3f-113">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="03534-114">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="03534-114">See Also</span></span>  
- [<span data-ttu-id="03534-115">Interfaccia ICorDebugInstanceFieldSymbol</span><span class="sxs-lookup"><span data-stu-id="03534-115">ICorDebugInstanceFieldSymbol Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebuginstancefieldsymbol-interface.md)  
- [<span data-ttu-id="03534-116">Interfacce di debug</span><span class="sxs-lookup"><span data-stu-id="03534-116">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="17e3f-114">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="17e3f-114">See also</span></span>
+- [<span data-ttu-id="17e3f-115">Interfaccia ICorDebugInstanceFieldSymbol</span><span class="sxs-lookup"><span data-stu-id="17e3f-115">ICorDebugInstanceFieldSymbol Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebuginstancefieldsymbol-interface.md)
+- [<span data-ttu-id="17e3f-116">Interfacce di debug</span><span class="sxs-lookup"><span data-stu-id="17e3f-116">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

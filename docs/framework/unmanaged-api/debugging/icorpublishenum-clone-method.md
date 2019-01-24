@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 12d9e468027e88cc74900364459f83d7e5125a9e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: fdc8c274cd6949977b3e0ad5df8e1e14692ad167
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423806"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54563587"
 ---
-# <a name="icorpublishenumclone-method"></a><span data-ttu-id="3e77f-102">Metodo ICorPublishEnum::Clone</span><span class="sxs-lookup"><span data-stu-id="3e77f-102">ICorPublishEnum::Clone Method</span></span>
-<span data-ttu-id="3e77f-103">Crea una copia di questo [ICorPublishEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md) oggetto.</span><span class="sxs-lookup"><span data-stu-id="3e77f-103">Creates a copy of this [ICorPublishEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md) object.</span></span>  
+# <a name="icorpublishenumclone-method"></a><span data-ttu-id="c3503-102">Metodo ICorPublishEnum::Clone</span><span class="sxs-lookup"><span data-stu-id="c3503-102">ICorPublishEnum::Clone Method</span></span>
+<span data-ttu-id="c3503-103">Crea una copia di questo [ICorPublishEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md) oggetto.</span><span class="sxs-lookup"><span data-stu-id="c3503-103">Creates a copy of this [ICorPublishEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md) object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3e77f-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="3e77f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c3503-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="c3503-104">Syntax</span></span>  
   
 ```  
 HRESULT Clone (  
@@ -35,18 +35,18 @@ HRESULT Clone (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="3e77f-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="3e77f-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="c3503-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="c3503-105">Parameters</span></span>  
  `ppEnum`  
- <span data-ttu-id="3e77f-106">[out] Un puntatore all'indirizzo di un `ICorPublishEnum` oggetto che è una copia di questo `ICorPublishEnum` oggetto.</span><span class="sxs-lookup"><span data-stu-id="3e77f-106">[out] A pointer to the address of an `ICorPublishEnum` object that is a copy of this `ICorPublishEnum` object.</span></span>  
+ <span data-ttu-id="c3503-106">[out] Un puntatore all'indirizzo di un `ICorPublishEnum` oggetto che rappresenta una copia di questo `ICorPublishEnum` oggetto.</span><span class="sxs-lookup"><span data-stu-id="c3503-106">[out] A pointer to the address of an `ICorPublishEnum` object that is a copy of this `ICorPublishEnum` object.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3e77f-107">Requisiti</span><span class="sxs-lookup"><span data-stu-id="3e77f-107">Requirements</span></span>  
- <span data-ttu-id="3e77f-108">**Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3e77f-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c3503-107">Requisiti</span><span class="sxs-lookup"><span data-stu-id="c3503-107">Requirements</span></span>  
+ <span data-ttu-id="c3503-108">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c3503-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3e77f-109">**Intestazione:** Corpub. idl, CorPub.h</span><span class="sxs-lookup"><span data-stu-id="3e77f-109">**Header:** CorPub.idl, CorPub.h</span></span>  
+ <span data-ttu-id="c3503-109">**Intestazione:** CorPub.idl, CorPub.h</span><span class="sxs-lookup"><span data-stu-id="c3503-109">**Header:** CorPub.idl, CorPub.h</span></span>  
   
- <span data-ttu-id="3e77f-110">**Libreria:** CorGuids. lib</span><span class="sxs-lookup"><span data-stu-id="3e77f-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c3503-110">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c3503-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="3e77f-111">**Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3e77f-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="c3503-111">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c3503-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3e77f-112">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="3e77f-112">See Also</span></span>  
- [<span data-ttu-id="3e77f-113">Interfaccia ICorPublishEnum</span><span class="sxs-lookup"><span data-stu-id="3e77f-113">ICorPublishEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md)
+## <a name="see-also"></a><span data-ttu-id="c3503-112">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c3503-112">See also</span></span>
+- [<span data-ttu-id="c3503-113">Interfaccia ICorPublishEnum</span><span class="sxs-lookup"><span data-stu-id="c3503-113">ICorPublishEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md)
