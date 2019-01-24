@@ -1,24 +1,18 @@
 ---
-title: Main() e argomenti della riga di comando - Guida per programmatori C#
+title: 'Main() e argomenti della riga di comando - Guida per programmatori C#'
 ms.custom: seodec18
 ms.date: 08/02/2017
 f1_keywords:
-- CS5001
-- main_CSharpKeyword
-- Main
+  - CS5001
+  - main_CSharpKeyword
+  - Main
 helpviewer_keywords:
-- Main method [C#]
-- C# language, command-line arguments
-- arguments [C#], command-line
-- command line [C#], arguments
-- command-line arguments [C#], Main method
+  - 'Main method [C#]'
+  - 'C# language, command-line arguments'
+  - 'arguments [C#], command-line'
+  - 'command line [C#], arguments'
+  - 'command-line arguments [C#], Main method'
 ms.assetid: 73a17231-cf96-44ea-aa8a-54807c6fb1f4
-ms.openlocfilehash: e9fcee86f8a3daed73adebb1f4ce3e16f7ea2042
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237090"
 ---
 # <a name="main-and-command-line-arguments-c-programming-guide"></a>Main() e argomenti della riga di comando (Guida per programmatori C#)
 
@@ -44,7 +38,7 @@ L'aggiunta dei tipi restituiti `async`, `Task` e `Task<int>` semplifica il codic
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Compilazione dalla riga di comando con csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)  
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
-- [Metodi](../../../csharp/programming-guide/classes-and-structs/methods.md)  
-- [Contenuto di un programma C#](../../../csharp/programming-guide/inside-a-program/index.md)  
+- [Compilazione dalla riga di comando con csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
+- [Metodi](../../../csharp/programming-guide/classes-and-structs/methods.md)
+- [Contenuto di un programma C#](../../../csharp/programming-guide/inside-a-program/index.md)

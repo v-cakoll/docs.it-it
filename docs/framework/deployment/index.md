@@ -2,21 +2,15 @@
 title: Distribuzione di .NET Framework e delle applicazioni
 ms.date: 03/30/2017
 helpviewer_keywords:
-- deploying applications [.NET Framework], packaging
-- deploying applications [.NET Framework]
-- deploying applications [.NET Framework], features
-- deploying applications [.NET Framework], distribution
-- .NET Framework, deploying
-- .NET Framework application deployment
+  - 'deploying applications [.NET Framework], packaging'
+  - 'deploying applications [.NET Framework]'
+  - 'deploying applications [.NET Framework], features'
+  - 'deploying applications [.NET Framework], distribution'
+  - '.NET Framework, deploying'
+  - .NET Framework application deployment
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a650fa0340ce63a573074746eef60994e2254c86
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453229"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>Distribuzione di .NET Framework e delle applicazioni
 Questo articolo consente di iniziare a distribuire .NET Framework con l'applicazione. La maggior parte delle informazioni, sono destinate agli sviluppatori OEM e agli amministratori aziendali. È consigliabile che gli utenti che vogliono installare .NET Framework leggano [Installare .NET Framework](~/docs/framework/install/index.md).  
@@ -153,7 +147,7 @@ Questo articolo consente di iniziare a distribuire .NET Framework con l'applicaz
   
 ## <a name="related-topics"></a>Argomenti correlati  
   
-|Titolo|Descrizione|  
+|Titolo|Description|  
 |-----------|-----------------|  
 |[Come il runtime individua gli assembly](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)|Descrive come Common Language Runtime determina l'assembly da usare per eseguire una richiesta di associazione.|  
 |[Procedure consigliate per il caricamento di assembly](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)|Illustra come evitare problemi di identità del tipo che possono causare la generazione di eccezioni <xref:System.InvalidCastException>, <xref:System.MissingMethodException> e altri errori.|  
@@ -166,5 +160,5 @@ Questo articolo consente di iniziare a distribuire .NET Framework con l'applicaz
 |[Distribuzione di una applicazione di interoperabilità](../../../docs/framework/interop/deploying-an-interop-application.md)|Illustra come fornire e installare applicazioni di interoperabilità, che in genere includono un assembly client .NET Framework, uno o più assembly di interoperabilità che rappresentano librerie dei tipi COM distinte e uno o più componenti COM registrati.|  
 |[Procedura: Ottenere lo stato di avanzamento dal programma d'installazione di .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)|Descrive come avviare e rilevare automaticamente il processo di installazione di .NET Framework pur mostrando la propria visualizzazione dello stato di avanzamento dell'installazione.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedere anche
 - [Guida di sviluppo](../../../docs/framework/development-guide.md)

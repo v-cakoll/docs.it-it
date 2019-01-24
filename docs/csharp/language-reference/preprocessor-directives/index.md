@@ -1,18 +1,12 @@
 ---
-title: Direttive per il preprocessore C#
+title: 'Direttive per il preprocessore C#'
 ms.date: 07/20/2015
 f1_keywords:
-- cs.preprocessor
+  - cs.preprocessor
 helpviewer_keywords:
-- preprocessor directives [C#]
-- keywords [C#], preprocessor directives
+  - 'preprocessor directives [C#]'
+  - 'keywords [C#], preprocessor directives'
 ms.assetid: f2406090-b244-4f7e-ab72-3698fefed724
-ms.openlocfilehash: 1c0a97cabce347be0bc9367f3d090a1fc699db19
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036097"
 ---
 # <a name="c-preprocessor-directives"></a>Direttive per il preprocessore C#
 Questa sezione contiene informazioni sulle seguenti direttive per il preprocessore C#:
@@ -40,5 +34,5 @@ Una direttiva del preprocessore deve essere l'unica istruzione su una riga.
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
+- [Riferimenti per C#](../../../csharp/language-reference/index.md)
 - [Guida per programmatori C#](../../../csharp/programming-guide/index.md)

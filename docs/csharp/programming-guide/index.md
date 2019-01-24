@@ -1,20 +1,14 @@
 ---
-title: Guida per programmatori C#
+title: 'Guida per programmatori C#'
 ms.date: 05/02/2017
 f1_keywords:
-- cs.langref
+  - cs.langref
 helpviewer_keywords:
-- reference tables [C#]
-- C# language, programming guide
-- Visual C#, programming concepts
-- C# language, concepts
+  - 'reference tables [C#]'
+  - 'C# language, programming guide'
+  - 'Visual C#, programming concepts'
+  - 'C# language, concepts'
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: 3827ebfe401938e4fa1b530672352123ae2ac826
-ms.sourcegitcommit: 0fbd677fcdc5bf46c4d827f492eaaa970edc07b6
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50235739"
 ---
 # <a name="c-programming-guide"></a>Guida per programmatori C#
 Questa sezione include informazioni dettagliate sulle principali funzionalità del linguaggio C# e sulle funzionalità accessibili a C# tramite .NET Framework.  
@@ -87,5 +81,5 @@ Questa sezione include informazioni dettagliate sulle principali funzionalità d
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per C#](../../csharp/language-reference/index.md)  
+- [Riferimenti per C#](../../csharp/language-reference/index.md)
 - [C#](../../csharp/index.md)

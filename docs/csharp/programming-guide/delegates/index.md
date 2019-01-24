@@ -1,17 +1,11 @@
 ---
-title: Delegati - Guida per programmatori C#
+title: 'Delegati - Guida per programmatori C#'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-- C# language, delegates
-- delegates [C#]
+  - 'C# language, delegates'
+  - 'delegates [C#]'
 ms.assetid: 97de039b-c76b-4b9c-a27d-8c1e1c8d93da
-ms.openlocfilehash: 1352b7b6d2146f4cf043034b8b24d7a737f93c3b
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240437"
 ---
 # <a name="delegates-c-programming-guide"></a>Delegati (Guida per programmatori C#)
 Un [delegate](../../../csharp/language-reference/keywords/delegate.md) è un tipo che rappresenta riferimenti ai metodi con un elenco di parametri e un tipo restituito particolari. Quando si crea un'istanza di un delegato, è possibile associare l'istanza a qualsiasi metodo con una firma compatibile e un tipo restituito. Tramite l'istanza di delegato è possibile richiamare (o chiamare) il metodo.  
@@ -70,6 +64,6 @@ Per altre informazioni, vedere [Delegati](~/_csharplang/spec/delegates.md) nella
   
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.Delegate>  
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- <xref:System.Delegate>
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
 - [Eventi](../../../csharp/programming-guide/events/index.md)

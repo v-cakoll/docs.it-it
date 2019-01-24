@@ -1,18 +1,12 @@
 ---
-title: Eccezioni e gestione delle eccezioni - Guida per programmatori C#
+title: 'Eccezioni e gestione delle eccezioni - Guida per programmatori C#'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-- exception handling [C#]
-- exceptions [C#]
-- C# language, exceptions
+  - 'exception handling [C#]'
+  - 'exceptions [C#]'
+  - 'C# language, exceptions'
 ms.assetid: 0001887f-4fa2-47e2-8034-2819477e2344
-ms.openlocfilehash: a617e8921bed3bb4513ecce738064d502af7995b
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236843"
 ---
 # <a name="exceptions-and-exception-handling-c-programming-guide"></a>Eccezioni e gestione delle eccezioni (Guida per programmatori C#)
 Le funzionalità di gestione delle eccezioni del linguaggio C# sono utili per gestire qualsiasi situazione imprevista o eccezionale che può verificarsi durante l'esecuzione di un programma. Per la gestione delle eccezioni vengono usate le parole chiave `try`, `catch` e `finally` per provare a eseguire azioni che potrebbero non riuscire, per gestire gli errori quando si decide che è ragionevole farlo e per pulire le risorse in un secondo momento. Le eccezioni possono essere generate da CLR (Common Language Runtime), da .NET Framework o qualsiasi libreria di terze parti o dal codice dell'applicazione. Per creare le eccezioni viene usata la parola chiave `throw`.  
@@ -67,11 +61,11 @@ Per altre informazioni, vedere [Eccezioni](~/_csharplang/spec/exceptions.md) nel
   
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.SystemException>  
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
-- [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)  
-- [throw](../../../csharp/language-reference/keywords/throw.md)  
-- [try-catch](../../../csharp/language-reference/keywords/try-catch.md)  
-- [try-finally](../../../csharp/language-reference/keywords/try-finally.md)  
-- [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)  
-- [Eccezioni](../../../standard/exceptions/index.md)  
+- <xref:System.SystemException>
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
+- [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)
+- [throw](../../../csharp/language-reference/keywords/throw.md)
+- [try-catch](../../../csharp/language-reference/keywords/try-catch.md)
+- [try-finally](../../../csharp/language-reference/keywords/try-finally.md)
+- [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)
+- [Eccezioni](../../../standard/exceptions/index.md)

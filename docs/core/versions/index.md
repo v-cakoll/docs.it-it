@@ -4,13 +4,8 @@ description: Questo articolo illustra come viene specificata la versione di .NET
 author: bleroy
 ms.date: 07/26/2018
 ms.custom: seodec18
-ms.openlocfilehash: e4ab5e3a6dd487437e267aec042639c70fdc61ad
-ms.sourcegitcommit: 8598d446303b545eed2d520a6ccd061c1a7d00cb
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53334808"
 ---
+
 # <a name="overview-of-how-net-core-is-versioned"></a>Panoramica di come viene specificata la versione di .NET Core
 
 .NET Core indica il runtime di .NET Core e .NET Core SDK, contenente gli strumenti necessari per lo sviluppo di applicazioni. .NET Core SDK è progettato per funzionare con qualsiasi versione precedente del runtime di .NET Core. Questo articolo illustra il runtime e la strategia delle versioni del SDK. La spiegazione dei numeri di versione di .NET Standard è disponibile nell'articolo di presentazione di [.NET Standard](../../standard/net-standard.md#net-implementation-support).
@@ -106,8 +101,8 @@ Ogni versione di .NET Core implementa una versione di .NET Standard. L'implement
 
 ## <a name="see-also"></a>Vedere anche
 
-* [Framework di destinazione](../../standard/frameworks.md)  
-* [Pacchetti di distribuzione di .NET Core](../build/distribution-packaging.md)  
-* [.NET Core Support Lifecycle Fact Sheet (Scheda informativa sul ciclo di supporto per .NET Core)](https://www.microsoft.com/net/core/support)  
-* [Associazione della versione di .NET core 2+](https://github.com/dotnet/designs/issues/3)  
-* [Immagini Docker per .NET Core](https://hub.docker.com/r/microsoft/dotnet/)
+- [Framework di destinazione](../../standard/frameworks.md)
+- [Pacchetti di distribuzione di .NET Core](../build/distribution-packaging.md)
+- [.NET Core Support Lifecycle Fact Sheet (Scheda informativa sul ciclo di supporto per .NET Core)](https://www.microsoft.com/net/core/support)
+- [Associazione della versione di .NET core 2+](https://github.com/dotnet/designs/issues/3)
+- [Immagini Docker per .NET Core](https://hub.docker.com/r/microsoft/dotnet/)
