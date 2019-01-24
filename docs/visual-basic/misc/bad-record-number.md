@@ -4,19 +4,19 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID63
 ms.assetid: 1fcc33f8-822a-4de9-a6e3-228ddb5824a6
-ms.openlocfilehash: 400879ba37c6b3215d9570ca6eb8eaa06edea03b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fbf1a2db97d0474fb758ff5ed572e94395a187da
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33600805"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664753"
 ---
-# <a name="bad-record-number"></a><span data-ttu-id="77116-102">Numero di record non valido</span><span class="sxs-lookup"><span data-stu-id="77116-102">Bad record number</span></span>
-<span data-ttu-id="77116-103">Il numero di record nell'istruzione `a FileGet`, `FilePut`, `FileGetObject`o `FilePutObject` è minore o uguale a zero.</span><span class="sxs-lookup"><span data-stu-id="77116-103">The record number in `a FileGet`, `FilePut`, `FileGetObject`, or `FilePutObject` statement is less than or equal to zero.</span></span>  
+# <a name="bad-record-number"></a><span data-ttu-id="15f7a-102">Numero di record non valido</span><span class="sxs-lookup"><span data-stu-id="15f7a-102">Bad record number</span></span>
+<span data-ttu-id="15f7a-103">Il numero di record nell'istruzione `a FileGet`, `FilePut`, `FileGetObject`o `FilePutObject` è minore o uguale a zero.</span><span class="sxs-lookup"><span data-stu-id="15f7a-103">The record number in `a FileGet`, `FilePut`, `FileGetObject`, or `FilePutObject` statement is less than or equal to zero.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="77116-104">Per correggere l'errore</span><span class="sxs-lookup"><span data-stu-id="77116-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="15f7a-104">Per correggere l'errore</span><span class="sxs-lookup"><span data-stu-id="15f7a-104">To correct this error</span></span>  
   
-1.  <span data-ttu-id="77116-105">Controllare i calcoli usati per generare il numero di record.</span><span class="sxs-lookup"><span data-stu-id="77116-105">Check the calculations used in generating the record number.</span></span> <span data-ttu-id="77116-106">Controllare l'ortografia delle variabili che contengono il numero di record o usati per calcolare i numeri di record.</span><span class="sxs-lookup"><span data-stu-id="77116-106">Verify spelling of the variables containing the record number or used in calculating record numbers.</span></span> <span data-ttu-id="77116-107">Un nome di variabile contenente errori di ortografia è dichiarato in modo implicito e inizializzato su zero, a meno che non sia stato usato `Option Explicit On` nel modulo.</span><span class="sxs-lookup"><span data-stu-id="77116-107">A misspelled variable name is implicitly declared and initialized to zero, unless you used `Option Explicit On` in the module.</span></span>  
+1.  <span data-ttu-id="15f7a-105">Controllare i calcoli usati per generare il numero di record.</span><span class="sxs-lookup"><span data-stu-id="15f7a-105">Check the calculations used in generating the record number.</span></span> <span data-ttu-id="15f7a-106">Controllare l'ortografia delle variabili che contengono il numero di record o usati per calcolare i numeri di record.</span><span class="sxs-lookup"><span data-stu-id="15f7a-106">Verify spelling of the variables containing the record number or used in calculating record numbers.</span></span> <span data-ttu-id="15f7a-107">Un nome di variabile contenente errori di ortografia è dichiarato in modo implicito e inizializzato su zero, a meno che non sia stato usato `Option Explicit On` nel modulo.</span><span class="sxs-lookup"><span data-stu-id="15f7a-107">A misspelled variable name is implicitly declared and initialized to zero, unless you used `Option Explicit On` in the module.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="77116-108">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="77116-108">See Also</span></span>  
- [<span data-ttu-id="77116-109">Istruzione Option Explicit</span><span class="sxs-lookup"><span data-stu-id="77116-109">Option Explicit Statement</span></span>](../../visual-basic/language-reference/statements/option-explicit-statement.md)
+## <a name="see-also"></a><span data-ttu-id="15f7a-108">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="15f7a-108">See also</span></span>
+- [<span data-ttu-id="15f7a-109">Istruzione Option Explicit</span><span class="sxs-lookup"><span data-stu-id="15f7a-109">Option Explicit Statement</span></span>](../../visual-basic/language-reference/statements/option-explicit-statement.md)
