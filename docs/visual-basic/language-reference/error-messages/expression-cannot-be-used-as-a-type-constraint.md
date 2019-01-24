@@ -1,5 +1,5 @@
 ---
-title: '&#39;&lt;espressione&gt; &#39; non può essere utilizzato come vincolo di tipo'
+title: '&#39;&lt;espressione&gt; &#39; non può essere usato come vincolo di tipo'
 ms.date: 07/20/2015
 f1_keywords:
 - bc32061
@@ -7,44 +7,44 @@ f1_keywords:
 helpviewer_keywords:
 - BC32061
 ms.assetid: b17821b7-fa14-4397-a211-6e2a14079f09
-ms.openlocfilehash: 8e9aad2ec65e037b15e19ca2e624fdc8f28bc94e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b7f77c8113f8af113b4c8515994093958970864a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33588174"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54742133"
 ---
-# <a name="39ltexpressiongt39-cannot-be-used-as-a-type-constraint"></a><span data-ttu-id="65987-102">&#39;&lt;espressione&gt; &#39; non può essere utilizzato come vincolo di tipo</span><span class="sxs-lookup"><span data-stu-id="65987-102">&#39;&lt;expression&gt;&#39; cannot be used as a type constraint</span></span>
-<span data-ttu-id="65987-103">Un elenco di vincoli comprende un'espressione che non rappresenta un vincolo valido per un parametro di tipo.</span><span class="sxs-lookup"><span data-stu-id="65987-103">A constraint list includes an expression that does not represent a valid constraint on a type parameter.</span></span>  
+# <a name="39ltexpressiongt39-cannot-be-used-as-a-type-constraint"></a><span data-ttu-id="d3a12-102">&#39;&lt;espressione&gt; &#39; non può essere usato come vincolo di tipo</span><span class="sxs-lookup"><span data-stu-id="d3a12-102">&#39;&lt;expression&gt;&#39; cannot be used as a type constraint</span></span>
+<span data-ttu-id="d3a12-103">Un elenco di vincoli comprende un'espressione che non rappresenta un vincolo valido per un parametro di tipo.</span><span class="sxs-lookup"><span data-stu-id="d3a12-103">A constraint list includes an expression that does not represent a valid constraint on a type parameter.</span></span>  
   
- <span data-ttu-id="65987-104">Un elenco di vincoli impone requisiti per l'argomento di tipo passato al parametro di tipo.</span><span class="sxs-lookup"><span data-stu-id="65987-104">A constraint list imposes requirements on the type argument passed to the type parameter.</span></span> <span data-ttu-id="65987-105">Si possono specificare i requisiti seguenti in qualsiasi combinazione:</span><span class="sxs-lookup"><span data-stu-id="65987-105">You can specify the following requirements in any combination:</span></span>  
+ <span data-ttu-id="d3a12-104">Un elenco di vincoli impone requisiti per l'argomento di tipo passato al parametro di tipo.</span><span class="sxs-lookup"><span data-stu-id="d3a12-104">A constraint list imposes requirements on the type argument passed to the type parameter.</span></span> <span data-ttu-id="d3a12-105">Si possono specificare i requisiti seguenti in qualsiasi combinazione:</span><span class="sxs-lookup"><span data-stu-id="d3a12-105">You can specify the following requirements in any combination:</span></span>  
   
--   <span data-ttu-id="65987-106">L'argomento di tipo deve implementare una o più interfacce</span><span class="sxs-lookup"><span data-stu-id="65987-106">The type argument must implement one or more interfaces</span></span>  
+-   <span data-ttu-id="d3a12-106">L'argomento di tipo deve implementare una o più interfacce</span><span class="sxs-lookup"><span data-stu-id="d3a12-106">The type argument must implement one or more interfaces</span></span>  
   
--   <span data-ttu-id="65987-107">L'argomento di tipo deve ereditare al massimo da una classe</span><span class="sxs-lookup"><span data-stu-id="65987-107">The type argument must inherit from at most one class</span></span>  
+-   <span data-ttu-id="d3a12-107">L'argomento di tipo deve ereditare al massimo da una classe</span><span class="sxs-lookup"><span data-stu-id="d3a12-107">The type argument must inherit from at most one class</span></span>  
   
--   <span data-ttu-id="65987-108">L'argomento di tipo deve esporre un costruttore senza parametri a cui il codice di creazione possa accedere (includere il vincolo `New` )</span><span class="sxs-lookup"><span data-stu-id="65987-108">The type argument must expose a parameterless constructor that the creating code can access (include the `New` constraint)</span></span>  
+-   <span data-ttu-id="d3a12-108">L'argomento di tipo deve esporre un costruttore senza parametri a cui il codice di creazione possa accedere (includere il vincolo `New` )</span><span class="sxs-lookup"><span data-stu-id="d3a12-108">The type argument must expose a parameterless constructor that the creating code can access (include the `New` constraint)</span></span>  
   
- <span data-ttu-id="65987-109">Se non si include alcuna classe o interfaccia specifica nell'elenco di vincoli, è possibile imporre un requisito più generale specificando una delle condizioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="65987-109">If you do not include any specific class or interface in the constraint list, you can impose a more general requirement by specifying one of the following:</span></span>  
+ <span data-ttu-id="d3a12-109">Se non si include alcuna classe o interfaccia specifica nell'elenco di vincoli, è possibile imporre un requisito più generale specificando una delle condizioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="d3a12-109">If you do not include any specific class or interface in the constraint list, you can impose a more general requirement by specifying one of the following:</span></span>  
   
--   <span data-ttu-id="65987-110">L'argomento di tipo deve essere un tipo valore (includere il vincolo `Structure` )</span><span class="sxs-lookup"><span data-stu-id="65987-110">The type argument must be a value type (include the `Structure` constraint)</span></span>  
+-   <span data-ttu-id="d3a12-110">L'argomento di tipo deve essere un tipo valore (includere il vincolo `Structure` )</span><span class="sxs-lookup"><span data-stu-id="d3a12-110">The type argument must be a value type (include the `Structure` constraint)</span></span>  
   
--   <span data-ttu-id="65987-111">L'argomento di tipo deve essere un tipo riferimento (includere il vincolo `Class` )</span><span class="sxs-lookup"><span data-stu-id="65987-111">The type argument must be a reference type (include the `Class` constraint)</span></span>  
+-   <span data-ttu-id="d3a12-111">L'argomento di tipo deve essere un tipo riferimento (includere il vincolo `Class` )</span><span class="sxs-lookup"><span data-stu-id="d3a12-111">The type argument must be a reference type (include the `Class` constraint)</span></span>  
   
- <span data-ttu-id="65987-112">Non è possibile specificare sia `Structure` che `Class` per lo stesso parametro di tipo e non è possibile specificare uno dei due vincoli più volte.</span><span class="sxs-lookup"><span data-stu-id="65987-112">You cannot specify both `Structure` and `Class` for the same type parameter, and you cannot specify either one more than once.</span></span>  
+ <span data-ttu-id="d3a12-112">Non è possibile specificare sia `Structure` che `Class` per lo stesso parametro di tipo e non è possibile specificare uno dei due vincoli più volte.</span><span class="sxs-lookup"><span data-stu-id="d3a12-112">You cannot specify both `Structure` and `Class` for the same type parameter, and you cannot specify either one more than once.</span></span>  
   
- <span data-ttu-id="65987-113">**ID errore:** BC32061</span><span class="sxs-lookup"><span data-stu-id="65987-113">**Error ID:** BC32061</span></span>  
+ <span data-ttu-id="d3a12-113">**ID errore:** BC32061</span><span class="sxs-lookup"><span data-stu-id="d3a12-113">**Error ID:** BC32061</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="65987-114">Per correggere l'errore</span><span class="sxs-lookup"><span data-stu-id="65987-114">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="d3a12-114">Per correggere l'errore</span><span class="sxs-lookup"><span data-stu-id="d3a12-114">To correct this error</span></span>  
   
--   <span data-ttu-id="65987-115">Verificare che l'espressione e i suoi elementi siano digitati correttamente.</span><span class="sxs-lookup"><span data-stu-id="65987-115">Verify that the expression and its elements are spelled correctly.</span></span>  
+-   <span data-ttu-id="d3a12-115">Verificare che l'espressione e i suoi elementi siano digitati correttamente.</span><span class="sxs-lookup"><span data-stu-id="d3a12-115">Verify that the expression and its elements are spelled correctly.</span></span>  
   
--   <span data-ttu-id="65987-116">Se l'espressione non soddisfa l'elenco di requisiti precedente, rimuoverla dall'elenco di vincoli.</span><span class="sxs-lookup"><span data-stu-id="65987-116">If the expression does not qualify for the preceding list of requirements, remove it from the constraint list.</span></span>  
+-   <span data-ttu-id="d3a12-116">Se l'espressione non soddisfa l'elenco di requisiti precedente, rimuoverla dall'elenco di vincoli.</span><span class="sxs-lookup"><span data-stu-id="d3a12-116">If the expression does not qualify for the preceding list of requirements, remove it from the constraint list.</span></span>  
   
--   <span data-ttu-id="65987-117">Se l'espressione fa riferimento a un'interfaccia o a una classe, verificare che il compilatore possa accedere a quell'interfaccia o a quella classe.</span><span class="sxs-lookup"><span data-stu-id="65987-117">If the expression refers to an interface or class, verify that the compiler has access to that interface or class.</span></span> <span data-ttu-id="65987-118">Potrebbe essere necessario qualificarne il nome e anche aggiungere un riferimento al progetto.</span><span class="sxs-lookup"><span data-stu-id="65987-118">You might need to qualify its name, and you might need to add a reference to your project.</span></span> <span data-ttu-id="65987-119">Per ulteriori informazioni, vedere "Riferimenti ai progetti" in [riferimenti a elementi dichiarati](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).</span><span class="sxs-lookup"><span data-stu-id="65987-119">For more information, see "References to Projects" in [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).</span></span>  
+-   <span data-ttu-id="d3a12-117">Se l'espressione fa riferimento a un'interfaccia o a una classe, verificare che il compilatore possa accedere a quell'interfaccia o a quella classe.</span><span class="sxs-lookup"><span data-stu-id="d3a12-117">If the expression refers to an interface or class, verify that the compiler has access to that interface or class.</span></span> <span data-ttu-id="d3a12-118">Potrebbe essere necessario qualificarne il nome e anche aggiungere un riferimento al progetto.</span><span class="sxs-lookup"><span data-stu-id="d3a12-118">You might need to qualify its name, and you might need to add a reference to your project.</span></span> <span data-ttu-id="d3a12-119">Per altre informazioni, vedere "Riferimenti ai progetti" nella [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).</span><span class="sxs-lookup"><span data-stu-id="d3a12-119">For more information, see "References to Projects" in [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="65987-120">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="65987-120">See Also</span></span>  
- [<span data-ttu-id="65987-121">Tipi generici in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="65987-121">Generic Types in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [<span data-ttu-id="65987-122">Tipi valore e tipi riferimento</span><span class="sxs-lookup"><span data-stu-id="65987-122">Value Types and Reference Types</span></span>](../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
- [<span data-ttu-id="65987-123">Riferimenti a elementi dichiarati</span><span class="sxs-lookup"><span data-stu-id="65987-123">References to Declared Elements</span></span>](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
- 
+## <a name="see-also"></a><span data-ttu-id="d3a12-120">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="d3a12-120">See also</span></span>
+- [<span data-ttu-id="d3a12-121">Generic Types in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="d3a12-121">Generic Types in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [<span data-ttu-id="d3a12-122">Value Types and Reference Types</span><span class="sxs-lookup"><span data-stu-id="d3a12-122">Value Types and Reference Types</span></span>](../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [<span data-ttu-id="d3a12-123">Riferimenti a elementi dichiarati</span><span class="sxs-lookup"><span data-stu-id="d3a12-123">References to Declared Elements</span></span>](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+
