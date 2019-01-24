@@ -17,20 +17,20 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8ecb80de1ae46b072df4bab8357e78e7a22ae298
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d4780242dc34f31ecd0ff0dc2c339cdaa30278a3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33458064"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54721162"
 ---
-# <a name="icorprofilerinfosetilinstrumentedcodemap-method"></a><span data-ttu-id="7ffec-102">Metodo ICorProfilerInfo::SetILInstrumentedCodeMap</span><span class="sxs-lookup"><span data-stu-id="7ffec-102">ICorProfilerInfo::SetILInstrumentedCodeMap Method</span></span>
-<span data-ttu-id="7ffec-103">Imposta una mappa del codice per la funzione specificata utilizzando le voci della mappa specificate Microsoft intermediate language (MSIL).</span><span class="sxs-lookup"><span data-stu-id="7ffec-103">Sets a code map for the specified function using the specified Microsoft intermediate language (MSIL) map entries.</span></span>  
+# <a name="icorprofilerinfosetilinstrumentedcodemap-method"></a><span data-ttu-id="659c2-102">Metodo ICorProfilerInfo::SetILInstrumentedCodeMap</span><span class="sxs-lookup"><span data-stu-id="659c2-102">ICorProfilerInfo::SetILInstrumentedCodeMap Method</span></span>
+<span data-ttu-id="659c2-103">Imposta una mappa codici per la funzione specificata utilizzando voci della mappa specificate Microsoft intermediate language (MSIL).</span><span class="sxs-lookup"><span data-stu-id="659c2-103">Sets a code map for the specified function using the specified Microsoft intermediate language (MSIL) map entries.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="7ffec-104">In .NET Framework versione 2.0, la chiamata `SetILInstrumentedCodeMap` su un `FunctionID` che rappresenta una funzione generica in un determinato dominio applicazione avrà effetto su tutte le istanze di tale funzione nel dominio dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="7ffec-104">In the .NET Framework version 2.0, calling `SetILInstrumentedCodeMap` on a `FunctionID` that represents a generic function in a particular application domain will affect all instances of that function in the application domain.</span></span>  
+>  <span data-ttu-id="659c2-104">In .NET Framework versione 2.0, la chiamata `SetILInstrumentedCodeMap` su un `FunctionID` che rappresenta una funzione generica in un determinato dominio dell'applicazione influirà su tutte le istanze della funzione nel dominio dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="659c2-104">In the .NET Framework version 2.0, calling `SetILInstrumentedCodeMap` on a `FunctionID` that represents a generic function in a particular application domain will affect all instances of that function in the application domain.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7ffec-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="7ffec-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="659c2-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="659c2-105">Syntax</span></span>  
   
 ```  
 HRESULT SetILInstrumentedCodeMap(  
@@ -40,56 +40,56 @@ HRESULT SetILInstrumentedCodeMap(
     [in, size_is(cILMapEntries)] COR_IL_MAP rgILMapEntries[]);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="7ffec-106">Parametri</span><span class="sxs-lookup"><span data-stu-id="7ffec-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="659c2-106">Parametri</span><span class="sxs-lookup"><span data-stu-id="659c2-106">Parameters</span></span>  
  `functionId`  
- <span data-ttu-id="7ffec-107">[in] L'ID della funzione per cui impostare la mappa del codice.</span><span class="sxs-lookup"><span data-stu-id="7ffec-107">[in] The ID of the function for which to set the code map.</span></span>  
+ <span data-ttu-id="659c2-107">[in] L'ID della funzione per cui impostare la mappa del codice.</span><span class="sxs-lookup"><span data-stu-id="659c2-107">[in] The ID of the function for which to set the code map.</span></span>  
   
  `fStartJit`  
- <span data-ttu-id="7ffec-108">[in] Un valore booleano che indica se la chiamata al `SetILInstrumentedCodeMap` metodo è il primo di una particolare `FunctionID`.</span><span class="sxs-lookup"><span data-stu-id="7ffec-108">[in] A Boolean value that indicates whether the call to the `SetILInstrumentedCodeMap` method is the first for a particular `FunctionID`.</span></span> <span data-ttu-id="7ffec-109">Impostare `fStartJit` a `true` nella prima chiamata a `SetILInstrumentedCodeMap` per un determinato `FunctionID`e a `false` successivamente.</span><span class="sxs-lookup"><span data-stu-id="7ffec-109">Set `fStartJit` to `true` in the first call to `SetILInstrumentedCodeMap` for a given `FunctionID`, and to `false` thereafter.</span></span>  
+ <span data-ttu-id="659c2-108">[in] Un valore booleano che indica se la chiamata per il `SetILInstrumentedCodeMap` metodo è il primo di una particolare `FunctionID`.</span><span class="sxs-lookup"><span data-stu-id="659c2-108">[in] A Boolean value that indicates whether the call to the `SetILInstrumentedCodeMap` method is the first for a particular `FunctionID`.</span></span> <span data-ttu-id="659c2-109">Impostare `fStartJit` al `true` nella prima chiamata a `SetILInstrumentedCodeMap` per un determinato `FunctionID`e a `false` successivamente.</span><span class="sxs-lookup"><span data-stu-id="659c2-109">Set `fStartJit` to `true` in the first call to `SetILInstrumentedCodeMap` for a given `FunctionID`, and to `false` thereafter.</span></span>  
   
  `cILMapEntries`  
- <span data-ttu-id="7ffec-110">[in] Il numero di elementi di `cILMapEntries` matrice.</span><span class="sxs-lookup"><span data-stu-id="7ffec-110">[in] The number of elements in the `cILMapEntries` array.</span></span>  
+ <span data-ttu-id="659c2-110">[in] Il numero di elementi nel `cILMapEntries` matrice.</span><span class="sxs-lookup"><span data-stu-id="659c2-110">[in] The number of elements in the `cILMapEntries` array.</span></span>  
   
  `rgILMapEntries`  
- <span data-ttu-id="7ffec-111">[in] Matrice di strutture COR_IL_MAP, ognuno dei quali specifica un offset MSIL.</span><span class="sxs-lookup"><span data-stu-id="7ffec-111">[in] An array of COR_IL_MAP structures, each of which specifies an MSIL offset.</span></span>  
+ <span data-ttu-id="659c2-111">[in] Matrice di strutture COR_IL_MAP, ognuno dei quali specifica un offset MSIL.</span><span class="sxs-lookup"><span data-stu-id="659c2-111">[in] An array of COR_IL_MAP structures, each of which specifies an MSIL offset.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="7ffec-112">Note</span><span class="sxs-lookup"><span data-stu-id="7ffec-112">Remarks</span></span>  
- <span data-ttu-id="7ffec-113">Un profiler spesso inserisce istruzioni all'interno del codice sorgente di un metodo per instrumentare tale metodo (ad esempio, per inviare una notifica quando viene raggiunta una riga di origine specificato).</span><span class="sxs-lookup"><span data-stu-id="7ffec-113">A profiler often inserts statements within the source code of a method in order to instrument that method (for example, to notify when a given source line is reached).</span></span> <span data-ttu-id="7ffec-114">`SetILInstrumentedCodeMap` consente a un profiler eseguire il mapping le istruzioni MSIL originale nelle nuove posizioni.</span><span class="sxs-lookup"><span data-stu-id="7ffec-114">`SetILInstrumentedCodeMap` enables a profiler to map the original MSIL instructions to their new locations.</span></span> <span data-ttu-id="7ffec-115">Un profiler può utilizzare il [ICorProfilerInfo:: GetILToNativeMapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md) metodo per ottenere l'offset MSIL originale per un determinato offset nativo.</span><span class="sxs-lookup"><span data-stu-id="7ffec-115">A profiler can use the [ICorProfilerInfo::GetILToNativeMapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md) method to get the original MSIL offset for a given native offset.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="659c2-112">Note</span><span class="sxs-lookup"><span data-stu-id="659c2-112">Remarks</span></span>  
+ <span data-ttu-id="659c2-113">Spesso, un profiler inserisce istruzioni all'interno del codice sorgente di un metodo per instrumentare tale metodo (ad esempio, per inviare una notifica quando viene raggiunta una riga di origine specificato).</span><span class="sxs-lookup"><span data-stu-id="659c2-113">A profiler often inserts statements within the source code of a method in order to instrument that method (for example, to notify when a given source line is reached).</span></span> <span data-ttu-id="659c2-114">`SetILInstrumentedCodeMap` consente a un profiler eseguire il mapping di istruzioni MSIL originale nelle nuove posizioni.</span><span class="sxs-lookup"><span data-stu-id="659c2-114">`SetILInstrumentedCodeMap` enables a profiler to map the original MSIL instructions to their new locations.</span></span> <span data-ttu-id="659c2-115">Un profiler può usare la [ICorProfilerInfo:: GetILToNativeMapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md) metodo per ottenere l'offset MSIL originale per un determinato offset nativi.</span><span class="sxs-lookup"><span data-stu-id="659c2-115">A profiler can use the [ICorProfilerInfo::GetILToNativeMapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md) method to get the original MSIL offset for a given native offset.</span></span>  
   
- <span data-ttu-id="7ffec-116">Il debugger si presupporrà che ogni offset precedente fa riferimento a un offset all'interno del codice MSIL originale, non modificato MSIL e che ogni nuovo offset fa riferimento all'offset all'interno del codice instrumentato MSIL.</span><span class="sxs-lookup"><span data-stu-id="7ffec-116">The debugger will assume that each old offset refers to an MSIL offset within the original, unmodified MSIL code, and that each new offset refers to the MSIL offset within the new, instrumented code.</span></span> <span data-ttu-id="7ffec-117">La mappa deve essere ordinata in ordine crescente.</span><span class="sxs-lookup"><span data-stu-id="7ffec-117">The map should be sorted in increasing order.</span></span> <span data-ttu-id="7ffec-118">Per l'esecuzione di istruzioni per il corretto funzionamento, seguire queste linee guida:</span><span class="sxs-lookup"><span data-stu-id="7ffec-118">For stepping to work properly, follow these guidelines:</span></span>  
+ <span data-ttu-id="659c2-116">Il debugger presuppone che ogni offset precedente fa riferimento a un offset all'interno del codice MSIL originale, non modificato MSIL e che ogni nuovo offset fa riferimento all'offset all'interno del nuovo codice instrumentato MSIL.</span><span class="sxs-lookup"><span data-stu-id="659c2-116">The debugger will assume that each old offset refers to an MSIL offset within the original, unmodified MSIL code, and that each new offset refers to the MSIL offset within the new, instrumented code.</span></span> <span data-ttu-id="659c2-117">La mappa deve essere disposti in ordine crescente.</span><span class="sxs-lookup"><span data-stu-id="659c2-117">The map should be sorted in increasing order.</span></span> <span data-ttu-id="659c2-118">Per l'esecuzione di istruzioni per il corretto funzionamento, seguire queste linee guida:</span><span class="sxs-lookup"><span data-stu-id="659c2-118">For stepping to work properly, follow these guidelines:</span></span>  
   
--   <span data-ttu-id="7ffec-119">Riordina il codice instrumentato MSIL.</span><span class="sxs-lookup"><span data-stu-id="7ffec-119">Do not reorder instrumented MSIL code.</span></span>  
+-   <span data-ttu-id="659c2-119">Non riordinano le codice instrumentato MSIL.</span><span class="sxs-lookup"><span data-stu-id="659c2-119">Do not reorder instrumented MSIL code.</span></span>  
   
--   <span data-ttu-id="7ffec-120">Non rimuovere il codice MSIL originale.</span><span class="sxs-lookup"><span data-stu-id="7ffec-120">Do not remove the original MSIL code.</span></span>  
+-   <span data-ttu-id="659c2-120">Non rimuovere il codice MSIL originale.</span><span class="sxs-lookup"><span data-stu-id="659c2-120">Do not remove the original MSIL code.</span></span>  
   
--   <span data-ttu-id="7ffec-121">Includere le voci per tutti i punti di sequenza dal file di database di (programma PDB) di programma nella mappa.</span><span class="sxs-lookup"><span data-stu-id="7ffec-121">Include entries for all the sequence points from the program database (PDB) file in the map.</span></span> <span data-ttu-id="7ffec-122">La mappa non interpolare voci mancanti.</span><span class="sxs-lookup"><span data-stu-id="7ffec-122">The map does not interpolate missing entries.</span></span> <span data-ttu-id="7ffec-123">In tal caso, si consideri la mappa seguente:</span><span class="sxs-lookup"><span data-stu-id="7ffec-123">So, given the following map:</span></span>  
+-   <span data-ttu-id="659c2-121">Includere le voci per tutti i punti di sequenza dal file di database (PDB) di programma nella mappa.</span><span class="sxs-lookup"><span data-stu-id="659c2-121">Include entries for all the sequence points from the program database (PDB) file in the map.</span></span> <span data-ttu-id="659c2-122">La mappa non esegue l'interpolazione voci mancanti.</span><span class="sxs-lookup"><span data-stu-id="659c2-122">The map does not interpolate missing entries.</span></span> <span data-ttu-id="659c2-123">Pertanto, data la mappa seguente:</span><span class="sxs-lookup"><span data-stu-id="659c2-123">So, given the following map:</span></span>  
   
-     <span data-ttu-id="7ffec-124">(vecchio, 0, 0 nuovo)</span><span class="sxs-lookup"><span data-stu-id="7ffec-124">(0 old, 0 new)</span></span>  
+     <span data-ttu-id="659c2-124">(0 precedente, 0 nuovi)</span><span class="sxs-lookup"><span data-stu-id="659c2-124">(0 old, 0 new)</span></span>  
   
-     <span data-ttu-id="7ffec-125">(5 vecchio, 10 nuovi)</span><span class="sxs-lookup"><span data-stu-id="7ffec-125">(5 old, 10 new)</span></span>  
+     <span data-ttu-id="659c2-125">(5 precedenti, 10 nuovi)</span><span class="sxs-lookup"><span data-stu-id="659c2-125">(5 old, 10 new)</span></span>  
   
-     <span data-ttu-id="7ffec-126">(9 vecchio, 20 nuovo)</span><span class="sxs-lookup"><span data-stu-id="7ffec-126">(9 old, 20 new)</span></span>  
+     <span data-ttu-id="659c2-126">(9 precedente, 20 nuovi)</span><span class="sxs-lookup"><span data-stu-id="659c2-126">(9 old, 20 new)</span></span>  
   
-    -   <span data-ttu-id="7ffec-127">Verrà eseguito il mapping di un offset di 0, 1, 2, 3 o 4 precedente al nuovo offset 0.</span><span class="sxs-lookup"><span data-stu-id="7ffec-127">An old offset of 0, 1, 2, 3, or 4 will be mapped to new offset 0.</span></span>  
+    -   <span data-ttu-id="659c2-127">Verrà eseguito il mapping di un offset 0, 1, 2, 3 o 4 precedente al nuovo offset 0.</span><span class="sxs-lookup"><span data-stu-id="659c2-127">An old offset of 0, 1, 2, 3, or 4 will be mapped to new offset 0.</span></span>  
   
-    -   <span data-ttu-id="7ffec-128">Verrà eseguito il mapping di un offset di 5, 6, 7 o 8 precedente al nuovo offset 10.</span><span class="sxs-lookup"><span data-stu-id="7ffec-128">An old offset of 5, 6, 7, or 8 will be mapped to new offset 10.</span></span>  
+    -   <span data-ttu-id="659c2-128">Verrà eseguito il mapping di un offset precedente del 5, 6, 7 o 8 al nuovo offset 10.</span><span class="sxs-lookup"><span data-stu-id="659c2-128">An old offset of 5, 6, 7, or 8 will be mapped to new offset 10.</span></span>  
   
-    -   <span data-ttu-id="7ffec-129">Verrà eseguito il mapping di un offset di 9 o versione successiva precedente al nuovo offset 20.</span><span class="sxs-lookup"><span data-stu-id="7ffec-129">An old offset of 9 or higher will be mapped to new offset 20.</span></span>  
+    -   <span data-ttu-id="659c2-129">Verrà eseguito il mapping di un offset precedente del 9 o versione successiva al nuovo offset 20.</span><span class="sxs-lookup"><span data-stu-id="659c2-129">An old offset of 9 or higher will be mapped to new offset 20.</span></span>  
   
-    -   <span data-ttu-id="7ffec-130">Verrà eseguito il mapping di un nuovo offset di 0, 1, 2, 3, 4, 5, 6, 7, 8 o 9 al vecchio offset 0.</span><span class="sxs-lookup"><span data-stu-id="7ffec-130">A new offset of 0, 1, 2, 3, 4, 5, 6, 7, 8, or 9 will be mapped to old offset 0.</span></span>  
+    -   <span data-ttu-id="659c2-130">Verrà eseguito il mapping di un nuovo offset 0, 1, 2, 3, 4, 5, 6, 7, 8 o 9 al vecchio offset 0.</span><span class="sxs-lookup"><span data-stu-id="659c2-130">A new offset of 0, 1, 2, 3, 4, 5, 6, 7, 8, or 9 will be mapped to old offset 0.</span></span>  
   
-    -   <span data-ttu-id="7ffec-131">Verrà eseguito il mapping di un nuovo offset pari a 10, 11, 12, 13, 14, 15, 16, 17, 18 o 19 al vecchio offset 5.</span><span class="sxs-lookup"><span data-stu-id="7ffec-131">A new offset of 10, 11, 12, 13, 14, 15, 16, 17, 18, or 19 will be mapped to old offset 5.</span></span>  
+    -   <span data-ttu-id="659c2-131">Verrà eseguito il mapping di un nuovo offset di 10, 11, 12, 13, 14, 15, 16, 17, 18 o 19 al vecchio offset 5.</span><span class="sxs-lookup"><span data-stu-id="659c2-131">A new offset of 10, 11, 12, 13, 14, 15, 16, 17, 18, or 19 will be mapped to old offset 5.</span></span>  
   
-    -   <span data-ttu-id="7ffec-132">Verrà eseguito il mapping di un nuovo offset pari a 20 o superiore al vecchio offset 9.</span><span class="sxs-lookup"><span data-stu-id="7ffec-132">A new offset of 20 or higher will be mapped to old offset 9.</span></span>  
+    -   <span data-ttu-id="659c2-132">Verrà eseguito il mapping di un nuovo offset pari a 20 o superiore al vecchio offset 9.</span><span class="sxs-lookup"><span data-stu-id="659c2-132">A new offset of 20 or higher will be mapped to old offset 9.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7ffec-133">Requisiti</span><span class="sxs-lookup"><span data-stu-id="7ffec-133">Requirements</span></span>  
- <span data-ttu-id="7ffec-134">**Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7ffec-134">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="659c2-133">Requisiti</span><span class="sxs-lookup"><span data-stu-id="659c2-133">Requirements</span></span>  
+ <span data-ttu-id="659c2-134">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="659c2-134">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7ffec-135">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="7ffec-135">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="659c2-135">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="659c2-135">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="7ffec-136">**Libreria:** CorGuids. lib</span><span class="sxs-lookup"><span data-stu-id="7ffec-136">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="659c2-136">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="659c2-136">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="7ffec-137">**Versioni di .NET framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7ffec-137">**.NET Framework Versions:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span></span>  
+ <span data-ttu-id="659c2-137">**Versioni di .NET Framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="659c2-137">**.NET Framework Versions:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7ffec-138">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="7ffec-138">See Also</span></span>  
- [<span data-ttu-id="7ffec-139">Interfaccia ICorProfilerInfo</span><span class="sxs-lookup"><span data-stu-id="7ffec-139">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a><span data-ttu-id="659c2-138">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="659c2-138">See also</span></span>
+- [<span data-ttu-id="659c2-139">Interfaccia ICorProfilerInfo</span><span class="sxs-lookup"><span data-stu-id="659c2-139">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
