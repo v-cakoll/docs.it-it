@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: impostare il testo visualizzato da un controllo di Windows Form'
+title: 'Procedura: Impostare il testo visualizzato dal controllo di un Windows Form'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - controls [Windows Forms], captions
 - forms [Windows Forms], captions
 ms.assetid: 36b95bff-8780-479d-b86a-f1a0673653aa
-ms.openlocfilehash: d9c9bea26cfc3d5b2cfc4484173a7680ff2fc34d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 30cf71aa2a87ff99ccb965844b620ef08a20b69c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525035"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54636447"
 ---
-# <a name="how-to-set-the-text-displayed-by-a-windows-forms-control"></a>Procedura: impostare il testo visualizzato da un controllo di Windows Form
-I controlli Windows Form in genere visualizzano il testo relativo alla funzione principale del controllo. Un controllo <xref:System.Windows.Forms.Button>, ad esempio, solitamente visualizza una didascalia indicante l'azione che verrà eseguita quando si sceglie il pulsante. Per tutti i controlli, il testo può essere impostato o restituito mediante la proprietà <xref:System.Windows.Forms.Control.Text%2A>. È possibile modificare il tipo di carattere usando la proprietà <xref:System.Windows.Forms.Control.Font%2A>. È anche possibile impostare il testo nella finestra di progettazione.  Vedere anche [come: creare l'accesso delle chiavi per Windows Form controlli usando la finestra di progettazione](how-to-create-access-keys-for-windows-forms-controls-using-the-designer.md), [procedura: impostare il testo visualizzato da un controllo Form di Windows usando la finestra di progettazione](how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer.md), [come: impostare l'immagine Visualizzato da un Windows Form mediante la finestra di progettazione](how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer.md).  
+# <a name="how-to-set-the-text-displayed-by-a-windows-forms-control"></a>Procedura: Impostare il testo visualizzato dal controllo di un Windows Form
+I controlli Windows Form in genere visualizzano il testo relativo alla funzione principale del controllo. Un controllo <xref:System.Windows.Forms.Button>, ad esempio, solitamente visualizza una didascalia indicante l'azione che verrà eseguita quando si sceglie il pulsante. Per tutti i controlli, il testo può essere impostato o restituito mediante la proprietà <xref:System.Windows.Forms.Control.Text%2A>. È possibile modificare il tipo di carattere usando la proprietà <xref:System.Windows.Forms.Control.Font%2A>. È anche possibile impostare il testo nella finestra di progettazione.  Vedere anche [come: Creare le chiavi di accesso per Windows Form usando la finestra di progettazione di controlli](how-to-create-access-keys-for-windows-forms-controls-using-the-designer.md), [come: Impostare il testo visualizzato da un Windows Form mediante la finestra di progettazione](how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer.md), [come: Impostare l'immagine visualizzata da un Windows Form mediante la finestra di progettazione](how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer.md).  
   
 ### <a name="to-set-the-text-displayed-by-a-control-programmatically"></a>Per impostare il testo visualizzato da un controllo a livello di codice  
   
@@ -71,7 +71,7 @@ I controlli Windows Form in genere visualizzano il testo relativo alla funzione 
     mpMenuItem->Text = "&& Now For Something Completely Different";  
     ```  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Windows.Forms.Control.Text%2A?displayProperty=nameWithType>  
- [Procedura: Creare tasti di scelta per i controlli Windows Form](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md)  
- [Procedura: Rispondere alla selezione dei pulsanti di Windows Form](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Windows.Forms.Control.Text%2A?displayProperty=nameWithType>
+- [Procedura: Creare le chiavi di accesso per i controlli Windows Form](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md)
+- [Procedura: Rispondere alle selezioni dei pulsanti di Windows Form](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)

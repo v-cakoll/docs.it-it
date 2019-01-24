@@ -1,21 +1,21 @@
 ---
-title: 'Procedura: inviare modifiche al database'
+title: 'Procedura: Inviare le modifiche al Database'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: c7cba174-9d40-491d-b32c-f2d73b7e9eab
-ms.openlocfilehash: fef41cd1bcb9d1c4b98f96975c56bfa19c675608
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 455e4e3296a9136b2b9bf24278bb034e4a94fc7a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362886"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54562817"
 ---
-# <a name="how-to-submit-changes-to-the-database"></a>Procedura: inviare modifiche al database
+# <a name="how-to-submit-changes-to-the-database"></a>Procedura: Inviare le modifiche al Database
 Indipendentemente da quante modifiche si apportano agli oggetti, queste vengono applicate solo alle repliche in memoria. Le modifiche non vengono apportate ai dati effettivi nel database e non saranno trasmesse al server finché non si chiama in modo esplicito <xref:System.Data.Linq.DataContext.SubmitChanges%2A> su <xref:System.Data.Linq.DataContext>.  
   
- Quando si effettua questa chiamata, <xref:System.Data.Linq.DataContext> tenta di convertire le modifiche in comandi SQL equivalenti. È possibile utilizzare la logica personalizzata per eseguire l'override di queste azioni, ma l'ordine di invio viene gestito da un servizio del <xref:System.Data.Linq.DataContext> noti come il *processore delle modifiche*. Di seguito viene riportata la sequenza degli eventi:  
+ Quando si effettua questa chiamata, <xref:System.Data.Linq.DataContext> tenta di convertire le modifiche in comandi SQL equivalenti. È possibile usare una logica personalizzata per eseguire l'override di queste azioni, ma l'ordine di invio viene gestito da un servizio del <xref:System.Data.Linq.DataContext> noto come il *processore delle modifiche*. Di seguito viene riportata la sequenza degli eventi:  
   
 1.  Quando si chiama <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] esamina il set di oggetti conosciuti per determinare se a tali oggetti sono state associate nuove istanze. In caso affermativo, queste nuove istanze vengono aggiunte al set di oggetti registrati.  
   
@@ -33,8 +33,8 @@ Indipendentemente da quante modifiche si apportano agli oggetti, queste vengono 
  [!code-csharp[DLinqSubmittingChanges#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSubmittingChanges/cs/Program.cs#1)]
  [!code-vb[DLinqSubmittingChanges#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSubmittingChanges/vb/Module1.vb#1)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Procedura: rilevare e risolvere gli invii in conflitto](../../../../../../docs/framework/data/adonet/sql/linq/how-to-detect-and-resolve-conflicting-submissions.md)  
- [Procedura: gestire i conflitti di modifiche](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)  
- [Download di database di esempio](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)  
- [Creazione e invio di modifiche dei dati](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)
+## <a name="see-also"></a>Vedere anche
+- [Procedura: Rilevare e risolvere gli invii in conflitto](../../../../../../docs/framework/data/adonet/sql/linq/how-to-detect-and-resolve-conflicting-submissions.md)
+- [Procedura: Gestire i conflitti di modifiche](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+- [Download di database di esempio](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+- [Creazione e invio di modifiche dei dati](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - throwing exceptions, design guidelines
 ms.assetid: 5388e02b-52f5-460e-a2b5-eeafe60eeebe
 author: KrzysztofCwalina
-ms.openlocfilehash: 016a42ee7a772a3268e823e75b6239467e13b315
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 74eee418a3c87b335cdf96557c4e17b95aff7b58
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148042"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54562882"
 ---
 # <a name="exception-throwing"></a>Generazione di eccezioni
 Linee guida che generano eccezioni descritte in questa sezione richiedono una buona definizione del significato dell'errore di esecuzione. Errore di esecuzione si verifica ogni volta che un membro non è possibile fare ciò che è stato progettato per eseguire operazioni (quali il nome del membro implica). Ad esempio, se il `OpenFile` metodo non può restituire un handle di file aperto al chiamante, possa essere considerato un errore di esecuzione.  
@@ -66,5 +66,5 @@ Linee guida che generano eccezioni descritte in questa sezione richiedono una bu
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Linee guida per la progettazione di Framework](../../../docs/standard/design-guidelines/index.md)  
+- [Linee guida per la progettazione di Framework](../../../docs/standard/design-guidelines/index.md)
 - [Linee guida di progettazione delle eccezioni](../../../docs/standard/design-guidelines/exceptions.md)

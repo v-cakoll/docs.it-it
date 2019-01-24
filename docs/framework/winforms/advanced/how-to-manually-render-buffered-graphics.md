@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: eseguire il rendering manuale di grafica memorizzata nel buffer'
+title: 'Procedura: Eseguire il rendering manuale di grafica memorizzata nel buffer'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - flicker [Windows Forms], reducing by manually rendering graphics
 - graphics [Windows Forms], rendering
 ms.assetid: 5192295e-bd8e-45f7-8bd6-5c4f6bd21e61
-ms.openlocfilehash: ab0868e31ac8b010c662c04a7670e1ead19cebe0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f901350b1cb63f385eba52665785c8d0f7fd7e5f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33524196"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54636352"
 ---
-# <a name="how-to-manually-render-buffered-graphics"></a>Procedura: eseguire il rendering manuale di grafica memorizzata nel buffer
+# <a name="how-to-manually-render-buffered-graphics"></a>Procedura: Eseguire il rendering manuale di grafica memorizzata nel buffer
 Se si sta gestendo direttamente grafica memorizzata nel buffer, sarà necessario essere in grado di creare ed eseguire il rendering dei buffer grafici. È possibile creare istanze della classe <xref:System.Drawing.BufferedGraphics> associata alle aree di disegno sullo schermo chiamando il metodo <xref:System.Drawing.BufferedGraphicsContext.Allocate%2A>. Il metodo crea un'istanza di <xref:System.Drawing.BufferedGraphics> associata a una particolare area di rendering, ad esempio un form o controllo. Una volta creata un'istanza di <xref:System.Drawing.BufferedGraphics>, è possibile disegnare la grafica nel buffer da essa rappresentato tramite la proprietà <xref:System.Drawing.BufferedGraphics.Graphics%2A>. Una volta eseguite tutte le operazioni grafiche, è possibile copiare il contenuto del buffer sullo schermo chiamando il metodo <xref:System.Drawing.BufferedGraphics.Render%2A>.   
   
 > [!NOTE]
@@ -23,7 +23,7 @@ Se si sta gestendo direttamente grafica memorizzata nel buffer, sarà necessario
   
 ### <a name="to-manually-display-buffered-graphics"></a>Per visualizzare manualmente la grafica memorizzata nel buffer  
   
-1.  Ottenere un riferimento a un'istanza della classe <xref:System.Drawing.BufferedGraphicsContext>. Per ulteriori informazioni, vedere [procedura: gestire manualmente le immagini memorizzate nel buffer](../../../../docs/framework/winforms/advanced/how-to-manually-manage-buffered-graphics.md).  
+1.  Ottenere un riferimento a un'istanza della classe <xref:System.Drawing.BufferedGraphicsContext>. Per altre informazioni, vedere [Procedura: Gestire manualmente le immagini memorizzate nel buffer](../../../../docs/framework/winforms/advanced/how-to-manually-manage-buffered-graphics.md).  
   
 2.  Creare un'istanza della classe <xref:System.Drawing.BufferedGraphics> chiamando il metodo <xref:System.Drawing.BufferedGraphicsContext.Allocate%2A>e, come illustrato nel codice di esempio seguente.  
   
@@ -45,8 +45,8 @@ Se si sta gestendo direttamente grafica memorizzata nel buffer, sarà necessario
      [!code-csharp[System.Windows.Forms.LegacyBufferedGraphics#24](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/CS/Class1.cs#24)]
      [!code-vb[System.Windows.Forms.LegacyBufferedGraphics#24](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/VB/Class1.vb#24)]  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Drawing.BufferedGraphicsContext>  
- <xref:System.Drawing.BufferedGraphics>  
- [Grafica a doppio buffer](../../../../docs/framework/winforms/advanced/double-buffered-graphics.md)  
- [Procedura: Gestire manualmente le immagini memorizzate nel buffer](../../../../docs/framework/winforms/advanced/how-to-manually-manage-buffered-graphics.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Drawing.BufferedGraphicsContext>
+- <xref:System.Drawing.BufferedGraphics>
+- [Grafica a doppio buffer](../../../../docs/framework/winforms/advanced/double-buffered-graphics.md)
+- [Procedura: Gestire manualmente le immagini memorizzate nel buffer](../../../../docs/framework/winforms/advanced/how-to-manually-manage-buffered-graphics.md)

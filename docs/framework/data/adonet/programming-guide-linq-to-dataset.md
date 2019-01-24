@@ -2,12 +2,12 @@
 title: Guida per programmatori (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: 977aedd7-0084-46a0-b56f-345787a55da1
-ms.openlocfilehash: 0c6b026d86a898aa52d93833ac3e447d6f6cba11
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6f6ab1634769a54bd8dbafe8c9d41b11ff787d50
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513370"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54636482"
 ---
 # <a name="programming-guide-linq-to-dataset"></a>Guida per programmatori (LINQ to DataSet)
 Contenuto della sezione vengono fornite informazioni di carattere concettuale ed esempi per programmare con [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)].  
@@ -25,7 +25,7 @@ Contenuto della sezione vengono fornite informazioni di carattere concettuale ed
  [Creazione di un oggetto DataTable da una query](../../../../docs/framework/data/adonet/creating-a-datatable-from-a-query-linq-to-dataset.md)  
  Vengono fornite informazioni sulla creazione di un <xref:System.Data.DataTable> da un [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] query usando il <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> (metodo).  
   
- [Procedura: implementare CopyToDataTable\<T > in cui il tipo generico T non è un DataRow](../../../../docs/framework/data/adonet/implement-copytodatatable-where-type-not-a-datarow.md)  
+ [Procedura: Implementare CopyToDataTable\<T > in cui il tipo generico T non è un DataRow](../../../../docs/framework/data/adonet/implement-copytodatatable-where-type-not-a-datarow.md)  
  Viene descritto come implementare un metodo `CopyToDataTable<T>` personalizzato in cui il parametro generico T non è di tipo <xref:System.Data.DataRow>.  
   
  [Metodi generici Field e SetField](../../../../docs/framework/data/adonet/generic-field-and-setfield-methods-linq-to-dataset.md)  
@@ -54,5 +54,5 @@ Contenuto della sezione vengono fornite informazioni di carattere concettuale ed
   
 ## <a name="see-also"></a>Vedere anche
 
-- [LINQ e ADO.NET](linq-and-ado-net.md)  
+- [LINQ e ADO.NET](linq-and-ado-net.md)
 - [LINQ (Language-Integrated Query)](../../../csharp/programming-guide/concepts/linq/index.md)

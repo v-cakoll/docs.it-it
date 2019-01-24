@@ -10,20 +10,20 @@ helpviewer_keywords:
 - <clear> element, authenticationModules
 - authenticationModules, clear element
 ms.assetid: dc522c45-4a80-4831-8955-f7b68a47edfd
-ms.openlocfilehash: 42fa6a44891e012300f61f1a11a47537c6739e2c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b2f5194cc6a4c7c0329edb2a1718a642781f79b9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50205191"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54563418"
 ---
 # <a name="ltcleargt-element-for-authenticationmodules-network-settings"></a>&lt;Cancella&gt; (elemento) per authenticationModules (impostazioni di rete)
 Cancella tutti i moduli di autenticazione dall'applicazione.  
   
  \<configuration>  
 \<system.net>  
-\<authenticationModules >  
-\<clear >  
+\<authenticationModules>  
+\<clear>  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -65,7 +65,7 @@ Cancella tutti i moduli di autenticazione dall'applicazione.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
-- <xref:System.Net.IAuthenticationModule>  
-- <xref:System.Net.AuthenticationManager>  
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Net.IAuthenticationModule>
+- <xref:System.Net.AuthenticationManager>
 - [Schema delle impostazioni di rete](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

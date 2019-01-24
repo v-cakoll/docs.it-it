@@ -2,12 +2,12 @@
 title: '&lt;iriParsing&gt; (impostazioni Uri)'
 ms.date: 03/30/2017
 ms.assetid: 953d0b53-445e-41f9-b302-77c4030852ce
-ms.openlocfilehash: de4eafc735bae69df5a2eb0adf263ba5cdca2097
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: ca8fc86b5b64b971e54eec8f7338010394b73239
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50048411"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552944"
 ---
 # <a name="ltiriparsinggt-element-uri-settings"></a>&lt;iriParsing&gt; (impostazioni Uri)
 Specifica se l'analisi IRI (International Resource Identifier) viene applicata a un <xref:System.Uri> e se devono essere applicate le regole di analisi IRI.  
@@ -17,7 +17,7 @@ Specifica se l'analisi IRI (International Resource Identifier) viene applicata a
   
  [\<URI > (impostazioni Uri)](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)  
   
- [\<iriParsing >](../../../../../docs/framework/configure-apps/file-schema/network/iriparsing-element-uri-settings.md)  
+ [\<iriParsing>](../../../../../docs/framework/configure-apps/file-schema/network/iriparsing-element-uri-settings.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,7 +43,7 @@ Specifica se l'analisi IRI (International Resource Identifier) viene applicata a
   
 |**Elemento**|**Descrizione**|  
 |-----------------|---------------------|  
-|[URI](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)|Contiene le impostazioni che specificano come .NET Framework gestisce gli indirizzi web espressi tramite uniform resource identifier (URI).|  
+|[uri](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)|Contiene le impostazioni che specificano come .NET Framework gestisce gli indirizzi web espressi tramite uniform resource identifier (URI).|  
   
 ## <a name="remarks"></a>Note  
  L'oggetto esistente <xref:System.Uri> classe è stata estesa in .NET Framework 3.5. 3.0 SP1 e 2.0 SP1 per fornire supporto per gli identificatori IRI (International Resource) e IDN (Internationalized Domain nomi). Gli utenti correnti non noteranno cambiamenti rispetto al comportamento di .NET Framework 2.0 a meno che non consentono in modo specifico gli IRI e IDN supportano. Questo garantisce la compatibilità delle applicazioni con le versioni precedenti di .NET Framework.  
@@ -79,7 +79,7 @@ Specifica se l'analisi IRI (International Resource Identifier) viene applicata a
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Configuration.IriParsingElement?displayProperty=nameWithType>  
- <xref:System.Configuration.UriSection?displayProperty=nameWithType>  
- [Schema delle impostazioni di rete](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Configuration.IriParsingElement?displayProperty=nameWithType>
+- <xref:System.Configuration.UriSection?displayProperty=nameWithType>
+- [Schema delle impostazioni di rete](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

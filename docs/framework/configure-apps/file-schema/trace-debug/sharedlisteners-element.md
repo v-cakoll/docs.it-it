@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: de200534-19dd-4156-86cf-c50521802c4c
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: b312ea8180c464fb9f955e7d7079cac930c8bf05
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 3069022287d469704cc7adac40d02ef3c6997b56
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397111"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54563048"
 ---
 # <a name="ltsharedlistenersgt-element"></a>&lt;sharedListeners&gt; elemento
 Contiene i listener a cui può fare riferimento qualsiasi origine o elemento di traccia.  Questi listener non ricevono tutte le tracce per impostazione predefinita e non è possibile recuperare questi listener in fase di esecuzione. I listener identificati come listener condivisi possono essere aggiunti alle origini o delle tracce in base al nome.  
   
  \<configuration>  
-\<System. Diagnostics >  
-\<sharedListeners >  
+\<system.diagnostics>  
+\<sharedListeners>  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -90,7 +90,7 @@ Contiene i listener a cui può fare riferimento qualsiasi origine o elemento di 
 </configuration></system.diagnostics>   
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Diagnostics.TraceListener>  
- [Schema delle impostazioni di traccia e debug](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
- [Listener di traccia](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Diagnostics.TraceListener>
+- [Schema delle impostazioni di traccia e debug](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [Listener di traccia](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

@@ -2,12 +2,12 @@
 title: Ottimizzazione mediante commit monofase e notifica monofase promuovibile
 ms.date: 03/30/2017
 ms.assetid: 57beaf1a-fb4d-441a-ab1d-bc0c14ce7899
-ms.openlocfilehash: 093dfb793d5a8c8dc59eaabab09f2e5b6c81c352
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b63c0a54fda54306891bdec0edd8d2e3dc65b595
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363286"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54553061"
 ---
 # <a name="optimization-using-single-phase-commit-and-promotable-single-phase-notification"></a>Ottimizzazione mediante commit monofase e notifica monofase promuovibile
 Questo argomento descrive i meccanismi di ottimizzazione delle prestazioni forniti dall'infrastruttura <xref:System.Transactions>.  
@@ -30,9 +30,9 @@ Questo argomento descrive i meccanismi di ottimizzazione delle prestazioni forni
  Se la transazione dello spazio dei nomi <xref:System.Transactions> richiede un'escalation (ad esempio, per supportare più GR), lo spazio dei nomi <xref:System.Transactions> informa il gestore di risorse in merito chiamando il metodo <xref:System.Transactions.ITransactionPromoter.Promote%2A> sull'interfaccia <xref:System.Transactions.ITransactionPromoter> da cui deriva l'interfaccia <xref:System.Transactions.IPromotableSinglePhaseNotification>. Il gestore di risorse esegue quindi la conversione interna della transazione da una transazione locale (che non richiede la registrazione) a un oggetto di transazione in grado di partecipare a una transazione DTC e quindi la associa alle operazioni già svolte. Quando viene richiesto il commit della transazione, la gestione transazioni invia comunque la notifica di richiesta di utilizzo del metodo <xref:System.Transactions.IPromotableSinglePhaseNotification.SinglePhaseCommit%2A> al gestore di risorse, che quindi esegue il commit della transazione distribuita creata nel corso dell'escalation.  
   
 > [!NOTE]
->  Il **TransactionCommitted** tracce (che vengono generate quando viene richiamata un'operazione di Commit della transazione l'innalzamento di livello) contengono l'ID attività della transazione DTC.  
+>  Il **TransactionCommitted** tracce (che vengono generate quando un Commit viene richiamato su una transazione con escalation) contengono l'ID attività della transazione DTC.  
   
- Per ulteriori informazioni sull'escalation della gestione, vedere [escalation della gestione transazioni](../../../../docs/framework/data/transactions/transaction-management-escalation.md).  
+ Per altre informazioni sull'escalation della gestione, vedere [Escalation della gestione transazioni](../../../../docs/framework/data/transactions/transaction-management-escalation.md).  
   
 ## <a name="transaction-management-escalation-scenario"></a>Scenario di escalation della gestione delle transazioni  
  Nello scenario seguente viene mostrata l'escalation di una transazione a transazione distribuita utilizzando lo spazio dei nomi <xref:System.Data> come 'proxy' del gestore di risorse. Questo scenario presuppone che sia già presente una connessione dello spazio dei nomi <xref:System.Data> al database, CN1, coinvolta nella transazione e che l'applicazione desideri coinvolgere un'altra connessione dello spazio dei nomi <xref:System.Data>, CN2. La transazione, in quanto completamente distribuita e con commit a due fasi, deve essere promossa a transazione DTC.  
@@ -54,12 +54,12 @@ Questo argomento descrive i meccanismi di ottimizzazione delle prestazioni forni
 7.  Entrambe le connessioni risultano quindi integrate in una transazione DTC distribuita.  
   
 ## <a name="single-phase-commit-optimization"></a>Ottimizzazione mediante commit monofase  
- Il protocollo di commit monofase è più efficiente in fase di esecuzione, poiché tutti gli aggiornamenti vengono eseguiti senza alcuna coordinazione esplicita. Per sfruttare questa ottimizzazione è necessario implementare un gestore di risorse utilizzando l'interfaccia <xref:System.Transactions.ISinglePhaseNotification> per la risorsa e quindi integrare le risorse in una transazione utilizzando il metodo <xref:System.Transactions.Transaction.EnlistDurable%2A> o il metodo <xref:System.Transactions.Transaction.EnlistVolatile%2A>. In particolare, il *EnlistmentOptions* parametro deve essere uguale a <xref:System.Transactions.EnlistmentOptions.None> per garantire che un commit a fase singola verrà eseguito.  
+ Il protocollo di commit monofase è più efficiente in fase di esecuzione, poiché tutti gli aggiornamenti vengono eseguiti senza alcuna coordinazione esplicita. Per sfruttare questa ottimizzazione è necessario implementare un gestore di risorse utilizzando l'interfaccia <xref:System.Transactions.ISinglePhaseNotification> per la risorsa e quindi integrare le risorse in una transazione utilizzando il metodo <xref:System.Transactions.Transaction.EnlistDurable%2A> o il metodo <xref:System.Transactions.Transaction.EnlistVolatile%2A>. In particolare, il *EnlistmentOptions* parametro deve essere uguale a <xref:System.Transactions.EnlistmentOptions.None> per garantire che verrebbe eseguito un commit monofase.  
   
  Poiché l'interfaccia <xref:System.Transactions.ISinglePhaseNotification> deriva dall'interfaccia <xref:System.Transactions.IEnlistmentNotification>, se il GR non supporta il commit monofase può comunque ricevere le notifiche di commit a due fasi.  Se la gestione transazioni invia una notifica di chiamata al metodo <xref:System.Transactions.ISinglePhaseNotification.SinglePhaseCommit%2A> al GR, quest'ultimo deve tentare di eseguire il commit della transazione e quindi deve indicare alla gestione transazioni l'esito del tentativo, ovvero se eseguire il commit o il rollback della transazione mediante una chiamata al metodo <xref:System.Transactions.SinglePhaseEnlistment.Committed%2A>, al metodo <xref:System.Transactions.SinglePhaseEnlistment.Aborted%2A> o al metodo <xref:System.Transactions.SinglePhaseEnlistment.InDoubt%2A> sul parametro <xref:System.Transactions.SinglePhaseEnlistment>. In questa fase, la risposta di una chiamata al metodo <xref:System.Transactions.Enlistment.Done%2A> sull'integrazione implica l'utilizzo della semantica ReadOnly. Pertanto, evitare di ricorrere al metodo <xref:System.Transactions.Enlistment.Done%2A> in aggiunta agli altri metodi.  
   
  Se è presente un'unica integrazione volatile e nessuna integrazione durevole, l'integrazione volatile riceve una notifica di commit monofase.  Se sono presenti elenchi volatili e un solo elenco durevole, gli elenchi volatili ricevono un commit a due fasi. Al completamento l'elenco durevole riceve un commit monofase.  
   
-## <a name="see-also"></a>Vedere anche  
- [Integrazione di risorse come partecipanti a una transazione](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)  
- [Commit di una transazione in monofase e multifase](../../../../docs/framework/data/transactions/committing-a-transaction-in-single-phase-and-multi-phase.md)
+## <a name="see-also"></a>Vedere anche
+- [Integrazione di risorse come partecipanti a una transazione](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)
+- [Commit di una transazione in monofase e multifase](../../../../docs/framework/data/transactions/committing-a-transaction-in-single-phase-and-multi-phase.md)
