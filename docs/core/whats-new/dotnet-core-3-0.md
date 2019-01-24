@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2018
-ms.openlocfilehash: 3ca833031eb8bb0f43a334f833f2e0075842d57d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 26fb7cb25b9bf7f00f87059fbe1848763f7f175d
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53156669"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415546"
 ---
 # <a name="whats-new-in-net-core-30-preview-1"></a>Novità di .NET Core 3.0 (Preview 1)
 
@@ -30,15 +30,12 @@ Per altre informazioni, vedere l'[annuncio relativo a .NET Core 3.0 Preview 1](h
 
 ## <a name="default-executables"></a>File eseguibili predefiniti
 
-.NET Core compilerà ora i file eseguibili per impostazione predefinita. Si tratta di una novità per le applicazioni che usano una versione di .NET Core installata a livello globale. Finora solo le [distribuzioni autonome](../deploying/index.md#self-contained-deployments-scd) avevano file eseguibili.
+Per impostazione predefinita .NET Core compilerà ora i [file eseguibili dipendenti dal framework](../deploying/index.md#framework-dependent-executables-fde). Si tratta di una novità per le applicazioni che usano una versione di .NET Core installata a livello globale. Finora solo le [distribuzioni autonome](../deploying/index.md#self-contained-deployments-scd) producevano un file eseguibile.
 
 Durante `dotnet build` o `dotnet publish`, viene creato un file eseguibile purché corrisponda all'ambiente e alla piattaforma dell'SDK usato. Il comportamento di questi file eseguibili è uguale a quello degli altri file eseguibili nativi, ad esempio:
 
 * È possibile fare doppio clic sul file eseguibile.
 * È possibile avviare l'applicazione direttamente da un prompt dei comandi, ad esempio `myapp.exe` in Windows e `./myapp` in Linux e macOS.
-
-> [!NOTE]
-> Non è supportata la specifica di un determinato runtime con gli argomenti `dotnet publish -r` o `dotnet build -r` per gli altri ambienti di runtime.
 
 ## <a name="build-copies-dependencies"></a>Copia delle dipendenze tramite la compilazione
 
@@ -51,7 +48,7 @@ Esistono alcune operazioni, ad esempio il collegamento e la pubblicazione della 
 
 Mentre .NET Core 2.1 supportava strumenti globali, .NET Core 3.0 ha ora strumenti locali. Gli strumenti locali sono simili agli strumenti globali, ma sono associati a una determinata posizione sul disco. Ciò consente di usare strumenti specifici per ogni progetto e ogni repository. Gli strumenti installati in locale non sono disponibili a livello globale.
 
-Gli strumenti locali si basano sul nome file manifesto `dotnet-tools.json` nella directory corrente. Questo file manifesto definisce gli strumenti che devono essere disponibili. Creando questo file manifesto nella radice del repository, si ha la certezza che chiunque cloni il codice possa ripristinare e usare gli strumenti necessari per lavorare in modo corretto con il codice.
+Gli strumenti locali si basano sul nome file manifesto `dotnet-tools.json` nella directory corrente. Questo file manifesto definisce gli strumenti che devono essere disponibili. Creando questo file manifesto nella radice del repository, si ha la certezza che chiunque cloni il codice non possa ripristinare e usare gli strumenti necessari per lavorare in modo corretto con il codice.
 
 Quando il file manifesto degli strumenti locali è disponibile, usare il comando seguente per scaricare e installare automaticamente tali strumenti in locale:
 

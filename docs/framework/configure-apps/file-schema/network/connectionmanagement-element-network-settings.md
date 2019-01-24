@@ -8,19 +8,19 @@ helpviewer_keywords:
 - <connectionManagement> element
 - connectionManagement element
 ms.assetid: bedccaab-12a2-4511-8f67-e961f249aec6
-ms.openlocfilehash: 7cc5f2a37c0520ee48a10afeb4b9bc83ffd61033
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 28864de79e809968f7efa6f3b052cfd599961854
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201543"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54685026"
 ---
 # <a name="ltconnectionmanagementgt-element-network-settings"></a>&lt;connectionManagement&gt; (impostazioni di rete)
 Specifica il numero massimo di connessioni a un host di rete.  
   
  \<configuration>  
 \<system.net>  
-\<connectionManagement >  
+\<connectionManagement>  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -47,7 +47,7 @@ Specifica il numero massimo di connessioni a un host di rete.
   
 |**Elemento**|**Descrizione**|  
 |-----------------|---------------------|  
-|[System.NET](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|Contiene le impostazioni di rete che specificano la modalità di connessione alla rete di .NET Framework.|  
+|[system.net](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|Contiene le impostazioni di rete che specificano la modalità di connessione alla rete di .NET Framework.|  
   
 ## <a name="remarks"></a>Note  
  Il `connectionManagement` elemento definisce il numero massimo di connessioni a un server o un gruppo di server.  
@@ -69,7 +69,7 @@ Specifica il numero massimo di connessioni a un host di rete.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
-- <xref:System.Net.ServicePoint>  
-- <xref:System.Net.ServicePointManager>  
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Net.ServicePoint>
+- <xref:System.Net.ServicePointManager>
 - [Schema delle impostazioni di rete](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

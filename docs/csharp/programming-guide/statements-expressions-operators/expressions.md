@@ -6,12 +6,12 @@ helpviewer_keywords:
 - expressions [C#]
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
-ms.openlocfilehash: b2975403c38dbb2b73c10b147a6903013a1e5573
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 1a9b80d90c8f5089744e9cd5a126f7730afbed44
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239290"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362314"
 ---
 # <a name="expressions-c-programming-guide"></a>Espressioni (Guida per programmatori C#)
 Un'*espressione* è una sequenza di uno o più operandi e zero o più operatori che può restituire un singolo valore, oggetto, metodo o spazio dei nomi. Le espressioni possono contenere un valore letterale, una chiamata al metodo, un operatore e i relativi operandi oppure un *nome semplice*, ad esempio il nome di una variabile, un membro di un tipo, un parametro di un metodo, uno spazio dei nomi o un tipo.  
@@ -25,7 +25,7 @@ System.Convert.ToInt32("35");
 ```  
   
 ## <a name="expression-values"></a>Valori dell'espressione  
- Nella maggior parte dei contesti in cui si usano le espressioni, ad esempio in istruzioni o parametri di metodo, l'espressione deve restituire un valore. Se x e y sono numeri interi, l'espressione `x + y` restituisce un valore numerico. L'espressione `new MyClass()` restituisce un riferimento a una nuova istanza di un oggetto `MyClass`. L'espressione `myClass.ToString()` restituisce una stringa poiché questo è il tipo restituito del metodo. Tuttavia, sebbene il nome di uno spazio dei nomi sia classificato come espressione, non restituisce un valore e quindi non può mai essere il risultato finale di un'espressione. Non è possibile passare il nome di uno spazio dei nomi a un parametro di metodo né usarlo in una nuova espressione o assegnarlo a una variabile. È possibile usarlo solo in un'espressione più ampia come sottoespressione. Lo stesso vale per i tipi (distinti dagli oggetti <xref:System.Type?displayProperty=nameWithType>), i nomi dei gruppi di metodi (distinti dai metodi specifici) e le funzioni di accesso agli eventi [add](../../../csharp/language-reference/keywords/add.md) e [remove](../../../csharp/language-reference/keywords/remove.md).  
+ Nella maggior parte dei contesti in cui si usano le espressioni, ad esempio in istruzioni o parametri di metodo, l'espressione deve restituire un valore. Se x e y sono numeri interi, l'espressione `x + y` restituisce un valore numerico. L'espressione `new MyClass()` restituisce un riferimento a una nuova istanza di una classe `MyClass`. L'espressione `myClass.ToString()` restituisce una stringa poiché questo è il tipo restituito del metodo. Tuttavia, sebbene il nome di uno spazio dei nomi sia classificato come espressione, non restituisce un valore e quindi non può mai essere il risultato finale di un'espressione. Non è possibile passare il nome di uno spazio dei nomi a un parametro di metodo né usarlo in una nuova espressione o assegnarlo a una variabile. È possibile usarlo solo in un'espressione più ampia come sottoespressione. Lo stesso vale per i tipi (distinti dagli oggetti <xref:System.Type?displayProperty=nameWithType>), i nomi dei gruppi di metodi (distinti dai metodi specifici) e le funzioni di accesso agli eventi [add](../../../csharp/language-reference/keywords/add.md) e [remove](../../../csharp/language-reference/keywords/remove.md).  
   
  Ad ogni valore è associato un tipo. Ad esempio, se x e y sono entrambi variabili di tipo `int`, anche il valore dell'espressione `x + y` è di tipo `int`. Se il valore viene assegnato a una variabile di tipo diverso o se x e y sono tipi diversi, vengono applicate le regole di conversione del tipo. Per altre informazioni sul funzionamento di tali conversioni, vedere [Cast e conversioni di tipi](../../../csharp/programming-guide/types/casting-and-type-conversions.md).  
   

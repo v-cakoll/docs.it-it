@@ -1,5 +1,5 @@
 ---
-title: Uso di una libreria .NET Standard in Visual Studio 2017
+title: Usare una libreria .NET Standard in Visual Studio 2017
 description: Compilare un'applicazione .NET Core che chiama i membri di un'altra libreria di classi con Visual Studio 2017.
 author: BillWagner
 ms.author: wiwagn
@@ -8,14 +8,14 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: ccf8d33b1017c3def137de7daec4373bfeec6305
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 7689d45b341dbe9dbfae40beec3a7663e2bd0366
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168891"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362392"
 ---
-# <a name="consuming-a-net-standard-library-in-visual-studio-2017"></a>Uso di una libreria .NET Standard in Visual Studio 2017
+# <a name="consume-a-net-standard-library-in-visual-studio-2017"></a>Usare una libreria .NET Standard in Visual Studio 2017
 
 Dopo aver creato una libreria di classi .NET Standard seguendo i passaggi riportati in [Creazione di una libreria di classi con C# e .NET Core in Visual Studio 2017](./library-with-visual-studio.md) o [Compilazione di una libreria di classi con Visual Basic e .NET Core in Visual Studio 2017](vb-library-with-visual-studio.md), dopo averla testata in [Test di una libreria di classi con .NET Core in Visual Studio 2017](testing-library-with-visual-studio.md) e dopo aver compilato una versione di rilascio della libreria, il passaggio successivo consiste nel rendere tale libreria disponibile per i chiamanti. Questa operazione può essere eseguita in due modi diversi:
 

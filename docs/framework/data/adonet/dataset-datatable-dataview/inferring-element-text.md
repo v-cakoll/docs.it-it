@@ -2,12 +2,12 @@
 title: Deduzione del testo dell'elemento
 ms.date: 03/30/2017
 ms.assetid: 789799e5-716f-459f-a168-76c5cf22178b
-ms.openlocfilehash: b70f76d2702ebcb098c64ea84900b723fbc137ab
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d457985bfbec924748d1a418e318609b6837b9d2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516494"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745161"
 ---
 # <a name="inferring-element-text"></a>Deduzione del testo dell'elemento
 Se un elemento contiene testo e non contiene elementi figlio da inferire come tabelle, ad esempio (elementi con attributi) o elementi ripetuti, una nuova colonna con il nome **TableName_Text** verranno aggiunti alla tabella inferita per l'elemento. Il testo contenuto nell'elemento viene aggiunto a una riga della tabella e archiviato nella nuova colonna. Il **ColumnMapping** della nuova colonna verrà impostata su **MappingType**.  
@@ -22,9 +22,9 @@ Se un elemento contiene testo e non contiene elementi figlio da inferire come ta
   
  Il processo di inferenza genererà una tabella denominata **Element1** con due colonne: **attr1** e **Element1_Text**. Il **ColumnMapping** proprietà delle **attr1** colonna verrà impostata su **MappingType**. Il **ColumnMapping** proprietà delle **Element1_Text** colonna verrà impostata su **MappingType**.  
   
- **Set di dati:** DocumentElement  
+ **DataSet:** DocumentElement  
   
- **Tabella:** Element1  
+ **tavolo:** Element1  
   
 |attr1|Element1_Text|  
 |-----------|--------------------|  
@@ -42,18 +42,18 @@ Se un elemento contiene testo e non contiene elementi figlio da inferire come ta
   
  Il processo di inferenza genererà una tabella denominata **Element1** con una sola colonna denominata **ChildElement1**. Il testo per il **ChildElement1** elemento verrà incluso in una riga nella tabella. Il testo rimanente verrà ignorato. Il **ColumnMapping** proprietà delle **ChildElement1** colonna verrà impostata su **MappingType**.  
   
- **Set di dati:** DocumentElement  
+ **DataSet:** DocumentElement  
   
- **Tabella:** Element1  
+ **tavolo:** Element1  
   
 |ChildElement1|  
 |-------------------|  
 |Text2|  
   
-## <a name="see-also"></a>Vedere anche  
- [Deduzione della struttura relazionale di DataSet da XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)  
- [Caricamento di un oggetto DataSet da XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)  
- [Caricamento delle informazioni dello schema DataSet da XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)  
- [Uso di XML in un set di dati](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
- [Oggetti DataSet, DataTable e DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vedere anche
+- [Deduzione della struttura relazionale di DataSet da XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)
+- [Caricamento di un oggetto DataSet da XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
+- [Caricamento delle informazioni dello schema DataSet da XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)
+- [Uso di XML in un set di dati](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
+- [Oggetti DataSet, DataTable e DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

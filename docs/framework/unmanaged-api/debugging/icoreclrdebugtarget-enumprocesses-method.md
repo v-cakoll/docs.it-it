@@ -19,12 +19,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c09b70b5afb0561d32e55dd89df6cac083abc068
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 98758ce2c1fb0373ce5a94ad153c0f07144616e7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422016"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54729904"
 ---
 # <a name="icoreclrdebugtargetenumprocesses-method"></a>Metodo ICoreClrDebugTarget::EnumProcesses
 Enumera i processi in esecuzione in un computer remoto.  
@@ -56,16 +56,16 @@ HRESULT EnumProcesses (
  Altri errori.  
   
 ## <a name="remarks"></a>Note  
- Per liberare la memoria allocata da questo metodo, chiamare il [ICoreClrDebugTarget:: FreeMemory](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-freememory-method.md) metodo.  
+ Per liberare la memoria allocata da questo metodo, chiamare il [ICoreClrDebugTarget:: FreeMemory](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-freememory-method.md) (metodo).  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** coreclrremotedebugginginterfaces. H  
+ **Intestazione:** CoreClrRemoteDebuggingInterfaces.h  
   
- **Libreria:** mscordbi_macx86.dll  
+ **Library:** mscordbi_macx86.dll  
   
  **Versioni di .NET framework:** 3.5 SP1  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ICoreClrDebugTarget](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ICoreClrDebugTarget](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md)

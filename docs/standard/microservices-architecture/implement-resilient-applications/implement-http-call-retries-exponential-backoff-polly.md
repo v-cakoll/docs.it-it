@@ -1,15 +1,15 @@
 ---
 title: Implementazione dei tentativi di chiamate HTTP con backoff esponenziale con Polly
-description: Informazioni su come gestire gli errori HTTP con Polly e HttpClientFactory
+description: Informazioni su come gestire gli errori HTTP con Polly e HttpClientFactory.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 06/10/2018
-ms.openlocfilehash: 78de1440721e83459e455f5c31d10e52a1d3b1b6
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 10/16/2018
+ms.openlocfilehash: 25b816cb56c30545b8d67986817f51e17b2ff770
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143987"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362756"
 ---
 # <a name="implement-http-call-retries-with-exponential-backoff-with-httpclientfactory-and-polly-policies"></a>Implementazione dei tentativi di chiamate HTTP con backoff esponenziale con i criteri di Polly e HttpClientFactory
 
@@ -38,7 +38,7 @@ services.AddHttpClient<IBasketService, BasketService>()
 
 Il metodo **AddPolicyHandler()** aggiunge i criteri agli oggetti `HttpClient` che verranno usati. In questo caso si aggiungono i criteri di Polly per i tentativi HTTP con backoff esponenziale.
 
-Per avere un approccio più modulare, i criteri di ripetizione HTTP possono essere definiti in un metodo separato all'interno del metodo ConfigureServices(), come il codice seguente.
+Per avere un approccio più modulare, i criteri di ripetizione HTTP possono essere definiti in un metodo separato nel file `Startup.cs`, come illustrato nel codice seguente:
 
 ```csharp
 static IAsyncPolicy<HttpResponseMessage> GetRetryPolicy()
@@ -55,7 +55,7 @@ Con Polly è possibile definire i criteri di ripetizione con il numero di tentat
 
 quindi proveranno per sei volte e i secondi tra ogni tentativo saranno esponenziali, a partire da due secondi.
 
-### <a name="adding-a-jitter-strategy-to-the-retry-policy"></a>Aggiunta di una strategia di instabilità ai criteri di ripetizione
+## <a name="add-a-jitter-strategy-to-the-retry-policy"></a>Aggiungere una strategia di instabilità ai criteri di ripetizione
 
 I normali criteri di ripetizione possono influire sul sistema quando scalabilità e concorrenza sono elevate e sono presenti molti conflitti. Per risolvere i picchi di tentativi simili provenienti da molti client in caso di interruzioni parziali, una soluzione alternativa efficace consiste nell'aggiungere una strategia di instabilità all'algoritmo o ai criteri di ripetizione. Ciò può migliorare le prestazioni complessive del sistema end-to-end grazie all'aggiunta di casualità nel backoff esponenziale. Permette di diluire i picchi quando si verificano problemi. Quando si usano criteri Polly semplici, il codice per implementare l'instabilità potrebbe somigliare a quello nell'esempio seguente:
 
@@ -71,19 +71,17 @@ Policy
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
--   **Retry pattern**
-    [*https://docs.microsoft.com/azure/architecture/patterns/retry*](https://docs.microsoft.com/azure/architecture/patterns/retry) (Modello di ripetizione)
+- **Modello di ripetizione dei tentativi**\
+  [*https://docs.microsoft.com/azure/architecture/patterns/retry*](/azure/architecture/patterns/retry)
 
--   **Polly e HttpClientFactory**
-    [*https://github.com/App-vNext/Polly/wiki/Polly-and-HttpClientFactory*](https://github.com/App-vNext/Polly/wiki/Polly-and-HttpClientFactory)
+- **Polly e HttpClientFactory**\
+  [*https://github.com/App-vNext/Polly/wiki/Polly-and-HttpClientFactory*](https://github.com/App-vNext/Polly/wiki/Polly-and-HttpClientFactory)
 
--   **Polly (libreria .NET con funzionalità di resilienza e di gestione degli errori temporanei)**
+- **Polly (libreria .NET con funzionalità di resilienza e gestione degli errori temporanei)**\
+  [*https://github.com/App-vNext/Polly*](https://github.com/App-vNext/Polly)
 
-    [*https://github.com/App-vNext/Polly*](https://github.com/App-vNext/Polly)
-
--   **Marc Brooker. Jitter: Making Things Better With Randomness** (Instabilità: eseguire operazioni meglio con la casualità)
-
-    [*https://brooker.co.za/blog/2015/03/21/backoff.html*](https://brooker.co.za/blog/2015/03/21/backoff.html)
+- **Marc Brooker. Jitter: Making Things Better With Randomness**\ (Instabilità: come migliorare l'esecuzione con la casualità)
+  [*https://brooker.co.za/blog/2015/03/21/backoff.html*](https://brooker.co.za/blog/2015/03/21/backoff.html)
 
 >[!div class="step-by-step"]
 >[Precedente](explore-custom-http-call-retries-exponential-backoff.md)

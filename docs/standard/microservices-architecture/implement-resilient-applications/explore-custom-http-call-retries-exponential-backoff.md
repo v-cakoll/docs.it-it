@@ -1,23 +1,23 @@
 ---
 title: Esplorazione dei tentativi di chiamate HTTP personalizzate con backoff esponenziale
-description: Informazioni su come è possibile implementare, partendo da zero, i tentativi di chiamata HTTP con backoff esponenziale per gestire possibili scenari di errore HTTP.
+description: Informazioni su come implementare da zero i tentativi di chiamata HTTP con backoff esponenziale per gestire possibili scenari di errore HTTP.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 06/08/2018
-ms.openlocfilehash: b7aaad9199bb275f45fd088a6207d707e8e5751c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 10/16/2018
+ms.openlocfilehash: fdbc09cddde34cb8897e1d5b105cb15c863b59ce
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145098"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362249"
 ---
 # <a name="explore-custom-http-call-retries-with-exponential-backoff"></a>Esplorazione dei tentativi di chiamate HTTP personalizzate con backoff esponenziale
 
 Per creare microservizi resilienti, è necessario gestire i possibili scenari di errore HTTP. Un modo di gestire tali errori, ma non consigliabile, è quello di creare la propria implementazione di tentativi con il backoff esponenziale.
 
-**Nota importante:** questa sezione illustra come è possibile creare il proprio codice personalizzato per implementare i tentativi di chiamata HTTP. Tuttavia, non è consigliabile eseguire questa operazione da soli, ma avvalersi di un meccanismo potente e affidabile e più semplice da usare come `HttpClientFactory` con Polly, disponibile a partire da .NET Core 2.1. Questi approcci consigliati sono illustrati nelle sezioni successive. 
+**Nota importante:** questa sezione illustra come creare il proprio codice personalizzato per implementare i tentativi di chiamata HTTP. Tuttavia è consigliabile non eseguire questa operazione da soli, ma avvalersi di un meccanismo potente e affidabile e più semplice da usare come `HttpClientFactory` con Polly, disponibile a partire da .NET Core 2.1. Questi approcci consigliati sono illustrati nelle sezioni successive.
 
-Per iniziare, è possibile implementare codice personalizzato con una classe di utilità per il backoff esponenziale come in [RetryWithExponentialBackoff.cs](https://gist.github.com/CESARDELATORRE/6d7f647b29e55fdc219ee1fd2babb260) e del codice come quello riportato di seguito (disponibile anche in questo [repository in GitHub](https://gist.github.com/CESARDELATORRE/d80c6423a1aebaffaf387469f5194f5b)).
+Per iniziare, è possibile implementare codice personalizzato con una classe di utilità per il backoff esponenziale, come in [RetryWithExponentialBackoff.cs](https://gist.github.com/CESARDELATORRE/6d7f647b29e55fdc219ee1fd2babb260), e anche di codice come quello riportato di seguito.
 
 ```csharp
 public sealed class RetryWithExponentialBackoff
@@ -113,8 +113,7 @@ public async Task<Catalog> GetCatalogItems(int page,int take, int? brand, int? t
 }
 ```
 
-Ricordare che questo codice è adatto solo come modello di verifica. Le sezioni successive illustrano come usare approcci più sofisticati, anche se più semplici, tramite HttpClientFactory.
-HttpClientFactory è disponibile a partire dalla versione di .NET Core 2.1, con le librerie di resilienza collaudate come Polly. 
+Ricordare che questo codice è adatto solo come modello di verifica. Le sezioni successive illustrano come usare approcci più sofisticati, anche se più semplici, tramite HttpClientFactory. HttpClientFactory è disponibile a partire dalla versione di .NET Core 2.1, con le librerie di resilienza collaudate come Polly.
 
 >[!div class="step-by-step"]
 >[Precedente](implement-resilient-entity-framework-core-sql-connections.md)

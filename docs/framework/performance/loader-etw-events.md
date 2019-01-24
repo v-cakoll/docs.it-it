@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d4746e9e7c8c83caf09ccf51749e9e3cbe69ec52
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3878821840adc272829f57fbac090e958619f3fb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397429"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54579004"
 ---
 # <a name="loader-etw-events"></a>Eventi ETW del caricatore
 <a name="top"></a> Questi eventi raccolgono le informazioni relative al caricamento e allo scaricamento di domini applicazioni, assembly e moduli.  
@@ -55,7 +55,7 @@ ms.locfileid: "33397429"
 |Nome campo|Tipo di dati|Descrizione|  
 |----------------|---------------|-----------------|  
 |AppDomainID|win:UInt64|Identificatore univoco per un dominio applicazioni.|  
-|AppDomainFlags|win:UInt32|0x1: dominio predefinito.<br /><br /> 0x2: eseguibile.<br /><br /> 0x4: dominio applicazioni, bit 28-31: condivisione dei criteri di questo dominio.<br /><br /> 0: dominio condiviso.|  
+|AppDomainFlags|win:UInt32|0x1: Dominio predefinito.<br /><br /> 0x2: File eseguibile.<br /><br /> 0x4: Application domain, bit 28-31: Condivisione dei criteri di questo dominio.<br /><br /> 0: Un ambiente condiviso.|  
 |AppDomainName|win:UnicodeString|Nome descrittivo del dominio applicazioni. Può cambiare nel corso del processo.|  
 |AppDomainIndex|win:UInt32|Indice di questo dominio applicazioni.|  
 |ClrInstanceID|win:UInt16|ID univoco per l'istanza di CLR o CoreCLR.|  
@@ -88,7 +88,7 @@ ms.locfileid: "33397429"
 |AssemblyID|win:UInt64|ID univoco per l'assembly.|  
 |AppDomainID|win:UInt64|ID del dominio dell'assembly.|  
 |BindingID|win:UInt64|ID che identifica univocamente l'associazione di assembly.|  
-|AssemblyFlags|win:UInt32|0x1: assembly indipendente dal dominio.<br /><br /> 0x2: assembly dinamico.<br /><br /> 0x4: assembly con immagine nativa.<br /><br /> 0x8: assembly ritirabile.|  
+|AssemblyFlags|win:UInt32|0x1: Assembly indipendente dal dominio.<br /><br /> 0x2: Assembly dinamico.<br /><br /> 0x4: Assembly con immagine nativa.<br /><br /> 0x8: Assembly ritirabile.|  
 |AssemblyName|win:UnicodeString|Nome completo dell'assembly.|  
 |ClrInstanceID|win:UInt16|ID univoco per l'istanza di CLR o CoreCLR.|  
   
@@ -120,7 +120,7 @@ ms.locfileid: "33397429"
 |----------------|---------------|-----------------|  
 |ModuleID|win:UInt64|ID univoco per il modulo.|  
 |AssemblyID|win:UInt64|ID dell'assembly in cui si trova il modulo.|  
-|ModuleFlags|win:UInt32|0x1: modulo indipendente dal dominio.<br /><br /> 0x2: modulo con immagine nativa.<br /><br /> 0x4: modulo dinamico.<br /><br /> 0x8: modulo del manifesto.|  
+|ModuleFlags|win:UInt32|0x1: Modulo indipendente dal dominio.<br /><br /> 0x2: Modulo dispone di un'immagine nativa.<br /><br /> 0x4: Modulo dinamico.<br /><br /> 0x8: Modulo del manifesto.|  
 |Reserved1|win:UInt32|Campo riservato.|  
 |ModuleILPath|win:UnicodeString|Percorso dell'immagine Microsoft Intermediate Language (MSIL) per il modulo oppure nome del modulo dinamico se si tratta di un assembly dinamico (con terminazione null).|  
 |ModuleNativePath|win:UnicodeString|Percorso dell'immagine nativa del modulo, se presente (con terminazione null).|  
@@ -167,7 +167,7 @@ ms.locfileid: "33397429"
 |ModuleID|win:UInt64|Identifica l'assembly al quale appartiene il modulo.|  
 |AssemblyID|win:UInt64|ID dell'assembly in cui si trova il modulo.|  
 |AppDomainID|win:UInt64|ID del dominio applicazioni in cui viene usato il modulo.|  
-|ModuleFlags|win:UInt32|0x1: modulo indipendente dal dominio.<br /><br /> 0x2: modulo con immagine nativa.<br /><br /> 0x4: modulo dinamico.<br /><br /> 0x8: modulo del manifesto.|  
+|ModuleFlags|win:UInt32|0x1: Modulo indipendente dal dominio.<br /><br /> 0x2: Modulo dispone di un'immagine nativa.<br /><br /> 0x4: Modulo dinamico.<br /><br /> 0x8: Modulo del manifesto.|  
 |Reserved1|win:UInt32|Campo riservato.|  
 |ModuleILPath|win:UnicodeString|Percorso dell'immagine MSIL per il modulo oppure nome del modulo dinamico se si tratta di un assembly dinamico (con terminazione null)|  
 |ModuleNativePath|win:UnicodeString|Percorso dell'immagine nativa del modulo, se presente (con terminazione null).|  
@@ -212,5 +212,5 @@ ms.locfileid: "33397429"
   
  Gli eventi di intervallo form vengono generati in un qualsiasi livello ETW maggiore o uguale a 4 e vengono classificati come eventi informativi.  
   
-## <a name="see-also"></a>Vedere anche  
- [Eventi ETW di CLR](../../../docs/framework/performance/clr-etw-events.md)
+## <a name="see-also"></a>Vedere anche
+- [Eventi ETW di CLR](../../../docs/framework/performance/clr-etw-events.md)

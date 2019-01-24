@@ -8,18 +8,19 @@ helpviewer_keywords:
 ms.assetid: e62056c6-b351-40eb-afc0-cc13fc44e45e
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 07bc0d9560546f4946d34413697fb0adcf84c58d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 232ad7527e65fd38fa471cccc917752aef766a88
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54628838"
 ---
 # <a name="custom-element-for-singletagsectionhandler"></a>Elemento personalizzato per SingleTagSectionHandler
 
-Definisce le impostazioni in una sezione di configurazione personalizzato definito da un <section> elemento e viene utilizzato il <xref:System.Configuration.SingleTagSectionHandler> classe.
+Definisce le impostazioni in una sezione di configurazione personalizzati che è definita da un <section> elemento e viene utilizzato il <xref:System.Configuration.SingleTagSectionHandler> classe.
 
 [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;*\<sectionName >*
+&nbsp;&nbsp;*\<sectionName>*
 
 ## <a name="syntax"></a>Sintassi
 
@@ -39,15 +40,15 @@ Gli attributi e valori di attributo sono definiti dall'utente.
 
 ## <a name="child-elements"></a>Elementi figlio
 
-Nessuno
+nessuno
 
 ## <a name="remarks"></a>Note
 
-Il  **\<sectionName >** è un elemento personalizzato definito da un [  **\<sezione >** ](~/docs/framework/configure-apps/file-schema/section-element.md) tag il [  **\<configSections >** ](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) elemento. Il sistema di configurazione restituisce un <xref:System.Collections.IDictionary> oggetto quando si chiama <xref:System.Configuration.Configuration.GetSection(System.String)?displayProperty=nameWithType>.
+Il  **\<sectionName >** è un elemento personalizzato definito da una [  **\<sezione >** ](~/docs/framework/configure-apps/file-schema/section-element.md) contrassegnare nel [  **\<configSections >** ](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) elemento. Il sistema di configurazione restituisce un <xref:System.Collections.IDictionary> dell'oggetto quando si chiama <xref:System.Configuration.Configuration.GetSection(System.String)?displayProperty=nameWithType>.
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente dichiara un elemento personalizzato denominato  **\<sampleSection >** che contiene le impostazioni di lettura per il <xref:System.Configuration.SingleTagSectionHandler> classe:
+L'esempio seguente dichiara un elemento personalizzato chiamato  **\<sampleSection >** che contiene le impostazioni lette dal <xref:System.Configuration.SingleTagSectionHandler> classe:
 
 ```xml
 <configuration>
@@ -63,8 +64,8 @@ Nell'esempio seguente dichiara un elemento personalizzato denominato  **\<sample
 
 ## <a name="configuration-file"></a>File di configurazione
 
-Questo elemento può essere usato nel file di configurazione dell'applicazione, i file di configurazione macchina (*Machine. config*), e *Web. config* file che non sono a livello di directory dell'applicazione.
+Questo elemento può essere usato nel file di configurazione dell'applicazione, file di configurazione computer (*Machine. config*), e *Web. config* file che non sono a livello di directory dell'applicazione.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Schema di file di configurazione per .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Schema di file di configurazione per .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)

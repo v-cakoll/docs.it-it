@@ -7,15 +7,15 @@ helpviewer_keywords:
 - customizing controls [WPF]
 - controls [WPF], customization
 ms.assetid: a3d9930e-5597-470e-a636-dcf65eac500b
-ms.openlocfilehash: 938d95c97350a513873cf8f9c5791d66e7a17e72
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2e3acf3de082db5b2cd586bed06cdb782e52d543
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551123"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54733402"
 ---
 # <a name="control-customization"></a>Personalizzazione dei controlli
-Questa categoria vengono illustrate le varie classi di base, interfacce e altri elementi e concetti utilizzati nella creazione completamente funzionale [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] controllo.  
+In questa categoria sono le varie classi di base, interfacce e altri elementi e i concetti utilizzati nella creazione di un completamente funzionale [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] controllo.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Cenni preliminari sulla modifica di controlli](../../../../docs/framework/wpf/controls/control-authoring-overview.md)  
@@ -24,5 +24,5 @@ Questa categoria vengono illustrate le varie classi di base, interfacce e altri 
  [Stili e modelli di Control](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
  [Automazione interfaccia utente di un controllo personalizzato WPF](../../../../docs/framework/wpf/controls/ui-automation-of-a-wpf-custom-control.md)  
   
-## <a name="see-also"></a>Vedere anche  
- [Applicazione di stili e modelli](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+## <a name="see-also"></a>Vedere anche
+- [Applicazione di stili e modelli](../../../../docs/framework/wpf/controls/styling-and-templating.md)

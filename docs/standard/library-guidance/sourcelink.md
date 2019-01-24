@@ -3,13 +3,13 @@ title: Librerie SourceLink e .NET
 description: Procedure consigliate per l'uso di SourceLink per migliorare il debug per le librerie .NET.
 author: jamesnk
 ms.author: mairaw
-ms.date: 10/02/2018
-ms.openlocfilehash: 3bc72e158a5773b656095f9ce58b442469f91e67
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/15/2019
+ms.openlocfilehash: be97f868e2fcfc6c45e4bbac45b033f8914f4d99
+ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128928"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54333538"
 ---
 # <a name="sourcelink"></a>SourceLink
 
@@ -35,9 +35,9 @@ Le istruzioni per l'uso di SourceLink sono reperibili nel repository GitHub [dot
 > * <xref:System.Diagnostics.DebuggerStepThroughAttribute> indica al debugger di eseguire il codice un'istruzione alla volta anziché eseguire un'istruzione nel codice.
 > * <xref:System.Diagnostics.DebuggerBrowsableAttribute> controlla se viene visualizzato un membro nelle finestre delle variabili del debugger.
 
-**✔️ VALUTARE** l'inclusione dei file di simboli (`*.pdb`) nel pacchetto NuGet principale.
+**✔️ VALUTARE** la pubblicazione dei file di simboli (`*.pdb`).
 
-> In genere, i file di simboli vengono pubblicati in un [pacchetto di simboli](./nuget.md#symbol-packages). Attualmente l'host pubblico principale per i pacchetti di simboli non supporta i file di simboli portatili (`*.pdb`) creati dai progetti in stile SDK e i pacchetti di simboli non sono utili.
+> Per altre informazioni sui file di simboli e i pacchetti di simboli, vedere [Pacchetti di simboli](./nuget.md#symbol-packages).
 
 >[!div class="step-by-step"]
 >[Precedente](dependencies.md)

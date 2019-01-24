@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: inserire virgolette in una stringa (Windows Form)'
+title: 'Procedura: Inserire virgolette in una stringa (Windows Form)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,23 +10,23 @@ helpviewer_keywords:
 - TextBox control [Windows Forms], displaying quotation marks
 - quotation marks [Windows Forms], adding to strings in text boxes
 ms.assetid: 68bdc3f3-4177-4eab-99cd-cac17a82b515
-ms.openlocfilehash: 7fcc2e8692880f1e5c2b8df807cf7943a5575c56
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 24d7ea17384a912fda454bfb1136696ab18d9843
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33534833"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54651643"
 ---
-# <a name="how-to-put-quotation-marks-in-a-string-windows-forms"></a>Procedura: inserire virgolette in una stringa (Windows Form)
+# <a name="how-to-put-quotation-marks-in-a-string-windows-forms"></a>Procedura: Inserire virgolette in una stringa (Windows Form)
 In alcuni casi è possibile racchiudere tra virgolette (" ") una stringa di testo. Ad esempio:  
   
  Ha detto, "Meritate un treat!"  
   
- In alternativa, è inoltre possibile utilizzare il <xref:Microsoft.VisualBasic.ControlChars.Quote> campo come costante.  
+ In alternativa, è anche possibile usare il <xref:Microsoft.VisualBasic.ControlChars.Quote> campo come costante.  
   
 ### <a name="to-place-quotation-marks-in-a-string-in-your-code"></a>Per inserire le virgolette in una stringa nel codice  
   
-1.  In Visual Basic, inserire due virgolette in una riga come virgolette incorporate. In Visual c# e [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)], inserire la sequenza di escape \\"come virgolette incorporate. Ad esempio, per creare la stringa precedente, usare il codice seguente.  
+1.  In Visual Basic, inserire due virgolette in una riga come virgolette incorporate. Nell'oggetto visivo C# e [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)], inserire la sequenza di escape \\"come virgolette incorporate. Ad esempio, per creare la stringa precedente, usare il codice seguente.  
   
     ```vb  
     Private Sub InsertQuote()  
@@ -48,9 +48,9 @@ In alcuni casi è possibile racchiudere tra virgolette (" ") una stringa di test
        }  
     ```  
   
-     oppure  
+     -oppure-  
   
-2.  Inserire il carattere ASCII o Unicode per una virgoletta. In Visual Basic, usare il carattere ASCII (34). In Visual c#, usare il carattere Unicode (\u0022).  
+2.  Inserire il carattere ASCII o Unicode per una virgoletta. In Visual Basic, usare il carattere ASCII (34). Nell'oggetto visivo C#, usare il carattere Unicode (\u0022).  
   
     ```vb  
     Private Sub InsertAscii()  
@@ -67,7 +67,7 @@ In alcuni casi è possibile racchiudere tra virgolette (" ") una stringa di test
     > [!NOTE]
     >  In questo esempio, non è possibile usare \u0022 perché non è possibile usare un nome di carattere universale che indica un carattere nel set di caratteri di base. In caso contrario, si otterrebbe C3851. Per altre informazioni, vedere l'[L'errore del compilatore C3851](/cpp/error-messages/compiler-errors-2/compiler-error-c3851).  
   
-     oppure  
+     -oppure-  
   
 3.  È anche possibile definire una costante per il carattere e usarlo se necessario.  
   
@@ -88,13 +88,13 @@ In alcuni casi è possibile racchiudere tra virgolette (" ") una stringa di test
        const_cast<String^>(quote));  
     ```  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Windows.Forms.TextBox>  
- <xref:Microsoft.VisualBasic.ControlChars.Quote>  
- [Cenni preliminari sul controllo TextBox](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)  
- [Procedura: Controllare il punto di inserimento in un controllo TextBox di Windows Form](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)  
- [Procedura: Creare una casella di testo Password con il controllo TextBox di Windows Form](../../../../docs/framework/winforms/controls/how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)  
- [Procedura: Creare una casella di testo in sola lettura](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)  
- [Procedura: Selezionare testo nel controllo TextBox di Windows Form](../../../../docs/framework/winforms/controls/how-to-select-text-in-the-windows-forms-textbox-control.md)  
- [Procedura: Visualizzare più righe nel controllo TextBox di Windows Form](../../../../docs/framework/winforms/controls/how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)  
- [Controllo TextBox](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Windows.Forms.TextBox>
+- <xref:Microsoft.VisualBasic.ControlChars.Quote>
+- [Cenni preliminari sul controllo TextBox](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)
+- [Procedura: Controllare il punto di inserimento in un controllo TextBox di Windows Form](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
+- [Procedura: Creare una casella di testo Password con il controllo TextBox di Windows Form](../../../../docs/framework/winforms/controls/how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
+- [Procedura: Creare una casella di testo di sola lettura](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)
+- [Procedura: Selezionare il testo nel controllo TextBox Windows Form](../../../../docs/framework/winforms/controls/how-to-select-text-in-the-windows-forms-textbox-control.md)
+- [Procedura: Visualizzare più righe nel controllo TextBox Windows Form](../../../../docs/framework/winforms/controls/how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
+- [Controllo TextBox](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)

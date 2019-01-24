@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: leggere i metadati delle immagini'
+title: 'Procedura: Leggere i metadati delle immagini'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,17 +8,17 @@ helpviewer_keywords:
 - metadata [Windows Forms], property item
 - metadata [Windows Forms], reading image
 ms.assetid: 72ec0b31-0be7-444a-9575-1dbcb864e0be
-ms.openlocfilehash: 92ce4eb8d51fbd25f9a129a629dc47bfb9941f34
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a22085e0bbaeda1a166c6d46b2604858fb403d8a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33526578"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54741444"
 ---
-# <a name="how-to-read-image-metadata"></a>Procedura: leggere i metadati delle immagini
-Alcuni file di immagine contengono metadati che è possibile leggere per determinare le caratteristiche dell'immagine. Ad esempio, una foto digitale potrebbe contenere metadati che è possibile leggere per determinare la marca e modello della fotocamera utilizzata per acquisire l'immagine. Con [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], è possibile leggere i metadati esistenti e ai file di immagine, è anche possibile scrivere nuovi metadati.  
+# <a name="how-to-read-image-metadata"></a>Procedura: Leggere i metadati delle immagini
+Alcuni file di immagine contengono metadati che è possibile leggere per determinare le caratteristiche dell'immagine. Scatta una foto digitale, ad esempio, potrebbe contenere i metadati che possono leggere per determinare la marca e modello di fotocamera usata per acquisire l'immagine. Con [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], è possibile leggere i metadati esistenti ed è anche possibile scrivere i nuovi metadati al file di immagine.  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Archivia un metadato singolo in un <xref:System.Drawing.Imaging.PropertyItem> oggetto. È possibile leggere il <xref:System.Drawing.Image.PropertyItems%2A> proprietà di un <xref:System.Drawing.Image> oggetto per recuperare tutti i metadati da un file. Il <xref:System.Drawing.Image.PropertyItems%2A> proprietà restituisce una matrice di <xref:System.Drawing.Imaging.PropertyItem> oggetti.  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Archivia un'informazione di metadati in un <xref:System.Drawing.Imaging.PropertyItem> oggetto. È possibile leggere il <xref:System.Drawing.Image.PropertyItems%2A> proprietà di un <xref:System.Drawing.Image> oggetto per recuperare tutti i metadati da un file. Il <xref:System.Drawing.Image.PropertyItems%2A> proprietà restituisce una matrice di <xref:System.Drawing.Imaging.PropertyItem> oggetti.  
   
  Oggetto <xref:System.Drawing.Imaging.PropertyItem> oggetto ha le seguenti quattro proprietà: `Id`, `Value`, `Len`, e `Type`.  
   
@@ -27,23 +27,23 @@ Alcuni file di immagine contengono metadati che è possibile leggere per determi
   
 |Valore esadecimale|Descrizione|  
 |-----------------------|-----------------|  
-|0x0320<br /><br /> 0x010F<br /><br /> 0x0110<br /><br /> 0x9003<br /><br /> 0x829A<br /><br /> 0x5090<br /><br /> 0x5091|Titolo dell'immagine<br /><br /> Produttore dell'hardware<br /><br /> Modello di apparecchiature<br /><br /> ExifDTOriginal<br /><br /> Tempo di esposizione EXIF<br /><br /> Tabella di luminanza<br /><br /> Tabella di saturazione|  
+|0x0320<br /><br /> 0x010F<br /><br /> 0x0110<br /><br /> 0x9003<br /><br /> 0x829A<br /><br /> 0x5090<br /><br /> 0x5091|Titolo dell'immagine<br /><br /> Casa produttrice dell'hardware<br /><br /> Modello delle apparecchiature<br /><br /> ExifDTOriginal<br /><br /> Tempo di esposizione EXIF<br /><br /> Tabella di luminosità<br /><br /> Tabella di cromatura|  
   
-## <a name="value"></a>Valore  
+## <a name="value"></a>Value  
  Una matrice di valori. Il formato dei valori è determinato dal <xref:System.Drawing.Imaging.PropertyItem.Type%2A> proprietà.  
   
 ## <a name="len"></a>Len  
  La lunghezza (in byte) della matrice di valori a cui punta il <xref:System.Drawing.Imaging.PropertyItem.Value%2A> proprietà.  
   
 ## <a name="type"></a>Tipo  
- Il tipo di dati dei valori nella matrice a cui punta il `Value` proprietà. I formati indicati dal `Type` i valori delle proprietà vengono visualizzati nella tabella seguente  
+ Il tipo di dati dei valori nella matrice a cui punta il `Value` proprietà. I formati indicati dal `Type` nella tabella seguente vengono visualizzati i valori delle proprietà  
   
 |Valore numerico|Descrizione|  
 |-------------------|-----------------|  
 |1|Elemento `Byte`|  
 |2|Matrice di `Byte` oggetti codificati in ASCII|  
-|3|Un integer a 16 bit|  
-|4|Intero a 32 bit|  
+|3|Un intero a 16 bit|  
+|4|Un intero a 32 bit|  
 |5|Una matrice di due `Byte` gli oggetti che rappresentano un numero razionale|  
 |6|Non utilizzato|  
 |7|Undefined|  
@@ -54,9 +54,9 @@ Alcuni file di immagine contengono metadati che è possibile leggere per determi
 ## <a name="example"></a>Esempio  
   
 ### <a name="description"></a>Descrizione  
- Esempio di codice seguente legge e visualizza le sette parti dei metadati nel file `FakePhoto.jpg`. Il secondo elemento della proprietà (indice 1) l'elenco contiene <xref:System.Drawing.Imaging.PropertyItem.Id%2A> 0x010F (produttore) e <xref:System.Drawing.Imaging.PropertyItem.Type%2A> 2 (matrice di byte con codifica ASCII). L'esempio di codice consente di visualizzare il valore dell'elemento proprietà.  
+ Esempio di codice seguente legge e visualizza i sette porzioni di metadati nel file `FakePhoto.jpg`. Il secondo elemento di proprietà (indice 1) nell'elenco contiene <xref:System.Drawing.Imaging.PropertyItem.Id%2A> 0x010F (produttrice dell'hardware) e <xref:System.Drawing.Imaging.PropertyItem.Type%2A> 2 (matrice di byte con codifica ASCII). L'esempio di codice visualizza il valore di tale elemento di proprietà.  
   
- Output del codice simile al seguente:  
+ Il codice restituisce un output simile al seguente:  
   
  `Property Item 0`  
   
@@ -121,8 +121,8 @@ Alcuni file di immagine contengono metadati che è possibile leggere per determi
  [!code-vb[System.Drawing.WorkingWithImages#51](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#51)]  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
- L'esempio precedente è progettato per l'uso con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs> `e`, un parametro del gestore eventi <xref:System.Windows.Forms.Control.Paint>. Gestire il modulo <xref:System.Windows.Forms.Control.Paint> evento e incollare questo codice nel gestore dell'evento paint. È necessario sostituire `FakePhoto.jpg` con un nome dell'immagine e un percorso valido per il sistema e l'importazione di `System.Drawing.Imaging` dello spazio dei nomi.  
+ L'esempio precedente è progettato per l'uso con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs> `e`, un parametro del gestore eventi <xref:System.Windows.Forms.Control.Paint>. Handle del modulo <xref:System.Windows.Forms.Control.Paint> evento e incollare questo codice nel gestore dell'evento paint. È necessario sostituire `FakePhoto.jpg` con un nome di immagine e un percorso valido per il sistema e l'importazione di `System.Drawing.Imaging` dello spazio dei nomi.  
   
-## <a name="see-also"></a>Vedere anche  
- [Immagini, bitmap e metafile](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
- [Utilizzo di immagini, bitmap, icone e metafile](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)
+## <a name="see-also"></a>Vedere anche
+- [Immagini, bitmap e metafile](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)
+- [Utilizzo di immagini, bitmap, icone e metafile](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)

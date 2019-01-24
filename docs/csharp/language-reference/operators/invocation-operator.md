@@ -1,7 +1,7 @@
 ---
 title: Operatore () - Riferimenti per C#
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 01/15/2019
 f1_keywords:
 - ()_CSharpKeyword
 helpviewer_keywords:
@@ -9,38 +9,51 @@ helpviewer_keywords:
 - cast operator [C#]
 - () operator [C#]
 ms.assetid: 846e1f94-8a8c-42fc-a42c-fbd38e70d8cc
-ms.openlocfilehash: 57c23dbd6ee95597514dba92e7217bdcc3e38f24
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 3a0af33739c9cb4d090842219eba4ece9700ef89
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236453"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362782"
 ---
 # <a name="-operator-c-reference"></a>Operatore () (Riferimenti per C#)
-Oltre a specificare l'ordine in cui devono essere eseguite le operazioni di un'espressione, le parentesi vengono usate per eseguire le operazioni seguenti:  
-  
-1.  Specificare i cast, ovvero le conversioni di tipi.  
-  
-     [!code-csharp[csRefOperators#1](../../../csharp/language-reference/operators/codesnippet/CSharp/invocation-operator_1.cs)]  
-  
-2.  Richiamare metodi o delegati.  
-  
-     [!code-csharp[csRefOperators#2](../../../csharp/language-reference/operators/codesnippet/CSharp/invocation-operator_2.cs)]  
-  
-## <a name="remarks"></a>Note  
- Un cast richiama l'operatore di conversione in modo esplicito da un tipo a un altro. Se tale operatore di conversione non viene definito, il cast non sarà eseguito correttamente. Per informazioni sulla definizione di un operatore di conversione, vedere [explicit](../../../csharp/language-reference/keywords/explicit.md) e [implicit](../../../csharp/language-reference/keywords/implicit.md).  
-  
- Non è possibile sottoporre l'operatore `()` a overload.  
-  
- Per altre informazioni, vedere [Cast e conversioni di tipi](../../../csharp/programming-guide/types/casting-and-type-conversions.md).  
-  
- Per altre informazioni sulla chiamata al metodo, vedere [Metodi](../../../csharp/programming-guide/classes-and-structs/methods.md).  
-  
-## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
+
+Le parentesi `()` vengono in genere usate per la chiamata di un metodo o un delegato o nelle espressioni cast.
+
+È anche possibile usare le parentesi per specificare l'ordine in cui valutare le operazioni in un'espressione. Per altre informazioni, vedere la sezione [Aggiunta di parentesi](../../programming-guide/statements-expressions-operators/operators.md#adding-parentheses) dell'articolo [Operatori](../../programming-guide/statements-expressions-operators/operators.md). Per l'elenco degli operatori ordinati in base al livello di precedenza, vedere [ Operatori C#](index.md).
+
+## <a name="method-invocation"></a>Chiamata del metodo
+
+L'esempio seguente illustra come richiamare un metodo (con o senza argomenti) e un delegato:
+
+[!code-csharp-interactive[use for invocation](~/samples/snippets/csharp/language-reference/operators/InvocationOperatorExamples.cs#Invocation)]
+
+Le parentesi si usano anche per richiamare un [costruttore](../../programming-guide/classes-and-structs/constructors.md) con un operatore [`new`](../keywords/new-operator.md).
+
+Per altre informazioni sui metodi, vedere [Metodi](../../programming-guide/classes-and-structs/methods.md). Per altre informazioni sui delegati, vedere [Delegati](../../programming-guide/delegates/index.md).
+
+## <a name="cast-expression"></a>Espressione cast
+
+Un'espressione cast con formato `(T)E` richiama un operatore di conversione per convertire il valore dell'espressione `E` nel tipo `T`. Se non esiste alcuna conversione esplicita dal tipo `E` al tipo `T`, si verifica un errore in fase di compilazione. Per informazioni su come definire un operatore di conversione, vedere gli articoli sulle parole chiave [explicit](../keywords/explicit.md) e [implicit](../keywords/implicit.md).
+
+L'esempio seguente illustra la conversione di tipi tra tipi numerici:
+
+[!code-csharp-interactive[use for cast](~/samples/snippets/csharp/language-reference/operators/InvocationOperatorExamples.cs#Cast)]
+
+Per altre informazioni sulle conversioni esplicite predefinite tra tipi numerici, vedere [Tabella delle conversioni numeriche esplicite](../keywords/explicit-numeric-conversions-table.md).
+
+Per altre informazioni, vedere [Cast e conversioni di tipi](../../programming-guide/types/casting-and-type-conversions.md) e [Operatori di conversione](../../programming-guide/statements-expressions-operators/conversion-operators.md).
+
+## <a name="operator-overloadability"></a>Overload degli operatori
+
+Non è possibile sottoporre a overload l'operatore `()`.
+
+## <a name="c-language-specification"></a>Specifiche del linguaggio C#
+
+Per altre informazioni, vedere le sezioni [Espressioni di chiamata](~/_csharplang/spec/expressions.md#invocation-expressions) e [Espressioni cast](~/_csharplang/spec/expressions.md#cast-expressions) della [specifica del linguaggio C#](../language-specification/index.md).
+
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
-- [Operatori C#](../../../csharp/language-reference/operators/index.md)
+- [Riferimenti per C#](../index.md)
+- [Guida per programmatori C#](../../programming-guide/index.md)
+- [Operatori C#](index.md)

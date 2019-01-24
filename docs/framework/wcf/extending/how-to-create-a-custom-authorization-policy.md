@@ -1,19 +1,19 @@
 ---
-title: 'Procedura: creare un criterio di autorizzazione personalizzato'
+title: 'Procedura: Creare un criterio di autorizzazione personalizzato'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 05b0549b-882d-4660-b6f0-5678543e5475
-ms.openlocfilehash: 0bacf874e09aca82b2f2685a146612cdef0673db
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: ba5d8d02d0c8d5993e1b072298aadcaa5fe0fe35
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804235"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54705904"
 ---
-# <a name="how-to-create-a-custom-authorization-policy"></a>Procedura: creare un criterio di autorizzazione personalizzato
-L'infrastruttura del modello di identità in Windows Communication Foundation (WCF) supporta un modello di autorizzazione basata sulle attestazioni. Le attestazioni vengono estratte dai token, elaborate facoltativamente dal criterio di autorizzazione personalizzato e poi collocate nella classe <xref:System.IdentityModel.Policy.AuthorizationContext> che può quindi essere esaminata per prendere decisioni in merito alle autorizzazioni. È possibile utilizzare un criterio personalizzato per trasformare le attestazioni ottenute dai token in ingresso in attestazioni previste dall'applicazione. In questo modo, il livello dell'applicazione può essere isolato dai dettagli di alle differenti attestazioni fornite dai diversi tipi di token supportati da WCF. In questo argomento viene illustrato come implementare un criterio di autorizzazione personalizzato e come aggiungerlo alla raccolta di criteri utilizzati da un servizio.  
+# <a name="how-to-create-a-custom-authorization-policy"></a>Procedura: Creare un criterio di autorizzazione personalizzato
+L'infrastruttura del modello di identità in Windows Communication Foundation (WCF) supporta un modello di autorizzazione basata sulle attestazioni. Le attestazioni vengono estratte dai token, elaborate facoltativamente dal criterio di autorizzazione personalizzato e poi collocate nella classe <xref:System.IdentityModel.Policy.AuthorizationContext> che può quindi essere esaminata per prendere decisioni in merito alle autorizzazioni. È possibile utilizzare un criterio personalizzato per trasformare le attestazioni ottenute dai token in ingresso in attestazioni previste dall'applicazione. In questo modo, il livello dell'applicazione può essere isolato dai dettagli alle differenti attestazioni fornite dai diversi tipi di token supportati da WCF. In questo argomento viene illustrato come implementare un criterio di autorizzazione personalizzato e come aggiungerlo alla raccolta di criteri utilizzati da un servizio.  
   
 ### <a name="to-implement-a-custom-authorization-policy"></a>Per implementare un criterio di autorizzazione personalizzato  
   
@@ -29,7 +29,7 @@ L'infrastruttura del modello di identità in Windows Communication Foundation (W
   
 1.  A questo metodo vengono passati due parametri: un'istanza della classe <xref:System.IdentityModel.Policy.EvaluationContext> e un riferimento all'oggetto.  
   
-2.  Se il criterio di autorizzazione personalizzato aggiunge <xref:System.IdentityModel.Claims.ClaimSet> istanze indipendentemente dal contenuto corrente del <xref:System.IdentityModel.Policy.EvaluationContext>, aggiungere ogni `ClaimSet` chiamando il <xref:System.IdentityModel.Policy.EvaluationContext.AddClaimSet%28System.IdentityModel.Policy.IAuthorizationPolicy%2CSystem.IdentityModel.Claims.ClaimSet%29> metodo e restituire `true` dal <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> metodo. La restituzione di `true` indica all'infrastruttura di autorizzazione che il criterio di autorizzazione ha eseguito la sua funzione e che non occorre chiamarlo nuovamente.  
+2.  Se il criterio di autorizzazione personalizzato aggiunge <xref:System.IdentityModel.Claims.ClaimSet> istanze indipendentemente dal contenuto corrente del <xref:System.IdentityModel.Policy.EvaluationContext>, aggiungere ogni `ClaimSet` chiamando il <xref:System.IdentityModel.Policy.EvaluationContext.AddClaimSet%28System.IdentityModel.Policy.IAuthorizationPolicy%2CSystem.IdentityModel.Claims.ClaimSet%29> metodo e restituire `true` dal <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> (metodo). La restituzione di `true` indica all'infrastruttura di autorizzazione che il criterio di autorizzazione ha eseguito la sua funzione e che non occorre chiamarlo nuovamente.  
   
 3.  Se il criterio di autorizzazione personalizzato aggiunge set di attestazioni solo quando determinate attestazioni sono già presenti in `EvaluationContext`, ricercare tali attestazioni esaminando le istanze di `ClaimSet` restituite dalla proprietà <xref:System.IdentityModel.Policy.EvaluationContext.ClaimSets%2A>. Se le attestazioni sono presenti, aggiungere i nuovi set di attestazioni chiamando il metodo <xref:System.IdentityModel.Policy.EvaluationContext.AddClaimSet%28System.IdentityModel.Policy.IAuthorizationPolicy%2CSystem.IdentityModel.Claims.ClaimSet%29> e, se non devono essere aggiunti altri set di attestazioni, restituire `true` per indicare all'infrastruttura di autorizzazione che il criterio di autorizzazione ha completato la sua funzione. Se le attestazioni non sono presenti, restituire `false` per indicare che il criterio di autorizzazione deve essere chiamato nuovamente nel caso in cui altri criteri di autorizzazione aggiungano altri set di attestazioni a `EvaluationContext`.  
   
@@ -45,8 +45,8 @@ L'infrastruttura del modello di identità in Windows Communication Foundation (W
       <behaviors>  
         <serviceAuthorization serviceAuthorizationManagerType=  
                   "Samples.MyServiceAuthorizationManager" >  
-          <authorizationPolicies>         
-            <add policyType="Samples.MyAuthorizationPolicy"  
+          <authorizationPolicies>  
+            <add policyType="Samples.MyAuthorizationPolicy" />  
           </authorizationPolicies>  
         </serviceAuthorization>  
       </behaviors>  
@@ -75,8 +75,8 @@ L'infrastruttura del modello di identità in Windows Communication Foundation (W
  [!code-csharp[c_CustomAuthPol#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customauthpol/cs/c_customauthpol.cs#5)]
  [!code-vb[c_CustomAuthPol#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customauthpol/vb/source.vb#5)]  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.ServiceAuthorizationManager>  
- [Procedura: Confrontare le attestazioni](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)  
- [Procedura: Creare un gestore autorizzazioni personalizzato per un servizio](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
- [Criteri di autorizzazione](../../../../docs/framework/wcf/samples/authorization-policy.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.ServiceModel.ServiceAuthorizationManager>
+- [Procedura: Confrontare le attestazioni](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)
+- [Procedura: Creare un gestore autorizzazioni personalizzato per un servizio](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
+- [Criteri di autorizzazione](../../../../docs/framework/wcf/samples/authorization-policy.md)

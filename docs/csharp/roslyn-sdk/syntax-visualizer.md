@@ -3,12 +3,12 @@ title: Esplorare il codice con il visualizzatore di sintassi Roslyn in Visual St
 description: Il visualizzatore di sintassi è uno strumento visivo che consente di esaminare i modelli che .NET Compiler Platform SDK genera per il codice.
 ms.date: 03/07/2018
 ms.custom: mvc, vs-dotnet
-ms.openlocfilehash: 9b283f656b5c468a2270abe9818a89218ce63d16
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 2d1c6d0b9f65324ee2eadafaa7f98360f37e7bb7
+ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143564"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54307201"
 ---
 # <a name="explore-code-with-the-roslyn-syntax-visualizer-in-visual-studio"></a>Esplorare il codice con il visualizzatore di sintassi Roslyn in Visual Studio
 
@@ -80,13 +80,13 @@ Di seguito è raffigurato il layout di ancoraggio da usare con la finestra degli
 
 È anche possibile inserire la finestra del grafico di sintassi in un secondo monitor, in caso di configurazione a doppio monitor.
 
-# <a name="inspecting-semantics"></a>Analisi della semantica
+## <a name="inspecting-semantics"></a>Analisi della semantica
 
 Il visualizzatore di sintassi consente di eseguire un'ispezione elementare di simboli e informazioni semantiche. Digitare `double x = 1 + 1;` all'interno di Main () nell'esempio di C#. A questo punto, selezionare l'espressione `1 + 1` nella finestra dell'editor del codice. Il visualizzatore evidenzierà il nodo **AddExpression** nel visualizzatore. Fare clic con il pulsante destro sul nodo **AddExpression** e fare clic su **View Symbol (if any)** (Visualizza simbolo (se esiste)). Si noti che la maggior parte delle voci di menu usa il qualificatore "se esiste". Il visualizzatore di sintassi controlla le proprietà di un nodo, incluse le proprietà che possono non essere presenti per tutti i nodi. 
 
-La griglia delle proprietà nel visualizzatore viene aggiornata come illustrato nella figura seguente. Il simbolo dell'espressione è un oggetto **SynthesizedIntrinsicOperatorSymbol** con **Kind = Method**.
+La griglia delle proprietà nel visualizzatore viene aggiornata come illustrato nella figura seguente: Il simbolo dell'espressione è un **SynthesizedIntrinsicOperatorSymbol** con **Kind = Method** (Tipo = Metodo).
 
-![Proprietà di Symbol](media/syntax-visualizer/symbol-properties.png)
+![Proprietà del simbolo](media/syntax-visualizer/symbol-properties.png)
 
 Provare a selezionare **View TypeSymbol (if any)** (Visualizza TypeSymbol (se esiste)) per lo stesso nodo **AddExpression**. La griglia delle proprietà nel visualizzatore viene aggiornata come illustrato nella figura seguente e indica che il tipo dell'espressione selezionata è `Int32`.
 

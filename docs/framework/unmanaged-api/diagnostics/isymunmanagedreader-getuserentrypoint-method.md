@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7b4c334d82320066bf9459907660fe6b7e2acefd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a8519577bb2b9d3ff8fa2138ba007d04d9fde159
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425321"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730152"
 ---
 # <a name="isymunmanagedreadergetuserentrypoint-method"></a>Metodo ISymUnmanagedReader::GetUserEntryPoint
-Restituisce il metodo che è stato specificato come punto di ingresso utente per il modulo, se presente. Ad esempio, questo metodo potrebbe essere metodo principale dell'utente anziché gli stub generato dal compilatore prima del metodo principale.  
+Restituisce il metodo che è stato specificato come punto di ingresso utente per il modulo, se presente. Questo metodo, ad esempio, potrebbe essere il metodo dell'utente principale anziché stub generato dal compilatore prima del metodo main.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,10 +39,10 @@ HRESULT GetUserEntryPoint (
  [out] Puntatore a una variabile che riceve il punto di ingresso.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK se il metodo ha esito positivo. in caso contrario, E_FAIL o un altro codice di errore.  
+ S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o qualche altro codice di errore.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** CorSym. idl, CorSym.h  
+ **Intestazione:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 933694a6a033dbfe817e3848b9008f05b86f51f3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 668c7298a9543cce93cce324672334c9ec1e8cd2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449012"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54732817"
 ---
 # <a name="imetadataimportenummethods-method"></a>Metodo IMetaDataImport::EnumMethods
 Enumera i token MethodDef che rappresentano i metodi del tipo specificato.  
@@ -50,7 +50,7 @@ HRESULT EnumMethods (
  [out] Matrice in cui archiviare i token MethodDef.  
   
  `cMax`  
- [in] La dimensione massima di MethodDef `rMethods` matrice.  
+ [in] Le dimensioni massime di MethodDef `rMethods` matrice.  
   
  `pcTokens`  
  [out] Il numero di token MethodDef restituiti in `rMethods`.  
@@ -60,17 +60,17 @@ HRESULT EnumMethods (
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
 |`S_OK`|`EnumMethods` stato restituito correttamente.|  
-|`S_FALSE`|Non sono presenti token MethodDef da enumerare. In tal caso, `pcTokens` è zero.|  
+|`S_FALSE`|Non sono presenti token MethodDef per enumerare. In tal caso, `pcTokens` è uguale a zero.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
- **Libreria:** inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [Interfaccia IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Interfaccia IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

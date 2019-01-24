@@ -16,11 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2f4382c7fa85008de9e67ad21c467402bae4ac90
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b40533553ccd7a3339a8a3ee0c8b47879efd38ef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54742461"
 ---
 # <a name="corprfsuspendreason-enumeration"></a>Enumerazione COR_PRF_SUSPEND_REASON
 Indica il motivo per cui il runtime è sospeso.  
@@ -43,26 +44,26 @@ typedef enum {
   
 |Membro|Descrizione|  
 |------------|-----------------|  
-|`COR_PRF_FIELD_SUSPEND_OTHER`|Il runtime è sospeso per un motivo non specificato.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_GC`|Il runtime è sospeso per una richiesta di garbage collection del servizio.<br /><br /> I callback relativi a garbage si verificano tra il [ICorProfilerCallback:: RuntimeSuspendFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendfinished-method.md) e [ICorProfilerCallback:: RuntimeResumeStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumestarted-method.md) callback.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_APPDOMAIN_SHUTDOWN`|Il runtime è stato sospeso in modo che un `AppDomain` può essere arrestato.<br /><br /> Durante la fase di esecuzione viene sospesa, il runtime determina quali thread si trovano nel `AppDomain` ovvero viene chiuso e impostarle per l'interruzione quando viene ripristinata. Esistono alcun `AppDomain`-callback specifici durante la sospensione.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_CODE_PITCHING`|La fase di esecuzione viene sospesa in modo che può verificarsi lancio del codice.<br /><br /> Lancio del codice viene utilizzata solo quando il compilatore di just-in-time (JIT) è attivo con abilitato lancio del codice. Codice di callback pitching si verificano tra il `ICorProfilerCallback::RuntimeSuspendFinished` e `ICorProfilerCallback::RuntimeResumeStarted` callback. **Nota:** JIT CLR non passo le funzioni in .NET Framework versione 2.0, questo valore non viene usata in 2.0.|  
+|`COR_PRF_FIELD_SUSPEND_OTHER`|Il runtime viene sospeso per un motivo non specificato.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_GC`|Il runtime viene sospeso per la manutenzione di una richiesta di garbage collection.<br /><br /> I callback relative alla raccolta garbage verificano tra i [RuntimeSuspendFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendfinished-method.md) e [RuntimeResumeStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumestarted-method.md) i callback.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_APPDOMAIN_SHUTDOWN`|La fase di esecuzione viene sospesa in modo che un `AppDomain` possono essere arrestate.<br /><br /> Durante la fase di esecuzione viene sospesa, il runtime determina quali thread sono nel `AppDomain` vale a dire viene arrestato e impostarli in modo che abort durante la ripresa. Esistono nessun `AppDomain`-callback specifico durante la sospensione.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_CODE_PITCHING`|La fase di esecuzione viene sospesa in modo che può verificarsi lancio del codice.<br /><br /> Tale tecnica di codice viene utilizzata solo quando il compilatore JIT just-in-time è attivo con code pitching attivato. Il codice callback pitching verificano tra i `ICorProfilerCallback::RuntimeSuspendFinished` e `ICorProfilerCallback::RuntimeResumeStarted` callback. **Nota:**  Il CLR JIT non lanciano funzioni in .NET Framework versione 2.0, in modo che questo valore non viene utilizzato in 2.0.|  
 |`COR_PRF_FIELD_SUSPEND_FOR_SHUTDOWN`|La fase di esecuzione viene sospesa in modo da poter essere arrestato. È necessario sospendere tutti i thread per completare l'operazione.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_INPROC_DEBUGGER`|Il runtime è sospeso per il debug in-process.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_GC_PREP`|Il runtime è sospeso per preparare per una garbage collection.|  
-|`COR_PRF_SUSPEND_FOR_REJIT`|Il runtime è sospeso per la ricompilazione JIT.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_INPROC_DEBUGGER`|Il runtime viene sospeso per il debug in-process.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_GC_PREP`|Il runtime viene sospeso per prepararsi per una garbage collection.|  
+|`COR_PRF_SUSPEND_FOR_REJIT`|Il runtime viene sospeso per la ricompilazione JIT.|  
   
 ## <a name="remarks"></a>Note  
- Tutti i thread di runtime nel codice non gestito è possibile continuare l'esecuzione fino a quando non si tenta di immettere nuovamente la fase di esecuzione, a quel punto si verrà inoltre sospeso fino a quando il runtime riprende. Questo vale anche per i nuovi thread che accedono al runtime. Tutti i thread nel runtime vengono sospesi immediatamente se si trovano nel codice che possono essere interrotte o richiesto di sospendere l'esecuzione quando raggiungono codice.  
+ Sono consentiti tutti i thread di runtime in codice non gestito per continuare l'esecuzione fino a quando non tentano di immettere nuovamente la fase di esecuzione, a questo punto che verranno inoltre sospese fino a quando il runtime riprende. Questo vale anche per nuovi thread che accedono al runtime. Tutti i thread all'interno del runtime vengono sospesi immediatamente se si trovano nel codice che possono essere interrotte o dover sospendere l'esecuzione al raggiungimento di codice che possono essere interrotte.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Enumerazioni di profilatura](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+## <a name="see-also"></a>Vedere anche
+- [Enumerazioni di profilatura](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

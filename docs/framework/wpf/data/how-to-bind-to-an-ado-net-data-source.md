@@ -1,5 +1,5 @@
 ---
-title: "Procedura: eseguire l'associazione a un'origine dati ADO.NET"
+title: "Procedura: Eseguire l'associazione a un'origine dati ADO.NET"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - ADO.NET data sources [WPF], binding to
 - binding [WPF], to ADO.NET data sources
 ms.assetid: a70c6d7b-7b38-4fdf-b655-4804db7c8315
-ms.openlocfilehash: c9e16b9fd100eb9aec7bee2f94307aa80371d5ec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 774262b33ceda3e8881fb92bcbc70a3dd5361f39
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556861"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54746648"
 ---
-# <a name="how-to-bind-to-an-adonet-data-source"></a>Procedura: eseguire l'associazione a un'origine dati ADO.NET
+# <a name="how-to-bind-to-an-adonet-data-source"></a>Procedura: Eseguire l'associazione a un'origine dati ADO.NET
 In questo esempio viene illustrato come associare un [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <xref:System.Windows.Controls.ListBox> il controllo a un [!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)] `DataSet`.  
   
 ## <a name="example"></a>Esempio  
@@ -25,17 +25,17 @@ In questo esempio viene illustrato come associare un [!INCLUDE[TLA#tla_winclient
  [!code-csharp[ADODataSet#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ADODataSet/CSharp/Window1.xaml.cs#1)]
  [!code-vb[ADODataSet#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ADODataSet/VisualBasic/Window1.xaml.vb#1)]  
   
- È possibile associare il <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> proprietà del <xref:System.Windows.Controls.ListBox> a `BookTable` del `DataSet`:  
+ È quindi possibile associare il <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> proprietà del <xref:System.Windows.Controls.ListBox> al `BookTable` del `DataSet`:  
   
  [!code-xaml[ADODataSet#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ADODataSet/CSharp/Window1.xaml#2)]  
   
- `BookItemTemplate` è il <xref:System.Windows.DataTemplate> che definisce la modalità con cui i dati vengono visualizzati:  
+ `BookItemTemplate` è il <xref:System.Windows.DataTemplate> che definisce come vengono visualizzati i dati:  
   
  [!code-xaml[ADODataSet#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ADODataSet/CSharp/Window1.xaml#3)]  
   
- `IntColorConverter` converte un oggetto `int` in un colore. Con l'utilizzo di questo convertitore, il <xref:System.Windows.Controls.TextBlock.Background%2A> colore del terzo <xref:System.Windows.Controls.TextBlock> è di colore verde se il valore di `NumPages` è minore di 350 in caso contrario. L'implementazione del convertitore non viene visualizzata qui.  
+ `IntColorConverter` converte un oggetto `int` in un colore. Con l'uso di questo convertitore, il <xref:System.Windows.Controls.TextBlock.Background%2A> colori del terzo <xref:System.Windows.Controls.TextBlock> viene visualizzato in verde se il valore di `NumPages` è inferiore a 350 rossa in caso contrario. L'implementazione del convertitore non viene visualizzata qui.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Windows.Data.BindingListCollectionView>  
- [Panoramica sul data binding](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Procedure relative alle proprietà](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Windows.Data.BindingListCollectionView>
+- [Panoramica sul data binding](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [Procedure relative alle proprietà](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

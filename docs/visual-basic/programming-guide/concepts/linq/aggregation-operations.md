@@ -2,11 +2,12 @@
 title: Operazioni di aggregazione (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 0f47e92c-5dd2-4007-baf4-c5fe5dc3b4a8
-ms.openlocfilehash: 7e6f838a340283f6fbcd0db4d7d6a089aae9a5aa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7daf4f653d3796eaa3ae426fdbf86a89ebdd2dc7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54735383"
 ---
 # <a name="aggregation-operations-visual-basic"></a>Operazioni di aggregazione (Visual Basic)
 Un'operazione di aggregazione calcola un singolo valore da una raccolta di valori. Un esempio di operazione di aggregazione è rappresentato dal calcolo della temperatura media giornaliera dai valori della temperatura giornaliera di un mese.  
@@ -32,41 +33,41 @@ Un'operazione di aggregazione calcola un singolo valore da una raccolta di valor
 ## <a name="query-expression-syntax-examples"></a>Esempi di sintassi delle espressioni di query  
   
 ### <a name="average"></a>Media  
- Nell'esempio di codice viene illustrato come utilizzare il `Aggregate Into Average` clausola in Visual Basic per il calcolo della temperatura media in una matrice di numeri che rappresentano le temperature.  
+ Il codice seguente viene illustrato come utilizzare il `Aggregate Into Average` clausola in Visual Basic per calcolare la temperatura media in una matrice di numeri che rappresentano le temperature.  
   
  [!code-vb[CsLINQAggregating#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/aggregation-operations_1.vb)]  
   
 ### <a name="count"></a>Conteggio  
- Nell'esempio di codice viene illustrato come utilizzare il `Aggregate Into Count` clausola in Visual Basic per contare il numero di valori in una matrice che sono maggiori o uguali a 80.  
+ Il codice seguente viene illustrato come utilizzare il `Aggregate Into Count` clausola in Visual Basic per contare il numero di valori in una matrice che sono maggiori o uguali a 80.  
   
  [!code-vb[CsLINQAggregating#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/aggregation-operations_2.vb)]  
   
 ### <a name="longcount"></a>LongCount  
- Nell'esempio di codice viene illustrato come utilizzare il `Aggregate Into LongCount` clausola per contare il numero di valori in una matrice.  
+ Il codice seguente viene illustrato come utilizzare il `Aggregate Into LongCount` clausola per contare il numero di valori in una matrice.  
   
  [!code-vb[CsLINQAggregating#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/aggregation-operations_3.vb)]  
   
 ### <a name="max"></a>Max  
- Nell'esempio di codice viene illustrato come utilizzare il `Aggregate Into Max` clausola per calcolare la temperatura massima in una matrice di numeri che rappresentano le temperature.  
+ Il codice seguente viene illustrato come utilizzare il `Aggregate Into Max` clausola per la quale calcolare la temperatura massima in una matrice di numeri che rappresentano le temperature.  
   
  [!code-vb[CsLINQAggregating#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/aggregation-operations_4.vb)]  
   
 ### <a name="min"></a>Min  
- Nell'esempio di codice viene illustrato come utilizzare il `Aggregate Into Min` clausola per calcolare la temperatura minima in una matrice di numeri che rappresentano le temperature.  
+ Il codice seguente viene illustrato come utilizzare il `Aggregate Into Min` clausola per la quale calcolare la temperatura minima in una matrice di numeri che rappresentano le temperature.  
   
  [!code-vb[CsLINQAggregating#5](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/aggregation-operations_5.vb)]  
   
 ### <a name="sum"></a>Sum  
- Nell'esempio di codice viene illustrato come utilizzare il `Aggregate Into Sum` clausola per calcolare la quantità totale di spesa da una matrice di valori che rappresentano le spese.  
+ Il codice seguente viene illustrato come utilizzare il `Aggregate Into Sum` clausola per calcolare l'importo di spesa totale da una matrice di valori che rappresentano le spese.  
   
  [!code-vb[CsLINQAggregating#6](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/aggregation-operations_6.vb)]  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Linq>  
- [Panoramica degli operatori query standard (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [Clausola Aggregate](../../../../visual-basic/language-reference/queries/aggregate-clause.md)  
- [Procedura: calcolare i valori di colonna in un File di testo CSV (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-compute-column-values-in-a-csv-text-file-linq.md)  
- [Procedura: Conteggio, somma o media di dati](../../../../visual-basic/programming-guide/language-features/linq/how-to-count-sum-or-average-data-by-using-linq.md)  
- [Procedura: Trovare il valore minimo o massimo in un risultato di query](../../../../visual-basic/programming-guide/language-features/linq/how-to-find-the-minimum-or-maximum-value-in-a-query-result.md)  
- [Procedura: eseguire una Query per il più grande o i File in un albero di Directory (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree.md)  
- [Procedura: eseguire una Query per il numero totale di byte in un Set di cartelle (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Linq>
+- [Panoramica degli operatori query standard (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Clausola Aggregate](../../../../visual-basic/language-reference/queries/aggregate-clause.md)
+- [Procedura: Calcolare i valori di colonna in un File di testo CSV (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-compute-column-values-in-a-csv-text-file-linq.md)
+- [Procedura: Conteggio, somma o Media di dati](../../../../visual-basic/programming-guide/language-features/linq/how-to-count-sum-or-average-data-by-using-linq.md)
+- [Procedura: Trovare il valore minimo o massimo in un risultato di Query](../../../../visual-basic/programming-guide/language-features/linq/how-to-find-the-minimum-or-maximum-value-in-a-query-result.md)
+- [Procedura: Eseguire una query per i File più grande o in un albero di Directory (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree.md)
+- [Procedura: Eseguire una query per il numero totale di byte in un Set di cartelle (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders.md)

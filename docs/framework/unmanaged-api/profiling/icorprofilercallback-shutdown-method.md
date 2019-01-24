@@ -17,14 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 83e32b2b69d53772f8a4ebaabe1c025b95d1da47
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bb2bfe927eddaf6812b0185a586135e76f649c1b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728122"
 ---
 # <a name="icorprofilercallbackshutdown-method"></a>Metodo ICorProfilerCallback::Shutdown
-Notifica al profiler che l'applicazione è in fase di chiusura.  
+Notifica al profiler che l'applicazione è in corso l'arresto.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -33,21 +34,21 @@ HRESULT Shutdown();
 ```  
   
 ## <a name="remarks"></a>Note  
- Il codice del profiler non è possibile chiamare metodi del [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) interfaccia dopo il `Shutdown` metodo viene chiamato. Tutte le chiamate a `ICorProfilerInfo` metodi causare comportamenti imprevisti dopo il `Shutdown` metodo restituisce. Alcuni eventi non modificabili possono ancora verificarsi dopo l'arresto; il profiler deve fare attenzione a restituire immediatamente quando ciò si verifica.  
+ Il codice del profiler non è possibile chiamare i metodi del [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) dell'interfaccia dopo la `Shutdown` viene chiamato il metodo. Tutte le chiamate a `ICorProfilerInfo` metodi di causare un comportamento indefinito dopo il `Shutdown` restituzione del metodo. Possono comunque si verificano determinati eventi non modificabile dopo l'arresto; il profiler deve prestare attenzione a restituire immediatamente quando ciò si verifica.  
   
- Il `Shutdown` metodo verrà chiamato solo se l'applicazione gestita che si sta profilando avviata come codice gestito (vale a dire iniziale gestito il frame dello stack di processo). Se l'applicazione avviata come codice non gestito, ma in un secondo momento è passato in codice gestito, creando un'istanza di common language runtime (CLR), quindi `Shutdown` non verrà chiamato. In questi casi, il profiler deve essere inclusa nella libreria un `DllMain` valore routine che utilizzi il DLL_PROCESS_DETACH per liberare risorse ed eseguire l'elaborazione di pulizia dei dati, ad esempio svuotando le tracce su disco e così via.  
+ Il `Shutdown` metodo verrà chiamato solo se l'applicazione gestita che si sta profilando avviata come codice gestito (vale a dire, viene gestito il fotogramma iniziale sullo stack del processo). Se l'applicazione avviata come codice non gestito, ma in un secondo momento un salto nel codice gestito, in modo da creare un'istanza di common language runtime (CLR), quindi `Shutdown` non verranno chiamati. In questi casi, il profiler deve essere inclusa nella relativa libreria un `DllMain` routine che utilizzi il DLL_PROCESS_DETACH value per liberare le risorse ed eseguire l'elaborazione di pulizia dei dati, ad esempio lo svuotamento tracce su disco e così via.  
   
- In generale, il profiler deve far fronte ad arresti imprevisti. Ad esempio, un processo venga arrestato dal Win32 `TerminateProcess` metodo (dichiarato in winbase). In altri casi, Common Language Runtime arresterà alcuni thread gestiti (thread in background) senza il recapito dei messaggi di eliminazione per tali.  
+ In generale, il profiler deve far fronte ad arresti imprevisti. Ad esempio, un processo venga arrestato di Win32 `TerminateProcess` metodo (dichiarato in winbase. h). In altri casi, CLR si arresta in determinati thread gestiti (thread in background) senza il recapito dei messaggi di eliminazione per loro.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [Metodo Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [Metodo Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md)

@@ -23,36 +23,36 @@ helpviewer_keywords:
 - names [Visual Basic], naming conventions
 - identifiers [Visual Basic], elements
 ms.assetid: 09d8843b-c0dc-4afe-9dab-87c439a69e66
-ms.openlocfilehash: 2f48f885b66f99ecc8c6c7e13fea7e75f0e3d24a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5311bba92043d3fded34a5d9337b6af13e213d4a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33651479"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573387"
 ---
 # <a name="declared-element-names-visual-basic"></a>Nomi di elementi dichiarati (Visual Basic)
-Ogni elemento dichiarato è un nome, detto anche un *identificatore*, il codice utilizzato per farvi riferimento.  
+Ogni elemento dichiarato è un nome, detto anche un *identificatore*, che viene usato il codice per fare riferimento a esso.  
   
 ## <a name="rules"></a>Regole  
  Il nome di un elemento in Visual Basic è necessario rispettare le regole seguenti:  
   
 -   Deve iniziare con un carattere alfabetico o un carattere di sottolineatura (`_`).  
   
--   Deve contenere solo caratteri alfabetici, cifre e caratteri di sottolineatura.  
+-   Deve contenere solo caratteri alfabetici, cifre decimali e caratteri di sottolineatura.  
   
 -   Deve contenere almeno un carattere alfabetico o una cifra decimale se inizia con un carattere di sottolineatura.  
   
--   Non deve essere più di 1023 caratteri.  
+-   Non deve essere lungo più di 1023 caratteri.  
   
- La lunghezza massima di 1023 caratteri si applica anche per l'intera stringa di un nome completo, ad esempio `outerNamespace.middleNamespace.innerNamespace.thisClass.thisElement`.  
+ La lunghezza massima di 1023 caratteri inoltre valida per l'intera stringa di un nome completo, ad esempio `outerNamespace.middleNamespace.innerNamespace.thisClass.thisElement`.  
   
- L'esempio seguente mostra alcuni nomi di elemento valido.  
+ L'esempio seguente illustra alcuni nomi di elemento valido.  
   
  `aB123__45`  
   
  `_567`  
   
- L'esempio seguente mostra alcuni nomi di elemento non valido. La prima riga contiene un carattere di sottolineatura, il secondo inizia con una cifra decimale e la terza colonna contiene un carattere non valido ($).  
+ L'esempio seguente illustra alcuni nomi di elemento non valido. Il primo contiene solo un carattere di sottolineatura, il secondo inizia con una cifra decimale e il terzo contiene un carattere non valido ($).  
   
  `' Three INVALID element names`  
   
@@ -63,34 +63,34 @@ Ogni elemento dichiarato è un nome, detto anche un *identificatore*, il codice 
  `xyz$wv`  
   
 > [!CAUTION]
->  I nomi degli elementi a partire da un carattere di sottolineatura (`_`) non fanno parte di [indipendenza del linguaggio e componenti indipendenti dal linguaggio](../../../../standard/language-independence-and-language-independent-components.md) (CLS), pertanto il codice conforme a CLS non è possibile utilizzare un componente che definisce tali nomi. Tuttavia, un carattere di sottolineatura in qualsiasi altra posizione nel nome di un elemento è conforme a CLS.  
+>  Nomi di elementi a partire da un carattere di sottolineatura (`_`) non fanno parte delle [Language Independence and Language-Independent Components](../../../../standard/language-independence-and-language-independent-components.md) (CLS), in modo che il codice conforme a CLS non è possibile utilizzare un componente che definisce tali nomi. Tuttavia, un carattere di sottolineatura in qualsiasi altra posizione nel nome di un elemento è conforme a CLS.  
   
-### <a name="name-length-guidelines"></a>Linee guida di lunghezza nome  
- In pratica, il nome deve essere il più breve possibile identificando chiaramente la natura dell'elemento. Questo migliora la leggibilità del codice e ridurre la dimensione del file di origine e di lunghezza riga.  
+### <a name="name-length-guidelines"></a>Nome lunghezza orientamenti  
+ Ai fini pratici, il nome deve essere più corte possibili durante identificare chiaramente la natura dell'elemento. Ciò migliora la leggibilità del codice e riduce le dimensioni di file di origine e lunghezza riga.  
   
- D'altra parte, il nome non deve essere breve in modo che non adeguatamente descrive ciò che rappresenta l'elemento e come utilizzato dal codice. Questo è importante per la leggibilità del codice. Se un altro utente sta tentando di capire, oppure se manualmente cercata è molto tempo dopo che è stato scritto, nomi di elemento appropriato possono salvare una considerevole quantità di tempo.  
+ D'altra parte, il nome non deve essere così breve che non in modo adeguato descrive ciò che rappresenta l'elemento e modo in cui il codice lo usa. Questo è importante per la leggibilità del codice. Se qualcun altro tenta di comprenderne il concetto, o se ne sta analizzando, molto tempo dopo che è stato scritto, i nomi degli elementi adatto può risparmiare una notevole quantità di tempo.  
   
 ## <a name="escaped-names"></a>Nomi con caratteri di escape  
- In genere, un nome di elemento non deve corrispondere una delle parole chiave riservate da Visual Basic, ad esempio `Case` o `Friend`. Tuttavia, è possibile definire un *nome forzato*, racchiuso tra parentesi (`[ ]`). Un nome con caratteri di escape può corrispondere a qualsiasi parola chiave Visual Basic, poiché le parentesi quadre rimuovere qualsiasi ambiguità. È inoltre possibile utilizzare le parentesi quando si fa riferimento al nome in un secondo momento nel codice.  
+ In genere, un nome di elemento non deve corrispondere la parola chiave riservata, ad esempio da Visual Basic `Case` o `Friend`. Tuttavia, è possibile definire un' *nome forzato*, che è racchiuso tra parentesi quadre (`[ ]`). Un nome con caratteri di escape può corrispondere a qualsiasi parola chiave Visual Basic, poiché le parentesi quadre rimuovere qualsiasi ambiguità. È anche possibile usare le parentesi quadre quando si fa riferimento al nome in un secondo momento nel codice.  
   
- In generale, è necessario utilizzare nomi con caratteri di escape solo quando:  
+ In generale, è consigliabile usare nomi con caratteri di escape solo se:  
   
--   Il codice ha eseguito la migrazione da una versione precedente di Visual Basic che non era riservata la parola chiave viene utilizzata come un nome. o  
+-   Il codice è eseguita la migrazione da una versione precedente di Visual Basic che non era riservata la parola chiave viene usata come un nome. o  
   
--   Si sta usando il codice scritto in un altro linguaggio in cui la parola chiave specificata non è riservata.  
+-   Si lavora con il codice scritto in un altro linguaggio in cui la parola chiave specificata non è riservata.  
   
- In caso contrario, è necessario considerare la ridenominazione dell'elemento se il nome è in conflitto con una parola chiave. Ambiente di sviluppo integrato (IDE) fornisce un modo semplice per eseguire questa operazione. Per ulteriori informazioni, vedere [Refactoring](/visualstudio/vb-ide/refactoring-vb).  
+ In caso contrario, è consigliabile rinominare l'elemento se il nome è in conflitto con una parola chiave. L'ambiente di sviluppo integrato (IDE) fornisce un modo semplice per eseguire questa operazione. Per altre informazioni, vedere [Refactoring](/visualstudio/vb-ide/refactoring-vb).  
   
 ## <a name="case-sensitivity-in-names"></a>Distinzione maiuscole/minuscole nei nomi  
- I nomi degli elementi in Visual Basic la distinzione tra maiuscole. Ciò significa che quando il compilatore confronta due nomi che differiscono solo nelle maiuscole, li interpreta come lo stesso nome. Ad esempio, se si ha `ABC` e `abc` , il compilatore li interpreta come se facessero riferimento allo stesso elemento dichiarato.  
+ I nomi degli elementi in Visual Basic sono tra maiuscole e minuscole. Ciò significa che quando il compilatore consente di confrontare due nomi che differiscono solo nelle maiuscole, li interpreta come lo stesso nome. Ad esempio, se si ha `ABC` e `abc` , il compilatore li interpreta come se facessero riferimento allo stesso elemento dichiarato.  
   
- Tuttavia, common language runtime (CLR) utilizza l'associazione tra maiuscole e minuscole. Perciò, quando si genera un assembly o una DLL e la si rende disponibile ad altri assembly, i nomi distinguono fra maiuscole e minuscole. Se ad esempio si definisce una classe con un elemento denominato `ABC`e altri assembly usano la classe mediante il Common Language Runtime, devono fare riferimento all'elemento come `ABC`. Se si successivamente ricompila la classe e modificare il nome dell'elemento a `abc`, gli altri assembly usano la classe non è più possano accedere all'elemento. Pertanto, quando si rilascia una versione aggiornata di un assembly, non si devono modificare le maiuscole e le minuscole degli elementi pubblici.  
+ Tuttavia, common language runtime (CLR) utilizza l'associazione tra maiuscole e minuscole. Perciò, quando si genera un assembly o una DLL e la si rende disponibile ad altri assembly, i nomi distinguono fra maiuscole e minuscole. Se ad esempio si definisce una classe con un elemento denominato `ABC`e altri assembly usano la classe mediante il Common Language Runtime, devono fare riferimento all'elemento come `ABC`. Se si successivamente ricompila la classe e modificare il nome dell'elemento a `abc`, gli altri assembly usano la classe non è più è stato possibile accedere a quell'elemento. Pertanto, quando si rilascia una versione aggiornata di un assembly, non si devono modificare le maiuscole e le minuscole degli elementi pubblici.  
   
 ## <a name="names-and-locales"></a>I nomi e le impostazioni locali  
- Confronto dei nomi è indipendente dalle impostazioni locali. Se due nomi corrispondano in una lingua, essi sono garantiti corrispondano in tutte le impostazioni locali.  
+ Confronto dei nomi è indipendente dalle impostazioni locali. Se due nomi corrisponde a una delle impostazioni locali, essi sono garantiti in modo che corrispondano in tutte le impostazioni locali.  
   
-## <a name="see-also"></a>Vedere anche  
- [Elementi dichiarati](../../../../visual-basic/programming-guide/language-features/declared-elements/index.md)  
- [Caratteristiche di elementi dichiarati](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)  
- [Riferimenti a elementi dichiarati](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
- [Istruzioni](../../../../visual-basic/language-reference/statements/index.md)
+## <a name="see-also"></a>Vedere anche
+- [Elementi dichiarati](../../../../visual-basic/programming-guide/language-features/declared-elements/index.md)
+- [Caratteristiche di elementi dichiarati](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
+- [Riferimenti a elementi dichiarati](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [Istruzioni](../../../../visual-basic/language-reference/statements/index.md)

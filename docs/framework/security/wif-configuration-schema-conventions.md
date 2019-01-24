@@ -3,12 +3,12 @@ title: Convenzioni dello schema di configurazione di WIF
 ms.date: 03/30/2017
 ms.assetid: f7864356-f72f-4cae-995c-18e0431f8a58
 author: BrucePerlerMS
-ms.openlocfilehash: dc2e8f7070af3ef907e4987964bb5aa83f889186
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: acdce1f0ae35713dd4955e1353e0a83000898408
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47206444"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54711395"
 ---
 # <a name="wif-configuration-schema-conventions"></a>Convenzioni dello schema di configurazione di WIF
 Questo argomento illustra le convenzioni usate negli argomenti relativi alla configurazione di Windows Identity Foundation (WIF) e descrive alcuni attributi e funzionalità comuni usati nelle sezioni [\<system.identityModel>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) e [\<system.identityModel.services>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md).  
@@ -44,6 +44,6 @@ Questo argomento illustra le convenzioni usate negli argomenti relativi alla con
   
  I tipi personalizzati devono essere derivati dal tipo specificato e devono fornire un costruttore `public` predefinito (argomento 0).  
   
-## <a name="see-also"></a>Vedere anche  
- [\<System. IdentityModel >](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md)  
- [\<system.identityModel.services>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md)
+## <a name="see-also"></a>Vedere anche
+- [\<system.identityModel>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md)
+- [\<system.identityModel.services>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md)

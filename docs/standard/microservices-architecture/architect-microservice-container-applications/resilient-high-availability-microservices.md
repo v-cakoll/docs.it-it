@@ -4,12 +4,12 @@ description: I microservizi sono progettati per resistere a errori temporanei di
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: cbfff525c977c8dc11503a9f230c3ede6f0d6f37
-ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
+ms.openlocfilehash: 174e9881be50b8c2f8220960e93dce626e776b65
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52745329"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362236"
 ---
 # <a name="resiliency-and-high-availability-in-microservices"></a>Resilienza e disponibilità elevata nei microservizi
 
@@ -29,12 +29,12 @@ Potrebbe sembrare ovvio, ed è spesso trascurato, ma un microservizio deve segna
 
 L'integrità è diversa dalla diagnostica. L'integrità dipende dalla segnalazione dello stato corrente del microservizio allo scopo di adottare le misure opportune. Un buon esempio consiste nell'utilizzo dei meccanismi di aggiornamento e distribuzione per mantenere la disponibilità. Anche se, a causa di un arresto anomalo del processo o del riavvio del computer, un servizio potrebbe essere attualmente non integro, potrebbe comunque essere operativo. L'esecuzione di un aggiornamento finirebbe solo con il peggiorare la situazione. L'approccio migliore consiste prima di tutto nell'eseguire un'indagine o attendere il recupero del microservizio. Gli eventi di integrità di un microservizio consentono di prendere decisioni informate e, in effetti, aiutano a creare servizi con riparazione automatica.
 
-La sezione [Implementazione dei controlli di integrità nei servizi ASP.NET Core](../implement-resilient-applications/monitor-app-health.md#implementing-health-checks-in-aspnet-core-services) di questa guida illustra come usare una nuova libreria HealthChecks di ASP.NET nei microservizi in modo da segnalarne lo stato a un servizio di monitoraggio e adottare le opportune misure.
+La sezione [Implementazione dei controlli di integrità nei servizi ASP.NET Core](../implement-resilient-applications/monitor-app-health.md#implement-health-checks-in-aspnet-core-services) di questa guida illustra come usare una nuova libreria HealthChecks di ASP.NET nei microservizi in modo da segnalarne lo stato a un servizio di monitoraggio e adottare le opportune misure.
 
 È anche possibile usare Beat Pulse, un'utilissima libreria open-source disponibile su [GitHub](https://github.com/Xabaril/BeatPulse) e come [pacchetto NuGet](https://www.nuget.org/packages/BeatPulse/). Questa libreria esegue anche i controlli di integrità e gestisce due tipi di controlli:
 
-- **Attività**: controlla se il microservizio è attivo, vale a dire, se può accettare le richieste e rispondere. 
-- **Idoneità** : controlla se anche le dipendenze del microservizio (database, servizi coda e così via) sono idonee, in modo che il microservizio possa eseguire le operazioni previste. 
+- **Attività**: controlla se il microservizio è attivo, ovvero se può accettare le richieste e rispondere. 
+- **Idoneità**: controlla se anche le dipendenze del microservizio (database, servizi coda e così via) sono idonee, in modo che il microservizio possa eseguire le operazioni previste. 
 
 ### <a name="using-diagnostics-and-logs-event-streams"></a>Uso della diagnostica e log dei flussi di eventi
 

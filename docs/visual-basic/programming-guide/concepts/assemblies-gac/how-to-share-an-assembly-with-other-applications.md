@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: condividere un Assembly con altre applicazioni (Visual Basic)'
+title: 'Procedura: Condividere un Assembly con altre applicazioni (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 5388aedc-cb42-4622-8b70-8e701eee057a
-ms.openlocfilehash: 3d29a3558a64c02fc8c59035f2fee5c64c4a776f
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: d0e1dafc700b55a63342331b3280337d2c93cbd1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48025467"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631828"
 ---
-# <a name="how-to-share-an-assembly-with-other-applications-visual-basic"></a>Procedura: condividere un Assembly con altre applicazioni (Visual Basic)
+# <a name="how-to-share-an-assembly-with-other-applications-visual-basic"></a>Procedura: Condividere un Assembly con altre applicazioni (Visual Basic)
 Gli assembly possono essere privati o condivisi. Per impostazione predefinita, i programmi più semplici sono costituiti da un assembly privato perché non sono destinati ad essere usati in altre applicazioni.  
   
  Per condividerlo con altre applicazioni, un assembly deve essere inserito nella [Global Assembly Cache](../../../../framework/app-domains/gac.md) (GAC).  
@@ -22,12 +22,12 @@ Gli assembly possono essere privati o condivisi. Per impostazione predefinita, i
   
 3.  Assegnare all'assembly le informazioni sulla versione. Per altre informazioni, vedere [Controllo delle versioni degli assembly](../../../../framework/app-domains/assembly-versioning.md).  
   
-4.  Aggiungere l'assembly alla Global Assembly Cache. Per altre informazioni, vedere [Procedura: installare un assembly nella Global Assembly Cache](../../../../framework/app-domains/how-to-install-an-assembly-into-the-gac.md).  
+4.  Aggiungere l'assembly alla Global Assembly Cache. Per altre informazioni, vedere [Procedura: Installare un Assembly nella Global Assembly Cache](../../../../framework/app-domains/how-to-install-an-assembly-into-the-gac.md).  
   
-5.  Accedere ai tipi contenuti nell'assembly da altre applicazioni. Per altre informazioni, vedere [Procedura: Aggiungere un riferimento a un assembly con nome sicuro](../../../../framework/app-domains/how-to-reference-a-strong-named-assembly.md).  
+5.  Accedere ai tipi contenuti nell'assembly da altre applicazioni. Per altre informazioni, vedere [Procedura: Riferimento a un Assembly con nome sicuro](../../../../framework/app-domains/how-to-reference-a-strong-named-assembly.md).  
   
 ## <a name="see-also"></a>Vedere anche
 
 - [Nozioni di base sulla programmazione](../../../../visual-basic/programming-guide/concepts/index.md)
-- [Assembly e Global Assembly Cache (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
+- [Assembly e Global Assembly Cache (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
 - [Programmazione con gli assembly](../../../../framework/app-domains/programming-with-assemblies.md)

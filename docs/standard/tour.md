@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: f9b4e3d885725afc4181256e02e3b174318e3ece
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: acd8e14e1d000f55f03017a4fee43347f50df3a7
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47232846"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415923"
 ---
 # <a name="tour-of-net"></a>Panoramica di .NET
 
@@ -125,7 +125,7 @@ Il metodo principale per ottenere l'interoperabilità nativa è usare "platform 
 
 La maggior parte del supporto per l'interoperabilità di Mono (e di Xamarin) per Java e Objective-C è realizzato in modo simile, nel senso che vengono usati gli stessi principi.
 
-Per altre informazioni sull'interoperabilità nativa, vedere l'argomento [Interoperabilità nativa](native-interop.md).
+Per altre informazioni sull'interoperabilità nativa, vedere l'articolo [Interoperabilità nativa](native-interop/index.md).
 
 ## <a name="unsafe-code"></a>Codice di tipo unsafe
 

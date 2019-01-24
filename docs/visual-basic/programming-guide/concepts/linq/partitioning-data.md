@@ -1,15 +1,15 @@
 ---
-title: Il partizionamento dei dati (Visual Basic)
+title: Partizionamento dei dati (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 69c59379-b66e-422c-b324-5b5c07760ef7
-ms.openlocfilehash: 17e929d3c95e079a0a73b8e8cadf51d3ece6f5f0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: afbbd479d3dadd69b81cdd6aead0a4263b92dfe9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645912"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728268"
 ---
-# <a name="partitioning-data-visual-basic"></a>Il partizionamento dei dati (Visual Basic)
+# <a name="partitioning-data-visual-basic"></a>Partizionamento dei dati (Visual Basic)
 Il partizionamento in LINQ è l'operazione di divisione di una sequenza di input in due sezioni senza ridisposizione degli elementi e la successiva restituzione di una delle sezioni.  
   
  La figura seguente illustra i risultati di tre diverse operazioni di partizionamento in una sequenza di caratteri. La prima operazione restituisce i primi tre elementi nella sequenza. La seconda operazione ignora i primi tre elementi e restituisce gli elementi rimanenti. La terza operazione ignora i primi due elementi nella sequenza e restituisce i tre elementi successivi.  
@@ -30,29 +30,29 @@ Il partizionamento in LINQ è l'operazione di divisione di una sequenza di input
 ## <a name="query-expression-syntax-examples"></a>Esempi di sintassi delle espressioni di query  
   
 ### <a name="skip"></a>Skip  
- Nell'esempio di codice viene illustrato come utilizzare il `Skip` clausola in Visual Basic per ignorare le prime quattro stringhe in una matrice di stringhe prima di restituire le altre stringhe nella matrice.  
+ Il codice seguente viene illustrato come utilizzare il `Skip` clausola in Visual Basic per ignorare le prime quattro stringhe in una matrice di stringhe prima di restituire le altre stringhe nella matrice.  
   
  [!code-vb[CsLINQPartitioning#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/partitioning-data_1.vb)]  
   
 ### <a name="skipwhile"></a>SkipWhile  
- Nell'esempio di codice viene illustrato come utilizzare il `Skip While` clausola in Visual Basic per ignorare le stringhe in una matrice mentre la prima lettera della stringa è "a". Le stringhe rimanenti nella matrice vengono restituite.  
+ Il codice seguente viene illustrato come utilizzare il `Skip While` clausola in Visual Basic per ignorare le stringhe in una matrice anche se la prima lettera della stringa è "a". Le stringhe rimanenti nella matrice vengono restituite.  
   
  [!code-vb[CsLINQPartitioning#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/partitioning-data_2.vb)]  
   
 ### <a name="take"></a>Take  
- Nell'esempio di codice viene illustrato come utilizzare il `Take` clausola in Visual Basic per restituire le prime due stringhe in una matrice di stringhe.  
+ Il codice seguente viene illustrato come utilizzare il `Take` clausola in Visual Basic per restituire le prime due stringhe in una matrice di stringhe.  
   
  [!code-vb[CsLINQPartitioning#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/partitioning-data_3.vb)]  
   
 ### <a name="takewhile"></a>TakeWhile  
- Nell'esempio di codice viene illustrato come utilizzare il `Take While` clausola in Visual Basic per restituire le stringhe da una matrice, mentre la lunghezza della stringa è minore o uguale a cinque.  
+ Il codice seguente viene illustrato come utilizzare il `Take While` clausola in Visual Basic per restituire le stringhe da una matrice, mentre la lunghezza della stringa è di cinque.  
   
  [!code-vb[CsLINQPartitioning#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/partitioning-data_4.vb)]  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Linq>  
- [Panoramica degli operatori query standard (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [Clausola Skip](../../../../visual-basic/language-reference/queries/skip-clause.md)  
- [Clausola Skip While](../../../../visual-basic/language-reference/queries/skip-while-clause.md)  
- [Clausola Take](../../../../visual-basic/language-reference/queries/take-clause.md)  
- [Clausola Take While](../../../../visual-basic/language-reference/queries/take-while-clause.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Linq>
+- [Panoramica degli operatori query standard (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Clausola Skip](../../../../visual-basic/language-reference/queries/skip-clause.md)
+- [Clausola Skip While](../../../../visual-basic/language-reference/queries/skip-while-clause.md)
+- [Clausola Take](../../../../visual-basic/language-reference/queries/take-clause.md)
+- [Clausola Take While](../../../../visual-basic/language-reference/queries/take-while-clause.md)

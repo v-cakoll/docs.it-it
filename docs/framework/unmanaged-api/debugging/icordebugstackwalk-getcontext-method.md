@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e1126842a30f19831cc845bcfccc0e08f4bf5f6f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 306eee3c0ce4689d1d6295aba1ef7584841dcc72
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422672"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731049"
 ---
 # <a name="icordebugstackwalkgetcontext-method"></a>Metodo ICorDebugStackWalk::GetContext
-Restituisce il contesto per il fotogramma corrente il [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) oggetto.  
+Restituisce il contesto per il fotogramma corrente di [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) oggetto.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,10 +38,10 @@ HRESULT GetContext([in]  ULONG32 contextFlags,
   
 #### <a name="parameters"></a>Parametri  
  `contextFlags`  
- [in] Flag che indicano il contenuto del buffer del contesto (definito in Winnt. H) richiesto.  
+ [in] Flag che indicano il contenuto richiesto del buffer del contesto (definite in Winnt. H).  
   
  `contextBufSize`  
- [in] Le dimensioni allocate del buffer del contesto.  
+ [in] La dimensione allocata del buffer del contesto.  
   
  `contextSize`  
  [out] Le dimensioni effettive del contesto. Questo valore deve essere minore o uguale alla dimensione del buffer del contesto.  
@@ -54,10 +54,10 @@ HRESULT GetContext([in]  ULONG32 contextFlags,
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|S_OK|Il contesto per il frame corrente è stato restituito correttamente.|  
-|E_FAIL|Non è stato possibile restituire il contesto.|  
+|S_OK|Il contesto per il fotogramma corrente è stato restituito correttamente.|  
+|E_FAIL|Il contesto non può essere restituito.|  
 |HRESULT_FROM_WIN32(ERROR_INSUFFICIENT BUFFER)|Il buffer del contesto è troppo piccolo.|  
-|CORDBG_E_PAST_END_OF_STACK|Puntatore ai frame è già alla fine dello stack. Pertanto, non è possibile accedere ulteriori frame.|  
+|CORDBG_E_PAST_END_OF_STACK|Puntatore ai frame è già alla fine dello stack. di conseguenza, nessun frame aggiuntivi sono accessibili.|  
   
 ## <a name="exceptions"></a>Eccezioni  
   
@@ -65,14 +65,14 @@ HRESULT GetContext([in]  ULONG32 contextFlags,
  Poiché la rimozione Ripristina solo un subset dei registri, ad esempio registri non volatili, il contesto potrebbe non corrispondere esattamente allo stato del registro al momento della chiamata.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Debug](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debug](../../../../docs/framework/unmanaged-api/debugging/index.md)

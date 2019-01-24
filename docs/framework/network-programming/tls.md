@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-ms.openlocfilehash: 9cb7dbdfb1ad221e00823d8d55e7fd3c52cabe8b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 2d7555d39b3aa92ca49368ca5ad59750e3603606
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194137"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415897"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>Procedure consigliate per Transport Layer Security (TLS) con .NET Framework
 
@@ -150,7 +150,7 @@ Le opzioni hanno lo stesso effetto sia per le reti HTTP (<xref:System.Net.Servic
 
 ### <a name="switchsystemnetdontenableschusestrongcrypto"></a>Switch.System.Net.DontEnableSchUseStrongCrypto
 
-Il valore `false` per `Switch.System.Net.DontEnableSchUseStrongCrypto` imposta l'uso della crittografia avanzata per l'app. Il valore `false` per `DontEnableSchUseStrongCrypto` usa protocolli di rete più sicuri (TLS 1.2, TLS 1.1 e TLS 1.0) e blocca i protocolli non sicuri. Per altre informazioni, vedere [Flag SCH_USE_STRONG_CRYPTO](#the-schusestrongcrypto-flag). Il valore `true` disabilita la crittografia avanzata per l'app.
+Il valore `false` per `Switch.System.Net.DontEnableSchUseStrongCrypto` imposta l'uso della crittografia avanzata per l'app. Il valore `false` per `DontEnableSchUseStrongCrypto` usa protocolli di rete più sicuri (TLS 1.2, TLS 1.1 e TLS 1.0) e blocca i protocolli non sicuri. Per altre informazioni, vedere [Flag SCH_USE_STRONG_CRYPTO](#the-sch_use_strong_crypto-flag). Il valore `true` disabilita la crittografia avanzata per l'app.
 
 Se l'app è destinata a .NET Framework 4.6 o versioni successive, l'impostazione predefinita di questa opzione è `false`. Si tratta di un'impostazione predefinita sicura, consigliata. Se l'app viene eseguita in .NET Framework 4.6, ma è destinata a una versione precedente, l'impostazione predefinita dell'opzione è `true`. In questo caso, è consigliabile impostarla in modo esplicito su `false`.
 
@@ -191,7 +191,7 @@ Tutte le chiavi del Registro di sistema descritte di seguito hanno lo stesso eff
 
 ### <a name="schusestrongcrypto"></a>SchUseStrongCrypto
 
-Il valore della chiave del Registro di sistema `HKEY_LOCAL_MACHINE\SOFTWARE\[Wow6432Node\]Microsoft\.NETFramework\<VERSION>: SchUseStrongCrypto` è di tipo DWORD. Il valore 1 imposta l'uso della crittografia avanzata per l'app. La crittografia avanzata usa protocolli di rete più sicuri (TLS 1.2, TLS 1.1 e TLS 1.0) e blocca i protocolli non sicuri. Un valore pari a 0 disabilita la crittografia avanzata. Per altre informazioni, vedere [Flag SCH_USE_STRONG_CRYPTO](#the-schusestrongcrypto-flag).
+Il valore della chiave del Registro di sistema `HKEY_LOCAL_MACHINE\SOFTWARE\[Wow6432Node\]Microsoft\.NETFramework\<VERSION>: SchUseStrongCrypto` è di tipo DWORD. Il valore 1 imposta l'uso della crittografia avanzata per l'app. La crittografia avanzata usa protocolli di rete più sicuri (TLS 1.2, TLS 1.1 e TLS 1.0) e blocca i protocolli non sicuri. Un valore pari a 0 disabilita la crittografia avanzata. Per altre informazioni, vedere [Flag SCH_USE_STRONG_CRYPTO](#the-sch_use_strong_crypto-flag).
 
 Se l'app è destinata a .NET Framework 4.6 o versioni successive, il valore predefinito di questa chiave è 1. Si tratta di un'impostazione predefinita sicura, consigliata. Se l'app viene eseguita in .NET Framework 4.6, ma è destinata a una versione precedente, l'impostazione predefinita della chiave è 0. In questo caso, è consigliabile impostarla in modo esplicito su 1.
 
@@ -258,7 +258,7 @@ Per aggiornare .NET Framework per consentire al sistema operativo scegliere la v
 Vedere anche:
 
 - [Versioni e dipendenze di .NET Framework](../migration-guide/versions-and-dependencies.md)
-- [Procedura: Determinare le versioni di .NET Framework installate](../migration-guide/how-to-determine-which-versions-are-installed.md)
+- [Procedura: Determinare le versioni di .NET Framework installate](../migration-guide/how-to-determine-which-versions-are-installed.md).
 
 ## <a name="support-for-tls-12"></a>Supporto per TLS 1.2
 

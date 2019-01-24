@@ -2,12 +2,12 @@
 title: Tipi strutturati nullable (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: ae006fa9-997e-45bb-8a04-a7f62026171e
-ms.openlocfilehash: 6b949cebfa1b16f8e6fb5a133c61c5668d90b3bf
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c4b0584283e179be2661e518d5bb350b536b058f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32762387"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731764"
 ---
 # <a name="nullable-structured-types-entity-sql"></a>Tipi strutturati nullable (Entity SQL)
 Un'istanza `null` di un tipo strutturato è un'istanza che non esiste ed è diversa da un'istanza esistente nella quale tutte le proprietà hanno valori `null`.  
@@ -88,5 +88,5 @@ Un'istanza `null` di un tipo strutturato è un'istanza che non esiste ed è dive
     }  
     ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Panoramica di Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+## <a name="see-also"></a>Vedere anche
+- [Panoramica di Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: esportare informazioni WSDL personalizzate'
+title: 'Procedura: Esportare informazioni WSDL personalizzate'
 ms.date: 03/30/2017
 ms.assetid: 5c1e4b58-b76b-472b-9635-2f80d42a0734
-ms.openlocfilehash: 82f343d5e2637ff1330570a01b376e83567db4f4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 86c6be86febb21f3c676d28357b29db5dcca07db
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33489049"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645145"
 ---
-# <a name="how-to-export-custom-wsdl"></a>Procedura: esportare informazioni WSDL personalizzate
+# <a name="how-to-export-custom-wsdl"></a>Procedura: Esportare informazioni WSDL personalizzate
 In questo argomento viene illustrato come esportare informazioni WSDL personalizzate. A tale scopo è necessario definire un nuovo attributo di codice denominato `WsdlDocumentationAttribute` che consente di aggiungere informazioni personalizzate nel codice WSDL generato dal servizio.  
   
 ### <a name="to-export-custom-wsdl-information"></a>Per esportare informazioni WSDL personalizzate  
@@ -195,5 +195,5 @@ return lines;
   }  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Metadati](../../../../docs/framework/wcf/feature-details/metadata.md)
+## <a name="see-also"></a>Vedere anche
+- [Metadati](../../../../docs/framework/wcf/feature-details/metadata.md)

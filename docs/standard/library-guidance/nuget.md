@@ -3,13 +3,13 @@ title: NuGet e librerie .NET
 description: Procedure consigliate per la creazione di pacchetti con NuGet per le librerie .NET.
 author: jamesnk
 ms.author: mairaw
-ms.date: 10/02/2018
-ms.openlocfilehash: 4f33c9993d8eef4b18823d5c16f9f51c06afae88
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.date: 01/15/2019
+ms.openlocfilehash: 6c3c7feb95f0ebe6b348f42cdd243ce1d14b9c50
+ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614545"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54333421"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -98,6 +98,8 @@ NuGet.org ospita il proprio [repository del server dei simboli](/nuget/create-pa
 
 > [!IMPORTANT]
 > Il server dei simboli di NuGet.org supporta solo i nuovi [file di simboli portatili](https://github.com/dotnet/core/blob/master/Documentation/diagnostics/portable_pdb.md) (`*.pdb`) creati da progetti in stile SDK.
+>
+> Per usare il server dei simboli di NuGet.org per il debug di una libreria .NET, gli sviluppatori devono avere Visual Studio 2017 15.9 o versioni successive.
 
 Un'alternativa alla creazione di un pacchetto di simboli è incorporare i file di simboli nel pacchetto NuGet principale. Il pacchetto NuGet principale è di dimensioni maggiori, tuttavia, grazie ai file di simboli incorporati gli sviluppatori non devono configurare il server di simboli NuGet.org. Se si sta creando un pacchetto NuGet usando un progetto in stile SDK, è possibile incorporare i file di simboli impostando la proprietà `AllowedOutputExtensionsInPackageBuildOutputFolder`:
 

@@ -2,12 +2,12 @@
 title: Esempio di UriTemplate
 ms.date: 03/30/2017
 ms.assetid: 0aaf91d0-ce18-468d-8006-bc9bc2e48231
-ms.openlocfilehash: 0dfb2cdc27460f3bc30a1c4302206bf43f7ef007
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 565e01fd591149e7eefb7e125b917ddb9acccbfe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518870"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54735477"
 ---
 # <a name="uritemplate-sample"></a>Esempio di UriTemplate
 La classe <xref:System.UriTemplate> fornisce metodi per l'utilizzo di set di URI che condividono una struttura comune. In questo esempio vengono illustrati i seguenti concetti principali relativi a `UriTemplate`:  
@@ -33,6 +33,6 @@ La classe <xref:System.UriTemplate> fornisce metodi per l'utilizzo di set di URI
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\UriTemplate`  
   
-## <a name="see-also"></a>Vedere anche  
- [UriTemplateTable](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)  
- [Dispatcher della tabella UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-table-dispatcher-sample.md)
+## <a name="see-also"></a>Vedere anche
+- [UriTemplateTable](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)
+- [Dispatcher della tabella UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-table-dispatcher-sample.md)

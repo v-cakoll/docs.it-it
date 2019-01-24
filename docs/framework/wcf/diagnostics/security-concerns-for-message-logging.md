@@ -2,12 +2,12 @@
 title: Problemi di sicurezza per la registrazione dei messaggi
 ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
-ms.openlocfilehash: 5ed2529d82c3994a245d2132909cd1e88b6ed62d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0bee1543a6c29dc34abcb2af08ee520923766175
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188807"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731998"
 ---
 # <a name="security-concerns-for-message-logging"></a>Problemi di sicurezza per la registrazione dei messaggi
 In questo argomento viene illustrato come evitare che i dati riservati vengano esposti nei log dei messaggi e come proteggere gli eventi generati dalla registrazione dei messaggi.  
@@ -99,16 +99,16 @@ In questo argomento viene illustrato come evitare che i dati riservati vengano e
 ## <a name="events-triggered-by-message-logging"></a>Eventi generati dalla registrazione dei messaggi  
  Di seguito vengono elencati tutti gli eventi emessi dalla registrazione dei messaggi.  
   
--   Registrazioni messaggi attiva: questo evento viene emesso quando la registrazione messaggi è abilitata nella configurazione, o tramite WMI. Il contenuto dell'evento è "Registrazione messaggi attivata. È possibile che le informazioni riservate vengano registrate in forma non crittografata, anche se crittografate durante la trasmissione, ad esempio i corpi dei messaggi".  
+-   La registrazione di messaggi: Questo evento viene generato quando la registrazione dei messaggi è abilitata nella configurazione o tramite WMI. Il contenuto dell'evento è "Registrazione messaggi attivata. È possibile che le informazioni riservate vengano registrate in forma non crittografata, anche se crittografate durante la trasmissione, ad esempio i corpi dei messaggi".  
   
--   Registrazioni messaggi disattivata: questo evento viene emesso quando la registrazione messaggi è disabilitata tramite WMI. Il contenuto dell'evento è "Registrazione messaggi disattivata".  
+-   Messaggio di disconnessione: Questo evento viene generato quando la registrazione dei messaggi è disabilitata tramite WMI. Il contenuto dell'evento è "Registrazione messaggi disattivata".  
   
--   Registrazione informazioni personali note attiva: questo evento viene generato quando la registrazione di informazioni personali note è abilitata. Ciò si verifica quando il `enableLoggingKnownPii` attributo il `machineSettings` elemento del file Machine. config è impostato su `true`e il `logKnownPii` attributo del `source` elemento nel file app. config o Web. config è impostato su `true`.  
+-   Accesso informazioni personali note: Questo evento viene generato quando la registrazione di informazioni personali note è abilitata. Ciò si verifica quando il `enableLoggingKnownPii` attributo il `machineSettings` elemento del file Machine. config è impostato su `true`e il `logKnownPii` attributo del `source` elemento nel file app. config o Web. config è impostato su `true`.  
   
--   Registrazione informazioni personali note non consentita: questo evento viene emesso quando la registrazione delle informazioni personali note non è consentita. Ciò si verifica quando il `logKnownPii` attributo del `source` elemento nel file app. config o Web. config è impostato su `true`, ma la `enableLoggingKnownPii` attributo il `machineSettings` elemento del file Machine. config è impostato su `false`. Non viene generata alcuna eccezione.  
+-   Registrare informazioni personali note non consentita: Questo evento viene generato quando la registrazione delle informazioni personali note non è consentita. Ciò si verifica quando il `logKnownPii` attributo del `source` elemento nel file app. config o Web. config è impostato su `true`, ma la `enableLoggingKnownPii` attributo il `machineSettings` elemento del file Machine. config è impostato su `false`. Non viene generata alcuna eccezione.  
   
  Questi eventi possono essere visualizzati nello strumento Visualizzatore eventi in dotazione con Windows. Per altre informazioni, vedere [registrazione eventi](../../../../docs/framework/wcf/diagnostics/event-logging/index.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Registrazione messaggi](../../../../docs/framework/wcf/diagnostics/message-logging.md)  
- [Problemi di sicurezza e suggerimenti utili per la traccia](../../../../docs/framework/wcf/diagnostics/tracing/security-concerns-and-useful-tips-for-tracing.md)
+## <a name="see-also"></a>Vedere anche
+- [Registrazione messaggi](../../../../docs/framework/wcf/diagnostics/message-logging.md)
+- [Problemi di sicurezza e suggerimenti utili per la traccia](../../../../docs/framework/wcf/diagnostics/tracing/security-concerns-and-useful-tips-for-tracing.md)
