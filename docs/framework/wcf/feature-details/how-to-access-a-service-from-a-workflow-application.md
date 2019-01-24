@@ -1,22 +1,22 @@
 ---
-title: "Procedura: accesso a un servizio da un'applicazione flusso di lavoro"
+title: "Procedura: Accedere a un servizio da un'applicazione flusso di lavoro"
 ms.date: 03/30/2017
 ms.assetid: 925ef8ea-5550-4c9d-bb7b-209e20c280ad
-ms.openlocfilehash: e9158f91d8df74cc9fd871567d854d32353d16e1
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 5ce2c4839d4b59fdc0f5fcd55ffe91d3adbcadcc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840589"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653697"
 ---
-# <a name="how-to-access-a-service-from-a-workflow-application"></a>Procedura: accesso a un servizio da un'applicazione flusso di lavoro
-In questo argomento viene descritto come chiamare un servizio flusso di lavoro da un'applicazione console del flusso di lavoro. Dipende dal completamento dei [procedura: creare un servizio del flusso di lavoro con attività di messaggistica](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md) argomento. Sebbene in questo argomento viene descritto come chiamare un servizio del flusso di lavoro da un'applicazione flusso di lavoro, gli stessi metodi sono utilizzabile per chiamare qualsiasi servizio Windows Communication Foundation (WCF) da un'applicazione flusso di lavoro.
+# <a name="how-to-access-a-service-from-a-workflow-application"></a>Procedura: Accedere a un servizio da un'applicazione flusso di lavoro
+In questo argomento viene descritto come chiamare un servizio flusso di lavoro da un'applicazione console del flusso di lavoro. Dipende dal completamento del [come: Creare un servizio del flusso di lavoro con attività di messaggistica](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md) argomento. Sebbene in questo argomento viene descritto come chiamare un servizio del flusso di lavoro da un'applicazione flusso di lavoro, gli stessi metodi sono utilizzabile per chiamare qualsiasi servizio Windows Communication Foundation (WCF) da un'applicazione flusso di lavoro.
 
 ### <a name="create-a-workflow-console-application-project"></a>Creare un progetto di applicazione console del flusso di lavoro
 
-1.  Avviare Visual Studio 2012.
+1.  Start Visual Studio 2012.
 
-2.  Caricare il progetto MyWFService creato nel [procedura: creare un servizio del flusso di lavoro con attività di messaggistica](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md) argomento.
+2.  Caricare il progetto MyWFService creato nel [come: Creare un servizio del flusso di lavoro con attività di messaggistica](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md) argomento.
 
 3.  Fare clic il **MyWFService** soluzione nel **Esplora soluzioni** e selezionare **Add**, **nuovo progetto**. Selezionare **flusso di lavoro** nel **modelli installati** e **applicazione Console flusso di lavoro** dall'elenco dei tipi di progetto. Assegnare al progetto il nome MyWFClient e utilizzare il percorso predefinito, come illustrato nella figura seguente.
 
@@ -42,7 +42,7 @@ In questo argomento viene descritto come chiamare un servizio flusso di lavoro d
 
      ![Nella casella degli strumenti attività Echo](../../../../docs/framework/wcf/feature-details/media/echoactivity.JPG "EchoActivity")
 
-7.  Trascinare un'attività <xref:System.Activities.Statements.Sequence> nell'area di progettazione. È sotto la **flusso di controllo** sezione della casella degli strumenti.
+7.  Trascinare e rilasciare un'attività <xref:System.Activities.Statements.Sequence> nell'area di progettazione. È sotto la **flusso di controllo** sezione della casella degli strumenti.
 
 8.  Con il <xref:System.Activities.Statements.Sequence> attività in stato attivo, fare clic sui **variabili** collegare e aggiungere una variabile stringa denominata `inString`. Assegnare alla variabile un valore predefinito pari `"Hello, world"` oltre a una variabile stringa denominata `outString` come illustrato nel diagramma seguente.
 
@@ -65,5 +65,5 @@ In questo argomento viene descritto come chiamare un servizio flusso di lavoro d
 ## <a name="see-also"></a>Vedere anche
 
 - [Servizi flusso di lavoro](../../../../docs/framework/wcf/feature-details/workflow-services.md)
-- [Procedura: Creare un servizio flusso di lavoro con attività di messaggistica](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)
+- [Procedura: Creare un servizio del flusso di lavoro con attività di messaggistica](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)
 - [Utilizzo di un servizio WCF da un flusso di lavoro in un progetto Web](https://go.microsoft.com/fwlink/?LinkId=207725)

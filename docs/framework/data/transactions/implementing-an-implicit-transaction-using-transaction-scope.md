@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49d1706a-1e0c-4c85-9704-75c908372eb9
-ms.openlocfilehash: f3184801ed6a81d65727c638ef733bc93a87c1e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ae0c729444b3ccb154481e65a094d29d68541793
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365306"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645847"
 ---
 # <a name="implementing-an-implicit-transaction-using-transaction-scope"></a>Implementazione di una transazione implicita utilizzando l'ambito di transazione
 La classe <xref:System.Transactions.TransactionScope> consente di contrassegnare facilmente un blocco di codice come ambito partecipante a una transazione, senza che sia necessario interagire con la transazione stessa. Un ambito di transazione può selezionare e gestire automaticamente la transazione di ambiente. In quanto efficiente e di facile utilizzo, la classe <xref:System.Transactions.TransactionScope> rappresenta la scelta ideale per sviluppare un'applicazione transazionale.  
@@ -23,25 +23,25 @@ La classe <xref:System.Transactions.TransactionScope> consente di contrassegnare
  [!code-csharp[TransactionScope#1](../../../../samples/snippets/csharp/VS_Snippets_Remoting/TransactionScope/cs/ScopeWithSQL.cs#1)]
  [!code-vb[TransactionScope#1](../../../../samples/snippets/visualbasic/VS_Snippets_Remoting/TransactionScope/vb/ScopeWithSQL.vb#1)]  
   
- L'ambito di transazione viene avviato non appena si crea un nuovo oggetto <xref:System.Transactions.TransactionScope>.  Come illustrato nell'esempio di codice, è consigliabile creare ambiti con un **utilizzando** istruzione. Il **utilizzando** informativa è disponibile in c# e in Visual Basic e funziona come un **try... finally** blocco per garantire che l'ambito viene eliminato correttamente.  
+ L'ambito di transazione viene avviato non appena si crea un nuovo oggetto <xref:System.Transactions.TransactionScope>.  Come illustrato nell'esempio di codice, è consigliabile creare ambiti con un' **usando** istruzione. Il **usando** istruzione è disponibile sia in C# e in Visual Basic e funziona come una **try... infine** blocco per garantire che l'ambito viene eliminato correttamente.  
   
- Quando si crea un'istanza di <xref:System.Transactions.TransactionScope>, la gestione transazioni determina la transazione a cui partecipare. Una volta deciso, l'ambito partecipa sempre a quella transazione. La decisione si basa su due fattori: se una transazione di ambiente è presente e il valore di **TransactionScopeOption** parametro nel costruttore. La transazione di ambiente è la transazione in cui il codice viene eseguito. Per ottenere un riferimento a questa transazione è possibile chiamare la proprietà <xref:System.Transactions.Transaction.Current%2A?displayProperty=nameWithType> statica della classe <xref:System.Transactions.Transaction>. Per ulteriori informazioni sull'utilizzo di questo parametro, vedere il [la gestione del flusso delle transazioni mediante TransactionScopeOption](#ManageTxFlow) sezione di questo argomento.  
+ Quando si crea un'istanza di <xref:System.Transactions.TransactionScope>, la gestione transazioni determina la transazione a cui partecipare. Una volta deciso, l'ambito partecipa sempre a quella transazione. La decisione si basa su due fattori: se è presente una transazione di ambiente e il valore della **TransactionScopeOption** parametro nel costruttore. La transazione di ambiente è la transazione in cui il codice viene eseguito. Per ottenere un riferimento a questa transazione è possibile chiamare la proprietà <xref:System.Transactions.Transaction.Current%2A?displayProperty=nameWithType> statica della classe <xref:System.Transactions.Transaction>. Per altre informazioni sull'utilizzo di questo parametro, vedere la [la gestione del flusso delle transazioni mediante l'enumerazione TransactionScopeOption](#ManageTxFlow) sezione di questo argomento.  
   
 ## <a name="completing-a-transaction-scope"></a>Completamento di un ambito di transazione  
- Quando in una determinata applicazione vengono completate tutte le operazioni che si desidera eseguire in una transazione, è necessario chiamare una sola volta il metodo <xref:System.Transactions.TransactionScope.Complete%2A?displayProperty=nameWIthType> per informare la gestione transazioni che può essere eseguito il commit della transazione. È consigliabile inserire la chiamata a <xref:System.Transactions.TransactionScope.Complete%2A> come l'ultima istruzione di **utilizzando** blocco.  
+ Quando in una determinata applicazione vengono completate tutte le operazioni che si desidera eseguire in una transazione, è necessario chiamare una sola volta il metodo <xref:System.Transactions.TransactionScope.Complete%2A?displayProperty=nameWIthType> per informare la gestione transazioni che può essere eseguito il commit della transazione. È molto buona norma inserire la chiamata a <xref:System.Transactions.TransactionScope.Complete%2A> come ultima istruzione il **usando** blocco.  
   
- Impossibile chiamare questo metodo interrompe la transazione, poiché il gestore delle transazioni viene interpretato come un errore di sistema, o equivalente a un'eccezione all'interno dell'ambito della transazione. Tuttavia, chiamare questo metodo non garantisce l'esecuzione del commit della transazione. Si tratta semplicemente di un modo per passare alla gestione transazioni le informazioni sullo stato. Dopo aver chiamato il metodo <xref:System.Transactions.TransactionScope.Complete%2A> non è più consentito utilizzare la proprietà <xref:System.Transactions.Transaction.Current%2A> per accedere alla transazione di ambiente. Se si ignora tale restrizione, il sistema genera un'eccezione.  
+ Non chiamare questo metodo interrompe la transazione, poiché il gestore delle transazioni viene interpretato come un errore di sistema, o equivalente a un'eccezione generata all'interno dell'ambito della transazione. Tuttavia, chiamare questo metodo non garantisce l'esecuzione del commit della transazione. Si tratta semplicemente di un modo per passare alla gestione transazioni le informazioni sullo stato. Dopo aver chiamato il metodo <xref:System.Transactions.TransactionScope.Complete%2A> non è più consentito utilizzare la proprietà <xref:System.Transactions.Transaction.Current%2A> per accedere alla transazione di ambiente. Se si ignora tale restrizione, il sistema genera un'eccezione.  
   
- Se il <xref:System.Transactions.TransactionScope> dell'oggetto creato inizialmente la transazione si verifica l'effettiva operazione di commit della transazione per la gestione transazioni dopo l'ultima riga di codice il **utilizzando** blocco. In caso contrario, il commit viene eseguito ogni volta che il metodo <xref:System.Transactions.CommittableTransaction.Commit%2A> viene chiamato dal proprietario dell'oggetto <xref:System.Transactions.CommittableTransaction>. A questo punto il gestore delle transazioni chiama la risorsa responsabili e fornire le istruzioni per eseguire il commit o rollback, a seconda che il <xref:System.Transactions.TransactionScope.Complete%2A> metodo è stato chiamato sul <xref:System.Transactions.TransactionScope> oggetto.  
+ Se il <xref:System.Transactions.TransactionScope> dell'oggetto creato inizialmente, la transazione si verifica il lavoro effettivo dell'esecuzione del commit della transazione dal gestore delle transazioni dopo l'ultima riga di codice nel **usando** blocco. In caso contrario, il commit viene eseguito ogni volta che il metodo <xref:System.Transactions.CommittableTransaction.Commit%2A> viene chiamato dal proprietario dell'oggetto <xref:System.Transactions.CommittableTransaction>. A questo punto la gestione transazioni chiama la risorsa responsabili e fornire le istruzioni per eseguire il commit o rollback, a seconda che il <xref:System.Transactions.TransactionScope.Complete%2A> metodo è stato chiamato sul <xref:System.Transactions.TransactionScope> oggetto.  
   
- Il **utilizzando** istruzione assicura che il <xref:System.Transactions.TransactionScope.Dispose%2A> metodo il <xref:System.Transactions.TransactionScope> oggetto viene chiamato anche se si verifica un'eccezione. Il metodo <xref:System.Transactions.TransactionScope.Dispose%2A> indica la fine dell'ambito della transazione. Le eccezioni che si verificano dopo la chiamata a questo metodo potrebbero non avere alcun effetto sulla transazione. Questo metodo consente inoltre di ripristinare lo stato precedente della transazione di ambiente.  
+ Il **usando** istruzione garantisce che il <xref:System.Transactions.TransactionScope.Dispose%2A> metodo il <xref:System.Transactions.TransactionScope> oggetto venga chiamato anche se si verifica un'eccezione. Il metodo <xref:System.Transactions.TransactionScope.Dispose%2A> indica la fine dell'ambito della transazione. Le eccezioni che si verificano dopo la chiamata a questo metodo potrebbero non avere alcun effetto sulla transazione. Questo metodo consente inoltre di ripristinare lo stato precedente della transazione di ambiente.  
   
  Se l'ambito crea la transazione e quest'ultima viene interrotta, viene generata un'eccezione <xref:System.Transactions.TransactionAbortedException>. Se la gestione transazioni non è in grado di prendere una decisione in merito al commit, viene generata un'eccezione <xref:System.Transactions.TransactionInDoubtException>. Se viene eseguito il commit della transazione, non viene generata alcuna eccezione.  
   
 ## <a name="rolling-back-a-transaction"></a>Esecuzione del rollback di una transazione  
  Non è consigliabile chiamare il metodo <xref:System.Transactions.TransactionScope.Complete%2A> all'interno dell'ambito di una determinata transazione allo scopo di eseguirne il rollback. Ad esempio, è preferibile generare un'eccezione all'interno dell'ambito. In tal caso, verrà eseguito il rollback della transazione a cui tale ambito partecipa.  
   
-##  <a name="ManageTxFlow"></a> La gestione del flusso delle transazioni mediante TransactionScopeOption  
+##  <a name="ManageTxFlow"></a> La gestione del flusso delle transazioni mediante l'enumerazione TransactionScopeOption  
  Gli ambiti di transazione possono essere annidati chiamando un metodo che utilizza un oggetto <xref:System.Transactions.TransactionScope> dall'interno di un metodo dotato di un proprio ambito, come nel caso del metodo `RootMethod` illustrato nell'esempio seguente  
   
 ```csharp  
@@ -81,7 +81,7 @@ void SomeMethod()
   
  Se l'ambito viene istanziato con l'opzione <xref:System.Transactions.TransactionScopeOption.RequiresNew>, tale ambito rappresenta sempre l'ambito radice. A tale scopo, avvia una nuova transazione che definisce come una nuova transazione di ambiente all'interno del proprio ambito.  
   
- Se l'ambito viene istanziato con l'opzione <xref:System.Transactions.TransactionScopeOption.Suppress>, tale ambito non partecipa ad alcuna transazione, indipendentemente dalla presenza di una transazione di ambito. Un ambito creata con questo valore è sempre **null** come la transazione di ambiente.  
+ Se l'ambito viene istanziato con l'opzione <xref:System.Transactions.TransactionScopeOption.Suppress>, tale ambito non partecipa ad alcuna transazione, indipendentemente dalla presenza di una transazione di ambito. Hanno un ambito istanziato con questo valore è sempre **null** come transazione di ambiente.  
   
  La tabella seguente contiene un riepilogo delle opzioni appena elencate.  
   
@@ -166,8 +166,8 @@ using(TransactionScope scope1 = new TransactionScope())
  Quando si utilizzano oggetti <xref:System.Transactions.TransactionScope> annidati, tutti gli ambiti annidati devono essere configurati in modo da utilizzare esattamente lo stesso livello di isolamento se intendono aggiungersi alla transazione di ambiente. Se un oggetto <xref:System.Transactions.TransactionScope> annidato tenta di aggiungersi alla transazione di ambiente specificando un livello di isolamento diverso, viene generata un'eccezione <xref:System.ArgumentException>.  
   
 ## <a name="interop-with-com"></a>Interoperabilità con COM+  
- Quando si crea una nuova istanza della classe <xref:System.Transactions.TransactionScope> è possibile utilizzare l'enumerazione <xref:System.Transactions.EnterpriseServicesInteropOption> in uno dei costruttori per specificare l'interoperabilità con COM+. Per ulteriori informazioni, vedere [interoperabilità con servizi aziendali e le transazioni COM+](../../../../docs/framework/data/transactions/interoperability-with-enterprise-services-and-com-transactions.md).  
+ Quando si crea una nuova istanza della classe <xref:System.Transactions.TransactionScope> è possibile utilizzare l'enumerazione <xref:System.Transactions.EnterpriseServicesInteropOption> in uno dei costruttori per specificare l'interoperabilità con COM+. Per altre informazioni, vedere [interoperabilità con transazioni COM+ ed Enterprise Services](../../../../docs/framework/data/transactions/interoperability-with-enterprise-services-and-com-transactions.md).  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Transactions.Transaction.Clone%2A>  
- <xref:System.Transactions.TransactionScope>
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Transactions.Transaction.Clone%2A>
+- <xref:System.Transactions.TransactionScope>
