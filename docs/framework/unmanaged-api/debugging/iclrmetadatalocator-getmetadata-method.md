@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4338619414c9c9ac8c5fe85479562410d1678698
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7758e61635bf6611cf83d2d66d0b62a28fac97d0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403858"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54647686"
 ---
 # <a name="iclrmetadatalocatorgetmetadata-method"></a>Metodo ICLRMetadataLocator::GetMetadata
 Chiamato dai servizi di accesso ai dati di common language runtime (CLR) per recuperare i metadati di un'immagine.  
@@ -55,7 +55,7 @@ HRESULT GetMetadata(
  [in] Le dimensioni del file di immagine.  
   
  `mvid`  
- [in] Identificatore univoco globale dell'immagine.  
+ [in] L'identificatore univoco globale dell'immagine.  
   
  `mdRva`  
  [in] L'indirizzo virtuale relativo (RVA) dei metadati. L'indirizzo è relativo all'indirizzo di base di immagine.  
@@ -70,19 +70,19 @@ HRESULT GetMetadata(
  [out] Buffer in cui inserire i metadati.  
   
  `dataSize`  
- [out] Le dimensioni dei metadati che viene restituito.  
+ [out] Le dimensioni dei metadati restituiti.  
   
 ## <a name="remarks"></a>Note  
  Questo metodo è implementato dal writer dell'applicazione di debug.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Clrdata. idl, Clrdata. H  
+ **Intestazione:** ClrData.idl, ClrData.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ICLRMetadataLocator](../../../../docs/framework/unmanaged-api/debugging/iclrmetadatalocator-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ICLRMetadataLocator](../../../../docs/framework/unmanaged-api/debugging/iclrmetadatalocator-interface.md)

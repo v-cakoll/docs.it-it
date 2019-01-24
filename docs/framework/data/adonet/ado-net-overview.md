@@ -2,12 +2,12 @@
 title: Cenni preliminari su ADO.NET
 ms.date: 03/30/2017
 ms.assetid: ee3bc1d8-11db-4be4-89eb-c708cf04117d
-ms.openlocfilehash: 697911201171a540d6749d03c51f14efba945765
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6769370396fc263f237a2884435630a2930b882b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529923"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54714386"
 ---
 # <a name="adonet-overview"></a>Cenni preliminari su ADO.NET
 ADO.NET fornisce uniformità di accesso sia per origini dati quali SQL Server e XML, sia per origini dati esposte tramite OLE DB e ODBC. Le applicazioni consumer che supportano la condivisione dei dati sono in grado di usare ADO.NET per connettersi a tali origini dati e recuperare, gestire e aggiornare i dati contenuti.  
@@ -20,7 +20,7 @@ ADO.NET fornisce uniformità di accesso sia per origini dati quali SQL Server e 
   
  ADO.NET fornisce il metodo più diretto per l'accesso ai dati in .NET Framework. Per un'astrazione di livello superiore che consente alle applicazioni di usare un modello concettuale anziché il modello di archiviazione sottostante, vedere la [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md).  
   
- **Informativa sulla privacy**: assembly The System, System, DLL, System, System, SqlServerCe. dll e DataSetExtensions. dll non distingue tra dati privati e pubblici dell'utente.  Questi assembly non raccolgono, archiviano o trasportano i dati privati degli utenti, tuttavia possono essere usati da applicazioni di terze parti per tali scopi.  
+ **Informativa sulla privacy**: Gli assembly System, System, DLL, System, System, SqlServerCe. dll e DataSetExtensions. dll non viene fatta distinzione tra un utente dati privati e pubblici.  Questi assembly non raccolgono, archiviano o trasportano i dati privati degli utenti, tuttavia possono essere usati da applicazioni di terze parti per tali scopi.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Architettura di ADO.NET](../../../../docs/framework/data/adonet/ado-net-architecture.md)  
@@ -57,7 +57,7 @@ ADO.NET fornisce uniformità di accesso sia per origini dati quali SQL Server e 
  [Recupero e modifica di dati in ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  Viene descritto come connettersi a un'origine dati, recuperare e modificare i dati, inclusi `DataReaders` e `DataAdapters`.  
   
-## <a name="see-also"></a>Vedere anche  
- [ADO.NET](../../../../docs/framework/data/adonet/index.md)  
- [Accesso ai dati in Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vedere anche
+- [ADO.NET](../../../../docs/framework/data/adonet/index.md)
+- [Accesso ai dati in Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio)
+- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

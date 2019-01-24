@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3d6486a90d952208af89428423867a3daa4e8618
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 874bbf46e74550b325631a00acc16f49d818dc61
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33453359"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54574937"
 ---
 # <a name="functionleave2-function"></a>Funzione FunctionLeave2
-Notifica al profiler che una funzione sta per restituire al chiamante e fornisce informazioni sul valore restituito dello stack frame e la funzione.  
+Notifica al profiler che una funzione sta per restituire al chiamante e vengono fornite informazioni relative al valore restituito dello stack frame e la funzione.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,20 +39,20 @@ void __stdcall FunctionLeave2 (
   
 #### <a name="parameters"></a>Parametri  
  `funcId`  
- [in] Identificatore della funzione che restituisce.  
+ [in] L'identificatore della funzione che restituisce.  
   
  `clientData`  
  [in] Identificatore della funzione modificato, quali il profiler specificato in precedenza tramite il [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md) (funzione).  
   
  `func`  
- [in] Oggetto `COR_PRF_FRAME_INFO` che punta alle informazioni sullo stack frame.  
+ [in] Oggetto `COR_PRF_FRAME_INFO` valore che punta alle informazioni sullo stack frame.  
   
- Il profiler deve trattare come handle opaco che può essere passato al motore di esecuzione di [ICorProfilerInfo2:: Getfunctioninfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) metodo.  
+ Il profiler deve trattarlo come un handle opaco che può essere passato al motore di esecuzione la [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) (metodo).  
   
  `retvalRange`  
  [in] Un puntatore a un [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) struttura che specifica la posizione di memoria del valore restituito della funzione.  
   
- Per accedere alle informazioni sul valore restituito, il `COR_PRF_ENABLE_FUNCTION_RETVAL` flag deve essere impostato. Il profiler può utilizzare il [ICorProfilerInfo:: SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) per impostare i flag dell'evento.  
+ Per poter accedere a informazioni sul valore restituito, il `COR_PRF_ENABLE_FUNCTION_RETVAL` flag deve essere impostato. Il profiler può usare la [ICorProfilerInfo:: SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) metodo per impostare i flag dell'evento.  
   
 ## <a name="remarks"></a>Note  
  I valori del `func` e `retvalRange` parametri non sono validi dopo il `FunctionLeave2` funzione perché i valori potrebbero cambiare o essere distrutti.  
@@ -61,25 +61,25 @@ void __stdcall FunctionLeave2 (
   
  Il motore di esecuzione non viene salvato alcun registro prima di chiamare questa funzione.  
   
--   In ingresso, è necessario salvare tutti i registri in uso, inclusi quelli in unità a virgola mobile (FPU).  
+-   In ingresso, è necessario salvare tutti i registri che usi, tra cui quelle in unità a virgola mobile (FPU).  
   
--   All'uscita, è necessario ripristinare lo stack recuperando tutti i parametri che sono stati inviati dal chiamante.  
+-   In uscita, è necessario ripristinare lo stack recuperando tutti i parametri che sono stati inseriti dal relativo chiamante.  
   
- L'implementazione di `FunctionLeave2` non devono bloccarsi perché ritarderà l'operazione di garbage collection. L'implementazione non deve tentare una garbage collection perché lo stack potrebbe non essere in uno stato di raccolta semplice garbage. Se si tenta un'operazione di garbage collection, il runtime si bloccherà finché `FunctionLeave2` restituisce.  
+ L'implementazione di `FunctionLeave2` non devono bloccare perché ritarderà l'operazione di garbage collection. L'implementazione non deve tentare una garbage collection perché lo stack potrebbe non essere in uno stato di garbage collection adatto. Se si tenta un'operazione di garbage collection, il runtime si bloccherà fino a `FunctionLeave2` restituisce.  
   
  Inoltre, il `FunctionLeave2` funzione non deve chiamare codice gestito o causare in alcun modo un'allocazione di memoria gestita.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Corprof. idl  
+ **Intestazione:** CorProf.idl  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Funzione FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)  
- [Funzione FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)  
- [Metodo SetEnterLeaveFunctionHooks2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)  
- [Funzioni statiche globali di profilatura](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+## <a name="see-also"></a>Vedere anche
+- [Funzione FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
+- [Funzione FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)
+- [Metodo SetEnterLeaveFunctionHooks2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
+- [Funzioni statiche globali di profilatura](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)

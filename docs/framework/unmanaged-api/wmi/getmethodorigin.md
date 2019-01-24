@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d1cc754fcf7d1defa815bb0a74b7c2b4a6909478
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 76f449e52168001a2aaac6cbc3707361cf7f809a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085754"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582464"
 ---
 # <a name="getmethodorigin-function"></a>GetMethodOrigin (funzione)
 Determina la classe in cui viene dichiarato un metodo.
@@ -72,11 +72,11 @@ Poiché una classe può ereditare i metodi da una o più classi base, gli svilup
 Il `pstrClassName` parametro non deve puntare a un valore valido `BSTR` prima di chiamare la funzione poiché si tratta di un `out` parametro; questo puntatore non viene deallocato dopo la funzione restituisce.
 
 ## <a name="requirements"></a>Requisiti  
-**Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** WMINet_Utils.idl  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Vedere anche  
-[WMI e contatori delle prestazioni (riferimenti alle API non gestite)](index.md)
+## <a name="see-also"></a>Vedere anche
+- [WMI e contatori delle prestazioni (riferimenti alle API non gestite)](index.md)

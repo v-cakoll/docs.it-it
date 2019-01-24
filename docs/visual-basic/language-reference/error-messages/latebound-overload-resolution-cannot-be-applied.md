@@ -1,5 +1,5 @@
 ---
-title: Risoluzione dell'overload con associazione tardiva non è possibile applicare a &#39; &lt;nomeroutine&gt; &#39; perché l'istanza di accesso è un tipo di interfaccia
+title: Risoluzione dell'overload con associazione tardiva non è possibile applicare a &#39; &lt;NomeProcedura&gt; &#39; perché l'istanza di accesso è un tipo interfaccia
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30933
@@ -8,25 +8,25 @@ helpviewer_keywords:
 - overload resolution [Visual Basic], with late-bound argument
 - BC30933
 ms.assetid: 8182eea0-dd34-4d6e-9ca0-41d8713e9dc4
-ms.openlocfilehash: e41cbf30f06547ef39553e31542e4e8b6df49a3b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: db0ce88f63be8d58cc1c1abf91eda6a0e56456c6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33589880"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54651516"
 ---
-# <a name="latebound-overload-resolution-cannot-be-applied-to-39ltprocedurenamegt39-because-the-accessing-instance-is-an-interface-type"></a>Risoluzione dell'overload con associazione tardiva non è possibile applicare a &#39; &lt;nomeroutine&gt; &#39; perché l'istanza di accesso è un tipo di interfaccia
-Il compilatore sta provando a risolvere un riferimento a una proprietà di overload o una routine, ma il riferimento non riesce perché è un argomento di tipo `Object` e l'oggetto che fa riferimento il tipo di dati di un'interfaccia. Il `Object` argomento induce il compilatore per risolvere il riferimento come ad associazione tardiva.  
+# <a name="latebound-overload-resolution-cannot-be-applied-to-39ltprocedurenamegt39-because-the-accessing-instance-is-an-interface-type"></a>Risoluzione dell'overload con associazione tardiva non è possibile applicare a &#39; &lt;NomeProcedura&gt; &#39; perché l'istanza di accesso è un tipo interfaccia
+Il compilatore sta provando a risolvere un riferimento a una proprietà in overload o una routine, ma il riferimento ha esito negativo perché è un argomento di tipo `Object` e l'oggetto che fa riferimento ha il tipo di dati di un'interfaccia. Il `Object` argomento induce il compilatore a risolvere il riferimento come associazione tardiva.  
   
- In questi casi, il compilatore risolve l'overload tramite la classe di implementazione anziché tramite l'interfaccia sottostante. Se la classe rinomina una delle versioni di overload, il compilatore non considera tale versione di overload perché il nome è diverso. Questo causa a sua volta al compilatore di ignorare la versione rinominata quando sarebbe stato la scelta corretta per risolvere il riferimento.  
+ In questi casi, il compilatore risolve l'overload tramite la classe di implementazione anziché tramite l'interfaccia sottostante. Se la classe consente di rinominare una delle versioni di overload, il compilatore non considera tale versione di un overload perché il nome è diverso. Ciò a sua volta fa sì che il compilatore ignora la versione rinominata quando avrebbe potuto essere la scelta corretta per risolvere il riferimento.  
   
  **ID errore:** BC30933  
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
--   Utilizzare `CType` per eseguire il cast dell'argomento da `Object` al tipo specificato per la firma di overload da chiamare.  
+-   Uso `CType` per eseguire il cast dell'argomento da `Object` nel tipo specificato per la firma di overload da chiamare.  
   
-     Si noti che non consentono il cast dell'oggetto che fa riferimento all'interfaccia sottostante. È necessario eseguire il cast dell'argomento per evitare questo errore.  
+     Si noti che non consente di eseguire il cast l'oggetto che fa riferimento all'interfaccia sottostante. È necessario eseguire il cast dell'argomento per evitare questo errore.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrata una chiamata a un overload `Sub` procedure che genera questo errore in fase di compilazione.  
@@ -53,18 +53,18 @@ Module m1
 End Module  
 ```  
   
- Nell'esempio precedente, se il compilatore ha consentito la chiamata a `s1` quanto scritto, la risoluzione verrà eseguita tramite la classe `c1` anziché l'interfaccia `i1`. Ciò significa che il compilatore non considerare `s2` perché il nome è diverso in `c1`, anche se è la scelta corretta, come definito da `i1`.  
+ Nell'esempio precedente, se il compilatore ha consentito la chiamata a `s1` come scritto, la risoluzione avverrebbero tramite la classe `c1` anziché l'interfaccia `i1`. Ciò significa che il compilatore non considererebbero `s2` perché il nome è diverso nel `c1`, anche se è la scelta corretta come definito da `i1`.  
   
- È possibile correggere l'errore modificando la chiamata a una delle righe di codice seguente:  
+ È possibile correggere l'errore modificando la chiamata a entrambe le righe di codice seguente:  
   
 ```  
 refer.s1(CType(o1, Integer))  
 refer.s1(CType(o1, Double))  
 ```  
   
- Ognuna delle righe di codice precedenti esegue il cast in modo esplicito il `Object` variabile `o1` a uno dei tipi di parametro definiti per gli overload.  
+ Ognuna delle righe di codice precedente esegue esplicitamente il cast di `Object` variabile `o1` a uno dei tipi di parametro definiti per gli overload.  
   
-## <a name="see-also"></a>Vedere anche  
- [Overload della routine](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)  
- [Risoluzione dell'overload](../../../visual-basic/programming-guide/language-features/procedures/overload-resolution.md)  
- [Funzione CType](../../../visual-basic/language-reference/functions/ctype-function.md)
+## <a name="see-also"></a>Vedere anche
+- [Overload della routine](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)
+- [Risoluzione dell'overload](../../../visual-basic/programming-guide/language-features/procedures/overload-resolution.md)
+- [Funzione CType](../../../visual-basic/language-reference/functions/ctype-function.md)

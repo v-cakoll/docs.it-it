@@ -14,12 +14,12 @@ helpviewer_keywords:
 - performance troubleshooting [WPF], animation
 - animations [WPF], use of system resources
 ms.assetid: e467796b-d5d4-45a6-a108-8c5d7ff69a0f
-ms.openlocfilehash: df4aa7f3bf046ec871333f665ab77fa460c4095c
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 6d79d3330154fff33abe5a401a70c6b9a20aad72
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842770"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660424"
 ---
 # <a name="animation-tips-and-tricks"></a>Suggerimenti sulle animazioni
 Quando si lavora con le animazioni in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], esistono una serie di suggerimenti e consigli che è possono apportare le animazioni offrono prestazioni migliori e migliorano.  
@@ -105,7 +105,7 @@ Quando si lavora con le animazioni in [!INCLUDE[TLA2#tla_wpf](../../../../includ
   
  Per rimuovere un'animazione, sono disponibili modi diversi. Le tecniche seguenti possono essere utilizzate per rimuovere animazioni appartenenti a un <xref:System.Windows.Media.Animation.Storyboard>.  
   
--   Per rimuovere un <xref:System.Windows.Media.Animation.Storyboard> si è iniziato con un trigger di evento, vedere [procedura: rimuovere uno Storyboard](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms749412(v=vs.90)).  
+-   Per rimuovere un <xref:System.Windows.Media.Animation.Storyboard> si è iniziato con un trigger di evento, vedere [come: Rimuovere uno Storyboard](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms749412(v=vs.90)).  
   
 -   Usare il codice per rimuovere un <xref:System.Windows.Media.Animation.Storyboard>, vedere il <xref:System.Windows.Media.Animation.Storyboard.Remove%2A> (metodo).  
   
@@ -128,5 +128,5 @@ Quando si lavora con le animazioni in [!INCLUDE[TLA2#tla_wpf](../../../../includ
   
  Per altre informazioni sugli oggetti orologio, vedere [Panoramica sistema di temporizzazione e animazione](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Cenni preliminari sull'animazione](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+## <a name="see-also"></a>Vedere anche
+- [Cenni preliminari sull'animazione](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)

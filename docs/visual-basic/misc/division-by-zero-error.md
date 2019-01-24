@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID11
 ms.assetid: 7dc22e29-8baa-4d82-a1a6-2de64ba9b25d
-ms.openlocfilehash: 1de26cdbb933bff6564740c3ebe55b3b8d343728
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1370ee71775490eb242b012c0b14f8302623f9e1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33636761"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645990"
 ---
 # <a name="division-by-zero-visual-basic-error"></a>Divisione per zero (errore di Visual Basic)
 Il valore di un'espressione usata come divisore è zero.  
@@ -20,5 +20,5 @@ Il valore di un'espressione usata come divisore è zero.
   
 2.  Controllare le operazioni precedenti nelle variabili dell'espressione, specialmente quelle passate alla routine come argomenti da altre routine.  
   
-## <a name="see-also"></a>Vedere anche  
- [Tipi di errore](../../visual-basic/programming-guide/language-features/error-types.md)
+## <a name="see-also"></a>Vedere anche
+- [Tipi di errore](../../visual-basic/programming-guide/language-features/error-types.md)

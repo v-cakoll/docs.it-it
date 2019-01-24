@@ -8,12 +8,12 @@ helpviewer_keywords:
 - dynamic properties
 - user preferences [Windows Forms], tracking
 ms.assetid: 0dd8bca5-a6bf-4ac4-8eec-5725d08b38dc
-ms.openlocfilehash: e38be762fbfdaccc7d5ba01a1f24f5f3086ca8bf
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b30203aaf36d4fa6c0b06d54da1abc1f99d22afc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43503597"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576902"
 ---
 # <a name="application-settings-overview"></a>Cenni preliminari sulle impostazioni delle applicazioni
 Questo argomento descrive come creare e archiviare i dati delle impostazioni per conto dell'applicazione e degli utenti.  
@@ -47,14 +47,14 @@ Questo argomento descrive come creare e archiviare i dati delle impostazioni per
   
  È anche possibile usare la classe <xref:System.Windows.Forms.Binding> per associare le impostazioni alle proprietà a livello di codice su form e controlli.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Configuration.ApplicationSettingsBase>  
- <xref:System.Configuration.SettingsProvider>  
- <xref:System.Configuration.LocalFileSettingsProvider>  
- <xref:System.Configuration.IPersistComponentSettings>  
- [Procedura: Convalidare le impostazioni applicazione](../../../../docs/framework/winforms/advanced/how-to-validate-application-settings.md)  
- [Gestione delle impostazioni di un'applicazione (.NET)](https://msdn.microsoft.com/library/35254321-ad14-47d9-b8c6-39ab3203c5d9)  
- [Procedura: Leggere le impostazioni in fase di esecuzione con C#](../../../../docs/framework/winforms/advanced/how-to-read-settings-at-run-time-with-csharp.md)  
- [Uso delle impostazioni applicazione e delle impostazioni utente](../../../../docs/framework/winforms/advanced/using-application-settings-and-user-settings.md)  
- [Application Settings Architecture](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)  
- [Application Settings for Custom Controls](../../../../docs/framework/winforms/advanced/application-settings-for-custom-controls.md) (Impostazioni delle applicazioni per i controlli personalizzati)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Configuration.ApplicationSettingsBase>
+- <xref:System.Configuration.SettingsProvider>
+- <xref:System.Configuration.LocalFileSettingsProvider>
+- <xref:System.Configuration.IPersistComponentSettings>
+- [Procedura: Convalidare le impostazioni applicazione](../../../../docs/framework/winforms/advanced/how-to-validate-application-settings.md)
+- [Gestione delle impostazioni di un'applicazione (.NET)](https://msdn.microsoft.com/library/35254321-ad14-47d9-b8c6-39ab3203c5d9)
+- [Procedura: Leggere le impostazioni in fase di esecuzione conC#](../../../../docs/framework/winforms/advanced/how-to-read-settings-at-run-time-with-csharp.md)
+- [Uso delle impostazioni applicazione e delle impostazioni utente](../../../../docs/framework/winforms/advanced/using-application-settings-and-user-settings.md)
+- [Application Settings Architecture](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)
+- [Application Settings for Custom Controls](../../../../docs/framework/winforms/advanced/application-settings-for-custom-controls.md)

@@ -21,12 +21,12 @@ helpviewer_keywords:
 - I literal type character [Visual Basic]
 - Integer data type
 ms.assetid: a8f233b4-4be3-455c-861b-05af2fbb6c60
-ms.openlocfilehash: 8c349104ed566e9a663afe01da3838f0167dc74e
-ms.sourcegitcommit: 296183dbe35077b5c5e5e74d5fbe7f399bc507ee
+ms.openlocfilehash: 2eb1afb1400b8770c4c1ddb0ec90bb44979e702f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "50982763"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662803"
 ---
 # <a name="integer-data-type-visual-basic"></a>Tipo di dati integer (Visual Basic)
 Contiene valori integer con segno a 32 bit (4 byte) in un intervallo compreso tra -2.147.483.648 e 2.147.483.647.  
@@ -69,7 +69,7 @@ Dim number = &H_035826I
 
 -   **Considerazioni sull'interoperabilità.** Se si prevede l'interazione con componenti non scritti per .NET Framework, ad esempio oggetti COM o di automazione, tenere presente che `Integer` ha un'ampiezza dei dati diversa (16 bit) in altri ambienti. Se si passa un argomento a 16 bit a un componente di questo tipo, nel nuovo codice Visual Basic è necessario eseguirne la dichiarazione come `Short` anziché come `Integer`.  
   
--   **Ampliamento.** Il tipo di dati `Integer` può ampliarsi nel tipo `Long`, `Decimal`, `Single` o `Double`. È pertanto possibile convertire `Integer` in uno di questi tipi senza generare un errore <xref:System.OverflowException?displayProperty=nameWithType>.  
+-   **Widening.** Il tipo di dati `Integer` può ampliarsi nel tipo `Long`, `Decimal`, `Single` o `Double`. È pertanto possibile convertire `Integer` in uno di questi tipi senza generare un errore <xref:System.OverflowException?displayProperty=nameWithType>.  
   
 -   **Caratteri tipo.** Aggiungendo il carattere di tipo letterale `I` a un valore letterale, se ne determina la conversione nel tipo di dati `Integer`. Aggiungendo il carattere identificatore di tipo `%` a qualsiasi identificatore, se ne determina la conversione al tipo di dati `Integer`.  
   
@@ -95,10 +95,10 @@ k = 5.5
 
 ## <a name="see-also"></a>Vedere anche
 
-<xref:System.Int32?displayProperty=nameWithType>   
- [Tipi di dati](../../../visual-basic/language-reference/data-types/index.md)  
- [Tipo di dati Long](../../../visual-basic/language-reference/data-types/long-data-type.md)  
- [Tipo di dati Short](../../../visual-basic/language-reference/data-types/short-data-type.md)  
- [Funzioni di conversione del tipo](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [Riepilogo della conversione](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [Uso efficiente dei tipi di dati](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- <xref:System.Int32?displayProperty=nameWithType>
+- [Tipi di dati](../../../visual-basic/language-reference/data-types/index.md)
+- [Tipo di dati Long](../../../visual-basic/language-reference/data-types/long-data-type.md)
+- [Tipo di dati Short](../../../visual-basic/language-reference/data-types/short-data-type.md)
+- [Funzioni di conversione del tipo](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Riepilogo della conversione](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [Uso efficiente dei tipi di dati](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

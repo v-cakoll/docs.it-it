@@ -1,19 +1,19 @@
 ---
-title: 'Procedura dettagliata: esecuzione di attività comuni utilizzando gli smart tag nei controlli Windows Form'
+title: 'Procedura dettagliata: Esecuzione di attività comuni usando gli smart tag nei controlli Windows Form'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - DesignerAction object model
 - smart tags
 - designer actions
 ms.assetid: cac337e6-00f6-4584-80f4-75728f5ea113
-ms.openlocfilehash: d1c69d2e9e89e0a4fed767216e8743a0ac9ac81d
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: b17fbaea48660a47630dd310c74be9cd3cc78609
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44201803"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54579316"
 ---
-# <a name="walkthrough-performing-common-tasks-using-smart-tags-on-windows-forms-controls"></a>Procedura dettagliata: esecuzione di attività comuni utilizzando gli smart tag nei controlli Windows Form
+# <a name="walkthrough-performing-common-tasks-using-smart-tags-on-windows-forms-controls"></a>Procedura dettagliata: Esecuzione di attività comuni usando gli smart tag nei controlli Windows Form
 Come si costruisce form e controlli per l'applicazione Windows Forms, esistono molte attività che verranno eseguite più volte. Queste sono alcune delle attività comuni eseguite che si verifica:  
   
 -   Aggiunta o rimozione di una scheda in un <xref:System.Windows.Forms.TabControl>.  
@@ -57,17 +57,17 @@ Come si costruisce form e controlli per l'applicazione Windows Forms, esistono m
   
 2.  Fare clic sul glifo dello smart tag. Nel menu di scelta rapida che viene visualizzato accanto all'icona, selezionare la **Aggiungi scheda** elemento. Si osservi che viene aggiunta una nuova pagina della scheda per il <xref:System.Windows.Forms.TabControl>.  
   
-3.  Trascinare un <xref:System.Windows.Forms.TableLayoutPanel> controllare dal **casella degli strumenti** nel form.  
+3.  Trascinare un controllo <xref:System.Windows.Forms.TableLayoutPanel> dalla **Casella degli strumenti** al form.  
   
 4.  Fare clic sul glifo dello smart tag. Nel menu di scelta rapida che viene visualizzato accanto all'icona, selezionare la **Aggiungi colonna** elemento. Si osservi che viene aggiunta una nuova colonna per il <xref:System.Windows.Forms.TableLayoutPanel> controllo.  
   
-5.  Trascinare un <xref:System.Windows.Forms.SplitContainer> controllare dal **casella degli strumenti** nel form.  
+5.  Trascinare un controllo <xref:System.Windows.Forms.SplitContainer> dalla **Casella degli strumenti** al form.  
   
 6.  Fare clic sul glifo dello smart tag. Nel menu di scelta rapida che viene visualizzato accanto all'icona, selezionare la **orientamento divisione orizzontale** elemento. Si noti che il <xref:System.Windows.Forms.SplitContainer> barra di divisione del controllo è ora orientamento orizzontale.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Windows.Forms.TextBox>  
- <xref:System.Windows.Forms.TabControl>  
- <xref:System.Windows.Forms.SplitContainer>  
- <xref:System.ComponentModel.Design.DesignerActionList>  
- [Procedura dettagliata: Aggiunta di Smart tag per un componente di Windows Form](https://msdn.microsoft.com/library/a6814169-fa7d-4527-808c-637ca5c95f63)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Windows.Forms.TextBox>
+- <xref:System.Windows.Forms.TabControl>
+- <xref:System.Windows.Forms.SplitContainer>
+- <xref:System.ComponentModel.Design.DesignerActionList>
+- [Procedura dettagliata: Aggiunta di Smart tag per un componente di Windows Form](https://msdn.microsoft.com/library/a6814169-fa7d-4527-808c-637ca5c95f63)

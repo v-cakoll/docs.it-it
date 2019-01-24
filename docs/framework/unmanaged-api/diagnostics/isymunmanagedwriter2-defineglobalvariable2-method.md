@@ -17,14 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9f35e3c9327a3945e6ddce85be52b757294b39aa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a6e4b323f9e06f2c5dc336af772bdade0db3dea7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54657441"
 ---
 # <a name="isymunmanagedwriter2defineglobalvariable2-method"></a>Metodo ISymUnmanagedWriter2::DefineGlobalVariable2
-Definisce una singola variabile globale.  
+Definisce una variabile globale singola.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -53,20 +54,20 @@ HRESULT DefineGlobalVariable2(
  [in] Il tipo di indirizzo.  
   
  `addr1`  
- [in] Il primo indirizzo per la specifica del parametro.  
+ [in] Il primo indirizzo relativo al parametro specificato.  
   
  `addr2`  
- [in] Il secondo indirizzo per la specifica del parametro.  
+ [in] Il secondo indirizzo relativo al parametro specificato.  
   
  `addr3`  
- [in] Terzo indirizzo per la specifica del parametro.  
+ [in] Terzo indirizzo relativo al parametro specificato.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK se il metodo ha esito positivo. in caso contrario, E_FAIL o un altro codice di errore.  
+ S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o qualche altro codice di errore.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** CorSym. idl  
+ **Intestazione:** CorSym.idl  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ISymUnmanagedWriter2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-interface.md)  
- [Metodo DefineGlobalVariable](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-defineglobalvariable-method.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ISymUnmanagedWriter2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-interface.md)
+- [Metodo DefineGlobalVariable](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-defineglobalvariable-method.md)

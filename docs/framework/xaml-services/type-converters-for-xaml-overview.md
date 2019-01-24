@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XAML [XAML Services], TypeConverter
 - type conversion for XAML [XAML Services]
 ms.assetid: 51a65860-efcb-4fe0-95a0-1c679cde66b7
-ms.openlocfilehash: 25705b573be74ea5a2d71537b0c165a6f619d1d9
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 79b4d972e5d82eaac6571efebb974ac7d764d30e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519153"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54659150"
 ---
 # <a name="type-converters-for-xaml-overview"></a>Panoramica dei convertitori di tipi per XAML
 I convertitori di tipi forniscono la logica per un writer di oggetti che esegue una conversione da una stringa nel markup XAML in particolari oggetti in un oggetto grafico. Nei servizi XAML di .NET Framework, il convertitore di tipi deve essere una classe che deriva da <xref:System.ComponentModel.TypeConverter>. Alcuni convertitori supportano anche il percorso di salvataggio XAML e possono essere usati per serializzare un oggetto in un formato stringa nel markup di serializzazione. Questo argomento descrive come e quando vengono richiamati i convertitori di tipi in XAML e vengono forniti consigli di implementazione per gli override del metodo di <xref:System.ComponentModel.TypeConverter>.  
@@ -105,9 +105,9 @@ I convertitori di tipi forniscono la logica per un writer di oggetti che esegue 
   
 <a name="type_converters_in_the_xaml_node_stream"></a>   
 ## <a name="type-converters-in-the-xaml-node-stream"></a>Convertitori di tipi nel flusso di nodi XAML  
- Se si usa un flusso del nodo XAML, l'azione o il risultato finale di un convertitore di tipi non è ancora eseguito. In un percorso di caricamento, la stringa dell'attributo che necessita di una conversione di tipi ai fini del caricamento resta sotto forma di valore testuale all'interno di un membro iniziale e di un membro finale. Il convertitore di tipi eventualmente necessario per questa operazione può essere determinato tramite la proprietà <xref:System.Xaml.XamlMember.TypeConverter%2A?displayProperty=nameWithType>. Tuttavia, per ottenere un valore valido da <xref:System.Xaml.XamlMember.TypeConverter%2A?displayProperty=nameWithType> è necessario avere un contesto dello schema XAML, che può accedere a queste informazioni tramite il membro sottostante, o il tipo del valore dell'oggetto usato dal membro. Il richiamo del comportamento di conversione di tipi richiede anche il contesto dello schema XAML poiché ciò richiede il mapping dei tipi e la creazione di un'istanza del convertitore.  
+ Se si usa un flusso del nodo XAML, l'azione o il risultato finale di un convertitore di tipi non è ancora eseguito. In un percorso di caricamento, la stringa dell'attributo che necessita di una conversione di tipi ai fini del caricamento resta sotto forma di valore testuale all'interno di un membro iniziale e di un membro finale. Il convertitore di tipi eventualmente necessario per questa operazione può essere determinato tramite la proprietà <xref:System.Xaml.XamlMember.TypeConverter%2A?displayProperty=nameWithType> . Tuttavia, per ottenere un valore valido da <xref:System.Xaml.XamlMember.TypeConverter%2A?displayProperty=nameWithType> è necessario avere un contesto dello schema XAML, che può accedere a queste informazioni tramite il membro sottostante, o il tipo del valore dell'oggetto usato dal membro. Il richiamo del comportamento di conversione di tipi richiede anche il contesto dello schema XAML poiché ciò richiede il mapping dei tipi e la creazione di un'istanza del convertitore.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.ComponentModel.TypeConverterAttribute>  
- [Convertitori di tipi ed estensioni di markup per XAML](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md)  
- [Cenni preliminari su XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.ComponentModel.TypeConverterAttribute>
+- [Convertitori di tipi ed estensioni di markup per XAML](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md)
+- [Cenni preliminari su XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)

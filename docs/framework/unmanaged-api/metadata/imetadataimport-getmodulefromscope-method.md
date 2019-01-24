@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f1f8acc546c0d96aca079223200b43aec933f729
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 931b17858465d4ff380069fc2cf2bb37cb7a7ffc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447909"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718182"
 ---
 # <a name="imetadataimportgetmodulefromscope-method"></a>Metodo IMetaDataImport::GetModuleFromScope
-Ottiene i metadati di un token per il modulo a cui fa riferimento nell'ambito dei metadati corrente.  
+Ottiene i metadati di un token per il modulo di cui viene fatto riferimento nell'ambito dei metadati corrente.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,17 +37,17 @@ HRESULT GetModuleFromScope (
   
 #### <a name="parameters"></a>Parametri  
  `pmd`  
- [out] Puntatore al token che rappresenta il modulo a cui fa riferimento nell'ambito dei metadati corrente.  
+ [out] Puntatore al token che rappresenta il modulo di cui viene fatto riferimento nell'ambito dei metadati corrente.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
- **Libreria:** inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [Interfaccia IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Interfaccia IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

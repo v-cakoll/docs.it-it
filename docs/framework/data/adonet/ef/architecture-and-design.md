@@ -2,12 +2,12 @@
 title: Architettura e progettazione
 ms.date: 03/30/2017
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
-ms.openlocfilehash: 281f321e45b019178aa82946eb451e56f5c04841
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8b3515fac9ae7f9302ba607fcf842719718f6c55
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154262"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576330"
 ---
 # <a name="architecture-and-design"></a>Architettura e progettazione
 Il modulo di generazione SQL nel [Provider di esempio](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) viene implementato come un visitatore dell'albero delle espressioni che rappresenta l'albero dei comandi. La generazione viene eseguita in un unico passaggio sull'albero delle espressioni.  
@@ -18,7 +18,7 @@ Il modulo di generazione SQL nel [Provider di esempio](https://code.msdn.microso
   
 -   Per evitare conflitti durante la ridenominazione degli alias, è necessario identificare tutti gli alias usati. È possibile rinviare le scelte di ridenominazione in SqlBuilder, usando gli oggetti Symbol per rappresentare le colonne candidate per la ridenominazione.  
   
- ![Diagramma](../../../../../docs/framework/data/adonet/ef/media/de1ca705-4f7c-4d2d-ace5-afefc6d3cefa.gif "de1ca705-4f7c-4d2d-ace5-afefc6d3cefa")  
+ ![Diagram](../../../../../docs/framework/data/adonet/ef/media/de1ca705-4f7c-4d2d-ace5-afefc6d3cefa.gif "de1ca705-4f7c-4d2d-ace5-afefc6d3cefa")  
   
  Nella prima fase, durante la visita dell'albero delle espressioni, le espressioni vengono raggruppate in oggetti SqlSelectStatements e i join e gli alias di join vengono resi bidimensionali. Durante questo passaggio, gli oggetti Symbol rappresentano colonne o alias di input che possono essere rinominati.  
   
@@ -52,7 +52,7 @@ internal sealed class SqlBuilder : ISqlFragment {
 ```  
   
 #### <a name="sqlselectstatement"></a>SqlSelectStatement  
- SqlSelectStatement rappresenta un'istruzione SQL SELECT canonica della forma "SELECT... DA.. POSIZIONE IN CUI... RAGGRUPPA PER... ORDER BY".  
+ SqlSelectStatement rappresenta un'istruzione SQL SELECT canonica della forma "SELECT... FROM  .. POSIZIONE IN CUI... RAGGRUPPA PER... ORDER BY".  
   
  Ognuna delle clausole SQL viene rappresentata da un oggetto StringBuilder e inoltre rileva se è stato specificato Distinct e se l'istruzione è al livello più alto. Se l'istruzione non è al livello più alto, la clausola ORDER BY viene omessa, a meno che nell'istruzione non sia inclusa anche una clausola TOP.  
   
@@ -414,5 +414,5 @@ IsEmpty(inut) = Not Exists(input)
   
  Per produrre nomi univoci sia per gli alias degli extent che per le colonne, usare <existing_name>_n, in cui n è l'alias più piccolo che non è stato ancora usato. L'elenco globale di tutti gli alias aumenta la necessità di eseguire ridenominazioni a catena.  
   
-## <a name="see-also"></a>Vedere anche  
- [Generazione di comandi SQL nel provider di esempio](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)
+## <a name="see-also"></a>Vedere anche
+- [Generazione di comandi SQL nel provider di esempio](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)

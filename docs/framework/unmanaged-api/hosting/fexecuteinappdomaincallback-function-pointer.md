@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4c3cafe3a8912702a093f9df7234112c0057b440
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e3031ce0eb6f23fdf5e5366d33ff075ea7816b0b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431300"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54649544"
 ---
 # <a name="fexecuteinappdomaincallback-function-pointer"></a>Puntatore alla funzione FExecuteInAppDomainCallback
-Punta a una funzione che viene chiamato da common language runtime (CLR) per eseguire codice gestito.  
+Punta a una funzione che viene chiamato da common language runtime (CLR) per eseguire il codice gestito.  
   
  Questo puntatore a funzione è stato deprecato nel [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
   
@@ -38,18 +38,18 @@ typedef HRESULT (__stdcall *FExecuteInAppDomainCallback) (
   
 #### <a name="parameters"></a>Parametri  
  `cookie`  
- [in] Puntatore alla memoria allocata dal chiamante opaca che contiene il codice gestito deve essere eseguito.  
+ [in] Puntatore alla memoria allocata dal chiamante opaco che contiene il codice gestito deve essere eseguito.  
   
- L'allocazione e la durata della memoria sono controllate dal chiamante (CLR). Non si tratta della memoria heap gestito di CLR.  
+ La durata della memoria e allocazione sono controllate dal chiamante (vale a dire, Common Language Runtime). Non si tratta della memoria heap gestito CLR.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Mscoree. H  
+ **Intestazione:** MSCorEE.h  
   
- **Libreria:** mscorwks. dll  
+ **Libreria:** MSCorWks.dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Funzioni di hosting CLR deprecate](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>Vedere anche
+- [Funzioni di hosting CLR deprecate](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

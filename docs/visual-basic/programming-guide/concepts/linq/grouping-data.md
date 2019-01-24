@@ -1,15 +1,15 @@
 ---
-title: Raggruppamento di dati (Visual Basic)
+title: Raggruppamento dei dati (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 8f3a0871-6958-4aef-8f6f-493e189fd57d
-ms.openlocfilehash: e2732c91dfff65ebb86ef45296ba369c3073a8f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 14b114906a0e04a4d11c323f80b070603a7286c0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644199"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576964"
 ---
-# <a name="grouping-data-visual-basic"></a>Raggruppamento di dati (Visual Basic)
+# <a name="grouping-data-visual-basic"></a>Raggruppamento dei dati (Visual Basic)
 Il raggruppamento consiste nell'inserire i dati in gruppi in modo che gli elementi in ogni gruppo condividano un attributo comune.  
   
  Nella figura seguente vengono illustrati i risultati del raggruppamento di una sequenza di caratteri. La chiave di ogni gruppo è il carattere.  
@@ -63,9 +63,9 @@ MsgBox(sb.ToString())
 ' 208  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Linq>  
- [Panoramica degli operatori query standard (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [Clausola Group By](../../../../visual-basic/language-reference/queries/group-by-clause.md)  
- [Procedura: raggruppare i file per estensione (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)  
- [Procedura: suddividere un File in molti file utilizzando i gruppi (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Linq>
+- [Panoramica degli operatori query standard (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Clausola Group By](../../../../visual-basic/language-reference/queries/group-by-clause.md)
+- [Procedura: Raggruppa file per estensione (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)
+- [Procedura: Suddividere un File in molti file usando i gruppi (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)

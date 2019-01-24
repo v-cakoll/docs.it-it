@@ -12,12 +12,12 @@ helpviewer_keywords:
 - structures [.NET Framework], design guidelines
 ms.assetid: 1f48b2d8-608c-4be6-9ba4-d8f203ed9f9f
 author: KrzysztofCwalina
-ms.openlocfilehash: 240492590fab4579b9d984d5dce759f6d9f8cbab
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: cc5b8d7effda31b0236477b217bccf5cf2137f8c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153111"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646607"
 ---
 # <a name="struct-design"></a>Progettazione di struct
 Il tipo di valore per utilizzo generico è più noto anche come uno struct, la parola chiave c#. In questa sezione vengono fornite linee guida per la progettazione di struct generale.  
@@ -48,6 +48,6 @@ Il tipo di valore per utilizzo generico è più noto anche come uno struct, la p
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Linee guida per la progettazione di tipi](../../../docs/standard/design-guidelines/type.md)  
-- [Linee guida per la progettazione di Framework](../../../docs/standard/design-guidelines/index.md)  
+- [Linee guida per la progettazione di tipi](../../../docs/standard/design-guidelines/type.md)
+- [Linee guida per la progettazione di Framework](../../../docs/standard/design-guidelines/index.md)
 - [Scelta tra classi e struct](../../../docs/standard/design-guidelines/choosing-between-class-and-struct.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e9dfd97ce5b9b192b9a2e88e3d7e4f963d929f47
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0702a7a58e6bd8c13254da5adce17c9adf6fa0cf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449260"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569459"
 ---
 # <a name="imetadataemit2savedeltatostream-method"></a>Metodo IMetaDataEmit2::SaveDeltaToStream
 Salva le modifiche dalla sessione di modifica e continuazione corrente nel flusso specificato.  
@@ -38,20 +38,20 @@ HRESULT SaveDeltaToStream (
   
 #### <a name="parameters"></a>Parametri  
  `pIStream`  
- [in] Un puntatore a interfaccia per il flusso scrivibile nel quale salvare le modifiche.  
+ [in] Un puntatore a interfaccia nel flusso scrivibile nel quale salvare le modifiche.  
   
  `dwSaveFlags`  
  [in] Riservato. Questo valore deve essere zero.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
- **Libreria:** usata come risorsa in Mscoree. dll  
+ **Libreria:** Usato come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)  
- [Interfaccia IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [Interfaccia IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

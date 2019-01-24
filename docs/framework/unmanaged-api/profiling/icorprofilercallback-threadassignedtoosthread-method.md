@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e577413ea6807ea5ff8be4d668aa82f0acbb007d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5c55c6ffea0f3688fc7c3c3283701b4e35f1fcbe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33451834"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54651981"
 ---
 # <a name="icorprofilercallbackthreadassignedtoosthread-method"></a>Metodo ICorProfilerCallback::ThreadAssignedToOSThread
-Notifica al profiler che un thread gestito viene implementato utilizzando un thread del sistema operativo in uso.  
+Notifica al profiler che un thread gestito viene implementato utilizzando un thread di sistema operativo in uso.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,16 +43,16 @@ HRESULT ThreadAssignedToOSThread(
  [in] Identificatore del thread del sistema operativo.  
   
 ## <a name="remarks"></a>Note  
- Il `ThreadAssignedToOSThread` richiamata in modo che il profiler può mantenere un mapping accurato tra i fiber thread del sistema operativo e i thread gestiti.  
+ Il `ThreadAssignedToOSThread` callback è presente in modo che il profiler può mantenere una mappatura accurata tra i fiber di thread del sistema operativo e i thread gestiti.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

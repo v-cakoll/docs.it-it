@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: eseguire il rendering delle immagini con GDI+'
+title: 'Procedura: Eseguire il rendering delle immagini con GDI+'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - images [Windows Forms], creating
 - GDI+, rendering existing images
 ms.assetid: c128b79a-3e31-47d8-9e66-3470f570a056
-ms.openlocfilehash: 6f5b139c6831a065c85e9d9889c259c859a649cb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a289aee211d5115d80e7ad0d9152b05a0eaf5487
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33524606"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54567806"
 ---
-# <a name="how-to-render-images-with-gdi"></a>Procedura: eseguire il rendering delle immagini con GDI+
-È possibile usare [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] per il rendering delle immagini presenti sotto forma di file nelle applicazioni. Farlo creando un nuovo oggetto di un <xref:System.Drawing.Image> classe (ad esempio <xref:System.Drawing.Bitmap>), creando un <xref:System.Drawing.Graphics> dell'oggetto che fa riferimento all'area di disegno che si desidera utilizzare e la chiamata il <xref:System.Drawing.Graphics.DrawImage%2A> metodo il <xref:System.Drawing.Graphics> oggetto. L'immagine verrà disegnata sulla superficie da disegno rappresentata dalla classe della grafica. È possibile usare l'editor di immagini per creare e modificare i file di immagine in fase di progettazione ed eseguire su di loro il rendering con [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] in fase di esecuzione. Per altre informazioni, vedere [Image Editor for Icons](/cpp/windows/image-editor-for-icons) (Editor di immagini per le icone).  
+# <a name="how-to-render-images-with-gdi"></a>Procedura: Eseguire il rendering delle immagini con GDI+
+È possibile usare [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] per il rendering delle immagini presenti sotto forma di file nelle applicazioni. Eseguire questa operazione creando un nuovo oggetto di un <xref:System.Drawing.Image> classe (, ad esempio <xref:System.Drawing.Bitmap>), creando una <xref:System.Drawing.Graphics> dell'oggetto che fa riferimento all'area di disegno da usare e chiamando il <xref:System.Drawing.Graphics.DrawImage%2A> metodo del <xref:System.Drawing.Graphics> oggetto. L'immagine verrà disegnata sulla superficie da disegno rappresentata dalla classe della grafica. È possibile usare l'editor di immagini per creare e modificare i file di immagine in fase di progettazione ed eseguire su di loro il rendering con [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] in fase di esecuzione. Per altre informazioni, vedere [Image Editor for Icons](/cpp/windows/image-editor-for-icons) (Editor di immagini per le icone).  
   
 ### <a name="to-render-an-image-with-gdi"></a>Per eseguire il rendering di un'immagine con GDI+  
   
-1.  Creare un oggetto che rappresenti l'immagine che si desidera visualizzare. L'oggetto deve essere un membro di una classe che eredita da <xref:System.Drawing.Image>, ad esempio <xref:System.Drawing.Bitmap> o <xref:System.Drawing.Imaging.Metafile>. Esempio:  
+1.  Creare un oggetto che rappresenti l'immagine che si desidera visualizzare. Questo oggetto deve essere un membro di una classe che eredita da <xref:System.Drawing.Image>, ad esempio <xref:System.Drawing.Bitmap> o <xref:System.Drawing.Imaging.Metafile>. Esempio:  
   
     ```vb  
     ' Uses the System.Environment.GetFolderPath to get the path to the   
@@ -47,7 +47,7 @@ ms.locfileid: "33524606"
           (System::Environment::SpecialFolder::MyPictures));  
     ```  
   
-2.  Creare un <xref:System.Drawing.Graphics> oggetto che rappresenta la superficie di disegno che si desidera utilizzare. Per altre informazioni, vedere [Procedura: Creare oggetti Graphics per disegnare](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md).  
+2.  Creare un <xref:System.Drawing.Graphics> oggetto che rappresenta la superficie di disegno da usare. Per altre informazioni, vedere [Procedura: Creare oggetti Graphics per disegnare](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md).  
   
     ```vb  
     ' Creates a Graphics object that represents the drawing surface of   
@@ -67,7 +67,7 @@ ms.locfileid: "33524606"
     Graphics^ g = button1->CreateGraphics();  
     ```  
   
-3.  Chiamare il <xref:System.Drawing.Graphics.DrawImage%2A> dell'oggetto graphics per il rendering dell'immagine. È necessario specificare l'immagine da disegnare e le coordinate in cui deve essere disegnata.  
+3.  Chiamare il <xref:System.Drawing.Graphics.DrawImage%2A> dell'oggetto di grafica per eseguire il rendering dell'immagine. È necessario specificare l'immagine da disegnare e le coordinate in cui deve essere disegnata.  
   
     ```vb  
     g.DrawImage(myBitmap, 1, 1)  
@@ -81,11 +81,11 @@ ms.locfileid: "33524606"
     g->DrawImage(myBitmap, 1, 1);  
     ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Introduzione alla programmazione grafica](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)  
- [Procedura: Creare oggetti Graphics per disegnare](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)  
- [Penne, linee e rettangoli in GDI+](../../../../docs/framework/winforms/advanced/pens-lines-and-rectangles-in-gdi.md)  
- [Procedura: Disegnare testo in un Windows Form](../../../../docs/framework/winforms/advanced/how-to-draw-text-on-a-windows-form.md)  
- [Grafica e disegno in Windows Form](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
- [Disegno di linee o figure chiuse](/cpp/windows/drawing-lines-or-closed-figures-image-editor-for-icons)  
- [Editor di immagini per le icone](/cpp/windows/image-editor-for-icons)
+## <a name="see-also"></a>Vedere anche
+- [Introduzione alla programmazione grafica](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)
+- [Procedura: Creare oggetti Graphics per disegnare](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)
+- [Penne, linee e rettangoli in GDI+](../../../../docs/framework/winforms/advanced/pens-lines-and-rectangles-in-gdi.md)
+- [Procedura: Disegnare testo in un Windows Form](../../../../docs/framework/winforms/advanced/how-to-draw-text-on-a-windows-form.md)
+- [Grafica e disegno in Windows Form](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
+- [Disegno di linee o figure chiuse](/cpp/windows/drawing-lines-or-closed-figures-image-editor-for-icons)
+- [Editor di immagini per le icone](/cpp/windows/image-editor-for-icons)

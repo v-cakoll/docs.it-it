@@ -3,20 +3,20 @@ title: '&lt;customCookieHandler&gt;'
 ms.date: 03/30/2017
 ms.assetid: a03b153d-5ec6-4915-9031-6f0c3fd348be
 author: BrucePerlerMS
-ms.openlocfilehash: 51ca91de5c77727f5f5506118461d19354f12c14
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: a3d032279d0b568d7072dbbe020344365c341c1b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836420"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54724018"
 ---
 # <a name="ltcustomcookiehandlergt"></a>&lt;customCookieHandler&gt;
 Imposta il tipo di gestore di cookie personalizzato. Questo elemento può essere presente solo se il `mode` attributo del `<cookieHandler>` elemento è "Custom". Il tipo personalizzato deve derivare dal <xref:System.IdentityModel.Services.CookieHandler> classe.  
   
- \<IdentityModel >  
-\<federationConfiguration >  
-\<cookieHandler >  
-\<customCookieHandler >  
+ \<system.identityModel.services>  
+\<federationConfiguration>  
+\<cookieHandler>  
+\<customCookieHandler>  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -47,7 +47,7 @@ Imposta il tipo di gestore di cookie personalizzato. Questo elemento può essere
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<cookieHandler >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md)|Consente di configurare il <xref:System.IdentityModel.Services.CookieHandler> che il <xref:System.IdentityModel.Services.SessionAuthenticationModule> viene utilizzato per leggere e scrivere i cookie.|  
+|[\<cookieHandler>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md)|Consente di configurare il <xref:System.IdentityModel.Services.CookieHandler> che il <xref:System.IdentityModel.Services.SessionAuthenticationModule> viene utilizzato per leggere e scrivere i cookie.|  
   
 ## <a name="remarks"></a>Note  
  Quando si specifica un gestore di cookie personalizzato impostando il `mode` attributo del `<cookieHandler>` elemento su "Custom", è necessario specificare il tipo del gestore di cookie personalizzato, includendo un `<customCookieHandler>` elemento figlio che fa riferimento al tipo di gestore di cookie. Questo elemento non può essere specificato quando il `mode` attributo è impostato su "Chunked" o "Default". I gestori di cookie personalizzato devono derivare dal <xref:System.IdentityModel.Services.CookieHandler> classe.  
@@ -63,5 +63,5 @@ Imposta il tipo di gestore di cookie personalizzato. Questo elemento può essere
 </cookieHandler>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.IdentityModel.Services.CookieHandler>
+## <a name="see-also"></a>Vedere anche
+- <xref:System.IdentityModel.Services.CookieHandler>

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2fe73bef50a32c3ff03f2a2754f665cc95018a4d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a0381ee61a0128a8ae303d44198f8d391b4531a9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402994"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660619"
 ---
 # <a name="importfileex-method"></a>Metodo ImportFileEx
 Importazioni indicato assembly o un modulo non associato.  
@@ -45,30 +45,30 @@ HRESULT ImportFileEx(
  Nome completo del file da cui importare.  
   
  `pszTargetName`  
- Nome facoltativo di file di destinazione.  
+ Nome facoltativo del file di destinazione.  
   
  `fSmartImport`  
- Se TRUE, viene utilizzato ImportTypes, in caso contrario l'importazione deve essere eseguita manualmente.  
+ Se TRUE, viene usato ImportTypes, in caso contrario, l'importazione deve essere eseguita manualmente.  
   
  `dwOpenFlags`  
- Flag da passare a [OpenScope (metodo)](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md).  
+ Flag da passare insieme alla [metodo OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md).  
   
  `pImportToken`  
  Riceve l'ID del file da importare.  
   
  `ppAssemblyScope`  
- Riceve l'ambito di importazione assembly [interfaccia IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) interfaccia. È impostato su NULL se il file non è un assembly.  
+ Ambito di importazione dell'assembly riceve [interfaccia IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) interfaccia. È impostato su NULL se il file non è un assembly.  
   
  `pdwCountOfScopes`  
  Riceve il numero di file importati e/o gli ambiti.  
   
 ## <a name="return-value"></a>Valore restituito  
- Se il metodo ha esito positivo, restituisce S_OK.  
+ Restituisce S_OK se il metodo ha esito positivo.  
   
 ## <a name="requirements"></a>Requisiti  
  Richiede alink.h.  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [Interfaccia IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [Alink (API)](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [Interfaccia IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [Alink (API)](../../../../docs/framework/unmanaged-api/alink/index.md)

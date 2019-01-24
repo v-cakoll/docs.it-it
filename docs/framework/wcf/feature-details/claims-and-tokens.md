@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - claims [WCF], and tokens
 ms.assetid: eff167f3-33f8-483d-a950-aa3e9f97a189
-ms.openlocfilehash: f640372504658c8f7935d3d219cd373f19ebf31f
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 21172ccda5f5f8070d81726d5f4dc6f9d80ab071
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837534"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569001"
 ---
 # <a name="claims-and-tokens"></a>Attestazioni e token
 Questo argomento descrive i vari tipi di attestazione che Windows Communication Foundation (WCF) Crea dai token predefiniti supportati.  
@@ -64,9 +64,9 @@ Questo argomento descrive i vari tipi di attestazione che Windows Communication 
 ## <a name="identity-claims-and-servicesecuritycontextisanonymous"></a>Attestazioni d'identità e ServiceSecurityContext.IsAnonymous  
  Se nessuna del `ClaimSet` gli oggetti risultanti dalle credenziali client contengano un'attestazione con un `Right` dei `Identity,` il <xref:System.ServiceModel.ServiceSecurityContext.IsAnonymous%2A> restituisce proprietà `true`. Se sono presenti una o più di tali attestazioni, la proprietà `IsAnonymous` restituisce `false`.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.IdentityModel.Claims.ClaimSet>  
- <xref:System.IdentityModel.Claims.Claim>  
- <xref:System.IdentityModel.Claims.Rights>  
- <xref:System.IdentityModel.Claims.ClaimTypes>  
- [Gestione delle attestazioni e dell'autorizzazione con il modello di identità](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.IdentityModel.Claims.ClaimSet>
+- <xref:System.IdentityModel.Claims.Claim>
+- <xref:System.IdentityModel.Claims.Rights>
+- <xref:System.IdentityModel.Claims.ClaimTypes>
+- [Gestione delle attestazioni e dell'autorizzazione con il modello di identità](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)

@@ -2,15 +2,15 @@
 title: Attivazione UDP
 ms.date: 03/30/2017
 ms.assetid: 4b0ccd10-0dfb-4603-93f9-f0857c581cb7
-ms.openlocfilehash: c64540db555d7cac56dd46c6ffb63ec95ca81f91
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 09b208f88b456b6d98e45fc34db3857f8938cd6b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46562352"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54715517"
 ---
 # <a name="udp-activation"></a>Attivazione UDP
-In questo esempio si basa sul [trasporto: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) esempio. Estende la [trasporto: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) esempio per supportare l'attivazione del processo mediante il servizio di attivazione processo Windows (WAS).  
+Questo esempio è basato sul [trasporto: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) esempio. Estende il [trasporto: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) esempio per supportare l'attivazione del processo mediante il servizio di attivazione processo Windows (WAS).  
   
  L'esempio è costituito da tre parti principali:  
   
@@ -103,13 +103,13 @@ In questo esempio si basa sul [trasporto: UDP](../../../../docs/framework/wcf/sa
 ## <a name="sample-usage"></a>Utilizzo dell'esempio  
  Dopo la compilazione, vengono generati quattro file binari diversi:  
   
--   Client.exe: il codice del client. Il file App.config viene compilato nel file di configurazione del client Client.exe.config.  
+-   Client.exe: Il codice client. Il file App.config viene compilato nel file di configurazione del client Client.exe.config.  
   
 -   UDPActivation.dll: la libreria che contiene tutte le principali implementazioni UDP.  
   
--   Service.dll: il codice del servizio. Questo file viene copiato nella directory \bin dell'applicazione virtuale ServiceModelSamples. Il file del servizio è Service.svc e il file di configurazione è Web.config. Dopo la compilazione, questi file vengono copiati nel percorso seguente: %SystemDrive%\Inetpub\wwwroot\ServiceModelSamples.  
+-   Service.dll: Il codice del servizio. Questo file viene copiato nella directory \bin dell'applicazione virtuale ServiceModelSamples. Il file del servizio è Service.svc e il file di configurazione è Web.config. Dopo la compilazione, questi file vengono copiati nel percorso seguente: %SystemDrive%\Inetpub\wwwroot\ServiceModelSamples.  
   
--   WasNetActivator: il programma attivatore di UDP.  
+-   WasNetActivator: Il programma attivatore UDP.  
   
 -   Verificare che tutte le parti necessarie siano installate correttamente. Nei passaggi seguenti viene illustrato come eseguire l'esempio:  
   

@@ -2,12 +2,12 @@
 title: Impostazione delle proprietà Use e Style
 ms.date: 03/30/2017
 ms.assetid: c09a0600-116f-41cf-900a-1b7e4ea4e300
-ms.openlocfilehash: 6728ab0a02c4fc171019564fa2a55bc3a5afd394
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: cd6f9af034f2f36c4daf808492713fcd616e3a9c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195905"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662153"
 ---
 # <a name="setting-the-use-and-style-properties"></a>Impostazione delle proprietà Use e Style
 In questo esempio viene illustrato l'uso delle proprietà Use e Style in <xref:System.ServiceModel.XmlSerializerFormatAttribute> e <xref:System.ServiceModel.DataContractFormatAttribute>. Queste proprietà influiscono sulla formattazione dei messaggi. Per impostazione predefinita, la formattazione del corpo del messaggio prevede che lo stile sia impostato su <xref:System.ServiceModel.OperationFormatStyle.Document>. Queste impostazioni possono essere specificate a livello del contratto di servizio o a livello del contratto dell'operazione.  

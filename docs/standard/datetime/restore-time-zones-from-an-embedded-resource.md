@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: ripristinare fusi orari da una risorsa incorporata'
+title: 'Procedura: Ripristinare i fusi orari da una risorsa incorporata'
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,16 +11,16 @@ helpviewer_keywords:
 ms.assetid: 6b7b4de9-da07-47e3-8f4c-823f81798ee7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 99d38b336b5e655dd1c96682eec90c5fbe8469d6
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 71fc4e04c87dfa3b83eabb06361d1da94a512a5e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841059"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54656804"
 ---
-# <a name="how-to-restore-time-zones-from-an-embedded-resource"></a>Procedura: ripristinare fusi orari da una risorsa incorporata
+# <a name="how-to-restore-time-zones-from-an-embedded-resource"></a>Procedura: Ripristinare i fusi orari da una risorsa incorporata
 
-In questo argomento viene descritto come ripristinare i fusi orari che sono state salvate in un file di risorse. Per informazioni e istruzioni sul salvataggio di fusi orari, vedere [procedura: salvare fusi orari in una risorsa incorporata](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md).
+In questo argomento viene descritto come ripristinare i fusi orari che sono state salvate in un file di risorse. Per informazioni e istruzioni sul salvataggio di fusi orari, vedere [come: Salvare fusi orari in una risorsa incorporata](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md).
 
 ### <a name="to-deserialize-a-timezoneinfo-object-from-an-embedded-resource"></a>Per deserializzare un oggetto TimeZoneInfo da una risorsa incorporata
 
@@ -60,6 +60,6 @@ L'esempio presenta i requisiti seguenti:
 
 ## <a name="see-also"></a>Vedere anche
 
-* [Date, ore e fusi orari](../../../docs/standard/datetime/index.md)
-* [Panoramica sui fusi orari](../../../docs/standard/datetime/time-zone-overview.md)
-* [Procedura: Salvare fusi orari in una risorsa incorporata](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md)
+- [Date, ore e fusi orari](../../../docs/standard/datetime/index.md)
+- [Panoramica sui fusi orari](../../../docs/standard/datetime/time-zone-overview.md)
+- [Procedura: Salvare fusi orari in una risorsa incorporata](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md)

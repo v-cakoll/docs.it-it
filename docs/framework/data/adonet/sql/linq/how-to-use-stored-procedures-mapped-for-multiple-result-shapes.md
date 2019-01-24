@@ -1,21 +1,21 @@
 ---
-title: 'Procedura: utilizzare stored procedure mappate per più forme di risultati'
+title: 'Procedura: Utilizzare le Stored procedure mappate per più forme di risultati'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: c2b84dfe-7fec-489a-92de-45215cec4518
-ms.openlocfilehash: 03a003bd5b09ae19b01dcc9880137661ba6fccae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6ea318e89cf91dcbf16747117b8000dfa3f9571d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356796"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573669"
 ---
-# <a name="how-to-use-stored-procedures-mapped-for-multiple-result-shapes"></a>Procedura: utilizzare stored procedure mappate per più forme di risultati
+# <a name="how-to-use-stored-procedures-mapped-for-multiple-result-shapes"></a>Procedura: Utilizzare le Stored procedure mappate per più forme di risultati
 Quando una stored procedure consente di restituire più forme di risultati, il tipo restituito non può essere fortemente tipizzato a una singola forma di proiezione. Sebbene [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] può generare tutti i tipi di proiezione possibili, non è possibile conoscere l'ordine in cui saranno restituiti.  
   
- Si consideri questo scenario rispetto a stored procedure che producono più forme di risultati in sequenza. Per ulteriori informazioni, vedere [procedura: utilizzare Stored procedure mappate per forme di risultati sequenziali](../../../../../../docs/framework/data/adonet/sql/linq/how-to-use-stored-procedures-mapped-for-sequential-result-shapes.md).  
+ Si consideri questo scenario rispetto a stored procedure che producono più forme di risultati in sequenza. Per altre informazioni, vedere [Procedura: Utilizzare le Stored procedure mappate per forme di risultati sequenziali](../../../../../../docs/framework/data/adonet/sql/linq/how-to-use-stored-procedures-mapped-for-sequential-result-shapes.md).  
   
  L'attributo <xref:System.Data.Linq.Mapping.ResultTypeAttribute> viene applicato a stored procedure che restituiscono più tipi di risultati per specificare il set di tipi che la stored procedure può restituire.  
   
@@ -43,5 +43,5 @@ else if(@shape = 2)
  [!code-csharp[DLinqSprox#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSprox/cs/Program.cs#5)]
  [!code-vb[DLinqSprox#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSprox/vb/Module1.vb#5)]  
   
-## <a name="see-also"></a>Vedere anche  
- [stored procedure](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
+## <a name="see-also"></a>Vedere anche
+- [stored procedure](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)

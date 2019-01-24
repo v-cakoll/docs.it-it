@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: f91fc5f7-de5a-4f23-b6ac-f450e63c662e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b92592500f0babf29891710cedf1228b0ddcb0e4
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 3e74fc1e4ab48e73365d41594a7a84cbad6ec044
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45970734"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54496114"
 ---
 # <a name="enabling-jit-attach-debugging"></a>Attivazione dell'esecuzione del debug ad associazione JIT
 Il termine debug ad associazione JIT indica l'associazione di un debugger a un processo in caso di errori. Può anche essere attivato da specifici metodi o funzioni.  
@@ -27,15 +27,15 @@ Il termine debug ad associazione JIT indica l'associazione di un debugger a un p
   
  Il debug ad associazione JIT viene attivato anche dalle chiamate ai metodi e alle funzioni seguenti:  
   
--   Metodo <xref:System.Diagnostics.Debugger.Launch%2A?displayProperty=nameWithType>.  
+-   Metodo<xref:System.Diagnostics.Debugger.Launch%2A?displayProperty=nameWithType> .  
   
--   Metodo <xref:System.Diagnostics.Debugger.Break%2A?displayProperty=nameWithType>.  
+-   Metodo<xref:System.Diagnostics.Debugger.Break%2A?displayProperty=nameWithType> .  
   
 -   Funzione [DebugBreak](https://go.microsoft.com/fwlink/?LinkId=182106) (Win32).  
   
- Prima di [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], .NET Framework forniva chiavi del Registro di sistema separate per controllare il comportamento dei debugger nativi e gestiti. A partire [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], il controllo viene consolidato in una singola chiave del Registro di sistema: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\Current Version\AeDebug. I valori che è possibile impostare per tale chiave determinano se un debugger viene richiamato e, in tal caso, se viene richiamato con una finestra di dialogo che richiede l'intervento dell'utente. Per informazioni sull'impostazione di questa chiave del Registro di sistema, vedere [configurazione del debug automatico](https://go.microsoft.com/fwlink/?LinkId=181767).  
+ Prima di [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], .NET Framework forniva chiavi del Registro di sistema separate per controllare il comportamento dei debugger nativi e gestiti. A partire dal [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], controllo viene consolidato in una chiave del Registro di sistema singolo: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\Current Version\AeDebug. I valori che è possibile impostare per tale chiave determinano se un debugger viene richiamato e, in tal caso, se viene richiamato con una finestra di dialogo che richiede l'intervento dell'utente. Per informazioni sull'impostazione di questa chiave del Registro di sistema, vedere [configurazione del debug automatico](https://go.microsoft.com/fwlink/?LinkId=181767).  
   
-## <a name="see-also"></a>Vedere anche  
- [Debug, traccia e profilatura](../../../docs/framework/debug-trace-profile/index.md)  
- [Semplificazione del debug di un'immagine](../../../docs/framework/debug-trace-profile/making-an-image-easier-to-debug.md)  
- [Abilitazione della funzione di profilatura](https://msdn.microsoft.com/library/3b669676-f0e0-4ebf-8674-68986dd2020d)
+## <a name="see-also"></a>Vedere anche
+- [Debug, traccia e profilatura](../../../docs/framework/debug-trace-profile/index.md)
+- [Semplificazione del debug di un'immagine](../../../docs/framework/debug-trace-profile/making-an-image-easier-to-debug.md)
+- [Abilitazione della funzione di profilatura](https://msdn.microsoft.com/library/3b669676-f0e0-4ebf-8674-68986dd2020d)

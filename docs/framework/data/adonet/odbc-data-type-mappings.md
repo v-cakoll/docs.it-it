@@ -2,12 +2,12 @@
 title: Mapping dei tipi di dati ODBC
 ms.date: 03/30/2017
 ms.assetid: 43c35d32-831d-480f-a150-78f7e869d17f
-ms.openlocfilehash: ece9397e8c8e8b9d26f8aac2298aa25173ac2d93
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: f57ba69a03837805f168cf33a9b8060633a6330f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44251534"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54724226"
 ---
 # <a name="odbc-data-type-mappings"></a>Mapping dei tipi di dati ODBC
 Nella tabella seguente sono illustrati i tipi [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dedotti per i tipi di dati dal provider di dati .NET Framework per ODBC (<xref:System.Data.Odbc>). I metodi tipizzati della funzione di accesso per il <xref:System.Data.Odbc.OdbcDataReader> sono inoltre elencati.  
@@ -35,6 +35,6 @@ Nella tabella seguente sono illustrati i tipi [!INCLUDE[dnprdnshort](../../../..
 |SQL_WLONGVARCHAR|String<br /><br /> Char[]|GetString()<br /><br /> GetChars()|  
 |SQL_WVARCHAR|String<br /><br /> Char[]|GetString()<br /><br /> GetChars()|  
   
-## <a name="see-also"></a>Vedere anche  
- [Recupero e modifica di dati in ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vedere anche
+- [Recupero e modifica di dati in ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

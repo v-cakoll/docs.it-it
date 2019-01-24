@@ -2,12 +2,12 @@
 title: Mapping tra vincoli XML Schema (XSD) e vincoli di dataset
 ms.date: 03/30/2017
 ms.assetid: 3d0d1a4b-9104-434f-ac04-6c01ab5716b5
-ms.openlocfilehash: c9cd97535a0165b82f0823c1f17f621491d4255c
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: 8addcf564bda969d404694171a2af3dd277ff22b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49337597"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54657337"
 ---
 # <a name="mapping-xml-schema-xsd-constraints-to-dataset-constraints"></a>Mapping tra vincoli XML Schema (XSD) e vincoli di dataset
 Lo schema XSD (XML Schema Definition Language) consente di specificare vincoli sugli elementi e sugli attributi in esso definiti. Durante il mapping di un XML Schema allo schema relazionale in una <xref:System.Data.DataSet>, vengono eseguito il mapping di vincoli di XML Schema ai vincoli relazionali appropriati nelle tabelle e colonne all'interno di **set di dati**.  
@@ -43,5 +43,5 @@ Lo schema XSD (XML Schema Definition Language) consente di specificare vincoli s
  [Generazione di relazioni tra DataSet da XML Schema (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
  Vengono descritti gli elementi di XML Schema usati per creare relazioni tra le colonne della tabella in un **set di dati**.  
   
-## <a name="see-also"></a>Vedere anche  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vedere anche
+- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

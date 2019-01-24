@@ -1,15 +1,15 @@
 ---
-title: "Procedura: bloccare gli endpoint nell'organizzazione"
+title: "Procedura: Bloccare gli endpoint nell'organizzazione"
 ms.date: 03/30/2017
 ms.assetid: 1b7eaab7-da60-4cf7-9d6a-ec02709cf75d
-ms.openlocfilehash: 23264159d30790cd54557509b0bc7c62edc1b5b7
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5392db25c0e3ae0051a892831dd013063389d863
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197431"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663079"
 ---
-# <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>Procedura: bloccare gli endpoint nell'organizzazione
+# <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>Procedura: Bloccare gli endpoint nell'organizzazione
 Le aziende di grandi dimensioni spesso richiedono che le applicazioni vengano sviluppate in conformità con i criteri di sicurezza aziendali. L'argomento seguente viene illustrato come sviluppare e installare un validator dell'endpoint client che può essere usato per convalidare tutte le applicazioni client Windows Communication Foundation (WCF) installate nel computer.  
   
  In questo caso, il validator è un validator client perché questo comportamento dell'endpoint viene aggiunto al client [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) sezione nel file Machine. config. WCF carica i comportamenti dell'endpoint comuni solo per le applicazioni client e carica i comportamenti del servizio comuni solo per le applicazioni di servizio. Per installare questo stesso validator per le applicazioni di servizio, il validator deve essere un comportamento del servizio. Per altre informazioni, vedere la [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) sezione.  
@@ -63,6 +63,6 @@ Le aziende di grandi dimensioni spesso richiedono che le applicazioni vengano sv
 ## <a name="net-framework-security"></a>Sicurezza di .NET Framework  
  Si potrebbe inoltre desiderare di crittografare gli elementi del file di configurazione. Per altre informazioni, vedere la sezione Vedere anche.  
   
-## <a name="see-also"></a>Vedere anche  
- [Crittografia degli elementi di file di configurazione utilizzando DPAPI](https://go.microsoft.com/fwlink/?LinkId=94954)  
- [Crittografia degli elementi di file di configurazione utilizzando RSA](https://go.microsoft.com/fwlink/?LinkId=94955)
+## <a name="see-also"></a>Vedere anche
+- [Crittografia degli elementi di file di configurazione utilizzando DPAPI](https://go.microsoft.com/fwlink/?LinkId=94954)
+- [Crittografia degli elementi di file di configurazione utilizzando RSA](https://go.microsoft.com/fwlink/?LinkId=94955)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 5e903e04-17d0-4014-ac9a-a43330ec8b1c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 80cee666a05432099a380a5ac547a5ca28698c31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 414526d498b39e894c6bd3530a446f8c06f46378
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33436033"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572747"
 ---
 # <a name="silverlight-debugging"></a>Debug Silverlight
 Gli argomenti in questa sezione descrivono l'ambiente e le interfacce forniti da Common Language Runtime (CLR) per supportare il debug delle applicazioni basate su Silverlight in esecuzione nel sistema operativo Windows o sulla piattaforma Macintosh.  
@@ -22,7 +22,7 @@ Gli argomenti in questa sezione descrivono l'ambiente e le interfacce forniti da
  Fornisce un meccanismo per l'enumerazione di CLR in un processo.  
   
  [Funzione CloseCLREnumeration](../../../../docs/framework/unmanaged-api/debugging/closeclrenumeration-function.md)  
- Chiude tutti gli eventi continuano l'avvio CLR validi posizionati in una matrice di handle restituita dal [funzione EnumerateCLRs](../../../../docs/framework/unmanaged-api/debugging/enumerateclrs-function.md)e libera la memoria per le matrici del percorso stringa e di handle.  
+ Chiude tutti gli eventi continuano l'avvio CLR validi che si trova in una matrice di handle restituita dal [funzione EnumerateCLRs](../../../../docs/framework/unmanaged-api/debugging/enumerateclrs-function.md)e libera la memoria per le matrici del percorso stringa e di handle.  
   
  [Funzione CreateCoreClrDebugTarget](../../../../docs/framework/unmanaged-api/debugging/createcoreclrdebugtarget-function.md)  
  Crea una connessione a una destinazione remota per l'enumerazione del runtime e dei processi.  
@@ -34,7 +34,7 @@ Gli argomenti in questa sezione descrivono l'ambiente e le interfacce forniti da
  Crea una stringa di versione da un percorso CLR in un processo di destinazione.  
   
  [Funzione CreateDebuggingInterfaceFromVersion](../../../../docs/framework/unmanaged-api/debugging/createdebugginginterfacefromversion-function-for-silverlight.md)  
- Accetta una stringa di versione CLR restituiti da [funzione CreateVersionStringFromModule](../../../../docs/framework/unmanaged-api/debugging/createversionstringfrommodule-function.md)funzione e restituisce un'interfaccia del debugger corrispondente.  
+ Accetta una stringa di versione CLR restituita da [funzione CreateVersionStringFromModule](../../../../docs/framework/unmanaged-api/debugging/createversionstringfrommodule-function.md)funzione e restituisce un'interfaccia del debugger corrispondente.  
   
  [Struttura CoreClrDebugProcInfo](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugprocinfo-structure.md)  
  Rappresenta un processo in esecuzione in un computer remoto.  
@@ -54,9 +54,9 @@ Gli argomenti in questa sezione descrivono l'ambiente e le interfacce forniti da
  [Funzione ShutdownDbgTransportManager](../../../../docs/framework/unmanaged-api/debugging/shutdowndbgtransportmanager-function.md)  
  Arresta il gestore trasporto per una connessione a un computer di destinazione remoto.  
   
-## <a name="see-also"></a>Vedere anche  
- [Coclassi di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-coclasses.md)  
- [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Funzioni statiche globali di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)  
- [Enumerazioni di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)  
- [Strutture di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+## <a name="see-also"></a>Vedere anche
+- [Coclassi di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-coclasses.md)
+- [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Funzioni statiche globali di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+- [Enumerazioni di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Strutture di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)

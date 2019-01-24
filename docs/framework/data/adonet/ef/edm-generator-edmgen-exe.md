@@ -2,23 +2,23 @@
 title: Generatore EDM (EdmGen.exe)
 ms.date: 03/30/2017
 ms.assetid: fe8297a1-1fc3-48ce-8eeb-f70f63f857aa
-ms.openlocfilehash: edec83b187afc74f3ad93181c4737a4d6cec8d0e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: cd43b6ca31eea2cc4265c7f2e1a045f0f12a256c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516123"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722117"
 ---
 # <a name="edm-generator-edmgenexe"></a>Generatore EDM (EdmGen.exe)
 EdmGen.exe è uno strumento da riga di comando per l'uso di file di modello e di mapping [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Lo strumento EdmGen.exe consente di effettuare le operazioni seguenti:  
   
--   Connettersi a un'origine dati tramite un provider di dati .NET Framework specifico dell'origine dati e generare il modello concettuale, il modello di archiviazione e il file di mapping (rispettivamente con estensione csdl, ssdl e msl) usati da [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Per altre informazioni, vedere [procedura: usare EdmGen.exe per generare il file di modello e di Mapping](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md).  
+-   Connettersi a un'origine dati tramite un provider di dati .NET Framework specifico dell'origine dati e generare il modello concettuale, il modello di archiviazione e il file di mapping (rispettivamente con estensione csdl, ssdl e msl) usati da [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Per altre informazioni, vedere [Procedura: Consente di generare il modello e i file di Mapping EdmGen.exe](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md).  
   
--   Convalidare un modello esistente. Per altre informazioni, vedere [procedura: usare EdmGen.exe per convalidare i file di modello e di Mapping](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md).  
+-   Convalidare un modello esistente. Per altre informazioni, vedere [Procedura: Utilizzare EdmGen.exe per convalidare i file di modello e Mapping](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md).  
   
--   Generare un file di codice C# o Visual Basic contenente le classi di oggetti generate da un file del modello concettuale (con estensione csdl). Per altre informazioni, vedere [procedura: usare EdmGen.exe per generare codice del livello oggetti](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-object-layer-code.md).  
+-   Generare un file di codice C# o Visual Basic contenente le classi di oggetti generate da un file del modello concettuale (con estensione csdl). Per altre informazioni, vedere [Procedura: Consente di generare codice del livello oggetti EdmGen.exe](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-object-layer-code.md).  
   
--   Generare un file di codice C# o Visual Basic contenente le visualizzazioni pregenerate per un modello esistente. Per altre informazioni, [procedura: Pre-Generate viste per migliorare le prestazioni delle Query](https://msdn.microsoft.com/library/b18a9d16-e10b-4043-ba91-b632f85a2579).  
+-   Generare un file di codice C# o Visual Basic contenente le visualizzazioni pregenerate per un modello esistente. Per altre informazioni, [come: Pre-generare viste per migliorare le prestazioni delle Query](https://msdn.microsoft.com/library/b18a9d16-e10b-4043-ba91-b632f85a2579).  
   
  Lo strumento EdmGen.exe viene installato nella directory [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]. In molti casi, il file si trova in C:\windows\Microsoft.NET\Framework\v4.0. Per i sistemi a 64 bit, questa directory si trova in C:\windows\Microsoft.NET\Framework64\v4.0. È anche possibile accedere allo strumento EdmGen.exe dal prompt dei comandi di Visual Studio (fare clic su **avviare**, scegliere **tutti i programmi**, scegliere **Microsoft Visual Studio 2010**, scegliere **Strumenti di visual Studio**, quindi fare clic su **Prompt dei comandi di Visual Studio 2010**).  
   
@@ -65,13 +65,13 @@ EdmGen /mode:choice [options]
 |`/targetversion:` \<string>|Versione di .NET Framework usata per compilare il codice generato. Le versioni supportate sono la 4 e la 4.5. Il valore predefinito è 4.|  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Procedura: Usare EdmGen.exe per generare i file di modello e di mapping](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)  
+ [Procedura: Usare EdmGen.exe per generare il modello e i file di Mapping](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)  
   
- [Procedura: Usare EdmGen.exe per generare codice a livello oggetti](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-object-layer-code.md)  
+ [Procedura: Usare EdmGen.exe per generare codice del livello oggetti](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-object-layer-code.md)  
   
- [Procedura: Usare EdmGen.exe per convalidare file di modello e di mapping](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)  
+ [Procedura: Utilizzare EdmGen.exe per convalidare i file di modello e Mapping](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)  
   
-## <a name="see-also"></a>Vedere anche  
- [Strumenti di ADO.NET Entity Data Model](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)  
- [Entity Data Model](../../../../../docs/framework/data/adonet/entity-data-model.md)  
- [Specifiche CSDL, SSDL e MSL](../../../../../docs/framework/data/adonet/ef/language-reference/csdl-ssdl-and-msl-specifications.md)
+## <a name="see-also"></a>Vedere anche
+- [Strumenti di ADO.NET Entity Data Model](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)
+- [Entity Data Model](../../../../../docs/framework/data/adonet/entity-data-model.md)
+- [Specifiche CSDL, SSDL e MSL](../../../../../docs/framework/data/adonet/ef/language-reference/csdl-ssdl-and-msl-specifications.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: creare un gestore autorizzazioni personalizzato per un servizio'
+title: 'Procedura: Creare un gestore autorizzazioni personalizzato per un servizio'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - Windows Communication Foundation, extending
 - OperationRequirement class
 ms.assetid: 6214afde-44c1-4bf5-ba07-5ad6493620ea
-ms.openlocfilehash: 7fe392b2fcd2f8ccb00bfd6ffd7e917649f8280c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 64eb44c948f669ea5364cc38c7416fdd12cdabd6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33490442"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573949"
 ---
-# <a name="how-to-create-a-custom-authorization-manager-for-a-service"></a>Procedura: creare un gestore autorizzazioni personalizzato per un servizio
+# <a name="how-to-create-a-custom-authorization-manager-for-a-service"></a>Procedura: Creare un gestore autorizzazioni personalizzato per un servizio
 L'infrastruttura del modello di identità in Windows Communication Foundation (WCF) supporta un modello di autorizzazione basata sulle attestazioni estensibili. Le attestazioni vengono estratte dai token, elaborate facoltativamente da criteri di autorizzazione personalizzati e quindi inserite in una classe <xref:System.IdentityModel.Policy.AuthorizationContext>. Un gestore autorizzazioni esamina le attestazioni contenute nel contesto <xref:System.IdentityModel.Policy.AuthorizationContext> per prendere decisioni di autorizzazione.  
   
  Per impostazione predefinita, le decisioni di autorizzazione sono prese dalla classe <xref:System.ServiceModel.ServiceAuthorizationManager>. È tuttavia possibile creare un gestore autorizzazioni personalizzato per eseguire l'override di queste decisioni. Per creare un gestore autorizzazioni personalizzato, creare una classe che deriva da <xref:System.ServiceModel.ServiceAuthorizationManager> e che implementa il metodo <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>. Le decisioni di autorizzazione sono prese tramite il metodo <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> che restituisce `true` quando l'accesso è concesso e `false` quando l'accesso è negato.  
@@ -33,7 +33,7 @@ L'infrastruttura del modello di identità in Windows Communication Foundation (W
      [!code-csharp[c_CustomAuthMgr#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customauthmgr/cs/c_customauthmgr.cs#5)]
      [!code-vb[c_CustomAuthMgr#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customauthmgr/vb/c_customauthmgr.vb#5)]  
   
-2.  Eseguire l'override del metodo <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%28System.ServiceModel.OperationContext%29>.  
+2.  Eseguire l'override del metodo <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%28System.ServiceModel.OperationContext%29> .  
   
      Utilizzare il contesto <xref:System.ServiceModel.OperationContext> passato al metodo <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%28System.ServiceModel.OperationContext%29> per prendere decisioni di autorizzazione.  
   
@@ -63,11 +63,11 @@ L'infrastruttura del modello di identità in Windows Communication Foundation (W
   
 3.  Aggiungere un'associazione in grado di proteggere la comunicazione tra client e servizio.  
   
-     L'associazione scelta per questa comunicazione determina le attestazioni aggiunte al contesto <xref:System.IdentityModel.Policy.AuthorizationContext> utilizzate dal gestore autorizzazioni personalizzato per prendere le decisioni di autorizzazione. Per ulteriori informazioni sulle associazioni fornite dal sistema, vedere [associazioni fornite dal sistema](../../../../docs/framework/wcf/system-provided-bindings.md).  
+     L'associazione scelta per questa comunicazione determina le attestazioni aggiunte al contesto <xref:System.IdentityModel.Policy.AuthorizationContext> utilizzate dal gestore autorizzazioni personalizzato per prendere le decisioni di autorizzazione. Per altri dettagli sulle associazioni fornite dal sistema, vedere [System-provided Bindings](../../../../docs/framework/wcf/system-provided-bindings.md).  
   
-4.  Associare il comportamento a un endpoint di servizio, aggiungendo un [ \<servizio >](../../../../docs/framework/configure-apps/file-schema/wcf/service.md) elemento e impostare il valore della `behaviorConfiguration` attributo sul valore dell'attributo del nome per il [ \<comportamento >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) elemento.  
+4.  Associare il comportamento a un endpoint di servizio, aggiungendo un [ \<service >](../../../../docs/framework/configure-apps/file-schema/wcf/service.md) elemento e impostare il valore della `behaviorConfiguration` attributo il valore dell'attributo del nome per il [ \<comportamento >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) elemento.  
   
-     Per ulteriori informazioni sulla configurazione di un endpoint del servizio, vedere [procedura: creare un Endpoint del servizio nella configurazione](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md).  
+     Per altre informazioni sulla configurazione di un endpoint del servizio, vedere [come: Creare un Endpoint del servizio nella configurazione](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md).  
   
      Nell'esempio di codice seguente viene illustrato come registrare il gestore autorizzazioni personalizzato `Samples.MyServiceAuthorizationManager`.  
   
@@ -117,7 +117,7 @@ L'infrastruttura del modello di identità in Windows Communication Foundation (W
  [!code-csharp[c_CustomAuthMgr#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customauthmgr/cs/c_customauthmgr.cs#2)]
  [!code-vb[c_CustomAuthMgr#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customauthmgr/vb/c_customauthmgr.vb#2)]  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.ServiceAuthorizationManager>  
- [Criteri di autorizzazione](../../../../docs/framework/wcf/samples/authorization-policy.md)  
- [Criteri di autorizzazione](../../../../docs/framework/wcf/samples/authorization-policy.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.ServiceModel.ServiceAuthorizationManager>
+- [Criteri di autorizzazione](../../../../docs/framework/wcf/samples/authorization-policy.md)
+- [Criteri di autorizzazione](../../../../docs/framework/wcf/samples/authorization-policy.md)

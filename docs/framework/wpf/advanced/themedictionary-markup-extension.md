@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ThemeDictionary markup extension [WPF]
 - XAML [WPF], ThemeDictionary markup extension
 ms.assetid: aa75e10b-13dd-4989-972d-51bab63a05e2
-ms.openlocfilehash: ea7c630be3f6d208f5c62e8b9e24606ff0df8466
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 659af630f697d7f2742bc71006241c4bded842c6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33547407"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718923"
 ---
 # <a name="themedictionary-markup-extension"></a>Estensione di markup ThemeDictionary
 Offre agli autori di controlli personalizzati o alle applicazioni che integrano controlli di terze parti un modo per caricare dizionari di risorse specifici del tema da usare per l'applicazione di stili al controllo.  
@@ -45,11 +45,11 @@ Offre agli autori di controlli personalizzati o alle applicazioni che integrano 
   
  Usando questa estensione è possibile specificare un singolo assembly di sole risorse contenente alcuni stili da usare solo quando il tema [!INCLUDE[TLA#tla_aero](../../../../includes/tlasharptla-aero-md.md)] viene applicato al sistema dell'utente. Gli altri stili possono essere usati quando è attivo il tema Luna e così via. Con questa estensione, il contenuto di un dizionario risorse specifico del controllo può essere invalidato automaticamente e ricaricato in modo che venga considerato specifico per un altro tema quando necessario.  
   
- Il `assemblyUri` stringa (<xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A> valore della proprietà) costituisce la base di una convenzione di denominazione che identifica il dizionario applicato a un particolare tema. Il <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A> logica per `ThemeDictionary` completa la convenzione generando un [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] che punta a una variante del dizionario tema, contenuta all'interno di un assembly di risorse precompilato. La descrizione di questa convenzione o delle interazioni dei temi con l'applicazione generale degli stili al controllo e a livello di pagina o di applicazione come concetto, non è illustrata completamente in questa sezione. Lo scenario di base per l'utilizzo di `ThemeDictionary` consiste nello specificare il <xref:System.Windows.ResourceDictionary.Source%2A> proprietà di un `ResourceDictionary` dichiarato a livello di applicazione. Quando si fornisce un [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] per l'assembly tramite un'estensione `ThemeDictionary` anziché un [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] diretto, la logica dell'estensione fornirà la logica di invalidazione applicata in occasione di tutte le modifiche del tema del sistema.  
+ Il `assemblyUri` stringa (<xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A> valore della proprietà) costituisce la base di una convenzione di denominazione che identifica il dizionario applicato a un particolare tema. Il <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A> per la logica `ThemeDictionary` completa la convenzione generando un [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] che punta a una variante di dizionario particolare dei temi, contenuta all'interno di un assembly di risorse precompilato. La descrizione di questa convenzione o delle interazioni dei temi con l'applicazione generale degli stili al controllo e a livello di pagina o di applicazione come concetto, non è illustrata completamente in questa sezione. Lo scenario di base per l'utilizzo `ThemeDictionary` consiste nello specificare il <xref:System.Windows.ResourceDictionary.Source%2A> proprietà di un `ResourceDictionary` dichiarato a livello di applicazione. Quando si fornisce un [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] per l'assembly tramite un'estensione `ThemeDictionary` anziché un [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] diretto, la logica dell'estensione fornirà la logica di invalidazione applicata in occasione di tutte le modifiche del tema del sistema.  
   
  La sintassi per gli attributi è quella più comunemente utilizzata con questa estensione di markup. Il token di stringa fornito dopo la stringa dell'identificatore `ThemeDictionary` viene assegnato come valore <xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A> della classe dell'estensione <xref:System.Windows.ThemeDictionaryExtension> sottostante.  
   
- `ThemeDictionary` può essere usato anche nella sintassi degli elementi oggetto. In questo caso, se si specifica il valore di <xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A> proprietà è obbligatoria.  
+ `ThemeDictionary` può essere usato anche nella sintassi degli elementi oggetto. In questo caso, specificando il valore di <xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A> proprietà è obbligatoria.  
   
  L'oggetto `ThemeDictionary` può anche essere utilizzato per un utilizzo dettagliato degli attributi che consente di specificare la proprietà <xref:System.Windows.Markup.StaticExtension.Member%2A> come coppia proprietà=valore:  
   
@@ -59,12 +59,12 @@ Offre agli autori di controlli personalizzati o alle applicazioni che integrano 
   
  L'utilizzo dettagliato spesso è utile per le estensioni con più proprietà da impostare o nel caso in cui alcune proprietà siano facoltative. Poiché `ThemeDictionary` presenta una sola proprietà da impostare, obbligatoria, l'utilizzo dettagliato non è tipico.  
   
- Nel [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] l'implementazione del processore, la gestione di questa estensione di markup viene definita per la <xref:System.Windows.ThemeDictionaryExtension> classe.  
+ Nel [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] l'implementazione del processore, la gestione di questa estensione di markup viene definita per il <xref:System.Windows.ThemeDictionaryExtension> classe.  
   
  `ThemeDictionary` è un'estensione di markup. Le estensioni di markup in genere vengono implementate quando per i valori dell'attributo devono essere utilizzati caratteri escape in modo che non vengano considerati come valori letterali o nomi di gestori e il requisito è più globale del semplice utilizzo di convertitori dei tipi su alcuni tipi o proprietà. Tutte le estensioni di markup in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] usano i caratteri { e } nella sintassi degli attributi, vale a dire la convenzione in base a cui il processore [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] riconosce che l'attributo deve essere elaborato da un'estensione di markup. Per altre informazioni, vedere [Estensioni di markup e XAML WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Applicazione di stili e modelli](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [Cenni preliminari su XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [Estensioni di markup e XAML WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)  
- [File di dati e di risorse dell'applicazione WPF](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)
+## <a name="see-also"></a>Vedere anche
+- [Applicazione di stili e modelli](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Cenni preliminari su XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [Estensioni di markup e XAML WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [File di dati e di risorse dell'applicazione WPF](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)

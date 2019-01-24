@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-ms.openlocfilehash: c5064d90c8601ee44be593446b0fd5ad483e57f2
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: f80d89d66253df310395cdfa3139e8765da24edb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45649998"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54584912"
 ---
 # <a name="configuring-tracing"></a>Configurazione delle funzionalità di traccia
 In questo argomento viene illustrato come attivare la funzionalità di traccia, configurare origini di traccia affinché vengano create tracce e impostati livelli di traccia, impostare traccia e propagazione di attività per supportare la correlazione tra tracce end-to-end e configurare i listener di traccia affinché accedano alle tracce.  
@@ -58,17 +58,17 @@ In questo argomento viene illustrato come attivare la funzionalità di traccia, 
 ## <a name="configuring-trace-sources-to-emit-traces"></a>Configurazione delle origini di traccia per la generazione di tracce  
  WCF definisce un'origine di traccia per ogni assembly. I listener definiti per tale origine accedono alle tracce generate all'interno di un assembly. Vengono definite le origini di traccia seguenti:  
   
--   System. ServiceModel: Registra tutte le fasi dell'elaborazione di WCF, ogni volta che la configurazione viene letta, viene elaborato un messaggio nel trasporto, sicurezza, l'elaborazione di un messaggio viene inviata nel codice utente e così via.  
+-   System.ServiceModel: Registra tutte le fasi dell'elaborazione di WCF, ogni volta che la configurazione viene letta, viene elaborato un messaggio nel trasporto, sicurezza, l'elaborazione di un messaggio viene inviata nel codice utente e così via.  
   
--   System.ServiceModel.MessageLogging: registra tutti i messaggi propagati nel sistema.  
+-   System.ServiceModel.MessageLogging: Registra tutti i messaggi che passano attraverso il sistema.  
   
 -   System.IdentityModel.  
   
 -   System.ServiceModel.Activation.  
   
--   System.IO.Log: registrazione per l'interfaccia .NET Framework nel Common Log File System (CLFS).  
+-   System.IO.Log: Registrazione per l'interfaccia di .NET Framework per il Common Log File System (CLFS).  
   
--   System.Runtime.Serialization: registra quando gli oggetti vengono letti o scritti.  
+-   System.Runtime.Serialization: Registra quando gli oggetti vengono letti o scritti.  
   
 -   CardSpace.  
   
@@ -142,7 +142,7 @@ In questo argomento viene illustrato come attivare la funzionalità di traccia, 
   
  È possibile configurare un listener di traccia personalizzato per l'invio di tracce in transito, ad esempio a un database remoto. I distributori di applicazioni devono applicare un apposito controllo di accesso nei log di traccia del computer remoto.  
   
- È inoltre possibile configurare un listener di traccia a livello di programmazione. Per altre informazioni, vedere [procedura: creare e inizializzare listener di traccia](https://go.microsoft.com/fwlink/?LinkId=94648) e [creazione di un TraceListener personalizzato](https://go.microsoft.com/fwlink/?LinkId=96239).  
+ È inoltre possibile configurare un listener di traccia a livello di programmazione. Per altre informazioni, vedere [Procedura: Creare e inizializzare listener di traccia](https://go.microsoft.com/fwlink/?LinkId=94648) e [creazione di un TraceListener personalizzato](https://go.microsoft.com/fwlink/?LinkId=96239).  
   
 > [!CAUTION]
 >  Poiché `System.Diagnostics.XmlWriterTraceListener` non è thread-safe, è possibile che l'origine di traccia blocchi le risorse in modo esclusivo durante la restituzione di tracce. Quando molti thread restituiscono tracce a un'origine configurata per l'utilizzo di questo listener, può verificarsi un conflitto di risorse con conseguente calo delle prestazioni. Per risolvere il problema, è necessario implementare un listener personalizzato di tipo thread-safe.  
@@ -180,8 +180,8 @@ In questo argomento viene illustrato come attivare la funzionalità di traccia, 
   
  Non è possibile utilizzare l'attributo `propagateActivity` con le origini di traccia definite dall'utente. Per la propagazione di ID attività di codice utente, accertarsi di non impostare l'attributo `ActivityTracing` di ServiceModel, mantenendo l'attributo `propagateActivity` di ServiceModel impostato su `true`.  
   
-## <a name="see-also"></a>Vedere anche  
- [Traccia](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [Amministrazione e diagnostica](../../../../../docs/framework/wcf/diagnostics/index.md)  
- [Procedura: creare e inizializzare listener di traccia](https://go.microsoft.com/fwlink/?LinkId=94648)  
- [Creazione di un TraceListener personalizzato](https://go.microsoft.com/fwlink/?LinkId=96239)
+## <a name="see-also"></a>Vedere anche
+- [Traccia](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [Amministrazione e diagnostica](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Procedura: Creare e inizializzare listener di traccia](https://go.microsoft.com/fwlink/?LinkId=94648)
+- [Creazione di un TraceListener personalizzato](https://go.microsoft.com/fwlink/?LinkId=96239)

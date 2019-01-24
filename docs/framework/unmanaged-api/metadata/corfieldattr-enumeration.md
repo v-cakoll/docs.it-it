@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a57318103fd875d6f2f2fe4ca54c776da86c0e53
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7b07388b7f7385e93a6ca891e8ea98a2ce69763c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446620"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576015"
 ---
 # <a name="corfieldattr-enumeration"></a>Enumerazione CorFieldAttr
 Contiene valori che descrivono i metadati relativi a un campo.  
@@ -63,31 +63,31 @@ typedef enum CorFieldAttr {
 |Membro|Descrizione|  
 |------------|-----------------|  
 |`fdFieldAccessMask`|Specifica le informazioni sull'accessibilità.|  
-|`fdPrivateScope`|Specifica che il campo non può fare riferimento.|  
+|`fdPrivateScope`|Specifica che il campo non può far riferimento.|  
 |`fdPrivate`|Specifica che il campo è accessibile solo dal relativo tipo padre.|  
 |`fdFamANDAssem`|Specifica che il campo è accessibile dalle classi derivate nel relativo assembly.|  
 |`fdAssembly`|Specifica che il campo è accessibile da tutti i tipi nell'assembly.|  
 |`fdFamily`|Specifica che il campo è accessibile solo dal relativo tipo e le classi derivate.|  
 |`fdFamORAssem`|Specifica che il campo è accessibile dalle classi derivate e da tutti i tipi nell'assembly.|  
-|`fdPublic`|Specifica che il campo è accessibile da tutti i tipi con visibilità di questo ambito.|  
-|`fdStatic`|Specifica che il campo è un membro del tipo anziché un membro di istanza.|  
+|`fdPublic`|Specifica che il campo è accessibile da tutti i tipi con visibilità dell'ambito.|  
+|`fdStatic`|Specifica che il campo è un membro del suo tipo anziché un membro di istanza.|  
 |`fdInitOnly`|Specifica che il campo non può essere modificato dopo l'inizializzazione.|  
 |`fdLiteral`|Specifica che il valore del campo è una costante in fase di compilazione.|  
-|`fdNotSerialized`|Specifica che il campo non è serializzato quando il relativo tipo è remoto.|  
+|`fdNotSerialized`|Specifica che il campo non è serializzato quando il relativo tipo viene eseguita in modalità remota.|  
 |`fdSpecialName`|Specifica che il campo è speciale e che il relativo nome viene descritto come.|  
-|`fdPinvokeImpl`|Specifica che l'implementazione del campo viene inoltrato tramite PInvoke.|  
+|`fdPinvokeImpl`|Specifica che l'implementazione del campo è inoltrata tramite PInvoke.|  
 |`fdReservedMask`|Riservato per uso interno da common language runtime.|  
-|`fdRTSpecialName`|Specifica che i metadati di common language runtime API interne devono verificare la codifica del nome.|  
-|`fdHasFieldMarshal`|Specifica che il campo contiene informazioni sul marshalling.|  
+|`fdRTSpecialName`|Specifica che i metadati di common language runtime le API interne devono verificare la codifica del nome.|  
+|`fdHasFieldMarshal`|Specifica che il campo contiene informazioni di marshalling.|  
 |`fdHasDefault`|Specifica che il campo ha un valore predefinito.|  
 |`fdHasFieldRVA`|Specifica che il campo ha un indirizzo virtuale relativo.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorHdr. H  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Enumerazioni dei metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Vedere anche
+- [Enumerazioni dei metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

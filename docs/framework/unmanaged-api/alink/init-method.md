@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b512389078ab022208c4b163edc8501a900669ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 315ddf89d9c0653f357490dc31986dc302024622
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33400364"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662647"
 ---
 # <a name="init-method"></a>Metodo Init
-Prepara oggetti che implementano il [interfaccia IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md) per l'utilizzo.  
+Prepara gli oggetti che implementano il [interfaccia IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md) per l'uso.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,18 +37,18 @@ HRESULT Init(
   
 #### <a name="parameters"></a>Parametri  
  `pDispenser`  
- [Interfaccia IMetaDataDispenserEx](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md) puntatore per il dispenser di metadati.  
+ [Interfaccia IMetaDataDispenserEx](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md) puntatore a dispenser di metadati.  
   
  `pErrorHandler`  
  [Interfaccia IMetaDataError](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-interface.md) puntatore a un'interfaccia di gestione degli errori facoltativo.  
   
 ## <a name="return-value"></a>Valore restituito  
- Se il metodo ha esito positivo, restituisce S_OK.  
+ Restituisce S_OK se il metodo ha esito positivo.  
   
 ## <a name="requirements"></a>Requisiti  
  Richiede alink.h  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [Interfaccia IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [Alink (API)](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [Interfaccia IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [Alink (API)](../../../../docs/framework/unmanaged-api/alink/index.md)

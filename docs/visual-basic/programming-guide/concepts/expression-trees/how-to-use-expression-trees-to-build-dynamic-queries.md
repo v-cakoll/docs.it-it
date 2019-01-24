@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: usare alberi delle espressioni di compilazione di query dinamiche (Visual Basic)'
+title: 'Procedura: Usare gli alberi delle espressioni per compilare query dinamiche (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 16278787-7532-4b65-98b2-7a412406c4ee
-ms.openlocfilehash: a2101598a083f8d0738cb531ebbaea0f7a87a577
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dd1e5fff21ef68683d0b721e84c4690d8e440d60
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643398"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645460"
 ---
-# <a name="how-to-use-expression-trees-to-build-dynamic-queries-visual-basic"></a>Procedura: usare alberi delle espressioni di compilazione di query dinamiche (Visual Basic)
+# <a name="how-to-use-expression-trees-to-build-dynamic-queries-visual-basic"></a>Procedura: Usare gli alberi delle espressioni per compilare query dinamiche (Visual Basic)
 In LINQ gli alberi delle espressioni vengono usati per rappresentare query strutturate destinate alle origini dati che implementano <xref:System.Linq.IQueryable%601>. Il provider LINQ, ad esempio, implementa l'interfaccia <xref:System.Linq.IQueryable%601> per l'esecuzione di query su archivi dati relazionali. Il compilatore Visual Basic consente di compilare query destinate a tali origini dati nel codice che compila un albero delle espressioni in fase di esecuzione. Il provider di query può quindi percorrere la struttura dei dati dell'albero delle espressioni e convertirla in un linguaggio di query adatto all'origine dati.  
   
  Gli alberi delle espressioni vengono usati in LINQ anche per rappresentare espressioni lambda assegnate a variabili di tipo <xref:System.Linq.Expressions.Expression%601>.  
@@ -107,8 +107,8 @@ Next
   
 -   Includere lo spazio dei nomi System.Linq.Expressions.  
   
--   Copiare il codice dell'esempio e incollarlo il `Main` `Sub` procedura.  
+-   Copiare il codice dell'esempio e incollarlo nella `Main` `Sub` procedure.  
   
-## <a name="see-also"></a>Vedere anche  
- [Alberi delle espressioni (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)  
- [Procedura: eseguire alberi delle espressioni (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
+## <a name="see-also"></a>Vedere anche
+- [Alberi delle espressioni (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)
+- [Procedura: Eseguire alberi delle espressioni (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)

@@ -2,12 +2,12 @@
 title: Formattatore e selettore dell'operazione
 ms.date: 03/30/2017
 ms.assetid: 1c27e9fe-11f8-4377-8140-828207b98a0e
-ms.openlocfilehash: a814de7433f2d06491245dc1d6e6e637b514118a
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 5261c082f748877505701221668b61bf7097ef06
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47070895"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661256"
 ---
 # <a name="operation-formatter-and-operation-selector"></a>Formattatore e selettore dell'operazione
 Questo esempio viene illustrato come utilizzare i punti di estendibilità di Windows Communication Foundation (WCF) per consentire i dati del messaggio in un formato diverso da quanto si aspetta da WCF. Per impostazione predefinita, i formattatori WCF prevede che i parametri del metodo siano inclusi nel `soap:body` elemento. In realtà, nell'esempio viene illustrato come implementare un formattatore dell'operazione personalizzato che analizza i dati dei parametri da una stringa di query HTTP GET e richiama i metodi utilizzando tali dati.  
@@ -98,7 +98,7 @@ void ReplaceFormatterBehavior(OperationDescription operationDescription, Endpoin
   
 -   È necessario effettuare questo passaggio prima di chiamare <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>. In questo esempio viene illustrato come il formattatore viene modificato manualmente prima di chiamare <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>. Un altro modo per ottenere lo stesso risultato consiste nel derivare una classe da <xref:System.ServiceModel.ServiceHost> che effettua le chiamate a `EnableHttpGetRequestsBehavior.ReplaceFormatterBehavior` prima dell'apertura (vedere documentazione di hosting e gli esempi).  
   
-### <a name="user-experience"></a>Attività dell'utente  
+### <a name="user-experience"></a>Esperienza utente  
  Nel server:  
   
 -   Non è necessario modificare l'implementazione `ICalculator` del server.  

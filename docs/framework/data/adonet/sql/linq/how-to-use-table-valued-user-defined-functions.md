@@ -1,18 +1,18 @@
 ---
-title: "Procedura: utilizzare funzioni definite dall'utente con valori di tabella"
+title: "Procedura: Usare funzioni definite dall'utente con valori di tabella"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5a4ae2b4-3290-4aa1-bc95-fc70c51b54cf
-ms.openlocfilehash: e0199bb0a783f54931885053681c48d288012404
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 03ed780cfba006f43f957dadf449cb4a369cbc96
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362899"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661633"
 ---
-# <a name="how-to-use-table-valued-user-defined-functions"></a>Procedura: utilizzare funzioni definite dall'utente con valori di tabella
+# <a name="how-to-use-table-valued-user-defined-functions"></a>Procedura: Usare funzioni definite dall'utente con valori di tabella
 Una funzione con valori di tabella restituisce un unico rowset, a differenza delle stored procedure che possono restituire forme di più risultati. Poiché il tipo restituito di una funzione con valori di tabella è `Table`, è possibile usare tale funzione in un punto qualsiasi del codice SQL in cui possa essere usata una tabella. È inoltre possibile gestire la funzione con valori di tabella esattamente come una tabella.  
   
 ## <a name="example"></a>Esempio  
@@ -47,5 +47,5 @@ AS p1 INNER JOIN Products AS p2 ON p1.ProductID = p2.ProductID
  [!code-csharp[DLinqUDFS#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqUDFS/cs/Program.cs#2)]
  [!code-vb[DLinqUDFS#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqUDFS/vb/Module1.vb#2)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Funzioni definite dall'utente](../../../../../../docs/framework/data/adonet/sql/linq/user-defined-functions.md)
+## <a name="see-also"></a>Vedere anche
+- [Funzioni definite dall'utente](../../../../../../docs/framework/data/adonet/sql/linq/user-defined-functions.md)

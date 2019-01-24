@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6935a72bb99e636b3732958ee88ad224b401513b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e1c3d20b1b9470c744f6dca9ef638555b9322c1c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430720"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54658117"
 ---
 # <a name="iassemblycachequeryassemblyinfo-method"></a>Metodo IAssemblyCache::QueryAssemblyInfo
 Ottiene i dati richiesti sull'assembly specificato.  
@@ -39,24 +39,24 @@ HRESULT QueryAssemblyInfo (
   
 #### <a name="parameters"></a>Parametri  
  `dwFlags`  
- [in] Flag definiti in Fusion. Sono supportati i seguenti valori:  
+ [in] Flag definiti in Fusion. Sono supportati i valori seguenti:  
   
--   QUERYASMINFO_FLAG_VALIDATE (0X00000001)  
+-   QUERYASMINFO_FLAG_VALIDATE (0x00000001)  
   
--   QUERYASMINFO_FLAG_GETSIZE (0X00000002)  
+-   QUERYASMINFO_FLAG_GETSIZE (0x00000002)  
   
  `pszAssemblyName`  
- [in] Il nome dell'assembly per cui recuperare i dati.  
+ [in] Il nome dell'assembly per cui verranno recuperati i dati.  
   
  `pAsmInfo`  
- [in, out] Un [ASSEMBLY_INFO](../../../../docs/framework/unmanaged-api/fusion/assembly-info-structure.md) struttura che contiene dati relativi all'assembly.  
+ [in, out] Un' [ASSEMBLY_INFO](../../../../docs/framework/unmanaged-api/fusion/assembly-info-structure.md) struttura che contiene i dati relativi all'assembly.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Fusion. h  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia IAssemblyCache](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia IAssemblyCache](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)

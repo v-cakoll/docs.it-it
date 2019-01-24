@@ -1,21 +1,21 @@
 ---
-title: 'Procedura: analizzare una stringa (Visual Basic)'
+title: 'Procedura: Analizzare una stringa (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 896e1b4b-f9bd-4975-8bc1-55b6badce1ac
-ms.openlocfilehash: da12ec98e03acceae375bbed4fc6ad4c2a71ec2d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 513a82cbed796be42eb8e531ec71221ef0ac267f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33640241"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54652449"
 ---
-# <a name="how-to-parse-a-string-visual-basic"></a>Procedura: analizzare una stringa (Visual Basic)
-In questo argomento viene illustrato come creare un albero XML in c#.  
+# <a name="how-to-parse-a-string-visual-basic"></a>Procedura: Analizzare una stringa (Visual Basic)
+In questo argomento viene illustrato come creare un albero XML in C#.  
   
 ## <a name="example"></a>Esempio  
- È possibile analizzare una stringa in Visual Basic usando il `XElement.Parse` metodo. Tuttavia, è preferibile utilizzare valori letterali XML, come illustrato nel codice seguente, in quanto i valori letterali XML prive di stessi problemi di prestazioni di analisi XML da una stringa.  
+ È possibile analizzare una stringa in Visual Basic usando il `XElement.Parse` (metodo). Tuttavia, è più efficiente usare valori letterali XML, come illustrato nel codice seguente, perché i valori letterali XML non sono soggetti a stessi problemi di prestazioni come l'analisi XML da una stringa.  
   
- Usando i valori letterali XML, è semplicemente possibile copiare e incollare il XML nel programma Visual Basic.  
+ Usando i valori letterali XML, è possibile solo copiare e incollare nel codice XML nel programma Visual Basic.  
   
 > [!NOTE]
 >  L'analisi di testo o il caricamento di un documento XML da un file di testo è un processo meno efficiente della costruzione funzionale. Se si inizializza un albero XML dal codice, il tempo CPU richiesto per la costruzione funzionale è inferiore rispetto all'analisi di testo.  
@@ -49,5 +49,5 @@ Dim contacts as XElement = _
     </Contacts>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Analisi XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+## <a name="see-also"></a>Vedere anche
+- [Analisi XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)

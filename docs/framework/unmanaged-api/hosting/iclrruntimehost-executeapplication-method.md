@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 56a49b3d08b58da109924267e6c23c188efefe29
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a68c210c8c87597e2f3e664ff67ff4ba3557323d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33436072"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54656362"
 ---
 # <a name="iclrruntimehostexecuteapplication-method"></a>Metodo ICLRRuntimeHost::ExecuteApplication
-Utilizzato in scenari di distribuzione basato su manifesto ClickOnce per specificare l'attivazione in un nuovo dominio dell'applicazione. Per ulteriori informazioni su questi scenari, vedere [protezione di applicazioni ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment).  
+Usato negli scenari di distribuzione ClickOnce basata su manifesto per specificare l'applicazione da attivare in un nuovo dominio. Per altre informazioni su questi scenari, vedere [ClickOnce Security and Deployment](/visualstudio/deployment/clickonce-security-and-deployment).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -48,13 +48,13 @@ HRESULT ExecuteApplication(
  [in] Il numero di stringhe contenute nel `ppwzManifestPaths` matrice.  
   
  `ppwzManifestPaths`  
- [in] Facoltativo. Matrice di stringhe che contiene i percorsi di manifesto per l'applicazione.  
+ [in] Facoltativo. Matrice di stringhe che contiene i percorsi di manifesto dell'applicazione.  
   
  `dwActivationData`  
  [in] Il numero di stringhe contenute nel `ppwzActivationData` matrice.  
   
  `ppwzActivationData`  
- [in] Facoltativo. Matrice di stringhe contenente i dati di attivazione dell'applicazione, ad esempio parte della stringa di query dell'URL per le applicazioni distribuite sul Web.  
+ [in] Facoltativo. Matrice di stringhe che contiene i dati di attivazione dell'applicazione, ad esempio la parte della stringa di query dell'URL per le applicazioni distribuite sul Web.  
   
  `pReturnValue`  
  [out] Il valore restituito dal punto di ingresso dell'applicazione.  
@@ -66,31 +66,31 @@ HRESULT ExecuteApplication(
 |S_OK|`ExecuteApplication` stato restituito correttamente.|  
 |HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) non è stato caricato in un processo oppure si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.|  
 |HOST_E_TIMEOUT|Timeout della chiamata.|  
-|HOST_E_NOT_OWNER|Il chiamante non dispone del blocco.|  
-|HOST_E_ABANDONED|Un evento è stato annullato mentre un thread bloccato o fiber era in attesa su di esso.|  
-|E_FAIL|Si è verificato un errore irreversibile sconosciuto. Se un metodo restituisce E_FAIL, Common Language Runtime non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiranno HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_NOT_OWNER|Il chiamante non possiede il blocco.|  
+|HOST_E_ABANDONED|Un evento è stato annullato durante un thread bloccato o fiber è rimasta in attesa su di esso.|  
+|E_FAIL|Si è verificato un errore irreversibile sconosciuto. Se un metodo viene restituito E_FAIL, CLR non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiranno HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Note  
- `ExecuteApplication` Consente di attivare applicazioni ClickOnce in un dominio applicazione appena creato.  
+ `ExecuteApplication` Consente di attivare le applicazioni ClickOnce in un dominio applicazione appena creata.  
   
  Il `pReturnValue` parametro di output è impostato sul valore restituito dall'applicazione. Se si specifica un valore null per `pReturnValue`, `ExecuteApplication` ha esito positivo, ma non restituisce un valore.  
   
 > [!IMPORTANT]
->  Non chiamare il [metodo Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) metodo prima di chiamare il `ExecuteApplication` metodo per attivare un'applicazione basata su manifesto. Se il `Start` metodo viene chiamato per primo, il `ExecuteApplication` chiamata al metodo avrà esito negativo.  
+>  Non si chiama il [metodo Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) metodo prima di chiamare il `ExecuteApplication` metodo per attivare un'applicazione basata su manifesto. Se il `Start` viene chiamato prima di tutto la `ExecuteApplication` chiamata al metodo avrà esito negativo.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Mscoree. H  
+ **Intestazione:** MSCorEE.h  
   
- **Libreria:** inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.ActivationContext>  
- <xref:System.AppDomainManager>  
- <xref:System.ApplicationIdentity>  
- [Interfaccia ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)  
- [Metodo SetAppDomainManager](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-setappdomainmanager-method.md)  
- [Procedura dettagliata: download di assembly su richiesta con l'API della distribuzione ClickOnce tramite la finestra di progettazione](/visualstudio/deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.ActivationContext>
+- <xref:System.AppDomainManager>
+- <xref:System.ApplicationIdentity>
+- [Interfaccia ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)
+- [Metodo SetAppDomainManager](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-setappdomainmanager-method.md)
+- [Procedura dettagliata: Download di assembly su richiesta con l'API della distribuzione ClickOnce tramite la finestra di progettazione](/visualstudio/deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer)

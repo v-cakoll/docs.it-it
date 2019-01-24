@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
-ms.openlocfilehash: 1b7d5aca6b2c992e4f1d6bdef2a687d1ff43bf71
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 34d49416bb7d0da60624a1f60e4dbd01a1dff9cd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514003"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54584545"
 ---
 # <a name="date-and-time-data"></a>Dati relativi a data e ora
 In SQL Server 2008 vengono introdotti nuovi tipi di dati per la gestione di informazioni relative a data e ora. I nuovi tipi di dati includono tipi separati per data e ora e tipi di dati espansi che offrono miglioramenti in termini di intervallo, precisione e gestione del fuso orario. A partire da .NET Framework versione 3.5 Service Pack 1 (SP1), il provider di dati .NET Framework per SQL Server (<xref:System.Data.SqlClient>) fornisce supporto completo per tutte le nuove funzionalità del Motore di database di SQL Server 2008. Per usare queste nuove funzionalità con SqlClient, è necessario installare .NET Framework 3.5 SP1 (o versione successiva).  
@@ -239,8 +239,8 @@ command.Parameters.AddWithValue( _
 |[Utilizzo dati di data e ora](https://go.microsoft.com/fwlink/?LinkId=98361)|Fornisce informazioni sulle funzioni e sui tipi di dati relativi a data e ora ed esempi del loro uso.|  
 |[Tipi di dati (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=98362)|Vengono descritti i tipi di dati di sistema inclusi in SQL Server 2008.|  
   
-## <a name="see-also"></a>Vedere anche  
- [Mapping dei tipi di dati SQL Server](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  
- [Configurazione di parametri e tipi di dati dei parametri](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
- [Tipi di dati SQL Server e ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vedere anche
+- [Mapping dei tipi di dati SQL Server](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
+- [Configurazione di parametri e tipi di dati dei parametri](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
+- [Tipi di dati SQL Server e ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
+- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

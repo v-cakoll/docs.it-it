@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: creare un contratto request/reply'
+title: 'Procedura: Creare un contratto Request / Reply'
 ms.date: 03/30/2017
 ms.assetid: 801d90da-3d45-4284-9c9f-56c8aadb4060
-ms.openlocfilehash: 0d41973d04fc75f70011505a3361e71e89a05276
-ms.sourcegitcommit: f6343b070f3c66877338a05c8bfb0be9985255e2
+ms.openlocfilehash: 085514e09eb13676d5c939724071e89535d443f5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39220984"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663609"
 ---
-# <a name="how-to-create-a-request-reply-contract"></a>Procedura: creare un contratto request/reply
+# <a name="how-to-create-a-request-reply-contract"></a>Procedura: Creare un contratto Request / Reply
 Un contratto di tipo request/reply specifica un metodo che restituisce una risposta La replica deve essere inviata e correlata alla richiesta in base ai termini di questo contratto. Anche se il metodo non restituisce alcuna risposta (`void` in C# o `Sub` in Visual Basic), nell'infrastruttura viene creato e inviato un messaggio vuoto al chiamante. Per impedire l'invio di un messaggio di risposta vuoto, utilizzare un contratto unidirezionale per l'operazione.  
   
 ### <a name="to-create-a-request-reply-contract"></a>Per creare un contratto request/reply  
@@ -47,7 +47,7 @@ public interface ICalculator
   
 -   L'applicazione degli attributi <xref:System.ServiceModel.ServiceContractAttribute> e <xref:System.ServiceModel.OperationContractAttribute> determina la generazione automatica delle definizioni del contratto di servizio in un documento del linguaggio di descrizione dei servizi Web (WSDL, Web Services Description Language) dopo la distribuzione del servizio. Il documento viene scaricato aggiungendo l'elemento `?wsdl` all'indirizzo di base HTTP per il servizio, Ad esempio, `http://microsoft/CalculatorService?wsdl`.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.OperationContractAttribute>  
- [Progettazione dei contratti di servizio](../../../../docs/framework/wcf/designing-service-contracts.md)  
- [Procedura: Creare un contratto duplex](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.ServiceModel.OperationContractAttribute>
+- [Progettazione dei contratti di servizio](../../../../docs/framework/wcf/designing-service-contracts.md)
+- [Procedura: Creare un contratto Duplex](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cbf538f066058b4f80d8cfd6cdf1a79683c79be9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 597c5071f9ea0ceacaf429ca10cc899f115772eb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413417"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54715634"
 ---
 # <a name="icordebugmanagedcallbackloadmodule-method"></a>Metodo ICorDebugManagedCallback::LoadModule
 Notifica al debugger che un modulo di common language runtime (CLR) è stato caricato correttamente.  
@@ -44,17 +44,17 @@ HRESULT LoadModule (
  [in] Un puntatore a un oggetto ICorDebugModule che rappresenta il modulo CLR.  
   
 ## <a name="remarks"></a>Note  
- Il `LoadModule` callback fornisce un momento appropriato per esaminare i metadati per il modulo, impostare i flag del compilatore just-in-time (JIT) o di abilitare o disabilitare i callback per il modulo di caricamento delle classi.  
+ Il `LoadModule` callback fornisce un momento opportuno per esaminare i metadati per il modulo, impostare i flag del compilatore just-in-time (JIT) o abilitare o disabilitare i callback per il modulo di caricamento delle classi.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Metodo UnloadModule](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadmodule-method.md)  
- [Interfaccia ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Metodo UnloadModule](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadmodule-method.md)
+- [Interfaccia ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

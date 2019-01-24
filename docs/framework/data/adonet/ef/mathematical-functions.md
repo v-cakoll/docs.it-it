@@ -2,12 +2,12 @@
 title: Funzioni matematiche
 ms.date: 03/30/2017
 ms.assetid: b040c7cb-156d-40f2-9152-61065b18148c
-ms.openlocfilehash: 63f83532c399f77e268913da3198327345b9c2ee
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d8d766cb1416a9a07476175364fe568d81fd9b25
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143675"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54652267"
 ---
 # <a name="mathematical-functions"></a>Funzioni matematiche
 
@@ -77,7 +77,7 @@ Oggetto `Double`.
 
 `SqlServer.ATAN(9)`
 
-## <a name="atn2expression-expression"></a>ATN2(Expression, Expression)
+## <a name="atn2expression-expression"></a>ATN2(expression, expression)
 
 Restituisce l'angolo, in radianti, la cui tangente è compresa tra le due espressioni numeriche specificate.
 
@@ -205,7 +205,7 @@ Oggetto `Double`.
 
 `SqlServer.LOG(100)`
 
-## <a name="log10expression"></a>LOG10(Expression)
+## <a name="log10expression"></a>LOG10(expression)
 
 Restituisce il logaritmo in base 10 dell'espressione `Double` specificata. 
 
@@ -221,7 +221,7 @@ Oggetto `Double`.
 
 `SqlServer.LOG10(100)`
 
-## <a name="pi"></a>PI
+## <a name="pi"></a>PI()
 
 Restituisce il valore costante di pi greco sotto forma di oggetto `Double`. 
 
@@ -233,7 +233,7 @@ Oggetto `Double`.
 
 `SqlServer.PI()`
 
-## <a name="powernumericexpression-powerexpression"></a>POWER (numeric_expression, power_expression)
+## <a name="powernumericexpression-powerexpression"></a>POWER(numeric_expression, power_expression)
 
 Calcola il valore dell'espressione specificata elevato alla potenza indicata.
 
@@ -383,9 +383,9 @@ Calcola la tangente di un'espressione specificata.
 ## <a name="see-also"></a>Vedere anche
 
 Per altre informazioni sulle funzioni matematiche supportate da SqlClient, vedere la documentazione relativa alla versione di SQL Server specificata nel file manifesto del provider SqlClient:  
-  
+
 **SQL Server 2005:** [Funzioni matematiche (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms177516(v=sql.90))  
 **SQL Server 2008:** [Funzioni matematiche (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms177516(v=sql.100))  
 **SQL Server 2012 e versioni successive:** [Funzioni matematiche (Transact-SQL)](/sql/t-sql/functions/mathematical-functions-transact-sql?view=sql-server-2017)   
 
- [SqlClient per funzioni Entity Framework](sqlclient-for-ef-functions.md)
+- [SqlClient per funzioni Entity Framework](sqlclient-for-ef-functions.md)

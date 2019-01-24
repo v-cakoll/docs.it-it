@@ -2,12 +2,12 @@
 title: Riferimenti a oggetti
 ms.date: 03/30/2017
 ms.assetid: 7a93d260-91c3-4448-8f7a-a66fb562fc23
-ms.openlocfilehash: 00caccaeed8cebeec2e053d418ae6a5bf9a12138
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 4965ddab23f0f6c64edd3d71e97ba3293d2f69ce
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347744"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54577633"
 ---
 # <a name="object-references"></a>Riferimenti a oggetti
 In questo esempio viene illustrato come passare oggetti mediante riferimenti tra server e client. L'esempio Usa simulata *social network*. Una social network è costituita da una classe `Person` che contiene un elenco di amici in cui ogni amico è un'istanza della classe `Person`, con il proprio elenco di amici. Viene creato un grafico degli oggetti. Il servizio espone le operazioni in tali social network.  
@@ -113,6 +113,6 @@ public List<Person> GetCommonFriends(List<Person> people)
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\ObjectReferences`  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A>  
- [Riferimenti a oggetti interoperativi](../../../../docs/framework/wcf/feature-details/interoperable-object-references.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A>
+- [Riferimenti a oggetti interoperativi](../../../../docs/framework/wcf/feature-details/interoperable-object-references.md)

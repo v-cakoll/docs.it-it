@@ -1,18 +1,18 @@
 ---
-title: 'Procedura: creare una forma tramite un oggetto PathGeometry'
+title: 'Procedura: Creare una forma utilizzando un oggetto PathGeometry'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - shapes [WPF], creating with PathGeometry class
 - graphics [WPF], shapes
 ms.assetid: 49a4a8b7-e738-45be-8dac-b54a6d8f5b21
-ms.openlocfilehash: 4c9cd7a1af921a0a547c7dec3afc5f69b29e6aed
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: acc50c279995835111e98dd2b74d06f705776f9c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865665"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54649362"
 ---
-# <a name="how-to-create-a-shape-by-using-a-pathgeometry"></a>Procedura: creare una forma tramite un oggetto PathGeometry
+# <a name="how-to-create-a-shape-by-using-a-pathgeometry"></a>Procedura: Creare una forma utilizzando un oggetto PathGeometry
 Questo esempio viene illustrato come creare forme tramite il <xref:System.Windows.Media.PathGeometry> classe. <xref:System.Windows.Media.PathGeometry> gli oggetti sono costituiti da uno o più <xref:System.Windows.Media.PathFigure> oggetti, ognuna delle quali <xref:System.Windows.Media.PathFigure> rappresenta un "importo" diverso o una forma. Ciascuna <xref:System.Windows.Media.PathFigure> è composto di uno o più <xref:System.Windows.Media.PathSegment> oggetti, ognuno dei quali rappresenta una parte collegata della figura o forma. Tipi di segmento comprendono <xref:System.Windows.Media.LineSegment>, <xref:System.Windows.Media.ArcSegment>, e <xref:System.Windows.Media.BezierSegment>.  
   
 ## <a name="example"></a>Esempio  
@@ -29,8 +29,8 @@ Un triangolo creato con un oggetto PathGeometry
   
  Questo esempio fa parte di un esempio più esaustivo. Per l'esempio completo, vedere la pagina [Geometries Sample (esempio di geometrie)](https://go.microsoft.com/fwlink/?LinkID=159989).  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Windows.Shapes.Path>  
- <xref:System.Windows.Media.GeometryDrawing>  
- [Cenni preliminari sulle classi Geometry](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
- [Esempio di geometrie](https://go.microsoft.com/fwlink/?LinkID=159989)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Windows.Shapes.Path>
+- <xref:System.Windows.Media.GeometryDrawing>
+- [Cenni preliminari sulle classi Geometry](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)
+- [Esempio di geometrie](https://go.microsoft.com/fwlink/?LinkID=159989)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c938ef8783a122dec2a5f5bd3775661d68fba62c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5ad18aaca1caef242832bbdae9a1094b2ef2d7be
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449403"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572461"
 ---
 # <a name="imetadataimport2getpekind-method"></a>Metodo IMetaDataImport2::GetPEKind
-Ottiene un valore che identifica il tipo di codice nel file eseguibile portabile (PE) del file, in genere un file DLL o EXE, definito nell'ambito dei metadati corrente.  
+Ottiene un valore che identifica la natura del codice nel file eseguibile portabile (PE) di file, in genere un file DLL o EXE, definito nell'ambito dei metadati corrente.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,24 +44,24 @@ HRESULT GetPEKind (
  [out] Puntatore a un valore che identifica l'architettura del computer. Vedere la sezione successiva per i valori possibili.  
   
 ## <a name="remarks"></a>Note  
- Il valore a cui fa riferimento il `pdwMachine` parametro può essere uno dei seguenti.  
+ Il valore a cui fanno riferimento le `pdwMachine` parametro può essere uno dei valori seguenti.  
   
-|Valore|Architettura del computer|  
+|Value|Architettura del computer|  
 |-----------|--------------------------|  
 |IMAGE_FILE_MACHINE_I386<br /><br /> 0x014C|x86|  
 |IMAGE_FILE_MACHINE_IA64<br /><br /> 0x0200|Intel IPF|  
 |IMAGE_FILE_MACHINE_AMD64<br /><br /> 0x8664|X64|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
- **Libreria:** usata come risorsa in Mscoree. dll  
+ **Libreria:** Usato come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)  
- [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [Enumerazione CorPEKind](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Enumerazione CorPEKind](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md)

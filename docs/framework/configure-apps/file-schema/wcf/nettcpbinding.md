@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - netTcpBinding Element
 ms.assetid: 5c5104a7-8754-4335-8233-46a45322503e
-ms.openlocfilehash: 0849120edf7d4b8948b3632cfe2fc81f1bdff1eb
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 0dc07bfb7b26e433fd3ff2b004253d8d2d90bf62
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54148188"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573433"
 ---
 # <a name="ltnettcpbindinggt"></a>&lt;netTcpBinding&gt;
 
@@ -77,7 +77,7 @@ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gl
 |`receiveTimeout`|Valore <xref:System.TimeSpan> che specifica l'intervallo di tempo fornito per il completamento di un'operazione di ricezione. Questo valore deve essere maggiore o uguale a <xref:System.TimeSpan.Zero>. L'impostazione predefinita è 00:10:00.|  
 |`sendTimeout`|Valore <xref:System.TimeSpan> che specifica l'intervallo di tempo fornito per il completamento di un'operazione di invio. Questo valore deve essere maggiore o uguale a <xref:System.TimeSpan.Zero>. L'impostazione predefinita è 00:01:00.|  
 |`transactionFlow`|Valore booleano che specifica se l'associazione supporta la propagazione di WS-Transactions. Il valore predefinito è `false`.|  
-|`transactionProtocol`|Specifica il protocollo di transazione da usare con questa associazione. I valori validi sono:<br /><br /> -OleTransactions<br />-WSAtomicTransactionOctober2004<br /><br /> L'impostazione predefinita è OleTransactions. L'attributo è di tipo <xref:System.ServiceModel.TransactionProtocol>.|  
+|`transactionProtocol`|Specifica il protocollo di transazione da usare con questa associazione. I valori validi sono:<br /><br /> -OleTransactions<br />-   WSAtomicTransactionOctober2004<br /><br /> L'impostazione predefinita è OleTransactions. L'attributo è di tipo <xref:System.ServiceModel.TransactionProtocol>.|  
 |`transferMode`|Valore <xref:System.ServiceModel.TransferMode> che specifica se i messaggi vengono memorizzati nel buffer o inviati nel flusso o sono una richiesta o una risposta.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
@@ -146,11 +146,11 @@ L'associazione è specificata nei file di configurazione per il client e il serv
 </bindings>
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedere anche
 
-- <xref:System.ServiceModel.NetTcpBinding>  
-- <xref:System.ServiceModel.Configuration.NetTcpBindingElement>  
-- [Associazioni](../../../../../docs/framework/wcf/bindings.md)  
-- [Configurazione di associazioni fornite dal sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
-- [Uso di associazioni per configurare servizi e client](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
+- <xref:System.ServiceModel.NetTcpBinding>
+- <xref:System.ServiceModel.Configuration.NetTcpBindingElement>
+- [Associazioni](../../../../../docs/framework/wcf/bindings.md)
+- [Configurazione di associazioni fornite dal sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Uso di associazioni per configurare servizi e client](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
 - [\<binding>](../../../../../docs/framework/misc/binding.md)

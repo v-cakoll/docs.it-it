@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data types [Visual Basic], ranges
 - operators [Visual Basic], result data types
 ms.assetid: 9d524533-e1a1-4aa8-b1b8-622068173d06
-ms.openlocfilehash: 135c44217debcddb15fd4cef7e73ca2f98903c43
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 90e3c8b61bd920ab06090f3f889d6cc61c354294
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003698"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650483"
 ---
 # <a name="data-types-of-operator-results-visual-basic"></a>Tipi di dati dei risultati degli operatori (Visual Basic)
 Visual Basic determina il tipo di dati del risultato di un'operazione in base ai tipi di dati degli operandi. In alcuni casi potrebbe trattarsi di un tipo di dati con un intervallo maggiore rispetto a quello degli operandi.  
@@ -175,14 +175,14 @@ Visual Basic determina il tipo di dati del risultato di un'operazione in base ai
   
  Il `Like` operatore è definito solo per i criteri di ricerca `String` operandi. Visual Basic tenta di convertire ogni operando in base alle esigenze per `String` prima dell'operazione. Il tipo di dati del risultato è sempre `Boolean`.  
   
-## <a name="see-also"></a>Vedere anche  
- [Tipi di dati](../../../visual-basic/language-reference/data-types/index.md)  
- [Operatori ed espressioni](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)  
- [Operatori aritmetici in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)  
- [Operatori di confronto in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)  
- [Operatori](../../../visual-basic/language-reference/operators/index.md)  
- [Precedenza tra gli operatori in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [Elenco degli operatori per funzionalità](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
- [Operatori aritmetici](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
- [Operatori di confronto](../../../visual-basic/language-reference/operators/comparison-operators.md)  
- [Istruzione Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+## <a name="see-also"></a>Vedere anche
+- [Tipi di dati](../../../visual-basic/language-reference/data-types/index.md)
+- [Operatori ed espressioni](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+- [Operatori aritmetici in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Operatori di confronto in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Operatori](../../../visual-basic/language-reference/operators/index.md)
+- [Precedenza tra gli operatori in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Elenco degli operatori per funzionalità](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [Operatori aritmetici](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
+- [Operatori di confronto](../../../visual-basic/language-reference/operators/comparison-operators.md)
+- [Istruzione Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)

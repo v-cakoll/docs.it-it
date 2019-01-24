@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: completare processi di stampa in Windows Form'
+title: 'Procedura: Processi di stampa di Windows completo form'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,17 +9,17 @@ helpviewer_keywords:
 - print jobs [Windows Forms], completing in Windows Forms
 - printing [Windows Forms], print jobs
 ms.assetid: 23ec74f7-34c5-4710-82a0-ee2914518548
-ms.openlocfilehash: 74a8e3721df72415437dd0c39b3298d67c19990b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f7504d645ea1fca6f45b17f79eb576919b782263
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33521589"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572825"
 ---
-# <a name="how-to-complete-windows-forms-print-jobs"></a>Procedura: completare processi di stampa in Windows Form
-Spesso, elaboratori di testo e altre applicazioni che eseguono processi di stampa fornirà l'opzione per visualizzare un messaggio agli utenti che un processo di stampa è stato completato. È possibile fornire questa funzionalità in Windows Form mediante la gestione di <xref:System.Drawing.Printing.PrintDocument.EndPrint> evento del <xref:System.Drawing.Printing.PrintDocument> componente.  
+# <a name="how-to-complete-windows-forms-print-jobs"></a>Procedura: Processi di stampa di Windows completo form
+Spesso, elaboratori di testo e altre applicazioni che eseguono processi di stampa fornirà l'opzione per visualizzare un messaggio agli utenti che un processo di stampa è stato completato. È possibile fornire questa funzionalità nei tuoi moduli di Windows tramite la gestione di <xref:System.Drawing.Printing.PrintDocument.EndPrint> eventi del <xref:System.Drawing.Printing.PrintDocument> componente.  
   
- La procedura seguente presuppone che sia stato creato un'applicazione basata su Windows con un <xref:System.Drawing.Printing.PrintDocument> componente su di esso, che è il metodo standard per consentire la stampa da un'applicazione basata su Windows. Per ulteriori informazioni sulla stampa di Windows Form utilizzando la <xref:System.Drawing.Printing.PrintDocument> componente, vedere [procedura: creare Windows Form processi di stampa Standard](../../../../docs/framework/winforms/advanced/how-to-create-standard-windows-forms-print-jobs.md).  
+ La procedura seguente richiede che è stata creata un'applicazione basata su Windows con un <xref:System.Drawing.Printing.PrintDocument> componente su di esso, che è il metodo standard per consentire la stampa da un'applicazione basata su Windows. Per altre informazioni sulla stampa di Windows Form usando la <xref:System.Drawing.Printing.PrintDocument> componente, vedere [come: Creare processi di stampa Standard Windows Forms](../../../../docs/framework/winforms/advanced/how-to-create-standard-windows-forms-print-jobs.md).  
   
 ### <a name="to-complete-a-print-job"></a>Per completare un processo di stampa  
   
@@ -37,9 +37,9 @@ Spesso, elaboratori di testo e altre applicazioni che eseguono processi di stamp
     printDocument1->DocumentName = "MyTextFile";  
     ```  
   
-2.  Scrivere codice per gestire l'evento <xref:System.Drawing.Printing.PrintDocument.EndPrint>.  
+2.  Scrivere codice per gestire l'evento <xref:System.Drawing.Printing.PrintDocument.EndPrint> .  
   
-     Nell'esempio di codice seguente, viene visualizzata una finestra di messaggio, che indica che il documento è terminata la stampa.  
+     Nell'esempio di codice seguente, verrà visualizzata una finestra di messaggio, che indica che il documento ha terminato la stampa.  
   
     ```vb  
     Private Sub PrintDocument1_EndPrint(ByVal sender As Object, ByVal e As System.Drawing.Printing.PrintEventArgs) Handles PrintDocument1.EndPrint  
@@ -80,6 +80,6 @@ Spesso, elaboratori di testo e altre applicazioni che eseguono processi di stamp
        (this, &Form1::printDocument1_EndPrint);  
     ```  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Drawing.Printing.PrintDocument>  
- [Supporto per la stampa in Windows Forms](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Drawing.Printing.PrintDocument>
+- [Supporto per la stampa in Windows Forms](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)

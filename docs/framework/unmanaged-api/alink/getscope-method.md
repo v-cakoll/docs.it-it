@@ -1,5 +1,5 @@
 ---
-title: GetScope Method1
+title: Metodo1 GetScope
 ms.date: 03/30/2017
 api_name:
 - IALink.GetScope
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e2746073fbc6adfd7090aa9b3cc38e46c4411744
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 782697536f5e01fa29830a64e47d960a47fe4eae
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33400185"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663141"
 ---
-# <a name="getscope-method1"></a>GetScope Method1
+# <a name="getscope-method1"></a>Metodo1 GetScope
 Ottiene un ambito di importazione.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -42,21 +42,21 @@ HRESULT GetScope(
  ID univoco dell'assembly da importare.  
   
  `FileToken`  
- ID univoco del file da importare.  
+ ID univoco del file da importare da.  
   
  `dwScope`  
  Ambito in base zero da importare.  
   
  `ppImportScope`  
- Riceve [interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) interfaccia per l'ambito.  
+ Riceve [interfaccia di IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) interfaccia per l'ambito.  
   
 ## <a name="return-value"></a>Valore restituito  
- Se il metodo ha esito positivo, restituisce S_OK.  
+ Restituisce S_OK se il metodo ha esito positivo.  
   
 ## <a name="requirements"></a>Requisiti  
  Richiede alink.h  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [Interfaccia IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [Alink (API)](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [Interfaccia IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [Alink (API)](../../../../docs/framework/unmanaged-api/alink/index.md)

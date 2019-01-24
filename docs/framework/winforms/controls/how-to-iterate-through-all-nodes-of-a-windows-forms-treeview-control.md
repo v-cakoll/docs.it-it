@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: scorrere tutti i nodi di un controllo TreeView Windows Form'
+title: 'Procedura: Scorrere tutti i nodi di un controllo TreeView di Windows Form'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,17 +10,17 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], iterating through nodes
 - tree nodes in TreeView control [Windows Forms], iterating through
 ms.assetid: 427f8928-ebcf-4beb-887f-695b905d5134
-ms.openlocfilehash: 89a2c1411ab64b4a20ad291165cfa6d83511c4c6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c6345ab5e5d4f4e480bb2724e7a1d795de2bef5d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33532756"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54651851"
 ---
-# <a name="how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control"></a>Procedura: scorrere tutti i nodi di un controllo TreeView Windows Form
-È talvolta utile esaminare tutti i nodi in un Windows Form <xref:System.Windows.Forms.TreeView> controllo per eseguire alcuni calcoli sui valori del nodo. Questa operazione può essere eseguita usando una routine ricorsiva (metodo ricorsivo in C# e C++) che esegue l'iterazione in ogni nodo in ogni raccolta dell'albero.  
+# <a name="how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control"></a>Procedura: Scorrere tutti i nodi di un controllo TreeView di Windows Form
+È talvolta utile esaminare tutti i nodi in un form Windows <xref:System.Windows.Forms.TreeView> controllo per eseguire calcoli sui valori del nodo. Questa operazione può essere eseguita usando una routine ricorsiva (metodo ricorsivo in C# e C++) che esegue l'iterazione in ogni nodo in ogni raccolta dell'albero.  
   
- Ogni <xref:System.Windows.Forms.TreeNode> oggetto in una visualizzazione albero include proprietà che è possibile utilizzare per spostarsi nella visualizzazione struttura ad albero: <xref:System.Windows.Forms.TreeNode.FirstNode%2A>, <xref:System.Windows.Forms.TreeNode.LastNode%2A>, <xref:System.Windows.Forms.TreeNode.NextNode%2A>, <xref:System.Windows.Forms.TreeNode.PrevNode%2A>, e <xref:System.Windows.Forms.TreeNode.Parent%2A>. Il valore di <xref:System.Windows.Forms.TreeNode.Parent%2A> proprietà è il nodo padre del nodo corrente. I nodi figlio del nodo corrente, se sono presenti, vengono elencati nel relativo <xref:System.Windows.Forms.TreeNode.Nodes%2A> proprietà. Il <xref:System.Windows.Forms.TreeView> stesso controllo dispone di <xref:System.Windows.Forms.TreeView.TopNode%2A> proprietà, che è il nodo radice dell'intera visualizzazione struttura.  
+ Ciascuna <xref:System.Windows.Forms.TreeNode> oggetto in una visualizzazione albero include proprietà che è possibile usare per spostarsi nella visualizzazione albero: <xref:System.Windows.Forms.TreeNode.FirstNode%2A>, <xref:System.Windows.Forms.TreeNode.LastNode%2A>, <xref:System.Windows.Forms.TreeNode.NextNode%2A>, <xref:System.Windows.Forms.TreeNode.PrevNode%2A>, e <xref:System.Windows.Forms.TreeNode.Parent%2A>. Il valore della <xref:System.Windows.Forms.TreeNode.Parent%2A> proprietà è il nodo padre del nodo corrente. I nodi figlio del nodo corrente, se sono presenti, vengono elencati nel relativo <xref:System.Windows.Forms.TreeNode.Nodes%2A> proprietà. Il <xref:System.Windows.Forms.TreeView> stesso controllo dispone di <xref:System.Windows.Forms.TreeView.TopNode%2A> proprietà, ovvero il nodo radice dell'intera visualizzazione albero.  
   
 ### <a name="to-iterate-through-all-nodes-of-the-treeview-control"></a>Per eseguire l'iterazione in tutti i nodi di un controllo TreeView  
   
@@ -123,6 +123,6 @@ ms.locfileid: "33532756"
        }  
     ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Controllo TreeView](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)  
- [Routine ricorsive](~/docs/visual-basic/programming-guide/language-features/procedures/recursive-procedures.md)
+## <a name="see-also"></a>Vedere anche
+- [Controllo TreeView](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)
+- [Routine ricorsive](~/docs/visual-basic/programming-guide/language-features/procedures/recursive-procedures.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: acd71129-5ff0-4b4e-b266-c72cc0c53601
-ms.openlocfilehash: 6b54f75afd52b5179693c5a92ebce2e8aa02f122
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: ca67a01d8f1bc76773a7794169e93d026fe222d7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32765464"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717963"
 ---
 # <a name="known-issues-and-considerations-in-linq-to-entities"></a>Problemi noti e considerazioni in LINQ to Entities
 Contenuto della sezione vengono fornite informazioni sui problemi noti relativi alle query [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)].  
@@ -19,15 +19,15 @@ Contenuto della sezione vengono fornite informazioni sui problemi noti relativi 
   
 -   [Perdita di informazioni di ordinamento](#OrderingInfoLost)  
   
--   [Numeri interi senza segno non è supportati](#UnsignedIntsUnsupported)  
+-   [Interi senza segno non è supportati](#UnsignedIntsUnsupported)  
   
--   [Errori di conversione](#TypeConversionErrors)  
+-   [Errori di conversione tipo](#TypeConversionErrors)  
   
--   [Riferimento a variabili Non scalari non supportate](#RefNonScalarClosures)  
+-   [Riferimento alle variabili Non scalari non supportate](#RefNonScalarClosures)  
   
 -   [Query nidificata potrebbe non riuscire con SQL Server 2000](#NestedQueriesSQL2000)  
   
--   [La proiezione di un tipo anonimo](#ProjectToAnonymousType)  
+-   [Proiezione di un tipo anonimo](#ProjectToAnonymousType)  
   
 <a name="LINQQueriesThatAreNotCached"></a>   
 ## <a name="linq-queries-that-cannot-be-cached"></a>Query LINQ che non possono essere memorizzate nella cache  
@@ -42,7 +42,7 @@ Contenuto della sezione vengono fornite informazioni sui problemi noti relativi 
   
 <a name="UnsignedIntsUnsupported"></a>   
 ## <a name="unsigned-integers-not-supported"></a>Mancato supporto degli Unsigned Integer  
- Non è possibile specificare un tipo Unsigned Integer in una query [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] in quanto in [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] non sono supportati gli integer senza segno. Se si specifica un intero senza segno, un <xref:System.ArgumentException> verrà generata l'eccezione durante la conversione di espressione di query, come illustrato nell'esempio seguente. In questo esempio viene eseguita una query per un ordine con ID 48000.  
+ Non è possibile specificare un tipo Unsigned Integer in una query [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] in quanto in [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] non sono supportati gli integer senza segno. Se si specifica un unsigned integer, un <xref:System.ArgumentException> verrà generata l'eccezione durante la conversione di espressioni di query, come illustrato nell'esempio seguente. In questo esempio viene eseguita una query per un ordine con ID 48000.  
   
  [!code-csharp[DP L2E Conceptual Examples#UIntAsQueryParam](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#uintasqueryparam)]
  [!code-vb[DP L2E Conceptual Examples#UIntAsQueryParam](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#uintasqueryparam)]  
@@ -79,5 +79,5 @@ Contenuto della sezione vengono fornite informazioni sui problemi noti relativi 
  [!code-csharp[DP L2E Conceptual Examples#ProjToAnonType2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#projtoanontype2)]
  [!code-vb[DP L2E Conceptual Examples#ProjToAnonType2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#projtoanontype2)]  
   
-## <a name="see-also"></a>Vedere anche  
- [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)
+## <a name="see-also"></a>Vedere anche
+- [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)

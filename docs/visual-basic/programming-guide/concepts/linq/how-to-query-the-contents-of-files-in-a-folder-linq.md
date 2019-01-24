@@ -1,16 +1,16 @@
 ---
-title: 'Procedura: eseguire Query sul contenuto dei file in una cartella (LINQ) (Visual Basic)'
+title: 'Procedura: Eseguire query sul contenuto dei file in una cartella (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: edacbcd3-f3e4-4429-a8be-28a58dc0dd70
-ms.openlocfilehash: e0f5e07065ebe210a927491a3f55f891f9934e60
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6bebb4bd7444516c51551a5c56171d08f9d0ef2e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643039"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54566925"
 ---
-# <a name="how-to-query-the-contents-of-files-in-a-folder-linq-visual-basic"></a>Procedura: eseguire Query sul contenuto dei file in una cartella (LINQ) (Visual Basic)
-Questo esempio illustra come eseguire una query su tutti i file in un albero di directory specificato, aprire ogni file e controllarne il contenuto. Questo tipo di tecnica può essere usato per creare indici o indici inversi del contenuto di un albero di directory. In questo esempio viene eseguita una semplice ricerca di una stringa. Tuttavia, con un'espressione regolare è possibile eseguire tipi di criteri di ricerca più complessi. Per ulteriori informazioni, vedere [procedura: combinare query LINQ con espressioni regolari (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md).  
+# <a name="how-to-query-the-contents-of-files-in-a-folder-linq-visual-basic"></a>Procedura: Eseguire query sul contenuto dei file in una cartella (LINQ) (Visual Basic)
+Questo esempio illustra come eseguire una query su tutti i file in un albero di directory specificato, aprire ogni file e controllarne il contenuto. Questo tipo di tecnica può essere usato per creare indici o indici inversi del contenuto di un albero di directory. In questo esempio viene eseguita una semplice ricerca di una stringa. Tuttavia, con un'espressione regolare è possibile eseguire tipi di criteri di ricerca più complessi. Per altre informazioni, vedere [Procedura: Combinare query LINQ con espressioni regolari (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md).  
   
 ## <a name="example"></a>Esempio  
   
@@ -73,6 +73,6 @@ End Module
 ## <a name="compiling-the-code"></a>Compilazione del codice  
  Creare un progetto che usi .NET Framework versione 3.5 o successiva con un riferimento a System.Core.dll e un'istruzione `Imports` per lo spazio dei nomi System.Linq.  
   
-## <a name="see-also"></a>Vedere anche  
- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
- [LINQ and File Directories (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md) (LINQ e directory file (Visual Basic))
+## <a name="see-also"></a>Vedere anche
+- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+- [LINQ and File Directories (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md) (LINQ e directory file (Visual Basic))

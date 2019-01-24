@@ -1,13 +1,13 @@
 ---
-title: Parte di stile di un WordprocessingML Document2
+title: Parte di stile di visualizzazione di un WordprocessingML Document2
 ms.date: 07/20/2015
 ms.assetid: 292cc094-9483-4192-ac3b-a5dc51fbac12
-ms.openlocfilehash: 58767c51595a5a2c4c262df133c393dc700e0b10
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 55ad04ba516482613d1abd86ce5feee007c0b98d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645954"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722790"
 ---
 # <a name="style-part-of-a-wordprocessingml-document"></a>Parte relativa allo stile di un documento WordprocessingML
 In questo argomento è illustrato un esempio della parte di stile del documento WordprocessingML di Office Open XML.  
@@ -140,5 +140,5 @@ In questo argomento è illustrato un esempio della parte di stile del documento 
 </w:styles>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Dettagli di Office aprire documenti WordprocessingML XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
+## <a name="see-also"></a>Vedere anche
+- [Dettagli di Office Open XML sui documenti WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)

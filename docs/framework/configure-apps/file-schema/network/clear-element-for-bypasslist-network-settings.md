@@ -10,21 +10,21 @@ helpviewer_keywords:
 - <bypasslist>, clear element
 - bypasslist, clear element
 ms.assetid: 301584ca-a914-4100-b180-3b288d3b099e
-ms.openlocfilehash: 5c26857496d52f9fb98ef76a72cb72fe8d852349
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 840833f2752115cb5f5639a25daf05bcbff3d452
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201413"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720915"
 ---
 # <a name="ltcleargt-element-for-bypasslist-network-settings"></a>&lt;Cancella&gt; (elemento) per bypasslist (impostazioni di rete)
 Cancella l'elenco proxy da ignorare.  
   
  \<configuration>  
 \<system.net>  
-\<defaultProxy >  
-\<BypassList >  
-\<clear >  
+\<defaultProxy>  
+\<bypasslist>  
+\<clear>  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,7 +45,7 @@ Cancella l'elenco proxy da ignorare.
   
 |**Elemento**|**Descrizione**|  
 |-----------------|---------------------|  
-|[BypassList](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Fornisce un set di espressioni regolari che descrivono gli indirizzi che non usano un proxy.|  
+|[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Fornisce un set di espressioni regolari che descrivono gli indirizzi che non usano un proxy.|  
   
 ## <a name="remarks"></a>Note  
  Il `clear` elemento cancella tutte le voci dell'elenco di esclusione.  
@@ -70,6 +70,6 @@ Cancella l'elenco proxy da ignorare.
 </configuration>   
 ```  
   
-## <a name="see-also"></a>Vedere anche  
-- <xref:System.Net.WebProxy?displayProperty=nameWithType>  
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Net.WebProxy?displayProperty=nameWithType>
 - [Schema delle impostazioni di rete](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

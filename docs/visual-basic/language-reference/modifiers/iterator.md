@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - Iterator keyword [Visual Basic]
 ms.assetid: 69cb0b04-ac87-49d0-bcfe-810c0d60daff
-ms.openlocfilehash: 565508046b3fa2dc52acf8c5204153beffc15d9e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bbc18a8b25e0de128cc2c1828213212adad108ec
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33599512"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54719495"
 ---
 # <a name="iterator-visual-basic"></a>Iteratore (Visual Basic)
-Specifica che una funzione o `Get` funzione di accesso è un iteratore.  
+Specifica che una funzione o `Get` della funzione di accesso è un iteratore.  
   
 ## <a name="remarks"></a>Note  
- Un *iteratore* esegue un'iterazione personalizzata su una raccolta. Un iteratore Usa il [Yield](../../../visual-basic/language-reference/statements/yield-statement.md) istruzione per restituire ogni elemento della raccolta uno alla volta. Quando un `Yield` istruzione viene raggiunto, viene mantenuta la posizione corrente nel codice. L'esecuzione viene riavviata a partire da quella posizione la volta successiva che viene chiamata la funzione iteratore.  
+ Un' *iteratore* esegue un'iterazione personalizzata su una raccolta. Un iteratore Usa il [Yield](../../../visual-basic/language-reference/statements/yield-statement.md) istruzione per restituire ogni elemento nella raccolta uno alla volta. Quando un `Yield` viene raggiunta l'istruzione, viene mantenuta la posizione corrente nel codice. L'esecuzione viene riavviata a partire da quella posizione la volta successiva che viene chiamata la funzione iteratore.  
   
- Un iteratore può essere implementato come una funzione o come un `Get` funzione di accesso di una definizione di proprietà. Il `Iterator` modificatore viene visualizzato nella dichiarazione di funzione iteratore o `Get` della funzione di accesso.  
+ Un iteratore può essere implementato come una funzione o un `Get` funzione di accesso di una definizione di proprietà. Il `Iterator` modificatore presente nella dichiarazione della funzione iteratore o `Get` della funzione di accesso.  
   
- Chiamare un iteratore dal codice client utilizzando un [For Each... Istruzione successiva](../../../visual-basic/language-reference/statements/for-each-next-statement.md).  
+ Chiamare un iteratore dal codice client usando un [For Each... Istruzione Next](../../../visual-basic/language-reference/statements/for-each-next-statement.md).  
   
- Il tipo restituito di una funzione iterator o `Get` della funzione di accesso può essere <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>, o <xref:System.Collections.Generic.IEnumerator%601>.  
+ Il tipo restituito di una funzione iteratore o `Get` funzione di accesso può essere <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>, o <xref:System.Collections.Generic.IEnumerator%601>.  
   
- Un iteratore non può avere qualsiasi `ByRef` parametri.  
+ Un iteratore non può contenere `ByRef` parametri.  
   
  Un iteratore non può verificarsi in un evento, costruttore di istanza, costruttore statico o distruttore statico.  
   
@@ -39,7 +39,7 @@ Specifica che una funzione o `Get` funzione di accesso è un iteratore.
 -   [Istruzione Property](../../../visual-basic/language-reference/statements/property-statement.md)  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrata una funzione iterator. La funzione iteratore ha un `Yield` istruzione all'interno di un [per... Avanti](../../../visual-basic/language-reference/statements/for-next-statement.md) ciclo. Ogni iterazione del [per ogni](../../../visual-basic/language-reference/statements/for-each-next-statement.md) corpo dell'istruzione in `Main` crea una chiamata al `Power` funzione iteratore. Ogni chiamata alla funzione iteratore procede fino alla prossima esecuzione dell'istruzione `Yield`, che si verifica durante l'iterazione successiva del ciclo `For…Next`.  
+ L'esempio seguente illustra una funzione iteratore. La funzione iteratore ha un `Yield` istruzione all'interno di un [per... Avanti](../../../visual-basic/language-reference/statements/for-next-statement.md) ciclo. Ogni iterazione del [per ognuno](../../../visual-basic/language-reference/statements/for-each-next-statement.md) nel corpo dell'istruzione `Main` crea una chiamata al `Power` funzione iteratore. Ogni chiamata alla funzione iteratore procede fino alla prossima esecuzione dell'istruzione `Yield`, che si verifica durante l'iterazione successiva del ciclo `For…Next`.  
   
  [!code-vb[VbVbalrStatements#98](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/iterator_1.vb)]  
   
@@ -48,9 +48,9 @@ Specifica che una funzione o `Get` funzione di accesso è un iteratore.
   
  [!code-vb[VbVbalrStatements#99](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/iterator_2.vb)]  
   
- Per ulteriori esempi, vedere [iteratori](../../programming-guide/concepts/iterators.md).  
+ Per altri esempi, vedere [iteratori](../../programming-guide/concepts/iterators.md).  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Runtime.CompilerServices.IteratorStateMachineAttribute>  
- [Iteratori](../../programming-guide/concepts/iterators.md)  
- [Istruzione Yield](../../../visual-basic/language-reference/statements/yield-statement.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Runtime.CompilerServices.IteratorStateMachineAttribute>
+- [Iteratori](../../programming-guide/concepts/iterators.md)
+- [Istruzione Yield](../../../visual-basic/language-reference/statements/yield-statement.md)

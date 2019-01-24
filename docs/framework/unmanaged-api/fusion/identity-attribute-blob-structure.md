@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 59b4c832a4bbc915749aadf435b204e084828698
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: eb2c560f8f906f20de752e5dfad995e2082caaea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33434346"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54654672"
 ---
 # <a name="identityattributeblob-structure"></a>Struttura IDENTITY_ATTRIBUTE_BLOB
-Contiene informazioni su un singolo attributo in un assembly ed è costituito da tre `DWORD`s. Ogni `DWORD` è un offset in un buffer di caratteri prodotto dal `CurrentIntoBuffer` metodo il [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md) interfaccia  
+Contiene informazioni su un singolo attributo in un assembly e costituito da tre `DWORD`s. Ogni `DWORD` è un offset in un buffer di caratteri prodotto dal `CurrentIntoBuffer` metodo per il [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md) interfaccia  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -51,11 +51,11 @@ typedef struct _IDENTITY_ATTRIBUTE_BLOB {
   
 1.  Ottenere un [IReferenceIdentity](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md) per l'assembly.  
   
-2.  Chiamare il `IReferenceIdentity::EnumAttributes` (metodo) e ottenere un [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md).  
+2.  Chiamare il `IReferenceIdentity::EnumAttributes` metodo e ottenere un [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md).  
   
 3.  Creare un buffer di caratteri ed eseguirne il cast come un `IDENTITY_ATTRIBUTE_BLOB` struttura.  
   
-4.  Chiamare il `CurrentIntoBuffer` metodo il `IEnumIDENTITY_ATTRIBUTE` interfaccia. Questo metodo copia gli attributi `Namespace`, `Name`, e `Value` nel buffer di caratteri. I tre offset per le stringhe verranno rese disponibili nel `IDENTITY_ATTRIBUTE_BLOB` struttura.  
+4.  Chiamare il `CurrentIntoBuffer` metodo di `IEnumIDENTITY_ATTRIBUTE` interfaccia. Questo metodo consente di copiare gli attributi `Namespace`, `Name`, e `Value` nel buffer di caratteri. Gli tre offset di queste stringhe saranno rese disponibili nel `IDENTITY_ATTRIBUTE_BLOB` struttura.  
   
 ```  
 // EnumAssemblyAttributes.cpp : main project file.  
@@ -233,17 +233,17 @@ Exit:
   
  PublicKeyToken = b77a5c561934e089  
   
- Versione 2.0.0.0 =  
+ Versione = 2.0.0.0  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Isolation. h  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia IReferenceIdentity](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)  
- [Interfaccia IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)  
- [Struttura IDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-structure.md)  
- [Strutture Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia IReferenceIdentity](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)
+- [Interfaccia IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)
+- [Struttura IDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-structure.md)
+- [Strutture Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)

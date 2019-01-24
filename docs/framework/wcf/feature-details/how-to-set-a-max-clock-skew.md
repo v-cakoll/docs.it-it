@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: impostare lo sfasamento massimo dei segnali di clock'
+title: "Procedura: Set un'inclinazione di Clock massima"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - MaxClockSkew property
 - WCF, custom bindings
 ms.assetid: 491d1705-eb29-43c2-a44c-c0cf996f74eb
-ms.openlocfilehash: dca675b8d5774948bffd936d146cb0e1dd9aa62d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 73c3bd7c8bf02fd003510c838fec45a68829fe1c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496731"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646877"
 ---
-# <a name="how-to-set-a-max-clock-skew"></a>Procedura: impostare lo sfasamento massimo dei segnali di clock
+# <a name="how-to-set-a-max-clock-skew"></a>Procedura: Set un'inclinazione di Clock massima
 È possibile un malfunzionamento delle funzioni dipendenti dall'orario quando le impostazioni dell'orologio in due computer sono differenti. Per limitare questo problema, è possibile impostare la proprietà `MaxClockSkew` su un <xref:System.TimeSpan>. Questa proprietà è disponibile in due classi:  
   
  <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>  
@@ -23,9 +23,9 @@ ms.locfileid: "33496731"
  <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>  
   
 > [!IMPORTANT]
->  Importante per una conversazione protetta, le modifiche per il `MaxClockSkew` proprietà deve essere resa quando il servizio o il client viene avviato automaticamente. A tale scopo, è necessario impostare la proprietà sul <xref:System.ServiceModel.Channels.SecurityBindingElement> restituito dal <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.BootstrapSecurityBindingElement%2A>.  
+>  Importante per una conversazione sicura, le modifiche per il `MaxClockSkew` proprietà deve essere apportata quando il servizio o il client viene avviato automaticamente. A tale scopo, è necessario impostare la proprietà sul <xref:System.ServiceModel.Channels.SecurityBindingElement> restituito dal <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.BootstrapSecurityBindingElement%2A>.  
   
- Per modificare la proprietà in una delle associazioni fornite dal sistema, è necessario trovare l'elemento di associazione di sicurezza nella raccolta di associazioni e impostare la proprietà `MaxClockSkew` su un valore nuovo. Le due classi derivano da <xref:System.ServiceModel.Channels.SecurityBindingElement>: <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> e <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>. Quando si recupera l'associazione di sicurezza dalla raccolta, è necessario eseguire il cast a uno di questi tipi per impostare correttamente la proprietà `MaxClockSkew`. Nell'esempio seguente viene utilizzato <xref:System.ServiceModel.WSHttpBinding> che utilizza <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>. Per un elenco che specifica quale tipo di associazione di sicurezza da utilizzare in ogni associazione fornita dal sistema, vedere [associazioni fornite dal sistema](../../../../docs/framework/wcf/system-provided-bindings.md).  
+ Per modificare la proprietà in una delle associazioni fornite dal sistema, è necessario trovare l'elemento di associazione di sicurezza nella raccolta di associazioni e impostare la proprietà `MaxClockSkew` su un valore nuovo. Le due classi derivano da <xref:System.ServiceModel.Channels.SecurityBindingElement>: <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> e <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>. Quando si recupera l'associazione di sicurezza dalla raccolta, è necessario eseguire il cast a uno di questi tipi per impostare correttamente la proprietà `MaxClockSkew`. Nell'esempio seguente viene utilizzato <xref:System.ServiceModel.WSHttpBinding> che utilizza <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>. Per un elenco che specifica quale tipo di associazione di sicurezza da usare in ogni associazione fornita dal sistema, vedere [System-provided Bindings](../../../../docs/framework/wcf/system-provided-bindings.md).  
   
 ### <a name="to-create-a-custom-binding-with-a-new-clock-skew-value-in-code"></a>Per creare un'associazione personalizzata con un nuovo valore dello sfasamento dei segnali di clock nel codice  
   
@@ -53,17 +53,17 @@ ms.locfileid: "33496731"
   
 1.  Creare un [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) nel [ \<associazioni >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) sezione dell'elemento.  
   
-2.  Creare un [ \<associazione >](../../../../docs/framework/misc/binding.md) elemento e impostare il `name` attributo su un valore appropriato. Nell'esempio seguente viene impostato su `MaxClockSkewBinding`.  
+2.  Creare un [ \<associazione >](../../../../docs/framework/misc/binding.md) e impostare il `name` attributo su un valore appropriato. Nell'esempio seguente viene impostato su `MaxClockSkewBinding`.  
   
-3.  Aggiungere un elemento di codifica. Nell'esempio seguente aggiunge un [ \<textMessageEncoding >](../../../../docs/framework/configure-apps/file-schema/wcf/textmessageencoding.md).  
+3.  Aggiungere un elemento di codifica. L'esempio seguente aggiunge un [ \<textMessageEncoding >](../../../../docs/framework/configure-apps/file-schema/wcf/textmessageencoding.md).  
   
-4.  Aggiungere un [ \<sicurezza >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) elemento e impostare il `authenticationMode` attributo per l'impostazione appropriata. Nell'esempio seguente l'attributo viene impostato su `Kerberos` per specificare che il servizio utilizza l'autenticazione di Windows.  
+4.  Aggiungere un [ \<sicurezza >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) e impostare il `authenticationMode` attributo un'impostazione appropriata. Nell'esempio seguente l'attributo viene impostato su `Kerberos` per specificare che il servizio utilizza l'autenticazione di Windows.  
   
-5.  Aggiungere un [ \<localServiceSettings >](../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md) e impostare il `maxClockSkew` attributo su un valore sotto forma di `"##:##:##"`. Nell'esempio seguente viene impostato su 7 minuti. Facoltativamente, aggiungere un [ \<localServiceSettings >](../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md) e impostare il `maxClockSkew` attributo per l'impostazione appropriata.  
+5.  Aggiungere un [ \<localServiceSettings >](../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md) e impostare il `maxClockSkew` attributo su un valore sotto forma di `"##:##:##"`. Nell'esempio seguente viene impostato su 7 minuti. Facoltativamente, aggiungere un [ \<localServiceSettings >](../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md) e impostare il `maxClockSkew` attributo un'impostazione appropriata.  
   
-6.  Aggiungere un elemento trasporto. Nell'esempio seguente viene utilizzato un [ \<httpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md).  
+6.  Aggiungere un elemento trasporto. L'esempio seguente usa un' [ \<httpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md).  
   
-7.  Per una conversazione protetta, le impostazioni di sicurezza devono verificarsi al programma di avvio nel [ \<secureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) elemento.  
+7.  Per una conversazione sicura, le impostazioni di sicurezza devono verificarsi all'avvio in automatico il [ \<secureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) elemento.  
   
     ```xml  
     <bindings>  
@@ -84,8 +84,8 @@ ms.locfileid: "33496731"
     </bindings>  
     ```  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>  
- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [Procedura: Creare un'associazione personalizzata usando SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>
+- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [Procedura: Creare un'associazione personalizzata usando SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)

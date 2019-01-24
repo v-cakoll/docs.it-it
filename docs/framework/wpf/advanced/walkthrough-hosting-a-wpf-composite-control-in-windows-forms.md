@@ -1,20 +1,20 @@
 ---
-title: 'Procedura dettagliata: hosting di controlli compositi di WPF in Windows Form'
+title: 'Procedura dettagliata: Hosting di un controllo composito WPF in Windows Form'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
-ms.openlocfilehash: b49d09ce81c0605ecd82b67ec4c0b24973ac293c
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: f0fad58d269c89079237969fc03cf5edb6cf0358
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582814"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569664"
 ---
-# <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>Procedura dettagliata: hosting di controlli compositi di WPF in Windows Form
+# <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>Procedura dettagliata: Hosting di un controllo composito WPF in Windows Form
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornisce un ambiente completo per la creazione di applicazioni. Tuttavia, quando è presente un investimento sostanziale [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] codice, può essere più efficace estendere esistente [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] dell'applicazione con [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] anziché riscriverla da zero. Uno scenario comune è quando si desidera incorporare uno o più controlli implementati con [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] all'interno dell'applicazione Windows Form. Per altre informazioni sulla personalizzazione dei controlli WPF, vedere [personalizzazione dei controlli](../../../../docs/framework/wpf/controls/control-customization.md).  
   
- Questa procedura dettagliata viene descritta un'applicazione che ospita un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] controllo composito per eseguire l'immissione di dati in un'applicazione Windows Form. Il controllo composito è compresso in una DLL. Questa procedura generale può essere estesa ad applicazioni e controlli più complessi. Questa procedura dettagliata è progettata per essere pressoché identiche aspetto e funzionalità alla [procedura dettagliata: Hosting di controlli Windows Form compositi in WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md). La principale differenza è che lo scenario di hosting è invertito.  
+ Questa procedura dettagliata viene descritta un'applicazione che ospita un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] controllo composito per eseguire l'immissione di dati in un'applicazione Windows Form. Il controllo composito è compresso in una DLL. Questa procedura generale può essere estesa ad applicazioni e controlli più complessi. Questa procedura dettagliata è progettata per essere pressoché identiche aspetto e funzionalità a [procedura dettagliata: Hosting di un Windows Forms Composite Control in WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md). La principale differenza è che lo scenario di hosting è invertito.  
   
  La procedura guidata è suddivisa in due sezioni. La prima sezione descrive brevemente l'implementazione del [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] controllo composito. La seconda sezione illustra in dettaglio come ospitare il controllo composito in un'applicazione Windows Forms, ricevere eventi dal controllo e accedere ad alcune delle proprietà del controllo.  
   
@@ -28,7 +28,7 @@ ms.locfileid: "48582814"
   
 ## <a name="prerequisites"></a>Prerequisiti  
 
-È necessario Visual Studio per completare questa procedura dettagliata.  
+Per completare la procedura dettagliata, è necessario Visual Studio.  
   
 ## <a name="implementing-the-wpf-composite-control"></a>Implementazione del controllo composito WPF  
  Il [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] controllo composito usato in questo esempio è un modulo di immissione dati semplice che accetta nome e l'indirizzo dell'utente. Quando l'utente fa clic su uno dei due pulsanti per indicare che l'attività è completata, il controllo genera un evento personalizzato per restituire tali informazioni all'host. La figura seguente mostra il controllo sottoposto a rendering.  
@@ -320,9 +320,9 @@ Controllo composito WPF ospitato in un'applicazione Windows Forms
   
  Compilare ed eseguire l'applicazione. Fare clic sui vari pulsanti di opzione per vedere l'effetto sul controllo composito WPF.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Windows.Forms.Integration.ElementHost>  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- [Progettare XAML in Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)  
- [Procedura dettagliata: Hosting di controlli Windows Form compositi in WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)  
- [Procedura dettagliata: hosting di controlli compositi 3D di WPF in Windows Form](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Windows.Forms.Integration.ElementHost>
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost>
+- [Progettare XAML in Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
+- [Procedura dettagliata: Hosting di controlli Windows Form compositi in WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [Procedura dettagliata: Hosting di controlli compositi 3D di WPF in Windows Form](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md)

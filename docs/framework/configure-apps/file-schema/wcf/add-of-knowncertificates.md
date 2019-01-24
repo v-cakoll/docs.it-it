@@ -2,23 +2,23 @@
 title: '&lt;add&gt; di &lt;knownCertificates&gt;'
 ms.date: 03/30/2017
 ms.assetid: 128aaabe-3f1a-4c3b-b59f-898d0f02910f
-ms.openlocfilehash: c08df67ef4f659b0c8f4a5e07c774487edb28caa
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 1189b394669acb826342b0a250b39db738599495
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150968"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54579472"
 ---
 # <a name="ltaddgt-of-ltknowncertificatesgt"></a>&lt;add&gt; di &lt;knownCertificates&gt;
 Aggiunge un certificato X.509 alla raccolta di certificati conosciuti.  
   
  \<system.ServiceModel>  
-\<i comportamenti >  
+\<behaviors>  
 \<serviceBehaviors>  
-\<comportamento >  
+\<behavior>  
 \<serviceCredentials>  
-\<issuedTokenAuthentication >  
-\<knownCertificates >  
+\<issuedTokenAuthentication>  
+\<knownCertificates>  
 \<add>  
   
 ## <a name="syntax"></a>Sintassi  
@@ -75,7 +75,7 @@ Aggiunge un certificato X.509 alla raccolta di certificati conosciuti.
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<knownCertificates >](../../../../../docs/framework/configure-apps/file-schema/wcf/knowncertificates.md)|Rappresenta una raccolta di certificati X.509 forniti da un servizio token di sicurezza (STS, Security Token Service) per la convalida dei token di sicurezza.|  
+|[\<knownCertificates>](../../../../../docs/framework/configure-apps/file-schema/wcf/knowncertificates.md)|Rappresenta una raccolta di certificati X.509 forniti da un servizio token di sicurezza (STS, Security Token Service) per la convalida dei token di sicurezza.|  
   
 ## <a name="remarks"></a>Note  
  L'emissione di un token di autenticazione prevede tre fasi. Nella prima fase, un client tenta di accedere a un servizio viene reindirizzato a un *servizio token di sicurezza*. Nella seconda fase, il servizio token di sicurezza autentica il client e quindi rilascia a quest'ultimo un token, in genere un token SAML (Security Assertions Markup Language), che il client restituisce in seguito al servizio. Nella terza fase, il servizio ricerca nel token appena ricevuto i dati da usare per autenticare il token stesso e, pertanto, il client. Affinché il token venga autenticato è necessario che il servizio riconosca il certificato usato dal servizio token di sicurezza.  
@@ -117,16 +117,16 @@ Aggiunge un certificato X.509 alla raccolta di certificati conosciuti.
 </serviceBehaviors>
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>  
- <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AllowedAudienceUris%2A>  
- <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AudienceUriMode%2A>  
- <xref:System.ServiceModel.Configuration.IssuedTokenServiceElement.KnownCertificates%2A>  
- <xref:System.ServiceModel.Configuration.X509CertificateTrustedIssuerElementCollection>  
- <xref:System.ServiceModel.Configuration.X509CertificateTrustedIssuerElement>  
- <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A>  
- [\<knownCertificates >](../../../../../docs/framework/configure-apps/file-schema/wcf/knowncertificates.md)  
- [Uso di certificati](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [Federazione e token rilasciati](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
- [Procedura: Configurare le credenziali in un servizio federativo](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
- [Protezione di servizi e client](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>
+- <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AllowedAudienceUris%2A>
+- <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AudienceUriMode%2A>
+- <xref:System.ServiceModel.Configuration.IssuedTokenServiceElement.KnownCertificates%2A>
+- <xref:System.ServiceModel.Configuration.X509CertificateTrustedIssuerElementCollection>
+- <xref:System.ServiceModel.Configuration.X509CertificateTrustedIssuerElement>
+- <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A>
+- [\<knownCertificates>](../../../../../docs/framework/configure-apps/file-schema/wcf/knowncertificates.md)
+- [Uso di certificati](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Federazione e token rilasciati](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
+- [Procedura: Configurare le credenziali in un servizio federativo](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [Protezione di servizi e client](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

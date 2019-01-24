@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a39eac88537d47535844d1f05e0741cc94142f0a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 36218fa44f1cb49d8d0193d7c72e6feb2d121050
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447253"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718845"
 ---
 # <a name="imetadataimportgetnamefromtoken-method"></a>Metodo IMetaDataImport::GetNameFromToken
 Ottiene il nome in formato UTF-8 dell'oggetto a cui fa riferimento il token di metadati specificato. Questo metodo è obsoleto.  
@@ -41,20 +41,20 @@ HRESULT GetNameFromToken (
  [in] Che rappresenta l'oggetto per restituire il nome per il token.  
   
  `pszUtf8NamePtr`  
- [out] Un puntatore per il nome dell'oggetto nell'heap UTF-8.  
+ [out] Puntatore al nome dell'oggetto UTF-8 nell'heap.  
   
 ## <a name="remarks"></a>Note  
- `GetNameFromToken` è obsoleto. In alternativa, chiamare un metodo per ottenere le proprietà di quel determinato tipo di token richiesto, ad esempio `GetFieldProps` per un campo o `GetMethodProps` per un metodo.  
+ `GetNameFromToken` è obsoleto. In alternativa, chiamare un metodo per ottenere le proprietà del tipo di token richiesto, come determinato `GetFieldProps` per un campo o `GetMethodProps` per un metodo.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
- **Libreria:** inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Inclusa come risorsa in Mscoree. dll  
   
  **Versioni di .NET framework:** 1.0  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [Interfaccia IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Interfaccia IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

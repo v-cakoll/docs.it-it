@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dff6b245c80050a5e85561b8bba6aa9ba8199ba8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 609bb050bb9c5addb5250f65a059a70d3ce32428
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407066"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662244"
 ---
 # <a name="clrdebuggingprocessflags-enumeration"></a>Enumerazione CLR_DEBUGGING_PROCESS_FLAGS
-Fornisce i valori utilizzati per il [ICLRDebugging:: OpenVirtualProcess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md) metodo.  
+Fornisce i valori utilizzati per il [ICLRDebugging:: OpenVirtualProcess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md) (metodo).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,23 +40,23 @@ typedef enum CLR_DEBUGGING_PROCESS_FLAGS
   
 |Membro|Descrizione|  
 |------------|-----------------|  
-|`CLR_DEBUGGING_MANAGED_EVENT_PENDING`|Il runtime dispone di un evento del debugger gestito a non-catch-up per inviare. Vedere la sezione Osservazioni per la distinzione tra gli eventi di aggiornamento e non-catch-up.|  
+|`CLR_DEBUGGING_MANAGED_EVENT_PENDING`|Questo runtime dispone di un evento del debugger gestito a non-catch-up per l'invio. Vedere la sezione Osservazioni per distinguere tra gli eventi di aggiornamento e non-catch-up.|  
 |`CLR_DEBUGGING_MANAGED_EVENT_DEBUGGER_LAUNCH`|L'evento gestito che è in sospeso è un <xref:System.Diagnostics.Debugger.Launch%2A?displayProperty=nameWithType> richiesta.|  
   
 ## <a name="remarks"></a>Note  
- Aggiornamento degli eventi includono processo, il dominio applicazione, assembly, modulo e le notifiche di creazione di thread che portano il debugger fino allo stato corrente dopo che è connesso a un processo. Gli eventi non-catch-up, indicati dal `CLR_DEBUGGING_MANAGED_EVENT_PENDING` flag, includere tutte le altri eventi del debugger, ad esempio le eccezioni e le notifiche di assistente al debug gestito.  
+ Aggiornamento degli eventi includono processo, dominio dell'applicazione, assembly, modulo e le notifiche di creazione di thread che portano il debugger fino allo stato corrente dopo averla associata a un processo. Gli eventi non-catch-up, indicati dal `CLR_DEBUGGING_MANAGED_EVENT_PENDING` flag, includere tutti gli altri eventi del debugger, ad esempio le eccezioni e le notifiche di assistente al debug gestito.  
   
- Il `CLR_DEBUGGING_MANAGED_EVENT_DEBUGGER_LAUNCH` flag consente al runtime di distinguere tra un'eccezione di terminazione e una richiesta per allegare un debugger gestito che può essere annullato.  
+ Il `CLR_DEBUGGING_MANAGED_EVENT_DEBUGGER_LAUNCH` flag consente al runtime di distinguere tra un'eccezione di terminazione e una richiesta per collegare un debugger gestito che può essere annullato.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Metahost. idl, Metahost. h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Enumerazioni di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)  
- [Debug](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Vedere anche
+- [Enumerazioni di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Debug](../../../../docs/framework/unmanaged-api/debugging/index.md)

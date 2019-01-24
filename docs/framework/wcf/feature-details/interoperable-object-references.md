@@ -2,12 +2,12 @@
 title: Riferimenti a oggetti interoperativi
 ms.date: 03/30/2017
 ms.assetid: cb8da4c8-08ca-4220-a16b-e04c8f527f1b
-ms.openlocfilehash: eeedd39ec14a6758395aee1f4c3b8ab26a0c2ffd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5d2f7d93544cafab7cfe5d8dcbb8a4c5d5c5b576
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493573"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582423"
 ---
 # <a name="interoperable-object-references"></a>Riferimenti a oggetti interoperativi
 Per impostazione predefinita <xref:System.Runtime.Serialization.DataContractSerializer> serializza gli oggetti per valore. È possibile usare la proprietà <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A> per indicare al serializzatore dei contratti dati di mantenere i riferimenti all'oggetto durante la serializzazione degli oggetti del tipo.  
@@ -94,8 +94,8 @@ public class SomeClass
   
  L'utilizzo di `IsReference` garantisce conformità nelle sequenze di andata e ritorno dei messaggi. In caso contrario, quando viene generato un tipo da uno schema, l'XML restituito per il tipo non è necessariamente compatibile con lo schema inizialmente presupposto. In altre parole, nonostante la serializzazione degli attributi `id` e `ref`, lo schema originale avrebbe potuto impedire a tali attributi (o a tutti gli attributi) di verificarsi nell'XML. Se si applica `IsReference` a un membro dati, il membro continua a essere riconosciuto come possibile riferimento quando si trova in una sequenza di andata e ritorno.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Runtime.Serialization.DataContractAttribute>  
- <xref:System.Runtime.Serialization.CollectionDataContractAttribute>  
- <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A>  
- <xref:System.Runtime.Serialization.CollectionDataContractAttribute.IsReference%2A>
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Runtime.Serialization.DataContractAttribute>
+- <xref:System.Runtime.Serialization.CollectionDataContractAttribute>
+- <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A>
+- <xref:System.Runtime.Serialization.CollectionDataContractAttribute.IsReference%2A>

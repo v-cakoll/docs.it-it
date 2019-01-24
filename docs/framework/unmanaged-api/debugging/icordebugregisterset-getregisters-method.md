@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: deaeb4e244a4f9c1e8582d9bea26c2ae5cfde818
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ee56a7f343de999d68a71d9eac04eed6e06b444e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421350"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54568894"
 ---
 # <a name="icordebugregistersetgetregisters-method"></a>Metodo ICorDebugRegisterSet::GetRegisters
-Ottiene il valore di ogni registro (nel computer in cui è attualmente in esecuzione codice) specificato dalla maschera di bit.  
+Ottiene il valore di ogni registro (nel computer che esegue codice) che viene specificato per la maschera di bit.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,28 +40,28 @@ HRESULT GetRegisters (
   
 #### <a name="parameters"></a>Parametri  
  `mask`  
- [in] Maschera di bit che specifica quali valori di registro da recuperare. Ogni bit corrisponde a un registro. Se un bit è impostato su uno, viene recuperato il valore del Registro; in caso contrario, non è possibile recuperare il valore del registro.  
+ [in] Maschera di bit che specifica quale registro e i valori devono essere recuperati. Ogni bit corrisponde a un registro. Se un bit è impostato su uno, viene recuperato il valore del Registro; in caso contrario, non è possibile recuperare il valore del registro.  
   
  `regCount`  
- [in] Il numero di valori del registro da recuperare.  
+ [in] Il numero di valori di registro da recuperare.  
   
  `regBuffer`  
  [out] Matrice di `CORDB_REGISTER` oggetti, ognuno dei quali riceve un valore di un registro.  
   
 ## <a name="remarks"></a>Note  
- Le dimensioni della matrice devono essere uguale al numero di bit impostati su 1 nella maschera di bit. Il `regCount` parametro specifica il numero di elementi nel buffer che riceverà i valori di registro. Se il `regCount` valore è troppo piccolo per il numero di registri indicato dalla maschera, i registri con numero maggiore verranno troncati dal set. Se il `regCount` valore è troppo grande, inutilizzata `regBuffer` gli elementi verranno modificati.  
+ Le dimensioni della matrice devono essere uguale al numero di bit impostati su uno nella maschera di bit. Il `regCount` parametro specifica il numero di elementi nel buffer che riceverà i valori di registro. Se il `regCount` valore è troppo piccolo per il numero di registri indicati dalla maschera, i registri numerati più alto verranno troncati dal set. Se il `regCount` valore è troppo grande, inutilizzata `regBuffer` elementi saranno non modificati.  
   
- Se la maschera di bit specifica un registro che non è disponibile, `GetRegisters` restituisce un valore indeterminato per tale registro.  
+ Se la maschera di bit specifica un registro che non è disponibile, `GetRegisters` restituisce un valore non definito per tale registro.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)  
- [Interfaccia ICorDebugRegisterSet2](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)
+- [Interfaccia ICorDebugRegisterSet2](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)

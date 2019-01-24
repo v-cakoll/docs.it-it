@@ -10,12 +10,12 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], codes
 - errors [Visual Basic], simulating
 ms.assetid: 85cd5c59-5224-4f02-aaf5-fcfefab17a29
-ms.openlocfilehash: 84fce92183228cbfa5554a3ba45770a86e83bff5
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: e819ba043dec2d5e8e792fdf57dc0c273a24e881
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47232937"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54654815"
 ---
 # <a name="error-statement"></a>Istruzione Error
 Simula il verificarsi di un errore.  
@@ -35,7 +35,7 @@ Error errornumber
   
  Se `errornumber` è definito, il `Error` istruzione chiama il gestore degli errori dopo le proprietà del `Err` oggetto vengono assegnati i valori predefiniti seguenti:  
   
-|Proprietà|Valore|  
+|Proprietà|Value|  
 |--------------|-----------|  
 |`Number`|Valore specificato come argomento per `Error` istruzione. Può essere qualsiasi numero errore valido.|  
 |`Source`|Nome del progetto Visual Basic corrente.|  
@@ -58,14 +58,14 @@ Error 11   ' Simulate the "Division by zero" error.
 ```  
   
 ## <a name="requirements"></a>Requisiti  
- **Namespace:** [Microsoft. VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
+ **Spazio dei nomi:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
   
- **Assembly:** libreria di Runtime di Visual Basic (in VisualBasic)  
+ **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:Microsoft.VisualBasic.ErrObject.Clear%2A>  
- <xref:Microsoft.VisualBasic.Information.Err%2A>  
- <xref:Microsoft.VisualBasic.ErrObject.Raise%2A>  
- [Istruzione On Error](../../../visual-basic/language-reference/statements/on-error-statement.md)  
- [Istruzione Resume](../../../visual-basic/language-reference/statements/resume-statement.md)  
- [Messaggi di errore](../../../visual-basic/language-reference/error-messages/index.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:Microsoft.VisualBasic.ErrObject.Clear%2A>
+- <xref:Microsoft.VisualBasic.Information.Err%2A>
+- <xref:Microsoft.VisualBasic.ErrObject.Raise%2A>
+- [Istruzione On Error](../../../visual-basic/language-reference/statements/on-error-statement.md)
+- [Istruzione Resume](../../../visual-basic/language-reference/statements/resume-statement.md)
+- [Messaggi di errore](../../../visual-basic/language-reference/error-messages/index.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: c878e457-f715-46e4-a136-ff14d6c86018
-ms.openlocfilehash: f2df0dfa039fa37fd9d9b471d28b2a03f06b3037
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c6d00271f412829cb8e030c2b9a338f73327977b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365735"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54724174"
 ---
 # <a name="walkthrough-simple-object-model-and-query-visual-basic"></a>Procedura dettagliata: Modello a oggetti e query semplici (Visual Basic)
 Questa procedura dettagliata descrive uno scenario [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] end-to-end di base con complessità minime. Verranno create una classe di entità per la modellazione della tabella Customers nel database Northwind di esempio, quindi una semplice query per elencare i clienti residenti nell'area londinese.  
@@ -42,32 +42,32 @@ Questa procedura dettagliata descrive uno scenario [!INCLUDE[vbtecdlinq](../../.
 -   Esecuzione della query e analisi dei risultati.  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>Creazione di una soluzione LINQ to SQL  
- In questa prima attività, viene creata una soluzione Visual Studio che contiene i riferimenti necessari per compilare ed eseguire un [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] progetto.  
+ In questa prima attività, si crea una soluzione di Visual Studio che contiene i riferimenti necessari per compilare ed eseguire un [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] progetto.  
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>Per creare una soluzione LINQ to SQL  
   
 1.  Scegliere **Nuovo progetto** dal menu **File**.  
   
-2.  Nel **tipi di progetto** riquadro del **nuovo progetto** la finestra di dialogo, fare clic su **Visual Basic**.  
+2.  Nel **tipi di progetto** riquadro della finestra di **nuovo progetto** nella finestra di dialogo fare clic su **Visual Basic**.  
   
 3.  Nel riquadro **Modelli** fare clic su **Applicazione console**.  
   
-4.  Nel **nome** digitare **LinqConsoleApp**.  
+4.  Nel **Name** , digitare **LinqConsoleApp**.  
   
 5.  Fare clic su **OK**.  
   
 ## <a name="adding-linq-references-and-directives"></a>Aggiunta di riferimenti e direttive LINQ  
- In questa procedura dettagliata vengono usati assembly che potrebbero non essere installati per impostazione predefinita nel progetto. Se `System.Data.Linq` non è elencato come riferimento nel progetto (fare clic su **Mostra tutti i file** in **Esplora** ed espandere il **riferimenti** nodo), aggiungere, come descritto in la procedura seguente.  
+ In questa procedura dettagliata vengono usati assembly che potrebbero non essere installati per impostazione predefinita nel progetto. Se `System.Data.Linq` non è elencato come riferimento nel progetto (fare clic su **Mostra tutti i file** nelle **Esplora soluzioni** ed espandere la **riferimenti** nodo), aggiungerlo come spiegato nella la procedura seguente.  
   
 #### <a name="to-add-systemdatalinq"></a>Per aggiungere System.Data.Linq  
   
-1.  In **Esplora**, fare doppio clic su **riferimenti**, quindi fare clic su **Aggiungi riferimento**.  
+1.  Nelle **Esplora soluzioni**, fare doppio clic su **riferimenti**, quindi fare clic su **Aggiungi riferimento**.  
   
-2.  Nel **Aggiungi riferimento** la finestra di dialogo, fare clic su **.NET**, fare clic sull'assembly LINQ e quindi fare clic su **OK**.  
+2.  Nel **Aggiungi riferimento** finestra di dialogo, fare clic su **.NET**, fare clic sull'assembly e quindi fare clic su **OK**.  
   
      L'assembly verrà aggiunto al progetto.  
   
-3.  Anche nel **Aggiungi riferimento** la finestra di dialogo, fare clic su **.NET**, scorrere e fare clic su Forms e quindi fare clic su **OK**.  
+3.  Anche nel **Aggiungi riferimento** finestra di dialogo, fare clic su **.NET**, scorrere fino alla e fare clic su Forms e quindi fare clic su **OK**.  
   
      Questo assembly, che supporta la finestra di messaggio nella procedura dettagliata, viene aggiunto al progetto.  
   
@@ -76,7 +76,7 @@ Questa procedura dettagliata descrive uno scenario [!INCLUDE[vbtecdlinq](../../.
      [!code-vb[DLinqWalk1VB#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk1VB/vb/Module1.vb#1)]  
   
 ## <a name="mapping-a-class-to-a-database-table"></a>Mapping di una classe a una tabella del database  
- In questo passaggio verrà creata una classe ed eseguito il mapping della classe a una tabella di database. Tale classe è detta un *classe di entità*. Notare che il mapping viene eseguito semplicemente aggiungendo l'attributo <xref:System.Data.Linq.Mapping.TableAttribute>. La proprietà <xref:System.Data.Linq.Mapping.TableAttribute.Name%2A> consente di specificare il nome della tabella nel database.  
+ In questo passaggio verrà creata una classe ed eseguito il mapping della classe a una tabella di database. Tale classe è detta un' *classe di entità*. Notare che il mapping viene eseguito semplicemente aggiungendo l'attributo <xref:System.Data.Linq.Mapping.TableAttribute>. La proprietà <xref:System.Data.Linq.Mapping.TableAttribute.Name%2A> consente di specificare il nome della tabella nel database.  
   
 #### <a name="to-create-an-entity-class-and-map-it-to-a-database-table"></a>Per creare una classe di entità ed eseguire il mapping della classe a una tabella di database  
   
@@ -113,7 +113,7 @@ Questa procedura dettagliata descrive uno scenario [!INCLUDE[vbtecdlinq](../../.
      [!code-vb[DLinqWalk1VB#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk1VB/vb/Module1.vb#4)]  
   
 ## <a name="creating-a-simple-query"></a>Creazione di una query semplice  
- In questo passaggio viene creata una query per cercare i clienti nella tabella di database Customers residenti nell'area londinese. Il codice della query in questo passaggio descrive semplicemente la query, ma non la esegue. Questo approccio è noto come *esecuzione posticipata*. Per altre informazioni, vedere [Introduzione alle query LINQ (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).  
+ In questo passaggio viene creata una query per cercare i clienti nella tabella di database Customers residenti nell'area londinese. Il codice della query in questo passaggio descrive semplicemente la query, ma non la esegue. Questo approccio è noto come *un'esecuzione posticipata*. Per altre informazioni, vedere [Introduzione alle query LINQ (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).  
   
  Verrà anche prodotto un output del log per mostrare i comandi SQL generati da [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Questa funzionalità di registrazione, che usa <xref:System.Data.Linq.DataContext.Log%2A>, è utile per eseguire il debug e per determinare che i comandi inviati al database rappresentano accuratamente la query.  
   
@@ -135,22 +135,22 @@ Questa procedura dettagliata descrive uno scenario [!INCLUDE[vbtecdlinq](../../.
 2.  ‎Premere F5 per eseguire il debug dell'applicazione.  
   
     > [!NOTE]
-    >  Se l'applicazione genera un errore di run-time, vedere la sezione Risoluzione dei problemi di [apprendimento tramite procedure dettagliate](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md).  
+    >  Se l'applicazione genera un errore di run-time, vedere la sezione Risoluzione dei problemi dei [apprendimento tramite procedure dettagliate](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md).  
   
      Nella finestra di messaggio viene visualizzato un elenco di sei clienti. Nella finestra della console verrà visualizzato il codice SQL generato.  
   
-3.  Fare clic su **OK** per chiudere la finestra di messaggio.  
+3.  Fare clic su **OK** per chiudere la finestra del messaggio.  
   
      L'applicazione verrà chiusa.  
   
-4.  Nel **File** menu, fare clic su **Salva tutto**.  
+4.  Nel menu **File** fare clic su **Salva tutto**.  
   
      Questa applicazione sarà necessaria se si continua con la successiva procedura dettagliata.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
- Il [procedura dettagliata: esecuzione di query tra relazioni (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-visual-basic.md) argomento continua in cui termina questa procedura dettagliata. La procedura dettagliata l'esecuzione di query tra relazioni illustra come [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] possibile eseguire una query tra tabelle, simile a *join* in un database relazionale.  
+ Il [procedura dettagliata: Esecuzione di query tra relazioni (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-visual-basic.md) argomento continua in cui termina questa procedura dettagliata. La procedura dettagliata l'esecuzione di query tra relazioni illustra la modalità [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] eseguire query tra tabelle, simile a *join* in un database relazionale.  
   
  Se si desidera eseguire la procedura dettagliata relativa all'esecuzione di query tra relazioni, è indispensabile salvare la soluzione per la procedura dettagliata appena completata.  
   
-## <a name="see-also"></a>Vedere anche  
- [Apprendimento tramite procedure dettagliate](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+## <a name="see-also"></a>Vedere anche
+- [Apprendimento tramite procedure dettagliate](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

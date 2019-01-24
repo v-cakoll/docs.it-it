@@ -7,12 +7,12 @@ helpviewer_keywords:
 - WPF [WPF], creating Direct3D9 content
 - Direct3D9 [WPF interoperability], creating Direct3D9 content
 ms.assetid: 286e98bc-1eaa-4b5e-923d-3490a9cca5fc
-ms.openlocfilehash: 192036836dfb010274944006feea44e5d81ff4e3
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 8e598b557381bf82b42ea87e2f020ebba4450929
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168748"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54520295"
 ---
 # <a name="walkthrough-creating-direct3d9-content-for-hosting-in-wpf"></a>Procedura dettagliata: Creazione di contenuto Direct3D9 per l'Hosting in WPF
 Questa procedura dettagliata viene illustrato come creare contenuto Direct3D9 adatto per l'hosting in un'applicazione Windows Presentation Foundation (WPF). Per ulteriori informazioni sull'hosting di contenuto Direct3D9 in applicazioni WPF, vedere [interoperatività di WPF e Direct3D9](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md).
@@ -137,7 +137,7 @@ Questa procedura dettagliata viene illustrato come creare contenuto Direct3D9 ad
 
 ## <a name="next-steps"></a>Passaggi successivi
 
--   Ospitare il contenuto Direct3D9 in un'applicazione WPF. Per altre informazioni, vedere [procedura dettagliata: Hosting di contenuto Direct3D9 in WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-direct3d9-content-in-wpf.md).
+-   Ospitare il contenuto Direct3D9 in un'applicazione WPF. Per altre informazioni, vedere [Procedura dettagliata: Hosting di contenuto Direct3D9 in WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-direct3d9-content-in-wpf.md).
 
 ## <a name="see-also"></a>Vedere anche
 

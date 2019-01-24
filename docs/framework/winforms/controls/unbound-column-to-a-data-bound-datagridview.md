@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: aggiungere una colonna non associata a un controllo DataGridView di Windows Form associato ai dati'
+title: 'Procedura: Aggiungere una colonna non associata a un controllo DataGridView di Windows associato a dati form'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - data grids [Windows Forms], adding unbound columns
 - DataGridView control [Windows Forms], unbound data
 ms.assetid: f7bdc4d8-ba8e-421b-ad62-82d936f01372
-ms.openlocfilehash: 39c637fe30ed852f7d6e9fa7a1dbbfa72af9e4b4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e877545f93fb57b636fd2e1559f52b4ad70a0b4e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43527930"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722764"
 ---
-# <a name="how-to-add-an-unbound-column-to-a-data-bound-windows-forms-datagridview-control"></a>Procedura: aggiungere una colonna non associata a un controllo DataGridView di Windows Form associato ai dati
+# <a name="how-to-add-an-unbound-column-to-a-data-bound-windows-forms-datagridview-control"></a>Procedura: Aggiungere una colonna non associata a un controllo DataGridView di Windows associato a dati form
 I dati visualizzati nel controllo <xref:System.Windows.Forms.DataGridView> in genere provengono da un'origine dati di qualche tipo, ma è possibile visualizzare una colonna di dati di origine diversa. Questo tipo di colonna è detto colonna non associata. Le colonne non associate possono assumere molte forme. Spesso vengono usate per fornire accesso ai dettagli di una riga di dati.  
   
  Esempio di codice seguente viene illustrato come creare una colonna non associata di **dettagli** pulsanti da visualizzare una tabella figlio correlata a una determinata riga in una tabella padre quando si implementa uno scenario master-details. Per rispondere alle selezioni dei pulsanti, implementare un gestore dell'evento <xref:System.Windows.Forms.DataGridView.CellClick?displayProperty=nameWithType> che visualizzi un form contenente la tabella figlio.  
   
- Questa attività è supportata in Visual Studio.  Vedere anche [procedura: aggiungere e rimuovere colonne nel Windows Forms DataGridView controllo usando la finestra di progettazione](https://msdn.microsoft.com/library/dyyesckz\(v=vs.110\))  
+ Questa attività è supportata in Visual Studio.  Vedere anche [come: Aggiungere e rimuovere colonne nel controllo DataGridView Windows Form usando la finestra di progettazione](https://msdn.microsoft.com/library/dyyesckz\(v=vs.110\))  
   
 ## <a name="example"></a>Esempio  
  [!code-csharp[System.Windows.Forms.DataGridViewMisc#010](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#010)]
@@ -34,7 +34,7 @@ I dati visualizzati nel controllo <xref:System.Windows.Forms.DataGridView> in ge
   
 -   Riferimenti agli assembly <xref:System?displayProperty=nameWithType> e <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Windows.Forms.DataGridView>  
- [Visualizzazione di dati nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)  
- [Modalità di visualizzazione di dati nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/data-display-modes-in-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Windows.Forms.DataGridView>
+- [Visualizzazione di dati nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)
+- [Modalità di visualizzazione di dati nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/data-display-modes-in-the-windows-forms-datagridview-control.md)

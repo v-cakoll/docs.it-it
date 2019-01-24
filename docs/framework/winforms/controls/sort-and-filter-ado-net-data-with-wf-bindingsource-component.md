@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: ordinare e filtrare i dati ADO.NET con il componente BindingSource Windows Form'
+title: 'Procedura: Ordinare e filtrare i dati ADO.NET con il Windows Form componente BindingSource'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - data [Windows Forms], sorting
 - ADO.NET [Windows Forms]
 ms.assetid: 6c206daf-d706-4602-9dbe-435343052063
-ms.openlocfilehash: 932d30d356225d88d7ef149561cc4c5cc8ac4dd0
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: edb639f25970c6946eb33c68dd5a99cad566d4a2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188755"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54584779"
 ---
-# <a name="how-to-sort-and-filter-adonet-data-with-the-windows-forms-bindingsource-component"></a>Procedura: ordinare e filtrare i dati ADO.NET con il componente BindingSource Windows Form
+# <a name="how-to-sort-and-filter-adonet-data-with-the-windows-forms-bindingsource-component"></a>Procedura: Ordinare e filtrare i dati ADO.NET con il Windows Form componente BindingSource
 È possibile esporre l'ordinamento e filtro funzionalità del <xref:System.Windows.Forms.BindingSource> controllare tramite il <xref:System.Windows.Forms.BindingSource.Sort%2A> e <xref:System.Windows.Forms.BindingSource.Filter%2A> proprietà. È possibile applicare un ordinamento semplice quando l'origine dati sottostante è un <xref:System.ComponentModel.IBindingList>, ed è possibile applicare il filtro e ordinamento avanzato quando l'origine dati è un <xref:System.ComponentModel.IBindingListView>. Il <xref:System.Windows.Forms.BindingSource.Sort%2A> proprietà richiede standard [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] sintassi: una stringa che rappresenta il nome di una colonna di dati nell'origine dati aggiungendo `ASC` o `DESC` per indicare se deve essere ordinato l'elenco in ordine crescente o decrescente. È possibile impostare l'ordinamento avanzato o più colonne di ordinamento separando ogni colonna con una virgola come separatore. Il <xref:System.Windows.Forms.BindingSource.Filter%2A> proprietà accetta un'espressione stringa.  
   
 > [!NOTE]
@@ -53,8 +53,8 @@ ms.locfileid: "50188755"
 ## <a name="compiling-the-code"></a>Compilazione del codice  
  Per eseguire questo esempio, incollare il codice in un form che contiene un <xref:System.Windows.Forms.BindingSource> denominate `BindingSource1` e una <xref:System.Windows.Forms.DataGridView> denominato `dataGridView1`. Gestire le <xref:System.Windows.Forms.Form.Load> evento per il form e chiamare `InitializeSortedFilteredBindingSource` nel metodo del gestore eventi load.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Windows.Forms.BindingSource.Sort%2A>  
- <xref:System.Windows.Forms.BindingSource.Filter%2A>  
- [Procedura: Installare database di esempio](https://msdn.microsoft.com/library/ed1291f6-604c-4972-ae22-0345c6dea12e)  
- [Componente BindingSource](../../../../docs/framework/winforms/controls/bindingsource-component.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Windows.Forms.BindingSource.Sort%2A>
+- <xref:System.Windows.Forms.BindingSource.Filter%2A>
+- [Procedura: Installare i database di esempio](https://msdn.microsoft.com/library/ed1291f6-604c-4972-ae22-0345c6dea12e)
+- [Componente BindingSource](../../../../docs/framework/winforms/controls/bindingsource-component.md)

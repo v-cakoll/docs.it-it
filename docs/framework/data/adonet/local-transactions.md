@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8ae3712f-ef5e-41a1-9ea9-b3d0399439f1
-ms.openlocfilehash: d8fb10d1ad9218d8113c95a4c67dbb32cf87beb1
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9cad6c798856fb77023bb52c528b9294f5f6d0bc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131365"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54656180"
 ---
 # <a name="local-transactions"></a>Transazioni locali
 Le transazioni in [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] consentono di associare più attività in modo da poterle eseguire come un'unità di lavoro singola. Ad esempio, si supponga che un'applicazione esegua due attività. Ovvero che prima aggiorni una tabella con le informazioni sull'ordine e che, successivamente, aggiorni una tabella contenente le informazioni d'inventario addebitando gli articoli ordinati. Se una delle attività non riesce, quindi entrambi gli aggiornamenti di rollback.  
@@ -47,8 +47,8 @@ Le transazioni in [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] cons
  [!code-csharp[DataWorks SqlTransaction.Local#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlTransaction.Local/CS/source.cs#1)]
  [!code-vb[DataWorks SqlTransaction.Local#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlTransaction.Local/VB/source.vb#1)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Transazioni e concorrenza](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
- [Transazioni distribuite](../../../../docs/framework/data/adonet/distributed-transactions.md)  
- [Integrazione di System.Transactions con SQL Server](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vedere anche
+- [Transazioni e concorrenza](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
+- [Transazioni distribuite](../../../../docs/framework/data/adonet/distributed-transactions.md)
+- [Integrazione di System.Transactions con SQL Server](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)
+- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

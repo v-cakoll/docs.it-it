@@ -1,14 +1,15 @@
 ---
-title: 'Procedura: trovare elementi figlio in un Namespace (XPath-LINQ to XML) (Visual Basic)'
+title: 'Procedura: Trovare elementi in un Namespace (XPath-LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: c7cb3b77-3424-4b54-9efa-4dc715948e41
-ms.openlocfilehash: 417ff63408ea640bbbd5cc4863193e769a2ec444
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3e8220c1dc34a56306d78db5d90ab5697ba5f632
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54714785"
 ---
-# <a name="how-to-find-elements-in-a-namespace-xpath-linq-to-xml-visual-basic"></a>Procedura: trovare elementi figlio in un Namespace (XPath-LINQ to XML) (Visual Basic)
+# <a name="how-to-find-elements-in-a-namespace-xpath-linq-to-xml-visual-basic"></a>Procedura: Trovare elementi in un Namespace (XPath-LINQ to XML) (Visual Basic)
 Le espressioni XPath consentono di trovare nodi in un determinato spazio dei nomi. Per specificare gli spazi dei nomi, nelle espressioni XPath si usano prefissi di spazio dei nomi. Per analizzare un'espressione XPath che contiene prefissi di spazio dei nomi, è necessario passare ai metodi XPath un oggetto che implementa <xref:System.Xml.IXmlNamespaceResolver>. In questo esempio viene usato <xref:System.Xml.XmlNamespaceManager>.  
   
  L'espressione XPath è:  
@@ -79,5 +80,5 @@ Results are identical
   </aw:PurchaseOrder>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [LINQ to XML per gli utenti di XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a>Vedere anche
+- [LINQ to XML per gli utenti di XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

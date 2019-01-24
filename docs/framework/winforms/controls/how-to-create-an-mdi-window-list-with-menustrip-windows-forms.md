@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: creare un elenco di finestre MDI con MenuStrip (Windows Form)'
+title: 'Procedura: Creare un elenco di finestre MDI con MenuStrip (Windows Form)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,17 +8,17 @@ helpviewer_keywords:
 - MDI [Windows Forms], creating window lists
 - MenuStrip control [Windows Forms], creating window lists
 ms.assetid: 04fb414b-811f-4a83-aab6-b4a24646dec5
-ms.openlocfilehash: c87ffadaef2842f10d40f6fd84eb1c70c6dfe37e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 00f35fe872fc5702595108646e2605ed419823f8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33530822"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585309"
 ---
-# <a name="how-to-create-an-mdi-window-list-with-menustrip-windows-forms"></a>Procedura: creare un elenco di finestre MDI con MenuStrip (Windows Form)
-Utilizzare l'interfaccia a documenti multipli (MDI) per creare applicazioni in grado di aprire documenti diverse alla stessa ora e copia e Incolla il contenuto da un documento a altro.  
+# <a name="how-to-create-an-mdi-window-list-with-menustrip-windows-forms"></a>Procedura: Creare un elenco di finestre MDI con MenuStrip (Windows Form)
+Usare l'interfaccia a documenti multipli (MDI) per creare applicazioni che possono aprire i documenti diverse alla stessa ora e copia e Incolla il contenuto da un documento a altro.  
   
- Questa procedura viene illustrato come creare un elenco di tutti i form figlio attivo nel menu finestra dell'elemento padre.  
+ Questa procedura illustra come creare un elenco di tutti i form figlio attivo nel menu finestra dell'elemento padre.  
   
 ### <a name="to-create-an-mdi-window-list-on-a-menustrip"></a>Per creare un elenco di finestre MDI con MenuStrip  
   
@@ -26,17 +26,17 @@ Utilizzare l'interfaccia a documenti multipli (MDI) per creare applicazioni in g
   
 2.  Aggiungere un tipo <xref:System.Windows.Forms.MenuStrip> al form.  
   
-3.  Aggiungere due voci di menu di primo livello per il <xref:System.Windows.Forms.MenuStrip> e impostare i relativi <xref:System.Windows.Forms.Control.Text%2A> proprietà `&File` e `&Window`.  
+3.  Aggiungere due voci di menu di primo livello per il <xref:System.Windows.Forms.MenuStrip> e impostare loro <xref:System.Windows.Forms.Control.Text%2A> delle proprietà per `&File` e `&Window`.  
   
 4.  Aggiungere una voce del sottomenu alla voce di menu `&File` e impostare la relativa proprietà <xref:System.Windows.Forms.ToolStripItem.Text%2A> su `&Open`.  
   
 5.  Impostare il <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> proprietà del <xref:System.Windows.Forms.MenuStrip> per il `&Window` <xref:System.Windows.Forms.ToolStripMenuItem>.  
   
-6.  Aggiungere un form al progetto e aggiungere il controllo desiderato, ad esempio un'altra <xref:System.Windows.Forms.MenuStrip>.  
+6.  Aggiungere un modulo al progetto e aggiungere il controllo desiderato, ad esempio un'altra <xref:System.Windows.Forms.MenuStrip>.  
   
 7.  Creare un gestore eventi per l'evento <xref:System.Windows.Forms.Control.Click> di `&New`<xref:System.Windows.Forms.ToolStripMenuItem>.  
   
-8.  All'interno del gestore eventi inserire codice simile al seguente per creare e visualizzare nuove istanze di `Form2` come finestre figlio MDI di `Form1`.  
+8.  All'interno del gestore di evento, inserire codice simile al seguente per creare e visualizzare le nuove istanze di `Form2` come finestre figlio MDI di `Form1`.  
   
     ```vb  
     Private Sub openToolStripMenuItem_Click(ByVal sender As _  
@@ -81,7 +81,7 @@ Utilizzare l'interfaccia a documenti multipli (MDI) per creare applicazioni in g
   
 -   Riferimenti agli assembly <xref:System?displayProperty=nameWithType> e <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Vedere anche  
- [Procedura: Creare form padre MDI](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)  
- [Procedura: Creare form figlio MDI](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)  
- [Controllo MenuStrip](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)
+## <a name="see-also"></a>Vedere anche
+- [Procedura: Creare form padre MDI](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)
+- [Procedura: Creare form figlio MDI](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)
+- [Controllo MenuStrip](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)

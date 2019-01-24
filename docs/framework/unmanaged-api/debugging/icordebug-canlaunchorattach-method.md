@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f86cc83936dd8150ca6b3f28c9b6a624278e2b36
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b768c8f7880a2317d1b72878657158e839b731f3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406289"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569729"
 ---
 # <a name="icordebugcanlaunchorattach-method"></a>Metodo ICorDebug::CanLaunchOrAttach
-Restituisce un HRESULT che indica se avviare un nuovo processo o connettersi al processo specificato esistente è possibile all'interno del contesto della configurazione del computer e di runtime corrente.  
+Restituisce un HRESULT che indica se avviare un nuovo processo o connettersi al processo esistente specificato è possibile all'interno del contesto della configurazione del computer e di runtime corrente.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,10 +41,10 @@ HRESULT CanLaunchOrAttach (
  [in] L'ID di un processo esistente.  
   
  `win32DebuggingEnabled`  
- [in] Passare `true` se si prevede di avviare il debug Win32 attivato o connettersi con Win32 debug abilitato; in caso contrario, passare `false`.  
+ [in] Passare `true` se si intende avviare con Win32 attivato il debug o collegare con Win32 di debug abilitate; in caso contrario, passare `false`.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK se i servizi di debug determinano che un nuovo processo di avvio o di connettersi al processo specificato è possibile, in base alle informazioni sulla configurazione di computer e di runtime corrente. I valori HRESULT possibili sono:  
+ S_OK se i servizi di debug determinano che avviare un nuovo processo o connettersi al processo specificato è possibile, in base alle informazioni sulla configurazione di computer e di runtime corrente. I valori HRESULT possibili sono:  
   
 -   S_OK  
   
@@ -55,18 +55,18 @@ HRESULT CanLaunchOrAttach (
 -   CORDBG_E_KERNEL_DEBUGGER_ENABLED  
   
 ## <a name="remarks"></a>Note  
- Questo metodo è puramente informativo. L'interfaccia non comporta l'arresto è l'avvio o connettersi a un processo, indipendentemente dal valore restituito da `CanLaunchOrAttach`.  
+ Questo metodo è puramente informativo. L'interfaccia non verrà interrotta è l'avvio o la connessione a un processo, indipendentemente dal valore restituito da `CanLaunchOrAttach`.  
   
- Se si prevede di avviare il debug Win32 attivato o la connessione con il debug Win32 attivato, passare `true` per `win32DebuggingEnabled`. Il valore HRESULT restituito da `CanLaunchOrAttach` potrebbero essere diversi se si utilizza questa opzione.  
+ Se si intende avviare con Win32 attivato il debug o collegare con Win32 attivato il debug, passare `true` per `win32DebuggingEnabled`. Il valore HRESULT restituito dal `CanLaunchOrAttach` potrebbero essere diversi se si usa questa opzione.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)

@@ -2,12 +2,12 @@
 title: WCF e nomi IDN (Internationalized Domain Name)
 ms.date: 03/30/2017
 ms.assetid: c8a3e10a-8bc2-4a78-8d86-a562ba6e65fa
-ms.openlocfilehash: a0d4a5b4fe5dd3bc7cf41c8c6ad320dd83861aec
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 83c6f3c2afec0f2b6b8fccca4bd8252e9ab35400
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187923"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54571587"
 ---
 # <a name="wcf-and-internationalized-domain-names"></a>WCF e nomi IDN (Internationalized Domain Name)
 È stato aggiunto il supporto per i servizi WCF con gli IDN (Internationalized Domain Name). Un IDN è un nome di dominio che contiene caratteri non ASCII. Questo supporto include sia la possibilità di ospitare un servizio WCF con un nome IDN sia un client WCF per comunicare con un servizio Web con un nome IDN.  
@@ -29,7 +29,7 @@ ms.locfileid: "50187923"
   
 1.  "None"  
   
-2.  Utilizzando "AllExceptIntranet"  
+2.  "AllExceptIntranet"  
   
 3.  "Tutti"  
   
@@ -41,5 +41,5 @@ ms.locfileid: "50187923"
 > [!WARNING]
 >  Quando si aggiungono caratteri Unicode ad applicationHost.exe.config, salvare il file usando la codifica UTF-8.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Uri?displayProperty=nameWithType>
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Uri?displayProperty=nameWithType>

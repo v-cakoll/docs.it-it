@@ -1,5 +1,5 @@
 ---
-title: "Procedura: disattivare sessioni protette in un'associazione WSFederationHttpBinding"
+title: "Procedura: Disabilitare le sessioni protette in un'associazione WSFederationHttpBinding"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 675fa143-6a4e-4be3-8afc-673334ab55ec
-ms.openlocfilehash: b61c8935b785a80f6e3163b3bafd83d3dd84f52f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8c03bb9601ecbaaf8694d1df26ba43e34434ac47
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202081"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720028"
 ---
-# <a name="how-to-disable-secure-sessions-on-a-wsfederationhttpbinding"></a>Procedura: disattivare sessioni protette in un'associazione WSFederationHttpBinding
+# <a name="how-to-disable-secure-sessions-on-a-wsfederationhttpbinding"></a>Procedura: Disabilitare le sessioni protette in un'associazione WSFederationHttpBinding
 Alcuni servizi possono richiedere credenziali federate senza tuttavia supportare le sessioni protette. In questo caso occorre disattivare la funzionalità di sessione protetta. A differenza della classe <xref:System.ServiceModel.WSHttpBinding>, la classe <xref:System.ServiceModel.WSFederationHttpBinding> non fornisce alcuna modalità di disattivazione delle sessioni protette quando si comunica con un servizio. È invece necessario creare un'associazione personalizzata che sostituisce le impostazioni della sessione protetta con un bootstrap.  
   
  Questo argomento illustra come modificare gli elementi di un'associazione <xref:System.ServiceModel.WSFederationHttpBinding> per creare un'associazione personalizzata. Il risultato è un'associazione <xref:System.ServiceModel.WSFederationHttpBinding> uguale all'originale in cui tuttavia non vengono utilizzate sessioni protette.  
@@ -42,5 +42,5 @@ Alcuni servizi possono richiedere credenziali federate senza tuttavia supportare
   
 -   Per compilare l'esempio di codice, creare un progetto che fa riferimento all'assembly System.ServiceModel.dll.  
   
-## <a name="see-also"></a>Vedere anche  
- [Associazioni e sicurezza](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)
+## <a name="see-also"></a>Vedere anche
+- [Associazioni e sicurezza](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)

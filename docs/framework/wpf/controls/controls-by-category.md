@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [WPF], listed by category
 ms.assetid: f8a1f78e-d9fa-4367-9ec6-f084577e83bb
-ms.openlocfilehash: 93512ab00fe05a4166125c5e319ce91a5cc04573
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b056f52879c4309db0cbb33ecc789d25439a8c68
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551999"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576850"
 ---
 # <a name="controls-by-category"></a>Controlli per categoria
 Controlli Windows Presentation Foundation (WPF) possono essere raggruppati logicamente in diverse categorie. che consentono di selezionare il controllo appropriato per ogni scenario grazie alla possibilità di vedere quali controlli dispongono di modelli di utilizzo o funzionalità simili.  
@@ -56,7 +56,7 @@ Controlli Windows Presentation Foundation (WPF) possono essere raggruppati logic
 -   <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="buttons"></a>Pulsanti  
- I pulsanti sono uno dei controlli più semplici dell'interfaccia utente. Le applicazioni in genere eseguono alcune attività di <xref:System.Windows.Controls.Primitives.ButtonBase.Click> evento quando un utente fa clic su di essi.  
+ I pulsanti sono uno dei controlli più semplici dell'interfaccia utente. Le applicazioni in genere eseguono qualche attività nel <xref:System.Windows.Controls.Primitives.ButtonBase.Click> evento quando un utente fa clic su di essi.  
   
 -   <xref:System.Windows.Controls.Button>  
   
@@ -177,5 +177,5 @@ Controlli Windows Presentation Foundation (WPF) possono essere raggruppati logic
   
 -   <xref:System.Windows.Controls.InkPresenter>  
   
-## <a name="see-also"></a>Vedere anche  
- [Libreria di controlli](../../../../docs/framework/wpf/controls/control-library.md)
+## <a name="see-also"></a>Vedere anche
+- [Libreria di controlli](../../../../docs/framework/wpf/controls/control-library.md)

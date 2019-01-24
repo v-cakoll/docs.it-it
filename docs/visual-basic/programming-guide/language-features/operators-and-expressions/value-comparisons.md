@@ -10,43 +10,43 @@ helpviewer_keywords:
 - operators [Visual Basic], comparison
 - expressions [Visual Basic], comparing
 ms.assetid: 60da0c76-9458-4afc-97e9-44a7939c064c
-ms.openlocfilehash: 6e1eda09784814d139ef94b6720b538aef30e5e7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 23733741a79506730187d5735a20f3848e43da1d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33649607"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54724814"
 ---
 # <a name="value-comparisons-visual-basic"></a>Confronto di valori (Visual Basic)
-Gli operatori di confronto consente di creare espressioni che confrontano i valori di variabili numeriche. Queste espressioni restituiscono un `Boolean` valore a seconda che il confronto sia true o false. Esempi di un'espressione di questo tipo sono i seguenti.  
+Gli operatori di confronto sono utilizzabile per creare espressioni che confrontano i valori delle variabili numeriche. Queste espressioni restituiscono un `Boolean` valore basato sul fatto che il confronto è true o false. Esempi di un'espressione di questo tipo sono i seguenti.  
   
  `45 > 26`  
   
  `26 > 45`  
   
- Restituisce la prima espressione `True`, in quanto 45 è maggiore di 26. Restituisce il secondo esempio `False`, in quanto 26 è maggiore di 45.  
+ La prima espressione restituisce `True`, poiché è maggiore di 26 45. Restituisce il secondo esempio `False`, perché non è superiore a 45 26.  
   
- È inoltre possibile confrontare le espressioni numeriche in questo modo. Le espressioni che confronto possono essere autonomamente le espressioni complesse, come nell'esempio seguente.  
+ È anche possibile confrontare espressioni numeriche in questo modo. Le espressioni che si confrontano possono essere autonomamente le espressioni complesse, come nell'esempio seguente.  
   
  `x / 45 * (y +17) >= System.Math.Sqrt(z) / (p - (x * 16))`  
   
- L'espressione complessa precedente include valori letterali, variabili e chiamate di funzione. Le espressioni su entrambi i lati dell'operatore di confronto vengono valutate e i valori risultanti vengono confrontati utilizzando il `>=` operatore di confronto. Se il valore dell'espressione a sinistra è maggiore o uguale al valore dell'espressione a destra, l'intera espressione restituisce `True`; in caso contrario, restituisce `False`.  
+ Espressione complessa precedente include i valori letterali, variabili e le chiamate di funzione. Le espressioni su entrambi i lati dell'operatore di confronto vengono valutate e i valori risultanti vengono confrontati utilizzando il `>=` operatore di confronto. Se il valore dell'espressione sul lato sinistro è maggiore o uguale al valore dell'espressione a destra, l'intera espressione viene valutata `True`; in caso contrario, restituisce `False`.  
   
- Le espressioni di confronto di valori utilizzate più frequentemente `If...Then` costruzioni, come nell'esempio seguente.  
+ Le espressioni che confrontano i valori utilizzate più frequentemente `If...Then` costruzioni, come nell'esempio seguente.  
   
  [!code-vb[VbVbalrOperators#84](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/value-comparisons_1.vb)]  
   
- Il `=` segno è un operatore di confronto, nonché un operatore di assegnazione. Quando usato come operatore di confronto, valuta se il valore a sinistra è uguale al valore a destra, come illustrato nell'esempio seguente.  
+ Il `=` segno è un operatore di confronto, nonché un operatore di assegnazione. Quando usato come operatore di confronto, valuta se il valore a sinistra è uguale a quello a destra, come illustrato nell'esempio seguente.  
   
  [!code-vb[VbVbalrOperators#85](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/value-comparisons_2.vb)]  
   
- È inoltre possibile utilizzare un'espressione di confronto in qualsiasi punto un `Boolean` valore è necessario, ad esempio in un `If`, `While`, `Loop`, o `ElseIf` istruzione, o durante l'assegnazione o passare un valore a un `Boolean` variabile. Nell'esempio seguente, viene assegnato il valore restituito dall'espressione di confronto per un `Boolean` variabile.  
+ È anche possibile usare un'espressione di confronto in qualsiasi punto un' `Boolean` valore è necessario, ad esempio in un `If`, `While`, `Loop`, o `ElseIf` istruzione, o durante l'assegnazione o passare un valore a un `Boolean` variabile. Nell'esempio seguente, viene assegnato il valore restituito dall'espressione di confronto per un `Boolean` variabile.  
   
  [!code-vb[VbVbalrOperators#86](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/value-comparisons_3.vb)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Espressioni booleane](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md)  
- [Operatori ed espressioni](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)  
- [Operatori di confronto in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)  
- [Procedura: Calcolare valori numerici](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-calculate-numeric-values.md)  
- [Precedenza tra gli operatori in Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md)
+## <a name="see-also"></a>Vedere anche
+- [Espressioni booleane](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md)
+- [Operatori ed espressioni](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+- [Operatori di confronto in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Procedura: Calcolare valori numerici](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-calculate-numeric-values.md)
+- [Precedenza tra gli operatori in Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 24ece9bb614957e02c81d3a0f0a0eefe59f3febc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d7c41e05ecf4e33f7ca711befdd90275452439df
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446545"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718858"
 ---
 # <a name="imetadataimportgetscopeprops-method"></a>Metodo IMetaDataImport::GetScopeProps
 Ottiene il nome ed eventualmente l'identificatore di versione dell'assembly o del modulo nell'ambito dei metadati corrente.  
@@ -40,29 +40,29 @@ HRESULT GetScopeProps (
   
 #### <a name="parameters"></a>Parametri  
  `szName`  
- [out] Un buffer per il nome di assembly o un modulo.  
+ [out] Un buffer per il nome assembly o un modulo.  
   
  `cchName`  
  [in] La dimensione in caratteri "wide" di `szName`.  
   
  `pchName`  
- [out] Il numero di caratteri "wide" restituiti in `szName`.  
+ [out] Il numero di caratteri "wide", restituito nel `szName`.  
   
  `pmvid`  
- [out, facoltativo] Un puntatore a un GUID che identifica in modo univoco la versione dell'assembly o modulo.  
+ [out, optional] Puntatore a un GUID che identifica la versione dell'assembly o del modulo.  
   
 ## <a name="remarks"></a>Note  
- Il [IMetaDataEmit:: SetModuleProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) metodo viene utilizzato per impostare queste proprietà.  
+ Il [SetModuleProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) metodo viene utilizzato per impostare queste proprietà.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
- **Libreria:** inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [Interfaccia IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Interfaccia IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

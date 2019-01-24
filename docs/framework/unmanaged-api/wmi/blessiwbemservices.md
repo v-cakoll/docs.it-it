@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a65c3c14507b2520c69875a1bc101ce826ace7ba
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: b127c48a300af01c8e7b32d422e42fbc4796420d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041408"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54716078"
 ---
 # <a name="blessiwbemservices-function"></a>BlessIWbemServices (funzione)
 Indica se le credenziali utente di consentono l'accesso all'oggetto specificato [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) classe.   
@@ -62,7 +62,7 @@ HRESULT BlessIWbemServices (
 
 I seguenti valori restituiti da questa funzione sono definiti nel *Winerror* file di intestazione, oppure è possibile definirle come costanti nel codice:
 
-|Costante  |Valore  |Descrizione  |
+|Costante  |Value  |Descrizione  |
 |---------|---------|---------|
 | `E_INVALIDARG` | 0x80070057 | Uno o più argomenti non sono validi. |
 | `E_POINTER` | 0x80004003 | `pIWbemServices` è `null`. | 
@@ -71,11 +71,11 @@ I seguenti valori restituiti da questa funzione sono definiti nel *Winerror* fil
 | `S_OK` | 0 | La chiamata di funzione è riuscita. | 
 
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** WMINet_Utils.idl  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Vedere anche  
-[WMI e contatori delle prestazioni (riferimenti alle API non gestite)](index.md)
+## <a name="see-also"></a>Vedere anche
+- [WMI e contatori delle prestazioni (riferimenti alle API non gestite)](index.md)

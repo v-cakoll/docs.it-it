@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: animare un rettangolo utilizzando fotogrammi chiave'
+title: 'Procedura: Animare un rettangolo utilizzando fotogrammi chiave'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - RectangleGeometry objects [WPF], animating with key frames
 - animation [WPF], RectangleGeometry objects with key frames
 ms.assetid: a8b45ceb-0e32-4ba1-928f-df6d30db17c6
-ms.openlocfilehash: 9b4a620ea58026c3be1b09d01a595e965e4c2b45
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 8e3da6ddf5a49ce690dfe1fc08732376a0998d67
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46002944"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645072"
 ---
-# <a name="how-to-animate-a-rectangle-geometry-by-using-key-frames"></a>Procedura: animare un rettangolo utilizzando fotogrammi chiave
+# <a name="how-to-animate-a-rectangle-geometry-by-using-key-frames"></a>Procedura: Animare un rettangolo utilizzando fotogrammi chiave
 In questo esempio illustra come animare la <xref:System.Windows.Media.RectangleGeometry.Rect%2A> proprietà di un <xref:System.Windows.Media.RectangleGeometry> usando fotogrammi chiave.  
   
 ## <a name="example"></a>Esempio  
@@ -34,9 +34,9 @@ In questo esempio illustra come animare la <xref:System.Windows.Media.RectangleG
   
  Per l'esempio completo, vedere [Esempio di animazione con fotogrammi chiave](https://go.microsoft.com/fwlink/?LinkID=160012).  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Windows.Media.RectangleGeometry>  
- <xref:System.Windows.Media.RectangleGeometry.Rect%2A>  
- <xref:System.Windows.Media.Animation.RectAnimationUsingKeyFrames>  
- [Cenni preliminari sulle animazioni con fotogrammi chiave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
- [Procedure relative ai fotogrammi chiave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Windows.Media.RectangleGeometry>
+- <xref:System.Windows.Media.RectangleGeometry.Rect%2A>
+- <xref:System.Windows.Media.Animation.RectAnimationUsingKeyFrames>
+- [Cenni preliminari sulle animazioni con fotogrammi chiave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+- [Procedure relative ai fotogrammi chiave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)

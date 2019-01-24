@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d20701237501834c611c4e498c39597cf275176
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3577c90af51886868d57796fb5bfae91dedcee16
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518686"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720119"
 ---
 # <a name="qualifiersetbeginenumeration-function"></a>QualifierSet_BeginEnumeration (funzione)
 Reimposta un enumeratore dei qualificatori di un oggetto all'inizio dell'enumerazione.  
@@ -53,9 +53,9 @@ HRESULT QualifierSet_BeginEnumeration (
 
 I seguenti valori restituiti da questa funzione sono definiti nel *WbemCli.h* file di intestazione, oppure è possibile definirle come costanti nel codice:
 
-|Costante  |Valore  |Descrizione  |
+|Costante  |Value  |Descrizione  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Il `lFlags` parametro non è valido. |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Il parametro `lFlags` non è valido. |
 |`WBEM_E_UNEXPECTED` | 0x8004101d | Una seconda chiamata a `QualifierSet_BeginEnumeration` è stata eseguita senza una chiamata corrispondente a [ `QualifierSet_EndEnumeration` ](qualifierset-endenumeration.md). |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Memoria insufficiente è disponibile per iniziare una nuova enumerazione. |
 |`WBEM_S_NO_ERROR` | 0 | La chiamata di funzione è riuscita.  |
@@ -68,18 +68,18 @@ Per enumerare tutti i qualificatori su un oggetto, questo metodo deve essere chi
 
 I flag che possono essere passati come il `lEnumFlags` definiti nell'argomento di *WbemCli.h* file di intestazione, oppure è possibile definirle come costanti nel codice.   
 
-|Costante  |Valore  |Descrizione  |
+|Costante  |Value  |Descrizione  |
 |---------|---------|---------|
 |  | 0 | Restituire i nomi di tutti i qualificatori. |
-| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Restituire solo i nomi dei qualificatori specifici per la proprietà corrente o l'oggetto. <br/> Per una proprietà: restituire solo i qualificatori specifici per la proprietà (incluse le sostituzioni) e non i qualificatori propagata dalla definizione della classe. <br/> Per un'istanza: restituire solo i nomi di qualificatore specifici dell'istanza. <br/> Per una classe: restituire solo i qualificatori specifico beiong la classe derivata.
-|`WBEM_FLAG_PROPAGATED_ONLY` | 0x20 | Restituisce solo i nomi dei qualificatori propagati da un altro oggetto. <br/> Per una proprietà: restituire solo i qualificatori propagati a questa proprietà dalla definizione della classe e non quelli dalla proprietà stessa. <br/> Per un'istanza: restituzione solo tali qualificatori propagati dalla definizione della classe. <br/> Per una classe: restituire solo i nomi di qualificatore ereditati dalle classi padre. |
+| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Restituire solo i nomi dei qualificatori specifici per la proprietà corrente o l'oggetto. <br/> Per una proprietà: Restituire solo gli e i qualificatori specifici per la proprietà (incluse le sostituzioni), non tali propagata dalla definizione della classe. <br/> Per un'istanza: Restituire solo i nomi di qualificatore specifici dell'istanza. <br/> Per una classe: Restituire solo i qualificatori specifico beiong la classe derivata.
+|`WBEM_FLAG_PROPAGATED_ONLY` | 0x20 | Restituisce solo i nomi dei qualificatori propagati da un altro oggetto. <br/> Per una proprietà: Restituisce solo i qualificatori propagati a questa proprietà dalla definizione della classe e non quelli dalla proprietà stessa. <br/> Per un'istanza: Restituzione solo tali qualificatori propagati dalla definizione della classe. <br/> Per una classe: Restituisce solo i nomi di qualificatore ereditati dalle classi padre. |
 
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** WMINet_Utils.idl  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Vedere anche  
-[WMI e contatori delle prestazioni (riferimenti alle API non gestite)](index.md)
+## <a name="see-also"></a>Vedere anche
+- [WMI e contatori delle prestazioni (riferimenti alle API non gestite)](index.md)

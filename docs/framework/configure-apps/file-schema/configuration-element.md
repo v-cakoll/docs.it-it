@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 2ec1c9dc-2e5c-4ef0-9958-81670ab88449
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 40c0ab5f18d5aae2c99dd66747d3435f0826af8b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 2a81e422c2e6d8c2d342821163f860c5cb54c083
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200322"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583324"
 ---
 # <a name="configuration-element"></a>\<configurazione > elemento
 
@@ -43,7 +43,7 @@ nessuno
 
 |     | Descrizione |
 | --- | ----------- |
-| [**\<assemblyBinding >**](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) | Specifica i criteri di associazione degli assembly al livello di configurazione.|
+| [**\<assemblyBinding>**](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) | Specifica i criteri di associazione degli assembly al livello di configurazione.|
 | [**\<avvio >** Schema delle impostazioni](~/docs/framework/configure-apps/file-schema/startup/index.md) | Tutti gli elementi nello schema delle impostazioni di avvio. |
 | [**\<runtime >** Schema delle impostazioni](~/docs/framework/configure-apps/file-schema/runtime/index.md) | Tutti gli elementi nello schema delle impostazioni di runtime. |
 | [**\<Remoting >** Schema delle impostazioni](https://msdn.microsoft.com/dc2d1e62-9af7-4ca1-99fd-98b93bb4db9e) | Tutti gli elementi nello schema delle impostazioni di comunicazione remota. |
@@ -52,7 +52,7 @@ nessuno
 | [**\<configurazione >** Schema delle sezioni](~/docs/framework/configure-apps/file-schema/configuration-sections-schema.md) | Tutti gli elementi nello schema delle impostazioni di sezione di configurazione. |
 | [Schema delle impostazioni di traccia e debug](~/docs/framework/configure-apps/file-schema/trace-debug/index.md) | Tutti gli elementi nello schema di impostazioni di traccia e debug. |
 | [Schema delle impostazioni di configurazione ASP.NET](https://msdn.microsoft.com/library/b5ysx397(v=vs.100).aspx) | Tutti gli elementi nello schema di configurazione ASP.NET, che include gli elementi per la configurazione di applicazioni e siti Web ASP.NET. Usato nel *Web. config* file. |
-| [**\<webServices >** Schema delle impostazioni](https://msdn.microsoft.com/f84d6d55-1add-4eb7-ae46-33df5833ea2e) | Tutti gli elementi nello schema delle impostazioni di servizi Web. |
+| [**\<webServices>** Settings Schema](https://msdn.microsoft.com/f84d6d55-1add-4eb7-ae46-33df5833ea2e) | Tutti gli elementi nello schema delle impostazioni di servizi Web. |
 | [Schema delle impostazioni Web](~/docs/framework/configure-apps/file-schema/web/index.md) | Tutti gli elementi nello schema delle impostazioni Web, che include gli elementi per la configurazione del funzionamento di ASP.NET con un'applicazione host, come IIS. Usato nel *ASPNET* file. |
 
 ## <a name="remarks"></a>Note
@@ -61,4 +61,4 @@ Ogni file di configurazione deve contenere un unico  **\<configuration >** eleme
 
 ## <a name="see-also"></a>Vedere anche
 
-[Schema di file di configurazione per .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Schema di file di configurazione per .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)

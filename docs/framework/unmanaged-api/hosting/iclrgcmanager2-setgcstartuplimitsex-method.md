@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 65fbf0bf42f7312ad80b61bf452b62a4d0ff93c9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 276f83ff95d4f63f9a26807fe2601c68e3f6b063
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33436124"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54574911"
 ---
 # <a name="iclrgcmanager2setgcstartuplimitsex-method"></a>Metodo ICLRGCManager2::SetGCStartupLimitsEx
-Imposta le dimensioni di un segmento di garbage collection e la dimensione massima della generazione del sistema di garbage collection 0.  
+Imposta le dimensioni di un segmento di garbage collection e le dimensioni massime della generazione del sistema di garbage collection 0.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,10 +40,10 @@ HRESULT SetGCStartupLimitsEx (
  `SegmentSize`  
  [in] La dimensione specificata per un segmento di garbage collection.  
   
- La dimensione minima del segmento è 4 MB. Segmenti possono essere aumentate in incrementi di 1 MB o maggiori.  
+ Le dimensioni del segmento minimo sono 4 MB. Segmenti possono essere un aumento con incrementi di 1 MB o maggiori.  
   
  `MaxGen0Size`  
- [in] La dimensione massima specificata per la generazione 0.  
+ [in] Le dimensioni massime specificata per la generazione 0.  
   
  La dimensione minima per la generazione 0 è 64 KB.  
   
@@ -54,26 +54,26 @@ HRESULT SetGCStartupLimitsEx (
 |S_OK|`SetGCStartupLimitsEx` stato restituito correttamente.|  
 |HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) non è stato caricato in un processo oppure si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.|  
 |HOST_E_TIMEOUT|Timeout della chiamata.|  
-|HOST_E_NOT_OWNER|Il chiamante non dispone del blocco.|  
-|HOST_E_ABANDONED|Un evento è stato annullato mentre un thread bloccato o fiber era in attesa su di esso.|  
-|E_FAIL|Si è verificato un errore irreversibile sconosciuto. Se un metodo restituisce E_FAIL, Common Language Runtime non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiranno HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_NOT_OWNER|Il chiamante non possiede il blocco.|  
+|HOST_E_ABANDONED|Un evento è stato annullato durante un thread bloccato o fiber è rimasta in attesa su di esso.|  
+|E_FAIL|Si è verificato un errore irreversibile sconosciuto. Dopo che un metodo viene restituito E_FAIL, CLR non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiranno HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Note  
- I valori che `SetGCStartupLimitsEx` set possono essere specificati solo prima che l'host viene avviata. Le chiamate successive a `SetGCStartupLimitsEx` vengono ignorati.  
+ I valori che `SetGCStartupLimitsEx` set possono essere specificati solo prima dell'avvio dell'host. Le chiamate successive a `SetGCStartupLimitsEx` vengono ignorati.  
   
- Per impostare uno dei parametri senza influire su altro, specificare 0 (zero) per il parametro che non si desidera modificare.  
+ Per impostare dei parametri senza influire su altro, specificare 0 (zero) per il parametro che non si vuole modificare.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Mscoree. H  
+ **Intestazione:** MSCorEE.h  
   
- **Libreria:** inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Gestione automatica della memoria](../../../../docs/standard/automatic-memory-management.md)  
- [Garbage Collection](../../../../docs/standard/garbage-collection/index.md)  
- [Interfaccia ICLRControl](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)  
- [Interfaccia ICLRGCManager2](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager2-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Gestione automatica della memoria](../../../../docs/standard/automatic-memory-management.md)
+- [Garbage Collection](../../../../docs/standard/garbage-collection/index.md)
+- [Interfaccia ICLRControl](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
+- [Interfaccia ICLRGCManager2](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager2-interface.md)

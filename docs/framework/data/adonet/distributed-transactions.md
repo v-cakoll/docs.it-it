@@ -2,12 +2,12 @@
 title: Transazioni distribuite
 ms.date: 03/30/2017
 ms.assetid: 718b257c-bcb2-408e-b004-a7b0adb1c176
-ms.openlocfilehash: 1f45f572b4336e52f7eee224ec80d9b7f423f991
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 002ed52b0f760376e813b15d0344a349da669f4b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43486327"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660333"
 ---
 # <a name="distributed-transactions"></a>Transazioni distribuite
 Una transazione consiste in una set di attività correlate che costituiscono una singola unità, la quale può riuscire (ovvero viene eseguito il commit della transazione) o non riuscire (il processo viene interrotto). Oggetto *transazione distribuita* è una transazione che influenza varie risorse. Per eseguire il commit di una transazione distribuita è necessario che tutti i partecipanti garantiscano che le eventuali modifiche apportate ai dati siano permanenti. Le modifiche devono essere definitive anche in caso di arresti anomali del sistema o altri eventi imprevisti. Se anche un unico partecipante non è in grado di garantire tale requisito, l'intera transazione verrà annullata e verrà effettuato il rollback di tutte le modifiche apportate ai dati nell'ambito della transazione.  
@@ -47,7 +47,7 @@ Una transazione consiste in una set di attività correlate che costituiscono una
 ## <a name="configuring-distributed-transactions"></a>Configurazione di transazioni distribuite  
  Può essere necessario abilitare MS DTC sulla rete per usare le transazioni distribuite. Se Windows Firewall è abilitato, è necessario consentire al servizio MS DTC di usare la rete o aprire la porta MS DTC.  
   
-## <a name="see-also"></a>Vedere anche  
- [Transazioni e concorrenza](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
- [Integrazione di System.Transactions con SQL Server](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vedere anche
+- [Transazioni e concorrenza](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
+- [Integrazione di System.Transactions con SQL Server](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)
+- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

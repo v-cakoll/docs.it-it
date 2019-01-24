@@ -1,5 +1,5 @@
 ---
-title: 'Procedura dettagliata: associazione ai dati in applicazioni ibride'
+title: 'Procedura dettagliata: Associazione ai dati in applicazioni ibride'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - data binding [WPF interoperability]
 ms.assetid: 18997e71-745a-4425-9c69-2cbce1d8669e
-ms.openlocfilehash: 7128b23790588a604989cb18918a7a7e8b598191
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: ba0d508881d6500d53e9e9781c3cce7185ed845d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584210"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54724343"
 ---
-# <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>Procedura dettagliata: associazione ai dati in applicazioni ibride
+# <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>Procedura dettagliata: Associazione ai dati in applicazioni ibride
 Associazione di un'origine dati a un controllo è essenziale per fornire agli utenti l'accesso ai dati sottostanti, se si usa [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Questa procedura dettagliata illustra come usare l'associazione dati in applicazioni ibride che includono entrambe [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] e [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] controlli.  
   
  Le attività illustrate nella procedura dettagliata sono le seguenti:  
@@ -122,7 +122,7 @@ Associazione di un'origine dati a un controllo è essenziale per fornire agli ut
   
 1.  Dal **Data** dal menu **Aggiungi nuova origine dati**.  
   
-2.  Nel **configurazione guidata origine dati**, creare una connessione al database Northwind usando un set di dati. Per altre informazioni, vedere [procedura: connettersi ai dati in un Database](https://msdn.microsoft.com/library/6c56e54e-8834-4297-85aa-cc1a443ba556).  
+2.  Nel **configurazione guidata origine dati**, creare una connessione al database Northwind usando un set di dati. Per altre informazioni, vedere [Procedura: Connettersi ai dati in un Database](https://msdn.microsoft.com/library/6c56e54e-8834-4297-85aa-cc1a443ba556).  
   
 3.  Quando viene richiesto per il **configurazione guidata origine dati**, salvare la stringa di connessione come `NorthwindConnectionString`.  
   
@@ -173,10 +173,10 @@ Associazione di un'origine dati a un controllo è essenziale per fornire agli ut
   
 10. Premere F5 per compilare ed eseguire l'applicazione.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Windows.Forms.Integration.ElementHost>  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- [Progettare XAML in Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)  
- [Data Binding nell'esempio di applicazioni ibride](https://go.microsoft.com/fwlink/?LinkID=159983)  
- [Procedura dettagliata: Hosting di controlli Windows Form compositi in WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)  
- [Procedura dettaglia: hosting di un controllo WPF composito in Windows Form](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Windows.Forms.Integration.ElementHost>
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost>
+- [Progettare XAML in Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
+- [Data Binding nell'esempio di applicazioni ibride](https://go.microsoft.com/fwlink/?LinkID=159983)
+- [Procedura dettagliata: Hosting di controlli Windows Form compositi in WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [Procedura dettagliata: Hosting di un controllo composito WPF in Windows Form](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

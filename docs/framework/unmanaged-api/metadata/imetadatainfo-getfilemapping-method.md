@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 562b6fcd015441ce5eb6b5f0ab7a4f361bb229c3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 84d53bd5bb9c0eca83b39fc9d1c83d93440e336b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449429"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645466"
 ---
 # <a name="imetadatainfogetfilemapping-method"></a>Metodo IMetaDataInfo::GetFileMapping
-Ottiene l'area di memoria del file mappato e il tipo di mapping.  
+Ottiene l'area della memoria del file mappato e il tipo di mapping.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,37 +42,37 @@ HRESULT GetFileMapping (
  [out] Un puntatore all'inizio del file mappato.  
   
  `pcbData`  
- [out] Le dimensioni dell'area mappato. Se `pdwMappingType` è `fmFlat`, si tratta della dimensione del file.  
+ [out] Le dimensioni dell'area mappata. Se `pdwMappingType` è `fmFlat`, questa è la dimensione del file.  
   
  `pdwMappingType`  
- [out] Oggetto [CorFileMapping](../../../../docs/framework/unmanaged-api/metadata/corfilemapping-enumeration.md) valore che indica il tipo di mapping. Restituisce sempre l'implementazione corrente di common language runtime (CLR) `fmFlat`. Altri valori sono riservati per utilizzi futuri. Tuttavia, è necessario verificare sempre il valore restituito, perché possono essere abilitate nelle versioni future o service release di altri valori.  
+ [out] Oggetto [CorFileMapping](../../../../docs/framework/unmanaged-api/metadata/corfilemapping-enumeration.md) valore che indica il tipo di mapping. Restituisce sempre l'implementazione corrente di common language runtime (CLR) `fmFlat`. Altri valori sono riservati per utilizzi futuri. Tuttavia, è necessario verificare sempre il valore restituito, poiché gli altri valori possono essere abilitati nelle versioni future o versioni del servizio.  
   
 ## <a name="return-value"></a>Valore restituito  
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|`S_OK`|Tutti gli output vengono compilati.|  
-|`E_INVALIDARG`|NULL passato come un valore dell'argomento.|  
-|`COR_E_NOTSUPPORTED`|L'implementazione di Common Language Runtime non può fornire informazioni sull'area di memoria. Questa situazione può verificarsi per i motivi seguenti:<br /><br /> -L'ambito dei metadati è stato aperto con il `ofWrite` o `ofCopyMemory` flag.<br />-L'ambito dei metadati è stato aperto senza il `ofReadOnly` flag.<br />-La [IMetaDataDispenser::](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md) metodo utilizzato per aprire solo la parte di metadati del file.<br />-Il file non è un file eseguibile portabile (PE). **Nota:** tali condizioni dipendono dall'implementazione CLR e venga potrebbero essere ridotte in versioni future di CLR.|  
+|`S_OK`|Tutti gli output sono pieni.|  
+|`E_INVALIDARG`|È stato passato NULL come valore dell'argomento.|  
+|`COR_E_NOTSUPPORTED`|L'implementazione CLR non può fornire informazioni sull'area della memoria. Questa situazione può verificarsi per i motivi seguenti:<br /><br /> -L'ambito dei metadati è stato aperto con il `ofWrite` o `ofCopyMemory` flag.<br />-L'ambito dei metadati è stato aperto senza il `ofReadOnly` flag.<br />-il [IMetaDataDispenser](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md) metodo utilizzato per aprire solo la parte dei metadati del file.<br />-Il file non è un file eseguibile portabile (PE). **Nota:**  Tali condizioni dipendono dall'implementazione CLR e sono probabilmente saranno ridotte nelle future versioni di CLR.|  
   
 ## <a name="remarks"></a>Note  
- La memoria che `ppvData` punta è valida solo fino a quando l'ambito dei metadati sottostante è aperto.  
+ La memoria che `ppvData` punti è valida solo finché è aperta nell'ambito dei metadati sottostanti.  
   
- Affinché il metodo funzioni, quando si esegue il mapping i metadati di un file su disco in memoria chiamando la [IMetaDataDispenser::](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) metodo, è necessario specificare il `ofReadOnly` flag e non è necessario specificare il `ofWrite` o `ofCopyMemory` flag.  
+ Affinché il metodo funzioni, quando si esegue il mapping ai metadati di un file su disco in memoria chiamando la [IMetaDataDispenser::](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) metodo, è necessario specificare il `ofReadOnly` flag e non deve specificare il `ofWrite` o `ofCopyMemory` flag.  
   
- La scelta del tipo di mapping di file per ogni ambito è specifica per una determinata implementazione di CLR. Non può essere impostata dall'utente. Restituisce sempre l'implementazione corrente di CLR `fmFlat` in `pdwMappingType`, ma si può cambiare nelle future versioni di CLR o nelle future versioni di servizio di una determinata versione. Controllare sempre il valore restituito `pdwMappingType`, poiché saranno necessario diversi tipi di layout e offset diversi.  
+ La scelta del tipo di mapping di file per ogni ambito è specifica per una determinata implementazione di CLR. Non può essere impostata dall'utente. Restituisce sempre l'implementazione corrente di CLR `fmFlat` in `pdwMappingType`, ma questo può cambiare nelle future versioni di CLR o future service release di una determinata versione. È consigliabile controllare sempre il valore restituito `pdwMappingType`, poiché tipi diversi disporranno di layout diversi e gli offset.  
   
- Non è possibile passare NULL per uno dei tre parametri. Il metodo restituisce `E_INVALIDARG`, e nessuno degli output viene riempito. Verrà ignorato il tipo di mapping o le dimensioni dell'area può comportare una chiusura anomala del programma.  
+ Non è possibile passare NULL per uno qualsiasi dei tre parametri. Il metodo restituisce `E_INVALIDARG`, e nessuno degli output viene riempito. Verrà ignorato il tipo di mapping o le dimensioni dell'area può comportare anomala del programma.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
- **Libreria:** usata come risorsa in Mscoree. dll  
+ **Libreria:** Usato come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia IMetaDataInfo](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-interface.md)  
- [Enumerazione CorFileMapping](../../../../docs/framework/unmanaged-api/metadata/corfilemapping-enumeration.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia IMetaDataInfo](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-interface.md)
+- [Enumerazione CorFileMapping](../../../../docs/framework/unmanaged-api/metadata/corfilemapping-enumeration.md)

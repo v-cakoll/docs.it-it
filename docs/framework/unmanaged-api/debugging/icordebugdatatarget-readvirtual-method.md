@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d9e619e4176633074242521133d42f191f140ca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8bc807906af67350f309a4fc9439899cea328be8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412191"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54575489"
 ---
 # <a name="icordebugdatatargetreadvirtual-method"></a>Metodo ICorDebugDataTarget::ReadVirtual
 Ottiene un blocco di memoria contigua a partire dall'indirizzo specificato e lo restituisce nel buffer fornito.  
@@ -40,7 +40,7 @@ HRESULT ReadVirtual(
   
 #### <a name="parameters"></a>Parametri  
  `address`  
- [in] Indirizzo iniziale di memoria richiesta.  
+ [in] L'indirizzo iniziale di memoria richiesta.  
   
  `pbuffer`  
  [out] Buffer in cui verrà archiviata la memoria.  
@@ -49,21 +49,21 @@ HRESULT ReadVirtual(
  [in] Il numero di byte da ottenere dall'indirizzo di destinazione.  
   
  `pBytesRead`  
- [out] Il numero di byte effettivamente letti dall'indirizzo di destinazione. Può trattarsi di un valore minore di `bytesRequested`.  
+ [out] Il numero di byte effettivamente letti dall'indirizzo di destinazione. Questo può essere minore `bytesRequested`.  
   
 ## <a name="remarks"></a>Note  
- Se è possibile leggere il primo byte (in corrispondenza dell'indirizzo di inizio specificato), la chiamata deve restituire l'esito positivo (per supportare la lettura efficiente di strutture di dati con autodescrittivi lunghezza, come le stringhe con terminazione null).  
+ Se è possibile leggere il primo byte (in corrispondenza dell'indirizzo iniziale specificato), la chiamata deve restituire esito positivo (per supportare la lettura efficiente di strutture di dati con lunghezza autodescrittiva, come le stringhe con terminazione null).  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ICorDebugDataTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)  
- [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Debug](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ICorDebugDataTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)
+- [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debug](../../../../docs/framework/unmanaged-api/debugging/index.md)

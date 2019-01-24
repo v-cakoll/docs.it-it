@@ -1,12 +1,12 @@
 ---
 title: Stringhe interpolate (Visual Basic)
 ms.date: 10/31/2017
-ms.openlocfilehash: 68194d4251f7057a070535531e0d4c1ad9154530
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: eadd1d86c3294d7a19f2ef6d2ed767ed08430750
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200888"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54647905"
 ---
 # <a name="interpolated-strings-visual-basic-reference"></a>Stringhe interpolate (riferimenti di Visual Basic)
 
@@ -76,8 +76,8 @@ Da una stringa interpolata vengono effettuate tre conversioni di tipo implicito:
 
    [!code-vb[interpolated-strings3](../../../../../samples/snippets/visualbasic/programming-guide/language-features/strings/interpolated-strings3.vb)]  
 
-## <a name="see-also"></a>Vedere anche  
- <xref:System.IFormattable?displayProperty=nameWithType>  
- <xref:System.FormattableString?displayProperty=nameWithType>  
- [Riferimenti per il linguaggio Visual Basic](index.md)  
- 
+## <a name="see-also"></a>Vedere anche
+- <xref:System.IFormattable?displayProperty=nameWithType>
+- <xref:System.FormattableString?displayProperty=nameWithType>
+- [Riferimenti per il linguaggio Visual Basic](index.md)
+

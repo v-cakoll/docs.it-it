@@ -2,12 +2,12 @@
 title: '&lt;basicHttpContextBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 39b16b82-4ec6-4eff-8031-67e026870961
-ms.openlocfilehash: ed115a736b9dc98164537269cb4e49d66e46ad6c
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 1b21d7e9dcca886ce0f34c12407d2e3a0856113b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147200"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720470"
 ---
 # <a name="ltbasichttpcontextbindinggt"></a>&lt;basicHttpContextBinding&gt;
 Specifica un'associazione che fornisce il contesto di scambio dell'associazione <xref:System.ServiceModel.BasicHttpBinding> mediante l'abilitazione dei cookie HTTP come meccanismo di scambio.  
@@ -96,13 +96,13 @@ Specifica un'associazione che fornisce il contesto di scambio dell'associazione 
 ## <a name="remarks"></a>Note  
  Questo elemento di associazione fornisce un livello di protezione e un meccanismo di scambio come parte del contesto per `BasicHttpBinding`.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.BasicHttpBinding>  
- <xref:System.ServiceModel.BasicHttpContextBinding>  
- <xref:System.ServiceModel.Configuration.BasicHttpContextBindingElement>  
- <xref:System.ServiceModel.Channels.ContextBindingElement>  
- [Associazioni](../../../../../docs/framework/wcf/bindings.md)  
- [Configurazione di associazioni fornite dal sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Uso di associazioni per configurare servizi e client](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<binding>](../../../../../docs/framework/misc/binding.md)  
- [\<basicHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.ServiceModel.BasicHttpBinding>
+- <xref:System.ServiceModel.BasicHttpContextBinding>
+- <xref:System.ServiceModel.Configuration.BasicHttpContextBindingElement>
+- <xref:System.ServiceModel.Channels.ContextBindingElement>
+- [Associazioni](../../../../../docs/framework/wcf/bindings.md)
+- [Configurazione di associazioni fornite dal sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Uso di associazioni per configurare servizi e client](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [\<basicHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)

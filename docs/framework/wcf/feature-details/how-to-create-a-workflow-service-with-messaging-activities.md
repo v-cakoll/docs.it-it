@@ -1,20 +1,20 @@
 ---
-title: 'Procedura: creare un servizio flusso di lavoro con attività di messaggistica'
+title: 'Procedura: Creare un servizio del flusso di lavoro con attività di messaggistica'
 ms.date: 03/30/2017
 ms.assetid: 53d094e2-6901-4aa1-88b8-024b27ccf78b
-ms.openlocfilehash: 12fc8706eb81df281571bb6ab54f7c2a2805f351
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: a90f525e23fcad0e46ebc378d22b8282e613643a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48580498"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54584977"
 ---
-# <a name="how-to-create-a-workflow-service-with-messaging-activities"></a>Procedura: creare un servizio flusso di lavoro con attività di messaggistica
-In questo argomento viene illustrato come creare un semplice servizio flusso di lavoro usando le attività di messaggistica. L'argomento è incentrato sui meccanismi di creazione di un servizio flusso di lavoro in cui il servizio è costituito esclusivamente da attività di messaggistica. In servizi reali i flussi di lavoro contengono molte altre attività. Il servizio implementa un'operazione denominata Echo che acquisisce una stringa e la restituisce al chiamante. Questo è il primo di una serie di due argomenti. Argomento successivo [procedura: accedere a un servizio da un flusso di lavoro applicazione](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md) viene illustrato come creare un'applicazione flusso di lavoro che possa chiamare il servizio creato in questo argomento.  
+# <a name="how-to-create-a-workflow-service-with-messaging-activities"></a>Procedura: Creare un servizio del flusso di lavoro con attività di messaggistica
+In questo argomento viene illustrato come creare un semplice servizio flusso di lavoro usando le attività di messaggistica. L'argomento è incentrato sui meccanismi di creazione di un servizio flusso di lavoro in cui il servizio è costituito esclusivamente da attività di messaggistica. In servizi reali i flussi di lavoro contengono molte altre attività. Il servizio implementa un'operazione denominata Echo che acquisisce una stringa e la restituisce al chiamante. Questo è il primo di una serie di due argomenti. Argomento successivo [How To: Accedere a un servizio da un flusso di lavoro applicazione](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md) viene illustrato come creare un'applicazione flusso di lavoro che possa chiamare il servizio creato in questo argomento.  
   
 ### <a name="to-create-a-workflow-service-project"></a>Per creare un progetto di servizio flusso di lavoro  
   
-1.  Avviare Visual Studio 2012.  
+1.  Start Visual Studio 2012.  
   
 2.  Fare clic sui **File** dal menu **New**e quindi **progetto** per visualizzare il **finestra Nuovo progetto**. Selezionare **flusso di lavoro** dall'elenco dei modelli installati e **applicazione di servizio del flusso di lavoro WCF** dall'elenco dei tipi di progetto. Denominare il progetto `MyWFService` e usare il percorso predefinito, come illustrato nella figura seguente.  
   
@@ -87,9 +87,9 @@ In questo argomento viene illustrato come creare un semplice servizio flusso di 
   
      ![Pagina della Guida WCF](../../../../docs/framework/wcf/feature-details/media/wcfhelppate.JPG "WCFHelpPate")  
   
-4.  Continuare con il [procedura: accedere a un servizio da un flusso di lavoro applicazione](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md) argomento per creare un client flusso di lavoro che chiami questo servizio.  
+4.  Continuare con la [come: Accedere a un servizio da un flusso di lavoro applicazione](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md) argomento per creare un client flusso di lavoro che chiami questo servizio.  
   
-## <a name="see-also"></a>Vedere anche  
- [Servizi flusso di lavoro](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
- [Panoramica dell'hosting dei servizi flusso di lavoro](../../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)  
- [Attività di messaggistica](../../../../docs/framework/wcf/feature-details/messaging-activities.md)
+## <a name="see-also"></a>Vedere anche
+- [Servizi flusso di lavoro](../../../../docs/framework/wcf/feature-details/workflow-services.md)
+- [Panoramica dell'hosting dei servizi flusso di lavoro](../../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)
+- [Attività di messaggistica](../../../../docs/framework/wcf/feature-details/messaging-activities.md)

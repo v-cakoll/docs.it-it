@@ -2,23 +2,23 @@
 title: "&lt;authentication&gt; dell'elemento &lt;serviceCertificate&gt;"
 ms.date: 03/30/2017
 ms.assetid: 733b67b4-08a1-4d25-9741-10046f9357ef
-ms.openlocfilehash: 556310846f8ac307ff9c92c06784eae16937c92c
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 967ab391c9a6dfe7da9b6ef0542b052872b21f52
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147954"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661126"
 ---
 # <a name="ltauthenticationgt-of-ltservicecertificategt-element"></a>&lt;authentication&gt; dell'elemento &lt;serviceCertificate&gt;
 Specifica le impostazioni usate dal proxy del client per autenticare i certificati dei servizi ottenuti mediante la negoziazione SSL/TLS.  
   
  \<system.ServiceModel>  
-\<i comportamenti >  
+\<behaviors>  
 sezione endpointBehaviors  
-\<comportamento >  
+\<behavior>  
 \<clientCredentials>  
-\<serviceCertificate >  
-\<autenticazione >  
+\<serviceCertificate>  
+\<authentication>  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -72,7 +72,7 @@ sezione endpointBehaviors
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)|Specifica un certificato da usare per l'autenticazione di un servizio presso il client.|  
+|[\<serviceCertificate>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)|Specifica un certificato da usare per l'autenticazione di un servizio presso il client.|  
   
 ## <a name="remarks"></a>Note  
  L'attributo `certificateValidationMode` di questo elemento di configurazione specifica il livello di attendibilità usato per autenticare i certificati. Per impostazione predefinita, il livello è impostato su `ChainTrust`. Tale impostazione prevede che ogni certificato appartenga a una gerarchia di certificati che termina in un'autorità di certificazione attendibile situata all'inizio della catena. Si tratta della modalità più sicura. Il livello può inoltre essere impostato su `PeerOrChainTrust`, a indicare che sia i certificati autocertificati (trust peer) sia i certificati appartenenti a una catena di trust sono ritenuti attendibili. Poiché i certificati autocertificati non devono essere acquistati da un'autorità attendibile, questo livello viene usato in fase di sviluppo e di debug dei client e dei servizi. Quando si distribuisce un client è invece opportuno usare il livello `ChainTrust`. È inoltre possibile impostare il valore su `Custom` o `None`. Per usare il valore `Custom` è necessario impostare anche l'attributo `customCertificateValidator` sull'assembly e sul tipo usati per convalidare il certificato. Per creare una convalida personalizzata, è necessario ereditare una classe dalla classe X509CertificateValidator astratta. Per altre informazioni, vedere [Procedura: Creare un servizio che usa un Validator del certificato personalizzato](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md).  
@@ -100,14 +100,14 @@ sezione endpointBehaviors
 </serviceCertificate>
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.Configuration.X509RecipientCertificateClientElement>  
- <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>  
- <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.Authentication%2A>  
- <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication>  
- [Comportamenti di sicurezza](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
- [Uso di certificati](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [Procedura: Creare un servizio che usa un Validator del certificato personalizzato](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)  
- [\<authentication>](../../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)  
- [Protezione di client](../../../../../docs/framework/wcf/securing-clients.md)  
- [Protezione di servizi e client](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.ServiceModel.Configuration.X509RecipientCertificateClientElement>
+- <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>
+- <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.Authentication%2A>
+- <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication>
+- [Comportamenti di sicurezza](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
+- [Uso di certificati](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Procedura: Creare un servizio che usa un Validator del certificato personalizzato](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)
+- [\<authentication>](../../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)
+- [Protezione di client](../../../../../docs/framework/wcf/securing-clients.md)
+- [Protezione di servizi e client](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - system.Net element
 - <system.Net> element
 ms.assetid: 52de4d6c-b24d-44aa-ba7d-6b5061f1357e
-ms.openlocfilehash: 82e022e28d3559791be3236fb80081807426a456
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 2f387ecccac2c1c97d03e2c22a31ad2dd0577c77
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192538"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54567776"
 ---
 # <a name="ltsystemnetgt-element-network-settings"></a>&lt;system.Net&gt; (impostazioni di rete)
 Contiene le impostazioni di rete che specificano la modalità di connessione alla rete di .NET Framework.  
@@ -43,14 +43,14 @@ Contiene le impostazioni di rete che specificano la modalità di connessione all
 |[defaultProxy](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|Configura il server proxy Hypertext Transfer Protocol (HTTP).|  
 |[mailSettings](../../../../../docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md)|Consente di configurare le opzioni di invio della posta elettronica SMTP Simple Mail Transport Protocol ().|  
 |[requestCaching](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|Controlla il meccanismo di memorizzazione nella cache per le richieste di rete.|  
-|[Impostazioni](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Configura le opzioni di rete di base per le classi di <xref:System.Net> e relativi spazi dei nomi figlio.|  
+|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Configura le opzioni di rete di base per le classi di <xref:System.Net> e relativi spazi dei nomi figlio.|  
 |[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|Specifica i moduli da utilizzare per richiedere informazioni da host Internet.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
 |**Elemento**|**Descrizione**|  
 |-----------------|---------------------|  
-|[Configurazione](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Contiene le impostazioni per tutti gli spazi dei nomi.|  
+|[configuration](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Contiene le impostazioni per tutti gli spazi dei nomi.|  
   
 ## <a name="remarks"></a>Note  
  Il [ \<system.net >](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) elemento contiene impostazioni per le classi di <xref:System.Net> e relativi spazi dei nomi figlio. Le impostazioni di configurano i moduli di autenticazione, la gestione della connessione, le impostazioni di posta elettronica, il server proxy e i moduli di richiesta di Internet per la ricezione di informazioni da host Internet.  
@@ -92,5 +92,5 @@ Contiene le impostazioni di rete che specificano la modalità di connessione all
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedere anche
 - [Schema delle impostazioni di rete](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

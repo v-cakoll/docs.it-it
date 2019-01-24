@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - BC42326
 ms.assetid: 63214dc6-0112-4245-8ebf-7c9e8f5a5782
-ms.openlocfilehash: 69228bbb5f659a8e500e85dea1ef87cb43b0356e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2f8b10082bb39c76ba1393daf8327df2ed631caf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590167"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54568101"
 ---
 # <a name="lambda-expression-will-not-be-removed-from-this-event-handler"></a>L'espressione lambda non verrà rimossa da questo gestore eventi
-Espressione lambda non vengono rimosse da questo gestore eventi. Assegnare l'espressione lambda a una variabile e utilizzare tale variabile per aggiungere e rimuovere l'evento.  
+Espressione lambda non vengono rimosse da questo gestore eventi. Assegnare l'espressione lambda a una variabile e usare la variabile per aggiungere e rimuovere l'evento.  
   
- Quando le espressioni lambda vengono utilizzate con i gestori eventi, si potrebbe non visualizzare il comportamento desiderato. Il compilatore genera un nuovo metodo per ogni definizione di espressione lambda anche se sono identici. Pertanto, il codice seguente consente di visualizzare `False`.  
+ Quando le espressioni lambda vengono usate con i gestori eventi, si potrebbe non visualizzare il comportamento desiderato. Il compilatore genera un nuovo metodo per ogni definizione di espressione lambda, anche se sono identici. Pertanto, il codice seguente consente di visualizzare `False`.  
   
 ```vb  
 Module Module1  
@@ -33,7 +33,7 @@ Module Module1
 End Module  
 ```  
   
- Quando le espressioni lambda vengono utilizzate con i gestori eventi, questo può causare risultati imprevisti. Nell'esempio seguente, l'espressione lambda aggiunta da `AddHandler` non viene rimosso dal `RemoveHandler` istruzione.  
+ Quando le espressioni lambda vengono usate con i gestori eventi, si potrebbero verificare risultati imprevisti. Nell'esempio seguente, l'espressione lambda aggiunto dal `AddHandler` non viene rimosso dal `RemoveHandler` istruzione.  
   
 ```vb  
 Module Module1  
@@ -54,13 +54,13 @@ Module Module1
 End Module  
 ```  
   
- Per impostazione predefinita, si tratta di un messaggio di avviso. Per ulteriori informazioni su come nascondere gli avvisi o considerarli come errori, vedere [configurazione degli avvisi in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
+ Per impostazione predefinita, si tratta di un messaggio di avviso. Per altre informazioni su come nascondere gli avvisi o considerarli come errori, vedere [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
  **ID errore:** BC42326  
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
--   Per evitare l'avviso e rimuovere l'espressione lambda, assegnare l'espressione lambda a una variabile e utilizzare tale variabile in entrambi i `AddHandler` e `RemoveHandler` istruzioni, come illustrato nell'esempio seguente.  
+-   Per evitare l'avviso e rimuovere l'espressione lambda, assegnare l'espressione lambda a una variabile e usare la variabile in entrambe le `AddHandler` e `RemoveHandler` (istruzioni), come illustrato nell'esempio seguente.  
   
 ```vb  
 Module Module1  
@@ -84,7 +84,7 @@ Module Module1
 End Module  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Espressioni lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)  
- [Conversione di tipo relaxed del delegato](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)  
- [Eventi](../../../visual-basic/programming-guide/language-features/events/index.md)
+## <a name="see-also"></a>Vedere anche
+- [Espressioni lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
+- [Conversione di tipo relaxed del delegato](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
+- [Eventi](../../../visual-basic/programming-guide/language-features/events/index.md)

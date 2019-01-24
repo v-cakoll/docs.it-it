@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 4380cad7-e509-448f-b9a5-6de042605fd4
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 4fe6a0c39388e72807043e9e1ccd2deb59afb656
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: d4c3801e81efc7af1afbf15d882a9d13ad552524
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48845967"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717558"
 ---
 # <a name="ui-automation-and-screen-scaling"></a>Automazione interfaccia utente e ridimensionamento dello schermo
 > [!NOTE]
->  Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate sulle [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere [Windows Automation API: automazione dell'interfaccia utente](https://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate sulle [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere [Windows Automation API: Automazione interfaccia utente](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] consente agli utenti di modificare l'impostazione [!INCLUDE[TLA#tla_dpi](../../../includes/tlasharptla-dpi-md.md)] in modo da visualizzare la maggior parte degli elementi dell' [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] sullo schermo con dimensioni maggiori. Benché questa funzionalità fosse già disponibile da tempo in [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)], nelle versioni precedenti era necessario che il ridimensionamento fosse implementato dalle applicazioni. In [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)], con Gestione finestre desktop viene applicato il ridimensionamento predefinito per tutte le applicazioni che non gestiscono direttamente tale funzionalità. Per le applicazioni client di automazione interfaccia utente è necessario tenere conto di questa funzionalità.  
   
@@ -38,9 +38,9 @@ ms.locfileid: "48845967"
   
  Il ridimensionamento dello schermo crea nuove sfide per le applicazioni che dipendono dalle coordinate dello schermo. Lo schermo contiene ora due sistemi di coordinate: fisico e logico. Le coordinate fisiche di un punto sono l'offset effettivo in pixel dalla parte superiore sinistra dell'origine. Le coordinate logiche sono gli offset così come si presenterebbero se i pixel fossero ridimensionati.  
   
- Si supponga di progettare una finestra di dialogo con un pulsante in corrispondenza delle coordinate (100, 48). Quando la finestra di dialogo viene visualizzata con l'impostazione predefinita di 96 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)], il pulsante si trova in corrispondenza delle coordinate fisiche (100, 48). Con l'impostazione di 120 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)], il pulsante si trova in corrispondenza delle coordinate fisiche (125, 60). Le coordinate logiche, tuttavia, rimangono le stesse indipendentemente dall'impostazione dei [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] : (100, 48).  
+ Si supponga di progettare una finestra di dialogo con un pulsante in corrispondenza delle coordinate (100, 48). Quando la finestra di dialogo viene visualizzata con l'impostazione predefinita di 96 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)], il pulsante si trova in corrispondenza delle coordinate fisiche (100, 48). Con l'impostazione di 120 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)], il pulsante si trova in corrispondenza delle coordinate fisiche (125, 60). Ma le coordinate logiche sono le stesse indipendentemente [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] impostazione: (100, 48).  
   
- Le coordinate logiche sono importanti in quanto garantiscono il comportamento coerente del sistema operativo e delle applicazioni indipendentemente dall'impostazione dei [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] . Ad esempio, <xref:System.Windows.Forms.Cursor.Position%2A?displayProperty=nameWithType> restituisce in genere le coordinate logiche. Se si sposta il cursore su un elemento in una finestra di dialogo, le stesse coordinate vengono restituite indipendentemente dall'impostazione dei [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] . Se si disegna un controllo in corrispondenza delle coordinate (100, 100), il controllo viene disegnato su queste coordinate logiche e occupa la stessa posizione relativa con qualsiasi impostazione dei [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] .  
+ Le coordinate logiche sono importanti in quanto garantiscono il comportamento coerente del sistema operativo e delle applicazioni indipendentemente dall'impostazione dei [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] . Ad esempio, la proprietà <xref:System.Windows.Forms.Cursor.Position%2A?displayProperty=nameWithType> restituisce in genere le coordinate logiche. Se si sposta il cursore su un elemento in una finestra di dialogo, le stesse coordinate vengono restituite indipendentemente dall'impostazione dei [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] . Se si disegna un controllo in corrispondenza delle coordinate (100, 100), il controllo viene disegnato su queste coordinate logiche e occupa la stessa posizione relativa con qualsiasi impostazione dei [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] .  
   
 <a name="Scaling_in_UI_Automation_Clients"></a>   
 ## <a name="scaling-in-ui-automation-clients"></a>Ridimensionamento nei client di automazione interfaccia utente  
@@ -65,7 +65,7 @@ ms.locfileid: "48845967"
      [!code-csharp[Highlighter#101](../../../samples/snippets/csharp/VS_Snippets_Wpf/Highlighter/CSharp/NativeMethods.cs#101)]
      [!code-vb[Highlighter#101](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Highlighter/VisualBasic/NativeMethods.vb#101)]  
   
-     Grazie a questa funzione, l'intero processo userà valori [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)], pertanto tutte le finestre appartenenti al processo non verranno ridimensionate. Nel [Highlighter Sample](https://msdn.microsoft.com/library/19ba4577-753e-4efd-92cc-c02ee67c1b69), ad esempio, le quattro finestre che costituiscono il rettangolo di evidenziazione si trovano in corrispondenza delle coordinate fisiche ottenute da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], non delle coordinate logiche. Se nell'esempio non venissero usati valori [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)], l'evidenziazione verrebbe disegnata in corrispondenza delle coordinate logiche sul desktop, con la conseguenza di un posizionamento errato in un ambiente non a 96 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] .  
+     Grazie a questa funzione, l'intero processo userà valori [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)], pertanto tutte le finestre appartenenti al processo non verranno ridimensionate. In [Highlighter Sample](https://msdn.microsoft.com/library/19ba4577-753e-4efd-92cc-c02ee67c1b69), le quattro finestre che costituiscono il rettangolo di evidenziazione si trovano in corrispondenza delle coordinate fisiche ottenute da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], non delle coordinate logiche. Se nell'esempio non venissero usati valori [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)], l'evidenziazione verrebbe disegnata in corrispondenza delle coordinate logiche sul desktop, con la conseguenza di un posizionamento errato in un ambiente non a 96 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] .  
   
 2.  Per ottenere coordinate del cursore, chiamare la funzione [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] `GetPhysicalCursorPos`. Nell'esempio riportato di seguito viene illustrato come dichiarare e usare questa funzione.  
   
@@ -73,9 +73,9 @@ ms.locfileid: "48845967"
      [!code-vb[UIAClient_snip#185](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#185)]  
   
 > [!CAUTION]
->  Non usare <xref:System.Windows.Forms.Cursor.Position%2A?displayProperty=nameWithType>. Il comportamento di questa proprietà al di fuori delle finestre client in un ambiente non ridimensionato non è definito.  
+>  Non usare la proprietà <xref:System.Windows.Forms.Cursor.Position%2A?displayProperty=nameWithType>. Il comportamento di questa proprietà al di fuori delle finestre client in un ambiente non ridimensionato non è definito.  
   
  Se nell'applicazione viene eseguita comunicazione tra processi diretta con applicazioni che non usano valori [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)], può essere necessario convertire le coordinate logiche e fisiche usando le funzioni [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] `PhysicalToLogicalPoint` e `LogicalToPhysicalPoint`.  
   
-## <a name="see-also"></a>Vedere anche  
- [Highlighter Sample](https://msdn.microsoft.com/library/19ba4577-753e-4efd-92cc-c02ee67c1b69)
+## <a name="see-also"></a>Vedere anche
+- [Highlighter Sample](https://msdn.microsoft.com/library/19ba4577-753e-4efd-92cc-c02ee67c1b69)

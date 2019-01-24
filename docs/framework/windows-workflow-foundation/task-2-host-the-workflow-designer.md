@@ -1,30 +1,30 @@
 ---
-title: "Attività 2: ospitare l'utilità di progettazione del flusso di lavoro"
+title: 'Attività 2: Host di progettazione del flusso di lavoro'
 ms.date: 03/30/2017
 ms.assetid: 0a29b138-270d-4846-b78e-2b875e34e501
-ms.openlocfilehash: 8ac6b3590d146909c1cb9fd8cf9cae2352b0155b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e8895e4b2c90f189c88ec3a803615e736dada455
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519064"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572773"
 ---
-# <a name="task-2-host-the-workflow-designer"></a>Attività 2: ospitare l'utilità di progettazione del flusso di lavoro
+# <a name="task-2-host-the-workflow-designer"></a>Attività 2: Host di progettazione del flusso di lavoro
 In questo argomento viene descritta la procedura per l'hosting di un'istanza di [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] in un'applicazione Windows Presentation Foundation (WPF).  
   
- La procedura consente di configurare il **griglia** controllo che contiene la finestra di progettazione a livello di codice crea un'istanza del <xref:System.Activities.Presentation.WorkflowDesigner> che contiene un valore predefinito <xref:System.Activities.Statements.Sequence> attività registra i metadati della finestra di progettazione per fornire supporto della finestra di progettazione per le attività predefinite tutte e che ospita il [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] nel [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] dell'applicazione.  
+ La procedura consente di configurare il **griglia** controllo che contiene la finestra di progettazione, a livello di codice crea un'istanza del <xref:System.Activities.Presentation.WorkflowDesigner> che contiene un valore predefinito <xref:System.Activities.Statements.Sequence> attività, registra i metadati della finestra di progettazione per fornire supporto di progettazione per attività tutte predefinite e gli host il [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] nella [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] dell'applicazione.  
   
 ### <a name="to-host-the-workflow-designer"></a>Per ospitare la finestra di progettazione del flusso di lavoro  
   
-1.  Aprire il HostingApplication progetto creato in [attività 1: creare una nuova applicazione Windows Presentation Foundation](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md).  
+1.  Aprire il progetto HostingApplication creato in [attività 1: Creare una nuova applicazione Windows Presentation Foundation](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md).  
   
-2.  Regolare le dimensioni della finestra per semplificare l'uso di [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]. A tale scopo, selezionare **MainWindow** nella finestra di progettazione, premere F4 per visualizzare il **proprietà** finestra e, nel **Layout** sezione, impostare il **larghezza** su un valore pari a 600 e **altezza** su un valore di 350.  
+2.  Regolare le dimensioni della finestra per semplificare l'uso di [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]. A questo scopo, selezionare **MainWindow** nella finestra di progettazione, premere F4 per visualizzare i **proprietà** finestra e, nella **Layout** sezione non esiste, impostare il **larghezza** su un valore pari a 600 e il **altezza** su un valore di 350.  
   
 3.  Impostare il nome della griglia selezionando il **griglia** pannello nella finestra di progettazione (fare clic sulla casella all'interno del **MainWindow**) e impostando il **nome** proprietà nella parte superiore del  **Proprietà** finestra su "grid1".  
   
-4.  Nel **proprietà** finestra, fare clic sui puntini di sospensione (**...** ) accanto al `ColumnDefinitions` proprietà per aprire la **Editor della raccolta** la finestra di dialogo.  
+4.  Nel **delle proprietà** finestra, fare clic sui puntini di sospensione (**...** ) accanto al `ColumnDefinitions` per aprire il **Editor della raccolta** nella finestra di dialogo.  
   
-5.  Nel **Editor della raccolta** la finestra di dialogo, fare clic su di **Aggiungi** tre volte per inserire tre colonne nel layout. La prima colonna conterrà il **della casella degli strumenti**, mentre la seconda ospiterà il [!INCLUDE[wfd2](../../../includes/wfd2-md.md)], e la terza colonna verrà utilizzata per il controllo proprietà.  
+5.  Nel **Editor della raccolta** della finestra di dialogo fare clic sui **Add** tre volte per inserire tre colonne nel layout. La prima colonna conterrà il **della casella degli strumenti**, mentre la seconda ospiterà il [!INCLUDE[wfd2](../../../includes/wfd2-md.md)], e la terza colonna verrà utilizzata per il controllo proprietà.  
   
 6.  Impostare il `Width` proprietà della colonna centrale sul valore "4 *".  
   
@@ -40,7 +40,7 @@ In questo argomento viene descritta la procedura per l'hosting di un'istanza di 
     </Grid>  
     ```  
   
-8.  In **Esplora**, fare doppio clic su MainWindow. XAML e selezionare **Visualizza codice**. Modificare il codice attenendosi ai passaggi seguenti:  
+8.  Nelle **Esplora soluzioni**, fare doppio clic su MainWindow. XAML e selezionare **Visualizza codice**. Modificare il codice attenendosi ai passaggi seguenti:  
   
     1.  Aggiungere gli spazi dei nomi seguenti:  
   
@@ -97,7 +97,7 @@ In questo argomento viene descritta la procedura per l'hosting di un'istanza di 
         }  
         ```  
   
-         Per ulteriori informazioni sulla registrazione di ActivityDesigner, vedere [procedura: creare un ActivityDesigner personalizzato](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-activity-designer.md).  
+         Per altre informazioni sulla registrazione di ActivityDesigner, vedere [come: Creare un ActivityDesigner personalizzato](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-activity-designer.md).  
   
     5.  Nel costruttore della classe `MainWindow`, aggiungere chiamate ai metodi dichiarati precedentemente per registrare i metadati per il supporto della finestra di progettazione e per creare l'oggetto <xref:System.Activities.Presentation.WorkflowDesigner>.  
   
@@ -119,9 +119,9 @@ In questo argomento viene descritta la procedura per l'hosting di un'istanza di 
   
 9. Premere F5 per compilare ed eseguire la soluzione.  
   
-10. Vedere [attività 3: creare la casella degli strumenti e PropertyGrid riquadri](../../../docs/framework/windows-workflow-foundation/task-3-create-the-toolbox-and-propertygrid-panes.md) per informazioni su come aggiungere **della casella degli strumenti** e **PropertyGrid** supportano alla finestra di progettazione del flusso di lavoro ospitata nuovamente.  
+10. Vedere [attività 3: Creare la casella degli strumenti e riquadri PropertyGrid](../../../docs/framework/windows-workflow-foundation/task-3-create-the-toolbox-and-propertygrid-panes.md) per informazioni su come aggiungere **casella degli strumenti** e **PropertyGrid** supportano alla finestra di progettazione del flusso di lavoro ospitata nuovamente.  
   
-## <a name="see-also"></a>Vedere anche  
- [Riallocazione di Progettazione flussi di lavoro](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)  
- [Attività 1: Creare una nuova applicazione Windows Presentation Foundation](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md)  
- [Attività 3: Creare i riquadri Casella degli strumenti e PropertyGrid](../../../docs/framework/windows-workflow-foundation/task-3-create-the-toolbox-and-propertygrid-panes.md)
+## <a name="see-also"></a>Vedere anche
+- [Riallocazione di Progettazione flussi di lavoro](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)
+- [Attività 1: Creare una nuova applicazione Windows Presentation Foundation](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md)
+- [Attività 3: Creare la casella degli strumenti e PropertyGrid riquadri](../../../docs/framework/windows-workflow-foundation/task-3-create-the-toolbox-and-propertygrid-panes.md)

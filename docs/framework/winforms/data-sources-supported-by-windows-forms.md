@@ -15,12 +15,12 @@ helpviewer_keywords:
 - DataSet class [Windows Forms], binding and Windows Forms
 - data [Windows Forms], data providers
 ms.assetid: 3d2c43f6-462b-4d35-9c86-13e9afe012e1
-ms.openlocfilehash: aee15d8d40ddd3f928c8bc5396d8bcbff17ba533
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 71013506bfe73907cd19c11b03d01d0c3e05e1d8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858912"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573973"
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Origini dati supportate da Windows Form
 In genere, l'associazione dati è stata utilizzata all'interno delle applicazioni per sfruttare i vantaggi dei dati archiviati nel database. Con data binding in Windows Form, è possibile accedere ai dati dal database, nonché i dati in altre strutture, ad esempio matrici e raccolte, purché siano stati soddisfatti alcuni requisiti minimi.  
@@ -37,7 +37,7 @@ In genere, l'associazione dati è stata utilizzata all'interno delle applicazion
  Windows Forms supporta proprietà di controllo data binding a proprietà pubbliche nell'istanza di un oggetto tramite il <xref:System.Windows.Forms.Binding> tipo. Windows Forms supporta anche controlli basati su elenchi di associazione, ad esempio un <xref:System.Windows.Forms.ListControl> a un oggetto istanza quando un <xref:System.Windows.Forms.BindingSource> viene usato.  
   
  matrice o raccolta  
- Per eseguire operazioni come origine dati, è necessario implementare un elenco di <xref:System.Collections.IList> interfaccia, una esempio sarebbe una matrice che è un'istanza del <xref:System.Array> classe. Per altre informazioni sulle matrici, vedere [procedura: creare una matrice di oggetti (Visual Basic)](https://msdn.microsoft.com/library/6b64e069-0387-400c-9081-3bdc581020c3).  
+ Per eseguire operazioni come origine dati, è necessario implementare un elenco di <xref:System.Collections.IList> interfaccia, una esempio sarebbe una matrice che è un'istanza del <xref:System.Array> classe. Per altre informazioni sulle matrici, vedere [come: Creare una matrice di oggetti (Visual Basic)](https://msdn.microsoft.com/library/6b64e069-0387-400c-9081-3bdc581020c3).  
   
  In generale, è consigliabile usare <xref:System.ComponentModel.BindingList%601> quando si creano elenchi di oggetti per il data binding. <xref:System.ComponentModel.BindingList%601> è una versione generica del <xref:System.ComponentModel.IBindingList> interfaccia. Il <xref:System.ComponentModel.IBindingList> interfaccia estende il <xref:System.Collections.IList> interfaccia mediante l'aggiunta di proprietà, metodi ed eventi necessari per l'associazione dati bidirezionale.  
   
@@ -57,7 +57,7 @@ In genere, l'associazione dati è stata utilizzata all'interno delle applicazion
   
 -   <xref:System.Data.DataViewManager>. Oggetto <xref:System.Data.DataViewManager> è una visualizzazione personalizzata dell'intera <xref:System.Data.DataSet>, analogo a un <xref:System.Data.DataView>, ma con le relazioni inclusione. Con un <xref:System.Data.DataViewManager.DataViewSettings%2A> raccolta, è possibile impostare i filtri predefiniti e le opzioni di ordinamento per tutte le viste che il <xref:System.Data.DataViewManager> per una determinata tabella.  
   
-## <a name="see-also"></a>Vedere anche  
- [Notifica delle modifiche nel data binding dei Windows Form](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)  
- [Data binding e Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)  
- [Data binding in Windows Form](../../../docs/framework/winforms/windows-forms-data-binding.md)
+## <a name="see-also"></a>Vedere anche
+- [Notifica delle modifiche nel data binding dei Windows Form](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)
+- [Data binding e Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
+- [Data binding in Windows Form](../../../docs/framework/winforms/windows-forms-data-binding.md)
