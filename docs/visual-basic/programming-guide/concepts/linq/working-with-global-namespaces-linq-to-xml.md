@@ -2,26 +2,26 @@
 title: Utilizzo di spazi dei nomi globali (Visual Basic) (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 0a8064d5-e02f-4315-ad48-6deaa443a2f0
-ms.openlocfilehash: c1f34b374f956ec0a8b9658742e529d7ccb1b2ce
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0922c6973baeb3e0ca51d984b332fd7a3e0b13f6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33648905"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54733909"
 ---
-# <a name="working-with-global-namespaces-visual-basic-linq-to-xml"></a><span data-ttu-id="0f7a1-102">Utilizzo di spazi dei nomi globali (Visual Basic) (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="0f7a1-102">Working with Global Namespaces (Visual Basic) (LINQ to XML)</span></span>
-<span data-ttu-id="0f7a1-103">Una delle funzionalità chiave dei valori letterali XML in Visual Basic è la possibilità di dichiarare spazi dei nomi XML usando il `Imports` istruzione.</span><span class="sxs-lookup"><span data-stu-id="0f7a1-103">One of the key features of XML literals in Visual Basic is the capability to declare XML namespaces by using the `Imports` statement.</span></span> <span data-ttu-id="0f7a1-104">Tramite questa funzionalità, è possibile dichiarare uno spazio dei nomi XML che usa un prefisso oppure uno spazio dei nomi XML predefinito.</span><span class="sxs-lookup"><span data-stu-id="0f7a1-104">Using this feature, you can declare an XML namespace that uses a prefix, or you can declare a default XML namespace.</span></span>  
+# <a name="working-with-global-namespaces-visual-basic-linq-to-xml"></a><span data-ttu-id="fa9dd-102">Utilizzo di spazi dei nomi globali (Visual Basic) (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="fa9dd-102">Working with Global Namespaces (Visual Basic) (LINQ to XML)</span></span>
+<span data-ttu-id="fa9dd-103">Una delle principali funzionalità di valori letterali XML in Visual Basic è la possibilità di dichiarare spazi dei nomi XML usando la `Imports` istruzione.</span><span class="sxs-lookup"><span data-stu-id="fa9dd-103">One of the key features of XML literals in Visual Basic is the capability to declare XML namespaces by using the `Imports` statement.</span></span> <span data-ttu-id="fa9dd-104">Tramite questa funzionalità, è possibile dichiarare uno spazio dei nomi XML che usa un prefisso oppure uno spazio dei nomi XML predefinito.</span><span class="sxs-lookup"><span data-stu-id="fa9dd-104">Using this feature, you can declare an XML namespace that uses a prefix, or you can declare a default XML namespace.</span></span>  
   
- <span data-ttu-id="0f7a1-105">Questa funzionalità risulta utile in due situazioni.</span><span class="sxs-lookup"><span data-stu-id="0f7a1-105">This capability is useful in two situations.</span></span> <span data-ttu-id="0f7a1-106">Innanzitutto gli spazi dei nomi dichiarati in valori letterali XML non vengono trasferiti nelle espressioni incorporate.</span><span class="sxs-lookup"><span data-stu-id="0f7a1-106">First, namespaces declared in XML literals do not carry over into embedded expressions.</span></span> <span data-ttu-id="0f7a1-107">La dichiarazione di spazi dei nomi globali riduce il numero di operazioni che è necessario eseguire per usare le espressioni incorporate con gli spazi dei nomi.</span><span class="sxs-lookup"><span data-stu-id="0f7a1-107">Declaring global namespaces reduces the amount of work that you have to do to use embedded expressions with namespaces.</span></span> <span data-ttu-id="0f7a1-108">In secondo luogo, è necessario dichiarare spazi dei nomi globali al fine di usare gli spazi dei nomi con le proprietà XML.</span><span class="sxs-lookup"><span data-stu-id="0f7a1-108">Second, you must declare global namespaces in order to use namespaces with XML properties.</span></span>  
+ <span data-ttu-id="fa9dd-105">Questa funzionalità risulta utile in due situazioni.</span><span class="sxs-lookup"><span data-stu-id="fa9dd-105">This capability is useful in two situations.</span></span> <span data-ttu-id="fa9dd-106">Innanzitutto gli spazi dei nomi dichiarati in valori letterali XML non vengono trasferiti nelle espressioni incorporate.</span><span class="sxs-lookup"><span data-stu-id="fa9dd-106">First, namespaces declared in XML literals do not carry over into embedded expressions.</span></span> <span data-ttu-id="fa9dd-107">La dichiarazione di spazi dei nomi globali riduce il numero di operazioni che è necessario eseguire per usare le espressioni incorporate con gli spazi dei nomi.</span><span class="sxs-lookup"><span data-stu-id="fa9dd-107">Declaring global namespaces reduces the amount of work that you have to do to use embedded expressions with namespaces.</span></span> <span data-ttu-id="fa9dd-108">In secondo luogo, è necessario dichiarare spazi dei nomi globali al fine di usare gli spazi dei nomi con le proprietà XML.</span><span class="sxs-lookup"><span data-stu-id="fa9dd-108">Second, you must declare global namespaces in order to use namespaces with XML properties.</span></span>  
   
- <span data-ttu-id="0f7a1-109">È possibile dichiarare spazi dei nomi globali a livello di progetto</span><span class="sxs-lookup"><span data-stu-id="0f7a1-109">You can declare global namespaces at the project level.</span></span> <span data-ttu-id="0f7a1-110">oppure a livello di modulo. In quest'ultimo caso gli spazi dei nomi eseguono l'override di quelli a livello di progetto.</span><span class="sxs-lookup"><span data-stu-id="0f7a1-110">You can also declare global namespaces at the module level, which overrides the project-level global namespaces.</span></span> <span data-ttu-id="0f7a1-111">Infine è possibile eseguire l'override degli spazi dei nomi globali in un valore letterale XML.</span><span class="sxs-lookup"><span data-stu-id="0f7a1-111">Finally, you can override global namespaces in an XML literal.</span></span>  
+ <span data-ttu-id="fa9dd-109">È possibile dichiarare spazi dei nomi globali a livello di progetto</span><span class="sxs-lookup"><span data-stu-id="fa9dd-109">You can declare global namespaces at the project level.</span></span> <span data-ttu-id="fa9dd-110">oppure a livello di modulo. In quest'ultimo caso gli spazi dei nomi eseguono l'override di quelli a livello di progetto.</span><span class="sxs-lookup"><span data-stu-id="fa9dd-110">You can also declare global namespaces at the module level, which overrides the project-level global namespaces.</span></span> <span data-ttu-id="fa9dd-111">Infine è possibile eseguire l'override degli spazi dei nomi globali in un valore letterale XML.</span><span class="sxs-lookup"><span data-stu-id="fa9dd-111">Finally, you can override global namespaces in an XML literal.</span></span>  
   
- <span data-ttu-id="0f7a1-112">Quando si usano i valori letterali o le proprietà XML incluse negli spazi dei nomi dichiarati a livello globale, è possibile visualizzare il nome espanso dei valori letterali o delle proprietà XML passandovi sopra con il mouse in Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="0f7a1-112">When using XML literals or XML properties that are in globally-declared namespaces, you can see the expanded name of XML literals or properties by hovering over them in Visual Studio.</span></span> <span data-ttu-id="0f7a1-113">Il nome espanso verrà visualizzato in una descrizione comandi.</span><span class="sxs-lookup"><span data-stu-id="0f7a1-113">You will see the expanded name in a tooltip.</span></span>  
+ <span data-ttu-id="fa9dd-112">Quando si usano i valori letterali o le proprietà XML incluse negli spazi dei nomi dichiarati a livello globale, è possibile visualizzare il nome espanso dei valori letterali o delle proprietà XML passandovi sopra con il mouse in Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="fa9dd-112">When using XML literals or XML properties that are in globally-declared namespaces, you can see the expanded name of XML literals or properties by hovering over them in Visual Studio.</span></span> <span data-ttu-id="fa9dd-113">Il nome espanso verrà visualizzato in una descrizione comandi.</span><span class="sxs-lookup"><span data-stu-id="fa9dd-113">You will see the expanded name in a tooltip.</span></span>  
   
- <span data-ttu-id="0f7a1-114">È possibile ottenere un oggetto <xref:System.Xml.Linq.XNamespace> che corrisponde a uno spazio dei nomi globale usando il metodo `GetXmlNamespace`.</span><span class="sxs-lookup"><span data-stu-id="0f7a1-114">You can get an <xref:System.Xml.Linq.XNamespace> object that corresponds to a global namespace using the `GetXmlNamespace` method.</span></span>  
+ <span data-ttu-id="fa9dd-114">È possibile ottenere un oggetto <xref:System.Xml.Linq.XNamespace> che corrisponde a uno spazio dei nomi globale usando il metodo `GetXmlNamespace`.</span><span class="sxs-lookup"><span data-stu-id="fa9dd-114">You can get an <xref:System.Xml.Linq.XNamespace> object that corresponds to a global namespace using the `GetXmlNamespace` method.</span></span>  
   
-## <a name="examples-of-global-namespaces"></a><span data-ttu-id="0f7a1-115">Esempi di spazi dei nomi globali</span><span class="sxs-lookup"><span data-stu-id="0f7a1-115">Examples of Global Namespaces</span></span>  
- <span data-ttu-id="0f7a1-116">Nell'esempio seguente viene dichiarato uno spazio dei nomi globale predefinito usando l'istruzione `Imports`, quindi viene usato un valore letterale XML per inizializzare un oggetto <xref:System.Xml.Linq.XElement> in tale spazio dei nomi:</span><span class="sxs-lookup"><span data-stu-id="0f7a1-116">The following example declares a default global namespace by using the `Imports` statement, and then uses an XML literal to initialize an <xref:System.Xml.Linq.XElement> object in that namespace:</span></span>  
+## <a name="examples-of-global-namespaces"></a><span data-ttu-id="fa9dd-115">Esempi di spazi dei nomi globali</span><span class="sxs-lookup"><span data-stu-id="fa9dd-115">Examples of Global Namespaces</span></span>  
+ <span data-ttu-id="fa9dd-116">Nell'esempio seguente viene dichiarato uno spazio dei nomi globale predefinito usando l'istruzione `Imports`, quindi viene usato un valore letterale XML per inizializzare un oggetto <xref:System.Xml.Linq.XElement> in tale spazio dei nomi:</span><span class="sxs-lookup"><span data-stu-id="fa9dd-116">The following example declares a default global namespace by using the `Imports` statement, and then uses an XML literal to initialize an <xref:System.Xml.Linq.XElement> object in that namespace:</span></span>  
   
 ```vb  
 Imports <xmlns="http://www.adventure-works.com">  
@@ -34,13 +34,13 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="0f7a1-117">Questo esempio produce il seguente output:</span><span class="sxs-lookup"><span data-stu-id="0f7a1-117">This example produces the following output:</span></span>  
+ <span data-ttu-id="fa9dd-117">Questo esempio produce il seguente output:</span><span class="sxs-lookup"><span data-stu-id="fa9dd-117">This example produces the following output:</span></span>  
   
 ```xml  
 <Root xmlns="http://www.adventure-works.com" />  
 ```  
   
- <span data-ttu-id="0f7a1-118">Nell'esempio seguente viene dichiarato uno spazio dei nomi globale con un prefisso, quindi viene usato un valore letterale XML per inizializzare un elemento:</span><span class="sxs-lookup"><span data-stu-id="0f7a1-118">The following example declares a global namespace with a prefix, and then uses an XML literal to initialize an element:</span></span>  
+ <span data-ttu-id="fa9dd-118">Nell'esempio seguente viene dichiarato uno spazio dei nomi globale con un prefisso, quindi viene usato un valore letterale XML per inizializzare un elemento:</span><span class="sxs-lookup"><span data-stu-id="fa9dd-118">The following example declares a global namespace with a prefix, and then uses an XML literal to initialize an element:</span></span>  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -53,14 +53,14 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="0f7a1-119">Questo esempio produce il seguente output:</span><span class="sxs-lookup"><span data-stu-id="0f7a1-119">This example produces the following output:</span></span>  
+ <span data-ttu-id="fa9dd-119">Questo esempio produce il seguente output:</span><span class="sxs-lookup"><span data-stu-id="fa9dd-119">This example produces the following output:</span></span>  
   
 ```xml  
 <aw:Root xmlns:aw="http://www.adventure-works.com" />  
 ```  
   
-## <a name="global-namespaces-and-embedded-expressions"></a><span data-ttu-id="0f7a1-120">Spazi dei nomi globali ed espressioni incorporate</span><span class="sxs-lookup"><span data-stu-id="0f7a1-120">Global Namespaces and Embedded Expressions</span></span>  
- <span data-ttu-id="0f7a1-121">Gli spazi dei nomi dichiarati in valori letterali XML non vengono trasferiti nelle espressioni incorporate.</span><span class="sxs-lookup"><span data-stu-id="0f7a1-121">Namespaces that are declared in XML literals do not carry over into embedded expressions.</span></span> <span data-ttu-id="0f7a1-122">Nell'esempio seguente viene dichiarato uno spazio dei nomi predefinito.</span><span class="sxs-lookup"><span data-stu-id="0f7a1-122">The following example declares a default namespace.</span></span> <span data-ttu-id="0f7a1-123">Viene quindi usata un'espressione incorporata per l'elemento `Child`.</span><span class="sxs-lookup"><span data-stu-id="0f7a1-123">It then uses an embedded expression for the `Child` element.</span></span>  
+## <a name="global-namespaces-and-embedded-expressions"></a><span data-ttu-id="fa9dd-120">Spazi dei nomi globali ed espressioni incorporate</span><span class="sxs-lookup"><span data-stu-id="fa9dd-120">Global Namespaces and Embedded Expressions</span></span>  
+ <span data-ttu-id="fa9dd-121">Gli spazi dei nomi dichiarati in valori letterali XML non vengono trasferiti nelle espressioni incorporate.</span><span class="sxs-lookup"><span data-stu-id="fa9dd-121">Namespaces that are declared in XML literals do not carry over into embedded expressions.</span></span> <span data-ttu-id="fa9dd-122">Nell'esempio seguente viene dichiarato uno spazio dei nomi predefinito.</span><span class="sxs-lookup"><span data-stu-id="fa9dd-122">The following example declares a default namespace.</span></span> <span data-ttu-id="fa9dd-123">Viene quindi usata un'espressione incorporata per l'elemento `Child`.</span><span class="sxs-lookup"><span data-stu-id="fa9dd-123">It then uses an embedded expression for the `Child` element.</span></span>  
   
 ```vb  
 Dim root As XElement = _  
@@ -70,7 +70,7 @@ Dim root As XElement = _
 Console.WriteLine(root)  
 ```  
   
- <span data-ttu-id="0f7a1-124">Questo esempio produce il seguente output:</span><span class="sxs-lookup"><span data-stu-id="0f7a1-124">This example produces the following output:</span></span>  
+ <span data-ttu-id="fa9dd-124">Questo esempio produce il seguente output:</span><span class="sxs-lookup"><span data-stu-id="fa9dd-124">This example produces the following output:</span></span>  
   
 ```xml  
 <Root xmlns="http://www.adventure-works.com">  
@@ -78,9 +78,9 @@ Console.WriteLine(root)
 </Root>  
 ```  
   
- <span data-ttu-id="0f7a1-125">Si noti che l'XML risultante include una dichiarazione di uno spazio dei nomi predefinito, per cui l'elemento `Child` non è incluso in alcuno spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="0f7a1-125">As you can see, the resulting XML includes a declaration of a default namespace so that the `Child` element is in no namespace.</span></span>  
+ <span data-ttu-id="fa9dd-125">Si noti che l'XML risultante include una dichiarazione di uno spazio dei nomi predefinito, per cui l'elemento `Child` non è incluso in alcuno spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="fa9dd-125">As you can see, the resulting XML includes a declaration of a default namespace so that the `Child` element is in no namespace.</span></span>  
   
- <span data-ttu-id="0f7a1-126">È possibile ridichiarare lo spazio dei nomi nell'espressione incorporata, come segue:</span><span class="sxs-lookup"><span data-stu-id="0f7a1-126">You could re-declare the namespace in the embedded expression, as follows:</span></span>  
+ <span data-ttu-id="fa9dd-126">È possibile ridichiarare lo spazio dei nomi nell'espressione incorporata, come segue:</span><span class="sxs-lookup"><span data-stu-id="fa9dd-126">You could re-declare the namespace in the embedded expression, as follows:</span></span>  
   
 ```vb  
 Dim root As XElement = _  
@@ -90,7 +90,7 @@ Dim root As XElement = _
 Console.WriteLine(root)  
 ```  
   
- <span data-ttu-id="0f7a1-127">Questo esempio produce il seguente output:</span><span class="sxs-lookup"><span data-stu-id="0f7a1-127">This example produces the following output:</span></span>  
+ <span data-ttu-id="fa9dd-127">Questo esempio produce il seguente output:</span><span class="sxs-lookup"><span data-stu-id="fa9dd-127">This example produces the following output:</span></span>  
   
 ```xml  
 <Root xmlns="http://www.adventure-works.com">  
@@ -98,7 +98,7 @@ Console.WriteLine(root)
 </Root>  
 ```  
   
- <span data-ttu-id="0f7a1-128">Questa operazione è, tuttavia, piuttosto complessa. Un approccio più efficace è costituito dall'utilizzo dello spazio dei nomi predefinito globale,</span><span class="sxs-lookup"><span data-stu-id="0f7a1-128">However, this is more cumbersome to use than the global default namespace, which is a better approach.</span></span> <span data-ttu-id="0f7a1-129">che consente di usare valori letterali XML senza dichiarare spazi dei nomi.</span><span class="sxs-lookup"><span data-stu-id="0f7a1-129">With the global default namespace, you can use XML literals without declaring namespaces.</span></span> <span data-ttu-id="0f7a1-130">L'XML risultante si troverà nello spazio dei nomi predefinito dichiarato a livello globale.</span><span class="sxs-lookup"><span data-stu-id="0f7a1-130">The resulting XML will be in the globally-declared default namespace.</span></span>  
+ <span data-ttu-id="fa9dd-128">Questa operazione è, tuttavia, piuttosto complessa. Un approccio più efficace è costituito dall'utilizzo dello spazio dei nomi predefinito globale,</span><span class="sxs-lookup"><span data-stu-id="fa9dd-128">However, this is more cumbersome to use than the global default namespace, which is a better approach.</span></span> <span data-ttu-id="fa9dd-129">che consente di usare valori letterali XML senza dichiarare spazi dei nomi.</span><span class="sxs-lookup"><span data-stu-id="fa9dd-129">With the global default namespace, you can use XML literals without declaring namespaces.</span></span> <span data-ttu-id="fa9dd-130">L'XML risultante si troverà nello spazio dei nomi predefinito dichiarato a livello globale.</span><span class="sxs-lookup"><span data-stu-id="fa9dd-130">The resulting XML will be in the globally-declared default namespace.</span></span>  
   
 ```vb  
 Imports <xmlns="http://www.adventure-works.com">  
@@ -113,7 +113,7 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="0f7a1-131">Questo esempio produce il seguente output:</span><span class="sxs-lookup"><span data-stu-id="0f7a1-131">This example produces the following output:</span></span>  
+ <span data-ttu-id="fa9dd-131">Questo esempio produce il seguente output:</span><span class="sxs-lookup"><span data-stu-id="fa9dd-131">This example produces the following output:</span></span>  
   
 ```xml  
 <Root xmlns="http://www.adventure-works.com">  
@@ -121,8 +121,8 @@ End Module
 </Root>  
 ```  
   
-## <a name="using-namespaces-with-xml-properties"></a><span data-ttu-id="0f7a1-132">Utilizzo degli spazi dei nomi con proprietà XML</span><span class="sxs-lookup"><span data-stu-id="0f7a1-132">Using Namespaces with XML Properties</span></span>  
- <span data-ttu-id="0f7a1-133">Se si usa un albero XML incluso in uno spazio dei nomi e si usano proprietà XML, è necessario usare uno spazio dei nomi globale in modi che anche le proprietà XML saranno incluse nello spazio dei nomi corretto.</span><span class="sxs-lookup"><span data-stu-id="0f7a1-133">If you are working with an XML tree that is in a namespace, and you use XML properties, then you must use a global namespace so that the XML properties will also be in the correct namespace.</span></span> <span data-ttu-id="0f7a1-134">Nell'esempio seguente viene dichiarato un albero XML in uno spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="0f7a1-134">The following example declares an XML tree in a namespace.</span></span> <span data-ttu-id="0f7a1-135">Viene quindi stampato il conteggio degli elementi `Child`.</span><span class="sxs-lookup"><span data-stu-id="0f7a1-135">It then prints the count of `Child` elements.</span></span>  
+## <a name="using-namespaces-with-xml-properties"></a><span data-ttu-id="fa9dd-132">Utilizzo degli spazi dei nomi con proprietà XML</span><span class="sxs-lookup"><span data-stu-id="fa9dd-132">Using Namespaces with XML Properties</span></span>  
+ <span data-ttu-id="fa9dd-133">Se si usa un albero XML incluso in uno spazio dei nomi e si usano proprietà XML, è necessario usare uno spazio dei nomi globale in modi che anche le proprietà XML saranno incluse nello spazio dei nomi corretto.</span><span class="sxs-lookup"><span data-stu-id="fa9dd-133">If you are working with an XML tree that is in a namespace, and you use XML properties, then you must use a global namespace so that the XML properties will also be in the correct namespace.</span></span> <span data-ttu-id="fa9dd-134">Nell'esempio seguente viene dichiarato un albero XML in uno spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="fa9dd-134">The following example declares an XML tree in a namespace.</span></span> <span data-ttu-id="fa9dd-135">Viene quindi stampato il conteggio degli elementi `Child`.</span><span class="sxs-lookup"><span data-stu-id="fa9dd-135">It then prints the count of `Child` elements.</span></span>  
   
 ```vb  
 Dim root As XElement = _  
@@ -132,13 +132,13 @@ Dim root As XElement = _
 Console.WriteLine(root.<Child>.Count())  
 ```  
   
- <span data-ttu-id="0f7a1-136">L'esempio indica che non sono presenti elementi `Child`.</span><span class="sxs-lookup"><span data-stu-id="0f7a1-136">This example indicates that there are no `Child` elements.</span></span> <span data-ttu-id="0f7a1-137">L'output è il seguente:</span><span class="sxs-lookup"><span data-stu-id="0f7a1-137">It produces the following output:</span></span>  
+ <span data-ttu-id="fa9dd-136">L'esempio indica che non sono presenti elementi `Child`.</span><span class="sxs-lookup"><span data-stu-id="fa9dd-136">This example indicates that there are no `Child` elements.</span></span> <span data-ttu-id="fa9dd-137">L'output è il seguente:</span><span class="sxs-lookup"><span data-stu-id="fa9dd-137">It produces the following output:</span></span>  
   
 ```  
 0  
 ```  
   
- <span data-ttu-id="0f7a1-138">Se tuttavia viene dichiarato uno spazio dei nomi globale predefinito, sia i valori letterali XML che la proprietà XML si trovano nello spazio dei nomi globale predefinito:</span><span class="sxs-lookup"><span data-stu-id="0f7a1-138">If, however, you declare a default global namespace, then both the XML literal and the XML property are in the default global namespace:</span></span>  
+ <span data-ttu-id="fa9dd-138">Se tuttavia viene dichiarato uno spazio dei nomi globale predefinito, sia i valori letterali XML che la proprietà XML si trovano nello spazio dei nomi globale predefinito:</span><span class="sxs-lookup"><span data-stu-id="fa9dd-138">If, however, you declare a default global namespace, then both the XML literal and the XML property are in the default global namespace:</span></span>  
   
 ```vb  
 Imports <xmlns="http://www.adventure-works.com">  
@@ -154,13 +154,13 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="0f7a1-139">L'esempio indica che è presente un unico elemento `Child`.</span><span class="sxs-lookup"><span data-stu-id="0f7a1-139">This example indicates that there is one `Child` element.</span></span> <span data-ttu-id="0f7a1-140">L'output è il seguente:</span><span class="sxs-lookup"><span data-stu-id="0f7a1-140">It produces the following output:</span></span>  
+ <span data-ttu-id="fa9dd-139">L'esempio indica che è presente un unico elemento `Child`.</span><span class="sxs-lookup"><span data-stu-id="fa9dd-139">This example indicates that there is one `Child` element.</span></span> <span data-ttu-id="fa9dd-140">L'output è il seguente:</span><span class="sxs-lookup"><span data-stu-id="fa9dd-140">It produces the following output:</span></span>  
   
 ```  
 1  
 ```  
   
- <span data-ttu-id="0f7a1-141">Se si dichiara uno spazio dei nomi globale che ha un prefisso, è possibile usare il prefisso per i valori letterali e le proprietà XML:</span><span class="sxs-lookup"><span data-stu-id="0f7a1-141">If you declare a global namespace that has a prefix, you can use the prefix for both XML literals and XML properties:</span></span>  
+ <span data-ttu-id="fa9dd-141">Se si dichiara uno spazio dei nomi globale che ha un prefisso, è possibile usare il prefisso per i valori letterali e le proprietà XML:</span><span class="sxs-lookup"><span data-stu-id="fa9dd-141">If you declare a global namespace that has a prefix, you can use the prefix for both XML literals and XML properties:</span></span>  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -176,8 +176,8 @@ Module Module1
 End Module  
 ```  
   
-## <a name="xnamespace-and-global-namespaces"></a><span data-ttu-id="0f7a1-142">XNamespace e spazi dei nomi globali</span><span class="sxs-lookup"><span data-stu-id="0f7a1-142">XNamespace and Global Namespaces</span></span>  
- <span data-ttu-id="0f7a1-143">È possibile ottenere un oggetto <xref:System.Xml.Linq.XNamespace> usando il metodo `GetXmlNamespace`:</span><span class="sxs-lookup"><span data-stu-id="0f7a1-143">You can get an <xref:System.Xml.Linq.XNamespace> object by using the `GetXmlNamespace` method:</span></span>  
+## <a name="xnamespace-and-global-namespaces"></a><span data-ttu-id="fa9dd-142">XNamespace e spazi dei nomi globali</span><span class="sxs-lookup"><span data-stu-id="fa9dd-142">XNamespace and Global Namespaces</span></span>  
+ <span data-ttu-id="fa9dd-143">È possibile ottenere un oggetto <xref:System.Xml.Linq.XNamespace> usando il metodo `GetXmlNamespace`:</span><span class="sxs-lookup"><span data-stu-id="fa9dd-143">You can get an <xref:System.Xml.Linq.XNamespace> object by using the `GetXmlNamespace` method:</span></span>  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -191,11 +191,11 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="0f7a1-144">Questo esempio produce il seguente output:</span><span class="sxs-lookup"><span data-stu-id="0f7a1-144">This example produces the following output:</span></span>  
+ <span data-ttu-id="fa9dd-144">Questo esempio produce il seguente output:</span><span class="sxs-lookup"><span data-stu-id="fa9dd-144">This example produces the following output:</span></span>  
   
 ```  
 http://www.adventure-works.com  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="0f7a1-145">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="0f7a1-145">See Also</span></span>  
- [<span data-ttu-id="0f7a1-146">Utilizzo di spazi dei nomi XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0f7a1-146">Working with XML Namespaces (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+## <a name="see-also"></a><span data-ttu-id="fa9dd-145">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="fa9dd-145">See also</span></span>
+- [<span data-ttu-id="fa9dd-146">Utilizzo di spazi dei nomi XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="fa9dd-146">Working with XML Namespaces (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)

@@ -1,7 +1,7 @@
 ---
 title: Operatore () - Riferimenti per C#
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 01/15/2019
 f1_keywords:
 - ()_CSharpKeyword
 helpviewer_keywords:
@@ -9,38 +9,51 @@ helpviewer_keywords:
 - cast operator [C#]
 - () operator [C#]
 ms.assetid: 846e1f94-8a8c-42fc-a42c-fbd38e70d8cc
-ms.openlocfilehash: 57c23dbd6ee95597514dba92e7217bdcc3e38f24
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 3a0af33739c9cb4d090842219eba4ece9700ef89
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236453"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362782"
 ---
-# <a name="-operator-c-reference"></a><span data-ttu-id="bc0a4-102">Operatore () (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="bc0a4-102">() Operator (C# Reference)</span></span>
-<span data-ttu-id="bc0a4-103">Oltre a specificare l'ordine in cui devono essere eseguite le operazioni di un'espressione, le parentesi vengono usate per eseguire le operazioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="bc0a4-103">In addition to being used to specify the order of operations in an expression, parentheses are used to perform the following tasks:</span></span>  
-  
-1.  <span data-ttu-id="bc0a4-104">Specificare i cast, ovvero le conversioni di tipi.</span><span class="sxs-lookup"><span data-stu-id="bc0a4-104">Specify casts, or type conversions.</span></span>  
-  
-     [!code-csharp[csRefOperators#1](../../../csharp/language-reference/operators/codesnippet/CSharp/invocation-operator_1.cs)]  
-  
-2.  <span data-ttu-id="bc0a4-105">Richiamare metodi o delegati.</span><span class="sxs-lookup"><span data-stu-id="bc0a4-105">Invoke methods or delegates.</span></span>  
-  
-     [!code-csharp[csRefOperators#2](../../../csharp/language-reference/operators/codesnippet/CSharp/invocation-operator_2.cs)]  
-  
-## <a name="remarks"></a><span data-ttu-id="bc0a4-106">Note</span><span class="sxs-lookup"><span data-stu-id="bc0a4-106">Remarks</span></span>  
- <span data-ttu-id="bc0a4-107">Un cast richiama l'operatore di conversione in modo esplicito da un tipo a un altro. Se tale operatore di conversione non viene definito, il cast non sarà eseguito correttamente.</span><span class="sxs-lookup"><span data-stu-id="bc0a4-107">A cast explicitly invokes the conversion operator from one type to another; the cast fails if no such conversion operator is defined.</span></span> <span data-ttu-id="bc0a4-108">Per informazioni sulla definizione di un operatore di conversione, vedere [explicit](../../../csharp/language-reference/keywords/explicit.md) e [implicit](../../../csharp/language-reference/keywords/implicit.md).</span><span class="sxs-lookup"><span data-stu-id="bc0a4-108">To define a conversion operator, see [explicit](../../../csharp/language-reference/keywords/explicit.md) and [implicit](../../../csharp/language-reference/keywords/implicit.md).</span></span>  
-  
- <span data-ttu-id="bc0a4-109">Non è possibile sottoporre l'operatore `()` a overload.</span><span class="sxs-lookup"><span data-stu-id="bc0a4-109">The `()` operator cannot be overloaded.</span></span>  
-  
- <span data-ttu-id="bc0a4-110">Per altre informazioni, vedere [Cast e conversioni di tipi](../../../csharp/programming-guide/types/casting-and-type-conversions.md).</span><span class="sxs-lookup"><span data-stu-id="bc0a4-110">For more information, see [Casting and Type Conversions](../../../csharp/programming-guide/types/casting-and-type-conversions.md).</span></span>  
-  
- <span data-ttu-id="bc0a4-111">Per altre informazioni sulla chiamata al metodo, vedere [Metodi](../../../csharp/programming-guide/classes-and-structs/methods.md).</span><span class="sxs-lookup"><span data-stu-id="bc0a4-111">For more information about method invocation, see [Methods](../../../csharp/programming-guide/classes-and-structs/methods.md).</span></span>  
-  
-## <a name="c-language-specification"></a><span data-ttu-id="bc0a4-112">Specifiche del linguaggio C#</span><span class="sxs-lookup"><span data-stu-id="bc0a4-112">C# Language Specification</span></span>  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a><span data-ttu-id="bc0a4-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="bc0a4-113">See Also</span></span>
+# <a name="-operator-c-reference"></a><span data-ttu-id="fafd1-102">Operatore () (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="fafd1-102">() operator (C# Reference)</span></span>
 
-- [<span data-ttu-id="bc0a4-114">Riferimenti per C#</span><span class="sxs-lookup"><span data-stu-id="bc0a4-114">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="bc0a4-115">Guida per programmatori C#</span><span class="sxs-lookup"><span data-stu-id="bc0a4-115">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="bc0a4-116">Operatori C#</span><span class="sxs-lookup"><span data-stu-id="bc0a4-116">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)
+<span data-ttu-id="fafd1-103">Le parentesi `()` vengono in genere usate per la chiamata di un metodo o un delegato o nelle espressioni cast.</span><span class="sxs-lookup"><span data-stu-id="fafd1-103">Parentheses, `()`, are typically used for method or delegate invocation or in cast expressions.</span></span>
+
+<span data-ttu-id="fafd1-104">È anche possibile usare le parentesi per specificare l'ordine in cui valutare le operazioni in un'espressione.</span><span class="sxs-lookup"><span data-stu-id="fafd1-104">You also use parentheses to specify the order in which to evaluate operations in an expression.</span></span> <span data-ttu-id="fafd1-105">Per altre informazioni, vedere la sezione [Aggiunta di parentesi](../../programming-guide/statements-expressions-operators/operators.md#adding-parentheses) dell'articolo [Operatori](../../programming-guide/statements-expressions-operators/operators.md).</span><span class="sxs-lookup"><span data-stu-id="fafd1-105">For more information, see the [Adding parentheses](../../programming-guide/statements-expressions-operators/operators.md#adding-parentheses) section of the [Operators](../../programming-guide/statements-expressions-operators/operators.md) article.</span></span> <span data-ttu-id="fafd1-106">Per l'elenco degli operatori ordinati in base al livello di precedenza, vedere [ Operatori C#](index.md).</span><span class="sxs-lookup"><span data-stu-id="fafd1-106">For the list of operators ordered by precedence level, see [C# operators](index.md).</span></span>
+
+## <a name="method-invocation"></a><span data-ttu-id="fafd1-107">Chiamata del metodo</span><span class="sxs-lookup"><span data-stu-id="fafd1-107">Method invocation</span></span>
+
+<span data-ttu-id="fafd1-108">L'esempio seguente illustra come richiamare un metodo (con o senza argomenti) e un delegato:</span><span class="sxs-lookup"><span data-stu-id="fafd1-108">The following example demonstrates how to invoke a method, with or without arguments, and a delegate:</span></span>
+
+[!code-csharp-interactive[use for invocation](~/samples/snippets/csharp/language-reference/operators/InvocationOperatorExamples.cs#Invocation)]
+
+<span data-ttu-id="fafd1-109">Le parentesi si usano anche per richiamare un [costruttore](../../programming-guide/classes-and-structs/constructors.md) con un operatore [`new`](../keywords/new-operator.md).</span><span class="sxs-lookup"><span data-stu-id="fafd1-109">You also use parentheses when you invoke a [constructor](../../programming-guide/classes-and-structs/constructors.md) with a [`new`](../keywords/new-operator.md) operator.</span></span>
+
+<span data-ttu-id="fafd1-110">Per altre informazioni sui metodi, vedere [Metodi](../../programming-guide/classes-and-structs/methods.md).</span><span class="sxs-lookup"><span data-stu-id="fafd1-110">For more information about methods, see [Methods](../../programming-guide/classes-and-structs/methods.md).</span></span> <span data-ttu-id="fafd1-111">Per altre informazioni sui delegati, vedere [Delegati](../../programming-guide/delegates/index.md).</span><span class="sxs-lookup"><span data-stu-id="fafd1-111">For more information about delegates, see [Delegates](../../programming-guide/delegates/index.md).</span></span>
+
+## <a name="cast-expression"></a><span data-ttu-id="fafd1-112">Espressione cast</span><span class="sxs-lookup"><span data-stu-id="fafd1-112">Cast expression</span></span>
+
+<span data-ttu-id="fafd1-113">Un'espressione cast con formato `(T)E` richiama un operatore di conversione per convertire il valore dell'espressione `E` nel tipo `T`.</span><span class="sxs-lookup"><span data-stu-id="fafd1-113">A cast expression of the form `(T)E` invokes a conversion operator to convert the value of expression `E` to type `T`.</span></span> <span data-ttu-id="fafd1-114">Se non esiste alcuna conversione esplicita dal tipo `E` al tipo `T`, si verifica un errore in fase di compilazione.</span><span class="sxs-lookup"><span data-stu-id="fafd1-114">If no explicit conversion exists from the type of `E` to type `T`, a compile-time error occurs.</span></span> <span data-ttu-id="fafd1-115">Per informazioni su come definire un operatore di conversione, vedere gli articoli sulle parole chiave [explicit](../keywords/explicit.md) e [implicit](../keywords/implicit.md).</span><span class="sxs-lookup"><span data-stu-id="fafd1-115">For information about how to define a conversion operator, see the [explicit](../keywords/explicit.md) and [implicit](../keywords/implicit.md) keyword articles.</span></span>
+
+<span data-ttu-id="fafd1-116">L'esempio seguente illustra la conversione di tipi tra tipi numerici:</span><span class="sxs-lookup"><span data-stu-id="fafd1-116">The following example demonstrates type conversion between numeric types:</span></span>
+
+[!code-csharp-interactive[use for cast](~/samples/snippets/csharp/language-reference/operators/InvocationOperatorExamples.cs#Cast)]
+
+<span data-ttu-id="fafd1-117">Per altre informazioni sulle conversioni esplicite predefinite tra tipi numerici, vedere [Tabella delle conversioni numeriche esplicite](../keywords/explicit-numeric-conversions-table.md).</span><span class="sxs-lookup"><span data-stu-id="fafd1-117">For more information about predefined explicit conversions between numeric types, see [Explicit numeric conversions table](../keywords/explicit-numeric-conversions-table.md).</span></span>
+
+<span data-ttu-id="fafd1-118">Per altre informazioni, vedere [Cast e conversioni di tipi](../../programming-guide/types/casting-and-type-conversions.md) e [Operatori di conversione](../../programming-guide/statements-expressions-operators/conversion-operators.md).</span><span class="sxs-lookup"><span data-stu-id="fafd1-118">For more information, see [Casting and type conversions](../../programming-guide/types/casting-and-type-conversions.md) and [Conversion operators](../../programming-guide/statements-expressions-operators/conversion-operators.md).</span></span>
+
+## <a name="operator-overloadability"></a><span data-ttu-id="fafd1-119">Overload degli operatori</span><span class="sxs-lookup"><span data-stu-id="fafd1-119">Operator overloadability</span></span>
+
+<span data-ttu-id="fafd1-120">Non è possibile sottoporre a overload l'operatore `()`.</span><span class="sxs-lookup"><span data-stu-id="fafd1-120">The operator `()` cannot be overloaded.</span></span>
+
+## <a name="c-language-specification"></a><span data-ttu-id="fafd1-121">Specifiche del linguaggio C#</span><span class="sxs-lookup"><span data-stu-id="fafd1-121">C# language specification</span></span>
+
+<span data-ttu-id="fafd1-122">Per altre informazioni, vedere le sezioni [Espressioni di chiamata](~/_csharplang/spec/expressions.md#invocation-expressions) e [Espressioni cast](~/_csharplang/spec/expressions.md#cast-expressions) della [specifica del linguaggio C#](../language-specification/index.md).</span><span class="sxs-lookup"><span data-stu-id="fafd1-122">For more information, see the [Invocation expressions](~/_csharplang/spec/expressions.md#invocation-expressions) and [Cast expressions](~/_csharplang/spec/expressions.md#cast-expressions) sections of the [C# language specification](../language-specification/index.md).</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="fafd1-123">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="fafd1-123">See also</span></span>
+
+- [<span data-ttu-id="fafd1-124">Riferimenti per C#</span><span class="sxs-lookup"><span data-stu-id="fafd1-124">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="fafd1-125">Guida per programmatori C#</span><span class="sxs-lookup"><span data-stu-id="fafd1-125">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="fafd1-126">Operatori C#</span><span class="sxs-lookup"><span data-stu-id="fafd1-126">C# Operators</span></span>](index.md)

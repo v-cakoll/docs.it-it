@@ -2,20 +2,20 @@
 title: Imperativo
 ms.date: 03/30/2017
 ms.assetid: 4f7ce807-c0e4-407a-92a6-22abafb40b51
-ms.openlocfilehash: 7547e3ed3d573cccce068aec239710e76d29bf38
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: cb8cd0814c695f0f870b7b160ca99e411724d302
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50189537"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54677654"
 ---
-# <a name="imperative"></a><span data-ttu-id="ad4a4-102">Imperativo</span><span class="sxs-lookup"><span data-stu-id="ad4a4-102">Imperative</span></span>
-<span data-ttu-id="ad4a4-103">In questo esempio viene illustrato come definire un <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> per un servizio utilizzando il codice anziché definire il `wsHttpBinding` nella configurazione di associazione.</span><span class="sxs-lookup"><span data-stu-id="ad4a4-103">This sample demonstrates how to define a <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> for a service using code, instead of defining the `wsHttpBinding` binding in configuration.</span></span> <span data-ttu-id="ad4a4-104">In questo esempio si basa sul [introduttiva](../../../../docs/framework/wcf/samples/getting-started-sample.md) che implementa un servizio di calcolatrice.</span><span class="sxs-lookup"><span data-stu-id="ad4a4-104">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) that implements a calculator service.</span></span>  
+# <a name="imperative"></a><span data-ttu-id="7c719-102">Imperativo</span><span class="sxs-lookup"><span data-stu-id="7c719-102">Imperative</span></span>
+<span data-ttu-id="7c719-103">In questo esempio viene illustrato come definire un <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> per un servizio utilizzando il codice anziché definire il `wsHttpBinding` nella configurazione di associazione.</span><span class="sxs-lookup"><span data-stu-id="7c719-103">This sample demonstrates how to define a <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> for a service using code, instead of defining the `wsHttpBinding` binding in configuration.</span></span> <span data-ttu-id="7c719-104">In questo esempio si basa sul [introduttiva](../../../../docs/framework/wcf/samples/getting-started-sample.md) che implementa un servizio di calcolatrice.</span><span class="sxs-lookup"><span data-stu-id="7c719-104">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) that implements a calculator service.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="ad4a4-105">La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.</span><span class="sxs-lookup"><span data-stu-id="ad4a4-105">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
+>  <span data-ttu-id="7c719-105">La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.</span><span class="sxs-lookup"><span data-stu-id="7c719-105">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- <span data-ttu-id="ad4a4-106">Nel codice seguente viene illustrato come definire un'associazione nel codice in modo imperativo.</span><span class="sxs-lookup"><span data-stu-id="ad4a4-106">The following code demonstrates how to define a binding imperatively in code.</span></span>  
+ <span data-ttu-id="7c719-106">Nel codice seguente viene illustrato come definire un'associazione nel codice in modo imperativo.</span><span class="sxs-lookup"><span data-stu-id="7c719-106">The following code demonstrates how to define a binding imperatively in code.</span></span>  
   
 ```csharp
 public static void Main()  
@@ -50,7 +50,7 @@ public static void Main()
 }  
 ```  
   
- <span data-ttu-id="ad4a4-107">Il client crea un canale per comunicare con il servizio, come mostrato nel codice di esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="ad4a4-107">The client creates a channel to communicate with the service as shown in the following sample code.</span></span>  
+ <span data-ttu-id="7c719-107">Il client crea un canale per comunicare con il servizio, come mostrato nel codice di esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="7c719-107">The client creates a channel to communicate with the service as shown in the following sample code.</span></span>  
   
 ```csharp
 WSHttpBinding binding = new WSHttpBinding();  
@@ -66,7 +66,7 @@ ChannelFactory<ICalculator> channelFactory = new ChannelFactory<ICalculator>(bin
 ICalculator channel = channelFactory.CreateChannel();  
 ```  
   
- <span data-ttu-id="ad4a4-108">Quando si esegue l'esempio, le richieste e le risposte dell'operazione vengono visualizzate nella finestra della console client.</span><span class="sxs-lookup"><span data-stu-id="ad4a4-108">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="ad4a4-109">Premere INVIO nella finestra del client per arrestare il client.</span><span class="sxs-lookup"><span data-stu-id="ad4a4-109">Press ENTER in the client window to shut down the client.</span></span>  
+ <span data-ttu-id="7c719-108">Quando si esegue l'esempio, le richieste e le risposte dell'operazione vengono visualizzate nella finestra della console client.</span><span class="sxs-lookup"><span data-stu-id="7c719-108">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="7c719-109">Premere INVIO nella finestra del client per arrestare il client.</span><span class="sxs-lookup"><span data-stu-id="7c719-109">Press ENTER in the client window to shut down the client.</span></span>  
   
 ```console  
 Add(100,15.99) = 115.99  
@@ -77,21 +77,21 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="ad4a4-110">Per impostare, compilare ed eseguire l'esempio</span><span class="sxs-lookup"><span data-stu-id="ad4a4-110">To set up, build, and run the sample</span></span>  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="7c719-110">Per impostare, compilare ed eseguire l'esempio</span><span class="sxs-lookup"><span data-stu-id="7c719-110">To set up, build, and run the sample</span></span>  
   
-1.  <span data-ttu-id="ad4a4-111">Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="ad4a4-111">Be sure you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
+1.  <span data-ttu-id="7c719-111">Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="7c719-111">Be sure you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  <span data-ttu-id="ad4a4-112">Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="ad4a4-112">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
+2.  <span data-ttu-id="7c719-112">Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="7c719-112">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3.  <span data-ttu-id="ad4a4-113">Per eseguire l'esempio in una configurazione singola o tra computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="ad4a4-113">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
+3.  <span data-ttu-id="7c719-113">Per eseguire l'esempio in una configurazione singola o tra computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="7c719-113">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="ad4a4-114">È possibile che gli esempi siano già installati nel computer.</span><span class="sxs-lookup"><span data-stu-id="ad4a4-114">The samples may already be installed on your machine.</span></span> <span data-ttu-id="ad4a4-115">Verificare la directory seguente (impostazione predefinita) prima di continuare.</span><span class="sxs-lookup"><span data-stu-id="ad4a4-115">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="7c719-114">È possibile che gli esempi siano già installati nel computer.</span><span class="sxs-lookup"><span data-stu-id="7c719-114">The samples may already be installed on your machine.</span></span> <span data-ttu-id="7c719-115">Verificare la directory seguente (impostazione predefinita) prima di continuare.</span><span class="sxs-lookup"><span data-stu-id="7c719-115">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="ad4a4-116">Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi.</span><span class="sxs-lookup"><span data-stu-id="ad4a4-116">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="ad4a4-117">Questo esempio si trova nella directory seguente.</span><span class="sxs-lookup"><span data-stu-id="ad4a4-117">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="7c719-116">Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi.</span><span class="sxs-lookup"><span data-stu-id="7c719-116">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="7c719-117">Questo esempio si trova nella directory seguente.</span><span class="sxs-lookup"><span data-stu-id="7c719-117">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Imperative`  
   
-## <a name="see-also"></a><span data-ttu-id="ad4a4-118">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="ad4a4-118">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7c719-118">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="7c719-118">See also</span></span>

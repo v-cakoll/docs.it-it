@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 98cf49714829b4b2f80e0240c2ebde7fa6c280e1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 389cf2e77728002ce1078f63df3d741d1847c105
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425405"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744973"
 ---
-# <a name="corsymaddrkind-enumeration"></a><span data-ttu-id="9ad31-102">Enumerazione CorSymAddrKind</span><span class="sxs-lookup"><span data-stu-id="9ad31-102">CorSymAddrKind Enumeration</span></span>
-<span data-ttu-id="9ad31-103">Indica il tipo di indirizzo di memoria.</span><span class="sxs-lookup"><span data-stu-id="9ad31-103">Indicates the type of memory address.</span></span>  
+# <a name="corsymaddrkind-enumeration"></a><span data-ttu-id="80c46-102">Enumerazione CorSymAddrKind</span><span class="sxs-lookup"><span data-stu-id="80c46-102">CorSymAddrKind Enumeration</span></span>
+<span data-ttu-id="80c46-103">Indica il tipo di indirizzo di memoria.</span><span class="sxs-lookup"><span data-stu-id="80c46-103">Indicates the type of memory address.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9ad31-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="9ad31-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="80c46-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="80c46-104">Syntax</span></span>  
   
 ```  
 typedef enum CorSymAddrKind  
@@ -44,23 +44,23 @@ typedef enum CorSymAddrKind
 } CorSymAddrKind;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="9ad31-105">Membri</span><span class="sxs-lookup"><span data-stu-id="9ad31-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="80c46-105">Membri</span><span class="sxs-lookup"><span data-stu-id="80c46-105">Members</span></span>  
   
-|<span data-ttu-id="9ad31-106">Membro</span><span class="sxs-lookup"><span data-stu-id="9ad31-106">Member</span></span>|<span data-ttu-id="9ad31-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="9ad31-107">Description</span></span>|  
+|<span data-ttu-id="80c46-106">Membro</span><span class="sxs-lookup"><span data-stu-id="80c46-106">Member</span></span>|<span data-ttu-id="80c46-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="80c46-107">Description</span></span>|  
 |------------|-----------------|  
-|`ADDR_IL_OFFSET`|<span data-ttu-id="9ad31-108">Indica un Microsoft intermediate language (MSIL) locale variabile o parametro di indice.</span><span class="sxs-lookup"><span data-stu-id="9ad31-108">Indicates a Microsoft intermediate language (MSIL) local variable or parameter index.</span></span>|  
-|`ADDR_NATIVE_RVA`|<span data-ttu-id="9ad31-109">Indica un indirizzo virtuale relativo in un modulo.</span><span class="sxs-lookup"><span data-stu-id="9ad31-109">Indicates a relative virtual address into a module.</span></span>|  
-|`ADDR_NATIVE_REGISTER`|<span data-ttu-id="9ad31-110">Indica un registro della CPU.</span><span class="sxs-lookup"><span data-stu-id="9ad31-110">Indicates a CPU register.</span></span>|  
-|`ADDR_NATIVE_REGREL`|<span data-ttu-id="9ad31-111">Indica che il primo indirizzo è un registro e il secondo è un offset.</span><span class="sxs-lookup"><span data-stu-id="9ad31-111">Indicates that the first address is a register and the second address is an offset.</span></span>|  
-|`ADDR_NATIVE_OFFSET`|<span data-ttu-id="9ad31-112">Indica un offset da un indirizzo di base.</span><span class="sxs-lookup"><span data-stu-id="9ad31-112">Indicates an offset from a base address.</span></span>|  
-|`ADDR_NATIVE_REGREG`|<span data-ttu-id="9ad31-113">Indica che il primo indirizzo è la parte di un registro bassa e il secondo è la parte alta.</span><span class="sxs-lookup"><span data-stu-id="9ad31-113">Indicates that the first address is the low portion of a register, and the second address is the high portion.</span></span>|  
-|`ADDR_NATIVE_REGSTK`|<span data-ttu-id="9ad31-114">Indica che il primo indirizzo è la parte di un registro bassa, il secondo è la parte alta e il terzo è un offset.</span><span class="sxs-lookup"><span data-stu-id="9ad31-114">Indicates that the first address is the low portion of a register, the second is the high portion, and the third is an offset.</span></span>|  
-|`ADDR_NATIVE_STKREG`|<span data-ttu-id="9ad31-115">Indica che il primo indirizzo è un registro, il secondo è un offset e il terzo è la parte alta del registro.</span><span class="sxs-lookup"><span data-stu-id="9ad31-115">Indicates that the first address is a register, the second is an offset, and the third is the high portion of the register.</span></span>|  
-|`ADDR_BITFIELD`|<span data-ttu-id="9ad31-116">Indica che il primo indirizzo è l'inizio di un campo e il secondo è la lunghezza del campo.</span><span class="sxs-lookup"><span data-stu-id="9ad31-116">Indicates that the first address is the start of a field and the second address is the field length.</span></span>|  
-|`ADDR_NATIVE_ISECTOFFSET`|<span data-ttu-id="9ad31-117">Indica che il primo indirizzo è la sezione e il secondo è un offset.</span><span class="sxs-lookup"><span data-stu-id="9ad31-117">Indicates that the first address is the section and the second address is an offset.</span></span>|  
+|`ADDR_IL_OFFSET`|<span data-ttu-id="80c46-108">Indica un Microsoft intermediate language (MSIL) locale variabile o parametro di indice.</span><span class="sxs-lookup"><span data-stu-id="80c46-108">Indicates a Microsoft intermediate language (MSIL) local variable or parameter index.</span></span>|  
+|`ADDR_NATIVE_RVA`|<span data-ttu-id="80c46-109">Indica un indirizzo virtuale relativo in un modulo.</span><span class="sxs-lookup"><span data-stu-id="80c46-109">Indicates a relative virtual address into a module.</span></span>|  
+|`ADDR_NATIVE_REGISTER`|<span data-ttu-id="80c46-110">Indica un registro della CPU.</span><span class="sxs-lookup"><span data-stu-id="80c46-110">Indicates a CPU register.</span></span>|  
+|`ADDR_NATIVE_REGREL`|<span data-ttu-id="80c46-111">Indica che il primo indirizzo è un registro e l'indirizzo di secondo è un offset.</span><span class="sxs-lookup"><span data-stu-id="80c46-111">Indicates that the first address is a register and the second address is an offset.</span></span>|  
+|`ADDR_NATIVE_OFFSET`|<span data-ttu-id="80c46-112">Indica un offset da un indirizzo di base.</span><span class="sxs-lookup"><span data-stu-id="80c46-112">Indicates an offset from a base address.</span></span>|  
+|`ADDR_NATIVE_REGREG`|<span data-ttu-id="80c46-113">Indica che il primo indirizzo è la parte bassa di un registro, e il secondo indirizzo è la parte alta.</span><span class="sxs-lookup"><span data-stu-id="80c46-113">Indicates that the first address is the low portion of a register, and the second address is the high portion.</span></span>|  
+|`ADDR_NATIVE_REGSTK`|<span data-ttu-id="80c46-114">Indica che il primo indirizzo è la parte bassa di un registro, il secondo è la parte alta e il terzo è un offset.</span><span class="sxs-lookup"><span data-stu-id="80c46-114">Indicates that the first address is the low portion of a register, the second is the high portion, and the third is an offset.</span></span>|  
+|`ADDR_NATIVE_STKREG`|<span data-ttu-id="80c46-115">Indica che il primo indirizzo è un registro, il secondo è un offset e il terzo è la parte alta del registro.</span><span class="sxs-lookup"><span data-stu-id="80c46-115">Indicates that the first address is a register, the second is an offset, and the third is the high portion of the register.</span></span>|  
+|`ADDR_BITFIELD`|<span data-ttu-id="80c46-116">Indica che il primo indirizzo è l'inizio di un campo e il secondo indirizzo è la lunghezza del campo.</span><span class="sxs-lookup"><span data-stu-id="80c46-116">Indicates that the first address is the start of a field and the second address is the field length.</span></span>|  
+|`ADDR_NATIVE_ISECTOFFSET`|<span data-ttu-id="80c46-117">Indica che il primo indirizzo è la sezione e il secondo indirizzo è un offset.</span><span class="sxs-lookup"><span data-stu-id="80c46-117">Indicates that the first address is the section and the second address is an offset.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="9ad31-118">Requisiti</span><span class="sxs-lookup"><span data-stu-id="9ad31-118">Requirements</span></span>  
- <span data-ttu-id="9ad31-119">**Intestazione:** CorSym. idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="9ad31-119">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="80c46-118">Requisiti</span><span class="sxs-lookup"><span data-stu-id="80c46-118">Requirements</span></span>  
+ <span data-ttu-id="80c46-119">**Intestazione:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="80c46-119">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9ad31-120">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="9ad31-120">See Also</span></span>  
- [<span data-ttu-id="9ad31-121">Enumerazioni dell'archivio simboli di diagnostica</span><span class="sxs-lookup"><span data-stu-id="9ad31-121">Diagnostics Symbol Store Enumerations</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="80c46-120">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="80c46-120">See also</span></span>
+- [<span data-ttu-id="80c46-121">Enumerazioni dell'archivio simboli di diagnostica</span><span class="sxs-lookup"><span data-stu-id="80c46-121">Diagnostics Symbol Store Enumerations</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)

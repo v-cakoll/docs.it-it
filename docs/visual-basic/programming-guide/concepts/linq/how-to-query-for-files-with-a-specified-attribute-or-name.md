@@ -1,18 +1,18 @@
 ---
-title: 'Procedura: eseguire una Query per i file con un attributo specificato o un nome (Visual Basic)'
+title: 'Procedura: Eseguire una query per i file con un attributo specificato o un nome (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: b26026a3-3f43-448f-a582-259997af6be0
-ms.openlocfilehash: 7a8314ba6109f25b4bc5f5952b358695844eadab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5ad3ec0c18d142e8db3eddce8902b023ff00ca4d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642911"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54733151"
 ---
-# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-visual-basic"></a><span data-ttu-id="f5365-102">Procedura: eseguire una Query per i file con un attributo specificato o un nome (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f5365-102">How to: Query for Files with a Specified Attribute or Name (Visual Basic)</span></span>
-<span data-ttu-id="f5365-103">In questo esempio viene illustrato come trovare tutti i file con un'estensione del nome specificata, come ad esempio "txt", in un albero di directory specificato.</span><span class="sxs-lookup"><span data-stu-id="f5365-103">This example shows how to find all files that have a specified file name extension (for example ".txt") in a specified directory tree.</span></span> <span data-ttu-id="f5365-104">Viene anche illustrato come restituire il file più recente o meno recente nell'albero in base all'ora di creazione.</span><span class="sxs-lookup"><span data-stu-id="f5365-104">It also shows how to return either the newest or oldest file in the tree based on the creation time.</span></span>  
+# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-visual-basic"></a><span data-ttu-id="f5a64-102">Procedura: Eseguire una query per i file con un attributo specificato o un nome (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f5a64-102">How to: Query for Files with a Specified Attribute or Name (Visual Basic)</span></span>
+<span data-ttu-id="f5a64-103">In questo esempio viene illustrato come trovare tutti i file con un'estensione del nome specificata, come ad esempio "txt", in un albero di directory specificato.</span><span class="sxs-lookup"><span data-stu-id="f5a64-103">This example shows how to find all files that have a specified file name extension (for example ".txt") in a specified directory tree.</span></span> <span data-ttu-id="f5a64-104">Viene anche illustrato come restituire il file più recente o meno recente nell'albero in base all'ora di creazione.</span><span class="sxs-lookup"><span data-stu-id="f5a64-104">It also shows how to return either the newest or oldest file in the tree based on the creation time.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="f5365-105">Esempio</span><span class="sxs-lookup"><span data-stu-id="f5365-105">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="f5a64-105">Esempio</span><span class="sxs-lookup"><span data-stu-id="f5a64-105">Example</span></span>  
   
 ```vb  
 Module FindFileByExtension  
@@ -60,9 +60,9 @@ Module FindFileByExtension
 End Module  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="f5365-106">Compilazione del codice</span><span class="sxs-lookup"><span data-stu-id="f5365-106">Compiling the Code</span></span>  
- <span data-ttu-id="f5365-107">Creare un progetto destinato a .NET Framework versione 3.5 o versione successiva con un riferimento a System.Core.dll e una `Imports` istruzione dello spazio dei nomi System. Linq.</span><span class="sxs-lookup"><span data-stu-id="f5365-107">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a   `Imports` statement for the System.Linq namespace.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="f5a64-106">Compilazione del codice</span><span class="sxs-lookup"><span data-stu-id="f5a64-106">Compiling the Code</span></span>  
+ <span data-ttu-id="f5a64-107">Creare un progetto destinato a .NET Framework versione 3.5 o versione successiva con un riferimento alla DLL e una `Imports` istruzione dello spazio dei nomi System. Linq.</span><span class="sxs-lookup"><span data-stu-id="f5a64-107">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a   `Imports` statement for the System.Linq namespace.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f5365-108">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="f5365-108">See Also</span></span>  
- [<span data-ttu-id="f5365-109">LINQ to Objects (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f5365-109">LINQ to Objects (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
- <span data-ttu-id="f5365-110">[LINQ and File Directories (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md) (LINQ e directory file (Visual Basic))</span><span class="sxs-lookup"><span data-stu-id="f5365-110">[LINQ and File Directories (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)</span></span>
+## <a name="see-also"></a><span data-ttu-id="f5a64-108">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="f5a64-108">See also</span></span>
+- [<span data-ttu-id="f5a64-109">LINQ to Objects (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f5a64-109">LINQ to Objects (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+- <span data-ttu-id="f5a64-110">[LINQ and File Directories (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md) (LINQ e directory file (Visual Basic))</span><span class="sxs-lookup"><span data-stu-id="f5a64-110">[LINQ and File Directories (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)</span></span>
