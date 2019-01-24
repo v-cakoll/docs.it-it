@@ -17,32 +17,32 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fbe41a3102a61052b2eceae7ccce3b93fd1bef6f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9074d7c46e53ff46e34973cd8143abc9e621fb1e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426101"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54683297"
 ---
-# <a name="isymunmanagedscope2getconstantcount-method"></a><span data-ttu-id="fd963-102">Metodo ISymUnmanagedScope2::GetConstantCount</span><span class="sxs-lookup"><span data-stu-id="fd963-102">ISymUnmanagedScope2::GetConstantCount Method</span></span>
-<span data-ttu-id="fd963-103">Ottiene un conteggio delle costanti definite in questo ambito.</span><span class="sxs-lookup"><span data-stu-id="fd963-103">Gets a count of the constants defined within this scope.</span></span>  
+# <a name="isymunmanagedscope2getconstantcount-method"></a><span data-ttu-id="bac96-102">Metodo ISymUnmanagedScope2::GetConstantCount</span><span class="sxs-lookup"><span data-stu-id="bac96-102">ISymUnmanagedScope2::GetConstantCount Method</span></span>
+<span data-ttu-id="bac96-103">Ottiene un conteggio delle costanti definite all'interno di questo ambito.</span><span class="sxs-lookup"><span data-stu-id="bac96-103">Gets a count of the constants defined within this scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fd963-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="fd963-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bac96-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="bac96-104">Syntax</span></span>  
   
 ```  
 HRESULT GetConstantCount(  
     [out, retval] ULONG32 *pRetVal);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="fd963-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="fd963-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="bac96-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="bac96-105">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="fd963-106">[out] Un puntatore a un `ULONG32` che riceve le dimensioni, in caratteri, del buffer necessaria per contenere le costanti.</span><span class="sxs-lookup"><span data-stu-id="fd963-106">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the constants.</span></span>  
+ <span data-ttu-id="bac96-106">[out] Un puntatore a un `ULONG32` che riceve le dimensioni, in caratteri, del buffer necessaria per contenere le costanti.</span><span class="sxs-lookup"><span data-stu-id="bac96-106">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the constants.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="fd963-107">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="fd963-107">Return Value</span></span>  
- <span data-ttu-id="fd963-108">S_OK se il metodo ha esito positivo. in caso contrario, E_FAIL o un altro codice di errore.</span><span class="sxs-lookup"><span data-stu-id="fd963-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="bac96-107">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="bac96-107">Return Value</span></span>  
+ <span data-ttu-id="bac96-108">S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o qualche altro codice di errore.</span><span class="sxs-lookup"><span data-stu-id="bac96-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="fd963-109">Requisiti</span><span class="sxs-lookup"><span data-stu-id="fd963-109">Requirements</span></span>  
- <span data-ttu-id="fd963-110">**Intestazione:** CorSym. idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="fd963-110">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="bac96-109">Requisiti</span><span class="sxs-lookup"><span data-stu-id="bac96-109">Requirements</span></span>  
+ <span data-ttu-id="bac96-110">**Intestazione:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="bac96-110">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fd963-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="fd963-111">See Also</span></span>  
- [<span data-ttu-id="fd963-112">Interfaccia ISymUnmanagedScope2</span><span class="sxs-lookup"><span data-stu-id="fd963-112">ISymUnmanagedScope2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="bac96-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="bac96-111">See also</span></span>
+- [<span data-ttu-id="bac96-112">Interfaccia ISymUnmanagedScope2</span><span class="sxs-lookup"><span data-stu-id="bac96-112">ISymUnmanagedScope2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope2-interface.md)

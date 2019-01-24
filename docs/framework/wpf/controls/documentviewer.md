@@ -7,22 +7,22 @@ helpviewer_keywords:
 - controls [WPF], DocumentViewer
 - DocumentViewer control [WPF]
 ms.assetid: c21eb322-d6b3-474b-ab05-94527bd1b0fa
-ms.openlocfilehash: 5ae0204a3ef7141ebbc98ecc91a464116593981f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 19e3d70e378e1357f4a3b299ddfb504f5b85fd0f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550907"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54682969"
 ---
-# <a name="documentviewer"></a><span data-ttu-id="2eb73-102">DocumentViewer</span><span class="sxs-lookup"><span data-stu-id="2eb73-102">DocumentViewer</span></span>
-<span data-ttu-id="2eb73-103">Il <xref:System.Windows.Controls.DocumentViewer> controllo consente di visualizzare <xref:System.Windows.Documents.FixedDocument> contenuto (ad esempio [!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)] documenti) in un formato impaginato.</span><span class="sxs-lookup"><span data-stu-id="2eb73-103">The <xref:System.Windows.Controls.DocumentViewer> control is used to view <xref:System.Windows.Documents.FixedDocument> content (such as [!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)] documents) in a paginated format.</span></span>  
+# <a name="documentviewer"></a><span data-ttu-id="5c602-102">DocumentViewer</span><span class="sxs-lookup"><span data-stu-id="5c602-102">DocumentViewer</span></span>
+<span data-ttu-id="5c602-103">Il <xref:System.Windows.Controls.DocumentViewer> controllo consente di visualizzare <xref:System.Windows.Documents.FixedDocument> contenuto (ad esempio [!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)] documenti) in un formato impaginato.</span><span class="sxs-lookup"><span data-stu-id="5c602-103">The <xref:System.Windows.Controls.DocumentViewer> control is used to view <xref:System.Windows.Documents.FixedDocument> content (such as [!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)] documents) in a paginated format.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="2eb73-104">Riferimenti</span><span class="sxs-lookup"><span data-stu-id="2eb73-104">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="5c602-104">Riferimenti</span><span class="sxs-lookup"><span data-stu-id="5c602-104">Reference</span></span>  
  <xref:System.Windows.Controls.DocumentViewer>  
   
  <xref:System.Windows.Documents.FixedDocument>  
   
-## <a name="see-also"></a><span data-ttu-id="2eb73-105">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="2eb73-105">See Also</span></span>  
- [<span data-ttu-id="2eb73-106">Documenti</span><span class="sxs-lookup"><span data-stu-id="2eb73-106">Documents</span></span>](../../../../docs/framework/wpf/advanced/documents.md)  
- [<span data-ttu-id="2eb73-107">Serializzazione e archiviazione di documenti</span><span class="sxs-lookup"><span data-stu-id="2eb73-107">Document Serialization and Storage</span></span>](../../../../docs/framework/wpf/advanced/document-serialization-and-storage.md)  
- [<span data-ttu-id="2eb73-108">Panoramica della stampa</span><span class="sxs-lookup"><span data-stu-id="2eb73-108">Printing Overview</span></span>](../../../../docs/framework/wpf/advanced/printing-overview.md)
+## <a name="see-also"></a><span data-ttu-id="5c602-105">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="5c602-105">See also</span></span>
+- [<span data-ttu-id="5c602-106">Documenti</span><span class="sxs-lookup"><span data-stu-id="5c602-106">Documents</span></span>](../../../../docs/framework/wpf/advanced/documents.md)
+- [<span data-ttu-id="5c602-107">Serializzazione e archiviazione di documenti</span><span class="sxs-lookup"><span data-stu-id="5c602-107">Document Serialization and Storage</span></span>](../../../../docs/framework/wpf/advanced/document-serialization-and-storage.md)
+- [<span data-ttu-id="5c602-108">Panoramica della stampa</span><span class="sxs-lookup"><span data-stu-id="5c602-108">Printing Overview</span></span>](../../../../docs/framework/wpf/advanced/printing-overview.md)
