@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d057201c7d7bec3070027bb1d9de62735d583cf6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 40d05ee60d0183337e67b1f36722dff29ae9beaf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429002"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663544"
 ---
-# <a name="isymunmanagedwritersetmethodsourcerange-method"></a><span data-ttu-id="91e80-102">Metodo ISymUnmanagedWriter::SetMethodSourceRange</span><span class="sxs-lookup"><span data-stu-id="91e80-102">ISymUnmanagedWriter::SetMethodSourceRange Method</span></span>
-<span data-ttu-id="91e80-103">Specifica l'inizio e fine di un metodo all'interno di un file di origine.</span><span class="sxs-lookup"><span data-stu-id="91e80-103">Specifies the true start and end of a method within a source file.</span></span> <span data-ttu-id="91e80-104">Utilizzare questo metodo per specificare l'estensione di un metodo in modo indipendente da punti di sequenza che esiste all'interno del metodo.</span><span class="sxs-lookup"><span data-stu-id="91e80-104">Use this method to specify the extent of a method independently of the sequence points that exist within the method.</span></span>  
+# <a name="isymunmanagedwritersetmethodsourcerange-method"></a><span data-ttu-id="b8269-102">Metodo ISymUnmanagedWriter::SetMethodSourceRange</span><span class="sxs-lookup"><span data-stu-id="b8269-102">ISymUnmanagedWriter::SetMethodSourceRange Method</span></span>
+<span data-ttu-id="b8269-103">Specifica l'inizio e fine di un metodo all'interno di un file di origine.</span><span class="sxs-lookup"><span data-stu-id="b8269-103">Specifies the true start and end of a method within a source file.</span></span> <span data-ttu-id="b8269-104">Utilizzare questo metodo per specificare l'estensione di un metodo indipendentemente dal punti di sequenza che esiste all'interno del metodo.</span><span class="sxs-lookup"><span data-stu-id="b8269-104">Use this method to specify the extent of a method independently of the sequence points that exist within the method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="91e80-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="91e80-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b8269-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="b8269-105">Syntax</span></span>  
   
 ```  
 HRESULT SetMethodSourceRange(  
@@ -39,30 +39,30 @@ HRESULT SetMethodSourceRange(
     [in] ULONG32                      endColumn);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="91e80-106">Parametri</span><span class="sxs-lookup"><span data-stu-id="91e80-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="b8269-106">Parametri</span><span class="sxs-lookup"><span data-stu-id="b8269-106">Parameters</span></span>  
  `startDoc`  
- <span data-ttu-id="91e80-107">[in] Puntatore al documento contenente la posizione iniziale.</span><span class="sxs-lookup"><span data-stu-id="91e80-107">[in] A pointer to the document containing the starting position.</span></span>  
+ <span data-ttu-id="b8269-107">[in] Puntatore al documento che contiene la posizione iniziale.</span><span class="sxs-lookup"><span data-stu-id="b8269-107">[in] A pointer to the document containing the starting position.</span></span>  
   
  `startLine`  
- <span data-ttu-id="91e80-108">[in] Il numero di riga iniziale.</span><span class="sxs-lookup"><span data-stu-id="91e80-108">[in] The starting line number.</span></span>  
+ <span data-ttu-id="b8269-108">[in] Il numero di riga iniziale.</span><span class="sxs-lookup"><span data-stu-id="b8269-108">[in] The starting line number.</span></span>  
   
  `startColumn`  
- <span data-ttu-id="91e80-109">[in] Colonna iniziale.</span><span class="sxs-lookup"><span data-stu-id="91e80-109">[in] The starting column.</span></span>  
+ <span data-ttu-id="b8269-109">[in] La colonna iniziale.</span><span class="sxs-lookup"><span data-stu-id="b8269-109">[in] The starting column.</span></span>  
   
  `endDoc`  
- <span data-ttu-id="91e80-110">[in] Puntatore al documento contenente la posizione finale.</span><span class="sxs-lookup"><span data-stu-id="91e80-110">[in] A pointer to the document containing the ending position.</span></span>  
+ <span data-ttu-id="b8269-110">[in] Puntatore al documento contenente la posizione finale.</span><span class="sxs-lookup"><span data-stu-id="b8269-110">[in] A pointer to the document containing the ending position.</span></span>  
   
  `endLine`  
- <span data-ttu-id="91e80-111">[in] Numero di riga finale.</span><span class="sxs-lookup"><span data-stu-id="91e80-111">[in] The ending line number.</span></span>  
+ <span data-ttu-id="b8269-111">[in] Numero di riga finale.</span><span class="sxs-lookup"><span data-stu-id="b8269-111">[in] The ending line number.</span></span>  
   
  `endColumn`  
- <span data-ttu-id="91e80-112">[in] Numero di colonna finale.</span><span class="sxs-lookup"><span data-stu-id="91e80-112">[in] The ending column number.</span></span>  
+ <span data-ttu-id="b8269-112">[in] Numero della colonna finale.</span><span class="sxs-lookup"><span data-stu-id="b8269-112">[in] The ending column number.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="91e80-113">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="91e80-113">Return Value</span></span>  
- <span data-ttu-id="91e80-114">S_OK se il metodo ha esito positivo. in caso contrario, E_FAIL o un altro codice di errore.</span><span class="sxs-lookup"><span data-stu-id="91e80-114">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="b8269-113">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="b8269-113">Return Value</span></span>  
+ <span data-ttu-id="b8269-114">S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o qualche altro codice di errore.</span><span class="sxs-lookup"><span data-stu-id="b8269-114">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="91e80-115">Requisiti</span><span class="sxs-lookup"><span data-stu-id="91e80-115">Requirements</span></span>  
- <span data-ttu-id="91e80-116">**Intestazione:** CorSym. idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="91e80-116">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b8269-115">Requisiti</span><span class="sxs-lookup"><span data-stu-id="b8269-115">Requirements</span></span>  
+ <span data-ttu-id="b8269-116">**Intestazione:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="b8269-116">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="91e80-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="91e80-117">See Also</span></span>  
- [<span data-ttu-id="91e80-118">Interfaccia ISymUnmanagedWriter</span><span class="sxs-lookup"><span data-stu-id="91e80-118">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+## <a name="see-also"></a><span data-ttu-id="b8269-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b8269-117">See also</span></span>
+- [<span data-ttu-id="b8269-118">Interfaccia ISymUnmanagedWriter</span><span class="sxs-lookup"><span data-stu-id="b8269-118">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

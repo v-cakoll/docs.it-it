@@ -1,18 +1,18 @@
 ---
-title: 'File XML di esempio: Tipico ordine di acquisto in uno spazio dei nomi3'
+title: 'File XML di esempio: Ordine di acquisto tipico in uno spazio dei nomi3'
 ms.date: 07/20/2015
 ms.assetid: 38260901-c9f9-4240-9cbf-652c8b05021d
-ms.openlocfilehash: 94aa8d39b351a55183b7164bd4ceca875742f17d
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 2929900865814127250acb2e24c7f674995705da
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244826"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646029"
 ---
-# <a name="sample-xml-file-typical-purchase-order-in-a-namespace"></a><span data-ttu-id="416e5-102">File XML di esempio: tipico ordine di acquisto in uno spazio dei nomi</span><span class="sxs-lookup"><span data-stu-id="416e5-102">Sample XML File: Typical Purchase Order in a Namespace</span></span>
-<span data-ttu-id="416e5-103">Il file XML seguente viene usato in vari esempi nella documentazione di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="416e5-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="416e5-104">Si tratta di un ordine di acquisto tipico.</span><span class="sxs-lookup"><span data-stu-id="416e5-104">This file is a typical purchase order.</span></span> <span data-ttu-id="416e5-105">L'XML si trova in uno spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="416e5-105">The XML is in a namespace.</span></span>  
+# <a name="sample-xml-file-typical-purchase-order-in-a-namespace"></a><span data-ttu-id="f3e0c-102">File XML di esempio: Ordine di acquisto tipico in un Namespace</span><span class="sxs-lookup"><span data-stu-id="f3e0c-102">Sample XML File: Typical Purchase Order in a Namespace</span></span>
+<span data-ttu-id="f3e0c-103">Il file XML seguente viene usato in vari esempi nella documentazione di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="f3e0c-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="f3e0c-104">Si tratta di un ordine di acquisto tipico.</span><span class="sxs-lookup"><span data-stu-id="f3e0c-104">This file is a typical purchase order.</span></span> <span data-ttu-id="f3e0c-105">L'XML si trova in uno spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="f3e0c-105">The XML is in a namespace.</span></span>  
   
-## <a name="purchaseorderinnamespacexml"></a><span data-ttu-id="416e5-106">PurchaseOrderInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="416e5-106">PurchaseOrderInNamespace.xml</span></span>  
+## <a name="purchaseorderinnamespacexml"></a><span data-ttu-id="f3e0c-106">PurchaseOrderInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="f3e0c-106">PurchaseOrderInNamespace.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -54,5 +54,5 @@ ms.locfileid: "39244826"
 </aw:PurchaseOrder>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="416e5-107">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="416e5-107">See Also</span></span>  
- [<span data-ttu-id="416e5-108">Documenti XML di esempio (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="416e5-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="f3e0c-107">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="f3e0c-107">See also</span></span>
+- [<span data-ttu-id="f3e0c-108">Documenti XML di esempio (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="f3e0c-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
