@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f50a5cb1f16be44b03cd94b69fdf32efa9e9007b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5227de340bec85620f8c8d45538ad9a9d7f688fb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425142"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54630957"
 ---
-# <a name="isymunmanagedreadergetnamespaces-method"></a><span data-ttu-id="c76ec-102">Metodo ISymUnmanagedReader::GetNamespaces</span><span class="sxs-lookup"><span data-stu-id="c76ec-102">ISymUnmanagedReader::GetNamespaces Method</span></span>
-<span data-ttu-id="c76ec-103">Ottiene gli spazi dei nomi definiti in ambito globale all'interno dell'archivio simboli.</span><span class="sxs-lookup"><span data-stu-id="c76ec-103">Gets the namespaces defined at global scope within this symbol store.</span></span>  
+# <a name="isymunmanagedreadergetnamespaces-method"></a><span data-ttu-id="f2014-102">Metodo ISymUnmanagedReader::GetNamespaces</span><span class="sxs-lookup"><span data-stu-id="f2014-102">ISymUnmanagedReader::GetNamespaces Method</span></span>
+<span data-ttu-id="f2014-103">Ottiene gli spazi dei nomi definiti in ambito globale all'interno di questo archivio dei simboli.</span><span class="sxs-lookup"><span data-stu-id="f2014-103">Gets the namespaces defined at global scope within this symbol store.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c76ec-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="c76ec-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f2014-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="f2014-104">Syntax</span></span>  
   
 ```  
 HRESULT GetNamespaces (  
@@ -38,21 +38,21 @@ HRESULT GetNamespaces (
         ISymUnmanagedNamespace*  namespaces[]);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="c76ec-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="c76ec-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="f2014-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="f2014-105">Parameters</span></span>  
  `cNameSpaces`  
- <span data-ttu-id="c76ec-106">[in] Le dimensioni della matrice di spazi dei nomi.</span><span class="sxs-lookup"><span data-stu-id="c76ec-106">[in] The size of the namespaces array.</span></span>  
+ <span data-ttu-id="f2014-106">[in] Le dimensioni della matrice di spazi dei nomi.</span><span class="sxs-lookup"><span data-stu-id="f2014-106">[in] The size of the namespaces array.</span></span>  
   
  `pcNameSpaces`  
- <span data-ttu-id="c76ec-107">[out] Un puntatore a una variabile che riceve la lunghezza dell'elenco dello spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="c76ec-107">[out] A pointer to a variable that receives the length of the namespace list.</span></span>  
+ <span data-ttu-id="f2014-107">[out] Un puntatore a una variabile che riceve la lunghezza dell'elenco lo spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="f2014-107">[out] A pointer to a variable that receives the length of the namespace list.</span></span>  
   
  `namespaces`  
- <span data-ttu-id="c76ec-108">[out] Un puntatore a una variabile che riceve l'elenco di spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="c76ec-108">[out] A pointer to a variable that receives the namespace list.</span></span>  
+ <span data-ttu-id="f2014-108">[out] Puntatore a una variabile che riceve l'elenco di spazi dei nomi.</span><span class="sxs-lookup"><span data-stu-id="f2014-108">[out] A pointer to a variable that receives the namespace list.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="c76ec-109">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="c76ec-109">Return Value</span></span>  
- <span data-ttu-id="c76ec-110">S_OK se il metodo ha esito positivo. in caso contrario, E_FAIL o un altro codice di errore.</span><span class="sxs-lookup"><span data-stu-id="c76ec-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="f2014-109">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="f2014-109">Return Value</span></span>  
+ <span data-ttu-id="f2014-110">S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o qualche altro codice di errore.</span><span class="sxs-lookup"><span data-stu-id="f2014-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c76ec-111">Requisiti</span><span class="sxs-lookup"><span data-stu-id="c76ec-111">Requirements</span></span>  
- <span data-ttu-id="c76ec-112">**Intestazione:** CorSym. idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="c76ec-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f2014-111">Requisiti</span><span class="sxs-lookup"><span data-stu-id="f2014-111">Requirements</span></span>  
+ <span data-ttu-id="f2014-112">**Intestazione:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="f2014-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c76ec-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c76ec-113">See Also</span></span>  
- [<span data-ttu-id="c76ec-114">Interfaccia ISymUnmanagedReader</span><span class="sxs-lookup"><span data-stu-id="c76ec-114">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a><span data-ttu-id="f2014-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="f2014-113">See also</span></span>
+- [<span data-ttu-id="f2014-114">Interfaccia ISymUnmanagedReader</span><span class="sxs-lookup"><span data-stu-id="f2014-114">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

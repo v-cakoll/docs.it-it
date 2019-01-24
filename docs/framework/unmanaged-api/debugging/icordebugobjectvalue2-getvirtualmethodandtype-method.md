@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c9a6978f35b5ea9fb71f8e933dbc7a08b1c390ad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: af07df53c094654ab86f5e6531fd78124aded988
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416501"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54630892"
 ---
-# <a name="icordebugobjectvalue2getvirtualmethodandtype-method"></a><span data-ttu-id="18633-102">Metodo ICorDebugObjectValue2::GetVirtualMethodAndType</span><span class="sxs-lookup"><span data-stu-id="18633-102">ICorDebugObjectValue2::GetVirtualMethodAndType Method</span></span>
-<span data-ttu-id="18633-103">Questo metodo non è ancora implementato.</span><span class="sxs-lookup"><span data-stu-id="18633-103">This method is not yet implemented.</span></span>  
+# <a name="icordebugobjectvalue2getvirtualmethodandtype-method"></a><span data-ttu-id="3228f-102">Metodo ICorDebugObjectValue2::GetVirtualMethodAndType</span><span class="sxs-lookup"><span data-stu-id="3228f-102">ICorDebugObjectValue2::GetVirtualMethodAndType Method</span></span>
+<span data-ttu-id="3228f-103">Questo metodo non è ancora implementato.</span><span class="sxs-lookup"><span data-stu-id="3228f-103">This method is not yet implemented.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="18633-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="18633-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3228f-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="3228f-104">Syntax</span></span>  
   
 ```  
 HRESULT GetVirtualMethodAndType (  
@@ -37,9 +37,9 @@ HRESULT GetVirtualMethodAndType (
 );  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="18633-105">Note</span><span class="sxs-lookup"><span data-stu-id="18633-105">Remarks</span></span>  
- <span data-ttu-id="18633-106">Ottiene puntatori a interfaccia alle istanze di "ICorDebugFunction" e "ICorDebugType" che rappresentano più derivati (metodo) e il tipo per il riferimento al membro specificato.</span><span class="sxs-lookup"><span data-stu-id="18633-106">Gets interface pointers to the "ICorDebugFunction" and "ICorDebugType" instances that represent the most derived method and type for the specified member reference.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="3228f-105">Note</span><span class="sxs-lookup"><span data-stu-id="3228f-105">Remarks</span></span>  
+ <span data-ttu-id="3228f-106">Ottiene i interfaccia puntatori alle istanze di "ICorDebugFunction" e "ICorDebugType" che rappresentano il metodo più derivata e il tipo per il riferimento al membro specificato.</span><span class="sxs-lookup"><span data-stu-id="3228f-106">Gets interface pointers to the "ICorDebugFunction" and "ICorDebugType" instances that represent the most derived method and type for the specified member reference.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="18633-107">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="18633-107">See Also</span></span>  
-    
- 
+## <a name="see-also"></a><span data-ttu-id="3228f-107">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="3228f-107">See also</span></span>
+
+

@@ -2,23 +2,23 @@
 title: ComPlusInvokingMethodFailedMismatchedTransactions
 ms.date: 03/30/2017
 ms.assetid: d13f1978-ff42-443a-939f-75c8c8d50286
-ms.openlocfilehash: 475fd023e65ec8d5bdfbd1aa608bdb11971d22e1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 87692b06403d8630217a1bf92160fe286be2187a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33467692"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54615299"
 ---
-# <a name="complusinvokingmethodfailedmismatchedtransactions"></a><span data-ttu-id="6e341-102">ComPlusInvokingMethodFailedMismatchedTransactions</span><span class="sxs-lookup"><span data-stu-id="6e341-102">ComPlusInvokingMethodFailedMismatchedTransactions</span></span>
-<span data-ttu-id="6e341-103">Id: 135</span><span class="sxs-lookup"><span data-stu-id="6e341-103">Id: 135</span></span>  
+# <a name="complusinvokingmethodfailedmismatchedtransactions"></a><span data-ttu-id="44e8b-102">ComPlusInvokingMethodFailedMismatchedTransactions</span><span class="sxs-lookup"><span data-stu-id="44e8b-102">ComPlusInvokingMethodFailedMismatchedTransactions</span></span>
+<span data-ttu-id="44e8b-103">Id: 135</span><span class="sxs-lookup"><span data-stu-id="44e8b-103">Id: 135</span></span>  
   
- <span data-ttu-id="6e341-104">Gravità: errore</span><span class="sxs-lookup"><span data-stu-id="6e341-104">Severity: Error</span></span>  
+ <span data-ttu-id="44e8b-104">Gravità: Error</span><span class="sxs-lookup"><span data-stu-id="44e8b-104">Severity: Error</span></span>  
   
- <span data-ttu-id="6e341-105">Categoria: ServiceModel</span><span class="sxs-lookup"><span data-stu-id="6e341-105">Category: ServiceModel</span></span>  
+ <span data-ttu-id="44e8b-105">Categoria: ServiceModel</span><span class="sxs-lookup"><span data-stu-id="44e8b-105">Category: ServiceModel</span></span>  
   
-## <a name="description"></a><span data-ttu-id="6e341-106">Descrizione</span><span class="sxs-lookup"><span data-stu-id="6e341-106">Description</span></span>  
- <span data-ttu-id="6e341-107">ComPlus: transazione non corrispondente nella chiamata del metodo.</span><span class="sxs-lookup"><span data-stu-id="6e341-107">ComPlus: Method call transaction mismatch.</span></span>  
+## <a name="description"></a><span data-ttu-id="44e8b-106">Descrizione</span><span class="sxs-lookup"><span data-stu-id="44e8b-106">Description</span></span>  
+ <span data-ttu-id="44e8b-107">ComPlus: Mancata corrispondenza della transazione metodo chiamata.</span><span class="sxs-lookup"><span data-stu-id="44e8b-107">ComPlus: Method call transaction mismatch.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6e341-108">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="6e341-108">See Also</span></span>  
- [<span data-ttu-id="6e341-109">Registrazione eventi</span><span class="sxs-lookup"><span data-stu-id="6e341-109">Event Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
- [<span data-ttu-id="6e341-110">Riferimenti generali sugli eventi</span><span class="sxs-lookup"><span data-stu-id="6e341-110">Events General Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+## <a name="see-also"></a><span data-ttu-id="44e8b-108">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="44e8b-108">See also</span></span>
+- [<span data-ttu-id="44e8b-109">Registrazione eventi</span><span class="sxs-lookup"><span data-stu-id="44e8b-109">Event Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
+- [<span data-ttu-id="44e8b-110">Riferimenti generali sugli eventi</span><span class="sxs-lookup"><span data-stu-id="44e8b-110">Events General Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
