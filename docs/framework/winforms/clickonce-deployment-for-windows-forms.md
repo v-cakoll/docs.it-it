@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Forms, ClickOnce deployment
 - walkthroughs [Windows Forms], ClickOnce deployment
 ms.assetid: 1451fce9-1965-4a03-b4d3-831b5fe4ad66
-ms.openlocfilehash: 0b76e07a23b105f2c1b4fb55a0d25bb52bcb9dc2
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 0b3b92e29c5de7365cbf1196a387bc0c9c440755
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44192041"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582090"
 ---
 # <a name="clickonce-deployment-for-windows-forms"></a>Distribuzione ClickOnce per Windows Form
 Gli argomenti riportati di seguito descrivono la tecnologia [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)], usata per semplificare la distribuzione delle applicazioni Windows Form ai computer client.  
@@ -38,7 +38,7 @@ Gli argomenti riportati di seguito descrivono la tecnologia [!INCLUDE[ndptecclic
  [ClickOnce e Authenticode](/visualstudio/deployment/clickonce-and-authenticode)  
  Descrive l'uso della tecnologia Authenticode nella distribuzione di applicazioni trusted.  
   
- [Procedura dettagliata: distribuzione manuale di un'applicazione ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)  
+ [Procedura dettagliata: Distribuzione manuale di un'applicazione ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)  
  Illustra l'uso della riga di comando e degli strumenti SDK per distribuire un'applicazione [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] senza usare Visual Studio.  
   
  [Procedura: Aggiungere un autore attendibile a un computer client per applicazioni ClickOnce](/visualstudio/deployment/how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications)  
@@ -47,7 +47,7 @@ Gli argomenti riportati di seguito descrivono la tecnologia [!INCLUDE[ndptecclic
  [Procedura: Specificare un percorso alternativo per gli aggiornamenti della distribuzione](/visualstudio/deployment/how-to-specify-an-alternate-location-for-deployment-updates)  
  Illustra la configurazione di un'applicazione [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)], mediante gli strumenti SDK, per verificare la presenza di un percorso diverso per le nuove versioni di un'applicazione.  
   
- [Procedura dettagliata: download di assembly su richiesta con l'API della distribuzione ClickOnce](/visualstudio/deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api)  
+ [Procedura dettagliata: Download di assembly su richiesta con l'API della distribuzione ClickOnce](/visualstudio/deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api)  
  Illustra l'uso delle chiamate alle API per recuperare un assembly quando l'applicazione tenta di caricarlo per la prima volta.  
   
  [Procedura: Recuperare informazioni sulle stringhe di query in un'applicazione ClickOnce online](/visualstudio/deployment/how-to-retrieve-query-string-information-in-an-online-clickonce-application)  
@@ -62,10 +62,10 @@ Gli argomenti riportati di seguito descrivono la tecnologia [!INCLUDE[ndptecclic
  [Procedura: Includere un file di dati in un'applicazione ClickOnce](/visualstudio/deployment/how-to-include-a-data-file-in-a-clickonce-application)  
  Illustra come contrassegnare un file per renderlo disponibile nella directory di dati [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)].  
   
-## <a name="see-also"></a>Vedere anche  
- [Cenni preliminari sulle impostazioni delle applicazioni](../../../docs/framework/winforms/advanced/application-settings-overview.md)  
- [Pubblicazione di applicazioni ClickOnce](/visualstudio/deployment/publishing-clickonce-applications)  
- [Compilazione di applicazioni ClickOnce dalla riga di comando](/visualstudio/deployment/building-clickonce-applications-from-the-command-line)  
- [Debug di applicazioni ClickOnce in cui si usa System.Deployment.Application](https://msdn.microsoft.com/library/86f31948-2ca8-47c0-8e8b-c2b817bbf79f)  
- [Distribuzione di componenti COM con ClickOnce](/visualstudio/deployment/deploying-com-components-with-clickonce)  
- [Procedura: Pubblicare un'applicazione ClickOnce mediante la Pubblicazione guidata](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)
+## <a name="see-also"></a>Vedere anche
+- [Cenni preliminari sulle impostazioni delle applicazioni](../../../docs/framework/winforms/advanced/application-settings-overview.md)
+- [Pubblicazione di applicazioni ClickOnce](/visualstudio/deployment/publishing-clickonce-applications)
+- [Compilazione di applicazioni ClickOnce dalla riga di comando](/visualstudio/deployment/building-clickonce-applications-from-the-command-line)
+- [Debug di applicazioni ClickOnce in cui si usa System.Deployment.Application](https://msdn.microsoft.com/library/86f31948-2ca8-47c0-8e8b-c2b817bbf79f)
+- [Distribuzione di componenti COM con ClickOnce](/visualstudio/deployment/deploying-com-components-with-clickonce)
+- [Procedura: Pubblicare un'applicazione ClickOnce mediante la Pubblicazione guidata](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)

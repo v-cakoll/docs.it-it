@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f67bd427c83385b2433b9f2e97f0b54e3b29a76f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d6dc245a53c9ec7cbe56e20313abc4269e33f45c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401063"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582318"
 ---
 # <a name="icordebugclassgettoken-method"></a>Metodo ICorDebugClass::GetToken
 Ottiene il `TypeDef` token di metadati che fa riferimento alla definizione di questa classe.  
@@ -37,16 +37,16 @@ HRESULT GetToken (
   
 #### <a name="parameters"></a>Parametri  
  `pTypeDef`  
- [out] Un puntatore a un `mdTypeDef` token che fa riferimento la definizione di questa classe.  
+ [out] Un puntatore a un `mdTypeDef` token che fa riferimento alla definizione di questa classe.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfacce di metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfacce di metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)

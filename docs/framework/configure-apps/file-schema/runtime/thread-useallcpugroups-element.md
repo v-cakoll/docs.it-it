@@ -1,17 +1,17 @@
 ---
-title: '&lt;Thread_UseAllCpuGroups&gt; elemento'
+title: '&lt;Thread_UseAllCpuGroups&gt; Element'
 ms.date: 03/30/2017
 ms.assetid: d30fe7c5-8469-46e2-b804-e3eec7b24256
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8a3984d594d0739d4b8f2b7b165aab434e10ab80
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 80f67502c61df13b17cfb3b75564d710e5fad2f9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611009"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54579941"
 ---
-# <a name="ltthreaduseallcpugroupsgt-element"></a>&lt;Thread_UseAllCpuGroups&gt; elemento
+# <a name="ltthreaduseallcpugroupsgt-element"></a>&lt;Thread_UseAllCpuGroups&gt; Element
 Specifica se il runtime distribuisce i thread gestiti tra tutti i gruppi di CPU.  
   
  \<configuration>  
@@ -67,7 +67,7 @@ Specifica se il runtime distribuisce i thread gestiti tra tutti i gruppi di CPU.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
-- [Schema delle impostazioni di runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+## <a name="see-also"></a>Vedere anche
+- [Schema delle impostazioni di runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [\<GCCpuGroup > elemento](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md)

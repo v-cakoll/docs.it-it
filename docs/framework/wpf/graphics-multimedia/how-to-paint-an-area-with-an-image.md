@@ -1,5 +1,5 @@
 ---
-title: "Procedura: disegnare un'area con un'immagine"
+title: "Procedura: Disegnare un'area con un'immagine"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - painting [WPF], with images
 - brushes [WPF], painting with images
 ms.assetid: 3432c533-1fc7-492d-94ee-0b13d60125ae
-ms.openlocfilehash: 5899531291c22ada76213905d0f2ca6944fcbba7
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 8c855a81b1bf7cccb59fe22fb2a2056f18ccae72
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857206"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580740"
 ---
-# <a name="how-to-paint-an-area-with-an-image"></a>Procedura: disegnare un'area con un'immagine
+# <a name="how-to-paint-an-area-with-an-image"></a>Procedura: Disegnare un'area con un'immagine
 In questo esempio viene illustrato come utilizzare il <xref:System.Windows.Media.ImageBrush> classe disegnare un'area con un'immagine. Un' <xref:System.Windows.Media.ImageBrush> Visualizza una singola immagine specificata dal relativo <xref:System.Windows.Media.ImageBrush.ImageSource%2A> proprietà.  
   
 ## <a name="example"></a>Esempio  
@@ -35,5 +35,5 @@ In questo esempio viene illustrato come utilizzare il <xref:System.Windows.Media
   
  Questo esempio di codice fa parte di un esempio più esaustivo fornito per il <xref:System.Windows.Media.ImageBrush> classe. Per l'esempio completo, vedere [esempio ImageBrush](https://go.microsoft.com/fwlink/?LinkID=160005).  
   
-## <a name="see-also"></a>Vedere anche  
- [Disegnare con oggetti Image, Drawing e Visual](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+## <a name="see-also"></a>Vedere anche
+- [Disegnare con oggetti Image, Drawing e Visual](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)

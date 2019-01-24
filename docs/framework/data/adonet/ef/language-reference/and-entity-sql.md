@@ -1,14 +1,15 @@
 ---
-title: '&amp;&amp; (E) (Entity SQL)'
+title: '&amp;&amp; (AND) (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: e7d24213-471d-4807-b85e-570375df89b5
-ms.openlocfilehash: 649b805c1d728c45120adf85f02533d36f7bcdff
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 6ee7987f2801a35fb9669472ce7b237e684f64e1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54579667"
 ---
-# <a name="ampamp-and-entity-sql"></a>&amp;&amp; (E) (Entity SQL)
+# <a name="ampamp-and-entity-sql"></a>&amp;&amp; (AND) (Entity SQL)
 Restituisce `true` se entrambe le espressioni sono `true`; in caso contrario, restituisce `false` o `NULL`.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -37,11 +38,11 @@ boolean_expression && boolean_expression
 ## <a name="example"></a>Esempio  
  Nella query Entity SQL seguente viene illustrato come usare l'operatore AND. La query è basata sul modello Sales di AdventureWorks. Per compilare ed eseguire questa query, effettuare le operazioni seguenti:  
   
-1.  Seguire la procedura indicata in [Procedura: eseguire una query che restituisce risultati StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1.  Attenersi alla procedura di [come: Eseguire una Query che restituisce risultati StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
 2.  Passare la query seguente come argomento al metodo `ExecuteStructuralTypeQuery` :  
   
  [!code-csharp[DP EntityServices Concepts 2#AND](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#and)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Riferimento a Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a>Vedere anche
+- [Riferimento a Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

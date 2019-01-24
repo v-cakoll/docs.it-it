@@ -2,12 +2,12 @@
 title: Differenze tra programmazione funzionale e Programmazione imperativa (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 6a1f3b57-00e6-447d-9906-74c7c4d5d85c
-ms.openlocfilehash: 63d3801a393b242bce8b497e2c983534a6996c6f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 762889717d2b20d5a06848ebaa41f3e066a8c061
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644277"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54579810"
 ---
 # <a name="functional-programming-vs-imperative-programming-visual-basic"></a>Differenze tra programmazione funzionale e Programmazione imperativa (Visual Basic)
 In questo argomento vengono presentate le differenze tra la programmazione funzionale e la più tradizionale programmazione imperativa (procedurale).  
@@ -25,12 +25,12 @@ In questo argomento vengono presentate le differenze tra la programmazione funzi
 |Controllo del flusso primario|Cicli, condizionali e chiamate di funzioni (metodi).|Chiamate di funzioni, inclusa la ricorsione.|  
 |Unità di modifica primaria|Istanze di strutture o classi.|Funzioni come oggetti e raccolte dati di prima classe.|  
   
- Anche se la maggior parte dei linguaggi è progettata per supportare un paradigma di programmazione specifico, i linguaggi generici sono in genere sufficientemente flessibili da supportare più paradigmi. Ad esempio, è possibile usare la maggior parte dei linguaggi che contengono puntatori a funzioni per supportare efficacemente la programmazione funzionale. Inoltre, Visual Basic include estensioni del linguaggio esplicite per supportare la programmazione funzionale, tra cui espressioni lambda e inferenza del tipo. La tecnologia LINQ è un tipo di programmazione funzionale e dichiarativa.  
+ Anche se la maggior parte dei linguaggi è progettata per supportare un paradigma di programmazione specifico, i linguaggi generici sono in genere sufficientemente flessibili da supportare più paradigmi. Ad esempio, è possibile usare la maggior parte dei linguaggi che contengono puntatori a funzioni per supportare efficacemente la programmazione funzionale. Inoltre, Visual Basic include le estensioni del linguaggio esplicite per supportare la programmazione funzionale, tra cui espressioni lambda e inferenza del tipo. La tecnologia LINQ è un tipo di programmazione funzionale e dichiarativa.  
   
 ## <a name="functional-programming-using-xslt"></a>Programmazione funzionale tramite XSLT  
  Gli sviluppatori XSLT hanno in genere una certa familiarità con l'approccio funzionale. Il modo più efficace per sviluppare un foglio di stile XSLT consiste nel considerare ogni modello come una trasformazione isolata e componibile. All'ordine di esecuzione non viene data alcuna importanza. XSLT non consente effetti collaterali, con l'eccezione che i meccanismi di escape per l'esecuzione di codice procedurale può introdurre effetti collaterali che pregiudicano la purezza funzionale. Tuttavia, pur essendo uno strumento efficace, alcune caratteristiche di XSLT non sono ottimali. Ad esempio, l'espressione di costrutti di programmazione in XML rende il codice relativamente dettagliato e pertanto difficile da mantenere. Inoltre, l'affidamento eccessivo alla ricorsione per il controllo del flusso può generare codice difficile da leggere. Per altre informazioni su XSLT, vedere [Trasformazioni XSLT](../../../../standard/data/xml/xslt-transformations.md).  
   
- Tuttavia, XSLT ha dimostrato il vantaggio dell'utilizzo di un approccio funzionale puro per trasformare XML da una forma a un'altra. La programmazione funzionale con LINQ to XML è simile a XSLT per molti aspetti. Tuttavia, i costrutti di programmazione introdotti da LINQ t XML e Visual Basic consentono di scrivere trasformazioni funzionali pure che risultano più leggibile e conservabile rispetto a XSLT.  
+ Tuttavia, XSLT ha dimostrato il vantaggio dell'utilizzo di un approccio funzionale puro per trasformare XML da una forma a un'altra. La programmazione funzionale con LINQ to XML è simile a XSLT per molti aspetti. Tuttavia, i costrutti di programmazione introdotti da LINQ to XML e Visual Basic consentono di scrivere trasformazioni funzionali pure che risultano più leggibile e facile da gestire rispetto a XSLT.  
   
 ## <a name="advantages-of-pure-functions"></a>Vantaggi delle funzioni pure  
  Il motivo principale per implementare le trasformazioni funzionali come funzioni pure è che le funzioni pure sono componibili, ossia sono autonome e senza stato. Queste caratteristiche offrono numerosi vantaggi, tra cui quelli riportati di seguito:  
@@ -48,9 +48,9 @@ In questo argomento vengono presentate le differenze tra la programmazione funzi
   
  Al contrario, l'approccio della programmazione funzionale ai problemi si traduce nella valutazione di trasformazioni funzionali pure di raccolte dati. Nella programmazione funzionale vengono evitati i dati di stato e modificabili e viene data invece una maggiore enfasi all'applicazione di funzioni.  
   
- Fortunatamente, Visual Basic non è necessario passare completamente alla programmazione funzionale, poiché supporta gli approcci di programmazione imperativi sia funzionanti. Gli sviluppatori possono scegliere l'approccio più appropriato per un determinato scenario. In effetti, nei programmi vengono spesso combinati entrambi gli approcci.  
+ Fortunatamente, Visual Basic non richiede passare completamente alla programmazione funzionale, perché supporta gli approcci di programmazione di approccio imperativi e funzionali. Gli sviluppatori possono scegliere l'approccio più appropriato per un determinato scenario. In effetti, nei programmi vengono spesso combinati entrambi gli approcci.  
   
-## <a name="see-also"></a>Vedere anche  
- [Introduzione alle trasformazioni funzionali Pure (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
- [Trasformazioni XSLT](../../../../standard/data/xml/xslt-transformations.md)  
- [Refactoring in funzioni Pure (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+## <a name="see-also"></a>Vedere anche
+- [Introduzione alle trasformazioni funzionali Pure (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
+- [Trasformazioni XSLT](../../../../standard/data/xml/xslt-transformations.md)
+- [Refactoring in funzioni Pure (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

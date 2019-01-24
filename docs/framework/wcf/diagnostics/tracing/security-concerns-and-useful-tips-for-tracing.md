@@ -2,12 +2,12 @@
 title: Problemi di sicurezza e suggerimenti utili per la traccia
 ms.date: 03/30/2017
 ms.assetid: 88bc2880-ecb9-47cd-9816-39016a07076f
-ms.openlocfilehash: 439484cf5df6311bef56be0e28e5949c79d9a8f4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0dadf89ecbd7623735debe37355761aea3d62db4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50184846"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580395"
 ---
 # <a name="security-concerns-and-useful-tips-for-tracing"></a>Problemi di sicurezza e suggerimenti utili per la traccia
 In questo argomento viene descritto come proteggere informazioni riservate e vengono elencati suggerimenti utili durante l'utilizzo di WebHost.  
@@ -90,5 +90,5 @@ In questo argomento viene descritto come proteggere informazioni riservate e ven
   
  L'indirizzo IP del mittente del messaggio, inoltre, viene registrato una volta per ogni connessione per trasporti orientati alla connessione e una volta per ogni messaggio inviato diversamente. Ciò avviene senza il consenso del mittente. Questa registrazione, tuttavia, avviene solo ai livelli di traccia Informazioni o Dettagliato, ovvero i livelli non predefiniti né consigliati in produzione, tranne che per il debug attivo.  
   
-## <a name="see-also"></a>Vedere anche  
- [Traccia](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+## <a name="see-also"></a>Vedere anche
+- [Traccia](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)

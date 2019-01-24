@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8025ba1d-29c7-4407-841b-d5a3bed40b7a
-ms.openlocfilehash: 362ba0000c739c8fc216186514a63531e603c637
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d261418136cfc799e7891da02b2bd8174cf8340a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502021"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582080"
 ---
 # <a name="compiled-queries--linq-to-entities"></a>Query compilate (LINQ to Entities)
 Quando si usa un'applicazione che esegue molte volte query strutturalmente simili in Entity Framework, è spesso possibile migliorare le prestazioni compilando la query una volta ed eseguendola più volte con parametri diversi. Un'applicazione potrebbe ad esempio essere usata per recuperare tutti i clienti di una determinata città, specificata in fase di runtime dall'utente in un modulo. In LINQ to Entities è supportato l'uso di query compilate per questo scopo.  
@@ -68,7 +68,7 @@ Quando si usa un'applicazione che esegue molte volte query strutturalmente simil
  [!code-csharp[DP L2E Conceptual Examples#MyParamsStruct](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#myparamsstruct)]
  [!code-vb[DP L2E Conceptual Examples#MyParamsStruct](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#myparamsstruct)]  
   
-## <a name="see-also"></a>Vedere anche  
- [ADO.NET Entity Framework](../../../../../../docs/framework/data/adonet/ef/index.md)  
- [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)  
- [Opzioni di unione di Entity Framework e query compilate](https://go.microsoft.com/fwlink/?LinkId=199591)
+## <a name="see-also"></a>Vedere anche
+- [ADO.NET Entity Framework](../../../../../../docs/framework/data/adonet/ef/index.md)
+- [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)
+- [Opzioni di unione di Entity Framework e query compilate](https://go.microsoft.com/fwlink/?LinkId=199591)

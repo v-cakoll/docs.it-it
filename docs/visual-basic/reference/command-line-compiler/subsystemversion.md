@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -subsystemversion compiler option [Visual Basic]
 - subsystemversion compiler option [Visual Basic]
 ms.assetid: 08be22b2-f447-4cd3-8203-120b1b920b54
-ms.openlocfilehash: 9c4b4d66ba002e58af87ef39ea82a7a23caa15ca
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 7519bb648a92cab78b4e4594a9c68a85aa932863
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185758"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580916"
 ---
 # <a name="-subsystemversion-visual-basic"></a>-subsystemversion (Visual Basic)
 Specifica la versione minima del sottosistema in cui è possibile eseguire il file eseguibile generato, determinando le versioni di Windows in cui è possibile eseguire il file eseguibile. In genere, questa opzione assicura che il file eseguibile possa sfruttare le funzionalità di protezione che non sono disponibili con le versioni precedenti di Windows.  
@@ -64,7 +64,7 @@ Specifica la versione minima del sottosistema in cui è possibile eseguire il fi
   
 
   
-## <a name="see-also"></a>Vedere anche  
-[Compilatore della riga di comando di Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+## <a name="see-also"></a>Vedere anche
+- [Compilatore della riga di comando di Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 
-[Proprietà di MSBuild](/visualstudio/msbuild/msbuild-properties)
+- [Proprietà di MSBuild](/visualstudio/msbuild/msbuild-properties)

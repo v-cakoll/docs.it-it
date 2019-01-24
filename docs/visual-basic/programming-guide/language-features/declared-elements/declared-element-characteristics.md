@@ -13,12 +13,12 @@ helpviewer_keywords:
 - data types [Visual Basic], declared elements
 - declared elements [Visual Basic], visibility
 ms.assetid: 1bc40fb8-b67c-4428-90a4-76b630ae2583
-ms.openlocfilehash: 27dad8b2fbfbc8d17090df201bf36eb080966f51
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: c34175a90c2c9c247a37ac186a415a585d1d7e97
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44076924"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582257"
 ---
 # <a name="declared-element-characteristics-visual-basic"></a>Caratteristiche di elementi dichiarati (Visual Basic)
 Oggetto *caratteristica* di un elemento dichiarato è un aspetto di tale elemento che influisce sulla modalità di interazione con il codice. Ogni elemento dichiarato con uno o più delle caratteristiche seguenti associate:  
@@ -27,14 +27,14 @@ Oggetto *caratteristica* di un elemento dichiarato è un aspetto di tale element
   
 -   *Durata* , ovvero il periodo di tempo di esecuzione durante il quale l'elemento è disponibile per l'uso. Per altre informazioni, vedere [durata in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md).  
   
--   *Ambito* , ovvero il set di tutto il codice che può fare riferimento all'elemento senza il nome completo. Per altre informazioni, vedere [procedura: controllare l'ambito di una variabile](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md).  
+-   *Ambito* , ovvero il set di tutto il codice che può fare riferimento all'elemento senza il nome completo. Per altre informazioni, vedere [Procedura: Controllare l'ambito di una variabile](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md).  
   
--   *Livello di accesso* , ovvero l'autorizzazione per il codice all'utilizzo dell'elemento. Per altre informazioni, vedere [procedura: controllare la disponibilità di una variabile](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md).  
+-   *Livello di accesso* , ovvero l'autorizzazione per il codice all'utilizzo dell'elemento. Per altre informazioni, vedere [Procedura: Controllare la disponibilità di una variabile](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md).  
   
 ## <a name="characteristics-of-the-elements"></a>Caratteristiche degli elementi  
  La tabella seguente illustra gli elementi dichiarati e le caratteristiche che si applicano a ognuno di essi.  
   
-|Elemento|Tipo di dati|Durata|Ambito <sup>1</sup>|Livello di accesso|  
+|Elemento|Tipo di dati|Durata|Scope <sup>1</sup>|Livello di accesso|  
 |-------------|---------------|--------------|------------------------|------------------|  
 |Variabile|Yes|Yes|Yes|Yes|  
 |Costante|Yes|No|Yes|Yes|  
@@ -53,12 +53,12 @@ Oggetto *caratteristica* di un elemento dichiarato è un aspetto di tale element
   
  <sup>1</sup> ambito è talvolta detta *visibilità*.  
   
-## <a name="see-also"></a>Vedere anche  
- [Elementi dichiarati](../../../../visual-basic/programming-guide/language-features/declared-elements/index.md)  
- [Nomi di elementi dichiarati](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
- [Riferimenti a elementi dichiarati](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
- [Durata in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)  
- [Ambito in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)  
- [Livelli di accesso in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
- [Tipi di dati](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- [Dichiarazione di variabile](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+## <a name="see-also"></a>Vedere anche
+- [Elementi dichiarati](../../../../visual-basic/programming-guide/language-features/declared-elements/index.md)
+- [Nomi di elementi dichiarati](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
+- [Riferimenti a elementi dichiarati](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [Durata in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
+- [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Livelli di accesso in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Tipi di dati](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
+- [Dichiarazione di variabile](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)

@@ -1,20 +1,20 @@
 ---
-title: 'Procedura: trovare la differenza dei Set tra due elenchi (LINQ) (Visual Basic)'
+title: 'Procedura: Trovare la differenza dei Set tra due elenchi (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: b5b25474-10a8-4df6-aab5-75621bb6b68e
-ms.openlocfilehash: 77ff74788adddcd28e23028b034cd682f2d94233
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e1c012dbe252c494c5f77e61b56deccbb07490fc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33641252"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54579719"
 ---
-# <a name="how-to-find-the-set-difference-between-two-lists-linq-visual-basic"></a>Procedura: trovare la differenza dei Set tra due elenchi (LINQ) (Visual Basic)
+# <a name="how-to-find-the-set-difference-between-two-lists-linq-visual-basic"></a>Procedura: Trovare la differenza dei Set tra due elenchi (LINQ) (Visual Basic)
 In questo esempio viene illustrato come usare LINQ per confrontare due elenchi di stringhe e restituire le righe presenti in names1.txt ma non in names2.txt.  
   
 ### <a name="to-create-the-data-files"></a>Per creare i file di dati  
   
-1.  Copiare names1. txt e names2 alla cartella della soluzione, come illustrato nella [procedura: combinare e confrontare stringhe raccolte (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md).  
+1.  Copiare names1.txt e names2.txt nella cartella della soluzione, come mostrato in [come: Combinare e confrontare raccolte di stringhe (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md).  
   
 ## <a name="example"></a>Esempio  
   
@@ -51,10 +51,10 @@ End Class
 ' Garcia, Debra  
 ```  
   
- Alcuni tipi di query operazioni in Visual Basic, ad esempio <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Union%2A>, e <xref:System.Linq.Enumerable.Concat%2A>, può essere espresso solo nella sintassi basate su metodo.  
+ Alcuni tipi di operazioni di query in Visual Basic, ad esempio <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Union%2A>, e <xref:System.Linq.Enumerable.Concat%2A>, possono essere espresse solo nella sintassi basata su metodo.  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
  Creare un progetto che usi .NET Framework versione 3.5 o successiva con un riferimento a System.Core.dll e un'istruzione `Imports` per lo spazio dei nomi System.Linq.  
   
-## <a name="see-also"></a>Vedere anche  
- [LINQ e stringhe (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+## <a name="see-also"></a>Vedere anche
+- [LINQ e stringhe (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
