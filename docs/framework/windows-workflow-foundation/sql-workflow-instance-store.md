@@ -2,12 +2,12 @@
 title: Archivio di istanze del flusso di lavoro SQL
 ms.date: 03/30/2017
 ms.assetid: 8cd2f8a5-4bf8-46ea-8909-c7fdb314fabc
-ms.openlocfilehash: d35cf6e94b010291276b5a543df1038715a0d50c
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 6af42fa8ae119ba8fbc08e00cd5b3800521943a1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453018"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54538297"
 ---
 # <a name="sql-workflow-instance-store"></a>Archivio di istanze del flusso di lavoro SQL
 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] viene fornito con l'archivio di istanze del flusso di lavoro SQL che consente ai flussi di lavoro di rendere persistenti le informazioni sullo stato delle istanze del flusso di lavoro in un database di SQL Server 2005 o di SQL Server 2008. Questa funzionalità viene implementata principalmente nel formato della classe <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> che deriva dalla classe <xref:System.Runtime.DurableInstancing.InstanceStore> astratta del framework di persistenza. La funzionalità di archivio di istanze del flusso di lavoro SQL costituisce un provider di persistenza SQL, ovvero un'implementazione concreta dell'API di persistenza usata da un host per inviare i comandi di persistenza all'archivio.  
@@ -24,7 +24,7 @@ ms.locfileid: "49453018"
   
 -   [Proprietà dell'archivio di istanze del flusso di lavoro SQL](../../../docs/framework/windows-workflow-foundation/properties-of-sql-workflow-instance-store.md)  
   
--   [Procedura: Abilitare la persistenza SQL per i flussi di lavoro e i relativi servizi](../../../docs/framework/windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)  
+-   [Procedura: Abilitare la persistenza SQL per i flussi di lavoro e i servizi del flusso di lavoro](../../../docs/framework/windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)  
   
 -   [Attivazione di istanze](../../../docs/framework/windows-workflow-foundation/instance-activation.md)  
   
@@ -36,5 +36,5 @@ ms.locfileid: "49453018"
   
 -   [Database di persistenza di SQL Server](../../../docs/framework/windows-workflow-foundation/sql-server-persistence-database.md)  
   
-## <a name="see-also"></a>Vedere anche  
- [Esempi di persistenza](https://go.microsoft.com/fwlink/?LinkID=177735)
+## <a name="see-also"></a>Vedere anche
+- [Esempi di persistenza](https://go.microsoft.com/fwlink/?LinkID=177735)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7512795e678f66c97185a499e602e99f51188117
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 47819740207ae94b814b3009708c2fd247688661
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443024"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564005"
 ---
 # <a name="cordeclsecurity-enumeration"></a>Enumerazione CorDeclSecurity
 Specifica le azioni relative alla sicurezza che possono essere eseguite con la sicurezza dichiarativa.  
@@ -64,14 +64,14 @@ typedef enum CorDeclSecurity {
 |`dclActionNil`|Riservato.|  
 |`dclRequest`|Riservato.|  
 |`dclDemand`|A tutti i chiamanti nella parte superiore dello stack di chiamate deve essere concessa l'autorizzazione specificata dall'oggetto di autorizzazione corrente.|  
-|`dclAssert`|Il codice chiamante può accedere alla risorsa identificata dall'oggetto autorizzazioni corrente, anche se i chiamanti nello stack non dispongono dell'autorizzazione per accedere alla risorsa|  
-|`dclDeny`|La possibilità di accedere alla risorsa specificata dall'oggetto autorizzazioni corrente viene negata ai chiamanti, anche se essi dispongono dell'autorizzazione per accedervi.|  
+|`dclAssert`|Il codice chiamante può accedere alla risorsa identificata dall'oggetto autorizzazioni corrente, anche se i primi chiamanti dello stack non sono state concesse autorizzazioni per accedere alla risorsa|  
+|`dclDeny`|La possibilità di accedere alla risorsa specificata dall'oggetto autorizzazioni corrente viene negata ai chiamanti, anche se dispongono dell'autorizzazione per accedervi.|  
 |`dclPermitOnly`|È possibile accedere solo alle risorse specificate dall'oggetto di autorizzazione, anche se al codice è stata concessa l'autorizzazione per accedere ad altre risorse.|  
-|`dclLinktimeCheck`|Il chiamante immediato è necessario concedere l'autorizzazione specificata per un periodo di tempo specifico.|  
-|`dclInheritanceCheck`|La classe derivata eredita un'altra classe o si esegue l'override di un metodo è necessaria disporre dell'autorizzazione specificata.|  
+|`dclLinktimeCheck`|Il chiamante immediato è necessario disporre sia concessa l'autorizzazione specificata per un determinato periodo di tempo.|  
+|`dclInheritanceCheck`|La classe derivata che eredita un'altra classe o l'override di un metodo è necessaria disporre dell'autorizzazione specificata.|  
 |`dclRequestMinimum`|Il chiamante può richiedere per le autorizzazioni minime necessarie per l'esecuzione di codice. Questa azione può essere usata solo nell'ambito dell'assembly.|  
-|`dclRequestOptional`|Il chiamante può richiedere le autorizzazioni aggiuntive facoltative (non necessarie per eseguire). Con questa richiesta viene implicitamente rifiutata ogni altra autorizzazione che non sia stata esplicitamente richiesta. Questa azione può essere usata solo nell'ambito dell'assembly.|  
-|`dclRequestRefuse`|Non verrà concessa la richiesta del chiamante per le autorizzazioni utilizzabili in modo improprio. Questa azione può essere usata solo nell'ambito dell'assembly.|  
+|`dclRequestOptional`|Il chiamante può richiedere autorizzazioni aggiuntive che sono facoltative (non necessario per l'esecuzione). Con questa richiesta viene implicitamente rifiutata ogni altra autorizzazione che non sia stata esplicitamente richiesta. Questa azione può essere usata solo nell'ambito dell'assembly.|  
+|`dclRequestRefuse`|Non verrà concessa richiesta del chiamante per le autorizzazioni utilizzabili in modo improprio. Questa azione può essere usata solo nell'ambito dell'assembly.|  
 |`dclPrejitGrant`|Riservato.|  
 |`dclPrejitDenied`|Riservato.|  
 |`dclNonCasDemand`|Riservato.|  
@@ -83,11 +83,11 @@ typedef enum CorDeclSecurity {
 |`dclMaximumValue`|Riservato.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorHdr. H  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Enumerazioni dei metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Vedere anche
+- [Enumerazioni dei metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

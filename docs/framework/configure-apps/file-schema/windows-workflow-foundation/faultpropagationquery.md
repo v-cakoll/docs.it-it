@@ -3,24 +3,24 @@ title: '&lt;faultPropagationQuery&gt;'
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 4fb5c2b1-3dad-4eca-9c7f-3efb51899813
-ms.openlocfilehash: 3c8038c133eb7f7a8d47c950037332fa68aa065e
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a91a6f61b39a780ed48ad8d5f5e0dfb9ef60da39
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32756072"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54538336"
 ---
 # <a name="ltfaultpropagationquerygt"></a>&lt;faultPropagationQuery&gt;
 Rappresenta una query usata per rilevare la gestione degli errori che si verificano all'interno di un'attività.  Questo evento si verifica ogni volta che un FaultHandler elabora un errore. È necessario usare tale query per rilevare la gestione degli errori che si verificano all'interno di un'attività. La query è necessaria affinché un partecipante del rilevamento sottoscriva i record di propagazione degli errori.  
   
- Per ulteriori informazioni sulla query del profilo di rilevamento, vedere [profili di rilevamento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).  
+ Per altre informazioni sulle query relative ai profili di rilevamento, vedere [profili di rilevamento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).  
   
 \<system.serviceModel>  
-\<rilevamento >  
+\<tracking>  
 \<trackingProfile>  
 \<flusso di lavoro >  
-\<faultPropagationQueries >  
-\<faultPropagationQuery >  
+\<faultPropagationQueries>  
+\<faultPropagationQuery>  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -56,8 +56,8 @@ Rappresenta una query usata per rilevare la gestione degli errori che si verific
 |-------------|-----------------|  
 |[\<faultPropagationQueries>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/faultpropagationqueries.md)|Rappresenta un elenco di elementi di configurazione usati per rilevare la gestione degli errori che si verificano all'interno di un'attività.  Questo evento si verifica ogni volta che un FaultHandler elabora un errore.|  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.Activities.Tracking.Configuration.FaultPropagationQueryElement?displayProperty=nameWithType>       
- <xref:System.Activities.Tracking.FaultPropagationQuery?displayProperty=nameWithType>       
- [Rilevamento e analisi del flusso di lavoro](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
- [Profili di rilevamento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.ServiceModel.Activities.Tracking.Configuration.FaultPropagationQueryElement?displayProperty=nameWithType>
+- <xref:System.Activities.Tracking.FaultPropagationQuery?displayProperty=nameWithType>
+- [Rilevamento e analisi del flusso di lavoro](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [Profili di rilevamento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

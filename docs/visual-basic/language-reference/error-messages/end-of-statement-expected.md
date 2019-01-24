@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30205
 ms.assetid: 53c7f825-a737-4b76-a1fa-f67745b8bd40
-ms.openlocfilehash: 8df756009ebe3a0613ec47018d938151829214df
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 1e4c46088d3d89d9c2066e33def880941107575f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198263"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54565020"
 ---
 # <a name="end-of-statement-expected"></a>Prevista fine dell'istruzione
 L'istruzione sia sintatticamente completa, ma un elemento di programmazione aggiuntivo segue l'elemento che si completa l'istruzione. Un terminatore di riga è necessario alla fine di ogni istruzione.
@@ -27,6 +27,6 @@ L'istruzione sia sintatticamente completa, ma un elemento di programmazione aggi
   
 2.  Inserisce un terminatore di riga dopo l'elemento che si completa l'istruzione.
   
-## <a name="see-also"></a>Vedere anche  
- [Procedura: Interrompere e combinare istruzioni nel codice](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)  
- [Istruzioni](../../../visual-basic/programming-guide/language-features/statements.md)
+## <a name="see-also"></a>Vedere anche
+- [Procedura: Interrompere e combinare istruzioni nel codice](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)
+- [Istruzioni](../../../visual-basic/programming-guide/language-features/statements.md)

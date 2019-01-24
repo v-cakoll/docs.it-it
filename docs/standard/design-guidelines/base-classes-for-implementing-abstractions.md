@@ -7,12 +7,12 @@ helpviewer_keywords:
 - base classes, abstractions
 ms.assetid: 37a2d9a4-9721-482a-a40f-eee2c1d97875
 author: KrzysztofCwalina
-ms.openlocfilehash: 411596f342930c9387dc6523d25805bddad18687
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 6811423258481fcbae24743c9b17f3f20c379c58
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148671"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54565813"
 ---
 # <a name="base-classes-for-implementing-abstractions"></a>Classi base per l'implementazione di astrazioni
 In teoria, una classe diventa una classe di base quando un'altra classe viene derivata da essa. Ai fini di questa sezione, tuttavia, una classe di base è una classe progettata principalmente per fornire un'astrazione comune o per altre classi di riutilizzare alcuni implementazione tuttavia l'ereditarietà predefinita. Le classi di base si trovano in genere al centro le gerarchie di ereditarietà, tra diverse implementazioni personalizzate nella parte inferiore e un'astrazione a livello di radice di una gerarchia.  
@@ -35,5 +35,5 @@ In teoria, una classe diventa una classe di base quando un'altra classe viene de
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Linee guida per la progettazione di Framework](../../../docs/standard/design-guidelines/index.md)  
+- [Linee guida per la progettazione di Framework](../../../docs/standard/design-guidelines/index.md)
 - [Progettazione finalizzata all'estensibilità](../../../docs/standard/design-guidelines/designing-for-extensibility.md)

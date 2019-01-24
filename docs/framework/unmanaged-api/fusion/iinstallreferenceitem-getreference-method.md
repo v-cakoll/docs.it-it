@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a6c64b98f3b5ab0445b076b0d3bacfaa398e26f3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c768091f84157ea651c018fa89cdeafcce6c02df
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429768"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54537673"
 ---
 # <a name="iinstallreferenceitemgetreference-method"></a>Metodo IInstallReferenceItem::GetReference
-Ottiene un puntatore per il [FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md) struttura rappresentato da questo [IInstallReferenceItem](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md) oggetto.  
+Ottiene un puntatore per il [FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md) rappresentato da questa struttura [IInstallReferenceItem](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md) oggetto.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,18 +42,18 @@ HRESULT GetReference (
  [out] L'oggetto restituito `FUSION_INSTALL_REFERENCE` puntatore.  
   
  `dwFlags`  
- [in] Riservato per l'estensibilità futura. `dwFlags` deve essere 0 (zero).  
+ [in] Riservato per un'estendibilità futura. `dwFlags` deve essere 0 (zero).  
   
  `pvReserved`  
- [in] Riservato per l'estensibilità futura. `pvReserved` deve essere un riferimento null.  
+ [in] Riservato per un'estendibilità futura. `pvReserved` deve essere un riferimento null.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Fusion. h  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia IInstallReferenceItem](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md)  
- [Struttura FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia IInstallReferenceItem](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md)
+- [Struttura FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md)

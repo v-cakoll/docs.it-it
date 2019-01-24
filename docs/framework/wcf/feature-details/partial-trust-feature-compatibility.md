@@ -2,12 +2,12 @@
 title: Compatibilità con la funzionalità di trust parziale
 ms.date: 03/30/2017
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
-ms.openlocfilehash: 97a51fe29677f46f9d3053250b65b3d818ca47dc
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 404fe1a7fb14f28d264d4a97981eade8404141ee
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864524"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564724"
 ---
 # <a name="partial-trust-feature-compatibility"></a>Compatibilità con la funzionalità di trust parziale
 Windows Communication Foundation (WCF) supporta un subset limitato di funzionalità durante l'esecuzione in un ambiente parzialmente attendibile. Le funzionalità supportate in un contesto parzialmente attendibile sono progettate sulla base di uno specifico set di scenari, come descritto nell'argomento [Supported Deployment Scenarios](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) .  
@@ -92,7 +92,7 @@ Windows Communication Foundation (WCF) supporta un subset limitato di funzionali
   
 -   Verificare che, se l'applicazione viene distribuita come completamente attendibile, gli utenti non possano modificare le impostazioni di sicurezza per l'accesso al codice per eseguire l'applicazione in ambiente parzialmente attendibile. In tal caso, il comportamento non viene eseguito e non viene generata alcuna eccezione. A tale scopo, vedere la **levelfinal** opzione usando [Caspol.exe (strumento di criteri di sicurezza dall'accesso di codice)](../../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md).  
   
- Per un esempio di un comportamento comune, vedere [procedura: Lock Down Endpoints in azienda](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).  
+ Per un esempio di un comportamento comune, vedere [come: Lock Down Endpoints in the Enterprise](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).  
   
 ## <a name="configuration"></a>Configurazione  
  Con un'eccezione, codice parzialmente attendibile può caricare solo le sezioni di configurazione WCF locale `app.config` file. Per caricare sezioni di configurazione WCF che fanno riferimento a sezioni WCF in Machine. config o in una radice del file Web. config è necessario ConfigurationPermission (Unrestricted). Senza questa autorizzazione, i riferimenti a WCF le sezioni di configurazione (comportamenti, associazioni) all'esterno i risultati del file di configurazione locale in un'eccezione quando viene caricata la configurazione.  
@@ -159,10 +159,10 @@ Windows Communication Foundation (WCF) supporta un subset limitato di funzionali
 ## <a name="unlisted-features"></a>Funzionalità non elencate  
  Il modo migliore per individuare se un'informazione non è disponibile in modalità di esecuzione in un ambiente di trust parziale è tentare di accedere alla risorsa o di eseguire l'azione all'interno di un blocco `try` e quindi eseguire il `catch` dell'errore. Per evitare il flooding dei file di traccia con errori duplicati, WCF disabilita la traccia della risorsa o dell'azione dopo il primo errore di sicurezza. Viene generata una traccia di eccezione per ogni accesso alla risorsa non riuscito, la prima volta che viene eseguito il tentativo di accedere alla risorsa o eseguire l'azione.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
- <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
- <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>  
- <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>  
- [Scenari di distribuzione supportati](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md)  
- [Procedure consigliate per l'attendibilità parziale](../../../../docs/framework/wcf/feature-details/partial-trust-best-practices.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>
+- <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>
+- <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>
+- <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>
+- [Scenari di distribuzione supportati](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md)
+- [Procedure consigliate per l'attendibilità parziale](../../../../docs/framework/wcf/feature-details/partial-trust-best-practices.md)

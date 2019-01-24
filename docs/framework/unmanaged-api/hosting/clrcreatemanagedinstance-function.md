@@ -19,17 +19,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a375ea586bacc2d3dafe53d493a7467730fae889
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 40a278945dc1a6c84a72221fd55e32f44a146662
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432321"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564396"
 ---
 # <a name="clrcreatemanagedinstance-function"></a>Funzione ClrCreateManagedInstance
 Crea un'istanza del tipo gestito specificato.  
   
- Questa funzione è stata deprecata nel [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]. Utilizzare l'attivazione COM per creare un'istanza del tipo gestito o utilizzare l'hosting (vedere [CLR Hosting interfacce aggiunte in .NET Framework 4 e 4.5](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)).  
+ Questa funzione è stata deprecata nel [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]. Utilizzare l'attivazione di COM per creare un'istanza del tipo gestito o utilizzare l'hosting (vedere [CLR Hosting interfacce aggiunte in .NET Framework 4 e 4.5](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -52,17 +52,17 @@ STDAPI ClrCreateManagedInstance (
  [out] Un puntatore a un puntatore a un'istanza del tipo gestito che è stata richiesta dal chiamante.  
   
 ## <a name="remarks"></a>Note  
- Common language runtime deve già essere caricato in un processo. Ad esempio, può essere caricato tramite una chiamata al [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) funzione prima di `ClrCreateManagedInstance` funzione viene chiamata. Se il runtime non è stato caricato, `ClrCreateManagedInstance` tenta innanzitutto di caricare v 1.0.3705 del runtime. Se il problema persiste, tenta di caricare la versione più recente del runtime.  
+ Common language runtime deve già essere caricato in un processo. Ad esempio, possono essere caricato tramite una chiamata ai [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) funzionare prima il `ClrCreateManagedInstance` funzione viene chiamata. Se il runtime non viene caricato, `ClrCreateManagedInstance` innanzitutto tenta di caricare v1.0.3705 del runtime. Se il problema persiste, tenta di caricare la versione più recente del runtime.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Mscoree. H  
+ **Intestazione:** MSCorEE.h  
   
- **Libreria:** Mscoree. dll  
+ **Libreria:** MSCorEE.dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Funzioni di hosting CLR deprecate](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)  
- [Hosting](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a>Vedere anche
+- [Funzioni di hosting CLR deprecate](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [Hosting](../../../../docs/framework/unmanaged-api/hosting/index.md)

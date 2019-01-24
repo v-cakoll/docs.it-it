@@ -1,23 +1,23 @@
 ---
-title: 'Procedura dettagliata: eseguire query tra relazioni (C#)'
+title: 'Procedura dettagliata: Eseguire query tra relazioni (C#)'
 ms.date: 03/30/2017
 ms.assetid: 552abeb1-18f2-4e93-a9c6-ef7b2db30c32
-ms.openlocfilehash: a438b0ae83a223abfc35643915e6eedd5be068a6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a24d96c9d138f0dcd2f162dad474da01f49e45d2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364418"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54563665"
 ---
-# <a name="walkthrough-querying-across-relationships-c"></a>Procedura dettagliata: eseguire query tra relazioni (C#)
-Questa procedura dettagliata viene illustrato l'utilizzo di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *associazioni* per rappresentare relazioni di chiave esterna nel database.  
+# <a name="walkthrough-querying-across-relationships-c"></a>Procedura dettagliata: Eseguire query tra relazioni (C#)
+Questa procedura dettagliata viene illustrato come utilizzare [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *associazioni* per rappresentare le relazioni di chiave esterna nel database.  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
  Questa procedura è stata scritta usando Impostazioni di sviluppo di Visual C#.  
   
 ## <a name="prerequisites"></a>Prerequisiti  
- È necessario avere completato [procedura dettagliata: oggetti modello e Query semplici (c#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md). Questa procedura dettagliata si basa su tale procedura dettagliata, inclusa la presenza del file northwnd.mdf in c:\linqtest5.  
+ È necessario avere completato [procedura dettagliata: Modello a oggetti semplice ed eseguire una Query (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md). Questa procedura dettagliata si basa su tale procedura dettagliata, inclusa la presenza del file northwnd.mdf in c:\linqtest5.  
   
 ## <a name="overview"></a>Panoramica  
  La procedura dettagliata è costituita da tre attività principali:  
@@ -86,7 +86,7 @@ Questa procedura dettagliata viene illustrato l'utilizzo di [!INCLUDE[vbtecdlinq
 4.  Premere INVIO nella finestra della console per terminare il debug.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
- Nella procedura successiva ([procedura dettagliata: modifica di dati (c#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)) viene illustrato come modificare i dati. Per tale procedura dettagliata non è necessario avere salvato le due procedure dettagliate di questa serie già completate.  
+ Procedura dettagliata seguente ([procedura dettagliata: Gestione dei dati (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)) viene illustrato come modificare i dati. Per tale procedura dettagliata non è necessario avere salvato le due procedure dettagliate di questa serie già completate.  
   
-## <a name="see-also"></a>Vedere anche  
- [Apprendimento tramite procedure dettagliate](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+## <a name="see-also"></a>Vedere anche
+- [Apprendimento tramite procedure dettagliate](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

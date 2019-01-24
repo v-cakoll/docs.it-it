@@ -2,12 +2,12 @@
 title: MsmqTransportBindingElement
 ms.date: 03/30/2017
 ms.assetid: 1c89f073-9ed3-4025-a8c5-13535a0f526b
-ms.openlocfilehash: 33cd9c427ed5ad04eaf9e9889f60f091f335d1e7
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d37ee4527226d9347e24fc2ee8007a263c71f198
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198107"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564877"
 ---
 # <a name="msmqtransportbindingelement"></a>MsmqTransportBindingElement
 MsmqTransportBindingElement  
@@ -32,21 +32,21 @@ class MsmqTransportBindingElement : MsmqBindingElementBase
 ### <a name="maxpoolsize"></a>MaxPoolSize  
  Tipo di dati: sint32  
   
- Tipo di accesso: sola lettura  
+ Tipo di accesso: Sola lettura  
   
  Dimensione massima del pool che contiene oggetti di messaggi MSMQ interni.  
   
 ### <a name="queuetransferprotocol"></a>QueueTransferProtocol  
  Tipo di dati: stringa  
   
- Tipo di accesso: sola lettura  
+ Tipo di accesso: Sola lettura  
   
  Valore di enumerazione che indica il trasporto per il canale delle comunicazioni in coda utilizzato da questa associazione.  
   
 ### <a name="useactivedirectory"></a>UseActiveDirectory  
  Tipo di dati: booleano  
   
- Tipo di accesso: sola lettura  
+ Tipo di accesso: Sola lettura  
   
  Restituisce un valore booleano che indica se convertire gli indirizzi delle code mediante Active Directory.  
   
@@ -56,5 +56,5 @@ class MsmqTransportBindingElement : MsmqBindingElementBase
 |---------|-----------------------------------|  
 |Spazio dei nomi|Definito in root\ServiceModel|  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.Channels.MsmqTransportBindingElement>
+## <a name="see-also"></a>Vedere anche
+- <xref:System.ServiceModel.Channels.MsmqTransportBindingElement>

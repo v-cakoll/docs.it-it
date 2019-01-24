@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - queues [WCF]. grouping messages
 ms.assetid: 63b23b36-261f-4c37-99a2-cc323cd72a1a
-ms.openlocfilehash: 62aa269d138d436824d3c825de9f722490d3b5bd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 260e8b38f110ffc2c2fdc5e2768db8c95fb01860
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33491901"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564123"
 ---
 # <a name="grouping-queued-messages-in-a-session"></a>Raggruppamento di messaggi in coda in una sessione
-Windows Communication Foundation (WCF) offre una sessione che consente di raggruppare un set di messaggi correlati affinché vengano elaborati da un'unica applicazione ricevente. I messaggi appartenenti a una sessione devono appartenere alla stessa transazione. Poiché tutti i messaggi appartengono alla stessa transazione, se l'elaborazione di un messaggio non riesce viene eseguito il rollback dell'intera sessione. Le sessioni presentano comportamenti simili relativamente alle code di messaggi non recapitabili e alle code di messaggi non elaborabili. La proprietà di durata (TTL, Time To Live) impostata in un'associazione in coda configurata per una determinata sessione viene applicata all'intera sessione. Se allo scadere del TTL è stata inviata solo una parte dei messaggi, l'intera sessione viene inserita nella coda di messaggi non recapitabili. Analogamente, quando risulta impossibile inviare a un'applicazione alcuni messaggi di una sessione contenuti nella coda dell'applicazione, l'intera sessione viene inserita nella coda di messaggi non elaborabili (se disponibile).  
+Windows Communication Foundation (WCF) fornisce una sessione che consente di raggruppare un set di messaggi correlati affinché vengano elaborati da un'unica applicazione ricevente. I messaggi appartenenti a una sessione devono appartenere alla stessa transazione. Poiché tutti i messaggi appartengono alla stessa transazione, se l'elaborazione di un messaggio non riesce viene eseguito il rollback dell'intera sessione. Le sessioni presentano comportamenti simili relativamente alle code di messaggi non recapitabili e alle code di messaggi non elaborabili. La proprietà di durata (TTL, Time To Live) impostata in un'associazione in coda configurata per una determinata sessione viene applicata all'intera sessione. Se allo scadere del TTL è stata inviata solo una parte dei messaggi, l'intera sessione viene inserita nella coda di messaggi non recapitabili. Analogamente, quando risulta impossibile inviare a un'applicazione alcuni messaggi di una sessione contenuti nella coda dell'applicazione, l'intera sessione viene inserita nella coda di messaggi non elaborabili (se disponibile).  
   
 ## <a name="message-grouping-example"></a>Esempio di raggruppamento di messaggi  
  Un esempio in cui raggruppare i messaggi risulta utile è quando si implementa un'applicazione di elaborazione degli ordini come un servizio WCF. Si supponga ad esempio che un client invii a questa applicazione un ordine contenente alcuni elementi. Per ogni elemento il client effettua una chiamata al servizio. Ciò comporta l'invio di un messaggio a parte per ogni elemento. È possibile che il server A riceva il primo elemento e il server B riceva il secondo elemento. Ogni volta che viene aggiunto un elemento, il server che lo sta elaborando deve individuare l'ordine associato e quindi aggiungervi tale elemento. Ciò risulta particolarmente inefficiente. Gli stessi problemi di inefficienza si presentano anche utilizzando un unico server che gestisce tutte le richieste. Infatti, tale server deve tenere traccia di tutti gli ordini correntemente in elaborazione e determinare a quale di essi appartiene il nuovo elemento. Il raggruppamento di tutte le richieste relative a un determinato ordine consente di semplificare notevolmente l'implementazione dell'applicazione descritta. L'applicazione client invia in una sessione tutti gli elementi relativi a un determinato ordine. Pertanto, quando il servizio elabora l'ordine, elabora l'intera sessione in un'unica operazione. \  
@@ -62,7 +62,7 @@ Windows Communication Foundation (WCF) offre una sessione che consente di raggru
   
 1.  Creare un ambito di transazione per scrivere nella coda transazionale.  
   
-2.  Creare il client WCF usando il [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) dello strumento.  
+2.  Creare il client WCF usando il [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) dello strumento.  
   
 3.  Inviare l'ordine.  
   
@@ -71,7 +71,7 @@ Windows Communication Foundation (WCF) offre una sessione che consente di raggru
 ## <a name="example"></a>Esempio  
   
 ### <a name="description"></a>Descrizione  
- Nell'esempio seguente viene riportato il codice del servizio `IProcessOrder` e di un client che utilizza tale servizio. Viene illustrato come WCF utilizza le sessioni in coda per fornire il comportamento di raggruppamento.  
+ Nell'esempio seguente viene riportato il codice del servizio `IProcessOrder` e di un client che utilizza tale servizio. Indica come WCF Usa le sessioni in coda per fornire il comportamento di raggruppamento.  
   
 ### <a name="code-for-the-service"></a>Codice del servizio  
  [!code-csharp[S_Msmq_Session#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_session/cs/service.cs#1)]
@@ -85,6 +85,6 @@ Windows Communication Foundation (WCF) offre una sessione che consente di raggru
   
   
   
-## <a name="see-also"></a>Vedere anche  
- [Sessioni e code](../../../../docs/framework/wcf/samples/sessions-and-queues.md)  
- [Panoramica delle code](../../../../docs/framework/wcf/feature-details/queues-overview.md)
+## <a name="see-also"></a>Vedere anche
+- [Sessioni e code](../../../../docs/framework/wcf/samples/sessions-and-queues.md)
+- [Panoramica delle code](../../../../docs/framework/wcf/feature-details/queues-overview.md)

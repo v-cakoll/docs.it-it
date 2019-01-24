@@ -1,5 +1,5 @@
 ---
-title: "Procedura dettagliata: dimostrazione dell'ereditarietà visiva"
+title: "Procedura dettagliata: Dimostrazione dell'ereditarietà visiva"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], visual inheritance
 - Windows Forms, inheritance
 ms.assetid: 01966086-3142-450e-8210-3fd4cb33f591
-ms.openlocfilehash: b17de01c4a5e89051393aa3c6bb2d0079535dbf6
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 3e1aced8ecb4f85dd81c8a928422cbb7d0b10dcd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46703682"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564331"
 ---
-# <a name="walkthrough-demonstrating-visual-inheritance"></a>Procedura dettagliata: dimostrazione dell'ereditarietà visiva
+# <a name="walkthrough-demonstrating-visual-inheritance"></a>Procedura dettagliata: Dimostrazione dell'ereditarietà visiva
 L'ereditarietà visiva consente di visualizzare i controlli nel form di base e di aggiungere nuovi controlli. In questa procedura dettagliata verrà creato un form di base che verrà compilato in una libreria di classi. La libreria di classi verrà importata in un altro progetto e verrà creato un nuovo form che eredita dal form di base. Durante questa procedura dettagliata, si apprenderà come:  
   
 -   Creare un progetto di libreria di classi contenente un form di base.  
@@ -161,9 +161,9 @@ L'ereditarietà visiva consente di visualizzare i controlli nel form di base e d
 12. Premere F5 per eseguire l'applicazione e osservare il comportamento del form ereditato.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
- L'ereditarietà per i controlli utente funziona in modo analogo. Aprire un nuovo progetto di libreria di classi e aggiungere un controllo utente. Inserire controlli costitutivi e compilare il progetto. Aprire un altro progetto di libreria di classi e aggiungere un riferimento alla libreria di classi compilata. Inoltre, provare ad aggiungere un controllo ereditato (tramite il **aggiungere nuovi elementi** finestra di dialogo) al progetto e l'uso il **Selezione ereditarietà**. Aggiungere un controllo utente e modificare il `Inherits` (`:` in Visual c#) istruzione. Per altre informazioni, vedere [procedura: ereditare Windows Form](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md).  
+ L'ereditarietà per i controlli utente funziona in modo analogo. Aprire un nuovo progetto di libreria di classi e aggiungere un controllo utente. Inserire controlli costitutivi e compilare il progetto. Aprire un altro progetto di libreria di classi e aggiungere un riferimento alla libreria di classi compilata. Inoltre, provare ad aggiungere un controllo ereditato (tramite il **aggiungere nuovi elementi** finestra di dialogo) al progetto e l'uso il **Selezione ereditarietà**. Aggiungere un controllo utente e modificare il `Inherits` (`:` in Visual c#) istruzione. Per altre informazioni, vedere [Procedura: Ereditare Windows Form](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Procedura: ereditare Windows Forms](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)  
- [Ereditarietà visiva di Windows Form](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)  
- [Windows Form](../../../../docs/framework/winforms/index.md)
+## <a name="see-also"></a>Vedere anche
+- [Procedura: Ereditare Windows Form](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)
+- [Ereditarietà visiva di Windows Form](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)
+- [Windows Form](../../../../docs/framework/winforms/index.md)

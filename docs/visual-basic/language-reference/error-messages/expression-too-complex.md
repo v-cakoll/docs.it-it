@@ -4,19 +4,19 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID16
 ms.assetid: 736847d1-5e03-44c8-95e4-3ed2cef2746b
-ms.openlocfilehash: 118f567c16cde0675b73c6e1fa56c3b4cd16e664
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6bef18075006bc99c04762e1cdf5b63d8d99f5a8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583419"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564851"
 ---
 # <a name="expression-too-complex"></a>Espressione troppo complessa
-Un'espressione a virgola mobile contiene troppe espressioni secondarie annidate.  
+Un'espressione a virgola mobile contiene troppi sottoespressioni annidate.  
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
--   Suddividere l'espressione in un numero di espressioni separate necessarie per evitare che si verifichi l'errore.  
+-   Suddividere l'espressione in numero di espressioni separato in base alle esigenze per impedire l'errore.  
   
-## <a name="see-also"></a>Vedere anche  
- [Operatori ed espressioni](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+## <a name="see-also"></a>Vedere anche
+- [Operatori ed espressioni](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)

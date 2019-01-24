@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7bb624c0ad3d74fa86c19233cbac303ffffc122c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8b3b04fa42b78164025058bd35af37a5176d51ba
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428015"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54565696"
 ---
 # <a name="cleardownloadcache-function"></a>Funzione ClearDownloadCache
-Cancella la cache di assembly globale degli assembly scaricato.  
+Cancella la cache assembly globali degli assembly scaricato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,14 +35,14 @@ HRESULT ClearDownloadCache ();
 ```  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Fusion. h  
   
- **Libreria:** Fusion. dll e mscorwks. dll. Utilizzare il file Fusion.dll anziché Mscorwks.dll per garantire che la versione corretta di .NET Framework di destinazione.  
+ **Libreria:** Fusion. dll e mscorwks. dll. Usare Fusion. dll invece di Mscorwks. dll per verificare che da usare come destinazione la versione corretta di .NET Framework.  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Funzioni statiche globali Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)  
- [Global Assembly Cache](../../../../docs/framework/app-domains/gac.md)
+## <a name="see-also"></a>Vedere anche
+- [Funzioni statiche globali Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [Global Assembly Cache](../../../../docs/framework/app-domains/gac.md)

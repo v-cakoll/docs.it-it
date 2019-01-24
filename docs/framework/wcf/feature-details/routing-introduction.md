@@ -2,12 +2,12 @@
 title: Introduzione al routing
 ms.date: 03/30/2017
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
-ms.openlocfilehash: e540e084305aee51d6820cc9ae43f7791d5c07d6
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: d13a5cc86b7f0bbd67e1ef3ab6094bfb004972c8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842768"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54563769"
 ---
 # <a name="routing-introduction"></a>Introduzione al routing
 Il servizio di routing fornisce un intermediario SOAP di collegamento generico in grado di indirizzare i messaggi in base al relativo contenuto. Il servizio di routing consente di creare logica di routing complessa per l'implementazione di scenari quali l'aggregazione dei servizi, il controllo delle versioni dei servizi, il routing prioritario e il routing multicast. Il servizio di routing offre inoltre funzionalità di gestione degli errori che consentono di configurare elenchi di endpoint di backup ai quali vengono inviati i messaggi se si verifica un errore di invio all'endpoint di destinazione primario.  
@@ -401,7 +401,7 @@ using (ServiceHost serviceHost =
   
  Per usare la rappresentazione di credenziali di Windows con il servizio di routing è necessario configurare sia le credenziali sia il servizio. L'oggetto delle credenziali client (<xref:System.ServiceModel.Security.WindowsClientCredential>, accessibile da <xref:System.ServiceModel.ChannelFactory>) definisce una proprietà <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> che deve essere impostata per consentire la rappresentazione. Infine, nel servizio è necessario configurare il comportamento di <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> per impostare `ImpersonateCallerForAllOperations` su `true`. Il servizio di routing usa questo flag per decidere se creare i client per inoltrare i messaggi con la rappresentazione abilitata.  
   
-## <a name="see-also"></a>Vedere anche  
- [Filtri per messaggi](message-filters.md)  
- [Contratti di routing](routing-contracts.md)  
- [Scelta di un filtro](choosing-a-filter.md)
+## <a name="see-also"></a>Vedere anche
+- [Filtri per messaggi](message-filters.md)
+- [Contratti di routing](routing-contracts.md)
+- [Scelta di un filtro](choosing-a-filter.md)

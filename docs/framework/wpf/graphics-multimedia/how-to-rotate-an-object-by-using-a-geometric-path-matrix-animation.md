@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: ruotare un oggetto utilizzando un percorso geometrico (animazione Matrix)'
+title: 'Procedura: Ruotare un oggetto utilizzando un percorso geometrico (animazione Matrix)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - rotating objects by geometric paths [WPF]
 - matrix animation [WPF]
 ms.assetid: 877dc9aa-6bdc-4beb-8772-3efaec32c0f0
-ms.openlocfilehash: 3a35f6dda05cfe65811de16d76b288c8fbd618a7
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: de61e2469e22d077da4b082e18340a837fac2880
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44199232"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54565891"
 ---
-# <a name="how-to-rotate-an-object-by-using-a-geometric-path-matrix-animation"></a>Procedura: ruotare un oggetto utilizzando un percorso geometrico (animazione Matrix)
+# <a name="how-to-rotate-an-object-by-using-a-geometric-path-matrix-animation"></a>Procedura: Ruotare un oggetto utilizzando un percorso geometrico (animazione Matrix)
 In questo esempio viene illustrato come utilizzare un <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> e una <xref:System.Windows.Media.MatrixTransform> per ruotare un oggetto lungo un tracciato geometrico definito da un <xref:System.Windows.Media.PathGeometry> oggetto.  
   
 ## <a name="example"></a>Esempio  
@@ -31,7 +31,7 @@ In questo esempio viene illustrato come utilizzare un <xref:System.Windows.Media
   
  La versione del codice dell'esempio precedente utilizzato un <xref:System.Windows.Media.Animation.Storyboard> animare il <xref:System.Windows.Media.EllipseGeometry>, anche se è stata applicata l'animazione solo una. Un modo più semplice per applicare una singola animazione a una proprietà nel codice consiste nell'usare il <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> (metodo). Per un esempio, vedere [Animare una proprietà senza utilizzare uno storyboard](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Cenni preliminari sull'animazione](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Procedure relative all'animazione percorso](../../../../docs/framework/wpf/graphics-multimedia/path-animation-how-to-topics.md)  
- [Path Animation Sample (Esempio di animazione tracciato)](https://go.microsoft.com/fwlink/?LinkID=160028)
+## <a name="see-also"></a>Vedere anche
+- [Cenni preliminari sull'animazione](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Procedure relative all'animazione percorso](../../../../docs/framework/wpf/graphics-multimedia/path-animation-how-to-topics.md)
+- [Path Animation Sample (Esempio di animazione tracciato)](https://go.microsoft.com/fwlink/?LinkID=160028)

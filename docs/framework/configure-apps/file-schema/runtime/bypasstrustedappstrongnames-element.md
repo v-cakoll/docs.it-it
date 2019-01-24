@@ -1,5 +1,5 @@
 ---
-title: '&lt;bypassTrustedAppStrongNames&gt; elemento'
+title: '&lt;bypassTrustedAppStrongNames&gt; Element'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - strong-name bypass feature
@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: 71b2ebf6-3843-41e2-ad52-ffa5cd083a40
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 59fe6beb359575c818131e1ae502fdebcec5096c
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 725e2ee19c97cf2642134058ece07b32455516a7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613752"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54565475"
 ---
-# <a name="ltbypasstrustedappstrongnamesgt-element"></a>&lt;bypassTrustedAppStrongNames&gt; elemento
+# <a name="ltbypasstrustedappstrongnamesgt-element"></a>&lt;bypassTrustedAppStrongNames&gt; Element
 Specifica se ignorare la convalida di nomi sicuri per gli assembly con attendibilità che vengono caricati con attendibilità <xref:System.AppDomain>.  
   
  \<configuration>  
 \<runtime>  
-\<bypassTrustedAppStrongNames >  
+\<bypassTrustedAppStrongNames>  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -83,7 +83,7 @@ Specifica se ignorare la convalida di nomi sicuri per gli assembly con attendibi
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
-- [Schema delle impostazioni di runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+## <a name="see-also"></a>Vedere anche
+- [Schema delle impostazioni di runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [Procedura: Disabilitare la funzionalità di ignorare il nome sicuro](../../../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)

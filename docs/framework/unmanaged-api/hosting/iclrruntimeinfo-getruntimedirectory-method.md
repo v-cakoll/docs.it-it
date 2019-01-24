@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f366e736c90ffd8cf588af3a6e5f6240426b9980
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 26bee605724fd69d972a7e07c6fe6be2fbcabfa3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33434525"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54563860"
 ---
 # <a name="iclrruntimeinfogetruntimedirectory-method"></a>Metodo ICLRRuntimeInfo::GetRuntimeDirectory
-Ottiene la directory di installazione di common language runtime (CLR) associata a questa interfaccia.  
+Ottiene la directory di installazione di common language runtime (CLR) associato a questa interfaccia.  
   
- Questo metodo sostituisce il [GetCORSystemDirectory](../../../../docs/framework/unmanaged-api/hosting/getcorsystemdirectory-function.md) funzione fornita nelle versioni di .NET Framework 2.0, 3.0 e 3.5.  
+ Questo metodo sostituisce le [GetCORSystemDirectory](../../../../docs/framework/unmanaged-api/hosting/getcorsystemdirectory-function.md) funzione fornita nelle versioni di .NET Framework 2.0, 3.0 e 3.5.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,10 +39,10 @@ HRESULT GetRuntimeDirectory(
   
 #### <a name="parameters"></a>Parametri  
  `pwzBuffer`  
- [out] Restituisce la directory di installazione di Common Language Runtime. Il percorso di installazione è completo. ad esempio, "c:\windows\microsoft.net\framework\v1.0.3705\\".  
+ [out] Restituisce la directory di installazione di CLR. Il percorso di installazione è completo. ad esempio, "c:\windows\microsoft.net\framework\v1.0.3705\\".  
   
  `pchBuffer`  
- [in, out] Specifica le dimensioni di `pwzBuffer` per evitare sovraccarichi del buffer. Se `pwzBuffer` è null, `pchBuffer` restituisce le dimensioni necessarie di `pwzBuffer`.  
+ [in, out] Specifica la dimensione del `pwzBuffer` per evitare i sovraccarichi del buffer. Se `pwzBuffer` è null, `pchBuffer` restituisce la dimensione necessaria della `pwzBuffer`.  
   
 ## <a name="return-value"></a>Valore restituito  
  Questo metodo restituisce gli specifici HRESULT seguenti, nonché gli errori di HRESULT che indicano la mancata riuscita del metodo.  
@@ -55,14 +55,14 @@ HRESULT GetRuntimeDirectory(
 ## <a name="remarks"></a>Note  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Metahost. H  
+ **Intestazione:** MetaHost.h  
   
- **Libreria:** inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)  
- [Hosting](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
+- [Hosting](../../../../docs/framework/unmanaged-api/hosting/index.md)

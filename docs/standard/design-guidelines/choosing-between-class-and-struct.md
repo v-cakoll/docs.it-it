@@ -13,12 +13,12 @@ helpviewer_keywords:
 - type design guidelines, classes
 ms.assetid: f8b8ec9b-0ba7-4dea-aadf-a93395cd804f
 author: KrzysztofCwalina
-ms.openlocfilehash: 650acf0efaa88120678819b77b03fab61107c630
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a47e43b2387362500d46c8e531f16d004d823c4c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131326"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54565865"
 ---
 # <a name="choosing-between-class-and-struct"></a>Scelta tra classi e struct
 Una delle decisioni di progettazione di base che deve affrontare ogni finestra di progettazione di framework è se un tipo di progettazione come una classe (un tipo riferimento) o uno struct (tipo di valore). Buona conoscenza delle differenze nel comportamento dei tipi di riferimento e tipi di valore è essenziale per effettuare questa scelta.  
@@ -55,5 +55,5 @@ Una delle decisioni di progettazione di base che deve affrontare ogni finestra d
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Linee guida per la progettazione di tipi](../../../docs/standard/design-guidelines/type.md)  
+- [Linee guida per la progettazione di tipi](../../../docs/standard/design-guidelines/type.md)
 - [Linee guida per la progettazione di Framework](../../../docs/standard/design-guidelines/index.md)
