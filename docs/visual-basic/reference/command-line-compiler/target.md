@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -target compiler options [Visual Basic]
 - /target compiler options [Visual Basic]
 ms.assetid: e0954147-548b-461f-9c4b-a8f88845616c
-ms.openlocfilehash: 7db9b71ee5b2c6b82bdb638471f9598df7f64097
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 5208d5a5291969b7060ef5a48e3f6c3ae42aa22a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148672"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671915"
 ---
 # <a name="-target-visual-basic"></a>-target (Visual Basic)
 Specifica il formato di output del compilatore.  
@@ -25,7 +25,7 @@ Specifica il formato di output del compilatore.
 ## <a name="remarks"></a>Note  
  Nella tabella seguente sono riepilogati gli effetti del `-target` opzione.  
   
-|**Opzione**|**Comportamento**|  
+|**Opzione**|**Classe Behavior**|  
 |----------------|------------------|  
 |`-target:exe`|Indica al compilatore di creare un'applicazione console eseguibile.<br /><br /> Si tratta dell'opzione predefinita se non si specifica `-target` opzione specificata. Il file eseguibile viene creato con un'estensione .exe.<br /><br /> Se non diversamente specificato con il `/out` opzione, il nome del file di output accetta il nome del file di input che contiene il `Sub Main` procedure.<br /><br /> Un solo `Sub Main` procedura è necessaria nei file di codice sorgente compilati in un file .exe. Usare la `-main` opzione del compilatore per specificare la classe che contiene il `Sub Main` procedure.|  
 |`-target:library`|Indica al compilatore di creare una libreria di collegamento dinamico (DLL).<br /><br /> Il file di libreria a collegamento dinamico viene creato con l'estensione dll.<br /><br /> Se non diversamente specificato con il `-out` opzione, il nome del file di output richiede il nome del primo file di input.<br /><br /> Quando si compila una DLL, un `Sub Main` procedura non è necessaria.|  
@@ -57,11 +57,11 @@ vbc -target:library in.vb
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Compilatore della riga di comando di Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
-- [-main](../../../visual-basic/reference/command-line-compiler/main.md)  
-- [-out (Visual Basic)](../../../visual-basic/reference/command-line-compiler/out.md)  
-- [-riferimenti (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)  
-- [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)  
-- [-moduleassemblyname](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)  
-- [Assembly e Global Assembly Cache](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
+- [Compilatore della riga di comando di Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [-main](../../../visual-basic/reference/command-line-compiler/main.md)
+- [-out (Visual Basic)](../../../visual-basic/reference/command-line-compiler/out.md)
+- [-riferimenti (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
+- [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)
+- [-moduleassemblyname](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)
+- [Assembly e Global Assembly Cache](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
 - [Esempi di righe di comando di compilazione](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

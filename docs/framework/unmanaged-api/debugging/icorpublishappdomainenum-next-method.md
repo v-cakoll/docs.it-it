@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ac3c6698e4ca127257b7682f1f55acd663375280
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1492c9eac9d647c2b71c47cf758265152783d991
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423728"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54673883"
 ---
 # <a name="icorpublishappdomainenumnext-method"></a>Metodo ICorPublishAppDomainEnum::Next
-Ottiene il numero specificato di domini applicazione che esiste nel processo, a partire dalla posizione corrente.  
+Ottiene il numero specificato di domini applicazione attualmente esistenti nel processo, a partire dalla posizione corrente.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,19 +43,19 @@ HRESULT Next (
  [in] Il numero di elementi da recuperare.  
   
  `objects`  
- [out] Recuperata un puntatore alla matrice di [ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md) oggetti, ognuno dei quali rappresenta un dominio applicazione.  
+ [out] Un puntatore alla matrice di recuperati [ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md) oggetti, ognuno dei quali rappresenta un dominio dell'applicazione.  
   
  `pceltFetched`  
  [out] Puntatore al numero di domini applicazione effettivamente restituiti. Questo valore può essere null se `celt` è uno.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Corpub. idl, CorPub.h  
+ **Intestazione:** CorPub.idl, CorPub.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ICorPublishAppDomainEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ICorPublishAppDomainEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-interface.md)

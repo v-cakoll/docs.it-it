@@ -2,12 +2,12 @@
 title: Dati di grandi dimensioni e flussi
 ms.date: 03/30/2017
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-ms.openlocfilehash: a6c655e260aa75504e9a445458664b11d8e4d56d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c6514903294147671804b5b8de47fddc764b0547
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145137"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674115"
 ---
 # <a name="large-data-and-streaming"></a>Dati di grandi dimensioni e flussi
 Windows Communication Foundation (WCF) è un'infrastruttura di comunicazione basato su XML. Poiché i dati XML sono comunemente codificati in formato di testo standard definito nel [specifica XML 1.0](https://go.microsoft.com/fwlink/?LinkId=94838)connesse, architetti e sviluppatori di sistemi riguarda in genere il footprint di trasmissione (o dimensioni) di messaggi inviati tra la rete e la codifica basata su testo di XML comporta particolari difficoltà per il trasferimento efficiente di dati binari.  
@@ -238,5 +238,5 @@ public class UploadStreamMessage
 > [!NOTE]
 >  La scelta di utilizzare trasferimenti memorizzati nel buffer o in flussi è una decisione specifica dell'endpoint. Per i trasporti HTTP, la modalità di trasferimento non si propaga attraverso una connessione o ai server proxy e agli altri intermediari. L'impostazione della modalità di trasferimento non si riflette nella descrizione dell'interfaccia del servizio. Dopo aver generato un client WCF per un servizio, è necessario modificare il file di configurazione per i servizi dovrà essere utilizzato per impostare la modalità di trasferimento con flusso. Per i trasporti TCP e named pipe, la modalità di trasferimento viene propagata come asserzione di criteri.  
   
-## <a name="see-also"></a>Vedere anche  
- [Come si fa: Abilitare lo Streaming](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
+## <a name="see-also"></a>Vedere anche
+- [Procedura: Abilitare lo Streaming](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 04b6c04868efff31253b2d723c5783060382212b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: fc4e8140485902e4677bca0228bc125c64b497f2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448973"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671863"
 ---
 # <a name="imetadataimportgetfieldprops-method"></a>Metodo IMetaDataImport::GetFieldProps
 Ottiene i metadati associati al campo a cui fa riferimento il token FieldDef specificato.  
@@ -68,26 +68,26 @@ HRESULT GetFieldProps (
  [in] Puntatore al valore binario dei metadati che descrive il campo.  
   
  `pcbSigBlob`  
- [out] Le dimensioni in byte di `ppvSigBlob`.  
+ [out] La dimensione in byte di `ppvSigBlob`.  
   
  `pdwCPlusTypeFlag`  
- [out] Flag che specifica il tipo di valore del campo.  
+ [out] Un flag che specifica il tipo di valore del campo.  
   
  `ppValue`  
  [out] Un valore costante per il campo.  
   
  `pcchValue`  
- [out] Dimensione in caratteri di `ppValue`, oppure zero se non esiste alcuna stringa.  
+ [out] La dimensione in caratteri di `ppValue`, oppure zero se è presente alcuna stringa.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
- **Libreria:** inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [Interfaccia IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Interfaccia IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

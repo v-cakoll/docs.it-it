@@ -2,14 +2,8 @@
 title: Contatori delle prestazioni di WCF
 ms.date: 03/30/2017
 helpviewer_keywords:
-- performance counters [WCF]
+  - 'performance counters [WCF]'
 ms.assetid: f559b2bd-ed83-4988-97a1-e88f06646609
-ms.openlocfilehash: d0ad7ee0bc3ea1d15197e6b8d9888d60b21a2f15
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48846220"
 ---
 # <a name="wcf-performance-counters"></a>Contatori delle prestazioni di WCF
 Windows Communication Foundation (WCF) include un vasto set di contatori delle prestazioni che consentono di misurare le prestazioni dell'applicazione.  
@@ -27,11 +21,11 @@ Windows Communication Foundation (WCF) include un vasto set di contatori delle p
   
  L'attributo `performanceCounters` può essere impostato per attivare un tipo specifico di contatori delle prestazioni. I valori validi sono:  
   
--   All: vengono attivati tutti i contatori della categoria (ServiceModelService, ServiceModelEndpoint e ServiceModelOperation).  
+-   Tutte: Tutti i contatori di categoria (ServiceModelService, ServiceModelEndpoint e ServiceModelOperation) sono abilitati.  
   
--   ServiceOnly: vengono attivati soltanto i contatori della categoria ServiceModelService. Rappresenta il valore predefinito.  
+-   ServiceOnly: Sono abilitati solo i contatori della categoria ServiceModelService. Rappresenta il valore predefinito.  
   
--   Off: vengono disattivati i contatori delle prestazioni della categoria ServiceModel*.  
+-   OFF: I contatori delle prestazioni ServiceModel * sono disabilitati.  
   
  Se si desidera abilitare contatori delle prestazioni per tutte le applicazioni WCF, è possibile inserire le impostazioni di configurazione nel file Machine. config.  Vedere le **aumento della dimensione della memoria per i contatori delle prestazioni** sezione di seguito per altre informazioni sulla configurazione di memoria sufficiente per i contatori delle prestazioni nel computer.  
   
@@ -59,7 +53,7 @@ config.Save();
 ## <a name="increasing-memory-size-for-performance-counters"></a>Aumento della dimensione della memoria per i contatori delle prestazioni  
  WCF utilizza memoria condivisa separata per le categorie di contatori delle prestazioni.  
   
- Per impostazione predefinita, la memoria condivisa separata è impostata su un quarto della dimensione della memoria globale dei contatori delle prestazioni. La dimensione della memoria globale predefinita dei contatori delle prestazioni è di 524.288 byte. Di conseguenza, le tre categorie di contatori delle prestazioni WCF hanno una dimensione di circa 128KB ognuna. A seconda delle caratteristiche di runtime delle applicazioni WCF in un computer, potrebbe essere esaurita memoria dei contatori delle prestazioni. In questo caso, WCF scrive un errore nel registro eventi dell'applicazione. Il contenuto dell'errore indica che un contatore delle prestazioni non è stato caricato e la voce contiene l'eccezione "System.InvalidOperationException: Memoria insufficiente per la visualizzazione del file dei contatori personalizzati". Se è attivata l'analisi al livello dell'errore, l'errore viene anche analizzato. Se memoria dei contatori delle prestazioni è esaurita, continuando a eseguire le applicazioni WCF con i contatori delle prestazioni abilitati può comportare una riduzione delle prestazioni. In questo caso l'amministratore del computer dovrà configurare il computer per l'allocazione di memoria sufficiente a supportare il numero massimo di contatori delle prestazioni che possono essere presenti in qualsiasi momento.  
+ Per impostazione predefinita, la memoria condivisa separata è impostata su un quarto della dimensione della memoria globale dei contatori delle prestazioni. La dimensione della memoria globale predefinita dei contatori delle prestazioni è di 524.288 byte. Di conseguenza, le tre categorie di contatori delle prestazioni WCF hanno una dimensione di circa 128KB ognuna. A seconda delle caratteristiche di runtime delle applicazioni WCF in un computer, potrebbe essere esaurita memoria dei contatori delle prestazioni. In questo caso, WCF scrive un errore nel registro eventi dell'applicazione. Il contenuto dell'errore indica che non sia stato caricato un contatore delle prestazioni e la voce contiene l'eccezione "System. InvalidOperationException: Visualizzazione di file di contatori personalizzati ha esaurito la memoria." Se è attivata l'analisi al livello dell'errore, l'errore viene anche analizzato. Se memoria dei contatori delle prestazioni è esaurita, continuando a eseguire le applicazioni WCF con i contatori delle prestazioni abilitati può comportare una riduzione delle prestazioni. In questo caso l'amministratore del computer dovrà configurare il computer per l'allocazione di memoria sufficiente a supportare il numero massimo di contatori delle prestazioni che possono essere presenti in qualsiasi momento.  
   
  È possibile modificare la quantità di memoria dei contatori delle prestazioni per le categorie WCF nel Registro di sistema. A tale scopo, è necessario aggiungere un nuovo valore DWORD denominato `FileMappingSize` ai tre percorsi specificati di seguito e impostarlo sul valore desiderato espresso in byte. Riavviare il computer per rendere effettive le modifiche.  
   
@@ -72,7 +66,7 @@ config.Save();
  Quando numerosi oggetti (ad esempio, ServiceHost) vengono eliminati ma rimangono in attesa di essere sottoposti all'operazione di Garbage Collection, il contatore delle prestazioni `PrivateBytes` registra un valore insolitamente elevato. Per risolvere questo problema è possibile aggiungere contatori specifici dell'applicazione o usare l'attributo `performanceCounters` per attivare soltanto i contatori a livello di servizio.  
   
 ## <a name="types-of-performance-counters"></a>Tipi di contatori delle prestazioni  
- I contatori delle prestazioni vengono applicati a tre livelli differenti: servizio, endpoint e operazione.  
+ I contatori delle prestazioni sono limitati a tre livelli differenti: Servizio, Endpoint e operazione.  
   
  Per recuperare il nome di un'istanza di contatore delle prestazioni è possibile usare WMI. Ad esempio,  
   
@@ -138,5 +132,5 @@ ServiceName@ServiceBaseAddress
   
  Per altre informazioni sull'accesso ai contatori a livello di codice, vedere [architettura di programmazione dei contatori delle prestazioni](https://go.microsoft.com/fwlink/?LinkId=95179).  
   
-## <a name="see-also"></a>Vedere anche  
- [Amministrazione e diagnostica](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a>Vedere anche
+- [Amministrazione e diagnostica](../../../../../docs/framework/wcf/diagnostics/index.md)

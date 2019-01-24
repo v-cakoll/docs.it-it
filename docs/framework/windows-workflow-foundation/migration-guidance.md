@@ -2,12 +2,12 @@
 title: Materiale sussidiario di migrazione
 ms.date: 03/30/2017
 ms.assetid: cb65c132-58c9-4028-b3d4-1efc71d5e60e
-ms.openlocfilehash: 73488354a807d8bf7d90c97b95f1021d884efd27
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: a07fac293c6e598ff60c635286f8ab808e057b9c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850413"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54676874"
 ---
 # <a name="migration-guidance"></a>Materiale sussidiario di migrazione
 Nel [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], Microsoft sta rilasciando la seconda versione principale di Windows Workflow Foundation (WF). [!INCLUDE[wf1](../../../includes/wf1-md.md)] è stato rilasciato in [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] (inclusi i tipi nei namespace System.Workflow.*, ora definiti WF3) e migliorato in [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. WF3 fa anche parte del [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], ma è presente insieme alla nuova tecnologia del flusso di lavoro (i tipi System. Activities.\* gli spazi dei nomi; denominata WF4). Quando si considera di usare WF4, è importante innanzitutto tenere presente che si sta controllando il tempo.  
@@ -43,17 +43,17 @@ Nel [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], Microsoft 
  [Indicazioni sulla migrazione di WF: Attività personalizzate avanzate](https://go.microsoft.com/fwlink/?LinkId=275560)  
  Fornisce materiale sussidiario per la riprogettazione delle attività personalizzate avanzate WF3 che usano le code WF3 e pianificano attività figlio come attività personalizzate WF4.  
   
- [Indicazioni sulla migrazione di WF: flussi di lavoro](https://go.microsoft.com/fwlink/?LinkId=153858)  
+ [Indicazioni sulla migrazione di WF: Flussi di lavoro](https://go.microsoft.com/fwlink/?LinkId=153858)  
  Vengono forniti esempi e istruzioni per riprogettare i flussi di lavoro di WF3 in WF4.  
   
- [Indicazioni sulla migrazione di WF: Hosting di flussi di lavoro](https://go.microsoft.com/fwlink/?LinkId=275561)  
+ [Indicazioni sulla migrazione di WF: Hosting del flusso di lavoro](https://go.microsoft.com/fwlink/?LinkId=275561)  
  Fornisce materiale sussidiario per la riprogettazione del codice di hosting WF3 come codice di hosting WF4. Vengono analizzate le differenze principali dell'hosting di flusso di lavoro tra WF3 e WF4.  
   
- [Indicazioni sulla migrazione di WF: Rilevamento di flussi di lavoro](https://go.microsoft.com/fwlink/?LinkId=275562)  
+ [Indicazioni sulla migrazione di WF: Flusso di lavoro di rilevamento](https://go.microsoft.com/fwlink/?LinkId=275562)  
  Fornisce materiale sussidiario per la riprogettazione della configurazione e del codice di rilevamento WF3 usando una configurazione e un codice di rilevamento WF4 equivalenti.  
   
- [Linee guida per WF: Servizi di flusso di lavoro](https://go.microsoft.com/fwlink/?LinkId=275564)  
+ [Linee guida per WF: Servizi flusso di lavoro](https://go.microsoft.com/fwlink/?LinkId=275564)  
  Vengono fornite istruzioni dettagliate orientate all'esempio per la riprogettazione di flussi di lavoro che implementano i servizi Web Windows Communication Foundation (WCF) (comunemente definiti come servizi di flussi di lavoro) creati in WF3 per usare WF4, in scenari comuni di attività predefinite.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Activities.Statements.Interop>
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Activities.Statements.Interop>

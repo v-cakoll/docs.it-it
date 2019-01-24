@@ -1,18 +1,18 @@
 ---
-title: 'Esempi di sintassi di query basate sul metodo: operatori di join'
+title: 'Esempi di sintassi di Query basate sul metodo: Operatori di join'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: d00f0efa-9084-4c17-843f-54904fcb4204
-ms.openlocfilehash: ee753f5101f525fc7d86a91f2aa3545d257a2be5
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 24d5b36e37802fee1452433b49fb6f4c4fbced14
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43740283"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54595903"
 ---
-# <a name="method-based-query-syntax-examples-join-operators"></a>Esempi di sintassi di query basate sul metodo: operatori di join
+# <a name="method-based-query-syntax-examples-join-operators"></a>Esempi di sintassi di Query basate sul metodo: Operatori di join
 Gli esempi in questo argomento illustrano come usare il <xref:System.Linq.Enumerable.Join%2A> e <xref:System.Linq.Enumerable.GroupJoin%2A> metodi per eseguire una query il [modello Sales di AdventureWorks](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) usando la sintassi di query basate su metodo. Il modello Sales di AdventureWorks usato in questi esempi è compilato in base alle tabelle Contact, Address, Product, SalesOrderHeader e SalesOrderDetail del database di esempio AdventureWorks.  
   
  Gli esempi in questo argomento usano il comando seguente `using` / `Imports` istruzioni:  
@@ -48,5 +48,5 @@ Gli esempi in questo argomento illustrano come usare il <xref:System.Linq.Enumer
  [!code-csharp[DP L2E Examples#JoinWithGroupedResults_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#joinwithgroupedresults_mq)]
  [!code-vb[DP L2E Examples#JoinWithGroupedResults_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#joinwithgroupedresults_mq)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Query in LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
+## <a name="see-also"></a>Vedere anche
+- [Query in LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

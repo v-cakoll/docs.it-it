@@ -1,5 +1,5 @@
 ---
-title: '&lt;loadFromRemoteSources&gt; elemento'
+title: '&lt;loadFromRemoteSources&gt; Element'
 ms.date: 05/24/2018
 helpviewer_keywords:
 - loadFromRemoteSources element
@@ -7,14 +7,14 @@ helpviewer_keywords:
 ms.assetid: 006d1280-2ac3-4db6-a984-a3d4e275046a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3070e293fc335bb24dd1234007307773d152ceee
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 2b2a5301defabde44c4f5a98e57bd302fe390d53
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611399"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671876"
 ---
-# <a name="ltloadfromremotesourcesgt-element"></a>&lt;loadFromRemoteSources&gt; elemento
+# <a name="ltloadfromremotesourcesgt-element"></a>&lt;loadFromRemoteSources&gt; element
 Specifica se gli assembly caricati da origini remote devono essere concessa l'attendibilità in .NET Framework 4 e versioni successive.
   
 > [!NOTE]
@@ -117,8 +117,8 @@ Nell'esempio seguente viene illustrato come concedere l'attendibilità totale pe
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Utilizzi più impliciti dei criteri CAS: loadFromRemoteSources](https://go.microsoft.com/fwlink/p/?LinkId=266839)  
-- [Procedura: Eseguire codice parzialmente attendibile in un oggetto Sandbox](../../../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)  
-- [Schema delle impostazioni di runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)  
-- <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>  
+- [Utilizzi più impliciti dei criteri CAS: loadFromRemoteSources](https://go.microsoft.com/fwlink/p/?LinkId=266839)
+- [Procedura: Eseguire codice parzialmente attendibile in un oggetto Sandbox](../../../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)
+- [Schema delle impostazioni di runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>

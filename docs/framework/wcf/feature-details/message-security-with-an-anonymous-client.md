@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cad53e1a-b7c9-4064-bc87-508c3d1dce49
-ms.openlocfilehash: e90eeb787fd2141459dfa67f36fda94036cec94f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b0dbd38e02c2e200796fa4508efc203685026155
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193877"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596670"
 ---
 # <a name="message-security-with-an-anonymous-client"></a>Protezione dei messaggi con un client anonimo
 Lo scenario seguente vengono illustrati un client e servizio protetti dalla protezione dei messaggi di Windows Communication Foundation (WCF). Tra gli obiettivi di progettazione c'è quello di usare la sicurezza dei messaggi invece che la sicurezza del trasporto, così che in futuro sia possibile supportare un modello basato su attestazioni più avanzate. Per altre informazioni sull'uso di attestazioni dettagliate per l'autorizzazione, vedere [gestione di attestazioni e autorizzazioni con il modello di identità](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).  
@@ -131,9 +131,9 @@ Lo scenario seguente vengono illustrati un client e servizio protetti dalla prot
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Panoramica della sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Sicurezza delle applicazioni distribuite](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)  
- [Sicurezza dei messaggi anonima](../../../../docs/framework/wcf/samples/message-security-anonymous.md)  
- [Identità del servizio e autenticazione](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [Modello di sicurezza per Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>Vedere anche
+- [Panoramica della sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Sicurezza delle applicazioni distribuite](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)
+- [Sicurezza dei messaggi anonima](../../../../docs/framework/wcf/samples/message-security-anonymous.md)
+- [Identità del servizio e autenticazione](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+- [Modello di sicurezza per Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

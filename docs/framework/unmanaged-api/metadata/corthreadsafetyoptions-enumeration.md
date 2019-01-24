@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3407fcac420b8129dd39eabf84aec84b58651944
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b460c2c4b0d38ec46ee9d7341de9b320a2ecaa7e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442840"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54594642"
 ---
 # <a name="corthreadsafetyoptions-enumeration"></a>Enumerazione CorThreadSafetyOptions
 Specifica i flag per selezionare le opzioni per la thread safety.  
@@ -41,15 +41,15 @@ typedef enum CorThreadSafetyOptions {
 |Membro|Descrizione|  
 |------------|-----------------|  
 |`MDThreadSatetyDefault`|Valore predefinito. Uguale a `MDThreadSatetyOff`.|  
-|`MDThreadSatetyOff`|Indica che non può essere impostato un blocco di lettura/scrittura.|  
+|`MDThreadSatetyOff`|Indica che non è possibile impostare un blocco di lettura/scrittura.|  
 |`MDThreadSatetyOn`|Indica che è possibile impostare un blocco di lettura/scrittura.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorHdr. H  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Enumerazioni dei metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Vedere anche
+- [Enumerazioni dei metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

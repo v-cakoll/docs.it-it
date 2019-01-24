@@ -9,15 +9,15 @@ helpviewer_keywords:
 - content [WPF], ScrollViewer control
 - controls [WPF], ScrollViewer
 ms.assetid: 2163666e-04da-4036-841f-40947c9c034d
-ms.openlocfilehash: b5417632c50924200390d0ec01048d8df3d393ca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7e4bb04c3d339f01b97c09966e096ddd6de47fbe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556068"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671980"
 ---
 # <a name="scrollviewer"></a>ScrollViewer
-Il <xref:System.Windows.Controls.ScrollViewer> controllo crea un'area scorrevole in cui è possibile scorrere il contenuto orizzontalmente o verticalmente.  
+Il <xref:System.Windows.Controls.ScrollViewer> controllo crea un'area scorrevole in cui è contenuto può scorrere orizzontalmente o verticalmente.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Panoramica sull'elemento ScrollViewer](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)  
@@ -28,6 +28,6 @@ Il <xref:System.Windows.Controls.ScrollViewer> controllo crea un'area scorrevole
   
  <xref:System.Windows.Controls.ScrollViewer>  
   
-## <a name="see-also"></a>Vedere anche  
- [Cenni preliminari sugli elementi Panel](../../../../docs/framework/wpf/controls/panels-overview.md)  
- [Layout](../../../../docs/framework/wpf/advanced/layout.md)
+## <a name="see-also"></a>Vedere anche
+- [Cenni preliminari sugli elementi Panel](../../../../docs/framework/wpf/controls/panels-overview.md)
+- [Layout](../../../../docs/framework/wpf/advanced/layout.md)

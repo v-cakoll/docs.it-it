@@ -8,12 +8,12 @@ helpviewer_keywords:
 - visual layer [WPF], DrawingVisual objects
 - DrawingVisual objects in visual layer [WPF]
 ms.assetid: 0b4e711d-e640-40cb-81c3-8f5c59909b7d
-ms.openlocfilehash: 799892424f92782d71b9a35e76d722d1725815ea
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 0d4ba3939a95b665684713f3b1775bacd3d028b9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861845"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54675069"
 ---
 # <a name="using-drawingvisual-objects"></a>Utilizzo degli oggetti DrawingVisual
 In questo argomento viene fornita una panoramica di come usare <xref:System.Windows.Media.DrawingVisual> oggetti nel [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] livello visivo.  
@@ -53,7 +53,7 @@ In questo argomento viene fornita una panoramica di come usare <xref:System.Wind
   
 -   <xref:System.Windows.FrameworkElement.GetVisualChild%2A>: Restituisce un elemento figlio in corrispondenza dell'indice specificato dalla raccolta di elementi figlio.  
   
--   <xref:System.Windows.FrameworkElement.VisualChildrenCount%2A>: Ottiene il numero di elementi figlio visivi all'interno di questo elemento.  
+-   <xref:System.Windows.FrameworkElement.VisualChildrenCount%2A>: Ottiene il numero di elementi figlio visivi in questo elemento.  
   
  Nell'esempio seguente, le sostituzioni per i due <xref:System.Windows.FrameworkElement> membri vengono implementati.  
   
@@ -69,8 +69,8 @@ In questo argomento viene fornita una panoramica di come usare <xref:System.Wind
  [!code-csharp[DrawingVisualSample#103](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingVisualSample/CSharp/Window1.xaml.cs#103)]
  [!code-vb[DrawingVisualSample#103](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DrawingVisualSample/visualbasic/window1.xaml.vb#103)]  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Windows.Media.DrawingVisual>  
- <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A>  
- [Cenni preliminari sul rendering della grafica WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [Hit testing a livello visivo](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Windows.Media.DrawingVisual>
+- <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A>
+- [Cenni preliminari sul rendering della grafica WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [Hit testing a livello visivo](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)

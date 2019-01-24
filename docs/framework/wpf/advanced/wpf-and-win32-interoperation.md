@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 0ffbde0d-701d-45a3-a6fa-dd71f4d9772e
-ms.openlocfilehash: 733a4d4ee7296d96a18e8ba4763dfa12e218c028
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a242f60324f2342f3dd96edc3ccbd663ecc9807a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526517"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54680481"
 ---
 # <a name="wpf-and-win32-interoperation"></a>Interoperatività di WPF e Win32
 Questo argomento fornisce una panoramica dell'interoperatività tra codice [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] e [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornisce un ambiente completo per la creazione di applicazioni. Tuttavia, se si ha una grande quantità di codice [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)], può essere più efficace riutilizzare tale codice.  
@@ -27,7 +27,7 @@ Questo argomento fornisce una panoramica dell'interoperatività tra codice [!INC
   
 -   Ospitare una finestra [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] nel contenuto [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Con questa tecnica, è possibile usare un controllo [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] personalizzato esistente nel contesto di altro contenuto [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] e passare i dati attraversando i limiti.  
   
- Questo argomento illustra concettualmente queste due tecniche. Per informazioni maggiormente orientate al codice relative all'hosting di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] in [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)], vedere [Procedura dettagliata: hosting di contenuto WPF in Win32](../../../../docs/framework/wpf/advanced/walkthrough-hosting-wpf-content-in-win32.md). Per informazioni maggiormente orientate al codice relative all'hosting di [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], vedere [Procedura dettagliata: hosting di un controllo Win32 in WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-win32-control-in-wpf.md).  
+ Questo argomento illustra concettualmente queste due tecniche. Per un'illustrazione più orientati al codice di hosting [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] nelle [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)], vedere [procedura dettagliata: Hosting di contenuto WPF in Win32](../../../../docs/framework/wpf/advanced/walkthrough-hosting-wpf-content-in-win32.md). Per un'illustrazione più orientati al codice di hosting [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] nelle [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], vedere [procedura dettagliata: Hosting di un controllo Win32 in WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-win32-control-in-wpf.md).  
   
 <a name="projects"></a>   
 ## <a name="wpf-interoperation-projects"></a>Progetti di interoperatività WPF  
@@ -87,7 +87,7 @@ Questo argomento fornisce una panoramica dell'interoperatività tra codice [!INC
 > [!NOTE]
 >  Tutte le attività di definizione della classe contenuto [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], o alcune di esse, per il primo passaggio in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] possono essere eseguite usando la classe parziale predefinita della classe contenuto, se si genera un assembly separato e quindi vi si fa riferimento. Anche se si include in genere un <xref:System.Windows.Application> oggetti come parte della compilazione il [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] in un assembly, non comporta l'utilizzo che <xref:System.Windows.Application> come parte dell'interoperatività, è sufficiente utilizzare uno o più classi radice per [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] file definiti per l'applicazione e fare riferimento alle relative classi parziali. La parte restante della procedura è essenzialmente simile a quella appena descritta.  
 >   
->  Ognuno di questi passaggi viene illustrato tramite il codice nell'argomento [Procedura dettagliata: hosting di contenuto WPF in Win32](../../../../docs/framework/wpf/advanced/walkthrough-hosting-wpf-content-in-win32.md).  
+>  Ognuno di questi passaggi viene illustrato tramite il codice nell'argomento [procedura dettagliata: Hosting di contenuto WPF in Win32](../../../../docs/framework/wpf/advanced/walkthrough-hosting-wpf-content-in-win32.md).  
   
 <a name="hosting_an_hwnd"></a>   
 ## <a name="hosting-a-microsoft-win32-window-in-wpf"></a>Hosting di una finestra Microsoft Win32 in WPF  
@@ -115,7 +115,7 @@ Questo argomento fornisce una panoramica dell'interoperatività tra codice [!INC
   
  Questi passaggi consentono di creare un'applicazione che funziona con l'input del mouse. È possibile aggiungere il supporto della tabulazione per la finestra ospitata implementando il <xref:System.Windows.Interop.IKeyboardInputSink> interfaccia.  
   
- Ognuno di questi passaggi viene illustrato tramite il codice nell'argomento [Procedura dettagliata: hosting di un controllo Win32 in WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-win32-control-in-wpf.md).  
+ Ognuno di questi passaggi viene illustrato tramite il codice nell'argomento [procedura dettagliata: Hosting di un controllo Win32 in WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-win32-control-in-wpf.md).  
   
 ### <a name="hwnds-inside-wpf"></a>Handle di finestra (HWND) in WPF  
  È possibile pensare <xref:System.Windows.Interop.HwndHost> come un controllo speciale. (Tecnicamente <xref:System.Windows.Interop.HwndHost> è un <xref:System.Windows.FrameworkElement> derivate (classe), non un <xref:System.Windows.Controls.Control> classe derivata, ma può essere considerato un controllo ai fini dell'interoperatività.) <xref:System.Windows.Interop.HwndHost> astrae sottostante [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] natura del contenuto ospitato in modo che il resto della [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] prende in considerazione il contenuto ospitato da un altro oggetto simile al controllo, che deve eseguire il rendering e l'elaborazione dell'input. <xref:System.Windows.Interop.HwndHost> in genere si comporta come qualsiasi altra [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.FrameworkElement>, anche se vi sono alcune importanti differenze all'output (disegno e grafica) e di input (mouse e tastiera) legate alle limitazioni relative quali gli oggetti HWND sottostanti possono supportare.  
@@ -156,9 +156,9 @@ Questo argomento fornisce una panoramica dell'interoperatività tra codice [!INC
   
  Le interfacce forniscono supporto solo per le operazioni eseguite nella transizione tra le aree [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] e [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]. All'interno dell'area [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)], il comportamento di tabulazione è completamente controllato dalla logica implementata da [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] per la tabulazione, se presente.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Windows.Interop.HwndHost>  
- <xref:System.Windows.Interop.HwndSource>  
- <xref:System.Windows.Interop>  
- [Procedura dettagliata: Hosting di un controllo Win32 in WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-win32-control-in-wpf.md)  
- [Procedura dettagliata: hosting di contenuto WPF in Win32](../../../../docs/framework/wpf/advanced/walkthrough-hosting-wpf-content-in-win32.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Windows.Interop.HwndHost>
+- <xref:System.Windows.Interop.HwndSource>
+- <xref:System.Windows.Interop>
+- [Procedura dettagliata: Hosting di un controllo Win32 in WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-win32-control-in-wpf.md)
+- [Procedura dettagliata: Hosting di contenuto WPF in Win32](../../../../docs/framework/wpf/advanced/walkthrough-hosting-wpf-content-in-win32.md)

@@ -2,12 +2,12 @@
 title: Elemento &lt;message&gt; di &lt;netTcpBinding&gt;
 ms.date: 03/30/2017
 ms.assetid: 1d71edd9-c085-4c2e-b6d3-980c313366f9
-ms.openlocfilehash: 7af8cd9d36b56093eee2b53873c0fe0775a33430
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 018cd6797b730bc5469cc68dd23fcf8315716588
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146160"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54677392"
 ---
 # <a name="ltmessagegt-element-of-ltnettcpbindinggt"></a>Elemento &lt;message&gt; di &lt;netTcpBinding&gt;
 Definisce il tipo di requisiti di sicurezza a livello di messaggio per un endpoint configurato con il [ \<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).  
@@ -79,13 +79,13 @@ Definisce il tipo di requisiti di sicurezza a livello di messaggio per un endpoi
 ## <a name="remarks"></a>Note  
  Il messaggio usa la sicurezza a livello di messaggio per garantire l'integrità e la riservatezza del messaggio SOAP e per svolgere l'autenticazione reciproca dei peer di comunicazione. Se questa modalità di sicurezza viene selezionata per un'associazione, nello stack di canali vengono configurati elementi di associazione di sicurezza dei messaggi e i messaggi SOAP vengono protetti in conformità agli standard WS-Security*.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.MessageSecurityOverTcp>  
- <xref:System.ServiceModel.Configuration.NetTcpSecurityElement.Message%2A>  
- <xref:System.ServiceModel.NetTcpSecurity.Message%2A>  
- <xref:System.ServiceModel.Configuration.NetTcpSecurityElement>  
- [Protezione di servizi e client](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Associazioni](../../../../../docs/framework/wcf/bindings.md)  
- [Configurazione di associazioni fornite dal sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Uso di associazioni per configurare servizi e client](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<binding>](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.ServiceModel.MessageSecurityOverTcp>
+- <xref:System.ServiceModel.Configuration.NetTcpSecurityElement.Message%2A>
+- <xref:System.ServiceModel.NetTcpSecurity.Message%2A>
+- <xref:System.ServiceModel.Configuration.NetTcpSecurityElement>
+- [Protezione di servizi e client](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Associazioni](../../../../../docs/framework/wcf/bindings.md)
+- [Configurazione di associazioni fornite dal sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Uso di associazioni per configurare servizi e client](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)

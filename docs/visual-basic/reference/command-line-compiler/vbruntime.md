@@ -1,5 +1,5 @@
 ---
-title: /vbruntime-
+title: -vbruntime
 ms.date: 03/13/2018
 f1_keywords:
 - vbruntime
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - -vbruntime compiler option [Visual Basic]
 - /vbruntime compiler option [Visual Basic]
 ms.assetid: 1aa0239e-511a-4c29-957d-fd72877b350a
-ms.openlocfilehash: 9525eb35041d32c65563e88ad64cd17b60b2a29b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 88a7a74eac5a27cdf473e161a8ffdb59c1eb9ab2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193643"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674557"
 ---
-# <a name="-vbruntime"></a>/vbruntime-
+# <a name="-vbruntime"></a>-vbruntime
 Indica che il compilatore deve compilare senza un riferimento alla libreria di runtime di Visual Basic oppure con un riferimento a una libreria di runtime specifica.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -94,8 +94,8 @@ Indica che il compilatore deve compilare senza un riferimento alla libreria di r
 vbc -vbruntime:C:\VBLibraries\CustomVBLibrary.dll  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Core di Visual Basic: nuova modalità di compilazione in Visual Studio 2010 SP1](https://blogs.msdn.com/b/vbteam/archive/2011/01/10/vb-core-new-compilation-mode-in-visual-studio-2010-sp1.aspx)  
- [Compilatore della riga di comando di Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
- [Esempi di righe di comando di compilazione](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
- [-sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md)
+## <a name="see-also"></a>Vedere anche
+- [Core di Visual Basic: nuova modalità di compilazione in Visual Studio 2010 SP1](https://blogs.msdn.com/b/vbteam/archive/2011/01/10/vb-core-new-compilation-mode-in-visual-studio-2010-sp1.aspx)
+- [Compilatore della riga di comando di Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Esempi di righe di comando di compilazione](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [-sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md)

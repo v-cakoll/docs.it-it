@@ -2,19 +2,19 @@
 title: 'File XML di esempio: Customers e Orders (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: ed319807-c432-4f8e-9694-dad4c7648310
-ms.openlocfilehash: 564347d2203390fbf5c609bd7d0a8b2ab885d87b
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 1ee702b8a487544f89454f35a1c1bdb5658c393d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244054"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671603"
 ---
 # <a name="sample-xml-file-customers-and-orders-linq-to-xml"></a>File XML di esempio: Customers e Orders (LINQ to XML)
 Il file XML seguente viene usato in vari esempi nella documentazione di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Contiene Customers e Orders.  
   
- L'argomento [File XSD di esempio: Customers e Orders](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md) contiene uno schema XSD che può essere usato per convalidare questo documento. Lo schema usa le funzionalità `xs:key` e `xs:keyref` di XSD per stabilire che l'attributo `CustomerID` dell'elemento `Customer` è una chiave e per stabilire una relazione tra l'elemento `CustomerID` in ogni elemento `Order` e l'attributo `CustomerID` in ogni elemento `Customer`.  
+ L'argomento [File XSD di esempio: I clienti e ordini](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md) contiene uno schema XSD che può essere utilizzato per convalidare questo documento. Lo schema usa le funzionalità `xs:key` e `xs:keyref` di XSD per stabilire che l'attributo `CustomerID` dell'elemento `Customer` è una chiave e per stabilire una relazione tra l'elemento `CustomerID` in ogni elemento `Order` e l'attributo `CustomerID` in ogni elemento `Customer`.  
   
- Per un esempio di scrittura di query LINQ che sfruttano i vantaggi di questa relazione usando la `Join` clausola, vedere [procedura: unione di due raccolte (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md).  
+ Per un esempio di scrittura di query LINQ che sfruttano i vantaggi di questa relazione usando la `Join` clausola, vedere [come: Unire due raccolte (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md).  
   
 ## <a name="customersordersxml"></a>CustomersOrders.xml  
   
@@ -434,5 +434,5 @@ Il file XML seguente viene usato in vari esempi nella documentazione di [!INCLUD
 </Root>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Documenti XML di esempio (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a>Vedere anche
+- [Documenti XML di esempio (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

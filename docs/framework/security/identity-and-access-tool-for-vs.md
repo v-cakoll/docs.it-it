@@ -3,12 +3,12 @@ title: Identity and Access Tool per Visual Studio 2012
 ms.date: 03/30/2017
 ms.assetid: 87b8f8f2-4074-44fd-9fd6-08278e877390
 author: BrucePerlerMS
-ms.openlocfilehash: 1177048d8124c955220605e52dde539b84510cba
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: a1b5456f9081d807a3c9e29e1010cbfbf91e637f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584162"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54678551"
 ---
 # <a name="identity-and-access-tool-for-visual-studio-2012"></a>Identity and Access Tool per Visual Studio 2012
 In questo argomento viene descritto il nuovo strumento Identity and Access Tool for Visual Studio 11 È possibile scaricare questo strumento dal seguente URL: [ https://go.microsoft.com/fwlink/?LinkID=245849 ](https://go.microsoft.com/fwlink/?LinkID=245849) o direttamente da Visual Studio 11 cercando "identità" in Gestione estensioni.  
@@ -25,7 +25,7 @@ In questo argomento viene descritto il nuovo strumento Identity and Access Tool 
   
 -   È possibile stabilire la federazione con Active Directory Federation Services (AD FS) 2.0, o altri provider di WS-Federation, in una singola schermata.  
   
--   Tramite lo strumento vengono utilizzate le funzionalità del Servizio di controllo di accesso (ACS) di Microsoft Azure con un elenco semplice di caselle di controllo per tutti i provider di identità che si desidera utilizzare: Facebook, Google, Live ID, Yahoo!, qualsiasi provider di OpenID e qualsiasi provider di WS-Federation. Selezionare i provider di identità, scegliere OK, quindi F5. In questo modo sia l'applicazione sia ACS verranno configurati automaticamente e l'applicazione di test sarà in grado di riconoscere ACS.  
+-   Lo strumento si avvale delle funzionalità di Windows Azure Access Control Service (ACS) con un semplice elenco di caselle di controllo per tutti i provider di identità che si desidera utilizzare: Facebook, Google, Live ID, Yahoo!, qualsiasi provider OpenID e qualsiasi provider di WS-Federation. Selezionare i provider di identità, scegliere OK, quindi F5. In questo modo sia l'applicazione sia ACS verranno configurati automaticamente e l'applicazione di test sarà in grado di riconoscere ACS.  
   
-## <a name="see-also"></a>Vedere anche  
- [Funzionalità di WIF](../../../docs/framework/security/wif-features.md)
+## <a name="see-also"></a>Vedere anche
+- [Funzionalità di WIF](../../../docs/framework/security/wif-features.md)

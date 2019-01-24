@@ -2,23 +2,23 @@
 title: Elemento &lt;defaultCertificate&gt;
 ms.date: 03/30/2017
 ms.assetid: f1ddf364-9a00-45d3-b989-ff381c154ce6
-ms.openlocfilehash: 2f6167d7b30da753d093a87753eeef3374fcc0f0
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 1e4c76ea2b3e4064f3bc14461be1729af299117b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146992"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54676630"
 ---
 # <a name="ltdefaultcertificategt-element"></a>Elemento &lt;defaultCertificate&gt;
 Specifica un certificato X.509 da usare quando un servizio o STS non ne fornisce uno tramite un protocollo di negoziazione.  
   
  \<system.ServiceModel>  
-\<i comportamenti >  
+\<behaviors>  
 sezione endpointBehaviors  
-\<comportamento >  
+\<behavior>  
 \<clientCredentials>  
-\<serviceCertificate >  
-\<defaultCertificate >  
+\<serviceCertificate>  
+\<defaultCertificate>  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -72,7 +72,7 @@ sezione endpointBehaviors
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)|Specifica un certificato da usare per l'autenticazione di un servizio presso il client.|  
+|[\<serviceCertificate>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)|Specifica un certificato da usare per l'autenticazione di un servizio presso il client.|  
   
 ## <a name="remarks"></a>Note  
  Per le associazioni che usano sistemi di sicurezza dei messaggi basati sui certificati, il certificato specificato mediante questo elemento di configurazione viene usato per crittografare i messaggi inviati al servizio ed è previsto che venga usato dal servizio per firmare le risposte al client. Può contenere un solo certificato da usare quando il servizio non specifica alcun certificato.  
@@ -98,11 +98,11 @@ sezione endpointBehaviors
 </serviceCertificate>
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.Configuration.X509DefaultServiceCertificateElement>  
- <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>  
- <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.DefaultCertificate%2A>  
- [Uso di certificati](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [\<authentication>](../../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)  
- [Protezione di client](../../../../../docs/framework/wcf/securing-clients.md)  
- [Protezione di servizi e client](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.ServiceModel.Configuration.X509DefaultServiceCertificateElement>
+- <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>
+- <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.DefaultCertificate%2A>
+- [Uso di certificati](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [\<authentication>](../../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)
+- [Protezione di client](../../../../../docs/framework/wcf/securing-clients.md)
+- [Protezione di servizi e client](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

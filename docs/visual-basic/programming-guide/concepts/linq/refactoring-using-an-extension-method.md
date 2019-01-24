@@ -1,16 +1,16 @@
 ---
-title: Refactoring tramite un metodo di estensione (Visual Basic)
+title: Refactoring con un metodo di estensione (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: d87ae99a-cfa9-4a31-a5e4-9d6437be6810
-ms.openlocfilehash: e613994651ad33b8e9f4aa78c0c2897431246344
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 429f1fb106eca6b6a9ce0f64ea81c260c10a088a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33647904"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671577"
 ---
-# <a name="refactoring-using-an-extension-method-visual-basic"></a>Refactoring tramite un metodo di estensione (Visual Basic)
-Questo esempio si basa sull'esempio precedente, [recuperando il testo dei paragrafi (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), effettuando il refactoring della concatenazione di stringhe tramite una funzione pura viene implementata come metodo di estensione.  
+# <a name="refactoring-using-an-extension-method-visual-basic"></a>Refactoring con un metodo di estensione (Visual Basic)
+Questo esempio si basa sull'esempio precedente [recuperando il testo dei paragrafi (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), effettuando il refactoring della concatenazione di stringhe tramite una funzione pura che viene implementata come metodo di estensione.  
   
  Nell'esempio precedente è stato usato l'operatore di query standard <xref:System.Linq.Enumerable.Aggregate%2A> per concatenare più stringhe in un'unica stringa. Se tuttavia si scrive un metodo di estensione per eseguire tale operazione, la query risultante sarà più semplice e ridotta.  
   
@@ -19,7 +19,7 @@ Questo esempio si basa sull'esempio precedente, [recuperando il testo dei paragr
   
  L'esempio contiene più overload del metodo `StringConcatenate`.  
   
- È possibile trovare istruzioni per la creazione del documento di origine per questo esempio in [l'origine documento Office Open XML (Visual Basic) di creazione](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ È possibile trovare istruzioni per la creazione del documento di origine per questo esempio nella [creando l'origine documento Office Open XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
   
  In questo esempio vengono usate classi dell'assembly WindowsBase e i tipi dello spazio dei nomi <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
@@ -216,7 +216,7 @@ Module Module1
 End Module  
 ```  
   
- In questo esempio produce il seguente output quando viene applicato al documento descritto in [l'origine documento Office Open XML (Visual Basic) di creazione](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ In questo esempio produce il seguente output quando viene applicato al documento descritto [creando l'origine documento Office Open XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
   
 ```  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
@@ -243,6 +243,6 @@ StyleName:Code >Hello World<
   
 -   [Refactoring con una funzione pura (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
   
-## <a name="see-also"></a>Vedere anche  
- [Esercitazione: Manipolazione di contenuto in un documento WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
- [Refactoring in funzioni Pure (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+## <a name="see-also"></a>Vedere anche
+- [Esercitazione: Manipolazione di contenuto in un documento WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Refactoring in funzioni Pure (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

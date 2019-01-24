@@ -16,36 +16,36 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b11cf0fadc9142ee291115cf9f0d84e6429834fb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6f5c21d329ed35f82e36c2d88ac911401799e820
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33455117"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596020"
 ---
 # <a name="imethodmalloc-interface"></a>Interfaccia IMethodMalloc
-Fornisce un metodo per allocare memoria per un nuovo corpo della funzione Microsoft intermediate language (MSIL).  
+Fornisce un metodo per allocare memoria per un nuovo corpo di funzione Microsoft intermediate language (MSIL).  
   
 > [!NOTE]
->  Il `IMethodMalloc` interfaccia è un semplice allocatore di memoria. Consente di allocare memoria, ma non per liberarlo.  
+>  Il `IMethodMalloc` interfaccia è un allocatore di memoria semplice. Consente di allocare la memoria, ma non per liberarlo.  
   
 ## <a name="methods"></a>Metodi  
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo Alloc](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-alloc-method.md)|Tenta di allocare una quantità di memoria specificata per il corpo di una nuova funzione MSIL.|  
+|[Metodo Alloc](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-alloc-method.md)|Tenta di allocare una quantità di memoria specificata per un nuovo corpo funzione MSIL.|  
   
 ## <a name="remarks"></a>Note  
- Ogni allocatore è specifico del modulo e assicura che il corpo della funzione sarà un offset positivo dalla base del modulo. Memoria di sopra della base di un modulo può essere preziosa, pertanto l'allocatore deve essere utilizzata per allocare memoria solo per un corpo della funzione.  
+ Ogni allocatore è specifico del modulo e assicura che il corpo della funzione sarà un offset dalla base del modulo positivo. Memoria di sopra della base di un modulo può essere preziosa, in modo che l'allocatore dovrebbe essere utilizzato per allocare memoria solo per un corpo della funzione.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfacce di profilatura](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfacce di profilatura](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: aggiungere i pulsanti Carica, Salva e Annulla al controllo BindingNavigator di Windows Form'
+title: 'Procedura: Aggiungere carica, Salva e Annulla i pulsanti per i Windows Form controllo BindingNavigator'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - controls [Windows Forms], manipulating
 - BindingNavigator control [Windows Forms], adding buttons
 ms.assetid: faa33042-186e-4bb2-8798-17ceb987ec62
-ms.openlocfilehash: 97be77b6591e4b7fa3db8176222dcb1feb3481bc
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: dc91a4a91d26cd51a06b1c08dcb76f8966c52594
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45972689"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671109"
 ---
-# <a name="how-to-add-load-save-and-cancel-buttons-to-the-windows-forms-bindingnavigator-control"></a>Procedura: aggiungere i pulsanti Carica, Salva e Annulla al controllo BindingNavigator di Windows Form
+# <a name="how-to-add-load-save-and-cancel-buttons-to-the-windows-forms-bindingnavigator-control"></a>Procedura: Aggiungere carica, Salva e Annulla i pulsanti per i Windows Form controllo BindingNavigator
 Il <xref:System.Windows.Forms.BindingNavigator> controllo è una speciale <xref:System.Windows.Forms.ToolStrip> controllo specifico per la navigazione e modifica dei controlli sul form che vengono associati ai dati.  
   
  Perché è un <xref:System.Windows.Forms.ToolStrip> (controllo), il <xref:System.Windows.Forms.BindingNavigator> componente può essere facilmente modificato per includere comandi aggiuntivi o alternativi dell'utente.  
@@ -109,9 +109,9 @@ Il <xref:System.Windows.Forms.BindingNavigator> controllo è una speciale <xref:
     > [!NOTE]
     >  Il <xref:System.Windows.Forms.BindingSource.CancelEdit%2A> metodo ha come ambito la riga di dati. Salvare le modifiche apportate durante la visualizzazione dei singoli record prima di passare al record successivo.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Windows.Forms.BindingNavigator>  
- <xref:System.Windows.Forms.BindingSource>  
- <xref:System.Windows.Forms.ToolStrip>  
- [Controllo BindingNavigator](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)  
- [Cenni preliminari sul componente BindingSource](../../../../docs/framework/winforms/controls/bindingsource-component-overview.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Windows.Forms.BindingNavigator>
+- <xref:System.Windows.Forms.BindingSource>
+- <xref:System.Windows.Forms.ToolStrip>
+- [Controllo BindingNavigator](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)
+- [Cenni preliminari sul componente BindingSource](../../../../docs/framework/winforms/controls/bindingsource-component-overview.md)

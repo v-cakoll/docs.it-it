@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 06a4ae8c-eeb2-4d5a-817e-b1b95c0653e1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 39472662cd26799e9adbbbd199129e2c83dd0d93
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 5c9bf5d138be250d1dfeee012368153bac96b067
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155366"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54672396"
 ---
 # <a name="performance-counters-in-the-net-framework"></a>Contatori di prestazioni in .NET Framework
 In questo argomento fornisce un elenco di contatori delle prestazioni in cui è possibile trovare il [Windows Performance Monitor](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249%28v=ws.11%29).  
@@ -251,6 +251,6 @@ for (int i = 0; i < Array.Length; i++)
 |**Profondità stack**|Visualizza la profondità dello stack durante l'ultimo controllo di sicurezza per l'accesso di codice di runtime. I controlli di sicurezza per l'accesso di codice di runtime vengono eseguiti mediante i percorsi nello stack. Questo contatore non rappresenta una media, ma visualizza solo l'ultimo valore osservato.|  
 |**Totale controlli runtime**|Visualizza il numero totale di controlli di sicurezza per l'accesso di codice di runtime eseguiti dall'avvio dell'applicazione. I controlli di sicurezza per l'accesso di codice di runtime vengono eseguiti quando un chiamante richiede una particolare autorizzazione. Il controllo di runtime viene eseguito su tutte le chiamate del chiamante ed esamina lo stack del thread corrente del chiamante. Se usato con il contatore **Profondità stack**, questo contatore indica la riduzione delle prestazioni che si verifica per i controlli di sicurezza.|  
   
-## <a name="see-also"></a>Vedere anche  
- [Contatori delle prestazioni](../../../docs/framework/debug-trace-profile/performance-counters.md)  
- [Runtime Profiling](../../../docs/framework/debug-trace-profile/runtime-profiling.md) (Profilatura di runtime)
+## <a name="see-also"></a>Vedere anche
+- [Contatori delle prestazioni](../../../docs/framework/debug-trace-profile/performance-counters.md)
+- [Runtime Profiling](../../../docs/framework/debug-trace-profile/runtime-profiling.md) (Profilatura di runtime)

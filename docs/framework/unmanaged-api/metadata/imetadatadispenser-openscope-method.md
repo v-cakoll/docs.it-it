@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0fb805e3292d90fd5f9562d9b0b8fcc31f84ec7f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 905de2745be085391bef8ea32b8f82a5da78f3a3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449364"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54681196"
 ---
 # <a name="imetadatadispenseropenscope-method"></a>Metodo IMetaDataDispenser::OpenScope
-Apre un file esistente, su disco e viene eseguito il mapping dei metadati in memoria.  
+Apre un file esistente su disco e viene eseguito il mapping dei metadati in memoria.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,40 +43,40 @@ HRESULT OpenScope (
  [in] Il nome del file da aprire. Il file deve contenere metadati di common language runtime (CLR).  
   
  `dwOpenFlags`  
- [in] Il valore di [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) enumerazione per specificare la modalità (lettura, scrittura e così via) di apertura.  
+ [in] Valore di [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) enumerazione per specificare la modalità (lettura, scrittura e così via) per l'apertura.  
   
  `riid`  
- [in] L'IID dell'interfaccia di metadati desiderati da restituire. il chiamante utilizzerà l'interfaccia per l'importazione (lettura) o la creazione dei metadati (scrittura).  
+ [in] IID dell'interfaccia di metadati desiderati da restituire. il chiamante Usa l'interfaccia per importare (lettura) o la creazione dei metadati (scrittura).  
   
- Il valore di `riid` deve specificare una delle interfacce "import" o "generazione". I valori validi sono IID_IMetaDataEmit, IID_IMetaDataImport, IID_IMetaDataAssemblyImport, IID_IMetaDataEmit2 IID_IMetaDataAssemblyEmit IID_IMetaDataImport2.  
+ Il valore di `riid` deve specificare una delle interfacce "import" o "Crea". I valori validi sono IID_IMetaDataEmit, IID_IMetaDataImport, IID_IMetaDataAssemblyImport, IID_IMetaDataEmit2 IID_IMetaDataAssemblyEmit IID_IMetaDataImport2.  
   
  `ppIUnk`  
- [out] Puntatore all'interfaccia restituita.  
+ [out] Il puntatore all'interfaccia restituita.  
   
 ## <a name="remarks"></a>Note  
  La copia in memoria dei metadati è possibile eseguire query utilizzando i metodi di una delle interfacce "import" o aggiunti utilizzando i metodi di una delle interfacce di "generazione".  
   
- Se il file di destinazione non contiene metadati CLR, la `OpenScope` metodo avrà esito negativo.  
+ Se il file di destinazione non contiene metadati CLR, il `OpenScope` metodo avrà esito negativo.  
   
- In .NET Framework versione 1.0 e 1.1, se un ambito viene aperto con `dwOpenFlags` impostato su ofRead, è idoneo per la condivisione. Vale a dire se successive chiamate a `OpenScope` passare il nome di un file che è stato precedentemente aperto, l'ambito esistente viene riutilizzato e non viene creato un nuovo insieme di strutture di dati. Tuttavia, possono verificarsi problemi a causa di questa condivisione.  
+ In .NET Framework versione 1.0 e 1.1, se un ambito viene aperto con `dwOpenFlags` impostata su ofRead, è idoneo per la condivisione. Vale a dire, se i successivi le chiamate a `OpenScope` passare il nome di un file che è stato precedentemente aperto, viene riutilizzato l'ambito esistente e non viene creato un nuovo set di strutture di dati. Tuttavia, possono verificarsi problemi a causa di questa condivisione.  
   
- In .NET Framework versione 2.0, gli ambiti di aperta con `dwOpenFlags` impostato su ofRead non sono più condivisi. Utilizzare il valore ofReadOnly per consentire l'ambito per la condivisione. Quando si condivide un ambito, le query che utilizzano "lettura/scrittura" interfacce di metadati avrà esito negativo.  
+ In .NET Framework versione 2.0, gli ambiti di aperta con `dwOpenFlags` impostato su ofRead non sono più condivisi. Usare il valore di ofReadOnly per consentire l'ambito da condividere. Quando viene condiviso un ambito, le query che usano "lettura/scrittura" interfacce di metadati avrà esito negativo.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
- **Libreria:** usata come risorsa in Mscoree. dll  
+ **Libreria:** Usato come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia IMetaDataDispenser](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)  
- [Interfaccia IMetaDataDispenserEx](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)  
- [Interfaccia IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)  
- [Interfaccia IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)  
- [Interfaccia IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [Interfaccia IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)  
- [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [Interfaccia IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia IMetaDataDispenser](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
+- [Interfaccia IMetaDataDispenserEx](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
+- [Interfaccia IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [Interfaccia IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [Interfaccia IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [Interfaccia IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Interfaccia IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

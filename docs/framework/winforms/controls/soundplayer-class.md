@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - sounds [Windows Forms], playing
 ms.assetid: f3945af9-045c-4e2d-b251-377c37ca2d77
-ms.openlocfilehash: 29399beebef3de3e7b4ae8ce7f3611e3d158296f
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: a93519cbc320def91c030e7344b33be2a10b4351
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48835581"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674336"
 ---
 # <a name="soundplayer-class"></a>Classe SoundPlayer
 La classe `SoundPlayer` consente di includere facilmente suoni nelle applicazioni.  
@@ -34,7 +34,7 @@ La classe `SoundPlayer` consente di includere facilmente suoni nelle applicazion
  [Procedura: Riprodurre un suono del sistema da un Windows Form](../../../../docs/framework/winforms/controls/how-to-play-a-system-sound-from-a-windows-form.md)  
  Fornisce il codice per riprodurre uno dei suoni del sistema.  
   
- [Procedura: Caricare in modo asincrono un suono in un Windows Form](../../../../docs/framework/winforms/controls/how-to-load-a-sound-asynchronously-within-a-windows-form.md)  
+ [Procedura: Caricare un suono in modo asincrono in un Windows Form](../../../../docs/framework/winforms/controls/how-to-load-a-sound-asynchronously-within-a-windows-form.md)  
  Fornisce codice per caricare in modo asincrono un suono da un URL e riprodurlo.  
   
  [Procedura: Riprodurre un suono ripetutamente in un Windows Form](../../../../docs/framework/winforms/controls/how-to-loop-a-sound-playing-on-a-windows-form.md)  
@@ -51,6 +51,6 @@ La classe `SoundPlayer` consente di includere facilmente suoni nelle applicazion
  [Controlli da usare in Windows Form](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  Fornisce un elenco completo dei controlli Windows Form, con collegamenti alle informazioni sul relativo uso.  
   
-## <a name="see-also"></a>Vedere anche 
+## <a name="see-also"></a>Vedere anche
 
 - [Oggetto My.Computer](../../../visual-basic/language-reference/objects/my-computer-object.md)

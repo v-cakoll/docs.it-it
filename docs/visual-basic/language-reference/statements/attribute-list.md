@@ -5,12 +5,12 @@ helpviewer_keywords:
 - attribute list
 - attributes [Visual Basic], applying
 ms.assetid: 5880073a-68a4-4b6b-8a07-ace32959a4e2
-ms.openlocfilehash: 23f2004a34f5d6dc27c8263f6e66642dd32c6a5f
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 9ab55187fef11fba9c794ff0266656860bea3d1f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37936929"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54672110"
 ---
 # <a name="attribute-list-visual-basic"></a>Elenco degli attributi (Visual Basic)
 Specifica gli attributi da applicare a un elemento di programmazione dichiarato. Gli attributi sono separati da una virgola. Di seguito è la sintassi per un attributo.  
@@ -53,8 +53,8 @@ Specifica gli attributi da applicare a un elemento di programmazione dichiarato.
   
  <xref:System.Runtime.InteropServices.DllImportAttribute> indica che la routine con attributi rappresenta un punto di ingresso in una libreria di collegamento dinamico (DLL) non gestita. L'attributo fornisce il nome della DLL come un argomento posizionale e le altre informazioni come gli inizializzatori di variabili.  
   
-## <a name="see-also"></a>Vedere anche  
- [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md)  
- [Modulo \<parola chiave>](../../../visual-basic/language-reference/modifiers/module-keyword.md)  
- [Panoramica degli attributi](../../../visual-basic/programming-guide/concepts/attributes/index.md)  
- [Procedura: Interrompere e combinare istruzioni nel codice](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)
+## <a name="see-also"></a>Vedere anche
+- [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md)
+- [Modulo \<parola chiave>](../../../visual-basic/language-reference/modifiers/module-keyword.md)
+- [Panoramica degli attributi](../../../visual-basic/programming-guide/concepts/attributes/index.md)
+- [Procedura: Interrompere e combinare istruzioni nel codice](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)

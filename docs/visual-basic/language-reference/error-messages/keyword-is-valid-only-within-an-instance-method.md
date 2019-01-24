@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30043
 ms.assetid: 7973aa82-a681-440c-9bca-242627d7ba86
-ms.openlocfilehash: 2d9e26aa7dccf1b9c6390a20a59b10a0d248969d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a464a059aa2d13e3472b9770960384b6be398092
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33586360"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54595942"
 ---
 # <a name="39ltkeywordgt39-is-valid-only-within-an-instance-method"></a>&#39;&lt;parola chiave&gt; &#39; è valido solo all'interno di un metodo di istanza
-Il `Me`, `MyClass`, e `MyBase` parole chiave fanno riferimento a istanze di classe specifico. Non possono essere utilizzati all'interno di un oggetto condiviso `Function` o `Sub` stored procedure.  
+Il `Me`, `MyClass`, e `MyBase` parole chiave fanno riferimento alle istanze di classe specifica. È possibile utilizzarle all'interno di un oggetto condiviso `Function` o `Sub` procedure.  
   
  **ID errore:** BC30043  
   
@@ -23,7 +23,7 @@ Il `Me`, `MyClass`, e `MyBase` parole chiave fanno riferimento a istanze di clas
   
 -   Rimuovere la parola chiave dalla routine oppure rimuovere il `Shared` parola chiave dalla dichiarazione di routine.  
   
-## <a name="see-also"></a>Vedere anche  
- [Assegnazione di variabili oggetto](../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)  
- [Me, My, MyBase e MyClass](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)  
- [Nozioni fondamentali sull'ereditarietà](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
+## <a name="see-also"></a>Vedere anche
+- [Assegnazione di variabili oggetto](../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)
+- [Me, My, MyBase e MyClass](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
+- [Nozioni fondamentali sull'ereditarietà](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)

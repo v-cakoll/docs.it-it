@@ -1,5 +1,5 @@
 ---
-title: ICorDebugModule Interface1
+title: Interfaccia1 ICorDebugModule
 ms.date: 03/30/2017
 api_name:
 - ICorDebugModule
@@ -16,24 +16,24 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: db4a980929a644d2862a382f147505644313da7b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: eca28f16f0430e793ad0b91b01db609f835f0a4e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422237"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671252"
 ---
-# <a name="icordebugmodule-interface1"></a>ICorDebugModule Interface1
-Rappresenta un modulo common language runtime (CLR), ovvero un file eseguibile o una libreria di collegamento dinamico (DLL).  
+# <a name="icordebugmodule-interface1"></a>Interfaccia1 ICorDebugModule
+Rappresenta un modulo common language runtime (CLR), che può essere un file eseguibile o una libreria di collegamento dinamico (DLL).  
   
 ## <a name="methods"></a>Metodi  
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
 |[Metodo CreateBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-createbreakpoint-method.md)|Non implementato.|  
-|[Metodo EnableClassLoadCallbacks](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-enableclassloadcallbacks-method.md)|Determina se il [ICorDebugManagedCallback:: LoadClass](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) e [ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadclass-method.md) vengono chiamati per questo modulo.|  
-|[Metodo EnableJITDebugging](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-enablejitdebugging-method.md)|Determina se il compilatore di just-in-time (JIT) consente di mantenere le informazioni di debug per i metodi all'interno del modulo.|  
-|[Metodo GetAssembly](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getassembly-method.md)|Ottiene l'assembly per il modulo che lo contiene.|  
+|[Metodo EnableClassLoadCallbacks](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-enableclassloadcallbacks-method.md)|Determina se il [LoadClass](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) e [UnloadClass](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadclass-method.md) i callback vengono chiamati per questo modulo.|  
+|[Metodo EnableJITDebugging](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-enablejitdebugging-method.md)|Determina se il compilatore JIT just-in-time mantiene le informazioni di debug per i metodi all'interno del modulo.|  
+|[Metodo GetAssembly](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getassembly-method.md)|Ottiene l'assembly che contiene per questo modulo.|  
 |[Metodo GetBaseAddress](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getbaseaddress-method.md)|Ottiene l'indirizzo di base del modulo.|  
 |[Metodo GetClassFromToken](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getclassfromtoken-method.md)|Ottiene l'oggetto ICorDebugClass dai metadati.|  
 |[Metodo GetEditAndContinueSnapshot](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-geteditandcontinuesnapshot-method.md)|Deprecato.|  
@@ -42,7 +42,7 @@ Rappresenta un modulo common language runtime (CLR), ovvero un file eseguibile o
 |[Metodo GetGlobalVariableValue](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getglobalvariablevalue-method.md)|Ottiene un oggetto valore per la variabile globale specificata.|  
 |[Metodo GetMetaDataInterface](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getmetadatainterface-method.md)|Ottiene un puntatore di interfaccia di metadati che può essere utilizzato per esaminare i metadati per il modulo.|  
 |[Metodo GetName](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getname-method.md)|Ottiene il nome del file del modulo.|  
-|[Metodo GetProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getprocess-method.md)|Ottiene il processo di contenitore per questo modulo.|  
+|[Metodo GetProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getprocess-method.md)|Ottiene il processo contenitore per questo modulo.|  
 |[Metodo GetSize](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getsize-method.md)|Ottiene le dimensioni del modulo in byte.|  
 |[Metodo GetToken](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-gettoken-method.md)|Ottiene il token per la voce della tabella per questo modulo.|  
 |[Metodo IsDynamic](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-isdynamic-method.md)|Indica se il modulo è dinamico.|  
@@ -54,14 +54,14 @@ Rappresenta un modulo common language runtime (CLR), ovvero un file eseguibile o
 >  Questa interfaccia non supporta la chiamata in modalità remota, tra computer o tra processi.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)  
- [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

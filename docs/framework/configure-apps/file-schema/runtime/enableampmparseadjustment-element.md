@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 ms.assetid: fda998a5-f538-4f8b-a18c-ee7f35e16938
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cf56a2720ab407d05b8356280913445c15a17020
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 97bb5912ec4d384260e3809166efacded8e2b389
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611074"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54679097"
 ---
 # <a name="ltenableampmparseadjustmentgt-element"></a>&lt;EnableAmPmParseAdjustment&gt; elemento
 Determina se analisi dell'ora e i metodi utilizzano un set di regole adattato per analizzare le stringhe di data che contengono un giorno, mese, ora e indicazione AM/PM.  
   
  \<configuration>  
  \<runtime>  
-\<EnableAmPmParseAdjustment >  
+\<EnableAmPmParseAdjustment>  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -76,11 +76,11 @@ Determina se analisi dell'ora e i metodi utilizzano un set di regole adattato pe
   
  Nella tabella seguente viene illustrata la differenza tra il <xref:System.DateTime> valore quando il <xref:System.DateTime.Parse%28System.String%29?displayProperty=nameWithType> metodo viene utilizzato per analizzare la stringa "" 4/10 6 AM"con il `<EnableAmPmParseAdjustment>` dell'elemento `enabled` proprietà è impostata su"0"o"1". Si presuppone che data odierna è 5 gennaio 2017 e Visualizza la data come se viene formattato con stringa di formato "G" della cultura specificata.  
   
-|Nome delle impostazioni cultura|attivato = "0"|attivato = "1"|  
+|Nome delle impostazioni cultura|enabled="0"|enabled="1"|  
 |------------------|------------------|------------------|  
 |en-US|1 O 5/2017:00 4:00|4/10/2017:00 6:00|  
 |en-GB|5/1/2017 6:00:00|10/4/2017 6:00:00|  
   
-## <a name="see-also"></a>Vedere anche  
-- [\<runtime > elemento](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)  
+## <a name="see-also"></a>Vedere anche
+- [\<runtime > elemento](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)
 - [Elemento \<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)

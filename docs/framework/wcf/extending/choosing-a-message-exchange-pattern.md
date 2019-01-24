@@ -2,22 +2,22 @@
 title: Scelta di un modello di scambio dei messaggi
 ms.date: 03/30/2017
 ms.assetid: 0f502ca1-6a8e-4607-ba15-59198c0e6146
-ms.openlocfilehash: ac5ff841eb4e314c1c9d04c895d7a22766da003e
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 927324e0f707284e31baefa261d4d90b147e4e24
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805889"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54594759"
 ---
 # <a name="choosing-a-message-exchange-pattern"></a>Scelta di un modello di scambio dei messaggi
-Il primo passaggio nella scrittura di un trasporto personalizzato è necessario stabilire quali *modelli di scambio dei messaggi* (o MEP) sono necessari per il canale a cui si sta sviluppando. In questo argomento vengono descritte le opzioni disponibili e vengono illustrati i vari requisiti. Questa è la prima attività nell'elenco di attività di sviluppo channel descritto in [sviluppo canali](../../../../docs/framework/wcf/extending/developing-channels.md).  
+Il primo passaggio nella scrittura di un trasporto personalizzato deve decidere quale *modelli di scambio dei messaggi* (o MEP, Message) sono necessari per il canale si sta sviluppando. In questo argomento vengono descritte le opzioni disponibili e vengono illustrati i vari requisiti. Si tratta della prima attività nell'elenco attività di sviluppo channel descritto nella [emergenti canali](../../../../docs/framework/wcf/extending/developing-channels.md).  
   
 ## <a name="six-message-exchange-patterns"></a>Sei modelli di scambio dei messaggi  
  Sono disponibili tre modelli di scambio dei messaggi:  
   
 -   Datagramma (<xref:System.ServiceModel.Channels.IInputChannel> e <xref:System.ServiceModel.Channels.IOutputChannel>)  
   
-     Quando si utilizza un modello di scambio di datagramma, un client invia un messaggio utilizzando un *generato automaticamente* exchange. Tale scambio richiede una conferma fuori banda di recapito con esito positivo. Il messaggio potrebbe infatti andare perso durante il transito e non raggiungere mai il servizio. Se l'operazione di invio viene completata correttamente sul lato client, non c'è garanzia che l'endpoint remoto abbia ricevuto il messaggio. Il datagramma è un componente fondamentale per i messaggi, poiché sulla sua base è possibile compilare protocolli propri, tra cui protocolli affidabili e protocolli sicuri. I canali del datagramma del client implementano l'interfaccia <xref:System.ServiceModel.Channels.IOutputChannel>, mentre i canali del datagramma del servizio implementano l'interfaccia <xref:System.ServiceModel.Channels.IInputChannel>.  
+     Quando si usa un modello di scambio di datagramma, un client invia un messaggio utilizzando un *generato automaticamente* exchange. Tale scambio richiede una conferma fuori banda di recapito con esito positivo. Il messaggio potrebbe infatti andare perso durante il transito e non raggiungere mai il servizio. Se l'operazione di invio viene completata correttamente sul lato client, non c'è garanzia che l'endpoint remoto abbia ricevuto il messaggio. Il datagramma è un componente fondamentale per i messaggi, poiché sulla sua base è possibile compilare protocolli propri, tra cui protocolli affidabili e protocolli sicuri. I canali del datagramma del client implementano l'interfaccia <xref:System.ServiceModel.Channels.IOutputChannel>, mentre i canali del datagramma del servizio implementano l'interfaccia <xref:System.ServiceModel.Channels.IInputChannel>.  
   
 -   Richiesta-risposta (<xref:System.ServiceModel.Channels.IRequestChannel> e <xref:System.ServiceModel.Channels.IReplyChannel>)  
   
@@ -48,7 +48,7 @@ I tre modelli di scambio dei messaggi di base. Dall'alto verso il basso: datagra
 >  Per il trasporto UDP, l'unico modello di scambio dei messaggi supportato è il datagramma, poiché il protocollo UPD è di tipo fire and forget.  
   
 ## <a name="sessions-and-sessionful-channels"></a>Sessioni e canali con sessione  
- Nel campo delle reti, esistono protocolli orientati alla connessione, ad esempio il protocollo TCP, e protocolli senza connessione, ad esempio il protocollo UPD. WCF utilizza il termine sessione per indicare un'astrazione logica simile a quello di connessione. I protocolli WCF con sessione sono simili ai protocolli di rete orientati alla connessione, mentre i protocolli WCF senza sessione sono simili ai protocolli di rete senza connessione.  
+ Nel campo delle reti, esistono protocolli orientati alla connessione, ad esempio il protocollo TCP, e protocolli senza connessione, ad esempio il protocollo UPD. WCF Usa il termine sessione per indicare un'astrazione logica simile a connessione. I protocolli WCF con sessione sono simili ai protocolli di rete orientati alla connessione, mentre i protocolli WCF senza sessione sono simili ai protocolli di rete senza connessione.  
   
  Nel modello a oggetti dei canali, ogni sessione logica si manifesta come un'istanza di un canale con sessione. Ogni nuova sessione creata dal client e accettata nel servizio corrisponde pertanto a un nuovo canale con sessione su ciascun lato. Nel diagramma seguente viene illustrata, nella parte superiore, la struttura dei canali senza sessione e, nella parte inferiore, la struttura dei canali con sessione.  
   
@@ -63,7 +63,7 @@ I tre modelli di scambio dei messaggi di base. Dall'alto verso il basso: datagra
 ## <a name="starting-and-terminating-sessions"></a>Avvio e terminazione di sessioni  
  Le sessioni vengono avviate sul client mediante la creazione di un nuovo canale con sessione e vengono avviate sul servizio quando il servizio riceve un messaggio inviato in una nuova sessione. Analogamente, le sessioni vengono terminate mediante la chiusura o l'interruzione di un canale con sessione.  
   
- L'eccezione è rappresentata dall'interfaccia <xref:System.ServiceModel.Channels.IDuplexSessionChannel>, che viene utilizzata per l'invio e la ricezione di messaggi in un modello di comunicazione duplex con sessione. È possibile che un lato desideri arrestare l'invio di messaggi ma continuarne la ricezione; a questo scopo, quando si utilizza l'interfaccia <xref:System.ServiceModel.Channels.IDuplexSessionChannel>, è presente un meccanismo che consente di chiudere la sessione di output, indicando quindi che non verranno più inviati messaggi, ma di mantenere aperta la sessione di input in modo da continuare a ricevere messaggi.  
+ L'eccezione è rappresentata dall'interfaccia <xref:System.ServiceModel.Channels.IDuplexSessionChannel>, che viene usata per l'invio e la ricezione di messaggi in un modello di comunicazione duplex con sessione. È possibile che un lato desideri arrestare l'invio di messaggi ma continuarne la ricezione; a questo scopo, quando si utilizza l'interfaccia <xref:System.ServiceModel.Channels.IDuplexSessionChannel>, è presente un meccanismo che consente di chiudere la sessione di output, indicando quindi che non verranno più inviati messaggi, ma di mantenere aperta la sessione di input in modo da continuare a ricevere messaggi.  
   
  In generale, le sessioni vengono chiuse sul lato di uscita e non sul lato di ingresso. In altri termini, è possibile chiudere i canali di output con sessione, in questo modo terminando correttamente la sessione. Con la chiusura di un canale di output con sessione, il canale di input con sessione corrispondente restituirà un valore null all'applicazione che chiama <xref:System.ServiceModel.Channels.IInputChannel.Receive%2A?displayProperty=nameWithType> su <xref:System.ServiceModel.Channels.IDuplexSessionChannel>.  
   
@@ -92,5 +92,5 @@ I tre modelli di scambio dei messaggi di base. Dall'alto verso il basso: datagra
   
 -   Quando sul canale viene chiamato il metodo <xref:System.ServiceModel.ICommunicationObject.Abort%2A>, terminare immediatamente la sessione senza eseguire l'I/O. Anche in questo caso, tale operazione può non comportare nulla o implicare l'interruzione di una connessione di rete o di un'altra risorsa.  
   
-## <a name="see-also"></a>Vedere anche  
- [Panoramica sul modello dei canali](../../../../docs/framework/wcf/extending/channel-model-overview.md)
+## <a name="see-also"></a>Vedere anche
+- [Panoramica sul modello dei canali](../../../../docs/framework/wcf/extending/channel-model-overview.md)

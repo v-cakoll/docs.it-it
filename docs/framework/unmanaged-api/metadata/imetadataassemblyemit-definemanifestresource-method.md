@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 48d688b64bbe9330a176ef073e96865b719ff2c0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 145659e8761b8c7804faf25e47a280a9d4f874b4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446681"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54679032"
 ---
 # <a name="imetadataassemblyemitdefinemanifestresource-method"></a>Metodo IMetaDataAssemblyEmit::DefineManifestResource
 Crea una struttura `ManifestResource` che contiene i metadati per la risorsa di manifesto specificata e restituisce il token di metadati associato.  
@@ -44,10 +44,10 @@ HRESULT DefineManifestResource (
  [in] Il nome della risorsa.  
   
  `tkImplementation`  
- [in] Un token di metadati del tipo `mdtFile` o `mdtAssemblyRef` che esegue il mapping al provider di risorse. Un valore NULL indica che il file in cui sono incorporato i metadati sia il provider di risorse.  
+ [in] Un token di metadati di tipo `mdtFile` o `mdtAssemblyRef` che esegue il mapping al provider di risorse. Un valore NULL indica che il file in cui sono incorporati i metadati sia il provider di risorse.  
   
  `dwOffset`  
- [in] L'offset all'inizio della risorsa all'interno del file. Per le risorse nei file autonomi, questo valore sarà sempre zero. Se la risorsa è incorporata in un file di PE (eseguibile), si tratta di un offset del BLOB, che inizia nella posizione specificata nel file di intestazione Cor. h della risorsa.  
+ [in] L'offset all'inizio della risorsa all'interno del file. Per le risorse in file autonomi, questo valore sarà sempre zero. Se la risorsa è incorporata in un file di PE (eseguibile), questo è un offset pari a risorse BLOB, che inizia nella posizione specificata nel file di intestazione Cor. h.  
   
  `dwResourceFlags`  
  [in] Combinazione bit per bit dei valori di flag che specificano le impostazioni delle proprietà per la definizione di risorsa.  
@@ -56,16 +56,16 @@ HRESULT DefineManifestResource (
  [out] Un puntatore al token di metadati restituiti.  
   
 ## <a name="remarks"></a>Note  
- Una `ManifestResource` struttura dei metadati deve essere definita per ogni risorsa è implementata in ognuno dei file dell'assembly.  
+ Uno `ManifestResource` struttura dei metadati deve essere definita per ogni risorsa che viene implementata in ciascuno dei file dell'assembly.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforma:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforma:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
- **Libreria:** usata come risorsa in Mscoree. dll  
+ **Libreria:** Usato come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
