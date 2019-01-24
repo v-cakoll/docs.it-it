@@ -10,21 +10,21 @@ helpviewer_keywords:
 - bypasslist, remove element
 - remove element, bypasslist
 ms.assetid: 61dcfb4a-e3d9-4abf-a2cd-7d685fe2f64b
-ms.openlocfilehash: 83449aa2df2b0442f5ba5e1f152232b007bcdc15
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c9db8cc2cf05987db97f28d7f97967f5bb52404e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193708"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54625666"
 ---
 # <a name="ltremovegt-element-for-bypasslist-network-settings"></a>&lt;rimuovere&gt; (elemento) per bypasslist (impostazioni di rete)
 Rimuove un indirizzo IP o nome DNS dall'elenco di bypass del proxy.  
   
  \<configuration>  
 \<system.net>  
-\<defaultProxy >  
-\<BypassList >  
-\<rimuovere >  
+\<defaultProxy>  
+\<bypasslist>  
+\<remove>  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -50,7 +50,7 @@ Rimuove un indirizzo IP o nome DNS dall'elenco di bypass del proxy.
   
 |**Elemento**|**Descrizione**|  
 |-----------------|---------------------|  
-|[BypassList](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Fornisce un set di espressioni regolari che descrivono gli indirizzi che non usano un proxy.|  
+|[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Fornisce un set di espressioni regolari che descrivono gli indirizzi che non usano un proxy.|  
   
 ## <a name="remarks"></a>Note  
  Il `remove` elemento rimuove le espressioni regolari che descrivono gli indirizzi IP o nomi di server DNS nell'elenco di indirizzi che ignorano un server proxy. Gli indirizzi sono stati definiti in precedenza nel file di configurazione o a un livello superiore nella gerarchia di configurazione.  
@@ -78,6 +78,6 @@ Rimuove un indirizzo IP o nome DNS dall'elenco di bypass del proxy.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
-- <xref:System.Net.WebProxy?displayProperty=nameWithType>  
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Net.WebProxy?displayProperty=nameWithType>
 - [Schema delle impostazioni di rete](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

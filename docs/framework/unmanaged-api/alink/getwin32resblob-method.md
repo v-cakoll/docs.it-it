@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f40b99c0a81bf0f2b622c7d23157dbb5736df1ca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: abc5f9350342af0439cb83f1df14979cfabcdb3e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403292"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54601541"
 ---
 # <a name="getwin32resblob-method"></a>Metodo GetWin32ResBlob
-Recupera il blob di risorse Win32. Chiamare questo metodo dopo l'impostazione di opzioni per l'assembly.  
+Recupera il blob di risorse Win32. Chiamare questo metodo dopo aver impostato le opzioni di assembly.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,13 +44,13 @@ HRESULT GetWin32ResBlob(
  ID dell'assembly.  
   
  `FileToken`  
- Token di file utilizzato per recuperare il nome del file da utilizzare quando si crea la risorsa di versione Win32  
+ Token file utilizzato per recuperare il nome del file da utilizzare quando si crea la risorsa di versione Win32  
   
  `fDll`  
- TRUE se è un file DLL, false per un file EXE.  
+ TRUE se una DLL, file di un file eseguibile è false.  
   
  `pszIconFile`  
- Icona facoltativa da inserire nel blob di risorse.  
+ Icona facoltativa da inserire nell'oggetto blob di risorse.  
   
  `ppResBlob`  
  Riceve il blob di risorse.  
@@ -59,12 +59,12 @@ HRESULT GetWin32ResBlob(
  Riceve le dimensioni del blob.  
   
 ## <a name="return-value"></a>Valore restituito  
- Se il metodo ha esito positivo, restituisce S_OK.  
+ Restituisce S_OK se il metodo ha esito positivo.  
   
 ## <a name="requirements"></a>Requisiti  
  Richiede alink.h  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [Interfaccia IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [Alink (API)](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [Interfaccia IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [Alink (API)](../../../../docs/framework/unmanaged-api/alink/index.md)

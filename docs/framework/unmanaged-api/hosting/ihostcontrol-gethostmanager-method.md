@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 355d2e259adb13da44b09e19872337c17ac20ade
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 821968fbde6d3f5434b83adf8c9661fe39d96293
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33439322"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54742029"
 ---
 # <a name="ihostcontrolgethostmanager-method"></a>Metodo IHostControl::GetHostManager
 Ottiene un puntatore a interfaccia per l'implementazione dell'host dell'interfaccia con l'oggetto specificato `IID`.  
@@ -38,10 +38,10 @@ HRESULT GetHostManager (
   
 #### <a name="parameters"></a>Parametri  
  `riid`  
- [in] Il `IID` dell'interfaccia che sta eseguendo una query per common language runtime (CLR).  
+ [in] Il `IID` dell'interfaccia che common language runtime (CLR) sta eseguendo una query per.  
   
  `ppObject`  
- [out] Puntatore a interfaccia implementata host oppure null se l'host non supporta questa interfaccia.  
+ [out] Un puntatore di interfaccia implementato dall'host, o null se l'host non supporta questa interfaccia.  
   
 ## <a name="return-value"></a>Valore restituito  
   
@@ -50,14 +50,14 @@ HRESULT GetHostManager (
 |S_OK|`GetHostManager` stato restituito correttamente.|  
 |HOST_E_CLRNOTAVAILABLE|CLR non è stato caricato in un processo oppure si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.|  
 |HOST_E_TIMEOUT|Timeout della chiamata.|  
-|HOST_E_NOT_OWNER|Il chiamante non dispone del blocco.|  
-|HOST_E_ABANDONED|Un evento è stato annullato mentre un thread bloccato o fiber era in attesa su di esso.|  
-|E_FAIL|Si è verificato un errore irreversibile sconosciuto. Quando un metodo viene restituito E_FAIL, Common Language Runtime non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiranno HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_NOT_OWNER|Il chiamante non possiede il blocco.|  
+|HOST_E_ABANDONED|Un evento è stato annullato durante un thread bloccato o fiber è rimasta in attesa su di esso.|  
+|E_FAIL|Si è verificato un errore irreversibile sconosciuto. Quando un metodo di E_FAIL viene restituito, CLR non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiranno HOST_E_CLRNOTAVAILABLE.|  
 |E_INVALIDARG|La richiesta `IID` non è valido.|  
-|E_NOINTERFACE|L'interfaccia richiesta non è supportata.|  
+|E_NOINTERFACE|L'interfaccia richiesta non è supportato.|  
   
 ## <a name="remarks"></a>Note  
- Common Language Runtime esegue la query per determinare se supporta uno o più delle interfacce seguenti host:  
+ CLR esegue query sull'host per determinare se supporta uno o più delle interfacce seguenti:  
   
 -   [IHostMemoryManager](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)  
   
@@ -77,18 +77,18 @@ HRESULT GetHostManager (
   
 -   [IHostSecurityManager](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-interface.md)  
   
- Se l'host supporta l'interfaccia specificata, imposta `ppObject` alla relativa implementazione di tale interfaccia. In caso contrario, imposta `ppObject` su null.  
+ Se l'host supporta l'interfaccia specificata, il sistema imposta `ppObject` alla relativa implementazione di tale interfaccia. In caso contrario, imposta `ppObject` su null.  
   
- CLR non chiama `Release` sui gestori di host, anche quando si arresta.  
+ CLR non chiama `Release` sugli amministratori dell'host, anche quando si arresta.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Mscoree. H  
+ **Intestazione:** MSCorEE.h  
   
- **Libreria:** inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia IHostControl](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia IHostControl](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md)

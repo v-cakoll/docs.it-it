@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC36564
 ms.assetid: 21312807-e1cd-4ac1-ae1c-c28a9c25164d
-ms.openlocfilehash: 757483f1e88276dd9db82de1c2a7e47b5c975b0a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 17b65a39082ddaf54aabf12ca9b95e49af80f5f6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33598241"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54666306"
 ---
 # <a name="type-arguments-could-not-be-inferred-from-the-delegate"></a>Impossibile dedurre argomenti tipo dal delegato
 Un'istruzione di assegnazione usa `AddressOf` per assegnare l'indirizzo di un oggetto generico a un delegato, ma non fornisce alcun argomento di tipo alla routine generica.  
@@ -25,9 +25,9 @@ Un'istruzione di assegnazione usa `AddressOf` per assegnare l'indirizzo di un og
   
 -   Specificare gli argomenti di tipo per la routine generica nell'espressione `AddressOf` .  
   
-## <a name="see-also"></a>Vedere anche  
- [Tipi generici in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [Operatore AddressOf](../../../visual-basic/language-reference/operators/addressof-operator.md)  
- [Routine generiche in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)  
- [Elenco dei tipi](../../../visual-basic/language-reference/statements/type-list.md)  
- [Metodi di estensione](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)
+## <a name="see-also"></a>Vedere anche
+- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Operatore AddressOf](../../../visual-basic/language-reference/operators/addressof-operator.md)
+- [Generic Procedures in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)
+- [Elenco dei tipi](../../../visual-basic/language-reference/statements/type-list.md)
+- [Metodi di estensione](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)

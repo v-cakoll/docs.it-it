@@ -2,12 +2,12 @@
 title: Sicurezza di SQL Server
 ms.date: 03/30/2017
 ms.assetid: 9053724d-a1fb-4f0f-b9dc-7f6dd893e8ff
-ms.openlocfilehash: 418dbd3e677619721b841736f5b4c1b423ada94b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 33ec28536115f8571bfda47266ed3b5cad1442bb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364207"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650583"
 ---
 # <a name="sql-server-security"></a>Sicurezza di SQL Server
 In SQL Server sono disponibili molte funzionalità che supportano la creazione di applicazioni di database protette.  
@@ -33,12 +33,12 @@ In SQL Server sono disponibili molte funzionalità che supportano la creazione d
  Considerazioni sulla sicurezza per SQL Server Express.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
-[Centro di sicurezza per il motore di Database SQL Server e Database SQL di Azure](/sql/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database)  
+[Centro sicurezza per il motore di Database SQL Server e Database SQL di Azure](/sql/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database)  
 Considerazioni sulla sicurezza per SQL Server e Database SQL di Azure.
 
-[Considerazioni sulla sicurezza per un'installazione di SQL Server](/sql/sql-server/install/security-considerations-for-a-sql-server-installation)  
+[Considerazioni sulla sicurezza per un'installazione SQL Server](/sql/sql-server/install/security-considerations-for-a-sql-server-installation)  
 Viene descritta la sicurezza da considerare prima di installare SQL Server.
 
-## <a name="see-also"></a>Vedere anche  
- [Protezione delle applicazioni ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [SQL Server e ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
+## <a name="see-also"></a>Vedere anche
+- [Protezione delle applicazioni ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [SQL Server e ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)

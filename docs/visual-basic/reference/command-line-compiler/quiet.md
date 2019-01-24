@@ -9,12 +9,12 @@ helpviewer_keywords:
 - /quiet compiler option [Visual Basic]
 - quiet compiler option [Visual Basic]
 ms.assetid: 5d77fa23-4c50-4708-8535-649912b098e8
-ms.openlocfilehash: e67fe05507c8cb3edd7f46cad19211ba11e3b054
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dfa85141e791cfcb28cfc6d216781f0cf14c2e4a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33652396"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54624154"
 ---
 # <a name="-quiet"></a>-quiet
 Impedisce al compilatore di visualizzare codice per avvisi ed errori relativi alla sintassi.  
@@ -26,9 +26,9 @@ Impedisce al compilatore di visualizzare codice per avvisi ed errori relativi al
 ```  
   
 ## <a name="remarks"></a>Note  
- Per impostazione predefinita, l'opzione `-quiet` non è attiva. Quando il compilatore segnala un errore di sintassi o di un avviso, viene visualizzata anche la riga del codice sorgente. Per le applicazioni che analizzano l'output del compilatore, potrebbe essere più utile per il compilatore di generare solo il testo della diagnostica.  
+ Per impostazione predefinita, l'opzione `-quiet` non è attiva. Quando il compilatore segnala un errore di sintassi relativa o avviso, viene visualizzata anche la riga di codice sorgente. Per le applicazioni che analizzare l'output del compilatore, potrebbe essere più utile per il compilatore di generare solo il testo della diagnostica.  
   
- Nell'esempio seguente, `Module1` genera un errore che include il codice sorgente quando viene compilato senza `-quiet`.  
+ Nell'esempio riportato di seguito `Module1` genera un errore che include il codice sorgente quando viene compilato senza `-quiet`.  
   
 ```vb  
 Module Module1  
@@ -46,12 +46,12 @@ C:\projects\vb2.vb(3) : error BC30451: 'x' is not declared. It may be inaccessib
         x()
         ~
 ``` 
- Compilato con `-quiet`, il compilatore restituisce solo le operazioni seguenti:  
+ Compilato con `-quiet`, il compilatore genera solo gli elementi seguenti:  
   
  `E:\test\t2.vb(3) : error BC30451: Name 'x' is not declared.`  
   
 > [!NOTE]
->  Il `-quiet` opzione non è disponibile all'interno dell'ambiente di sviluppo di Visual Studio; è disponibile solo durante la compilazione dalla riga di comando.  
+>  Il `-quiet` opzione non è disponibile all'interno dell'ambiente di sviluppo di Visual Studio, è disponibile solo durante la compilazione dalla riga di comando.  
   
 ## <a name="example"></a>Esempio  
  Il codice seguente Compila `T2.vb` non visualizzare il codice per la diagnostica del compilatore relativi alla sintassi:  
@@ -60,6 +60,6 @@ C:\projects\vb2.vb(3) : error BC30451: 'x' is not declared. It may be inaccessib
 vbc -quiet t2.vb  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Compilatore della riga di comando di Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
- [Esempi di righe di comando di compilazione](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a>Vedere anche
+- [Compilatore della riga di comando di Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Esempi di righe di comando di compilazione](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

@@ -3,12 +3,12 @@ title: Creazione del primo servizio WCF che può riconoscere attestazioni
 ms.date: 03/30/2017
 ms.assetid: e0e6d091-9a97-4888-8f2c-cbcee42d90ee
 author: BrucePerlerMS
-ms.openlocfilehash: e6324087afa62f276766c733284dc69e425b89bc
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 2102ec07a26c02c7181e3422e48939c40b86a8de
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836233"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599205"
 ---
 # <a name="building-my-first-claims-aware-wcf-service"></a>Creazione del primo servizio WCF che può riconoscere attestazioni
 ## <a name="applies-to"></a>Si applica a  
@@ -38,7 +38,7 @@ ms.locfileid: "48836233"
   
  AD FS 2.0 fa parte di Windows Server R2 e può essere utilizzato come servizio token di sicurezza in scenari locali. Azure Active Directory Access Control (detto anche Servizio di controllo di accesso o ACS) è un servizio cloud, fornito come parte di Microsoft Azure. Per fini di test e didattici, è inoltre possibile utilizzare altri servizi token di sicurezza per compilare applicazioni in grado di riconoscere attestazioni. Ad esempio, è possibile usare STS di sviluppo locale che fa parte del [Identity and Access Tool per Visual Studio](https://go.microsoft.com/fwlink/?LinkID=245849) che è disponibile gratuitamente online.  
   
- Per compilare il primo servizio WCF in grado di riconoscere attestazioni mediante WIF, vedere [procedura: abilitare WIF per un'applicazione di servizio Web WCF](../../../docs/framework/security/how-to-enable-wif-for-a-wcf-web-service-application.md).
+ Per compilare il primo servizio WCF in grado di riconoscere attestazioni mediante WIF, vedere [How To: Abilitare WIF per un'applicazione di servizio Web WCF](../../../docs/framework/security/how-to-enable-wif-for-a-wcf-web-service-application.md).
   
-## <a name="see-also"></a>Vedere anche  
- [Guida introduttiva a WIF](../../../docs/framework/security/getting-started-with-wif.md)
+## <a name="see-also"></a>Vedere anche
+- [Guida introduttiva a WIF](../../../docs/framework/security/getting-started-with-wif.md)

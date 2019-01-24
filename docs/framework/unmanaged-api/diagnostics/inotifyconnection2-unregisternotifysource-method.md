@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c4b4f90f918c872f3227ac22f4cccadcbf3194a0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3e5380ed63a362b73b0684ef07b638117751ca80
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425480"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712012"
 ---
 # <a name="inotifyconnection2unregisternotifysource-method"></a>Metodo INotifyConnection2::UnregisterNotifySource
 Rimuove un oggetto di origine di notifica specificato dalla connessione.  
@@ -38,16 +38,16 @@ HRESULT UnregisterNotifySource
   
 #### <a name="parameters"></a>Parametri  
  `in_pNotifySource`  
- [in] Oggetto di notifica di annullamento della registrazione.  
+ [in] Oggetto di notifica di cui annullare la registrazione.  
   
 ## <a name="return-value"></a>Valore restituito  
  S_OK se il metodo ha esito positivo.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** ProtocolNotify2. idl  
+ **Intestazione:** ProtocolNotify2.idl  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia INotifyConnection2](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)  
- [Interfaccia INotifySource2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)  
- [Interfaccia INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)  
- [Metodo RegisterNotifySource](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-registernotifysource-method.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia INotifyConnection2](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
+- [Interfaccia INotifySource2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
+- [Interfaccia INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
+- [Metodo RegisterNotifySource](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-registernotifysource-method.md)

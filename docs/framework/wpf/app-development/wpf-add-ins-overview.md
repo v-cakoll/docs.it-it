@@ -12,12 +12,12 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 07c33aa49e6fc8f78acd86a92cf555ae389e200c
-ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
+ms.openlocfilehash: 48981a942461570c0ef822dba9b18cb9a41f59f8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53397033"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662738"
 ---
 # <a name="wpf-add-ins-overview"></a>Cenni preliminari sui componenti aggiuntivi di WPF
 <a name="Introduction"></a> .NET Framework include un modello di componente aggiuntivo che gli sviluppatori possono usare per creare applicazioni che supportano l'estendibilità mediante componenti aggiuntivi. Questo modello consente di creare componenti aggiuntivi che si integrano con le funzionalità dell'applicazione estendendole. In alcuni scenari, le applicazioni devono anche visualizzare le interfacce utente fornite dai componenti aggiuntivi. In questo argomento viene illustrato come WPF integra il modello di componente aggiuntivo .NET Framework per consentire questi scenari, l'architettura sottostante, i vantaggi e le relative limitazioni.  
@@ -282,10 +282,10 @@ ms.locfileid: "53397033"
 ## <a name="performance-optimization"></a>Ottimizzazione delle prestazioni  
  Per impostazione predefinita, quando vengono utilizzati più domini applicazione, gli assembly .NET Framework richiesti da ogni applicazione tutti vengono caricati nel dominio dell'applicazione. Di conseguenza, il tempo necessario per creare nuovi domini dell'applicazione e avviare le applicazioni al loro interno potrebbe influire sulle prestazioni. Tuttavia, .NET Framework fornisce un modo per ridurre i tempi di avvio indicando alle applicazioni di condividere gli assembly nei domini applicazione se sono già caricati. Eseguire questa operazione usando il <xref:System.LoaderOptimizationAttribute> attributo, che deve essere applicato al metodo del punto di ingresso (`Main`). In questo caso, è necessario usare soltanto il codice per implementare la definizione dell'applicazione (vedere [Cenni preliminari sulla gestione di applicazioni](../../../../docs/framework/wpf/app-development/application-management-overview.md)).  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.LoaderOptimizationAttribute>  
- [Componenti aggiuntivi ed estendibilità](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))  
- [Domini dell'applicazione](../../../../docs/framework/app-domains/application-domains.md)  
- [Panoramica di .NET framework Remoting](https://msdn.microsoft.com/library/eccb1d31-0a22-417a-97fd-f4f1f3aa4462)  
- [Oggetti remotizzabili](https://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a)  
- [Procedure relative alle proprietà](../../../../docs/framework/wpf/app-development/how-to-topics.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.LoaderOptimizationAttribute>
+- [Componenti aggiuntivi ed estendibilità](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
+- [Domini dell'applicazione](../../../../docs/framework/app-domains/application-domains.md)
+- [Panoramica di .NET framework Remoting](https://msdn.microsoft.com/library/eccb1d31-0a22-417a-97fd-f4f1f3aa4462)
+- [Oggetti remotizzabili](https://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a)
+- [Procedure relative alle proprietà](../../../../docs/framework/wpf/app-development/how-to-topics.md)

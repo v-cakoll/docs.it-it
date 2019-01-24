@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b9ded6b4e0ac8f3e70fd0145ab6e2410c3b38e02
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 694fc95a1ad16b61e25a897b778b15ec41af2a01
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448674"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54714269"
 ---
 # <a name="imetadataimport2getgenericparamprops-method"></a>Metodo IMetaDataImport2::GetGenericParamProps
 Ottiene i metadati associati al parametro generico rappresentato dal token specificato.  
@@ -44,19 +44,19 @@ HRESULT GetGenericParamProps (
   
 #### <a name="parameters"></a>Parametri  
  `gp`  
- [in] Token che rappresenta il parametro generico per il quale restituire i metadati.  
+ [in] Il token che rappresenta il parametro generico per il quale restituire i metadati.  
   
  `pulParamSeq`  
- [out] La posizione ordinale del `Type` parametro nel metodo o nel costruttore padre.  
+ [out] La posizione ordinale del `Type` parametro nel costruttore padre o nel metodo.  
   
  `pdwParamFlags`  
- [out] Il valore di [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) enumerazione che descrive il `Type` per il parametro generico.  
+ [out] Valore di [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) enumerazione che descrive il `Type` per il parametro generico.  
   
  `ptOwner`  
  [out] Token TypeDef o MethodDef che rappresenta il proprietario del parametro.  
   
  `reserved`  
- [out] Riservato per l'estensibilità futura.  
+ [out] Riservato per un'estendibilità futura.  
   
  `wzName`  
  [out] Il nome del parametro generico.  
@@ -65,17 +65,17 @@ HRESULT GetGenericParamProps (
  [in] Le dimensioni del `wzName` buffer.  
   
  `pchName`  
- [out] Le dimensioni restituite del nome, in caratteri wide.  
+ [out] Dimensioni restituite del nome, in caratteri "wide".  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
- **Libreria:** usata come risorsa in Mscoree. dll  
+ **Libreria:** Usato come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)  
- [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

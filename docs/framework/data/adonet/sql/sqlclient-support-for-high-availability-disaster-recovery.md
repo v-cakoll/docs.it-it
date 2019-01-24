@@ -2,12 +2,12 @@
 title: Supporto SqlClient per disponibilità elevata, ripristino di emergenza
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
-ms.openlocfilehash: 258922a1541c4594ce2b4673d4d68c279087aef2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 50f2e4c46fbb8c043237aac90ffee98112b8cefa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513026"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54609122"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>Supporto SqlClient per disponibilità elevata, ripristino di emergenza
 In questo argomento viene descritto il supporto di SqlClient (aggiunto in [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]) per i gruppi di disponibilità AlwaysOn, con disponibilità elevata e ripristino di emergenza.  La funzionalità gruppi di disponibilità AlwaysOn è stato aggiunto a SQL Server 2012. Per altre informazioni sui gruppi di disponibilità AlwaysOn, vedere la documentazione Online di SQL Server.  
@@ -51,7 +51,7 @@ In questo argomento viene descritto il supporto di SqlClient (aggiunto in [!INCL
   
 -   La connessione a SQL Server istanza configurata con più di 64 indirizzi IP causerà un errore di connessione.  
   
--   Comportamento di un'applicazione che utilizza il `MultiSubnetFailover` proprietà di connessione non è interessata in base al tipo di autenticazione: autenticazione di SQL Server, l'autenticazione Kerberos o autenticazione di Windows.  
+-   Comportamento di un'applicazione che utilizza il `MultiSubnetFailover` proprietà di connessione non è interessata in base al tipo di autenticazione: Autenticazione di SQL Server, l'autenticazione Kerberos o autenticazione di Windows.  
   
 -   Aumentare il valore di `Connect Timeout` per adattarlo al tempo di failover e ridurre i tentativi di connessione dell'applicazione.  
   
@@ -96,6 +96,6 @@ In questo argomento viene descritto il supporto di SqlClient (aggiunto in [!INCL
   
  Il routing di sola lettura può richiedere più tempo rispetto alla connessione al database primario, poiché il routing di sola lettura si connette innanzitutto al database primario, quindi effettua la ricerca del miglior database secondario leggibile disponibile. Per questo motivo, è necessario aumentare il timeout di accesso.  
   
-## <a name="see-also"></a>Vedere anche  
- [Funzionalità di SQL Server e ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vedere anche
+- [Funzionalità di SQL Server e ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)
+- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -4,11 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_WideNarrowNotApplicable
 ms.assetid: 5811098c-b124-4caf-8a2b-f81f12f1d5f5
-ms.openlocfilehash: 6d4f991a6829d31d256755670958ec7e69b1d6d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3302483cb7025d0d11d2b24223540801527b9b19
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54669211"
 ---
 # <a name="vbstrconvwide-and-vbstrconvnarrow-are-not-applicable-to-the-locale-specified"></a>VbStrConv.Wide e VbStrConv.Narrow non possono essere usati con le impostazioni locali specificate
 L'applicazione sta tentando di usare i membri di enumerazione `VbStrConv` `Wide` o `Narrow`, che non sono applicabili alle impostazioni locali specificate.  
@@ -17,7 +18,7 @@ L'applicazione sta tentando di usare i membri di enumerazione `VbStrConv` `Wide`
   
 1.  Rimuovere `VbStrConv.Wide` o `VbStrConv.Narrow`.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Globalization>  
-   
- [Introduzione alle applicazioni internazionali basate su .NET Framework](/visualstudio/ide/introduction-to-international-applications-based-on-the-dotnet-framework)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Globalization>
+
+- [Introduzione alle applicazioni internazionali basate su .NET Framework](/visualstudio/ide/introduction-to-international-applications-based-on-the-dotnet-framework)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows applications
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-ms.openlocfilehash: 59b21bf9bbe3e78a1ac8cedd3812863cbcae7382
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 3db3c49427765249f7d6c5ac394f8b239cd40fa3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582580"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592523"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Nozioni fondamentali relative alle applicazioni Windows Forms (Visual Basic)
 Una parte importante di Visual Basic è la possibilità di creare applicazioni Windows Forms che vengono eseguite localmente sui computer degli utenti. È possibile usare Visual Studio per creare l'applicazione e interfaccia utente mediante Windows Forms. Un'applicazione Windows Forms è basata sulle classi dal <xref:System.Windows.Forms> dello spazio dei nomi.  
@@ -47,7 +47,7 @@ Una parte importante di Visual Basic è la possibilità di creare applicazioni W
 |A|Vedere|  
 |--------|---------|  
 |Creare una nuova applicazione Windows Forms con Visual Studio|[Procedura dettagliata: Creazione di un semplice Windows Form](https://msdn.microsoft.com/library/2d9daec0-0543-41d0-acb1-964f685bddbb)|  
-|Usare i controlli nei form|[Procedura: Aggiungere controlli a un Windows Forms](../../../framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|   
+|Usare i controlli nei form|[Procedura: Aggiungere controlli a un Windows Form](../../../framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|   
 |Creare grafici con <xref:System.Drawing>|[Introduzione alla programmazione grafica](../../../framework/winforms/advanced/getting-started-with-graphics-programming.md)|  
 |Creare controlli personalizzati|[Procedura: Ereditare dalla classe UserControl](../../../framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|  
   
@@ -66,9 +66,9 @@ Una parte importante di Visual Basic è la possibilità di creare applicazioni W
   
 |A|Vedere|  
 |--------|---------|  
-|Usare il <xref:System.Windows.Forms.BindingSource> componente|[Procedura: associare controlli Windows Forms al componente BindingSource usando la finestra di progettazione](../../../framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|  
-|Lavorare con [!INCLUDE[vstecado](~/includes/vstecado-md.md)] zdroje dat|[Procedura: ordinare e filtrare i dati ADO.NET con il componente BindingSource Windows Forms](../../../framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
-|Utilizzare la finestra Origini dati|[Procedura dettagliata: visualizzazione di dati in un Windows Form](/visualstudio/data-tools/accessing-data-in-visual-studio)|  
+|Usare il <xref:System.Windows.Forms.BindingSource> componente|[Procedura: Associare controlli Windows Form al componente BindingSource usando la finestra di progettazione](../../../framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|  
+|Lavorare con [!INCLUDE[vstecado](~/includes/vstecado-md.md)] zdroje dat|[Procedura: Ordinare e filtrare i dati ADO.NET con il Windows Form componente BindingSource](../../../framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
+|Utilizzare la finestra Origini dati|[Procedura dettagliata: Visualizzazione dei dati in un Windows Form](/visualstudio/data-tools/accessing-data-in-visual-studio)|  
   
 ## <a name="deploying-applications-to-client-computers"></a>Distribuzione delle applicazioni ai client  
  Una volta scritta, l'applicazione, è necessario inviarlo agli utenti in modo che possano installarla ed eseguirla sui propri computer client. Uso di [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] tecnologia, è possibile distribuire le applicazioni dall'interno di Visual Studio con pochi clic e fornire agli utenti con un URL che punta all'applicazione sul Web. [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] Consente di gestire tutti gli elementi e le dipendenze dell'applicazione e garantisce che l'applicazione sia installata correttamente nel computer client.  
@@ -81,7 +81,7 @@ Una parte importante di Visual Basic è la possibilità di creare applicazioni W
   
 |A|Vedere|  
 |--------|---------|  
-|Distribuire un'applicazione con [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[Procedura: Pubblicare un'applicazione ClickOnce mediante la Pubblicazione guidata](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [Procedura dettagliata: distribuzione manuale di un'applicazione ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|  
+|Distribuire un'applicazione con [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[Procedura: Pubblicare un'applicazione ClickOnce mediante la Pubblicazione guidata](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [Procedura dettagliata: Distribuzione manuale di un'applicazione ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|  
 |Aggiorna un [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] distribuzione|[Procedura: Gestire gli aggiornamenti per un'applicazione ClickOnce](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|  
 |Gestire la sicurezza con [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[Procedura: Abilitare le impostazioni di sicurezza ClickOnce](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|  
   
@@ -92,11 +92,11 @@ Una parte importante di Visual Basic è la possibilità di creare applicazioni W
   
 |A|Vedere|  
 |--------|---------|  
-|Stampare il contenuto di un form|[Procedura: stampare grafica in Windows Forms](../../../framework/winforms/advanced/how-to-print-graphics-in-windows-forms.md)<br /><br /> [Procedura: stampare un file di testo con più pagine in Windows Forms](../../../framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)|   
+|Stampare il contenuto di un form|[Procedura: Stampare grafica in Windows Form](../../../framework/winforms/advanced/how-to-print-graphics-in-windows-forms.md)<br /><br /> [Procedura: Stampare un File di testo con più pagine in Windows Form](../../../framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)|   
 |Altre informazioni sulla sicurezza di Windows Form|[Panoramica della sicurezza in Windows Forms](../../../framework/winforms/security-in-windows-forms-overview.md)|  
   
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>  
-- [Panoramica sui Windows Form](../../../framework/winforms/windows-forms-overview.md)  
+- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>
+- [Panoramica sui Windows Form](../../../framework/winforms/windows-forms-overview.md)
 - [Oggetto My.Forms](../../../visual-basic/language-reference/objects/my-forms-object.md)

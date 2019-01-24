@@ -2,19 +2,19 @@
 title: '&lt;add&gt; di &lt;transportConfigurationType&gt;'
 ms.date: 03/30/2017
 ms.assetid: 03d79db9-571d-4534-acef-d05e5467b257
-ms.openlocfilehash: 1079b25ce137dc89fc31f46a11f3720486462021
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 2a72fe8cfa78c7e6edfec9f9f6ff8f1f55eceb15
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54149137"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54656817"
 ---
 # <a name="ltaddgt-of-lttransportconfigurationtypegt"></a>&lt;add&gt; di &lt;transportConfigurationType&gt;
 Questo elemento è una coppia chiave/valore che identifica il tipo di un determinato trasporto.  
   
  \<system.ServiceModel>  
-\<serviceHostingEnvironment >  
-\<transportConfigurationTypes >  
+\<ServiceHostingEnvironment>  
+\<transportConfigurationTypes>  
 \<add>  
   
 ## <a name="syntax"></a>Sintassi  
@@ -45,7 +45,7 @@ Questo elemento è una coppia chiave/valore che identifica il tipo di un determi
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<transportConfigurationTypes >](../../../../../docs/framework/configure-apps/file-schema/wcf/transportconfigurationtypes.md)|Raccolta di tipi che implementano il trasporto specifico.|  
+|[\<transportConfigurationTypes>](../../../../../docs/framework/configure-apps/file-schema/wcf/transportconfigurationtypes.md)|Raccolta di tipi che implementano il trasporto specifico.|  
   
 ## <a name="example"></a>Esempio  
   
@@ -58,8 +58,8 @@ Questo elemento è una coppia chiave/valore che identifica il tipo di un determi
 </serviceHostingEnvironment>
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.Configuration.TransportConfigurationTypeElement>  
- <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>  
- <xref:System.ServiceModel.ServiceHostingEnvironment>  
- [Hosting](../../../../../docs/framework/wcf/feature-details/hosting.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.ServiceModel.Configuration.TransportConfigurationTypeElement>
+- <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>
+- <xref:System.ServiceModel.ServiceHostingEnvironment>
+- [Hosting](../../../../../docs/framework/wcf/feature-details/hosting.md)

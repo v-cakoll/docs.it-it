@@ -2,12 +2,12 @@
 title: Pubblicazione WSDL personalizzata
 ms.date: 03/30/2017
 ms.assetid: 3b3e8103-2c95-4db3-a05b-46aa8e9d4d29
-ms.openlocfilehash: 725b62a26d640e242010a01ff810ea90d5cc53bc
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e09e79725b0a9e4ee34e4062c1434415cfc25d03
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508420"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572925"
 ---
 # <a name="custom-wsdl-publication"></a>Pubblicazione WSDL personalizzata
 Nell'esempio viene illustrato come eseguire le seguenti operazioni:  
@@ -16,7 +16,7 @@ Nell'esempio viene illustrato come eseguire le seguenti operazioni:
   
 -   Implementare <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> per importare le annotazioni WSDL personalizzate.  
   
--   Implementare <xref:System.ServiceModel.Description.IServiceContractGenerationExtension?displayProperty=nameWithType> e <xref:System.ServiceModel.Description.IOperationContractGenerationExtension?displayProperty=nameWithType> rispettivamente su un comportamento del contratto personalizzato e un comportamento dell'operazione personalizzato per scrivere le annotazioni importate come commenti in CodeDom per il contratto e l'operazione importati.  
+-   Implementare <xref:System.ServiceModel.Description.IServiceContractGenerationExtension?displayProperty=nameWithType> e <xref:System.ServiceModel.Description.IOperationContractGenerationExtension?displayProperty=nameWithType> rispettivamente su un comportamento del contratto personalizzato e un comportamento dell'operazione personalizzato per scrivere le annotazioni importate come commenti in CodeDOM per il contratto e l'operazione importati.  
   
 -   Usare la <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> per scaricare il WSDL, una <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> per importare il WSDL mediante l'utilità di importazione WSDL personalizzata e il <xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType> per generare codice client di Windows Communication Foundation (WCF) con le annotazioni WSDL quali / / / e ' ' commenti in c# e Visual Base.  
   

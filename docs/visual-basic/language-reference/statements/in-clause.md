@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - In keyword [Visual Basic]
 ms.assetid: 2f003a85-8fb6-4280-822b-6ac12839b915
-ms.openlocfilehash: 47eb90c9c89c7114c40b8a2caeb0e99f3ceccccb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9e96cb9e8c67075a229c97f11ec7127a4afb75a7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33597396"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54567230"
 ---
 # <a name="in-clause-visual-basic"></a>Clausola In (Visual Basic)
-Specifica il gruppo che la variabile di ciclo per scorrere un `For Each` ciclo o specifica la raccolta di query in un `From`, `Join`, o `Group Join` clausola.  
+Specifica il gruppo che la variabile di ciclo deve essere attraversato in una `For Each` ciclo o specifica la raccolta di query in un `From`, `Join`, o `Group Join` clausola.  
   
 ## <a name="remarks"></a>Note  
  Il `In` parola chiave può essere utilizzata nei contesti seguenti:  
@@ -27,5 +27,5 @@ Specifica il gruppo che la variabile di ciclo per scorrere un `For Each` ciclo o
   
  [Clausola Group Join](../../../visual-basic/language-reference/queries/group-join-clause.md)  
   
-## <a name="see-also"></a>Vedere anche  
- [Parole chiave](../../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a>Vedere anche
+- [Parole chiave](../../../visual-basic/language-reference/keywords/index.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 112ddcf51a5637bb89df9479850c2a4a70d2e1d8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5e041efed929255d4ce3af2d051a391bc4179cda
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448726"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54630918"
 ---
 # <a name="imetadataimport2getversionstring-method"></a>Metodo IMetaDataImport2::GetVersionString
-Ottiene il numero di versione del runtime che è stato utilizzato per compilare l'assembly.  
+Ottiene il numero di versione del runtime che è stato usato per compilare l'assembly.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,23 +42,23 @@ HRESULT GetVersionString (
  [out] Una matrice per archiviare la stringa che specifica la versione.  
   
  `ccBufSize`  
- [in] Le dimensioni, in caratteri wide, del `pwzBuf` matrice.  
+ [in] Le dimensioni, in caratteri "wide", del `pwzBuf` matrice.  
   
  `pccBufSize`  
- [out] Il numero di caratteri wide, incluso un terminatore null, restituite nel `pwzBuf` matrice.  
+ [out] Il numero di caratteri "wide", incluso un carattere di terminazione null, restituito nel `pwzBuf` matrice.  
   
 ## <a name="remarks"></a>Note  
- Il `GetVersionString` metodo ottiene la versione compilata per di ambito dei metadati corrente. Se l'ambito non è mai stato salvato, non disporrà di una versione e verrà restituita una stringa vuota.  
+ Il `GetVersionString` metodo ottiene la versione compilata dell'ambito dei metadati corrente. Se l'ambito non è mai stato salvato, non disporrà di una versione e verrà restituita una stringa vuota.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
- **Libreria:** usata come risorsa in Mscoree. dll  
+ **Libreria:** Usato come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)  
- [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

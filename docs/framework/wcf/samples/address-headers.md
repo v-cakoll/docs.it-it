@@ -2,12 +2,12 @@
 title: Intestazioni di indirizzo
 ms.date: 03/30/2017
 ms.assetid: b0c94d4a-3bde-4b4d-bb6d-9f12bc3a6940
-ms.openlocfilehash: d2e38c674e0a3ea10df2e8363e90f4adf7edc9da
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1c4a64b80ac629c740aea3dbdec2ab270ab061c2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43503076"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54632933"
 ---
 # <a name="address-headers"></a>Intestazioni di indirizzo
 Nell'esempio di intestazioni di indirizzo viene illustrato come i client possono passare i parametri di riferimento a un servizio che utilizza Windows Communication Foundation (WCF).  
@@ -19,10 +19,10 @@ Nell'esempio di intestazioni di indirizzo viene illustrato come i client possono
   
  Parte del modello di riferimento all'endpoint è che ogni riferimento può portare alcuni parametri per riferimento che aggiungono informazioni di identificazione aggiuntive. In WCF, questi parametri per riferimento vengono modellati come istanze di `AddressHeader` classe.  
   
- In questo esempio, il client aggiunge un parametro di riferimento a `EndpointAddress` dell'endpoint client. Il servizio cerca questo parametro per riferimento e ne usa il valore nella logica dell'operazione del servizio "Hello".  
+ In questo esempio, il client aggiunge un parametro per riferimento a `EndpointAddress` dell'endpoint client. Il servizio cerca questo parametro per riferimento e ne usa il valore nella logica dell'operazione del servizio "Hello".  
   
 ## <a name="client"></a>Client  
- Il client deve aggiungere un `AddressHeader` al `EndpointAddress` del `ServiceEndpoint` per inviare un parametro di riferimento. Poiché la classe `EndpointAddress` è immutabile, è necessario modificare l'indirizzo endpoint utilizzando la classe `EndpointAddressBuilder`. Nel codice seguente il client viene inizializzato per inviare un parametro di riferimento come parte del messaggio.  
+ Il client deve aggiungere un `AddressHeader` al `EndpointAddress` del `ServiceEndpoint` per inviare un parametro per riferimento. Poiché la classe `EndpointAddress` è immutabile, è necessario modificare l'indirizzo endpoint utilizzando la classe `EndpointAddressBuilder`. Nel codice seguente il client viene inizializzato per inviare un parametro di riferimento come parte del messaggio.  
   
 ```csharp   
 HelloClient client = new HelloClient();  

@@ -16,11 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 96ab659e6ab6cc9601c0e9a1ab511da92905c242
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 745ba18fd1a36789f06bcd3dd4d183c9b28b9875
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650106"
 ---
 # <a name="cornotificationfortokenmovement-enumeration"></a>Enumerazione CorNotificationForTokenMovement
 Specifica le notifiche che verranno inviate al client API dei metadati quando si verifica una modifica del mapping dei token.  
@@ -64,39 +65,39 @@ typedef enum CorNotificationForTokenMovement {
   
 |Membro|Descrizione|  
 |------------|-----------------|  
-|`MDNotifyDefault`|Notificare quando `mdTypeRef`, `mdMethodDef`, `mdMemberRef`, o `mdFieldDef` spostamento token.|  
-|`MDNotifyAll`|Notificare quando si sposta tutti i token.|  
-|`MDNotifyNone`|Non notificare quando spostano i token.|  
-|`MDNotifyMethodDef`|Inviare una notifica quando un `mdMethodDef` token passa.|  
-|`MDNotifyMemberRef`|Inviare una notifica quando un `mdMemberRef` token passa.|  
-|`MDNotifyFieldDef`|Inviare una notifica quando un `mdFieldDef` token passa.|  
-|`MDNotifyTypeRef`|Inviare una notifica quando un `mdTypeRef` token passa.|  
-|`MDNotifyTypeDef`|Inviare una notifica quando un `mdTypeDef` token passa.|  
-|`MDNotifyParamDef`|Inviare una notifica quando un `mdParamDef` token passa.|  
-|`MDNotifyInterfaceImpl`|Inviare una notifica quando un `mdInterfaceImpl` token passa.|  
-|`MDNotifyProperty`|Inviare una notifica quando un `mdProperty` token passa.|  
-|`MDNotifyEvent`|Inviare una notifica quando un `mdEvent` token passa.|  
-|`MDNotifySignature`|Inviare una notifica quando un `mdSignature` token passa.|  
-|`MDNotifyTypeSpec`|Inviare una notifica quando un `mdTypeSpec` token passa.|  
-|`MDNotifyCustomAttribute`|Inviare una notifica quando un `mdCustomAttribute` token passa.|  
-|`MDNotifySecurityValue`|Inviare una notifica quando un `mdSecurityValue` token passa.|  
-|`MDNotifyPermission`|Inviare una notifica quando un `mdPermission` token passa.|  
-|`MDNotifyModuleRef`|Inviare una notifica quando un `mdModuleRef` token passa.|  
-|`MDNotifyNameSpace`|Inviare una notifica quando un `mdNameSpace` token passa.|  
-|`MDNotifyAssemblyRef`|Inviare una notifica quando un `mdAssemblyRef` token passa.|  
-|`MDNotifyFile`|Inviare una notifica quando un `mdFile` token passa.|  
-|`MDNotifyExportedType`|Inviare una notifica quando un `mdExportedType` token passa.|  
-|`MDNotifyResource`|Inviare una notifica quando un `mdManifestResource` token passa.|  
+|`MDNotifyDefault`|Invia una notifica quando `mdTypeRef`, `mdMethodDef`, `mdMemberRef`, o `mdFieldDef` Sposta i token.|  
+|`MDNotifyAll`|Inviare una notifica quando si sposta tutti i token.|  
+|`MDNotifyNone`|Non notificano quando spostano i token.|  
+|`MDNotifyMethodDef`|Invia una notifica quando un `mdMethodDef` passa il token.|  
+|`MDNotifyMemberRef`|Invia una notifica quando un `mdMemberRef` passa il token.|  
+|`MDNotifyFieldDef`|Invia una notifica quando un `mdFieldDef` passa il token.|  
+|`MDNotifyTypeRef`|Invia una notifica quando un `mdTypeRef` passa il token.|  
+|`MDNotifyTypeDef`|Invia una notifica quando un `mdTypeDef` passa il token.|  
+|`MDNotifyParamDef`|Invia una notifica quando un `mdParamDef` passa il token.|  
+|`MDNotifyInterfaceImpl`|Invia una notifica quando un `mdInterfaceImpl` passa il token.|  
+|`MDNotifyProperty`|Invia una notifica quando un `mdProperty` passa il token.|  
+|`MDNotifyEvent`|Invia una notifica quando un `mdEvent` passa il token.|  
+|`MDNotifySignature`|Invia una notifica quando un `mdSignature` passa il token.|  
+|`MDNotifyTypeSpec`|Invia una notifica quando un `mdTypeSpec` passa il token.|  
+|`MDNotifyCustomAttribute`|Invia una notifica quando un `mdCustomAttribute` passa il token.|  
+|`MDNotifySecurityValue`|Invia una notifica quando un `mdSecurityValue` passa il token.|  
+|`MDNotifyPermission`|Invia una notifica quando un `mdPermission` passa il token.|  
+|`MDNotifyModuleRef`|Invia una notifica quando un `mdModuleRef` passa il token.|  
+|`MDNotifyNameSpace`|Invia una notifica quando un `mdNameSpace` passa il token.|  
+|`MDNotifyAssemblyRef`|Invia una notifica quando un `mdAssemblyRef` passa il token.|  
+|`MDNotifyFile`|Invia una notifica quando un `mdFile` passa il token.|  
+|`MDNotifyExportedType`|Invia una notifica quando un `mdExportedType` passa il token.|  
+|`MDNotifyResource`|Invia una notifica quando un `mdManifestResource` passa il token.|  
   
 ## <a name="remarks"></a>Note  
- Un token può essere mappato nuovamente (ovvero spostarlo) durante un'unione di metadati.  
+ Un token può essere mappato nuovamente (che è stato spostato) durante un'unione dei metadati.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorHdr. H  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Enumerazioni dei metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Vedere anche
+- [Enumerazioni dei metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

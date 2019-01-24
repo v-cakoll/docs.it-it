@@ -12,12 +12,12 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], data changes in database
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: cf52635f-0c1b-46c3-aff1-bdf181cf19b1
-ms.openlocfilehash: 1b957fb7524b7eaf46bf321713196e90bae66b6c
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: bcc56e1f7a36c705aec6750b76a4ad5d99fe7101
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415208"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54658416"
 ---
 # <a name="how-to-modify-data-in-a-database-by-using-linq-visual-basic"></a>Procedura: Modificare i dati in un Database utilizzando LINQ (Visual Basic)
 Language Integrated Query (LINQ) query rendono più semplice accedere alle informazioni sul database e modificare i valori nel database.  
@@ -160,9 +160,9 @@ Language Integrated Query (LINQ) query rendono più semplice accedere alle infor
   
 7.  Premere F5 per eseguire il progetto. Fare clic su **Add** per aggiungere un nuovo record. Fare clic su **Update** per modificare il nuovo record. Fare clic su **eliminare** per eliminare il nuovo record.  
   
-## <a name="see-also"></a>Vedere anche  
- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [Query](../../../../visual-basic/language-reference/queries/index.md)  
- [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
- [Metodi DataContext (O/R Designer)](/visualstudio/data-tools/datacontext-methods-o-r-designer)  
- [Procedura: Assegnare stored procedure per eseguire aggiornamenti, inserimenti ed eliminazioni (O/R Designer)](https://msdn.microsoft.com/library/e88224ab-ff61-4a3a-b6b8-6f3694546cac)
+## <a name="see-also"></a>Vedere anche
+- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
+- [Query](../../../../visual-basic/language-reference/queries/index.md)
+- [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
+- [Metodi DataContext (O/R Designer)](/visualstudio/data-tools/datacontext-methods-o-r-designer)
+- [Procedura: Assegnare stored procedure per eseguire aggiornamenti, inserimenti ed eliminazioni (O/R Designer)](https://msdn.microsoft.com/library/e88224ab-ff61-4a3a-b6b8-6f3694546cac)

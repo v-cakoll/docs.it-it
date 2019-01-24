@@ -2,12 +2,12 @@
 title: Introduzione alle trasformazioni funzionali Pure (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 82bf3348-c503-4854-a91f-71f9835779ff
-ms.openlocfilehash: 8c382363c757887802ed54b565b24422d0ac7db7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a4e9cdf98dfe3a54ecb9ff4316742d76b51ba782
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645283"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573026"
 ---
 # <a name="introduction-to-pure-functional-transformations-visual-basic"></a>Introduzione alle trasformazioni funzionali Pure (Visual Basic)
 Contenuto della sezione vengono presentate le trasformazioni funzionali, inclusi i concetti sottostanti e i costrutti di linguaggio che le supportano. In particolare viene eseguito il confronto tra la programmazione orientata a oggetti e quella basata sulle trasformazioni funzionali e vengono forniti consigli utili su come effettuare la transizione a quest'ultima. Sebbene le trasformazioni funzionali possano essere usate in molti scenari di programmazione, come esempio concreto viene usata la trasformazione XML.  
@@ -22,5 +22,5 @@ Contenuto della sezione vengono presentate le trasformazioni funzionali, inclusi
 |[Applicabilità della trasformazione funzionale (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/applicability-of-functional-transformation.md)|Vengono descritti gli scenari tipici per le trasformazioni funzionali.|  
 |[Trasformazione funzionale di XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-transformation-of-xml.md)|Vengono descritte le trasformazioni funzionali nel contesto della trasformazione di alberi XML.|  
   
-## <a name="see-also"></a>Vedere anche  
- [Trasformazioni funzionali pure di XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)
+## <a name="see-also"></a>Vedere anche
+- [Trasformazioni funzionali pure di XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)

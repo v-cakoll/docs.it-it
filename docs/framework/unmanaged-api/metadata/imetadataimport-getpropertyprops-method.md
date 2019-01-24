@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7312cbd31a04365801b0380d5914966f36679560
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 81680825daff2cd2358da7b3956782020edf4791
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449455"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54672058"
 ---
 # <a name="imetadataimportgetpropertyprops-method"></a>Metodo IMetaDataImport::GetPropertyProps
 Ottiene i metadati per la proprietà rappresentata dal token specificato.  
@@ -52,7 +52,7 @@ HRESULT GetPropertyProps (
   
 #### <a name="parameters"></a>Parametri  
  `prop`  
- [in] Un token che rappresenta la proprietà per restituire i metadati.  
+ [in] Token che rappresenta la proprietà per restituire i metadati.  
   
  `pClass`  
  [out] Puntatore al token TypeDef che rappresenta il tipo che implementa la proprietà.  
@@ -64,10 +64,10 @@ HRESULT GetPropertyProps (
  [in] La dimensione in caratteri "wide" di `szProperty`.  
   
  `pchProperty`  
- [out] Il numero di caratteri "wide" restituiti in `szProperty`.  
+ [out] Il numero di caratteri "wide", restituito nel `szProperty`.  
   
  `pdwPropFlags`  
- [out] Puntatore ai flag di attributo applicato alla proprietà. Questo valore è una maschera di bit di [CorPropertyAttr](../../../../docs/framework/unmanaged-api/metadata/corpropertyattr-enumeration.md) enumerazione.  
+ [out] Puntatore al flag di attributi applicati alla proprietà. Questo valore è una maschera di bit di [CorPropertyAttr](../../../../docs/framework/unmanaged-api/metadata/corpropertyattr-enumeration.md) enumerazione.  
   
  `ppvSig`  
  [out] Un puntatore per la firma dei metadati della proprietà.  
@@ -76,38 +76,38 @@ HRESULT GetPropertyProps (
  [out] Il numero di byte restituiti nella `ppvSig`.  
   
  `pdwCPlusTypeFlag`  
- [out] Flag che specificano il tipo della costante che rappresenta il valore predefinito della proprietà. Questo valore è un'enumerazione CorElementType.  
+ [out] Flag che specifica il tipo della costante che rappresenta il valore predefinito della proprietà. Questo valore viene ricavato dall'enumerazione CorElementType.  
   
  `ppDefaultValue`  
- [out] Puntatore ai byte archiviare il valore predefinito per questa proprietà.  
+ [out] Puntatore ai byte che archiviano il valore predefinito per questa proprietà.  
   
  `pcchDefaultValue`  
- [out] La dimensione in caratteri "wide" di `ppDefaultValue`, se `pdwCPlusTypeFlag` è ELEMENT_TYPE_STRING; in caso contrario, questo valore non è rilevante. In questo caso, la lunghezza di `ppDefaultValue` viene dedotto dal tipo specificato da `pdwCPlusTypeFlag`.  
+ [out] La dimensione in caratteri wide di `ppDefaultValue`, se `pdwCPlusTypeFlag` è ELEMENT_TYPE_STRING; in caso contrario, questo valore non è rilevante. In tal caso, la lunghezza di `ppDefaultValue` viene dedotto dal tipo specificato dal `pdwCPlusTypeFlag`.  
   
  `pmdSetter`  
- [out] Puntatore al token MethodDef che rappresenta il metodo della funzione di accesso set per la proprietà.  
+ [out] Puntatore al token MethodDef che rappresenta il metodo della funzione di accesso set della proprietà.  
   
  `pmdGetter`  
- [out] Puntatore al token MethodDef che rappresenta il metodo di funzione di accesso get della proprietà.  
+ [out] Puntatore al token MethodDef che rappresenta il metodo della funzione di accesso get della proprietà.  
   
  `rmdOtherMethod`  
- [out] Matrice di token MethodDef che rappresentano gli altri metodi associati alla proprietà.  
+ [out] Matrice dei token MethodDef che rappresentano gli altri metodi associati alla proprietà.  
   
  `cMax`  
- [in] Dimensione massima della matrice `rmdOtherMethod`. Se non si specifica una matrice sufficientemente grande da contenere tutti i metodi, questi verranno ignorati senza avviso.  
+ [in] Dimensione massima della matrice `rmdOtherMethod`. Se non si specifica una matrice sufficientemente grande da contenere tutti i metodi, vengono ignorati senza avviso.  
   
  `pcOtherMethod`  
  [out] Il numero di token MethodDef restituiti in `rmdOtherMethod`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
- **Libreria:** inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [Interfaccia IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Interfaccia IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

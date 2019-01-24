@@ -10,12 +10,12 @@ helpviewer_keywords:
 - padding [WPF]
 - aligning [WPF]
 ms.assetid: 9c6a2009-9b86-4e40-8605-0a2664dc3973
-ms.openlocfilehash: 44c8814362ebb490d5e7676496309b2124782b78
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 5c716c07fabe5b93f13c86f8d347e4fd4d058145
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43800888"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569954"
 ---
 # <a name="alignment-margins-and-padding-overview"></a>Panoramica su allineamento, margini e spaziatura interna
 Il <xref:System.Windows.FrameworkElement> classe espone diverse proprietà che vengono usate per posizionare con precisione gli elementi figlio. In questo argomento descrive quattro delle proprietà più importanti: <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>, <xref:System.Windows.FrameworkElement.Margin%2A>, <xref:System.Windows.Controls.Border.Padding%2A>, e <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>. È fondamentale comprendere gli effetti di queste proprietà, perché forniscono la base per controllare la posizione degli elementi nelle applicazioni [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
@@ -139,13 +139,13 @@ Il <xref:System.Windows.FrameworkElement> classe espone diverse proprietà che v
 ## <a name="whats-next"></a>Argomenti successivi  
  Proprietà di posizionamento definite per il <xref:System.Windows.FrameworkElement> classe consentono un controllo accurato del posizionamento degli elementi all'interno di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applicazioni. Quelle descritte qui sono dunque le diverse tecniche che permettono di posizionare in modo più efficace gli elementi usando [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
- Sono inoltre disponibili ulteriori risorse in cui il layout di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] viene descritto in modo più particolareggiato. Il [Panoramica di pannelli](../../../../docs/framework/wpf/controls/panels-overview.md) argomento contiene più in dettaglio i vari <xref:System.Windows.Controls.Panel> elementi. L'argomento [procedura dettagliata: prima applicazione desktop WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md) vengono presentate tecniche avanzate che usano gli elementi di layout per posizionare i componenti e associare le relative azioni a origini dati.  
+ Sono inoltre disponibili ulteriori risorse in cui il layout di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] viene descritto in modo più particolareggiato. Il [Panoramica di pannelli](../../../../docs/framework/wpf/controls/panels-overview.md) argomento contiene più in dettaglio i vari <xref:System.Windows.Controls.Panel> elementi. L'argomento [procedura dettagliata: Prima applicazione desktop WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md) vengono presentate tecniche avanzate che usano gli elementi di layout per posizionare i componenti e associare le relative azioni a origini dati.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Windows.FrameworkElement>  
- <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>  
- <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>  
- <xref:System.Windows.FrameworkElement.Margin%2A>  
- [Cenni preliminari sugli elementi Panel](../../../../docs/framework/wpf/controls/panels-overview.md)  
- [Layout](../../../../docs/framework/wpf/advanced/layout.md)  
- [Esempio di raccolte di layout WPF](https://go.microsoft.com/fwlink/?LinkID=160054)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Windows.FrameworkElement>
+- <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>
+- <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>
+- <xref:System.Windows.FrameworkElement.Margin%2A>
+- [Cenni preliminari sugli elementi Panel](../../../../docs/framework/wpf/controls/panels-overview.md)
+- [Layout](../../../../docs/framework/wpf/advanced/layout.md)
+- [Esempio di raccolte di layout WPF](https://go.microsoft.com/fwlink/?LinkID=160054)

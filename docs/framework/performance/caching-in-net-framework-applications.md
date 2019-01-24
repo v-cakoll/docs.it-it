@@ -7,12 +7,12 @@ helpviewer_keywords:
 - caching [ASP.NET]
 ms.assetid: c4b47ee0-4b82-4124-9bce-818088385e34
 author: tdykstra
-ms.openlocfilehash: 4d9451f99b0253d0a4de6550b64fedd7fdfeda77
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 9fc63f860bad96d7dd304de31dd6e9b6626c90b6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43862017"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54721076"
 ---
 # <a name="caching-in-net-framework-applications"></a>Memorizzazione nella cache in applicazioni .NET Framework
 La memorizzazione nella cache consente di inserire i dati in memoria per l'accesso rapido. Quando accedono nuovamente ai dati, le applicazioni possono recuperarli dalla cache anziché dall'origine. In questo modo si possono ottenere migliori prestazioni e scalabilità. Inoltre, se si memorizzano i dati nella cache, questi sono accessibili anche quando l'origine dati è temporaneamente non disponibile.  
@@ -42,7 +42,7 @@ La memorizzazione nella cache consente di inserire i dati in memoria per l'acces
 > [!NOTE]
 >  La classe <xref:System.Runtime.Caching.MemoryCache> è modellata in base all'oggetto cache ASP.NET definito nello spazio dei nomi <xref:System.Web.Caching>. Pertanto, la logica di memorizzazione nella cache interna è simile alla logica fornita nelle versioni precedenti di ASP.NET.  
   
- Per un esempio di come usare la memorizzazione nella cache in un'applicazione WPF, vedere [Procedura dettagliata: Memorizzazione dei dati di un'applicazione nella cache di un'applicazione WPF](../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md).  
+ Per un esempio di come usare per la memorizzazione nella cache in un'applicazione WPF, vedere [procedura dettagliata: La memorizzazione nella cache i dati dell'applicazione in un'applicazione WPF](../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md).  
   
 ## <a name="caching-in-aspnet-applications"></a>Memorizzazione nella cache in applicazioni ASP.NET  
  Le classi di memorizzazione nella cache nello spazio dei nomi <xref:System.Runtime.Caching> offrono funzionalità per memorizzare dati nella cache in ASP.NET.  
@@ -51,7 +51,7 @@ La memorizzazione nella cache consente di inserire i dati in memoria per l'acces
 >  Se un'applicazione è destinata a [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] o versioni precedenti, è necessario usare le classi di memorizzazione nella cache definite nello spazio dei nomi <xref:System.Web.Caching>. Per altre informazioni, vedere [Cenni preliminari sull'inserimento nella cache in ASP.NET](https://msdn.microsoft.com/library/5ec28012-4972-4dc3-b3e8-9d20401fe11d).  
   
 > [!NOTE]
->  Quando si sviluppano nuove applicazioni, è consigliabile usare la classe <xref:System.Runtime.Caching.MemoryCache>. L'API disponibile nello spazio dei nomi <xref:System.Runtime.Caching> è analoga a quella dello spazio dei nomi <xref:System.Web.Caching.Cache>. L'API risulterà quindi familiare se si è già usata la memorizzazione nella cache nelle versioni precedenti di ASP.NET. Per un esempio di come usare la memorizzazione nella cache in applicazioni ASP.NET, vedere [Procedura dettagliata: Memorizzazione nella cache dei dati applicazioni in ASP.NET](https://msdn.microsoft.com/library/942236f6-0138-4aaf-af71-a5ea451a1e23).  
+>  Quando si sviluppano nuove applicazioni, è consigliabile usare la classe <xref:System.Runtime.Caching.MemoryCache>. L'API disponibile nello spazio dei nomi <xref:System.Runtime.Caching> è analoga a quella dello spazio dei nomi <xref:System.Web.Caching.Cache>. L'API risulterà quindi familiare se si è già usata la memorizzazione nella cache nelle versioni precedenti di ASP.NET. Per un esempio di come usare la memorizzazione nella cache nelle applicazioni ASP.NET, vedere [procedura dettagliata: La memorizzazione nella cache i dati dell'applicazione in ASP.NET](https://msdn.microsoft.com/library/942236f6-0138-4aaf-af71-a5ea451a1e23).  
   
 ### <a name="output-caching"></a>Memorizzazione dell'output nella cache  
  Per memorizzare manualmente nella cache i dati delle applicazioni, è possibile usare la classe ASP.NET <xref:System.Runtime.Caching.MemoryCache>. ASP.NET supporta anche la memorizzazione dell'output nella cache, permettendo così di inserire in memoria l'output generato da pagine, controlli e risposte HTTP. È possibile configurare la memorizzazione dell'output nella cache in modo dichiarativo, in una pagina Web ASP.NET, oppure usando le impostazioni nel file Web.config. Per altre informazioni, vedere [Elemento outputCache per caching (schema delle impostazioni ASP.NET)](https://msdn.microsoft.com/library/47cd2b47-316f-4dfd-bbf8-539be3066fee).  
@@ -76,8 +76,8 @@ La memorizzazione nella cache consente di inserire i dati in memoria per l'acces
   
  Per altre informazioni, vedere l'articolo [Extensible Output Caching with ASP.NET 4 (VS 2010 and .NET 4.0 Series)](https://go.microsoft.com/fwlink/?LinkId=185772) (Memorizzazione nella cache di output estendibile con ASP.NET 4 - VS 2010 e .NET 4.0) nel blog di Scott Guthrie.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Runtime.Caching.ObjectCache>  
- <xref:System.Runtime.Caching.MemoryCache>  
- [Procedura dettagliata: Memorizzazione dei dati di un'applicazione nella cache di un'applicazione WPF](../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)  
- [Procedura dettagliata: Memorizzazione nella cache dei dati applicazioni in ASP.NET](https://msdn.microsoft.com/library/942236f6-0138-4aaf-af71-a5ea451a1e23)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Runtime.Caching.ObjectCache>
+- <xref:System.Runtime.Caching.MemoryCache>
+- [Procedura dettagliata: La memorizzazione nella cache i dati dell'applicazione in un'applicazione WPF](../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
+- [Procedura dettagliata: La memorizzazione nella cache i dati dell'applicazione in ASP.NET](https://msdn.microsoft.com/library/942236f6-0138-4aaf-af71-a5ea451a1e23)

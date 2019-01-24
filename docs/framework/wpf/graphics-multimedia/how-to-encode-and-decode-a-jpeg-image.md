@@ -1,5 +1,5 @@
 ---
-title: "Procedura: codificare e decodificare un'immagine JPEG"
+title: "Procedura: Codificare e decodificare un'immagine JPEG"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,20 +13,20 @@ helpviewer_keywords:
 - JPEG decoding [WPF]
 - JPEG encoding [WPF]
 ms.assetid: b8cfde37-9f68-4911-a05e-51d8d7bdec7b
-ms.openlocfilehash: 916eab63938100daf91e6c1a5af31648a99108d0
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.openlocfilehash: db42411f71e2934f3e5f86a06f434da220f1882e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37027967"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603508"
 ---
-# <a name="how-to-encode-and-decode-a-jpeg-image"></a>Procedura: codificare e decodificare un'immagine JPEG
+# <a name="how-to-encode-and-decode-a-jpeg-image"></a>Procedura: Codificare e decodificare un'immagine JPEG
 
-Negli esempi seguenti viene illustrato come decodificare e codificare un'immagine JPEG utilizzando la specifica <xref:System.Windows.Media.Imaging.JpegBitmapDecoder> e <xref:System.Windows.Media.Imaging.JpegBitmapEncoder> oggetti.  
+Gli esempi seguenti illustrano come decodificare e codificare un'immagine JPEG usando le specifiche <xref:System.Windows.Media.Imaging.JpegBitmapDecoder> e <xref:System.Windows.Media.Imaging.JpegBitmapEncoder> oggetti.  
   
-## <a name="example---decode-a-jpeg-image"></a>Esempio: decodificare un'immagine JPEG
+## <a name="example---decode-a-jpeg-image"></a>Esempio - decodificare un'immagine JPEG
 
-In questo esempio viene illustrato come decodificare un'immagine JPEG utilizzando un <xref:System.Windows.Media.Imaging.JpegBitmapDecoder> da un <xref:System.IO.FileStream>.  
+In questo esempio viene illustrato come decodificare un'immagine JPEG usando un <xref:System.Windows.Media.Imaging.JpegBitmapDecoder> da un <xref:System.IO.FileStream>.  
   
 [!code-cpp[JpegBitmapDecoderEncoder#1](~/samples/snippets/cpp/VS_Snippets_Wpf/JpegBitmapDecoderEncoder/CPP/jpegencoderdecoder.cpp#1)]
 [!code-csharp[JpegBitmapDecoderEncoder#1](~/samples/snippets/csharp/VS_Snippets_Wpf/JpegBitmapDecoderEncoder/CSharp/JpegEncoderDecoder.cs#1)]
@@ -34,7 +34,7 @@ In questo esempio viene illustrato come decodificare un'immagine JPEG utilizzand
   
 ## <a name="example---encode-a-jpeg-image"></a>Esempio: codificare un'immagine JPEG
 
-In questo esempio viene illustrato come codificare un <xref:System.Windows.Media.Imaging.BitmapSource> in un'immagine JPEG immagine usando un <xref:System.Windows.Media.Imaging.JpegBitmapEncoder>.  
+In questo esempio illustra come codificare un <xref:System.Windows.Media.Imaging.BitmapSource> in un'immagine JPEG immagine usando un <xref:System.Windows.Media.Imaging.JpegBitmapEncoder>.  
   
 [!code-cpp[JpegBitmapDecoderEncoder#4](~/samples/snippets/cpp/VS_Snippets_Wpf/JpegBitmapDecoderEncoder/CPP/jpegencoderdecoder.cpp#4)]
 [!code-csharp[JpegBitmapDecoderEncoder#4](~/samples/snippets/csharp/VS_Snippets_Wpf/JpegBitmapDecoderEncoder/CSharp/JpegEncoderDecoder.cs#4)]
@@ -42,4 +42,4 @@ In questo esempio viene illustrato come codificare un <xref:System.Windows.Media
   
 ## <a name="see-also"></a>Vedere anche
 
-[Cenni preliminari sulla creazione dell'immagine](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)
+- [Cenni preliminari sulla creazione dell'immagine](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)

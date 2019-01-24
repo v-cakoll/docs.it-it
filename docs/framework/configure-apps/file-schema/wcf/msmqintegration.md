@@ -2,12 +2,12 @@
 title: '&lt;msmqIntegration&gt;'
 ms.date: 03/30/2017
 ms.assetid: ab677405-1ffe-457a-803f-00c1770e51e2
-ms.openlocfilehash: 6b1449ec385af2478ee278e9823a005c69ca8dc2
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 42197706a0c3f0f1940f8815fe0e41bb609a457a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147850"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603053"
 ---
 # <a name="ltmsmqintegrationgt"></a>&lt;msmqIntegration&gt;
 Specifica un trasporto MSMQ per un'associazione personalizzata.  
@@ -16,7 +16,7 @@ Specifica un trasporto MSMQ per un'associazione personalizzata.
 \<le associazioni >  
 \<customBinding>  
 \<binding>  
-\<msmqIntegration >  
+\<msmqIntegration>  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -62,7 +62,7 @@ Specifica un trasporto MSMQ per un'associazione personalizzata.
 |maxRetryCycles|Numero intero che indica il numero massimo di cicli di ripetizione dei tentativi di recapito dei messaggi all'applicazione ricevente. Il valore predefinito è <xref:System.Int32.MaxValue>.<br /><br /> Un singolo ciclo di ripetizione tenta di recapitare un messaggio a un'applicazione per un numero di volte specificato. Il numero di tentativi eseguiti è impostato dall'attributo `maxImmediateRetries`. Se l'applicazione non riesce a usare il messaggio dopo che i tentativi di recapito sono stati esauriti, il messaggio viene inviato a una coda di tentativi. I cicli di ripetizione successivi sono costituiti dal messaggio restituito dalla coda di tentativi alla coda dell'applicazione per tentare nuovamente il recapito all'applicazione, dopo un intervallo di tempo specificato dall'attributo `retryCycleDelay`. L'attributo `maxRetryCycles` specifica il numero di cicli di ripetizione che l'applicazione usa per tentare di recapitare il messaggio.|  
 |rejectAfterLastRetry|Valore booleano che indica l'azione da intraprendere per un messaggio non recapitato dopo il numero massimo di tentativi.<br /><br /> `true` indica che al mittente viene restituito un non riconoscimento e che il messaggio viene eliminato. `false` indica che il messaggio viene inviato alla coda dei messaggi non elaborabili. Il valore predefinito è `false`.<br /><br /> Se il valore è `false`, l'applicazione ricevente può leggere la coda dei messaggi non elaborabili per elaborare i messaggi non elaborabili, ovvero i messaggi il cui recapito ha avuto esito negativo.<br /><br /> Poiché MSMQ 3.0 non supporta la restituzione di un non riconoscimento al mittente, questo attributo viene ignorato in MSMQ 3.0.|  
 |retryCycleDelay|Valore <xref:System.TimeSpan> che specifica l'intervallo di tempo tra i cicli di ripetizione dei tentativi di recapitare un messaggio che è impossibile recapitare immediatamente. L'impostazione predefinita è 00:10:00.<br /><br /> Un singolo ciclo di ripetizione tenta di recapitare un messaggio a un'applicazione ricevente per uno specificato numero di volte. Il numero di tentativi eseguiti è specificato dall'attributo `maxImmediateRetries`. Se l'applicazione non riesce a usare il messaggio dopo il numero specificato di tentativi immediati, il messaggio viene inviato a una coda di tentativi. I cicli di ripetizione successivi sono costituiti dal messaggio restituito dalla coda di tentativi alla coda dell'applicazione per tentare nuovamente il recapito all'applicazione, dopo un intervallo di tempo specificato dall'attributo `retryCycleDelay`. Il numero di cicli di ripetizione è specificato dall'attributo `maxRetryCycles`.|  
-|serializationFormat|Specifica il formattatore usato per serializzare gli oggetti inviati come parte di un messaggio MSMQ. I valori validi sono:<br /><br /> -ActiveX: Il formattatore ActiveX viene utilizzato durante la serializzazione di oggetti COM.<br />-Binario:  Serializza l'oggetto in un pacchetto binario.<br />-ByteArray:  Serializza l'oggetto in una matrice di byte.<br />-Stream:  Serializza l'oggetto in un flusso.<br />-Xml:  Serializza l'oggetto in un pacchetto XML. Il valore predefinito è XML.<br /><br /> L'attributo è di tipo <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat>.|  
+|serializationFormat|Specifica il formattatore usato per serializzare gli oggetti inviati come parte di un messaggio MSMQ. I valori validi sono:<br /><br /> -ActiveX: Il formattatore ActiveX viene utilizzato durante la serializzazione di oggetti COM.<br />-Binario:  Serializza l'oggetto in un pacchetto binario.<br />-   ByteArray:  Serializza l'oggetto in una matrice di byte.<br />-Stream:  Serializza l'oggetto in un flusso.<br />-   Xml:  Serializza l'oggetto in un pacchetto XML. Il valore predefinito è XML.<br /><br /> L'attributo è di tipo <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat>.|  
 |timeToLive|Valore <xref:System.TimeSpan> che specifica la durata di validità dei messaggi prima che scadano e vengano inseriti nella coda dei messaggi non recapitabili. Il valore predefinito è 1.00:00:00, che corrisponde a un giorno.<br /><br /> L'attributo è impostato per verificare che i messaggi a scadenza non risultino non aggiornati prima di essere elaborati dalle applicazioni riceventi. Un messaggio in una coda che non viene usato dall'applicazione ricevente entro l'intervallo di tempo specificato viene considerato scaduto. I messaggi scaduti vengono inviati a una coda speciale denominata coda dei messaggi non recapitabili. Il percorso della coda dei messaggi non recapitabili viene impostato con l'attributo `customDeadLetterQueue` o sul valore appropriato predefinito, in base alle garanzie.|  
 |useMsmqTracing|Valore booleano che specifica se i messaggi elaborati da questa associazione devono essere tracciati. Il valore predefinito è `false`.<br /><br /> Quando la traccia è attivata, i messaggi di rapporto vengono creati e inviati alla coda dei rapporti ogni volta che il messaggio viene inviato o ricevuto da un computer in cui è installato il sistema di accodamento messaggi.|  
 |useSourceJournal|Valore booleano che indica se le copie dei messaggi elaborati da questa associazione devono essere archiviate nella coda journal di origine. Il valore predefinito è `false`.<br /><br /> Le applicazioni in coda che devono tenere un registro dei messaggi che hanno lasciato la coda in uscita del computer possono copiare i messaggi in una coda journal. Quando un messaggio lascia la coda in uscita e viene ricevuto un riconoscimento che il messaggio è stato ricevuto nel computer di destinazione, una copia del messaggio viene mantenuta nella coda journal del sistema del computer di invio.|  
@@ -79,14 +79,14 @@ Specifica un trasporto MSMQ per un'associazione personalizzata.
 |-------------|-----------------|  
 |[\<binding>](../../../../../docs/framework/misc/binding.md)|Definisce tutte le funzionalità di associazione dell'associazione personalizzata.|  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.Configuration.MsmqIntegrationElement>  
- <xref:System.ServiceModel.Channels.TransportBindingElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [Trasporti](../../../../../docs/framework/wcf/feature-details/transports.md)  
- [Code in WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)  
- [Scelta di un trasporto](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
- [Associazioni](../../../../../docs/framework/wcf/bindings.md)  
- [Estensione delle associazioni](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [Associazioni personalizzate](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.ServiceModel.Configuration.MsmqIntegrationElement>
+- <xref:System.ServiceModel.Channels.TransportBindingElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [Trasporti](../../../../../docs/framework/wcf/feature-details/transports.md)
+- [Code in WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)
+- [Scelta di un trasporto](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+- [Associazioni](../../../../../docs/framework/wcf/bindings.md)
+- [Estensione delle associazioni](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [Associazioni personalizzate](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

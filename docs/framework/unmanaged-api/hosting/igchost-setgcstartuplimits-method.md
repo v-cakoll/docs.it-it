@@ -17,18 +17,18 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cbe94aa67c9cf9ac587b7fca9f5cbeca4870506b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 83a1c03c209d68035b3615c83ec0ee13b94eb549
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33437209"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54719950"
 ---
 # <a name="igchostsetgcstartuplimits-method"></a>Metodo IGCHost::SetGCStartupLimits
-Imposta le dimensioni del segmento e la dimensione massima per la generazione 0.  
+Imposta le dimensioni del segmento e le dimensioni massime per la generazione 0.  
   
 > [!IMPORTANT]
->  A partire dal [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], è possibile impostare una dimensione del segmento e dimensione massima di generazione 0 a valori maggiori di `DWORD` utilizzando il [igchost2:: Setgcstartuplimitsex](../../../../docs/framework/unmanaged-api/hosting/igchost2-setgcstartuplimitsex-method.md) metodo.  
+>  Inizia con il [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], è possibile impostare le dimensioni dei segmenti e dimensioni del numero massimo di generazioni 0 per i valori maggiori `DWORD` tramite il [IGCHost2::SetGCStartupLimitsEx](../../../../docs/framework/unmanaged-api/hosting/igchost2-setgcstartuplimitsex-method.md) (metodo).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,22 +41,22 @@ HRESULT SetGCStartupLimits (
   
 #### <a name="parameters"></a>Parametri  
  `SegmentSize`  
- [in] Dimensione del segmento utilizzata dal sistema di garbage collection.  
+ [in] Le dimensioni del segmento usato dal sistema di garbage collection.  
   
  `MaxGen0Size`  
  [in] La dimensione massima per la generazione 0.  
   
 ## <a name="remarks"></a>Note  
- Il `SetGCStartupLimits` metodo può essere chiamato una sola volta. Questi valori non possono essere modificati successivamente.  
+ Il `SetGCStartupLimits` metodo può essere chiamato una sola volta. Questi valori non possono essere modificati in un secondo momento.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** GCHost. idl, GCHost. H  
+ **Intestazione:** GCHost.idl, GCHost.h  
   
- **Libreria:** inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia IGCHost](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia IGCHost](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)

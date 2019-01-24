@@ -2,12 +2,12 @@
 title: Sicurezza in SQL Server Express
 ms.date: 03/30/2017
 ms.assetid: cf9cf6d9-4b05-43e9-ac7b-6cefbfcd6d4e
-ms.openlocfilehash: 736c450d944efe7e6a69e16e00e1c96f0a868697
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: c14548f2ff8e93c4dbbc61b946b9ed01cb62ab8a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485586"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664070"
 ---
 # <a name="sql-server-express-security"></a>Sicurezza in SQL Server Express
 Microsoft SQL Server Express Edition (SQL Server Express) è basata su Microsoft SQL Server e supporta la maggior parte delle funzionalità del motore di database. È progettato in modo tale che le funzionalità non essenziali e la connettività di rete siano disattivate per impostazione predefinita, al fine di ridurre la superficie di attacco disponibile per utenti malintenzionati.  
@@ -33,11 +33,11 @@ Microsoft SQL Server Express Edition (SQL Server Express) è basata su Microsoft
 |-|-|  
 |[Documentazione online di SQL Server](https://msdn.microsoft.com/library/bb543165.aspx)|Include la documentazione relativa a SQL Server Express.|  
 |[Connessione a SQL Server Express](https://msdn.microsoft.com/library/ms165679.aspx) nella documentazione Online di SQL Server|Viene descritto come usare SQL Server Express Edition in una rete.|  
-|[Documentazione Online di Microsoft SQL Server 2005 Express Edition](https://msdn.microsoft.com/library/ms165706.aspx)|Documentazione completa relativa a SQL Server 2005 Express Edition.|  
+|[Microsoft SQL Server 2005 Express Edition Books Online](https://msdn.microsoft.com/library/ms165706.aspx)|Documentazione completa relativa a SQL Server 2005 Express Edition.|  
 |[Istanze utente per utenti Non amministratori](https://msdn.microsoft.com/library/ms143684.aspx) nella documentazione Online di SQL Server|Viene descritto come creare e distribuire istanze utente.|  
 |[Connessione alle istanze utente di SQL Server Express](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)|Vengono descritte le funzionalità dell'istanza utente in un'applicazione ADO.NET. Vengono inoltre fornite informazioni su come abilitare un'istanza utente, effettuare la connessione a un'istanza utente usando un oggetto <xref:System.Data.SqlClient.SqlConnection>, la durata dell'istanza utente e gli scenari dell'istanza utente.|  
   
-## <a name="see-also"></a>Vedere anche  
- [Sicurezza di SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
- [Connessione alle istanze utente di SQL Server Express](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vedere anche
+- [Sicurezza di SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)
+- [Connessione alle istanze utente di SQL Server Express](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)
+- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

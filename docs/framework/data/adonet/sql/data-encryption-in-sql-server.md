@@ -2,12 +2,12 @@
 title: Crittografia dei dati in SQL Server
 ms.date: 03/30/2017
 ms.assetid: 83b992f7-b351-4678-b4b9-f4ffd58134cc
-ms.openlocfilehash: 4d02e93cddef57cc42e03ecc6b094b34c24b3f93
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 4b421d2cb5a44ee164a73ea1367a79d81fb37c31
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509095"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54591929"
 ---
 # <a name="data-encryption-in-sql-server"></a>Crittografia dei dati in SQL Server
 In SQL Server sono disponibili funzioni per di crittografia e decrittografia dei dati tramite certificato, chiave asimmetrica o chiave simmetrica. Tutte queste funzionalità vengono gestite in un archivio di certificati interno. Nell'archivio viene usata una gerarchia di crittografia per proteggere i certificati e le chiavi di un livello con il livello superiore nella gerarchia. Quest'area di funzionalità di SQL Server è denominata archivio segreto.  
@@ -26,14 +26,14 @@ In SQL Server sono disponibili funzioni per di crittografia e decrittografia dei
   
 |Risorsa|Descrizione|  
 |-|-|  
-|[Crittografia di SQL Server](/sql/relational-databases/security/encryption/sql-server-encryption)|Viene fornita una panoramica della crittografia in SQL Server. In questo argomento include collegamenti a ulteriori articoli.|  
+|[SQL Server Encryption](/sql/relational-databases/security/encryption/sql-server-encryption)|Viene fornita una panoramica della crittografia in SQL Server. In questo argomento include collegamenti a ulteriori articoli.|  
 |[Gerarchia di crittografia](/sql/relational-databases/security/encryption/encryption-hierarchy)|Viene fornita una panoramica della crittografia in SQL Server. In questo argomento vengono forniti collegamenti ad altri articoli.|  
   
-## <a name="see-also"></a>Vedere anche  
- [Protezione delle applicazioni ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [Scenari di sicurezza delle applicazioni in SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
- [Autenticazione in SQL Server](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)  
- [Ruoli server e database in SQL Server](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)  
- [Proprietà e separazione tra schemi e utenti in SQL Server](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)  
- [Autorizzazioni in SQL Server](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vedere anche
+- [Protezione delle applicazioni ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [Scenari di sicurezza delle applicazioni in SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
+- [Autenticazione in SQL Server](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)
+- [Ruoli server e database in SQL Server](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)
+- [Proprietà e separazione tra schemi e utenti in SQL Server](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)
+- [Autorizzazioni in SQL Server](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)
+- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

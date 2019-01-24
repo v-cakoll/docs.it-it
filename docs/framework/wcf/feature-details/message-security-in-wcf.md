@@ -2,12 +2,12 @@
 title: Protezione dei messaggi in WCF
 ms.date: 03/30/2017
 ms.assetid: a80efb59-591a-4a37-bb3c-8fffa6ca0b7d
-ms.openlocfilehash: 81d9acde3c8fab1860904074199066cca55c7186
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 023798f3bbc283b11dbb6c132f7573ee65d18077
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195251"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731348"
 ---
 # <a name="message-security-in-wcf"></a>Protezione dei messaggi in WCF
 Windows Communication Foundation (WCF) sono disponibili due modalità principali per fornire una sicurezza (`Transport` e `Message`) e una terza modalità (`TransportWithMessageCredential`) che combina i due. In questo argomento viene illustrata la sicurezza dei messaggi e i motivi per cui è consigliabile utilizzarla.  
@@ -58,8 +58,8 @@ Windows Communication Foundation (WCF) sono disponibili due modalità principali
   
 -   Richiede l'implementazione di meccanismi di sicurezza a livello del contenuto XML e il supporto della specifica WS-Security. Ciò può influire sull'interoperabilità.  
   
-## <a name="see-also"></a>Vedere anche  
- [Protezione di servizi e client](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Sicurezza del trasporto](../../../../docs/framework/wcf/feature-details/transport-security.md)  
- [Procedura: Usare le funzionalità di sicurezza del trasporto e le credenziali a livello di messaggio](../../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)  
- [Microsoft Patterns and Practices, capitolo 3: implementazione di trasporto e messaggio di sicurezza di livello](https://go.microsoft.com/fwlink/?LinkId=88897)
+## <a name="see-also"></a>Vedere anche
+- [Protezione di servizi e client](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Sicurezza del trasporto](../../../../docs/framework/wcf/feature-details/transport-security.md)
+- [Procedura: Usare la sicurezza trasporto e le credenziali del messaggio](../../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)
+- [Microsoft Patterns and Practices, capitolo 3: Implementazione della sicurezza del trasporto e messaggio livello](https://go.microsoft.com/fwlink/?LinkId=88897)

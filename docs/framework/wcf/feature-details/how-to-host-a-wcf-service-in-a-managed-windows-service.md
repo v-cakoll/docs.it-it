@@ -1,18 +1,18 @@
 ---
-title: 'Procedura: ospitare un servizio WCF in un servizio Windows gestito'
+title: 'Procedura: Ospitare un servizio WCF in un servizio Windows gestito'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8e37363b-4dad-4fb6-907f-73c30fac1d9a
-ms.openlocfilehash: edbc67ddf20eee6ebbe9091faa43bc1de91809d2
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: b4cb2ae3b2db8cdfab962c61ead387baf1bb7158
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46000765"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54613825"
 ---
-# <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>Procedura: ospitare un servizio WCF in un servizio Windows gestito
+# <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>Procedura: Ospitare un servizio WCF in un servizio Windows gestito
 
 Questo argomento descrive i passaggi di base necessari per creare un servizio Windows Communication Foundation (WCF) ospitato da un servizio di Windows. Lo scenario è abilitato per l'opzione che è un servizio WCF con esecuzione prolungata ospitato all'esterno di Internet Information Services (IIS) in un ambiente protetto non attivato messaggio di hosting del servizio Windows gestito. La durata del servizio è controllata invece dal sistema operativo. Questa opzione di hosting è disponibile in tutte le versioni di Windows.
 
@@ -138,4 +138,4 @@ Analogamente all'opzione di self-hosting, l'ambiente host del servizio Windows r
 - [Configurazione semplificata](../../../../docs/framework/wcf/simplified-configuration.md)
 - [Hosting in un'applicazione gestita](../../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md)
 - [Servizi di hosting](../../../../docs/framework/wcf/hosting-services.md)
-- [Windows Server AppFabric con funzionalità di Hosting](https://go.microsoft.com/fwlink/?LinkId=201276)
+- [Funzionalità di hosting di Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=201276)

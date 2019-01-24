@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: chiamare una funzione Windows che accetta tipi senza segno (Visual Basic)'
+title: 'Procedura: Chiamare una funzione Windows che accetta tipi senza segno (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Windows functions [Visual Basic], calling
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - data types [Visual Basic], numeric
 - unsigned types [Visual Basic], using
 ms.assetid: c2c0e712-8dc2-43b9-b4c6-345fbb02e7ce
-ms.openlocfilehash: d66b74f06abe6b337c24859c444f7a8c2aa52c13
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 092f1acf6e6a8468890a371836979db4e0692d1e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524565"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54669315"
 ---
-# <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>Procedura: chiamare una funzione Windows che accetta tipi senza segno (Visual Basic)
+# <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>Procedura: Chiamare una funzione Windows che accetta tipi senza segno (Visual Basic)
 Se si sta utilizzando una classe, modulo o una struttura con membri dei tipi di integer senza segno, è possibile accedere a questi membri con Visual Basic.  
   
 ### <a name="to-call-a-windows-function-that-takes-an-unsigned-type"></a>Per chiamare una funzione Windows che accetta un tipo unsigned  
@@ -77,9 +77,9 @@ Se si sta utilizzando una classe, modulo o una struttura con membri dei tipi di 
     > [!IMPORTANT]
     >  Chiamare l'API di Windows richiede l'autorizzazione di accesso al codice non gestito, che possono influire sull'esecuzione in situazioni di attendibilità parziale. Per altre informazioni, vedere <xref:System.Security.Permissions.SecurityPermission> e [le autorizzazioni di accesso di codice](https://msdn.microsoft.com/library/e5ae402f-6dda-4732-bbe8-77296630f675).  
   
-## <a name="see-also"></a>Vedere anche  
- [Tipi di dati](../../../visual-basic/language-reference/data-types/index.md)  
- [Tipo di dati Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md)  
- [Tipo di dati UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)  
- [Istruzione Declare](../../../visual-basic/language-reference/statements/declare-statement.md)  
- [Procedura dettagliata: Chiamata delle API di Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)
+## <a name="see-also"></a>Vedere anche
+- [Tipi di dati](../../../visual-basic/language-reference/data-types/index.md)
+- [Tipo di dati Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md)
+- [Tipo di dati UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)
+- [Istruzione Declare](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [Procedura dettagliata: Chiamata delle API di Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)

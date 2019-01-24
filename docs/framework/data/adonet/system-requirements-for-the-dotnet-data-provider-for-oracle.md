@@ -2,12 +2,12 @@
 title: Requisiti di sistema per il provider di dati.NET Framework per Oracle
 ms.date: 03/30/2017
 ms.assetid: 054f76b9-1737-43f0-8160-84a00a387217
-ms.openlocfilehash: 60d57e30e2a1588ec6e0b9e253f371f8fbae28bc
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: cc3fc61c5adebf67b1203897579b2f959cbc0546
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43501097"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54670871"
 ---
 # <a name="system-requirements-for-the-net-framework-data-provider-for-oracle"></a>Requisiti di sistema per il provider di dati.NET Framework per Oracle
 Per usare il provider di dati .NET Framework per Oracle, è necessario disporre di Microsoft Data Access Components (MDAC) 2.6 o versione successiva. Si consiglia l'uso di MDAC 2.8 SP1.  
@@ -37,6 +37,6 @@ Unicode=True
 ### <a name="oraclelob-can-only-update-full-characters"></a>OracleLob consente di aggiornare solo caratteri completi.  
  Per motivi di usabilità, la <xref:System.Data.OracleClient.OracleLob> oggetto eredita dalla classe Stream di .NET Framework e fornisce **ReadByte** e **WriteByte** metodi. Implementa inoltre metodi, ad esempio **CopyTo** e **Erase**, che usare sulle sezioni di Oracle **LOB** oggetti. Al contrario, il software client Oracle fornisce una serie di API per l'uso con **LOB**s (**CLOB** e **NCLOB**). Tuttavia, queste API funzionano solo con i caratteri completi. A causa di questa differenza, il Provider di dati per Oracle implementa il supporto per **Read** e **ReadByte** per lavorare con dati UTF-16 in una modalità byte per byte. Tuttavia, gli altri metodi del **OracleLob** oggetto consentono solo operazioni con caratteri completi.  
   
-## <a name="see-also"></a>Vedere anche  
- [Oracle e ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vedere anche
+- [Oracle e ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)
+- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

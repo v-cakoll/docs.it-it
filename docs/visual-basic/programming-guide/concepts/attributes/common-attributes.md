@@ -2,15 +2,15 @@
 title: Attributi comuni (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 11fe4894-1bf9-4525-a36b-cddcd3a5d22b
-ms.openlocfilehash: 5a91b0aa48a22db4ea7fb56a9c632ff0cb44dce5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0bc51a37fa0ccbcb3a74e1796686f0d6a6ec4d84
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644160"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690904"
 ---
 # <a name="common-attributes-visual-basic"></a>Attributi comuni (Visual Basic)
-In questo argomento vengono descritti gli attributi più comunemente utilizzati nei programmi Visual Basic.  
+In questo argomento descrive gli attributi utilizzati più frequentemente nei programmi Visual Basic.  
   
 -   [Attributi globali](#Global)  
   
@@ -29,7 +29,7 @@ In questo argomento vengono descritti gli attributi più comunemente utilizzati 
 <Assembly: AssemblyVersion("1.0.0.0")>  
 ```  
   
- Gli attributi globali vengono visualizzati nel codice sorgente dopo qualsiasi livello superiore `Imports` istruzioni e prima delle dichiarazioni di tipo, modulo o spazio dei nomi. Gli attributi globali possono apparire in più file di origine, ma i file devono essere compilati in un'unica operazione di compilazione. Per i progetti di Visual Basic, gli attributi globali in genere vengono inseriti in file AssemblyInfo. vb (il file viene creato automaticamente quando si crea un progetto in Visual Studio).  
+ Gli attributi globali appaiono nel codice sorgente dopo eventuali principale `Imports` istruzioni e prima delle dichiarazioni di tipo, modulo o dello spazio dei nomi. Gli attributi globali possono apparire in più file di origine, ma i file devono essere compilati in un'unica operazione di compilazione. Per i progetti Visual Basic, gli attributi globali vengono in genere inseriti in file AssemblyInfo. vb (il file viene creato automaticamente quando si crea un progetto in Visual Studio).  
   
  Gli attributi dell'assembly sono valori che forniscono informazioni relative a un assembly. Sono suddivisi nelle seguenti categorie:  
   
@@ -218,9 +218,9 @@ End Class
 |---|---|---|  
 |<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|Percorso completo del file di origine contenente il chiamante. È il percorso al momento della compilazione.|`String`|  
 |<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|Numero di riga nel file di origine da cui viene chiamato il metodo.|`Integer`|  
-|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|Nome di una proprietà o di un metodo del chiamante. Per ulteriori informazioni, vedere [informazioni sul chiamante (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md).|`String`|  
+|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|Nome di una proprietà o di un metodo del chiamante. Per altre informazioni, vedere [informazioni sul chiamante (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md).|`String`|  
   
- Per ulteriori informazioni sugli attributi di informazioni sul chiamante, vedere [informazioni sul chiamante (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md).  
+ Per altre informazioni sugli attributi di informazioni sul chiamante, vedere [informazioni sul chiamante (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md).  
   
 ##  <a name="VB"></a> Attributi di Visual Basic  
  Nella tabella seguente elenca gli attributi specifici di Visual Basic.  
@@ -228,18 +228,18 @@ End Class
 |Attributo|Scopo|  
 |---------------|-------------|  
 |<xref:Microsoft.VisualBasic.ComClassAttribute>|Indica al compilatore che la classe deve essere esposto come un oggetto COM.|  
-|<xref:Microsoft.VisualBasic.HideModuleNameAttribute>|Consente ai membri del modulo a cui accedere solo mediante i requisiti necessari per il modulo.|  
-|<xref:Microsoft.VisualBasic.VBFixedStringAttribute>|Specifica le dimensioni di una stringa di lunghezza fissa in una struttura da utilizzare con file di input e output funzioni.|  
-|<xref:Microsoft.VisualBasic.VBFixedArrayAttribute>|Specifica le dimensioni di una matrice fissa in una struttura da utilizzare con file di input e output funzioni.|  
+|<xref:Microsoft.VisualBasic.HideModuleNameAttribute>|Consente ai membri del modulo a cui accedere usando solo la qualifica necessaria per il modulo.|  
+|<xref:Microsoft.VisualBasic.VBFixedStringAttribute>|Specifica le dimensioni di una stringa di lunghezza fissa in una struttura per l'utilizzo con file di input e output funzioni.|  
+|<xref:Microsoft.VisualBasic.VBFixedArrayAttribute>|Specifica le dimensioni di una matrice fissa in una struttura per l'utilizzo con file di input e output funzioni.|  
   
 ### <a name="comclassattribute"></a>COMClassAttribute  
- Utilizzare `COMClassAttribute` per semplificare il processo di creazione di componenti COM da Visual Basic. Gli oggetti COM sono notevolmente diversi dagli assembly .NET Framework e senza `COMClassAttribute`, è necessario seguire una serie di passaggi per generare un oggetto COM da Visual Basic. Per le classi contrassegnate con `COMClassAttribute`, il compilatore esegue molte di queste operazioni automaticamente.  
+ Usare `COMClassAttribute` per semplificare il processo di creazione di componenti COM da Visual Basic. Gli oggetti COM sono notevolmente diversi dagli assembly .NET Framework e senza `COMClassAttribute`, è necessario seguire una serie di passaggi per generare un oggetto COM da Visual Basic. Per le classi contrassegnate con `COMClassAttribute`, il compilatore esegue molti di questi passaggi automaticamente.  
   
 ### <a name="hidemodulenameattribute"></a>HideModuleNameAttribute  
- Utilizzare `HideModuleNameAttribute` per consentire ai membri di modulo a cui devono accedere solo mediante i requisiti necessari per il modulo.  
+ Usare `HideModuleNameAttribute` per consentire ai membri di modulo a cui accedere usando solo la qualifica necessaria per il modulo.  
   
 ### <a name="vbfixedstringattribute"></a>VBFixedStringAttribute  
- Utilizzare `VBFixedStringAttribute` per forzare Visual Basic per creare una stringa di lunghezza fissa. Le stringhe sono di lunghezza variabile per impostazione predefinita, e questo attributo è utile quando si archiviano stringhe nei file. Il codice seguente illustra questo processo:  
+ Usare `VBFixedStringAttribute` forzare Visual Basic per creare una stringa di lunghezza fissa. Le stringhe sono di lunghezza variabile per impostazione predefinita, e questo attributo è utile quando si archiviano stringhe nei file. Il codice seguente illustra questo processo:  
   
 ```vb  
 Structure Worker  
@@ -252,12 +252,12 @@ End Structure
 ```  
   
 ### <a name="vbfixedarrayattribute"></a>VBFixedArrayAttribute  
- Utilizzare `VBFixedArrayAttribute` per dichiarare matrici di dimensioni fisse. Le stringhe di Visual Basic, le matrici hanno lunghezza variabile per impostazione predefinita. Questo attributo è utile durante la serializzazione o la scrittura di dati nei file.  
+ Usare `VBFixedArrayAttribute` per dichiarare matrici di dimensione fissa. Simili a stringhe Visual Basic e le matrici sono di lunghezza variabile per impostazione predefinita. Questo attributo è utile durante la serializzazione o la scrittura dei dati ai file.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Reflection>  
- <xref:System.Attribute>  
- [Guida per programmatori Visual Basic](../../../../visual-basic/programming-guide/index.md)  
- [Attributi](../../../../standard/attributes/index.md)  
- [Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)  
- [Accesso agli attributi tramite reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Reflection>
+- <xref:System.Attribute>
+- [Guida per programmatori Visual Basic](../../../../visual-basic/programming-guide/index.md)
+- [Attributi](../../../../standard/attributes/index.md)
+- [Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)
+- [Accesso agli attributi tramite reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)

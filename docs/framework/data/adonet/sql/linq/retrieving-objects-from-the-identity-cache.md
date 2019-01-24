@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 96c13903-ccb6-4a0e-ab6a-8ca955ca314d
-ms.openlocfilehash: fe22dbdff0e5e9ea6bfe55fc24c492414e01cd6f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dceda9dce794e0a08cc9cd7905cf3cd0685898d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357608"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569154"
 ---
 # <a name="retrieving-objects-from-the-identity-cache"></a>Recupero di oggetti dalla cache di identità
 In questo argomento vengono descritti i tipi di query LINQ to SQL che restituiscono un oggetto dalla cache delle identità gestita dall'oggetto <xref:System.Data.Linq.DataContext>.  
@@ -20,7 +20,7 @@ In questo argomento vengono descritti i tipi di query LINQ to SQL che restituisc
  In generale, affinché una query LINQ to SQL restituisca un oggetto dalla cache delle identità, la query deve essere basata sulla chiave primaria di un oggetto e deve restituire un unico oggetto. In particolare, il formato della query deve essere uno di quelli illustrati di seguito.  
   
 > [!NOTE]
->  Le query precompilate non restituiranno oggetti dalla cache delle identità. Per ulteriori informazioni sulle query pre-compilate, vedere <xref:System.Data.Linq.CompiledQuery> e [come: Store e riutilizzare le query](../../../../../../docs/framework/data/adonet/sql/linq/how-to-store-and-reuse-queries.md).  
+>  Le query precompilate non restituiranno oggetti dalla cache delle identità. Per altre informazioni sulle query precompilate, vedere <xref:System.Data.Linq.CompiledQuery> e [come: Store e riutilizzare query](../../../../../../docs/framework/data/adonet/sql/linq/how-to-store-and-reuse-queries.md).  
   
  Il formato di una query deve essere uno dei formati generali riportati di seguito per poter recuperare un oggetto dalla cache delle identità:  
   
@@ -64,8 +64,8 @@ In questo argomento vengono descritti i tipi di query LINQ to SQL che restituisc
  [!code-csharp[L2S_QueryCache#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/l2s_querycache/cs/program.cs#1)]
  [!code-vb[L2S_QueryCache#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/l2s_querycache/vb/module1.vb#1)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Concetti relativi alle query](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
- [Identità degli oggetti](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)  
- [Informazioni di base](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
- [Identità degli oggetti](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)
+## <a name="see-also"></a>Vedere anche
+- [Concetti relativi alle query](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
+- [Identità degli oggetti](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)
+- [Informazioni di base](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
+- [Identità degli oggetti](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)

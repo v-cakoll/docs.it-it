@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: rispondere alla selezione nel controllo DataGrid Windows Form'
+title: 'Procedura: Rispondere alla selezione nel controllo DataGrid Windows Form'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,20 +12,20 @@ helpviewer_keywords:
 - examples [Windows Forms], DataGrid control
 - DataGrid control [Windows Forms], click events
 ms.assetid: a0aa204b-8351-4d82-9933-ee21a5c9e409
-ms.openlocfilehash: 3b89bab9370039e4089ad834c6ea1f528d7b6575
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: be9c5c213f9bb52bf620b3d7edec95279220abdf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33535164"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722907"
 ---
-# <a name="how-to-respond-to-clicks-in-the-windows-forms-datagrid-control"></a>Procedura: rispondere alla selezione nel controllo DataGrid Windows Form
+# <a name="how-to-respond-to-clicks-in-the-windows-forms-datagrid-control"></a>Procedura: Rispondere alla selezione nel controllo DataGrid Windows Form
 > [!NOTE]
 >  Benché il controllo <xref:System.Windows.Forms.DataGridView> sostituisca il controllo <xref:System.Windows.Forms.DataGrid> aggiungendovi funzionalità, il controllo <xref:System.Windows.Forms.DataGrid> viene mantenuto per compatibilità con le versioni precedenti e per un eventuale uso futuro. Per altre informazioni, vedere [Differenze tra i controlli DataGridView e DataGrid Windows Form](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
- Dopo il Windows Form <xref:System.Windows.Forms.DataGrid> è connesso a un database, è possibile monitorare la cella selezionata dall'utente.  
+ Dopo i moduli di Windows <xref:System.Windows.Forms.DataGrid> è connesso a un database, è possibile monitorare la cella selezionata dall'utente.  
   
-### <a name="to-detect-when-the-user-of-the-datagrid-selects-a-different-cell"></a>Per rilevare quando l'utente del controllo DataGrid seleziona una cella diversa  
+### <a name="to-detect-when-the-user-of-the-datagrid-selects-a-different-cell"></a>Per rilevare quando l'utente della griglia dati consente di selezionare una cella diversa  
   
 -   Nel <xref:System.Windows.Forms.DataGrid.CurrentCellChanged> gestore eventi, scrivere il codice per rispondere in modo appropriato.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "33535164"
     }  
     ```  
   
-     (Visual c#) Inserire il codice seguente nel costruttore del form per registrare il gestore dell'evento.  
+     (Visual C#) Inserire il codice seguente nel costruttore del form per registrare il gestore dell'evento.  
   
     ```csharp  
     this.myDataGrid.CurrentCellChanged += new  
@@ -58,7 +58,7 @@ ms.locfileid: "33535164"
   
 -   Chiamare il <xref:System.Windows.Forms.DataGrid.HitTest%2A> metodo in un gestore eventi appropriato, ad esempio per il <xref:System.Windows.Forms.Control.MouseDown> o <xref:System.Windows.Forms.Control.Click> evento.  
   
-     Il <xref:System.Windows.Forms.DataGrid.HitTest%2A> metodo restituisce un <xref:System.Windows.Forms.DataGrid.HitTestInfo> oggetto che contiene la riga e colonna all'area selezionata.  
+     Il <xref:System.Windows.Forms.DataGrid.HitTest%2A> metodo restituisce un <xref:System.Windows.Forms.DataGrid.HitTestInfo> oggetto che contiene la riga e colonna dell'area selezionata.  
   
     ```vb  
     Private Sub myDataGrid_MouseDown(ByVal sender As Object, _  
@@ -132,7 +132,7 @@ ms.locfileid: "33535164"
     }  
     ```  
   
-     (Visual c#) Inserire il codice seguente nel costruttore del form per registrare il gestore dell'evento.  
+     (Visual C#) Inserire il codice seguente nel costruttore del form per registrare il gestore dell'evento.  
   
     ```csharp  
     this.myDataGrid.MouseDown += new  
@@ -140,6 +140,6 @@ ms.locfileid: "33535164"
        (this.myDataGrid_MouseDown);  
     ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Controllo DataGrid](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)  
- [Procedura: Modificare i dati visualizzati in fase di esecuzione nel controllo DataGrid Windows Form](../../../../docs/framework/winforms/controls/change-displayed-data-at-run-time-wf-datagrid-control.md)
+## <a name="see-also"></a>Vedere anche
+- [Controllo DataGrid](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)
+- [Procedura: Modificare i dati visualizzati in fase di esecuzione nel controllo DataGrid Windows Form](../../../../docs/framework/winforms/controls/change-displayed-data-at-run-time-wf-datagrid-control.md)

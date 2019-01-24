@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bcfb584fc2380a7ae1567d3d4d6203b537676220
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ca2d7fe73fc749296f76e18ecce75b7fdd0795d3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429699"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585591"
 ---
 # <a name="iassemblynamesetproperty-method"></a>Metodo IAssemblyName::SetProperty
-Imposta il valore della proprietà a cui fa riferimento l'identificatore della proprietà specificata.  
+Imposta il valore della proprietà fa riferimento l'identificatore della proprietà specificata.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,17 +42,17 @@ HRESULT SetProperty (
  [in] Identificatore univoco della proprietà il cui valore verrà impostato.  
   
  `pvProperty`  
- [in] Il valore su cui impostare la proprietà a cui fa riferimento `PropertyId`.  
+ [in] Il valore su cui impostare la proprietà fa `PropertyId`.  
   
  `cbProperty`  
  [in] Le dimensioni, in byte, di `pvProperty`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Fusion. h  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)

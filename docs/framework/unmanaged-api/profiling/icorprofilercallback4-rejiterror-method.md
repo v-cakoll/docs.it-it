@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ec6472a33c49d9345793d73ac2f78f8896dc218b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b77dcbb1acffe47524aee3cd7761e342175dcd34
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33454818"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54733697"
 ---
 # <a name="icorprofilercallback4rejiterror-method"></a>Metodo ICorProfilerCallback4::ReJITError
 Notifica al profiler che il compilatore di just-in-time (JIT) ha rilevato un errore nel processo di ricompilazione.  
@@ -45,10 +45,10 @@ HRESULT ReJITError(
  [in] Il `MethodDef` del metodo in cui è stato effettuato il tentativo di ricompilazione non riuscita.  
   
  `functionId`  
- [in] L'istanza della funzione che viene ricompilata o contrassegnata per la ricompilazione. Questo valore può essere `NULL` se l'errore si è verificato in una base di ciascun metodo anziché una base per istanza (ad esempio, se il profiler ha specificato un token di metadati non validi per il metodo per la ricompilazione).  
+ [in] L'istanza della funzione che verrà ricompilata o contrassegnata per la ricompilazione. Questo valore può essere `NULL` se l'errore si è verificato su una base di ciascun metodo invece di base per istanza (ad esempio, se il profiler specificato un token di metadati non validi per il metodo di ricompilazione).  
   
  `hrStatus`  
- [in] Un valore HRESULT che indica la natura dell'errore. Vedere la sezione HRESULT di stato per un elenco di valori.  
+ [in] HRESULT che indica la natura dell'errore. Vedere la sezione di HRESULT di stato per un elenco di valori.  
   
 ## <a name="return-value"></a>Valore restituito  
  I valori restituiti da questo callback vengono ignorati.  
@@ -57,22 +57,22 @@ HRESULT ReJITError(
   
 |HRESULT matrice di stato|Descrizione|  
 |--------------------------|-----------------|  
-|E_INVALIDARG|Il `moduleID` o `methodDef` token è `NULL`.|  
+|E_INVALIDARG|Il `moduleID` oppure `methodDef` token è `NULL`.|  
 |CORPROF_E_DATAINCOMPLETE|Il modulo non è ancora completamente caricato o è in fase di scaricamento.|  
 |CORPROF_E_MODULE_IS_DYNAMIC|Il modulo specificato è stato generato dinamicamente (ad esempio, da `Reflection.Emit`) e pertanto non è supportato da questo metodo.|  
-|CORPROF_E_FUNCTION_IS_COLLECTIBLE|Il metodo viene creata un'istanza in un assembly ritirabile e pertanto non è in grado di essere ricompilata. Si noti che i tipi e funzioni definite in un contesto di reflection non (ad esempio, `List<MyCollectibleStruct>`) può essere creata un'istanza in un assembly ritirabile.|  
-|E_OUTOFMEMORY|CLR ha esaurito la memoria durante il tentativo di contrassegnare il metodo specificato per la ricompilazione JIT.|  
-|Altro|Il sistema operativo ha restituito un errore esterno al controllo di CLR. Ad esempio, se una chiamata di sistema per modificare la protezione di accesso di una pagina di memoria non riesce, viene visualizzato l'errore del sistema operativo.|  
+|CORPROF_E_FUNCTION_IS_COLLECTIBLE|Il metodo viene creata un'istanza in un assembly ritirabile e pertanto non può essere ricompilato. Si noti che i tipi e funzioni definite in un contesto non di reflection (ad esempio, `List<MyCollectibleStruct>`) è possibile creare istanze in un assembly ritirabile.|  
+|E_OUTOFMEMORY|Il CLR ha esaurito la memoria durante il tentativo di contrassegnare il metodo specificato per la ricompilazione JIT.|  
+|Altro|Il sistema operativo ha restituito un errore esterno al controllo di CLR. Ad esempio, se una chiamata di sistema per modificare la protezione di accesso di una pagina di memoria ha esito negativo, viene visualizzato l'errore del sistema operativo.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [Interfaccia ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [Interfaccia ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)

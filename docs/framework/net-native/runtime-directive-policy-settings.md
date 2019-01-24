@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: cb52b1ef-47fd-4609-b69d-0586c818ac9e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ac5d80664bbca8cf950eb2e6f37badc485c398d2
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: fc5eddbf21e6e530279e2c85420e539e5d51a7f9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46000988"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54642568"
 ---
 # <a name="runtime-directive-policy-settings"></a>Impostazioni dei criteri della direttiva di runtime
 > [!NOTE]
@@ -127,6 +127,6 @@ ms.locfileid: "46000988"
 |`Required PublicAndInternal`|Abilita i criteri per i tipi o i membri pubblici e interni e assicura che i metadati per i tipi e i membri pubblici e interni siano sempre disponibili. Questa impostazione è diversa da `PublicAndInternal`, che rende disponibili i metadati per i tipi e i membri pubblici e interni solo se la catena di strumenti li identifica come necessari.|✓||  
 |`Required All`|Richiede alla catena di strumenti di mantenere tutti i tipi e i membri indipendentemente dal loro uso effettivo e abilita i relativi criteri.|✓||  
   
-## <a name="see-also"></a>Vedere anche  
- [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [Elementi direttiva di runtime](../../../docs/framework/net-native/runtime-directive-elements.md)
+## <a name="see-also"></a>Vedere anche
+- [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Elementi direttiva di runtime](../../../docs/framework/net-native/runtime-directive-elements.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - attributes [Windows Forms], application settings
 - wrapper classes [Windows Forms], application settings
 ms.assetid: 53caa66c-a9fb-43a5-953c-ad092590098d
-ms.openlocfilehash: 9ed549cb1e10b22c4fa34d984133a6be11dfab44
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 09fb5c26f7ecccd427155836c3864773153dddfa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525112"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54668951"
 ---
 # <a name="application-settings-attributes"></a>Attributi delle impostazioni delle applicazioni
 L'architettura di impostazioni dell'applicazione fornisce numerosi attributi che possono essere applicati per la classe wrapper di impostazioni o alle singole proprietà. Questi attributi vengono esaminati in fase di esecuzione per l'infrastruttura di impostazioni dell'applicazione, spesso in modo specifico il provider di impostazioni, per adattare il suo funzionamento alle esigenze del wrapper personalizzate dichiarate.  
@@ -37,8 +37,8 @@ L'architettura di impostazioni dell'applicazione fornisce numerosi attributi che
   
  *Classe* indica che l'attributo può essere applicato solo a una classe wrapper di impostazioni dell'applicazione. *Proprietà* indica che l'attributo può essere applicato solo alle proprietà delle impostazioni. *Entrambi* indica che l'attributo può essere applicato a qualsiasi livello.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Configuration.ApplicationSettingsBase>  
- <xref:System.Configuration.SettingsProvider>  
- [Application Settings Architecture](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)  
- [Procedura: creare le impostazioni applicazione](https://msdn.microsoft.com/library/53b3af80-1c02-4e35-99c6-787663148945)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Configuration.ApplicationSettingsBase>
+- <xref:System.Configuration.SettingsProvider>
+- [Application Settings Architecture](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)
+- [Procedura: Creare le impostazioni dell'applicazione](https://msdn.microsoft.com/library/53b3af80-1c02-4e35-99c6-787663148945)

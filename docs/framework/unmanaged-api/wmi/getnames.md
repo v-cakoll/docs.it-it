@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f53174bf060938d5a55cbd196944ac11916d59cd
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: b0065b2cbbd17c5bb3dca6773951cdb8729e59fa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43778055"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583561"
 ---
 # <a name="getnames-function"></a>GetNames (funzione)
 Recupera un subset o tutti i nomi delle proprietà di un oggetto. 
@@ -65,7 +65,7 @@ HRESULT GetNames (
 
 I seguenti valori restituiti da questa funzione sono definiti nel *WbemCli.h* file di intestazione, oppure è possibile definirle come costanti nel codice:
 
-|Costante  |Valore  |Descrizione  |
+|Costante  |Value  |Descrizione  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | Si è verificato un errore generale. |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Uno o più parametri non vengono o è stata specificata una combinazione di flag e i parametri non corretta. |
@@ -83,7 +83,7 @@ I valori di flag `lFlags` sono campi di bit
 
 I flag che possono essere passati come le `lEnumFlags` argomenti sono i campi di bit definiti nel *WbemCli.h* file di intestazione, oppure è possibile definirle come costanti nel codice.  È possibile combinare un flag di ogni gruppo con eventuali flag da qualsiasi altro gruppo. Tuttavia, i flag dallo stesso gruppo si escludono a vicenda. 
 
-| Flag di gruppo 1 |Valore  |Descrizione  |
+| Flag di gruppo 1 |Value  |Descrizione  |
 |---------|---------|---------|
 | `WBEM_FLAG_ALWAYS` | 0 | Restituire tutti i nomi di proprietà. `strQualifierName` e `pQualifierVal` inutilizzate. |
 | `WBEM_FLAG_ONLY_IF_TRUE` | 1 | Restituire solo le proprietà che hanno un qualificatore del nome specificato per il `strQualifierName` parametro. Se questo flag viene utilizzato, è necessario specificare `strQualifierName`. |
@@ -95,7 +95,7 @@ I flag che possono essere passati come le `lEnumFlags` argomenti sono i campi di
 |`WBEM_FLAG_KEYS_ONLY` | 0x4 | Restituire solo i nomi di proprietà che definiscono le chiavi. |
 |`WBEM_FLAG_REFS_ONLY` | 0x8 | Restituito solo nomi di proprietà che sono riferimenti a oggetti. |
 
-| Gruppo 3 flag |Valore  |Descrizione  |
+| Gruppo 3 flag |Value  |Descrizione  |
 |---------|---------|---------|
 | `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Restituire solo i nomi di proprietà che appartengono alla classe più derivata. Escludere le proprietà delle classi padre. |
 | `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | Restituire solo i nomi di proprietà che appartengono alle classi padre. |
@@ -105,11 +105,11 @@ I flag che possono essere passati come le `lEnumFlags` argomenti sono i campi di
 La funzione alloca sempre una nuova `SAFEARRAY` se viene restituito `WBEM_S_NO_ERROR`, e `pstrNames` è sempre impostato in modo che punti a esso. La matrice restituita può contenere elementi 0 se non esistono proprietà corrispondenti ai filtri specificati. Se la funzione restituisce un valore diverso da `WBM_S_NO_ERROR`, un nuovo `SAFEARRAY` struttura non viene restituita.
  
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** WMINet_Utils.idl  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Vedere anche  
-[WMI e contatori delle prestazioni (riferimenti alle API non gestite)](index.md)
+## <a name="see-also"></a>Vedere anche
+- [WMI e contatori delle prestazioni (riferimenti alle API non gestite)](index.md)

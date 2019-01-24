@@ -1,5 +1,5 @@
 ---
-title: "Procedura: disegnare un'area con un oggetto Visual"
+title: "Procedura: Disegnare un'area con un oggetto Visual"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - visuals [WPF], painting with
 - brushes [WPF], painting with visuals
 ms.assetid: 35f92996-1d03-4542-acc4-3469dcf09492
-ms.openlocfilehash: 05014042c9e46232d02114f22ee8798d895e8559
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2fa5e11ffceac6563ec3fcc7ec8df84e5857da2a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43523926"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661477"
 ---
-# <a name="how-to-paint-an-area-with-a-visual"></a>Procedura: disegnare un'area con un oggetto Visual
+# <a name="how-to-paint-an-area-with-a-visual"></a>Procedura: Disegnare un'area con un oggetto Visual
 Questo esempio illustra come usare il <xref:System.Windows.Media.VisualBrush> classe per disegnare un'area con un <xref:System.Windows.Media.Visual>.  
   
  Nell'esempio seguente vengono utilizzati numerosi controlli e un pannello come sfondo di un rettangolo.  
@@ -31,5 +31,5 @@ Questo esempio illustra come usare il <xref:System.Windows.Media.VisualBrush> cl
   
  Questo esempio di codice è parte di un esempio più esaustivo disponibile per il <xref:System.Windows.Media.VisualBrush> classe. Per l'esempio completo, vedere la [esempio VisualBrush](https://go.microsoft.com/fwlink/?LinkID=160049).  
   
-## <a name="see-also"></a>Vedere anche  
- [Disegnare con oggetti Image, Drawing e Visual](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+## <a name="see-also"></a>Vedere anche
+- [Disegnare con oggetti Image, Drawing e Visual](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)

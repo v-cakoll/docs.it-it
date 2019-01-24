@@ -1,5 +1,5 @@
 ---
-title: "Procedura: creare l'identità di un'entità personalizzata"
+title: "Procedura: Creare un'identità di entità di sicurezza personalizzata"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,17 +10,17 @@ helpviewer_keywords:
 - PrincipalPermissionMode
 - PrincipalPermissionAttribute
 ms.assetid: c4845fca-0ed9-4adf-bbdc-10812be69b61
-ms.openlocfilehash: e3ecee7be32cef7fc5371e56cfc32e2d0ef7ae6f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8f957419bcb12b0dbe735240df3cd38fa7d16e76
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33488039"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54739680"
 ---
-# <a name="how-to-create-a-custom-principal-identity"></a>Procedura: creare l'identità di un'entità personalizzata
+# <a name="how-to-create-a-custom-principal-identity"></a>Procedura: Creare un'identità di entità di sicurezza personalizzata
 <xref:System.Security.Permissions.PrincipalPermissionAttribute> è uno strumento dichiarativo per controllare l'accesso ai metodi del servizio. Quando si usa questo attributo, l'enumerazione <xref:System.ServiceModel.Description.PrincipalPermissionMode> specifica la modalità di esecuzione dei controlli dell'autorizzazione. Se questa modalità è impostata su <xref:System.ServiceModel.Description.PrincipalPermissionMode.Custom>, consente all'utente di specificare che una classe <xref:System.Security.Principal.IPrincipal> personalizzata restituita dalla proprietà <xref:System.Threading.Thread.CurrentPrincipal%2A>. In questo argomento viene illustrato lo scenario in cui <xref:System.ServiceModel.Description.PrincipalPermissionMode.Custom> viene usato in combinazione con un criterio di autorizzazione personalizzato e un'entità personalizzata.  
   
- Per ulteriori informazioni sull'utilizzo di <xref:System.Security.Permissions.PrincipalPermissionAttribute>, vedere [procedura: limitare l'accesso con la classe PrincipalPermissionAttribute](../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md).  
+ Per altre informazioni sull'uso di <xref:System.Security.Permissions.PrincipalPermissionAttribute>, vedere [come: Limitare l'accesso con la classe PrincipalPermissionAttribute](../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md).  
   
 ## <a name="example"></a>Esempio  
  [!code-csharp[PrincipalPermissionMode#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/principalpermissionmode/cs/source.cs#8)]
@@ -49,9 +49,9 @@ ms.locfileid: "33488039"
   
 -   <xref:System.IdentityModel.Policy>  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.Description.PrincipalPermissionMode>  
- <xref:System.ServiceModel.Description.PrincipalPermissionMode>  
- <xref:System.Security.Permissions.PrincipalPermissionAttribute>  
- [Procedura: Usare il provider di ruoli ASP.NET con un servizio](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)  
- [Procedura: Limitare l'accesso con la classe PrincipalPermissionAttribute](../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.ServiceModel.Description.PrincipalPermissionMode>
+- <xref:System.ServiceModel.Description.PrincipalPermissionMode>
+- <xref:System.Security.Permissions.PrincipalPermissionAttribute>
+- [Procedura: Usare il Provider di ruoli ASP.NET con un servizio](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)
+- [Procedura: Limitare l'accesso con la classe PrincipalPermissionAttribute](../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)

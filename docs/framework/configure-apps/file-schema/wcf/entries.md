@@ -1,22 +1,22 @@
 ---
-title: '&lt;Voci&gt;'
+title: '&lt;entries&gt;'
 ms.date: 03/30/2017
 ms.assetid: 202e430c-c1b9-4343-abe2-ac78c181a3b7
-ms.openlocfilehash: 8c442990ee736c17b71b625e06d961230a8ceed2
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 33f98cb4b138307622a14463ce5a3008058b6e31
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146433"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587060"
 ---
-# <a name="ltentriesgt"></a>&lt;Voci&gt;
+# <a name="ltentriesgt"></a>&lt;entries&gt;
 Voce di routing contenente i mapping tra i filtri di routing e gli endpoint di destinazione ai quali inviare i messaggi quando viene trovata una corrispondenza di filtro.  
   
  \<system.serviceModel>  
-\<routing >  
-\<routingTables >  
+\<routing>  
+\<routingTables>  
 \<tabella >  
-\<le voci >  
+\<entries>  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,14 +45,14 @@ Voce di routing contenente i mapping tra i filtri di routing e gli endpoint di d
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<i filtri >](../../../../../docs/framework/configure-apps/file-schema/wcf/filters-of-routing.md)|Esegue il mapping di un filtro a un endpoint client definito in precedenza. I messaggi che corrispondono a questo filtro verranno inviati a questa destinazione.|  
+|[\<filters>](../../../../../docs/framework/configure-apps/file-schema/wcf/filters-of-routing.md)|Esegue il mapping di un filtro a un endpoint client definito in precedenza. I messaggi che corrispondono a questo filtro verranno inviati a questa destinazione.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<routing >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|Sezione di configurazione contenente una tabella di routing.|  
+|[\<routing>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|Sezione di configurazione contenente una tabella di routing.|  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.Routing.Configuration.RoutingSection?displayProperty=nameWithType>       
- <xref:System.ServiceModel.Routing.Configuration.FilterTableEntryElement?displayProperty=nameWithType>    
+## <a name="see-also"></a>Vedere anche
+- <xref:System.ServiceModel.Routing.Configuration.RoutingSection?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Routing.Configuration.FilterTableEntryElement?displayProperty=nameWithType>

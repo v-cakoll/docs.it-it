@@ -1,15 +1,15 @@
 ---
-title: Proiettando XML in una forma diversa (Visual Basic)
+title: Proiezione di XML in una forma diversa (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 2da7ec97-34f7-443d-9a48-b162ac58236b
-ms.openlocfilehash: d5fe201b14bdfa81bd4c750e17eaef6ba6e895f2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9df05ff8c9dc43de861675b4780fcbdca6881bf8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645655"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54609720"
 ---
-# <a name="projecting-xml-in-a-different-shape-visual-basic"></a>Proiettando XML in una forma diversa (Visual Basic)
+# <a name="projecting-xml-in-a-different-shape-visual-basic"></a>Proiezione di XML in una forma diversa (Visual Basic)
 In questo argomento viene illustrato un esempio di proiezione del codice XML in una forma diversa da quella del codice XML di origine.  
   
  Molte trasformazioni XML tipiche sono costituite da query concatenate, come nel caso di questo esempio. Non è infrequente iniziare con un qualche tipo di codice XML, proiettare i risultati intermedi come raccolte di tipi anonimi o con nome e infine proiettare i risultati nuovamente nel codice XML in una forma completamente diverso rispetto al codice XML di origine.  
@@ -17,7 +17,7 @@ In questo argomento viene illustrato un esempio di proiezione del codice XML in 
 ## <a name="example"></a>Esempio  
  In questo esempio viene elaborato un documento WordprocessingML, recuperandone i nodi dei paragrafi da un documento WordprocessingML. Vengono inoltre identificati lo stile e il testo di ciascun paragrafo. Infine il codice XML viene proiettato con una forma diversa. Questo esempio si basa su esempi precedenti di questa esercitazione. La nuova istruzione usata per la proiezione è indicata nei commenti del codice riportato di seguito.  
   
- Per istruzioni sulla creazione del documento di origine per questo esempio, vedere [l'origine documento Office Open XML (Visual Basic) di creazione](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Per istruzioni sulla creazione del documento di origine per questo esempio, vedere [creando l'origine documento Office Open XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
   
  In questo esempio vengono usate classi dell'assembly WindowsBase e i tipi dello spazio dei nomi <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
@@ -232,5 +232,5 @@ End Module
   
 -   [Ricerca di testo nei documenti di Word (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
   
-## <a name="see-also"></a>Vedere anche  
- [Esercitazione: Manipolazione di contenuto in un documento WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+## <a name="see-also"></a>Vedere anche
+- [Esercitazione: Manipolazione di contenuto in un documento WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
