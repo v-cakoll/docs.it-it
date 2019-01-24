@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XML documents [Visual Basic], creating
 - document literal [Visual Basic]
 ms.assetid: f7bbee56-0911-41de-b907-96f20450137b
-ms.openlocfilehash: bd2ecfb93cfcdb7cf9c115f9a44ac47dd74c4b53
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 09ab9d0bf3feeea70ddbc094183406a6fd646c1c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604354"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690514"
 ---
 # <a name="xml-document-literal-visual-basic"></a>Valore letterale di documento XML (Visual Basic)
 Un valore letterale che rappresenta un <xref:System.Xml.Linq.XDocument> oggetto.  
@@ -34,35 +34,35 @@ rootElement
 |---|---|  
 |`encoding`|Facoltativo. Usa testo letterale che dichiara la codifica del documento.|  
 |`standalone`|Facoltativo. Testo letterale. Deve essere "yes" o "no".|  
-|`piCommentList`|Facoltativo. Elenco di istruzioni di elaborazione XML e commenti XML. Assume il formato seguente:<br /><br /> `piComment [` `piComment` `... ]`<br /><br /> Ogni `piComment` può essere uno dei seguenti:<br /><br /> -   [Valore letterale istruzione di elaborazione XML](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md).<br />-   [Valore letterale commento XML](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md).|  
-|`rootElement`|Obbligatorio. Elemento radice del documento. Il formato è uno dei valori seguenti:<br /><br /> <ul><li>[Valore letterale elemento XML](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).</li><li>Espressione incorporata del formato `<%=` `elementExp` `%>`. Il `elementExp` restituisce uno dei seguenti:<br /><br /> <ul><li>Oggetto <xref:System.Xml.Linq.XElement>.</li><li>Una raccolta che contiene uno <xref:System.Xml.Linq.XElement> oggetto e un numero qualsiasi di <xref:System.Xml.Linq.XProcessingInstruction> e <xref:System.Xml.Linq.XComment> oggetti.</li></ul></li></ul><br /> Per ulteriori informazioni, vedere [espressioni incorporate in XML](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).|  
+|`piCommentList`|Facoltativo. Elenco di istruzioni di elaborazione XML e commenti in formato XML. Assume il formato seguente:<br /><br /> `piComment [` `piComment` `... ]`<br /><br /> Ogni `piComment` può essere uno dei seguenti:<br /><br /> -   [Valore letterale istruzione di elaborazione XML](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md).<br />-   [Valore letterale commento XML](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md).|  
+|`rootElement`|Obbligatorio. Elemento radice del documento. Il formato è uno dei seguenti:<br /><br /> <ul><li>[Valore letterale elemento XML](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).</li><li>Espressione del form incorporata `<%=` `elementExp` `%>`. Il `elementExp` restituisce uno dei seguenti:<br /><br /> <ul><li>Oggetto <xref:System.Xml.Linq.XElement>.</li><li>Una raccolta che contiene un <xref:System.Xml.Linq.XElement> oggetto e un numero qualsiasi di <xref:System.Xml.Linq.XProcessingInstruction> e <xref:System.Xml.Linq.XComment> oggetti.</li></ul></li></ul><br /> Per altre informazioni, vedere [espressioni incorporate in XML](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).|  
   
 ## <a name="return-value"></a>Valore restituito  
  Oggetto <xref:System.Xml.Linq.XDocument>.  
   
 ## <a name="remarks"></a>Note  
- Un valore letterale documento XML è identificato dalla dichiarazione XML all'inizio del valore letterale. Sebbene ogni valore letterale documento XML deve avere esattamente un elemento XML radice, può contenere un numero qualsiasi di istruzioni di elaborazione e commenti XML.  
+ Un valore letterale documento XML viene identificato dalla dichiarazione XML all'inizio del valore letterale. Anche se ogni valore letterale documento XML deve avere esattamente un elemento XML radice, può avere un numero qualsiasi di istruzioni di elaborazione XML e commenti in formato XML.  
   
  Un valore letterale documento XML non può trovarsi in un elemento XML.  
   
 > [!NOTE]
->  Un valore letterale XML può estendersi su più righe senza utilizzare caratteri di continuazione di riga. In questo modo è possibile copiare il contenuto da un documento XML e incollarlo direttamente in un programma Visual Basic.  
+>  Un valore letterale XML può estendersi su più righe senza utilizzare caratteri di continuazione di riga. In questo modo è possibile copiare il contenuto da un documento XML e incollare il codice direttamente in un programma Visual Basic.  
   
  Il compilatore Visual Basic converte il valore letterale documento XML in chiamate per il <xref:System.Xml.Linq.XDocument.%23ctor%2A> e <xref:System.Xml.Linq.XDeclaration.%23ctor%2A> costruttori.  
   
 ## <a name="example"></a>Esempio  
- L'esempio seguente crea un documento XML con una dichiarazione XML, un'istruzione di elaborazione, un commento e un elemento che contiene un altro elemento.  
+ L'esempio seguente crea un documento XML che dispone di una dichiarazione XML, un'istruzione di elaborazione, un commento e un elemento che contiene un altro elemento.  
   
  [!code-vb[VbXMLSamples#30](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-document-literal_1.vb)]  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Xml.Linq.XElement>  
- <xref:System.Xml.Linq.XProcessingInstruction>  
- <xref:System.Xml.Linq.XComment>  
- <xref:System.Xml.Linq.XDocument>  
- [Valore letterale istruzione di elaborazione XML](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md)  
- [Valore letterale di commento XML](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md)  
- [Valore letterale elemento XML](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)  
- [Valori letterali XML](../../../visual-basic/language-reference/xml-literals/index.md)  
- [Creazione di XML in Visual Basic](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
- [Espressioni incorporate in XML](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Xml.Linq.XElement>
+- <xref:System.Xml.Linq.XProcessingInstruction>
+- <xref:System.Xml.Linq.XComment>
+- <xref:System.Xml.Linq.XDocument>
+- [Valore letterale istruzione di elaborazione XML](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md)
+- [Valore letterale di commento XML](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md)
+- [Valore letterale elemento XML](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
+- [Valori letterali XML](../../../visual-basic/language-reference/xml-literals/index.md)
+- [Creazione di XML in Visual Basic](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [Espressioni incorporate in XML](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)

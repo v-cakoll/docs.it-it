@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ebfa886e85cd72c4ea7d088ef345bc9968dec18f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bc182687b12f5941996c17f4c09da44c49ef815c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426007"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54694906"
 ---
 # <a name="inotifysink2onsynccallreturn-method"></a>Metodo INotifySink2::OnSyncCallReturn
-Viene richiamato quando una chiamata restituisce.  
+Viene richiamato quando una chiamata termina.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,21 +40,21 @@ HRESULT OnSyncCallReturn
   
 #### <a name="parameters"></a>Parametri  
  `in_CallID`  
- [in] ID della restituito dalla chiamata. Vedere [Struttura CALL_ID](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).  
+ [in] ID della restituito dalla chiamata. Visualizzare [Struttura CALL_ID](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).  
   
  `in_pBuffer`  
- [in] Buffer di chiamata.  
+ [in] Chiamare il buffer.  
   
  `in_BufferSize`  
- [in] Dimensione del buffer di chiamata, in byte.  
+ [in] Dimensioni del buffer di chiamate, espressa in byte.  
   
 ## <a name="return-value"></a>Valore restituito  
  S_OK se il metodo ha esito positivo.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** ProtocolNotify2. idl  
+ **Intestazione:** ProtocolNotify2.idl  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)  
- [Interfaccia INotifySource2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)  
- [Interfaccia INotifyConnection2](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
+- [Interfaccia INotifySource2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
+- [Interfaccia INotifyConnection2](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 401c23e44cc473d0a27a82a00343852693cb0f2e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: fb97c545d2d57ef589b5a7a5b3618eaa2b6f364f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429345"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54686998"
 ---
 # <a name="idefinitionidentity-interface"></a>Interfaccia IDefinitionIdentity
 Rappresenta la firma univoca del codice che definisce l'applicazione nell'ambito corrente.  
@@ -30,17 +30,17 @@ Rappresenta la firma univoca del codice che definisce l'applicazione nell'ambito
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|`IDefinitionIdentity::Clone`|Ottiene un puntatore a interfaccia a un nuovo `IDefinitionIdentity` oggetto è uguale a `IDefinitionIdentity`, tranne le modifiche di attributo specificato.|  
-|`IDefinitionIdentity::EnumAttributes`|Ottiene un puntatore a interfaccia a un [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md) oggetto che contiene gli attributi associati a questo `IDefinitionIdentity`.|  
+|`IDefinitionIdentity::Clone`|Ottiene un puntatore a interfaccia a una nuova `IDefinitionIdentity` che è identico a questo oggetto `IDefinitionIdentity`, fatta eccezione per le modifiche di attributo specificato.|  
+|`IDefinitionIdentity::EnumAttributes`|Ottiene un puntatore a interfaccia a un [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md) che contiene gli attributi associati a questo oggetto `IDefinitionIdentity`.|  
 |`IDefinitionIdentity::GetAttribute`|Ottiene il valore dell'attributo con il nome specificato nello spazio dei nomi specificato.|  
 |`IDefinitionIdentity::SetAttribute`|Imposta l'attributo con il nome specificato nello spazio dei nomi specificato al valore specificato.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Isolation. h  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfacce Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfacce Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)

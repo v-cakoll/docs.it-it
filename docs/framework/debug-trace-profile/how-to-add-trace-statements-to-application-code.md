@@ -1,5 +1,5 @@
 ---
-title: "Procedura: aggiungere istruzioni di traccia al codice dell'applicazione"
+title: "Procedura: Aggiungere istruzioni di traccia al codice dell'applicazione"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f3a93fa7-1717-467d-aaff-393e5c9828b4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ed85c73182da5d911c6cc84fba26c658412ac158
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8a347919617e495ace19ca12eebc9b9a77f613ff
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391368"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54684374"
 ---
-# <a name="how-to-add-trace-statements-to-application-code"></a>Procedura: aggiungere istruzioni di traccia al codice dell'applicazione
-I metodi usati più spesso per la traccia sono i metodi per la scrittura dell'output nei listener: **Write**, **WriteIf**, **WriteLine**, **WriteLineIf**, **Assert** e **Fail**. Questi metodi possono essere divisi in due categorie: **Write**, **WriteLine** e **Fail** generano tutti output in modo non condizionale, mentre **WriteIf**, **WriteLineIf** e **Assert** verificano una condizione booleana e scrivono o non scrivono il valore della condizione. **WriteIf** e **WriteLineIf** generano output se la condizione è `true` e **Assert** genera output se la condizione è `false`.  
+# <a name="how-to-add-trace-statements-to-application-code"></a>Procedura: Aggiungere istruzioni di traccia al codice dell'applicazione
+I metodi usati più spesso per la traccia sono i metodi per la scrittura dell'output nei listener: **Scrivere**, **WriteIf**, **WriteLine**, **WriteLineIf**, **Assert**, e **esito negativo**. Questi metodi possono essere suddivisi in due categorie: **Scrivere**, **WriteLine**, e **esito negativo** tutti generano output in modo non condizionale, mentre **WriteIf**, **WriteLineIf**e  **L'asserzione** verificano una condizione booleana e scrivono o non scrivono sul valore della condizione. **WriteIf** e **WriteLineIf** generano output se la condizione è `true` e **Assert** genera output se la condizione è `false`.  
   
  Quando si progetta la traccia e si esegue il debug strategia, è necessario considerare come si desidera visualizzare l'output. Più istruzioni **Write** costituite da informazioni non correlate creeranno un log che è difficile da leggere. D'altra parte, usando **WriteLine** per inserire istruzioni correlate in righe separate, potrebbe essere difficile distinguere quali informazioni sono correlate. In generale, usare più istruzioni **Write** quando si vogliono combinare informazioni provenienti da più origini per creare un singolo messaggio informativo e usare l’istruzione **WriteLine** quando si intende creare un unico messaggio completo.  
   
@@ -84,12 +84,12 @@ I metodi usati più spesso per la traccia sono i metodi per la scrittura dell'ou
     > [!NOTE]
     >  È possibile usare **Assert** con operazioni di traccia e debug. In questo esempio viene restituito lo stack di chiamate nella raccolta **Listeners**. Per altre informazioni, vedere [Asserzioni nel codice gestito](/visualstudio/debugger/assertions-in-managed-code) e <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Diagnostics.Debug.WriteIf%2A?displayProperty=nameWithType>  
- <xref:System.Diagnostics.Debug.WriteLineIf%2A?displayProperty=nameWithType>  
- <xref:System.Diagnostics.Trace.WriteIf%2A?displayProperty=nameWithType>  
- <xref:System.Diagnostics.Trace.WriteLineIf%2A?displayProperty=nameWithType>  
- [Traccia e strumentazione di applicazioni](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)  
- [Procedura: Creare, inizializzare e configurare opzioni di traccia](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)  
- [Opzioni di traccia](../../../docs/framework/debug-trace-profile/trace-switches.md)  
- [Listener di traccia](../../../docs/framework/debug-trace-profile/trace-listeners.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Diagnostics.Debug.WriteIf%2A?displayProperty=nameWithType>
+- <xref:System.Diagnostics.Debug.WriteLineIf%2A?displayProperty=nameWithType>
+- <xref:System.Diagnostics.Trace.WriteIf%2A?displayProperty=nameWithType>
+- <xref:System.Diagnostics.Trace.WriteLineIf%2A?displayProperty=nameWithType>
+- [Traccia e strumentazione di applicazioni](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+- [Procedura: Creare, inizializzare e configurare opzioni di traccia](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
+- [Opzioni di traccia](../../../docs/framework/debug-trace-profile/trace-switches.md)
+- [Listener di traccia](../../../docs/framework/debug-trace-profile/trace-listeners.md)

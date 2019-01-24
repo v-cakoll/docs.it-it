@@ -2,12 +2,12 @@
 title: '&lt;endpoint&gt; di &lt;client&gt;'
 ms.date: 03/30/2017
 ms.assetid: de6238ae-bbf8-48e9-a1b5-e24c0bea8afa
-ms.openlocfilehash: 47b3599ed2d0868fcbc4a04a28936bcfe1c9c3f1
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: a7d95ee819c911d80178e38a37aeaccc5b1f1764
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147005"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54598305"
 ---
 # <a name="ltendpointgt-of-ltclientgt"></a>&lt;endpoint&gt; di &lt;client&gt;
 Specifica proprietà di contratto, associazione e indirizzo dell'endpoint del canale usato dai client per connettersi agli endpoint del servizio nel server.  
@@ -50,14 +50,14 @@ Specifica proprietà di contratto, associazione e indirizzo dell'endpoint del ca
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<intestazioni >](../../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)|Raccolte di intestazioni di indirizzo.|  
-|[\<identità >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Identità che consente l'autenticazione di un endpoint da altri endpoint con i quali vengono scambiati messaggi.|  
+|[\<headers>](../../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)|Raccolte di intestazioni di indirizzo.|  
+|[\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Identità che consente l'autenticazione di un endpoint da altri endpoint con i quali vengono scambiati messaggi.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<client >](../../../../../docs/framework/configure-apps/file-schema/wcf/client.md)|Sezione di configurazione che definisce un elenco di endpoint ai quali può connettersi un client.|  
+|[\<client>](../../../../../docs/framework/configure-apps/file-schema/wcf/client.md)|Sezione di configurazione che definisce un elenco di endpoint ai quali può connettersi un client.|  
   
 ## <a name="example"></a>Esempio  
  Di seguito è riportato un esempio di configurazione dell'endpoint di un canale.  
@@ -71,11 +71,11 @@ Specifica proprietà di contratto, associazione e indirizzo dell'endpoint del ca
 </endpoint>
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.Configuration.ChannelEndpointElement>  
- <xref:System.ServiceModel.Configuration.ClientSection>  
- <xref:System.ServiceModel.Configuration.ChannelEndpointElementCollection>  
- <xref:System.ServiceModel.Configuration.ClientSection.Endpoints%2A>  
- <xref:System.ServiceModel.Configuration.ChannelEndpointElement>  
- [Configurazione del client WCF](../../../../../docs/framework/wcf/feature-details/client-configuration.md)  
- [Client](../../../../../docs/framework/wcf/feature-details/clients.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.ServiceModel.Configuration.ChannelEndpointElement>
+- <xref:System.ServiceModel.Configuration.ClientSection>
+- <xref:System.ServiceModel.Configuration.ChannelEndpointElementCollection>
+- <xref:System.ServiceModel.Configuration.ClientSection.Endpoints%2A>
+- <xref:System.ServiceModel.Configuration.ChannelEndpointElement>
+- [Configurazione del client WCF](../../../../../docs/framework/wcf/feature-details/client-configuration.md)
+- [Client](../../../../../docs/framework/wcf/feature-details/clients.md)

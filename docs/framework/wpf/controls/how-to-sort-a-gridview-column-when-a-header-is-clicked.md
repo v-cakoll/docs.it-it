@@ -1,5 +1,5 @@
 ---
-title: "Procedura: ordinare una colonna GridView quando si fa clic su un'intestazione"
+title: "Procedura: Ordinare una colonna GridView quando si fa clic su un'intestazione"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,18 +10,18 @@ helpviewer_keywords:
 - ListView controls [WPF], sorting GridView columns
 - GridView controls [WPF], ListView control
 ms.assetid: 4865d720-d147-40ed-83a7-af7587f8aad8
-ms.openlocfilehash: 30bcbd8b7cdd4c184560aaa4a2799137da51fc8a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2d0cca89d906a60a3f7072de27bc54b7a869a01e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33554898"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54694087"
 ---
-# <a name="how-to-sort-a-gridview-column-when-a-header-is-clicked"></a>Procedura: ordinare una colonna GridView quando si fa clic su un'intestazione
-In questo esempio viene illustrato come creare un <xref:System.Windows.Controls.ListView> controllo che implementa un <xref:System.Windows.Controls.GridView> consente di visualizzare la modalità e ordina il contenuto quando un utente fa clic su un'intestazione di colonna.  
+# <a name="how-to-sort-a-gridview-column-when-a-header-is-clicked"></a>Procedura: Ordinare una colonna GridView quando si fa clic su un'intestazione
+In questo esempio viene illustrato come creare un <xref:System.Windows.Controls.ListView> controllo che implementa un <xref:System.Windows.Controls.GridView> consente di visualizzare la modalità e ordinare il contenuto quando un utente fa clic su un'intestazione di colonna.  
   
 ## <a name="example"></a>Esempio  
- L'esempio seguente definisce un <xref:System.Windows.Controls.GridView> con tre colonne in cui associare il <xref:System.DateTime.Year%2A>, <xref:System.DateTime.Month%2A>, e <xref:System.DateTime.Day%2A>, proprietà del <xref:System.DateTime> struttura.  
+ L'esempio seguente definisce una <xref:System.Windows.Controls.GridView> con tre colonne associate ai <xref:System.DateTime.Year%2A>, <xref:System.DateTime.Month%2A>, e <xref:System.DateTime.Day%2A>, le proprietà del <xref:System.DateTime> struttura.  
   
 ```xaml  
 <GridView>  
@@ -37,7 +37,7 @@ In questo esempio viene illustrato come creare un <xref:System.Windows.Controls.
 </GridView>  
 ```  
   
- L'esempio seguente mostra gli elementi di dati che sono definiti come un <xref:System.Collections.ArrayList> di <xref:System.DateTime> oggetti. Il <xref:System.Collections.ArrayList> è definito come il <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> per il <xref:System.Windows.Controls.ListView> controllo.  
+ L'esempio seguente illustra gli elementi di dati che sono definiti come un <xref:System.Collections.ArrayList> di <xref:System.DateTime> oggetti. Il <xref:System.Collections.ArrayList> viene definito come il <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> per il <xref:System.Windows.Controls.ListView> controllo.  
   
 ```xaml  
 <ListView.ItemsSource>  
@@ -69,7 +69,7 @@ In questo esempio viene illustrato come creare un <xref:System.Windows.Controls.
     xmlns:p="clr-namespace:System;assembly=mscorlib">  
 ```  
   
- Per ordinare i dati in base al contenuto di una colonna, nell'esempio viene definito un gestore eventi per gestire il <xref:System.Windows.Controls.Primitives.ButtonBase.Click> evento che si verifica quando si preme il pulsante dell'intestazione di colonna. Nell'esempio seguente viene illustrato come specificare un gestore eventi per il <xref:System.Windows.Controls.GridViewColumnHeader> controllo.  
+ Per ordinare i dati in base al contenuto di una colonna, l'esempio definisce un gestore eventi per gestire il <xref:System.Windows.Controls.Primitives.ButtonBase.Click> evento che si verifica quando si preme il pulsante dell'intestazione di colonna. Nell'esempio seguente viene illustrato come specificare un gestore eventi per il <xref:System.Windows.Controls.GridViewColumnHeader> controllo.  
   
 ```xaml  
 <ListView x:Name='lv' Height="150" HorizontalAlignment="Center"   
@@ -197,7 +197,7 @@ Partial Public Class Window1
 End Class
 ```  
   
- L'esempio seguente illustra l'algoritmo di ordinamento che viene chiamato dal gestore eventi per ordinare i dati. L'ordinamento viene eseguita creando un nuovo <xref:System.ComponentModel.SortDescription> struttura.  
+ L'esempio seguente illustra l'algoritmo di ordinamento che viene chiamato dal gestore eventi per ordinare i dati. L'ordinamento viene eseguito creando un nuovo <xref:System.ComponentModel.SortDescription> struttura.  
   
 ```csharp  
 private void Sort(string sortBy, ListSortDirection direction)  
@@ -223,9 +223,9 @@ Private Sub Sort(ByVal sortBy As String, ByVal direction As ListSortDirection)
 End Sub  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Windows.Controls.ListView>  
- <xref:System.Windows.Controls.GridView>  
- [Panoramica sul controllo ListView](../../../../docs/framework/wpf/controls/listview-overview.md)  
- [Cenni preliminari su GridView](../../../../docs/framework/wpf/controls/gridview-overview.md)  
- [Procedure relative alle proprietà](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Windows.Controls.ListView>
+- <xref:System.Windows.Controls.GridView>
+- [Panoramica sul controllo ListView](../../../../docs/framework/wpf/controls/listview-overview.md)
+- [Cenni preliminari su GridView](../../../../docs/framework/wpf/controls/gridview-overview.md)
+- [Procedure relative alle proprietà](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)

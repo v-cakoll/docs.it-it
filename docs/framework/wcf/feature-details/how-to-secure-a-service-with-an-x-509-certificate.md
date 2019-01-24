@@ -1,18 +1,18 @@
 ---
-title: 'Procedura: proteggere un servizio con un certificato X.509'
+title: 'Procedura: Proteggere un servizio con un certificato X.509'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2d06c2aa-d0d7-4e5e-ad7e-77416aa1c10b
-ms.openlocfilehash: 1db4ebff194a63552f54d1a3011099d28cbbf659
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d96897b9b11419bba8a6ef9d3c9579a62e19ee20
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50196895"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54686491"
 ---
-# <a name="how-to-secure-a-service-with-an-x509-certificate"></a>Procedura: proteggere un servizio con un certificato X.509
+# <a name="how-to-secure-a-service-with-an-x509-certificate"></a>Procedura: Proteggere un servizio con un certificato X.509
 Protezione di un servizio con un certificato X.509 è una tecnica di base che utilizzano la maggior parte dei binding in Windows Communication Foundation (WCF). In questo argomento vengono illustrati i passaggi di configurazione di un servizio indipendente con un certificato X.509.  
   
  Un prerequisito è un certificato valido utilizzabile per autenticare il server. Il certificato deve essere emesso al server da un autorità di certificazione attendibile. Se il certificato non è valido, nessun client che tenti di utilizzare il servizio lo reputerà attendibile e, di conseguenza, non verrà stabilita nessuna connessione. Per altre informazioni sull'uso dei certificati, vedere [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
@@ -82,5 +82,5 @@ Protezione di un servizio con un certificato X.509 è una tecnica di base che ut
   
 -   <xref:System.Runtime.Serialization>  
   
-## <a name="see-also"></a>Vedere anche  
- [Uso di certificati](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+## <a name="see-also"></a>Vedere anche
+- [Uso di certificati](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

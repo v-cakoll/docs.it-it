@@ -14,12 +14,12 @@ helpviewer_keywords:
 - comments
 - code comments
 ms.assetid: 90136fba-22eb-49f9-ba81-63db629b4a47
-ms.openlocfilehash: fafc80cc4847e9ec05f19fc7f3d31d2d5b11197a
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 92aadfe851514dcba713455664cf8f7b0aa1c17b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44194589"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597541"
 ---
 # <a name="comments-in-code-visual-basic"></a>Commenti nel codice (Visual Basic)
 Negli esempi di codice viene spesso utilizzato il simbolo di commento (`'`). Questo simbolo indica al compilatore di Visual Basic per ignorare il testo seguente, o la *commento*. I commenti sono brevi annotazioni descrittive che vengono aggiunte al codice per agevolarne la lettura.  
@@ -59,9 +59,9 @@ Negli esempi di codice viene spesso utilizzato il simbolo di commento (`'`). Que
 > [!NOTE]
 >  Per aggiungere commenti al codice è possibile anche inserire la parola chiave `REM` prima del testo. Tuttavia, il `'` simbolo e il **commento**/**Rimuovi commento** pulsanti sono più facili da usare e richiedono meno spazio e memoria.  
   
-## <a name="see-also"></a>Vedere anche  
- [Documentazione del codice con commenti XML](https://msdn.microsoft.com/magazine/dd722812.aspx)  
- [Procedura: Creare documentazione XML](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)  
- [Tag di commento XML](../../../visual-basic/language-reference/xmldoc/index.md)  
- [Struttura del programma e convenzioni di scrittura del codice](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
- [Istruzione REM](../../../visual-basic/language-reference/statements/rem-statement.md)
+## <a name="see-also"></a>Vedere anche
+- [Documentazione del codice con commenti XML](https://msdn.microsoft.com/magazine/dd722812.aspx)
+- [Procedura: Creare documentazione XML](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
+- [Tag di commento XML](../../../visual-basic/language-reference/xmldoc/index.md)
+- [Struttura del programma e convenzioni di scrittura del codice](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
+- [Istruzione REM](../../../visual-basic/language-reference/statements/rem-statement.md)

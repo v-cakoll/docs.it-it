@@ -1,5 +1,5 @@
 ---
-title: ICorDebugAssemblyEnum Interface1
+title: Interfaccia1 ICorDebugAssemblyEnum
 ms.date: 03/30/2017
 api_name:
 - ICorDebugAssemblyEnum
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c6b8fa9304296765fcdb6ebe42db5523e5ff387d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 97a5cad5902324a4999648553ab92ee1df11dde5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399071"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54686726"
 ---
-# <a name="icordebugassemblyenum-interface1"></a>ICorDebugAssemblyEnum Interface1
+# <a name="icordebugassemblyenum-interface1"></a>Interfaccia1 ICorDebugAssemblyEnum
 Implementa i metodi ICorDebugEnum ed enumera le matrici ICorDebugAssembly.  
   
 ## <a name="methods"></a>Metodi  
@@ -38,13 +38,13 @@ Implementa i metodi ICorDebugEnum ed enumera le matrici ICorDebugAssembly.
 >  Questa interfaccia non supporta la chiamata in modalità remota, tra computer o tra processi.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

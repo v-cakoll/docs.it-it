@@ -5,42 +5,42 @@ helpviewer_keywords:
 - user settings [Windows Forms]
 - application settings [Windows Forms], how-to topics
 ms.assetid: 54682d3b-1cbf-4683-9351-012b8b4286b5
-ms.openlocfilehash: f5231ecc9fb3898d60241ea8a53b509daced8a0f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 70af7054353886757af81910f780e62001f0c9d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33523842"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54685113"
 ---
 # <a name="using-application-settings-and-user-settings"></a>Utilizzo delle impostazioni applicazione e delle impostazioni utente
-A partire da .NET Framework 2.0, è possibile creare e accedere ai valori che sono persistenti tra le sessioni di esecuzione dell'applicazione. Questi valori sono denominati *impostazioni*. Le impostazioni possono rappresentare le preferenze dell'utente o informazioni importanti, l'applicazione devono utilizzare. Ad esempio, è possibile creare una serie di impostazioni per archiviare le preferenze utente per la combinazione di colori di un'applicazione. Oppure è possibile archiviare la stringa di connessione che specifica un database che utilizza l'applicazione. Impostazioni consentono di mantenere le informazioni essenziali per l'applicazione all'esterno del codice e creare i profili che archiviano le preferenze di singoli utenti.  
+A partire da .NET Framework 2.0, è possibile creare e accedere ai valori che vengono rese persistenti tra le sessioni di esecuzione dell'applicazione. Questi valori sono denominati *impostazioni*. Le impostazioni possono rappresentare le preferenze dell'utente, o informazioni importanti dell'applicazione devono usare. Ad esempio, si potrebbe creare una serie di impostazioni che memorizzano le preferenze utente per la combinazione di colori di un'applicazione. Oppure è possibile archiviare la stringa di connessione che specifica un database che usa l'applicazione. Le impostazioni consentono di mantenere le informazioni essenziali per l'applicazione all'esterno del codice e creare i profili che archiviano le preferenze dell'utente.  
   
- Negli argomenti di questa sezione viene descritto come utilizzare le impostazioni in fase di progettazione e di esecuzione.  
+ Gli argomenti in questa sezione descrivono come usare le impostazioni in fase di progettazione e tempo di esecuzione.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Procedura: Creare una nuova impostazione in fase di progettazione](../../../../docs/framework/winforms/advanced/how-to-create-a-new-setting-at-design-time.md)  
   
- Viene illustrato come utilizzare Visual Studio per creare una nuova impostazione per un'applicazione.  
+ Viene illustrato come usare Visual Studio per creare una nuova impostazione per un'applicazione.  
   
  [Procedura: Modificare il valore di un'impostazione esistente in fase di progettazione](../../../../docs/framework/winforms/advanced/how-to-change-the-value-of-an-existing-setting-at-design-time.md)  
   
- Viene descritto come utilizzare Visual Studio per modificare il valore di un'impostazione esistente.  
+ Viene descritto come usare Visual Studio per modificare il valore di un'impostazione esistente.  
   
  [Procedura: Modificare il valore di un'impostazione tra le sessioni dell'applicazione](../../../../docs/framework/winforms/advanced/how-to-change-the-value-of-a-setting-between-application-sessions.md)  
   
- Viene illustrato come modificare il valore di un'impostazione di un'applicazione compilata tra le sessioni dell'applicazione.  
+ Illustra come modificare il valore di un'impostazione in un'applicazione compilata tra sessioni dell'applicazione.  
   
- [Procedura: Leggere le impostazioni in fase di esecuzione con C#](../../../../docs/framework/winforms/advanced/how-to-read-settings-at-run-time-with-csharp.md)  
+ [Procedura: Leggere le impostazioni in fase di esecuzione conC#](../../../../docs/framework/winforms/advanced/how-to-read-settings-at-run-time-with-csharp.md)  
   
- Viene descritto come usare il codice per leggere le impostazioni con c#.  
+ Viene descritto come usare il codice per leggere le impostazioni con C#.  
   
- [Procedura: Scrivere le impostazioni utente in fase di esecuzione con C#](../../../../docs/framework/winforms/advanced/how-to-write-user-settings-at-run-time-with-csharp.md)  
+ [Procedura: Scrivere le impostazioni utente in fase di esecuzione conC#](../../../../docs/framework/winforms/advanced/how-to-write-user-settings-at-run-time-with-csharp.md)  
   
- Viene illustrato come utilizzare codice per scrivere e salvare i valori delle impostazioni utente con c#.  
+ Viene illustrato come usare il codice per scrivere e salvare i valori delle impostazioni utente con C#.  
   
- [Procedura: Aggiungere più set di impostazioni all'applicazione in C#](../../../../docs/framework/winforms/advanced/how-to-add-multiple-sets-of-settings-to-your-application-in-csharp.md)  
+ [Procedura: Aggiungere all'applicazione in più set di impostazioniC#](../../../../docs/framework/winforms/advanced/how-to-add-multiple-sets-of-settings-to-your-application-in-csharp.md)  
   
- Viene illustrato come aggiungere più set di impostazioni per un'applicazione con c#.  
+ Spiega come aggiungere più set di impostazioni a un'applicazione con C#.  
   
-## <a name="see-also"></a>Vedere anche  
- [Impostazioni delle applicazioni per Windows Form](../../../../docs/framework/winforms/advanced/application-settings-for-windows-forms.md)
+## <a name="see-also"></a>Vedere anche
+- [Impostazioni delle applicazioni per Windows Form](../../../../docs/framework/winforms/advanced/application-settings-for-windows-forms.md)

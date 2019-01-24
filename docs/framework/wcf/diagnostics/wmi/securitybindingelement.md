@@ -2,12 +2,12 @@
 title: SecurityBindingElement
 ms.date: 03/30/2017
 ms.assetid: ef93b6e6-3524-48a8-94d3-c8837f1872f9
-ms.openlocfilehash: 601e3fafd9aa876186b7f78dfdcb87a2336ddfcd
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f7c4e30b72af36de1d3088e4ca8cd98ced734104
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185771"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54692324"
 ---
 # <a name="securitybindingelement"></a>SecurityBindingElement
 SecurityBindingElement  
@@ -35,42 +35,42 @@ class SecurityBindingElement : BindingElement
 ### <a name="defaultalgorithmsuite"></a>DefaultAlgorithmSuite  
  Tipo di dati: stringa  
   
- Tipo di accesso: sola lettura  
+ Tipo di accesso: Sola lettura  
   
  Specifica gli algoritmi da usare con l'associazione.  
   
 ### <a name="includetimestamp"></a>IncludeTimestamp  
  Tipo di dati: booleano  
   
- Tipo di accesso: sola lettura  
+ Tipo di accesso: Sola lettura  
   
  Valore booleano che specifica se ogni messaggio contiene un timestamp.  
   
 ### <a name="keyentropymode"></a>KeyEntropyMode  
  Tipo di dati: stringa  
   
- Tipo di accesso: sola lettura  
+ Tipo di accesso: Sola lettura  
   
  Origine dell'entropia usata per creare chiavi.  
   
 ### <a name="localservicesecuritysettings"></a>LocalServiceSecuritySettings  
  Tipo di dati: LocalServiceSecuritySettings  
   
- Tipo di accesso: sola lettura  
+ Tipo di accesso: Sola lettura  
   
  Proprietà di sicurezza specifiche dell'associazione per il servizio locale.  
   
 ### <a name="messagesecurityversion"></a>MessageSecurityVersion  
  Tipo di dati: stringa  
   
- Tipo di accesso: sola lettura  
+ Tipo di accesso: Sola lettura  
   
  Versione usata per la protezione del messaggio.  
   
 ### <a name="securityheaderlayout"></a>SecurityHeaderLayout  
  Tipo di dati: stringa  
   
- Tipo di accesso: sola lettura  
+ Tipo di accesso: Sola lettura  
   
  Ordine degli elementi nell'intestazione di sicurezza di questa associazione.  
   
@@ -80,5 +80,5 @@ class SecurityBindingElement : BindingElement
 |---------|-----------------------------------|  
 |Spazio dei nomi|Definito in root\ServiceModel|  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.Channels.SecurityBindingElement>
+## <a name="see-also"></a>Vedere anche
+- <xref:System.ServiceModel.Channels.SecurityBindingElement>

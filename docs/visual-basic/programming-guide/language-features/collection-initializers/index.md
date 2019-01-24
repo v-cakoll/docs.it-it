@@ -2,16 +2,10 @@
 title: Inizializzatori di raccolta (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
-- vb.CollectionInitializer
+  - vb.CollectionInitializer
 helpviewer_keywords:
-- collection initializers [Visual Basic]
+  - 'collection initializers [Visual Basic]'
 ms.assetid: a9290329-77b0-4fdf-ae75-8fc17287f469
-ms.openlocfilehash: c22599f50ac071245a1381d267f3f7cb66806174
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45991623"
 ---
 # <a name="collection-initializers-visual-basic"></a>Inizializzatori di raccolta (Visual Basic)
 Gli *inizializzatori di insieme* consentono di creare una raccolta e popolarla con un set iniziale di valori. Gli inizializzatori di insieme sono utili quando si crea una raccolta da un set di valori noti, ad esempio un elenco di opzioni di menu o categorie, un set iniziale di valori numerici, un elenco statico di stringhe quali nomi di giorni o mesi o un elenco di aree geografiche, ad esempio un elenco di stati che viene usato per la convalida.  
@@ -54,7 +48,7 @@ Gli *inizializzatori di insieme* consentono di creare una raccolta e popolarla c
   
  [!code-vb[VbVbalrCollectionInitializers#10](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializers/VB/Module1.vb#10)]  
   
- Se la raccolta ha un metodo `Add` con parametri che corrispondono al costruttore dell'oggetto `Customer` è possibile nidificare i valori dei parametri per il metodo `Add` all'interno di inizializzatori di insieme, come descritto nella sezione successiva. Se la raccolta non dispone di tale metodo `Add` è possibile crearne uno come metodo di estensione. Per un esempio di creazione di un metodo `Add` come metodo di estensione per una raccolta, vedere [Procedura: Creare un metodo di estensione Add usato da un inizializzatore di insieme](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md). Per un esempio di creazione di una raccolta personalizzata che può essere usata con un inizializzatore di insieme, vedere [Procedura: Creare una raccolta usata da un inizializzatore di insieme](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md).  
+ Se la raccolta ha un metodo `Add` con parametri che corrispondono al costruttore dell'oggetto `Customer` è possibile nidificare i valori dei parametri per il metodo `Add` all'interno di inizializzatori di insieme, come descritto nella sezione successiva. Se la raccolta non dispone di tale metodo `Add` è possibile crearne uno come metodo di estensione. Per un esempio di come creare un `Add` metodo come metodo di estensione per una raccolta, vedere [come: Creare un metodo di estensione usata da un inizializzatore di raccolta Add](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md). Per un esempio di come creare una raccolta personalizzata che può essere usata con un inizializzatore di insieme, vedere [come: Creare una raccolta usata da un inizializzatore di raccolta](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md).  
   
 ## <a name="nesting-collection-initializers"></a>Annidamento di inizializzatori di insieme  
  È possibile annidare valori in un inizializzatore di insieme per identificare un overload specifico di un metodo `Add` per la raccolta che viene creata. I valori passati al metodo `Add` devono essere separati da virgole e racchiusi tra parentesi graffe (`{}`), come nella sintassi di un valore letterale di matrice o di un inizializzatore di insieme.  
@@ -73,18 +67,18 @@ Gli *inizializzatori di insieme* consentono di creare una raccolta e popolarla c
   
 |Titolo|Descrizione|  
 |---|---|  
-|[Procedura: Creare un metodo di estensione Add usato da un inizializzatore di raccolta](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md)|Illustra come creare un metodo di estensione denominato `Add` che può essere usato per popolare una raccolta con valori di un inizializzatore di insieme.|  
+|[Procedura: Creare un metodo di estensione usata da un inizializzatore di raccolta Add](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md)|Illustra come creare un metodo di estensione denominato `Add` che può essere usato per popolare una raccolta con valori di un inizializzatore di insieme.|  
 |[Procedura: Creare una raccolta usata da un inizializzatore di raccolta](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md)|Illustra come abilitare l'uso di un inizializzatore di insieme includendo un metodo `Add` in una classe di raccolte che implementa `IEnumerable`.|  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Raccolte](../../../../visual-basic/programming-guide/concepts/collections.md)  
-- [Array](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  
-- [Inizializzatori di oggetto: tipi denominati e tipi anonimi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
-- [Operatore New](../../../../visual-basic/language-reference/operators/new-operator.md)  
-- [Proprietà implementate automaticamente](../../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)  
-- [Procedura: Inizializzare una variabile di matrice in Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)  
-- [Inferenza del tipo di variabile locale](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
-- [Tipi anonimi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
-- [Introduzione a LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
+- [Raccolte](../../../../visual-basic/programming-guide/concepts/collections.md)
+- [Matrici](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
+- [Inizializzatori di oggetto: Tipi denominati e anonimi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [Operatore New](../../../../visual-basic/language-reference/operators/new-operator.md)
+- [Proprietà implementate automaticamente](../../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)
+- [Procedura: Inizializzare una variabile di matrice in Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)
+- [Inferenza del tipo di variabile locale](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [Tipi anonimi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
+- [Introduzione a LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [Procedura: Creare un elenco di elementi](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)

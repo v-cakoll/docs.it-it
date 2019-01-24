@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 95850448504fd863f2726a7fb7574436476a6dc5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c4e4b163cc783ccd01bc406789f5bf92448c697c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449325"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54685529"
 ---
 # <a name="imetadataimportgetparamprops-method"></a>Metodo IMetaDataImport::GetParamProps
 Ottiene i valori di metadati relativi al parametro a cui fa riferimento il token ParamDef specificato.  
@@ -49,7 +49,7 @@ HRESULT GetParamProps (
  [in] Token ParamDef che rappresenta il parametro per restituire i metadati.  
   
  `pmd`  
- [out] Un puntatore a un token MethodDef che rappresenta il metodo che accetta il parametro.  
+ [out] Un puntatore a un token MethodDef che rappresentano il metodo che accetta il parametro.  
   
  `pulSequence`  
  [out] La posizione ordinale del parametro nell'elenco di argomenti di metodo.  
@@ -58,10 +58,10 @@ HRESULT GetParamProps (
  [out] Un buffer contenente il nome del parametro.  
   
  `cchName`  
- [in] La dimensione in caratteri wide della richiesta `szName`.  
+ [in] Le dimensioni richieste in caratteri wide di `szName`.  
   
  `pchName`  
- [out] Dimensione restituita in caratteri "wide" di `szName`.  
+ [out] Le dimensioni restituite in caratteri wide di `szName`.  
   
  `pdwAttr`  
  [out] Puntatore ai flag di attributo associato al parametro.  
@@ -73,17 +73,17 @@ HRESULT GetParamProps (
  [out] Puntatore a una costante stringa restituita dal parametro.  
   
  `pcchValue`  
- [out] Le dimensioni di `ppValue` in caratteri "wide", oppure zero se `ppValue` non contiene una stringa.  
+ [out] Il valore pari `ppValue` in caratteri "wide", oppure zero se `ppValue` non contiene una stringa.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
- **Libreria:** inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [Interfaccia IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Interfaccia IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
