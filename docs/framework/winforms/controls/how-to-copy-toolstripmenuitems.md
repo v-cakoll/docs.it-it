@@ -1,19 +1,19 @@
 ---
-title: 'Procedura: copiare ToolStripMenuItems'
+title: 'Procedura: Copiare ToolStripMenuItems'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - menu items [Windows Forms], copying and pasting
 - MenuStrip control [Windows Forms], arranging items
 - ToolStripMenuItems [Windows Forms], copying and pasting
 ms.assetid: 17ef4207-e92e-4db2-b648-27246e6517ad
-ms.openlocfilehash: 238516f18037a75b1d254d95086e22a970fadf09
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d3b1103cda6d4f61b55f6856cd426779a4f39f2e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33530481"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54639445"
 ---
-# <a name="how-to-copy-toolstripmenuitems"></a>Procedura: copiare ToolStripMenuItems
+# <a name="how-to-copy-toolstripmenuitems"></a>Procedura: Copiare ToolStripMenuItems
 In fase di progettazione è possibile copiare interi menu di primo livello e le voci dei relativi sottomenu in un'altra posizione in <xref:System.Windows.Forms.MenuStrip>. È anche possibile copiare singole voci di menu tra i menu di primo livello o modificare la posizione delle voci di menu all'interno di un menu.  
   
 ### <a name="to-copy-a-top-level-menu-and-its-submenu-items-to-another-top-level-location"></a>Per copiare un menu di primo livello e le voci dei relativi sottomenu in un'altra posizione di primo livello  
@@ -42,7 +42,7 @@ In fase di progettazione è possibile copiare interi menu di primo livello e le 
   
      La voce di sottomenu copiata viene inserita prima della voce di sottomenu selezionata.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Windows.Forms.MenuStrip>  
- <xref:System.Windows.Forms.ToolStripMenuItem>  
- [Panoramica sul controllo MenuStrip](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Windows.Forms.MenuStrip>
+- <xref:System.Windows.Forms.ToolStripMenuItem>
+- [Panoramica sul controllo MenuStrip](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)

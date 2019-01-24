@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: aggiungere pulsanti a un controllo ToolBar'
+title: 'Procedura: Aggiungere pulsanti a un controllo ToolBar'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,31 +12,31 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolBar control [Windows Forms], adding drop-down menus
 ms.assetid: 78a58a8d-1041-4e38-9219-4096fa6a5c5c
-ms.openlocfilehash: e61a635d59bd9adfb73a0293df776187cdbca499
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 134cda4aa0042323e39966d60a7d51fda54cb954
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33527102"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54711551"
 ---
-# <a name="how-to-add-buttons-to-a-toolbar-control"></a>Procedura: aggiungere pulsanti a un controllo ToolBar
+# <a name="how-to-add-buttons-to-a-toolbar-control"></a>Procedura: Aggiungere pulsanti a un controllo ToolBar
 > [!NOTE]
 >  Benché il controllo <xref:System.Windows.Forms.ToolStrip> sostituisca il controllo <xref:System.Windows.Forms.ToolBar> aggiungendovi funzionalità, il controllo <xref:System.Windows.Forms.ToolBar> viene mantenuto per compatibilità con le versioni precedenti e per un eventuale uso futuro.  
   
- Parte integrante di <xref:System.Windows.Forms.ToolBar> i pulsanti e aggiungervi è. Possono essere usati per fornire facile accesso ai comandi di menu o, in alternativa, possono essere posizionati in un'altra area dell'interfaccia utente dell'applicazione per esporre i comandi per gli utenti che non sono disponibili nella struttura di menu.  
+ Parte integrante del <xref:System.Windows.Forms.ToolBar> controllo è i pulsanti e aggiungervi. Possono essere usati per fornire l'accesso facile ai comandi di menu o, in alternativa, possono essere posizionati in un'altra area dell'interfaccia utente dell'applicazione per esporre i comandi per gli utenti che non sono disponibili nella struttura di menu.  
   
- Negli esempi seguenti si presuppone che un <xref:System.Windows.Forms.ToolBar> controllo è stato aggiunto a un Windows Form (`Form1`).  
+ Gli esempi seguenti presuppongono che un <xref:System.Windows.Forms.ToolBar> controllo è stato aggiunto a un modulo di Windows (`Form1`).  
   
 ### <a name="to-add-buttons-programmatically"></a>Per aggiungere pulsanti a livello di codice  
   
-1.  In una routine, creare i pulsanti della barra degli strumenti aggiungendoli al file il <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> insieme.  
+1.  In una procedura, creare pulsanti della barra degli strumenti aggiungendoli al <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> raccolta.  
   
-2.  Specificare le impostazioni di proprietà per un singolo pulsante passando l'indice del pulsante tramite il <xref:System.Windows.Forms.ToolBar.Buttons%2A> proprietà.  
+2.  Specificare le impostazioni delle proprietà per un singolo pulsante passando l'indice del pulsante tramite il <xref:System.Windows.Forms.ToolBar.Buttons%2A> proprietà.  
   
-     Nell'esempio seguente si presuppone un form con un <xref:System.Windows.Forms.ToolBar> controllo già aggiunto.  
+     L'esempio seguente si presuppone un form con un <xref:System.Windows.Forms.ToolBar> controllo già aggiunto.  
   
     > [!NOTE]
-    >  Il <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> è un insieme in base zero, il codice deve procedere di conseguenza.  
+    >  Il <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> raccolta è una raccolta in base zero, il codice dovrebbe procedere di conseguenza.  
   
     ```vb  
     Public Sub CreateToolBarButtons()  
@@ -148,9 +148,9 @@ ms.locfileid: "33527102"
        }  
     ```  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Windows.Forms.ToolBar>  
- [Procedura: Definire un'icona per un pulsante ToolBar](../../../../docs/framework/winforms/controls/how-to-define-an-icon-for-a-toolbar-button.md)  
- [Procedura: Attivare eventi di menu per i pulsanti di una barra degli strumenti](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)  
- [Panoramica sul controllo ToolBar](../../../../docs/framework/winforms/controls/toolbar-control-overview-windows-forms.md)  
- [Controllo ToolBar](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Windows.Forms.ToolBar>
+- [Procedura: Definire un'icona per un pulsante della barra degli strumenti](../../../../docs/framework/winforms/controls/how-to-define-an-icon-for-a-toolbar-button.md)
+- [Procedura: Attivare eventi di Menu per i pulsanti della barra degli strumenti](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [Panoramica sul controllo ToolBar](../../../../docs/framework/winforms/controls/toolbar-control-overview-windows-forms.md)
+- [Controllo ToolBar](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)

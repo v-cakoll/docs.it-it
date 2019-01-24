@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b6b01abc16334dbe091e7586efcce1c3e390a64e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b552ef39c7f73aaa5cfeae4a313e329b267abf98
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426975"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643390"
 ---
 # <a name="isymunmanagedwriterdefineparameter-method"></a>Metodo ISymUnmanagedWriter::DefineParameter
-Definisce un singolo parametro nel metodo corrente. Il tipo di parametro viene ricavato dalla posizione del parametro (sequenza) all'interno della firma del metodo.  
+Definisce un singolo parametro nel metodo corrente. Il tipo di parametro deriva dalla posizione del parametro (sequenza) all'interno di firma del metodo.  
   
- Se i parametri vengono definiti nei metadati per un determinato metodo, non è necessario definire nuovamente utilizzando questo metodo. I lettori di simbolo devono controllare i metadati normale per i parametri prima di verificare l'archivio dei simboli.  
+ Se i parametri vengono definiti nei metadati per un determinato metodo, non è necessario definire nuovamente utilizzando questo metodo. I reader di simboli devono controllare i metadati normale per i parametri prima di controllare l'archivio dei simboli.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -47,28 +47,28 @@ HRESULT DefineParameter(
  [in] Il nome del parametro.  
   
  `attributes`  
- [in] Gli attributi di parametro.  
+ [in] Gli attributi del parametro.  
   
  `sequence`  
- [in] La firma di parametro.  
+ [in] Firma del parametro.  
   
  `addrKind`  
  [in] Il tipo di indirizzo.  
   
  `addr1`  
- [in] Il primo indirizzo per la specifica del parametro.  
+ [in] Il primo indirizzo relativo al parametro specificato.  
   
  `addr2`  
- [in] Il secondo indirizzo per la specifica del parametro.  
+ [in] Il secondo indirizzo relativo al parametro specificato.  
   
  `addr3`  
- [in] Terzo indirizzo per la specifica del parametro.  
+ [in] Terzo indirizzo relativo al parametro specificato.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK se il metodo ha esito positivo. in caso contrario, E_FAIL o un altro codice di errore.  
+ S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o qualche altro codice di errore.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** CorSym. idl, CorSym.h  
+ **Intestazione:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

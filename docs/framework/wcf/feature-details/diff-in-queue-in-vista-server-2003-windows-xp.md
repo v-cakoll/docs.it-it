@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF], differences in operating systems
 ms.assetid: aa809d93-d0a3-4ae6-a726-d015cca37c04
-ms.openlocfilehash: d956a72c9413384176c10effefc0307b09744c4c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5bbae7e54160923e973ff6a8adb655587adf1002
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33492024"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54708831"
 ---
 # <a name="differences-in-queuing-features-in-windows-vista-windows-server-2003-and-windows-xp"></a>Differenze nelle funzionalità di accodamento in Windows Vista, Windows Server 2003 e Windows XP
-Questo argomento vengono riepilogate le differenze tra la funzionalità delle code di Windows Communication Foundation (WCF) tra [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], e [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
+In questo argomento vengono riepilogate le differenze nella funzionalità di code di Windows Communication Foundation (WCF) tra [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], e [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
 ## <a name="application-specific-dead-letter-queue"></a>Coda di messaggi non recapitabili specifica dell'applicazione  
  I messaggi in coda possono restare nella coda per un tempo indefinito se l'applicazione ricevente non li legge in maniera tempestiva. Questo comportamento non è consigliabile se i messaggi hanno una scadenza. I messaggi a scadenza hanno la proprietà `TimeToLive` impostata nell'associazione in coda. Questa proprietà indica per quanto tempo i messaggi possono restare nella coda prima di scadere. I messaggi scaduti vengono inviati a una coda speciale denominata coda dei messaggi non recapitabili. Un messaggio può finire in una coda di messaggi non recapitabili anche per altri motivi, ad esempio se si supera una quota della coda o si verifica un errore di autenticazione.  
@@ -30,11 +30,11 @@ Questo argomento vengono riepilogate le differenze tra la funzionalità delle co
   
 -   Il servizio di accodamento messaggi in [!INCLUDE[wv](../../../../includes/wv-md.md)] supporta il negative acknowledgment a differenza di [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. Un negative acknowledgment dal gestore delle code ricevente determina l'inserimento, da parte del gestore delle code mittente, del messaggio respinto nella coda dei messaggi non recapitabili. Per questa ragione, `ReceiveErrorHandling.Reject` non è consentito con [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
--   Il servizio di accodamento messaggi in [!INCLUDE[wv](../../../../includes/wv-md.md)] supporta una proprietà del messaggio che conta il numero di volte che viene tentato il recapito del messaggio. Questa proprietà del numero di interruzioni non è disponibile in [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. WCF mantiene il conteggio delle interruzioni in memoria, pertanto è possibile che questa proprietà non può contenere un valore accurato quando lo stesso messaggio viene letto da più di un servizio WCF in una Web farm.  
+-   Il servizio di accodamento messaggi in [!INCLUDE[wv](../../../../includes/wv-md.md)] supporta una proprietà del messaggio che conta il numero di volte che viene tentato il recapito del messaggio. Questa proprietà del numero di interruzioni non è disponibile in [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. WCF gestisce il conteggio delle interruzioni in memoria, pertanto è possibile che questa proprietà non può contenere un valore accurato quando lo stesso messaggio viene letto da più di un servizio WCF in una Web farm.  
   
 ## <a name="remote-transactional-read"></a>Lettura transazionale in remoto  
  Il servizio di accodamento messaggi in [!INCLUDE[wv](../../../../includes/wv-md.md)] supporta le letture transazionali in remoto. Ciò consente a un'applicazione che sta leggendo da una coda di essere ospitata in un computer che è diverso da quello in cui è ospitata la coda. In questo modo è possibile disporre di una farm di servizi che leggono da una coda centrale, con conseguente aumento della velocità effettiva complessiva del sistema. Inoltre, se si verifica un errore durante la lettura e l'elaborazione del messaggio, viene eseguito il rollback della transazione e il messaggio rimane nella coda per poter essere elaborato in seguito.  
   
-## <a name="see-also"></a>Vedere anche  
- [Uso di code di messaggi non recapitabili per gestire gli errori di trasferimento dei messaggi](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
- [Gestione dei messaggi non elaborabili](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)
+## <a name="see-also"></a>Vedere anche
+- [Uso di code di messaggi non recapitabili per gestire gli errori di trasferimento dei messaggi](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)
+- [Gestione dei messaggi non elaborabili](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)

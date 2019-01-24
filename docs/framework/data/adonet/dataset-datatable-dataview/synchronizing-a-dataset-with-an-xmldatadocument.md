@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fbc96fa9-b5d1-4f97-b099-c89b0e14ce2c
-ms.openlocfilehash: 5aeb5fc3ad1008871b6c54d6c096cb3a76c3416e
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: ef0518bfd53ea5696c9369fe78e4ceccd3c6260c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47082462"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54708129"
 ---
 # <a name="synchronizing-a-dataset-with-an-xmldatadocument"></a>Sincronizzazione di un dataset con un oggetto XmlDataDocument
 Contenuto della sezione viene descritto un passaggio dell'elaborazione di un ordine di acquisto mediante un <xref:System.Data.DataSet> fortemente tipizzato e sincronizzato con un <xref:System.Xml.XmlDataDocument>. Gli esempi che seguono creano una **set di dati** con uno schema minimizzato che corrisponde solo una parte del documento XML di origine. Gli esempi usano un **XmlDataDocument** per mantenere la fedeltà del documento XML di origine, consentendo il **set di dati** per essere utilizzata per esporre un subset del documento XML.  
@@ -231,6 +231,6 @@ public class Sample
 }  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Sincronizzazione di DataSet e XmlDataDocument](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vedere anche
+- [Sincronizzazione di DataSet e XmlDataDocument](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)
+- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

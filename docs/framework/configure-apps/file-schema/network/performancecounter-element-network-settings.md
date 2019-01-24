@@ -8,12 +8,12 @@ helpviewer_keywords:
 - performanceCounter element
 - <performanceCounter> element
 ms.assetid: 3afa1586-e1b8-473d-8985-c3fc90cf561b
-ms.openlocfilehash: 445b57747bbcb04df0d6bc6b3e90743b8c9600f4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ea0eba097505741aba31bce4f23e0cc9ca1d4608
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187076"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712483"
 ---
 # <a name="ltperformancecountergt-element-network-settings"></a>&lt;performanceCounter&gt; (impostazioni di rete)
 Abilita o disabilita i contatori delle prestazioni di rete.  
@@ -47,7 +47,7 @@ Abilita o disabilita i contatori delle prestazioni di rete.
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[Impostazioni](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Configura le opzioni di rete di base per lo spazio dei nomi <xref:System.Net>.|  
+|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Configura le opzioni di rete di base per lo spazio dei nomi <xref:System.Net>.|  
   
 ## <a name="remarks"></a>Note  
  Questo elemento può essere usato nel file di configurazione dell'applicazione o nel file di configurazione del computer (Machine.config).  
@@ -73,8 +73,8 @@ Abilita o disabilita i contatori delle prestazioni di rete.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
-- <xref:System.Net.Configuration.PerformanceCountersElement?displayProperty=nameWithType>  
-- <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType>  
-- [Schema delle impostazioni di rete](../../../../../docs/framework/configure-apps/file-schema/network/index.md)  
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Net.Configuration.PerformanceCountersElement?displayProperty=nameWithType>
+- <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType>
+- [Schema delle impostazioni di rete](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
 - [I contatori delle prestazioni di rete](../../../../../docs/framework/debug-trace-profile/performance-counters.md#networking)

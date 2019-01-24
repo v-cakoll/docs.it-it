@@ -1,5 +1,5 @@
 ---
-title: "Procedura: eseguire l'associazione a un servizio Web"
+title: "Procedura: Eseguire l'associazione a un servizio Web"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - Web service binding [WPF]
 - data binding [WPF], Web service
 ms.assetid: 77e2d373-69ba-4cbd-b6f5-2c83c38fc98b
-ms.openlocfilehash: 84c5aee8d2bc7d31ebcfee98930d9a0847c527d5
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 0a738d52cfb01fff1cb21d0e6ebb8f1b7b28d57f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397085"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54695767"
 ---
-# <a name="how-to-bind-to-a-web-service"></a>Procedura: eseguire l'associazione a un servizio Web
+# <a name="how-to-bind-to-a-web-service"></a>Procedura: Eseguire l'associazione a un servizio Web
 In questo esempio viene illustrato come eseguire l'associazione agli oggetti restituiti dalle chiamate al metodo del servizio Web.  
   
 ## <a name="example"></a>Esempio  
@@ -45,7 +45,7 @@ In questo esempio viene illustrato come eseguire l'associazione agli oggetti res
   
  Per informazioni sulla struttura dei **getContentResponse**, vedere [documentazione del servizio contenuto](https://services.msdn.microsoft.com/ContentServices/ContentService.asmx).  
   
-## <a name="see-also"></a>Vedere anche  
- [Panoramica sul data binding](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Panoramica delle origini di associazione](../../../../docs/framework/wpf/data/binding-sources-overview.md)  
- [Rendere i dati disponibili per l'associazione in XAML](../../../../docs/framework/wpf/data/how-to-make-data-available-for-binding-in-xaml.md)
+## <a name="see-also"></a>Vedere anche
+- [Panoramica sul data binding](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [Panoramica delle origini di associazione](../../../../docs/framework/wpf/data/binding-sources-overview.md)
+- [Rendere i dati disponibili per l'associazione in XAML](../../../../docs/framework/wpf/data/how-to-make-data-available-for-binding-in-xaml.md)

@@ -4,22 +4,22 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [WCF], integration overview
 ms.assetid: 02c5697f-6e2e-47d6-b715-f3a28aebfbd5
-ms.openlocfilehash: c789d4a52da9b2785fb5919a674bf19f23d23509
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bd031b0f7464da2f1e251abfa1fe314ee2fa763d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493396"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54710225"
 ---
 # <a name="integrating-with-com-applications-overview"></a>Panoramica sull'integrazione con applicazioni COM
-Windows Communication Foundation (WCF) offre allo sviluppatore del codice gestito con un ambiente completo per la creazione di applicazioni connesse. Tuttavia, se si dispone di un investimento sostanziale nel codice non gestito basato su COM e non si desidera eseguire la migrazione, è possibile comunque integrare servizi Web WCF direttamente nel codice esistente usando il moniker del servizio WCF. Il moniker servizio può essere usato da un'ampia gamma di ambienti di sviluppo basati su COM, ad esempio Office VBA, Visual Basic 6.0 o Visual C++ 6.0.  
+Windows Communication Foundation (WCF) offre allo sviluppatore di codice gestito con un ambiente completo per la creazione di applicazioni connesse. Tuttavia, se presente una grande quantità di codice basato su COM non gestito e non si desidera eseguire la migrazione, è comunque possibile integrare servizi Web WCF direttamente nel codice esistente usando il moniker del servizio WCF. Il moniker servizio può essere usato da un'ampia gamma di ambienti di sviluppo basati su COM, ad esempio Office VBA, Visual Basic 6.0 o Visual C++ 6.0.  
   
 > [!NOTE]
->  Il moniker del servizio utilizza un canale di comunicazione WCF per tutte le comunicazioni. I meccanismi di sicurezza e identità per tale canale differiscono da quelli utilizzati nei proxy COM e DCOM standard. Inoltre, poiché il moniker del servizio utilizza un canale di comunicazione WCF il periodo di timeout predefinito è un minuto per tutte le chiamate.  
+>  Il moniker del servizio Usa un canale di comunicazione WCF per tutte le comunicazioni. I meccanismi di sicurezza e identità per tale canale differiscono da quelli utilizzati nei proxy COM e DCOM standard. Inoltre, poiché il moniker del servizio utilizza un canale di comunicazione WCF il periodo di timeout predefinito è un minuto per tutte le chiamate.  
   
- Il moniker del servizio viene usato con il `GetObject` funzione per fornire lo sviluppatore non gestito con un approccio specifico COM, fortemente tipizzato per chiamare i servizi Web WCF. Ciò richiede un oggetto locale, definizione visibile a COM del contratto di servizio Web WCF e l'associazione che deve essere utilizzato. Come altri client WCF, il moniker del servizio deve costruire un canale tipizzato per il servizio, anche se la costruzione di tale canale avviene in modo trasparente al programmatore COM alla prima chiamata di metodo.  
+ Il moniker del servizio viene usato con il `GetObject` funzione per fornire lo sviluppatore non gestito con un approccio specifico COM, fortemente tipizzato per chiamare servizi Web WCF. Ciò richiede un locale, visibile a COM definizione di contratto di servizio Web WCF e il binding che deve essere utilizzato. Quali altri client WCF, il moniker del servizio deve costruire un canale tipizzato per il servizio, anche se costruzione di tale canale avviene in modo trasparente al programmatore COM alla prima chiamata di metodo.  
   
- In comune con altri client WCF, quando si utilizza il moniker, le applicazioni specificare l'indirizzo, associazione e contratto per comunicare con un servizio. Il contratto può essere specificato in uno dei modi seguenti:  
+ In comune con altri client WCF, quando si utilizza il moniker, applicazioni di specificare l'indirizzo, associazione e contratto per comunicare con un servizio. Il contratto può essere specificato in uno dei modi seguenti:  
   
 -   Contratto tipizzato: il contratto viene registrato come tipo visibile a COM sul computer client.  
   
@@ -65,5 +65,5 @@ Windows Communication Foundation (WCF) offre allo sviluppatore del codice gestit
 >   
 >  `</configuration>`  
   
-## <a name="see-also"></a>Vedere anche  
- [Procedura: Registrare e configurare un moniker servizio](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)
+## <a name="see-also"></a>Vedere anche
+- [Procedura: Registrare e configurare un Moniker servizio](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)

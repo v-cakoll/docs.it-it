@@ -1,18 +1,18 @@
 ---
-title: 'Procedura: impostare la dimensione degli elementi affiancati di un TileBrush'
+title: 'Procedura: Impostare la dimensione degli elementi affiancati di un TileBrush'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - TileBrush [WPF], size of tilepropertys
 - Viewport property of TileBrush [WPF]
 ms.assetid: 04f41090-1b46-4e36-832f-d27d28708b8c
-ms.openlocfilehash: e1ba1a25281ffdd1cc00e0bed0efe4f8508780be
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 4bfc14693f1714206e89ec50128ad62dd239dbee
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43467835"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54713564"
 ---
-# <a name="how-to-set-the-tile-size-for-a-tilebrush"></a>Procedura: impostare la dimensione degli elementi affiancati di un TileBrush
+# <a name="how-to-set-the-tile-size-for-a-tilebrush"></a>Procedura: Impostare la dimensione degli elementi affiancati di un TileBrush
 In questo esempio viene illustrato come impostare la dimensione delle tessere per un <xref:System.Windows.Media.TileBrush>. Per impostazione predefinita, un <xref:System.Windows.Media.TileBrush> produce una sola tessera che riempie completamente l'area da disegnare. È possibile eseguire l'override di questo comportamento impostando il <xref:System.Windows.Media.TileBrush.Viewport%2A> e <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> proprietà.  
   
  Il <xref:System.Windows.Media.TileBrush.Viewport%2A> proprietà specifica la dimensione delle tessere per un <xref:System.Windows.Media.TileBrush>. Per impostazione predefinita, il valore della <xref:System.Windows.Media.TileBrush.Viewport%2A> proprietà è relativo alle dimensioni dell'area da disegnare. Per rendere il <xref:System.Windows.Media.TileBrush.Viewport%2A> proprietà specificare una dimensione assoluta della tessera, impostare il <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> proprietà <xref:System.Windows.Media.BrushMappingMode.Absolute>.  
@@ -38,7 +38,7 @@ In questo esempio viene illustrato come impostare la dimensione delle tessere pe
   
  Sebbene questo esempio Usa la <xref:System.Windows.Media.ImageBrush> (classe), il <xref:System.Windows.Media.TileBrush.Viewport%2A> e <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> le proprietà si comportano in modo identico per gli altri <xref:System.Windows.Media.TileBrush> oggetti, vale a dire, per <xref:System.Windows.Media.DrawingBrush> e <xref:System.Windows.Media.VisualBrush>. Per altre informazioni sulle <xref:System.Windows.Media.ImageBrush> e l'altra <xref:System.Windows.Media.TileBrush> oggetti, vedere [disegnare con immagini, disegni e oggetti visivi](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md).  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Windows.Media.TileBrush>  
- [Disegnare con oggetti Image, Drawing e Visual](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
- [Creare modelli di elementi affiancati differenti con un TileBrush](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-different-tile-patterns-with-a-tilebrush.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Windows.Media.TileBrush>
+- [Disegnare con oggetti Image, Drawing e Visual](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+- [Creare modelli di elementi affiancati differenti con un TileBrush](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-different-tile-patterns-with-a-tilebrush.md)

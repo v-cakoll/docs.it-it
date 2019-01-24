@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - message security [WCF], programming overview
 ms.assetid: 739ec222-4eda-4cc9-a470-67e64a7a3f10
-ms.openlocfilehash: 1cb18f1be8e418ace4c9f9f71b7f97ac37ff8074
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 2b49031b0001ddba01a888806206360c1cbdbacb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193890"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54699467"
 ---
 # <a name="programming-wcf-security"></a>Programmazione delle funzionalità di sicurezza di WCF
 Questo argomento descrive le attività di programmazione fondamentali utilizzate per creare un'applicazione Windows Communication Foundation (WCF) sicuro. Questo argomento descrive solo l'autenticazione, riservatezza e integrità, complessivamente note come *protezione del trasferimento*. In questo argomento non descrive l'autorizzazione (controllo di accesso a risorse o servizi); Per informazioni sull'autorizzazione, vedere [autorizzazione](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
@@ -35,7 +35,7 @@ Questo argomento descrive le attività di programmazione fondamentali utilizzate
   
     1.  `Transport`  
   
-         La sicurezza a livello di trasporto dipende dal meccanismo utilizzato dall'associazione scelta. Ad esempio, se si utilizza l'associazione `WSHttpBinding`, il meccanismo di sicurezza è Secure Sockets Layer (SSL), che peraltro è anche il meccanismo del protocollo HTTPS. In generale, il vantaggio principale della sicurezza a livello di trasporto è che offre una buona velocità effettiva indipendentemente dal trasporto utilizzato. Tuttavia, tale tipo di sicurezza presenta due limiti. Anzitutto, il meccanismo di trasporto impone il tipo di credenziale utilizzato per autenticare un utente. Di fatto ciò rappresenta uno svantaggio solo se un servizio deve garantire l'interoperabilità con altri servizi che richiedono vari tipi di credenziali. Inoltre, poiché la sicurezza non viene applicata a livello di messaggio, la sicurezza viene implementata in modo hop-by-hop anziché end-to-end. Questo secondo limite rappresenta un problema solo se il percorso dei messaggi fra client e servizio prevede intermediari. Per altre informazioni su quale trasporto utilizzare, vedere [scelta di un trasporto](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md). Per altre informazioni sull'uso di sicurezza del trasporto, vedere [Cenni preliminari sulla sicurezza di trasporto](../../../../docs/framework/wcf/feature-details/transport-security-overview.md).  
+         La sicurezza a livello di trasporto dipende dal meccanismo utilizzato dall'associazione scelta. Ad esempio, se si utilizza l'associazione `WSHttpBinding`, il meccanismo di sicurezza è Secure Sockets Layer (SSL), che peraltro è anche il meccanismo del protocollo HTTPS. In generale, il vantaggio principale della sicurezza a livello di trasporto è che offre una buona velocità effettiva indipendentemente dal trasporto utilizzato. Tuttavia, presenta due limitazioni: Il primo è che il meccanismo di trasporto determina il tipo di credenziale utilizzato per autenticare un utente. Di fatto ciò rappresenta uno svantaggio solo se un servizio deve garantire l'interoperabilità con altri servizi che richiedono vari tipi di credenziali. Inoltre, poiché la sicurezza non viene applicata a livello di messaggio, la sicurezza viene implementata in modo hop-by-hop anziché end-to-end. Questo secondo limite rappresenta un problema solo se il percorso dei messaggi fra client e servizio prevede intermediari. Per altre informazioni su quale trasporto utilizzare, vedere [scelta di un trasporto](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md). Per altre informazioni sull'uso di sicurezza del trasporto, vedere [Cenni preliminari sulla sicurezza di trasporto](../../../../docs/framework/wcf/feature-details/transport-security-overview.md).  
   
     2.  `Message`  
   
@@ -101,6 +101,6 @@ Questo argomento descrive le attività di programmazione fondamentali utilizzate
  [!code-csharp[c_TcpClient#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_tcpclient/cs/source.cs#1)]
  [!code-vb[c_TcpClient#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_tcpclient/vb/source.vb#1)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Programmazione WCF di base](../../../../docs/framework/wcf/basic-wcf-programming.md)  
- [Scenari di sicurezza comuni](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)
+## <a name="see-also"></a>Vedere anche
+- [Programmazione WCF di base](../../../../docs/framework/wcf/basic-wcf-programming.md)
+- [Scenari di sicurezza comuni](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fd1e5daada8793e94980afc5f0cf509915bd288e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6e7679fd8010ebe06f20a2a894cbc8e9864b81f4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33450929"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54705495"
 ---
 # <a name="icorprofilercallbackappdomainshutdownstarted-method"></a>Metodo ICorProfilerCallback::AppDomainShutdownStarted
-Notifica al profiler che un dominio applicazione è in corso lo scaricamento da un processo.  
+Notifica al profiler che un dominio dell'applicazione è in corso lo scaricamento da un processo.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,16 +39,16 @@ HRESULT AppDomainShutdownStarted(
  [in] Identifica il dominio in cui sono archiviati gli assembly dell'applicazione.  
   
 ## <a name="remarks"></a>Note  
- Il valore di `appDomainId` non è valida per qualsiasi richiesta di informazioni dopo il `AppDomainShutdownStarted` metodo restituisce, si tratta di completamento per ottenere informazioni su questo dominio applicazione.  
+ Il valore di `appDomainId` non è valida per qualsiasi richiesta di informazioni dopo il `AppDomainShutdownStarted` restituzione del metodo, ovvero si tratta di completamento per ottenere informazioni sul dominio applicazione.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

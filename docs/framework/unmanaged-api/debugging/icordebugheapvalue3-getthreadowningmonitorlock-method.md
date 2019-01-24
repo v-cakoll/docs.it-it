@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ba09991e9452a86c6b7a1cbb08a38a71ba2aeaa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8d3e10a3dbae0d1b790c0d80c9286affedaa4c8b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416764"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709143"
 ---
 # <a name="icordebugheapvalue3getthreadowningmonitorlock-method"></a>Metodo ICorDebugHeapValue3::GetThreadOwningMonitorLock
 Restituisce il thread gestito che possiede il blocco di monitoraggio per questo oggetto.  
@@ -41,7 +41,7 @@ HRESULT GetThreadOwningMonitorLock (
  [out] Il thread gestito che possiede il blocco di monitoraggio per questo oggetto.  
   
  `pAcquisitionCount`  
- [out] Il numero di volte in cui che il thread sarebbe necessario rilasciare il blocco prima di restituire a essere senza proprietario.  
+ [out] Il numero di volte in cui che il thread dovrà rilasciare il blocco prima di restituire a essere senza proprietario.  
   
 ## <a name="return-value"></a>Valore restituito  
  Questo metodo restituisce gli specifici HRESULT seguenti, nonché gli errori di HRESULT che indicano la mancata riuscita del metodo.  
@@ -49,32 +49,32 @@ HRESULT GetThreadOwningMonitorLock (
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
 |S_OK|Metodo completato correttamente.|  
-|S_FALSE|Nessun thread gestito possiede il blocco di monitoraggio su questo oggetto.|  
+|S_FALSE|Nessun thread gestito possiede il blocco di monitoraggio per questo oggetto.|  
   
 ## <a name="exceptions"></a>Eccezioni  
   
 ## <a name="remarks"></a>Note  
- Se un thread gestito possiede il blocco di monitoraggio per questo oggetto:  
+ Se un thread gestito è il proprietario del blocco di monitoraggio per questo oggetto:  
   
 -   Il metodo restituisce S_OK.  
   
--   L'oggetto thread è valido fino a quando non si esce dal thread.  
+-   L'oggetto thread è valido fino a quando la chiusura del thread.  
   
- Se nessun thread gestito possiede il blocco di monitoraggio su questo oggetto `ppThread` e `pAcquisitionCount` sono identiche, e il metodo restituisce S_FALSE.  
+ Se nessun thread gestito possiede il blocco di monitoraggio tohoto objektu `ppThread` e `pAcquisitionCount` rimangono invariati, e il metodo restituisce S_FALSE.  
   
  Se `ppThread` o `pAcquisitionCount` non è un puntatore valido, il risultato è indefinito.  
   
- Se si verifica un errore che non è possibile determinare che, se presente, thread proprietario del blocco di monitoraggio per questo oggetto, il metodo restituisce un HRESULT che indica un errore.  
+ Se si verifica un errore in modo che non può essere determinato che, se presente, thread proprietario del blocco di monitoraggio per l'oggetto, il metodo restituisce un HRESULT che indica un errore.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Debug](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debug](../../../../docs/framework/unmanaged-api/debugging/index.md)

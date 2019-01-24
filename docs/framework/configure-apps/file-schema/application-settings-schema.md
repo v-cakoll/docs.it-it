@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 5797fcff-6081-4e8c-bebf-63d9c70cf14b
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: f11be59941759687806591feb1edcce28b2119e6
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 7a4f60571fb4d30793f64c57317bf0b372ae4812
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123338"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701911"
 ---
 # <a name="application-settings-schema"></a>Schema Application Settings
 
@@ -26,9 +26,9 @@ Le impostazioni dell'applicazione definisce gli elementi seguenti come parte dei
 
 | Elemento                    | Descrizione                                                                           |
 | -------------------------- | ------------------------------------------------------------------------------------- |
-| **\<applicationSettings >** | Contiene tutti  **\<impostazione >** tag specifici dell'applicazione.                         |
-| **\<userSettings >**        | Contiene tutti  **\<impostazione >** tag specifici per l'utente corrente.                        |
-| **\<impostazione >**             | Definisce un'impostazione. Figlio del  **\<applicationSettings >** oppure  **\<userSettings >**. |
+| **\<applicationSettings>** | Contiene tutti  **\<impostazione >** tag specifici dell'applicazione.                         |
+| **\<userSettings>**        | Contiene tutti  **\<impostazione >** tag specifici per l'utente corrente.                        |
+| **\<setting>**             | Definisce un'impostazione. Figlio del  **\<applicationSettings >** oppure  **\<userSettings >**. |
 | **\<value>**               | Definisce un valore dell'impostazione. Elemento figlio  **\<impostazione >**.                                   |
 
 ## <a name="applicationsettings-element"></a>\<applicationSettings > elemento
@@ -92,5 +92,5 @@ Nell'esempio seguente viene illustrato un file di impostazioni dell'applicazione
 
 ## <a name="see-also"></a>Vedere anche
 
-[Cenni preliminari sulle impostazioni delle applicazioni](~/docs/framework/winforms/advanced/application-settings-overview.md)   
-[Application Settings Architecture](~/docs/framework/winforms/advanced/application-settings-architecture.md)
+- [Cenni preliminari sulle impostazioni delle applicazioni](~/docs/framework/winforms/advanced/application-settings-overview.md)
+- [Application Settings Architecture](~/docs/framework/winforms/advanced/application-settings-architecture.md)

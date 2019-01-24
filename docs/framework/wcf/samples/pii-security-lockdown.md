@@ -2,12 +2,12 @@
 title: Blocco della sicurezza delle informazioni personali
 ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
-ms.openlocfilehash: 48b62ed5c27463b863ff585520a4b42fc4c83f88
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 3537f50c8695838b69d1920cfd953c8b1196d830
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195138"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54699779"
 ---
 # <a name="pii-security-lockdown"></a>Blocco della sicurezza delle informazioni personali
 In questo esempio viene illustrato come controllare diverse funzionalità correlate alla sicurezza di un servizio Windows Communication Foundation (WCF) da:  
@@ -47,7 +47,7 @@ In questo esempio viene illustrato come controllare diverse funzionalità correl
   
 3.  Crittografare le impostazioni di configurazione appSettings nella cartella Web.config eseguendo il comando seguente: `aspnet_regiis -pe "appSettings" -app "/servicemodelsamples" -prov "DataProtectionConfigurationProvider"`.  
   
- Altre informazioni sulla crittografia delle sezioni del file di configurazione sono reperibile leggendo una procedura su DPAPI nella configurazione di ASP.NET ([Building Secure ASP.NET Applications: autenticazione, autorizzazione e comunicazioni protette](https://go.microsoft.com/fwlink/?LinkId=95137)) e procedure su RSA nella configurazione di ASP.NET ([procedura: crittografare sezioni di configurazione in ASP.NET 2.0 utilizzando RSA](https://go.microsoft.com/fwlink/?LinkId=95138)).  
+ Altre informazioni sulla crittografia delle sezioni del file di configurazione sono reperibile leggendo una procedura su DPAPI nella configurazione di ASP.NET ([Building Secure ASP.NET Applications: L'autenticazione, autorizzazione e comunicazioni protette](https://go.microsoft.com/fwlink/?LinkId=95137)) e procedure su RSA nella configurazione di ASP.NET ([How To: Crittografare le sezioni di configurazione in ASP.NET 2.0 utilizzando RSA](https://go.microsoft.com/fwlink/?LinkId=95138)).  
   
 ## <a name="locking-configuration-file-elements"></a>Blocco degli elementi del file di configurazione  
  Negli scenari ospitati da Web è possibile che alcuni servizi siano all'interno di sottodirectory di altri servizi. In queste situazioni, i valori di configurazione per il servizio nella sottodirectory vengono calcolati esaminando i valori in Machine.config e unendoli successivamente con i file Web.config delle directory padre, facendo scorrere verso il basso l'albero di directory e unendo infine il file Web.config alla directory che contiene il servizio. Il comportamento predefinito della maggior parte degli elementi di configurazione è di consentire che i file di configurazione presenti nelle sottodirectory eseguano l'override dei valori impostati nelle directory padre. In alcune situazioni potrebbe essere auspicabile impedire che i file di configurazione presenti nelle sottodirectory eseguano l'override dei valori impostati nella configurazione della directory padre.  
@@ -124,9 +124,9 @@ In questo esempio viene illustrato come controllare diverse funzionalità correl
   
  È anche possibile crittografare gli elementi del file di configurazione usando DPAPI e RSA. Per altre informazioni, vedere i collegamenti che seguono.  
   
--   [Creazione di applicazioni ASP.NET protette: Autenticazione, autorizzazione e comunicazioni protette](https://go.microsoft.com/fwlink/?LinkId=95137)  
+-   [Creazione di applicazioni ASP.NET protette: L'autenticazione, autorizzazione e comunicazioni protette](https://go.microsoft.com/fwlink/?LinkId=95137)  
   
--   [Procedura: Crittografare sezioni di configurazione in ASP.NET 2.0 utilizzando RSA](https://go.microsoft.com/fwlink/?LinkId=95138)  
+-   [Procedura: Crittografare le sezioni di configurazione in ASP.NET 2.0 utilizzando RSA](https://go.microsoft.com/fwlink/?LinkId=95138)  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
@@ -142,5 +142,5 @@ In questo esempio viene illustrato come controllare diverse funzionalità correl
   
 1.  Modificare Machine.config per impostare l'attributo `enableLoggingKnownPii` su `false`.  
   
-## <a name="see-also"></a>Vedere anche  
- [Esempi di monitoraggio di AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)
+## <a name="see-also"></a>Vedere anche
+- [Esempi di monitoraggio di AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)

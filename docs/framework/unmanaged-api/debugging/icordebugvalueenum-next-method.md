@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 433e387365834498203e444ed2f85889f8adde06
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 020df45f7f18a029f8c098fcc4dea1c131da017c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420445"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54706917"
 ---
 # <a name="icordebugvalueenumnext-method"></a>Metodo ICorDebugValueEnum::Next
-Ottiene il numero specificato di istanze di "ICorDebugValue" dell'enumerazione, a partire dalla posizione corrente.  
+Ottiene il numero di istanze di "ICorDebugValue" specificato dall'enumerazione, iniziando in corrispondenza della posizione corrente.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,20 +43,20 @@ HRESULT Next (
  [in] Il numero di `ICorDebugValue` istanze da recuperare.  
   
  `values`  
- [out] Matrice di puntatori, ognuno dei quali punta a un `ICorDebugValue` oggetto.  
+ [out] Una matrice di puntatori, ognuno dei quali punta a un `ICorDebugValue` oggetto.  
   
  `pceltFetched`  
  [out] Puntatore al numero di `ICorDebugValue` istanze effettivamente restituite. Questo valore può essere null se `celt` è uno.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
-    
- 
+## <a name="see-also"></a>Vedere anche
+
+

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - claims [WCF], creation and resource values
 ms.assetid: 30431f76-cbe7-4bad-bad7-8e43e23a82d4
-ms.openlocfilehash: cfa697023ca9d4c0b6f43c90c382816993dccc5d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ca1bb8ccbc77e2b026a65a9cef56118e8b86dbb3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33488052"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54704069"
 ---
 # <a name="claim-creation-and-resource-values"></a>Creazione di attestazioni e valori delle risorse
 La classe <xref:System.IdentityModel.Claims.Claim> fornisce numerosi metodi per creare istanze di tipi di attestazioni incorporati. Il metodo seguente non esegue alcun controllo semantico o del formato sulla risorsa fornita:  
@@ -42,7 +42,7 @@ La classe <xref:System.IdentityModel.Claims.Claim> fornisce numerosi metodi per 
   
 -   <xref:System.IdentityModel.Claims.Claim.CreateX500DistinguishedNameClaim%2A>  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.IdentityModel.Claims.Claim>  
- <xref:System.IdentityModel.Claims.ClaimSet>  
- [Gestione delle attestazioni e dell'autorizzazione con il modello di identità](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.IdentityModel.Claims.Claim>
+- <xref:System.IdentityModel.Claims.ClaimSet>
+- [Gestione delle attestazioni e dell'autorizzazione con il modello di identità](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)

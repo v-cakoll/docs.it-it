@@ -2,12 +2,12 @@
 title: Tipi di dati e funzioni
 ms.date: 03/30/2017
 ms.assetid: 683413c5-0312-4e60-8619-9a97bdc6e62a
-ms.openlocfilehash: 34f8f0a59f1a962eaa6a747e124f47d1570ca455
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0a60c5f680937816cd97b4ef44ee7fd1ad510f73
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520739"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54711895"
 ---
 # <a name="data-types-and-functions"></a>Tipi di dati e funzioni
 Negli argomenti elencati nella tabella seguente viene descritto il supporto LINQ to SQL per membri, costrutti e cast CRL (Common Language Runtime). I membri e i costrutti supportati sono disponibili per l'uso in query LINQ to SQL.  
@@ -31,7 +31,7 @@ Negli argomenti elencati nella tabella seguente viene descritto il supporto LINQ
 |[Metodi System.TimeSpan](../../../../../../docs/framework/data/adonet/sql/linq/system-timespan-methods.md)|Viene descritto il supporto LINQ to SQL per i membri della struttura <xref:System.TimeSpan?displayProperty=nameWithType>.|  
 |[Funzionalità non supportata](../../../../../../docs/framework/data/adonet/sql/linq/unsupported-functionality.md)|Viene descritta la funzionalità non supportata in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].|  
   
-## <a name="see-also"></a>Vedere anche  
- [Tipi SQL-CLR non corrispondenti](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)  
- [Riferimento](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)  
- [Libreria di classi .NET framework in Visual Studio](https://msdn.microsoft.com/library/a03e374c-3d5c-4169-937b-49857ab273ae)
+## <a name="see-also"></a>Vedere anche
+- [Tipi SQL-CLR non corrispondenti](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)
+- [Riferimento](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+- [Libreria di classi .NET framework in Visual Studio](https://msdn.microsoft.com/library/a03e374c-3d5c-4169-937b-49857ab273ae)

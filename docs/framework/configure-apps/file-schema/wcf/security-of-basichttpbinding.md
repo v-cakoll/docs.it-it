@@ -2,12 +2,12 @@
 title: '&lt;security&gt; di &lt;basicHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 6432708d-5465-4bd9-bfc2-466742db99cb
-ms.openlocfilehash: 870694eae832dd603e511d0b6817c07b08c50614
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 9e6a0e864dcb83a529a5ac457e2fcffe0435376f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150266"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701170"
 ---
 # <a name="ltsecuritygt-of-ltbasichttpbindinggt"></a>&lt;security&gt; di &lt;basicHttpBinding&gt;
 Definisce le funzionalità di sicurezza del [ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).  
@@ -53,7 +53,7 @@ Definisce le funzionalità di sicurezza del [ \<basicHttpBinding >](../../../../
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<trasporto >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-basichttpbinding.md)|Definisce le impostazioni di sicurezza del trasporto per un servizio HTTP di base. L'elemento corrisponde a <xref:System.ServiceModel.HttpTransportSecurity>.|  
+|[\<transport>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-basichttpbinding.md)|Definisce le impostazioni di sicurezza del trasporto per un servizio HTTP di base. L'elemento corrisponde a <xref:System.ServiceModel.HttpTransportSecurity>.|  
 |[\<messaggio >](../../../../../docs/framework/configure-apps/file-schema/wcf/message-of-basichttpbinding.md)|Definisce le impostazioni di sicurezza del messaggio per un servizio HTTP di base. L'elemento corrisponde a <xref:System.ServiceModel.BasicHttpMessageSecurity>.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
@@ -65,14 +65,14 @@ Definisce le funzionalità di sicurezza del [ \<basicHttpBinding >](../../../../
 ## <a name="remarks"></a>Note  
  Per impostazione predefinita, il messaggio SOAP non è protetto e il client non viene autenticato. Questo elemento consente di configurare impostazioni di sicurezza aggiuntive per l'elemento `basicHttpBinding`.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.BasicHttpBinding.Security%2A>  
- <xref:System.ServiceModel.Configuration.BasicHttpBindingElement.Security%2A>  
- <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement>  
- <xref:System.ServiceModel.BasicHttpSecurity>  
- [Protezione di servizi e client](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Selezione di un tipo di credenziale](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
- [Associazioni](../../../../../docs/framework/wcf/bindings.md)  
- [Configurazione di associazioni fornite dal sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Uso di associazioni per configurare servizi e client](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<binding>](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.ServiceModel.BasicHttpBinding.Security%2A>
+- <xref:System.ServiceModel.Configuration.BasicHttpBindingElement.Security%2A>
+- <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement>
+- <xref:System.ServiceModel.BasicHttpSecurity>
+- [Protezione di servizi e client](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Selezione di un tipo di credenziale](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
+- [Associazioni](../../../../../docs/framework/wcf/bindings.md)
+- [Configurazione di associazioni fornite dal sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Uso di associazioni per configurare servizi e client](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)

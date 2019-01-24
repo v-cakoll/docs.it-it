@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 72c76f0b-7255-4576-9261-3587f949669c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4b57233457c697dbe35ab0f68d6ce3557cee9b5c
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 6c3e9e58a8cfe5f18aba2e8db56f84d089cc49df
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48580089"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54641148"
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>Risorse app per librerie destinate a più piattaforme
 È possibile usare .NET Framework [libreria di classi portabile](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) tipo per garantire che le risorse nelle librerie di classi sono accessibili da più piattaforme progetto. Questo tipo di progetto è disponibile in Visual Studio 2012 e fa riferimento al subset portabile della libreria di classi .NET Framework. Usando la [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] viene garantito che sia possibile accedere alla libreria da applicazioni desktop, applicazioni Silverlight, applicazioni Windows Phone e da applicazioni [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].
@@ -52,7 +52,7 @@ ms.locfileid: "48580089"
  Se il progetto [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] include risorse localizzate, usare il modello hub and spoke per distribuirle proprio come avviene per una libreria in un'applicazione desktop. Per usare il file di risorse principale e qualunque file di risorse localizzate in un'applicazione [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], aggiungere un riferimento all'assembly originale. In fase di compilazione, Visual Studio estrae le risorse dal file di risorse principale ed ogni file di risorse localizzate in file .resw separati. Vengono quindi compilate i file .resw in un singolo file PRI a cui [!INCLUDE[wrt](../../../includes/wrt-md.md)] accede in fase di esecuzione.
 
 <a name="NonLoc"></a>
-## <a name="example-non-localized-includenetportableincludesnet-portable-mdmd"></a>Esempio: [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] non localizzata
+## <a name="example-non-localized-includenetportableincludesnet-portable-mdmd"></a>Esempio: Non localizzato [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]
  Il seguente semplice esempio di [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] non localizzata usa le risorse per archiviare i nomi delle colonne e per determinare il numero di caratteri da riservare ai dati tabulari. Nell'esempio viene usato un file denominato LibResources.resx per archiviare le risorse di tipo stringa elencate nella tabella seguente.
 
 |Nome della risorsa|Valore della risorsa|
@@ -81,7 +81,7 @@ ms.locfileid: "48580089"
 
  [!code-csharp[Conceptual.Resources.PortableMetro#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portablemetro/cs/blankpage.xaml.cs#1)]
 
-## <a name="example-localized-includenetportableincludesnet-portable-mdmd"></a>Esempio: [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] localizzata
+## <a name="example-localized-includenetportableincludesnet-portable-mdmd"></a>Esempio: Localizzato [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]
  Il seguente esempio di [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] localizzata include le risorse per le impostazioni cultura francesi (Francia) e inglesi (Stati Uniti). Le impostazioni cultura inglese (Stati Uniti) rappresenta impostazioni cultura predefinite dell'app; le risorse vengono illustrate nella tabella di [sezione precedente](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md#NonLoc). Il file di risorse per le impostazioni cultura francesi (Francia) è denominato LibResources.fr-FR.resx ed è costituito dalle risorse di tipo stringa elencate nella tabella seguente. Il codice sorgente per la classe `UILibrary` è lo stesso di quello riportato nella sezione precedente.
 
 |Nome della risorsa|Valore della risorsa|
@@ -106,6 +106,6 @@ ms.locfileid: "48580089"
   
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.Resources.ResourceManager>  
-- [Risorse nelle applicazioni desktop](../../../docs/framework/resources/index.md)  
+- <xref:System.Resources.ResourceManager>
+- [Risorse nelle applicazioni desktop](../../../docs/framework/resources/index.md)
 - [Creazione del pacchetto e distribuzione delle risorse](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)

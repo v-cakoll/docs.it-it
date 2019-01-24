@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: individuare tutti i nodi in un Namespace (Visual Basic)'
+title: 'Procedura: Trovare tutti i nodi in un Namespace (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: b735d7da-5727-48a3-ab57-a16378adc32e
-ms.openlocfilehash: 8018ede1c8ef5942325caec3a97afdd89880a331
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3a89b0eae4baf380787df32b1d327dd1f52b6f05
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33641616"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54640683"
 ---
-# <a name="how-to-find-all-nodes-in-a-namespace-visual-basic"></a>Procedura: individuare tutti i nodi in un Namespace (Visual Basic)
+# <a name="how-to-find-all-nodes-in-a-namespace-visual-basic"></a>Procedura: Trovare tutti i nodi in un Namespace (Visual Basic)
 È possibile applicare un filtro sullo spazio dei nomi di ogni elemento o attributo per trovare tutti i nodi inclusi in questo determinato spazio dei nomi.  
   
 ## <a name="example"></a>Esempio  
@@ -54,7 +54,7 @@ Nodes in the http://www.adventure-works.com namespace
 ## <a name="example"></a>Esempio  
  Il file XML cui accede la seguente query contiene gli ordini di acquisto in due spazi dei nomi diversi. Con la query viene creato un nuovo albero contenente solo gli elementi di uno degli spazi dei nomi.  
   
- Questo esempio usa il documento XML seguente: [File XML di esempio: ordini di acquisto consolidati](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md).  
+ Nell'esempio viene utilizzato il seguente documento XML:  [File XML di esempio: Ordini di acquisto consolidati](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md).  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -109,5 +109,5 @@ End Module
 </Root>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Le query di base (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+## <a name="see-also"></a>Vedere anche
+- [Query di base (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 08406f7d93671b406b3c7cd8719a7a0e5e423184
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 65e1ed604084fa61c8e47f0bb468b6a6d100778c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43523502"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54695725"
 ---
 # <a name="beginenumeration-function"></a>BeginEnumeration (funzione)
 Reimposta l'enumeratore all'inizio dell'enumerazione.  
@@ -67,21 +67,21 @@ I flag che possono essere passati come il `lEnumFlags` definiti nell'argomento d
 
 **Gruppo 1**
 
-|Costante  |Valore  |Descrizione  |
+|Costante  |Value  |Descrizione  |
 |---------|---------|---------|
 |`WBEM_FLAG_KEYS_ONLY` | 0x4 | Include le proprietà che costituiscono solo la chiave. |
 |`WBEM_FLAG_REFS_ONLY` | 0x8 | Include le proprietà che sono solo i riferimenti agli oggetti. |
 
 **Gruppo 2**
 
-Costante  |Valore  |Descrizione  |
+Costante  |Value  |Descrizione  |
 |---------|---------|---------|
 |`WBEM_FLAG_SYSTEM_ONLY` | 0x30 | Limitare l'enumerazione per solo le proprietà di sistema. |
 |`WBEM_FLAG_NONSYSTEM_ONLY` | 0x40 | Include le proprietà locali e propagate ma ne esclude le proprietà di sistema dall'enumerazione. |
 
 Per le classi:
 
-Costante  |Valore  |Descrizione  |
+Costante  |Value  |Descrizione  |
 |---------|---------|---------|
 |`WBEM_FLAG_CLASS_OVERRIDES_ONLY` | 0x100 | Limitare la proprietà viene sottoposto a override nella definizione della classe dell'enumerazione. |
 |`WBEM_FLAG_CLASS_LOCAL_AND_OVERRIDES` | 0x100 | Limitare l'enumerazione alle proprietà sottoposto a override nella definizione della classe corrente e alle nuove proprietà definite nella classe. |
@@ -91,18 +91,18 @@ Costante  |Valore  |Descrizione  |
 
 Per le istanze:
 
-Costante  |Valore  |Descrizione  |
+Costante  |Value  |Descrizione  |
 |---------|---------|---------|
 | `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Limitare l'enumerazione alle proprietà definite o modificato nella classe stessa. |
 | `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | Limitare l'enumerazione delle proprietà ereditate dalle classi di base. |
 
 
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** WMINet_Utils.idl  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Vedere anche  
-[WMI e contatori delle prestazioni (riferimenti alle API non gestite)](index.md)
+## <a name="see-also"></a>Vedere anche
+- [WMI e contatori delle prestazioni (riferimenti alle API non gestite)](index.md)

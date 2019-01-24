@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5498874661f36ee4e96e6d2d58e3076bb8abbcce
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: cc68ba1d87a6dcb638eae5bfa041baeaf0846800
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611490"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54699935"
 ---
 # <a name="ltappcontextswitchoverridesgt-element"></a>&lt;AppContextSwitchOverrides&gt; elemento
 Definisce una o più opzioni di compatibilità usate dalla classe <xref:System.AppContext> per fornire un meccanismo di rifiuto esplicito per la nuova funzionalità.  
   
  \<configuration>  
  \<runtime>  
-\<AppContextSwitchOverrides >  
+\<AppContextSwitchOverrides>  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,7 +43,7 @@ Definisce una o più opzioni di compatibilità usate dalla classe <xref:System.A
   
 |Value|Descrizione|  
 |-----------|-----------------|  
-|"nome = valore"|Un nome di parametro predefinito insieme al relativo valore (`true` o `false`). Più coppie nome/valore di opzione sono separate da punti e virgola (";"). Per un elenco di nomi di parametro predefiniti supportati da .NET Framework, vedere la sezione Osservazioni.|  
+|"name=value"|Un nome di parametro predefinito insieme al relativo valore (`true` o `false`). Più coppie nome/valore di opzione sono separate da punti e virgola (";"). Per un elenco di nomi di parametro predefiniti supportati da .NET Framework, vedere la sezione Osservazioni.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
@@ -161,7 +161,7 @@ L'esempio seguente usa il `<add>` elemento a cui aggiungere le due impostazioni 
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
-- <xref:System.AppContext?displayProperty=nameWithType>  
-- [\<runtime > elemento](runtime-element.md)  
+## <a name="see-also"></a>Vedere anche
+- <xref:System.AppContext?displayProperty=nameWithType>
+- [\<runtime > elemento](runtime-element.md)
 - [Elemento \<configuration>](../configuration-element.md)

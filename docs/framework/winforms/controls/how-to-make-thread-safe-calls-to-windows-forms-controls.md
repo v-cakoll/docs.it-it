@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: effettuare chiamate thread-safe a controlli di Windows Form'
+title: 'Procedura: Effettuare chiamate Thread-Safe a controlli di Windows Form'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - threading [Windows Forms], cross-thread calls
 - controls [Windows Forms], multithreading
 ms.assetid: 138f38b6-1099-4fd5-910c-390b41cbad35
-ms.openlocfilehash: f2716db441380138e6058ec45d9ae9c07f0e21a7
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 60a71aefbf6d180ffe8d68f54d438e5b58a603fe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664722"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54710469"
 ---
-# <a name="how-to-make-thread-safe-calls-to-windows-forms-controls"></a>Procedura: effettuare chiamate thread-safe a controlli di Windows Form
+# <a name="how-to-make-thread-safe-calls-to-windows-forms-controls"></a>Procedura: Effettuare chiamate Thread-Safe a controlli di Windows Form
 
 Se si usa il multithreading per migliorare le prestazioni delle applicazioni Windows Forms, è necessario assicurarsi che sia possibile effettuare chiamate ai controlli in modo thread-safe.
 
@@ -406,7 +406,7 @@ private:
  L'esempio di codice seguente è un'applicazione Windows Form completa, costituita da un form con tre pulsanti e una casella di testo. Il primo pulsante dimostra un accesso cross-thread non sicuro, il secondo pulsante dimostra un accesso sicuro con <xref:System.Windows.Forms.Control.Invoke%2A>e il terzo pulsante dimostra un accesso sicuro con <xref:System.ComponentModel.BackgroundWorker>.
 
 > [!NOTE]
-> Per istruzioni su come eseguire l'esempio, vedere [Procedura: Compilare ed eseguire un esempio di codice Windows Form completo tramite Visual Studio](https://msdn.microsoft.com/library/cc447f7e-4c3b-4397-9d05-aeba3ca49416). Questo esempio richiede riferimenti agli assembly System.Drawing e System.Windows.Forms.
+> Per istruzioni su come eseguire l'esempio, vedere [come: Compilare ed eseguire un esempio di codice completo di Windows Form con Visual Studio](https://msdn.microsoft.com/library/cc447f7e-4c3b-4397-9d05-aeba3ca49416). Questo esempio richiede riferimenti agli assembly System.Drawing e System.Windows.Forms.
 
 ```csharp
 using System;
@@ -1051,7 +1051,7 @@ Quando si esegue l'applicazione e si fa clic sul pulsante **Unsafe Call** , vien
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.ComponentModel.BackgroundWorker>
-- [Procedura: Eseguire un'operazione in background](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
-- [Procedura: Implementare un form che esegue un'operazione in background](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
+- [Procedura: Eseguire un'operazione in Background](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
+- [Procedura: Implementare un Form che usa un'operazione in Background](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
 - [Sviluppo di controlli Windows Form personalizzati con .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
 - [Windows Form e applicazioni non gestite](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)

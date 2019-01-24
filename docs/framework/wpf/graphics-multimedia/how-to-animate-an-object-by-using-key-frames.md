@@ -1,18 +1,18 @@
 ---
-title: 'Procedura: animare un oggetto utilizzando fotogrammi chiave'
+title: 'Procedura: Animare un oggetto utilizzando fotogrammi chiave'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - animation [WPF], objects with key frames
 - key frames [WPF], animating objects with
 ms.assetid: b1f15ba9-cac7-4cea-8699-5c6b55c05c5e
-ms.openlocfilehash: 5e948b574e1b4a1c431b9495583e9579502576a8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: eb9de4098c5fb9bde74fa93dda6dd5a878ed0339
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43416334"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54697530"
 ---
-# <a name="how-to-animate-an-object-by-using-key-frames"></a>Procedura: animare un oggetto utilizzando fotogrammi chiave
+# <a name="how-to-animate-an-object-by-using-key-frames"></a>Procedura: Animare un oggetto utilizzando fotogrammi chiave
 In questo esempio illustra come animare un oggetto, che in questo esempio è il <xref:System.Windows.Controls.Page.Background%2A> proprietà di un <xref:System.Windows.Controls.Page> controllo, usando fotogrammi chiave.  
   
 ## <a name="example"></a>Esempio  
@@ -33,13 +33,13 @@ In questo esempio illustra come animare un oggetto, che in questo esempio è il 
   
  Per l'esempio completo, vedere [Esempio di animazione con fotogrammi chiave](https://go.microsoft.com/fwlink/?LinkID=160012).  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames>  
- <xref:System.Windows.Controls.Page.Background%2A>  
- <xref:System.Windows.Controls.Page>  
- <xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame>  
- <xref:System.Windows.Media.LinearGradientBrush>  
- <xref:System.Windows.Media.RadialGradientBrush>  
- <xref:System.Windows.Media.DrawingBrush>  
- [Cenni preliminari sulle animazioni con fotogrammi chiave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
- [Procedure relative ai fotogrammi chiave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames>
+- <xref:System.Windows.Controls.Page.Background%2A>
+- <xref:System.Windows.Controls.Page>
+- <xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame>
+- <xref:System.Windows.Media.LinearGradientBrush>
+- <xref:System.Windows.Media.RadialGradientBrush>
+- <xref:System.Windows.Media.DrawingBrush>
+- [Cenni preliminari sulle animazioni con fotogrammi chiave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+- [Procedure relative ai fotogrammi chiave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)

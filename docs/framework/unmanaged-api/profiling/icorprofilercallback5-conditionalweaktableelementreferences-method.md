@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4ee3c3302d77bcc7b807c01ccb5bab172153ddda
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ad192f753cd1977c9ca68e147d23375ce092b66f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33459951"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54708233"
 ---
 # <a name="icorprofilercallback5conditionalweaktableelementreferences-method"></a>Metodo ICorProfilerCallback5::ConditionalWeakTableElementReferences
 Identifica la chiusura transitiva di oggetti a cui le radici fanno riferimento tramite i riferimenti di campo di membri diretti e tramite le dipendenze `ConditionalWeakTable`.  
@@ -41,7 +41,7 @@ HRESULT ConditionalWeakTableElementReferences(     [in]                     ULON
  [in] Matrice di ID oggetto, ognuno dei quali include il valore `ObjectID` per l'elemento primario nella coppia di handle dipendente.  
   
  `valueRefIds`  
- [in] Matrice di ID oggetto, ognuno dei quali include il valore `ObjectID` per l'elemento secondario nella coppia di handle dipendente. (`keyRefIds[i]` mantiene `valueRefIds[i]` alive.)  
+ [in] Matrice di ID oggetto, ognuno dei quali include il valore `ObjectID` per l'elemento secondario nella coppia di handle dipendente. (`keyRefIds[i]` mantiene `valueRefIds[i]` attiva.)  
   
  `rootIds`  
  [in] Matrice di valori `GCHandleID` che fanno riferimento a un valore Integer contenente informazioni aggiuntive sulla radice di Garbage Collection.  
@@ -49,7 +49,7 @@ HRESULT ConditionalWeakTableElementReferences(     [in]                     ULON
  Nessuno dei valori `ObjectID` restituito dal metodo `ConditionalWeakTableElementReferences` è valido durante il callback stesso, poiché è possibile che il Garbage Collector stia spostando oggetti da posizioni precedenti a nuove posizioni. I profiler non devono quindi tentare di verificare gli oggetti durante una chiamata a `ConditionalWeakTableElementReferences`. In corrispondenza di `GarbageCollectionFinished`, tutti gli oggetti saranno stati spostati nelle nuove posizioni e sarà possibile verificarli.  
   
 ## <a name="example"></a>Esempio  
- Esempio di codice seguente viene illustrato come implementare [ICorProfilerCallback5](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback5-interface.md) e utilizzare questo metodo.  
+ Esempio di codice seguente viene illustrato come implementare [ICorProfilerCallback5](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback5-interface.md) e usare questo metodo.  
   
 ```  
 HRESULT Callback5Impl::ConditionalWeakTableElementReferences(  
@@ -73,14 +73,14 @@ HRESULT Callback5Impl::ConditionalWeakTableElementReferences(
 ```  
   
 ## <a name="remarks"></a>Note  
- Un profiler per il [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] o versioni successive implementa il [ICorProfilerCallback5](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback5-interface.md) interfaccia e registra le dipendenze specificate per il `ConditionalWeakTableElementReferences` metodo. `ICorProfilerCallback5` fornisce il set completo di dipendenze tra oggetti attivi rappresentati da `ConditionalWeakTable` voci. Queste dipendenze e il membro del campo di riferimenti specificati dal [ICorProfilerCallback:: ObjectReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md) metodo abilitare un profiler gestito generare il grafico completo degli oggetti attivi.  
+ Un profiler per il [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] o versioni successive implementa le [ICorProfilerCallback5](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback5-interface.md) interfaccia e registra le dipendenze specificate dal `ConditionalWeakTableElementReferences` (metodo). `ICorProfilerCallback5` fornisce il set completo di dipendenze tra oggetti attivi rappresentati da `ConditionalWeakTable` voci. Queste dipendenze e membro del campo di riferimenti specificati dal [ICorProfilerCallback:: ObjectReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md) metodo abilita un profiler gestito generare il grafico completo degli oggetti attivi.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ICorProfilerCallback5](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback5-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ICorProfilerCallback5](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback5-interface.md)

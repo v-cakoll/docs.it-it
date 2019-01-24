@@ -10,12 +10,12 @@ helpviewer_keywords:
 - throwing exceptions, performance
 ms.assetid: 3ad6aad9-08e6-4232-b336-0e301f2493e6
 author: KrzysztofCwalina
-ms.openlocfilehash: ab125117836545b9a2436347375ed0e08c591c7b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: f9fe3045d8bd8b4d625c5cd49bc18574ebb740de
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153748"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54707726"
 ---
 # <a name="exceptions-and-performance"></a>Eccezioni e prestazioni
 Un problema comune correlato alle eccezioni è che se le eccezioni vengono usate per il codice che normalmente ha esito negativo, le prestazioni dell'implementazione saranno inaccettabili. Si tratta di un problema valido. Quando un membro genera un'eccezione, le prestazioni possono essere notevolmente più lenti. Tuttavia, è possibile ottenere buone prestazioni rimanendo rigorosamente le linee guida di eccezione che impedisce l'utilizzo di codici di errore. Due modelli descritti in questa sezione suggeriscono metodi per eseguire questa operazione.  
@@ -74,5 +74,5 @@ public struct DateTime {
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Linee guida per la progettazione di Framework](../../../docs/standard/design-guidelines/index.md)  
+- [Linee guida per la progettazione di Framework](../../../docs/standard/design-guidelines/index.md)
 - [Linee guida di progettazione delle eccezioni](../../../docs/standard/design-guidelines/exceptions.md)

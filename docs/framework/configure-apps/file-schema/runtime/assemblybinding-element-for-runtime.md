@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: 964cbb35-ab49-4498-8471-209689e5dada
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 33900f40aab85fd67540ecd6004a46e13e8eb8c2
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: c0060115360cd077fd1e390be916f2f8afbadd9a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612036"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54713993"
 ---
 # <a name="ltassemblybindinggt-element-for-ltruntimegt"></a>&lt;assemblyBinding&gt; (elemento) per &lt;runtime&gt;
 Contiene le informazioni sul reindirizzamento della versione degli assembly e i relativi percorsi.  
   
  \<configuration>  
 \<runtime>  
-\<assemblyBinding >  
+\<assemblyBinding>  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,7 +40,7 @@ Contiene le informazioni sul reindirizzamento della versione degli assembly e i 
 |Attributo|Descrizione|  
 |---------------|-----------------|  
 |**xmlns**|Attributo obbligatorio.<br /><br /> Specifica lo spazio dei nomi XML necessario per il binding di assembly. Usare la stringa "urn:schemas-microsoft-com:asm.v1" come valore.|  
-|**AppliesTo**|Specifica la versione di runtime a cui si applica il reindirizzamento di assembly .NET Framework. Questo attributo facoltativo usa un numero di versione di .NET Framework per indicare la versione a cui deve essere applicato. Se non si specifica l'attributo **appliesTo** l'elemento **\<assemblyBinding>** viene applicato a tutte le versioni di .NET Framework. Il **appliesTo** attributo è stato introdotto in .NET Framework versione 1.1; viene ignorata da .NET Framework versione 1.0. Quando si usa .NET Framework versione 1.0 vengono quindi applicati tutti gli elementi **\<assemblyBinding>** anche se viene specificato un attributo **appliesTo**.|  
+|**appliesTo**|Specifica la versione di runtime a cui si applica il reindirizzamento di assembly .NET Framework. Questo attributo facoltativo usa un numero di versione di .NET Framework per indicare la versione a cui deve essere applicato. Se non si specifica l'attributo **appliesTo** l'elemento **\<assemblyBinding>** viene applicato a tutte le versioni di .NET Framework. Il **appliesTo** attributo è stato introdotto in .NET Framework versione 1.1; viene ignorata da .NET Framework versione 1.0. Quando si usa .NET Framework versione 1.0 vengono quindi applicati tutti gli elementi **\<assemblyBinding>** anche se viene specificato un attributo **appliesTo**.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
   
@@ -92,7 +92,7 @@ Contiene le informazioni sul reindirizzamento della versione degli assembly e i 
 </runtime>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
-- [Schema delle impostazioni di runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+## <a name="see-also"></a>Vedere anche
+- [Schema delle impostazioni di runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [Reindirizzamento delle versioni di assembly](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

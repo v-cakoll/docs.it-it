@@ -17,11 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bd8a2d373b801bd8238d50eecb388ef511bc34bc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4c16f904251545b87426210a76c5107e93a27749
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54639562"
 ---
 # <a name="imetadataimportenumfields-method"></a>Metodo IMetaDataImport::EnumFields
 Enumera i token FieldDef per il tipo a cui fa riferimento il token TypeDef specificato.  
@@ -46,7 +47,7 @@ HRESULT EnumFields (
  [in] Il token TypeDef della classe i cui campi sono da enumerare.  
   
  `rFields`  
- [out] Elenco di token FieldDef.  
+ [out] L'elenco dei token FieldDef.  
   
  `cMax`  
  [in] Dimensione massima della matrice `rFields`.  
@@ -59,17 +60,17 @@ HRESULT EnumFields (
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
 |`S_OK`|`EnumFields` stato restituito correttamente.|  
-|`S_FALSE`|Non sono presenti campi da enumerare. In tal caso, `pcTokens` è zero.|  
+|`S_FALSE`|Non sono presenti campi da enumerare. In tal caso, `pcTokens` è uguale a zero.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
- **Libreria:** inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [Interfaccia IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Interfaccia IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

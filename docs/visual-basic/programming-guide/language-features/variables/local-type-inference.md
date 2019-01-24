@@ -12,12 +12,12 @@ helpviewer_keywords:
 - inference [Visual Basic]
 - type inference [Visual Basic]
 ms.assetid: b8307f18-2e56-4ab3-a45a-826873f400f6
-ms.openlocfilehash: b33b8b2d17c240e380377528d4f5d2f511381a7d
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: f4edc879af9539a40269336bed97fe206920992a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37959952"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54706748"
 ---
 # <a name="local-type-inference-visual-basic"></a>Inferenza del tipo di variabile locale (Visual Basic)
 Usa il compilatore Visual Basic *inferenza* per determinare i tipi di dati delle variabili locali dichiarate senza un `As` clausola. Il compilatore deduce il tipo della variabile dal tipo dell'espressione di inizializzazione. In questo modo è possibile dichiarare variabili senza specificare esplicitamente un tipo, come illustrato nell'esempio seguente. Come risultato le dichiarazioni, entrambe `num1` e `num2` sono fortemente tipizzati come numeri interi.  
@@ -71,11 +71,11 @@ Usa il compilatore Visual Basic *inferenza* per determinare i tipi di dati delle
   
  Per altre informazioni, vedere [Option Infer Statement](../../../../visual-basic/language-reference/statements/option-infer-statement.md) e [pagina compilazione, creazione progetti (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic).  
   
-## <a name="see-also"></a>Vedere anche  
- [Tipi anonimi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
- [Associazione anticipata e tardiva](../../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)  
- [Istruzione For Each...Next](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
- [Istruzione For...Next](../../../../visual-basic/language-reference/statements/for-next-statement.md)  
- [Istruzione Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md)  
- [/optioninfer](../../../../visual-basic/reference/command-line-compiler/optioninfer.md)  
- [Introduzione a LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+## <a name="see-also"></a>Vedere anche
+- [Tipi anonimi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
+- [Associazione anticipata e tardiva](../../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)
+- [Istruzione For Each...Next](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)
+- [Istruzione For...Next](../../../../visual-basic/language-reference/statements/for-next-statement.md)
+- [Istruzione Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md)
+- [/optioninfer](../../../../visual-basic/reference/command-line-compiler/optioninfer.md)
+- [Introduzione a LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

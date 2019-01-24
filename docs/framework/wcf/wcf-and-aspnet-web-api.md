@@ -2,12 +2,12 @@
 title: API Web ASP.NET e WCF
 ms.date: 03/30/2017
 ms.assetid: 08ceded3-fd9a-4467-9715-c4cbd9c7228e
-ms.openlocfilehash: 9ff974ca59b5a6448a140cbb1e7d6e8114840bdf
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 460c2d6d3acfd857c3f11db313a2ebb894a14cea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198419"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54697023"
 ---
 # <a name="wcf-and-aspnet-web-api"></a>API Web ASP.NET e WCF
 WCF è il modello di programmazione unificato di Microsoft per la compilazione di applicazioni orientate ai servizi. Consente agli sviluppatori di compilare soluzioni transazionali protette e affidabili in grado di integrarsi a piattaforme diverse e interagire con investimenti esistenti. [ASP.NET Web API](https://www.asp.net/web-api) è un framework che rende più semplice compilare servizi HTTP che soddisfano una vasta gamma di client, inclusi browser e dispositivi mobili. API Web ASP.NET è la piattaforma ideale per compilare applicazioni RESTful in .NET Framework. In questo argomento vengono indicate alcune linee guida utili per decidere la tecnologia che soddisfa meglio le proprie esigenze.  
@@ -26,6 +26,6 @@ WCF è il modello di programmazione unificato di Microsoft per la compilazione d
   
  Utilizzare WCF per creare servizi web affidabili e sicure che sono accessibili tramite un'ampia gamma di trasporti. Utilizzare l'API Web ASP.NET per creare i servizi basati su HTTP accessibili da un'ampia varietà di client. Utilizzare l'API Web ASP.NET se si stanno creando e progettando nuovi servizi in stile REST. Sebbene WCF fornisca supporto per scrivere servizi in stile REST, il supporto per REST nell'API Web ASP.NET è più completo e tutti i futuri miglioramenti della funzionalità REST verranno introdotti nell'API Web ASP.NET. Se si dispone di un servizio WCF e si desidera esporre endpoint REST aggiuntivi, utilizzare WCF e <xref:System.ServiceModel.WebHttpBinding>.  
   
-## <a name="see-also"></a>Vedere anche  
- [Informazioni su Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)  
- [Concetti fondamentali di Windows Communication Foundation](../../../docs/framework/wcf/fundamental-concepts.md)  
+## <a name="see-also"></a>Vedere anche
+- [Informazioni su Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)
+- [Concetti fondamentali di Windows Communication Foundation](../../../docs/framework/wcf/fundamental-concepts.md)

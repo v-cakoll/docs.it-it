@@ -2,21 +2,21 @@
 title: '&lt;add&gt; di &lt;scopes&gt;'
 ms.date: 03/30/2017
 ms.assetid: 0563a7d8-fc84-4c85-9066-af32665857c2
-ms.openlocfilehash: e2bf649259d6ccb0e55428ab3619fe561d051ff7
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 961fb3e388e3ae756bd7511ea6c65df6dd2a1486
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146237"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54705573"
 ---
 # <a name="ltaddgt-of-ltscopesgt"></a>&lt;add&gt; di &lt;scopes&gt;
 Aggiunge URI di ambito personalizzato che è possibile usare per filtrare gli endpoint di servizio durante l'esecuzione di query.  
   
 \<system.ServiceModel>  
-\<i comportamenti >  
-\<endpointBehaviors >  
-\<comportamento >  
-\<endpointDiscovery >  
+\<behaviors>  
+\<endpointBehaviors>  
+\<behavior>  
+\<endpointDiscovery>  
 \<gli ambiti >  
 \<add>  
   
@@ -54,5 +54,5 @@ Aggiunge URI di ambito personalizzato che è possibile usare per filtrare gli en
 |-------------|-----------------|  
 |[\<gli ambiti >](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)|Contiene una raccolta di elementi di configurazione che specificano URI di ambito personalizzati che è possibile usare per filtrare gli endpoint del servizio durante l'esecuzione di query.|  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>
+## <a name="see-also"></a>Vedere anche
+- <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>

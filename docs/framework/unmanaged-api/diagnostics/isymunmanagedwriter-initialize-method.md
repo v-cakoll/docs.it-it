@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 44046560f4f788c4a7d695ff18c9c01740fea35a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e9c38a2d87f8c8db0b77dd60460d6d00a73f41ea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428035"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54710989"
 ---
 # <a name="isymunmanagedwriterinitialize-method"></a>Metodo ISymUnmanagedWriter::Initialize
-Imposta l'interfaccia di emissione di metadati con il quale verrà associato questo writer e il nome del file di output in cui verranno scritti i simboli di debug.  
+Imposta l'interfaccia di emissione dei metadati con il quale verrà associato questo writer e imposta il nome del file di output in cui verranno scritti i simboli di debug.  
   
- Questo metodo può essere chiamato una sola volta e deve essere chiamato prima di altri metodi di scrittura. Per alcuni writer possono richiedere un nome di file. Tuttavia, è possibile passare sempre un nome di file a questo metodo senza effetti negativi sui writer che non utilizzano il nome del file.  
+ Questo metodo può essere chiamato una sola volta e deve essere chiamato prima di qualsiasi altro metodo di scrittura. Per alcuni writer richiedano un nome di file. Tuttavia, è possibile passare sempre un nome di file a questo metodo senza alcun effetto negativo sul writer che non usano il nome del file.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,23 +41,23 @@ HRESULT Initialize(
   
 #### <a name="parameters"></a>Parametri  
  `emitter`  
- [in] Puntatore a interfaccia di emissione dei metadati.  
+ [in] Un puntatore all'interfaccia di emissione dei metadati.  
   
  `filename`  
  [in] Il nome di file in cui vengono scritti i simboli di debug. Se specificato per un writer che non usa i nomi file, il parametro sarà ignorato.  
   
  `pIStream`  
- [in] Se specificato, il writer di simboli genererà i simboli nel determinato <xref:System.Runtime.InteropServices.ComTypes.IStream> anziché nel file specificato nella `filename` parametro. Il parametro `pIStream` è facoltativo.  
+ [in] Se specificato, il writer di simboli genererà i simboli nel dato <xref:System.Runtime.InteropServices.ComTypes.IStream> invece che al file specificato nel `filename` parametro. Il parametro `pIStream` è facoltativo.  
   
  `fFullBuild`  
  [in] `true` se si tratta di una ricompilazione completa. `false` se si tratta di una compilazione incrementale.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK se il metodo ha esito positivo. in caso contrario, E_FAIL o un altro codice di errore.  
+ S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o qualche altro codice di errore.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** CorSym. idl, CorSym.h  
+ **Intestazione:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)  
- [Metodo Initialize2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-initialize2-method.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [Metodo Initialize2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-initialize2-method.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - properties [WPF], DefaultDrawingAttributes
 - DefaultDrawingAttributes property [WPF]
 ms.assetid: 66a3129d-9577-43eb-acbd-56c147282016
-ms.openlocfilehash: 25f9c0141a97d8e52e0883b14fd3e1f4574a05ea
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 4da833256183f10eb62b43c3f665d76a6fc2ba80
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004279"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54711798"
 ---
 # <a name="collect-ink"></a>Raccogliere l'input penna
 
@@ -26,7 +26,7 @@ La raccolta di input penna è una delle funzionalità principali della piattafor
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-Per usare gli esempi seguenti, è innanzitutto necessario installare Visual Studio e [!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)]. È inoltre necessario comprendere come scrivere applicazioni per l'applicazione WPF. Per altre informazioni sulle operazioni iniziali con WPF, vedere [procedura dettagliata: prima applicazione desktop WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).
+Per usare gli esempi seguenti, è innanzitutto necessario installare Visual Studio e [!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)]. È inoltre necessario comprendere come scrivere applicazioni per l'applicazione WPF. Per altre informazioni sulle operazioni iniziali con WPF, vedere [procedura dettagliata: Prima applicazione desktop WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).
 
 ## <a name="use-the-inkcanvas-element"></a>Usare l'elemento InkCanvas
 

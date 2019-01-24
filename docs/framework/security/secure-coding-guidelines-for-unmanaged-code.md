@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: a8d15139-d368-4c9c-a747-ba757781117c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 60e293ac8c9100876aa5a524bb5dda04e9f4183f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cf9071f8b5c4569ace53b13f7b9b7282bf8e87c8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408151"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54711973"
 ---
 # <a name="secure-coding-guidelines-for-unmanaged-code"></a>Linee guida per la creazione di codice sicuro applicabili al codice non gestito
 Alcuni codici di libreria devono chiamare codice non gestito (ad esempio, le API del codice nativo, come Win32). Poiché questo comporta il superamento del perimetro di sicurezza per il codice gestito, è necessaria la dovuta attenzione. Se il codice è indipendente dalla sicurezza, sia il proprio codice sia il codice da cui viene chiamato devono avere l'autorizzazione per codice non gestito (<xref:System.Security.Permissions.SecurityPermission> con il flag <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> specificato).  
@@ -51,5 +51,5 @@ Alcuni codici di libreria devono chiamare codice non gestito (ad esempio, le API
 |**native**|Indipendente dalla sicurezza; in altre parole, codice non gestito per cui è richiesta l'autorizzazione alla chiamata di codice non gestito. Viene eseguito il controllo di sicurezza, che blocca le chiamate non autorizzate.|  
 |**unsafe**|Presenza di un punto di ingresso per codice non gestito pericoloso con annullamento della sicurezza. Gli sviluppatori dovranno usare la massima attenzione nell'uso di codice non gestito di questo tipo, accertandosi che siano attivi altri tipi di sicurezza per evitare vulnerabilità di sicurezza. Questa parola chiave consente l'override del sistema di sicurezza.|  
   
-## <a name="see-also"></a>Vedere anche  
- [Linee guida per la generazione di codice sicuro](../../../docs/standard/security/secure-coding-guidelines.md)
+## <a name="see-also"></a>Vedere anche
+- [Linee guida per la generazione di codice sicuro](../../../docs/standard/security/secure-coding-guidelines.md)

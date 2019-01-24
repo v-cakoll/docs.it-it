@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bed903c7380bc73601f03a83d2c637ef34d9b9e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6d47ca3a9134266d1c40447cea6eb8aaf2cc9eb9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405214"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54706297"
 ---
 # <a name="assemblyattributesgoheresm"></a>AssemblyAttributesGoHereSM
 Usato da ALink come segnaposto per archiviare le informazioni sugli attributi personalizzati.  
@@ -43,7 +43,7 @@ AssemblyAttributeGoHereSM
 ## <a name="requirements"></a>Requisiti  
  mscorlib.dll  
   
-## <a name="see-also"></a>Vedere anche  
- [AssemblyAttributesGoHere](../../../../docs/framework/unmanaged-api/alink/assemblyattributesgohere.md)  
- [AssemblyAttributesGoHereM](../../../../docs/framework/unmanaged-api/alink/assemblyattributesgoherem.md)  
- [AssemblyAttributesGoHereS](../../../../docs/framework/unmanaged-api/alink/assemblyattributesgoheres.md)
+## <a name="see-also"></a>Vedere anche
+- [AssemblyAttributesGoHere](../../../../docs/framework/unmanaged-api/alink/assemblyattributesgohere.md)
+- [AssemblyAttributesGoHereM](../../../../docs/framework/unmanaged-api/alink/assemblyattributesgoherem.md)
+- [AssemblyAttributesGoHereS](../../../../docs/framework/unmanaged-api/alink/assemblyattributesgoheres.md)

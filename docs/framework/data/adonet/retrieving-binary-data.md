@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 56c5a9e3-31f1-482f-bce0-ff1c41a658d0
-ms.openlocfilehash: ec4ef17687e4e1bf2cc18182a64fc7361fe3b6f7
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 2d1b88d25c5c2e94d86c1fed53c472e2b0af493e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43421983"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643650"
 ---
 # <a name="retrieving-binary-data"></a>Recupero di dati binari
 Per impostazione predefinita, il **DataReader** carica i dati in arrivo come una riga, non appena è disponibile un'intera riga di dati. Tuttavia, è necessario gestire gli oggetti BLOB (Binary Large Object, oggetto binario di grandi dimensioni) in modo diverso, poiché è possibile che contengano gigabyte di dati che non possono risiedere in una sola riga. Il **Command. ExecuteReader** metodo ha un overload che accetta un <xref:System.Data.CommandBehavior> per modificare il comportamento predefinito dell'argomento il **DataReader**. È possibile passare <xref:System.Data.CommandBehavior.SequentialAccess> per il **ExecuteReader** metodo per modificare il comportamento predefinito del **DataReader** in modo che invece di caricare le righe di dati, caricherà i dati in modo sequenziale non appena viene ricevuto. Si consiglia di usare questa procedura per caricare BLOB o altre strutture di dati di grandi dimensioni. Notare che questo comportamento può variare a seconda dell'origine dati. La restituzione di un BLOB da Microsoft Access comporta, ad esempio, il caricamento in memoria dell'intero BLOB, anziché il caricamento sequenziale durante la ricezione.  
@@ -153,7 +153,7 @@ reader.Close();
 connection.Close();  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Utilizzo di DataReader](https://msdn.microsoft.com/library/126a966a-d08d-4d22-a19f-f432908b2b54)  
- [Dati binari e con valori elevati SQL Server](../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vedere anche
+- [Utilizzo di DataReader](https://msdn.microsoft.com/library/126a966a-d08d-4d22-a19f-f432908b2b54)
+- [Dati binari e con valori elevati SQL Server](../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
+- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

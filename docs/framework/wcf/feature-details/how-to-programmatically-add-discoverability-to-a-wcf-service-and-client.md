@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: aggiungere capacità di individuazione a un client e un servizio WCF a livello di codice'
+title: 'Procedura: A livello di codice aggiungere funzionalità di individuazione a un Client e servizio WCF'
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-ms.openlocfilehash: 407777b1545fb12eb3ed1787fdba86991c894fdb
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: a0240d09c07a23c2c578008885e5bca00169acdd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838455"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643130"
 ---
-# <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>Procedura: aggiungere capacità di individuazione a un client e un servizio WCF a livello di codice
+# <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>Procedura: A livello di codice aggiungere funzionalità di individuazione a un Client e servizio WCF
 In questo argomento viene illustrato come rendere individuabile un servizio Windows Communication Foundation (WCF). Si basa il [self-hosting](https://go.microsoft.com/fwlink/?LinkId=145523) esempio.  
   
 ### <a name="to-configure-the-existing-self-host-service-sample-for-discovery"></a>Per configurare l'esempio di servizio indipendente esistente per l'individuazione  
@@ -340,6 +340,6 @@ namespace DiscoveryClientApp
 }  
 ```  
 
-## <a name="see-also"></a>Vedere anche  
- [Panoramica di WCF Discovery](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
- [Modello a oggetti WCF Discovery](../../../../docs/framework/wcf/feature-details/wcf-discovery-object-model.md)
+## <a name="see-also"></a>Vedere anche
+- [Panoramica di WCF Discovery](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
+- [Modello a oggetti WCF Discovery](../../../../docs/framework/wcf/feature-details/wcf-discovery-object-model.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: controllare la durata delle animazioni con fotogrammi chiave'
+title: 'Procedura: Controllare la durata delle animazioni con fotogrammi chiave'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - key frames [WPF], timing
 - timing key-fram animation
 ms.assetid: b059216f-7d4b-4ca8-a019-bc287ee7bf16
-ms.openlocfilehash: d65bf6f7643adf1d98d468853ae8017a4a6554ac
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 3a8e11ee8bfbbe87ca5a1c51b815dd21c124a951
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086193"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712025"
 ---
-# <a name="how-to-control-key-frame-animation-timing"></a>Procedura: controllare la durata delle animazioni con fotogrammi chiave
+# <a name="how-to-control-key-frame-animation-timing"></a>Procedura: Controllare la durata delle animazioni con fotogrammi chiave
 In questo esempio viene illustrato come controllare l'intervallo di fotogrammi chiave all'interno di un'animazione con fotogrammi chiave. Analogamente alle altre animazioni, animazioni con fotogrammi chiave hanno un <xref:System.Windows.Media.Animation.Timeline.Duration%2A> proprietà. Oltre a specificare la durata di un'animazione, è necessario specificare quale parte di tale durata viene assegnata a ciascuno dei relativi fotogrammi chiave. Per assegnare l'ora, specificare un <xref:System.Windows.Media.Animation.KeyTime> per ogni fotogramma chiave l'animazione.  
   
  Il <xref:System.Windows.Media.Animation.KeyTime> per ogni fotogramma chiave specifica quando termina un fotogramma chiave (non specifica la durata di riproduzione di un fotogramma chiave). È possibile specificare una <xref:System.Windows.Media.Animation.KeyTime> come un <xref:System.TimeSpan> valore, come una percentuale o il <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> o <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> valore speciale.  
@@ -65,7 +65,7 @@ In questo esempio viene illustrato come controllare l'intervallo di fotogrammi c
   
  Per l'esempio completo, vedere [Esempio di animazione con fotogrammi chiave](https://go.microsoft.com/fwlink/?LinkID=160012). Per altre informazioni sulle animazioni con fotogrammi chiave, vedere la [Cenni preliminari sulle animazioni con fotogrammi chiave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Cenni preliminari sulle animazioni con fotogrammi chiave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
- [Cenni preliminari sull'animazione](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Procedure relative alle proprietà](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)
+## <a name="see-also"></a>Vedere anche
+- [Cenni preliminari sulle animazioni con fotogrammi chiave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+- [Cenni preliminari sull'animazione](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Procedure relative alle proprietà](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)

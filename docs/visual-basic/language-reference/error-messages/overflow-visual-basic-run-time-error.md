@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrERRID_Overflow
 ms.assetid: c6a23279-3086-412a-bcff-ff8ed2cb8c6f
-ms.openlocfilehash: 7546676b85465577b357b7ad0757b4db8d40dbe3
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: c45559042231b72ef1ba892cabbead03797df8e6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863351"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54642512"
 ---
 # <a name="overflow-visual-basic-run-time-error"></a>Overflow (errore di run-time Visual Basic)
 Un overflow quando si tenta di un'assegnazione che superano i limiti del server di destinazione dell'assegnazione.  
@@ -22,8 +22,8 @@ Un overflow quando si tenta di un'assegnazione che superano i limiti del server 
   
 3.  Assicurarsi che i numeri utilizzati nei calcoli che vengono assegnati forzatamente a numeri interi non sono risultati superiori ai numeri interi.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Int32.MaxValue?displayProperty=nameWithType>  
- <xref:System.Double.MaxValue?displayProperty=nameWithType>  
- [Tipi di dati](../../../visual-basic/language-reference/data-types/index.md)  
- [Tipi di errore](../../../visual-basic/programming-guide/language-features/error-types.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Int32.MaxValue?displayProperty=nameWithType>
+- <xref:System.Double.MaxValue?displayProperty=nameWithType>
+- [Tipi di dati](../../../visual-basic/language-reference/data-types/index.md)
+- [Tipi di errore](../../../visual-basic/programming-guide/language-features/error-types.md)

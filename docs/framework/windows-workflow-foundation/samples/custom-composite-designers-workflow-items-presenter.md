@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 70055c4b-1173-47a3-be80-b5bce6f59e9a
-ms.openlocfilehash: f0a3616e6723d43ee4f2772c37e930c5facef31a
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 13d1a76779877bc2ab6d1cbd9c892bf14781e788
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49122331"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54705943"
 ---
 # <a name="custom-composite-designers---workflow-items-presenter"></a>Finestre di progettazione composite personalizzate - Relatore di elementi del flusso di lavoro
 <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> è un tipo chiave nel modello di programmazione della finestra di progettazione di WF che consente la modifica di una raccolta di elementi contenuti. In questo esempio viene illustrato come compilare un ActivityDesigner che espone una raccolta modificabile.
@@ -157,6 +157,6 @@ End Sub
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\WorkflowItemsPresenter`  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Activities.Presentation.WorkflowItemsPresenter>  
- [Sviluppo di applicazioni con Progettazione flussi di lavoro](/visualstudio/workflow-designer/developing-applications-with-the-workflow-designer)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Activities.Presentation.WorkflowItemsPresenter>
+- [Sviluppo di applicazioni con Progettazione flussi di lavoro](/visualstudio/workflow-designer/developing-applications-with-the-workflow-designer)
