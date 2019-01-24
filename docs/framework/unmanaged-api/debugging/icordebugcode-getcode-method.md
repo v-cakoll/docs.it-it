@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d09681f97829f88bedf53af229298d5d57d764df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d057032f2a46ef29a903ae21ab13af02f9d657f1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402689"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728765"
 ---
 # <a name="icordebugcodegetcode-method"></a>Metodo ICorDebugCode::GetCode
-Ottiene il codice per la funzione specificata, formattata per il disassembly. Questo metodo è obsoleto in .NET Framework versione 2.0. Utilizzare [ICorDebugCode2:: GetCodeChunks](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md) invece.  
+Ottiene tutto il codice per la funzione specificata, formattata per il disassembly. Questo metodo è stato deprecato in .NET Framework versione 2.0. Uso [ICorDebugCode2::GetCodeChunks](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md) invece.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -57,17 +57,17 @@ HRESULT GetCode (
  [out] Il numero di byte restituiti.  
   
 ## <a name="remarks"></a>Note  
- Se il codice della funzione è stato suddiviso in più blocchi, questi vengono concatenati in ordine crescente di offset nativo. Non vengono controllati i limiti di istruzione.  
+ Se il codice della funzione è stato diviso in più blocchi, questi vengono concatenati in ordine crescente offset nativo. I limiti di istruzioni non vengono controllati.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
  **Versioni di .NET framework:** 1.1, 1.0  
   
-## <a name="see-also"></a>Vedere anche  
- [Metodo GetCodeChunks](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)  
- 
+## <a name="see-also"></a>Vedere anche
+- [Metodo GetCodeChunks](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)
+

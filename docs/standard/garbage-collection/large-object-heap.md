@@ -8,12 +8,12 @@ helpviewer_keywords:
 - GC [.NET ], large object heap
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cdbbf3138cad0a2fae311bf03476eebba23b7320
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 822aedd3e08ad3f8950f6531fe687ec26df4622a
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50202907"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415533"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Heap oggetti grandi nei sistemi Windows
 
@@ -47,8 +47,8 @@ Quando viene attivata una Garbage Collection, il Garbage Collector rintraccia gl
 
 La figura 1 illustra uno scenario in cui GC forma la generazione 1 dopo la prima operazione GC di generazione 0 in cui `Obj1` e `Obj3` sono inattivi e forma la generazione 2 dopo la prima operazione GC di generazione 1 in cui `Obj2` e `Obj5` sono inattivi. Si noti che questa figura e le successive sono incluse a semplice scopo illustrativo e contengono pochissimi oggetti per illustrare meglio cosa accade nell'heap. In realtà un'operazione GC include in genere un numero di oggetti molto più elevato.
 
-![Figura 1: GC generazione 0 e GC generazione 1](media/loh/loh-figure-1.jpg)  
-Figura 1: GC generazione 0 e GC generazione 1.
+![Figura 1: GC di generazione 0 e GC di generazione 1](media/loh/loh-figure-1.jpg)  
+Figura 1: GC di generazione 0 e GC di generazione 1.
 
 Nella figura 2, dopo un'operazione GC di generazione 2 in cui viene rilevato che `Obj1` e `Obj2` sono inattivi, il Garbage Collector crea spazio libero contiguo con la memoria occupata in precedenza da `Obj1` e `Obj2` e tale memoria viene usata per soddisfare una richiesta di allocazione per `Obj4`. Anche lo spazio dopo l'ultimo oggetto, `Obj3`, e fino alla fine del segmento può essere usato per soddisfare richieste di allocazione.
 
@@ -144,7 +144,7 @@ Per raccogliere dati sulle prestazioni dell'heap oggetti grandi è possibile usa
 
 ### <a name="net-clr-memory-performance-counters"></a>Contatori delle prestazioni della memoria CLR .NET
 
-Questi contatori delle prestazioni sono in genere un buon primo passo nell'analisi dei problemi di prestazioni (anche se Microsoft consiglia l'uso degli [eventi ETW](#etw)). Configurare Performance Monitor aggiungendo i contatori desiderati, come illustrato nella figura 4. I contatori importanti per l'heap oggetti grandi sono:
+Questi contatori delle prestazioni sono in genere un buon primo passo nell'analisi dei problemi di prestazioni (anche se Microsoft consiglia l'uso degli [eventi ETW](#etw-events)). Configurare Performance Monitor aggiungendo i contatori desiderati, come illustrato nella figura 4. I contatori importanti per l'heap oggetti grandi sono:
 
 - **Raccolte di generazione 2**
 

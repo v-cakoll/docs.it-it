@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ee18cbdc821dc523e9012488f0c08d9211164e62
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b65f3476da69249f449090e1f2d67c58ed5a427a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445562"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54737296"
 ---
 # <a name="imetadataemitsetfieldmarshal-method"></a>Metodo IMetaDataEmit::SetFieldMarshal
-Imposta le informazioni di marshalling per il parametro di campo, metodo o un metodo a cui fa riferimento il token specificato di PInvoke.  
+Imposta i PInvoke informazioni di marshalling per il parametro di metodo viene restituito, campo o metodo fa riferimento il token specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,7 +39,7 @@ HRESULT SetFieldMarshal (
   
 #### <a name="parameters"></a>Parametri  
  `tk`  
- [in] Il token per l'elemento di dati di destinazione. Questo è un `mdFieldDef` o `mdParamDef` token.  
+ [in] Il token per l'elemento di dati di destinazione. Questo è un `mdFieldDef` o un `mdParamDef` token.  
   
  `pvNativeType`  
  [in] La firma per il tipo non gestito.  
@@ -48,14 +48,14 @@ HRESULT SetFieldMarshal (
  [in] Il numero di byte in `pvNativeType`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
- **Libreria:** usata come risorsa in Mscoree. dll  
+ **Libreria:** Usato come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [Interfaccia IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [Interfaccia IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

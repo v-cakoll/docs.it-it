@@ -2,12 +2,12 @@
 title: Gestione degli errori
 ms.date: 03/30/2017
 ms.assetid: c948841a-7db9-40ae-9b78-587d216cbcaf
-ms.openlocfilehash: 548d93e63440e256ddb54c3ca792a49817c9b059
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 396ad7ba6f690cedf783adcf180c92a88427a959
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49452849"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54695556"
 ---
 # <a name="error-handling"></a>Gestione degli errori
 ## <a name="error-handling-in-windows-communication-foundation"></a>Gestione degli errori in Windows Communication Foundation  
@@ -67,5 +67,5 @@ ms.locfileid: "49452849"
   
  Un errore di invio di conversione dei tipi può essere analizzato in modo analogo a molti altri tipi di errori di invio installando un gestore degli errori. Il punto di estendibilità di IErrorHandler viene chiamato per gestire le eccezioni a livello di servizio. Da quel punto è possibile scegliere la risposta da inviare al chiamante ed eseguire eventuali attività personalizzate e di creazione di rapporti.  
   
-## <a name="see-also"></a>Vedere anche  
- [Programmazione WCF di base](../basic-wcf-programming.md)
+## <a name="see-also"></a>Vedere anche
+- [Programmazione WCF di base](../basic-wcf-programming.md)

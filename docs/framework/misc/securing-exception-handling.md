@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 1f3da743-9742-47ff-96e6-d0dd1e9e1c19
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fe978930a9f84e0084f79f5fe585a1ecc3bf4eb2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c406edcef393d3c2b9e4cf6dbeee9d572c0951f4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393042"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54679383"
 ---
 # <a name="securing-exception-handling"></a>Protezione della gestione delle eccezioni
-In Visual C++ e Visual Basic, un'espressione di filtro ulteriormente verso l'alto e viene eseguito prima di qualsiasi **infine** istruzione. Il **catch** blocco associato a tale filtro viene eseguito dopo il **infine** istruzione. Per ulteriori informazioni, vedere [eccezioni filtrate dall'utente](../../../docs/standard/exceptions/using-user-filtered-exception-handlers.md). In questa sezione vengono esaminate le implicazioni di sicurezza di questo ordine. Si consideri l'esempio di pseudocodice seguente è illustrato l'ordine delle istruzioni di filtro e **infine** le istruzioni vengono eseguite.  
+In Visual C++ e Visual Basic, un'espressione di filtro ulteriormente verso l'alto e viene eseguito prima di qualsiasi **infine** istruzione. Il **intercettare** blocco associato a tale filtro viene eseguito dopo il **infine** istruzione. Per altre informazioni, vedere [eccezioni filtrate dall'utente](../../../docs/standard/exceptions/using-user-filtered-exception-handlers.md). In questa sezione esamina le implicazioni di sicurezza di quest'ordine. Si consideri l'esempio di pseudocodice seguente è illustrato l'ordine delle istruzioni di filtro e **infine** le istruzioni vengono eseguite.  
   
 ```cpp  
 void Main()   
@@ -60,7 +60,7 @@ Finally
 Catch  
 ```  
   
- Il filtro viene eseguito prima il **infine** istruzione, in modo da problemi di sicurezza possono essere introdotti dal tutto ciò che viene in cui l'esecuzione di altro codice potrebbe sfruttare. Ad esempio:  
+ Il filtro viene eseguito prima il **infine** istruzione, in modo che i problemi di sicurezza possono essere introdotti dal tutto ciò che rende uno stato di modifica in cui l'esecuzione di altro codice è stato possibile sfruttare i vantaggi. Ad esempio:  
   
 ```cpp  
 try   
@@ -79,7 +79,7 @@ finally
 }  
 ```  
   
- Questo pseudo-codice consente un filtro di livello più alto lo stack di eseguire codice arbitrario. Altri esempi di operazioni che possono avere un effetto simile sono la rappresentazione temporanea di un'altra identità, l'impostazione di un flag interno che consente di ignorare un controllo di sicurezza o modificare le impostazioni cultura associate al thread. La soluzione consigliata consiste nell'introduzione di un gestore di eccezioni per isolare le modifiche del codice dello stato del thread da blocchi dei filtri. Tuttavia, è importante che il gestore di eccezioni sia introdotto o non verrà risolto il problema. Nell'esempio seguente passa le impostazioni cultura dell'interfaccia utente, ma qualsiasi tipo di modifica dello stato di thread potrebbe essere esposta in modo analogo.  
+ Questo pseudocodice consente a un filtro di livello più alto lo stack per l'esecuzione arbitraria di codice. Altri esempi di operazioni che possono avere un effetto simile sono la rappresentazione temporanea di un'altra identità, impostando un flag interno che consente di ignorare un controllo di sicurezza o modificare le impostazioni cultura associate al thread. La soluzione consigliata è introdurre un gestore di eccezioni per isolare le modifiche del codice dello stato del thread da blocchi dei filtri. Tuttavia, è importante che il gestore di eccezioni è lecito correttamente o non verrà risolto questo problema. Nell'esempio seguente passa le impostazioni cultura dell'interfaccia utente, ma qualsiasi tipo di modifica dello stato di thread potrebbe essere esposta in modo analogo.  
   
 ```cpp  
 YourObject.YourMethod()  
@@ -116,7 +116,7 @@ Thread.CurrentThread.CurrentUICulture)
 End Class  
 ```  
   
- Per eseguire il wrapping esistente è in questo caso è la soluzione corretta **provare**/**infine** blocco in un **provare**/**catch** blocco. La semplice introduzione di un **catch-throw** clausola in esistente **provare**/**infine** blocco il problema persiste, come illustrato nell'esempio seguente.  
+ In questo caso la soluzione corretta consiste nell'inserire l'oggetto esistente **provare**/**infine** blocco in un **provare**/**catch** blocco. La semplice introduzione di un **catch-throw** clausola esistente **provare**/**infine** blocco non risolve il problema, come illustrato nell'esempio seguente.  
   
 ```cpp  
 YourObject.YourMethod()  
@@ -136,9 +136,9 @@ YourObject.YourMethod()
 }  
 ```  
   
- Ciò non risolve il problema, perché il **infine** istruzione non è stato eseguito prima il `FilterFunc` Ottiene controllo.  
+ Non viene risolto il problema in quanto il **infine** istruzione non è stato eseguito prima il `FilterFunc` Ottiene controllo.  
   
- Nell'esempio seguente corregge il problema, verificare che il **infine** clausola sia eseguita prima della generazione di un'eccezione di blocchi di filtro delle eccezioni dei chiamanti.  
+ Nell'esempio seguente corregge il problema, verificare che il **infine** clausola è stata eseguita prima della generazione di un'eccezione di blocchi di filtro delle eccezioni dei chiamanti.  
   
 ```cpp  
 YourObject.YourMethod()  
@@ -160,5 +160,5 @@ YourObject.YourMethod()
 }  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Linee guida per la generazione di codice sicuro](../../../docs/standard/security/secure-coding-guidelines.md)
+## <a name="see-also"></a>Vedere anche
+- [Linee guida per la generazione di codice sicuro](../../../docs/standard/security/secure-coding-guidelines.md)

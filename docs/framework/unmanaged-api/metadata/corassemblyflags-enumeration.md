@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9d6ec37bbd8750c27a41b5f18180c7726cdcd483
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f99fb7a693c47b257abe9c0b783856179fc9f0eb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442837"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582376"
 ---
 # <a name="corassemblyflags-enumeration"></a>Enumerazione CorAssemblyFlags
 Contiene valori che descrivono i metadati applicati alla compilazione di un assembly.  
@@ -66,24 +66,24 @@ typedef enum CorAssemblyFlags {
 |`afPA_IA64`|Indica che l'architettura del processore Itanium (PE32 +).|  
 |`afPA_AMD64`|Indica che l'architettura del processore AMD X64 (PE32 +).|  
 |`afPA_ARM`|Indica che l'architettura del processore ARM (PE32).|  
-|`afPA_NoPlatform`|Indica che l'assembly è un assembly di riferimento. ovvero, si applica a qualsiasi architettura, ma non è possibile eseguire su qualsiasi architettura. Di conseguenza, il flag è identico `afPA_Mask`.|  
-|`afPA_Specified`|Indica che i flag di architettura del processore devono essere propagati ad il `AssemblyRef` record.|  
+|`afPA_NoPlatform`|Indica che l'assembly è un assembly di riferimento. vale a dire, si applica a qualsiasi architettura, ma non è possibile eseguire su qualsiasi architettura. Di conseguenza, il flag è identico `afPA_Mask`.|  
+|`afPA_Specified`|Indica che il flag di architettura del processore deve essere propagato al `AssemblyRef` record.|  
 |`afPA_Mask`|Maschera che descrive l'architettura del processore.|  
 |`afPA_FullMask`|Specifica che la descrizione dell'architettura del processore è inclusa.|  
-|`afPA_Shift`|Indica un numero di spostamenti nei flag di architettura del processore da e verso l'indice.|  
-|`afEnableJITcompileTracking`|Indica il valore corrispondente di <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> del <xref:System.Diagnostics.DebuggableAttribute>.|  
-|`afDisableJITcompileOptimizer`|Indica il valore corrispondente di <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> del <xref:System.Diagnostics.DebuggableAttribute>.|  
-|`afRetargetable`|Indica che l'assembly può essere reindirizzato in fase di esecuzione a un assembly da un server di pubblicazione diverso.|  
+|`afPA_Shift`|Indica un conteggio dello spostamento nei flag di architettura di processore da e verso l'indice.|  
+|`afEnableJITcompileTracking`|Indica il valore corrispondente dal <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> del <xref:System.Diagnostics.DebuggableAttribute>.|  
+|`afDisableJITcompileOptimizer`|Indica il valore corrispondente dal <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> del <xref:System.Diagnostics.DebuggableAttribute>.|  
+|`afRetargetable`|Indica che l'assembly può essere ridestinato in fase di esecuzione a un assembly da un autore diverso.|  
 |`afContentType_Mask`|Maschera che descrive il tipo di contenuto.|  
 |`afContentType_Default`|Indica il tipo di contenuto predefinito.|  
 |`afContentType_WindowsRuntime`|Indica il [!INCLUDE[wrt](../../../../includes/wrt-md.md)] tipo di contenuto.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorHdr. H  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Enumerazioni dei metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Vedere anche
+- [Enumerazioni dei metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

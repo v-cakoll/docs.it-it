@@ -1,16 +1,16 @@
 ---
-title: "Procedura: recuperare metadati attraverso un'associazione non MEX"
+title: "Procedura: Recuperare metadati attraverso un'associazione non MEX"
 ms.date: 03/30/2017
 ms.assetid: 2292e124-81b2-4317-b881-ce9c1ec66ecb
-ms.openlocfilehash: 198c343aa6f25d55e518990dc1dbd2667a8c17ad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ac0a7d979e6b86933c4acd88b1a2fa11ba5bc991
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33488088"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54689551"
 ---
-# <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a>Procedura: recuperare metadati attraverso un'associazione non MEX
-In questo argomento viene illustrato come recuperare metadati da un endpoint MEX attraverso un'associazione non MEX. Il codice in questo esempio è basato sul [Endpoint di metadati protetto personalizzato](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) esempio.  
+# <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a>Procedura: Recuperare metadati attraverso un'associazione non MEX
+In questo argomento viene illustrato come recuperare metadati da un endpoint MEX attraverso un'associazione non MEX. Il codice in questo esempio si basa sul [Endpoint di metadati protetto personalizzato](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) esempio.  
   
 ### <a name="to-retrieve-metadata-over-a-non-mex-binding"></a>Per recuperare metadati attraverso un'associazione non MEX  
   
@@ -121,7 +121,7 @@ In questo argomento viene illustrato come recuperare metadati da un endpoint MEX
     ServiceEndpointCollection endpoints = importer.ImportAllEndpoints();  
     ```  
   
-5.  A questo punto, si ha una raccolta di endpoint del servizio. Per ulteriori informazioni sull'importazione dei metadati, vedere [procedura: importare metadati negli endpoint del servizio](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md).  
+5.  A questo punto, si ha una raccolta di endpoint del servizio. Per altre informazioni sull'importazione di metadati, vedere [come: Importare metadati negli endpoint servizio](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Metadati](../../../../docs/framework/wcf/feature-details/metadata.md)
+## <a name="see-also"></a>Vedere anche
+- [Metadati](../../../../docs/framework/wcf/feature-details/metadata.md)

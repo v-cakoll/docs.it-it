@@ -1,15 +1,15 @@
 ---
 title: Attività di apprendimento automatico - ML.NET
-description: Esplorare le diverse attività di apprendimento automatico e gli algoritmi di apprendimento associati che sono supportati in ML.NET.
+description: Esplorare le diverse attività di apprendimento automatico e le attività associate supportate in ML.NET.
 ms.custom: seodec18
-ms.date: 11/29/2018
+ms.date: 01/15/2019
 author: jralexander
-ms.openlocfilehash: 4b333fb8c954c94ed84033d9858a496f591f2169
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 02b454d18eca36c94c27ae15665af5df2ec87905
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126588"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415702"
 ---
 # <a name="machine-learning-tasks-in-mlnet"></a>Attività di apprendimento automatico in ML.NET
 
@@ -45,9 +45,10 @@ Per le attività di classificazione binaria sono disponibili gli algoritmi di ap
 * [BinaryClassificationGamTrainer](xref:Microsoft.ML.Trainers.FastTree.BinaryClassificationGamTrainer)
 * [FastForestClassification](xref:Microsoft.ML.Trainers.FastTree.FastForestClassification)
 * [FastTreeBinaryClassificationTrainer](xref:Microsoft.ML.Trainers.FastTree.FastTreeBinaryClassificationTrainer)
-* [FieldAwareFactorizationMachineTrainer](xref:Microsoft.ML.Runtime.FactorizationMachine.FieldAwareFactorizationMachineTrainer)
-* [LightGbmBinaryTrainer](xref:Microsoft.ML.Runtime.LightGBM.LightGbmBinaryTrainer)
-* [LinearSvm](xref:Microsoft.ML.Trainers.Online.LinearSvm)
+* [FieldAwareFactorizationMachineTrainer](xref:Microsoft.ML.FactorizationMachine.FieldAwareFactorizationMachineTrainer)
+* [LightGbmBinaryTrainer](xref:Microsoft.ML.LightGBM.LightGbmBinaryTrainer)
+* [LinearSvmTrainer](xref:Microsoft.ML.Trainers.Online.LinearSvmTrainer)
+* [LogisticRegression](xref:Microsoft.ML.Learners.LogisticRegression)
 * [PriorTrainer](xref:Microsoft.ML.Trainers.PriorTrainer)
 * [RandomTrainer](xref:Microsoft.ML.Trainers.RandomTrainer)
 * [StochasticGradientDescentClassificationTrainer](xref:Microsoft.ML.Trainers.StochasticGradientDescentClassificationTrainer)
@@ -77,9 +78,8 @@ Algoritmi di apprendimento consigliati per la classificazione multiclasse:
 
 Per le attività di classificazione multiclasse sono disponibili gli algoritmi di apprendimento seguenti:
 
-* [LightGbmMulticlassTrainer](xref:Microsoft.ML.Runtime.LightGBM.LightGbmMulticlassTrainer)
-* [MetaMulticlassTrainer<TTransformer,TModel>](xref:Microsoft.ML.Runtime.Learners.MetaMulticlassTrainer%602)
-* [MultiClassClassificationTrainers](xref:Microsoft.ML.Trainers.MultiClassClassificationTrainers)
+* [LightGbmMulticlassTrainer](xref:Microsoft.ML.LightGBM.LightGbmMulticlassTrainer)
+* [MetaMulticlassTrainer<TTransformer,TModel>](xref:Microsoft.ML.Learners.MetaMulticlassTrainer%602)
 * [MultiClassNaiveBayesTrainer](xref:Microsoft.ML.Trainers.MultiClassNaiveBayesTrainer)
 * [Ova](xref:Microsoft.ML.Trainers.Ova)
 * [Pkpd](xref:Microsoft.ML.Trainers.Pkpd)
@@ -87,7 +87,7 @@ Per le attività di classificazione multiclasse sono disponibili gli algoritmi d
 
 ## <a name="regression"></a>Regressione
 
-Un attività di [apprendimento automatico con supervisione](glossary.md#supervised-machine-learning) che viene usata per stimare il valore dell'etichetta da un set di caratteristiche correlate. L'etichetta può essere relativa a qualsiasi valore reale e non appartiene a un set finito di valori come nelle attività di classificazione. Gli algoritmi di regressione modellano la dipendenza dell'etichetta in base alle caratteristiche correlate per determinare come cambierà l'etichetta quando variano i valori delle caratteristiche. L'input di un algoritmo di regressione è un set di esempi con etichette di valori noti. L'output di un algoritmo di regressione è una funzione, che è possibile usare per stimare il valore dell'etichetta per qualsiasi nuovo set di caratteristiche di input. Alcuni esempi di scenari di regressione sono i seguenti:
+Un attività di [apprendimento automatico con supervisione](glossary.md#supervised-machine-learning) che viene usata per stimare il valore dell'etichetta da un set di funzionalità correlate. L'etichetta può essere relativa a qualsiasi valore reale e non appartiene a un set finito di valori come nelle attività di classificazione. Gli algoritmi di regressione modellano la dipendenza dell'etichetta in base alle relative funzionalità correlate per determinare come cambierà l'etichetta quando variano i valori delle funzionalità. L'input di un algoritmo di regressione è un set di esempi con etichette di valori noti. L'output di un algoritmo di regressione è una funzione, che è possibile usare per stimare il valore dell'etichetta per qualsiasi nuovo set di funzionalità di input. Alcuni esempi di scenari di regressione sono i seguenti:
 
 * Stima dei prezzi delle case in base alle caratteristiche, come numero di camere da letto, posizione o dimensione.
 * Stima dei prezzi futuri delle azioni in base ai dati cronologici e alle tendenze di mercato correnti.
@@ -105,18 +105,15 @@ Algoritmi di apprendimento consigliati per la regressione:
 Per le attività di regressione sono disponibili gli algoritmi di apprendimento seguenti:
 
 * [FastTreeRegressionTrainer](xref:Microsoft.ML.Trainers.FastTree.FastTreeRegressionTrainer)
-* [FastTreeRegressionFastTreeTrainer](xref:Microsoft.ML.Runtime.FastTreeRegressionFastTreeTrainer)
-* [FastTreeTweedieRegressionFastTreeTrainer](xref:Microsoft.ML.Runtime.FastTreeTweedieRegressionFastTreeTrainer)
 * [FastTreeTweedieTrainer](xref:Microsoft.ML.Trainers.FastTree.FastTreeTweedieTrainer)
-* [LightGbmRegressorTrainer](xref:Microsoft.ML.Runtime.LightGBM.LightGbmRegressorTrainer)
-* [LogisticRegression](xref:Microsoft.ML.Runtime.Learners.LogisticRegression)
+* [LightGbmRegressorTrainer](xref:Microsoft.ML.LightGBM.LightGbmRegressorTrainer)
 * [OlsLinearRegressionTrainer](xref:Microsoft.ML.Trainers.HalLearners.OlsLinearRegressionTrainer)
 * [OnlineGradientDescentTrainer](xref:Microsoft.ML.Trainers.Online.OnlineGradientDescentTrainer)
 * [PoissonRegression](xref:Microsoft.ML.Trainers.PoissonRegression)
 * [RegressionGamTrainer](xref:Microsoft.ML.Trainers.FastTree.RegressionGamTrainer)
 * [SdcaRegressionTrainer](xref:Microsoft.ML.Trainers.SdcaRegressionTrainer)
 * [FastTree.SingleTrainer](xref:Microsoft.ML.Trainers.FastTree.SingleTrainer)
-* [LightGBM.SingleTrainer](xref:Microsoft.ML.Runtime.LightGBM.SingleTrainer)
+* [LightGBM.SingleTrainer](xref:Microsoft.ML.LightGBM.SingleTrainer)
 
 ## <a name="clustering"></a>Clustering
 
@@ -161,11 +158,10 @@ Un'attività di ranking crea un modello di ranking in base a un set di esempi co
 
 Per le attività di ranking sono disponibili gli algoritmi di apprendimento seguenti:
 
-* [FastTreeRankingFastTreeTrainer](xref:Microsoft.ML.Runtime.FastTreeRankingFastTreeTrainer)
 * [FastTreeRankingTrainer](xref:Microsoft.ML.Trainers.FastTree.FastTreeRankingTrainer)
-* [LightGbmRankingTrainer](xref:Microsoft.ML.Runtime.LightGBM.LightGbmRankingTrainer)
+* [LightGbmRankingTrainer](xref:Microsoft.ML.LightGBM.LightGbmRankingTrainer)
 
-## <a name="recommendation"></a>Raccomandazione
+## <a name="recommendation"></a>Consiglio
 
 Un'attività di raccomandazione consente di generare un elenco di servizi o prodotti consigliati. ML.NET usa la [fattorizzazione di matrice](https://en.wikipedia.org/wiki/Matrix_factorization_%28recommender_systems%29) e un algoritmo di [filtraggio collaborativo](https://en.wikipedia.org/wiki/Collaborative_filtering) per le raccomandazioni quando si hanno dati cronologici di classificazione dei prodotti nel proprio catalogo. Ad esempio, quando sono presenti dati cronologici di classificazione di film per gli utenti e si vogliono raccomandare altri film a cui questi potrebbero essere interessati.
 

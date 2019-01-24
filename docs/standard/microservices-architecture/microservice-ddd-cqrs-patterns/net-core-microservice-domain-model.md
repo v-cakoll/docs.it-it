@@ -4,12 +4,12 @@ description: Architettura di microservizi .NET per applicazioni .NET incluse in 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 1c21ba1cc4c02336a204b1fe91b72e5f3e89228c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a0b3e75c6a93aebf979b8df758fe37460c046a15
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127134"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415936"
 ---
 # <a name="implement-a-microservice-domain-model-with-net-core"></a>Implementare un modello di dominio del microservizio con .NET Core 
 
@@ -152,7 +152,7 @@ Anche la nuova operazione OrderItem(params) sarà controllata ed eseguita dal me
 
 Quando si usa Entity Framework Core 1.1 o versioni successive, un'entità DDD può essere espressa meglio perché consente di [eseguire il mapping ai campi](https://docs.microsoft.com/ef/core/modeling/backing-field) oltre alle proprietà. Ciò è utile quando si proteggono le raccolte di entità figlio oppure oggetti valore. Con questa funzionalità avanzata, è possibile usare i semplici campi privati anziché le proprietà e implementare gli aggiornamenti della raccolta di campi nei metodi pubblici e fornire l'accesso di sola lettura usando il metodo AsReadOnly.
 
-In DDD, aggiornare l'entità usando solo i metodi nell'entità (o costruttore) per controllare qualsiasi invariante e la coerenza dei dati, dunque le proprietà sono definite solo con una funzione di accesso Get. Le proprietà sono supportate da campi privati. I membri privati sono accessibili solo dall'interno della classe. Tuttavia, esiste un'eccezione: questi campi devono essere impostati anche in EF Core, in modo che venga restituito l'oggetto con i valori appropriati.
+In DDD, aggiornare l'entità usando solo i metodi nell'entità (o costruttore) per controllare qualsiasi invariante e la coerenza dei dati, dunque le proprietà sono definite solo con una funzione di accesso Get. Le proprietà sono supportate da campi privati. I membri privati sono accessibili solo dall'interno della classe. Esiste tuttavia un'eccezione: questi campi devono essere impostati anche in EF Core, in modo che venga restituito l'oggetto con i valori appropriati.
 
 ### <a name="map-properties-with-only-get-accessors-to-the-fields-in-the-database-table"></a>Mappare le proprietà solo con funzioni di accesso Get ai campi nella tabella di database
 
@@ -171,8 +171,8 @@ Ad esempio, nell'esempio di codice OrderAggregate precedente, sono presenti dive
 - **Vaughn Vernon. Modellazione di aggregazioni con DDD ed Entity Framework.** Si osservi che *non* si tratta di Entity Framework Core. \
   [*https://vaughnvernon.co/?p=879*](https://vaughnvernon.co/?p=879)
 
-- **Julie Lerman. Programmazione per DDD (Domain-Driven Design): suggerimenti per sviluppatori attenti ai dati** \
-  [*https://msdn.microsoft.com/magazine/dn342868.aspx*](https://msdn.microsoft.com/en-us/magazine/dn342868.aspx)
+- **Julie Lerman. Coding for Domain-Driven Design: Tips for Data-Focused Devs** \ (Creazione di codice per strutture basate sui domini: suggerimenti per lo sviluppo incentrato sui dati)
+  [*https://msdn.microsoft.com/magazine/dn342868.aspx*](https://msdn.microsoft.com/magazine/dn342868.aspx)
 
 - **Udi Dahan. How to create fully encapsulated Domain Models** \ (Come creare modelli di dominio completamente incapsulati)
   [*http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/*](http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/)

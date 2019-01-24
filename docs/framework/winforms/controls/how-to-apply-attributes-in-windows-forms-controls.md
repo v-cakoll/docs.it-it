@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: applicare attributi nei controlli Windows Form'
+title: 'Procedura: Applicare attributi nei controlli di Windows Form'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - attributes [Windows Forms], applying
 - Windows Forms controls, applying attributes
 ms.assetid: af0a3f7f-155b-4ba1-83c4-9cf721331a06
-ms.openlocfilehash: 1ab54b0c6828a0648fecfc293b6a7143b012ad6a
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 522c8b207b86608e3bbd9a5831a3adb5c6d6d430
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45592964"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54735156"
 ---
-# <a name="how-to-apply-attributes-in-windows-forms-controls"></a>Procedura: applicare attributi nei controlli Windows Form
+# <a name="how-to-apply-attributes-in-windows-forms-controls"></a>Procedura: Applicare attributi nei controlli di Windows Form
 Per lo sviluppo di componenti e controlli che interagiscano correttamente con l'ambiente di progettazione ed eseguito correttamente in fase di esecuzione, è necessario applicare correttamente gli attributi alle classi e membri.  
   
 ## <a name="example"></a>Esempio  
@@ -77,9 +77,9 @@ Per lo sviluppo di componenti e controlli che interagiscano correttamente con l'
   
 -   Il form che contiene il `AttributesDemoControl` richiede un riferimento al `AttributesDemoControl` per compilare assembly.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.IComparable>  
- <xref:System.Windows.Forms.DataGridView>  
- [Sviluppo di controlli Windows Form personalizzati con .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
- [Attributi nei controlli Windows Forms](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)  
- [Procedura: serializzare raccolte di tipi Standard tramite DesignerSerializationVisibilityAttribute](https://msdn.microsoft.com/library/7829fcdd-8205-405f-8231-a1282a9835c9)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.IComparable>
+- <xref:System.Windows.Forms.DataGridView>
+- [Sviluppo di controlli Windows Form personalizzati con .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
+- [Attributi nei controlli Windows Forms](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)
+- [Procedura: Serializzare raccolte di tipi Standard tramite DesignerSerializationVisibilityAttribute](https://msdn.microsoft.com/library/7829fcdd-8205-405f-8231-a1282a9835c9)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 83f6190872ecf4435688f3b7c82a61f5f15d9f62
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f988f95c28e6d2248882fb033b8d8c4d3c629229
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443326"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744193"
 ---
 # <a name="assemblymetadata-structure"></a>Struttura ASSEMBLYMETADATA
-Contiene informazioni sull'assembly di riferimento, tra cui la versione e il livello di supporto per le impostazioni locali, processori e sistemi operativi.  
+Contiene informazioni sull'assembly di riferimento, inclusi la versione e del relativo livello di supporto per le impostazioni locali, processori e sistemi operativi.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -47,11 +47,11 @@ typedef struct {
   
 |Membro|Descrizione|  
 |------------|-----------------|  
-|`usMajorVersion`|Il numero di versione principale dell'assembly di riferimento. Questo valore non può essere zero. Se tutti i bit di `usMajorVersion` sono impostati, la versione principale non è specificata.|  
-|`usMinorVersion`|Il numero di versione secondaria dell'assembly di riferimento. Questo valore non può essere zero. Se tutti i bit di `usMinorVersion` sono impostati, la versione secondaria non è specificata.|  
-|`usBuildNumber`|Il numero di build dell'assembly di riferimento. Questo valore non può essere zero. Se tutti i bit di `usBuildNumber` sono impostati, il numero di build non è specificato.|  
-|`usRevisionNumber`|Il numero di revisione dell'assembly di riferimento. Questo valore non può essere zero. Se tutti i bit di `usRevisionNumber` sono impostati, non viene specificato il numero di revisione.|  
-|`szLocale`|Un elenco di nomi delle impostazioni locali conformi alle specifiche RFC1766, separati da punti e virgola, che specifica le impostazioni locali supportate dall'assembly di riferimento. Un valore null indica l'indipendenza dalle impostazioni locali. **Nota:** In .NET Framework versione 1.0 non è possibile specificare più di una delle impostazioni locali.|  
+|`usMajorVersion`|Il numero di versione principale dell'assembly di riferimento. Questo valore non può essere zero. Se tutti i bit di `usMajorVersion` vengono impostate, la versione principale non è specificata.|  
+|`usMinorVersion`|Il numero di versione secondaria dell'assembly di riferimento. Questo valore non può essere zero. Se tutti i bit di `usMinorVersion` vengono impostate, la versione secondaria non è specificata.|  
+|`usBuildNumber`|Il numero di build dell'assembly di riferimento. Questo valore non può essere zero. Se tutti i bit di `usBuildNumber` vengono impostate, il numero di build non è specificato.|  
+|`usRevisionNumber`|Il numero di revisione dell'assembly di riferimento. Questo valore non può essere zero. Se tutti i bit di `usRevisionNumber` vengono impostate, il numero di revisione non è specificato.|  
+|`szLocale`|Elenco di nomi delle impostazioni locali conforme alla specifica RFC1766, separata da punti e virgola, che specifica le impostazioni locali supportate dall'assembly cui viene fatto riferimento. Un valore null indica l'indipendenza dalle impostazioni locali. **Nota:**  In .NET Framework versione 1.0 non è possibile specificare più di una delle impostazioni locali.|  
 |`cbLocale`|La dimensione in caratteri "wide" di `szLocale`.|  
 |`rdwProcessor`|Matrice di identificatori, come definito in Winnt. h, per i tipi di processore supportati da assembly di riferimento. Un valore NULL indica l'indipendenza del processore.|  
 |`ulProcessor`|La lunghezza del `rdwProcessor` matrice.|  
@@ -59,15 +59,15 @@ typedef struct {
 |`ulOS`|La lunghezza del `rOS` matrice.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
- **Libreria:** usata come risorsa in Mscoree. dll  
+ **Libreria:** Usato come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Strutture di metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)  
- [Interfaccia IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)  
- [Struttura OSINFO](../../../../docs/framework/unmanaged-api/metadata/osinfo-structure.md)
+## <a name="see-also"></a>Vedere anche
+- [Strutture di metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)
+- [Interfaccia IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [Struttura OSINFO](../../../../docs/framework/unmanaged-api/metadata/osinfo-structure.md)

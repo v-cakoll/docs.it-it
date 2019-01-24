@@ -8,19 +8,21 @@ helpviewer_keywords:
 - operators [C#], conversion
 - user-defined conversions [C#]
 ms.assetid: c5ad73a3-d57b-4d2b-b4c9-24e3c2856efc
-ms.openlocfilehash: a55a2148ce161deca79d8ba8e64a217e474f0284
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 927640b63773d24be93cc90427668f9568a39652
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236817"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362730"
 ---
 # <a name="conversion-operators-c-programming-guide"></a>Operatori di conversione (Guida per programmatori C#)
+
 C# consente ai programmatori di dichiarare conversioni in classi o struct, in modo che sia possibile convertire le classi o gli struct da e/o in altre classi o altri struct oppure tipi di base. Le conversioni vengono definite come operatori e sono denominate in base al tipo di destinazione della conversione. Il tipo dell'argomento da convertire oppure il tipo del risultato della conversione, ma non entrambi, deve essere il tipo contenitore.  
   
  [!code-csharp[csProgGuideStatements#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/conversion-operators_1.cs)]  
   
-## <a name="conversion-operators-overview"></a>Panoramica degli operatori di conversione  
+## <a name="conversion-operators-overview"></a>Panoramica degli operatori di conversione
+
  Gli operatori di conversione hanno le proprietà seguenti:  
   
 -   Le conversioni dichiarate come `implicit` vengono eseguite automaticamente quando è necessario.  
@@ -29,7 +31,8 @@ C# consente ai programmatori di dichiarare conversioni in classi o struct, in mo
   
 -   Tutte le conversioni devono essere dichiarate come `static`.  
   
-## <a name="related-sections"></a>Sezioni correlate  
+## <a name="related-sections"></a>Sezioni correlate
+
  Per ulteriori informazioni:  
   
 -   [Uso degli operatori di conversione](../../../csharp/programming-guide/statements-expressions-operators/using-conversion-operators.md)  

@@ -3,12 +3,12 @@ title: Novità di C# 7.0 - Guida a C#
 description: Panoramica delle nuove funzionalità incluse nella prossima versione 7 del linguaggio C#.
 ms.date: 12/21/2016
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 0a8b20606e5133c45f26377ea1c2eba58a1aa3af
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 08e9b9d1a991c6dd18477214dec60fba95afc6c9
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155288"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415728"
 ---
 # <a name="whats-new-in-c-70"></a>Novità di C# 7.0
 
@@ -105,7 +105,7 @@ In un'assegnazione di tupla è anche possibile specificare i nomi dei campi sul 
 
 La riga precedente genera un avviso, `CS8123`, che indica che i nomi sul lato destro dell'assegnazione, `Alpha` e `Beta`, vengono ignorati perché sono in conflitto con i nomi sul lato sinistro, `First` e `Second`.
 
-Gli esempi precedenti illustrano la sintassi di base per dichiarare le tuple. Le tuple sono particolarmente utili come tipi restituiti per i metodi `private` e `internal`. Offrono una sintassi semplice per tali metodi per restituire più valori discreti: si salva il lavoro di creazione di una `class` o uno `struct` che definisce il tipo restituito. Non è necessario creare un nuovo tipo.
+Gli esempi precedenti illustrano la sintassi di base per dichiarare le tuple. Le tuple sono particolarmente utili come tipi restituiti per i metodi `private` e `internal`. Le tuple forniscono una sintassi semplice per consentire a tali metodi di restituire più valori distinti: Si salva il lavoro di creazione di una `class` o uno `struct` che definisce il tipo restituito. Non è necessario creare un nuovo tipo.
 
 La creazione di una tupla è più efficiente e più produttiva.
 È una sintassi più semplice e leggera per definire una struttura dei dati che contiene più di un valore. Il metodo di esempio riportato di seguito restituisce i valori minimo e massimo trovati in una sequenza di interi:
@@ -168,7 +168,7 @@ I criteri di ricerca supportano le espressioni `is` e le espressioni `switch`. O
 
 ### <a name="is-expression"></a>Espressione `is`
 
-L'espressione con criterio `is` estende il noto operatore `is` per eseguire query su un oggetto oltre il relativo tipo.
+L'espressione con criterio `is` estende il noto [operatore `is`](../language-reference/keywords/is.md#pattern-matching-with-is) per l'esecuzione di query su un oggetto oltre il relativo tipo.
 
 Iniziamo con uno scenario semplice a cui verranno aggiunte delle funzionalità per spiegare in che modo le espressioni di criteri di ricerca semplificano gli algoritmi usati con i tipi non correlati. Si inizierà con un metodo che calcola la somma di un numero di tirate di dadi:
 
@@ -329,7 +329,7 @@ In C# 6 sono stati introdotti i [membri con corpo di espressione](csharp-6.md#ex
 > [!NOTE]
 > In questo esempio non è necessario un finalizzatore, ma viene incluso per illustrare la sintassi. Non implementare un finalizzatore nella classe a meno che non sia necessario per rilasciare risorse non gestite. È inoltre consigliabile usare la classe <xref:System.Runtime.InteropServices.SafeHandle> anziché gestire direttamente le risorse non gestite.
 
-Le nuove posizioni per i membri con corpo di espressione rappresentano un importante punto cardine per il linguaggio C#: queste funzionalità sono state implementate dai membri della community che lavoravano al progetto open source [Roslyn](https://github.com/dotnet/Roslyn).
+Questi nuovi percorsi per i membri con corpo di espressione rappresentano un importante punto cardine per il linguaggio C#: Queste funzionalità sono state implementate da membri della community che lavorano sul progetto open source [Roslyn](https://github.com/dotnet/Roslyn).
 
 La modifica di un metodo in un membro con corpo di espressione è una [modifica compatibile a livello binario](version-update-considerations.md#binary-compatible-changes).
 

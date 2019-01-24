@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: individuare assembly mediante DEVPATH'
+title: 'Procedura: Individuare assembly mediante DEVPATH'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - DEVPATH
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 44d2eadf-7eec-443c-a2ac-d601fd919e17
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 3a9ae9c60ad7de80d04f16984b3b2fb048421cc2
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 11ed84b01adf57eb526eaa1e71c6968e48c64cc2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49452759"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54627544"
 ---
-# <a name="how-to-locate-assemblies-by-using-devpath"></a>Procedura: individuare assembly mediante DEVPATH
+# <a name="how-to-locate-assemblies-by-using-devpath"></a>Procedura: Individuare assembly mediante DEVPATH
 Gli sviluppatori desiderano assicurarsi che funzioni correttamente un assembly condiviso in corso di sviluppo con più applicazioni. Anziché inserire continuamente l'assembly nella global assembly cache durante il ciclo di sviluppo, lo sviluppatore può creare una variabile di ambiente DEVPATH che punta alla directory di output di compilazione per l'assembly.  
   
  Ad esempio, si supponga che si sta creando un assembly condiviso denominato MySharedAssembly e la directory di output è C:\MySharedAssembly\Debug. È possibile inserire C:\MySharedAssembly\Debug nella variabile DEVPATH. È quindi necessario specificare il [ \<developmentMode >](../../../docs/framework/configure-apps/file-schema/runtime/developmentmode-element.md) elemento nel file di configurazione del computer. Questo elemento indica a common language runtime da usare DEVPATH per individuare gli assembly.  
@@ -45,5 +45,5 @@ Gli sviluppatori desiderano assicurarsi che funzioni correttamente un assembly c
 > [!NOTE]
 >  Usare questa impostazione solo in fase di sviluppo. Il runtime non verifica se le versioni di assembly con nome sicuro trovato nel DEVPATH. Utilizza semplicemente il primo assembly individuato.  
   
-## <a name="see-also"></a>Vedere anche  
- [Configurazione delle app .NET Framework](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)
+## <a name="see-also"></a>Vedere anche
+- [Configurazione delle app .NET Framework](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)

@@ -5,15 +5,15 @@ helpviewer_keywords:
 - queues [WCF], best practices
 - best practices [WCF], queued communication
 ms.assetid: 446a6383-cae3-4338-b193-a33c14a49948
-ms.openlocfilehash: b54569ad3d11c3b9b1b96e2738bdf0582b63b0b7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 03b2366f531c0a7f8fd296ee2a685c38fd62ca82
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495583"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54719820"
 ---
 # <a name="best-practices-for-queued-communication"></a>Procedure consigliate per comunicazioni in coda
-In questo argomento fornisce le procedure consigliate per la comunicazione in coda in Windows Communication Foundation (WCF). Nelle sezioni seguenti vengono descritte le procedure consigliate in funzione dello scenario.  
+In questo argomento illustra le procedure consigliate per la comunicazione in coda in Windows Communication Foundation (WCF). Nelle sezioni seguenti vengono descritte le procedure consigliate in funzione dello scenario.  
   
 ## <a name="fast-best-effort-queued-messaging"></a>Messaggistica in coda di tipo veloce ed efficiente  
  Per scenari che richiedono la separazione fornita dalla messaggistica in coda nonché velocità, elevate prestazioni ed efficienza, utilizzare una coda non transazionale e impostare la proprietà <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> su `false`.  
@@ -36,7 +36,7 @@ In questo argomento fornisce le procedure consigliate per la comunicazione in co
   
  La disattivazione delle code dei messaggi non recapitabili per la comunicazione affidabile end-to-end non è consigliata.  
   
- Per altre informazioni, vedere [utilizzando code per gestire errori di trasferimento messaggi](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md).  
+ Per altre informazioni, vedere [Usa le code di lettera non consegnata per gestire errori di trasferimento messaggi](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md).  
   
 ### <a name="use-of-poison-message-handling"></a>Utilizzo della gestione dei messaggi non elaborabili  
  La gestione dei messaggi non elaborabili consente il ripristino dopo un errore per proseguire l'elaborazione dei messaggi.  
@@ -48,7 +48,7 @@ In questo argomento fornisce le procedure consigliate per la comunicazione in co
 ## <a name="achieving-high-throughput"></a>Raggiungimento di velocità effettive elevate  
  Per raggiungere velocità effettive elevate in un singolo endpoint, utilizzare gli elementi seguenti:  
   
--   Batch transazionale. Il batch transazionale garantisce la lettura di molti messaggi in una singola transazione. In questo modo vengono ottimizzati i commit della transazione, aumentando le prestazioni complessive. Lo svantaggio del batch consiste nel fatto che se si verifica un errore in un singolo messaggio all'interno di un batch, verrà eseguito il rollback dell'intero batch e i messaggi dovranno essere elaborati uno alla volta fino a che il batch non sarà nuovamente sicuro. Nella maggior parte dei casi i messaggi non elaborabili sono rari, pertanto il batch è il modo preferito per aumentare le prestazioni del sistema, in particolare quando vi sono altri gestori delle risorse che partecipano alla transazione. Per altre informazioni, vedere [raggruppamento di messaggi in una transazione](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md).  
+-   Batch transazionale. Il batch transazionale garantisce la lettura di molti messaggi in una singola transazione. In questo modo vengono ottimizzati i commit della transazione, aumentando le prestazioni complessive. Lo svantaggio del batch consiste nel fatto che se si verifica un errore in un singolo messaggio all'interno di un batch, verrà eseguito il rollback dell'intero batch e i messaggi dovranno essere elaborati uno alla volta fino a che il batch non sarà nuovamente sicuro. Nella maggior parte dei casi i messaggi non elaborabili sono rari, pertanto il batch è il modo preferito per aumentare le prestazioni del sistema, in particolare quando vi sono altri gestori delle risorse che partecipano alla transazione. Per altre informazioni, vedere [l'invio in batch di messaggi in una transazione](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md).  
   
 -   Concorrenza. La concorrenza aumenta la velocità effettiva, ma può anche provocare conflitti nelle risorse condivise. Per altre informazioni, vedere [concorrenza](../../../../docs/framework/wcf/samples/concurrency.md).  
   
@@ -56,40 +56,40 @@ In questo argomento fornisce le procedure consigliate per la comunicazione in co
   
  Quando si utilizza il batch, è necessario sapere che la concorrenza e la limitazione danno luogo a batch simultanei.  
   
- Per ottenere maggiore velocità effettiva e disponibilità, usare una farm di servizi WCF che leggere dalla coda. In questo caso, tutti i servizi interessati devono esporre lo stesso contratto nello stesso endpoint. L'approccio della farm funziona in modo ottimale per applicazioni che hanno elevate frequenze di produzione di messaggi poiché consente a un certo numero di servizi di leggere dalla stessa coda.  
+ Per ottenere velocità effettiva e disponibilità, usare una farm di servizi WCF che leggere dalla coda. In questo caso, tutti i servizi interessati devono esporre lo stesso contratto nello stesso endpoint. L'approccio della farm funziona in modo ottimale per applicazioni che hanno elevate frequenze di produzione di messaggi poiché consente a un certo numero di servizi di leggere dalla stessa coda.  
   
  Quando si utilizzano le farm, è necessario sapere che le letture transazionali remote non sono supportate in MSMQ 3.0. MSMQ 4.0 supporta le letture transazionali remote.  
   
- Per altre informazioni, vedere [raggruppamento di messaggi in una transazione](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md) e [differenze nelle funzionalità di Accodamento messaggi in Windows Vista, Windows Server 2003 e Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md).  
+ Per altre informazioni, vedere [l'invio in batch di messaggi in una transazione](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md) e [differenze nelle funzionalità di Accodamento in Windows Vista, Windows Server 2003 e Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md).  
   
 ## <a name="queuing-with-unit-of-work-semantics"></a>Accodamento con unità di semantica del lavoro  
  In alcuni scenari i messaggi raggruppati in una coda possono essere correlati insieme e, pertanto, il loro ordine è significativo. In tali scenari, viene elaborato un gruppo di messaggi correlati come singola unità. Ciò significa che tutti i messaggi vengono elaborati correttamente oppure che nessun di essi viene elaborato. Per implementare tale comportamento, utilizzare sessioni con code.  
   
- Per altre informazioni, vedere [raggruppamento dei messaggi in coda in una sessione](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md).  
+ Per altre informazioni, vedere [raggruppamento di messaggi in coda in una sessione](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md).  
   
 ## <a name="correlating-request-reply-messages"></a>Correlazione di messaggi request/reply  
  Sebbene le code siano tipicamente unidirezionali, in alcuni scenari è necessario determinare una correlazione tra una risposta ricevuta a una richiesta inviata precedentemente. Se tale correlazione viene richiesta, è consigliato applicare al messaggio la propria intestazione del messaggio SOAP contenente informazioni sulla correlazione. In genere, il mittente allega questa intestazione al messaggio e il destinatario, dopo aver elaborato il messaggio e aver risposto con un messaggio nuovo in una coda di risposte, allega l'intestazione del messaggio del mittente contenente le informazioni sulla correlazione così che il mittente possa identificare il messaggio di risposta con il messaggio di richiesta.  
   
 ## <a name="integrating-with-non-wcf-applications"></a>Integrazione con applicazioni non WCF  
- Utilizzare `MsmqIntegrationBinding` l'integrazione di servizi WCF o client con i servizi non WCF o client. L'applicazione non WCF può essere un'applicazione MSMQ scritta utilizzando System. Messaging, COM+, Visual Basic o C++.  
+ Usare `MsmqIntegrationBinding` durante l'integrazione di servizi WCF o client con i servizi non WCF o client. L'applicazione non WCF può essere un'applicazione MSMQ scritta utilizzando System. Messaging, COM+, Visual Basic o C++.  
   
  Quando si utilizza `MsmqIntegrationBinding`, è necessario sapere che:  
   
--   Il corpo del messaggio WCF non è quella di un corpo del messaggio MSMQ. Quando si invia un messaggio WCF utilizzando un'associazione in coda, il corpo del messaggio WCF viene posizionata all'interno di un messaggio MSMQ. L'infrastruttura MSMQ vede solo il messaggio MSMQ ignorando queste informazioni aggiuntive.  
+-   Il corpo del messaggio WCF non è quello utilizzato per il corpo del messaggio MSMQ. Quando si invia un messaggio WCF utilizzando un'associazione in coda, il corpo del messaggio WCF viene posizionata all'interno di un messaggio MSMQ. L'infrastruttura MSMQ vede solo il messaggio MSMQ ignorando queste informazioni aggiuntive.  
   
 -   `MsmqIntegrationBinding` supporta i tipi di serializzazione più comuni. In base al tipo di serializzazione, il tipo del corpo del messaggio generico, <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>, prende parametri di tipo diverso. <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.ByteArray>, ad esempio, richiede `MsmqMessage\<byte[]>`<xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.Stream> e `MsmqMessage<Stream>` richiede .  
   
--   Con la serializzazione XML, è possibile specificare il tipo conosciuto utilizzando il `KnownTypes` attributo la [ \<comportamento >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) elemento che viene quindi utilizzato per determinare la modalità deserializzare il messaggio XML.  
+-   Con la serializzazione XML, è possibile specificare il tipo conosciuto utilizzando il `KnownTypes` attributo la [ \<comportamento >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) elemento che viene quindi usato per determinare come deserializzare il messaggio XML.  
   
-## <a name="see-also"></a>Vedere anche  
- [Accodamento in WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
- [Procedura: Scambiare messaggi in coda con endpoint WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
- [Procedura: Scambiare messaggi con endpoint WCF e con applicazioni di accodamento messaggi](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
- [Raggruppamento di messaggi in coda in una sessione](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)  
- [Invio in batch di messaggi in una transazione](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)  
- [Uso di code di messaggi non recapitabili per gestire gli errori di trasferimento dei messaggi](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
- [Gestione dei messaggi non elaborabili](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)  
- [Differenze nelle funzionalità di accodamento in Windows Vista, Windows Server 2003 e Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)  
- [Protezione dei messaggi mediante la sicurezza del trasporto](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)  
- [Protezione dei messaggi mediante la sicurezza dei messaggi](../../../../docs/framework/wcf/feature-details/securing-messages-using-message-security.md)  
- [Risoluzione dei problemi relativi ai messaggi in coda](../../../../docs/framework/wcf/feature-details/troubleshooting-queued-messaging.md)
+## <a name="see-also"></a>Vedere anche
+- [Accodamento in WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
+- [Procedura: Lo scambio di messaggi in coda con endpoint WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)
+- [Procedura: Scambiare messaggi con endpoint WCF e le applicazioni di Accodamento messaggi](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
+- [Raggruppamento di messaggi in coda in una sessione](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)
+- [Invio in batch di messaggi in una transazione](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)
+- [Uso di code di messaggi non recapitabili per gestire gli errori di trasferimento dei messaggi](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)
+- [Gestione dei messaggi non elaborabili](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)
+- [Differenze nelle funzionalità di accodamento in Windows Vista, Windows Server 2003 e Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)
+- [Protezione dei messaggi mediante la sicurezza del trasporto](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)
+- [Protezione dei messaggi mediante la sicurezza dei messaggi](../../../../docs/framework/wcf/feature-details/securing-messages-using-message-security.md)
+- [Risoluzione dei problemi relativi ai messaggi in coda](../../../../docs/framework/wcf/feature-details/troubleshooting-queued-messaging.md)

@@ -5,12 +5,12 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 09/13/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 455058ad0a9155b8c6d2a267259783c2a7cc9815
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 7a2a7b251f38a2f1add39e50e32a832adaedc965
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168923"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362800"
 ---
 # <a name="build-a-c-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>Compilare un'applicazione Hello World usando C# con .NET Core SDK in Visual Studio 2017
 
@@ -76,9 +76,9 @@ Migliorare l'applicazione per richiedere il nome dell'utente e visualizzarlo ins
 
 L'applicazione è stata creata ed eseguita. Per sviluppare un'applicazione professionale, eseguire alcuni passaggi aggiuntivi per rendere un'applicazione pronta per il rilascio:
 
-- Per altre informazioni sul debug dell'applicazione, vedere [Debug dell'applicazione C# Hello World con Visual Studio 2017](debugging-with-visual-studio.md).
+- Per informazioni sul debug dell'applicazione, vedere [Eseguire il debug dell'applicazione .NET Core Hello World con Visual Studio 2017](debugging-with-visual-studio.md).
 
-- Per informazioni sullo sviluppo e la pubblicazione di una versione distribuibile dell'applicazione, vedere [Publishing your C# Hello World application with Visual Studio 2017](publishing-with-visual-studio.md) (Pubblicazione dell'applicazione Hello World usando C# con Visual Studio 2017).
+- Per informazioni sullo sviluppo e la pubblicazione di una versione distribuibile dell'applicazione, vedere [Pubblicare l'applicazione .NET Core Hello World con Visual Studio 2017](publishing-with-visual-studio.md).
 
 ## <a name="related-topics"></a>Argomenti correlati
 

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2cd0fc9f86515d63533275002301eb47f11feebb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4cb5b091aadbdd503dd7988f713f40a00876a2dc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411266"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54608321"
 ---
 # <a name="icordebugcontrollerstop-method"></a>Metodo ICorDebugController::Stop
-Esegue un'interruzione cooperativa su tutti i thread che eseguono codice gestito nel processo.  
+Esegue un arresto cooperativo in tutti i thread che eseguono il codice gestito nel processo.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,21 +40,21 @@ HRESULT Stop (
  Non usato.  
   
 ## <a name="remarks"></a>Note  
- `Stop` esegue un'interruzione cooperativa su tutti i thread che esegue codice gestito nel processo. Durante una sessione di debug solo gestito, il thread non gestito è possibile continuare l'esecuzione (ma verrà bloccata durante il tentativo di chiamare codice gestito). Durante una sessione di debug di interoperabilità, il thread non gestito verrà arrestato. Il `dwTimeoutIgnored` valore attualmente viene ignorato e trattato come infinito (-1). Se l'interruzione cooperativa ha esito negativo a causa di un deadlock, tutti i thread vengono sospesi e verrà restituito E_TIMEOUT.  
+ `Stop` esegue un'interruzione cooperativa in tutti i thread che esegue codice gestito nel processo. Durante una sessione di debug solo gestito, i thread non gestiti possono continuare a eseguire (ma verrà bloccata durante il tentativo di chiamare codice gestito). Durante una sessione di debug di interoperabilità, i thread non gestiti verranno arrestati. Il `dwTimeoutIgnored` valore viene attualmente ignorato e trattato come INFINITE (-1). Se l'arresto cooperativo ha esito negativo a causa di un deadlock, tutti i thread vengono sospesi ed E_TIMEOUT viene restituito.  
   
 > [!NOTE]
->  `Stop` è l'unico metodo sincrono nell'API di debug. Quando `Stop` restituisce S_OK, il processo è stato arrestato. Il callback non viene assegnato da notificare listener dell'interruzione. Il debugger deve chiamare [ICorDebugController:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) per consentire la ripresa del processo.  
+>  `Stop` è l'unico metodo sincrono nell'API di debug. Quando si `Stop` restituisce S_OK, il processo è stato arrestato. Non viene assegnato alcun callback per notificare ai listener dell'interruzione. Il debugger deve chiamare [ICorDebugController](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) per consentire la ripresa del processo.  
   
- Il debugger gestisce un contatore di arresto. Quando il contatore è pari a zero, il controller viene ripreso. Ogni chiamata a `Stop` o ogni callback inviato incrementa il contatore. Ogni chiamata a `ICorDebugController::Continue` decrementa il contatore.  
+ Il debugger mantiene un contatore di arresto. Quando il conteggio arrivasse a zero, viene ripreso il controller. Ogni chiamata a `Stop` o ogni callback inviato viene incrementato il contatore. Ogni chiamata a `ICorDebugController::Continue` decrementa il contatore.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- 
+## <a name="see-also"></a>Vedere anche
+

@@ -7,14 +7,14 @@ ms.date: 08/07/2017
 dev_langs:
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: e743cb496aca101b4594435c86e48951870cf8ef
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: de7a423bb3e9a288d17c86e9e0afc3b00f6fd80b
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170028"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362262"
 ---
-# <a name="build-a-net-core-visual-basic-hello-world-application-in-visual-studio-2017"></a>Creazione di un'applicazione .NET Core Hello World con Visual Basic in Visual Studio 2017
+# <a name="build-a-visual-basic-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>Compilare un'applicazione Hello World usando Visual Basic con .NET Core SDK in Visual Studio 2017
 
 Questo argomento offre un'introduzione dettagliata per la compilazione, il debug e la pubblicazione di una semplice applicazione console .NET Core usando Visual Basic in Visual Studio 2017. Visual Studio 2017 offre un ambiente di sviluppo completo per la creazione di applicazioni .NET Core. Se l'applicazione non ha alcuna dipendenza specifica della piattaforma, è possibile eseguirla su qualsiasi piattaforma usata come destinazione da .NET Core o su qualsiasi sistema in cui è installato .NET Core.
 
@@ -78,9 +78,9 @@ Migliorare l'applicazione per richiedere il nome dell'utente e visualizzarlo ins
 
 L'applicazione è stata creata ed eseguita. Per sviluppare un'applicazione professionale, eseguire alcuni passaggi aggiuntivi per rendere un'applicazione pronta per il rilascio:
 
-- Per altre informazioni sul debug dell'applicazione, vedere [Debug dell'applicazione C# Hello World con Visual Studio 2017](debugging-with-visual-studio.md).
+- Per eseguire il debug dell'applicazione, vedere [Eseguire il debug dell'applicazione .NET Core Hello World con Visual Studio 2017](debugging-with-visual-studio.md).
 
-- Per informazioni sullo sviluppo e la pubblicazione di una versione distribuibile dell'applicazione, vedere [Publishing your C# Hello World application with Visual Studio 2017](publishing-with-visual-studio.md) (Pubblicazione dell'applicazione Hello World usando C# con Visual Studio 2017).
+- Per pubblicare una versione distribuibile dell'applicazione, vedere [Pubblicare l'applicazione .NET Core Hello World con Visual Studio 2017](publishing-with-visual-studio.md).
 
 <!--
 ## Related topics

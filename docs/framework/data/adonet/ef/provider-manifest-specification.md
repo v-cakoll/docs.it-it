@@ -2,12 +2,12 @@
 title: Specifica del manifesto del provider
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
-ms.openlocfilehash: 9875f0ce8d7b10532d7545c05d58ab43146120f0
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 592d435dd0da3a66fb3bbd278a53facb6cf08cb7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43739273"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54734052"
 ---
 # <a name="provider-manifest-specification"></a>Specifica del manifesto del provider
 Questa sezione illustra come un provider dell'archivio dati può supportare i tipi e le funzioni di tale archivio.  
@@ -23,7 +23,7 @@ Questa sezione illustra come un provider dell'archivio dati può supportare i ti
   
  Il manifesto del provider deve essere caricabile dagli strumenti in fase di progettazione senza che sia necessario aprire una connessione all'archivio dati.  
   
- Il [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] avviene sensibili, ma potrebbe non essere nell'archivio dati sottostante. Quando nel manifesto vengono definiti e usati gli elementi di EDM, ad esempio identificatori e nomi dei tipi, è necessario che venga usata la distinzione tra maiuscole e minuscole di [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Se nel manifesto del provider vengono visualizzati elementi dell'archivio dati per cui potrebbe essere rilevata la distinzione tra maiuscole e minuscole, è necessario mantenere tale distinzione nel manifesto del provider.  
+ Il [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] avviene sensibili, ma potrebbe non essere nell'archivio dati sottostante. Quando nel manifesto vengono definiti e usati gli artefatti di EDM, ad esempio identificatori e nomi dei tipi, è necessario che venga usata la distinzione tra maiuscole e minuscole di [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Se nel manifesto del provider vengono visualizzati elementi dell'archivio dati per cui potrebbe essere rilevata la distinzione tra maiuscole e minuscole, è necessario mantenere tale distinzione nel manifesto del provider.  
   
  [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] richiede un manifesto del provider per tutti i provider di dati. Se si prova a usare un provider che non dispone di un provider del manifesto con il [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], si otterrà un errore.  
   
@@ -54,7 +54,7 @@ Questa sezione illustra come un provider dell'archivio dati può supportare i ti
   
  Scrivere un file XML con due sezioni:  
   
--   Un elenco di tipi di provider espresso in termini EDM con la definizione del mapping per entrambe le direzioni: da EDM a provider e da provider a EDM.  
+-   Un elenco di tipi di provider espresso in termini EDM e definire il mapping per entrambe le direzioni: EDM a provider e i provider a EDM.  
   
 -   Un elenco di funzioni supportate dal provider in cui i tipi di parametri e i tipi restituiti sono espressi in termini EDM.  
   
@@ -279,5 +279,5 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 ##### <a name="namespace-attribute"></a>Attributo namespace  
  Ogni provider dell'archivio dati deve definire uno spazio dei nomi o un gruppo di spazi dei nomi per le informazioni definite nel manifesto. Tale spazio dei nomi può essere usato nelle query Entity SQL per risolvere nomi di funzioni e tipi. Ad esempio: SqlServer. Lo spazio dei nomi deve essere diverso dallo spazio dei nomi canonico, ovvero EDM, definito dai servizi di entità per funzioni standard che devono essere supportate dalle query Entity SQL.  
   
-## <a name="see-also"></a>Vedere anche  
- [Scrittura di un provider di dati Entity Framework](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)
+## <a name="see-also"></a>Vedere anche
+- [Scrittura di un provider di dati Entity Framework](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)

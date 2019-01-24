@@ -7,12 +7,12 @@ helpviewer_keywords:
 - white-space processing in XAML [XAML Services]
 - characters [XAML Services], East Asian
 ms.assetid: cc9cc377-7544-4fd0-b65b-117b90bb0b23
-ms.openlocfilehash: 3eea3d6c8a28ace0cc79cbfeb7eb3a7a52c9b8ab
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 750f054c908cd9d837a18ee6c8a537285b325288
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50205165"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728359"
 ---
 # <a name="white-space-processing-in-xaml"></a>L'elaborazione in XAML gli spazi vuoti
 Le regole del linguaggio per XAML di stato che lo spazio vuoto significativo deve essere elaborato da un [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] l'implementazione del processore. In questo argomento vengono illustrate queste regole del linguaggio XAML, Illustra inoltre la gestione degli spazi vuoti aggiuntivi definita dal [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] implementazione del processore XAML e writer XAML per la serializzazione.  
@@ -53,7 +53,7 @@ Le regole del linguaggio per XAML di stato che lo spazio vuoto significativo dev
 ## <a name="preserving-white-space"></a>Conservare lo spazio vuoto  
  Esistono diverse tecniche per la conservazione di spazi vuoti nell'origine [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] per la presentazione conclusiva che non sono interessati da [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] normalizzazione di spazi vuoti del processore.  
   
- **XML: space = "preserve"**: specificare questo attributo a livello di elemento quando è richiesta la conservazione degli spazi vuoti. Vengono così mantenuti tutti gli spazi vuoti, inclusi gli spazi che potrebbero essere aggiunti dalle applicazioni di modifica del codice per allineare gli elementi in modo ottimale, come nidificazione visivamente intuitiva. Tuttavia, il rendering di tali spazi dipende ancora una volta dal modello di contenuto per l'elemento contenitore. Evitare di specificare `xml:space="preserve"` a livello di radice spazio significativo indipendentemente dal modo in cui si impostato l'attributo perché la maggior parte dei modelli a oggetti non considera il bianchi. L'impostazione `xml:space` globalmente può avere conseguenze sulle prestazioni dell'elaborazione XAML, in particolare la serializzazione, in alcune implementazioni. È invece consigliabile impostare solo l'attributo in modo specifico a livello di elementi che consentono di eseguire il rendering di spazi vuoti all'interno di stringhe, o sono raccolte di spazi vuoti significative.  
+ **xml:space="preserve"**: Specificare questo attributo a livello di elemento quando è richiesta la conservazione degli spazi vuoti. Vengono così mantenuti tutti gli spazi vuoti, inclusi gli spazi che potrebbero essere aggiunti dalle applicazioni di modifica del codice per allineare gli elementi in modo ottimale, come nidificazione visivamente intuitiva. Tuttavia, il rendering di tali spazi dipende ancora una volta dal modello di contenuto per l'elemento contenitore. Evitare di specificare `xml:space="preserve"` a livello di radice spazio significativo indipendentemente dal modo in cui si impostato l'attributo perché la maggior parte dei modelli a oggetti non considera il bianchi. L'impostazione `xml:space` globalmente può avere conseguenze sulle prestazioni dell'elaborazione XAML, in particolare la serializzazione, in alcune implementazioni. È invece consigliabile impostare solo l'attributo in modo specifico a livello di elementi che consentono di eseguire il rendering di spazi vuoti all'interno di stringhe, o sono raccolte di spazi vuoti significative.  
   
  **Entità e spazi unificatori**: [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] supporta il posizionamento di qualsiasi entità [!INCLUDE[TLA#tla_unicode](../../../includes/tlasharptla-unicode-md.md)] all'interno di un modello di testo a oggetti. È possibile usare entità dedicate quali gli spazi unificatori (&\#160; nella codifica UTF-8). È anche possibile usare controlli rich text che supportano caratteri spazio unificatore. È necessario prestare molta attenzione se si usano entità per simulare caratteristiche di layout, ad esempio il rientro, in quanto l'output di runtime delle entità varierà in base a un maggior numero di fattori rispetto alle funzionalità per ottenere i risultati di rientro in un sistema di layout tipico, ad esempio l'utilizzo corretto di pannelli e margini. Ad esempio, viene eseguito il mapping delle entità ai tipi di carattere, pertanto le dimensioni possono cambiare in funzione della selezione del tipo di carattere operata dall'utente.  
   
@@ -74,7 +74,7 @@ Le regole del linguaggio per XAML di stato che lo spazio vuoto significativo dev
   
  Inoltre, determinati elementi inline che implicano un'interruzione in un modello di documento dinamico devono evitare l'introduzione di uno spazio aggiuntivo persino in un insieme significativo di spazi vuoti. Ad esempio, il <xref:System.Windows.Documents.LineBreak> elemento ha lo stesso scopo la \<BR / > tag in [!INCLUDE[TLA2#tla_html](../../../includes/tla2sharptla-html-md.md)]e per migliorare la leggibilità nel markup, in genere un <xref:System.Windows.Documents.LineBreak> è separato dal testo successivo da un avanzamento di riga creata. Tale avanzamento riga non deve essere normalizzato per l'utilizzo come spazio iniziale nella riga successiva. Per abilitare questo comportamento, la definizione di classe per il <xref:System.Windows.Documents.LineBreak> elemento si applica il <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute>, che viene quindi interpretato dalle [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] processore per indicare che lo spazio vuoto che circonda <xref:System.Windows.Documents.LineBreak> sarà sempre tagliato.  
   
-## <a name="see-also"></a>Vedere anche  
- [Panoramica di XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [Entità carattere XML e XAML](../../../docs/framework/xaml-services/xml-character-entities-and-xaml.md)  
- [XML: space in XAML gestisce](../../../docs/framework/xaml-services/xml-space-handling-in-xaml.md)
+## <a name="see-also"></a>Vedere anche
+- [Panoramica di XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [Entità carattere XML e XAML](../../../docs/framework/xaml-services/xml-character-entities-and-xaml.md)
+- [XML: space in XAML gestisce](../../../docs/framework/xaml-services/xml-space-handling-in-xaml.md)

@@ -1,5 +1,5 @@
 ---
-title: Test di una libreria di classi con .NET Core in Visual Studio 2017
+title: Eseguire il test di una libreria di classi .NET Standard con .NET Core in Visual Studio 2017
 description: Creare un progetto di unit test per la libreria di classi .NET Core. Verificare che la libreria di classi .NET Core funzioni correttamente con gli unit test.
 author: BillWagner
 ms.author: wiwagn
@@ -8,16 +8,16 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodoc18
-ms.openlocfilehash: 9e680921a882ab1c974a7546a6e91a892288db8d
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 7f0f1da48294fd3856f0b2524ef5239b8b63f3e6
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170795"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362691"
 ---
-# <a name="testing-a-class-library-with-net-core-in-visual-studio-2017"></a>Test di una libreria di classi con .NET Core in Visual Studio 2017
+# <a name="test-a-net-standard-library-with-net-core-in-visual-studio-2017"></a>Eseguire il test di una libreria .NET Standard con .NET Core in Visual Studio 2017
 
-In [Compilazione di una libreria di classi con C# e .NET Core in Visual Studio 2017](library-with-visual-studio.md) o [Compilazione di una libreria di classi con Visual Basic e .NET Core in Visual Studio 2017](vb-library-with-visual-studio.md) è stata creata una libreria di classi semplice che aggiunge un metodo di estensione alla classe <xref:System.String>. Ora verrà creato uno unit test per verificare che tale libreria funzioni nel modo previsto. Il progetto unit test verrà aggiunto alla soluzione creata nell'argomento precedente.
+In [Compilare una libreria .NET Standard con C# e .NET Core SDK in Visual Studio 2017](library-with-visual-studio.md) o [Compilare una libreria di classi con Visual Basic e .NET Core in Visual Studio 2017](vb-library-with-visual-studio.md) è stata creata una libreria di classi semplice che aggiunge un metodo di estensione alla classe <xref:System.String>. Ora verrà creato uno unit test per verificare che tale libreria funzioni nel modo previsto. Il progetto unit test verrà aggiunto alla soluzione creata nell'articolo precedente.
 
 ## <a name="creating-a-unit-test-project"></a>Creazione di un progetto unit test
 

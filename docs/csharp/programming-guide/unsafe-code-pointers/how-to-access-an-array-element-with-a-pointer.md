@@ -1,18 +1,18 @@
 ---
-title: Come accedere a un elemento di matrice tramite un puntatore - Guida per programmatori C#
+title: 'Procedura: Accedere a un elemento di matrice tramite un puntatore - Guida per programmatori C#'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - pointers [C#], array access
 ms.assetid: 6c46f2af-a730-4855-8638-f136d9abaa12
-ms.openlocfilehash: 4f5d82e0ccdffcb694e3030aabe58b8da687a5e1
-ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
+ms.openlocfilehash: 59765dbcad6c28cf2ad9f3df2052df19cafd08f1
+ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54084797"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54307279"
 ---
-# <a name="how-to-access-an-array-element-with-a-pointer-c-programming-guide"></a>Come accedere a un elemento di matrice tramite un puntatore (Guida per programmatori C#)
+# <a name="how-to-access-an-array-element-with-a-pointer-c-programming-guide"></a>Procedura: Accedere a un elemento di matrice tramite un puntatore (Guida per programmatori C#)
 
 In un contesto non sicuro è possibile accedere a un elemento in memoria usando l'accesso all'elemento mediante puntatore, come illustrato nell'esempio seguente:
 
@@ -36,10 +36,10 @@ Si noti che l'espressione `charPointer[i]` è equivalente all'espressione `*(cha
 
 [!code-csharp[csProgGuidePointers#12](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/how-to-access-an-array-element-with-a-pointer_2.cs)]
 
-**Lettere maiuscole:**
-**ABCDEFGHIJKLMNOPQRSTUVWXYZ**
-**lettere minuscole:**
-**abcdefghijklmnopqrstuvwxyz**
+**Lettere maiuscole:**  
+**ABCDEFGHIJKLMNOPQRSTUVWXYZ**  
+**Lettere minuscole:**  
+**abcdefghijklmnopqrstuvwxyz**  
 
 ## <a name="see-also"></a>Vedere anche
 

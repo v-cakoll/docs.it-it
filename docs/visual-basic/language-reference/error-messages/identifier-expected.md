@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30203
 ms.assetid: c05162ee-55d0-4d7f-84bb-e7758d4c5081
-ms.openlocfilehash: ddbb0481ed51d9daad1eedff72fbdb9f6b4a9a35
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 56d405bfe1079e9862d47bc64566fee62a573be0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33586130"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731036"
 ---
 # <a name="identifier-expected"></a>È previsto un identificatore
-Un elemento di programmazione che non è un nome di elemento dichiarato riconoscibile si verifica dove il contesto richiede un nome di elemento. Una possibile causa è un attributo è stato specificato in un punto diverso rispetto all'inizio dell'istruzione.  
+Un elemento di programmazione che non è un nome facilmente riconoscibile elemento dichiarato si verifica dove il contesto richiede un nome di elemento. Una possibile causa è che un attributo sia stato specificato in una posizione diversa rispetto all'inizio dell'istruzione.  
   
  **ID errore:** BC30203  
   
@@ -23,9 +23,9 @@ Un elemento di programmazione che non è un nome di elemento dichiarato riconosc
   
 -   Verificare che tutti gli attributi dell'istruzione vengono inseriti all'inizio.  
   
--   Verificare che tutti i nomi degli elementi nell'istruzione siano stati digitati correttamente.  
+-   Verificare che tutti i nomi di elementi nell'istruzione siano digitati correttamente.  
   
-## <a name="see-also"></a>Vedere anche  
- [Nomi di elementi dichiarati](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
- [Panoramica degli attributi](../../../visual-basic/programming-guide/concepts/attributes/index.md)
- 
+## <a name="see-also"></a>Vedere anche
+- [Nomi di elementi dichiarati](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
+- [Panoramica degli attributi](../../../visual-basic/programming-guide/concepts/attributes/index.md)
+

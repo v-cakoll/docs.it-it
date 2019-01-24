@@ -12,12 +12,12 @@ helpviewer_keywords:
 - properties [Visual Basic], setting at run time
 - CallByName function
 ms.assetid: 79a7b8b4-b8c7-4ad8-aca8-12a9a2b32f03
-ms.openlocfilehash: 76be426049489bb58e50878822c03fa5cd5cca8e
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 865270cfc8089d0bf229d9de7a7775dd2a3361d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42911646"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731522"
 ---
 # <a name="calling-a-property-or-method-using-a-string-name-visual-basic"></a>Chiamata di una proprietà o di un metodo mediante un nome di stringa (Visual Basic)
 Nella maggior parte dei casi, è possibile individuare le proprietà e metodi di un oggetto in fase di progettazione e scrivere codice per gestirli. Tuttavia, in alcuni casi potrebbe non sapere sui metodi e proprietà di un oggetto in anticipo, oppure è possibile semplicemente la flessibilità di un utente finale di specificare le proprietà o eseguire i metodi in fase di esecuzione.  
@@ -27,7 +27,7 @@ Nella maggior parte dei casi, è possibile individuare le proprietà e metodi di
   
  Il `CallByName` funzione consente di utilizzare una stringa per specificare una proprietà o metodo in fase di esecuzione. La firma per il `CallByName` funzione si presenta come segue:  
   
- *Risultato* = `CallByName`(*oggetto*, *nomeroutine*, *CallType*, *argomenti*())  
+ *Result* = `CallByName`(*Object*, *ProcedureName*, *CallType*, *Arguments*())  
   
  Il primo argomento, *oggetto*, accetta il nome dell'oggetto a cui si vuole agire. Il *nomeroutine* argomento accetta una stringa che contiene il nome del metodo o proprietà della routine da richiamare. Il *CallType* argomento accetta una costante che rappresenta il tipo di routine da richiamare: un metodo (`Microsoft.VisualBasic.CallType.Method`), una proprietà di lettura (`Microsoft.VisualBasic.CallType.Get`), o una proprietà impostata (`Microsoft.VisualBasic.CallType.Set`). Il *argomenti* argomenti, che sono facoltativo, accetta una matrice di tipo `Object` che contiene gli argomenti per la procedura.  
   
@@ -46,6 +46,6 @@ Nella maggior parte dei casi, è possibile individuare le proprietà e metodi di
 > [!NOTE]
 >  Mentre il `CallByName` funzione potrebbe essere utile in alcuni casi, è necessario valutare dell'utilità, anche le implicazioni sulle prestazioni, ovvero usando `CallByName` per richiamare una procedura è leggermente più lento rispetto a una chiamata ad associazione tardiva. Se si richiamano una funzione che viene poi chiamata più volte, ad esempio all'interno di un ciclo, `CallByName` può avere un grave effetto sulle prestazioni.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:Microsoft.VisualBasic.Interaction.CallByName%2A>  
- [Determinazione del tipo di un oggetto](../../../../visual-basic/programming-guide/language-features/early-late-binding/determining-object-type.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:Microsoft.VisualBasic.Interaction.CallByName%2A>
+- [Determinazione del tipo di un oggetto](../../../../visual-basic/programming-guide/language-features/early-late-binding/determining-object-type.md)

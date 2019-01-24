@@ -4,18 +4,20 @@ description: Architettura di microservizi .NET per applicazioni .NET incluse in 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 5e6c79cb538d108bba4f3915f93240d9320293c1
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 923d177a294e0aeccc3fe6632488a2bc5f48b727
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143636"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362845"
 ---
 # <a name="apply-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>Applicare gli approcci CQRS e CQS in un microservizio DDD in eShopOnContainers
 
 La progettazione del microservizio per gli ordini nell'applicazione di riferimento eShopOnContainers è basata sui principi del modello CQRS. Tuttavia, usa l'approccio più semplice che consiste nella separazione delle query dai comandi e nell'uso dello stesso database per entrambe le azioni.
 
-L'aspetto essenziale di tali modelli e, in questo caso, il punto importante è che le query sono idempotenti: indipendentemente da quante volte si esegue una query in un sistema, lo stato del sistema non viene modificato. È anche possibile usare un modello di dati di "lettura" diverso dal modello di dominio "scritto" dalla logica transazionale, anche se i microservizi di ordinamento usano lo stesso database. Ecco perché questo è un approccio CQRS semplificato.
+L'aspetto essenziale di tali modelli e, in questo caso, il punto importante è che le query sono idempotenti: indipendentemente da quante volte si esegue una query in un sistema, lo stato del sistema non viene modificato. In altre parole, le query non hanno effetti collaterali.
+
+Pertanto è possibile usare un modello di dati di "lettura" diverso dal modello di dominio "di scrittura" della logica transazionale, anche se i microservizi di ordinamento usano lo stesso database. Ecco perché questo è un approccio CQRS semplificato.
 
 D'altra parte, lo stato dei comandi che attivano le transazioni e gli aggiornamenti dei dati cambia nel sistema. Con i comandi, occorre prestare attenzione quando si affrontano scenari complessi e regole aziendali in continua evoluzione. Ecco perché le tecniche di progettazione DDD consentono di ottenere un sistema con una modellazione ottimale.
 

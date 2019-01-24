@@ -2,12 +2,12 @@
 title: WSDL e criteri
 ms.date: 03/30/2017
 ms.assetid: cea87440-3519-4640-8494-b8a2b0e88c84
-ms.openlocfilehash: 330a48989e9d6ca3cee0d11bf4b3fce38a25fa3d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1e6b315c1830602e72b4b498cd38eed8428bc5ff
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33501095"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54741431"
 ---
 # <a name="wsdl-and-policy"></a>WSDL e criteri
 Questo argomento descrive Windows Communication Foundation (WCF) WSDL 1.1, WS-Policy e WS-PolicyAttachment dettagli di implementazione, nonché ulteriori asserzioni WS-Policy e le estensioni WSDL 1.1 introdotte da WCF.  
@@ -28,19 +28,19 @@ Questo argomento descrive Windows Communication Foundation (WCF) WSDL 1.1, WS-Po
 |cdp|http://schemas.microsoft.com/net/2006/06/duplex|  
   
 ## <a name="wcf-wsdl11-extensions"></a>Estensioni WSDL1.1 di WCF  
- WCF Usa le estensioni WSDL1.1 seguenti per descrivere i requisiti delle sessioni di contratto.  
+ WCF Usa le estensioni WSDL1.1 seguenti per descrivere i requisiti della sessione del contratto.  
   
  wsdl:portType/wsdl:operation/@msc:isInitiating  
- xs: Boolean, indica questa operazione avvia una sessione WCF. il valore predefinito è `false`.  
+ xs: Boolean, indica l'operazione avvia una sessione di WCF. il valore predefinito è `false`.  
   
  wsdl:portType/wsdl:operation/@msc:isTerminating  
- xs: Boolean, indica l'operazione termina una sessione WCF. il valore predefinito è `false`.  
+ xs: Boolean, indica l'operazione termina una sessione di WCF. il valore predefinito è `false`.  
   
  wsdl:portType/wsdl:operation/@msc:usingSession  
  xs:boolean, indica che questo contratto richiede una sessione per essere stabilito.  
   
 ### <a name="soap-1x-http-binding-transport-uris"></a>URI dei trasporti delle associazioni SOAP 1.x HTTP  
- WCF Usa gli URI seguenti per indicare i trasporti da usare per gli elementi di estensione associazioni WSDL 1.1, SOAP 1.1 e SOAP 1.2.  
+ WCF utilizza gli URI seguenti per indicare i trasporti da usare per gli elementi di estensione dell'associazione WSDL 1.1, SOAP 1.1 e SOAP 1.2.  
   
 |Trasporto|URI|  
 |---------------|---------|  
@@ -50,7 +50,7 @@ Questo argomento descrive Windows Communication Foundation (WCF) WSDL 1.1, WS-Po
 |Named pipe|http://schemas.microsoft.com/soap/named-pipe|  
   
 ## <a name="policy-assertions-implemented-by-wcf"></a>Asserzioni di criteri implementate da WCF  
- Oltre alle asserzioni di criteri introdotte nelle specifiche dei servizi Web (WS-*) e indicate nelle altre sezioni di questo documento, WCF implementa le asserzioni di criteri seguenti.  
+ Oltre alle asserzioni di criteri introdotte nelle specifiche dei servizi Web (WS-*) e menzionate nelle altre sezioni di questo documento, WCF implementa le asserzioni di criteri seguenti.  
   
 |Asserzione di criteri|Soggetto dei criteri|Descrizione|  
 |----------------------|--------------------|-----------------|  
@@ -72,7 +72,7 @@ Questo argomento descrive Windows Communication Foundation (WCF) WSDL 1.1, WS-Po
 |mssp:MustNotSendCancel|Annidata|Specifica un requisito secondo cui all'autorità emittente di un determinato SecurityContextToken non devono essere inviati messaggi di richiesta di un token RST (Request Security Token) [WS-Trust] usando l'associazione Cancel [WS-Trust, WS-SC]. Se questa asserzione è presente, tali messaggi di richiesta non devono essere inviati all'autorità emittente. Se questa asserzione non è presente, tali messaggi di richiesta possono essere inviati all'autorità emittente.|  
 |mssp:RequireClientCertificate|Annidata|Questo elemento facoltativo specifica un requisito secondo cui deve essere fornito un certificato client come parte del protocollo TLSNEGO. Se questa asserzione è presente, deve essere fornito un certificato client. Se questa asserzione non è presente, non deve essere fornito un certificato client. Questa asserzione non deve essere usata al di fuori di mssp:SslContextToken.|  
   
-## <a name="see-also"></a>Vedere anche  
- [Pubblicazione WSDL personalizzata](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)  
- [Procedura: Esportare informazioni WSDL personalizzate](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)  
- [Procedura: Importare informazioni WSDL personalizzate](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)
+## <a name="see-also"></a>Vedere anche
+- [Pubblicazione WSDL personalizzata](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)
+- [Procedura: Esportare informazioni WSDL personalizzate](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)
+- [Procedura: Importare informazioni WSDL personalizzate](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)

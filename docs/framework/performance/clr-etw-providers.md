@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 0beafad4-b2c8-47f4-b342-83411d57a51f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e33e93ba42ad37d6a998fc80348af551aed18a4d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8fd1a4d41e65ea4d39f1cfee33aa5e166eec71ce
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398157"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54628552"
 ---
 # <a name="clr-etw-providers"></a>Provider ETW di CLR
 Common Language Runtime (CLR) dispone di due provider, ovvero il provider di runtime e quello di rundown.  
@@ -91,5 +91,5 @@ Common Language Runtime (CLR) dispone di due provider, ovvero il provider di run
   
  Uno strumento può eseguire i passaggi 2 e 3 (avvio di una sessione di rundown e conclusione della profilatura) anziché disattivare immediatamente la profilatura nel momento in cui un utente ne richiede l'arresto. Uno strumento può anche eseguire il passaggio 4.  
   
-## <a name="see-also"></a>Vedere anche  
- [Eventi ETW in Common Language Runtime](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)
+## <a name="see-also"></a>Vedere anche
+- [Eventi ETW in Common Language Runtime](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)

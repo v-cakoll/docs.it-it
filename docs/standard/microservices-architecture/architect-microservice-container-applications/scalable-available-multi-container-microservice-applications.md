@@ -4,12 +4,12 @@ description: Informazioni sulle opzioni che consentono di orchestrare microservi
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: c3a40d5a9229ec754f5a5c2e2637af964f25ba08
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8f8d05a79189b909990fd7ef0c05bd84d556a94a
+ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152721"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54307435"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Orchestrazione di microservizi e applicazioni a più contenitori per la scalabilità e la disponibilità elevate
 
@@ -17,7 +17,7 @@ L'uso di agenti di orchestrazione per applicazioni pronte per la produzione è e
 
 La figura 4-23 illustra la distribuzione in un cluster di un'applicazione costituita da più microservizi (contenitori).
 
-![Applicazioni Docker composte in un cluster: viene usato un contenitore per ogni istanza del servizio. I contenitori Docker sono "unità di distribuzione" e un contenitore è un'istanza di un Docker. Un host gestisce più contenitori](./media/image23.png)
+![Applicazioni Docker composte in un cluster: usare un contenitore per ogni istanza del servizio. I contenitori Docker sono "unità di distribuzione" e un contenitore è un'istanza di un Docker. Un host gestisce più contenitori](./media/image23.png)
 
 **Figura 4-23**. Cluster di contenitori
 
@@ -87,11 +87,11 @@ Il servizio Azure Kubernetes consente di semplificare la creazione, la configura
 
 Il servizio Azure Kubernetes ottimizza la configurazione degli strumenti e delle tecnologie open source più diffusi per clustering Docker in modo specifico per Azure. Si ottiene una soluzione che offre la portabilità per la configurazione di contenitori e applicazioni. È sufficiente selezionare le dimensioni, il numero di host e gli strumenti dell'agente di orchestrazione. Il servizio Azure Kubernetes gestisce tutte le altre operazioni.
 
-![Struttura di un cluster Kubernetes: è presente un nodo master che gestisce DNS, utilità di pianificazione, proxy e così via e diversi nodi del ruolo di lavoro che ospitano i contenitori.](media/image36.png)
+![Struttura del cluster Kubernetes: è presente un nodo master che gestisce DNS, utilità di pianificazione, proxy e così via e diversi nodi del ruolo di lavoro che ospitano i contenitori.](media/image36.png)
 
 **Figura 4-24**. Struttura semplificata e topologia del cluster Kubernetes
 
-Nella figura 4-24 viene illustrata la struttura di un cluster Kubernetes in cui un nodo master (VM) controlla la maggior parte del coordinamento del cluster. È possibile distribuire i contenitori al resto dei nodi che vengono gestiti come un singolo pool dal punto di vista dell'applicazione per la scalabilità a migliaia o persino decine di migliaia di contenitori.
+La figura 4-24 illustra la struttura di un cluster Kubernetes in cui un nodo master (VM) controlla la maggior parte del coordinamento del cluster. È possibile distribuire i contenitori al resto dei nodi (che vengono gestiti come un singolo pool dal punto di vista dell'applicazione) e la struttura consente la scalabilità a migliaia o persino decine di migliaia di contenitori.
 
 ## <a name="development-environment-for-kubernetes"></a>Ambiente di sviluppo per Kubernetes
 

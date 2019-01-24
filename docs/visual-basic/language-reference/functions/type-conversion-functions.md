@@ -81,12 +81,12 @@ helpviewer_keywords:
 - rounding numbers [Visual Basic], banker's rounding
 - type conversion [Visual Basic], Visual Basic vs. .NET Framework
 ms.assetid: d9d8d165-f967-44ff-a6cd-598e4740a99e
-ms.openlocfilehash: cbc9891170cde4b993a5dc890ed71c07a6f59f9e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ea20569b207100886ddd4b40c8d4c86c55d5ddf1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129558"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54743543"
 ---
 # <a name="type-conversion-functions-visual-basic"></a>Funzioni di conversione del tipo (Visual Basic)
 Queste funzioni vengono compilate inline, vale a dire che il codice di conversione fa parte del codice che valuta l'espressione. In alcuni casi non vi è alcuna chiamata a una procedura per eseguire la conversione, che migliora le prestazioni. Ogni funzione converte un'espressione per un tipo di dati specifico.  
@@ -119,7 +119,7 @@ CUShort(expression)
 ## <a name="return-value-data-type"></a>Restituire il tipo di dati di valore  
  Il nome della funzione determina il tipo di dati del valore restituito, come illustrato nella tabella seguente.  
   
-|Nome della funzione|Tipo di dati restituito|Intervallo per `expression` argomento|  
+|Nome funzione|Tipo di dati restituito|Intervallo per `expression` argomento|  
 |-------------------|----------------------|-------------------------------------|  
 |`CBool`|[Tipo di dati Boolean](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|Qualunque `Char` o `String` o espressione numerica.|  
 |`CByte`|[Tipo di dati Byte](../../../visual-basic/language-reference/data-types/byte-data-type.md)|<xref:System.Byte.MinValue?displayProperty=nameWithType> (0) attraverso <xref:System.Byte.MaxValue?displayProperty=nameWithType> (255) (senza segno); vengono arrotondate parti frazionarie.<sup> 1</sup><br/><br/>A partire da Visual Basic 15.8, Visual Basic consente di ottimizzare le prestazioni della virgola mobile per la conversione di byte con il `CByte` funzione; vedere la [osservazioni](#remarks) sezione per altre informazioni. Vedere le [CInt esempio](#cint-example) sezione per un esempio.|  
@@ -172,7 +172,7 @@ Dim i3 As Integer = CInt(Math.Round(s))        ' Result: 174
 
 ## <a name="behavior"></a>Comportamento  
   
--   **Coercizione.** In generale, è possibile utilizzare le funzioni di conversione di tipi di dati per assegnare il risultato di un'operazione a un particolare tipo di dati anziché il tipo di dati predefinito. Ad esempio, usare `CDec` forzare operazioni aritmetiche decimali nei casi in cui con precisione singola e precisione doppia o calcoli di interi normalmente avverrebbero.  
+-   **Coercion.** In generale, è possibile utilizzare le funzioni di conversione di tipi di dati per assegnare il risultato di un'operazione a un particolare tipo di dati anziché il tipo di dati predefinito. Ad esempio, usare `CDec` forzare operazioni aritmetiche decimali nei casi in cui con precisione singola e precisione doppia o calcoli di interi normalmente avverrebbero.  
   
 -   **Conversioni non riuscite.** Se il `expression` passati alla funzione è compreso nell'intervallo del tipo di dati a cui si desidera convertire, un <xref:System.OverflowException> si verifica.  
   
@@ -242,7 +242,7 @@ Dim i3 As Integer = CInt(Math.Round(s))        ' Result: 174
   
  [!code-vb[VbVbalrFunctions#10](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_10.vb)]  
   
-## <a name="csbyte-example"></a>Esempio di CSByte  
+## <a name="csbyte-example"></a>CSByte Example  
  L'esempio seguente usa il `CSByte` funzione per convertire un valore numerico a `SByte`.  
   
  [!code-vb[VbVbalrFunctions#11](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_11.vb)]  
@@ -285,17 +285,17 @@ Dim i3 As Integer = CInt(Math.Round(s))        ' Result: 174
   
  [!code-vb[VbVbalrFunctions#18](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_18.vb)]  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:Microsoft.VisualBasic.Strings.Asc%2A>  
- <xref:Microsoft.VisualBasic.Strings.AscW%2A>  
- <xref:Microsoft.VisualBasic.Strings.Chr%2A>  
- <xref:Microsoft.VisualBasic.Strings.ChrW%2A>  
- <xref:Microsoft.VisualBasic.Conversion.Int%2A>  
- <xref:Microsoft.VisualBasic.Conversion.Fix%2A>  
- <xref:Microsoft.VisualBasic.Strings.Format%2A>  
- <xref:Microsoft.VisualBasic.Conversion.Hex%2A>  
- <xref:Microsoft.VisualBasic.Conversion.Oct%2A>  
- <xref:Microsoft.VisualBasic.Conversion.Str%2A>  
- <xref:Microsoft.VisualBasic.Conversion.Val%2A>  
- [Funzioni di conversione](../../../visual-basic/language-reference/functions/conversion-functions.md)  
- [Conversioni di tipi in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:Microsoft.VisualBasic.Strings.Asc%2A>
+- <xref:Microsoft.VisualBasic.Strings.AscW%2A>
+- <xref:Microsoft.VisualBasic.Strings.Chr%2A>
+- <xref:Microsoft.VisualBasic.Strings.ChrW%2A>
+- <xref:Microsoft.VisualBasic.Conversion.Int%2A>
+- <xref:Microsoft.VisualBasic.Conversion.Fix%2A>
+- <xref:Microsoft.VisualBasic.Strings.Format%2A>
+- <xref:Microsoft.VisualBasic.Conversion.Hex%2A>
+- <xref:Microsoft.VisualBasic.Conversion.Oct%2A>
+- <xref:Microsoft.VisualBasic.Conversion.Str%2A>
+- <xref:Microsoft.VisualBasic.Conversion.Val%2A>
+- [Funzioni di conversione](../../../visual-basic/language-reference/functions/conversion-functions.md)
+- [Conversioni di tipi in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)

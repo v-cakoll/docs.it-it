@@ -2,23 +2,23 @@
 title: ThumbPrintNotValidated
 ms.date: 03/30/2017
 ms.assetid: e3e110f5-2853-4150-99c9-18236df320e2
-ms.openlocfilehash: e59247e5193ea706e2e5d390a075224e563d1dc0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7737032cfcfe3ef0cad2d51b444c15e865fcd0e7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33472070"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745402"
 ---
 # <a name="thumbprintnotvalidated"></a>ThumbPrintNotValidated
 Id: 153  
   
- Gravità: errore  
+ Gravità: Error  
   
  Categoria: TransactionBridge  
   
 ## <a name="description"></a>Descrizione  
  Questo evento indica che non è stato possibile convalidare un certificato di identità con l'identificazione personale specificata. Vengono indicati il nome e l'ID del processo.  
   
-## <a name="see-also"></a>Vedere anche  
- [Registrazione eventi](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
- [Riferimenti generali sugli eventi](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+## <a name="see-also"></a>Vedere anche
+- [Registrazione eventi](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
+- [Riferimenti generali sugli eventi](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
