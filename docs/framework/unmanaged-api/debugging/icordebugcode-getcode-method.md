@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d09681f97829f88bedf53af229298d5d57d764df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d057032f2a46ef29a903ae21ab13af02f9d657f1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402689"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728765"
 ---
-# <a name="icordebugcodegetcode-method"></a><span data-ttu-id="9a344-102">Metodo ICorDebugCode::GetCode</span><span class="sxs-lookup"><span data-stu-id="9a344-102">ICorDebugCode::GetCode Method</span></span>
-<span data-ttu-id="9a344-103">Ottiene il codice per la funzione specificata, formattata per il disassembly.</span><span class="sxs-lookup"><span data-stu-id="9a344-103">Gets all the code for the specified function, formatted for disassembly.</span></span> <span data-ttu-id="9a344-104">Questo metodo è obsoleto in .NET Framework versione 2.0.</span><span class="sxs-lookup"><span data-stu-id="9a344-104">This method has been deprecated in the .NET Framework version 2.0.</span></span> <span data-ttu-id="9a344-105">Utilizzare [ICorDebugCode2:: GetCodeChunks](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md) invece.</span><span class="sxs-lookup"><span data-stu-id="9a344-105">Use [ICorDebugCode2::GetCodeChunks](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md) instead.</span></span>  
+# <a name="icordebugcodegetcode-method"></a><span data-ttu-id="1e2e1-102">Metodo ICorDebugCode::GetCode</span><span class="sxs-lookup"><span data-stu-id="1e2e1-102">ICorDebugCode::GetCode Method</span></span>
+<span data-ttu-id="1e2e1-103">Ottiene tutto il codice per la funzione specificata, formattata per il disassembly.</span><span class="sxs-lookup"><span data-stu-id="1e2e1-103">Gets all the code for the specified function, formatted for disassembly.</span></span> <span data-ttu-id="1e2e1-104">Questo metodo è stato deprecato in .NET Framework versione 2.0.</span><span class="sxs-lookup"><span data-stu-id="1e2e1-104">This method has been deprecated in the .NET Framework version 2.0.</span></span> <span data-ttu-id="1e2e1-105">Uso [ICorDebugCode2::GetCodeChunks](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md) invece.</span><span class="sxs-lookup"><span data-stu-id="1e2e1-105">Use [ICorDebugCode2::GetCodeChunks](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md) instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9a344-106">Sintassi</span><span class="sxs-lookup"><span data-stu-id="9a344-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1e2e1-106">Sintassi</span><span class="sxs-lookup"><span data-stu-id="1e2e1-106">Syntax</span></span>  
   
 ```  
 HRESULT GetCode (  
@@ -40,34 +40,34 @@ HRESULT GetCode (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="9a344-107">Parametri</span><span class="sxs-lookup"><span data-stu-id="9a344-107">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="1e2e1-107">Parametri</span><span class="sxs-lookup"><span data-stu-id="1e2e1-107">Parameters</span></span>  
  `startOffset`  
- <span data-ttu-id="9a344-108">[in] L'offset dell'inizio della funzione.</span><span class="sxs-lookup"><span data-stu-id="9a344-108">[in] The offset of the beginning of the function.</span></span>  
+ <span data-ttu-id="1e2e1-108">[in] L'offset dell'inizio della funzione.</span><span class="sxs-lookup"><span data-stu-id="1e2e1-108">[in] The offset of the beginning of the function.</span></span>  
   
  `endOffset`  
- <span data-ttu-id="9a344-109">[in] L'offset della fine della funzione.</span><span class="sxs-lookup"><span data-stu-id="9a344-109">[in] The offset of the end of the function.</span></span>  
+ <span data-ttu-id="1e2e1-109">[in] L'offset della fine della funzione.</span><span class="sxs-lookup"><span data-stu-id="1e2e1-109">[in] The offset of the end of the function.</span></span>  
   
  `cBufferAlloc`  
- <span data-ttu-id="9a344-110">[in] Le dimensioni del `buffer` della matrice in cui verrà restituito il codice.</span><span class="sxs-lookup"><span data-stu-id="9a344-110">[in] The size of the `buffer` array into which the code will be returned.</span></span>  
+ <span data-ttu-id="1e2e1-110">[in] Le dimensioni del `buffer` della matrice in cui verrà restituito il codice.</span><span class="sxs-lookup"><span data-stu-id="1e2e1-110">[in] The size of the `buffer` array into which the code will be returned.</span></span>  
   
  `buffer`  
- <span data-ttu-id="9a344-111">[out] Matrice in cui verrà restituito il codice.</span><span class="sxs-lookup"><span data-stu-id="9a344-111">[out] The array into which the code will be returned.</span></span>  
+ <span data-ttu-id="1e2e1-111">[out] Matrice in cui verrà restituito il codice.</span><span class="sxs-lookup"><span data-stu-id="1e2e1-111">[out] The array into which the code will be returned.</span></span>  
   
  `pcBufferSize`  
- <span data-ttu-id="9a344-112">[out] Il numero di byte restituiti.</span><span class="sxs-lookup"><span data-stu-id="9a344-112">[out] The number of bytes returned.</span></span>  
+ <span data-ttu-id="1e2e1-112">[out] Il numero di byte restituiti.</span><span class="sxs-lookup"><span data-stu-id="1e2e1-112">[out] The number of bytes returned.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="9a344-113">Note</span><span class="sxs-lookup"><span data-stu-id="9a344-113">Remarks</span></span>  
- <span data-ttu-id="9a344-114">Se il codice della funzione è stato suddiviso in più blocchi, questi vengono concatenati in ordine crescente di offset nativo.</span><span class="sxs-lookup"><span data-stu-id="9a344-114">If the function's code has been divided into multiple chunks, they are concatenated in order of increasing native offset.</span></span> <span data-ttu-id="9a344-115">Non vengono controllati i limiti di istruzione.</span><span class="sxs-lookup"><span data-stu-id="9a344-115">Instruction boundaries are not checked.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="1e2e1-113">Note</span><span class="sxs-lookup"><span data-stu-id="1e2e1-113">Remarks</span></span>  
+ <span data-ttu-id="1e2e1-114">Se il codice della funzione è stato diviso in più blocchi, questi vengono concatenati in ordine crescente offset nativo.</span><span class="sxs-lookup"><span data-stu-id="1e2e1-114">If the function's code has been divided into multiple chunks, they are concatenated in order of increasing native offset.</span></span> <span data-ttu-id="1e2e1-115">I limiti di istruzioni non vengono controllati.</span><span class="sxs-lookup"><span data-stu-id="1e2e1-115">Instruction boundaries are not checked.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9a344-116">Requisiti</span><span class="sxs-lookup"><span data-stu-id="9a344-116">Requirements</span></span>  
- <span data-ttu-id="9a344-117">**Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9a344-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1e2e1-116">Requisiti</span><span class="sxs-lookup"><span data-stu-id="1e2e1-116">Requirements</span></span>  
+ <span data-ttu-id="1e2e1-117">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1e2e1-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9a344-118">**Intestazione:** Cordebug. idl, Cordebug. H</span><span class="sxs-lookup"><span data-stu-id="9a344-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="1e2e1-118">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="1e2e1-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="9a344-119">**Libreria:** CorGuids. lib</span><span class="sxs-lookup"><span data-stu-id="9a344-119">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="1e2e1-119">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1e2e1-119">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="9a344-120">**Versioni di .NET framework:** 1.1, 1.0</span><span class="sxs-lookup"><span data-stu-id="9a344-120">**.NET Framework Versions:** 1.1, 1.0</span></span>  
+ <span data-ttu-id="1e2e1-120">**Versioni di .NET framework:** 1.1, 1.0</span><span class="sxs-lookup"><span data-stu-id="1e2e1-120">**.NET Framework Versions:** 1.1, 1.0</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9a344-121">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="9a344-121">See Also</span></span>  
- [<span data-ttu-id="9a344-122">Metodo GetCodeChunks</span><span class="sxs-lookup"><span data-stu-id="9a344-122">GetCodeChunks Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)  
- 
+## <a name="see-also"></a><span data-ttu-id="1e2e1-121">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="1e2e1-121">See also</span></span>
+- [<span data-ttu-id="1e2e1-122">Metodo GetCodeChunks</span><span class="sxs-lookup"><span data-stu-id="1e2e1-122">GetCodeChunks Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)
+

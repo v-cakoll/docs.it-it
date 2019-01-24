@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 93e96d6f8570e6aef7bfc18ef2859dc1e86ec8fb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: acc4da79796e975d349d1cb33c301c25c4791cb6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429031"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709078"
 ---
-# <a name="userthread-structure"></a><span data-ttu-id="5f0d2-102">Struttura USER_THREAD</span><span class="sxs-lookup"><span data-stu-id="5f0d2-102">USER_THREAD Structure</span></span>
-<span data-ttu-id="5f0d2-103">Vengono fornite informazioni a un debugger su un thread.</span><span class="sxs-lookup"><span data-stu-id="5f0d2-103">Provides information to a debugger about a thread.</span></span> <span data-ttu-id="5f0d2-104">Per ulteriori informazioni, vedere il [INotifySource2:: SetNotifyFilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md) metodo.</span><span class="sxs-lookup"><span data-stu-id="5f0d2-104">For more information, see the [INotifySource2::SetNotifyFilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md) method.</span></span>  
+# <a name="userthread-structure"></a><span data-ttu-id="c0ecf-102">Struttura USER_THREAD</span><span class="sxs-lookup"><span data-stu-id="c0ecf-102">USER_THREAD Structure</span></span>
+<span data-ttu-id="c0ecf-103">Vengono fornite informazioni a un debugger su un thread.</span><span class="sxs-lookup"><span data-stu-id="c0ecf-103">Provides information to a debugger about a thread.</span></span> <span data-ttu-id="c0ecf-104">Per altre informazioni, vedere la [INotifySource2::SetNotifyFilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md) (metodo).</span><span class="sxs-lookup"><span data-stu-id="c0ecf-104">For more information, see the [INotifySource2::SetNotifyFilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md) method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5f0d2-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="5f0d2-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c0ecf-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="c0ecf-105">Syntax</span></span>  
   
 ```  
 typedef struct tagUSER_THREAD  
@@ -37,17 +37,17 @@ typedef struct tagUSER_THREAD
 } USER_THREAD;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="5f0d2-106">Membri</span><span class="sxs-lookup"><span data-stu-id="5f0d2-106">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="c0ecf-106">Membri</span><span class="sxs-lookup"><span data-stu-id="c0ecf-106">Members</span></span>  
   
-|<span data-ttu-id="5f0d2-107">Membro</span><span class="sxs-lookup"><span data-stu-id="5f0d2-107">Member</span></span>|<span data-ttu-id="5f0d2-108">Descrizione</span><span class="sxs-lookup"><span data-stu-id="5f0d2-108">Description</span></span>|  
+|<span data-ttu-id="c0ecf-107">Membro</span><span class="sxs-lookup"><span data-stu-id="c0ecf-107">Member</span></span>|<span data-ttu-id="c0ecf-108">Descrizione</span><span class="sxs-lookup"><span data-stu-id="c0ecf-108">Description</span></span>|  
 |------------|-----------------|  
-|`pSidBuffer`|<span data-ttu-id="5f0d2-109">Indirizzo del buffer dei thread.</span><span class="sxs-lookup"><span data-stu-id="5f0d2-109">Address of thread buffer.</span></span>|  
-|`dwSidLen`|<span data-ttu-id="5f0d2-110">Lunghezza del buffer dei thread, in byte.</span><span class="sxs-lookup"><span data-stu-id="5f0d2-110">Length of thread buffer, in bytes.</span></span>|  
-|`dwTid`|<span data-ttu-id="5f0d2-111">ID del thread.</span><span class="sxs-lookup"><span data-stu-id="5f0d2-111">Thread ID.</span></span>|  
+|`pSidBuffer`|<span data-ttu-id="c0ecf-109">Indirizzo del buffer dei thread.</span><span class="sxs-lookup"><span data-stu-id="c0ecf-109">Address of thread buffer.</span></span>|  
+|`dwSidLen`|<span data-ttu-id="c0ecf-110">Lunghezza del buffer di thread, in byte.</span><span class="sxs-lookup"><span data-stu-id="c0ecf-110">Length of thread buffer, in bytes.</span></span>|  
+|`dwTid`|<span data-ttu-id="c0ecf-111">ID del thread.</span><span class="sxs-lookup"><span data-stu-id="c0ecf-111">Thread ID.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="5f0d2-112">Requisiti</span><span class="sxs-lookup"><span data-stu-id="5f0d2-112">Requirements</span></span>  
- <span data-ttu-id="5f0d2-113">**Intestazione:** ProtocolNotify2. idl</span><span class="sxs-lookup"><span data-stu-id="5f0d2-113">**Header:** ProtocolNotify2.idl</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c0ecf-112">Requisiti</span><span class="sxs-lookup"><span data-stu-id="c0ecf-112">Requirements</span></span>  
+ <span data-ttu-id="c0ecf-113">**Intestazione:** ProtocolNotify2.idl</span><span class="sxs-lookup"><span data-stu-id="c0ecf-113">**Header:** ProtocolNotify2.idl</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5f0d2-114">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="5f0d2-114">See Also</span></span>  
- [<span data-ttu-id="5f0d2-115">Metodo SetNotifyFilter</span><span class="sxs-lookup"><span data-stu-id="5f0d2-115">SetNotifyFilter Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md)  
- [<span data-ttu-id="5f0d2-116">Strutture dell'archivio simboli di diagnostica</span><span class="sxs-lookup"><span data-stu-id="5f0d2-116">Diagnostics Symbol Store Structures</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)
+## <a name="see-also"></a><span data-ttu-id="c0ecf-114">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c0ecf-114">See also</span></span>
+- [<span data-ttu-id="c0ecf-115">Metodo SetNotifyFilter</span><span class="sxs-lookup"><span data-stu-id="c0ecf-115">SetNotifyFilter Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md)
+- [<span data-ttu-id="c0ecf-116">Strutture dell'archivio simboli di diagnostica</span><span class="sxs-lookup"><span data-stu-id="c0ecf-116">Diagnostics Symbol Store Structures</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)
