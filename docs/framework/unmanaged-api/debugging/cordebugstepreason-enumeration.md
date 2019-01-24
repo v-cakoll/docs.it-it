@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 71dcc34fd3489fc71cec4050b168548927833082
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8b27bf19ec340c41cd990b7142450242ea6d6ea2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404531"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552242"
 ---
 # <a name="cordebugstepreason-enumeration"></a>Enumerazione CorDebugStepReason
 Indica l'esito di una singola istruzione.  
@@ -44,23 +44,23 @@ typedef enum CorDebugStepReason {
   
 |Membro|Descrizione|  
 |------------|-----------------|  
-|`STEP_NORMAL`|In genere, l'esecuzione di istruzioni completata all'interno della stessa funzione.|  
-|`STEP_RETURN`|L'avanzamento continua in genere, dopo la funzione ha restituito.|  
-|`STEP_CALL`|In genere, l'avanzamento continua all'inizio di una nuova funzione chiamata.|  
+|`STEP_NORMAL`|L'esecuzione di istruzioni completata in genere, entro la stessa funzione.|  
+|`STEP_RETURN`|L'esecuzione di istruzioni continuato in genere, dopo la funzione ha restituito.|  
+|`STEP_CALL`|L'esecuzione di istruzioni continuato in genere, all'inizio di una nuova funzione chiamata.|  
 |`STEP_EXCEPTION_FILTER`|È stata generata un'eccezione e il controllo è stato passato a un filtro eccezioni.|  
 |`STEP_EXCEPTION_HANDLER`|È stata generata un'eccezione e il controllo è stato passato a un gestore di eccezioni.|  
 |`STEP_INTERCEPT`|Il controllo è stato passato a un intercettore.|  
-|`STEP_EXIT`|Il thread è stato chiuso prima del completamento dell'istruzione.|  
+|`STEP_EXIT`|Il thread sia stato chiuso prima del completamento dell'istruzione.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Metodo StepComplete](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-stepcomplete-method.md)  
- [Enumerazioni di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>Vedere anche
+- [Metodo StepComplete](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-stepcomplete-method.md)
+- [Enumerazioni di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

@@ -1,16 +1,16 @@
 ---
-title: "Trasporto: transazioni personalizzate nell'esempio UDP"
+title: "Trasporto: Transazioni personalizzate nell'esempio UDP"
 ms.date: 03/30/2017
 ms.assetid: 6cebf975-41bd-443e-9540-fd2463c3eb23
-ms.openlocfilehash: b3a105194ceef9d9091dfbc9521fd47978517f89
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 931cedfeb5604b00ec1cf3f4d2742e2dff2eacca
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521092"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552208"
 ---
-# <a name="transport-custom-transactions-over-udp-sample"></a>Trasporto: transazioni personalizzate nell'esempio UDP
-Questo esempio è basato sul [trasporto: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) esempio di Windows Communication Foundation (WCF)[estensibilità del trasporto](../../../../docs/framework/wcf/samples/transport-extensibility.md). Estende l'esempio Trasporto di UDP per supportare flussi di transazioni personalizzate e illustra l'utilizzo della proprietà <xref:System.ServiceModel.Channels.TransactionMessageProperty>.  
+# <a name="transport-custom-transactions-over-udp-sample"></a>Trasporto: Transazioni personalizzate nell'esempio UDP
+Questo esempio è basato sul [trasporto: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) esempio in Windows Communication Foundation (WCF)[estensibilità del trasporto](../../../../docs/framework/wcf/samples/transport-extensibility.md). Estende l'esempio Trasporto di UDP per supportare flussi di transazioni personalizzate e illustra l'utilizzo della proprietà <xref:System.ServiceModel.Channels.TransactionMessageProperty>.  
   
 ## <a name="code-changes-in-the-udp-transport-sample"></a>Modifiche al codice nell'esempio Trasporto di UDP  
  Per illustrare il flusso della transazione l'esempio modifica il contratto di servizio affinché `ICalculatorContract` richieda un ambito della transazione per `CalculatorService.Add()`. L'esempio aggiunge anche un parametro `System.Guid` supplementare al contratto dell'operazione `Add`. Questo parametro viene utilizzato per passare l'identificatore della transazione client al servizio.  
@@ -38,7 +38,7 @@ class CalculatorService : IDatagramContract, ICalculatorContract
 }  
 ```  
   
- Il [trasporto: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) esempio Usa pacchetti UDP per passare messaggi tra un client e un servizio. Il [trasporto: esempio di trasporto personalizzato](../../../../docs/framework/wcf/samples/transport-custom-transactions-over-udp-sample.md) utilizza lo stesso meccanismo per trasportare messaggi, ma quando una transazione viene propagata, viene inserito nel pacchetto UDP insieme al messaggio codificato.  
+ Il [trasporto: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) esempio Usa pacchetti UDP per passare messaggi tra un client e un servizio. Il [trasporto: Esempio di trasporto personalizzato](../../../../docs/framework/wcf/samples/transport-custom-transactions-over-udp-sample.md) utilizza lo stesso meccanismo per trasportare messaggi, ma quando una transazione viene propagata, viene inserito nel pacchetto UDP insieme al messaggio codificato.  
   
 ```  
 byte[] txmsgBuffer =                TransactionMessageBuffer.WriteTransactionMessageBuffer(txPropToken, messageBuffer);  
@@ -262,5 +262,5 @@ if (transaction != null)
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Transactions\TransactionMessagePropertyUDPTransport`  
   
-## <a name="see-also"></a>Vedere anche  
- [Trasporto UDP](../../../../docs/framework/wcf/samples/transport-udp.md)
+## <a name="see-also"></a>Vedere anche
+- [Trasporto: UDP](../../../../docs/framework/wcf/samples/transport-udp.md)

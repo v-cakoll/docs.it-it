@@ -2,12 +2,12 @@
 title: Operazioni asincrone
 ms.date: 03/30/2017
 ms.assetid: e7d32c3c-bf78-4bfc-a357-c9e82e4a4b3c
-ms.openlocfilehash: c1c99437ada9dd9e71e0e999073e8d207569c2bf
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: b1c6646f666ca1d931ab8caa8cd0a2e0c6a6722f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43463078"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54538661"
 ---
 # <a name="asynchronous-operations"></a>Operazioni asincrone
 Il completamento di alcune operazioni di database, ad esempio l'esecuzione di comandi, può richiedere parecchio tempo. In questi casi, le applicazioni a thread singolo devono bloccare altre operazioni e attendere il comando per il completamento prima di continuare le rispettive operazioni. Al contrario, la possibilità di assegnare l'operazione a esecuzione prolungata a un thread in background consente al thread in primo piano di restare attivo per l'intera durata dell'operazione. In un'applicazione Windows, ad esempio, la delega dell'operazione a esecuzione prolungata a un thread in background consente al thread dell'interfaccia utente di rimanere attivo mentre l'operazione è in esecuzione.  
@@ -29,7 +29,7 @@ Il completamento di alcune operazioni di database, ad esempio l'esecuzione di co
  [Polling in applicazioni console](../../../../../docs/framework/data/adonet/sql/polling-in-console-applications.md)  
  Viene fornito un esempio che illustra l'uso del polling per attendere il completamento dell'esecuzione di un comando asincrono da un'applicazione console. Questa tecnica è valida anche in una libreria di classi o in altre applicazioni senza interfaccia utente.  
   
-## <a name="see-also"></a>Vedere anche  
- [SQL Server e ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [Chiamata sincrona dei metodi asincroni](../../../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vedere anche
+- [SQL Server e ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
+- [Chiamata sincrona dei metodi asincroni](../../../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)
+- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

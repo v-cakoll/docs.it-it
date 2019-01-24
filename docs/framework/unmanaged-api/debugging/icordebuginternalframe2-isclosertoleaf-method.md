@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6d26d4dc046841a891c8a36530bd579d100b8f5b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a3a5dca321470b3fda8490ca5ae809045d724150
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416124"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552164"
 ---
 # <a name="icordebuginternalframe2isclosertoleaf-method"></a>Metodo ICorDebugInternalFrame2::IsCloserToLeaf
-Controlla se il `this` frame interno è più vicino alla foglia rispetto all'oggetto ICorDebugFrame specificato.  
+Controlla se il `this` frame interno è più simile alla foglia a oggetto ICorDebugFrame specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,7 +39,7 @@ HRESULT IsCloserToLeaf([in] ICorDebugFrame * pFrameToCompare,
  [in] Un puntatore al confronto `ICorDebugFrame` oggetto.  
   
  `pIsCloser`  
- [out] `true` se il `this` frame interno è più vicino alla foglia rispetto al frame specificato da `pFrameToCompare`; in caso contrario, `false`.  
+ [out] `true` se il `this` frame interno è più simile alla foglia a frame specificato da `pFrameToCompare`; in caso contrario, `false`.  
   
 ## <a name="return-value"></a>Valore restituito  
  Questo metodo restituisce gli specifici HRESULT seguenti, nonché gli errori di HRESULT che indicano la mancata riuscita del metodo.  
@@ -54,15 +54,15 @@ HRESULT IsCloserToLeaf([in] ICorDebugFrame * pFrameToCompare,
  `IsCloserToLeaf` può essere utilizzato per implementare un criterio per interfoliazione frame interni con altri frame nello stack.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ICorDebugInternalFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md)  
- [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Debug](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ICorDebugInternalFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md)
+- [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debug](../../../../docs/framework/unmanaged-api/debugging/index.md)

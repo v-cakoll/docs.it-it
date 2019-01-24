@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6f5cbb7c0b4e3ce6d66d30e812008fc3419d7d7d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9b39cdec6d5cc10256c2911c98f94b7565295408
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429092"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54537998"
 ---
 # <a name="iassemblycacheitemcommit-method"></a>Metodo IAssemblyCacheItem::Commit
-Esegue il commit il riferimento di assembly memorizzati nella cache in memoria.  
+Esegue il commit il riferimento all'assembly memorizzati nella cache in memoria.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,14 +41,14 @@ HRESULT Commit (
  [in] Flag definiti in Fusion.  
   
  `pulDisposition`  
- [out, facoltativo] Un valore che indica il risultato dell'operazione.  
+ [out, optional] Un valore che indica il risultato dell'operazione.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Fusion. h  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)

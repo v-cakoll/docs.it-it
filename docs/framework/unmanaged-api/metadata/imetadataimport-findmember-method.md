@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 79c9a54a44ae1751cb8b1b57379ccfd6485f6e6b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 267a36fbbdf48472bc35581ce98af5cd7a9cef9c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448191"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54550370"
 ---
 # <a name="imetadataimportfindmember-method"></a>Metodo IMetaDataImport::FindMember
-Ottiene un puntatore al MemberDef token di campo o metodo incluso dall'oggetto <xref:System.Type> e con la firma di nome e i metadati specificata.  
+Ottiene un puntatore al MemberDef token per campo o un metodo che è racchiuso da specificato <xref:System.Type> e avente il nome e i metadati della firma specificata.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -50,30 +50,30 @@ HRESULT FindMember (
  [in] Un puntatore per la firma binaria dei metadati del membro.  
   
  `cbSigBlob`  
- [in] Le dimensioni in byte di `pvSigBlob`.  
+ [in] La dimensione in byte di `pvSigBlob`.  
   
  `pmb`  
  [out] Puntatore al token MemberDef corrispondente.  
   
 ## <a name="remarks"></a>Note  
- Specificare il membro utilizzando la classe o interfaccia di inclusione (`td`), il nome (`szName`) e facoltativamente la firma (`pvSigBlob`). Potrebbero essere presenti più membri con lo stesso nome in una classe o interfaccia. In tal caso, passare la firma del membro per trovare una corrispondenza univoca.  
+ Si specifica il membro utilizzando la classe o interfaccia contenitore (`td`), il relativo nome (`szName`) e facoltativamente la firma (`pvSigBlob`). Potrebbero essere presenti più membri con lo stesso nome in una classe o interfaccia. In tal caso, passare la firma del membro per trovare una corrispondenza univoca.  
   
- La firma passata a `FindMember` deve essere stata generata nell'ambito corrente, in quanto le firme sono associate a un particolare ambito. Una firma è possibile incorporare un token che identifica il tipo di classe o un valore che lo contiene. Il token è un indice nella tabella TypeDef locale. Non è possibile generare una firma in fase di esecuzione all'esterno del contesto dell'ambito corrente e utilizzare tale firma come input a `FindMember`.  
+ La firma è passato a `FindMember` deve essere stata generata nell'ambito corrente, in quanto le firme sono associate a un particolare ambito. Una firma possibile incorporare un token che identifica il tipo di classe o valore di inclusione. Il token è un indice nella tabella di TypeDef locale. Non è possibile generare una firma in fase di esecuzione all'esterno del contesto dell'ambito corrente e usare come input a quella firma `FindMember`.  
   
- `FindMember` Consente di individuare solo i membri che sono stati definiti direttamente nella classe o interfaccia. non trova i membri ereditati.  
+ `FindMember` Trova solo i membri che sono stati definiti direttamente nella classe o interfaccia. i membri ereditati non viene trovato.  
   
 > [!NOTE]
->  `FindMember` è un metodo helper. Chiama [IMetaDataImport:: FindMethod](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findmethod-method.md); se la chiamata non trova una corrispondenza, `FindMember` chiama quindi [FindField](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findfield-method.md).  
+>  `FindMember` è un metodo helper. Viene chiamato [FindMethod](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findmethod-method.md); se tale chiamata non trova una corrispondenza `FindMember` quindi chiama [FindField](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findfield-method.md).  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
- **Libreria:** inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [Interfaccia IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Interfaccia IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

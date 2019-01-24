@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: eb6a3e65b1f1d59cde3bff99e491bcf09816c8ad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b4c79cb3df37a9ed10e46567be63aad29fee37c4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428058"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54550188"
 ---
 # <a name="isymunmanagedwriterabort-method"></a>Metodo ISymUnmanagedWriter::Abort
-Chiude il writer di simboli senza eseguire il commit i simboli per l'archivio dei simboli. Dopo questa chiamata, il writer di simboli diventa non valido per ulteriori aggiornamenti. Per eseguire il commit i simboli e chiudere il writer di simboli, utilizzare il [ISymUnmanagedWriter:: Close](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-close-method.md) metodo invece.  
+Chiude il writer di simboli senza eseguire il commit i simboli per l'archivio dei simboli. Dopo questa chiamata, il writer di simboli viene invalidato per altri aggiornamenti. Per eseguire il commit i simboli e chiudere il writer di simboli, usare il [ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-close-method.md) metodo invece.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,10 +34,10 @@ HRESULT Abort();
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK se il metodo ha esito positivo. in caso contrario, E_FAIL o un altro codice di errore.  
+ S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o qualche altro codice di errore.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** CorSym. idl, CorSym.h  
+ **Intestazione:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

@@ -2,12 +2,12 @@
 title: Scelta di un codificatore di messaggi
 ms.date: 03/30/2017
 ms.assetid: 2204d82d-d962-4922-a79e-c9a231604f19
-ms.openlocfilehash: 061869704674206739d81be24e105fc87ce0f129
-ms.sourcegitcommit: b5cd9d5d3b75a5537fc9ad8a3f085f0bb1845ee0
+ms.openlocfilehash: 027c9e460e15b4b038147cd79c04bd082bc3356d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "44248930"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54538427"
 ---
 # <a name="choosing-a-message-encoder"></a>Scelta di un codificatore di messaggi
 In questo argomento vengono descritti i criteri per la scelta tra i codificatori di messaggi che sono inclusi in Windows Communication Foundation (WCF): file binario, testo e Message Transmission Optimization Mechanism (MTOM).  
@@ -36,12 +36,12 @@ In questo argomento vengono descritti i criteri per la scelta tra i codificatori
 |Ispezione|L'ispezione è la capacità di esaminare i messaggi durante la trasmissione. Le codifiche di testo, con o senza l'utilizzo di SOAP, consentono a numerose applicazioni di ispezionare e analizzare i messaggi senza utilizzare strumenti specializzati. Si noti che l'utilizzo della sicurezza del trasferimento, a livello di messaggio o di trasporto, influisce sulla capacità di ispezionare i messaggi. La riservatezza evita che un messaggio venga esaminato, mentre l'integrità lo protegge dalle modifiche.|Testo|  
 |Affidabilità|L'affidabilità è la flessibilità di un codificatore nei confronti degli errori di trasmissione. L'affidabilità può essere fornita anche a livello di messaggio, trasporto o applicazione. Tutti i codificatori di WCF standard presuppongono che un altro livello stia fornendo l'affidabilità. Il codificatore non ha grandi capacità di recupero da un errore di trasmissione.|nessuno|  
 |Semplicità|La semplicità rappresenta la facilità con cui è possibile creare codificatori e decodificatori per una specifica di codifica. Le codifiche di testo sono particolarmente vantaggiose per la semplicità. La codifica di testo POX, inoltre, ha anche il vantaggio che non richiede supporto per l'elaborazione di SOAP.|Testo (POX)|  
-|Dimensioni|La codifica determina la quantità di sovraccarico imposto sul contenuto. La dimensione dei messaggi codificati è direttamente correlata alla velocità effettiva massima delle operazioni del servizio. Le codifiche binarie in genere sono più compatte di quelle di testo. Quando la dimensione del messaggio è importante, prendere in considerazione anche la compressione del contenuto del messaggio durante la codifica. La compressione aumenta tuttavia gli oneri di elaborazione sia per il mittente che per il destinatario del messaggio.|Binario|  
+|Dimensione|La codifica determina la quantità di sovraccarico imposto sul contenuto. La dimensione dei messaggi codificati è direttamente correlata alla velocità effettiva massima delle operazioni del servizio. Le codifiche binarie in genere sono più compatte di quelle di testo. Quando la dimensione del messaggio è importante, prendere in considerazione anche la compressione del contenuto del messaggio durante la codifica. La compressione aumenta tuttavia gli oneri di elaborazione sia per il mittente che per il destinatario del messaggio.|Binario|  
 |Flusso|Il flusso consente alle applicazioni di iniziare a elaborare un messaggio prima che sia arrivato tutto. Per utilizzare in modo efficiente un flusso, è necessario che i dati importanti di un messaggio siano disponibili all'inizio del messaggio, affinché l'applicazione ricevente non debba attenderne l'arrivo. Le applicazioni che utilizzano il trasferimento tramite flussi, inoltre, devono organizzare i dati nel messaggio in modo incrementale affinché il contenuto non abbia dipendenze in avanti. In molti casi, è necessario trovare un compromesso tra l'utilizzo di un flusso e la riduzione massima delle dimensioni di trasferimento di quel contenuto.|nessuno|  
 |Supporto di strumenti di terze parti|Le aree di supporto per una codifica comprendono sviluppo e diagnosi. Gli sviluppatori di terze parti hanno investito massicciamente in librerie e toolkit per la gestione dei messaggi codificati nel formato POX.|Testo (POX)|  
 |Interoperabilità|Questo fattore si riferisce alla capacità di un codificatore di WCF per interagire con i servizi non WCF.|Testo<br /><br /> MTOM (parziale)|  
   
-Nota: quando si utilizza il codificatore binario, l'utilizzo dell'impostazione IgnoreWhitespace durante la creazione di un elemento XMLReader non avrà effetto.  Ad esempio, se si effettua quanto riportato di seguito in un'operazione del servizio:  
+Nota: Quando si utilizza il codificatore binario, usare l'impostazione IgnoreWhitespace durante la creazione di un elemento XMLReader avrà alcun effetto.  Ad esempio, se si effettua quanto riportato di seguito in un'operazione del servizio:  
 
 ```csharp
 public void OperationContract(XElement input)
@@ -84,4 +84,4 @@ Il client sia il servizio prevede l'accettazione inviare e ricevere messaggi com
   
 ## <a name="see-also"></a>Vedere anche
 
-[Associazioni](../../../../docs/framework/wcf/feature-details/bindings.md)
+- [Associazioni](../../../../docs/framework/wcf/feature-details/bindings.md)

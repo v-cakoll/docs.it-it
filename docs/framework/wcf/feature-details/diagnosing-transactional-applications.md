@@ -2,15 +2,15 @@
 title: Diagnostica di applicazioni transazionali
 ms.date: 03/30/2017
 ms.assetid: 4a993492-1088-4d10-871b-0c09916af05f
-ms.openlocfilehash: 4fa85fea0651d7a31c5a50bbc9c1226421b976b7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f4cc42e7ac6847d8320b96fce5198d55df303de2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33497000"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54550279"
 ---
 # <a name="diagnosing-transactional-applications"></a>Diagnostica di applicazioni transazionali
-In questo argomento viene descritto come utilizzare la funzionalità di diagnostica e gestione di Windows Communication Foundation (WCF) per risolvere i problemi di un'applicazione transazionale.  
+Questo argomento descrive come usare la gestione di Windows Communication Foundation (WCF) e la funzionalità di diagnostica per risolvere i problemi di un'applicazione transazionale.  
   
 ## <a name="performance-counters"></a>Contatori delle prestazioni  
  WCF fornisce un set standard di contatori delle prestazioni per misurare le prestazioni dell'applicazione transazionale. Per altre informazioni, vedere [Contatori delle prestazioni](../../../../docs/framework/wcf/diagnostics/performance-counters/index.md).  
@@ -45,7 +45,7 @@ In questo argomento viene descritto come utilizzare la funzionalità di diagnost
 |Transazioni propagate al secondo|Numero di transazioni propagate alle operazioni in questo endpoint ogni secondo. Questo contatore viene incrementato ogni volta che è presente una transazione nel messaggio inviato all'endpoint.|  
   
 ## <a name="windows-management-instrumentation"></a>Strumentazione gestione Windows  
- WCF espone dati di ispezione di un servizio in fase di esecuzione tramite un provider di Strumentazione gestione Windows (WMI) di WCF. Per ulteriori informazioni sull'accesso ai dati WMI, vedere [tramite Strumentazione gestione Windows per la diagnostica](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
+ WCF espone dati di ispezione di un servizio in fase di esecuzione tramite un provider di Strumentazione gestione Windows (WMI) di WCF. Per altre informazioni sull'accesso ai dati WMI, vedere [uso di Strumentazione gestione Windows per la diagnostica](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
   
  Un numero di proprietà WMI in sola lettura indica le impostazioni della transazione applicate per un servizio. Nella tabelle seguenti vengono elencate tutte queste impostazioni.  
   
@@ -89,11 +89,11 @@ In questo argomento viene descritto come utilizzare la funzionalità di diagnost
   
 -   Traccia di WCF standard  
   
-     Questo tipo di traccia è equivalente alla traccia di qualsiasi applicazione WCF. Per altre informazioni, vedere [Configuring Tracing](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md).  
+     Questo tipo di traccia è equivalente alla traccia di tutte le applicazioni WCF. Per altre informazioni, vedere [Configuring Tracing](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md).  
   
 -   Traccia WS-AtomicTransaction  
   
-     Traccia WS-AtomicTransaction può essere abilitata utilizzando il [utilità configurazione WS-AtomicTransaction (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md). Tale traccia consente di comprendere lo stato delle transazioni e di conoscere i partecipanti all'interno di un sistema. Per attivare anche la traccia del modello di servizi interna, è possibile impostare la chiave del Registro di sistema `HKLM\SOFTWARE\Microsoft\WSAT\3.0\ServiceModelDiagnosticTracing` su un valore valido dell'enumerazione <xref:System.Diagnostics.SourceLevels>. È possibile abilitare la registrazione nello stesso modo di altre applicazioni WCF dei messaggi.  
+     Analisi WS-AtomicTransaction può essere abilitata utilizzando la [utilità di configurazione WS-AtomicTransaction (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md). Tale traccia consente di comprendere lo stato delle transazioni e di conoscere i partecipanti all'interno di un sistema. Per attivare anche la traccia del modello di servizi interna, è possibile impostare la chiave del Registro di sistema `HKLM\SOFTWARE\Microsoft\WSAT\3.0\ServiceModelDiagnosticTracing` su un valore valido dell'enumerazione <xref:System.Diagnostics.SourceLevels>. È possibile abilitare la registrazione nello stesso modo delle altre applicazioni WCF dei messaggi.  
   
 -   Traccia `System.Transactions`  
   
@@ -118,9 +118,9 @@ In questo argomento viene descritto come utilizzare la funzionalità di diagnost
     </configuration>  
     ```  
   
-     Ciò consente inoltre la traccia di WCF, come WCF utilizza anche il <xref:System.Transactions> dell'infrastruttura.  
+     Consente anche la tracciatura WCF, come WCF Usa anche il <xref:System.Transactions> dell'infrastruttura.  
   
-## <a name="see-also"></a>Vedere anche  
- [Amministrazione e diagnostica](../../../../docs/framework/wcf/diagnostics/index.md)  
- [Configurazione delle funzionalità di traccia](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
- [Utilità di configurazione WS-AtomicTransaction (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
+## <a name="see-also"></a>Vedere anche
+- [Amministrazione e diagnostica](../../../../docs/framework/wcf/diagnostics/index.md)
+- [Configurazione delle funzionalità di traccia](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
+- [Utilità di configurazione WS-AtomicTransaction (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)

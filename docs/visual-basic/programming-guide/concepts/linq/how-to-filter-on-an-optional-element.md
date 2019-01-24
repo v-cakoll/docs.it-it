@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: filtro su un elemento facoltativo (Visual Basic)'
+title: 'Procedura: Filtrare un elemento facoltativo (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: a74b76ad-6889-4185-a189-d6ef2c63841e
-ms.openlocfilehash: 2748f2296af78073042d7348cceba6544f2daa10
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: feb7c3fbf40db81835ef132c52a2d9f2af1229be
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643515"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552424"
 ---
-# <a name="how-to-filter-on-an-optional-element-visual-basic"></a>Procedura: filtro su un elemento facoltativo (Visual Basic)
+# <a name="how-to-filter-on-an-optional-element-visual-basic"></a>Procedura: Filtrare un elemento facoltativo (Visual Basic)
 Talvolta si desidera filtrare in base a un elemento anche se non si è certi che esista nel documento XML. La ricerca deve essere eseguita in modo che se l'elemento specifico non include l'elemento figlio, non viene generata un'eccezione di riferimento null quando si applica un filtro sull'elemento. Nell'esempio seguente l'elemento `Child5` non contiene un elemento figlio `Type`, tuttavia la query viene comunque eseguita correttamente.  
   
 ## <a name="example"></a>Esempio  
@@ -57,7 +57,7 @@ Child Four Text
 ```  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente è illustrata la stessa query per XML in uno spazio dei nomi. Per ulteriori informazioni, vedere [utilizzo di spazi dei nomi XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
+ Nell'esempio seguente è illustrata la stessa query per XML in uno spazio dei nomi. Per altre informazioni, vedere [uso di spazi dei nomi XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
   
 ```vb  
 Imports <xmlns='http://www.adatum.com'>  
@@ -106,13 +106,13 @@ Child Two Text
 Child Four Text  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType>  
- <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType>  
- <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType>  
- [Le query di base (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)  
- [Proprietà Child Axis XML](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)  
- [Proprietà axis dell'attributo XML](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)  
- [Proprietà Value XML](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md)  
- [Panoramica degli operatori query standard (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [Operazioni di proiezione (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType>
+- <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType>
+- <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType>
+- [Query di base (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [Proprietà Child Axis XML](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)
+- [Proprietà axis dell'attributo XML](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)
+- [Proprietà Value XML](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md)
+- [Panoramica degli operatori query standard (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Operazioni di proiezione (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)

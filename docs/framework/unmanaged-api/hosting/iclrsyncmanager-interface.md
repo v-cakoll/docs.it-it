@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ede896cdb93217fcfba9d66ed7102bcc1ba762e9
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4b949466c5557415ec06bac601380675beed7fd1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129324"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54549863"
 ---
 # <a name="iclrsyncmanager-interface"></a>Interfaccia ICLRSyncManager
 Definisce i metodi che consentono all'host per ottenere informazioni sulle attività di richiesta e per rilevare i deadlock nell'implementazione della sincronizzazione.  
@@ -38,14 +38,14 @@ Definisce i metodi che consentono all'host per ottenere informazioni sulle attiv
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
   
- **Intestazione:** Mscoree. H  
+ **Intestazione:** MSCorEE.h  
   
  **Libreria:** Inclusa come risorsa in Mscoree. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Threading.Thread>  
- [Interfaccia IHostSyncManager](ihostsyncmanager-interface.md)  
- [Threading gestito e non gestito](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))  
- [Interfacce di hosting](hosting-interfaces.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Threading.Thread>
+- [Interfaccia IHostSyncManager](ihostsyncmanager-interface.md)
+- [Threading gestito e non gestito](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))
+- [Interfacce di hosting](hosting-interfaces.md)

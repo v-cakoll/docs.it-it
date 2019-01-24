@@ -12,12 +12,12 @@ helpviewer_keywords:
 - brushes [WPF], painting with images
 - brushes [WPF], painting with visuals
 ms.assetid: 779aac3f-8d41-49d8-8130-768244aa2240
-ms.openlocfilehash: 0d860062814a447830e1237f4fc2c1ae0d223e9e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d226ecb6e168a044cd9802b4278c25084d8c84fc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510024"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54537751"
 ---
 # <a name="painting-with-images-drawings-and-visuals"></a>Disegnare con oggetti Image, Drawing e Visual
 In questo argomento viene descritto come utilizzare <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, e <xref:System.Windows.Media.VisualBrush> oggetti da disegnare un'area con un'immagine, una <xref:System.Windows.Media.Drawing>, o un <xref:System.Windows.Media.Visual>.  
@@ -41,7 +41,7 @@ Oggetti disegnati con un oggetto ImageBrush
  Per impostazione predefinita, un <xref:System.Windows.Media.ImageBrush> occupa completamente la propria immagine per riempire completamente l'area disegnata, eventualmente distorcendo l'immagine se tale area presenta proporzioni diverse rispetto all'immagine. È possibile modificare questo comportamento cambiando il <xref:System.Windows.Media.TileBrush.Stretch%2A> rispetto al valore predefinito della proprietà <xref:System.Windows.Media.Stretch.Fill> al <xref:System.Windows.Media.Stretch.None>, <xref:System.Windows.Media.Stretch.Uniform>, o <xref:System.Windows.Media.Stretch.UniformToFill>. In quanto <xref:System.Windows.Media.ImageBrush> è un tipo di <xref:System.Windows.Media.TileBrush>, è possibile specificare esattamente come un tratto con immagine riempie l'area di output e persino creare dei modelli. Per altre informazioni su advanced <xref:System.Windows.Media.TileBrush> funzionalità, vedere la [Cenni preliminari sugli oggetti TileBrush](../../../../docs/framework/wpf/graphics-multimedia/tilebrush-overview.md).  
   
 <a name="fillingpanelwithimage"></a>   
-## <a name="example-paint-an-object-with-a-bitmap-image"></a>Esempio: disegnare un oggetto con un'immagine bitmap  
+## <a name="example-paint-an-object-with-a-bitmap-image"></a>Esempio: Disegnare un oggetto con un'immagine Bitmap  
  L'esempio seguente usa un' <xref:System.Windows.Media.ImageBrush> per disegnare il <xref:System.Windows.Controls.Panel.Background%2A> di un <xref:System.Windows.Controls.Canvas>.  
   
  [!code-xaml[BrushOverviewExamples_snip#GraphicsMMImageBrushAsCanvasBackgroundExampleWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/ImageBrushExample.xaml#graphicsmmimagebrushascanvasbackgroundexamplewholepage)]  
@@ -73,7 +73,7 @@ Oggetti disegnati con un oggetto DrawingBrush
  Ad esempio un <xref:System.Windows.Media.ImageBrush>, una <xref:System.Windows.Media.DrawingBrush> estende relativo <xref:System.Windows.Media.DrawingBrush.Drawing%2A> per riempire l'area di output. È possibile eseguire l'override di questo comportamento cambiando il <xref:System.Windows.Media.TileBrush.Stretch%2A> proprietà dall'impostazione predefinita del <xref:System.Windows.Media.Stretch.Fill>. Per altre informazioni, vedere la proprietà <xref:System.Windows.Media.TileBrush.Stretch%2A>.  
   
 <a name="fillingareawithdrawingbrushexample"></a>   
-## <a name="example-paint-an-object-with-a-drawing"></a>Esempio: disegnare un oggetto con un oggetto Drawing  
+## <a name="example-paint-an-object-with-a-drawing"></a>Esempio: Disegnare un oggetto con un oggetto  
  L'esempio seguente illustra come disegnare un oggetto con un disegno di tre ellissi. Oggetto <xref:System.Windows.Media.GeometryDrawing> viene usato per descrivere i puntini di sospensione.  
   
  [!code-xaml[BrushOverviewExamples_snip#GraphicsMMDrawingBrushAsButtonBackgroundExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/DrawingBrushExample.xaml#graphicsmmdrawingbrushasbuttonbackgroundexample)]  
@@ -90,16 +90,16 @@ Oggetti disegnati con un oggetto DrawingBrush
   
  Esistono due modi per specificare il <xref:System.Windows.Media.VisualBrush.Visual%2A> contenuto di un <xref:System.Windows.Media.VisualBrush>.  
   
--   Creare una nuova <xref:System.Windows.Media.Visual> e usarlo per impostare il <xref:System.Windows.Media.VisualBrush.Visual%2A> proprietà del <xref:System.Windows.Media.VisualBrush>. Per un esempio, vedere la sezione [Esempio: disegnare un oggetto con un oggetto Visual](#examplevisualbrush1) seguente.  
+-   Creare una nuova <xref:System.Windows.Media.Visual> e usarlo per impostare il <xref:System.Windows.Media.VisualBrush.Visual%2A> proprietà del <xref:System.Windows.Media.VisualBrush>. Per un esempio, vedere il [esempio: Disegnare un oggetto con un oggetto visivo](#examplevisualbrush1) sezione che segue.  
   
--   Usare un oggetto esistente <xref:System.Windows.Media.Visual>, che consente di creare un'immagine duplicata della destinazione <xref:System.Windows.Media.Visual>. È quindi possibile usare il <xref:System.Windows.Media.VisualBrush> per creare effetti interessanti, ad esempio reflection e ingrandimento. Per un esempio, vedere la sezione [Esempio: creare una reflection](#examplevisualbrush2).  
+-   Usare un oggetto esistente <xref:System.Windows.Media.Visual>, che consente di creare un'immagine duplicata della destinazione <xref:System.Windows.Media.Visual>. È quindi possibile usare il <xref:System.Windows.Media.VisualBrush> per creare effetti interessanti, ad esempio reflection e ingrandimento. Per un esempio, vedere il [esempio: Creare una Reflection](#examplevisualbrush2) sezione.  
   
  Quando si definisce una nuova <xref:System.Windows.Media.VisualBrush.Visual%2A> per un <xref:System.Windows.Media.VisualBrush> e che <xref:System.Windows.Media.Visual> è un <xref:System.Windows.UIElement> (ad esempio un pannello o un controllo), viene eseguito il sistema di layout nel <xref:System.Windows.UIElement> e i relativi elementi figlio quando il <xref:System.Windows.Media.VisualBrush.AutoLayoutContent%2A> è impostata su `true`. Tuttavia, la radice <xref:System.Windows.UIElement> viene essenzialmente isolato dal resto del sistema: gli stili e layout esterno non può superare questo limite. Pertanto, è necessario specificare in modo esplicito le dimensioni della radice <xref:System.Windows.UIElement>, in quanto il suo unico elemento padre è il <xref:System.Windows.Media.VisualBrush> e pertanto non può essere ridimensionato automaticamente se stesso per l'area da disegnare. Per altre informazioni sul layout in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], vedere [Layout](../../../../docs/framework/wpf/advanced/layout.md).  
   
  Ad esempio <xref:System.Windows.Media.ImageBrush> e <xref:System.Windows.Media.DrawingBrush>, un <xref:System.Windows.Media.VisualBrush> estende il proprio contenuto per riempire l'area di output. È possibile eseguire l'override di questo comportamento cambiando il <xref:System.Windows.Media.TileBrush.Stretch%2A> proprietà dall'impostazione predefinita del <xref:System.Windows.Media.Stretch.Fill>. Per altre informazioni, vedere la proprietà <xref:System.Windows.Media.TileBrush.Stretch%2A>.  
   
 <a name="examplevisualbrush1"></a>   
-## <a name="example-paint-an-object-with-a-visual"></a>Esempio: disegnare un oggetto con un oggetto Visual  
+## <a name="example-paint-an-object-with-a-visual"></a>Esempio: Disegnare un oggetto con un oggetto visivo  
  L'esempio seguente usa numerosi controlli e un pannello per disegnare un rettangolo.  
   
  [!code-xaml[BrushOverviewExamples_snip#GraphicsMMVisualBrushAsRectangleBackgroundExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/VisualBrushExample.xaml#graphicsmmvisualbrushasrectanglebackgroundexample)]  
@@ -108,7 +108,7 @@ Oggetti disegnati con un oggetto DrawingBrush
  [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMVisualBrushAsRectangleBackgroundExample1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/visualbrushexample.vb#graphicsmmvisualbrushasrectanglebackgroundexample1)]  
   
 <a name="examplevisualbrush2"></a>   
-## <a name="example-create-a-reflection"></a>Esempio: creare una reflection  
+## <a name="example-create-a-reflection"></a>Esempio: Creare una reflection  
  Nell'esempio precedente è stato illustrato come creare un nuovo <xref:System.Windows.Media.Visual> da utilizzare come sfondo. È anche possibile usare un <xref:System.Windows.Media.VisualBrush> per visualizzare un elemento visivo esistente; questa funzionalità consente di produrre effetti visivi interessanti, ad esempio reflection e ingrandimento. L'esempio seguente usa un' <xref:System.Windows.Media.VisualBrush> per creare un riflesso di un <xref:System.Windows.Controls.Border> che contiene diversi elementi. L'immagine seguente illustra l'output generato dall'esempio.  
   
  ![Un oggetto visivo di riflessi](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-visualbrush-reflection-small.jpg "graphicsmm_visualbrush_reflection_small")  
@@ -126,7 +126,7 @@ Oggetto Visual riflesso
   
  Oggetto <xref:System.Windows.Media.TileBrush> include tre componenti principali: il contenuto, tessere e area di output.  
   
- ![Componenti di TileBrush](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-defaultcontentprojection2.png "wcpsdk_mmgraphics_defaultcontentprojection2")  
+ ![TileBrush components](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-defaultcontentprojection2.png "wcpsdk_mmgraphics_defaultcontentprojection2")  
 Componenti di un oggetto TileBrush con una sola tessera  
   
  ![Componenti di TileBrush affiancato](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-tiledprojection.png "graphicsmm_tiledprojection")  
@@ -134,16 +134,16 @@ Componenti di un oggetto TileBrush con più tessere
   
  Per altre informazioni sulle funzionalità di affiancamento <xref:System.Windows.Media.TileBrush> oggetti, vedere la [Cenni preliminari sugli oggetti TileBrush](../../../../docs/framework/wpf/graphics-multimedia/tilebrush-overview.md).  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Windows.Media.ImageBrush>  
- <xref:System.Windows.Media.DrawingBrush>  
- <xref:System.Windows.Media.VisualBrush>  
- <xref:System.Windows.Media.TileBrush>  
- [Panoramica sugli oggetti TileBrush](../../../../docs/framework/wpf/graphics-multimedia/tilebrush-overview.md)  
- [Panoramica sui pennelli di WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-brushes-overview.md)  
- [Cenni preliminari sulla creazione dell'immagine](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)  
- [Cenni preliminari sugli oggetti Drawing](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)  
- [Panoramica sulle maschere di opacità](../../../../docs/framework/wpf/graphics-multimedia/opacity-masks-overview.md)  
- [Cenni preliminari sul rendering della grafica WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [Esempio ImageBrush](https://go.microsoft.com/fwlink/?LinkID=160005)  
- [Esempio VisualBrush](https://go.microsoft.com/fwlink/?LinkID=160049)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Windows.Media.ImageBrush>
+- <xref:System.Windows.Media.DrawingBrush>
+- <xref:System.Windows.Media.VisualBrush>
+- <xref:System.Windows.Media.TileBrush>
+- [Panoramica sugli oggetti TileBrush](../../../../docs/framework/wpf/graphics-multimedia/tilebrush-overview.md)
+- [Panoramica sui pennelli di WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-brushes-overview.md)
+- [Cenni preliminari sulla creazione dell'immagine](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)
+- [Cenni preliminari sugli oggetti Drawing](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)
+- [Panoramica sulle maschere di opacità](../../../../docs/framework/wpf/graphics-multimedia/opacity-masks-overview.md)
+- [Cenni preliminari sul rendering della grafica WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [Esempio ImageBrush](https://go.microsoft.com/fwlink/?LinkID=160005)
+- [Esempio VisualBrush](https://go.microsoft.com/fwlink/?LinkID=160049)

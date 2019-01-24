@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strings [Visual Basic], Visual Basic
 - strings [Visual Basic], regular expressions
 ms.assetid: 5674418d-f00d-4f72-9f98-d15897793350
-ms.openlocfilehash: 7d2477070dce558aa932c822852ac8ac9c6721e4
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: 2a7dd80d141ff5945bcce71fead1bb5bc24ad737
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39332672"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552384"
 ---
 # <a name="string-basics-in-visual-basic"></a>Nozioni fondamentali sulle stringhe in Visual Basic
 Il tipo di dati `String` rappresenta una serie di caratteri, ognuno dei quali, a sua volta, rappresenta un'istanza del tipo di dati `Char`. In questo argomento introduce i concetti di base delle stringhe in Visual Basic.  
@@ -71,8 +71,8 @@ World]]></xml>.Value
   
  A differenza di altri tipi di dati intrinseci, `String` è un tipo riferimento. Quando una variabile di tipo riferimento viene passata come argomento di una funzione o di una subroutine, invece del valore effettivo della stringa viene passato un riferimento all'indirizzo di memoria in cui sono archiviati i dati Nell'esempio precedente, quindi, il nome della variabile rimane lo stesso, ma punta a un'istanza nuova e diversa della classe `String`, che contiene il nuovo valore.   
   
-## <a name="see-also"></a>Vedere anche  
- [Introduzione alle stringhe in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)  
- [Tipo di dati String](../../../../visual-basic/language-reference/data-types/string-data-type.md)  
- [Tipo di dati Char](../../../../visual-basic/language-reference/data-types/char-data-type.md)  
- [Operazioni di base su stringhe](../../../../standard/base-types/basic-string-operations.md)
+## <a name="see-also"></a>Vedere anche
+- [Introduzione alle stringhe in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
+- [Tipo di dati String](../../../../visual-basic/language-reference/data-types/string-data-type.md)
+- [Tipo di dati Char](../../../../visual-basic/language-reference/data-types/char-data-type.md)
+- [Operazioni di base su stringhe](../../../../standard/base-types/basic-string-operations.md)

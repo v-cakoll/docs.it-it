@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3b4731a9503ab29a7d90ddd28c7ac0a5a761c1e0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5895dc3cb64b72380dead1e048c012b586c4f48e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432495"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54550721"
 ---
 # <a name="inotifyconnection2registernotifysource-method"></a>Metodo INotifyConnection2::RegisterNotifySource
-Installa un'origine di notifica specificato.  
+Installa un'origine di notifica specificati.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -48,10 +48,10 @@ HRESULT RegisterNotifySource
  S_OK se il metodo ha esito positivo.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** ProtocolNotify2. idl  
+ **Intestazione:** ProtocolNotify2.idl  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia INotifyConnection2](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)  
- [Interfaccia INotifySource2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)  
- [Interfaccia INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)  
- [Metodo UnregisterNotifySource](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-unregisternotifysource-method.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia INotifyConnection2](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
+- [Interfaccia INotifySource2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
+- [Interfaccia INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
+- [Metodo UnregisterNotifySource](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-unregisternotifysource-method.md)

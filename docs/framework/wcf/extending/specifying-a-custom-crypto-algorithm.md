@@ -2,12 +2,12 @@
 title: Specifica di un algoritmo di crittografia personalizzato
 ms.date: 03/30/2017
 ms.assetid: d662a305-8e09-451d-9a59-b0f12b012f1d
-ms.openlocfilehash: d8fb22daac66c3ef80f148db03703fc5024d3438
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5c7bddb7e6e1696ea1cb4f8359e34a51a89fce40
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33489225"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54537686"
 ---
 # <a name="specifying-a-custom-crypto-algorithm"></a>Specifica di un algoritmo di crittografia personalizzato
 WCF consente di specificare un algoritmo di crittografia personalizzato da usare per crittografare i dati o calcolare le firme digitali. A tale scopo, attenersi alla procedura seguente:  
@@ -105,7 +105,7 @@ public class MyCustomAlgorithmSuite : SecurityAlgorithmSuite
 </configuration>  
 ```  
   
- La sezione di <`cryptoClasses`> elemento crea il mapping tra il SHA256CryptoServiceProvider e l'alias "SHA256CSP". Il <`nameEntry`> elemento crea il mapping tra l'alias "SHA256CSP" e l'URL specificato (http://constoso.com/CustomAlgorithms/CustomHashAlgorithm ).  
+ La sezione sotto il <`cryptoClasses`> elemento crea il mapping tra il SHA256CryptoServiceProvider e l'alias "SHA256CSP". Il <`nameEntry`> elemento crea il mapping tra l'alias "SHA256CSP" e l'URL specificato (http://constoso.com/CustomAlgorithms/CustomHashAlgorithm ).  
   
  Per registrare l'algoritmo personalizzato nel codice usare il metodo <xref:System.Security.Cryptography.CryptoConfig.AddAlgorithm(System.Type,System.String[])>. Questo metodo crea entrambi i mapping. Nell'esempio seguente viene illustrato come chiamare questo metodo:  
   
@@ -123,10 +123,10 @@ WSHttpBinding binding = new WSHttpBinding();
             binding.Security.Message.AlgorithmSuite = new MyCustomAlgorithmSuite();  
 ```  
   
- Per un esempio di codice completo, vedere il [agilità di crittografia nella sicurezza WCF](../../../../docs/framework/wcf/samples/cryptographic-agility-in-wcf-security.md) esempio.  
+ Per un esempio di codice completo, vedere la [agilità di crittografia nella sicurezza WCF](../../../../docs/framework/wcf/samples/cryptographic-agility-in-wcf-security.md) esempio.  
   
-## <a name="see-also"></a>Vedere anche  
- [Protezione di servizi e client](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Protezione dei servizi](../../../../docs/framework/wcf/securing-services.md)  
- [Panoramica della sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Concetti relativi alla sicurezza](../../../../docs/framework/wcf/feature-details/security-concepts.md)
+## <a name="see-also"></a>Vedere anche
+- [Protezione di servizi e client](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Protezione dei servizi](../../../../docs/framework/wcf/securing-services.md)
+- [Panoramica della sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Concetti relativi alla sicurezza](../../../../docs/framework/wcf/feature-details/security-concepts.md)

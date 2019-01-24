@@ -17,14 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6ac1ecb73257782888c963082953ed243177a86b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a9d156d7c7ada8309e501ba44720dfa285ce50d2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552359"
 ---
 # <a name="imetadataimportgeteventprops-method"></a>Metodo IMetaDataImport::GetEventProps
-Ottiene informazioni sui metadati per l'evento rappresentato dal token specificato, inclusi il tipo dichiarante, add e Remove per delegati e i flag e altri dati associati.  
+Ottiene le informazioni sui metadati per l'evento rappresentato dal token di evento specificato, incluso il tipo dichiarante, add e i metodi di installazione per i delegati, i flag e gli altri dati associati.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -48,50 +49,50 @@ HRESULT GetEventProps (
   
 #### <a name="parameters"></a>Parametri  
  `ev`  
- [in] Token di metadati che rappresenta l'evento per ottenere i metadati.  
+ [in] Il token di metadati di evento che rappresenta l'evento per ottenere i metadati.  
   
  `pClass`  
- [out] Un puntatore al token TypeDef che rappresenta la classe che dichiara l'evento.  
+ [out] Puntatore al token TypeDef che rappresenta la classe che dichiara l'evento.  
   
  `szEvent`  
- [out] Il nome dell'evento a cui fa riferimento `ev`.  
+ [out] Il nome dell'evento a cui fanno riferimento `ev`.  
   
  `pchEvent`  
  [in] La lunghezza in caratteri wide della richiesta `szEvent`.  
   
  `pdwEventFlags`  
- [out] La lunghezza restituita in caratteri wide di `szEvent`.  
+ [out] La lunghezza in caratteri wide di restituita `szEvent`.  
   
  `ptkEventType`  
- [out] Un puntatore a un TypeRef o TypeDef metadati token che rappresenta il <xref:System.Delegate> tipo dell'evento.  
+ [out] Un puntatore a oggetto TypeRef o TypeDef metadati token che rappresenta il <xref:System.Delegate> tipo dell'evento.  
   
  `pmdAddOn`  
- [out] Puntatore al token di metadati che rappresenta il metodo che consente di aggiungere gestori eventi per l'evento.  
+ [out] Puntatore al token di metadati che rappresenta il metodo che aggiunge i gestori dell'evento.  
   
  `pmdRemoveOn`  
- [out] Puntatore al token di metadati che rappresenta il metodo rimuove i gestori per l'evento.  
+ [out] Puntatore al token di metadati che rappresenta il metodo che rimuove gestori dell'evento.  
   
  `pmdFire`  
  [out] Puntatore al token di metadati che rappresenta il metodo che genera l'evento.  
   
  `rmdOtherMethod`  
- [out] Una matrice di puntatori token ad altri metodi associati all'evento.  
+ [out] Una matrice di puntatori token agli altri metodi associati all'evento.  
   
  `cMax`  
  [in] Dimensione massima della matrice `rmdOtherMethod`.  
   
  `pcOtherMethod`  
- [out] Il numero di token restituiti in `rmdOtherMethod`.  
+ [out] Il numero di token restituito nel `rmdOtherMethod`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
- **Libreria:** inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [Interfaccia IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Interfaccia IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

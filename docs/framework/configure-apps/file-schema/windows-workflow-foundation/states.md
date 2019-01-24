@@ -1,27 +1,27 @@
 ---
-title: '&lt;Stati&gt;'
+title: '&lt;states&gt;'
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: ebea5e7c-ad58-43c5-8f2d-cca25ae1b721
-ms.openlocfilehash: fe02106d8d7f70cb328214c7e464d80a41b75528
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: d1ec35b1c434b8188fde7b546e2dee42a93f5c91
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32757278"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54550578"
 ---
-# <a name="ltstatesgt"></a>&lt;Stati&gt;
+# <a name="ltstatesgt"></a>&lt;states&gt;
 Rappresenta una raccolta di stati sottoscritti dell'istanza del flusso di lavoro rilevata che si riferiscono alla fase di creazione dei record di rilevamento.  
   
- Per ulteriori informazioni sulla query del profilo di rilevamento, vedere [profili di rilevamento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
+ Per altre informazioni sulle query relative ai profili di rilevamento, vedere [profili di rilevamento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
   
 \<system.serviceModel>  
-\<rilevamento >  
+\<tracking>  
 \<trackingProfile>  
 \<flusso di lavoro >  
-\<workflowInstanceQueries >  
-\<workflowInstanceQuery >  
-\<stati >  
+\<workflowInstanceQueries>  
+\<workflowInstanceQuery>  
+\<states>  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -51,7 +51,7 @@ Rappresenta una raccolta di stati sottoscritti dell'istanza del flusso di lavoro
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<stato >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md)|Stato sottoscritto dell'istanza del flusso di lavoro rilevata che si riferisce al momento della creazione del record.|  
+|[\<state>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md)|Stato sottoscritto dell'istanza del flusso di lavoro rilevata che si riferisce al momento della creazione del record.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -93,9 +93,9 @@ Rappresenta una raccolta di stati sottoscritti dell'istanza del flusso di lavoro
 </workflowInstanceQueries>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement?displayProperty=nameWithType>       
- <xref:System.ServiceModel.Activities.Tracking.Configuration.StateElementCollection?displayProperty=nameWithType>       
- <xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType>       
- [Rilevamento e analisi del flusso di lavoro](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
- [Profili di rilevamento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Activities.Tracking.Configuration.StateElementCollection?displayProperty=nameWithType>
+- <xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType>
+- [Rilevamento e analisi del flusso di lavoro](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [Profili di rilevamento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

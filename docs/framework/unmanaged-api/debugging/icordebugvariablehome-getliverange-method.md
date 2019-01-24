@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c0f9c586a9e95fc2e57c4956601f6dce2b988159
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 894629b7cc1c48eb6c1820c65a0a2a41332a8080
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423065"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54549691"
 ---
 # <a name="icordebugvariablehomegetliverange-method"></a>Metodo IcorDebugVariableHome::GetLiveRange
 Ottiene l'intervallo nativo su cui questa variabile è in tempo reale.  
@@ -38,19 +38,19 @@ HRESULT GetLiveRange(
   
 #### <a name="parameters"></a>Parametri  
  `pStartOffset`  
- [out] L'offset logico in cui la variabile è il prima in tempo reale.  
+ [out] L'offset logico in cui la variabile è primo in tempo reale.  
   
  `pEndOffset`  
- [out] L'offset logico immediatamente dopo il punto in cui la variabile è l'ultimo in tempo reale.  
+ [out] L'offset logico immediatamente dopo il punto in corrispondenza del quale la variabile è l'ultimo in tempo reale.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)

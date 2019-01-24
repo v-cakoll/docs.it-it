@@ -1,18 +1,18 @@
 ---
-title: Utilizzo della varianza per Func e azione delegati generici (Visual Basic)
+title: Uso della varianza per i delegati generici azione (Visual Basic) e Func
 ms.date: 07/20/2015
 ms.assetid: 36c3012f-b39c-493b-b90f-079b5912ac1b
-ms.openlocfilehash: e4c878f65867c575a1691423df583662d72a257c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 134b3c0776e100a4bdc7e902bc8b41477a0ee264
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642935"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54549457"
 ---
-# <a name="using-variance-for-func-and-action-generic-delegates-visual-basic"></a>Utilizzo della varianza per Func e azione delegati generici (Visual Basic)
+# <a name="using-variance-for-func-and-action-generic-delegates-visual-basic"></a>Uso della varianza per i delegati generici azione (Visual Basic) e Func
 In questi esempi viene illustrato come usare la covarianza e la controvarianza nei delegati generici `Func` e `Action` per consentire il riutilizzo dei metodi e offrire maggiore flessibilità nel codice.  
   
- Per ulteriori informazioni sulla covarianza e controvarianza, vedere [varianza nei delegati (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md).  
+ Per altre informazioni sulla covarianza e controvarianza, vedere [varianza nei delegati (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md).  
   
 ## <a name="using-delegates-with-covariant-type-parameters"></a>Uso dei delegati con parametri di tipo covariante  
  L'esempio seguente illustra i vantaggi del supporto di covarianza nei delegati generici `Func`. Il metodo `FindByTitle` accetta un parametro di tipo `String` e restituisce un oggetto di tipo `Employee`. Tuttavia, è possibile assegnare questo metodo al delegato `Func(Of String, Person)` perché `Employee` eredita `Person`.  
@@ -89,6 +89,6 @@ Class AddressBook
 End Class  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Covarianza e controvarianza (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)  
- [Generics](~/docs/standard/generics/index.md)
+## <a name="see-also"></a>Vedere anche
+- [Covarianza e controvarianza (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)
+- [Generics](~/docs/standard/generics/index.md)

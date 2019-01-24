@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: chiamare una stored procedure utilizzando LINQ (Visual Basic)'
+title: 'Procedura: Chiamare una Stored Procedure utilizzando LINQ (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - queries [LINQ in Visual Basic], stored procedure calls
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - stored procedures [LINQ to SQL]
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 6436d384-d1e0-40aa-8afd-451007477260
-ms.openlocfilehash: 50a4dff90dc1ce02869978f1da147e530cefc3e1
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: bd1a3b0b163d3ab0fcc7eb9616e88c11381ff189
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49122666"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552047"
 ---
-# <a name="how-to-call-a-stored-procedure-by-using-linq-visual-basic"></a>Procedura: chiamare una stored procedure utilizzando LINQ (Visual Basic)
+# <a name="how-to-call-a-stored-procedure-by-using-linq-visual-basic"></a>Procedura: Chiamare una Stored Procedure utilizzando LINQ (Visual Basic)
 Language-Integrated Query (LINQ) semplifica accedere alle informazioni di database, tra cui database oggetti, ad esempio stored procedure.  
   
  Nell'esempio seguente viene illustrato come creare un'applicazione che chiama una stored procedure in un database di SQL Server. Nell'esempio viene illustrato come chiamare due diverse stored procedure nel database. Ogni routine restituisce i risultati di una query. Una procedura accetta i parametri di input e l'altra routine non accetta parametri.  
@@ -68,9 +68,9 @@ Language-Integrated Query (LINQ) semplifica accedere alle informazioni di databa
   
 4.  Premere F5 per eseguire il progetto e visualizzare i risultati.  
   
-## <a name="see-also"></a>Vedere anche  
- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [Query](../../../../visual-basic/language-reference/queries/index.md)  
- [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
- [Metodi DataContext (O/R Designer)](/visualstudio/data-tools/datacontext-methods-o-r-designer)  
- [Procedura: Assegnare stored procedure per eseguire aggiornamenti, inserimenti ed eliminazioni (O/R Designer)](https://msdn.microsoft.com/library/e88224ab-ff61-4a3a-b6b8-6f3694546cac)
+## <a name="see-also"></a>Vedere anche
+- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
+- [Query](../../../../visual-basic/language-reference/queries/index.md)
+- [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
+- [Metodi DataContext (O/R Designer)](/visualstudio/data-tools/datacontext-methods-o-r-designer)
+- [Procedura: Assegnare stored procedure per eseguire aggiornamenti, inserimenti ed eliminazioni (O/R Designer)](https://msdn.microsoft.com/library/e88224ab-ff61-4a3a-b6b8-6f3694546cac)

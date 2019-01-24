@@ -2,14 +2,15 @@
 title: Metodo CLR per il mapping di funzioni canoniche
 ms.date: 03/30/2017
 ms.assetid: e3363261-2cb8-4b54-9555-2870be99b929
-ms.openlocfilehash: 07d488eb8caba8309857ef7fba42e67e155363e2
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 31e6bfaf86ffb6721491a8d6681d713075a628f8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54551579"
 ---
 # <a name="clr-method-to-canonical-function-mapping"></a>Metodo CLR per il mapping di funzioni canoniche
-In Entity Framework è disponibile un set di funzioni canoniche che implementano funzionalità comuni in numerosi sistemi di database, ad esempio modifica delle stringhe e funzioni matematiche. In questo modo gli sviluppatori possono scegliere come destinazione un'ampia gamma di sistemi di database. In caso di chiamata da una tecnologia di query, ad esempio LINQ to Entities, queste funzioni canoniche vengono convertite nella funzione di archivio corrispondente appropriata per il provider usato. Le chiamate alle funzioni possono pertanto essere espresse con una forma comune indipendentemente dall'origine dati, per offrire un'esperienza di query coerente in diverse origini dati. Anche gli operatori AND, OR, NOT e XOR bit per bit vengono mappati alle funzioni canoniche quando l'operando è un tipo numerico. Per gli operandi booleani, gli operatori AND, OR, NOT e XOR bit per bit calcolano le operazioni AND, OR, NOT e XOR dei relativi operandi. Per ulteriori informazioni, vedere [funzioni canoniche](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md).  
+In Entity Framework è disponibile un set di funzioni canoniche che implementano funzionalità comuni in numerosi sistemi di database, ad esempio modifica delle stringhe e funzioni matematiche. In questo modo gli sviluppatori possono scegliere come destinazione un'ampia gamma di sistemi di database. In caso di chiamata da una tecnologia di query, ad esempio LINQ to Entities, queste funzioni canoniche vengono convertite nella funzione di archivio corrispondente appropriata per il provider usato. Le chiamate alle funzioni possono pertanto essere espresse con una forma comune indipendentemente dall'origine dati, per offrire un'esperienza di query coerente in diverse origini dati. Anche gli operatori AND, OR, NOT e XOR bit per bit vengono mappati alle funzioni canoniche quando l'operando è un tipo numerico. Per gli operandi booleani, gli operatori AND, OR, NOT e XOR bit per bit calcolano le operazioni AND, OR, NOT e XOR dei relativi operandi. Per altre informazioni, vedere [funzioni canoniche](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md).  
   
  Per gli scenari LINQ, le query su Entity Framework comportano il mapping di determinati metodi CLR ai metodi nell'origine dati sottostante tramite funzioni canoniche. Qualsiasi chiamata ai metodi in una query LINQ to Entities non mappata in modo esplicito a una funzione canonica comporta la generazione di un'eccezione <xref:System.NotSupportedException> in fase di runtime.  
   
@@ -46,9 +47,9 @@ In Entity Framework è disponibile un set di funzioni canoniche che implementano
 |System.String Insert(Int32 `startIndex`, String `value`)|Concat(Concat(Substring(`this`, 1, `startIndex`), `value`), Substring(`this`, `startIndex`+1, Length(`this`) - `startIndex`))||  
 |System.String Remove(Int32 `startIndex`)|Substring(`this`, 1, `startIndex`)||  
 |System.String Remove(Int32 `startIndex`, Int32 `count`)|Concat (sottostringa (`this`, 1, `startIndex`), Substring (`this`, `startIndex`  +  `count` + 1, lunghezza (`this`)-(`startIndex` + `count`)))|Remove(`startIndex`, `count`) è supportato solo se `count` è un valore intero maggiore o uguale a 0.|  
-sistema. Stringa di sostituzione (stringa `oldValue`, stringa `newValue`)|Replace(`this`, `oldValue`, `newValue`)||  
+denominati. Stringa Replace (String `oldValue`, stringa `newValue`)|Replace(`this`, `oldValue`, `newValue`)||  
 |System.String Substring(Int32 `startIndex`)|Substring(`this`, `startIndex` +1, Length(`this`) - `startIndex`)||  
-|System.String Substring(Int32 `startIndex`, Int32 `length`)|Substring (`this`, `startIndex` + 1, `length`)||  
+|System.String Substring(Int32 `startIndex`, Int32 `length`)|Substring(`this`, `startIndex` +1, `length`)||  
 |System.String ToLower()|ToLower(`this`)||  
 |System.String ToUpper()|ToUpper(`this`)||  
 |System.String Trim()|Trim(`this`)||  
@@ -69,7 +70,7 @@ sistema. Stringa di sostituzione (stringa `oldValue`, stringa `newValue`)|Replac
 |Boolean op_Inequality(DateTime `t1`, DateTime `t2`)|!= (operatore)||  
 |Booleano op_LessThan (DateTime `t1`, DateTime `t2`)|< (operatore)||  
 |Boolean op_LessThanOrEqual(DateTime `t1`, DateTime `t2`)|<= (operatore)||  
-|Microsoft.VisualBasic.DateAndTime.DatePart( _<br /><br /> ByVal `Interval` come DateInterval, \_<br /><br /> ByVal `DateValue` come valore DateTime, \_<br /><br /> ByVal facoltativo `FirstDayOfWeekValue` come FirstDayOfWeek = VbSunday, \_<br /><br /> ByVal facoltativo `FirstWeekOfYearValue` come FirstWeekOfYear = VbFirstJan1 \_<br /><br /> ) As Integer||Per altre informazioni, vedere la sezione relativa alla funzione DatePart.|  
+|Microsoft.VisualBasic.DateAndTime.DatePart( _<br /><br /> ByVal `Interval` come DateInterval, \_<br /><br /> ByVal `DateValue` come data/ora, \_<br /><br /> ByVal facoltativo `FirstDayOfWeekValue` come FirstDayOfWeek = VbSunday, \_<br /><br /> ByVal facoltativo `FirstWeekOfYearValue` come FirstWeekOfYear = VbFirstJan1 \_<br /><br /> ) As Integer||Per altre informazioni, vedere la sezione relativa alla funzione DatePart.|  
 |Microsoft.VisualBasic.DateAndTime.Now|CurrentDateTime()||  
 |Microsoft.VisualBasic.DateAndTime.Year(DateTime `TimeValue`)|Year()||  
 |Microsoft.VisualBasic.DateAndTime.Month(DateTime `TimeValue`)|Month()||  
@@ -195,5 +196,5 @@ icrosoft.VisualBasic.DateAndTime.Day(DateTime `TimeValue`)|Day()||
 |------------|------------------------|  
 |Guid.NewGuid()|NewGuid()|  
   
-## <a name="see-also"></a>Vedere anche  
- [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)
+## <a name="see-also"></a>Vedere anche
+- [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)

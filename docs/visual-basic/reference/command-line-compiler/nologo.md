@@ -7,12 +7,12 @@ helpviewer_keywords:
 - nologo compiler option [Visual Basic]
 - /nologo compiler option [Visual Basic]
 ms.assetid: 25ef54b6-d676-4639-a2d2-a747a158bc07
-ms.openlocfilehash: 21c708ef632cc0ed923713cd49e22d44848b4db3
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 1b9cedc3e45795a66c203d4c86bb071045a1d3f5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131144"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54550474"
 ---
 # <a name="-nologo-visual-basic"></a>-nologo (Visual Basic)
 Evita la visualizzazione del banner del copyright e i messaggi informativi durante la compilazione.  
@@ -36,6 +36,6 @@ Evita la visualizzazione del banner del copyright e i messaggi informativi duran
 vbc -nologo t2.vb  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Compilatore della riga di comando di Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
- [Esempi di righe di comando di compilazione](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a>Vedere anche
+- [Compilatore della riga di comando di Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Esempi di righe di comando di compilazione](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

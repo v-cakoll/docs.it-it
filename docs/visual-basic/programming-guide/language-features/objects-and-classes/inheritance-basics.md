@@ -20,90 +20,91 @@ helpviewer_keywords:
 - abstract classes [Visual Basic], inheritance
 - overriding, Overrides keyword
 ms.assetid: dfc8deba-f5b3-4d1d-a937-7cb826446fc5
-ms.openlocfilehash: 9225e5fd9fa35ae06414018a109f66515f99363f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ae6b53db3a2cdcefa2b05d68ed953c5e17b279dc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54551787"
 ---
 # <a name="inheritance-basics-visual-basic"></a>Nozioni fondamentali sull'ereditarietà (Visual Basic)
-Il `Inherits` istruzione viene utilizzata per dichiarare una nuova classe, denominata un *derivata*, in base a una classe esistente, nota come un *classe di base*. Le classi derivate ereditano e possono estendere, proprietà, metodi, eventi, campi e costanti definite nella classe base. Nella sezione seguente vengono descritte alcune delle regole per l'ereditarietà e i modificatori che è possibile utilizzare per modificare le classi modo ereditano o sono ereditati:  
+Il `Inherits` istruzione viene usata per dichiarare una nuova classe, denominata un *classe derivata*, in base a una classe esistente, nota come un *classe di base*. Le classi derivate ereditano e possono estendere, proprietà, metodi, eventi, campi e le costanti definite nella classe di base. La sezione seguente descrive alcune delle regole per l'ereditarietà e i modificatori che è possibile usare per modificare le classi modo ereditano o vengono ereditati:  
   
 -   Per impostazione predefinita, tutte le classi sono ereditabili a meno che non contrassegnato con il `NotInheritable` (parola chiave). Le classi possono ereditare da altre classi nel progetto o dalle classi in altri assembly che fa riferimento il progetto.  
   
--   A differenza dei linguaggi che consentono l'ereditarietà multipla, Visual Basic consente solo l'ereditarietà singola nelle classi. vale a dire, le classi derivate possono avere solo una classe base. Sebbene l'ereditarietà multipla non è consentita nelle classi, le classi possono implementare più interfacce, che possono raggiungere la stessa funzione.  
+-   Diversamente dai linguaggi che consentono l'ereditarietà multipla, Visual Basic consente solo l'ereditarietà singola nelle classi. ovvero le classi derivate possono avere una sola classe base. Anche se non è consentito nelle classi di ereditarietà multipla, le classi possono implementare più interfacce di cui è possono eseguire in modo efficace la stessa funzione.  
   
--   Per evitare l'esposizione agli elementi in una classe base, il tipo di accesso di una classe derivata deve essere uguale o più restrittivo di quello della classe base. Ad esempio, un `Public` classe non può ereditare un `Friend` o `Private` (classe) e un `Friend` classe non può ereditare un `Private` classe.  
+-   Per evitare l'esposizione agli elementi in una classe base, il tipo di accesso di una classe derivata deve essere uguale o più restrittivo alla classe di base. Ad esempio, un `Public` classe non può ereditare un `Friend` o una `Private` (classe) e un `Friend` classe non può ereditare un `Private` classe.  
   
 ## <a name="inheritance-modifiers"></a>Modificatori di ereditarietà  
- Visual Basic vengono presentate le istruzioni seguenti a livello di classe e i modificatori di supportano l'ereditarietà:  
+ Visual Basic introduce le istruzioni a livello di classe e i modificatori per il supporto dell'ereditarietà:  
   
--   `Inherits` istruzione: specifica la classe base.  
+-   `Inherits` istruzione: specifica la classe di base.  
   
--   `NotInheritable` modificatore: impedisce ai programmatori di utilizzo della classe come classe base.  
+-   `NotInheritable` modificatore, ovvero per impedire ai programmatori di utilizzo della classe come classe di base.  
   
--   `MustInherit` modificatore: Specifica che la classe è può essere utilizzata come classe di base. Le istanze di `MustInherit` le classi non possono essere create direttamente; essi possono essere creati solo istanze della classe di base di una classe derivata. (Altri linguaggi di programmazione, ad esempio C++ e c#, usano il termine *classe astratta* per descrivere una classe.)  
+-   `MustInherit` modificatore: Specifica che la classe deve essere utilizzato come classe di base. Le istanze di `MustInherit` classi non possono essere create direttamente; possono solo essere create istanze della classe di base di una classe derivata. (Altri linguaggi di programmazione, ad esempio C++ e C#, viene usato il termine *classe astratta* per descrivere una classe di questo tipo.)  
   
 ## <a name="overriding-properties-and-methods-in-derived-classes"></a>Override di proprietà e metodi nelle classi derivate  
- Per impostazione predefinita, una classe derivata eredita le proprietà e metodi della classe base. Se una proprietà o metodo ha un comportamento diverso nella classe derivata può essere *sottoposto a override*. Ovvero, è possibile definire una nuova implementazione del metodo nella classe derivata. I seguenti modificatori consentono di controllare le modalità di override di proprietà e metodi:  
+ Per impostazione predefinita, una classe derivata eredita le proprietà e metodi della classe base. Se un metodo o proprietà ereditata deve comportarsi in modo diverso nella classe derivata può risultare *sottoposto a override*. Vale a dire, è possibile definire una nuova implementazione del metodo nella classe derivata. I seguenti modificatori consentono di controllare le modalità di override di proprietà e metodi:  
   
--   `Overridable` -Consente di una proprietà o metodo in una classe per eseguire l'override in una classe derivata.  
+-   `Overridable` : Consente a una proprietà o metodo in una classe per eseguire l'override in una classe derivata.  
   
--   `Overrides` : Esegue l'override di un `Overridable` proprietà o un metodo definito nella classe base.  
+-   `Overrides` : Esegue l'override di un `Overridable` proprietà o un metodo definito nella classe di base.  
   
--   `NotOverridable` -Impedisce una proprietà o un metodo da sottoporre a override in una classe che eredita. Per impostazione predefinita, `Public` metodi sono `NotOverridable`.  
+-   `NotOverridable` -Impedisce una proprietà o metodo da sottoporre a override in una classe che eredita. Per impostazione predefinita `Public` sono metodi `NotOverridable`.  
   
--   `MustOverride` : Richiede che una classe derivata esegue l'override di proprietà o metodo. Quando il `MustOverride` parola chiave viene utilizzata, la definizione del metodo è costituita solo il `Sub`, `Function`, o `Property` istruzione. Le altre istruzioni non sono consentite in modo specifico, non `End Sub` o `End Function` istruzione. `MustOverride` i metodi devono essere dichiarati `MustInherit` classi.  
+-   `MustOverride` : Richiede che una classe derivata eseguono l'override di proprietà o metodo. Quando la `MustOverride` parola chiave viene usata, la definizione del metodo è costituito solo il `Sub`, `Function`, o `Property` istruzione. Le altre istruzioni non sono consentiti e in particolare è presente alcun `End Sub` o `End Function` istruzione. `MustOverride` i metodi devono essere dichiarati `MustInherit` classi.  
   
- Si supponga che si desidera definire le classi per la gestione delle retribuzioni. È possibile definire un oggetto generico `Payroll` classe che contiene un `RunPayroll` metodo che calcola retribuzioni di una settimana tipica. È quindi possibile utilizzare `Payroll` come classe base per una più specializzato `BonusPayroll` (classe), che potrebbe essere usate quando si distribuiscono bonus ai dipendenti.  
+ Si supponga di che voler definire classi per la gestione delle retribuzioni. È possibile definire un oggetto generico `Payroll` classe che contiene un `RunPayroll` metodo che calcola retribuzioni per una settimana tipica. È quindi possibile usare `Payroll` come classe di base per una più specializzati `BonusPayroll` (classe), che potrebbe essere usati quando si distribuiscono bonus ai dipendenti.  
   
  Il `BonusPayroll` classe può ereditare ed eseguire l'override, il `PayEmployee` metodo definito nella base `Payroll` classe.  
   
- L'esempio seguente definisce una classe base, `Payroll,` e una classe derivata, `BonusPayroll`, che esegue l'override di un metodo ereditato, `PayEmployee`. Una routine, `RunPayroll`, crea e passa quindi un `Payroll` oggetto e un `BonusPayroll` oggetto a una funzione, `Pay`, che viene eseguita la `PayEmployee` metodo di entrambi gli oggetti.  
+ L'esempio seguente definisce una classe di base `Payroll,` e una classe derivata `BonusPayroll`, che esegue l'override di un metodo ereditato, `PayEmployee`. Una routine, `RunPayroll`, viene creato e quindi passa un `Payroll` oggetto e un `BonusPayroll` oggetto a una funzione `Pay`, che esegue il `PayEmployee` metodo di entrambi gli oggetti.  
   
  [!code-vb[VbVbalrOOP#28](../../../../visual-basic/misc/codesnippet/VisualBasic/inheritance-basics_1.vb)]  
   
 ## <a name="the-mybase-keyword"></a>La parola chiave MyBase  
- Il `MyBase` (parola chiave) si comporta come una variabile oggetto che fa riferimento alla classe di base dell'istanza corrente di una classe. `MyBase` viene spesso utilizzato per accedere ai membri di classe di base che vengono sottoposti a override o shadowing in una classe derivata. In particolare, `MyBase.New` viene utilizzata per chiamare in modo esplicito un costruttore di classe di base da un costruttore di classe derivata.  
+ Il `MyBase` (parola chiave) si comporta come una variabile oggetto che fa riferimento alla classe di base dell'istanza corrente di una classe. `MyBase` viene spesso utilizzato per accedere ai membri di classe base sottoposto a override o shadowing in una classe derivata. In particolare, `MyBase.New` viene usato per chiamare in modo esplicito un costruttore di classe di base da un costruttore di classe derivata.  
   
- Si supponga, ad esempio, che si progetta una classe derivata che esegue l'override di un metodo ereditato dalla classe di base. Il metodo sottoposto a override è possibile chiamare il metodo nella classe base e modificare il valore restituito, come illustrato nel frammento di codice seguente:  
+ Si supponga, ad esempio, che si progetta una classe derivata che esegue l'override di un metodo ereditato dalla classe di base. Il metodo sottoposto a override è possibile chiamare il metodo nella classe di base e modificare il valore restituito, come illustrato nel frammento di codice seguente:  
   
  [!code-vb[VbVbalrOOP#109](../../../../visual-basic/misc/codesnippet/VisualBasic/inheritance-basics_2.vb)]  
   
- Nell'elenco seguente descrive le restrizioni sull'utilizzo di `MyBase`:  
+ L'elenco seguente descrive le restrizioni sull'uso di `MyBase`:  
   
--   `MyBase` fa riferimento alla classe base immediata e i relativi membri ereditati. Non può essere utilizzato per accedere a `Private` membri della classe.  
+-   `MyBase` fa riferimento alla classe di base immediata e i relativi membri ereditati. Non può essere usato per accedere a `Private` membri della classe.  
   
--   `MyBase` è una parola chiave, non un oggetto reale. `MyBase` non è possibile assegnare a una variabile, passare alle procedure o un `Is` confronto.  
+-   `MyBase` è una parola chiave, non un oggetto reale. `MyBase` non può essere assegnato a una variabile, passati alle procedure o usato in un `Is` confronto.  
   
--   Il metodo che `MyBase` qualifica non deve essere definito nella classe base immediata; potrebbe invece essere definita in una classe di base ereditata indirettamente. Affinché un riferimento qualificato da `MyBase` venga compilato correttamente, una classe di base deve contenere un metodo corrispondente al nome e i tipi di parametri presenti nella chiamata.  
+-   Il metodo che `MyBase` qualifica non deve essere definito nella classe di base immediata; può invece essere definito in una classe di base ereditata indirettamente. Affinché un riferimento qualificato da `MyBase` venga compilato correttamente, una classe di base deve contenere un metodo corrispondente al nome e i tipi di parametri che vengono visualizzati nella chiamata.  
   
--   Non è possibile utilizzare `MyBase` chiamare `MustOverride` metodi della classe di base.  
+-   Non è possibile usare `MyBase` chiamare `MustOverride` metodi della classe di base.  
   
--   `MyBase` non può essere utilizzato per qualificare se stesso. Pertanto, il codice seguente non è valido:  
+-   `MyBase` non può essere utilizzato per qualificare stesso. Pertanto, il codice seguente non è valido:  
   
      `MyBase.MyBase.BtnOK_Click()`  
   
--   `MyBase` non può essere utilizzata nei moduli.  
+-   `MyBase` non è utilizzabile nei moduli.  
   
--   `MyBase` non può essere utilizzato per accedere ai membri di classe di base che sono contrassegnati come `Friend` se la classe di base si trova in un assembly diverso.  
+-   `MyBase` non può essere usato per accedere ai membri di classe di base che sono contrassegnati come `Friend` se la classe di base si trova in un assembly diverso.  
   
- Per ulteriori informazioni e un altro esempio, vedere [procedura: accedere a una variabile nascosta da una classe derivata](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md).  
+ Per altre informazioni e un altro esempio, vedere [come: Accedere a una variabile nascosta da una classe derivata](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md).  
   
 ## <a name="the-myclass-keyword"></a>La parola chiave MyClass  
- Il `MyClass` (parola chiave) si comporta come una variabile oggetto che fa riferimento all'istanza corrente di una classe come implementata originariamente. `MyClass` è simile `Me`, ma ogni metodo e proprietà chiamare sul `MyClass` viene trattato come se il metodo o proprietà fosse [NotOverridable](../../../../visual-basic/language-reference/modifiers/notoverridable.md). Pertanto, il metodo o proprietà non è interessata eseguendo l'override in una classe derivata.  
+ Il `MyClass` (parola chiave) si comporta come una variabile oggetto che fa riferimento all'istanza corrente di una classe come implementata originariamente. `MyClass` è simile a `Me`, ma tutti i metodi e proprietà in una chiamata `MyClass` viene trattato come se il metodo o proprietà fosse [NotOverridable](../../../../visual-basic/language-reference/modifiers/notoverridable.md). Pertanto, il metodo o proprietà non è influenzata viene sottoposto a override in una classe derivata.  
   
--   `MyClass` è una parola chiave, non un oggetto reale. `MyClass` non è possibile assegnare a una variabile, passare alle procedure o un `Is` confronto.  
+-   `MyClass` è una parola chiave, non un oggetto reale. `MyClass` non può essere assegnato a una variabile, passati alle procedure o usato in un `Is` confronto.  
   
--   `MyClass` fa riferimento a tale classe e i relativi membri ereditati.  
+-   `MyClass` fa riferimento alla classe che lo contiene e i relativi membri ereditati.  
   
--   `MyClass` può essere utilizzato come qualificatore per `Shared` membri.  
+-   `MyClass` può essere usato come qualificatore per `Shared` membri.  
   
--   `MyClass` non può essere utilizzato all'interno di un `Shared` (metodo), ma può essere utilizzato all'interno di un metodo di istanza per accedere a un membro di una classe condiviso.  
+-   `MyClass` non può essere utilizzato all'interno di un `Shared` (metodo), ma può essere usato all'interno di un metodo di istanza per accedere a un membro condiviso di una classe.  
   
 -   `MyClass` non può essere utilizzata nei moduli standard.  
   
--   `MyClass` può essere utilizzato per qualificare un metodo che è definito in una classe base e che non contiene alcuna implementazione del metodo fornito in quella classe. Questo riferimento ha lo stesso significato di `MyBase.` *metodo*.  
+-   `MyClass` può essere utilizzata per qualificare un metodo definito in una classe di base e che non ha un'implementazione del metodo specificato in tale classe. Tale riferimento ha lo stesso significato di `MyBase.` *metodo*.  
   
  Nell'esempio seguente vengono confrontate `Me` e `MyClass`.  
   
@@ -139,8 +140,8 @@ Class testClasses
 End Class  
 ```  
   
- Anche se `derivedClass` esegue l'override `testMethod`, `MyClass` parola chiave in `useMyClass` Annulla gli effetti dell'override e i compilatore consente di risolvere la chiamata per la versione della classe base `testMethod`.  
+ Sebbene `derivedClass` esegue l'override `testMethod`, il `MyClass` parola chiave nel `useMyClass` Annulla gli effetti dell'esecuzione dell'override e i compilatore risolve la chiamata a quella classe di base di `testMethod`.  
   
-## <a name="see-also"></a>Vedere anche  
- [Istruzione Inherits](../../../../visual-basic/language-reference/statements/inherits-statement.md)  
- [Me, My, MyBase e MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
+## <a name="see-also"></a>Vedere anche
+- [Istruzione Inherits](../../../../visual-basic/language-reference/statements/inherits-statement.md)
+- [Me, My, MyBase e MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)

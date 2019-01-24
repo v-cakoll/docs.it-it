@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 24b01fecc7947d14e36b4411a58d200667b0f2a7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8abe1b63aad7b73b3260553550112ded75b77bb9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415542"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54537738"
 ---
 # <a name="icordebugmanagedcallbackexitthread-method"></a>Metodo ICorDebugManagedCallback::ExitThread
-Notifica al debugger che un thread che era in esecuzione il codice gestito è stato terminato.  
+Notifica al debugger che un thread che stava eseguendo codice gestito è stato terminato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,22 +38,22 @@ HRESULT ExitThread (
   
 #### <a name="parameters"></a>Parametri  
  `pAppDomain`  
- [in] Un puntatore a un oggetto ICorDebugAppDomain che rappresenta il dominio dell'applicazione contenente il thread gestito.  
+ [in] Un puntatore a un oggetto ICorDebugAppDomain che rappresenta il dominio applicazione contenente il thread gestito.  
   
  `thread`  
  [in] Un puntatore a un oggetto ICorDebugThread che rappresenta il thread gestito.  
   
 ## <a name="remarks"></a>Note  
- Una volta il `ExitThread` callback viene generato, il thread non verrà più visualizzato nelle enumerazioni dei thread.  
+ Una volta il `ExitThread` callback viene attivato, il thread non apparirà più nelle enumerazioni dei thread.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

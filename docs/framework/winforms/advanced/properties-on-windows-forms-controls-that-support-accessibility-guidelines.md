@@ -5,30 +5,30 @@ helpviewer_keywords:
 - Windows Forms, accessibility properties of controls
 - accessibility [Windows Forms], Windows Forms control properties
 ms.assetid: ad3567a6-313b-4708-9e15-f487a831f049
-ms.openlocfilehash: b466dcf42561d8ced7b224215538a807c94b174b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b731f277620925a333c8d9eba64c8900674327da
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33524488"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552211"
 ---
 # <a name="properties-on-windows-forms-controls-that-support-accessibility-guidelines"></a>Proprietà nei controlli Windows Form che supportano le linee guida per l'accesso facilitato
-Controlli della casella degli strumenti standard di Windows Form supportano molte delle linee guida di accessibilità, inclusi l'esposizione dello stato attivo e l'esposizione di elementi dello schermo.  
+Controlli della casella degli strumenti standard per i moduli di Windows supportano molte delle linee guida accessibilità, inclusi che espone lo stato attivo e l'esposizione degli elementi dello schermo.  
   
-## <a name="planning-ahead-for-accessibility"></a>Pianificazione dell'accesso facilitato  
- Proprietà dei controlli è utilizzabile per supportare altre linee guida di accessibilità, come illustrato nella tabella seguente. Inoltre, utilizzare i menu per fornire accesso alle funzionalità del programma.  
+## <a name="planning-ahead-for-accessibility"></a>La pianificazione per l'accessibilità  
+ Le proprietà dei controlli sono utilizzabile per supportare altre linee guida sull'accessibilità, come illustrato nella tabella seguente. Inoltre, è consigliabile usare i menu per fornire accesso alle funzionalità del programma.  
   
 |Proprietà del controllo|Considerazioni per l'accessibilità|  
 |----------------------|--------------------------------------|  
-|AccessibleDescription|La descrizione viene segnalata agli strumenti di accessibilità, ad esempio gli screen reader. Gli strumenti per l'accessibilità sono dispositivi e programmi specializzati che consentono agli utenti con disabilità di usare i computer in modo più efficace.|  
+|AccessibleDescription|La descrizione viene segnalata agli strumenti di accessibilità, ad esempio lettori dello schermo. Gli strumenti per l'accessibilità sono dispositivi e programmi specializzati che consentono agli utenti con disabilità di usare i computer in modo più efficace.|  
 |AccessibleName|Il nome che verrà segnalato agli strumenti di accessibilità.|  
 |AccessibleRole|Viene descritto l'utilizzo dell'elemento nell'interfaccia utente.|  
-|TabIndex|Crea un percorso di navigazione sensibile nel form. È importante per i controlli senza etichette intrinseche, ad esempio caselle di testo che precede nell'ordine di tabulazione all'etichetta associata.|  
-|Testo|Usare il carattere "&" per creare le chiavi di accesso. Utilizzando i tasti di scelta fa parte di accesso da tastiera documentato alle funzionalità.|  
-|Dimensione carattere|Se le dimensioni del carattere non sono regolabile, quindi deve essere impostato su 10 punti o superiori. Dopo aver impostata la dimensione dello stesso tipo di carattere, tutti i controlli aggiunti in seguito al form avranno le stesse dimensioni.|  
+|TabIndex|Crea un percorso di navigazione sensibile attraverso il form. È importante per i controlli senza le etichette intrinseche, ad esempio caselle di testo, per disporre le etichette associate immediatamente li precedono nell'ordine di tabulazione.|  
+|Testo|Usare il carattere "&" per creare le chiavi di accesso. Usando le chiavi di accesso fa parte di accesso da tastiera documentato a funzionalità.|  
+|Dimensione carattere|Se le dimensioni del carattere non sono modificabile, quindi deve essere impostato a 10 punti o superiori. Dopo aver impostata le dimensioni del form del tipo di carattere, tutti i controlli aggiunti in seguito al form avranno le stesse dimensioni.|  
 |Forecolor|Se questa proprietà è impostata sul valore predefinito, le preferenze dell'utente colore verranno usate nel form.|  
 |Backcolor|Se questa proprietà è impostata sul valore predefinito, le preferenze dell'utente colore verranno usate nel form.|  
 |BackgroundImage|Omettere questa proprietà per rendere più leggibile il testo.|  
   
-## <a name="see-also"></a>Vedere anche  
- [Procedura dettagliata: Creazione di un'applicazione Windows ad Accesso facilitato](../../../../docs/framework/winforms/advanced/walkthrough-creating-an-accessible-windows-based-application.md)
+## <a name="see-also"></a>Vedere anche
+- [Procedura dettagliata: Creazione di un'applicazione basata su Windows accessibile](../../../../docs/framework/winforms/advanced/walkthrough-creating-an-accessible-windows-based-application.md)

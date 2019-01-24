@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 27bec505df1db4ccbba862e81d9407d11245d449
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: adb06ec558f2d5f823d2040422a82e8b20d926a8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412373"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54537894"
 ---
 # <a name="icordebugeditandcontinuesnapshot-interface1"></a>ICorDebugEditAndContinueSnapshot Interface1
 `ICorDebugEditAndContinueSnapshot` è obsoleto. Non usare questa interfaccia.  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

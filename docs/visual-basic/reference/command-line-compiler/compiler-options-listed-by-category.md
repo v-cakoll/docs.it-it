@@ -4,12 +4,12 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
-ms.openlocfilehash: 55127a1a4afd8a677ef72d79ebf00debc15404e7
-ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
+ms.openlocfilehash: 9c46d557df35d575b28cc5843f82670613f62f91
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54307552"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54551618"
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>Opzioni del compilatore Visual Basic elencate per categoria
 Il compilatore della riga di comando di Visual Basic viene fornito come alternativa alla compilazione dei programmi dall'interno l'ambiente di sviluppo integrato (IDE) di Visual Studio. Di seguito è riportato un elenco delle opzioni del compilatore da riga di comando di Visual Basic ordinati in base alla categoria funzionale.  
@@ -126,8 +126,8 @@ Il compilatore della riga di comando di Visual Basic viene fornito come alternat
 |`-parallel[+&#124;-]`|Specifica se usare la compilazione simultanea (+).|  
 |`-checksumalgorithm:<alg>`|Specificare l'algoritmo per il calcolo del checksum del file di origine archiviato nel file PDB.  I valori supportati sono: SHA1 (predefinito) o SHA256.|  
   
-## <a name="see-also"></a>Vedere anche  
- [Opzioni del compilatore Visual Basic in ordine alfabetico](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)  
- [Introduzione a Creazione progetti](https://msdn.microsoft.com/library/898dd854-c98d-430c-ba1b-a913ce3c73d7(v=vs.100))  
- [Opzioni del compilatore C# in ordine alfabetico](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)  
- [Opzioni del compilatore C# elencate per categoria](../../../csharp/language-reference/compiler-options/listed-by-category.md)
+## <a name="see-also"></a>Vedere anche
+- [Opzioni del compilatore Visual Basic in ordine alfabetico](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)
+- [Introduzione a Creazione progetti](https://msdn.microsoft.com/library/898dd854-c98d-430c-ba1b-a913ce3c73d7(v=vs.100))
+- [Opzioni del compilatore C# in ordine alfabetico](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)
+- [Opzioni del compilatore C# elencate per categoria](../../../csharp/language-reference/compiler-options/listed-by-category.md)

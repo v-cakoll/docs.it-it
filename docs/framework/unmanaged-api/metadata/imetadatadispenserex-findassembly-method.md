@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0b4caf27fe45ce0a85b7e1800827a1e5cd0893ca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5b35abe6a11b96a88bdd610a4018469bf747fe90
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445238"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54550708"
 ---
 # <a name="imetadatadispenserexfindassembly-method"></a>Metodo IMetaDataDispenserEx::FindAssembly
-Questo metodo non è implementato. Se chiamato, restituisce E_NOTIMPL.  
+Questo metodo non è implementato. Se chiamato, viene restituito E_NOTIMPL.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,13 +43,13 @@ HRESULT FindAssembly(
   
 #### <a name="parameters"></a>Parametri  
  `szAppBase`  
- [in] Non usato.  
+ [in] Non utilizzato.  
   
  `szPrivateBin`  
- [in] Non usato.  
+ [in] Non utilizzato.  
   
  `szGlobalBin`  
- [in] Non usato.  
+ [in] Non utilizzato.  
   
  `szAssemblyName`  
  [in] L'assembly da trovare.  
@@ -64,14 +64,14 @@ HRESULT FindAssembly(
  [out] Il numero di caratteri effettivamente restituiti nella `szName`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforma:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforma:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
- **Libreria:** usata come risorsa in Mscoree. dll  
+ **Libreria:** Usato come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia IMetaDataDispenserEx](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)  
- [Interfaccia IMetaDataDispenser](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia IMetaDataDispenserEx](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
+- [Interfaccia IMetaDataDispenser](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)

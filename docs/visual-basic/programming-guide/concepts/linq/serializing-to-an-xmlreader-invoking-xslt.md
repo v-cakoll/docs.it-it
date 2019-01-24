@@ -2,12 +2,12 @@
 title: Serializzazione in base a un XmlReader (richiamo di XSLT) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 8b64f95a-e8f6-40f7-99f9-a8002c63af96
-ms.openlocfilehash: 05754593f4f30683ffabecaa8e16c35bf836a3f8
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: 8cdb5e55738c14792c0628319fb937aa95a7e58d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39198840"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54549733"
 ---
 # <a name="serializing-to-an-xmlreader-invoking-xslt-visual-basic"></a>Serializzazione in base a un XmlReader (richiamo di XSLT) (Visual Basic)
 Quando si usano le funzionalità di interoperabilità <xref:System.Xml?displayProperty=nameWithType> di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], è possibile usare <xref:System.Xml.Linq.XNode.CreateReader%2A> per creare un oggetto <xref:System.Xml.XmlReader>. Il modulo che legge dall'oggetto <xref:System.Xml.XmlReader> creato legge i nodi dell'albero XML e li elabora di conseguenza.  
@@ -60,5 +60,5 @@ Console.WriteLine(newTree)
 </Root>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Serializzazione di alberi XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md)
+## <a name="see-also"></a>Vedere anche
+- [Serializzazione di alberi XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md)

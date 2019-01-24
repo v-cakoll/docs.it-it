@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e85c4a0e-4f3f-458c-b58b-0ddbc06bf974
-ms.openlocfilehash: d5031136b48b50ef7ad34b97942b7f6d8054d340
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 892c0488588e9a5b59650f4a815ba9819493a610
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522316"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54538268"
 ---
 # <a name="adding-columns-to-a-datatable"></a>Aggiunta di colonne a un oggetto DataTable
 Oggetto <xref:System.Data.DataTable> contiene una raccolta di <xref:System.Data.DataColumn> gli oggetti a cui fanno riferimento le **colonne** proprietà della tabella. Tale raccolta di colonne, insieme a eventuali vincoli, consente di definire lo schema, o struttura, della tabella.  
@@ -51,10 +51,10 @@ workTable.Columns.Add("Purchases", typeof(Double));
   
  Se si sta usando l'oggetto <xref:System.Xml.Linq.XElement> come proprietà <xref:System.Data.DataColumn.DataType%2A> di un oggetto <xref:System.Data.DataColumn> nell'oggetto <xref:System.Data.DataTable>, la serializzazione XML non funzionerà quando si legge nei dati. Ad esempio, se si scrive un oggetto <xref:System.Xml.XmlDocument> usando il metodo `DataTable.WriteXml`, durante la serializzazione in XML è presente un nodo padre aggiuntivo nell'oggetto <xref:System.Xml.Linq.XElement>. Per risolvere questo problema, usare il tipo <xref:System.Data.SqlTypes.SqlXml> invece dell'oggetto <xref:System.Xml.Linq.XElement>. `ReadXml` e `WriteXml` funzionano correttamente con l'oggetto <xref:System.Data.SqlTypes.SqlXml>.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Data.DataColumn>  
- <xref:System.Data.DataColumnCollection>  
- <xref:System.Data.DataTable>  
- [Definizione dello schema DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)  
- [DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Data.DataColumn>
+- <xref:System.Data.DataColumnCollection>
+- <xref:System.Data.DataTable>
+- [Definizione dello schema DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)
+- [DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
+- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
