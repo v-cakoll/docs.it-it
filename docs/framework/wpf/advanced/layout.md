@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-ms.openlocfilehash: 869780f2b6a625923ce869bcaafbbd2319f6cb23
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: d6326ae34b53ca4f68bc58b85e395c10726a377d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46703024"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738826"
 ---
 # <a name="layout"></a>Layout
 Questo argomento descrive il sistema di layout di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. La capacità di identificare correttamente i casi in cui vengono eseguiti calcoli del layout è essenziale per la creazione di interfacce utente in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -146,11 +146,11 @@ Questo argomento descrive il sistema di layout di [!INCLUDE[TLA#tla_winclient](.
   
 <a name="LayoutSystem_whatsnext"></a>   
 ## <a name="whats-next"></a>Argomenti successivi  
- La capacità di identificare il modo in cui gli elementi vengono misurati e disposti è il primo passaggio per la comprensione del layout. Per altre informazioni sui contatori <xref:System.Windows.Controls.Panel> elementi, vedere [pannelli Panoramica](../../../../docs/framework/wpf/controls/panels-overview.md). Per meglio determinare le diverse proprietà di posizionamento che possono influire sul layout, vedere [Panoramica su allineamento, margini e spaziatura interna](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md). Per un esempio di una classe personalizzata <xref:System.Windows.Controls.Panel> elemento, vedere [esempio di pannello radiale personalizzato](https://go.microsoft.com/fwlink/?LinkID=159982). Quando si è pronti per riunire il tutto in un'applicazione leggera, vedere [procedura dettagliata: prima applicazione desktop WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).  
+ La capacità di identificare il modo in cui gli elementi vengono misurati e disposti è il primo passaggio per la comprensione del layout. Per altre informazioni sui contatori <xref:System.Windows.Controls.Panel> elementi, vedere [pannelli Panoramica](../../../../docs/framework/wpf/controls/panels-overview.md). Per meglio determinare le diverse proprietà di posizionamento che possono influire sul layout, vedere [Panoramica su allineamento, margini e spaziatura interna](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md). Per un esempio di una classe personalizzata <xref:System.Windows.Controls.Panel> elemento, vedere [esempio di pannello radiale personalizzato](https://go.microsoft.com/fwlink/?LinkID=159982). Quando si è pronti per riunire il tutto in un'applicazione leggera, vedere [procedura dettagliata: Prima applicazione desktop WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Windows.FrameworkElement>  
- <xref:System.Windows.UIElement>  
- [Cenni preliminari sugli elementi Panel](../../../../docs/framework/wpf/controls/panels-overview.md)  
- [Panoramica su allineamento, margini e spaziatura interna](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)  
- [Ottimizzazione delle prestazioni: layout e progettazione](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Windows.FrameworkElement>
+- <xref:System.Windows.UIElement>
+- [Cenni preliminari sugli elementi Panel](../../../../docs/framework/wpf/controls/panels-overview.md)
+- [Panoramica su allineamento, margini e spaziatura interna](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)
+- [Ottimizzazione delle prestazioni: layout e progettazione](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)

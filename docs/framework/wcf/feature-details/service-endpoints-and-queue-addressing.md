@@ -2,12 +2,12 @@
 title: Mapping fra gli endpoint di servizio e l'indirizzamento delle code
 ms.date: 03/30/2017
 ms.assetid: 7d2d59d7-f08b-44ed-bd31-913908b83d97
-ms.openlocfilehash: 71ebf29e51118a7f555f3e79598e49ffd65e0c63
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b513dbf5bfde812c551335826813967272bfd708
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196304"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54613922"
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>Mapping fra gli endpoint di servizio e l'indirizzamento delle code
 Questo argomento descrive come i client indirizzano i servizi che leggono da code e il mapping fra gli endpoint di servizio e le code. Come promemoria, la figura seguente illustra il modello di distribuzione classica di Windows Communication Foundation (WCF) in coda la distribuzione di applicazioni.  
@@ -40,9 +40,9 @@ Questo argomento descrive come i client indirizzano i servizi che leggono da cod
   
 -   \<*Nome-coda*> è il nome della coda. Il nome della coda può riferirsi anche a una coda secondaria. Pertanto \< *nome-coda*> = \< *name-of-queue*> [; *secondari nome-coda-*].  
   
- Esempio 1: per indirizzare una coda privata PurchaseOrders ospitata nel computer abc presso adatum.com, l'URI da utilizzare è net.msmq://abc.adatum.com/private/PurchaseOrders.  
+ Esempio 1: Per indirizzare una coda privata PurchaseOrders ospitata nel computer abc presso adatum.com, l'URI da MSMQ: //ABC.adatum.com/private/PurchaseOrders.  
   
- Esempio 2: per indirizzare una coda pubblica AccountsPayable ospitata nel computer def presso adatum.com, l'URI da utilizzare è net.msmq://def.adatum.com/AccountsPayable.  
+ Esempio 2: Per indirizzare una coda pubblica AccountsPayable ospitata nel computer def presso adatum.com, l'URI da MSMQ: //def.adatum.com/AccountsPayable.  
   
  L'indirizzo della coda viene utilizzato dal listener come URI di ascolto da cui leggere i messaggi. In altre parole, l'indirizzo della coda è equivalente alla porta di ascolto del socket TCP.  
   
@@ -79,7 +79,7 @@ Questo argomento descrive come i client indirizzano i servizi che leggono da cod
 ### <a name="reading-messages-from-the-dead-letter-queue-or-the-poison-message-queue"></a>Lettura dei messaggi dalla coda dei messaggi non recapitabili o dalla coda dei messaggi non elaborabili  
  Per leggere i messaggi da una coda di messaggi non elaborabili che è una coda secondaria della coda di destinazione, aprire l'elemento `ServiceHost` con l'indirizzo della coda secondaria.  
   
- Esempio: un servizio che legge dalla coda di messaggi non elaborabili della coda privata PurchaseOrders nel computer locale presenta l'indirizzo net.msmq://localhost/private/PurchaseOrders;poison.  
+ Esempio: Net.msmq://localhost/private/PurchaseOrders;poison possono essere risolti con un servizio che legge dalla coda di messaggi non elaborabili della coda privata PurchaseOrders nel computer locale.  
   
  Per leggere messaggi da una coda transazionale di sistema di messaggi non recapitabili, l'URI deve presentarsi nel formato: net.msmq://localhost/system$;DeadXact.  
   
@@ -100,9 +100,9 @@ Questo argomento descrive come i client indirizzano i servizi che leggono da cod
   
  Si noti che quando si ricevono messaggi da una coda tramite l'associazione `MsmqIntegrationBinding` è possibile utilizzare soltanto i nomi di formato Direct e, se è stata scelta l'opzione di integrazione con Active Directory, i nomi di formato pubblici e privati. È tuttavia consigliabile utilizzare i nomi di formato Direct. In [!INCLUDE[wv](../../../../includes/wv-md.md)], ad esempio, l'utilizzo di qualsiasi altro nome di formato comporta un errore, poiché il sistema tenta di aprire una coda secondaria che tuttavia può essere aperta solo tramite i nomi di formato Direct.  
   
- Quando si esegue l'indirizzamento tramite il protocollo SRMP utilizzando l'associazione `MsmqIntegrationBinding` non occorre aggiungere /msmq/ nel nome di formato Direct per consentire ai servizi Internet Information Services (IIS) di eseguire la distribuzione. Ad esempio: quando si indirizza una coda abc utilizzando il protocollo SRMP del protocollo, anziché DIRECT =http://adatum.com/msmq/private$/ABC è necessario utilizzare DIRECT =http://adatum.com/private$/ abc.  
+ Quando si esegue l'indirizzamento tramite il protocollo SRMP usando l'associazione `MsmqIntegrationBinding` non occorre aggiungere /msmq/ nel nome di formato Direct per consentire ai servizi Internet Information Services (IIS) di eseguire la distribuzione. Ad esempio: Quando si indirizza una coda abc utilizzando il protocollo SRMP del protocollo, anziché DIRECT =http://adatum.com/msmq/private$/ABC è necessario utilizzare DIRECT =http://adatum.com/private$/ abc.  
   
  Si noti che non è possibile utilizzare l'indirizzamento net.msmq:// con l'associazione `MsmqIntegrationBinding`. Poiché `MsmqIntegrationBinding` supporta Freeform formato nome indirizzamento di MSMQ, è possibile usare un servizio WCF che usa questa associazione per l'uso di funzionalità dell'elenco di distribuzione e il multicast in MSMQ. Un'eccezione è la specifica dell'elemento `CustomDeadLetterQueue` quando si utilizza l'associazione `MsmqIntegrationBinding`. Analogamente al caso di specifica dell'elemento quando si utilizza l'associazione `NetMsmqBinding`, tale elemento deve presentare il formato net.msmq://.  
   
-## <a name="see-also"></a>Vedere anche  
- [Hosting Web di un'applicazione in coda](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)
+## <a name="see-also"></a>Vedere anche
+- [Hosting Web di un'applicazione in coda](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)

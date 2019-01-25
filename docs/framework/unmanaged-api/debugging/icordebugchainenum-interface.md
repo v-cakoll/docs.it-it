@@ -1,5 +1,5 @@
 ---
-title: ICorDebugChainEnum Interface1
+title: Interfaccia1 ICorDebugChainEnum
 ms.date: 03/30/2017
 api_name:
 - ICorDebugChainEnum
@@ -16,21 +16,21 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 878318584d2875ff0d2c6d1648336b383093a75f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6c43b850e8a49d78ff1b1815e7ce6b4c857fb6c1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404814"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730659"
 ---
-# <a name="icordebugchainenum-interface1"></a>ICorDebugChainEnum Interface1
+# <a name="icordebugchainenum-interface1"></a>Interfaccia1 ICorDebugChainEnum
 Implementa i metodi ICorDebugEnum ed enumera le matrici ICorDebugChain.  
   
 ## <a name="methods"></a>Metodi  
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo Next](../../../../docs/framework/unmanaged-api/debugging/icordebugchainenum-next-method.md)|Ottiene il numero specificato di `ICorDebugChain` istanze nell'enumerazione, a partire dalla posizione corrente.|  
+|[Metodo Next](../../../../docs/framework/unmanaged-api/debugging/icordebugchainenum-next-method.md)|Ottiene il numero specificato di `ICorDebugChain` istanze dall'enumerazione, iniziando in corrispondenza della posizione corrente.|  
   
 ## <a name="remarks"></a>Note  
   
@@ -38,13 +38,13 @@ Implementa i metodi ICorDebugEnum ed enumera le matrici ICorDebugChain.
 >  Questa interfaccia non supporta la chiamata in modalità remota, tra computer o tra processi.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
