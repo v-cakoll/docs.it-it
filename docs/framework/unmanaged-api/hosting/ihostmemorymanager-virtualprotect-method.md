@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bada01e910397adcf0fe59286d90774a0ab24ffa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c6ebba2f6d7f40c835b6ffdc479bdc9f2fdc354e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33439876"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54568062"
 ---
-# <a name="ihostmemorymanagervirtualprotect-method"></a><span data-ttu-id="c1bf7-102">Metodo IHostMemoryManager::VirtualProtect</span><span class="sxs-lookup"><span data-stu-id="c1bf7-102">IHostMemoryManager::VirtualProtect Method</span></span>
-<span data-ttu-id="c1bf7-103">Funge da wrapper logico per la funzione Win32 corrispondente.</span><span class="sxs-lookup"><span data-stu-id="c1bf7-103">Serves as a logical wrapper for the corresponding Win32 function.</span></span> <span data-ttu-id="c1bf7-104">L'implementazione Win32 di `VirtualProtect` modifica la protezione in un'area di pagine salvate nello spazio degli indirizzi virtuali del processo chiamante.</span><span class="sxs-lookup"><span data-stu-id="c1bf7-104">The Win32 implementation of `VirtualProtect` changes the protection on a region of committed pages in the virtual address space of the calling process.</span></span>  
+# <a name="ihostmemorymanagervirtualprotect-method"></a><span data-ttu-id="09c61-102">Metodo IHostMemoryManager::VirtualProtect</span><span class="sxs-lookup"><span data-stu-id="09c61-102">IHostMemoryManager::VirtualProtect Method</span></span>
+<span data-ttu-id="09c61-103">Funge da wrapper logico per la funzione Win32 corrispondente.</span><span class="sxs-lookup"><span data-stu-id="09c61-103">Serves as a logical wrapper for the corresponding Win32 function.</span></span> <span data-ttu-id="09c61-104">L'implementazione di Win32 di `VirtualProtect` cambia la protezione in un'area delle pagine eseguito il commit nello spazio degli indirizzi virtuali del processo chiamante.</span><span class="sxs-lookup"><span data-stu-id="09c61-104">The Win32 implementation of `VirtualProtect` changes the protection on a region of committed pages in the virtual address space of the calling process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c1bf7-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="c1bf7-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="09c61-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="09c61-105">Syntax</span></span>  
   
 ```  
 HRESULT VirtualProtect (  
@@ -38,41 +38,41 @@ HRESULT VirtualProtect (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="c1bf7-106">Parametri</span><span class="sxs-lookup"><span data-stu-id="c1bf7-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="09c61-106">Parametri</span><span class="sxs-lookup"><span data-stu-id="09c61-106">Parameters</span></span>  
  `lpAddress`  
- <span data-ttu-id="c1bf7-107">[in] Un puntatore all'indirizzo di base per la memoria virtuale i cui attributi di protezione devono essere modificati.</span><span class="sxs-lookup"><span data-stu-id="c1bf7-107">[in] A pointer to the base address of the virtual memory whose protection attributes are to be changed.</span></span>  
+ <span data-ttu-id="09c61-107">[in] Un puntatore all'indirizzo di base per la memoria virtuale cui attributi di protezione devono essere modificato.</span><span class="sxs-lookup"><span data-stu-id="09c61-107">[in] A pointer to the base address of the virtual memory whose protection attributes are to be changed.</span></span>  
   
  `dwSize`  
- <span data-ttu-id="c1bf7-108">[in] Le dimensioni in byte, dell'area delle pagine di memoria da modificare.</span><span class="sxs-lookup"><span data-stu-id="c1bf7-108">[in] The size, in bytes, of the region of memory pages to be changed.</span></span>  
+ <span data-ttu-id="09c61-108">[in] Le dimensioni, in byte, dell'area di pagine di memoria da modificare.</span><span class="sxs-lookup"><span data-stu-id="09c61-108">[in] The size, in bytes, of the region of memory pages to be changed.</span></span>  
   
  `flNewProtect`  
- <span data-ttu-id="c1bf7-109">[in] Il tipo di protezione della memoria da applicare.</span><span class="sxs-lookup"><span data-stu-id="c1bf7-109">[in] The type of memory protection to apply.</span></span>  
+ <span data-ttu-id="09c61-109">[in] Tipo di protezione della memoria da applicare.</span><span class="sxs-lookup"><span data-stu-id="09c61-109">[in] The type of memory protection to apply.</span></span>  
   
  `pflOldProtect`  
- <span data-ttu-id="c1bf7-110">[out] Puntatore al valore precedente della memoria protezione.</span><span class="sxs-lookup"><span data-stu-id="c1bf7-110">[out] A pointer to the previous memory protection value.</span></span>  
+ <span data-ttu-id="09c61-110">[out] Puntatore al valore di protezione della memoria precedente.</span><span class="sxs-lookup"><span data-stu-id="09c61-110">[out] A pointer to the previous memory protection value.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="c1bf7-111">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="c1bf7-111">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="09c61-111">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="09c61-111">Return Value</span></span>  
   
-|<span data-ttu-id="c1bf7-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="c1bf7-112">HRESULT</span></span>|<span data-ttu-id="c1bf7-113">Descrizione</span><span class="sxs-lookup"><span data-stu-id="c1bf7-113">Description</span></span>|  
+|<span data-ttu-id="09c61-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="09c61-112">HRESULT</span></span>|<span data-ttu-id="09c61-113">Descrizione</span><span class="sxs-lookup"><span data-stu-id="09c61-113">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="c1bf7-114">S_OK</span><span class="sxs-lookup"><span data-stu-id="c1bf7-114">S_OK</span></span>|<span data-ttu-id="c1bf7-115">`VirtualProtect` stato restituito correttamente.</span><span class="sxs-lookup"><span data-stu-id="c1bf7-115">`VirtualProtect` returned successfully.</span></span>|  
-|<span data-ttu-id="c1bf7-116">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="c1bf7-116">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="c1bf7-117">Common language runtime (CLR) non è stato caricato in un processo oppure si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.</span><span class="sxs-lookup"><span data-stu-id="c1bf7-117">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="c1bf7-118">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="c1bf7-118">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="c1bf7-119">Timeout della chiamata.</span><span class="sxs-lookup"><span data-stu-id="c1bf7-119">The call timed out.</span></span>|  
-|<span data-ttu-id="c1bf7-120">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="c1bf7-120">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="c1bf7-121">Il chiamante non dispone del blocco.</span><span class="sxs-lookup"><span data-stu-id="c1bf7-121">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="c1bf7-122">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="c1bf7-122">HOST_E_ABANDONED</span></span>|<span data-ttu-id="c1bf7-123">Un evento è stato annullato mentre un thread bloccato o fiber era in attesa su di esso.</span><span class="sxs-lookup"><span data-stu-id="c1bf7-123">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="c1bf7-124">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="c1bf7-124">E_FAIL</span></span>|<span data-ttu-id="c1bf7-125">Si è verificato un errore irreversibile sconosciuto.</span><span class="sxs-lookup"><span data-stu-id="c1bf7-125">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="c1bf7-126">Quando un metodo viene restituito E_FAIL, Common Language Runtime non è più utilizzabile all'interno del processo.</span><span class="sxs-lookup"><span data-stu-id="c1bf7-126">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="c1bf7-127">Le chiamate successive ai metodi di hosting restituiranno HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="c1bf7-127">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="09c61-114">S_OK</span><span class="sxs-lookup"><span data-stu-id="09c61-114">S_OK</span></span>|<span data-ttu-id="09c61-115">`VirtualProtect` stato restituito correttamente.</span><span class="sxs-lookup"><span data-stu-id="09c61-115">`VirtualProtect` returned successfully.</span></span>|  
+|<span data-ttu-id="09c61-116">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="09c61-116">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="09c61-117">Common language runtime (CLR) non è stato caricato in un processo oppure si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.</span><span class="sxs-lookup"><span data-stu-id="09c61-117">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="09c61-118">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="09c61-118">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="09c61-119">Timeout della chiamata.</span><span class="sxs-lookup"><span data-stu-id="09c61-119">The call timed out.</span></span>|  
+|<span data-ttu-id="09c61-120">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="09c61-120">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="09c61-121">Il chiamante non possiede il blocco.</span><span class="sxs-lookup"><span data-stu-id="09c61-121">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="09c61-122">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="09c61-122">HOST_E_ABANDONED</span></span>|<span data-ttu-id="09c61-123">Un evento è stato annullato durante un thread bloccato o fiber è rimasta in attesa su di esso.</span><span class="sxs-lookup"><span data-stu-id="09c61-123">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="09c61-124">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="09c61-124">E_FAIL</span></span>|<span data-ttu-id="09c61-125">Si è verificato un errore irreversibile sconosciuto.</span><span class="sxs-lookup"><span data-stu-id="09c61-125">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="09c61-126">Quando un metodo di E_FAIL viene restituito, CLR non è più utilizzabile all'interno del processo.</span><span class="sxs-lookup"><span data-stu-id="09c61-126">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="09c61-127">Le chiamate successive ai metodi di hosting restituiranno HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="09c61-127">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="c1bf7-128">Note</span><span class="sxs-lookup"><span data-stu-id="c1bf7-128">Remarks</span></span>  
- <span data-ttu-id="c1bf7-129">Questa implementazione di `VirtualProtect` restituisce un valore HRESULT, mentre l'implementazione Win32 restituisce un valore diverso da zero per indicare l'esito positivo e il valore zero per indicare un errore.</span><span class="sxs-lookup"><span data-stu-id="c1bf7-129">This implementation of `VirtualProtect` returns an HRESULT value, while the Win32 implementation returns a non-zero value to indicate success, and a zero value to indicate failure.</span></span> <span data-ttu-id="c1bf7-130">Per ulteriori informazioni, vedere la documentazione di piattaforma di Windows.</span><span class="sxs-lookup"><span data-stu-id="c1bf7-130">For more information, see the Windows Platform documentation.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="09c61-128">Note</span><span class="sxs-lookup"><span data-stu-id="09c61-128">Remarks</span></span>  
+ <span data-ttu-id="09c61-129">Questa implementazione di `VirtualProtect` restituisce un valore HRESULT, mentre l'implementazione di Win32 restituisce un valore diverso da zero per indicare l'esito positivo e un valore zero per indicare un errore.</span><span class="sxs-lookup"><span data-stu-id="09c61-129">This implementation of `VirtualProtect` returns an HRESULT value, while the Win32 implementation returns a non-zero value to indicate success, and a zero value to indicate failure.</span></span> <span data-ttu-id="09c61-130">Per altre informazioni, vedere la documentazione della piattaforma Windows.</span><span class="sxs-lookup"><span data-stu-id="09c61-130">For more information, see the Windows Platform documentation.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c1bf7-131">Requisiti</span><span class="sxs-lookup"><span data-stu-id="c1bf7-131">Requirements</span></span>  
- <span data-ttu-id="c1bf7-132">**Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c1bf7-132">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="09c61-131">Requisiti</span><span class="sxs-lookup"><span data-stu-id="09c61-131">Requirements</span></span>  
+ <span data-ttu-id="09c61-132">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="09c61-132">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c1bf7-133">**Intestazione:** Mscoree. H</span><span class="sxs-lookup"><span data-stu-id="c1bf7-133">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="09c61-133">**Intestazione:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="09c61-133">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="c1bf7-134">**Libreria:** inclusa come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="c1bf7-134">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="09c61-134">**Libreria:** Inclusa come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="09c61-134">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="c1bf7-135">**Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c1bf7-135">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="09c61-135">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="09c61-135">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c1bf7-136">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c1bf7-136">See Also</span></span>  
- [<span data-ttu-id="c1bf7-137">Interfaccia IHostMemoryManager</span><span class="sxs-lookup"><span data-stu-id="c1bf7-137">IHostMemoryManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)
+## <a name="see-also"></a><span data-ttu-id="09c61-136">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="09c61-136">See also</span></span>
+- [<span data-ttu-id="09c61-137">Interfaccia IHostMemoryManager</span><span class="sxs-lookup"><span data-stu-id="09c61-137">IHostMemoryManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)

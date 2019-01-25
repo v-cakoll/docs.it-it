@@ -10,22 +10,22 @@ helpviewer_keywords:
 - BC36644
 - BC36647
 ms.assetid: 0e0050f2-2039-4311-b260-f0ebfde84189
-ms.openlocfilehash: 6f84df5c9388220e5ca817d95362753df0920534
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 68ed7541d76c1678f9f308ed2cda8afec1231a73
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33586812"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54608719"
 ---
-# <a name="data-types-of-the-type-parameters-cannot-be-inferred-from-these-arguments"></a><span data-ttu-id="1669c-102">Impossibile dedurre da questi argomenti i tipi di dati dei parametri di tipo</span><span class="sxs-lookup"><span data-stu-id="1669c-102">Data type(s) of the type parameter(s) cannot be inferred from these arguments</span></span>
-<span data-ttu-id="1669c-103">Impossibile dedurre da questi argomenti i tipi di dati dei parametri di tipo.</span><span class="sxs-lookup"><span data-stu-id="1669c-103">Data type(s) of the type parameter(s) cannot be inferred from these arguments.</span></span> <span data-ttu-id="1669c-104">Per correggere l'errore, provare a specificare i tipi di dati in modo esplicito.</span><span class="sxs-lookup"><span data-stu-id="1669c-104">Specifying the data type(s) explicitly might correct this error.</span></span>  
+# <a name="data-types-of-the-type-parameters-cannot-be-inferred-from-these-arguments"></a><span data-ttu-id="a1100-102">Impossibile dedurre da questi argomenti i tipi di dati dei parametri di tipo</span><span class="sxs-lookup"><span data-stu-id="a1100-102">Data type(s) of the type parameter(s) cannot be inferred from these arguments</span></span>
+<span data-ttu-id="a1100-103">I tipi di dati dei parametri di tipo non è possibile dedurre da questi argomenti.</span><span class="sxs-lookup"><span data-stu-id="a1100-103">Data type(s) of the type parameter(s) cannot be inferred from these arguments.</span></span> <span data-ttu-id="a1100-104">Per correggere l'errore, provare a specificare i tipi di dati in modo esplicito.</span><span class="sxs-lookup"><span data-stu-id="a1100-104">Specifying the data type(s) explicitly might correct this error.</span></span>  
   
- <span data-ttu-id="1669c-105">Questo errore si verifica quando la risoluzione dell'overload non riesce.</span><span class="sxs-lookup"><span data-stu-id="1669c-105">This error occurs when overload resolution has failed.</span></span> <span data-ttu-id="1669c-106">Viene visualizzato come messaggio subordinato che indica perché un determinato candidato di overload è stato eliminato.</span><span class="sxs-lookup"><span data-stu-id="1669c-106">It occurs as a subordinate message that states why a particular overload candidate has been eliminated.</span></span> <span data-ttu-id="1669c-107">Il messaggio di errore spiega che il compilatore non è possibile usare l'inferenza del tipo per trovare tipi di dati per i parametri di tipo.</span><span class="sxs-lookup"><span data-stu-id="1669c-107">The error message explains that the compiler cannot use type inference to find data types for the type parameters.</span></span>  
+ <span data-ttu-id="a1100-105">Questo errore si verifica quando la risoluzione dell'overload non riesce.</span><span class="sxs-lookup"><span data-stu-id="a1100-105">This error occurs when overload resolution has failed.</span></span> <span data-ttu-id="a1100-106">Viene visualizzato come messaggio subordinato che indica perché un determinato candidato di overload è stato eliminato.</span><span class="sxs-lookup"><span data-stu-id="a1100-106">It occurs as a subordinate message that states why a particular overload candidate has been eliminated.</span></span> <span data-ttu-id="a1100-107">Il messaggio di errore spiega che il compilatore non è possibile usare l'inferenza del tipo per trovare i tipi di dati per i parametri di tipo.</span><span class="sxs-lookup"><span data-stu-id="a1100-107">The error message explains that the compiler cannot use type inference to find data types for the type parameters.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="1669c-108">Quando non è possibile specificare gli argomenti (ad esempio per gli operatori di query nelle espressioni di query), il messaggio di errore visualizzato non contiene la seconda frase.</span><span class="sxs-lookup"><span data-stu-id="1669c-108">When specifying arguments is not an option (for example, for query operators in query expressions), the error message appears without the second sentence.</span></span>  
+>  <span data-ttu-id="a1100-108">Quando non è possibile specificare gli argomenti (ad esempio per gli operatori di query nelle espressioni di query), il messaggio di errore visualizzato non contiene la seconda frase.</span><span class="sxs-lookup"><span data-stu-id="a1100-108">When specifying arguments is not an option (for example, for query operators in query expressions), the error message appears without the second sentence.</span></span>  
   
- <span data-ttu-id="1669c-109">Il codice seguente illustra l'errore.</span><span class="sxs-lookup"><span data-stu-id="1669c-109">The following code demonstrates the error.</span></span>  
+ <span data-ttu-id="a1100-109">Il codice seguente illustra l'errore.</span><span class="sxs-lookup"><span data-stu-id="a1100-109">The following code demonstrates the error.</span></span>  
   
 ```vb  
 Module Module1  
@@ -51,13 +51,13 @@ Interface InterfaceExample(Of T)
 End Interface  
 ```  
   
- <span data-ttu-id="1669c-110">**ID errore:** BC36647 e BC36644</span><span class="sxs-lookup"><span data-stu-id="1669c-110">**Error ID:** BC36647 and BC36644</span></span>  
+ <span data-ttu-id="a1100-110">**ID errore:** BC36647 e BC36644</span><span class="sxs-lookup"><span data-stu-id="a1100-110">**Error ID:** BC36647 and BC36644</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="1669c-111">Per correggere l'errore</span><span class="sxs-lookup"><span data-stu-id="1669c-111">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="a1100-111">Per correggere l'errore</span><span class="sxs-lookup"><span data-stu-id="a1100-111">To correct this error</span></span>  
   
--   <span data-ttu-id="1669c-112">È possibile specificare un tipo di dati per il parametro o i parametri di tipo anziché basarsi sull'inferenza del tipo.</span><span class="sxs-lookup"><span data-stu-id="1669c-112">You may be able to specify a data type for the type parameter or parameters instead of relying on type inference.</span></span>  
+-   <span data-ttu-id="a1100-112">È possibile specificare un tipo di dati per il parametro o i parametri di tipo anziché basarsi sull'inferenza del tipo.</span><span class="sxs-lookup"><span data-stu-id="a1100-112">You may be able to specify a data type for the type parameter or parameters instead of relying on type inference.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1669c-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="1669c-113">See Also</span></span>  
- [<span data-ttu-id="1669c-114">Conversione di tipo relaxed del delegato</span><span class="sxs-lookup"><span data-stu-id="1669c-114">Relaxed Delegate Conversion</span></span>](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)  
- [<span data-ttu-id="1669c-115">Routine generiche in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="1669c-115">Generic Procedures in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)  
- [<span data-ttu-id="1669c-116">Conversioni di tipi in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="1669c-116">Type Conversions in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+## <a name="see-also"></a><span data-ttu-id="a1100-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a1100-113">See also</span></span>
+- [<span data-ttu-id="a1100-114">Conversione di tipo relaxed del delegato</span><span class="sxs-lookup"><span data-stu-id="a1100-114">Relaxed Delegate Conversion</span></span>](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
+- [<span data-ttu-id="a1100-115">Generic Procedures in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="a1100-115">Generic Procedures in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)
+- [<span data-ttu-id="a1100-116">Conversioni di tipi in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="a1100-116">Type Conversions in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)

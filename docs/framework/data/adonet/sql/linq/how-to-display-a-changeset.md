@@ -1,27 +1,27 @@
 ---
-title: 'Procedura: visualizzare un insieme di modifiche'
+title: 'Procedura: Visualizzare un insieme di modifiche'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 126e7245-c5a0-4ebf-800d-cc1fcf9cd0ab
-ms.openlocfilehash: c9664c6d32f78f455aa29311f111acaecb5c7905
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 773e72d52a934bc7c6fa80fe252d62e67f87a34b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359985"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596800"
 ---
-# <a name="how-to-display-a-changeset"></a><span data-ttu-id="c6c26-102">Procedura: visualizzare un insieme di modifiche</span><span class="sxs-lookup"><span data-stu-id="c6c26-102">How to: Display a ChangeSet</span></span>
-<span data-ttu-id="c6c26-103">È possibile visualizzare modifiche registrate da <xref:System.Data.Linq.DataContext> usando <xref:System.Data.Linq.DataContext.GetChangeSet%2A>.</span><span class="sxs-lookup"><span data-stu-id="c6c26-103">You can view changes tracked by a <xref:System.Data.Linq.DataContext> by using <xref:System.Data.Linq.DataContext.GetChangeSet%2A>.</span></span>  
+# <a name="how-to-display-a-changeset"></a><span data-ttu-id="d3e81-102">Procedura: Visualizzare un insieme di modifiche</span><span class="sxs-lookup"><span data-stu-id="d3e81-102">How to: Display a ChangeSet</span></span>
+<span data-ttu-id="d3e81-103">È possibile visualizzare modifiche registrate da <xref:System.Data.Linq.DataContext> usando <xref:System.Data.Linq.DataContext.GetChangeSet%2A>.</span><span class="sxs-lookup"><span data-stu-id="d3e81-103">You can view changes tracked by a <xref:System.Data.Linq.DataContext> by using <xref:System.Data.Linq.DataContext.GetChangeSet%2A>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="c6c26-104">Esempio</span><span class="sxs-lookup"><span data-stu-id="c6c26-104">Example</span></span>  
- <span data-ttu-id="c6c26-105">Nell'esempio seguente vengono recuperati i clienti la cui città di residenza è London, la città viene modificata in Paris, quindi le modifiche vengono inviate di nuovo al database.</span><span class="sxs-lookup"><span data-stu-id="c6c26-105">The following example retrieves customers whose city is London, changes the city to Paris, and submits the changes back to the database.</span></span>  
+## <a name="example"></a><span data-ttu-id="d3e81-104">Esempio</span><span class="sxs-lookup"><span data-stu-id="d3e81-104">Example</span></span>  
+ <span data-ttu-id="d3e81-105">Nell'esempio seguente vengono recuperati i clienti la cui città di residenza è London, la città viene modificata in Paris, quindi le modifiche vengono inviate di nuovo al database.</span><span class="sxs-lookup"><span data-stu-id="d3e81-105">The following example retrieves customers whose city is London, changes the city to Paris, and submits the changes back to the database.</span></span>  
   
  [!code-csharp[DLinqDebuggingSupport#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqDebuggingSupport/cs/Program.cs#2)]
  [!code-vb[DLinqDebuggingSupport#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqDebuggingSupport/vb/Module1.vb#2)]  
   
- <span data-ttu-id="c6c26-106">L'output generato da questo codice è analogo al seguente:</span><span class="sxs-lookup"><span data-stu-id="c6c26-106">Output from this code appears similar to the following.</span></span> <span data-ttu-id="c6c26-107">Notare che il riepilogo alla fine dell'output indica che sono state apportate otto modifiche.</span><span class="sxs-lookup"><span data-stu-id="c6c26-107">Note that the summary at the end shows that eight changes were made.</span></span>  
+ <span data-ttu-id="d3e81-106">L'output generato da questo codice è analogo al seguente:</span><span class="sxs-lookup"><span data-stu-id="d3e81-106">Output from this code appears similar to the following.</span></span> <span data-ttu-id="d3e81-107">Notare che il riepilogo alla fine dell'output indica che sono state apportate otto modifiche.</span><span class="sxs-lookup"><span data-stu-id="d3e81-107">Note that the summary at the end shows that eight changes were made.</span></span>  
   
  `CustomerID: AROUT`  
   
@@ -75,5 +75,5 @@ ms.locfileid: "33359985"
   
  `Total changes: {Added: 0, Removed: 0, Modified: 8}`  
   
-## <a name="see-also"></a><span data-ttu-id="c6c26-108">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c6c26-108">See Also</span></span>  
- [<span data-ttu-id="c6c26-109">Supporto per il debug</span><span class="sxs-lookup"><span data-stu-id="c6c26-109">Debugging Support</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)
+## <a name="see-also"></a><span data-ttu-id="d3e81-108">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="d3e81-108">See also</span></span>
+- [<span data-ttu-id="d3e81-109">Supporto per il debug</span><span class="sxs-lookup"><span data-stu-id="d3e81-109">Debugging Support</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)

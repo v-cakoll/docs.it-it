@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1be18d374bad07b590096acac985812c2e2ed9b2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 42ee1f0652a6534372a37a630df0e48d289a9a34
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407584"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54724606"
 ---
-# <a name="icordebugsetunmanagedhandler-method"></a><span data-ttu-id="0e6f5-102">Metodo ICorDebug::SetUnmanagedHandler</span><span class="sxs-lookup"><span data-stu-id="0e6f5-102">ICorDebug::SetUnmanagedHandler Method</span></span>
-<span data-ttu-id="0e6f5-103">Specifica l'oggetto di gestore eventi per gli eventi non gestiti.</span><span class="sxs-lookup"><span data-stu-id="0e6f5-103">Specifies the event handler object for unmanaged events.</span></span>  
+# <a name="icordebugsetunmanagedhandler-method"></a><span data-ttu-id="9fb2b-102">Metodo ICorDebug::SetUnmanagedHandler</span><span class="sxs-lookup"><span data-stu-id="9fb2b-102">ICorDebug::SetUnmanagedHandler Method</span></span>
+<span data-ttu-id="9fb2b-103">Specifica l'oggetto di gestore eventi per gli eventi non gestiti.</span><span class="sxs-lookup"><span data-stu-id="9fb2b-103">Specifies the event handler object for unmanaged events.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0e6f5-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="0e6f5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9fb2b-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="9fb2b-104">Syntax</span></span>  
   
 ```  
 HRESULT SetUnmanagedHandler (  
@@ -35,21 +35,21 @@ HRESULT SetUnmanagedHandler (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="0e6f5-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="0e6f5-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="9fb2b-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="9fb2b-105">Parameters</span></span>  
  `pCallback`  
- <span data-ttu-id="0e6f5-106">[in] Un puntatore a un [ICorDebugUnmanagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugunmanagedcallback-interface.md) oggetto che rappresenta il gestore eventi per gli eventi non gestiti.</span><span class="sxs-lookup"><span data-stu-id="0e6f5-106">[in] A pointer to an [ICorDebugUnmanagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugunmanagedcallback-interface.md) object that represents the event handler for unmanaged events.</span></span>  
+ <span data-ttu-id="9fb2b-106">[in] Un puntatore a un [ICorDebugUnmanagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugunmanagedcallback-interface.md) oggetto che rappresenta il gestore eventi per gli eventi non gestiti.</span><span class="sxs-lookup"><span data-stu-id="9fb2b-106">[in] A pointer to an [ICorDebugUnmanagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugunmanagedcallback-interface.md) object that represents the event handler for unmanaged events.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="0e6f5-107">Note</span><span class="sxs-lookup"><span data-stu-id="0e6f5-107">Remarks</span></span>  
- <span data-ttu-id="0e6f5-108">Il gestore dell'evento oggetto non gestito eventi devono essere impostati dopo una chiamata a [ICorDebug:: Initialize](../../../../docs/framework/unmanaged-api/debugging/icordebug-initialize-method.md) e prima delle chiamate a [ICorDebug:: CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md) o [ICorDebug:: DebugActiveProcess ](../../../../docs/framework/unmanaged-api/debugging/icordebug-debugactiveprocess-method.md).</span><span class="sxs-lookup"><span data-stu-id="0e6f5-108">The event handler object for unmanaged events must be set after a call to [ICorDebug::Initialize](../../../../docs/framework/unmanaged-api/debugging/icordebug-initialize-method.md) and before any calls to [ICorDebug::CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md) or [ICorDebug::DebugActiveProcess](../../../../docs/framework/unmanaged-api/debugging/icordebug-debugactiveprocess-method.md).</span></span> <span data-ttu-id="0e6f5-109">Per applicazioni legacy, non è tuttavia necessario impostare l'oggetto di gestore eventi per gli eventi non gestiti fino a quando non viene generato il primo evento di debug nativo.</span><span class="sxs-lookup"><span data-stu-id="0e6f5-109">However, for legacy purposes, you are not required to set the event handler object for unmanaged events until the first native debug event is raised.</span></span> <span data-ttu-id="0e6f5-110">In particolare, se `ICorDebug::CreateProcess` ha impostato il flag CREATE_SUSPENDED, gli eventi non possono essere inviati fino a quando non viene ripreso il thread principale di debug nativo.</span><span class="sxs-lookup"><span data-stu-id="0e6f5-110">Specifically, if `ICorDebug::CreateProcess` has set the CREATE_SUSPENDED flag, native debug events cannot be dispatched until the main thread is resumed.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9fb2b-107">Note</span><span class="sxs-lookup"><span data-stu-id="9fb2b-107">Remarks</span></span>  
+ <span data-ttu-id="9fb2b-108">Il gestore eventi relativo oggetto non gestito devono essere impostati eventi dopo una chiamata a [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-initialize-method.md) e prima delle chiamate a [ICorDebug:: CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md) o [DebugActiveProcess ](../../../../docs/framework/unmanaged-api/debugging/icordebug-debugactiveprocess-method.md).</span><span class="sxs-lookup"><span data-stu-id="9fb2b-108">The event handler object for unmanaged events must be set after a call to [ICorDebug::Initialize](../../../../docs/framework/unmanaged-api/debugging/icordebug-initialize-method.md) and before any calls to [ICorDebug::CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md) or [ICorDebug::DebugActiveProcess](../../../../docs/framework/unmanaged-api/debugging/icordebug-debugactiveprocess-method.md).</span></span> <span data-ttu-id="9fb2b-109">Tuttavia, per scopi di legacy, non occorre impostare l'oggetto gestore evento per eventi non gestiti fino a quando non viene generato il primo evento di debug nativi.</span><span class="sxs-lookup"><span data-stu-id="9fb2b-109">However, for legacy purposes, you are not required to set the event handler object for unmanaged events until the first native debug event is raised.</span></span> <span data-ttu-id="9fb2b-110">In particolare, se `ICorDebug::CreateProcess` ha impostato il flag CREATE_SUSPENDED, debug nativo non possono essere inviati gli eventi fino a quando non viene ripreso il thread principale.</span><span class="sxs-lookup"><span data-stu-id="9fb2b-110">Specifically, if `ICorDebug::CreateProcess` has set the CREATE_SUSPENDED flag, native debug events cannot be dispatched until the main thread is resumed.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0e6f5-111">Requisiti</span><span class="sxs-lookup"><span data-stu-id="0e6f5-111">Requirements</span></span>  
- <span data-ttu-id="0e6f5-112">**Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0e6f5-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9fb2b-111">Requisiti</span><span class="sxs-lookup"><span data-stu-id="9fb2b-111">Requirements</span></span>  
+ <span data-ttu-id="9fb2b-112">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9fb2b-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0e6f5-113">**Intestazione:** Cordebug. idl, Cordebug. H</span><span class="sxs-lookup"><span data-stu-id="0e6f5-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="9fb2b-113">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="9fb2b-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="0e6f5-114">**Libreria:** CorGuids. lib</span><span class="sxs-lookup"><span data-stu-id="0e6f5-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="9fb2b-114">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9fb2b-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="0e6f5-115">**Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0e6f5-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="9fb2b-115">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9fb2b-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0e6f5-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="0e6f5-116">See Also</span></span>  
- [<span data-ttu-id="0e6f5-117">Interfaccia ICorDebug</span><span class="sxs-lookup"><span data-stu-id="0e6f5-117">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+## <a name="see-also"></a><span data-ttu-id="9fb2b-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="9fb2b-116">See also</span></span>
+- [<span data-ttu-id="9fb2b-117">Interfaccia ICorDebug</span><span class="sxs-lookup"><span data-stu-id="9fb2b-117">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
