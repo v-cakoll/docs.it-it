@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5ecd1c714f41c76833ef6a0a4b7be87e338ca1a4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 51eeaf79e470e38461450c6f4afbef982cca7a34
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448830"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54727963"
 ---
-# <a name="imetadataimport2enumgenericparams-method"></a><span data-ttu-id="9da35-102">Metodo IMetaDataImport2::EnumGenericParams</span><span class="sxs-lookup"><span data-stu-id="9da35-102">IMetaDataImport2::EnumGenericParams Method</span></span>
-<span data-ttu-id="9da35-103">Ottiene un enumeratore per una matrice di token di parametri generici associati il TypeDef o MethodDef specificato token.</span><span class="sxs-lookup"><span data-stu-id="9da35-103">Gets an enumerator for an array of generic parameter tokens associated with the specified TypeDef or MethodDef token.</span></span>  
+# <a name="imetadataimport2enumgenericparams-method"></a><span data-ttu-id="8f3c7-102">Metodo IMetaDataImport2::EnumGenericParams</span><span class="sxs-lookup"><span data-stu-id="8f3c7-102">IMetaDataImport2::EnumGenericParams Method</span></span>
+<span data-ttu-id="8f3c7-103">Ottiene un enumeratore per una matrice di parametri generici token associato con il TypeDef o MethodDef specificato token.</span><span class="sxs-lookup"><span data-stu-id="8f3c7-103">Gets an enumerator for an array of generic parameter tokens associated with the specified TypeDef or MethodDef token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9da35-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="9da35-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8f3c7-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="8f3c7-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumGenericParams (  
@@ -39,38 +39,38 @@ HRESULT EnumGenericParams (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="9da35-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="9da35-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="8f3c7-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="8f3c7-105">Parameters</span></span>  
  `phEnum`  
- <span data-ttu-id="9da35-106">[in, out] Un puntatore all'enumeratore.</span><span class="sxs-lookup"><span data-stu-id="9da35-106">[in, out] A pointer to the enumerator.</span></span>  
+ <span data-ttu-id="8f3c7-106">[in, out] Un puntatore all'enumeratore.</span><span class="sxs-lookup"><span data-stu-id="8f3c7-106">[in, out] A pointer to the enumerator.</span></span>  
   
  `tk`  
- <span data-ttu-id="9da35-107">[in] Il token TypeDef o MethodDef i cui parametri generici sono da enumerare.</span><span class="sxs-lookup"><span data-stu-id="9da35-107">[in] The TypeDef or MethodDef token whose generic parameters are to be enumerated.</span></span>  
+ <span data-ttu-id="8f3c7-107">[in] Il token TypeDef o MethodDef i cui parametri generici devono essere enumerati.</span><span class="sxs-lookup"><span data-stu-id="8f3c7-107">[in] The TypeDef or MethodDef token whose generic parameters are to be enumerated.</span></span>  
   
  `rGenericParams`  
- <span data-ttu-id="9da35-108">[out] Matrice di parametri generici da enumerare.</span><span class="sxs-lookup"><span data-stu-id="9da35-108">[out] The array of generic parameters to enumerate.</span></span>  
+ <span data-ttu-id="8f3c7-108">[out] Matrice di parametri generici da enumerare.</span><span class="sxs-lookup"><span data-stu-id="8f3c7-108">[out] The array of generic parameters to enumerate.</span></span>  
   
  `cMax`  
- <span data-ttu-id="9da35-109">[in] Il numero massimo di richiesto di token da inserire `rGenericParams`.</span><span class="sxs-lookup"><span data-stu-id="9da35-109">[in] The requested maximum number of tokens to place in `rGenericParams`.</span></span>  
+ <span data-ttu-id="8f3c7-109">[in] Il numero massimo di richiesto di token da inserire `rGenericParams`.</span><span class="sxs-lookup"><span data-stu-id="8f3c7-109">[in] The requested maximum number of tokens to place in `rGenericParams`.</span></span>  
   
  `pcGenericParams`  
- <span data-ttu-id="9da35-110">[out] Il numero restituito di token inseriti in `rGenericParams`.</span><span class="sxs-lookup"><span data-stu-id="9da35-110">[out] The returned number of tokens placed in `rGenericParams`.</span></span>  
+ <span data-ttu-id="8f3c7-110">[out] Il numero restituito dei token inserito in `rGenericParams`.</span><span class="sxs-lookup"><span data-stu-id="8f3c7-110">[out] The returned number of tokens placed in `rGenericParams`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="9da35-111">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="9da35-111">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="8f3c7-111">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="8f3c7-111">Return Value</span></span>  
   
-|<span data-ttu-id="9da35-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="9da35-112">HRESULT</span></span>|<span data-ttu-id="9da35-113">Descrizione</span><span class="sxs-lookup"><span data-stu-id="9da35-113">Description</span></span>|  
+|<span data-ttu-id="8f3c7-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="8f3c7-112">HRESULT</span></span>|<span data-ttu-id="8f3c7-113">Descrizione</span><span class="sxs-lookup"><span data-stu-id="8f3c7-113">Description</span></span>|  
 |-------------|-----------------|  
-|`S_OK`|<span data-ttu-id="9da35-114">`EnumGenericParams` stato restituito correttamente.</span><span class="sxs-lookup"><span data-stu-id="9da35-114">`EnumGenericParams` returned successfully.</span></span>|  
-|`S_FALSE`|<span data-ttu-id="9da35-115">`phEnum` non ha membro elementi.</span><span class="sxs-lookup"><span data-stu-id="9da35-115">`phEnum` has no member elements.</span></span> <span data-ttu-id="9da35-116">In questo caso, `pcGenericParams` è impostato su 0 (zero).</span><span class="sxs-lookup"><span data-stu-id="9da35-116">In this case, `pcGenericParams` is set to 0 (zero).</span></span>|  
+|`S_OK`|<span data-ttu-id="8f3c7-114">`EnumGenericParams` stato restituito correttamente.</span><span class="sxs-lookup"><span data-stu-id="8f3c7-114">`EnumGenericParams` returned successfully.</span></span>|  
+|`S_FALSE`|<span data-ttu-id="8f3c7-115">`phEnum` non ha membro elementi.</span><span class="sxs-lookup"><span data-stu-id="8f3c7-115">`phEnum` has no member elements.</span></span> <span data-ttu-id="8f3c7-116">In questo caso, `pcGenericParams` è impostato su 0 (zero).</span><span class="sxs-lookup"><span data-stu-id="8f3c7-116">In this case, `pcGenericParams` is set to 0 (zero).</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="9da35-117">Requisiti</span><span class="sxs-lookup"><span data-stu-id="9da35-117">Requirements</span></span>  
- <span data-ttu-id="9da35-118">**Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9da35-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8f3c7-117">Requisiti</span><span class="sxs-lookup"><span data-stu-id="8f3c7-117">Requirements</span></span>  
+ <span data-ttu-id="8f3c7-118">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8f3c7-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9da35-119">**Intestazione:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="9da35-119">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="8f3c7-119">**Intestazione:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="8f3c7-119">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="9da35-120">**Libreria:** usata come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="9da35-120">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="8f3c7-120">**Libreria:** Usato come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="8f3c7-120">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="9da35-121">**Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9da35-121">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="8f3c7-121">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8f3c7-121">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9da35-122">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="9da35-122">See Also</span></span>  
- [<span data-ttu-id="9da35-123">Interfaccia IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="9da35-123">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)  
- [<span data-ttu-id="9da35-124">Interfaccia IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="9da35-124">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+## <a name="see-also"></a><span data-ttu-id="8f3c7-122">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="8f3c7-122">See also</span></span>
+- [<span data-ttu-id="8f3c7-123">Interfaccia IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="8f3c7-123">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="8f3c7-124">Interfaccia IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="8f3c7-124">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

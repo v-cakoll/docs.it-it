@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3d4e07fb3d0988838fde662f4bb7d4719cc2d50f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b905d3b5de39057cba384ea7bca917bc3476623f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408340"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700650"
 ---
-# <a name="cortypeid-structure"></a><span data-ttu-id="ab49e-102">Struttura COR_TYPEID</span><span class="sxs-lookup"><span data-stu-id="ab49e-102">COR_TYPEID Structure</span></span>
-<span data-ttu-id="ab49e-103">Contiene un identificatore di tipo.</span><span class="sxs-lookup"><span data-stu-id="ab49e-103">Contains a type identifier.</span></span>  
+# <a name="cortypeid-structure"></a><span data-ttu-id="23fe0-102">Struttura COR_TYPEID</span><span class="sxs-lookup"><span data-stu-id="23fe0-102">COR_TYPEID Structure</span></span>
+<span data-ttu-id="23fe0-103">Contiene un identificatore di tipo.</span><span class="sxs-lookup"><span data-stu-id="23fe0-103">Contains a type identifier.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ab49e-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="ab49e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="23fe0-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="23fe0-104">Syntax</span></span>  
   
 ```  
 typedef struct COR_TYPEID{  
@@ -35,27 +35,27 @@ typedef struct COR_TYPEID{
 } COR_TYPEID;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="ab49e-105">Membri</span><span class="sxs-lookup"><span data-stu-id="ab49e-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="23fe0-105">Membri</span><span class="sxs-lookup"><span data-stu-id="23fe0-105">Members</span></span>  
   
-|<span data-ttu-id="ab49e-106">Membro</span><span class="sxs-lookup"><span data-stu-id="ab49e-106">Member</span></span>|<span data-ttu-id="ab49e-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="ab49e-107">Description</span></span>|  
+|<span data-ttu-id="23fe0-106">Membro</span><span class="sxs-lookup"><span data-stu-id="23fe0-106">Member</span></span>|<span data-ttu-id="23fe0-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="23fe0-107">Description</span></span>|  
 |------------|-----------------|  
-|`token1`|<span data-ttu-id="ab49e-108">Il primo token.</span><span class="sxs-lookup"><span data-stu-id="ab49e-108">The first token.</span></span>|  
-|`token2`|<span data-ttu-id="ab49e-109">Il secondo token.</span><span class="sxs-lookup"><span data-stu-id="ab49e-109">The second token.</span></span>|  
+|`token1`|<span data-ttu-id="23fe0-108">Il primo token.</span><span class="sxs-lookup"><span data-stu-id="23fe0-108">The first token.</span></span>|  
+|`token2`|<span data-ttu-id="23fe0-109">Secondo token.</span><span class="sxs-lookup"><span data-stu-id="23fe0-109">The second token.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="ab49e-110">Note</span><span class="sxs-lookup"><span data-stu-id="ab49e-110">Remarks</span></span>  
- <span data-ttu-id="ab49e-111">Il `COR_TYPEID` struttura viene restituita da una serie di metodi di debug che forniscono informazioni sugli oggetti da sottoporre a garbage collection.</span><span class="sxs-lookup"><span data-stu-id="ab49e-111">The `COR_TYPEID` structure is returned by a number of debugging methods that provide information about objects to be garbage-collected.</span></span> <span data-ttu-id="ab49e-112">Può quindi essere passato come argomento ad altri metodi di debug che forniscono informazioni aggiuntive su tale elemento.</span><span class="sxs-lookup"><span data-stu-id="ab49e-112">It can then be passed as an argument to other debugging methods that provide additional information about that item.</span></span> <span data-ttu-id="ab49e-113">Ad esempio, enumerando un [ICorDebugHeapEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md) dell'oggetto, è possibile recuperare singoli [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) gli oggetti che rappresentano i singoli oggetti nell'heap gestito.</span><span class="sxs-lookup"><span data-stu-id="ab49e-113">For example, by enumerating an [ICorDebugHeapEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md) object, you can retrieve individual [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) objects that represent individual objects on the managed heap.</span></span> <span data-ttu-id="ab49e-114">È quindi possibile passare il `COR_TYPEID` valore il `COR_HEAPOBJECT.type` campo il [icordebugprocess5:: Gettypefortypeid](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypefortypeid-method.md) metodo per recuperare un oggetto ICorDebugType che fornisce informazioni sul tipo relative all'oggetto.</span><span class="sxs-lookup"><span data-stu-id="ab49e-114">You can then pass the `COR_TYPEID` value from the `COR_HEAPOBJECT.type` field to the [ICorDebugProcess5::GetTypeForTypeID](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypefortypeid-method.md) method to retrieve an ICorDebugType object that provides type information about the object.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="23fe0-110">Note</span><span class="sxs-lookup"><span data-stu-id="23fe0-110">Remarks</span></span>  
+ <span data-ttu-id="23fe0-111">Il `COR_TYPEID` struttura viene restituita da un numero di metodi di debug che forniscono informazioni sugli oggetti di essere sottoposto a garbage collection.</span><span class="sxs-lookup"><span data-stu-id="23fe0-111">The `COR_TYPEID` structure is returned by a number of debugging methods that provide information about objects to be garbage-collected.</span></span> <span data-ttu-id="23fe0-112">Si può quindi essere passato come argomento per altri metodi di debug che forniscono informazioni aggiuntive relative a tale elemento.</span><span class="sxs-lookup"><span data-stu-id="23fe0-112">It can then be passed as an argument to other debugging methods that provide additional information about that item.</span></span> <span data-ttu-id="23fe0-113">Ad esempio, tramite l'enumerazione un' [ICorDebugHeapEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md) dell'oggetto, è possibile recuperare singoli [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) gli oggetti che rappresentano singoli oggetti nell'heap gestito.</span><span class="sxs-lookup"><span data-stu-id="23fe0-113">For example, by enumerating an [ICorDebugHeapEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md) object, you can retrieve individual [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) objects that represent individual objects on the managed heap.</span></span> <span data-ttu-id="23fe0-114">È quindi possibile passare il `COR_TYPEID` valore di `COR_HEAPOBJECT.type` campo il [ICorDebugProcess5::GetTypeForTypeID](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypefortypeid-method.md) metodo per recuperare un oggetto ICorDebugType che fornisce informazioni sul tipo sull'oggetto.</span><span class="sxs-lookup"><span data-stu-id="23fe0-114">You can then pass the `COR_TYPEID` value from the `COR_HEAPOBJECT.type` field to the [ICorDebugProcess5::GetTypeForTypeID](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypefortypeid-method.md) method to retrieve an ICorDebugType object that provides type information about the object.</span></span>  
   
- <span data-ttu-id="ab49e-115">Oggetto `COR_TYPEID` oggetto deve essere opaca.</span><span class="sxs-lookup"><span data-stu-id="ab49e-115">A `COR_TYPEID` object is intended to be opaque.</span></span> <span data-ttu-id="ab49e-116">I singoli campi non devono essere accessibile oppure modificati.</span><span class="sxs-lookup"><span data-stu-id="ab49e-116">Its individual fields should not be accessed or manipulated.</span></span> <span data-ttu-id="ab49e-117">L'uso esclusivo è un identificatore che viene fornito come un `out` parametro in una chiamata al metodo e che può essere passato a sua volta, agli altri metodi per fornire informazioni aggiuntive.</span><span class="sxs-lookup"><span data-stu-id="ab49e-117">Its sole use is as an identifier that is provided as an `out` parameter in a method call and that can, in turn, be passed to other methods to provide additional information.</span></span>  
+ <span data-ttu-id="23fe0-115">Oggetto `COR_TYPEID` oggetto deve essere opaca.</span><span class="sxs-lookup"><span data-stu-id="23fe0-115">A `COR_TYPEID` object is intended to be opaque.</span></span> <span data-ttu-id="23fe0-116">I singoli campi non devono essere accessibile o modificati.</span><span class="sxs-lookup"><span data-stu-id="23fe0-116">Its individual fields should not be accessed or manipulated.</span></span> <span data-ttu-id="23fe0-117">L'utilizzo esclusivo è un identificatore che viene fornito come un `out` parametro in una chiamata al metodo e che può essere passato a sua volta, agli altri metodi per fornire informazioni aggiuntive.</span><span class="sxs-lookup"><span data-stu-id="23fe0-117">Its sole use is as an identifier that is provided as an `out` parameter in a method call and that can, in turn, be passed to other methods to provide additional information.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ab49e-118">Requisiti</span><span class="sxs-lookup"><span data-stu-id="ab49e-118">Requirements</span></span>  
- <span data-ttu-id="ab49e-119">**Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ab49e-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="23fe0-118">Requisiti</span><span class="sxs-lookup"><span data-stu-id="23fe0-118">Requirements</span></span>  
+ <span data-ttu-id="23fe0-119">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="23fe0-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ab49e-120">**Intestazione:** Cordebug. idl, Cordebug. H</span><span class="sxs-lookup"><span data-stu-id="ab49e-120">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="23fe0-120">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="23fe0-120">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="ab49e-121">**Libreria:** CorGuids. lib</span><span class="sxs-lookup"><span data-stu-id="ab49e-121">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="23fe0-121">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="23fe0-121">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="ab49e-122">**Versioni di .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ab49e-122">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="23fe0-122">**Versioni di .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="23fe0-122">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ab49e-123">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="ab49e-123">See Also</span></span>  
- [<span data-ttu-id="ab49e-124">Strutture di debug</span><span class="sxs-lookup"><span data-stu-id="ab49e-124">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [<span data-ttu-id="ab49e-125">Debug</span><span class="sxs-lookup"><span data-stu-id="ab49e-125">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a><span data-ttu-id="23fe0-123">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="23fe0-123">See also</span></span>
+- [<span data-ttu-id="23fe0-124">Strutture di debug</span><span class="sxs-lookup"><span data-stu-id="23fe0-124">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [<span data-ttu-id="23fe0-125">Debug</span><span class="sxs-lookup"><span data-stu-id="23fe0-125">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

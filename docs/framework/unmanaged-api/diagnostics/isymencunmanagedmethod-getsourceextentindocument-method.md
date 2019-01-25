@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dc3a986326f9b47194558ca86bcbeabb61dbaeb3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 832746b911e74790de246b00a364aaec4bda8f67
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425539"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54739978"
 ---
-# <a name="isymencunmanagedmethodgetsourceextentindocument-method"></a><span data-ttu-id="c9211-102">Metodo ISymENCUnmanagedMethod::GetSourceExtentInDocument</span><span class="sxs-lookup"><span data-stu-id="c9211-102">ISymENCUnmanagedMethod::GetSourceExtentInDocument Method</span></span>
-<span data-ttu-id="c9211-103">Ottiene il valore più piccolo start riga e la riga finale per il metodo in un documento specifico.</span><span class="sxs-lookup"><span data-stu-id="c9211-103">Gets the smallest start line and largest end line for the method in a specific document.</span></span>  
+# <a name="isymencunmanagedmethodgetsourceextentindocument-method"></a><span data-ttu-id="064d0-102">Metodo ISymENCUnmanagedMethod::GetSourceExtentInDocument</span><span class="sxs-lookup"><span data-stu-id="064d0-102">ISymENCUnmanagedMethod::GetSourceExtentInDocument Method</span></span>
+<span data-ttu-id="064d0-103">Ottiene il valore più piccolo start riga e la riga finale per il metodo in un documento specifico.</span><span class="sxs-lookup"><span data-stu-id="064d0-103">Gets the smallest start line and largest end line for the method in a specific document.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c9211-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="c9211-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="064d0-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="064d0-104">Syntax</span></span>  
   
 ```  
 HRESULT GetSourceExtentInDocument(  
@@ -36,21 +36,21 @@ HRESULT GetSourceExtentInDocument(
     [out] ULONG32* pendLine);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="c9211-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="c9211-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="064d0-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="064d0-105">Parameters</span></span>  
  `document`  
- <span data-ttu-id="c9211-106">[in] Puntatore al documento.</span><span class="sxs-lookup"><span data-stu-id="c9211-106">[in] A pointer to the document.</span></span>  
+ <span data-ttu-id="064d0-106">[in] Puntatore al documento.</span><span class="sxs-lookup"><span data-stu-id="064d0-106">[in] A pointer to the document.</span></span>  
   
  `pstartLine`  
- <span data-ttu-id="c9211-107">[out] Un puntatore a un `ULONG32` che riceve la riga iniziale.</span><span class="sxs-lookup"><span data-stu-id="c9211-107">[out] A pointer to a `ULONG32` that receives the start line.</span></span>  
+ <span data-ttu-id="064d0-107">[out] Un puntatore a un `ULONG32` che riceve la riga iniziale.</span><span class="sxs-lookup"><span data-stu-id="064d0-107">[out] A pointer to a `ULONG32` that receives the start line.</span></span>  
   
  `pendLine`  
- <span data-ttu-id="c9211-108">[out] Un puntatore a un `ULONG32` che riceve la riga finale.</span><span class="sxs-lookup"><span data-stu-id="c9211-108">[out] A pointer to a `ULONG32` that receives the end line.</span></span>  
+ <span data-ttu-id="064d0-108">[out] Un puntatore a un `ULONG32` che riceve la riga finale.</span><span class="sxs-lookup"><span data-stu-id="064d0-108">[out] A pointer to a `ULONG32` that receives the end line.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="c9211-109">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="c9211-109">Return Value</span></span>  
- <span data-ttu-id="c9211-110">S_OK se il metodo ha esito positivo. in caso contrario, E_FAIL o un altro codice di errore.</span><span class="sxs-lookup"><span data-stu-id="c9211-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="064d0-109">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="064d0-109">Return Value</span></span>  
+ <span data-ttu-id="064d0-110">S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o qualche altro codice di errore.</span><span class="sxs-lookup"><span data-stu-id="064d0-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c9211-111">Requisiti</span><span class="sxs-lookup"><span data-stu-id="c9211-111">Requirements</span></span>  
- <span data-ttu-id="c9211-112">**Intestazione:** CorSym. idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="c9211-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="064d0-111">Requisiti</span><span class="sxs-lookup"><span data-stu-id="064d0-111">Requirements</span></span>  
+ <span data-ttu-id="064d0-112">**Intestazione:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="064d0-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c9211-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c9211-113">See Also</span></span>  
- [<span data-ttu-id="c9211-114">Interfaccia ISymENCUnmanagedMethod</span><span class="sxs-lookup"><span data-stu-id="c9211-114">ISymENCUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
+## <a name="see-also"></a><span data-ttu-id="064d0-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="064d0-113">See also</span></span>
+- [<span data-ttu-id="064d0-114">Interfaccia ISymENCUnmanagedMethod</span><span class="sxs-lookup"><span data-stu-id="064d0-114">ISymENCUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
