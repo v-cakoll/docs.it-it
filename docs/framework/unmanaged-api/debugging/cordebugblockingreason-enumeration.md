@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fe5e1267b619d5900ed9af55dd6079a8f38d6550
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c867945f8a75cade5c7405b2908e2819f5d261d9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406900"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54706972"
 ---
-# <a name="cordebugblockingreason-enumeration"></a><span data-ttu-id="dbd3f-102">Enumerazione CorDebugBlockingReason</span><span class="sxs-lookup"><span data-stu-id="dbd3f-102">CorDebugBlockingReason Enumeration</span></span>
-<span data-ttu-id="dbd3f-103">Specifica i motivi che possono causare il blocco di un thread su un oggetto specifico.</span><span class="sxs-lookup"><span data-stu-id="dbd3f-103">Specifies the reasons why a thread may become blocked on a given object.</span></span>  
+# <a name="cordebugblockingreason-enumeration"></a><span data-ttu-id="bb87c-102">Enumerazione CorDebugBlockingReason</span><span class="sxs-lookup"><span data-stu-id="bb87c-102">CorDebugBlockingReason Enumeration</span></span>
+<span data-ttu-id="bb87c-103">Specifica i motivi che possono causare il blocco di un thread su un oggetto specifico.</span><span class="sxs-lookup"><span data-stu-id="bb87c-103">Specifies the reasons why a thread may become blocked on a given object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="dbd3f-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="dbd3f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bb87c-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="bb87c-104">Syntax</span></span>  
   
 ```  
 Typedef enum CorDebugBlockingReason  
@@ -37,26 +37,26 @@ Typedef enum CorDebugBlockingReason
 }  CorDebugBlockingReason;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="dbd3f-105">Membri</span><span class="sxs-lookup"><span data-stu-id="dbd3f-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="bb87c-105">Membri</span><span class="sxs-lookup"><span data-stu-id="bb87c-105">Members</span></span>  
   
-|<span data-ttu-id="dbd3f-106">Membro</span><span class="sxs-lookup"><span data-stu-id="dbd3f-106">Member</span></span>|<span data-ttu-id="dbd3f-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="dbd3f-107">Description</span></span>|  
+|<span data-ttu-id="bb87c-106">Membro</span><span class="sxs-lookup"><span data-stu-id="bb87c-106">Member</span></span>|<span data-ttu-id="bb87c-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="bb87c-107">Description</span></span>|  
 |------------|-----------------|  
-|`BLOCKING_NONE`|<span data-ttu-id="dbd3f-108">Solo per uso interno.</span><span class="sxs-lookup"><span data-stu-id="dbd3f-108">Internal use only.</span></span>|  
-|`BLOCKING_MONITOR_CRITICAL_SECTION`|<span data-ttu-id="dbd3f-109">Un thread sta tentando di acquisire la sezione critica è associata al blocco di monitoraggio su un oggetto.</span><span class="sxs-lookup"><span data-stu-id="dbd3f-109">A thread is trying to acquire the critical section that is associated with the monitor lock on an object.</span></span> <span data-ttu-id="dbd3f-110">In genere, questo errore si verifica quando si chiama uno del <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> o <xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType> metodi.</span><span class="sxs-lookup"><span data-stu-id="dbd3f-110">Typically, this occurs when you call one of the <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> or <xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType> methods.</span></span>|  
-|`BLOCKING_MONITOR_EVENT`|<span data-ttu-id="dbd3f-111">Un thread è in attesa dell'evento associato a un blocco di monitoraggio per un oggetto.</span><span class="sxs-lookup"><span data-stu-id="dbd3f-111">A thread is waiting on the event that is associated with a monitor lock for an object.</span></span> <span data-ttu-id="dbd3f-112">In genere, questo errore si verifica quando si chiama uno del <xref:System.Threading.Monitor?displayProperty=nameWithType> `Wait` metodi.</span><span class="sxs-lookup"><span data-stu-id="dbd3f-112">Typically, this occurs when you call one of the <xref:System.Threading.Monitor?displayProperty=nameWithType>`Wait` methods.</span></span>|  
+|`BLOCKING_NONE`|<span data-ttu-id="bb87c-108">Solo per uso interno.</span><span class="sxs-lookup"><span data-stu-id="bb87c-108">Internal use only.</span></span>|  
+|`BLOCKING_MONITOR_CRITICAL_SECTION`|<span data-ttu-id="bb87c-109">Un thread sta tentando di acquisire la sezione critica che è associata il blocco del monitoraggio in un oggetto.</span><span class="sxs-lookup"><span data-stu-id="bb87c-109">A thread is trying to acquire the critical section that is associated with the monitor lock on an object.</span></span> <span data-ttu-id="bb87c-110">In genere, ciò si verifica quando si chiama uno dei <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> o <xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType> metodi.</span><span class="sxs-lookup"><span data-stu-id="bb87c-110">Typically, this occurs when you call one of the <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> or <xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType> methods.</span></span>|  
+|`BLOCKING_MONITOR_EVENT`|<span data-ttu-id="bb87c-111">Un thread è in attesa dell'evento associato a un blocco di monitoraggio per un oggetto.</span><span class="sxs-lookup"><span data-stu-id="bb87c-111">A thread is waiting on the event that is associated with a monitor lock for an object.</span></span> <span data-ttu-id="bb87c-112">In genere, ciò si verifica quando si chiama uno dei <xref:System.Threading.Monitor?displayProperty=nameWithType> `Wait` metodi.</span><span class="sxs-lookup"><span data-stu-id="bb87c-112">Typically, this occurs when you call one of the <xref:System.Threading.Monitor?displayProperty=nameWithType>`Wait` methods.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="dbd3f-113">Note</span><span class="sxs-lookup"><span data-stu-id="dbd3f-113">Remarks</span></span>  
- <span data-ttu-id="dbd3f-114">Quando il `BLOCKING_MONITOR_CRITICAL_SECTION` o `BLOCKING_MONITOR_EVENT` membro viene utilizzato un [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) struttura, il `pBlockingObject` membro della struttura punta a un'interfaccia "ICorDebugValue" che rappresenta l'oggetto in corso di immissione .</span><span class="sxs-lookup"><span data-stu-id="dbd3f-114">When the `BLOCKING_MONITOR_CRITICAL_SECTION` or `BLOCKING_MONITOR_EVENT` member is used in a [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) structure, the `pBlockingObject` member of the structure points to an "ICorDebugValue" interface that represents the object that is being entered.</span></span> <span data-ttu-id="dbd3f-115">È inoltre garantito per implementare il [ICorDebugHeapValue3](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue3-interface.md) interfaccia.</span><span class="sxs-lookup"><span data-stu-id="dbd3f-115">It is also guaranteed to implement the [ICorDebugHeapValue3](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue3-interface.md) interface.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="bb87c-113">Note</span><span class="sxs-lookup"><span data-stu-id="bb87c-113">Remarks</span></span>  
+ <span data-ttu-id="bb87c-114">Quando la `BLOCKING_MONITOR_CRITICAL_SECTION` oppure `BLOCKING_MONITOR_EVENT` membro viene utilizzato un [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) struttura, il `pBlockingObject` membro della struttura punta a un'interfaccia "ICorDebugValue" che rappresenta l'oggetto che viene viene immesso .</span><span class="sxs-lookup"><span data-stu-id="bb87c-114">When the `BLOCKING_MONITOR_CRITICAL_SECTION` or `BLOCKING_MONITOR_EVENT` member is used in a [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) structure, the `pBlockingObject` member of the structure points to an "ICorDebugValue" interface that represents the object that is being entered.</span></span> <span data-ttu-id="bb87c-115">È inoltre garantito per implementare il [ICorDebugHeapValue3](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue3-interface.md) interfaccia.</span><span class="sxs-lookup"><span data-stu-id="bb87c-115">It is also guaranteed to implement the [ICorDebugHeapValue3](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue3-interface.md) interface.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="dbd3f-116">Requisiti</span><span class="sxs-lookup"><span data-stu-id="dbd3f-116">Requirements</span></span>  
- <span data-ttu-id="dbd3f-117">**Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="dbd3f-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="bb87c-116">Requisiti</span><span class="sxs-lookup"><span data-stu-id="bb87c-116">Requirements</span></span>  
+ <span data-ttu-id="bb87c-117">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bb87c-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="dbd3f-118">**Intestazione:** Cordebug. idl, Cordebug. H</span><span class="sxs-lookup"><span data-stu-id="dbd3f-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="bb87c-118">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="bb87c-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="dbd3f-119">**Libreria:** CorGuids. lib</span><span class="sxs-lookup"><span data-stu-id="dbd3f-119">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="bb87c-119">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="bb87c-119">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="dbd3f-120">**Versioni di .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="dbd3f-120">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="bb87c-120">**Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bb87c-120">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="dbd3f-121">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="dbd3f-121">See Also</span></span>  
- [<span data-ttu-id="dbd3f-122">Enumerazioni di debug</span><span class="sxs-lookup"><span data-stu-id="dbd3f-122">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)  
- [<span data-ttu-id="dbd3f-123">Debug</span><span class="sxs-lookup"><span data-stu-id="dbd3f-123">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a><span data-ttu-id="bb87c-121">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="bb87c-121">See also</span></span>
+- [<span data-ttu-id="bb87c-122">Enumerazioni di debug</span><span class="sxs-lookup"><span data-stu-id="bb87c-122">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [<span data-ttu-id="bb87c-123">Debug</span><span class="sxs-lookup"><span data-stu-id="bb87c-123">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

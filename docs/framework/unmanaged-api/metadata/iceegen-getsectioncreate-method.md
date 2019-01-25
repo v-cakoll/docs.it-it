@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 857462c380ce51994e13dab5cfe3c28bba0f38be
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 93e96e7804a3b5ecc64e9e50ce700435be83b77a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443339"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643364"
 ---
-# <a name="iceegengetsectioncreate-method"></a><span data-ttu-id="412fa-102">Metodo ICeeGen::GetSectionCreate</span><span class="sxs-lookup"><span data-stu-id="412fa-102">ICeeGen::GetSectionCreate Method</span></span>
-<span data-ttu-id="412fa-103">Genera l'errore e ottiene una sezione di codice utilizzando il nome specificato e i valori di flag.</span><span class="sxs-lookup"><span data-stu-id="412fa-103">Generates and gets a code section using the specified name and flag values.</span></span>  
+# <a name="iceegengetsectioncreate-method"></a><span data-ttu-id="a369f-102">Metodo ICeeGen::GetSectionCreate</span><span class="sxs-lookup"><span data-stu-id="a369f-102">ICeeGen::GetSectionCreate Method</span></span>
+<span data-ttu-id="a369f-103">Genera l'errore e ottiene una sezione di codice usando il nome specificato e i valori di flag.</span><span class="sxs-lookup"><span data-stu-id="a369f-103">Generates and gets a code section using the specified name and flag values.</span></span>  
   
- <span data-ttu-id="412fa-104">Questo metodo è obsoleto e non deve essere utilizzato.</span><span class="sxs-lookup"><span data-stu-id="412fa-104">This method is obsolete and should not be used.</span></span>  
+ <span data-ttu-id="a369f-104">Questo metodo è obsoleto e non deve essere utilizzato.</span><span class="sxs-lookup"><span data-stu-id="a369f-104">This method is obsolete and should not be used.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="412fa-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="412fa-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a369f-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="a369f-105">Syntax</span></span>  
   
 ```  
 HRESULT GetSectionCreate (  
@@ -39,27 +39,27 @@ HRESULT GetSectionCreate (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="412fa-106">Parametri</span><span class="sxs-lookup"><span data-stu-id="412fa-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="a369f-106">Parametri</span><span class="sxs-lookup"><span data-stu-id="a369f-106">Parameters</span></span>  
  `name`  
- <span data-ttu-id="412fa-107">[in] Un puntatore a una stringa che specifica il nome della sezione da creare.</span><span class="sxs-lookup"><span data-stu-id="412fa-107">[in] A pointer to a string that specifies the name of the section to be created.</span></span>  
+ <span data-ttu-id="a369f-107">[in] Un puntatore a una stringa che specifica il nome della sezione da creare.</span><span class="sxs-lookup"><span data-stu-id="a369f-107">[in] A pointer to a string that specifies the name of the section to be created.</span></span>  
   
  `flags`  
- <span data-ttu-id="412fa-108">[in] Flag che specificano le opzioni.</span><span class="sxs-lookup"><span data-stu-id="412fa-108">[in] Flags that specify options.</span></span>  
+ <span data-ttu-id="a369f-108">[in] Flag che specificano le opzioni.</span><span class="sxs-lookup"><span data-stu-id="a369f-108">[in] Flags that specify options.</span></span>  
   
  `section`  
- <span data-ttu-id="412fa-109">[out] Puntatore alla sezione di codice appena creato.</span><span class="sxs-lookup"><span data-stu-id="412fa-109">[out] A pointer to the newly created code section.</span></span>  
+ <span data-ttu-id="a369f-109">[out] Puntatore alla sezione di codice appena creato.</span><span class="sxs-lookup"><span data-stu-id="a369f-109">[out] A pointer to the newly created code section.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="412fa-110">Note</span><span class="sxs-lookup"><span data-stu-id="412fa-110">Remarks</span></span>  
- <span data-ttu-id="412fa-111">Chiamare `GetSectionCreate` solo se sono necessari requisiti speciali di sezione che non sono gestiti da altri metodi.</span><span class="sxs-lookup"><span data-stu-id="412fa-111">Call `GetSectionCreate` only if you have special section requirements that are not handled by other methods.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a369f-110">Note</span><span class="sxs-lookup"><span data-stu-id="a369f-110">Remarks</span></span>  
+ <span data-ttu-id="a369f-111">Chiamare `GetSectionCreate` solo se si hanno requisiti di sezione speciale che non sono gestiti tramite altri metodi.</span><span class="sxs-lookup"><span data-stu-id="a369f-111">Call `GetSectionCreate` only if you have special section requirements that are not handled by other methods.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="412fa-112">Requisiti</span><span class="sxs-lookup"><span data-stu-id="412fa-112">Requirements</span></span>  
- <span data-ttu-id="412fa-113">**Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="412fa-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a369f-112">Requisiti</span><span class="sxs-lookup"><span data-stu-id="a369f-112">Requirements</span></span>  
+ <span data-ttu-id="a369f-113">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a369f-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="412fa-114">**Intestazione:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="412fa-114">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="a369f-114">**Intestazione:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="a369f-114">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="412fa-115">**Libreria:** usata come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="412fa-115">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="a369f-115">**Libreria:** Usato come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="a369f-115">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="412fa-116">**Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="412fa-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="a369f-116">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a369f-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="412fa-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="412fa-117">See Also</span></span>  
- [<span data-ttu-id="412fa-118">Interfaccia ICeeGen</span><span class="sxs-lookup"><span data-stu-id="412fa-118">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+## <a name="see-also"></a><span data-ttu-id="a369f-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a369f-117">See also</span></span>
+- [<span data-ttu-id="a369f-118">Interfaccia ICeeGen</span><span class="sxs-lookup"><span data-stu-id="a369f-118">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

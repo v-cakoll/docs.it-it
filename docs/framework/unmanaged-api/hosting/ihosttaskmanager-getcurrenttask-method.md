@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2420ddb5cf9be2cfb08f89d27d9aa277305e7ffb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bd92b03d87672875661bb5e5241c6fa46f099ce6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442692"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54732466"
 ---
-# <a name="ihosttaskmanagergetcurrenttask-method"></a><span data-ttu-id="3d5df-102">Metodo IHostTaskManager::GetCurrentTask</span><span class="sxs-lookup"><span data-stu-id="3d5df-102">IHostTaskManager::GetCurrentTask Method</span></span>
-<span data-ttu-id="3d5df-103">Ottiene un puntatore a interfaccia per l'attività attualmente in esecuzione sul thread del sistema operativo da cui viene effettuata la chiamata.</span><span class="sxs-lookup"><span data-stu-id="3d5df-103">Gets an interface pointer to the task that is currently executing on the operating system thread from which this call is made.</span></span>  
+# <a name="ihosttaskmanagergetcurrenttask-method"></a><span data-ttu-id="bac7d-102">Metodo IHostTaskManager::GetCurrentTask</span><span class="sxs-lookup"><span data-stu-id="bac7d-102">IHostTaskManager::GetCurrentTask Method</span></span>
+<span data-ttu-id="bac7d-103">Ottiene un puntatore a interfaccia per l'attività attualmente in esecuzione nel thread del sistema operativo da cui viene effettuata la chiamata.</span><span class="sxs-lookup"><span data-stu-id="bac7d-103">Gets an interface pointer to the task that is currently executing on the operating system thread from which this call is made.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3d5df-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="3d5df-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bac7d-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="bac7d-104">Syntax</span></span>  
   
 ```  
 HRESULT GetCurrentTask (  
@@ -35,36 +35,36 @@ HRESULT GetCurrentTask (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="3d5df-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="3d5df-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="bac7d-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="bac7d-105">Parameters</span></span>  
  `pTask`  
- <span data-ttu-id="3d5df-106">[out] Un puntatore all'indirizzo di un [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) istanza che rappresenta l'attività attualmente in esecuzione, o null, se nessuna attività è in esecuzione.</span><span class="sxs-lookup"><span data-stu-id="3d5df-106">[out] A pointer to the address of an [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) instance that represents the currently executing task, or null, if no task is currently executing.</span></span>  
+ <span data-ttu-id="bac7d-106">[out] Un puntatore all'indirizzo di un [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) istanza che rappresenta l'attività attualmente in esecuzione, o null, se nessuna attività è in esecuzione.</span><span class="sxs-lookup"><span data-stu-id="bac7d-106">[out] A pointer to the address of an [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) instance that represents the currently executing task, or null, if no task is currently executing.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="3d5df-107">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="3d5df-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="bac7d-107">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="bac7d-107">Return Value</span></span>  
   
-|<span data-ttu-id="3d5df-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="3d5df-108">HRESULT</span></span>|<span data-ttu-id="3d5df-109">Descrizione</span><span class="sxs-lookup"><span data-stu-id="3d5df-109">Description</span></span>|  
+|<span data-ttu-id="bac7d-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="bac7d-108">HRESULT</span></span>|<span data-ttu-id="bac7d-109">Descrizione</span><span class="sxs-lookup"><span data-stu-id="bac7d-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="3d5df-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="3d5df-110">S_OK</span></span>|<span data-ttu-id="3d5df-111">`GetCurrentTask` stato restituito correttamente.</span><span class="sxs-lookup"><span data-stu-id="3d5df-111">`GetCurrentTask` returned successfully.</span></span>|  
-|<span data-ttu-id="3d5df-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="3d5df-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="3d5df-113">Common language runtime (CLR) non è stato caricato in un processo oppure si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.</span><span class="sxs-lookup"><span data-stu-id="3d5df-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="3d5df-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="3d5df-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="3d5df-115">Timeout della chiamata.</span><span class="sxs-lookup"><span data-stu-id="3d5df-115">The call timed out.</span></span>|  
-|<span data-ttu-id="3d5df-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="3d5df-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="3d5df-117">Il chiamante non dispone del blocco.</span><span class="sxs-lookup"><span data-stu-id="3d5df-117">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="3d5df-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="3d5df-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="3d5df-119">Un evento è stato annullato mentre un thread bloccato o fiber era in attesa su di esso.</span><span class="sxs-lookup"><span data-stu-id="3d5df-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="3d5df-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="3d5df-120">E_FAIL</span></span>|<span data-ttu-id="3d5df-121">Si è verificato un errore irreversibile sconosciuto.</span><span class="sxs-lookup"><span data-stu-id="3d5df-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="3d5df-122">Quando un metodo viene restituito E_FAIL, Common Language Runtime non è più utilizzabile all'interno del processo.</span><span class="sxs-lookup"><span data-stu-id="3d5df-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="3d5df-123">Le chiamate successive ai metodi di hosting restituiranno HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="3d5df-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="3d5df-124">HOST_E_INVALIDOPERATION</span><span class="sxs-lookup"><span data-stu-id="3d5df-124">HOST_E_INVALIDOPERATION</span></span>|<span data-ttu-id="3d5df-125">`GetCurrentTask` è stato chiamato su un thread del sistema operativo all'esterno del controllo dell'host.</span><span class="sxs-lookup"><span data-stu-id="3d5df-125">`GetCurrentTask` was called on an operating system thread outside the control of the host.</span></span>|  
+|<span data-ttu-id="bac7d-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="bac7d-110">S_OK</span></span>|<span data-ttu-id="bac7d-111">`GetCurrentTask` stato restituito correttamente.</span><span class="sxs-lookup"><span data-stu-id="bac7d-111">`GetCurrentTask` returned successfully.</span></span>|  
+|<span data-ttu-id="bac7d-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="bac7d-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="bac7d-113">Common language runtime (CLR) non è stato caricato in un processo oppure si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.</span><span class="sxs-lookup"><span data-stu-id="bac7d-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="bac7d-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="bac7d-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="bac7d-115">Timeout della chiamata.</span><span class="sxs-lookup"><span data-stu-id="bac7d-115">The call timed out.</span></span>|  
+|<span data-ttu-id="bac7d-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="bac7d-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="bac7d-117">Il chiamante non possiede il blocco.</span><span class="sxs-lookup"><span data-stu-id="bac7d-117">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="bac7d-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="bac7d-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="bac7d-119">Un evento è stato annullato durante un thread bloccato o fiber è rimasta in attesa su di esso.</span><span class="sxs-lookup"><span data-stu-id="bac7d-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="bac7d-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="bac7d-120">E_FAIL</span></span>|<span data-ttu-id="bac7d-121">Si è verificato un errore irreversibile sconosciuto.</span><span class="sxs-lookup"><span data-stu-id="bac7d-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="bac7d-122">Quando un metodo di E_FAIL viene restituito, CLR non è più utilizzabile all'interno del processo.</span><span class="sxs-lookup"><span data-stu-id="bac7d-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="bac7d-123">Le chiamate successive ai metodi di hosting restituiranno HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="bac7d-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="bac7d-124">HOST_E_INVALIDOPERATION</span><span class="sxs-lookup"><span data-stu-id="bac7d-124">HOST_E_INVALIDOPERATION</span></span>|<span data-ttu-id="bac7d-125">`GetCurrentTask` è stato chiamato su un thread del sistema operativo all'esterno del controllo dell'host.</span><span class="sxs-lookup"><span data-stu-id="bac7d-125">`GetCurrentTask` was called on an operating system thread outside the control of the host.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="3d5df-126">Note</span><span class="sxs-lookup"><span data-stu-id="3d5df-126">Remarks</span></span>  
- <span data-ttu-id="3d5df-127">L'host può anche impostare il `pTask` parametro su null per impedire che un'attività che non rientrano nel CLR.</span><span class="sxs-lookup"><span data-stu-id="3d5df-127">The host can also set the `pTask` parameter to null to prevent a task that it did not initiate from entering the CLR.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="bac7d-126">Note</span><span class="sxs-lookup"><span data-stu-id="bac7d-126">Remarks</span></span>  
+ <span data-ttu-id="bac7d-127">L'host può anche impostare il `pTask` parametro su null per impedire che un'attività che non è stata avviata il CLR.</span><span class="sxs-lookup"><span data-stu-id="bac7d-127">The host can also set the `pTask` parameter to null to prevent a task that it did not initiate from entering the CLR.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3d5df-128">Requisiti</span><span class="sxs-lookup"><span data-stu-id="3d5df-128">Requirements</span></span>  
- <span data-ttu-id="3d5df-129">**Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3d5df-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="bac7d-128">Requisiti</span><span class="sxs-lookup"><span data-stu-id="bac7d-128">Requirements</span></span>  
+ <span data-ttu-id="bac7d-129">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bac7d-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3d5df-130">**Intestazione:** Mscoree. H</span><span class="sxs-lookup"><span data-stu-id="3d5df-130">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="bac7d-130">**Intestazione:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="bac7d-130">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="3d5df-131">**Libreria:** inclusa come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="3d5df-131">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="bac7d-131">**Libreria:** Inclusa come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="bac7d-131">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="3d5df-132">**Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3d5df-132">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="bac7d-132">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bac7d-132">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3d5df-133">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="3d5df-133">See Also</span></span>  
- [<span data-ttu-id="3d5df-134">Interfaccia ICLRTask</span><span class="sxs-lookup"><span data-stu-id="3d5df-134">ICLRTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  
- [<span data-ttu-id="3d5df-135">Interfaccia ICLRTaskManager</span><span class="sxs-lookup"><span data-stu-id="3d5df-135">ICLRTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)  
- [<span data-ttu-id="3d5df-136">Interfaccia IHostTask</span><span class="sxs-lookup"><span data-stu-id="3d5df-136">IHostTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)  
- [<span data-ttu-id="3d5df-137">Interfaccia IHostTaskManager</span><span class="sxs-lookup"><span data-stu-id="3d5df-137">IHostTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
+## <a name="see-also"></a><span data-ttu-id="bac7d-133">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="bac7d-133">See also</span></span>
+- [<span data-ttu-id="bac7d-134">Interfaccia ICLRTask</span><span class="sxs-lookup"><span data-stu-id="bac7d-134">ICLRTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
+- [<span data-ttu-id="bac7d-135">Interfaccia ICLRTaskManager</span><span class="sxs-lookup"><span data-stu-id="bac7d-135">ICLRTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
+- [<span data-ttu-id="bac7d-136">Interfaccia IHostTask</span><span class="sxs-lookup"><span data-stu-id="bac7d-136">IHostTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
+- [<span data-ttu-id="bac7d-137">Interfaccia IHostTaskManager</span><span class="sxs-lookup"><span data-stu-id="bac7d-137">IHostTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)

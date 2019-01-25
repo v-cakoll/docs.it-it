@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aeb3c4e9a1d87b2d93a310b88c340aec0955a845
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5478a8d3433a8a57dab458c98ea745f32a9ffdf4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425298"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54721903"
 ---
-# <a name="isymunmanagednamespacegetname-method"></a><span data-ttu-id="90f82-102">Metodo ISymUnmanagedNamespace::GetName</span><span class="sxs-lookup"><span data-stu-id="90f82-102">ISymUnmanagedNamespace::GetName Method</span></span>
-<span data-ttu-id="90f82-103">Ottiene il nome di questo spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="90f82-103">Gets the name of this namespace.</span></span>  
+# <a name="isymunmanagednamespacegetname-method"></a><span data-ttu-id="ddd00-102">Metodo ISymUnmanagedNamespace::GetName</span><span class="sxs-lookup"><span data-stu-id="ddd00-102">ISymUnmanagedNamespace::GetName Method</span></span>
+<span data-ttu-id="ddd00-103">Ottiene il nome di questo spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="ddd00-103">Gets the name of this namespace.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="90f82-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="90f82-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ddd00-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="ddd00-104">Syntax</span></span>  
   
 ```  
 HRESULT GetName(  
@@ -37,21 +37,21 @@ HRESULT GetName(
         length_is(*pcchName)] WCHAR szName[]);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="90f82-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="90f82-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="ddd00-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="ddd00-105">Parameters</span></span>  
  `cchName`  
- <span data-ttu-id="90f82-106">[in] Oggetto `ULONG32` che indica le dimensioni del `szName` buffer.</span><span class="sxs-lookup"><span data-stu-id="90f82-106">[in] A `ULONG32` that indicates the size of the `szName` buffer.</span></span>  
+ <span data-ttu-id="ddd00-106">[in] Oggetto `ULONG32` che indica le dimensioni del `szName` buffer.</span><span class="sxs-lookup"><span data-stu-id="ddd00-106">[in] A `ULONG32` that indicates the size of the `szName` buffer.</span></span>  
   
  `pcchName`  
- <span data-ttu-id="90f82-107">[out] Un puntatore a un `ULONG32` che riceve le dimensioni, in caratteri, del buffer necessaria per contenere il nome dello spazio dei nomi, inclusa la terminazione null.</span><span class="sxs-lookup"><span data-stu-id="90f82-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the namespace name, including the null termination.</span></span>  
+ <span data-ttu-id="ddd00-107">[out] Un puntatore a un `ULONG32` che riceve le dimensioni, in caratteri, del buffer necessaria per contenere il nome dello spazio dei nomi, inclusa la terminazione null.</span><span class="sxs-lookup"><span data-stu-id="ddd00-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the namespace name, including the null termination.</span></span>  
   
  `szName`  
- <span data-ttu-id="90f82-108">[out] Un puntatore a un buffer che contiene il nome dello spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="90f82-108">[out] A pointer to a buffer that contains the namespace name.</span></span>  
+ <span data-ttu-id="ddd00-108">[out] Un puntatore a un buffer che contiene il nome dello spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="ddd00-108">[out] A pointer to a buffer that contains the namespace name.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="90f82-109">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="90f82-109">Return Value</span></span>  
- <span data-ttu-id="90f82-110">S_OK se il metodo ha esito positivo. in caso contrario, E_FAIL o un altro codice di errore.</span><span class="sxs-lookup"><span data-stu-id="90f82-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="ddd00-109">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="ddd00-109">Return Value</span></span>  
+ <span data-ttu-id="ddd00-110">S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o qualche altro codice di errore.</span><span class="sxs-lookup"><span data-stu-id="ddd00-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="90f82-111">Requisiti</span><span class="sxs-lookup"><span data-stu-id="90f82-111">Requirements</span></span>  
- <span data-ttu-id="90f82-112">**Intestazione:** CorSym. idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="90f82-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ddd00-111">Requisiti</span><span class="sxs-lookup"><span data-stu-id="ddd00-111">Requirements</span></span>  
+ <span data-ttu-id="ddd00-112">**Intestazione:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="ddd00-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="90f82-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="90f82-113">See Also</span></span>  
- [<span data-ttu-id="90f82-114">Interfaccia ISymUnmanagedNamespace</span><span class="sxs-lookup"><span data-stu-id="90f82-114">ISymUnmanagedNamespace Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)
+## <a name="see-also"></a><span data-ttu-id="ddd00-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="ddd00-113">See also</span></span>
+- [<span data-ttu-id="ddd00-114">Interfaccia ISymUnmanagedNamespace</span><span class="sxs-lookup"><span data-stu-id="ddd00-114">ISymUnmanagedNamespace Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)
