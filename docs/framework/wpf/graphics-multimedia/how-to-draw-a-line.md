@@ -1,19 +1,19 @@
 ---
-title: 'Procedura: disegnare una linea'
+title: 'Procedura: Disegnare una linea'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - drawing [WPF], lines
 - graphics [WPF], lines
 - lines [WPF], drawing
 ms.assetid: 0513ee01-6b27-4bb3-85f3-3a3e6710d80e
-ms.openlocfilehash: bee343676175098493df347823a3bdbdf17b205f
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 54152b6b68dd453c565afa2ffb23edfe8132a441
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45963770"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54629020"
 ---
-# <a name="how-to-draw-a-line"></a>Procedura: disegnare una linea
+# <a name="how-to-draw-a-line"></a>Procedura: Disegnare una linea
 In questo esempio illustra come disegnare linee con il <xref:System.Windows.Shapes.Line> elemento.  
   
  Per disegnare una linea, creare un <xref:System.Windows.Shapes.Line> elemento. Usare relativi <xref:System.Windows.Shapes.Line.X1%2A> e <xref:System.Windows.Shapes.Line.Y1%2A> delle proprietà impostare il punto iniziale; e utilizzare relativo <xref:System.Windows.Shapes.Line.X2%2A> e <xref:System.Windows.Shapes.Line.Y2%2A> proprietà da impostare il punto finale. Infine, impostare relativi <xref:System.Windows.Shapes.Shape.Stroke%2A> e <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> perché non è visibile una riga senza un tratto.  
@@ -27,6 +27,6 @@ In questo esempio illustra come disegnare linee con il <xref:System.Windows.Shap
   
  In questo esempio fa parte di un esempio più esaustivo; per l'esempio completo, vedere [esempio di elementi forma](https://go.microsoft.com/fwlink/?LinkID=160037).  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Windows.Shapes.Line>  
- [Esempio di elementi forma](https://go.microsoft.com/fwlink/?LinkID=160037)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Windows.Shapes.Line>
+- [Esempio di elementi forma](https://go.microsoft.com/fwlink/?LinkID=160037)

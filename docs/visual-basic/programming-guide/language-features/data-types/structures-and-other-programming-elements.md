@@ -8,18 +8,18 @@ helpviewer_keywords:
 - arrays [Visual Basic], structure elements
 - nested structures [Visual Basic]
 ms.assetid: 0f849313-ccd2-4c9a-acb9-69de6751c088
-ms.openlocfilehash: 7b375c5a45998fc0bd06f7c075f23a30dd377295
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ed406254435602dcd98bc97716cc88710a470ed1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33652025"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54679591"
 ---
 # <a name="structures-and-other-programming-elements-visual-basic"></a>Strutture e altri elementi di programmazione (Visual Basic)
-È possibile utilizzare le strutture in combinazione con le matrici, oggetti e le procedure, nonché tra loro. Le interazioni di utilizzare la stessa sintassi come questi elementi singolarmente.  
+È possibile usare le strutture in combinazione con le matrici, oggetti e le procedure, nonché tra loro. Le interazioni di utilizzano la stessa sintassi come questi elementi singolarmente.  
   
 > [!NOTE]
->  Non è possibile inizializzare uno degli elementi di struttura nella dichiarazione della struttura. È possibile assegnare valori solo agli elementi di una variabile che è stato dichiarato un tipo di struttura.  
+>  Non è possibile inizializzare uno degli elementi struttura nella dichiarazione di struttura. È possibile assegnare valori solo agli elementi di una variabile che è stato dichiarato un tipo di struttura.  
   
 ## <a name="structures-and-arrays"></a>Strutture e le matrici  
  Una struttura può contenere una matrice come uno o più dei relativi elementi. Questa condizione è illustrata nell'esempio seguente.  
@@ -33,7 +33,7 @@ Public Structure systemInfo
 End Structure   
 ```  
   
- È accedere ai valori di una matrice all'interno di una struttura allo stesso modo, si accede alla proprietà di un oggetto. Questa condizione è illustrata nell'esempio seguente.  
+ Accedere ai valori di una matrice all'interno di una struttura allo stesso modo si accede a una proprietà su un oggetto. Questa condizione è illustrata nell'esempio seguente.  
   
 ```vb  
 Dim mySystem As systemInfo  
@@ -66,9 +66,9 @@ Protected Structure userInput
 End Structure  
 ```  
   
- È necessario utilizzare una classe di oggetto specifico in una dichiarazione, anziché `Object`.  
+ È consigliabile usare una classe di oggetto specifico in tale dichiarazione, anziché `Object`.  
   
-## <a name="structures-and-procedures"></a>Strutture e le procedure  
+## <a name="structures-and-procedures"></a>Strutture e procedure  
  È possibile passare una struttura come argomento di routine. Questa condizione è illustrata nell'esempio seguente.  
   
 ```vb  
@@ -81,9 +81,9 @@ Public Sub fillSystem(ByRef someSystem As systemInfo)
 End Sub  
 ```  
   
- Nell'esempio precedente passa la struttura *per riferimento*, che consente la procedura per modificare i relativi elementi in modo che le modifiche abbiano effetto nel codice chiamante. Se si desidera proteggere una struttura da tale modifica, passarlo come valore.  
+ Nell'esempio precedente passa la struttura *per riferimento*, che consente la procedura per modificare gli elementi in modo che le modifiche diventano effettive nel codice chiamante. Se si desidera proteggere una struttura da tali modifiche, passarlo come valore.  
   
- È inoltre possibile restituire una struttura da una `Function` stored procedure. Questa condizione è illustrata nell'esempio seguente.  
+ È inoltre possibile restituire una struttura da una `Function` procedure. Questa condizione è illustrata nell'esempio seguente.  
   
 ```vb  
 Dim allSystems(100) As systemInfo  
@@ -96,7 +96,7 @@ Function findByDate(ByVal searchDate As Date) As systemInfo
 End Function  
 ```  
   
-## <a name="structures-within-structures"></a>Strutture all'interno di strutture  
+## <a name="structures-within-structures"></a>Strutture all'interno delle strutture  
  Le strutture possono contenere altre strutture. Questa condizione è illustrata nell'esempio seguente.  
   
 ```vb  
@@ -118,18 +118,18 @@ ReDim allSystems(1).diskDrives(3)
 allSystems(1).diskDrives(0).type = "Floppy"  
 ```  
   
- È inoltre possibile utilizzare questa tecnica per incapsulare una struttura definita in un modulo all'interno di una struttura definita in un modulo diverso.  
+ È anche possibile usare questa tecnica per incapsulare una struttura definita in un modulo all'interno di una struttura definita in un modulo diverso.  
   
  Le strutture possono contenere altre strutture a una profondità arbitraria.  
   
-## <a name="see-also"></a>Vedere anche  
- [Tipi di dati](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- [Tipi di dati elementari](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)  
- [Tipi di dati compositi](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)  
- [Tipi valore e tipi riferimento](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
- [Strutture](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
- [Risoluzione dei problemi relativi ai tipi di dati](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- [Procedura: Dichiarare una struttura](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)  
- [Variabili di struttura](../../../../visual-basic/programming-guide/language-features/data-types/structure-variables.md)  
- [Strutture e classi](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)  
- [Istruzione Structure](../../../../visual-basic/language-reference/statements/structure-statement.md)
+## <a name="see-also"></a>Vedere anche
+- [Tipi di dati](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
+- [Tipi di dati elementari](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
+- [Tipi di dati compositi](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
+- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Strutture](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
+- [Risoluzione dei problemi relativi ai tipi di dati](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [Procedura: Dichiarare una struttura](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
+- [Variabili di struttura](../../../../visual-basic/programming-guide/language-features/data-types/structure-variables.md)
+- [Strutture e classi](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)
+- [Istruzione Structure](../../../../visual-basic/language-reference/statements/structure-statement.md)

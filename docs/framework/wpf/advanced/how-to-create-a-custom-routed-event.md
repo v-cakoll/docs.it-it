@@ -8,22 +8,22 @@ helpviewer_keywords:
 - routed events [WPF], creating
 - events [WPF], routing
 ms.assetid: b79f459a-1c3f-4045-b2d4-1659cc8eaa3c
-ms.openlocfilehash: a8aa038008ed93cedfe49fde4e0269712b4fb19a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f6d043dc2975770fe9111c6266096eefb3fe15b0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33543706"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671694"
 ---
 # <a name="how-to-create-a-custom-routed-event"></a>Procedura: Creare un evento indirizzato personalizzato
-Per l'evento personalizzato supportare il routing degli eventi, è necessario registrare un <xref:System.Windows.RoutedEvent> utilizzando il <xref:System.Windows.EventManager.RegisterRoutedEvent%2A> metodo. Questo esempio illustra le nozioni di base per la creazione di un evento indirizzato personalizzato.  
+Per l'evento personalizzato supportare il routing degli eventi, è necessario registrare un' <xref:System.Windows.RoutedEvent> utilizzando il <xref:System.Windows.EventManager.RegisterRoutedEvent%2A> (metodo). Questo esempio illustra le nozioni di base per la creazione di un evento indirizzato personalizzato.  
   
 ## <a name="example"></a>Esempio  
- Come illustrato nell'esempio seguente, innanzitutto si registra un <xref:System.Windows.RoutedEvent> utilizzando il <xref:System.Windows.EventManager.RegisterRoutedEvent%2A> metodo. Per convenzione, il <xref:System.Windows.RoutedEvent> nome del campo statico deve terminare con il suffisso ***evento***. In questo esempio, il nome dell'evento è `Tap` e la strategia di routing dell'evento è <xref:System.Windows.RoutingStrategy.Bubble>. Dopo la chiamata di registrazione, è possibile fornire funzioni di accesso di aggiunta e rimozione dell'evento [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] per l'evento.  
+ Come illustrato nell'esempio seguente, è necessario registrare prima di tutto una <xref:System.Windows.RoutedEvent> utilizzando il <xref:System.Windows.EventManager.RegisterRoutedEvent%2A> (metodo). Per convenzione, il <xref:System.Windows.RoutedEvent> nome del campo statico deve terminare con il suffisso ***evento***. In questo esempio, è il nome dell'evento `Tap` e la strategia di routing dell'evento è <xref:System.Windows.RoutingStrategy.Bubble>. Dopo la chiamata di registrazione, è possibile fornire funzioni di accesso di aggiunta e rimozione dell'evento [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] per l'evento.  
   
  Si noti che anche se l'evento viene generato tramite il metodo virtuale `OnTap` in questo particolare esempio, la modalità di generazione dell'evento o la relativa risposta alle modifiche varierà in base alle esigenze.  
   
- Si noti inoltre che in questo esempio viene implementata un'intera sottoclasse di <xref:System.Windows.Controls.Button>; tale sottoclasse è compilata come un assembly separato e quindi creare un'istanza come classe personalizzata in un apposito [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] pagina. Ciò dimostra che i controlli sottoclassati possono essere inseriti in alberi composti da altri controlli e che, in una situazione del genere, gli eventi personalizzati in questi controlli dispongono delle stesse funzionalità di routing di qualsiasi elemento [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] nativo.  
+ Si noti inoltre che in questo esempio viene implementata un'intera sottoclasse di <xref:System.Windows.Controls.Button>; tale sottoclasse è compilata come assembly separato e quindi creata un'istanza come classe personalizzata in un oggetto separato [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] pagina. Ciò dimostra che i controlli sottoclassati possono essere inseriti in alberi composti da altri controlli e che, in una situazione del genere, gli eventi personalizzati in questi controlli dispongono delle stesse funzionalità di routing di qualsiasi elemento [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] nativo.  
   
  [!code-csharp[RoutedEventCustom#CustomClass](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventCustom/CSharp/SDKSampleLibrary/class1.cs#customclass)]
  [!code-vb[RoutedEventCustom#CustomClass](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/RoutedEventCustom/VB/SDKSampleLibrary/Class1.vb#customclass)]  
@@ -34,7 +34,7 @@ Per l'evento personalizzato supportare il routing degli eventi, è necessario re
   
  Per un esempio di funzionamento degli eventi di bubbling, vedere [Gestire un evento indirizzato](../../../../docs/framework/wpf/advanced/how-to-handle-a-routed-event.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Cenni preliminari sugli eventi indirizzati](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
- [Cenni preliminari sull'input](../../../../docs/framework/wpf/advanced/input-overview.md)  
- [Cenni preliminari sulla modifica di controlli](../../../../docs/framework/wpf/controls/control-authoring-overview.md)
+## <a name="see-also"></a>Vedere anche
+- [Cenni preliminari sugli eventi indirizzati](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
+- [Cenni preliminari sull'input](../../../../docs/framework/wpf/advanced/input-overview.md)
+- [Cenni preliminari sulla modifica di controlli](../../../../docs/framework/wpf/controls/control-authoring-overview.md)

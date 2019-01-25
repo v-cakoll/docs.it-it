@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d93763da2afbbdb1e738c802ba172e9f16e5f7af
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 98d7be5adc81cff09b121265e7d5b5f712122607
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448458"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54611410"
 ---
 # <a name="imetadataimportgetmemberprops-method"></a>Metodo IMetaDataImport::GetMemberProps
-Ottiene informazioni sui metadati, inclusi il nome, la firma binaria e l'indirizzo virtuale relativo, del <xref:System.Type> membro a cui fa riferimento il token di metadati specificato.  
+Ottiene le informazioni sui metadati, inclusi il nome, la firma binaria e indirizzo virtuale relativo, del <xref:System.Type> membro a cui fa riferimento il token di metadati specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -49,7 +49,7 @@ HRESULT GetMemberProps (
   
 #### <a name="parameters"></a>Parametri  
  `mb`  
- [in] Token che fa riferimento al membro per ottenere i metadati associati.  
+ [in] Il token che fa riferimento al membro per ottenere i metadati associati.  
   
  `pClass`  
  [out] Puntatore al token di metadati che rappresenta la classe del membro.  
@@ -64,13 +64,13 @@ HRESULT GetMemberProps (
  [out] Dimensione in caratteri "wide" del nome restituito.  
   
  `pdwAttr`  
- [out] Eventuali valori di flag applicati al membro.  
+ [out] I valori di flag applicati al membro.  
   
  `ppvSigBlob`  
  [out] Un puntatore per la firma binaria dei metadati del membro.  
   
  `pcbSigBlob`  
- [out] Le dimensioni in byte di `ppvSigBlob`.  
+ [out] La dimensione in byte di `ppvSigBlob`.  
   
  `pulCodeRVA`  
  [out] Un puntatore all'indirizzo virtuale relativo del membro.  
@@ -79,23 +79,23 @@ HRESULT GetMemberProps (
  [out] Flag di implementazione del metodo associato al membro.  
   
  `pdwCPlusTypeFlag`  
- [out] Flag che contrassegna un <xref:System.ValueType>.  
+ [out] Un flag che contrassegna un <xref:System.ValueType>.  
   
  `ppValue`  
- [out] Valore stringa costante restituito da questo membro.  
+ [out] Un valore stringa costante restituito da questo membro.  
   
  `pcchValue`  
- [out] La dimensione in caratteri di `ppValue`, oppure zero se `ppValue` non contiene una stringa.  
+ [out] La dimensione in caratteri della `ppValue`, oppure zero se `ppValue` non contiene una stringa.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
- **Libreria:** inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [Interfaccia IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Interfaccia IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

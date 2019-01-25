@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Let clause [Visual Basic]
 - Let statement [Visual Basic]
 ms.assetid: 981aa516-16eb-4c53-b1f1-5aa3e82f316e
-ms.openlocfilehash: 34c0fd239d9e08dab4a107cb8447941e7ab3ecbe
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: de7ef8aa456235b4fd3003230645db4f5a813a9c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516763"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54634064"
 ---
 # <a name="let-clause-visual-basic"></a>Clausola Let (Visual Basic)
 Calcola un valore e lo assegna a una nuova variabile all'interno della query.  
@@ -41,9 +41,9 @@ Let variable = expression [, ...]
   
  [!code-vb[VbSimpleQuerySamples#16](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/let-clause_1.vb)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Introduzione a LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [Query](../../../visual-basic/language-reference/queries/index.md)  
- [Clausola Select](../../../visual-basic/language-reference/queries/select-clause.md)  
- [Clausola From](../../../visual-basic/language-reference/queries/from-clause.md)  
- [Clausola Where](../../../visual-basic/language-reference/queries/where-clause.md)
+## <a name="see-also"></a>Vedere anche
+- [Introduzione a LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Query](../../../visual-basic/language-reference/queries/index.md)
+- [Clausola Select](../../../visual-basic/language-reference/queries/select-clause.md)
+- [Clausola From](../../../visual-basic/language-reference/queries/from-clause.md)
+- [Clausola Where](../../../visual-basic/language-reference/queries/where-clause.md)

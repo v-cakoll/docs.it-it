@@ -8,12 +8,12 @@ helpviewer_keywords:
 - As keyword [Visual Basic], statement syntax
 - As keyword [Visual Basic]
 ms.assetid: b4281ec8-2be5-49f7-aae8-ae0a96265b0d
-ms.openlocfilehash: 9c1d9943c59a8ed4c3f2002fdbcdefeefafe42ba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 893df117ce6ead444ef1da262782cc271102f4d7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604263"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54672266"
 ---
 # <a name="as-clause-visual-basic"></a>Clausola As (Visual Basic)
 Introduce un `As` clausola che identifica un tipo di dati in un'istruzione di dichiarazione o un elenco di vincoli in un parametro di tipo generico.  
@@ -37,9 +37,9 @@ Introduce un `As` clausola che identifica un tipo di dati in un'istruzione di di
   
  [Istruzione Event](../../../visual-basic/language-reference/statements/event-statement.md)  
   
- [For... Istruzioni successive](../../../visual-basic/language-reference/statements/for-next-statement.md)  
+ [Per... Istruzioni Next](../../../visual-basic/language-reference/statements/for-next-statement.md)  
   
- [For Each... Istruzioni successive](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
+ [For Each... Istruzioni Next](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
   
  [Clausola From](../../../visual-basic/language-reference/queries/from-clause.md)  
   
@@ -59,10 +59,10 @@ Introduce un `As` clausola che identifica un tipo di dati in un'istruzione di di
   
  [Try... Catch... Istruzioni finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
   
-## <a name="see-also"></a>Vedere anche  
- [Procedura: Creare una nuova variabile](../../../visual-basic/programming-guide/language-features/variables/how-to-create-a-new-variable.md)  
- [Tipi di dati](../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- [Dichiarazione di variabile](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)  
- [Elenco dei tipi](../../../visual-basic/language-reference/statements/type-list.md)  
- [Tipi generici in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [Parole chiave](../../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a>Vedere anche
+- [Procedura: Creare una nuova variabile](../../../visual-basic/programming-guide/language-features/variables/how-to-create-a-new-variable.md)
+- [Tipi di dati](../../../visual-basic/programming-guide/language-features/data-types/index.md)
+- [Dichiarazione di variabile](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+- [Elenco dei tipi](../../../visual-basic/language-reference/statements/type-list.md)
+- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Parole chiave](../../../visual-basic/language-reference/keywords/index.md)

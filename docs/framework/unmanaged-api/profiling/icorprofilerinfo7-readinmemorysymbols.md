@@ -1,5 +1,5 @@
 ---
-title: 'Icorprofilerinfo7:: Readinmemorysymbols'
+title: ICorProfilerInfo7::ReadInMemorySymbols
 ms.date: 03/30/2017
 api_name:
 - ICorProfilerInfo7.ReadInMemorySymbols
@@ -12,16 +12,17 @@ api_type:
 ms.assetid: 1745a0b9-8332-4777-a670-b549bff3b901
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9874c8e567a89fd3977be360666c86406f2cd395
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ca71819214e614af5a0c269ed77b1cf7f9b7d7ee
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54658676"
 ---
-# <a name="icorprofilerinfo7readinmemorysymbols"></a>Icorprofilerinfo7:: Readinmemorysymbols
+# <a name="icorprofilerinfo7readinmemorysymbols"></a>ICorProfilerInfo7::ReadInMemorySymbols
 [Supportato in [!INCLUDE[net_v461](../../../../includes/net-v461-md.md)] e versioni successive]  
   
- Legge i byte dal flusso simbolo in memoria.  
+ Legge i byte da un flusso di simboli in memoria.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,7 +44,7 @@ HRESULT ReadInMemorySymbols(
  [in] L'offset all'interno del flusso in memoria in corrispondenza del quale iniziare la lettura dei byte.  
   
  `pSymbolBytes`  
- [out] Un puntatore al buffer in cui verranno copiati i dati. Il buffer deve essere `countSymbolBytes` di spazio disponibile.  
+ [out] Un puntatore al buffer in cui verranno copiati i dati. Il buffer deve avere `countSymbolBytes` di spazio disponibile.  
   
  `countSymbolBytes`  
  [in] Il numero di byte da copiare.  
@@ -54,22 +55,22 @@ HRESULT ReadInMemorySymbols(
 ## <a name="return-value"></a>Valore restituito  
  `S_OK`, se un numero diverso da zero di byte letti.  
   
- `CORPROF_E_MODULE_IS_DYNAMIC`, se il modulo è stato creato utilizzando <xref:System.Reflection.Emit>.  
+ `CORPROF_E_MODULE_IS_DYNAMIC`, se il modulo è stato creato usando <xref:System.Reflection.Emit>.  
   
 ## <a name="remarks"></a>Note  
- Il `ReadInMemorySymbols` metodo tenta di leggere `countSymbolBytes` dei dati a partire dall'offset `symbolsReadOffset` all'interno del flusso in memoria. I dati vengono copiati in `pSymbolBytes`, che dovranno avere `countSymbolBytes` di spazio disponibile.     `pCountSymbolsBytesRead` contiene il numero effettivo di byte letti, che può essere inferiore rispetto a `countSymbolBytes` se viene raggiunta la fine del flusso.  
+ Il `ReadInMemorySymbols` metodo tenta di leggere `countSymbolBytes` dei dati a partire dall'offset `symbolsReadOffset` all'interno del flusso in memoria. I dati vengono copiati `pSymbolBytes`, che deve disporre di `countSymbolBytes` dello spazio disponibile.     `pCountSymbolsBytesRead` contiene il numero effettivo di byte letti, che può essere inferiore rispetto a `countSymbolBytes` se viene raggiunta la fine del flusso.  
   
 > [!NOTE]
 >  L'implementazione corrente non supporta Reflection. Emit. Se il modulo è stato creato tramite Reflection. Emit, il metodo restituisce `CORPROF_E_MODULE_IS_DYNAMIC`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ICorProfilerInfo7](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ICorProfilerInfo7](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-interface.md)

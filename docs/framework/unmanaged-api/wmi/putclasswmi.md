@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: de08662a825a84f19a40863cf73481d89364ebd0
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 995c697497876969edc1021350b7bfe28e4018bb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836206"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54614510"
 ---
 # <a name="putclasswmi-function"></a>PutClassWmi (funzione)
 Crea una nuova classe o ne aggiorna una esistente.  
@@ -54,7 +54,7 @@ HRESULT PutClassWmi (
 | `WBEM_FLAG_UPDATE_ONLY` | 1 | Aggiornare la classe. La classe deve esistere per la chiamata abbia esito positivo. |
 | `WBEM_FLAG_CREATE_ONLY` | 2 | Creare la classe. La chiamata ha esito negativo se la classe esiste già. |
 | `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | Il flag determina una chiamata semisincrona. |
-| `WBEM_FLAG_OWNER_UPDATE` | 0x10000. | Push provider devono specificare questo flag quando si chiama `PutClassWmi` per indicare che questa classe è stato modificato. |
+| `WBEM_FLAG_OWNER_UPDATE` | 0x10000 | Push provider devono specificare questo flag quando si chiama `PutClassWmi` per indicare che questa classe è stato modificato. |
 | `WBEM_FLAG_UPDATE_COMPATIBLE` | 0 | Consente a una classe da aggiornare se sono presenti nessuna classe derivata e nessuna istanza di tale classe. Consente inoltre aggiornamenti in tutti i casi se la modifica è qualificatori irrilevanti, ad esempio il qualificatore di descrizione. Se la classe dispone di istanze o le modifiche sono per qualificatori importanti, l'aggiornamento ha esito negativo. |
 | `WBEM_FLAG_UPDATE_SAFE_MODE` | 0x20 | Consente gli aggiornamenti delle classi anche se sono presenti le classi figlio, purché la modifica non generi conflitti con le classi figlio. Ad esempio, questo flag consente una nuova proprietà da aggiungere alla classe di base che non è stata citata in precedenza in una qualsiasi delle classi figlio. Se la classe dispone di istanze, l'aggiornamento ha esito negativo. |
 | `WBEM_FLAG_UPDATE_FORCE_MODE` | 0x40 | forza gli aggiornamenti delle classi quando sono presenti le classi figlio in conflitto. Ad esempio, questo flag impone un aggiornamento se un qualificatore di classe è definito in una classe figlio e la classe di base tenta di aggiungere lo stesso qualificatore che entra in conflitto con graduazione uno esistente. In modalità di forza, tis conflitto viene risolto eliminando il qualificatore in conflitto nella classe figlio. |
@@ -69,7 +69,7 @@ HRESULT PutClassWmi (
 
 I seguenti valori restituiti da questa funzione sono definiti nel *WbemCli.h* file di intestazione, oppure è possibile definirle come costanti nel codice:
 
-|Costante  |Valore  |Descrizione  |
+|Costante  |Value  |Descrizione  |
 |---------|---------|---------|
 | `WBEM_E_ACCESS_DENIED` | 0x80041003 | L'utente dispone dell'autorizzazione per creare o modificare le classi. |
 | `WBEM_E_FAILED` | 0x80041001 | Si è verificato un errore non specificato. |
@@ -94,11 +94,11 @@ L'utente non può creare classi con nomi che iniziano o terminano con chacater u
 Se la chiamata di funzione non riesce, è possibile ottenere informazioni aggiuntive sull'errore chiamando il [GetErrorInfo](geterrorinfo.md) (funzione).
 
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** WMINet_Utils.idl  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Vedere anche  
-[WMI e contatori delle prestazioni (riferimenti alle API non gestite)](index.md)
+## <a name="see-also"></a>Vedere anche
+- [WMI e contatori delle prestazioni (riferimenti alle API non gestite)](index.md)

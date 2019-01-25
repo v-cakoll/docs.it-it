@@ -2,12 +2,12 @@
 title: ChannelPoolSettings
 ms.date: 03/30/2017
 ms.assetid: d3f475bd-f780-4bbe-b291-339387322964
-ms.openlocfilehash: d763be92243768bce9fdaefcd3e3575effac464b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4a3e45140765f99f4a30b77fc9d02b167601b50b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200483"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54591479"
 ---
 # <a name="channelpoolsettings"></a>ChannelPoolSettings
 ChannelPoolSettings  
@@ -32,21 +32,21 @@ class ChannelPoolSettings
 ### <a name="idletimeout"></a>IdleTimeout  
  Tipo di dati: DateTime  
   
- Tipo di accesso: sola lettura  
+ Tipo di accesso: Sola lettura  
   
  Periodo massimo di inattività della connessione prima che venga interrotta.  
   
 ### <a name="leasetimeout"></a>LeaseTimeout  
  Tipo di dati: DateTime  
   
- Tipo di accesso: sola lettura  
+ Tipo di accesso: Sola lettura  
   
  Limite massimo di tempo per il completamento dell'operazione di lease prima del timeout.  
   
 ### <a name="maxoutboundchannelsperendpoint"></a>MaxOutboundChannelsPerEndpoint  
  Tipo di dati: sint32  
   
- Tipo di accesso: sola lettura  
+ Tipo di accesso: Sola lettura  
   
  Numero massimo di canali in uscita per ogni endpoint.  
   
@@ -56,5 +56,5 @@ class ChannelPoolSettings
 |---------|-----------------------------------|  
 |Spazio dei nomi|Definito in root\ServiceModel|  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.Channels.ChannelPoolSettings>
+## <a name="see-also"></a>Vedere anche
+- <xref:System.ServiceModel.Channels.ChannelPoolSettings>

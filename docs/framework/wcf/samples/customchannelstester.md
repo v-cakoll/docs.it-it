@@ -2,21 +2,21 @@
 title: CustomChannelsTester
 ms.date: 03/30/2017
 ms.assetid: ee1fa307-98b1-4647-8860-2e9217ba6082
-ms.openlocfilehash: eebe4f15095c7cefbd32971fd2f3ee308e9916b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0ede9e6b2c2b4d4bf027ff729bc0418d7ac48f06
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33499388"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596644"
 ---
 # <a name="customchannelstester"></a>CustomChannelsTester
 `CustomChannelsTester` è uno strumento che può essere usato per testare le implementazioni del canale personalizzato in un set di contratti di servizio predefiniti. È possibile selezionare il set di contratti di servizio e passarlo allo strumento usando un file XML. Lo strumento genera quindi il servizio e il client che esercitano le implementazioni del canale personalizzate durante lo scambio di messaggi.  
   
 ### <a name="to-build-the-tool"></a>Per compilare lo strumento  
   
-1.  Per compilare la soluzione, seguire le istruzioni in [compilazione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+1.  Per compilare la soluzione, seguire le istruzioni riportate in [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-2.  La compilazione della soluzione genera tre file: CustomChannelsTester.exe, TestSpec.xml e SampleRun.cmd. Il file SampleRun.cmd contiene una riga di comando di esempio in cui viene illustrato come utilizzare questo strumento per verificare il [trasporto: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) esempio.  
+2.  La compilazione della soluzione genera tre file: CustomChannelsTester.exe, testspec. XML e samplerun. cmd. Il file samplerun. cmd ha una riga di comando di esempio che illustra come usare questo strumento per testare il [trasporto: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) esempio.  
   
 ### <a name="to-run-the-tool"></a>Per eseguire lo strumento  
   
@@ -28,7 +28,7 @@ ms.locfileid: "33499388"
   
      L'utilizzo dell'opzione `/binding` è obbligatorio.  
   
-     `/dll` è necessaria se il "associazione" non è un'associazione fornita dal sistema fornita da Windows Communication Foundation (WCF).  
+     `/dll` è necessario se "associazione" non è un'associazione fornita dal sistema fornita da Windows Communication Foundation (WCF).  
   
      `/testspec` è facoltativo.  
   

@@ -12,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: 7931c942-63c1-47c3-a045-9d9de3cacdbf
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 55a7eb431432b67b3252853d14bf93be304ee883
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 86cd4e7db5aa79ff85e5079813844d2af1598f4f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845437"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54642805"
 ---
 # <a name="lttracegt-element"></a>&lt;traccia&gt; elemento
 Contiene i listener che raccolgono, archiviano e indirizzano i messaggi di traccia.  
   
  \<configuration>  
-\<System. Diagnostics >  
-\<traccia >  
+\<system.diagnostics>  
+\<trace>  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -47,14 +47,14 @@ Contiene i listener che raccolgono, archiviano e indirizzano i messaggi di tracc
   
 ## <a name="autoflush-attribute"></a>Attributo AutoFlush  
   
-|Valore|Descrizione|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |`false`|Non consente automaticamente di scaricare il buffer di output. Questa è l'impostazione predefinita.|  
 |`true`|Scarica automaticamente il buffer di output.|  
   
 ## <a name="usegloballock-attribute"></a>Attributo useGlobalLock  
   
-|Valore|Descrizione|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |`false`|Non utilizzare il blocco globale se il listener è thread-safe. in caso contrario, viene utilizzato il blocco globale.|  
 |`true`|Usa il blocco globale indipendentemente dal fatto che il listener è thread-safe. Questa è l'impostazione predefinita.|  
@@ -87,9 +87,9 @@ Contiene i listener che raccolgono, archiviano e indirizzano i messaggi di tracc
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Diagnostics.TraceListener>  
- <xref:System.Diagnostics.DefaultTraceListener>  
- <xref:System.Diagnostics.TextWriterTraceListener>  
- <xref:System.Diagnostics.EventLogTraceListener>  
- [Schema delle impostazioni di traccia e debug](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Diagnostics.TraceListener>
+- <xref:System.Diagnostics.DefaultTraceListener>
+- <xref:System.Diagnostics.TextWriterTraceListener>
+- <xref:System.Diagnostics.EventLogTraceListener>
+- [Schema delle impostazioni di traccia e debug](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
