@@ -12,21 +12,21 @@ helpviewer_keywords:
 ms.assetid: 7931c942-63c1-47c3-a045-9d9de3cacdbf
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 55a7eb431432b67b3252853d14bf93be304ee883
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 86cd4e7db5aa79ff85e5079813844d2af1598f4f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845437"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54642805"
 ---
-# <a name="lttracegt-element"></a><span data-ttu-id="1763f-102">&lt;traccia&gt; elemento</span><span class="sxs-lookup"><span data-stu-id="1763f-102">&lt;trace&gt; Element</span></span>
-<span data-ttu-id="1763f-103">Contiene i listener che raccolgono, archiviano e indirizzano i messaggi di traccia.</span><span class="sxs-lookup"><span data-stu-id="1763f-103">Contains listeners that collect, store, and route tracing messages.</span></span>  
+# <a name="lttracegt-element"></a><span data-ttu-id="59031-102">&lt;traccia&gt; elemento</span><span class="sxs-lookup"><span data-stu-id="59031-102">&lt;trace&gt; Element</span></span>
+<span data-ttu-id="59031-103">Contiene i listener che raccolgono, archiviano e indirizzano i messaggi di traccia.</span><span class="sxs-lookup"><span data-stu-id="59031-103">Contains listeners that collect, store, and route tracing messages.</span></span>  
   
- <span data-ttu-id="1763f-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="1763f-104">\<configuration></span></span>  
-<span data-ttu-id="1763f-105">\<System. Diagnostics ></span><span class="sxs-lookup"><span data-stu-id="1763f-105">\<system.diagnostics></span></span>  
-<span data-ttu-id="1763f-106">\<traccia ></span><span class="sxs-lookup"><span data-stu-id="1763f-106">\<trace></span></span>  
+ <span data-ttu-id="59031-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="59031-104">\<configuration></span></span>  
+<span data-ttu-id="59031-105">\<system.diagnostics></span><span class="sxs-lookup"><span data-stu-id="59031-105">\<system.diagnostics></span></span>  
+<span data-ttu-id="59031-106">\<trace></span><span class="sxs-lookup"><span data-stu-id="59031-106">\<trace></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1763f-107">Sintassi</span><span class="sxs-lookup"><span data-stu-id="1763f-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="59031-107">Sintassi</span><span class="sxs-lookup"><span data-stu-id="59031-107">Syntax</span></span>  
   
 ```xml  
 <trace autoflush="true|false"   
@@ -34,46 +34,46 @@ ms.locfileid: "48845437"
        useGlobalLock="true| false"/>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="1763f-108">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="1763f-108">Attributes and Elements</span></span>  
- <span data-ttu-id="1763f-109">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="1763f-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="59031-108">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="59031-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="59031-109">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="59031-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="1763f-110">Attributi</span><span class="sxs-lookup"><span data-stu-id="1763f-110">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="59031-110">Attributi</span><span class="sxs-lookup"><span data-stu-id="59031-110">Attributes</span></span>  
   
-|<span data-ttu-id="1763f-111">Attributo</span><span class="sxs-lookup"><span data-stu-id="1763f-111">Attribute</span></span>|<span data-ttu-id="1763f-112">Descrizione</span><span class="sxs-lookup"><span data-stu-id="1763f-112">Description</span></span>|  
+|<span data-ttu-id="59031-111">Attributo</span><span class="sxs-lookup"><span data-stu-id="59031-111">Attribute</span></span>|<span data-ttu-id="59031-112">Descrizione</span><span class="sxs-lookup"><span data-stu-id="59031-112">Description</span></span>|  
 |---------------|-----------------|  
-|`autoflush`|<span data-ttu-id="1763f-113">Attributo facoltativo.</span><span class="sxs-lookup"><span data-stu-id="1763f-113">Optional attribute.</span></span><br /><br /> <span data-ttu-id="1763f-114">Specifica se i listener di traccia automaticamente svuotano del buffer di output dopo ogni operazione di scrittura.</span><span class="sxs-lookup"><span data-stu-id="1763f-114">Specifies whether the trace listeners automatically flush the output buffer after every write operation.</span></span>|  
-|`indentsize`|<span data-ttu-id="1763f-115">Attributo facoltativo.</span><span class="sxs-lookup"><span data-stu-id="1763f-115">Optional attribute.</span></span><br /><br /> <span data-ttu-id="1763f-116">Specifica il numero di spazi del rientro.</span><span class="sxs-lookup"><span data-stu-id="1763f-116">Specifies the number of spaces to indent.</span></span>|  
-|`useGlobalLock`|<span data-ttu-id="1763f-117">Attributo facoltativo.</span><span class="sxs-lookup"><span data-stu-id="1763f-117">Optional attribute.</span></span><br /><br /> <span data-ttu-id="1763f-118">Indica se il blocco globale deve essere utilizzato.</span><span class="sxs-lookup"><span data-stu-id="1763f-118">Indicates whether the global lock should be used.</span></span>|  
+|`autoflush`|<span data-ttu-id="59031-113">Attributo facoltativo.</span><span class="sxs-lookup"><span data-stu-id="59031-113">Optional attribute.</span></span><br /><br /> <span data-ttu-id="59031-114">Specifica se i listener di traccia automaticamente svuotano del buffer di output dopo ogni operazione di scrittura.</span><span class="sxs-lookup"><span data-stu-id="59031-114">Specifies whether the trace listeners automatically flush the output buffer after every write operation.</span></span>|  
+|`indentsize`|<span data-ttu-id="59031-115">Attributo facoltativo.</span><span class="sxs-lookup"><span data-stu-id="59031-115">Optional attribute.</span></span><br /><br /> <span data-ttu-id="59031-116">Specifica il numero di spazi del rientro.</span><span class="sxs-lookup"><span data-stu-id="59031-116">Specifies the number of spaces to indent.</span></span>|  
+|`useGlobalLock`|<span data-ttu-id="59031-117">Attributo facoltativo.</span><span class="sxs-lookup"><span data-stu-id="59031-117">Optional attribute.</span></span><br /><br /> <span data-ttu-id="59031-118">Indica se il blocco globale deve essere utilizzato.</span><span class="sxs-lookup"><span data-stu-id="59031-118">Indicates whether the global lock should be used.</span></span>|  
   
-## <a name="autoflush-attribute"></a><span data-ttu-id="1763f-119">Attributo AutoFlush</span><span class="sxs-lookup"><span data-stu-id="1763f-119">autoflush Attribute</span></span>  
+## <a name="autoflush-attribute"></a><span data-ttu-id="59031-119">Attributo AutoFlush</span><span class="sxs-lookup"><span data-stu-id="59031-119">autoflush Attribute</span></span>  
   
-|<span data-ttu-id="1763f-120">Valore</span><span class="sxs-lookup"><span data-stu-id="1763f-120">Value</span></span>|<span data-ttu-id="1763f-121">Descrizione</span><span class="sxs-lookup"><span data-stu-id="1763f-121">Description</span></span>|  
+|<span data-ttu-id="59031-120">Value</span><span class="sxs-lookup"><span data-stu-id="59031-120">Value</span></span>|<span data-ttu-id="59031-121">Descrizione</span><span class="sxs-lookup"><span data-stu-id="59031-121">Description</span></span>|  
 |-----------|-----------------|  
-|`false`|<span data-ttu-id="1763f-122">Non consente automaticamente di scaricare il buffer di output.</span><span class="sxs-lookup"><span data-stu-id="1763f-122">Does not automatically flush the output buffer.</span></span> <span data-ttu-id="1763f-123">Questa è l'impostazione predefinita.</span><span class="sxs-lookup"><span data-stu-id="1763f-123">This is the default.</span></span>|  
-|`true`|<span data-ttu-id="1763f-124">Scarica automaticamente il buffer di output.</span><span class="sxs-lookup"><span data-stu-id="1763f-124">Automatically flushes the output buffer.</span></span>|  
+|`false`|<span data-ttu-id="59031-122">Non consente automaticamente di scaricare il buffer di output.</span><span class="sxs-lookup"><span data-stu-id="59031-122">Does not automatically flush the output buffer.</span></span> <span data-ttu-id="59031-123">Questa è l'impostazione predefinita.</span><span class="sxs-lookup"><span data-stu-id="59031-123">This is the default.</span></span>|  
+|`true`|<span data-ttu-id="59031-124">Scarica automaticamente il buffer di output.</span><span class="sxs-lookup"><span data-stu-id="59031-124">Automatically flushes the output buffer.</span></span>|  
   
-## <a name="usegloballock-attribute"></a><span data-ttu-id="1763f-125">Attributo useGlobalLock</span><span class="sxs-lookup"><span data-stu-id="1763f-125">useGlobalLock Attribute</span></span>  
+## <a name="usegloballock-attribute"></a><span data-ttu-id="59031-125">Attributo useGlobalLock</span><span class="sxs-lookup"><span data-stu-id="59031-125">useGlobalLock Attribute</span></span>  
   
-|<span data-ttu-id="1763f-126">Valore</span><span class="sxs-lookup"><span data-stu-id="1763f-126">Value</span></span>|<span data-ttu-id="1763f-127">Descrizione</span><span class="sxs-lookup"><span data-stu-id="1763f-127">Description</span></span>|  
+|<span data-ttu-id="59031-126">Value</span><span class="sxs-lookup"><span data-stu-id="59031-126">Value</span></span>|<span data-ttu-id="59031-127">Descrizione</span><span class="sxs-lookup"><span data-stu-id="59031-127">Description</span></span>|  
 |-----------|-----------------|  
-|`false`|<span data-ttu-id="1763f-128">Non utilizzare il blocco globale se il listener è thread-safe. in caso contrario, viene utilizzato il blocco globale.</span><span class="sxs-lookup"><span data-stu-id="1763f-128">Does not use the global lock if the listener is thread safe; otherwise, uses the global lock.</span></span>|  
-|`true`|<span data-ttu-id="1763f-129">Usa il blocco globale indipendentemente dal fatto che il listener è thread-safe.</span><span class="sxs-lookup"><span data-stu-id="1763f-129">Uses the global lock regardless of whether the listener is thread safe.</span></span> <span data-ttu-id="1763f-130">Questa è l'impostazione predefinita.</span><span class="sxs-lookup"><span data-stu-id="1763f-130">This is the default.</span></span>|  
+|`false`|<span data-ttu-id="59031-128">Non utilizzare il blocco globale se il listener è thread-safe. in caso contrario, viene utilizzato il blocco globale.</span><span class="sxs-lookup"><span data-stu-id="59031-128">Does not use the global lock if the listener is thread safe; otherwise, uses the global lock.</span></span>|  
+|`true`|<span data-ttu-id="59031-129">Usa il blocco globale indipendentemente dal fatto che il listener è thread-safe.</span><span class="sxs-lookup"><span data-stu-id="59031-129">Uses the global lock regardless of whether the listener is thread safe.</span></span> <span data-ttu-id="59031-130">Questa è l'impostazione predefinita.</span><span class="sxs-lookup"><span data-stu-id="59031-130">This is the default.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="1763f-131">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="1763f-131">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="59031-131">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="59031-131">Child Elements</span></span>  
   
-|<span data-ttu-id="1763f-132">Elemento</span><span class="sxs-lookup"><span data-stu-id="1763f-132">Element</span></span>|<span data-ttu-id="1763f-133">Descrizione</span><span class="sxs-lookup"><span data-stu-id="1763f-133">Description</span></span>|  
+|<span data-ttu-id="59031-132">Elemento</span><span class="sxs-lookup"><span data-stu-id="59031-132">Element</span></span>|<span data-ttu-id="59031-133">Descrizione</span><span class="sxs-lookup"><span data-stu-id="59031-133">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="1763f-134">\<listeners></span><span class="sxs-lookup"><span data-stu-id="1763f-134">\<listeners></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-trace.md)|<span data-ttu-id="1763f-135">Specifica un listener che raccoglie, archivia e indirizza i messaggi.</span><span class="sxs-lookup"><span data-stu-id="1763f-135">Specifies a listener that collects, stores, and routes messages.</span></span>|  
+|[<span data-ttu-id="59031-134">\<listeners></span><span class="sxs-lookup"><span data-stu-id="59031-134">\<listeners></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-trace.md)|<span data-ttu-id="59031-135">Specifica un listener che raccoglie, archivia e indirizza i messaggi.</span><span class="sxs-lookup"><span data-stu-id="59031-135">Specifies a listener that collects, stores, and routes messages.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="1763f-136">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="1763f-136">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="59031-136">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="59031-136">Parent Elements</span></span>  
   
-|<span data-ttu-id="1763f-137">Elemento</span><span class="sxs-lookup"><span data-stu-id="1763f-137">Element</span></span>|<span data-ttu-id="1763f-138">Descrizione</span><span class="sxs-lookup"><span data-stu-id="1763f-138">Description</span></span>|  
+|<span data-ttu-id="59031-137">Elemento</span><span class="sxs-lookup"><span data-stu-id="59031-137">Element</span></span>|<span data-ttu-id="59031-138">Descrizione</span><span class="sxs-lookup"><span data-stu-id="59031-138">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="1763f-139">Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="1763f-139">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`system.diagnostics`|<span data-ttu-id="1763f-140">Specifica i listener di traccia per raccogliere, archiviare e indirizzare i messaggi, oltre al livello di impostazione di un'opzione di traccia.</span><span class="sxs-lookup"><span data-stu-id="1763f-140">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
+|`configuration`|<span data-ttu-id="59031-139">Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="59031-139">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`system.diagnostics`|<span data-ttu-id="59031-140">Specifica i listener di traccia per raccogliere, archiviare e indirizzare i messaggi, oltre al livello di impostazione di un'opzione di traccia.</span><span class="sxs-lookup"><span data-stu-id="59031-140">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="1763f-141">Esempio</span><span class="sxs-lookup"><span data-stu-id="1763f-141">Example</span></span>  
- <span data-ttu-id="1763f-142">Nell'esempio seguente viene illustrato come utilizzare il `<trace>` elemento a cui aggiungere il listener `MyListener` per il `Listeners` raccolta.</span><span class="sxs-lookup"><span data-stu-id="1763f-142">The following example shows how to use the `<trace>` element to add the listener `MyListener` to the `Listeners` collection.</span></span> <span data-ttu-id="1763f-143">`MyListener` Crea un file denominato `MyListener.log` e scrive l'output del file.</span><span class="sxs-lookup"><span data-stu-id="1763f-143">`MyListener` creates a file that is named `MyListener.log` and writes the output to the file.</span></span> <span data-ttu-id="1763f-144">Il `useGlobalLock` attributo è impostato su `false`, in modo che il blocco globale non può essere utilizzato se il listener di traccia è thread-safe.</span><span class="sxs-lookup"><span data-stu-id="1763f-144">The `useGlobalLock` attribute is set to `false`, which causes the global lock not to be used if the trace listener is thread safe.</span></span> <span data-ttu-id="1763f-145">Il `autoflush` attributo è impostato su `true`, in modo che il listener di traccia da scrivere nel file indipendentemente dal fatto che il <xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType> viene chiamato il metodo.</span><span class="sxs-lookup"><span data-stu-id="1763f-145">The `autoflush` attribute is set to `true`, which causes the trace listener to write to the file regardless of whether the <xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType> method is called.</span></span> <span data-ttu-id="1763f-146">Il `indentsize` attributo è impostato su 0 (zero), che fa sì che il listener per il rientro quando la <xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType> viene chiamato il metodo.</span><span class="sxs-lookup"><span data-stu-id="1763f-146">The `indentsize` attribute is set to 0 (zero), which causes the listener to indent zero spaces when the <xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType> method is called.</span></span>  
+## <a name="example"></a><span data-ttu-id="59031-141">Esempio</span><span class="sxs-lookup"><span data-stu-id="59031-141">Example</span></span>  
+ <span data-ttu-id="59031-142">Nell'esempio seguente viene illustrato come utilizzare il `<trace>` elemento a cui aggiungere il listener `MyListener` per il `Listeners` raccolta.</span><span class="sxs-lookup"><span data-stu-id="59031-142">The following example shows how to use the `<trace>` element to add the listener `MyListener` to the `Listeners` collection.</span></span> <span data-ttu-id="59031-143">`MyListener` Crea un file denominato `MyListener.log` e scrive l'output del file.</span><span class="sxs-lookup"><span data-stu-id="59031-143">`MyListener` creates a file that is named `MyListener.log` and writes the output to the file.</span></span> <span data-ttu-id="59031-144">Il `useGlobalLock` attributo è impostato su `false`, in modo che il blocco globale non può essere utilizzato se il listener di traccia è thread-safe.</span><span class="sxs-lookup"><span data-stu-id="59031-144">The `useGlobalLock` attribute is set to `false`, which causes the global lock not to be used if the trace listener is thread safe.</span></span> <span data-ttu-id="59031-145">Il `autoflush` attributo è impostato su `true`, in modo che il listener di traccia da scrivere nel file indipendentemente dal fatto che il <xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType> viene chiamato il metodo.</span><span class="sxs-lookup"><span data-stu-id="59031-145">The `autoflush` attribute is set to `true`, which causes the trace listener to write to the file regardless of whether the <xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType> method is called.</span></span> <span data-ttu-id="59031-146">Il `indentsize` attributo è impostato su 0 (zero), che fa sì che il listener per il rientro quando la <xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType> viene chiamato il metodo.</span><span class="sxs-lookup"><span data-stu-id="59031-146">The `indentsize` attribute is set to 0 (zero), which causes the listener to indent zero spaces when the <xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType> method is called.</span></span>  
   
 ```xml  
 <configuration>  
@@ -87,9 +87,9 @@ ms.locfileid: "48845437"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="1763f-147">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="1763f-147">See Also</span></span>  
- <xref:System.Diagnostics.TraceListener>  
- <xref:System.Diagnostics.DefaultTraceListener>  
- <xref:System.Diagnostics.TextWriterTraceListener>  
- <xref:System.Diagnostics.EventLogTraceListener>  
- [<span data-ttu-id="1763f-148">Schema delle impostazioni di traccia e debug</span><span class="sxs-lookup"><span data-stu-id="1763f-148">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+## <a name="see-also"></a><span data-ttu-id="59031-147">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="59031-147">See also</span></span>
+- <xref:System.Diagnostics.TraceListener>
+- <xref:System.Diagnostics.DefaultTraceListener>
+- <xref:System.Diagnostics.TextWriterTraceListener>
+- <xref:System.Diagnostics.EventLogTraceListener>
+- [<span data-ttu-id="59031-148">Schema delle impostazioni di traccia e debug</span><span class="sxs-lookup"><span data-stu-id="59031-148">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
