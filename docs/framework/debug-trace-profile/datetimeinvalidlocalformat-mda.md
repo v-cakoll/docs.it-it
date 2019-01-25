@@ -14,49 +14,49 @@ helpviewer_keywords:
 ms.assetid: c4a942bb-2651-4b65-8718-809f892a0659
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 54ce0f75ddfbf9f3b62917aa67f4d97140bbdc42
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 78d9d769deefedef0c72b847c86e7b9fc175288c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153339"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54732674"
 ---
-# <a name="datetimeinvalidlocalformat-mda"></a><span data-ttu-id="c56f9-102">dateTimeInvalidLocalFormat (MDA)</span><span class="sxs-lookup"><span data-stu-id="c56f9-102">dateTimeInvalidLocalFormat MDA</span></span>
-<span data-ttu-id="c56f9-103">L'assistente al debug gestito `dateTimeInvalidLocalFormat` viene attivato quando per la formattazione di un'istanza di <xref:System.DateTime> archiviata in formato UTC (Universal Coordinated Time) viene usato un formato riservato alle istanze locali di <xref:System.DateTime>.</span><span class="sxs-lookup"><span data-stu-id="c56f9-103">The `dateTimeInvalidLocalFormat` MDA is activated when a <xref:System.DateTime> instance that is stored as a Universal Coordinated Time (UTC) is formatted using a format that is intended to be used only for local <xref:System.DateTime> instances.</span></span> <span data-ttu-id="c56f9-104">Questo assistente non viene attivato per le istanze di <xref:System.DateTime> non specificate o predefinite.</span><span class="sxs-lookup"><span data-stu-id="c56f9-104">This MDA is not activated for unspecified or default <xref:System.DateTime> instances.</span></span>  
+# <a name="datetimeinvalidlocalformat-mda"></a><span data-ttu-id="aad4b-102">dateTimeInvalidLocalFormat (MDA)</span><span class="sxs-lookup"><span data-stu-id="aad4b-102">dateTimeInvalidLocalFormat MDA</span></span>
+<span data-ttu-id="aad4b-103">L'assistente al debug gestito `dateTimeInvalidLocalFormat` viene attivato quando per la formattazione di un'istanza di <xref:System.DateTime> archiviata in formato UTC (Universal Coordinated Time) viene usato un formato riservato alle istanze locali di <xref:System.DateTime>.</span><span class="sxs-lookup"><span data-stu-id="aad4b-103">The `dateTimeInvalidLocalFormat` MDA is activated when a <xref:System.DateTime> instance that is stored as a Universal Coordinated Time (UTC) is formatted using a format that is intended to be used only for local <xref:System.DateTime> instances.</span></span> <span data-ttu-id="aad4b-104">Questo assistente non viene attivato per le istanze di <xref:System.DateTime> non specificate o predefinite.</span><span class="sxs-lookup"><span data-stu-id="aad4b-104">This MDA is not activated for unspecified or default <xref:System.DateTime> instances.</span></span>  
   
-## <a name="symptom"></a><span data-ttu-id="c56f9-105">Sintomi</span><span class="sxs-lookup"><span data-stu-id="c56f9-105">Symptom</span></span>  
- <span data-ttu-id="c56f9-106">Un'applicazione sta serializzando manualmente un'istanza di <xref:System.DateTime> in formato UTC usando un formato locale:</span><span class="sxs-lookup"><span data-stu-id="c56f9-106">An application is manually serializing a UTC <xref:System.DateTime> instance using a local format:</span></span>  
+## <a name="symptom"></a><span data-ttu-id="aad4b-105">Sintomo</span><span class="sxs-lookup"><span data-stu-id="aad4b-105">Symptom</span></span>  
+ <span data-ttu-id="aad4b-106">Un'applicazione sta serializzando manualmente un'istanza di <xref:System.DateTime> in formato UTC usando un formato locale:</span><span class="sxs-lookup"><span data-stu-id="aad4b-106">An application is manually serializing a UTC <xref:System.DateTime> instance using a local format:</span></span>  
   
 ```csharp
 DateTime myDateTime = DateTime.UtcNow;  
 Serialize(myDateTime.ToString("yyyy-MM-dd'T'HH:mm:ss.fffffffzzz"));  
 ```  
   
-### <a name="cause"></a><span data-ttu-id="c56f9-107">Causa</span><span class="sxs-lookup"><span data-stu-id="c56f9-107">Cause</span></span>  
- <span data-ttu-id="c56f9-108">Il formato 'z' del metodo <xref:System.DateTime.ToString%2A?displayProperty=nameWithType> include l'offset del fuso orario locale, ad esempio "+10:00" per l'ora di Sydney.</span><span class="sxs-lookup"><span data-stu-id="c56f9-108">The 'z' format for the <xref:System.DateTime.ToString%2A?displayProperty=nameWithType> method includes the local time zone offset, for example, "+10:00" for Sydney time.</span></span> <span data-ttu-id="c56f9-109">Di conseguenza, verrà generato un risultato significativo solo se il valore di <xref:System.DateTime> è locale.</span><span class="sxs-lookup"><span data-stu-id="c56f9-109">As such, it will only produce a meaningful result if the value of the <xref:System.DateTime> is local.</span></span> <span data-ttu-id="c56f9-110">Se il valore è in formato UTC, <xref:System.DateTime.ToString%2A?displayProperty=nameWithType> include l'offset del fuso orario locale, ma non visualizza né modifica l'identificatore del fuso orario.</span><span class="sxs-lookup"><span data-stu-id="c56f9-110">If the value is UTC time, <xref:System.DateTime.ToString%2A?displayProperty=nameWithType> includes the local time zone offset, but it does not display or adjust the time zone specifier.</span></span>  
+### <a name="cause"></a><span data-ttu-id="aad4b-107">Causa</span><span class="sxs-lookup"><span data-stu-id="aad4b-107">Cause</span></span>  
+ <span data-ttu-id="aad4b-108">Il formato 'z' del metodo <xref:System.DateTime.ToString%2A?displayProperty=nameWithType> include l'offset del fuso orario locale, ad esempio "+10:00" per l'ora di Sydney.</span><span class="sxs-lookup"><span data-stu-id="aad4b-108">The 'z' format for the <xref:System.DateTime.ToString%2A?displayProperty=nameWithType> method includes the local time zone offset, for example, "+10:00" for Sydney time.</span></span> <span data-ttu-id="aad4b-109">Di conseguenza, verrà generato un risultato significativo solo se il valore di <xref:System.DateTime> è locale.</span><span class="sxs-lookup"><span data-stu-id="aad4b-109">As such, it will only produce a meaningful result if the value of the <xref:System.DateTime> is local.</span></span> <span data-ttu-id="aad4b-110">Se il valore è in formato UTC, <xref:System.DateTime.ToString%2A?displayProperty=nameWithType> include l'offset del fuso orario locale, ma non visualizza né modifica l'identificatore del fuso orario.</span><span class="sxs-lookup"><span data-stu-id="aad4b-110">If the value is UTC time, <xref:System.DateTime.ToString%2A?displayProperty=nameWithType> includes the local time zone offset, but it does not display or adjust the time zone specifier.</span></span>  
   
-### <a name="resolution"></a><span data-ttu-id="c56f9-111">Risoluzione</span><span class="sxs-lookup"><span data-stu-id="c56f9-111">Resolution</span></span>  
- <span data-ttu-id="c56f9-112">Le istanze di <xref:System.DateTime> in formato UTC devono essere formattate in modo che vengano identificate come UTC.</span><span class="sxs-lookup"><span data-stu-id="c56f9-112">UTC <xref:System.DateTime> instances should be formatted in a way that indicates that they are UTC.</span></span> <span data-ttu-id="c56f9-113">Per indicare un'ora in formato UTC è consigliabile usare una 'Z':</span><span class="sxs-lookup"><span data-stu-id="c56f9-113">The recommended format for UTC times to use a 'Z' to denote UTC time:</span></span>  
+### <a name="resolution"></a><span data-ttu-id="aad4b-111">Risoluzione</span><span class="sxs-lookup"><span data-stu-id="aad4b-111">Resolution</span></span>  
+ <span data-ttu-id="aad4b-112">Le istanze di <xref:System.DateTime> in formato UTC devono essere formattate in modo che vengano identificate come UTC.</span><span class="sxs-lookup"><span data-stu-id="aad4b-112">UTC <xref:System.DateTime> instances should be formatted in a way that indicates that they are UTC.</span></span> <span data-ttu-id="aad4b-113">Per indicare un'ora in formato UTC è consigliabile usare una 'Z':</span><span class="sxs-lookup"><span data-stu-id="aad4b-113">The recommended format for UTC times to use a 'Z' to denote UTC time:</span></span>  
   
 ```csharp
 DateTime myDateTime = DateTime.UtcNow;  
 Serialize(myDateTime.ToString("yyyy-MM-dd'T'HH:mm:ss.fffffffZ"));  
 ```  
   
- <span data-ttu-id="c56f9-114">Esiste anche un formato "o" che serializza un'istanza di <xref:System.DateTime> usando la proprietà <xref:System.DateTime.Kind%2A> che viene serializzata correttamente indipendentemente dal fatto che l'istanza sia in formato locale, UTC o non specificato:</span><span class="sxs-lookup"><span data-stu-id="c56f9-114">There is also an "o" format that serializes a <xref:System.DateTime> making use of the <xref:System.DateTime.Kind%2A> property that serializes correctly regardless of whether the instance is local, UTC, or unspecified:</span></span>  
+ <span data-ttu-id="aad4b-114">Esiste anche un formato "o" che serializza un'istanza di <xref:System.DateTime> usando la proprietà <xref:System.DateTime.Kind%2A> che viene serializzata correttamente indipendentemente dal fatto che l'istanza sia in formato locale, UTC o non specificato:</span><span class="sxs-lookup"><span data-stu-id="aad4b-114">There is also an "o" format that serializes a <xref:System.DateTime> making use of the <xref:System.DateTime.Kind%2A> property that serializes correctly regardless of whether the instance is local, UTC, or unspecified:</span></span>  
   
 ```csharp
 DateTime myDateTime = DateTime.UtcNow;  
 Serialize(myDateTime.ToString("o"));  
 ```  
   
-## <a name="effect-on-the-runtime"></a><span data-ttu-id="c56f9-115">Effetto sull'ambiente di esecuzione</span><span class="sxs-lookup"><span data-stu-id="c56f9-115">Effect on the Runtime</span></span>  
- <span data-ttu-id="c56f9-116">Questo assistente al debug gestito non ha alcun effetto sul runtime.</span><span class="sxs-lookup"><span data-stu-id="c56f9-116">This MDA does not affect the runtime.</span></span>  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="aad4b-115">Effetto sull'ambiente di esecuzione</span><span class="sxs-lookup"><span data-stu-id="aad4b-115">Effect on the Runtime</span></span>  
+ <span data-ttu-id="aad4b-116">Questo assistente al debug gestito non ha alcun effetto sul runtime.</span><span class="sxs-lookup"><span data-stu-id="aad4b-116">This MDA does not affect the runtime.</span></span>  
   
-## <a name="output"></a><span data-ttu-id="c56f9-117">Output</span><span class="sxs-lookup"><span data-stu-id="c56f9-117">Output</span></span>  
- <span data-ttu-id="c56f9-118">L'attivazione di questo assistente al debug gestito non genera alcun output specifico. È possibile, tuttavia, usare lo stack di chiamate per determinare la posizione della chiamata <xref:System.DateTime.ToString%2A> che ha attivato l'assistente.</span><span class="sxs-lookup"><span data-stu-id="c56f9-118">There is no special output as a result of this MDA activating., However, the call stack can be used to determine the location of the <xref:System.DateTime.ToString%2A> call that activated the MDA.</span></span>  
+## <a name="output"></a><span data-ttu-id="aad4b-117">Output</span><span class="sxs-lookup"><span data-stu-id="aad4b-117">Output</span></span>  
+ <span data-ttu-id="aad4b-118">L'attivazione di questo assistente al debug gestito non genera alcun output specifico. È possibile, tuttavia, usare lo stack di chiamate per determinare la posizione della chiamata <xref:System.DateTime.ToString%2A> che ha attivato l'assistente.</span><span class="sxs-lookup"><span data-stu-id="aad4b-118">There is no special output as a result of this MDA activating., However, the call stack can be used to determine the location of the <xref:System.DateTime.ToString%2A> call that activated the MDA.</span></span>  
   
-## <a name="configuration"></a><span data-ttu-id="c56f9-119">Configurazione</span><span class="sxs-lookup"><span data-stu-id="c56f9-119">Configuration</span></span>  
+## <a name="configuration"></a><span data-ttu-id="aad4b-119">Configurazione</span><span class="sxs-lookup"><span data-stu-id="aad4b-119">Configuration</span></span>  
   
 ```xml  
 <mdaConfig>  
@@ -66,19 +66,19 @@ Serialize(myDateTime.ToString("o"));
 </mdaConfig>  
 ```  
   
-## <a name="example"></a><span data-ttu-id="c56f9-120">Esempio</span><span class="sxs-lookup"><span data-stu-id="c56f9-120">Example</span></span>  
- <span data-ttu-id="c56f9-121">Si consideri ad esempio un'applicazione che stia serializzando indirettamente un valore <xref:System.DateTime> UTC tramite la classe <xref:System.Xml.XmlConvert> o <xref:System.Data.DataSet>, come descritto di seguito.</span><span class="sxs-lookup"><span data-stu-id="c56f9-121">Consider an application that is indirectly serializing a UTC <xref:System.DateTime> value by using the <xref:System.Xml.XmlConvert> or <xref:System.Data.DataSet> class, in the following manner.</span></span>  
+## <a name="example"></a><span data-ttu-id="aad4b-120">Esempio</span><span class="sxs-lookup"><span data-stu-id="aad4b-120">Example</span></span>  
+ <span data-ttu-id="aad4b-121">Si consideri ad esempio un'applicazione che stia serializzando indirettamente un valore <xref:System.DateTime> UTC tramite la classe <xref:System.Xml.XmlConvert> o <xref:System.Data.DataSet>, come descritto di seguito.</span><span class="sxs-lookup"><span data-stu-id="aad4b-121">Consider an application that is indirectly serializing a UTC <xref:System.DateTime> value by using the <xref:System.Xml.XmlConvert> or <xref:System.Data.DataSet> class, in the following manner.</span></span>  
   
 ```csharp
 DateTime myDateTime = DateTime.UtcNow;  
 String serialized = XMLConvert.ToString(myDateTime);  
 ```  
   
- <span data-ttu-id="c56f9-122">Per impostazione predefinita, <xref:System.Xml.XmlConvert> e <xref:System.Data.DataSet> usano formati locali per la serializzazione.</span><span class="sxs-lookup"><span data-stu-id="c56f9-122">The <xref:System.Xml.XmlConvert> and <xref:System.Data.DataSet> serializations use local formats for serialization by default.</span></span> <span data-ttu-id="c56f9-123">Per serializzare altri tipi di valori <xref:System.DateTime>, ad esempio UTC, sono necessarie opzioni aggiuntive.</span><span class="sxs-lookup"><span data-stu-id="c56f9-123">Additional options are required to serialize other kinds of <xref:System.DateTime> values, such as UTC.</span></span>  
+ <span data-ttu-id="aad4b-122">Per impostazione predefinita, <xref:System.Xml.XmlConvert> e <xref:System.Data.DataSet> usano formati locali per la serializzazione.</span><span class="sxs-lookup"><span data-stu-id="aad4b-122">The <xref:System.Xml.XmlConvert> and <xref:System.Data.DataSet> serializations use local formats for serialization by default.</span></span> <span data-ttu-id="aad4b-123">Per serializzare altri tipi di valori <xref:System.DateTime>, ad esempio UTC, sono necessarie opzioni aggiuntive.</span><span class="sxs-lookup"><span data-stu-id="aad4b-123">Additional options are required to serialize other kinds of <xref:System.DateTime> values, such as UTC.</span></span>  
   
- <span data-ttu-id="c56f9-124">Per questo esempio specifico, passare `XmlDateTimeSerializationMode.RoundtripKind` alla chiamata `ToString` su `XmlConvert`.</span><span class="sxs-lookup"><span data-stu-id="c56f9-124">For this specific example, pass in `XmlDateTimeSerializationMode.RoundtripKind` to the `ToString` call on `XmlConvert`.</span></span> <span data-ttu-id="c56f9-125">In questo modo i dati vengono serializzati come ora UTC.</span><span class="sxs-lookup"><span data-stu-id="c56f9-125">This serializes the data as a UTC time.</span></span>  
+ <span data-ttu-id="aad4b-124">Per questo esempio specifico, passare `XmlDateTimeSerializationMode.RoundtripKind` alla chiamata `ToString` su `XmlConvert`.</span><span class="sxs-lookup"><span data-stu-id="aad4b-124">For this specific example, pass in `XmlDateTimeSerializationMode.RoundtripKind` to the `ToString` call on `XmlConvert`.</span></span> <span data-ttu-id="aad4b-125">In questo modo i dati vengono serializzati come ora UTC.</span><span class="sxs-lookup"><span data-stu-id="aad4b-125">This serializes the data as a UTC time.</span></span>  
   
- <span data-ttu-id="c56f9-126">Se si usa <xref:System.Data.DataSet>, impostare la proprietà <xref:System.Data.DataColumn.DateTimeMode%2A> dell'oggetto <xref:System.Data.DataColumn> su <xref:System.Data.DataSetDateTime.Utc>.</span><span class="sxs-lookup"><span data-stu-id="c56f9-126">If using a <xref:System.Data.DataSet>, set the <xref:System.Data.DataColumn.DateTimeMode%2A> property on the <xref:System.Data.DataColumn> object to <xref:System.Data.DataSetDateTime.Utc>.</span></span>  
+ <span data-ttu-id="aad4b-126">Se si usa <xref:System.Data.DataSet>, impostare la proprietà <xref:System.Data.DataColumn.DateTimeMode%2A> dell'oggetto <xref:System.Data.DataColumn> su <xref:System.Data.DataSetDateTime.Utc>.</span><span class="sxs-lookup"><span data-stu-id="aad4b-126">If using a <xref:System.Data.DataSet>, set the <xref:System.Data.DataColumn.DateTimeMode%2A> property on the <xref:System.Data.DataColumn> object to <xref:System.Data.DataSetDateTime.Utc>.</span></span>  
   
 ```csharp
 DateTime myDateTime = DateTime.UtcNow;  
@@ -86,6 +86,6 @@ String serialized = XmlConvert.ToString(myDateTime,
     XmlDateTimeSerializationMode.RoundtripKind);  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="c56f9-127">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c56f9-127">See Also</span></span>  
- <xref:System.Globalization.DateTimeFormatInfo>  
- [<span data-ttu-id="c56f9-128">Diagnostica degli errori tramite gli assistenti al debug gestito</span><span class="sxs-lookup"><span data-stu-id="c56f9-128">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+## <a name="see-also"></a><span data-ttu-id="aad4b-127">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="aad4b-127">See also</span></span>
+- <xref:System.Globalization.DateTimeFormatInfo>
+- [<span data-ttu-id="aad4b-128">Diagnostica degli errori tramite gli assistenti al debug gestito</span><span class="sxs-lookup"><span data-stu-id="aad4b-128">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
