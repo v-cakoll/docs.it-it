@@ -36,12 +36,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
-ms.openlocfilehash: 3a419fb38d3b97b08c8aaa094265d8b426429ae4
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: b69fc668a63d1b4f834d5aa65ae8e27854d73e63
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266591"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54595578"
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Tipi generici in Visual Basic (Visual Basic)
 Un *tipo generico* è un singolo elemento di programmazione che si adatta per eseguire la stessa funzionalità per diversi tipi di dati. Quando si definisce una classe o una routine generica, non è necessario definire una versione distinta per ogni tipo di dati per il quale si vuole eseguire tale funzionalità.  
@@ -59,7 +59,7 @@ Cacciavite come strumento generico
   
  È ora possibile usare `stringQ` per lavorare esclusivamente con i valori `String` . Poiché `stringQ` è specifico per `String` anziché essere generalizzato per i valori `Object` , non viene eseguita alcuna associazione tardiva o conversione di tipo. Questo consente di risparmiare il tempo di esecuzione e riduce gli errori di runtime.  
   
- Per altre informazioni sull'uso di un tipo generico, vedere [How to: Use a Generic Class](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md).  
+ Per altre informazioni sull'uso di un tipo generico, vedere [come: Usare una classe generica](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md).  
   
 ## <a name="example-of-a-generic-class"></a>Esempio di classe generica  
  Nell'esempio seguente viene illustrata la struttura della definizione di una classe generica.  
@@ -74,10 +74,10 @@ Cacciavite come strumento generico
   
  [!code-vb[VbVbalrDataTypes#4](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_4.vb)]  
   
- Per un esempio più esaustivo, vedere [procedura: definire una classe che può fornire funzionalità identiche su diversi tipi di dati](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md).  
+ Per un esempio più esaustivo, vedere [come: Definire una classe che può fornire funzionalità identiche con tipi di dati diversi](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md).  
   
 ## <a name="eligible-programming-elements"></a>Elementi di programmazione idonei  
- È possibile definire e usare classi, strutture, interfacce, routine e delegati generici. Si noti che [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] definisce diverse classi, strutture e interfacce generiche che rappresentano elementi generici usati comunemente. Il <xref:System.Collections.Generic?displayProperty=nameWithType> dello spazio dei nomi fornisce dizionari, elenchi, code e stack. Prima di definire un elemento generico personalizzato, verificare se è già disponibile in <xref:System.Collections.Generic?displayProperty=nameWithType>.  
+ È possibile definire e usare classi, strutture, interfacce, routine e delegati generici. Si noti che [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] definisce diverse classi, strutture e interfacce generiche che rappresentano elementi generici usati comunemente. Lo spazio dei nomi <xref:System.Collections.Generic?displayProperty=nameWithType> fornisce dizionari, elenchi, code e stack. Prima di definire un elemento generico personalizzato, verificare se è già disponibile in <xref:System.Collections.Generic?displayProperty=nameWithType>.  
   
  Le routine non sono tipi, ma è possibile definire e usare routine generiche. Vedere [Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md).  
   
@@ -149,14 +149,14 @@ Cacciavite come strumento generico
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Tipi di dati](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
-- [Caratteri tipo](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
-- [Tipi valore e tipi riferimento](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
-- [Conversioni di tipi in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
-- [Risoluzione dei problemi relativi ai tipi di dati](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
-- [Tipi di dati](../../../../visual-basic/language-reference/data-types/index.md)  
-- [Of](../../../../visual-basic/language-reference/statements/of-clause.md)  
-- [As](../../../../visual-basic/language-reference/statements/as-clause.md)  
-- [Tipo di dati Object](../../../../visual-basic/language-reference/data-types/object-data-type.md)  
-- [Covarianza e controvarianza](../../concepts/covariance-contravariance/index.md)  
+- [Tipi di dati](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
+- [Caratteri tipo](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
+- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Conversioni di tipi in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Risoluzione dei problemi relativi ai tipi di dati](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [Tipi di dati](../../../../visual-basic/language-reference/data-types/index.md)
+- [Of](../../../../visual-basic/language-reference/statements/of-clause.md)
+- [As](../../../../visual-basic/language-reference/statements/as-clause.md)
+- [Tipo di dati Object](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Covarianza e controvarianza](../../concepts/covariance-contravariance/index.md)
 - [Iteratori](../../../../visual-basic/programming-guide/concepts/iterators.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: creare pulsanti interruttore nei controlli ToolStrip'
+title: 'Procedura: Creare pulsanti interruttore nei controlli ToolStrip'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolStrip control [Windows Forms], creating toggle buttons
 ms.assetid: d9c197df-4c65-43f2-beee-b68b52b2befc
-ms.openlocfilehash: a04d531433273328c2d8eb0c5ef614f08c33952a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 723916eb0c1e242df301c49bf0716e0262a3ba42
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33530381"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54614978"
 ---
-# <a name="how-to-create-toggle-buttons-in-toolstrip-controls"></a>Procedura: creare pulsanti interruttore nei controlli ToolStrip
-Quando un utente fa clic su un interruttore, appaiono incassato e mantiene tale aspetto fino a quando l'utente fa clic sul pulsante nuovo.  
+# <a name="how-to-create-toggle-buttons-in-toolstrip-controls"></a>Procedura: Creare pulsanti interruttore nei controlli ToolStrip
+Quando un utente fa clic su un pulsante Mostra/Nascondi, viene visualizzato incassato e mantiene tale aspetto fino a quando l'utente fa clic sul pulsante nuovo.  
   
 ### <a name="to-create-a-toggling-toolstripbutton"></a>Per creare un ToolStripButton  
   
--   Usare codice simile all'esempio di codice seguente. Questo codice presuppone che il modulo contiene un <xref:System.Windows.Forms.ToolStrip> controllo e che il relativo <xref:System.Windows.Forms.ToolStrip.Items%2A> raccolta contiene un <xref:System.Windows.Forms.ToolStripButton> chiamato `toolStripButton1`. Inoltre, presuppone che si dispone di un gestore eventi denominato `toolStripButton1_CheckedChanged`.  
+-   Usare codice simile al codice seguente. Questo codice presuppone che il form contenga un <xref:System.Windows.Forms.ToolStrip> controllo e che il <xref:System.Windows.Forms.ToolStrip.Items%2A> raccolta contiene un <xref:System.Windows.Forms.ToolStripButton> chiamato `toolStripButton1`. Si presume anche che un gestore eventi chiamato `toolStripButton1_CheckedChanged`.  
   
     ```vb  
     toolStripButton1.CheckOnClick = True  
@@ -35,6 +35,6 @@ Quando un utente fa clic su un interruttore, appaiono incassato e mantiene tale 
     EventHandler(toolStripButton1_CheckedChanged);  
     ```  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Windows.Forms.ToolStripButton>  
- [Panoramica sul controllo ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Windows.Forms.ToolStripButton>
+- [Panoramica sul controllo ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)

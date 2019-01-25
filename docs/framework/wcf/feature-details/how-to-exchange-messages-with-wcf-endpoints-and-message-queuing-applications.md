@@ -1,21 +1,21 @@
 ---
-title: 'Procedura: scambiare messaggi con endpoint WCF e con applicazioni del sistema di accodamento dei messaggi'
+title: 'Procedura: Scambiare messaggi con endpoint WCF e le applicazioni di Accodamento messaggi'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 62210fd8-a372-4d55-ab9b-c99827d1885e
-ms.openlocfilehash: 807a34ac50ea317ace42ec12eddcd9ec7cf3736b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f0bfb966026d7588de63bef38eb289bb33a7a688
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33491079"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620162"
 ---
-# <a name="how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications"></a>Procedura: scambiare messaggi con endpoint WCF e con applicazioni del sistema di accodamento dei messaggi
+# <a name="how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications"></a>Procedura: Scambiare messaggi con endpoint WCF e le applicazioni di Accodamento messaggi
 È possibile integrare le applicazioni di Accodamento messaggi (MSMQ) esistenti con le applicazioni di Windows Communication Foundation (WCF) utilizzando l'associazione di integrazione MSMQ per convertire i messaggi MSMQ in e da messaggi WCF. In questo modo è possibile chiamare applicazioni MSMQ riceventi dai client WCF, nonché chiamare servizi WCF da applicazioni MSMQ mittenti.  
   
- In questa sezione viene descritto come utilizzare <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> per la comunicazione in coda tra (1) un client WCF e un'applicazione MSMQ Server scritta utilizzando System. Messaging e (2) un'applicazione MSMQ client e un servizio WCF.  
+ In questa sezione viene illustrato come usare <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> per la comunicazione in coda tra (1) un client WCF e il servizio di un'applicazione MSMQ scritta utilizzando System. Messaging e (2) un'applicazione MSMQ client e un servizio WCF.  
   
  Per un esempio completo che illustra come chiamare un'applicazione MSMQ ricevente da un client WCF, vedere la [Windows Communication Foundation a Accodamento messaggi](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md) esempio.  
   
@@ -43,12 +43,12 @@ ms.locfileid: "33491079"
   
 ### <a name="to-create-a-wcf-client-that-sends-messages-to-a-msmq-receiver-application"></a>Per creare un client WCF che invia messaggi a un'applicazione MSMQ ricevente  
   
-1.  Definire un'interfaccia che definisce il contratto di servizio per il client WCF che invia messaggi al destinatario di MSMQ, in coda, come illustrato nell'esempio di codice seguente.  
+1.  Definire un'interfaccia che definisce il contratto di servizio per il client WCF che inviati in coda i messaggi per l'applicazione MSMQ ricevente, come illustrato nell'esempio di codice seguente.  
   
      [!code-csharp[S_WcfToMsmq#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_wcftomsmq/cs/proxy.cs#6)]
      [!code-vb[S_WcfToMsmq#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_wcftomsmq/vb/proxy.vb#6)]  
   
-2.  Definire una classe client che il client WCF utilizza per chiamare l'applicazione MSMQ ricevente.  
+2.  Definire una classe client che usa il client WCF per chiamare l'applicazione MSMQ ricevente.  
   
      [!code-csharp[S_WcfToMsmq#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_wcftomsmq/cs/snippets.cs#2)]
      [!code-vb[S_WcfToMsmq#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_wcftomsmq/vb/snippets.vb#2)]  
@@ -62,10 +62,10 @@ ms.locfileid: "33491079"
   
      [!code-csharp[S_WcfToMsmq#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_wcftomsmq/cs/client.cs#4)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Panoramica delle code](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
- [Procedura: Scambiare messaggi in coda con endpoint WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
- [Da Windows Communication Foundation a Accodamento messaggi](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)  
- [Installazione accodamento messaggi (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)  
- [Accodamento messaggi in Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)  
- [Sicurezza dei messaggi nell'accodamento messaggi](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)
+## <a name="see-also"></a>Vedere anche
+- [Panoramica delle code](../../../../docs/framework/wcf/feature-details/queues-overview.md)
+- [Procedura: Lo scambio di messaggi in coda con endpoint WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)
+- [Da Windows Communication Foundation a Accodamento messaggi](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)
+- [Installazione accodamento messaggi (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)
+- [Accodamento messaggi in Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)
+- [Sicurezza dei messaggi nell'accodamento messaggi](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)

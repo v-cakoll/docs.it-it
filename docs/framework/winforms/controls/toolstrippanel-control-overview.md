@@ -7,12 +7,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms]
 - ToolStripPanel control [Windows Forms], about ToolStripPanel control
 ms.assetid: ce54a60c-5eba-4b4c-bd77-cf0748a666cc
-ms.openlocfilehash: 1f13240df9879f656d986845552e8e93a74ade8f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 104ccfd0370eff48312372a2391031575b53b3bf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193369"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660229"
 ---
 # <a name="toolstrippanel-control-overview"></a>Cenni preliminari sul controllo ToolStripPanel
 Oggetto <xref:System.Windows.Forms.ToolStripPanel> fornisce un'unica area per posizionare e raggruppare <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, e <xref:System.Windows.Forms.StatusStrip> controlli. Più <xref:System.Windows.Forms.ToolStrip> controlli vengono disposti orizzontalmente o verticalmente in base il <xref:System.Windows.Forms.ToolStripPanelRow.Orientation%2A> del <xref:System.Windows.Forms.ToolStripPanel>.  
@@ -28,7 +28,7 @@ Oggetto <xref:System.Windows.Forms.ToolStripPanel> fornisce un'unica area per po
 |<xref:System.Windows.Forms.ToolStripPanel.Rows%2A>|Ottiene il <xref:System.Windows.Forms.ToolStripPanelRow> in questo <xref:System.Windows.Forms.ToolStripPanel>.|  
 |<xref:System.Windows.Forms.ToolStripPanel.Join%2A>|Aggiunge un <xref:System.Windows.Forms.ToolStrip> a un <xref:System.Windows.Forms.ToolStripPanel>.|  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Windows.Forms.ToolStripContainer>  
- <xref:System.Windows.Forms.ToolStripContentPanel>  
- [Esempio di ToolStrip](https://msdn.microsoft.com/library/b7352439-184a-4a3a-b2ad-07465d3af9ed)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Windows.Forms.ToolStripContainer>
+- <xref:System.Windows.Forms.ToolStripContentPanel>
+- [Esempio di ToolStrip](https://msdn.microsoft.com/library/b7352439-184a-4a3a-b2ad-07465d3af9ed)

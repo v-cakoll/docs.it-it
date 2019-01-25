@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: 6cc55983-b894-449b-8e26-b258e53939cd
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 5693b92ac35a357ff1f8643d0eb9ec2105acecb4
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 64985d4ed2c6a82c54a7623df4b13d7ec54bff33
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193356"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599348"
 ---
 # <a name="assemblybinding-element-for-configuration"></a>\<assemblyBinding > (elemento) per \<configuration >
 
 Specifica i criteri di associazione degli assembly al livello di configurazione.
 
 [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;**\<assemblyBinding >**
+&nbsp;&nbsp;**\<assemblyBinding>**
 
 ## <a name="syntax"></a>Sintassi
 
@@ -47,7 +47,7 @@ Specifica i criteri di associazione degli assembly al livello di configurazione.
 
 |     | Descrizione |
 | --- | ----------- |
-| [**\<linkedConfiguration >**](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md) | Specifica un file di configurazione da includere. |
+| [**\<linkedConfiguration>**](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md) | Specifica un file di configurazione da includere. |
 
 ## <a name="remarks"></a>Note
 
@@ -70,4 +70,4 @@ Nell'esempio seguente viene illustrato come includere un file di configurazione 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Schema di file di configurazione per .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Schema di file di configurazione per .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)

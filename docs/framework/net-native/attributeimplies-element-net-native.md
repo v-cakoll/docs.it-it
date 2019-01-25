@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 82db7193-a860-418b-84fc-fff2fdf2e025
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 960ee5716b9760ab82628a8d21728cd6675e5215
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7f4e12f690d685f58b69483631aa0e93c9902636
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395440"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54696815"
 ---
 # <a name="ltattributeimpliesgt-element-net-native"></a>Elemento &lt;AttributeImplies&gt; (.NET Native)
 Definisce i criteri per gli elementi di codice a cui viene applicato l'attributo contenitore.  
@@ -67,8 +67,8 @@ Definisce i criteri per gli elementi di codice a cui viene applicato l'attributo
   
  Gli attributi di reflection, serializzazione e interoperabilità sono tutti facoltativi, ma è necessario usarne almeno uno.  
   
-## <a name="see-also"></a>Vedere anche  
- [\<Tipo > elemento](../../../docs/framework/net-native/type-element-net-native.md)  
- [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [Elementi direttiva di runtime](../../../docs/framework/net-native/runtime-directive-elements.md)  
- [Impostazioni dei criteri delle direttive di runtime](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+## <a name="see-also"></a>Vedere anche
+- [\<Tipo > elemento](../../../docs/framework/net-native/type-element-net-native.md)
+- [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Elementi direttiva di runtime](../../../docs/framework/net-native/runtime-directive-elements.md)
+- [Impostazioni dei criteri delle direttive di runtime](../../../docs/framework/net-native/runtime-directive-policy-settings.md)

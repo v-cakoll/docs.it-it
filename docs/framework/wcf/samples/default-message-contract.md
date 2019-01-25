@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Message Contract
 ms.assetid: 5a200b78-1a46-4104-b7fb-da6dbab33893
-ms.openlocfilehash: 9f5a7eff25fb202ba84f0bd49893748b507326fd
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b1c4db312c04c4248f16a2ff7ee8b54222e66cbe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188170"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620279"
 ---
 # <a name="default-message-contract"></a>Impostazione predefinita dei contratti di messaggio
 L'esempio Impostazione predefinita dei contratti di messaggio illustra un servizio in cui un messaggio personalizzato definito dall'utente viene passato da e verso le operazioni del servizio. In questo esempio si basa sul [introduttiva](../../../../docs/framework/wcf/samples/getting-started-sample.md) che implementa un'interfaccia calcolatrice come servizio tipizzato. Anziché le operazioni del servizio singole per addizione, sottrazione, moltiplicazione e divisione utilizzate nel [introduttiva](../../../../docs/framework/wcf/samples/getting-started-sample.md), in questo esempio passa un messaggio personalizzato che contiene gli operandi e l'operatore e restituisce il risultato del calcolo aritmetico.  

@@ -1,16 +1,16 @@
 ---
-title: Guida introduttiva Tutorial2
+title: Introduzione a Tutorial2
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WF [WF], getting started
 - Windows Workflow Foundation [WF], getting started
 ms.assetid: c2d3585f-6b1a-4d4f-9865-bd7cd31c5d42
-ms.openlocfilehash: 7e1bfdc79eda8095d5d391afd61abb8473d8e7ff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 99daa524f041ffcd096195fc79527557b8f2697d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33512440"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54591982"
 ---
 # <a name="getting-started-tutorial"></a>Esercitazione introduttiva
 In questa sezione contiene un set di procedure dettagliate che introducono alla programmazione di applicazioni di Windows Workflow Foundation (WF). Seguendo le procedure di questi argomenti, verrà compilata un'applicazione che è un gioco per determinare un numero. Nel primo argomento dell'esercitazione vengono descritti i passaggi per creare le attività personalizzate richieste per il flusso di lavoro. Nel secondo argomento, queste attività vengono assemblate in un flusso di lavoro del diagramma di flusso insieme alle attività incorporate del flusso di lavoro. Nel terzo argomento, l'applicazione host viene configurata in modo da eseguire il flusso di lavoro e nell'ultimo argomento viene introdotta la persistenza. Ogni passaggio in questo processo dipende dai passaggi precedenti, pertanto si consiglia di completarli in ordine.  
@@ -25,17 +25,17 @@ In questa sezione contiene un set di procedure dettagliate che introducono alla 
  [Procedura: Eseguire un flusso di lavoro](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)  
  Viene descritto come richiamare un flusso di lavoro da un ambiente host, come passare i dati all'interno e all'esterno di un flusso di lavoro e come riprendere i segnalibri.  
   
- [Procedura: Creare ed eseguire un flusso di lavoro con esecuzione prolungata](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md)  
+ [Procedura: Creare ed eseguire una lunga esecuzione flusso di lavoro](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md)  
  Viene descritto come aggiungere la persistenza a un'applicazione flusso di lavoro.  
   
- [Procedura: Creare un partecipante di rilevamento personalizzato](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md)  
+ [Procedura: Creare un partecipante di rilevamento personalizzati](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md)  
  Viene descritto come creare un partecipante del rilevamento personalizzato e un profilo di rilevamento.  
   
- [Procedura: Ospitare più versioni di un flusso di lavoro side-by-side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)  
+ [Procedura: Ospitare più versioni di un flusso di lavoro Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)  
  Viene descritto come usare `WorkflowIdentity` per ospitare più versioni di un flusso di lavoro side-by-side.  
   
  [Procedura: Aggiornare la definizione di un'istanza del flusso di lavoro in esecuzione](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md)  
  Viene descritto come usare l'aggiornamento dinamico per modificare le istanze in esecuzione del flusso di lavoro.  
   
-## <a name="see-also"></a>Vedere anche  
- [Programmazione di Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/programming.md)
+## <a name="see-also"></a>Vedere anche
+- [Programmazione di Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/programming.md)

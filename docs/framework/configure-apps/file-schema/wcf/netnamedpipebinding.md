@@ -2,12 +2,12 @@
 title: '&lt;netNamedPipeBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 00a8580b-face-47a4-838d-b9fed48e72df
-ms.openlocfilehash: 545148d1f663078b8182029817f0f22d33036200
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 54f1ad4feefe15f4901d8e493cadc0842f55224f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54152034"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54606673"
 ---
 # <a name="ltnetnamedpipebindinggt"></a>&lt;netNamedPipeBinding&gt;
 Definisce un'associazione che è protetta, affidabile, ottimizzata per le comunicazioni tra processi nel computer. Per impostazione predefinita, genera uno stack di comunicazione in fase di esecuzione con WS-ReliableMessaging per affidabilità, sicurezza del trasporto per la sicurezza del trasferimento, named pipe per il recapito dei messaggi e codifica binaria dei messaggi.  
@@ -63,7 +63,7 @@ Definisce un'associazione che è protetta, affidabile, ottimizzata per le comuni
 |receiveTimeout|Valore <xref:System.TimeSpan> che specifica l'intervallo di tempo fornito per il completamento di un'operazione di ricezione. Questo valore deve essere maggiore o uguale a <xref:System.TimeSpan.Zero>. L'impostazione predefinita è 00:10:00.|  
 |sendTimeout|Valore <xref:System.TimeSpan> che specifica l'intervallo di tempo fornito per il completamento di un'operazione di invio. Questo valore deve essere maggiore o uguale a <xref:System.TimeSpan.Zero>. L'impostazione predefinita è 00:01:00.|  
 |transactionFlow|Valore booleano che specifica se l'associazione supporta la propagazione di WS-Transactions. Il valore predefinito è `false`.|  
-|transactionProtocol|Specifica il protocollo di transazione da usare con questa associazione. I valori validi sono:<br /><br /> -OleTransactions<br />WS-AtomicTransactionOctober2004<br /><br /> L'impostazione predefinita è OleTransactions. L'attributo è di tipo <xref:System.ServiceModel.TransactionProtocol>.|  
+|transactionProtocol|Specifica il protocollo di transazione da usare con questa associazione. I valori validi sono:<br /><br /> -OleTransactions<br />-   WS-AtomicTransactionOctober2004<br /><br /> L'impostazione predefinita è OleTransactions. L'attributo è di tipo <xref:System.ServiceModel.TransactionProtocol>.|  
 |transferMode|Valore <xref:System.ServiceModel.TransferMode> che specifica se i messaggi vengono memorizzati nel buffer o inviati nel flusso o sono una richiesta o una risposta.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
@@ -143,10 +143,10 @@ Definisce un'associazione che è protetta, affidabile, ottimizzata per le comuni
 </configuration>
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.Configuration.NetNamedPipeBindingElement>  
- <xref:System.ServiceModel.NetNamedPipeBinding>  
- [\<binding>](../../../../../docs/framework/misc/binding.md)  
- [Associazioni](../../../../../docs/framework/wcf/bindings.md)  
- [Configurazione di associazioni fornite dal sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Uso di associazioni per configurare servizi e client](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.ServiceModel.Configuration.NetNamedPipeBindingElement>
+- <xref:System.ServiceModel.NetNamedPipeBinding>
+- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [Associazioni](../../../../../docs/framework/wcf/bindings.md)
+- [Configurazione di associazioni fornite dal sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Uso di associazioni per configurare servizi e client](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)

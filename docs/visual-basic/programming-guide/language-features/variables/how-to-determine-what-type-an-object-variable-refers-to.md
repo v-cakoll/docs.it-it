@@ -1,20 +1,20 @@
 ---
-title: 'Procedura: determinare a quale tipo fa riferimento una variabile oggetto (Visual Basic)'
+title: 'Procedura: Determinare a quale tipo fa riferimento una variabile oggetto (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - TypeOf operator [Visual Basic], determining object variable type
 - variables [Visual Basic], object
 - object variables [Visual Basic], determining type
 ms.assetid: 6f6a138d-58a4-40d1-9f4e-0a3c598eaf81
-ms.openlocfilehash: 0dfd4ed87b65f536802ae71cbc3de41e1c4f83af
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 149af116f2b848082367b33d826bace8345cee05
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33651314"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54571178"
 ---
-# <a name="how-to-determine-what-type-an-object-variable-refers-to-visual-basic"></a>Procedura: determinare a quale tipo fa riferimento una variabile oggetto (Visual Basic)
-Una variabile oggetto contiene un puntatore a dati archiviati in un' posizione. Il tipo di dati può cambiare in fase di esecuzione. In qualsiasi momento, è possibile utilizzare il <xref:System.Type.GetTypeCode%2A> metodo per determinare il tipo in fase di esecuzione corrente, o [operatore TypeOf](../../../../visual-basic/language-reference/operators/typeof-operator.md) per determinare se il tipo in fase di esecuzione è compatibile con un tipo specificato.  
+# <a name="how-to-determine-what-type-an-object-variable-refers-to-visual-basic"></a>Procedura: Determinare a quale tipo fa riferimento una variabile oggetto (Visual Basic)
+Una variabile oggetto contiene un puntatore ai dati archiviati in un' posizione. Il tipo di dati può modificare durante la fase di esecuzione. In qualsiasi momento, è possibile usare la <xref:System.Type.GetTypeCode%2A> metodo per determinare il tipo di runtime corrente, o il [operatore TypeOf](../../../../visual-basic/language-reference/operators/typeof-operator.md) per determinare se il tipo in fase di esecuzione è compatibile con un tipo specificato.  
   
 ### <a name="to-determine-the-exact-type-an-object-variable-currently-refers-to"></a>Per determinare che il tipo esatto una variabile oggetto attualmente fa riferimento a  
   
@@ -33,11 +33,11 @@ Una variabile oggetto contiene un puntatore a dati archiviati in un' posizione. 
     MsgBox("myObject currently has type code " & CStr(datTyp))  
     ```  
   
-     È possibile testare il <xref:System.TypeCode> il valore di enumerazione rispetto a un qualsiasi membro di enumerazione di interesse, ad esempio `Double`.  
+     È possibile testare il <xref:System.TypeCode> valore dell'enumerazione su un qualsiasi membro di enumerazione è di interesse, ad esempio `Double`.  
   
 ### <a name="to-determine-whether-an-object-variables-type-is-compatible-with-a-specified-type"></a>Per determinare se un oggetto tipo di variabile è compatibile con un tipo specificato  
   
--   Utilizzare il `TypeOf` operatore in combinazione con il [operatore Is](../../../../visual-basic/language-reference/operators/is-operator.md) per testare l'oggetto con un `TypeOf`... `Is` espressione.  
+-   Usare la `TypeOf` operatore in combinazione con il [operatore Is](../../../../visual-basic/language-reference/operators/is-operator.md) per testare l'oggetto con un `TypeOf`... `Is` espressione.  
   
     ```  
     If TypeOf objA Is System.Windows.Forms.Control Then  
@@ -45,18 +45,18 @@ Una variabile oggetto contiene un puntatore a dati archiviati in un' posizione. 
     End If  
     ```  
   
-     Il `TypeOf`... `Is` restituisce `True` se l'oggetto della fase di esecuzione tipo è compatibile con il tipo specificato.  
+     Il `TypeOf`... `Is` espressione restituisce `True` se l'oggetto della fase di esecuzione tipo è compatibile con il tipo specificato.  
   
-     Il criterio per la compatibilità varia a seconda che il tipo specificato una classe, struttura o interfaccia. In generale, i tipi sono compatibili, se l'oggetto è dello stesso tipo, eredita da o implementa il tipo specificato. Per ulteriori informazioni, vedere [operatore TypeOf](../../../../visual-basic/language-reference/operators/typeof-operator.md).  
+     Il criterio per la compatibilità dipende dal fatto che il tipo specificato è una classe, struttura o interfaccia. In generale, i tipi sono compatibili se l'oggetto è dello stesso tipo, eredita o implementa il tipo specificato. Per altre informazioni, vedere [operatore TypeOf](../../../../visual-basic/language-reference/operators/typeof-operator.md).  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
- Si noti che il tipo specificato non può essere una variabile o espressione. Deve essere il nome di un tipo definito, ad esempio una classe, struttura o interfaccia. Inclusi i tipi intrinseci, ad esempio `Integer` e `String`.  
+ Si noti che il tipo specificato non può essere una variabile o espressione. Deve essere il nome di un tipo definito, ad esempio una classe, struttura o interfaccia. Questo include, ad esempio tipi intrinseci `Integer` e `String`.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Object.GetType%2A>  
- <xref:System.Type?displayProperty=nameWithType>  
- <xref:System.Type.GetTypeCode%2A>  
- <xref:System.TypeCode>  
- [Variabili oggetto](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)  
- [Valori di variabili oggetto](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)  
- [Tipo di dati Object](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Object.GetType%2A>
+- <xref:System.Type?displayProperty=nameWithType>
+- <xref:System.Type.GetTypeCode%2A>
+- <xref:System.TypeCode>
+- [Variabili oggetto](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
+- [Valori di variabili oggetto](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
+- [Tipo di dati Object](../../../../visual-basic/language-reference/data-types/object-data-type.md)

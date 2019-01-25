@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d3a9cdb49c1a44dbc68cd4b7ccf4d4781ce5c539
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 071c9c9cbdb47372903ef418a4f21450d8071f8c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421892"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54614065"
 ---
 # <a name="icordebugregisterset2getregistersavailable-method"></a>Metodo ICorDebugRegisterSet2::GetRegistersAvailable
-Ottiene una matrice di byte che fornisce una bitmap dei registri disponibili.  
+Ottiene una matrice di byte che fornisce una bitmap di registri disponibili.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,28 +41,28 @@ HRESULT GetRegistersAvailable (
  [in] Dimensione della matrice `availableRegChunks`.  
   
  `availableRegChunks`  
- [out] Matrice di byte, ogni bit che corrisponde a un registro. Se un registro è disponibile, viene impostato il bit corrispondente.  
+ [out] Matrice di byte, ogni bit che corrisponde a un registro. Se è disponibile un registro, viene impostato il bit corrispondente.  
   
 ## <a name="remarks"></a>Note  
- I valori dell'enumerazione CorDebugRegister specificano i registri di microprocessori diversi. I cinque bit superiori di ogni valore sono l'indice di `availableRegChunks` matrice di byte. I tre bit inferiore di ogni valore di identificare la posizione del bit all'interno del byte indicizzato. Dato un `CorDebugRegister` valore che specifica un particolare registro, la posizione del registro nella maschera è determinato come segue:  
+ I valori dell'enumerazione CorDebugRegister specificano i registri di microprocessori diversi. I cinque bit superiore di ogni valore sono l'indice nel `availableRegChunks` matrice di byte. I tre bit inferiore di ogni valore di identificare la posizione del bit all'interno del byte indicizzata. Dato un `CorDebugRegister` valore che specifica un determinato registro, la posizione del registro nella maschera è determinato come segue:  
   
-1.  Estrarre necessaria per accedere al byte corretto in corrispondenza dell'indice di `availableRegChunks` matrice:  
+1.  Estrarre necessaria per accedere al corretto byte in corrispondenza dell'indice di `availableRegChunks` matrice:  
   
      `CorDebugRegister` valore >> 3  
   
-2.  Estrarre la posizione del bit all'interno del byte indicizzato, in bit zero è il bit meno significativo:  
+2.  Estrarre la posizione del bit all'interno del byte indicizzata, in cui il bit zero è il bit meno significativo:  
   
-     `CorDebugRegister` valore & 7  
+     `CorDebugRegister` valore di & amp;7  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ICorDebugRegisterSet2](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)  
- [Interfaccia ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ICorDebugRegisterSet2](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)
+- [Interfaccia ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2dbc6b5ffaa3a381bdd657059a682a3d12dc4cf1
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: cdd8f8a1120e3e6e82c87cc02afa5c503493da1e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850207"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54719833"
 ---
 # <a name="imetadataemitdefinemethod-method"></a>Metodo IMetaDataEmit::DefineMethod
 Crea una definizione per un metodo o una funzione globale con la firma specificata e restituisce un token per tale definizione.  
@@ -75,7 +75,7 @@ HRESULT DefineMethod (
 ## <a name="slots-in-the-v-table"></a>Slot nella V-table  
  Il runtime Usa le definizioni di metodo per configurare gli slot di v-table. Nel caso in cui devono essere ignorate, ad esempio uno o più slot per mantenere la parità con un layout di interfaccia COM, un metodo fittizio è definito in modo da occupare lo slot o slot nella tabella v. impostare il `dwMethodFlags` per il `mdRTSpecialName` pari al [CorMethodAttr](../../../../docs/framework/unmanaged-api/metadata/cormethodattr-enumeration.md) enumerazione e specificare il nome come:  
   
- VtblGap\<*SequenceNumber*>\<\_*NumeroDiSlot*>
+ _VtblGap\<*SequenceNumber*>\<\_*CountOfSlots*>
   
  in cui *SequenceNumber* è il numero di sequenza del metodo e *NumeroDiSlot* è il numero di slot da ignorare nella v-table. Se *NumeroDiSlot* viene omesso, viene usato il valore 1. Questi metodi fittizi non richiamabili da codice gestito o non gestito e qualsiasi tentativo di chiamarle da codice gestito o non gestito, genera un'eccezione. Il loro unico scopo è a occupare spazio nella v-table generata dal runtime per l'integrazione con COM.  
   
@@ -104,14 +104,14 @@ HRESULT DefineMethod (
 |`dwImplFlags`|Impostare `miCil` e `miManaged`.|Impostare `miNative` e `miUnmanaged`.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
- **Libreria:** usato come risorsa in Mscoree. dll  
+ **Libreria:** Usato come risorsa in Mscoree. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [Interfaccia IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [Interfaccia IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

@@ -2,12 +2,12 @@
 title: Uso di Service Trace Viewer per la visualizzazione di tracce correlate e risoluzione dei problemi
 ms.date: 03/30/2017
 ms.assetid: 05d2321c-8acb-49d7-a6cd-8ef2220c6775
-ms.openlocfilehash: b43c7f3d8018c119dbabf8f55ec115a00e1ac077
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c54585ab8e9d9fc039858b07ab75068e984b78db
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188794"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54594811"
 ---
 # <a name="using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting"></a>Uso di Service Trace Viewer per la visualizzazione di tracce correlate e risoluzione dei problemi
 In questo argomento viene illustrato il formato dei dati di traccia, come visualizzarlo e gli approcci che usano Service Trace Viewer per risolvere i problemi dell'applicazione.  
@@ -119,7 +119,7 @@ In questo argomento viene illustrato il formato dei dati di traccia, come visual
   
 -   È stata elaborata l'azione di addizione.  
   
--   È stata impostata la sessione di sicurezza (questo si è VERIFICATO alla prima richiesta) e sono stati elaborati tre messaggi di risposta dell'infrastruttura di sicurezza: RST, RSTR, SCT (elaborazione messaggio 1, 2, 3).  
+-   Configurare la sessione di sicurezza (questo si è verificato alla prima richiesta) e l'infrastruttura di sicurezza di tre elaborati i messaggi di risposta: RST, RSTR, SCT (elaborazione messaggio 1, 2, 3).  
   
 -   Sono state elaborate le richieste di sottrazione, moltiplicazione e divisione.  
   
@@ -138,7 +138,7 @@ Elenco delle attività client WCF in base all'ora di creazione (riquadro sinistr
  Se si fa doppio clic di elaborazione azione attività Aggiungi nel pannello sinistro, noteremo una rappresentazione grafica delle attività client WCF correlati da aggiungere. La prima attività sulla sinistra è l'attività radice (0000), che è l'attività predefinita. WCF trasferimenti all'esterno dell'attività di ambiente. Se non è definito, WCF trasferisce fuori da 0000. Qui, la seconda attività, Add di Elaborazione azione, viene trasferita fuori da 0. Quindi si vede l'attività di impostazione della sessione di sicurezza.  
   
  ![Uso del Visualizzatore di tracce](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace5.gif "e2eTrace5")  
-Visualizzazione grafica delle attività client WCF: Attività di ambiente (qui 0), Elaborazione azione e Impostazione sessione di sicurezza  
+Visualizzazione grafico delle attività client WCF: Ambiente (qui 0) attività elaborazione azione e impostazione sessione di sicurezza  
   
  Nel riquadro in alto a destra, è possibile vedere tutte le tracce relative all'attività Add di Elaborazione azione. In particolare, è stato inviato il messaggio di richiesta ("Messaggio inviato tramite canale") ed è stata ricevuta la risposta ("Ricevuto un messaggio tramite canale") nella stessa attività, come illustrato nel grafico seguente. Per maggiore chiarezza, nel grafico l'attività Impostazione sessione di sicurezza è compressa.  
   
@@ -198,7 +198,7 @@ Espansione delle attività per individuare la causa radice di un problema
  ![Uso del Visualizzatore di tracce](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace11.gif "e2eTrace11")  
 Per iniziare la risoluzione dei problemi, è anche possibile scegliere una traccia dei messaggi rossa o gialla e fare doppio clic su di essa per individuare la causa radice  
   
-## <a name="see-also"></a>Vedere anche  
- [Scenari di traccia end-to-end](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  
- [Strumento Visualizzatore di tracce dei servizi (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)  
- [Traccia](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+## <a name="see-also"></a>Vedere anche
+- [Scenari di traccia end-to-end](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
+- [Strumento Visualizzatore di tracce dei servizi (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
+- [Traccia](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)

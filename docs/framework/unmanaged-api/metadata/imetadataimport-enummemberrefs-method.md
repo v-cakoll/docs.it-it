@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c148ee0b2c96f2a387dac54eaff690ab3f05ebf8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 34a6762618780b22bcd8be376209912390524578
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447058"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592015"
 ---
 # <a name="imetadataimportenummemberrefs-method"></a>Metodo IMetaDataImport::EnumMemberRefs
 Enumera i token MemberRef che rappresentano i membri del tipo specificato.  
@@ -44,7 +44,7 @@ HRESULT EnumMemberRefs (
  [in, out] Un puntatore all'enumeratore.  
   
  `tkParent`  
- [in] Un token TypeDef, TypeRef, MethodDef o ModuleRef per il tipo i cui membri sono da enumerare.  
+ [in] Un token ModuleRef, TypeRef, MethodDef o TypeDef per il tipo i cui membri sono da enumerare.  
   
  `rMemberRefs`  
  [out] Matrice utilizzata per archiviare i token MemberRef.  
@@ -53,24 +53,24 @@ HRESULT EnumMemberRefs (
  [in] Dimensione massima della matrice `rMemberRefs`.  
   
  `pcTokens`  
- [out] Il numero effettivo di token di MemberRef restituiti in `rMemberRefs`.  
+ [out] Il numero effettivo di token MemberRef restituiti in `rMemberRefs`.  
   
 ## <a name="return-value"></a>Valore restituito  
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
 |`S_OK`|`EnumMemberRefs` stato restituito correttamente.|  
-|`S_FALSE`|Non sono presenti token MemberRef da enumerare. In tal caso, `pcTokens` è impostato su zero.|  
+|`S_FALSE`|Non sono presenti token MemberRef per enumerare. In tal caso, `pcTokens` è impostato su zero.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
- **Libreria:** inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [Interfaccia IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Interfaccia IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

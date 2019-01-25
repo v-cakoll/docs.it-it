@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 6933e753-2f2a-425b-ae84-42138c957d76
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3487b67ea49cecfd0da2b5b3f993ea54d562145d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: 90beb1487581ff4c031d6f10fb613430207dc026
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397520"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54575567"
 ---
 # <a name="contention-etw-events"></a>Eventi ETW di conflitto
 Gli eventi di conflitto vengono generati ogni volta che si verifica un conflitto per i blocchi <xref:System.Threading.Monitor?displayProperty=nameWithType> o nativi usati dal runtime. Un conflitto si verifica quando un thread attende un blocco mentre un altro thread possiede tale blocco.  
@@ -37,5 +37,5 @@ Gli eventi di conflitto vengono generati ogni volta che si verifica un conflitto
 |Flag|win:UInt8|0 per gestito, 1 per nativo.|  
 |ClrInstanceID|win:UInt16|ID univoco per l'istanza di CLR.|  
   
-## <a name="see-also"></a>Vedere anche  
- [Eventi ETW di CLR](../../../docs/framework/performance/clr-etw-events.md)
+## <a name="see-also"></a>Vedere anche
+- [Eventi ETW di CLR](../../../docs/framework/performance/clr-etw-events.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - overriding XML serialization
 - SOAP, overriding encoded XML serialization
 ms.assetid: d0791df8-04e3-46b4-a6be-fe0ed09267e8
-ms.openlocfilehash: 7deec91f605555cff94fa882c887a4adf97db58a
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: d4af79920e38f0e3db8265256a9a7a706048d7e9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415065"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54697543"
 ---
 # <a name="how-to-override-encoded-soap-xml-serialization"></a>Procedura: Eseguire l'override della serializzazione XML con codifica SOAP
   
@@ -279,9 +279,9 @@ public class Run
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Serializzazione SOAP e XML](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
-- [Attributi per il controllo della serializzazione SOAP codificata](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)  
-- [Serializzazione XML con Servizi Web XML](../../../docs/standard/serialization/xml-serialization-with-xml-web-services.md)  
-- [Procedura: Serializzare un oggetto](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
-- [Procedura: Deserializzare un oggetto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)  
+- [Serializzazione SOAP e XML](../../../docs/standard/serialization/xml-and-soap-serialization.md)
+- [Attributi per il controllo della serializzazione SOAP codificata](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)
+- [Serializzazione XML con Servizi Web XML](../../../docs/standard/serialization/xml-serialization-with-xml-web-services.md)
+- [Procedura: Serializzare un oggetto](../../../docs/standard/serialization/how-to-serialize-an-object.md)
+- [Procedura: Deserializzare un oggetto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
 - [Procedura: Serializzare un oggetto come un Stream XML con codifica SOAP](../../../docs/standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)

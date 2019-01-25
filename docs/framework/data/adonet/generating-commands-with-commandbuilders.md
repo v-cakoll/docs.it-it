@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6e3fb8b5-373b-4f9e-ab03-a22693df8e91
-ms.openlocfilehash: a8767ca492a514f3ee7a2d4688858282ec706ef7
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: f2aff8d5d8779e3c99644238ae54d30a13f00304
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150836"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54618948"
 ---
 # <a name="generating-commands-with-commandbuilders"></a>Generazione di comandi tramite CommandBuilders
 Se la proprietà `SelectCommand` viene specificata in modo dinamico in fase di esecuzione, ad esempio mediante uno strumento per query che accetta un comando testuale dell'utente, potrebbe non essere possibile specificare l'appropriato `InsertCommand`, `UpdateCommand` o `DeleteCommand` in fase di progettazione. Se <xref:System.Data.DataTable> esegue il mapping o viene generato da una singola tabella di database, è possibile usare l'oggetto <xref:System.Data.Common.DbCommandBuilder> per generare automaticamente gli oggetti `DeleteCommand`, `InsertCommand` e `UpdateCommand` di <xref:System.Data.Common.DbDataAdapter>.  
@@ -112,8 +112,8 @@ custDS.Tables.Remove(custDS.Tables["Customers"]);
 adapter.Fill(custDS, "Customers");  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Comandi e parametri](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
- [Esecuzione di un comando](../../../../docs/framework/data/adonet/executing-a-command.md)  
- [DbConnection, DbCommand e DbException](../../../../docs/framework/data/adonet/dbconnection-dbcommand-and-dbexception.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vedere anche
+- [Comandi e parametri](../../../../docs/framework/data/adonet/commands-and-parameters.md)
+- [Esecuzione di un comando](../../../../docs/framework/data/adonet/executing-a-command.md)
+- [DbConnection, DbCommand e DbException](../../../../docs/framework/data/adonet/dbconnection-dbcommand-and-dbexception.md)
+- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

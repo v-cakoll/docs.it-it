@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: stampare un file di testo con più pagine in Windows Form'
+title: 'Procedura: Stampare un File di testo con più pagine in Windows Form'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Windows Forms, printing text
 - printing [Windows Forms], text
 ms.assetid: 362427f8-03d4-4826-b49f-60ab066ad322
-ms.openlocfilehash: b8cfba338bb318139bedf5595df8bad666c201bd
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 149f0ca6df60931f8bb567ef5e4876c779825f1e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084424"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54604369"
 ---
-# <a name="how-to-print-a-multi-page-text-file-in-windows-forms"></a>Procedura: stampare un file di testo con più pagine in Windows Form
+# <a name="how-to-print-a-multi-page-text-file-in-windows-forms"></a>Procedura: Stampare un File di testo con più pagine in Windows Form
 La stampa di testo è un'operazione molto comune nelle applicazioni per Windows. La classe <xref:System.Drawing.Graphics> fornisce metodi per visualizzare oggetti (grafica o testo) su una periferica, ad esempio un monitor o una stampante.  
   
 > [!NOTE]
@@ -58,9 +58,9 @@ La stampa di testo è un'operazione molto comune nelle applicazioni per Windows.
   
 -   Riferimenti agli assembly System, System.Windows.Forms e System.Drawing.  
   
--   Per informazioni sulla compilazione di questo esempio dalla riga di comando per Visual Basic o Visual c#, vedere [compilazione dalla riga di comando](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oppure [con la creazione della riga di comando csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). È anche possibile compilare questo esempio in Visual Studio incollando il codice in un nuovo progetto.  Vedere anche [Procedura: Compilare ed eseguire un esempio di codice Windows Form completo tramite Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+-   Per informazioni sulla compilazione di questo esempio dalla riga di comando per Visual Basic o Visual c#, vedere [compilazione dalla riga di comando](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oppure [con la creazione della riga di comando csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). È anche possibile compilare questo esempio in Visual Studio incollando il codice in un nuovo progetto.  Vedere anche [come: Compilare ed eseguire un esempio di codice completo di Windows Form con Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Drawing.Graphics>  
- <xref:System.Drawing.Brush>  
- [Supporto per la stampa in Windows Forms](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Drawing.Graphics>
+- <xref:System.Drawing.Brush>
+- [Supporto per la stampa in Windows Forms](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)

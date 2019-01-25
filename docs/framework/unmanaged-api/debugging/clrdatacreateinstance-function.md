@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d9d4965751db1a70871270317a644b0acb1302f7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c22d9bf286a2241b0c1c5512e29532a01032cb3d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405980"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54648871"
 ---
 # <a name="clrdatacreateinstance-function"></a>Funzione CLRDataCreateInstance
 Crea un oggetto di interfaccia per l'elemento di destinazione specificato.  
@@ -39,25 +39,25 @@ HRESULT CLRDataCreateInstance (
   
 #### <a name="parameters"></a>Parametri  
  `iid`  
- [in] Identificatore dell'interfaccia per creare un'istanza.  
+ [in] L'identificatore dell'interfaccia da cui creare istanze.  
   
  `target`  
- [in] Un puntatore a un utente implementato [ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md) oggetto che rappresenta l'elemento di destinazione per cui creare l'oggetto di interfaccia.  
+ [in] Un puntatore a un utente implementate [ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md) oggetto che rappresenta l'elemento di destinazione per cui creare l'oggetto di interfaccia.  
   
  `iface`  
  [out] Un puntatore all'indirizzo dell'oggetto interfaccia restituita.  
   
 ## <a name="remarks"></a>Note  
- Il `ICLRDataTarget` oggetto è implementato dal writer dell'applicazione di debug. L'implementazione varia a seconda del tipo di elemento di destinazione rappresentato. L'elemento di destinazione potrebbe essere un processo, i dump di memoria, computer remoto e così via.  
+ Il `ICLRDataTarget` oggetto viene implementato dal writer dell'applicazione di debug. L'implementazione dipende dal tipo di elemento di destinazione rappresentato. L'elemento di destinazione può essere un processo, dump della memoria, computer remoto e così via.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Clrdata. idl  
+ **Intestazione:** ClrData.idl  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Funzioni statiche globali di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+## <a name="see-also"></a>Vedere anche
+- [Funzioni statiche globali di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)

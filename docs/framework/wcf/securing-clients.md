@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - clients [WCF], security considerations
 ms.assetid: 44c8578c-9a5b-4acd-8168-1c30a027c4c5
-ms.openlocfilehash: 7090d5e9cd4b44a6f894cc92ad69b34761356118
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d76b7db8a3c8f2dcdc8bdbc325a1bb14b87229ab
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188203"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54721110"
 ---
 # <a name="securing-clients"></a>Protezione di client
 In Windows Communication Foundation (WCF), il servizio impone i requisiti di sicurezza per i client. Ovvero specifica quale modalità di sicurezza utilizzare e se il client deve fornire o meno una credenziale. Il processo di protezione di un client, pertanto, è semplice: utilizzare i metadati ottenuti dal servizio (se è pubblicato) e generare un client. I metadati specificano come configurare il client. Se il servizio richiede al client di fornire una credenziale, è necessario ottenerne una che corrisponda al requisito. In questo argomento viene descritto il processo in modo dettagliato. Per altre informazioni sulla creazione di un servizio sicuro, vedere [Securing Services](../../../docs/framework/wcf/securing-services.md).  
@@ -134,7 +134,7 @@ In Windows Communication Foundation (WCF), il servizio impone i requisiti di sic
 > [!NOTE]
 >  È impossibile impostare alcuni dei valori della credenziale client utilizzando i file di configurazione dell'applicazione, ad esempio nome utente e password o i valori utente e password di Windows. È possibile specificare tali valori della credenziale solo nel codice.  
   
- Per altre informazioni sull'impostazione della credenziale client, vedere [procedura: Specify Client Credential Values](../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
+ Per altre informazioni sull'impostazione della credenziale client, vedere [come: Specificare i valori di credenziale Client](../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
   
 > [!NOTE]
 >  `ClientCredentialType` viene ignorato quando `SecurityMode` è impostato su `"TransportWithMessageCredential",` come illustrato nell'esempio di configurazione seguente.  
@@ -152,16 +152,16 @@ In Windows Communication Foundation (WCF), il servizio impone i requisiti di sic
 </wsHttpBinding>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>  
- <xref:System.ServiceModel.ClientBase%601>  
- <xref:System.ServiceModel.Description.ClientCredentials>  
- <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A>  
- <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>  
- [\<bindings>](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)  
- [Strumento Editor di configurazione (SvcConfigEditor.exe)](../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)  
- [Protezione dei servizi](../../../docs/framework/wcf/securing-services.md)  
- [Accesso ai servizi tramite client WCF](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)  
- [Procedura: Specificare valori di credenziali client](../../../docs/framework/wcf/how-to-specify-client-credential-values.md)  
- [Strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
- [Procedura: Specificare il tipo di credenziali client](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>
+- <xref:System.ServiceModel.ClientBase%601>
+- <xref:System.ServiceModel.Description.ClientCredentials>
+- <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A>
+- <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>
+- [\<bindings>](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)
+- [Strumento Editor di configurazione (SvcConfigEditor.exe)](../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)
+- [Protezione dei servizi](../../../docs/framework/wcf/securing-services.md)
+- [Accesso ai servizi tramite client WCF](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)
+- [Procedura: Specificare i valori di credenziale Client](../../../docs/framework/wcf/how-to-specify-client-credential-values.md)
+- [Strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+- [Procedura: Specificare il tipo di credenziale Client](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)

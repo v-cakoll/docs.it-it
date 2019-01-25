@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: selezionare le stampanti connesse a un utente&#39;Computer s in Windows Form'
+title: 'Procedura: Selezionare le stampanti connesse a un utente&#39;s Computer in Windows Form'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,25 +9,25 @@ helpviewer_keywords:
 - printing [Windows Forms], choosing printers
 - printers [Windows Forms], choosing
 ms.assetid: 63c1172b-2931-4ac0-953f-37f629494bbf
-ms.openlocfilehash: 5f54a74dc8118d2ebcb2df7e91f229c1807b0297
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 10f45fadab0f3480d4c475ff8ee448b8d1cddb13
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33522708"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572812"
 ---
-# <a name="how-to-choose-the-printers-attached-to-a-user39s-computer-in-windows-forms"></a>Procedura: selezionare le stampanti connesse a un utente&#39;Computer s in Windows Form
+# <a name="how-to-choose-the-printers-attached-to-a-user39s-computer-in-windows-forms"></a>Procedura: Selezionare le stampanti connesse a un utente&#39;s Computer in Windows Form
 Spesso gli utenti vogliono scegliere una stampante diversa da quella predefinita. È possibile consentire agli utenti di selezionare una stampante tra quelle attualmente installate usando il componente <xref:System.Windows.Forms.PrintDialog> . Tramite il componente <xref:System.Windows.Forms.PrintDialog> , l'oggetto <xref:System.Windows.Forms.DialogResult> del componente <xref:System.Windows.Forms.PrintDialog> viene acquisito e usato per selezionare la stampante.  
   
  Nella procedura seguente viene selezionato un file di testo da stampare sulla stampante predefinita. Viene quindi creata un'istanza della classe <xref:System.Windows.Forms.PrintDialog> .  
   
 ### <a name="to-choose-a-printer-and-then-print-a-file"></a>Per selezionare una stampante e stampare un file  
   
-1.  Selezionare la stampante da utilizzare tramite il <xref:System.Windows.Forms.PrintDialog> componente.  
+1.  Selezionare la stampante da usare tramite il <xref:System.Windows.Forms.PrintDialog> componente.  
   
-     Nell'esempio di codice seguente vengono gestiti due eventi. Nel primo, un <xref:System.Windows.Forms.Button> del controllo <xref:System.Windows.Forms.Control.Click> evento, il <xref:System.Windows.Forms.PrintDialog> viene creata un'istanza di classe e la stampante selezionata dall'utente viene acquisita il <xref:System.Windows.Forms.DialogResult> proprietà.  
+     Nell'esempio di codice seguente vengono gestiti due eventi. Nel primo, un <xref:System.Windows.Forms.Button> del controllo <xref:System.Windows.Forms.Control.Click> evento, il <xref:System.Windows.Forms.PrintDialog> viene creata un'istanza di classe e la stampante selezionata dall'utente viene acquisita nella <xref:System.Windows.Forms.DialogResult> proprietà.  
   
-     In un secondo evento, il <xref:System.Drawing.Printing.PrintDocument.PrintPage> evento del <xref:System.Drawing.Printing.PrintDocument> componente, viene stampato un documento di esempio per la stampante specificata.  
+     Nel secondo caso, il <xref:System.Drawing.Printing.PrintDocument.PrintPage> eventi del <xref:System.Drawing.Printing.PrintDocument> componente, un documento di esempio viene stampato sulla stampante specificata.  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles Button1.Click  
@@ -106,5 +106,5 @@ Spesso gli utenti vogliono scegliere una stampante diversa da quella predefinita
        System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Supporto per la stampa in Windows Forms](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)
+## <a name="see-also"></a>Vedere anche
+- [Supporto per la stampa in Windows Forms](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)

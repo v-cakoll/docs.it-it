@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: caricare entità correlate (WCF Data Services)'
+title: 'Procedura: Caricare entità correlate (WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,17 +8,17 @@ helpviewer_keywords:
 - WCF Data Services, deferred content
 - WCF Data Services, loading data
 ms.assetid: 6f143d30-d997-4e6b-bcf0-d5c394ecb108
-ms.openlocfilehash: f7aa13ac217d86be23d0957ddb6c069831cacd2d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a05d294f80943e771a298b4442a521de86ff2f19
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358163"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616966"
 ---
-# <a name="how-to-load-related-entities-wcf-data-services"></a>Procedura: caricare entità correlate (WCF Data Services)
-Per caricare entità associate in [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], è possibile usare il metodo <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> sulla classe <xref:System.Data.Services.Client.DataServiceContext>. È inoltre possibile utilizzare il <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> metodo il <xref:System.Data.Services.Client.DataServiceQuery%601> per richiedere che le entità correlate vengano caricate rapidamente nella stessa risposta alla query.  
+# <a name="how-to-load-related-entities-wcf-data-services"></a>Procedura: Caricare entità correlate (WCF Data Services)
+Per caricare entità associate in [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], è possibile usare il metodo <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> sulla classe <xref:System.Data.Services.Client.DataServiceContext>. È anche possibile usare la <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> metodo su di <xref:System.Data.Services.Client.DataServiceQuery%601> in modo da richiedere che le entità correlate vengano caricate rapidamente nella stessa risposta alla query.  
   
- Nell'esempio riportato in questo argomento vengono usati il servizio dati Northwind di esempio e le classi del servizio dati client generate automaticamente. Questo servizio e le classi di dati client vengono create quando si completa la [Guida rapida di WCF Data Services](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  
+ Nell'esempio riportato in questo argomento vengono usati il servizio dati Northwind di esempio e le classi del servizio dati client generate automaticamente. Questo servizio e le classi dati client vengono create quando si completa la [Guida rapida di WCF Data Services](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrato come caricare in modo esplicito l'entità `Customer` correlata a ogni istanza di `Orders` restituita.  
@@ -32,5 +32,5 @@ Per caricare entità associate in [!INCLUDE[ssAstoria](../../../../includes/ssas
  [!code-csharp[Astoria Northwind Client#ExpandOrderDetails](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#expandorderdetails)]
  [!code-vb[Astoria Northwind Client#ExpandOrderDetails](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#expandorderdetails)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Esecuzione di query sul servizio dati](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)
+## <a name="see-also"></a>Vedere anche
+- [Esecuzione di query sul servizio dati](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)

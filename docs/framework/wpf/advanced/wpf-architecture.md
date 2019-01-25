@@ -16,12 +16,12 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: 50a7e1b08c31b5d0fb779dabf617a08bbb4c6cf4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 7214304d8575fb6ef8774d55eaf29ad714235123
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195918"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54634584"
 ---
 # <a name="wpf-architecture"></a>Architettura WPF
 In questo argomento fornisce una presentazione guidata della gerarchia di classi Windows Presentation Foundation (WPF). Viene illustrata la maggior parte dei sottosistemi principali di [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]e ne vengono descritte le modalità di interazione. Vengono inoltre forniti i dettagli relativi ad alcune scelte effettuate dagli architetti di [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
@@ -141,14 +141,14 @@ In questo argomento fornisce una presentazione guidata della gerarchia di classi
   
  Lo sviluppo di applicazioni basate su [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] dovrebbe risultare molto familiare per gli utenti. È possibile impostare proprietà, utilizzare oggetti e associare dati in modo molto simile a quanto avviene in [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] o [!INCLUDE[TLA#tla_aspnet](../../../../includes/tlasharptla-aspnet-md.md)]. Un'indagine più approfondita dell'architettura di [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], evidenzierà la possibilità di creare applicazioni molto più ricche in cui i dati vengono considerati gli elementi principali dell'applicazione.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Windows.Media.Visual>  
- <xref:System.Windows.UIElement>  
- <xref:System.Windows.Input.ICommand>  
- <xref:System.Windows.FrameworkElement>  
- <xref:System.Windows.Threading.DispatcherObject>  
- <xref:System.Windows.Input.CommandBinding>  
- <xref:System.Windows.Controls.Control>  
- [Panoramica sul data binding](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Layout](../../../../docs/framework/wpf/advanced/layout.md)  
- [Cenni preliminari sull'animazione](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Windows.Media.Visual>
+- <xref:System.Windows.UIElement>
+- <xref:System.Windows.Input.ICommand>
+- <xref:System.Windows.FrameworkElement>
+- <xref:System.Windows.Threading.DispatcherObject>
+- <xref:System.Windows.Input.CommandBinding>
+- <xref:System.Windows.Controls.Control>
+- [Panoramica sul data binding](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [Layout](../../../../docs/framework/wpf/advanced/layout.md)
+- [Cenni preliminari sull'animazione](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)

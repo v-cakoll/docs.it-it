@@ -5,12 +5,12 @@ helpviewer_keywords:
 - PropertyPath object [WPF]
 - XAML [WPF], PropertyPath object
 ms.assetid: 0e3cdf07-abe6-460a-a9af-3764b4fd707f
-ms.openlocfilehash: 24dd4ca5663f2e6d98ed3888f07329724fdc353d
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 7c6f658558618e0812ea2537837577cbf011edd4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042543"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54648755"
 ---
 # <a name="propertypath-xaml-syntax"></a>Sintassi XAML di PropertyPath
 Il <xref:System.Windows.PropertyPath> oggetto supporta un inline complessa [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sintassi per l'impostazione di varie proprietà che accettano il <xref:System.Windows.PropertyPath> tipo come relativo valore. Questo argomento viene descritta la <xref:System.Windows.PropertyPath> sintassi quando viene applicato a tipi di sintassi di associazione e l'animazione.  
@@ -196,7 +196,7 @@ or
   
  In generale, <xref:System.Windows.PropertyPath> è progettata per usare due costruttori diversi, uno per gli utilizzi di binding e animazione più semplici e uno per gli utilizzi di animazione complessi. Usare il <xref:System.Windows.PropertyPath.%23ctor%28System.Object%29> firma per l'associazione utilizzi, in cui l'oggetto è una stringa. Usare la <xref:System.Windows.PropertyPath.%23ctor%28System.Object%29> firma per i percorsi di animazione a un solo passaggio, in cui l'oggetto è un <xref:System.Windows.DependencyProperty>. Usare il <xref:System.Windows.PropertyPath.%23ctor%28System.String%2CSystem.Object%5B%5D%29> firma per le animazioni complesse. Quest'ultimo costruttore usa una stringa token per il primo parametro e una matrice di oggetti che riempiono le posizioni nella stringa token per definire una relazione di percorso di proprietà.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Windows.PropertyPath>  
- [Panoramica sul data binding](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Cenni preliminari sugli storyboard](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Windows.PropertyPath>
+- [Panoramica sul data binding](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [Cenni preliminari sugli storyboard](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, authentication
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
-ms.openlocfilehash: 92efda893d0d96b5d0f6de90364faec0b85c79aa
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a68a291b1974e86c9a4f16f9d90a879649076533
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513247"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54595136"
 ---
 # <a name="debugging-windows-authentication-errors"></a>Debug degli errori di autenticazione di Windows
 Quando si utilizza l'autenticazione di Windows come meccanismo di sicurezza, i processi di sicurezza vengono gestiti dall'interfaccia SSPI (Security Support Provider Interface). Quando si verificano errori di sicurezza a livello SSPI, questi vengono riportati da Windows Communication Foundation (WCF). In questo argomento viene fornito un framework e un insieme di domande per facilitare la diagnosi degli errori.  
@@ -45,13 +45,13 @@ Quando si utilizza l'autenticazione di Windows come meccanismo di sicurezza, i p
   
  In particolare, i quattro tipi di account includono:  
   
--   Utente locale: profilo utente del computer. Ad esempio: `MachineName\Administrator` o `MachineName\ProfileName`.  
+-   Utente locale: Profilo utente del computer. Ad esempio: `MachineName\Administrator` o `MachineName\ProfileName`.  
   
--   Sistema locale: account predefinito SYSTEM in un computer non associato a un dominio.  
+-   Sistema locale: L'account predefinito SYSTEM in un computer non appartenente a un dominio.  
   
--   Utente del dominio: account utente in un dominio Windows. Ad esempio: `DomainName\ProfileName`.  
+-   Utente di dominio: Un account utente in un dominio di Windows. Ad esempio: `DomainName\ProfileName`.  
   
--   Computer del dominio: processo con identità di computer in esecuzione in un computer associato a un dominio Windows. Ad esempio: `MachineName\Network Service`.  
+-   Computer del dominio: Un processo con identità del computer in esecuzione in un computer aggiunto a un dominio di Windows. Ad esempio: `MachineName\Network Service`.  
   
 > [!NOTE]
 >  La credenziale del servizio viene acquisita quando viene chiamato il metodo <xref:System.ServiceModel.ICommunicationObject.Open%2A> della classe <xref:System.ServiceModel.ServiceHost>. La credenziale del client viene letta ogni volta che il client invia un messaggio.  
@@ -139,15 +139,15 @@ Quando si utilizza l'autenticazione di Windows come meccanismo di sicurezza, i p
  [!code-vb[C_DebuggingWindowsAuth#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_debuggingwindowsauth/vb/source.vb#3)]  
   
 #### <a name="sspi-is-not-available"></a>L'interfaccia SSPI non è disponibile  
- I sistemi operativi seguenti non supportano l'autenticazione di Windows quando viene utilizzato come un server: [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Media Center Edition e [!INCLUDE[wv](../../../../includes/wv-md.md)]Home Edition.  
+ I sistemi operativi seguenti non supportano l'autenticazione di Windows quando viene utilizzato come un server: [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Media Center Edition e [!INCLUDE[wv](../../../../includes/wv-md.md)]Home Edition.  
   
 #### <a name="developing-and-deploying-with-different-identities"></a>Sviluppo e distribuzione con identità diverse  
  Se l'applicazione viene sviluppata in un computer e distribuita in un altro e si utilizzano diversi tipi di account per l'autenticazione in ogni computer, potrebbe verificarsi un comportamento diverso. Si supponga, ad esempio, di sviluppare l'applicazione in un computer Windows XP Pro utilizzando la modalità di autenticazione `SSPI Negotiated`. Se si utilizza un account utente locale per l'autenticazione, verrà utilizzato il protocollo NTLM. Una volta sviluppata l'applicazione, il servizio viene distribuito in un computer Windows Server 2003 in cui è in esecuzione un account di dominio. A questo punto il client non è in grado di autenticare il servizio poiché utilizza Kerberos e un controller di dominio.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.Security.WindowsClientCredential>  
- <xref:System.ServiceModel.Security.WindowsServiceCredential>  
- <xref:System.ServiceModel.Security.WindowsClientCredential>  
- <xref:System.ServiceModel.ClientBase%601>  
- [Delega e rappresentazione](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)  
- [Scenari non supportati](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.ServiceModel.Security.WindowsClientCredential>
+- <xref:System.ServiceModel.Security.WindowsServiceCredential>
+- <xref:System.ServiceModel.Security.WindowsClientCredential>
+- <xref:System.ServiceModel.ClientBase%601>
+- [Delega e rappresentazione](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)
+- [Scenari non supportati](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)

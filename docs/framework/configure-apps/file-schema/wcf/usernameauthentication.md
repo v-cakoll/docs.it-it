@@ -1,23 +1,23 @@
 ---
-title: '&lt;UserNameAuthentication&gt;'
+title: '&lt;userNameAuthentication&gt;'
 ms.date: 03/30/2017
 ms.assetid: 24d8b398-770f-418f-ba23-c4325419cfa6
-ms.openlocfilehash: 3ade257a81e218fa123a08624123af614df84956
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 1b8a85a3b2699aa88db24d1f7afee3de67dbf39b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150045"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54656643"
 ---
-# <a name="ltusernameauthenticationgt"></a>&lt;UserNameAuthentication&gt;
+# <a name="ltusernameauthenticationgt"></a>&lt;userNameAuthentication&gt;
 Specifica le credenziali di un servizio in base a nome utente e password.  
   
  \<system.ServiceModel>  
-\<i comportamenti >  
+\<behaviors>  
 \<serviceBehaviors>  
-\<comportamento >  
+\<behavior>  
 \<serviceCredentials>  
-\<userNameAuthentication >  
+\<userNameAuthentication>  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,7 +44,7 @@ Specifica le credenziali di un servizio in base a nome utente e password.
 |`includeWindowsGroups`|Valore booleano che specifica se i gruppi di Windows sono inclusi nel contesto di sicurezza. Il valore predefinito è `true`.<br /><br /> L'impostazione di questo attributo su `true` determina un effetto sulle prestazioni in quanto comporta un'espansione completa del gruppo. Impostare questa proprietà su `false` se non è necessario stabilire l'elenco di gruppi a cui appartiene un utente.|  
 |`maxCacheLogonTokens`|Numero intero che specifica il numero massimo di token di accesso da memorizzare nella cache. Questo valore deve essere maggiore di zero. Il valore predefinito è 128.|  
 |`membershipProviderName`|Quando l'attributo `clientCredentialType` di un'associazione viene impostato su `username`, viene eseguito il mapping del nome utente sugli account di Windows. È possibile eseguire l'override di questo comportamento usando questo attributo, il quale è una stringa che contiene il nome del valore <xref:System.Web.Security.MembershipProvider> che fornisce il meccanismo di convalida della password appropriato.|  
-|`userNamePasswordValidationMode`|Specifica il modo in cui viene convalidata la password del nome utente. I valori validi sono:<br /><br /> -Windows<br />-MembershipProvider<br />-Custom<br /><br /> L'impostazione predefinita è Windows. L'attributo è di tipo <xref:System.ServiceModel.Security.UserNamePasswordValidationMode>.|  
+|`userNamePasswordValidationMode`|Specifica il modo in cui viene convalidata la password del nome utente. I valori validi sono:<br /><br /> -   Windows<br />-MembershipProvider<br />-Custom<br /><br /> L'impostazione predefinita è Windows. L'attributo è di tipo <xref:System.ServiceModel.Security.UserNamePasswordValidationMode>.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
@@ -60,8 +60,8 @@ Specifica le credenziali di un servizio in base a nome utente e password.
   
  Se nessuna delle associazioni usate da un servizio viene configurata per usare l'autenticazione di Windows per nome utente/password, le impostazioni relative alla memorizzazione nella cache dei token di accesso vengono ignorate. Tali impostazioni includono `cacheLogonTokenLifetime`, `cacheLogonTokens` e `maxCacheLogonTokens`.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.Configuration.UserNameServiceElement>  
- <xref:System.ServiceModel.Description.ServiceCredentials.UserNameAuthentication%2A>  
- <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential>  
- <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.UserNameAuthentication%2A>
+## <a name="see-also"></a>Vedere anche
+- <xref:System.ServiceModel.Configuration.UserNameServiceElement>
+- <xref:System.ServiceModel.Description.ServiceCredentials.UserNameAuthentication%2A>
+- <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential>
+- <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.UserNameAuthentication%2A>

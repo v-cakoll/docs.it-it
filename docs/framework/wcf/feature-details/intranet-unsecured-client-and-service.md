@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f450f5d4-3547-47ec-9320-2809e6a12634
-ms.openlocfilehash: eb165b69e1312363a8cc7c1a3ceea66a422d54f7
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 7583eab4673dc14380f18456d1713351dbc74f17
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143467"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603118"
 ---
 # <a name="intranet-unsecured-client-and-service"></a>Client e servizio Intranet non protetti
 La figura seguente illustra un semplice servizio Windows Communication Foundation (WCF) sviluppato per fornire informazioni su una rete privata protetta a un'applicazione WCF. Sicurezza non è necessaria perché i dati sono di importanza bassa, la rete è considerata naturalmente protetta o sicurezza viene fornita tramite un livello sottostante l'infrastruttura WCF.  
@@ -112,7 +112,7 @@ La figura seguente illustra un semplice servizio Windows Communication Foundatio
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.NetTcpBinding>  
- [Panoramica della sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Modello di sicurezza per Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.ServiceModel.NetTcpBinding>
+- [Panoramica della sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Modello di sicurezza per Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

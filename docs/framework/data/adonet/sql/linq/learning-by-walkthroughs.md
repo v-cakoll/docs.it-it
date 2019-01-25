@@ -2,12 +2,12 @@
 title: Apprendimento tramite procedure dettagliate
 ms.date: 03/30/2017
 ms.assetid: a8ae2965-6a49-4155-89b0-7fab2c488ab1
-ms.openlocfilehash: 1386d0e8fadddab5cd15818cb616bf331262e654
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 1ddd2b8dacaccc0911a7e5a2bd684bba0fa16012
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47401498"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589917"
 ---
 # <a name="learning-by-walkthroughs"></a>Apprendimento tramite procedure dettagliate
 Il [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentazione vengono fornite diverse procedure dettagliate. In questo argomento vengono discussi alcuni problemi generali relativi alle procedure, inclusa la risoluzione dei problemi, e vengono forniti i collegamenti a diverse procedure dettagliate di base per acquisire familiarità con [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
@@ -22,17 +22,17 @@ Il [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documenta
   
 |Obiettivo|Visual Basic|C#|  
 |---------------|------------------|---------|  
-|Creare una classe di entità ed eseguire una semplice query.|[Procedura dettagliata: Modello a oggetti e query semplici (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-visual-basic.md)|[Procedura dettagliata: Modello a oggetti e query semplici (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md)|  
-|Aggiungere una seconda classe ed eseguire una query più complessa.<br /><br /> Richiede il completamento della procedura dettagliata precedente.|[Procedura dettagliata: eseguire query tra relazioni (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-visual-basic.md)|[Procedura dettagliata: eseguire query tra relazioni (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md)|  
-|Aggiungere, modificare ed eliminare elementi nel database.|[Procedura dettagliata: modifica dei dati (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-visual-basic.md)|[Procedura dettagliata: modifica dei dati (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)|  
-|Usare stored procedure.|[Procedura dettagliata: utilizzo solo di stored procedure (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-visual-basic.md)|[Procedura dettagliata: utilizzo solo di stored procedure (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-csharp.md)|  
+|Creare una classe di entità ed eseguire una semplice query.|[Procedura dettagliata: Modello a oggetti semplice ed eseguire una Query (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-visual-basic.md)|[Procedura dettagliata: Modello a oggetti semplice ed eseguire una Query (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md)|  
+|Aggiungere una seconda classe ed eseguire una query più complessa.<br /><br /> Richiede il completamento della procedura dettagliata precedente.|[Procedura dettagliata: Eseguire query tra relazioni (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-visual-basic.md)|[Procedura dettagliata: Eseguire query tra relazioni (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md)|  
+|Aggiungere, modificare ed eliminare elementi nel database.|[Procedura dettagliata: La modifica dei dati (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-visual-basic.md)|[Procedura dettagliata: La modifica dei dati (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)|  
+|Usare stored procedure.|[Procedura dettagliata: Utilizzo solo di Stored procedure (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-visual-basic.md)|[Procedura dettagliata: Utilizzo solo di Stored procedure (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-csharp.md)|  
   
 ## <a name="general"></a>Generale  
  Le informazioni seguenti riguardano queste procedure dettagliate in generale:  
   
--   Ambiente: In ogni [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] procedura dettagliata Usa Visual Studio come ambiente di sviluppo integrato (IDE).  
+-   Ambiente: Ogni [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] procedura dettagliata Usa Visual Studio come ambiente di sviluppo integrato (IDE).  
   
--   Motori SQL: queste procedure dettagliate sono scritte per essere implementate tramite SQL Server Express. Se non si dispone di SQL Server Express, è possibile scaricarlo gratuitamente. Per altre informazioni, vedere [download dei database di esempio](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+-   Motori SQL: Queste procedure dettagliate sono scritte per essere implementate tramite SQL Server Express. Se non si dispone di SQL Server Express, è possibile scaricarlo gratuitamente. Per altre informazioni, vedere [download dei database di esempio](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
     > [!NOTE]
     >  Nelle procedure dettagliate di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] viene usato un nome file come stringa di connessione. La possibilità di specificare semplicemente un nome file è un aspetto pratico di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] per gli utenti di SQL Server Express. Prestare sempre attenzione ai problemi di sicurezza. Per altre informazioni, vedere [sicurezza in LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md).  
@@ -87,5 +87,5 @@ Il [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documenta
   
 3.  Fare doppio clic su **SQL Server (SQLEXPRESS)**, quindi fare clic su **riavviare**.  
   
-## <a name="see-also"></a>Vedere anche  
- [Introduzione](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)
+## <a name="see-also"></a>Vedere anche
+- [Introduzione](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)

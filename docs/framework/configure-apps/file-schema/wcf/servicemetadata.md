@@ -2,21 +2,21 @@
 title: '&lt;serviceMetadata&gt;'
 ms.date: 03/30/2017
 ms.assetid: 2b4c3b4c-31d4-4908-a9b7-5bb411c221f2
-ms.openlocfilehash: 4cff141d7e012e865280e4397e6e3d65075a8f45
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 3e363e90f9436073a30c228eca5c962763418e8c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150981"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610207"
 ---
 # <a name="ltservicemetadatagt"></a>&lt;serviceMetadata&gt;
 Specifica la pubblicazione dei metadati del servizio e delle informazioni associate.  
   
 \<system.serviceModel>  
-\<i comportamenti >  
+\<behaviors>  
 \<serviceBehaviors>  
-\<comportamento >  
-\<serviceMetadata >  
+\<behavior>  
+\<serviceMetadata>  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -116,8 +116,8 @@ Specifica la pubblicazione dei metadati del servizio e delle informazioni associ
 </configuration>
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.Configuration.ServiceMetadataPublishingElement>  
- <xref:System.ServiceModel.Description.ServiceMetadataBehavior>  
- [Comportamenti di sicurezza](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
- [Comportamento di pubblicazione dei metadati](../../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.ServiceModel.Configuration.ServiceMetadataPublishingElement>
+- <xref:System.ServiceModel.Description.ServiceMetadataBehavior>
+- [Comportamenti di sicurezza](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
+- [Comportamento di pubblicazione dei metadati](../../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md)

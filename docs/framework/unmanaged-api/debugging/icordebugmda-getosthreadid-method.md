@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 20833624b4b853a1a56964e11a25f446c6b39053
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e67e3bc3477e078a4f1d963cdd768676503dc953
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33414713"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54607663"
 ---
 # <a name="icordebugmdagetosthreadid-method"></a>Metodo ICorDebugMDA::GetOSThreadId
-Ottiene l'identificatore del thread del sistema operativo (sistema operativo) su cui l'assistente al debug gestito (MDA) rappresentato da [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md) è in esecuzione.  
+Ottiene l'identificatore del thread del sistema operativo (OS) su cui l'assistente al debug gestito (MDA) rappresentato da [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md) è in esecuzione.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,20 +37,20 @@ HRESULT GetOSThreadId (
   
 #### <a name="parameters"></a>Parametri  
  `pOsTid`  
- [out] Puntatore all'identificatore del thread del sistema operativo.  
+ [out] Un puntatore all'identificatore del thread del sistema operativo.  
   
 ## <a name="remarks"></a>Note  
- Il thread del sistema operativo viene utilizzato invece di un oggetto ICorDebugThread per consentire situazioni in cui un assistente al debug gestito è generato su un thread nativo o su un thread gestito non ancora entrato nel codice gestito.  
+ Il thread del sistema operativo verrà usato invece di un oggetto ICorDebugThread per consentire situazioni in cui un assistente al debug gestito viene attivato su un thread nativo o su un thread gestito che non ha ancora inserito codice gestito.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)  
- [Diagnostica degli errori tramite gli assistenti al debug gestito](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)
+- [Diagnostica degli errori tramite gli assistenti al debug gestito](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30996
 ms.assetid: 6e183fe0-8888-43ed-a062-01571079455f
-ms.openlocfilehash: 9d786fd1e929129c420b7bec62efd0bd445d85eb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1fa66a3c50b5c1eadd4c63b92c57ab60e1a11076
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33586386"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54595994"
 ---
 # <a name="initializer-expected"></a>Previsto inizializzatore
-Si è provato a dichiarare un'istanza di una classe utilizzando un inizializzatore di oggetto in cui l'inizializzazione di elenco è vuoto, come illustrato nell'esempio seguente.  
+Si è provato a dichiarare un'istanza di una classe usando un inizializzatore di oggetto in cui l'inizializzazione di elenco è vuota, come illustrato nell'esempio seguente.  
   
  `' Not valid.`  
   
@@ -31,6 +31,6 @@ Si è provato a dichiarare un'istanza di una classe utilizzando un inizializzato
   
 1.  Inizializzare almeno un campo o proprietà nell'inizializzatore o non utilizzare un inizializzatore di oggetto.  
   
-## <a name="see-also"></a>Vedere anche  
- [Inizializzatori di oggetto: tipi denominati e tipi anonimi](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
- [Procedura: Dichiarare un oggetto usando un inizializzatore di oggetto](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)
+## <a name="see-also"></a>Vedere anche
+- [Inizializzatori di oggetto: Tipi denominati e anonimi](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [Procedura: Dichiarare un oggetto usando un inizializzatore di oggetto](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)

@@ -2,12 +2,12 @@
 title: System.ServiceModel.Channels.PeerNodeAuthenticationFailure
 ms.date: 03/30/2017
 ms.assetid: 0b50f782-ca06-4a82-aa7f-71f78ddc5177
-ms.openlocfilehash: 633f497950ab14d7715537eed8f5cc80e7a350a0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1ed037c548f1d833f2a20118ee1e017cd19e3391
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33479853"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54628240"
 ---
 # <a name="systemservicemodelchannelspeernodeauthenticationfailure"></a>System.ServiceModel.Channels.PeerNodeAuthenticationFailure
 L’handshake di sicurezza con un router adiacente potenziale non è riuscito.  
@@ -20,8 +20,8 @@ L’handshake di sicurezza con un router adiacente potenziale non è riuscito.
 ## <a name="troubleshooting"></a>Risoluzione dei problemi  
  Assicurarsi che tutti i router adiacenti abbiano le credenziali di sicurezza appropriate.  
   
-## <a name="see-also"></a>Vedere anche  
- [Sicurezza del canale peer](../../../../../docs/framework/wcf/feature-details/peer-channel-security.md)  
- [Traccia](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [Uso delle tracce per risolvere i problemi di un'applicazione](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [Amministrazione e diagnostica](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a>Vedere anche
+- [Sicurezza del canale peer](../../../../../docs/framework/wcf/feature-details/peer-channel-security.md)
+- [Traccia](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [Uso delle tracce per risolvere i problemi di un'applicazione](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [Amministrazione e diagnostica](../../../../../docs/framework/wcf/diagnostics/index.md)

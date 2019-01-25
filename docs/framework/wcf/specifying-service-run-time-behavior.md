@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5c5450ea-6af1-4b75-a267-613d0ac54707
-ms.openlocfilehash: 0dbf0a61e1d1183b3f4491002b04156ccf6da0ce
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 759a5dd4cecbaf804d1ccf29fa504c2f5e1ad7f8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183737"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54566739"
 ---
 # <a name="specifying-service-run-time-behavior"></a>Specifica del comportamento in fase di esecuzione del servizio
 Dopo aver definito un contratto di servizio ([Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md)) e implementato tale contratto ([Implementing Service Contracts](../../../docs/framework/wcf/implementing-service-contracts.md)), è possibile configurare il comportamento operativo del runtime del servizio. In questo argomento vengono illustrati i comportamenti dell'operazione e del servizio forniti dal sistema e viene descritto dove trovare ulteriori informazioni per creare nuovi comportamenti. Mentre alcuni comportamenti vengono applicati come attributi, molti vengono applicati utilizzando un file di configurazione dell'applicazione o a livello di codice. Per altre informazioni sulla configurazione dell'applicazione di servizio, vedere [configurazione dei servizi](../../../docs/framework/wcf/configuring-services.md).  
@@ -64,7 +64,7 @@ Dopo aver definito un contratto di servizio ([Designing Service Contracts](../..
  Si noti che quando un oggetto viene fornito a questo costruttore, alcune funzionalità correlate a Windows Communication Foundation (WCF) comportamento di istanza funzionano in modo diverso. La chiamata, ad esempio, di <xref:System.ServiceModel.InstanceContext.ReleaseServiceInstance%2A?displayProperty=nameWithType> non ha effetto quando viene fornita l'istanza di un oggetto noto. Analogamente, qualsiasi altro meccanismo di rilascio delle istanze viene ignorato. La classe <xref:System.ServiceModel.ServiceHost> si comporta sempre come se la proprietà <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> fosse impostata su <xref:System.ServiceModel.ReleaseInstanceMode.None?displayProperty=nameWithType> per tutte le operazioni.  
   
 ## <a name="other-service-endpoint-contract-and-operation-behaviors"></a>Altri comportamenti del servizio, dell'endpoint, del contratto e dell'operazione  
- I comportamenti del servizio, ad esempio l'attributo <xref:System.ServiceModel.ServiceBehaviorAttribute> , agiscono su un servizio intero. Se, ad esempio, si imposta la proprietà <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A?displayProperty=nameWithType> su <xref:System.ServiceModel.ConcurrencyMode.Multiple?displayProperty=nameWithType>, è necessario gestire i problemi di sincronizzazione dei thread all'interno di ogni operazione in quel servizio. I comportamenti dell'endpoint operano all'interno di un endpoint. Molti dei comportamenti dell'endpoint forniti dal sistema interessano la funzionalità client. I comportamenti del contratto operano a livello di contratto e i comportamenti dell'operazione modificano il recapito dell'operazione.  
+ I comportamenti del servizio, ad esempio l'attributo <xref:System.ServiceModel.ServiceBehaviorAttribute> , agiscono su un servizio intero. Se, ad esempio, si imposta la proprietà <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A?displayProperty=nameWithType> su <xref:System.ServiceModel.ConcurrencyMode.Multiple?displayProperty=nameWithType> , è necessario gestire i problemi di sincronizzazione dei thread all'interno di ogni operazione in quel servizio. I comportamenti dell'endpoint operano all'interno di un endpoint. Molti dei comportamenti dell'endpoint forniti dal sistema interessano la funzionalità client. I comportamenti del contratto operano a livello di contratto e i comportamenti dell'operazione modificano il recapito dell'operazione.  
   
  Molti di questi comportamenti vengono implementati sugli attributi e vengono utilizzati come si utilizzano gli attributi <xref:System.ServiceModel.ServiceBehaviorAttribute> e <xref:System.ServiceModel.OperationBehaviorAttribute> , applicandoli alla classe di servizio appropriata o all'implementazione dell'operazione. Altri comportamenti, ad esempio gli oggetti <xref:System.ServiceModel.Description.ServiceMetadataBehavior> o <xref:System.ServiceModel.Description.ServiceDebugBehavior> , vengono in genere applicati utilizzando un file di configurazione dell'applicazione, sebbene sia possibile utilizzarli anche a livello di programmazione.  
   
@@ -120,6 +120,6 @@ Dopo aver definito un contratto di servizio ([Designing Service Contracts](../..
   
 -   <xref:System.ServiceModel.TransactionFlowAttribute>. Specifica il livello al quale un'operazione del servizio accetta un'intestazione di transazione.  
   
-## <a name="see-also"></a>Vedere anche  
- [Configurazione dei servizi](../../../docs/framework/wcf/configuring-services.md)  
- [Procedura: Controllare le istanze del servizio](../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)
+## <a name="see-also"></a>Vedere anche
+- [Configurazione dei servizi](../../../docs/framework/wcf/configuring-services.md)
+- [Procedura: Controllare le istanze del servizio](../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)

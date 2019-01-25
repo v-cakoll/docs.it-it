@@ -5,12 +5,12 @@ helpviewer_keywords:
 - layout [WPF], automatic
 - automatic layout [WPF]
 ms.assetid: 6fed9264-18bb-4d05-8867-1fe356c6f687
-ms.openlocfilehash: d6ed0da9be32a4a4de4111acfb2d347b7bd5096d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4cb351b0db83bd83c17aa4aca004b310dc957437
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201556"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54609603"
 ---
 # <a name="use-automatic-layout-overview"></a>Cenni preliminari sull'utilizzo del layout automatico
 In questo argomento illustra le linee guida per gli sviluppatori su come scrivere [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] le applicazioni con localizzabile [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]. In passato, la localizzazione di un'interfaccia utente era un processo molto tempo. Ogni lingua dell'interfaccia utente è stato adattato per richiedeva modifiche pixel per pixel. Oggi, con la progettazione e standard, di codifica corretti [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] può essere costruito in modo che i localizzatori hanno ridimensionamento e riposizionamento a scopo. L'approccio alla scrittura di applicazioni che è possibile ridimensionare e riposizionare con maggiore semplicità viene definito layout automatico e può essere ottenuta utilizzando [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] progettazione dell'applicazione.  
@@ -107,7 +107,7 @@ Grid
   
  **Nota** per l'esempio di codice completo, vedere [condivisione di proprietà di ridimensionamento tra griglie](../../../../docs/framework/wpf/controls/how-to-share-sizing-properties-between-grids.md)  
   
-## <a name="see-also"></a>Vedere anche  
- [Globalizzazione per WPF](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)  
- [Utilizzare un layout automatico per creare un pulsante](../../../../docs/framework/wpf/advanced/how-to-use-automatic-layout-to-create-a-button.md)  
- [Usare una griglia per il layout automatico](../../../../docs/framework/wpf/advanced/how-to-use-a-grid-for-automatic-layout.md)
+## <a name="see-also"></a>Vedere anche
+- [Globalizzazione per WPF](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)
+- [Utilizzare un layout automatico per creare un pulsante](../../../../docs/framework/wpf/advanced/how-to-use-automatic-layout-to-create-a-button.md)
+- [Usare una griglia per il layout automatico](../../../../docs/framework/wpf/advanced/how-to-use-a-grid-for-automatic-layout.md)

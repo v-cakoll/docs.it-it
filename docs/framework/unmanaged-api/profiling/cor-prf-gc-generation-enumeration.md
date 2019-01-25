@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8283139566050b1858a003316dc46581822a9bbb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 15bd3ed8f1642e44ecf9c4df49feebd72eeac8c2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33450154"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54590133"
 ---
 # <a name="corprfgcgeneration-enumeration"></a>Enumerazione COR_PRF_GC_GENERATION
 Identifica una generazione di garbage collection.  
@@ -47,20 +47,20 @@ typedef enum {
 |`COR_PRF_GC_LARGE_OBJECT_HEAP`|L'oggetto viene archiviato nell'heap degli oggetti di grandi dimensioni.|  
   
 ## <a name="remarks"></a>Note  
- Il garbage collector consente di migliorare le prestazioni di gestione della memoria dividendo gli oggetti in generazioni in base all'età. Il garbage collector attualmente utilizza tre generazioni, numerate 0, 1 e 2, oltre a un segmento di un heap speciale che viene utilizzato per oggetti di grandi dimensioni. Gli oggetti la cui dimensione è maggiore di un particolare valore vengono archiviati nell'heap degli oggetti di grandi dimensioni. Gli altri oggetti allocati inizialmente appartengono alla generazione 0. Tutti gli oggetti esistenti dopo la garbage collection nella generazione 0 vengono promossi alla generazione 1. Gli oggetti che esistono dopo la garbage collection nella generazione 1 promossi alla generazione 2.  
+ Il garbage collector consente di migliorare le prestazioni di gestione della memoria suddividendo gli oggetti in base all'età generazioni. Attualmente, il garbage collector Usa tre generazioni, numerate 0, 1 e 2, oltre a un segmento dell'heap speciale che viene utilizzato per oggetti di grandi dimensioni. Gli oggetti la cui dimensione è maggiore di un particolare valore vengono archiviati nell'heap degli oggetti di grandi dimensioni. Gli altri oggetti allocati iniziano appartengono alla generazione 0. Tutti gli oggetti esistenti dopo la garbage collection nella generazione 0 vengono promossi alla generazione 1. Gli oggetti che esistono dopo la garbage collection nella generazione 1 promossi alla generazione 2.  
   
- L'utilizzo di generazioni significa che il garbage collector deve utilizzare solo un subset degli oggetti allocati in qualsiasi momento.  
+ L'uso di generazioni significa che il garbage collector deve usare solo un subset degli oggetti allocati in qualsiasi momento.  
   
- Il `COR_PRF_GC_GENERATION` enumerazione viene utilizzata per la [COR_PRF_GC_GENERATION_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md) struttura.  
+ Il `COR_PRF_GC_GENERATION` enumerazione viene utilizzata per il [COR_PRF_GC_GENERATION_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md) struttura.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Enumerazioni di profilatura](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+## <a name="see-also"></a>Vedere anche
+- [Enumerazioni di profilatura](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

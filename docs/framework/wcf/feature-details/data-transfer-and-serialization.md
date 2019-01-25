@@ -5,15 +5,15 @@ helpviewer_keywords:
 - data serialization [WCF]
 - data transfer [WCF]
 ms.assetid: 0f03c635-f3e7-4c5c-9463-3cb0135e221e
-ms.openlocfilehash: 53c1421bf14c598611e116c61353c4ecd465f1aa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5192030fa2eda45431dd8a3765603d3081b93fa3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33489206"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54595318"
 ---
 # <a name="data-transfer-and-serialization"></a>Trasferimento dati e serializzazione
-In un sistema collegato, per eseguire qualsiasi attività, servizi e client dipendono dallo scambio di dati. Gli sviluppatori di un servizio o client, è necessario comprendere come Windows Communication Foundation (WCF) gestisce dati e la serializzazione dei dati per poter creare applicazioni efficienti e facili da gestire.  
+In un sistema collegato, per eseguire qualsiasi attività, servizi e client dipendono dallo scambio di dati. Gli sviluppatori di un servizio o client, è necessario comprendere come Windows Communication Foundation (WCF) gestisce i dati e la serializzazione dei dati per creare applicazioni che sono efficienti e facili da gestire.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Definizione del trasferimento dati nei contratti di servizio](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)  
@@ -44,7 +44,7 @@ In un sistema collegato, per eseguire qualsiasi attività, servizi e client dipe
  Descrive gli elementi da prendere in considerazione quando si programma il trasferimento dei dati e la serializzazione.  
   
  [Panoramica dell'architettura di trasferimento dati](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md)  
- Descrive una visualizzazione della struttura complessiva di trasferimento dei dati in WCF.  
+ Descrive una vista della progettazione complessiva del trasferimento dei dati in WCF.  
   
 ## <a name="reference"></a>Riferimenti  
  <xref:System.ServiceModel>  
@@ -60,6 +60,6 @@ In un sistema collegato, per eseguire qualsiasi attività, servizi e client dipe
 ## <a name="related-sections"></a>Sezioni correlate  
  [Estensione di codificatori e serializzatori](../../../../docs/framework/wcf/extending/extending-encoders-and-serializers.md)  
   
-## <a name="see-also"></a>Vedere anche  
- [Procedure consigliate: Controllo delle versioni del contratto di dati](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)  
- [Controllo delle versioni dei servizi](../../../../docs/framework/wcf/service-versioning.md)
+## <a name="see-also"></a>Vedere anche
+- [Procedure consigliate: Versioni di DataContract](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)
+- [Controllo delle versioni dei servizi](../../../../docs/framework/wcf/service-versioning.md)

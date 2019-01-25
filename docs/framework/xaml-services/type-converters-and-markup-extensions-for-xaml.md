@@ -8,12 +8,12 @@ helpviewer_keywords:
 - value converters for XAML [XAML Services]
 - XAML [XAML Services], service context
 ms.assetid: db07a952-05ce-4aa4-b6f9-aac7397d0326
-ms.openlocfilehash: 0c9cb7e87416860dda98df0da967ffbc070bc270
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3bcf78ce6fe0e56e027b2d473a95d6663971744d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33565863"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54588223"
 ---
 # <a name="type-converters-and-markup-extensions-for-xaml"></a>Convertitori di tipi ed estensioni di markup per XAML
 I convertitori di tipi e le estensioni di markup sono due tecniche usate dai sistemi di tipi XAML e writer XAML per generare componenti dell'oggetto grafico. Anche se condividono alcune caratteristiche, i convertitori di tipi e le estensioni di markup sono rappresentati in modo diverso in un flusso del nodo XAML. In questo set di documentazione, i convertitori di tipi, le estensioni di markup e costrutti simili talvolta vengono detti collettivamente convertitori di valori.  
@@ -45,13 +45,13 @@ I convertitori di tipi e le estensioni di markup sono due tecniche usate dai sis
  Per altre informazioni sul modello di implementazione dell'estensione di markup per XAML, vedere [Markup Extensions for XAML Overview](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md).  
   
 > [!NOTE]
->  I tipi <xref:System.Windows.Markup.MarkupExtension> e <xref:System.Windows.Markup.ValueSerializer> sono entrambi inclusi nello spazio dei nomi <xref:System.Windows.Markup> e non in quello <xref:System.Xaml> . Ciò non implica che questi tipi sono specifici per le tecnologie WPF o Windows Form che altrimenti popolano gli spazi dei nomi CLR che contengono la stringa `Windows`. <xref:System.Windows.Markup.MarkupExtension> e <xref:System.Windows.Markup.ValueSerializer> sono inclusi nell'assembly System.Xaml e non dispongono di alcuna dipendenza dal framework specifica. Questi tipi esistevano già nello spazio dei nomi CLR per [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)] e restano nello spazio dei nomi CLR in [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] per evitare di interrompere i riferimenti nei progetti WPF esistenti. Per altre informazioni, vedere [Types Migrated from WPF to System.Xaml](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md).  
+>  I tipi <xref:System.Windows.Markup.MarkupExtension> e <xref:System.Windows.Markup.ValueSerializer> sono entrambi inclusi nello spazio dei nomi <xref:System.Windows.Markup> e non in quello <xref:System.Xaml> . Ciò non implica che questi tipi sono specifici per le tecnologie di Windows Forms o WPF che altrimenti popolano gli spazi dei nomi CLR che contengono la stringa `Windows`. <xref:System.Windows.Markup.MarkupExtension> e <xref:System.Windows.Markup.ValueSerializer> sono inclusi nell'assembly System.Xaml e non dispongono di alcuna dipendenza dal framework specifica. Questi tipi esistevano già nello spazio dei nomi CLR per [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)] e restano nello spazio dei nomi CLR in [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] per evitare di interrompere i riferimenti nei progetti WPF esistenti. Per altre informazioni, vedere [Types Migrated from WPF to System.Xaml](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md).  
   
 <a name="value_serializers"></a>   
 ## <a name="value-serializers"></a>Serializzatori di valori  
- Un oggetto <xref:System.Windows.Markup.ValueSerializer> è un convertitore di tipi specializzato ottimizzato per la conversione di un oggetto in una stringa. È possibile che un oggetto <xref:System.Windows.Markup.ValueSerializer> per XAML non implementi affatto il metodo `ConvertFrom` . Con un'implementazione di <xref:System.Windows.Markup.ValueSerializer> si ottengono servizi in un modo simile a quello di un'implementazione di <xref:System.ComponentModel.TypeConverter> . I metodi virtuali forniscono un parametro di input `context`. Il parametro `context` è di tipo <xref:System.Windows.Markup.IValueSerializerContext>, che eredita dall'interfaccia di <xref:System.IServiceProvider> e dispone di un metodo <xref:System.IServiceProvider.GetService%2A> .  
+ Un oggetto <xref:System.Windows.Markup.ValueSerializer> è un convertitore di tipi specializzato ottimizzato per la conversione di un oggetto in una stringa. È possibile che un oggetto <xref:System.Windows.Markup.ValueSerializer> per XAML non implementi affatto il metodo `ConvertFrom` . Con un'implementazione di <xref:System.Windows.Markup.ValueSerializer> si ottengono servizi in un modo simile a quello di un'implementazione di <xref:System.ComponentModel.TypeConverter> . I metodi virtuali forniscono un parametro di input `context` . Il parametro `context` è di tipo <xref:System.Windows.Markup.IValueSerializerContext>, che eredita dall'interfaccia di <xref:System.IServiceProvider> e dispone di un metodo <xref:System.IServiceProvider.GetService%2A> .  
   
- Nel sistema di tipi XAML e per le implementazioni del writer XAML che usano l'elaborazione del ciclo del nodo XAML per la serializzazione, un convertitore di valori associato a un tipo o a un membro viene segnalato dalla relativa proprietà <xref:System.Xaml.XamlType.ValueSerializer%2A?displayProperty=nameWithType>. Il significato per i writer XAML che eseguono la serializzazione è che, in presenza di <xref:System.Xaml.XamlType.TypeConverter%2A?displayProperty=nameWithType> e <xref:System.Xaml.XamlType.ValueSerializer%2A?displayProperty=nameWithType>, il convertitore di tipi deve essere usato per il percorso di caricamento e il serializzatore di valori deve essere usato per il percorso di salvataggio. Se <xref:System.Xaml.XamlType.TypeConverter%2A?displayProperty=nameWithType> esiste ma <xref:System.Xaml.XamlType.ValueSerializer%2A?displayProperty=nameWithType> è `null`, il convertitore di tipi viene usato anche per il percorso di salvataggio.  
+ Nel sistema di tipi XAML e per le implementazioni del writer XAML che usano l'elaborazione del ciclo del nodo XAML per la serializzazione, un convertitore di valori associato a un tipo o a un membro viene segnalato dalla relativa proprietà <xref:System.Xaml.XamlType.ValueSerializer%2A?displayProperty=nameWithType> . Il significato per i writer XAML che eseguono la serializzazione è che, in presenza di <xref:System.Xaml.XamlType.TypeConverter%2A?displayProperty=nameWithType> e <xref:System.Xaml.XamlType.ValueSerializer%2A?displayProperty=nameWithType> , il convertitore di tipi deve essere usato per il percorso di caricamento e il serializzatore di valori deve essere usato per il percorso di salvataggio. Se <xref:System.Xaml.XamlType.TypeConverter%2A?displayProperty=nameWithType> esiste ma <xref:System.Xaml.XamlType.ValueSerializer%2A?displayProperty=nameWithType> è `null`, il convertitore di tipi viene usato anche per il percorso di salvataggio.  
   
 <a name="other_value_converters"></a>   
 ## <a name="other-value-converters"></a>Altri convertitori di valori  
@@ -65,9 +65,9 @@ I convertitori di tipi e le estensioni di markup sono due tecniche usate dai sis
 ## <a name="service-context-for-a-value-converter"></a>Contesto del servizio per un convertitore di valori  
  Quando si implementa un convertitore di valori, è spesso necessario accedere a un contesto in cui viene applicato il convertitore di valori. Questo contesto è noto come contesto del servizio. Il contesto del servizio può includere informazioni quali il contesto dello schema XAML attivo, l'accesso al sistema di mapping dei tipi fornito dal contesto dello schema XAML e dal writer di oggetti XAML e così via. Per altre informazioni sui contesti del servizio disponibili per un convertitore di valori e sulle modalità di accesso ai servizi eventualmente forniti da un contesto del servizio, vedere [Contesti di servizio disponibili per convertitori di tipi ed estensioni di markup](../../../docs/framework/xaml-services/service-contexts-available-to-type-converters-and-markup-extensions.md).  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Windows.Markup.MarkupExtension>  
- <xref:System.Xaml.XamlObjectWriter>  
- [Panoramica delle estensioni di markup per XAML](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md)  
- [Panoramica dei convertitori di tipi per XAML](../../../docs/framework/xaml-services/type-converters-for-xaml-overview.md)  
- [Contesti di servizio disponibili per convertitori di tipi ed estensioni di markup](../../../docs/framework/xaml-services/service-contexts-available-to-type-converters-and-markup-extensions.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Windows.Markup.MarkupExtension>
+- <xref:System.Xaml.XamlObjectWriter>
+- [Panoramica delle estensioni di markup per XAML](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md)
+- [Panoramica dei convertitori di tipi per XAML](../../../docs/framework/xaml-services/type-converters-for-xaml-overview.md)
+- [Service Contexts Available to Type Converters and Markup Extensions](../../../docs/framework/xaml-services/service-contexts-available-to-type-converters-and-markup-extensions.md)

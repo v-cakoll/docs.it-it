@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31183
 ms.assetid: 0ab1dbce-8397-4959-b2cd-f58798b051a0
-ms.openlocfilehash: a88ec6f2ca0338942f804f944d415683fbf1a1bf
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 42d89530355a1372e83fbdcfe4c94bfe4db5fd3a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49087248"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54687518"
 ---
 # <a name="xml-namespace-uri-httpwwww3orgxml1998namespace-can-be-bound-only-to-39xmlns39"></a>Spazio dei nomi XML URI `http://www.w3.org/XML/1998/namespace`; può essere associato solo a &#39;xmlns&#39;
 L'URI `http://www.w3.org/XML/1998/namespace` viene usato in una dichiarazione dello spazio dei nomi XML. Questo URI è uno spazio dei nomi riservato e non può essere incluso in una dichiarazione dello spazio dei nomi XML.  
@@ -25,6 +25,6 @@ Rimuovere la dichiarazione dello spazio dei nomi XML oppure sostituire l'URI `ht
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Istruzione Imports (spazio dei nomi XML)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)  
-- [Valori letterali XML](../../../visual-basic/language-reference/xml-literals/index.md)  
+- [Istruzione Imports (spazio dei nomi XML)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)
+- [Valori letterali XML](../../../visual-basic/language-reference/xml-literals/index.md)
 - [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)

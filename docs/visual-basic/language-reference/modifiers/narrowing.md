@@ -10,31 +10,31 @@ helpviewer_keywords:
 - Narrowing keyword [Visual Basic]
 - data type conversion [Visual Basic]
 ms.assetid: a207ee91-aca4-4771-b4e2-713f029bf2bb
-ms.openlocfilehash: 54a18d0cc10e42829b48b0ef75bb77ab0d47b45f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bd88c05f16a2027b0367effebef809cb5e5abfe8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33597458"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617435"
 ---
 # <a name="narrowing-visual-basic"></a>Narrowing (Visual Basic)
-Indica che un operatore di conversione (`CType`) converte una classe o struttura in un tipo che potrebbe non essere in grado di contenere alcuni dei possibili valori della classe o della struttura originale.  
+Indica che un operatore di conversione (`CType`) converte una classe o struttura in un tipo che potrebbe non essere in grado di contenere alcuni dei possibili valori della classe o struttura originale.  
   
-## <a name="converting-with-the-narrowing-keyword"></a>La conversione con la parola chiave Narrowing  
+## <a name="converting-with-the-narrowing-keyword"></a>Conversione di Narrowing (parola chiave)  
  Routine di conversione deve specificare `Public Shared` oltre a `Narrowing`.  
   
- Conversioni di restrizione non sempre esito positivo in fase di esecuzione e può non riuscire o comportare la perdita di dati. Esempi sono `Long` a `Integer`, `String` a `Date`e un tipo di base a un tipo derivato. Questa conversione ultima è narrowing perché il tipo di base potrebbe non contenere tutti i membri del tipo derivato e pertanto non è un'istanza del tipo derivato.  
+ Conversioni di Narrowing non sempre riuscire in fase di esecuzione e può avere esito negativo o comportano una perdita di dati. Sono esempi `Long` al `Integer`, `String` a `Date`e un tipo di base a un tipo derivato. Questa conversione ultimo è narrowing perché il tipo di base potrebbe non contenere tutti i membri del tipo derivato e pertanto non è un'istanza del tipo derivato.  
   
- Se `Option Strict` è `On`, l'utilizzo di codice è necessario utilizzare `CType` per tutte le conversioni di restrizione.  
+ Se `Option Strict` viene `On`, il codice deve usare `CType` per tutte le conversioni di narrowing.  
   
- Il `Narrowing` parola chiave può essere utilizzata in questo contesto:  
+ Il `Narrowing` parola chiave può essere usata in questo contesto:  
   
  [Istruzione Operator](../../../visual-basic/language-reference/statements/operator-statement.md)  
   
-## <a name="see-also"></a>Vedere anche  
- [Istruzione Operator](../../../visual-basic/language-reference/statements/operator-statement.md)  
- [Widening](../../../visual-basic/language-reference/modifiers/widening.md)  
- [Conversioni di ampliamento e restrizione](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)  
- [Procedura: Definire un operatore](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)  
- [Funzione CType](../../../visual-basic/language-reference/functions/ctype-function.md)  
- [Istruzione Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+## <a name="see-also"></a>Vedere anche
+- [Istruzione Operator](../../../visual-basic/language-reference/statements/operator-statement.md)
+- [Widening](../../../visual-basic/language-reference/modifiers/widening.md)
+- [Conversioni di ampliamento e restrizione](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+- [Procedura: Definire un operatore](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)
+- [Funzione CType](../../../visual-basic/language-reference/functions/ctype-function.md)
+- [Istruzione Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)
