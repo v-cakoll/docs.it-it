@@ -2,12 +2,12 @@
 title: Scenari di distribuzione supportati
 ms.date: 03/30/2017
 ms.assetid: 3399f208-3504-4c70-a22e-a7c02a8b94a6
-ms.openlocfilehash: a86fd9d50b2bdfa2daafa3bec98802d10a1efef5
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 605521cb91945812db178db3a82883b4d13bc636
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44183379"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54614484"
 ---
 # <a name="supported-deployment-scenarios"></a>Scenari di distribuzione supportati
 Il sottoinsieme delle funzionalità di Windows Communication Foundation (WCF) supportati per l'uso in applicazioni parzialmente attendibili è progettato per soddisfare i requisiti degli scenari di alcuni, ma non tutti, per l'utilizzo di WCF. Nel server, WCF in uso soddisfi i requisiti a livello di Internet condiviso ai provider di hosting che eseguono le applicazioni di terze parti nel [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] Medium Trust set di autorizzazioni per motivi di sicurezza. Sul client, supporto con attendibilità parziale WCF è progettato per soddisfare i requisiti di tecnologie di distribuzione, ad esempio [distribuzione ClickOnce](https://go.microsoft.com/fwlink/?LinkId=83712) o [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]della tecnologia applicazione Browser XAML, che consente facile e sicuro distribuzione di applicazioni desktop da siti non attendibili.  
@@ -32,15 +32,15 @@ Il sottoinsieme delle funzionalità di Windows Communication Foundation (WCF) su
   
  I servizi flussi di lavoro richiedono autorizzazioni di attendibilità totale e non possono essere utilizzati in applicazioni parzialmente attendibili.  
   
- Per altre informazioni, vedere [procedura: usare attendibilità media in ASP.NET 2.0](https://go.microsoft.com/fwlink/?LinkId=84603).  
+ Per altre informazioni, vedere [Procedura: Usare l'attendibilità media in ASP.NET 2.0](https://go.microsoft.com/fwlink/?LinkId=84603).  
   
 ## <a name="partial-trust-on-the-client"></a>Attendibilità parziale nel client  
- Quando si scarica ed esegue codice dai siti Internet non attendibili, è necessario adottare determinate precauzioni di sicurezza. Entrambe [distribuzione ClickOnce](https://go.microsoft.com/fwlink/?LinkId=83712) e [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]dell'applicazione Browser XAML (XBAP) tecnologia avvalgono dell'attendibilità parziale per concedere autorizzazioni limitate (area Internet) al codice non attendibile.  
+ Quando si scarica ed esegue codice dai siti Internet non attendibili, è necessario adottare determinate precauzioni di sicurezza. La [distribuzione ClickOnce](https://go.microsoft.com/fwlink/?LinkId=83712) e la tecnologia Applicazione browser XAML (XBAP) di [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]usano entrambe l'attendibilità parziale per concedere autorizzazioni limitate (area Internet) al codice non attendibile.  
   
  WCF può essere utilizzato per comunicare con server remoti da applicazioni parzialmente attendibili distribuite tramite [distribuzione ClickOnce](https://go.microsoft.com/fwlink/?LinkId=83712) o XBAP. Il set di autorizzazioni area Internet include <xref:System.Net.WebPermission> per l'host di origine, in modo da comunicare con il proprio server di origine usando uno dei binding WCF supportate descritte in queste applicazioni [Partial Trust Feature Compatibility ](../../../../docs/framework/wcf/feature-details/partial-trust-feature-compatibility.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Sicurezza dall'accesso di codice](https://go.microsoft.com/fwlink/?LinkId=83717)  
- [Panoramica di Windows Presentation Foundation ospitate da Browser](https://go.microsoft.com/fwlink/?LinkId=98397)  
- [Attendibilità parziale](../../../../docs/framework/wcf/feature-details/partial-trust.md)  
- [Attendibilità media ASP.Net](https://go.microsoft.com/fwlink/?LinkId=69328)
+## <a name="see-also"></a>Vedere anche
+- [Sicurezza dall'accesso di codice](https://go.microsoft.com/fwlink/?LinkId=83717)
+- [Panoramica di Windows Presentation Foundation ospitate da Browser](https://go.microsoft.com/fwlink/?LinkId=98397)
+- [Attendibilità parziale](../../../../docs/framework/wcf/feature-details/partial-trust.md)
+- [Attendibilità media ASP.NET](https://go.microsoft.com/fwlink/?LinkId=69328)

@@ -1,19 +1,19 @@
 ---
-title: 'Procedura: creare controlli per Windows Form'
+title: 'Procedura: Creare controlli per Windows Form'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], creating
 - UserControl class [Windows Forms], Windows Forms
 - custom controls [Windows Forms], creating
 ms.assetid: 7570e982-545b-4c3a-a7c7-55581d313400
-ms.openlocfilehash: 844e38fc62fc9fb04a723c1a4a8ad834e957c8ce
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: a6ea57dda8f034684e8590ce4c3b6d37ab01230e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44178312"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54579524"
 ---
-# <a name="how-to-author-controls-for-windows-forms"></a>Procedura: creare controlli per Windows Form
+# <a name="how-to-author-controls-for-windows-forms"></a>Procedura: Creare controlli per Windows Form
 Un controllo rappresenta un collegamento grafico tra l'utente e il programma. Un controllo può fornire o elaborare dati, accettare input dall'utente, rispondere a eventi o eseguire qualsiasi numero di altre funzioni che connettono l'utente e l'applicazione. Poiché un controllo è essenzialmente un componente con un'interfaccia grafica, può essere utilizzato per le stesse funzioni di un componente oltre che per consentire l'interazione dell'utente. I controlli vengono creati per scopi specifici e la creazione di controlli è semplicemente un'altra attività di programmazione. Tenendo conto di questo, i passaggi seguenti rappresentano una panoramica del processo di creazione di un controllo. I collegamenti forniscono altre informazioni sui singoli passaggi.  
   
 > [!NOTE]
@@ -41,9 +41,9 @@ Un controllo rappresenta un collegamento grafico tra l'utente e il programma. Un
   
 5.  Se è necessario un disegno personalizzato per il controllo, aggiungere codice per esso. Per informazioni dettagliate, vedere [Disegno e rendering di controlli personalizzati](../../../../docs/framework/winforms/controls/custom-control-painting-and-rendering.md).  
   
-6.  Se il controllo eredita da <xref:System.Windows.Forms.UserControl>, è possibile verificarne il comportamento di runtime compilando il progetto di controllo ed eseguendolo nel **UserControl Test Container**. Per altre informazioni, vedere [Procedura: Eseguire il test del comportamento in fase di esecuzione di UserControl](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).  
+6.  Se il controllo eredita da <xref:System.Windows.Forms.UserControl>, è possibile verificarne il comportamento di runtime compilando il progetto di controllo ed eseguendolo nel **UserControl Test Container**. Per altre informazioni, vedere [Procedura: Testare il comportamento in fase di esecuzione di UserControl](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).  
   
-7.  È possibile testare ed eseguire il debug del controllo anche creando un nuovo progetto, ad esempio un'applicazione Windows, e inserendolo in un contenitore. Questa procedura è illustrata in [Procedura dettagliata: modifica di un controllo composito con Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md).  
+7.  È possibile testare ed eseguire il debug del controllo anche creando un nuovo progetto, ad esempio un'applicazione Windows, e inserendolo in un contenitore. Questo processo viene illustrato come parte di [procedura dettagliata: Modifica di un controllo composito con Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md).  
   
 8.  Quando si aggiunge ogni funzionalità, aggiungere le funzionalità al progetto di test per verificarne il funzionamento.  
   
@@ -51,11 +51,11 @@ Un controllo rappresenta un collegamento grafico tra l'utente e il programma. Un
   
 10. Creare il pacchetto e distribuire il controllo. Per informazioni dettagliate, vedere [Distribuzione di applicazioni, servizi e componenti](https://msdn.microsoft.com/library/wtzawcsz).  
   
-## <a name="see-also"></a>Vedere anche  
- [Procedura dettagliata: Modifica di un controllo composito con Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)  
- [Procedura dettagliata: Eredità da un controllo Windows Form con Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)  
- [Procedura: Ereditare dalla classe UserControl](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)  
- [Procedura: Ereditare dalla classe Control](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-control-class.md)  
- [Procedura: Ereditare da controlli Windows Form esistenti](../../../../docs/framework/winforms/controls/how-to-inherit-from-existing-windows-forms-controls.md)  
- [Procedura: Eseguire il test del comportamento in fase di esecuzione di UserControl](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)  
- [Tipi di controlli personalizzati](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
+## <a name="see-also"></a>Vedere anche
+- [Procedura dettagliata: Modifica di un controllo composito con Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)
+- [Procedura dettagliata: Eredità da un controllo di Windows Forms con Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
+- [Procedura: Ereditare dalla classe UserControl](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)
+- [Procedura: Ereditare dalla classe Control](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-control-class.md)
+- [Procedura: Ereditare da esistenti di Windows Form](../../../../docs/framework/winforms/controls/how-to-inherit-from-existing-windows-forms-controls.md)
+- [Procedura: Testare il comportamento in fase di esecuzione di UserControl](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)
+- [Tipi di controlli personalizzati](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)

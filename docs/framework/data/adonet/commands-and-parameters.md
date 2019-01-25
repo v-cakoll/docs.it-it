@@ -2,12 +2,12 @@
 title: Comandi e parametri
 ms.date: 03/30/2017
 ms.assetid: b623f810-d871-49a5-b0f5-078cc3c34db6
-ms.openlocfilehash: 8e476d68b60272d944eecfe585fd77d8a7a8f08c
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 0f90e45a9679e76a38621f6e3ae19de0e7591098
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197877"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54612784"
 ---
 # <a name="commands-and-parameters"></a>Comandi e parametri
 Una volta stabilita una connessione a un'origine dati, è possibile eseguire i comandi e restituire i risultati dell'origine dati usando un oggetto <xref:System.Data.Common.DbCommand>. È possibile creare un comando usando uno dei costruttori di comando del provider di dati .NET Framework usato. I costruttori possono accettare argomenti facoltativi, ad esempio un'istruzione SQL da eseguire nell'origine dati, un oggetto <xref:System.Data.Common.DbConnection> o un oggetto <xref:System.Data.Common.DbTransaction>. È inoltre possibile configurare tali oggetti come proprietà del comando, nonché creare un comando per una particolare connessione usando il metodo <xref:System.Data.Common.DbConnection.CreateCommand%2A> di un oggetto `DbConnection`. È possibile configurare l'istruzione SQL eseguita dal comando tramite la proprietà <xref:System.Data.Common.DbCommand.CommandText%2A>.  
@@ -30,8 +30,8 @@ Una volta stabilita una connessione a un'origine dati, è possibile eseguire i c
  [Uso di comandi per modificare i dati](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)  
  Viene descritto come usare un provider di dati per eseguire stored procedure o istruzioni DDL (Data Definition Language).  
   
-## <a name="see-also"></a>Vedere anche  
- [DataAdapter e DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
- [Oggetti DataSet, DataTable e DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [Connessione a un'origine dati](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vedere anche
+- [DataAdapter e DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
+- [Oggetti DataSet, DataTable e DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [Connessione a un'origine dati](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
+- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - shared [elements VB]
 - elements [Visual Basic], shared
 ms.assetid: 2bf7cf2c-b0dd-485e-8749-b5d674dab4cd
-ms.openlocfilehash: b76d999bfe3f7ae5205cb9486e040c1d6191b78c
-ms.sourcegitcommit: dc02d7d95f1e3efcc7166eaf431b0ec0dc9d8dca
+ms.openlocfilehash: 001baa8d3cbd294772bef634825c67ea13b23458
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37143531"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597281"
 ---
 # <a name="shared-visual-basic"></a>Shared (Visual Basic)
 Specifica che uno o più elementi di programmazione dichiarati sono associati a una classe o struttura in generale e non a una specifica istanza della classe o struttura.  
@@ -34,7 +34,7 @@ Specifica che uno o più elementi di programmazione dichiarati sono associati a 
   
 -   **Modificatori combinati.** Non è possibile specificare `Shared` assieme [esegue l'override](../../../visual-basic/language-reference/modifiers/overrides.md), [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md), [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md), [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md), o [ Statico](../../../visual-basic/language-reference/modifiers/static.md) nella stessa dichiarazione.  
   
--   **L'accesso.** Accedere a un elemento condiviso, qualificarlo con il nome di classe o struttura, non con il nome della variabile di un'istanza specifica della relativa classe o struttura. Anche insufficienti creare un'istanza di una classe o struttura per accedere ai relativi membri condivisi.  
+-   **Accessing.** Accedere a un elemento condiviso, qualificarlo con il nome di classe o struttura, non con il nome della variabile di un'istanza specifica della relativa classe o struttura. Anche insufficienti creare un'istanza di una classe o struttura per accedere ai relativi membri condivisi.  
   
      L'esempio seguente chiama la routine condivisa <xref:System.Double.IsNaN%2A> esposti dal <xref:System.Double> struttura.  
   
@@ -92,10 +92,10 @@ Specifica che uno o più elementi di programmazione dichiarati sono associati a 
   
  [Istruzione Sub](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>Vedere anche  
- [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)  
- [Static](../../../visual-basic/language-reference/modifiers/static.md)  
- [Durata in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)  
- [Routine](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
- [Strutture](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
- [Oggetti e classi](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+## <a name="see-also"></a>Vedere anche
+- [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)
+- [Static](../../../visual-basic/language-reference/modifiers/static.md)
+- [Durata in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
+- [Routine](../../../visual-basic/programming-guide/language-features/procedures/index.md)
+- [Strutture](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
+- [Oggetti e classi](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

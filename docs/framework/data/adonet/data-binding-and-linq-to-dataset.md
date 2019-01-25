@@ -2,17 +2,17 @@
 title: Data binding e LINQ to DataSet
 ms.date: 03/30/2017
 ms.assetid: 310bff4a-32dd-4f20-a271-6dbd82912631
-ms.openlocfilehash: e82cc5ecfc1272cfb4594cb556fa9455a7ea7813
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 91349de3b12b45e645ad4080c9fc972f28c669ca
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32757892"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655777"
 ---
 # <a name="data-binding-and-linq-to-dataset"></a>Data binding e LINQ to DataSet
-*Associazione dati* è il processo che stabilisce una connessione tra l'interfaccia utente dell'applicazione e la logica di business. Se l'associazione è impostata correttamente e i dati forniscono le notifiche appropriate, quando il valore dei dati cambia la modifica si riflette automaticamente negli elementi associati ai dati. L'oggetto <xref:System.Data.DataSet> di ADO.NET è una rappresentazione di dati residente in memoria che fornisce un modello di programmazione relazionale coerente, indipendentemente dall'origine dati che contiene. L'oggetto <xref:System.Data.DataView> di ADO.NET 2.0 consente di ordinare e filtrare i dati archiviati in <xref:System.Data.DataTable>. Questa funzionalità viene spesso usata nelle applicazioni di associazione dati. Tramite un oggetto <xref:System.Data.DataView>, è possibile esporre i dati di una tabella applicando diversi tipi di ordinamento e filtrare i dati per stato di riga o sulla base di un'espressione di filtro. Per ulteriori informazioni sul <xref:System.Data.DataView> , vedere [DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md).  
+*Associazione dati* è il processo che stabilisce una connessione tra l'applicazione dell'interfaccia utente e la logica di business. Se l'associazione è impostata correttamente e i dati forniscono le notifiche appropriate, quando il valore dei dati cambia la modifica si riflette automaticamente negli elementi associati ai dati. L'oggetto <xref:System.Data.DataSet> di ADO.NET è una rappresentazione di dati residente in memoria che fornisce un modello di programmazione relazionale coerente, indipendentemente dall'origine dati che contiene. L'oggetto <xref:System.Data.DataView> di ADO.NET 2.0 consente di ordinare e filtrare i dati archiviati in <xref:System.Data.DataTable>. Questa funzionalità viene spesso usata nelle applicazioni di associazione dati. Tramite un oggetto <xref:System.Data.DataView>, è possibile esporre i dati di una tabella applicando diversi tipi di ordinamento e filtrare i dati per stato di riga o sulla base di un'espressione di filtro. Per altre informazioni sul <xref:System.Data.DataView> oggetti, vedere [DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md).  
   
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] consente agli sviluppatori di creare query complesse e potenti su un <xref:System.Data.DataSet> utilizzando [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)]. Tuttavia, un [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] query restituisce un'enumerazione di <xref:System.Data.DataRow> oggetti, non è possibile utilizzare facilmente negli scenari di associazione. Per semplificare l'associazione, è possibile creare un <xref:System.Data.DataView> da un [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] query. Questo <xref:System.Data.DataView> utilizza il filtro e ordinamento specificate nella query, ma è più adatto per l'associazione dati. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] estende la funzionalità del <xref:System.Data.DataView> fornendo [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] basate su espressioni di filtro e ordinamento, che consente di gran lunga più complesse e potenti di filtro e ordinamento rispetto alle operazioni basate su stringa filtro.  
+ [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] consente agli sviluppatori di creare query complesse e potenti su un <xref:System.Data.DataSet> tramite [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)]. Tuttavia, un [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] query restituisce un'enumerazione di <xref:System.Data.DataRow> gli oggetti che non viene usato con facilità in uno scenario di associazione. Per semplificare l'associazione, è possibile creare un <xref:System.Data.DataView> da un [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] query. Ciò <xref:System.Data.DataView> Usa il filtro e ordinamento specificate nella query, ma è più adatto per il data binding. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] estende la funzionalità dei <xref:System.Data.DataView> fornendo [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] basate su espressioni di filtro e ordinamento, che consente di molto più complesse e potenti di filtro e ordinamento di operazioni rispetto a basato su stringa di filtro e ordinamento.  
   
  Si noti che <xref:System.Data.DataView> rappresenta la query stessa e non è una visualizzazione sopra la query. L'oggetto <xref:System.Data.DataView> è associato a un controllo dell'interfaccia utente, ad esempio <xref:System.Windows.Forms.DataGrid> o <xref:System.Windows.Forms.DataGridView>, che fornisce un modello di associazione dati semplice. Un oggetto <xref:System.Data.DataView> può essere creato anche da <xref:System.Data.DataTable>, fornendo una visualizzazione predefinita della tabella.  
   
@@ -35,5 +35,5 @@ ms.locfileid: "32757892"
  [Procedura: Associare un oggetto DataView a un controllo DataGridView di Windows Form](../../../../docs/framework/data/adonet/how-to-bind-a-dataview-object-to-a-winforms-datagridview-control.md)  
  Viene illustrato come associare un oggetto <xref:System.Data.DataView> a <xref:System.Windows.Forms.DataGridView>.  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida per programmatori](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)
+## <a name="see-also"></a>Vedere anche
+- [Guida per programmatori](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)

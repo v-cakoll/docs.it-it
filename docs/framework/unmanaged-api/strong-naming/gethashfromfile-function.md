@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f98f888280090bfa613acf6ae37bc60ab63c371e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e81ed965fcd5c293378bcffd943eecff35257013
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33456514"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572669"
 ---
 # <a name="gethashfromfile-function"></a>Funzione GetHashFromFile
-Genera un hash per il contenuto del file specificato.  
+Genera un hash basato sul contenuto del file specificato.  
   
- Questa funzione è stata deprecata. Utilizzare il [ICLRStrongName:: GetHashFromFile](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfile-method.md) metodo invece.  
+ Questa funzione è stata deprecata. Usare la [GetHashFromFile](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfile-method.md) metodo invece.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,33 +42,33 @@ HRESULT GetHashFromFile (
   
 #### <a name="parameters"></a>Parametri  
  `szFilePath`  
- [in] Il nome del file con hash.  
+ [in] Il nome del file da hash.  
   
  `piHashAlg`  
- [in, out] L'algoritmo da utilizzare durante la generazione di hash. Gli algoritmi validi sono quelli definiti in CryptoAPI Win32. Se `piHashAlg` è impostato su 0, l'algoritmo predefinito CALG_SHA-1 viene utilizzato.  
+ [in, out] L'algoritmo da utilizzare durante la generazione di hash. Gli algoritmi validi sono quelli definiti per la funzione CryptoAPI Win32. Se `piHashAlg` è impostato su 0, l'algoritmo predefinito viene utilizzato CALG_SHA-1.  
   
  `pbHash`  
  [out] Matrice di byte contenente il valore hash generato.  
   
  `cchHash`  
- [in] La dimensione massima del buffer che `pbHash` punta a.  
+ [in] Le dimensioni massime del buffer che `pbHash` punta a.  
   
  `pchHash`  
- [out] Le dimensioni, in byte, dell'oggetto restituito `pbHash`.  
+ [out] Le dimensioni, in byte, del valore restituito `pbHash`.  
   
 ## <a name="remarks"></a>Note  
- Questa funzione è analoga [GetHashFromFileW](../../../../docs/framework/unmanaged-api/strong-naming/gethashfromfilew-function.md), ad eccezione del fatto che la specifica del nome file è ANSI anziché Unicode.  
+ Questa funzione equivale [GetHashFromFileW](../../../../docs/framework/unmanaged-api/strong-naming/gethashfromfilew-function.md), ad eccezione del fatto che la specifica del nome file è ANSI invece di Unicode.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** StrongName. H  
+ **Intestazione:** StrongName.h  
   
- **Libreria:** inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Metodo GetHashFromFile](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfile-method.md)  
- [Metodo GetHashFromFileW](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md)  
- [Interfaccia ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Metodo GetHashFromFile](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfile-method.md)
+- [Metodo GetHashFromFileW](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md)
+- [Interfaccia ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

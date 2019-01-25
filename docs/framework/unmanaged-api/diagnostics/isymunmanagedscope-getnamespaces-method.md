@@ -17,14 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c786cd43a25aa0c69c19e57452a3b190c7bfb167
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e577fd6bafecb9adaf3b759d100ab21f6b32ffd4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54693175"
 ---
 # <a name="isymunmanagedscopegetnamespaces-method"></a>Metodo ISymUnmanagedScope::GetNamespaces
-Ottiene gli spazi dei nomi utilizzati in questo ambito.  
+Ottiene gli spazi dei nomi utilizzati all'interno di questo ambito.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -48,10 +49,10 @@ HRESULT GetNamespaces(
  [out] Matrice che riceve gli spazi dei nomi.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK se il metodo ha esito positivo. in caso contrario, E_FAIL o un altro codice di errore.  
+ S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o qualche altro codice di errore.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** CorSym. idl, CorSym.h  
+ **Intestazione:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)

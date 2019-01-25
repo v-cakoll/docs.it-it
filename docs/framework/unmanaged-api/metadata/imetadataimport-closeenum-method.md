@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3d81f9b0107fd927ddfda24cfd0ea3249e4c8651
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 724660cd5703ee9b893493df5d583d97b5bdfb3e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448817"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720522"
 ---
 # <a name="imetadataimportcloseenum-method"></a>Metodo IMetaDataImport::CloseEnum
-Chiude l'enumeratore identificata dall'handle specificato.  
+Chiude l'enumeratore che è identificato dall'handle specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,20 +37,20 @@ void CloseEnum (
   
 #### <a name="parameters"></a>Parametri  
  `hEnum`  
- [in] Handle per l'enumeratore chiudere.  
+ [in] L'handle per l'enumeratore chiudere.  
   
 ## <a name="remarks"></a>Note  
- L'handle specificato dal `hEnum` viene ottenuto da un precedente `Enum` *nome* chiamata (ad esempio, [IMetaDataImport:: EnumTypeDefs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumtypedefs-method.md)).  
+ L'handle specificato da `hEnum` ottenuto da una precedente `Enum` *nome* chiamare (ad esempio [EnumTypeDefs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumtypedefs-method.md)).  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
- **Libreria:** inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [Interfaccia IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Interfaccia IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

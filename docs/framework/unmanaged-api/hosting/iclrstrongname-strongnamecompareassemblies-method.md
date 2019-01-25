@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3eb23da5accd89931ee4b883bfa162035ec26ddd
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 23d5e2f586f63cbd21dcb6e5da3445153f4a9db3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861036"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54683390"
 ---
 # <a name="iclrstrongnamestrongnamecompareassemblies-method"></a>Metodo ICLRStrongName::StrongNameCompareAssemblies
 Determina se due assembly differiscono solo per le firme con nome sicuro.  
@@ -57,16 +57,16 @@ HRESULT StrongNameCompareAssemblies (
  `S_OK` Se il metodo è stata completata correttamente. in caso contrario, un valore HRESULT indicante un errore (vedere [valori HRESULT comuni](https://go.microsoft.com/fwlink/?LinkId=213878) per un elenco).  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Metahost. H  
+ **Intestazione:** MetaHost.h  
   
- **Libreria:** inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Inclusa come risorsa in Mscoree. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="remarks"></a>Note  
  La firma con nome sicuro di un assembly è costituito da testo Nome, versione, impostazioni cultura e token di chiave pubblica dell'assembly.  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

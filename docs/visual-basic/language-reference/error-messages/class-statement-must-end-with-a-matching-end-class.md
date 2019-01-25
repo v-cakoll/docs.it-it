@@ -1,5 +1,5 @@
 ---
-title: "&#39;Classe&#39; l'istruzione deve terminare con un corrispondente &#39;fine (classe)&#39;"
+title: '&#39;Classe&#39; istruzione deve terminare con un oggetto corrispondente &#39;End Class&#39;'
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30481
@@ -7,24 +7,24 @@ f1_keywords:
 helpviewer_keywords:
 - BC30481
 ms.assetid: 583f3029-bc3a-4e06-866f-92dbecc46f19
-ms.openlocfilehash: 7c9051b15f6d9cf37d7d0245f758905467d5bbc5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4e80ce58048bfa7f2fecc65e7167479df07bf57c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33585515"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54715088"
 ---
-# <a name="39class39-statement-must-end-with-a-matching-39end-class39"></a>&#39;Classe&#39; l'istruzione deve terminare con un corrispondente &#39;fine (classe)&#39;
-`Class` viene utilizzato per avviare un `Class` blocco, quindi può comparire solo all'inizio del blocco, con un corrispondente `End Class` istruzione che termina il blocco. È presente una ridondanza `Class` istruzione oppure non è stato terminato il `Class` blocco con `End Class`.  
+# <a name="39class39-statement-must-end-with-a-matching-39end-class39"></a>&#39;Classe&#39; istruzione deve terminare con un oggetto corrispondente &#39;End Class&#39;
+`Class` viene usato per avviare un `Class` bloccare, quindi può comparire solo all'inizio del blocco, con un oggetto corrispondente `End Class` che termina il blocco di istruzione. È presente un redundant `Class` istruzione oppure non è stato terminato il `Class` block con `End Class`.  
   
  **ID errore:** BC30481  
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
--   Individuare e rimuovere il `Class` istruzione.  
+-   Individuare e rimuovere l'istruzione `Class` non necessaria.  
   
--   Terminare il `Class` blocco con un corrispondente `End Class`.  
+-   Concludere il `Class` blocco con un oggetto corrispondente `End Class`.  
   
-## <a name="see-also"></a>Vedere anche  
- [Fine \<parola chiave > istruzione](../../../visual-basic/language-reference/statements/end-keyword-statement.md)  
- [Istruzione Class](../../../visual-basic/language-reference/statements/class-statement.md)
+## <a name="see-also"></a>Vedere anche
+- [Fine \<parola chiave > istruzione](../../../visual-basic/language-reference/statements/end-keyword-statement.md)
+- [Istruzione Class](../../../visual-basic/language-reference/statements/class-statement.md)

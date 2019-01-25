@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 89a30cf4fa95df85e3650459e356a6a82b19bcd6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c03cdb9f9205676d17d6e18b9b2e074132ee26f1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33439827"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54594772"
 ---
 # <a name="ihostiocompletionmanagerbind-method"></a>Metodo IHostIoCompletionManager::Bind
 Associa l'handle specificato per una porta di completamento i/o che è stata creata da una precedente chiamata a [CreateIoCompletionPort](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-createiocompletionport-method.md).  
@@ -41,7 +41,7 @@ HRESULT Bind (
  [in] La porta di completamento i/o a cui associare `hHandle`. Se il valore di `hPort` è null, `hHandle` è associata alla porta di completamento i/o predefinito.  
   
  `hHandle`  
- [in] L'handle del sistema operativo da associare alla `hPort`.  
+ [in] L'handle del sistema operativo a cui associarsi `hPort`.  
   
 ## <a name="return-value"></a>Valore restituito  
   
@@ -50,24 +50,24 @@ HRESULT Bind (
 |S_OK|`Bind` stato restituito correttamente.|  
 |HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) non è stato caricato in un processo oppure si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.|  
 |HOST_E_TIMEOUT|Timeout della chiamata.|  
-|HOST_E_NOT_OWNER|Il chiamante non dispone del blocco.|  
-|HOST_E_ABANDONED|Un evento è stato annullato mentre un thread bloccato o fiber era in attesa su di esso.|  
-|E_FAIL|Si è verificato un errore irreversibile sconosciuto. Quando un metodo viene restituito E_FAIL, Common Language Runtime non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiranno HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_NOT_OWNER|Il chiamante non possiede il blocco.|  
+|HOST_E_ABANDONED|Un evento è stato annullato durante un thread bloccato o fiber è rimasta in attesa su di esso.|  
+|E_FAIL|Si è verificato un errore irreversibile sconosciuto. Quando un metodo di E_FAIL viene restituito, CLR non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiranno HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Note  
- Viene creata una porta di completamento i/o tramite una chiamata a `CreateIoCompletionPort`. CLR chiama `Bind` per associare un handle a tale porta.  
+ Una porta di completamento i/o viene creata mediante una chiamata a `CreateIoCompletionPort`. CLR chiama `Bind` per associare un handle a tale porta.  
   
 > [!NOTE]
->  Al termine di una richiesta dei / o, l'host deve chiamare il [ICLRIoCompletionManager::](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-oncomplete-method.md) metodo.  
+>  Quando viene completata una richiesta dei / o, l'host deve chiamare il [ICLRIoCompletionManager](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-oncomplete-method.md) (metodo).  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Mscoree. H  
+ **Intestazione:** MSCorEE.h  
   
- **Libreria:** inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ICLRIoCompletionManager](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ICLRIoCompletionManager](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-interface.md)

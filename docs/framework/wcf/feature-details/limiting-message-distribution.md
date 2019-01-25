@@ -2,18 +2,18 @@
 title: Limitazione della distribuzione di messaggi
 ms.date: 03/30/2017
 ms.assetid: 8b5ec4b8-1ce9-45ef-bb90-2c840456bcc1
-ms.openlocfilehash: bec5a28abeff23929d2c0f1c363f4e08872a63fa
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 3f660294bf9acea3ac5df7e0b4250885645a0835
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43738646"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54686764"
 ---
 # <a name="limiting-message-distribution"></a>Limitazione della distribuzione di messaggi
 In base alla progettazione, il canale peer è una rete di trasmissione. Il relativo modello di flooding di base prevede la distribuzione di ogni messaggio inviato da qualsiasi membro di una rete a tutti gli altri membri di quella stessa rete. Questa soluzione è ideale nelle situazioni in cui tutti i messaggi generati da un membro sono attinenti e utili a tutti gli altri membri, ad esempio in una chat. Tuttavia, molte applicazioni hanno occasionalmente la necessità di limitare la distribuzione dei messaggi. Ad esempio, se un nuovo membro si aggiunge a una rete e desidera recuperare l'ultimo messaggio inviato attraverso di essa, non è necessario che questa richiesta venga propagata a ogni membro della rete. È possibile limitare la richiesta ai router adiacenti oppure applicare un filtro ai messaggi generati in locale. I messaggi possono anche essere inviati a un singolo nodo della rete. In questo argomento viene illustrato come utilizzare il conteggio hop, un filtro di propagazione dei messaggi, un filtro locale o una connessione diretta per controllare il modo in cui i messaggi vengono inoltrati attraverso la rete. Vengono inoltre fornite linee guida generali per la scelta dell'approccio più appropriato.  
   
 ## <a name="hop-counts"></a>Conteggi hop  
- Il concetto di `PeerHopCount` è simile a quello di durata (TTL, Time-To-Live) utilizzato nel protocollo IP. Il valore di `PeerHopCount` viene collegato a un'istanza del messaggio e specifica il numero di volte in cui un messaggio deve essere inoltrato prima di essere eliminato. Ogni volta che un messaggio viene ricevuto da un client del canale peer, il client esamina il messaggio per verificare se `PeerHopCount` è specificato. In caso affermativo, il client diminuisce il valore del conteggio hop di uno prima di inoltrare il messaggio ai nodi adiacenti. Quando un client riceve un messaggio con un valore del conteggio hop pari a zero, il client elabora il messaggio, ma non lo inoltra ai router adiacenti.  
+ Il concetto di `PeerHopCount` è simile a quello di durata (TTL, Time-To-Live) utilizzato nel protocollo IP. Il valore di `PeerHopCount` viene collegato a un'istanza del messaggio e specifica il numero di volte in cui un messaggio deve essere inoltrato prima di essere rilasciato. Ogni volta che un messaggio viene ricevuto da un client del canale peer, il client esamina il messaggio per verificare se `PeerHopCount` è specificato. In caso affermativo, il client diminuisce il valore del conteggio hop di uno prima di inoltrare il messaggio ai nodi adiacenti. Quando un client riceve un messaggio con un valore del conteggio hop pari a zero, il client elabora il messaggio, ma non lo inoltra ai router adiacenti.  
   
  Il conteggio hop può essere inserito in un messaggio aggiungendo `PeerHopCount` come attributo alla proprietà o al campo pertinente nell'implementazione della classe del messaggio. È possibile impostarlo su un valore specifico prima di inviare il messaggio nella rete. Il conteggio hop consente quindi di limitare la distribuzione dei messaggi nella rete in caso di necessità, evitando potenzialmente la duplicazione non necessaria dei messaggi. Ciò si rivela utile nei casi in cui la rete contiene una quantità elevata di dati ridondanti oppure per l'invio di un messaggio a router immediatamente adiacenti o all'interno di un numero ridotto di hop.  
   
@@ -46,23 +46,23 @@ In base alla progettazione, il canale peer è una rete di trasmissione. Il relat
   
 -   **Who**  
   
-    -   *Singolo nodo*: filtro locale o connessione diretta.  
+    -   *Singolo nodo*:  Filtro locale o connessione diretta.  
   
-    -   *Router adiacenti entro una determinata distanza*: PeerHopCount.  
+    -   *Router adiacenti entro una determinata distanza*:  PeerHopCount.  
   
-    -   *Sottoinsieme complesso della mesh*: MessagePropagationFilter.  
+    -   *Sottoinsieme complesso della mesh*:  MessagePropagationFilter.  
   
 -   **Con quale frequenza**  
   
-    -   *Molto frequente*: connessione diretta, PeerHopCount, MessagePropagationFilter.  
+    -   *Molto frequente*:  Connessione diretta, PeerHopCount, MessagePropagationFilter.  
   
-    -   *Occasionali*: filtro locale.  
+    -   *Occasional*:  Filtro locale.  
   
 -   **Utilizzo della larghezza di banda**  
   
-    -   *Elevata*: connessione diretta, meno consigliabile l'utilizzo di MessagePropagationFilter o filtro locale.  
+    -   *Elevata*:  Connessione diretta, meno consigliabile l'utilizzo di MessagePropagationFilter o filtro locale.  
   
-    -   *Bassa*: qualsiasi, connessione diretta probabilmente non necessaria.  
+    -   *Bassa*:  Qualsiasi, la connessione diretta probabilmente non necessaria.  
   
-## <a name="see-also"></a>Vedere anche  
- [Creazione di un'applicazione del canale peer](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)
+## <a name="see-also"></a>Vedere anche
+- [Creazione di un'applicazione del canale peer](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)

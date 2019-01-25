@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 99354547-39c1-4b0b-8553-938e8f8d1808
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e7e653101faf9e0664f41e031c7bad05523825f3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b5854abd97c05cf0d57bfdd9a19826fea2fd7502
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394683"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54566944"
 ---
 # <a name="constrained-execution-regions"></a>aree di esecuzione vincolate
 Le aree a esecuzione vincolata rientrano in un meccanismo per la creazione di codice gestito affidabile. Un'area a esecuzione vincolata è un'area in cui Common Language Runtime (CLR) non può generare eccezioni fuori banda che impedirebbero l'esecuzione completa del codice nell'area. All'interno di tale area il codice non può eseguire codice che comporterebbe la generazione di eccezioni fuori banda. Il metodo <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> deve precedere immediatamente un blocco `try` e contrassegna i blocchi `catch`, `finally` e `fault` come aree a esecuzione vincolata. Dopo che è stato contrassegnato come area a esecuzione vincolata, il codice può chiamare solo altro codice con contratto di affidabilità efficace e può allocare o effettuare chiamate virtuali a metodi non preparati o non affidabili solo se è in grado di gestire eventuali errori. Per il codice in esecuzione in un'area a esecuzione vincolata, CLR ritarda le interruzioni di thread.  
@@ -114,5 +114,5 @@ Le aree a esecuzione vincolata rientrano in un meccanismo per la creazione di co
   
 -   Puntatori a funzione e delegati.  
   
-## <a name="see-also"></a>Vedere anche  
- [Procedure consigliate per l'ottimizzazione dell'affidabilità](../../../docs/framework/performance/reliability-best-practices.md)
+## <a name="see-also"></a>Vedere anche
+- [Procedure consigliate per l'ottimizzazione dell'affidabilità](../../../docs/framework/performance/reliability-best-practices.md)

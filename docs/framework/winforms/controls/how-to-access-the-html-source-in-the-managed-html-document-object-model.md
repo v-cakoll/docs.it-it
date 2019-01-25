@@ -1,5 +1,5 @@
 ---
-title: "Procedura: accedere all'origine HTML nel Document Object Model HTML gestito"
+title: "Procedura: Accedere all'origine HTML nel modello a oggetti documento HTML gestito"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,34 +8,34 @@ helpviewer_keywords:
 - managed HTML DOM
 - HTML [Windows Forms], accessing in Windows Forms
 ms.assetid: 53db79fa-8a5e-448e-88c2-f54ace3860b6
-ms.openlocfilehash: 49a50bdf5ea0f24d712458c739b7829ee73d157a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 310af03adf38339dd13a5095546391d4bfecac05
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33527813"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674950"
 ---
-# <a name="how-to-access-the-html-source-in-the-managed-html-document-object-model"></a>Procedura: accedere all'origine HTML nel Document Object Model HTML gestito
+# <a name="how-to-access-the-html-source-in-the-managed-html-document-object-model"></a>Procedura: Accedere all'origine HTML nel modello a oggetti documento HTML gestito
 Le proprietà <xref:System.Windows.Forms.WebBrowser.DocumentStream%2A> r <xref:System.Windows.Forms.WebBrowser.DocumentText%2A> del controllo <xref:System.Windows.Forms.WebBrowser> restituiscono l'HTML del documento corrente come si presentava al momento della visualizzazione iniziale. Se tuttavia si modifica la pagina con chiamate a metodo e proprietà, ad esempio <xref:System.Windows.Forms.HtmlElement.AppendChild%2A> e <xref:System.Windows.Forms.HtmlElement.InnerHtml%2A>, queste modifiche non saranno visualizzate quando si chiama <xref:System.Windows.Forms.WebBrowser.DocumentStream%2A> e <xref:System.Windows.Forms.WebBrowser.DocumentText%2A>. Per ottenere l'origine HTML più recente del DOM, è necessario chiamare la proprietà <xref:System.Windows.Forms.HtmlElement.OuterHtml%2A> sull'elemento HTML.  
   
  La procedura seguente mostra come recuperare l'origine dinamica e visualizzarla in un menu di scelta rapida separato.  
   
 ### <a name="retrieving-the-dynamic-source-with-the-outerhtml-property"></a>Recupero dell'origine dinamica con la proprietà OuterHtml  
   
-1.  Creare una nuova applicazione Windows Forms. Iniziare con una sola <xref:System.Windows.Forms.Form>e lo chiama `Form1`.  
+1.  Creare una nuova applicazione Windows Forms. Iniziare con una sola <xref:System.Windows.Forms.Form>e chiamarlo `Form1`.  
   
-2.  Host di <xref:System.Windows.Forms.WebBrowser> il controllo nell'applicazione Windows Form e denominarlo `WebBrowser1`. Per ulteriori informazioni, vedere [procedura: aggiungere funzionalità del Browser Web per un'applicazione Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-web-browser-capabilities-to-a-windows-forms-application.md).  
+2.  Host di <xref:System.Windows.Forms.WebBrowser> controllo nell'applicazione Windows Forms e denominarlo `WebBrowser1`. Per altre informazioni, vedere [Procedura: Aggiungere funzionalità del Browser Web a un'applicazione di Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-web-browser-capabilities-to-a-windows-forms-application.md).  
   
-3.  Creare un secondo <xref:System.Windows.Forms.Form> nell'applicazione denominata `CodeForm`.  
+3.  Creare una seconda <xref:System.Windows.Forms.Form> nell'applicazione denominata `CodeForm`.  
   
-4.  Aggiungere un <xref:System.Windows.Forms.RichTextBox> il controllo a `CodeForm` e impostare il relativo <xref:System.Windows.Forms.Control.Dock%2A> proprietà `Fill`.  
+4.  Aggiungere un <xref:System.Windows.Forms.RichTextBox> il controllo a `CodeForm` e impostare relativo <xref:System.Windows.Forms.Control.Dock%2A> proprietà `Fill`.  
   
-5.  Creare una proprietà pubblica su `CodeForm` chiamato `Code`.  
+5.  Creare una proprietà pubblica sul `CodeForm` chiamato `Code`.  
   
      [!code-csharp[DisplayWebBrowserCode#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/DisplayWebBrowserCode/CS/CodeForm.cs#1)]
      [!code-vb[DisplayWebBrowserCode#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/DisplayWebBrowserCode/VB/CodeForm.vb#1)]  
   
-6.  Aggiungere un <xref:System.Windows.Forms.Button> controllo denominato `Button1` per il <xref:System.Windows.Forms.Form>e verificare la presenza di <xref:System.Windows.Forms.Control.Click> evento. Per ulteriori informazioni sul monitoraggio degli eventi, vedere [eventi](../../../../docs/standard/events/index.md).  
+6.  Aggiungere un <xref:System.Windows.Forms.Button> controllo denominato `Button1` per il <xref:System.Windows.Forms.Form>e il monitoraggio per il <xref:System.Windows.Forms.Control.Click> evento. Per informazioni dettagliate sul monitoraggio degli eventi, vedere [eventi](../../../../docs/standard/events/index.md).  
   
 7.  Aggiungere il codice seguente al gestore eventi <xref:System.Windows.Forms.Control.Click>.  
   
@@ -45,6 +45,6 @@ Le proprietà <xref:System.Windows.Forms.WebBrowser.DocumentStream%2A> r <xref:S
 ## <a name="robust-programming"></a>Programmazione efficiente  
  Verificare sempre il valore di <xref:System.Windows.Forms.WebBrowser.Document%2A> prima di tentarne il recupero. Se il caricamento della pagina corrente non viene completato, è possibile che l'inizializzazione di <xref:System.Windows.Forms.WebBrowser.Document%2A> o di uno o più dei relativi oggetti figlio non sia eseguita.  
   
-## <a name="see-also"></a>Vedere anche  
- [Utilizzare il Document Object Model HTML gestito](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)  
- [Panoramica sul controllo WebBrowser](../../../../docs/framework/winforms/controls/webbrowser-control-overview.md)
+## <a name="see-also"></a>Vedere anche
+- [Utilizzare il Document Object Model HTML gestito](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)
+- [Panoramica sul controllo WebBrowser](../../../../docs/framework/winforms/controls/webbrowser-control-overview.md)

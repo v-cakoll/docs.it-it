@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 38c942b9a94c83f5a3316cf3ae3ccbbad2b0ec69
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8ec8e5dfc92a818bfc23c28f3058086c3bd1a8ed
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444317"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597944"
 ---
 # <a name="loadstringrcex-function"></a>Funzione LoadStringRCEx
 Converte un valore HRESULT a un messaggio di errore appropriato per le impostazioni cultura specificate.  
@@ -43,13 +43,13 @@ HRESULT LoadStringRCEx (
   
 #### <a name="parameters"></a>Parametri  
  `lcid`  
- [in] Un identificatore delle impostazioni cultura. Passare -1 `lcid` per utilizzare le impostazioni cultura predefinite.  
+ [in] Un identificatore delle impostazioni cultura. Passare -1 per `lcid` usare le impostazioni cultura predefinite.  
   
  `iResourceID`  
  [in] Un valore HRESULT.  
   
  `szBuffer`  
- [out] Un buffer che contiene il messaggio di errore dopo il completamento.  
+ [out] Un buffer che contiene il messaggio di errore dopo il corretto completamento.  
   
  `iMax`  
  [in] Le dimensioni del buffer di messaggi di errore.  
@@ -69,18 +69,18 @@ HRESULT LoadStringRCEx (
 |E_INVALIDARG|`szBuffer` è null, o `iMax` è zero (0).|  
   
 ## <a name="remarks"></a>Note  
- Se il metodo non viene completata correttamente, `szBuffer` contiene una stringa vuota.  
+ Se il metodo non viene completato correttamente, `szBuffer` contiene una stringa vuota.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Mscoree. H  
+ **Intestazione:** MSCorEE.h  
   
- **Libreria:** Mscoree. dll  
+ **Libreria:** MSCorEE.dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Globalization.CultureInfo.LCID%2A?displayProperty=nameWithType>  
- [Funzione LoadStringRC](../../../../docs/framework/unmanaged-api/hosting/loadstringrc-function.md)  
- [Funzioni di hosting CLR deprecate](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Globalization.CultureInfo.LCID%2A?displayProperty=nameWithType>
+- [Funzione LoadStringRC](../../../../docs/framework/unmanaged-api/hosting/loadstringrc-function.md)
+- [Funzioni di hosting CLR deprecate](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

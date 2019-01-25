@@ -2,12 +2,12 @@
 title: Aggiornamenti flusso personalizzati
 ms.date: 03/30/2017
 ms.assetid: e3da85c8-57f3-4e32-a4cb-50123f30fea6
-ms.openlocfilehash: 84edac7a4dbaaf1a01332f5c0af29319c279dd1b
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 12c2b56d65b2ff41d6919e978dfad7560d05782c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806032"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54611319"
 ---
 # <a name="custom-stream-upgrades"></a>Aggiornamenti flusso personalizzati
 I trasporti orientati al flusso, quali TCP e named pipe, operano su un flusso continuo di byte tra il client e il server. Questo flusso viene realizzato da un oggetto <xref:System.IO.Stream>. In un aggiornamento flusso, il client desidera aggiungere un livello di protocollo facoltativo allo stack di canali e chiede all'altra estremità del canale di comunicazione di farlo. L'aggiornamento flusso consiste nel sostituire l'oggetto <xref:System.IO.Stream> originale con un oggetto aggiornato.  
@@ -19,11 +19,11 @@ I trasporti orientati al flusso, quali TCP e named pipe, operano su un flusso co
 ## <a name="how-stream-upgrades-work"></a>Funzionamento degli aggiornamenti flusso  
  Il processo di aggiornamento flusso include quattro componenti.  
   
-1.  Un aggiornamento flusso *iniziatore* inizia il processo: in fase di esecuzione, può inviare una richiesta a altra estremità della connessione per aggiornare il livello di trasporto del canale.  
+1.  Un flusso di aggiornamento *iniziatore* avvia il processo: in fase di esecuzione, può inviare una richiesta a altra estremità della connessione per aggiornare il livello di trasporto del canale.  
   
-2.  Un aggiornamento flusso *Acceptor* esegue l'aggiornamento: in fase di esecuzione, riceve la richiesta di aggiornamento da altro computer e, se possibile, accetta l'aggiornamento.  
+2.  Un flusso di aggiornamento *Acceptor* esegue l'aggiornamento: in fase di esecuzione riceve la richiesta di aggiornamento da altra macchina e, se possibile, accetta l'aggiornamento.  
   
-3.  Un aggiornamento *Provider* crea il *iniziatore* sul client e il *Acceptor* sul server.  
+3.  Un aggiornamento *Provider* crea il *iniziatore* sul client e il *Acceptor* nel server.  
   
 4.  Un aggiornamento flusso *elemento di associazione* viene aggiunto alle associazioni sul servizio e il client e crea il provider in fase di esecuzione.  
   
@@ -67,7 +67,7 @@ I trasporti orientati al flusso, quali TCP e named pipe, operano su un flusso co
 ## <a name="security-upgrades"></a>Aggiornamenti della protezione  
  L'aggiunta di un aggiornamento della protezione è una versione specifica del processo generale di aggiornamento flusso.  
   
- WCF fornisce già due elementi di associazione per l'aggiornamento della protezione di flusso. La configurazione della protezione a livello di trasporto viene incapsulata dalle classi <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement> e <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>, che possono essere configurate e aggiunte a un'associazione personalizzata. Questi elementi di associazione estendono la classe <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement> che crea i provider di aggiornamento flusso client e server. Questi elementi di associazione includono metodi che creano le classi di provider di aggiornamento flusso di sicurezza specifiche, che non sono `public`, pertanto, per questi due casi, tutto ciò che è necessario fare è aggiungere l'elemento di associazione all'associazione.  
+ WCF fornisce già due elementi di associazione per l'aggiornamento di sicurezza del flusso. La configurazione della protezione a livello di trasporto viene incapsulata dalle classi <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement> e <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>, che possono essere configurate e aggiunte a un'associazione personalizzata. Questi elementi di associazione estendono la classe <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement> che crea i provider di aggiornamento flusso client e server. Questi elementi di associazione includono metodi che creano le classi di provider di aggiornamento flusso di sicurezza specifiche, che non sono `public`, pertanto, per questi due casi, tutto ciò che è necessario fare è aggiungere l'elemento di associazione all'associazione.  
   
  Per gli scenari di sicurezza non soddisfatti dai due elementi di associazione precedenti vengono derivate tre classi `abstract` correlate alla protezione dalle classi di base di iniziatore, acceptor e provider precedenti:  
   
@@ -92,13 +92,13 @@ I trasporti orientati al flusso, quali TCP e named pipe, operano su un flusso co
   
 4.  Il flusso verrà aggiornato dopo ogni chiamata a <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A> e <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A>.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.Channels.StreamUpgradeInitiator>  
- <xref:System.ServiceModel.Channels.StreamSecurityUpgradeInitiator>  
- <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor>  
- <xref:System.ServiceModel.Channels.StreamSecurityUpgradeAcceptor>  
- <xref:System.ServiceModel.Channels.StreamUpgradeProvider>  
- <xref:System.ServiceModel.Channels.StreamSecurityUpgradeProvider>  
- <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement>  
- <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>  
- <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>
+## <a name="see-also"></a>Vedere anche
+- <xref:System.ServiceModel.Channels.StreamUpgradeInitiator>
+- <xref:System.ServiceModel.Channels.StreamSecurityUpgradeInitiator>
+- <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor>
+- <xref:System.ServiceModel.Channels.StreamSecurityUpgradeAcceptor>
+- <xref:System.ServiceModel.Channels.StreamUpgradeProvider>
+- <xref:System.ServiceModel.Channels.StreamSecurityUpgradeProvider>
+- <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement>
+- <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>
+- <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>

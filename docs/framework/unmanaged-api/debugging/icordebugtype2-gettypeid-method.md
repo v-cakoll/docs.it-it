@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5bc1407f8444b78154981619742bd0da188c4335
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 463838681ceaaeb2edab85a22dd979fb143b9248
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422071"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54602884"
 ---
 # <a name="icordebugtype2gettypeid-method"></a>Metodo ICorDebugType2::GetTypeID
 Ottiene un [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) per questo tipo.  
@@ -37,7 +37,7 @@ HRESULT GetTypeID(
   
 #### <a name="parameters"></a>Parametri  
  `id`  
- [out] Un puntatore al [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) per ICorDebugType.  
+ [out] Un puntatore per il [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) per ICorDebugType.  
   
 ## <a name="return-value"></a>Valore restituito  
  Il valore restituito è `S_OK` in caso di esito positivo o un codice di errore `HRESULT` in caso di esito negativo. Il `HRESULT` codici includono quanto segue:  
@@ -49,18 +49,18 @@ HRESULT GetTypeID(
 |`CORDBG_E_UNSUPPORTED`|Il tipo non è supportato.|  
   
 ## <a name="remarks"></a>Note  
- Questo metodo fornisce un mapping dal ICorDebugType, che rappresenta un tipo che potrebbe non sono stato caricato in fase di esecuzione, a un [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md), che funge da opaco gestiscono che identifica un tipo caricato in fase di esecuzione.  
+ Questo metodo fornisce un mapping tra ICorDebugType, che rappresenta un tipo che può o potrebbe non sono stato caricato in fase di esecuzione, a un [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md), che funge da un colore opaco gestiscono che identifica un tipo caricato nel runtime.  
   
- Quando il tipo che rappresenta il ICorDebugType non è stato ancora stato caricato, questo metodo restituisce `CORDBG_E_CLASS_NOT_LOADED`.  Se il tipo non è supportato, restituisce `CORDBG_E_UNSUPPORTED`.  
+ Quando il tipo che rappresenta il ICorDebugType non è ancora stato caricato, questo metodo restituisce `CORDBG_E_CLASS_NOT_LOADED`.  Se il tipo non è supportato, restituisce `CORDBG_E_UNSUPPORTED`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ICorDebugType2](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ICorDebugType2](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-interface.md)

@@ -2,12 +2,12 @@
 title: '&lt;msmqTransport&gt;'
 ms.date: 03/30/2017
 ms.assetid: 19d89f35-76ac-49dc-832b-e8bec2d5e33b
-ms.openlocfilehash: a0406ae6e91755707656e10c75cbd25dd68d07c2
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 523f2fd030f40a6d55080a48773159ab4b5887ec
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147915"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660580"
 ---
 # <a name="ltmsmqtransportgt"></a>&lt;msmqTransport&gt;
 Impone a un canale di trasferire i messaggi tramite il trasporto MSMQ quando viene incluso in un'associazione personalizzata.  
@@ -16,7 +16,7 @@ Impone a un canale di trasferire i messaggi tramite il trasporto MSMQ quando vie
 \<le associazioni >  
 \<customBinding>  
 \<binding>  
-\<msmqIntegration >  
+\<msmqIntegration>  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -73,7 +73,7 @@ Impone a un canale di trasferire i messaggi tramite il trasporto MSMQ quando vie
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<msmqTransportSecurity >](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqtransportsecurity.md)|Specifica le impostazioni di sicurezza del trasporto per questa associazione. L'elemento è di tipo <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>.|  
+|[\<msmqTransportSecurity>](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqtransportsecurity.md)|Specifica le impostazioni di sicurezza del trasporto per questa associazione. L'elemento è di tipo <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -86,15 +86,15 @@ Impone a un canale di trasferire i messaggi tramite il trasporto MSMQ quando vie
   
  Questo è l'elemento di associazione predefinito usato dall'associazione standard dell'accodamento dei messaggi (`netMsmqBinding`).  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.Configuration.MsmqTransportElement>  
- <xref:System.ServiceModel.Channels.MsmqTransportBindingElement>  
- <xref:System.ServiceModel.Channels.TransportBindingElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [Code in WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)  
- [Trasporti](../../../../../docs/framework/wcf/feature-details/transports.md)  
- [Scelta di un trasporto](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
- [Associazioni](../../../../../docs/framework/wcf/bindings.md)  
- [Estensione delle associazioni](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [Associazioni personalizzate](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.ServiceModel.Configuration.MsmqTransportElement>
+- <xref:System.ServiceModel.Channels.MsmqTransportBindingElement>
+- <xref:System.ServiceModel.Channels.TransportBindingElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [Code in WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)
+- [Trasporti](../../../../../docs/framework/wcf/feature-details/transports.md)
+- [Scelta di un trasporto](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+- [Associazioni](../../../../../docs/framework/wcf/bindings.md)
+- [Estensione delle associazioni](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [Associazioni personalizzate](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

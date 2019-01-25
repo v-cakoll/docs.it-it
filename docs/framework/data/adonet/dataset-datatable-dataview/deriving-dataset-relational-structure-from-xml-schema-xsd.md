@@ -2,17 +2,17 @@
 title: Derivazione della struttura relazionale di dataset da XML Schema (XSD)
 ms.date: 03/30/2017
 ms.assetid: 8f6cd04d-6197-4bc4-9096-8c51c7e4acae
-ms.openlocfilehash: 76fd0126f32eb2b22a12ee0b67e1f81794ff9445
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8d11fdbcb973eb3e4b7487eb6aacb28374c4c654
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195294"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717938"
 ---
 # <a name="deriving-dataset-relational-structure-from-xml-schema-xsd"></a>Derivazione della struttura relazionale di dataset da XML Schema (XSD)
 Questa sezione fornisce una panoramica della compilazione dello schema relazionale di un tipo `DataSet` da un documento basato sullo schema XSD (XML Schema Definition Language). In generale, per ognuno `complexType` nell'elemento figlio di un elemento dello schema, viene generata una tabella di `DataSet`. La struttura della tabella è determinata dalla definizione del tipo complesso. Le tabelle vengono create nel `DataSet` per gli elementi di primo livello nello schema. Tuttavia, una tabella viene creata solo per un livello superiore `complexType` elemento quando il `complexType` è annidato all'interno di un altro elemento `complexType` elemento, nel quale caso annidata `complexType` elemento viene mappato a una `DataTable` all'interno del `DataSet`.  
   
- Per altre informazioni su XSD, vedere il World Wide Web Consortium (W3C) [XML Schema Part 0: Primer Recommendation](https://www.w3.org/TR/xmlschema-0/), il [XML Schema Part 1: Structures Recommendation](https://www.w3.org/TR/xmlschema-1/)e il [XML Schema Part 2: Datatypes Recommendation](https://www.w3.org/TR/xmlschema-2/).  
+ Per altre informazioni su XSD, vedere il World Wide Web Consortium (W3C) [XML Schema Part 0: Introduzione alla raccomandazione](https://www.w3.org/TR/xmlschema-0/), il [XML Schema Part 1: Strutture di raccomandazione](https://www.w3.org/TR/xmlschema-1/)e il [XML Schema Part 2: Datatypes Recommendation](https://www.w3.org/TR/xmlschema-2/).  
   
  Nell'esempio seguente viene illustrato un XML Schema in cui `customers` è l'elemento figlio del `MyDataSet` elemento, che è un **DataSet** elemento.  
   
@@ -96,5 +96,5 @@ OutOfStateCustomers (CustomerID , CompanyName, Phone)
  [Uso di XML in un set di dati](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
  Viene descritto come caricare e mantenere la struttura relazionale e i dati in un `DataSet` come dati XML.  
   
-## <a name="see-also"></a>Vedere anche  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vedere anche
+- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

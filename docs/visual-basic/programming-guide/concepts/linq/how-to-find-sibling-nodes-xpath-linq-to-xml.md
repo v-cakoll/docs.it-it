@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: trovare nodi di pari livello (XPath-LINQ to XML) (Visual Basic)'
+title: 'Procedura: Trovare nodi di pari livello (XPath-LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 73082738-2113-4438-8545-98d5df0927cb
-ms.openlocfilehash: ded92d8cb7cb2d2aa6c6342c3ddec347e25ff79a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 740123077c24dd27fe1a4810d0cb45c4775894aa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642881"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54622637"
 ---
-# <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-visual-basic"></a>Procedura: trovare nodi di pari livello (XPath-LINQ to XML) (Visual Basic)
+# <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-visual-basic"></a>Procedura: Trovare nodi di pari livello (XPath-LINQ to XML) (Visual Basic)
 Può essere necessario trovare tutti i gli elementi di pari livello di un nodo che hanno un nome specifico. La raccolta risultante può includere il nodo di contesto, se anche quest'ultimo ha il nome specifico.  
   
  L'espressione XPath è:  
@@ -19,7 +19,7 @@ Può essere necessario trovare tutti i gli elementi di pari livello di un nodo c
 ## <a name="example"></a>Esempio  
  In questo esempio viene dapprima ricercato un elemento `Book` e quindi tutti gli elementi di pari livello denominati `Book`. La raccolta risultante include il nodo di contesto.  
   
- Questo esempio usa il documento XML seguente: [File XML di esempio: libri (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).  
+ Nell'esempio viene utilizzato il seguente documento XML:  [File XML di esempio: Libri (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).  
   
 ```vb  
 Dim books As XDocument = XDocument.Load("Books.xml")  
@@ -67,5 +67,5 @@ Results are identical
 </Book>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [LINQ to XML per gli utenti di XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a>Vedere anche
+- [LINQ to XML per gli utenti di XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e3926a0d49b2db02cf52a3cc943b05edc4cc36a8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 939e815f4d3adc5f6e1c8b8fc85c9f4b89372501
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406285"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54571483"
 ---
 # <a name="assemblyoptions-enumeration"></a>Enumerazione AssemblyOptions
 Enumera le opzioni di assembly.  
@@ -61,22 +61,22 @@ typedef enum _AssemblyOptions {
 |optAssemTitle|Stringa - rappresenta il titolo dell'assembly.|  
 |optAssemDescription|Stringa - contiene la descrizione dell'assembly.|  
 |optAssemConfig|Stringa - contiene la configurazione dell'assembly.|  
-|optAssemOS|Stringa - codificata come: "dwOSPlatformId.dwOSMajorVersion.dwOSMinorVersion".|  
+|optAssemOS|Stringa, codificata come: "dwOSPlatformId.dwOSMajorVersion.dwOSMinorVersion".|  
 |optAssemProcessor|ULONG|  
 |optAssemLocale|Stringa - contiene le impostazioni locali di assembly.|  
-|optAssemVersion|Stringa - codificata come: "Principale".|  
-|optAssemCompany|Stringa - contiene la società.|  
+|optAssemVersion|Stringa, codificata come: "Revisione".|  
+|optAssemCompany|Stringa - contiene l'azienda.|  
 |optAssemProduct|Stringa - contiene il nome del prodotto.|  
-|optAssemProductVersion|Stringa (noto anche come InformationalVersion).|  
+|optAssemProductVersion|Stringa (anche nota come InformationalVersion).|  
 |optAssemCopyright|Stringa - contiene le informazioni sul copyright.|  
 |optAssemTrademark|Stringa - contiene le informazioni sul marchio.|  
 |optAssemKeyFile|String (nome file).|  
 |optAssemKeyName|Stringa (il nome della chiave).|  
 |optAssemAlgID|ULONG|  
 |optAssemFlags|ULONG|  
-|optAssemHalfSign|Bool (anche noto come DelaySign).|  
-|optAssemFileVersion|Stringa - codificata come "Revisione", corrisponde a ProductVersion.|  
-|optAssemSatelliteVer|Stringa - codificata come "Revisione".|  
+|optAssemHalfSign|Bool (noto anche come DelaySign).|  
+|optAssemFileVersion|Stringa - codificato come "Revisione", identico ProductVersion.|  
+|optAssemSatelliteVer|Stringa - codificato come "Revisione".|  
 |optLastAssemOption|Un contatore del numero di elementi.|  
   
 ## <a name="requirements"></a>Requisiti  
@@ -84,5 +84,5 @@ typedef enum _AssemblyOptions {
   
  **Libreria**: ALink. dll  
   
-## <a name="see-also"></a>Vedere anche  
- [Al.exe (Assembly Linker)](../../../../docs/framework/tools/al-exe-assembly-linker.md)
+## <a name="see-also"></a>Vedere anche
+- [Al.exe (Assembly Linker)](../../../../docs/framework/tools/al-exe-assembly-linker.md)

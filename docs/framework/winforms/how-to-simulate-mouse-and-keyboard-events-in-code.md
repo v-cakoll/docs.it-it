@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: simulare eventi di mouse e tastiera nel codice'
+title: 'Procedura: Simulare eventi di Mouse e tastiera nel codice'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - mouse clicks [Windows Forms], simulating
 - mouse [Windows Forms], event simulation
 ms.assetid: 6abcb67e-3766-4af2-9590-bf5dabd17e41
-ms.openlocfilehash: 56c7d534d5428ff116c6de1aeffd9a31bd7a5063
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 56291df0db8daf6d166800c0b9638c43e6b545f6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43798113"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610578"
 ---
-# <a name="how-to-simulate-mouse-and-keyboard-events-in-code"></a>Procedura: simulare eventi di mouse e tastiera nel codice
+# <a name="how-to-simulate-mouse-and-keyboard-events-in-code"></a>Procedura: Simulare eventi di Mouse e tastiera nel codice
 Windows Form include diverse opzioni per simulare a livello di codice l'input del mouse e della tastiera. In questo argomento viene fornita una panoramica di queste opzioni.  
   
 ## <a name="simulating-mouse-input"></a>Simulazione dell'input del mouse  
@@ -87,7 +87,7 @@ Windows Form include diverse opzioni per simulare a livello di codice l'input de
   
 -   Riferimenti agli assembly System, System.Drawing e System.Windows.Forms.  
   
- Per informazioni sulla compilazione di questo esempio dalla riga di comando per Visual Basic o Visual c#, vedere [compilazione dalla riga di comando](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oppure [con la creazione della riga di comando csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). È anche possibile compilare questo esempio in Visual Studio incollando il codice in un nuovo progetto.  Vedere anche [Procedura: Compilare ed eseguire un esempio di codice Windows Form completo tramite Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Per informazioni sulla compilazione di questo esempio dalla riga di comando per Visual Basic o Visual c#, vedere [compilazione dalla riga di comando](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oppure [con la creazione della riga di comando csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). È anche possibile compilare questo esempio in Visual Studio incollando il codice in un nuovo progetto.  Vedere anche [come: Compilare ed eseguire un esempio di codice completo di Windows Form con Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
-## <a name="see-also"></a>Vedere anche  
- [Input dell'utente in Windows Forms](../../../docs/framework/winforms/user-input-in-windows-forms.md)
+## <a name="see-also"></a>Vedere anche
+- [Input dell'utente in Windows Forms](../../../docs/framework/winforms/user-input-in-windows-forms.md)

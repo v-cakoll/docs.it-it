@@ -2,12 +2,12 @@
 title: Accesso ai servizi WCF con un'applicazione client Windows Store
 ms.date: 03/30/2017
 ms.assetid: e2002ef4-5dee-4a54-9d87-03b33d35fc52
-ms.openlocfilehash: a6324d5400e9fb15b3373eea4df0a15cd7c54887
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: 95a717f139983be8291c2d156d8dd1626a43372a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266639"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54613662"
 ---
 # <a name="accessing-wcf-services-with-a-windows-store-client-app"></a>Accesso ai servizi WCF con un'applicazione client Windows Store
 In Windows 8 è stato introdotto un nuovo tipo di applicazione denominato applicazioni Windows Store. Queste applicazioni sono progettate in base a un'interfaccia del touchscreen. .NET Framework 4.5 consente alle applicazioni Windows Store di chiamare i servizi WCF.  
@@ -55,7 +55,7 @@ In Windows 8 è stato introdotto un nuovo tipo di applicazione denominato applic
  Sono supportate sia la codifica testo sia quella binaria. Inoltre, sono supportate tutte le modalità di trasferimento WCF. Per altre informazioni, vedere [Streaming Message Transfer](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md).  
   
 ### <a name="add-service-reference"></a>Aggiungi riferimento al servizio  
- Per chiamare un servizio WCF da un'applicazione Windows Store, usare la funzionalità Aggiungi riferimento al servizio di Visual Studio 2012. Si noteranno alcune modifiche di tale funzionalità quando eseguita in un'applicazione Windows Store. Innanzitutto non viene generato alcun file di configurazione. Nelle applicazioni Windows Store non vengono usati i file di configurazione, pertanto devono essere configurati nel codice. Questo codice di configurazione è disponibile nel file References.cs generato da Aggiungi riferimento al servizio. Per visualizzare questo file, assicurarsi di selezionare "Mostra tutti i file" in Esplora soluzioni. Il file si trova nei riferimenti al servizio, quindi nei nodi Reference.svcmap del progetto. Tutte le operazioni generate per i servizi WCF in un'applicazione Windows Store saranno asincrone mediante il modello asincrono basato su attività. Per altre informazioni, vedere [Task-based Asynchronous Pattern](https://msdn.microsoft.com/magazine/ff959203.aspx).  
+ Per chiamare un servizio WCF da un'applicazione Windows Store, usare la funzionalità Aggiungi riferimento al servizio di Visual Studio 2012. Si noteranno alcune modifiche di tale funzionalità quando eseguita in un'applicazione Windows Store. Innanzitutto non viene generato alcun file di configurazione. Nelle applicazioni Windows Store non vengono usati i file di configurazione, pertanto devono essere configurati nel codice. Questo codice di configurazione è disponibile nel file References.cs generato da Aggiungi riferimento al servizio. Per visualizzare questo file, assicurarsi di selezionare "Mostra tutti i file" in Esplora soluzioni. Il file si trova nei riferimenti al servizio, quindi nei nodi Reference.svcmap del progetto. Tutte le operazioni generate per i servizi WCF in un'applicazione Windows Store saranno asincrone mediante il modello asincrono basato su attività. Per altre informazioni, vedere [Modello asincrono basato su attività](https://msdn.microsoft.com/magazine/ff959203.aspx).  
   
  Poiché la configurazione viene generata nel codice, tutte le modifiche apportate al file Reference.cs verranno sovrascritte ogni volta che il riferimento al servizio viene aggiornato. Per risolvere questa situazione, il codice di configurazione viene generato all'interno di un metodo parziale, che è possibile implementare nella classe proxy del client. Il metodo parziale viene dichiarato come riportato di seguito:  
   
@@ -174,10 +174,10 @@ void async SomeMethod()
   
  Si noti l'uso della parola chiave async nel metodo con cui si effettua la chiamata asincrona e la parola chiave await quando viene chiamato il metodo asincrono.  
   
-## <a name="see-also"></a>Vedere anche  
- [WCF nel Blog delle App Windows Store](https://blogs.msdn.com/b/piyushjo/archive/2011/09/22/wcf-in-win8-metro-styled-apps-absolutely-supported.aspx)  
- [Sicurezza e i client di WCF Windows Store](https://blogs.msdn.com/b/piyushjo/archive/2011/10/11/calling-a-wcf-service-from-a-metro-application-adding-security.aspx)  
- [Le app di Windows Store e chiamate tra computer](https://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)  
- [La chiamata a un servizio WCF distribuito in Azure da un'App Windows Store](https://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)  
- [Programmazione delle funzionalità di sicurezza di WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)  
- [Associazioni](../../../../docs/framework/wcf/bindings.md)
+## <a name="see-also"></a>Vedere anche
+- [WCF nel Blog delle App Windows Store](https://blogs.msdn.com/b/piyushjo/archive/2011/09/22/wcf-in-win8-metro-styled-apps-absolutely-supported.aspx)
+- [Sicurezza e i client di WCF Windows Store](https://blogs.msdn.com/b/piyushjo/archive/2011/10/11/calling-a-wcf-service-from-a-metro-application-adding-security.aspx)
+- [Le app di Windows Store e chiamate tra computer](https://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)
+- [La chiamata a un servizio WCF distribuito in Azure da un'App Windows Store](https://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)
+- [Programmazione delle funzionalità di sicurezza di WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
+- [Associazioni](../../../../docs/framework/wcf/bindings.md)

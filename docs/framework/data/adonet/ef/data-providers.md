@@ -2,12 +2,12 @@
 title: Provider di dati Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 5252e639-ff11-4818-82e7-07221ed6ae23
-ms.openlocfilehash: cd18e8b971af9103fdaecaebfe6f0c8e0ae9a0d3
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 502bfce39a9e645f36b9be13775a0357307d6c31
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44259597"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54602832"
 ---
 # <a name="entity-framework-data-providers"></a>Provider di dati Entity Framework
 Questa sezione fornisce informazioni su provider di dati che supportano [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
@@ -26,5 +26,5 @@ Questa sezione fornisce informazioni su provider di dati che supportano [!INCLUD
  [Provider di terze parti per Entity Framework](https://go.microsoft.com/fwlink/?LinkId=143699)  
  Elenco dei provider di dati di terze parti attualmente disponibili per Entity Framework.  
   
-## <a name="see-also"></a>Vedere anche  
- [Uso di provider di dati](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)
+## <a name="see-also"></a>Vedere anche
+- [Uso di provider di dati](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)

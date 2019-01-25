@@ -1,16 +1,16 @@
 ---
-title: 'Procedura: implementare un servizio individuabile che esegue la registrazione al proxy di individuazione'
+title: 'Procedura: Implementare un servizio individuabile che esegue la registrazione al Proxy di individuazione'
 ms.date: 03/30/2017
 ms.assetid: eb275bc1-535b-44c8-b9f3-0b75e9aa473b
-ms.openlocfilehash: e0ceada8f65b98676d160ba096c63bf946a178cf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 30cf098b97b1e0188f264bee2ce3dbcdcdb8921b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33490597"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623690"
 ---
-# <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a>Procedura: implementare un servizio individuabile che esegue la registrazione al proxy di individuazione
-Quello che segue è il secondo di quattro argomenti incentrato sull'implementazione di un proxy di individuazione. Nell'argomento precedente, [procedura: implementare un Proxy di individuazione](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md), è implementato un proxy di individuazione. In questo argomento, si crea un servizio WCF che invia messaggi di annuncio (`Hello` e `Bye`) al proxy di individuazione, in modo da registrare e annullare la registrazione di se stesso con il proxy di individuazione.  
+# <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a>Procedura: Implementare un servizio individuabile che esegue la registrazione al Proxy di individuazione
+Quello che segue è il secondo di quattro argomenti incentrato sull'implementazione di un proxy di individuazione. Nell'argomento precedente, [come: Implementare un Proxy di individuazione](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md), è stato implementato un proxy di individuazione. In questo argomento, si crea un servizio WCF che invia messaggi di annuncio (`Hello` e `Bye`) al proxy di individuazione, in modo da registrare e annullare la registrazione di se stesso con il proxy di individuazione.  
   
 ### <a name="to-define-the-service-contract"></a>Per definire il contratto di servizio  
   
@@ -154,7 +154,7 @@ Quello che segue è il secondo di quattro argomenti incentrato sull'implementazi
     }  
     ```  
   
- L'implementazione di un servizio individuabile è quindi completata. Continuare a [procedura: implementare un'applicazione Client che utilizza il Proxy di individuazione per trovare un servizio](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md).  
+ L'implementazione di un servizio individuabile è quindi completata. Continuare a [come: Implementare un'applicazione Client che usa il Proxy di individuazione per cercare un servizio](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md).  
   
 ## <a name="example"></a>Esempio  
  Quello che segue è l'elenco completo del codice usato in questo argomento.  
@@ -284,7 +284,7 @@ namespace Microsoft.Samples.Discovery
 }  
 ```  
 
-## <a name="see-also"></a>Vedere anche  
- [WCF Discovery](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)  
- [Procedura: Implementare un proxy di individuazione](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)  
- [Procedura: Implementare un'applicazione client che usa il proxy di individuazione per trovare un servizio](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
+## <a name="see-also"></a>Vedere anche
+- [WCF Discovery](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)
+- [Procedura: Implementare un Proxy di individuazione](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)
+- [Procedura: Implementare un'applicazione Client che usa il Proxy di individuazione per cercare un servizio](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)

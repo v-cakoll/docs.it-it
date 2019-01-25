@@ -5,15 +5,15 @@ helpviewer_keywords:
 - WPF Host application [WPF]
 - PresentationHost.exe
 ms.assetid: 3215bfa1-722c-4ac8-a7c5-bdd02d30afbd
-ms.openlocfilehash: ca8198e17bec62866b6a58e6fd14ea468308f48b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d3b1ebf3cd62b77a9082c0b149469462b5dffa3e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33552688"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54577525"
 ---
 # <a name="wpf-host-presentationhostexe"></a>Host WPF (PresentationHost.exe)
-Host di Windows Presentation Foundation (WPF) (PresentationHost.exe) è l'applicazione che consente [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] hosting nel browser compatibili delle applicazioni (tra cui [!INCLUDE[TLA#tla_ie6](../../../../includes/tlasharptla-ie6-md.md)] e versioni successive). Per impostazione predefinita, l'Host di Windows Presentation Foundation (WPF) è registrato come la shell e [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] ospitate da browser gestore per [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] contenuto, che include:  
+Host di Windows Presentation Foundation (WPF) (PresentationHost.exe) è l'applicazione che consente [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] alle applicazioni di essere ospitate in browser compatibili (inclusi [!INCLUDE[TLA#tla_ie6](../../../../includes/tlasharptla-ie6-md.md)] e versioni successive). Per impostazione predefinita, l'Host di Windows Presentation Foundation (WPF) è registrato come la shell e [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] ospitate da browser gestore per [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] contenuto, che include:  
   
 -   File [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] separati (con estensione xaml) non compilati.  
   
@@ -21,9 +21,9 @@ Host di Windows Presentation Foundation (WPF) (PresentationHost.exe) è l'applic
   
  Per i file di questi tipi, Host di Windows Presentation Foundation (WPF):  
   
--   Avvia registrato [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] gestore per ospitare il contenuto di Windows Presentation Foundation (WPF).  
+-   Avvia l'oggetto registrato [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] gestore per ospitare il contenuto di Windows Presentation Foundation (WPF).  
   
--   Carica le versioni corrette delle richieste [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] e gli assembly di Windows Presentation Foundation (WPF).  
+-   Carica le versioni corrette degli richiesti [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] e gli assembly di Windows Presentation Foundation (WPF).  
   
 -   Assicura che siano disponibili i livelli di autorizzazione appropriati per l'area di distribuzione.  
   
@@ -57,5 +57,5 @@ Host di Windows Presentation Foundation (WPF) (PresentationHost.exe) è l'applic
 ### <a name="visual-studio-debugging-in-zone"></a>Debugging nell'area di sicurezza di Visual Studio  
  `PresentationHost.exe -debug -debugSecurityZoneURL http://www.example.com c:\folderpath\example.xbap`  
   
-## <a name="see-also"></a>Vedere anche  
- [Sicurezza](../../../../docs/framework/wpf/security-wpf.md)
+## <a name="see-also"></a>Vedere anche
+- [Sicurezza](../../../../docs/framework/wpf/security-wpf.md)

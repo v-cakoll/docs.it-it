@@ -1,22 +1,22 @@
 ---
-title: 'Procedura: chiamare operazioni del servizio WCF in modo asincrono'
+title: 'Procedura: Chiamare operazioni del servizio WCF in modo asincrono'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0face17f-43ca-417b-9b33-737c0fc360df
-ms.openlocfilehash: 90e00e4264ff808151c9e1c58fdaf290765620c8
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 19b09c9ec789419f2774207b051b8ee488b6725d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200334"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54625549"
 ---
-# <a name="how-to-call-wcf-service-operations-asynchronously"></a>Procedura: chiamare operazioni del servizio WCF in modo asincrono
-In questo argomento viene illustrato come un client può accedere a un'operazione del servizio in modo asincrono. Il servizio in questo argomento implementa l'interfaccia `ICalculator`. Il client può chiamare le operazioni in questa interfaccia in modo asincrono utilizzando il modello di chiamata asincrono basato su eventi. (Per altre informazioni sul modello di chiamata asincrono basato su eventi, vedere [programmazione multithreading con il modello asincrono basato su eventi](https://go.microsoft.com/fwlink/?LinkId=248184)). Per un esempio che illustra come implementare un'operazione in modo asincrono in un servizio, vedere [procedura: implementare un'operazione del servizio asincrona](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md). Per altre informazioni sulle operazioni sincrone e asincrone, vedere [sincrono e alle operazioni asincrone](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md).  
+# <a name="how-to-call-wcf-service-operations-asynchronously"></a>Procedura: Chiamare operazioni del servizio WCF in modo asincrono
+In questo argomento viene illustrato come un client può accedere a un'operazione del servizio in modo asincrono. Il servizio in questo argomento implementa l'interfaccia `ICalculator`. Il client può chiamare le operazioni in questa interfaccia in modo asincrono utilizzando il modello di chiamata asincrono basato su eventi. (Per altre informazioni sul modello di chiamata asincrono basato su eventi, vedere [programmazione multithreading con il modello asincrono basato su eventi](https://go.microsoft.com/fwlink/?LinkId=248184)). Per un esempio che illustra come implementare un'operazione in modo asincrono in un servizio, vedere [come: Implementare un'operazione del servizio asincrona](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md). Per altre informazioni sulle operazioni sincrone e asincrone, vedere [sincrono e alle operazioni asincrone](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md).  
   
 > [!NOTE]
->  Il modello di chiamata asincrono basato su eventi non è supportato quando si utilizza una classe <xref:System.ServiceModel.ChannelFactory%601>. Per informazioni sulle chiamate asincrone utilizzando il <xref:System.ServiceModel.ChannelFactory%601>, vedere [procedura: chiamare operazioni usando in modo asincrono una Channel Factory](../../../../docs/framework/wcf/feature-details/how-to-call-operations-asynchronously-using-a-channel-factory.md).  
+>  Il modello di chiamata asincrono basato su eventi non è supportato quando si utilizza una classe <xref:System.ServiceModel.ChannelFactory%601>. Per informazioni sulle chiamate asincrone utilizzando il <xref:System.ServiceModel.ChannelFactory%601>, vedere [come: Chiamare le operazioni in modo asincrono usando una Channel Factory](../../../../docs/framework/wcf/feature-details/how-to-call-operations-asynchronously-using-a-channel-factory.md).  
   
 ## <a name="procedure"></a>Routine  
   
@@ -63,5 +63,5 @@ In questo argomento viene illustrato come un client può accedere a un'operazion
  [!code-csharp[EventAsync#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/eventasync/cs/client.cs#6)]
  [!code-vb[EventAsync#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/eventasync/vb/client.vb#6)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Procedura: Implementare un'operazione del servizio asincrona](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md)
+## <a name="see-also"></a>Vedere anche
+- [Procedura: Implementare un'operazione del servizio asincrona](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md)

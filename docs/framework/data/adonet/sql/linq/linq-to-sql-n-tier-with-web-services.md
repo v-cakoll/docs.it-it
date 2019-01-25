@@ -2,18 +2,18 @@
 title: Più livelli di LINQ to SQL con Servizi Web
 ms.date: 03/30/2017
 ms.assetid: 9cb10eb8-957f-4beb-a271-5f682016fed2
-ms.openlocfilehash: bf13c34a058d33d240e780cb1ce0e665bd1322d2
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: caa7105e4f64cce78c34237279fd357fdfe92d55
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43862238"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623612"
 ---
 # <a name="linq-to-sql-n-tier-with-web-services"></a>Più livelli di LINQ to SQL con Servizi Web
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] è progettato appositamente per essere utilizzati nel livello intermedio in un livello di accesso a regime di controllo dei dati (DAL), ad esempio un servizio Web. Se il livello di presentazione è una pagina Web ASP.NET, verrà usato il controllo server Web <xref:System.Web.UI.WebControls.LinqDataSource> per gestire il trasferimento dei dati tra l'interfaccia utente e [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nel livello intermedio. Se il livello di presentazione non è una pagina ASP.NET, sarà necessario eseguire operazioni aggiuntive nel livello intermedio e nel livello di presentazione in modo da gestire la serializzazione e deserializzazione dei dati.  
   
 ## <a name="setting-up-linq-to-sql-on-the-middle-tier"></a>Configurazione di LINQ to SQL nel livello intermedio  
- In un servizio Web o in un'applicazione a più livelli, il livello intermedio contiene il contesto dati e le classi di entità. È possibile creare manualmente queste classi oppure usando SQLMetal.exe o la [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] come descritto in un altro punto della documentazione. In fase di progettazione è possibile rendere le classi di entità serializzabili. Per altre informazioni, vedere [procedura: rendere serializzabili le entità](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md). Un'altra opzione è creare un set separato di classi che incapsulano i dati da serializzare e quindi proiettare in tali tipi serializzabili quando si restituiscono i dati nelle query [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].  
+ In un servizio Web o in un'applicazione a più livelli, il livello intermedio contiene il contesto dati e le classi di entità. È possibile creare manualmente queste classi oppure usando SQLMetal.exe o la [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] come descritto in un altro punto della documentazione. In fase di progettazione è possibile rendere le classi di entità serializzabili. Per altre informazioni, vedere [Procedura: Rendere serializzabili le entità](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md). Un'altra opzione è creare un set separato di classi che incapsulano i dati da serializzare e quindi proiettare in tali tipi serializzabili quando si restituiscono i dati nelle query [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].  
   
  Definire quindi l'interfaccia con i metodi che i client chiameranno per recuperare, inserire e aggiornare i dati. I metodi di interfaccia eseguono il wrapping delle query [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]. È possibile usare qualsiasi tipo di meccanismo di serializzazione per gestire le chiamate al metodo remote e la serializzazione dei dati. L'unico requisito è che se si hanno relazioni cicliche o bidirezionali nel modello a oggetti, come ad esempio tra Customers e Orders nel modello a oggetti standard Northwind, è necessario usare un serializzatore che lo supporti. Windows Communication Foundation (WCF) <xref:System.Runtime.Serialization.DataContractSerializer> relazioni bidirezionali supporta, ma la classe XmlSerializer utilizzata con servizi Web non WCF non esiste. Se si sceglie di utilizzare XmlSerializer, sarà necessario accertarsi che il modello a oggetti non contenga relazioni cicliche.  
   
@@ -36,6 +36,6 @@ ms.locfileid: "43862238"
   
  Per altre informazioni, vedere [recupero di dati e operazioni CUD in applicazioni a più livelli (LINQ to SQL)](../../../../../../docs/framework/data/adonet/sql/linq/data-retrieval-and-cud-operations-in-n-tier-applications.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Applicazioni a più livelli e remote con LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md)  
- [NIB: Cenni preliminari sul controllo Server Web LinqDataSource](https://msdn.microsoft.com/library/104cfc3f-7385-47d3-8a51-830dfa791136)
+## <a name="see-also"></a>Vedere anche
+- [Applicazioni a più livelli e remote con LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md)
+- [NIB: Cenni preliminari sul controllo Server Web LinqDataSource](https://msdn.microsoft.com/library/104cfc3f-7385-47d3-8a51-830dfa791136)

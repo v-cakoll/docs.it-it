@@ -1,19 +1,19 @@
 ---
-title: 'Procedura: animare lo spessore di un bordo utilizzando frame chiave'
+title: 'Procedura: Animare lo spessore di un bordo utilizzando i fotogrammi chiave'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - animation [WPF], border thickness with key frames
 - key frames [WPF], animating border thickness with
 - border thickness [WPF], animating with key frames
 ms.assetid: 3a9cb463-0a63-407d-aae7-3fbb1a559947
-ms.openlocfilehash: a601fd6779a4d912166366652435aff9ae37613f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: d30e414dd83e596da6415cc455c599820a22f3e0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43421410"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54689955"
 ---
-# <a name="how-to-animate-the-thickness-of-a-border-by-using-key-frames"></a>Procedura: animare lo spessore di un bordo utilizzando frame chiave
+# <a name="how-to-animate-the-thickness-of-a-border-by-using-key-frames"></a>Procedura: Animare lo spessore di un bordo utilizzando i fotogrammi chiave
 In questo esempio illustra come animare la <xref:System.Windows.Controls.Control.BorderThickness%2A> proprietà di un <xref:System.Windows.Controls.Border>.  
   
 ## <a name="example"></a>Esempio  
@@ -29,10 +29,10 @@ In questo esempio illustra come animare la <xref:System.Windows.Controls.Control
   
  Per l'esempio completo, vedere [Esempio di animazione con fotogrammi chiave](https://go.microsoft.com/fwlink/?LinkID=160012).  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Windows.Media.Animation.LinearThicknessKeyFrame>  
- <xref:System.Windows.Media.Animation.DiscreteThicknessKeyFrame>  
- <xref:System.Windows.Media.Animation.SplineThicknessKeyFrame>  
- [Cenni preliminari sulle animazioni con fotogrammi chiave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
- [Procedure relative ai fotogrammi chiave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)  
- [Animare un valore BorderThickness](../../../../docs/framework/wpf/controls/how-to-animate-a-borderthickness-value.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Windows.Media.Animation.LinearThicknessKeyFrame>
+- <xref:System.Windows.Media.Animation.DiscreteThicknessKeyFrame>
+- <xref:System.Windows.Media.Animation.SplineThicknessKeyFrame>
+- [Cenni preliminari sulle animazioni con fotogrammi chiave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+- [Procedure relative ai fotogrammi chiave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)
+- [Animare un valore BorderThickness](../../../../docs/framework/wpf/controls/how-to-animate-a-borderthickness-value.md)

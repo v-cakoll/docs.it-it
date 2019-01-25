@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aff8fa88fe811d5a07ea8ffb1653e403338ba546
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 01d8821cdcb27ed44491db41da22309147da8a36
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33440187"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54706735"
 ---
 # <a name="ihostsecuritycontextcapture-method"></a>Metodo IHostSecurityContext::Capture
-Ottiene un clone di [IHostSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md) istanza restituita da una chiamata a [IHostSecurityManager::](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-getsecuritycontext-method.md).  
+Ottiene un clone del [IHostSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md) istanza restituita da una chiamata a [IHostSecurityManager](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-getsecuritycontext-method.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -46,22 +46,22 @@ HRESULT Capture (
 |S_OK|`Capture` stato restituito correttamente.|  
 |HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) non è stato caricato in un processo oppure si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.|  
 |HOST_E_TIMEOUT|Timeout della chiamata.|  
-|HOST_E_NOT_OWNER|Il chiamante non dispone del blocco.|  
-|HOST_E_ABANDONED|Un evento è stato annullato mentre un thread bloccato o fiber era in attesa su di esso.|  
-|E_FAIL|Si è verificato un errore irreversibile sconosciuto. Quando un metodo viene restituito E_FAIL, Common Language Runtime non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiranno HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_NOT_OWNER|Il chiamante non possiede il blocco.|  
+|HOST_E_ABANDONED|Un evento è stato annullato durante un thread bloccato o fiber è rimasta in attesa su di esso.|  
+|E_FAIL|Si è verificato un errore irreversibile sconosciuto. Quando un metodo di E_FAIL viene restituito, CLR non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiranno HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Note  
- Il puntatore a interfaccia restituito da `Capture` è un clone del contesto acquisito. Quando queste informazioni viene spostate su un punto di codice asincrono, la relativa durata è separata da quello del puntatore rispetto al quale è stata effettuata la chiamata. Il puntatore originale può quindi essere rilasciato.  
+ Il puntatore a interfaccia restituito dal `Capture` è un clone del contesto acquisito. Quando queste informazioni vengono spostate in un punto di codice asincrono, la sua durata è separata da quello del puntatore rispetto al quale è stata effettuata la chiamata. Il puntatore originale può pertanto essere rilasciato.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Mscoree. H  
+ **Intestazione:** MSCorEE.h  
   
- **Libreria:** inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia IHostSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md)  
- [Interfaccia IHostSecurityManager](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia IHostSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md)
+- [Interfaccia IHostSecurityManager](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-interface.md)

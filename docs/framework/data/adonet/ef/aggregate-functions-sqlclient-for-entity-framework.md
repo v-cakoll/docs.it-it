@@ -2,12 +2,12 @@
 title: Funzioni di aggregazione (SqlClient per Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 03303f01-b591-4efc-9875-f9c608edff0b
-ms.openlocfilehash: 8ed9a58da9914724fe312876d6594cb526f2e0e9
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 55a10b82ffc189f5cf4118cb225a96963226256e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856517"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54724187"
 ---
 # <a name="aggregate-functions-sqlclient-for-entity-framework"></a>Funzioni di aggregazione (SqlClient per Entity Framework)
 Il provider di dati .NET Framework per SQL Server (SqlClient) fornisce funzioni di aggregazione che eseguono calcoli su un set di valori di input e restituiscono un valore. Tali funzioni si trovano nello spazio dei nomi SqlServer, disponibile quando si usa SqlClient. Una proprietà dello spazio dei nomi del provider consente a Entity Framework di individuare il prefisso usato dal provider per costrutti specifici, ad esempio tipi e funzioni.  
@@ -37,7 +37,7 @@ Tipo di `expression`.
  
  **Argomenti**
  
- Una raccolta (`Int32`).
+ A Collection(`Int32`).
  
  **Valore restituito**
  
@@ -68,9 +68,9 @@ Oggetto `Int32`.
 **Esempio**
 
 [!code-csharp[DP EntityServices Concepts#SQLSERVER_COUNT](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_count)]
-[! codice sql[DP EntityServices concetti & SQLSERVER_COUNT](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_count)
+[!code-sql[DP EntityServices Concepts#SQLSERVER_COUNT](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_count)
  
-## <a name="countbigexpression"></a>COUNT_BIG(Expression)
+## <a name="countbigexpression"></a>COUNT_BIG(expression)
  
  Restituisce il numero di elementi in una raccolta come un valore `bigint`.
  
@@ -142,7 +142,7 @@ Restituisce la deviazione statistica standard di tutti i valori nell'espressione
 
 **Argomenti**
 
-Una raccolta (`Double`).
+A Collection(`Double`).
 
 **Valore restituito**
 
@@ -159,7 +159,7 @@ Restituisce la deviazione statistica standard relativa alla popolazione per tutt
 
 **Argomenti**
 
-Una raccolta (`Double`).
+A Collection(`Double`).
 
 **Valore restituito**
 
@@ -187,13 +187,13 @@ Tipo di `expression`.
 [!code-csharp[DP EntityServices Concepts#SQLSERVER_SUM](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_sum)]
 [!code-sql[DP EntityServices Concepts#SQLSERVER_SUM](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_sum)]
 
-## <a name="varexpression"></a>VAR(Expression)
+## <a name="varexpression"></a>VAR(expression)
 
 Restituisce la varianza statistica di tutti i valori nell'espressione specificata.
 
 **Argomenti**
 
-Una raccolta (`Double`).
+A Collection(`Double`).
 
 **Valore restituito**
 
@@ -210,7 +210,7 @@ Restituisce la varianza statistica della popolazione per tutti i valori nell'esp
 
 **Argomenti**
 
-Una raccolta (`Double`).
+A Collection(`Double`).
 
 **Valore restituito**
 
@@ -224,8 +224,8 @@ Oggetto `Double`.
 ## <a name="see-also"></a>Vedere anche
 
 Per altre informazioni sulle funzioni di aggregazione supportate da SqlClient, vedere la documentazione relativa alla versione di SQL Server specificata nel file manifesto del provider SqlClient:  
-  
-**SQL Server 2005**: [funzioni di aggregazione (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms173454(v=sql.90))  
-**SQL Server 2008 e versioni successive**: [funzioni di aggregazione (Transact-SQL)](/sql/t-sql/functions/aggregate-functions-transact-sql)  
-[Linguaggio Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)  
-[Funzioni di aggregazione canoniche](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)
+
+**SQL Server 2005**: [Aggregate Functions (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms173454(v=sql.90))  
+**SQL Server 2008 e versioni successive**:  [Aggregate Functions (Transact-SQL)](/sql/t-sql/functions/aggregate-functions-transact-sql)  
+- [Linguaggio Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)
+- [Funzioni di aggregazione canoniche](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)

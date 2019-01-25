@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], surrogates
 ms.assetid: 8c31134c-46c5-4ed7-94af-bab0ac0dfce5
-ms.openlocfilehash: b06cb45d6075c8de1da973a11e2edec6792df304
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: b9349291979e76650f07db5e433620554928eb4b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809469"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54614608"
 ---
 # <a name="data-contract-surrogates"></a>Surrogati del contratto dati
 Il contratto dati *surrogato* è una funzionalità avanzata basata sul modello del contratto dati. È progettata per la personalizzazione e la sostituzione dei tipi nelle situazioni in cui gli utenti desiderano modificare il modo in cui un tipo viene serializzato, deserializzato o proiettato nei metadati. Un surrogato può essere utilizzato, ad esempio, quando un contratto dati non è stato specificato per il tipo, i campi e le proprietà non sono contrassegnati con l'attributo <xref:System.Runtime.Serialization.DataMemberAttribute> o gli utenti desiderano creare dinamicamente variazioni dello schema.  
@@ -60,7 +60,7 @@ Il contratto dati *surrogato* è una funzionalità avanzata basata sul modello d
   
  Il metodo <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%2A> viene chiamato quando un oggetto viene serializzato. Questo metodo trasferisce dati dal tipo originale ai campi del tipo surrogato. I campi possono essere mappati direttamente ai campi surrogati oppure è possibile archiviare le modifiche dei dati originali nel surrogato. Gli utilizzi possibili comprendono: mapping diretto dei campi, esecuzione di operazioni sui dati da archiviare nei campi surrogati, archiviazione dell'XML del tipo originale nel campo surrogato.  
   
- Il parametro `targetType` fa riferimento al tipo dichiarato del membro. Questo parametro è il tipo surrogato restituito dal metodo <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDataContractType%2A>. Il serializzatore non implica che l'oggetto restituito possa essere assegnato a questo tipo. Il `obj` parametro è l'oggetto da serializzare e verrà convertito nel surrogato, se necessario. Questo metodo deve restituire l'oggetto di input se il surrogato non gestisce l'oggetto. In caso contrario, verrà restituito il nuovo oggetto surrogato. Il surrogato non viene chiamato se l'oggetto è null. In questo metodo è possibile definire numerosi mapping surrogati per istanze diverse.  
+ Il parametro `targetType` fa riferimento al tipo dichiarato del membro. Questo parametro è il tipo surrogato restituito dal metodo <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDataContractType%2A>. Il serializzatore non implica che l'oggetto restituito possa essere assegnato a questo tipo. Il `obj` parametro è l'oggetto da serializzare e verrà convertito surrogato, se necessario. Questo metodo deve restituire l'oggetto di input se il surrogato non gestisce l'oggetto. In caso contrario, verrà restituito il nuovo oggetto surrogato. Il surrogato non viene chiamato se l'oggetto è null. In questo metodo è possibile definire numerosi mapping surrogati per istanze diverse.  
   
  Quando si crea una classe <xref:System.Runtime.Serialization.DataContractSerializer>, è possibile fare in modo che conservi i riferimenti all'oggetto. (Per altre informazioni, vedere [serializzazione e deserializzazione](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).) A tale scopo, impostare il parametro `preserveObjectReferences` nel costruttore su `true`. In questo caso, il surrogato viene chiamato solo una volta per un oggetto dal momento che tutte le serializzazioni successive scrivono il riferimento nel flusso. Se il parametro `preserveObjectReferences` è impostato su `false`, il surrogato viene chiamato ogni volta che si verifica un'istanza.  
   
@@ -77,7 +77,7 @@ Il contratto dati *surrogato* è una funzionalità avanzata basata sul modello d
   
  Questo metodo viene chiamato solo durante la deserializzazione di un oggetto. Fornisce il mapping dei dati inverso per la deserializzazione dal tipo surrogato al tipo originale. Analogamente al metodo `GetObjectToSerialize`, alcuni possibili utilizzi sono lo scambio diretto dei dati del campo, l'esecuzione di operazioni sui dati e l'archiviazione di dati XML. Quando si deserializza, non sempre è possibile ottenere dall'originale i valori dei dati esatti a causa di modifiche intervenute durante la conversione dei dati.  
   
- Il parametro `targetType` fa riferimento al tipo dichiarato del membro. Questo parametro è il tipo surrogato restituito dal metodo `GetDataContractType`. Il `obj` parametro fa riferimento all'oggetto deserializzato. Se surrogato, l'oggetto può essere convertito di nuovo nel tipo originale. Questo metodo restituisce l'oggetto di input se il surrogato non gestisce l'oggetto. In caso contrario l'oggetto deserializzato verrà restituito dopo il completamento della conversione. Se esistono molti tipi surrogati, è possibile fornire per ognuno la conversione dei dati da surrogato a tipo originale indicando ogni tipo e la relativa conversione.  
+ Il parametro `targetType` fa riferimento al tipo dichiarato del membro. Questo parametro è il tipo surrogato restituito dal metodo `GetDataContractType`. Il `obj` parametro fa riferimento all'oggetto che è stato deserializzato. Se surrogato, l'oggetto può essere convertito di nuovo nel tipo originale. Questo metodo restituisce l'oggetto di input se il surrogato non gestisce l'oggetto. In caso contrario l'oggetto deserializzato verrà restituito dopo il completamento della conversione. Se esistono molti tipi surrogati, è possibile fornire per ognuno la conversione dei dati da surrogato a tipo originale indicando ogni tipo e la relativa conversione.  
   
  Durante la restituzione di un oggetto, le tabelle degli oggetti interni vengono aggiornate con l'oggetto restituito da questo surrogato. Qualsiasi riferimento successivo a un'istanza otterrà l'istanza del surrogato dalle tabelle degli oggetti.  
   
@@ -131,7 +131,7 @@ Il contratto dati *surrogato* è una funzionalità avanzata basata sul modello d
 ### <a name="getknowncustomdatatypes-method"></a>Metodo GetKnownCustomDataTypes  
  Questo metodo ottiene dallo schema tipi di dati personalizzati definiti. È facoltativo per l'importazione dello schema.  
   
- Il metodo  viene chiamato all'inizio dell'esportazione e dell'importazione dello schema. Restituisce i tipi di dati personalizzati utilizzati nello schema esportato o importato. Viene passato a <xref:System.Collections.ObjectModel.Collection%601> (il parametro `customDataTypes`), che è una raccolta di tipi. Il metodo aggiunge ulteriori tipi noti a questa raccolta. I tipi di dati personalizzati conosciuti sono indispensabili per attivare la serializzazione e la deserializzazione dei dati personalizzati utilizzando la classe <xref:System.Runtime.Serialization.DataContractSerializer>. Per ulteriori informazioni, vedere [tipi conosciuti di contratto dati](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
+ Il metodo  viene chiamato all'inizio dell'esportazione e dell'importazione dello schema. Restituisce i tipi di dati personalizzati utilizzati nello schema esportato o importato. Viene passato a <xref:System.Collections.ObjectModel.Collection%601> (il parametro `customDataTypes`), che è una raccolta di tipi. Il metodo aggiunge ulteriori tipi noti a questa raccolta. I tipi di dati personalizzati conosciuti sono indispensabili per attivare la serializzazione e la deserializzazione dei dati personalizzati utilizzando la classe <xref:System.Runtime.Serialization.DataContractSerializer>. Per altre informazioni, vedere [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
   
 ## <a name="implementing-a-surrogate"></a>Implementazione di un surrogato  
  Per utilizzare il surrogato del contratto dati all'interno di WCF, è necessario seguire una procedura speciale.  
@@ -191,10 +191,10 @@ Il contratto dati *surrogato* è una funzionalità avanzata basata sul modello d
   
      [!code-csharp[C_IDataContractSurrogate#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#10)]  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Runtime.Serialization.DataContractSerializer>  
- <xref:System.Runtime.Serialization.IDataContractSurrogate>  
- <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>  
- <xref:System.Runtime.Serialization.ImportOptions>  
- <xref:System.Runtime.Serialization.ExportOptions>  
- [Uso di contratti di dati](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- <xref:System.Runtime.Serialization.IDataContractSurrogate>
+- <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>
+- <xref:System.Runtime.Serialization.ImportOptions>
+- <xref:System.Runtime.Serialization.ExportOptions>
+- [Uso di contratti di dati](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)

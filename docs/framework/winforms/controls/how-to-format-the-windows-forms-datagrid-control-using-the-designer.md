@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: formattare il controllo DataGrid Windows Form mediante la finestra di progettazione'
+title: 'Procedura: Formattare il controllo di DataGrid Windows Form usando la finestra di progettazione'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - columns [Windows Forms], DataGrid controls
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - tables [Windows Forms], formatting in DataGrid control
 - formatting [Windows Forms]
 ms.assetid: 533b9814-6124-49dc-9fda-085f1502609f
-ms.openlocfilehash: 7a63ff5e070c9986fb5890fbf09fb7d4e8cccc9f
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 6445a8fd51c8802f3f1565e53f044594850cd9a9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873164"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54615624"
 ---
-# <a name="how-to-format-the-windows-forms-datagrid-control-using-the-designer"></a>Procedura: formattare il controllo DataGrid Windows Form mediante la finestra di progettazione
+# <a name="how-to-format-the-windows-forms-datagrid-control-using-the-designer"></a>Procedura: Formattare il controllo di DataGrid Windows Form usando la finestra di progettazione
 
 > [!NOTE]
 >  Benché il controllo <xref:System.Windows.Forms.DataGridView> sostituisca il controllo <xref:System.Windows.Forms.DataGrid> aggiungendovi funzionalità, il controllo <xref:System.Windows.Forms.DataGrid> viene mantenuto per compatibilità con le versioni precedenti e per un eventuale uso futuro. Per altre informazioni, vedere [Differenze tra i controlli DataGridView e DataGrid Windows Form](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
@@ -33,7 +33,7 @@ ms.locfileid: "48873164"
   
  Come passaggio iniziale in una griglia dei dati di formattazione, è possibile impostare le proprietà del <xref:System.Windows.Forms.DataGrid> stesso. Queste scelte di colori e il formato formano una base da cui è quindi possibile apportare modifiche a seconda delle tabelle di dati e le colonne visualizzate.  
   
- La procedura seguente richiede un **applicazione di Windows** progetto con un form contenente un <xref:System.Windows.Forms.DataGrid> controllo. Per informazioni sulla configurazione di un progetto di questo tipo, vedere [procedura: creare un progetto di applicazione Windows](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa) e [procedura: aggiungere i controlli Windows Form](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md). In Visual Studio 2005, il <xref:System.Windows.Forms.DataGrid> controllo non è nel **casella degli strumenti** per impostazione predefinita. Per altre informazioni, vedere [procedura: aggiungere elementi alla casella degli strumenti](https://msdn.microsoft.com/library/458e119e-17fe-450b-b889-e31c128bd7e0).  
+ La procedura seguente richiede un **applicazione di Windows** progetto con un form contenente un <xref:System.Windows.Forms.DataGrid> controllo. Per informazioni sulla configurazione di un progetto di questo tipo, vedere [come: Creare un progetto di applicazione Windows](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa) e [come: Aggiungere controlli a un Windows Form](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md). In Visual Studio 2005, il <xref:System.Windows.Forms.DataGrid> controllo non è nel **casella degli strumenti** per impostazione predefinita. Per altre informazioni, vedere [Procedura: Aggiungere elementi alla casella degli strumenti](https://msdn.microsoft.com/library/458e119e-17fe-450b-b889-e31c128bd7e0).  
   
 > [!NOTE]
 >  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzare l'IDE di Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
@@ -73,7 +73,7 @@ ms.locfileid: "48873164"
     > [!NOTE]
     >  Quando si personalizzano i colori dei controlli, è possibile rendere il controllo inaccessibile a causa di scarsa colore scelto (ad esempio, rosso e verde). Utilizzare i colori disponibili nel **colori di sistema** tavolozza per evitare questo problema.
 
-     La procedura seguente richiede un <xref:System.Windows.Forms.DataGrid> controllo associato a una tabella di dati. Per altre informazioni, vedere [procedura: associare il controllo DataGrid di Windows Form a un'origine dati](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md).
+     La procedura seguente richiede un <xref:System.Windows.Forms.DataGrid> controllo associato a una tabella di dati. Per altre informazioni, vedere [Procedura: Associare il controllo DataGrid di Windows Form a un'origine dati](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md).
 
 ### <a name="to-set-the-table-and-column-style-of-a-data-table-at-design-time"></a>Per impostare lo stile di tabella e colonna di una tabella di dati in fase di progettazione
 

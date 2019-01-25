@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4924f373270a30b593e27c334d383963fc4a7cf0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 770901d5461d2092ce5f2862624a038caf03e1f7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33435851"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54678661"
 ---
 # <a name="iclrruntimeinfogetinterface-method"></a>Metodo ICLRRuntimeInfo::GetInterface
-Carica CLR nel processo corrente e restituisce runtime puntatori di interfaccia, ad esempio [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md), [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md), e [IMetaDataDispenserEx](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md).  
+Carica CLR nel processo corrente e restituisce come puntatori a interfaccia, runtime [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md), [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md), e [IMetaDataDispenserEx](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md).  
   
- Questo metodo sostituisce tutte le `CorBindTo`* delle funzioni di [funzioni di Hosting CLR deprecate](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md) sezione.  
+ Questo metodo sostituisce tutte le `CorBindTo`* funzioni nel [funzioni di Hosting CLR deprecate](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md) sezione.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,7 +40,7 @@ HRESULT GetInterface(
   
 #### <a name="parameters"></a>Parametri  
  `rclsid`  
- [in] L'interfaccia CLSID per la coclasse.  
+ [in] L'interfaccia CLSID della coclasse.  
   
  `riid`  
  [in] L'IID richiesti `rclsid` interfaccia.  
@@ -56,10 +56,10 @@ HRESULT GetInterface(
 |S_OK|Metodo completato correttamente.|  
 |E_POINTER|`ppUnk` è null.|  
 |E_OUTOFMEMORY|Memoria insufficiente è disponibile per gestire la richiesta.|  
-|CLR_E_SHIM_LEGACYRUNTIMEALREADYBOUND|Un runtime diverso è già associato ai criteri di attivazione 2 versione CLR legacy.|  
+|CLR_E_SHIM_LEGACYRUNTIMEALREADYBOUND|Un runtime diverso era già associato ai criteri di attivazione 2 versione CLR legacy.|  
   
 ## <a name="remarks"></a>Note  
- Questo metodo, CLR essere caricato, ma non inizializzato.  
+ Questo metodo, il CLR caricato ma non inizializzato.  
   
  La tabella seguente mostra le combinazioni supportate per `rclsid` e `riid`.  
   
@@ -75,15 +75,15 @@ HRESULT GetInterface(
 |CLSID_CLRStrongName|IID_ICLRStrongName|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Metahost. H  
+ **Intestazione:** MetaHost.h  
   
- **Libreria:** inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)  
- [Interfacce di hosting](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
- [Hosting](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
+- [Interfacce di hosting](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Hosting](../../../../docs/framework/unmanaged-api/hosting/index.md)

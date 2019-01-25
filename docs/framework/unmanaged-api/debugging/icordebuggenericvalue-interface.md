@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0081f020da673023e2c35f9599e9682215e2c9d4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ce4c1b73ab806958627bb68bfdcfcae890bc5e67
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415064"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709832"
 ---
 # <a name="icordebuggenericvalue-interface1"></a>ICorDebugGenericValue Interface1
 Sottoclasse di "ICorDebugValue" che si applica a tutti i valori. Questa interfaccia fornisce i metodi Get e Set per il valore.  
@@ -30,13 +30,13 @@ Sottoclasse di "ICorDebugValue" che si applica a tutti i valori. Questa interfac
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo GetValue](../../../../docs/framework/unmanaged-api/debugging/icordebuggenericvalue-getvalue-method.md)|Il valore può essere copiato nel buffer specificato.|  
+|[Metodo GetValue](../../../../docs/framework/unmanaged-api/debugging/icordebuggenericvalue-getvalue-method.md)|Valore copiato nel buffer specificato.|  
 |[Metodo SetValue](../../../../docs/framework/unmanaged-api/debugging/icordebuggenericvalue-setvalue-method.md)|Copia un nuovo valore dal buffer specificato.|  
   
 ## <a name="remarks"></a>Note  
- `ICorDebugGenericValue` è un'interfaccia secondario perché è non utilizzabile in remoto.  
+ `ICorDebugGenericValue` è una sotto-interfaccia perché è non utilizzabili in remoto.  
   
- Per i tipi di riferimento, il valore è il riferimento piuttosto che il contenuto del riferimento.  
+ Per i tipi riferimento, il valore è il riferimento anziché il contenuto di riferimento.  
   
  Questa interfaccia non supporta la chiamata in modalità remota, tra computer o tra processi.  
   
@@ -44,14 +44,14 @@ Sottoclasse di "ICorDebugValue" che si applica a tutti i valori. Questa interfac
 >  Questa interfaccia non supporta la chiamata in modalità remota, tra computer o tra processi.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
-    
- [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Vedere anche
+
+- [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

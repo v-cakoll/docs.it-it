@@ -1,19 +1,19 @@
 ---
-title: 'Procedura: ereditare form mediante la finestra di dialogo Selezione ereditarietà'
+title: 'Procedura: Ereditare form mediante la finestra di dialogo Selezione ereditarietà'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - inheritance [Windows Forms], forms
 - Inheritance Picker dialog box
 - inherited forms [Windows Forms], creating
 ms.assetid: 969b4c04-12aa-4297-93a2-0ae747447823
-ms.openlocfilehash: 7a6de60ec7621792b4f19857a2743f64cbdc686c
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 94fe3d551e8f846d8deec6f2b6ab9e96d91e8335
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837297"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54601831"
 ---
-# <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>Procedura: ereditare form mediante la finestra di dialogo Selezione ereditarietà
+# <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>Procedura: Ereditare form mediante la finestra di dialogo Selezione ereditarietà
 Il modo più semplice di ereditare un modulo o un altro oggetto consiste nell'usare la finestra di dialogo **Selezione ereditarietà**. In questo modo è possibile recuperare e riutilizzare il codice o un'interfaccia utente precedentemente creata in altre soluzioni.  
   
 > [!NOTE]
@@ -54,10 +54,10 @@ Il modo più semplice di ereditare un modulo o un altro oggetto consiste nell'us
      Per informazioni su come modificare l'aspetto di un modulo di base, vedere [Effetti della modifica dell'aspetto di un modulo di base](../../../../docs/framework/winforms/advanced/effects-of-modifying-base-form-appearance.md).  
   
     > [!NOTE]
-    >  Quando si uniscono controlli e componenti ereditati con controlli e componenti standard in Windows Form, possono verificarsi conflitti nell'ordinamento z. È possibile correggere il problema modificando l'ordine z. Fare clic sul menu **Formato**, scegliere **Ordine** e quindi fare clic su **Porta in primo piano** o **Porta in secondo piano**. Per altre informazioni sull'ordine z dei controlli, vedere [Procedura: Disporre oggetti su più livelli in Windows Forms](../../../../docs/framework/winforms/controls/how-to-layer-objects-on-windows-forms.md).  
+    >  Quando si uniscono controlli e componenti ereditati con controlli e componenti standard in Windows Form, possono verificarsi conflitti nell'ordinamento z. È possibile correggere il problema modificando l'ordine z. Fare clic sul menu **Formato**, scegliere **Ordine** e quindi fare clic su **Porta in primo piano** o **Porta in secondo piano**. Per altre informazioni sull'ordine z dei controlli, vedere [come: Livello oggetti in Windows Form](../../../../docs/framework/winforms/controls/how-to-layer-objects-on-windows-forms.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Istruzione Inherits](~/docs/visual-basic/language-reference/statements/inherits-statement.md)  
- [using](~/docs/csharp/language-reference/keywords/using.md)  
- [Effetti della modifica dell'aspetto di un modulo di base](../../../../docs/framework/winforms/advanced/effects-of-modifying-base-form-appearance.md)  
- [Ereditarietà visiva di Windows Form](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)
+## <a name="see-also"></a>Vedere anche
+- [Istruzione Inherits](~/docs/visual-basic/language-reference/statements/inherits-statement.md)
+- [using](~/docs/csharp/language-reference/keywords/using.md)
+- [Effetti della modifica dell'aspetto di un modulo di base](../../../../docs/framework/winforms/advanced/effects-of-modifying-base-form-appearance.md)
+- [Ereditarietà visiva di Windows Form](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)

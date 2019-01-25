@@ -2,12 +2,12 @@
 title: Architettura ADO.NET
 ms.date: 03/30/2017
 ms.assetid: fcd45b99-ae8f-45ab-8b97-d887beda734e
-ms.openlocfilehash: 4c2299951202794112ea66c1f20025777c68e356
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 2af1d6339b17871d56b949d845534479380c46ab
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44195517"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623183"
 ---
 # <a name="adonet-architecture"></a>Architettura ADO.NET
 L'elaborazione dei dati è stata sempre basata principalmente su un modello a due livelli basato su connessione. In considerazione dell'utilizzo crescente dell'architettura a più livelli per l'elaborazione dei dati, i programmatori si avvalgono di un approccio disconnesso per ottenere applicazioni con scalabilità maggiore.  
@@ -56,6 +56,6 @@ Architettura di ADO.NET
   
  In [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] e le classi XML convergono nell'oggetto `DataSet`. È possibile compilare il `DataSet` con dati provenienti da un'origine XML, sia che si tratti di un file che di un flusso XML. È possibile scrivere il `DataSet` sotto forma di XML in conformità con le specifiche W3C (World Wide Web Consortium), includendone lo schema sotto forma di schema XSD (XML Schema Definition Language), indipendentemente dall'origine dati nel `DataSet`. XML, che costituisce il formato di serializzazione nativo del `DataSet`, rappresenta un supporto eccellente per lo spostamento di dati tra i livelli e rende il `DataSet` una soluzione ottimale per le attività in remoto relative al contesto dei dati e dello schema da e per un servizio Web XML. Per altre informazioni, vedere [XML Documents and Data](../../../../docs/standard/data/xml/index.md) (Documenti e dati XML).  
   
-## <a name="see-also"></a>Vedere anche  
- [Panoramica di ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vedere anche
+- [Panoramica di ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
+- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

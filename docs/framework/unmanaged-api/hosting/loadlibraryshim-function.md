@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5fe1ba15f8a9f8ee79582158209049c1e502a61d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 3bad6c052ec90c8cd3e47c4ec822fc2d5ae944af
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47199869"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54612164"
 ---
 # <a name="loadlibraryshim-function"></a>Funzione LoadLibraryShim
 Carica una versione specifica di una DLL che è incluso nel pacchetto ridistribuibile di .NET Framework.  
@@ -68,11 +68,11 @@ HRESULT LoadLibraryShim (
 >  A partire da .NET Framework versione 2.0, il caricamento Fusion fa sì che Common Language Runtime da caricare. Questo avviene perché le funzioni in Fusion. dll sono ora le cui implementazioni sono fornite dal runtime del wrapper.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Mscoree. H  
+ **Intestazione:** MSCorEE.h  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Funzioni di hosting CLR deprecate](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>Vedere anche
+- [Funzioni di hosting CLR deprecate](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

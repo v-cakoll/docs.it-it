@@ -2,21 +2,21 @@
 title: '&lt;callbackDebug&gt;'
 ms.date: 03/30/2017
 ms.assetid: 4073feda-1857-4be4-9947-227afb847ced
-ms.openlocfilehash: 5bd2356c3bb798e948341cb3c4ba504ac886ed44
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 1aa292a3fe06af9cf1dbc53ebf5bbdf9841be8d9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145081"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54687375"
 ---
 # <a name="ltcallbackdebuggt"></a>&lt;callbackDebug&gt;
 Specifica il debug del servizio per un oggetto di callback Windows Communication Foundation (WCF).  
   
  \<system.ServiceModel>  
-\<i comportamenti >  
-\<endpointBehaviors >  
-\<comportamento >  
-\<callbackDebug >  
+\<behaviors>  
+\<endpointBehaviors>  
+\<behavior>  
+\<callbackDebug>  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,6 +45,6 @@ Specifica il debug del servizio per un oggetto di callback Windows Communication
 |-------------|-----------------|  
 |[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Specifica un comportamento dell'endpoint.|  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.Configuration.CallbackDebugElement>  
- <xref:System.ServiceModel.Description.CallbackDebugBehavior>
+## <a name="see-also"></a>Vedere anche
+- <xref:System.ServiceModel.Configuration.CallbackDebugElement>
+- <xref:System.ServiceModel.Description.CallbackDebugBehavior>

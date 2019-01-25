@@ -2,22 +2,22 @@
 title: '&lt;transport&gt; di &lt;webHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: f150fb19-7de1-44af-81f4-86cad881cd05
-ms.openlocfilehash: 70145678048b3e7843d9d458f80d3d149544447a
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 657de92129d27e70834cb401cde42d24b633f7ed
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54149475"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54677017"
 ---
 # <a name="lttransportgt-of-ltwebhttpbindinggt"></a>&lt;transport&gt; di &lt;webHttpBinding&gt;
 Definisce le impostazioni di sicurezza a livello di trasporto per un endpoint del servizio configurato per ricevere richieste HTTP.  
   
  \<system.ServiceModel>  
 \<le associazioni >  
-\<webHttpBinding >  
+\<webHttpBinding>  
 \<binding>  
 \<security>  
-\<trasporto >  
+\<transport>  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -84,14 +84,14 @@ Definisce le impostazioni di sicurezza a livello di trasporto per un endpoint de
 |-------------|-----------------|  
 |[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-webhttpbinding.md)|Rappresenta le funzionalità di protezione del [ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) elemento.|  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.HttpTransportSecurity>  
- <xref:System.ServiceModel.Configuration.WebHttpSecurityElement.Transport%2A>  
- <xref:System.ServiceModel.WebHttpSecurity.Transport%2A>  
- <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>  
- [Protezione di servizi e client](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Associazioni](../../../../../docs/framework/wcf/bindings.md)  
- [Configurazione di associazioni fornite dal sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Uso di associazioni per configurare servizi e client](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<binding>](../../../../../docs/framework/misc/binding.md)  
- [Modello di programmazione HTTP Web di WCF](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.ServiceModel.HttpTransportSecurity>
+- <xref:System.ServiceModel.Configuration.WebHttpSecurityElement.Transport%2A>
+- <xref:System.ServiceModel.WebHttpSecurity.Transport%2A>
+- <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>
+- [Protezione di servizi e client](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Associazioni](../../../../../docs/framework/wcf/bindings.md)
+- [Configurazione di associazioni fornite dal sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Uso di associazioni per configurare servizi e client](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [Modello di programmazione HTTP Web di WCF](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

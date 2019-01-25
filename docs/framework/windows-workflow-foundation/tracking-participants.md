@@ -2,12 +2,12 @@
 title: Partecipanti del rilevamento
 ms.date: 03/30/2017
 ms.assetid: f13e360c-eeb7-4a49-98a0-8f6a52d64f68
-ms.openlocfilehash: e346e0df3417f6ac83854bd96d6e64dcf103ea93
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 3165e08a02954facb7e016606e2f94662c6edfe9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47086366"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54613535"
 ---
 # <a name="tracking-participants"></a>Partecipanti del rilevamento
 I partecipanti del rilevamento sono punti di estensibilità che consentono a uno sviluppatore di flussi di lavoro di accedere a oggetti <xref:System.Activities.Tracking.InteropTrackingRecord.TrackingRecord%2A> e di elaborarli. In [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] viene fornito un partecipante del rilevamento standard che scrive record di rilevamento come eventi ETW (Event Tracing for Windows). Se tale partecipante non soddisfa i propri requisiti, è anche possibile scrivere un partecipante del rilevamento personalizzato.  
@@ -140,6 +140,6 @@ instance.Extensions.Add(new ConsoleTrackingParticipant());
             Console.ReadLine();  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Monitoraggio dell'infrastruttura di App di Windows Server](https://go.microsoft.com/fwlink/?LinkId=201273)  
- [Monitoraggio delle applicazioni con App Fabric](https://go.microsoft.com/fwlink/?LinkId=201275)
+## <a name="see-also"></a>Vedere anche
+- [Monitoraggio dell'infrastruttura di App di Windows Server](https://go.microsoft.com/fwlink/?LinkId=201273)
+- [Monitoraggio delle applicazioni con App Fabric](https://go.microsoft.com/fwlink/?LinkId=201275)

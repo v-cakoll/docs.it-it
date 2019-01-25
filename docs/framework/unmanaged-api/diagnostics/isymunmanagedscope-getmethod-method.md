@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ebef54baf4e560b364845a521e4b4444ed359395
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 12dd485f2b89dc76076410e76a132ff547681597
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426120"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616823"
 ---
 # <a name="isymunmanagedscopegetmethod-method"></a>Metodo ISymUnmanagedScope::GetMethod
 Ottiene il metodo che contiene questo ambito.  
@@ -36,13 +36,13 @@ HRESULT GetMethod(
   
 #### <a name="parameters"></a>Parametri  
  `pRetVal`  
- [out] Un puntatore all'oggetto restituito [ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) interfaccia.  
+ [out] Un puntatore al valore restituito [ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) interfaccia.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK se il metodo ha esito positivo. in caso contrario, E_FAIL o un altro codice di errore.  
+ S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o qualche altro codice di errore.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** CorSym. idl, CorSym.h  
+ **Intestazione:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)

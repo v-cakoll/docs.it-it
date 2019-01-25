@@ -7,14 +7,14 @@ helpviewer_keywords:
 - interface implementation [Visual Basic], walkthrough
 - interfaces [Visual Basic], creating
 ms.assetid: ded82af2-9f52-4232-98ef-fe458180f112
-ms.openlocfilehash: af9305deb60637b642d091501e743f2c7a57ccad
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 7a5694826e0fff82aceb8ad18f75f96f308e724c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43391081"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54680387"
 ---
-# <a name="walkthrough-creating-and-implementing-interfaces-visual-basic"></a>Procedura dettagliata: creazione e implementazione di interfacce (Visual Basic)
+# <a name="walkthrough-creating-and-implementing-interfaces-visual-basic"></a>Procedura dettagliata: Creazione e implementazione di interfacce (Visual Basic)
 
 Le interfacce vengono descritte le caratteristiche della proprietà, metodi ed eventi, ma lasciare i dettagli di implementazione fino a strutture o classi.  
   
@@ -109,7 +109,7 @@ Le interfacce vengono descritte le caratteristiche della proprietà, metodi ed e
   
 ## <a name="see-also"></a>Vedere anche
 
- [Istruzione Implements](../../../../visual-basic/language-reference/statements/implements-statement.md)  
- [Interfacce](../../../../visual-basic/programming-guide/language-features/interfaces/index.md)  
- [Istruzione Interface](../../../../visual-basic/language-reference/statements/interface-statement.md)  
- [Istruzione Event](../../../../visual-basic/language-reference/statements/event-statement.md)  
+- [Istruzione Implements](../../../../visual-basic/language-reference/statements/implements-statement.md)
+- [Interfacce](../../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+- [Istruzione Interface](../../../../visual-basic/language-reference/statements/interface-statement.md)
+- [Istruzione Event](../../../../visual-basic/language-reference/statements/event-statement.md)

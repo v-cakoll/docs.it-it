@@ -2,12 +2,12 @@
 title: Ottimizzazione dell'applicazione Async (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 4c3e7997-a95f-4fbe-a6ac-60ba042d30b9
-ms.openlocfilehash: 6e919d3998719186d0355b9bd187782fcb0e5332
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 0dc03e1063b16c96916d4cac9214ddfa3333620b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696676"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54625159"
 ---
 # <a name="fine-tuning-your-async-application-visual-basic"></a>Ottimizzazione dell'applicazione Async (Visual Basic)
 È possibile rendere più precise e flessibili le applicazioni asincrone usando le proprietà e i metodi resi disponibili dal tipo <xref:System.Threading.Tasks.Task>. Gli argomenti di questa sezione mostrano esempi che usano <xref:System.Threading.CancellationToken> e metodi `Task` importanti, ad esempio <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>.  
@@ -16,11 +16,11 @@ ms.locfileid: "34696676"
   
 -   `WhenAny` restituisce un'attività completata quando una qualsiasi attività in una raccolta viene completata.  
   
-     Per esempi che utilizzano `WhenAny`, vedere [annullare attività asincrone rimanenti dopo una completa (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md)e [avviare più attività asincrone e processo li come sono Complete (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/start-multiple-async-tasks-and-process-them-as-they-complete.md).  
+     Per esempi che usano `WhenAny`, vedere [annullare attività asincrone rimanenti dopo ne è stata completata una (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md)e [processo elaborarle quando vengono completate (Visual Basic) e avviare più attività asincrone](../../../../visual-basic/programming-guide/concepts/async/start-multiple-async-tasks-and-process-them-as-they-complete.md).  
   
 -   `WhenAll` restituisce un'attività completata quando tutte le attività in una raccolta vengono completate.  
   
-     Per ulteriori informazioni e un esempio che usa `WhenAll`, vedere [procedura: estendere la Async Walkthrough mediante tramite Task. whenall (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).  
+     Per altre informazioni e un esempio che usa `WhenAll`, vedere [come: Estendere la procedura dettagliata asincrona tramite Task. whenall (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).  
   
  Questa sezione presenta i seguenti esempi.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "34696676"
   
  ![Finestra WPF con pulsante Annulla](../../../../csharp/programming-guide/concepts/async/media/cancellation.png "Annullamento")  
   
- È possibile scaricare i progetti completi di Windows Presentation Foundation (WPF) da [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Esempio di attività asincrona: ottimizzazione dell'applicazione).  
+ È possibile scaricare i progetti Windows Presentation Foundation (WPF) completa da [esempio asincrono: Ottimizzare correttamente l'applicazione](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).  
   
-## <a name="see-also"></a>Vedere anche  
- [Programmazione asincrona con Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
+## <a name="see-also"></a>Vedere anche
+- [Programmazione asincrona con Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)

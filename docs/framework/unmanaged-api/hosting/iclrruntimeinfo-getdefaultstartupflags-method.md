@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 546a26306a1faaeceb1337b79bd2d27970d9f5be
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a4615200bce3aa11401abc9e9c264ab8d8e797b6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33434213"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720015"
 ---
 # <a name="iclrruntimeinfogetdefaultstartupflags-method"></a>Metodo ICLRRuntimeInfo::GetDefaultStartupFlags
-Ottiene i flag di avvio e di un file di configurazione di host che verrà utilizzato per avviare il runtime.  
+Ottiene il flag di avvio e i file di configurazione di host che verrà usato per avviare il runtime.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,34 +38,34 @@ HRESULT GetDefaultStartupFlags(
   
 #### <a name="parameters"></a>Parametri  
  `pdwStartupFlags`  
- [out] Un puntatore per i flag di avvio host attualmente impostati.  
+ [out] Puntatore ai flag di avvio host attualmente impostati.  
   
  `pwzHostConfigFile`  
- [out] Puntatore al percorso di directory del file di configurazione host corrente.  
+ [out] Un puntatore al percorso di directory del file di configurazione host corrente.  
   
  `pcchHostConfigFile`  
- [in, out] In input, le dimensioni di `pwzHostConfigFile`, per evitare sovraccarichi del buffer. Se `pwzHostConfigFile` è null, il metodo restituisce la dimensione necessaria della `pwzHostConfigFile` per pre-allocazione.  
+ [in, out] In input, le dimensioni di `pwzHostConfigFile`, per evitare i sovraccarichi del buffer. Se `pwzHostConfigFile` è null, il metodo restituisce la dimensione necessaria della `pwzHostConfigFile` per pre-allocazione.  
   
 ## <a name="return-value"></a>Valore restituito  
- Questo metodo restituisce il valore HRESULT specifico seguente nonché gli errori HRESULT che indicano la mancata riuscita del metodo.  
+ Questo metodo restituisce il valore HRESULT specifico seguente, nonché gli errori HRESULT che indicano un errore di metodo.  
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
 |S_OK|Metodo completato correttamente.|  
   
 ## <a name="remarks"></a>Note  
- Questo metodo restituisce i valori di flag predefiniti (`STARTUP_CONCURRENT_GC` e `NULL`), i valori forniti da una chiamata precedente a o il [SetDefaultStartupFlags (metodo)](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-setdefaultstartupflags-method.md), o i valori impostati da qualsiasi il `CorBind*` metodi se vengono associati a questo runtime.  
+ Questo metodo restituisce i valori di flag predefiniti (`STARTUP_CONCURRENT_GC` e `NULL`), o i valori forniti da una precedente chiamata ai [SetDefaultStartupFlags (metodo)](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-setdefaultstartupflags-method.md), o i valori impostati da uno qualsiasi del `CorBind*` metodi se vengono associati a questa versione del runtime.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Metahost. H  
+ **Intestazione:** MetaHost.h  
   
- **Libreria:** inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)  
- [Interfacce di hosting](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
- [Hosting](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
+- [Interfacce di hosting](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Hosting](../../../../docs/framework/unmanaged-api/hosting/index.md)

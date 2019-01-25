@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: fdf5856d-516b-4042-849d-911c4518a6cb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8332eba909c3ebe475e3f364f81a676733e4e3d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d45a8bdebb296a33862f018308a7ef876e0cd64c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397062"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572357"
 ---
 # <a name="clr-etw-keywords-and-levels"></a>Parole chiave e livelli ETW di CLR
 <a name="top"></a> Gli eventi Event Tracing for Windows (ETW) possono essere filtrati in base a categoria e livello. Le [Parole chiave ETW di CLR](#keywords) degli eventi permettono di filtrare gli eventi per categoria e vengono usate in diverse combinazioni per i provider di runtime e rundown. I [livelli evento](#levels) vengono identificati da flag.  
@@ -37,7 +37,7 @@ ms.locfileid: "33397062"
 ### <a name="clr-etw-runtime-keywords"></a>Parole chiave di runtime ETW di CLR  
  La tabella seguente contiene le parole chiave di runtime ETW di CLR, i rispettivi valori e informazioni sullo scopo per cui vengono usate.  
   
-|Nome parola chiave di runtime|Valore|Scopo|  
+|Nome parola chiave di runtime|Value|Scopo|  
 |--------------------------|-----------|-------------|  
 |`GCKeyword`|0x00000001|Consente la raccolta di [eventi di Garbage Collection](../../../docs/framework/performance/garbage-collection-etw-events.md).|  
 |`LoaderKeyword`|0x00000008|Consente la raccolta di [eventi del caricatore](../../../docs/framework/performance/loader-etw-events.md).|  
@@ -62,7 +62,7 @@ ms.locfileid: "33397062"
 ### <a name="clr-etw-rundown-keywords"></a>Parole chiave di rundown ETW di CLR  
  La tabella seguente contiene le parole chiave di rundown ETW di CLR, i rispettivi valori e informazioni sullo scopo per cui vengono usate.  
   
-|Nome parola chiave di rundown|Valore|Scopo|  
+|Nome parola chiave di rundown|Value|Scopo|  
 |--------------------------|-----------|-------------|  
 |`LoaderRundownKeyword`|0x00000008|Consente la raccolta di eventi del caricatore se usata con `StartRundownKeyword` e `EndRundownKeyword`.|  
 |`JitRundownKeyword`|0x00000010|Consente la raccolta di eventi `DCStart` e `DCEnd` per metodi compilati tramite JIT se usata con `StartRundownKeyword` e `EndRundownKeyword`.|  
@@ -122,7 +122,7 @@ ms.locfileid: "33397062"
   
  0x0 - LogAlways  
   
-## <a name="see-also"></a>Vedere anche  
- [Provider ETW di CLR](../../../docs/framework/performance/clr-etw-providers.md)  
- [Eventi ETW di CLR](../../../docs/framework/performance/clr-etw-events.md)  
- [Eventi ETW in Common Language Runtime](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)
+## <a name="see-also"></a>Vedere anche
+- [Provider ETW di CLR](../../../docs/framework/performance/clr-etw-providers.md)
+- [Eventi ETW di CLR](../../../docs/framework/performance/clr-etw-events.md)
+- [Eventi ETW in Common Language Runtime](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)

@@ -2,12 +2,12 @@
 title: Raccolte di schemi comuni
 ms.date: 03/30/2017
 ms.assetid: 50127ced-2ac8-4d7a-9cd1-5c98c655ff03
-ms.openlocfilehash: 157330304ac656ddbdbb18408ca5144566746808
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: dfd1e28a117ca71cac6c792058c1aeb17a0c4f69
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44260269"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700962"
 ---
 # <a name="common-schema-collections"></a>Raccolte di schemi comuni
 Le raccolte di schemi comuni sono le raccolte di schemi implementati da ciascun provider gestito .NET Framework. È possibile eseguire query di un provider gestito .NET Framework per determinare l'elenco di raccolte di schemi supportati chiamando il **GetSchema** metodo senza argomenti oppure con il nome di raccolta di schemi "MetaDataCollections". In questo modo verrà restituito un oggetto <xref:System.Data.DataTable> con un elenco delle raccolte di schemi supportati, il numero delle restrizioni supportate da ciascuna raccolta e il numero di parti identificatore usate. Tutte le colonne richieste vengono descritte in queste raccolte. I provider hanno la possibilità di aggiungere colonne, se necessario. Ad esempio, `SqlClient` e `OracleClient` aggiungono ParameterName alla raccolta delle restrizioni.  
@@ -94,7 +94,7 @@ Le raccolte di schemi comuni sono le raccolte di schemi implementati da ciascun 
 |----------------|--------------|-----------------|  
 |ReservedWord|stringa|Parole riservate specifiche del provider.|  
   
-## <a name="see-also"></a>Vedere anche  
- [Recupero di informazioni sullo schema del database](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
- [Raccolte di schemi e GetSchema](../../../../docs/framework/data/adonet/getschema-and-schema-collections.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vedere anche
+- [Recupero di informazioni sullo schema del database](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
+- [Raccolte di schemi e GetSchema](../../../../docs/framework/data/adonet/getschema-and-schema-collections.md)
+- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

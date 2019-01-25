@@ -3,18 +3,18 @@ title: '&lt;federationConfiguration&gt;'
 ms.date: 03/30/2017
 ms.assetid: 8b14054c-6d07-46ab-ab58-03f14beac0f2
 author: BrucePerlerMS
-ms.openlocfilehash: 66fa16992d779b08ee8c55598efc98f8f5267656
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6f658fb4746211ac9d7001899133111c64f22408
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181709"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645119"
 ---
 # <a name="ltfederationconfigurationgt"></a>&lt;federationConfiguration&gt;
 Consente di configurare il <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) e il <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM) quando si usa federated authentication tramite il protocollo WS-Federation. Consente di configurare il <xref:System.Security.Claims.ClaimsAuthorizationManager> quando si usa la <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> o il <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> classe per fornire il controllo di accesso basato sulle attestazioni.  
   
- \<IdentityModel >  
-\<federationConfiguration >  
+ \<system.identityModel.services>  
+\<federationConfiguration>  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,9 +39,9 @@ Consente di configurare il <xref:System.IdentityModel.Services.WSFederationAuthe
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<cookieHandler >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md)|Consente di configurare il gestore di cookie usato da SAM. Facoltativo.|  
-|[\<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicecertificate.md)|Configura il certificato utilizzato per crittografare e decrittografare i token. Facoltativo.|  
-|[\<wsFederation >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/wsfederation.md)|Consente di configurare il modulo di autenticazione WS-Federation (WSFAM). Facoltativo.|  
+|[\<cookieHandler>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md)|Consente di configurare il gestore di cookie usato da SAM. Facoltativo.|  
+|[\<serviceCertificate>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicecertificate.md)|Configura il certificato utilizzato per crittografare e decrittografare i token. Facoltativo.|  
+|[\<wsFederation>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/wsfederation.md)|Consente di configurare il modulo di autenticazione WS-Federation (WSFAM). Facoltativo.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -91,8 +91,8 @@ Consente di configurare il <xref:System.IdentityModel.Services.WSFederationAuthe
 </system.identityModel.services>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>  
- <xref:System.IdentityModel.Services.SessionAuthenticationModule>  
- <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType>  
- [\<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>
+- <xref:System.IdentityModel.Services.SessionAuthenticationModule>
+- <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType>
+- [\<identityConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)

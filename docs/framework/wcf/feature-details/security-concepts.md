@@ -2,12 +2,12 @@
 title: Concetti sulla protezione
 ms.date: 03/30/2017
 ms.assetid: 944fa5ca-2c34-4268-8897-e005a61b470d
-ms.openlocfilehash: cdac8ab2ee257924327cc082a55839903c32f80c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 61e993e8491a380410ffe772baa4d9f817f8cb23
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147580"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610812"
 ---
 # <a name="security-concepts"></a>Concetti sulla protezione
 In questa sezione illustra brevemente i concetti associati alla protezione di Windows Communication Foundation (WCF).  
@@ -36,7 +36,7 @@ In questa sezione illustra brevemente i concetti associati alla protezione di Wi
 ## <a name="related-sections"></a>Sezioni correlate  
  [Estensione della sicurezza](../../../../docs/framework/wcf/extending/extending-security.md)  
   
-## <a name="see-also"></a>Vedere anche  
- [Sicurezza](../../../../docs/framework/wcf/feature-details/security.md)  
- [Panoramica della sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Modello di sicurezza per Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>Vedere anche
+- [Sicurezza](../../../../docs/framework/wcf/feature-details/security.md)
+- [Panoramica della sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Modello di sicurezza per Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

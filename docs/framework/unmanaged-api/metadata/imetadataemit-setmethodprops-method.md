@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5ef6771ec3f458c20701cc330a5730367b3c5b89
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7406a6118a9cca7087f913b3b2dd6f37a2d9238c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445926"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599894"
 ---
 # <a name="imetadataemitsetmethodprops-method"></a>Metodo IMetaDataEmit::SetMethodProps
-Imposta o aggiorna la funzione, archiviata nell'indirizzo virtuale relativo specificato, di un metodo definito da una precedente chiamata a [IMetaDataEmit:: DefineMethod](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemethod-method.md).  
+Imposta o aggiorna la funzionalità, archiviata in corrispondenza di indirizzo virtuale relativo specificato, di un metodo definito da una chiamata precedente a [DefineMethod](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemethod-method.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,23 +43,23 @@ HRESULT SetMethodProps (
  [in] Il token per il metodo da modificare.  
   
  `dwMethodFlags`  
- [in] Gli attributi dei membri.  
+ [in] Attributi del membro.  
   
  `ulCodeRVA`  
  [in] L'indirizzo del codice.  
   
  `dwImplFlags`  
- [in] I flag di implementazione per il metodo.  
+ [in] I flag di implementazione del metodo.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
- **Libreria:** usata come risorsa in Mscoree. dll  
+ **Libreria:** Usato come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [Interfaccia IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [Interfaccia IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

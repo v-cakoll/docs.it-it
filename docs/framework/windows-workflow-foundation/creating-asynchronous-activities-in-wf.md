@@ -2,12 +2,12 @@
 title: Creazione di attività asincrone in WF
 ms.date: 03/30/2017
 ms.assetid: 497e81ed-5eef-460c-ba55-fae73c05824f
-ms.openlocfilehash: 31c0d5a87a7979bc59c3e1d942ed0594d128c80a
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 1b7fe1c5c998660f054d2ca060c108c758e36db7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266559"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650928"
 ---
 # <a name="creating-asynchronous-activities-in-wf"></a>Creazione di attività asincrone in WF
 <xref:System.Activities.AsyncCodeActivity> fornisce agli autori dell'attività una classe di base che consente alle attività derivate di implementare la logica di esecuzione asincrona. Ciò si rivela utile per attività personalizzate che devono eseguire un lavoro asincrono senza contenere il thread dell'utilità di pianificazione del flusso di lavoro e senza bloccare nessuna attività che può essere eseguita in parallelo. In questo argomento viene fornita una panoramica su come creare attività asincrone personalizzate usando l'oggetto <xref:System.Activities.AsyncCodeActivity>.  
@@ -44,9 +44,9 @@ ms.locfileid: "48266559"
  [!code-csharp[CFX_ActivityExample#9](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#9)]  
   
 ### <a name="scheduling-actions-or-child-activities-using-asynccodeactivity"></a>Azioni di programmazione o attività figlio usando AsyncCodeActivity  
- Le attività personalizzate derivate <xref:System.Activities.AsyncCodeActivity> forniscono un metodo per eseguire il lavoro in modo asincrono rispetto al thread del flusso di lavoro, ma non consentono di pianificare le attività figlio o le azioni. Tuttavia, il comportamento asincrono può essere incorporato nella pianificazione delle attività figlio tramite la composizione. Un'attività asincrona può essere creata e quindi composta con un'attività <xref:System.Activities.Activity> o <xref:System.Activities.NativeActivity> derivata per fornire il comportamento asincrono e la pianificazione delle attività figlio o delle azioni. Ad esempio, è possibile creare un'attività che deriva da <xref:System.Activities.Activity> e ha come implementazione un oggetto <xref:System.Activities.Statements.Sequence> che contiene l'attività asincrona nonché le altre attività che implementano la logica dell'attività. Per ulteriori esempi sulla composizione di attività usando <xref:System.Activities.Activity> e <xref:System.Activities.NativeActivity>, vedere [procedura: creare un'attività](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) e [opzioni di creazione di attività](../../../docs/framework/windows-workflow-foundation/activity-authoring-options-in-wf.md).  
+ Le attività personalizzate derivate <xref:System.Activities.AsyncCodeActivity> forniscono un metodo per eseguire il lavoro in modo asincrono rispetto al thread del flusso di lavoro, ma non consentono di pianificare le attività figlio o le azioni. Tuttavia, il comportamento asincrono può essere incorporato nella pianificazione delle attività figlio tramite la composizione. Un'attività asincrona può essere creata e quindi composta con un'attività <xref:System.Activities.Activity> o <xref:System.Activities.NativeActivity> derivata per fornire il comportamento asincrono e la pianificazione delle attività figlio o delle azioni. Ad esempio, è possibile creare un'attività che deriva da <xref:System.Activities.Activity> e ha come implementazione un oggetto <xref:System.Activities.Statements.Sequence> che contiene l'attività asincrona nonché le altre attività che implementano la logica dell'attività. Per ulteriori esempi sulla composizione di attività usando <xref:System.Activities.Activity> e <xref:System.Activities.NativeActivity>, vedere [come: Create an Activity](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) e [le opzioni di creazione attività](../../../docs/framework/windows-workflow-foundation/activity-authoring-options-in-wf.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedere anche
 
-- <xref:System.Action>  
-- <xref:System.Func%602>  
+- <xref:System.Action>
+- <xref:System.Func%602>

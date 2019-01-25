@@ -2,12 +2,12 @@
 title: Descrizione del servizio
 ms.date: 03/30/2017
 ms.assetid: 7034b5d6-d608-45f3-b57d-ec135f83ff24
-ms.openlocfilehash: c31edae952b20823945403dd5aebb438bcbf0c11
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a3fa98d8dc80c5ee0d745d2de4364636fd78e631
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195268"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54677359"
 ---
 # <a name="service-description"></a>Descrizione del servizio
 L'esempio Descrizione del servizio illustra come un servizio può recuperare le informazioni di descrizione del servizio nella fase di esecuzione. L'esempio è basato sul [introduttiva](../../../../docs/framework/wcf/samples/getting-started-sample.md), con un'operazione di servizio aggiuntiva definita per restituire informazioni descrittive sul servizio. Le informazioni restituite elencano indirizzi di base e gli endpoint del servizio. Il servizio fornisce queste informazioni utilizzando le classi <xref:System.ServiceModel.OperationContext>, <xref:System.ServiceModel.ServiceHost> e <xref:System.ServiceModel.Description.ServiceDescription>.  

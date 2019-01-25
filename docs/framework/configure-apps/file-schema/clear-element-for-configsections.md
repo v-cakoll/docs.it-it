@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 77f1d761-ff45-4001-8f36-3a3e5c41fa63
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: aa43d92270d09793d099ce34345ab82a355f90e3
-ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
+ms.openlocfilehash: 9439e2ac7634b242c9f847346f7dcf265d6ab419
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54307071"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54678005"
 ---
 # <a name="clear-element-for-configsections"></a>\<Cancella > (elemento) per \<configSections >
 
@@ -93,4 +93,4 @@ Questo elemento può essere usato nel file di configurazione dell'applicazione, 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Schema di file di configurazione per .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Schema di file di configurazione per .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)

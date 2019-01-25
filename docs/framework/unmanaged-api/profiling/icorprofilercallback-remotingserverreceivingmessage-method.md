@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c1874b5bea465eb31bcaad2d912b90d35cfc711b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 67ec3bf10638538b49f1ec44ff583bdf4ba4ef9e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33454104"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572253"
 ---
 # <a name="icorprofilercallbackremotingserverreceivingmessage-method"></a>Metodo ICorProfilerCallback::RemotingServerReceivingMessage
-Notifica al profiler che il processo ha ricevuto una richiesta di attivazione o la chiamata di metodo remoto.  
+Notifica al profiler che il processo ha ricevuto una richiesta di attivazione o chiamata al metodo remoto.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,30 +37,30 @@ HRESULT RemotingClientSendingMessage(
   
 #### <a name="parameters"></a>Parametri  
  `pCookie`  
- [in] Un valore che corrisponde al valore fornito [ICorProfilerCallback:: RemotingClientSendingMessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientsendingmessage-method.md) in queste condizioni:  
+ [in] Un valore che corrisponde al valore fornito [RemotingClientSendingMessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientsendingmessage-method.md) in queste condizioni:  
   
--   I cookie dei GUID remoti sono attive.  
+-   I cookie GUID di .NET Remoting sono attivi.  
   
--   Il canale riesce a trasmettere il messaggio.  
+-   Il canale ha esito positivo la trasmissione del messaggio.  
   
--   I cookie GUID sono attivi sul processo del lato client.  
+-   I cookie GUID sono attivi nel processo del lato client.  
   
- Ciò consente l'associazione semplice delle chiamate remote e la creazione di uno stack di chiamata logico.  
+ Ciò consente l'associazione semplice delle chiamate remote e la creazione di uno stack di chiamate logici.  
   
  `fIsAsync`  
- [in] Un valore che è `true` se la chiamata è asincrona; in caso contrario, `false`.  
+ [in] Valore che rappresenta `true` se la chiamata è asincrona; in caso contrario, `false`.  
   
 ## <a name="remarks"></a>Note  
- Se la richiesta di messaggio è asincrona, la richiesta può essere gestita da un thread qualsiasi.  
+ Se il messaggio di richiesta è asincrona, la richiesta può essere gestita da qualsiasi thread arbitrario.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

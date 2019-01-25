@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 49962e632ced9aac376791ead672e6910117ee10
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1bfb3e07504570f8cedceddb43410b48691c4695
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33434739"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54595760"
 ---
 # <a name="iclrassemblyidentitymanagergetclrassemblyreferencelist-method"></a>Metodo ICLRAssemblyIdentityManager::GetCLRAssemblyReferenceList
 Ottiene un puntatore a interfaccia a un [ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md) istanza dall'elenco fornito di identità di assembly parziali.  
@@ -39,13 +39,13 @@ HRESULT  GetCLRAssemblyReferenceList (
   
 #### <a name="parameters"></a>Parametri  
  `ppwzAssemblyReferences`  
- [in] Matrice di stringhe con terminazione null nel formato "proprietà name = value …" che consente di specificare un elenco di identità di assembly parziali.  
+ [in] Una matrice di stringhe con terminazione null nella forma "proprietà nome = valore..." che specifica un elenco di identità di assembly parziali.  
   
  `dwNumOfReferences`  
  [in] Il numero di elementi in `ppwzAssemblyReferences`.  
   
  `ppReferenceList`  
- [out] Puntatore a interfaccia a un `ICLRAssemblyReferenceList` oggetto che contiene i dati di identità di assembly per l'elenco di assembly specificato in `ppwzAssemblyReferences`.  
+ [out] Puntatore a interfaccia a un `ICLRAssemblyReferenceList` oggetto che contiene i dati di identità di assembly per un elenco di assembly specificati in `ppwzAssemblyReferences`.  
   
 ## <a name="return-value"></a>Valore restituito  
   
@@ -54,19 +54,19 @@ HRESULT  GetCLRAssemblyReferenceList (
 |S_OK|Il metodo è stato restituito correttamente.|  
 |HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) non è stato caricato in un processo oppure si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.|  
 |HOST_E_TIMEOUT|Timeout della chiamata.|  
-|HOST_E_NOT_OWNER|Il chiamante non dispone del blocco.|  
-|HOST_E_ABANDONED|Un evento è stato annullato mentre un thread bloccato o fiber era in attesa su di esso.|  
-|E_FAIL|Si è verificato un errore irreversibile sconosciuto. Se un metodo restituisce E_FAIL, Common Language Runtime non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiranno HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_NOT_OWNER|Il chiamante non possiede il blocco.|  
+|HOST_E_ABANDONED|Un evento è stato annullato durante un thread bloccato o fiber è rimasta in attesa su di esso.|  
+|E_FAIL|Si è verificato un errore irreversibile sconosciuto. Se un metodo viene restituito E_FAIL, CLR non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiranno HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Mscoree. H  
+ **Intestazione:** MSCorEE.h  
   
- **Libreria:** inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ICLRAssemblyIdentityManager](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)  
- [Interfaccia ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ICLRAssemblyIdentityManager](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
+- [Interfaccia ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: faa9bc412e67e0e49ee969bd8b246a424fe628a0
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: bee6b9cde81b71b5229ef5c4e939d0aea6b9a014
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086270"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54711707"
 ---
 # <a name="imetadataemitapplyeditandcontinue-method"></a>Metodo IMetaDataEmit::ApplyEditAndContinue
 Aggiorna l'ambito dell'assembly corrente con le modifiche apportate nei metadati specificati.  
@@ -42,14 +42,14 @@ HRESULT ApplyEditAndContinue (
  I metadati del delta sono il blocco di metadati che includono le modifiche apportate alla copia dei metadati effettivi del modulo.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
- **Libreria:** usato come risorsa in Mscoree. dll  
+ **Libreria:** Usato come risorsa in Mscoree. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [Interfaccia IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [Interfaccia IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

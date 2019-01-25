@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: conteggiare le occorrenze di una parola in una stringa (LINQ) (Visual Basic)'
+title: 'Procedura: Conteggio delle occorrenze di una parola in una stringa (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: bc367e46-f7cc-45f9-936f-754e661b7bb9
-ms.openlocfilehash: a2e7b59ee1d289fe794fb83705d42ac0e48fb4a2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a4d8349db0a1c5b0cc7b69cbae7d19dd1d9d10b9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33641999"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54716804"
 ---
-# <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-visual-basic"></a>Procedura: conteggiare le occorrenze di una parola in una stringa (LINQ) (Visual Basic)
+# <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-visual-basic"></a>Procedura: Conteggio delle occorrenze di una parola in una stringa (LINQ) (Visual Basic)
 Questo esempio illustra come usare una query LINQ per contare le occorrenze di una parola specifica all'interno di una stringa. Si noti che per eseguire il conteggio viene prima chiamato il metodo <xref:System.String.Split%2A> per creare una matrice di parole. Il metodo <xref:System.String.Split%2A> influisce negativamente sulle prestazioni. Se l'unica operazione da eseguire sulla stringa è il conteggio delle parole, è consigliabile usare il metodo <xref:System.Text.RegularExpressions.Regex.Matches%2A> o <xref:System.String.IndexOf%2A>. Se tuttavia le prestazioni non rappresentano un problema critico o se la frase è già stata suddivisa per sottoporla ad altri tipi di query, anche LINQ costituisce una scelta appropriata per contare le parole o le frasi.  
   
 ## <a name="example"></a>Esempio  
@@ -60,5 +60,5 @@ End Class
 ## <a name="compiling-the-code"></a>Compilazione del codice  
  Creare un progetto che usi .NET Framework versione 3.5 o successiva con un riferimento a System.Core.dll e un'istruzione `Imports` per lo spazio dei nomi System.Linq.  
   
-## <a name="see-also"></a>Vedere anche  
- [LINQ e stringhe (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+## <a name="see-also"></a>Vedere anche
+- [LINQ e stringhe (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

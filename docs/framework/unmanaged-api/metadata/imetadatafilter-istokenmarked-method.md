@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5bf5149e8e42a810a6a490767638b374f66b5679
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 32642c4ff6193e2002c8a4c7d201b36c7601debb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445864"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582539"
 ---
 # <a name="imetadatafilteristokenmarked-method"></a>Metodo IMetaDataFilter::IsTokenMarked
 Ottiene un valore che indica se il token di metadati specificato è stato contrassegnato come elaborato.  
@@ -38,19 +38,19 @@ HRESULT IsTokenMarked (
   
 #### <a name="parameters"></a>Parametri  
  `tk`  
- [in] Token da esaminare per un segno di elaborazione.  
+ [in] Il token da esaminare per un segno di elaborazione.  
   
  `pIsMarked`  
- [out] Un valore che è `true` se `tk` è stato elaborato; in caso contrario `false`.  
+ [out] Valore che rappresenta `true` se `tk` è stato elaborato; in caso contrario `false`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
- **Libreria:** usata come risorsa in Mscoree. dll  
+ **Libreria:** Usato come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia IMetaDataFilter](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia IMetaDataFilter](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-interface.md)

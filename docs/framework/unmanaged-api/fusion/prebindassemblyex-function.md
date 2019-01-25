@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3d3e2535851d39be642de56a86b78c328ecaf446
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ea34c4087014091b92d6227177a2f08209cc2e10
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432001"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54570879"
 ---
 # <a name="prebindassemblyex-function"></a>Funzione PreBindAssemblyEx
 Ottiene il nome visualizzato di post-criteri per un assembly.  
   
- Questa funzione supporta l'infrastruttura .NET Framework e non deve essere utilizzato direttamente dal codice.  
+ Questa funzione supporta l'infrastruttura .NET Framework e non deve essere usato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -58,19 +58,19 @@ HRESULT PreBindAssemblyEx (
  [out] Contiene il nome visualizzato di post-criteri.  
   
  `pvReserved`  
- [in] Riservato per l'estensibilità futura. `pvReserved` deve essere un riferimento null.  
+ [in] Riservato per un'estendibilità futura. `pvReserved` deve essere un riferimento null.  
   
 ## <a name="remarks"></a>Note  
  Il `ppNamePostPolicy` parametro di output viene impostato solo se la funzione restituisce HRESULT FUSION_E_REF_DEF_MISMATCH. In caso contrario, è null.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Fusion. h  
   
- **Libreria:** inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Funzioni statiche globali Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+## <a name="see-also"></a>Vedere anche
+- [Funzioni statiche globali Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)

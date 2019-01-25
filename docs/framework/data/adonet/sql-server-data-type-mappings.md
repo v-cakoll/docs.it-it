@@ -2,12 +2,12 @@
 title: Mapping dei tipi di dati SQL Server
 ms.date: 03/30/2017
 ms.assetid: fafdc31a-f435-4cd3-883f-1dfadd971277
-ms.openlocfilehash: 9bc2747dff7b6f2bffdca4186519f2a36083e5f0
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 6a718421e7a9b77bcea6b0c4ad502e8335984e27
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45649536"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54584951"
 ---
 # <a name="sql-server-data-type-mappings"></a>Mapping dei tipi di dati SQL Server
 SQL Server e .NET Framework sono basati su sistemi di tipi diversi. La struttura <xref:System.Decimal> .NET Framework dispone ad esempio di una scala massima di 28, mentre i tipi di dati decimali e numerici di SQL Server dispongono di una scala massima di 38. Per mantenere l'integrità dei dati in caso di lettura e scrittura dei dati, <xref:System.Data.SqlClient.SqlDataReader> espone metodi delle funzioni di accesso tipizzate specifici di SQL Server che restituiscono oggetti di <xref:System.Data.SqlTypes>, nonché metodi delle funzioni di accesso che restituiscono tipi .NET Framework. Sia i tipi SQL Server che i tipi .NET Framework sono rappresentati anche dalle enumerazioni nelle classi <xref:System.Data.DbType> e <xref:System.Data.SqlDbType>, che è possibile usare quando si specificano tipi di dati <xref:System.Data.SqlClient.SqlParameter>.  
@@ -56,9 +56,9 @@ SQL Server e .NET Framework sono basati su sistemi di tipi diversi. La struttura
 
 Per altre informazioni sui tipi di dati di SQL Server, vedere [tipi di dati (Transact-SQL)](/sql/t-sql/data-types/data-types-transact-sql).
   
-## <a name="see-also"></a>Vedere anche  
- [Tipi di dati SQL Server e ADO.NET](../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  
- [Dati binari e con valori elevati SQL Server](../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
- [Mapping dei tipi di dati in ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
- [Configurazione di parametri e tipi di dati dei parametri](../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vedere anche
+- [Tipi di dati SQL Server e ADO.NET](../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
+- [Dati binari e con valori elevati SQL Server](../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
+- [Mapping dei tipi di dati in ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)
+- [Configurazione di parametri e tipi di dati dei parametri](../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
+- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

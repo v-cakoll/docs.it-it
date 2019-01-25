@@ -2,15 +2,15 @@
 title: Trasferimento dei messaggi di flusso
 ms.date: 03/30/2017
 ms.assetid: 72a47a51-e5e7-4b76-b24a-299d51e0ae5a
-ms.openlocfilehash: 340c903e2cb34373514ea2f739cab57dc620df5d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5a146b9f0bd2eb74b5ef4b5877e6cb925d386abc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33499141"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643819"
 ---
 # <a name="streaming-message-transfer"></a>Trasferimento dei messaggi di flusso
-Windows Communication Foundation (WCF) trasporti supportano due modalità di trasferimento dei messaggi:  
+I trasporti di Windows Communication Foundation (WCF) supportano due modalità di trasferimento dei messaggi:  
   
 -   Trasferimento con memorizzazione nel buffer: in questa modalità, l'intero messaggio viene memorizzato in un buffer fino al completamento del trasferimento. Un messaggio memorizzato nel buffer deve essere completamente recapitato prima che un destinatario sia in grado di leggerlo.  
   
@@ -27,7 +27,7 @@ Windows Communication Foundation (WCF) trasporti supportano due modalità di tra
   
  La scelta di utilizzare trasferimenti memorizzati nel buffer o in flussi è una decisione specifica dell'endpoint. Per i trasporti HTTP, la modalità di trasferimento non si propaga attraverso una connessione, né verso server o altri intermediari. L'impostazione della modalità di trasferimento non si riflette nella descrizione dell'interfaccia del servizio. Dopo aver generato una classe client per un servizio, per impostare la modalità è necessario modificare il file di configurazione dei servizi per cui si desidera utilizzare la modalità di trasferimento con flusso. Per i trasporti TCP e named pipe, la modalità di trasferimento viene propagata come asserzione di criteri.  
   
- Per esempi di codice, vedere [procedura: abilitare lo Streaming](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md).  
+ Per esempi di codice, vedere [come: Abilitare la trasmissione](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md).  
   
 ## <a name="enabling-asynchronous-streaming"></a>Abilitazione del flusso asincrono  
  Per abilitare il flusso asincrono, aggiungere il comportamento dell'endpoint <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior> all'host del servizio e impostare la relativa proprietà <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior.AsynchronousSendEnabled%2A> su `true`.  
@@ -39,12 +39,12 @@ Windows Communication Foundation (WCF) trasporti supportano due modalità di tra
   
  Le operazioni che si verificano in un trasporto con flusso possono presentare un contratto avente al massimo un solo parametro di input oppure un solo parametro output. Questo parametro corrisponde al corpo intero del messaggio e deve essere un messaggio <xref:System.ServiceModel.Channels.Message>, un tipo derivato dal flusso <xref:System.IO.Stream> oppure un'implementazione dell'interfaccia <xref:System.Xml.Serialization.IXmlSerializable>. Definire un valore restituito di un'operazione equivale a definire un parametro di output.  
   
- Alcune funzionalità WCF, ad esempio la messaggistica affidabile, transazioni e la protezione a livello di messaggio SOAP, utilizzano memorizzazione nel buffer i messaggi per le trasmissioni. L'utilizzo di queste funzionalità può ridurre o eliminare del tutto i vantaggi in termini di prestazioni ottenuti mediante i flussi. Per proteggere un trasporto con flusso, utilizzare soltanto la protezione a livello di trasporto oppure utilizzare la protezione a livello di trasporto insieme a una protezione a livello di messaggio di sola autenticazione.  
+ Alcune funzionalità WCF, ad esempio messaggistica affidabile, transazioni e sicurezza a livello di messaggio SOAP, si basano su memorizzazione nel buffer i messaggi per le trasmissioni. L'utilizzo di queste funzionalità può ridurre o eliminare del tutto i vantaggi in termini di prestazioni ottenuti mediante i flussi. Per proteggere un trasporto con flusso, utilizzare soltanto la protezione a livello di trasporto oppure utilizzare la protezione a livello di trasporto insieme a una protezione a livello di messaggio di sola autenticazione.  
   
- Le intestazioni SOAP vengono sempre memorizzate nel buffer, anche quando si utilizza la modalità di trasferimento con flusso. Le intestazioni di un messaggio non devono superare la quota di trasporto indicata da `MaxBufferSize`. Per ulteriori informazioni su questa impostazione, vedere [le quote dei trasporti](../../../../docs/framework/wcf/feature-details/transport-quotas.md).  
+ Le intestazioni SOAP vengono sempre memorizzate nel buffer, anche quando si utilizza la modalità di trasferimento con flusso. Le intestazioni di un messaggio non devono superare la quota di trasporto indicata da `MaxBufferSize`. Per altre informazioni su questa impostazione, vedere [le quote dei trasporti](../../../../docs/framework/wcf/feature-details/transport-quotas.md).  
   
 ## <a name="differences-between-buffered-and-streamed-transfers"></a>Differenze tra trasferimenti con memorizzazione nel buffer e con flusso  
  Il passaggio dalla modalità di trasferimento con memorizzazione nel buffer alla modalità di trasferimento con flusso comporta la modifica della forma del canale nativo dei trasporti TCP e pipe con nome. Per i trasferimenti con memorizzazione nel buffer, la forma del canale nativo è <xref:System.ServiceModel.Channels.IDuplexSessionChannel>. Per i trasferimenti con flusso, i canali nativi sono <xref:System.ServiceModel.Channels.IRequestChannel> e <xref:System.ServiceModel.Channels.IReplyChannel>. La modifica della modalità di trasferimento di un'applicazione esistente che utilizza questi trasporti in modo diretto (ovvero non tramite un contratto di servizio) richiede la modifica della forma del canale previsto di channel factory e listener.  
   
-## <a name="see-also"></a>Vedere anche  
- [Procedura: Abilitare lo streaming](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
+## <a name="see-also"></a>Vedere anche
+- [Procedura: Abilitare lo Streaming](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)

@@ -9,29 +9,29 @@ helpviewer_keywords:
 - states [WPF], Frame
 - styles [WPF], Frame
 ms.assetid: a01c32e2-c951-46a0-a82f-2614ca241f0b
-ms.openlocfilehash: 78bbeb915e17bcd59480b921efa1b6a51fa67762
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: fbe49ae98e0fe281500ae37d53a3d47ff1d0b03a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457891"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700269"
 ---
 # <a name="frame-styles-and-templates"></a>Stili e modelli di Frame
-In questo argomento vengono descritti gli stili e modelli per il <xref:System.Windows.Controls.Frame> controllo. È possibile modificare il valore predefinito <xref:System.Windows.Controls.ControlTemplate> per fornire al controllo un aspetto univoco. Per altre informazioni, vedere [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+In questo argomento descrive gli stili e modelli per la <xref:System.Windows.Controls.Frame> controllo. È possibile modificare il valore predefinito <xref:System.Windows.Controls.ControlTemplate> per fornire al controllo un aspetto univoco. Per altre informazioni, vedere [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
   
 ## <a name="frame-parts"></a>Parti di frame  
- La tabella seguente elenca le parti denominate la <xref:System.Windows.Controls.Frame> controllo.  
+ La tabella seguente elenca le parti denominate di <xref:System.Windows.Controls.Frame> controllo.  
   
 |Parte|Tipo|Descrizione|  
 |-|-|-|  
-|PART_FrameCP|<xref:System.Windows.Controls.ContentPresenter>|L'area del contenuto.|  
+|PART_FrameCP|<xref:System.Windows.Controls.ContentPresenter>|Area del contenuto.|  
   
-## <a name="frame-states"></a>Stati di frame  
- Nella tabella seguente sono elencati gli stati visivi per la <xref:System.Windows.Controls.Frame> controllo.  
+## <a name="frame-states"></a>Gli stati del frame  
+ La tabella seguente elenca gli stati visivi il <xref:System.Windows.Controls.Frame> controllo.  
   
 |Nome VisualState|Nome VisualStateGroup|Descrizione|  
 |-|-|-|  
-|Valido|ValidationStates|Il controllo Usa il <xref:System.Windows.Controls.Validation> classe e <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `false`.|  
+|Valido|ValidationStates|Il controllo Usa il <xref:System.Windows.Controls.Validation> classi e le <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `false`.|  
 |InvalidFocused|ValidationStates|Il <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `true` ha il controllo ha lo stato attivo.|  
 |InvalidUnfocused|ValidationStates|Il <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `true` ha il controllo non è attivo.|  
   
@@ -46,10 +46,10 @@ In questo argomento vengono descritti gli stili e modelli per il <xref:System.Wi
   
  Per l'esempio completo, vedere [Esempio di applicazione di stili con ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Windows.FrameworkElement.Style%2A>  
- <xref:System.Windows.Controls.ControlTemplate>  
- [Stili e modelli di Control](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
- [Personalizzazione dei controlli](../../../../docs/framework/wpf/controls/control-customization.md)  
- [Applicazione di stili e modelli](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Windows.FrameworkElement.Style%2A>
+- <xref:System.Windows.Controls.ControlTemplate>
+- [Stili e modelli di Control](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)
+- [Personalizzazione dei controlli](../../../../docs/framework/wpf/controls/control-customization.md)
+- [Applicazione di stili e modelli](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
