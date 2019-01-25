@@ -2,12 +2,12 @@
 title: '&lt;customTrackingQueries&gt; di WCF'
 ms.date: 03/30/2017
 ms.assetid: 14cfe47e-9935-4120-84f1-8f38de8ca4c1
-ms.openlocfilehash: f75c6bf50d30da5a136137c858a5cd96ce0783ff
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: f4f6186aa51ef1656f31fb0035f58a07e5c2447b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150084"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700793"
 ---
 # <a name="ltcustomtrackingqueriesgt-of-wcf"></a>&lt;customTrackingQueries&gt; di WCF
 
@@ -16,11 +16,11 @@ Rappresenta una raccolta di query usate per rilevare gli eventi definiti nelle a
  Per altre informazioni sulle query relative ai profili di rilevamento, vedere [profili di rilevamento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).
   
 \<system.serviceModel>  
-\<rilevamento >  
+\<tracking>  
 \<i profili >  
 \<trackingProfile>  
 \<flusso di lavoro >  
-\<customTrackingQueries >  
+\<customTrackingQueries>  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -51,17 +51,17 @@ Nessuno.
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<customTrackingQuery >](customtrackingquery-of-wcf.md)|Query usata per rilevare gli eventi definiti nelle attività del codice.|  
+|[\<customTrackingQuery>](customtrackingquery-of-wcf.md)|Query usata per rilevare gli eventi definiti nelle attività del codice.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<flusso di lavoro >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|Elemento di configurazione contenente tutte le query per un flusso di lavoro specifico identificato dalla proprietà `activityDefinitionId`.|  
+|[\<workflow>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|Elemento di configurazione contenente tutte le query per un flusso di lavoro specifico identificato dalla proprietà `activityDefinitionId`.|  
   
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.ServiceModel.Activities.Tracking.Configuration.CustomTrackingQueryElementCollection?displayProperty=nameWithType>       
-- <xref:System.Activities.Tracking.CustomTrackingQuery?displayProperty=nameWithType>       
-- [Rilevamento e analisi del flusso di lavoro](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
+- <xref:System.ServiceModel.Activities.Tracking.Configuration.CustomTrackingQueryElementCollection?displayProperty=nameWithType>
+- <xref:System.Activities.Tracking.CustomTrackingQuery?displayProperty=nameWithType>
+- [Rilevamento e analisi del flusso di lavoro](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
 - [Profili di rilevamento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

@@ -1,20 +1,20 @@
 ---
-title: 'Procedura: creare un servizio che accetti dati arbitrari usando il modello di programmazione REST WCF'
+title: 'Procedura: Creare un servizio che accetti dati arbitrari usando il modello di programmazione REST WCF'
 ms.date: 03/30/2017
 ms.assetid: e566c15a-b600-4e4a-be3a-4af43e767dae
-ms.openlocfilehash: bc2643672743971da14c8bc4c75ac113f691bf4a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8728afbe5ebfe31d619b311f521eb1012a0dc323
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494163"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54666998"
 ---
-# <a name="how-to-create-a-service-that-accepts-arbitrary-data-using-the-wcf-rest-programming-model"></a>Procedura: creare un servizio che accetti dati arbitrari usando il modello di programmazione REST WCF
-Talvolta gli sviluppatori devono disporre del controllo completo sulla modalità di restituzione dei dati da un'operazione del servizio, Ciò accade quando un'operazione del servizio deve restituire dati in un formato non supportato byWCF. In questo argomento viene illustrato l'utilizzo del modello di programmazione REST WCF per creare un servizio che riceve i dati arbitrari.  
+# <a name="how-to-create-a-service-that-accepts-arbitrary-data-using-the-wcf-rest-programming-model"></a>Procedura: Creare un servizio che accetti dati arbitrari usando il modello di programmazione REST WCF
+Talvolta gli sviluppatori devono disporre del controllo completo sulla modalità di restituzione dei dati da un'operazione del servizio, Ciò avviene quando un'operazione del servizio deve restituire dati in un formato non supportato byWCF. In questo argomento viene illustrato l'utilizzo del modello di programmazione REST WCF per creare un servizio che riceve i dati arbitrari.  
   
 ### <a name="to-implement-the-service-contract"></a>Per implementare il contratto di servizio  
   
-1.  Definire il contratto di servizio. L'operazione che riceve i dati arbitrari deve disporre di un parametro di tipo <xref:System.IO.Stream>. Il parametro deve inoltre essere l'unico passato nel corpo della richiesta. L'operazione descritta in questo esempio accetta anche un parametro filename che viene passato nell'URL della richiesta. Per passare un parametro nell'URL specificare <xref:System.UriTemplate> in <xref:System.ServiceModel.Web.WebInvokeAttribute>. In questo caso che l'URI utilizzato per chiamare questo metodo termina con "UploadFile/Some-Filename". La parte "{filename}" del modello di URI specifica che il parametro filename per l'operazione viene passato nell'URI usato per chiamare l'operazione.  
+1.  Definire il contratto di servizio. L'operazione che riceve i dati arbitrari deve disporre di un parametro di tipo <xref:System.IO.Stream>. Il parametro deve inoltre essere l'unico passato nel corpo della richiesta. L'operazione descritta in questo esempio accetta anche un parametro filename che viene passato nell'URL della richiesta. Per passare un parametro nell'URL specificare <xref:System.UriTemplate> in <xref:System.ServiceModel.Web.WebInvokeAttribute>. In questo caso che l'URI usato per chiamare questo metodo termina con "UploadFile/Some-Filename". La parte "{filename}" del modello URI specifica che il parametro filename per l'operazione viene passato nell'URI usato per chiamare l'operazione.  
   
     ```csharp  
      [ServiceContract]  
@@ -193,7 +193,7 @@ namespace ReceiveRawData
   
 -   Durante la compilazione del codice, fare riferimento a System.ServiceModel.dll e System.ServiceModel.Web.dll.  
   
-## <a name="see-also"></a>Vedere anche  
- [UriTemplate e UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)  
- [Modello di programmazione HTTP Web di WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
- [Panoramica del modello di programmazione HTTP Web di WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
+## <a name="see-also"></a>Vedere anche
+- [UriTemplate e UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)
+- [Modello di programmazione HTTP Web di WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+- [Panoramica del modello di programmazione HTTP Web di WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)

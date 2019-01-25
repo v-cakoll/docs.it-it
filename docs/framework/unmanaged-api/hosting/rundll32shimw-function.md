@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 18247a947449ea5fd19f1882031b598086332742
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 883f987eb168bf5996baba66f5081875e67f2000
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441740"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698726"
 ---
 # <a name="rundll32shimw-function"></a>Funzione RunDll32ShimW
 Esegue il comando specificato.  
@@ -41,7 +41,7 @@ HRESULT RunDll32ShimW (
   
 #### <a name="parameters"></a>Parametri  
  `hwnd`  
- [in] Un handle a una finestra in cui verrà visualizzato l'output del comando.  
+ [in] Handle per una finestra in cui verrà visualizzato l'output del comando.  
   
  `hinst`  
  [in] Handle per la raccolta che contiene il comando.  
@@ -53,13 +53,13 @@ HRESULT RunDll32ShimW (
  [in] Valore intero che specifica la modalità di visualizzazione della finestra di output.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Mscoree. H  
+ **Intestazione:** MSCorEE.h  
   
- **Libreria:** Mscoree. dll  
+ **Libreria:** MSCorEE.dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Funzioni di hosting CLR deprecate](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>Vedere anche
+- [Funzioni di hosting CLR deprecate](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

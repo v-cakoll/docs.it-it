@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ClearType [WPF], registry settings
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
-ms.openlocfilehash: d6a121e2a95ce4005b43937f83c6c74ec7d8f1c1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ffc21ca3eed979e9b7cd419f63729d8520a54a5d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514858"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720288"
 ---
 # <a name="cleartype-registry-settings"></a>Impostazioni del Registro di sistema ClearType
 In questo argomento viene fornita una panoramica di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] le impostazioni del Registro di sistema usate dal [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applicazioni.  
@@ -81,7 +81,7 @@ In questo argomento viene fornita una panoramica di [!INCLUDE[TLA2#tla_winclient
 ## <a name="pixel-structure"></a>Struttura del pixel  
  La struttura del pixel descrive il tipo di pixel alla base di un dispositivo di visualizzazione. La struttura del pixel è definita come uno di tre tipi:  
   
-|Tipo|Valore|Descrizione|  
+|Tipo|Value|Descrizione|  
 |----------|-----------|-----------------|  
 |Semplice|0|Il dispositivo di visualizzazione non ha struttura del pixel. In questo caso le sorgenti di luce per ogni colore sono distribuite in modo uniforme nell'area dei pixel, condizione nota come rendering in scala di grigi. Questo è il funzionamento di un dispositivo di visualizzazione standard. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] non viene mai applicato al testo di cui si esegue il rendering.|  
 |RGB|1|Il dispositivo di visualizzazione dispone di pixel costituiti da tre strisce nell'ordine seguente: rosso, verde e blu. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] viene applicato al testo di cui si esegue il rendering.|  
@@ -114,6 +114,6 @@ In questo argomento viene fornita una panoramica di [!INCLUDE[TLA2#tla_winclient
   
  ![Impostazioni ClearType nell'Editor del Registro di sistema](../../../../docs/framework/wpf/advanced/media/cleartyperegistry01.png "ClearTypeRegistry01")  
   
-## <a name="see-also"></a>Vedere anche  
- [Panoramica su ClearType](../../../../docs/framework/wpf/advanced/cleartype-overview.md)  
- [ClearType Antialiasing (Anti-aliasing ClearType)](/windows/desktop/gdi/cleartype-antialiasing)
+## <a name="see-also"></a>Vedere anche
+- [Panoramica su ClearType](../../../../docs/framework/wpf/advanced/cleartype-overview.md)
+- [ClearType Antialiasing (Anti-aliasing ClearType)](/windows/desktop/gdi/cleartype-antialiasing)

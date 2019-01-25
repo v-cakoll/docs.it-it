@@ -2,12 +2,12 @@
 title: Metodi System.Object
 ms.date: 03/30/2017
 ms.assetid: 5397fca0-689e-443e-802f-e1cbdc866427
-ms.openlocfilehash: bd4b30a65e7ad9391d9b867884d1c909491344bc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cae06286b77e23718facfc5be2b0ac2d27381ad3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355175"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54713414"
 ---
 # <a name="systemobject-methods"></a>Metodi System.Object
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] supporta i seguenti <xref:System.Object> metodi.  
@@ -26,7 +26,7 @@ ms.locfileid: "33355175"
 |<xref:System.Object.ToString?displayProperty=nameWithType> per i tipi binari, ad esempio `BINARY`, `VARBINARY`, `IMAGE` e `TIMESTAMP`.||  
   
 ## <a name="differences-from-net"></a>Differenze rispetto a .NET  
- L'output di <xref:System.Object.ToString?displayProperty=nameWithType> per doppia utilizza SQL `CONVERT`(nvarchar (30), @x, 2) in SQL. In SQL vengono sempre usate 16 cifre e la notazione scientifica in questo caso, ad esempio "0.000000000000000e+000" per 0. Di conseguenza, la conversione di <xref:System.Object.ToString?displayProperty=nameWithType> non genera la stessa stringa di <xref:System.Convert.ToString%2A?displayProperty=nameWithType> in .NET Framework.  
+ L'output del <xref:System.Object.ToString?displayProperty=nameWithType> per la doppia Usa SQL `CONVERT`(NVARCHAR(30), @x, 2) in SQL. In SQL vengono sempre usate 16 cifre e la notazione scientifica in questo caso, ad esempio "0.000000000000000e+000" per 0. Di conseguenza, la conversione di <xref:System.Object.ToString?displayProperty=nameWithType> non genera la stessa stringa di <xref:System.Convert.ToString%2A?displayProperty=nameWithType> in .NET Framework.  
   
-## <a name="see-also"></a>Vedere anche  
- [Tipi di dati e funzioni](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+## <a name="see-also"></a>Vedere anche
+- [Tipi di dati e funzioni](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

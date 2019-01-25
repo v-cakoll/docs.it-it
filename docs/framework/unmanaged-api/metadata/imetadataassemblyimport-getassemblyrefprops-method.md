@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0810ba945c1ed5874dae79704362a399c7349604
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 91d21f51312eb812d253ba218eeeb99e5df1ff8e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445822"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730230"
 ---
 # <a name="imetadataassemblyimportgetassemblyrefprops-method"></a>Metodo IMetaDataAssemblyImport::GetAssemblyRefProps
 Ottiene il set di proprietà per il riferimento all'assembly con la firma dei metadati specificato.  
@@ -49,43 +49,43 @@ HRESULT GetAssemblyRefProps (
  [in] Il `mdAssemblyRef` token di metadati che rappresenta il riferimento all'assembly per cui ottenere le proprietà.  
   
  `ppbPublicKeyOrToken`  
- [out] Un puntatore a chiave pubblica o token di metadati.  
+ [out] Puntatore alla chiave pubblica o token di metadati.  
   
  `pcbPublicKeyOrToken`  
- [out] Il numero di byte restituito chiave pubblica o token.  
+ [out] Il numero di byte restituito pubblico o un token.  
   
  `szName`  
  [out] Il nome semplice dell'assembly.  
   
  `cchName`  
- [in] La dimensione in caratteri wide, di `szName`.  
+ [in] Le dimensioni, in caratteri wide, di `szName`.  
   
  `pchName`  
- [out] Un puntatore al numero di caratteri "wide" effettivamente restituiti nella `szName`.  
+ [out] Un puntatore al numero di caratteri wide effettivamente restituiti nella `szName`.  
   
  `pMetaData`  
  [out] Un puntatore a una struttura ASSEMBLYMETADATA che contiene i metadati dell'assembly.  
   
  `ppbHashValue`  
- [out] Puntatore al valore hash. Si tratta dell'hash, utilizza l'algoritmo SHA-1, il `PublicKey` proprietà dell'assembly a cui fa riferimento, a meno che il flag arfFullOriginator del [AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) set di enumerazione.  
+ [out] Puntatore al valore hash. Questo è l'hash, usando l'algoritmo SHA-1, del `PublicKey` proprietà dell'assembly a cui viene fatto riferimento, a meno che il flag arfFullOriginator del [AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) enumerazione è impostato.  
   
  `pcbHashValue`  
- [out] Il numero di caratteri "wide" nel valore hash restituito.  
+ [out] Il numero di caratteri wide nel valore restituito di hash.  
   
  `pdwAssemblyRefFlags`  
- [out] Puntatore a flag che descrivono i metadati applicati a un assembly. Il valore del flag è una combinazione di uno o più [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) valori.  
+ [out] Puntatore al flag che descrivono i metadati applicati a un assembly. Il valore dei flag è una combinazione di uno o più [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) valori.  
   
 ## <a name="return-value"></a>Valore restituito  
- Questo metodo restituisce S_OK se riesce; in caso contrario, restituisce uno dei codici di errore definiti nel file di intestazione Winerror. h.  
+ Questo metodo restituisce S_OK se riesce; in caso contrario, restituisce uno dei codici di errore definiti nel file di intestazione file Winerror. h.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
- **Libreria:** usata come risorsa in Mscoree. dll  
+ **Libreria:** Usato come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - AddressOf operator [Visual Basic]
 - addresses, passing to API procedures
 ms.assetid: 8105a59d-60d8-4ab5-b221-5899cdfacbf4
-ms.openlocfilehash: 7c229c32a3b295b4dbfe50ca2abc60d4ad5f2145
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4f4f88551b6708ac3d0ee0f0f5bdcbdec1dfaaa9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33597787"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54721069"
 ---
 # <a name="addressof-operator-visual-basic"></a>Operatore AddressOf (Visual Basic)
 Crea un'istanza di delegato di routine che fa riferimento la procedura specifica.  
@@ -26,15 +26,15 @@ AddressOf procedurename
   
 ## <a name="parts"></a>Parti  
  `procedurename`  
- Obbligatorio. Specifica la procedura per fare riferimento il delegato appena creato.  
+ Obbligatorio. Specifica la routine a cui fa riferimento il delegato appena creato.  
   
 ## <a name="remarks"></a>Note  
- Il `AddressOf` operatore crea un delegato della funzione che fa riferimento alla funzione specificata da `procedurename`. Quando la stored procedure specificata è che un metodo di istanza, quindi il delegato della funzione fa riferimento l'istanza sia il metodo. Quindi, quando viene richiamato il delegato della funzione viene chiamato il metodo specificato dell'istanza specificata.  
+ Il `AddressOf` operatore crea un delegato della funzione che fa riferimento alla funzione specificata da `procedurename`. Quando la procedura specificata è che un metodo di istanza, quindi il delegato della funzione fa riferimento a sia l'istanza del metodo. Quindi, quando viene richiamato il delegato della funzione viene chiamato il metodo specificato dell'istanza specificata.  
   
- Il `AddressOf` operatore può essere usato come operando di un costruttore di delegato o può essere utilizzato in un contesto in cui il tipo del delegato può essere determinato dal compilatore.  
+ Il `AddressOf` operatore può essere usato come operando di un costruttore di delegato o può essere usato in un contesto in cui il tipo del delegato può essere determinato dal compilatore.  
   
 ## <a name="example"></a>Esempio  
- Questo esempio viene utilizzato il `AddressOf` operatore per designare un delegato per gestire il `Click` evento di un pulsante.  
+ Questo esempio Usa la `AddressOf` operatore per definire un delegato per gestire il `Click` eventi di un pulsante.  
   
  [!code-vb[VbVbalrDelegates#8](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addressof-operator_1.vb)]  
   
@@ -43,8 +43,8 @@ AddressOf procedurename
   
  [!code-vb[VbVbalrDelegates#9](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addressof-operator_2.vb)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Istruzione Declare](../../../visual-basic/language-reference/statements/declare-statement.md)  
- [Istruzione Function](../../../visual-basic/language-reference/statements/function-statement.md)  
- [Istruzione Sub](../../../visual-basic/language-reference/statements/sub-statement.md)  
- [Delegati](../../../visual-basic/programming-guide/language-features/delegates/index.md)
+## <a name="see-also"></a>Vedere anche
+- [Istruzione Declare](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [Istruzione Function](../../../visual-basic/language-reference/statements/function-statement.md)
+- [Istruzione Sub](../../../visual-basic/language-reference/statements/sub-statement.md)
+- [Delegati](../../../visual-basic/programming-guide/language-features/delegates/index.md)

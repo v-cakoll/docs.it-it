@@ -1,16 +1,16 @@
 ---
-title: 'Procedura: creare un servizio che restituisca dati arbitrari usando il modello di programmazione HTTP Web WCF'
+title: 'Procedura: Creare un servizio che restituisca dati arbitrari usando il modello di programmazione HTTP Web WCF'
 ms.date: 03/30/2017
 ms.assetid: 0283955a-b4ae-458d-ad9e-6fbb6f529e3d
-ms.openlocfilehash: 763d62750380f025ae369e1e917b46d4e51874e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 187db6d3c19373270b25000029f51aa70a81afd5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33498108"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576395"
 ---
-# <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>Procedura: creare un servizio che restituisca dati arbitrari usando il modello di programmazione HTTP Web WCF
-Talvolta gli sviluppatori devono disporre del controllo completo sulla modalità di restituzione dei dati da un'operazione del servizio, Ciò accade quando un'operazione del servizio deve restituire dati in un formato non supportato da WCF. Questo argomento viene illustrato l'uso del modello di programmazione WCF WEB HTTP per creare tale servizio. In questo servizio è presente un'operazione che restituisce un flusso.  
+# <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>Procedura: Creare un servizio che restituisca dati arbitrari usando il modello di programmazione HTTP Web WCF
+Talvolta gli sviluppatori devono disporre del controllo completo sulla modalità di restituzione dei dati da un'operazione del servizio, Ciò avviene quando un'operazione del servizio deve restituire i dati in un formato non supportato da WCF. In questo argomento viene illustrato l'utilizzo il modello di programmazione WCF WEB HTTP per creare un servizio di questo tipo. In questo servizio è presente un'operazione che restituisce un flusso.  
   
 ### <a name="to-implement-the-service-contract"></a>Per implementare il contratto di servizio  
   
@@ -25,7 +25,7 @@ Talvolta gli sviluppatori devono disporre del controllo completo sulla modalità
         }  
     ```  
   
-     Poiché il metodo restituisce un <xref:System.IO.Stream>, WCF si presuppone che l'operazione ha il controllo completo sui byte restituiti dall'operazione del servizio e viene non applicata alcuna formattazione ai dati che viene restituiti.  
+     Poiché il metodo restituisce un <xref:System.IO.Stream>, WCF si presuppone che l'operazione abbia il controllo completo sui byte restituiti dall'operazione del servizio e viene non applicata alcuna formattazione ai dati restituiti.  
   
 2.  Implementare il contratto di servizio Il contratto ha una sola operazione (`GetImage`). Questo metodo genera una bitmap, quindi la salva in <xref:System.IO.MemoryStream> in formato .jpg. L'operazione restituisce quindi il flusso al chiamante.  
   
@@ -53,7 +53,7 @@ Talvolta gli sviluppatori devono disporre del controllo completo sulla modalità
   
      Si noti il codice dalla seconda all'ultima riga: `WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";`  
   
-     Consente di impostare l'intestazione del tipo di contenuto di `"image/jpeg"`. Sebbene in questo esempio venga illustrato come restituire un file jpg, è possibile modificarlo per restituire qualsiasi tipo di dati necessario, in qualsiasi formato. L'operazione deve recuperare o generare i dati e scriverli in un flusso.  
+     Questo imposta l'intestazione content-type su `"image/jpeg"`. Sebbene in questo esempio venga illustrato come restituire un file jpg, è possibile modificarlo per restituire qualsiasi tipo di dati necessario, in qualsiasi formato. L'operazione deve recuperare o generare i dati e scriverli in un flusso.  
   
 ### <a name="to-host-the-service"></a>Per ospitare il servizio  
   
@@ -175,5 +175,5 @@ namespace RawImageService
   
 -   Durante la compilazione del codice di esempio, fare riferimento a System.ServiceModel.dll e a System.ServiceModel.Web.dll.  
   
-## <a name="see-also"></a>Vedere anche  
- [Modello di programmazione HTTP Web di WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+## <a name="see-also"></a>Vedere anche
+- [Modello di programmazione HTTP Web di WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

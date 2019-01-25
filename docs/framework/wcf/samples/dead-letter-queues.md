@@ -2,12 +2,12 @@
 title: Code di messaggi non recapitabili
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-ms.openlocfilehash: c6b3f059f1a1b11825b595346ed47f6a498078f1
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 263c1fd399c8863154e0e53a1f79528d38022b78
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582606"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54721295"
 ---
 # <a name="dead-letter-queues"></a>Code di messaggi non recapitabili
 Questo esempio dimostra come gestire ed elaborare messaggi il cui recapito non è riuscito. Si basa il [transazionale associazione MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) esempio. In questo esempio viene usata l'associazione `netMsmqBinding`. Il servizio è un'applicazione console indipendente che consente di osservare il servizio che riceve messaggi in coda.
@@ -26,11 +26,11 @@ Questo esempio dimostra come gestire ed elaborare messaggi il cui recapito non �
 
 -   Proprietà <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> per esprimere il tipo di coda di messaggi non recapitabili richiesta dal client. L'enumerazione contiene i valori seguenti:
 
--   `None`: non viene richiesta alcuna coda di messaggi non recapitabili dal client.
+-   `None`: Coda dei messaggi non recapitabili è richiesto dal client.
 
--   `System`: viene usata la coda di messaggi non recapitabili di sistema per archiviare i messaggi non recapitati. La coda di messaggi non recapitabili di sistema è condivisa da tutte le applicazioni in esecuzione nel computer.
+-   `System`: La coda del sistema viene usato per archiviare i messaggi non recapitati. La coda di messaggi non recapitabili di sistema è condivisa da tutte le applicazioni in esecuzione nel computer.
 
--   `Custom`: per archiviare i messaggi non recapitati viene usata una coda di messaggi non recapitabili personalizzata specificata usando la proprietà <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A>. Questa funzionalità è disponibile solo in [!INCLUDE[wv](../../../../includes/wv-md.md)]. Viene usata quando l'applicazione deve usare la propria coda di messaggi non recapitabili invece di condividerla con altre applicazioni in esecuzione nello stesso computer.
+-   `Custom`: Una coda recapitabili personalizzata specificata utilizzando il <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> proprietà viene utilizzata per archiviare i messaggi non recapitati. Questa funzionalità è disponibile solo in [!INCLUDE[wv](../../../../includes/wv-md.md)]. Viene usata quando l'applicazione deve usare la propria coda di messaggi non recapitabili invece di condividerla con altre applicazioni in esecuzione nello stesso computer.
 
 -   Proprietà <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> per esprimere la coda specifica da usare come coda di messaggi non recapitabili. Questa è disponibile solo in [!INCLUDE[wv](../../../../includes/wv-md.md)].
 
@@ -350,7 +350,7 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
     >  L'impostazione di `security mode` su `None` è equivalente all'impostazione di `MsmqAuthenticationMode`, `MsmqProtectionLevel` e della sicurezza `Message` su `None`.
 
 ## <a name="comments"></a>Commenti
- Per impostazione predefinita con il trasporto dell'associazione `netMsmqBinding` è abilitata la sicurezza. Il tipo di sicurezza del trasporto è determinato da due proprietà, `MsmqAuthenticationMode` e `MsmqProtectionLevel`. Per impostazione predefinita, la modalità di autenticazione è impostata su `Windows` e il livello di protezione è impostato su `Sign`. Affinché MSMQ fornisca la funzionalità di autenticazione e firma, deve appartenere a un dominio. Se si esegue questo esempio in un computer che non appartiene a un dominio, si riceve l'errore seguente: "Il certificato interno del servizio di accodamento messaggi non esiste".
+ Per impostazione predefinita con il trasporto dell'associazione `netMsmqBinding` è abilitata la sicurezza. Il tipo di sicurezza del trasporto è determinato da due proprietà, `MsmqAuthenticationMode` e `MsmqProtectionLevel`. Per impostazione predefinita, la modalità di autenticazione è impostata su `Windows` e il livello di protezione è impostato su `Sign`. Affinché MSMQ fornisca la funzionalità di autenticazione e firma, deve appartenere a un dominio. Se si esegue questo esempio in un computer che non fa parte di un dominio, viene visualizzato l'errore seguente: "Interno accodamento dell'utente messaggi certificati non esiste".
 
 > [!IMPORTANT]
 >  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  

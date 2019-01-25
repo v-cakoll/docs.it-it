@@ -2,12 +2,12 @@
 title: Considerazioni sulle prestazioni (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 61913f3b-4f42-4d9b-810f-2a13c2388a4a
-ms.openlocfilehash: 8adf3a2787c47efd929ebc5c0198e13240c279ee
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 43194baeaaeefd8748980a8542bea199d3e8d29f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130220"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54732011"
 ---
 # <a name="performance-considerations-entity-framework"></a>Considerazioni sulle prestazioni (Entity Framework)
 In questo argomento vengono descritte le caratteristiche relative alle prestazioni di ADO.NET Entity Framework e vengono illustrate alcune considerazioni per migliorare le prestazioni di applicazioni Entity Framework.  
@@ -19,7 +19,7 @@ In questo argomento vengono descritte le caratteristiche relative alle prestazio
 |---------------|-------------------|---------------|--------------|  
 |Caricamento di metadati|Moderato|Una volta in ogni dominio dell'applicazione.|I metadati del modello e di mapping usati da Entity Framework sono caricati in un <xref:System.Data.Metadata.Edm.MetadataWorkspace>. Questi metadati sono memorizzati nella cache globalmente e sono disponibili per altre istanze di <xref:System.Data.Objects.ObjectContext> nello stesso dominio dell'applicazione.|  
 |Apertura della connessione al database|Modera<sup>1</sup>|Secondo le necessità.|Poiché una connessione aperta al database Usa una risorsa preziosa, il [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] apre e chiude la connessione al database solo in base alle esigenze. È possibile aprire anche in modo esplicito la connessione. Per altre informazioni, vedere [alla gestione delle connessioni e transazioni](https://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99).|  
-|Generazione di visualizzazioni|High|Una volta in ogni dominio dell'applicazione. Possono essere generate anticipatamente.|Prima di poter eseguire una query su un modello concettuale o salvare delle modifiche all'origine dati, Entity Framework deve generare un set di visualizzazioni query locali per accedere al database. A causa del costo elevato della generazione di queste visualizzazioni, è possibile generarle in anticipo e aggiungerle al progetto in fase di progettazione. Per altre informazioni, vedere [come: Pre-generare viste per migliorare le prestazioni delle Query](https://msdn.microsoft.com/library/b18a9d16-e10b-4043-ba91-b632f85a2579).|  
+|Generazione di visualizzazioni|High|Una volta in ogni dominio dell'applicazione. Possono essere generate anticipatamente.|Prima di poter eseguire una query su un modello concettuale o salvare delle modifiche all'origine dati, Entity Framework deve generare un set di visualizzazioni query locali per accedere al database. A causa del costo elevato della generazione di queste visualizzazioni, è possibile generarle in anticipo e aggiungerle al progetto in fase di progettazione. Per altre informazioni, vedere [Procedura: Pre-generare viste per migliorare le prestazioni delle Query](https://msdn.microsoft.com/library/b18a9d16-e10b-4043-ba91-b632f85a2579).|  
 |Preparazione della query|Modera<sup>2</sup>|Una volta per ogni query univoca.|Include i costi per creare il comando della query, generare un albero dei comandi basato sui metadati del modello e di mapping e definire la forma dei dati restituiti. Poiché vengono memorizzati nella cache sia i comandi delle query Entity SQL sia le query LINQ, le successive esecuzioni dei comandi della stessa query sono più veloci. Tuttavia, è possibile usare le query LINQ compilate per ridurre il costo nelle esecuzioni successive e le query compilate possono essere più efficienti di quelle LINQ che vengono memorizzate nella cache automaticamente. Per altre informazioni, vedere [query compilate (LINQ to Entities)](../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md). Per informazioni generali sull'esecuzione di query LINQ, vedere [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md). **Nota:**  Le query LINQ to Entities che applicano l'operatore `Enumerable.Contains` alle raccolte in memoria non vengono memorizzate automaticamente nella cache. Inoltre, la parametrizzazione delle raccolte in memoria nelle query LINQ compilate non è consentita.|  
 |Esecuzione della query|Bassa<sup>2</sup>|Una volta per ogni query.|Costo dell'esecuzione del comando sull'origine dati tramite il provider di dati ADO.NET. Poiché la maggior parte delle origini dati memorizzano nella cache i piani di query, è possibile che le successive esecuzioni della stessa query siano ancor più veloci.|  
 |Caricamento e convalida di tipi|Low<sup>3</sup>|Una volta per ciascuna istanza <xref:System.Data.Objects.ObjectContext>.|I tipi vengono caricati e convalidati rispetto ai tipi definiti nel modello concettuale.|  
@@ -58,7 +58,7 @@ In questo argomento vengono descritte le caratteristiche relative alle prestazio
 -   Le query su un modello concettuale che sembrano semplici possono comportare l'esecuzione di query più complesse sull'origine dati. Il motivo consiste nel fatto che Entity Framework traduce una query su un modello concettuale in una equivalente query sull'origine dati. Quando un singolo set di entità nel modello concettuale esegue il mapping a più tabelle nell'origine dati, o quando una relazione tra entità viene mappata a una tabella di join, è possibile che il comando di query eseguito sulla query dell'origine dati richieda uno o più join.  
   
     > [!NOTE]
-    >  Usare il metodo <xref:System.Data.Objects.ObjectQuery.ToTraceString%2A> della classe <xref:System.Data.Objects.ObjectQuery%601> o <xref:System.Data.EntityClient.EntityCommand> per visualizzare i comandi che sono eseguiti sull'origine dati per una data query. Per altre informazioni, vedere [come: Visualizzare i comandi di Store](https://msdn.microsoft.com/library/f9771c6e-3b62-4b24-a5d4-55d68e14fa79).  
+    >  Usare il metodo <xref:System.Data.Objects.ObjectQuery.ToTraceString%2A> della classe <xref:System.Data.Objects.ObjectQuery%601> o <xref:System.Data.EntityClient.EntityCommand> per visualizzare i comandi che sono eseguiti sull'origine dati per una data query. Per altre informazioni, vedere [Procedura: Visualizzare i comandi di Store](https://msdn.microsoft.com/library/f9771c6e-3b62-4b24-a5d4-55d68e14fa79).  
   
 -   Le query Entity SQL annidate possono creare join nel server e possono restituire un elevato numero di righe.  
   
@@ -72,7 +72,7 @@ In questo argomento vengono descritte le caratteristiche relative alle prestazio
   
      Inoltre, tali query fanno in modo che la pipeline delle query generi un'unica query con duplicazione di oggetti tra le query annidate. Per questo motivo una singola colonna può essere duplicata più volte. In alcuni database, tra cui SQL Server, questo può causare un forte aumento delle dimensioni della tabella TempDB, con effetti negativi sulle prestazioni del server. Occorre quindi prestare attenzione quando si eseguono query annidate.  
   
--   Qualsiasi query che restituisce un elevato numero di dati può causare una diminuzione delle prestazioni se il client in quel momento sta eseguendo operazioni che consumano risorse in modo proporzionale alle dimensioni del set dei risultati. In tali casi, è necessario limitare la quantità di dati restituiti dalla query. Per altre informazioni, vedere [come: Risultati della pagina tramite Query](https://msdn.microsoft.com/library/ffc0f920-e7de-42e0-9b12-ef356421d030).  
+-   Qualsiasi query che restituisce un elevato numero di dati può causare una diminuzione delle prestazioni se il client in quel momento sta eseguendo operazioni che consumano risorse in modo proporzionale alle dimensioni del set dei risultati. In tali casi, è necessario limitare la quantità di dati restituiti dalla query. Per altre informazioni, vedere [Procedura: Risultati della pagina tramite Query](https://msdn.microsoft.com/library/ffc0f920-e7de-42e0-9b12-ef356421d030).  
   
  Qualsiasi comando generato automaticamente da Entity Framework può essere più complesso degli analoghi comandi scritti in modo esplicito da un sviluppatore del database. Se è necessario avere il controllo esplicito sui comandi eseguiti sull'origine dati, si può definire un mapping a una funzione con valori di tabella o una stored procedure.  
   
@@ -94,7 +94,7 @@ In questo argomento vengono descritte le caratteristiche relative alle prestazio
  I percorsi della query definiscono il grafico degli oggetti restituiti da una query. Quando si definisce un percorso della query, è sufficiente una sola richiesta al database per restituire tutti gli oggetti definiti dal percorso. L'utilizzo di percorsi della query può comportare l'esecuzione di comandi complessi nell'origine dati, derivanti da query di oggetto apparentemente semplici. Questo si verifica in quanto per restituire oggetti correlati in una singola query sono necessari uno o più join. Questa complessità è maggiore nelle query su un modello di entità complesso, ad esempio un'entità con ereditarietà o un percorso che include relazioni molti-a-molti.  
   
 > [!NOTE]
->  Usare il metodo <xref:System.Data.Objects.ObjectQuery.ToTraceString%2A> per visualizzare il comando che verrà generato da un oggetto <xref:System.Data.Objects.ObjectQuery%601>. Per altre informazioni, vedere [come: Visualizzare i comandi di Store](https://msdn.microsoft.com/library/f9771c6e-3b62-4b24-a5d4-55d68e14fa79).  
+>  Usare il metodo <xref:System.Data.Objects.ObjectQuery.ToTraceString%2A> per visualizzare il comando che verrà generato da un oggetto <xref:System.Data.Objects.ObjectQuery%601>. Per altre informazioni, vedere [Procedura: Visualizzare i comandi di Store](https://msdn.microsoft.com/library/f9771c6e-3b62-4b24-a5d4-55d68e14fa79).  
   
  Quando un percorso della query include troppi oggetti correlati o gli oggetti contengono troppi dati delle righe, potrebbe non essere possibile completare la query dall'origine dati. Questo si verifica se la query richiede un'archiviazione temporanea intermedia superiore alle possibilità dell'origine dati. In questo caso, è possibile ridurre la complessità della query sull'origine dati caricando in modo esplicito gli oggetti correlati.  
   
@@ -124,7 +124,7 @@ In questo argomento vengono descritte le caratteristiche relative alle prestazio
  È possibile migliorare le prestazioni complessive delle query in Entity Framework usando le strategie seguenti.  
   
 #### <a name="pre-generate-views"></a>Generare in anticipo le visualizzazioni  
- La generazione di visualizzazioni basate su un modello di entità ha un costo significativo la prima volta che un'applicazione esegue una query. Usare EdmGen.exe per generare in anticipo visualizzazioni come un file di codice Visual Basic o C# che può essere aggiunto al progetto nella fase di progettazione. Per generare visualizzazioni pre-compilate, è inoltre possibile usare il toolkit di trasformazione dei modelli di testo. Le visualizzazioni generate in anticipo vengono convalidate in fase di esecuzione per garantirne la coerenza con la versione corrente del modello di entità specificato. Per altre informazioni, vedere [come: Pre-generare viste per migliorare le prestazioni delle Query](https://msdn.microsoft.com/library/b18a9d16-e10b-4043-ba91-b632f85a2579) e [isolamento delle prestazioni con viste a precompilato/Pre-generate in anticipo in Entity Framework 4](https://go.microsoft.com/fwlink/?LinkID=201337&clcid=0x409).  
+ La generazione di visualizzazioni basate su un modello di entità ha un costo significativo la prima volta che un'applicazione esegue una query. Usare EdmGen.exe per generare in anticipo visualizzazioni come un file di codice Visual Basic o C# che può essere aggiunto al progetto nella fase di progettazione. Per generare visualizzazioni pre-compilate, è inoltre possibile usare il toolkit di trasformazione dei modelli di testo. Le visualizzazioni generate in anticipo vengono convalidate in fase di esecuzione per garantirne la coerenza con la versione corrente del modello di entità specificato. Per altre informazioni, vedere [Procedura: Pre-generare viste per migliorare le prestazioni delle Query](https://msdn.microsoft.com/library/b18a9d16-e10b-4043-ba91-b632f85a2579) e [isolamento delle prestazioni con viste a precompilato/Pre-generate in anticipo in Entity Framework 4](https://go.microsoft.com/fwlink/?LinkID=201337&clcid=0x409).  
   
  Quando si usano modelli di dimensioni elevate, si applica la considerazione seguente:  
   
@@ -136,7 +136,7 @@ In questo argomento vengono descritte le caratteristiche relative alle prestazio
 #### <a name="return-the-correct-amount-of-data"></a>Restituire la quantità corretta di dati  
  In alcuni scenari, la specifica di un percorso della query usando il metodo <xref:System.Data.Objects.ObjectQuery%601.Include%2A> è molto più veloce perché richiede meno round trip al database. Tuttavia, in altri scenari, l'esecuzione di round trip aggiuntivi al database per caricare oggetti correlati potrebbe risultare più veloce perché le query più semplici con meno join comportano meno ridondanza di dati. Per questo motivo si consiglia di testare le prestazioni usando varie modalità di recupero di oggetti correlati. Per altre informazioni, vedere [caricamento di oggetti correlati](https://msdn.microsoft.com/library/452347d2-7b3b-44cd-9001-231299a28cb1).  
   
- Per evitare la restituzione di troppi dati in una sola query, si può considerare di eseguire il paging dei risultati della query in gruppi più gestibili. Per altre informazioni, vedere [come: Risultati della pagina tramite Query](https://msdn.microsoft.com/library/ffc0f920-e7de-42e0-9b12-ef356421d030).  
+ Per evitare la restituzione di troppi dati in una sola query, si può considerare di eseguire il paging dei risultati della query in gruppi più gestibili. Per altre informazioni, vedere [Procedura: Risultati della pagina tramite Query](https://msdn.microsoft.com/library/ffc0f920-e7de-42e0-9b12-ef356421d030).  
   
 #### <a name="limit-the-scope-of-the-objectcontext"></a>Limitare l'ambito di ObjectContext  
  Nella maggior parte dei casi, è necessario creare un'istanza <xref:System.Data.Objects.ObjectContext> all'interno di un'istruzione `using` (`Using…End Using` in Visual Basic). In questo modo le prestazioni migliorano in quanto viene garantita l'eliminazione automatica delle risorse associate al contesto dell'oggetto quando il codice esce dal blocco di istruzioni. Tuttavia, quando i controlli vengono associati a oggetti gestiti dal contesto dell'oggetto, l'istanza <xref:System.Data.Objects.ObjectContext> deve essere gestita finché l'associazione è necessaria e viene eliminata manualmente. Per altre informazioni, vedere [alla gestione delle connessioni e transazioni](https://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99).  
@@ -153,5 +153,5 @@ In questo argomento vengono descritte le caratteristiche relative alle prestazio
   
 -   [Confronto delle prestazioni di ADO.NET Entity Framework](https://go.microsoft.com/fwlink/?LinkID=123913)  
   
-## <a name="see-also"></a>Vedere anche  
- [Considerazioni sullo sviluppo e sulla distribuzione](../../../../../docs/framework/data/adonet/ef/development-and-deployment-considerations.md)
+## <a name="see-also"></a>Vedere anche
+- [Considerazioni sullo sviluppo e sulla distribuzione](../../../../../docs/framework/data/adonet/ef/development-and-deployment-considerations.md)

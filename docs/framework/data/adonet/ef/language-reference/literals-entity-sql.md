@@ -2,12 +2,12 @@
 title: Valori letterali (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 092ef693-6e5f-41b4-b868-5b9e82928abf
-ms.openlocfilehash: 90c065dff0f81a743cd66e224885de01f6129b56
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 71c77a3cb91d0981614e83221ad82d17067dc321
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32767323"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643104"
 ---
 # <a name="literals-entity-sql"></a>Valori letterali (Entity SQL)
 In questo argomento viene descritto il supporto [!INCLUDE[esql](../../../../../../includes/esql-md.md)] per i valori letterali.  
@@ -15,9 +15,9 @@ In questo argomento viene descritto il supporto [!INCLUDE[esql](../../../../../.
 ## <a name="null"></a>Null  
  Il valore letterale Null viene usato per rappresentare il valore Null per qualsiasi tipo. Un valore letterale Null è compatibile con qualsiasi tipo.  
   
- I valori Null tipizzati possono essere creati tramite cast su un valore letterale Null. Per ulteriori informazioni, vedere [CAST](../../../../../../docs/framework/data/adonet/ef/language-reference/cast-entity-sql.md).  
+ I valori Null tipizzati possono essere creati tramite cast su un valore letterale Null. Per altre informazioni, vedere [CAST](../../../../../../docs/framework/data/adonet/ef/language-reference/cast-entity-sql.md).  
   
- Per le regole sulla posizione in cui è disponibile a virgola mobile valori letterali null può essere utilizzato, vedere [valori letterali Null e inferenza del tipo](../../../../../../docs/framework/data/adonet/ef/language-reference/null-literals-and-type-inference-entity-sql.md).  
+ Per le regole sulla posizione in cui libero a mobile valori letterali null mobili possono essere usati, vedere [valori letterali Null e inferenza del tipo](../../../../../../docs/framework/data/adonet/ef/language-reference/null-literals-and-type-inference-entity-sql.md).  
   
 ## <a name="boolean"></a>Booleano  
  I valori letterali Boolean sono rappresentati dalle parole chiave `true` e `false`.  
@@ -45,7 +45,7 @@ N"This is a string!"
 ## <a name="datetime"></a>DateTime  
  Un valore letterale di tipo DateTime è indipendente dalle impostazioni locali ed è composto da una parte relativa alla data e da una parte relativa all'ora. Entrambe queste parti sono obbligatorie e non vi sono valori predefiniti.  
   
- La parte della data deve essere nel formato: `YYYY` - `MM` - `DD`, dove `YYYY` è un valore di anno a quattro cifre compreso tra 0001 e 9999, `MM` è il mese compreso tra 1 e 12 e `DD` è il valore del giorno che è valido per il mese specificato `MM`.  
+ La parte della data deve essere nel formato: `YYYY` - `MM` - `DD`, dove `YYYY` è un valore dell'anno a quattro cifre compreso tra 0001 e 9999 `MM` è il mese compreso tra 1 e 12 e `DD` è il valore del giorno che sono valido per il mese specificato `MM`.  
   
  La parte relativa all'ora deve essere nel formato `HH`:`MM`[:`SS`[.fffffff]], dove `HH` è il valore dell'ora compreso tra 0 e 23, `MM` è il valore dei minuti compreso tra 0 e 59, `SS` è il valore dei secondi compreso tra 0 e 59 e fffffff è il valore dei secondi frazionari compreso tra 0 e 9999999. Tutti gli intervalli includono il primo e l'ultimo valore. I secondi frazionari sono facoltativi. I secondi sono facoltativi, a meno che non vengano specificati i secondi frazionari. In questo caso, i secondi sono obbligatori. Quando i secondi o i secondi frazionari non sono specificati, viene usato il valore predefinito zero.  
   
@@ -92,7 +92,7 @@ X'' –- empty binary string
 ```  
   
 ## <a name="guid"></a>Guid  
- Un valore letterale `GUID` rappresenta un identificatore univoco globale. È una sequenza formata dalla parola chiave `GUID` seguito da cifre esadecimali nel formato noto come *Registro di sistema* formato: 8-4-4-4-12 racchiuse tra virgolette. Per le cifre esadecimali non viene fatta distinzione tra maiuscole e minuscole.  
+ Un valore letterale `GUID` rappresenta un identificatore univoco globale. Si tratta di una sequenza formata dalla parola chiave `GUID` seguito da cifre esadecimali nel formato noto come *registro* formato: 4-4-4-8-12 racchiuso tra virgolette singole. Per le cifre esadecimali non viene fatta distinzione tra maiuscole e minuscole.  
   
  Tra il simbolo GUID e il payload con valore letterale può essere presente un numero qualsiasi di spazi ma non possono essere presenti nuove righe.  
   
@@ -101,5 +101,5 @@ Guid'1afc7f5c-ffa0-4741-81cf-f12eAAb822bf'
 GUID  '1AFC7F5C-FFA0-4741-81CF-F12EAAB822BF'  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Panoramica di Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+## <a name="see-also"></a>Vedere anche
+- [Panoramica di Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

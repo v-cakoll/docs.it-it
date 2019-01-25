@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
-ms.openlocfilehash: a38b4202ba3402c2dff3884c1560752d0353e0ba
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 8d138bae794cac00b1542f63153f343fb95a24c7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54029671"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717402"
 ---
 # <a name="configuring-services-using-configuration-files"></a>Configurazione dei servizi tramite file di configurazione
 Configurazione di un servizio Windows Communication Foundation (WCF) con un file di configurazione ti offre la possibilità di fornire endpoint e i dati sul comportamento del servizio al momento della distribuzione invece che in fase di progettazione. In questo argomento vengono delineate le principali tecniche disponibili.  
@@ -21,7 +21,7 @@ Configurazione di un servizio Windows Communication Foundation (WCF) con un file
 > [!IMPORTANT]
 >  Nel caso di distribuzione di scenari affiancati in cui vengono implementate due versioni diverse di un servizio, è necessario specificare nomi parziali di assembly a cui viene fatto riferimento nei file di configurazione. Questa operazione è necessaria perché il file di configurazione è condiviso tra tutte le versioni di un servizio che potrebbero essere in esecuzione in versioni diverse di .NET Framework.  
   
-## <a name="systemconfiguration-webconfig-and-appconfig"></a>System. Configuration: Web. config e App. config  
+## <a name="systemconfiguration-webconfig-and-appconfig"></a>System.Configuration: Web. config e App. config  
  WCF utilizza il sistema di configurazione di System. Configuration del [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
   
  Quando si configura un servizio in Visual Studio, usare un file Web. config o App. config per specificare le impostazioni. La scelta del nome del file di configurazione è determinata dall'ambiente host scelto per il servizio. Se si sta usando IIS per ospitare il servizio, usare un file Web.config. Se si sta usando un altro ambiente host, usare un file App.config.  
@@ -108,7 +108,7 @@ Configurazione di un servizio Windows Communication Foundation (WCF) con un file
 ### <a name="the-behaviors-element"></a>Il \<comportamenti > elemento  
  Si tratta di un elemento contenitore per gli elementi `behavior` che definiscono i comportamenti di un servizio.  
   
- [\<i comportamenti >](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)  
+ [\<behaviors>](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)  
   
 ### <a name="the-behavior-element"></a>Il \<comportamento > elemento  
  Ogni elemento `behavior` è identificato da un attributo `name` e specifica un comportamento fornito dal sistema, ad esempio <`throttling`>, o un comportamento personalizzato. Se non viene assegnato alcun nome, l'elemento relativo al comportamento corrisponde al comportamento del servizio o dell'endpoint predefinito.  
@@ -262,8 +262,8 @@ Configurazione di un servizio Windows Communication Foundation (WCF) con un file
   
  Se una raccolta di comportamenti figlio contiene un comportamento già presente nella raccolta di comportamenti padre, il comportamento figlio sostituisce quello del padre. Pertanto, se una raccolta di comportamenti padre fosse `<serviceMetadata httpGetEnabled="False" />` e una raccolta di comportamenti figlio fosse `<serviceMetadata httpGetEnabled="True" />`, il comportamento figlio sostituirebbe il comportamento padre nella raccolta di comportamenti e httpGetEnabled sarebbe "true".  
   
-## <a name="see-also"></a>Vedere anche  
- [Configurazione semplificata](../../../docs/framework/wcf/simplified-configuration.md)  
- [Configurazione di applicazioni Windows Communication Foundation](https://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)  
- [\<service>](../../../docs/framework/configure-apps/file-schema/wcf/service.md)  
- [\<binding>](../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>Vedere anche
+- [Configurazione semplificata](../../../docs/framework/wcf/simplified-configuration.md)
+- [Configurazione di applicazioni Windows Communication Foundation](https://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)
+- [\<service>](../../../docs/framework/configure-apps/file-schema/wcf/service.md)
+- [\<binding>](../../../docs/framework/misc/binding.md)

@@ -2,12 +2,12 @@
 title: Riferimento per parole chiave
 description: Fare clic sui collegamenti alle informazioni relative a tutte le F# parole chiave del linguaggio.
 ms.date: 05/16/2016
-ms.openlocfilehash: 20592c57e09c6e0f09bb3acae021369ac5e511d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5a94a30ca0f73538cc22e76fa75bd76741b70d99
+ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579839"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54857905"
 ---
 # <a name="keyword-reference"></a>Riferimento per parole chiave
 
@@ -73,7 +73,7 @@ La tabella seguente illustra tutti i F# parole chiave in ordine alfabetico, insi
 |`return!`|[Espressioni di calcolo](computation-expressions.md)<br /><br />[Flussi di lavoro asincroni](asynchronous-workflows.md)|Utilizzato per indicare un'espressione di calcolo che, quando valutata, fornisce il risultato dell'espressione di calcolo che lo contiene.|
 |`select`|[Espressioni di query](query-expressions.md)|Utilizzato nelle espressioni di query per specificare quali campi o le colonne da estrarre. Si tratta di una parola chiave contestuale, che significa che non è effettivamente una parola riservata e OCS funge solo da una parola chiave nel contesto appropriato.|
 |`static`|[Membri](members/index.md)|Utilizzato per indicare un metodo o proprietà che può essere chiamato senza un'istanza di un tipo o membro condiviso tra tutte le istanze di un tipo valore.|
-|`struct`|[Strutture](structures.md)<br /><br />[Vincoli](generics/constraints.md)|Usata per dichiarare un tipo di struttura.<br /><br />Usato anche in vincoli del parametro generico.<br /><br />Utilizzato per la compatibilità OCaml nelle definizioni dei moduli.|
+|`struct`|[Strutture](structures.md)<br /><br /> [Tuple](tuples.md)<br/><br/>[Vincoli](generics/constraints.md)|Usata per dichiarare un tipo di struttura.<br /><br/>Consente di specificare una tupla di uno struct.<br/><br />Usato anche in vincoli del parametro generico.<br /><br />Utilizzato per la compatibilità OCaml nelle definizioni dei moduli.|
 |`then`|[Espressioni condizionali: `if...then...else`](conditional-expressions-if-then-else.md)<br /><br />[Costruttori](members/constructors.md)|Usato nelle espressioni condizionali.<br /><br />Usato anche per ottenere effetti collaterali dopo la costruzione di oggetti.|
 |`to`|[Cicli: `for...to` Expression](loops-for-to-expression.md)|Utilizzato in `for` cicli per indicare un intervallo.|
 |`true`|[Tipi primitivi](primitive-types.md)|Usati come valori letterali booleani.|

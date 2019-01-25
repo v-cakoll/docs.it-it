@@ -2,12 +2,12 @@
 title: Pool di connessioni OLE DB, ODBC e Oracle
 ms.date: 03/30/2017
 ms.assetid: 2bd83b1e-3ea9-43c4-bade-d9cdb9bbbb04
-ms.openlocfilehash: 3ce65036605b7693955c3a6064fca80263d3538f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: bc07d4d33f2a568ef0fb4dd9806832222a13ca6a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43527376"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54692743"
 ---
 # <a name="ole-db-odbc-and-oracle-connection-pooling"></a>Pool di connessioni OLE DB, ODBC e Oracle
 Il pool di connessioni consente di migliorare notevolmente le prestazioni e di aumentare la scalabilità dell'applicazione. Questa sezione descrive il pool di connessioni per i provider di dati .NET Framework per OLE DB, ODBC e Oracle.  
@@ -68,7 +68,7 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
 |`Min Pool Size`|0|Numero minimo di connessioni gestite nel pool.|  
 |`Pooling`|'true'|Se l'impostazione è `true`, la connessione viene recuperata dal pool appropriato o, se necessario, creata e aggiunta al pool appropriato.|  
   
-## <a name="see-also"></a>Vedere anche  
- [Pool di connessioni](../../../../docs/framework/data/adonet/connection-pooling.md)  
- [Contatori delle prestazioni](../../../../docs/framework/data/adonet/performance-counters.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vedere anche
+- [Pool di connessioni](../../../../docs/framework/data/adonet/connection-pooling.md)
+- [Contatori delle prestazioni](../../../../docs/framework/data/adonet/performance-counters.md)
+- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

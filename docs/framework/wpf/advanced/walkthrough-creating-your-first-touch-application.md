@@ -1,5 +1,5 @@
 ---
-title: 'Procedura dettagliata: creazione della prima applicazione a tocco'
+title: 'Procedura dettagliata: Creazione della prima applicazione Touch'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - touch-sensitive applications [WPF], creating
 - creating a touchscreen application [WPF]
 ms.assetid: d69e602e-9a25-4e24-950b-e89eaa2a906b
-ms.openlocfilehash: 935999fd5ada93bedebb38462f9faa93b8ec923f
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 34a534653455449233c2908f4226cdb3a9bb9867
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086726"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54724239"
 ---
-# <a name="walkthrough-creating-your-first-touch-application"></a>Procedura dettagliata: creazione della prima applicazione a tocco
+# <a name="walkthrough-creating-your-first-touch-application"></a>Procedura dettagliata: Creazione della prima applicazione Touch
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] consente alle applicazioni rispondere al tocco. Ad esempio, è possibile interagire con un'applicazione utilizzando uno o più dita su un dispositivo sensibile al tocco, ad esempio un touchscreen che questa procedura dettagliata viene creata un'applicazione che consente all'utente di spostare, ridimensionare o ruotare un oggetto tramite tocco.  
   
 ## <a name="prerequisites"></a>Prerequisiti  
@@ -27,13 +27,13 @@ ms.locfileid: "49086726"
   
 -   Un dispositivo che accetta un input tocco, ad esempio un touchscreen, che supporta Windows Touch.  
   
- Inoltre, si deve avere una conoscenza di base di come creare un'applicazione in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], in particolare la modalità sottoscrivere e gestire un evento. Per altre informazioni, vedere [Procedura dettagliata: La prima applicazione desktop WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).  
+ Inoltre, si deve avere una conoscenza di base di come creare un'applicazione in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], in particolare la modalità sottoscrivere e gestire un evento. Per altre informazioni, vedere [Procedura dettagliata: Prima applicazione desktop WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).  
   
 ## <a name="creating-the-application"></a>Creare l'applicazione  
   
 #### <a name="to-create-the-application"></a>Per creare l'applicazione  
   
-1.  Creare un nuovo progetto di applicazione WPF in Visual Basic o Visual C# denominato `BasicManipulation`. Per altre informazioni, vedere [Procedura: Creare un nuovo progetto di applicazione WPF](https://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82).  
+1.  Creare un nuovo progetto di applicazione WPF in Visual Basic o Visual C# denominato `BasicManipulation`. Per altre informazioni, vedere [Procedura: Creare un nuovo progetto applicazione WPF](https://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82).  
   
 2.  Sostituire il contenuto del file MainWindow. XAML con il XAML seguente.  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: nascondere le intestazioni delle colonne nel controllo DataGridView di Windows Form'
+title: 'Procedura: Nascondere le intestazioni di colonna nel controllo DataGridView Windows Form'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - column headers [Windows Forms], hiding
 - DataGridView control [Windows Forms], column headers
 ms.assetid: e4ad5f68-50d2-4b9e-93ee-9d622423a8ab
-ms.openlocfilehash: ff9c32725384219e4ffc98f3a76fcff9f6cfc221
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 80377aa598938031f9708c4b7657594985ec0746
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33532275"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717064"
 ---
-# <a name="how-to-hide-column-headers-in-the-windows-forms-datagridview-control"></a>Procedura: nascondere le intestazioni delle colonne nel controllo DataGridView di Windows Form
-In alcuni casi è necessario visualizzare un <xref:System.Windows.Forms.DataGridView> senza intestazioni di colonna. Nel <xref:System.Windows.Forms.DataGridView> (controllo), il <xref:System.Windows.Forms.DataGridView.ColumnHeadersVisible%2A> valore della proprietà determina se le intestazioni di colonna vengono visualizzate.  
+# <a name="how-to-hide-column-headers-in-the-windows-forms-datagridview-control"></a>Procedura: Nascondere le intestazioni di colonna nel controllo DataGridView Windows Form
+In alcuni casi si potrebbe essere necessario visualizzare un <xref:System.Windows.Forms.DataGridView> senza intestazioni di colonna. Nel <xref:System.Windows.Forms.DataGridView> (controllo), il <xref:System.Windows.Forms.DataGridView.ColumnHeadersVisible%2A> valore della proprietà determina se le intestazioni di colonna vengono visualizzate.  
   
 ### <a name="to-hide-the-column-headers"></a>Per nascondere le intestazioni di colonna  
   
@@ -33,7 +33,7 @@ In alcuni casi è necessario visualizzare un <xref:System.Windows.Forms.DataGrid
   
 -   Riferimenti agli assembly <xref:System?displayProperty=nameWithType> e <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Windows.Forms.DataGridView>  
- <xref:System.Windows.Forms.DataGridView.ColumnHeadersVisible%2A?displayProperty=nameWithType>  
- [Funzionalità di base per colonna, riga e cella nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/basic-column-row-and-cell-features-wf-datagridview-control.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Windows.Forms.DataGridView>
+- <xref:System.Windows.Forms.DataGridView.ColumnHeadersVisible%2A?displayProperty=nameWithType>
+- [Funzionalità di base per colonna, riga e cella nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/basic-column-row-and-cell-features-wf-datagridview-control.md)

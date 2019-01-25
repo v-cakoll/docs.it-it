@@ -10,20 +10,20 @@ helpviewer_keywords:
 ms.assetid: 7f0c2246-c070-4748-b96a-2f66a296c539
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: badab8200a4b10fdc13987dfe39ebfebd4d1f7cf
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 19983e4d17ac2843385685a6b8b247d16f4cc081
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143168"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700462"
 ---
 # <a name="ltoidmapgt-element"></a>&lt;oidMap&gt; elemento
 Contiene mapping di identificatore (OID) ASN.1 oggetto alle classi.  
   
  \<configuration>  
-\<mscorlib >  
-\<cryptographySettings >  
-\<oidMap >  
+\<mscorlib>  
+\<cryptographySettings>  
+\<oidMap>  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,7 +42,7 @@ Contiene mapping di identificatore (OID) ASN.1 oggetto alle classi.
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<oidEntry >](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidentry-element.md)|Esegue il mapping di OID ASN.1 a un nome descrittivo.|  
+|[\<oidEntry>](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidentry-element.md)|Esegue il mapping di OID ASN.1 a un nome descrittivo.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -75,9 +75,9 @@ Contiene mapping di identificatore (OID) ASN.1 oggetto alle classi.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
-- [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)  
-- [Schema delle impostazioni di crittografia](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
-- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)  
-- [Configurazione di classi di crittografia](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)  
+## <a name="see-also"></a>Vedere anche
+- [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Schema delle impostazioni di crittografia](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
+- [Configurazione di classi di crittografia](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
 - [Mapping di identificatori di oggetti ad algoritmi di crittografia](../../../../../docs/framework/configure-apps/map-object-identifiers-to-cryptography-algorithms.md)

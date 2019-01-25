@@ -8,30 +8,30 @@ helpviewer_keywords:
 - defaultProxy element
 - <defaultProxy> element
 ms.assetid: 9d663c4b-07b4-4f6f-9b12-efbd3630354f
-ms.openlocfilehash: 54185c7cca734ced166fbe0a52b96214321d4469
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 48c5f5a50563cdbea5fa806e7c7524e413ba3712
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200509"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596176"
 ---
 # <a name="ltdefaultproxygt-element-network-settings"></a>&lt;defaultProxy&gt; (impostazioni di rete)
 Configura il server proxy Hypertext Transfer Protocol (HTTP).  
   
  \<configuration>  
 \<system.net>  
-\<defaultProxy >  
+\<defaultProxy>  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```xml  
-      <defaultProxy  
-        enabled="true|false"  
-        useDefaultCredentials="true|false">  
-           <bypasslist> … </bypasslist>  
-           <proxy> … </proxy>  
-           <module> … </module>  
-      </defaultProxy>
+<defaultProxy  
+  enabled="true|false"  
+  useDefaultCredentials="true|false">  
+    <bypasslist>...</bypasslist>  
+    <proxy>...</proxy>  
+    <module>...</module>  
+</defaultProxy>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
@@ -48,15 +48,15 @@ Configura il server proxy Hypertext Transfer Protocol (HTTP).
   
 |**Elemento**|**Descrizione**|  
 |-----------------|---------------------|  
-|[BypassList](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Fornisce un set di espressioni regolari che descrivono gli indirizzi che non usano il proxy.|  
+|[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Fornisce un set di espressioni regolari che descrivono gli indirizzi che non usano il proxy.|  
 |[module](../../../../../docs/framework/configure-apps/file-schema/network/module-element-network-settings.md)|Aggiunge un nuovo modulo proxy all'applicazione.|  
-|[Proxy](../../../../../docs/framework/configure-apps/file-schema/network/proxy-element-network-settings.md)|Definisce un server proxy.|  
+|[proxy](../../../../../docs/framework/configure-apps/file-schema/network/proxy-element-network-settings.md)|Definisce un server proxy.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
 |**Elemento**|**Descrizione**|  
 |-----------------|---------------------|  
-|[System.NET](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|Contiene le impostazioni di rete che specificano la modalità di connessione alla rete di .NET Framework.|  
+|[system.net](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|Contiene le impostazioni di rete che specificano la modalità di connessione alla rete di .NET Framework.|  
   
 ## <a name="remarks"></a>Note  
  Se l'elemento defaultProxy è vuoto, verranno usate le impostazioni proxy di Internet Explorer. Questo comportamento è diverso da quello di .NET Framework versione 1.1.  
@@ -86,6 +86,6 @@ Configura il server proxy Hypertext Transfer Protocol (HTTP).
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
-- <xref:System.Net.WebProxy?displayProperty=nameWithType>  
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Net.WebProxy?displayProperty=nameWithType>
 - [Schema delle impostazioni di rete](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

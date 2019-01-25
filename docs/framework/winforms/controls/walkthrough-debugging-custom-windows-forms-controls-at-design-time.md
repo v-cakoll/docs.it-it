@@ -1,5 +1,5 @@
 ---
-title: 'Procedura dettagliata: debug di controlli di Windows Form personalizzati in fase di progettazione'
+title: 'Procedura dettagliata: Debug di controlli di Windows Form personalizzati in fase di progettazione'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], debugging
 - design-time debugging
 ms.assetid: 1fd83ccd-3798-42fc-85a3-6cba99467387
-ms.openlocfilehash: 824c1e47cf50dc13a3a986e48a49158b15dbb935
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: ceee83c9deb318f5912eb724cbd237c3d7b73152
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45964842"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54733337"
 ---
-# <a name="walkthrough-debugging-custom-windows-forms-controls-at-design-time"></a>Procedura dettagliata: debug di controlli di Windows Form personalizzati in fase di progettazione
-Quando si crea un controllo personalizzato, è spesso risulterà necessario per eseguire il debug relativo comportamento in fase di progettazione. Ciò è particolarmente vero se si crea una finestra di progettazione personalizzata per il controllo personalizzato. Per informazioni dettagliate, vedere [procedura dettagliata: creazione di un Windows Form controllo che accetta i vantaggi di Visual Studio in fase di progettazione funzionalità](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md).  
+# <a name="walkthrough-debugging-custom-windows-forms-controls-at-design-time"></a>Procedura dettagliata: Debug di controlli di Windows Form personalizzati in fase di progettazione
+Quando si crea un controllo personalizzato, è spesso risulterà necessario per eseguire il debug relativo comportamento in fase di progettazione. Ciò è particolarmente vero se si crea una finestra di progettazione personalizzata per il controllo personalizzato. Per informazioni dettagliate, vedere [procedura dettagliata: Creazione di un Windows Form di controllo che consente di sfruttare le funzionalità in fase di progettazione di Visual Studio](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md).  
   
  È possibile eseguire il debug dei controlli personalizzati utilizzando Visual Studio, esattamente come si potrebbero eseguire il debug di eventuali altre classi di .NET Framework. La differenza è che si eseguirà il debug di un'istanza separata di Visual Studio che codice del controllo personalizzato in esecuzione  
   
@@ -60,9 +60,9 @@ Quando si crea un controllo personalizzato, è spesso risulterà necessario per 
   
 1.  Aggiungere un **libreria di controlli Windows** progetto alla soluzione.  
   
-2.  Aggiungere un nuovo **UserControl** elemento al progetto DebugControlLibrary. Per informazioni dettagliate, vedere [NIB: procedura: aggiungere nuovi elementi di progetto](https://msdn.microsoft.com/library/63d3e16b-de6e-4bb5-a0e3-ecec762201ce). Assegnare al nuovo file di origine di un nome di base di "DebugControl".  
+2.  Aggiungere un nuovo **UserControl** elemento al progetto DebugControlLibrary. Per informazioni dettagliate, vedere [NIB: procedura: Aggiungere nuovi elementi di progetto](https://msdn.microsoft.com/library/63d3e16b-de6e-4bb5-a0e3-ecec762201ce). Assegnare al nuovo file di origine di un nome di base di "DebugControl".  
   
-3.  Usando il **Esplora soluzioni**, eliminare il controllo del progetto predefinita eliminando il file di codice con il nome di base "`UserControl1`". Per informazioni dettagliate, vedere [NIB: procedura: rimozione, eliminazione ed escludere elementi](https://msdn.microsoft.com/library/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73).  
+3.  Usando il **Esplora soluzioni**, eliminare il controllo del progetto predefinita eliminando il file di codice con il nome di base "`UserControl1`". Per informazioni dettagliate, vedere [NIB: procedura: Rimuovere, eliminare ed escludere elementi](https://msdn.microsoft.com/library/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73).  
   
 4.  Compilare la soluzione.  
   
@@ -159,7 +159,7 @@ Quando si crea un controllo personalizzato, è spesso risulterà necessario per 
   
 4.  Aprire Form1 nel **progettazione form** e selezionare il **DebugControl** controllo.  
   
-5.  Modificare il valore della `DemoString` proprietà. Si noti che quando si esegue il commit della modifica, l'istanza di debug di Visual Studio acquisisce lo stato attivo e l'esecuzione si arresta in corrispondenza del punto di interruzione. È possibile passo a passo la funzione di accesso di proprietà come il sarebbe qualsiasi altro codice.  
+5.  Modificare il valore della proprietà `DemoString` . Si noti che quando si esegue il commit della modifica, l'istanza di debug di Visual Studio acquisisce lo stato attivo e l'esecuzione si arresta in corrispondenza del punto di interruzione. È possibile passo a passo la funzione di accesso di proprietà come il sarebbe qualsiasi altro codice.  
   
 6.  Dopo averli completati con la sessione di debug, è possibile uscire chiudendo l'istanza host di Visual Studio o facendo clic la **arresta debug** pulsante nell'istanza di debug.  
   
@@ -170,9 +170,9 @@ Quando si crea un controllo personalizzato, è spesso risulterà necessario per 
   
 -   Esistono diversi attributi è possibile applicare alle proprietà del controllo per modificare l'interazione del controllo personalizzato con la finestra di progettazione. È possibile trovare questi attributi nel <xref:System.ComponentModel?displayProperty=nameWithType> dello spazio dei nomi.  
   
--   È possibile scrivere una finestra di progettazione personalizzata per il controllo personalizzato. Ciò consente il controllo completo della fase di progettazione utilizzando l'infrastruttura della finestra di progettazione extensible esposta da Visual Studio. Per informazioni dettagliate, vedere [procedura dettagliata: creazione di un Windows Form controllo che accetta i vantaggi di Visual Studio in fase di progettazione funzionalità](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md).  
+-   È possibile scrivere una finestra di progettazione personalizzata per il controllo personalizzato. Ciò consente il controllo completo della fase di progettazione utilizzando l'infrastruttura della finestra di progettazione extensible esposta da Visual Studio. Per informazioni dettagliate, vedere [procedura dettagliata: Creazione di un Windows Form di controllo che consente di sfruttare le funzionalità in fase di progettazione di Visual Studio](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Procedura dettagliata: Creazione di un controllo Windows Form che usufruisca delle funzionalità offerte da Visual Studio in fase di progettazione](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)  
- [Procedura: accedere ai servizi in fase di progettazione](https://msdn.microsoft.com/library/c186c4b6-076c-438d-9ed3-f13da29c8c1f)  
- [Procedura: Accedere al supporto in fase di progettazione in Windows Forms](https://msdn.microsoft.com/library/a84f8579-1f47-41b9-ba37-69030b0aff09)
+## <a name="see-also"></a>Vedere anche
+- [Procedura dettagliata: Creazione di un controllo di Windows Form che consente di sfruttare le funzionalità in fase di progettazione di Visual Studio](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)
+- [Procedura: Servizi di accesso in fase di progettazione](https://msdn.microsoft.com/library/c186c4b6-076c-438d-9ed3-f13da29c8c1f)
+- [Procedura: Supporto dell'accesso in fase di progettazione in Windows Form](https://msdn.microsoft.com/library/a84f8579-1f47-41b9-ba37-69030b0aff09)

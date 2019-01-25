@@ -7,12 +7,12 @@ helpviewer_keywords:
 - graphics [WPF], PathGeometry class
 - XAML [WPF], object element usage
 ms.assetid: b8586241-a02d-486e-9223-e1e98e047f41
-ms.openlocfilehash: d681cd15fa3daa3698edc5e0ad3d3c2669c1dfdf
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 03f9c4f8156c5f14ff127dd47c7ade6f6ee22e5e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45591932"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671265"
 ---
 # <a name="path-markup-syntax"></a>Sintassi di markup del percorso
 I tracciati vengono illustrati nella [forme e disegno di base di WPF Overview](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md) e il [panoramica delle classi Geometry](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md), tuttavia, in questo argomento descrive in dettaglio il potente e complesso mini-linguaggio è possibile usare per specificare percorso modo più compatto usando le geometrie [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
@@ -40,7 +40,7 @@ I tracciati vengono illustrati nella [forme e disegno di base di WPF Overview](.
 ### <a name="a-note-about-white-space"></a>Nota sugli spazi vuoti  
  Per brevità nelle sezioni di sintassi seguenti viene illustrato uno spazio singolo, ma sono accettabili più spazi quando viene visualizzato uno spazio singolo.  
   
- Due numeri non è necessario essere separati da virgole o spazi vuoti, ma ciò può essere eseguita solo quando la stringa risultante è ambigua. Ad esempio, `2..3` è composta da due numeri: "2". e ".3". Analogamente, `2-3` è "2" e "-3". Gli spazi non sono necessari né prima né dopo i comandi.  
+ Due numeri non è necessario essere separati da virgole o spazi vuoti, ma ciò può essere eseguita solo quando la stringa risultante è ambigua. Ad esempio, `2..3` è composta da due numeri: "2." e ".3". Analogamente, `2-3` è "2" e "-3". Gli spazi non sono necessari né prima né dopo i comandi.  
   
 ### <a name="syntax"></a>Sintassi  
  Il [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] attributo sintassi di utilizzo di un <xref:System.Windows.Media.StreamGeometry> è composto da facoltativo <xref:System.Windows.Media.FillRule> valore e una o più descrizioni di figure.  
@@ -224,11 +224,11 @@ Maiuscolo `V` indica che `y` è un valore assoluto; una minuscola `v` indica che
   
  È anche possibile usare una notazione scientifica. Ad esempio, `+1.e17` è un valore valido.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Windows.Shapes.Path>  
- <xref:System.Windows.Media.StreamGeometry>  
- <xref:System.Windows.Media.PathGeometry>  
- <xref:System.Windows.Media.PathFigureCollection>  
- [Cenni preliminari sugli oggetti Shape e sulle funzionalità di disegno di base di WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [Cenni preliminari sulle classi Geometry](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
- [Procedure relative alle proprietà](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Windows.Shapes.Path>
+- <xref:System.Windows.Media.StreamGeometry>
+- <xref:System.Windows.Media.PathGeometry>
+- <xref:System.Windows.Media.PathFigureCollection>
+- [Cenni preliminari sugli oggetti Shape e sulle funzionalità di disegno di base di WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
+- [Cenni preliminari sulle classi Geometry](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)
+- [Procedure relative alle proprietà](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)
