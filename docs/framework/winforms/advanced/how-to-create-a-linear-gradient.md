@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: creare una sfumatura lineare'
+title: 'Procedura: Creare una sfumatura lineare'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,36 +10,36 @@ helpviewer_keywords:
 - colors [Windows Forms], creating linear gradients
 - gradients
 ms.assetid: 6c88e1cc-1217-4399-ac12-cb37592b9f01
-ms.openlocfilehash: 9eeedf1ef92bdf6e5e2724eeca5060765b0778f3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d9ceb10eb5990742271c8d952d9293807c21677a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33522460"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54696295"
 ---
-# <a name="how-to-create-a-linear-gradient"></a>Procedura: creare una sfumatura lineare
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] fornisce orizzontali, verticali e diagonali gradienti lineari. Per impostazione predefinita, il colore in una sfumatura lineare cambia in modo uniforme. Tuttavia, è possibile personalizzare una sfumatura lineare in modo che il colore cambia in modo non uniformi.  
+# <a name="how-to-create-a-linear-gradient"></a>Procedura: Creare una sfumatura lineare
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] fornisce orizzontali, verticali e diagonali sfumature lineari. Per impostazione predefinita, il colore in una sfumatura lineare viene modificato in modo uniforme. Tuttavia, è possibile personalizzare una sfumatura lineare in modo che il colore viene modificato in modo non uniforme.  
   
- Nell'esempio seguente inserisce una riga di un'ellisse e un rettangolo con un pennello sfumato lineare orizzontale.  
+ Nell'esempio seguente inserisce una riga, un'ellisse e un rettangolo con un pennello sfumatura lineare orizzontale.  
   
- Il <xref:System.Drawing.Drawing2D.LinearGradientBrush.%23ctor%2A> costruttore riceve quattro argomenti: due punti e due colori. Il primo punto (0, 10) è associato al primo colore (rosso) e il secondo punto (200, 10) è associato il secondo colore (blu). Come prevedibile, la riga disegnata da (0, 10) a (200, 10) cambia gradualmente da rosso a blu.  
+ Il <xref:System.Drawing.Drawing2D.LinearGradientBrush.%23ctor%2A> costruttore riceve quattro argomenti: due punti e due colori. Il primo punto (0, 10) è associato il primo colore (rosso) e il secondo punto (200, 10) è associato il secondo colore (blu). Come si può immaginare, la riga disegnata dal punto (0, 10) a (200, 10) cambia gradualmente da rosso a blu.  
   
- Il numero 10 punti (50, 10) e (200, 10) non sono importanti. L'aspetto importante è che i due punti hanno stessa coordinata secondo, ovvero la riga che li connettono è orizzontale. I puntini di sospensione e il rettangolo inoltre modificare gradualmente da rosso a blu come coordinata orizzontale va da 0 a 200.  
+ Il numero 10 in quanto (50, 10) e (200, 10) non sono importanti. È importante che i due punti abbiano la stessa coordinata secondo, ovvero la linea di connessione è orizzontale. I puntini di sospensione e il rettangolo inoltre modificare gradualmente da rosso a blu come la coordinata orizzontale va da 0 a 200.  
   
- Nella figura seguente mostra la riga, i puntini di sospensione e il rettangolo. Si noti che la sfumatura di colore si ripete per la coordinata orizzontale aumenta oltre 200.  
+ La figura seguente mostra la riga, i puntini di sospensione e il rettangolo. Si noti che la sfumatura di colore viene ripetuto man mano che aumenta la coordinata orizzontale a oltre 200.  
   
  ![Sfumatura lineare](../../../../docs/framework/winforms/advanced/media/cslineargradient1.png "cslineargradient1")  
   
-### <a name="to-use-horizontal-linear-gradients"></a>Per utilizzare sfumature lineare orizzontale  
+### <a name="to-use-horizontal-linear-gradients"></a>Per utilizzare sfumature lineari orizzontali  
   
--   Passare l'opaco rosso e blu opaco come terzo e quarto argomento, rispettivamente.  
+-   Passare blu rosso ed è opaco opaco come il terzo e quarto argomento, rispettivamente.  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#21)]
      [!code-vb[System.Drawing.UsingaGradientBrush#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#21)]  
   
- Nell'esempio precedente, i componenti di colore modificare in modo lineare si sposta da una coordinata orizzontale pari a 0 per una coordinata orizzontale 200. Ad esempio, un punto in cui la coordinata è compreso tra 0 e 200 disporrà di un componente blu che si trova a metà tra 0 e 255.  
+ Nell'esempio precedente, i componenti di colore modificare in modo lineare come si spostano da una coordinata orizzontale pari a 0 a una coordinata orizzontale pari a 200. Ad esempio, un punto di cui prima coordinata è compreso tra 0 e 200 avrà un componente blu che è compreso tra 0 e 255.  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Consente di regolare il modo in cui che un colore varia da un bordo di una sfumatura a altro. Si supponga di che voler creare un pennello sfumato cambia da nero in rosso in base alla tabella seguente.  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Consente di regolare la modalità di che un colore varia da un bordo di una sfumatura a altro. Si supponga di che voler creare un pennello a sfumatura che le modifiche apportate dal nero al rosso in base alla tabella riportata di seguito.  
   
 |Coordinata orizzontale|Componenti RGB|  
 |---------------------------|--------------------|  
@@ -47,36 +47,36 @@ ms.locfileid: "33522460"
 |40|(128, 0, 0)|  
 |200|(255, 0, 0)|  
   
- Si noti che il componente rosso intensità media quando la coordinata orizzontale corrisponde solo il 20% del modo in cui da 0 a 200.  
+ Si noti che il componente rossa intensità media quando la coordinata orizzontale corrisponde solo il 20% del modo in cui da 0 a 200.  
   
- L'esempio seguente imposta il <xref:System.Drawing.Drawing2D.LinearGradientBrush.Blend%2A> proprietà di un <xref:System.Drawing.Drawing2D.LinearGradientBrush> oggetto da associare tre intensità relative a tre posizioni relative. Come indicato nella tabella precedente, un'intensità pari a 0,5 è associata a una posizione relativa di 0,2. Il codice verrà inserito un'ellisse e un rettangolo con pennello sfumato.  
+ L'esempio seguente imposta la <xref:System.Drawing.Drawing2D.LinearGradientBrush.Blend%2A> proprietà di un <xref:System.Drawing.Drawing2D.LinearGradientBrush> oggetto da associare tre intensità relative tre posizioni relative. Come indicato nella tabella precedente, è associata a una posizione relativa di 0.2 un'intensità di 0,5. Il codice viene compilato un rettangolo con il pennello a sfumatura e un'ellisse.  
   
- Nella figura seguente viene illustrato il rettangolo e l'ellisse risultante.  
+ La figura seguente mostra l'ellisse risultante e il rettangolo.  
   
  ![Sfumatura lineare](../../../../docs/framework/winforms/advanced/media/cslineargradient2.png "cslineargradient2")  
   
-### <a name="to-customize-linear-gradients"></a>Per personalizzare i gradienti lineari  
+### <a name="to-customize-linear-gradients"></a>Per personalizzare le sfumature lineari  
   
--   Passare l'opaco nero e rosso opaco come terzo e quarto argomento, rispettivamente.  
+-   Passare il rosso opaco e nero opaco come il terzo e quarto argomento, rispettivamente.  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#22](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#22)]
      [!code-vb[System.Drawing.UsingaGradientBrush#22](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#22)]  
   
- Le sfumature negli esempi precedenti sono state orizzontale; vale a dire il colore cambia gradualmente mentre si sposta lungo una linea orizzontale. È inoltre possibile definire sfumature verticali e diagonali.  
+ Le sfumature negli esempi precedenti sono state orizzontale; vale a dire il colore cambia gradualmente quando si sposta lungo una linea orizzontale. È anche possibile definire le sfumature verticali e diagonali.  
   
- Nell'esempio seguente passa i punti (0, 0) e (200, 100) a un <xref:System.Drawing.Drawing2D.LinearGradientBrush.%23ctor%2A> costruttore. Il colore blu è associato a (0, 0), ed è associato il colore verde (200, 100). Una riga (con la larghezza della penna 10) e un'ellisse vengono riempiti con pennello sfumato lineare.  
+ L'esempio seguente passa i punti (0, 0) e (200, 100) per un <xref:System.Drawing.Drawing2D.LinearGradientBrush.%23ctor%2A> costruttore. È associato il colore blu (0, 0), ed è associato il colore verde (200, 100). Una riga (con la larghezza della penna 10) e un elemento ellipse vengono riempiti con il pennello sfumato lineare.  
   
- Nella figura seguente mostra la riga e l'ellisse. Si noti che il colore in ellisse cambia gradualmente mentre si sposta lungo una riga che sono parallelo a quella che passa attraverso (0, 0) e (200, 100).  
+ La figura seguente mostra la riga e l'ellisse. Si noti che il colore in ellisse cambia gradualmente quando si sposta lungo una riga che sono parallelo a quella che passa attraverso (0, 0) e (200, 100).  
   
  ![Sfumatura lineare](../../../../docs/framework/winforms/advanced/media/cslineargradient3.png "cslineargradient3")  
   
-### <a name="to-create-diagonal-linear-gradients"></a>Per creare diagonale gradienti lineari  
+### <a name="to-create-diagonal-linear-gradients"></a>Per creare diagonale sfumature lineari  
   
--   Passare l'opaco blu e verde opaco come terzo e quarto argomento, rispettivamente.  
+-   Passare l'opaco blu e verde opaco come il terzo e quarto argomento, rispettivamente.  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#23](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#23)]
      [!code-vb[System.Drawing.UsingaGradientBrush#23](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#23)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Uso di un pennello a sfumatura per il riempimento di forme](../../../../docs/framework/winforms/advanced/using-a-gradient-brush-to-fill-shapes.md)  
- [Grafica e disegno in Windows Form](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
+## <a name="see-also"></a>Vedere anche
+- [Uso di un pennello a sfumatura per il riempimento di forme](../../../../docs/framework/winforms/advanced/using-a-gradient-brush-to-fill-shapes.md)
+- [Grafica e disegno in Windows Form](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ddf1c83c-9d40-45e6-b04d-9828c6cbbfdc
-ms.openlocfilehash: 043f156f96d6ebc9ac5a6487287ad327928d9bf0
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: c168fc2ceddde0f8d104ec5e562f92c9c9e487d7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43776301"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583535"
 ---
 # <a name="enumerating-instances-of-sql-server-adonet"></a>Enumerazione di istanze di SQL Server (ADO.NET)
 SQL Server consente alle applicazioni di individuare le istanze di SQL Server all'interno della rete corrente. Mediante la classe <xref:System.Data.Sql.SqlDataSourceEnumerator> queste informazioni vengono esposte allo sviluppatore dell'applicazione che in tal modo dispone di una <xref:System.Data.DataTable> contenente dati relativi a tutti i server visibili. La tabella restituita contiene un elenco di istanze del server disponibile in rete che corrisponde all'elenco fornito quando un utente tenta di creare una nuova connessione ed espande l'elenco a discesa che contiene tutti i server disponibili nel **connessione Proprietà** nella finestra di dialogo. I risultati visualizzati non sono sempre completi.  
@@ -46,9 +46,9 @@ System.Data.DataTable dataTable = instance.GetDataSources();
 |Colonna|Descrizione|  
 |------------|-----------------|  
 |**ServerName**|Nome del server.|  
-|**NomeIstanza**|Nome dell'istanza del server. Resta vuoto se il server è in esecuzione come istanza predefinita.|  
+|**InstanceName**|Nome dell'istanza del server. Resta vuoto se il server è in esecuzione come istanza predefinita.|  
 |**IsClustered**|Indica se il server è parte di un cluster.|  
-|**Version**|Versione del server. Ad esempio:<br /><br /> -9.00.x ([!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)])<br />-   10.0.xx ([!INCLUDE[ssKatmai](../../../../../includes/sskatmai-md.md)])<br />-   10.50.x ([!INCLUDE[ssKilimanjaro](../../../../../includes/sskilimanjaro-md.md)])<br />-11.0.xx (SQL Server 2012)|  
+|**Version**|Versione del server. Ad esempio:<br /><br /> -   9.00.x ([!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)])<br />-   10.0.xx ([!INCLUDE[ssKatmai](../../../../../includes/sskatmai-md.md)])<br />-   10.50.x ([!INCLUDE[ssKilimanjaro](../../../../../includes/sskilimanjaro-md.md)])<br />-   11.0.xx (SQL Server 2012)|  
   
 ## <a name="enumeration-limitations"></a>Limitazioni delle enumerazioni  
  È possibile elencare o non elencare tutti i server disponibili. L'elenco può variare in base a fattori come i timeout e il traffico di rete. Pertanto l'elenco può risultare diverso durante due chiamate consecutive. Verranno elencati solo i server nella stessa rete. Normalmente i pacchetti di broadcast non passeranno dai router. Per questo motivo è possibile che l'utente non visualizzi un server elencato, ma tale server resterà stabile durante le chiamate.  
@@ -124,6 +124,6 @@ class Program
 }  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [SQL Server e ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vedere anche
+- [SQL Server e ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
+- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

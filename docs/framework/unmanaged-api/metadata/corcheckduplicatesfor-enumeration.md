@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9cdb1570b682088e92ff7c7a78d84259d02d8512
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9c930b6fe81fdb7013e95a20d33ff0ba0148f88f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444503"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54658816"
 ---
 # <a name="corcheckduplicatesfor-enumeration"></a>Enumerazione CorCheckDuplicatesFor
-Specifica il token di metadati che verrà controllato la presenza di duplicati.  
+Specifica il token di metadati che verrà verificato la presenza di duplicati.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -73,37 +73,37 @@ typedef enum CorCheckDuplicatesFor {
 |`MDDupAll`|Controllare tutti i token di metadati per i duplicati.|  
 |`MDDupENC`|Non usato.|  
 |`MDNoDupChecks`|Non archiviare i token di metadati per i duplicati.|  
-|`MDDupTypeDef`|Verificare la presenza di duplicati di `mdTypeDef` token.|  
-|`MDDupInterfaceImpl`|Verificare la presenza di duplicati di `mdInterfaceImpl` token.|  
-|`MDDupMethodDef`|Verificare la presenza di duplicati di `mdMethodDef` token.|  
-|`MDDupTypeRef`|Verificare la presenza di duplicati di `mdTypeRef` token.|  
-|`MDDupMemberRef`|Verificare la presenza di duplicati di `mdMemberRef` token.|  
-|`MDDupCustomAttribute`|Verificare la presenza di duplicati di `mdCustomAttribute` token.|  
-|`MDDupParamDef`|Verificare la presenza di duplicati di `mdParamDef` token.|  
-|`MDDupPermission`|Verificare la presenza di duplicati di `mdPermission` token.|  
-|`MDDupProperty`|Verificare la presenza di duplicati di `mdProperty` token.|  
-|`MDDupEvent`|Verificare la presenza di duplicati di `mdEvent` token.|  
-|`MDDupFieldDef`|Verificare la presenza di duplicati di `mdFieldDef` token.|  
-|`MDDupSignature`|Verificare la presenza di duplicati di `mdSignature` token.|  
-|`MDDupModuleRef`|Verificare la presenza di duplicati di `mdModuleRef` token.|  
-|`MDDupTypeSpec`|Verificare la presenza di duplicati di `mdTypeSpec` token.|  
-|`MDDupImplMap`|Verificare la presenza di duplicati di `mdImplMap` token.|  
-|`MDDupAssemblyRef`|Verificare la presenza di duplicati di `mdAssemblyRef` token.|  
-|`MDDupFile`|Verificare la presenza di duplicati di `mdFile` token.|  
-|`MDDupExportedType`|Verificare la presenza di duplicati di `mdExportedType` token.|  
-|`MDDupManifestResource`|Verificare la presenza di duplicati di `mdManifestResource` token.|  
-|`MDDupGenericParam`|Verificare la presenza di duplicati di `mdGenericParam` token.|  
-|`MDDupMethodSpec`|Verificare la presenza di duplicati di `mdMethodSpec` token.|  
-|`MDDupGenericParamConstraint`|Verificare la presenza di duplicati di `mdGenericParamConstraint` token.|  
-|`MDDupAssembly`|Verificare la presenza di duplicati di `mdAssembly` token.|  
-|`MDDupDefault`|Verificare la presenza di duplicati di `mdMemberRef`, `mdTypeRef`, `mdSignature`, `mdTypeSpec`, e `mdMethodSpec` token.|  
+|`MDDupTypeDef`|Verificare la presenza di duplicati di `mdTypeDef` i token.|  
+|`MDDupInterfaceImpl`|Verificare la presenza di duplicati di `mdInterfaceImpl` i token.|  
+|`MDDupMethodDef`|Verificare la presenza di duplicati di `mdMethodDef` i token.|  
+|`MDDupTypeRef`|Verificare la presenza di duplicati di `mdTypeRef` i token.|  
+|`MDDupMemberRef`|Verificare la presenza di duplicati di `mdMemberRef` i token.|  
+|`MDDupCustomAttribute`|Verificare la presenza di duplicati di `mdCustomAttribute` i token.|  
+|`MDDupParamDef`|Verificare la presenza di duplicati di `mdParamDef` i token.|  
+|`MDDupPermission`|Verificare la presenza di duplicati di `mdPermission` i token.|  
+|`MDDupProperty`|Verificare la presenza di duplicati di `mdProperty` i token.|  
+|`MDDupEvent`|Verificare la presenza di duplicati di `mdEvent` i token.|  
+|`MDDupFieldDef`|Verificare la presenza di duplicati di `mdFieldDef` i token.|  
+|`MDDupSignature`|Verificare la presenza di duplicati di `mdSignature` i token.|  
+|`MDDupModuleRef`|Verificare la presenza di duplicati di `mdModuleRef` i token.|  
+|`MDDupTypeSpec`|Verificare la presenza di duplicati di `mdTypeSpec` i token.|  
+|`MDDupImplMap`|Verificare la presenza di duplicati di `mdImplMap` i token.|  
+|`MDDupAssemblyRef`|Verificare la presenza di duplicati di `mdAssemblyRef` i token.|  
+|`MDDupFile`|Verificare la presenza di duplicati di `mdFile` i token.|  
+|`MDDupExportedType`|Verificare la presenza di duplicati di `mdExportedType` i token.|  
+|`MDDupManifestResource`|Verificare la presenza di duplicati di `mdManifestResource` i token.|  
+|`MDDupGenericParam`|Verificare la presenza di duplicati di `mdGenericParam` i token.|  
+|`MDDupMethodSpec`|Verificare la presenza di duplicati di `mdMethodSpec` i token.|  
+|`MDDupGenericParamConstraint`|Verificare la presenza di duplicati di `mdGenericParamConstraint` i token.|  
+|`MDDupAssembly`|Verificare la presenza di duplicati di `mdAssembly` i token.|  
+|`MDDupDefault`|Verificare la presenza di duplicati `mdMemberRef`, `mdTypeRef`, `mdSignature`, `mdTypeSpec`, e `mdMethodSpec` i token.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorHdr. H  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Enumerazioni dei metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Vedere anche
+- [Enumerazioni dei metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

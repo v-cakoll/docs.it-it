@@ -2,21 +2,21 @@
 title: '&lt;serviceDiscovery&gt;'
 ms.date: 03/30/2017
 ms.assetid: a3c68a4a-fc95-43c5-aacb-785936c0cf39
-ms.openlocfilehash: 2b3061274ef670ccd672c3155ca7285d567834bd
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 73943f5f962a6963809e2c65ce8593f6181559f7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146901"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587333"
 ---
 # <a name="ltservicediscoverygt"></a>&lt;serviceDiscovery&gt;
 Specifica l'individuabilità degli endpoint del servizio.  
   
  \<system.ServiceModel>  
-\<i comportamenti >  
+\<behaviors>  
 \<serviceBehaviors>  
-\<comportamento >  
-\<serviceDiscovery >  
+\<behavior>  
+\<serviceDiscovery>  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -49,8 +49,8 @@ Specifica l'individuabilità degli endpoint del servizio.
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<announcementEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/announcementendpoint.md)|Raccolta di endpoint per agli annunci. Usare questa sezione per specificare gli endpoint da usare per l'invio di messaggi di annuncio.|  
-|[\<discoveryEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryendpoint.md)|Raccolta di endpoint di individuazione. Usare questa sezione per specificare gli endpoint sui quali stare in ascolto dei messaggi di individuazione.|  
+|[\<announcementEndpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/announcementendpoint.md)|Raccolta di endpoint per agli annunci. Usare questa sezione per specificare gli endpoint da usare per l'invio di messaggi di annuncio.|  
+|[\<discoveryEndpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryendpoint.md)|Raccolta di endpoint di individuazione. Usare questa sezione per specificare gli endpoint sui quali stare in ascolto dei messaggi di individuazione.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -85,5 +85,5 @@ Specifica l'individuabilità degli endpoint del servizio.
 </behaviors>
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>
+## <a name="see-also"></a>Vedere anche
+- <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>

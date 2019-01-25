@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XAML [XAML Services], type converter services how-to
 ms.assetid: b4dad00f-03da-4579-a4e9-d8d72d2ccbce
-ms.openlocfilehash: b68f00724ecd3a3edc64ee1e3dd7d97bffa20a62
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f3417ed53131a695623ea6c365314ab2c5eedd37
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566170"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54629296"
 ---
 # <a name="service-contexts-available-to-type-converters-and-markup-extensions"></a>Contesti di servizio disponibili per convertitori di tipi ed estensioni di markup
 Gli autori dei tipi che supportano gli utilizzi di convertitori di tipi e estensioni di markup devono spesso disporre di informazioni contestuali sulla posizione di utilizzo nel markup o nella struttura dell'oggetto grafico circostante. Le informazioni potrebbero essere necessarie per garantire che venga creata correttamente un'istanza dell'oggetto fornito o che vengano definiti i riferimenti dell'oggetto agli oggetti esistenti nell'oggetto grafico. In caso di utilizzo dei servizi XAML di .NET Framework, il contesto eventualmente necessario viene esposto come serie di interfacce del servizio. Nel codice di supporto del convertitore di tipi o dell'estensione di markup può essere eseguita una query per un servizio usando il contesto di un provider di servizi disponibile e passato da <xref:System.Xaml.XamlObjectWriter> o da tipi correlati. Il contesto dello schema XAML è disponibile direttamente attraverso uno di questi servizi. In questo argomento viene illustrato come accedere ai contesti di servizio da un'implementazione del convertitore di valori e vengono elencati i servizi generalmente disponibili e i relativi ruoli.  
@@ -75,7 +75,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
 ### <a name="iserviceprovider"></a>IServiceProvider  
  **Documentazione di riferimento**: <xref:System.IServiceProvider>  
   
- **Relativo a:** funzionamento di base di un'infrastruttura basata su servizi in .NET Framework in modo che sia possibile chiamare <xref:System.IServiceProvider.GetService%2A?displayProperty=nameWithType>.  
+ **Relativo a:** Operazioni di base di un'infrastruttura basata su servizi in .NET Framework in modo che sia possibile chiamare <xref:System.IServiceProvider.GetService%2A?displayProperty=nameWithType>.  
   
 ### <a name="itypedescriptorcontext"></a>ITypeDescriptorContext  
  **Documentazione di riferimento**: <xref:System.ComponentModel.ITypeDescriptorContext>  
@@ -92,18 +92,18 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **Definito da:** <xref:System.Windows.Markup> dello spazio dei nomi, assembly System. Xaml    
   
- **Relativo a:** scenari del percorso di caricamento e interazione con il contesto dello schema XAML  
+ **Relativo a:** Scenari del percorso di caricamento e interazione con il contesto dello schema XAML  
   
  **API del servizio:**  <xref:System.Windows.Markup.IXamlTypeResolver.Resolve%2A>  
   
- Può influire sul mapping dei tipi da XAML a CLR che si rende necessario quando il writer XAML costruisce un oggetto CLR in un oggetto grafico. <xref:System.Windows.Markup.IXamlTypeResolver.Resolve%2A> elabora una stringa di prefisso potenzialmente qualificata che corrisponde al nome di un tipo XAML (<xref:System.Xaml.XamlType.Name%2A?displayProperty=nameWithType>) e restituisce un oggetto <xref:System.Type> CLR. La risoluzione dei tipi in genere dipende in misura rilevante dal contesto dello schema XAML. Determinati aspetti, ad esempio quali assembly vengono caricati e a quali di questi è possibile o necessario accedere per la risoluzione di tipi, vengono considerati esclusivamente dal contesto dello schema XAML.  
+ Può influire sul mapping dei tipi da XAML a CLR che si rende necessario quando il writer XAML costruisce un oggetto CLR in un oggetto grafico. <xref:System.Windows.Markup.IXamlTypeResolver.Resolve%2A> elabora una stringa di prefisso potenzialmente qualificata che corrisponde al nome di un tipo XAML (<xref:System.Xaml.XamlType.Name%2A?displayProperty=nameWithType>) e restituisce un oggetto <xref:System.Type>CLR. La risoluzione dei tipi in genere dipende in misura rilevante dal contesto dello schema XAML. Determinati aspetti, ad esempio quali assembly vengono caricati e a quali di questi è possibile o necessario accedere per la risoluzione di tipi, vengono considerati esclusivamente dal contesto dello schema XAML.  
   
 ### <a name="iuricontext"></a>IUriContext  
  **Documentazione di riferimento**: <xref:System.Windows.Markup.IUriContext>  
   
  **Definito da:** <xref:System.Windows.Markup> dello spazio dei nomi, assembly System. Xaml    
   
- **Relativo a:** gestione del percorso di caricamento e del percorso di salvataggio di valori di membro che sono valori di URI o `x:Uri` .  
+ **Relativo a:** Percorso di caricamento e salvare la gestione di percorso dei valori del membro che sono URI o `x:Uri` valori.  
   
  **API del servizio:**  <xref:System.Windows.Markup.IUriContext.BaseUri%2A>  
   
@@ -114,7 +114,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **Definito da:** <xref:System.Xaml> dello spazio dei nomi, assembly System. Xaml    
   
- **Relativo a:** gestione del percorso di caricamento e rinvii o ottimizzazioni della ricerca di tipi.  
+ **Relativo a:** Caricare il percorso la gestione e ricerca rinvii o ottimizzazioni.  
   
  **API dei servizi:**  <xref:System.Xaml.IAmbientProvider.GetAllAmbientValues%2A>, altri 3.  
   
@@ -125,7 +125,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **Definito da:** <xref:System.Xaml> dello spazio dei nomi, assembly System. Xaml    
   
- **Relativo a:** percorso di caricamento e qualsiasi operazione che deve risolvere un tipo XAML in un tipo di supporto.  
+ **Relativo a:** Percorso di caricamento e qualsiasi operazione che deve risolvere un tipo XAML in un tipo di supporto.  
   
  **API del servizio:**  <xref:System.Xaml.IXamlSchemaContextProvider.SchemaContext%2A>  
   
@@ -136,7 +136,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **Definito da:** <xref:System.Xaml> dello spazio dei nomi, assembly System. Xaml    
   
- **Relativo a:** percorso di caricamento.  
+ **Relativo a:** Percorso di caricamento.  
   
  **API del servizio:**  <xref:System.Xaml.IRootObjectProvider.RootObject%2A>  
   
@@ -147,7 +147,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **Definito da:** <xref:System.Xaml> dello spazio dei nomi, assembly System. Xaml    
   
- **Relativo a:** percorso di caricamento, percorso di salvataggio.  
+ **Relativo a:** Percorso di caricamento, percorso di salvataggio.  
   
  **API del servizio:** <xref:System.Xaml.IXamlNamespaceResolver.GetNamespace%2A> per il percorso di caricamento, <xref:System.Xaml.IXamlNamespaceResolver.GetNamespacePrefixes%2A> per il percorso di salvataggio.  
   
@@ -158,7 +158,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **Definito da:** <xref:System.Windows.Markup> dello spazio dei nomi, assembly System. Xaml    
   
- **Relativo a:** percorso di caricamento e percorso di salvataggio.  
+ **Relativo a:** Percorso di caricamento e percorso di salvataggio.  
   
  **API del servizio:**  <xref:System.Windows.Markup.IProvideValueTarget.TargetObject%2A>, <xref:System.Windows.Markup.IProvideValueTarget.TargetProperty%2A>.  
   
@@ -169,7 +169,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **Definito da:** <xref:System.Xaml> dello spazio dei nomi, assembly System. Xaml    
   
- **Relativo a:** definizione di un oggetto grafico del percorso di caricamento, risoluzione di oggetti identificati da `x:Name`, `x:Reference`o tecniche specifiche del framework.  
+ **Relativo a:** Caricare la definizione di percorso oggetto grafico, la risoluzione di oggetti identificati da `x:Name`, `x:Reference`, o tecniche specifiche del framework.  
   
  **API dei servizi:**  <xref:System.Xaml.IXamlNameResolver.Resolve%2A>. Altre API per scenari più avanzati, ad esempio, la gestione dei riferimenti in avanti.  
   
@@ -180,14 +180,14 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **Definito da:** <xref:System.Xaml> dello spazio dei nomi, assembly System. Xaml    
   
- **Relativo a:** risoluzione del percorso di caricamento di informazioni sul tipo CLR indiretto.  
+ **Relativo a:** Caricare la risoluzione del percorso di informazioni sul tipo CLR indiretti.  
   
  **API del servizio:** <xref:System.Xaml.IDestinationTypeProvider.GetDestinationType%2A>  
   
  Per altre informazioni, vedere <xref:System.Xaml.IDestinationTypeProvider>.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Windows.Markup.MarkupExtension>  
- <xref:System.Xaml.XamlObjectWriter>  
- [Panoramica delle estensioni di markup per XAML](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md)  
- [Panoramica dei convertitori di tipi per XAML](../../../docs/framework/xaml-services/type-converters-for-xaml-overview.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Windows.Markup.MarkupExtension>
+- <xref:System.Xaml.XamlObjectWriter>
+- [Panoramica delle estensioni di markup per XAML](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md)
+- [Panoramica dei convertitori di tipi per XAML](../../../docs/framework/xaml-services/type-converters-for-xaml-overview.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [WPF], rendering
 - rendering graphics [WPF]
 ms.assetid: 6dec9657-4d8c-4e46-8c54-40fb80008265
-ms.openlocfilehash: cbbaba8cbdaf6dfd7b7c18447d425298b4911e94
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 6323d27158855e5ded1698401835b35632bedebe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44260129"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603837"
 ---
 # <a name="wpf-graphics-rendering-overview"></a>Cenni preliminari sul rendering della grafica WPF
 Questo argomento offre una panoramica del livello visivo di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Ed è incentrato sul ruolo del <xref:System.Windows.Media.Visual> classe per il rendering di supporto nel [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] modello.  
@@ -25,15 +25,15 @@ Questo argomento offre una panoramica del livello visivo di [!INCLUDE[TLA2#tla_w
   
  Il <xref:System.Windows.Media.Visual> oggetto è dei principali [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] oggetto, il cui ruolo principale consiste nel fornire supporto per il rendering. Controlli dell'interfaccia utente, ad esempio <xref:System.Windows.Controls.Button> e <xref:System.Windows.Controls.TextBox>, derivano dal <xref:System.Windows.Media.Visual> e come utilizzarla per rendere persistenti i dati di rendering. Il <xref:System.Windows.Media.Visual> oggetto fornisce il supporto per:  
   
--   Visualizzazione dell'output: eseguire il rendering del contenuto del disegno serializzato e salvato in modo permanente di un oggetto visivo.  
+-   Visualizzazione di output: Rendering per la classe resa persistente, serializzato il contenuto del disegno di un oggetto visivo.  
   
--   Trasformazioni: eseguire trasformazioni su un oggetto visivo.  
+-   Trasformazioni: Esecuzione di trasformazioni su un oggetto visivo.  
   
--   Ritaglio: offrire supporto dell'area di ritaglio per un oggetto visivo.  
+-   Ritaglio: Fornire supporto di area di ritaglio per un oggetto visivo.  
   
--   Hit testing: determinare se una coordinata o una geometria è contenuta all'interno di un oggetto visivo.  
+-   L'hit testing: Determinare se una coordinata o una geometria è contenuta all'interno di un oggetto visivo.  
   
--   Calcoli relativi al rettangolo di selezione: determinare il rettangolo delimitatore di un oggetto visivo.  
+-   Calcoli relativi al riquadro: Determinare il rettangolo di delimitazione di un oggetto visivo.  
   
  Tuttavia, il <xref:System.Windows.Media.Visual> oggetto non includono il supporto per le funzionalità non relative al rendering, ad esempio:  
   
@@ -159,7 +159,7 @@ Diagramma della gerarchia di una struttura ad albero visuale
 Diagramma dell'ordine di rendering della struttura ad albero visuale  
   
 ### <a name="root-visual"></a>Oggetto visivo radice  
- L'**oggetto visivo radice** è l'elemento di primo livello di una gerarchia struttura ad albero visuale. Nella maggior parte delle applicazioni, la classe di base dell'oggetto visivo radice sia <xref:System.Windows.Window> o <xref:System.Windows.Navigation.NavigationWindow>. Se venissero tuttavia ospitati oggetti visivi in un'applicazione Win32, l'oggetto visivo radice sarebbe l'oggetto visivo di primo livello ospitato nella finestra Win32. Per altre informazioni, vedere [Esercitazione: hosting di oggetti visivi in un'applicazione Win32](../../../../docs/framework/wpf/graphics-multimedia/tutorial-hosting-visual-objects-in-a-win32-application.md).  
+ L'**oggetto visivo radice** è l'elemento di primo livello di una gerarchia struttura ad albero visuale. Nella maggior parte delle applicazioni, la classe di base dell'oggetto visivo radice sia <xref:System.Windows.Window> o <xref:System.Windows.Navigation.NavigationWindow>. Se venissero tuttavia ospitati oggetti visivi in un'applicazione Win32, l'oggetto visivo radice sarebbe l'oggetto visivo di primo livello ospitato nella finestra Win32. Per altre informazioni, vedere [Esercitazione: Hosting di oggetti visivi in un'applicazione Win32](../../../../docs/framework/wpf/graphics-multimedia/tutorial-hosting-visual-objects-in-a-win32-application.md).  
   
 ### <a name="relationship-to-the-logical-tree"></a>Relazione con l'albero logico  
  L'albero logico in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] rappresenta gli elementi di un'applicazione in fase di esecuzione. Sebbene questo albero non venga modificato direttamente, la visualizzazione dell'applicazione è utile per comprendere l'ereditarietà delle proprietà e il routing degli eventi. A differenza di struttura ad albero visuale, l'albero logico può rappresentare oggetti dati non visivi, ad esempio <xref:System.Windows.Documents.ListItem>. In molti casi, l'albero logico corrisponde strettamente alle definizioni di markup dell'applicazione. Il codice seguente illustra un <xref:System.Windows.Controls.DockPanel> elemento definito nel markup.  
@@ -257,12 +257,12 @@ Grafica e testo con impostazioni DPI diverse
  [!code-csharp[VisualsOverview#102](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualsOverview/CSharp/Window1.xaml.cs#102)]
  [!code-vb[VisualsOverview#102](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsOverview/visualbasic/window1.xaml.vb#102)]  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Windows.Media.Visual>  
- <xref:System.Windows.Media.VisualTreeHelper>  
- <xref:System.Windows.Media.DrawingVisual>  
- [Grafica bidimensionale e creazione di immagini](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [Hit testing a livello visivo](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)  
- [Uso degli oggetti DrawingVisual](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md)  
- [Esercitazione: hosting di oggetti visivi in un'applicazione Win32](../../../../docs/framework/wpf/graphics-multimedia/tutorial-hosting-visual-objects-in-a-win32-application.md)  
- [Ottimizzazione delle prestazioni di applicazioni WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Windows.Media.Visual>
+- <xref:System.Windows.Media.VisualTreeHelper>
+- <xref:System.Windows.Media.DrawingVisual>
+- [Grafica bidimensionale e creazione di immagini](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [Hit testing a livello visivo](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)
+- [Uso degli oggetti DrawingVisual](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md)
+- [Esercitazione: Hosting di oggetti visivi in un'applicazione Win32](../../../../docs/framework/wpf/graphics-multimedia/tutorial-hosting-visual-objects-in-a-win32-application.md)
+- [Ottimizzazione delle prestazioni di applicazioni WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)

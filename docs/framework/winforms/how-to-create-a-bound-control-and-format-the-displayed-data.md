@@ -1,19 +1,19 @@
 ---
-title: 'Procedura: creare un controllo con associazione e formattare i dati visualizzati'
+title: 'Procedura: Creare un controllo con associazione e formattare i dati visualizzati'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data [Windows Forms], formatting
 - bound controls [Windows Forms], creating
 - bound controls [Windows Forms], formatting data
 ms.assetid: d5a56228-899d-41d9-8af8-87b3f4ec2f94
-ms.openlocfilehash: 8f4d3c4c738e31ab83d506dc7afb4e49b142765b
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 2e9dabe12e3f4eda590cec26a70c6becb0e2b7a3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45614998"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54689731"
 ---
-# <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>Procedura: creare un controllo con associazione e formattare i dati visualizzati
+# <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>Procedura: Creare un controllo con associazione e formattare i dati visualizzati
 Con data binding in Windows Form, è possibile formattare i dati visualizzati in un controllo con associazione a dati mediante la **formattazione e associazione avanzata** nella finestra di dialogo.  
   
 > [!NOTE]
@@ -50,11 +50,11 @@ Con data binding in Windows Form, è possibile formattare i dati visualizzati in
     |Valuta|Specificare il numero di posizioni decimali utilizzando **decimali** controllo di scorrimento.|  
     |Data/Ora|Selezionare la data e ora da visualizzare selezionando uno degli elementi nel **tipo** casella di selezione.|  
     |Scientifico|Specificare il numero di posizioni decimali utilizzando **decimali** controllo di scorrimento.|  
-    |Personalizzato|Specificare una stringa di formato personalizzata.<br /><br /> Per altre informazioni, vedere [Formattazione di tipi](../../../docs/standard/base-types/formatting-types.md). **Nota:** stringhe di formato personalizzato non è garantite correttamente il round trip tra l'origine dati e il controllo associato. Gestire invece l'evento <xref:System.Windows.Forms.Binding.Parse> o <xref:System.Windows.Forms.Binding.Format> per il binding e applicare la formattazione personalizzata nel codice di gestione degli eventi.|  
+    |Personalizzato|Specificare una stringa di formato personalizzata.<br /><br /> Per altre informazioni, vedere [Formattazione di tipi](../../../docs/standard/base-types/formatting-types.md). **Nota:**  Le stringhe di formato personalizzate non eseguono sempre correttamente il round trip tra l'origine dati e il controllo associato. Gestire invece l'evento <xref:System.Windows.Forms.Binding.Parse> o <xref:System.Windows.Forms.Binding.Format> per l'associazione e applicare la formattazione personalizzata nel codice di gestione degli eventi.|  
   
 8.  Fare clic su **OK** per chiudere la **formattazione e associazione avanzata** nella finestra di dialogo e tornare alla finestra Proprietà.  
   
-## <a name="see-also"></a>Vedere anche  
- [Procedura: Creare un controllo con associazione semplice in un Windows Form](../../../docs/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form.md)  
- [Convalida dell'input utente in Windows Form](../../../docs/framework/winforms/user-input-validation-in-windows-forms.md)  
- [Data binding in Windows Form](../../../docs/framework/winforms/windows-forms-data-binding.md)
+## <a name="see-also"></a>Vedere anche
+- [Procedura: Creare un controllo con associazione semplice in un Windows Form](../../../docs/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form.md)
+- [Convalida dell'input utente in Windows Form](../../../docs/framework/winforms/user-input-validation-in-windows-forms.md)
+- [Data binding in Windows Form](../../../docs/framework/winforms/windows-forms-data-binding.md)

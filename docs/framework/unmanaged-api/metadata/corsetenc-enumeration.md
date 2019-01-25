@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3e09bf424a41445f7e36397775d1578cdf4e7e75
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bf1be8d5c709f3d6e5991e4d33dde2e923291a95
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442787"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569414"
 ---
 # <a name="corsetenc-enumeration"></a>Enumerazione CorSetENC
 Contiene valori usati per influenzare il comportamento durante la generazione di metadati.  
@@ -50,19 +50,19 @@ typedef enum CorSetENC {
 |------------|-----------------|  
 |`MDSetENCOn`|Obsoleta.|  
 |`MDSetENCOff`|Obsoleta.|  
-|`MDUpdateENC`|Indica che, mentre è possibile aggiornare i metadati, token non può essere spostati.|  
+|`MDUpdateENC`|Indica che, mentre i metadati possono essere aggiornati, i token non è possibile spostare.|  
 |`MDUpdateFull`|Indica che i token possono essere spostati durante gli aggiornamenti.|  
-|`MDUpdateExtension`|Indica che gli aggiornamenti possono essere costituiti solo da aggiunte. Token non possono essere spostati.|  
+|`MDUpdateExtension`|Indica che gli aggiornamenti possono essere costituito solo da aggiunte. Token non possono essere spostati.|  
 |`MDUpdateIncremental`|Indica che la compilazione incrementale.|  
-|`MDUpdateDelta`|Indica che solo i metadati modificati devono essere salvato.|  
+|`MDUpdateDelta`|Indica che solo i metadati modificati devono essere salvati.|  
 |`MDUpdateMask`|Include `MDUpdateENC`, `MDUpdateFull` e `MDUpdateIncremental`.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorHdr. H  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Enumerazioni dei metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Vedere anche
+- [Enumerazioni dei metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: unire contenuto da file dissimili (LINQ) (Visual Basic)'
+title: 'Procedura: Unire contenuto da file non analoghi (LINQ) (Visual Basic)'
 ms.date: 06/27/2018
 ms.assetid: e7530857-c467-41ea-9730-84e6b1065a4d
-ms.openlocfilehash: d82e43449651ead5f39ec9c9442d3087b34d10ef
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: a3dbfc6593d838af0285d8dab73ceecf1b0340f0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37072046"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655465"
 ---
-# <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a>Procedura: unire contenuto da file dissimili (LINQ) (Visual Basic)
+# <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a>Procedura: Unire contenuto da file non analoghi (LINQ) (Visual Basic)
 
 In questo esempio viene illustrato come eseguire un join di dati da due file con valori delimitati da virgole che condividono un valore comune usato come una chiave corrispondente. Questa tecnica può essere utile se è necessario combinare dati provenienti da due fogli di calcolo, o da un foglio di calcolo e da un file con un altro formato, in un nuovo file. È possibile modificare l'esempio in modo che funzioni con qualsiasi tipo di testo strutturato.  
   
@@ -125,11 +125,11 @@ End Class
 
 Creare e compilare un progetto destinato a una delle opzioni seguenti:
 
-- .NET framework versione 3.5 con un riferimento a DLL.
-- .NET framework versione 4.0 o versione successiva.
-- Versione di .NET core 1.0 o versione successiva.
+- .NET Framework versione 3.5 con un riferimento a System.Core.dll.
+- .NET Framework versione 4.0 o successiva.
+- .NET Core versione 1.0 o successiva.
   
 ## <a name="see-also"></a>Vedere anche
 
- [LINQ e stringhe (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
- [LINQ and File Directories (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md) (LINQ e directory file (Visual Basic))
+- [LINQ e stringhe (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ and File Directories (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md) (LINQ e directory file (Visual Basic))

@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: usare Svcutil.exe per esportare metadati dal codice del servizio compilato'
+title: 'Procedura: Usare Svcutil.exe per esportare metadati dal codice del servizio compilato'
 ms.date: 03/30/2017
 ms.assetid: 95d0aed3-16a2-4398-89bb-39418eeb7355
-ms.openlocfilehash: 68d651a396aa748d53f9121e9861260bdbf2dffa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6af43b076f7c508fd17cac367caeed30065b0c4c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33492749"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54648101"
 ---
-# <a name="how-to-use-svcutilexe-to-export-metadata-from-compiled-service-code"></a>Procedura: usare Svcutil.exe per esportare metadati dal codice del servizio compilato
+# <a name="how-to-use-svcutilexe-to-export-metadata-from-compiled-service-code"></a>Procedura: Usare Svcutil.exe per esportare metadati dal codice del servizio compilato
 Svcutil.exe è in grado di esportare metadati per servizi, contratti e tipi di dati in assembly compilati, come segue:  
   
 -   Per esportare metadati per tutti i contratti di servizio compilati per un set di assembly utilizzando Svcutil.exe, specificare gli assembly come parametri di input. Comportamento predefinito.  
@@ -19,7 +19,7 @@ Svcutil.exe è in grado di esportare metadati per servizi, contratti e tipi di d
 -   Per esportare tutti i tipi di contratto dati all'interno di un set di assembly, utilizzare l'opzione `/dataContractOnly`.  
   
 > [!NOTE]
->  Utilizzare l'opzione `/reference` per specificare il percorso dei file degli eventuali assembly dipendenti.  
+>  Usare l'opzione `/reference` per specificare il percorso dei file degli eventuali assembly dipendenti.  
   
 ### <a name="to-export-metadata-for-compiled-service-contracts"></a>Per esportare metadati per contratti di servizio compilati  
   
@@ -28,7 +28,7 @@ Svcutil.exe è in grado di esportare metadati per servizi, contratti e tipi di d
 2.  Eseguire Svcutil.exe sugli assembly compilati.  
   
     > [!NOTE]
-    >  Potrebbe essere necessario utilizzare l'opzione `/reference` per specificare il percorso del file di eventuali assembly dipendenti.  
+    >  Potrebbe essere necessario usare l'opzione `/reference` per specificare il percorso del file di eventuali assembly dipendenti.  
   
     ```  
     svcutil.exe Contracts.dll  
@@ -56,7 +56,7 @@ Svcutil.exe è in grado di esportare metadati per servizi, contratti e tipi di d
 3.  Eseguire Svcutil.exe sull'eseguibile del servizio compilato utilizzando l'opzione `/serviceName` per specificare il nome di configurazione del servizio.  
   
     > [!NOTE]
-    >  Potrebbe essere necessario utilizzare l'opzione `/reference` per specificare il percorso del file di eventuali assembly dipendenti.  
+    >  Potrebbe essere necessario usare l'opzione `/reference` per specificare il percorso del file di eventuali assembly dipendenti.  
   
     ```  
     svcutil.exe /serviceName:MyService Service.exe /reference:path/Contracts.dll  
@@ -69,7 +69,7 @@ Svcutil.exe è in grado di esportare metadati per servizi, contratti e tipi di d
 2.  Eseguire Svcutil.exe sugli assembly compilati utilizzando l'opzione `/dataContract` per specificare che devono essere generati solo i metadati dei contratti dati.  
   
     > [!NOTE]
-    >  Potrebbe essere necessario utilizzare l'opzione `/reference` per specificare il percorso del file di eventuali assembly dipendenti.  
+    >  Potrebbe essere necessario usare l'opzione `/reference` per specificare il percorso del file di eventuali assembly dipendenti.  
   
     ```  
     svcutil.exe /dataContractOnly Contracts.dll  
@@ -162,6 +162,6 @@ public class MyService : IPersonFinder
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
- [Esportazione e importazione di metadati](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)
+## <a name="see-also"></a>Vedere anche
+- [Strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+- [Esportazione e importazione di metadati](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 42dc78ff3c58b67801cd99512781d8c8509dd272
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ab479aab56b429c104a44b1fae192bc7f20a389d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447340"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54656921"
 ---
 # <a name="imetadataemitseteventprops-method"></a>Metodo IMetaDataEmit::SetEventProps
-Imposta o aggiorna la funzionalità specificata di un evento definito tramite una chiamata precedente a [IMetaDataEmit:: DefineEvent](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md).  
+Imposta o aggiorna la funzionalità specificata di un evento definito da una chiamata precedente a [DefineEvent](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -46,10 +46,10 @@ HRESULT SetEventProps (
  [in] Il token di evento.  
   
  `dwEventFlags`  
- [in] Flag di evento. Si tratta di una maschera di bit di `CorEventAttr` valori.  
+ [in] Flag dell'evento. Si tratta di una maschera di bit delle `CorEventAttr` valori.  
   
  `tkEventType`  
- [in] Il token per la classe di evento. Questo è un `mdTypeDef` o `mdTypeRef` token.  
+ [in] Il token per la classe di evento. Questo è un `mdTypeDef` o un `mdTypeRef` token.  
   
  `mdAddOn`  
  [in] Il metodo utilizzato per sottoscrivere l'evento, o null.  
@@ -61,17 +61,17 @@ HRESULT SetEventProps (
  [in] Il metodo utilizzato (da una classe derivata) per generare l'evento.  
   
  `rmdOtherMethods[]`  
- [in] Matrice di token per gli altri metodi associati all'evento. L'ultimo elemento della matrice deve essere `mdMethodDefNil`.  
+ [in] Matrice dei token per gli altri metodi associati all'evento. L'ultimo elemento della matrice deve essere `mdMethodDefNil`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
- **Libreria:** usata come risorsa in Mscoree. dll  
+ **Libreria:** Usato come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [Interfaccia IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [Interfaccia IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

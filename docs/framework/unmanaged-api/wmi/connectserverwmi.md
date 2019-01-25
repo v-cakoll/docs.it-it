@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fa4b789641034b6563b15c52e96cbfdfa13d989a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b8968ab7c3b6fee1e29a7389020c26232e34c1e2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197388"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54567009"
 ---
 # <a name="connectserverwmi-function"></a>ConnectServerWmi (funzione)
 Crea una connessione tramite DCOM a uno spazio dei nomi WMI in un computer specifico.  
@@ -56,14 +56,14 @@ HRESULT ConnectServerWmi (
  
 `lSecurityFlags` [in] Flag da passare per il `ConnectServerWmi` (metodo). Un valore pari a zero (0) per questo parametro determina la chiamata a `ConnectServerWmi` restituendo solo dopo aver stabilita una connessione al server. Ciò può comportare un'applicazione non risponde all'infinito se il server è interrotto. Gli altri valori validi sono:
 
-| Costante  | Valore  | Descrizione  |
+| Costante  | Value  | Descrizione  |
 |---------|---------|---------|
 | `CONNECT_REPOSITORY_ONLY` | 0x40 | Riservato per uso interno. Non usare. |
 | `WBEM_FLAG_CONNECT_USE_MAX_WAIT` | 0x80 | `ConnectServerWmi` Restituisce due minuti o meno. |
 
 `strAuthority` [in] Il nome di dominio dell'utente. Se son presenti i seguenti valori:
 
-| Valore | Descrizione |
+| Value | Descrizione |
 |---------|---------|
 | blank | Viene utilizzata l'autenticazione NTLM e viene utilizzato il dominio NTLM dell'utente corrente. Se `strUser` specifica il dominio (la posizione consigliata), non deve essere specificato qui. La funzione restituisce `WBEM_E_INVALID_PARAMETER` se si specifica il dominio in entrambi i parametri. |
 | Kerberos:*nome dell'entità* | Viene utilizzata l'autenticazione Kerberos, e questo parametro contiene un nome dell'entità Kerberos. |
@@ -102,11 +102,11 @@ Questa funzione esegue il wrapping di una chiamata per il [IWbemLocator::Connect
 
 
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** WMINet_Utils.idl  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Vedere anche  
-[WMI e contatori delle prestazioni (riferimenti alle API non gestite)](index.md)
+## <a name="see-also"></a>Vedere anche
+- [WMI e contatori delle prestazioni (riferimenti alle API non gestite)](index.md)

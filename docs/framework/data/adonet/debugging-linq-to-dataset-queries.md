@@ -2,12 +2,12 @@
 title: Debug di query di LINQ to DataSet
 ms.date: 03/30/2017
 ms.assetid: f4c54015-8ce2-4c5c-8d18-7038144cc66d
-ms.openlocfilehash: c1014db4cad54420b917585becd2a2031638c1d9
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 6c7b8c6cec39adfd5b7456d94cfae5622649e5a3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123605"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54680507"
 ---
 # <a name="debugging-linq-to-dataset-queries"></a>Debug di query di LINQ to DataSet
 
@@ -27,6 +27,6 @@ Visual Studio supporta il debug di [!INCLUDE[linq_dataset](../../../../includes/
   
  In Visual Basic in Visual Studio, è possibile usare modifica e continuazione su non -[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] codice, anche in metodi contenente una [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] query. È possibile aggiungere o rimuovere codice prima la [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] anche se le modifiche influiscono sul numero di riga dell'istruzione il [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] query. L'esecuzione del debug di Visual Basic non -[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] codice rimane invariato rispetto a prima [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] è stata introdotta. È possibile modificare, aggiungere o rimuovere un [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] esegue una query, tuttavia, a meno che non si arresta il debug per applicare le modifiche.  
   
-## <a name="see-also"></a>Vedere anche  
- [Debug di codice gestito](/visualstudio/debugger/debugging-managed-code)  
- [Guida per programmatori](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)
+## <a name="see-also"></a>Vedere anche
+- [Debug di codice gestito](/visualstudio/debugger/debugging-managed-code)
+- [Guida per programmatori](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)

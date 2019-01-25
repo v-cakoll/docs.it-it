@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: salvare fusi orari in una risorsa incorporata'
+title: 'Procedura: Salvare fusi orari in una risorsa incorporata'
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 3c96d83a-a057-4496-abb0-8f4b12712558
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 921874e774d18751c29db495dac1bc53d10cc8ad
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: c67a97193d186275e6a788f6b18bbc17c535f367
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45653347"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592874"
 ---
-# <a name="how-to-save-time-zones-to-an-embedded-resource"></a>Procedura: salvare fusi orari in una risorsa incorporata
+# <a name="how-to-save-time-zones-to-an-embedded-resource"></a>Procedura: Salvare fusi orari in una risorsa incorporata
 
 Una fuso orario dell'applicazione spesso richiede la presenza di un determinato fuso orario. Tuttavia, poiché la disponibilità dei singoli <xref:System.TimeZoneInfo> oggetti dipende dalle informazioni archiviate nel Registro di sistema locale, anche fusi orari generalmente disponibili può essere assente. Inoltre, viene creata un'istanza di informazioni sui fusi orari personalizzati usando il <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> (metodo) non è archiviato con altre informazioni sul fuso orario nel Registro di sistema. Per garantire che i fusi orari disponibili quando sono necessari, è possibile salvarli serializzando li e ripristinarli in un secondo momento per la deserializzazione.
 
@@ -37,9 +37,9 @@ Oltre a un file di risorse che viene compilato con l'applicazione, diversi altri
 
 1. Recuperare un fuso orario esistente o creare un nuovo fuso orario.
 
-   Per recuperare un fuso orario esistente, vedere [procedura: accedere ora UTC e l'ora locale zona agli oggetti predefiniti del](../../../docs/standard/datetime/access-utc-and-local.md) e [procedura: creare un'istanza di un oggetto TimeZoneInfo](../../../docs/standard/datetime/instantiate-time-zone-info.md).
+   Per recuperare un fuso orario esistente, vedere [come: Accedere ora UTC e l'ora locale zona agli oggetti predefiniti](../../../docs/standard/datetime/access-utc-and-local.md) e [come: Creare un'istanza di un oggetto TimeZoneInfo](../../../docs/standard/datetime/instantiate-time-zone-info.md).
 
-   Per creare un nuovo fuso orario, chiamare uno degli overload del <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> (metodo). Per altre informazioni, vedere [procedura: creare fusi orari senza regole di regolazione](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md) e [procedura: creare fusi orari con regole di regolazione](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md).
+   Per creare un nuovo fuso orario, chiamare uno degli overload del <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> (metodo). Per altre informazioni, vedere [Procedura: Creare fusi orari senza regole di regolazione](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md) e [come: Creare fusi orari con regole di regolazione](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md).
 
 2. Chiamare il <xref:System.TimeZoneInfo.ToSerializedString%2A> metodo per creare una stringa che contiene i dati del fuso orario.
 
@@ -85,6 +85,6 @@ L'esempio presenta i requisiti seguenti:
 
 ## <a name="see-also"></a>Vedere anche
 
-* [Date, ore e fusi orari](../../../docs/standard/datetime/index.md)
-* [Panoramica sui fusi orari](../../../docs/standard/datetime/time-zone-overview.md)
-* [Procedura: Ripristinare i fusi orari da una risorsa incorporata](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md)
+- [Date, ore e fusi orari](../../../docs/standard/datetime/index.md)
+- [Panoramica sui fusi orari](../../../docs/standard/datetime/time-zone-overview.md)
+- [Procedura: Ripristinare i fusi orari da una risorsa incorporata](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md)

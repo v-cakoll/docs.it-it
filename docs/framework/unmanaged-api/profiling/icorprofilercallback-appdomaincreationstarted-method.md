@@ -17,14 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 141fd99ab0a96b20bfe06f1eb8612dd92b6cccc0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 98fac8630403107f96f2fa86e5bcc9b0e60d0d08
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54737163"
 ---
 # <a name="icorprofilercallbackappdomaincreationstarted-method"></a>Metodo ICorProfilerCallback::AppDomainCreationStarted
-Notifica al profiler la creazione di un dominio applicazione.  
+Notifica al profiler che un dominio dell'applicazione viene creato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,19 +36,19 @@ HRESULT AppDomainCreationStarted(
   
 #### <a name="parameters"></a>Parametri  
  `appDomainId`  
- [in] Identifica il dominio viene creato.  
+ [in] Identifica il dominio di cui viene creato.  
   
 ## <a name="remarks"></a>Note  
- L'ID non è valido per qualsiasi richiesta di informazioni fino a quando il [ICorProfilerCallback:: AppDomainCreationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomaincreationfinished-method.md) metodo viene chiamato.  
+ L'ID non è valida per qualsiasi richiesta di informazioni finché il [AppDomainCreationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomaincreationfinished-method.md) viene chiamato il metodo.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

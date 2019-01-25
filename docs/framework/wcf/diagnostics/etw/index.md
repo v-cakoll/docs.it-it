@@ -6,15 +6,15 @@ helpviewer_keywords:
 - administration [WCF], analytic tracing
 - analytic tracing [WCF]
 ms.assetid: 1d518e47-a38d-41e8-93d7-8c3b361f6a56
-ms.openlocfilehash: 210418b8a8765a1fc59658e9df57c92ce087c95f
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 4651c515a938ed8f8736597808156080cfb0bbed
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809264"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54609083"
 ---
 # <a name="analytic-tracing-with-etw"></a>Traccia analitica con ETW
-Traccia analitica di Windows Communication Foundation (WCF) offre un modo per acquisire informazioni diagnostiche durante l'esecuzione di un servizio WCF. Gli eventi di traccia analitica WCF vengono generati in punti chiave nello stack di WCF per consentire la risoluzione dei problemi dei servizi WCF in un ambiente di produzione. Traccia analitica per i servizi WCF ha un impatto minimo sulle prestazioni di un server di prodotto che ospita [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] servizi WCF, poiché questi eventi vengono generati in modo molto efficiente in una sessione di traccia eventi per Windows (ETW).  
+Traccia analitica di Windows Communication Foundation (WCF) offre un modo per acquisire informazioni diagnostiche durante l'esecuzione di un servizio WCF. Gli eventi di traccia analitica WCF vengono generati in punti chiave nello stack di WCF per consentire la risoluzione dei problemi dei servizi WCF in un ambiente di produzione. Traccia analitica per i servizi WCF con un impatto minimo sulle prestazioni di un server di prodotto che includono [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] dei servizi WCF come questi eventi vengono generati in modo molto efficiente a una sessione Event Tracing for Windows (ETW).  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Panoramica della traccia analitica](../../../../../docs/framework/wcf/diagnostics/etw/analytic-tracing-overview.md)  
@@ -29,6 +29,6 @@ Traccia analitica di Windows Communication Foundation (WCF) offre un modo per ac
  [Riferimento dell'evento di traccia analitica](../../../../../docs/framework/wcf/diagnostics/etw/analytic-trace-event-reference.md)  
  Mostra una tabella di ID evento con i relativi livelli, parole chiave e messaggi dell'evento.  
   
-## <a name="see-also"></a>Vedere anche  
- [WCF Services e Event Tracing for Windows](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md)  
- [Eventi di rilevamento in Traccia eventi per Windows](../../../../../docs/framework/windows-workflow-foundation/samples/tracking-events-into-event-tracing-in-windows.md)
+## <a name="see-also"></a>Vedere anche
+- [WCF Services e Event Tracing for Windows](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md)
+- [Eventi di rilevamento in Traccia eventi per Windows](../../../../../docs/framework/windows-workflow-foundation/samples/tracking-events-into-event-tracing-in-windows.md)

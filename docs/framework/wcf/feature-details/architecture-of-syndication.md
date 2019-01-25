@@ -2,12 +2,12 @@
 title: Architettura di diffusione
 ms.date: 03/30/2017
 ms.assetid: ed4ca86e-e3d8-4acb-87aa-1921fbc353be
-ms.openlocfilehash: f0a6b288860c343157f31f74d5a461fad1784e0a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b07fc03fd11c794d804b6bcd1813010965365e43
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33492816"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623443"
 ---
 # <a name="architecture-of-syndication"></a>Architettura di diffusione
 L'API di diffusione è progettata per fornire un modello di programmazione indipendente dal formato, che consente di scrivere in rete contenuto diffuso in molteplici formati. Il modello di dati astratto è costituito dalle classi seguenti:  
@@ -30,7 +30,7 @@ L'API di diffusione è progettata per fornire un modello di programmazione indip
   
  [!code-csharp[S_UE_SyndicationBoth#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_syndicationboth/cs/service.cs#0)]  
   
- Supporto della diffusione viene compilato il resto modello di programmazione WCF che definisce il <xref:System.ServiceModel.WebHttpBinding> binding, che viene utilizzato in combinazione con <xref:System.ServiceModel.Description.WebHttpBehavior> per rendere i feed disponibile come servizi. Per ulteriori informazioni sul modello di programmazione REST WCF, vedere [Panoramica del modello di programmazione a WCF Web HTTP](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md).  
+ Supporto della diffusione è basato su REST modello di programmazione WCF che definisce il <xref:System.ServiceModel.WebHttpBinding> associazione, che viene usato in combinazione con <xref:System.ServiceModel.Description.WebHttpBehavior> per rendere disponibili feed come servizi. Per altre informazioni sul modello di programmazione REST WCF, vedere [HTTP Web WCF Programming Model Overview](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md).  
   
 > [!NOTE]
 >  La specifica Atom 1.0 consente di specificare secondi frazionari in uno qualsiasi dei costrutti data. Durante la serializzazione e deserializzazione l'implementazione WCF ignora i secondi frazionari.  
@@ -75,9 +75,9 @@ L'API di diffusione è progettata per fornire un modello di programmazione indip
   
 ## <a name="extensibility"></a>Estendibilità  
   
--   Una funzionalità chiave dei protocolli di diffusione è l'estensibilità. Sia Atom 1.0 che RSS 2.0 consentono di aggiungere ai feed di diffusione attributi ed elementi che non sono definiti nelle specifiche. Il modello di programmazione diffusione WCF fornisce due modalità di utilizzo con attributi ed estensioni personalizzati: derivazione di una nuova classe e l'accesso non fortemente tipizzato. Per altre informazioni, vedere [estendibilità della diffusione](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md).  
+-   Una funzionalità chiave dei protocolli di diffusione è l'estensibilità. Sia Atom 1.0 che RSS 2.0 consentono di aggiungere ai feed di diffusione attributi ed elementi che non sono definiti nelle specifiche. Il modello di programmazione di diffusione WCF fornisce due modalità di utilizzo di attributi ed estensioni personalizzati: derivazione di una nuova classe e l'accesso non fortemente tipizzato. Per altre informazioni, vedere [estendibilità della diffusione](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Panoramica della diffusione WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)  
- [Modalità di mapping del modello a oggetti di diffusione WCF ad Atom e RSS](../../../../docs/framework/wcf/feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md)  
- [Modello di programmazione HTTP Web di WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+## <a name="see-also"></a>Vedere anche
+- [Panoramica della diffusione WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)
+- [Modalità di mapping del modello a oggetti di diffusione WCF ad Atom e RSS](../../../../docs/framework/wcf/feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md)
+- [Modello di programmazione HTTP Web di WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

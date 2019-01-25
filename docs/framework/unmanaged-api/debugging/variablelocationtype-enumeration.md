@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1cc7a299e6be328095c0368acf0a4b767fb74d01
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: dd1a622faa095836a3d5c22c7a18084482074c2c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423949"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653216"
 ---
 # <a name="variablelocationtype-enumeration"></a>Enumerazione VariableLocationType
-Indica il tipo nativo di percorso di una variabile.  
+Indica il tipo di percorso nativo di una variabile.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,21 +41,21 @@ typedef enum VariableLocationType
   
 |Membro|Descrizione|  
 |------------|-----------------|  
-|`VLT_REGISTER`|La variabile è in un registro.|  
+|`VLT_REGISTER`|La variabile è in un registro di sistema.|  
 |`VLT_REGISTER_RELATIVE`|La variabile è in una posizione di memoria relativo al registro.|  
-|`VLT_INVALID`|La variabile non viene archiviata in un registro o di una posizione di memoria relativo al registro.|  
+|`VLT_INVALID`|La variabile non viene archiviata in un registro o una posizione di memoria relativo al registro.|  
   
 ## <a name="remarks"></a>Note  
- Un membro del `VariableLocationType` enumerazione restituito dal [ICorDebugVariableHome::GetLocationType](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getlocationtype-method.md) metodo.  
+ Un membro del `VariableLocationType` enumerazione viene restituita per la [ICorDebugVariableHome::GetLocationType](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getlocationtype-method.md) (metodo).  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Enumerazioni di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>Vedere anche
+- [Enumerazioni di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

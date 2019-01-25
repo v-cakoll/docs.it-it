@@ -16,16 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 30aad6fc62c8fee7448163ca69117b804203d505
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: defa18bde8e5ce0f1cc7ff040aaa4fa0e95fd7e1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54619218"
 ---
 # <a name="gethashfromhandle-function"></a>Funzione GetHashFromHandle
-Genera un hash per il contenuto del file con l'handle di file specificato, usando l'algoritmo hash specificato.  
+Genera un hash basato sul contenuto del file con l'handle di file specificato, usando l'algoritmo hash specificato.  
   
- Questa funzione è stata deprecata. Utilizzare il [:: GetHashFromHandle](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromhandle-method.md) metodo invece.  
+ Questa funzione è stata deprecata. Usare la [GetHashFromHandle](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromhandle-method.md) metodo invece.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,7 +45,7 @@ HRESULT GetHashFromHandle (
  [in] L'handle del file di cui eseguire l'hashing.  
   
  `piHashAlg`  
- [in, out] Costante che specifica l'algoritmo hash. Utilizzare zero per l'algoritmo predefinito.  
+ [in, out] Costante che specifica l'algoritmo hash. Usa lo zero per l'algoritmo predefinito.  
   
  `pbHash`  
  [out] Il buffer di hash restituito.  
@@ -53,17 +54,17 @@ HRESULT GetHashFromHandle (
  [in] La dimensione massima richiesta del `pbHash`.  
   
  `pchHash`  
- [out] Le dimensioni, in byte, dell'oggetto restituito `pbHash`.  
+ [out] Le dimensioni, in byte, del valore restituito `pbHash`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** StrongName. H  
+ **Intestazione:** StrongName.h  
   
- **Libreria:** inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Metodo GetHashFromHandle](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromhandle-method.md)  
- [Interfaccia ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Metodo GetHashFromHandle](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromhandle-method.md)
+- [Interfaccia ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hit testing functionality [WPF]
 - visual layer [WPF], hit testing functionality
 ms.assetid: b1a64b61-14be-4d75-b89a-5c67bebb2c7b
-ms.openlocfilehash: fe54578407e881ec7d6782ec21100b29eded07a3
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 27e5e8c939cf95b6406c810c25940cc04420b22c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45988582"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54692415"
 ---
 # <a name="hit-testing-in-the-visual-layer"></a>Hit testing a livello visivo
 In questo argomento vengono forniti dei cenni preliminari sulle funzionalità di hit testing fornite dal livello visivo. Supporto per l'hit testing consente di determinare se un valore di geometria o un punto compreso in contenuto di cui viene eseguito il rendering di un <xref:System.Windows.Media.Visual>, consentendo di implementare un comportamento dell'interfaccia utente, ad esempio un rettangolo di selezione per selezionare più oggetti.  
@@ -24,13 +24,13 @@ In questo argomento vengono forniti dei cenni preliminari sulle funzionalità di
 ## <a name="hit-testing-scenarios"></a>Scenari di hit Testing  
  Il <xref:System.Windows.UIElement> classe fornisce il <xref:System.Windows.UIElement.InputHitTest%2A> metodo, che consente di eseguire un hit test su un elemento usando un valore di coordinate specificato. In molti casi, il <xref:System.Windows.UIElement.InputHitTest%2A> metodo fornisce le funzionalità richieste per implementare l'hit testing di elementi. Esistono tuttavia diversi scenari nei quali potrebbe essere necessario implementare l'hit testing a livello visivo.  
   
--   Hit testing su non -<xref:System.Windows.UIElement> oggetti: applicabile se si esegue l'hit testing non -<xref:System.Windows.UIElement> oggetti, ad esempio <xref:System.Windows.Media.DrawingVisual> o oggetti grafici.  
+-   Hit testing su non -<xref:System.Windows.UIElement> oggetti: Ciò vale se si esegue l'hit testing non -<xref:System.Windows.UIElement> oggetti, ad esempio <xref:System.Windows.Media.DrawingVisual> o oggetti grafici.  
   
--   Hit testing tramite una geometria: applicabile se è necessario eseguire un hit test usando un oggetto geometry anziché il valore delle coordinate di un punto.  
+-   L'hit testing utilizzando una geometria: Ciò vale se è necessario eseguire un hit test usando un oggetto geometry anziché il valore della coordinata di un punto.  
   
--   Hit testing su più oggetti: applicabile quando è necessario eseguire un hit test su più oggetti, ad esempio oggetti sovrapposti. È possibile ottenere risultati per tutti gli elementi visivi che intersecano una geometria o un punto, non solo il primo.  
+-   Hit testing su più oggetti: Si applica quando è necessario eseguire un hit test su più oggetti, ad esempio oggetti sovrapposti. È possibile ottenere risultati per tutti gli elementi visivi che intersecano una geometria o un punto, non solo il primo.  
   
--   Ignorando <xref:System.Windows.UIElement> criteri di hit testing: applicabile quando è necessario ignorare il <xref:System.Windows.UIElement> hit testing di criterio che prende in considerazione fattori quali se un elemento disabilitazione o invisibilità.  
+-   Ignorando <xref:System.Windows.UIElement> hit test dei criteri: Si applica quando è necessario ignorare il <xref:System.Windows.UIElement> hit testing di criterio che prende in considerazione fattori quali se un elemento disabilitazione o invisibilità.  
   
 > [!NOTE]
 >  Per un esempio di codice completo che illustra l'hit testing a livello visivo, vedere [Hit Test Using DrawingVisuals Sample (Esempio di Hit Test mediante DrawingVisual)](https://go.microsoft.com/fwlink/?LinkID=159994) e [Hit Test with Win32 Interoperation Sample (Esempio di hit test con interoperatività Win32)](https://go.microsoft.com/fwlink/?LinkID=159995).  
@@ -138,13 +138,13 @@ Eliminazione di una struttura ad albero visuale
  [!code-csharp[HitTestingOverview#108](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#108)]
  [!code-vb[HitTestingOverview#108](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#108)]  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A>  
- <xref:System.Windows.Media.HitTestResult>  
- <xref:System.Windows.Media.HitTestResultCallback>  
- <xref:System.Windows.Media.HitTestFilterCallback>  
- <xref:System.Windows.UIElement.IsHitTestVisible%2A>  
- [Eseguire un hit Test Using DrawingVisuals Sample](https://go.microsoft.com/fwlink/?LinkID=159994)  
- [Eseguire un hit Test con interoperatività Win32](https://go.microsoft.com/fwlink/?LinkID=159995)  
- [Eseguire un hit test della geometria in un oggetto Visual](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-geometry-in-a-visual.md)  
- [Eseguire un hit test utilizzando un contenitore di host Win32](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-a-win32-host-container.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A>
+- <xref:System.Windows.Media.HitTestResult>
+- <xref:System.Windows.Media.HitTestResultCallback>
+- <xref:System.Windows.Media.HitTestFilterCallback>
+- <xref:System.Windows.UIElement.IsHitTestVisible%2A>
+- [Eseguire un hit Test Using DrawingVisuals Sample](https://go.microsoft.com/fwlink/?LinkID=159994)
+- [Eseguire un hit Test con interoperatività Win32](https://go.microsoft.com/fwlink/?LinkID=159995)
+- [Eseguire un hit test della geometria in un oggetto Visual](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-geometry-in-a-visual.md)
+- [Eseguire un hit test utilizzando un contenitore di host Win32](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-a-win32-host-container.md)

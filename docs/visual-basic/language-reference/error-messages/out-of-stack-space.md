@@ -4,29 +4,29 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID28
 ms.assetid: bfcd792b-ac29-4158-81fc-ea0c13f4ffa2
-ms.openlocfilehash: e39be5913fe877cf7b3396e4f13f4440288cb8f3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2f91763888069b6dca90da03995dc1b6812fd426
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33593285"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655491"
 ---
 # <a name="out-of-stack-space-visual-basic"></a>Spazio dello stack insufficiente (Visual Basic)
-Lo stack è un'area di lavoro di memoria aumenta e si ridotta dinamicamente con le richieste del programma in esecuzione. Sono stati superati i limiti.  
+Lo stack è un'area di lavoro di memoria aumenta e si ridotta dinamicamente con le esigenze del programma in esecuzione. Sono stati superati i limiti massimi.  
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
-1.  Verificare che le procedure non sono eccessivamente annidate.  
+1.  Verificare che le procedure non elaborati annidate troppo profondamente.  
   
-2.  Verificare che le routine ricorsive terminino correttamente.  
+2.  Assicurarsi che le routine ricorsive terminino correttamente.  
   
-3.  Se le variabili locali richiedono uno spazio più a quello disponibile, provare a dichiarare alcune variabili a livello di modulo. È anche possibile dichiarare tutte le variabili nella procedura static facendo precedere il `Property`, `Sub`, o `Function` parola chiave with `Static`. Oppure è possibile utilizzare il `Static` istruzione per dichiarare le variabili statiche singoli all'interno delle procedure.  
+3.  Se le variabili locali richiedono uno spazio più a quello disponibile, provare a dichiarare alcune variabili a livello di modulo. È anche possibile dichiarare come statici tutte le variabili nella procedura facendo precedere il `Property`, `Sub`, o `Function` parola chiave with `Static`. In alternativa è possibile usare il `Static` dichiarare singole variabili statiche all'interno delle routine dell'istruzione.  
   
-4.  Ridefinire alcune stringhe a lunghezza fissa come stringhe a lunghezza variabile, come stringhe a lunghezza fissa richiedono più spazio di stack di stringhe a lunghezza variabile. È inoltre possibile definire la stringa a livello di modulo in cui è necessario nessuno spazio dello stack.  
+4.  Ridefinire alcune delle stringhe a lunghezza fissa sotto forma di stringhe a lunghezza variabile, come stringhe a lunghezza fissa utilizzino più spazio di stack più stringhe a lunghezza variabile. È anche possibile definire la stringa a livello di modulo in cui è non necessario alcun spazio dello stack.  
   
-5.  Controllare il numero di nidificata `DoEvents` chiamate di funzioni, utilizzando il `Calls` finestra di dialogo per visualizzare le routine attive nello stack.  
+5.  Controllare il numero di annidato `DoEvents` chiamate a funzioni, usando il `Calls` finestra di dialogo per visualizzare quali procedure attive nello stack.  
   
-6.  Assicurarsi che non si determinava "cascata di eventi" generando un evento che chiama una routine evento già nello stack. Una catena di eventi è simile a una chiamata di routine ricorsiva non terminata, ma è meno ovvio, poiché la chiamata viene effettuata da Visual Basic, anziché una chiamata esplicita nel codice. Utilizzare il `Calls` finestra di dialogo per visualizzare le routine attive nello stack.  
+6.  Assicurarsi che non si ha provocato una "catena di eventi" generando un evento che chiama una routine evento già nello stack. Una catena di eventi è simile a una chiamata di routine ricorsive senza terminazione, ma è meno ovvio, poiché viene effettuata la chiamata da Visual Basic piuttosto che una chiamata esplicita nel codice. Usare il `Calls` finestra di dialogo per visualizzare quali procedure attive nello stack.  
   
-## <a name="see-also"></a>Vedere anche  
- [Finestra Memoria](/visualstudio/debugger/memory-windows)
+## <a name="see-also"></a>Vedere anche
+- [Finestra Memoria](/visualstudio/debugger/memory-windows)

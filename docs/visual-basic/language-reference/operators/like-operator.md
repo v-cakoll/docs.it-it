@@ -22,12 +22,12 @@ helpviewer_keywords:
 - data [Visual Basic], string comparisons
 - string comparison [Visual Basic], Like operators
 ms.assetid: 966283ec-80e2-4294-baa8-c75baff804f9
-ms.openlocfilehash: c5b26bd1d3ebae5136718833c124e3c6e575e9b7
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: b1621131b3f5e4669eb637c054be1548597cf252
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44198166"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54703263"
 ---
 # <a name="like-operator-visual-basic"></a>Like (operatore) (Visual Basic)
 Confronta una stringa con un modello.  
@@ -43,7 +43,7 @@ result = string Like pattern
  Obbligatorio. Qualsiasi `Boolean` variabile. Il risultato è un `Boolean` valore che indica se il `string` soddisfa le `pattern`.  
   
  `string`  
- Obbligatorio. Qualsiasi espressione `String`.  
+ Obbligatorio. Qualsiasi espressione `String` .  
   
  `pattern`  
  Obbligatorio. Qualsiasi `String` espressione conforme alle convenzioni sui criteri di ricerca descritti in "Osservazioni".  
@@ -73,7 +73,7 @@ result = string Like pattern
 ## <a name="special-characters"></a>Caratteri speciali  
  Per la corrispondenza tra parentesi quadre sinistra i caratteri speciali (`[`), punto interrogativo (`?`), simbolo di cancelletto (`#`) e l'asterisco (`*`), racchiuderli tra parentesi quadre. La parentesi quadra chiusa (`]`) non può essere usato all'interno di un gruppo per stabilire una corrispondenza, ma può essere usato all'esterno di un gruppo come un singolo carattere.  
   
- La sequenza di caratteri `[]` viene considerato una stringa di lunghezza zero (`""`). Tuttavia, non può far parte di un elenco di caratteri racchiusi tra parentesi quadre. Se si desidera verificare se una posizione nella `string` contiene uno di un gruppo di caratteri o nessun carattere, è possibile usare `Like` due volte. Per un esempio, vedere [procedura: confrontare una stringa con un modello](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-match-a-string-against-a-pattern.md).  
+ La sequenza di caratteri `[]` viene considerato una stringa di lunghezza zero (`""`). Tuttavia, non può far parte di un elenco di caratteri racchiusi tra parentesi quadre. Se si desidera verificare se una posizione nella `string` contiene uno di un gruppo di caratteri o nessun carattere, è possibile usare `Like` due volte. Per un esempio, vedere [Procedura: Confrontare una stringa con un modello](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-match-a-string-against-a-pattern.md).  
   
 ## <a name="character-ranges"></a>Intervalli di caratteri  
  Tramite un segno meno (`–`) per separare i limiti inferiore e superiore dell'intervallo, `charlist` può specificare un intervallo di caratteri. Ad esempio, `[A–Z]` produce una corrispondenza, se la posizione corrispondente `string` contiene un qualsiasi carattere compreso nell'intervallo `A`–`Z`, e `[!H–L]` produce una corrispondenza, se la posizione corrispondente contiene un qualsiasi carattere compreso nell'intervallo `H`–`L`.  
@@ -95,19 +95,19 @@ result = string Like pattern
  Quando una lingua che usa un carattere digraph viene specificata nelle impostazioni locali del sistema, un'occorrenza del carattere in uno singolo digraph `pattern` o `string` corrisponde alla sequenza di due caratteri equivalente in altra stringa. Analogamente, un carattere di digraph nella `pattern` racchiusi tra parentesi quadre (di per sé, in un elenco o in un intervallo) corrisponde alla sequenza di due caratteri equivalente in `string`.  
   
 ## <a name="overloading"></a>Overload  
- Il `Like` operatore può essere *sottoposto a overload*, il che significa che una classe o struttura può ridefinire il comportamento quando un operando ha il tipo di quella classe o struttura. Se il codice Usa l'operatore su una classe o struttura, assicurarsi di che comprendere il comportamento ridefinito. Per altre informazioni, vedere [routine di operatore](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ Il `Like` operatore può essere *sottoposto a overload*, il che significa che una classe o struttura può ridefinire il comportamento quando un operando ha il tipo di quella classe o struttura. Se il codice Usa l'operatore su una classe o struttura, assicurarsi di che comprendere il comportamento ridefinito. Per altre informazioni, vedere [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Esempio  
  Questo esempio viene usato il `Like` operatore per confrontare le stringhe in vari modelli. I risultati vengono inseriti in un `Boolean` variabile che indica se ogni stringa soddisfa il modello.  
   
  [!code-vb[VbVbalrOperators#30](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/like-operator_1.vb)]  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:Microsoft.VisualBasic.Strings.InStr%2A>  
- <xref:Microsoft.VisualBasic.Strings.StrComp%2A>  
- [Operatori di confronto](../../../visual-basic/language-reference/operators/comparison-operators.md)  
- [Precedenza tra gli operatori in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [Elenco degli operatori per funzionalità](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
- [Istruzione Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md)  
- [Operatori ed espressioni](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)  
- [Procedura: Confrontare una stringa con un modello](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-match-a-string-against-a-pattern.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:Microsoft.VisualBasic.Strings.InStr%2A>
+- <xref:Microsoft.VisualBasic.Strings.StrComp%2A>
+- [Operatori di confronto](../../../visual-basic/language-reference/operators/comparison-operators.md)
+- [Precedenza tra gli operatori in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Elenco degli operatori per funzionalità](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [Istruzione Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md)
+- [Operatori ed espressioni](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+- [Procedura: Confrontare una stringa con un modello](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-match-a-string-against-a-pattern.md)

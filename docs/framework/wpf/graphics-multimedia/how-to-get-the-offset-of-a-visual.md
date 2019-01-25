@@ -1,5 +1,5 @@
 ---
-title: "Procedura: ottenere l'offset di un oggetto Visual"
+title: "Procedura: Ottenere l'offset di un oggetto Visual"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,18 +10,18 @@ helpviewer_keywords:
 - visual objects [WPF], retrieving offset values from
 - retrieving offset values from visual objects [WPF]
 ms.assetid: 889a1dd6-1b11-445a-b351-fbb04c53ee34
-ms.openlocfilehash: 97f4de9e2e40840962e4233b1de25843a4b885b4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ad45dee5b72594f30b141e3affbb26706af645aa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33561849"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645392"
 ---
-# <a name="how-to-get-the-offset-of-a-visual"></a>Procedura: ottenere l'offset di un oggetto Visual
-Questi esempi mostrano come recuperare il valore di offset di un oggetto visivo è relativo padre, qualsiasi predecessore o discendente.  
+# <a name="how-to-get-the-offset-of-a-visual"></a>Procedura: Ottenere l'offset di un oggetto Visual
+Questi esempi illustrano come recuperare il valore di offset di un oggetto visivo che è relativo al relativo elemento padre, qualsiasi predecessore o discendente.  
   
 ## <a name="example"></a>Esempio  
- Il markup seguente viene mostrato un <xref:System.Windows.Controls.TextBlock> definito con <xref:System.Windows.FrameworkElement.Margin%2A> valore 4.  
+ L'esempio di markup seguente mostra una <xref:System.Windows.Controls.TextBlock> che viene definita con <xref:System.Windows.FrameworkElement.Margin%2A> valore 4.  
   
  [!code-xaml[VisualSnippets#VisualSnippet1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualSnippets/CSharp/Window1.xaml#visualsnippet1)]  
   
@@ -30,31 +30,31 @@ Questi esempi mostrano come recuperare il valore di offset di un oggetto visivo 
  [!code-csharp[VisualSnippets#VisualSnippet2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualSnippets/CSharp/Window1.xaml.cs#visualsnippet2)]
  [!code-vb[VisualSnippets#VisualSnippet2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/VisualSnippets/visualbasic/window1.xaml.vb#visualsnippet2)]  
   
- L'offset prende in considerazione il <xref:System.Windows.FrameworkElement.Margin%2A> valore. In questo caso, <xref:System.Windows.Vector.X%2A> è 4, e <xref:System.Windows.Vector.Y%2A> è 4.  
+ L'offset prende in considerazione il <xref:System.Windows.FrameworkElement.Margin%2A> valore. In questo caso <xref:System.Windows.Vector.X%2A> è 4, e <xref:System.Windows.Vector.Y%2A> è 4.  
   
- Il valore di offset restituito è relativo elemento padre del <xref:System.Windows.Media.Visual>. Se si desidera restituire un valore di offset non specificato fa riferimento l'elemento padre di un <xref:System.Windows.Media.Visual>, utilizzare il <xref:System.Windows.Media.Visual.TransformToAncestor%2A> metodo.  
+ Il valore di offset restituito è relativamente all'elemento padre del <xref:System.Windows.Media.Visual>. Se si vuole restituire un valore di offset non relativi all'elemento padre di un <xref:System.Windows.Media.Visual>, usare il <xref:System.Windows.Media.Visual.TransformToAncestor%2A> (metodo).  
   
-## <a name="getting-the-offset-relative-to-an-ancestor"></a>Acquisizione dell'Offset relativo a un predecessore  
- Il markup seguente viene mostrato un <xref:System.Windows.Controls.TextBlock> annidato all'interno di due <xref:System.Windows.Controls.StackPanel> oggetti.  
+## <a name="getting-the-offset-relative-to-an-ancestor"></a>Ottenere l'Offset relativo a un predecessore  
+ L'esempio di markup seguente mostra una <xref:System.Windows.Controls.TextBlock> annidato all'interno di due <xref:System.Windows.Controls.StackPanel> oggetti.  
   
  [!code-xaml[VisualSnippets#VisualSnippet7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualSnippets/CSharp/Window2.xaml#visualsnippet7)]  
   
- Nella figura seguente mostra i risultati del markup.  
+ La figura seguente mostra i risultati del markup.  
   
  ![Valori di offset degli oggetti](../../../../docs/framework/wpf/graphics-multimedia/media/visualoffset-01.png "VisualOffset_01")  
-TextBlock annidato all'interno di due StackPanel  
+TextBlock annidati all'interno di due StackPanel  
   
- Esempio di codice seguente viene illustrato come utilizzare il <xref:System.Windows.Media.Visual.TransformToAncestor%2A> metodo per recuperare l'offset del <xref:System.Windows.Controls.TextBlock> relativo contenitore <xref:System.Windows.Window>. Sono contenuti i valori di offset all'interno di restituito <xref:System.Windows.Media.GeneralTransform> valore.  
+ Esempio di codice seguente viene illustrato come utilizzare il <xref:System.Windows.Media.Visual.TransformToAncestor%2A> metodo per recuperare l'offset del <xref:System.Windows.Controls.TextBlock> rispetto al contenitore <xref:System.Windows.Window>. Sono contenuti i valori di offset all'interno di restituito <xref:System.Windows.Media.GeneralTransform> valore.  
   
  [!code-csharp[VisualSnippets#VisualSnippet5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualSnippets/CSharp/Window1.xaml.cs#visualsnippet5)]
  [!code-vb[VisualSnippets#VisualSnippet5](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/VisualSnippets/visualbasic/window1.xaml.vb#visualsnippet5)]  
   
- L'offset prende in considerazione il <xref:System.Windows.FrameworkElement.Margin%2A> i valori per tutti gli oggetti nel contenitore <xref:System.Windows.Window>. In questo caso, <xref:System.Windows.Vector.X%2A> è 28 (16 + 8 + 4), e <xref:System.Windows.Vector.Y%2A> è 28.  
+ L'offset prende in considerazione la <xref:System.Windows.FrameworkElement.Margin%2A> i valori per tutti gli oggetti nel contenitore <xref:System.Windows.Window>. In questo caso <xref:System.Windows.Vector.X%2A> è 28 (16 + 8 + 4), e <xref:System.Windows.Vector.Y%2A> è 28.  
   
- Il valore di offset restituito è relativo il predecessore di <xref:System.Windows.Media.Visual>. Se si desidera restituire un valore di offset è relativo al discendente di un <xref:System.Windows.Media.Visual>, utilizzare il <xref:System.Windows.Media.Visual.TransformToDescendant%2A> metodo.  
+ Il valore di offset restituito è relativo al predecessore del <xref:System.Windows.Media.Visual>. Se si vuole restituire un valore di offset è relativo al discendente di un <xref:System.Windows.Media.Visual>, usare il <xref:System.Windows.Media.Visual.TransformToDescendant%2A> (metodo).  
   
-## <a name="getting-the-offset-relative-to-a-descendant"></a>Acquisizione dell'Offset relativo a un discendente  
- Il markup seguente viene mostrato un <xref:System.Windows.Controls.TextBlock> contenuta all'interno di un <xref:System.Windows.Controls.StackPanel> oggetto.  
+## <a name="getting-the-offset-relative-to-a-descendant"></a>Ottenere l'Offset relativo a un discendente  
+ L'esempio di markup seguente mostra una <xref:System.Windows.Controls.TextBlock> contenuta all'interno di un <xref:System.Windows.Controls.StackPanel> oggetto.  
   
  [!code-xaml[VisualSnippets#VisualSnippet4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualSnippets/CSharp/Window1.xaml#visualsnippet4)]  
   
@@ -63,9 +63,9 @@ TextBlock annidato all'interno di due StackPanel
  [!code-csharp[VisualSnippets#VisualSnippet9](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualSnippets/CSharp/Window1.xaml.cs#visualsnippet9)]
  [!code-vb[VisualSnippets#VisualSnippet9](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/VisualSnippets/visualbasic/window1.xaml.vb#visualsnippet9)]  
   
- L'offset prende in considerazione il <xref:System.Windows.FrameworkElement.Margin%2A> i valori per tutti gli oggetti. In questo caso, <xref:System.Windows.Vector.X%2A> è -4 e <xref:System.Windows.Vector.Y%2A> è -4. I valori di offset sono valori negativi, poiché l'oggetto padre viene spostato negativamente rispetto all'oggetto figlio.  
+ L'offset prende in considerazione il <xref:System.Windows.FrameworkElement.Margin%2A> i valori per tutti gli oggetti. In questo caso <xref:System.Windows.Vector.X%2A> è -4, e <xref:System.Windows.Vector.Y%2A> è -4. I valori di offset sono valori negativi, poiché l'oggetto padre viene spostato negativamente rispetto al relativo oggetto figlio.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Windows.Media.Visual>  
- <xref:System.Windows.Media.VisualTreeHelper>  
- [Cenni preliminari sul rendering della grafica WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Windows.Media.Visual>
+- <xref:System.Windows.Media.VisualTreeHelper>
+- [Cenni preliminari sul rendering della grafica WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
