@@ -5,12 +5,12 @@ helpviewer_keywords:
 - My.Settings object [Visual Basic], application settings
 - examples [Visual Basic], application settings
 ms.assetid: e38d0cc7-247a-46ca-ba04-f2913f0adb2e
-ms.openlocfilehash: 3b933287d18a2519969852117fc6f847e9ead461
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: d14f53003320bb4c3b71134af324961c7565cebf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48583659"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54535463"
 ---
 # <a name="accessing-application-settings-visual-basic"></a>Accesso alle impostazioni dell'applicazione (Visual Basic)
 Questa sezione include argomenti che descrivono l'oggetto `My.Settings` e le attività che consente di eseguire.  
@@ -25,11 +25,11 @@ Questa sezione include argomenti che descrivono l'oggetto `My.Settings` e le att
   
 |A|Vedere|  
 |--------|---------|  
-|Aggiornare il valore di un'impostazione utente|[Procedura: Modificare le impostazioni utente in Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)|  
+|Aggiornare il valore di un'impostazione utente|[Procedura: Modificare le impostazioni dell'utente in Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)|  
 |Visualizzare le impostazioni utente e dell'applicazione in una griglia delle proprietà|[Procedura: Creare griglie di proprietà per impostazioni utente in Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)|  
 |Salvare i valori delle impostazioni utente aggiornate|[Procedura: Mantenere le impostazioni utente in Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)|  
 |Determinare i valori delle impostazioni utente|[Procedura: Leggere le impostazioni dell'applicazione in Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)|  
   
-## <a name="see-also"></a>Vedere anche  
- [Gestione delle impostazioni di un'applicazione (.NET)](/visualstudio/ide/managing-application-settings-dotnet)  
- [Oggetto My.Settings](../../../../visual-basic/language-reference/objects/my-settings-object.md)
+## <a name="see-also"></a>Vedere anche
+- [Gestione delle impostazioni di un'applicazione (.NET)](/visualstudio/ide/managing-application-settings-dotnet)
+- [Oggetto My.Settings](../../../../visual-basic/language-reference/objects/my-settings-object.md)

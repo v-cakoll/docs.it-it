@@ -1,12 +1,12 @@
 ---
 title: Attributi (C#)
 ms.date: 04/26/2018
-ms.openlocfilehash: c33d93a4af91e0c61546e8d51ab470f2889c095c
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: f211e8af48bdfef0bb9bf4341c7a5911b5695101
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44214147"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573344"
 ---
 # <a name="attributes-c"></a>Attributi (C#)
 
@@ -125,7 +125,7 @@ Per altre informazioni, vedere:
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida per programmatori C#](../../index.md)  
-- [Reflection (C#)](../reflection.md)  
-- [Attributi](../../../../standard/attributes/index.md)  
-- [Uso degli attributi in C#](../../../tutorials/attributes.md)  
+- [Guida per programmatori C#](../../index.md)
+- [Reflection (C#)](../reflection.md)
+- [Attributi](../../../../standard/attributes/index.md)
+- [Uso degli attributi in C#](../../../tutorials/attributes.md)

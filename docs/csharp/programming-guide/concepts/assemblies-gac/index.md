@@ -2,17 +2,17 @@
 title: Assembly e Global Assembly Cache (C#)
 ms.date: 07/20/2015
 ms.assetid: 149f5ca5-5b34-4746-9542-1ae43b2d0256
-ms.openlocfilehash: ed5ecff57035b4d3cf47f8325fe5c172180f9d40
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 25ae3a25b825a0594d7cc9479c58e967375e61b5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042296"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54577046"
 ---
 # <a name="assemblies-and-the-global-assembly-cache-c"></a>Assembly e Global Assembly Cache (C#)
 Gli assembly costituiscono l'unità fondamentale della distribuzione, del controllo delle versioni, del riutilizzo, dell'ambito di attivazione e delle autorizzazioni di sicurezza per un'applicazione basata su .NET. Gli assembly hanno il formato di un file eseguibile (con estensione exe) o di libreria a collegamento dinamico (con estensione dll) e costituiscono i blocchi predefiniti di .NET Framework. Gli assembly forniscono al Common Language Runtime le informazioni necessarie per riconoscere le implementazioni dei tipi. Un assembly può essere considerato come una raccolta di tipi e risorse che formano un'unità logica di funzionalità e che sono creati per interagire.  
   
- Gli assembly possono contenere uno o più moduli. È ad esempio possibile pianificare i progetti di grandi dimensioni in modo tale che diversi sviluppatori lavorino su moduli distinti che, una volta raggruppati, costituiranno un singolo assembly. Per altre informazioni sui moduli, vedere l'argomento [Procedura: Compilare un assembly su più file](../../../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md).  
+ Gli assembly possono contenere uno o più moduli. È ad esempio possibile pianificare i progetti di grandi dimensioni in modo tale che diversi sviluppatori lavorino su moduli distinti che, una volta raggruppati, costituiranno un singolo assembly. Per altre informazioni sui moduli, vedere l'argomento [Procedura: Compilare un assembly con più file](../../../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md).  
   
  Di seguito sono riportate le proprietà degli assembly:  
   
@@ -52,12 +52,12 @@ Gli assembly costituiscono l'unità fondamentale della distribuzione, del contro
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida per programmatori C#](../../../../csharp/programming-guide/index.md)  
-- [Assembly in Common Language Runtime](../../../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
-- [Assembly Friend (C#)](friend-assemblies.md)  
-- [Procedura: Condividere un assembly con altre applicazioni (C#)](how-to-share-an-assembly-with-other-applications.md)  
-- [Procedura: Caricare e scaricare gli assembly (C#)](how-to-load-and-unload-assemblies.md)  
-- [Procedura: Determinare se un file è un assembly (C#)](how-to-determine-if-a-file-is-an-assembly.md)  
-- [Procedura: Creare e usare assembly dalla riga di comando (C#)](how-to-create-and-use-assemblies-using-the-command-line.md)  
-- [Procedura dettagliata: Incorporamento dei tipi da assembly gestiti in Visual Studio (C#)](walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)  
+- [Guida per programmatori C#](../../../../csharp/programming-guide/index.md)
+- [Assembly in Common Language Runtime](../../../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
+- [Assembly Friend (C#)](friend-assemblies.md)
+- [Procedura: Condividere un assembly con altre applicazioni (C#)](how-to-share-an-assembly-with-other-applications.md)
+- [Procedura: Caricare e scaricare gli assembly (C#)](how-to-load-and-unload-assemblies.md)
+- [Procedura: Determinare se un file è un assembly (C#)](how-to-determine-if-a-file-is-an-assembly.md)
+- [Procedura: Creare e usare assembly dalla riga di comando (C#)](how-to-create-and-use-assemblies-using-the-command-line.md)
+- [Procedura dettagliata: Incorporamento dei tipi da assembly gestiti in Visual Studio (C#)](walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)
 - [Procedura dettagliata: Incorporamento delle informazioni sui tipi da assembly di Microsoft Office in Visual Studio (C#)](walkthrough-embedding-type-information-from-microsoft-office-assemblies.md)

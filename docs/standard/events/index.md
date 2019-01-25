@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9572a203336aa32f1a37a834b99bf0dac35c7f1c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8ae7149e1f104863825fdea128729dcc80847c19
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127927"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54679932"
 ---
 # <a name="handling-and-raising-events"></a>Gestione e generazione di eventi
 Gli eventi in .NET Framework si basano sul modello di delegato. Il modello di delegato segue lo schema progettuale osservatore, che consente a un sottoscrittore di effettuare la registrazione con e ricevere notifiche da un provider. Un mittente dell'evento esegue il push di una notifica di evento, mentre un ricevitore di eventi riceve la notifica e definisce una risposta. In questo articolo viene descritto come implementare gli eventi nel codice, come usare gli eventi nelle applicazioni e i componenti principali del modello di delegato.  
@@ -76,23 +76,23 @@ Gli eventi in .NET Framework si basano sul modello di delegato. Il modello di de
 ## <a name="raising-multiple-events"></a>Generazione di più eventi  
  Se la propria classe genera più eventi, il compilatore genera un campo per ogni istanza del delegato di evento. Se il numero di eventi è elevato, il costo di archiviazione di un campo per ciascun delegato non è sostenibile. Per questi casi, .NET Framework fornisce le proprietà evento che è possibile usare con un'altra struttura di dati di propria scelta per archiviare i delegati degli eventi.  
   
- Le proprietà dell'evento sono costituite da dichiarazioni di eventi accompagnate dalle funzioni di accesso agli eventi. Queste funzioni sono metodi che consentono di aggiungere o rimuovere istanze del delegato di evento dalla struttura di dati di archiviazione. Si noti che le proprietà evento sono più lente rispetto ai campi evento, perché ogni delegato dell'evento deve essere recuperato prima di poter essere richiamato. Il compromesso è tra memoria e velocità. Se la classe definisce molti eventi che vengono generati di rado, sarà necessario implementare le proprietà degli eventi. Per altre informazioni, vedere [Procedura: gestire più eventi mediante le relative proprietà](../../../docs/standard/events/how-to-handle-multiple-events-using-event-properties.md).  
+ Le proprietà dell'evento sono costituite da dichiarazioni di eventi accompagnate dalle funzioni di accesso agli eventi. Queste funzioni sono metodi che consentono di aggiungere o rimuovere istanze del delegato di evento dalla struttura di dati di archiviazione. Si noti che le proprietà evento sono più lente rispetto ai campi evento, perché ogni delegato dell'evento deve essere recuperato prima di poter essere richiamato. Il compromesso è tra memoria e velocità. Se la classe definisce molti eventi che vengono generati di rado, sarà necessario implementare le proprietà degli eventi. Per altre informazioni, vedere [Procedura: Gestire più eventi mediante le relative proprietà](../../../docs/standard/events/how-to-handle-multiple-events-using-event-properties.md).  
   
 ## <a name="related-topics"></a>Argomenti correlati  
   
 |Titolo|Description|  
 |-----------|-----------------|  
-|[Procedura: generare e utilizzare eventi](../../../docs/standard/events/how-to-raise-and-consume-events.md)|Contiene esempi di generazione e uso di eventi.|  
-|[Procedura: gestire più eventi mediante le relative proprietà](../../../docs/standard/events/how-to-handle-multiple-events-using-event-properties.md)|Viene illustrato come usare le proprietà degli eventi per gestire più eventi.|  
+|[Procedura: Generare e utilizzare eventi](../../../docs/standard/events/how-to-raise-and-consume-events.md)|Contiene esempi di generazione e uso di eventi.|  
+|[Procedura: Gestire più eventi mediante le relative proprietà](../../../docs/standard/events/how-to-handle-multiple-events-using-event-properties.md)|Viene illustrato come usare le proprietà degli eventi per gestire più eventi.|  
 |[Modello di progettazione observer](../../../docs/standard/events/observer-design-pattern.md)|Viene descritto lo schema progettuale che consente a un sottoscrittore di effettuare la registrazione con e ricevere notifiche da un provider.|  
 |[Procedura: Usare eventi in un'applicazione Web Form](../../../docs/standard/events/how-to-consume-events-in-a-web-forms-application.md)|Viene illustrato come gestire un evento generato da un controllo Web Form.|  
   
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.EventHandler>  
-- <xref:System.EventHandler%601>  
-- <xref:System.EventArgs>  
-- <xref:System.Delegate>  
-- [Panoramica degli eventi e degli eventi indirizzati (app UWP)](/windows/uwp/xaml-platform/events-and-routed-events-overview)  
-- [Eventi (Visual Basic)](../../visual-basic/programming-guide/language-features/events/index.md)  
+- <xref:System.EventHandler>
+- <xref:System.EventHandler%601>
+- <xref:System.EventArgs>
+- <xref:System.Delegate>
+- [Panoramica degli eventi e degli eventi indirizzati (app UWP)](/windows/uwp/xaml-platform/events-and-routed-events-overview)
+- [Eventi (Visual Basic)](../../visual-basic/programming-guide/language-features/events/index.md)
 - [Eventi (Guida per programmatori C#)](../../csharp/programming-guide/events/index.md)
