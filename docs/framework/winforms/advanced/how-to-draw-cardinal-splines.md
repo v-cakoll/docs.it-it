@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: disegnare spline di tipo Cardinal'
+title: 'Procedura: Disegnare spline di tipo Cardinal'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,46 +9,46 @@ helpviewer_keywords:
 - drawing [Windows Forms], cardinal splines
 - graphics [Windows Forms], cardinal splines
 ms.assetid: a4a41e80-4461-4b47-b6bd-2c5e68881994
-ms.openlocfilehash: 3ad06eb28e1d8e6b5d5f4a77e545f174d8a68d9b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9f2fd0f54c95ff2185c1a1d17785d300c97f7f4f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33525060"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54739800"
 ---
-# <a name="how-to-draw-cardinal-splines"></a>Procedura: disegnare spline di tipo Cardinal
-Spline di tipo cardinal è una curva che passa attraverso un determinato set di punti. Per disegnare spline di tipo cardinal, creare un <xref:System.Drawing.Graphics> dell'oggetto e passare l'indirizzo di una matrice di punti per il <xref:System.Drawing.Graphics.DrawCurve%2A> metodo.  
+# <a name="how-to-draw-cardinal-splines"></a>Procedura: Disegnare spline di tipo Cardinal
+Spline di tipo cardinal è una curva che passa attraverso un set specificato di punti. Per disegnare spline di tipo cardinal, creare un <xref:System.Drawing.Graphics> , quindi passare l'indirizzo di una matrice di punti di <xref:System.Drawing.Graphics.DrawCurve%2A> (metodo).  
   
-### <a name="drawing-a-bell-shaped-cardinal-spline"></a>Creazione di una Spline di tipo Cardinal a campana  
+### <a name="drawing-a-bell-shaped-cardinal-spline"></a>Creazione di una Spline cardinali a forma di campana  
   
--   Nell'esempio seguente disegna una spline di tipo cardinal a campana che passa attraverso cinque punti designati. Nella figura seguente mostra la curva e cinque punti.  
+-   Nell'esempio seguente disegna una spline di tipo cardinal a forma di campana che passa attraverso cinque punti designati. La figura seguente mostra la curva e cinque punti.  
   
-     ![Spline di tipo Cardinal](../../../../docs/framework/winforms/advanced/media/cardinalspline1.png "CardinalSpline1")  
+     ![Cardinal Spline](../../../../docs/framework/winforms/advanced/media/cardinalspline1.png "CardinalSpline1")  
   
  [!code-csharp[System.Drawing.ConstructingDrawingCurves#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.ConstructingDrawingCurves#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/VB/Class1.vb#21)]  
   
-### <a name="drawing-a-closed-cardinal-spline"></a>Disegno di una spline di tipo Cardinal chiusa  
+### <a name="drawing-a-closed-cardinal-spline"></a>Disegnare una curva Spline cardinale chiusa  
   
--   Utilizzare il <xref:System.Drawing.Graphics.DrawClosedCurve%2A> metodo la <xref:System.Drawing.Graphics> classe per disegnare una spline di tipo cardinal chiusa. In una spline di tipo cardinal chiusa, la curva continua fino all'ultimo punto della matrice e si connette con il primo punto nella matrice. Nell'esempio seguente disegna una spline di tipo cardinal chiusa che passa attraverso sei punti designati. Nella figura seguente mostra la spline chiusa e sei punti.  
+-   Usare la <xref:System.Drawing.Graphics.DrawClosedCurve%2A> metodo del <xref:System.Drawing.Graphics> classe per disegnare una curva spline cardinale chiusa. In una spline di tipo cardinal chiusa, la curva continua fino all'ultimo punto della matrice e si connette con il primo punto della matrice. L'esempio seguente disegna una spline di tipo cardinal chiusa che attraversa sei punti designati. La figura seguente mostra la spline chiusa e i punti di sei.  
   
- ![Spline di tipo Cardinal](../../../../docs/framework/winforms/advanced/media/cardinalspline1a.png "CardinalSpline1A")  
+ ![Cardinal Spline](../../../../docs/framework/winforms/advanced/media/cardinalspline1a.png "CardinalSpline1A")  
   
  [!code-csharp[System.Drawing.ConstructingDrawingCurves#22](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/CS/Class1.cs#22)]
  [!code-vb[System.Drawing.ConstructingDrawingCurves#22](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/VB/Class1.vb#22)]  
   
-### <a name="changing-the-bend-of-a-cardinal-spline"></a>Modifica della curvatura di una spline di tipo Cardinal  
+### <a name="changing-the-bend-of-a-cardinal-spline"></a>Modifica della curvatura di una Spline di tipo Cardinal  
   
--   Possibile modificare la spline di tipo cardinal passando un argomento di tensione per la <xref:System.Drawing.Graphics.DrawCurve%2A> metodo. L'esempio seguente disegna una spline di tipo cardinal tre che passano attraverso lo stesso set di punti. Nella figura seguente mostra le tre curve insieme ai relativi valori di tensione. Si noti che quando la tensione è 0, i punti vengono collegati da linee rette.  
+-   Modificare la modalità di una spline di tipo cardinal devia passando un argomento di tensione per la <xref:System.Drawing.Graphics.DrawCurve%2A> (metodo). L'esempio seguente disegna una spline di tipo cardinal tre che passano attraverso lo stesso set di punti. La figura seguente illustra le tre curve insieme ai relativi valori di tensione. Si noti che quando la tensione è 0, i punti connessi da linee rette.  
   
- ![Spline di tipo Cardinal](../../../../docs/framework/winforms/advanced/media/cardinalspline2.png "CardinalSpline2")  
+ ![Cardinal Spline](../../../../docs/framework/winforms/advanced/media/cardinalspline2.png "CardinalSpline2")  
   
  [!code-csharp[System.Drawing.ConstructingDrawingCurves#23](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/CS/Class1.cs#23)]
  [!code-vb[System.Drawing.ConstructingDrawingCurves#23](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/VB/Class1.vb#23)]  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
- Negli esempi precedenti sono progettati per l'uso con Windows Form e richiedono <xref:System.Windows.Forms.PaintEventArgs> `e`, ovvero un parametro del <xref:System.Windows.Forms.Control.Paint> gestore dell'evento.  
+ Negli esempi precedenti sono progettati per l'uso con Windows Form, e richiedono <xref:System.Windows.Forms.PaintEventArgs> `e`, ovvero un parametro del <xref:System.Windows.Forms.Control.Paint> gestore dell'evento.  
   
-## <a name="see-also"></a>Vedere anche  
- [Linee, curve e forme](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
- [Costruzione e creazione di curve](../../../../docs/framework/winforms/advanced/constructing-and-drawing-curves.md)
+## <a name="see-also"></a>Vedere anche
+- [Linee, curve e forme](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)
+- [Costruzione e creazione di curve](../../../../docs/framework/winforms/advanced/constructing-and-drawing-curves.md)

@@ -17,14 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6956d73be0380baef96d94584f007e0683331784
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 95f61170d401161dcf217f139dbe6e4c6d3a0e0c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54735039"
 ---
 # <a name="lockclrversion-function"></a>Funzione LockClrVersion
-Consente all'host determinare quale versione di common language runtime (CLR) verrà utilizzata all'interno del processo prima di inizializzare in modo esplicito il CLR.  
+Consente all'host determinare quale versione di common language runtime (CLR) da utilizzare all'interno del processo prima di inizializzare in modo esplicito il CLR.  
   
  Questa funzione è stata deprecata nel [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
   
@@ -40,13 +41,13 @@ HRESULT LockClrVersion (
   
 #### <a name="parameters"></a>Parametri  
  `hostCallback`  
- [in] La funzione deve essere chiamato da Common Language Runtime al momento dell'inizializzazione.  
+ [in] La funzione che verrà chiamata da CLR in fase di inizializzazione.  
   
  `pBeginHostSetup`  
- [in] La funzione di essere chiamato dall'host per indicare a CLR che l'inizializzazione sta avviando.  
+ [in] La funzione da chiamare dall'host per indicare a CLR che l'inizializzazione sta avviando.  
   
  `pEndHostSetup`  
- [in] La funzione di essere chiamato dall'host per indicare a CLR che l'inizializzazione è stata completata.  
+ [in] La funzione da chiamare dall'host per indicare a CLR che l'inizializzazione è stata completata.  
   
 ## <a name="return-value"></a>Valore restituito  
  Questo metodo restituisce codici di errore COM standard, come definito nel file Winerror. H, oltre ai valori seguenti.  
@@ -57,40 +58,40 @@ HRESULT LockClrVersion (
 |E_INVALIDARG|Uno o più argomenti sono null.|  
   
 ## <a name="remarks"></a>Note  
- L'host chiama `LockClrVersion` prima dell'inizializzazione di Common Language Runtime. `LockClrVersion` accetta tre parametri, ognuno dei quali sono i callback di tipo [FLockClrVersionCallback](../../../../docs/framework/unmanaged-api/hosting/flockclrversioncallback-function-pointer.md). Questo tipo viene definito come segue.  
+ L'host chiama `LockClrVersion` prima di inizializzare il CLR. `LockClrVersion` accetta tre parametri, ognuno dei quali sono i callback typu [FLockClrVersionCallback](../../../../docs/framework/unmanaged-api/hosting/flockclrversioncallback-function-pointer.md). Questo tipo viene definito come segue.  
   
 ```  
 typedef HRESULT ( __stdcall *FLockClrVersionCallback ) ();  
 ```  
   
- I passaggi seguenti si verificano durante l'inizializzazione del runtime:  
+ Al momento dell'inizializzazione del runtime vengono eseguite le operazioni seguenti:  
   
-1.  L'host chiama [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) o una delle altre funzioni di inizializzazione di runtime. In alternativa, l'host è stato possibile inizializzare il runtime mediante l'attivazione di oggetti COM.  
+1.  L'host chiama [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) o una delle altre funzioni di inizializzazione di runtime. In alternativa, l'host è stato possibile inizializzare il runtime usando l'attivazione di oggetti COM.  
   
-2.  Il runtime chiama la funzione specificata per il `hostCallback` parametro.  
+2.  Il runtime chiama la funzione specificata dal `hostCallback` parametro.  
   
-3.  La funzione specificata da `hostCallback` effettua quindi la sequenza di chiamate seguente:  
+3.  La funzione specificata da `hostCallback` quindi rende la sequenza di chiamate seguente:  
   
-    -   La funzione specificata per il `pBeginHostSetup` parametro.  
+    -   La funzione specificata dal `pBeginHostSetup` parametro.  
   
     -   `CorBindToRuntimeEx` (o un'altra funzione di inizializzazione di runtime).  
   
-    -   [SetHostControl](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md).  
+    -   [ICLRRuntimeHost::SetHostControl](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md).  
   
-    -   [ICLRRuntimeHost:: Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md).  
+    -   [ICLRRuntimeHost::Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md).  
   
-    -   La funzione specificata per il `pEndHostSetup` parametro.  
+    -   La funzione specificata dal `pEndHostSetup` parametro.  
   
- Tutte le chiamate da `pBeginHostSetup` per `pEndHostSetup` deve verificarsi in un solo thread o fiber, con lo stesso stack logico. Il thread può essere diverso dal thread su cui `hostCallback` viene chiamato.  
+ Tutte le chiamate da `pBeginHostSetup` a `pEndHostSetup` deve verificarsi su un singolo thread o fiber, con lo stesso stack di logico. Questo thread può essere diverso dal thread su cui `hostCallback` viene chiamato.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Mscoree. H  
+ **Intestazione:** MSCorEE.h  
   
- **Libreria:** Mscoree. dll  
+ **Libreria:** MSCorEE.dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Funzioni di hosting CLR deprecate](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>Vedere anche
+- [Funzioni di hosting CLR deprecate](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

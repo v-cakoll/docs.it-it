@@ -4,21 +4,21 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID67
 ms.assetid: 2ff203e2-bba6-43ae-b72f-8e92a881c98f
-ms.openlocfilehash: 8a9d89cc96e5b5875d0286becbf5b20d6895ae34
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 15e08cedbd58016959f00e1ca817019937775df2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33593967"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54737231"
 ---
 # <a name="too-many-files"></a>Troppi file.
-Più file sono stati creati nella directory radice di permesso dal sistema operativo o sono stati aperti più file rispetto al numero specificato nel **file =** nel file CONFIG. File SYS.  
+Più file creati nella directory radice superiore a quello permesso del sistema operativo o sono stati aperti più file rispetto al numero specificato nella **file =** nel file CONFIG. File di SYS.  
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
-1.  Se il programma è apertura, chiusura o salvataggio di file nella directory radice, modificare il programma in modo che utilizzi una sottodirectory.  
+1.  Se il programma è apertura, chiusura o il salvataggio dei file nella directory radice, modificare il programma in modo che utilizzi una sottodirectory.  
   
-2.  Aumentare il numero di file specificato per il **file =** nel file CONFIG. SYS file e riavviare il computer.  
+2.  Aumentare il numero di file specificati nella **file =** nel file CONFIG. SYS file, quindi riavviare il computer.  
   
-## <a name="see-also"></a>Vedere anche  
- [Tipi di errore](../../../visual-basic/programming-guide/language-features/error-types.md)
+## <a name="see-also"></a>Vedere anche
+- [Tipi di errore](../../../visual-basic/programming-guide/language-features/error-types.md)

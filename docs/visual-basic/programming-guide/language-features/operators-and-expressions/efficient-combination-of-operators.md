@@ -13,44 +13,44 @@ helpviewer_keywords:
 - parentheses [Visual Basic], complex expressions
 - numeric expressions
 ms.assetid: bd22340e-b5be-458b-8772-3916c02309a4
-ms.openlocfilehash: 8ced464cb0cc8e1bec3c3449dccb827575599905
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: daaf75256b3449209b4e3c030cc6b54692c6a172
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33648918"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620427"
 ---
 # <a name="efficient-combination-of-operators-visual-basic"></a>Combinazione efficace di operatori (Visual Basic)
 Le espressioni complesse possono contenere molti operatori diversi. Questa condizione è illustrata nell'esempio seguente.  
   
  `x = (45 * (y + z)) ^ (2 / 85) * 5 + z`  
   
- Per creare espressioni complesse, ad esempio quello nell'esempio precedente richiede una conoscenza approfondita delle regole di precedenza degli operatori. Per ulteriori informazioni, vedere [precedenza degli operatori in Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md).  
+ Per creare espressioni complesse come quello nell'esempio precedente richiede una conoscenza approfondita delle regole di precedenza degli operatori. Per altre informazioni, vedere [precedenza degli operatori in Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md).  
   
 ## <a name="parenthetical-expressions"></a>Espressioni tra parentesi  
- Frequenza con cui operazioni in un ordine diverso da quello determinato dalla precedenza degli operatori. Si osservi l'esempio riportato di seguito.  
+ Spesso è necessario di operazioni in un ordine diverso da quello determinato dalla precedenza degli operatori. Si osservi l'esempio riportato di seguito.  
   
  `x = z * y + 4`  
   
- Nell'esempio precedente Moltiplica `z` da `y`, quindi aggiunge il risultato a `4`. Tuttavia, se si desidera aggiungere `y` e `4` prima moltiplicare il risultato per `z`, è possibile eseguire l'override di precedenza degli operatori normale utilizzando le parentesi. Per racchiudere un'espressione tra parentesi, si forza l'espressione da valutare prima di tutto, indipendentemente dalla precedenza degli operatori. Per forzare l'esempio precedente per eseguire prima l'addizione, è necessario riscriverla come nell'esempio seguente.  
+ Moltiplica l'esempio precedente `z` dal `y`, quindi aggiunge il risultato a `4`. Tuttavia, se si desidera aggiungere `y` e `4` prima di moltiplicando il risultato da `z`, è possibile eseguire l'override di precedenza degli operatori normale usando le parentesi. Racchiudendo un'espressione tra parentesi, si forza quell'espressione da valutare in primo luogo, indipendentemente dalla precedenza degli operatori. Per forzare l'esempio precedente per eseguire prima l'addizione, è necessario riscriverla come nell'esempio seguente.  
   
  `x = z * (y + 4)`  
   
  Nell'esempio precedente viene aggiunto `y` e `4`, quindi moltiplica tale somma per `z`.  
   
 ### <a name="nested-parenthetical-expressions"></a>Espressioni tra parentesi nidificate  
- È possibile nidificare le espressioni in più livelli di parentesi per eseguire l'override ulteriormente la precedenza. Le espressioni nidificate tra parentesi vengono valutate per primi, seguito dal successivo nidificata, e così via per l'almeno eccessivamente annidate e infine le espressioni all'esterno delle parentesi. Questa condizione è illustrata nell'esempio seguente.  
+ È possibile annidare le espressioni in più livelli di parentesi per ignorare la precedenza ulteriormente. Le espressioni di annidamento più profondo racchiuso tra parentesi vengono valutate per primi, seguito da quello successivo di annidamento più profondo, e così via fino al minimo di nidificazione e infine le espressioni all'esterno delle parentesi. Questa condizione è illustrata nell'esempio seguente.  
   
  `x = (z * 4) ^ (y * (z + 2))`  
   
- Nell'esempio precedente, `z + 2` viene valutato per primo, quindi le altre espressioni tra parentesi. Elevamento a potenza, che in genere ha maggiore precedenza di addizione e moltiplicazione, viene valutato per ultimo in questo esempio perché le altre espressioni sono racchiuse tra parentesi.  
+ Nell'esempio precedente, `z + 2` viene valutato per primo, quindi le altre espressioni tra parentesi. Elevamento a potenza, che normalmente ha precedenza maggiore rispetto ad addizione e moltiplicazione, viene valutato per ultimo in questo esempio perché le altre espressioni sono racchiuse tra parentesi.  
   
-## <a name="see-also"></a>Vedere anche  
- [Operatori aritmetici in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)  
- [Operatori di confronto in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)  
- [Operatori logici e bit per bit in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)  
- [Operatori logici e bit per bit (Visual Basic)](../../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)  
- [Espressioni booleane](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md)  
- [Confronto di valori](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)  
- [Procedura: Calcolare valori numerici](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-calculate-numeric-values.md)  
- [Precedenza tra gli operatori in Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md)
+## <a name="see-also"></a>Vedere anche
+- [Operatori aritmetici in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Operatori di confronto in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Operatori logici e bit per bit in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+- [Operatori logici e bit per bit (Visual Basic)](../../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
+- [Espressioni booleane](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md)
+- [Confronto di valori](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)
+- [Procedura: Calcolare valori numerici](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-calculate-numeric-values.md)
+- [Precedenza tra gli operatori in Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md)

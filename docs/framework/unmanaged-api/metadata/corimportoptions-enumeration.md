@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7078b2eb98c15b7229132076da8af4691032bb08
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8a4cc17bdcaea5099d0d2b0195ae4fa28e3d4744
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441792"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744605"
 ---
 # <a name="corimportoptions-enumeration"></a>Enumerazione CorImportOptions
 Contiene valori di flag che controllano il comportamento durante l'importazione di un assembly esterno all'ambito corrente.  
@@ -48,7 +48,7 @@ typedef enum CorImportOptions {
   
 |Membro|Descrizione|  
 |------------|-----------------|  
-|`MDImportOptionDefault`|Indica il comportamento predefinito, ovvero ignorare i record eliminati.|  
+|`MDImportOptionDefault`|Indica il comportamento predefinito, ovvero per ignorare i record eliminati.|  
 |`MDImportOptionAll`|Indica che tutti i metadati devono essere enumerati.|  
 |`MDImportOptionAllTypeDefs`|Indica che devono essere enumerati tutti i typedef, inclusi quelli eliminati.|  
 |`MDImportOptionAllMethodDefs`|Indica che devono essere enumerati tutti gli oggetti MethodDef, inclusi quelli eliminati.|  
@@ -59,11 +59,11 @@ typedef enum CorImportOptions {
 |`MDImportOptionAllExportedTypes`|Indica che devono essere enumerati tutti i tipi esportati, inclusi quelli eliminati.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorHdr. H  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Enumerazioni dei metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Vedere anche
+- [Enumerazioni dei metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
