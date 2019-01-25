@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: recuperare il valore di un elemento (LINQ to XML) (Visual Basic)'
+title: 'Procedura: Recuperare il valore di un elemento (LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 76b9b2a5-b3ba-49da-ba74-82100e1bd21c
-ms.openlocfilehash: ff2a1712a79bdedd74fe51391f01dd900ae585e6
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: 710b5d3e9c636c832d52206921f21c8141cf4319
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43254227"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671525"
 ---
-# <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-visual-basic"></a>Procedura: recuperare il valore di un elemento (LINQ to XML) (Visual Basic)
+# <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-visual-basic"></a>Procedura: Recuperare il valore di un elemento (LINQ to XML) (Visual Basic)
 In questo argomento viene illustrato come ottenere il valore degli elementi. Questa operazione può essere eseguita in due modi. È possibile eseguire il cast di un oggetto <xref:System.Xml.Linq.XElement> o  <xref:System.Xml.Linq.XAttribute> nel tipo desiderato. L'operatore di conversione esplicito converte quindi il contenuto dell'elemento o dell'attributo nel tipo specificato e lo assegna alla variabile. In alternativa, è possibile usare la proprietà <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> o <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType>.  
   
  Con Visual Basic l'approccio migliore consiste nell'utilizzo della proprietà <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType>.  
@@ -149,5 +149,5 @@ v4:element does not exist
   
  In generale, è possibile scrivere codice più semplice quando si usa il cast per recuperare il contenuto di elementi e attributi.  
   
-## <a name="see-also"></a>Vedere anche  
- [Assi LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)
+## <a name="see-also"></a>Vedere anche
+- [Assi LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)

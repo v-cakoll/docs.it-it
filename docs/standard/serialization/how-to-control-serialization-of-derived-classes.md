@@ -1,18 +1,18 @@
 ---
-title: 'Procedura: controllare la serializzazione delle classi derivate'
+title: 'Procedura: Controllare la serializzazione delle classi derivate'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: caa92596-9e15-4d91-acbe-56911ef47a84
-ms.openlocfilehash: 00eb4ba1f5f84c60f1ca51871f604b6ee27798c3
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 12cb3a1fb3311450b8597ef13f1f2efa4adeaf7e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46002840"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728843"
 ---
-# <a name="how-to-control-serialization-of-derived-classes"></a>Procedura: controllare la serializzazione delle classi derivate
+# <a name="how-to-control-serialization-of-derived-classes"></a>Procedura: Controllare la serializzazione delle classi derivate
 L'uso dell'attributo **XmlElementAttribute** per modificare il nome di un elemento XML non rappresenta l'unico modo per personalizzare la serializzazione degli oggetti. È anche possibile personalizzare il flusso XML derivando da una classe esistente e istruendo l'istanza <xref:System.Xml.Serialization.XmlSerializer> su come serializzare la nuova classe.  
   
  Ad esempio, in presenza di una classe `Book`, è possibile derivare da essa e creare una classe `ExpandedBook` che disponga di alcune proprietà in più. Tuttavia, è necessario dare indicazioni a **XmlSerializer** di accettare il tipo derivato durante la serializzazione o la deserializzazione. È possibile ottenere questo risultato creando un'istanza di <xref:System.Xml.Serialization.XmlElementAttribute> e impostandone la proprietà **Type** sul tipo di classe derivato. Aggiungere **XmlElementAttribute** a un'istanza <xref:System.Xml.Serialization.XmlAttributes>. Aggiungere quindi **XmlAttributes** a un'istanza di <xref:System.Xml.Serialization.XmlAttributeOverrides>, specificando il tipo da sottoporre a override e il nome del membro che accetta la classe derivata, come illustrato nell'esempio riportato di seguito.  
@@ -234,10 +234,10 @@ public class Run
   
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.Xml.Serialization.XmlSerializer>  
-- <xref:System.Xml.Serialization.XmlElementAttribute>  
-- <xref:System.Xml.Serialization.XmlAttributes>  
-- <xref:System.Xml.Serialization.XmlAttributeOverrides>  
-- [Serializzazione SOAP e XML](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
-- [Procedura: Serializzare un oggetto](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
-- [Procedura: Specificare un nome di elemento alternativo per un flusso XML](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
+- <xref:System.Xml.Serialization.XmlSerializer>
+- <xref:System.Xml.Serialization.XmlElementAttribute>
+- <xref:System.Xml.Serialization.XmlAttributes>
+- <xref:System.Xml.Serialization.XmlAttributeOverrides>
+- [Serializzazione SOAP e XML](../../../docs/standard/serialization/xml-and-soap-serialization.md)
+- [Procedura: Serializzare un oggetto](../../../docs/standard/serialization/how-to-serialize-an-object.md)
+- [Procedura: Specificare un nome di elemento alternativo per un Stream XML](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)

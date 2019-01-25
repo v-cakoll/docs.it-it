@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 49b42a7fc54af56149b602b337e4a6c853c270cd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6cf4c0eb3f9bb36cb45aa93c576b4efddaa93482
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406357"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736533"
 ---
 # <a name="cordebuginternalframetype-enumeration"></a>Enumerazione CorDebugInternalFrameType
-Identifica il tipo di stack frame. Questa enumerazione viene utilizzata per la [ICorDebugInternalFrame:: GetFrameType](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe-getframetype-method.md) metodo.  
+Identifica il tipo di stack frame. Questa enumerazione viene utilizzata per la [ICorDebugInternalFrame](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe-getframetype-method.md) (metodo).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -53,22 +53,22 @@ typedef enum CorDebugInternalFrameType {
 |`STUBFRAME_M2U`|Un frame di uno stub a gestito.|  
 |`STUBFRAME_U2M`|Un frame di stub non gestito a gestito.|  
 |`STUBFRAME_APPDOMAIN_TRANSITION`|Una transizione tra i domini applicazione.|  
-|`STUBFRAME_LIGHTWEIGHT_FUNCTION`|Una chiamata al metodo leggero.|  
+|`STUBFRAME_LIGHTWEIGHT_FUNCTION`|Una chiamata al metodo di caricamento leggero.|  
 |`STUBFRAME_FUNC_EVAL`|Inizio della valutazione della funzione.|  
-|`STUBFRAME_INTERNALCALL`|Una chiamata interna di common language runtime.|  
+|`STUBFRAME_INTERNALCALL`|Una chiamata interna in common language runtime.|  
 |`STUBFRAME_CLASS_INIT`|Inizio dell'inizializzazione di una classe.|  
-|`STUBFRAME_EXCEPTION`|Eccezione che viene generata un'eccezione.|  
+|`STUBFRAME_EXCEPTION`|Eccezione generata.|  
 |`STUBFRAME_SECURITY`|Un frame utilizzato per la sicurezza dall'accesso di codice.|  
 |`STUBFRAME_JIT_COMPILATION`|Il runtime è un metodo di compilazione JIT.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Enumerazioni di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>Vedere anche
+- [Enumerazioni di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

@@ -2,16 +2,17 @@
 title: Assembly e Global Assembly Cache (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: fcf78ff1-f1ab-4a5d-b6d8-00d2046b6c80
-ms.openlocfilehash: 6d1692d6b62e1f1f3a8f979d3de242003f034ed5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 413d3266546fa1d2b403509793c62e76bca5bc70
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717259"
 ---
 # <a name="assemblies-and-the-global-assembly-cache-visual-basic"></a>Assembly e Global Assembly Cache (Visual Basic)
 Gli assembly costituiscono l'unità fondamentale della distribuzione, del controllo delle versioni, del riutilizzo, dell'ambito di attivazione e delle autorizzazioni di sicurezza per un'applicazione basata su .NET. Gli assembly hanno il formato di un file eseguibile (con estensione exe) o di libreria a collegamento dinamico (con estensione dll) e costituiscono i blocchi predefiniti di .NET Framework. Gli assembly forniscono al Common Language Runtime le informazioni necessarie per riconoscere le implementazioni dei tipi. Un assembly può essere considerato come una raccolta di tipi e risorse che formano un'unità logica di funzionalità e che sono creati per interagire.  
   
- Gli assembly possono contenere uno o più moduli. È ad esempio possibile pianificare i progetti di grandi dimensioni in modo tale che diversi sviluppatori lavorino su moduli distinti che, una volta raggruppati, costituiranno un singolo assembly. Per altre informazioni sui moduli, vedere l'argomento [Procedura: Compilare un assembly su più file](../../../../framework/app-domains/how-to-build-a-multifile-assembly.md).  
+ Gli assembly possono contenere uno o più moduli. È ad esempio possibile pianificare i progetti di grandi dimensioni in modo tale che diversi sviluppatori lavorino su moduli distinti che, una volta raggruppati, costituiranno un singolo assembly. Per altre informazioni sui moduli, vedere l'argomento [come: Compilare un Assembly su più file](../../../../framework/app-domains/how-to-build-a-multifile-assembly.md).  
   
  Di seguito sono riportate le proprietà degli assembly:  
   
@@ -47,12 +48,12 @@ Gli assembly costituiscono l'unità fondamentale della distribuzione, del contro
 > [!NOTE]
 >  Per compilare un assembly in Visual Studio, scegliere **Compila** dal menu **Compila**.  
   
-## <a name="see-also"></a>Vedere anche  
- [Assembly in Common Language Runtime](../../../../framework/app-domains/assemblies-in-the-common-language-runtime.md)  
- [Assembly Friend (Visual Basic)](friend-assemblies.md)  
- [Procedura: condividere un Assembly con altre applicazioni (Visual Basic)](how-to-share-an-assembly-with-other-applications.md)  
- [Procedura: caricamento e scaricare gli assembly (Visual Basic)](how-to-load-and-unload-assemblies.md)  
- [Procedura: determinare se un File è un Assembly (Visual Basic)](how-to-determine-if-a-file-is-an-assembly.md)  
- [Procedura: creare e utilizzare assembly dalla riga di comando (Visual Basic)](how-to-create-and-use-assemblies-using-the-command-line.md)  
- [Procedura dettagliata: Incorporamento dei tipi da assembly gestiti in Visual Studio (Visual Basic)](walkthrough-embedding-types-from-managed-assemblies-in-vs.md)  
- [Procedura dettagliata: Incorporamento delle informazioni sui tipi da assembly di Microsoft Office in Visual Studio (Visual Basic)](walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-vs.md)
+## <a name="see-also"></a>Vedere anche
+- [Assembly in Common Language Runtime](../../../../framework/app-domains/assemblies-in-the-common-language-runtime.md)
+- [Assembly Friend (Visual Basic)](friend-assemblies.md)
+- [Procedura: Condividere un Assembly con altre applicazioni (Visual Basic)](how-to-share-an-assembly-with-other-applications.md)
+- [Procedura: Caricare e scaricare gli assembly (Visual Basic)](how-to-load-and-unload-assemblies.md)
+- [Procedura: Determinare se un File è un Assembly (Visual Basic)](how-to-determine-if-a-file-is-an-assembly.md)
+- [Procedura: Creare e usare assembly dalla riga di comando (Visual Basic)](how-to-create-and-use-assemblies-using-the-command-line.md)
+- [Procedura dettagliata: Incorporamento dei tipi da assembly gestiti in Visual Studio (Visual Basic)](walkthrough-embedding-types-from-managed-assemblies-in-vs.md)
+- [Procedura dettagliata: Incorporamento di informazioni sui tipi da assembly di Microsoft Office in Visual Studio (Visual Basic)](walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-vs.md)

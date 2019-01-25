@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: f14b6fd7-0966-4d87-bc89-54ef3a44a94a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 13f7e935ab999ccc3cd3ea1e308e8d686bed4171
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 95762cbda4a1a251dd64fd33b2815d474f1fe2b9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396935"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54685217"
 ---
 # <a name="garbage-collection-etw-events"></a>Eventi ETW di Garbage Collection
 <a name="top"></a> Questi eventi raccolgono informazioni relative alla Garbage Collection ai fini della diagnostica e del debug, tra cui stabilire quante volte è stato eseguito il processo di Garbage Collection, la quantità di memoria liberata durante la procedura di Garbage Collection e così via.  
@@ -366,5 +366,5 @@ ms.locfileid: "33396935"
   
  Nessun dato dell'evento.  
   
-## <a name="see-also"></a>Vedere anche  
- [Eventi ETW di CLR](../../../docs/framework/performance/clr-etw-events.md)
+## <a name="see-also"></a>Vedere anche
+- [Eventi ETW di CLR](../../../docs/framework/performance/clr-etw-events.md)

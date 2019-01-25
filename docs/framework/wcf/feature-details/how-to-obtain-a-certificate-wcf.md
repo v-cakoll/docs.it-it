@@ -1,17 +1,17 @@
 ---
-title: 'Procedura: ottenere un certificato (WCF)'
+title: 'Procedura: Ottenere un certificato (WCF)'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - certificates [WCF], obtaining
 ms.assetid: d53762fd-15ea-42dc-b0ea-6a6597aa23f7
-ms.openlocfilehash: 664eb62997123ea248b0b69700b86bf794646d4b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: cefea47d77fef9a59234584b02b03dca4cd99ebe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519222"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709442"
 ---
-# <a name="how-to-obtain-a-certificate-wcf"></a>Procedura: ottenere un certificato (WCF)
+# <a name="how-to-obtain-a-certificate-wcf"></a>Procedura: Ottenere un certificato (WCF)
 Per usare uno qualsiasi di Windows Communication Foundation (WCF) funzionalità di che utilizzano i certificati X.509, è necessario prima ottenere i certificati.  
   
 ### <a name="to-obtain-an-x509-certificate"></a>Per ottenere un certificato X.509  
@@ -27,6 +27,6 @@ Per usare uno qualsiasi di Windows Communication Foundation (WCF) funzionalità 
     > [!NOTE]
     >  Indipendentemente dall'approccio adottato, il destinatario della richiesta SOAP che contiene il certificato X.509 deve considerare attendibile il certificato X.509. Questo significa che il certificato X.509 o un'autorità emittente nella catena di certificati si trova nell'archivio certificati Persone attendibili e che il certificato X.509 non si trova nell'archivio Certificati non disponibili nell'elenco locale.  
   
-## <a name="see-also"></a>Vedere anche  
- [Uso di certificati](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [Procedura: Creare certificati temporanei da usare durante lo sviluppo](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)
+## <a name="see-also"></a>Vedere anche
+- [Uso di certificati](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Procedura: Creare certificati temporanei da usare durante lo sviluppo](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 532f69afd949971fbb4f56a8fdbcc6eab159446f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d1c214918b4a41ac989a3804c9146c4a54c5909f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33427707"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738209"
 ---
 # <a name="isymunmanagedwriterdefinedocument-method"></a>Metodo ISymUnmanagedWriter::DefineDocument
-Definisce un documento di origine. Per le lingue note, fornitori e i tipi di documento vengono forniti i GUID.  
+Definisce un documento di origine. Vengono forniti i GUID per i linguaggi conosciuti, fornitori e i tipi di documento.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,22 +43,22 @@ HRESULT DefineDocument(
  [in] Un puntatore a un `WCHAR` che definisce l'uniform resource locator (URL) che identifica il documento.  
   
  `language`  
- [in] Un puntatore a un GUID che definisce il linguaggio del documento.  
+ [in] Puntatore a un GUID che definisce la lingua del documento.  
   
  `languageVendor`  
  [in] Puntatore a un GUID che definisce l'identità del fornitore del linguaggio del documento.  
   
  `documentType`  
- [in] Puntatore a un GUID che definisce il tipo del documento.  
+ [in] Un puntatore a un GUID che definisce il tipo del documento.  
   
  `pRetVal`  
- [out] Un puntatore all'oggetto restituito [ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md) interfaccia.  
+ [out] Un puntatore al valore restituito [ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md) interfaccia.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK se il metodo ha esito positivo. in caso contrario, E_FAIL o un altro codice di errore.  
+ S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o qualche altro codice di errore.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** CorSym. idl, CorSym.h  
+ **Intestazione:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

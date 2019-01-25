@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XAML [WPF], TypeConverter class
 ms.assetid: f6313e4d-e89d-497d-ac87-b43511a1ae4b
-ms.openlocfilehash: 53e2d14cf331cf41b20300afbe8966538bf621ca
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 29286328c960707151fd5b6f2804346373000ad4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43407109"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54748077"
 ---
 # <a name="typeconverters-and-xaml"></a>TypeConverter e XAML
 Questo argomento illustra lo scopo della conversione del tipo string come funzionalità generale del linguaggio XAML. In .NET Framework, il <xref:System.ComponentModel.TypeConverter> classe svolge un ruolo particolare come parte dell'implementazione per una classe gestita personalizzata che può essere utilizzata come valore della proprietà utilizzo degli attributi XAML. Se si scrive una classe personalizzata e si desidera che le istanze della classe perché sia utilizzabile come valori di attributo impostabili XAML, si potrebbe essere necessario applicare una <xref:System.ComponentModel.TypeConverterAttribute> alla classe, scrivere una classe personalizzata <xref:System.ComponentModel.TypeConverter> classe o a entrambe.  
@@ -112,10 +112,10 @@ Questo argomento illustra lo scopo della conversione del tipo string come funzio
 ## <a name="applying-the-typeconverterattribute"></a>Applicazione di TypeConverterAttribute  
  Affinché il convertitore di tipi personalizzati da utilizzare come convertitore di tipi per una classe personalizzata da un processore XAML, è necessario applicare il [!INCLUDE[TLA#tla_netframewkattr](../../../../includes/tlasharptla-netframewkattr-md.md)] <xref:System.ComponentModel.TypeConverterAttribute> alla definizione della classe. L'oggetto <xref:System.ComponentModel.TypeConverterAttribute.ConverterTypeName%2A> specificato tramite l'attributo deve corrispondere al nome di tipo del convertitore dei tipi personalizzato. Se si applica questo attributo, quando un processore XAML gestisce valori per i quali il tipo di proprietà usa il tipo di classe personalizzato, può usare stringhe di input e restituire istanze di oggetti.  
   
- Si può anche fornire un convertitore dei tipi per le singole proprietà. Anziché applicare una [!INCLUDE[TLA#tla_netframewkattr](../../../../includes/tlasharptla-netframewkattr-md.md)] <xref:System.ComponentModel.TypeConverterAttribute> alla definizione della classe, applicarlo a una definizione di proprietà (la definizione principale, non il `get` / `set` implementazioni in esso contenuti). Il tipo della proprietà deve corrispondere al tipo elaborato dal convertitore dei tipi personalizzato. Se questo attributo viene applicato, quando un processore XAML gestisce i valori di tale proprietà, può elaborare stringhe di input e restituire istanze di oggetti. La tecnica del convertitore tipo per singole proprietà risulta particolarmente utile se si sceglie di usare un tipo di proprietà di Microsoft .NET Framework o da qualche altra libreria in cui è possibile controllare la definizione di classe e non è possibile applicare un <xref:System.ComponentModel.TypeConverterAttribute> non esiste.  
+ Si può anche fornire un convertitore dei tipi per le singole proprietà. Anziché applicare un [!INCLUDE[TLA#tla_netframewkattr](../../../../includes/tlasharptla-netframewkattr-md.md)] <xref:System.ComponentModel.TypeConverterAttribute> alla definizione della classe, applicarlo a una definizione della proprietà (la definizione principale, non le implementazioni di `get`/`set` al suo interno). Il tipo della proprietà deve corrispondere al tipo elaborato dal convertitore dei tipi personalizzato. Se questo attributo viene applicato, quando un processore XAML gestisce i valori di tale proprietà, può elaborare stringhe di input e restituire istanze di oggetti. La tecnica del convertitore tipo per singole proprietà risulta particolarmente utile se si sceglie di usare un tipo di proprietà di Microsoft .NET Framework o da qualche altra libreria in cui è possibile controllare la definizione di classe e non è possibile applicare un <xref:System.ComponentModel.TypeConverterAttribute> non esiste.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.ComponentModel.TypeConverter>  
- [Cenni preliminari su XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [Estensioni di markup e XAML WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)  
- [Descrizione dettagliata della sintassi XAML](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.ComponentModel.TypeConverter>
+- [Cenni preliminari su XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [Estensioni di markup e XAML WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [Descrizione dettagliata della sintassi XAML](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - controls [WPF], RichTextBox
 - RichTextBox control [WPF], how-to topics
 ms.assetid: 36e9f98e-f968-42d8-adb6-9e78c814aec0
-ms.openlocfilehash: 8542076ca9552ae0d5ace74f1a287f5cd39aff21
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 5eccafd3a7fb75f0458fa50b1c557f4b3ddb7c27
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864329"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720483"
 ---
 # <a name="richtextbox-how-to-topics"></a>Procedure relative al controllo RichTextBox
 In questa sezione vengono forniti esempi che illustrano come eseguire attività comuni usando il <xref:System.Windows.Controls.RichTextBox> controllo.  
@@ -22,9 +22,9 @@ In questa sezione vengono forniti esempi che illustrano come eseguire attività 
  [Modificare la selezione a livello di codice in un oggetto RichTextBox](../../../../docs/framework/wpf/controls/change-selection-in-a-richtextbox-programmatically.md)  
  [Salvare, caricare e stampare il contenuto di RichTextBox](../../../../docs/framework/wpf/controls/how-to-save-load-and-print-richtextbox-content.md)  
  [Posizionare un menu di scelta rapida personalizzato in un controllo RichTextBox](../../../../docs/framework/wpf/controls/how-to-position-a-custom-context-menu-in-a-richtextbox.md)  
- [Procedura: sostituire l'Host di contenuto predefinito per un controllo RichTextBox](https://msdn.microsoft.com/library/dec1b2ce-9ca5-4bb2-bf54-f8a80a3c8beb)  
+ [Procedura: Sostituire l'Host di contenuto predefinito per un controllo RichTextBox](https://msdn.microsoft.com/library/dec1b2ce-9ca5-4bb2-bf54-f8a80a3c8beb)  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Windows.Controls.TextBox>  
- [Documenti in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [Cenni preliminari sui documenti dinamici](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Windows.Controls.TextBox>
+- [Documenti in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [Cenni preliminari sui documenti dinamici](../../../../docs/framework/wpf/advanced/flow-document-overview.md)

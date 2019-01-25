@@ -13,23 +13,23 @@ helpviewer_keywords:
 - Drawing objects [WPF]
 - DrawingGroup objects [WPF]
 ms.assetid: 6ab1fe6b-3eed-4432-a248-b487e7234e5b
-ms.openlocfilehash: 8b142cfc65e39e48502cde263fea51378c47f43e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e70367d199ece207589d67ee38cb71f0cdda5b11
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556036"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54684114"
 ---
 # <a name="drawings"></a>Oggetti Drawing
-<xref:System.Windows.Media.Drawing> gli oggetti vengono utilizzati per creare in modo efficace le forme, immagini o testo. Disegni vengono utilizzati quando si disegna con un <xref:System.Windows.Media.DrawingBrush> o di programmazione con <xref:System.Windows.Media.Visual> oggetti.  
+<xref:System.Windows.Media.Drawing> gli oggetti vengono utilizzati per tracciare in modo efficiente forme, immagini o testo. In cui vengono utilizzati quando sul disegno con un <xref:System.Windows.Media.DrawingBrush> o di programmazione con <xref:System.Windows.Media.Visual> oggetti.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Cenni preliminari sugli oggetti Drawing](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)  
   [Procedure relative alle proprietà](../../../../docs/framework/wpf/graphics-multimedia/drawings-how-to-topics.md)  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Windows.Media.Drawing>  
- [Grafica bidimensionale e creazione di immagini](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [Cenni preliminari sul rendering della grafica WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [Cenni preliminari sugli oggetti Shape e sulle funzionalità di disegno di base di WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [Grafica e funzionalità multimediali](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Windows.Media.Drawing>
+- [Grafica bidimensionale e creazione di immagini](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [Cenni preliminari sul rendering della grafica WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [Cenni preliminari sugli oggetti Shape e sulle funzionalità di disegno di base di WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
+- [Grafica e funzionalità multimediali](../../../../docs/framework/wpf/graphics-multimedia/index.md)

@@ -1,15 +1,15 @@
 ---
-title: 'Client: channel factory e canali'
+title: 'Client: Channel factory e canali'
 ms.date: 03/30/2017
 ms.assetid: ef245191-fdab-4468-a0da-7c6f25d2110f
-ms.openlocfilehash: 3f045f56f7b73c5416e7a21a3afde29d22212d68
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 71ed9f9cbef35d14597ce6452d65bfca994dc23e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50182437"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720314"
 ---
-# <a name="client-channel-factories-and-channels"></a>Client: channel factory e canali
+# <a name="client-channel-factories-and-channels"></a>Client: Channel factory e canali
 In questo argomento viene illustrata la creazione di channel factory e canali.  
   
 ## <a name="channel-factories-and-channels"></a>Channel factory e canali  
@@ -73,5 +73,5 @@ this.socket.SendTo(
 );  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Sviluppo di canali](../../../../docs/framework/wcf/extending/developing-channels.md)
+## <a name="see-also"></a>Vedere anche
+- [Sviluppo di canali](../../../../docs/framework/wcf/extending/developing-channels.md)

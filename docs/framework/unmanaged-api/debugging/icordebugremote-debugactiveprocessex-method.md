@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e0e3cdbff5054ec990c40c333ed4bd4029a91f12
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: eb085cc486c307a308258709f4c58619597bc202
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420804"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54608388"
 ---
 # <a name="icordebugremotedebugactiveprocessex-method"></a>Metodo ICorDebugRemote::DebugActiveProcessEx
 Avvia un processo in un computer remoto all'interno del debugger.  
@@ -40,20 +40,20 @@ HRESULT DebugActiveProcessEx (
   
 #### <a name="parameters"></a>Parametri  
  `pRemoteTarget`  
- [in] Puntatore a un [ICorDebugRemoteTarget (interfaccia)](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md). Questo parametro viene utilizzato per determinare il computer in cui viene eseguito il processo.  
+ [in] Puntatore a un [interfaccia ICorDebugRemoteTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md). Questo parametro viene utilizzato per determinare la macchina in cui viene eseguito il processo.  
   
  `id`  
- [in] L'ID del processo a cui il debugger deve essere collegato.  
+ [in] L'ID del processo a cui il debugger deve essere allegato.  
   
  `win32Attach`  
- [in] `true` se il debugger deve comportarsi come il debugger di Win32 per il processo e inviare i callback non gestiti; in caso contrario, `false`.  
+ [in] `true` se il debugger deve comportarsi come il debugger di Win32 per il processo e inviare il callback non gestite; in caso contrario, `false`.  
   
  `ppProcess`  
  [out] Un puntatore all'indirizzo di un oggetto "ICorDebugProcess" che rappresenta il processo a cui è stato connesso il debugger.  
   
 ## <a name="return-value"></a>Valore restituito  
  S_OK  
- È stato collegato al processo nel computer remoto.  
+ È stato collegato il processo nel computer remoto.  
   
  E_FAIL (o altri codici E_ restituiti)  
  Impossibile connettersi al processo nel computer remoto.  
@@ -62,16 +62,16 @@ HRESULT DebugActiveProcessEx (
  Debug in modalità mista non è supportato in Silverlight.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
  **Versioni di .NET framework:** 4.5, 4, 3.5 SP1  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ICorDebugRemote](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-interface.md)  
- [Interfaccia ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)  
-    
- [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ICorDebugRemote](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-interface.md)
+- [Interfaccia ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+
+- [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 6a14125f-1a8d-41a1-8a32-659ca0ad12de
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b713eefa4f23aec34b5f55c0c3457381f54ef931
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: de8569c55ef50e3f18d084f7d7ad60c733e58e50
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394621"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623105"
 ---
 # <a name="ltfieldgt-element-net-native"></a>Elemento &lt;Field&gt; (.NET Native)
 Applica i criteri di reflection di runtime a un campo.  
@@ -60,7 +60,7 @@ Applica i criteri di reflection di runtime a un campo.
 ## <a name="remarks"></a>Note  
  Se i criteri di un campo non sono definiti esplicitamente, l'evento eredita i criteri di runtime dell'elemento padre.  
   
-## <a name="see-also"></a>Vedere anche  
- [Elementi direttiva di runtime](../../../docs/framework/net-native/runtime-directive-elements.md)  
- [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [Impostazioni dei criteri delle direttive di runtime](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+## <a name="see-also"></a>Vedere anche
+- [Elementi direttiva di runtime](../../../docs/framework/net-native/runtime-directive-elements.md)
+- [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Impostazioni dei criteri delle direttive di runtime](../../../docs/framework/net-native/runtime-directive-policy-settings.md)

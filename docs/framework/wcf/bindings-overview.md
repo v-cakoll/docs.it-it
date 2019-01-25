@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
-ms.openlocfilehash: f171a6380840fe2cb828ee06985317f002b353de
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 7d617400fe5c07e8c9754e322960f31a350f62e5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397254"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54657415"
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Panoramica sulle associazioni di Windows Communication Foundation
 Le associazioni sono oggetti che vengono utilizzati per specificare i dettagli di comunicazione necessarie per connettersi all'endpoint di un servizio Windows Communication Foundation (WCF). Ogni endpoint in un servizio WCF richiede un'associazione essere specificato bene. Questo argomento descrive i tipi dei dettagli di comunicazione definiti dalle associazioni, gli elementi di un'associazione, le associazioni incluse in WCF e come specificare un'associazione per un endpoint.  
@@ -32,9 +32,9 @@ Le associazioni sono oggetti che vengono utilizzati per specificare i dettagli d
 ## <a name="system-provided-bindings"></a>Associazioni fornite dal sistema  
  Le informazioni in un'associazione possono essere complesse e alcune impostazioni potrebbero non essere compatibili con altre. Per questo motivo, WCF include un set di associazioni fornite dal sistema. Queste associazioni sono progettate per soddisfare la maggior parte dei requisiti delle applicazioni. Le classi seguenti rappresentano alcuni esempi di associazioni fornite dal sistema:  
   
--   <xref:System.ServiceModel.BasicHttpBinding>: associazione di protocollo HTTP adatta alla connessione a servizi Web conformi alla specifica WS-I Basic Profile (ad esempio, servizi basati sui servizi Web ASP.NET).  
+-   <xref:System.ServiceModel.BasicHttpBinding>: Un'associazione di protocollo HTTP adatta alla connessione ai servizi Web conformi a WS-I specifica Basic Profile (ad esempio, servizi Web ASP.NET basata sui servizi).  
   
--   <xref:System.ServiceModel.WSHttpBinding>: associazione interoperabile adatta alla connessione agli endpoint conformi ai protocolli WS-*.  
+-   <xref:System.ServiceModel.WSHttpBinding>: Un'associazione interoperativa adatta per la connessione agli endpoint conformi a WS-* protocolli.  
   
 -   <xref:System.ServiceModel.NetNamedPipeBinding>: Usa il [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] per connettersi agli altri endpoint WCF nello stesso computer.  
   
@@ -57,5 +57,5 @@ Le associazioni sono oggetti che vengono utilizzati per specificare i dettagli d
 ## <a name="code-and-configuration"></a>Codice e configurazione  
  È possibile definire associazioni in due modi, tramite il codice o la configurazione. Questi due approcci non variano a seconda che si stia usando un'associazione fornita dal sistema o un'associazione personalizzata. In generale, l'uso del codice garantisce il controllo completo sulla definizione di un'associazione in fase di progettazione. Usando la configurazione, d'altra parte, consente a un amministratore di sistema o l'utente di un servizio WCF o un client per modificare i parametri di un'associazione senza dover ricompilare l'applicazione di servizio. Questa flessibilità è spesso opportuno poiché non è possibile stimare i requisiti specifici del computer in cui è necessario distribuire un'applicazione WCF. Se l'associazione e le informazioni di indirizzo vengono tenute fuori dal codice, esse possono cambiare senza che sia necessario ricompilare o ridistribuire l'applicazione. Si noti che le associazioni definite in codice vengono create dopo le associazioni specificate in configurazione, il che consente alle associazioni definite nel codice di sovrascrivere qualsiasi associazione definita nella configurazione.  
   
-## <a name="see-also"></a>Vedere anche  
- [Uso di associazioni per configurare servizi e client](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+## <a name="see-also"></a>Vedere anche
+- [Uso di associazioni per configurare servizi e client](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)

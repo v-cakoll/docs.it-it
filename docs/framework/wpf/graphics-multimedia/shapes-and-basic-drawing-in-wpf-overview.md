@@ -12,12 +12,12 @@ helpviewer_keywords:
 - vectors [WPF], drawing
 - Shape objects [WPF]
 ms.assetid: 66d7a6d6-e3b6-47bc-8dfe-8a1b26f7d901
-ms.openlocfilehash: 47df352c3b001f088f34ea057b34698efc4f4b53
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: e3a18d1cf788dfa8f2a9b05077b30af7eeabe584
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086804"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54665903"
 ---
 # <a name="shapes-and-basic-drawing-in-wpf-overview"></a>Cenni preliminari sugli oggetti Shape e sulle funzionalità di disegno di base di WPF
 Questo argomento offre una panoramica di come disegnare con <xref:System.Windows.Shapes.Shape> oggetti. Oggetto <xref:System.Windows.Shapes.Shape> è un tipo di <xref:System.Windows.UIElement> che consente di disegnare una forma sullo schermo. Poiché si tratta di elementi dell'interfaccia utente <xref:System.Windows.Shapes.Shape> oggetti possono essere utilizzati all'interno di <xref:System.Windows.Controls.Panel> elementi e la maggior parte dei controlli.  
@@ -155,13 +155,13 @@ Data="M 100,200 C 100,25 400,350 400,175 H 280" />
   
  La proprietà Stretch accetta uno dei valori seguenti:  
   
--   <xref:System.Windows.Media.Stretch.None>: il <xref:System.Windows.Shapes.Shape> contenuto dell'oggetto non viene allungato.  
+-   <xref:System.Windows.Media.Stretch.None>: Il <xref:System.Windows.Shapes.Shape> contenuto dell'oggetto non viene allungato.  
   
--   <xref:System.Windows.Media.Stretch.Fill>: il <xref:System.Windows.Shapes.Shape> contenuto dell'oggetto viene allungato per riempire lo spazio del layout.  Le proporzioni non vengono mantenute.  
+-   <xref:System.Windows.Media.Stretch.Fill>: Il <xref:System.Windows.Shapes.Shape> contenuto dell'oggetto viene allungato per riempire lo spazio del layout.  Le proporzioni non vengono mantenute.  
   
--   <xref:System.Windows.Media.Stretch.Uniform>: il <xref:System.Windows.Shapes.Shape> contenuto dell'oggetto viene allungato il più possibile per riempire lo spazio del layout mantenendo le proporzioni originali.  
+-   <xref:System.Windows.Media.Stretch.Uniform>: Il <xref:System.Windows.Shapes.Shape> contenuto dell'oggetto viene allungato il più possibile per riempire lo spazio del layout mantenendo le proporzioni originali.  
   
--   <xref:System.Windows.Media.Stretch.UniformToFill>: il <xref:System.Windows.Shapes.Shape> contenuto dell'oggetto viene allungato per riempire completamente lo spazio del layout mantenendo le proporzioni originali.  
+-   <xref:System.Windows.Media.Stretch.UniformToFill>: Il <xref:System.Windows.Shapes.Shape> contenuto dell'oggetto viene allungato per riempire completamente lo spazio del layout mantenendo le proporzioni originali.  
   
  Si noti che, quando un <xref:System.Windows.Shapes.Shape> contenuto di un oggetto viene allungato, la <xref:System.Windows.Shapes.Shape> struttura dell'oggetto viene disegnata dopo l'allungamento.  
   
@@ -214,9 +214,9 @@ myPolygon.StrokeThickness = 2;
   
  Negli esempi precedenti è stata applicata una sola trasformazione a ogni oggetto Shape. Per applicare più trasformazioni a una forma (o qualsiasi altro elemento dell'interfaccia utente), usare un <xref:System.Windows.Media.TransformGroup>.  
   
-## <a name="see-also"></a>Vedere anche  
- [Grafica bidimensionale e creazione di immagini](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [Cenni sul disegno con colori a tinta unita e sfumature](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
- [Cenni preliminari sulle classi Geometry](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
- [Procedura dettagliata: Prima applicazione desktop WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
- [Cenni preliminari sull'animazione](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+## <a name="see-also"></a>Vedere anche
+- [Grafica bidimensionale e creazione di immagini](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [Cenni sul disegno con colori a tinta unita e sfumature](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
+- [Cenni preliminari sulle classi Geometry](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)
+- [Procedura dettagliata: Prima applicazione desktop WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)
+- [Cenni preliminari sull'animazione](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)

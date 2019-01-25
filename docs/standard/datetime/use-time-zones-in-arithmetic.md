@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: usare fusi orari nella data e ora aritmetico'
+title: 'Procedura: Usare fusi orari nella data e ora aritmetico'
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 83dd898d-1338-415d-8cd6-445377ab7871
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9c9f7b2623b4ed766fb44b46c3f54caa962c07eb
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 053ca2d10deadf58d5bb8b4628fb5dee815d82c8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041522"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54682693"
 ---
-# <a name="how-to-use-time-zones-in-date-and-time-arithmetic"></a>Procedura: usare fusi orari nella data e ora aritmetico
+# <a name="how-to-use-time-zones-in-date-and-time-arithmetic"></a>Procedura: Usare fusi orari nella data e ora aritmetico
 
 In genere, quando si esegue Data e ora utilizzando aritmetica <xref:System.DateTime> o <xref:System.DateTimeOffset> valori, il risultato non riflette eventuali regole di rettifica del fuso orario. Questo vale anche quando il fuso orario del valore di data e ora è chiaramente identificabile (ad esempio, quando la <xref:System.DateTime.Kind%2A> è impostata su <xref:System.DateTimeKind.Local>). In questo argomento viene illustrato come eseguire operazioni aritmetiche su valori di data e ora appartenenti a un determinato fuso orario. I risultati delle operazioni aritmetiche rifletteranno le regole di rettifica del fuso orario.
 
@@ -66,5 +66,5 @@ L'esempio presenta i requisiti seguenti:
 
 ## <a name="see-also"></a>Vedere anche
 
-* [Date, ore e fusi orari](../../../docs/standard/datetime/index.md)
-* [Esecuzione di operazioni aritmetiche con date e ore](../../../docs/standard/datetime/performing-arithmetic-operations.md)
+- [Date, ore e fusi orari](../../../docs/standard/datetime/index.md)
+- [Esecuzione di operazioni aritmetiche con date e ore](../../../docs/standard/datetime/performing-arithmetic-operations.md)

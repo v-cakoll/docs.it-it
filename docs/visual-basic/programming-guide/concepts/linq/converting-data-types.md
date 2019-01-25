@@ -1,15 +1,15 @@
 ---
-title: La conversione dei tipi di dati (Visual Basic)
+title: Conversione dei tipi di dati (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 9b0cf1ab-de48-4c6e-9f00-05b40fade46e
-ms.openlocfilehash: 9821b2d6caad8feeac856185b92518c25de88da3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3845c14bc7390d486668916fe7d5d5ad840b7990
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643750"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653736"
 ---
-# <a name="converting-data-types-visual-basic"></a>La conversione dei tipi di dati (Visual Basic)
+# <a name="converting-data-types-visual-basic"></a>Conversione dei tipi di dati (Visual Basic)
 I metodi di conversione modificano il tipo degli oggetti di input.  
   
  Le operazioni di conversione nelle query LINQ sono utili in un'ampia gamma di applicazioni. Ecco alcuni esempi:  
@@ -37,7 +37,7 @@ I metodi di conversione modificano il tipo degli oggetti di input.
 |ToLookup|Inserisce gli elementi in un oggetto <xref:System.Linq.Lookup%602>, un dizionario uno-a-molti, sulla base di una funzione del selettore di chiavi. Questo metodo forza l'esecuzione di query.|Non applicabile.|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|  
   
 ## <a name="query-expression-syntax-example"></a>Esempio di sintassi delle espressioni di query  
- Nell'esempio di codice viene illustrato come utilizzare il `From As` clausola per eseguire il cast di un tipo a un sottotipo prima di accedere a un membro che è disponibile solo per il sottotipo.  
+ Il codice seguente viene illustrato come utilizzare il `From As` clausola per eseguire il cast di un tipo a un sottotipo prima di accedere a un membro che è disponibile solo nel sottotipo.  
   
 ```vb  
 Class Plant  
@@ -77,8 +77,8 @@ Sub Cast()
 End Sub  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Linq>  
- [Panoramica degli operatori query standard (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [Clausola From](../../../../visual-basic/language-reference/queries/from-clause.md)  
- [Procedura: eseguire Query di ArrayList con LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Linq>
+- [Panoramica degli operatori query standard (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Clausola From](../../../../visual-basic/language-reference/queries/from-clause.md)
+- [Procedura: Eseguire una query su un ArrayList con LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)

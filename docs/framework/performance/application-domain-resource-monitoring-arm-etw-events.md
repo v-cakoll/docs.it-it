@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d38ff268-a2ee-434e-b504-d570880e0289
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 47ab6e52278c77156e828869dd23575561879bff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8442b8723476984b90f740beac912688719f1791
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398183"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54689835"
 ---
 # <a name="application-domain-resource-monitoring-arm-etw-events"></a>Eventi ETW di monitoraggio delle risorse del dominio applicazione (ARM)
 <a name="top"></a> Questi eventi forniscono informazioni di diagnostica dettagliate sullo stato di un dominio applicazione. È possibile usare questi eventi o la funzionalità di monitoraggio delle risorse del dominio applicazione (ARM) per ottenere le stesse informazioni.  
@@ -156,5 +156,5 @@ ms.locfileid: "33398183"
 |AppDomainID|win:UInt64|L’identificatore di dominio applicazione.|  
 |ClrInstanceID|win:UInt16|ID univoco per l'istanza di CLR o CoreCLR.|  
   
-## <a name="see-also"></a>Vedere anche  
- [Eventi ETW di CLR](../../../docs/framework/performance/clr-etw-events.md)
+## <a name="see-also"></a>Vedere anche
+- [Eventi ETW di CLR](../../../docs/framework/performance/clr-etw-events.md)

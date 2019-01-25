@@ -7,12 +7,12 @@ helpviewer_keywords:
 - rapid application development (RAD), My.Settings
 - My.Resources object [Visual Basic], developing applications
 ms.assetid: 68284ab1-b685-4814-a2a4-01ae40445ff8
-ms.openlocfilehash: 7dbb15c43d044e21c9823c4a1652b0408006e5c3
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 4150d2f9634045351cb52e02c4f4807e55d118e6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44032767"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717902"
 ---
 # <a name="rapid-application-development-with-myresources-and-mysettings-visual-basic"></a>Sviluppo rapido di applicazioni con My.Resources e My.Settings (Visual Basic)
 Il `My.Resources` oggetto consente di accedere alle risorse dell'applicazione e consente di recuperare in modo dinamico le risorse per l'applicazione.  
@@ -26,7 +26,7 @@ Il `My.Resources` oggetto consente di accedere alle risorse dell'applicazione e 
   
  Analogamente, il `My.Settings` oggetto consente di accedere alle impostazioni dell'applicazione e consente di archiviare e recuperare le impostazioni delle proprietà e altre informazioni per l'applicazione in modo dinamico. Per altre informazioni, vedere [oggetto My. Resources](../../../visual-basic/language-reference/objects/my-resources-object.md) e [oggetto My. Settings](../../../visual-basic/language-reference/objects/my-settings-object.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Oggetto My.Resources](../../../visual-basic/language-reference/objects/my-resources-object.md)  
- [Oggetto My.Settings](../../../visual-basic/language-reference/objects/my-settings-object.md)  
- [Accesso alle impostazioni dell'applicazione](../../../visual-basic/developing-apps/programming/app-settings/index.md)
+## <a name="see-also"></a>Vedere anche
+- [Oggetto My.Resources](../../../visual-basic/language-reference/objects/my-resources-object.md)
+- [Oggetto My.Settings](../../../visual-basic/language-reference/objects/my-settings-object.md)
+- [Accesso alle impostazioni dell'applicazione](../../../visual-basic/developing-apps/programming/app-settings/index.md)

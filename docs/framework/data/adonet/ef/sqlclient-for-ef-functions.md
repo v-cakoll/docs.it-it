@@ -2,19 +2,19 @@
 title: SqlClient per funzioni Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 71a3613c-b94e-494c-8ad8-90cf86ae0b87
-ms.openlocfilehash: 99283b75704aaa2f80e49b0495d1cf950f6097df
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: dc111d3f8321170a02c70f168bf8ae5c2a3521e8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32764671"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730633"
 ---
 # <a name="sqlclient-for-entity-framework-functions"></a>SqlClient per funzioni Entity Framework
 Il provider di dati .NET Framework per SQL Server (SqlClient) per Entity Framework fornisce un set di funzioni per l'esecuzione di calcoli matematici e di aggregazione nonché funzioni per eseguire operazioni `System.DateTime` e `string`. Tali funzioni si trovano nello spazio dei nomi `SQLServer`.  
   
  Per un elenco di funzioni che dovrebbero funzionare con qualsiasi provider, vedere [funzioni canoniche](../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md).  
   
- Per informazioni sulla mappa funzioni canoniche come funzioni SQL Server, vedere [concettuale canoniche del modello per il Mapping di funzioni di SQL Server](../../../../../docs/framework/data/adonet/ef/conceptual-model-canonical-to-sql-server-functions-mapping.md).  
+ Per informazioni sui mapping di funzioni canoniche a funzioni SQL Server, vedere [concettuale canoniche del modello per il Mapping di SQL Server funzioni](../../../../../docs/framework/data/adonet/ef/conceptual-model-canonical-to-sql-server-functions-mapping.md).  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Mapping di funzioni canoniche del modello concettuale a funzioni SQL Server](../../../../../docs/framework/data/adonet/ef/conceptual-model-canonical-to-sql-server-functions-mapping.md)  
@@ -29,6 +29,6 @@ Il provider di dati .NET Framework per SQL Server (SqlClient) per Entity Framewo
   
  [Funzioni di sistema](../../../../../docs/framework/data/adonet/ef/system-functions.md)  
   
-## <a name="see-also"></a>Vedere anche  
- [Riferimento a Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
- [Panoramica di Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+## <a name="see-also"></a>Vedere anche
+- [Riferimento a Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Panoramica di Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

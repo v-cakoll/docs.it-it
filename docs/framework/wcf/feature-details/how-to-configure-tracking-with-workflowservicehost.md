@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: configurare il rilevamento con WorkflowServiceHost'
+title: 'Procedura: Configurare il rilevamento con WorkflowServiceHost'
 ms.date: 03/30/2017
 ms.assetid: ed1485fe-7529-4351-bca3-8bb915260b17
-ms.openlocfilehash: 56b9f95019995cdb55ec36769ff179ce1125c4b6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8ed8775a8eb13a8e69566c1d413dcd2eba6d8b6c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33490734"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54577569"
 ---
-# <a name="how-to-configure-tracking-with-workflowservicehost"></a>Procedura: configurare il rilevamento con WorkflowServiceHost
+# <a name="how-to-configure-tracking-with-workflowservicehost"></a>Procedura: Configurare il rilevamento con WorkflowServiceHost
 In questo argomento viene illustrato come configurare il rilevamento di un flusso di lavoro [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] ospitato in <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Viene configurato tramite un file Web.config specificando un comportamento del servizio.  
   
 ### <a name="configure-tracking-in-configuration"></a>Configurare il rilevamento nella configurazione  
@@ -27,7 +27,7 @@ In questo argomento viene illustrato come configurare il rilevamento di un fluss
     ```  
   
     > [!NOTE]
-    >  L'esempio di configurazione precedente usa la configurazione semplificata. Per altre informazioni, vedere [configurazione semplificata](../../../../docs/framework/wcf/simplified-configuration.md).  
+    >  L'esempio di configurazione precedente usa la configurazione semplificata. Per altre informazioni, vedere [Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md).  
   
      L'esempio di configurazione precedente aggiunge un elemento <xref:System.Activities.Tracking.EtwTrackingParticipant> e specifica un nome del profilo di rilevamento. I profili di rilevamento vengono creati in un elemento <`trackingProfile`> all'interno di un elemento <`tracking`>. Il profilo di rilevamento contiene query di rilevamento che consentono a un partecipante del rilevamento di eseguire la sottoscrizione agli eventi del flusso di lavoro generati quando lo stato di un'istanza del flusso di lavoro viene modificato al runtime. Nell'esempio seguente viene illustrato come creare un profilo di rilevamento.  
   
@@ -50,9 +50,9 @@ In questo argomento viene illustrato come configurare il rilevamento di un fluss
     </system.serviceModel>  
     ```  
   
-     Per ulteriori informazioni sui profili di rilevamento, vedere [profili di rilevamento](../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).  
+     Per altre informazioni sui profili di rilevamento, vedere [profili di rilevamento](../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).  
   
-     Per ulteriori informazioni sul rilevamento in generale, vedere [flusso di lavoro rilevamento e traccia](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md).  
+     Per altre informazioni sul rilevamento in generale, vedere [flusso di lavoro di rilevamento e traccia](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md).  
   
 ### <a name="configure-tracking-in-code"></a>Configurare il rilevamento nel codice  
   
@@ -64,11 +64,11 @@ In questo argomento viene illustrato come configurare il rilevamento di un fluss
   
      L'esempio di codice precedente aggiunge un elemento <xref:System.Activities.Tracking.EtwTrackingParticipant> e specifica un nome del profilo di rilevamento. I profili di rilevamento vengono creati in un elemento <`trackingProfile`> all'interno di un elemento <`tracking`> come illustrato nella sezione precedente.  
   
-     Per ulteriori informazioni sui profili di rilevamento, vedere [profili di rilevamento](../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).  
+     Per altre informazioni sui profili di rilevamento, vedere [profili di rilevamento](../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).  
   
-     Per ulteriori informazioni sul rilevamento in generale, vedere [flusso di lavoro rilevamento e traccia](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md). Per un esempio di configurazione del rilevamento a livello di codice vedere [configurazione del rilevamento per un flusso di lavoro](../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md).  
+     Per altre informazioni sul rilevamento in generale, vedere [flusso di lavoro di rilevamento e traccia](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md). Per un esempio di configurazione di rilevamento a livello di codice, vedere [configurazione del rilevamento per un flusso di lavoro](../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Configurazione semplificata per servizi WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)  
- [Servizi flusso di lavoro](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
- [Profili di rilevamento](../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+## <a name="see-also"></a>Vedere anche
+- [Configurazione semplificata per servizi WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)
+- [Servizi flusso di lavoro](../../../../docs/framework/wcf/feature-details/workflow-services.md)
+- [Profili di rilevamento](../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

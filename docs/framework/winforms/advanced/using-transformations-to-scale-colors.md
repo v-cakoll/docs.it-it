@@ -8,17 +8,17 @@ helpviewer_keywords:
 - transformations [Windows Forms], for scaling colors
 - colors [Windows Forms], scaling
 ms.assetid: df23c887-7fd6-4b15-ad94-e30b5bd4b849
-ms.openlocfilehash: 6cfe90cef42086672990c45c99961db3d29c3ff3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ff6172d571a7ca449ab21d1f7a7f9a699bf40f8e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33525967"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54737975"
 ---
 # <a name="using-transformations-to-scale-colors"></a>Utilizzo delle trasformazioni per scalare i colori
-Una trasformazione di ridimensionamento Moltiplica uno o più di quattro componenti di colore da un numero. Le voci della matrice di colori che rappresentano l'adattamento sono indicate nella tabella riportata di seguito.  
+Una trasformazione di ridimensionamento Moltiplica uno o più di quattro componenti di colore da un numero. Le voci di matrice di colore che rappresentano la scalabilità sono indicate nella tabella seguente.  
   
-|Componente scalabilità|Voce della matrice|  
+|Componente di scalabilità|Voce della matrice|  
 |----------------------------|------------------|  
 |Rosso|[0][0]|  
 |Verde|[1][1]|  
@@ -26,7 +26,7 @@ Una trasformazione di ridimensionamento Moltiplica uno o più di quattro compone
 |Alfa|[3][3]|  
   
 ## <a name="scaling-one-color"></a>Adattamento di un colore  
- Nell'esempio seguente viene costruito un <xref:System.Drawing.Image> oggetto dal file Colorbars2. Il codice quindi ridimensiona il componente blu di ciascun pixel nell'immagine di un fattore pari a 2. L'immagine originale viene disegnato accanto all'immagine trasformata.  
+ Nell'esempio seguente si costruisce un <xref:System.Drawing.Image> oggetto Colorbars2 nel file. Il codice quindi ridimensiona il componente blu di ciascun pixel nell'immagine di un fattore pari a 2. Accanto all'immagine trasformata viene disegnata l'immagine originale.  
   
  [!code-csharp[System.Drawing.RecoloringImages#41](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#41)]
  [!code-vb[System.Drawing.RecoloringImages#41](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#41)]  
@@ -35,9 +35,9 @@ Una trasformazione di ridimensionamento Moltiplica uno o più di quattro compone
   
  ![Scalare i colori](../../../../docs/framework/winforms/advanced/media/colortrans3.png "colortrans3")  
   
- Nella tabella seguente sono elencati i vettori di colore per le quattro barre prima e dopo il ridimensionamento blu. Si noti che il componente blu nella quarta barra di colore è passato da 0,8 a 0,6. Ciò accade perché [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] mantiene solo la parte frazionaria del risultato. Ad esempio, (2)(0.8) = 1.6, e la parte frazionaria 1.6 è 0,6. Mantenendo solo la parte frazionaria assicura che il risultato è sempre nell'intervallo [0, 1].  
+ La tabella seguente elenca i vettori di colore per le quattro barre prima e dopo il ridimensionamento blu. Si noti che il componente blu nella barra dei colori quarto passato da 0,8 a 0,6. Infatti, [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] mantiene solo la parte frazionaria del risultato. Ad esempio, (2)(0.8) Version=1.6, e la parte frazionaria di 1.6 è 0,6. Mantenendo solo la parte frazionaria garantisce che il risultato è sempre nell'intervallo [0, 1].  
   
-|Originale|Scala|  
+|Originale|Scalabilità|  
 |--------------|------------|  
 |(0.4, 0.4, 0.4, 1)|(0.4, 0.4, 0.8, 1)|  
 |(0.4, 0.2, 0.2, 1)|(0.4, 0.2, 0.4, 1)|  
@@ -45,7 +45,7 @@ Una trasformazione di ridimensionamento Moltiplica uno o più di quattro compone
 |(0.4, 0.4, 0.8, 1)|(0.4, 0.4, 0.6, 1)|  
   
 ## <a name="scaling-multiple-colors"></a>Adattamento dei colori più  
- Nell'esempio seguente viene costruito un <xref:System.Drawing.Image> oggetto dal file Colorbars2. Il codice quindi ridimensiona i componenti rossi, verde e blu di ciascun pixel dell'immagine. I componenti rossi sono ridotte del 25% e vengono ridimensionati i componenti di colore verde del 35% vengono ridimensionati i componenti di colore blu del 50%.  
+ Nell'esempio seguente si costruisce un <xref:System.Drawing.Image> oggetto Colorbars2 nel file. Il codice quindi ridimensiona i componenti rossi, verdi e blu di ogni pixel nell'immagine. I componenti rosso sono stati ridotti del 25%, i componenti verdi sono stati ridotti del 35% e i componenti blu sono stati ridotti al 50%.  
   
  [!code-csharp[System.Drawing.RecoloringImages#42](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#42)]
  [!code-vb[System.Drawing.RecoloringImages#42](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#42)]  
@@ -54,17 +54,17 @@ Una trasformazione di ridimensionamento Moltiplica uno o più di quattro compone
   
  ![Scalare i colori](../../../../docs/framework/winforms/advanced/media/colortrans4.png "colortrans4")  
   
- Nella tabella seguente sono elencati i vettori di colore per le quattro barre prima e dopo il ridimensionamento rosso, verde e blu.  
+ La tabella seguente elenca i vettori di colore per le quattro barre prima e dopo il ridimensionamento rosso, verde e blu.  
   
-|Originale|Scala|  
+|Originale|Scalabilità|  
 |--------------|------------|  
 |(0.6, 0.6, 0.6, 1)|(0.45, 0.39, 0.3, 1)|  
 |(0, 1, 1, 1)|(0, 0.65, 0.5, 1)|  
 |(1, 1, 0, 1)|(0.75, 0.65, 0, 1)|  
 |(1, 0, 1, 1)|(0.75, 0, 0.5, 1)|  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Drawing.Imaging.ColorMatrix>  
- <xref:System.Drawing.Imaging.ImageAttributes>  
- [Grafica e disegno in Windows Form](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
- [Ricolorazione di immagini](../../../../docs/framework/winforms/advanced/recoloring-images.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Drawing.Imaging.ColorMatrix>
+- <xref:System.Drawing.Imaging.ImageAttributes>
+- [Grafica e disegno in Windows Form](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
+- [Ricolorazione di immagini](../../../../docs/framework/winforms/advanced/recoloring-images.md)

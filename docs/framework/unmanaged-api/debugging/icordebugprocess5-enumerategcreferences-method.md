@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2b5f66099eb4b1cb84d9911567cac4255bf20480
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 44093f84ea644757a5f5c73da54ce5bcfa717a4e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421398"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728088"
 ---
 # <a name="icordebugprocess5enumerategcreferences-method"></a>Metodo ICorDebugProcess5::EnumerateGCReferences
 Ottiene un enumeratore per tutti gli oggetti che devono essere sottoposto a garbage collection in un processo.  
@@ -38,23 +38,23 @@ HRESULT EnumerateGCReferences(
   
 #### <a name="parameters"></a>Parametri  
  `enumerateWeakReferences`  
- [in] Valore booleano che indica se i riferimenti deboli sono anche da enumerare. Se `enumerateWeakReferences` è `true`, `ppEnum` enumeratore include riferimenti forti e riferimenti deboli. Se `enumerateWeakReferences` è `false`, l'enumeratore include solo i riferimenti forti.  
+ [in] Valore booleano che indica se i riferimenti deboli sono anche da enumerare. Se `enumerateWeakReferences` viene `true`, il `ppEnum` enumeratore include riferimenti forti e i riferimenti deboli. Se `enumerateWeakReferences` è `false`, l'enumeratore include solo i riferimenti sicuri.  
   
  `ppEnum`  
- [out] Un puntatore all'indirizzo di un [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) che è un enumeratore per gli oggetti da sottoporre a garbage collection.  
+ [out] Un puntatore all'indirizzo di un [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) vale a dire un enumeratore per gli oggetti per essere sottoposto a garbage collection.  
   
 ## <a name="remarks"></a>Note  
- Questo metodo fornisce un modo per determinare la catena del completa per qualsiasi oggetto gestito in un processo e può essere utilizzato per stabilire perché un oggetto è ancora attivo.  
+ Questo metodo fornisce un modo per determinare la catena di definizione radice completa per qualsiasi oggetto gestito in un processo e può essere utilizzato per determinare il motivo per cui un oggetto è ancora attivo.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ICorDebugProcess5](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)  
- [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ICorDebugProcess5](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
+- [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

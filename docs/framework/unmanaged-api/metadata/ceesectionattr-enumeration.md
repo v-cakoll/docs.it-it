@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9b7f70162ae368934e1383683672fed86f9ce18c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5e88dd0053ec7562d6223c18479f4a4fadc68c12
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441413"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701794"
 ---
 # <a name="ceesectionattr-enumeration"></a>Enumerazione CeeSectionAttr
-Fornisce valori che specificano gli attributi di una sezione per l'utilizzo da parte di [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interfaccia.  
+Fornisce i valori che specificano gli attributi di una sezione per l'utilizzo da parte di [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interfaccia.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,18 +44,18 @@ typedef enum  {
 |Membro|Descrizione|  
 |------------|-----------------|  
 |`sdNone`|Sezione non dispone di attributi.|  
-|`sdReadOnly`|Sezione contiene dati inizializzati che possono essere letto solo, non è stato aggiornato.|  
-|`sdReadWrite`|Sezione contiene dati inizializzati che possono essere letti o aggiornati.|  
+|`sdReadOnly`|Sezione contiene i dati inizializzati che possono essere solo letto, non aggiornati.|  
+|`sdReadWrite`|Sezione contiene i dati inizializzati che possono essere letti o aggiornati.|  
 |`sdExecute`|Sezione contiene codice eseguibile che può essere letto ed eseguito.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
- **Libreria:** inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Enumerazioni dei metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Vedere anche
+- [Enumerazioni dei metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

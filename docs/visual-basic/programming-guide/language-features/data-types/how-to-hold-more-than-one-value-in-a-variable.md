@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: inserire più valori in una variabile (Visual Basic)'
+title: 'Procedura: Inserire più valori in una variabile (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - classes [Visual Basic], composite data types
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - arrays [Visual Basic], compilation errors
 - types [Visual Basic], composite
 ms.assetid: 5fe0e558-aac2-4a40-b7f2-7cfea7336917
-ms.openlocfilehash: 781f56c7e710f5130d821ca4796398379dfa4c6e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: c6cd9c61c332fc98e99334143b50e395f4eabf47
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517963"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671499"
 ---
-# <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>Procedura: inserire più valori in una variabile (Visual Basic)
+# <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>Procedura: Inserire più valori in una variabile (Visual Basic)
 Una variabile contiene più di un valore se si dichiara che questo sia di un *tipo di dati composito*.  
   
  [Tipi di dati compositi](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md) includono matrici, strutture e classi. Una variabile di un tipo di dati composito può contenere una combinazione di tipi di dati elementari e altri tipi composti. Classi e strutture possono contenere codice, nonché i dati.  
@@ -41,11 +41,11 @@ Una variabile contiene più di un valore se si dichiara che questo sia di un *ti
   
 5.  Seguire il `As` parola chiave con il nome del tipo di dati compositi appropriato.  
   
-## <a name="see-also"></a>Vedere anche  
- [Tipi di dati](../../../../visual-basic/language-reference/data-types/index.md)  
- [Caratteri tipo](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
- [Tipi di dati compositi](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)  
- [Strutture](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
- [Array](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  
- [Oggetti e classi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
- [Tipi valore e tipi riferimento](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+## <a name="see-also"></a>Vedere anche
+- [Tipi di dati](../../../../visual-basic/language-reference/data-types/index.md)
+- [Caratteri tipo](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
+- [Tipi di dati compositi](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
+- [Strutture](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
+- [Matrici](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
+- [Oggetti e classi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)

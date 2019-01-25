@@ -10,12 +10,12 @@ helpviewer_keywords:
 - reserved words, Visual Basic keywords
 - Visual Basic, keywords
 ms.assetid: b5a65ef0-c408-4836-afb6-e6828c0771ca
-ms.openlocfilehash: eaa8813613a0d17b6d1e32cdcdb8361e9b2e8d84
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 654c4e4c017141893dd14c7f0f84f76096b274d6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33605316"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664876"
 ---
 # <a name="keywords-visual-basic"></a>Parole chiave (Visual Basic)
 Le tabelle seguenti elencano tutte le parole chiave del linguaggio Visual Basic.  
@@ -51,7 +51,7 @@ Le tabelle seguenti elencano tutte le parole chiave del linguaggio Visual Basic.
 |[IsNot](../../../visual-basic/language-reference/operators/isnot-operator.md)|[Let](../../../visual-basic/language-reference/queries/let-clause.md)|[Lib](../../../visual-basic/language-reference/statements/declare-statement.md)|[Like](../../../visual-basic/language-reference/operators/like-operator.md)|  
 |[Long](../../../visual-basic/language-reference/data-types/long-data-type.md)|[Loop](../../../visual-basic/language-reference/statements/do-loop-statement.md)|[Me](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)|[Mod](../../../visual-basic/language-reference/operators/mod-operator.md)|  
 |[Modulo](../../../visual-basic/language-reference/modifiers/module-keyword.md)|[Istruzione Module](../../../visual-basic/language-reference/statements/module-statement.md)|[MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)|[MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)|  
-|[MyBase](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)|[MyClass](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)|[Namespace](../../../visual-basic/language-reference/statements/namespace-statement.md)|[Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)|  
+|[MyBase](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)|[MyClass](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)|[Spazio dei nomi](../../../visual-basic/language-reference/statements/namespace-statement.md)|[Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)|  
 |[Vincolo New](../../../visual-basic/language-reference/statements/type-list.md)|[Operatore New](../../../visual-basic/language-reference/operators/new-operator.md)|[avanti](../../../visual-basic/language-reference/statements/for-next-statement.md)|[Next (in Resume)](../../../visual-basic/language-reference/statements/resume-statement.md)|  
 |[Not](../../../visual-basic/language-reference/operators/not-operator.md)|[Nothing](../../../visual-basic/language-reference/nothing.md)|[NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)|[NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)|  
 |[Oggetto](../../../visual-basic/language-reference/data-types/object-data-type.md)|[Of](../../../visual-basic/language-reference/statements/of-clause.md)|[On](../../../visual-basic/misc/on.md)|[Operator](../../../visual-basic/language-reference/statements/operator-statement.md)|  
@@ -77,7 +77,7 @@ Le tabelle seguenti elencano tutte le parole chiave del linguaggio Visual Basic.
 |[Operatore >>](../../../visual-basic/language-reference/operators/right-shift-operator.md)|[Operatore >>=](../../../visual-basic/language-reference/operators/right-shift-assignment-operator.md)|[<<](../../../visual-basic/language-reference/operators/left-shift-operator.md)|[<\<=](../../../visual-basic/language-reference/operators/left-shift-assignment-operator.md)|  
   
 > [!NOTE]
->  `EndIf`, `GoSub`, `Variant`, e `Wend` vengono mantenuti come parole chiave riservate, anche se non sono più utilizzate in Visual Basic. Il significato della parola chiave `Let` è stato modificato. `Let` viene ora usata nelle query LINQ. Per altre informazioni, vedere [Clausola let](../../../visual-basic/language-reference/queries/let-clause.md).  
+>  `EndIf`, `GoSub`, `Variant`, e `Wend` vengono mantenute come parole chiave riservate, anche se non sono più utilizzate in Visual Basic. Il significato della parola chiave `Let` è stato modificato. `Let` viene ora usata nelle query LINQ. Per altre informazioni, vedere [Clausola let](../../../visual-basic/language-reference/queries/let-clause.md).  
   
 ## <a name="unreserved-keywords"></a>Parole chiave non riservate  
  Le parole chiave seguenti non sono riservate, ovvero possono essere usate come nomi degli elementi di programmazione. Si consiglia tuttavia di non eseguire questa operazione poiché potrebbe rendere il codice di difficile lettura e causare errori difficili da rilevare.  
@@ -117,5 +117,5 @@ Le tabelle seguenti elencano tutte le parole chiave del linguaggio Visual Basic.
 |[Riepilogo del Registro di sistema](../../../visual-basic/language-reference/keywords/registry-summary.md)|Elenca le funzioni usate per leggere, salvare ed eliminare le impostazioni del programma.|  
 |[Riepilogo della modifica delle stringhe](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)|Elenca le funzioni usate per modificare le stringhe.|  
   
-## <a name="see-also"></a>Vedere anche  
- [Membri della libreria di runtime di Visual Basic](../../../visual-basic/language-reference/runtime-library-members.md)
+## <a name="see-also"></a>Vedere anche
+- [Membri della libreria di runtime di Visual Basic](../../../visual-basic/language-reference/runtime-library-members.md)

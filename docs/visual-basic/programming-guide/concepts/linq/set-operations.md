@@ -1,15 +1,15 @@
 ---
-title: Operazioni sui set (Visual Basic)
+title: Operazioni set (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 2b06e822-e030-438f-9db7-ee402bd3a706
-ms.openlocfilehash: 2620fa02c8f1f07edbf149c3202af8ab1decc072
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b1b515c7eee11f7aadc1d34223dbb4ea1367842d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33652526"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54741876"
 ---
-# <a name="set-operations-visual-basic"></a>Operazioni sui set (Visual Basic)
+# <a name="set-operations-visual-basic"></a>Operazioni set (Visual Basic)
 Le operazioni sui set in LINQ si riferiscono alle operazioni di query che generano un set di risultati basato sulla presenza o sull'assenza di elementi equivalenti all'interno delle stesse Collection oppure di Collection (o set) distinte.  
   
  La sezione seguente elenca i metodi dell'operatore query standard che eseguono operazioni sui set.  
@@ -50,9 +50,9 @@ Le operazioni sui set in LINQ si riferiscono alle operazioni di query che genera
   
  [!code-vb[CsLINQSetOps#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/set-operations_1.vb)]  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Linq>  
- [Panoramica degli operatori query standard (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [Clausola Distinct](../../../../visual-basic/language-reference/queries/distinct-clause.md)  
- [Procedura: combinare e confrontare raccolte di stringhe (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)  
- [Procedura: trovare la differenza dei Set tra due elenchi (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-the-set-difference-between-two-lists-linq.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Linq>
+- [Panoramica degli operatori query standard (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Clausola Distinct](../../../../visual-basic/language-reference/queries/distinct-clause.md)
+- [Procedura: Combinare e confrontare raccolte di stringhe (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)
+- [Procedura: Trovare la differenza dei Set tra due elenchi (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-the-set-difference-between-two-lists-linq.md)

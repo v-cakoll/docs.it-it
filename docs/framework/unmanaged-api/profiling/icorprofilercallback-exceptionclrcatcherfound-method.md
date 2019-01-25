@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 33dc6a863af0c03066d5f01e5101c9a6cc6d5859
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: edbd48c910c89c9dd5feea33d9598933fd63befa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33451123"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54729781"
 ---
 # <a name="icorprofilercallbackexceptionclrcatcherfound-method"></a>Metodo ICorProfilerCallback::ExceptionCLRCatcherFound
-Chiamato quando un `catch` bloccare per l'eccezione si trova all'interno di common language runtime (CLR). Questo metodo è obsoleto in .NET Framework versione 2.0.  
+Chiamato quando un `catch` blocca per un'eccezione si trova all'interno di common language runtime (CLR). Questo metodo è obsoleto in .NET Framework versione 2.0.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,14 +34,14 @@ HRESULT ExceptionCLRCatcherFound();
 ```  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
  **Versione di .NET framework:** 1.0  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [Metodo ExceptionCLRCatcherExecute](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionclrcatcherexecute-method.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [Metodo ExceptionCLRCatcherExecute](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionclrcatcherexecute-method.md)

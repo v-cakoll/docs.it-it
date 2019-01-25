@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC36635
 ms.assetid: 74609979-9c03-4864-bbce-f588aa2e0917
-ms.openlocfilehash: c492615850ec089fe35c1ae4eaba90a741e30f42
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: afefa821f9695dbbfe2a96aee5afd3171ae5b1db
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33588921"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700221"
 ---
 # <a name="lambda-expressions-are-not-valid-in-the-first-expression-of-a-39select-case39-statement"></a>Espressioni lambda non sono valide nella prima espressione di un &#39;Select Case&#39; istruzione
-Non è possibile utilizzare un'espressione lambda dell'espressione di test in un `Select Case` istruzione. Le definizioni delle espressioni lambda restituiscono funzioni e l'espressione di test di un `Select Case` istruzione deve essere un tipo di dati elementare.  
+È possibile usare un'espressione lambda per l'espressione di test in un `Select Case` istruzione. Le definizioni delle espressioni lambda restituiscono le funzioni e l'espressione di test di un `Select Case` istruzione deve essere un tipo di dati elementare.  
   
  Il codice seguente causa questo errore:  
   
@@ -40,7 +40,7 @@ Select Case ((Function(arg? As Integer) arg Is Nothing)(num))
 End Select  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Espressioni lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)  
- [Istruzione If...Then...Else](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
- [Istruzione Select...Case](../../../visual-basic/language-reference/statements/select-case-statement.md)
+## <a name="see-also"></a>Vedere anche
+- [Espressioni lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
+- [Istruzione If...Then...Else](../../../visual-basic/language-reference/statements/if-then-else-statement.md)
+- [Istruzione Select...Case](../../../visual-basic/language-reference/statements/select-case-statement.md)

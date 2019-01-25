@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4b985aeb97621e552e9e97581e67cae029d019ef
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5fe770ffc5a9c187e9069e8a66553976f9a53b2f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405893"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709884"
 ---
 # <a name="setpekind-method"></a>Metodo SetPEKind
-Determina il tipo di file eseguibile portabile, specifiche del computer o indipendente dal computer.  
+Determina il tipo di eseguibile portabile, specifiche del computer o indipendente dal computer.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -51,13 +51,13 @@ HRESULT SetPEKind(
  Architettura del computer di destinazione, come indicato nell'intestazione NT.  
   
 ## <a name="return-value"></a>Valore restituito  
- Se il metodo ha esito positivo, restituisce S_OK.  
+ Restituisce S_OK se il metodo ha esito positivo.  
   
 ## <a name="requirements"></a>Requisiti  
  Richiede alink.h.  
   
-## <a name="see-also"></a>Vedere anche  
- [Metodo GetPEKind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md)  
- [Interfaccia IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [Interfaccia IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [Alink (API)](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Vedere anche
+- [Metodo GetPEKind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md)
+- [Interfaccia IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [Interfaccia IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [Alink (API)](../../../../docs/framework/unmanaged-api/alink/index.md)

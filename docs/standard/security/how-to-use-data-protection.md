@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: utilizzare la protezione dati'
+title: 'Procedura: Usare la protezione dati'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -18,14 +18,14 @@ helpviewer_keywords:
 ms.assetid: 606698b0-cb1a-42ca-beeb-0bea34205d20
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b043c5a2173cff9eb82497f6d4ee8b7c0aa3f14c
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: b90c8fc25b0d33d084fbfd4979088e568c0618df
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086622"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698392"
 ---
-# <a name="how-to-use-data-protection"></a>Procedura: utilizzare la protezione dati
+# <a name="how-to-use-data-protection"></a>Procedura: Usare la protezione dati
 .NET Framework fornisce l'accesso a Data Protection API (DPAPI), che permette di crittografare dati usando informazioni dell'account utente o del computer corrente.  L'uso di DPAPI permette di attenuare il problema complesso correlato alla generazione e all'archiviazione esplicite di una chiave crittografica.  
   
  Usare la classe <xref:System.Security.Cryptography.ProtectedMemory> per crittografare una matrice di byte in memoria.  Questa funzionalità è disponibile nei sistemi operativi Microsoft Windows XP e versioni successive.  È possibile specificare che la memoria crittografata dal processo corrente può essere decrittografata solo dal processo corrente stesso, da tutti i processi o dallo stesso contesto utente.  Vedere l'enumerazione <xref:System.Security.Cryptography.MemoryProtectionScope> per una descrizione dettagliata delle opzioni di <xref:System.Security.Cryptography.ProtectedMemory>.  
@@ -68,5 +68,5 @@ ms.locfileid: "49086622"
   
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.Security.Cryptography.ProtectedMemory>  
+- <xref:System.Security.Cryptography.ProtectedMemory>
 - <xref:System.Security.Cryptography.ProtectedData>

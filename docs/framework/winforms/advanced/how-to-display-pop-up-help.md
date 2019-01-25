@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: visualizzare la Guida rapida'
+title: 'Procedura: Visualizzare la Guida rapida'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - pop-up Help
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - HelpProvider component [Windows Forms]
 - Help [Windows Forms], adding to dialog boxes
 ms.assetid: 218aa81e-e87e-4d67-af05-11627bbdce3b
-ms.openlocfilehash: 47833e734c09e402ab1824b9c629b2ba39acfb9f
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: e017e25f140d3dfd260545f28fab73905fe149fa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45658691"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54601844"
 ---
-# <a name="how-to-display-pop-up-help"></a>Procedura: visualizzare la Guida rapida
+# <a name="how-to-display-pop-up-help"></a>Procedura: Visualizzare la Guida rapida
 Un modo per visualizzare la Guida sui moduli di Windows è usare il **aiutare** pulsante, che si trova sul lato destro della barra del titolo, accessibile tramite il <xref:System.Windows.Forms.Form.HelpButton%2A> proprietà. Questo tipo di visualizzazione della Guida è ideale con le finestre di dialogo. Con le finestre di dialogo visualizzate come modali (con il metodo <xref:System.Windows.Forms.Form.ShowDialog%2A>) risulta difficile accedere a sistemi di Guida esterni, perché le finestre di dialogo modali devono venire chiuse prima che lo stato attivo possa passare a un'altra finestra. Inoltre, tramite il **aiutare** pulsante richiede che sia presente alcun **Riduci a icona** pulsante o **Ingrandisci** pulsante visualizzato nella barra del titolo. Questa è una convenzione standard-finestra di dialogo, mentre i form dispongono in genere **Riduci a icona** e **Ingrandisci** pulsanti.  
   
  Tenere presente che è possibile usare anche il componente <xref:System.Windows.Forms.HelpProvider> per collegare i controlli ai file in un sistema di Guida, anche se è stata implementata la Guida rapida. Per altre informazioni, vedere [visualizzazione della Guida in un'applicazione Windows](../../../../docs/framework/winforms/advanced/how-to-provide-help-in-a-windows-application.md).  
@@ -42,7 +42,7 @@ Un modo per visualizzare la Guida sui moduli di Windows è usare il **aiutare** 
   
 6.  Premere il **aiutare** pulsante sulla barra del titolo e fare clic sul controllo su cui impostare la stringa della Guida.  
   
-## <a name="see-also"></a>Vedere anche  
- [Visualizzazione della Guida relativa a un controllo tramite le descrizioni comandi](../../../../docs/framework/winforms/advanced/control-help-using-tooltips.md)  
- [Integrazione della Guida dell'utente in Windows Form](../../../../docs/framework/winforms/advanced/integrating-user-help-in-windows-forms.md)  
- [Windows Form](../../../../docs/framework/winforms/index.md)
+## <a name="see-also"></a>Vedere anche
+- [Visualizzazione della Guida relativa a un controllo tramite le descrizioni comandi](../../../../docs/framework/winforms/advanced/control-help-using-tooltips.md)
+- [Integrazione della Guida dell'utente in Windows Form](../../../../docs/framework/winforms/advanced/integrating-user-help-in-windows-forms.md)
+- [Windows Form](../../../../docs/framework/winforms/index.md)

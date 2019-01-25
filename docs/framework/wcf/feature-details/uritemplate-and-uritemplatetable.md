@@ -2,12 +2,12 @@
 title: UriTemplate e UriTemplateTable
 ms.date: 03/30/2017
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
-ms.openlocfilehash: 66463248f66457aa61ceea22afd003f7b93717e1
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 3fd60325d2264a2ddeaabef7b0998844ca8c8cd6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198410"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722608"
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate e UriTemplateTable
 Gli sviluppatori Web devono poter essere in grado di descrivere la forma e il layout degli URI a cui rispondono i loro servizi. Windows Communication Foundation (WCF) aggiunto due nuove classi per consentire agli sviluppatori di controllare gli URI. <xref:System.UriTemplate> e <xref:System.UriTemplateTable> costituiscono la base del motore di invio basato su URI in WCF. Queste classi possono essere utilizzate anche nel meccanismo del mapping delle proprie, consentendo agli sviluppatori di sfruttare i vantaggi dei modelli e l'URI senza implementare un servizio WCF.  
@@ -36,7 +36,7 @@ Gli sviluppatori Web devono poter essere in grado di descrivere la forma e il la
   
  Il metodo <xref:System.UriTemplate.ToString> restituisce la stringa di modello.  
   
- La proprietà <xref:System.UriTemplate.PathSegmentVariableNames%2A> contiene la raccolta dei nomi delle variabili utilizzate all'interno dei segmenti di percorso contenuti nella stringa di modello.  
+ La proprietà <xref:System.UriTemplate.PathSegmentVariableNames%2A> contiene la raccolta dei nomi delle variabili usate all'interno dei segmenti di percorso contenuti nella stringa di modello.  
   
  Il metodo <xref:System.UriTemplate.IsEquivalentTo%28System.UriTemplate%29> accetta un oggetto <xref:System.UriTemplate> come parametro e restituisce un valore booleano che specifica se i due modelli sono equivalenti. Per altre informazioni, vedere la sezione equivalenza fra modelli più avanti in questo argomento.  
   
@@ -93,7 +93,7 @@ Gli sviluppatori Web devono poter essere in grado di descrivere la forma e il la
   
 - "casa/{stanza}?x={letto}&y=divano"  
   
-- "? x = {casa}"  
+- "?x={shoe}"  
   
 - "casa?x=3&y={var}  
   
@@ -129,7 +129,7 @@ Gli sviluppatori Web devono poter essere in grado di descrivere la forma e il la
 - /{casa}{stanza}: le variabili devono essere separate da un valore letterale.  
   
 ### <a name="matching-and-compound-path-segments"></a>Segmenti di percorso composti e corrispondenti  
- I segmenti di percorso composti consentono di definire un UriTemplate che dispone di più variabili all'interno di un solo segmento di percorso. Ad esempio, nella stringa di modello seguente: "indirizzi / {regione}. {Città} "due variabili (stato e città) sono definite all'interno del segmento stesso. Questo modello corrisponderebbe a un URL, ad esempio `http://example.com/Washington.Redmond` ma corrisponderà anche un URL come `http://example.com/Washington.Redmond.Microsoft`. Nel secondo caso, la variabile di stato conterrà "Washington" e la variabile della città conterrà "Redmond". In questo caso il qualsiasi testo (eccetto '/') corrisponderà alla variabile {city}. Se si desidera un modello che non corrisponderà al testo "extra", posizionare la variabile in un segmento di modello separato, ad esempio: "indirizzi / {regione} / {città}.  
+ I segmenti di percorso composti consentono di definire un UriTemplate che dispone di più variabili all'interno di un solo segmento di percorso. Ad esempio, nella stringa di modello seguente: "Punta / {state}. {Città} "due variabili (stato e città) sono definite all'interno del segmento stesso. Questo modello corrisponderebbe a un URL, ad esempio `http://example.com/Washington.Redmond` ma corrisponderà anche un URL come `http://example.com/Washington.Redmond.Microsoft`. Nel secondo caso, la variabile di stato conterrà "Washington" e la variabile della città conterrà "Redmond". In questo caso il qualsiasi testo (eccetto '/') corrisponderà alla variabile {city}. Se si desidera un modello che non corrisponderà al testo "extra", posizionare la variabile in un segmento di modello separato, ad esempio: "Punta / {state} / {città}.  
   
 ### <a name="named-wildcard-segments"></a>Segmenti con caratteri jolly con nome  
  Un segmento con carattere jolly denominata è qualsiasi segmento variabile di percorso il cui nome di variabile inizia con il carattere jolly '\*'. La stringa di modello seguente contiene un segmento con carattere jolly con nome denominato "casa".  
@@ -328,9 +328,9 @@ Quando a una variabile viene assegnato il valore predefinito `null`, è necessar
 > [!NOTE]
 > I caratteri á e Á sono considerati caratteri diversi quando sono contenuti in un percorso URI o in un valore letterale di un segmento di percorso <xref:System.UriTemplate>. I caratteri a e A sono invece considerati uguali. I caratteri á e Á sono considerati caratteri uguali quando sono contenuti in un elemento {nomeVariabile} del modello <xref:System.UriTemplate> o in una stringa di query. Anche in questo caso i caratteri a e A sono considerati uguali.  
   
-## <a name="see-also"></a>Vedere anche  
- [Panoramica del modello di programmazione HTTP Web di WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)  
- [Modello a oggetti per la programmazione HTTP Web di WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)  
- [UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-sample.md)  
- [UriTemplateTable](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)  
- [Dispatcher della tabella UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-table-dispatcher-sample.md)
+## <a name="see-also"></a>Vedere anche
+- [Panoramica del modello di programmazione HTTP Web di WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
+- [Modello a oggetti per la programmazione HTTP Web di WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)
+- [UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-sample.md)
+- [UriTemplateTable](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)
+- [Dispatcher della tabella UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-table-dispatcher-sample.md)

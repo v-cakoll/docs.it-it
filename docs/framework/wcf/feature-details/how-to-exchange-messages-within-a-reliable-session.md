@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: scambiare messaggi in una sessione affidabile'
+title: 'Procedura: Scambiare messaggi in una sessione affidabile'
 ms.date: 03/30/2017
 ms.assetid: 87cd0e75-dd2c-44c1-8da0-7b494bbdeaea
-ms.openlocfilehash: 53e5661bf140540cd0fc7a9fcb739b67488b8491
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0b03845f9638a3646c72b1210de12dd94cf4cc9f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195736"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720054"
 ---
-# <a name="how-to-exchange-messages-within-a-reliable-session"></a>Procedura: scambiare messaggi in una sessione affidabile
+# <a name="how-to-exchange-messages-within-a-reliable-session"></a>Procedura: Scambiare messaggi in una sessione affidabile
 
 In questo argomento vengono delineati i passaggi necessari per attivare una sessione affidabile utilizzando una delle associazioni fornite dal sistema che supportano tale sessione, ma non per impostazione predefinita. Si attiva una sessione affidabile in modo imperativo tramite codice o in modo dichiarativo nel file di configurazione. Questa procedura Usa i file di configurazione client e servizio per abilitare la sessione affidabile e stabilire che i messaggi arrivino nello stesso ordine in cui sono stati inviati.
 
@@ -75,8 +75,8 @@ Diverse associazioni fornite dal sistema supportano sessioni affidabili per impo
 
 - <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>
 
-Per un esempio di come creare un'associazione personalizzata che supporta sessioni affidabili, vedere [procedura: creare un'associazione di sessione affidabile personalizzata con HTTPS](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-reliable-session-binding-with-https.md).
+Per un esempio di come creare un'associazione personalizzata che supporta sessioni affidabili, vedere [come: Creare un'associazione di sessione affidabile personalizzata con HTTPS](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-reliable-session-binding-with-https.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Sessioni affidabili](../../../../docs/framework/wcf/feature-details/reliable-sessions.md)
+- [Sessioni affidabili](../../../../docs/framework/wcf/feature-details/reliable-sessions.md)

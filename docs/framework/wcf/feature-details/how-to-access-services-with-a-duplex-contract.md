@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: accedere ai servizi con un contratto duplex'
+title: 'Procedura: Servizi di accesso con un contratto duplex'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,16 +7,16 @@ dev_langs:
 helpviewer_keywords:
 - duplex contracts [WCF]
 ms.assetid: 746a9d64-f21c-426c-b85d-972e916ec6c5
-ms.openlocfilehash: 6675da079b343b1b80477c65260ee8a1f44df72a
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.openlocfilehash: 2f83b8ac71bfc53791f7de42d127badbda0d3881
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37027902"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610312"
 ---
-# <a name="how-to-access-services-with-a-duplex-contract"></a>Procedura: accedere ai servizi con un contratto duplex
+# <a name="how-to-access-services-with-a-duplex-contract"></a>Procedura: Servizi di accesso con un contratto duplex
 
-Una funzionalità di Windows Communication Foundation (WCF) è la possibilità di creare un servizio che utilizza un modello di messaggistica duplex. Questo modello consente a un servizio di comunicare con il client tramite un callback. In questo argomento vengono illustrati i passaggi per creare un client WCF in una classe client che implementa l'interfaccia di callback.
+Una funzionalità di Windows Communication Foundation (WCF) è la possibilità di creare un servizio che usa un modello di messaggistica duplex. Questo modello consente a un servizio di comunicare con il client tramite un callback. Questo argomento illustra i passaggi per creare un client WCF in una classe client che implementa l'interfaccia di callback.
 
 Un'associazione duale espone l'indirizzo IP del client al servizio. Nel client è necessario implementare un meccanismo di sicurezza in grado di garantire che il client si connetta solo a servizi ritenuti attendibili.
 
@@ -24,11 +24,11 @@ Per un'esercitazione sulla creazione di un servizio WCF di base e un client, ved
 
 ## <a name="to-access-a-duplex-service"></a>Per accedere a un servizio duplex
 
-1. Creare un servizio che contiene due interfacce. La prima interfaccia è per il servizio, la seconda è per il callback. Per ulteriori informazioni sulla creazione di un servizio duplex, vedere [procedura: creare un contratto Duplex](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md).
+1. Creare un servizio che contiene due interfacce. La prima interfaccia è per il servizio, la seconda è per il callback. Per altre informazioni sulla creazione di un servizio duplex, vedere [come: Creare un contratto Duplex](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md).
 
 2. Eseguire il servizio.
 
-3. Usare la [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) per generare contratti (interfacce) per il client. Per informazioni su come eseguire questa operazione, vedere [procedura: creare un Client](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md).
+3. Usare la [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) per generare contratti (interfacce) per il client. Per informazioni su come eseguire questa operazione, vedere [come: Creare un Client](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md).
 
 4. Implementare l'interfaccia di callback nella classe client, come illustrato nell'esempio seguente.
 
@@ -78,7 +78,7 @@ Per un'esercitazione sulla creazione di un servizio WCF di base e un client, ved
     Dim wcfClient As New CalculatorDuplexClient(site, "default")
     ```
 
-7. Chiamare i metodi del client WCF come richiesto.
+7. Chiamare i metodi del client WCF in base alle esigenze.
 
 ## <a name="example"></a>Esempio
 
@@ -89,8 +89,8 @@ Nell'esempio di codice seguente viene descritto come creare una classe client ch
 
 ## <a name="see-also"></a>Vedere anche
 
-[Esercitazione introduttiva](../../../../docs/framework/wcf/getting-started-tutorial.md)  
-[Procedura: Creare un contratto duplex](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)  
-[Strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
-[Procedura: Creare un client](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
-[Procedura: Usare ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)
+- [Esercitazione introduttiva](../../../../docs/framework/wcf/getting-started-tutorial.md)
+- [Procedura: Creare un contratto Duplex](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
+- [Strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+- [Procedura: Creare un Client](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
+- [Procedura: Usare ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)

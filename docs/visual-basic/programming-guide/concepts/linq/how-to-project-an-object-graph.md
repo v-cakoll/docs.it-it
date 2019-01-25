@@ -1,19 +1,19 @@
 ---
-title: 'Procedura: proiettare un grafico di oggetti (Visual Basic)'
+title: 'Procedura: Proiettare un grafico di oggetti (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 9451eb47-6a31-49d7-84df-73368c618422
-ms.openlocfilehash: 0a8bf33075ada306cf639006ab099115aad43348
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 32629718b26036530bc9c856f5dff6ed1d7ae0c3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43487143"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730828"
 ---
-# <a name="how-to-project-an-object-graph-visual-basic"></a>Procedura: proiettare un grafico di oggetti (Visual Basic)
+# <a name="how-to-project-an-object-graph-visual-basic"></a>Procedura: Proiettare un grafico di oggetti (Visual Basic)
 In questo argomento viene illustrato come proiettare, ovvero popolare, un oggetto grafico da XML.  
   
 ## <a name="example"></a>Esempio  
- Nel codice seguente un oggetto grafico viene popolato con le classi `Address`, `PurchaseOrder` e `PurchaseOrderItem` del [File XML di esempio: tipico ordine di acquisto (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md) Documento XML.  
+ Il codice seguente popola un oggetto grafico con il `Address`, `PurchaseOrder`, e `PurchaseOrderItem` classi il [File XML di esempio: Ordine di acquisto tipico (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md) documento XML.  
   
 ```vb  
 Class Address  
@@ -337,7 +337,7 @@ USPrice: 39.98
 ShipDate: 5/21/1999  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Linq.Enumerable.Select%2A>  
- <xref:System.Linq.Enumerable.ToList%2A>  
- [Proiezioni e trasformazioni (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Linq.Enumerable.Select%2A>
+- <xref:System.Linq.Enumerable.ToList%2A>
+- [Proiezioni e trasformazioni (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

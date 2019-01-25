@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer.Info object
 ms.assetid: 2eb2aa5f-303d-426c-918d-989c8b7b08d0
-ms.openlocfilehash: 9eabd2538d43c5a0104032c501da8cbf81b5c74d
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 4d187d171aa90ae1067078f7540a18f39c3508a1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45963705"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54685657"
 ---
 # <a name="mycomputerinfo-object"></a>Oggetto My.Computer.Info
 Offre proprietà che consentono di ottenere informazioni su memoria del computer, assembly caricati, nome e sistema operativo.  
@@ -18,11 +18,11 @@ Offre proprietà che consentono di ottenere informazioni su memoria del computer
  Per informazioni sulle proprietà dei `My.Computer.Info` oggetti, vedere <xref:Microsoft.VisualBasic.Devices.ComputerInfo>.  
   
 ## <a name="requirements"></a>Requisiti  
- **Namespace:** <xref:Microsoft.VisualBasic.Devices>  
+ **Spazio dei nomi:** <xref:Microsoft.VisualBasic.Devices>  
   
  **Classe:** <xref:Microsoft.VisualBasic.Devices.ComputerInfo>  
   
- **Assembly:** libreria di Runtime di Visual Basic (in VisualBasic)  
+ **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
   
-## <a name="see-also"></a>Vedere anche  
- [Oggetto My.Computer](../../../visual-basic/language-reference/objects/my-computer-object.md)
+## <a name="see-also"></a>Vedere anche
+- [Oggetto My.Computer](../../../visual-basic/language-reference/objects/my-computer-object.md)

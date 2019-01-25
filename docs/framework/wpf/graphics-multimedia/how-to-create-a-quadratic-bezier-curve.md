@@ -1,19 +1,19 @@
 ---
-title: 'Procedura: creare una curva di Bezier quadratica'
+title: 'Procedura: Creare una curva di Bezier quadratica.'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Bezier curves [WPF], creating
 - quadratic Bezier curves [WPF], creating
 - graphics [WPF], quadratic Bezier curves
 ms.assetid: cd8fca4a-504e-4fd8-92ea-2969065a6e02
-ms.openlocfilehash: 8481a7e0e6d682a335b22ea6cdf73a23a9f155af
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: a5d424f3fda3957bf54d7073d41d9fe2dabb1736
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085832"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650093"
 ---
-# <a name="how-to-create-a-quadratic-bezier-curve"></a>Procedura: creare una curva di Bezier quadratica
+# <a name="how-to-create-a-quadratic-bezier-curve"></a>Procedura: Creare una curva di Bezier quadratica.
 In questo esempio viene illustrato come creare una curva di Bézier quadratica.  Per creare una curva di Bézier quadratica, usare il <xref:System.Windows.Media.PathGeometry>, <xref:System.Windows.Media.PathFigure>, e <xref:System.Windows.Media.QuadraticBezierSegment> classi.  
   
 ## <a name="example"></a>Esempio  
@@ -35,6 +35,6 @@ In questo esempio viene illustrato come creare una curva di Bézier quadratica. 
   
  Questo esempio fa parte di un esempio più esaustivo. Per l'esempio completo, vedere la pagina [Geometries Sample (esempio di geometrie)](https://go.microsoft.com/fwlink/?LinkID=159989).  
   
-## <a name="see-also"></a>Vedere anche  
- [Creare un arco ellittico](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-an-elliptical-arc.md)  
- [Creare una curva di Bézier cubica](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-cubic-bezier-curve.md)
+## <a name="see-also"></a>Vedere anche
+- [Creare un arco ellittico](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-an-elliptical-arc.md)
+- [Creare una curva di Bézier cubica](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-cubic-bezier-curve.md)

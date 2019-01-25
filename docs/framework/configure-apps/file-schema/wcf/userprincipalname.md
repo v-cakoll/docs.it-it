@@ -2,19 +2,19 @@
 title: '&lt;userPrincipalName&gt;'
 ms.date: 03/30/2017
 ms.assetid: 68032f69-149e-4613-bae4-18314d4fd294
-ms.openlocfilehash: ff38a6975d1ec73c1a3014b94198ba630c3fec31
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 8ba961e060e12801395a0ad0bd02aebda35655c8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54149980"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54656557"
 ---
 # <a name="ltuserprincipalnamegt"></a>&lt;userPrincipalName&gt;
 Specifica il nome principale dell'utente (UPN, User Principal Name) di un servizio da autenticare presso il client.  
   
  Per altre informazioni sull'impostazione del nome UPN, vedere [identità del servizio e autenticazione](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
-\<identità >  
+\<identity>  
 \<userPrincipalName>  
   
 ## <a name="syntax"></a>Sintassi  
@@ -39,7 +39,7 @@ Specifica il nome principale dell'utente (UPN, User Principal Name) di un serviz
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<identità >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Specifica l'identità del servizio da autenticare presso il client.|  
+|[\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Specifica l'identità del servizio da autenticare presso il client.|  
   
 ## <a name="remarks"></a>Note  
  Un client Windows Communication Foundation (WCF) sicuro che si connette a un endpoint con questa identità usa il nome UPN quando esegue l'autenticazione SSPI con l'endpoint.  
@@ -53,10 +53,10 @@ Specifica il nome principale dell'utente (UPN, User Principal Name) di un serviz
 </identity>
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.Configuration.IdentityElement>  
- <xref:System.ServiceModel.EndpointAddress>  
- <xref:System.ServiceModel.EndpointAddress.Identity%2A>  
- <xref:System.ServiceModel.UpnEndpointIdentity>  
- [Identità del servizio e autenticazione](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [\<identità >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.ServiceModel.Configuration.IdentityElement>
+- <xref:System.ServiceModel.EndpointAddress>
+- <xref:System.ServiceModel.EndpointAddress.Identity%2A>
+- <xref:System.ServiceModel.UpnEndpointIdentity>
+- [Identità del servizio e autenticazione](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+- [\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)

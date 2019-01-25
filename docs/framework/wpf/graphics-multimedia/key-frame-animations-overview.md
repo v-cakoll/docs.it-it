@@ -6,12 +6,12 @@ helpviewer_keywords:
 - key frames [WPF], about key-frame animations
 - multiple animation target values [WPF]
 ms.assetid: 10028f97-bb63-41fc-b8ad-663dac7ea203
-ms.openlocfilehash: f163b71d7a33aa115a2a4600cac08b7e4b2e80e7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 5891887ea0df4addc828dd617c9fce63bb9096ea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517406"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661594"
 ---
 # <a name="key-frame-animations-overview"></a>Cenni preliminari sulle animazioni con fotogrammi chiave
 Questo argomento presenta le animazioni con fotogrammi chiave. Le animazioni con fotogrammi chiave consentono di usare più di due valori di destinazione e di controllare il metodo di interpolazione di un'animazione.  
@@ -283,13 +283,13 @@ Un key spline con punti di controllo (0.25, 0.5) e (0.75, 1.0)
   
 8.  Ordinare i fotogrammi chiave in base al tempo risolto (chiave primaria) e all'ordine di dichiarazione (chiave secondaria), ad esempio, usare un ordinamento stabile basato su risolti del fotogramma chiave <xref:System.Windows.Media.Animation.KeyTime> valori.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Windows.Media.Animation.KeyTime>  
- <xref:System.Windows.Media.Animation.KeySpline>  
- <xref:System.Windows.Media.Animation.Timeline>  
- [Esempio di animazione Key Spline](https://go.microsoft.com/fwlink/?LinkID=160011)  
- [Esempio di animazione con fotogrammi chiave](https://go.microsoft.com/fwlink/?LinkID=160012)  
- [Cenni preliminari sull'animazione](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Cenni preliminari sugli storyboard](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)  
- [Procedure relative ai fotogrammi chiave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)  
- [Cenni preliminari sui comportamenti temporali](../../../../docs/framework/wpf/graphics-multimedia/timing-behaviors-overview.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Windows.Media.Animation.KeyTime>
+- <xref:System.Windows.Media.Animation.KeySpline>
+- <xref:System.Windows.Media.Animation.Timeline>
+- [Esempio di animazione Key Spline](https://go.microsoft.com/fwlink/?LinkID=160011)
+- [Esempio di animazione con fotogrammi chiave](https://go.microsoft.com/fwlink/?LinkID=160012)
+- [Cenni preliminari sull'animazione](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Cenni preliminari sugli storyboard](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)
+- [Procedure relative ai fotogrammi chiave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)
+- [Cenni preliminari sui comportamenti temporali](../../../../docs/framework/wpf/graphics-multimedia/timing-behaviors-overview.md)

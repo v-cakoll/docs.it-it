@@ -2,12 +2,12 @@
 title: Funzioni di aggregazione canoniche
 ms.date: 03/30/2017
 ms.assetid: 3bcff826-ca90-41b3-a791-04d6ff0e5085
-ms.openlocfilehash: e4772176130fc72a22645462921c90dd5b7967b2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f65557703070a43f586a668903d049a374ef70d3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506638"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54708974"
 ---
 # <a name="aggregate-canonical-functions"></a>Funzioni di aggregazione canoniche
 
@@ -228,4 +228,4 @@ Come in [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], aggregazioni ba
 
 ## <a name="see-also"></a>Vedere anche
 
-[Funzioni canoniche](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)
+- [Funzioni canoniche](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)

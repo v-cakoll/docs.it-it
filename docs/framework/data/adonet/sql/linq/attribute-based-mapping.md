@@ -2,22 +2,22 @@
 title: Mapping basato su attributi
 ms.date: 03/30/2017
 ms.assetid: 6dd89999-f415-4d61-b8c8-237d23d7924e
-ms.openlocfilehash: 81bbe8806694967d68c3e15da1d582092fb95e1a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bd16731684a04ca7a92dbb6560b5c008558896cf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358180"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54713902"
 ---
 # <a name="attribute-based-mapping"></a>Mapping basato su attributi
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] esegue il mapping di un database di SQL Server a un [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] modello a oggetti applicando attributi o usando un file di mapping esterno. In questo argomento viene descritto l'approccio basato sugli attributi.  
   
- Nella forma più elementare, in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] viene eseguito il mapping di un database a un oggetto <xref:System.Data.Linq.DataContext>, di una tabella a una classe e di colonne e relazioni alle proprietà in tali classi. È anche possibile usare attributi per eseguire il mapping di una gerarchia di ereditarietà nel modello a oggetti. Per ulteriori informazioni, vedere [procedura: generare il modello a oggetti in Visual Basic o c#](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md).  
+ Nella forma più elementare, in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] viene eseguito il mapping di un database a un oggetto <xref:System.Data.Linq.DataContext>, di una tabella a una classe e di colonne e relazioni alle proprietà in tali classi. È anche possibile usare attributi per eseguire il mapping di una gerarchia di ereditarietà nel modello a oggetti. Per altre informazioni, vedere [Procedura: Generare il modello a oggetti in Visual Basic o C# ](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md).  
   
- Gli sviluppatori che usano Visual Studio in genere eseguono il mapping basato sugli attributi tramite il [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]. È anche possibile usare lo strumento da riga di comando SQLMetal o codificare gli attributi manualmente. Per ulteriori informazioni, vedere [procedura: generare il modello a oggetti in Visual Basic o c#](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md).  
+ Gli sviluppatori che usano Visual Studio in genere eseguono il mapping basato sugli attributi tramite il [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]. È anche possibile usare lo strumento da riga di comando SQLMetal o codificare gli attributi manualmente. Per altre informazioni, vedere [Procedura: Generare il modello a oggetti in Visual Basic o C# ](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md).  
   
 > [!NOTE]
->  Il mapping può inoltre essere eseguito usando un file XML esterno. Per ulteriori informazioni, vedere [Mapping esterno](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
+>  Il mapping può inoltre essere eseguito usando un file XML esterno. Per altre informazioni, vedere [Mapping esterno](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
   
  Nelle sezioni seguenti viene descritto in dettaglio il mapping basato sugli attributi. Per altre informazioni, vedere lo spazio dei nomi <xref:System.Data.Linq.Mapping>.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "33358180"
 |Proprietà|Tipo|Default|Descrizione|  
 |--------------|----------|-------------|-----------------|  
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A>|AutoSync|Never|Indica a Common Language Runtime (CLR) di recuperare il valore dopo un'operazione di inserimento o di aggiornamento.<br /><br /> Opzioni: Always, Never, OnUpdate, OnInsert.|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A>|Boolean|`true`|Indica che una colonna può contenere valori null.|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A>|Booleano|`true`|Indica che una colonna può contenere valori null.|  
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.DbType%2A>|String|Tipo di colonna di database dedotto|Consente di usare tipi di database e modificatori per specificare il tipo di colonna del database.|  
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.Expression%2A>|String|Empty|Consente di definire una colonna calcolata in un database.|  
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A>|Boolean|`false`|Consente di indicare che una colonna contiene valori generati automaticamente dal database.|  
@@ -64,7 +64,7 @@ ms.locfileid: "33358180"
 >  I valori delle proprietà di archiviazione AssociationAttribute e ColumnAttribute rispettano la distinzione tra maiuscole e minuscole. Verificare, ad esempio, che per i valori dell'attributo della proprietà AssociationAttribute.Storage venga usata la stessa combinazione di maiuscole e minuscole adoperata per i nomi di proprietà corrispondenti usati in altri punti del codice. Questo vale per tutti i linguaggi di programmazione .NET, anche quelli che non sono in genere tra maiuscole e minuscole, tra cui Visual Basic. Per altre informazioni sulla proprietà di archiviazione, vedere <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>.  
   
 ## <a name="associationattribute-attribute"></a>Attributo AssociationAttribute  
- Usare questo attributo per definire una proprietà che rappresenti un'associazione nel database, ad esempio una relazione da chiave esterna a chiave primaria. Per ulteriori informazioni sulle relazioni, vedere [procedura: mappare le relazioni di Database](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-database-relationships.md).  
+ Usare questo attributo per definire una proprietà che rappresenti un'associazione nel database, ad esempio una relazione da chiave esterna a chiave primaria. Per altre informazioni sulle relazioni, vedere [come: Eseguire il mapping delle relazioni di database](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-database-relationships.md).  
   
  La tabella seguente descrive le proprietà di questo attributo.  
   
@@ -142,5 +142,5 @@ ms.locfileid: "33358180"
   
  Per altre informazioni, vedere <xref:System.Data.Linq.Mapping.DataAttribute>.  
   
-## <a name="see-also"></a>Vedere anche  
- [Riferimento](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+## <a name="see-also"></a>Vedere anche
+- [Riferimento](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
