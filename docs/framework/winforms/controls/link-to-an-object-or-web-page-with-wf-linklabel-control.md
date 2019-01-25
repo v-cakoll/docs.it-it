@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: eseguire il collegamento a un oggetto o a una pagina Web con il controllo LinkLabel di Windows Form'
+title: 'Procedura: Collegarsi a un oggetto o Web Page con il controllo LinkLabel di Windows Form'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,23 +15,23 @@ helpviewer_keywords:
 - LinkLabel control [Windows Forms], linking to object or Web page
 - LinkLabel control [Windows Forms], examples
 ms.assetid: 6c91c975-3cb7-4504-82f0-fc6255f8fb85
-ms.openlocfilehash: 9957eae7e15c99ec259574b435402420c6bcf5f5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fd397f9a6462ad9da06b1cc258a51b3cccf5d21c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539633"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54628448"
 ---
-# <a name="how-to-link-to-an-object-or-web-page-with-the-windows-forms-linklabel-control"></a>Procedura: eseguire il collegamento a un oggetto o a una pagina Web con il controllo LinkLabel di Windows Form
-Windows Form <xref:System.Windows.Forms.LinkLabel> controllo consente di creare collegamenti ipertestuali nel modulo. Quando si fa clic sul collegamento, è possibile modificare il colore per indicare che il collegamento è stato visitato. Per ulteriori informazioni sulla modifica del colore, vedere [procedura: modificare l'aspetto del controllo LinkLabel di Windows Form](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md).  
+# <a name="how-to-link-to-an-object-or-web-page-with-the-windows-forms-linklabel-control"></a>Procedura: Collegarsi a un oggetto o Web Page con il controllo LinkLabel di Windows Form
+I moduli di Windows <xref:System.Windows.Forms.LinkLabel> controllo consente di creare collegamenti ipertestuali nel form. Quando si fa clic sul collegamento, è possibile modificare il colore per indicare che il collegamento è stato visitato. Per altre informazioni su come modificare il colore, vedere [come: Modificare l'aspetto del controllo Windows Form LinkLabel](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md).  
   
 ## <a name="linking-to-another-form"></a>Collegamento a un altro formato  
   
 #### <a name="to-link-to-another-form-with-a-linklabel-control"></a>Il collegamento a un altro form con un controllo LinkLabel  
   
-1.  Impostare il <xref:System.Windows.Forms.LinkLabel.Text%2A> proprietà per una didascalia appropriata.  
+1.  Impostare il <xref:System.Windows.Forms.LinkLabel.Text%2A> proprietà su un titolo appropriato.  
   
-2.  Impostare il <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> proprietà per determinare quale parte della didascalia verrà indicata come collegamento. Come indicato dipende dalle proprietà correlate all'aspetto dell'etichetta del collegamento. Il <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> valore è rappresentato da un <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> contenente due numeri, la posizione del carattere iniziale e il numero di caratteri. Il <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> proprietà può essere impostata nella finestra proprietà o nel codice in modo simile al seguente:  
+2.  Impostare il <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> proprietà per determinare quale parte della didascalia verrà indicato come collegamento. Come è indicato dipende dalle proprietà correlate all'aspetto dell'etichetta del collegamento. Il <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> valore è rappresentato da un <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> contenente due numeri, la posizione del carattere iniziale e il numero di caratteri. Il <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> proprietà può essere impostata nella finestra proprietà o nel codice in modo analogo al seguente:  
   
     ```vb  
     ' In this code example, the link area has been set to begin  
@@ -57,7 +57,7 @@ Windows Form <xref:System.Windows.Forms.LinkLabel> controllo consente di creare 
 3.  Nel <xref:System.Windows.Forms.LinkLabel.LinkClicked> gestore dell'evento, richiamare il <xref:System.Windows.Forms.Form.Show%2A> metodo per aprire un'altra forma nel progetto e impostare il <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> proprietà `true`.  
   
     > [!NOTE]
-    >  Un'istanza del <xref:System.Windows.Forms.LinkLabelLinkClickedEventArgs> classe contiene un riferimento di <xref:System.Windows.Forms.LinkLabel> controllo che è stato fatto clic, pertanto non è necessario eseguire il cast di `sender` oggetto.  
+    >  Un'istanza del <xref:System.Windows.Forms.LinkLabelLinkClickedEventArgs> classe contiene un riferimento al <xref:System.Windows.Forms.LinkLabel> controllo che è stato selezionato, in modo che non è necessario eseguire il cast di `sender` oggetto.  
   
     ```vb  
     Protected Sub LinkLabel1_LinkClicked(ByVal Sender As System.Object, _  
@@ -93,18 +93,18 @@ Windows Form <xref:System.Windows.Forms.LinkLabel> controllo consente di creare 
     ```  
   
 ## <a name="linking-to-a-web-page"></a>Collegamento a una pagina Web  
- Il <xref:System.Windows.Forms.LinkLabel> controllo può essere utilizzato anche per visualizzare una pagina Web con il browser predefinito.  
+ Il <xref:System.Windows.Forms.LinkLabel> controllo può essere usato anche per visualizzare una pagina Web con il browser predefinito.  
   
-#### <a name="to-start-internet-explorer-and-link-to-a-web-page-with-a-linklabel-control"></a>Avviare Internet Explorer e collegamento a una pagina Web con un controllo LinkLabel  
+#### <a name="to-start-internet-explorer-and-link-to-a-web-page-with-a-linklabel-control"></a>Per avviare Internet Explorer e collegamento a una pagina Web con un controllo LinkLabel  
   
-1.  Impostare il <xref:System.Windows.Forms.LinkLabel.Text%2A> proprietà per una didascalia appropriata.  
+1.  Impostare il <xref:System.Windows.Forms.LinkLabel.Text%2A> proprietà su un titolo appropriato.  
   
-2.  Impostare il <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> proprietà per determinare quale parte della didascalia verrà indicata come collegamento.  
+2.  Impostare il <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> proprietà per determinare quale parte della didascalia verrà indicato come collegamento.  
   
-3.  Nel <xref:System.Windows.Forms.LinkLabel.LinkClicked> gestore dell'evento, in corrispondenza di un blocco di gestione delle eccezioni, chiamare una seconda stored procedure che imposta il <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> proprietà `true` e utilizza il <xref:System.Diagnostics.Process.Start%2A> metodo per avviare il browser predefinito con un URL. Utilizzare il <xref:System.Diagnostics.Process.Start%2A> è necessario aggiungere un riferimento al metodo di <xref:System.Diagnostics?displayProperty=nameWithType> dello spazio dei nomi.  
+3.  Nel <xref:System.Windows.Forms.LinkLabel.LinkClicked> gestore dell'evento, in corrispondenza di un blocco di gestione delle eccezioni, chiamare una seconda stored procedure che consente di impostare il <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> proprietà `true` e Usa il <xref:System.Diagnostics.Process.Start%2A> metodo per avviare il browser predefinito con un URL. Usare la <xref:System.Diagnostics.Process.Start%2A> è necessario aggiungere un riferimento al metodo il <xref:System.Diagnostics?displayProperty=nameWithType> dello spazio dei nomi.  
   
     > [!IMPORTANT]
-    >  Se il codice seguente viene eseguito in un ambiente parzialmente attendibile (ad esempio in un'unità condivisa), il compilatore JIT non riesce quando il `VisitLink` metodo viene chiamato. Il `System.Diagnostics.Process.Start` istruzione provoca una richiesta di collegamento che ha esito negativo. Per intercettare l'eccezione generata quando il `VisitLink` metodo viene chiamato, il codice seguente assicura che se il compilatore JIT non riesce, l'errore viene gestito correttamente.  
+    >  Se il codice seguente viene eseguito in un ambiente parzialmente attendibile (ad esempio in un'unità condivisa), il compilatore JIT non riesce quando il `VisitLink` viene chiamato il metodo. Il `System.Diagnostics.Process.Start` istruzione provoca una richiesta di collegamento che ha esito negativo. Per intercettare l'eccezione generata quando il `VisitLink` viene chiamato il metodo, il codice seguente garantisce che se il compilatore JIT non riesce, l'errore viene gestito normalmente.  
   
     ```vb  
     Private Sub LinkLabel1_LinkClicked(ByVal sender As System.Object, _  
@@ -178,8 +178,8 @@ Windows Form <xref:System.Windows.Forms.LinkLabel> controllo consente di creare 
        }  
     ```  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType>  
- [Panoramica sul controllo LinkLabel](../../../../docs/framework/winforms/controls/linklabel-control-overview-windows-forms.md)  
- [Procedura: Modificare l'aspetto del controllo LinkLabel di Windows Form](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)  
- [Controllo LinkLabel](../../../../docs/framework/winforms/controls/linklabel-control-windows-forms.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType>
+- [Panoramica sul controllo LinkLabel](../../../../docs/framework/winforms/controls/linklabel-control-overview-windows-forms.md)
+- [Procedura: Modificare l'aspetto del controllo Windows Form LinkLabel](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)
+- [Controllo LinkLabel](../../../../docs/framework/winforms/controls/linklabel-control-windows-forms.md)

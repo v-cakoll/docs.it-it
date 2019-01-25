@@ -1,5 +1,5 @@
 ---
-title: "Procedura: modificare l'aspetto del testo e delle immagini di una descrizione comandi in Windows Form"
+title: "Procedura: Modificare l'aspetto del controllo ToolStrip testo e immagini in Windows Form"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,17 +13,17 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], text
 - toolbars [Windows Forms], text
 ms.assetid: d62dc9d1-2edd-4dfa-aed7-1335d6e13d86
-ms.openlocfilehash: d3f53291e24d6a57e798725b716a7fd56eb661b4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 05e44da390f3fe668890d8c093729cb0ebfd1642
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33530530"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631074"
 ---
-# <a name="how-to-change-the-appearance-of-toolstrip-text-and-images-in-windows-forms"></a>Procedura: modificare l'aspetto del testo e delle immagini di una descrizione comandi in Windows Form
-È possibile controllare se vengono visualizzate testo e immagini in un <xref:System.Windows.Forms.ToolStripItem> e la modalità di allineamento uno rispetto a altro e <xref:System.Windows.Forms.ToolStrip>.  
+# <a name="how-to-change-the-appearance-of-toolstrip-text-and-images-in-windows-forms"></a>Procedura: Modificare l'aspetto del controllo ToolStrip testo e immagini in Windows Form
+È possibile controllare se le immagini e testo vengono visualizzate in una <xref:System.Windows.Forms.ToolStripItem> e come siano allineati uno rispetto a altro e <xref:System.Windows.Forms.ToolStrip>.  
   
-### <a name="to-define-what-is-displayed-on-a-toolstripitem"></a>Per definire gli elementi visualizzati in un controllo ToolStripItem  
+### <a name="to-define-what-is-displayed-on-a-toolstripitem"></a>Per definire cosa è visualizzato su un ToolStripItem  
   
 -   Impostare il <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> proprietà sul valore desiderato. I valori possibili sono `Image`, `ImageAndText`, `None`, e `Text`. Il valore predefinito è `ImageAndText`.  
   
@@ -36,9 +36,9 @@ ms.locfileid: "33530530"
     toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;  
     ```  
   
-### <a name="to-align-text-on-a-toolstripitem"></a>Per allineare il testo in un controllo ToolStripItem  
+### <a name="to-align-text-on-a-toolstripitem"></a>Per allineare il testo su un ToolStripItem  
   
--   Impostare il <xref:System.Windows.Forms.ToolStripItem.TextAlign%2A> proprietà sul valore desiderato. I valori possibili sono qualsiasi combinazione di superiore, centrale e inferiore con left, center e right. Il valore predefinito è `MiddleCenter`.  
+-   Impostare il <xref:System.Windows.Forms.ToolStripItem.TextAlign%2A> proprietà sul valore desiderato. I valori possibili sono qualsiasi combinazione di alto, medio e basso a sinistra, centro e a destra. Il valore predefinito è `MiddleCenter`.  
   
     ```vb  
     ToolStripSplitButton1.TextAlign = _  
@@ -49,9 +49,9 @@ ms.locfileid: "33530530"
     toolStripSplitButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;  
     ```  
   
-### <a name="to-align-an-image-on-a-toolstripitem"></a>Per allineare un'immagine in un controllo ToolStripItem  
+### <a name="to-align-an-image-on-a-toolstripitem"></a>Per allineare un'immagine in ToolStripItem  
   
--   Impostare il <xref:System.Windows.Forms.ToolStripItem.ImageAlign%2A> proprietà sul valore desiderato. I valori possibili sono qualsiasi combinazione di superiore, centrale e inferiore con left, center e right. Il valore predefinito è `MiddleLeft`.  
+-   Impostare il <xref:System.Windows.Forms.ToolStripItem.ImageAlign%2A> proprietà sul valore desiderato. I valori possibili sono qualsiasi combinazione di alto, medio e basso a sinistra, centro e a destra. Il valore predefinito è `MiddleLeft`.  
   
     ```vb  
     ToolStripSplitButton1.ImageAlign = _  
@@ -62,7 +62,7 @@ ms.locfileid: "33530530"
     toolStripSplitButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;  
     ```  
   
-### <a name="to-define-how-toolstripitem-text-and-images-are-displayed-relative-to-each-other"></a>Per definire la modalità di visualizzazione di immagini e testo ToolStripItem reciprocamente  
+### <a name="to-define-how-toolstripitem-text-and-images-are-displayed-relative-to-each-other"></a>Per definire la modalità di visualizzazione di immagini e testo ToolStripItem mettendone in relazione  
   
 -   Impostare il <xref:System.Windows.Forms.ToolStripItem.TextImageRelation%2A> proprietà sul valore desiderato. I valori possibili sono `ImageAboveText`, `ImageBeforeText`, `Overlay`, `TextAboveImage`, e `TextBeforeImage`. Il valore predefinito è `ImageBeforeText`.  
   
@@ -75,8 +75,8 @@ ms.locfileid: "33530530"
     toolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;  
     ```  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Windows.Forms.ToolStrip>  
- [Panoramica sul controllo ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)  
- [Architettura del controllo ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)  
- [Riepilogo della tecnologia ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Windows.Forms.ToolStrip>
+- [Panoramica sul controllo ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)
+- [Architettura del controllo ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)
+- [Riepilogo della tecnologia ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)

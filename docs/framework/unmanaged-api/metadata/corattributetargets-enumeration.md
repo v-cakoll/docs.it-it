@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 54d239c3091b29424b26fbab4cb4eb9152ff9ad9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 416c7787e7e68ea0c6864091e92d92fed1a60bf4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442166"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650119"
 ---
 # <a name="corattributetargets-enumeration"></a>Enumerazione CorAttributeTargets
 Specifica gli elementi dell'applicazione ai quali è valido applicare un attributo.  
@@ -67,7 +67,7 @@ typedef enum CorAttributeTargets
 |`catAssembly`|Attributo può essere applicato a un assembly.|  
 |`catModule`|Attributo può essere applicato a un modulo (con estensione dll o .exe) eseguibile portabile.|  
 |`catClass`|Attributo può essere applicato a una classe.|  
-|`catStruct`|Attributo può essere applicato a una struttura; ovvero, un tipo di valore.|  
+|`catStruct`|Attributo può essere applicato a una struttura; vale a dire, digitare un valore.|  
 |`catEnum`|Attributo può essere applicato a un'enumerazione.|  
 |`catConstructor`|Attributo può essere applicato a un costruttore.|  
 |`catMethod`|Attributo può essere applicato a un metodo.|  
@@ -84,14 +84,14 @@ typedef enum CorAttributeTargets
 ## <a name="remarks"></a>Note  
  Il `CorAttributeTargets` valori di enumerazione possono essere combinati con un'operazione OR bit per bit per ottenere la combinazione desiderata.  
   
- Il `CorAttributeTargets` parallelo gestito <xref:System.AttributeTargets?displayProperty=nameWithType> enumerazione.  
+ Il `CorAttributeTargets` Affianca managed <xref:System.AttributeTargets?displayProperty=nameWithType> enumerazione.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorHdr. H  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Enumerazioni dei metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Vedere anche
+- [Enumerazioni dei metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

@@ -7,18 +7,18 @@ helpviewer_keywords:
 - FlowDocumentPageViewer control [WPF]
 - controls [WPF], FlowDocumentPageViewer
 ms.assetid: 1ed5a30e-f415-4c26-a52f-9f028a68f66f
-ms.openlocfilehash: bad83378863cbc8b05fd3b74fe126e8147a20494
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4f58ebbb3f0876c8c1aa23bae04fb46573bc234f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551227"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653762"
 ---
 # <a name="flowdocumentpageviewer"></a>FlowDocumentPageViewer
-Il <xref:System.Windows.Controls.FlowDocumentPageViewer> controllo consente di visualizzare <xref:System.Windows.Documents.FlowDocument> contenuto per ogni pagina. Si differenzia il <xref:System.Windows.Controls.FlowDocumentScrollViewer>, che presenta <xref:System.Windows.Documents.FlowDocument> contenuto in un visualizzatore a scorrimento.  
+Il <xref:System.Windows.Controls.FlowDocumentPageViewer> controllo consente di visualizzare <xref:System.Windows.Documents.FlowDocument> contenuto su una base per ogni pagina. Confrontare con il <xref:System.Windows.Controls.FlowDocumentScrollViewer>, che presenta <xref:System.Windows.Documents.FlowDocument> contenuto in un visualizzatore a scorrimento.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Windows.Documents.FlowDocument>  
- [Cenni preliminari sui documenti dinamici](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
- [Procedure relative alle proprietà](../../../../docs/framework/wpf/advanced/flow-content-elements-how-to-topics.md)  
- [Documenti in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Windows.Documents.FlowDocument>
+- [Cenni preliminari sui documenti dinamici](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+- [Procedure relative alle proprietà](../../../../docs/framework/wpf/advanced/flow-content-elements-how-to-topics.md)
+- [Documenti in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)

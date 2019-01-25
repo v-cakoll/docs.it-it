@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID95
 ms.assetid: 02b8e145-7988-48ad-abad-ed7656b4933c
-ms.openlocfilehash: 54add44280c3381b8a5724cd8c28ba91f879e130
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8eeadcbae52991da6f8a0c5ea12d123df0036927
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33597490"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54566814"
 ---
 # <a name="application-defined-or-object-defined-error"></a>Errore definito dall'applicazione o dall'oggetto
 Si è verificato un errore definito dall'applicazione o dall'utente. Controllare l'errore.  
@@ -18,5 +18,5 @@ Si è verificato un errore definito dall'applicazione o dall'utente. Controllare
   
 -   Consultare l'errore per vedere dove è definito e come risolverlo.  
   
-## <a name="see-also"></a>Vedere anche  
- [Tipi di errore](../../visual-basic/programming-guide/language-features/error-types.md)
+## <a name="see-also"></a>Vedere anche
+- [Tipi di errore](../../visual-basic/programming-guide/language-features/error-types.md)

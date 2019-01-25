@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [Windows Forms], about security
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
-ms.openlocfilehash: 36d38756f7df88ec04aca781525f0f6b0a48b768
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: a19e6d2ed39c21301b3409cdeb55a569f0d2eff4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839131"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54703380"
 ---
 # <a name="security-in-windows-forms-overview"></a>Cenni preliminari sulla sicurezza in Windows Form
 Prima del rilascio di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], qualsiasi codice in esecuzione sul computer di un utente aveva gli stessi diritti o le stesse autorizzazioni di accesso alle risorse che aveva un utente del computer. Se ad esempio all'utente era consentito l'accesso al file system o a un database, anche il codice aveva accesso al file system o al database. Anche se ciò può essere accettabile per il codice contenuto negli eseguibili installati esplicitamente dall'utente nel computer locale, non è altrettanto accettabile per quanto riguarda il codice potenzialmente dannoso proveniente da Internet o da una Intranet locale. A questo tipo di codice, infatti, non deve essere consentito l'accesso alle risorse del computer dell'utente senza autorizzazione esplicita.  
@@ -75,17 +75,17 @@ Prima del rilascio di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md
   
  La tecnologia più adatta dipenderà dallo specifico ambiente di distribuzione. Per altre informazioni, vedere [Scelta di una strategia di distribuzione ClickOnce](/visualstudio/deployment/choosing-a-clickonce-deployment-strategy).  
   
- Per impostazione predefinita [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] le applicazioni distribuite mediante Visual Studio o il [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] strumenti SDK (Mage.exe e MageUI.exe) configurati per l'esecuzione in un computer client con attendibilità totale. Se si vuole distribuire l'applicazione in un ambiente parzialmente attendibile o assegnando soltanto alcune autorizzazioni aggiuntive, sarà necessario modificare le impostazioni predefinite. È possibile farlo con Visual Studio o [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] strumento SDK MageUI.exe quando si configura la distribuzione. Per altre informazioni sull'uso di MageUI.exe, vedere la procedura dettagliata relativa alla distribuzione di un'applicazione ClickOnce dalla riga di comando.  Per altre informazioni su come impostare le autorizzazioni per una zona personalizzata, vedere [Procedura: impostare le autorizzazioni personalizzate per un'applicazione ClickOnce](https://msdn.microsoft.com/library/hafybdaa\(v=vs.110\)) o [Procedura: impostare le autorizzazioni personalizzate per un'applicazione ClickOnce](https://msdn.microsoft.com/library/hafybdaa\(v=vs.120\)).  
+ Per impostazione predefinita [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] le applicazioni distribuite mediante Visual Studio o il [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] strumenti SDK (Mage.exe e MageUI.exe) configurati per l'esecuzione in un computer client con attendibilità totale. Se si vuole distribuire l'applicazione in un ambiente parzialmente attendibile o assegnando soltanto alcune autorizzazioni aggiuntive, sarà necessario modificare le impostazioni predefinite. È possibile farlo con Visual Studio o [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] strumento SDK MageUI.exe quando si configura la distribuzione. Per altre informazioni su come usare MageUI.exe, vedere questa procedura dettagliata: Distribuzione di un'applicazione ClickOnce dalla riga di comando.  Vedere anche [come: Impostare autorizzazioni personalizzate per un'applicazione ClickOnce](https://msdn.microsoft.com/library/hafybdaa\(v=vs.110\)) o [come: Impostare autorizzazioni personalizzate per un'applicazione ClickOnce](https://msdn.microsoft.com/library/hafybdaa\(v=vs.120\)).  
   
  Per altre informazioni sugli aspetti di sicurezza di [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] e sull'elevazione delle autorizzazioni, vedere [Protezione di applicazioni ClickOnce](/visualstudio/deployment/securing-clickonce-applications). Per altre informazioni sulla distribuzione di applicazioni attendibili, vedere [Panoramica della distribuzione di applicazioni attendibili](/visualstudio/deployment/trusted-application-deployment-overview).  
   
 ### <a name="testing-the-application"></a>Verifica dell'applicazione  
- Se è stata distribuita l'applicazione Windows Forms con Visual Studio, è possibile abilitare il debug in ambiente parzialmente attendibile o un'autorizzazione con restrizioni impostata dall'ambiente di sviluppo.  Vedere anche [Procedura: eseguire il debug di un'applicazione ClickOnce con autorizzazioni limitate](https://msdn.microsoft.com/library/593zkfdf\(v=vs.110\)) o [Procedura: eseguire il debug di un'applicazione ClickOnce con autorizzazioni limitate](https://msdn.microsoft.com/library/593zkfdf\(v=vs.120\)).  
+ Se è stata distribuita l'applicazione Windows Forms con Visual Studio, è possibile abilitare il debug in ambiente parzialmente attendibile o un'autorizzazione con restrizioni impostata dall'ambiente di sviluppo.  Vedere anche [come: Eseguire il debug di un'applicazione ClickOnce con autorizzazioni limitate](https://msdn.microsoft.com/library/593zkfdf\(v=vs.110\)) o [come: Eseguire il debug di un'applicazione ClickOnce con autorizzazioni limitate](https://msdn.microsoft.com/library/593zkfdf\(v=vs.120\)).  
   
-## <a name="see-also"></a>Vedere anche  
- [Sicurezza di Windows Form](../../../docs/framework/winforms/windows-forms-security.md)  
- [Nozioni fondamentali sulla sicurezza per l’accesso al codice](../../../docs/framework/misc/code-access-security-basics.md)  
- [Sicurezza e distribuzione di ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)  
- [Panoramica della distribuzione di applicazioni attendibili](/visualstudio/deployment/trusted-application-deployment-overview)  
- [Mage.exe (Strumento per la generazione e la modifica di manifesti)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)  
- [MageUI.exe (Strumento per la generazione e la modifica di manifesti, client grafico)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)
+## <a name="see-also"></a>Vedere anche
+- [Sicurezza di Windows Form](../../../docs/framework/winforms/windows-forms-security.md)
+- [Nozioni fondamentali sulla sicurezza per l’accesso al codice](../../../docs/framework/misc/code-access-security-basics.md)
+- [Sicurezza e distribuzione di ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)
+- [Panoramica della distribuzione di applicazioni attendibili](/visualstudio/deployment/trusted-application-deployment-overview)
+- [Mage.exe (Strumento per la generazione e la modifica di manifesti)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)
+- [MageUI.exe (Strumento per la generazione e la modifica di manifesti, client grafico)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)

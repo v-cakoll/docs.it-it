@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 983cad5ed87d0666ed71a805a3b3f7a3c7e7c091
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bb91c5dfbe5c83e08d786043d7e4732fa19e53db
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444304"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54566786"
 ---
 # <a name="ihosttaskmanagercallneedshosthook-method"></a>Metodo IHostTaskManager::CallNeedsHostHook
-Consente all'host di specificare se common language runtime (CLR) può rendere inline la chiamata a una funzione non gestita specificata.  
+Consente all'host specificare se common language runtime (CLR) è possibile incorporare la chiamata a una funzione non gestita specificata.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,10 +38,10 @@ HRESULT CallNeedsHostHook (
   
 #### <a name="parameters"></a>Parametri  
  `target`  
- [in] L'indirizzo all'interno del file mappato eseguibile portabile (PE) della funzione non gestita che deve essere chiamato.  
+ [in] L'indirizzo all'interno del file mappato eseguibile portabile (PE) della funzione non gestito che deve essere chiamato.  
   
  `pbCallNeedsHostHook`  
- [out] Un puntatore a un valore booleano che indica se l'host richiede che la chiamata a essere associata.  
+ [out] Un puntatore a un valore booleano che indica se l'host richiede la chiamata a eseguire l'hook.  
   
 ## <a name="return-value"></a>Valore restituito  
   
@@ -50,26 +50,26 @@ HRESULT CallNeedsHostHook (
 |S_OK|`CallNeedsHostHook` stato restituito correttamente.|  
 |HOST_E_CLRNOTAVAILABLE|CLR non è stato caricato in un processo oppure si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.|  
 |HOST_E_TIMEOUT|Timeout della chiamata.|  
-|HOST_E_NOT_OWNER|Il chiamante non dispone del blocco.|  
-|HOST_E_ABANDONED|Un evento è stato annullato mentre un thread bloccato o fiber era in attesa su di esso.|  
-|E_FAIL|Si è verificato un errore irreversibile sconosciuto. Quando un metodo viene restituito E_FAIL, Common Language Runtime non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiranno HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_NOT_OWNER|Il chiamante non possiede il blocco.|  
+|HOST_E_ABANDONED|Un evento è stato annullato durante un thread bloccato o fiber è rimasta in attesa su di esso.|  
+|E_FAIL|Si è verificato un errore irreversibile sconosciuto. Quando un metodo di E_FAIL viene restituito, CLR non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiranno HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Note  
- Per ottimizzare l'esecuzione di codice, CLR esegue un'analisi di ogni piattaforma richiamo durante la compilazione per determinare se la chiamata può essere resa inline. `CallNeedsHostHook` consente all'host di eseguire l'override di tale decisione richiedendo l'hook una chiamata a una funzione non gestita. Se l'host richiede una funzione hook, il runtime non rende inline la chiamata.  
+ Per ottimizzare l'esecuzione di codice, CLR esegue un'analisi di ogni piattaforma chiamata invoke durante la compilazione per determinare se la chiamata può essere impostato come inline. `CallNeedsHostHook` consente all'host eseguire l'override di questa decisione, richiedendo l'hook una chiamata a una funzione non gestita. Se l'host necessita di una funzione hook, il runtime non rende inline della chiamata.  
   
- L'host in genere richiederebbe un hook quando è necessario modificare uno stato a virgola mobile o alla ricezione di notifica che una chiamata sta entrando in uno stato in cui l'host non è possibile tenere delle richieste traccia di memoria e di eventuali blocchi acquisiti. Quando l'host richiede l'hook di chiamata, il runtime notifica all'host le transizioni da e verso codice gestito mediante chiamate al [EnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enterruntime-method.md), [LeaveRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-leaveruntime-method.md), [ ReverseEnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseenterruntime-method.md), e [ReverseLeaveRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseleaveruntime-method.md).  
+ L'host in genere richiederebbe un hook di quando è necessario modificare uno stato a virgola mobile, o dopo aver ricevuto la notifica che una chiamata sta entrando in uno stato in cui l'host non è possibile tenere traccia richieste del runtime per la memoria o di eventuali blocchi acquisiti. Quando l'host richiede che la chiamata di hook, il runtime di notifica all'host di transizioni da e verso il codice gestito tramite le chiamate a [EnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enterruntime-method.md), [LeaveRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-leaveruntime-method.md), [ ReverseEnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseenterruntime-method.md), e [ReverseLeaveRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseleaveruntime-method.md).  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Mscoree. H  
+ **Intestazione:** MSCorEE.h  
   
- **Libreria:** inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  
- [Interfaccia ICLRTaskManager](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)  
- [Interfaccia IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)  
- [Interfaccia IHostTaskManager](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
+- [Interfaccia ICLRTaskManager](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
+- [Interfaccia IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
+- [Interfaccia IHostTaskManager](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Call statement [Visual Basic]
 - procedures [Visual Basic], calling
 ms.assetid: e5b31571-6867-406f-b8e7-a3f9aae4723a
-ms.openlocfilehash: 259fcc6f1c59df09e768a08204df81aa8105de53
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: e706650ac6da84d9b4e77fc549811e731be61b92
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37936789"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54594161"
 ---
 # <a name="call-statement-visual-basic"></a>Istruzione Call (Visual Basic)
 Trasferisce il controllo a un `Function`, `Sub`, o una routine di libreria di collegamento dinamico (DLL).  
@@ -43,8 +43,8 @@ Trasferisce il controllo a un `Function`, `Sub`, o una routine di libreria di co
   
  [!code-vb[VbVbalrStatements#97](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/call-statement_1.vb)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Istruzione Function](../../../visual-basic/language-reference/statements/function-statement.md)  
- [Istruzione Sub](../../../visual-basic/language-reference/statements/sub-statement.md)  
- [Istruzione Declare](../../../visual-basic/language-reference/statements/declare-statement.md)  
- [Espressioni lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
+## <a name="see-also"></a>Vedere anche
+- [Istruzione Function](../../../visual-basic/language-reference/statements/function-statement.md)
+- [Istruzione Sub](../../../visual-basic/language-reference/statements/sub-statement.md)
+- [Istruzione Declare](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [Espressioni lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)

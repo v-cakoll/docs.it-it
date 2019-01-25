@@ -22,22 +22,22 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], handling
 - On Error statement [Visual Basic]
 ms.assetid: ff947930-fb84-40cf-bd66-1ea219561d5c
-ms.openlocfilehash: b2e32dcca2e29a178af6dc985da536b47f0ebae6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9916c7197b260436a447a84b22df9b76dc5af4cd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33605095"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54654884"
 ---
 # <a name="on-error-statement-visual-basic"></a>Istruzione On Error (Visual Basic)
-Abilita una routine di gestione degli errori e specifica il percorso della routine all'interno di una routine. consente inoltre di disabilitare una routine di gestione degli errori.  
+Consente a una routine di gestione degli errori e specifica il percorso della routine all'interno di una routine. è anche utilizzabile per disabilitare una routine di gestione degli errori.  
   
- Senza la gestione degli errori, qualsiasi errore di run-time che si verifica rappresenta un errore irreversibile: viene visualizzato un messaggio di errore e l'esecuzione viene arrestata.  
+ Senza la gestione degli errori è irreversibile qualsiasi errore di run-time che si verifica: viene visualizzato un messaggio di errore e l'esecuzione viene arrestata.  
   
- Quando possibile, si consiglia di utilizzare nel codice, anziché utilizzare la gestione strutturata delle eccezioni strutturata e `On Error` istruzione. Per altre informazioni, vedere [Istruzione Try...Catch...Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
+ Quando possibile, si consiglia di usare la gestione del codice, anziché utilizzare la gestione delle eccezioni non strutturata delle eccezioni strutturata e `On Error` istruzione. Per altre informazioni, vedere [Istruzione Try...Catch...Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
   
 > [!NOTE]
->  Il `Error` (parola chiave) viene usato anche nel [Error (istruzione)](../../../visual-basic/language-reference/statements/error-statement.md), che è supportato per compatibilità con le versioni precedenti.  
+>  Il `Error` parola chiave viene usata anche nel [Error (istruzione)](../../../visual-basic/language-reference/statements/error-statement.md), che è supportata per compatibilità con le versioni precedenti.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -49,82 +49,82 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
   
 |Termine|Definizione|  
 |---|---|  
-|`GoTo` `line`|Consente la routine di gestione degli errori che inizia alla riga specificata in obbligatorio `line` argomento. Il `line` argomento è un'etichetta di riga o un numero di riga. Se si verifica un errore di run-time, controllare i branch per la riga specificata, attivando il gestore di errori. La riga specificata deve trovarsi nella stessa routine come il `On Error` verrà eseguita l'istruzione o un errore in fase di compilazione.|  
-|`GoTo` 0|Disabilita gestore errori abilitato nella procedura corrente e viene reimpostato su `Nothing`.|  
-|`GoTo` -1|Disabilita l'eccezione abilitata nella procedura corrente e viene reimpostato su `Nothing`.|  
-|`Resume Next`|Specifica che quando si verifica un errore di run-time, controllo passa all'istruzione immediatamente successiva all'istruzione in cui si è verificato l'errore e l'esecuzione continua da tale punto. Utilizzare questo modulo anziché `On Error GoTo` quando l'accesso agli oggetti.|  
+|`GoTo` `line`|Abilita la routine di gestione degli errori che inizia alla riga specificata in richiesti `line` argomento. Il `line` argomento è un'etichetta di riga o un numero di riga. Se si verifica un errore di run-time, controllare la riga specificata, attivando il gestore di errori dei rami. La riga specificata deve trovarsi nella stessa routine come il `On Error` verrà eseguita l'istruzione o un errore in fase di compilazione.|  
+|`GoTo` 0|Disabilita il gestore di errori abilitato nella procedura corrente e reimpostarlo su `Nothing`.|  
+|`GoTo` -1|Disabilita eccezione abilitata nella procedura corrente e reimpostarlo su `Nothing`.|  
+|`Resume Next`|Specifica che quando si verifica un errore di run-time, controllo passa all'istruzione immediatamente successiva all'istruzione in cui si è verificato l'errore e l'esecuzione continua da tale punto. Utilizzare questo modulo invece `On Error GoTo` l'accesso agli oggetti.|  
   
 ## <a name="remarks"></a>Note  
   
 > [!NOTE]
->  È consigliabile utilizzare Gestione strutturata delle eccezioni nel codice ogni volta che è possibile, anziché utilizzare la gestione delle eccezioni non strutturata e `On Error` istruzione. Per altre informazioni, vedere [Istruzione Try...Catch...Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
+>  È consigliabile usare Gestione strutturata delle eccezioni nel codice quando possibile, anziché utilizzare la gestione delle eccezioni non strutturati e `On Error` istruzione. Per altre informazioni, vedere [Istruzione Try...Catch...Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
   
- Un gestore di errori "abilitato" è quello che viene attivato da un `On Error` istruzione. Un gestore degli errori "attivo" è un gestore abilitato che sta per la gestione di un errore.  
+ Un gestore di errori "abilitato" è quello che è attivata per un `On Error` istruzione. Un gestore degli errori "active" è un gestore abilitato che sta per la gestione di un errore.  
   
- Se si verifica un errore mentre un gestore degli errori è attivo (tra l'occorrenza dell'errore e un `Resume`, `Exit Sub`, `Exit Function`, o `Exit Property` istruzione), il gestore di errori della routine corrente non è possibile gestire l'errore. Controllo viene restituito alla routine chiamante.  
+ Se si verifica un errore mentre è attivo un gestore degli errori (tra l'occorrenza dell'errore e un `Resume`, `Exit Sub`, `Exit Function`, o `Exit Property` istruzione), il gestore di errori della stored procedure corrente non è possibile gestire l'errore. Controllo viene restituito alla routine chiamante.  
   
- Se la routine chiamante dispone di un gestore errori abilitato, verrà attivato per gestire gli errori. Se il gestore di errori della routine chiamata anche è attivo, il controllo passa attraverso la routine chiamate precedente finché non viene trovato un gestore errori abilitato ma inattivo. Se il gestore errori non viene trovato, l'errore è irreversibile nel punto in cui si è effettivamente verificato.  
+ Se la routine chiamante dispone di un gestore di errori abilitato, verrà attivato per gestire gli errori. Se il gestore di errori della stored procedure chiamante anche è attivo, il controllo passa attraverso procedure chiamante precedenti fino a quando non viene trovato un gestore di errori abilitato, ma inattiva. Se il gestore errori non viene trovato, l'errore è irreversibile nel punto in corrispondenza del quale si è effettivamente verificato.  
   
- Ogni volta che il gestore degli errori passa il controllo torna a una routine chiamante, che diventa la routine corrente. Dopo l'errore viene gestito da un gestore di errori in tutte le procedure, nella routine corrente, dal punto indicato dall'esecuzione riprende il `Resume` istruzione.  
+ Ogni volta che il gestore degli errori passa il controllo torna a una routine chiamante, questa diventerà la routine corrente. Dopo l'errore viene gestito da un gestore degli errori in tutte le procedure, l'esecuzione riprende nella procedura corrente in corrispondenza del punto designato dal `Resume` istruzione.  
   
 > [!NOTE]
->  Una routine di gestione degli errori non è un `Sub` stored procedure o un `Function` stored procedure. È una sezione di codice contrassegnato da un'etichetta di riga o un numero di riga.  
+>  Una routine di gestione degli errori non è un `Sub` routine o un `Function` procedure. È una sezione di codice contrassegnato da un'etichetta di riga o un numero di riga.  
   
 ## <a name="number-property"></a>Proprietà Number  
- Routine di gestione degli errori si basano sul valore di `Number` proprietà del `Err` oggetto per determinare la causa dell'errore. La routine deve testare o salvare i valori di proprietà pertinenti di `Err` oggetto qualsiasi altro errore può verificarsi prima o una routine che potrebbe causare un errore viene richiamato. I valori delle proprietà di `Err` oggetto riflettono solo l'errore più recente. Il messaggio di errore associata a `Err.Number` è contenuto in `Err.Description`.  
+ Routine di gestione degli errori si basano sul valore di `Number` proprietà del `Err` oggetto per determinare la causa dell'errore. La routine deve testare o salvare i valori delle proprietà pertinenti nel `Err` prima di qualsiasi altro errore può verificarsi o prima di una routine che potrebbe causare un errore è denominato dell'oggetto. I valori delle proprietà di `Err` oggetto riflettono solo l'errore più recente. Il messaggio di errore associato `Err.Number` contenuto in `Err.Description`.  
   
 ## <a name="throw-statement"></a>Istruzione Throw  
- Un errore viene generato con il `Err.Raise` metodo imposta la `Exception` proprietà a un'istanza appena creata del <xref:System.Exception> classe. Per supportare la generazione di eccezioni di tipi derivati, un `Throw` nel linguaggio è supportata l'istruzione. Questo ha un singolo parametro che rappresenta l'istanza di eccezione viene generata. Nell'esempio seguente viene illustrato come utilizzare queste funzioni con il supporto di gestione delle eccezioni esistenti:  
+ Un errore che viene generato con il `Err.Raise` metodo imposta la `Exception` proprietà a un'istanza appena creata del <xref:System.Exception> classe. Per supportare la generazione di eccezioni derivate dei tipi di eccezione, un `Throw` istruzione è supportata nel linguaggio. Ciò richiede un solo parametro che rappresenta l'istanza di eccezione viene generata. Nell'esempio seguente viene illustrato come queste funzionalità possono essere utilizzate con supporto di gestione delle eccezioni esistenti:  
   
  [!code-vb[VbVbalrErrorHandling#17](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/on-error-statement_1.vb)]  
   
- Si noti che il `On Error GoTo` istruzione vengono intercettati tutti gli errori, indipendentemente dalla classe di eccezione.  
+ Si noti che il `On Error GoTo` istruzione intercetta tutti gli errori, indipendentemente dalla classe di eccezione.  
   
 ## <a name="on-error-resume-next"></a>On Error Resume Next  
- `On Error Resume Next` fa sì che l'esecuzione continuare con l'istruzione immediatamente successiva all'istruzione che ha causato l'errore di run-time, o con l'istruzione immediatamente successiva all'ultima chiamata effettuata la stored procedure che contiene il `On Error Resume Next` istruzione. Questa istruzione consente di continuare nonostante sia stato un errore di run-time. È possibile inserire la routine di gestione degli errori in cui si verificherà l'errore, anziché trasferire il controllo in un'altra posizione all'interno della routine. Un `On Error Resume Next` istruzione diventa inattiva quando viene chiamata un'altra routine, pertanto è consigliabile eseguire un `On Error Resume Next` istruzione in ogni chiamata di routine se si desidera tale routine di gestione degli errori inline.  
+ `On Error Resume Next` fa sì che l'esecuzione di continuare con l'istruzione immediatamente successiva all'istruzione che ha causato l'errore di run-time, oppure con l'istruzione immediatamente successiva all'ultima chiamata all'esterno di procedure che contiene il `On Error Resume Next` istruzione. Questa istruzione consente l'esecuzione di continuare nonostante sia un errore di run-time. È possibile inserire la routine di gestione degli errori in cui si verificherà l'errore anziché il trasferimento del controllo in un'altra posizione all'interno della routine. Un' `On Error Resume Next` istruzione diventa inattiva quando viene chiamata un'altra routine, pertanto è consigliabile eseguire un `On Error Resume Next` istruzione in ogni chiamata di routine se si desidera che all'interno di tale routine di gestione degli errori di linea.  
   
 > [!NOTE]
->  Il `On Error Resume Next` costrutto può essere preferibile `On Error GoTo` la gestione degli errori generati durante l'accesso ad altri oggetti. Controllo `Err` dopo ogni interazione con un oggetto, Elimina l'ambiguità sulla quale oggetto ha effettuato l'accesso dal codice. È possibile essere certi che l'oggetto inserito il codice di errore in `Err.Number`, nonché quale oggetto ha generato l'errore (l'oggetto specificato `Err.Source`).  
+>  Il `On Error Resume Next` costrutto può essere preferibile `On Error GoTo` durante la gestione degli errori generati durante l'accesso ad altri oggetti. Controllo `Err` dopo ogni interazione con un oggetto rimuove ambiguità intorno al quale oggetto ha effettuato l'accesso dal codice. È possibile che l'oggetto inserito il codice di errore in `Err.Number`, nonché l'oggetto che ha originariamente generato l'errore (l'oggetto specificato nel `Err.Source`).  
   
 ## <a name="on-error-goto-0"></a>On Error GoTo 0  
- `On Error GoTo 0` Disabilita la gestione degli errori in routine corrente. Riga 0 non specifica come l'inizio del codice di gestione degli errori, anche se la routine contiene una riga numerata da 0. Senza un `On Error GoTo 0` istruzione, un gestore degli errori viene disattivato automaticamente quando si esce da una routine.  
+ `On Error GoTo 0` Disabilita la gestione degli errori nelle routine corrente. La riga 0 non viene specificata come l'inizio del codice di gestione degli errori, anche se la routine contiene una riga numerata da 0. Senza un `On Error GoTo 0` istruzione, un gestore degli errori viene automaticamente disabilitata quando si esce da una routine.  
   
 ## <a name="on-error-goto--1"></a>On Error GoTo -1  
- `On Error GoTo -1` Disabilita l'eccezione nella procedura corrente. Non specifica riga -1 come punto di partenza del codice di gestione degli errori, anche se la routine contiene una riga numerata -1. Senza un `On Error GoTo -1` istruzione, un'eccezione viene disabilitata automaticamente quando si esce da una routine.  
+ `On Error GoTo -1` Disabilita l'eccezione nella procedura corrente. Non specifica riga -1 come punto di partenza del codice di gestione degli errori, anche se la routine contiene una riga con il numero di -1. Senza un `On Error GoTo -1` istruzione, un'eccezione viene automaticamente disabilitata quando si esce da una routine.  
   
- Per impedire che il codice di gestione degli errori in esecuzione quando non si è verificato alcun errore, inserire un `Exit Sub`, `Exit Function`, o `Exit Property` istruzione immediatamente prima della routine di gestione degli errori, come illustrato nel frammento seguente:  
+ Per evitare che il codice di gestione degli errori in esecuzione quando si è verificato alcun errore, inserire un `Exit Sub`, `Exit Function`, o `Exit Property` istruzione immediatamente prima della routine di gestione degli errori, come illustrato nel frammento seguente:  
   
  [!code-vb[VbVbalrErrorHandling#18](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/on-error-statement_2.vb)]  
   
- In questo caso, il codice di gestione degli errori segue il `Exit Sub` istruzione e precede il `End Sub` che lo separano dal flusso della routine. È possibile inserire il codice di gestione degli errori in un punto qualsiasi in una stored procedure.  
+ In questo caso, il codice di gestione degli errori segue il `Exit Sub` istruzione e precede la `End Sub` che lo separano dal flusso della routine. È possibile inserire codice di gestione degli errori in un punto qualsiasi in una procedura.  
   
 ## <a name="untrapped-errors"></a>Errori non intercettati  
- Errori non intercettati negli oggetti vengono restituiti all'applicazione di controllo quando l'oggetto è in esecuzione come file eseguibile. All'interno dell'ambiente di sviluppo, non intercettati gli errori vengono restituiti all'applicazione di controllo solo se sono impostate le opzioni appropriate. Vedere la documentazione dell'applicazione host per una descrizione dei quali opzioni da impostare durante il debug, come impostarle e indica se l'host può creare classi.  
+ Non intercettati errori negli oggetti vengono restituiti all'applicazione di controllo quando l'oggetto è in esecuzione come un file eseguibile. All'interno dell'ambiente di sviluppo, non intercettati gli errori vengono restituiti all'applicazione di controllo solo se sono impostate le opzioni appropriate. Vedere la documentazione dell'applicazione host per una descrizione dei quali opzioni devono essere impostato durante il debug, come impostarli e indica se l'host può creare classi.  
   
- Se si crea un oggetto che accede a altri oggetti, è consigliabile gestire errori non gestiti vengono passati. Se non è possibile, mappare i codici di errore `Err.Number` per uno degli errori, quindi passare nuovamente al chiamante dell'oggetto. È necessario specificare l'errore aggiungendo il codice di errore per il `VbObjectError` costante. Ad esempio, se il codice di errore è 1052, assegnarlo come indicato di seguito:  
+ Se si crea un oggetto che accede a altri oggetti, è consigliabile gestire errori non gestiti che passare di nuovo. Se non è possibile, il mapping di codici di errore `Err.Number` a uno dei propri errori e quindi passare nuovamente al chiamante dell'oggetto. È necessario specificare l'errore aggiungendo il codice di errore per il `VbObjectError` costante. Ad esempio, se il codice di errore è 1052, assegnarla come indicato di seguito:  
   
  [!code-vb[VbVbalrErrorHandling#19](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/on-error-statement_3.vb)]  
   
 > [!CAUTION]
->  Gli errori di sistema durante le chiamate alle librerie a collegamento dinamico (DLL) Windows non generano eccezioni e non possono essere intercettati con intercettazione degli errori di Visual Basic. Quando la chiamata di funzioni DLL, è necessario controllare ogni valore restituito per l'esito positivo o negativo (in base alle specifiche API) e in caso di errore, controllare il valore di `Err` dell'oggetto `LastDLLError` proprietà.  
+>  Non generano eccezioni ed errori di sistema durante le chiamate alle librerie Windows a collegamento dinamico (DLL) non possono essere intercettati con intercettazione degli errori di Visual Basic. Quando si chiamano le funzioni di DLL, è necessario controllare ogni valore restituito per esito positivo o negativo (in base alle specifiche di API) e si verifica un errore, controllare il valore di `Err` dell'oggetto `LastDLLError` proprietà.  
   
 ## <a name="example"></a>Esempio  
- In questo esempio utilizza in primo luogo il `On Error GoTo` istruzione per specificare il percorso di una routine di gestione degli errori all'interno di una stored procedure. Nell'esempio, un tentativo di dividere per zero genera il numero di errore 6. Nella routine di gestione degli errori viene gestito l'errore e il controllo viene quindi restituito all'istruzione che ha causato l'errore. Il `On Error GoTo 0` istruzione consente di disattivare la registrazione degli errori. Il `On Error Resume Next` istruzione utilizzata per rinviare la registrazione degli errori in modo che il contesto per l'errore generato dall'istruzione successiva può essere riconosciuto per determinati. Si noti che `Err.Clear` viene utilizzato per cancellare il `Err` proprietà dell'oggetto dopo l'errore viene gestito.  
+ In questo esempio utilizza in primo luogo il `On Error GoTo` istruzione per specificare il percorso di una routine di gestione degli errori all'interno di una routine. Nell'esempio, un tentativo di dividere per zero genera il numero di errore 6. L'errore viene gestito nella routine di gestione degli errori e il controllo viene quindi restituito all'istruzione che ha causato l'errore. Il `On Error GoTo 0` istruzione consente di disattivare la registrazione degli errori. Il `On Error Resume Next` istruzione viene utilizzata per rinviare la registrazione degli errori in modo che il contesto dell'errore generato dall'istruzione successiva può essere riconosciuto per alcuni. Si noti che `Err.Clear` viene usato per cancellare il `Err` proprietà dell'oggetto dopo l'errore viene gestito.  
   
  [!code-vb[VbVbalrErrorHandling#20](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/on-error-statement_4.vb)]  
   
 ## <a name="requirements"></a>Requisiti  
- **Namespace:** [VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
+ **Spazio dei nomi:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
   
- **Assembly:** libreria di Runtime di Visual Basic (in VisualBasic)  
+ **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:Microsoft.VisualBasic.Information.Err%2A>  
- <xref:Microsoft.VisualBasic.ErrObject.Number%2A>  
- <xref:Microsoft.VisualBasic.ErrObject.Description%2A>  
- <xref:Microsoft.VisualBasic.ErrObject.LastDllError%2A>  
- [Istruzione End](../../../visual-basic/language-reference/statements/end-statement.md)  
- [Istruzione Exit](../../../visual-basic/language-reference/statements/exit-statement.md)  
- [Istruzione Resume](../../../visual-basic/language-reference/statements/resume-statement.md)  
- [Messaggi di errore](../../../visual-basic/language-reference/error-messages/index.md)  
- [Istruzione Try...Catch...Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:Microsoft.VisualBasic.Information.Err%2A>
+- <xref:Microsoft.VisualBasic.ErrObject.Number%2A>
+- <xref:Microsoft.VisualBasic.ErrObject.Description%2A>
+- <xref:Microsoft.VisualBasic.ErrObject.LastDllError%2A>
+- [Istruzione End](../../../visual-basic/language-reference/statements/end-statement.md)
+- [Istruzione Exit](../../../visual-basic/language-reference/statements/exit-statement.md)
+- [Istruzione Resume](../../../visual-basic/language-reference/statements/resume-statement.md)
+- [Messaggi di errore](../../../visual-basic/language-reference/error-messages/index.md)
+- [Istruzione Try...Catch...Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)

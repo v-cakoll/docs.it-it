@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: selezionare un elemento nel controllo ListView Windows Form'
+title: 'Procedura: Selezionare un elemento nel controllo ListView Windows Form'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - selection [Windows Forms], in list views
 - list views [Windows Forms], selecting items
 ms.assetid: ddea918e-1ddf-47f4-bd09-1e9b4c9d0c39
-ms.openlocfilehash: 8256eaeddf98c5a0dd80357bcd562e8f66db85b3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ed3e68fbe77f194ed04d15f99a48657a32a13b50
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33532821"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54644716"
 ---
-# <a name="how-to-select-an-item-in-the-windows-forms-listview-control"></a>Procedura: selezionare un elemento nel controllo ListView Windows Form
-In questo esempio viene illustrato come selezionare a livello di programmazione un elemento in un Windows Form <xref:System.Windows.Forms.ListView> controllo. Selezione di un elemento a livello di codice non cambia automaticamente lo stato attivo per il <xref:System.Windows.Forms.ListView> controllo. Per questo motivo, si sarà in genere consigliabile impostare l'elemento, come lo stato attivo quando si seleziona un elemento.  
+# <a name="how-to-select-an-item-in-the-windows-forms-listview-control"></a>Procedura: Selezionare un elemento nel controllo ListView Windows Form
+In questo esempio viene illustrato come selezionare a livello di programmazione un elemento in un form Windows <xref:System.Windows.Forms.ListView> controllo. Selezione di un elemento a livello di codice non cambia automaticamente lo stato attivo per il <xref:System.Windows.Forms.ListView> controllo. Per questo motivo, è anche in genere possibile impostare l'elemento come lo stato attivo quando si seleziona un elemento.  
   
 ## <a name="example"></a>Esempio  
  [!code-csharp[System.Windows.Forms.ListView.Misc#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListView.Misc/CS/form1.cs#1)]
@@ -31,6 +31,6 @@ In questo esempio viene illustrato come selezionare a livello di programmazione 
   
 -   Riferimenti agli spazi dei nomi <xref:System?displayProperty=nameWithType> e <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Windows.Forms.ListView>  
- <xref:System.Windows.Forms.ListViewItem.Selected%2A?displayProperty=nameWithType>
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Windows.Forms.ListView>
+- <xref:System.Windows.Forms.ListViewItem.Selected%2A?displayProperty=nameWithType>

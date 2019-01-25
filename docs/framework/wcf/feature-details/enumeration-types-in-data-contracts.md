@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], enumeration types
 ms.assetid: b5d694da-68cb-4b74-a5fb-75108a68ec3b
-ms.openlocfilehash: ed4a0c572f651793a40cb5ffcaa32aef884c1cec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 21f1f948e0bcd088cbe14316760708e10285124b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494517"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54649310"
 ---
 # <a name="enumeration-types-in-data-contracts"></a>Tipi di enumerazioni nei contratti dati
 Le enumerazioni possono essere espresse nel modello del contratto dati. In questo argomento vengono esaminati molti esempi che spiegano il modello di programmazione.  
@@ -30,7 +30,7 @@ Le enumerazioni possono essere espresse nel modello del contratto dati. In quest
  È possibile usare come al solito le proprietà <xref:System.Runtime.Serialization.DataContractAttribute> (<xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> e <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A>) per i contratti dati dell'enumerazione.  
   
 ### <a name="enumeration-member-values"></a>Valori membro dell'enumerazione  
- In genere il contratto dati include i nomi dei membri dell'enumerazione, non i valori numerici. Tuttavia, quando si utilizza il modello di contratto dati, se il lato ricevente è un client WCF, lo schema esportato mantiene i valori numerici. Si noti che questo non è il caso quando si utilizza il [utilizzando la classe XmlSerializer](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md).  
+ In genere il contratto dati include i nomi dei membri dell'enumerazione, non i valori numerici. Tuttavia, quando si usa il modello di contratto dati, se il lato ricevente è un client WCF, lo schema esportato mantiene i valori numerici. Si noti che ciò non avviene quando si usa la [usando la classe XmlSerializer](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md).  
   
  Nell'esempio precedente, se `condition` è impostato su `Used` e i dati vengono serializzati in XML, il codice XML risultante è `<condition>Used</condition>``<condition>1</condition>` e non . Di conseguenza, il contratto dati seguente è equivalente al contratto dati di `CarConditionEnum`.  
   
@@ -81,7 +81,7 @@ Le enumerazioni possono essere espresse nel modello del contratto dati. In quest
   
 1.  Tentare di individuare un membro dell'enumerazione (a cui è applicato l'attributo <xref:System.Runtime.Serialization.EnumMemberAttribute>) associato al valore numerico. Se disponibile, inviare un elenco che contenga solo quel membro.  
   
-2.  Tentare di suddividere il valore numerico in una somma tale che vi siano membri dell'enumerazione (ai quali è applicato l'attributo <xref:System.Runtime.Serialization.EnumMemberAttribute>) associati a ogni parte della somma. Inviare l'elenco di tutti questi membri. Si noti che il *algoritmo greedy* viene utilizzato per trovare ad esempio una somma, e pertanto non c'è garanzia che tale somma venga trovata anche se è presente. Per evitare questo problema, verificare che i valori numerici dei membri dell'enumerazione siano potenze di due.  
+2.  Tentare di suddividere il valore numerico in una somma tale che vi siano membri dell'enumerazione (ai quali è applicato l'attributo <xref:System.Runtime.Serialization.EnumMemberAttribute>) associati a ogni parte della somma. Inviare l'elenco di tutti questi membri. Si noti che il *algoritmo greedy* viene usato per trovare tale somma, e pertanto non c'è garanzia che tale somma venga trovata anche se è presente. Per evitare questo problema, verificare che i valori numerici dei membri dell'enumerazione siano potenze di due.  
   
 3.  Se i due passaggi precedenti hanno esito negativo e il valore numerico è diverso da zero, generare un'eccezione <xref:System.Runtime.Serialization.SerializationException>. Se il valore numerico è zero, inviare l'elenco vuoto.  
   
@@ -96,7 +96,7 @@ Le enumerazioni possono essere espresse nel modello del contratto dati. In quest
  [!code-csharp[c_DataContractEnumerations#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractenumerations/cs/source.cs#5)]
  [!code-vb[c_DataContractEnumerations#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractenumerations/vb/source.vb#5)]  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Runtime.Serialization.DataContractSerializer>  
- [Uso di contratti di dati](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- [Definizione del trasferimento dati nei contratti di servizio](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- [Uso di contratti di dati](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [Definizione del trasferimento dati nei contratti di servizio](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)

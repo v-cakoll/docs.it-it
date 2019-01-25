@@ -1,5 +1,5 @@
 ---
-title: Classe &#39; &lt;classname&gt; &#39; non è stato trovato
+title: Classe &#39; &lt;classname&gt; &#39; non è stata trovata
 ms.date: 07/20/2015
 f1_keywords:
 - bc31098
@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC31098
 ms.assetid: 72528d02-77b7-4b4c-8b9e-d12f666f92ef
-ms.openlocfilehash: 38f4fd0d10386476a5ca7b2ef6f1576cd5b69db9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5f08fdb67611fe5fcee8b13f08162a62f6db59b3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33586490"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744986"
 ---
-# <a name="class-39ltclassnamegt39-cannot-be-found"></a>Classe &#39; &lt;classname&gt; &#39; non è stato trovato
-Classe\<NomeClasse >' non è stato trovato. Questa condizione è in genere il risultato di un "Microsoft.VisualBasic.dll" non corrispondente.  
+# <a name="class-39ltclassnamegt39-cannot-be-found"></a>Classe &#39; &lt;classname&gt; &#39; non è stata trovata
+Classe\<NomeClasse >' non è stata trovata. Questa condizione è in genere il risultato di un "Microsoft.VisualBasic.dll" non corrispondente.  
   
  Non è stato possibile trovare un membro definito.  
   
@@ -25,11 +25,11 @@ Classe\<NomeClasse >' non è stato trovato. Questa condizione è in genere il ri
   
 1.  Ripetere la compilazione del programma, per controllare se l'errore si verifica di nuovo.  
   
-2.  Se l'errore si ripresenta, salvare il lavoro e riavviare Visual Studio.  
+2.  Se l'errore si ripete, salvare il lavoro e riavviare Visual Studio.  
   
 3.  Se l'errore persiste, reinstallare Visual Basic.  
   
 4.  Se l'errore persiste dopo la reinstallazione, inviare una notifica al Servizio supporto tecnico Microsoft.  
   
-## <a name="see-also"></a>Vedere anche  
- [Talk to Us](/visualstudio/ide/talk-to-us) (Comunicazioni con Microsoft)
+## <a name="see-also"></a>Vedere anche
+- [Talk to Us](/visualstudio/ide/talk-to-us) (Comunicazioni con Microsoft)

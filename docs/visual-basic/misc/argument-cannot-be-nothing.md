@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrGeneral_ArgumentNullException
 ms.assetid: 2abd995b-36a5-45f0-b3c1-6e0c3b31a875
-ms.openlocfilehash: 7b08dd41f638138df4c2f92fbe9f05f1312c2d03
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 157329c74e9c300f8d4d60d96980f9cb77d0e550
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33600068"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54656128"
 ---
 # <a name="argument-cannot-be-nothing"></a>L'argomento non può essere Nothing
 È stato specificato un valore null per un argomento che deve avere un valore.  
@@ -20,5 +20,5 @@ ms.locfileid: "33600068"
   
 -   Verificare che il valore sia calcolato correttamente.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.NullReferenceException>
+## <a name="see-also"></a>Vedere anche
+- <xref:System.NullReferenceException>

@@ -1,23 +1,23 @@
 ---
-title: '&lt;useLegacyJit&gt; elemento'
+title: '&lt;useLegacyJit&gt; Element'
 ms.date: 04/26/2017
 ms.assetid: c2cf97f0-9262-4f1f-a754-5568b51110ad
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dd4f9728338ecc66f84fe42b9bdbda9938ed518b
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: ecf4d805feeb27a7c3fa08d2ab6dd05b6fff693a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612192"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54648180"
 ---
-# <a name="ltuselegacyjitgt-element"></a>&lt;useLegacyJit&gt; elemento
+# <a name="ltuselegacyjitgt-element"></a>&lt;useLegacyJit&gt; Element
 
 Determina se Common Language Runtime usa il compilatore JIT a 64 bit legacy per la compilazione JIT.  
   
 \<configuration>  
 \<runtime>  
-\<useLegacyJit >
+\<useLegacyJit>
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,7 +39,7 @@ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gl
   
 ### <a name="enabled-attribute"></a>attributo Enabled  
   
-| Value | Descrizione                                                                                                         |  
+| Valore | Descrizione                                                                                                         |  
 | ----- | ------------------------------------------------------------------------------------------------------------------- |  
 | 0     | Common language runtime usa il nuovo compilatore JIT a 64 bit incluso in .NET Framework 4.6 e versioni successive. |  
 | 1     | Common language runtime usa il compilatore JIT a 64 bit precedente.                                                     |  
@@ -95,6 +95,6 @@ File di configurazione seguente disabilita la compilazione con il nuovo compilat
   
 ## <a name="see-also"></a>Vedere anche
 
-- [\<runtime > elemento](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)   
-- [Elemento \<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)   
+- [\<runtime > elemento](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)
+- [Elemento \<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)
 - [Mitigazione: Nuovo compilatore JIT a 64 bit](../../../../../docs/framework/migration-guide/mitigation-new-64-bit-jit-compiler.md)

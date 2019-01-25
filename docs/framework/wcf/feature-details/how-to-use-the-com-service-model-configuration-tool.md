@@ -1,17 +1,17 @@
 ---
-title: 'Procedura: usare lo strumento di configurazione del modello di servizi di COM+'
+title: 'Procedura: Usare lo strumento di configurazione modello di servizio COM+'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM+ [WCF], using service model configuration tool
 ms.assetid: 7e68cd8d-5fda-4641-b92f-290db874376e
-ms.openlocfilehash: d26e3b127328a3de4df6bd58fb6015bee045f3c1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 528e46a47daa6df865308592eb41658369a74b6e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496240"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736247"
 ---
-# <a name="how-to-use-the-com-service-model-configuration-tool"></a>Procedura: usare lo strumento di configurazione del modello di servizi di COM+
+# <a name="how-to-use-the-com-service-model-configuration-tool"></a>Procedura: Usare lo strumento di configurazione modello di servizio COM+
 Dopo aver selezionato una modalità di hosting appropriata, utilizzare lo strumento della riga di comando per la configurazione del modello di servizi COM+ (ComSvcConfig.exe) per configurare le interfacce dell'applicazione da esporre come servizi Web.  
   
 > [!NOTE]
@@ -29,7 +29,7 @@ Dopo aver selezionato una modalità di hosting appropriata, utilizzare lo strume
 >  Il ripristino di questa chiave del Registro di sistema è importante. Si tratta di una chiave di compatibilità. Se non si ripristina, questa modifica può causare problemi ad altre applicazioni .NET in esecuzione nel computer.  
   
 > [!WARNING]
->  Quando si utilizza ComSvcConfig.exe /install in un computer Windows 8, una finestra di dialogo viene visualizzata contenente il messaggio "un'app nel PC richiede la funzionalità di Windows seguente: .NET Framework 3.5 (include .NET 2.0 e .NET 3.0" Se non è installato .NET Framework 3.5. Questa finestra di dialogo può essere ignorata. In alternativa è possibile impostare la chiave del Registro di sistema OnlyUseLatestCLR su un valore DWORD di 0x00000001  
+>  Quando si usa ComSvcConfig.exe /install in un computer Windows 8, una finestra di dialogo viene visualizzata che indica che "un'app nel PC richiede la funzionalità di Windows seguente: .NET Framework 3.5 (include .NET 2.0 e .NET 3.0" Se non è installato .NET Framework 3.5. Questa finestra di dialogo può essere ignorata. In alternativa è possibile impostare la chiave del Registro di sistema OnlyUseLatestCLR su un valore DWORD di 0x00000001  
   
 ### <a name="to-add-an-interface-to-the-set-of-interfaces-that-are-to-be-exposed-as-web-services-using-the-com-hosting-mode"></a>Per aggiungere un'interfaccia al set di interfacce da esporre come servizi Web mediante la modalità di hosting COM+  
   
@@ -109,5 +109,5 @@ Dopo aver selezionato una modalità di hosting appropriata, utilizzare lo strume
     ComSvcConfig.exe /?  
     ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Panoramica dell'integrazione con applicazioni COM+](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)
+## <a name="see-also"></a>Vedere anche
+- [Panoramica dell'integrazione con applicazioni COM+](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)

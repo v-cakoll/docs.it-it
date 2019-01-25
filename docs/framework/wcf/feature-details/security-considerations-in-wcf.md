@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - WCF, security
 ms.assetid: 42055ee0-6d0c-443d-9d89-788dfc345d6d
-ms.openlocfilehash: f7bcaff5cd30566f2bf729695a7c4c44cd45c5d3
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6cc19f7719b9cdbcd3852c99f450c1d728dc833b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192837"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745981"
 ---
 # <a name="security-considerations-in-wcf"></a>Considerazioni sulla sicurezza in WCF
 Negli argomenti di questa sezione elenca i vari elementi correlati alla sicurezza da considerare quando si progetta un'applicazione Windows Communication Foundation (WCF).  
@@ -50,5 +50,5 @@ Negli argomenti di questa sezione elenca i vari elementi correlati alla sicurezz
 ## <a name="related-sections"></a>Sezioni correlate  
  [Linee guida e procedure consigliate per la sicurezza](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
   
-## <a name="see-also"></a>Vedere anche  
- [Sicurezza](../../../../docs/framework/wcf/feature-details/security.md)
+## <a name="see-also"></a>Vedere anche
+- [Sicurezza](../../../../docs/framework/wcf/feature-details/security.md)

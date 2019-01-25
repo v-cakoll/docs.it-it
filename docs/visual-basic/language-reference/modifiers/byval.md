@@ -8,15 +8,15 @@ helpviewer_keywords:
 - ByVal keyword [Visual Basic], contexts
 - ByVal keyword [Visual Basic]
 ms.assetid: 1eaf4e58-b305-4785-9e3d-e416b9c75598
-ms.openlocfilehash: 076289ff303dce58f036d6c7cb1505b151da19f6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6fa87db4fbab961dd1aa526e2ac8ff15b031005b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33602983"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650080"
 ---
 # <a name="byval-visual-basic"></a>ByVal (Visual Basic)
-Specifica che un argomento è passato in modo che la routine o proprietà chiamata non è possibile modificare il valore di una variabile sottostante all'argomento nel codice chiamante.  
+Specifica che un argomento è passato in modo tale che la routine o proprietà chiamata non è possibile modificare il valore di una variabile sottostante all'argomento nel codice chiamante.  
   
 ## <a name="remarks"></a>Note  
  Il modificatore `ByVal` può essere usato nei contesti seguenti:  
@@ -32,10 +32,10 @@ Specifica che un argomento è passato in modo che la routine o proprietà chiama
  [Istruzione Sub](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato l'utilizzo del `ByVal` con un argomento di tipo riferimento meccanismo di passaggio dei parametri. Nell'esempio, l'argomento è `c1`, un'istanza della classe `Class1`. `ByVal` impedisce al codice nelle procedure di modifica del valore sottostante dell'argomento di riferimento `c1`, ma non protegge accessibili campi e proprietà di `c1`.  
+ Nell'esempio seguente viene illustrato l'utilizzo del `ByVal` meccanismo con un argomento di tipo di riferimento di passaggio dei parametri. Nell'esempio, è l'argomento `c1`, un'istanza della classe `Class1`. `ByVal` impedisce che la modifica del valore sottostante dell'argomento di riferimento, il codice nelle procedure riportate `c1`, ma non protegge accessibili campi e proprietà di `c1`.  
   
  [!code-vb[VbVbalrKeywords#10](../../../visual-basic/language-reference/codesnippet/VisualBasic/byval_1.vb)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Parole chiave](../../../visual-basic/language-reference/keywords/index.md)  
- [Passaggio di argomenti per valore e per riferimento](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
+## <a name="see-also"></a>Vedere anche
+- [Parole chiave](../../../visual-basic/language-reference/keywords/index.md)
+- [Passaggio di argomenti per valore e per riferimento](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

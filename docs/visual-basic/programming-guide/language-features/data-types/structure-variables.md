@@ -7,14 +7,15 @@ helpviewer_keywords:
 - variables [Visual Basic], structure variables
 - structure variables [Visual Basic]
 ms.assetid: 156872f8-aabc-4454-8e2d-f2253c3c13c9
-ms.openlocfilehash: 0dad7bdcac5428753e252f3b26ca0a127c293a7f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f9cc6d0165b0eda8358d250c37910b1362473ab1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54640602"
 ---
 # <a name="structure-variables-visual-basic"></a>Variabili di struttura (Visual Basic)
-Dopo aver creato una struttura, è possibile dichiarare le variabili a livello di routine sia a livello di modulo come quel tipo. Ad esempio, è possibile creare una struttura che registra le informazioni su un computer. Nell'esempio che segue viene illustrato quanto descritto.  
+Dopo aver creato una struttura, è possibile dichiarare le variabili a livello di routine e a livello di modulo di quel tipo. Ad esempio, è possibile creare una struttura di registrare le informazioni sul sistema. Nell'esempio che segue viene illustrato quanto descritto.  
   
 ```  
 Public Structure systemInfo  
@@ -31,10 +32,10 @@ Dim mySystem, yourSystem As systemInfo
 ```  
   
 > [!NOTE]
->  In classi e moduli, le strutture dichiarate utilizzando il [Dim (istruzione)](../../../../visual-basic/language-reference/statements/dim-statement.md) predefinito l'accesso pubblico. Se si intende una struttura per essere private, assicurarsi che dichiara la classe utilizzando il [privata](../../../../visual-basic/language-reference/modifiers/private.md) (parola chiave).  
+>  Nelle classi e moduli, strutture dichiarate utilizzando il [istruzione Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) predefinito per l'accesso pubblico. Se si intende una struttura a essere private, assicurarsi di dichiarare usando il [privato](../../../../visual-basic/language-reference/modifiers/private.md) (parola chiave).  
   
 ## <a name="access-to-structure-values"></a>Accesso ai valori di struttura  
- Per assegnare e recuperare i valori dagli elementi di una variabile di struttura, utilizzare la stessa sintassi utilizzata per impostare e ottenere le proprietà su un oggetto. Inserire l'operatore di accesso ai membri (`.`) tra il nome di variabile di struttura e il nome dell'elemento. Nell'esempio seguente accede agli elementi delle variabili dichiarate in precedenza come tipo `systemInfo`.  
+ Per assegnare e recuperare i valori dagli elementi di una variabile di struttura, utilizzare la stessa sintassi utilizzata per impostare e ottenere le proprietà su un oggetto. Si inserisce l'operatore di accesso ai membri (`.`) tra il nome di variabile di struttura e il nome dell'elemento. Nell'esempio seguente accede agli elementi delle variabili dichiarate in precedenza come tipo `systemInfo`.  
   
 ```  
 mySystem.cPU = "486"  
@@ -42,23 +43,23 @@ Dim tooOld As Boolean
 If yourSystem.purchaseDate < #1/1/1992# Then tooOld = True  
 ```  
   
-## <a name="assigning-structure-variables"></a>L'assegnazione delle variabili di struttura  
- È inoltre possibile assegnare una variabile a un'altra se sono entrambi dello stesso tipo di struttura. Verranno copiati tutti gli elementi di una struttura per gli elementi corrispondenti in altra. Questa condizione è illustrata la dichiarazione seguente.  
+## <a name="assigning-structure-variables"></a>Assegnazione di variabili di struttura  
+ È anche possibile assegnare una variabile a un altro se entrambi sono dello stesso tipo struttura. Questa copia tutti gli elementi di una struttura per gli elementi corrispondenti in altra. Questa condizione è illustrata la dichiarazione seguente.  
   
 ```  
 yourSystem = mySystem  
 ```  
   
- Se un elemento di struttura è un tipo riferimento, ad esempio un `String`, `Object`, o matrice, puntatore ai dati viene copiato. Nell'esempio precedente, se `systemInfo` fosse stata inclusa una variabile oggetto, quindi l'esempio precedente avrebbe consentito la copia del puntatore da `mySystem` a `yourSystem`, e una modifica ai dati dell'oggetto tramite una struttura sarebbe attivo quando vi si accede con la struttura.  
+ Se un elemento di struttura è un tipo riferimento, ad esempio un `String`, `Object`, o matrice, il puntatore ai dati viene copiato. Nell'esempio precedente, se `systemInfo` fosse stata inclusa una variabile oggetto, quindi l'esempio precedente sarebbe stato copiato il puntatore dal `mySystem` a `yourSystem`, e una modifica ai dati dell'oggetto tramite una sola struttura sarebbe attivo quando si accede tramite la struttura.  
   
-## <a name="see-also"></a>Vedere anche  
- [Tipi di dati](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- [Tipi di dati elementari](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)  
- [Tipi di dati compositi](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)  
- [Tipi valore e tipi riferimento](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
- [Strutture](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
- [Risoluzione dei problemi relativi ai tipi di dati](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- [Procedura: Dichiarare una struttura](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)  
- [Strutture e altri elementi di programmazione](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-other-programming-elements.md)  
- [Strutture e classi](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)  
- [Istruzione Structure](../../../../visual-basic/language-reference/statements/structure-statement.md)
+## <a name="see-also"></a>Vedere anche
+- [Tipi di dati](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
+- [Tipi di dati elementari](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
+- [Tipi di dati compositi](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
+- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Strutture](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
+- [Risoluzione dei problemi relativi ai tipi di dati](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [Procedura: Dichiarare una struttura](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
+- [Strutture e altri elementi di programmazione](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-other-programming-elements.md)
+- [Strutture e classi](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)
+- [Istruzione Structure](../../../../visual-basic/language-reference/statements/structure-statement.md)

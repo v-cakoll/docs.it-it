@@ -4,38 +4,38 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - event logging [WCF]
 ms.assetid: aac0530d-f44c-45a1-bada-e30e0677b41f
-ms.openlocfilehash: ea0e6f3dc66bf40d631077c0dce20ea46f3a6688
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: d8bc1f06308fba41f622307ff65d8fc3f9720a5a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804943"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653658"
 ---
 # <a name="event-logging-in-wcf"></a>Registrazione eventi in WCF
 Windows Communication Foundation (WCF) tiene traccia degli eventi interni nel registro eventi di Windows.  
   
 ## <a name="viewing-event-logs"></a>Visualizzazione dei registri eventi  
- La registrazione degli eventi è abilitata automaticamente per impostazione predefinita e non è disponibile un meccanismo per disabilitarlo. Eventi registrati da WCF possono essere visualizzati utilizzando il Visualizzatore eventi. Per avviare questo strumento, fare clic su **avviare**, fare clic su **Pannello di controllo**, fare doppio clic su **strumenti di amministrazione**, quindi fare doppio clic su **Visualizzatore eventi**.  
+ La registrazione degli eventi è abilitata automaticamente per impostazione predefinita e non è disponibile un meccanismo per disabilitarlo. Gli eventi registrati da WCF possono essere visualizzati utilizzando il Visualizzatore eventi. Per avviare questo strumento, fare clic su **avviare**, fare clic su **Pannello di controllo**, fare doppio clic su **strumenti di amministrazione**, quindi fare doppio clic su **Visualizzatore eventi**.  
   
 ### <a name="application-event-log"></a>Registro eventi dell'applicazione  
  Il **registro eventi dell'applicazione** contiene la maggior parte degli eventi generati da WCF. La maggior parte delle voci riguardano errori nell'avvio di una particolare funzionalità per un'applicazione. Alcuni esempi:  
   
--   Registrazione/traccia dei messaggi: WCF scrive un evento nel registro eventi quando si verifica un errore di traccia e registrazione dei messaggi. Tuttavia, non tutti gli errori di traccia generano un evento. Per impedire che il registro eventi venga riempito completamente con errori di tracce, WCF implementa un periodo di blackout di 10 minuti per tale evento. Ciò significa che se WCF scrive un errore di traccia nel registro eventi, non ripeterà questa operazione per almeno 10 minuti.  
+-   Registrazione/traccia dei messaggi: WCF scrive un evento nel registro eventi quando si verifica un errore di traccia e registrazione dei messaggi. Tuttavia, non tutti gli errori di traccia generano un evento. Per evitare che il registro eventi venga riempito completamente errori di traccia, WCF implementa un periodo di blackout di 10 minuti per tale evento. Ciò significa che se WCF scrive un errore di traccia nel log eventi, non ripeterà questa ancora una volta per almeno 10 minuti.  
   
--   Listener condiviso: il servizio di condivisione porte TCP WCF registra un evento quando non può essere avviato.  
+-   Listener condiviso: Il servizio di condivisione porta WCF TCP registra un evento quando non viene avviato.  
   
--   [!INCLUDE[infocard](../../../../../includes/infocard-md.md)]: registra eventi quando il servizio non può essere avviato.  
+-   [!INCLUDE[infocard](../../../../../includes/infocard-md.md)]: Registra gli eventi quando il servizio non viene avviato.  
   
 -   Eventi critici e di errore, quali errori di avvio o arresti anomali del sistema  
   
--   Registrazione messaggi attivata: gli eventi vengono registrati quando la registrazione dei messaggi è attivata. Questa funzionalità consente di notificare all'amministratore che informazioni riservate specifiche dell'applicazione possono essere registrate nelle intestazioni e nel corpo del messaggio.  
+-   Registrazione messaggi attivata: Registra gli eventi quando è attivata la registrazione dei messaggi. Questa funzionalità consente di notificare all'amministratore che informazioni riservate specifiche dell'applicazione possono essere registrate nelle intestazioni e nel corpo del messaggio.  
   
 -   Viene registrato un evento quando è impostato l'attributo `enableLoggingKnownPII` dell'elemento `machineSettings` nel file `machine.config`. Questo attributo specifica se un'applicazione in esecuzione sul computer può registrare informazioni che consentono l'identificazione personale (PII).  
   
--   Se l'attributo `logKnownPii` nel file `app.config` o `web.config` è impostato su `true` affinché un'applicazione specifica attivi la registrazione delle informazioni che consentono l'identificazione personale, ma l'attributo `enableLoggingKnownPII` nell'elemento `machineSettings` del file `machine.config` è impostato su `false`, viene registrato un evento. In aggiunta, se `logKnownPii` e `enableLoggingKnownPII` sono impostati su `true` viene registrato un evento. Per ulteriori informazioni su queste impostazioni di configurazione, vedere la sezione sicurezza del [la configurazione di registrazione dei messaggi](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md) argomento.  
+-   Se l'attributo `logKnownPii` nel file `app.config` o `web.config` è impostato su `true` affinché un'applicazione specifica attivi la registrazione delle informazioni che consentono l'identificazione personale, ma l'attributo `enableLoggingKnownPII` nell'elemento `machineSettings` del file `machine.config` è impostato su `false`, viene registrato un evento. In aggiunta, se `logKnownPii` e `enableLoggingKnownPII` sono impostati su `true` viene registrato un evento. Per altre informazioni su queste impostazioni di configurazione, vedere la sezione sicurezza del [configurazione della registrazione dei messaggi](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md) argomento.  
   
 ### <a name="security-event-log"></a>Registro eventi di sicurezza  
- Il **registro eventi di sicurezza** contiene eventi di controllo di sicurezza che vengono registrati da WCF.  
+ Il **registro eventi di sicurezza** contiene eventi di controllo di sicurezza che sono registrati da WCF.  
   
 ### <a name="system-event-log"></a>Registro eventi di sistema  
  WCF non registra alcun **registro eventi di sistema**.  
@@ -47,6 +47,6 @@ Windows Communication Foundation (WCF) tiene traccia degli eventi interni nel re
   
  Quando si fa clic su "ulteriori informazioni" quando si visualizza un evento nel Visualizzatore eventi, il Visualizzatore eventi può inviare informazioni via Internet. Per ulteriori informazioni, vedere la Guida del Visualizzatore eventi.  
   
-## <a name="see-also"></a>Vedere anche  
- [Amministrazione e diagnostica](../../../../../docs/framework/wcf/diagnostics/index.md)  
- [Riferimenti generali sugli eventi](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+## <a name="see-also"></a>Vedere anche
+- [Amministrazione e diagnostica](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Riferimenti generali sugli eventi](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

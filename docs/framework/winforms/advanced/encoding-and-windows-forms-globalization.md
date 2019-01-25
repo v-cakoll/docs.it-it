@@ -19,12 +19,12 @@ helpviewer_keywords:
 - localization [Windows Forms], character sets
 - globalization [Windows Forms], character sets
 ms.assetid: 22e8965d-a712-42b3-8167-3ee346bd70f9
-ms.openlocfilehash: 1b1ac50bde87b22c3ce9ff7524edbf8750976788
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 3a9d891fe898cf691a5f0d36e6360c2a73fb199d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183113"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54629229"
 ---
 # <a name="encoding-and-windows-forms-globalization"></a>Globalizzazione di Windows Form e codifica
 Le applicazioni Windows Forms sono completamente compatibili con Unicode, vale a dire che ogni carattere è rappresentato da un numero univoco, indipendentemente dalla piattaforma, dal programma o dal linguaggio in uso. Per altre informazioni su Unicode, vedere la [sito Web del consorzio Unicode](https://www.unicode.org).  
@@ -38,4 +38,4 @@ Le applicazioni Windows Forms sono completamente compatibili con Unicode, vale a
   
 ## <a name="see-also"></a>Vedere anche
 
-[Globalizzazione di applicazioni Windows Form](globalizing-windows-forms.md)
+- [Globalizzazione di applicazioni Windows Form](globalizing-windows-forms.md)

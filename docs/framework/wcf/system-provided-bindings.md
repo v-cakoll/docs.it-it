@@ -5,12 +5,12 @@ ms.date: 06/05/2018
 helpviewer_keywords:
 - bindings [WCF], system-provided
 ms.assetid: 2c243746-45ce-4588-995e-c17126a579a6
-ms.openlocfilehash: 6730238a73b41faa4409fdfc75af1de36f31d13e
-ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
+ms.openlocfilehash: 3c6c6b628d208aede8c547dcfa66fc189a26ae01
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34805646"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569602"
 ---
 # <a name="system-provided-bindings"></a>Associazioni fornite dal sistema
 
@@ -57,7 +57,7 @@ Con WCF sono in dotazione le associazioni seguenti:
 
 |Binding|Interoperabilità|Sicurezza (predefinita)|Sessione<br />(Predefinito)|Transazioni|Duplex|Codifica (predefinita)|Flusso<br />(Predefinito)|
 |-------------|----------------------|--------------------------|-----------------------------|------------------|------------|--------------------------|-------------------------------|
-|<xref:System.ServiceModel.BasicHttpBinding>|Basic Profile 1.1|(None), Transport, Message, misto|(Nessuno)|(Nessuno)|n/d|Text, (MTOM)|Yes<br />(memorizzato nel buffer)|
+|<xref:System.ServiceModel.BasicHttpBinding>|Basic Profile 1.1|(None), Transport, Message, misto|(Nessuno)|(Nessuno)|N/D|Text, (MTOM)|Yes<br />(memorizzato nel buffer)|
 |<xref:System.ServiceModel.WSHttpBinding>|WS|Transport, (Message), misto|(None), sessione affidabile, sessione di sicurezza|(None), sì|N/D|(Text), MTOM|No|
 |<xref:System.ServiceModel.WSDualHttpBinding>|WS|(Message), None|(Sessione affidabile), sessione di sicurezza|(None), sì|Yes|(Text), MTOM|No|
 |<xref:System.ServiceModel.WSFederationHttpBinding>|WS-Federation|(Message), misto, None|(None), sessione affidabile, sessione di sicurezza|(None), sì|No|(Text), MTOM|No|
@@ -68,28 +68,28 @@ Con WCF sono in dotazione le associazioni seguenti:
 |<xref:System.ServiceModel.NetMsmqBinding>|.NET|Message, (Transport), None|(None), Transport|None, (sì)|No|Binario|No|
 |<xref:System.ServiceModel.NetPeerTcpBinding>|Peer|(Transport)|(Nessuno)|(Nessuno)|Yes||No|
 |<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|MSMQ|(Transport)|(Nessuno)|None, (sì)|N/D|N/D|No|
-|<xref:System.ServiceModel.BasicHttpContextBinding>|Basic Profile 1.1|(None), Transport, Message, misto|(Nessuno)|(Nessuno)|n/d|Text, (MTOM)|Yes<br />(memorizzato nel buffer)|
+|<xref:System.ServiceModel.BasicHttpContextBinding>|Basic Profile 1.1|(None), Transport, Message, misto|(Nessuno)|(Nessuno)|N/D|Text, (MTOM)|Yes<br />(memorizzato nel buffer)|
 |<xref:System.ServiceModel.NetTcpContextBinding>|.NET|(Transport), Message, None, misto|(Transport), sessione affidabile, sessione di sicurezza|(None), sì|Yes|Binario|Yes<br />(memorizzato nel buffer)|
 |<xref:System.ServiceModel.WSHttpContextBinding>|WS|Transport, (Message), misto|(None), sessione affidabile, sessione di sicurezza|(None), sì|N/D|Text, (MTOM)|No|
-|<xref:System.ServiceModel.UdpBinding> <br /><br /> **Nota:** l'interoperabilità può essere ottenuta implementando la specifica standard SOAP-over-UDP implementata da questa associazione.|.NET|(Nessuno)|(Nessuno)|(Nessuno)|N/D|(Text)|No|
+|<xref:System.ServiceModel.UdpBinding> <br /><br /> **Nota:**  L'interoperabilità può essere ottenuta implementando la specifica standard SOAP-over-UDP implementata da questa associazione.|.NET|(Nessuno)|(Nessuno)|(Nessuno)|N/D|(Text)|No|
 
 > [!IMPORTANT]
-> <xref:System.ServiceModel.NetHttpBinding> è un'associazione progettata per usare i servizi HTTP o WebSocket e usa la codifica binaria per impostazione predefinita. <xref:System.ServiceModel.NetHttpBinding> rileva se viene usato con un contratto request/reply o un contratto duplex e modifica il proprio comportamento di conseguenza. Usa HTTP per i contratti request/reply e WebSockets per i contratti duplex. Questo comportamento può essere modificato mediante l'impostazione dell'associazione <xref:System.ServiceModel.Channels.WebSocketTransportUsage> WhenDuplex, il valore predefinito che determina il comportamento descritto in precedenza. Never: impedisce l'uso di WebSockets. Il tentativo di usare un contratto duplex con questa impostazione genera un'eccezione. Always: forza l'uso di WebSockets anche per i contratti request/reply. NetHttpBinding supporta sessioni affidabili sia in modalità HTTP sia in modalità WebSocket. Nella modalità WebSocket, le sessioni vengono fornite dal trasporto.
+> <xref:System.ServiceModel.NetHttpBinding> è un'associazione progettata per usare i servizi HTTP o WebSocket e usa la codifica binaria per impostazione predefinita. <xref:System.ServiceModel.NetHttpBinding> rileva se viene usato con un contratto request/reply o un contratto duplex e modifica il proprio comportamento di conseguenza. Usa HTTP per i contratti request/reply e WebSockets per i contratti duplex. Questo comportamento può essere sottoposto a override utilizzando il <xref:System.ServiceModel.Channels.WebSocketTransportUsage> impostazioni dell'associazione: WhenDuplex: si tratta del valore predefinito e si comporta come descritto in precedenza. Never: impedisce l'uso di WebSockets. Il tentativo di usare un contratto duplex con questa impostazione genera un'eccezione. Always: forza l'uso di WebSockets anche per i contratti request/reply. NetHttpBinding supporta sessioni affidabili sia in modalità HTTP sia in modalità WebSocket. Nella modalità WebSocket, le sessioni vengono fornite dal trasporto.
 
  Nella tabella seguente sono spiegate le funzionalità elencate nella tabella precedente.
 
 |Funzionalità|Descrizione|
 |-------------|-----------------|
 |Tipo di interoperabilità|Denomina il protocollo o la tecnologia con cui l'associazione assicura l'interoperatività.|
-|Sicurezza|Specifica come il canale viene protetto:<br />- None: il messaggio SOAP non è protetto e il client non è autenticato.<br />- Transport: i requisiti di sicurezza sono soddisfatti a livello di trasporto.<br />- Message: i requisiti di sicurezza sono soddisfatti a livello di messaggio.<br />- Misto: le attestazioni sono contenute nel messaggio, i requisiti di integrità e riservatezza sono soddisfatti dal livello di trasporto.|
+|Sicurezza|Specifica come il canale viene protetto:<br />-None: Il messaggio SOAP non è protetto e il client non è autenticato.<br />-Transport: Requisiti di sicurezza sono soddisfatti a livello di trasporto.<br />-Messaggio: Requisiti di sicurezza sono soddisfatti a livello di messaggio.<br />-Mista: Le attestazioni sono contenute nel messaggio. requisiti di integrità e riservatezza sono soddisfatti dal livello di trasporto.|
 |Sessione|Specifica se questa associazione supporta contratti di sessione.|
 |Transazioni|Specifica se le transazioni sono attivate.|
 |Duplex|Specifica se sono supportati contratti duplex. Si noti che questa funzionalità richiede il supporto delle sessioni nell'associazione.|
-|Codifica|Specifica il formato di trasmissione del messaggio. I valori consentiti includono:<br />- Text: ad esempio UTF-8.<br />- Binary<br />- MTOM (Message Transmission Optimization Mechanism): consente di codificare in modo efficiente elementi XML binari all'interno del contesto di una SOAP envelope.|
-|Flusso|Specifica se il flusso è supportato per i messaggi in ingresso e in uscita. Utilizzare la proprietà `TransferMode` nell'associazione per impostare il valore. I valori consentiti includono:<br />- <xref:System.ServiceModel.TransferMode.Buffered>: i messaggi di richiesta e risposta vengono entrambi memorizzati nel buffer.<br />- <xref:System.ServiceModel.TransferMode.Streamed>: i messaggi di richiesta e risposta vengono entrambi trasmessi.<br />- <xref:System.ServiceModel.TransferMode.StreamedRequest>: il messaggio di richiesta viene trasmesso e quello di risposta viene memorizzato nel buffer.<br />- <xref:System.ServiceModel.TransferMode.StreamedResponse>: il messaggio di richiesta viene memorizzato nel buffer e quello di risposta viene trasmesso.|
+|Codifica|Specifica il formato di trasmissione del messaggio. I valori consentiti includono:<br />- Text: ad esempio UTF-8.<br />- Binary<br />-MTOM (MTOM): Un metodo per la codifica in modo efficiente elementi XML binari all'interno del contesto di una SOAP envelope.|
+|Flusso|Specifica se il flusso è supportato per i messaggi in ingresso e in uscita. Utilizzare la proprietà `TransferMode` nell'associazione per impostare il valore. I valori consentiti includono:<br />- <xref:System.ServiceModel.TransferMode.Buffered>: I messaggi di richiesta e risposta vengono entrambi memorizzati nel buffer.<br />- <xref:System.ServiceModel.TransferMode.Streamed>: I messaggi di richiesta e risposta vengono entrambi inviati nel flusso.<br />- <xref:System.ServiceModel.TransferMode.StreamedRequest>: Il messaggio di richiesta viene inviato nel flusso e quello di risposta viene memorizzato nel buffer.<br />- <xref:System.ServiceModel.TransferMode.StreamedResponse>: Il messaggio di richiesta viene memorizzato nel buffer e quello di risposta viene inviato nel flusso.|
 
 ## <a name="see-also"></a>Vedere anche
 
-[Panoramica della creazione di endpoint](endpoint-creation-overview.md)  
-[Uso di associazioni per configurare servizi e client](using-bindings-to-configure-services-and-clients.md)  
-[Programmazione WCF di base](basic-wcf-programming.md)  
+- [Panoramica della creazione di endpoint](endpoint-creation-overview.md)
+- [Uso di associazioni per configurare servizi e client](using-bindings-to-configure-services-and-clients.md)
+- [Programmazione WCF di base](basic-wcf-programming.md)

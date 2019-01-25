@@ -7,16 +7,16 @@ helpviewer_keywords:
 ms.assetid: 3770ea8a-2655-4add-9c59-fe0610ad5084
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 68fa7753be76b0681c40e540e86b11c89e7a8ca1
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 9c5e4133a3bc1f019ada00299df929c2e3915880
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48037339"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726585"
 ---
 # <a name="ui-automation-support-for-standard-controls"></a>Supporto per automazione interfaccia utente dei controlli standard
 > [!NOTE]
->  Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate sulle [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere [Windows Automation API: automazione dell'interfaccia utente](https://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate sulle [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere [Windows Automation API: Automazione interfaccia utente](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  Questo argomento contiene informazioni sul supporto di [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] per i controlli standard in applicazioni sviluppate per i framework [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]e [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] .  
   
@@ -36,7 +36,7 @@ ms.locfileid: "48037339"
 |----------------|------------------|  
 |Button|Pulsante|  
 |Button|RadioButton|  
-|Button|Group|  
+|Button|Raggruppa|  
 |Button|CheckBox|  
 |Button|Hyperlink|  
 |Button|SplitButton|  
@@ -76,7 +76,7 @@ ms.locfileid: "48037339"
 |tooltips_class32|Descrizione comando|  
 |#32774|Descrizione comando|  
 |ReBarWindow32|ToolBar|  
-|SysTreeView32|Tree|  
+|SysTreeView32|Struttura ad albero|  
 |SysTreeView32|TreeItem|  
   
  **Nota** Il controllo RichEdit è supportato solo per le versioni fornite con [!INCLUDE[TLA#tla_winvista](../../../includes/tlasharptla-winvista-md.md)] (in Riched20.dll versione 3.1 e successive e MsftEdit.dll versione 4.1 e successive).  
@@ -90,7 +90,7 @@ ms.locfileid: "48037339"
 |SysDateTimePick32|Personalizzato|  
 |SysMonthCal32|Calendar|  
 |MS_WINNOTE|ToolTip|  
-|VBBubble|Tooltip|  
+|VBBubble|ToolTip|  
 |ScrollBar (se usato come controllo autonomo)|Slider|  
 |SuperGrid|Personalizzato|  
   
@@ -169,5 +169,5 @@ ms.locfileid: "48037339"
 |RaftingContainer|  
 |StatusStrip|  
   
-## <a name="see-also"></a>Vedere anche  
- [Tipi di controllo per l'automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-control-types.md)
+## <a name="see-also"></a>Vedere anche
+- [Tipi di controllo per l'automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-control-types.md)

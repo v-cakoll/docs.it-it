@@ -1,21 +1,21 @@
 ---
-title: 'Procedura: creare una raccolta utilizzata da un inizializzatore di raccolta (Visual Basic)'
+title: 'Procedura: Creare una raccolta usata da un inizializzatore di raccolta (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - collection initializers [Visual Basic]
 ms.assetid: c858db10-424d-47e0-92cd-e08087cc5ebc
-ms.openlocfilehash: 6158b6f02d95260e2955e77d732fae8b8d9d5e04
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aaa367e5a1739f26e9b0458d8f2fc44462b73b7b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33654161"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631724"
 ---
-# <a name="how-to-create-a-collection-used-by-a-collection-initializer-visual-basic"></a>Procedura: creare una raccolta utilizzata da un inizializzatore di raccolta (Visual Basic)
-Quando si utilizza un inizializzatore di raccolta per creare una raccolta, il compilatore Visual Basic cerca un `Add` metodo del tipo di raccolta per cui i parametri per il `Add` metodo corrispondono ai tipi dei valori nell'inizializzatore di raccolta. Questo `Add` metodo viene utilizzato per popolare la raccolta con i valori dall'inizializzatore di raccolta.  
+# <a name="how-to-create-a-collection-used-by-a-collection-initializer-visual-basic"></a>Procedura: Creare una raccolta usata da un inizializzatore di raccolta (Visual Basic)
+Quando si usa un inizializzatore di insieme per creare una raccolta, il compilatore Visual Basic cerca un' `Add` metodo di raccolta per il quale i parametri per il `Add` metodo corrispondono ai tipi dei valori nell'inizializzatore di insieme. Ciò `Add` metodo viene utilizzato per popolare la raccolta con i valori dall'inizializzatore di raccolta.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente un `OrderCollection` raccolta che contiene un pubblico `Add` metodo che è possibile utilizzare un inizializzatore di raccolta per aggiungere oggetti di tipo `Order`. Il `Add` metodo consente di utilizzare la sintassi dell'inizializzatore di raccolta abbreviata.  
+ L'esempio seguente mostra un' `OrderCollection` raccolta che contiene un pubblico `Add` metodo che è possibile usare un inizializzatore di raccolta per aggiungere gli oggetti di tipo `Order`. Il `Add` metodo consente di utilizzare la sintassi dell'inizializzatore di raccolta abbreviato.  
   
  [!code-vb[VbVbalrCollectionInitializersHowTo2#4](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/VisualBasic/how-to-create-a-collection-used-by-a-collection-initializer_1.vb)]  
   
@@ -25,6 +25,6 @@ Quando si utilizza un inizializzatore di raccolta per creare una raccolta, il co
   
  [!code-vb[VbVbalrCollectionInitializersHowTo2#3](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/VisualBasic/how-to-create-a-collection-used-by-a-collection-initializer_4.vb)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Inizializzatori di raccolta](../../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)  
- [Procedura: Creare un metodo di estensione Add usato da un inizializzatore di raccolta](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md)
+## <a name="see-also"></a>Vedere anche
+- [Inizializzatori di raccolta](../../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)
+- [Procedura: Creare un metodo di estensione usata da un inizializzatore di raccolta Add](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md)

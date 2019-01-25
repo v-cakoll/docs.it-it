@@ -17,14 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8f34fee19c796f65d315fcbd26d55e1d5322303a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c131c5531d52f5ee81c70bddb67e8bc6071f39e3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599663"
 ---
 # <a name="icorprofilerinfoisarrayclass-method"></a>Metodo ICorProfilerInfo::IsArrayClass
-Determina se la classe specificata è una classe della matrice.  
+Determina se la classe specificata è una classe di matrici.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,25 +42,25 @@ HRESULT IsArrayClass(
  [in] L'ID della classe da esaminare.  
   
  `pBaseElemType`  
- [out] Un puntatore a un valore dell'enumerazione CorElementType che indica il tipo degli elementi della matrice.  
+ [out] Puntatore a un valore dell'enumerazione CorElementType che indica il tipo degli elementi della matrice.  
   
  `pBaseClassId`  
- [out] Un puntatore all'ID classe degli elementi della matrice, se disponibile.  
+ [out] Un puntatore all'ID di classe degli elementi della matrice, se disponibile.  
   
  `pcRank`  
- [out] Un puntatore a un intero che indica il rango (numero di dimensioni) della matrice.  
+ [out] Puntatore a un intero che indica il numero di dimensioni (vale a dire, numero di dimensioni) della matrice.  
   
 ## <a name="remarks"></a>Note  
- Se la classe specificata è una classe della matrice, il `IsArrayClass` metodo restituisce un HRESULT S_OK e i valori per i parametri di output non null. In caso contrario, restituisce S_FALSE.  
+ Se la classe specificata è una classe di matrici, il `IsArrayClass` metodo viene restituito un HRESULT S_OK e i valori per parametri di output diverso da null. In caso contrario, restituisce S_FALSE.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

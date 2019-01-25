@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3b9b77b94e466a4aab4a575501ac6922293b3410
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d7a3fcd34f8cab6fa3c2949a4ee3270189b3dc77
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424144"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730035"
 ---
 # <a name="isymunmanageddocumentwritersetchecksum-method"></a>Metodo ISymUnmanagedDocumentWriter::SetCheckSum
 Imposta le informazioni di checksum.  
@@ -38,19 +38,19 @@ HRESULT SetCheckSum(
   
 #### <a name="parameters"></a>Parametri  
  `algorithmId`  
- [in] GUID che rappresenta l'identificatore dell'algoritmo.  
+ [in] Il GUID che rappresenta l'identificatore dell'algoritmo.  
   
  `checkSumSize`  
- [in] Oggetto `ULONG32` che indica le dimensioni, in byte, del `checkSum` buffer.  
+ [in] Oggetto `ULONG32` che indica la dimensione, espressa in byte, del `checkSum` buffer.  
   
  `checkSum`  
  [in] Buffer che archivia le informazioni di checksum.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK se il metodo ha esito positivo. in caso contrario, E_FAIL o un altro codice di errore.  
+ S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o qualche altro codice di errore.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** CorSym. idl, CorSym.h  
+ **Intestazione:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ISymUnmanagedDocumentWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ISymUnmanagedDocumentWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-interface.md)

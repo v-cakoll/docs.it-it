@@ -2,12 +2,12 @@
 title: Un altro log eventi ha già registrato un'origine con questo nome
 ms.date: 07/20/2015
 ms.assetid: e6f5cd95-bb3f-4845-84fb-ae623a9bd44e
-ms.openlocfilehash: b12fd5dcdeaccb0dc294c44e4b8a898726978633
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fa4e8a022db1bbc19bff38fd529066b0619add68
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33598920"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646109"
 ---
 # <a name="another-event-log-has-already-registered-a-source-with-this-name"></a>Un altro log eventi ha già registrato un'origine con questo nome
 Si è provato a scrivere una voce in un log eventi ma l'origine specificata è stata registrata in un altro log eventi.  
@@ -20,6 +20,6 @@ Si è provato a scrivere una voce in un log eventi ma l'origine specificata è s
   
 2.  Registrare l'origine nel nuovo log.  
   
-## <a name="see-also"></a>Vedere anche  
- [My](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)  
+## <a name="see-also"></a>Vedere anche
+- [My.Application.Log](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)
 

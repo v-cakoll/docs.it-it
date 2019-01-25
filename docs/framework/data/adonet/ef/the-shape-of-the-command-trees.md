@@ -2,12 +2,12 @@
 title: Forma degli alberi dei comandi
 ms.date: 03/30/2017
 ms.assetid: 2215585e-ca47-45f8-98d4-8cb982f8c1d3
-ms.openlocfilehash: 9084e2616ac4ea540bdf755afd011d67a5c991fa
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b859dfaa6350341b4b90753fd5dda3339e6bb584
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766036"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573027"
 ---
 # <a name="the-shape-of-the-command-trees"></a>Forma degli alberi dei comandi
 Il modulo di generazione SQL è responsabile della generazione di una query SQL specifica di back-end basata su una determinata espressione dell'albero dei comandi della query di input. Questa sezione descrive le caratteristiche, le proprietà e la forma degli alberi dei comandi di query.  
@@ -69,9 +69,9 @@ Il modulo di generazione SQL è responsabile della generazione di una query SQL 
   
 -   Funzioni definite dall'utente.  
   
- Funzioni canoniche (vedere [funzioni canoniche](../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md) per ulteriori informazioni) vengono specificati come parte di [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], e i provider devono fornire le implementazioni per le funzioni canoniche in base a tali specifiche. Le funzioni di archivio si basano sulle specifiche contenute nel file manifesto del provider corrispondente. Le funzioni definite dall'utente si basano sulle specifiche di SSDL.  
+ Funzioni canoniche (vedere [funzioni canoniche](../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md) per altre informazioni) vengono specificati come parte di [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], e i provider devono fornire implementazioni per le funzioni canoniche basate su tali specifiche. Le funzioni di archivio si basano sulle specifiche contenute nel file manifesto del provider corrispondente. Le funzioni definite dall'utente si basano sulle specifiche di SSDL.  
   
- Inoltre, le funzioni che includono l'attributo NiladicFunction non dispongono di argomenti e devono essere convertite senza la parentesi finale,  Vale a dire, a  *\<functionName >* anziché  *\<functionName > ()*.  
+ Inoltre, le funzioni che includono l'attributo NiladicFunction non dispongono di argomenti e devono essere convertite senza la parentesi finale,  Vale a dire, alla  *\<functionName >* anziché  *\<functionName > ()*.  
   
 #### <a name="dbnewinstanceexpression"></a>DbNewInstanceExpression  
  DbNewInstanceExpression può essere specificato solo nei due casi seguenti:  
@@ -96,14 +96,14 @@ Il modulo di generazione SQL è responsabile della generazione di una query SQL 
 #### <a name="dbscanexpression"></a>DbScanExpression  
  Quando viene usato negli alberi dei comandi di output, DbScanExpression rappresenta in modo efficiente un'analisi di una query di tabella, visualizzazione o archivio, rappresentata da EnitySetBase::Target.  
   
- Se la proprietà dei metadati "Definizione di Query" della destinazione è diverso da null, rappresenta una query, il testo della query per cui viene fornito nella proprietà dei metadati in linguaggio specifico del provider (o un dialetto) come specificato nella definizione dello schema di archivio.  
+ Se la proprietà dei metadati "Definizione di Query" della destinazione è diverso da null, rappresenta una query, il testo della query per il quale viene fornito nella proprietà dei metadati nel linguaggio specifico del provider (o il sottolinguaggio) come specificato nella definizione dello schema di archivio.  
   
- In caso contrario, la destinazione rappresenta una tabella o una visualizzazione. Il prefisso di schema si trova nella proprietà dei metadati "Schema", in caso contrario, null, in caso contrario è il nome del contenitore di entità.  Il nome di tabella o vista è alla proprietà dei metadati "Table", se non è null, in caso contrario la proprietà Name dell'entità di base del set.  
+ In caso contrario, la destinazione rappresenta una tabella o una visualizzazione. È il prefisso dello schema nelle proprietà dei metadati "Schema", se non null, in caso contrario è il nome del contenitore di entità.  Il nome di tabella o vista è sia le proprietà dei metadati "Table", se non è null, in caso contrario, la proprietà Name dell'entità di base del set.  
   
  Tutte queste proprietà hanno origine dalla definizione dell'EntitySet corrispondente nel file SSDL (Store Schema Definition Language).  
   
 ### <a name="using-primitive-types"></a>Utilizzo dei tipi primitivi  
  Quando si fa riferimento ai tipi primitivi negli alberi dei comandi di output, in genere il riferimento è contenuto nei tipi primitivi del modello concettuale. Per determinate espressioni, tuttavia, i, provider richiedono il tipo primitivo dell'archivio corrispondente. Esempi di tali espressioni includono DbCastExpression e in alcuni casi DbNullExpression, se il provider deve eseguire il cast del valore null al tipo corrispondente. In questi casi, i provider devono eseguire il mapping al tipo di provider in base al tipo primitivo e ai relativi facet.  
   
-## <a name="see-also"></a>Vedere anche  
- [Generazione SQL](../../../../../docs/framework/data/adonet/ef/sql-generation.md)
+## <a name="see-also"></a>Vedere anche
+- [Generazione SQL](../../../../../docs/framework/data/adonet/ef/sql-generation.md)

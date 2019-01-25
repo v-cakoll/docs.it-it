@@ -2,12 +2,12 @@
 title: Scenari relativi al canale peer
 ms.date: 03/30/2017
 ms.assetid: dae6e0f7-900c-45ee-8be9-3647698382fb
-ms.openlocfilehash: 42b16ea394b9375be14aed4b2792d306fcb62f2d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 05fe7f632b286876dfee36b7d5d22a77c0ae11e4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33492984"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54566207"
 ---
 # <a name="peer-channel-scenarios"></a>Scenari relativi al canale peer
 Le API del canale peer supportano gli scenari di sviluppo seguenti.  
@@ -24,5 +24,5 @@ Le API del canale peer supportano gli scenari di sviluppo seguenti.
 ## <a name="gaming"></a>Giochi  
  Con il canale peer, gli sviluppatori di applicazioni possono creare versioni senza server dei giochi, in cui i movimenti di gioco vengono trasmessi e sincronizzati con gli altri giocatori da un meccanismo peer-to-peer anziché da un server centrale. Per gli ISV di piccole dimensioni, questo consente di eliminare i costi operativi associati alla distribuzione, alla gestione e al supporto di server centrali. I giochi scritti usando un'architettura peer-to-peer possono essere riprodotti in Internet o in reti locali cablate o wireless. Le attività di gioco secondarie, quali la sala d'attesa e la chat, possono essere sviluppate usando una rete peer-to-peer.  
   
-## <a name="see-also"></a>Vedere anche  
- [Concetti relativi al canale peer](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)
+## <a name="see-also"></a>Vedere anche
+- [Concetti relativi al canale peer](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)

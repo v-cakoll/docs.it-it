@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: esaminare il contesto di sicurezza'
+title: 'Procedura: Esaminare il contesto di sicurezza'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - WCF, security
 - Claimset class
 ms.assetid: 389b5a57-4175-4bc0-ada0-fc750d51149f
-ms.openlocfilehash: 64e566fb8d0cfadc2a46d0a335ddb2799739f9f9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: bcc23097a6778bb537421ba494dd94414b37f4e2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187780"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646266"
 ---
-# <a name="how-to-examine-the-security-context"></a>Procedura: esaminare il contesto di sicurezza
+# <a name="how-to-examine-the-security-context"></a>Procedura: Esaminare il contesto di sicurezza
 Durante la programmazione di servizi Windows Communication Foundation (WCF), il contesto di sicurezza del servizio consente di determinare dettagli sulle credenziali client e sulle attestazioni utilizzate per eseguire l'autenticazione con il servizio. A tale fine, utilizzare le proprietà della classe <xref:System.ServiceModel.ServiceSecurityContext>.  
   
  È ad esempio possibile recuperare l'identità del client corrente utilizzando <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> o la proprietà <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A>. Per determinare se il client è anonimo, utilizzare la proprietà <xref:System.ServiceModel.ServiceSecurityContext.IsAnonymous%2A>.  
@@ -54,6 +54,6 @@ Durante la programmazione di servizi Windows Communication Foundation (WCF), il 
   
 -   <xref:System.IdentityModel.Claims>  
   
-## <a name="see-also"></a>Vedere anche  
- [Protezione dei servizi](../../../docs/framework/wcf/securing-services.md)  
- [Identità del servizio e autenticazione](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+## <a name="see-also"></a>Vedere anche
+- [Protezione dei servizi](../../../docs/framework/wcf/securing-services.md)
+- [Identità del servizio e autenticazione](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

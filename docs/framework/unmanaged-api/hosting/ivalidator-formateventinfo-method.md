@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 875052ed26e83de50807e33e9c74dcf89f7ee679
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 17217146d8e5ed53feb8305ca4ac16c8f96ddeb7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33440645"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653858"
 ---
 # <a name="ivalidatorformateventinfo-method"></a>Metodo IValidator::FormatEventInfo
 Ottiene il messaggio di errore corrispondente all'errore di convalida specificato.  
@@ -44,7 +44,7 @@ HRESULT FormatEventInfo(
  [in] Il valore HRESULT passato al gestore di errori di convalida.  
   
  `Context`  
- [in] Oggetto `VEContext` istanza che contiene informazioni sul contesto relative all'errore di convalida.  
+ [in] Oggetto `VEContext` istanza che contiene informazioni contestuali relative all'errore di convalida.  
   
  `msg`  
  [in, out] Stringa che contiene il messaggio di errore restituito.  
@@ -53,16 +53,16 @@ HRESULT FormatEventInfo(
  [in] La lunghezza massima del messaggio di errore.  
   
  `psa`  
- [in] Una matrice protetta che contiene i parametri aggiuntivi che descrive l'errore.  
+ [in] Una matrice protetta contenente parametri aggiuntivi che descrive l'errore.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** IValidator. idl, IValidator.h  
+ **Intestazione:** IValidator. idl, IValidator. H  
   
- **Libreria:** inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- 
+## <a name="see-also"></a>Vedere anche
+

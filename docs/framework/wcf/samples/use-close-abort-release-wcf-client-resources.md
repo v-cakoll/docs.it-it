@@ -3,12 +3,12 @@ title: Utilizzare Chiudi e Interrompi per rilasciare le risorse del client WCF
 description: Dispose può avere esito negativo e generano eccezioni quando si verifica un errore di rete. Che può causare comportamenti indesiderati. Invece utilizzare Chiudi e Interrompi per rilasciare le risorse del client quando la rete non è riuscita.
 ms.date: 11/12/2018
 ms.assetid: aff82a8d-933d-4bdc-b0c2-c2f7527204fb
-ms.openlocfilehash: d37ad9d2277fea2656311a5a1f57d51343d10d89
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4996ccba955d7946bb76b8124b8b28d803b6f3e1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147216"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736429"
 ---
 # <a name="close-and-abort-release-resources-safely-when-network-connections-have-dropped"></a>Chiusura e interruzione rilasciare le risorse in modo sicuro quando le connessioni di rete sono stato eliminato
 In questo esempio viene illustrato come utilizzare il `Close` e `Abort` metodi per pulire le risorse quando si usa un client tipizzato. Il `using` istruzione genera eccezioni quando la connessione di rete non è affidabile. In questo esempio si basa sul [introduttiva](../../../../docs/framework/wcf/samples/getting-started-sample.md) che implementa un servizio di calcolatrice. In questo esempio, il client è un'applicazione console (.exe) e il servizio è ospitato da Internet Information Services (IIS).  

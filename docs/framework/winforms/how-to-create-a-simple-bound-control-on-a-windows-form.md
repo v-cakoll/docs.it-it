@@ -1,18 +1,18 @@
 ---
-title: 'Procedura: creare un controllo con associazione semplice in un Windows Form'
+title: 'Procedura: Creare un controllo con associazione semplice in un Windows Form'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data binding [Windows Forms], simple data binding
 - Windows Forms controls, data binding
 ms.assetid: 3bcaded8-0f1a-4cc0-8830-f59be253bf4e
-ms.openlocfilehash: 26bc136ea2b7e5bda4a57c5dad65ec3522efcd3d
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.openlocfilehash: 129301354c67d43783e997bcf42f848c5c39ab3c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46321353"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643572"
 ---
-# <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>Procedura: creare un controllo con associazione semplice in un Windows Form
+# <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>Procedura: Creare un controllo con associazione semplice in un Windows Form
 Con *associazione semplice*, è possibile visualizzare un singolo elemento di dati, ad esempio un valore di colonna da una tabella di set di dati, in un controllo. È possibile un'associazione semplice di qualsiasi proprietà di un controllo a un valore di dati.  
   
 > [!NOTE]
@@ -45,7 +45,7 @@ Con *associazione semplice*, è possibile visualizzare un singolo elemento di da
     > [!NOTE]
     >  Poiché i controlli con associazione semplice visualizzare solo un singolo elemento di dati, viene in genere includere logica di navigazione in un Windows Form con controlli con associazione semplice.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Windows.Forms.Binding>  
- [Data binding in Windows Form](../../../docs/framework/winforms/windows-forms-data-binding.md)  
- [Data binding e Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Windows.Forms.Binding>
+- [Data binding in Windows Form](../../../docs/framework/winforms/windows-forms-data-binding.md)
+- [Data binding e Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)

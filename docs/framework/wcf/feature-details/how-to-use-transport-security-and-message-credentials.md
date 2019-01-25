@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: usare le funzionalità di sicurezza a livello di trasporto e le credenziali a livello di messaggio'
+title: 'Procedura: Usare la sicurezza trasporto e le credenziali del messaggio'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - TransportWithMessageCredentials
 ms.assetid: 6cc35346-c37a-4859-b82b-946c0ba6e68f
-ms.openlocfilehash: f678c4713bff342cb3e788a85d7e58fc6e47820c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 7af670210b39da93e9f3efb37a0bfddce84ed2a2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187608"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731868"
 ---
-# <a name="how-to-use-transport-security-and-message-credentials"></a>Procedura: usare le funzionalità di sicurezza a livello di trasporto e le credenziali a livello di messaggio
-Protezione di un servizio con le credenziali di trasporto e messaggio utilizza il meglio delle modalità di sicurezza di trasporto e messaggio di Windows Communication Foundation (WCF). Complessivamente, le funzionalità di sicurezza a livello di trasporto garantiscono integrità e riservatezza, mentre le funzionalità di sicurezza a livello di messaggio offrono vari tipi di credenziali non disponibili quando si utilizzano meccanismi di sicurezza basati esclusivamente sul livello di trasporto. In questo argomento vengono illustrati i passaggi di base per implementare il trasporto con credenziali messaggio utilizzando le associazioni <xref:System.ServiceModel.WSHttpBinding> e <xref:System.ServiceModel.NetTcpBinding>. Per altre informazioni sull'impostazione della modalità di sicurezza, vedere [procedura: impostare la modalità di sicurezza](../../../../docs/framework/wcf/how-to-set-the-security-mode.md).  
+# <a name="how-to-use-transport-security-and-message-credentials"></a>Procedura: Usare la sicurezza trasporto e le credenziali del messaggio
+Protezione di un servizio con le credenziali di trasporto e messaggio utilizza il meglio delle modalità di sicurezza di trasporto e messaggio di Windows Communication Foundation (WCF). Complessivamente, le funzionalità di sicurezza a livello di trasporto garantiscono integrità e riservatezza, mentre le funzionalità di sicurezza a livello di messaggio offrono vari tipi di credenziali non disponibili quando si utilizzano meccanismi di sicurezza basati esclusivamente sul livello di trasporto. In questo argomento vengono illustrati i passaggi di base per implementare il trasporto con credenziali messaggio utilizzando le associazioni <xref:System.ServiceModel.WSHttpBinding> e <xref:System.ServiceModel.NetTcpBinding>. Per altre informazioni sull'impostazione della modalità di sicurezza, vedere [come: Impostare la modalità di sicurezza](../../../../docs/framework/wcf/how-to-set-the-security-mode.md).  
   
  Quando si imposta la modalità di sicurezza su `TransportWithMessageCredential`, il trasporto determina il meccanismo di sicurezza a livello di trasporto effettivamente utilizzato. Nel caso del protocollo HTTP, il meccanismo è Secure Sockets Layer (SSL) su HTTP (HTTPS). Nel caso del protocollo TCP, invece, il meccanismo è SSL su TCP oppure Windows.  
   
@@ -25,7 +25,7 @@ Protezione di un servizio con le credenziali di trasporto e messaggio utilizza i
   
 ### <a name="to-use-the-wshttpbinding-with-a-certificate-for-transport-security-in-code"></a>Per utilizzare l'associazione WSHttpBinding con un certificato allo scopo di fornire la protezione a livello di trasporto (in codice)  
   
-1.  Usare lo strumento HttpCfg.exe per associare un certificato SSL a una porta del computer. Per altre informazioni, vedere [procedura: configurare una porta con un certificato SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
+1.  Usare lo strumento HttpCfg.exe per associare un certificato SSL a una porta del computer. Per altre informazioni, vedere [Procedura: Configurare una porta con un certificato SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
   
 2.  Creare un'istanza della classe <xref:System.ServiceModel.WSHttpBinding> e impostare la proprietà <xref:System.ServiceModel.WSHttpSecurity.Mode%2A> su <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>.  
   
@@ -84,7 +84,7 @@ Protezione di un servizio con le credenziali di trasporto e messaggio utilizza i
   
 #### <a name="to-use-the-wshttpbinding"></a>Per utilizzare l'associazione WSHttpBinding  
   
-1.  Configurare il computer con un certificato SSL associato a una porta. (Per altre informazioni, vedere [procedura: configurare una porta con un certificato SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)). Non è necessario impostare una <`transport`> valore dell'elemento con questa configurazione.  
+1.  Configurare il computer con un certificato SSL associato a una porta. (Per altre informazioni, vedere [come: Configurare una porta con un certificato SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)). Non è necessario impostare una <`transport`> valore dell'elemento con questa configurazione.  
   
 2.  Specificare il tipo di credenziale client della protezione a livello di messaggio. L'esempio seguente imposta la `clientCredentialType` attributo del <`message`> elemento `UserName`.  
   
@@ -160,7 +160,7 @@ Protezione di un servizio con le credenziali di trasporto e messaggio utilizza i
     </bindings>  
     ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Procedura: Impostare la modalità di sicurezza](../../../../docs/framework/wcf/how-to-set-the-security-mode.md)  
- [Protezione dei servizi](../../../../docs/framework/wcf/securing-services.md)  
- [Protezione di servizi e client](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+## <a name="see-also"></a>Vedere anche
+- [Procedura: Impostare la modalità di sicurezza](../../../../docs/framework/wcf/how-to-set-the-security-mode.md)
+- [Protezione dei servizi](../../../../docs/framework/wcf/securing-services.md)
+- [Protezione di servizi e client](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

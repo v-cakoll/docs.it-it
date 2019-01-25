@@ -17,11 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5a447de2bb01e7bbf838ef5443e3ae7951bf8226
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9a93ef073d4dd2eaf58c057d4cdf25fa39082e14
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54706326"
 ---
 # <a name="isymunmanageddocumentgeturl-method"></a>Metodo ISymUnmanagedDocument::GetURL
 Restituisce l'uniform resource locator () per questo documento.  
@@ -37,16 +38,16 @@ HRESULT GetURL(
   
 #### <a name="parameters"></a>Parametri  
  `cchUrl`  
- [in] La dimensione, in caratteri, del `szURL` buffer.  
+ [in] Le dimensioni, in caratteri, del `szURL` buffer.  
   
  `pcchUrl`  
  [out] Un puntatore a una variabile che riceve le dimensioni dell'URL, inclusa la terminazione null.  
   
  `szUrl`  
- [out] Buffer contenente l'URL.  
+ [out] Buffer che contiene l'URL.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK se il metodo ha esito positivo. in caso contrario, un codice di errore.  
+ S_OK se il metodo ha esito positivo; in caso contrario, un codice di errore.  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ISymUnmanagedDocument](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ISymUnmanagedDocument](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

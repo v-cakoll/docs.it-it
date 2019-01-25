@@ -17,11 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4037ca42c5a66f075e949cd2035c1e7db510bb8e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2ca43ebc257ee4eb9d0ef17f3399e87c03b9f9c3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54740008"
 ---
 # <a name="imetadataimportgetmethodprops-method"></a>Metodo IMetaDataImport::GetMethodProps
 Ottiene i metadati associati al metodo a cui fa riferimento il token MethodDef specificato.  
@@ -51,38 +52,38 @@ HRESULT GetMethodProps (
  [out] Un puntatore a un token TypeDef che rappresenta il tipo che implementa il metodo.  
   
  `szMethod`  
- [out] Puntatore a un buffer con il nome del metodo.  
+ [out] Un puntatore a un buffer che contiene il nome del metodo.  
   
  `cchMethod`  
  [in] La dimensione richiesta del `szMethod`.  
   
  `pchMethod`  
- [out] Un puntatore alla dimensione in caratteri "wide" di `szMethod`, o in caso di troncamento, il numero effettivo di caratteri "wide" nel nome del metodo.  
+ [out] Un puntatore alla dimensione in caratteri wide di `szMethod`, o in caso di troncamento, il numero effettivo di caratteri "wide" nel nome del metodo.  
   
  `pdwAttr`  
- [out] Puntatore a tutti i flag associati al metodo.  
+ [out] Puntatore a nessun flag associato al metodo.  
   
  `ppvSigBlob`  
  [out] Un puntatore per la firma binaria dei metadati del metodo.  
   
  `pcbSigBlob`  
- [out] Un puntatore alla dimensione in byte di `ppvSigBlob`.  
+ [out] Un puntatore alla dimensione in byte del `ppvSigBlob`.  
   
  `pulCodeRVA`  
  [out] Un puntatore all'indirizzo virtuale relativo del metodo.  
   
  `pdwImplFlags`  
- [out] Puntatore ai flag di implementazione per il metodo.  
+ [out] Puntatore ai flag di implementazione del metodo.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
- **Libreria:** inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [Interfaccia IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Interfaccia IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

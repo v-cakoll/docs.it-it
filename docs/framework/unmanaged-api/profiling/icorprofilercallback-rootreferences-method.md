@@ -17,14 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 467d065ab4d47e698c7043697ebe2ccf5f98a3cf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 94b736a8e3250f4d208d4a9a46a022140b676318
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631353"
 ---
 # <a name="icorprofilercallbackrootreferences-method"></a>Metodo ICorProfilerCallback::RootReferences
-Notifica al profiler con informazioni sui riferimenti principali dopo l'operazione di garbage collection.  
+Notifica al profiler con le informazioni sui riferimenti principali dopo l'operazione di garbage collection.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,23 +40,23 @@ HRESULT RootReferences(
  [in] Il numero di riferimenti nel `rootRefIds` matrice.  
   
  `rootRefIds`  
- [in] Matrice di ID di oggetto che fanno riferimento a un oggetto statico o un oggetto di nello stack.  
+ [in] Matrice di ID di oggetto che fanno riferimento a un oggetto statico o un oggetto nello stack.  
   
 ## <a name="remarks"></a>Note  
- Entrambi `RootReferences` e [ICorProfilerCallback2:: Rootreferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) vengono chiamati per notificare al profiler. I profiler in genere implementano uno o l'altro, ma non entrambi, in quanto le informazioni passate in `RootReferences2` è un superset di passati `RootReferences`.  
+ Entrambe `RootReferences` e [ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) vengono chiamati per notificare al profiler. I profiler in genere implementano uno o l'altro, ma non entrambi, poiché le informazioni inviate `RootReferences2` è un superset di che passato `RootReferences`.  
   
- È possibile che il `rootRefIds` matrice per contenere un oggetto null. Ad esempio, tutti i riferimenti all'oggetto dichiarati nello stack vengono trattati come radici dal garbage collector e verrà segnalati sempre.  
+ È possibile che il `rootRefIds` matrice per contenere un oggetto null. Ad esempio, tutti i riferimenti all'oggetto dichiarati nello stack vengono gestiti dal garbage collector come radici e verrà segnalati sempre.  
   
- L'ID di oggetto restituito da `RootReferences` non validi durante il callback vero e proprio, perché l'operazione di garbage collection potrebbe essere ancora spostando gli oggetti provenienti da indirizzi precedenti a nuovi indirizzi. Di conseguenza, i profiler non devono tentare di controllare gli oggetti durante una `RootReferences` chiamare. Quando [ICorProfilerCallback2::](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) viene chiamato, tutti gli oggetti sono stati spostati nelle nuove posizioni e possono essere controllati in modo sicuro.  
+ L'ID di oggetto restituito da `RootReferences` nejsou platné durante il callback vero e proprio, perché l'operazione di garbage collection stia ancora spostando gli oggetti provenienti da indirizzi precedenti per i nuovi indirizzi. Pertanto, profiler non deve tentare di controllare gli oggetti durante una `RootReferences` chiamare. Quando [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) viene chiamato, tutti gli oggetti sono stati spostati nelle nuove posizioni e può essere controllati in modo sicuro.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
