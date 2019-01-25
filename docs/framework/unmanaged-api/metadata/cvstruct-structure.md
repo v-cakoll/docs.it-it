@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 195f311d58f2169d715bb33986ee6e591622f377
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: fb73980faa64464c572945fe5ad04e015dc8805b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445043"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720652"
 ---
-# <a name="cvstruct-structure"></a><span data-ttu-id="81c57-102">Struttura CVStruct</span><span class="sxs-lookup"><span data-stu-id="81c57-102">CVStruct Structure</span></span>
-<span data-ttu-id="81c57-103">Contiene informazioni usate durante l'installazione di un modulo o un'immagine composita.</span><span class="sxs-lookup"><span data-stu-id="81c57-103">Contains information that is used when installing a module or a composite image.</span></span>  
+# <a name="cvstruct-structure"></a><span data-ttu-id="8573c-102">Struttura CVStruct</span><span class="sxs-lookup"><span data-stu-id="8573c-102">CVStruct Structure</span></span>
+<span data-ttu-id="8573c-103">Contiene informazioni usate durante l'installazione di un modulo o un'immagine composita.</span><span class="sxs-lookup"><span data-stu-id="8573c-103">Contains information that is used when installing a module or a composite image.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="81c57-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="81c57-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8573c-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="8573c-104">Syntax</span></span>  
   
 ```  
 typedef struct {  
@@ -37,23 +37,23 @@ typedef struct {
 } CVStruct;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="81c57-105">Membri</span><span class="sxs-lookup"><span data-stu-id="81c57-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="8573c-105">Membri</span><span class="sxs-lookup"><span data-stu-id="8573c-105">Members</span></span>  
   
-|<span data-ttu-id="81c57-106">Membro</span><span class="sxs-lookup"><span data-stu-id="81c57-106">Member</span></span>|<span data-ttu-id="81c57-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="81c57-107">Description</span></span>|  
+|<span data-ttu-id="8573c-106">Membro</span><span class="sxs-lookup"><span data-stu-id="8573c-106">Member</span></span>|<span data-ttu-id="8573c-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="8573c-107">Description</span></span>|  
 |------------|-----------------|  
-|<span data-ttu-id="81c57-108">Principale</span><span class="sxs-lookup"><span data-stu-id="81c57-108">Major</span></span>|<span data-ttu-id="81c57-109">Numero di build di versione principale.</span><span class="sxs-lookup"><span data-stu-id="81c57-109">Major version build number.</span></span>|  
-|<span data-ttu-id="81c57-110">Secondario</span><span class="sxs-lookup"><span data-stu-id="81c57-110">Minor</span></span>|<span data-ttu-id="81c57-111">Numero di build di versione secondario.</span><span class="sxs-lookup"><span data-stu-id="81c57-111">Minor version build number.</span></span>|  
-|<span data-ttu-id="81c57-112">Sub</span><span class="sxs-lookup"><span data-stu-id="81c57-112">Sub</span></span>|<span data-ttu-id="81c57-113">Numero di build secondaria.</span><span class="sxs-lookup"><span data-stu-id="81c57-113">Sub-build number.</span></span>|  
-|<span data-ttu-id="81c57-114">Compilazione</span><span class="sxs-lookup"><span data-stu-id="81c57-114">Build</span></span>|<span data-ttu-id="81c57-115">Numero di build.</span><span class="sxs-lookup"><span data-stu-id="81c57-115">Build number.</span></span>|  
+|<span data-ttu-id="8573c-108">Principale</span><span class="sxs-lookup"><span data-stu-id="8573c-108">Major</span></span>|<span data-ttu-id="8573c-109">Numero di build di versione principale.</span><span class="sxs-lookup"><span data-stu-id="8573c-109">Major version build number.</span></span>|  
+|<span data-ttu-id="8573c-110">Secondario</span><span class="sxs-lookup"><span data-stu-id="8573c-110">Minor</span></span>|<span data-ttu-id="8573c-111">Numero di build di versione secondario.</span><span class="sxs-lookup"><span data-stu-id="8573c-111">Minor version build number.</span></span>|  
+|<span data-ttu-id="8573c-112">Sub</span><span class="sxs-lookup"><span data-stu-id="8573c-112">Sub</span></span>|<span data-ttu-id="8573c-113">Numero di build secondaria.</span><span class="sxs-lookup"><span data-stu-id="8573c-113">Sub-build number.</span></span>|  
+|<span data-ttu-id="8573c-114">Compilazione</span><span class="sxs-lookup"><span data-stu-id="8573c-114">Build</span></span>|<span data-ttu-id="8573c-115">numero di build.</span><span class="sxs-lookup"><span data-stu-id="8573c-115">Build number.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="81c57-116">Requisiti</span><span class="sxs-lookup"><span data-stu-id="81c57-116">Requirements</span></span>  
- <span data-ttu-id="81c57-117">**Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="81c57-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8573c-116">Requisiti</span><span class="sxs-lookup"><span data-stu-id="8573c-116">Requirements</span></span>  
+ <span data-ttu-id="8573c-117">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8573c-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="81c57-118">**Intestazione:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="81c57-118">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="8573c-118">**Intestazione:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="8573c-118">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="81c57-119">**Libreria:** usata come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="81c57-119">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="8573c-119">**Libreria:** Usato come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="8573c-119">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="81c57-120">**Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="81c57-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="8573c-120">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8573c-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="81c57-121">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="81c57-121">See Also</span></span>  
- [<span data-ttu-id="81c57-122">Strutture di metadati</span><span class="sxs-lookup"><span data-stu-id="81c57-122">Metadata Structures</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)
+## <a name="see-also"></a><span data-ttu-id="8573c-121">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="8573c-121">See also</span></span>
+- [<span data-ttu-id="8573c-122">Strutture di metadati</span><span class="sxs-lookup"><span data-stu-id="8573c-122">Metadata Structures</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)

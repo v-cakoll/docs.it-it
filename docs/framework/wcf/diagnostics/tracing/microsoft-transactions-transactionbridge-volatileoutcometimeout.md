@@ -2,23 +2,23 @@
 title: Microsoft.Transactions.TransactionBridge.VolatileOutcomeTimeout
 ms.date: 03/30/2017
 ms.assetid: 2dbe34c5-57c7-4b64-9257-63021911d03c
-ms.openlocfilehash: b64f61d25c3be87019151cbf560becd3384ec182
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fac3682a955ed0caf21fdb1dea48672bf3bdea77
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33475631"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54704576"
 ---
-# <a name="microsofttransactionstransactionbridgevolatileoutcometimeout"></a><span data-ttu-id="5bbc5-102">Microsoft.Transactions.TransactionBridge.VolatileOutcomeTimeout</span><span class="sxs-lookup"><span data-stu-id="5bbc5-102">Microsoft.Transactions.TransactionBridge.VolatileOutcomeTimeout</span></span>
-<span data-ttu-id="5bbc5-103">Il servizio del protocollo WS-AT è andato in timeout durante l'attesa di una risposta a un messaggio in uscita da parte di un partecipante volatile.</span><span class="sxs-lookup"><span data-stu-id="5bbc5-103">The WS-AT protocol service timed out waiting for a response to an outcome message from a volatile participant.</span></span> <span data-ttu-id="5bbc5-104">Il risultato della transazione può essere incerto se il partecipante risponde.</span><span class="sxs-lookup"><span data-stu-id="5bbc5-104">The transaction outcome may be in doubt if the participant returns.</span></span>  
+# <a name="microsofttransactionstransactionbridgevolatileoutcometimeout"></a><span data-ttu-id="3c133-102">Microsoft.Transactions.TransactionBridge.VolatileOutcomeTimeout</span><span class="sxs-lookup"><span data-stu-id="3c133-102">Microsoft.Transactions.TransactionBridge.VolatileOutcomeTimeout</span></span>
+<span data-ttu-id="3c133-103">Il servizio del protocollo WS-AT è andato in timeout durante l'attesa di una risposta a un messaggio in uscita da parte di un partecipante volatile.</span><span class="sxs-lookup"><span data-stu-id="3c133-103">The WS-AT protocol service timed out waiting for a response to an outcome message from a volatile participant.</span></span> <span data-ttu-id="3c133-104">Il risultato della transazione può essere incerto se il partecipante risponde.</span><span class="sxs-lookup"><span data-stu-id="3c133-104">The transaction outcome may be in doubt if the participant returns.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="5bbc5-105">Descrizione</span><span class="sxs-lookup"><span data-stu-id="5bbc5-105">Description</span></span>  
- <span data-ttu-id="5bbc5-106">Viene tracciato quando un partecipante volatile ha deciso di eseguire il commit o di interrompere ma non ha risposto a un commit o a una richiesta di rollback entro un determinato periodo di tempo.</span><span class="sxs-lookup"><span data-stu-id="5bbc5-106">Traced when a Volatile participant has decided to Commit or Abort but has not responded to a Commit or Rollback request within a given amount of time.</span></span>  
+## <a name="description"></a><span data-ttu-id="3c133-105">Descrizione</span><span class="sxs-lookup"><span data-stu-id="3c133-105">Description</span></span>  
+ <span data-ttu-id="3c133-106">Viene tracciato quando un partecipante volatile ha deciso di eseguire il commit o di interrompere ma non ha risposto a un commit o a una richiesta di rollback entro un determinato periodo di tempo.</span><span class="sxs-lookup"><span data-stu-id="3c133-106">Traced when a Volatile participant has decided to Commit or Abort but has not responded to a Commit or Rollback request within a given amount of time.</span></span>  
   
-## <a name="troubleshooting"></a><span data-ttu-id="5bbc5-107">Risoluzione dei problemi</span><span class="sxs-lookup"><span data-stu-id="5bbc5-107">Troubleshooting</span></span>  
- <span data-ttu-id="5bbc5-108">Assicurarsi che tutti i partecipanti volatili siano in grado di rispondere entro il periodo di tempo specificato.</span><span class="sxs-lookup"><span data-stu-id="5bbc5-108">Ensure that all Volatile participants are able to respond within the given amount of time.</span></span> <span data-ttu-id="5bbc5-109">Il periodo di tempo predefinito è 180 secondi.</span><span class="sxs-lookup"><span data-stu-id="5bbc5-109">The default time period is 180 seconds.</span></span>  <span data-ttu-id="5bbc5-110">Se è insufficiente, aumentare il criterio del timer `VolatileOutcomeDelay` per WS-AT.</span><span class="sxs-lookup"><span data-stu-id="5bbc5-110">If this is insufficient, increase the `VolatileOutcomeDelay` timer policy for WS-AT.</span></span>  
+## <a name="troubleshooting"></a><span data-ttu-id="3c133-107">Risoluzione dei problemi</span><span class="sxs-lookup"><span data-stu-id="3c133-107">Troubleshooting</span></span>  
+ <span data-ttu-id="3c133-108">Assicurarsi che tutti i partecipanti volatili siano in grado di rispondere entro il periodo di tempo specificato.</span><span class="sxs-lookup"><span data-stu-id="3c133-108">Ensure that all Volatile participants are able to respond within the given amount of time.</span></span> <span data-ttu-id="3c133-109">Il periodo di tempo predefinito è 180 secondi.</span><span class="sxs-lookup"><span data-stu-id="3c133-109">The default time period is 180 seconds.</span></span>  <span data-ttu-id="3c133-110">Se è insufficiente, aumentare il criterio del timer `VolatileOutcomeDelay` per WS-AT.</span><span class="sxs-lookup"><span data-stu-id="3c133-110">If this is insufficient, increase the `VolatileOutcomeDelay` timer policy for WS-AT.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5bbc5-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="5bbc5-111">See Also</span></span>  
- [<span data-ttu-id="5bbc5-112">Traccia</span><span class="sxs-lookup"><span data-stu-id="5bbc5-112">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="5bbc5-113">Uso delle tracce per risolvere i problemi di un'applicazione</span><span class="sxs-lookup"><span data-stu-id="5bbc5-113">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="5bbc5-114">Amministrazione e diagnostica</span><span class="sxs-lookup"><span data-stu-id="5bbc5-114">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="3c133-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="3c133-111">See also</span></span>
+- [<span data-ttu-id="3c133-112">Traccia</span><span class="sxs-lookup"><span data-stu-id="3c133-112">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [<span data-ttu-id="3c133-113">Uso delle tracce per risolvere i problemi di un'applicazione</span><span class="sxs-lookup"><span data-stu-id="3c133-113">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="3c133-114">Amministrazione e diagnostica</span><span class="sxs-lookup"><span data-stu-id="3c133-114">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

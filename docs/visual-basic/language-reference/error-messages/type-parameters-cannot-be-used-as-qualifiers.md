@@ -7,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - BC32098
 ms.assetid: bab05325-dde8-4621-a5f6-368b5b7b2d76
-ms.openlocfilehash: 563010efc4f3049d330ee2b38b7f59e23292e630
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8ee0fd5822c22da090aa0abee679e2f68e0fc1d8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33595142"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54659706"
 ---
-# <a name="type-parameters-cannot-be-used-as-qualifiers"></a><span data-ttu-id="37f81-102">Impossibile utilizzare i parametri di tipo come qualificatori</span><span class="sxs-lookup"><span data-stu-id="37f81-102">Type parameters cannot be used as qualifiers</span></span>
-<span data-ttu-id="37f81-103">Un elemento di programmazione è qualificato con la stringa di qualificazione che include un parametro di tipo.</span><span class="sxs-lookup"><span data-stu-id="37f81-103">A programming element is qualified with a qualification string that includes a type parameter.</span></span>  
+# <a name="type-parameters-cannot-be-used-as-qualifiers"></a><span data-ttu-id="3c39c-102">Impossibile utilizzare i parametri di tipo come qualificatori</span><span class="sxs-lookup"><span data-stu-id="3c39c-102">Type parameters cannot be used as qualifiers</span></span>
+<span data-ttu-id="3c39c-103">Un elemento di programmazione è qualificato con una stringa di qualificazione che includa un parametro di tipo.</span><span class="sxs-lookup"><span data-stu-id="3c39c-103">A programming element is qualified with a qualification string that includes a type parameter.</span></span>  
   
- <span data-ttu-id="37f81-104">Un parametro di tipo rappresenta un requisito per un tipo che deve essere fornito quando il tipo generico viene costruito.</span><span class="sxs-lookup"><span data-stu-id="37f81-104">A type parameter represents a requirement for a type that is to be supplied when the generic type is constructed.</span></span> <span data-ttu-id="37f81-105">Non rappresenta un tipo specifico definito.</span><span class="sxs-lookup"><span data-stu-id="37f81-105">It does not represent a specific defined type.</span></span> <span data-ttu-id="37f81-106">La stringa di qualificazione deve includere solo gli elementi definiti in fase di compilazione.</span><span class="sxs-lookup"><span data-stu-id="37f81-106">A qualification string must include only elements that are defined at compile time.</span></span>  
+ <span data-ttu-id="3c39c-104">Un parametro di tipo rappresenta un requisito per un tipo che deve essere specificato quando viene costruito il tipo generico.</span><span class="sxs-lookup"><span data-stu-id="3c39c-104">A type parameter represents a requirement for a type that is to be supplied when the generic type is constructed.</span></span> <span data-ttu-id="3c39c-105">Non rappresenta un tipo specifico definito.</span><span class="sxs-lookup"><span data-stu-id="3c39c-105">It does not represent a specific defined type.</span></span> <span data-ttu-id="3c39c-106">La stringa di qualificazione deve includere solo gli elementi definiti in fase di compilazione.</span><span class="sxs-lookup"><span data-stu-id="3c39c-106">A qualification string must include only elements that are defined at compile time.</span></span>  
   
- <span data-ttu-id="37f81-107">Le istruzioni seguenti possono generare questo errore.</span><span class="sxs-lookup"><span data-stu-id="37f81-107">The following statements can generate this error.</span></span>  
+ <span data-ttu-id="3c39c-107">Le istruzioni seguenti possono generare questo errore.</span><span class="sxs-lookup"><span data-stu-id="3c39c-107">The following statements can generate this error.</span></span>  
   
 ```  
 Public Function checkText(Of c As System.Windows.Forms.Control)(  
@@ -30,15 +30,15 @@ Public Function checkText(Of c As System.Windows.Forms.Control)(
 End Function  
 ```  
   
- <span data-ttu-id="37f81-108">**ID errore:** BC32098</span><span class="sxs-lookup"><span data-stu-id="37f81-108">**Error ID:** BC32098</span></span>  
+ <span data-ttu-id="3c39c-108">**ID errore:** BC32098</span><span class="sxs-lookup"><span data-stu-id="3c39c-108">**Error ID:** BC32098</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="37f81-109">Per correggere l'errore</span><span class="sxs-lookup"><span data-stu-id="37f81-109">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="3c39c-109">Per correggere l'errore</span><span class="sxs-lookup"><span data-stu-id="3c39c-109">To correct this error</span></span>  
   
-1.  <span data-ttu-id="37f81-110">Rimuovere il parametro di tipo stringa di qualificazione o sostituirlo con un tipo definito.</span><span class="sxs-lookup"><span data-stu-id="37f81-110">Remove the type parameter from the qualification string, or replace it with a defined type.</span></span>  
+1.  <span data-ttu-id="3c39c-110">Rimuovere il parametro di tipo dalla stringa di qualificazione o sostituirlo con un tipo definito.</span><span class="sxs-lookup"><span data-stu-id="3c39c-110">Remove the type parameter from the qualification string, or replace it with a defined type.</span></span>  
   
-2.  <span data-ttu-id="37f81-111">Se è necessario utilizzare un tipo costruito per individuare l'elemento di programmazione qualificato, è necessario utilizzare la logica di programma aggiuntiva.</span><span class="sxs-lookup"><span data-stu-id="37f81-111">If you need to use a constructed type to locate the programming element being qualified, you must use additional program logic.</span></span>  
+2.  <span data-ttu-id="3c39c-111">Se è necessario utilizzare un tipo costruito per individuare l'elemento di programmazione completo in corso, è necessario usare la logica del programma aggiuntivi.</span><span class="sxs-lookup"><span data-stu-id="3c39c-111">If you need to use a constructed type to locate the programming element being qualified, you must use additional program logic.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="37f81-112">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="37f81-112">See Also</span></span>  
- [<span data-ttu-id="37f81-113">Riferimenti a elementi dichiarati</span><span class="sxs-lookup"><span data-stu-id="37f81-113">References to Declared Elements</span></span>](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
- [<span data-ttu-id="37f81-114">Tipi generici in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="37f81-114">Generic Types in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [<span data-ttu-id="37f81-115">Elenco dei tipi</span><span class="sxs-lookup"><span data-stu-id="37f81-115">Type List</span></span>](../../../visual-basic/language-reference/statements/type-list.md)
+## <a name="see-also"></a><span data-ttu-id="3c39c-112">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="3c39c-112">See also</span></span>
+- [<span data-ttu-id="3c39c-113">Riferimenti a elementi dichiarati</span><span class="sxs-lookup"><span data-stu-id="3c39c-113">References to Declared Elements</span></span>](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [<span data-ttu-id="3c39c-114">Generic Types in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="3c39c-114">Generic Types in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [<span data-ttu-id="3c39c-115">Elenco dei tipi</span><span class="sxs-lookup"><span data-stu-id="3c39c-115">Type List</span></span>](../../../visual-basic/language-reference/statements/type-list.md)
