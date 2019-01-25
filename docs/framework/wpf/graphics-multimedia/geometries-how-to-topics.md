@@ -6,35 +6,35 @@ f1_keywords:
 helpviewer_keywords:
 - geometry classes [WPF]
 ms.assetid: 83873331-b013-472e-8197-8ba993dd242f
-ms.openlocfilehash: 8c72cf0e7fc0e516c25f1019af91401514f45a92
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cb8efd32302287de1d80ef68cf98bfa071b7feaf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557160"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664681"
 ---
-# <a name="geometries-how-to-topics"></a><span data-ttu-id="d9e76-102">Procedure relative agli oggetti Geometry</span><span class="sxs-lookup"><span data-stu-id="d9e76-102">Geometries How-to Topics</span></span>
-<span data-ttu-id="d9e76-103">Negli argomenti di questa sezione viene illustrato come utilizzare <xref:System.Windows.Media.Geometry> oggetti nelle applicazioni.</span><span class="sxs-lookup"><span data-stu-id="d9e76-103">The topics in this section demonstrate how to use <xref:System.Windows.Media.Geometry> objects in your applications.</span></span>  
+# <a name="geometries-how-to-topics"></a><span data-ttu-id="3d188-102">Procedure relative agli oggetti Geometry</span><span class="sxs-lookup"><span data-stu-id="3d188-102">Geometries How-to Topics</span></span>
+<span data-ttu-id="3d188-103">Gli argomenti in questa sezione illustrano come usare <xref:System.Windows.Media.Geometry> oggetti nelle applicazioni.</span><span class="sxs-lookup"><span data-stu-id="3d188-103">The topics in this section demonstrate how to use <xref:System.Windows.Media.Geometry> objects in your applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="d9e76-104">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="d9e76-104">In This Section</span></span>  
- [<span data-ttu-id="d9e76-105">Aggiungere un'animazione a un oggetto EllipseGeometry</span><span class="sxs-lookup"><span data-stu-id="d9e76-105">Animate an EllipseGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-ellipsegeometry.md)  
- [<span data-ttu-id="d9e76-106">Animare la proprietà Size di un ArcSegment</span><span class="sxs-lookup"><span data-stu-id="d9e76-106">Animate the Size of an ArcSegment</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-size-of-an-arcsegment.md)  
- [<span data-ttu-id="d9e76-107">Controllare il riempimento di una forma composta</span><span class="sxs-lookup"><span data-stu-id="d9e76-107">Control the Fill of a Composite Shape</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-the-fill-of-a-composite-shape.md)  
- [<span data-ttu-id="d9e76-108">Creare una geometria combinata</span><span class="sxs-lookup"><span data-stu-id="d9e76-108">Create a Combined Geometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-combined-geometry.md)  
- [<span data-ttu-id="d9e76-109">Creare una forma composta</span><span class="sxs-lookup"><span data-stu-id="d9e76-109">Create a Composite Shape</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-composite-shape.md)  
- [<span data-ttu-id="d9e76-110">Creare una curva di Bézier cubica</span><span class="sxs-lookup"><span data-stu-id="d9e76-110">Create a Cubic Bezier Curve</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-cubic-bezier-curve.md)  
- [<span data-ttu-id="d9e76-111">Creare una riga usando un oggetto LineGeometry</span><span class="sxs-lookup"><span data-stu-id="d9e76-111">Create a Line Using a LineGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-line-using-a-linegeometry.md)  
- [<span data-ttu-id="d9e76-112">Creare un oggetto LineSegment in un oggetto PathGeometry</span><span class="sxs-lookup"><span data-stu-id="d9e76-112">Create a LineSegment in a PathGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-linesegment-in-a-pathgeometry.md)  
- [<span data-ttu-id="d9e76-113">Creare una forma usando un oggetto PathGeometry</span><span class="sxs-lookup"><span data-stu-id="d9e76-113">Create a Shape by Using a PathGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-shape-by-using-a-pathgeometry.md)  
- [<span data-ttu-id="d9e76-114">Creare una forma usando un oggetto StreamGeometry</span><span class="sxs-lookup"><span data-stu-id="d9e76-114">Create a Shape Using a StreamGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-shape-using-a-streamgeometry.md)  
- [<span data-ttu-id="d9e76-115">Creare una curva di Bézier quadratica</span><span class="sxs-lookup"><span data-stu-id="d9e76-115">Create a Quadratic Bezier Curve</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-quadratic-bezier-curve.md)  
- [<span data-ttu-id="d9e76-116">Creare un arco ellittico</span><span class="sxs-lookup"><span data-stu-id="d9e76-116">Create an Elliptical Arc</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-an-elliptical-arc.md)  
- [<span data-ttu-id="d9e76-117">Creare più percorsi secondari in un PathGeometry</span><span class="sxs-lookup"><span data-stu-id="d9e76-117">Create Multiple Subpaths Within a PathGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-multiple-subpaths-within-a-pathgeometry.md)  
- [<span data-ttu-id="d9e76-118">Definire un rettangolo usando RectangleGeometry</span><span class="sxs-lookup"><span data-stu-id="d9e76-118">Define a Rectangle Using a RectangleGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-define-a-rectangle-using-a-rectanglegeometry.md)  
- [<span data-ttu-id="d9e76-119">Arrotondare gli angoli di un oggetto RectangleGeometry</span><span class="sxs-lookup"><span data-stu-id="d9e76-119">Round the Corners of a RectangleGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-round-the-corners-of-a-rectanglegeometry.md)  
+## <a name="in-this-section"></a><span data-ttu-id="3d188-104">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="3d188-104">In This Section</span></span>  
+ [<span data-ttu-id="3d188-105">Aggiungere un'animazione a un oggetto EllipseGeometry</span><span class="sxs-lookup"><span data-stu-id="3d188-105">Animate an EllipseGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-ellipsegeometry.md)  
+ [<span data-ttu-id="3d188-106">Animare la proprietà Size di un ArcSegment</span><span class="sxs-lookup"><span data-stu-id="3d188-106">Animate the Size of an ArcSegment</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-size-of-an-arcsegment.md)  
+ [<span data-ttu-id="3d188-107">Controllare il riempimento di una forma composta</span><span class="sxs-lookup"><span data-stu-id="3d188-107">Control the Fill of a Composite Shape</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-the-fill-of-a-composite-shape.md)  
+ [<span data-ttu-id="3d188-108">Creare una geometria combinata</span><span class="sxs-lookup"><span data-stu-id="3d188-108">Create a Combined Geometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-combined-geometry.md)  
+ [<span data-ttu-id="3d188-109">Creare una forma composta</span><span class="sxs-lookup"><span data-stu-id="3d188-109">Create a Composite Shape</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-composite-shape.md)  
+ [<span data-ttu-id="3d188-110">Creare una curva di Bézier cubica</span><span class="sxs-lookup"><span data-stu-id="3d188-110">Create a Cubic Bezier Curve</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-cubic-bezier-curve.md)  
+ [<span data-ttu-id="3d188-111">Creare una riga usando un oggetto LineGeometry</span><span class="sxs-lookup"><span data-stu-id="3d188-111">Create a Line Using a LineGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-line-using-a-linegeometry.md)  
+ [<span data-ttu-id="3d188-112">Creare un oggetto LineSegment in un oggetto PathGeometry</span><span class="sxs-lookup"><span data-stu-id="3d188-112">Create a LineSegment in a PathGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-linesegment-in-a-pathgeometry.md)  
+ [<span data-ttu-id="3d188-113">Creare una forma usando un oggetto PathGeometry</span><span class="sxs-lookup"><span data-stu-id="3d188-113">Create a Shape by Using a PathGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-shape-by-using-a-pathgeometry.md)  
+ [<span data-ttu-id="3d188-114">Creare una forma usando un oggetto StreamGeometry</span><span class="sxs-lookup"><span data-stu-id="3d188-114">Create a Shape Using a StreamGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-shape-using-a-streamgeometry.md)  
+ [<span data-ttu-id="3d188-115">Creare una curva di Bézier quadratica</span><span class="sxs-lookup"><span data-stu-id="3d188-115">Create a Quadratic Bezier Curve</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-quadratic-bezier-curve.md)  
+ [<span data-ttu-id="3d188-116">Creare un arco ellittico</span><span class="sxs-lookup"><span data-stu-id="3d188-116">Create an Elliptical Arc</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-an-elliptical-arc.md)  
+ [<span data-ttu-id="3d188-117">Creare più percorsi secondari in un PathGeometry</span><span class="sxs-lookup"><span data-stu-id="3d188-117">Create Multiple Subpaths Within a PathGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-multiple-subpaths-within-a-pathgeometry.md)  
+ [<span data-ttu-id="3d188-118">Definire un rettangolo usando RectangleGeometry</span><span class="sxs-lookup"><span data-stu-id="3d188-118">Define a Rectangle Using a RectangleGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-define-a-rectangle-using-a-rectanglegeometry.md)  
+ [<span data-ttu-id="3d188-119">Arrotondare gli angoli di un oggetto RectangleGeometry</span><span class="sxs-lookup"><span data-stu-id="3d188-119">Round the Corners of a RectangleGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-round-the-corners-of-a-rectanglegeometry.md)  
   
-## <a name="see-also"></a><span data-ttu-id="d9e76-120">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="d9e76-120">See Also</span></span>  
- <xref:System.Windows.Media.Brushes>  
- <xref:System.Windows.Shapes.Shape>  
- [<span data-ttu-id="d9e76-121">Cenni preliminari sugli oggetti Shape e sulle funzionalità di disegno di base di WPF</span><span class="sxs-lookup"><span data-stu-id="d9e76-121">Shapes and Basic Drawing in WPF Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [<span data-ttu-id="d9e76-122">Grafica e funzionalità multimediali</span><span class="sxs-lookup"><span data-stu-id="d9e76-122">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="see-also"></a><span data-ttu-id="3d188-120">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="3d188-120">See also</span></span>
+- <xref:System.Windows.Media.Brushes>
+- <xref:System.Windows.Shapes.Shape>
+- [<span data-ttu-id="3d188-121">Cenni preliminari sugli oggetti Shape e sulle funzionalità di disegno di base di WPF</span><span class="sxs-lookup"><span data-stu-id="3d188-121">Shapes and Basic Drawing in WPF Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
+- [<span data-ttu-id="3d188-122">Grafica e funzionalità multimediali</span><span class="sxs-lookup"><span data-stu-id="3d188-122">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)

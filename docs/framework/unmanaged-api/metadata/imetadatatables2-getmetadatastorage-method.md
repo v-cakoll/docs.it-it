@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 33064fe8292eb7a8079d2f68bcdea767d306be6f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e832bbb58a08c50d8c2bb37fa0c310ef3133d02c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33452319"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583637"
 ---
-# <a name="imetadatatables2getmetadatastorage-method"></a><span data-ttu-id="cbe17-102">Metodo IMetaDataTables2::GetMetaDataStorage</span><span class="sxs-lookup"><span data-stu-id="cbe17-102">IMetaDataTables2::GetMetaDataStorage Method</span></span>
-<span data-ttu-id="cbe17-103">Ottiene le dimensioni e il contenuto dei metadati archiviati nella sezione specificata.</span><span class="sxs-lookup"><span data-stu-id="cbe17-103">Gets the size and contents of the metadata stored in the specified section.</span></span>  
+# <a name="imetadatatables2getmetadatastorage-method"></a><span data-ttu-id="c66dc-102">Metodo IMetaDataTables2::GetMetaDataStorage</span><span class="sxs-lookup"><span data-stu-id="c66dc-102">IMetaDataTables2::GetMetaDataStorage Method</span></span>
+<span data-ttu-id="c66dc-103">Ottiene le dimensioni e il contenuto dei metadati archiviati nella sezione specificata.</span><span class="sxs-lookup"><span data-stu-id="c66dc-103">Gets the size and contents of the metadata stored in the specified section.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cbe17-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="cbe17-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c66dc-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="c66dc-104">Syntax</span></span>  
   
 ```  
 HRESULT GetMetaDataStorage (  
@@ -36,22 +36,22 @@ HRESULT GetMetaDataStorage (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="cbe17-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="cbe17-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="c66dc-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="c66dc-105">Parameters</span></span>  
  `ppvMd`  
- <span data-ttu-id="cbe17-106">[in, out] Un puntatore a una sezione di metadati.</span><span class="sxs-lookup"><span data-stu-id="cbe17-106">[in, out] A pointer to a metadata section.</span></span>  
+ <span data-ttu-id="c66dc-106">[in, out] Puntatore a una sezione di metadati.</span><span class="sxs-lookup"><span data-stu-id="c66dc-106">[in, out] A pointer to a metadata section.</span></span>  
   
  `pcbMd`  
- <span data-ttu-id="cbe17-107">[out] Le dimensioni del flusso di metadati.</span><span class="sxs-lookup"><span data-stu-id="cbe17-107">[out] The size of the metadata stream.</span></span>  
+ <span data-ttu-id="c66dc-107">[out] Le dimensioni del flusso di metadati.</span><span class="sxs-lookup"><span data-stu-id="c66dc-107">[out] The size of the metadata stream.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="cbe17-108">Requisiti</span><span class="sxs-lookup"><span data-stu-id="cbe17-108">Requirements</span></span>  
- <span data-ttu-id="cbe17-109">**Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="cbe17-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c66dc-108">Requisiti</span><span class="sxs-lookup"><span data-stu-id="c66dc-108">Requirements</span></span>  
+ <span data-ttu-id="c66dc-109">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c66dc-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="cbe17-110">**Intestazione:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="cbe17-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="c66dc-110">**Intestazione:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="c66dc-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="cbe17-111">**Libreria:** usata come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="cbe17-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="c66dc-111">**Libreria:** Usato come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="c66dc-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="cbe17-112">**Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cbe17-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="c66dc-112">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c66dc-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cbe17-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="cbe17-113">See Also</span></span>  
- [<span data-ttu-id="cbe17-114">Interfaccia IMetaDataTables2</span><span class="sxs-lookup"><span data-stu-id="cbe17-114">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)  
- [<span data-ttu-id="cbe17-115">Interfaccia IMetaDataTables</span><span class="sxs-lookup"><span data-stu-id="cbe17-115">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+## <a name="see-also"></a><span data-ttu-id="c66dc-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c66dc-113">See also</span></span>
+- [<span data-ttu-id="c66dc-114">Interfaccia IMetaDataTables2</span><span class="sxs-lookup"><span data-stu-id="c66dc-114">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+- [<span data-ttu-id="c66dc-115">Interfaccia IMetaDataTables</span><span class="sxs-lookup"><span data-stu-id="c66dc-115">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
