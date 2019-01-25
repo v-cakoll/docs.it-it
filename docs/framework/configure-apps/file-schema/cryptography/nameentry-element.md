@@ -1,5 +1,5 @@
 ---
-title: '&lt;nameEntry&gt; elemento'
+title: '&lt;nameEntry&gt; Element'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#nameEntry
@@ -10,21 +10,21 @@ helpviewer_keywords:
 ms.assetid: 7d7535e9-4b4a-4b8c-82e2-e40dff5a7821
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: f5d53debd746ba031e39215354c391d288016b6b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a4c29db3f84570d4d5e99a1deaf8beb3145c8ea1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201356"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54626940"
 ---
-# <a name="ltnameentrygt-element"></a>&lt;nameEntry&gt; elemento
+# <a name="ltnameentrygt-element"></a>&lt;nameEntry&gt; Element
 Esegue il mapping di un nome di classe a un nome di algoritmo descrittivo, in modo da poter associare più nomi descrittivi a una classe.  
   
  \<configuration>  
-\<mscorlib >  
-\<cryptographySettings >  
-\<cryptoNameMapping >  
-\<nameEntry >  
+\<mscorlib>  
+\<cryptographySettings>  
+\<cryptoNameMapping>  
+\<nameEntry>  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -77,8 +77,8 @@ Esegue il mapping di un nome di classe a un nome di algoritmo descrittivo, in mo
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
-- [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)  
-- [Schema delle impostazioni di crittografia](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
-- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)  
+## <a name="see-also"></a>Vedere anche
+- [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Schema delle impostazioni di crittografia](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
 - [Configurazione di classi di crittografia](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)

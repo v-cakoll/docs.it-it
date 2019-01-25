@@ -11,12 +11,12 @@ helpviewer_keywords:
 - type design guidelines, classes
 ms.assetid: d67c14d8-c4dd-443f-affb-4ccae677c9b6
 author: KrzysztofCwalina
-ms.openlocfilehash: a521842d8c4651984d8d6667b93b0f28a1eba894
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d0a2f11b53f50f2ec2f301f7b88df65e1cd7b811
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130765"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617382"
 ---
 # <a name="static-class-design"></a>Progettazione di classi statiche
 Una classe statica viene definita come una classe che contiene solo membri statici (naturalmente oltre i membri di istanza ereditati da <xref:System.Object?displayProperty=nameWithType> e possibilmente un costruttore privato). Alcuni linguaggi offrono il supporto incorporato per le classi statiche. In c# 2.0 e versioni successive, quando una classe viene dichiarata come statico, è sealed, abstract e non i membri di istanza possono essere sottoposto a override o dichiarati.  
@@ -39,5 +39,5 @@ Una classe statica viene definita come una classe che contiene solo membri stati
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Linee guida per la progettazione di tipi](../../../docs/standard/design-guidelines/type.md)  
+- [Linee guida per la progettazione di tipi](../../../docs/standard/design-guidelines/type.md)
 - [Linee guida per la progettazione di Framework](../../../docs/standard/design-guidelines/index.md)

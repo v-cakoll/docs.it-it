@@ -2,12 +2,12 @@
 title: Channel factory e memorizzazione nella cache
 ms.date: 03/30/2017
 ms.assetid: 954f030e-091c-4c0e-a7a2-10f9a6b1f529
-ms.openlocfilehash: fa333d3ffa0063e226405eb8e715f9ee99f68432
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 055c9d1412338bb444ca33556f3c94b1ffc4c6a7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151330"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745339"
 ---
 # <a name="channel-factory-and-caching"></a>Channel factory e memorizzazione nella cache
 Le applicazioni client WCF utilizzano la classe <xref:System.ServiceModel.ChannelFactory%601> per creare un canale di comunicazione con un servizio WCF.  La creazione di istanze dell'oggetto <xref:System.ServiceModel.ChannelFactory%601> comporta un sovraccarico perché include le seguenti operazioni:  
@@ -111,9 +111,9 @@ public partial class TestClient : System.ServiceModel.ClientBase, ITest {}
   
  Nell'esempio precedente, tutte le istanze di `TestClient` utilizzano channel factory diverse. Ciò è utile quando ogni endpoint presenta requisiti di sicurezza diversi e la memorizzazione nella cache non è appropriata.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.ClientBase%601>  
- [Creazione di client](../../../../docs/framework/wcf/building-clients.md)  
- [Client](../../../../docs/framework/wcf/feature-details/clients.md)  
- [Accesso ai servizi tramite client WCF](../../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)  
- [Come si fa: Usare ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.ServiceModel.ClientBase%601>
+- [Creazione di client](../../../../docs/framework/wcf/building-clients.md)
+- [Client](../../../../docs/framework/wcf/feature-details/clients.md)
+- [Accesso ai servizi tramite client WCF](../../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)
+- [Procedura: Usare ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)

@@ -2,12 +2,12 @@
 title: Set di caratteri di input (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 13d291d3-e6bc-4719-b953-758b61a590b6
-ms.openlocfilehash: 5e7886215cac2d9363a9ed68cd03a0fce4374055
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: dce967ea8853f81fedaa53ea706fab4839b9f474
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32764697"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54641200"
 ---
 # <a name="input-character-set-entity-sql"></a>Set di caratteri di input (Entity SQL)
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] accetta i caratteri Unicode con codifica UTF-16.  
@@ -28,5 +28,5 @@ ms.locfileid: "32764697"
   
  Gli identificatori semplici possono essere solo caratteri latini. Questo consente di evitare l'ambiguità durante il confronto, poiché vengono confrontati i valori originali. ABC sarebbe ad esempio diverso nelle tabelle codici giapponese e latina.  
   
-## <a name="see-also"></a>Vedere anche  
- [Panoramica di Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+## <a name="see-also"></a>Vedere anche
+- [Panoramica di Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: acf2ba752ace49ae288857dc22819a8e7e429a34
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 510ef77f217cdd6e3441e3d6684d431fc31307fd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424053"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698921"
 ---
 # <a name="stacktracesimplecontext-structure"></a>Struttura StackTrace_SimpleContext
 Fornisce un contesto semplice che può essere usato invece di una struttura `CONTEXT` completa.  
@@ -42,20 +42,20 @@ struct StackTrace_SimpleContext
   
 |Membro|Descrizione|  
 |------------|-----------------|  
-|`StackOffset`|Il puntatore dello stack o il puntatore dello stack invio (ESP) x86 piattaforme.|  
-|`FrameOffset`|L'offset di frame o il registro EBP x86 piattaforme.|  
+|`StackOffset`|Il puntatore dello stack, o il puntatore dello stack invio (ESP) x86 piattaforme.|  
+|`FrameOffset`|L'offset di frame, o il registro EBP x86 piattaforme.|  
 |`InstructionOffset`|Il puntatore all'istruzione o il puntatore all'istruzione invio (EIP) x86 piattaforme.|  
   
 ## <a name="remarks"></a>Note  
- Poiché le funzioni di traccia dello stack, in genere è necessario restituire solo l'indirizzo, offset di frame e indirizzo dello stack, è possibile utilizzare facoltativamente il `SimpleContext` struttura anziché una grande `CONTEXT` struttura.  
+ Poiché le funzioni di traccia dello stack in genere necessario restituire solo l'indirizzo di offset di frame e indirizzo dello stack, è possibile usare la `SimpleContext` struttura invece di un grande `CONTEXT` struttura.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** SOS_Stacktrace. h  
+ **Intestazione:** SOS_Stacktrace.h  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Strutture di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [Debug](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Vedere anche
+- [Strutture di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [Debug](../../../../docs/framework/unmanaged-api/debugging/index.md)

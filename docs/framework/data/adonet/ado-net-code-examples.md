@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c119657a-9ce6-4940-91e4-ac1d5f0d9584
-ms.openlocfilehash: 8719ffc458297191514cfe65714d5b6dd862dd60
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 5d3bc2b4e5fbb8cc36cf4688bd4fa5e4c0851dcf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143617"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597632"
 ---
 # <a name="adonet-code-examples"></a>Esempi di codice ADO.NET
 Gli elenchi di codice inclusi in questo argomento illustrano come recuperare dati da un database usando le tecnologie ADO.NET seguenti:
@@ -344,9 +344,9 @@ End Class
 ```
 
 ## <a name="see-also"></a>Vedere anche
- [Panoramica di ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)  
- [Recupero e modifica di dati in ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [Creazione di applicazioni dati](https://msdn.microsoft.com/library/ab334d5f-4f49-4346-bce0-3325d6130b3e)  
- [Esecuzione di query su Entity Data Model (attività di Entity Framework)](https://msdn.microsoft.com/187f1caa-e4d3-4e31-bd99-5d5c2b329c77)  
- [Come si fa: Eseguire una Query che restituisce oggetti di tipo anonimo](https://msdn.microsoft.com/3b264025-e911-4d73-90ce-992d2b9d189d)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)  
+- [Panoramica di ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
+- [Recupero e modifica di dati in ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [Creazione di applicazioni dati](https://msdn.microsoft.com/library/ab334d5f-4f49-4346-bce0-3325d6130b3e)
+- [Esecuzione di query su Entity Data Model (attività di Entity Framework)](https://msdn.microsoft.com/187f1caa-e4d3-4e31-bd99-5d5c2b329c77)
+- [Procedura: Eseguire una Query che restituisce oggetti di tipo anonimo](https://msdn.microsoft.com/3b264025-e911-4d73-90ce-992d2b9d189d)
+- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

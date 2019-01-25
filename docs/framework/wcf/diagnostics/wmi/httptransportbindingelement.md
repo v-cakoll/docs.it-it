@@ -2,12 +2,12 @@
 title: HttpTransportBindingElement
 ms.date: 03/30/2017
 ms.assetid: 088a7bce-6bb2-4839-ad74-f68d4b1aa0f9
-ms.openlocfilehash: 34ad4b8534d082d7f5248d42d70ca5bd0647a5dc
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 2376a0ec25539b97a37b1827e3e4c148eb8d5838
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49454317"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610773"
 ---
 # <a name="httptransportbindingelement"></a>HttpTransportBindingElement
 HttpTransportBindingElement  
@@ -41,84 +41,84 @@ class HttpTransportBindingElement : TransportBindingElement
 ### <a name="allowcookies"></a>AllowCookies  
  Tipo di dati: booleano  
   
- Tipo di accesso: sola lettura  
+ Tipo di accesso: Sola lettura  
   
  Valore che indica se il client accetta cookie e li propaga alle richieste future.  
   
 ### <a name="authenticationscheme"></a>AuthenticationScheme  
  Tipo di dati: stringa  
   
- Tipo di accesso: sola lettura  
+ Tipo di accesso: Sola lettura  
   
  Schema di autenticazione utilizzato per autenticare le richieste del client da elaborare mediante un listener HTTP.  
   
 ### <a name="bypassproxyonlocal"></a>BypassProxyOnLocal  
  Tipo di dati: booleano  
   
- Tipo di accesso: sola lettura  
+ Tipo di accesso: Sola lettura  
   
  Valore che indica se i proxy vengono ignorati per gli indirizzi locali.  
   
 ### <a name="hostnamecomparisonmode"></a>HostnameComparisonMode  
  Tipo di dati: stringa  
   
- Tipo di accesso: sola lettura  
+ Tipo di accesso: Sola lettura  
   
  Valore che indica se viene usato il nome host per raggiungere il servizio in caso di corrispondenza dell'URI.  
   
 ### <a name="keepaliveenabled"></a>KeepAliveEnabled  
  Tipo di dati: booleano  
   
- Tipo di accesso: sola lettura  
+ Tipo di accesso: Sola lettura  
   
  Se attivato, le connessioni HTTP vengono mantenute attive indipendentemente dal livello di attività.  
   
 ### <a name="maxbuffersize"></a>MaxBufferSize  
  Tipo di dati: sint32  
   
- Tipo di accesso: sola lettura  
+ Tipo di accesso: Sola lettura  
   
  Dimensione massima del pool di buffer.  
   
 ### <a name="proxyaddress"></a>ProxyAddress  
  Tipo di dati: stringa  
   
- Tipo di accesso: sola lettura  
+ Tipo di accesso: Sola lettura  
   
  URI contenente l'indirizzo del proxy da utilizzare per le richieste HTTP.  
   
 ### <a name="proxyauthenticationscheme"></a>ProxyAuthenticationScheme  
  Tipo di dati: stringa  
   
- Tipo di accesso: sola lettura  
+ Tipo di accesso: Sola lettura  
   
  Schema di autenticazione utilizzato per autenticare le richieste del client da elaborare mediante un listener HTTP.  
   
 ### <a name="realm"></a>Realm  
  Tipo di dati: stringa  
   
- Tipo di accesso: sola lettura  
+ Tipo di accesso: Sola lettura  
   
  Area di autenticazione.  
   
 ### <a name="transfermode"></a>TransferMode  
  Tipo di dati: stringa  
   
- Tipo di accesso: sola lettura  
+ Tipo di accesso: Sola lettura  
   
  Valore che specifica se i messaggi vengono memorizzati nel buffer o trasmessi in caso di richiesta o risposta.  
   
 ### <a name="unsafeconnectionntlmauthentication"></a>UnsafeConnectionNtlmAuthentication  
  Tipo di dati: booleano  
   
- Tipo di accesso: sola lettura  
+ Tipo di accesso: Sola lettura  
   
  Valore che indica se sul server è attivata la condivisione di connessioni non sicure.  
   
 ### <a name="usedefaultwebproxy"></a>UseDefaultWebProxy  
  Tipo di dati: booleano  
   
- Tipo di accesso: sola lettura  
+ Tipo di accesso: Sola lettura  
   
  Valore che indica se vengono utilizzate impostazioni proxy a livello di computer invece delle specifiche impostazioni utente.  
   
@@ -128,5 +128,5 @@ class HttpTransportBindingElement : TransportBindingElement
 |---------|-----------------------------------|  
 |Spazio dei nomi|Definito in root\ServiceModel|  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>
+## <a name="see-also"></a>Vedere anche
+- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>

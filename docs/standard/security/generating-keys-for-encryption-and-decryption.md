@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c197dfc9-a453-4226-898d-37a16638056e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 349324cabc999bac3bd0c247d3614dfc503b8b61
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 32f9a5f92ae580839ce46476de9f9c7edcd54685
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153527"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573400"
 ---
 # <a name="generating-keys-for-encryption-and-decryption"></a>Generazione di chiavi per crittografia e decrittografia
 La creazione e la gestione di chiavi sono due momenti importanti del processo di crittografia. Per gli algoritmi simmetrici è richiesta la creazione di una chiave e un vettore di inizializzazione (IV). La chiave deve rimanere segreta per chiunque non debba decrittografare i dati. Il vettore di inizializzazione non deve rimanere segreto, ma dovrebbe essere modificato per ogni sessione. Gli algoritmi asimmetrici richiedono la creazione di una chiave pubblica e di una chiave privata. La chiave pubblica può essere resa pubblica a chiunque, mentre quella privata deve essere nota solo alla parte che decrittograferà i dati crittografati con la chiave pubblica. Questa sezione descrive come generare e gestire chiavi sia per gli algoritmi simmetrici che per quelli asimmetrici.  
@@ -90,7 +90,7 @@ RSAParameters RSAKeyInfo = RSA.ExportParameters(false);
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Crittografia di dati](../../../docs/standard/security/encrypting-data.md)  
-- [Decrittografia di dati](../../../docs/standard/security/decrypting-data.md)  
-- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)  
-- [Come si fa: Store Asymmetric Keys in a un contenitore di chiavi](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md)
+- [Crittografia di dati](../../../docs/standard/security/encrypting-data.md)
+- [Decrittografia di dati](../../../docs/standard/security/decrypting-data.md)
+- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+- [Procedura: Store Asymmetric Keys in a un contenitore di chiavi](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md)

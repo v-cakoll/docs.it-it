@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - BC42324
 ms.assetid: b5c2c4bd-3b2a-4a73-aaeb-55728eb03b68
-ms.openlocfilehash: 7144a5fd4a197fddaf1ac4132df0ff70995ad067
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 358c7a988ae95c2326a26bc048f5436e11acb340
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33594162"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54641590"
 ---
 # <a name="using-the-iteration-variable-in-a-lambda-expression-may-have-unexpected-results"></a>L'utilizzo della variabile di iterazione in un'espressione lambda può produrre risultati imprevisti
-Utilizzo della variabile di iterazione in un'espressione lambda può produrre risultati imprevisti. In alternativa, creare una variabile locale all'interno del ciclo e assegnarvi il valore della variabile di iterazione.  
+Uso della variabile di iterazione in un'espressione lambda può produrre risultati imprevisti. In alternativa, creare una variabile locale all'interno del ciclo e assegnare il valore della variabile di iterazione.  
   
- Questo avviso viene visualizzato quando si utilizza una variabile di iterazione del ciclo in un'espressione lambda dichiarata all'interno del ciclo. Ad esempio, l'esempio seguente genera l'avviso venga visualizzato.  
+ Questo avviso viene visualizzato quando si usa una variabile di iterazione del ciclo in un'espressione lambda dichiarata all'interno del ciclo. Ad esempio, l'esempio seguente genera l'avviso venga visualizzato.  
   
 ```vb  
 For i As Integer = 1 To 10  
@@ -45,7 +45,7 @@ Module Module1
 End Module  
 ```  
   
- Il `For` ciclo crea una matrice di espressioni lambda, ognuna delle quali restituisce il valore della variabile di iterazione del ciclo `i`. Quando le espressioni lambda vengono valutate nel `For Each` ciclo, potrebbe essere previsti 0, 1, 2, 3 e 4, i valori successivi di `i` nel `For` ciclo. Vedere invece il valore finale di `i` per cinque volte:  
+ Il `For` ciclo crea una matrice di espressioni lambda, ognuna delle quali restituisce il valore della variabile di iterazione del ciclo `i`. Quando vengono valutate le espressioni lambda nel `For Each` ciclo, si aspetterebbe di vedere 0, 1, 2, 3 e 4, i valori successivi di `i` nel `For` ciclo. Vedere invece il valore finale della `i` visualizzate cinque volte:  
   
  `5`  
   
@@ -57,13 +57,13 @@ End Module
   
  `5`  
   
- Per impostazione predefinita, si tratta di un messaggio di avviso. Per ulteriori informazioni su come nascondere gli avvisi o considerarli come errori, vedere [configurazione degli avvisi in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
+ Per impostazione predefinita, si tratta di un messaggio di avviso. Per altre informazioni su come nascondere gli avvisi o considerarli come errori, vedere [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
  **ID errore:** BC42324  
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
--   Assegnare il valore della variabile di iterazione a una variabile locale e utilizzare la variabile locale nell'espressione lambda.  
+-   Assegnare il valore della variabile di iterazione a una variabile locale e usare la variabile locale nell'espressione lambda.  
   
 ```vb  
 Module Module1  
@@ -83,5 +83,5 @@ Module Module1
 End Module  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Espressioni lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
+## <a name="see-also"></a>Vedere anche
+- [Espressioni lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)

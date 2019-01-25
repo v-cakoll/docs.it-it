@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 427d93a9aff527d36720c4199782fa104a66f8d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6bfa846aa66345e23e085ca148c7e3f492c529f4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33455033"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576343"
 ---
 # <a name="gethashfromblob-function"></a>Funzione GetHashFromBlob
-Ottiene un hash dell'assembly nell'indirizzo di memoria specificata, utilizzando l'algoritmo hash specificato.  
+Ottiene un hash dell'assembly all'indirizzo di memoria specificato usando l'algoritmo hash specificato.  
   
- Questa funzione è stata deprecata. Utilizzare il [ICLRStronName:: GetHashFromBlob](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromblob-method.md) metodo invece.  
+ Questa funzione è stata deprecata. Usare la [ICLRStronName:: GetHashFromBlob](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromblob-method.md) metodo invece.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -49,7 +49,7 @@ HRESULT GetHashFromBlob (
  [in] La lunghezza, espressa in byte, del blocco di memoria.  
   
  `piHashAlg`  
- [in, out] Costante che specifica l'algoritmo hash. Utilizzare zero per l'algoritmo predefinito.  
+ [in, out] Costante che specifica l'algoritmo hash. Usa lo zero per l'algoritmo predefinito.  
   
  `pbHash`  
  [out] Il buffer di hash restituito.  
@@ -58,17 +58,17 @@ HRESULT GetHashFromBlob (
  [in] La dimensione massima richiesta del `pbHash`.  
   
  `pchHash`  
- [out] Le dimensioni, in byte, dell'oggetto restituito `pbHash`.  
+ [out] Le dimensioni, in byte, del valore restituito `pbHash`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** StrongName. H  
+ **Intestazione:** StrongName.h  
   
- **Libreria:** inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Metodo GetHashFromBlob](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromblob-method.md)  
- [Interfaccia ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Metodo GetHashFromBlob](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromblob-method.md)
+- [Interfaccia ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

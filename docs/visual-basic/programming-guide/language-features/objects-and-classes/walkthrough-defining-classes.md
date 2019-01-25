@@ -15,14 +15,14 @@ helpviewer_keywords:
 - Terminate event [Visual Basic]
 - execution [Visual Basic], stopping
 ms.assetid: 07018828-2d49-4cf5-a44b-19fb15d9efea
-ms.openlocfilehash: aac30a8b0272ae6c141138a91585953237ab8098
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: c41d3b2c8d905395f1249b15709da8dbdf5d4632
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43403542"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54640433"
 ---
-# <a name="walkthrough-defining-classes-visual-basic"></a>Procedura dettagliata: definizione delle classi (Visual Basic)
+# <a name="walkthrough-defining-classes-visual-basic"></a>Procedura dettagliata: Definizione di classi (Visual Basic)
 
 Questa procedura dettagliata viene illustrato come definire le classi, che è quindi possibile usare per creare oggetti. Inoltre viene illustrato come aggiungere proprietà e metodi per la nuova classe e viene illustrato come inizializzare un oggetto.  
   
@@ -77,9 +77,9 @@ Questa procedura dettagliata viene illustrato come definire le classi, che è qu
   
 1.  Eseguire l'applicazione premendo F5. Fare clic sul pulsante sul form per chiamare la routine di test. Viene visualizzato un messaggio che informa che l'originale `UserName` è "MOORE, BOBBY", perché la procedura chiamata il `Capitalize` metodo dell'oggetto.  
   
-2.  Fare clic su **OK** per chiudere la finestra di messaggio. Il `Button1 Click` procedure modifica il valore della `UserName` proprietà e viene visualizzato un messaggio indicante che il nuovo valore di `UserName` è "Worden, Joe".  
+2.  Fare clic su **OK** per chiudere la finestra del messaggio. Il `Button1 Click` procedure modifica il valore della `UserName` proprietà e viene visualizzato un messaggio indicante che il nuovo valore di `UserName` è "Worden, Joe".  
   
 ## <a name="see-also"></a>Vedere anche
 
-[Programmazione orientata a oggetti (Visual Basic)](../../concepts/object-oriented-programming.md)  
-[Oggetti e classi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+- [Programmazione orientata a oggetti (Visual Basic)](../../concepts/object-oriented-programming.md)
+- [Oggetti e classi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

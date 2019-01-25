@@ -10,15 +10,15 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Subclass attribute
 - Subclass attribute in XAML [XAML Services]
 ms.assetid: 99f66072-8107-4362-ab99-8171dc83b469
-ms.openlocfilehash: b04982ff0b7685b4e4b809255e3bbe541b42cb9e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 67d699782cd2ce2b13e159d2b7218b4868a8794c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566418"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54670927"
 ---
 # <a name="xsubclass-directive"></a>Direttiva x:Subclass
-Modifica il comportamento di compilazione markup XAML quando `x:Class` viene inoltre fornita. Anziché creare una classe parziale che si basa sul `x:Class`, forniti `x:Class` viene creata come una classe intermedia, e quindi la classe derivata è previsto che sia basata su `x:Class`.  
+Modifica il comportamento di compilazione XAML markup quando `x:Class` viene anche fornito. Anziché creare una classe parziale che si basa sul `x:Class`, l'oggetto fornito `x:Class` viene creata come una classe intermedia, e quindi è previsto che la classe derivata specificata in base a `x:Class`.  
   
 ## <a name="xaml-attribute-usage"></a>Uso della sintassi XAML per gli attributi  
   
@@ -32,30 +32,30 @@ Modifica il comportamento di compilazione markup XAML quando `x:Class` viene ino
   
 |||  
 |-|-|  
-|`namespace`|Facoltativo. Specifica uno spazio dei nomi CLR che contiene `classname`. Se `namespace` è specificato, un punto (.) separa `namespace` e `classname`.|  
-|`classname`|Obbligatorio. Specifica il nome CLR della classe parziale che connette il codice XAML caricato e il code-behind per tale codice XAML. Vedere la sezione Osservazioni.|  
-|`subclassNamespace`|Facoltativo. Può essere diverso da `namespace` se ogni spazio dei nomi è possibile risolvere l'altro. Specifica uno spazio dei nomi CLR che contiene `subclassName`. Se `subclassName` è specificato, un punto (.) separa `subclassNamespace` e `subclassName`.|  
+|`namespace`|Facoltativo. Specifica uno spazio dei nomi CLR contenente `classname`. Se `namespace` viene specificato, un punto (.) separa `namespace` e `classname`.|  
+|`classname`|Obbligatorio. Specifica il nome CLR della classe parziale che si connette il caricamento XAML e il code-behind per tale XAML. Vedere la sezione Osservazioni.|  
+|`subclassNamespace`|Facoltativo. Può essere diversa dalla `namespace` se ogni spazio dei nomi può risolvere l'altra. Specifica uno spazio dei nomi CLR contenente `subclassName`. Se `subclassName` viene specificato, un punto (.) separa `subclassNamespace` e `subclassName`.|  
 |`subclassName`|Obbligatorio. Specifica il nome CLR della sottoclasse.|  
   
 ## <a name="dependencies"></a>Dipendenze  
- [Direttiva X:Class](../../../docs/framework/xaml-services/x-class-directive.md) necessario fornire anche sullo stesso oggetto, che deve essere l'elemento radice della produzione XAML.  
+ [Direttiva X:Class](../../../docs/framework/xaml-services/x-class-directive.md) deve anche essere specificato nello stesso oggetto, che deve essere l'elemento radice della produzione XAML.  
   
 ## <a name="remarks"></a>Note  
- `x:Subclass` utilizzo è destinato principalmente per le lingue che non supportano le dichiarazioni di classe parziale.  
+ `x:Subclass` utilizzo è destinato principalmente in linguaggi che non supportano le dichiarazioni di classe parziale.  
   
- La classe utilizzata come il `x:Subclass` non può essere una classe annidata, e `x:Subclass` deve fare riferimento all'oggetto radice, come illustrato nella sezione "Dipendenze".  
+ La classe utilizzata come le `x:Subclass` non può essere una classe annidata, e `x:Subclass` deve fare riferimento all'oggetto radice, come illustrato nella sezione "Dipendenze".  
   
- In caso contrario, il significato concettuale di `x:Subclass` non è definita da un'implementazione di servizi XAML di .NET Framework. In questo modo il comportamento di servizi XAML di .NET Framework non specifica il modello di programmazione generale mediante XAML markup e il codice di supporto sono connessi. Le implementazioni di ulteriormente i concetti relativi a `x:Class` e `x:Subclass` vengono eseguite da framework specifici che utilizzano modelli di programmazione o applicazione per definire come connettere markup XAML, markup compilato e codice basato su CLR. Ogni framework potrebbe disporre di operazioni di compilazione che abilitano alcuni comportamenti o componenti specifici che devono essere inclusi nell'ambiente di compilazione. All'interno di un framework di azioni di compilazione possono inoltre variare in base al linguaggio CLR specifico utilizzato per il code-behind.  
+ In caso contrario, il significato di concettuale `x:Subclass` non è definito da un'implementazione di servizi XAML di .NET Framework. Questo avviene perché il comportamento dei servizi XAML di .NET Framework non specifica il modello di programmazione generale da cui XAML markup e il codice di supporto sono connessi. Le implementazioni di ulteriormente i concetti correlati a `x:Class` e `x:Subclass` vengono eseguite dal framework specifici che utilizzano modelli di programmazione o i modelli di applicazione per definire la modalità di connessione di markup XAML compilato markup e code-behind basati su CLR. Ogni framework potrebbe essere operazioni di compilazione che consentono alcuni dei comportamenti o componenti specifici che devono essere inclusi nell'ambiente di compilazione. All'interno di un framework, le azioni di compilazione possono variare anche in base al linguaggio specifico di CLR che viene usato per il code-behind.  
   
 ## <a name="wpf-usage-notes"></a>Note sull'utilizzo WPF  
- `x:Subclass` può essere in una radice della pagina o nel database di <xref:System.Windows.Application> radice nella definizione dell'applicazione, che dispone già di `x:Class`. Dichiarazione di `x:Subclass` su qualsiasi elemento diverso da una radice di un'applicazione o pagina o specificarla in cui non `x:Class` esiste, genera un errore in fase di compilazione.  
+ `x:Subclass` può essere in una radice della pagina o nel database di <xref:System.Windows.Application> radice nella definizione di applicazione, che ha già `x:Class`. La dichiarazione `x:Subclass` su qualsiasi elemento diverso da una radice di pagina o un'applicazione o la specifica, in cui non `x:Class` esiste, provoca un errore in fase di compilazione.  
   
- Creazione di derivata classi che funzionano correttamente per il `x:Subclass` scenario è abbastanza complesso. Potrebbe essere necessario esaminare i file intermedi (vale a dire i file g prodotti nella cartella obj del progetto dalla compilazione del markup, con nomi che includono i nomi dei file con estensione XAML). Questi file intermedi consentono di determinare l'origine di determinati costrutti di programmazione in classi parziali associate nell'applicazione compilata.  
+ Creazione di derivate le classi che funzionano correttamente per il `x:Subclass` scenario è piuttosto complesso. Potrebbe essere necessario esaminare i file intermedi (i file g nella cartella obj del progetto generati dalla compilazione del markup, con nomi che includono i nomi dei file con estensione XAML). Questi file intermedi consente di determinare l'origine di determinati costrutti di programmazione in classi parziali unite nell'applicazione compilata.  
   
- Gestori di eventi nella classe derivata devono essere `internal override` (`Friend Overrides` in Microsoft Visual Basic) per eseguire l'override gli stub per i gestori creati nella classe intermedia durante la compilazione. In caso contrario, le implementazioni della classe derivata nascondono l'implementazione della classe intermedi e non vengono richiamati i gestori di classe intermedia.  
+ I gestori di eventi nella classe derivata devono essere `internal override` (`Friend Overrides` in Microsoft Visual Basic) per eseguire l'override gli stub per i gestori nella classe intermedia creati durante la compilazione. In caso contrario, le implementazioni della classe derivata nascondono (ombreggiatura molto sfumata) dell'implementazione della classe intermedi e non vengono richiamati i gestori classi intermedia.  
   
- Quando si definiscono gli oggetti `x:Class` e `x:Subclass`, non è necessario fornire alcuna implementazione per la classe a cui fa riferimento `x:Class`. È necessario assegnargli un nome tramite il `x:Class` attributo in modo che il compilatore dispone di alcune indicazioni per la classe che viene creato il file intermedio (il compilatore non seleziona un nome predefinito in questo caso). È possibile assegnare il `x:Class` un'implementazione della classe; tuttavia, non si tratta di uno scenario tipico per l'utilizzo di entrambi `x:Class` e `x:Subclass`.  
+ Quando si definiscono entrambi `x:Class` e `x:Subclass`, non è necessario fornire qualsiasi implementazione della classe che fa riferimento `x:Class`. È sufficiente assegnarle un nome tramite la `x:Class` attributo in modo che il compilatore contiene alcune indicazioni per la classe che crea i file intermedi (il compilatore non seleziona un nome predefinito in questo caso). È possibile assegnare il `x:Class` un'implementazione della classe; tuttavia, ciò non lo scenario tipico per l'utilizzo di entrambe `x:Class` e `x:Subclass`.  
   
-## <a name="see-also"></a>Vedere anche  
- [Direttiva x:Class](../../../docs/framework/xaml-services/x-class-directive.md)  
- [Classi XAML e personalizzate per WPF](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)
+## <a name="see-also"></a>Vedere anche
+- [Direttiva x:Class](../../../docs/framework/xaml-services/x-class-directive.md)
+- [Classi XAML e personalizzate per WPF](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)

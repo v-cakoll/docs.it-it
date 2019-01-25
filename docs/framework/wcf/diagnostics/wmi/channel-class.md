@@ -2,12 +2,12 @@
 title: Classe Channel
 ms.date: 03/30/2017
 ms.assetid: d9fae2ca-209c-4341-a0f5-6b79d1a67776
-ms.openlocfilehash: 108d5f8e3cd092863dbd48e2bb9d180798b091a4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 3fbf398cca7ae9adbbecb9439bf3cbd32eb03969
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197873"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54668392"
 ---
 # <a name="channel-class"></a>Classe Channel
 Canale  
@@ -34,35 +34,35 @@ class Channel
 ### <a name="localaddress"></a>LocalAddress  
  Tipo di dati: stringa  
   
- Tipo di accesso: sola lettura  
+ Tipo di accesso: Sola lettura  
   
  Endpoint locale del canale.  
   
 ### <a name="ref"></a>ref  
- Tipo di dati: endpoint  
+ Tipo di dati: Endpoint  
   
- Tipo di accesso: sola lettura  
+ Tipo di accesso: Sola lettura  
   
  Riferimento all'endpoint a cui si connette il canale.  
   
 ### <a name="remoteaddress"></a>RemoteAddress  
  Tipo di dati: stringa  
   
- Tipo di accesso: sola lettura  
+ Tipo di accesso: Sola lettura  
   
  Indirizzo remoto associato al canale.  
   
 ### <a name="sessionid"></a>SessionId  
  Tipo di dati: stringa  
   
- Tipo di accesso: sola lettura  
+ Tipo di accesso: Sola lettura  
   
  ID della sessione corrente, se presente.  
   
 ### <a name="type"></a>Tipo  
  Tipo di dati: stringa  
   
- Tipo di accesso: sola lettura  
+ Tipo di accesso: Sola lettura  
   
  Tipo del canale.  
   
@@ -72,5 +72,5 @@ class Channel
 |---------|-----------------------------------|  
 |Spazio dei nomi|Definito in root\ServiceModel|  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.Channels.ChannelBase>
+## <a name="see-also"></a>Vedere anche
+- <xref:System.ServiceModel.Channels.ChannelBase>

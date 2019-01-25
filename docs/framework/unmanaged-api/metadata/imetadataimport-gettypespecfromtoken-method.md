@@ -17,11 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 54c35f4f7a7f933bbc06a641d9ba00c5059b5ff9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 53d0f3bd991d502e4ddcad7df1e24d18af367e7a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54598394"
 ---
 # <a name="imetadataimportgettypespecfromtoken-method"></a>Metodo IMetaDataImport::GetTypeSpecFromToken
 Ottiene la firma binaria dei metadati della specifica del tipo rappresentata dal token indicato.  
@@ -44,20 +45,20 @@ HRESULT GetTypeSpecFromToken (
  [out] Un puntatore per la firma binaria dei metadati.  
   
  `pcbSig`  
- [out] Le dimensioni in byte, della firma dei metadati.  
+ [out] Le dimensioni, in byte, della firma dei metadati.  
   
 ## <a name="return-value"></a>Valore restituito  
- Un valore HRESULT che indica l'esito positivo o negativo. Gli errori possono essere verificati con la macro FAILED.  
+ HRESULT che indica l'esito positivo o negativo. Gli errori possono essere testati con la macro FAILED.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
- **Libreria:** inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [Interfaccia IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Interfaccia IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

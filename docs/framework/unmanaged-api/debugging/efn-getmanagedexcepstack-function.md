@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 44f3604e3c12cd4b9781876d2d412d942353061e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1c1c05918965e40801757462ce53257bc36a5d8c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404154"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587713"
 ---
 # <a name="efngetmanagedexcepstack-function"></a>Funzione _EFN_GetManagedExcepStack
 Restituisce una versione stringa della traccia dello stack contenuta internamente, dato l'indirizzo di un oggetto eccezione gestita.  
@@ -39,7 +39,7 @@ HRESULT _EFN_GetManagedExcepStack(
   
 #### <a name="parameters"></a>Parametri  
  `Client`  
- [in] Il client è in corso il debug.  
+ [in] Il client in fase di debug.  
   
  `StackObjAddr`  
  [in] Puntatore a un oggetto gestito, derivato da <xref:System.Exception>.  
@@ -51,14 +51,14 @@ HRESULT _EFN_GetManagedExcepStack(
  [out] Il numero di caratteri disponibili nel buffer di stringa.  
   
 ## <a name="remarks"></a>Note  
- Se non è presente nessun codice gestito sul thread attualmente in contesto, la funzione restituisce HRESULT SOS_E_NOMANAGEDCODE con un valore funzionalità 0xa0 e un codice di errore di 0x1000.  
+ Se non vi è nessun codice gestito sul thread attualmente nel contesto, la funzione restituisce HRESULT SOS_E_NOMANAGEDCODE con un valore di impianto pari a 0xa0 e un codice di errore di 0x1000.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** SOS_Stacktrace. h  
+ **Intestazione:** SOS_Stacktrace.h  
   
  **Versione di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Funzioni statiche globali di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+## <a name="see-also"></a>Vedere anche
+- [Funzioni statiche globali di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)

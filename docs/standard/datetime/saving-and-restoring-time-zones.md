@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4028b310-e7ce-49d4-a646-1e83bfaf6f9d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1dc983f1f0b2405f207d69c62b800ee854fcd409
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 9d783f9e0d098e472dcf67aea394804d6eef2662
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44081768"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569460"
 ---
 # <a name="saving-and-restoring-time-zones"></a>Salvataggio e ripristino dei fusi orari
 
@@ -72,8 +72,8 @@ Negli esempi precedenti sono archiviate informazioni sul fuso orario a una varia
 
 Archiviazione di una stringa serializzata fuso orario in questo modo anche separa le routine di creazione del fuso orario dall'applicazione stessa. Ad esempio, una routine di creazione del fuso orario può eseguire e creare un file di dati che contiene informazioni cronologiche fuso orario che un'applicazione può usare. Il file di dati può essere quindi essere installato con l'applicazione e può essere aperto e uno o più dei fusi orari può essere deserializzato quando l'applicazione lo richiede.
 
-Per un esempio che usa una risorsa incorporata per archiviare dati serializzati del fuso orario, vedere [procedura: salvare fusi orari in una risorsa incorporata](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md) e [procedura: ripristinare fusi orari da una risorsa incorporata](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md).
+Per un esempio che usa una risorsa incorporata per archiviare dati serializzati del fuso orario, vedere [come: Salvare fusi orari in una risorsa incorporata](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md) e [come: Ripristinare i fusi orari da una risorsa incorporata](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-* [Date, ore e fusi orari](../../../docs/standard/datetime/index.md)
+- [Date, ore e fusi orari](../../../docs/standard/datetime/index.md)

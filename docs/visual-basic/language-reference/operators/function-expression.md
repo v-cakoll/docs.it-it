@@ -6,12 +6,12 @@ helpviewer_keywords:
 - functions [Visual Basic], function expressions
 - lambda expressions [Visual Basic], function expression
 ms.assetid: e8a47a45-4b8a-4f45-a623-7653625dffbc
-ms.openlocfilehash: cfdd17f6f4ee6c4ddb3fa73ab3ec9c5ce46a162f
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: b83bee06a3a001fd362a217907e783cb7ad293ca
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46702998"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54648107"
 ---
 # <a name="function-expression-visual-basic"></a>Espressione di funzione (Visual Basic)
 Dichiara i parametri e il codice che definiscono un'espressione lambda function.  
@@ -87,12 +87,12 @@ Dim londonCusts = db.Customers.
   
  Per altre informazioni sui metodi di query, vedere [query](../../../visual-basic/language-reference/queries/index.md). Per altre informazioni sugli operatori di query standard, vedere [panoramica degli operatori Query Standard](../../programming-guide/concepts/linq/standard-query-operators-overview.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Istruzione Function](../../../visual-basic/language-reference/statements/function-statement.md)  
- [Espressioni lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)  
- [Operatori ed espressioni](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)  
- [Istruzioni](../../../visual-basic/programming-guide/language-features/statements.md)  
- [Confronto di valori](../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)  
- [Espressioni booleane](../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md)  
- [Operatore If](../../../visual-basic/language-reference/operators/if-operator.md)  
- [Conversione di tipo relaxed del delegato](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
+## <a name="see-also"></a>Vedere anche
+- [Istruzione Function](../../../visual-basic/language-reference/statements/function-statement.md)
+- [Espressioni lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
+- [Operatori ed espressioni](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+- [Istruzioni](../../../visual-basic/programming-guide/language-features/statements.md)
+- [Confronto di valori](../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)
+- [Espressioni booleane](../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md)
+- [Operatore If](../../../visual-basic/language-reference/operators/if-operator.md)
+- [Conversione di tipo relaxed del delegato](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)

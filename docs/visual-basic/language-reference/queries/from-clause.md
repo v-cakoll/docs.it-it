@@ -10,12 +10,12 @@ helpviewer_keywords:
 - From clause [Visual Basic]
 - From statement [Visual Basic]
 ms.assetid: 83e3665e-68a0-4540-a3a3-3d777a0f95d5
-ms.openlocfilehash: 71573de48cc51c48291fc4b82a0628d2d0f96caa
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: fd11d00ebfa42eda272db39965d25b905bd5c841
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44198244"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54678785"
 ---
 # <a name="from-clause-visual-basic"></a>Clausola From (Visual Basic)
 Specifica uno o più variabili di intervallo e una raccolta di query.  
@@ -69,20 +69,20 @@ From element [ As type ] In collection [ _ ]
   
  [!code-vb[VbSimpleQuerySamples#23](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/from-clause_3.vb)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Query](../../../visual-basic/language-reference/queries/index.md)  
- [Introduzione a LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [Istruzione For Each...Next](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
- [Istruzione For...Next](../../../visual-basic/language-reference/statements/for-next-statement.md)  
- [Clausola Select](../../../visual-basic/language-reference/queries/select-clause.md)  
- [Clausola Where](../../../visual-basic/language-reference/queries/where-clause.md)  
- [Clausola Aggregate](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
- [Clausola Distinct](../../../visual-basic/language-reference/queries/distinct-clause.md)  
- [Clausola Join](../../../visual-basic/language-reference/queries/join-clause.md)  
- [Clausola Group Join](../../../visual-basic/language-reference/queries/group-join-clause.md)  
- [Clausola Order By](../../../visual-basic/language-reference/queries/order-by-clause.md)  
- [Clausola Let](../../../visual-basic/language-reference/queries/let-clause.md)  
- [Clausola Skip](../../../visual-basic/language-reference/queries/skip-clause.md)  
- [Clausola Take](../../../visual-basic/language-reference/queries/take-clause.md)  
- [Clausola Skip While](../../../visual-basic/language-reference/queries/skip-while-clause.md)  
- [Clausola Take While](../../../visual-basic/language-reference/queries/take-while-clause.md)
+## <a name="see-also"></a>Vedere anche
+- [Query](../../../visual-basic/language-reference/queries/index.md)
+- [Introduzione a LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Istruzione For Each...Next](../../../visual-basic/language-reference/statements/for-each-next-statement.md)
+- [Istruzione For...Next](../../../visual-basic/language-reference/statements/for-next-statement.md)
+- [Clausola Select](../../../visual-basic/language-reference/queries/select-clause.md)
+- [Clausola Where](../../../visual-basic/language-reference/queries/where-clause.md)
+- [Clausola Aggregate](../../../visual-basic/language-reference/queries/aggregate-clause.md)
+- [Clausola Distinct](../../../visual-basic/language-reference/queries/distinct-clause.md)
+- [Clausola Join](../../../visual-basic/language-reference/queries/join-clause.md)
+- [Clausola Group Join](../../../visual-basic/language-reference/queries/group-join-clause.md)
+- [Clausola Order By](../../../visual-basic/language-reference/queries/order-by-clause.md)
+- [Clausola Let](../../../visual-basic/language-reference/queries/let-clause.md)
+- [Clausola Skip](../../../visual-basic/language-reference/queries/skip-clause.md)
+- [Clausola Take](../../../visual-basic/language-reference/queries/take-clause.md)
+- [Clausola Skip While](../../../visual-basic/language-reference/queries/skip-while-clause.md)
+- [Clausola Take While](../../../visual-basic/language-reference/queries/take-while-clause.md)

@@ -1,22 +1,22 @@
 ---
-title: 'Procedura: dichiarare una variabile oggetto e assegnarle un oggetto in Visual Basic'
+title: 'Procedura: Dichiarare una variabile oggetto e assegnarle un oggetto in Visual Basic'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - object variables [Visual Basic], declaring
 - declaring object variables [Visual Basic]
 ms.assetid: 2fa77dde-1fb2-439a-80d4-3e9787649fad
-ms.openlocfilehash: 1f38c90f0571b3fc73c4c89812092cdada936d84
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 86037499b44d17f2ba83fd6cd0dad83ceb14e6b8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33648876"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730087"
 ---
-# <a name="how-to-declare-an-object-variable-and-assign-an-object-to-it-in-visual-basic"></a>Procedura: dichiarare una variabile oggetto e assegnarle un oggetto in Visual Basic
-Si dichiara una variabile del [tipo di dati Object](../../../../visual-basic/language-reference/data-types/object-data-type.md) specificando `As Object` in un [Dim (istruzione)](../../../../visual-basic/language-reference/statements/dim-statement.md). Assegnare un oggetto a tale variabile inserendo l'oggetto dopo il segno di uguale (`=`) in una clausola di istruzione o l'inizializzazione di assegnazione.  
+# <a name="how-to-declare-an-object-variable-and-assign-an-object-to-it-in-visual-basic"></a>Procedura: Dichiarare una variabile oggetto e assegnarle un oggetto in Visual Basic
+Si dichiara una variabile del [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md) specificando `As Object` in un [istruzione Dim](../../../../visual-basic/language-reference/statements/dim-statement.md). Si assegna un oggetto a tale variabile posizionando l'oggetto dopo il segno di uguale (`=`) in una clausola di istruzione o l'inizializzazione di assegnazione.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene dichiarato un `Object` variabile e assegna l'istanza corrente a esso.  
+ Nell'esempio seguente viene dichiarato un `Object` variabile e assegna a esso dell'istanza corrente.  
   
 ```  
       Dim thisObject As Object  
@@ -38,11 +38,11 @@ Dim thisObject As Object= "This is an Object"
   
 -   Una procedura in cui inserire l'istruzione di assegnazione.  
   
-## <a name="see-also"></a>Vedere anche  
- [Dichiarazione di variabile](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)  
- [Variabili oggetto](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)  
- [Dichiarazione di variabili oggetto](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)  
- [Tipo di dati Object](../../../../visual-basic/language-reference/data-types/object-data-type.md)  
- [Istruzione Dim](../../../../visual-basic/language-reference/statements/dim-statement.md)  
- [Inferenza del tipo di variabile locale](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
- [Istruzione Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
+## <a name="see-also"></a>Vedere anche
+- [Dichiarazione di variabile](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+- [Variabili oggetto](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
+- [Dichiarazione di variabili oggetto](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
+- [Tipo di dati Object](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Istruzione Dim](../../../../visual-basic/language-reference/statements/dim-statement.md)
+- [Inferenza del tipo di variabile locale](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [Istruzione Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)

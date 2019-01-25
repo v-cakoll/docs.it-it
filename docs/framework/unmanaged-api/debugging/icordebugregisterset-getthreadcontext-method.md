@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 632d3912bae28da22e701078bb47d2d8dbfd3644
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 668b3849af9be24e019dc472a0b80067f0e1e0c1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423403"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54612736"
 ---
 # <a name="icordebugregistersetgetthreadcontext-method"></a>Metodo ICorDebugRegisterSet::GetThreadContext
 Ottiene il contesto del thread corrente.  
@@ -42,22 +42,22 @@ HRESULT GetThreadContext(
  [in] Le dimensioni, in byte, del `context` matrice.  
   
  `context`  
- [in, out] Una matrice di byte che costituiscono Win32 `CONTEXT` struttura per la piattaforma corrente.  
+ [in, out] Una matrice di byte che compongono Win32 `CONTEXT` struttura per la piattaforma corrente.  
   
 ## <a name="remarks"></a>Note  
- Il debugger deve chiamare questa funzione anziché Win32 `GetThreadContext` funzione, perché il thread potrebbe essere in uno stato "fraudolente" il contesto in cui è cambiato temporaneamente. I dati restituiti sono Win32 `CONTEXT` struttura per la piattaforma corrente.  
+ Il debugger deve chiamare questa funzione anziché Win32 `GetThreadContext` funzionare, perché il thread potrebbe essere in uno stato "cui" in cui il contesto è stato modificato temporaneamente. I dati restituiti sono Win32 `CONTEXT` struttura per la piattaforma corrente.  
   
- Per il frame non foglia, i client devono controllare quali registri sono validi con [GetRegistersAvailable](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getregistersavailable-method.md).  
+ Per i frame foglia, i client devono controllare i registri che sono validi con [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getregistersavailable-method.md).  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)  
- [Interfaccia ICorDebugRegisterSet2](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)
+- [Interfaccia ICorDebugRegisterSet2](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)

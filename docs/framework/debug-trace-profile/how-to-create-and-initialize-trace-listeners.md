@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: creare e inizializzare listener di traccia'
+title: 'Procedura: Creare e inizializzare listener di traccia'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 21726de1-61ee-4fdc-9dd0-3be49324d066
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 943621b953fbe158b3be6ae0695ba7692b7c517f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ee0ad6b34e30b03ec42ff793e37d0e13b448cbfe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389200"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583103"
 ---
-# <a name="how-to-create-and-initialize-trace-listeners"></a>Procedura: creare e inizializzare listener di traccia
+# <a name="how-to-create-and-initialize-trace-listeners"></a>Procedura: Creare e inizializzare listener di traccia
 Le classi <xref:System.Diagnostics.Debug?displayProperty=nameWithType> e <xref:System.Diagnostics.Trace?displayProperty=nameWithType> inviano messaggi a oggetti detti listener, che li ricevono e li elaborano. Uno di questi listener, <xref:System.Diagnostics.DefaultTraceListener?displayProperty=nameWithType>, viene creato e inizializzato automaticamente quando si abilita la traccia o il debug. Se si vuole indirizzare l'output di <xref:System.Diagnostics.Trace> o <xref:System.Diagnostics.Debug> a origini aggiuntive, è necessario creare e inizializzare listener di traccia aggiuntivi.  
   
  I listener devono essere creati in base alle esigenze dell'applicazione. Se, ad esempio, si desidera un record di testo di tutti gli output di traccia, creare un listener <xref:System.Diagnostics.TextWriterTraceListener>, che, quando è abilitato, scrive tutto l'output in un nuovo file di testo. Se invece si vuole visualizzare l'output solo durante l'esecuzione dell'applicazione, creare un listener <xref:System.Diagnostics.ConsoleTraceListener>, che indirizza tutto l'output a una finestra della console. Il listener <xref:System.Diagnostics.EventLogTraceListener> è in grado di indirizzare l'output di traccia a un registro eventi. Per altre informazioni, vedere [Listener di traccia](../../../docs/framework/debug-trace-profile/trace-listeners.md).  
@@ -94,8 +94,8 @@ Le classi <xref:System.Diagnostics.Debug?displayProperty=nameWithType> e <xref:S
     myListener.Flush();  
     ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Listener di traccia](../../../docs/framework/debug-trace-profile/trace-listeners.md)  
- [Opzioni di traccia](../../../docs/framework/debug-trace-profile/trace-switches.md)  
- [Procedura: aggiungere istruzioni di traccia al codice dell'applicazione](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)  
- [Traccia e strumentazione di applicazioni](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+## <a name="see-also"></a>Vedere anche
+- [Listener di traccia](../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [Opzioni di traccia](../../../docs/framework/debug-trace-profile/trace-switches.md)
+- [Procedura: Aggiungere istruzioni di traccia al codice dell'applicazione](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [Traccia e strumentazione di applicazioni](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)

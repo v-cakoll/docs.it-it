@@ -1,5 +1,5 @@
 ---
-title: '&lt;generatePublisherEvidence&gt; elemento'
+title: '&lt;generatePublisherEvidence&gt; Element'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - generatePublisherEvidence element
@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 7d208f50-e8d5-4a42-bc1a-1cf3590706a8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3b2cd047367820d249272ca220669835975dbf2d
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 33d4c023b7a649fd2aa3d9d52a90bb7111c59743
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611165"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54683034"
 ---
-# <a name="ltgeneratepublisherevidencegt-element"></a>&lt;generatePublisherEvidence&gt; elemento
+# <a name="ltgeneratepublisherevidencegt-element"></a>&lt;generatePublisherEvidence&gt; Element
 Specifica se il runtime crea <xref:System.Security.Policy.Publisher> evidenza per la sicurezza dall'accesso di codice (CAS).  
   
  \<configuration>  
 \<runtime>  
-\<generatePublisherEvidence >  
+\<generatePublisherEvidence>  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -78,6 +78,6 @@ Specifica se il runtime crea <xref:System.Security.Policy.Publisher> evidenza pe
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
-- [Schema delle impostazioni di runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+## <a name="see-also"></a>Vedere anche
+- [Schema delle impostazioni di runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)

@@ -17,11 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 79f08109f1ad267c4898cc0789859b55f534d1b9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 245933b23028e2baf8a09ca07595f394b65c0ec3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698297"
 ---
 # <a name="imetadatatablesgetcolumninfo-method"></a>Metodo IMetaDataTables::GetColumnInfo
 Ottiene i dati relativi alla colonna specificata nella tabella specificata.  
@@ -41,16 +42,16 @@ HRESULT GetColumnInfo (
   
 #### <a name="parameters"></a>Parametri  
  `ixTbl`  
- [in] Indice della tabella desiderata.  
+ [in] L'indice della tabella desiderata.  
   
  `ixCol`  
- [in] Indice della colonna desiderato.  
+ [in] L'indice della colonna desiderata.  
   
  `poCol`  
  [out] Un puntatore all'offset della colonna nella riga.  
   
  `pcbCol`  
- [out] Puntatore alla dimensione, in byte, della colonna.  
+ [out] Un puntatore alla dimensione, espressa in byte, della colonna.  
   
  `pType`  
  [out] Un puntatore al tipo dei valori nella colonna.  
@@ -59,14 +60,14 @@ HRESULT GetColumnInfo (
  [out] Un puntatore a un puntatore al nome della colonna.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
- **Libreria:** usata come risorsa in Mscoree. dll  
+ **Libreria:** Usato come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia IMetaDataTables](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)  
- [Interfaccia IMetaDataTables2](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia IMetaDataTables](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [Interfaccia IMetaDataTables2](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

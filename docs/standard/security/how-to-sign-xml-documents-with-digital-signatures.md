@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: firmare documenti XML con firme digitali'
+title: 'Procedura: Firmare documenti XML con firme digitali'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 99692ac1-d8c9-42d7-b1bf-2737b01037e4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 361dfd8cc9264f86bfc94a150635d9891274c9ac
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 49999ae8b66b01ca71c0027bdf43c13272fbe8a4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664605"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54622624"
 ---
-# <a name="how-to-sign-xml-documents-with-digital-signatures"></a>Procedura: firmare documenti XML con firme digitali
+# <a name="how-to-sign-xml-documents-with-digital-signatures"></a>Procedura: Firmare documenti XML con firme digitali
 È possibile usare le classi dello spazio dei nomi <xref:System.Security.Cryptography.Xml> per firmare un documento XML o parte di esso con una firma digitale.  Le firme digitali XML (XMLDSIG) consentono di verificare che i dati non siano stati alterati dopo la firma.  Per altre informazioni sullo standard XMLDSIG, vedere la raccomandazione del World Wide Web Consortium (W3C) [XML Signature Syntax and Processing](https://www.w3.org/TR/xmldsig-core/).  
   
  L'esempio di codice in questa procedura illustra come firmare digitalmente un intero documento XML e allegare la firma al documento in un elemento <`Signature`>.  L'esempio crea una chiave di firma RSA, aggiunge la chiave a un contenitore di chiavi sicuro e usa quindi la chiave per firmare digitalmente un documento XML.  La chiave può successivamente essere recuperata per verificare la firma digitale XML oppure può essere usata per firmare un altro documento XML.  
   
- Per informazioni su come verificare una firma digitale XML creata mediante questa procedura, vedere [procedura: verificare le firme digitali dei documenti XML](../../../docs/standard/security/how-to-verify-the-digital-signatures-of-xml-documents.md).  
+ Per informazioni su come verificare una firma digitale XML creata mediante questa procedura, vedere [come: Verificare le firme digitali dei documenti XML](../../../docs/standard/security/how-to-verify-the-digital-signatures-of-xml-documents.md).  
   
 ### <a name="to-digitally-sign-an-xml-document"></a>Per firmare digitalmente un documento XML  
   
@@ -120,5 +120,5 @@ ms.locfileid: "45664605"
   
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.Security.Cryptography.Xml>  
+- <xref:System.Security.Cryptography.Xml>
 - [Procedura: Verificare le firme digitali dei documenti XML](../../../docs/standard/security/how-to-verify-the-digital-signatures-of-xml-documents.md)

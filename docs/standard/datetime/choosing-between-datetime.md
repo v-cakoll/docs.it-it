@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 07f17aad-3571-4014-9ef3-b695a86f3800
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 54392ce12ca93d3a7979b1d0bbc78132773f88ce
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 0ed41d7739822d531986d65faa820ab7100c6651
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44227714"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600115"
 ---
 # <a name="choosing-between-datetime-datetimeoffset-timespan-and-timezoneinfo"></a>Scelta tra DateTime, DateTimeOffset, TimeSpan e TimeZoneInfo
 
@@ -47,7 +47,7 @@ Le applicazioni .NET che usano informazioni su data e ora sono molto diversifica
 
 ## <a name="the-datetime-structure"></a>Struttura DateTime
 
-Un valore <xref:System.DateTime> definisce una data e un'ora specifiche. Include un <xref:System.DateTime.Kind%2A> proprietà che fornisce informazioni limitate sul fuso orario in cui tale data e ora a cui appartiene. Il <xref:System.DateTimeKind> valore restituito dal <xref:System.DateTime.Kind%2A> proprietà indica se il <xref:System.DateTime> valore rappresenta l'ora locale (<xref:System.DateTimeKind.Local?displayProperty=nameWithType>), Coordinated Universal Time (UTC) (<xref:System.DateTimeKind.Utc?displayProperty=nameWithType>), o un'ora non specificata (<xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>).
+Un valore <xref:System.DateTime> definisce una data e un'ora specifiche. Include un <xref:System.DateTime.Kind%2A> proprietà che fornisce informazioni limitate sul fuso orario in cui tale data e ora a cui appartiene. Il valore <xref:System.DateTimeKind> restituito dalla proprietà <xref:System.DateTime.Kind%2A> indica se il valore <xref:System.DateTime> rappresenta l'ora locale (<xref:System.DateTimeKind.Local?displayProperty=nameWithType>), l'ora UTC (Coordinated Universal Time) (<xref:System.DateTimeKind.Utc?displayProperty=nameWithType>) o un'ora non specificata (<xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>).
 
 La struttura <xref:System.DateTime> è adatta per le applicazioni che hanno le caratteristiche seguenti:
 
@@ -122,4 +122,4 @@ L'uso del supporto per i fusi orari in .NET è possibile solo se il fuso orario 
 
 ## <a name="see-also"></a>Vedere anche
 
-* [Date, ore e fusi orari](../../../docs/standard/datetime/index.md)
+- [Date, ore e fusi orari](../../../docs/standard/datetime/index.md)

@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: c4a942bb-2651-4b65-8718-809f892a0659
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 54ce0f75ddfbf9f3b62917aa67f4d97140bbdc42
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 78d9d769deefedef0c72b847c86e7b9fc175288c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153339"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54732674"
 ---
 # <a name="datetimeinvalidlocalformat-mda"></a>dateTimeInvalidLocalFormat (MDA)
 L'assistente al debug gestito `dateTimeInvalidLocalFormat` viene attivato quando per la formattazione di un'istanza di <xref:System.DateTime> archiviata in formato UTC (Universal Coordinated Time) viene usato un formato riservato alle istanze locali di <xref:System.DateTime>. Questo assistente non viene attivato per le istanze di <xref:System.DateTime> non specificate o predefinite.  
   
-## <a name="symptom"></a>Sintomi  
+## <a name="symptom"></a>Sintomo  
  Un'applicazione sta serializzando manualmente un'istanza di <xref:System.DateTime> in formato UTC usando un formato locale:  
   
 ```csharp
@@ -86,6 +86,6 @@ String serialized = XmlConvert.ToString(myDateTime,
     XmlDateTimeSerializationMode.RoundtripKind);  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Globalization.DateTimeFormatInfo>  
- [Diagnostica degli errori tramite gli assistenti al debug gestito](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Globalization.DateTimeFormatInfo>
+- [Diagnostica degli errori tramite gli assistenti al debug gestito](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

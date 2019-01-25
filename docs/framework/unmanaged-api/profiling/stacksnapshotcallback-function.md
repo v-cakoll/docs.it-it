@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 78fdcb69e73bc7238972d1a6ffb37b5ba91c7953
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5e73afa7ef33e12d6bc658c944c79ce1bc4f94f4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33459085"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572416"
 ---
 # <a name="stacksnapshotcallback-function"></a>Funzione StackSnapshotCallback
-Fornisce informazioni su ogni frame gestito e ogni esecuzione di frame non gestiti nello stack durante un'analisi dello stack, che viene avviata dal profiler di [ICorProfilerInfo2:: DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) metodo.  
+Fornisce informazioni su ogni frame gestito e ogni esecuzione dei frame non gestiti nello stack durante un'analisi dello stack, che viene avviata dal profiler il [ICorProfilerInfo2::DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) (metodo).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,19 +41,19 @@ HRESULT __stdcall StackSnapshotCallback (
   
 #### <a name="parameters"></a>Parametri  
  `funcId`  
- [in] Se questo valore è zero, il callback è per un'esecuzione di frame non gestiti. in caso contrario, è l'identificatore di una funzione gestita e il callback è per un frame gestito.  
+ [in] Se questo valore è zero, il callback è per un'esecuzione dei frame non gestite; in caso contrario, è l'identificatore di una funzione gestita e questa richiamata viene eseguita per un frame gestito.  
   
  `ip`  
- [in] Il valore del puntatore all'istruzione di codice nativo nel frame.  
+ [in] Il valore del puntatore dell'istruzione di codice nativo nel frame.  
   
  `frameInfo`  
- [in] Oggetto `COR_PRF_FRAME_INFO` valore che fa riferimento alle informazioni sullo stack frame. Questo valore è valido per essere utilizzato solo durante il callback.  
+ [in] Oggetto `COR_PRF_FRAME_INFO` valore cui fa riferimento alle informazioni sullo stack frame. Questo valore è valido per essere utilizzato solo durante il callback.  
   
  `contextSize`  
- [in] Le dimensioni del `CONTEXT` struttura, a cui fa riferimento il `context` parametro.  
+ [in] Le dimensioni dei `CONTEXT` struttura, a cui fa riferimento il `context` parametro.  
   
  `context`  
- [in] Un puntatore a un Win32 `CONTEXT` struttura che rappresenta lo stato della CPU per questo fotogramma.  
+ [in] Un puntatore a un Win32 `CONTEXT` struttura che rappresenta lo stato della CPU per il frame.  
   
  Il `context` parametro è valido solo se è stato passato il flag COR_PRF_SNAPSHOT_CONTEXT `ICorProfilerInfo2::DoStackSnapshot`.  
   
@@ -61,19 +61,19 @@ HRESULT __stdcall StackSnapshotCallback (
  [in] Un puntatore ai dati client, che vengano passati direttamente da `ICorProfilerInfo2::DoStackSnapshot`.  
   
 ## <a name="remarks"></a>Note  
- Il `StackSnapshotCallback` funzione implementata dal writer del profiler. È necessario limitare la complessità del lavoro svolto in `StackSnapshotCallback`. Ad esempio, quando si utilizza `ICorProfilerInfo2::DoStackSnapshot` in modo asincrono, il thread di destinazione può contenere blocchi. Se il codice all'interno `StackSnapshotCallback` richiede gli stessi blocchi, un deadlock.  
+ Il `StackSnapshotCallback` (funzione) viene implementata dal writer del profiler. È necessario limitare la complessità del lavoro svolto `StackSnapshotCallback`. Ad esempio, quando si usa `ICorProfilerInfo2::DoStackSnapshot` in modo asincrono, il thread di destinazione può contenere blocchi. Se all'interno del codice `StackSnapshotCallback` richiede gli stessi blocchi, un deadlock.  
   
- Il `ICorProfilerInfo2::DoStackSnapshot` chiamate al metodo di `StackSnapshotCallback` funzione una sola volta per ogni frame gestito o una volta per ogni esecuzione di frame non gestiti. Se `StackSnapshotCallback` viene chiamato per un'esecuzione di frame non gestiti, il profiler può utilizzare il contesto di registro (a cui fa riferimento il `context` parametro) per eseguire la propria analisi dello stack non gestito. In questo caso, Win32 `CONTEXT` struttura rappresenta lo stato della CPU per il frame recentemente inserito nell'esecuzione di frame non gestiti. Sebbene Win32 `CONTEXT` struttura include i valori per tutti i registri, è necessario basarsi solo sui valori di registro dei puntatori di stack frame registro dei puntatori, registro dei puntatori (istruzione) e non volatili (cioè, mantenuti) registri integer.  
+ Il `ICorProfilerInfo2::DoStackSnapshot` chiamate al metodo il `StackSnapshotCallback` funzione una volta ogni frame gestito o una sola volta per ogni esecuzione dei frame non gestiti. Se `StackSnapshotCallback` viene chiamato per un'esecuzione dei frame non gestiti, il profiler può usare il contesto di registro (fa il `context` parametro) per eseguire la propria analisi dello stack non gestito. In questo caso, Win32 `CONTEXT` struttura rappresenta lo stato della CPU per il frame recentemente inserito nell'esecuzione dei frame non gestiti. Sebbene Win32 `CONTEXT` struttura include i valori per tutti i registri, è necessario basarsi solo sui valori del registro dei puntatori di stack frame registro dei puntatori, registro dei puntatori (istruzione) e non volatile (cioè, mantenuti) registri integer.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Corprof. idl  
+ **Intestazione:** CorProf.idl  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Metodo DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)  
- [Funzioni statiche globali di profilatura](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+## <a name="see-also"></a>Vedere anche
+- [Metodo DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)
+- [Funzioni statiche globali di profilatura](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)

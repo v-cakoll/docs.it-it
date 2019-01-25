@@ -14,12 +14,12 @@ helpviewer_keywords:
 - TargetType attribute [XAML Services]
 - Type markup extension in XAML [XAML Services]
 ms.assetid: e0e0ce6f-e873-49c7-8ad7-8b840eb353ec
-ms.openlocfilehash: e4d56c5b5deda0bd1df8827020e0b76cc6276c1c
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 2fc44163db99be5a0f2ddb2820053a5bdda3ccbe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086635"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54668990"
 ---
 # <a name="xtype-markup-extension"></a>Estensione del markup x:Type
 Fornisce Common Language Runtime <xref:System.Type> oggetto che rappresenta il tipo sottostante per un tipo XAML specificato.  
@@ -79,8 +79,8 @@ Fornisce Common Language Runtime <xref:System.Type> oggetto che rappresenta il t
   
  In WPF, è possibile usare le funzionalità di XAML 2009, ma solo per XAML loose (XAML non è compilato dal markup). Il codice XAML compilato dal markup per WPF e il modulo BAML di XAML non supportano attualmente le parole chiave e le funzionalità di XAML 2009.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Windows.Style>  
- [Applicazione di stili e modelli](../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [Cenni preliminari su XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [Estensioni di markup e XAML WPF](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Windows.Style>
+- [Applicazione di stili e modelli](../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Cenni preliminari su XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [Estensioni di markup e XAML WPF](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)

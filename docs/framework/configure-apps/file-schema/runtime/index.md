@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: f04816ab-110d-4e28-9283-845d6d9a4a68
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 16090ff7a756757fd92474c036fea211904684ac
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 4289f013123796badcaedac2f89e1560397a0aa4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614339"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54659004"
 ---
 # <a name="runtime-settings-schema"></a>Schema delle impostazioni di runtime
 Le impostazioni di runtime vengono usate da Common Language Runtime per configurare le applicazioni destinate a .NET Framework.  
@@ -131,7 +131,7 @@ Le impostazioni di runtime vengono usate da Common Language Runtime per configur
 |[\<UseRandomizedStringHashAlgorithm>](../../../../../docs/framework/configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md)|Specifica se il runtime calcola i codici hash per le stringhe in base al dominio applicazione.|  
 |[\<UseSmallInternalThreadStacks>](../../../../../docs/framework/configure-apps/file-schema/runtime/usesmallinternalthreadstacks-element.md)|Richiede al runtime di usare dimensioni dello stack esplicite quando crea determinati thread usati internamente, invece delle dimensioni dello stack predefinite.|  
   
-## <a name="see-also"></a>Vedere anche  
-- [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)  
-- [Procedura: Disabilitare la Garbage Collection simultanea](https://msdn.microsoft.com/library/ba2c6c67-5778-497c-9fac-5f793b5500c7)  
+## <a name="see-also"></a>Vedere anche
+- [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Procedura: Disabilitare la Garbage Collection simultanea](https://msdn.microsoft.com/library/ba2c6c67-5778-497c-9fac-5f793b5500c7)
 - [Reindirizzamento delle versioni di assembly](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

@@ -1,15 +1,15 @@
 ---
-title: '&lt;Servizi&gt;'
+title: '&lt;services&gt;'
 ms.date: 03/30/2017
 ms.assetid: 80d76ba9-2058-48ad-9b91-5e4be7e5c113
-ms.openlocfilehash: a48bd0ac30c1a85602122b2fd9213c2aa5159e91
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 7b26224f1217e7f73a529c082c2c9272ec189a5a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54148097"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573257"
 ---
-# <a name="ltservicesgt"></a>&lt;Servizi&gt;
+# <a name="ltservicesgt"></a>&lt;services&gt;
 I servizi vengono definiti nella sezione `services` del file di configurazione. Ogni servizio dispone di una propria sezione di configurazione `service`.  
   
  \<system.ServiceModel>  
@@ -43,5 +43,5 @@ I servizi vengono definiti nella sezione `services` del file di configurazione. 
 |-------------|-----------------|  
 |[\<system.serviceModel>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)|L'elemento radice di tutti gli elementi di configurazione di Windows Communication Foundation (WCF).|  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.Configuration.ServicesSection>
+## <a name="see-also"></a>Vedere anche
+- <xref:System.ServiceModel.Configuration.ServicesSection>

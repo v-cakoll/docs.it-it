@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 53f02499bbc64f1502951ff9fbf16a848e77f0ca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e0ce6a207f2a7862b0b49f1e68cda9528aa03ca7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430808"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667531"
 ---
 # <a name="isymunmanagedwriter2definelocalvariable2-method"></a>Metodo ISymUnmanagedWriter2::DefineLocalVariable2
 Definisce una singola variabile nell'ambito lessicale corrente. Questo metodo può essere chiamato più volte per una variabile con lo stesso nome presente in più posizioni in un ambito. In questo caso, tuttavia, i valori del `startOffset` e `endOffset` parametri non devono sovrapporsi.  
@@ -47,7 +47,7 @@ HRESULT DefineLocalVariable2(
  [in] Il nome della variabile locale.  
   
  `attributes`  
- [in] Attributi della variabile locale.  
+ [in] Attributi della variabile locali.  
   
  `sigToken`  
  [in] Il token di metadati della firma.  
@@ -56,26 +56,26 @@ HRESULT DefineLocalVariable2(
  [in] Il tipo di indirizzo.  
   
  `addr1`  
- [in] Il primo indirizzo per la specifica del parametro.  
+ [in] Il primo indirizzo relativo al parametro specificato.  
   
  `addr2`  
- [in] Il secondo indirizzo per la specifica del parametro.  
+ [in] Il secondo indirizzo relativo al parametro specificato.  
   
  `addr3`  
- [in] Terzo indirizzo per la specifica del parametro.  
+ [in] Terzo indirizzo relativo al parametro specificato.  
   
  `startOffset`  
- [in] Offset iniziale della variabile. Questo parametro è facoltativo. Se il valore è 0, questo parametro viene ignorato e la variabile viene definita nell'intero ambito. Se è un valore diverso da zero, la variabile rientrerà negli offset dell'ambito corrente.  
+ [in] Offset iniziale della variabile. Questo parametro è facoltativo. Se è 0, questo parametro viene ignorato e la variabile viene definita nell'intero ambito. Se è un valore diverso da zero, la variabile rientra negli offset dell'ambito corrente.  
   
  `endOffset`  
- [in] Offset finale della variabile. Questo parametro è facoltativo. Se il valore è 0, questo parametro viene ignorato e la variabile viene definita nell'intero ambito. Se è un valore diverso da zero, la variabile rientrerà negli offset dell'ambito corrente.  
+ [in] Offset finale per la variabile. Questo parametro è facoltativo. Se è 0, questo parametro viene ignorato e la variabile viene definita nell'intero ambito. Se è un valore diverso da zero, la variabile rientra negli offset dell'ambito corrente.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK se il metodo ha esito positivo. in caso contrario, E_FAIL o un altro codice di errore.  
+ S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o qualche altro codice di errore.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** CorSym. idl  
+ **Intestazione:** CorSym.idl  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ISymUnmanagedWriter2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-interface.md)  
- [Metodo DefineLocalVariable](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-definelocalvariable-method.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ISymUnmanagedWriter2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-interface.md)
+- [Metodo DefineLocalVariable](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-definelocalvariable-method.md)
