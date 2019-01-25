@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4156c3507ccbd21d59893c5e03e15fe9b7322e48
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 52a00496c3b4d5ccd96adaf569c25c64a5709a9a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447798"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717592"
 ---
-# <a name="imetadataimportisglobal-method"></a><span data-ttu-id="f7c7c-102">Metodo IMetaDataImport::IsGlobal</span><span class="sxs-lookup"><span data-stu-id="f7c7c-102">IMetaDataImport::IsGlobal Method</span></span>
-<span data-ttu-id="f7c7c-103">Ottiene un valore che indica se il campo, il metodo o il tipo rappresentato dal token di metadati specificato ha ambito globale.</span><span class="sxs-lookup"><span data-stu-id="f7c7c-103">Gets a value indicating whether the field, method, or type represented by the specified metadata token has global scope.</span></span>  
+# <a name="imetadataimportisglobal-method"></a><span data-ttu-id="f427d-102">Metodo IMetaDataImport::IsGlobal</span><span class="sxs-lookup"><span data-stu-id="f427d-102">IMetaDataImport::IsGlobal Method</span></span>
+<span data-ttu-id="f427d-103">Ottiene un valore che indica se il campo, il metodo o il tipo rappresentato dal token di metadati specificato ha ambito globale.</span><span class="sxs-lookup"><span data-stu-id="f427d-103">Gets a value indicating whether the field, method, or type represented by the specified metadata token has global scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f7c7c-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="f7c7c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f427d-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="f427d-104">Syntax</span></span>  
   
 ```  
 HRESULT IsGlobal (  
@@ -36,22 +36,22 @@ HRESULT IsGlobal (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="f7c7c-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="f7c7c-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="f427d-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="f427d-105">Parameters</span></span>  
  `pd`  
- <span data-ttu-id="f7c7c-106">[in] Token di metadati che rappresenta un tipo, un campo o metodo.</span><span class="sxs-lookup"><span data-stu-id="f7c7c-106">[in] A metadata token that represents a type, field, or method.</span></span>  
+ <span data-ttu-id="f427d-106">[in] Un token di metadati che rappresenta un tipo, un campo o metodo.</span><span class="sxs-lookup"><span data-stu-id="f427d-106">[in] A metadata token that represents a type, field, or method.</span></span>  
   
  `pbGlobal`  
- <span data-ttu-id="f7c7c-107">[out] 1 se l'oggetto ha ambito globale. in caso contrario, 0 (zero).</span><span class="sxs-lookup"><span data-stu-id="f7c7c-107">[out] 1 if the object has global scope; otherwise, 0 (zero).</span></span>  
+ <span data-ttu-id="f427d-107">[out] 1 se l'oggetto ha un ambito globale; in caso contrario, 0 (zero).</span><span class="sxs-lookup"><span data-stu-id="f427d-107">[out] 1 if the object has global scope; otherwise, 0 (zero).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f7c7c-108">Requisiti</span><span class="sxs-lookup"><span data-stu-id="f7c7c-108">Requirements</span></span>  
- <span data-ttu-id="f7c7c-109">**Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f7c7c-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f427d-108">Requisiti</span><span class="sxs-lookup"><span data-stu-id="f427d-108">Requirements</span></span>  
+ <span data-ttu-id="f427d-109">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f427d-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f7c7c-110">**Intestazione:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="f7c7c-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="f427d-110">**Intestazione:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="f427d-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="f7c7c-111">**Libreria:** inclusa come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="f7c7c-111">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="f427d-111">**Libreria:** Inclusa come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="f427d-111">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="f7c7c-112">**Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f7c7c-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="f427d-112">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f427d-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f7c7c-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="f7c7c-113">See Also</span></span>  
- [<span data-ttu-id="f7c7c-114">Interfaccia IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="f7c7c-114">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [<span data-ttu-id="f7c7c-115">Interfaccia IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="f7c7c-115">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="f427d-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="f427d-113">See also</span></span>
+- [<span data-ttu-id="f427d-114">Interfaccia IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="f427d-114">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="f427d-115">Interfaccia IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="f427d-115">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

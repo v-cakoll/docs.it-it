@@ -1,5 +1,5 @@
 ---
-title: Funzione CreateIDispatchSTAForwarder (riferimenti alle API non gestita di WPF)
+title: Funzione CreateIDispatchSTAForwarder (riferimenti alle API WPF non gestite)
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -8,19 +8,19 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: 57a02dfa-f091-4ace-9c06-1f4ab52b3527
-ms.openlocfilehash: f7e45d5cafa40ba147fe39888e74a67ac9f95c5b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 215f6ff727b814e7e7d7c708c29a8c5221f5797f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33536651"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54575982"
 ---
-# <a name="createidispatchstaforwarder-function-wpf-unmanaged-api-reference"></a><span data-ttu-id="c3ddf-102">Funzione CreateIDispatchSTAForwarder (riferimenti alle API non gestita di WPF)</span><span class="sxs-lookup"><span data-stu-id="c3ddf-102">CreateIDispatchSTAForwarder Function (WPF Unmanaged API Reference)</span></span>
-<span data-ttu-id="c3ddf-103">Questa API supporta l'infrastruttura di Windows Presentation Foundation (WPF) e non deve essere utilizzato direttamente dal codice.</span><span class="sxs-lookup"><span data-stu-id="c3ddf-103">This API supports the Windows Presentation Foundation (WPF) infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="createidispatchstaforwarder-function-wpf-unmanaged-api-reference"></a><span data-ttu-id="02602-102">Funzione CreateIDispatchSTAForwarder (riferimenti alle API WPF non gestite)</span><span class="sxs-lookup"><span data-stu-id="02602-102">CreateIDispatchSTAForwarder Function (WPF Unmanaged API Reference)</span></span>
+<span data-ttu-id="02602-103">Questa API supporta l'infrastruttura Windows Presentation Foundation (WPF) e non deve essere usato direttamente dal codice.</span><span class="sxs-lookup"><span data-stu-id="02602-103">This API supports the Windows Presentation Foundation (WPF) infrastructure and is not intended to be used directly from your code.</span></span>  
   
- <span data-ttu-id="c3ddf-104">Utilizzata dall'infrastruttura di Windows Presentation Foundation (WPF) per la gestione dei thread e di windows.</span><span class="sxs-lookup"><span data-stu-id="c3ddf-104">Used by the Windows Presentation Foundation (WPF) infrastructure for thread and windows management.</span></span>  
+ <span data-ttu-id="02602-104">Utilizzata dall'infrastruttura Windows Presentation Foundation (WPF) per la gestione dei thread e windows.</span><span class="sxs-lookup"><span data-stu-id="02602-104">Used by the Windows Presentation Foundation (WPF) infrastructure for thread and windows management.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c3ddf-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="c3ddf-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="02602-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="02602-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT CreateIDispatchSTAForwarder(  
@@ -29,25 +29,25 @@ HRESULT CreateIDispatchSTAForwarder(
 )  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="c3ddf-106">Parametri</span><span class="sxs-lookup"><span data-stu-id="c3ddf-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="02602-106">Parametri</span><span class="sxs-lookup"><span data-stu-id="02602-106">Parameters</span></span>  
   
-## <a name="property-valuereturn-value"></a><span data-ttu-id="c3ddf-107">Valore proprietà/Valore restituito</span><span class="sxs-lookup"><span data-stu-id="c3ddf-107">Property Value/Return Value</span></span>  
- <span data-ttu-id="c3ddf-108">pDispatchDelegate</span><span class="sxs-lookup"><span data-stu-id="c3ddf-108">pDispatchDelegate</span></span>  
- <span data-ttu-id="c3ddf-109">Un puntatore a un `IDispatch` interfaccia.</span><span class="sxs-lookup"><span data-stu-id="c3ddf-109">A pointer to an `IDispatch` interface.</span></span>  
+## <a name="property-valuereturn-value"></a><span data-ttu-id="02602-107">Valore proprietà/Valore restituito</span><span class="sxs-lookup"><span data-stu-id="02602-107">Property Value/Return Value</span></span>  
+ <span data-ttu-id="02602-108">pDispatchDelegate</span><span class="sxs-lookup"><span data-stu-id="02602-108">pDispatchDelegate</span></span>  
+ <span data-ttu-id="02602-109">Un puntatore a un `IDispatch` interfaccia.</span><span class="sxs-lookup"><span data-stu-id="02602-109">A pointer to an `IDispatch` interface.</span></span>  
   
- <span data-ttu-id="c3ddf-110">ppForwarder</span><span class="sxs-lookup"><span data-stu-id="c3ddf-110">ppForwarder</span></span>  
- <span data-ttu-id="c3ddf-111">Un puntatore all'indirizzo di un `IDispatch` interfaccia.</span><span class="sxs-lookup"><span data-stu-id="c3ddf-111">A pointer to the address of an `IDispatch` interface.</span></span>  
+ <span data-ttu-id="02602-110">ppForwarder</span><span class="sxs-lookup"><span data-stu-id="02602-110">ppForwarder</span></span>  
+ <span data-ttu-id="02602-111">Un puntatore all'indirizzo di un `IDispatch` interfaccia.</span><span class="sxs-lookup"><span data-stu-id="02602-111">A pointer to the address of an `IDispatch` interface.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c3ddf-112">Requisiti</span><span class="sxs-lookup"><span data-stu-id="c3ddf-112">Requirements</span></span>  
- <span data-ttu-id="c3ddf-113">**Piattaforme:** vedere [requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c3ddf-113">**Platforms:** See [.NET Framework System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="02602-112">Requisiti</span><span class="sxs-lookup"><span data-stu-id="02602-112">Requirements</span></span>  
+ <span data-ttu-id="02602-113">**Piattaforme:** Visualizzare [requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="02602-113">**Platforms:** See [.NET Framework System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c3ddf-114">**DLL:**</span><span class="sxs-lookup"><span data-stu-id="c3ddf-114">**DLL:**</span></span>  
+ <span data-ttu-id="02602-114">**DLL:**</span><span class="sxs-lookup"><span data-stu-id="02602-114">**DLL:**</span></span>  
   
- <span data-ttu-id="c3ddf-115">In .NET Framework 3.0 e 3.5: PresentationHostDLL.dll</span><span class="sxs-lookup"><span data-stu-id="c3ddf-115">In the .NET Framework 3.0 and 3.5: PresentationHostDLL.dll</span></span>  
+ <span data-ttu-id="02602-115">In .NET Framework 3.0 e 3.5: PresentationHostDLL.dll</span><span class="sxs-lookup"><span data-stu-id="02602-115">In the .NET Framework 3.0 and 3.5: PresentationHostDLL.dll</span></span>  
   
- <span data-ttu-id="c3ddf-116">In .NET Framework 4 e versioni successive: PresentationHost_v0400.dll</span><span class="sxs-lookup"><span data-stu-id="c3ddf-116">In the .NET Framework 4 and later: PresentationHost_v0400.dll</span></span>  
+ <span data-ttu-id="02602-116">In .NET Framework 4 e versioni successive: PresentationHost_v0400.dll</span><span class="sxs-lookup"><span data-stu-id="02602-116">In the .NET Framework 4 and later: PresentationHost_v0400.dll</span></span>  
   
- <span data-ttu-id="c3ddf-117">**Versione di .NET framework:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c3ddf-117">**.NET Framework Version:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]</span></span>  
+ <span data-ttu-id="02602-117">**Versione di .NET framework:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="02602-117">**.NET Framework Version:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c3ddf-118">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c3ddf-118">See Also</span></span>  
- [<span data-ttu-id="c3ddf-119">Riferimenti alle API non gestite di WPF</span><span class="sxs-lookup"><span data-stu-id="c3ddf-119">WPF Unmanaged API Reference</span></span>](../../../../docs/framework/wpf/advanced/wpf-unmanaged-api-reference.md)
+## <a name="see-also"></a><span data-ttu-id="02602-118">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="02602-118">See also</span></span>
+- [<span data-ttu-id="02602-119">Riferimenti alle API non gestite di WPF</span><span class="sxs-lookup"><span data-stu-id="02602-119">WPF Unmanaged API Reference</span></span>](../../../../docs/framework/wpf/advanced/wpf-unmanaged-api-reference.md)

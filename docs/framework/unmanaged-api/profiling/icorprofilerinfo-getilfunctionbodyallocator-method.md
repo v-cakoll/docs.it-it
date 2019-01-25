@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 00a3afab4d5f6151bcd0efd2b658d4cd7fa8f1e0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0ae8b209ad03594cb77029193b0e9dec773a6e02
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33462202"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603326"
 ---
-# <a name="icorprofilerinfogetilfunctionbodyallocator-method"></a><span data-ttu-id="08587-102">Metodo ICorProfilerInfo::GetILFunctionBodyAllocator</span><span class="sxs-lookup"><span data-stu-id="08587-102">ICorProfilerInfo::GetILFunctionBodyAllocator Method</span></span>
-<span data-ttu-id="08587-103">Ottiene un'interfaccia che fornisce un metodo per allocare memoria per essere utilizzato per scambiare il corpo di un metodo in codice Microsoft intermediate language (MSIL).</span><span class="sxs-lookup"><span data-stu-id="08587-103">Gets an interface that provides a method to allocate memory to be used for swapping out the body of a method in Microsoft intermediate language (MSIL) code.</span></span>  
+# <a name="icorprofilerinfogetilfunctionbodyallocator-method"></a><span data-ttu-id="efae2-102">Metodo ICorProfilerInfo::GetILFunctionBodyAllocator</span><span class="sxs-lookup"><span data-stu-id="efae2-102">ICorProfilerInfo::GetILFunctionBodyAllocator Method</span></span>
+<span data-ttu-id="efae2-103">Ottiene un'interfaccia che fornisce un metodo per allocare memoria da utilizzare per la sostituzione di corpo di un metodo in codice Microsoft intermediate language (MSIL).</span><span class="sxs-lookup"><span data-stu-id="efae2-103">Gets an interface that provides a method to allocate memory to be used for swapping out the body of a method in Microsoft intermediate language (MSIL) code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="08587-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="08587-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="efae2-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="efae2-104">Syntax</span></span>  
   
 ```  
 HRESULT GetILFunctionBodyAllocator(  
@@ -35,24 +35,24 @@ HRESULT GetILFunctionBodyAllocator(
     [out] IMethodMalloc **ppMalloc);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="08587-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="08587-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="efae2-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="efae2-105">Parameters</span></span>  
  `moduleId`  
- <span data-ttu-id="08587-106">[in] L'ID del modulo in cui risiede il metodo.</span><span class="sxs-lookup"><span data-stu-id="08587-106">[in] The ID of the module in which the method resides.</span></span>  
+ <span data-ttu-id="efae2-106">[in] L'ID del modulo in cui si trova il metodo.</span><span class="sxs-lookup"><span data-stu-id="efae2-106">[in] The ID of the module in which the method resides.</span></span>  
   
  `ppMalloc`  
- <span data-ttu-id="08587-107">[out] Un puntatore a un [IMethodMalloc](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-interface.md) interfaccia che fornisce un metodo per allocare la memoria.</span><span class="sxs-lookup"><span data-stu-id="08587-107">[out] A pointer to an [IMethodMalloc](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-interface.md) interface that provides a method to allocate the memory.</span></span>  
+ <span data-ttu-id="efae2-107">[out] Un puntatore a un [IMethodMalloc](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-interface.md) interfaccia che fornisce un metodo per allocare la memoria.</span><span class="sxs-lookup"><span data-stu-id="efae2-107">[out] A pointer to an [IMethodMalloc](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-interface.md) interface that provides a method to allocate the memory.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="08587-108">Note</span><span class="sxs-lookup"><span data-stu-id="08587-108">Remarks</span></span>  
- <span data-ttu-id="08587-109">Il corpo di un metodo in codice MSIL deve essere individuato come indirizzi virtuali relativi (RVA), rispetto al modulo caricato, che significa che segue il modulo all'interno di 4 GB.</span><span class="sxs-lookup"><span data-stu-id="08587-109">A method body in MSIL code must be located as a relative virtual address (RVA), relative to the loaded module, which means that it follows the module within 4 GB.</span></span> <span data-ttu-id="08587-110">Per renderne più semplice per uno strumento di scambiare il corpo di un metodo, il `GetILFunctionBodyAllocator` metodo assicura che la memoria viene allocata all'interno dell'intervallo.</span><span class="sxs-lookup"><span data-stu-id="08587-110">To make it easier for a tool to swap out the body of a method, the `GetILFunctionBodyAllocator` method ensures that memory is allocated within that range.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="efae2-108">Note</span><span class="sxs-lookup"><span data-stu-id="efae2-108">Remarks</span></span>  
+ <span data-ttu-id="efae2-109">Il corpo di un metodo in codice MSIL deve essere individuato come un indirizzo virtuale relativo (RVA), rispetto al modulo caricato, il che significa che segue il modulo all'interno di 4 GB.</span><span class="sxs-lookup"><span data-stu-id="efae2-109">A method body in MSIL code must be located as a relative virtual address (RVA), relative to the loaded module, which means that it follows the module within 4 GB.</span></span> <span data-ttu-id="efae2-110">Per renderne più semplice per uno strumento sostituire il corpo di un metodo, il `GetILFunctionBodyAllocator` metodo assicura che la memoria viene allocata all'interno dell'intervallo.</span><span class="sxs-lookup"><span data-stu-id="efae2-110">To make it easier for a tool to swap out the body of a method, the `GetILFunctionBodyAllocator` method ensures that memory is allocated within that range.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="08587-111">Requisiti</span><span class="sxs-lookup"><span data-stu-id="08587-111">Requirements</span></span>  
- <span data-ttu-id="08587-112">**Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="08587-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="efae2-111">Requisiti</span><span class="sxs-lookup"><span data-stu-id="efae2-111">Requirements</span></span>  
+ <span data-ttu-id="efae2-112">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="efae2-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="08587-113">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="08587-113">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="efae2-113">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="efae2-113">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="08587-114">**Libreria:** CorGuids. lib</span><span class="sxs-lookup"><span data-stu-id="08587-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="efae2-114">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="efae2-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="08587-115">**Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="08587-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="efae2-115">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="efae2-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="08587-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="08587-116">See Also</span></span>  
- [<span data-ttu-id="08587-117">Interfaccia ICorProfilerInfo</span><span class="sxs-lookup"><span data-stu-id="08587-117">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a><span data-ttu-id="efae2-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="efae2-116">See also</span></span>
+- [<span data-ttu-id="efae2-117">Interfaccia ICorProfilerInfo</span><span class="sxs-lookup"><span data-stu-id="efae2-117">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

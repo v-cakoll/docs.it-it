@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c5477578491c3cbc3f5fce694820971e99b45079
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 156b2274aa442d9efb129d51ccf5939a09ac7408
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444100"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54710131"
 ---
-# <a name="imetadataassemblyimportcloseenum-method"></a><span data-ttu-id="7edf9-102">Metodo IMetaDataAssemblyImport::CloseEnum</span><span class="sxs-lookup"><span data-stu-id="7edf9-102">IMetaDataAssemblyImport::CloseEnum Method</span></span>
-<span data-ttu-id="7edf9-103">Rilascia un riferimento all'istanza di enumerazione specificato.</span><span class="sxs-lookup"><span data-stu-id="7edf9-103">Releases a reference to the specified enumeration instance.</span></span>  
+# <a name="imetadataassemblyimportcloseenum-method"></a><span data-ttu-id="2599d-102">Metodo IMetaDataAssemblyImport::CloseEnum</span><span class="sxs-lookup"><span data-stu-id="2599d-102">IMetaDataAssemblyImport::CloseEnum Method</span></span>
+<span data-ttu-id="2599d-103">Rilascia un riferimento all'istanza di enumerazione specificato.</span><span class="sxs-lookup"><span data-stu-id="2599d-103">Releases a reference to the specified enumeration instance.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7edf9-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="7edf9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2599d-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="2599d-104">Syntax</span></span>  
   
 ```  
 void CloseEnum (  
@@ -35,18 +35,18 @@ void CloseEnum (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="7edf9-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="7edf9-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="2599d-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="2599d-105">Parameters</span></span>  
  `hEnum`  
- <span data-ttu-id="7edf9-106">[in] L'istanza di enumerazione per essere chiuso.</span><span class="sxs-lookup"><span data-stu-id="7edf9-106">[in] The enumeration instance to be closed.</span></span>  
+ <span data-ttu-id="2599d-106">[in] L'istanza di enumerazione per essere chiuso.</span><span class="sxs-lookup"><span data-stu-id="2599d-106">[in] The enumeration instance to be closed.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7edf9-107">Requisiti</span><span class="sxs-lookup"><span data-stu-id="7edf9-107">Requirements</span></span>  
- <span data-ttu-id="7edf9-108">**Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7edf9-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2599d-107">Requisiti</span><span class="sxs-lookup"><span data-stu-id="2599d-107">Requirements</span></span>  
+ <span data-ttu-id="2599d-108">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2599d-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7edf9-109">**Intestazione:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="7edf9-109">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="2599d-109">**Intestazione:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="2599d-109">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="7edf9-110">**Libreria:** usata come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="7edf9-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="2599d-110">**Libreria:** Usato come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="2599d-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="7edf9-111">**Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7edf9-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="2599d-111">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2599d-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7edf9-112">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="7edf9-112">See Also</span></span>  
- [<span data-ttu-id="7edf9-113">Interfaccia IMetaDataAssemblyImport</span><span class="sxs-lookup"><span data-stu-id="7edf9-113">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+## <a name="see-also"></a><span data-ttu-id="2599d-112">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="2599d-112">See also</span></span>
+- [<span data-ttu-id="2599d-113">Interfaccia IMetaDataAssemblyImport</span><span class="sxs-lookup"><span data-stu-id="2599d-113">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
